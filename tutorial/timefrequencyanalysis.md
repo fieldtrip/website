@@ -36,10 +36,10 @@ If you want to know more about tapers/ window functions you can have a look at t
 
 To calculate the time-frequency analysis for the example dataset we will perform the following steps:
 
-- Read the data into MATLAB using **[ft_definetrial](/reference/ft_definetrial)** and **[ft_preprocessing](/reference/ft_preprocessing)**
-- Seperate the trials from each condition using **[ft_selectdata](/reference/ft_selectdata)**
-- Compute the power values for each frequency bin and each time bin using the function **[ft_freqanalysis](/reference/ft_freqanalysis)**
-- Visualize the results. This can be done by creating time-frequency plots for one (**[ft_singleplotTFR](/reference/ft_singleplotTFR)**) or several channels (**[ft_multiplotTFR](/reference/ft_multiplotTFR)**), or by creating a topographic plot for a specified time- and frequency interval (**[ft_topoplotTFR](/reference/ft_topoplotTFR)**).
+- Read the data into MATLAB using **[ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_definetrial.m)** and **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)**
+- Seperate the trials from each condition using **[ft_selectdata](https://github.com/fieldtrip/fieldtrip/blob/release/ft_selectdata.m)**
+- Compute the power values for each frequency bin and each time bin using the function **[ft_freqanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqanalysis.m)**
+- Visualize the results. This can be done by creating time-frequency plots for one (**[ft_singleplotTFR](https://github.com/fieldtrip/fieldtrip/blob/release/ft_singleplotTFR.m)**) or several channels (**[ft_multiplotTFR](https://github.com/fieldtrip/fieldtrip/blob/release/ft_multiplotTFR.m)**), or by creating a topographic plot for a specified time- and frequency interval (**[ft_topoplotTFR](https://github.com/fieldtrip/fieldtrip/blob/release/ft_topoplotTFR.m)**).
 
 {% include image src="/assets/img/tutorial/timefrequencyanalysis/tfr_pipelinenew.png" width="200" %}
 
@@ -49,7 +49,7 @@ In this tutorial, procedures of 4 types of time-frequency analysis will be shown
 
 ## Preprocessing
 
-The first step is to read the data using the function **[ft_preprocessing](/reference/ft_preprocessing)**. With the aim to reduce boundary effects occurring at the start and the end of the trials, it is recommended to read larger time intervals than the time period of interest. In this example, the time of interest is from -0.5 s to 1.5 s (t = 0 s defines the time of stimulus); however, the script reads the data from -1.0 s to 2.0 s.
+The first step is to read the data using the function **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)**. With the aim to reduce boundary effects occurring at the start and the end of the trials, it is recommended to read larger time intervals than the time period of interest. In this example, the time of interest is from -0.5 s to 1.5 s (t = 0 s defines the time of stimulus); however, the script reads the data from -1.0 s to 2.0 s.
 
 ### Reading in the data
 
@@ -79,7 +79,7 @@ Subsequently you can save the data to disk.
 
 Here, we will describe how to calculate time frequency representations using Hanning tapers. When choosing for a fixed window length procedure the frequency resolution is defined according to the length of the time window (delta T). The frequency resolution (delta f in figure 1) = 1/length of time window in sec (delta T in figure 1). Thus a 500 ms time window results in a 2 Hz frequency resolution (1/0.5 sec= 2 Hz) meaning that power can be calculated for 2 Hz, 4 Hz, 6 Hz etc. An integer number of cycles must fit in the time window.
 
-**[Ft_freqanalysis](/reference/ft_freqanalysis)** requires preprocessed data (see above), which is available from <ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/timefrequencyanalysis/dataFIC.mat>.
+**[Ft_freqanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqanalysis.m)** requires preprocessed data (see above), which is available from <ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/timefrequencyanalysis/dataFIC.mat>.
 
     load dataFIC
 
@@ -125,7 +125,7 @@ To visualize the event-related power changes, a normalization with respect to a 
 
 There are three ways of graphically representing the data: 1) time-frequency plots of all channels, in a quasi-topographical layout, 2) time-frequency plot of an individual channel (or average of several channels), 3) topographical 2-D map of the power changes in a specified time-frequency interval.
 
-To plot the TFRs from all the sensors use the function **[ft_multiplotTFR](/reference/ft_multiplotTFR)**. Settings can be adjusted in the cfg structure. For example:
+To plot the TFRs from all the sensors use the function **[ft_multiplotTFR](https://github.com/fieldtrip/fieldtrip/blob/release/ft_multiplotTFR.m)**. Settings can be adjusted in the cfg structure. For example:
 
     cfg = [];
     cfg.baseline     = [-0.5 -0.1];
@@ -140,9 +140,9 @@ To plot the TFRs from all the sensors use the function **[ft_multiplotTFR](/refe
 
 _Figure: Time-frequency representations calculated using ft_freqanalysis. Plotting was done with ft_multiplotTFR)_
 
-Note that using the options cfg.baseline and cfg.baselinetype results in baseline correction of the data. Baseline correction can also be applied directly by calling **[ft_freqbaseline](/reference/ft_freqbaseline)**. Moreover, you can combine the various visualization options/functions interactively to explore your data. Currently, this is the default plotting behavior because the configuration option cfg.interactive='yes' is activated unless you explicitly select cfg.interactive='no' before calling **[ft_multiplotTFR](/reference/ft_multiplotTFR)** to deactivate it. See also the [plotting tutorial](/tutorial/plotting) for more details.
+Note that using the options cfg.baseline and cfg.baselinetype results in baseline correction of the data. Baseline correction can also be applied directly by calling **[ft_freqbaseline](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqbaseline.m)**. Moreover, you can combine the various visualization options/functions interactively to explore your data. Currently, this is the default plotting behavior because the configuration option cfg.interactive='yes' is activated unless you explicitly select cfg.interactive='no' before calling **[ft_multiplotTFR](https://github.com/fieldtrip/fieldtrip/blob/release/ft_multiplotTFR.m)** to deactivate it. See also the [plotting tutorial](/tutorial/plotting) for more details.
 
-An interesting effect seems to be present in the TFR of sensor MRC15. To make a plot of a single channel use the function **[ft_singleplotTFR](/reference/ft_singleplotTFR)**.
+An interesting effect seems to be present in the TFR of sensor MRC15. To make a plot of a single channel use the function **[ft_singleplotTFR](https://github.com/fieldtrip/fieldtrip/blob/release/ft_singleplotTFR.m)**.
 
     cfg = [];
     cfg.baseline     = [-0.5 -0.1];
@@ -160,7 +160,7 @@ _Figure: The time-frequency representation of a single sensor obtained using ft_
 
 If you see artifacts in your figure, see [this question](/faq/i_am_getting_strange_artifacts_in_figures_that_use_opacity).
 
-From the previous figure you can see that there is an increase in power around 15-20 Hz in the time interval 0.9 to 1.3 s after stimulus onset. To show the topography of the beta increase use the function **[ft_topoplotTFR](/reference/ft_topoplotTFR)**.
+From the previous figure you can see that there is an increase in power around 15-20 Hz in the time interval 0.9 to 1.3 s after stimulus onset. To show the topography of the beta increase use the function **[ft_topoplotTFR](https://github.com/fieldtrip/fieldtrip/blob/release/ft_topoplotTFR.m)**.
 
     cfg = [];
     cfg.baseline     = [-0.5 -0.1];
@@ -212,7 +212,7 @@ Below is the configuration for a 7-cycle time window. The calculation is only do
     cfg.toi          = -0.5:0.05:1.5;
     TFRhann7 = ft_freqanalysis(cfg, dataFIC);
 
-To plot the result use **[ft_singleplotTFR](/reference/ft_singleplotTFR)**:
+To plot the result use **[ft_singleplotTFR](https://github.com/fieldtrip/fieldtrip/blob/release/ft_singleplotTFR.m)**:
 
     cfg              = [];
     cfg.baseline     = [-0.5 -0.1];
@@ -233,7 +233,7 @@ If you see artifacts in your figure, see [this FAQ](/faq/i_am_getting_strange_ar
 
 {% include markup/warning %}
 **Boundary effects**
-Note the boundary effects, in particular for the lower frequency bins, i.e. the blue (or white) region in the time frequency plane. Within this region, no power values are calculated. The reason for this is that for the corresponding time points, the requested timewindow is not entirely filled with data. For example for 2 Hz the time window has a length of 3.5 s (7 cycles for 2 cycles/s = 3.5 s), this does not fit in the 3 sec window that is preprocessed and therefore there is no data point here. For 5 Hz the window has a length of 1.4 s (7 cycles for 5 cycles/s = 1.4 s). We preprocessed data between t = -1 sec and t = 2 sec so the first power value is assigned to t= -0.3 (since -1 + (0.5 \* 1.4) = -0.3). Because of these boundary effects it is important to apply **[ft_freqanalysis ](/reference/ft_freqanalysis)** to a larger time window to get all the time frequency points for your time window of interest. This requires some thinking ahead when designing your experiment, because inclusion of data from epochs-of-non-interest might contaminate your data with artifacts or other unwanted data features (e.g. stimulus-offset related rebounds).
+Note the boundary effects, in particular for the lower frequency bins, i.e. the blue (or white) region in the time frequency plane. Within this region, no power values are calculated. The reason for this is that for the corresponding time points, the requested timewindow is not entirely filled with data. For example for 2 Hz the time window has a length of 3.5 s (7 cycles for 2 cycles/s = 3.5 s), this does not fit in the 3 sec window that is preprocessed and therefore there is no data point here. For 5 Hz the window has a length of 1.4 s (7 cycles for 5 cycles/s = 1.4 s). We preprocessed data between t = -1 sec and t = 2 sec so the first power value is assigned to t= -0.3 (since -1 + (0.5 \* 1.4) = -0.3). Because of these boundary effects it is important to apply **[ft_freqanalysis ](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqanalysis.m)** to a larger time window to get all the time frequency points for your time window of interest. This requires some thinking ahead when designing your experiment, because inclusion of data from epochs-of-non-interest might contaminate your data with artifacts or other unwanted data features (e.g. stimulus-offset related rebounds).
 {% include markup/end %}
 
 If you would like to learn more about plotting of time-frequency representations, please see the [visualization](#visualization) section.
@@ -241,7 +241,7 @@ If you would like to learn more about plotting of time-frequency representations
 #### Exercise 3
 
 {% include markup/exercise %}
-Adjust the length of the time-window and thereby degree of smoothing. Use **[ft_singleplotTFR](/reference/ft_singleplotTFR)** to show the results. Discuss the consequences of changing these setting.
+Adjust the length of the time-window and thereby degree of smoothing. Use **[ft_singleplotTFR](https://github.com/fieldtrip/fieldtrip/blob/release/ft_singleplotTFR.m)** to show the results. Discuss the consequences of changing these setting.
 
 4 cycles per time window:
 
@@ -273,7 +273,7 @@ Adjust the length of the time-window and thereby degree of smoothing. Use **[ft_
 
 Multitapers are typically used in order to achieve better control over the frequency smoothing. More tapers for a given time window will result in stronger smoothing. For frequencies above 30 Hz, smoothing has been shown to be advantageous, increasing sensitivity thanks to reduced variance in the estimates despite reduced effective spectral resolution. Oscillatory gamma activity (30-100 Hz) is quite broad band and thus analysis of this signal component benefits from multitapering, which trades spectral resolution against increased sensitivity. For signals lower than 30 Hz it is recommend to use only a single taper, e.g. a Hanning taper as shown above (beware that in the example below multitapers are used to analyze low frequencies because there are no effects in the gamma band in this dataset).
 
-Time-frequency analysis based on multitapers can be performed by the function **[ft_freqanalysis](/reference/ft_freqanalysis)**. The function uses a sliding time window for which the power is calculated for a given frequency. Prior to calculating the power by discrete Fourier transforms the data are 'tapered'. Several orthogonal tapers might be used for each time window. The power is calculated for each tapered data segment and then combined. In the example below we apply a time window which gradually becomes shorter for higher frequencies (similar to wavelet techniques). Note that this is not necessary, but up to the researcher to decide. The arguments for the chosen parameters are as follows:
+Time-frequency analysis based on multitapers can be performed by the function **[ft_freqanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqanalysis.m)**. The function uses a sliding time window for which the power is calculated for a given frequency. Prior to calculating the power by discrete Fourier transforms the data are 'tapered'. Several orthogonal tapers might be used for each time window. The power is calculated for each tapered data segment and then combined. In the example below we apply a time window which gradually becomes shorter for higher frequencies (similar to wavelet techniques). Note that this is not necessary, but up to the researcher to decide. The arguments for the chosen parameters are as follows:
 
 - cfg.foi, the frequencies of interest, here from 1 Hz to 30 Hz in steps of 2 Hz. The step size could be decreased at the expense of computation time and redundancy.
 - cfg.toi, the time-interval of interest. This vector determines the center times for the time windows for which the power values should be calculated. The setting cfg.toi = -0.5:0.05:1.5 results in power values from -0.5 to 1.5 s in steps of 50 ms. A finer time resolution will give redundant information and longer computation times, but a smoother graphical output.

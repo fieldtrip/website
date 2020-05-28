@@ -75,7 +75,7 @@ to see the amount of data in the buffer steadily increasing over time. Note that
 
 After a certain amount of time, the [ring buffer](http://en.wikipedia.org/wiki/Circular_buffer) will fill up and start wrapping around. From that point onward you will not be able to read the data all the way back from sample 1.
 
-You can combine the **[ft_read_header](/reference/ft_read_header)** and **[ft_read_data](/reference/ft_read_data)** calls to plot only the data of interest. You can also use **[ft_read_event](/reference/ft_read_event)** to determine triggers, and based on those process certain pieces of data.
+You can combine the **[ft_read_header](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_header.m)** and **[ft_read_data](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_data.m)** calls to plot only the data of interest. You can also use **[ft_read_event](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_event.m)** to determine triggers, and based on those process certain pieces of data.
 
 ## Suggested further reading
 

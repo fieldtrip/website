@@ -28,7 +28,7 @@ You can find the template 3-D electrode sets included in FieldTrip [here](https:
 
 The following template electrode sets describe the 10-20 EEG electrodes and were constructed by Robert Oostenveld as part of the study described in _Robert Oostenveld and Peter Praamstra. **The five percent electrode system for high-resolution EEG and ERP measurements.** Clin Neurophysiol. 2001 Apr;112(4):713-9._ More details on the electrode positioning and the different naming schemes can be found in the paper (link to [pubmed](http://www.ncbi.nlm.nih.gov/pubmed/11275545), [sciencedirect](http://www.sciencedirect.com/science/article/pii/S1388245700005277)) and on Robert's [personal blog](http://robertoostenveld.nl/?p=5).
 
-The electrodes are stored in an ASA .elc file which can be read with **[ft_read_sens](/reference/ft_read_sens)**. The electrode positions are represented in mm in the MNI coordinate system and are aligned with the scalp model which is detailed in [this publication](http://www.ncbi.nlm.nih.gov/pubmed/12842715).
+The electrodes are stored in an ASA .elc file which can be read with **[ft_read_sens](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_sens.m)**. The electrode positions are represented in mm in the MNI coordinate system and are aligned with the scalp model which is detailed in [this publication](http://www.ncbi.nlm.nih.gov/pubmed/12842715).
 
 - standard_1005.elc
 - standard_1020.elc

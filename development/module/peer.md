@@ -40,7 +40,7 @@ which will compute a random matrix on each of the three slaves. You can compare 
 
 What happened in the peercellfun call is that each of the sets of input arguments {'rand', 10}, {'rand', 20} and {'rand', 30} was sent to one of the available slaves. The slave peer is waiting for something to arrive, and as soon as a job arrives, the slave executes rand(10), rand(20) or rand(30) and the output arguments are sent back to the master.
 
-The example above demonstrates how you can use **[peercellfun](/reference/peercellfun)** to distribute jobs consisting of a single function that is executed on multiple input arguments. Another function that is available is **[peerfeval](/reference/peerfeval)**, which works similar to the normal MATLAB feval function.
+The example above demonstrates how you can use **[peercellfun](https://github.com/fieldtrip/fieldtrip/blob/release/peercellfun.m)** to distribute jobs consisting of a single function that is executed on multiple input arguments. Another function that is available is **[peerfeval](https://github.com/fieldtrip/fieldtrip/blob/release/peerfeval.m)**, which works similar to the normal MATLAB feval function.
 
 ### Starting the master on your computer
 
@@ -48,7 +48,7 @@ On your own computer you start a MATLAB session and type
 
     peermaster
 
-The **[peermaster](/reference/peermaster)** command will start the network buffer and the peer discovery threads in the background and signal the other peers on the network that you are not willing to execute jobs for them.
+The **[peermaster](https://github.com/fieldtrip/fieldtrip/blob/release/peermaster.m)** command will start the network buffer and the peer discovery threads in the background and signal the other peers on the network that you are not willing to execute jobs for them.
 
 In case you have a computer with a multi-core CPU (as most computers have nowadays), you can also start a peerslave for each of the idle cores. An efficient usage of your N-core CPU would consist of N slaves and one master.
 
@@ -58,7 +58,7 @@ You start multiple MATLAB instances, one per available core. Within each MATLAB 
 
     peerslave
 
-The **[peerslave](/reference/peerslave)** command will start the network buffer and the peer discovery threads in the background, switch to slave mode to signal the other peers that it is willing to execute a job and wait until a request for execution comes in.
+The **[peerslave](https://github.com/fieldtrip/fieldtrip/blob/release/peerslave.m)** command will start the network buffer and the peer discovery threads in the background, switch to slave mode to signal the other peers that it is willing to execute a job and wait until a request for execution comes in.
 
 ### Requirement: enough MATLAB licenses
 

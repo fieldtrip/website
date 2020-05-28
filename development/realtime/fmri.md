@@ -152,7 +152,7 @@ name that starts with "d" will always be parsed as a double precision value, eve
 looks like an integer. Please see siemensap.h for Doxygen-style documentation of the API.
 
 The same C library is also used within the **sap2matlab** MEX file for decoding the ASCII protocol into a MATLAB
-data structure. However, this gets automatically called in **[ft_read_header](/reference/ft_read_header)**, so users won't need to worry if they
+data structure. However, this gets automatically called in **[ft_read_header](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_header.m)**, so users won't need to worry if they
 stick to the usual FieldTrip functions.
 
 ### Compilation
@@ -161,6 +161,6 @@ We provide a simple "Makefile" for the MinGW compiler on Windows or GCC on other
 
 ## Testing with pre-recorded fMRI data
 
-You can use the MATLAB function **[ft_realtime_fmriproxy](/reference/ft_realtime_fmriproxy)**, which emulates an fMRI acquisition system by writing volumes in a cycle of about 2 seconds. The data is simulated on the fly.
+You can use the MATLAB function **[ft_realtime_fmriproxy](https://github.com/fieldtrip/fieldtrip/blob/release/ft_realtime_fmriproxy.m)**, which emulates an fMRI acquisition system by writing volumes in a cycle of about 2 seconds. The data is simulated on the fly.
 
-Alternatively, you can use **[ft_realtime_dicomproxy](/reference/ft_realtime_dicomproxy)**, which emulates an fMRI acquisition system by reading a series of DICOM files from disk.
+Alternatively, you can use **[ft_realtime_dicomproxy](https://github.com/fieldtrip/fieldtrip/blob/release/ft_realtime_dicomproxy.m)**, which emulates an fMRI acquisition system by reading a series of DICOM files from disk.

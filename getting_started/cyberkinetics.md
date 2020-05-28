@@ -18,7 +18,7 @@ You will need to download the "MATLAB Import Filter" and the Cyberkinetics libra
 The low-level FieldTrip reading function that is used to read Cyberkinetics dat
 fieldtrip/fileio/private/read_neuroshare.m
 
-To get started, you should add the FieldTrip main directory to your path, and execute the **[ft_defaults](/reference/ft_defaults)** function, which sets the defaults and configures up the minimal required path settings. See also this [frequently asked question](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path).
+To get started, you should add the FieldTrip main directory to your path, and execute the **[ft_defaults](https://github.com/fieldtrip/fieldtrip/blob/release/ft_defaults.m)** function, which sets the defaults and configures up the minimal required path settings. See also this [frequently asked question](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path).
 
     addpath <path_to_fieldtrip>
     ft_defaults

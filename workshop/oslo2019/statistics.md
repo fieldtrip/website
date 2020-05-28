@@ -116,9 +116,9 @@ _stat_t_ contains:
 - _time_ is a row vector with the time points in seconds
 - _cfg_ shows the cfg that gave rise to this structure
 
-We can now plot the ERPs using the field _cfg.maskparameter_ of the plotting functions: **[ft_multiplotER](/reference/ft_multiplotER)**, **[ft_singleplotER](/reference/ft_singleplotER)** and **[ft_topoplotER](/reference/ft_topoplotER)**
+We can now plot the ERPs using the field _cfg.maskparameter_ of the plotting functions: **[ft_multiplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_multiplotER.m)**, **[ft_singleplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_singleplotER.m)** and **[ft_topoplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_topoplotER.m)**
 
-Here, we will show **[ft_singleplotER](/reference/ft_singleplotER)**
+Here, we will show **[ft_singleplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_singleplotER.m)**
 
     ERP_standard.mask = stat_t.mask; % adding mask to ERP
 
@@ -177,7 +177,7 @@ The Bonferroni correction has eliminated some likely _false positives_, but prob
 
 #### Cluster-based correction for multiple comparisons
 
-As noted above, EEG data is smooth over the spatio-temporal dimensions. We can easily imaging how we can build clusters in the temporal dimension. These are simply data points that are neighboring each other in time. For the spatial dimension, it is necessary to build a neighbor structure using **[ft_prepare_neighbours](/reference/ft_prepare_neighbours)**. This uses the (digitized) positions of the electrodes.
+As noted above, EEG data is smooth over the spatio-temporal dimensions. We can easily imaging how we can build clusters in the temporal dimension. These are simply data points that are neighboring each other in time. For the spatial dimension, it is necessary to build a neighbor structure using **[ft_prepare_neighbours](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_neighbours.m)**. This uses the (digitized) positions of the electrodes.
 
 ##### Neighbors
 
@@ -364,7 +364,7 @@ Here, we'll just quickly show how to do within-subject statistics on TFRs
 
 ### Load the data
 
-First, we'll load the data, both the ones with the trials and the ones with the average of the trials. We append the two trial data structures to one another using **[ft_appendfreq](/reference/ft_appendfreq)** and we calculate the difference between the two averages using **[ft_math](/reference/ft_math)**.
+First, we'll load the data, both the ones with the trials and the ones with the average of the trials. We append the two trial data structures to one another using **[ft_appendfreq](https://github.com/fieldtrip/fieldtrip/blob/release/ft_appendfreq.m)** and we calculate the difference between the two averages using **[ft_math](https://github.com/fieldtrip/fieldtrip/blob/release/ft_math.m)**.
 
     load tfr_left_trials.mat
     load tfr_right_trials.mat

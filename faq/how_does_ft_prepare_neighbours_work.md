@@ -5,7 +5,7 @@ tags: [statistics, cluster]
 
 # How does ft_prepare_neighbours work?
 
-There are three methods how **[ft_prepare_neighbours](/reference/ft_prepare_neighbours)** can define the neighbour structure for your data: '**distance**', '**triangulation**' and '**template**'.
+There are three methods how **[ft_prepare_neighbours](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_neighbours.m)** can define the neighbour structure for your data: '**distance**', '**triangulation**' and '**template**'.
 
 Usually, neighbouring sensors can be defined as sensors that are close by. The '**distance**' method simply draws a circle of certain size around each sensor-position. Each other sensor included in this circle is defined to be a neighbouring sensor. The radius of the circle is defined by cfg.neighbourdist. If not given a value, the function will try to be smart and 'guess' a good value. From experience we know, however, that this default is not always a good choice. Choosing 'distance' as the defining property of neighbour might not always be useful. It might introduce superflous information, thereby reducing sensitivity of your analyses. It will lead to some central sensor having way more neighbours than outer sensors, which, depending on the choice of cfg.neighbourdist, might even be neglected.
 
@@ -14,4 +14,4 @@ The problem of defining neighbouring nodes in a network is known from graph theo
 
 To circumvent all the above mentioned problems, we introduced a ['**template**'-based approach](/template/neighbours) for neighbourselection in summer 2011. The rationale behind this approach is simply that systems across the world are equal, therefore any neighbourselection once made should be valid for other systems of the same kind. However, selection of neighbours still is highly subjective. All templates in FieldTrip can and will probably updated and optimized, without you as the user realizing this. Please make sure to verify the template-defined neighbourselection by ft_neighbourplot.
 
-For more information how to call and use this, see **[ft_prepare_neighbours](/reference/ft_prepare_neighbours)** and **[ft_neighbourplot](/reference/ft_neighbourplot)**.
+For more information how to call and use this, see **[ft_prepare_neighbours](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_neighbours.m)** and **[ft_neighbourplot](https://github.com/fieldtrip/fieldtrip/blob/release/ft_neighbourplot.m)**.

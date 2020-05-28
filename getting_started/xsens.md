@@ -9,7 +9,7 @@ tags: [xsens, motion, dataformat]
 
 ## C3D
 
-The [C3D](https://www.c3d.org) format can be read in FieldTrip using the low-level [reading functions](/development/fileio) and using the high-level **[ft_preprpcessing](/reference/ft_preprocessing)** function.
+The [C3D](https://www.c3d.org) format can be read in FieldTrip using the low-level [reading functions](/development/module/fileio) and using the high-level **[ft_preprpcessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** function.
 
     cfg = [];
     cfg.dataset = 'sub-03_rec-01_take-02_motion.c3d'
@@ -57,7 +57,7 @@ where the channels correspond to the time-varying positions of of the reconstruc
 
 ## MVNX
 
-The MVNX file format is an open XML file format that contains more information than the C3D files, including all of the segment information as well as joint angle data, center of mass and factory calibrated sensor data. It can be read using either the low-level [reading functions](/development/fileio) and using the high-level **[ft_preprpcessing](/reference/ft_preprocessing)** function.
+The MVNX file format is an open XML file format that contains more information than the C3D files, including all of the segment information as well as joint angle data, center of mass and factory calibrated sensor data. It can be read using either the low-level [reading functions](/development/module/fileio) and using the high-level **[ft_preprpcessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** function.
 
 Reading the MVNX file requires that you have the `load_mvnx.m` function on your MATLAB path. This function can be found within the MVN Studio Developer Toolkit or [here](https://github.com/Roger-Dai/motion-capture). We recommend that you put the file in `fieldtrip/external/xsens`, in which case that directory will automatically be added to the path when needed.
 

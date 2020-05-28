@@ -16,13 +16,13 @@ Neurophysiological data can become quite large with the result that disk space, 
 ## Memory efficient coding tips
 
 - Work on your programming _style_. Take a look [here](http://www.datatool.com/downloads/matlab_style_guidelines.pdf) for a concise summary of the recommended style of programming.
-- Downsample your data (but backup your original data), e.g. using **[ft_resampledata](/reference/ft_resampledata)**
-- Change data to single-precision (after preprocessing by using **[ft_struct2single](/reference/ft_struct2single)** or by using `cfg.precision = 'single'` in certain functions)
-- Check if you really have to “cfg.keeptrials = 'yes'” in **[ft_freqanalysis](/reference/ft_freqanalysis)**.
+- Downsample your data (but backup your original data), e.g. using **[ft_resampledata](https://github.com/fieldtrip/fieldtrip/blob/release/ft_resampledata.m)**
+- Change data to single-precision (after preprocessing by using **[ft_struct2single](https://github.com/fieldtrip/fieldtrip/blob/release/ft_struct2single.m)** or by using `cfg.precision = 'single'` in certain functions)
+- Check if you really have to “cfg.keeptrials = 'yes'” in **[ft_freqanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqanalysis.m)**.
 - If you are working on a single subject, make sure other subjects are no longer in memory. This might seem trivial, but many people assign unique variables to subjects and forget to clear them.
 - Perhaps most importantly – once in a while let someone else go through your scripts to see if they can be optimized.
 - Within a script or function make sure you clear large variables that you don't need anymore using the clear statement. Note that MATLAB's memory use might not be intuitive. For instance, reloading a large dataset into the same variable may result in MATLAB allocating twice the memory you actually need.
-- The `cfg` field in your FieldTrip data structures stores the history of the processing steps performed on the data. This field can get quite large after many such steps and specifically after appending several data structures, because each `cfg` is stored in a cell array within the `cfg.previous` field. You can look at the cfg using **[ft_analysispipeline](/reference/ft_analysispipeline)**. Simply emptying this field (e.g. by doing `freq.cfg = []`) will free up space. Remember to keep a copy of the cfg field on disk if you want to keep track of your analysis pipeline. 
+- The `cfg` field in your FieldTrip data structures stores the history of the processing steps performed on the data. This field can get quite large after many such steps and specifically after appending several data structures, because each `cfg` is stored in a cell array within the `cfg.previous` field. You can look at the cfg using **[ft_analysispipeline](https://github.com/fieldtrip/fieldtrip/blob/release/ft_analysispipeline.m)**. Simply emptying this field (e.g. by doing `freq.cfg = []`) will free up space. Remember to keep a copy of the cfg field on disk if you want to keep track of your analysis pipeline. 
 
 {% include markup/warning %}
 If you have any more suggestions please add them here.

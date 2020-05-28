@@ -4,7 +4,7 @@ tags: [example, freq, coherence, eeg, meg, fixme]
 ---
 
 {% include markup/warning %}
-This tutorial does not follow the structure of the "main" FieldTrip tutorials, but rather explains the lower-level MATLAB functions instead of **[ft_freqanalysis](/reference/ft_freqanalysis)**.
+This tutorial does not follow the structure of the "main" FieldTrip tutorials, but rather explains the lower-level MATLAB functions instead of **[ft_freqanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqanalysis.m)**.
 
 Perhaps you are looking for the tutorial on [time-frequency analysis](/tutorial/timefrequencyanalysis)?
 {% include markup/end %}

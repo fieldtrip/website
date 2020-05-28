@@ -108,7 +108,7 @@ Here is the list of the functions in the module Forward (folders: \_fieldtrip/fo
     triangle4pt.m
     warp_apply.m
 
-**functions which have the .m file somewhere else (src folder?)**
+**functions which have the .m file somewhere else (src folder?.m)**
 
     meg_leadfield1.mexa64
     routlm.mexa64

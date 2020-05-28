@@ -7,7 +7,7 @@ tags: [example, planar, gradient, combineplanar]
 
 ## Description
 
-This script demonstrates the pipeline sequence you should follow when you use **[ft_combineplanar](/reference/ft_combineplanar)** in your induced Time-Frequency and Event-Related Fields analysis. This script is specific for MEG datasets that have axial/magnetometer sensors (CTF, Elekta) and you're interested to compute a synthetic planar representation.
+This script demonstrates the pipeline sequence you should follow when you use **[ft_combineplanar](https://github.com/fieldtrip/fieldtrip/blob/release/ft_combineplanar.m)** in your induced Time-Frequency and Event-Related Fields analysis. This script is specific for MEG datasets that have axial/magnetometer sensors (CTF, Elekta) and you're interested to compute a synthetic planar representation.
 
 ## Example dataset
 

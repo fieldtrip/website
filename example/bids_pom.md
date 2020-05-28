@@ -101,7 +101,7 @@ original
 
 Each of these directories contain either a few files (for emg, eyetracker and task) or many files (for the MR scans).
 
-After converting/reorganizing the data to the BIDS structure using [bidscoin](https://github.com/Donders-Institute/bidscoin) for the MR data and **[data2bids](/reference/data2bids)** for the rest (see below), we obtain the following directory and file structure.
+After converting/reorganizing the data to the BIDS structure using [bidscoin](https://github.com/Donders-Institute/bidscoin) for the MR data and **[data2bids](https://github.com/fieldtrip/fieldtrip/blob/release/data2bids.m)** for the rest (see below), we obtain the following directory and file structure.
 
 ```bash
 bids
@@ -331,7 +331,7 @@ The MRI data was converted from DICOM to BIDS using [bidscoin](https://github.co
 
 ## Converting the non-MRI data to BIDS
 
-The conversion of the EMG, eye tracker and behavioral data to BIDS uses **[data2bids](/reference/data2bids)** and follows the [other examples](/example/bids) that you can find on this website. Note that in the following code the Presentation files are converted to `_events.tsv` files, but these are not only linked the fMRI data, but also to the EMG and to the eye tracker, and therefore we choose here to place the events in the beh directory, rather than alongside the fMRI in the func directory.
+The conversion of the EMG, eye tracker and behavioral data to BIDS uses **[data2bids](https://github.com/fieldtrip/fieldtrip/blob/release/data2bids.m)** and follows the [other examples](/example/bids) that you can find on this website. Note that in the following code the Presentation files are converted to `_events.tsv` files, but these are not only linked the fMRI data, but also to the EMG and to the eye tracker, and therefore we choose here to place the events in the beh directory, rather than alongside the fMRI in the func directory.
 
 The first part of the code is general metadata/documentation and applies to all data:
 
@@ -691,7 +691,7 @@ The events from the presentation log file can also be aligned using the MRI trig
 
 #### Presentation custom log file (.txt)
 
-The events in the custom `.txt` log file from presentation was not processed by the **[ft_read_event](/reference/ft_read_event)** function, but rather using MATLAB [readtable](https://www.mathworks.com/help/matlab/ref/readtable.html). As a consequence, it has many more details, i.e. rows, however the rows are not standardized. Also, it does not contain one "event" per row, but it contains one "trial" per row, which consists of both a stimulus and response. Furthermore, each trial is scored as correct/oincorrect.
+The events in the custom `.txt` log file from presentation was not processed by the **[ft_read_event](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_event.m)** function, but rather using MATLAB [readtable](https://www.mathworks.com/help/matlab/ref/readtable.html). As a consequence, it has many more details, i.e. rows, however the rows are not standardized. Also, it does not contain one "event" per row, but it contains one "trial" per row, which consists of both a stimulus and response. Furthermore, each trial is scored as correct/oincorrect.
 
 There are 132 trials in the `.txt` file, hence we expect 132 corresponding events for the presentation log and the EMG.
 
@@ -718,7 +718,7 @@ The following code shows each event value of the presentation `.log` file, and h
     9   132
     10  595
 
-It reveals that value 8 and 9 both happen 132 times. It also shows 595 occurrences for value 10, which probably corresponds to the triggers of the functional MRI scan. This is something we could again check using **[ft_read_mri](/reference/ft_read_mri)**.
+It reveals that value 8 and 9 both happen 132 times. It also shows 595 occurrences for value 10, which probably corresponds to the triggers of the functional MRI scan. This is something we could again check using **[ft_read_mri](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_mri.m)**.
 
 The first trial in the presentation `.txt` file is specified to be at 83.307391 seconds. The first "Picture 8" in the presentation log file is at 83.3074 seconds, which is nearly the same. It also matches that there are 132 "Picture 8" events. Hence the time of the presentation `.log` and `.txt` files is the same, which could have been expected since both are written by the same software on the same computer. The corresponding entry in the `_scans.tsv` file should therefore become '1900-01-01T19:10:03.769'.
 

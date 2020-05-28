@@ -5,11 +5,11 @@ tags: [faq, dataformat, preprocessing, raw]
 
 # What dataformats are supported?
 
-FieldTrip has a flexible way for supporting data formats. It uses a small number of reading functions that provide a common interface to all electrophysiological (MEG/EEG) and MRI file formats: **[ft_read_header](/reference/ft_read_header)**, **[ft_read_data](/reference/ft_read_data)** and **[ft_read_event](/reference/ft_read_event)**. Where needed, these functions will call the appropriate low-level functions that are apecific to the file format. Some of the low-level functions are written by ourselves, others are supplied by the manufacturers and again others are obtained from other open source toolboxes. You can find more technical information on the reading functions on [this](/development/module/fileio) page.
+FieldTrip has a flexible way for supporting data formats. It uses a small number of reading functions that provide a common interface to all electrophysiological (MEG/EEG) and MRI file formats: **[ft_read_header](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_header.m)**, **[ft_read_data](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_data.m)** and **[ft_read_event](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_event.m)**. Where needed, these functions will call the appropriate low-level functions that are apecific to the file format. Some of the low-level functions are written by ourselves, others are supplied by the manufacturers and again others are obtained from other open source toolboxes. You can find more technical information on the reading functions on [this](/development/module/fileio) page.
 
 What follows is a summary of the data formats that are supported by FieldTrip. You can find more details on some of the formats, especially regarding the different MEG systems and their auxiliary files (e.g. MRI and volume conduction models). We regularly implement new data formats and this documentation may be out of date, so if yours is not listed here, please check the code.
 
-The following MEG data formats are supported by **[ft_read_header](/reference/ft_read_header)**, **[ft_read_data](/reference/ft_read_data)** and **[ft_read_event](/reference/ft_read_event)**:
+The following MEG data formats are supported by **[ft_read_header](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_header.m)**, **[ft_read_data](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_data.m)** and **[ft_read_event](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_event.m)**:
 
 - [CTF](/getting_started/ctf) (.ds, .res4, .meg4)
 - [Neuromag/Elekta/MEGIN](/getting_started/neuromag) (.fif)
@@ -18,7 +18,7 @@ The following MEG data formats are supported by **[ft_read_header](/reference/ft
 - ITAB
 - Tristan BabySquid
 
-The following EEG data formats are supported by **[ft_read_header](/reference/ft_read_header)**, **[ft_read_data](/reference/ft_read_data)** and **[ft_read_event](/reference/ft_read_event)**:
+The following EEG data formats are supported by **[ft_read_header](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_header.m)**, **[ft_read_data](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_data.m)** and **[ft_read_event](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_event.m)**:
 
 - [ANT Neuro](/getting_started/antneuro) (.avr, .cnt, .trg)
 - BESA (.avr, .swf)
@@ -32,7 +32,7 @@ The following EEG data formats are supported by **[ft_read_header](/reference/ft
 - TMSi (.Poly5)
 - generic standard formats (.edf, .gdf)
 
-The following EEG/MEG sensor formats are supported by **[ft_read_sens](/reference/ft_read_sens)**:
+The following EEG/MEG sensor formats are supported by **[ft_read_sens](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_sens.m)**:
 
 - All supported MEG formats (CTF, Neuromag/Elekta/MEGIN, BTi/4D, Yokogawa/Ricoh)
 - ASA electrode file
@@ -43,7 +43,7 @@ The following EEG/MEG sensor formats are supported by **[ft_read_sens](/referenc
 - FIL Polhemus recording
 - SPM5/SPM8/SPM12 electrode positions
 
-The following spike and LFP data formats are supported by **[ft_read_spike](/reference/ft_read_spike)** and **[ft_read_data](/reference/ft_read_data)**:
+The following spike and LFP data formats are supported by **[ft_read_spike](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_spike.m)** and **[ft_read_data](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_data.m)**:
 
 - [Plexon](/getting_started/plexon) (.nex, .plx, .ddt)
 - [Neuralynx](/getting_started/neuralynx) (.ncs, .nse, .nts, .nev, .nrd, .dma, .log)
@@ -51,19 +51,19 @@ The following spike and LFP data formats are supported by **[ft_read_spike](/ref
 - MPI - Max Planck Institute (.dap)
 - Windaq (.wdq)
 
-The following NIRS data formats are supported by **[ft_read_header](/reference/ft_read_header)**, **[ft_read_data](/reference/ft_read_data)** and **[ft_read_event](/reference/ft_read_event)**:
+The following NIRS data formats are supported by **[ft_read_header](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_header.m)**, **[ft_read_data](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_data.m)** and **[ft_read_event](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_event.m)**:
 
 - Artinis Medical Systems (.oxy3, .oxy4)
 - ASCII-formatted data from the NIRS system from Birkbeck college, London (.txt)
 - Homer (.nirs)
 
-The following eye-tracker data formats are supported by **[ft_read_header](/reference/ft_read_header)**, **[ft_read_data](/reference/ft_read_data)** and **[ft_read_event](/reference/ft_read_event)**:
+The following eye-tracker data formats are supported by **[ft_read_header](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_header.m)**, **[ft_read_data](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_data.m)** and **[ft_read_event](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_event.m)**:
 
 - SR Research EyeLink (.asc)
 - SMI - SensoMotoric Instruments (.txt)
 - Tobii (.tsv)
 
-The following anatomical MRI data formats are supported by **[ft_read_mri](/reference/ft_read_mri)**:
+The following anatomical MRI data formats are supported by **[ft_read_mri](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_mri.m)**:
 
 - NIFTI (.nii / .nii.gz), using the FreeSurfer toolbox
 - mgz (.mgz), using the FreeSurfer toolbox
@@ -73,7 +73,7 @@ The following anatomical MRI data formats are supported by **[ft_read_mri](/refe
 - ASA (.mri, .iso)
 - DICOM (.ima, .dcm)
 
-The following surface and volume mesh formats are supported by **[ft_read_headshape](/reference/ft_read_headshape)**:
+The following surface and volume mesh formats are supported by **[ft_read_headshape](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_headshape.m)**:
 
 - Generic meshes (.stl, .off)
 - Visualisation Toolkit (.vtk)

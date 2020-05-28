@@ -67,7 +67,7 @@ The current naming scheme is ambiguous and/or inefficient for end-users and deve
 - _ft_ccplottopo...?_
 - _ft_statplotXXX....?_
 
-**Extra Intermediate-level functions (to be located in trunk/private?)**
+**Extra Intermediate-level functions (to be located in trunk/private?.m)**
 
 - ft_1dsingleplot
 - ft_2dsingleplot

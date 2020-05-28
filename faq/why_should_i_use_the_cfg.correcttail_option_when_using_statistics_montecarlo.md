@@ -5,7 +5,7 @@ tags: [faq, statistics, cluster]
 
 # Why should I use the cfg.correcttail option when using statistics_montecarlo?
 
-When running statistics using **[ft_freqstatistics](/reference/ft_freqstatistics)**, **[ft_timelockstatistics](/reference/ft_timelockstatistics)**, or **[ft_sourcestatistics](/reference/ft_sourcestatistics)** with cfg.method = 'montecarlo' you are presented with the option cfg.correcttail, which is relevant when you are doing a two-sided tes
+When running statistics using **[ft_freqstatistics](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqstatistics.m)**, **[ft_timelockstatistics](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockstatistics.m)**, or **[ft_sourcestatistics](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourcestatistics.m)** with cfg.method = 'montecarlo' you are presented with the option cfg.correcttail, which is relevant when you are doing a two-sided tes
 
     %   cfg.correcttail = correct p-values or alpha-values when doing a two-sided test, 'alpha','prob' or 'no' (default = 'no')
 

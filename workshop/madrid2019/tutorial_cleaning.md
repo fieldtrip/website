@@ -56,10 +56,10 @@ With these guidelines in mind, let us load [Chennu et al., data](/workshop/madri
 
 In this tutorial the following steps will be taken:
 
-- Read the data into MATLAB using **[ft_preprocessing](/reference/ft_preprocessing)** and visualize the data in between processsing steps with **[ft_databrowser](/reference/ft_databrowser)**
-- Interpolate broken channels or noisy data segments with **[ft_channelrepair](/reference/ft_channelrepair)**, removing artifacts with **[ft_rejectartifact](/reference/ft_rejectartifact)**
-- Select relevant segments of data using **[ft_redefinetrial](/reference/ft_redefinetrial)** as well as concatenating data using **[ft_appenddata](/reference/ft_appenddata)**
-- Once all data is cleaned, correct for eye movement artifacts by running independent component analysis using **[ft_componentanalysis](/reference/ft_componentanalysis)**
+- Read the data into MATLAB using **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** and visualize the data in between processsing steps with **[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_databrowser.m)**
+- Interpolate broken channels or noisy data segments with **[ft_channelrepair](https://github.com/fieldtrip/fieldtrip/blob/release/ft_channelrepair.m)**, removing artifacts with **[ft_rejectartifact](https://github.com/fieldtrip/fieldtrip/blob/release/ft_rejectartifact.m)**
+- Select relevant segments of data using **[ft_redefinetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_redefinetrial.m)** as well as concatenating data using **[ft_appenddata](https://github.com/fieldtrip/fieldtrip/blob/release/ft_appenddata.m)**
+- Once all data is cleaned, correct for eye movement artifacts by running independent component analysis using **[ft_componentanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_componentanalysis.m)**
 
 ## Reading in data
 
@@ -102,7 +102,7 @@ We will start with some minimal preprocessing:
 
 {% include markup/danger %}
 As you notice we use the average reference, which is breaking with de Cheveigne & Arzounian's guidelines. We do it anyways because the average reference enhances the interpretability of the data when using
-**[ft_databrowser](/reference/ft_databrowser)**. For example, interpreting topoplots to identify both artifacts and interesting electrophysiological phenomena is always easier with an average reference. Keep in mind though that by subtracting an average, noisy periods present in only few EEG channels will spread to all other channels.
+**[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_databrowser.m)**. For example, interpreting topoplots to identify both artifacts and interesting electrophysiological phenomena is always easier with an average reference. Keep in mind though that by subtracting an average, noisy periods present in only few EEG channels will spread to all other channels.
 {% include markup/end %}
 
 Following preprocessing, the data will have the following fields
@@ -130,7 +130,7 @@ systems, take a look at the custom function and
 
 _Discarding pathological channels for which there is no useful signal_ is the
 first step in de Cheveigne & Arzounian's guidelines, so we will now use the
-**[ft_databrowser](/reference/ft_databrowser)** to visually inspect our data and
+**[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_databrowser.m)** to visually inspect our data and
 mark time segments where data is noisy. We can use this function to
 simultaneously mark and keep track of different types of physiological
 artifacts, such as blinks or muscle artifacts. If you have not used the
@@ -162,8 +162,8 @@ recording, can you find it? Use the identify button to see the channel name.
 
 We manually add the names of channels that are bad throughout the entire
 recording to the artifact structure. Many FieldTrip functions, ie
-**[ft_channelselection](/reference/ft_channelselection)** or
-**[ft_channelrepair](/reference/ft_channelrepair)**, which we will use further
+**[ft_channelselection](https://github.com/fieldtrip/fieldtrip/blob/release/ft_channelselection.m)** or
+**[ft_channelrepair](https://github.com/fieldtrip/fieldtrip/blob/release/ft_channelrepair.m)**, which we will use further
 *down, require the specification of channel names in their configuration. For
 *this specify channel names as strings in a cell-array such as {'E7';'Oz'}
 
@@ -187,11 +187,11 @@ segments that contain artifacts.
 We repair channels by interpolation, or more precisely by replacing the bad
 channel with the average of their neighbouring channels. This requires a
 definition of neighbouring channels. FieldTrip comes with a variety of
-**[templates for defining neighbouring channels](/template/neighbours)**. For
+[templates for defining neighbouring channels](/template/neighbours). For
 this dataset we provide this information for you, but in general you know your
 own EEG system and your own data best and you should therefore think about
 your own neighbours structure. See also the
-**[ft_prepare_neighbours](/reference/ft_prepare_neighbours)** function.
+**[ft_prepare_neighbours](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_neighbours.m)** function.
 
     load('/madrid2019/tutorial_cleaning/cfg_neighbours', 'neighbours');
 
@@ -283,7 +283,7 @@ FieldTrip functions later to make it easier to use.
         data_fixed{1,k} = ft_channelrepair(cfg, data_bad);
     end
 
-After correcting each artifactual trial we can use **[ft_appenddata](/reference/ft_appenddata)** to
+After correcting each artifactual trial we can use **[ft_appenddata](https://github.com/fieldtrip/fieldtrip/blob/release/ft_appenddata.m)** to
 combine the trials into one structure again.
 
     data_fixed = ft_appenddata([], data_fixed{:});
@@ -292,7 +292,7 @@ combine the trials into one structure again.
 
 {% include markup/info %}
 Visualize the selected artifacts in data_bad with
-**[ft_databrowser](/reference/ft_databrowser)** and compare it to data_fixed.
+**[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_databrowser.m)** and compare it to data_fixed.
 You can also just plot the bad channel by specifying its name in cfg.channel. Or
 you can use the standard MATLAB plot function. For this you need to find the
 index of the channel using the `data.label` field.
@@ -320,7 +320,7 @@ artifacts and append the fixed data.
 Inspect the new data structure. What has changed?
 {% include markup/end %}
 
-In order keep the data as one continuous trial we use **[ft_redefinetrial](/reference/ft_redefinetrial)** and
+In order keep the data as one continuous trial we use **[ft_redefinetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_redefinetrial.m)** and
 the sample information
 
     cfg = [];
@@ -329,7 +329,7 @@ the sample information
 
 ## Visualize the results of channel interpolation
 
-We can use **[ft_databrowser](/reference/ft_databrowser)** to check the results of the interpolation.
+We can use **[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_databrowser.m)** to check the results of the interpolation.
 
     cfg = [];
     cfg.viewmode      = 'vertical';
@@ -488,7 +488,7 @@ by the independent component's time course.
 ##### Exercise 4
 
 {% include markup/info %}
-Use **[ft_databrowser](/reference/ft_databrowser)** one last time to view the
+Use **[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_databrowser.m)** one last time to view the
 cleaned data. Did the ICA successfully correct all eye blinks?
 {% include markup/end %}
 

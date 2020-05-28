@@ -32,9 +32,9 @@ If you want to know more about tapers/window functions you can have a look at th
 
 To calculate the time-frequency representation for the example dataset we will perform the following steps:
 
-- Read the data into Matlab using **[ft_definetrial](/reference/ft_definetrial)** and **[ft_preprocessing](/reference/ft_preprocessing)**
-- Compute the power values for each frequency bin and each time bin using the function **[ft_freqanalysis](/reference/ft_freqanalysis)**
-- Visualize the results. This can be done by creating time-frequency plots for one (**[ft_singleplotTFR](/reference/ft_singleplotTFR)**) or several channels (**[ft_multiplotTFR](/reference/ft_multiplotTFR)**), or by creating a topographic plot for a specified time- and frequency interval (**[ft_topoplotTFR](/reference/ft_topoplotTFR)**).
+- Read the data into Matlab using **[ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_definetrial.m)** and **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)**
+- Compute the power values for each frequency bin and each time bin using the function **[ft_freqanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqanalysis.m)**
+- Visualize the results. This can be done by creating time-frequency plots for one (**[ft_singleplotTFR](https://github.com/fieldtrip/fieldtrip/blob/release/ft_singleplotTFR.m)**) or several channels (**[ft_multiplotTFR](https://github.com/fieldtrip/fieldtrip/blob/release/ft_multiplotTFR.m)**), or by creating a topographic plot for a specified time- and frequency interval (**[ft_topoplotTFR](https://github.com/fieldtrip/fieldtrip/blob/release/ft_topoplotTFR.m)**).
 
 {% include image src="/assets/img/workshop/natmeg/timefrequency/tfr_pipelinenew.png" width="200" %}
 
@@ -42,7 +42,7 @@ _Figure: Schematic overview of the steps in time-frequency analysis_
 
 ## Preprocessing EEG data
 
-The first step is to read the data using the function **[ft_preprocessing](/reference/ft_preprocessing)**. With the aim to reduce boundary effects occurring at the start and the end of the trials, it is recommended to read larger time intervals than the time period of interest. In this example, the time of interest is from -1.0 s to 1.5 s (t = 0 s defines the time of response); however, the script reads the data from -1.5 s to 2.0 s.
+The first step is to read the data using the function **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)**. With the aim to reduce boundary effects occurring at the start and the end of the trials, it is recommended to read larger time intervals than the time period of interest. In this example, the time of interest is from -1.0 s to 1.5 s (t = 0 s defines the time of response); however, the script reads the data from -1.5 s to 2.0 s.
 
 The EEG dataset that we use in this tutorial is available as BrainVision EEG files from our FTP server. You should download the [binary data file](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/oslo2019/oddball1_mc_downsampled_eeg.eeg), the [header file](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/oslo2019/oddball1_mc_downsampled_eeg.vhdr), and the [text marker file](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/oslo2019/oddball1_mc_downsampled_eeg.vmrk). You can find out more about the BrainVision file format [in this overview](/getting_started/brainvision/).
 
@@ -73,7 +73,7 @@ We will focus on two conditions from this dataset: whether the participant respo
 
 ## Computing power spectra
 
-At first, we will look at the frequency content in the data using a Fourier transform using a Fourier transform with a Hanning window by using **[ft_freqanalysis](/reference/ft_freqanalysis)**. This is not time resolved, but gives us a power estimate per frequency over the whole time window. We calculate this separately for the trials where the participant responded with the left and the right index finger. We will calculate and visualize the power for a selected central EEG channel.
+At first, we will look at the frequency content in the data using a Fourier transform using a Fourier transform with a Hanning window by using **[ft_freqanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqanalysis.m)**. This is not time resolved, but gives us a power estimate per frequency over the whole time window. We calculate this separately for the trials where the participant responded with the left and the right index finger. We will calculate and visualize the power for a selected central EEG channel.
 
     cfg         = [];
     cfg.output  = 'pow';
@@ -88,7 +88,7 @@ At first, we will look at the frequency content in the data using a Fourier tran
     cfg.trials   = find(data.trialinfo(:,1) == 4096);
     spectr_right = ft_freqanalysis(cfg, data);
 
-The output of **[ft_freqanalysis](/reference/ft_freqanalysis)** is a structure with the following elements:
+The output of **[ft_freqanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqanalysis.m)** is a structure with the following elements:
 
     spectr_left =
         label: {'EEG126'}      % Channel names
@@ -136,7 +136,7 @@ Since we have two conditions (responses with left and right index finger), we wi
     cfg.trials     = find(data.trialinfo(:,1) == 4096);
     tfr_right      = ft_freqanalysis(cfg, data);
 
-If we compare the output of **[ft_freqanalysis](/reference/ft_freqanalysis)** to what we obtained when computing the power spectra (see above), we can see that the data now also contains a time dimension:
+If we compare the output of **[ft_freqanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqanalysis.m)** to what we obtained when computing the power spectra (see above), we can see that the data now also contains a time dimension:
 
     tfr_left =
         label: {128x1 cell}
@@ -155,7 +155,7 @@ To visualize the event-related power changes, a normalization with respect to a 
 - Subtracting, for each frequency, the average power in a baseline interval from all other power values. This gives, for each frequency, the _absolute change_ in power with respect to the baseline interval.
 - Expressing the raw power values as the relative increase or decrease with respect to the power in the baseline interval (for each frequency): active period devided by baseline. Note that the _relative baseline_ is expressed as a ratio; i.e., no change is represented by 1.
 
-Let's first look at the topographical representation of the power changes in a specified time-interval using **[ft_topoplotTFR](/reference/ft_topoplotTFR)**. We choose to look at 400 to 800 ms and plot the data with an absolute baseline.
+Let's first look at the topographical representation of the power changes in a specified time-interval using **[ft_topoplotTFR](https://github.com/fieldtrip/fieldtrip/blob/release/ft_topoplotTFR.m)**. We choose to look at 400 to 800 ms and plot the data with an absolute baseline.
 
     cfg              = [];
     cfg.baseline     = [-0.5 -0.1];
@@ -209,7 +209,7 @@ Let's take a look at what happens when instead of an absolute baseline we use a 
 
 _Figure: Topographic representation of relative power changes to baseline._
 
-This looks better! We can also plot the time-resolved activity using **[ft_singleplotTFR](/reference/ft_singleplotTFR)**. Let's choose the same central electrode as we used above for the power spectra:
+This looks better! We can also plot the time-resolved activity using **[ft_singleplotTFR](https://github.com/fieldtrip/fieldtrip/blob/release/ft_singleplotTFR.m)**. Let's choose the same central electrode as we used above for the power spectra:
 
 	cfg          = [];
 	cfg.colorbar = 'yes';
@@ -228,7 +228,7 @@ _Figure: Time-frequency representation of power at a central electrode._
 
 ### Plot the difference between conditions
 
-We now want to collapse the information of both conditions by comparing them. One possibility is to take the difference between the conditions: we subtract the two power spectra and then divide them by their sum - this normalizes the difference by the common activity. This can conveniently be done using **[ft_math](/reference/ft_math)**:
+We now want to collapse the information of both conditions by comparing them. One possibility is to take the difference between the conditions: we subtract the two power spectra and then divide them by their sum - this normalizes the difference by the common activity. This can conveniently be done using **[ft_math](https://github.com/fieldtrip/fieldtrip/blob/release/ft_math.m)**:
 
     cfg = [];
     cfg.parameter    = 'powspctrm';
@@ -278,7 +278,7 @@ Let's calculate the time-frequency representation of our data using Morlet wavel
 
 ### Plot the difference between conditions
 
-As for our first analysis, we want to look at the difference between the conditions, so we use **[ft_math](/reference/ft_math)** again. We then visualize the results looking at the same channels as above.
+As for our first analysis, we want to look at the difference between the conditions, so we use **[ft_math](https://github.com/fieldtrip/fieldtrip/blob/release/ft_math.m)** again. We then visualize the results looking at the same channels as above.
 
     cfg            = [];
     cfg.parameter  = 'powspctrm';

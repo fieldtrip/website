@@ -6,7 +6,7 @@ title: Getting started with LORETA
 
 LORETA-KEY is a software program implemented by Roberto Pascual-Marqui that implements the LORETA source localization algorithm ("low resolution brain electromagnetic tomography"). The software is available from the [LORETA home page](http://www.unizh.ch/keyinst/NewLORETA/LORETA01.htm). Using LORETA-KEY, you can make a distributed source reconstruction for EEG data, using a three-shell spherical head model registered to a standardized stereotactic space (based on MNI brain). The source reconstruction is restricted to cortical gray matter.
 
-The LORETA2FIELDTRIP function can be used to read in the resulting files (.slor, .lorb) from the LORETA-KEY software. The output of the LORETA2FIELDTRIP function is a MATLAB structure that is equivalent to the structures that result from the **[ft_sourceanalysis](/reference/ft_sourceanalysis)** function in FieldTrip. Hence, you can use its output as input in the FieldTrip **[ft_sourcegrandaverage](/reference/ft_sourcegrandaverage)** and/or **[ft_sourcestatistics](/reference/ft_sourcestatistics)** functions.
+The LORETA2FIELDTRIP function can be used to read in the resulting files (.slor, .lorb) from the LORETA-KEY software. The output of the LORETA2FIELDTRIP function is a MATLAB structure that is equivalent to the structures that result from the **[ft_sourceanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceanalysis.m)** function in FieldTrip. Hence, you can use its output as input in the FieldTrip **[ft_sourcegrandaverage](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourcegrandaverage.m)** and/or **[ft_sourcestatistics](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourcestatistics.m)** functions.
 
 Using sourcestatistics, you can perform a random-effect parametric or non-parametric statistical test based on a single-voxel statistic or based on a spatio-temporal cluster statistic (only non-parametric). Both the parametric and non-parametric statistical tests implemented in FieldTrip have support for correcting for the multiple comparison problem.
 
@@ -23,7 +23,7 @@ To use sLORETA data in FieldTrip, you need to do the following steps.
 
 ### Hints on plotting the LORETA source
 
-For use in **[ft_sourceplot](/reference/ft_sourceplot)** with method _"slice"_ or _"ortho"_ you can use the MNI template as anatomy
+For use in **[ft_sourceplot](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceplot.m)** with method _"slice"_ or _"ortho"_ you can use the MNI template as anatomy
 
     % Read in the MNI template from SP
     template = ft_read_mri([cur_path_FT, '\external\spm8\templates\T1.nii']);

@@ -43,7 +43,7 @@ The channel orientation is used for synthetic gradient computation for axial gra
 {% include markup/warning %}
 MEG forward computations are performed for each `grad.coilpos` and `grad.coilori`, and subsequently combined using `grad.tra`. Although they are called "coils", you can better think of them as integration points.
 
-By default a first order gradiometer is described by 2 "coils", but you could use more integration points to get a more accurate forward model (see `cfg.coilaccuracy` in **[ft_preprocessing](/reference/ft_preprocessing)**).
+By default a first order gradiometer is described by 2 "coils", but you could use more integration points to get a more accurate forward model (see `cfg.coilaccuracy` in **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)**).
 {% include markup/end %}
 
 ## The definition of NIRS sensors
@@ -82,21 +82,21 @@ The upgrade from the old to the current representation is required since the rel
 
 - for forward and inverse modeling purposes, the sensing elements, i.e. the electrodes or coils are of relevance.
 
-Originally, FieldTrip relied on recovering sensor positions from the electrode/coil positions by looking into the `tra` matrix, because the `tra` matrix specifies which electrode/coil contributes to which channel. However, since we are now supporting increasingly complex `tra` matrices which can include balancing coefficients (obtained through **[ft_denoise_synthetic](/reference/ft_denoise_synthetic)**, or **[ft_denoise_pca](/reference/ft_denoise_pca)**), projected-out spatial topographies (obtained through a sequence of **[ft_componentanalysis](/reference/ft_componentanalysis)** and **[ft_rejectcomponent](/reference/ft_rejectcomponent)**), or synthetic planar gradients (obtained through **[ft_megplanar](/reference/ft_megplanar)**). With these increasingly complex `tra` matrices, reconstructing the channel positions from the coil/electrode positions is not straightforward and sometimes impossible, therefore we now make the explicit distinction between channels and electrodes/coils.
+Originally, FieldTrip relied on recovering sensor positions from the electrode/coil positions by looking into the `tra` matrix, because the `tra` matrix specifies which electrode/coil contributes to which channel. However, since we are now supporting increasingly complex `tra` matrices which can include balancing coefficients (obtained through **[ft_denoise_synthetic](https://github.com/fieldtrip/fieldtrip/blob/release/ft_denoise_synthetic.m)**, or **[ft_denoise_pca](https://github.com/fieldtrip/fieldtrip/blob/release/ft_denoise_pca.m)**), projected-out spatial topographies (obtained through a sequence of **[ft_componentanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_componentanalysis.m)** and **[ft_rejectcomponent](https://github.com/fieldtrip/fieldtrip/blob/release/ft_rejectcomponent.m)**), or synthetic planar gradients (obtained through **[ft_megplanar](https://github.com/fieldtrip/fieldtrip/blob/release/ft_megplanar.m)**). With these increasingly complex `tra` matrices, reconstructing the channel positions from the coil/electrode positions is not straightforward and sometimes impossible, therefore we now make the explicit distinction between channels and electrodes/coils.
 
 ## Some additional notes on the `tra` matrix
 
-The `tra` matrix is an important piece of information to be taken into account when computing forward models (leadfields) for the sensor data in a given data structure. When computing a forward model, we compute the magnetic/electric field distribution at the described sensors/electrodes in the data, given a known dipolar source. If the sensor data has been manipulated in any way - e.g. by creating higher order synthetic gradients using additional  reference coils (as can be done with CTF MEG data with **[ft_denoise_synthetic](/reference/ft_denoise_synthetic)**, or with the custom CTF software), by using adaptive weights estimated from the data (as can be done with 4D-data, using custom software or **[ft_denoise_pca](/reference/ft_denoise_pca)**), or also when removing spatial topographies from the sensor data (using a combination of **[ft_componentanalysis](/reference/ft_componentanalysis)** and **[ft_rejectcomponent](/reference/ft_rejectcomponent)**) - the corresponding leadfields need to be manipulated in the same way, to ensure that the forward model is consistent with the data.
+The `tra` matrix is an important piece of information to be taken into account when computing forward models (leadfields) for the sensor data in a given data structure. When computing a forward model, we compute the magnetic/electric field distribution at the described sensors/electrodes in the data, given a known dipolar source. If the sensor data has been manipulated in any way - e.g. by creating higher order synthetic gradients using additional  reference coils (as can be done with CTF MEG data with **[ft_denoise_synthetic](https://github.com/fieldtrip/fieldtrip/blob/release/ft_denoise_synthetic.m)**, or with the custom CTF software), by using adaptive weights estimated from the data (as can be done with 4D-data, using custom software or **[ft_denoise_pca](https://github.com/fieldtrip/fieldtrip/blob/release/ft_denoise_pca.m)**), or also when removing spatial topographies from the sensor data (using a combination of **[ft_componentanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_componentanalysis.m)** and **[ft_rejectcomponent](https://github.com/fieldtrip/fieldtrip/blob/release/ft_rejectcomponent.m)**) - the corresponding leadfields need to be manipulated in the same way, to ensure that the forward model is consistent with the data.
 
 As the `tra` matrix provides information how the individual electrodes/coils relate to the individual channels in the data structure, it is updated automatically upon manipulation of the data in the following functions:
 
-- [ft_combineplanar](/reference/ft_combineplanar)
-- [ft_componentanalysis](/reference/ft_componentanalysis)
-- [ft_denoise_pca](/reference/ft_denoise_pca)
-- [ft_denoise_synthetic](/reference/ft_denoise_synthetic)
-- [ft_denoise_tsr](/reference/ft_denoise_tsr)
-- [ft_preprocessing](/reference/ft_preprocessing)
-- [ft_rejectcomponent](/reference/ft_rejectcomponent)
+- [ft_combineplanar](https://github.com/fieldtrip/fieldtrip/blob/release/ft_combineplanar)
+- [ft_componentanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_componentanalysis)
+- [ft_denoise_pca](https://github.com/fieldtrip/fieldtrip/blob/release/ft_denoise_pca)
+- [ft_denoise_synthetic](https://github.com/fieldtrip/fieldtrip/blob/release/ft_denoise_synthetic)
+- [ft_denoise_tsr](https://github.com/fieldtrip/fieldtrip/blob/release/ft_denoise_tsr)
+- [ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing)
+- [ft_rejectcomponent](https://github.com/fieldtrip/fieldtrip/blob/release/ft_rejectcomponent)
 
 Algorithmically, the `tra` matrix is used as a left multiplier of the unbalanced lead field (i.e. for MEG the leadfield that represents the magnetic field distribution at the location of the individual magnetometer coils) in the following way: `lf_balanced = grad.tra * lf_unbalanced`. For example, to obtain a first-order axial gradiometer, each row in the `tra` matrix contains two '1's (assuming the orientation of the top and bottom coils to be opposite), indicating that the modeled field estimated at the top and bottom coil of a gradiometer should be summed to obtain a model of the axial gradients. To obtain synthetic higher order gradients, the columns in the `tra` matrix that correspond to the reference coils will have non-zero values, reflecting the 'balancing' coefficients.
 

@@ -6,7 +6,7 @@ tags: [example, bids, sharing, motion, qualisys, optotrak, xsens]
 # Converting an example motion tracking dataset for sharing in BIDS
 
 {% include markup/danger %}
-BIDS does currently not specify how to represent motion tracking data. This example - and the support that is implemented in the **[data2bids](/reference/data2bids)** function - should be considered as a preliminary proposal to help researchers with their existing data. 
+BIDS does currently not specify how to represent motion tracking data. This example - and the support that is implemented in the **[data2bids](https://github.com/fieldtrip/fieldtrip/blob/release/data2bids.m)** function - should be considered as a preliminary proposal to help researchers with their existing data. 
 
 See [this issue](https://github.com/bids-standard/bids-specification/issues/443) on GitHub and [this Google doc](https://docs.google.com/document/d/1iaaLKgWjK5pcISD1MVxHKexB3PZWfE2aAC5HF_pCZWo/edit?usp=sharing) with the draft specification that is being discussed.
 {% include markup/end %}
@@ -16,7 +16,7 @@ There are numerous companies that manufacture research-oriented motion capture s
 Motion tracking data - optionally in relation to the presentation of stimulus material and responses (e.g. button presses) that are given by the subject - can be stored in the BIDS representation in line with the specification of [behavioral data](https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/07-behavioral-experiments.html). We store the continuously motion tracking data in tab-separated-value format (TSV) in the `_motion.tsv` file. The events corresponding to stimuli and responses are stored in the `_events.tsv` file, similar as for other types of data in BIDS.
 
 {% include markup/info %}
-Besides storing the output of the motion capture system, the position of the (optical) markers on the body, the frame of reference (coordinate system) and the units should be documented in the sidecar JSON file. This can be added to the `cfg.motion` field to **[data2bids](/reference/data2bids)** function, e.g. as `cfg.motion.MarkerPositions` and `cfg.motion.MotionCoordinateSystem`.
+Besides storing the output of the motion capture system, the position of the (optical) markers on the body, the frame of reference (coordinate system) and the units should be documented in the sidecar JSON file. This can be added to the `cfg.motion` field to **[data2bids](https://github.com/fieldtrip/fieldtrip/blob/release/data2bids.m)** function, e.g. as `cfg.motion.MarkerPositions` and `cfg.motion.MotionCoordinateSystem`.
 {% include markup/end %}
 
 ## Qualisys
@@ -77,7 +77,7 @@ The following example demonstrates how to convert an Optotrak dataset to BIDS. T
 
 The data was exported using the Optotrak software to TSV (tab separated values) files. Inspecting them in a text editor shows that they are comma separated, so a file extension of CSV (comma separated values) would have made more sense. There are two exported files, one for the motion data and one for the analog channels.
 
-FieldTrip does not have direct support for the Optotrak file format, nor for the specific format in which the data is exported to the TSV files. However, it is trivial to read the TSV files using MATLABs **[readtable](https://nl.mathworks.com/help/matlab/ref/readtable.html)** function. Subsequently, we will use the approach explained [here](http://www.fieldtriptoolbox.org/faq/how_can_i_import_my_own_dataformat/#circumvent-the-fieldtrip-reading-functions) to convert the tabular data to a FieldTrip data structure, similar to what would have been returned by **[ft_preprocessing](/reference/ft_preprocessing)**. The data2bids function can take this as input and will export it in the right format, including the required metadata.
+FieldTrip does not have direct support for the Optotrak file format, nor for the specific format in which the data is exported to the TSV files. However, it is trivial to read the TSV files using MATLABs **[readtable](https://nl.mathworks.com/help/matlab/ref/readtable.html.m)** function. Subsequently, we will use the approach explained [here](http://www.fieldtriptoolbox.org/faq/how_can_i_import_my_own_dataformat/#circumvent-the-fieldtrip-reading-functions) to convert the tabular data to a FieldTrip data structure, similar to what would have been returned by **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)**. The data2bids function can take this as input and will export it in the right format, including the required metadata.
 
 The original data for the following example and the converted BIDS representation are available from our [FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/example/bids_motion/).
 

@@ -23,7 +23,7 @@ The already preprocessed data is based on 151-channel MEG recordings from 10 sub
 
     load ERF_orig;    % averages for each individual subject, for each condition
 
-Using **[ft_timelockgrandaverage](/reference/ft_timelockgrandaverage)** with the `cfg.keepindividual` option allows us to represent the data in a more convenient format for the subsequent computations:
+Using **[ft_timelockgrandaverage](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockgrandaverage.m)** with the `cfg.keepindividual` option allows us to represent the data in a more convenient format for the subsequent computations:
 
     cfg = [];
     cfg.keepindividual = 'yes';
@@ -362,7 +362,7 @@ The maximum effect can unambiguously be determined over all observations, but wi
 
 The effect size after averaging the data in the largest cluster is the one that most closely relates to the statistical inference that was done here using a cluster-based permutation test. However, it is very difficult to report the precise details of the cluster due to its ragged shape. Furthermore, there is no reason to assume that exactly the same cluster would be found in a follow-up study with independent data; although we would expect a similar effect, the edges of the cluster and its extend would be different.
 
-More important perhaps is to consider the effect that the cluster-forming-threshold (the `cfg.clusterthreshold` option in **[ft_statistics_montecarlo](/reference/ft_statistics_montecarlo)**, for which we used the default here) would have on the effect size. If the cluster threshold is higher, the cluster would have a smaller spatial and temporal extent and would only contain the peak, hence the effect within that cluster would be larger. With a lower cluster threshold, the cluster would be larger, and the effect computed over the average in the cluster would be smaller. The cluster threshold has a complex relationship to the statistical sensitivity of the test and to the effect size for the average over the resulting cluster. Note that in a hypothesis-driven study you should not use the cluster threshold to "optimize" (or p-hack) your statistical inference.
+More important perhaps is to consider the effect that the cluster-forming-threshold (the `cfg.clusterthreshold` option in **[ft_statistics_montecarlo](https://github.com/fieldtrip/fieldtrip/blob/release/ft_statistics_montecarlo.m)**, for which we used the default here) would have on the effect size. If the cluster threshold is higher, the cluster would have a smaller spatial and temporal extent and would only contain the peak, hence the effect within that cluster would be larger. With a lower cluster threshold, the cluster would be larger, and the effect computed over the average in the cluster would be smaller. The cluster threshold has a complex relationship to the statistical sensitivity of the test and to the effect size for the average over the resulting cluster. Note that in a hypothesis-driven study you should not use the cluster threshold to "optimize" (or p-hack) your statistical inference.
 
 ### Average over the circumscribed rectangle
 

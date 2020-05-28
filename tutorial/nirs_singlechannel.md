@@ -54,11 +54,11 @@ _Figure: Overview of fNIRS analysis procedure._
 
 ### Getting Started
 
-The dataset that we would like to analyze is called 'motor_cortex.oxy3'. First, we need to point FieldTrip to this file. Note that FieldTrip does not feature a graphical-user interface, but instead requires you to script your way to the end goal. To let MATLAB know that we want to use FieldTrip and it's file locations, add the FieldTrip folder to your path ([without subfolders](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path)) and then execute the **[ft_defaults](/reference/ft_defaults)** function by typing:
+The dataset that we would like to analyze is called 'motor_cortex.oxy3'. First, we need to point FieldTrip to this file. Note that FieldTrip does not feature a graphical-user interface, but instead requires you to script your way to the end goal. To let MATLAB know that we want to use FieldTrip and it's file locations, add the FieldTrip folder to your path ([without subfolders](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path)) and then execute the **[ft_defaults](https://github.com/fieldtrip/fieldtrip/blob/release/ft_defaults.m)** function by typing:
 
     ft_defaults
 
-In general, FieldTrip is keeping all input arguments to a function stored together in a local variable called 'configuration' or 'cfg'. Although MATLAB variables could take any name, for convenience we will keep on using the name 'cfg' for this. FieldTrip functions are designed to each represent one step in your analysis pipeline. One (crucial) step in your analysis pipeline is to read in and preprocess the data. For this, we will make use of the FieldTrip function **[ft_preprocessing](/reference/ft_preprocessing)**. You can check out the help of the preprocessing function by typing
+In general, FieldTrip is keeping all input arguments to a function stored together in a local variable called 'configuration' or 'cfg'. Although MATLAB variables could take any name, for convenience we will keep on using the name 'cfg' for this. FieldTrip functions are designed to each represent one step in your analysis pipeline. One (crucial) step in your analysis pipeline is to read in and preprocess the data. For this, we will make use of the FieldTrip function **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)**. You can check out the help of the preprocessing function by typing
 
     help ft_preprocessing
 
@@ -73,14 +73,14 @@ If this is your first time using FieldTrip you might also want to have a look at
 ### Read & trim data
 
 For now, however, let's take a moment and read the help only and neglect the code.
-So, it seems that **[ft_preprocessing](/reference/ft_preprocessing)** would like to see our filename in the variable cfg.dataset. So, let us give FieldTrip this information. Best is to open up the editor and put all lines of code in there. It is also good practice to initialize the cfg-variable each time you want to start a new step in your processing pipeline.
+So, it seems that **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** would like to see our filename in the variable cfg.dataset. So, let us give FieldTrip this information. Best is to open up the editor and put all lines of code in there. It is also good practice to initialize the cfg-variable each time you want to start a new step in your processing pipeline.
 
     cfg = [];
     cfg.dataset = 'motor_cortex.oxy3';
 
 Normally you would specify the full path, including the drive (for instance: C:\). This makes sure that your code will execute independent from your current MATLAB location. It is good practice to keep your original raw data, your processed data and your scripts in three separate locations. In this case we will work with the data in the present working directory.
 
-Let us try to execute **[ft_preprocessing](/reference/ft_preprocessing)** now as was specified in the help:
+Let us try to execute **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** now as was specified in the help:
 
     [data] = ft_preprocessing(cfg);
 
@@ -96,7 +96,7 @@ There are more options to specify when reading in your data, such as cfg.padding
 Through the option cfg.trl you can specify which trials should be read in. For now we will read in all trials, but we will make a selection later on.
 {% include markup/end %}
 
-Let us take a look at what just happened. If you observed your workspace closely, you will have noticed that a new variable was added called 'data'. This is the same name that we put just in front of **[ft_preprocessing](/reference/ft_preprocessing)**. Had you written [something], then the variable 'something' would have been added to your workspace.
+Let us take a look at what just happened. If you observed your workspace closely, you will have noticed that a new variable was added called 'data'. This is the same name that we put just in front of **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)**. Had you written [something], then the variable 'something' would have been added to your workspace.
 
 If preprocessing was done as described, the data will have the following fields
 
@@ -110,9 +110,9 @@ If preprocessing was done as described, the data will have the following fields
           opto: [1x1 struct]
            cfg: [1x1 struct]
 
-Let us go through these one-by-one. The field 'hdr' contain all top-level information about your data, like for example the original sample rate, the number of channels etc. So all information that was potentially available at the time you read in the dataset. The field 'label' lists the name of all channels that you decided to read in. Note that you have told **[ft_preprocessing](/reference/ft_preprocessing)** to just read-in, by default, all channels as you haven't specified a subset. As you can see, there are 48 labels, and as the measurement consisted of 2 wavelengths per channel, this represents 24 channels. You also read in a set of ADC-channels, these will be ignored for now (these contain the triggers of the oxymon file, hence, this is NIRS acquisition hardware specific). The next field is called 'time' and represents the time axis of the dataset. The field 'trial' contains the data of all your channels. It is called 'trial' because usually, data is separated into different trials. To start off, we however have now read in all available data. The field 'fsample' describes the current sample rate of the data in the 'trial'-field. The field 'sampleinfo' describes the sample numbers of each trial with respect to the original measurement. The field 'opto' contains all high-level information about the composition of the channels and optodes, such as what wavelengths were used, the position of the optodes, what optodes formed which channels, etc. Finally, the field 'cfg' is the same cfg that we have just used, extended by some default values. This way, we can always trace back what has actually happened to our data. But more about that later.
+Let us go through these one-by-one. The field 'hdr' contain all top-level information about your data, like for example the original sample rate, the number of channels etc. So all information that was potentially available at the time you read in the dataset. The field 'label' lists the name of all channels that you decided to read in. Note that you have told **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** to just read-in, by default, all channels as you haven't specified a subset. As you can see, there are 48 labels, and as the measurement consisted of 2 wavelengths per channel, this represents 24 channels. You also read in a set of ADC-channels, these will be ignored for now (these contain the triggers of the oxymon file, hence, this is NIRS acquisition hardware specific). The next field is called 'time' and represents the time axis of the dataset. The field 'trial' contains the data of all your channels. It is called 'trial' because usually, data is separated into different trials. To start off, we however have now read in all available data. The field 'fsample' describes the current sample rate of the data in the 'trial'-field. The field 'sampleinfo' describes the sample numbers of each trial with respect to the original measurement. The field 'opto' contains all high-level information about the composition of the channels and optodes, such as what wavelengths were used, the position of the optodes, what optodes formed which channels, etc. Finally, the field 'cfg' is the same cfg that we have just used, extended by some default values. This way, we can always trace back what has actually happened to our data. But more about that later.
 
-Let us dive deeper into our data for now. For having a quick look at our data, we can use the function **[ft_databrowser](/reference/ft_databrowser)** . The databrowser is much more than a simple 'data browser', but we will utilize this functionality for our purpose at the moment. Of course, we could have a look at how to call the databrowser (help **[ft_databrowser](/reference/ft_databrowser)**), but a good guess is always to use FieldTrip functions as ft_functionname(cfg, data). We can keep the cfg empty to start with, and then see if this works. We add 'ylim = 'maxmin'' to the configuration to adjust the y-axis such that the lowest values in the graph are determining the lowest point on the y-axis, and the largest values in the graph determine the highest point on the y-axis.
+Let us dive deeper into our data for now. For having a quick look at our data, we can use the function **[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_databrowser.m)** . The databrowser is much more than a simple 'data browser', but we will utilize this functionality for our purpose at the moment. Of course, we could have a look at how to call the databrowser (help **[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_databrowser.m)**), but a good guess is always to use FieldTrip functions as ft_functionname(cfg, data). We can keep the cfg empty to start with, and then see if this works. We add 'ylim = 'maxmin'' to the configuration to adjust the y-axis such that the lowest values in the graph are determining the lowest point on the y-axis, and the largest values in the graph determine the highest point on the y-axis.
 
     cfg = [];
     cfg.ylim = 'maxmin'
@@ -122,7 +122,7 @@ Let us dive deeper into our data for now. For having a quick look at our data, w
 
 _Figure: Databrowser read-in._
 
-Using **[ft_databrowser](/reference/ft_databrowser)**, you can also cut out pieces of your data that you do not need. For instance, if you have started the recording while putting the optodes in place, you will probably have a chunk of data at the start of the recording that you don't need and which contains very high (not brain-related) values that rapidly fluctuate. It is useful to cut these pieces out (trimming). In the tutorial dataset, this is not needed, but see here for an [illustration of how trimming works within ft_databrowser](/tutorial/visual_artifact_rejection#use_ft_databrowser_to_mark_the_artifacts_manually).
+Using **[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_databrowser.m)**, you can also cut out pieces of your data that you do not need. For instance, if you have started the recording while putting the optodes in place, you will probably have a chunk of data at the start of the recording that you don't need and which contains very high (not brain-related) values that rapidly fluctuate. It is useful to cut these pieces out (trimming). In the tutorial dataset, this is not needed, but see here for an [illustration of how trimming works within ft_databrowser](/tutorial/visual_artifact_rejection#use_ft_databrowser_to_mark_the_artifacts_manually).
 
 Additionally, we'll from here select just one channel, to reduce the complexity for those new to fNIRS analyses.
 
@@ -143,7 +143,7 @@ Take a moment to familiarize yourself with the user-interface. Change the horizo
 
 ### Remove artifacts
 
-There are several ways to remove aspects of the data that are not of interest. That is, fNIRS data not only represents changes in oxyhemoglobin and deoxyhemoglobin concentrations, but contains, amongst others, also other physiological signals, random noise and variations stemming from the measurement environment. One prominent issue is motion artifacts, which are produced by temporary changes in the contact between optode and skin, often caused by movements of the head. Typically, one finds these motion artifacts in all channels simultaneously, but it could also be that just one channel or a few channels were affected, for instance if the participant moves the mouth. Short, unexpected peaks in the data are considered to stem from motion. You can detect and remove these artifacts for instance through **[ft_artifact_zvalue](/reference/ft_artifact_zvalue)**.
+There are several ways to remove aspects of the data that are not of interest. That is, fNIRS data not only represents changes in oxyhemoglobin and deoxyhemoglobin concentrations, but contains, amongst others, also other physiological signals, random noise and variations stemming from the measurement environment. One prominent issue is motion artifacts, which are produced by temporary changes in the contact between optode and skin, often caused by movements of the head. Typically, one finds these motion artifacts in all channels simultaneously, but it could also be that just one channel or a few channels were affected, for instance if the participant moves the mouth. Short, unexpected peaks in the data are considered to stem from motion. You can detect and remove these artifacts for instance through **[ft_artifact_zvalue](https://github.com/fieldtrip/fieldtrip/blob/release/ft_artifact_zvalue.m)**.
 
 You can specify a z-value cut-off like this:
 
@@ -153,7 +153,7 @@ You can specify a z-value cut-off like this:
     cfg.artfctdef.zvalue.cutoff = 3.5;
     [cfg, artifact] = ft_artifact_zvalue(cfg, data);
 
-You will see that FieldTrip identified 8 artifacts through this procedure. These are not yet removed, you would call **[ft_rejectartifact](/reference/ft_rejectartifact)**.
+You will see that FieldTrip identified 8 artifacts through this procedure. These are not yet removed, you would call **[ft_rejectartifact](https://github.com/fieldtrip/fieldtrip/blob/release/ft_rejectartifact.m)**.
 
 #### Exercise 2
 
@@ -166,7 +166,7 @@ What is the optimal threshold to get rid off short-lived peaks?
 
 ### Transform to changes in oxyHB/deoxyHB
 
-You might have noticed that you were looking at OD values (OD stands for optical density and directly relates to the light intensity that fell on the optodes) rather than at oxygenated and deoxygenated hemoglobin concentrations, because the channel labels mention the wavelengths. We can transform our data to concentrations using **[ft_nirs_transform_ODs](/reference/ft_nirs_transform_ODs)**. One of the choices you can make when using **[ft_nirs_transform_ODs](/reference/ft_nirs_transform_ODs)** is the dpf (differential path length factor), which can differ depending on the age of the participant and the tissue type under investigation (i.e. when analyzing changes in blood oxygenation in muscles.
+You might have noticed that you were looking at OD values (OD stands for optical density and directly relates to the light intensity that fell on the optodes) rather than at oxygenated and deoxygenated hemoglobin concentrations, because the channel labels mention the wavelengths. We can transform our data to concentrations using **[ft_nirs_transform_ODs](https://github.com/fieldtrip/fieldtrip/blob/release/ft_nirs_transform_ODs.m)**. One of the choices you can make when using **[ft_nirs_transform_ODs](https://github.com/fieldtrip/fieldtrip/blob/release/ft_nirs_transform_ODs.m)** is the dpf (differential path length factor), which can differ depending on the age of the participant and the tissue type under investigation (i.e. when analyzing changes in blood oxygenation in muscles.
 
     cfg = [];
     cfg.dpf = 5.9;
@@ -192,7 +192,7 @@ Apart from motion artifacts, which appear as spikes in the data, fNIRS measureme
 
 Because we are interested to find whether the brain responds specifically to the events that took place during the experiment, we want to focus our analyses on the timewindows in which the events took place (these timewindows are often called epochs or trials). More specifically, we want to investigate whether there is increase in oxygenation in the channel of interest timelocked to the experimental event. In the current dataset, the events are fingertaps of the participant. To be able to analyze these specific event-related responses, we have not only recorded the NIRS signal, but also when which event happened, stored in a so-called trigger channel. The triggers indicate when what happened in the experiment.
 
-Earlier, we have read in all epochs by not specifying cfg.trl during our previous call to **[ft_preprocessing](/reference/ft_preprocessing)**. In the help documentation cfg.trl points to **[ft_definetrial](/reference/ft_definetrial)**, which we will now use to define our trials. So let us have a look at the functio
+Earlier, we have read in all epochs by not specifying cfg.trl during our previous call to **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)**. In the help documentation cfg.trl points to **[ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_definetrial.m)**, which we will now use to define our trials. So let us have a look at the functio
 
     help ft_definetrial
 
@@ -204,13 +204,13 @@ Let us assume for now that we have no clue about the triggers in the data. We wi
     cfg.trialdef = [];
     cfg.trialdef.eventtype = '?';
 
-The question mark indicates that we are not sure about the event triggers, and the function **[ft_trialfun_general](/reference/ft_trialfun_general)** will thus output all events that are found in the dataset. Now, we can call **[ft_definetrial](/reference/ft_definetrial)**
+The question mark indicates that we are not sure about the event triggers, and the function **[ft_trialfun_general](https://github.com/fieldtrip/fieldtrip/blob/release/ft_trialfun_general.m)** will thus output all events that are found in the dataset. Now, we can call **[ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_definetrial.m)**
 
     ft_definetrial(cfg);
 
 In the command window, you will see that 24 events were found, and two types of events were used, namely event 'A' and event 'B'. In case you recorded your files with the Artinis Oxymon system, and you did not add events during the measurement, you can include them here, see FAQ.
 
-Furthermore, note that we do not define the output variable [cfg] now, as we are not interested in the output. The variable 'cfg' will thus stay unchanged. We want to have a look at epochs/trials starting 10 second pre-stimulus (before event 'A') and ending 35 seconds after 'A' (post-stimulus). So we can now define our trials and subsequently use this to call **[ft_preprocessing](/reference/ft_preprocessing)**:
+Furthermore, note that we do not define the output variable [cfg] now, as we are not interested in the output. The variable 'cfg' will thus stay unchanged. We want to have a look at epochs/trials starting 10 second pre-stimulus (before event 'A') and ending 35 seconds after 'A' (post-stimulus). So we can now define our trials and subsequently use this to call **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)**:
 
     cfg.trialdef.eventtype  = 'event';
     cfg.trialdef.eventvalue = 'A';
@@ -241,12 +241,12 @@ All signal values seem to be around the same values. Why could that be?
 #### Exercise 5
 
 {% include markup/info %}
-You might want to perform an additional preprocessing step now. What steps do you consider useful? Check out the options in **[ft_preprocessing](/reference/ft_preprocessing)**!
+You might want to perform an additional preprocessing step now. What steps do you consider useful? Check out the options in **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)**!
 {% include markup/end %}
 
 ### Timelockanalysis
 
-We would like to compute the average of our data and have a look at the average response. We can use **[ft_timelockanalysis](/reference/ft_timelockanalysis)** for computing the average and the various available plotting function for plotting.
+We would like to compute the average of our data and have a look at the average response. We can use **[ft_timelockanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockanalysis.m)** for computing the average and the various available plotting function for plotting.
 
     cfg = [];
     data_timelock = ft_timelockanalysis(cfg, data_epoch);

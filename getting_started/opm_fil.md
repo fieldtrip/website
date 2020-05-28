@@ -34,7 +34,7 @@ You can read the header and data using the low-level functions like this
 
 This uses the `opm_fil` function in fieldtrip/fileio/private. Since the file format is not automatically detected, you have to specify it explicitly.
 
-You can also process the data in the usual way using **[ft_preprocessing](/reference/ft_preprocessing)** or visualize it with **[ft_databrowser](/reference/ft_databrowser)**. The following returns the data in a continuous representation.
+You can also process the data in the usual way using **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** or visualize it with **[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_databrowser.m)**. The following returns the data in a continuous representation.
 
     cfg = [];
     cfg.headerformat = 'opm_fil';
@@ -45,7 +45,7 @@ You can also process the data in the usual way using **[ft_preprocessing](/refer
 
 ## Triggers and events
 
-The data contains a trigger channel that is sampled at the same speed as all other channels. Events are detected and returned using **[ft_read_event](/reference/ft_read_event)** as usual, and you can use **[ft_definetrial](/reference/ft_definetrial)** to define trials.
+The data contains a trigger channel that is sampled at the same speed as all other channels. Events are detected and returned using **[ft_read_event](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_event.m)** as usual, and you can use **[ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_definetrial.m)** to define trials.
 
     cfg = [];
     cfg.headerformat = 'opm_fil';

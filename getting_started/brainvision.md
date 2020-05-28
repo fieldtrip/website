@@ -56,7 +56,7 @@ FieldTrip needs the user to define what file to read in. The BrainVision Recorde
 
 The .eeg files are the raw data files, i.e. they contain the data as it has been stored upon acquisition.
 
-You can subsequently epoch your data using [ft_definetrial](/reference/ft_definetrial), and you can read in the data and preprocess it using [ft_preprocessing](/reference/ft_preprocessing). Note that in FieldTrip, no unit conversion takes place.
+You can subsequently epoch your data using [ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_definetrial), and you can read in the data and preprocess it using [ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing). Note that in FieldTrip, no unit conversion takes place.
 
 ### Exporting raw EEG data after doing processing in BVA
 

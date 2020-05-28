@@ -5,7 +5,7 @@ tags: [faq, peer, debug]
 
 # How can I debug a problematic distributed job?
 
-A distributed job may fail for various reasons. If the error is properly caught by the slave that executed the job, **[peercellfun](/reference/peercellfun)** will display the error on the master. If **[peercellfun](/reference/peercellfun)** fails to return the output arguments of the jobs that it sent out, you'll have to dig deeper...
+A distributed job may fail for various reasons. If the error is properly caught by the slave that executed the job, **[peercellfun](https://github.com/fieldtrip/fieldtrip/blob/release/peercellfun.m)** will display the error on the master. If **[peercellfun](https://github.com/fieldtrip/fieldtrip/blob/release/peercellfun.m)** fails to return the output arguments of the jobs that it sent out, you'll have to dig deeper...
 
 This page describes a number of strategies that you can use.
 
@@ -25,7 +25,7 @@ The problem may be related to file and/or directory permissions because the peer
 
 ## Start an interactive peerslave
 
-You can start another interactive MATLAB session, preferably on another computer, and within that MATLAB session start a **[peerslave](/reference/peerslave)**. To ensure that the master will pick this slave, and not one of the other idle slaves on the network, you have to specify both to your master and your slave that they should restict them selves based on username using the allowuser option.
+You can start another interactive MATLAB session, preferably on another computer, and within that MATLAB session start a **[peerslave](https://github.com/fieldtrip/fieldtrip/blob/release/peerslave.m)**. To ensure that the master will pick this slave, and not one of the other idle slaves on the network, you have to specify both to your master and your slave that they should restict them selves based on username using the allowuser option.
 
 In the master MATLAB session you do
 peermaster('allowuser, 'roboos');
@@ -34,7 +34,7 @@ peerslave('allowuser', 'roboos');
 
 Since both MATLAB sessions will run under your own account (here with the account name "roboos"), the master and slave will exclusively communicate.
 
-Subsequently, you can restart the **[peercellfun](/reference/peercellfun)** command in the master and look at what happens inside the slave MATLAB session.
+Subsequently, you can restart the **[peercellfun](https://github.com/fieldtrip/fieldtrip/blob/release/peercellfun.m)** command in the master and look at what happens inside the slave MATLAB session.
 
 ## Start a slave as another user
 
@@ -46,13 +46,13 @@ To test this, you can log in using the public account, which has the password "p
 
 The public user does not have any privileges or disk quota, so logging in under this account is normally not of interest to you or anyone else.
 
-Once logged in as other user, you start an interactive MATLAB session and a **[peerslave](/reference/peerslave)** inside it. To ensure that your master will send the job to this slave, and not to another one in the network, you can use the allowgroup option.
+Once logged in as other user, you start an interactive MATLAB session and a **[peerslave](https://github.com/fieldtrip/fieldtrip/blob/release/peerslave.m)** inside it. To ensure that your master will send the job to this slave, and not to another one in the network, you can use the allowgroup option.
 
-You start the **[peermaster](/reference/peermaster)** using
+You start the **[peermaster](https://github.com/fieldtrip/fieldtrip/blob/release/peermaster.m)** using
 
     peermaster('allowgroup', 'xyz');
 
-and the **[peerslave](/reference/peerslave)** as
+and the **[peerslave](https://github.com/fieldtrip/fieldtrip/blob/release/peerslave.m)** as
 
     peerslave('group', 'xyz');
 
@@ -64,16 +64,16 @@ and
 
     peerslave('group', 'xyz', 'allowgroup', 'xyz');
 
-Subsequently you retry the **[peercellfun](/reference/peercellfun)** and look at the screen of the interactive slave MATLAB session.
+Subsequently you retry the **[peercellfun](https://github.com/fieldtrip/fieldtrip/blob/release/peercellfun.m)** and look at the screen of the interactive slave MATLAB session.
 
 ## Start a slave in non-graphical mode
 
 It might be that the problem is related to the graphical output of the function that you are trying to evaluate. The slaves that are running by default on the DCCN Linux cluster do not have a graphical output. Some graphical functions (like plotting) has been reported to work, but others (like drawing a GUI) have been reported to fail.
 
-To ensure that a non-graphical slave can execute your jobs, you can use putty to connect to a Linux cluster node. Subsequently you start MATLAB in the putty window and start **[peerslave](/reference/peerslave)** with
+To ensure that a non-graphical slave can execute your jobs, you can use putty to connect to a Linux cluster node. Subsequently you start MATLAB in the putty window and start **[peerslave](https://github.com/fieldtrip/fieldtrip/blob/release/peerslave.m)** with
 peerslave('allowuser', 'yourid');
 
-Subsequently you can restrict your **[peermaster](/reference/peermaster)** to the same userid (you can also use groups for this, see above) and retry the execution of the jobs with **[peercellfun](/reference/peercellfun)**.
+Subsequently you can restrict your **[peermaster](https://github.com/fieldtrip/fieldtrip/blob/release/peermaster.m)** to the same userid (you can also use groups for this, see above) and retry the execution of the jobs with **[peercellfun](https://github.com/fieldtrip/fieldtrip/blob/release/peercellfun.m)**.
 
 ## Use the MATLAB debugger in the slave
 
@@ -81,4 +81,4 @@ If all of the methods described above fail, you'll have to resort to using the M
 
 In the function that is executed you insert a "keyboard" statement. Since the slave runs like a normal MATLAB, it will jump to debug mode on that line and you can continue step-by-step.
 
-You can also try to resolve the problem by typing "dbstop if caught error" in MATLAB prior to starting the **[peerslave](/reference/peerslave)**. The slave will evaluate the function using peerexec, which does feval in a large try-catch loop. Note that a normal "dbstop if error" will not be sufficient, because the error is caught with the purpose of sending it back to the master.
+You can also try to resolve the problem by typing "dbstop if caught error" in MATLAB prior to starting the **[peerslave](https://github.com/fieldtrip/fieldtrip/blob/release/peerslave.m)**. The slave will evaluate the function using peerexec, which does feval in a large try-catch loop. Note that a normal "dbstop if error" will not be sufficient, because the error is caught with the purpose of sending it back to the master.

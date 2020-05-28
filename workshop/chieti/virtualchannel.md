@@ -239,7 +239,7 @@ We can also compute the difference between the power in the left and right-hand 
 {% include image src="/assets/img/workshop/chieti/virtualchannel/screen_shot_2015-09-17_at_09.38.55.png" width="500" %}
 
 {% include markup/info %}
-You should use the interactive functionality of the **[ft_multiplotTFR](/reference/ft_multiplotTFR)** figures. Click in the figures to identify the time, frequency and channel selections that show interesting effects.
+You should use the interactive functionality of the **[ft_multiplotTFR](https://github.com/fieldtrip/fieldtrip/blob/release/ft_multiplotTFR.m)** figures. Click in the figures to identify the time, frequency and channel selections that show interesting effects.
 {% include markup/end %}
 
 Another way of looking at the dynamics in this channel-time-frequency representation is by making a movi
@@ -356,7 +356,7 @@ Following interpolation of the (non-uniform grid) source reconstructed data onto
 
 ### Estimate seed based connectivity
 
-The left/right source-level contrast image gives us a suggestion of the left and right motor cortices. Using the interactive option of **[ft_sourceplot](/reference/ft_sourceplot)**, we can click around in the figure and identify the voxel coordinates of the peak in both hemispheres.
+The left/right source-level contrast image gives us a suggestion of the left and right motor cortices. Using the interactive option of **[ft_sourceplot](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceplot.m)**, we can click around in the figure and identify the voxel coordinates of the peak in both hemispheres.
 
 We can define the seeds, expressed in voxels. Subsequently we have to convert these from voxel to BTi coordinates.
 
@@ -540,5 +540,5 @@ The virtual channel time series seem to be consistent with what we expect to hap
 {% include image src="/assets/img/workshop/chieti/virtualchannel/screen_shot_2015-09-17_at_09.42.01.png" width="500" %}
 
 {% include markup/info %}
-There are many more connectivity methods available in **[ft_connectivityanalysis](/reference/ft_connectivityanalysis)**. Try out some of the others.
+There are many more connectivity methods available in **[ft_connectivityanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_connectivityanalysis.m)**. Try out some of the others.
 {% include markup/end %}

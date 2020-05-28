@@ -23,7 +23,7 @@ This tutorial contains hands-on material that we use for the [MEG/EEG toolkit co
 
 This tutorial consists of three parts:
 
-- **Simulated data with directed connections**: In this part we are going to simulate some data with the help of **[ft_connectivitysimulation](/reference/ft_connectivitysimulation)** and use these data to compute various connectivity metrics. As a generative model of the data we will use a multivariate autoregressive model. Subsequently, we will estimate the multivariate autoregressive model, the spectral transfer function, and the cross-spectral density matrix using the functions **[ft_mvaranalysis](/reference/ft_mvaranalysis)** and **[ft_freqanalysis](/reference/ft_freqanalysis)**. In the next step we will compute and inspect various measures of connectivity with **[ft_connectivityanalysis](/reference/ft_connectivityanalysis)** and **[ft_connectivityplot](/reference/ft_connectivityplot)**.
+- **Simulated data with directed connections**: In this part we are going to simulate some data with the help of **[ft_connectivitysimulation](https://github.com/fieldtrip/fieldtrip/blob/release/ft_connectivitysimulation.m)** and use these data to compute various connectivity metrics. As a generative model of the data we will use a multivariate autoregressive model. Subsequently, we will estimate the multivariate autoregressive model, the spectral transfer function, and the cross-spectral density matrix using the functions **[ft_mvaranalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_mvaranalysis.m)** and **[ft_freqanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqanalysis.m)**. In the next step we will compute and inspect various measures of connectivity with **[ft_connectivityanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_connectivityanalysis.m)** and **[ft_connectivityplot](https://github.com/fieldtrip/fieldtrip/blob/release/ft_connectivityplot.m)**.
 
 - **Simulated data with common pick-up and different noise levels**: In this part we are going to simulate some data consisting of an instantaneous mixture of three 'sources', creating a situation of common pick up. We will explore the effect of this common pick up on the consequent estimates of connectivity, and we will investigate the effect of different mixings on these estimates.
 
@@ -61,9 +61,9 @@ We will first determine the position on which the cortico-muscular coherence is 
 
 The cortical position is expressed in individual subject [head-coordinates](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined) and in centimeter. Relative to the center of the head (in between the ears) the position is 4 cm towards the nose, -3 towards the left side (i.e., 3 cm towards the right!) and 12 cm towards the vertex.
 
-The **[ft_sourceanalysis](/reference/ft_sourceanalysis)** methods are usually applied to the whole brain using a regular 3-D grid or using a triangulated cortical sheet. You can also just specify the location of a single or multiple points of interest with _cfg.sourcemodel.pos_ and the LCMV beamformer will simply be performed at the location of interest.
+The **[ft_sourceanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceanalysis.m)** methods are usually applied to the whole brain using a regular 3-D grid or using a triangulated cortical sheet. You can also just specify the location of a single or multiple points of interest with _cfg.sourcemodel.pos_ and the LCMV beamformer will simply be performed at the location of interest.
 
-The LCMV beamformer spatial filter for the location of interest will pass the activity at that location with unit-gain, while optimally suppressing all other noise and other source contributions to the MEG data. The LCMV implementation in FieldTrip requires the data covariance matrix to be computed with **[ft_timelockanalysis](/reference/ft_timelockanalysis)**.
+The LCMV beamformer spatial filter for the location of interest will pass the activity at that location with unit-gain, while optimally suppressing all other noise and other source contributions to the MEG data. The LCMV implementation in FieldTrip requires the data covariance matrix to be computed with **[ft_timelockanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockanalysis.m)**.
 
 Rather than doing all the preprocessing again, you can download the preprocessed data and headmodel from the FieldTrip FTP server ([data.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/connectivity/data.mat)[SubjectCMC.hdm](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/connectivity/SubjectCMC.hdm))
 
@@ -87,7 +87,7 @@ Rather than doing all the preprocessing again, you can download the preprocessed
 The source reconstruction contains the estimated power and the source-level time series of the averaged ERF, but here we are not interested in those. The _cfg.keepfilter_ option results in the spatial filter being kept in the output source structure. This filter can be used to reconstruct the single-trial time series as a virtual channel by multiplying it with the original MEG data.
 
 {% include markup/warning %}
-In this case, the headmodel coordinates were defined in cm, this might be different for different headmodels. You can inspect the units of the headmodel with **[ft_read_headmodel](/reference/ft_read_headmodel)**
+In this case, the headmodel coordinates were defined in cm, this might be different for different headmodels. You can inspect the units of the headmodel with **[ft_read_headmodel](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_headmodel.m)**
 
     hdm = ft_read_headmodel('SubjectCMC.hdm')
 
@@ -119,10 +119,10 @@ In this case, the headmodel coordinates were defined in cm, this might be differ
 {% include markup/warning %}
 The LCMV spatial filter is computed using data in the time domain. However, no time-domain spatial filters (during preprocessing e.g., low-pass or high-pass filters) have been applied before hand. Consequently, the filter will suppress all noise in the data in all frequency bands. The spatial filter derived from the broadband data allows us to compute a broadband source level time series.
 
-If you would know that the subsequent analysis would be limited to a specific frequency range in the data (e.g. everything above 30 Hz), you could first apply a filter using **[ft_preprocessing](/reference/ft_preprocessing)** (e.g. _cfg.hpfilter=yes_ and _cfg.hpfreq=30_) prior to computing the covariance and the spatial filter.  
+If you would know that the subsequent analysis would be limited to a specific frequency range in the data (e.g. everything above 30 Hz), you could first apply a filter using **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** (e.g. _cfg.hpfilter=yes_ and _cfg.hpfreq=30_) prior to computing the covariance and the spatial filter.  
 {% include markup/end %}
 
-The _sourcedata_ structure resembles the raw-data output of **[ft_preprocessing](/reference/ft_preprocessing)** and consequently can be used in any follow-up function. You can for example visualize the single-trial virtual channel time series using **[ft_databrowser](/reference/ft_databrowser)**:
+The _sourcedata_ structure resembles the raw-data output of **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** and consequently can be used in any follow-up function. You can for example visualize the single-trial virtual channel time series using **[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_databrowser.m)**:
 
     cfg = [];
     cfg.viewmode = 'vertical';  % you can also specify 'butterfly'

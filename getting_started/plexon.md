@@ -17,9 +17,9 @@ FieldTrip can read Plexon data from the following file formats.
 
 The .plx files contain the multiplexed raw acquisition data. During acquisition the data arrives in random order from the different continuous and spike channels. The .plx file therefore contains data in many small fragments, which causes the reading of plx files to be slow. The newer plexon .pl2 file recording format doesn't have this limitation. One option for the slow .plx format is to convert the data to the .nex file format. These .nex files also contain the continuous and spike data, but in a orderer format that allows much faster read-access. Using the newer plexon_plx_v2 filetype also greatly speeds up .plx file reading by using the official Plexon SDK (see below).
 
-There are some constraints related to the way that FieldTrip represents continuous and spike data. All main FieldTrip functions read continuous data using the **[ft_read_header](/reference/ft_read_header)** and **[ft_read_data](/reference/ft_read_data)** functions. These functions require the continuous data in all channels contained in the file to have the same sampling frequency. This can be a problem because Plexon file formats often contain both 40kHz spike data and 1kHz sampled LFP data in the same file. One solution is to resave all source files into two separate files. The other is to modify the fileio fuctions to select the correct sampling frequency and channels.
+There are some constraints related to the way that FieldTrip represents continuous and spike data. All main FieldTrip functions read continuous data using the **[ft_read_header](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_header.m)** and **[ft_read_data](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_data.m)** functions. These functions require the continuous data in all channels contained in the file to have the same sampling frequency. This can be a problem because Plexon file formats often contain both 40kHz spike data and 1kHz sampled LFP data in the same file. One solution is to resave all source files into two separate files. The other is to modify the fileio fuctions to select the correct sampling frequency and channels.
 
-To get started, you should add the FieldTrip main directory to your path, and execute the **[ft_defaults](/reference/ft_defaults)** function, which sets the defaults and configures up the minimal required path settings. See also this [frequently asked question](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path).
+To get started, you should add the FieldTrip main directory to your path, and execute the **[ft_defaults](https://github.com/fieldtrip/fieldtrip/blob/release/ft_defaults.m)** function, which sets the defaults and configures up the minimal required path settings. See also this [frequently asked question](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path).
 
     addpath <path_to_fieldtrip>
     ft_defaults
@@ -46,7 +46,7 @@ The .ddt format is a Plexon continuous data file optimized for continuous (strea
 
 ## Reading continuous data from a .nex file
 
-The .nex file format can contain continuous and spike data. To test the reading of continuous data, you can use the **[ft_read_header](/reference/ft_read_header)** and **[ft_read_data](/reference/ft_read_data)** functions.
+The .nex file format can contain continuous and spike data. To test the reading of continuous data, you can use the **[ft_read_header](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_header.m)** and **[ft_read_data](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_data.m)** functions.
 
     >> hdr = ft_read_header('p021parall.nex')
 
@@ -67,11 +67,11 @@ The .nex file format can contain continuous and spike data. To test the reading 
     % read the events a.k.a. the triggers
     >> event = ft_read_event('p021parall.nex')
 
-After having tested the reading of continuous data, you can use the **[ft_definetrial](/reference/ft_definetrial)** and **[ft_preprocessing](/reference/ft_preprocessing)** functions as explained in the [tutorial documentation](/tutorial).
+After having tested the reading of continuous data, you can use the **[ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_definetrial.m)** and **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** functions as explained in the [tutorial documentation](/tutorial).
 
 ## Reading spike data from a .nex file
 
-To read the spike data, you should use the **[ft_read_spike](/reference/ft_read_spike)** function. Since spikes take very little memory, all spikes in all spike channels will be read at once.
+To read the spike data, you should use the **[ft_read_spike](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_spike.m)** function. Since spikes take very little memory, all spikes in all spike channels will be read at once.
 
     >> spike = ft_read_spike('p021parall.nex')
 
@@ -82,17 +82,17 @@ To read the spike data, you should use the **[ft_read_spike](/reference/ft_read_
       timestamp: {1x4 cell}
             hdr: [1x1 struct]
 
-If you have read the continuous data using the standard FieldTrip **[ft_preprocessing](/reference/ft_preprocessing)** function, you can subsequently use the **[ft_appendspike](/reference/ft_appendspike)** function to add the spike channels to the continuous LFP data. Once the LFP and spike data are represented in the same datastructure, you can for example compute field-field, field-spike and spike-spike coherence using **[ft_freqanalysis](/reference/ft_freqanalysis)**.
+If you have read the continuous data using the standard FieldTrip **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** function, you can subsequently use the **[ft_appendspike](https://github.com/fieldtrip/fieldtrip/blob/release/ft_appendspike.m)** function to add the spike channels to the continuous LFP data. Once the LFP and spike data are represented in the same datastructure, you can for example compute field-field, field-spike and spike-spike coherence using **[ft_freqanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqanalysis.m)**.
 
 ## Reading continuous or spike data from a .plx file
 
-The low-level functions ft_read_header and ft_read_data also work on .plx files, which means that you can use the standard FieldTrip **[ft_preprocessing](/reference/ft_preprocessing)** function. However, the .plx format is a very inefficient format, which makes the reading of subsequent trials rather slow. Instead of reading individual trials, it is recommended that you use the approach that is explained [here](/faq/reading_is_slow_can_i_write_my_raw_data_to_a_more_efficient_file_format).
+The low-level functions ft_read_header and ft_read_data also work on .plx files, which means that you can use the standard FieldTrip **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** function. However, the .plx format is a very inefficient format, which makes the reading of subsequent trials rather slow. Instead of reading individual trials, it is recommended that you use the approach that is explained [here](/faq/reading_is_slow_can_i_write_my_raw_data_to_a_more_efficient_file_format).
 
-The FieldTrip **[ft_read_spike](/reference/ft_read_spike)** function works fine on .plx files. However, note that the .plx files only contain the unsorted spikes.
+The FieldTrip **[ft_read_spike](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_spike.m)** function works fine on .plx files. However, note that the .plx files only contain the unsorted spikes.
 
 ## Reading triggers and other events
 
-Triggers are in FieldTrip represented as events. These events are read using the **[ft_read_event](/reference/ft_read_event)** function. The **[ft_definetrial](/reference/ft_definetrial)** function is used to define data segments of interest, i.e. trials, based on the trigger events. After defining the trials, you should use the **[ft_preprocessing](/reference/ft_preprocessing)** function to read the continuous LFP data.
+Triggers are in FieldTrip represented as events. These events are read using the **[ft_read_event](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_event.m)** function. The **[ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_definetrial.m)** function is used to define data segments of interest, i.e. trials, based on the trigger events. After defining the trials, you should use the **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** function to read the continuous LFP data.
 
 ## Using Newer Reading Functions
 

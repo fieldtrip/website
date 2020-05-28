@@ -20,4 +20,4 @@ or alternatively
     peer('discover',    'stop')
     peer('expire',      'stop')
 
-Either way will stop the threads created by the peer mex file (which is started by **[peermaster](/reference/peermaster)** and **[peerslave](/reference/peerslave)**).
+Either way will stop the threads created by the peer mex file (which is started by **[peermaster](https://github.com/fieldtrip/fieldtrip/blob/release/peermaster.m)** and **[peerslave](https://github.com/fieldtrip/fieldtrip/blob/release/peerslave.m)**).

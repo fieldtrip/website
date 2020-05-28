@@ -13,14 +13,14 @@ You should start by adding the qsub toolbox to your MATLAB pat
 
 ### Submitting a single MATLAB job to the cluster
 
-To submit a job to the cluster, you will use **[qsubfeval](/reference/qsubfeval)**. It stands for “qsub – evaluation - function”. As an input you specify a name of your function, an argument, and time and memory requirements (see below).
+To submit a job to the cluster, you will use **[qsubfeval](https://github.com/fieldtrip/fieldtrip/blob/release/qsubfeval.m)**. It stands for “qsub – evaluation - function”. As an input you specify a name of your function, an argument, and time and memory requirements (see below).
 
 Try the followin
 
     qsubfeval('rand', 100, 'timreq', 60, 'memreq', 1024)
 
 {% include markup/info %}
-Besides the memory requirements for your computation, MATLAB also requires memory for itself. The **[qsubfeval](/reference/qsubfeval)** and **[qsubcellfun](/reference/qsubcellfun)** functions have the option **memoverhead** for this, which is by default 1GB. The **memreq** option itself does not have a default value. The torque job is started with a memory reservation of **memreq+memoverhead**.
+Besides the memory requirements for your computation, MATLAB also requires memory for itself. The **[qsubfeval](https://github.com/fieldtrip/fieldtrip/blob/release/qsubfeval.m)** and **[qsubcellfun](https://github.com/fieldtrip/fieldtrip/blob/release/qsubcellfun.m)** functions have the option **memoverhead** for this, which is by default 1GB. The **memreq** option itself does not have a default value. The torque job is started with a memory reservation of **memreq+memoverhead**.
 {% include markup/end %}
 
 You will get the job ID as the outpu
@@ -56,11 +56,11 @@ For detailed information on the submitted job use qstat -f JobI
   ...
 ```
 
-The **[qsubfeval](/reference/qsubfeval)** command creates a bunch of tempory files in your working directory. STDIN.oXXX is the standard output, i.e. the output that MATLAB normally prints in the command window. STDIN.eXXX is an error message file. For the job to complete successfully, this file should be empty.
+The **[qsubfeval](https://github.com/fieldtrip/fieldtrip/blob/release/qsubfeval.m)** command creates a bunch of tempory files in your working directory. STDIN.oXXX is the standard output, i.e. the output that MATLAB normally prints in the command window. STDIN.eXXX is an error message file. For the job to complete successfully, this file should be empty.
 
 ### Submitting a batch of jobs
 
-To execute few jobs in parallel as a batch you will use **[qsubcellfun](/reference/qsubcellfun)**. It is very similar to **[qsubfeval](/reference/qsubfeval)**, but instead of one input argument, you specify a cell-array of arguments. Qsubcellfun then evaluates your function with each element of the array. In fact it calls **[qsubfeval](/reference/qsubfeval)** as many times as the number of elements in the array.
+To execute few jobs in parallel as a batch you will use **[qsubcellfun](https://github.com/fieldtrip/fieldtrip/blob/release/qsubcellfun.m)**. It is very similar to **[qsubfeval](https://github.com/fieldtrip/fieldtrip/blob/release/qsubfeval.m)**, but instead of one input argument, you specify a cell-array of arguments. Qsubcellfun then evaluates your function with each element of the array. In fact it calls **[qsubfeval](https://github.com/fieldtrip/fieldtrip/blob/release/qsubfeval.m)** as many times as the number of elements in the array.
 
 Qsubcellfun is similar to the standard MATLAB Cellfun. Try the following:
 
@@ -86,25 +86,25 @@ and compare it with
     ans =
     -2.2588 0.8622 0.3188 -1.3077
 
-The difference in the output formats is due to the UniformOutput argument, which is default false in **[qsubcellfun](/reference/qsubcellfun)** and default true in CELLFUN.
+The difference in the output formats is due to the UniformOutput argument, which is default false in **[qsubcellfun](https://github.com/fieldtrip/fieldtrip/blob/release/qsubcellfun.m)** and default true in CELLFUN.
 
-When using **[qsubcellfun](/reference/qsubcellfun)** you have to specify the time and memory requirements of a single job.
+When using **[qsubcellfun](https://github.com/fieldtrip/fieldtrip/blob/release/qsubcellfun.m)** you have to specify the time and memory requirements of a single job.
 
-Same as with **[qsubfeval](/reference/qsubfeval)**, you can use `qstat, qstat -f, qstat -al, cluster-qstat`{linux} commands to check the status and info on the submitted jobs.
+Same as with **[qsubfeval](https://github.com/fieldtrip/fieldtrip/blob/release/qsubfeval.m)**, you can use `qstat, qstat -f, qstat -al, cluster-qstat`{linux} commands to check the status and info on the submitted jobs.
 
 Qsubcellfun works as a wrapper for qsubfeval. If you use qsubcellfun, all the temporally files created by qsubfeval are automatically deleted when the job is completed, or when it is terminated with Ctrl+C, or with an error.
 
 #### Time and memory management
 
-You will have noticed that you have to specify the time and memory requirements for the individual jobs using the 'timreq' and 'memreq' arguments to **[qsubcellfun](/reference/qsubcellfun)**. These time and memory requirements are passed to the batch queueing system, which uses them to find an appropriate execution host (i.e one that has enough free memory) and to monitor the usage.
+You will have noticed that you have to specify the time and memory requirements for the individual jobs using the 'timreq' and 'memreq' arguments to **[qsubcellfun](https://github.com/fieldtrip/fieldtrip/blob/release/qsubcellfun.m)**. These time and memory requirements are passed to the batch queueing system, which uses them to find an appropriate execution host (i.e one that has enough free memory) and to monitor the usage.
 
 Do not set the requirements too tight, because if the job exceeds the requested resources, it will be killed. However, if you grossly overestimate them, your jobs will be scheduled in a “slow” queue, where only a few jobs can run simultaneously. The queueing and throttling policies on the number and the size of the jobs is to prevent a few large jobs from a single user from blocking all computational resources of the cluster. So the most optimal approach to get your jobs executed is to try and estimate the memory and time requirements as good as you can.
 
-The help of **[qsubcellfun](/reference/qsubcellfun)** lists some suggestions on how to estimate the time and memory.
+The help of **[qsubcellfun](https://github.com/fieldtrip/fieldtrip/blob/release/qsubcellfun.m)** lists some suggestions on how to estimate the time and memory.
 
 ### Stacking of jobs
 
-The execution of each job involves writing the input arguments to a file, submitting the job, to Torque, starting MATLAB, reading the file, evaluate the function, writing the output arguments to file and at the end collecting all output arguments of all jobs and rearranging them. Starting MATLAB for each job imposes quite some overhead on the jobs if they are small, that is why **[qsubcellfun](/reference/qsubcellfun)** implements "stacking" to combine multiple MATLAB jobs into one job for the Linux cluster. If the jobs that you pass to **[qsubcellfun](/reference/qsubcellfun)** are small (less than 180 seconds) they will be stacked automatically. You can control it in detail with the "stack" option in **[qsubcellfun](/reference/qsubcellfun)**. For example
+The execution of each job involves writing the input arguments to a file, submitting the job, to Torque, starting MATLAB, reading the file, evaluate the function, writing the output arguments to file and at the end collecting all output arguments of all jobs and rearranging them. Starting MATLAB for each job imposes quite some overhead on the jobs if they are small, that is why **[qsubcellfun](https://github.com/fieldtrip/fieldtrip/blob/release/qsubcellfun.m)** implements "stacking" to combine multiple MATLAB jobs into one job for the Linux cluster. If the jobs that you pass to **[qsubcellfun](https://github.com/fieldtrip/fieldtrip/blob/release/qsubcellfun.m)** are small (less than 180 seconds) they will be stacked automatically. You can control it in detail with the "stack" option in **[qsubcellfun](https://github.com/fieldtrip/fieldtrip/blob/release/qsubcellfun.m)**. For example
 
     >> qsubcellfun(@randn, {1,1,1,1}, 'memreq', 1024, 'timreq', 60, 'stack', 4);
     stacking 4 MATLAB jobs in each qsub job

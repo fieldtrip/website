@@ -5,7 +5,7 @@ tags: [faq, peer]
 
 # How can I prevent a job from executing twice?
 
-Jobs that fail to finish in the expected amount of time (1), or jobs that fail to start properly (2) are by default automatically resubmitted by **[peercellfun](/reference/peercellfun)**. In general this is desired behavior, becaus
+Jobs that fail to finish in the expected amount of time (1), or jobs that fail to start properly (2) are by default automatically resubmitted by **[peercellfun](https://github.com/fieldtrip/fieldtrip/blob/release/peercellfun.m)**. In general this is desired behavior, becaus
 
 1.  peers in generals come and go, and a colleague of yours might have switched of a peer that was busy on your job
 2.  an idle peerslave might accept your job, and only then find out that it cannot get a MATLAB license

@@ -49,7 +49,7 @@ Because I didn't do source analysis myself until now I don't now the best way to
 
 **Plotting data**
 
-**Working with animal electrophysiology data (LFPs and spikes)**
+**Working with animal electrophysiology data (LFPs and spikes.m)**
 
 **How to use checkconfig**
 

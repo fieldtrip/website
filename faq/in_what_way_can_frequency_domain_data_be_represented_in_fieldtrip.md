@@ -7,11 +7,11 @@ tags: [faq, freq, connectivity, coherence]
 
 ## Different output options in ft_freqanalysis
 
-When computing the frequency domain representation of your data using **[ft_freqanalysis](/reference/ft_freqanalysis)**, you can specify the cfg-option 'output'. This option determines the representation of your data:
+When computing the frequency domain representation of your data using **[ft_freqanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqanalysis.m)**, you can specify the cfg-option 'output'. This option determines the representation of your data:
 
     cfg.output = 'pow';
 
-The output to **[ft_freqanalysis](/reference/ft_freqanalysis)** will look like this:
+The output to **[ft_freqanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqanalysis.m)** will look like this:
 
     freq =
 
@@ -26,7 +26,7 @@ The numeric data will be stored in the field called 'powspctrm', containing the 
 
     cfg.output = 'powandcsd';
 
-The output to **[ft_freqanalysis](/reference/ft_freqanalysis)** will look like this:
+The output to **[ft_freqanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqanalysis.m)** will look like this:
 
     freq =
 
@@ -43,7 +43,7 @@ The numeric data will now be stored in two fields: the 'powspctrm' and the 'crss
 
     cfg.output = 'fourier';
 
-The output to **[ft_freqanalysis](/reference/ft_freqanalysis)** will look like this:
+The output to **[ft_freqanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqanalysis.m)** will look like this:
 
     freq =
 
@@ -67,7 +67,7 @@ Note that the 'powspctrm' is actually nothing else than the cross-spectrum betwe
 
 ## Yet another representation
 
-Using **[ft_connectivityanalysis](/reference/ft_connectivityanalysis)** on frequency domain data containing fourier-spectra, without specifying cfg.channelcmb will result in yet another representation of (bivariate) frequency domain data.
+Using **[ft_connectivityanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_connectivityanalysis.m)** on frequency domain data containing fourier-spectra, without specifying cfg.channelcmb will result in yet another representation of (bivariate) frequency domain data.
 
     coh =
 
@@ -82,7 +82,7 @@ Note that this representation lacks a 'labelcmb' field, and that the 'dimord' is
 
 ## Toggling between the different representations
 
-It is possible (but not recommended for non-expert users) to toggle between the different representations using **[ft_checkdata](/reference/ft_checkdata)** in combination with the key 'cmbrepresentation'. For exampl
+It is possible (but not recommended for non-expert users) to toggle between the different representations using **[ft_checkdata](https://github.com/fieldtrip/fieldtrip/blob/release/ft_checkdata.m)** in combination with the key 'cmbrepresentation'. For exampl
 
     freq =
 

@@ -9,7 +9,7 @@ Sensor locations are described by the `elec` structure and can contain fewer or 
 
 Depending on the system from which the data originates, fiducials are either digitized and represented just like electrodes, or fiducials are represented separately from the electrodes.
 
-In **[ft_electroderealign](/reference/ft_electroderealign)** the fiducials are never obtained from the `elec` structure, but they always have to be explicitly specified in the configuration:
+In **[ft_electroderealign](https://github.com/fieldtrip/fieldtrip/blob/release/ft_electroderealign.m)** the fiducials are never obtained from the `elec` structure, but they always have to be explicitly specified in the configuration:
 
     fid.chanpos       = [nas; lpa; rpa];       % CTF coordinates of the fiducials
     fid.elecpos       = [nas; lpa; rpa];       % just like electrode positions

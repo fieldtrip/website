@@ -8,7 +8,7 @@ tags: [guidelines, development]
 When you add documentation, please consider the following documentation guidelines to keep it consistent with other documentation and to facilitate cross-linking.
 
 - FieldTrip should be written with capital "F" and capital "T"
-- All FieldTrip functions should be written in the text made **bold**, without .m, and with a link to the reference documentation: i.e. **[ft_preprocessing](/reference/ft_preprocessing)**
+- All FieldTrip functions should be written in the text made **bold**, without .m, and with a link to the reference documentation: i.e. **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)**
 - When you add a new page, please give it relevant [tags](#how_to_add_tags).
 - If you see something that needs to be fixed in the documentation, report it as issue on [GitHub](https://github.com/fieldtrip/website/issues)
 - Please structure new tutorials [in the following way](#how_to_structure_a_tutorial).

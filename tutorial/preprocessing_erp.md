@@ -7,11 +7,11 @@ tags: [tutorial, eeg, brainvision, preprocessing, trialfun, timelock, eeg-affect
 
 ## Background
 
-In FieldTrip the preprocessing of data refers to the reading of the data, segmenting the data around interesting events such as triggers, temporal filtering and optionally rereferencing. The **[ft_preprocessing](/reference/ft_preprocessing)** function takes care of all these steps, i.e., it reads the data and applies the preprocessing options.
+In FieldTrip the preprocessing of data refers to the reading of the data, segmenting the data around interesting events such as triggers, temporal filtering and optionally rereferencing. The **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** function takes care of all these steps, i.e., it reads the data and applies the preprocessing options.
 
 There are largely two alternative approaches for preprocessing, which especially differ in the amount of memory required. The first approach is to read all data from the file into memory, apply filters, and subsequently cut the data into interesting segments. The second approach is to first identify the interesting segments, read those segments from the data file and apply the filters to those segments only. The remainder of this tutorial explains the second approach, as that is the most appropriate for large data sets such as the EEG data used in this tutorial. The approach for reading and filtering continuous data and segmenting afterwards is explained in [another tutorial](/tutorial/continuous).
 
-Preprocessing involves several steps including identifying individual trials from the dataset, filtering and artifact rejections. This tutorial covers how to identify trials using the trigger signal. Defining data segments of interest can be done according to a specified trigger channel or according to your own criteria when you write your own trial function. Examples for both ways are described in this tutorial, and both ways depend on **[ft_definetrial](/reference/ft_definetrial)**.
+Preprocessing involves several steps including identifying individual trials from the dataset, filtering and artifact rejections. This tutorial covers how to identify trials using the trigger signal. Defining data segments of interest can be done according to a specified trigger channel or according to your own criteria when you write your own trial function. Examples for both ways are described in this tutorial, and both ways depend on **[ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_definetrial.m)**.
 
 The output of ft_definetrial is a configuration structure containing the field cfg.trl. This is a matrix representing the relevant parts of the raw datafile which are to be selected for further processing. Each row in the `trl` matrix represents a single epoch-of-interest, and the `trl` matrix has at least 3 columns. The first column defines (in samples) the beginpoint of each epoch with respect to how the data are stored in the raw datafile. The second column defines (in samples) the endpoint of each epoch, and the third column specifies the offset (in samples) of the first sample within each epoch with respect to timepoint 0 within that epoch.
 
@@ -27,7 +27,7 @@ Make sure that all files that you have downloaded from the ftp link are unzipped
 
 For memory efficiency (especially relevant for large datasets), with FieldTrip we commonly use the strategy to only read in those segments of data that are of interest. This requires first to define the segments of interest (the trials) and subsequently to read them in and preprocess them. It is also possible to read in the whole continuous data, and segment the data in memory [(see here)](/tutorial/continuous).
 
-Instead of using the default 'trialfun_general' function with **[ft_definetrial](/reference/ft_definetrial)**, we will use a custom 'trialfun_affcog' that has been written specifically for this experiment. This custom function reads markers from the EEG record and identifies trials that belong to condition 1 (positive-negative judgement) or 2 (animal-human judgement). The function is available along with the data.
+Instead of using the default 'trialfun_general' function with **[ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_definetrial.m)**, we will use a custom 'trialfun_affcog' that has been written specifically for this experiment. This custom function reads markers from the EEG record and identifies trials that belong to condition 1 (positive-negative judgement) or 2 (animal-human judgement). The function is available along with the data.
 
 The custom trial function is available from [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/preprocessing_erp/trialfun_affcog.m) or can be found at the end in the [appendix](#appendix-the-trialfun-used-in-this-example) of this example script. Please save it to a local file with the name `trialfun_affcog.m`.
 
@@ -37,7 +37,7 @@ The custom trial function is available from [here](ftp://ftp.fieldtriptoolbox.or
     cfg.datafile     = 's04.eeg';
     cfg = ft_definetrial(cfg);
 
-After the call to **[ft_definetrial](/reference/ft_definetrial)**, the cfg now not only stores the dataset name, but also the definition of the segments of data that will be used for further processing and analysis. The first column is the begin sample, the second the end sample, the third the offset and the fourth contains the condition for each trial (1=affective, 2=ontological).
+After the call to **[ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_definetrial.m)**, the cfg now not only stores the dataset name, but also the definition of the segments of data that will be used for further processing and analysis. The first column is the begin sample, the second the end sample, the third the offset and the fourth contains the condition for each trial (1=affective, 2=ontological).
 
     >> disp(cfg.trl)
     ans =
@@ -53,9 +53,9 @@ After the call to **[ft_definetrial](/reference/ft_definetrial)**, the cfg now n
 
 In this raw BrainVision dataset, the signal from all electrodes is recorded unipolar and referenced to an electrode on the left mastoid. We want the signal to be referenced to linked (left and right) mastoids. During the acquisition an 'RM' electrode (number 32) was placed on the right mastoid and recorded along with all EEG channels.
 
-To re-reference the data we use the `cfg.implicitref` option of **[ft_preprocessing](/reference/ft_preprocessing)** to add the implicit reference channel 'LM' (the left mastoid) to the data representation as a channel with all zeros, and subsequently use the `cfg.refchannel` and `cfg.reref` options to subtract the mean of the two mastoid channels ('LM' and 'RM') from all channels.
+To re-reference the data we use the `cfg.implicitref` option of **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** to add the implicit reference channel 'LM' (the left mastoid) to the data representation as a channel with all zeros, and subsequently use the `cfg.refchannel` and `cfg.reref` options to subtract the mean of the two mastoid channels ('LM' and 'RM') from all channels.
 
-Now call pre-processing using the cfg output that resulted from **[ft_definetrial](/reference/ft_definetrial)**:
+Now call pre-processing using the cfg output that resulted from **[ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_definetrial.m)**:
 
     % Baseline-correction options
     cfg.demean          = 'yes';
@@ -72,12 +72,12 @@ Now call pre-processing using the cfg output that resulted from **[ft_definetria
 
     data = ft_preprocessing(cfg);
 
-Try **[ft_databrowser](/reference/ft_databrowser)** now to visualize the data segments that were read into memory.
+Try **[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_databrowser.m)** now to visualize the data segments that were read into memory.
 
     cfg = [];  % use only default options
     ft_databrowser(cfg, data);
 
-You can also use **[ft_databrowser](/reference/ft_databrowser)** to visualize the continuous data that is stored on disk. The data will be read on the fly:
+You can also use **[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_databrowser.m)** to visualize the continuous data that is stored on disk. The data will be read on the fly:
 
     cfg         = [];
     cfg.dataset = 's04.vhdr';
@@ -162,7 +162,7 @@ We now discard these extra channels that were used as EOG from the data and add 
     cfg  = [];
     data = ft_appenddata(cfg, data, eogv, eogh);
 
-You can check the channel labels that are now present in the data and use **[ft_databrowser](/reference/ft_databrowser)** to look at all data combined.
+You can check the channel labels that are now present in the data and use **[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_databrowser.m)** to look at all data combined.
 
     disp(data.label')
       Columns 1 through 12
@@ -189,7 +189,7 @@ For topoplotting and sometimes for analysis it is necessary to know how the elec
 
 {% include image src="/assets/img/tutorial/preprocessing_erp/layoutacticapmpi.png" width="200" %}
 
-The channel positions are not stored in the EEG dataset. You have to use a layout file; this is a .mat file that contains the 2-D positions of the channels. FieldTrip provides a number of default layouts for BrainVision EEG caps in the fieldtrip/template/layout directory. It is also possible to create custom layouts (see **[ft_prepare_layout](/reference/ft_prepare_layout)** and the [layout tutorial](/tutorial/layout)). In this example we will use an existing layout file that is included with the example data.
+The channel positions are not stored in the EEG dataset. You have to use a layout file; this is a .mat file that contains the 2-D positions of the channels. FieldTrip provides a number of default layouts for BrainVision EEG caps in the fieldtrip/template/layout directory. It is also possible to create custom layouts (see **[ft_prepare_layout](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_layout.m)** and the [layout tutorial](/tutorial/layout)). In this example we will use an existing layout file that is included with the example data.
 
     cfg        = [];
     cfg.layout = 'mpi_customized_acticap64.mat';
@@ -199,7 +199,7 @@ Note that the layout should contain correct channel labels that match the channe
 
 ### Artifacts
 
-An next important step of EEG preprocessing is detection (and rejection) of artifacts. Different approaches of dealing with artifacts are presented in details in the [introductory tutorial on artifacts](/tutorial/artifacts), the [visual artifact removal tutorial](/tutorial/visual_artifact_rejection) and the [automatic artifact rejection removal tutorial](/tutorial/automatic_artifact_rejection). In this example script, we will use **[ft_rejectvisual](/reference/ft_rejectvisual)** function to visually inspect the data and reject the trials or channels that contain artifacts. We first will try the "channel" mode. In this mode all trials are displayed at once allowing paging through the channels. Then we will try the "summary" mode.
+An next important step of EEG preprocessing is detection (and rejection) of artifacts. Different approaches of dealing with artifacts are presented in details in the [introductory tutorial on artifacts](/tutorial/artifacts), the [visual artifact removal tutorial](/tutorial/visual_artifact_rejection) and the [automatic artifact rejection removal tutorial](/tutorial/automatic_artifact_rejection). In this example script, we will use **[ft_rejectvisual](https://github.com/fieldtrip/fieldtrip/blob/release/ft_rejectvisual.m)** function to visually inspect the data and reject the trials or channels that contain artifacts. We first will try the "channel" mode. In this mode all trials are displayed at once allowing paging through the channels. Then we will try the "summary" mode.
 
 #### Channel mode
 
@@ -212,7 +212,7 @@ You can scroll to the vertical EOG channel ('veog', number 61) and confirm to yo
 {% include image src="/assets/img/tutorial/preprocessing_erp/example_script_artifacts1.png" width="600" %}
 
 {% include markup/info %}
-In **[ft_rejectvisual](/reference/ft_rejectvisual)** with cfg.method='channel' you can go to channel '43' (note that the channel name is '43' and its number is also 43). There you will see that in trials 138 to 149 this channel is a bit more noisy, suggesting that the electrode contact on this side of the cap was temporarily bad. Neighboring channels also suggest that at trial 138 something happened, perhaps a movement of the electrode cap. We are not going to deal with this now, but it is something that you might want to keep in mind for optional cleaning of the data with **[ft_componentanalysis](/reference/ft_componentanalysis)** and **[ft_rejectcomponent](/reference/ft_rejectcomponent)**
+In **[ft_rejectvisual](https://github.com/fieldtrip/fieldtrip/blob/release/ft_rejectvisual.m)** with cfg.method='channel' you can go to channel '43' (note that the channel name is '43' and its number is also 43). There you will see that in trials 138 to 149 this channel is a bit more noisy, suggesting that the electrode contact on this side of the cap was temporarily bad. Neighboring channels also suggest that at trial 138 something happened, perhaps a movement of the electrode cap. We are not going to deal with this now, but it is something that you might want to keep in mind for optional cleaning of the data with **[ft_componentanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_componentanalysis.m)** and **[ft_rejectcomponent](https://github.com/fieldtrip/fieldtrip/blob/release/ft_rejectcomponent.m)**
 {% include markup/end %}
 
 #### Summary mode
@@ -238,7 +238,7 @@ After removing data segments that contain artifacts, you might want to do a last
     cfg.viewmode = 'vertical';
     ft_databrowser(cfg, data_clean);
 
-Note that you can also use **[ft_databrowser](/reference/ft_databrowser)** to mark artifacts instead of - or in addition to - ft_rejectvisual. The artifacts marked in ft_databrowser can be removed using **[ft_rejectartifact](/reference/ft_rejectartifact)**. The important difference between the two is that ft_rejectvisual can only be used to reject complete trials, whereas ft_rejectartifact can also be used to reject small sections from continuous data or from long trials.
+Note that you can also use **[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_databrowser.m)** to mark artifacts instead of - or in addition to - ft_rejectvisual. The artifacts marked in ft_databrowser can be removed using **[ft_rejectartifact](https://github.com/fieldtrip/fieldtrip/blob/release/ft_rejectartifact.m)**. The important difference between the two is that ft_rejectvisual can only be used to reject complete trials, whereas ft_rejectartifact can also be used to reject small sections from continuous data or from long trials.
 {% include markup/end %}
 
 ### Computing and plotting the ERPs

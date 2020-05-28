@@ -19,4 +19,4 @@ Regarding events: the events.nev file (which you probably use) only contains tim
       event(i).sample = (event(i).timestamp-double(hdr.FirstTimesStamp))./hdr.TimeStampPerSample + 1;
     end
 
-Regarding spike timestamps (nse, nts): our usual way of dealing with them is by making an all-zero virtual continuous channel, and insert a one at the location of each spike. This is automatically done by the low-level code if you select a spike channel in preprocessing (by means of the low-level neuralynx specific function that is called by **[ft_read_data](/reference/ft_read_data)**).
+Regarding spike timestamps (nse, nts): our usual way of dealing with them is by making an all-zero virtual continuous channel, and insert a one at the location of each spike. This is automatically done by the low-level code if you select a spike channel in preprocessing (by means of the low-level neuralynx specific function that is called by **[ft_read_data](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_data.m)**).

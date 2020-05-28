@@ -5,7 +5,7 @@ tags: [preprocessing, raw, faq, trigger, event, values, type, eventvalue, eventt
 
 # How can I find out what eventvalues and eventtypes there are in my data?
 
-If you recorded data and do not know what eventvalues or eventtypes there are in your data or if the expected values or types do not show up in your data, there is an easy way in FieldTrip to find out what actually _is_ in your data. You need to call **[ft_definetrial](/reference/ft_definetrial)** with cfg.dataset as you are interested in and cfg.eventtype set to '?
+If you recorded data and do not know what eventvalues or eventtypes there are in your data or if the expected values or types do not show up in your data, there is an easy way in FieldTrip to find out what actually _is_ in your data. You need to call **[ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_definetrial.m)** with cfg.dataset as you are interested in and cfg.eventtype set to '?
 
     cfg = [];
     cfg.dataset            = 'yourfile.ext';
@@ -14,7 +14,7 @@ If you recorded data and do not know what eventvalues or eventtypes there are in
 
 This will print in the command window an overview of all eventtypes with associated eventvalues for subsequent trigger-based trial selection.
 
-Another way to find out eventvalues is to use **[ft_databrowser](/reference/ft_databrowser)**. When calling the databrowser in mode cfg.continuous = 'yes' and with not resampled-data (e.g. with the raw dataset), vertical lines will indicate the onset time of the triggers (and text will indicate the associated value
+Another way to find out eventvalues is to use **[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_databrowser.m)**. When calling the databrowser in mode cfg.continuous = 'yes' and with not resampled-data (e.g. with the raw dataset), vertical lines will indicate the onset time of the triggers (and text will indicate the associated value
 
     cfg = [];
     cfg.dataset    = 'yourfile.ext';

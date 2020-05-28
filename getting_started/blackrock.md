@@ -15,7 +15,7 @@ The specifications of this data format can be found on [the company's website](h
 
 To read Blackrock data into FieldTrip, you will need the NPMK toolbox. The latest version of it can be cloned from github: https://github.com/BlackrockMicrosystems/NPMK. This is a MATLAB-toolbox provided by Blackrock microsystems. FieldTrip relies on the low-level reading functionality of this code. Make sure that the .m files in the NPMK toolbox are on the MATLAB path.
 
-To get started, you should add the FieldTrip main directory to your path, and execute the **[ft_defaults](/reference/ft_defaults)** function, which sets the defaults and configures up the minimal required path settings. See also this [frequently asked question](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path).
+To get started, you should add the FieldTrip main directory to your path, and execute the **[ft_defaults](https://github.com/fieldtrip/fieldtrip/blob/release/ft_defaults.m)** function, which sets the defaults and configures up the minimal required path settings. See also this [frequently asked question](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path).
 
     addpath <path_to_fieldtrip>
     ft_defaults

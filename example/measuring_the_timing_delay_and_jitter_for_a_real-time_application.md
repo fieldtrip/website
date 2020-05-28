@@ -165,7 +165,7 @@ On the receiving side (the machine, that reads the data online from shared memor
     end % while true
 
 Once, the data is saved on disk (in a ctf .ds), we can now detect incoming and outgoing triggers.
-We could use **[ft_read_event](/reference/ft_read_event)** to detect the pulses but first we need to make sure , that incoming and outgoing triggers always come in couplets.
+We could use **[ft_read_event](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_event.m)** to detect the pulses but first we need to make sure , that incoming and outgoing triggers always come in couplets.
 
 We can just plot the trigger channel:
 
@@ -538,7 +538,7 @@ The first example shows how you can read data from a real-time acquisition ssyte
 
 ## Timing of the ft_read_header function
 
-To test the timing of the detection of new data in the buffer, without actually reading and processing the data, you can use the following code. The **[ft_realtime_signalproxy](/reference/ft_realtime_signalproxy)** function will write some random noise data to a buffer:
+To test the timing of the detection of new data in the buffer, without actually reading and processing the data, you can use the following code. The **[ft_realtime_signalproxy](https://github.com/fieldtrip/fieldtrip/blob/release/ft_realtime_signalproxy.m)** function will write some random noise data to a buffer:
 
     cfg = [];
     cfg.channel = [1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32];
@@ -578,7 +578,7 @@ This will show you something like
          12240
      ...
 
-You can notice the number of samples increasing now and then with 40 samples (the blocksize in **[ft_realtime_signalproxy](/reference/ft_realtime_signalproxy)**). In this example, it increases approximately every 7th iteration of the **[ft_read_header](/reference/ft_read_header)** function. That means that the **[ft_read_header](/reference/ft_read_header)** function is called 7 times in the time that it took to collect 40 data samples, corresponding to 7 calls per 40 ms, or 5.7 ms per single call to **[ft_read_header](/reference/ft_read_header)**.
+You can notice the number of samples increasing now and then with 40 samples (the blocksize in **[ft_realtime_signalproxy](https://github.com/fieldtrip/fieldtrip/blob/release/ft_realtime_signalproxy.m)**). In this example, it increases approximately every 7th iteration of the **[ft_read_header](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_header.m)** function. That means that the **[ft_read_header](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_header.m)** function is called 7 times in the time that it took to collect 40 data samples, corresponding to 7 calls per 40 ms, or 5.7 ms per single call to **[ft_read_header](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_header.m)**.
 
 ## Timing of the ft_read_header function when accessing shared memory, performed on the CTF275 MEG system at the FCDC
 

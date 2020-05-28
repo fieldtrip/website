@@ -28,7 +28,7 @@ The [Inverse source parameter estimates from EEG/MEG data](/development/module/i
 3.  distributed source modeling
     - minimum norm estimation with and without noise regularisation (MNE)
 
-The reference of the **[ft_sourceanalysis](/reference/ft_sourceanalysis)** function refers to the following method
+The reference of the **[ft_sourceanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceanalysis.m)** function refers to the following method
 
     cfg.method = 'lcmv'    linear constrained minimum variance beamformer
                  'sam'     synthetic aperture magnetometry
@@ -105,7 +105,7 @@ _This is under construction, but it is not really clear how this exactly relates
 
 FAQ: [What kind of volume conduction models are implemented?](/faq/what_kind_of_volume_conduction_models_are_implemented)
 
-Reference: **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)**
+Reference: **[ft_prepare_headmodel](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_headmodel.m)**
 
 - The methods listed in the reference of ft_prepare_headmodel should be matched to the articles in [References to implemented methods](/references_to_implemented_methods).
 - The references to implemented methods can be probably extended.
@@ -192,7 +192,7 @@ Method
 
 - article in References to implemented methods: **none**
 
-- lower-level function name: **[ft_headmodel_slab](/reference/ft_headmodel_slab)**
+- lower-level function name: **[ft_headmodel_slab](https://github.com/fieldtrip/fieldtrip/blob/release/ft_headmodel_slab.m)**
 
 - explanation in help of the lower-level function: yes
 
@@ -228,7 +228,7 @@ Method
 
 - article in References to implemented methods: yes (Huang et al., 1999) but is called: **multispheres**
 
-- lower-level function name: **[ft_headmodel_localspheres](/reference/ft_headmodel_localspheres)**
+- lower-level function name: **[ft_headmodel_localspheres](https://github.com/fieldtrip/fieldtrip/blob/release/ft_headmodel_localspheres.m)**
 
 - explanation in help of the lower-level function: yes
 

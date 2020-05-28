@@ -5,7 +5,7 @@ tags: [faq, artifact]
 
 # How can I check the quality of an EEG or MEG recording ?
 
-The **[ft_qualitycheck](/reference/ft_qualitycheck)** function allows you to inspect the overall quality of a MEG dataset.
+The **[ft_qualitycheck](https://github.com/fieldtrip/fieldtrip/blob/release/ft_qualitycheck.m)** function allows you to inspect the overall quality of a MEG dataset.
 
 1. The data is analyzed, quantified, and stored in a .mat file in a timelock- and freq-like fashion. This allows a detailed inspection by existing FT functions.
 
@@ -13,7 +13,7 @@ The **[ft_qualitycheck](/reference/ft_qualitycheck)** function allows you to ins
 
 Here is an example of the quality check report: [20110321_1203.pdf](/assets/pdf/faq/20110321_1203.pdf). The time courses display the evolution of the noise characteristics for a one-hour recording, averaged over 10-second segments.
 
-Simply call **[ft_qualitycheck](/reference/ft_qualitycheck)** with cfg.dataset pointing to the file location, for example;
+Simply call **[ft_qualitycheck](https://github.com/fieldtrip/fieldtrip/blob/release/ft_qualitycheck.m)** with cfg.dataset pointing to the file location, for example;
 
     cfg         = []
     cfg.dataset = 'dataset.ds';

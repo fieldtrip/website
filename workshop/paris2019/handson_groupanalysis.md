@@ -13,11 +13,11 @@ This tutorial was written specifically for the [PracticalMEEG workshop in Paris]
 
 This tutorial provides an introduction into different options for statistical analysis. Here we will use event-related fields (ERFs) that are estimated at the source level for a cortical-sheet parcellation. This type of data representation can also be referred to as "virtual channels", since the source activity is represented in the same way as if there were iEEG electrodes placed in the brain.
 
-To introduce the issue of multiple comparisons, we will start with an analysis for a single hand-picked channel/parcel analysis. After that we will consider analyses that take all virtual channels and all timepoints into account. We will start with some basic statistical testing using the MATLAB statistics toolbox and compare the results with that from using the FieldTrip **[ft_timelockstatistics](/reference/ft_timelockstatistics)** function. Topics that will be covered are parametric statistics on a single channel and time-window, the multiple comparison problem (MCP), non-parametric randomization testing and cluster-based testing.
+To introduce the issue of multiple comparisons, we will start with an analysis for a single hand-picked channel/parcel analysis. After that we will consider analyses that take all virtual channels and all timepoints into account. We will start with some basic statistical testing using the MATLAB statistics toolbox and compare the results with that from using the FieldTrip **[ft_timelockstatistics](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockstatistics.m)** function. Topics that will be covered are parametric statistics on a single channel and time-window, the multiple comparison problem (MCP), non-parametric randomization testing and cluster-based testing.
 
-This tutorial uses the same [multimodal faces](/workshop/paris2019/dataset) as the other tutorials in this series. However, here we will deal with (statistical) analyses on the group level. We will look at differences between the familiar, unfamiliar and scrambled face conditions in a within-subjects design. The processed dataset in this tutorial contains source reconstructed data from all 20 subjects. The virtual-channel ERFs were obtained using **[ft_sourceanalysis](/reference/ft_sourceanalysis)** and **[ft_sourceparcellate](/reference/ft_sourceparcellate)**. For the purpose of inspecting your data visually, we also use the channel-level plotting functions and **[ft_timelockgrandaverage](/reference/ft_timelockgrandaverage)** to calculate the grand average across participants.
+This tutorial uses the same [multimodal faces](/workshop/paris2019/dataset) as the other tutorials in this series. However, here we will deal with (statistical) analyses on the group level. We will look at differences between the familiar, unfamiliar and scrambled face conditions in a within-subjects design. The processed dataset in this tutorial contains source reconstructed data from all 20 subjects. The virtual-channel ERFs were obtained using **[ft_sourceanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceanalysis.m)** and **[ft_sourceparcellate](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceparcellate.m)**. For the purpose of inspecting your data visually, we also use the channel-level plotting functions and **[ft_timelockgrandaverage](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockgrandaverage.m)** to calculate the grand average across participants.
 
-Note that in this tutorial we will not provide detailed information about statistics on channel-level power spectra, time-frequency representations of power (as obtained from **[ft_freqanalysis](/reference/ft_freqanalysis)**), nor on high-density volumetric or cortical sheet source reconstruction results. However, FieldTrip does have similar statistical options for this as well: at the sensor-level we have the **[ft_freqstatistics](/reference/ft_freqstatistics)** function, and on the source-level (statistics on source reconstructed activity), we have the **[ft_sourcestatistics](/reference/ft_sourcestatistics)** function.
+Note that in this tutorial we will not provide detailed information about statistics on channel-level power spectra, time-frequency representations of power (as obtained from **[ft_freqanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqanalysis.m)**), nor on high-density volumetric or cortical sheet source reconstruction results. However, FieldTrip does have similar statistical options for this as well: at the sensor-level we have the **[ft_freqstatistics](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqstatistics.m)** function, and on the source-level (statistics on source reconstructed activity), we have the **[ft_sourcestatistics](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourcestatistics.m)** function.
 
 A more thorough discussion of randomization tests and cluster-based statistics is presented in the [Cluster-based permutation tests on event related fields](/tutorial/cluster_permutation_timelock) and the [Cluster-based permutation tests on time-frequency data](/tutorial/cluster_permutation_freq) tutorials.
 
@@ -38,9 +38,9 @@ To do parametric or non-parametric statistics on virtual-channel event-related f
 
 We will perform the following steps in this tutorial:
 
-- We will visually inspect the data and look where are differences between the conditions by plotting the grand-averages and subject-averages using the **[ft_multiplotER](/reference/ft_multiplotER)**, the **[ft_singleplotER](/reference/ft_singleplotER)** and the MATLAB plot functions. Note that in practice you should _not_ guide your statistical analysis by a visual inspection of the data; you should state your hypothesis up-front and avoid [data dredging or p-hacking](https://en.wikipedia.org/wiki/Data_dredging).
+- We will visually inspect the data and look where are differences between the conditions by plotting the grand-averages and subject-averages using the **[ft_multiplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_multiplotER.m)**, the **[ft_singleplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_singleplotER.m)** and the MATLAB plot functions. Note that in practice you should _not_ guide your statistical analysis by a visual inspection of the data; you should state your hypothesis up-front and avoid [data dredging or p-hacking](https://en.wikipedia.org/wiki/Data_dredging).
 - We will use the standard MATLAB functions for statistical testing in the channel and time of interest
-- We will use **[ft_timelockstatistics](/reference/ft_timelockstatistics)** for statistical testing in the channel and time of interest
+- We will use **[ft_timelockstatistics](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockstatistics.m)** for statistical testing in the channel and time of interest
 - We will test all channels and latencies and consider multiple comparison corrections
 - We will do a non-parametric test with clustering
 
@@ -101,7 +101,7 @@ We can calculate the grand-average over subjects for each of the conditions.
     grandavg_scrambled = ft_timelockgrandaverage(cfg, avg_scrambled{:});
     % "{:}" means to use data from all elements of the cell-array
 
-Now we plot all channels with **[ft_multiplotER](/reference/ft_multiplotER)** to find a channel of interest. Since the data represents virtual-channel timeseries, we cannot use a standard (helmet or head-like) layout. Instead we use a regular ordered layout. See also [this section](/tutorial/layout/#creating-a-schematic-ieeg-layout) in the plotting tutorial. Using the inflated representation of the cortical surface, it would be possible to make a nicer layout, but that is out of scope for this tutorial.
+Now we plot all channels with **[ft_multiplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_multiplotER.m)** to find a channel of interest. Since the data represents virtual-channel timeseries, we cannot use a standard (helmet or head-like) layout. Instead we use a regular ordered layout. See also [this section](/tutorial/layout/#creating-a-schematic-ieeg-layout) in the plotting tutorial. Using the inflated representation of the cortical surface, it would be possible to make a nicer layout, but that is out of scope for this tutorial.
 
     %% virtual channels are not arranged according to a known layout
     cfg = [];
@@ -223,7 +223,7 @@ You can do a dependent samples t-test with the MATLAB [ttest](https://www.mathwo
 
 #### T-test with FieldTrip function
 
-You can do the same thing in FieldTrip (which does not require the statistics toolbox) using the **[ft_timelockstatistics](/reference/ft_timelockstatistics)** function. This should give you the same p-value.
+You can do the same thing in FieldTrip (which does not require the statistics toolbox) using the **[ft_timelockstatistics](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockstatistics.m)** function. This should give you the same p-value.
 
     % define the parameters for the statistical comparison
     cfg = [];
@@ -249,7 +249,7 @@ From the code above you can see that the statistical comparison is between condi
 #### Exercise 1
 
 {% include markup/exercise %}
-Look at the temporal evolution of the effect by changing cfg.latency and cfg.avgovertime in **[ft_timelockstatistics](/reference/ft_timelockstatistics)**. You can plot the t-value versus time, the probability versus time and the statistical mask versus time. Note that the output of the **[ft_timelockstatistics](/reference/ft_timelockstatistics)** function closely resembles the output of the **[ft_timelockanalysis](/reference/ft_timelockanalysis)** function.
+Look at the temporal evolution of the effect by changing cfg.latency and cfg.avgovertime in **[ft_timelockstatistics](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockstatistics.m)**. You can plot the t-value versus time, the probability versus time and the statistical mask versus time. Note that the output of the **[ft_timelockstatistics](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockstatistics.m)** function closely resembles the output of the **[ft_timelockanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockanalysis.m)** function.
 {% include markup/end %}
 
 ### Multiple comparisons
@@ -337,7 +337,7 @@ Below you can see the means by which to implement a Bonferroni correction. Howev
 
     stat_bonferroni = ft_timelockstatistics(cfg, avg_famous{:}, avg_scrambled{:});
 
-FieldTrip also has other methods implemented for performing a multiple comparison correction, such as the FDR. See the **[ft_statistics_analytic](/reference/ft_statistics_analytic)** function for the options to `cfg.correctm` when you are doing a parametric test.
+FieldTrip also has other methods implemented for performing a multiple comparison correction, such as the FDR. See the **[ft_statistics_analytic](https://github.com/fieldtrip/fieldtrip/blob/release/ft_statistics_analytic.m)** function for the options to `cfg.correctm` when you are doing a parametric test.
 
 ## Non-parametric statistics
 
@@ -345,7 +345,7 @@ FieldTrip also has other methods implemented for performing a multiple compariso
 
 Instead of using the analytic t-distribution to calculate the appropriate p-value for your effect, you can use a nonparametric randomization test to obtain the p-value.
 
-This is implemented in FieldTrip in the function **[ft_statistics_montecarlo](/reference/ft_statistics_montecarlo)**, which is called by **[ft_timelockstatistics](/reference/ft_timelockstatistics)** when you set `cfg.method = 'montecarlo'``. A Monte-Carlo estimate of the significance probabilities and/or critical values is calculated based on randomizing (or permuting) your data many times between the conditions.
+This is implemented in FieldTrip in the function **[ft_statistics_montecarlo](https://github.com/fieldtrip/fieldtrip/blob/release/ft_statistics_montecarlo.m)**, which is called by **[ft_timelockstatistics](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockstatistics.m)** when you set `cfg.method = 'montecarlo'``. A Monte-Carlo estimate of the significance probabilities and/or critical values is calculated based on randomizing (or permuting) your data many times between the conditions.
 
     cfg = [];
     cfg.channel = 'all';
@@ -403,13 +403,13 @@ Perform the same statistical test, but now without selecting the time range of i
 
 {% include markup/end %}
 
-Also in the non-parametric approach for testing of statistical significance, different corrections for multiple comparisons such as Bonferroni, FDR, and others are implemented. See the options for `cfg.correctm` in **[ft_statistics_montecarlo](/reference/ft_statistics_montecarlo)**.
+Also in the non-parametric approach for testing of statistical significance, different corrections for multiple comparisons such as Bonferroni, FDR, and others are implemented. See the options for `cfg.correctm` in **[ft_statistics_montecarlo](https://github.com/fieldtrip/fieldtrip/blob/release/ft_statistics_montecarlo.m)**.
 
 ### Permutation test based on cluster statistics
 
 FieldTrip also implements a special way to correct for multiple comparisons, which makes use of the feature in the data that the effects at neighbouring timepoints are highly correlated. For more details see the cluster permutation tutorials for [ERFs](/tutorial/cluster_permutation_timelock) and [time frequency data](/tutorial/cluster_permutation_freq) and the publication by [Maris and Oostenveld (2007)](/references_to_implemented_methods#statistical_inference_by_means_of_permutation).
 
-If your channels in the data are close to each other, you can also use the feature that neighbouring channels are likely to show similar effects. This requires that you specify which channels are neighbours, see **[ft_prepare_neighbours](/reference/ft_prepare_neighbours)**. In this case we will not assume that neighbouring patches see the same thing, and will only rely on clustering over the time axis.
+If your channels in the data are close to each other, you can also use the feature that neighbouring channels are likely to show similar effects. This requires that you specify which channels are neighbours, see **[ft_prepare_neighbours](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_neighbours.m)**. In this case we will not assume that neighbouring patches see the same thing, and will only rely on clustering over the time axis.
 
     cfg = [];
     cfg.channel = 'all';

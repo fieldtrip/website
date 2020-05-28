@@ -17,7 +17,7 @@ The source code for the mex files is mostly contained in the fieldtrip/src direc
 
 ## Recommended way of recompiling
 
-To (re)compile all mex files at once, you can use the **[ft_compile_mex](/reference/ft_compile_mex)** function.
+To (re)compile all mex files at once, you can use the **[ft_compile_mex](https://github.com/fieldtrip/fieldtrip/blob/release/ft_compile_mex.m)** function.
 
 ## Alternative way of recompiling
 

@@ -40,7 +40,7 @@ If you also have the [MATLAB Parallel Server](https://nl.mathworks.com/products/
 
 At the Donders we have a Linux compute cluster that is managed with a batch queueing system that allows users to submit large batches of jobs to run in parallel. The Donders cluster runs Torque/Maui, but other PBS systems, SLURM, LSF, Sun Grid Engine and Oracle Grid Engine are also supported. More documentation on the qsub toolbox is found [here](/development/module/qsub).
 
-To facilitate distributed computing, we have implemented the **[qsubcellfun](/reference/qsubcellfun)** wrapper function within MATLAB, which for the end-user works similar to [cellfun](https://nl.mathworks.com/help/matlab/ref/cellfun.html) and [batch](https://nl.mathworks.com/help/parallel-computing/batch.html).
+To facilitate distributed computing, we have implemented the **[qsubcellfun](https://github.com/fieldtrip/fieldtrip/blob/release/qsubcellfun.m)** wrapper function within MATLAB, which for the end-user works similar to [cellfun](https://nl.mathworks.com/help/matlab/ref/cellfun.html) and [batch](https://nl.mathworks.com/help/parallel-computing/batch.html).
 
     for i=1:Nsubj
       cfg{i}         = ...
@@ -48,7 +48,7 @@ To facilitate distributed computing, we have implemented the **[qsubcellfun](/re
     end
     rawdata = qsubcellfun(@ft_preprocessing, cfg);
 
-See **[qsubcellfun](/reference/qsubcellfun)**, **[qsubfeval](/reference/qsubfeval)** and **[qsubget](/reference/qsubget)** for details.
+See **[qsubcellfun](https://github.com/fieldtrip/fieldtrip/blob/release/qsubcellfun.m)**, **[qsubfeval](https://github.com/fieldtrip/fieldtrip/blob/release/qsubfeval.m)** and **[qsubget](https://github.com/fieldtrip/fieldtrip/blob/release/qsubget.m)** for details.
 
 ### FieldTrip peer computing toolbox
 
@@ -66,7 +66,7 @@ The syntax you would use to distribute jobs with the peer system is similar to [
     end
     rawdata = peercellfun(@ft_preprocessing, cfg);
 
-See **[peercellfun](/reference/peercellfun)**, **[peerfeval](/reference/peerfeval)** and **[peerget](/reference/peerget)** for details.
+See **[peercellfun](https://github.com/fieldtrip/fieldtrip/blob/release/peercellfun.m)**, **[peerfeval](https://github.com/fieldtrip/fieldtrip/blob/release/peerfeval.m)** and **[peerget](https://github.com/fieldtrip/fieldtrip/blob/release/peerget.m)** for details.
 
 ### FieldTrip engine toolbox
 

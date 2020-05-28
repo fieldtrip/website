@@ -39,16 +39,16 @@ The EEG channels are called “C4-A1” and “C3-A2”, according to derivation
 
 To explore the sleep data, we will perform the following step
 
-- Read the sleep data with **[ft_preprocessing](/reference/ft_preprocessing)** and view the raw signals in 30-second epochs using **[ft_databrowser](/reference/ft_databrowser)**.
-- Detect artifactual Wake epochs using **[ft_artifact_muscle](/reference/ft_artifact_muscle)** by looking at the EMG and EOG excluding artifactual periods and periods with eye activity from further planned analysis using **[ft_rejectartifact](/reference/ft_rejectartifact)**.
-- Estimating the sleep frequencies represented over the course of sleep using **[ft_freqanalysis](/reference/ft_freqanalysis)** and visualize using **[ft_singleplotTFR](/reference/ft_singleplotTFR)** and **[ft_databrowser](/reference/ft_databrowser)**.
-- Identify the sleep state of non-REM by thresholding and combining signals using **[ft_apply_montage](/reference/ft_apply_montage)** and reading in pre-scored hypnograms for a comparison with the here estimated sleep stages **[ft_databrowser](/reference/ft_databrowser)**.
-- Find spontaneous ECG events like R-waves and determine the heart rate using **[ft_artifact_zvalue](/reference/ft_artifact_zvalue)**.
-- Find sleep EEG events like slow waves and sleep spindles in the non-REM signal that was cleaned from artifacts using **[ft_artifact_zvalue](/reference/ft_artifact_zvalue)**, **[ft_preprocessing](/reference/ft_preprocessing)**, **[ft_redefinetrial](/reference/ft_redefinetrial)** and visualize their time-locked average signals and time-locked frequency activity (ERF) using **[ft_timelockanalysis](/reference/ft_timelockanalysis)**, **[ft_singleplotER](/reference/ft_singleplotER)**, **[ft_freqanalysis](/reference/ft_freqanalysis)** and **[ft_singleplotTFR](/reference/ft_singleplotTFR)** and then view them in the browser **[ft_databrowser](/reference/ft_databrowser)**.
+- Read the sleep data with **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** and view the raw signals in 30-second epochs using **[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_databrowser.m)**.
+- Detect artifactual Wake epochs using **[ft_artifact_muscle](https://github.com/fieldtrip/fieldtrip/blob/release/ft_artifact_muscle.m)** by looking at the EMG and EOG excluding artifactual periods and periods with eye activity from further planned analysis using **[ft_rejectartifact](https://github.com/fieldtrip/fieldtrip/blob/release/ft_rejectartifact.m)**.
+- Estimating the sleep frequencies represented over the course of sleep using **[ft_freqanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqanalysis.m)** and visualize using **[ft_singleplotTFR](https://github.com/fieldtrip/fieldtrip/blob/release/ft_singleplotTFR.m)** and **[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_databrowser.m)**.
+- Identify the sleep state of non-REM by thresholding and combining signals using **[ft_apply_montage](https://github.com/fieldtrip/fieldtrip/blob/release/ft_apply_montage.m)** and reading in pre-scored hypnograms for a comparison with the here estimated sleep stages **[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_databrowser.m)**.
+- Find spontaneous ECG events like R-waves and determine the heart rate using **[ft_artifact_zvalue](https://github.com/fieldtrip/fieldtrip/blob/release/ft_artifact_zvalue.m)**.
+- Find sleep EEG events like slow waves and sleep spindles in the non-REM signal that was cleaned from artifacts using **[ft_artifact_zvalue](https://github.com/fieldtrip/fieldtrip/blob/release/ft_artifact_zvalue.m)**, **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)**, **[ft_redefinetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_redefinetrial.m)** and visualize their time-locked average signals and time-locked frequency activity (ERF) using **[ft_timelockanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockanalysis.m)**, **[ft_singleplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_singleplotER.m)**, **[ft_freqanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqanalysis.m)** and **[ft_singleplotTFR](https://github.com/fieldtrip/fieldtrip/blob/release/ft_singleplotTFR.m)** and then view them in the browser **[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_databrowser.m)**.
 
 ## Preprocessing
 
-The **[ft_preprocessing](/reference/ft_preprocessing)** function requires the modified sleep datasets and Subject loading code (e.g. Subject05.m), which is available from [our FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/sleep/)
+The **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** function requires the modified sleep datasets and Subject loading code (e.g. Subject05.m), which is available from [our FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/sleep/)
 
 Load the subject specific information. Then read and preprocess the continuous sleep data
 
@@ -78,7 +78,7 @@ The data from Subject01 should have the following structure:
     sampleinfo: [1 4024448]
            cfg: [1x1 struct]
 
-Because the original channels are not named conveniently we apply a montage structure to rename the channel labels to EEG, EOG, EMG and ECG. The montage consists of a matrix of correspondences that changes the original labels by the new ones. By using **[ft_preprocessing](/reference/ft_preprocessing)**, with this matrix as a part of the cfg option montage, channel labels can be modified.
+Because the original channels are not named conveniently we apply a montage structure to rename the channel labels to EEG, EOG, EMG and ECG. The montage consists of a matrix of correspondences that changes the original labels by the new ones. By using **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)**, with this matrix as a part of the cfg option montage, channel labels can be modified.
 
       montage_rename          = [];
       montage_rename.labelold = {'C4-A1' 'ROC-LOC' 'EMG1-EMG2' 'ECG1-ECG2'};
@@ -89,7 +89,7 @@ Because the original channels are not named conveniently we apply a montage stru
       cfg.montage = montage_rename;
       data_continuous = ft_preprocessing(cfg, data_orig);
 
-Lets browse the continuous sleep data as typical for sleep scoring in 30-s epochs using **[ft_databrowser](/reference/ft_databrowser)**.
+Lets browse the continuous sleep data as typical for sleep scoring in 30-s epochs using **[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_databrowser.m)**.
 
 Please also skip through several epochs in the data and zoom out in the time axis to view the full data. Play around to get a good feeling for the signals represented and how the different signals look like and change over the time of sleep.
 
@@ -102,7 +102,7 @@ Please also skip through several epochs in the data and zoom out in the time axi
 {% include image src="/assets/img/tutorial/sleep/sleep_figure_1.png" width="400" %}
 {% include image src="/assets/img/tutorial/sleep/sleep_figure_1_2.png" width="400" %}
 
-_Figure 2: **[ft_databrowser](/reference/ft_databrowser)** of the original data with renamed channels. The data can be horizontally (time axis) and vertically (y-axis/signal amplitude) zoomed in and out to view the data in smaller or larger segments. And data can be viewed segment by segment.._
+_Figure 2: **[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_databrowser.m)** of the original data with renamed channels. The data can be horizontally (time axis) and vertically (y-axis/signal amplitude) zoomed in and out to view the data in smaller or larger segments. And data can be viewed segment by segment.._
 
 We now additionally segment the continuous data in 30-second trials. This allows us later to perform analyses on the data more efficiently. Also this is the basis to break down the long signal into more comprehensible equal-sized chunks from which we can reconstruct a new signal to better estimate sleep states that clearly switch only on such longer time scales.
 
@@ -138,7 +138,7 @@ To identify periods of wake (including brief arousals), non-REM and REM states d
 Please note that due to the reduced sample rate of 128 Hz we cannot use the typical frequency range to better detect EMG, however this should suffice for our case.
 {% include markup/end %}
 
-We now use **[ft_artifact_muscle](/reference/ft_artifact_muscle)** for automated artifact rejection according to some threshold (for more information on the active mode of this function see also the [automatic artifact rejection tutorial](/tutorial/automatic_artifact_rejection?s[]=ft&s[]=artifact&s[]=muscle#jump_artifact_detection)).
+We now use **[ft_artifact_muscle](https://github.com/fieldtrip/fieldtrip/blob/release/ft_artifact_muscle.m)** for automated artifact rejection according to some threshold (for more information on the active mode of this function see also the [automatic artifact rejection tutorial](/tutorial/automatic_artifact_rejection?s[]=ft&s[]=artifact&s[]=muscle#jump_artifact_detection)).
 
 We want to be very cautious with excluding and exclude more than we must since EMG artifacts point towards movement or wake periods have happened probably some seconds earlier and later.
 
@@ -167,7 +167,7 @@ Typically EMG higher than 100 microVolts are best excluded. Note that we exclude
 
 _Figure 3: Interactive figure of ft_artifact_muscle. The left panel shows the z-score of the processed data. Suprathreshold data points are marked in red. The lower right panel shows one trial, which in our case is the same as on the left panel, as we inspect the data all in one.._
 
-We can now look at the detected "artifacts" using **[ft_databrowser](/reference/ft_databrowser)**
+We can now look at the detected "artifacts" using **[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_databrowser.m)**
 
       cfg_art_browse             = cfg;
       cfg_art_browse.continuous  = 'yes';
@@ -214,7 +214,7 @@ Explore the right threshold for detecting all EOG artifacts. Again, the data is 
       % make a copy of the samples where the EOG artifacts start and end, this is needed further down
       EOG_detected = cfg.artfctdef.eog.artifact;
 
-To exclude these epochs with artifacts from analysis we use **[ft_rejectartifact](/reference/ft_rejectartifact)** and replace all the artifactual data points in all channels of the continuous sleep data with zeros by using the option cfg.artfctdef.reject 'value' and setting it to 0.
+To exclude these epochs with artifacts from analysis we use **[ft_rejectartifact](https://github.com/fieldtrip/fieldtrip/blob/release/ft_rejectartifact.m)** and replace all the artifactual data points in all channels of the continuous sleep data with zeros by using the option cfg.artfctdef.reject 'value' and setting it to 0.
 
       % replace the artifactual segments with zero
       cfg = [];
@@ -473,7 +473,7 @@ Lets load a prescored hypnogram as the reference
 
 {% include image src="/assets/img/tutorial/sleep/sleep_hypongram_estimated_vs_prescored.png" width="400" %}
 
-Now we want to view either the prescored or the estimated hypnogram information in with **[ft_databrowser](/reference/ft_databrowser)** using the feature to mark artifactual epochs to highlight epochs according to their sleep state. For simplicity, here we want to focus only on Wake, REM and non-REM because those sleep stages are the ones we get both from the prescored and our estimated hypnogram. However the prescored hypnogram can also give us a more detailed view on the non-REM sleep stages that we can take a look at in the browser
+Now we want to view either the prescored or the estimated hypnogram information in with **[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_databrowser.m)** using the feature to mark artifactual epochs to highlight epochs according to their sleep state. For simplicity, here we want to focus only on Wake, REM and non-REM because those sleep stages are the ones we get both from the prescored and our estimated hypnogram. However the prescored hypnogram can also give us a more detailed view on the non-REM sleep stages that we can take a look at in the browser
 
     artfctdef = [];
     if false % can either choose true or false here to switch between presocred and estimated hypnogram
@@ -548,7 +548,7 @@ Other than detecting periods of hightened or lowered activity often it is intere
 
 ### R-waves and heart rate in ECG
 
-Detect R-waves using **[ft_artifact_zvalue](/reference/ft_artifact_zvalue)** by filtering in a frequency band that puts an emphasis on the R-waves frequency in the ECG. As R-waves are concrete peaks we find the maxima in the envelope of the envelope signals. Note that this methods also works if the R-waves would be inversed pointing towards the negative values.
+Detect R-waves using **[ft_artifact_zvalue](https://github.com/fieldtrip/fieldtrip/blob/release/ft_artifact_zvalue.m)** by filtering in a frequency band that puts an emphasis on the R-waves frequency in the ECG. As R-waves are concrete peaks we find the maxima in the envelope of the envelope signals. Note that this methods also works if the R-waves would be inversed pointing towards the negative values.
 
     %% find heart R-waves in ECG
     cfg            = [];
@@ -587,7 +587,7 @@ Also it might be that the signal was recored in the opposite direction, that is 
 
 {% include markup/end %}
 
-Check if the detected peaks are good estimates of the R-wave in the **[ft_databrowser](/reference/ft_databrowser)**
+Check if the detected peaks are good estimates of the R-wave in the **[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_databrowser.m)**
 
     artfctdef = [];
     artfctdef.rwave.artifact = [Rwave_peaks-10 Rwave_peaks+10];
@@ -653,7 +653,7 @@ Lets view the prepared non-REM data
 
 #### Slow-wave or sleep spindle detection in EEG
 
-Candidates for slow waves or sleep spindle events can be detected using **[ft_artifact_zvalue](/reference/ft_artifact_zvalue)** similarly like for detecting the R-waves above but using a good low and high pass or the band-pass filter in the slow-wave or spindle band and a more strict cutoff threshold.
+Candidates for slow waves or sleep spindle events can be detected using **[ft_artifact_zvalue](https://github.com/fieldtrip/fieldtrip/blob/release/ft_artifact_zvalue.m)** similarly like for detecting the R-waves above but using a good low and high pass or the band-pass filter in the slow-wave or spindle band and a more strict cutoff threshold.
 
     cfg            = [];
     cfg.continuous = 'yes';
@@ -834,7 +834,7 @@ Repeat the above analysis for event detection for sleep spindles when you did sl
 #### Exercise 7
 
 {% include markup/info %}
-View the outcomes of the slow-wave and spindle detection in the same window of **[ft_databrowser](/reference/ft_databrowser)**
+View the outcomes of the slow-wave and spindle detection in the same window of **[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_databrowser.m)**
 {% include markup/end %}
 
 #### Exercise 8
@@ -855,14 +855,14 @@ In this tutorial we learned how to read and interpret continuous sleep data. We 
 
 Also we looked at the distribution of different sleep frequency bands, their fluctuation in sleep cycles and how we can extract epochs from the data that contains useful information for further analysis while at the same time deciding to exclude epochs with other (artifactual) activity (e.g. Wake). We thus constructed a partial estimate of a sleep profile (hypnogram) to aid us further.
 
-Finally we explored how easy it is to detect spontaneous events in signals like ECG and EEG by using simple filtering and thresholding of the cleaned data epochs as a basis, e.g. we found R-waves, sleep slow waves and spindles. These have been then viewed in the **[ft_databrowser](/reference/ft_databrowser)** and we looked at the typical spontaneous events by aligning them by time (ERP) and look at time-locked frequency activity (ERF), all in a single channel.
+Finally we explored how easy it is to detect spontaneous events in signals like ECG and EEG by using simple filtering and thresholding of the cleaned data epochs as a basis, e.g. we found R-waves, sleep slow waves and spindles. These have been then viewed in the **[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_databrowser.m)** and we looked at the typical spontaneous events by aligning them by time (ERP) and look at time-locked frequency activity (ERF), all in a single channel.
 
 This should give you a basis of also recognizing other data and see that recordings are highly dependent on the current state. Importantly, this might also apply to wake recordings of task in which the subjects might doze off, loose focus or have their eyes closed or directed away at important periods of the task. The techinques here can thus also be used as sanity check in other data.
 
 Interesting to continue the analysis if you want to go further:
 
 - do the analyis on data with multiple EEG channels and topographic plots (e.g. [Time-frequency analysis of combined MEG/EEG](/workshop/natmeg/timefrequency))
-- using **[ft_freqgrandaverage](/reference/ft_freqgrandaverage)** and **[ft_timelockgrandaverage](/reference/ft_timelockgrandaverage)** to average the results of different recordings/subjects
+- using **[ft_freqgrandaverage](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqgrandaverage.m)** and **[ft_timelockgrandaverage](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockgrandaverage.m)** to average the results of different recordings/subjects
 - Practicing or trying to automatically find different kind of events, e.g. rapid eye movements and blinks (in the first derivative of a filtered EOG signal), epileptic spikes have similar properties to slow waves (but have different amplitudes and shapes) ...
 - find the timelocking/co-occurrence between different events (e.g. spindles that occur at the same time as slow waves.) and only look at the ones that occur together or the ones that do not.
 

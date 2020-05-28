@@ -13,7 +13,7 @@ You can find the template models for source reconstruction included in FieldTrip
 
 ### Grid search in dipole fitting
 
-When you do source reconstruction with dipole fit methods (as implemented in **[ft_dipolefitting](/reference/ft_dipolefitting)**), you usually assume a source model that consists of a single or a small number of equivalent current dipoles and you fit the source location, orientation and strength to the data. In this case you might start with an exhaustive grid search on a pre-defined grid, which in general is then followed by a non-linear optimization of the location of the dipoles. The initial grid on which the search is performed is not that important and is usually constructed on the fly as 3d grid with a reasonable resolution. The resolution should not be too high, otherwise the grid search will take too long, but should also not be too low, otherwise the non-lienar search will have to start from a grid location that is still far of from the minimum. Both a too low and a too high grid resolution will cause the dipole fitting procedure to take more time.
+When you do source reconstruction with dipole fit methods (as implemented in **[ft_dipolefitting](https://github.com/fieldtrip/fieldtrip/blob/release/ft_dipolefitting.m)**), you usually assume a source model that consists of a single or a small number of equivalent current dipoles and you fit the source location, orientation and strength to the data. In this case you might start with an exhaustive grid search on a pre-defined grid, which in general is then followed by a non-linear optimization of the location of the dipoles. The initial grid on which the search is performed is not that important and is usually constructed on the fly as 3d grid with a reasonable resolution. The resolution should not be too high, otherwise the grid search will take too long, but should also not be too low, otherwise the non-lienar search will have to start from a grid location that is still far of from the minimum. Both a too low and a too high grid resolution will cause the dipole fitting procedure to take more time.
 
 ### Scanning with a beamformer
 
@@ -44,7 +44,7 @@ or you can use
     figure
     ft_plot_mesh(sourcemodel)
 
-You will notice that the 3D regular grids are not that interesting to look at; since there are no connecting elements (triangles), **[ft_plot_mesh](/reference/ft_plot_mesh)** will only show the vertices.
+You will notice that the 3D regular grids are not that interesting to look at; since there are no connecting elements (triangles), **[ft_plot_mesh](https://github.com/fieldtrip/fieldtrip/blob/release/plotting/ft_plot_mesh.m)** will only show the vertices.
 
 ### Distributed source models with MNE
 

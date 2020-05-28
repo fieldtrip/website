@@ -7,7 +7,7 @@ tags: [preprocessing, continuous, raw, faq]
 
 Most of the FieldTrip documentation is written for a cognitive neuroscience audience, i.e. researchers that usually are performing experiments in which different stimuli are presented and where the subject performs different mental tasks.
 
-However, you can also use FieldTrip for analyzing continuous data that does not contain any triggers. One way for processing continuous data is to read it as a single, very long data segment. That is done by skipping **[ft_definetrial](/reference/ft_definetrial)** and by calling **[ft_preprocessing](/reference/ft_preprocessing)** like this
+However, you can also use FieldTrip for analyzing continuous data that does not contain any triggers. One way for processing continuous data is to read it as a single, very long data segment. That is done by skipping **[ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_definetrial.m)** and by calling **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** like this
 
     cfg = [];
     cfg.dataset = 'yourfile.ext';
@@ -53,7 +53,7 @@ This uses the **ft_trialfun_general** function to segment the data. This functio
 
 ## Segmenting data that is already in memory
 
-If you have read your data in into MATLAB and it is represented as a a single, very long trial, you can also segment it using **[ft_redefinetrial](/reference/ft_redefinetrial)**.
+If you have read your data in into MATLAB and it is represented as a a single, very long trial, you can also segment it using **[ft_redefinetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_redefinetrial.m)**.
 
     cfg = [];
     cfg.dataset = 'yourfile.ext';

@@ -7,7 +7,7 @@ tags: [example, statistics]
 
 This example script demonstrates two stratification methods. In the first, the extremes are trimmed, such that at the end the mean of the distributions is (close to) equal. In the second the distribution itself is equated, including the mean, variance and all higher order statistics. Note that, although the second method looks nicer, it is not completely flawless. There is still a small bias within each bin for the selected items to be shifted, and hence the two distributions will not be perfectly equal.
 
-Finally, this example page shows how you can very simply stratify with the FieldTrip **[ft_stratify](/reference/ft_stratify)** function. Although the example here only looks at a single channel, quite often you'll want to stratify the power in two channels simultaneously (e.g. for coherence computation). The **[ft_stratify](/reference/ft_stratify)** function allows you to do that, and also solves the within-bin bias problem (cfg.equalbinavg='yes').
+Finally, this example page shows how you can very simply stratify with the FieldTrip **[ft_stratify](https://github.com/fieldtrip/fieldtrip/blob/release/ft_stratify.m)** function. Although the example here only looks at a single channel, quite often you'll want to stratify the power in two channels simultaneously (e.g. for coherence computation). The **[ft_stratify](https://github.com/fieldtrip/fieldtrip/blob/release/ft_stratify.m)** function allows you to do that, and also solves the within-bin bias problem (cfg.equalbinavg='yes').
 
     s1_orig = randn(1,10000);
     s2_orig = randn(1,10000) + 1;
@@ -97,7 +97,7 @@ Finally, this example page shows how you can very simply stratify with the Field
 
 **Figure 3** Now we have taken only the part of the two distributions that overlap. Note that this method preserves fewer trials than trimming the extremes.
 
-Note that this easily can be achieved with the FieldTrip **[ft_stratify](/reference/ft_stratify)** function like this
+Note that this easily can be achieved with the FieldTrip **[ft_stratify](https://github.com/fieldtrip/fieldtrip/blob/release/ft_stratify.m)** function like this
 
     cfg = [];
     cfg.method      = 'histogram'

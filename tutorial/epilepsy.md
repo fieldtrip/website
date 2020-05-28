@@ -64,7 +64,7 @@ In the CTF recording it appears that the patient's head is tilted to the right, 
 
 #### Analysis of the Neuromag dataset
 
-In this dataset, the head coils are switched on after 20 seconds of recording, which causes a filter artifact, so we can omit the first 20 seconds of data by specifying a single 'trial' from 21 seconds until the end of the recording by using the **[ft_preprocessing](/reference/ft_preprocessing/)** function (see the line-by-line commands for case 3, below).
+In this dataset, the head coils are switched on after 20 seconds of recording, which causes a filter artifact, so we can omit the first 20 seconds of data by specifying a single 'trial' from 21 seconds until the end of the recording by using the **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** function (see the line-by-line commands for case 3, below).
 
 The joint analysis of planar and magnetometer channels for the Neuromag data did not result in satisfactory results. We chose to select only the planar gradiometers for further analysis. The results are similar, but not identical to the results from the CTF data. Both analyzes reveal an area of relatively high kurtosis adjacent to the lesion, a glioma in the right parietal area. This was the area followed up by the surgical team, based on the kurtosis data (originally analyzed in CTF software) interpreted in the context of seizure semiology and neuroanatomy. Both analyzes also yielded a strong peak in the left frontal cortex, which is also thought to be clinically significant.
 
@@ -174,7 +174,7 @@ After coregistration we check once more.
     ft_determine_coordsys(mri_realigned, 'interactive', 'no')
     ft_plot_headshape(headshape);
 
-The headshape not only covers the scalp, but also the face and nose. Hence the coregistration needs to be done prior to defacing from the anatomical MRI. After coregistration we use **[ft_defacevolume](/reference/ft_defacevolume)** to remove the facial details. The translate, rotate and scale parameters specified here were determined experimentally in the graphical user interface.
+The headshape not only covers the scalp, but also the face and nose. Hence the coregistration needs to be done prior to defacing from the anatomical MRI. After coregistration we use **[ft_defacevolume](https://github.com/fieldtrip/fieldtrip/blob/release/ft_defacevolume.m)** to remove the facial details. The translate, rotate and scale parameters specified here were determined experimentally in the graphical user interface.
 
     cfg = [];
     cfg.translate = [70 0 -75];
@@ -186,7 +186,7 @@ The headshape not only covers the scalp, but also the face and nose. Hence the c
 
 {% include image src="/assets/img/tutorial/epilepsy/case3/ctf/figure02.png" width="700" %}
 
-and we use **[ft_volumereslice](/reference/ft_volumereslice)** to reslice the MRI, so that the axes of the volume are aligned with the axes of the coordinate system. This facilitates plotting and ensures that results interpolated on the MRI are not displayed upside-down.
+and we use **[ft_volumereslice](https://github.com/fieldtrip/fieldtrip/blob/release/ft_volumereslice.m)** to reslice the MRI, so that the axes of the volume are aligned with the axes of the coordinate system. This facilitates plotting and ensures that results interpolated on the MRI are not displayed upside-down.
 
     cfg = [];
     mri_resliced = ft_volumereslice(cfg, mri_defaced);
@@ -209,7 +209,7 @@ The kurtosis beamformer is typically run within a bandpass filter (here 10-70 Hz
     cfg.coilaccuracy = 0; % ensure that sensors are expressed in SI units
     data = ft_preprocessing(cfg);
 
-In the following stage, we compute the data covariance matrix for the beamformer source reconstruction. We use the **[ft_timelockanalysis](/reference/ft_sourceanalysis)** function (more commonly used elsewhere to compute an average), and because we have not defined individual trials within the data it will produce the covariance matrix for the whole time period of the data.
+In the following stage, we compute the data covariance matrix for the beamformer source reconstruction. We use the **[ft_timelockanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceanalysis.m)** function (more commonly used elsewhere to compute an average), and because we have not defined individual trials within the data it will produce the covariance matrix for the whole time period of the data.
 
     cfg = [];
     cfg.channel = 'MEG';
@@ -283,7 +283,7 @@ Next we precompute the leadfields, which is not obligatory, but speeds up the su
 
 #### Compute the beamformer virtual channels and kurtosis
 
-Now we compute the LCMV beamformer and reconstruct the time series at each of the locations specified in the source model grid. By projecting the vector dipole moment (for x, y, and z direction) in the direction of maximal power, the source time series becomes a simple vector. The **[ft_sourceanalysis](/reference/ft_sourceanalysis)** function can compute the kurtosis of this time series.
+Now we compute the LCMV beamformer and reconstruct the time series at each of the locations specified in the source model grid. By projecting the vector dipole moment (for x, y, and z direction) in the direction of maximal power, the source time series becomes a simple vector. The **[ft_sourceanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceanalysis.m)** function can compute the kurtosis of this time series.
 
     cfg = [];
     cfg.headmodel = headmodel;

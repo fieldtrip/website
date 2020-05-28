@@ -9,7 +9,7 @@ No, it isn't. The anatomical image is represented as a cube in which a bunch of 
 
 The bottom line is now, that **if your anatomical volume is registered to a meaningful coordinate system**, it doesn't really matter whether the anatomy appears upside down, or not. The figure tries to illustrate this, where the green axes represent the axes of the interesting coordinate system, that is defined relative to the potato, whereas the pink axes represent the voxel coordinate axes. FieldTrip works with the coordinate system defined by the green axes, which are stored in the transformation matrix that is attached to the MRI structure.
 
-If you still find the upside-down issue problematic, you can use **[ft_volumereslice](/reference/ft_volumereslice)**. See this Frequently Asked Question about [reslicing of an MRI ](/faq/how_change_mri_orientation_size_fov) for more information.
+If you still find the upside-down issue problematic, you can use **[ft_volumereslice](https://github.com/fieldtrip/fieldtrip/blob/release/ft_volumereslice.m)**. See this Frequently Asked Question about [reslicing of an MRI ](/faq/how_change_mri_orientation_size_fov) for more information.
 
 {% include image src="/assets/img/faq/my_mri_is_upside_down_is_this_a_problem/potatomen.png" width="600" %}
 

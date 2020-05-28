@@ -48,7 +48,7 @@ However, here we are not interested in the trial definition for offline processi
 
     ft_realtime_classification(cfg);
 
-The **[ft_realtime_classification](/reference/ft_realtime_classification)** function will print the classification result on screen and will open a figure in which the timing is displayed. It being an offline application here, the timing is measured relative to the amount of data that is processed. An acceleration factor larger than 1 means that data is processed faster than realtime, whereas smaller than 1 would indicate that it cannot keep up with the realtime speed. Note that there is quite some time spent on plotting the timing figure. Furthermore note that the timing is relative to the processed data, whereas there is also time between the trials for which the data does not have to be processed.
+The **[ft_realtime_classification](https://github.com/fieldtrip/fieldtrip/blob/release/ft_realtime_classification.m)** function will print the classification result on screen and will open a figure in which the timing is displayed. It being an offline application here, the timing is measured relative to the amount of data that is processed. An acceleration factor larger than 1 means that data is processed faster than realtime, whereas smaller than 1 would indicate that it cannot keep up with the realtime speed. Note that there is quite some time spent on plotting the timing figure. Furthermore note that the timing is relative to the processed data, whereas there is also time between the trials for which the data does not have to be processed.
 
 ## MATLAB code
 

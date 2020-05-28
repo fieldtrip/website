@@ -23,11 +23,11 @@ Every evening one of the FieldTrip [automation scripts](https://github.com/field
 
 ## Running the tests yourself
 
-You can simply execute the tests that don't rely on data on our network share. You can also run them using the **[ft_test](/reference/ft_test)** function like this
+You can simply execute the tests that don't rely on data on our network share. You can also run them using the **[ft_test](https://github.com/fieldtrip/fieldtrip/blob/release/ft_test.m)** function like this
 
     ft_test run test_bug46
 
-When using `ft_test`, the results are stored (together with details on the MATLAB version and operating system) in the dashboard database. You can query previous results of the tests using the **[ft_test](/reference/ft_test)** function like this
+When using `ft_test`, the results are stored (together with details on the MATLAB version and operating system) in the dashboard database. You can query previous results of the tests using the **[ft_test](https://github.com/fieldtrip/fieldtrip/blob/release/ft_test.m)** function like this
 
     ft_test report test_bug46
 

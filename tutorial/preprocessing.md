@@ -13,7 +13,7 @@ If you are interested in how to do preprocessing on your data prior to segmentin
 
 ## Background
 
-In FieldTrip the preprocessing of data refers to the reading of the data, segmenting the data around interesting events such as triggers, temporal filtering and optionally rereferencing. The **[ft_preprocessing](/reference/ft_preprocessing)** function takes care of all these steps, i.e., it reads the data and applies the preprocessing options.
+In FieldTrip the preprocessing of data refers to the reading of the data, segmenting the data around interesting events such as triggers, temporal filtering and optionally rereferencing. The **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** function takes care of all these steps, i.e., it reads the data and applies the preprocessing options.
 
 There are largely two alternative approaches for preprocessing, which especially differ in the amount of memory required. The first approach is to read all data from the file into memory, apply filters, and subsequently cut the data into interesting segments. The second approach is to first identify the interesting segments, read those segments from the data file and apply the filters to those segments only. The remainder of this tutorial explains the second approach, as that is the most appropriate for large data sets such as the MEG data used in this tutorial. The approach for reading and filtering continuous data and segmenting afterwards is explained in another tutorial.
 
@@ -22,7 +22,7 @@ Preprocessing involves several steps including identifying individual trials fro
 - according to a specified trigger channel
 - according to your own criteria when you write your own trial function
 
-Examples for both ways are described in this tutorial, and both ways depend on **[ft_definetrial](/reference/ft_preprocessing)**.
+Examples for both ways are described in this tutorial, and both ways depend on **[ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)**.
 
 The output of ft_definetrial is a configuration structure containing the field cfg.trl. This is a matrix representing the relevant parts of the raw datafile which are to be selected for further processing. Each row in the `trl` matrix represents a single epoch-of-interest, and the `trl` matrix has at least 3 columns. The first column defines (in samples) the beginpoint of each epoch with respect to how the data are stored in the raw datafile. The second column defines (in samples) the endpoint of each epoch, and the third column specifies the offset (in samples) of the first sample within each epoch with respect to timepoint 0 within that epoch.
 
@@ -32,19 +32,19 @@ The output of ft_definetrial is a configuration structure containing the field c
 
 The following steps are taken in this tutorial:
 
-- Define segments of data of interest (the trial definition) using **[ft_definetrial](/reference/ft_definetrial)**
-- Read the data into MATLAB using **[ft_preprocessing](/reference/ft_preprocessing)**
-- Split up the data for the different conditions **[ft_selectdata](/reference/ft_selectdata)**
+- Define segments of data of interest (the trial definition) using **[ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_definetrial.m)**
+- Read the data into MATLAB using **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)**
+- Split up the data for the different conditions **[ft_selectdata](https://github.com/fieldtrip/fieldtrip/blob/release/ft_selectdata.m)**
 
 ## Reading and preprocessing the interesting trials
 
-Using the FieldTrip function **[ft_definetrial](/reference/ft_definetrial)** you can define the pieces of data that will be read in for preprocessing. Trials are defined by their begin and end sample in the data file and each trial has an offset that defines where the relative t=0 point (usually the point of the stimulus-trigger) is for that trial.
+Using the FieldTrip function **[ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_definetrial.m)** you can define the pieces of data that will be read in for preprocessing. Trials are defined by their begin and end sample in the data file and each trial has an offset that defines where the relative t=0 point (usually the point of the stimulus-trigger) is for that trial.
 
 {% include /shared/tutorial/definetrial_all.md %}
 
 This results in a cfg.trl that contains the trial definitions of all conditions (since we specified all three trigger values: 3, 5, and 9). In cfg.trl the beginning, the trigger offset and the end of each trial relative to the beginning of the raw data are defined. Additionally, cfg.trl contains a column that contains the trigger values, i.e., it tells you to which condition each trial belongs.
 
-The output of **[ft_definetrial](/reference/ft_definetrial)** can be used for **[ft_preprocessing](/reference/ft_preprocessing)**.
+The output of **[ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_definetrial.m)** can be used for **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)**.
 
     cfg.channel    = {'MEG' 'EOG'};
     cfg.continuous = 'yes';
@@ -55,7 +55,7 @@ The output of **[ft_definetrial](/reference/ft_definetrial)** can be used for **
         save PreprocData data_all
 
 
-The output of **[ft_preprocessing](/reference/ft_preprocessing)** is the structure data_all which has the following fields:
+The output of **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** is the structure data_all which has the following fields:
 
     data_all =
                hdr: [1x1 struct]
@@ -136,7 +136,7 @@ There are often cases in which it is not sufficient to define a trial only accor
     trl(samecondition,:) = []; % delete those trials
 
 
-Save the trial function together with your other scripts as mytrialfun.m. To ensure that **[ft_preprocessing](/reference/ft_preprocessing)** is making use of the new trial function use the commands
+Save the trial function together with your other scripts as mytrialfun.m. To ensure that **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** is making use of the new trial function use the commands
 
     cfg = [];
     cfg.dataset              = 'Subject01.ds';
@@ -151,7 +151,7 @@ Save the trial function together with your other scripts as mytrialfun.m. To ens
     cfg.channel = {'MEG' 'STIM'};
     dataMytrialfun = ft_preprocessing(cfg);
 
-When you do not specify cfg.trialfun, **[ft_definetrial](/reference/ft_definetrial)** will call a function named trialfun_general as default. Then trials will be defined as we have seen it in the earlier section (Reading and preprocessing the interesting trials).
+When you do not specify cfg.trialfun, **[ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_definetrial.m)** will call a function named trialfun_general as default. Then trials will be defined as we have seen it in the earlier section (Reading and preprocessing the interesting trials).
 
 The output dataMytrialfun now contains fewer trials than before: 192 instead of 261. Thus, we discarded 69 trials that had the same condition in the previous trial. The field dataMytrialfun.trialinfo contains the 4th column of the trl (trial definition) (trigger values of the current trial), and the 5th column of the trl (trigger values of the previous trial).
 

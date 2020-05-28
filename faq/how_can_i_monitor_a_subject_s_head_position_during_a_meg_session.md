@@ -10,7 +10,7 @@ The CTF/Neuromag acquisition software provides a shared memory in which the the 
 {% include markup/warning %}
 Please cite this paper when you use the realtime head localizer in your research:
 
-Stolk A, Todorovic A, Schoffelen JM, Oostenveld R. **[Online and offline tools for head movement compensation in MEG.](https://doi.org/10.1016/j.neuroimage.2012.11.047)** Neuroimage, 2013.
+Stolk A, Todorovic A, Schoffelen JM, Oostenveld R. **[Online and offline tools for head movement compensation in MEG.](https://doi.org/10.1016/j.neuroimage.2012.11.047.m)** Neuroimage, 2013.
 {% include markup/end %}
 
 ## Acquiring the head shape for more realistic visualization
@@ -141,7 +141,7 @@ Currently the option for online monitoring is only available for the CTF system.
 
 For further reading of real time head localizer please read [this paper](https://doi.org/10.1016/j.neuroimage.2012.11.047).
 
-The above online head localization procedure can substantially reduce the influence of head movement within a session, e.g. using short repositioning instructions between experimental blocks, and also allows for accurate repositioning between sessions. However, residual head movement is likely to negatively impact statistical sensitivity and one may want to consider to incorporate information about these head movements into the offline analysis. For instance, incorporation of head position time series into the general linear model, using **[ft_regressconfound](/reference/ft_regressconfound)**, has been found to improve statistical sensitivity up to 30%.
+The above online head localization procedure can substantially reduce the influence of head movement within a session, e.g. using short repositioning instructions between experimental blocks, and also allows for accurate repositioning between sessions. However, residual head movement is likely to negatively impact statistical sensitivity and one may want to consider to incorporate information about these head movements into the offline analysis. For instance, incorporation of head position time series into the general linear model, using **[ft_regressconfound](https://github.com/fieldtrip/fieldtrip/blob/release/ft_regressconfound.m)**, has been found to improve statistical sensitivity up to 30%.
 
 Furthermore, despite using the Polhemus to localize electrode locations we can use the structure.io to localize them. You can find the tutorial [here](/tutorial/electrode). This means we do not need the Polhemus for our experimental procedure and therefore reduce the preparation time by having less to measure.
 

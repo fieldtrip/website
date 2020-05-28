@@ -16,14 +16,14 @@ At the Donders Institute, we record brain activity using an ECoG electrode grid 
 To deal with the tremendous amounts of data recorded each session (approximately 1.5 Gb/min), we develop a recording procedure that allows us to:
 
 1.  Ensure the correct recording and storage of a particular session (using the .nrd Neuralynx dataformat).
-2.  Use a format that allows us to keep long-term storages copies of the original datasets (using the **[ft_spikesplitting](/reference/ft_spikesplitting)** function to split the original file and store it in the .sdma file format).
-3.  Obtain a 1 kHz downsampled working copy of the LFP data that can be conveniently used by the **[ft_preprocessing](/reference/ft_preprocessing)** and other FieldTrip functions.
+2.  Use a format that allows us to keep long-term storages copies of the original datasets (using the **[ft_spikesplitting](https://github.com/fieldtrip/fieldtrip/blob/release/ft_spikesplitting.m)** function to split the original file and store it in the .sdma file format).
+3.  Obtain a 1 kHz downsampled working copy of the LFP data that can be conveniently used by the **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** and other FieldTrip functions.
 4.  Obtain a 1 kHz downsampled estimate of the multi-unit activity (MUA).
 5.  Eventually obtain an estimate of single-unit activity (SUA), depending on the electrode grid configuration.
 
-The downsampling of the original 32 kHz data into the LFP and MUA data is done using the **[ft_spikedownsample](/reference/ft_spikedownsample)** function.
+The downsampling of the original 32 kHz data into the LFP and MUA data is done using the **[ft_spikedownsample](https://github.com/fieldtrip/fieldtrip/blob/release/ft_spikedownsample.m)** function.
 
-Here, we will briefly explain how we use FieldTrip to obtain these representations of the data. In addition, we will describe some basic preprocessing steps (i.e., relabeling channels and using a montage configuration to re-reference the data). To known more about the characteristics of the fileformats used in our recording and analysis setup, please check **[Spike and LFP dataformats](/dataformat/spike)** for a description of Neuralynx and Plexon data formats supported by FieldTrip. For general information about getting started with Plexon and Neuralynx using FieldTrip, please refer to the getting started with **[getting_started:neuralynx](/getting_started/neuralynx)** and **[getting_started:plexon](/getting_started/plexon)** sections.
+Here, we will briefly explain how we use FieldTrip to obtain these representations of the data. In addition, we will describe some basic preprocessing steps (i.e., relabeling channels and using a montage configuration to re-reference the data). To known more about the characteristics of the fileformats used in our recording and analysis setup, please check the page on [spike and LFP dataformats](/dataformat/spike) for a description of Neuralynx and Plexon data formats supported by FieldTrip. For general information about getting started with Plexon and Neuralynx using FieldTrip, please refer to the [getting started with Neuralynx](/getting_started/neuralynx) and [getting started with Plexon](/getting_started/plexon) sections.
 
 ## Data format conversions
 
@@ -33,7 +33,7 @@ The overall flow of datafile formats transformations that we currently use in ou
 
 ### Data splitting
 
-The Neuralynx acquisition system provides the data in a format containing the raw data directly after A/D conversion. During each recorded session, the .nrd file is written directly to an external Lacie RAID-0 hard disk that is connected by firewire 800. The .nrd datafiles contain a 16kB ASCII header, followed by the multiplexed 32-bit channel-level data (see also [this](/getting_started/neuralynx) page). The huge size of these multiplexed files (>100 Gb per 45 minute session) precludes them for efficient post-processing. Using the FieldTrip **[ft_spikesplitting](/reference/ft_spikesplitting)** function, we split the .nrd file into separate files for each channel, containing exactly the same 32-bit information. These files are written into a single directory which usually has the extension .sdma, since it contains the "split dma" channels. We refer to this directory as the output dataset, whereas the .nrd file is the input dataset.
+The Neuralynx acquisition system provides the data in a format containing the raw data directly after A/D conversion. During each recorded session, the .nrd file is written directly to an external Lacie RAID-0 hard disk that is connected by firewire 800. The .nrd datafiles contain a 16kB ASCII header, followed by the multiplexed 32-bit channel-level data (see also [this](/getting_started/neuralynx) page). The huge size of these multiplexed files (>100 Gb per 45 minute session) precludes them for efficient post-processing. Using the FieldTrip **[ft_spikesplitting](https://github.com/fieldtrip/fieldtrip/blob/release/ft_spikesplitting.m)** function, we split the .nrd file into separate files for each channel, containing exactly the same 32-bit information. These files are written into a single directory which usually has the extension .sdma, since it contains the "split dma" channels. We refer to this directory as the output dataset, whereas the .nrd file is the input dataset.
 
 An example of the configuration for spikesplitting is provided belo
 
@@ -49,7 +49,7 @@ It is also important to note that:
 
 - The information extracted from a single .nrd file also contains the timestamps, trigger and event information (see below for details).
 
-- The new version of Neuralynx software also reserves an initial segment of the recorded file to write a header. The FieldTrip function **[ft_spikesplitting](/reference/ft_spikesplitting)** could extract this information and write it in a .txt file in the dataset directory. According to Neuralynx, this header will be operative in future releases.
+- The new version of Neuralynx software also reserves an initial segment of the recorded file to write a header. The FieldTrip function **[ft_spikesplitting](https://github.com/fieldtrip/fieldtrip/blob/release/ft_spikesplitting.m)** could extract this information and write it in a .txt file in the dataset directory. According to Neuralynx, this header will be operative in future releases.
 
 - The .sdma dataset format is used as our back up copy and long-term storage. After creating two backup copies, the original .nrd file is erased.
 
@@ -57,9 +57,9 @@ It is also important to note that:
 
 ### Data downsampling
 
-The **[ft_spikedownsample](/reference/ft_spikedownsample)** function preprocesses and downsamples the LFP data sampled at 32 KHz to 1 kHz. The LFP data at 1 kHz can subsequently be analyzed.
+The **[ft_spikedownsample](https://github.com/fieldtrip/fieldtrip/blob/release/ft_spikedownsample.m)** function preprocesses and downsamples the LFP data sampled at 32 KHz to 1 kHz. The LFP data at 1 kHz can subsequently be analyzed.
 
-An example of the configuration for **[ft_spikedownsample](/reference/ft_spikedownsample)** is provided belo
+An example of the configuration for **[ft_spikedownsample](https://github.com/fieldtrip/fieldtrip/blob/release/ft_spikedownsample.m)** is provided belo
 
     cfg             = [];
     cfg.dataset     = inputDirectory;   % i.e. the *.sdma directory
@@ -83,7 +83,7 @@ This basic configuration structure is necessary to downsample the data. Optional
     cfg.preproc.precision  = 'double';
     cfg = ft_spikedownsample(cfg);
 
-By using the option **format** in the configuration structure, we can choose the file format to which the downsampled LFP data will be written. FieldTrip can write the file dataset in several formats (see **[ft_write_data](/reference/ft_write_data)**). We use the Plexon .nex format which provides us the best compromise between data read/write speed and storage capacity. To get more details about the Plexon dataformats, please see the [getting started with Plexon data](/getting_started/plexon) section. The output dataset directory for the LFP data uses the suffix _\_ds_.
+By using the option **format** in the configuration structure, we can choose the file format to which the downsampled LFP data will be written. FieldTrip can write the file dataset in several formats (see **[ft_write_data](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_write_data.m)**). We use the Plexon .nex format which provides us the best compromise between data read/write speed and storage capacity. To get more details about the Plexon dataformats, please see the [getting started with Plexon data](/getting_started/plexon) section. The output dataset directory for the LFP data uses the suffix _\_ds_.
 
 The raw .nrd file and the split DMA files contains AD values that are not scaled in uV and require an additional factor of 64x. In addition, our acquisition system includes a Plexon headstage with an additional amplification of 20x. Thus, in our case the calibration should be specified as 1/(64\*20).
 
@@ -93,7 +93,7 @@ The different file formats can have different timestamp definitions. The Neuraly
 
 In contrast, the timestamp clock in the Plexon acquisition hardware ticks at the native sampling frequency of 40kHz, meaning that subsequent samples in a Plexon file are 40000/Fsample timestamps apart. In a channel that is sampled at 40kHz subsequent samples are one clocktick apart, in a channel that is sampled at 1kHz the subsequent samples are 40 clockticks apart.
 
-In FieldTrip the relation between the timestamps and the samples is represented in the header. If you call **[ft_read_header](/reference/ft_read_header)** on your datafile, you'll see something like this
+In FieldTrip the relation between the timestamps and the samples is represented in the header. If you call **[ft_read_header](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_header.m)** on your datafile, you'll see something like this
 
     >> hdr = ft_read_header('256_noev_DigitaLynx_DMA.nrd')
     hdr =
@@ -136,11 +136,11 @@ During acquisition the 16 bit trigger channel is sampled with 32kHz, just like a
 
 After spikesplitting, there is a .ttl file containing the same 32kHz representation of the trigger channel as in the DMA log file. There are also two files (.tsl and .tsh) that represent the lowest and highest 32-bits of the 64-bit timestamp channel. The Neuralynx timestamp channel has a clock rate of 1MHz, i.e. 1e6 timestamps per second, or approximately 32 timestamps per data sample at 32kHz (1e6/32556).
 
-After spikedownsampling, the continuous sampled LFP channels are not represented at 32kHz any more, but typically at 1000 Hz. That means that the samples at which the triggers occur in the .ttl channel cannot directly be mapped onto the samples in the LFP channels. The method to link the original triggers to the downsampled data is by means of the timestamps. The **[ft_spikedownsample](/reference/ft_spikedownsample)** function has the option _cfg.timestampdefinition_ which can be _'orig'_ or _'sample'_. If you specify it as _cfg.timestampdefinition='sample'_, the timestamps in the downsampled LFP channels will correspond to the original samples, i.e. there will be 32566 timestamps per second in the downsampled data. The first downsampled sample will be at timestamp 17, because the first 32 original samples are all compressed into the first downsampled sample. If you specify _cfg.timestampdefinition='orig'_, the downsampled LFP data will be written to disk with the original timestamp definition with 1e6 timestamps per second.
+After spikedownsampling, the continuous sampled LFP channels are not represented at 32kHz any more, but typically at 1000 Hz. That means that the samples at which the triggers occur in the .ttl channel cannot directly be mapped onto the samples in the LFP channels. The method to link the original triggers to the downsampled data is by means of the timestamps. The **[ft_spikedownsample](https://github.com/fieldtrip/fieldtrip/blob/release/ft_spikedownsample.m)** function has the option _cfg.timestampdefinition_ which can be _'orig'_ or _'sample'_. If you specify it as _cfg.timestampdefinition='sample'_, the timestamps in the downsampled LFP channels will correspond to the original samples, i.e. there will be 32566 timestamps per second in the downsampled data. The first downsampled sample will be at timestamp 17, because the first 32 original samples are all compressed into the first downsampled sample. If you specify _cfg.timestampdefinition='orig'_, the downsampled LFP data will be written to disk with the original timestamp definition with 1e6 timestamps per second.
 
 ### Data preprocessing
 
-Data sessions that had been subsequently split, downsampled and stored in Plexon .nex format are suitable to be preprocessed for further analysis. To get a general idea of how to proceed, we recommend to read the documentation of the FieldTrip **[ft_preprocessing](/reference/ft_preprocessing)** function and the preprocessing tutorials in the [tutorial documentation](/tutorial) .
+Data sessions that had been subsequently split, downsampled and stored in Plexon .nex format are suitable to be preprocessed for further analysis. To get a general idea of how to proceed, we recommend to read the documentation of the FieldTrip **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** function and the preprocessing tutorials in the [tutorial documentation](/tutorial) .
 Here, we will focused on how to read the Plexon dataset directories (_\_ds_) which contain multiple .nex files. A basic configuration structure is provided belo
 
     cfg = [];
@@ -163,7 +163,7 @@ The specification of the dataformat and headerformat options as _combined_ds_ en
 
 ### Dealing with changing of channel labels
 
-Neuralynx uses the expression **csc** (from *c*ontinuous *s*ampled *c*hannel) in addition with a number (e.g. _010_) to label the channels. This labels are different from the names assigned to the electrodes in the electrode array. To keep consistency on the labels (this is especially important for plotting the channels), we apply a **montage structure** that consist of a matrix of correspondences that changes the original labels by the new ones. By using the FieldTrip function **[ft_preprocessing](/reference/ft_preprocessing)**, with the montage as a part of the cfg option **montage**, channel labels can be modified.
+Neuralynx uses the expression **csc** (from *c*ontinuous *s*ampled *c*hannel) in addition with a number (e.g. _010_) to label the channels. This labels are different from the names assigned to the electrodes in the electrode array. To keep consistency on the labels (this is especially important for plotting the channels), we apply a **montage structure** that consist of a matrix of correspondences that changes the original labels by the new ones. By using the FieldTrip function **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)**, with the montage as a part of the cfg option **montage**, channel labels can be modified.
 
 All montage files for our particular experiment are available upon request. An example of changing the channel labels is provided belo
 
@@ -176,7 +176,7 @@ It is important to note that to change labels in our recordings on Kurt, we use 
 
 ### Dealing with data re-referencing
 
-Similar to what we described in the last section, re-reference of the signal to a particular electrode or electrode group could be performed using a montage structure and the FieldTrip **[ft_preprocessing](/reference/ft_preprocessing)** function. We implemented 2 montage structures to be used together with our datasets recording. These files are also available upon request.
+Similar to what we described in the last section, re-reference of the signal to a particular electrode or electrode group could be performed using a montage structure and the FieldTrip **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** function. We implemented 2 montage structures to be used together with our datasets recording. These files are also available upon request.
 
 ## Plotting Options
 
@@ -184,10 +184,10 @@ To visualize the data, we take advantage of the several specialized plotting fun
 
 ### Dealing with layouts
 
-Datasets obtained from electrocortigraphic (ECoG) grids might be particular for each recording. Number, position and relation with anatomical number of the electrodes used in a grid might differ completely to the same parameters in another ECoG grid. The FieldTrip function **[ft_prepare_layout](/reference/ft_prepare_layout)** allows the possibility to create a particular layout structures of a electrode grid from an image of the grid.
+Datasets obtained from electrocortigraphic (ECoG) grids might be particular for each recording. Number, position and relation with anatomical number of the electrodes used in a grid might differ completely to the same parameters in another ECoG grid. The FieldTrip function **[ft_prepare_layout](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_layout.m)** allows the possibility to create a particular layout structures of a electrode grid from an image of the grid.
 In the following, we will show the layout structures that are currently used in our datasets. These layouts are avalaible upon request.
 
-For example, a schematic layout of the 256 electrode grid might be obtained using the following the function **[ft_layoutplot](/reference/ft_layoutplot)**:
+For example, a schematic layout of the 256 electrode grid might be obtained using the following the function **[ft_layoutplot](https://github.com/fieldtrip/fieldtrip/blob/release/ft_layoutplot.m)**:
 
     load kurt_layout_schematic_common
     cfg = [];
@@ -198,6 +198,6 @@ To obtain something like this:
 
 {% include image src="/assets/img/getting_started/neuralynx_fcdc/schematic_common3.png" %}
 
-An example of the same layout, containing time-frequency charts at the site of each electrode (obtaining with the FieldTrip function **[ft_topoplotTFR](/reference/ft_topoplotTFR)**) is provided below:
+An example of the same layout, containing time-frequency charts at the site of each electrode (obtaining with the FieldTrip function **[ft_topoplotTFR](https://github.com/fieldtrip/fieldtrip/blob/release/ft_topoplotTFR.m)**) is provided below:
 
 {% include image src="/assets/img/getting_started/neuralynx_fcdc/ku_039_256elec.png" width="571" %}--x367)

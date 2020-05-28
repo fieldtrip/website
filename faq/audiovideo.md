@@ -7,7 +7,7 @@ tags: [faq, audio, video]
 
 In epilepsy recordings it is common to record video along with the EEG. Also for some cognitive tasks, e.g. involving communicative expressions or spoken feedback, it is possible to record video and/or audio along with the EEG or MEG.
 
-FieldTrip has two functions to facilitate the exploration of EEG/MEG recorded in synchrony with audio/video: **[ft_databrowser](/reference/ft_databrowser)** and **[ft_audiovideobrowser](/reference/ft_audiovideobrowser)**.
+FieldTrip has two functions to facilitate the exploration of EEG/MEG recorded in synchrony with audio/video: **[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_databrowser.m)** and **[ft_audiovideobrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_audiovideobrowser.m)**.
 
 For both functions you should consider that:
 
@@ -22,15 +22,15 @@ This functionality has been implemented specifically for the [VideoMEG](https://
 
 ## ft_databrowser
 
-The **[ft_databrowser](/reference/ft_databrowser)** function has the focus on the EEG/MEG data and allows you to select a fragment of the EEG/MEG and playback the corresponding audio and/or video.
+The **[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_databrowser.m)** function has the focus on the EEG/MEG data and allows you to select a fragment of the EEG/MEG and playback the corresponding audio and/or video.
 
 ## ft_audiovideobrowser
 
-The **[ft_audiovideobrowser](/reference/ft_audiovideobrowser)** function has the focus on the audio/video data and allows you to segment it in trials in the same way that the EEG/MEG data is segmented. This allows you to review the audio/video in the experimental trials. The trial definition that is based on the triggers/events coded in the EEG/MEG file are used to read the corresponding audio/video fragments.
+The **[ft_audiovideobrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_audiovideobrowser.m)** function has the focus on the audio/video data and allows you to segment it in trials in the same way that the EEG/MEG data is segmented. This allows you to review the audio/video in the experimental trials. The trial definition that is based on the triggers/events coded in the EEG/MEG file are used to read the corresponding audio/video fragments.
 
 ## Example
 
-Here is a demonstration of **[ft_databrowser](/reference/ft_databrowser)**. You specify the EEG dataset and the function that is to be executed upon selecting a piece of EEG data. The _browse_audiovideo_ is a small helper function located in the `fieldtrip/private` directory; similar functions exist for a quick spectral analysis or topographic plotting of a selected piece of EEG data.
+Here is a demonstration of **[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_databrowser.m)**. You specify the EEG dataset and the function that is to be executed upon selecting a piece of EEG data. The _browse_audiovideo_ is a small helper function located in the `fieldtrip/private` directory; similar functions exist for a quick spectral analysis or topographic plotting of a selected piece of EEG data.
 
 In `cfg.selcfg` you specify the details needed by _browse_audiovideo_: the audio file, and the header of both data and audio. The header of the data and the audio are extended with the **FirstTimeStamp** and **TimeStampPerSample** fields. You should define the timestamps the same for synchronous samples in both recordings.
 

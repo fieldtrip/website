@@ -32,9 +32,9 @@ If you want to know more about tapers/window functions you can have a look at th
 
 To calculate the time-frequency analysis for the example dataset we will perform the following steps for both MEG and EE
 
-- Read the data into Matlab using **[ft_definetrial](/reference/ft_definetrial)** and **[ft_preprocessing](/reference/ft_preprocessing)**
-- Compute the power values for each frequency bin and each time bin using the function **[ft_freqanalysis](/reference/ft_freqanalysis)**
-- Visualize the results. This can be done by creating time-frequency plots for one (**[ft_singleplotTFR](/reference/ft_singleplotTFR)**) or several channels (**[ft_multiplotTFR](/reference/ft_multiplotTFR)**), or by creating a topographic plot for a specified time- and frequency interval (**[ft_topoplotTFR](/reference/ft_topoplotTFR)**).
+- Read the data into Matlab using **[ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_definetrial.m)** and **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)**
+- Compute the power values for each frequency bin and each time bin using the function **[ft_freqanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqanalysis.m)**
+- Visualize the results. This can be done by creating time-frequency plots for one (**[ft_singleplotTFR](https://github.com/fieldtrip/fieldtrip/blob/release/ft_singleplotTFR.m)**) or several channels (**[ft_multiplotTFR](https://github.com/fieldtrip/fieldtrip/blob/release/ft_multiplotTFR.m)**), or by creating a topographic plot for a specified time- and frequency interval (**[ft_topoplotTFR](https://github.com/fieldtrip/fieldtrip/blob/release/ft_topoplotTFR.m)**).
 
 {% include image src="/assets/img/workshop/natmeg/timefrequency/tfr_pipelinenew.png" width="200" %}
 
@@ -42,7 +42,7 @@ _Figure: Schematic overview of the steps in time-frequency analysis_
 
 ## Preprocessing MEG
 
-The first step is to read the data using the function **[ft_preprocessing](/reference/ft_preprocessing)**. With the aim to reduce boundary effects occurring at the start and the end of the trials, it is recommended to read larger time intervals than the time period of interest. In this example, the time of interest is from -1.0 s to 1.5 s (t = 0 s defines the time of response); however, the script reads the data from -1.5 s to 2.0 s.
+The first step is to read the data using the function **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)**. With the aim to reduce boundary effects occurring at the start and the end of the trials, it is recommended to read larger time intervals than the time period of interest. In this example, the time of interest is from -1.0 s to 1.5 s (t = 0 s defines the time of response); however, the script reads the data from -1.5 s to 2.0 s.
 
 As with the previous preprocessing tutorial, we will preprocess the MEG and EEG data separately. We will start with MEG magnetometers, then move to EEG before looking at the planar gradiometers in MEG.
 
@@ -75,7 +75,7 @@ The MEG dataset that we use in this tutorial is available as [oddball1_mc_downsa
 
 ### Clean data
 
-At this stage in the processing pipeline you could remove bad trials using, for example, [ft_rejectvisual](/reference/ft_rejectvisual). We are going to skip this for now as we do not have a lot of trials for this part of the analysis and the data is relatively clean. Furthermore, be aware that removing trials in this way could create a bias towards removing more trials in one condition than in the other due to differences in variance between the conditions.
+At this stage in the processing pipeline you could remove bad trials using, for example, [ft_rejectvisual](https://github.com/fieldtrip/fieldtrip/blob/release/ft_rejectvisual). We are going to skip this for now as we do not have a lot of trials for this part of the analysis and the data is relatively clean. Furthermore, be aware that removing trials in this way could create a bias towards removing more trials in one condition than in the other due to differences in variance between the conditions.
 
 ## Time-frequency analysis with a Hanning taper and fixed window length
 
@@ -144,9 +144,9 @@ There are three ways of graphically representing the data: 1) time-frequency plo
 
 _Figure: Time-frequency representations calculated using ft_freqanalysis and plotted with ft_multiplotTFR_
 
-Note that by using the options cfg.baseline and cfg.baselinetype when calling plotting functions, baseline correction can be applied to the data. Baseline correction can also be applied directly by calling **[ft_freqbaseline](/reference/ft_freqbaseline)**. You can combine the various visualization options/functions interactively to explore your data. Currently, this is the default ploting behavior because the configuration option cfg.interactive='yes' is activated unless you explicitly select cfg.interactive='no' before calling **[ft_multiplotTFR](/reference/ft_multiplotTFR)** to deactivate it. See also the [plotting tutorial](/tutorial/plotting) for more details.
+Note that by using the options cfg.baseline and cfg.baselinetype when calling plotting functions, baseline correction can be applied to the data. Baseline correction can also be applied directly by calling **[ft_freqbaseline](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqbaseline.m)**. You can combine the various visualization options/functions interactively to explore your data. Currently, this is the default ploting behavior because the configuration option cfg.interactive='yes' is activated unless you explicitly select cfg.interactive='no' before calling **[ft_multiplotTFR](https://github.com/fieldtrip/fieldtrip/blob/release/ft_multiplotTFR.m)** to deactivate it. See also the [plotting tutorial](/tutorial/plotting) for more details.
 
-Something interesting seems to happen at channel MEG1041. To make a plot of a single channel use the function **[ft_singleplotTFR](/reference/ft_singleplotTFR)**.
+Something interesting seems to happen at channel MEG1041. To make a plot of a single channel use the function **[ft_singleplotTFR](https://github.com/fieldtrip/fieldtrip/blob/release/ft_singleplotTFR.m)**.
 
     cfg = [];
     cfg.baseline     = [-0.5 -0.1];
@@ -163,7 +163,7 @@ Something interesting seems to happen at channel MEG1041. To make a plot of a si
 
 _Figure: The time-frequency representation for a single sensor, obtained using ft_singleplotTFR_
 
-From the previous figure you can see that there is an increase in power around 15-25 Hz in the time interval 0.4 to about 0.8 s after response onset. To show the topography of the beta increase use the function **[ft_topoplotTFR](/reference/ft_topoplotTFR)**.
+From the previous figure you can see that there is an increase in power around 15-25 Hz in the time interval 0.4 to about 0.8 s after response onset. To show the topography of the beta increase use the function **[ft_topoplotTFR](https://github.com/fieldtrip/fieldtrip/blob/release/ft_topoplotTFR.m)**.
 
     cfg = [];
     cfg.baseline     = [-0.5 -0.1];
@@ -207,7 +207,7 @@ Perhaps we should now also look at the beta-rebound after a response of the othe
 
 _Figure: Topographic representation of the time-frequency representations of beta (15-25 Hz) after (0.5-1.0s) right-finger response, obtained using ft_topoplotTFR_
 
-Until now we have been using an (absolute) baseline. However, because we have two conditions with an - assumed - similar baseline, we can also compare the two conditions directly by subtracting and then dividing the two powerspectra by there sum, thereby normalizing by their common activity using **[ft_math](/reference/ft_math)**.
+Until now we have been using an (absolute) baseline. However, because we have two conditions with an - assumed - similar baseline, we can also compare the two conditions directly by subtracting and then dividing the two powerspectra by there sum, thereby normalizing by their common activity using **[ft_math](https://github.com/fieldtrip/fieldtrip/blob/release/ft_math.m)**.
 
     cfg = [];
     cfg.parameter = 'powspctrm';
@@ -266,9 +266,9 @@ Keep an eye open for the differences in processing and visualizing EEG.
 
 ### Clean data
 
-As with the MEG data we are going to skip trial rejection. However, if you wish to check for bad trials you can do so using, for example, [ft_rejectvisual](/reference/ft_rejectvisual).
+As with the MEG data we are going to skip trial rejection. However, if you wish to check for bad trials you can do so using, for example, [ft_rejectvisual](https://github.com/fieldtrip/fieldtrip/blob/release/ft_rejectvisual).
 
-Especially EEG records can contain bad channels due to various reasons such as bad impedance, broken channels, etc. In the next steps we will therefor use **[ft_rejectvisual](/reference/ft_rejectvisual)** to select bad channels. We will then fix these channels by replacing the values of these channels with an average of its neighbours. Note that we have not re-referenced our data yet. We should remove bad channels prior to re-referencing or the noise from these channels will be present in all channels.
+Especially EEG records can contain bad channels due to various reasons such as bad impedance, broken channels, etc. In the next steps we will therefor use **[ft_rejectvisual](https://github.com/fieldtrip/fieldtrip/blob/release/ft_rejectvisual.m)** to select bad channels. We will then fix these channels by replacing the values of these channels with an average of its neighbours. Note that we have not re-referenced our data yet. We should remove bad channels prior to re-referencing or the noise from these channels will be present in all channels.
 
     % select bad channels
     cfg = [];
@@ -299,7 +299,7 @@ Fixing bad channels is usually done by interpolating between neighbouring channe
 
 _Figure: 3-D representation of the neighbourstructure, obtained using ft_neighbourplot._
 
-We can then use this neighborhood structure to fix our bad channels with **[ft_channelrepair](/reference/ft_channelrepair)**, by replacing their values with interpolations between their neighbours.
+We can then use this neighborhood structure to fix our bad channels with **[ft_channelrepair](https://github.com/fieldtrip/fieldtrip/blob/release/ft_channelrepair.m)**, by replacing their values with interpolations between their neighbours.
 
     % fix channels
     cfg = [];

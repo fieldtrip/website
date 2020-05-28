@@ -5,7 +5,7 @@ tags: [example, raw, preprocessing, trialfun, trialdef]
 
 # Making your own trialfun for conditional trial definition
 
-The **[ft_definetrial](/reference/ft_definetrial)** function allows you to specify your own MATLAB function for conditional selection of data segments or trials of interest. That is done using the **cfg.trialfun** option. Using a trial-function you can use an arbitrary complex conditional sequence of events to select data, e.g. only correct responses, or only responses that happened between 300 and 750 ms after the presentation of the stimulus. You can also use your own reading function to obtain the events, or you can read the data from an EMG channel to detect the onset of muscle activity.
+The **[ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_definetrial.m)** function allows you to specify your own MATLAB function for conditional selection of data segments or trials of interest. That is done using the **cfg.trialfun** option. Using a trial-function you can use an arbitrary complex conditional sequence of events to select data, e.g. only correct responses, or only responses that happened between 300 and 750 ms after the presentation of the stimulus. You can also use your own reading function to obtain the events, or you can read the data from an EMG channel to detect the onset of muscle activity.
 
 This trial-function should be a MATLAB function with the following function definition
 
@@ -48,7 +48,7 @@ In the [fieldtrip/trialfun](https://github.com/fieldtrip/fieldtrip/tree/master/t
     end
     end
 
-When calling **[ft_definetrial](/reference/ft_definetrial)**, you would specify
+When calling **[ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_definetrial.m)**, you would specify
 
     cfg = ...
     cfg.trialfun = 'your_trialfun_name';
@@ -110,7 +110,7 @@ Let's say that your EEG acquisition system has separate inputs for the stimulus 
     trl(:,6) = reaction_time;
     trl(:,7) = (stimulus_value==3 & response_value==103) | (stimulus_value==4 & response_value==104);
 
-When calling **[ft_definetrial](/reference/ft_definetrial)**, you would specify
+When calling **[ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_definetrial.m)**, you would specify
 
     cfg = ...
     cfg.trialfun = 'another_trialfun_example';

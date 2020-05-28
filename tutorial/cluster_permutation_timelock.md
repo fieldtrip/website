@@ -27,10 +27,10 @@ This tutorial contains hands-on material that we use for the [MEG/EEG toolkit co
 
 In this tutorial we will consider a **between-trials** experiment, in which we analyze the data of a single subject. The statistical analysis for this experiment we perform both on _axial_ and _planar_ ERFs. The steps we perform are as follow
 
-- Preprocessing and time-locked analysis with the **[ft_definetrial](/reference/ft_definetrial)**, **[ft_preprocessing](/reference/ft_preprocessing)** and **[ft_timelockanalysis](/reference/ft_timelockanalysis)** functions
-- (Calculation of the planar gradient with the **[ft_megplanar](/reference/ft_megplanar)** and **[ft_combineplanar](/reference/ft_combineplanar)** functions)
-- Permutation test with the **[ft_timelockstatistics](/reference/ft_timelockstatistics)** function
-- Plotting the result with the **[ft_topoplotER](/reference/ft_topoplotER)** function
+- Preprocessing and time-locked analysis with the **[ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_definetrial.m)**, **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** and **[ft_timelockanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockanalysis.m)** functions
+- (Calculation of the planar gradient with the **[ft_megplanar](https://github.com/fieldtrip/fieldtrip/blob/release/ft_megplanar.m)** and **[ft_combineplanar](https://github.com/fieldtrip/fieldtrip/blob/release/ft_combineplanar.m)** functions)
+- Permutation test with the **[ft_timelockstatistics](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockstatistics.m)** function
+- Plotting the result with the **[ft_topoplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_topoplotER.m)** function
 
 {% include image src="/assets/img/tutorial/cluster_permutation_timelock/bwtrial_stat_procedure_axial.png" %}
 
@@ -42,11 +42,11 @@ _Figure 2. Analysis protocol of a between-trials experiment with planar data_
 
 Subsequently, we consider a **within-subjects** experiment, in which we compare differences between (planar gradient) ERFs over all subjects. The steps we perform are as follow
 
-- Preprocessing and time-locked analysis with **[ft_definetrial](/reference/ft_definetrial)**, **[ft_preprocessing](/reference/ft_preprocessing)** and **[ft_timelockanalysis](/reference/ft_timelockanalysis)** functions
-- Calculation of the planar gradient with the **[ft_megplanar](/reference/ft_megplanar)** and **[ft_combineplanar](/reference/ft_combineplanar)** functions
-- Make grandaverage with the **[ft_timelockgrandaverage](/reference/ft_timelockgrandaverage)** function
-- Permutation test with the **[ft_timelockstatistics](/reference/ft_timelockstatistics)** function
-- Plotting the result with the **[ft_topoplotER](/reference/ft_topoplotER)** function
+- Preprocessing and time-locked analysis with **[ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_definetrial.m)**, **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** and **[ft_timelockanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockanalysis.m)** functions
+- Calculation of the planar gradient with the **[ft_megplanar](https://github.com/fieldtrip/fieldtrip/blob/release/ft_megplanar.m)** and **[ft_combineplanar](https://github.com/fieldtrip/fieldtrip/blob/release/ft_combineplanar.m)** functions
+- Make grandaverage with the **[ft_timelockgrandaverage](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockgrandaverage.m)** function
+- Permutation test with the **[ft_timelockstatistics](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockstatistics.m)** function
+- Plotting the result with the **[ft_topoplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_topoplotER.m)** function
 
 {% include image src="/assets/img/tutorial/cluster_permutation_timelock/ft_stat_tutorial2.png" width="550" %}
 
@@ -85,9 +85,9 @@ Subsequently you can save the data to disk.
       save dataFIC_LP dataFIC_LP
       save dataFC_LP dataFC_LP
 
-Using the preprocessed data, we now create a data structure that is the average across trials, time-locked to a particular event, using **[ft_timelockanalysis](/reference/ft_timelockanalysis)**. The output of **[ft_timelockanalysis](/reference/ft_timelockanalysis)** contains an .avg field with the average event-related field, and a .trial field with the individual trial data. The output is stored in timelockFIC and timelockFC for the fully incongruent and the fully congruent condition. This output is then suitable, as well, for statististical analyses.
+Using the preprocessed data, we now create a data structure that is the average across trials, time-locked to a particular event, using **[ft_timelockanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockanalysis.m)**. The output of **[ft_timelockanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockanalysis.m)** contains an .avg field with the average event-related field, and a .trial field with the individual trial data. The output is stored in timelockFIC and timelockFC for the fully incongruent and the fully congruent condition. This output is then suitable, as well, for statististical analyses.
 
-To obtain the preprocessed data required by **[ft_timelockanalysis](/reference/ft_timelockanalysis)** you can get it here from our FTP server: [dataFIC_LP](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_timelock/dataFIC_LP.mat) and [dataFC_LP.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_timelock/dataFC_LP.mat).
+To obtain the preprocessed data required by **[ft_timelockanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockanalysis.m)** you can get it here from our FTP server: [dataFIC_LP](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_timelock/dataFIC_LP.mat) and [dataFC_LP.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_timelock/dataFC_LP.mat).
 
     load dataFIC_LP
     load dataFC_LP
@@ -99,13 +99,13 @@ To obtain the preprocessed data required by **[ft_timelockanalysis](/reference/f
 
 ### Permutation test
 
-Cluster-level permutation tests for event-related fields are performed by the function **[ft_timelockstatistics](/reference/ft_timelockstatistics)**. This function takes as its input arguments a configuration structure(cfg) and two or more data structures. These data structures must be produced by **[ft_timelockanalysis](/reference/ft_timelockanalysis)** or **[ft_timelockgrandaverage](/reference/ft_timelockgrandaverage)**, which all operate on preprocessed data. The argument list of **[ft_timelockstatistics](/reference/ft_timelockstatistics)** must contain one data structure for every experimental condition. For comparing the data structures timelockFIC and timelockFC, you must call **[ft_timelockstatistics](/reference/ft_timelockstatistics)** as follows:
+Cluster-level permutation tests for event-related fields are performed by the function **[ft_timelockstatistics](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockstatistics.m)**. This function takes as its input arguments a configuration structure(cfg) and two or more data structures. These data structures must be produced by **[ft_timelockanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockanalysis.m)** or **[ft_timelockgrandaverage](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockgrandaverage.m)**, which all operate on preprocessed data. The argument list of **[ft_timelockstatistics](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockstatistics.m)** must contain one data structure for every experimental condition. For comparing the data structures timelockFIC and timelockFC, you must call **[ft_timelockstatistics](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockstatistics.m)** as follows:
 
     [stat] = ft_timelockstatistics(cfg, timelockFIC, timelockFC);
 
 #### The configuration settings
 
-Some fields of the configuration (cfg), such as channel and latency, are not specific for **[ft_timelockstatistics](/reference/ft_timelockstatistics)**; their role is similar in other FieldTrip functions. We first concentrate on the fields that are specific for **[ft_timelockstatistics](/reference/ft_timelockstatistics)**.
+Some fields of the configuration (cfg), such as channel and latency, are not specific for **[ft_timelockstatistics](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockstatistics.m)**; their role is similar in other FieldTrip functions. We first concentrate on the fields that are specific for **[ft_timelockstatistics](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockstatistics.m)**.
 
     cfg = [];
     cfg.method = 'montecarlo';       % use the Monte Carlo Method to calculate the significance probability
@@ -144,19 +144,19 @@ We now describe these options one-by-one.
 
 - The value of **cfg.minnbchan** is a tuning parameter that determines the way the clusters are formed. More specifically, we use cfg.minnbchan to specify the minimum number of neighborhood channels that is required for a selected sample (i.e., a sample who's T-value exceeds the threshold) to be included in the clustering algorithm. With cfg.minnbchan = 0 (the default), it sometimes happens that two clusters are spatially connected via a narrow bridge of samples. Because they are connected, these two clusters are considered as a single cluster. If clusters are interpreted as reflecting spatially distinct sources, such a combined cluster does not make much sense. To suppress this type of combined clusters, one can choose to ignore all selected samples (on the basis of their T-values) if they have less than some minimum number of neighbors that were also selected. This minimum number is assigned to cfg.minnbchan. This number must be chosen independently of the data.
 
-- **cfg.neighbours** is a structure that you need to have previously created using [ft_prepare_neighbours](/reference/ft_prepare_neighbours).
+- **cfg.neighbours** is a structure that you need to have previously created using [ft_prepare_neighbours](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_neighbours).
 
 - We use **cfg.tail** to choose between a one-sided and a two-sided statistical test. Choosing cfg.tail = 0 affects the calculations in three ways. First, the sample-specific T-values are thresholded from below as well as from above. This implies that both large negative and large positive T-statistics are selected for later clustering. Second, clustering is performed separately for thresholded positive and thresholded negative T-statistics. And third, the critical value for the cluster-level test statistic (determined by cfg.alpha; see further) is now two-sided: negative cluster-level statistics must be compared with the negative critical value, and positive cluster-level statistics must be compared with the positive critical value.
 
-- We use **cfg.alpha** to control the false alarm rate of the permutation test (the probability of falsely rejecting the null hypothesis). The value of cfg.alpha determines the critical values with which we must compare the test statistic (i.e., the maximum and the minimum cluster-level statistic). _Note that if you want to run a two-sided test, you have to split the critical alpha value by setting cfg.correcttail = 'alpha'; i.e. this sets cfg.alpha = 0.025, corresponding to a false alarm rate of 0.05 in a two-sided test._ The field cfg.alpha is not crucial. This is because the output of **[ft_timelockstatistics](/reference/ft_timelockstatistics)** (see further) contains a p-value for every cluster (calculated under the permutation distribution of the maximum/minimum cluster-level statistic). Instead of the critical values, we can also use these p-values to determine the significance of the clusters.
+- We use **cfg.alpha** to control the false alarm rate of the permutation test (the probability of falsely rejecting the null hypothesis). The value of cfg.alpha determines the critical values with which we must compare the test statistic (i.e., the maximum and the minimum cluster-level statistic). _Note that if you want to run a two-sided test, you have to split the critical alpha value by setting cfg.correcttail = 'alpha'; i.e. this sets cfg.alpha = 0.025, corresponding to a false alarm rate of 0.05 in a two-sided test._ The field cfg.alpha is not crucial. This is because the output of **[ft_timelockstatistics](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockstatistics.m)** (see further) contains a p-value for every cluster (calculated under the permutation distribution of the maximum/minimum cluster-level statistic). Instead of the critical values, we can also use these p-values to determine the significance of the clusters.
 
-- We use **cfg.numrandomization** to control the number of draws from the permutation distribution. Remember that **[ft_timelockstatistics](/reference/ft_timelockstatistics)** approximates the permutation distribution by means of a histogram. This histogram is a so-called Monte Carlo approximation of the permutation distribution. This Monte Carlo approximation is used to calculate the p-values and the critical values that are shown in the output of **[ft_timelockstatistics](/reference/ft_timelockstatistics)**. In this tutorial, we use cfg.numrandomization = 100. This number is too small for actual applications. As a rule of thumb, use cfg.numrandomization = 500, and double this number if it turns out that the p-value differs from the critical alpha-level (0.05 or 0.01) by less than 0.02.
+- We use **cfg.numrandomization** to control the number of draws from the permutation distribution. Remember that **[ft_timelockstatistics](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockstatistics.m)** approximates the permutation distribution by means of a histogram. This histogram is a so-called Monte Carlo approximation of the permutation distribution. This Monte Carlo approximation is used to calculate the p-values and the critical values that are shown in the output of **[ft_timelockstatistics](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockstatistics.m)**. In this tutorial, we use cfg.numrandomization = 100. This number is too small for actual applications. As a rule of thumb, use cfg.numrandomization = 500, and double this number if it turns out that the p-value differs from the critical alpha-level (0.05 or 0.01) by less than 0.02.
 
 - We use **cfg.design** to store information about the UOs. The content of cfg.design must be a matrix. Consider the hypothetical case that your subject has performed 5 trials in the first condition and 4 trials in the second condition. Then the correct design matrix looks like this: cfg.design = [1 1 1 1 1 2 2 2 2].
 
 - We use **cfg.ivar** to indicate the row of the design matrix that contains the independent variable. For a between-trials statistical analysis, the minimum design matrix contains only a single row, and cfg.ivar is superfluous. However, in other statistical analyses (e.g., those for a within-UO design) the design matrix must contain more than one row, and specifying cfg.ivar is essential.
 
-We now briefly discuss the configuration fields that are not specific for **[ft_timelockstatistics](/reference/ft_timelockstatistics)**:
+We now briefly discuss the configuration fields that are not specific for **[ft_timelockstatistics](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockstatistics.m)**:
 
     cfg_neighb        = [];
     cfg_neighb.method = 'distance';
@@ -171,9 +171,9 @@ We now briefly discuss the configuration fields that are not specific for **[ft_
 With these two options, we select the spatio-temporal dataset involving all MEG channels and the time interval between 0 and 1 second. The two experimental conditions will only be compared on this selection of the complete spatio-temporal dataset. Also, feel free to consult
 [our frequently asked questions about ft_prepare_neighbours](/faq/how_can_i_define_neighbouring_sensors)
 
-One should be aware of the fact that the sensitivity of **[ft_timelockstatistics](/reference/ft_timelockstatistics)** (i.e., the probability of detecting an effect) depends on the length of the time interval that is analyzed, as specified in cfg.latency. For instance, assume that the difference between the two experimental conditions extends over a short time interval only (e.g., between 0.3 and 0.4 sec.). If it is known in advance that this short time interval is the only interval where an effect is likely to occur, then one should limit the analysis to this time interval (i.e., choose cfg.latency = [0.3 0.4]). Choosing a time interval on the basis of prior information about the time course of the effect will increase the sensitivity of the statistical test. If there is no prior information, then one must compare the experimental conditions over the complete time interval. This is accomplished by choosing cfg.latency = 'all'. In this tutorial, we choose cfg.latency = [0 1] because EEG-studies have shown that the strongest effect of semantic incongruity is observed in the first second after stimulus presentation.
+One should be aware of the fact that the sensitivity of **[ft_timelockstatistics](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockstatistics.m)** (i.e., the probability of detecting an effect) depends on the length of the time interval that is analyzed, as specified in cfg.latency. For instance, assume that the difference between the two experimental conditions extends over a short time interval only (e.g., between 0.3 and 0.4 sec.). If it is known in advance that this short time interval is the only interval where an effect is likely to occur, then one should limit the analysis to this time interval (i.e., choose cfg.latency = [0.3 0.4]). Choosing a time interval on the basis of prior information about the time course of the effect will increase the sensitivity of the statistical test. If there is no prior information, then one must compare the experimental conditions over the complete time interval. This is accomplished by choosing cfg.latency = 'all'. In this tutorial, we choose cfg.latency = [0 1] because EEG-studies have shown that the strongest effect of semantic incongruity is observed in the first second after stimulus presentation.
 
-Now, run **[ft_timelockstatistics](/reference/ft_timelockstatistics)** to compare timelockFIC and timelockFC using the configuration described above.
+Now, run **[ft_timelockstatistics](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockstatistics.m)** to compare timelockFIC and timelockFC using the configuration described above.
 
     [stat] = ft_timelockstatistics(cfg, timelockFIC, timelockFC);
 
@@ -187,7 +187,7 @@ The output can also be obtained from [stat_ERF_axial_FICvsFC.mat](ftp://ftp.fiel
 
     load stat_ERF_axial_FICvsFC
 
-The output of **[ft_timelockstatistics](/reference/ft_timelockstatistics)** has separate fields for positive and negative clusters. For the positive clusters, the output is given in the following pair of fields: stat.posclusters and stat.posclusterslabelmat. The field **stat.posclusters** is an array that provides the following information for every cluste
+The output of **[ft_timelockstatistics](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockstatistics.m)** has separate fields for positive and negative clusters. For the positive clusters, the output is given in the following pair of fields: stat.posclusters and stat.posclusterslabelmat. The field **stat.posclusters** is an array that provides the following information for every cluste
 
 - The field **clusterstat** contains the cluster-level statistic (the sum of the T-values in this cluster).
 
@@ -212,11 +212,11 @@ And by typing stat.negclusters(1), you should obtain the following:
            prob: 0
     clusterstat: -1.0251e+04
 
-It is possible that the p-values in your output are a little bit different from 0. This is because **[ft_timelockstatistics](/reference/ft_timelockstatistics)** calculated as a Monte Carlo approximation of the permutation p-values: the p-value for the k-th positive cluster is calculated as the proportion of random draws from the permutation distribution in which the maximum of the cluster-level statistics is larger than stat.posclusters(k).clusterstat.
+It is possible that the p-values in your output are a little bit different from 0. This is because **[ft_timelockstatistics](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockstatistics.m)** calculated as a Monte Carlo approximation of the permutation p-values: the p-value for the k-th positive cluster is calculated as the proportion of random draws from the permutation distribution in which the maximum of the cluster-level statistics is larger than stat.posclusters(k).clusterstat.
 
 ### Plotting the results
 
-To plot the results of the permutation test, we use the plotting function **[ft_topoplotER](/reference/ft_topoplotER)**. In doing so, we will plot a topography of the difference between the two experimental conditions (FIC and FC). Atop that, and for each timestep of interest, we will highlight the sensors which are members of significant clusters. First, however, we must calculate the difference between conditions using **[ft_math](/reference/ft_math)**.
+To plot the results of the permutation test, we use the plotting function **[ft_topoplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_topoplotER.m)**. In doing so, we will plot a topography of the difference between the two experimental conditions (FIC and FC). Atop that, and for each timestep of interest, we will highlight the sensors which are members of significant clusters. First, however, we must calculate the difference between conditions using **[ft_math](https://github.com/fieldtrip/fieldtrip/blob/release/ft_math.m)**.
 
     cfg = [];
     avgFIC = ft_timelockanalysis(cfg, dataFIC_LP);
@@ -305,7 +305,7 @@ _Figure 4: Raw effect (FIC-FC) on the ERFs of subject 1, significant clusters ar
 
 ### Using planar gradient data
 
-To perform the permutation test using synthetic planar gradient data, the data must first be converted using the functions **[ft_megplanar](/reference/ft_megplanar)** and **[ft_combineplanar](/reference/ft_combineplanar)**. These functions were described in the tutorial on event-related fields. After running these functions, the statistical analysis using **[ft_timelockstatistics ](/reference/ft_timelockstatistics)** involves the same configuration options as for ordinary event-related averages (no synthetic planar gradients). There is only one additional step, which is needed to add the gradiometer structure to one of the planar gradient data sets.
+To perform the permutation test using synthetic planar gradient data, the data must first be converted using the functions **[ft_megplanar](https://github.com/fieldtrip/fieldtrip/blob/release/ft_megplanar.m)** and **[ft_combineplanar](https://github.com/fieldtrip/fieldtrip/blob/release/ft_combineplanar.m)**. These functions were described in the tutorial on event-related fields. After running these functions, the statistical analysis using **[ft_timelockstatistics ](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockstatistics.m)** involves the same configuration options as for ordinary event-related averages (no synthetic planar gradients). There is only one additional step, which is needed to add the gradiometer structure to one of the planar gradient data sets.
 
     cfg = [];
     cfg.planarmethod   = 'sincos';
@@ -367,7 +367,7 @@ We now calculate the raw effect in the average with planar gradient data using t
     cfg.parameter = 'avg';
     raweffectFICvsFC     = ft_math(cfg, avgFIC_planar_cmb, avgFC_planar_cmb);
 
-Using the following configuration for **[ft_topoplotER](/reference/ft_topoplotER)** we can plot the raw effect and highlight the channels contributing to the largest cluster
+Using the following configuration for **[ft_topoplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_topoplotER.m)** we can plot the raw effect and highlight the channels contributing to the largest cluster
 
     figure;
     timestep = 0.05; %(in seconds)
@@ -421,13 +421,13 @@ We now describe how we can statistically test the difference between the event-r
 
 ERF_orig contains allsubjFIC and allsubjFC, each storing the event-related averages for the fully incongruent, and the fully congruent sentence endings, respectively.
 
-The format for these variables, are a prime example of how you should organise your data to be suitable for ft_XXXstatistics. Specifically, each variable is a cell-array of structures, with each subject's averaged stored in one cell. To create this data structure two steps are required. First, the single-subject averages were calculated individually for each subject using the function [ft_timelockanalysis](/reference/ft_timelockanalysis). Second, using a for-loop we have combined the data from each subject, within each condition, into one variable (allsubj_FIC/allsubj_FC). We suggest that you adopt this procedure as well.
+The format for these variables, are a prime example of how you should organise your data to be suitable for ft_XXXstatistics. Specifically, each variable is a cell-array of structures, with each subject's averaged stored in one cell. To create this data structure two steps are required. First, the single-subject averages were calculated individually for each subject using the function [ft_timelockanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockanalysis). Second, using a for-loop we have combined the data from each subject, within each condition, into one variable (allsubj_FIC/allsubj_FC). We suggest that you adopt this procedure as well.
 
 On a technical note, it is preferred to represent the multi-subject data as a cell-array of structures, rather than a so-called struct-array. The reason for this is that the cell-array representation allows for easy expansion into a MATLAB function that allows for a variable number of input arguments (which is how the ft_XXXstatistics functions have been designed).
 
 ### Permutation test
 
-We now perform the permutation test using **[ft_timelockstatistics](/reference/ft_timelockstatistics)**. The configuration settings for this analysis differ from the previous settings in several fields:
+We now perform the permutation test using **[ft_timelockstatistics](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockstatistics.m)**. The configuration settings for this analysis differ from the previous settings in several fields:
 
 1.  We have to select a different measure to evaluate the effect at sample level (in cfg.statistic)
 2.  The design matrix is different (i.c., it now contains two lines instead of one)
@@ -488,7 +488,7 @@ From inspection of stat.posclusters and stat.negclusters, we observe that there 
 
 ### Plotting the results
 
-For plotting we first use [ft_timelockgrandaverage](/reference/ft_timelockgrandaverage) to calculate the grand average (average across all subject's average).
+For plotting we first use [ft_timelockgrandaverage](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockgrandaverage) to calculate the grand average (average across all subject's average).
 
     % load individual subject data
     load('ERF_orig');

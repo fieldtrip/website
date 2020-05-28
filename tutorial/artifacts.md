@@ -38,19 +38,19 @@ In manual artifact detection, the user visually inspects the data and identifies
 
 The functions that are available for manual artifact detection are
 
-- **[ft_rejectvisual](/reference/ft_rejectvisual)**
-- **[ft_databrowser](/reference/ft_databrowser)**
+- **[ft_rejectvisual](https://github.com/fieldtrip/fieldtrip/blob/release/ft_rejectvisual.m)**
+- **[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_databrowser.m)**
 
-The **[ft_rejectvisual](/reference/ft_rejectvisual)** function works only for segmented data (i.e. trials) that have already been read into memory. It allows you to browse through the large amounts of data in a MATLAB figure by either showing all channels at once (per trial) or showing all trials at once (per channel) or by showing a summary of all channels and trials. Using the mouse, you can select trials and/or channels that should be removed from the data. This function directly returns the data with the noise parts removed and you don't have to call **[ft_rejectartifact](/reference/ft_rejectartifact)** or **[ft_rejectcomponent](/reference/ft_rejectcomponent)**.
+The **[ft_rejectvisual](https://github.com/fieldtrip/fieldtrip/blob/release/ft_rejectvisual.m)** function works only for segmented data (i.e. trials) that have already been read into memory. It allows you to browse through the large amounts of data in a MATLAB figure by either showing all channels at once (per trial) or showing all trials at once (per channel) or by showing a summary of all channels and trials. Using the mouse, you can select trials and/or channels that should be removed from the data. This function directly returns the data with the noise parts removed and you don't have to call **[ft_rejectartifact](https://github.com/fieldtrip/fieldtrip/blob/release/ft_rejectartifact.m)** or **[ft_rejectcomponent](https://github.com/fieldtrip/fieldtrip/blob/release/ft_rejectcomponent.m)**.
 
 {% include markup/info %}
-If you want to use **[ft_rejectvisual](/reference/ft_rejectvisual)** on continuous data, you can first segment it in one-second pieces using **[ft_redefinetrial](/reference/ft_redefinetrial)** and then call ft_rejectvisual. Segmenting continuous data is explained in [this FAQ](/faq/how_can_i_process_continuous_data_without_triggers).
+If you want to use **[ft_rejectvisual](https://github.com/fieldtrip/fieldtrip/blob/release/ft_rejectvisual.m)** on continuous data, you can first segment it in one-second pieces using **[ft_redefinetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_redefinetrial.m)** and then call ft_rejectvisual. Segmenting continuous data is explained in [this FAQ](/faq/how_can_i_process_continuous_data_without_triggers).
 {% include markup/end %}
 
 
-The **[ft_databrowser](/reference/ft_databrowser)** function works both for continuous and segmented data and also works with the data either on disk or already read into memory. It allows you to browse through the data and to select with the mouse sections of data that contain an artifact. Those time-segments are marked. Contrary to ft_rejectvisual, the ft_databrowser function does not return the cleaned data and also does not allow you to delete bad channels (though you can switch them off from visualization). After detecting the time-segments with the artifacts, you should call **[ft_rejectartifact](/reference/ft_rejectartifact)** to remove them from your data (when the data is already in memory) or from your trial definition (when the data is still on disk).
+The **[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_databrowser.m)** function works both for continuous and segmented data and also works with the data either on disk or already read into memory. It allows you to browse through the data and to select with the mouse sections of data that contain an artifact. Those time-segments are marked. Contrary to ft_rejectvisual, the ft_databrowser function does not return the cleaned data and also does not allow you to delete bad channels (though you can switch them off from visualization). After detecting the time-segments with the artifacts, you should call **[ft_rejectartifact](https://github.com/fieldtrip/fieldtrip/blob/release/ft_rejectartifact.m)** to remove them from your data (when the data is already in memory) or from your trial definition (when the data is still on disk).
 
-Noteworthy is that the **[ft_databrowser](/reference/ft_databrowser)** function can also be used to visualise the timecourse of the ICA components and thus easily allows you to identify the components corresponding to eye blinks, heart beat and line noise. Note that a proper ICA unmixing of your data requires that the atypical artifacts (e.g. electrode movement, squid jumps) are removed **prior** to calling **[ft_componentanalysis](/reference/ft_componentanalysis)**. After you have determined what the bad components are, you can call **[ft_rejectcomponent](/reference/ft_rejectcomponent)** to project the data back to the sensor level, excluding the bad components.
+Noteworthy is that the **[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_databrowser.m)** function can also be used to visualise the timecourse of the ICA components and thus easily allows you to identify the components corresponding to eye blinks, heart beat and line noise. Note that a proper ICA unmixing of your data requires that the atypical artifacts (e.g. electrode movement, squid jumps) are removed **prior** to calling **[ft_componentanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_componentanalysis.m)**. After you have determined what the bad components are, you can call **[ft_rejectcomponent](https://github.com/fieldtrip/fieldtrip/blob/release/ft_rejectcomponent.m)** to project the data back to the sensor level, excluding the bad components.
 
 More information about manually dealing with artifacts is found in the [visual artifact rejection](/tutorial/visual_artifact_rejection) tutorial.
 
@@ -62,21 +62,21 @@ Most of the automatic artifact detection functions are based on filtering the da
 
 The available functions for automatic artifact detection are:
 
-- **[ft_artifact_clip](/reference/ft_artifact_clip)**
-- **[ft_artifact_ecg](/reference/ft_artifact_ecg)**
-- **[ft_artifact_threshold](/reference/ft_artifact_threshold)**
-- **[ft_artifact_eog](/reference/ft_artifact_eog)**
-- **[ft_artifact_jump](/reference/ft_artifact_jump)**
-- **[ft_artifact_muscle](/reference/ft_artifact_muscle)**
-- **[ft_artifact_zvalue](/reference/ft_artifact_zvalue)**
+- **[ft_artifact_clip](https://github.com/fieldtrip/fieldtrip/blob/release/ft_artifact_clip.m)**
+- **[ft_artifact_ecg](https://github.com/fieldtrip/fieldtrip/blob/release/ft_artifact_ecg.m)**
+- **[ft_artifact_threshold](https://github.com/fieldtrip/fieldtrip/blob/release/ft_artifact_threshold.m)**
+- **[ft_artifact_eog](https://github.com/fieldtrip/fieldtrip/blob/release/ft_artifact_eog.m)**
+- **[ft_artifact_jump](https://github.com/fieldtrip/fieldtrip/blob/release/ft_artifact_jump.m)**
+- **[ft_artifact_muscle](https://github.com/fieldtrip/fieldtrip/blob/release/ft_artifact_muscle.m)**
+- **[ft_artifact_zvalue](https://github.com/fieldtrip/fieldtrip/blob/release/ft_artifact_zvalue.m)**
 
-Note that the eog, jump and muscle detection functions are all just wrappers around **[ft_artifact_zvalue](/reference/ft_artifact_zvalue)** where the filter and padding options are set to reasonable defaults.
+Note that the eog, jump and muscle detection functions are all just wrappers around **[ft_artifact_zvalue](https://github.com/fieldtrip/fieldtrip/blob/release/ft_artifact_zvalue.m)** where the filter and padding options are set to reasonable defaults.
 
 More information about automatic detection of artifacts is found in the [automatic artifact rejection](/tutorial/automatic_artifact_rejection) tutorial.
 
 ### Removing artifacts from the data
 
-If you use manual or automatic detection of time segments that contain an artifact, you usually would proceed to reject those segments from subsequent analysis with **[ft_rejectartifact](/reference/ft_rejectartifact)**. FieldTrip supports variable trial length data, which allows you to reject only those pieces of data containing the artifact, keeping the rest of the trial. This is especially useful if your experiment consists of very long trials.
+If you use manual or automatic detection of time segments that contain an artifact, you usually would proceed to reject those segments from subsequent analysis with **[ft_rejectartifact](https://github.com/fieldtrip/fieldtrip/blob/release/ft_rejectartifact.m)**. FieldTrip supports variable trial length data, which allows you to reject only those pieces of data containing the artifact, keeping the rest of the trial. This is especially useful if your experiment consists of very long trials.
 
 ## Subtracting spatial/temporal/spectral aspects of data reflecting artifacts
 
@@ -88,7 +88,7 @@ Another commonly used approach is to make a linear decomposition of the data usi
 
 ### Removing artifacts from the data
 
-If you use ICA to detect artifacts, you usually would proceed with projecting the decomposed data (excluding the artifact components) back to the sensor level. This is done with **[ft_rejectcomponent](/reference/ft_rejectcomponent)**.
+If you use ICA to detect artifacts, you usually would proceed with projecting the decomposed data (excluding the artifact components) back to the sensor level. This is done with **[ft_rejectcomponent](https://github.com/fieldtrip/fieldtrip/blob/release/ft_rejectcomponent.m)**.
 
 The following example scripts explain how to use ICA to detect and remove [EOG](/example/use_independent_component_analysis_ica_to_remove_eog_artifacts) and [ECG](/example/use_independent_component_analysis_ica_to_remove_ecg_artifacts) artifacts.
 

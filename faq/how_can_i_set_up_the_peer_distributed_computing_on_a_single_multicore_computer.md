@@ -9,9 +9,9 @@ There are in principle two options for setting up the peer-to-peer computing sys
 
 ## Using an interactive MATLAB session for each peer
 
-Per core you should start one MATLAB session to run as slave, i.e. 4 sessions for a quad-core CPU. In each of the slave MATLAB sessions, you start the peer as slave by typing **[peerslave](/reference/peerslave)**. This will (among others) start the announce and tcpserver thread and subsequently it will wait for an incoming job. Every second while waiting it will print a line with the current time on screen, which allow you to check that it is still running.
+Per core you should start one MATLAB session to run as slave, i.e. 4 sessions for a quad-core CPU. In each of the slave MATLAB sessions, you start the peer as slave by typing **[peerslave](https://github.com/fieldtrip/fieldtrip/blob/release/peerslave.m)**. This will (among others) start the announce and tcpserver thread and subsequently it will wait for an incoming job. Every second while waiting it will print a line with the current time on screen, which allow you to check that it is still running.
 
-Subsequently you start one more MATLAB session which will be the master session from which you distribute the jobs. In that MATLAB session you type **[peermaster](/reference/peermaster)**, which will (among others) start the discover thread. In the master you can then use **[peercellfun](/reference/peercellfun)** to send a batch of jobs for execution on the slaves.
+Subsequently you start one more MATLAB session which will be the master session from which you distribute the jobs. In that MATLAB session you type **[peermaster](https://github.com/fieldtrip/fieldtrip/blob/release/peermaster.m)**, which will (among others) start the discover thread. In the master you can then use **[peercellfun](https://github.com/fieldtrip/fieldtrip/blob/release/peercellfun.m)** to send a batch of jobs for execution on the slaves.
 
 In the end you should have N+1 peers, with N slaves and one master.
 
@@ -45,4 +45,4 @@ There is also a Linux shell script with the name peerslave, which is designed to
 
 Please type on the unix command line
 peerslave.arch --help
-(where arch is glnx86, glnxa64 or maci) to get an overview of all the options. In principle most of the options have the same behavior as the MATLAB **[peerslave](/reference/peerslave)** function.
+(where arch is glnx86, glnxa64 or maci) to get an overview of all the options. In principle most of the options have the same behavior as the MATLAB **[peerslave](https://github.com/fieldtrip/fieldtrip/blob/release/peerslave.m)** function.

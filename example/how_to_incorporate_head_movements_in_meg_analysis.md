@@ -19,13 +19,13 @@ In general there are multiple ways that you can use the continuous head localiza
 3. you can compensate the raw data for the movements
 4. you can correct the forward model (i.e. the leadfield) for the spatial blurring that is due to the movements
 
-The first way of dealing with it requires that you visualize and decide on the movements. This is demonstrated in the first half of the example script. A more general description of the data, also containing information on the head movements, is made using **[ft_qualitycheck](/faq/how_can_i_check_the_quality_of_an_meeg_dataset?)**. At the donders, this function is run automatically on each new MEG dataset every night.
+The first way of dealing with it requires that you visualize and decide on the movements. This is demonstrated in the first half of the example script. A more general description of the data, also containing information on the head movements, is made using **[ft_qualitycheck](/faq/how_can_i_check_the_quality_of_an_meeg_dataset?.m)**. At the donders, this function is run automatically on each new MEG dataset every night.
 
-The second way of dealing with the movements means that you perform **[ft_timelockanalysis](/reference/ft_timelockanalysis)**, **[ft_freqanalysis](/reference/ft_freqanalysis)** or **[ft_sourceanalysis](/reference/ft_sourceanalysis)** with the option keeptrials=yes. This will give trial estimates of the ERF, the power or the source strength for each trial. The effect that the variable head position has on those single-trial estimates can be estimated and removed from the data using **[ft_regressconfound](/reference/ft_regressconfound)**. This method has been found to significantly improve statistical sensivity following head movements, [up to 30%](https://doi.org/10.1016/j.neuroimage.2012.11.047), and is therefore demonstrated in the second half of the example script.
+The second way of dealing with the movements means that you perform **[ft_timelockanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockanalysis.m)**, **[ft_freqanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqanalysis.m)** or **[ft_sourceanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceanalysis.m)** with the option keeptrials=yes. This will give trial estimates of the ERF, the power or the source strength for each trial. The effect that the variable head position has on those single-trial estimates can be estimated and removed from the data using **[ft_regressconfound](https://github.com/fieldtrip/fieldtrip/blob/release/ft_regressconfound.m)**. This method has been found to significantly improve statistical sensivity following head movements, [up to 30%](https://doi.org/10.1016/j.neuroimage.2012.11.047), and is therefore demonstrated in the second half of the example script.
 
-The third way of dealing with the movements requires that you make a spatial interpolation of the raw MEG data at each moment in time, in which you correct for the movements. In principle this could be done using the **[ft_megrealign](/reference/ft_megrealign)** function, but at this moment (May 2012) that function cannot yet deal with within-session movements.
+The third way of dealing with the movements requires that you make a spatial interpolation of the raw MEG data at each moment in time, in which you correct for the movements. In principle this could be done using the **[ft_megrealign](https://github.com/fieldtrip/fieldtrip/blob/release/ft_megrealign.m)** function, but at this moment (May 2012) that function cannot yet deal with within-session movements.
 
-The fourth way of dealing with the movements is implemented in the **[ft_headmovement](/reference/ft_headmovement)** function. It is not explained in further detail on this example page.
+The fourth way of dealing with the movements is implemented in the **[ft_headmovement](https://github.com/fieldtrip/fieldtrip/blob/release/ft_headmovement.m)** function. It is not explained in further detail on this example page.
 
 ## Reading-in and visualizing the head localization
 
@@ -177,7 +177,7 @@ Finally, note that the circumcenter function is a helper function that calculate
 {% include markup/warning %}
 Please cite this paper when you have used the offline head movement compensation in your study:
 
-Stolk A, Todorovic A, Schoffelen JM, Oostenveld R. **[Online and offline tools for head movement compensation in MEG.](https://doi.org/10.1016/j.neuroimage.2012.11.047)** Neuroimage. 2013 Mar;68:39-48. doi: 10.1016/j.neuroimage.2012.11.047.
+Stolk A, Todorovic A, Schoffelen JM, Oostenveld R. **[Online and offline tools for head movement compensation in MEG.](https://doi.org/10.1016/j.neuroimage.2012.11.047.m)** Neuroimage. 2013 Mar;68:39-48. doi: 10.1016/j.neuroimage.2012.11.047.
 {% include markup/end %}
 
 ## Appendix: circumcenter

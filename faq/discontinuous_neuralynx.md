@@ -11,7 +11,7 @@ In case there are gaps in the recording, the default way of linking timestamps t
 
     timestamp = hdr.TimeStampPerSample * sample hdr.FirstTimeStamp
 
-Due to the gaps in the recording, the timestamps that relate to events cannot be mapped like this to the sample numbers. Furthermore, **[ft_read_header](/reference/ft_read_header)** computes the hdr.TimeStampPerSample without taking the gaps in the recording into account, so it will be incorrect.
+Due to the gaps in the recording, the timestamps that relate to events cannot be mapped like this to the sample numbers. Furthermore, **[ft_read_header](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_header.m)** computes the hdr.TimeStampPerSample without taking the gaps in the recording into account, so it will be incorrect.
 
 The low-level `read_neuralynx_ncs` function detects the presence of gaps in the `.ncs` file and issues a warning. If you get this warning, the solution is to read in the raw timestamps for all individual samples rather than relying on the monotonous linear relationship. This is possible for a single channel, the procedure does not yet work when reading a whole dataset at once (i.e. a directory containing multiple `.ncs` files).
 

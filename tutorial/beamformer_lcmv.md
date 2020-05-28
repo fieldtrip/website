@@ -31,18 +31,18 @@ The brain is divided in a regular three dimensional grid and the source strength
 
 To localize the evoked sources for the example dataset we will perform the following step
 
-- Read the data into MATLAB using **[ft_definetrial](/reference/ft_definetrial)** and **[ft_preprocessing](/reference/ft_preprocessing)**
-- Compute the covariance matrix using the function **[ft_timelockanalysis](/reference/ft_timelockanalysis)**
-- Construct a forward model and lead field matrix using **[ft_volumesegment](/reference/ft_volumesegment)**, **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)** and **[ft_prepare_leadfield](/reference/ft_prepare_leadfield)**
+- Read the data into MATLAB using **[ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_definetrial.m)** and **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)**
+- Compute the covariance matrix using the function **[ft_timelockanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockanalysis.m)**
+- Construct a forward model and lead field matrix using **[ft_volumesegment](https://github.com/fieldtrip/fieldtrip/blob/release/ft_volumesegment.m)**, **[ft_prepare_headmodel](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_headmodel.m)** and **[ft_prepare_leadfield](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_leadfield.m)**
 
-- Compute a spatial filter and estimate the amplitude of the sources using **[ft_sourceanalysis](/reference/ft_sourceanalysis)**
-  - Visualize the results, by first interpolating the sources to the anatomical MRI using **[ft_sourceinterpolate](/reference/ft_sourceinterpolate)** and plotting this with **[ft_sourceplot](/reference/ft_sourceplot)**.
+- Compute a spatial filter and estimate the amplitude of the sources using **[ft_sourceanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceanalysis.m)**
+  - Visualize the results, by first interpolating the sources to the anatomical MRI using **[ft_sourceinterpolate](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceinterpolate.m)** and plotting this with **[ft_sourceplot](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceplot.m)**.
 
 ## Preprocessing
 
 ### Reading the data
 
-The aim is to identify the sources underlying somatosensory evoked fields. We seek to compare the activation in the post-stimulus to the activation in the pre-stimulus interval. We first use **[ft_preprocessing](/reference/ft_preprocessing)** and **[ft_redefinetrial](/reference/ft_redefinetrial)** to extract relevant data. We know that the subject's median nerve was stimulated almost at 3Hz (every 0.36 sec), which influences our selection of the pre- and post-stimulus interval (i.e. as short as possible).
+The aim is to identify the sources underlying somatosensory evoked fields. We seek to compare the activation in the post-stimulus to the activation in the pre-stimulus interval. We first use **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** and **[ft_redefinetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_redefinetrial.m)** to extract relevant data. We know that the subject's median nerve was stimulated almost at 3Hz (every 0.36 sec), which influences our selection of the pre- and post-stimulus interval (i.e. as short as possible).
 
 The ft_definetrial and ft_preprocessing functions require the original MEG dataset, which is available from <ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/SubjectSEF.zip>.
 
@@ -99,9 +99,9 @@ We can additionally explore the spatiotemporal dynamics using FieldTrip interact
 
 The present dataset was recorded with a CTF MEG system which has first-order axial gradiometer sensors that measure the gradient of the magnetic field in the radial direction, i.e. orthogonal to the scalp. Often it is helpful to interpret the MEG fields after transforming the data to a planar gradient configuration, i.e. by computing the gradient tangential to the scalp. This representation of MEG data is comparable to the field measured by planar gradiometer sensors. One advantage of the planar gradient transformation is that the signal amplitude typically is largest directly above a source.
 
-With **[ft_megplanar](/reference/ft_megplanar)** we calculate the planar gradient of the averaged data. **[Ft_megplanar](/reference/ft_megplanar)** is used to compute the amplitude of the planar gradient by combining the horizontal and vertical components of the planar gradient;
+With **[ft_megplanar](https://github.com/fieldtrip/fieldtrip/blob/release/ft_megplanar.m)** we calculate the planar gradient of the averaged data. **[Ft_megplanar](https://github.com/fieldtrip/fieldtrip/blob/release/ft_megplanar.m)** is used to compute the amplitude of the planar gradient by combining the horizontal and vertical components of the planar gradient;
 
-The planar gradient at a given sensor location can be approximated by comparing the field at that sensor with its neighbours (i.e. finite difference estimate of the derivative). The planar gradient at one location is computed in both the horizontal and the vertical direction with the FieldTrip function **[ft_megplanar](/reference/ft_megplanar)**. These two orthogonal gradients on a single sensor location can be combined using Pythagoras rule with the FieldTrip function **[ft_combineplanar](/reference/ft_combineplanar)**.
+The planar gradient at a given sensor location can be approximated by comparing the field at that sensor with its neighbours (i.e. finite difference estimate of the derivative). The planar gradient at one location is computed in both the horizontal and the vertical direction with the FieldTrip function **[ft_megplanar](https://github.com/fieldtrip/fieldtrip/blob/release/ft_megplanar.m)**. These two orthogonal gradients on a single sensor location can be combined using Pythagoras rule with the FieldTrip function **[ft_combineplanar](https://github.com/fieldtrip/fieldtrip/blob/release/ft_combineplanar.m)**.
 
 Calculate the planar gradient of the averaged dat
 
@@ -135,7 +135,7 @@ Compute the amplitude of the planar gradient by combining the horizontal and ver
 
 The first step in the procedure is to construct a forward model. The forward model allows us to calculate an estimate of the field measured by the MEG sensors for a given current distribution. In MEG analysis a forward model is typically constructed for each subject. There are many types of forward models which to various degrees take the individual anatomy into account. We will here use a semi-realistic head model developed by Nolte (2003). It is based on a correction of the lead field for a spherical volume conductor by a superposition of basis functions, gradients of harmonic functions constructed from spherical harmonics.
 
-The first step in constructing the forward model is to find the brain surface from the subject's MRI, using [ft_volumesegment](/reference/ft_volumesegment). The MRI scan used in this tutorial has already been realigned to the same coordinate system as the MEG data (in this case 'CTF', see [this page](/faq/how_can_i_convert_an_anatomical_mri_from_dicom_into_ctf_format) on how to realign your subject's brain volume.
+The first step in constructing the forward model is to find the brain surface from the subject's MRI, using [ft_volumesegment](https://github.com/fieldtrip/fieldtrip/blob/release/ft_volumesegment). The MRI scan used in this tutorial has already been realigned to the same coordinate system as the MEG data (in this case 'CTF', see [this page](/faq/how_can_i_convert_an_anatomical_mri_from_dicom_into_ctf_format) on how to realign your subject's brain volume.
 
     % read and segment the subject's anatomical scan
     load('SubjectSEF_mri.mat'); % matfile containing the realigned anatomical scan

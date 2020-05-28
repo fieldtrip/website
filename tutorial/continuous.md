@@ -7,7 +7,7 @@ tags: [tutorial, preprocessing, continuous, eeg, raw, brainvision, memory, meg-l
 
 ## Introduction
 
-A convenient use of the **[ft_preprocessing](/reference/ft_preprocessing)** is to read the continuous data fully in memory. This is feasible if your data set is relatively small and if your computer has enough memory to hold all data in memory at once.
+A convenient use of the **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** is to read the continuous data fully in memory. This is feasible if your data set is relatively small and if your computer has enough memory to hold all data in memory at once.
 
 ## Background
 
@@ -17,12 +17,12 @@ Using this approach, you can read all data from the file into memory, apply filt
 
 The following steps are taken to read data, to apply filters and to reference the data (in case of EEG), and optionally to select interesting segments of data around events or triggers or by cutting the continuous data into convenient constant-length segments.
 
-- read the data for the EEG channels using **[ft_preprocessing](/reference/ft_preprocessing)**, apply a filter and re-reference to linked mastoids
-- read the data for the horizontal and vertical EOG channels using **[ft_preprocessing](/reference/ft_preprocessing)**, and compute the horizontal and vertical bipolar EOG derivations
-- combine the EEG and EOG into a single data representation using **[ft_appenddata](/reference/ft_appenddata)**
-- determine interesting pieces of data based on the trigger events using **[ft_definetrial](/reference/ft_definetrial)**
-- segment the continuous data into trials using **[ft_redefinetrial](/reference/ft_redefinetrial)**
-- segment the continuous data into one-second pieces using **[ft_redefinetrial](/reference/ft_redefinetrial)**
+- read the data for the EEG channels using **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)**, apply a filter and re-reference to linked mastoids
+- read the data for the horizontal and vertical EOG channels using **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)**, and compute the horizontal and vertical bipolar EOG derivations
+- combine the EEG and EOG into a single data representation using **[ft_appenddata](https://github.com/fieldtrip/fieldtrip/blob/release/ft_appenddata.m)**
+- determine interesting pieces of data based on the trigger events using **[ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_definetrial.m)**
+- segment the continuous data into trials using **[ft_redefinetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_redefinetrial.m)**
+- segment the continuous data into one-second pieces using **[ft_redefinetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_redefinetrial.m)**
 
 ## The data set used in this tutorial
 
@@ -34,7 +34,7 @@ The MEG dataset [Subject01.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tut
 
 ## Reading continuous EEG data into memory
 
-The simplest method for preprocessing and reading the data into memory is by calling the **[ft_preprocessing](/reference/ft_preprocessing)** function with only the dataset as configuration argument.
+The simplest method for preprocessing and reading the data into memory is by calling the **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** function with only the dataset as configuration argument.
 
     cfg = [];
     cfg.dataset     = 'subj2.vhdr';
@@ -59,7 +59,7 @@ This reads the data from file as one long continuous segment without any additio
 
 ## Reading continuous MEG data into memory
 
-If the data on disk is stored in a segmented or epoched format, i.e. where the file format already reflects the trials in the experiment, a call to **[ft_preprocessing](/reference/ft_preprocessing)** will return in the data being read and segmented into the original trials.
+If the data on disk is stored in a segmented or epoched format, i.e. where the file format already reflects the trials in the experiment, a call to **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** will return in the data being read and segmented into the original trials.
 
     cfg = [];
     cfg.dataset     = 'Subject01.ds';
@@ -147,7 +147,7 @@ The resulting channel 51 in this representation of the data is referenced to its
     plot(data_eogh.time{1}, data_eogh.trial{1}(2,:),'g');
     legend({'51' '60'});
 
-For convenience we rename channel 60 into EOGH and use the **[ft_preprocessing](/reference/ft_preprocessing)** function once more to select the horizontal EOG channel and discard the dummy channel.
+For convenience we rename channel 60 into EOGH and use the **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** function once more to select the horizontal EOG channel and discard the dummy channel.
 
     data_eogh.label{2} = 'EOGH';
 
@@ -175,7 +175,7 @@ Now that we have the EEG data rereferenced to linked mastoids and the horizontal
     cfg = [];
     data_all = ft_appenddata(cfg, data_eeg, data_eogh, data_eogv);
 
-In the example above, no filters were applied to the data. It is possible to apply filters to the data during the initial preprocessing/reading. It is also possible to apply filters afterwards by calling the **[ft_preprocessing](/reference/ft_preprocessing)** function with the data as second input argument. If you want to apply different preprocessing options (such as filters for EEG channels, rectification of EMG channels, re-referencing) to different channels, you should call **[ft_preprocessing](/reference/ft_preprocessing)** with the desired options for each of the channel types and subsequently append the data for the different channels types into one raw data structure.
+In the example above, no filters were applied to the data. It is possible to apply filters to the data during the initial preprocessing/reading. It is also possible to apply filters afterwards by calling the **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** function with the data as second input argument. If you want to apply different preprocessing options (such as filters for EEG channels, rectification of EMG channels, re-referencing) to different channels, you should call **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** with the desired options for each of the channel types and subsequently append the data for the different channels types into one raw data structure.
 
 ## Segmenting continuous data into trials
 
@@ -212,12 +212,12 @@ The trigger codes S111, S121, S131, S141 correspond to the presented pictures of
     cfg.trialdef.eventvalue = {'S151', 'S161', 'S171', 'S181'};
     cfg_vis_tool            = ft_definetrial(cfg);
 
-The output configuration resulting from **[ft_definetrial](/reference/ft_definetrial)** contains the trial definition as a Nx3 matrix with the begin sample, the end sample and the offset of each trial. In principle you could now use this configuration to read these segments from the original data file on disk, but since we already have the complete continuous data in memory, we'll use **[ft_redefinetrial](/reference/ft_redefinetrial)** to cut these trials out of the continuous data segment.
+The output configuration resulting from **[ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_definetrial.m)** contains the trial definition as a Nx3 matrix with the begin sample, the end sample and the offset of each trial. In principle you could now use this configuration to read these segments from the original data file on disk, but since we already have the complete continuous data in memory, we'll use **[ft_redefinetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_redefinetrial.m)** to cut these trials out of the continuous data segment.
 
     data_vis_animal = ft_redefinetrial(cfg_vis_animal, data_all);
     data_vis_tool   = ft_redefinetrial(cfg_vis_tool,   data_all);
 
-Subsequently we could do artifact detection with **[ft_rejectvisual](/reference/ft_rejectvisual)** to remove trials with artifacts and average the trials using **[ft_timelockanalysis](/reference/ft_timelockanalysis)** to get the ERP, or use **[ft_freqanalysis](/reference/ft_freqanalysis)** to obtain an averaged time-frequency representation of the data in both conditions. If you use ft_timelockanalysis or ft_frequencyanalysis with the option cfg.keeptrials='yes', you subsequently could use ft_timelockstatistics or ft_freqstatistics for statistical comparison of the animal-tool contrast in these stimuli.
+Subsequently we could do artifact detection with **[ft_rejectvisual](https://github.com/fieldtrip/fieldtrip/blob/release/ft_rejectvisual.m)** to remove trials with artifacts and average the trials using **[ft_timelockanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockanalysis.m)** to get the ERP, or use **[ft_freqanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqanalysis.m)** to obtain an averaged time-frequency representation of the data in both conditions. If you use ft_timelockanalysis or ft_frequencyanalysis with the option cfg.keeptrials='yes', you subsequently could use ft_timelockstatistics or ft_freqstatistics for statistical comparison of the animal-tool contrast in these stimuli.
 
 ## Segmenting continuous data into one-second pieces
 

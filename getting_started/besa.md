@@ -50,7 +50,7 @@ The BESA toolbox is maintained by [BESA](http://www.besa.de) and included in the
 
 ## Electrode information
 
-BESA electrode files can also be read into MATLAB, using the **[ft_read_sens](/reference/ft_read_sens)** function. They do not directly correspond to a core FieldTrip data structure, but you can add the electrode information to any FieldTrip data structure according to this:
+BESA electrode files can also be read into MATLAB, using the **[ft_read_sens](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_sens.m)** function. They do not directly correspond to a core FieldTrip data structure, but you can add the electrode information to any FieldTrip data structure according to this:
 
     data = besa2fieldtrip('yourbesafile.avr');
     data.elec = ft_read_sens('yourelectrodes.sfp');

@@ -16,7 +16,7 @@ The objective of supplying these low-level functions as a separate module/toolbo
 
 The low-level functions are in the [connectivity](/development/module/connectivity) module, which is released together with FieldTrip but can also be downloaded [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/modules/) as a separate toolbox.
 
-Please note that if you are an end-user interested in analyzing experimental EEG/MEG/ECoG data, you will probably will want to use the high-level FieldTrip functions. The functions such as **[ft_preprocessing](/reference/ft_preprocessing)**, **[ft_timelockanalysis](/reference/ft_timelockanalysis)**, **[ft_sourceanalysis](/reference/ft_sourceanalysis)**, **[ft_mvaranalysis](/reference/ft_mvaranalysis)**, **[ft_freqanalysis](/reference/ft_freqanalysis)**, **[ft_connectivityanalysis](/reference/ft_connectivityanalysis)** and **[ft_networkanalysis](/reference/ft_networkanalysis)** provide a user-friendly interface that take care of all relevant analysis steps and the data bookkeeping.
+Please note that if you are an end-user interested in analyzing experimental EEG/MEG/ECoG data, you will probably will want to use the high-level FieldTrip functions. The functions such as **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)**, **[ft_timelockanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockanalysis.m)**, **[ft_sourceanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceanalysis.m)**, **[ft_mvaranalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_mvaranalysis.m)**, **[ft_freqanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqanalysis.m)**, **[ft_connectivityanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_connectivityanalysis.m)** and **[ft_networkanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_networkanalysis.m)** provide a user-friendly interface that take care of all relevant analysis steps and the data bookkeeping.
 
 ## Supported connectivity metrics
 
@@ -51,7 +51,7 @@ The inputdata consists of a matrix of one of the following dimensionalitie
 1.  Nrpt x Nchan x Nchan (x Nfreq) (x Ntime)
 2.  Nrpt x Nchancmb (x Nfreq) (x Ntime)
 
-where Nrpt can be singleton. Additional arguments come in key-value pairs and depend on the function and the required functionality. The current functions only take inputdata which is already in a bivariate representation. In FieldTrip this is ensured by the calling function **[ft_connectivityanalysis](/reference/ft_connectivityanalysis)**.
+where Nrpt can be singleton. Additional arguments come in key-value pairs and depend on the function and the required functionality. The current functions only take inputdata which is already in a bivariate representation. In FieldTrip this is ensured by the calling function **[ft_connectivityanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_connectivityanalysis.m)**.
 
 One exception to the API described above i
 

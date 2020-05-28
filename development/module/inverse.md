@@ -16,7 +16,7 @@ The objective of supplying these low-level functions as a separate module/toolbo
 
 The low-level functions are combined in the [forward](/development/module/forward) and the [inverse](/development/module/inverse) toolboxes, which are released together with FieldTrip but can also be downloaded [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/modules/) as separate toolboxes. In the past these functions were combined in one toolbox.
 
-Please note that if you are an end-user interested in analyzing experimental EEG/MEG data, you will probably will want to use the high-level FieldTrip functions. The functions such as **[ft_preprocessing](/reference/ft_preprocessing)**, **[ft_timelockanalysis](/reference/ft_timelockanalysis)** and **[ft_sourceanalysis](/reference/ft_sourceanalysis)** provide a user-friendly interface that take care of all relevant analysis steps and the data bookkeeping.
+Please note that if you are an end-user interested in analyzing experimental EEG/MEG data, you will probably will want to use the high-level FieldTrip functions. The functions such as **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)**, **[ft_timelockanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockanalysis.m)** and **[ft_sourceanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceanalysis.m)** provide a user-friendly interface that take care of all relevant analysis steps and the data bookkeeping.
 
 ## Module layout
 

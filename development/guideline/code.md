@@ -21,7 +21,7 @@ The function should always start with a help section, that explains the purpose 
 
 ### The best-practice example function
 
-The easiest way to get started with writing a new high-level FieldTrip function is to take a close look at [ft_examplefunction](/reference/ft_examplefunction), which is located in FT's core (root) directory. (Note: this is true as of Feb 11, 2011.) It shows the best practices that one should adhere to concerning input and output structure and data handling. Also, it demonstrates how one should document the function according to FT standard guidelines.
+The easiest way to get started with writing a new high-level FieldTrip function is to take a close look at [ft_examplefunction](https://github.com/fieldtrip/fieldtrip/blob/release/ft_examplefunction), which is located in FT's core (root) directory. (Note: this is true as of Feb 11, 2011.) It shows the best practices that one should adhere to concerning input and output structure and data handling. Also, it demonstrates how one should document the function according to FT standard guidelines.
 
 ## Provide reference documentation in the function help
 
@@ -34,7 +34,7 @@ To explain what the input and output data structures of the function are, please
 [output] = ft_xxxxxx(cfg, input)
 [output] = ft_xxxxxx(cfg, input1, input2)
 
-where output and input, input1, input2 are the standard names of data types, such as raw, timelock, freq, source, volume, spike. Pleae look in **[ft_datatype](/reference/ft_datatype)** for a complete list and pointers to the detailed documentation on the standard datatypes.
+where output and input, input1, input2 are the standard names of data types, such as raw, timelock, freq, source, volume, spike. Pleae look in **[ft_datatype](https://github.com/fieldtrip/fieldtrip/blob/release/ft_datatype.m)** for a complete list and pointers to the detailed documentation on the standard datatypes.
 
 ## Provide the appropriate level of feedback to the user
 
@@ -50,7 +50,7 @@ There are 5 different ways of doing this.
 
 When a new function is written in FieldTrip, it is important to include these feedbacks. Each warning and error should have an **identifier**. By using identifiers, the individual warnings can be switched off by the user in MATLAB. Hence, `warning_once` should be used cautiously.
 
-The short text messages which accompany errors and warnings on the screen are often not enough to provide insight for the users. The text message on screen should be kept short, but a **[Frequently Asked Question](/faq)** should explain the warning and why an error occurred. The identifiers should help the user to find the relevant FAQ. The FAQ
+The short text messages which accompany errors and warnings on the screen are often not enough to provide insight for the users. The text message on screen should be kept short, but a [Frequently Asked Question](/faq) should explain the warning and why an error occurred. The identifiers should help the user to find the relevant FAQ. The FAQ
 should also have the same 'warning' or 'error' tag (e.g. `FieldTrip:fileio:fileNotExisting`).
 
 ## Use the dimord field to describe or deciper the data
@@ -116,7 +116,7 @@ To determine the dimord, you should use the **fieldtrip/private/getdimord** func
 
 Any new configuration option should have a default set at the beginning of the function. If you don't know a good default value, you should specify the default value as empty, i.e. `cfg.newoption = []`.
 
-If you add a configuration option, you should check in the [configuration index](/reference/configuration) whether a cfg option with similar functionality already exists in another function. Use identical names for identical functionality and try to keep the help similar if possible.
+If you add a configuration option, you should check in the [configuration index](https://github.com/fieldtrip/fieldtrip/blob/release/configuration) whether a cfg option with similar functionality already exists in another function. Use identical names for identical functionality and try to keep the help similar if possible.
 
 ## Renaming configuration options or values
 

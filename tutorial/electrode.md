@@ -34,11 +34,11 @@ This youtube video shows the procedure that is explained in this tutorial
 In this section we describe the procedure to acquire electrode positions with a 3D-Scanner
 
 - First we have to record the data using the 3D-scanner
-- then we will read the surface me with **[ft_read_headshape](/reference/ft_read_headshape)**
-- we convert the units of the mesh **[ft_convert_units](/reference/ft_convert_units)**
-- we localise the fiducials on the head surface **[ft_electrodeplacement](/reference/ft_electrodeplacement)**
-- we realign the mesh on the bases of the fiducials to ctf-coordiantes **[ft_meshrealign](/reference/ft_meshrealign)**
-- now we are able to localise the electrode locations **[ft_electrodeplacement](/reference/ft_electrodeplacement)**
+- then we will read the surface me with **[ft_read_headshape](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_headshape.m)**
+- we convert the units of the mesh **[ft_convert_units](https://github.com/fieldtrip/fieldtrip/blob/release/ft_convert_units.m)**
+- we localise the fiducials on the head surface **[ft_electrodeplacement](https://github.com/fieldtrip/fieldtrip/blob/release/ft_electrodeplacement.m)**
+- we realign the mesh on the bases of the fiducials to ctf-coordiantes **[ft_meshrealign](https://github.com/fieldtrip/fieldtrip/blob/release/ft_meshrealign.m)**
+- now we are able to localise the electrode locations **[ft_electrodeplacement](https://github.com/fieldtrip/fieldtrip/blob/release/ft_electrodeplacement.m)**
 - finally we assign the electrode labels
 
 ### Recording data
@@ -121,7 +121,7 @@ _Figure: Identifying electrode locations_
 
 The next step is to assign the labels to all electrodes. In the specific case, we used an electrode cap from [Easycap](https://www.easycap.de) that has the electrodes in the [M10](http://www.easycap.de/e/electrodes/13_M10.htm) arrangement.
 
-The call to **[ft_electrodeplacement](/reference/ft_electrodeplacement)** returns default electrode labels as '1','2',... and so on, which is correct for the first 60 electrodes. To assign the correct labels to the reference, ground and to the anatomical landmarks (NAS, LPA and RPA), we use the following piece of MATLAB code:
+The call to **[ft_electrodeplacement](https://github.com/fieldtrip/fieldtrip/blob/release/ft_electrodeplacement.m)** returns default electrode labels as '1','2',... and so on, which is correct for the first 60 electrodes. To assign the correct labels to the reference, ground and to the anatomical landmarks (NAS, LPA and RPA), we use the following piece of MATLAB code:
 
     elec.label(61:65) = { ...
         'GND'

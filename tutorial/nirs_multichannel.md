@@ -73,7 +73,7 @@ Analyses can be conducted in many different ways and in different orders, depend
 
 ### Read data and downsample
 
-We first need to read in the data into the MATLAB workspace, by executing **[ft_preprocessing](/reference/ft_preprocessing)**:
+We first need to read in the data into the MATLAB workspace, by executing **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)**:
 
     cfg             = [];
     cfg.dataset     = 'LR-01-2015-06-01-0002.oxy3';
@@ -147,7 +147,7 @@ As mentioned, the fNIRS data is stored at 250 Hz. You can check this in
 
     data_raw.fsample
 
-Since the hemodynamic response takes about 5 to 10 s to reach its peak (i.e. corresponding to a frequency of 0.2 to 0.1 Hz), a 250 Hz measurement is much higher than needed. To save memory and to make the subsequent processing faster, we will downsample the data to 10 Hz using **[ft_resampledata](/reference/ft_resampledata)**.
+Since the hemodynamic response takes about 5 to 10 s to reach its peak (i.e. corresponding to a frequency of 0.2 to 0.1 Hz), a 250 Hz measurement is much higher than needed. To save memory and to make the subsequent processing faster, we will downsample the data to 10 Hz using **[ft_resampledata](https://github.com/fieldtrip/fieldtrip/blob/release/ft_resampledata.m)**.
 
     cfg                   = [];
     cfg.resamplefs        = 10;
@@ -161,7 +161,7 @@ It is better to resample multiple times if the resampling factor is larger than 
 The resampling also includes low-pass filtering of the data. As the new sampling rate is 10 Hz, we will lose data with frequencies larger than 5 Hz. This means we will lose a lot of information from the standards in our experiment, as they are presented near 6.7 Hz, but we keep the deviant information, which is presented near 0.6 Hz. For the current analysis, we are only interested in the deviant data. Just remember: be wary of filtering!
 {% include markup/end %}
 
-We can now plot the data and see what it looks like. In cfg.preproc we can specify some options for on-the-fly preprocessing. Here, we will demean the data, i.e. subtract the mean value. The options you can specify in cfg.preproc are largely the same as the options for **[ft_preprocessing](/reference/ft_preprocessing)** with as a difference that in our current command, namely ft_databrowser, the demeaning is only applied for plotting, the data itself remains the same.
+We can now plot the data and see what it looks like. In cfg.preproc we can specify some options for on-the-fly preprocessing. Here, we will demean the data, i.e. subtract the mean value. The options you can specify in cfg.preproc are largely the same as the options for **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** with as a difference that in our current command, namely ft_databrowser, the demeaning is only applied for plotting, the data itself remains the same.
 
     cfg                = [];
     cfg.preproc.demean = 'yes';
@@ -202,7 +202,7 @@ This step has removed some of the variability in the hemodynamic response betwee
 
 In the single channel tutorial, after initial preprocessing we continued with removing bad data as there were no pieces of the data that were both irrelevant (say, during a break) and very noisy. In this tutorial, we will first segment the data to get the time segments of interest before we move on to cleaning the data further. The motivation here to first segment and then detect artifacts is that the largest artifacts in the data are due to motion artifacts that occur between the experimental blocks. By segmenting the data in trials, these non-relevant sections in the data are ignored and we obtain a cleaner data set already.
 
-In this experiment, the segment of interest is a period of 5 s before and 20s after stimulus onset. We will cut out the segments in the data using the function **[ft_redefinetrial](/reference/ft_redefinetrial)**. Normally we would use **[ft_definetrial](/reference/ft_definetrial)** to determine the segments, but due to the resampling the sample indices have changed and hence we will do it by hand.
+In this experiment, the segment of interest is a period of 5 s before and 20s after stimulus onset. We will cut out the segments in the data using the function **[ft_redefinetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_redefinetrial.m)**. Normally we would use **[ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_definetrial.m)** to determine the segments, but due to the resampling the sample indices have changed and hence we will do it by hand.
 
     event = ft_read_event('LR-01-2015-06-01-0002.oxy3');
 
@@ -292,7 +292,7 @@ Inspect the signal carefully! When does it increase/decrease, when does it peak?
 
 ### Remove bad channels
 
-First, we will remove the optode channels that make poor contact with the skin of the scalp yielding bad signal because of that. From the optical density traces we can estimate whether there is a good coupling between optode and scalp, because the two signals from each optode (corresponding to the two wavelengths) should have a heartbeat that is positively correlated. If the correlation is small or negative, we exclude that optode from further processing. This is implemented in **[ft_nirs_scalpcouplingindex](/reference/ft_nirs_scalpcouplingindex)**. For more details see [Polloniniet al. (2014), Auditory cortex activation to natural speech and simulated cochlear implant speech measured with functional near-infrared spectroscopy](https://doi.org/10.1016/j.heares.2013.11.007).
+First, we will remove the optode channels that make poor contact with the skin of the scalp yielding bad signal because of that. From the optical density traces we can estimate whether there is a good coupling between optode and scalp, because the two signals from each optode (corresponding to the two wavelengths) should have a heartbeat that is positively correlated. If the correlation is small or negative, we exclude that optode from further processing. This is implemented in **[ft_nirs_scalpcouplingindex](https://github.com/fieldtrip/fieldtrip/blob/release/ft_nirs_scalpcouplingindex.m)**. For more details see [Polloniniet al. (2014), Auditory cortex activation to natural speech and simulated cochlear implant speech measured with functional near-infrared spectroscopy](https://doi.org/10.1016/j.heares.2013.11.007).
 
     cfg      = [];
     data_sci = ft_nirs_scalpcouplingindex(cfg, data_epoch);
@@ -323,14 +323,14 @@ We already removed major motion artifacts by epoching, thus removing the periods
 
 ### Transform optical densities to oxy- and deoxy-hemoglobin concentration changes
 
-Like in the [single channel tutorial](/tutorial/nirs_singlechannel), we will now convert the optical densities into oxygenated and deoxygenated hemoglobin concentrations by using **[ft_nirs_transform_ODs](/reference/ft_nirs_transform_ODs)**.
+Like in the [single channel tutorial](/tutorial/nirs_singlechannel), we will now convert the optical densities into oxygenated and deoxygenated hemoglobin concentrations by using **[ft_nirs_transform_ODs](https://github.com/fieldtrip/fieldtrip/blob/release/ft_nirs_transform_ODs.m)**.
 
     cfg                 = [];
     cfg.target          = {'O2Hb', 'HHb'};
     cfg.channel         = 'nirs'; % e.g. one channel incl. wildcards, you can also use ?all? to select all NIRS channels
     data_conc           = ft_nirs_transform_ODs(cfg, data_sci);
 
-Check the data again using **[ft_singleplotER](/reference/ft_singleplotER)**. You should see a clear heartbeat in the signal.
+Check the data again using **[ft_singleplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_singleplotER.m)**. You should see a clear heartbeat in the signal.
 
 {% include image src="/assets/img/tutorial/nirs_multichannel/nirs_tut2_hemoglobinovertime.png" width="600" %}
 
@@ -356,13 +356,13 @@ The changes in average concentration now reveals a perfect example of the hemody
 ### Plot results
 
 Now that we obtained the functional responses, the next step is to average over trials and to visualize the results.
-First, we will run **[ft_timelockanalysis](/reference/ft_timelockanalysis)** to compute the average. The default behavior of the **[ft_timelockanalysis](/reference/ft_timelockanalysis)** is to average across all trials. We want to make a separate average for the deviant and for the standard trials, hence we need inform the code which trials belong to the standard stimuli and which belong to the deviants. Information about the conditions is stored in the trialinfo, where 1 represents the standards, and 2 represents the deviants.
+First, we will run **[ft_timelockanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockanalysis.m)** to compute the average. The default behavior of the **[ft_timelockanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockanalysis.m)** is to average across all trials. We want to make a separate average for the deviant and for the standard trials, hence we need inform the code which trials belong to the standard stimuli and which belong to the deviants. Information about the conditions is stored in the trialinfo, where 1 represents the standards, and 2 represents the deviants.
 
     cfg               = [];
     cfg.trials        = find(data_lpf.trialinfo(:,1) == 1);
     timelockSTD       = ft_timelockanalysis(cfg, data_lpf);
 
-Then, we will apply a baseline correction using **[ft_timelockbaseline](/reference/ft_timelockbaseline)**. The five seconds preceding the stimulus will be used as time window for the baseline.
+Then, we will apply a baseline correction using **[ft_timelockbaseline](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockbaseline.m)**. The five seconds preceding the stimulus will be used as time window for the baseline.
 
     cfg                 = [];
     cfg.baseline        = [-5 0];
@@ -389,9 +389,9 @@ The channel layout can be read the `nirs_48ch_layout.mat` file using the standar
 
 **Figure 10; Channel layout for multiplot and topoplot.**
 
-There are a number of FieldTrip options available for visualizing the results, such as **[ft_singleplotER](/reference/ft_singleplotER)** (ER stands for Event Related), which allows you to plot a single channel, and **[ft_multiplotER](/reference/ft_multiplotER)**, which allows you to plot multiple channels on a schematic representation of the head. The **[ft_multiplotER](/reference/ft_multiplotER)** can also be used in interactive mode to select pieces of the data of interest (for instance specific channels and a specific time window).
+There are a number of FieldTrip options available for visualizing the results, such as **[ft_singleplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_singleplotER.m)** (ER stands for Event Related), which allows you to plot a single channel, and **[ft_multiplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_multiplotER.m)**, which allows you to plot multiple channels on a schematic representation of the head. The **[ft_multiplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_multiplotER.m)** can also be used in interactive mode to select pieces of the data of interest (for instance specific channels and a specific time window).
 
-Important to remember is that for **[ft_multiplotER](/reference/ft_multiplotER)** to run, you need to point FieldTrip to the layout structure using `cfg.layout = lay`.
+Important to remember is that for **[ft_multiplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_multiplotER.m)** to run, you need to point FieldTrip to the layout structure using `cfg.layout = lay`.
 
     cfg                   = [];
     cfg.showlabels        = 'yes';

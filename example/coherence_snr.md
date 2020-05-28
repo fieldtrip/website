@@ -65,7 +65,7 @@ Compute two simulated datasets, each with the same channels.
 
 {% include image src="/assets/img/example/coherence_snr/example_coherence_snr_1.png" width="500" %}
 
-Next we compute the spectral decomposition of the raw data and subsequently compute the coherence with **[ft_connectivityanalysis](/reference/ft_connectivityanalysis)**. Note that for coherence (or other measures of phase synchrony) we need to specify either 'powandcsd' or 'fourier' as cfg.output to **[ft_freqanalysis](/reference/ft_freqanalysis)**.
+Next we compute the spectral decomposition of the raw data and subsequently compute the coherence with **[ft_connectivityanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_connectivityanalysis.m)**. Note that for coherence (or other measures of phase synchrony) we need to specify either 'powandcsd' or 'fourier' as cfg.output to **[ft_freqanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqanalysis.m)**.
 
     cfg = [];
     cfg.method = 'mtmfft';
@@ -88,7 +88,7 @@ Next we compute the spectral decomposition of the raw data and subsequently comp
 
 {% include image src="/assets/img/example/coherence_snr/example_coherence_snr_2.png" width="500" %}
 
-Plotting the coherence for the two datasets is easy, as there are only two channels and therefore one estimate of coherence (as function of frequency) per dataset. For more realistic numbers of channels you may want to look at **[ft_connectivityplot](/reference/ft_connectivityplot)** and **[ft_multiplotCC](/reference/ft_multiplotCC)**.
+Plotting the coherence for the two datasets is easy, as there are only two channels and therefore one estimate of coherence (as function of frequency) per dataset. For more realistic numbers of channels you may want to look at **[ft_connectivityplot](https://github.com/fieldtrip/fieldtrip/blob/release/ft_connectivityplot.m)** and **[ft_multiplotCC](https://github.com/fieldtrip/fieldtrip/blob/release/ft_multiplotCC.m)**.
 
 ## Exercise 1
 
@@ -96,7 +96,7 @@ You should vary the SNR parameters for the two datasets and experiment with the 
 
 ## Exercise 2
 
-You should set the frequency of the signal either at 10 Hz or at 10.5 Hz and experiment with the taper in **[ft_freqanalysis](/reference/ft_freqanalysis)**. Especially for large signal to noise values you will see that the spectral leakage for a signal at 10.5 Hz is much larger with a boxcar taper than with a tanning taper.
+You should set the frequency of the signal either at 10 Hz or at 10.5 Hz and experiment with the taper in **[ft_freqanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqanalysis.m)**. Especially for large signal to noise values you will see that the spectral leakage for a signal at 10.5 Hz is much larger with a boxcar taper than with a tanning taper.
 
 ## Exercise 3
 

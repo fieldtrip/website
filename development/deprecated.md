@@ -7,7 +7,7 @@ title: Deprecated functions and options
 # Deprecated functions and options
 
 {% include markup/info %}
-Definition of **[deprecation](http://en.wikipedia.org/wiki/Deprecated)**
+Definition of **[deprecation](http://en.wikipedia.org/wiki/Deprecated.m)**
 (_From Wikipedia, the free encyclopedia_)
 
 In computer software standards and documentation, deprecation is the gradual phasing-out of a software or programming language feature.
@@ -43,7 +43,7 @@ September 2011: the following function should really not be used any more. Since
 
 - **ft_artifact_manual**
 
-October 2010: the following functions will be substituted by a single implementation of **[ft_artifact_zvalue](/reference/ft_artifact_zvalue)**, which accomplishes the same results of the deprecated function with different cfg settings ([see HERE](/tutorial/artifacts)).
+October 2010: the following functions will be substituted by a single implementation of **[ft_artifact_zvalue](https://github.com/fieldtrip/fieldtrip/blob/release/ft_artifact_zvalue.m)**, which accomplishes the same results of the deprecated function with different cfg settings ([see HERE](/tutorial/artifacts)).
 
 - **ft_artifact_eog**
 - **ft_artifact_jump**

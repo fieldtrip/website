@@ -74,4 +74,4 @@ to each individual function call. It is possible to enable this behavior globall
     global ft_default
     ft_default.debug = 'saveonerror'
 
-The fields in `ft_default` are merged with the input cfg structure to all FieldTrip functions. This is explained in more detail in **[ft_defaults](/reference/ft_defaults)**.
+The fields in `ft_default` are merged with the input cfg structure to all FieldTrip functions. This is explained in more detail in **[ft_defaults](https://github.com/fieldtrip/fieldtrip/blob/release/ft_defaults.m)**.
