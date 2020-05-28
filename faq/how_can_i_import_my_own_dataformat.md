@@ -9,7 +9,7 @@ There are two approaches for importing data from an unsupported format: you can 
 
 ## Extend the FieldTrip reading functions
 
-The first and preferred way of implementing a new data format is by extending the **[ft_read_header](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_header.m)**, **[ft_read_data](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_data.m)** and **[ft_read_event](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_event.m)** functions. These functions are wrappers around the code for many different file formats and provide a common interface. Probably you will also have to add your file format to the **[ft_filetype](https://github.com/fieldtrip/fieldtrip/blob/release/ft_filetype.m)** function so that the files are properly recognized.
+The first and preferred way of implementing a new data format is by extending the **[ft_read_header](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_header.m)**, **[ft_read_data](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_data.m)** and **[ft_read_event](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_event.m)** functions. These functions are wrappers around the code for many different file formats and provide a common interface. Probably you will also have to add your file format to the **[ft_filetype](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_filetype.m)** function so that the files are properly recognized.
 
 ## Using your own low-level reading functions when calling ft_read_header/data/event
 

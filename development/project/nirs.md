@@ -49,7 +49,7 @@ New channels for **[ft_chantype](https://github.com/fieldtrip/fieldtrip/blob/rel
 
 ## Filetype
 
-**[ft_filetype](https://github.com/fieldtrip/fieldtrip/blob/release/ft_filetype.m)** need to be able to identify NIRS data files correctly. Die to copyright issues, these files should be best put into fieldtrip\external\manufacturer. The following table shows manufacturers and systems and the respective extension of the data files. Note that I do not know all these different types, and below is just an example table:
+**[ft_filetype](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_filetype.m)** need to be able to identify NIRS data files correctly. Die to copyright issues, these files should be best put into fieldtrip\external\manufacturer. The following table shows manufacturers and systems and the respective extension of the data files. Note that I do not know all these different types, and below is just an example table:
 
 | Manufacturer                                                                                               | System(s)                            | File format | Proprietary file format |
 | ---------------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------- | ----------------------- |

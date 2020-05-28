@@ -203,9 +203,9 @@ If you want to know which trigger (or triggers) happen in which trial, you have 
 
 ## Guidelines for adding support for other file formats
 
-The ft_read_data, ft_read_header and ft_read_event functions strongly depend on the **[ft_filetype](https://github.com/fieldtrip/fieldtrip/blob/release/ft_filetype.m)** helper function. That function automatically determines the format of the file, for example by looking at the extension, by looking at the first few bytes of the file or any other characteristic feature. So adding support for a new file format also requires that new file format to be added to the ft_filetype function.
+The ft_read_data, ft_read_header and ft_read_event functions strongly depend on the **[ft_filetype](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_filetype.m)** helper function. That function automatically determines the format of the file, for example by looking at the extension, by looking at the first few bytes of the file or any other characteristic feature. So adding support for a new file format also requires that new file format to be added to the ft_filetype function.
 
-The **[ft_filetype](https://github.com/fieldtrip/fieldtrip/blob/release/ft_filetype.m)** function is often called like this (e.g. in ft_read_data)
+The **[ft_filetype](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_filetype.m)** function is often called like this (e.g. in ft_read_data)
 
     var = ft_filetype(filename)
     if strcmp(var, something)
