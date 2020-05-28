@@ -1,5 +1,5 @@
 ---
-title: 07 May 2020 - code update defaultspmversion
+title: 07 May 2020 - Code update, the default SPM version is now spm12  
 categories: [news]
 ---
 
