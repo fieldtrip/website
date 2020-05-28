@@ -51,9 +51,10 @@ We will next compute the inverse solutions and compare two distributed source re
 6.  We want to consider all frequencies; please set the frequency window of interest to “[0 256]”.
 7.  Select “yes” for the “PST Hanning window”. In this example we do not provide “Source priors” and don't want to “Restrict solutions”; these fields remain unchanged. You can find an example on how to include fMRI-based location priors into source reconstruction in the SPM12 manual chapter on multimodal and multisubject data fusion.
 8.  As final step use “Select Modalities” and choose 'MEG' to invert only the 102 magnetometers. You can also select several sensor types and fuse EEG and MEG data. Note that we cannot invert the combined planar gradients, because we do not have a physical forward model for those.
-    The second type of inversion we will examine corresponds to a **L2-minimum norm** (MNM) solution, i.e, fitting the data at the same time as minimising the total energy
-    of the sources. In SPM, this is called “IID” because it corresponds to assuming that the prior probability of each source being active is independent and identically
-    distributed.
+
+The second type of inversion we will examine corresponds to a **L2-minimum norm** (MNM) solution, i.e, fitting the data at the same time as minimising the total energy
+of the sources. In SPM, this is called “IID” because it corresponds to assuming that the prior probability of each source being active is independent and identically
+distributed.
 
 9.  Go back to the batch editor, add another “M/EEG - Source reconstruction – Source Inversion” module, and select the same input files as before (“PapMcbdspmeeg_run_01_sss.mat”), but this time set the inversion index to 2. We use the same forward model as for the “MSP” source reconstruction.
 10. Set the inversion parameters to “custom” again, but this time with the inversion type “IID”. The remaining parameters should be made to match the Multiple Sparse Priors inversion approach.
@@ -95,9 +96,7 @@ You can use the batch framework to construct a processing pipeline across a grou
 
 We are at the end of the demo now. You can use the forward model under index “3” and play around with the inversion models, take a look at the induced activity or try to invert MEG and EEG data together.
 
-SPM offers many other options for source reconstruction. Here we used two different
-distributed source reconstruction methods, but you could also use a Bayesian version
-of an Equivalent Current Dipole algorithm by selecting VB-ECD after clicking the “Invert” button within the “3D Source Reconstruction” window.
+SPM offers many other options for source reconstruction. Here we used two different distributed source reconstruction methods, but you could also use a Bayesian version of an Equivalent Current Dipole algorithm by selecting VB-ECD after clicking the “Invert” button within the “3D Source Reconstruction” window.
 
 #### Literature
 
