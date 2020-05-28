@@ -7,8 +7,7 @@ tags: [tutorial, meg, source, coherence, meg-visuomotor151-k]
 
 ## Introduction
 
-In this tutorial we will continue working on the combined visual and motor task dataset (Schoffelen, Poort, Oostenveld, & Fries (2011) Selective Movement Preparation Is Subserved by Selective
-Increases in Corticomuscular Gamma-Band Coherence. J Neurosci. 31(18):6750-6758) described in the [channel-level analysis tutorial](/tutorial/sensor_analysis).
+In this tutorial we will continue working on the combined visual and motor task dataset (Schoffelen, Poort, Oostenveld, & Fries (2011) Selective Movement Preparation Is Subserved by Selective Increases in Corticomuscular Gamma-Band Coherence. J Neurosci. 31(18):6750-6758) described in the [channel-level analysis tutorial](/tutorial/sensor_analysis).
 
 In this tutorial you will learn about applying beamformer techniques in the frequency domain. You will learn how to compute an appropriate head model and lead field matrix, how to compute appropriate time-frequency windows, and how to contrast the effect of interest against some control/baseline. Also, you will play around with several options for plotting the results overlaid on a structural MRI. Finally, you will apply the results from the sensor-level coherence analysis and localize sources that are coherent with the EMG signals.
 
@@ -30,26 +29,26 @@ The tutorial is split into three parts. In the first part of the tutorial, we wi
 
 In the first part of this tutorial we will use the anatomical data to prepare the source analysis. This involve
 
-- Reading in the subject specific anatomical MRI using **[ft_read_mri](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_mri.m)**
-- Construct a forward model using **[ft_volumesegment](https://github.com/fieldtrip/fieldtrip/blob/release/ft_volumesegment.m)** and **[ft_prepare_headmodel](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_headmodel.m)**
-- Prepare the source model using **[ft_prepare_sourcemodel](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_sourcemodel.m)**
+-   Reading in the subject specific anatomical MRI using **[ft_read_mri](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_mri.m)**
+-   Construct a forward model using **[ft_volumesegment](https://github.com/fieldtrip/fieldtrip/blob/release/ft_volumesegment.m)** and **[ft_prepare_headmodel](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_headmodel.m)**
+-   Prepare the source model using **[ft_prepare_sourcemodel](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_sourcemodel.m)**
 
 Next, we head out to investigate the response to the visual stimulation. We will localize the sources of the visual gamma-band activity following the following step
 
-- Load the data from disk and define baseline and poststimulus period using **[ft_redefinetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_redefinetrial.m)**
-- Compute the cross-spectral density matrix for all MEG channels using the function **[ft_freqanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqanalysis.m)**
-- Compute the lead field matrices using **[ft_prepare_leadfield](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_leadfield.m)**
-- Compute a common spatial filter and estimate the power of the sources using **[ft_sourceanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceanalysis.m)**
-- Compute the condition difference using **[ft_math](https://github.com/fieldtrip/fieldtrip/blob/release/ft_math.m)**
-- Visualize the result with **[ft_sourceplot](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceplot.m)**
+-   Load the data from disk and define baseline and poststimulus period using **[ft_redefinetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_redefinetrial.m)**
+-   Compute the cross-spectral density matrix for all MEG channels using the function **[ft_freqanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqanalysis.m)**
+-   Compute the lead field matrices using **[ft_prepare_leadfield](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_leadfield.m)**
+-   Compute a common spatial filter and estimate the power of the sources using **[ft_sourceanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceanalysis.m)**
+-   Compute the condition difference using **[ft_math](https://github.com/fieldtrip/fieldtrip/blob/release/ft_math.m)**
+-   Visualize the result with **[ft_sourceplot](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceplot.m)**
 
 In the third part we shift our attention to the motor task in this dataset. We will compute the spatial distribution of the cortico-muscular coherence over the whole brain using a very similar analysis pipeline.
 
-- Define a suitable time window without interfering stimulation **[ft_redefinetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_redefinetrial.m)**
-- Compute the cross-spectral density matrix for MEG and EMG channels using **[ft_freqanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqanalysis.m)**
-- Use the source- and headmodel as computed above using **[ft_volumesegment](https://github.com/fieldtrip/fieldtrip/blob/release/ft_volumesegment.m)**, **[ft_prepare_headmodel](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_headmodel.m)**
-- Beam the oscillatory activity and estimate the cortico-muscular coherence using **[ft_sourceanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceanalysis.m)**
-- Visualize the cortico-muscular coherence with **[ft_sourceplot](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceplot.m)**
+-   Define a suitable time window without interfering stimulation **[ft_redefinetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_redefinetrial.m)**
+-   Compute the cross-spectral density matrix for MEG and EMG channels using **[ft_freqanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqanalysis.m)**
+-   Use the source- and headmodel as computed above using **[ft_volumesegment](https://github.com/fieldtrip/fieldtrip/blob/release/ft_volumesegment.m)**, **[ft_prepare_headmodel](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_headmodel.m)**
+-   Beam the oscillatory activity and estimate the cortico-muscular coherence using **[ft_sourceanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceanalysis.m)**
+-   Visualize the cortico-muscular coherence with **[ft_sourceplot](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceplot.m)**
 
 {% include image src="/assets/img/tutorial/beamformingextended/pipeline.png" width="650" %}
 
@@ -216,11 +215,11 @@ Now, we 'cut' out the pre- and post-stimulus time windows:
 As mentioned in the Background, it is ideal to contrast the activity of interest against some control.
 
 1.  Suitable control windows are, for example:
-    - Activity contrasted with baseline (example shown here using data_bsl)
-    - Activity of condition 1 contrasted with condition 2 (using e.g. data_left and data_right)
+    -   Activity contrasted with baseline (example shown here using data_bsl)
+    -   Activity of condition 1 contrasted with condition 2 (using e.g. data_left and data_right)
 2.  However, if no other suitable data condition or baseline time-window exists, then options are:
-    - Activity contrasted with estimated noise
-    - Use normalized leadfields
+    -   Activity contrasted with estimated noise
+    -   Use normalized leadfields
 
 The latter two cases are covered in [another tutorial](/tutorial/beamformer#source_analysiswithout_contrasting_condition) that we will not deal with today.
 
@@ -284,6 +283,7 @@ Using the cross-spectral density and the lead field matrices a spatial filter is
     cfg.grad              = freq_cmb.grad;
     cfg.method            = 'dics';
     cfg.keeptrials        = 'yes';
+    cfg.channel           = 'MEG';
     cfg.sourcemodel       = sourcemodel_lf;
     cfg.headmodel         = hdm;
     cfg.keeptrials        = 'yes';
@@ -309,6 +309,7 @@ Remember that we intended to contrast the baseline with the experiment time peri
 
     % beam pre- and poststim by using the common filter
     cfg.sourcemodel.filter  = source.avg.filter;
+    cfg.sourcemodel.label   = source.avg.label;
     source_bsl       = ft_sourceanalysis(cfg, freq_bsl);
     source_exp       = ft_sourceanalysis(cfg, freq_exp);
 
@@ -347,6 +348,7 @@ Now, we can plot the interpolated data:
     ft_sourceplot(cfg, source_diff_int);
 
 {% include image src="/assets/img/tutorial/beamformingextended/fig4_beamed2.png" %}
+
 _Figure: The power estimates of the activity induced by the visual stimulus around 55 Hz._
 
 Congratulations, you successfully beamed visual gamma!
