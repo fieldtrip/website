@@ -21,7 +21,11 @@ This problem is due to additional security measures implemented in macOS. MATLAB
 If you trust the source where you have downloaded FieldTrip, you can resolve these errors for all mex files at once by opening a terminal and typing
 
 ```bash
-sudo find LOCATION_OF_FIELDTRIP -name \*.mex\* -exec spctl --add {} \;
+sudo xattr -r -d com.apple.quarantine LOCATION_OF_FIELDTRIP
+
+sudo find LOCATION_OF_FIELDTRIP -name \*.mexmaci64 -exec spctl --add {} \;
 ```
 
 where `LOCATION_OF_FIELDTRIP` is the place where you have unzipped FieldTrip. Following `sudo` you will have to give your administrator password.
+
+The first command removes all FieldTrip files from [quarantaine](https://derflounder.wordpress.com/2012/11/20/clearing-the-quarantine-extended-attribute-from-downloaded-applications/), the second adds a [Gatekeeper exception](https://osxdaily.com/2015/07/15/add-remove-gatekeeper-app-command-line-mac-os-x/) to all mex files.
