@@ -2,15 +2,18 @@
 title: ft_channelselection
 ---
 ```plaintext
- FT_CHANNELSELECTION makes a selection of EEG and/or MEG channel labels.
- This function translates the user-specified list of channels into channel
- labels as they occur in the data. This channel selection procedure can be
- used throughout FieldTrip.
+ FT_CHANNELSELECTION makes a selection of EEG and/or MEG channel labels. This
+ function translates the user-specified list of channels into channel labels as they
+ occur in the data. This channel selection procedure can be used throughout
+ FieldTrip.
 
- You can specify a mixture of real channel labels and of special strings,
- or index numbers that will be replaced by the corresponding channel
- labels. Channels that are not present in the raw datafile are
- automatically removed from the channel list.
+ You can specify a mixture of real channel labels and of special strings, or index
+ numbers that will be replaced by the corresponding channel labels. Channels that
+ are not present in the raw datafile are automatically removed from the channel
+ list.
+
+ The order of the channels in the list that is returned corresponds to the order in
+ the data.
 
  E.g. the desired input specification can be:
    'all'        is replaced by all channels in the datafile

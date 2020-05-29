@@ -21,6 +21,7 @@ title: beamformer_lcmv
  The input dipole model consists of
    dipin.pos   positions for dipole, e.g. regular grid, Npositions x 3
    dipin.mom   dipole orientation (optional), 3 x Npositions
+ and can additionally contain things like a precomputed filter.
 
  Additional options should be specified in key-value pairs and can be
   'lambda'           = regularisation parameter

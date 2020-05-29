@@ -412,7 +412,7 @@ A detailed description of each function is available in the [reference documenta
 
 ## B 
 
-**cfg.backproject** - [ft_dipolefitting](/reference/ft_dipolefitting), [ft_prepare_leadfield](/reference/ft_prepare_leadfield)  
+**cfg.backproject** - [ft_dipolefitting](/reference/ft_dipolefitting), [ft_prepare_leadfield](/reference/ft_prepare_leadfield), [ft_sourceanalysis](/reference/ft_sourceanalysis)  
 
 
 **cfg.badchannel** - [ft_channelrepair](/reference/ft_channelrepair), [ft_scalpcurrentdensity](/reference/ft_scalpcurrentdensity)  
@@ -1885,10 +1885,10 @@ A detailed description of each function is available in the [reference documenta
 **cfg.normalization** - [ft_spike_jpsth](/reference/ft_spike_jpsth)  
 
 
-**cfg.normalize** - [ft_dipolefitting](/reference/ft_dipolefitting), [ft_prepare_leadfield](/reference/ft_prepare_leadfield), [ft_regressconfound](/reference/ft_regressconfound), [ft_sourceanalysis](/reference/ft_sourceanalysis), [ft_spike_waveform](/reference/ft_spike_waveform)  
+**cfg.normalize** - [ft_prepare_leadfield](/reference/ft_prepare_leadfield), [ft_regressconfound](/reference/ft_regressconfound), [ft_sourceanalysis](/reference/ft_sourceanalysis), [ft_spike_waveform](/reference/ft_spike_waveform)  
 
 
-**cfg.normalizeparam** - [ft_dipolefitting](/reference/ft_dipolefitting), [ft_prepare_leadfield](/reference/ft_prepare_leadfield)  
+**cfg.normalizeparam** - [ft_prepare_leadfield](/reference/ft_prepare_leadfield), [ft_sourceanalysis](/reference/ft_sourceanalysis)  
 
 
 **cfg.normalizevar** - [ft_timelockgrandaverage](/reference/ft_timelockgrandaverage)  
@@ -3082,7 +3082,7 @@ A detailed description of each function is available in the [reference documenta
 **cfg.warpmni** - [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)  
 
 
-**cfg.weight** - [ft_dipolefitting](/reference/ft_dipolefitting)  
+**cfg.weight** - [ft_prepare_leadfield](/reference/ft_prepare_leadfield), [ft_sourceanalysis](/reference/ft_sourceanalysis)  
 
 
 **cfg.whichEcho** - [ft_omri_pipeline_nuisance](/reference/ft_omri_pipeline_nuisance)  

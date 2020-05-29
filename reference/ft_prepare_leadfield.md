@@ -38,20 +38,22 @@ title: ft_prepare_leadfield
    cfg.elec          = structure with electrode positions or filename, see FT_READ_SENS
    cfg.grad          = structure with gradiometer definition or filename, see FT_READ_SENS
 
- Optionally, you can modify the leadfields by reducing the rank (i.e.
- remove the weakest orientation), or by normalizing each column.
+ Optionally, you can modify the leadfields by reducing the rank (i.e. remove the
+ weakest orientation), or by normalizing each column.
    cfg.reducerank      = 'no', or number (default = 3 for EEG, 2 for MEG)
+   cfg.backproject     = 'yes' or 'no',  determines when reducerank is applied whether the 
+                         lower rank leadfield is projected back onto the original linear 
+                         subspace, or not (default = 'yes')
    cfg.normalize       = 'yes' or 'no' (default = 'no')
    cfg.normalizeparam  = depth normalization parameter (default = 0.5)
-   cfg.backproject     = 'yes' or 'no' (default = 'yes') determines when reducerank is applied
-                         whether the lower rank leadfield is projected back onto the original
-                         linear subspace, or not.
+   cfg.weight          = number or Nx1 vector, weight for each dipole position to compensate 
+                         for the size of the corresponding patch (default = 1)
 
  Depending on the type of headmodel, some additional options may be
  specified.
 
  For OPENMEEG based headmodels:
-   cfg.openmeeg.batchsize    = scalar (default 100e3), number of dipoles
+   cfg.openmeeg.batchsize    = scalar (default 1e4), number of dipoles
                                for which the leadfield is computed in a
                                single call to the low-level code. Trades off
                                memory efficiency for speed.

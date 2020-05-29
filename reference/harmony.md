@@ -6,7 +6,7 @@ title: harmony
  using a mesh harmonic based low-pass filter.
 
  Use as
-   [dipout] = minimumnormestimate(dip, grad, headmodel, dat, ...)
+   [dipout] = harmony(dip, grad, headmodel, dat, ...)
 
  Optional input arguments should come in key-value pairs and can include
   'noisecov'             = Nchan x Nchan matrix with noise covariance

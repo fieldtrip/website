@@ -29,10 +29,10 @@ title: ft_datatype_freq
           cfg: [1x1 struct]         the configuration used by the function that generated this data structure
 
  Required fields:
-   - label, dimord, freq
+   - freq, dimord, label or labelcmb
 
  Optional fields:
-   - powspctrm, fouriesspctrm, csdspctrm, cohspctrm, time, labelcmb, grad, elec, cumsumcnt, cumtapcnt, trialinfo
+   - powspctrm, fouriesspctrm, csdspctrm, cohspctrm, time, grad, elec, cumsumcnt, cumtapcnt, trialinfo
 
  Deprecated fields:
    - <none>
