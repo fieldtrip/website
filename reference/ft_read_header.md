@@ -72,6 +72,8 @@ title: ft_read_header
    Mega Neurone (directory)
    Natus/Nicolet/Nervus (.e files)
    Nihon Kohden (*.m00, *.EEG)
+   Bitalino OpenSignals (*.txt)
+   OpenBCI (*.txt)
 
  The following spike and LFP dataformats are supported
    Neuralynx (*.ncs, *.nse, *.nts, *.nev, *.nrd, *.dma, *.log)
