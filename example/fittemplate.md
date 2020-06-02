@@ -25,7 +25,16 @@ You load the head shape measured during the MEG recording with the Polhemus and 
     template = ft_read_headmodel('standard_bem.mat');
     template = ft_convert_units(template, 'mm');
 
-Note that the template head model contains three surfaces describing the three compartments of scalp, skull and brain.    
+Note that the template head model contains three surfaces describing the three compartments of scalp, skull and brain. Furthermore, it descibes the conductivities and the BEM system matrix, computed with dipoli. Here is how the complete structure looks like
+
+    template = 
+      struct with fields:
+
+         bnd: [1×3 struct]
+        cond: [0.3300 0.0041 0.3300]
+         mat: [3000×3000 double]
+        type: 'dipoli'
+        unit: 'mm'
 
 ## Coregistration
 
