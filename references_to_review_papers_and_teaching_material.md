@@ -49,6 +49,8 @@ Mike X. Cohen, [MATLAB for Brain and Cognitive Scientists](https://www.amazon.co
 
 Wilson G, Aruliah DA, Brown CT, Chue Hong NP, Davis M, Guy RT, et al. (2014) [Best Practices for Scientific Computing](http://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1001745). PLoS Biol 12(1): e1001745. https://doi.org/10.1371/journal.pbio.1001745
 
+In MATLAB you have the command window, on Linux, macOS and Windows you have the terminal and the Bash command line. With [Discovering the terminal](https://blog.balthazar-rouberol.com/discovering-the-terminal) you can get a 30-minute introduction in how to use the Bash command line.
+
 ## Data Sharing
 
 For data sharing we recommend that you consider organizing your data along the lines of the [BIDS standard](http://bids.neuroimaging.io). See [The brain imaging data structure, a format for organizing and describing outputs of neuroimaging experiments](http://www.nature.com/articles/sdata201644) for an introduction and [MEG-BIDS, the brain imaging data structure extended to magnetoencephalography](https://www.nature.com/articles/sdata2018110). The ** [data2bids](https://github.com/fieldtrip/fieldtrip/blob/release/data2bids.m)** function helps to organize your data in the BIDS structure.
