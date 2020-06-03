@@ -21,12 +21,12 @@ This allows you to easily track the changes that we make to the code. If you als
 
 We use git (the software) and github.com (the website, see below) in combination with a [Forking Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows#forking-workflow) for the development of the code, and for maintenance of the documentation on the website. We complement this with code reviews by the core team and quality control using a set of test scripts. A short summary of the procedure is as follows
 
-1. The contributor makes a fork of the `fieldtrip/fieldtrip` (or the `fieldtrip/website`) repository to his/her personal GitHub page.
-2. He/she makes a clone of the `personal/fieldtrip` (or the `personal/website`) repository to his/her own computer. It is recommended to set the `fieldtrip/fieldtrip` repository as the upstream remote.
-3. He/she creates a new branch, makes the suggested changes, commits them to that branch, pushes that branch to his/her own fork (on GitHub) and submits a pull request.
-4. The core team reviews the pull request. The suggested change should make sense, fit in the larger strategy, should be consistent with other code, and code should be documented.
-5. The code in the pull request is optionally tested by the core team to ensure that it does not break anything.
-6. After successful reviewing and testing, the core team merges the pull request with the master branch.
+1.  The contributor makes a fork of the `fieldtrip/fieldtrip` (or the `fieldtrip/website`) repository to his/her personal GitHub page.
+2.  He/she makes a clone of the `personal/fieldtrip` (or the `personal/website`) repository to his/her own computer. It is recommended to set the `fieldtrip/fieldtrip` repository as the upstream remote.
+3.  He/she creates a new branch, makes the suggested changes, commits them to that branch, pushes that branch to his/her own fork (on GitHub) and submits a pull request.
+4.  The core team reviews the pull request. The suggested change should make sense, fit in the larger strategy, should be consistent with other code, and code should be documented.
+5.  The code in the pull request is optionally tested by the core team to ensure that it does not break anything.
+6.  After successful reviewing and testing, the core team merges the pull request with the master branch.
 
 In the next section we will explain the technical terms and slang, and will give a more gentle step-by-step introduction.
 
@@ -44,8 +44,8 @@ There are lots of resources available on the internet to learn more about Git. T
 
 Git usually lives on two levels:
 
-1. on your local computer
-2. on a remote server, for example [github.com](https://github.com), [gitlab.com](https://gitlab.com) or [bitbucket.com](https://bitbucket.com)
+1.  on your local computer
+2.  on a remote server, for example [github.com](https://github.com), [gitlab.com](https://gitlab.com) or [bitbucket.com](https://bitbucket.com)
 
 #### push, pull, clone
 
@@ -63,14 +63,14 @@ One of the most powerful features of Git is the idea of [branching](http://git-s
 
 To recap, the main commands that you'll need are:
 
-- **clone** to create a new local repository based on a remote repository
-- **commit** to add some changes to your local repository
-- **push** to send your local changes to the remote repository
-- **pull** to receive the remote changes to your local repository (it runs two processes: **fetch**, where the remote changes are downloaded, and **merge**, where the changes are integrated into your local repository's branches)
-- **branch** to list the branches
-- **checkout** to switch to an existing branch
-- **checkout -b** to create a new branch
-- **merge** to merge a branch with your main local branch
+-   **clone** to create a new local repository based on a remote repository
+-   **commit** to add some changes to your local repository
+-   **push** to send your local changes to the remote repository
+-   **pull** to receive the remote changes to your local repository (it runs two processes: **fetch**, where the remote changes are downloaded, and **merge**, where the changes are integrated into your local repository's branches)
+-   **branch** to list the branches
+-   **checkout** to switch to an existing branch
+-   **checkout -b** to create a new branch
+-   **merge** to merge a branch with your main local branch
 
 You can use any of these commands on the command line, in Linux or Mac, by doing:
 
@@ -94,11 +94,11 @@ you will switch from a side branch into the main branch of your repository.
 
 You only have read permission for the [FieldTrip repository](https://github.com/fieldtrip/fieldtrip) on GitHub, this means that you cannot directly change the code of the FieldTrip repository. What you can do, as demonstrated below, is:
 
-1. Copy the FieldTrip repository under your private account on github.com (this is called **forking**).
-2. This new personal repository will become your **remote repository**. You will need **clone** the remote repository onto your local machine.
-3. You will create a new **branch**, edit some files, and **commit** them to the developmental branch of your **local repository**.
-4. Then you can **push** this developmental **branch** to your **remote repository**.
-5. You will then tell to the developers of FieldTrip to check these changes in your **remote repository**, using a **pull request**.
+1.  Copy the FieldTrip repository under your private account on github.com (this is called **forking**).
+2.  This new personal repository will become your **remote repository**. You will need **clone** the remote repository onto your local machine.
+3.  You will create a new **branch**, edit some files, and **commit** them to the developmental branch of your **local repository**.
+4.  Then you can **push** this developmental **branch** to your **remote repository**.
+5.  You will then tell to the developers of FieldTrip to check these changes in your **remote repository**, using a **pull request**.
 
 All the **highlighted** words are the new concepts explained above. **Forking** and **pull request** are two main concepts when working with multiple remote repositories. I will use them throughout the tutorial and are the words that you will need to successfully google possible problems. If they are not clear, refer to the main [documentation](http://git-scm.com/documentation).
 
@@ -108,7 +108,7 @@ Now that the main concepts are explained, we will try to add a new feature to Fi
 
 ### 1. Fork the main FieldTrip
 
-Go with your web browser to [https://github.com/fieldtrip/fieldtrip](https://github.com/fieldtrip/fieldtrip) and click on the right-hand side, towards the top, on **Fork**. This will create a new remote repository in your GitHub account at the address: `https://github.com/USERNAME/fieldtrip`. The title of your repository will say:
+Go with your web browser to <https://github.com/fieldtrip/fieldtrip> and click on the right-hand side, towards the top, on **Fork**. This will create a new remote repository in your GitHub account at the address: `https://github.com/USERNAME/fieldtrip`. The title of your repository will say:
 
 ```bash
 USERNAME/fieldtrip
@@ -149,7 +149,7 @@ and it'll tell you:
 Switched to a new branch 'welcome'
 ```
 
-If you have filed a bug on [Bugzilla](/development/issues), you could name your new branch _bugXXXX_ where XXXX is the number of the bug. If you have filed an issue on [GitHub]((/development/issues), you could name your new branch _issueXXXX_ with the number. This helps linking your code suggestions to the discussion on that specific bug or issue.
+If you have filed a bug on [Bugzilla](/development/issues), you could name your new branch _bugXXXX_ where XXXX is the number of the bug. If you have filed an issue on [GitHub]\((/development/issues), you could name your new branch _issueXXXX_ with the number. This helps linking your code suggestions to the discussion on that specific bug or issue.
 
 ### 4. Add and edit files
 
@@ -358,4 +358,27 @@ The following figure gives a graphical summary of some of the steps and terms.
 
 ## Want more?
 
-[github.com](https://github.com) offers lots of documentation. In particular, see the detailed instructions to [fork a repository](https://help.github.com/articles/fork-a-repo) and to [create a pull request](https://help.github.com/articles/using-pull-requests). If you plan to continue development, I suggest to set up your remotes with _origin_ pointing to your personal remote repository and _upstream_ pointing to [https://github.com/fieldtrip/fieldtrip](https://github.com/fieldtrip/fieldtrip), as described in [fork a repository](https://help.github.com/articles/fork-a-repo).
+[github.com](https://github.com) offers lots of documentation. In particular, see the detailed instructions to [fork a repository](https://help.github.com/articles/fork-a-repo) and to [create a pull request](https://help.github.com/articles/using-pull-requests). If you plan to continue development, I suggest to set up your remotes with _origin_ pointing to your personal remote repository and _upstream_ pointing to <https://github.com/fieldtrip/fieldtrip>, as described in [fork a repository](https://help.github.com/articles/fork-a-repo).
+
+Below are some helpful resources for you to go beyond the basic recipe and become a real Git "connaisseur":
+
+### Step-by-step guides
+
+-   As plain text <http://www-cs-students.stanford.edu/~blynn//gitmagic/ch01.html>
+-   Or more playful <https://learngitbranching.js.org/>
+-   Examples of different workflows <https://www.atlassian.com/git/tutorials/comparing-workflows>
+
+### Official git documentation
+
+-   Contains a reference manual <https://git-scm.com/docs>
+-   A book with more conceptual in-depth explanations <https://git-scm.com/book/en/v2>
+-   A couple of short introductory videos <https://git-scm.com/videos>
+
+### Git terminology
+
+-   <https://jwiegley.github.io/git-from-the-bottom-up/>
+
+### Troubleshooting
+
+-   <https://github.blog/2015-06-08-how-to-undo-almost-anything-with-git/>
+-   <https://ohshitgit.com/>
