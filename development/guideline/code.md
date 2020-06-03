@@ -351,7 +351,7 @@ To facilitate supporting older MATLAB versions, below we list some known incompa
 
 FieldTrip has to run on a large variety of platforms, with different operating systems and MATLAB versions. Therefore, we try to keep the compiled mex files reasonably consistent. Since mex files are added in the course of the development, and we don't want to recompile them too often, we cannot be too strict on the compile environment. If possible you should compile the mex files with a MATLAB version that is two years old, i.e. not the latest, but also not a version that is very old.
 
-In most cases the mex file source code should be located in fieldtrip/src. The `ft_compile_mex` function is used to compile the mex files and the `synchronize-private.sh` BASH script is used to copy the updated mex files to all required (private) directories.
+In most cases the mex file source code should be located in fieldtrip/src. The `ft_compile_mex` function is used to compile the mex files and the `synchronize-private.sh` Bash script is used to copy the updated mex files to all required (private) directories.
 
 If the mex file is part of a collection of related mex files and only present on a single location (e.g. fieldtrip/@config/private), the mex file source code should be present in _that_ specific directory together with a compilation script.
 
