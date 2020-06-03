@@ -71,6 +71,9 @@ The [Brief History of the EEG Surface Laplacian](http://ssltool.sourceforge.net/
 
 The following paper illustrates several problems associated with the lack of robustness and gives recommendations: Rousselet, G.A. & Pernet, C.R. (2012) [Improving standards in brain-behavior correlation analyses](https://www.frontiersin.org/articles/10.3389/fnhum.2012.00119/full). Frontiers in human neuroscience, 6, 119.
 
+The paper [How to get statistically significant effects in any ERP experiment (and why you shouldn’t)](https://doi.org/10.1111/psyp.12639) by Steve Luck and Nicholas Gaspelin demonstrates how common methods for quantifying and analyzing ERP effects can lead to very high rates of significant but bogus effects.
+
+
 The blog post [Correlations in neuroscience: are small n, interaction fallacies, lack of illustrations and confidence intervals the norm?](https://garstats.wordpress.com/2018/06/11/ejn2017) by Guillaume Rousselet has some interesting observations and recommendations.
 
 [The Meaningfulness of Effect Sizes in Psychological Research: Differences Between Sub-Disciplines and the Impact of Potential Biases](https://doi.org/10.3389/fpsyg.2019.00813) by Thomas Schäfer and Marcus A. Schwarz discusses the relevance and challenges of using and reporting effect sizes.
