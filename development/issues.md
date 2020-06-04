@@ -18,7 +18,7 @@ You first have to [sign up for an account](https://github.com/join) or log in on
 2. How confident are you that the behaviour you have observed is in fact a
    genuine bug, and not a misunderstanding?
 
-   -  *Confident*: Please [open a new GitHub issue](https://github.com/fieldtrip/fieldtrip/issues/new);
+   -  *Confident*: Please [open a new GitHub issue](https://github.com/fieldtrip/fieldtrip/issues/new/choose);
       select the "bug report" issue template to get started.
 
    -  *Not so confident*: That's fine! Consider instead creating a new topic
