@@ -41,6 +41,8 @@ The Child Mind Institute provides both raw and preprocessed EEG data in the [Mul
 
 The Max Planck Institut in Leipzig shares the [LEMON Mind-Brain-Body Dataset](http://fcon_1000.projects.nitrc.org/indi/retro/MPI_LEMON.html) which includes data from 228 healthy participants comprising a young (N=154, range 20–35 years) and an elderly group (N=74, range 59–77 years). During a two-day assessment, participants completed 3T MRI and a 62-channel EEG experiment at rest.
 
+On [Physionet](https://physionet.org/about/database/#neuro) you can find a list of clinical and cognitive EEG datasets, PLUS also various other ExG and physiological datasets. They are especially useful when developing and/or testing new data analysis methods.  
+
 The [Brain Signals](http://www.brainsignals.de) website has a list of references to shared EEG data sets.
 
 Arno Delorme maintains a list of [Open EEG datasets](https://sccn.ucsd.edu/~arno/fam2data/publicly_available_EEG_data.html).
