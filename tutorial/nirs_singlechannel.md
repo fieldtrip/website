@@ -153,7 +153,7 @@ You can specify a z-value cut-off like this:
     cfg.artfctdef.zvalue.cutoff = 3.5;
     [cfg, artifact] = ft_artifact_zvalue(cfg, data);
 
-You will see that FieldTrip identified 8 artifacts through this procedure. These are not yet removed, you would call **[ft_rejectartifact](https://github.com/fieldtrip/fieldtrip/blob/release/ft_rejectartifact.m)**.
+You will see that FieldTrip identified 8 artifacts through this procedure. Note that these are only identified, they  are not yet removed; we will keep them in memory and call **[ft_rejectartifact](https://github.com/fieldtrip/fieldtrip/blob/release/ft_rejectartifact.m)** after filtering segmenting the data into epochs.
 
 #### Exercise 2
 
@@ -224,12 +224,20 @@ Note that we left out the brackets around the output variable as we have a singl
     cfg = [];
     cfg.ylim = [-1 1];
     cfg.viewmode = 'vertical';
+    cfg.artfctdef.zvalue.artifact = artifact;
     ft_databrowser(cfg, data_epoch);
 
 {% include image src="/assets/img/tutorial/nirs_singlechannel/nirs_tut1_fig3_ft_define_trial_v2.png" width="400" %}
 
 _Figure: Databrowser for 12 trials._
 
+We can now remove the trials containing the artifacts that we determined earlier.
+
+    cfg = [];
+    cfg.artfctdef.zvalue.artifact = artifact;
+    cfg.artfctdef.reject = 'complete';
+    data_epoch = ft_rejectartifact(cfg, data_epoch);
+  
 So we pulled our data out of the measurement. The data looks crisps and clear.
 
 #### Exercise 4
