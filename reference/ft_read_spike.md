@@ -24,6 +24,7 @@ title: ft_read_spike
    'neuroshare'
    'neurosim_spikes'
    'wave_clus'
+   'nwb'
 
  The output spike structure usually contains
    spike.label     = 1xNchans cell-array, with channel labels

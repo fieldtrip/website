@@ -69,5 +69,6 @@ title: ft_filetype
   - Qualisys *.tsv
   - Mrtrix *.mif
   - MAUS *.TextGrid
+  - Neurodata Without Borders *.nwb
   - PhysioNet *.hea and *.dat
 ```

@@ -82,6 +82,7 @@ title: ft_read_header
    MPI - Max Planck Institute (*.dap)
    Neurosim  (neurosim_spikes, neurosim_signals, neurosim_ds)
    Windaq (*.wdq)
+   Neurodata Without Borders: Neurophysiology (*.nwb)
 
  The following NIRS dataformats are supported
    BUCN - Birkbeck college, London (*.txt)
