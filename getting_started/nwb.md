@@ -36,7 +36,7 @@ generateCore()
 % Filename and path
 nwbFile = 'X:/examplefolder/sub-YutaMouse41_ses-YutaMouse41-150831_behavior+ecephys.nwb';
 
-% Show schema version of the file. If this does not match your installed version, see 'change NWB schema version' below
+% Show schema version of the file. If this does not match your installed version, see 'Change NWB schema version' below
 disp(util.getSchemaVersion(nwbFile))
 
 % Load data in nwb format
@@ -63,6 +63,13 @@ catch ME
 	rethrow(ME)
 end
  ```
+
+## Change NWB schema version
+In case you are trying to load a file using a different schema version than the one installed on your system this may cause an error (often something like 'Unable to resolve the name types.core.DynamicTableRegion'). If so:
+- go to the [NWB release site](https://github.com/NeurodataWithoutBorders/nwb-schema/releases), 
+- choose the schema closest to your file's schema, 
+- download the zip file associated with that schema,
+- copy the files in the zip's \nwb-schema-2.2.1\core into the \nwb-schema\core subfolder of your MatNWB directory (you probably want to make a backup of the original files first).
 
 ## Missing functionality
 
