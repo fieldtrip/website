@@ -11,9 +11,11 @@ Feel free to hit the **edit** button to share links to other open access dataset
 
 The FieldTrip tutorials include a lot of smaller datasets that are available for download. These datasets are listed in [this frequently asked question](/faq/what_types_of_datasets_and_their_respective_analyses_are_used_on_fieldtrip).
 
-Note that other MEG/EEG data analysis toolboxes like SPM, MNE, EEGLAB and BrainStorm also share tutorial datasets.
+On the [Donders Repository](https://data.donders.ru.nl/collections/published), [OpenNeuro](https://openneuro.org) and on [Zenodo](https://zenodo.org) you can find many publicly accessible EEG, MEG and fMRI datasets.
 
-On the [Donders Repository](https://data.donders.ru.nl/collections/published), [OpenNeuro](https://openneuro.org) and on [Zenodo](https://zenodo.org) you can find many publicly accessible EEG, MEG and fMRI datasets. On [DataCite](https://search.datacite.org) and on [Google Dataset Search](https://datasetsearch.research.google.com) you san search for datasets.
+On [DataCite](https://search.datacite.org) and on [Google Dataset Search](https://datasetsearch.research.google.com) you san search for datasets that are hosted in publicly accessible repositories.
+
+Other MEG/EEG data analysis toolboxes like SPM, MNE, EEGLAB and BrainStorm also share tutorial datasets.
 
 ## Other MEG datasets
 
@@ -56,3 +58,5 @@ Kahana and Rizutto have released [EGoG data from 251 subjects](http://memory.psy
 ## Other LFP and spike datasets
 
 A collection of intracranial animal datasets is shared on the [Collaborative Research in Computational Neuroscience](http://crcns.org/) data sharing website.
+
+The [DANDI Archive](https://gui.dandiarchive.org/#/) of the BRAIN Initiative contains shared cellular neurophysiology data.
