@@ -16,6 +16,9 @@
 - name:  Getting started with Neuralynx data
   link:  /getting_started/neuralynx
 
+- name:  Getting started with Neurodata Without Borders (NWB) data
+  link:  /getting_started/nwb
+
 - name:  Getting started with Plexon data
   link:  /getting_started/plexon
 

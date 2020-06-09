@@ -82,6 +82,9 @@
 - name:  Getting started with Nicolet data
   link:  /getting_started/nicolet
 
+- name:  Getting started with Neurodata Without Borders (NWB) data
+  link:  /getting_started/nwb
+
 - name:  Getting started with Plexon data
   link:  /getting_started/plexon
 
