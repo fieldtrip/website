@@ -39,6 +39,7 @@ In general you should get started with the [tutorials](/tutorial). The pages tha
 - [Getting started with Artinis NIRS data](/getting_started/artinis)
 - [Getting started with SR-Research EyeLink eye-tracker data](/getting_started/eyelink)
 - [Getting started with XSens motion capture data](/getting_started/xsens)
+- [Getting started with Neurodata Without Borders (NWB) data](/getting_started/nwb)
 
 ## Getting started with data from other software
 
