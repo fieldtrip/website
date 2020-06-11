@@ -114,6 +114,18 @@ The last option is useful for MATLAB command window output, which in itself is n
 
 Tags are displayed at the top of the page. If you click on a tag, you are brought to an overview page with all pages that share the same tag. Those overview pages are automatically build on the web server after every change.
 
+## Redirection
+
+If you rename a page, the URL (i.e. the link on the web) that points to it will not be valid any more. That is problematic if that link is for example used in other documentation, on other websites, or in the email archive. To prevent broken links, you can redirect from the old page to the new page; this requires that you including `redirect_from` in the page header of the new page. You can also use it to redirect links to multiple old pages to a new single page in which the documentation has been merged.
+
+```plaintext
+---
+title: New page title
+redirect_from:
+  - /olddir/oldname/
+---
+```
+
 ## See also
 
 You can include an automatically generated list of pages with specific tags like this
