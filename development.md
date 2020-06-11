@@ -17,7 +17,7 @@ We use a combination of tools (GitHub, website, mailman, Twitter, Facebook) that
 - [Guidelines](/development/guideline)
 - [Modules](/development/module)
 - [Data Structures](/development/datastructure)
-- [Testing and releasing](/development/dashboard)
+- [Testing and releasing](/development/testing)
 - [Projects](/development/project)
 - [Meetings](/development/meeting)
 - [Integration](/development/integration)
