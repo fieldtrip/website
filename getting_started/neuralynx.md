@@ -95,3 +95,5 @@ The events.nev file (which you probably use) only contains timestamps and not sa
 ## See also
 
 {% include seealso tag="neuralynx" %}
+
+- [Data File Formats](https://support.neuralynx.com/hc/en-us/articles/360040444811-TechTip-Neuralynx-Data-File-Formats) explained by Neuralynx
