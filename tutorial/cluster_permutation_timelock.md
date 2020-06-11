@@ -94,8 +94,8 @@ To obtain the preprocessed data required by **[ft_timelockanalysis](https://gith
 
     cfg = [];
     cfg.keeptrials = 'yes';
-    timelockFIC = ft_timelockanalysis(cfg, dataFIC_LP);
-    timelockFC  = ft_timelockanalysis(cfg, dataFC_LP);
+    timelockFIC    = ft_timelockanalysis(cfg, dataFIC_LP);
+    timelockFC     = ft_timelockanalysis(cfg, dataFC_LP);
 
 ### Permutation test
 
@@ -107,36 +107,35 @@ Cluster-level permutation tests for event-related fields are performed by the fu
 
 Some fields of the configuration (cfg), such as channel and latency, are not specific for **[ft_timelockstatistics](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockstatistics.m)**; their role is similar in other FieldTrip functions. We first concentrate on the fields that are specific for **[ft_timelockstatistics](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockstatistics.m)**.
 
-    cfg = [];
-    cfg.method = 'montecarlo';       % use the Monte Carlo Method to calculate the significance probability
-    cfg.statistic = 'ft_statfun_indepsamplesT'; % use the independent samples T-statistic as a measure to
-                                   % evaluate the effect at the sample level
-    cfg.correctm = 'cluster';
-    cfg.clusteralpha = 0.05;         % alpha level of the sample-specific test statistic that
-                                   % will be used for thresholding
-    cfg.clusterstatistic = 'maxsum'; % test statistic that will be evaluated under the
-                                   % permutation distribution.
-    cfg.minnbchan = 2;               % minimum number of neighborhood channels that is
-                                   % required for a selected sample to be included
-                                   % in the clustering algorithm (default=0).
-    % cfg.neighbours = neighbours;   % see below
-    cfg.tail = 0;                    % -1, 1 or 0 (default = 0); one-sided or two-sided test
-    cfg.clustertail = 0;
-    cfg.alpha = 0.025;               % alpha level of the permutation test
-    cfg.numrandomization = 100;      % number of draws from the permutation distribution
+    cfg                  = [];
+    cfg.method           = 'montecarlo'; % use the Monte Carlo Method to calculate the significance probability
+    cfg.statistic        = 'indepsamplesT'; % use the independent samples T-statistic as a measure to
+                                       % evaluate the effect at the sample level
+    cfg.correctm         = 'cluster';
+    cfg.clusteralpha     = 0.05;       % alpha level of the sample-specific test statistic that
+                                       % will be used for thresholding
+    cfg.clusterstatistic = 'maxsum';   % test statistic that will be evaluated under the
+                                       % permutation distribution.
+    cfg.minnbchan        = 2;          % minimum number of neighborhood channels that is
+                                       % required for a selected sample to be included
+                                       % in the clustering algorithm (default=0).
+    % cfg.neighbours     = neighbours; % see below
+    cfg.tail             = 0;          % -1, 1 or 0 (default = 0); one-sided or two-sided test
+    cfg.clustertail      = 0;
+    cfg.alpha            = 0.025;      % alpha level of the permutation test
+    cfg.numrandomization = 100;        % number of draws from the permutation distribution
 
-    design = zeros(1,size(timelockFIC.trial,1) + size(timelockFC.trial,1));
-    design(1,1:size(timelockFIC.trial,1)) = 1;
-    design(1,(size(timelockFIC.trial,1)+1):(size(timelockFIC.trial,1) + size(timelockFC.trial,1)))= 2;
-
-    cfg.design = design;             % design matrix
-    cfg.ivar  = 1;                   % number or list with indices indicating the independent variable(s)
+    n_fc  = size(timelockFC.trial, 1);
+    n_fic = size(timelockFIC.trial, 1); 
+    
+    cfg.design           = [ones(1,n_fc), ones(1,n_fic)*2]; % design matrix
+    cfg.ivar             = 1; % number or list with indices indicating the independent variable(s)
 
 We now describe these options one-by-one.
 
 - With **cfg.method** = 'montecarlo' we choose the Monte Carlo method for calculating the significance probability. This significance probability is a Monte Carlo estimate of the p-value under the permutation distribution.
 
-- With **cfg.statistic** = 'ft_statfun_indepsamplesT', we choose the independent samples T-statistic to evaluate the effect (the difference between the fully congruent and the fully incongruent condition) at the sample level. In cfg.statistic, many other test statistics can be specified. Which test statistic is appropriate depends on your research question and your experimental design. For instance, in a within-UO design, one must use the dependent samples T-statistic ('ft_statfun_depsamplesT'). And if you want to compare more than two experimental conditions, you should choose an F-statistic ('ft_statfun_indepsamplesF' or 'ft_statfun_depsamplesFmultivariate').
+- With **cfg.statistic** = 'indepsamplesT', we choose the independent samples T-statistic to evaluate the effect (the difference between the fully congruent and the fully incongruent condition) at the sample level. In cfg.statistic, many other test statistics can be specified. Which test statistic is appropriate depends on your research question and your experimental design. For instance, in a within-UO design, one must use the dependent samples T-statistic ('ft_statfun_depsamplesT'). And if you want to compare more than two experimental conditions, you should choose an F-statistic ('ft_statfun_indepsamplesF' or 'ft_statfun_depsamplesFmultivariate'). The 'ft_statfun' can be omitted in the specification of cfg.statistic, FieldTrip will look for functions on the MATLAB that are named 'ft_statfun_<cfg.statistic>' automatically, but it's also OK to specify the full filename, i.e. 'ft_statfun_indepsamplesT'. Also, you can write your own 'statfun' with another test-statistic that you deem relevant.
 
 - We use **cfg.clusteralpha** to choose the critical value that will be used for thresholding the sample-specific T-statistics. With cfg.clusteralpha = 0.05, every sample-specific T-statistic is compared with the critical value of the univariate T-test with a critical alpha-level of 0.05. (This statistical test would have been the most appropriate test if we had observed a single channel at a single time-point.) The value of cfg.clusteralpha does not affect the false alarm rate of the statistical test at the cluster-level. It is a rational threshold for deciding whether a sample should be considered a member of some large cluster of samples (which may or may not be significant at the cluster-level).
 
@@ -187,12 +186,12 @@ The output can also be obtained from [stat_ERF_axial_FICvsFC.mat](ftp://ftp.fiel
 
     load stat_ERF_axial_FICvsFC
 
-The output of **[ft_timelockstatistics](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockstatistics.m)** has separate fields for positive and negative clusters. For the positive clusters, the output is given in the following pair of fields: stat.posclusters and stat.posclusterslabelmat. The field **stat.posclusters** is an array that provides the following information for every cluste
+The output of **[ft_timelockstatistics](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockstatistics.m)** has separate fields for positive and negative clusters. For the positive clusters, the output is given in the following pair of fields: stat.posclusters and stat.posclusterslabelmat. The field **stat.posclusters** is an array that provides the following information for every cluster:
 
-- The field **clusterstat** contains the cluster-level statistic (the sum of the T-values in this cluster).
+- The field **clusterstat** contains the cluster-level test statistic (here: the sum of the T-values in this cluster).
 
-- The field **prob** contains the proportion of draws from the permutation distribution with a maximum cluster-level statistic that is larger than clusterstat.
-  The elements in the array stat.posclusters are sorted according to their p-value: the cluster with the smallest p-value comes first, followed by the cluster with the second-smallest, etc. Thus, if the k-th cluster has a p-value that is larger than the critical alpha-level (e.g., 0.025), then so does the (k+1)-th. Type stat.posclusters(k) on the MATLAB command line to see the information for the k-th cluster.
+- The field **prob** contains the proportion of draws from the permutation distribution with a maximum cluster-level statistic that is larger than the cluster-level test statistic.
+  The elements in the array stat.posclusters are sorted according to these probabilities: the cluster with the smallest p-value comes first, followed by the cluster with the second-smallest, etc. Thus, if the k-th cluster has a p-value that is larger than the critical alpha-level (e.g., 0.025), then so does the (k+1)-th. Type stat.posclusters(k) on the MATLAB command line to see the information for the k-th cluster. Note, however, that in fact for the statistical inferential decision (i.e. reject or not the null hypothesis), only the p-value of the largest cluster is relevant. Therefore, importantly, it is a bit silly to use the terminology 'significant clusters' in this context, by evaluating the cluster-associated p-values.  
 
 The field stat.posclusterslabelmat is a spatiotemporal matrix. This matrix contains numbers that identify the clusters to which the (channel,time)-pairs (the samples) belong. For example, all (channel,time)-pairs that belong to the third cluster, are identified by the number 3. As will be shown in the following, this information can be used to visualize the topography of the clusters.
 
@@ -214,53 +213,49 @@ And by typing stat.negclusters(1), you should obtain the following:
 
 It is possible that the p-values in your output are a little bit different from 0. This is because **[ft_timelockstatistics](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockstatistics.m)** calculated as a Monte Carlo approximation of the permutation p-values: the p-value for the k-th positive cluster is calculated as the proportion of random draws from the permutation distribution in which the maximum of the cluster-level statistics is larger than stat.posclusters(k).clusterstat.
 
-### Plotting the results
+### Plotting of the results
 
-To plot the results of the permutation test, we use the plotting function **[ft_topoplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_topoplotER.m)**. In doing so, we will plot a topography of the difference between the two experimental conditions (FIC and FC). Atop that, and for each timestep of interest, we will highlight the sensors which are members of significant clusters. First, however, we must calculate the difference between conditions using **[ft_math](https://github.com/fieldtrip/fieldtrip/blob/release/ft_math.m)**.
+To plot the results of the permutation test, we use the plotting function **[ft_topoplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_topoplotER.m)**. In doing so, we will plot a topography of the difference between the two experimental conditions (FIC and FC). On top of that, and for each timestep of interest, we will highlight the sensors which are members of significant clusters. First, however, we must calculate the difference between conditions using **[ft_math](https://github.com/fieldtrip/fieldtrip/blob/release/ft_math.m)**.
 
-    cfg = [];
+    cfg    = [];
     avgFIC = ft_timelockanalysis(cfg, dataFIC_LP);
-    avgFC = ft_timelockanalysis(cfg, dataFC_LP);
+    avgFC  = ft_timelockanalysis(cfg, dataFC_LP);
 
     % Then take the difference of the averages using ft_math
-    cfg  = [];
+    cfg           = [];
     cfg.operation = 'subtract';
     cfg.parameter = 'avg';
     raweffectFICvsFC = ft_math(cfg, avgFIC, avgFC);
 
-We then construct a boolean matrix indicating membership in the significant clusters. This matrix has size [Number_of_MEG_channels x Number_of_temporal_samples], like stat.posclusterslabelmat. We'll make two such matrices: one for positive clusters (named pos), and one for negative (neg). All (channel,time)-pairs belonging to the significant clusters will be coded in the new boolean matrix as 1, and all those that don't will be coded as 0.
+We then construct a boolean matrix indicating whether a channel/time point belongs to a cluster that we deem interesting to inspect. This matrix has size [Number_of_MEG_channels x Number_of_time_samples], like stat.posclusterslabelmat. We'll make two such matrices: one for positive clusters (named pos), and one for negative (neg). All (channel,time)-pairs belonging to the large clusters whose probability of occurrence is sufficiently low in relation to the associated randomization distribution of clusterstats will be coded in the new boolean matrix as 1, and all those that don't will be coded as 0.
 
-In plotting significant clusters, we must of course first determine which clusters are reliable.
 % Make a vector of all p-values associated with the clusters from ft_timelockstatistics.
 
     pos_cluster_pvals = [stat.posclusters(:).prob];
 
-    % Then, find which clusters are significant, outputting their indices as held in stat.posclusters
-    % In case you have downloaded and loaded the data, ensure stat.cfg.alpha exist
-    if ~isfield(stat.cfg,'alpha'); stat.cfg.alpha = 0.025; end; % stat.cfg.alpha was moved as the downloaded data was processed by an additional FieldTrip function to anonymize the data.
-
-    pos_signif_clust = find(pos_cluster_pvals < stat.cfg.alpha);
-    % (stat.cfg.alpha is the alpha level we specified earlier for cluster comparisons; In this case, 0.025)
-    % make a boolean matrix of which (channel,time)-pairs are part of a significant cluster
-    pos = ismember(stat.posclusterslabelmat, pos_signif_clust);
+    % Then, find which clusters are deemed interesting to visualize, here we use a cutoff criterion based on the
+    % cluster-associated p-value, and take a 5% two-sided cutoff (i.e. 0.025 for the positive and negative clusters,
+    % respectively
+    pos_clust = find(pos_cluster_pvals < 0.025);
+    pos       = ismember(stat.posclusterslabelmat, pos_clust);
 
     % and now for the negative clusters...
     neg_cluster_pvals = [stat.negclusters(:).prob];
-    neg_signif_clust = find(neg_cluster_pvals < stat.cfg.alpha);
-    neg = ismember(stat.negclusterslabelmat, neg_signif_clust);
+    neg_clust         = find(neg_cluster_pvals < 0.025);
+    neg               = ismember(stat.negclusterslabelmat, neg_clust);
 
 Alternatively, we can manually select which clusters we want to plot. If we only want to see the extext of the first (i.e. most significant) positive and negative clusters, for instance, we can do so as follows:
 
     pos = stat.posclusterslabelmat == 1; % or == 2, or 3, etc.
-      neg = stat.negclusterslabelmat == 1;
+    neg = stat.negclusterslabelmat == 1;
 
 To plot a sequence of twenty topographic plots equally spaced between 0 and 1 second, we define the vector j of time steps. These time intervals correspond to the samples m in stat and in the variables pos and neg. m and j must, therefore, have the same length.
 
 To be sure that your sample-based time windows align with your time windows in seconds, check the following:
 
-    timestep = 0.05; % timestep between time windows for each subplot (in seconds)
+    timestep      = 0.05; % timestep between time windows for each subplot (in seconds)
     sampling_rate = dataFC_LP.fsample; % Data has a temporal resolution of 300 Hz
-    sample_count = length(stat.time);
+    sample_count  = length(stat.time);
     % number of temporal samples in the statistics object
     j = [0:timestep:1]; % Temporal endpoints (in seconds) of the ERP average computed in each subplot
     m = [1:timestep*sampling_rate:sample_count]; % temporal endpoints in M/EEG samples
@@ -274,25 +269,25 @@ To plot the data use the following for-loop:
     for k = 1:20;
        subplot(4,5,k);
        cfg = [];
-       cfg.xlim=[j(k) j(k+1)];   % time interval of the subplot
+       cfg.xlim = [j(k) j(k+1)];   % time interval of the subplot
        cfg.zlim = [-2.5e-13 2.5e-13];
-       % If a channel reaches this significance, then
+       % If a channel is in a to-be-plotted cluster, then
        % the element of pos_int with an index equal to that channel
        % number will be set to 1 (otherwise 0).
 
-       % Next, check which channels are significant over the
+       % Next, check which channels are in the clusters over the
        % entire time interval of interest.
        pos_int = zeros(numel(raweffectFICvsFC.label),1);
        neg_int = zeros(numel(raweffectFICvsFC.label),1);
        pos_int(i1) = all(pos(i2, m(k):m(k+1)), 2);
        neg_int(i1) = all(neg(i2, m(k):m(k+1)), 2);
 
-       cfg.highlight = 'on';
-       % Get the index of each significant channel
+       cfg.highlight   = 'on';
+       % Get the index of the to-be-highlighted channel
        cfg.highlightchannel = find(pos_int | neg_int);
-       cfg.comment = 'xlim';
-       cfg.commentpos = 'title';
-       cfg.layout = 'CTF151_helmet.mat';
+       cfg.comment     = 'xlim';
+       cfg.commentpos  = 'title';
+       cfg.layout      = 'CTF151_helmet.mat';
        cfg.interactive = 'no';
        ft_topoplotER(cfg, raweffectFICvsFC);
     end
@@ -321,19 +316,19 @@ To perform the permutation test using synthetic planar gradient data, the data m
 
 Having calculated synthetic planar gradient data, one can use the same configuration parameters as used for the analysis of the original data.
 
-    cfg = [];
-    cfg.channel = {'MEG'};
-    cfg.latency = [0 1];
-    cfg.neighbours = neighbours;
-    cfg.method = 'montecarlo';
-    cfg.statistic = 'indepsamplesT';
-    cfg.correctm = 'cluster';
-    cfg.clusteralpha = 0.05;
+    cfg                  = [];
+    cfg.channel          = {'MEG'};
+    cfg.latency          = [0 1];
+    cfg.neighbours       = neighbours;
+    cfg.method           = 'montecarlo';
+    cfg.statistic        = 'indepsamplesT';
+    cfg.correctm         = 'cluster';
+    cfg.clusteralpha     = 0.05;
     cfg.clusterstatistic = 'maxsum';
-    cfg.minnbchan = 2;
-    cfg.tail = 0;
-    cfg.clustertail = 0;
-    cfg.alpha = 0.025;
+    cfg.minnbchan        = 2;
+    cfg.tail             = 0;
+    cfg.clustertail      = 0;
+    cfg.alpha            = 0.025;
     cfg.numrandomization = 100;
 
     design = zeros(1,size(timelockFIC_planar_cmb.trial,1) + size(timelockFC_planar_cmb.trial,1));
@@ -355,34 +350,30 @@ We now calculate the raw effect in the average with planar gradient data using t
 
     cfg = [];
     cfg.keeptrials = 'no';   % now only the average, not the single trials
-    avgFIC_planar = ft_timelockanalysis(cfg, timelockFIC_planar);
-    avgFC_planar  = ft_timelockanalysis(cfg, timelockFC_planar);
+    avgFIC_planar  = ft_timelockanalysis(cfg, timelockFIC_planar);
+    avgFC_planar   = ft_timelockanalysis(cfg, timelockFC_planar);
     cfg = [];
     avgFIC_planar_cmb = ft_combineplanar(cfg, avgFIC_planar);
     avgFC_planar_cmb  = ft_combineplanar(cfg, avgFC_planar);
 
     % subtract avgFC from avgFIC
     cfg = [];
-    cfg.operation = 'subtract'
-    cfg.parameter = 'avg';
-    raweffectFICvsFC     = ft_math(cfg, avgFIC_planar_cmb, avgFC_planar_cmb);
+    cfg.operation    = 'subtract'
+    cfg.parameter    = 'avg';
+    raweffectFICvsFC = ft_math(cfg, avgFIC_planar_cmb, avgFC_planar_cmb);
 
 Using the following configuration for **[ft_topoplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_topoplotER.m)** we can plot the raw effect and highlight the channels contributing to the largest cluster
 
     figure;
-    timestep = 0.05; %(in seconds)
+    timestep      = 0.05; %(in seconds)
     sampling_rate = dataFC_LP.fsample;
-    sample_count = length(stat.time);
+    sample_count  = length(stat.time);
     j = [0:timestep:1]; % Temporal endpoints (in seconds) of the ERP average computed in each subplot
     m = [1:timestep*sampling_rate:sample_count]; % temporal endpoints in M/EEG samples
 
     pos_cluster_pvals = [stat.posclusters(:).prob];
-
-    % In case you have downloaded and loaded the data, ensure stat.cfg.alpha exist
-    if ~isfield(stat.cfg,'alpha'); stat.cfg.alpha = 0.025; end; % stat.cfg.alpha was moved as the downloaded data was processed by an additional FieldTrip function to anonymize the data.
-
-    pos_signif_clust = find(pos_cluster_pvals < stat.cfg.alpha);
-    pos = ismember(stat.posclusterslabelmat, pos_signif_clust);
+    pos_clust         = find(pos_cluster_pvals < 0.025);
+    pos               = ismember(stat.posclusterslabelmat, pos_clust);
 
     % Remember to do the same for negative clusters if you want them!
 
@@ -407,7 +398,7 @@ Using the following configuration for **[ft_topoplotER](https://github.com/field
 
 {% include image src="/assets/img/tutorial/cluster_permutation_timelock/clusperm_erf_topos_raweffect_ficvsfc_pl_subj1_new.png" width="700" %}
 
-_Figure 5: Raw effect (FIC-FC) on the planar gradient ERFs of subject 1, the significant clusters are highlighted.._
+_Figure 5: Raw effect (FIC-FC) on the planar gradient ERFs of subject 1, the most prominent clusters are highlighted.._
 
 ## Within-subjects experiments
 
@@ -435,36 +426,30 @@ We now perform the permutation test using **[ft_timelockstatistics](https://gith
 
 The configuration looks as follows:
 
-    cfg = [];
+    cfg         = [];
     cfg.channel = {'MEG'};
     cfg.latency = [0 1];
 
-    cfg.method = 'montecarlo';
-    cfg.statistic = 'depsamplesT';
-    cfg.correctm = 'cluster';
-    cfg.clusteralpha = 0.05;
+    cfg.method           = 'montecarlo';
+    cfg.statistic        = 'depsamplesT';
+    cfg.correctm         = 'cluster';
+    cfg.clusteralpha     = 0.05;
     cfg.clusterstatistic = 'maxsum';
-    cfg.minnbchan = 2;
-    cfg.neighbours = neighbours;  % same as defined for the between-trials experiment
-    cfg.tail = 0;
-    cfg.clustertail = 0;
-    cfg.alpha = 0.025;
+    cfg.minnbchan        = 2;
+    cfg.neighbours       = neighbours;  % same as defined for the between-trials experiment
+    cfg.tail             = 0;
+    cfg.clustertail      = 0;
+    cfg.alpha            = 0.025;
     cfg.numrandomization = 500;
 
-    subj = 10;
-    design = zeros(2,2*subj);
-    for i = 1:subj
-    design(1,i) = i;
-    end
-    for i = 1:subj
-    design(1,subj+i) = i;
-    end
-    design(2,1:subj)        = 1;
-    design(2,subj+1:2*subj) = 2;
-
+    Nsubj  = 10;
+    design = zeros(2, Nsubj*2);
+    design(1,:) = [1:Nsubj 1:Nsubj];
+    design(2,:) = [ones(1,Nsubj) ones(1,Nsubj*2];
+    
     cfg.design = design;
-    cfg.uvar  = 1;
-    cfg.ivar  = 2;
+    cfg.uvar   = 1;
+    cfg.ivar   = 2;
 
 We now describe the differences between this configuration and the configuration for a between-trials experiment.
 
@@ -506,23 +491,20 @@ With the output, we can now create the plots
     cfg = [];
     cfg.operation = 'subtract';
     cfg.parameter = 'avg';
-    GA_FICvsFC = ft_math(cfg, GA_FIC, GA_FC);
+    GA_FICvsFC    = ft_math(cfg, GA_FIC, GA_FC);
 
     figure;
     % define parameters for plotting
-    timestep = 0.05;      %(in seconds)
+    timestep      = 0.05; %(in seconds)
     sampling_rate = dataFIC_LP.fsample;
     sample_count  = length(stat.time);
     j = [0:timestep:1];   % Temporal endpoints (in seconds) of the ERP average computed in each subplot
     m = [1:timestep*sampling_rate:sample_count];  % temporal endpoints in M/EEG samples
-    % get relevant (significant) values
+    
+    % get relevant values
     pos_cluster_pvals = [stat.posclusters(:).prob];
-
-    % In case you have downloaded and loaded the data, ensure stat.cfg.alpha exist
-    if ~isfield(stat.cfg,'alpha'); stat.cfg.alpha = 0.025; end; % stat.cfg.alpha was moved as the downloaded data was processed by an additional FieldTrip function to anonymize the data.
-
-    pos_signif_clust = find(pos_cluster_pvals < stat.cfg.alpha);
-    pos = ismember(stat.posclusterslabelmat, pos_signif_clust);
+    pos_clust = find(pos_cluster_pvals < 0.025);
+    pos       = ismember(stat.posclusterslabelmat, pos_clust);
 
     % First ensure the channels to have the same order in the average and in the statistical output.
     % This might not be the case, because ft_math might shuffle the order
@@ -531,22 +513,22 @@ With the output, we can now create the plots
     % plot
     for k = 1:20;
        subplot(4,5,k);
-       cfg = [];
-       cfg.xlim=[j(k) j(k+1)];
-       cfg.zlim = [-5e-14 5e-14];
-       pos_int = zeros(numel(GA_FICvsFC.label),1);
-       pos_int(i1) = all(pos(i2, m(k):m(k+1)), 2);
-       cfg.highlight = 'on';
+       cfg            = [];
+       cfg.xlim       = [j(k) j(k+1)];
+       cfg.zlim       = [-5e-14 5e-14];
+       pos_int        = zeros(numel(GA_FICvsFC.label),1);
+       pos_int(i1)    = all(pos(i2, m(k):m(k+1)), 2);
+       cfg.highlight  = 'on';
        cfg.highlightchannel = find(pos_int);
-       cfg.comment = 'xlim';
+       cfg.comment    = 'xlim';
        cfg.commentpos = 'title';
-       cfg.layout = 'CTF151_helmet.mat';
+       cfg.layout     = 'CTF151_helmet.mat';
        ft_topoplotER(cfg, GA_FICvsFC);
     end
 
 {% include image src="/assets/img/tutorial/cluster_permutation_timelock/clusperm_erf_topos_raweffect_ficvsfc_pl_ga_new.png" width="600" %}
 
-_Figure 6: Raw effect (FIC-FC) on the grand average planar gradient ERFs the significant cluster is highlighted._
+_Figure 6: Raw effect (FIC-FC) on the grand average planar gradient ERFs with the prominent clusters highlighted._
 
 ## Summary and suggested further readings
 
