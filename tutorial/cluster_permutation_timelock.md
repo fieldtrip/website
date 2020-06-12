@@ -336,14 +336,12 @@ Having calculated synthetic planar gradient data, one can use the same configura
     cfg.alpha            = 0.025;
     cfg.numrandomization = 100;
 
-    design = zeros(1,size(timelockFIC_planar_cmb.trial,1) + size(timelockFC_planar_cmb.trial,1));
-    design(1,1:size(timelockFIC_planar_cmb.trial,1)) = 1;
-    design(1,(size(timelockFIC_planar_cmb.trial,1)+1):(size(timelockFIC_planar_cmb.trial,1) + size(timelockFC_planar_cmb.trial,1)))= 2;
+    n_fc  = size(timelockFC_planar_cmb.trial, 1);
+    n_fic = size(timelockFIC_planar_cmb.trial, 1);
 
-    cfg.design = design;
-    cfg.ivar = 1;
-
-    [stat] = ft_timelockstatistics(cfg, timelockFIC_planar_cmb, timelockFC_planar_cmb)
+    cfg.design           = [ones(1,n_fic), ones(1,n_fc)*2]; % design matrix
+    cfg.ivar             = 1; % number or list with indices indicating the independent variable(s)
+    [stat]               = ft_timelockstatistics(cfg, timelockFIC_planar_cmb, timelockFC_planar_cmb)
 
     save stat_ERF_planar_FICvsFC stat
 
@@ -450,7 +448,7 @@ The configuration looks as follows:
     Nsubj  = 10;
     design = zeros(2, Nsubj*2);
     design(1,:) = [1:Nsubj 1:Nsubj];
-    design(2,:) = [ones(1,Nsubj) ones(1,Nsubj*2];
+    design(2,:) = [ones(1,Nsubj) ones(1,Nsubj)*2];
     
     cfg.design = design;
     cfg.uvar   = 1;
