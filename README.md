@@ -7,6 +7,7 @@ Feel free to contribute by doing edits here and sending a pull request. See <htt
 ## Technical notes
 
 - The website is rebuilt after every pushed commit; this can take up to 5 minutes.
+- File names should not contain spaces or other special characters.
 - Pages that contain tags must have a title.
 - Tags should be in lower case.
 - All tags should appear on a single line.
