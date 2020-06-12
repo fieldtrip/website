@@ -128,7 +128,7 @@ Some fields of the configuration (cfg), such as channel and latency, are not spe
     n_fc  = size(timelockFC.trial, 1);
     n_fic = size(timelockFIC.trial, 1);
     
-    cfg.design           = [ones(1,n_fc), ones(1,n_fic)*2]; % design matrix
+    cfg.design           = [ones(1,n_fic), ones(1,n_fc)*2]; % design matrix
     cfg.ivar             = 1; % number or list with indices indicating the independent variable(s)
 
 We now describe these options one-by-one.
