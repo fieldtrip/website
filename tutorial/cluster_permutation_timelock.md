@@ -197,21 +197,26 @@ The field stat.posclusterslabelmat is a spatiotemporal matrix. This matrix conta
 
 For the negative clusters, the output is given in the following pair of fields: stat.negclusters and stat.negclusterslabelmat. These fields contain the same type of information as stat.posclusters and stat.posclusterslabelmat, but now for the negative clusters.
 
-By inspecting stat.posclusters and stat.negclusters, it can be seen that only the first positive and the first negative cluster have a p-value less than the critical alpha-level of 0.025. This critical alpha-level corresponds to a false alarm rate of 0.05 in a two-sided test. By typing stat.posclusters(1) on the MATLAB command line, you should obtain the following:
+By inspecting stat.posclusters and stat.negclusters, it can be seen that only the first positive and the first negative cluster have a p-value less than the critical alpha-level of 0.025. This critical alpha-level corresponds to a false alarm rate of 0.05 in a two-sided test. By typing stat.posclusters(1) on the MATLAB command line, you should obtain more or less the following:
 
     stat.posclusters(1)
     ans =
-           prob: 0
-    clusterstat: 8.2721e+03
+    
+               prob: 0.0099
+        clusterstat: 8.2721e+03
+             stddev: 0.0099
+            cirange: 0.0194
 
-And by typing stat.negclusters(1), you should obtain the following:
+And by typing stat.negclusters(1), you should obtain more or less the following:
 
     stat.negclusters(1)
     ans =
-           prob: 0
-    clusterstat: -1.0251e+04
+              prob: 0.0099
+       clusterstat: -1.0251e+04
+            stddev: 0.0099
+           cirange: 0.0194
 
-It is possible that the p-values in your output are a little bit different from 0. This is because **[ft_timelockstatistics](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockstatistics.m)** calculated as a Monte Carlo approximation of the permutation p-values: the p-value for the k-th positive cluster is calculated as the proportion of random draws from the permutation distribution in which the maximum of the cluster-level statistics is larger than stat.posclusters(k).clusterstat.
+It is possible that the p-values in your output are a little bit different from 0. This is because **[ft_timelockstatistics](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockstatistics.m)** calculated as a Monte Carlo approximation of the permutation p-values: the p-value for the k-th positive cluster is calculated as the proportion of random draws from the permutation distribution in which the maximum of the cluster-level statistics is larger than stat.posclusters(k).clusterstat. Also, given the Monte Carlo approximation, the probability values are not exact, and their confidence interval and standard deviation are given by the cirange, and stddev, respectively.
 
 ### Plotting of the results
 
