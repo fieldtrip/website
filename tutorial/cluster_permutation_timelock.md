@@ -77,7 +77,7 @@ For subsequent analysis we split the data into two different data structures, th
     dataFIC_LP = ft_redefinetrial(cfg, data_all);
 
     cfg = [];
-    cfg.trials = data_all.trialinfo == 5;
+    cfg.trials = data_all.trialinfo == 9;
     dataFC_LP = ft_redefinetrial(cfg, data_all);
 
 Subsequently you can save the data to disk.
@@ -126,7 +126,7 @@ Some fields of the configuration (cfg), such as channel and latency, are not spe
     cfg.numrandomization = 100;        % number of draws from the permutation distribution
 
     n_fc  = size(timelockFC.trial, 1);
-    n_fic = size(timelockFIC.trial, 1); 
+    n_fic = size(timelockFIC.trial, 1);
     
     cfg.design           = [ones(1,n_fc), ones(1,n_fic)*2]; % design matrix
     cfg.ivar             = 1; % number or list with indices indicating the independent variable(s)

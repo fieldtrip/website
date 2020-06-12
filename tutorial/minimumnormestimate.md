@@ -66,7 +66,7 @@ Otherwise run the following code:
     dataFIC_LP = ft_redefinetrial(cfg, data_all);
 
     cfg = [];
-    cfg.trials = data_all.trialinfo == 5;
+    cfg.trials = data_all.trialinfo == 9;
     dataFC_LP = ft_redefinetrial(cfg, data_all);
 
 Subsequently you can save the data to disk.
