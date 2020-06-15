@@ -78,7 +78,7 @@ For the sake of time efficiency, you can load the already segmented MRI that is 
 
     load segmentedmri
 
-Otherwise, the segmentation involves the following steps ((**[ft_volumesegment](https://github.com/fieldtrip/fieldtrip/blob/release/ft_volumesegment.m)** makes use of SPM. Note that you don't need a separate SPM installation, the required SPM-files are included in the FieldTrip release in the fieldtripXXX/external/spm8 directory)):
+Otherwise, the segmentation involves **[ft_volumesegment](https://github.com/fieldtrip/fieldtrip/blob/release/ft_volumesegment.m)** which makes use of SPM. Note that you don't need a separate SPM installation, the required SPM-files are included in the FieldTrip release in the fieldtripXXX/external/spm12 directory)):
 
     mri = ft_read_mri('subjectK.mri');
 

@@ -25,8 +25,8 @@ In the [Preprocessing and event-related activity](/workshop/natmeg/preprocessing
 
 ### Source model
 
-In this tutorial we will use the dipole fitting approach (1) to localise the neuronal activity and (2) to estimate the time course of the activity. This approach is most suitable for relatively early cortical activity which is not spread over many or large cortical areas. Dipole fitting assumes that a small number of point-like equivalent current dipoles (ECDs) can describe the measured topography. It optimises the location, the orientation and the amplitude of the model dipoles in order to minimise the difference between the model and measured topography. A good introduction to dipole fitting is provided by Scherg (1990) ((Source localization by fitting an equivalent current dipole model
-Scherg M. [Fundamentals of dipole source potential analysis](http://sputnik.ece.ucsb.edu/wcsl/courses/ECE594/594C_F10Madhow/dipole_model_scherg90.pdf). In: Auditory evoked magnetic fields and electric potentials. eds. F. Grandori, M. Hoke and G.L. Romani. Advances in Audiology, vol. 6. Karger, Basel, pp 40-69, 1990)).
+In this tutorial we will use the dipole fitting approach (1) to localise the neuronal activity and (2) to estimate the time course of the activity. This approach is most suitable for relatively early cortical activity which is not spread over many or large cortical areas. Dipole fitting assumes that a small number of point-like equivalent current dipoles (ECDs) can describe the measured topography. It optimises the location, the orientation and the amplitude of the model dipoles in order to minimise the difference between the model and measured topography. A good introduction to dipole fitting is provided by Scherg (Source localization by fitting an equivalent current dipole model
+Scherg M. [Fundamentals of dipole source potential analysis](http://sputnik.ece.ucsb.edu/wcsl/courses/ECE594/594C_F10Madhow/dipole_model_scherg90.pdf). In: Auditory evoked magnetic fields and electric potentials. eds. F. Grandori, M. Hoke and G.L. Romani. Advances in Audiology, vol. 6. Karger, Basel, pp 40-69, 1990).
 
 ### Volume conduction model
 

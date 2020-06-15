@@ -172,7 +172,7 @@ _Figure 5: Time-frequency representation of power using ft_multiplotTFR and the 
 
 _Figure 6: Time-frequency representation of power averaged across the electrodes highlighted in the previous figure. Note the initial evoked power in the low frequency range followed by induced depression of oscillatory power in the alpha frequency range._
 
-Typically, visual grating tasks reliably elicit sustained gamma band response ~60-80 Hz in both humans ((Hoogenboom N1, Schoffelen JM, Oostenveld R, Parkes LM, Fries P. (2006) Localizing human visual gamma-band activity in frequency, time and space. Neuroimage. 2006 Feb 1;29(3):764-73. Epub 2005 Oct 10.)) and non human primates ((Fries P, Scheeringa R, Oostenveld R. (2008) Finding Gamma. Neuron. 2008 May 8;58(3):303-5. doi: 10.1016/j.neuron.2008.04.020.)). The following lines will estimate oscillatory power in the higher frequencies > 40 Hz, baseline correct and plot the rusult.
+Typically, visual grating tasks reliably elicit sustained gamma band response ~60-80 Hz in both humans (Hoogenboom N1, Schoffelen JM, Oostenveld R, Parkes LM, Fries P. (2006) Localizing human visual gamma-band activity in frequency, time and space. Neuroimage. 2006 Feb 1;29(3):764-73. Epub 2005 Oct 10.) and non human primates (Fries P, Scheeringa R, Oostenveld R. (2008) Finding Gamma. Neuron. 2008 May 8;58(3):303-5. doi: 10.1016/j.neuron.2008.04.020.). The following lines will estimate oscillatory power in the higher frequencies > 40 Hz, baseline correct and plot the rusult.
 
     % estimate high frequency gamma
     cfg            = [];
