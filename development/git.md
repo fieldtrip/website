@@ -367,6 +367,7 @@ Below are some helpful resources for you to go beyond the basic recipe and becom
 -   As plain text <http://www-cs-students.stanford.edu/~blynn//gitmagic/ch01.html>
 -   Or more playful <https://learngitbranching.js.org/>
 -   Examples of different workflows <https://www.atlassian.com/git/tutorials/comparing-workflows>
+-   GIT Commands : Definitive Guide with examples <https://acompiler.com/git-commands/>
 
 ### Official git documentation
 
