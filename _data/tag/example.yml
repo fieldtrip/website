@@ -97,7 +97,7 @@
 - name:  Computing and reporting the effect size
   link:  /example/effectsize
 
-- name:  Performing multiscale entropy analysis on EEG/MEG/LFP data
+- name:  Performing modified Multiscale Entropy (mMSE) analysis on EEG/MEG/LFP data
   link:  /example/entropy_analysis
 
 - name:  Fit a dipole to the tactile ERF after mechanical stimulation
