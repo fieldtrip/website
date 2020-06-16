@@ -1,15 +1,15 @@
 ---
-title: Performing multiscale entropy analysis on EEG/MEG/LFP data 
+title: Performing modified Multiscale Entropy (mMSE) analysis on EEG/MEG/LFP data 
 tags: [example, entropy]
 ---
 
-# MSE - perform multiscale entropy analysis
+# MSE - perform modified Multiscale Entropy (mMSE) analysis
 
 Recently, we have developed a novel algorithm based on multiscale entropy (**[Costa et al. 2002](https://doi.org/10.1103/PhysRevLett.89.068102.m)**) called modified multiscale entropy (mMSE) that directly quantifies the temporal irregularity of time-domain EEG/MEG/LFP signals at longer and shorter timescales. In general, patterns of fluctuations in brain activity that tend to repeat over time are assigned lower entropy, whereas more irregular, non-repeating patterns yield higher entropy. To allow the investigation of dynamic changes in signal irregularity, we developed mMSE as a time-resolved variant, while also permitting assessment of entropy over atypically longer time scales by calculating across discontinuous, concatenated segments (**[Grandy et al.](https://doi.org/10.1038/srep23073.m)**) (see the figure below). 
 
 {% include image src="/assets/img/example/entropy_analysis/Figure2.png" %}
  
-Please see our preprints **[Kloosterman et al.](https://doi.org/10.1101/834614.m)** and **[Kosciessa et al.](https://doi.org/10.1101/752808.m)** for more information, and the tutorial folder on our Github page for a step-by-step explanation of the computation of multiscale entropy within our MATLAB function.
+Notably, mMSE is able to reveal brain-behavior links in EEG data that go undetected by conventional analysis methods such as spectral power, overall signal variation (SD), and event-related potentials (ERPs).  Please see our preprints **[Kloosterman et al.](https://doi.org/10.1101/834614.m)** and **[Kosciessa et al.](https://doi.org/10.1371/journal.pcbi.1007885)** for more information, and the tutorial folder on our Github page for a step-by-step explanation of the computation of mMSE within our fieldtrip MATLAB function.
 
 # Download and install the mMSE toolbox
 
@@ -23,15 +23,15 @@ or use the Download button on the GitHub page. The mMSE toolbox folder can be pl
 
 After this step, you can call **[ft_entropyanalysis](https://github.com/LNDG/mMSE/blob/master/ft_entropyanalysis.m.m)** as any other FieldTrip function.
 
-# Run multiscale entropy analysis on your data
+# Run mMSE analysis on your data
 
-**[ft_entropyanalysis](https://github.com/LNDG/mMSE/blob/master/ft_entropyanalysis.m.m)** takes as input preprocessed data as produced by **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)**. A few points are important to consider when preprocessing data for entropy analysis. First, it is advisable to apply a high-pass filter to your data to remove slow drifts. This is because entropy is computed by counting how often patterns reoccur in the time-domain data. To determine patterns, the data is first discretized by defining boundaries around each data point. These boundaries are set based on the standard deviation of the time-domain-signal. Slow drifts (e.g., due to electrode motion during the recording in EEG) will increase the standard deviation, thus loosening these boundaries, which in turn will result in more pattern matches and thus lower estimations of entropy (**[Kosciessa et al.](https://doi.org/10.1101/752808.m)**). We have previously used a standard high-pass Butterworth filter during preprocessing, with a cutoff of 0.5 Hz on the continuous data (prior to defining trials) with good results. 
+**[ft_entropyanalysis](https://github.com/LNDG/mMSE/blob/master/ft_entropyanalysis.m)** takes as input preprocessed data as produced by **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)**. A few points are important to consider when preprocessing data for entropy analysis. First, it is advisable to apply a high-pass filter to your data to remove slow drifts. This is because entropy is computed by counting how often patterns reoccur in the time-domain data. To determine patterns, the data is first discretized by defining boundaries around each data point. These boundaries are set based on the standard deviation of the time-domain-signal. Slow drifts (e.g., due to electrode motion during the recording in EEG) will increase the standard deviation, thus loosening these boundaries, which in turn will result in more pattern matches and thus lower estimations of entropy (**[Kosciessa et al.](https://doi.org/10.1371/journal.pcbi.1007885)**). We have previously used a standard high-pass Butterworth filter during preprocessing, with a cutoff of 0.5 Hz on the continuous data (prior to defining trials) with good results. 
 
 Second, entropy is often computed for shorter and longer time scales. Longer time scales are accessed by increasingly coarsening the data by either averaging neighbouring data points or point skipping after low-pass filtering. Therefore, the timescales you can access depend on the sampling rate of the data. Given that entropy analysis can become computationally  intensive with the high sampling rates and high number of channels typically used in E/MEG, we recommend downsampling to make the data easier to handle. In our example, we use a sampling rate of 256 Hz.
 
 A final point pertains to the boundaries that are set around each data point to count pattern matches (see figure above). By increasingly smoothing the time series, coarse-graining affects not only on the signal's entropy, but also its overall variation, as reflected in the decreasing standard deviation as a function of time scale (see **[Nikulin and Brismar, 2004](https://doi.org/10.1103/PhysRevLett.92.089803.m)**). In the original implementation of the MSE calculation, the similarity parameter `r` was set as a proportion of the original (scale 1) time series' standard deviation and applied to all the scales (**[Costa et al. 2002](https://doi.org/10.1103/PhysRevLett.89.068102.m)**). Because of the decreasing variation in the time series due to coarse graining, the similarity parameter therefore becomes increasingly tolerant at longer time scales, resulting in more similar patterns and decreased entropy. This decreasing entropy can be attributed both to changes in signal complexity, but also in overall variation. To overcome this limitation, we advise recomputing the similarity parameter for each timescale, thereby normalizing MSE with respect to changes in overall time series variation at each scale. This feature can be controlled using the `cfg.recompute_r` parameter, as explained below.
 
-To run entropy analysis on your preprocessed data, first define the configuration:
+To run mMSE analysis on your preprocessed data, first define the configuration:
 
 	cfg = [];
 	cfg.m                 = 2;                 % pattern length
@@ -78,14 +78,33 @@ The `mmse` struct is structurally comparable to a `freq` structure as obtained f
 
 If, after computing mMSE, you would like to use the FieldTrip functions for plotting, e.g. **[ft_multiplotTFR](https://github.com/fieldtrip/fieldtrip/blob/release/ft_multiplotTFR.m)** and computing statistics, i.e. **[ft_freqstatistics](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqstatistics.m)**, the easiest way is to place the mMSE output into a freq structure (see **[ft_datatype_freq](https://github.com/fieldtrip/fieldtrip/blob/release/utilities/ft_datatype_freq.m)**) so you can just plug the mMSE values into these functions.
 
+# Run standard MSE analysis on your data
+
+Finally, it is also possible to run standard MSE analysis with our function. Standard MSE is computed across the complete timeseries at once so it has no time dimension. Furthermore, data is coarsened by averaging adjacent samples (point averaging). Finally, the r parameter is computed only once, instead of recomputed for each timescale. Please see the original MSE paper for details (**[Costa et al. 2002](https://doi.org/10.1103/PhysRevLett.89.068102.m)**). 
+
+To run standard MSE analysis, define your cfg as follows:
+
+	cfg = [];
+	cfg.m                 = 2;                 		% pattern length
+	cfg.r                 = 0.5;               		% similarity parameter 
+	cfg.timwin            = data.time{1}(end)-data.time{1}(1);   % Assuming 1 trial with continuous data
+	cfg.toi               = median(data.time{1});   % middle time point 
+	cfg.timescales        = 1:42;              		% timescale list
+	cfg.recompute_r       = 'per_toi'; 				% use same similarity parameter across scales 
+	cfg.coarsegrainmethod = 'pointavg';       		% pointavg original implementation
+	cfg.mem_available     = 16e9;              		% memory available, in bytes
+	cfg.allowgpu          = true;              		% allow GPU computations, if available
+	[mse] = ft_entropyanalysis(cfg, data);
+ 
+
 Please contact us if you have questions (@neuro_klooster or kloosterman [at] mpib-berlin.mpg.de) or if you find bugs. You can also send us a Pull Request on the Github page.
 
 This work was contributed by Niels Kloosterman, Julian Kosciessa, Liliana Polyanska, and Douglas Garrett within the **[Lifespan Neural Dynamics Group]( https://github.com/LNDG.m)**.
 
 Please cite the following papers if you find the mMSE toolbox useful:
 
-Kloosterman NA, Kosciessa J, Lindenberger U, Fahrenfort J, Garrett DD (2019) Boosting Brain Signal Variability Underlies Liberal Shifts in Decision Bias. Biorxiv:834614. 
+Kloosterman NA, Kosciessa JQ, Lindenberger U, Fahrenfort JJ, Garrett DD. 2019. Boosting Brain Signal Variability Underlies Liberal Shifts in Decision Bias. Biorxiv 834614. doi:10.1101/834614
 
-Kosciessa JQ, Kloosterman NA, Garrett DD (2019) Standard multiscale entropy reflects spectral power at mismatched temporal scales: What's signal irregularity got to do with it? Biorxiv:752808. 
+Kosciessa JQ, Kloosterman NA, Garrett DD. 2020. Standard multiscale entropy reflects neural dynamics at mismatched temporal scales: What’s signal irregularity got to do with it? Plos Comput Biol 16:e1007885. doi:10.1371/journal.pcbi.1007885
 
-Grandy TH, Garrett DD, Schmiedek F, Werkle-Bergner M (2016) On the estimation of brain signal entropy from sparse neuroimaging data. Sci Rep 6:23073. 
+Grandy TH, Garrett DD, Schmiedek F, Werkle-Bergner M (2016) On the estimation of brain signal entropy from sparse neuroimaging data. Sci Rep 6:23073.
