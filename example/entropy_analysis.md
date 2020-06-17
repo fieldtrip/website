@@ -3,7 +3,7 @@ title: Performing modified Multiscale Entropy (mMSE) analysis on EEG/MEG/LFP dat
 tags: [example, entropy]
 ---
 
-# MSE - perform modified Multiscale Entropy (mMSE) analysis
+# Perform modified Multiscale Entropy (mMSE) analysis on EEG/MEG/LFP data 
 
 Recently, we have developed a novel algorithm based on multiscale entropy (**[Costa et al. 2002](https://doi.org/10.1103/PhysRevLett.89.068102.m)**) called modified multiscale entropy (mMSE) that directly quantifies the temporal irregularity of time-domain EEG/MEG/LFP signals at longer and shorter timescales. In general, patterns of fluctuations in brain activity that tend to repeat over time are assigned lower entropy, whereas more irregular, non-repeating patterns yield higher entropy. To allow the investigation of dynamic changes in signal irregularity, we developed mMSE as a time-resolved variant, while also permitting assessment of entropy over atypically longer time scales by calculating across discontinuous, concatenated segments (**[Grandy et al.](https://doi.org/10.1038/srep23073.m)**) (see the figure below). 
 
