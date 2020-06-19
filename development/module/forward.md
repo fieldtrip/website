@@ -2,8 +2,6 @@
 title: Forward computation of EEG/MEG source models
 ---
 
-{% include /shared/development/warning.md %}
-
 # Forward computation of EEG/MEG source models
 
 FieldTrip has a consistent set of low-level functions for forward computations of the EEG potential or MEG field. The spatial distribution of a known source in a volume conductor is called a leadfield.
