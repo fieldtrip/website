@@ -76,7 +76,6 @@ See also the [tutorials](/tutorial) and [frequently asked questions](/faq).
 
 ### Miscellaneous
 
-- [MSE - perform multiscale entropy analysis](/example/entropy_analysis)
 - [BIDS - the brain imaging data structure](/example/bids)
 - [Combining simultaneous recordings in BIDS](/example/bids_pom)
 - [Converting an example audio dataset for sharing in BIDS](/example/bids_audio)
@@ -88,8 +87,10 @@ See also the [tutorials](/tutorial) and [frequently asked questions](/faq).
 - [Converting an example video dataset for sharing in BIDS](/example/bids_video)
 - [Converting the combined MEG/fMRI MOUS dataset for sharing in BIDS](/example/bids_mous)
 - [Correlation analysis in fMRI data](/example/correlation_analysis_in_fmri_data)
+- [Creating a layout for plotting NIRS optodes and channels](/example/nirs_layout)
 - [Example analysis pipeline for Biosemi bdf data](/example/biosemi)
 - [Find the orientation of planar gradiometer channels](/example/planar_orientation)
 - [How to import data from MNE-Python and FreeSurfer](/example/import_mne)
 - [How to use ft_checkconfig](/example/checkconfig)
+- [Performing modified Multiscale Entropy (mMSE) analysis](/example/entropy_analysis)
 - [Writing simulated data to a CTF dataset](/example/writing_simulated_data_to_a_ctf_dataset)
