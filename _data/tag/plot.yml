@@ -4,6 +4,9 @@
 - name:  Check the quality of the anatomical coregistration
   link:  /example/coregistration_quality_control
 
+- name:  Creating a layout for plotting NIRS optodes and channels
+  link:  /example/nirs_layout
+
 - name:  Plotting the result of source reconstructing on a cortical mesh
   link:  /example/plotting_the_result_of_source_reconstructing_on_a_cortical_mesh
 
@@ -57,6 +60,9 @@
 
 - name:  Source reconstruction of event-related fields using minimum-norm estimation
   link:  /tutorial/minimumnormestimate
+
+- name:  Plotting data at the channel and source level
+  link:  /tutorial/plotting
 
 - name:  Sensor-level ERF, TFR and connectivity analyses
   link:  /tutorial/sensor_analysis

@@ -1,0 +1,6 @@
+- name:  Creating a layout for plotting NIRS optodes and channels
+  link:  /example/nirs_layout
+
+- name:  Plotting data at the channel and source level
+  link:  /tutorial/plotting
+

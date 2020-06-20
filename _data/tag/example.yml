@@ -154,6 +154,9 @@
 - name:  Interpolating data from the CTF151 to the CTF275 sensor array using megrealign
   link:  /example/megrealign
 
+- name:  Creating a layout for plotting NIRS optodes and channels
+  link:  /example/nirs_layout
+
 - name:  Simulate an oscillatory signal with phase resetting
   link:  /example/phase_reset
 
