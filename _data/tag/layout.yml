@@ -1,3 +1,6 @@
+- name:  Creating a layout for plotting NIRS optodes and channels
+  link:  /example/nirs_layout
+
 - name:  How are electrodes, magnetometers or gradiometers described?
   link:  /faq/how_are_electrodes_magnetometers_or_gradiometers_described
 
@@ -18,4 +21,7 @@
 
 - name:  Specifying the channel layout for plotting
   link:  /tutorial/layout
+
+- name:  Plotting data at the channel and source level
+  link:  /tutorial/plotting
 
