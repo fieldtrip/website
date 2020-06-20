@@ -1,6 +1,6 @@
 ---
 title: Visual artifact rejection
-tags: [fixme, tutorial, artifact, meg, raw, preprocessing, meg-language]
+tags: [tutorial, artifact, meg, raw, preprocessing, meg-language]
 ---
 
 # Visual artifact rejection

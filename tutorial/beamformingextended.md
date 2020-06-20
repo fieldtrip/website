@@ -260,8 +260,8 @@ Note that we will need all three data structures for beamforming later on, so ke
 
 Before computing the leadfields, we need to load again our source- and headmodels if they are not in memory anymore:
 
-    load hdm;
-    load sourcemodel;
+    load hdm
+    load sourcemodel
 
 Since we already verified that sensors, head- and sourcemodel align up, we can continue to computing the leadfield matrices by incorporating our just computed frequency data. Note that this step only uses the gradiometer definition and the identity of the channels present in the data, but not the actual data itself. Therefore the resulting leadfield can be used with any subsequent source analysis step that uses data from the same recording session.
 

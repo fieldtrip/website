@@ -1,6 +1,6 @@
 ---
 title: Automatic artifact rejection
-tags: [fixme, tutorial, artifact, meg, raw, preprocessing, meg-artifact]
+tags: [tutorial, artifact, meg, raw, preprocessing, meg-artifact]
 ---
 
 # Automatic artifact rejection
