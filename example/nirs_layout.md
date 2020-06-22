@@ -41,8 +41,8 @@ with the Neuromag system, this is not possible since two planar gradiometers are
 the same location. In that respect, the situation that we have with NIRS is a bit a
 combination of both. We have to consider both the transmitter (Tx) and the receiver
 (Rx) that play a role in the NIRS channel, but also that on one Tx-Rx pair two
-wavelengths are used, which allows the separation on oxi- and deoxihemoglobin.
-Consequently, we have to think about how we want to plot the oxi and deoxi channels
+wavelengths are used, which allows the separation on oxy- and deoxyhemoglobin.
+Consequently, we have to think about how we want to plot the oxy and deoxy channels
 in relation to each other. Furthermore, we migth also want to make a distinction in
 the graphical representation for regular (long) and for short channels.
 
@@ -186,9 +186,9 @@ Again you can plot the layout, probably you will have to do this repeatedly whil
 
 {% include image src="/assets/img/example/nirs_layout/figure3.png" width="400" %}
 
-### Make separate channels for the oxi and deoxihemoglobin (or wavelengths)
+### Make separate channels for the oxy- and deoxyhemoglobin (or wavelengths)
 
-We are still not ready, since we need to add separate channels for the optical densities (OD) for the two wavelengths, or after **[ft_nirs_transform_ODs](https://github.com/fieldtrip/fieldtrip/blob/release/external/artinis/ft_nirs_transform_ODs.m)** for the oxihemoglobin (O2Hb) and deoxihemoglobin (HHb).
+We are still not ready, since we need to add separate channels for the optical densities (OD) for the two wavelengths, or after **[ft_nirs_transform_ODs](https://github.com/fieldtrip/fieldtrip/blob/release/external/artinis/ft_nirs_transform_ODs.m)** for the oxyhemoglobin (O2Hb) and deoxyhemoglobin (HHb).
 
     figure
 
@@ -212,7 +212,7 @@ We are still not ready, since we need to add separate channels for the optical d
 
 {% include image src="/assets/img/example/nirs_layout/figure4.png" width="400" %}
 
-### Combine the oxi and deoxihemoglobin layouts
+### Combine the oxy- and deoxyhemoglobin layouts
 
 We can combine the two layouts in a single layout with **[ft_appendlayout](https://github.com/fieldtrip/fieldtrip/blob/release/ft_appendlayout.m)**.
 
@@ -227,7 +227,7 @@ We can combine the two layouts in a single layout with **[ft_appendlayout](https
 
 {% include image src="/assets/img/example/nirs_layout/figure5.png" width="400" %}
 
-It is also possible to plot the oxi and deoxi channel on top of each other, e.g.
+It is also possible to plot the oxy and deoxy channel on top of each other, e.g.
 using different line colors. For that you have to specify a distance of 0.
 
     cfg = [];
@@ -246,9 +246,9 @@ they are printed on top of each other.
 The same procedure can be used to make the layouts for the two different infrared
 wavelengths, and these can be combined side-by-side or overlapping as well.
 
-## Split the oxi and deoxihemoglobin into separate layouts
+## Split the oxy- and deoxyhemoglobin into separate layouts
 
-If you have a layout that already combines the oxi and deoxi channels in a
+If you have a layout that already combines the oxy and deoxy channels in a
 particular way (e.g. overlapping) and you want to change it (e.g. into
 side-by-side), you can use the following code to split the different channels again.
 
@@ -287,7 +287,7 @@ If you are starting with a structure sensor recording of the 3D optode positions
 in the tutorial on [localizing electrodes using a 3D-scanner](/tutorial/electrode/), then you
 can start by making a layout for only the Tx and Rx optodes, From that you can subsequently
 construct the channels (see above) from the pairwise optode combinations, and again construct
-the layout for the oxi and deoxihemoglobin.
+the layout for the oxy- and deoxyhemoglobin.
 
 ## Summary and further reading
 
