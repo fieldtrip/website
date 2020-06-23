@@ -2,9 +2,12 @@
 title: beamformer_pcc
 ---
 ```plaintext
- BEAMFORMER_PCC implements an experimental beamformer based on partial
- canonical correlations or coherences. Dipole locations that are outside
- the head will return a NaN value.
+ BEAMFORMER_PCC implements a linearly-constrained miminum variance  beamformer
+ that allows for post-hoc computation of canonical or partial coherence or
+ correlation. Moreover, if cortico-cortical interactions are computed, the
+ spatial filters are computed with a paired dipole as sourcemodel, thus
+ suppressing the distortive effect of correlated activity from the seed region.
+ Dipole locations that are outside the head will return a NaN value.
 
  Use as
    [dipout] = beamformer_pcc(dipin, grad, headmodel, dat, cov, ...)

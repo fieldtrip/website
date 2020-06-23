@@ -20,6 +20,7 @@ title: ft_read_spike
    'neuralynx_nts'
    'plexon_ddt'
    'plexon_nex'
+   'plexon_nex5'
    'plexon_plx'
    'neuroshare'
    'neurosim_spikes'

@@ -21,6 +21,7 @@ title: ft_read_event
    'tolerance'      tolerance in samples when merging Neuromag analogue trigger channels (default = 1, meaning that an shift of one sample in both directions is compensated for)
    'blocking'       wait for the selected number of events (default = 'no')
    'timeout'        amount of time in seconds to wait when blocking (default = 5)
+   'password'       password structure for encrypted data set (only for mayo_mef30 and mayo_mef21)
 
  This function returns an event structure with the following fields
    event.type      = string

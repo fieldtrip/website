@@ -3132,6 +3132,9 @@ A detailed description of each function is available in the [reference documenta
 **cfg.xrange** - [ft_volumereslice](/reference/ft_volumereslice)  
 
 
+**cfg.xscale** - [ft_appendlayout](/reference/ft_appendlayout)  
+
+
 ## Y 
 
 **cfg.ygrid** - [ft_dipolefitting](/reference/ft_dipolefitting), [ft_prepare_leadfield](/reference/ft_prepare_leadfield), [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel), [ft_sourceanalysis](/reference/ft_sourceanalysis)  
@@ -3141,6 +3144,9 @@ A detailed description of each function is available in the [reference documenta
 
 
 **cfg.yrange** - [ft_volumereslice](/reference/ft_volumereslice)  
+
+
+**cfg.yscale** - [ft_appendlayout](/reference/ft_appendlayout)  
 
 
 ## Z 

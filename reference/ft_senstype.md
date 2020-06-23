@@ -59,6 +59,7 @@ title: ft_senstype
    'eeg1010'
    'eeg1005'
    'ext1020'             in case it is a small subset of eeg1020, eeg1010 or eeg1005
+   'nex5'
 
  The optional input argument for the desired type can be any of the above, or any of
  the following generic classes of acquisition systems

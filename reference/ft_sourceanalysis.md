@@ -19,7 +19,7 @@ title: ft_sourceanalysis
    cfg.method     = 'lcmv'    linear constrained minimum variance beamformer
                     'sam'     synthetic aperture magnetometry
                     'dics'    dynamic imaging of coherent sources
-                    'pcc'     partial cannonical correlation/coherence
+                    'pcc'     partial canonical correlation/coherence
                     'mne'     minimum norm estimation
                     'rv'      scan residual variance with single dipole
                     'music'   multiple signal classification

@@ -17,6 +17,7 @@ title: ft_read_header
    'coordsys'       = string, 'head' or 'dewar' (default = 'head')
    'chantype'       = string or cell of strings, channel types to be read (NeuroOmega, BlackRock).
    'headerformat'   = name of a MATLAB function that takes the filename as input (default is automatic)
+   'password'       = password structure for encrypted data set (only for mayo_mef30 and mayo_mef21)
 
  This returns a header structure with the following elements
    hdr.Fs                  sampling frequency

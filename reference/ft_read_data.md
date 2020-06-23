@@ -25,6 +25,7 @@ title: ft_read_data
    'fallback'       can be empty or 'biosig' (default = [])
    'blocking'       wait for the selected number of events (default = 'no')
    'timeout'        amount of time in seconds to wait when blocking (default = 5)
+   'password'       password structure for encrypted data set (only for mayo_mef30 and mayo_mef21)
 
  This function returns a 2-D matrix of size Nchans*Nsamples for continuous
  data when begevent and endevent are specified, or a 3-D matrix of size

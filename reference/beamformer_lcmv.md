@@ -24,9 +24,6 @@ title: beamformer_lcmv
  and can additionally contain things like a precomputed filter.
 
  Additional options should be specified in key-value pairs and can be
-  'lambda'           = regularisation parameter
-  'kappa'            = parameter for covariance matrix inversion
-  'tol'              = parameter for covariance matrix inversion
   'powmethod'        = can be 'trace' or 'lambda1'
   'feedback'         = give ft_progress indication, can be 'text', 'gui' or 'none' (default)
   'fixedori'         = use fixed or free orientation,                   can be 'yes' or 'no'
@@ -37,12 +34,22 @@ title: beamformer_lcmv
   'keepmom'          = remember the estimated dipole moment timeseries, can be 'yes' or 'no'
   'keepcov'          = remember the estimated dipole covariance,        can be 'yes' or 'no'
   'kurtosis'         = compute the kurtosis of the dipole timeseries,   can be 'yes' or 'no'
-  'weightnorm'       = normalize the beamformer weights,                can be 'no', 'unitnoisegain' or 'nai'
+  'weightnorm'       = normalize the beamformer weights,                can be 'no', 'unitnoisegain', 'arraygain' or 'nai'
 
  These options influence the forward computation of the leadfield
-  'reducerank'       = reduce the leadfield rank, can be 'no' or a number (e.g. 2)
-  'normalize'        = normalize the leadfield
-  'normalizeparam'   = parameter for depth normalization (default = 0.5)
+   'reducerank'      = 'no', or number (default = 3 for EEG, 2 for MEG)
+   'backproject'     = 'yes' or 'no',  determines when reducerank is applied whether the 
+                        lower rank leadfield is projected back onto the original linear 
+                        subspace, or not (default = 'yes')
+   'normalize'       = 'yes' or 'no' (default = 'no')
+   'normalizeparam'  = depth normalization parameter (default = 0.5)
+   'weight'          = number or Nx1 vector, weight for each dipole position to compensate 
+                        for the size of the corresponding patch (default = 1)
+
+ These options influence the mathematical inversion of the covariance matrix
+  'lambda'           = regularisation parameter
+  'kappa'            = parameter for covariance matrix inversion
+  'tol'              = parameter for covariance matrix inversion
 
  If the dipole definition only specifies the dipole location, a rotating
  dipole (regional source) is assumed on each location. If a dipole moment
