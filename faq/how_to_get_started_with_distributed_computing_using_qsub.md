@@ -142,7 +142,7 @@ A complete batch of jobs can be dealt with in a similar manne
 
     jobidarray = {};
     for i=1:10
-    jobidarray{i} = qsubfeval(@myfunction, inputarg{i});
+      jobidarray{i} = qsubfeval(@myfunction, inputarg{i});
     end
     save jobidarray.mat jobidarray
     exit
@@ -151,13 +151,12 @@ A complete batch of jobs can be dealt with in a similar manne
     load jobidarray.mat
     outputarg = {};
     for i=1:10
-    outputarg{i} = qsubget(jobidarray{i});
+      outputarg{i} = qsubget(jobidarray{i});
     end
 
 Or with fewer lines of code using the standard [cellfun](http://www.mathworks.nl/help/matlab/ref/cellfun.html) function a
 
-    jobidarray = cellfun(@qsubfeval, repmat(@myfunction, size(inputarg)), inputarg, ...
-     'UniformOutput', false);
+    jobidarray = cellfun(@qsubfeval, repmat(@myfunction, size(inputarg)), inputarg, 'UniformOutput', false);
     save jobidarray.mat jobidarray
     exit
 
