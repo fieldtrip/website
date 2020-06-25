@@ -92,7 +92,6 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 ## Statistical analysis
 
 - [How NOT to interpret results from a cluster-based permutation test?](/faq/how_not_to_interpret_results_from_a_cluster-based_permutation_test)
-- [How can I define my own neighbourhood template?](/faq/how_can_i_define_my_own_neighbourhood_template)
 - [How can I define neighbouring sensors?](/faq/how_can_i_define_neighbouring_sensors)
 - [How can I determine the onset of an effect?](/faq/how_can_i_determine_the_onset_of_an_effect)
 - [How can I test an interaction effect using cluster-based permutation tests?](/faq/how_can_i_test_an_interaction_effect_using_cluster-based_permutation_tests)
