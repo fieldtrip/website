@@ -16,9 +16,6 @@
 - name:  Use simulated ERPs to explore cluster statistics
   link:  /example/use_simulated_erps_to_explore_cluster_statistics
 
-- name:  How can I define my own neighbourhood templates or updating an already existing template?
-  link:  /faq/how_can_i_define_my_own_neighbourhood_template
-
 - name:  How can I define neighbouring sensors?
   link:  /faq/how_can_i_define_neighbouring_sensors
 

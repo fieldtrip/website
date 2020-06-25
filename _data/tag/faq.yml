@@ -121,9 +121,6 @@
 - name:  How can I debug my analysis script if a FieldTrip function gives an error?
   link:  /faq/how_can_i_debug_my_analysis_script_if_a_fieldtrip_function_gives_an_error
 
-- name:  How can I define my own neighbourhood templates or updating an already existing template?
-  link:  /faq/how_can_i_define_my_own_neighbourhood_template
-
 - name:  How can I define neighbouring sensors?
   link:  /faq/how_can_i_define_neighbouring_sensors
 
