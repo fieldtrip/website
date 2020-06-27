@@ -33,6 +33,10 @@ You are invited to add your own tutorials, example scripts or answers to frequen
 
 You can contribute to this website by going to the corresponding [website repository](https://github.com/fieldtrip/website) on GitHub, editing or adding a page there and sending your suggestion as a "pull request". All contributions are reviewed by the maintainers. If you are not sure about the quality of your contribution, just submit it as pull request and we will check, improve and/or provide feedback if needed.
 
+You can also edit pages online in your browser: just go to the bottom of any page here on the website, click the "Edit this page on GitHub" link and click on the pencil symbo (see below). After making the change you have to commit the change and write a (very short) description of why you made it. Your change will be automatically sent as pull-request, reviewed by one of the maintainers and merged.
+
+{% include image src="/assets/img/development/contribute/edit-on-github.png" %}
+
 {% include markup/info %}
 When adding documentation, please consider the [documentation guidelines](/development/guideline/documentation) to keep it consistent with other documentation and to facilitate cross-linking.
 {% include markup/end %}
