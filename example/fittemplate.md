@@ -30,9 +30,9 @@ Note that the template head model contains three surfaces describing the three c
     template = 
       struct with fields:
 
-         bnd: [1×3 struct]
+         bnd: [1x3 struct]
         cond: [0.3300 0.0041 0.3300]
-         mat: [3000×3000 double]
+         mat: [3000x3000 double]
         type: 'dipoli'
         unit: 'mm'
 

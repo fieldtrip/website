@@ -73,13 +73,13 @@ The result looks like this
     >> layout
       struct with fields:
 
-            pos: [16×2 double]
-          label: {16×1 cell}
-          width: [16×1 double]
-         height: [16×1 double]
-           mask: {[5×2 double]  [7×2 double]  [0×2 double]}
-        outline: {[16×2 double]  [3×2 double]  [6×2 double]  [7×2 double]}
-            cfg: [1×1 struct]
+            pos: [16x2 double]
+          label: {16x1 cell}
+          width: [16x1 double]
+         height: [16x1 double]
+           mask: {[5x2 double]  [7x2 double]  [0x2 double]}
+        outline: {[16x2 double]  [3x2 double]  [6x2 double]  [7x2 double]}
+            cfg: [1x1 struct]
 
 We can use **[ft_plot_layout](https://github.com/fieldtrip/fieldtrip/blob/release/plotting/ft_plot_layout.m)** to make a figure. You can see that it also added a box for the comment and a box for the scale. These are optional, see **[ft_prepare_layout](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_layout.m)**.
 
