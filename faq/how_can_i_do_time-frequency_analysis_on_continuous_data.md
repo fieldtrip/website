@@ -14,7 +14,7 @@ However, you might be interested in changes in the power spectrum at a much long
 We start by reading the data as one long continuous segment. It may be useful at this stage to apply a high-pass filter to remove the slow drift from the data
 
     cfg = [];
-    cfg.dataset  = 'subj2.vhdr''
+    cfg.dataset  = 'subj2.vhdr'
     cfg.hpfilter = 'yes'
     cfg.hpfreq   = 1;
     data_continuous = ft_preprocessing(cfg)
@@ -28,7 +28,7 @@ Let us visually inspect the data
 Subsequently, we proceed by segmenting the data into "trials", i.e. data segments of constant length. If we were to concatenate all segments, we would again have the original data.
 
     cfg = [];
-    cfg.length  = 1;
+    cfg.length = 1;
     cfg.overlap = 0;
     data_segmented = ft_redefinetrial(cfg, data_continuous)
 
