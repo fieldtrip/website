@@ -174,7 +174,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [How to get started with peer distributed computing on my own desktop computer?](/faq/how_to_get_started_with_peer_distributed_computing_on_my_own_desktop_computer)
 - [What happens if a job fails to execute properly?](/faq/what_happens_if_a_job_fails_to_execute_properly)
 - [What happens with a job that has an error on the worker?](/faq/what_happens_with_a_job_that_has_an_error_on_the_worker)
-- [Why are the peers using multicast to announce themselves?](/faq/why_are_the_peers_using_multicast_to_announce_themselves)\_\_\_
+- [Why are the peers using multicast to announce themselves?](/faq/why_are_the_peers_using_multicast_to_announce_themselves)
 - [Why does peercellfun resubmit jobs that take too long to get started?](/faq/why_does_peercellfun_resubmit_jobs_that_take_too_long_to_get_started)
 
 ## MATLAB questions
