@@ -1,11 +1,12 @@
 ---
-title: peerzombie
+title: peermaster
 ---
 ```plaintext
- PEERZOMBIE starts the low-level peer servicesand switches to zombie
- mode. As a zombie, the peer will not allow any job requests or job results
- to be written to it. It still announces itself to the other peers in the
- network and you can think of this as the "default" or "unspecified" mode.
+ PEERMASTER starts the low-level peer services and switches to master
+ mode. After switching to master mode, you can use submit jobs for
+ remote execution. The server will not accept jobs to be executed,
+ but does accept the output arguments of jobs that have been executed on
+ other peers. Note that peercellfun will automatically execute peermaster.
 
  Use as
    peermaster(...)
@@ -26,5 +27,5 @@ title: peerzombie
  to peers that it does not know. A slave will not accept jobs from a peer
  that it does not know.
 
- See also PEERMASTER, PEERSLAVE, PEERRESET
+ See also PEERSLAVE, PEERRESET
 ```
