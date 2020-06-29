@@ -28,11 +28,11 @@
 - name:  How can I set up the peer distributed computing on a small number of computers?
   link:  /faq/how_can_i_set_up_the_peer_distributed_computing_on_a_small_number_of_computers
 
-- name:  How can I stop the different threads created by peermaster and peerslave?
-  link:  /faq/how_can_i_stop_the_different_threads_created_by_peermaster_and_peerslave
+- name:  How can I stop the different threads created by peercontroller and peerworker?
+  link:  /faq/how_can_i_stop_the_different_threads_created_by_peercontroller_and_peerworker
 
-- name:  How can I use the command-line peerslave and optimize the MATLAB licenses?
-  link:  /faq/how_can_i_use_the_command-line_peerslave_and_optimize_the_matlab_licenses
+- name:  How can I use the command-line peerworker and optimize the MATLAB licenses?
+  link:  /faq/how_can_i_use_the_command-line_peerworker_and_optimize_the_matlab_licenses
 
 - name:  How do I avoid having to allocate N copies of my data if I want to execute N jobs?
   link:  /faq/how_do_i_avoid_having_to_allocate_n_copies_of_my_data_if_i_want_to_execute_n_jobs
@@ -55,8 +55,8 @@
 - name:  What happens if a peer distributed job fails to execute properly?
   link:  /faq/what_happens_if_a_job_fails_to_execute_properly
 
-- name:  What happens with a peer distributed job that has an error on the slave?
-  link:  /faq/what_happens_with_a_job_that_has_an_error_on_the_slave
+- name:  What happens with a peer distributed job that has an error on the worker?
+  link:  /faq/what_happens_with_a_job_that_has_an_error_on_the_worker
 
 - name:  Why are the peers using multicast to announce themselves?
   link:  /faq/why_are_the_peers_using_multicast_to_announce_themselves

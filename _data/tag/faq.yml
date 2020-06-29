@@ -199,8 +199,8 @@
 - name:  How can I set up the peer distributed computing on a small number of computers?
   link:  /faq/how_can_i_set_up_the_peer_distributed_computing_on_a_small_number_of_computers
 
-- name:  How can I stop the different threads created by peermaster and peerslave?
-  link:  /faq/how_can_i_stop_the_different_threads_created_by_peermaster_and_peerslave
+- name:  How can I stop the different threads created by peercontroller and peerworker?
+  link:  /faq/how_can_i_stop_the_different_threads_created_by_peercontroller_and_peerworker
 
 - name:  How to test an interaction effect using cluster-based permutation tests?
   link:  /faq/how_can_i_test_an_interaction_effect_using_cluster-based_permutation_tests
@@ -217,8 +217,8 @@
 - name:  How can I use my MacBook Pro for stimulus presentation in the MEG lab?
   link:  /faq/how_can_i_use_my_macbook_pro_for_stimulus_presentation_in_the_meg_lab
 
-- name:  How can I use the command-line peerslave and optimize the MATLAB licenses?
-  link:  /faq/how_can_i_use_the_command-line_peerslave_and_optimize_the_matlab_licenses
+- name:  How can I use the command-line peerworker and optimize the MATLAB licenses?
+  link:  /faq/how_can_i_use_the_command-line_peerworker_and_optimize_the_matlab_licenses
 
 - name:  How can I use the databrowser?
   link:  /faq/how_can_i_use_the_databrowser
@@ -442,8 +442,8 @@
 - name:  What happens if a peer distributed job fails to execute properly?
   link:  /faq/what_happens_if_a_job_fails_to_execute_properly
 
-- name:  What happens with a peer distributed job that has an error on the slave?
-  link:  /faq/what_happens_with_a_job_that_has_an_error_on_the_slave
+- name:  What happens with a peer distributed job that has an error on the worker?
+  link:  /faq/what_happens_with_a_job_that_has_an_error_on_the_worker
 
 - name:  What is the conductivity of the brain, CSF, skull and skin tissue?
   link:  /faq/what_is_the_conductivity_of_the_brain_csf_skull_and_skin_tissue
