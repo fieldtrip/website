@@ -9,6 +9,6 @@ When using [peercellfun](https://github.com/fieldtrip/fieldtrip/blob/release/pee
 
 One way to take care of this is by using input- and outputfiles. See the FAQ on [faq:how_can_i_combine_fieldtrip_with_peer_distributed_computing](/faq/how_can_i_combine_fieldtrip_with_peer_distributed_computing) for this approach.
 
-Another way to take care of this is by avoiding to use peercellfun, and instead relying on the lower-level [peerfeval](https://github.com/fieldtrip/fieldtrip/blob/release/peerfeval) and [peerget](https://github.com/fieldtrip/fieldtrip/blob/release/peerget). Peerfeval will submit a single job to an available peerslave, and return a job ID. Peerget should be provided with this job ID and will then retrieve the output of your job.
+Another way to take care of this is by avoiding to use peercellfun, and instead relying on the lower-level [peerfeval](https://github.com/fieldtrip/fieldtrip/blob/release/peerfeval) and [peerget](https://github.com/fieldtrip/fieldtrip/blob/release/peerget). Peerfeval will submit a single job to an available peerworker, and return a job ID. Peerget should be provided with this job ID and will then retrieve the output of your job.
 
 To use peerfeval and peerget properly, you will need to write some job-scheduling scaffolding code. Please refer to peercellfun's source code for an example of how to do this.

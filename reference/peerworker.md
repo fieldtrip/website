@@ -1,12 +1,12 @@
 ---
-title: peerslave
+title: peerworker
 ---
 ```plaintext
- PEERSLAVE starts the low-level peer services and switches to slave mode.
+ PEERWORKER starts the low-level peer services and switches to worker mode.
  Subsequently it will wait untill a job comes in and execute it.
 
  Use as
-   peerslave(...)
+   peerworker(...)
 
  Optional input arguments should be passed as key-value pairs. The
  following options are available to limit the peer network, i.e. to
@@ -20,12 +20,12 @@ title: peerslave
    refusehost   = {...}
  The allow options will prevent peers that do not match the requirements
  to be added to the (dynamic) list of known peers. Consequently, these
- options limit which peers know each other. A master will not send jobs
- to peers that it does not know. A slave will not accept jobs from a peer
+ options limit which peers know each other. A controller will not send jobs
+ to peers that it does not know. A worker will not accept jobs from a peer
  that it does not know.
 
  The following options are available to limit the number and duration
- of the jobs that the slave will execute.
+ of the jobs that the worker will execute.
    maxnum      = number (default = inf)
    maxtime     = number (default = inf)
    maxidle     = number (default = inf)
@@ -36,5 +36,5 @@ title: peerslave
    cpuavail    = number, speed of the CPU                 (default = inf)
    timavail    = number, maximum duration of a single job (default = inf)
 
- See also PEERMASTER, PEERRESET, PEERFEVAL, PEERCELLFUN
+ See also PEERCONTROLLER, PEERRESET, PEERFEVAL, PEERCELLFUN
 ```

@@ -77,14 +77,14 @@ The peer distributed computing toolbox has a number of mex files that are compil
 
     peercompile
 
-Furthermore, for the different Unix platforms there is a command-line peerslave client. Since we provide an executable for the different platforms, the executables need to have a different name. We are following the MathWorks naming scheme for the mex files, i.e.
+Furthermore, for the different Unix platforms there is a command-line peerworker client. Since we provide an executable for the different platforms, the executables need to have a different name. We are following the MathWorks naming scheme for the mex files, i.e.
 
-- peerslave.maci    (32-bit macOS)
-- peerslave.maci64  (64-bit macOS)
-- peerslave.glnx86  (32-bit Linux)
-- peerslave.glnxa64 (64-bit Linux)
+- peerworker.maci    (32-bit macOS)
+- peerworker.maci64  (64-bit macOS)
+- peerworker.glnx86  (32-bit Linux)
+- peerworker.glnxa64 (64-bit Linux)
 
-Compiling the peerslave command line executable is done on the Unix command line. However, since the compilation process involves linking the object files to the MATLAB engine library, the location where your copy of MATLAB is installed should be specified. Please edit the Makefile and change it so that the following settings are correct for your platform. Note that maci is used for 32-bit MATLAB and maci64 is used for 64-bit MATLAB.
+Compiling the peerworker command line executable is done on the Unix command line. However, since the compilation process involves linking the object files to the MATLAB engine library, the location where your copy of MATLAB is installed should be specified. Please edit the Makefile and change it so that the following settings are correct for your platform. Note that maci is used for 32-bit MATLAB and maci64 is used for 64-bit MATLAB.
 
 ```Makefile
 MATLABARCH = maci
@@ -100,7 +100,7 @@ cd peer/src
 make
 ```
 
-You should similarly modify MATLABARCH and MATLABPATH in `peer/peerslave`.
+You should similarly modify MATLABARCH and MATLABPATH in `peer/peerworker`.
 
 If you want to compile a 32-bit version on a 64-bit platform, e.g. if you are using an older 32-bit MATLAB version on a newer 64-bit operating system, you should also specify
 
