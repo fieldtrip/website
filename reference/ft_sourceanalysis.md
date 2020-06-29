@@ -77,12 +77,12 @@ title: ft_sourceanalysis
  the leadfields by reducing the rank (i.e. remove the weakest orientation), or by
  normalizing each column.
    cfg.reducerank      = 'no', or number (default = 3 for EEG, 2 for MEG)
-   cfg.backproject     = 'yes' or 'no',  determines when reducerank is applied whether the 
-                         lower rank leadfield is projected back onto the original linear 
+   cfg.backproject     = 'yes' or 'no',  determines when reducerank is applied whether the
+                         lower rank leadfield is projected back onto the original linear
                          subspace, or not (default = 'yes')
    cfg.normalize       = 'yes' or 'no' (default = 'no')
    cfg.normalizeparam  = depth normalization parameter (default = 0.5)
-   cfg.weight          = number or Nx1 vector, weight for each dipole position to compensate 
+   cfg.weight          = number or Nx1 vector, weight for each dipole position to compensate
                          for the size of the corresponding patch (default = 1)
 
  Other configuration options are

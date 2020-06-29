@@ -39,12 +39,12 @@ title: beamformer_dics
 
  These options influence the forward computation of the leadfield
    'reducerank'      = 'no', or number (default = 3 for EEG, 2 for MEG)
-   'backproject'     = 'yes' or 'no',  determines when reducerank is applied whether the 
-                        lower rank leadfield is projected back onto the original linear 
+   'backproject'     = 'yes' or 'no',  determines when reducerank is applied whether the
+                        lower rank leadfield is projected back onto the original linear
                         subspace, or not (default = 'yes')
    'normalize'       = 'yes' or 'no' (default = 'no')
    'normalizeparam'  = depth normalization parameter (default = 0.5)
-   'weight'          = number or Nx1 vector, weight for each dipole position to compensate 
+   'weight'          = number or Nx1 vector, weight for each dipole position to compensate
                         for the size of the corresponding patch (default = 1)
 
  These options influence the mathematical inversion of the cross-spectral density matrix
