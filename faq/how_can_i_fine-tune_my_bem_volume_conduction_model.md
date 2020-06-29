@@ -7,7 +7,7 @@ tags: [faq, source, headmodel]
 
 The construction of a BEM volume conduction model is not always straight forward, especially if the quality of the MRI is not optimal or if the model needs to be very accurate. For example, getting an accurate estimate of the thickness of the skull or incorporating the CSF layer is difficult.
 
-The strategy employed in FieldTrip for constructing the BEM model boils down to the manipulation of geometrical data. The following qualitatively different classes of data are distinguishe
+The strategy employed in FieldTrip for constructing the BEM model boils down to the manipulation of geometrical data. The following qualitatively different classes of data are distinguishes:
 
 - anatomical MRI, described as voxels in a regular 3-D lattice, grey values
 - segmented MRI, described as voxels in a regular 3-D lattice, boolean or probabilistic values
@@ -43,7 +43,7 @@ Inside **[ft_prepare_mesh](https://github.com/fieldtrip/fieldtrip/blob/release/f
 
 The MATLAB image processing toolbox includes a number of morphological operations that are very useful for manipulating binary segmentations. Some of the most common operators are imfill, imdilate, bwlabeln, etc.
 
-In particular imdilate can be used to augment the volume of a closed surface (e.g. the inner skull) in order to render the other surrounding tissues (e.g. the outer skull). An example is shown belo
+In particular imdilate can be used to augment the volume of a closed surface (e.g. the inner skull) in order to render the other surrounding tissues (e.g. the outer skull). An example is shown below:
 
 {% include image src="/assets/img/faq/how_can_i_fine-tune_my_bem_volume_conduction_model/wiki12.png" width="300" %}
 
@@ -83,7 +83,7 @@ The iso2mesh method uses the vol2surf function from the [iso2mesh](http://iso2me
 
 The [iso2mesh](http://iso2mesh.sourceforge.net) toolbox includes very useful functions for mesh manipulations.
 
-Also SPM includes functions for triangular mesh manipulatio
+Also SPM includes functions for triangular mesh manipulation:
 
 - spm_mesh_adjacency.m
 
@@ -109,4 +109,4 @@ Also SPM includes functions for triangular mesh manipulatio
 
 The **[ft_prepare_headmodel](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_headmodel.m)** function can take a single or the combination of multiple meshes as input and make a volume conduction model out of it. This construction of the volume conduction model can for example consist of fitting spheres to the mesh for a concentric sphere model, or the computation of a BEM system matrix.
 
-After constructing the volume conduction model of the head, FieldTrip can compute leadfields and estimate sources by solving the inverse problem. Please see the tutorial documentation elsewhere on this website for complete examples.
+After constructing the volume conduction model of the head, FieldTrip can compute leadfields and estimate sources by solving the inverse problem. Please see the [tutorial documentation](http://www.fieldtriptoolbox.org/tutorial/) for complete examples.
