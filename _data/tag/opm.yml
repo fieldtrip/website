@@ -1,6 +1,3 @@
-- name:  Development
-  link:  /development
-
 - name:  Contribute
   link:  /development/contribute
 
@@ -31,14 +28,17 @@
 - name:  Reporting issues
   link:  /development/issues
 
+- name:  Development
+  link:  /development
+
 - name:  Meetings
   link:  /development/meeting
 
-- name:  Modular organization of the source code
-  link:  /development/module
-
 - name:  Reading and writing of EEG/MEG time series data
   link:  /development/module/fileio
+
+- name:  Modular organization of the source code
+  link:  /development/module
 
 - name:  Plotting of channel-level, source-level and other geometrical data related to EEG/MEG
   link:  /development/module/plotting

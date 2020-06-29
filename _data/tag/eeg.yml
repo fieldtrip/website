@@ -169,14 +169,14 @@
 - name:  Beamforming evoked fields and potentials in combined MEG/EEG data
   link:  /workshop/aarhus/beamformingerf
 
-- name:  FieldTrip workshop in Madrid
-  link:  /workshop/madrid2019
-
 - name:  Convert the EEG sedation dataset for sharing in BIDS
   link:  /workshop/madrid2019/bids_sedation
 
 - name:  Details on the resting-state EEG dataset recorded with different sedation levels
   link:  /workshop/madrid2019/eeg_sedation
+
+- name:  FieldTrip workshop in Madrid
+  link:  /workshop/madrid2019
 
 - name:  Cleaning and processing resting-state EEG
   link:  /workshop/madrid2019/tutorial_cleaning
@@ -208,14 +208,14 @@
 - name:  Time-frequency analysis of combined MEG/EEG data
   link:  /workshop/natmeg/timefrequency
 
-- name:  FieldTrip workshop in Oslo
-  link:  /workshop/oslo2019
-
 - name:  Forward modeling for EEG source reconstruction
   link:  /workshop/oslo2019/forward_modeling
 
 - name:  Preprocessing and event-related potentials in EEG data
   link:  /workshop/oslo2019/introduction
+
+- name:  FieldTrip workshop in Oslo
+  link:  /workshop/oslo2019
 
 - name:  Statistical analysis and multiple comparison correction for EEG data
   link:  /workshop/oslo2019/statistics
