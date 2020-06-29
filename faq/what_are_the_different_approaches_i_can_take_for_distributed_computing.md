@@ -66,7 +66,7 @@ The syntax you would use to distribute jobs with the peer system is similar to [
     end
     rawdata = peercellfun(@ft_preprocessing, cfg);
 
-See **[peercellfun](https://github.com/fieldtrip/fieldtrip/blob/release/peercellfun.m)**, **[peerfeval](https://github.com/fieldtrip/fieldtrip/blob/release/peerfeval.m)** and **[peerget](https://github.com/fieldtrip/fieldtrip/blob/release/peerget.m)** for details.
+See **[peercellfun](https://github.com/fieldtrip/fieldtrip/blob/release/peer/peercellfun.m)**, **[peerfeval](https://github.com/fieldtrip/fieldtrip/blob/release/peer/peerfeval.m)** and **[peerget](https://github.com/fieldtrip/fieldtrip/blob/release/peer/peerget.m)** for details.
 
 ### FieldTrip engine toolbox
 

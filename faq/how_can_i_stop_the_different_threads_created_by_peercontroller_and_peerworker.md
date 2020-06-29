@@ -20,4 +20,4 @@ or alternatively
     peer('discover',    'stop')
     peer('expire',      'stop')
 
-Either way will stop the threads created by the peer mex file (which is started by **[peercontroller](https://github.com/fieldtrip/fieldtrip/blob/release/peercontroller.m)** and **[peerworker](https://github.com/fieldtrip/fieldtrip/blob/release/peerworker.m)**).
+Either way will stop the threads created by the peer mex file (which is started by **[peercontroller](https://github.com/fieldtrip/fieldtrip/blob/release/peer/peercontroller.m)** and **[peerworker](https://github.com/fieldtrip/fieldtrip/blob/release/peer/peerworker.m)**).
