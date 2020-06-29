@@ -7,7 +7,7 @@ tags: [faq, source, headmodel]
 
 The construction of a BEM volume conduction model is not always straight forward, especially if the quality of the MRI is not optimal or if the model needs to be very accurate. For example, getting an accurate estimate of the thickness of the skull or incorporating the CSF layer is difficult.
 
-The strategy employed in FieldTrip for constructing the BEM model boils down to the manipulation of geometrical data. The following qualitatively different classes of data are distinguishes:
+The strategy employed in FieldTrip for constructing the BEM model boils down to the manipulation of geometrical data. The following qualitatively different classes of data are distinguished:
 
 - anatomical MRI, described as voxels in a regular 3-D lattice, grey values
 - segmented MRI, described as voxels in a regular 3-D lattice, boolean or probabilistic values
@@ -86,27 +86,18 @@ The [iso2mesh](http://iso2mesh.sourceforge.net) toolbox includes very useful fun
 Also SPM includes functions for triangular mesh manipulation:
 
 - spm_mesh_adjacency.m
-
 - spm_mesh_clusters.m
-
 - spm_mesh_curvature.m
-
 - spm_mesh_distmtx.m
-
 - spm_mesh_get_lm.m
-
 - spm_mesh_inflate.m
-
 - spm_mesh_label.m
-
 - spm_mesh_normals.m
-
 - spm_mesh_project.m
-
 - spm_mesh_render.m
 
 ## Converting mesh to volume conduction model
 
 The **[ft_prepare_headmodel](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_headmodel.m)** function can take a single or the combination of multiple meshes as input and make a volume conduction model out of it. This construction of the volume conduction model can for example consist of fitting spheres to the mesh for a concentric sphere model, or the computation of a BEM system matrix.
 
-After constructing the volume conduction model of the head, FieldTrip can compute leadfields and estimate sources by solving the inverse problem. Please see the [tutorial documentation](http://www.fieldtriptoolbox.org/tutorial/) for complete examples.
+After constructing the volume conduction model of the head, FieldTrip can compute leadfields and estimate sources by solving the inverse problem. Please see the [tutorial documentation](/tutorial/) for complete examples.
