@@ -35,6 +35,8 @@ The [Mother Of Unification Studies (MOUS) dataset](https://doi.org/10.34973/37n0
 
 The [FieldTrip made easy](https://doi.org/10.3389/fnins.2018.00711) paper includes [high-density EEG data](https://doi.org/10.34973/fkgz-8d22) from 29 healthy human participants, recorded in an auditory steady state responses (ASSR) paradigm. The data collection contains not only all data, but also the analysis scripts to reproduce the results presented in the paper.
 
+From the lab of Steve Luck and Emily Kappenman you can download the [ERP CORE](https://erpinfo.org/erp-core), a freely available online resource consisting of optimized paradigms, experiment control scripts, example data from 40 participants, data processing pipelines and analysis scripts, and a broad set of results for 7 different ERP components obtained from 6 different ERP paradigms: N170 (Face Perception Paradigm), MMN (Passive Auditory Oddball Paradigm), N2pc (Simple Visual Search Paradigm), N400 (Word Pair Judgement Paradigm), P3b (Active Visual Oddball Paradigm), LRP and ERN (Flankers Paradigm).
+
 The [BNCI Horizon 2020 consortium](http://bnci-horizon-2020.eu/database/data-sets) hosts a repository of datasets from brain-computer interface (BCI) and decoding experiments available for free download. The datasets include EEG, fNIRS, and ECoG data collected mainly by the consortium partners in several European countries.
 
 The [National Sleep Research Resource](https://sleepdata.org) website links to a large collection of sleep EEG datasets.
