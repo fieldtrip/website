@@ -18,7 +18,7 @@ title: ft_read_event
    'trigshift'      integer, number of samples to shift from flank to detect trigger value (default = 0)
    'chanindx'       list with channel numbers for trigger detection, specify -1 in case you don't want to detect triggers (default is automatic)
    'threshold'      threshold for analog trigger channels (default is system specific)
-   'tolerance'      tolerance in samples when merging Neuromag analogue trigger channels (default = 1, meaning that an shift of one sample in both directions is compensated for)
+   'tolerance'      tolerance in samples when merging Neuromag analogue trigger channels (default = 1, meaning that a shift of one sample in both directions is compensated for)
    'blocking'       wait for the selected number of events (default = 'no')
    'timeout'        amount of time in seconds to wait when blocking (default = 5)
    'password'       password structure for encrypted data set (only for mayo_mef30 and mayo_mef21)

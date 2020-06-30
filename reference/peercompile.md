@@ -4,7 +4,7 @@ title: peercompile
 ```plaintext
  PEERCOMPILE  This script/function is used for compiling and linking the 'peer' MEX file.
 
- On Linux and MacOS X, you should just be able to call this function without arguments.
+ On Linux and macOS, you should just be able to call this function without arguments.
 
  On Windows, you need to select a compiler using one of the following options:
    compile('bcb')   - Borland C++ Builder

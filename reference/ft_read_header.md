@@ -14,8 +14,8 @@ title: ft_read_header
    'fallback'       = can be empty or 'biosig' (default = [])
    'checkmaxfilter' = boolean, whether to check that maxfilter has been correctly applied (default = true)
    'chanindx'       = list with channel indices in case of different sampling frequencies (only for EDF)
+   'chantype'       = string or cell-array with strings, channel types to be read (only for NeuroOmega and BlackRock)
    'coordsys'       = string, 'head' or 'dewar' (default = 'head')
-   'chantype'       = string or cell of strings, channel types to be read (NeuroOmega, BlackRock).
    'headerformat'   = name of a MATLAB function that takes the filename as input (default is automatic)
    'password'       = password structure for encrypted data set (only for mayo_mef30 and mayo_mef21)
 
@@ -44,9 +44,6 @@ title: ft_read_header
  'headerformat' option. This function should take the filename as input argument.
  Please check the code of this function for details, and search for BIDS_TSV as
  example.
-
- Use cfg.chantype='chaninfo' to get hdr.chaninfo table. For BlackRock
- specify decimation with chantype:skipfactor (e.g. cfg.chantype='analog:10')
 
  The following MEG dataformats are supported
    CTF (*.ds, *.res4, *.meg4)
@@ -83,6 +80,7 @@ title: ft_read_header
    MPI - Max Planck Institute (*.dap)
    Neurosim  (neurosim_spikes, neurosim_signals, neurosim_ds)
    Windaq (*.wdq)
+   NeuroOmega (*.mat transformed from *.mpx)
    Neurodata Without Borders: Neurophysiology (*.nwb)
 
  The following NIRS dataformats are supported

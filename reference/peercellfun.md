@@ -15,7 +15,7 @@ title: peercellfun
    UniformOutput  = boolean (default = false)
    StopOnError    = boolean (default = true)
    RetryOnError   = number, number of retries for failed jobs expressed as ratio (default = 0.05)
-   MaxBusy        = number, amount of slaves allowed to be busy (default = inf)
+   MaxBusy        = number, amount of workers allowed to be busy (default = inf)
    diary          = string, can be 'always', 'never', 'warning', 'error' (default = 'error')
    timreq         = number, initial estimate for the time required to run a single job (default = 3600)
    mintimreq      = number, minimum time required to run a single job (default is automatic)
@@ -29,5 +29,5 @@ title: peercellfun
    x2    = {2, 2, 2, 2, 2};
    y     = peercellfun(fname, x1, x2);
 
- See also PEERMASTER, PEERSLAVE, PEERLIST, PEERINFO, PEERFEVAL, CELLFUN, BATCH
+ See also PEERCONTROLLER, PEERWORKER, PEERLIST, PEERINFO, PEERFEVAL, CELLFUN, BATCH
 ```
