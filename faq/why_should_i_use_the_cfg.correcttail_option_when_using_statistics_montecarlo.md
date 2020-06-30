@@ -5,14 +5,18 @@ tags: [faq, statistics, cluster]
 
 # Why should I use the cfg.correcttail option when using statistics_montecarlo?
 
-When running statistics using **[ft_freqstatistics](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqstatistics.m)**, **[ft_timelockstatistics](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockstatistics.m)**, or **[ft_sourcestatistics](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourcestatistics.m)** with cfg.method = 'montecarlo' you are presented with the option cfg.correcttail, which is relevant when you are doing a two-sided tes
+When running statistics using **[ft_freqstatistics](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqstatistics.m)**, **[ft_timelockstatistics](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockstatistics.m)**, or **[ft_sourcestatistics](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourcestatistics.m)** with `cfg.method = 'montecarlo'` you are presented with the option `cfg.correcttail`, which is relevant when you are doing a two-sided test:
 
-    %   cfg.correcttail = correct p-values or alpha-values when doing a two-sided test, 'alpha','prob' or 'no' (default = 'no')
+    % cfg.correcttail = correct p-values or alpha-values when doing a two-sided test, 'alpha','prob' or 'no' (default = 'no')
+
+{% include markup/warning %}
+When doing a two-sided test with alpha = 0.05 and *not correcting*, you are effectively testing with alpha = 0.1.
+{% include markup/end %}
 
 ## Correct alpha
 
 In case of a two-tailed test, the type-I error rate (alpha) refers to both tails
-of the distribution, whereas the stat.prob value computed with the montecarlo
+of the distribution, whereas the `stat.prob` value computed with the montecarlo
 method corresponds to one tail, i.e. the probability, under the assumption of no
 effect or no difference (the null hypothesis), of obtaining a result equal to or
 more extreme than what was actually observed. The decision rule whether the
@@ -42,6 +46,4 @@ Use the following configuration:
     cfg.tail        = 0; % two-sided test
     cfg.correcttail = 'prob';
 
-Effectively, this means multiplying the p-values (in stat.prob, stat.posclusters.prob and stat.negclusters.prob) with a factor of two.
-
-Please note that, when doing a two-sided test with alpha = 0.05 and not correcting, you are effectively testing with alpha = 0.1.
+Effectively, this means multiplying the p-values (in `stat.prob`, `stat.posclusters.prob` and `stat.negclusters.prob`) with a factor of two.
