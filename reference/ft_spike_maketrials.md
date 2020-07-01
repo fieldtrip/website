@@ -21,20 +21,20 @@ title: ft_spike_maketrials
 
    cfg.trl  = is an nTrials-by-M matrix, with at least 3 columns:
      Every row contains start (col 1), end (col 2) and offset of the event
-     trigger in the trial in timestamp or sample units (cfg.trlunit). 
-     For example, an offset of -1000 means that the trigger (t = 0 sec) 
+     trigger in the trial in timestamp or sample units (cfg.trlunit).
+     For example, an offset of -1000 means that the trigger (t = 0 sec)
      occurred 1000 timestamps or samples after the
      trial start.
      If more columns are added than 3, these are used to construct the
      spike.trialinfo field having information about the trial.
-     Note that values in cfg.trl get inaccurate above 2^53 (in that case 
+     Note that values in cfg.trl get inaccurate above 2^53 (in that case
      it is better to use the original uint64 representation)
 
-   cfg.trlunit = 'timestamps' (default) or 'samples'. 
-     If 'samples', cfg.trl should 
+   cfg.trlunit = 'timestamps' (default) or 'samples'.
+     If 'samples', cfg.trl should
      be specified in samples, and cfg.hdr = data.hdr should be specified.
      This option can be used to reuse a cfg.trl that was used for
-     preprocessing LFP data. 
+     preprocessing LFP data.
      If 'timestamps', cfg.timestampspersecond should be
      specified, but cfg.hdr should not.
 

@@ -412,7 +412,7 @@ A detailed description of each function is available in the [reference documenta
 
 ## B 
 
-**cfg.backproject** - [ft_dipolefitting](/reference/ft_dipolefitting), [ft_prepare_leadfield](/reference/ft_prepare_leadfield), [ft_sourceanalysis](/reference/ft_sourceanalysis)  
+**cfg.backproject** - [ft_dipolefitting](/reference/ft_dipolefitting), [ft_dipolesimulation](/reference/ft_dipolesimulation), [ft_megplanar](/reference/ft_megplanar), [ft_prepare_leadfield](/reference/ft_prepare_leadfield), [ft_sourceanalysis](/reference/ft_sourceanalysis)  
 
 
 **cfg.badchannel** - [ft_channelrepair](/reference/ft_channelrepair), [ft_scalpcurrentdensity](/reference/ft_scalpcurrentdensity)  
@@ -2280,7 +2280,7 @@ A detailed description of each function is available in the [reference documenta
 **cfg.rectify** - [ft_preprocessing](/reference/ft_preprocessing)  
 
 
-**cfg.reducerank** - [ft_dipolefitting](/reference/ft_dipolefitting), [ft_prepare_leadfield](/reference/ft_prepare_leadfield), [ft_sourceanalysis](/reference/ft_sourceanalysis)  
+**cfg.reducerank** - [ft_dipolefitting](/reference/ft_dipolefitting), [ft_dipolesimulation](/reference/ft_dipolesimulation), [ft_megplanar](/reference/ft_megplanar), [ft_prepare_leadfield](/reference/ft_prepare_leadfield), [ft_sourceanalysis](/reference/ft_sourceanalysis)  
 
 
 **cfg.refchan** - [ft_realtime_coillocalizer](/reference/ft_realtime_coillocalizer), [ft_sourceanalysis](/reference/ft_sourceanalysis)  

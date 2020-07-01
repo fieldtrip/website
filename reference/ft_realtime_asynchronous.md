@@ -33,7 +33,7 @@ title: ft_realtime_asynchronous
                      write_event (default = []
 
  The bcifun must be of the form
-   
+
    cmd = bcifun(cfg,data)
 
  where cfg is the configuration passed by this function and data is the
@@ -46,11 +46,11 @@ title: ft_realtime_asynchronous
  cfg.jumptoeof='yes' causes the realtime function to jump to the end
  when the function _starts_. It causes all data acquired prior to
  starting the RT function to be skipped.
- 
+
  cfg.bufferdata=last causes the realtime function to jump to the last
  available data while _running_. If the RT loop is not fast enough,
  it causes some data to be dropped.
- 
+
  If you want to skip all data that was acquired before you start the
  RT function, but don't want to miss any data that was acquired while
  the realtime function is started, then you should use jumptoeof=yes and

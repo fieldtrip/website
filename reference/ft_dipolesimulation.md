@@ -42,6 +42,12 @@ title: ft_dipolesimulation
    cfg.dipoleunit = units for dipole amplitude (default nA*m)
    cfg.chanunit   = units for the channel data
 
+ Optionally, you can modify the leadfields by reducing the rank, i.e. remove the weakest orientation
+   cfg.reducerank    = 'no', or number (default = 3 for EEG, 2 for MEG)
+   cfg.backproject   = 'yes' or 'no',  determines when reducerank is applied whether the 
+                       lower rank leadfield is projected back onto the original linear 
+                       subspace, or not (default = 'yes')
+
  The volume conduction model of the head should be specified as
    cfg.headmodel     = structure with volume conduction model, see FT_PREPARE_HEADMODEL
 
