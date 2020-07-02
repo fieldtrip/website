@@ -27,7 +27,7 @@ It contains high-level functions that are publicly available for experienced end
 
 ## Supported methods for inverse estimation of the source parameters
 
-The inverse methods for computing a source reconstruction can be divided into three categories: **dipole fitting** (using an overdetermined model with a few sources), **scaning** (using a metric that can be computed independently on each point of a source model) and **distributed source modelling** (using an underdetermined distributed source model). The following source reconstruction methods are implemented
+The inverse methods for computing a source reconstruction can be divided into three categories: **dipole fitting** (using an overdetermined model with a few sources), **scanning** (using a metric that can be computed independently on each point of a source model) and **distributed source modelling** (using an underdetermined distributed source model). The following source reconstruction methods are implemented
 
 ### Dipole fitting
 
