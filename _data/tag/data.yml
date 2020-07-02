@@ -10,11 +10,11 @@
 - name:  Can I create an artificial CTF dataset using MATLAB?
   link:  /example/writing_simulated_data_to_a_ctf_dataset
 
-- name:  How can I share my MEG data?
-  link:  /faq/data_sharing
-
 - name:  What dataformats are supported?
   link:  /faq/dataformat
+
+- name:  How can I share my MEG data?
+  link:  /faq/data_sharing
 
 - name:  How are the various MATLAB data structures defined?
   link:  /faq/how_are_the_various_data_structures_defined
@@ -97,11 +97,11 @@
 - name:  Getting started with Philips/EGI data
   link:  /getting_started/egi
 
-- name:  Getting started with Neuralynx data
-  link:  /getting_started/neuralynx
-
 - name:  Getting started with Neuralynx data recorded at the Donders Institute
   link:  /getting_started/neuralynx_fcdc
+
+- name:  Getting started with Neuralynx data
+  link:  /getting_started/neuralynx
 
 - name:  Getting started with Neuromag/Elekta/Megin data
   link:  /getting_started/neuromag

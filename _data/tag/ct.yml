@@ -133,11 +133,11 @@
 - name:  Analysis of corticomuscular coherence
   link:  /tutorial/coherence
 
-- name:  Analysis of sensor- and source-level connectivity
-  link:  /tutorial/connectivity
-
 - name:  Extended analysis of sensor- and source-level connectivity
   link:  /tutorial/connectivityextended
+
+- name:  Analysis of sensor- and source-level connectivity
+  link:  /tutorial/connectivity
 
 - name:  Localizing electrodes using a 3D-scanner
   link:  /tutorial/electrode
