@@ -1,5 +1,6 @@
 ---
 title: Preprocessing of EEG/MEG time series data
+tags: [development, preproc]
 ---
 
 # Preprocessing of EEG/MEG time series data
@@ -13,25 +14,25 @@ The low-level functions are combined in the **preproc** toolbox, which is availa
 
 Note that the FieldTrip toolbox comes with a user-friendly **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** function, which reads data from disk and applies preprocessing to that data. Regular users mainly interested in analyzing their data should be using that function. The functions described here are for people that are developing their own code and/or contributing to the development of FieldTrip.
 
-All of the low-level preprocessing functions require data to be represented as a 2D matrix (Nchans X Nsamples). The following functions are implemented in the preproc modul
+All of the low-level preprocessing functions require data to be represented as a 2D matrix (Nchans X Nsamples). The following functions are implemented in the preproc module:
 
-- **[ft_preproc_bandpassfilter](https://github.com/fieldtrip/fieldtrip/blob/release/preproc/ft_preproc_bandpassfilter.m)** - applies a band-pass filter to the data
-- **[ft_preproc_bandstopfilter](https://github.com/fieldtrip/fieldtrip/blob/release/preproc/ft_preproc_bandstopfilter.m)** - applies a band-stop filter to the data
-- **[ft_preproc_highpassfilter](https://github.com/fieldtrip/fieldtrip/blob/release/preproc/ft_preproc_highpassfilter.m)** - applies a high-pass filter to the data
-- **[ft_preproc_lowpassfilter](https://github.com/fieldtrip/fieldtrip/blob/release/preproc/ft_preproc_lowpassfilter.m)** - applies a low-pass filter to the data
-- **[ft_preproc_medianfilter](https://github.com/fieldtrip/fieldtrip/blob/release/preproc/ft_preproc_medianfilter.m)** - applies a median filter, i.e. a jump-preserving smoothing kernel
-- **[ft_preproc_dftfilter](https://github.com/fieldtrip/fieldtrip/blob/release/preproc/ft_preproc_dftfilter.m)** - applies a narrow-band notch filter to the data to remove the 50Hz noise
-- **[ft_preproc_baselinecorrect](https://github.com/fieldtrip/fieldtrip/blob/release/preproc/ft_preproc_baselinecorrect.m)** - performs a baseline correction
-- **[ft_preproc_detrend](https://github.com/fieldtrip/fieldtrip/blob/release/preproc/ft_preproc_detrend.m)** - removes linear or higher order polynomial trends
-- **[ft_preproc_polyremoval](https://github.com/fieldtrip/fieldtrip/blob/release/preproc/ft_preproc_polyremoval.m)** - removes polynomial trends
-- **[ft_preproc_denoise](https://github.com/fieldtrip/fieldtrip/blob/release/preproc/ft_preproc_denoise.m)** - regresses out noise with a known timecourse
-- **[ft_preproc_derivative](https://github.com/fieldtrip/fieldtrip/blob/release/preproc/ft_preproc_derivative.m)** - computes the temporal Nth order derivative
-- **[ft_preproc_hilbert](https://github.com/fieldtrip/fieldtrip/blob/release/preproc/ft_preproc_hilbert.m)** - computes the Hilbert transpose of the data
-- **[ft_preproc_rectify](https://github.com/fieldtrip/fieldtrip/blob/release/preproc/ft_preproc_rectify.m)** - rectifies the data, useful for EMG
-- **[ft_preproc_rereference](https://github.com/fieldtrip/fieldtrip/blob/release/preproc/ft_preproc_rereference.m)** - rereferences EEG data using the average over all channels or selected channels
-- **[ft_preproc_resample](https://github.com/fieldtrip/fieldtrip/blob/release/preproc/ft_preproc_resample.m)** - resamples the data
-- **[ft_preproc_slidingrange](https://github.com/fieldtrip/fieldtrip/blob/release/preproc/ft_preproc_slidingrange.m)** - computes the range of the data in a sliding time window
-- **[ft_preproc_standardize](https://github.com/fieldtrip/fieldtrip/blob/release/preproc/ft_preproc_standardize.m)** - performs a z-transformation of the data
+- **[ft_preproc_bandpassfilter](https://github.com/fieldtrip/fieldtrip/blob/release/preproc/ft_preproc_bandpassfilter.m)** applies a band-pass filter to the data
+- **[ft_preproc_bandstopfilter](https://github.com/fieldtrip/fieldtrip/blob/release/preproc/ft_preproc_bandstopfilter.m)** applies a band-stop filter to the data
+- **[ft_preproc_highpassfilter](https://github.com/fieldtrip/fieldtrip/blob/release/preproc/ft_preproc_highpassfilter.m)** applies a high-pass filter to the data
+- **[ft_preproc_lowpassfilter](https://github.com/fieldtrip/fieldtrip/blob/release/preproc/ft_preproc_lowpassfilter.m)** applies a low-pass filter to the data
+- **[ft_preproc_medianfilter](https://github.com/fieldtrip/fieldtrip/blob/release/preproc/ft_preproc_medianfilter.m)** applies a median filter, i.e. a jump-preserving smoothing kernel
+- **[ft_preproc_dftfilter](https://github.com/fieldtrip/fieldtrip/blob/release/preproc/ft_preproc_dftfilter.m)** applies a narrow-band notch filter to the data to remove the 50Hz noise
+- **[ft_preproc_baselinecorrect](https://github.com/fieldtrip/fieldtrip/blob/release/preproc/ft_preproc_baselinecorrect.m)** performs a baseline correction
+- **[ft_preproc_detrend](https://github.com/fieldtrip/fieldtrip/blob/release/preproc/ft_preproc_detrend.m)** removes linear or higher order polynomial trends
+- **[ft_preproc_polyremoval](https://github.com/fieldtrip/fieldtrip/blob/release/preproc/ft_preproc_polyremoval.m)** removes polynomial trends
+- **[ft_preproc_denoise](https://github.com/fieldtrip/fieldtrip/blob/release/preproc/ft_preproc_denoise.m)** regresses out noise with a known timecourse
+- **[ft_preproc_derivative](https://github.com/fieldtrip/fieldtrip/blob/release/preproc/ft_preproc_derivative.m)** computes the temporal Nth order derivative
+- **[ft_preproc_hilbert](https://github.com/fieldtrip/fieldtrip/blob/release/preproc/ft_preproc_hilbert.m)** computes the Hilbert transpose of the data
+- **[ft_preproc_rectify](https://github.com/fieldtrip/fieldtrip/blob/release/preproc/ft_preproc_rectify.m)** rectifies the data, useful for EMG
+- **[ft_preproc_rereference](https://github.com/fieldtrip/fieldtrip/blob/release/preproc/ft_preproc_rereference.m)** rereferences EEG data using the average over all channels or selected channels
+- **[ft_preproc_resample](https://github.com/fieldtrip/fieldtrip/blob/release/preproc/ft_preproc_resample.m)** resamples the data
+- **[ft_preproc_slidingrange](https://github.com/fieldtrip/fieldtrip/blob/release/preproc/ft_preproc_slidingrange.m)** computes the range of the data in a sliding time window
+- **[ft_preproc_standardize](https://github.com/fieldtrip/fieldtrip/blob/release/preproc/ft_preproc_standardize.m)** performs a z-transformation of the data
 
 ## Benchmarking
 

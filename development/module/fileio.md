@@ -1,6 +1,6 @@
 ---
 title: Reading and writing of EEG/MEG time series data
-tags: [development]
+tags: [development, fileio]
 ---
 
 # Reading and writing of EEG/MEG time series data

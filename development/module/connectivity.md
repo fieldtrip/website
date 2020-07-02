@@ -1,5 +1,6 @@
 ---
 title: Connectivity estimates for EEG/MEG time series data
+tags: [development, connectivity]
 ---
 
 {% include /shared/development/warning.md %}
@@ -46,7 +47,7 @@ The functions should be called as
     outputdata = ft_connectivity_psi (inputdata, 'key1', value1, 'key2', value2, ....);
     outputdata = ft_connectivity_wpli(inputdata, 'key1', value1, 'key2', value2, ....);
 
-The inputdata consists of a matrix of one of the following dimensionalitie
+The inputdata consists of a matrix of one of the following dimensionalities:
 
 1.  Nrpt x Nchan x Nchan (x Nfreq) (x Ntime)
 2.  Nrpt x Nchancmb (x Nfreq) (x Ntime)

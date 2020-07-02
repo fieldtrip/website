@@ -1,6 +1,6 @@
 ---
 title: Distributed computing using a Linux compute cluster
-tags: [distributed]
+tags: [development, distributed, qsub]
 ---
 
 # Distributed computing using a Linux compute cluster
