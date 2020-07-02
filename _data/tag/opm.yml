@@ -1,3 +1,6 @@
+- name:  Development
+  link:  /development
+
 - name:  Contribute
   link:  /development/contribute
 
@@ -28,11 +31,11 @@
 - name:  Reporting issues
   link:  /development/issues
 
-- name:  Development
-  link:  /development
-
 - name:  Meetings
   link:  /development/meeting
+
+- name:  Modular organization of the source code
+  link:  /development/module
 
 - name:  Connectivity estimates for EEG/MEG time series data
   link:  /development/module/connectivity
@@ -48,9 +51,6 @@
 
 - name:  Inverse source parameter estimates from EEG/MEG data
   link:  /development/module/inverse
-
-- name:  Modular organization of the source code
-  link:  /development/module
 
 - name:  Distributed computing using a peer-to-peer cluster
   link:  /development/module/peer

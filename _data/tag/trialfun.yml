@@ -7,11 +7,11 @@
 - name:  How can I transform trigger values from bits to decimal representation with a trialfun?
   link:  /faq/how_can_i_transform_trigger_values_from_bits_to_decimal_representation_with_a_trialfun
 
-- name:  Is it possible to keep track of trial-specific information in my analysis pipeline?
-  link:  /faq/is_it_possible_to_keep_track_of_trial-specific_information_in_my_fieldtrip_analysis_pipeline
-
 - name:  I used to work with trl-matrices that have more than 3 columns. Why is this not supported anymore?
   link:  /faq/i_used_to_work_with_trl-matrices_that_have_more_than_3_columns._why_is_this_not_supported_anymore
+
+- name:  Is it possible to keep track of trial-specific information in my analysis pipeline?
+  link:  /faq/is_it_possible_to_keep_track_of_trial-specific_information_in_my_fieldtrip_analysis_pipeline
 
 - name:  How can I check or decipher the sequence of triggers in my data?
   link:  /faq/triggers
