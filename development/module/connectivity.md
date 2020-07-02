@@ -3,8 +3,6 @@ title: Connectivity estimates for EEG/MEG time series data
 tags: [development, connectivity]
 ---
 
-{% include /shared/development/warning.md %}
-
 # Connectivity estimates for EEG/MEG time series data
 
 FieldTrip has a consistent set of low-level functions for the computation of connectivity, i.e. estimating a bivariate or multivariate quantity from electrophysiological data, both on the sensor level and on the source level.
