@@ -1,6 +1,9 @@
 - name:  MEG dataformats
   link:  /dataformat/meg
 
+- name:  Connectivity estimates for EEG/MEG time series data
+  link:  /development/module/connectivity
+
 - name:  CTF
   link:  /development/realtime/ctf
 

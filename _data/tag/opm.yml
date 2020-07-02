@@ -37,11 +37,35 @@
 - name:  Modular organization of the source code
   link:  /development/module
 
+- name:  Connectivity estimates for EEG/MEG time series data
+  link:  /development/module/connectivity
+
+- name:  Distributed computing using the MATLAB engine system
+  link:  /development/module/engine
+
 - name:  Reading and writing of EEG/MEG time series data
   link:  /development/module/fileio
 
+- name:  Forward computation of EEG/MEG source models
+  link:  /development/module/forward
+
+- name:  Inverse source parameter estimates from EEG/MEG data
+  link:  /development/module/inverse
+
+- name:  Distributed computing using a peer-to-peer cluster
+  link:  /development/module/peer
+
 - name:  Plotting of channel-level, source-level and other geometrical data related to EEG/MEG
   link:  /development/module/plotting
+
+- name:  Preprocessing of EEG/MEG time series data
+  link:  /development/module/preproc
+
+- name:  Distributed computing using a Linux compute cluster
+  link:  /development/module/qsub
+
+- name:  Spectral estimation of of EEG/MEG time series data
+  link:  /development/module/specest
 
 - name:  Project overview
   link:  /development/project
