@@ -21,6 +21,7 @@ title: ft_prepare_sourcemodel
                 'basedonresolution'  regular 3D grid with specification of the resolution
                 'basedonvol'         surface mesh based on inward shifted brain surface from volume conductor
                 'basedonfile'        the sourcemodel should be read from file
+                'basedoncentroids'   irregular 3D grid based on volumetric mesh
  The default for cfg.method is to determine the approach automatically, based on
  the configuration options that you specify.
 
@@ -61,6 +62,10 @@ title: ft_prepare_sourcemodel
 
  BASEDONCORTEX - places sources on the vertices of a cortical surface description
    cfg.headshape     = string, should be a *.fif file
+
+ BASEDONCENTROIDS - places sources on the centroids of a volumetric mesh
+   cfg.headmodel      = volumetric mesh
+   cfg.headmodel.type = 'simbio';
 
  Other configuration options include
    cfg.unit          = string, can be 'mm', 'cm', 'm' (default is automatic)
