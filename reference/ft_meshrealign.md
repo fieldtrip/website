@@ -19,7 +19,7 @@ title: ft_meshrealign
  where the mesh input argument comes from FT_READ_HEADSHAPE or FT_PREPARE_MESH and
  cfg is a configuration structure that should contain
 
-  cfg.method    = string, can be 'interactive' or fiducial' (default = 'interactive')
+   cfg.method          = string, can be 'interactive' or fiducial' (default = 'interactive')
 
  The configuration can furthermore contain
    cfg.coordsys        = string, can be 'ctf', 'neuromag', '4d', 'bti', 'itab'

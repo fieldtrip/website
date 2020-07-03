@@ -11,9 +11,9 @@ title: ft_examplefunction
 
  <<note that the cfg list should be indented with two spaces
 
-  cfg.option1    = value, explain the value here (default = something)
-  cfg.option2    = value, describe the value here and if needed
-                   continue here to allow automatic parsing of the help
+   cfg.option1    = value, explain the value here (default = something)
+   cfg.option2    = value, describe the value here and if needed
+                    continue here to allow automatic parsing of the help
 
  The configuration can optionally contain
    cfg.option3   = value, explain it here (default is automatic)

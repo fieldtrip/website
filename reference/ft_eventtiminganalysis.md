@@ -11,16 +11,16 @@ title: ft_eventtiminganalysis
  where data is single-channel raw data as obtained by FT_PREPROCESSING
  and cfg is a configuration structure according to
 
-  cfg.method  = method for estimating event-related activity
+   cfg.method  = method for estimating event-related activity
                  'aseo', analysis of single-trial ERP and ongoing
                          activity (according to Xu et al, 2009)
                  'gbve', graph-based variability estimation
                          (according to Gramfort et al, IEEE TBME 2009)
-  cfg.channel = Nx1 cell-array with selection of channels (default = 'all'),
-                see FT_CHANNELSELECTION for details
-  cfg.trials  = 'all' or a selection given as a 1xN vector (default = 'all')
-  cfg.output  = 'model', or 'residual', which returns the modelled data,
-                or the residuals.
+   cfg.channel = Nx1 cell-array with selection of channels (default = 'all'),
+                 see FT_CHANNELSELECTION for details
+   cfg.trials  = 'all' or a selection given as a 1xN vector (default = 'all')
+   cfg.output  = 'model', or 'residual', which returns the modelled data,
+                 or the residuals.
 
  Method specific options are specified in the appropriate substructure.
 
@@ -45,7 +45,7 @@ title: ft_eventtiminganalysis
                               be a cell-array, one matrix per channel.
 
  For the GBVE method, the following options can be specified:
-   cfg.gbve.sigma             = vector, range of sigma values to explore in 
+   cfg.gbve.sigma             = vector, range of sigma values to explore in
                                 cross-validation loop (default: 0.01:0.01:0.2)
    cfg.gbve.distance          = scalar, distance metric to use as
                                 evaluation criterion, see plugin code for
@@ -64,7 +64,7 @@ title: ft_eventtiminganalysis
                                 average smoothing (default: 1), see
                                 eeglab's movav function for more
                                 information.
-   
+
  To facilitate data-handling and distributed computing you can use
    cfg.inputfile   =  ...
    cfg.outputfile  =  ...

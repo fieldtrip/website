@@ -52,7 +52,9 @@ title: ft_sourceplot
    cfg.downsample    = downsampling for resolution reduction, integer value (default = 1) (orig: from surface)
    cfg.atlas         = string, filename of atlas to use (default = []) see FT_READ_ATLAS
                         for ROI masking (see 'masking' below) or for orthogonal plots (see method='ortho' below)
-   cfg.visible       = string, 'on' or 'off', whether figure will be visible (default = 'on')
+   cfg.visible       = string, 'on' or 'off' whether figure will be visible (default = 'on')
+   cfg.position      = location and size of the figure, specified as a vector of the form [left bottom width height]
+   cfg.renderer      = string, 'opengl', 'zbuffer', 'painters', see MATLAB Figure Properties. If this function crashes, you should try 'painters'.
 
  The following parameters can be used for the functional data:
    cfg.funcolormap   = colormap for functional data, see COLORMAP (default = 'auto')

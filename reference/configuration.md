@@ -928,6 +928,12 @@ A detailed description of each function is available in the [reference documenta
 **cfg.ecgscale** - [ft_databrowser](/reference/ft_databrowser), [ft_multiplotTFR](/reference/ft_multiplotTFR), [ft_rejectvisual](/reference/ft_rejectvisual), [ft_singleplotER](/reference/ft_singleplotER), [ft_singleplotTFR](/reference/ft_singleplotTFR)  
 
 
+**cfg.ectopicbeatcorrect** - [ft_heartrate](/reference/ft_heartrate)  
+
+
+**cfg.ectopicbeatthreshold** - [ft_heartrate](/reference/ft_heartrate)  
+
+
 **cfg.edgecolor** - [ft_sourceplot](/reference/ft_sourceplot)  
 
 
@@ -2111,7 +2117,7 @@ A detailed description of each function is available in the [reference documenta
 **cfg.port** - [ft_realtime_brainampproxy](/reference/ft_realtime_brainampproxy), [ft_realtime_jaga16proxy](/reference/ft_realtime_jaga16proxy)  
 
 
-**cfg.position** - [ft_databrowser](/reference/ft_databrowser)  
+**cfg.position** - [ft_clusterplot](/reference/ft_clusterplot), [ft_databrowser](/reference/ft_databrowser), [ft_layoutplot](/reference/ft_layoutplot), [ft_neighbourplot](/reference/ft_neighbourplot), [ft_sourceplot](/reference/ft_sourceplot), [ft_topoplotCC](/reference/ft_topoplotCC)  
 
 
 **cfg.poststim** - [ft_artifact_tms](/reference/ft_artifact_tms)  
@@ -2328,7 +2334,7 @@ A detailed description of each function is available in the [reference documenta
 **cfg.removevalue** - [ft_anonymizedata](/reference/ft_anonymizedata)  
 
 
-**cfg.renderer** - [ft_databrowser](/reference/ft_databrowser), [ft_multiplotER](/reference/ft_multiplotER), [ft_multiplotTFR](/reference/ft_multiplotTFR), [ft_singleplotER](/reference/ft_singleplotER), [ft_singleplotTFR](/reference/ft_singleplotTFR), [ft_sourceplot](/reference/ft_sourceplot)  
+**cfg.renderer** - [ft_clusterplot](/reference/ft_clusterplot), [ft_databrowser](/reference/ft_databrowser), [ft_layoutplot](/reference/ft_layoutplot), [ft_multiplotER](/reference/ft_multiplotER), [ft_multiplotTFR](/reference/ft_multiplotTFR), [ft_neighbourplot](/reference/ft_neighbourplot), [ft_singleplotER](/reference/ft_singleplotER), [ft_singleplotTFR](/reference/ft_singleplotTFR), [ft_sourceplot](/reference/ft_sourceplot), [ft_sourceplot](/reference/ft_sourceplot), [ft_topoplotCC](/reference/ft_topoplotCC)  
 
 
 **cfg.reproducescript** - [ft_reproducescript](/reference/ft_reproducescript)  
@@ -3059,7 +3065,7 @@ A detailed description of each function is available in the [reference documenta
 **cfg.viewresult** - [ft_volumerealign](/reference/ft_volumerealign)  
 
 
-**cfg.visible** - [ft_clusterplot](/reference/ft_clusterplot), [ft_layoutplot](/reference/ft_layoutplot), [ft_neighbourplot](/reference/ft_neighbourplot), [ft_sourceplot](/reference/ft_sourceplot)  
+**cfg.visible** - [ft_clusterplot](/reference/ft_clusterplot), [ft_databrowser](/reference/ft_databrowser), [ft_layoutplot](/reference/ft_layoutplot), [ft_neighbourplot](/reference/ft_neighbourplot), [ft_sourceplot](/reference/ft_sourceplot), [ft_topoplotCC](/reference/ft_topoplotCC)  
 
 
 **cfg.visualize** - [ft_qualitycheck](/reference/ft_qualitycheck)  

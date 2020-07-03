@@ -8,14 +8,13 @@ title: ft_nirs_referencechannelsubtraction
    outdata = ft_nirs_referencechannelsubtraction(cfg, indata)
  where indata is nirs data and cfg is a configuration structure that should contain
 
-  cfg.shortdistance = scalar, below which distance a channel is regarded
-                      as short in cm (default = 1.5)
-  cfg.closedistance = scalar, defines the maximal distance between a
-                      long and a short channel in cm (default = 15).
-                      NOT APPLIED CURRENTLY!
-  cfg.method        = string, 'regstat2', 'QR' or 'OLS' (default = 'QR')
-  cfg.verbose       = boolean, whether text output is desired (default =
-                      false)
+   cfg.shortdistance = scalar, below which distance a channel is regarded
+                       as short in cm (default = 1.5)
+   cfg.closedistance = scalar, defines the maximal distance between a
+                       long and a short channel in cm (default = 15).
+                       NOT APPLIED CURRENTLY!
+   cfg.method        = string, 'regstat2', 'QR' or 'OLS' (default = 'QR')
+   cfg.verbose       = boolean, whether text output is desired (default = false)
 
  To facilitate data-handling and distributed computing you can use
    cfg.inputfile   =  ...

@@ -2,21 +2,24 @@
 title: ft_topoplotCC
 ---
 ```plaintext
- FT_TOPOPLOTCC plots the coherence between channel pairs
+ FT_TOPOPLOTCC plots the coherence or connectivity between channel pairs
 
  Use as
   ft_topoplotCC(cfg, freq)
 
  The configuration should contain:
-   cfg.feedback    = string (default = 'textbar')
-   cfg.layout      = specification of the layout, see FT_PREPARE_LAYOUT
-   cfg.foi         = the frequency of interest which is to be plotted (default is the first frequency bin)
-   cfg.widthparam  = string, parameter to be used to control the line width (see below)
-   cfg.alphaparam  = string, parameter to be used to control the opacity (see below)
-   cfg.colorparam  = string, parameter to be used to control the line color
+   cfg.feedback      = string (default = 'textbar')
+   cfg.layout        = specification of the layout, see FT_PREPARE_LAYOUT
+   cfg.foi           = the frequency of interest which is to be plotted (default is the first frequency bin)
+   cfg.widthparam    = string, parameter to be used to control the line width (see below)
+   cfg.alphaparam    = string, parameter to be used to control the opacity (see below)
+   cfg.colorparam    = string, parameter to be used to control the line color
+   cfg.visible       = string, 'on' or 'off' whether figure will be visible (default = 'on')
+   cfg.position      = location and size of the figure, specified as a vector of the form [left bottom width height]
+   cfg.renderer      = string, 'opengl', 'zbuffer', 'painters', see MATLAB Figure Properties. If this function crashes, you should try 'painters'.
 
- The widthparam should be indicated in pixels, e.g. usefull numbers are 1
- and larger.
+ The widthparam should be indicated in pixels, e.g. usefull numbers are 1 and
+ larger.
 
  The alphaparam should be indicated as opacity between 0 (fully transparent)
  and 1 (fully opaque).

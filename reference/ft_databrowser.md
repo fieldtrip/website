@@ -26,7 +26,7 @@ title: ft_databrowser
  The following configuration options are supported:
    cfg.ylim                    = vertical scaling, can be 'maxmin', 'maxabs' or [ymin ymax] (default = 'maxabs')
    cfg.zlim                    = color scaling to apply to component topographies, 'minmax', 'maxabs' (default = 'maxmin')
-   cfg.blocksize               = duration in seconds for cutting the data up
+   cfg.blocksize               = duration in seconds for cutting continuous data in segments
    cfg.trl                     = structure that defines the data segments of interest, only applicable for trial-based data
    cfg.continuous              = 'yes' or 'no', whether the data should be interpreted as continuous or trial-based
    cfg.allowoverlap            = 'yes' or 'no', whether data that is overlapping in multiple trials is allowed (default = 'no')
@@ -48,8 +48,9 @@ title: ft_databrowser
    cfg.selfun                  = string, name of function that is evaluated using the right-click context menu. The selected data and cfg.selcfg are passed on to this function.
    cfg.selcfg                  = configuration options for function in cfg.selfun
    cfg.seldat                  = 'selected' or 'all', specifies whether only the currently selected or all channels will be passed to the selfun (default = 'selected')
+   cfg.visible                 = string, 'on' or 'off' whether figure will be visible (default = 'on')
+   cfg.position                = location and size of the figure, specified as a vector of the form [left bottom width height]
    cfg.renderer                = string, 'opengl', 'zbuffer', 'painters', see MATLAB Figure Properties. If this function crashes, you should try 'painters'.
-   cfg.position                = location and size of the figure, specified as a vector of the form [left bottom width height].
 
  The following options for the scaling of the EEG, EOG, ECG, EMG, MEG and NIRS channels
  is optional and can be used to bring the absolute numbers of the different
