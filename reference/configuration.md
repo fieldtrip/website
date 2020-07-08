@@ -1781,6 +1781,9 @@ A detailed description of each function is available in the [reference documenta
 **cfg.moveinward** - [ft_electroderealign](/reference/ft_electroderealign), [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)  
 
 
+**cfg.movetocentroids** - [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)  
+
+
 **cfg.moviefreq** - [ft_movieplotTFR](/reference/ft_movieplotTFR)  
 
 

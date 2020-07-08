@@ -68,18 +68,20 @@ title: ft_prepare_sourcemodel
    cfg.headmodel.type = 'simbio';
 
  Other configuration options include
-   cfg.unit          = string, can be 'mm', 'cm', 'm' (default is automatic)
-   cfg.tight         = 'yes' or 'no' (default is automatic)
-   cfg.inwardshift   = number, how much should the innermost surface be moved inward to constrain
-                       sources to be considered inside the source compartment (default = 0)
-   cfg.moveinward    = number, move dipoles inward to ensure a certain distance to the innermost
-                       surface of the source compartment (default = 0)
-   cfg.spherify      = 'yes' or 'no', scale the source model so that it fits inside a sperical
-                       volume conduction model (default = 'no')
-   cfg.symmetry      = 'x', 'y' or 'z' symmetry for two dipoles, can be empty (default = [])
-   cfg.headshape     = a filename for the headshape, a structure containing a single surface,
-                       or a Nx3 matrix with headshape surface points (default = [])
-   cfg.spmversion    = string, 'spm2', 'spm8', 'spm12' (default = 'spm12')
+   cfg.unit            = string, can be 'mm', 'cm', 'm' (default is automatic)
+   cfg.tight           = 'yes' or 'no' (default is automatic)
+   cfg.inwardshift     = number, how much should the innermost surface be moved inward to constrain
+                         sources to be considered inside the source compartment (default = 0)
+   cfg.moveinward      = number, move dipoles inward to ensure a certain distance to the innermost
+                         surface of the source compartment (default = 0)
+   cfg.movetocentroids = 'yes' or 'no', move the dipoles to the centroids of the hexahedral 
+                         or tetrahedral mesh (default = 'no')
+   cfg.spherify        = 'yes' or 'no', scale the source model so that it fits inside a sperical
+                         volume conduction model (default = 'no')
+   cfg.symmetry        = 'x', 'y' or 'z' symmetry for two dipoles, can be empty (default = [])
+   cfg.headshape       = a filename for the headshape, a structure containing a single surface,
+                         or a Nx3 matrix with headshape surface points (default = [])
+   cfg.spmversion      = string, 'spm2', 'spm8', 'spm12' (default = 'spm12')
 
  The EEG or MEG sensor positions can be present in the data or can be specified as
    cfg.elec          = structure with electrode positions or filename, see FT_READ_SENS
