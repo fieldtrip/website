@@ -1,12 +1,12 @@
 ---
 title: Where can I find open access MEG/EEG data?
-tags: [faq, dataset]
+tags: [faq, dataset, sharing]
 ---
 
 # Where can I find open access MEG/EEG data?
 
 {% include markup/warning %}
-Feel free to hit the **edit** button to share links to other open access datasets here.
+Feel free to hit the **edit** button at the bottom of this page to add more links to other open access datasets.
 {% include markup/end %}
 
 The FieldTrip tutorials include a lot of smaller datasets that are available for download. These datasets are listed in [this frequently asked question](/faq/what_types_of_datasets_and_their_respective_analyses_are_used_on_fieldtrip).
@@ -45,13 +45,17 @@ The Child Mind Institute provides both raw and preprocessed EEG data in the [Mul
 
 The Max Planck Institut in Leipzig shares the [LEMON Mind-Brain-Body Dataset](http://fcon_1000.projects.nitrc.org/indi/retro/MPI_LEMON.html) which includes data from 228 healthy participants comprising a young (N=154, range 20–35 years) and an elderly group (N=74, range 59–77 years). During a two-day assessment, participants completed 3T MRI and a 62-channel EEG experiment at rest.
 
-On [Physionet](https://physionet.org/about/database/#neuro) you can find a list of clinical and cognitive EEG datasets, PLUS also various other ExG and physiological datasets. They are especially useful when developing and/or testing new data analysis methods.  
+On [Physionet](https://physionet.org/about/database/#neuro) you can find a list of clinical and cognitive EEG datasets, plus also various other ExG and physiological datasets. They are especially useful when developing and/or testing new data analysis methods.
+
+On the [BNCI Horizon 2020](http://bnci-horizon-2020.eu) project page you can find more than 25 well-documented [datasets for BCI research](http://bnci-horizon-2020.eu/database/data-sets).
 
 The [Brain Signals](http://www.brainsignals.de) website has a list of references to shared EEG data sets.
 
 Arno Delorme maintains a list of [Open EEG datasets](https://sccn.ucsd.edu/~arno/fam2data/publicly_available_EEG_data.html).
 
 Brad Voytek maintains a list of [Open Datasets in Human Electrophysiology](https://github.com/voytekresearch/OpenData).
+
+NeuroTechX maintains a list of [Open EEG datasets](https://github.com/NeuroTechX/awesome-bci#brain-databases).
 
 ## Other ECoG datasets
 
