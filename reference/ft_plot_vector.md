@@ -15,7 +15,7 @@ title: ft_plot_vector
    'highlight'       = a logical vector of size Y, where 1 means that the corresponding values in Y are highlighted (according to the highlightstyle)
    'highlightstyle'  = can be 'box', 'thickness', 'saturation', 'difference' (default='box')
    'color'           = see MATLAB standard line properties and see below
-   'facecolor'       = color for the highlighted box (default = [0.6 0.6 0.6])
+   'facecolor'       = color for the highlighted box/difference (default = [0.6 0.6 0.6])
    'facealpha'       = transparency for the highlighted box, between 0 and 1 (default = 1)
    'linewidth'       = see MATLAB standard line properties
    'markersize'      = see MATLAB standard line properties
@@ -60,7 +60,7 @@ title: ft_plot_vector
   subplot(3,1,1); ft_plot_vector(x, y, 'highlight', y>0.8, 'highlightstyle', 'box');
   subplot(3,1,2); ft_plot_vector(x, y, 'highlight', y>0.8, 'highlightstyle', 'thickness');
   subplot(3,1,3); ft_plot_vector(x, y, 'highlight', y>0.8, 'highlightstyle', 'saturation');
-
+ 
  Example 4
   x = 1:100; y = hann(100)'; ymin = 0.8*y; ymax = 1.2*y;
   ft_plot_vector(x, [ymin; ymax], 'highlight', ones(size(y)), 'highlightstyle', 'difference', 'color', 'none');
