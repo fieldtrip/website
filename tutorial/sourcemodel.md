@@ -106,8 +106,8 @@ In order for the freesurfer pipeline to work, the anatomical image needs to be a
 
 For later use, we save the transformation matrix. Combined with the transformation matrix saved earlier, we can now toggle back and forth between the acpc-based coordinates, and the ctf-based coordinates.
 
-transform_vox2acpc = mri.transform;
-save(fullfile(mripath,sprintf('%s_transform_vox2acpc',subjectname)), 'transform_vox2acpc');
+    transform_vox2acpc = mri.transform;
+    save(fullfile(mripath,sprintf('%s_transform_vox2acpc',subjectname)), 'transform_vox2acpc');
 
 Also save the acpc-coregistered anatomical image, this file will be the input file for the freesurfer processing pipeline:
 
