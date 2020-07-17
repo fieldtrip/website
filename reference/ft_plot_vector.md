@@ -60,7 +60,7 @@ title: ft_plot_vector
   subplot(3,1,1); ft_plot_vector(x, y, 'highlight', y>0.8, 'highlightstyle', 'box');
   subplot(3,1,2); ft_plot_vector(x, y, 'highlight', y>0.8, 'highlightstyle', 'thickness');
   subplot(3,1,3); ft_plot_vector(x, y, 'highlight', y>0.8, 'highlightstyle', 'saturation');
- 
+
  Example 4
   x = 1:100; y = hann(100)'; ymin = 0.8*y; ymax = 1.2*y;
   ft_plot_vector(x, [ymin; ymax], 'highlight', ones(size(y)), 'highlightstyle', 'difference', 'color', 'none');
