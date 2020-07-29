@@ -37,7 +37,7 @@ Please note that the use of these layout files requires that the channel labelin
 
 ## Referencing Biosemi EEG data
 
-The Biosemi system uses a common-sense (CMS) and a drivel-right-leg (DRL) electrode, which injects a small amount of current to minimize the effect of external noise sources. When recording data to disk and when reading it into FieldTrip, it is expressed as potential difference relative to the CMS. With this type of amplifier systems you should **always** reference after reading the data from disk, i.e. change the reference from CMS to another electrode, and you should **not** add the CMS electrode as implicit reference channel to the data.
+The Biosemi system uses a common-sense (CMS) and a driven-right-leg (DRL) electrode, which injects a small amount of current to minimize the effect of external noise sources. When recording data to disk and when reading it into FieldTrip, it is expressed as potential difference relative to the CMS. With this type of amplifier systems you should **always** reference after reading the data from disk, i.e. change the reference from CMS to another electrode, and you should **not** add the CMS electrode as implicit reference channel to the data.
 
 For channel-level analysis you may want to use linked mastoids, or linked T7 and T8. For source analysis you would (as with other systems) best reference to the average of all electrodes (minus CMS).
 
