@@ -65,7 +65,7 @@ The **[ft_sourceanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft
 
 The LCMV beamformer spatial filter for the location of interest will pass the activity at that location with unit-gain, while optimally suppressing all other noise and other source contributions to the MEG data. The LCMV implementation in FieldTrip requires the data covariance matrix to be computed with **[ft_timelockanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockanalysis.m)**.
 
-Rather than doing all the preprocessing again, you can download the preprocessed data and headmodel from the FieldTrip FTP server ([data.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/connectivity/data.mat)[SubjectCMC.hdm](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/connectivity/SubjectCMC.hdm))
+Rather than doing all the preprocessing again, you can download the preprocessed data and headmodel from the FieldTrip FTP server ([data.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/connectivity/data.mat)[SubjectCMC.hdm]; (ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/connectivity/SubjectCMC.hdm))
 
     load data
 
