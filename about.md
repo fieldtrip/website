@@ -11,6 +11,8 @@ FieldTrip is being developed and maintained at the [Donders Institute for Brain,
 
 The development is led by Robert Oostenveld and Jan-Mathijs Schoffelen, and receives many valuable contributions from present and past colleagues from the Donders and many contributors over the world.
 
+Please see the [support](/support) page for contact details.
+
 ## Funding
 
 - [NWO](http://www.nwo.nl)
