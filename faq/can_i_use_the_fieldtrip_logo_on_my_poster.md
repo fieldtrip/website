@@ -14,6 +14,6 @@ Yes you can, and it is much appreciated! Below you can find the logo bitmap in d
 - [fieldtriplogo-150.png](/assets/img/fieldtriplogo-150.png)
 - [fieldtriplogo-160.png](/assets/img/fieldtriplogo-160.png)
 - [fieldtriplogo-200.png](/assets/img/fieldtriplogo-200.png)
-- [fieldtriplogo-high-transparent.png](/assets/img/fieldtriplogo-high-transparent.png)
 - [fieldtriplogo-high.png](/assets/img/fieldtriplogo-high.png)
+- [fieldtriplogo-high-transparent.png](/assets/img/fieldtriplogo-high-transparent.png)
 - [fieldtriplogo.eps](/assets/img/fieldtriplogo.eps) (Encapsulated Postscript)
