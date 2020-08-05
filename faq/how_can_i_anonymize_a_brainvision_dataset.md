@@ -26,3 +26,7 @@ To anonymize the BrainVision dataset, you can use the following code:
     ft_write_data(inputfile, dat, 'dataformat', 'brainvision_eeg', 'header', hdr, 'event', event)
 
 The original header information in `hdr.orig` contains the full ASCII description and therefore is potentially identifying. Hence we remove it prior to  passing it on to **[ft_write_data](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_write_data.m)** which writes the data, header and events back to disk.  
+
+## Additional notes
+
+When reading a BrainVision dataset and wwiting it back to disk, the comments in the `.vhdr` file (starting with a semicolon) are removed as well. Furthermore, there might be information in the header file about electrode impedances or electrode positions that is not parsed by the FieldTrip reading functions: that will also not be present in the output files.
