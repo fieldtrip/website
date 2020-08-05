@@ -22,7 +22,7 @@ This is how the test dataset looks like. It consists of multiple files, that are
     mrifile       = 'testData/T1w.nii';
     cortexfile    = 'testData/testCustom.gii';
 
-Note that the data and headerinformation is scatered over multiple files, similar to BrainVision (vhdr,vmrk,eeg) and other formats. In FieldTrip we use cfg.dataset to indicate such a collection; in this case cfg.dataset can either refer to teh headerfile or to the datafile.
+Note that the data and headerinformation is scatered over multiple files, similar to BrainVision (vhdr,vmrk,eeg) and other formats. In FieldTrip we use cfg.dataset to indicate such a collection; in this case cfg.dataset can either refer to the headerfile or to the datafile.
 
 ## Time series data
 

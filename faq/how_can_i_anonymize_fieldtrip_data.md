@@ -9,7 +9,7 @@ If you share your MATLAB files with others, you should be aware that the [proven
 
 FieldTrip keeps track of the analyses in the `data.cfg.previous` field. This is something you can exploit using **[ft_analysispipeline](https://github.com/fieldtrip/fieldtrip/blob/release/ft_analysispipeline.m)** to look up details of the processing that you might not be able to find in your analysis scripts any more.
 
-However, the consequence might also be that original file name are present which might identify the subject (e.g., after calling `ft_prepare_headmodel`, the input volume is saved in `vol.cfg.previous`). You can use the **[ft_anonymizedata](https://github.com/fieldtrip/fieldtrip/blob/release/ft_anonymizedata.m)** function to scrub the provenance from unwanted information.
+However, the consequence might also be that original file name are present which might identify the subject. For example, after calling **[ft_prepare_headmodel](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_headmodel.m)** the provenance of the input data is saved in the output `headmodel.cfg.previous`). You can use the **[ft_anonymizedata](https://github.com/fieldtrip/fieldtrip/blob/release/ft_anonymizedata.m)** function to scrub unwanted information from the provenance.
 
 Better is not to use the subject's name, date of birth or other identifying information as the filename if you acquire the data. If you - or the person from whom you received the data - nevertheless did use identifying information in the file name: the earlier you rename it, the better. Have a look here to learn [how to rename and anonymize a CTF dataset](/faq/how_can_i_anonymize_a_ctf_dataset), i.e. the `.ds` directory with all files in it.
 
@@ -20,7 +20,7 @@ Furthermore, depending on how strict you want to be, the date at which a subject
 {% include markup/info %}
 In the [Human Connectome Project](http://www.humanconnectome.org) (HCP) we decided that the date at which the subject was scanned (i.e. date of acquisition) should not be revealed, as it would mean that not only the participant him/herself, but potentially also family members, friends and other people that were informed about the subject participating would be able to identify the individual subject in the database. This is one of the reasons for releasing subjects in the HCP in larger batches and not continuously.
 
-You may want to review some of the [elements](http://www.humanconnectome.org/data/data-use-terms/restricted-data-reference.html) of the HCP related to the gradual sensitivity of human data and the [data use terms](http://www.humanconnectome.org/data/data-use-terms/) for the open and restricted access elements of the HCP data.
+You may want to review the [elements](http://www.humanconnectome.org/data/data-use-terms/restricted-data-reference.html) of the HCP related to the gradual sensitivity of human data and the [data use terms](http://www.humanconnectome.org/data/data-use-terms/) for the open and restricted access elements of the HCP data.
 
-Note that the important difference between e.g. the [Creative Commons](http://creativecommons.org/licenses/) licenses and the data use terms that were designed for the HCP is that the latter ones explicitly deal with the possibility of identifying subjects.
+Note that the important difference between e.g. the [Creative Commons](http://creativecommons.org/licenses/) licenses and the data use terms that were designed for the HCP is that the latter ones explicitly deal with identifying the data subjects.
 {% include markup/end %}
