@@ -1,6 +1,6 @@
 ---
 title: Converting an example EEG dataset for sharing in BIDS
-tags: [example, bids, sharing, anonymize]
+tags: [example, bids, sharing]
 ---
 
 # Converting an example EEG dataset for sharing in BIDS
