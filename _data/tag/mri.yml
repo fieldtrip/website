@@ -31,7 +31,7 @@
 - name:  How can I anonymize or deidentify an anatomical MRI?
   link:  /faq/how_can_i_anonymize_an_anatomical_mri
 
-- name:  How can I anonymize DICOM files?
+- name:  How can I anonymize or deidentify DICOM files?
   link:  /faq/how_can_i_anonymize_dicom_files
 
 - name:  How can I convert an anatomical MRI from DICOM into CTF format?
