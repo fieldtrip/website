@@ -76,6 +76,9 @@
 - name:  How are the various MATLAB data structures defined?
   link:  /faq/how_are_the_various_data_structures_defined
 
+- name:  How can I anonymize or deidentify a BrainVision dataset?
+  link:  /faq/how_can_i_anonymize_a_brainvision_dataset
+
 - name:  How can I anonymize or deidentify a CTF dataset?
   link:  /faq/how_can_i_anonymize_a_ctf_dataset
 
