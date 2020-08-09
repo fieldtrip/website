@@ -1,4 +1,10 @@
-<form method="get" action="http://www.google.com/search" target="_blank">
-  Search the website<input type="hidden" name="sitesearch" value="www.fieldtriptoolbox.org" />
-  <input type="text" name="q" maxlength="255" placeholder="Search using Google" />
-</form>
+<div id="searchwebsite">
+<p><em>External content is disabled.</em></p>
+</div>
+
+<script>
+if(readCookie('allow-external-cookies')=='true') {
+  let elem = document.getElementById('searchwebsite');
+  elem.innerHTML = '<form method="get" action="http://www.google.com/search" target="_blank">Search the website<input type="hidden" name="sitesearch" value="www.fieldtriptoolbox.org" /><input type="text" name="q" maxlength="255" placeholder="Search using Google" /></form>'
+  }
+</script>

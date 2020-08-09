@@ -1,1 +1,10 @@
-<iframe width="500" height="281" src="https://www.youtube.com/embed/{{ include.id }}" frameborder="0" allowfullscreen></iframe>
+<div id="youtube">
+<p><em>External content is disabled.</em></p>
+</div>
+
+<script>
+if(readCookie('allow-external-cookies')=='true') {
+  let elem = document.getElementById('youtube');
+  elem.innerHTML = '<iframe width="500" height="281" src="https://www.youtube.com/embed/{{ include.id }}" frameborder="0" allowfullscreen></iframe>'
+}
+</script>

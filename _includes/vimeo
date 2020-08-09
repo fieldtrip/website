@@ -1,1 +1,10 @@
-<iframe width="500" height="281" src="https://player.vimeo.com/video/{{ include.id }}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<div id="vimeo">
+<p><em>External content is disabled.</em></p>
+</div>
+
+<script>
+if(readCookie('allow-external-cookies')=='true') {
+  let elem = document.getElementById('vimeo');
+  elem.innerHTML = '<iframe width="500" height="281" src="https://player.vimeo.com/video/{{ include.id }}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>'
+}
+</script>
