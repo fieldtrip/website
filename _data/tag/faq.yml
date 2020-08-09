@@ -406,9 +406,6 @@
 - name:  The databrowser crashes and destroys the whole MATLAB session, how can I resolve this?
   link:  /faq/the_databrowser_crashes_and_destroys_the_whole_matlab_session_how_can_i_resolve_this
 
-- name:  What usage information is FieldTrip tracking?
-  link:  /faq/tracking
-
 - name:  How can I check or decipher the sequence of triggers in my data?
   link:  /faq/triggers
 
