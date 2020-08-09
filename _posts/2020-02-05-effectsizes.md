@@ -1,6 +1,6 @@
 ---
 title: 05 February, 2020 - Computing and reporting effect sizes example script
-categories: [news]
+categories: []
 ---
 
 ### 05 February, 2020
