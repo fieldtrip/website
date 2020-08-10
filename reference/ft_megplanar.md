@@ -33,7 +33,7 @@ title: ft_megplanar
    cfg.spheremesh  = number of dipoles in the source layer (default = 642)
    cfg.tolerance   = tolerance ratio for leadfield matrix inverse based on a truncated svd,
                      reflects the relative magnitude of the largest singular value
-                     to retain (default =s 1e-3)
+                     to retain (default = 1e-3)
    cfg.headshape   = a filename containing headshape, a structure containing a
                      single triangulated boundary, or a Nx3 matrix with surface
                      points

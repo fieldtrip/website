@@ -20,7 +20,7 @@ title: ft_laggedcoherence
    cfg.numcycles = integer, number of cycles of the Fourier basis functions that
                    are used to calculate the Fourier coefficients that are the
                    basis for calculating lagged coherence
- 
+
 
  When using the results of this function in a publication, please cite:
    Fransen, A. M., van Ede, F., & Maris, E. (2015). Identifying neuronal

@@ -53,7 +53,7 @@ A detailed description of each function is available in the [reference documenta
 **cfg.anaparameter** - [ft_sourceplot](/reference/ft_sourceplot)  
 
 
-**cfg.anonimize** - [ft_audiovideobrowser](/reference/ft_audiovideobrowser)  
+**cfg.anonymize** - [ft_audiovideobrowser](/reference/ft_audiovideobrowser)  
 
 
 **cfg.appenddim** - [ft_appendfreq](/reference/ft_appendfreq), [ft_appendtimelock](/reference/ft_appendtimelock)  
