@@ -27,12 +27,18 @@ If you do not allow third party cookies and scripts to be used on this website, 
 
 <p><button name="button" onclick="eraseCookie('allow-external-cookies');location.reload()" class="btn btn-primary btn-sm">Reset cookie permission</button></p>
 
-## How we process your personal data when using the FieldTrip toolbox
+## How we process your personal data when you download the FieldTrip toolbox
+
+You can download FieldTrip from an FTP server that is hosted on a server of the Donders Centre for Cognitive Neuroimaging, Radboud University Nijmegen. The FTP server allows anonymous logins, it tracks the downloads and IP addresses for technical and security reasons, but does not retain information about individual users. We do store the information that you provide in the download form. Note that you are not required to use the download form, you can also go to the FTP server directly.
+
+Alternatively, you can download and contribute to FieldTrip from GitHub, which is an external service. The processing of your data by GitHub is explained in its [privacy policy](https://github.com/site/privacy).
+
+## How we process your personal data when you use the FieldTrip toolbox
 
 The FieldTrip toolbox itself includes the **[ft_trackusage](https://github.com/fieldtrip/fieldtrip/blob/release/utilities/ft_trackusage.m)** function. This function is called once in every new MATLAB session from within **[ft_defaults](https://github.com/fieldtrip/fieldtrip/blob/release/ft_defaults.m)** at the moment that you start using the first high-level FieldTrip function. The first time ever that you start FieldTrip, you will see a warning message in your MATLAB command window about this.
 
 The reason for tracking is to gather information about the number of users, how often FieldTrip is used, which versions of FieldTrip are used, and which versions of MATLAB are used. This information helps us in deciding where to focus our attention in continued development. Furthermore, this information is used to inform our funding sources about the success. We do not store any directly identifyable information about your login name or computer name, but encrypt it with a [random salt](https://en.wikipedia.org/wiki/Salt_(cryptography)) that is unique to your computer and not shared with us.
- 
+
 You can disable usage tracking at startup by specifying
 
     global ft_default
@@ -45,9 +51,3 @@ prior to calling **[ft_defaults](https://github.com/fieldtrip/fieldtrip/blob/rel
     save(fullfile(prefdir, 'fieldtripprefs.mat'), '-struct', 'prefs')
 
 You can also store other global defaults this way: the content of the `fieldtripprefs.mat` file is merged with the global `ft_default` variable, which in turn is merged with the `cfg` variable that each high-level FieldTrip function uses.
-
-## How we process your personal data when you download the FieldTrip toolbox
-
-You can download FieldTrip from an FTP server that is hosted on a server of the Donders Centre for Cognitive Neuroimaging, Radboud University Nijmegen. The FTP server allows anonymous logins, it tracks the downloads and IP addresses for technical and security reasons, but does not retain information about individual users. We do store the information that you provide in the download form. Note that you are not required to use the download form, you can also go to the FTP server directly.
-
-Alternatively, you can download and contribute to FieldTrip from GitHub, which is an external service. The processing of your data by GitHub is explained in its [privacy policy](https://github.com/site/privacy).
