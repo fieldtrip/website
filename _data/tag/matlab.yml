@@ -19,7 +19,7 @@
 - name:  How fast is the FieldTrip buffer for realtime data streaming?
   link:  /faq/how_fast_is_the_fieldtrip_buffer_for_realtime_data_streaming
 
-- name:  MATLAB complains about a missing or invalid MEX file, what should I do?
+- name:  MATLAB complains about a missing or invalid mex file, what should I do?
   link:  /faq/matlab_complains_about_a_missing_or_invalid_mex_file_what_should_i_do
 
 - name:  Replacements for functions from MathWorks toolboxes
