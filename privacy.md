@@ -19,7 +19,7 @@ If you approve third party cookies and scripts, this website will use custom Goo
 
 ### External analytical cookies
 
-If you approve third party cookies and scripts, this website will use Google Analytics to track website usage. Nevertheless, we have taken all actions we can to limit the power of Google: we have configured Google Analytics to anonymize IP addresses, use SSL, not to track you over multiple devices, and not to use your information for targetted marketing.
+If you approve third party cookies and scripts, this website will use Google Analytics to track website usage. Nevertheless, we have taken all actions we can to limit the power of Google: we have configured Google Analytics to anonymize IP addresses, not to track you over multiple devices, and not to use your information for targetted marketing.
 
 ### Reset the permission for third party cookies and scripts
 
