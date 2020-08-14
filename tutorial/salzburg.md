@@ -16,8 +16,6 @@ The data in this tutorial has been acquired with 148 sensor magnetometer system 
 
 ## Procedure
 
-FIXME add list when completed
-
 ### Loading the data
 
 In the following section we will read and epoch the data. Subsequently we will apply some processing steps, e.g. rejecting bad trials by visual inspection and decomposing the data by means of independent component analysis. The late step will allow us to disregard data components likely reflective for cardiac and ocular activity.
