@@ -235,8 +235,3 @@ Related projects on electrophysiology (EEG, MEG) data I/O are
 - [NeuroShare](http://www.neuroshare.org/)
 - [EEG toolbox](http://eeg.sourceforge.net/)
 - [FIFF access](http://ltl.tkk.fi/~kuutela/meg-pd/)
-
-Lists of EEG and MEG file formats can be found here
-
-- <http://www.eemagine.com/fileformats.htm>
-- <http://bci.tugraz.at/~schloegl/biosig/TESTED>
