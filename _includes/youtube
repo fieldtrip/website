@@ -1,4 +1,4 @@
-<div id="youtube">
+<div id="youtube-{{ include.id }}">
 <p><em>External content is disabled due to cookie settings.</em></p>
 </div>
 
