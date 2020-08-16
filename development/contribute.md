@@ -19,7 +19,7 @@ You can provide us with [detailed bug reports](/development/issues). The easier 
 
 ## Contribute code
 
-You can share your MATLAB code with us and help us to integrate it into the FieldTrip toolbox. We use [git and GitHub](/development/git) to manage the code. On the [development section of this website](/development) you can find more details on how the project and code are organized. You can of course also [ask](/contact).
+You can share your MATLAB code with us and help us to integrate it into the FieldTrip toolbox. We use [git and GitHub](/development/git) to manage the code. On the [development section of this website](/development) you can find more details on how the project and code are organized. You can of course also [ask](/support).
 
 If your contribution is considerable, for example a completely new algorithm, there are some additional requirements: your code contribution must be in FieldTrip style, the algorithm must be of broad interest (i.e. more than a single lab), must be maintainable and must be documented not only with help in the code, but also on the website as a tutorial or as example script.
 
