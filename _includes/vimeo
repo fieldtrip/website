@@ -4,7 +4,7 @@
 
 <script>
 if(readCookie('allow-external-cookies')=='true') {
-  let elem = document.getElementById('vimeo');
+  let elem = document.getElementById('vimeo-{{ include.id }}');
   elem.innerHTML = '<iframe width="500" height="281" src="https://player.vimeo.com/video/{{ include.id }}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>'
 }
 </script>
