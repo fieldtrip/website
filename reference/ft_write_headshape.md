@@ -21,7 +21,7 @@ title: ft_write_headshape
  Optional input arguments should be specified as key-value pairs and
  can include
    'data'        = data matrix, size(1) should be number of vertices
-   'unit'        = string, e.g. 'mm'
+   'unit'        = string, desired units for the data on disk, for example 'mm'
 
  Supported output formats are
    'mne_tri'		MNE surface desciption in ascii format

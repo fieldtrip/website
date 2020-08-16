@@ -1428,6 +1428,9 @@ A detailed description of each function is available in the [reference documenta
 **cfg.interactive** - [ft_audiovideobrowser](/reference/ft_audiovideobrowser), [ft_movieplotTFR](/reference/ft_movieplotTFR), [ft_multiplotER](/reference/ft_multiplotER), [ft_multiplotTFR](/reference/ft_multiplotTFR), [ft_singleplotER](/reference/ft_singleplotER), [ft_singleplotTFR](/reference/ft_singleplotTFR), [ft_sliceinterp](/reference/ft_sliceinterp), [ft_spike_plot_raster](/reference/ft_spike_plot_raster), [ft_spikedetection](/reference/ft_spikedetection), [ft_topoplotER](/reference/ft_topoplotER), [ft_topoplotTFR](/reference/ft_topoplotTFR)  
 
 
+**cfg.intermediatename** - [ft_volumenormalise](/reference/ft_volumenormalise)  
+
+
 **cfg.interplimits** - [ft_topoplotER](/reference/ft_topoplotER), [ft_topoplotIC](/reference/ft_topoplotIC), [ft_topoplotTFR](/reference/ft_topoplotTFR)  
 
 
@@ -1492,7 +1495,10 @@ A detailed description of each function is available in the [reference documenta
 **cfg.keepindividual** - [ft_freqgrandaverage](/reference/ft_freqgrandaverage), [ft_sourcegrandaverage](/reference/ft_sourcegrandaverage), [ft_timelockgrandaverage](/reference/ft_timelockgrandaverage)  
 
 
-**cfg.keepinside** - [ft_volumedownsample](/reference/ft_volumedownsample)  
+**cfg.keepinside** - [ft_volumedownsample](/reference/ft_volumedownsample), [ft_volumenormalise](/reference/ft_volumenormalise)  
+
+
+**cfg.keepintermediate** - [ft_volumenormalise](/reference/ft_volumenormalise)  
 
 
 **cfg.keepleadfield** - [ft_sourceanalysis](/reference/ft_sourceanalysis)  
@@ -2729,7 +2735,10 @@ A detailed description of each function is available in the [reference documenta
 **cfg.spm.tol** - [ft_volumerealign](/reference/ft_volumerealign)  
 
 
-**cfg.spmmethod** - [ft_volumesegment](/reference/ft_volumesegment)  
+**cfg.spmmethod** - [ft_volumenormalise](/reference/ft_volumenormalise), [ft_volumesegment](/reference/ft_volumesegment)  
+
+
+**cfg.spmparams** - [ft_volumenormalise](/reference/ft_volumenormalise)  
 
 
 **cfg.spmversion** - [ft_prepare_mesh](/reference/ft_prepare_mesh), [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel), [ft_volumebiascorrect](/reference/ft_volumebiascorrect), [ft_volumedownsample](/reference/ft_volumedownsample), [ft_volumenormalise](/reference/ft_volumenormalise), [ft_volumerealign](/reference/ft_volumerealign), [ft_volumesegment](/reference/ft_volumesegment)  
@@ -2893,6 +2902,9 @@ A detailed description of each function is available in the [reference documenta
 **cfg.template.mri** - [ft_interactiverealign](/reference/ft_interactiverealign)  
 
 
+**cfg.templatecoordsys** - [ft_volumenormalise](/reference/ft_volumenormalise)  
+
+
 **cfg.testtrials** - [ft_denoise_tsr](/reference/ft_denoise_tsr)  
 
 
@@ -2959,7 +2971,7 @@ A detailed description of each function is available in the [reference documenta
 **cfg.topplotsize** - [ft_spike_plot_raster](/reference/ft_spike_plot_raster)  
 
 
-**cfg.tpm** - [ft_volumesegment](/reference/ft_volumesegment)  
+**cfg.tpm** - [ft_volumenormalise](/reference/ft_volumenormalise), [ft_volumesegment](/reference/ft_volumesegment)  
 
 
 **cfg.transform** - [ft_prepare_headmodel](/reference/ft_prepare_headmodel)  
@@ -3092,9 +3104,6 @@ A detailed description of each function is available in the [reference documenta
 
 
 **cfg.warp** - [ft_electroderealign](/reference/ft_electroderealign), [ft_electroderealign](/reference/ft_electroderealign), [ft_electroderealign](/reference/ft_electroderealign)  
-
-
-**cfg.warpmni** - [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)  
 
 
 **cfg.weight** - [ft_prepare_leadfield](/reference/ft_prepare_leadfield), [ft_sourceanalysis](/reference/ft_sourceanalysis)  

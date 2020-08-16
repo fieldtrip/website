@@ -48,7 +48,6 @@ title: ft_prepare_sourcemodel
  inversely warped from MNI coordinates to the individual subjects MRI.
  It uses the following configuration options:
    cfg.mri             = structure with anatomical MRI model or filename, see FT_READ_MRI
-   cfg.warpmni         = 'yes'
    cfg.nonlinear       = 'no' (or 'yes'), use non-linear normalization
    cfg.resolution      = number (e.g. 6) of the resolution of the template MNI grid, defined in mm
    cfg.template        = specification of a template sourcemodel as structure, or the filename of a template sourcemodel (defined in MNI space)
@@ -70,11 +69,11 @@ title: ft_prepare_sourcemodel
  Other configuration options include
    cfg.unit            = string, can be 'mm', 'cm', 'm' (default is automatic)
    cfg.tight           = 'yes' or 'no' (default is automatic)
-   cfg.inwardshift     = number, amount to shift the innermost surface of the headmodel inward when determining 
+   cfg.inwardshift     = number, amount to shift the innermost surface of the headmodel inward when determining
                          whether sources are inside or outside the source compartment (default = 0)
    cfg.moveinward      = number, amount to move sources inward to ensure a certain minimal distance to the innermost
                          surface of the headmodel (default = 0)
-   cfg.movetocentroids = 'yes' or 'no', move the dipoles to the centroids of the hexahedral 
+   cfg.movetocentroids = 'yes' or 'no', move the dipoles to the centroids of the hexahedral
                          or tetrahedral mesh (default = 'no')
    cfg.spherify        = 'yes' or 'no', scale the source model so that it fits inside a sperical
                          volume conduction model (default = 'no')

@@ -33,7 +33,8 @@ title: ft_checkconfig
  Optional input arguments should be specified as key-value pairs and can include
    renamed         = {'old',  'new'}        % list the old and new option
    renamedval      = {'opt',  'old', 'new'} % list option and old and new value
-   allowedval      = {'opt', 'allowed1'...} % list of allowed values for a particular option, anything else will throw an error
+   allowedtype     = {'opt', 'allowed1', ...} % list of allowed data type classes for a particular option, anything else will throw an error
+   allowedval      = {'opt', 'allowed1', ...} % list of allowed values for a particular option, anything else will throw an error
    required        = {'opt1', 'opt2', etc.} % list the required options
    allowed         = {'opt1', 'opt2', etc.} % list the allowed options, all other options are forbidden
    forbidden       = {'opt1', 'opt2', etc.} % list the forbidden options, these result in an error
@@ -46,5 +47,5 @@ title: ft_checkconfig
    checksize       = 'yes', 'no'            % remove large fields from the cfg
    trackconfig     = 'on', 'off'            % start/end config tracking
 
- See also FT_CHECKDATA, FT_DEFAULTS
+ See also FT_CHECKDATA, FT_CHECKOPT, FT_DEFAULTS
 ```

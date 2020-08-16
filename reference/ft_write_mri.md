@@ -6,16 +6,17 @@ title: ft_write_mri
  MRI to a file.
 
  Use as
-   ft_write_mri(filename, img, ...)
- where img represents the 3-D array with image values.
-
- The specified filename can already contain the filename extention, but that is not
- required since it will be added automatically.
+   ft_write_mri(filename, dat, ...)
+ where the input argument dat represents the 3-D array with the values.
 
  Additional options should be specified in key-value pairs and can be
    'dataformat'   = string, see below
-   'transform'    = transformation matrix, specifying the transformation from voxel coordinates to head coordinates
+   'transform'    = 4x4 homogenous transformation matrix, specifying the transformation from voxel coordinates to head coordinates
+   'unit'         = string, desired units for the image data on disk, for example 'mm'
    'spmversion'   = version of SPM to be used, in case data needs to be written in analyze format
+
+ The specified filename can already contain the filename extention, but that is not
+ required since it will be added automatically.
 
  The supported dataformats are
    'analyze'
