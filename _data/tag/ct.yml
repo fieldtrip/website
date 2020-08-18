@@ -85,6 +85,9 @@
 - name:  How does the filter padding in preprocessing work?
   link:  /faq/how_does_the_filter_padding_in_preprocessing_work
 
+- name:  How should I report the positions of the fiducial points on the head?
+  link:  /faq/how_should_i_report_the_positions_of_the_fiducial_points_on_the_head
+
 - name:  I am getting strange artifacts in figures that use opacity
   link:  /faq/i_am_getting_strange_artifacts_in_figures_that_use_opacity
 

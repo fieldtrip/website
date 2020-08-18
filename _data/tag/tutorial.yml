@@ -118,6 +118,9 @@
 - name:  Creating a sourcemodel for source-reconstruction of MEG or EEG data
   link:  /tutorial/sourcemodel
 
+- name:  Preprocessing and analysis of spike-train data
+  link:  /tutorial/spike
+
 - name:  Preprocessing and analysis of spike and local field potential data
   link:  /tutorial/spikefield
 
