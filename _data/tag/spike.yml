@@ -28,6 +28,9 @@
 - name:  Introduction to the FieldTrip toolbox
   link:  /tutorial/introduction
 
+- name:  Preprocessing and analysis of spike-train data
+  link:  /tutorial/spike
+
 - name:  Preprocessing and analysis of spike and local field potential data
   link:  /tutorial/spikefield
 

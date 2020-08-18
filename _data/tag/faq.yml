@@ -298,6 +298,9 @@
 - name:  How should I refer to FieldTrip in my publication?
   link:  /faq/how_should_i_refer_to_fieldtrip_in_my_publication
 
+- name:  How should I report the positions of the fiducial points on the head?
+  link:  /faq/how_should_i_report_the_positions_of_the_fiducial_points_on_the_head
+
 - name:  How should I share example data with the email list or developers?
   link:  /faq/how_should_i_send_example_data_to_the_developers
 
