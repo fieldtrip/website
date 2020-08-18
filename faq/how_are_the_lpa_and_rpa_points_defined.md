@@ -17,13 +17,13 @@ The approximate position of the pre-auriciular point is indicated in the figure 
 
 The problem with using the LPA and RPA according to this definition is that it can be really difficult to localize them precisely on the anatomical MRI. Mislocalization of these points can lead to severe misregistration between the MRI and MEG/EEG, and consequently affect the accuracy of source localization.
 
-{% include markup/danger %}
-Regardless of which convention you use for the points representing the left and right ear landmarks, you have to be aware of it and use it consistently throughout.
+{% include markup/info %}
+Because of the challenge of localizing the LPA and RPA points when doing EEG or MEG measurements, in the anatomical MRI, and in 3D surface scans, various labs around the world have adopted slightly different conventions. These are discussed in more detail in the FAQ on [how to report the positions of the fiducial points on the head](/faq/how_should_i_report_the_positions_of_the_fiducial_points_on_the_head).
 {% include markup/end %}
 
-Because of the difficulty of localizing the LPA and RPA points in both EEG/MEG and in the anatomical MRI, various labs have adopted slightly different conventions for the fiducial points for the ears. Some labs use the junction between the tragus and the helix, marked with the red dot in the figure of the ear above, which can be located more precisely both anatomically and on the MRI slices. Other possibilities that are less frequently used are the tip of the tragus, the ear lobe or the [mastoid](http://en.wikipedia.org/wiki/Mastoid).
+## The LPA/RPA in the Donders MEG and MRI labs
 
-At the Donders Centre in Nijmegen we use ear molds with a hole in them (see below) to attach the markers: In the MEG scanner we insert a small tube into the hole (the tube is also used for auditory stimulation) and attach the MEG localizer coil to the tube. In the MRI scanner we use the same ear molds, but rather insert a custom-made marker with a small drop of vitamine E into the hole. The position thereby obtained with the MEG localizer coils is as precisely as possible reproduced in the MRI, given the movement that is allowed by the ear molds. We have various sizes of ear molds, both at the MEG and MRI scanner, and subjects should use the same size in both scanners.
+At the Donders Centre in Nijmegen we use silicone ear molds with a hole in them (see below) to attach the markers: In the MEG scanner we insert a small tube into the hole (the tube is also used for auditory stimulation) and attach the MEG localizer coil to the tube. In the MRI scanner we use the same ear molds, but rather insert a custom-made marker with a small drop of vitamine E into the hole. The position thereby obtained with the MEG localizer coils is as precisely as possible reproduced in the MRI, given the movement that is allowed by the ear molds. We have various sizes of ear molds, both at the MEG and MRI scanner, and subjects should use the same size in both scanners.
 
 {% include image src="/assets/img/faq/how_are_the_lpa_and_rpa_points_defined/ear_molds_1.jpg" width="200" %}
 
@@ -38,4 +38,4 @@ Note that for the [nasion](http://en.wikipedia.org/wiki/Nasion), where at the Do
 ## See also
 
 - BrainStorm documentation on [coordinate systems](http://neuroimage.usc.edu/brainstorm/CoordinateSystems)
-- http://www.proplugs.com for the ear molds we use at the Donders Centre
+- <http://www.proplugs.com> for the ear molds we use at the Donders Centre

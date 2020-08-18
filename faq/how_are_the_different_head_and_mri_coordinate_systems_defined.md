@@ -1,6 +1,6 @@
 ---
 title: How are the different head and MRI coordinate systems defined?
-tags: [faq, headmodel, mri, source, coordinate]
+tags: [faq, headmodel, mri, source, fiducial, coordinate]
 ---
 
 # How are the different head and MRI coordinate systems defined?
