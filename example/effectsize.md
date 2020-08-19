@@ -437,3 +437,7 @@ The effect size for the data averaged in the circumscribed rectangle is 1.43.
 Following some discussion in the MEG lab meeting at the DCCN, we think that both the effect size for the circumscribed rectangle _and_ the size of the maximum effect are interesting to report. Usually the first will give a conservative **lower bound** on the effect size, whereas the second gives an **upper bound** on the effect size.  Furthermore, for both it is easy to report the area or location (in channels and time and/or frequency).
 
 Regardless of _how_ you compute the effect size that you report: as long as you compute and report the effect size, plus some details that help the reader interpret the effect size and use it in building upon your work, you are contributing to making science better and more reproducible!
+
+## See also
+
+- There is an interesting crowdsourced document on [Effect size, confidence intervals, and power analyses](https://docs.google.com/document/d/1_vNjPCI7H52T8tav1reYgWx6puMT03JZVY1wvEPHrWU/edit) with practical guidance
