@@ -71,4 +71,5 @@ title: ft_filetype
   - MAUS *.TextGrid
   - Neurodata Without Borders *.nwb
   - PhysioNet *.hea and *.dat
+  - NIRx *.tpl, *.wl1 and *.wl2
 ```
