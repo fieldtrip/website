@@ -358,9 +358,9 @@ The field isih.isi contains the isi per spike (w.r.t the previous spike) and con
 
 This gives two figures, one with a longer refractory period (the narrow spiking cell; top), and one with a bursting pattern (the broad spiking cell; bottom)
 
-{% include image src="/assets/img/tutorial/spike/isi_sig002a_wf.png" width="300" %}
+{% include image src="/assets/img/tutorial/spike/isi_sig002a_wf.png" width="500" %}
 
-{% include image src="/assets/img/tutorial/spike/isi_sig003a_wf.png" width="300" %}
+{% include image src="/assets/img/tutorial/spike/isi_sig003a_wf.png" width="500" %}
 
 We also read in an additional dataset consisting of an M-clust .t file, that can be found at
 [ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/spike/tt6_7.t](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/spike/tt6_7.t)
@@ -391,7 +391,7 @@ We also read in an additional dataset consisting of an M-clust .t file, that can
     cfg.colormap    = jet(300);
     figure, ft_spike_plot_isireturn(cfg,isih)
 
-{% include image src="/assets/img/tutorial/spike/isica1_example.png" width="300" %}
+{% include image src="/assets/img/tutorial/spike/isica1_example.png" width="600" %}
 
 This plot shows that after a burst, either a new burst follows, or a long waiting period on the order of a theta cycle (100 ms).
 
@@ -442,7 +442,7 @@ A raster plot with psth is obtained by running
     cfg.interactive  = 'no'; % toggle off interactive mode
     figure, ft_spike_plot_raster(cfg,spikeTrials, psth)
 
-{% include image src="/assets/img/tutorial/spike/psth_example3.png" width="300" %}
+{% include image src="/assets/img/tutorial/spike/psth_example3.png" width="600" %}
 
 The yellow lines in the raster plot indicate the trial borders. Configuration options are available to control spike length and width, and size of the raster relative to the summarizing PSTH / spike density data. Also, multiple neurons are plotted with different colors. This can also be used to plot multiple conditions at the same time.
 
@@ -461,7 +461,7 @@ We then run spike-density functions on the spike trains, to obtain spike density
     cfg.interactive  = 'no'; % toggle off interactive mode
     figure, ft_spike_plot_raster(cfg,spikeTrials, sdf)
 
-{% include image src="/assets/img/tutorial/spike/sdf_example.png" width="300" %}
+{% include image src="/assets/img/tutorial/spike/sdf_example.png" width="600" %}
 
 The output from **[ft_spikedensity](https://github.com/fieldtrip/fieldtrip/blob/release/ft_spikedensity.m)** is again a timelock structure. A second output can be obtained from **[ft_spikedensity](https://github.com/fieldtrip/fieldtrip/blob/release/ft_spikedensity.m)**, containing the estimated spike densities per trial in a continuous raw data structure. To this end, do:
 
