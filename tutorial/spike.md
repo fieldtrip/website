@@ -110,7 +110,7 @@ The resulting wave structure has the following content
         dimord: 'chan_lead_time'
            cfg: [1x1 struct]
 
-and the structure spikeCleaned contains fewer spikes than originally now. In addition, the individual waveforms have been aligne
+and the structure spikeCleaned contains fewer spikes than originally now. In addition, the individual waveforms have been aligned:
 
     spikeCleaned =
 
@@ -263,7 +263,7 @@ The field spikeTrials.cfg.trl tells us what the start and ends of the trials was
 The advantage of the spike structure is that it is very memory efficient as compared to e.g. a binary (zeros and integers) format, and that data from hundreds of neurons can easily be stored in this structure. For many functions, e.g. PSTHs, raster-plots and cross-correlations, it is also the most natural format to perform computations. Furthermore, the format makes it easy to associate certain data with single spikes, for example spike-triggered LFP spectra and waveform information.
 
 It is also possible to create only one trial. This is useful for two reasons. First of all, we explicitly convert timestamps to time. Secondly, we can correct for the fact the first recorded timestamp often does not start at zero (for example, with Neuralynx data).
-In this case, the first recorded timestamp does correspond to zero. To this end, we run
+In this case, the first recorded timestamp does correspond to zero. To this end, we run:
 
     cfg                     = [];
     hdr                     = ft_read_header('p029_sort_final_01.nex');
@@ -290,7 +290,7 @@ Now, all spike_notrials.trial{i} are set to ones, and all spike times (spike_not
 
 ### Converting spike structure to continuous raw format and back
 
-For some analyses, it may be desired to have the data in binary format. The spike structure can be converted to a continuous binary raw format (see **[ft_datatype_raw](https://github.com/fieldtrip/fieldtrip/blob/release/utilities/ft_datatype_raw.m)**) by using
+For some analyses, it may be desired to have the data in binary format. The spike structure can be converted to a continuous binary raw format (see **[ft_datatype_raw](https://github.com/fieldtrip/fieldtrip/blob/release/utilities/ft_datatype_raw.m)**) by using:
 
     dat = ft_checkdata(spikeTrials,'datatype', 'raw', 'fsample', 1000)
 
@@ -343,7 +343,7 @@ The resulting structure isih has the following content
         coeffvar: [1.6898 1.1453]
              cfg: [1x1 struct]
 
-The field isih.isi contains the isi per spike (w.r.t the previous spike) and contains NaNs at the beginning of the trials. The field isih.avg contains the average isi histogram per unit, and isih.coeffvar the computed parameter summarizing the statistics of the isi histogram (e.g. see Shinomoto et al., 2009) .We then plot the isi histogram (which can be plotted alone using **[ft_spike_plot_isi](https://github.com/fieldtrip/fieldtrip/blob/release/ft_spike_plot_isi.m)**) together with the isi (Poincare) return plot, which plots the current isi(n) against the next isi(n+1), thereby giving insight into the second order statistics of the isi distributio
+The field isih.isi contains the isi per spike (w.r.t the previous spike) and contains NaNs at the beginning of the trials. The field isih.avg contains the average isi histogram per unit, and isih.coeffvar the computed parameter summarizing the statistics of the isi histogram (e.g. see Shinomoto et al., 2009) .We then plot the isi histogram (which can be plotted alone using **[ft_spike_plot_isi](https://github.com/fieldtrip/fieldtrip/blob/release/ft_spike_plot_isi.m)**) together with the isi (Poincare) return plot, which plots the current isi(n) against the next isi(n+1), thereby giving insight into the second order statistics of the isi distribution:
 
     for k = [1 2] % only do for the single units
       cfg              = [];
@@ -463,7 +463,7 @@ We then run spike-density functions on the spike trains, to obtain spike density
 
 {% include image src="/assets/img/tutorial/spike/sdf_example.png" width="300" %}
 
-The output from **[ft_spikedensity](https://github.com/fieldtrip/fieldtrip/blob/release/ft_spikedensity.m)** is again a timelock structure. A second output can be obtained from **[ft_spikedensity](https://github.com/fieldtrip/fieldtrip/blob/release/ft_spikedensity.m)**, containing the estimated spike densities per trial in a continuous raw data structure. To this end, do
+The output from **[ft_spikedensity](https://github.com/fieldtrip/fieldtrip/blob/release/ft_spikedensity.m)** is again a timelock structure. A second output can be obtained from **[ft_spikedensity](https://github.com/fieldtrip/fieldtrip/blob/release/ft_spikedensity.m)**, containing the estimated spike densities per trial in a continuous raw data structure. To this end, do:
 
     cfg         = [];
     cfg.latency = [-1 3];
