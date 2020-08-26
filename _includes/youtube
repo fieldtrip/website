@@ -1,5 +1,5 @@
 <div id="youtube-{{ include.id }}">
-<p><em>External content, like this YouTube video, is disabled due to your <a href="/privacy">privacy settings</a>.</em></p>
+<p><em>Embedded video is disabled due to your <a href="/privacy">privacy settings</a>, you can find the video on <a href="https://youtu.be/{{ include.id }}">YouTube</a>.".</em></p>
 </div>
 
 <script>

@@ -1,5 +1,5 @@
 <div id="vimeo-{{ include.id }}">
-<p><em>External content, like this Vimeo video, is disabled due to your <a href="/privacy">privacy settings</a>.</em></p>
+<p><em>Embedded video is disabled due to your <a href="/privacy">privacy settings</a>, you can find the video on <a href="https://vimeo.com/{{ include.id }}">Vimeo</a>.".</em></p>
 </div>
 
 <script>
