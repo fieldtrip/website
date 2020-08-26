@@ -629,11 +629,11 @@ We then plot the JPSTH using **[ft_spike_plot_jpsth](https://github.com/fieldtri
 
 giving the normalized jpsth, the shuffle corrected normalized jpsth, and the difference between the two, revealing an increase in synchronization between spike trains that is not due to evoked, joint fluctuations in the firing rate.
 
-{% include image src="/assets/img/tutorial/spike/jpsthraw44.png" width="300" %}
+{% include image src="/assets/img/tutorial/spike/jpsthraw44.png" width="500" %}
 
-{% include image src="/assets/img/tutorial/spike/jpsthshuff44.png" width="300" %}
+{% include image src="/assets/img/tutorial/spike/jpsthshuff44.png" width="500" %}
 
-{% include image src="/assets/img/tutorial/spike/jpsthsubtr44.png" width="300" %}
+{% include image src="/assets/img/tutorial/spike/jpsthsubtr44.png" width="500" %}
 
 ## Summary
 
