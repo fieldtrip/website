@@ -1,0 +1,10 @@
+<div id="latestcommits">
+<p><em>Embedded listing of latest commits is disabled due to your <a href="/privacy">privacy settings</a>, you can find the commits on <a href="https://github.com/fieldtrip/fieldtrip/commits">GitHub</a>.</em></p>
+</div>
+
+<script>
+if(readCookie('allow-external-cookies')=='true') {
+  let elem = document.getElementById('latestcommits');
+  elem.innerHTML = '<iframe width="502" height="252" src="//tylerlh.github.com/github-latest-commits-widget/?username=fieldtrip&repo=fieldtrip&limit=20" frameborder="0"></iframe>'
+}
+</script>
