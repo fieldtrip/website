@@ -26,4 +26,7 @@ To get started with FieldTrip, continue reading the [getting started](/getting_s
 
 ## Recent improvements to the code
 
-All changes to the code can be tracked on [Twitter](http://twitter.com/fieldtriptoolbx) and [GitHub](/development/git).
+All changes to the code can be tracked on [GitHub](/development/git).
+
+{% include latestcommits %}
+
