@@ -16,7 +16,7 @@ title: ft_read_sens
    'coordsys'       = string, 'head' or 'dewar' (default = 'head')
    'coilaccuracy'   = scalar, can be empty or a number (0, 1 or 2) to specify the accuracy (default = [])
 
- The electrode, gradiometer and optode structures are defined in more detail 
+ The electrode, gradiometer and optode structures are defined in more detail
  in FT_DATATYPE_SENS.
 
  Files from the following acquisition systems and analysis platforms file formats

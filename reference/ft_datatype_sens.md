@@ -2,14 +2,16 @@
 title: ft_datatype_sens
 ---
 ```plaintext
- FT_DATATYPE_SENS describes the FieldTrip structure that represents an EEG, ECoG, or
- MEG sensor array. This structure is commonly called "elec" for EEG, "grad" for MEG,
- "opto" for NIRS, or general "sens" for either one.
+ FT_DATATYPE_SENS describes the FieldTrip structure that represents an MEG, EEG,
+ sEEG, ECoG, or NIRS sensor array. This structure is commonly called "grad" for MEG,
+ "elec" for EEG and intranial EEG, "opto" for NIRS, or in general "sens" if it could
+ be any one.
 
  For all sensor types a distinction should be made between the channel (i.e. the
  output of the transducer that is A/D converted) and the sensor, which may have some
- spatial extent. E.g. with EEG you can have a bipolar channel, where the position of
- the channel can be represented as in between the position of the two electrodes.
+ spatial extent. For example in MEG gradiometers are comprised of multiple coils and
+ with EEG you can have a bipolar channel, where the position of the channel can be
+ represented as in between the position of the two electrodes.
 
  The structure for MEG gradiometers and/or magnetometers contains
     sens.label      = Mx1 cell-array with channel labels
@@ -20,9 +22,7 @@ title: ft_datatype_sens
     sens.tra        = MxN matrix to combine coils into channels
     sens.balance    = structure containing info about the balancing, See FT_APPLY_MONTAGE
  and optionally
-    sens.chanposold = Mx3 matrix with original channel positions (in case
-                      sens.chanpos has been updated to contain NaNs, e.g.
-                      after ft_componentanalysis)
+    sens.chanposold = Mx3 matrix with original channel positions (in case sens.chanpos has been updated to contain NaNs, e.g. after FT_COMPONENTANALYSIS)
     sens.chanoriold = Mx3 matrix with original channel orientations
     sens.labelold   = Mx1 cell-array with original channel labels
 
@@ -40,10 +40,8 @@ title: ft_datatype_sens
     sens.optopos       = Nx3 matrix with the position of individual optodes
     sens.optotype      = Nx1 cell-array with information about the type of optode (receiver or transmitter)
     sens.optolabel     = Nx1 cell-array with optode labels
-    sens.transmits     = NxK matrix, boolean, where N is the number of optodes and K the number of wavelengths. Specifies what optode is transmitting at what wavelength (or nothing at all, which indicates that it is a receiver).
     sens.wavelength    = 1xK vector of all wavelengths that were used
-    sens.laserstrength = 1xK vector of the strength of the emitted light of the lasers
-    sens.tra           = MxN matrix, boolean, contains information about how receiver and transmitter are combined to form channels
+    sens.tra           = MxN matrix that specifies for each of the M channels which of the N optodes transmits at which wavelength (positive integer from 1 to K), or receives (negative ingeger from 1 to K)
 
  The following fields apply to MEG, EEG, sEEG and ECoG
     sens.chantype = Mx1 cell-array with the type of the channel, see FT_CHANTYPE
@@ -54,9 +52,12 @@ title: ft_datatype_sens
     sens.fid  = structure with fiducial information
 
  Historical fields:
-    pnt, pos, ori, pnt1, pnt2, fiberpos, fibertype, fiberlabel, transceiver
+    pnt, pos, ori, pnt1, pnt2, fiberpos, fibertype, fiberlabel, transceiver, transmits, laserstrength
 
  Revision history:
+ (2020/latest) Updated the specification of the NIRS sensor definition.
+   Dropped the laserstrength and renamed transmits into tra for consistency.
+
  (2019/latest) Updated the specification of the NIRS sensor definition.
    Use "opto" instead of "fibers", see http://bit.ly/33WaqWU for details.
 
