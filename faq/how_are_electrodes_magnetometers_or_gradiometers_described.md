@@ -46,7 +46,7 @@ MEG forward computations are performed for each `grad.coilpos` and `grad.coilori
 By default a first order gradiometer is described by 2 "coils", but you could use more integration points to get a more accurate forward model (see `cfg.coilaccuracy` in **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)**).
 {% include markup/end %}
 
-## The definition of NIRS sensors
+## The definition of NIRS optodes and channels
 
 Channels in a NIRS acquisition system comprise a pair of transmitting and receiving optodes. Furthermore, each optode is used with multiple wavelengths of the infrared light.
 
