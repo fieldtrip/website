@@ -13,10 +13,10 @@ The Nicolet system was once known as Nervus, launched in 1994/5 by Taugagreining
 
 It is a popular clinical EEG format, especially in the Nordic countries.
 
-The file format has been through some revisions. FieldTrip can read the file format from 2012 through 2020. For older formats, see this repository: https://github.com/janbrogger/NicoletEegImportOld . This requires access to the Nicolet DLLs.
+The file format has been through some revisions. FieldTrip can read the file format from 2012 through 2020. For older formats, see this repository: <https://github.com/janbrogger/NicoletEegImportOld>. This requires access to the Nicolet DLLs.
 
-- Files with the extension .e can be read in by FieldTrip 
-- Older .eeg files probably have the same format with minor changes (from 1994/95 to ca. 2004). 
+- Files with the extension .e can be read in by FieldTrip
+- Older .eeg files probably have the same format with minor changes (from 1994/95 to ca. 2004).
 
 ## Limits
 
@@ -32,7 +32,7 @@ This code also enables EEGLAB users to read the Nicolet file format through the 
     
     % using low-level functions
     hdr = ft_read_header(nicoletfile);
-    data = ft_read_data(nicoletfile, 'header', hdr);
+    dat = ft_read_data(nicoletfile, 'header', hdr);
 
     % using high-level functions (recommended)
     cfg            = [];
@@ -43,4 +43,3 @@ This code also enables EEGLAB users to read the Nicolet file format through the 
 
     cfg.viewmode   = 'vertical';
     ft_databrowser(cfg, data);
-
