@@ -73,50 +73,50 @@ The data is shared by the authors in the form of MATLAB files. Each file contain
     >> nirs
     nirs =
       struct with fields:
-         mrk: [1×1 struct]
-         mnt: [1×1 struct]
-         nfo: [1×1 struct]
-         ch1: [30003×1 double]
-         ch2: [30003×1 double]
-         ch3: [30003×1 double]
-         ch4: [30003×1 double]
-         ch5: [30003×1 double]
-         ch6: [30003×1 double]
-         ch7: [30003×1 double]
-         ch8: [30003×1 double]
-         ch9: [30003×1 double]
-        ch10: [30003×1 double]
-        ch11: [30003×1 double]
-        ch12: [30003×1 double]
-        ch13: [30003×1 double]
-        ch14: [30003×1 double]
-        ch15: [30003×1 double]
-        ch16: [30003×1 double]
-        ch17: [30003×1 double]
-        ch18: [30003×1 double]
-        ch19: [30003×1 double]
-        ch20: [30003×1 double]
-        ch21: [30003×1 double]
-        ch22: [30003×1 double]
-        ch23: [30003×1 double]
-        ch24: [30003×1 double]
-        ch25: [30003×1 double]
-        ch26: [30003×1 double]
-        ch27: [30003×1 double]
-        ch28: [30003×1 double]
-        ch29: [30003×1 double]
-        ch30: [30003×1 double]
-        ch31: [30003×1 double]
-        ch32: [30003×1 double]
-        ch33: [30003×1 double]
-        ch34: [30003×1 double]
-        ch35: [30003×1 double]
-        ch36: [30003×1 double]
-        ch37: [30003×1 double]
-        ch38: [30003×1 double]
-        ch39: [30003×1 double]
-        ch40: [30003×1 double]
-         dat: [1×1 struct]
+         mrk: [1x1 struct]
+         mnt: [1x1 struct]
+         nfo: [1x1 struct]
+         ch1: [30003x1 double]
+         ch2: [30003x1 double]
+         ch3: [30003x1 double]
+         ch4: [30003x1 double]
+         ch5: [30003x1 double]
+         ch6: [30003x1 double]
+         ch7: [30003x1 double]
+         ch8: [30003x1 double]
+         ch9: [30003x1 double]
+        ch10: [30003x1 double]
+        ch11: [30003x1 double]
+        ch12: [30003x1 double]
+        ch13: [30003x1 double]
+        ch14: [30003x1 double]
+        ch15: [30003x1 double]
+        ch16: [30003x1 double]
+        ch17: [30003x1 double]
+        ch18: [30003x1 double]
+        ch19: [30003x1 double]
+        ch20: [30003x1 double]
+        ch21: [30003x1 double]
+        ch22: [30003x1 double]
+        ch23: [30003x1 double]
+        ch24: [30003x1 double]
+        ch25: [30003x1 double]
+        ch26: [30003x1 double]
+        ch27: [30003x1 double]
+        ch28: [30003x1 double]
+        ch29: [30003x1 double]
+        ch30: [30003x1 double]
+        ch31: [30003x1 double]
+        ch32: [30003x1 double]
+        ch33: [30003x1 double]
+        ch34: [30003x1 double]
+        ch35: [30003x1 double]
+        ch36: [30003x1 double]
+        ch37: [30003x1 double]
+        ch38: [30003x1 double]
+        ch39: [30003x1 double]
+        ch40: [30003x1 double]
+         dat: [1x1 struct]
     
 Contrary to the description in the accompanying publication (see table 1 in the PDF manuscript) and in the GitHub repository, the MATLAB files do *not* contain the variables `cntHb`, `clab`, etc. However, it is not so hard to make sense of the data: each channel is represented as a vector, there is header information, there is information about the optode montage, and there is information about the events.
 
@@ -124,12 +124,12 @@ Contrary to the description in the accompanying publication (see table 1 in the 
     ans =
       struct with fields:
                 fs: 13.3333
-              clab: {1×40 cell}
+              clab: {1x40 cell}
                  T: 30003
            nEpochs: 1
             length: 2.2502e+03
             format: 'DOUBLE'
-        resolution: [1×40 double]
+        resolution: [1x40 double]
               file: 'D:\Experimental data\NIRS motor imagery\matdata\fNIRS 01'
            nEvents: 75
           nClasses: 3
@@ -139,22 +139,22 @@ Contrary to the description in the accompanying publication (see table 1 in the 
     >> nirs.mnt
     ans =
      struct with fields:
-                  x: [40×1 double]
-                  y: [40×1 double]
-             pos_3d: [3×40 double]
-               clab: {1×40 cell}
-                box: [2×41 double]
-             box_sz: [2×41 double]
-          scale_box: [2×1 double]
-       scale_box_sz: [2×1 double]
+                  x: [40x1 double]
+                  y: [40x1 double]
+             pos_3d: [3x40 double]
+               clab: {1x40 cell}
+                box: [2x41 double]
+             box_sz: [2x41 double]
+          scale_box: [2x1 double]
+       scale_box_sz: [2x1 double]
 
 
     >> nirs.mrk
     ans =
      struct with fields:
-           event: [1×1 struct]
-            time: [1×75 double]
-               y: [3×75 double]
+           event: [1x1 struct]
+            time: [1x75 double]
+               y: [3x75 double]
        className: {'RIGHT'  'LEFT'  'FOOT'}
 
 
