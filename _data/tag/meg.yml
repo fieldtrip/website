@@ -76,6 +76,9 @@
 - name:  Getting started with Neuromag/Elekta/Megin data
   link:  /getting_started/neuromag
 
+- name:  Getting started with OPM data recorded at the FIL
+  link:  /getting_started/opm_fil
+
 - name:  Getting started with real-time head localization in MEG
   link:  /getting_started/realtime_headlocalizer
 

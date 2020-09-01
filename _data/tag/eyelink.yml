@@ -1,6 +1,6 @@
-- name:  TOBI - Tools for Brain-Computer Interaction
-  link:  /development/realtime/tobi
-
 - name:  Converting an example eyetracker dataset for sharing in BIDS
   link:  /example/bids_eyetracker
+
+- name:  Getting started with SR-Research EyeLink eye-tracker data
+  link:  /getting_started/eyelink
 

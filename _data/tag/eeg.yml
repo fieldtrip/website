@@ -91,6 +91,9 @@
 - name:  Getting started with EDF (European Data Format) data
   link:  /getting_started/edf
 
+- name:  Getting started with EEGLAB
+  link:  /getting_started/eeglab
+
 - name:  Getting started with Philips/EGI data
   link:  /getting_started/egi
 

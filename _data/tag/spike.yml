@@ -16,6 +16,9 @@
 - name:  Getting started with Neuralynx data
   link:  /getting_started/neuralynx
 
+- name:  Getting started with Neuralynx data recorded at the Donders Institute
+  link:  /getting_started/neuralynx_fcdc
+
 - name:  Getting started with Neurodata Without Borders (NWB) data
   link:  /getting_started/nwb
 
