@@ -1,6 +1,6 @@
 ---
 title: Getting started with Neuromag/Elekta/Megin data
-tags: [elekta, neuromag, megin, meg, dataformat]
+tags: [dataformat, neuromag, elekta, megin, meg]
 ---
 
 # Getting started with Neuromag//Megin data

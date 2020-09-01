@@ -1,6 +1,6 @@
 ---
 title: Getting started with CTF data
-tags: [ctf, meg, dataformat]
+tags: [dataformat, ctf, meg]
 ---
 
 # Getting started with CTF data

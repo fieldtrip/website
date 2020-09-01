@@ -1,6 +1,6 @@
 ---
 title: How can I use AnyWave for reviewing continuous data?
-tags: [anywave]
+tags: [dataformat, anywave]
 ---
 
 # How can I use AnyWave for reviewing continuous data?

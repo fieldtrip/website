@@ -1,5 +1,6 @@
 ---
 title: Getting started with SR-Research EyeLink eye-tracker data
+tags: [dataformat, eyelink]
 ---
 
 # Getting started with SR-Research EyeLink eye-tracker data

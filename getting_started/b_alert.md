@@ -1,6 +1,6 @@
 ---
 title: Getting started with ABM's B-Alert EEG data
-tags: [b-alert, balert, abm, x10, x-10, x24, x-24]
+tags: [dataformat, b-alert, balert, abm, x10, x-10, x24, x-24]
 ---
 
 # Getting started with ABM's B-Alert EEG data

@@ -1,5 +1,6 @@
 ---
 title: Getting started with EEGLAB
+tags: [dataformat, eeglab, eeg]
 ---
 
 # Getting started with EEGLAB

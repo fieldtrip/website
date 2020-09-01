@@ -1,6 +1,6 @@
 ---
 title: Getting started with BTi/4D data
-tags: [4d, bti, meg, dataformat]
+tags: [dataformat, 4d, bti, meg]
 ---
 
 # Getting started with BTi/4D data

@@ -1,6 +1,6 @@
 ---
 title: Getting started with Hitachi NIRS data
-tags: [nirs, hitachi]
+tags: [dataformat, nirs, hitachi]
 ---
 
 # Getting started with Hitachi NIRS data

@@ -1,6 +1,6 @@
 ---
 title: Getting started with Cyberkinetics data
-tags: [cyberkinetics, blackrock, lfp, spike, dataformat]
+tags: [dataformat, cyberkinetics, blackrock, lfp, spike]
 ---
 
 # Getting started with Cyberkinetics data

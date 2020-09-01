@@ -1,5 +1,6 @@
 ---
 title: Getting started with LORETA
+tags: [dataformat, loreta]
 ---
 
 # Getting started with LORETA

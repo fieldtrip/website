@@ -1,6 +1,6 @@
 ---
 title: Getting started with OPM data recorded at the FIL
-tags: [opm, fil]
+tags: [dataformat, opm, fil, meg]
 ---
 
 # Getting started with OPM data recorded at the FIL

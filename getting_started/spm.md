@@ -1,5 +1,6 @@
 ---
 title: Integrating with SPM12
+tags: [spm]
 ---
 
 # Integrating with SPM8

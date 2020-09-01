@@ -1,6 +1,6 @@
 ---
 title: Getting started with Philips/EGI data
-tags: [egi, eeg, dataformat]
+tags: [dataformat, egi, eeg]
 ---
 
 # Getting started with EGI/Philips data

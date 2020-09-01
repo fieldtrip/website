@@ -1,6 +1,6 @@
 ---
 title: Getting started with Yokogawa data
-tags: [meg, yokogawa, dataformat, coordinate]
+tags: [dataformat, meg, yokogawa, coordinate]
 ---
 
 # Getting started with Yokogawa data

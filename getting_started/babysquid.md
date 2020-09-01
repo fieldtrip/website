@@ -1,6 +1,6 @@
 ---
 title: Getting started with BabySQUID data
-tags: [babysquid, meg, dataformat]
+tags: [dataformat, babysquid, meg]
 ---
 
 # Getting started with BabySQUID data

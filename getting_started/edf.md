@@ -1,6 +1,6 @@
 ---
 title: Getting started with EDF (European Data Format) data
-tags: [edf, eeg, dataformat]
+tags: [dataformat, edf, eeg]
 ---
 
 # Getting started with EDF (European Data Format) data

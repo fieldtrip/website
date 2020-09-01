@@ -1,6 +1,6 @@
 ---
 title: Getting started with Neuralynx data recorded at the Donders Institute
-tags: [neuralynx, lfp, dataformat]
+tags: [dataformat, neuralynx, lfp, spike]
 ---
 
 # Getting started with Neuralynx data recorded at the Donders Institute

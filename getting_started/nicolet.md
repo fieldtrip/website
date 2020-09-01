@@ -1,6 +1,6 @@
 ---
 title: Getting started with Nicolet data
-tags: [nicolet, eeg, dataformat]
+tags: [dataformat, nicolet, eeg]
 ---
 
 # Getting started with Nicolet data

@@ -1,6 +1,6 @@
 ---
 title: Getting started with Blackrock data
-tags: [blackrock, lfp, spike, dataformat]
+tags: [dataformat, blackrock, lfp, spike]
 ---
 
 # Getting started with Blackrock data

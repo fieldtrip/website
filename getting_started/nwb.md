@@ -1,6 +1,6 @@
 ---
 title: Getting started with Neurodata Without Borders (NWB) data
-tags: [dataformat, spike, nwb, neurodata without borders, matnwb]
+tags: [dataformat, spike, nwb]
 ---
 
 # Getting started with Neurodata Without Borders (NWB) data
@@ -66,8 +66,8 @@ end
 
 ## Change NWB schema version
 In case you are trying to load a file using a different schema version than the one installed on your system this may cause an error (often something like 'Unable to resolve the name types.core.DynamicTableRegion'). If so:
-- go to the [NWB release site](https://github.com/NeurodataWithoutBorders/nwb-schema/releases), 
-- choose the schema closest to your file's schema, 
+- go to the [NWB release site](https://github.com/NeurodataWithoutBorders/nwb-schema/releases),
+- choose the schema closest to your file's schema,
 - download the zip file associated with that schema,
 - copy the files in the zip's \nwb-schema-2.2.1\core into the \nwb-schema\core subfolder of your MatNWB directory (you probably want to make a backup of the original files first).
 
@@ -75,6 +75,6 @@ In case you are trying to load a file using a different schema version than the 
 
 At its current stage, the NWB integration into Fieldtrip is not feature-complete. For example:
 
-- Reading events (ft_read_event). NWB:N is a pretty generic dataformat and can contain very diverse types of data. Therefore, it is not trivial to programmatically and reliably create an event output that could be used in a trial function. 
+- Reading events (ft_read_event). NWB:N is a pretty generic dataformat and can contain very diverse types of data. Therefore, it is not trivial to programmatically and reliably create an event output that could be used in a trial function.
 
 - Reading waveforms (voltage time series around identified spikes) by ft_read_spike.

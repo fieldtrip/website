@@ -1,6 +1,6 @@
 ---
 title: Getting started with Shimadzu NIRS data
-tags: [nirs, shimadzu]
+tags: [dataformat, nirs, shimadzu]
 ---
 
 # Getting started with Shimadzu NIRS data

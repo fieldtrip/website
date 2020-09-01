@@ -1,6 +1,6 @@
 ---
 title: Getting started with Artinis NIRS data
-tags: [nirs, artinis]
+tags: [dataformat, nirs, artinis]
 ---
 
 # Getting started with Artinis NIRS data

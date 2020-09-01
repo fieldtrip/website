@@ -1,6 +1,6 @@
 ---
 title: Getting started with Neuralynx data
-tags: [neuralynx, lfp, spike, dataformat]
+tags: [dataformat, neuralynx, lfp, spike]
 ---
 
 # Getting started with Neuralynx data

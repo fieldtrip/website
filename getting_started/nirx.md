@@ -1,6 +1,6 @@
 ---
 title: Getting started with NIRx NIRS data
-tags: [nirs, nirx]
+tags: [dataformat, nirs, nirx]
 ---
 
 # Getting started with NIRx NIRS data
