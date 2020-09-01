@@ -115,7 +115,7 @@ Let us go through these one-by-one. The field 'hdr' contain all top-level inform
 Let us dive deeper into our data for now. For having a quick look at our data, we can use the function **[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_databrowser.m)** . The databrowser is much more than a simple 'data browser', but we will utilize this functionality for our purpose at the moment. Of course, we could have a look at how to call the databrowser (help **[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_databrowser.m)**), but a good guess is always to use FieldTrip functions as ft_functionname(cfg, data). We can keep the cfg empty to start with, and then see if this works. We add 'ylim = 'maxmin'' to the configuration to adjust the y-axis such that the lowest values in the graph are determining the lowest point on the y-axis, and the largest values in the graph determine the highest point on the y-axis.
 
     cfg = [];
-    cfg.ylim = 'maxmin'
+    cfg.ylim = 'maxmin';
     ft_databrowser(cfg, data);
 
 {% include image src="/assets/img/tutorial/nirs_singlechannel/nirs_tut1_fig1_ft_databrowser_readin.png" width="400" %}
@@ -127,7 +127,7 @@ Using **[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_
 Additionally, we'll from here select just one channel, to reduce the complexity for those new to fNIRS analyses.
 
     cfg = [];
-    cfg.ylim = 'maxmin'
+    cfg.ylim = 'maxmin';
     cfg.channel = {'Rx4b-Tx5 [860nm]', 'Rx4b-Tx5 [764nm]'};
     ft_databrowser(cfg, data);
 
