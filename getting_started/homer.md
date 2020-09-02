@@ -1,4 +1,5 @@
-title: Getting started with HOMER
+---
+title: Getting started with Homer
 tags: [dataformat, homer, nirs]
 ---
 
