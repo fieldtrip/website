@@ -69,4 +69,4 @@ The table can easily be exported to Excel or LibreOffice, where you can do addit
 
 The STI101 channel represents stimuli, in STI102 you can see the response codes corresponding to button presses.
 
-Note that the event type "Trigger" replicates the event type "STI101". We recommend that you use STI101 for consistency with Neuromag/Elekta and MNE software.
+Note that the event type "Trigger" replicates the event type "STI101". We recommend that you use STI101 for consistency with Neuromag/Elekta/Megin and MNE software.

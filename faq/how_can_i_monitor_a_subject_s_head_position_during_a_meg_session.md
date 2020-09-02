@@ -125,7 +125,7 @@ Keep in mind that Odin's data directory is automatically cleaned every now and t
 
 ### Elekta specific protocol
 
-Currently the option for online monitoring is only available for the CTF system. The Neuromag/Elekta real-time data stream can already be processed in FieldTrip, however, the relevant information in real time data stream is currently missing. However, in principle it would look similar to CTF specific protocol
+Currently the option for online monitoring is only available for the CTF system. The Neuromag/Elekta/Megin real-time data stream can already be processed in FieldTrip, however, the relevant information in real time data stream is currently missing. However, in principle it would look similar to CTF specific protocol
 
 1. 'Initialize the MEG system'.
 2. 'Start neuromag2ft for real-time head localization'.

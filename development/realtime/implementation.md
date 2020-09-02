@@ -23,7 +23,7 @@ This page deals with specific implemenations of the FieldTrip buffer protocol. T
 - [Biosemi](/development/realtime/biosemi)
 - [CTF (MEG)](/development/realtime/ctf)
 - [Emotiv](/development/realtime/emotiv)
-- [Neuromag/Elekta (MEG)](/development/realtime/neuromag)
+- [Neuromag/Elekta/Megin (MEG)](/development/realtime/neuromag)
 - [Jinga-Hi (LFP/EEG)](/development/realtime/jinga-hi)
 - [Micromed (ECoG)](/development/realtime/micromed)
 - [ModularEEG/OpenEEG](/development/realtime/modulareeg)
