@@ -430,7 +430,7 @@
 - name:  What are the different approaches I can take for distributed computing?
   link:  /faq/what_are_the_different_approaches_i_can_take_for_distributed_computing
 
-- name:  What are the different Neuromag/Elekta and Yokogawa layouts good for?
+- name:  What are the different Neuromag/Elekta/Megin and Yokogawa layouts good for?
   link:  /faq/what_are_the_different_neuromag_and_yokogawa_layouts_good_for
 
 - name:  What convention is used to define absolute phase in 'mtmconvol', 'wavelet' and 'mtmfft'?

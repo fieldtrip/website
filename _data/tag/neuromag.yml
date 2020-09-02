@@ -1,8 +1,11 @@
 - name:  MEG dataformats
   link:  /dataformat/meg
 
-- name:  Elekta / Neuromag
+- name:  Neuromag/Elekta/Megin
   link:  /development/realtime/neuromag
+
+- name:  Find the orientation of planar gradiometers
+  link:  /example/planar_orientation
 
 - name:  How can I visualize the neuromag head position indicator coils?
   link:  /faq/how_can_i_visualize_the_neuromag_head_position_indicator_coils

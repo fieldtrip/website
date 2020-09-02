@@ -82,7 +82,7 @@
 - name:  Neuralynx
   link:  /development/realtime/neuralynx
 
-- name:  Elekta / Neuromag
+- name:  Neuromag/Elekta/Megin
   link:  /development/realtime/neuromag
 
 - name:  ANT NeuroSDK
