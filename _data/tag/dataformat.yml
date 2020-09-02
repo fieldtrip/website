@@ -91,6 +91,9 @@
 - name:  Getting started with Hitachi NIRS data
   link:  /getting_started/hitachi
 
+- name:  Getting started with HOMER
+  link:  /getting_started/homer
+
 - name:  Getting started with LORETA
   link:  /getting_started/loreta
 
