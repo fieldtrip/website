@@ -1,32 +1,29 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="/style.css">
-    <title>{{ page.title }}</title>
-    <style type="text/css" media="screen">
-      .container {
-        margin: 10px auto;
-        max-width: 600px;
-        text-align: center;
-      }
-      h1 {
-        margin: 30px 0;
-        font-size: 4em;
-        line-height: 1;
-        letter-spacing: -1px;
-      }
-    </style>
-    {% include favicon %}
-  </head>
+<!DOCTYPE html>
+<html lang="en">
+  {% include head %}
+  {% include favicon %}
+  {% include google-analytics %}
   <body>
     {% include navigation %}
 
     <div class="container">
-      <h1>404</h1>
-      <p><strong>Page not found :(</strong></p>
-      <p>The requested page could not be found.</p>
+     <div class="row">
+
+        <div class="col-sm-1">
+          {% include left %}
+        </div>
+        <div class="col-sm-8 main-page-content">
+          <h1>404 - Page not found</h1>
+          <p>The requested page could not be found.</p>
+        </div>
+        <div class="col-sm-3">
+          {% include right %}
+        </div>
+      </div>
     </div>
 
+    {% include google-search %}
+    {% include footer %}
+    {% include cookie-banner %}
   </body>
 </html>

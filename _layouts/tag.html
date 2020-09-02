@@ -1,22 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
   {% include head %}
+  {% include favicon %}
+  {% include google-analytics %}
   <body>
     {% include navigation %}
 
-    <h1>Pages tagged with "{{ page.tag }}"</h1>
+    <div class="container">
+     <div class="row">
 
-    {% if site.data.tag[page.tag] != nill %}
-      <ul>
-        {% assign list = site.data.tag[page.tag] | sort_natural: "name" %}
-        {% for item in list %}
-          <li><a href="{{ item.link }}" {% if page.url == item.link %}style="color: red;"{% endif %}>
-            {{ item.name }}
-          </a></li>
-        {% endfor %}
-      </ul>
-    {% endif %}
+        <div class="col-sm-1">
+          {% include left %}
+        </div>
+        <div class="col-sm-8 main-page-content">
+          <h1>Pages tagged with "{{ page.tag }}"</h1>
+          {% if site.data.tag[page.tag] != nill %}
+            <ul>
+              {% assign list = site.data.tag[page.tag] | sort_natural: "name" %}
+              {% for item in list %}
+                <li><a href="{{ item.link }}" {% if page.url == item.link %}style="color: red;"{% endif %}>
+                  {{ item.name }}
+                </a></li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        </div>
+        <div class="col-sm-3">
+          {% include right %}
+        </div>
+      </div>
+    </div>
 
+    {% include google-search %}
     {% include footer %}
+    {% include cookie-banner %}
   </body>
 </html>
