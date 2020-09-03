@@ -22,6 +22,9 @@
 - name:  Getting started with Shimadzu NIRS data
   link:  /getting_started/shimadzu
 
+- name:  Specifying the channel layout for plotting
+  link:  /tutorial/layout
+
 - name:  Preprocessing and averaging of multi-channel NIRS data
   link:  /tutorial/nirs_multichannel
 
