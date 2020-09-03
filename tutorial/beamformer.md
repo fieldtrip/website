@@ -1,6 +1,6 @@
 ---
 title: Localizing oscillatory sources using beamformer techniques
-tags: [tutorial, meg, freq, source, headmodel, mri, plot, meg-language]
+tags: [tutorial, meg, freq, source, headmodel, mri, plotting, meg-language]
 ---
 
 # Localizing oscillatory sources using beamformer techniques

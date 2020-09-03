@@ -124,7 +124,13 @@ Still, the power is more difficult to interpret due to it being larger for low f
 
 ### Multiplot functions
 
-The multiplot functions work similarly to the singleplot functions, again first by selecting the data and subsequently using the MATLAB functions plot and imagesc. But instead of one plot, multiple plots are made; one for each channel. These plots are arranged according to a specified layout in one pair of axes. In the subsequent figures you can see these axes that are normally set to “off”.
+The multiplot functions work similarly to the singleplot functions, again first by selecting the data and subsequently using the MATLAB functions plot and imagesc. But instead of one plot, multiple plots are made; one for each channel. These plots are arranged according to a specified layout in one pair of axes.
+
+{% include markup/info %}
+There is a separate tutorial that explains how to [specify the channel layout for plotting](/tutorial/layout).
+{% include markup/end %}
+
+In the subsequent figures you can see these axes that are normally set to “off”.
 
     cfg = [];
     cfg.layout = 'CTF151.lay';

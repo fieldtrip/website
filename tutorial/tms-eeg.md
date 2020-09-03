@@ -1,6 +1,6 @@
 ---
 title: Dealing with TMS-EEG datasets
-tags: [tutorial, tms, eeg, preprocesing, plot, eeg-tms]
+tags: [tutorial, tms, eeg, preprocesing, plotting, eeg-tms]
 ---
 
 # Dealing with TMS-EEG datasets

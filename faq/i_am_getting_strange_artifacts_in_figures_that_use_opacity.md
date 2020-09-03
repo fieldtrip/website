@@ -1,6 +1,6 @@
 ---
 title: I am getting strange artifacts in figures that use opacity
-tags: [faq, plot, artifact]
+tags: [faq, plotting, artifact]
 ---
 
 # I am getting strange artifacts in figures that use opacity

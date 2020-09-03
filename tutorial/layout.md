@@ -1,20 +1,29 @@
 ---
 title: Specifying the channel layout for plotting
-tags: [tutorial, plot, eeg, meg, ecog, layout]
+tags: [tutorial, plotting, layout, eeg, meg, seeg, ecog, nirs]
 ---
 
 # Specifying the channel layout for plotting
 
 The 2D channel layout is a representation of the channel positions, together with the outline of the head or other anatomical features, that allows data to be plotted in a topographically consistent manner on a 2D computer screen (or piece of paper). The 2D channel layout is _not an exact representation_ of the channel positions, just a projection for the purpose of visualization.
 
+The layout is a MATLAB structure with the following elements
+
+    layout.pos     = Nx2 matrix with the position where each channel should be plotted
+    layout.label   = Nx1 cell-array with the channel labels
+    layout.width   = Nx1 vector with the width of each box for multiplotting
+    layout.height  = Nx1 vector with the height of each box for multiplotting
+    layout.mask    = optional cell-array with line segments that determine the area for topographic interpolation
+    layout.outline = optional cell-array with line segments that represent the head, nose, ears, sulci or other anatomical features
+
 ## Constructing a layout
 
 Many of the FieldTrip plotting functions use a 2D layout of the channels for plotting. The layout is a schematic 2D representation for displaying the data on the computer screen or in print on paper. The layout results from **[ft_prepare_layout](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_layout.m)** and can be constructed from
 
-- position of the sensor positions in 3D space
-- existing (template) layout on disk
-- photo or drawing of the sensor positions
-- schematic representation
+- the position of the sensor positions in 3D space
+- an existing (template) layout on disk
+- a photo or drawing of the sensor positions
+- a schematic representation
 
 ### 3D sensor positions
 

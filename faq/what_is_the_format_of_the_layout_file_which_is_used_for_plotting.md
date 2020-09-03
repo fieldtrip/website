@@ -1,6 +1,6 @@
 ---
 title: What is the format of the layout file which is used for plotting?
-tags: [faq, layout, plot]
+tags: [faq, layout, plotting]
 ---
 
 # What is the format of the layout file which is used for plotting?

@@ -1,6 +1,6 @@
 ---
 title: Plotting the result of source reconstructing on a cortical mesh
-tags: [example, plot, source]
+tags: [example, plotting, source]
 ---
 
 # Plotting the result of source reconstructing on a cortical mesh

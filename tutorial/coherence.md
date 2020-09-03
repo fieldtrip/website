@@ -1,6 +1,6 @@
 ---
 title: Analysis of corticomuscular coherence
-tags: [tutorial, coherence, meg, emg, plot, source, connectivity, meg-visuomotor151]
+tags: [tutorial, coherence, meg, emg, plotting, source, connectivity, meg-visuomotor151]
 ---
 
 # Analysis of corticomuscular coherence

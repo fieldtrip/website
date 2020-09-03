@@ -1,6 +1,6 @@
 ---
 title: Reference documentation
-tags: [cfg, timelock, freq, source, headmodel, statistics, plot]
+tags: [cfg, timelock, freq, source, headmodel, statistics, plotting]
 ---
 
 # Reference documentation
