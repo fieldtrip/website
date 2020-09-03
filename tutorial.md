@@ -23,16 +23,16 @@ When adding or contributing to the tutorials please consider the [documentation 
 ## Preprocessing of MEG and EEG data
 
 - [Preprocessing - Reading continuous EEG and MEG data](/tutorial/continuous)
+- [Preprocessing - Trigger based trial selection](/tutorial/preprocessing)
 - [Introduction on artifacts](/tutorial/artifacts)
 - [Visual artifact detection](/tutorial/visual_artifact_rejection)
 - [Automatic artifact detection](/tutorial/automatic_artifact_rejection)
-- [Preprocessing - Trigger based trial selection](/tutorial/preprocessing)
-- [Preprocessing and event-related activity in combined MEG/EEG data](/workshop/natmeg/preprocessing)
 
 ## Sensor-level analyses of MEG and EEG data
 
 - [Event related fields and MEG planar gradient](/tutorial/eventrelatedaveraging)
 - [Preprocessing of EEG data and computing ERPs](/tutorial/preprocessing_erp)
+- [Preprocessing and event-related activity in combined MEG/EEG data](/workshop/natmeg/preprocessing)
 - [Time-frequency analysis using Hanning window, multitapers and wavelets](/tutorial/timefrequencyanalysis)
 - [Time-frequency analysis of combined MEG/EEG](/workshop/natmeg/timefrequency)
 - [Sensor-level ERF, TFR and connectivity analyses](/tutorial/sensor_analysis)
