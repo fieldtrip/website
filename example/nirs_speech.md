@@ -1,6 +1,6 @@
 ---
 title: Analyzing NIRS data recorded during listening to and repeating speech
-tags: [example, nirs, shimadzu]
+tags: [example, nirs]
 ---
 
 # Analyzing NIRS data recorded during listening to and repeating speech
