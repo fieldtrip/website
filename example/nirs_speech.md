@@ -122,10 +122,7 @@ The spatial arrangement of optodes does not match Figure 2 in the PDF manuscript
     cfg.dataset = filename;
     data_raw = ft_preprocessing(cfg);
 
-If you look in data_raw.label, you can see that there are 28 NIRS channels, 8 "aux"
-channels and one "s" channel that represents the stimuli. See
-<https://www.nitrc.org/plugins/mwiki/index.php/homer2:Homer_Input_Files#NIRS_data_file_format>
-for a desciption of the file format.
+If you look in data_raw.label, you can see that there are 28 NIRS channels, 8 "aux" channels and one "s" channel that represents the stimuli. See the [Homer documentation](https://www.nitrc.org/plugins/mwiki/index.php/homer2:Homer_Input_Files#NIRS_data_file_format) for a description of the file format.
 
 Let us have a look at the NIRS data
 
@@ -187,8 +184,8 @@ By computing the time between successive events, we can find the boundaries betw
 
 There are 5 small peaks to be seen, and a big one immediately following the first event.
 
-    boundary = find(diff([aux1.sample])>300); % these are the aux1 events _after_ which a longer pause happens
-    boundary = [aux1(boundary).sample] + 10*hdr.Fs;  % express the boundary in samples, 10 seconds after the event
+    boundary = find(diff([aux1.sample])>300);       % these are the aux1 events _after_ which a longer pause happens
+    boundary = [aux1(boundary).sample] + 10*hdr.Fs; % express the boundary in samples, 10 seconds after the event
 
 ## Segmenting the continuous data into trials locked to sentence presentation
 
@@ -289,11 +286,11 @@ I think these are the onsets of the clicks in each condition, which trigger the 
 
     figure; hold on
     plot(data_raw.time{1}, data_raw.trial{1}(29:30,:))
-    plot(data_raw.time{1}(sample(block1)), 2.8_ones(size(block1)), 'ko')
-    plot(data_raw.time{1}(sample(block2)), 2.8_ones(size(block2)), 'mo')
-    plot(data_raw.time{1}(sample(block3)), 2.8_ones(size(block3)), 'co')
-    plot(data_raw.time{1}(sample(block4)), 2.8_ones(size(block4)), 'yo')
-    plot(data_raw.time{1}(sample(block5)), 2.8\*ones(size(block5)), 'go')
+    plot(data_raw.time{1}(sample(block1)), 2.8*ones(size(block1)), 'ko')
+    plot(data_raw.time{1}(sample(block2)), 2.8*ones(size(block2)), 'mo')
+    plot(data_raw.time{1}(sample(block3)), 2.8*ones(size(block3)), 'co')
+    plot(data_raw.time{1}(sample(block4)), 2.8*ones(size(block4)), 'yo')
+    plot(data_raw.time{1}(sample(block5)), 2.8*ones(size(block5)), 'go')
 
 {% include image src="/assets/img/example/nirs_speech/figure7.png" %}
 
@@ -431,7 +428,7 @@ specific averages.
 
 {% include image src="/assets/img/example/nirs_speech/figure10.png" %}
 
-After baseline correcting (which is done while making the figure, it could also have been done using **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)**) we can see condition differences in the event-related responses in the 5 conditions. However, due to the alternating stimulus-response sequence and the response possibly being confounded with an artifact, it is hard to tell whether teh difference is due to the stimulus or the response (which affects the baseline of each trial).
+After baseline correcting (which is done while making the figure, it could also have been done using **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)**) we can see condition differences in the event-related responses in the 5 conditions. However, due to the alternating stimulus-response sequence and the response possibly being confounded with an artifact, it is hard to tell whether teh difference is due to the stimulus or to the response that could affect the baseline of each subsequent trial.
 
 ## Closing remarks
 
