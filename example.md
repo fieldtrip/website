@@ -20,6 +20,7 @@ See also the [tutorials](/tutorial) and [frequently asked questions](/faq).
 - [Interpolating data from the CTF151 to the CTF275 sensor array using ft_megrealign](/example/megrealign)
 - [Making your own trialfun for conditional trial definition](/example/making_your_own_trialfun_for_conditional_trial_definition)
 - [Analyzing NIRS data recorded during unilateral finger- and foot-tapping](/example/nirs_fingertapping)
+- [Analyzing NIRS data recorded during listening to and repeating speech](/example/nirs_speech)
 - [The correct pipeline order for combining planar MEG channels](/example/combineplanar_pipelineorder)
 - [Use independent component analysis (ICA) to remove ECG artifacts](/example/use_independent_component_analysis_ica_to_remove_ecg_artifacts)
 - [Use independent component analysis (ICA) to remove EOG artifacts](/example/use_independent_component_analysis_ica_to_remove_eog_artifacts)

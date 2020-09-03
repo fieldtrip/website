@@ -5,7 +5,7 @@ tags: [example, nirs, shimadzu]
 
 # Analyzing NIRS data recorded during unilateral finger- and foot-tapping
 
-This example script demonstrates the analysis of data that is shared in *Bak, Sujin; Park, Jinwoo; Shin, Jaeyoung; Jeong, Jichai (2019): Open Access fNIRS Dataset for Classification of Unilateral Finger- and Foot-Tapping.*
+This example script demonstrates the analysis of data that is shared by Sujin Bak, Jinwoo Park, Jaeyoung Shin, and Jichai Jeong: _[Open Access fNIRS Dataset for Classification of Unilateral Finger- and Foot-Tapping](https://doi.org/10.6084/m9.figshare.9783755.v2)_.
 
 The following links point to the shared data, to the PDF manuscript that explains the shared data, and to a GitHub repository from one of the authors that contains some example analyses on the data.
 
@@ -26,7 +26,7 @@ The temporal structure of each trial is
 
 The total duration of a trial, including the instruction, ranges from 2+10+2+15=29 to 2+10+2+17=31 seconds.
 
-## Making a MATLAB analysis script
+## Building a MATLAB analysis script
 
     filenames = {
       'v2/fNIRS 01.mat'
@@ -69,7 +69,7 @@ The total duration of a trial, including the instruction, ranges from 2+10+2+15=
 The data is shared by the authors in the form of MATLAB files. Each file contains a bunch of separate variables, you can load it like this to represent it as a structure:
 
     nirs = load(filename);
-    
+
     >> nirs
     nirs =
       struct with fields:
@@ -117,8 +117,8 @@ The data is shared by the authors in the form of MATLAB files. Each file contain
         ch39: [30003x1 double]
         ch40: [30003x1 double]
          dat: [1x1 struct]
-    
-Contrary to the description in the accompanying publication (see table 1 in the PDF manuscript) and in the GitHub repository, the MATLAB files do *not* contain the variables `cntHb`, `clab`, etc. However, it is not so hard to make sense of the data: each channel is represented as a vector, there is header information, there is information about the optode montage, and there is information about the events.
+
+Contrary to the description in the accompanying publication (see table 1 in the PDF manuscript) and in the GitHub repository, the MATLAB files do _not_ contain the variables `cntHb`, `clab`, etc. However, it is not so hard to make sense of the data: each channel is represented as a vector, there is header information, there is information about the optode montage, and there is information about the events.
 
     >> nirs.nfo
     ans =
@@ -156,7 +156,6 @@ Contrary to the description in the accompanying publication (see table 1 in the 
             time: [1x75 double]
                y: [3x75 double]
        className: {'RIGHT'  'LEFT'  'FOOT'}
-
 
 # Convering the MATLAB structure to a FieldTrip raw data structure
 
@@ -259,19 +258,19 @@ To improve the plotting of topographies, we can also make an outline and mask. T
       % upper left
       corner1x = min(layout.pos(sel,1)-layout.width (sel)/2) - pad;
       corner1y = max(layout.pos(sel,2)+layout.height(sel)/2) + pad;
-      
+
       % upper right
       corner2x = max(layout.pos(sel,1)+layout.width (sel)/2) + pad;
       corner2y = max(layout.pos(sel,2)+layout.height(sel)/2) + pad;
-      
+
       % lower right
       corner3x = max(layout.pos(sel,1)+layout.width (sel)/2) + pad;
       corner3y = min(layout.pos(sel,2)-layout.height(sel)/2) - pad;
-      
+
       % lower left
       corner4x = min(layout.pos(sel,1)-layout.width (sel)/2) - pad;
       corner4y = min(layout.pos(sel,2)-layout.height(sel)/2) - pad;
-      
+
       layout.outline{i} = [
         corner1x corner1y
         corner2x corner2y
@@ -279,7 +278,7 @@ To improve the plotting of topographies, we can also make an outline and mask. T
         corner4x corner4y
         corner1x corner1y % this closes the outline
         ];
-      
+
       layout.mask{i} = [
         corner1x corner1y
         corner2x corner2y
@@ -288,7 +287,7 @@ To improve the plotting of topographies, we can also make an outline and mask. T
         corner1x corner1y % this closes the outline
         ];
     end
-    
+
     figure
     ft_plot_layout(layout, 'label', true, 'outline', true, 'mask', true)
 
@@ -306,7 +305,6 @@ The `mrk` field contains times
     ans =
       Columns 1 through 9
             1950    30975    60975    91950    ...
-
 
 These numbers are larger than the total number of samples, so they do not directly map onto samples. I started off assuming that the marker time is expressed in milliseconds, but that turned out not to be correct. Therefore I experimented with the following piece of code until I had something that made sense.
 
@@ -400,7 +398,7 @@ and we map the right, left, and foot condition onto condition codes 1, 2, and 3.
 
 ## Plot the averaged responses
 
-*Running this script for some of the subjects, I noticed that the the data of subject 1 is very nice, even without artifact removal. The data of subjects 2 and 3 is not so nice their results would probably improve by including some additional cleaning and artifact removal in the script.*    
+_Running this script for some of the subjects, I noticed that the the data of subject 1 is very nice, even without artifact removal. The data of subjects 2 and 3 is not so nice their results would probably improve by including some additional cleaning and artifact removal in the script._
 
     cfg = [];
     cfg.layout = layout;
@@ -436,7 +434,7 @@ This step benefits from the layout having an outline and especially a mask, othe
 {% include image src="/assets/img/example/nirs_fingertapping/figure7.png" width="400" %}
 
 {% include image src="/assets/img/example/nirs_fingertapping/figure8.png" width="400" %}
-    
+  
 {% include markup/success %}
 From the topographic arrangements it is clear that the left hemisphere responds with an increase in HbO to the right fingertapping task and the right hemisphere to the left fingertapping task; the HbR (on the right side of the figure) shows the opposite pattern. Also interesting is that both left and right hemisphere show a decrease in HbO and an increase in HbR during the tapping of the foot.
 {% include markup/end %}

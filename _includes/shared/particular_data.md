@@ -34,20 +34,27 @@ In general you should get started with the [tutorials](/tutorial). The pages tha
 - [Getting started with animal electrophysiology data, including spikes](/getting_started/animal)
 - [Getting started with human intracranial electrophysiology data](/getting_started/human_ecog)
 
-## Getting started with other types of data
+## Getting started with NIRS data
 
 - [Getting started with Artinis NIRS data](/getting_started/artinis)
+- [Getting started with Hitachi NIRS data](/getting_started/hitachi)
+- [Getting started with NIRx NIRS data](/getting_started/nirx)
+- [Getting started with Shimadzu NIRS data](/getting_started/shimadzu)
+
+## Getting started with other types of data
+
 - [Getting started with SR-Research EyeLink eye-tracker data](/getting_started/eyelink)
 - [Getting started with XSens motion capture data](/getting_started/xsens)
 - [Getting started with Neurodata Without Borders (NWB) data](/getting_started/nwb)
 
 ## Getting started with data from other software
 
-- [Getting started with data from SPM](/getting_started/spm)
 - [Getting started with data from EEGLAB](/getting_started/eeglab)
+- [Getting started with data from SPM](/getting_started/spm)
 - [Getting started with data from LORETA](/getting_started/loreta)
 - [Getting started with data from the BIOIMAGE suite](/getting_started/bioimage)
 - [Getting started with data from AnyWave](/getting_started/anywave)
+- [Getting started with data from Homer](/getting_started/homer)
 
 ## Getting started with real-time data analysis
 
