@@ -1,8 +1,8 @@
 ---
-title: FieldTrip Workshop in Marseille
+title: FieldTrip Workshop in Marseille in January 2016
 ---
 
-# FieldTrip Workshop in Marseille
+# FieldTrip Workshop in Marseille in January 2016
 
 Together with Jean-Michel Badier and Christian Benar from the [MEG laboratory in Marseille](http://meg.univ-amu.fr/wiki/Main_Page), we will run a FieldTrip workshop.
 

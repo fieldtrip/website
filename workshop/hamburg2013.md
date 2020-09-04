@@ -1,8 +1,8 @@
 ---
-title: FieldTrip workshop in Hamburg
+title: FieldTrip workshop in Hamburg in 2013
 ---
 
-# FieldTrip workshop in Hamburg
+# FieldTrip workshop in Hamburg in 2013
 
 ## When
 

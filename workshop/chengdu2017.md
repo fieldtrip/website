@@ -2,7 +2,7 @@
 title: Chengdu, China
 ---
 
-# Chengdu, China
+# FieldTrip workshop in Chengdu, China
 
 - By whom: Robert Oostenveld
 - When: 27-29 September 2017
