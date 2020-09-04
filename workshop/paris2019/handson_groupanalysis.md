@@ -1,6 +1,6 @@
 ---
 title: Group analysis
-tags: [meg, timelock, statistics, plotting, paris2019, mmfaces]
+tags: [paris2019, meg, timelock, statistics, plotting, mmfaces]
 ---
 
 # Group-level statistics with parametric and non-parametric methods

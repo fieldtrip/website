@@ -1,6 +1,6 @@
 ---
 title: From raw data to ERP
-tags: [meg, timelock, preprocessing, paris2019, mmfaces]
+tags: [paris2019, meg, timelock, preprocessing, mmfaces]
 ---
 
 # From raw data to ERP

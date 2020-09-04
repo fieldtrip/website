@@ -1,8 +1,9 @@
 ---
-title: Preprocessing EEG & MEG
+title: Preprocessing of EEG and MEG data
+tags: [ohbm2018]
 ---
 
-## Preprocessing EEG & MEG
+# Preprocessing of EEG and MEG data
 
 ## Introduction
 

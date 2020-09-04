@@ -1,8 +1,9 @@
 ---
 title: Solving the EEG forward problem using BEM and FEM
+tags: [baci2017]
 ---
 
-## Solving the EEG forward problem using BEM and FEM
+# Solving the EEG forward problem using BEM and FEM
 
 ## Introduction
 

@@ -1,5 +1,6 @@
 ---
 title: MEG/EEG analysis and FieldTrip Workshop in Oxford, UK
+tags: [oxford2019]
 ---
 
 # MEG/EEG analysis and FieldTrip Workshop in Oxford, UK

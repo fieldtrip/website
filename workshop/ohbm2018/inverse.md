@@ -1,8 +1,9 @@
 ---
-title: Inverse problem
+title: Solving the EEG inverse problem
+tags: [ohbm2018]
 ---
 
-# Inverse problem
+# Solving the EEG inverse problem
 
 ## Introduction
 

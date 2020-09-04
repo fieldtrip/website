@@ -15,7 +15,7 @@ In this tutorial we will analyze a single-subject MEG dataset from the [Human Co
 
 {% include /shared/tutorial/hcp_motort.md %}
 
-This tutorial follows on the [MEG virtual channels and seed-based connectivity](/workshop/chieti/virtualchannel) tutorial and continues with the data that has already partially been computed there.
+This tutorial follows on the [MEG virtual channels and seed-based connectivity](/workshop/chieti2015/virtualchannel) tutorial and continues with the data that has already partially been computed there.
 
 ## Procedure
 

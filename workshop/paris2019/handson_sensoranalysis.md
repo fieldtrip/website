@@ -1,6 +1,6 @@
 ---
 title: Time-frequency analysis using Hanning window, multitapers and wavelets
-tags: [meg, freq, paris2019, mmfaces]
+tags: [paris2019, meg, freq, mmfaces]
 ---
 
 # Time-frequency analysis using Hanning window, multitapers and wavelets

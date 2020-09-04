@@ -1,6 +1,6 @@
 ---
 title: Localizing sources of neural sources using beamformer techniques
-tags: [meg, sourceanalysis, beamformer, paris2019, mmfaces]
+tags: [paris2019, meg, sourceanalysis, beamformer, mmfaces]
 ---
 
 # Localizing sources of neural activity using beamformer techniques

@@ -1,12 +1,14 @@
 ---
-title: Inverse problem
+title: Solving the EEG inverse problem
+tags: [baci2017]
 ---
 
-# Inverse problem
+# Solving the EEG inverse problem
 
 ## Introduction
 
 In this tutorial you can find information about how to fit dipole models and how to do source reconstruction using minimum-norm estimation to the somatosensory evoked potentials (SEPs) of a single subject from the [preprocessing](/workshop/baci2017/preprocessing).
+
 We will be working on the dataset from the previous hands on sessions, and we will use the functional and anatomical data from these tutorials to deal with the inverse problem. As you already noticed we have prepared two different mathematical models from the [forward problem](/workshop/baci2017/forwardproblem). We will use both to solve the inverse problem and compare the results. You've either got the relevant data already processed yourself or can find in the data directory.
 
 This tutorial will not show how to combine source-level data over multiple subjects. It will also not describe how to do source-localization of oscillatory activation. You can check the Localizing oscillatory sources using beamformer techniques tutorial if you are interested in the later.
@@ -15,8 +17,7 @@ This tutorial will not show how to combine source-level data over multiple subje
 
 ### Dipole fit
 
-In this tutorial we will use the dipole fitting approach (1) to localise the neuronal activity and (2) to estimate the time course of the activity. This approach is most suitable for relatively early cortical activity which is not spread over many or large cortical areas. Dipole fitting assumes that a small number of point-like equivalent current dipoles (ECDs) can describe the measured topography. It optimises the location, the orientation and the amplitude of the model dipoles in order to minimise the difference between the model and measured topography. A good introduction to dipole fitting is provided by Scherg (Source localization by fitting an equivalent current dipole model
-Scherg M. [Fundamentals of dipole source potential analysis](http://apsychoserver.psych.arizona.edu/jjbareprints/psyc501a/readings/Scherg_Fundamentals%20of%20Dipole%20Source%20Potentials_Auditory%20Evoked%20Agnetic%20Fileds_1990.pdf). In: Auditory evoked magnetic fields and electric potentials. eds. F. Grandori, M. Hoke and G.L. Romani. Advances in Audiology, vol. 6. Karger, Basel, pp 40-69, 1990).
+In this tutorial we will use the dipole fitting approach (1) to localise the neuronal activity and (2) to estimate the time course of the activity. This approach is most suitable for relatively early cortical activity which is not spread over many or large cortical areas. Dipole fitting assumes that a small number of point-like equivalent current dipoles (ECDs) can describe the measured topography. It optimises the location, the orientation and the amplitude of the model dipoles in order to minimise the difference between the model and measured topography. A good introduction to dipole fitting is provided by Scherg (Source localization by fitting an equivalent current dipole model Scherg M. [Fundamentals of dipole source potential analysis](http://apsychoserver.psych.arizona.edu/jjbareprints/psyc501a/readings/Scherg_Fundamentals%20of%20Dipole%20Source%20Potentials_Auditory%20Evoked%20Agnetic%20Fileds_1990.pdf). In: Auditory evoked magnetic fields and electric potentials. eds. F. Grandori, M. Hoke and G.L. Romani. Advances in Audiology, vol. 6. Karger, Basel, pp 40-69, 1990).
 
 ### Minimum norm estimate
 

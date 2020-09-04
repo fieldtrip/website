@@ -1,8 +1,9 @@
 ---
 title: Solving the EEG and MEG forward problem using the finite element method
+tags: [ohbm2018]
 ---
 
-## Solving the EEG and MEG forward problem using the finite element method
+# Solving the EEG and MEG forward problem using the finite element method
 
 ## Introduction
 

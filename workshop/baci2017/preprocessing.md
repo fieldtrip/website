@@ -1,8 +1,9 @@
 ---
-title: Preprocessing in EEG
+title: Preprocessing of EEG data
+tags: [baci2017]
 ---
 
-## Preprocessing in EEG
+# Preprocessing of EEG data
 
 ## Introduction
 

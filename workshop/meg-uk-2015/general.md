@@ -1,5 +1,6 @@
 ---
 title: General instructions for MATLAB demo's
+tags: [meg-uk-2015]
 ---
 
 # General instructions for MATLAB demo's
