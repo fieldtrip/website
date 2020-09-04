@@ -205,6 +205,9 @@
 - name:  FieldTrip stats demo
   link:  /workshop/meg-uk-2015/fieldtrip-stats-demo
 
+- name:  General instructions for MATLAB demo's
+  link:  /workshop/meg-uk-2015/general
+
 - name:  SPM Source reconstruction demo
   link:  /workshop/meg-uk-2015/spm_source
 
