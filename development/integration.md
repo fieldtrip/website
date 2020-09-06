@@ -32,7 +32,7 @@ We use a YouTube [video channel](https://www.youtube.com/fieldtriptoolbox) that 
 
 ## GitHub
 
-We use Git and GitHub for version control of the software and of the website, and for managing external contributions. More details can be found [here](/development/git). We also maintain a copy of the repository on [BitBucket](#bitbucket) and on [Gitlab](#gitlab).
+We use git and GitHub for version control of the software and of the website, and for managing external contributions. More details can be found [here](/development/git). We also maintain a copy of the repository on [BitBucket](#bitbucket) and on [Gitlab](#gitlab).
 
 If changes are pushed to GitHub, a webhook is triggered. The code for that is maintained at <http://github.com/fieldtrip/automation>.
 
@@ -78,7 +78,11 @@ In the past we used [dokuwiki](http://dokuwiki.org/) as the CMS system for our w
 
 ## SVN - obsolete
 
-We used to do the development with Subversion (also known as SVN). As of February 2016 we have moved all development over to git and github.
+We used to do the development with Subversion (also known as SVN). As of February 2016 we have moved all development over to git and GitHub.
+
+## CVS - obsolete
+
+We initially used Concurrent Versions System (CVS) as the version control system.  At a certain point we followed the example from the SPM developers and switched to SVN to facilitate collaboration between more contributors.
 
 ## Google Code - obsolete
 
