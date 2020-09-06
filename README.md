@@ -2,7 +2,7 @@
 
 This repository contains the FieldTrip documentation hosted on <http://www.fieldtriptoolbox.org>.
 
-Feel free to contribute by doing edits here and sending a pull request. See <http://www.fieldtriptoolbox.org/development/git> for a complete tutorial.
+Feel free to contribute by doing edits here and sending a pull request. See <http://www.fieldtriptoolbox.org/development/git> for a complete tutorial and <http://www.fieldtriptoolbox.org/development/guideline/website> for formatting instructions.
 
 ## Technical notes
 
