@@ -5,7 +5,7 @@ tags: [support]
 
 # Email discussion list
 
-Please realize that the main developers are busy with research and teaching themselves and therefore in general cannot answer individual questions. Therefore we kindly request you to ask for support on the FieldTrip [email discussion list](http://mailman.science.ru.nl/mailman/listinfo/fieldtrip). It aims to foster an open communication among users themselves to build up expertise, and between users and developers.
+Please realize that the main developers are busy with research and teaching themselves and therefore in general cannot be expected to answer each individual question. Therefore we kindly request you to ask for support on the FieldTrip [email discussion list](http://mailman.science.ru.nl/mailman/listinfo/fieldtrip). It aims to foster an open communication among users themselves to build up expertise, and between users and developers.
 
 You can easily (un)subscribe yourself on the list's [webpage](http://mailman.science.ru.nl/mailman/listinfo/fieldtrip). Only people who are subscribed to the discussion list can send and will receive messages. Once subscribed, you can send your questions and contributions to <fieldtrip@science.ru.nl>.
 
