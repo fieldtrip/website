@@ -44,7 +44,7 @@ title: ft_read_mri
    AFNI (*.head, *.brik)
    FreeSurfer (*.mgz, *.mgh)
    MINC (*.mnc)
-   Neuromag/Elekta (*.fif)
+   Neuromag/Elekta/Megin (*.fif)
    ANT - Advanced Neuro Technology (*.mri)
    Yokogawa (*.mrk, incomplete)
    Mrtrix image format (*.mif)

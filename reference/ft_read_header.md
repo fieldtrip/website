@@ -47,7 +47,7 @@ title: ft_read_header
 
  The following MEG dataformats are supported
    CTF (*.ds, *.res4, *.meg4)
-   Neuromag/Elekta (*.fif)
+   Neuromag/Elekta/Megin (*.fif)
    BTi/4D (*.m4d, *.pdf, *.xyz)
    Yokogawa/Ricoh (*.ave, *.con, *.raw)
    NetMEG (*.nc)

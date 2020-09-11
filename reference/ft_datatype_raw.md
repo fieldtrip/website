@@ -11,14 +11,14 @@ title: ft_datatype_raw
 
  An example of a raw data structure with 151 MEG channels is
 
-          label: {151x1 cell}      the channel labels (e.g. 'MRC13')
-           time: {1x266 cell}      the timeaxis [1*Ntime double] per trial
-          trial: {1x266 cell}      the numeric data [151*Ntime double] per trial
+          label: {151x1 cell}      the channel labels represented as a cell-array of strings
+           time: {1x266 cell}      the time axis [1*Ntime double] per trial
+          trial: {1x266 cell}      the numeric data as a cell array, with a matrix of [151*Ntime double] per trial
      sampleinfo: [266x2 double]    the begin and endsample of each trial relative to the recording on disk
       trialinfo: [266x1 double]    optional trigger or condition codes for each trial
             hdr: [1x1 struct]      the full header information of the original dataset on disk
            grad: [1x1 struct]      information about the sensor array (for EEG it is called elec)
-           cfg: [1x1 struct]       the configuration used by the function that generated this data structure
+            cfg: [1x1 struct]      the configuration used by the function that generated this data structure
 
  Required fields:
    - time, trial, label
