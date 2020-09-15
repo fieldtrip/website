@@ -75,6 +75,7 @@ When adding or contributing to the tutorials please consider the [documentation 
 - [Analysis of corticomuscular coherence](/tutorial/coherence)
 - [Analysis of sensor- and source-level connectivity](/tutorial/connectivity)
 - [Whole brain connectivity and network analysis](/tutorial/networkanalysis)
+- [Whole brain connectivity and network analysis (2) - EEG](/tutorial/networkanalysis_eeg)
 
 ## Statistics
 
