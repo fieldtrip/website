@@ -149,6 +149,9 @@
   link:  /tutorial/networkanalysis
 
 - name:  Whole brain connectivity and network analysis
+  link:  /tutorial/networkanalysis_eeg
+
+- name:  Whole brain connectivity and network analysis
   link:  /tutorial/networkanalysis_old
 
 - name:  Preprocessing of EEG data and computing ERPs

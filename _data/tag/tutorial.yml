@@ -89,6 +89,9 @@
   link:  /tutorial/networkanalysis
 
 - name:  Whole brain connectivity and network analysis
+  link:  /tutorial/networkanalysis_eeg
+
+- name:  Whole brain connectivity and network analysis
   link:  /tutorial/networkanalysis_old
 
 - name:  Preprocessing and averaging of multi-channel NIRS data
