@@ -31,6 +31,9 @@
 - name:  How should I specify the coordinate systems in a BIDS dataset?
   link:  /faq/bids_coordsystem
 
+- name:  Getting started with BIDS
+  link:  /getting_started/bids
+
 - name:  Convert the EEG sedation dataset for sharing in BIDS
   link:  /workshop/madrid2019/bids_sedation
 

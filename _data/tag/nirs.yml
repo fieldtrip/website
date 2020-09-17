@@ -25,6 +25,9 @@
 - name:  Getting started with Shimadzu NIRS data
   link:  /getting_started/shimadzu
 
+- name:  Getting started with SNIRF data
+  link:  /getting_started/snirf
+
 - name:  Specifying the channel layout for plotting
   link:  /tutorial/layout
 

@@ -82,6 +82,9 @@
 - name:  Getting started with BESA data
   link:  /getting_started/besa
 
+- name:  Getting started with BIDS
+  link:  /getting_started/bids
+
 - name:  Getting started with BioImage Suite
   link:  /getting_started/bioimage
 
@@ -153,6 +156,9 @@
 
 - name:  Getting started with Shimadzu NIRS data
   link:  /getting_started/shimadzu
+
+- name:  Getting started with SNIRF data
+  link:  /getting_started/snirf
 
 - name:  Getting started with XSens motion capture data
   link:  /getting_started/xsens
