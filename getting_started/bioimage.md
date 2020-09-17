@@ -1,6 +1,6 @@
 ---
 title: Getting started with BioImage Suite
-tags: [dataformat, getting_started, bioimagesuite, bioimage, ieeg, ecog, seeg, localization]
+tags: [dataformat, bioimagesuite, bioimage, ieeg, ecog, seeg, localization]
 ---
 
 # Getting started with BioImage Suite

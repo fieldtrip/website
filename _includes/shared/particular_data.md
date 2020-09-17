@@ -40,6 +40,7 @@ In general you should get started with the [tutorials](/tutorial). The pages tha
 - [Getting started with Hitachi NIRS data](/getting_started/hitachi)
 - [Getting started with NIRx NIRS data](/getting_started/nirx)
 - [Getting started with Shimadzu NIRS data](/getting_started/shimadzu)
+- [Getting started with SNIRF NIRS data](/getting_started/snirf)
 
 ## Getting started with other types of data
 
@@ -49,6 +50,7 @@ In general you should get started with the [tutorials](/tutorial). The pages tha
 
 ## Getting started with data from other software
 
+- [Getting started with BIDS](/getting_started/bids)
 - [Getting started with data from EEGLAB](/getting_started/eeglab)
 - [Getting started with data from SPM](/getting_started/spm)
 - [Getting started with data from LORETA](/getting_started/loreta)
