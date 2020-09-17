@@ -1,7 +1,7 @@
 ---
 title: 17 September 2020 - New communication strategy
 categories: [news, release]
-tweet: Heads up fieldtrippers, we're switching things up! Instead of automated commits, we'll be tweeting cool features, good news & important contributions! Make sure to check our github https://github.com/fieldtrip, website http://www.fieldtriptoolbox.org & mailing list (http://www.fieldtriptoolbox.org/discussion_list/).---
+tweet: Heads up fieldtrippers, we're switching things up! Instead of automated commits, we'll be tweeting cool features, good news & important contributions! Make sure to check our github https://github.com/fieldtrip, website http://www.fieldtriptoolbox.org & mailing list (http://www.fieldtriptoolbox.org/discussion_list/).
 ---
 
 ### 17 September, 2020
