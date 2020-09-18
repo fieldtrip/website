@@ -24,6 +24,7 @@ See also the [tutorials](/tutorial) and [frequently asked questions](/faq).
 - [The correct pipeline order for combining planar MEG channels](/example/combineplanar_pipelineorder)
 - [Use independent component analysis (ICA) to remove ECG artifacts](/example/use_independent_component_analysis_ica_to_remove_ecg_artifacts)
 - [Use independent component analysis (ICA) to remove EOG artifacts](/example/use_independent_component_analysis_ica_to_remove_eog_artifacts)
+- [Use denoising source separation (DSS) to remove ECG artifacts](/example/use_denoising_source_separation_dss_to_remove_ecg_artifacts)
 
 ### Spectral analysis
 
