@@ -1,6 +1,6 @@
 ---
 title: 03 September, 2018 - BIOMAG open science panel
-categories: []
+categories: [news]
 ---
 
 ### 03 September, 2018
