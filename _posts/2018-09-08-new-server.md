@@ -1,6 +1,6 @@
 ---
 title: 10 September, 2018 - New server
-categories: []
+categories: [news]
 ---
 
 ### 10 September, 2018

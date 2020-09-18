@@ -1,6 +1,6 @@
 ---
 title: 20 December, 2018 - Donders Award
-categories: []
+categories: [news]
 ---
 
 ### 20 December, 2018

@@ -1,6 +1,6 @@
 ---
 title: 01 July, 2018 - HCP workshop
-categories: []
+categories: [news]
 ---
 
 ## 01 July, 2018

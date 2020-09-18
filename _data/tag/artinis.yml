@@ -1,6 +1,9 @@
 - name:  Artinis Medical Systems
   link:  /development/realtime/artinis
 
+- name:  Converting an example NIRS dataset for sharing in BIDS
+  link:  /example/bids_nirs
+
 - name:  Getting started with Artinis NIRS data
   link:  /getting_started/artinis
 

@@ -7,7 +7,7 @@ tags: [website, syntax, guidelines, development]
 
 This page describes the syntax and formatting for the FieldTrip website. The content of the website is maintained on <http://github.com/fieldtrip/website> and we have a complete [tutorial](/development/git/) that explains how to contribute. You can also use the GitHub web interface by opening a specific page page and clicking on the pen symbol ("Edit this file") in the upper right corner.
 
-The website pages are written in Markdown format, which are converted into html using [Jekyll](https://jekyllrb.com). The Markdown pages includes sections in the [Liquid](https://shopify.github.io/liquid/) makeup language for more detailed formatting. The resulting static html pages and style sheets also make use of [Bootstrap](https://getbootstrap.com/docs/4.0/getting-started/introduction/).
+The website pages are written in Markdown format, which are converted into html using [Jekyll](https://jekyllrb.com). The Markdown pages includes sections in the [Liquid](https://shopify.github.io/liquid/) makeup language for more detailed formatting, for which the Shopify [Liquid cheat sheet](http://cheat.markdunkley.com) is a good resource. The resulting static html pages and style sheets also make use of [Bootstrap](https://getbootstrap.com/docs/4.0/getting-started/introduction/).
 
 This Markdown [cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) is a very good place to start. It is also helpful to check the formatting in an online Markdown editor like <https://stackedit.io> or <https://dillinger.io>.
 

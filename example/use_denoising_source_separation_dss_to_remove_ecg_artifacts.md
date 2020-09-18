@@ -2,8 +2,6 @@
 title: Use denoising source separation (DSS) to remove ECG artifacts
 ---
 
-{% include /shared/development/warning.md %}
-
 ## Use denoising source separation (DSS) to remove ECG artifacts
 
 ### Description
