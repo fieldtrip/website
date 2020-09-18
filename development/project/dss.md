@@ -1,80 +1,80 @@
 ---
-title: Use DSS to remove ECG/BCG artifacts within ft_componentanalysis
+title: Use denoising source separation (DSS) to remove ECG artifacts
 ---
 
 {% include /shared/development/warning.md %}
 
-## Use DSS to remove ECG/BCG artifacts within ft_componentanalysis
+## Use denoising source separation (DSS) to remove ECG artifacts
 
 ### Description
 
-This script demonstrates how you can use DSS for cleaning the BCG artifacts from your EEG data. It consists of three step
+This script demonstrates how you can use denoising source separation (DSS) for cleaning the ECG/BCG artifacts from your MEEG data. It consists of four steps:
 
-1.  performing optimal peak detection on the independent ECG channel
-2.  selecting number of components to remove from EEG data
-3.  removing those components and backprojecting the data
+1.  detection of QRS-complexes using the ECG channel, which has been recorded along with the data
+2.  use the identified peaks as prior information to inform the DSS algorithm to unmix the MEEG channel data
+2.  selection of a number of components to remove from MEEG data
+3.  removal of the identified components
 
-You may download the external [DSS toolbox here](http://www.cis.hut.fi/projects/dss).
-
-How does DSS work to find the components to remove? You give it the time points of the peaks, and time windows of set length before/after this peak (you can obtain these easily by calling ft_artifact_zvalue). After concatenating trials into one vector (hence matrix of channels x time) the data is sphered. For each component, it initializes by projecting the sphered data onto a random basis [randn(1,Nchan)*sphered_data]. If it is solving for the second or later component, this weight is orthogonalized with respect to all previously found weights for previously computed components. The average template of the artifact in the time windows around the peaks is computed, with zeros elsewhere. (This step was modified to respect trial boundaries, i.e. if a time window around a peak goes off the edge of a trial). The weighting of sphered data to obtain this repeated template is computed (and re-orthogonalized if component 2 or greater) and normed. Iterate until weights not change much and save.
+DSS is a blind source separation technique that is akin to ICA, with the added functionality of that it can use prior information to unmix the signals into sources that have certain characteristics. While in ICA the defining characteristic of the sources is statistical independence, in DSS one can for instance steer the unmixing towards the identification of sources that are timelocked to certain events. This is the exact feature that we are going to exploit in this example, because it shows how to remove the ECG artifact, using information about the timing of the QRS-complexes. What is therefore needed, is a sufficiently clean ECG-like signal to begin with, to allow for the identification of those peaks. This will be done, using the ft_artifact_zvalue function. Next, the output of ft_artifact_zvalue will be used to call ft_componentanalysis with 'dss' as method. 
 
 ### Example dataset
 
-You can run the code below on your own data. Alternatively, try with the example EEG dataset [ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/callmesomething.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/callmesomething.zip). All figures in this example script are based on these data. (Note**_ just a placeholder at the moment, this data does not exist yet._**)
+You can run the code below on your own data. Alternatively, try with the example MEG dataset [ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/ArtifactRemoval.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/ArtifactRemoval.zip). All figures in this example script are based on these data. 
 
-To load this dataset into MATLAB and preprocess with FieldTrip, us
+To load this dataset into MATLAB and preprocess with FieldTrip, use:
 
-    % ft_preprocessing of example dataset
-    cfg = [];
-    cfg.dataset = 'ArtifactRemoval.ds';
+    cfg         = [];
+    cfg.dataset = 'ArtifactRemoval.ds'; % ensure that you are in the correct folder for this to run
     cfg.trialdef.eventtype = 'trial';
-    cfg = ft_definetrial(cfg);
+    cfg     = ft_definetrial(cfg);
+    cfg.trl = cfg.trl(1:end-1,:); % remove the last one, because it clips.
+
+    cfg.channel = 'MEG';
+    cfg.demean  = 'yes';
+    meg         = ft_preprocessing(cfg);
 
 ### ECG peak detection
 
-We can use ft_artifact_zvalue. Apply preproc to the ECG channel, and use some cfg options to obtain the peak time point above threshold within a certain time range (rather than all values above threshold), and furthermore, set a fixed time-range around this peak.
-Filter the ECG channel to optimize separation of a single peak per heartbeat relative to other waves. This will be different per subject. One possible/recommended way for BCG is a combination of drift-removal (bandpass 5-30Hz) and then the Hilbert envelope of this.
+We will use ft_artifact_zvalue for this step. To this end, we read in the ECG channel (in the dataset used this is channel 'EEG058'), and apply some filtering etc. to facilitate the identification of peaks in the signal.
 
-    cfg=[];
-    cfg.artfctdef.zvalue.channel='ECG';
-    cfg.artfctdef.zvalue.cutoff=2;
-    cfg.artfctdef.zvalue.interactive = 'yes';
-    cfg.artfctdef.zvalue.bpfilter='yes';
-    cfg.artfctdef.zvalue.bpfreq=[5 30];
-    cfg.artfctdef.zvalue.hilbert='yes';
-    cfg.artfctdef.zvalue.artfctpeak='yes';
-    cfg.artfctdef.zvalue.artfctpeakrange=[-.25 .5]; % save out 250ms prior and 500ms post ECG peak
-    cfg=ft_artifact_zvalue(cfg,rawcleanrere);
+    cfg = removefields(cfg, {'channel', 'demean'});
+    cfg.artfctdef.zvalue.channel         = 'EEG058';
+    cfg.artfctdef.zvalue.cutoff          = 2;
+    cfg.artfctdef.zvalue.interactive     = 'yes';
+    cfg.artfctdef.zvalue.bpfilter        = 'yes';
+    cfg.artfctdef.zvalue.bpfreq          = [5 30];
+    cfg.artfctdef.zvalue.hilbert         = 'yes';
+    cfg.artfctdef.zvalue.artfctpeak      = 'yes';
+    cfg.artfctdef.zvalue.artfctpeakrange = [-.25 .5]; % save out 250ms prior and 500ms post ECG peak
+    cfg = ft_artifact_zvalue(cfg);
 
 The DSS code wants a 'params' structure which contains peak time points, as well as the range around the peak that you think is relevant. Note that the subfield 'dssartifact' is different from 'artifact' in 2 ways: 1) beginning/end points based on cfg.artfctdef.zvalue.artfctpeakrange rather than where the channel exceeded the threshold, and 2) the sample counts between trial end to the start of next trial have been subtracted.
 
-    params.tr=cfg.artfctdef.zvalue.peaks;
-    params.tr_begin=cfg.artfctdef.zvalue.dssartifact(:,1);
-    params.tr_end=cfg.artfctdef.zvalue.dssartifact(:,2);
-
+    params.tr  = cfg.artfctdef.zvalue.peaks_indx;
+    params.pre = 0.25*meg.fsample;
+    params.pst = 0.50*meg.fsample;
+    params.demean = true;
+    
 ### DSS component rejection
-
-    addpath ~/mfiles/dss_1-0
 
     cfg                   = [];
     cfg.method            = 'dss';
-    cfg.dss.denf.function = 'denoise_avgJM';
+    cfg.dss.denf.function = 'denoise_avg2';
     cfg.dss.denf.params   = params;
-    cfg.numcomponent      = 15; % choose here optimal for your dataset!!
-    % cfg.channel           = {'all', '-ECG'};
-    cfg.channel           = {'all'}; % Is it better to include ECG in DSS or not??
-    compdss               = ft_componentanalysis(cfg, rawcleanrere);
+    cfg.dss.wdim          = 75;
+    cfg.numcomponent      = 4;
+    cfg.channel           = 'MEG';
+    cfg.cellmode          = 'yes';
+    comp                  = ft_componentanalysis(cfg, meg);
 
-The output compdss contains the components to reject. Use ft_databrowser to plot all components at once and decide if you have selected the correct scfg.numcomp to reject. Iterate if needed until it appears that all components rejected are heartbeat related. Usually 10-15 is the right range for 64 channel EEG data in the MRI.
+The output compdss contains the components to reject. You can use ft_databrowser to plot all components at once and decide which components to reject. Unlike ICA, where the order of the components is rather random, usually the first (and second) components are the ones to be rejected. This is because, given the default settings, DSS iteratively searches for the the 'sources' that contain the required features, in this case: 'are heartbeat like'. Thus, the first component looks most like a heartbeat signal, followed by the second one, etc.
 
     cfg = [];
-    cfg.layout = 'EEG1010.lay'; % specify the layout file that should be used for plotting
-    cfg.showcallinfo='no';
-    ft_databrowser(cfg,compdss);
+    cfg.layout = 'CTF275_helmet.mat'; % specify the layout file that should be used for plotting
+    ft_databrowser(cfg, comp);
 
 Once you are happy with the number of components to reject, then actually remove them from the data.
 
     cfg           = [];
-    cfg.component = 1:size(compdss.topo,2);
-    cfg.feedback  = 'textbar';
-    rawdssrej     = ft_rejectcomponent(cfg, compdss, rawcleanrere);
+    cfg.component = [1 2];
+    meg_clean     = ft_rejectcomponent(cfg, comp, meg);
