@@ -3,7 +3,7 @@ title: Converting an example NIRS dataset for sharing in BIDS
 tags: [example, bids, sharing, nirs, artinis, homer, snirf]
 ---
 
-# Converting an example motion tracking dataset for sharing in BIDS
+# Converting an example NIRS dataset for sharing in BIDS
 
 {% include markup/danger %}
 BIDS does currently not specify how to represent NIRS data. This example - and the support that is implemented in the **[data2bids](https://github.com/fieldtrip/fieldtrip/blob/release/data2bids.m)** function - should be considered as a preliminary proposal to help researchers with their existing data.
@@ -26,7 +26,7 @@ The raw data is available on our FTP server, together with the script to convert
     % the Artinis oxy3 files come with an optodetemplates.xml, this has to be in
     % the same directory as the oxy3 file and it cannot be a subdirectory
     % hence we have to change to the correct directory
-    
+
     % if we don't change to the data directory, a graphical user interface dialog will pop up
 
     cd('original')
@@ -48,13 +48,13 @@ The raw data is available on our FTP server, together with the script to convert
 
     for i=1:length(filelist)
       filename = filelist{i};
-      
+
       cfg = [];
       cfg.dataset = filename;
       cfg.method = 'convert';
       cfg.writejson = 'replace';
       cfg.writetsv = 'replace';
-      
+
       % the following settings relate to the directory structure and file names
       cfg.bidsroot = '../bids'; % we are running this code in the "original" directory
       cfg.sub = filename([1 2 4 5]); % the first characters minus the "-"
@@ -62,20 +62,19 @@ The raw data is available on our FTP server, together with the script to convert
       cfg.run = [];
       cfg.task = 'auditoryoddball';
       cfg.datatype = 'nirs';
-      
+
       % the following settings relate to the dataset_description.json
       cfg.dataset_description.Name                = '48-channel NIRS measured during auditory oddball task';
       cfg.dataset_description.Authors             = 'Marc van Wanrooij';
       cfg.dataset_description.ReferencesAndLinks  = {'http://www.fieldtriptoolbox.org/tutorial/nirs_multichannel/'}; % this can be a list
       cfg.dataset_description.BIDSVersion         = 'BEP030'; % this does not correspnd to an official version, but a BIDS Extension Proposal. See http://bids.neuroimaging.io/bep030
-      
+
       data2bids(cfg)
     end
 
-
 In the organization of the data to BIDS, the data is also converted to the SNIRF format. In the binary SNIRF format it is not specified what the channel names are, only which pair of sources/transmitters and detectors/receivers is being combined in each channel. Since SNIRF looks rather similar to teh Homer format (see further down), the default nomenclature for SNIRF channels is `Sx-Dx [wavelength]` where `x` is a number. In the Artinis software it is slightly different and channels are called `Rx-Tx [wavelength]`.
 
-For data that is in the BIDS format, FieldTrip (from version 20200911 onward) uses the BIDS `.json` and `.tsv` sidecar files to overrule the header and event details. You can see that with the following code
+For data that is in the BIDS format, FieldTrip version 20200911 or later uses the BIDS `.json` and `.tsv` sidecar files to overrule the header and event details. You can see that with the following code
 
     hdr1   = ft_read_header('../bids/sub-LR01/nirs/sub-LR01_task-auditoryoddball_nirs.snirf', 'readbids', true)
     event1 = ft_read_event('../bids/sub-LR01/nirs/sub-LR01_task-auditoryoddball_nirs.snirf', 'readbids', true)
@@ -85,10 +84,9 @@ which will return the channel names as `Rx-Tx` according to the Artinis standard
     hdr2   = ft_read_header('../bids/sub-LR01/nirs/sub-LR01_task-auditoryoddball_nirs.snirf', 'readbids', false)
     event2 = ft_read_event('../bids/sub-LR01/nirs/sub-LR01_task-auditoryoddball_nirs.snirf', 'readbids', false)
 
-
 ## Homer
 
-Homer is MATLAB-based software for the analysis of NIRS and is developed by researchers in the [lab](http://cbs.unix.fas.harvard.edu/science/core-facilities/neuroimaging/facilities/nirs-lab) of David Boas.
+Homer is MATLAB-based software for the analysis of NIRS and is developed by researchers in the [lab](http://cbs.unix.fas.harvard.edu/science/core-facilities/neuroimaging/facilities/nirs-lab) of David Boas. If you have used Homer to import your data, you can use **[data2bids](http://github.com/fieldtrip/fieldtrip/blob/release/data2bids.m)** to convert the `.nirs` files to SNIRF and to organize them according to BIDS.
 
 ### Example
 
@@ -100,7 +98,7 @@ The complete original dataset is available from Mendeley, a subset of the raw da
 
     % the original dataset includes data from 40 subjects
     % we are just using a subset here to demonstrate the principle
-    
+
     filenames = {
       'S1001_run01.nirs'
       'S1003_run01.nirs'
@@ -112,11 +110,11 @@ The complete original dataset is available from Mendeley, a subset of the raw da
 
     for i=1:length(filenames)
       filename = filenames{i};
-      
+
       cfg = [];
       cfg.dataset = fullfile('original', filename);
       cfg.method = 'convert';
-      
+
       % the following settings relate to the directory structure and file names
       cfg.bidsroot = 'bids';
       cfg.sub = filename(1:5);
@@ -124,7 +122,7 @@ The complete original dataset is available from Mendeley, a subset of the raw da
       cfg.run = [];
       cfg.task = 'listenandrepeat';
       cfg.datatype = 'nirs';
-      
+
       % the following settings relate to the dataset_description.json
       cfg.dataset_description.Name                = 'Defenderfer 2019; fNIRS data files for event-related vocoding/background noise study';
       cfg.dataset_description.Authors             = 'Defenderfer, Jessica; Buss, Aaron ';
@@ -132,7 +130,7 @@ The complete original dataset is available from Mendeley, a subset of the raw da
       cfg.dataset_description.License             = 'CC BY 4.0';
       cfg.dataset_description.ReferencesAndLinks  = {'http://www.fieldtriptoolbox.org/example/nirs_speech/'}; % this can be a list
       cfg.dataset_description.BIDSVersion         = 'BEP030'; % this does not correspnd to an official version, but a BIDS Extension Proposal. See http://bids.neuroimaging.io/bep030
-      
+
       data2bids(cfg)
     end
 
@@ -157,13 +155,13 @@ The raw data is available on our FTP server, together with the script to convert
     %%
 
     for i=1:numel(filelist)
-      
+
       filename = filelist{i};
-      
+
       cfg = [];
       cfg.dataset = fullfile('original', filename);
       cfg.method = 'copy';
-      
+
       % the following settings relate to the directory structure and file names
       cfg.bidsroot = 'bids';
       cfg.sub = filename(1:4); % the first four characters
@@ -171,13 +169,13 @@ The raw data is available on our FTP server, together with the script to convert
       cfg.run = [];
       cfg.task = 'auditoryoddball';
       cfg.datatype = 'nirs';
-      
+
       % the following settings relate to the dataset_description.json
       cfg.dataset_description.Name                = '48-channel NIRS measured during auditory oddball task';
       cfg.dataset_description.Authors             = 'Marc van Wanrooij';
       cfg.dataset_description.ReferencesAndLinks  = {'http://www.fieldtriptoolbox.org/tutorial/nirs_multichannel/'}; % this can be a list
       cfg.dataset_description.BIDSVersion         = 'BEP030'; % this does not correspnd to an official version, but a BIDS Extension Proposal. See http://bids.neuroimaging.io/bep030
-      
+
       data2bids(cfg)
-      
+
     end
