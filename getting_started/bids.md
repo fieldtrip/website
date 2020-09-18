@@ -11,9 +11,9 @@ To read more about BIDS, please see the [website](https://bids.neuroimaging.io) 
 
 ## Reading data from a BIDS dataset
 
-FieldTrip has direct support for all data file formats that are used in BIDS. This includes
+FieldTrip has direct support for all data file formats that are used in BIDS. This includes:
 
-- anatomical and functional MRI
+- structural and functional MRI
   - NIfTI format (`.nii` and `.nii.gz`)
 - MEG
   - [CTF](/getting_started/ctf)
@@ -30,7 +30,7 @@ FieldTrip has direct support for all data file formats that are used in BIDS. Th
   - [Neurodata Without Borders](/getting_started/nwb) (`.nwb`)
   - Multiscale Electrophysiology File Format
 
-Furthermore, there are a number of BIDS extension proposals (so called BEPs) that are likely to be part of the BIDS specification in the future. Some of these
+Furthermore, there are a number of BIDS extension proposals (so called BEPs) that are likely to be part of the BIDS specification in the near future. Some of these are:
 
 - PET, see <http://bids.neuroimaging.io/bep009>
   - NIfTI format (`.nii` and `.nii.gz`)
@@ -41,16 +41,16 @@ Furthermore, there are a number of BIDS extension proposals (so called BEPs) tha
 
 When you read raw data that is represented in the BIDS organization, the corresponding sidecar files are also read. In the case of MEG, EEG and iEEG that means that the corresponding json file and the `_channels.tsv` file are read. Channel names in the original (binary) file format will be overruled with those in the channels file. Also the `_events.tsv` file will be read, events that are in the original (binary) file will be replaced by those from the events file.
 
-If you want to avoid reading the channels and/or events from the BIDS sidecar files, you can specify the `readbids` option as false or 'no'. This is supported in ft
+If you want to avoid reading the channels and/or events from the BIDS sidecar files, you can specify in the low-level functions the `readbids` or `cfg.readbids` option as 'no'.
 
 ## Writing data to a BIDS dataset
 
-Using the **[data2bids](https://github.com/fieldtrip/fieldtrip/blob/release/data2bids.m)** function you can decorate, copy, or convert data to bids.
+Using the **[data2bids](https://github.com/fieldtrip/fieldtrip/blob/release/data2bids.m)** function you can organize your data according to BIDS. It supports three methods:
 
-- **decorate**: use this if the data is already in the right format, with the right filename and in the right directory
-- **copy**: use this if the data is already in the right format, but not with the filename and not in the right directrory
-- **convert**: use this if the data is in a format that is not supported according to the BIDS specification
+- **decorate**: use this if the data is already in the right file format, with the right filename and in the right directory
+- **copy**: use this if the data is already in the right file format, but not with the filename and not in the right directrory
+- **convert**: use this if the data is in a file format that is not supported according to the BIDS specification, or with raw or minimally preprocessed data in memory
 
-There are various examples that show how to convert different data formats in BIDS:
+There are various examples that show how to convert different types of data:
 
 {% include seealso tag1="example" tag2="bids" %}
