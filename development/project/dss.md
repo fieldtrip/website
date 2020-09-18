@@ -48,7 +48,7 @@ We will use ft_artifact_zvalue for this step. To this end, we read in the ECG ch
     cfg.artfctdef.zvalue.artfctpeakrange = [-.25 .5]; % save out 250ms prior and 500ms post ECG peak
     cfg = ft_artifact_zvalue(cfg);
 
-The DSS code wants a 'params' structure which contains peak time points, as well as the range around the peak that you think is relevant. Note that the subfield 'dssartifact' is different from 'artifact' in 2 ways: 1) beginning/end points based on cfg.artfctdef.zvalue.artfctpeakrange rather than where the channel exceeded the threshold, and 2) the sample counts between trial end to the start of next trial have been subtracted.
+The DSS code wants a 'params' structure which contains peak time points, expressed in samples. These peak time points should either be expressed relative to the onset of the corresponding trial (which will only work, if the consecutive data that is to be subjected to ft_componentanalysis is epoched in the same way, as the data that was used for the peak identification), or relative to the onset of the recording. In the first case, you can use the peaks_indx cell-array for the params structure, in the second case, you'd need to use the peaks vector. We will use the cell-array mode, (in combination with cfg.cellmode for ft_componentanalysis) since that allows for a much more memory efficient implementation of the decomposition. In addition to the peak indices, you also need to specify a 'pre' and 'pst' window.
 
     params.tr  = cfg.artfctdef.zvalue.peaks_indx;
     params.pre = 0.25*meg.fsample;
@@ -67,7 +67,7 @@ The DSS code wants a 'params' structure which contains peak time points, as well
     cfg.cellmode          = 'yes';
     comp                  = ft_componentanalysis(cfg, meg);
 
-The output compdss contains the components to reject. You can use ft_databrowser to plot all components at once and decide which components to reject. Unlike ICA, where the order of the components is rather random, usually the first (and second) components are the ones to be rejected. This is because, given the default settings, DSS iteratively searches for the the 'sources' that contain the required features, in this case: 'are heartbeat like'. Thus, the first component looks most like a heartbeat signal, followed by the second one, etc.
+The output comp contains the identified components. You can use ft_databrowser to plot all components at once and decide which components to reject. Unlike ICA, where the order of the components is rather random, usually the first (and second) components are the ones to be rejected. This is because, given the default settings, DSS iteratively searches for the the 'sources' that contain the required features, in this case: 'are heartbeat like'. Thus, the first component looks most like a heartbeat signal, followed by the second one, etc.
 
     cfg = [];
     cfg.layout = 'CTF275_helmet.mat'; % specify the layout file that should be used for plotting
