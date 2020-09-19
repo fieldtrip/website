@@ -57,6 +57,7 @@ title: ft_compute_leadfield
    multiple concentric spheres (up to 4 spheres)
    leadfield interpolation using a precomputed sourcemodel
    boundary element method (BEM)
+   finite element method (FEM)
 
  See also FT_PREPARE_VOL_SENS, FT_HEADMODEL_ASA, FT_HEADMODEL_BEMCP,
  FT_HEADMODEL_CONCENTRICSPHERES, FT_HEADMODEL_DIPOLI, FT_HEADMODEL_HALFSPACE,

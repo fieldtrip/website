@@ -18,6 +18,7 @@ title: ft_read_header
    'coordsys'       = string, 'head' or 'dewar' (default = 'head')
    'headerformat'   = name of a MATLAB function that takes the filename as input (default is automatic)
    'password'       = password structure for encrypted data set (only for mayo_mef30 and mayo_mef21)
+   'readbids'       = boolean, whether to read information from the BIDS sidecar files (default = true)
 
  This returns a header structure with the following elements
    hdr.Fs                  sampling frequency

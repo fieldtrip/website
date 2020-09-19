@@ -22,6 +22,7 @@ title: ft_read_event
    'blocking'       wait for the selected number of events (default = 'no')
    'timeout'        amount of time in seconds to wait when blocking (default = 5)
    'password'       password structure for encrypted data set (only for mayo_mef30 and mayo_mef21)
+   'readbids'       boolean, whether to read information from the BIDS sidecar files (default = true)
 
  This function returns an event structure with the following fields
    event.type      = string
