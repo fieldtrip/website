@@ -1,10 +1,9 @@
 ---
-title: 17 September 2020 - New communication strategy
+title: 17 September 2020 - Improved communication strategy
 categories: [news, release]
-tweet: Heads up fieldtrippers, we're switching things up! Instead of automated commits, we'll be tweeting cool features, good news & important contributions! Make sure to check our github https://github.com/fieldtrip, website http://www.fieldtriptoolbox.org & mailing list (http://www.fieldtriptoolbox.org/discussion_list/).
+tweet: We are changing gears on twitter! Instead of tweeting on every commit, we'll send less frequent but more interesting tweets: important releases, new features and other contributions! Make sure to check https://github.com/fieldtrip, and http://www.fieldtriptoolbox.org/discussion_list.
 ---
 
 ### 17 September, 2020
 
-Dear fieldtrip users, as communication is an integral part of our work, we're changing our strategy! In addition to what we have been announcing so far (e.g. workshop dates), we will be highlighting the release of new fieldtrip versions with remarkable changes and/or considerable external contribution! 
-We will make sure that these announcements reach you either through our website, [our twitter page](https://twitter.com/fieldtriptoolbx) and [our mailing list](http://www.fieldtriptoolbox.org/discussion_list/).
+We are changing our [communication](/development/guideline/communication) strategy, which is an integral part of our work! We will continue to use this website for news items and updates on releases, but also use twitter more systematically. Instead of sending a tweet upon every commit (which made sense in the pre-GitHub days but not any more), we will start sending less frequent but more interesting tweets with important releases, announcements of new features, documentation updates, training events, and other interesting information! So to follow the important news, please keep checking here or follow us on [twitter](https://twitter.com/fieldtriptoolbx).
