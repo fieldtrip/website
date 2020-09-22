@@ -72,14 +72,14 @@ The raw data is available on our FTP server, together with the script to convert
       data2bids(cfg)
     end
 
-In the organization of the data to BIDS, the data is also converted to the SNIRF format. In the binary SNIRF format it is not specified what the channel names are, only which pair of sources/transmitters and detectors/receivers is being combined in each channel. Since SNIRF looks rather similar to teh Homer format (see further down), the default nomenclature for SNIRF channels is `Sx-Dx [wavelength]` where `x` is a number. In the Artinis software it is slightly different and channels are called `Rx-Tx [wavelength]`.
+In the organization of the data to BIDS, the data is also converted to the SNIRF format. In the binary SNIRF format it is not specified what the channel names are, only which pair of sources/transmitters and detectors/receivers is being combined in each channel. Since SNIRF looks rather similar to the Homer format (see further down), the default nomenclature for SNIRF channels is `'Sx-Dx [wavelength]'` where `x` is a number. In the Artinis software it is slightly different and channels are called `'Rx-Tx [wavelength]'`.
 
 For data that is in the BIDS format, FieldTrip version 20200911 or later uses the BIDS `.json` and `.tsv` sidecar files to overrule the header and event details. You can see that with the following code
 
     hdr1   = ft_read_header('../bids/sub-LR01/nirs/sub-LR01_task-auditoryoddball_nirs.snirf', 'readbids', true)
     event1 = ft_read_event('../bids/sub-LR01/nirs/sub-LR01_task-auditoryoddball_nirs.snirf', 'readbids', true)
 
-which will return the channel names as `Rx-Tx` according to the Artinis standard, since that is represented in the `_channels.tsv` sidecar. By specifying the readbids option as false, you can skip the BIDS json and tsv and the channel names correspond to the SNIRF defaults, i.e., `Sx-Dx` rather than `Rx-Tx`.
+which will return the channel names as `'Rx-Tx'` according to the Artinis standard, since that is represented in the `_channels.tsv` sidecar. By specifying the readbids option as false, you can skip the BIDS json and tsv and the channel names correspond to the SNIRF defaults, i.e., `'Sx-Dx'` rather than `'Rx-Tx'`.
 
     hdr2   = ft_read_header('../bids/sub-LR01/nirs/sub-LR01_task-auditoryoddball_nirs.snirf', 'readbids', false)
     event2 = ft_read_event('../bids/sub-LR01/nirs/sub-LR01_task-auditoryoddball_nirs.snirf', 'readbids', false)

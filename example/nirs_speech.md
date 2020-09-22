@@ -428,7 +428,7 @@ specific averages.
 
 {% include image src="/assets/img/example/nirs_speech/figure10.png" %}
 
-After baseline correcting (which is done while making the figure, it could also have been done using **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)**) we can see condition differences in the event-related responses in the 5 conditions. However, due to the alternating stimulus-response sequence and the response possibly being confounded with an artifact, it is hard to tell whether teh difference is due to the stimulus or to the response that could affect the baseline of each subsequent trial.
+After baseline correcting (which is done while making the figure, it could also have been done using **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)**) we can see condition differences in the event-related responses in the 5 conditions. However, due to the alternating stimulus-response sequence and the response possibly being confounded with an artifact, it is hard to tell whether the difference is due to the stimulus or to the response that could affect the baseline of each subsequent trial.
 
 ## Closing remarks
 
