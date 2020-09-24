@@ -18,7 +18,6 @@ With each of these we reach out to a specific group FieldTrip stakeholders but -
 
 These are to be announced on the website and on twitter.
 
-
 To add a news item to the website, please file a pull request adding a new file to the [_posts folder on the website](https://github.com/fieldtrip/website/tree/master/_posts). See example files there for how these (markdown) files should be structured. The latest files flagged as `categories: [news]` will, when merged, appear on the homepage.
 
 Whenever a new release is made following automatic code [testing](http://www.fieldtriptoolbox.org/development/testing/), a news item is automatically made that is flagged as `categories: [release]` in the header, and sent as pull request to the [website repository](https://github.com/fieldtrip/website/pulls). This PR has to be reviewed and summarized for human readability by one of the website editors. If merged, the "latest release" section on the homepage will automatically be updated to reflect this.
