@@ -12,7 +12,7 @@ To communicate with and reach a wide audience, we use the following channels
 - [GitHub](http://github.com/fieldtrip), for interaction between developpers
 - [Twitter](http://twitter.com/fieldtriptoolbx), for announcements and news
 
-With each of these we reach out to a specific group FieldTrip stakeholders but - alhough they are partially overlapping - there is none of them through which we reach everyone.
+With each of these we reach out to a specific group FieldTrip stakeholders but - alhough they are partially overlapping - there is none through which we reach everyone.
 
 ## News items and releases
 
