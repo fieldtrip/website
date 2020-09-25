@@ -133,6 +133,8 @@ table {
 }
 #sec-news-and-announcements .post-excerpt {
   border-top: 1px dashed #ccc;
-  border-bottom: 1px dashed #ccc;
   padding-top: 1em;
+}
+#sec-news-and-announcements .post-excerpt:last-child {
+  border-bottom: 1px dashed #ccc;
 }
