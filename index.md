@@ -14,6 +14,8 @@ Robert Oostenveld, Pascal Fries, Eric Maris, and Jan-Mathijs Schoffelen. **[Fiel
 
 To get started, head over to the [getting started](/getting_started) documentation and the [tutorials](/tutorial).
 
+<section id="latest-release" markdown="1">
+
 ## Latest release
 
 _The latest code developments can be tracked in detail on [GitHub](/development/git)._
@@ -24,11 +26,17 @@ _The latest code developments can be tracked in detail on [GitHub](/development/
 
 {% if counter == 0 %}
 {% assign counter = counter | plus: 1 %}
+<div class="post-excerpt" markdown="1">
 {{ post.excerpt }}
+</div>
 {% endif %}
 
 {% endif %}
 {% endfor %}
+
+</section>
+
+<section id="news-and-announcements" markdown="1">
 
 ## News and announcements
 
@@ -40,8 +48,12 @@ _You can also follow us on [Twitter](http://twitter.com/fieldtriptoolbx)._
 
 {% if counter < 7 %}
 {% assign counter = counter | plus: 1 %}
+<div class="post-excerpt" markdown="1">
 {{ post.excerpt }}
+</div>
 {% endif %}
 
 {% endif %}
 {% endfor %}
+
+</section>
