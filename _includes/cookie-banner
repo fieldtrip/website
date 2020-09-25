@@ -29,17 +29,17 @@
   else {
     // show the cookie banner and ask for permission for the next 31 days
     document.getElementById('cookie-notice').style.display = 'block';
-  }
 
-  document.getElementById('cookie-notice-accept').addEventListener("click",function() {
-    createCookie('allow-external-cookies','true',31);
-    document.getElementById('cookie-notice').style.display = 'none';
-    location.reload();
-  });
-  document.getElementById('cookie-notice-reject').addEventListener("click",function() {
-    createCookie('allow-external-cookies','false',31);
-    document.getElementById('cookie-notice').style.display = 'none';
-    location.reload();
-  });
+    document.getElementById('cookie-notice-accept').addEventListener("click",function() {
+      createCookie('allow-external-cookies','true',31);
+      document.getElementById('cookie-notice').style.display = 'none';
+      location.reload();
+    });
+    document.getElementById('cookie-notice-reject').addEventListener("click",function() {
+      createCookie('allow-external-cookies','false',31);
+      document.getElementById('cookie-notice').style.display = 'none';
+      location.reload();
+    });
+  }
 
 </script>
