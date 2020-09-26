@@ -7,7 +7,7 @@ tags: [dataformat, homer, nirs]
 
 ## Background
 
-Homer is a set of MATLAB scripts used for analyzing fNIRS data to obtain estimates and maps of brain activation. It has evolved since the early 1990s, first as the Photon Migration Imaging toolbox, then HOMER, and the current version is HOMER2.
+Homer is a set of MATLAB scripts used for analyzing fNIRS data to obtain estimates and maps of brain activation. It has evolved since the early 1990s, first as the Photon Migration Imaging toolbox, then HOMER and [Homer2](https://homer-fnirs.org), and development now continues as [Homer3](https://github.com/BUNPC/Homer3)
 
 The Homer software is described in the paper [HomER: a review of time-series analysis methods for near-infrared spectroscopy of the brain](https://doi.org/10.1364/ao.48.00d280). You can download Homer [here on NITRC](https://www.nitrc.org/projects/homer2/) and you can also find more technical documentation on NITRC, for example on the `.nirs` [file format](https://www.nitrc.org/plugins/mwiki/index.php/homer2:Homer_Input_Files#NIRS_data_file_format).
 
