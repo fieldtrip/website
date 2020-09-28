@@ -212,39 +212,52 @@ Next, we call **[ft_sourceanalysis](https://github.com/fieldtrip/fieldtrip/blob/
     cfg                   = [];
     cfg.frequency         = freq.freq;
     cfg.method            = 'pcc';
-    cfg.grid              = lf;
-    cfg.headmodel         = hdm;
+    cfg.sourcemodel       = leadfield;
+    cfg.headmodel         = headmodel_eeg;
     cfg.keeptrials        = 'yes';
     cfg.pcc.lambda        = '10%';
     cfg.pcc.projectnoise  = 'yes';
     cfg.pcc.fixedori      = 'yes';
+    cfg.elec              = elec_aligned;
     source = ft_sourceanalysis(cfg, freq);
     source = ft_sourcedescriptives([], source); % to get the neural-activity-index
+
 
 ### Visualization of the neural-activity-index
 
 In order to visualize source-reconstructed data, the function [ft_sourceplot](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceplot) can be used. If the input data contains the dipole positions defined on a triangulated mesh (i.e. it contains both a 'pos' and a 'tri' field), one should use the 'surface' method.
 
     %% plot the neural activity index (power/noise)
-    cfg               = [];
+
+    cfg = [];
+    cfg.parameter    = 'nai';
+    sourceint = ft_sourceinterpolate(cfg,source,dkatlas);
+    cfg=[];
+    sourceint = ft_sourceparcellate(cfg, sourceint, dkatlas);
+
+    cfg = [];
     cfg.method        = 'surface';
     cfg.funparameter  = 'nai';
     cfg.maskparameter = cfg.funparameter;
-    cfg.funcolorlim   = [0.0 8];
-    cfg.opacitylim    = [3 8];
+    % cfg.funcolorlim   = [0.0 8];
+    % cfg.opacitylim    = [3 8];
     cfg.opacitymap    = 'rampup';
-    cfg.funcolormap   = 'jet';
+    % cfg.funcolormap   = 'jet';
     cfg.colorbar      = 'no';
-    ft_sourceplot(cfg, source);
+    figure(4);
+    ft_sourceplot(cfg, sourceint);
+    colorbar off
     view([-90 30]);
-    light;
+    light('Position',[0,-90 30])
+    material dull
+    set(gcf,'color','w');
 
-{% include image src="/assets/img/tutorial/networkanalysis/tutorial_nwa_nai.png" width="400" %}
+{% include image src="/assets/img/tutorial/networkanalysis/tutorial_nwa_EEG_nai.png" width="400" %}
 
-_Figure 4: Reconstructed activity (neural activity index) of resting state alpha power is not as instructive as one would hope._
+_Figure 6: Reconstructed activity (neural activity index) of resting state alpha power is not as instructive as one would hope._
 
 {% include markup/info %}
-Compare the distribution of the neural activity index with the sensor topographies plotted earlier. How do they compare? Could you give an explanation of why the correspondence could be poor?
+Compare the distribution of the neural activity index with the electrode topography plotted earlier. How do they compare? Could you give an explanation of why the correspondence could be poor?
 {% include markup/end %}
 
 ### Creation of a 'pseudo-contrast' based on a median split of the epochs
@@ -255,11 +268,13 @@ Typically, in an experimental context, it is useful to visualize activity contra
     cfg              = [];
     cfg.output       = 'pow';
     cfg.method       = 'mtmfft';
-    cfg.taper        = 'dpss';
+    cfg.taper        = 'hanning';
     cfg.foilim       = [9 11];
     cfg.tapsmofrq    = 1;
     cfg.keeptrials   = 'yes';
-    datapow           = ft_freqanalysis(cfg, dataica);
+    datapow           = ft_freqanalysis(cfg, dataseg);
+    cfg.foilim       = [3 40];
+    datapowfull           = ft_freqanalysis(cfg, dataseg);
 
     %% identify the indices of trials with high and low alpha power
     freqind = nearest(datapow.freq, 10);
@@ -273,31 +288,31 @@ Now, we can compute the spectra for the two sets of epochs using **[ft_freqdescr
     %% compute the power spectrum for the median splitted data
     cfg              = [];
     cfg.trials       = indlow;
-    datapow_low      = ft_freqdescriptives(cfg, datapow);
+    datapow_low      = ft_freqdescriptives(cfg, datapowfull);
 
     cfg.trials       = indhigh;
-    datapow_high     = ft_freqdescriptives(cfg, datapow);
+    datapow_high     = ft_freqdescriptives(cfg, datapowfull);
 
     %% compute the difference between high and low
     cfg = [];
     cfg.parameter = 'powspctrm';
     cfg.operation = 'divide';
     powratio      = ft_math(cfg, datapow_high, datapow_low);
-
+    
     %% plot the topography of the difference along with the spectra
     cfg        = [];
-    cfg.layout = 'CTF275_helmet.mat';
+    cfg.layout = lay;
     cfg.xlim   = [9.9 10.1];
-    figure; ft_topoplotER(cfg, powratio);
+    figure(7);
+    subplot(1,2,1);ft_topoplotER(cfg, powratio);
 
     cfg         = [];
-    cfg.channel = {'MRO33'};
-    figure; ft_singleplotER(cfg, datapow_high, datapow_low);
+    cfg.channel = {'EEG087', 'EEG088'};
+    subplot(1,2,2);ft_singleplotER(cfg, datapow_high, datapow_low);
 
-{% include image src="/assets/img/tutorial/networkanalysis/nwa_topo_powratio.png" width="300" %}
-{% include image src="/assets/img/tutorial/networkanalysis/nwa_spectrum_mediansplit.png" width="300" %}
+{% include image src="/assets/img/tutorial/networkanalysis/tutorial_nwa_EEG_highlow_alpha.png" width="300" %}
 
-_Figure 5: Difference topography (left) and power spectra of the median splitted data, according to 10 Hz power at sensor 'MRO33'._
+_Figure 7: Difference topography (left) and power spectra of the median splitted data, according to 10 Hz power at sensor 'EEG087'._
 
 ### Source reconstruction of 'low' and 'high' alpha activity epochs
 
@@ -312,17 +327,18 @@ Now we will compute the source reconstructed alpha power again, as illustrated a
     cfg.foi        = 10;
 
     cfg.trials = indlow;
-    freq_low   = ft_freqanalysis(cfg, dataica);
+    freq_low   = ft_freqanalysis(cfg, dataseg);
 
     cfg.trials = indhigh;
-    freq_high  = ft_freqanalysis(cfg, dataica);
+    freq_high  = ft_freqanalysis(cfg, dataseg);
 
     %% compute the beamformer filters based on the entire data
     cfg                   = [];
     cfg.frequency         = freq.freq;
     cfg.method            = 'pcc';
-    cfg.grid              = lf;
-    cfg.headmodel         = hdm;
+    cfg.sourcemodel              = leadfield;
+    cfg.headmodel         = headmodel_eeg;
+    cfg.elec              = elec_aligned;
     cfg.keeptrials        = 'yes';
     cfg.pcc.lambda        = '10%';
     cfg.pcc.projectnoise  = 'yes';
@@ -334,9 +350,10 @@ Now we will compute the source reconstructed alpha power again, as illustrated a
     cfg                   = [];
     cfg.frequency         = freq.freq;
     cfg.method            = 'pcc';
-    cfg.grid              = lf;
+    cfg.sourcemodel              = leadfield;
     cfg.sourcemodel.filter       = source.avg.filter;
-    cfg.headmodel         = hdm;
+    cfg.headmodel         = headmodel_eeg;
+    cfg.elec              = elec_aligned;
     cfg.keeptrials        = 'yes';
     cfg.pcc.lambda        = '10%';
     cfg.pcc.projectnoise  = 'yes';
@@ -348,28 +365,25 @@ Now we will compute the source reconstructed alpha power again, as illustrated a
     cfg.parameter = 'pow';
     source_ratio  = ft_math(cfg, source_high, source_low);
 
-We now create a fancy opacity mask for the functional data, and visualize the log-difference on the cortical sheet.
-
-    % create a fancy mask
-    source_ratio.mask = (1+tanh(2.*(source_ratio.pow./max(source_ratio.pow(:))-0.5)))./2;
+We now visualize the log-difference on the cortical sheet.
 
     cfg = [];
     cfg.method        = 'surface';
     cfg.funparameter  = 'pow';
-    cfg.maskparameter = 'mask';
-    cfg.funcolorlim   = [-.3 .3];
-    cfg.funcolormap   = 'jet';
     cfg.colorbar      = 'no';
-    ft_sourceplot(cfg, source_ratio);
+    figure(8);ft_sourceplot(cfg, sourceint);
     view([-90 30]);
     light('style','infinite','position',[0 -200 200]);
+    colorbar off
+    material dull
+    set(gcf,'color','w');
 
-{% include image src="/assets/img/tutorial/networkanalysis/tutorial_nwa_source_alpha.png" width="400" %}
+{% include image src="/assets/img/tutorial/networkanalysis/tutorial_nwa_EEG_alpha_ratio.png" width="400" %}
 
-_Figure 6: Source reconstructed activity illustrating the relative difference in alpha power between the high and low alpha conditions._
+_Figure 8: Source reconstructed activity illustrating the relative difference in alpha power between the high and low alpha conditions._
 
 {% include markup/info %}
-Compare this source reconstruction with the sensor topographies generated above. How do the two representations compare?
+Compare this source reconstruction with the scalp topography generated above. How do the two representations compare?
 {% include markup/end %}
 
 ### Connectivity analysis and parcellation
@@ -382,13 +396,15 @@ Next, we will call **[ft_connectivityanalysis](https://github.com/fieldtrip/fiel
     cfg.complex = 'absimag';
     source_conn = ft_connectivityanalysis(cfg, source);
 
+
+
 We can now make a, rather uninformative, visualization of the connectome, plotting the full weighted graph, between all pairs of nodes.
 
-    figure;imagesc(source_conn.cohspctrm);
+    figure(9);imagesc(source_conn.cohspctrm);
 
-{% include image src="/assets/img/tutorial/networkanalysis/tutorial_nwa_connectomefull.png" width="300" %}
+{% include image src="/assets/img/tutorial/networkanalysis/tutorial_nwa_EEG_connmat.png" width="300" %}
 
-_Figure 7: connectivity matrix between all pairs of dipole locations_
+_Figure 9: connectivity matrix between all pairs of dipole locations_
 
 In the present example, the resulting connectivity matrix has ~64 million elements, which obviously is a very large number which does not really make sense in light of what we know about the spatial resolution of MEG. In other words, it would be a bit silly to assume each dipole locations to represent an independent neural source, and each edge to represent a separate neural connections. Therefore, one strategy to reduce the dimensionality in the data is to adopt a parcellation scheme.
 
