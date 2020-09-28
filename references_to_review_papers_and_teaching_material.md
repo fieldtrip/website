@@ -21,6 +21,10 @@ Steven J Luck, [An Introduction to the Event-Related Potential Technique](http:/
 
 MEG: An Introduction to Methods. by Peter Hansen, Morten Kringelbach, Riitta Salmelin. [Pdf](http://brainmaster.com/software/pubs/brain/MEG%20-%20An%20Intro.pdf), [Amazon](http://www.amazon.com/MEG-Introduction-Methods-Peter-Hansen/dp/0195307232/ref=sr_1_2?s=books&ie=UTF8&qid=1375859237&sr=1-2&keywords=magnetoencephalography).
 
+An old, but certainly not outdated paper on SQUID-based MEG instrumentation is [Magnetoencephalography—theory, instrumentation, and applications to noninvasive studies of the working human brain](https://doi.org/10.1103/RevModPhys.65.413) by Hämäläinen et al. (1993). 
+
+A recent review of advancements in OPM-based MEG research is given in [Moving magnetoencephalography towards real-world applications with a wearable system](https://doi.org/10.1038/nature26147) by Boto et al. (2018).  
+
 ## Guidelines for acquisition, analysis and publication
 
 Specifically for MEG we recommend the [Good practice for conducting and reporting MEG research](http://www.sciencedirect.com/science/article/pii/S1053811912009895) paper by Joachim Gross et al. that was published in 2012 in NeuroImage.
