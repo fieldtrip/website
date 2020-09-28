@@ -78,73 +78,17 @@ Using the EEG electrodes we compute a 2D layout in order to plot topographies. W
 
 {% include image src="/assets/img/tutorial/networkanalysis_eeg/tutorial_nwa_EEG_layout.png" width="400" %}
 
-_Figure 1: Top- scalp topography of oscillatory power centered at 10 Hz (left: axial gradient representation, right: planar gradient representation). Bottom- power spectrum averaged over three occipital sensors illustrating a clear ~10 Hz peak._
-### Artefact rejection
+_Figure 1: 2D electorde layout._
 
-We will first clean the data from potential bad segments such as SQUID jumps and/or bad channels using **[ft_rejectvisual](https://github.com/fieldtrip/fieldtrip/blob/release/ft_rejectvisual.m)**. Subsequently, we will identify occular and cardiac artifacts by means of ICA using **[ft_componentanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_componentanalysis.m)**. Since, these type of artifacts are predominately low frequent and we are interested in a 10Hz signal, we will downsample the data using **[ft_resampledata](https://github.com/fieldtrip/fieldtrip/blob/release/ft_resampledata.m)** in order to speed up calculations during ft_componentanalysis and reduce potential working memory issues. Alternatively, you can skip these steps and download the data [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/networkanalysis/).
+### Data segmentation
 
-    %% make a visual inspection and reject bad trials/sensors
+Next, the data is segmented into overlapping segemnts of 1 second length.
+
+    %% resegment the data into 1 sec chunks
     cfg         = [];
-    cfg.method  = 'summary';
-    cfg.channel = 'MEG';
-    cfg.layout  = 'CTF275.lay';
-    dataclean   = ft_rejectvisual(cfg, data);
-
-    %% you can identify the rejected trial numbers by typing
-    trlind = [];
-    for i=1:length(dataclean.cfg.artfctdef.summary.artifact)
-      badtrials(i) = find(data.sampleinfo(:,1)==dataclean.cfg.artfctdef.summary.artifact(i));
-    end
-    disp(badtrials);
-
-    % alternatively, you can use the list below, this is the definition of the badtrials for the data that has been stored on dis
-    %badtrials  = [18 19 21 72 73 74 75 76 93 94 109 110 126 127 128 140 172 173 179 180 181 182 196 197 198 227 228 233 243 244 250 251 265 266 286];
-
-    cfg        = [];
-    cfg.trials = setdiff(1:numel(data.trial), badtrials);
-    dataclean  = ft_selectdata(cfg, data);
-
-    %% downsample the data to speed up component analysis
-    dataclean.time(1:end) = dataclean.time(1); % this avoids numeric round off issues in the time axes upon resampling
-
-    cfg            = [];
-    cfg.resamplefs = 100;
-    cfg.detrend    = 'yes';
-    datads         = ft_resampledata(cfg, dataclean);
-
-    %% use ICA in order to identify cardiac and blink components
-    cfg                 = [];
-    cfg.method          = 'runica';
-    cfg.runica.maxsteps = 50;
-    %cfg.randomseed      = 0; % this can be uncommented to match the data that has been stored on disk
-    comp                = ft_componentanalysis(cfg, datads);
-
-    %% visualize components
-
-    % these were the indices of the bad components that were identified
-    % they may be different if you re-run the ICA decomposition with a random randomseed.
-    badcomp = [2 3 7 16];
-
-    cfg            = [];
-    cfg.channel    = badcomp;
-    cfg.layout     = 'CTF275_helmet.mat';
-    cfg.compscale  = 'local';
-    cfg.continuous = 'yes';
-    ft_databrowser(cfg, comp);
-
-    cfg           = [];
-    cfg.component = badcomp;
-    dataica       = ft_rejectcomponent(cfg, comp);
-
-{% include image src="/assets/img/tutorial/networkanalysis/tutorial_nwa_comp.png" width="400" %}
-
-_Figure 1: Topography and time course of IC's likely reflecting cardiac and eye movement artifacts_
-
-We project the component data back to the channel representation, leaving out the bad components.
-
-    cfg            = [];
-    cfg.component  = badcomp;
-    dataica        = ft_rejectcomponent(cfg, comp);
+    cfg.length  = 1;
+    cfg.overlap = .5;
+    dataseg        = ft_redefinetrial(cfg,data);
 
 ### Spectral analysis
 
@@ -154,48 +98,25 @@ We will analyze the spectral content of the data using **[ft_freqanalysis](https
     cfg              = [];
     cfg.output       = 'pow';
     cfg.method       = 'mtmfft';
-    cfg.taper        = 'dpss';
-    cfg.tapsmofrq    = 1;
+    cfg.taper        = 'hanning';
     cfg.keeptrials   = 'no';
-    datapow          = ft_freqanalysis(cfg, dataica);
-
-    %% compute the planar transformation, this is not really necessary, but instructive anyhow
-    load ctf275_neighb; % loads the neighbourhood structure for the channels
-
-    dataicatmp      = dataica;
-    dataicatmp.grad = data.grad;
-
-    cfg               = [];
-    cfg.neighbours    = neighbours;
-    cfg.planarmethod  = 'sincos';
-    planar            = ft_megplanar(cfg, dataicatmp);
-    clear dataicatmp;
-
-    %% compute the power spectrum
-    cfg              = [];
-    cfg.output       = 'pow';
-    cfg.method       = 'mtmfft';
-    cfg.taper        = 'dpss';
-    cfg.tapsmofrq    = 1;
-    cfg.keeptrials   = 'no';
-    datapow_planar   = ft_freqanalysis(cfg, planar);
-
+    datapow          = ft_freqanalysis(cfg, dataseg);
     %% plot the topography and the spectrum
-    figure;
+    figure(1);
 
-    cfg        = [];
-    cfg.layout = 'CTF275_helmet.mat';
-    cfg.xlim   = [9 11];
-    subplot(2,2,1); ft_topoplotER(cfg, datapow);
-    subplot(2,2,2); ft_topoplotER(cfg, ft_combineplanar([], datapow_planar));
+    cfg             = [];
+    cfg.layout      = lay;
+    cfg.xlim        = [9 11];
+    subplot(1,2,1); ft_topoplotER(cfg, datapow);
 
-    cfg         = [];
-    cfg.channel = {'MRO22', 'MRO32', 'MRO33'};
-    subplot(2,2,3); ft_singleplotER(cfg, datapow);
+    cfg             = [];
+    cfg.channel     = {'EEG087', 'EEG088'};
+    cfg.xlim        = [3 30];
+    subplot(1,2,2); ft_singleplotER(cfg, datapow);
 
-{% include image src="/assets/img/tutorial/networkanalysis/tutorial_nwa_topo_alpha.png" width="400" %}
+{% include image src="/assets/img/tutorial/networkanalysis_eeg/tutorial_nwa_EEG_topo_alpha.png" width="400" %}
 
-_Figure 2: Top- scalp topography of oscillatory power centered at 10 Hz (left: axial gradient representation, right: planar gradient representation). Bottom- power spectrum averaged over three occipital sensors illustrating a clear ~10 Hz peak._
+_Figure 2: Left- scalp topography of oscillatory power centered at 10 Hz. Right- power spectrum averaged over two occipital sensors illustrating a clear ~10 Hz peak._
 
 ### Computation of the forward model
 
