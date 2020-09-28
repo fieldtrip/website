@@ -25,7 +25,7 @@ A comprehensive introduction in the neurophysiology and biophysics of EEG (also 
 
 Steven J Luck, [An Introduction to the Event-Related Potential Technique](http://www.amazon.com/Introduction-Event-Related-Potential-Technique-Neuroscience/dp/0262621967), MIT Press: 2005, ISBN 0262621967. This book is reviewed here: Peter Hagoort (2006) [Event-related potentials from the user's perspective](http://www.nature.com/neuro/journal/v9/n4/full/nn0406-463.html); Nature Neuroscience 9, 463.
 
-[MEG: An Introduction to Methods]((http://www.amazon.com/MEG-Introduction-Methods-Peter-Hansen/dp/0195307232/ref=sr_1_2?s=books&ie=UTF8&qid=1375859237&sr=1-2&keywords=magnetoencephalography) by Peter Hansen, Morten Kringelbach, Riitta Salmelin (2010). [Pdf](http://brainmaster.com/software/pubs/brain/MEG%20-%20An%20Intro.pdf). 
+[MEG: An Introduction to Methods](http://www.amazon.com/MEG-Introduction-Methods-Peter-Hansen/dp/0195307232/ref=sr_1_2?s=books&ie=UTF8&qid=1375859237&sr=1-2&keywords=magnetoencephalography) by Peter Hansen, Morten Kringelbach, Riitta Salmelin (2010). [Pdf](http://brainmaster.com/software/pubs/brain/MEG%20-%20An%20Intro.pdf). 
 
 [Magnetoencephalography - From Signals to Dynamic Cortical Networks](https://www.springer.com/gp/book/9783662521113) by Selma Supek and Cheryl J Aine (2014). 
 
