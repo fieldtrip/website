@@ -28,8 +28,11 @@ Also, we will explore the connectomes in more detail, and investigate how the sp
 
 The data analyses will follow the following steps:
 
-- Read the data into MATLAB using **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** and cut into overlapping segments with **[ft_redefinetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_redefinetrial.m)**.
+- Load the data into MATLAB select the EEG electrodes using **[ft_selectdata](https://github.com/fieldtrip/fieldtrip/blob/release/ft_selectdata.m)** and convert the units of the electrodes from cm to mm using **[ft_convert_units](https://github.com/fieldtrip/fieldtrip/blob/release/ft_convert_units.m)**.
+- Cut the data into overlapping segments with **[ft_redefinetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_redefinetrial.m)**.
 - Compute sensor level power spectra and determine peak frequency using **[ft_freqanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqanalysis.m)** and **[ft_multiplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_multiplotER.m)**.
+- Align the EEG electrodes to the scalp surface using **[ft_electroderealign](https://github.com/fieldtrip/fieldtrip/blob/release/ft_electroderealign.m)**.
+- Plot and evaluate the alignement using **[ft_plot_headmodel](https://github.com/fieldtrip/fieldtrip/blob/release/ft_plot_headmodel.m)**, **[ft_plot_mesh](https://github.com/fieldtrip/fieldtrip/blob/release/ft_plot_mesh.m)** and **[ft_plot_sens](https://github.com/fieldtrip/fieldtrip/blob/release/ft_plot_sens.m)** in combination.
 - Construct a forward model using **[ft_prepare_leadfield](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_leadfield.m)**.
 - Compute spatial filters and estimate the amplitude of the sources using **[ft_sourceanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceanalysis.m)**.
 - Visualize the results, with **[ft_sourceplot](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceplot.m)**.
