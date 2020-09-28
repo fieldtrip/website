@@ -13,17 +13,21 @@ If you are new to FieldTrip, please start by reading the reference paper [FieldT
 
 Sylvain Baillet wrote a recent review manuscript on [Magnetoencephalography for brain electrophysiology and imaging](http://www.nature.com/neuro/journal/v20/n3/full/nn.4504.html) in Nature Neuroscience (2017).
 
-A comprehensive introduction in the neurophysiology and biophysics of EEG (also relevant for MEG) is given in [Electric Fields of the Brain: The Neurophysics of EEG, 2nd Edition](http://www.amazon.com/Electric-Fields-Brain-Neurophysics-EEG/dp/019505038X/ref=sr_1_1?s=books&ie=UTF8&qid=1375859032&sr=1-1) by Paul L. Nunez and Ramesh Srinivasan.
-
-Steven J Luck, [An Introduction to the Event-Related Potential Technique](http://www.amazon.com/Introduction-Event-Related-Potential-Technique-Neuroscience/dp/0262621967), MIT Press: 2005, ISBN 0262621967. This book is reviewed here: Peter Hagoort (2006) [Event-related potentials from the user's perspective](http://www.nature.com/neuro/journal/v9/n4/full/nn0406-463.html); Nature Neuroscience 9, 463.
-
 [The brain in time: insights from neuromagnetic recordings](http://onlinelibrary.wiley.com/doi/10.1111/j.1749-6632.2010.05438.x/abstract) by Riitta Hari, Lauri Parkkonen and Cathy Nangini gives a comprehensive introduction to MEG.
-
-MEG: An Introduction to Methods. by Peter Hansen, Morten Kringelbach, Riitta Salmelin. [Pdf](http://brainmaster.com/software/pubs/brain/MEG%20-%20An%20Intro.pdf), [Amazon](http://www.amazon.com/MEG-Introduction-Methods-Peter-Hansen/dp/0195307232/ref=sr_1_2?s=books&ie=UTF8&qid=1375859237&sr=1-2&keywords=magnetoencephalography).
 
 An old, but certainly not outdated paper on SQUID-based MEG instrumentation is [Magnetoencephalography—theory, instrumentation, and applications to noninvasive studies of the working human brain](https://doi.org/10.1103/RevModPhys.65.413) by Hämäläinen et al. (1993). 
 
 A recent review of advancements in OPM-based MEG research is given in [Moving magnetoencephalography towards real-world applications with a wearable system](https://doi.org/10.1038/nature26147) by Boto et al. (2018).  
+
+### Books
+
+A comprehensive introduction in the neurophysiology and biophysics of EEG (also relevant for MEG) is given in [Electric Fields of the Brain: The Neurophysics of EEG, 2nd Edition](http://www.amazon.com/Electric-Fields-Brain-Neurophysics-EEG/dp/019505038X/ref=sr_1_1?s=books&ie=UTF8&qid=1375859032&sr=1-1) by Paul L. Nunez and Ramesh Srinivasan.
+
+Steven J Luck, [An Introduction to the Event-Related Potential Technique](http://www.amazon.com/Introduction-Event-Related-Potential-Technique-Neuroscience/dp/0262621967), MIT Press: 2005, ISBN 0262621967. This book is reviewed here: Peter Hagoort (2006) [Event-related potentials from the user's perspective](http://www.nature.com/neuro/journal/v9/n4/full/nn0406-463.html); Nature Neuroscience 9, 463.
+
+[MEG: An Introduction to Methods]((http://www.amazon.com/MEG-Introduction-Methods-Peter-Hansen/dp/0195307232/ref=sr_1_2?s=books&ie=UTF8&qid=1375859237&sr=1-2&keywords=magnetoencephalography) by Peter Hansen, Morten Kringelbach, Riitta Salmelin (2010). [Pdf](http://brainmaster.com/software/pubs/brain/MEG%20-%20An%20Intro.pdf). 
+
+[Magnetoencephalography - From Signals to Dynamic Cortical Networks](https://www.springer.com/gp/book/9783662521113) by Selma Supek and Cheryl J Aine (2014). 
 
 ## Guidelines for acquisition, analysis and publication
 
