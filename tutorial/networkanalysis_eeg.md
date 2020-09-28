@@ -120,34 +120,76 @@ _Figure 2: Left- scalp topography of oscillatory power centered at 10 Hz. Right-
 
 ### Computation of the forward model
 
-In the following section we will compute the forward model, i.e. the leadfield matrix that defines for a set of predefined dipole locations the expected magnetic field distribution as it is picked up by the MEG sensors. In this tutorial we will use a cortical sheet based source model, in which the individual dipole locations are constrained to the cortical sheet. This anatomical model has been obtained with freesurfer and it takes quite some time to generate. This falls outside the scope of this tutorial. If you would like to get an idea how this can be done, please have a look at our [sourcemodel tutorial](/tutorial/sourcemodel).
+We first load the precomputed mni-standard [Desikan-Killiani](https://surfer.nmr.mgh.harvard.edu/fswiki/CorticalParcellation) atlas, BEM headmodel and the sourcemodel. In the following section we will compute the forward model, i.e. the leadfield matrix that defines for a set of predefined dipole locations the expected electromagnetic scalop distribution as it is picked up by the EEG electrodes. In this tutorial we will use a cortical sheet based source model, in which the individual dipole locations are constrained to the cortical sheet. This anatomical model has been obtained with freesurfer and it takes quite some time to generate. This falls outside the scope of this tutorial. If you would like to get an idea how this can be done, please have a look at our [sourcemodel tutorial](/tutorial/sourcemodel).
 Alternatively, one could create a volumetric dipole grid based on regularly spaced 3-dimensional grid of dipole locations, or an inverse-warp from MNI normalized volumetric space of a template 3D grid. More information about this can be found in our [sourcemodel tutorial](/tutorial/sourcemodel) as well.
 
     %% load the required geometrical information
-    load hdm
-    load sourcemodel_4k
-
+    load('dkatlas.mat')
+    load('headmodel_eeg.mat')
+    load('sourcemodel.mat')
     %% visualize the coregistration of sensors, headmodel, and sourcemodel.
-    figure;
+    figure(2);
+    % make the headmodel surface transparent
+    ft_plot_headmodel(headmodel_eeg, 'edgecolor', 'none'); alpha 0.4
+    ft_plot_sens(dataseg.elec);
+    view([45 -15 0])
+
+{% include image src="/assets/img/tutorial/networkanalysis_eeg/tutorial_nwa_EEG_headmodel_electrodes_mismatch.png" width="400" %}
+
+_Figure 3: Misalignment between headmodel and electrode array._
+
+In Figure 3 it is apparent that the electrodes do not align with the scalp surface. To achieve this we use ft_electroderealign in an interactive mode. Figure 4 provides the settings that had been used to align the electrodes. In particular, the option rotate, scale and translate in Figure 3.
+    %%
+    cfg         = [];
+    cfg.method  = 'interactive';
+    cfg.headshape = headmodel_eeg.bnd(1);
+    cfg.elec    = elec;
+    elec_aligned = ft_electroderealign(cfg);
+    % make sure the aligned electrodes are updated
+    dataseg.elec = elec_aligned;
+    
+
+{% include image src="/assets/img/tutorial/networkanalysis_eeg/tutorial_nwa_EEG_headmodel_electrodes_match.png" width="400" %}
+
+_Figure 4: Headmodel and electrode array aligned correctly._
+
+Before we proceed it is always useful to check the corregistration between the electrodes, headmodel and sourcemodel. 
+
+    %% visualize the coregistration of electrodes, headmodel, and sourcemodel.
+    figure(5);
+
+    % create colormap to plot parcels in different color
+    nLabels = length(dkatlas.tissuelabel);
+    colr = hsv(nLabels); 
+    vertexcolor = ones(size(dkatlas.pos,1), 3);
+    for i= 1:length(dkatlas.tissuelabel)
+        index = find(dkatlas.tissue==i);
+       if ~isempty(index) 
+          vertexcolor(index,:) = repmat(colr(i,:),  length(index), 1);
+       end   
+    end
 
     % make the headmodel surface transparent
-    ft_plot_headmodel(hdm, 'edgecolor', 'none'); alpha 0.4
-    ft_plot_mesh(ft_convert_units(sourcemodel, 'cm'),'vertexcolor',sourcemodel.sulc);
-    ft_plot_sens(dataclean.grad);
+    ft_plot_headmodel(headmodel_eeg, 'edgecolor', 'none','facecolor', 'black'); alpha 0.1
+    ft_plot_mesh(dkatlas, 'facecolor', 'brain',  'vertexcolor', ...
+    vertexcolor, 'facealpha', .5);
+    ft_plot_sens(elec_aligned);
     view([0 -90 0])
+    
+{% include image src="/assets/img/tutorial/networkanalysis_eeg/tutorial_nwa_EEG_geometry_all.png" width="400" %}
 
-{% include image src="/assets/img/tutorial/networkanalysis/tutorial_nwa_geometry.png" width="400" %}
-
-_Figure 3: Coregistration between headmodel, sourcemodel and sensor array._
+_Figure 5: Alignment of headmodel (grey), electrodes (black) and sourcemodel(color). Individual parcels are assigned different color value._
 
 Now we can proceed with the computation of the leadfield matrix, using **[ft_prepare_leadfield](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_leadfield.m)**.
 
-    %% compute the leadfield
-    cfg             = [];
-    cfg.grid        = sourcemodel;
-    cfg.headmodel   = hdm;
-    cfg.channel     = {'MEG'};
-    lf              = ft_prepare_leadfield(cfg, dataica);
+    cfg = [];
+    cfg.elec = elec_aligned;            
+    cfg.channel = dataseg.label;  
+    cfg.sourcemodel.pos = sourcemodel.pos;              % 2002v source points
+    cfg.sourcemodel.inside = 1:size(sourcemodel.pos,1); % all source points are inside of the brain
+    cfg.headmodel = headmodel_eeg;                               % volume conduction model
+    leadfield = ft_prepare_leadfield(cfg);
+
 
 ### Source reconstruction
 
@@ -162,7 +204,7 @@ In addition to a forward model, the beamformer needs a sensor-level covariance m
     cfg.keeptrials = 'yes';
     cfg.tapsmofrq  = 1;
     cfg.foi        = 10;
-    freq           = ft_freqanalysis(cfg, dataica);
+    freq           = ft_freqanalysis(cfg, dataseg);
 
 Next, we call **[ft_sourceanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceanalysis.m)** with 'pcc' as method. Essentially, this methods implements DICS (the underlying algorithm for computing the spatial filters is according to DICS), but provides more flexibility with respect to data handling. In this context, the advantage is that the 'pcc'-implementation directly outputs, for each dipole location in the sourcemodel, the fourier coefficients (i.e. phase and amplitude estimates) for each of the trials. This can subsequently be used in a straightforward way for connectivity analysis. In contrast, using 'dics' as a method, to obtain the single trial representation of phase and amplitude is quite a bit more tedious.
 
