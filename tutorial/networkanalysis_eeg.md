@@ -11,17 +11,14 @@ This page is a placeholder, and its current content is just the MEG networkanaly
 {% include markup/end %}
 
 ## Introduction
-MY FIRST EDIT
 
-MY SECOND EDIT
-
-This tutorial will demonstrate one of the possible ways to analyze MEG data from a graph theoretical perspective. It is assumed that you are familiar with the various preprocessing steps which will be performed here, as these are not explained further in detail. An overview and detailed information on preprocessing can be found [here](/tutorial/continuous) and on time-frequency analysis [here](/tutorial/timefrequencyanalysis)
+This tutorial will replicate the [networkanalysis](/tutorial/networkanalysis) yet using EEG data instead of MEG. It will demonstrate one of the possible ways to analyze EEG data from a graph theoretical perspective. It is assumed that you are familiar with the various preprocessing steps which will be performed here, as these are not explained further in detail. An overview and detailed information on preprocessing can be found [here](/tutorial/continuous) and on time-frequency analysis [here](/tutorial/timefrequencyanalysis)
 
 This tutorial will use metrics that are derived from graph theory and are implemented in the Brain Connectivity Toolbox (BCT, detailed explanation can be found [here](https://sites.google.com/site/bctnet/measures/list)).
 
 ## Background
 
-We will analyze brain signals acquired during a resting condition with eyes closed. In contrast to an event-related analysis, where the data is segmented around some external events, we will analyze the entire continuous recording of approximately 5 minutes length. We will compute connectomes that quantify the 'connectivity' between all pairs of pre defined regions, adopting a parcellation approach.
+We will analyze brain signals acquired during an Odd-ball task. This data has been previously used in this [tutorial](/workshop/natmeg/preprocessing/#preprocessing-and-averaging-eeg/). For the purpose of this tutorial will we treat the data as if it was a continuous resting state recording. In contrast to an event-related analysis, where the data is segmented around some external events, we will analyze the entire continuous recording. We will compute connectomes that quantify the 'connectivity' between all pairs of pre defined regions, adopting a parcellation approach.
 
 Such connectomes are typically used for a subsequent graph analysis, to extract specific structure in the connections. We will illustrate this by visualizing the node degree.
 
