@@ -76,7 +76,7 @@ Using the EEG electrodes we compute a 2D layout in order to plot topographies. W
     figure;
     ft_plot_layout(lay)
 
-{% include image src="/assets/img/tutorial/networkanalysis/tutorial_nwa_topo_alpha.png" width="400" %}
+{% include image src="/assets/img/tutorial/networkanalysis_eeg/tutorial_nwa_EEG_layout.png" width="400" %}
 
 _Figure 1: Top- scalp topography of oscillatory power centered at 10 Hz (left: axial gradient representation, right: planar gradient representation). Bottom- power spectrum averaged over three occipital sensors illustrating a clear ~10 Hz peak._
 ### Artefact rejection
