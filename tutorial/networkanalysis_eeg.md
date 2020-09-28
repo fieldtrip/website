@@ -76,7 +76,7 @@ Using the EEG electrodes we compute a 2D layout in order to plot topographies. W
     figure;
     ft_plot_layout(lay)
 
-{% include image src="/assets/img/tutorial/networkanalysis_eeg/tutorial_nwa_EEG_layout.png" width="400" %}
+{% include image src="/assets/img/tutorial/networkanalysis_eeg/tutorial_nwaEEG_layout.png" width="400" %}
 
 _Figure 1: 2D electorde layout._
 
