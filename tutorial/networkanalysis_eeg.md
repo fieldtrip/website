@@ -45,31 +45,40 @@ The data analyses will follow the following steps:
 
 ### Reading the data
 
-The aim is to identify the frequency and topography of an 10Hz oscillation. We first use **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** to read the continuous data and
+The aim is to identify the frequency and topography of an 10Hz oscillation. You can download the required data from FIXME <ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/networkanalysis/>. This latter folder contains a few files that we will need later in this tutorial as well, so it is recommended to download its contents.
 
-**[ft_redefinetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_redefinetrial.m)** to segment it into epochs of 2 seconds length.
-
-The ft_redefinetrial and ft_preprocessing functions require the original MEG dataset, which is available from <ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/SubjectRest.zip>. Alternatively, you can skip this step and directly load the preprocessed data from <ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/networkanalysis/>. This latter folder contains a few files that we will need later in this tutorial as well, so it is recommended to download its contents.
-
-    %% read the continuous data and segment into 2 seconds epochs
-    cfg            = [];
-    cfg.dataset    = 'SubjectRest.ds'; % note that you may need to add the full path to the .ds directory
-    cfg.continuous = 'yes';
-    cfg.channel    = {'MEG'};
-    data           = ft_preprocessing(cfg);
-
+    %% load EEG data
+    load('data_eeg_reref_ica.mat')
+    load('elec.mat')
+    % select EEG electrodes only
     cfg         = [];
-    cfg.length  = 2;
-    cfg.overlap = 0.5;
-    data        = ft_redefinetrial(cfg, data);
+    cfg.channel = elec.label;
+    data        = ft_selectdata(cfg,data_eeg_reref_ica);
+    data        = rmfield(data,'grad');
+    % convert elec positions in mm
+    elec        = ft_convert_units(elec,'mm');
+    data.elec   = elec;
+    
+### Prepare electrode layout for plotting
 
-    % this step is needed to 1) remove the DC-component, and to 2) get rid of a few segments of data at
-    % the end of the recording, which contains only 0's.
-    cfg        = [];
-    cfg.demean = 'yes';
-    cfg.trials = 1:(numel(data.trial)-6);
-    data       = ft_preprocessing(cfg, data);
+Using the EEG electrodes we compute a 2D layout in order to plot topographies. We use **[ft_prepare_layout](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_layout.m)** and visualize it using **[ft_plot_lay](https://github.com/fieldtrip/fieldtrip/blob/release/ft_plot_lay.m)**.
 
+    %% prepare layout and plot
+    cfg         = [];
+    cfg.elec    = elec;
+    layout      = ft_prepare_layout(cfg);
+    %% scale the layout to fit the head outline
+    lay         =layout;
+    lay.pos     =layout.pos./.7;
+    lay.pos(:,1)=layout.pos(:,1)./.9;
+    lay.pos(:,2)=layout.pos(:,2)+.08;
+    lay.pos(:,2)=lay.pos(:,2)./.7;
+    figure;
+    ft_plot_layout(lay)
+
+{% include image src="/assets/img/tutorial/networkanalysis/tutorial_nwa_topo_alpha.png" width="400" %}
+
+_Figure 1: Top- scalp topography of oscillatory power centered at 10 Hz (left: axial gradient representation, right: planar gradient representation). Bottom- power spectrum averaged over three occipital sensors illustrating a clear ~10 Hz peak._
 ### Artefact rejection
 
 We will first clean the data from potential bad segments such as SQUID jumps and/or bad channels using **[ft_rejectvisual](https://github.com/fieldtrip/fieldtrip/blob/release/ft_rejectvisual.m)**. Subsequently, we will identify occular and cardiac artifacts by means of ICA using **[ft_componentanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_componentanalysis.m)**. Since, these type of artifacts are predominately low frequent and we are interested in a 10Hz signal, we will downsample the data using **[ft_resampledata](https://github.com/fieldtrip/fieldtrip/blob/release/ft_resampledata.m)** in order to speed up calculations during ft_componentanalysis and reduce potential working memory issues. Alternatively, you can skip these steps and download the data [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/networkanalysis/).
