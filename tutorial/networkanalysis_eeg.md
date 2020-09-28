@@ -406,25 +406,6 @@ We can now make a, rather uninformative, visualization of the connectome, plotti
 
 _Figure 9: connectivity matrix between all pairs of dipole locations_
 
-In the present example, the resulting connectivity matrix has ~64 million elements, which obviously is a very large number which does not really make sense in light of what we know about the spatial resolution of MEG. In other words, it would be a bit silly to assume each dipole locations to represent an independent neural source, and each edge to represent a separate neural connections. Therefore, one strategy to reduce the dimensionality in the data is to adopt a parcellation scheme.
-
-When creating a parcellated connectivity matrix, we combine the connectivity values between sets of dipole pairs that belong to a given pair of parcels. Although it's not clear what the most optimal parcellation scheme would be for MEG source reconstructed data, we could choose for a parcellation based on anatomy, e.g. using the labeling according to Brodmann. In this tutorial, we will use a parcellation that has been obtained using a multimodal parcellation scheme, and which is described in more detail [here](http://www.nature.com/nature/journal/v536/n7615/full/nature18933.html).
-
-In fieldtrip, we use **[ft_sourceparcellate](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceparcellate.m)**
-
-    load atlas_MMP1.0_4k.mat;
-    atlas.pos = source_conn.pos; % otherwise the parcellation won't work
-
-    cfg = [];
-    cfg.parcellation = 'parcellation';
-    cfg.parameter    = 'cohspctrm';
-    parc_conn = ft_sourceparcellate(cfg, source_conn, atlas);
-
-    figure;imagesc(parc_conn.cohspctrm);
-
-{% include image src="/assets/img/tutorial/networkanalysis/tutorial_nwa_connectomeparc.png" width="300" %}
-
-_Figure 7: connectivity matrix between all pairs of parcels_
 
 ### Network analysis
 
@@ -435,23 +416,29 @@ We can now explore the structure in the estimated connectivity matrices using gr
     cfg.parameter = 'cohspctrm';
     cfg.threshold = .1;
     network_full = ft_networkanalysis(cfg,source_conn);
-    network_parc = ft_networkanalysis(cfg,parc_conn);
+    %% sourceinterpolate
+    cfg = [];
+    cfg.parameter    = 'degrees';
+    network_int = ft_sourceinterpolate(cfg,network_full,dkatlas);
+    cfg=[];
+    network_int = ft_sourceparcellate(cfg, network_int, dkatlas);
+    %%
+    % create a fancy mask
 
-    %% visualize
-    cfg               = [];
+    cfg = [];
     cfg.method        = 'surface';
     cfg.funparameter  = 'degrees';
-    cfg.funcolormap   = 'jet';
-    ft_sourceplot(cfg, network_full);
-    view([-150 30]);
+    cfg.colorbar      = 'no';
+    figure(8);ft_sourceplot(cfg, network_int);
+    view([-90 30]);
+    light('style','infinite','position',[0 -200 200]);
+    colorbar off
+    material dull
+    set(gcf,'color','w');
 
-    ft_sourceplot(cfg, network_parc);
-    view([-150 30]);
+{% include image src="/assets/img/tutorial/networkanalysis/tutorial_nwa_EEG_nodedegree.png" width="300" %}
 
-{% include image src="/assets/img/tutorial/networkanalysis/tutorial_nwa_degreefull.png" width="300" %}
-{% include image src="/assets/img/tutorial/networkanalysis/tutorial_nwa_degreeparc.png" width="300" %}
-
-_Figure 8: Node degree based on imaginary part of coherency, thresholded at a value of 0.1. Cold colors indicated few suptrathreshold connections, warm colors indicate many suprathreshold connections. Left panel: degree based on the thresholded full connectome. Right panel: degree based on the thresholded parcellated connectome._
+_Figure 10: Node degree based on imaginary part of coherency, thresholded at a value of 0.1. Dark colors indicated few suptrathreshold connections, hot colors indicate many suprathreshold connections._
 
 {% include markup/info %}
 Compare the degree values for the parcellated and the full connectomes. Why are the values different? What determines the maximum value?
@@ -463,15 +450,6 @@ Re-compute the node degree based on some other threshold(s), and inspect the eff
 Re-compute the parcellated connectome using cfg.method = 'max', and inspect the effect of this parameter on the result.
 {% include markup/end %}
 
-### Exploration of the connectomes in more detail
-
-The graph-based analysis illustrated above allows for only a crude inspection of the connectomes. One detail that is not visualized in this way is the spatial structure of the connections for a given node/parcel. To get a feel how the estimated connectivity patterns change as a function of 'seed' location is important. You will notice that the patterns may quite dramatically change, when moving from one seed location to the next. On the other hand, often nearby seed locations will lead to very similar spatial pattern. The directory that contains the data for this tutorial contains a simple function that allows for this exploration. It can be invoked as follow
-
-    load sourcemodel_4k_inflated;
-    source_conn.pos = sourcemodel.pos;
-    tutorial_nwa_connectivityviewer(source_conn, 'cohspctrm', [0 0.1]);
-
-The first input argument is the data structure with the connectivity matrix you want to explore. The second input argument is a string that designates the name of the field to be visualized. The third input argument defines the limits of the color scale. When clicking on the cortical sheet in the figure, you will specify the seed location from which the spatial pattern of connectivity will be displayed.
 
 {% include markup/info %}
 Invoke the function and explore the data.
