@@ -124,17 +124,21 @@ table {
       margin-bottom: 0; }
 
 /* -------------------------------------------------- */
-/* Homepage styles for releases and news items */
+/* Styles for homepage release and news item posts */
 
-#sec-latest-release {
+#sec-news {
   border-top: 1px solid #bbb;
-  border-bottom: 1px solid #bbb;
-  padding-bottom: 0.5em;
+  padding-top: 0em;
+  padding-bottom: 0em;
 }
-#sec-news-and-announcements .post-excerpt {
+#sec-news .post-excerpt {
   border-top: 1px dashed #ccc;
   padding-top: 1em;
+  padding-bottom: 0em;
 }
-#sec-news-and-announcements .post-excerpt:last-child {
-  border-bottom: 1px dashed #ccc;
+#sec-news .post-excerpt:last-child {
+  border-top: 1px dashed #ccc;
+  padding-top: 1em;
+  // border-bottom: 1px dashed #ccc;
+  padding-bottom: 0em;
 }
