@@ -27,6 +27,8 @@ You can type DIR to see if your \*.EDF file is located in the current working di
 
 After converting the EDF file to ASC format and transferring it from the Eyelink computer, we can read it in MATLAB.
 
+Alternatively, you can also use a toolbox (https://github.com/uzh/edf-converter) by Adrian Etter and Marc Biedermann, to read in your \*.EDF file to matlab. 
+
 To read in the continuous data, you would simply do this:
 
     filename_eye = 'tobsta35.asc';
