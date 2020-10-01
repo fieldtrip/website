@@ -4,7 +4,7 @@ This repository contains the FieldTrip documentation hosted on <http://www.field
 
 Feel free to contribute by doing edits here and sending a pull request. See <http://www.fieldtriptoolbox.org/development/git> for a complete tutorial and <http://www.fieldtriptoolbox.org/development/guideline/website> for formatting instructions.
 
-## Technical notes
+## Technical notes By Fieldtrip
 
 - The website is rebuilt after every pushed commit; this can take up to 5 minutes.
 - File names should not contain spaces or other special characters.
