@@ -23,7 +23,7 @@ The example here is based on the dataset that is also used in the tutorial on [p
 
 The raw data is available on our FTP server, together with the script to convert the data to BIDS and the resulting BIDS dataset. You can find all three [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/example/bids_nirs/artinis/).
 
-    % the Artinis oxy3 files come with an optodetemplates.xml, this has to be in
+    % the Artinis oxy3 files come with an optodetemplates.xml file, this has to be in
     % the same directory as the oxy3 file and it cannot be a subdirectory
     % hence we have to change to the correct directory
 
