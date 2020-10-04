@@ -242,11 +242,11 @@ The idea is to use a template grid that is defined in normalized space, e.g. bas
 
 {% include image src="/assets/img/tutorial/sourcemodel/brains.gif" width="500" %}
 
-**Figure 1a: Example: the MNI template brain and the brains of 3 subjects**
+_Figure 1a: Example: the MNI template brain and the brains of 3 subjects._
 
 {% include image src="/assets/img/tutorial/sourcemodel/mni_grids2.gif" width="500" %}
 
-**Figure 1b: Example: the MNI grid and the grid of 3 subjects, note that each grid point points to the same location in all brains, and that the subjects' grids are not regularly spaced**
+_Figure 1b: Example: the MNI grid and the grid of 3 subjects, note that each grid point points to the same location in all brains, and that the subjects' grids are not regularly spaced._
 
 In the figures above, the spatial deformation of the individual subjects' brains relative to the template brain is exemplified. However, there may be other relevant differences between the coordinate system used for the individual subjects' anatomy and the MNI coordinate system. For example, in MEG-datasets it is custom to use a coordinate system that is defined relative to the three coils that are placed on the nose and the ears, with a specific orientation of the coordinate axes, whereas the MNI/SPM coordinate system is defined in a different way.
 

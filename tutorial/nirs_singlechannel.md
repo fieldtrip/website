@@ -50,7 +50,7 @@ The following order of steps provide a good standard approach for analyzing fNIR
 
 {% include image src="/assets/img/tutorial/nirs_singlechannel/nirs_tut1_fig1.png" width="400" %}
 
-_Figure: Overview of fNIRS analysis procedure._
+_Figure 1: Overview of the analysis procedure._
 
 ### Getting Started
 
@@ -120,7 +120,7 @@ Let us dive deeper into our data for now. For having a quick look at our data, w
 
 {% include image src="/assets/img/tutorial/nirs_singlechannel/nirs_tut1_fig1_ft_databrowser_readin.png" width="400" %}
 
-_Figure: Databrowser read-in._
+_Figure 2: Display of raw data in the databrowser._
 
 Using **[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_databrowser.m)**, you can also cut out pieces of your data that you do not need. For instance, if you have started the recording while putting the optodes in place, you will probably have a chunk of data at the start of the recording that you don't need and which contains very high (not brain-related) values that rapidly fluctuate. It is useful to cut these pieces out (trimming). In the tutorial dataset, this is not needed, but see here for an [illustration of how trimming works within ft_databrowser](/tutorial/visual_artifact_rejection#use_ft_databrowser_to_mark_the_artifacts_manually).
 
@@ -133,7 +133,7 @@ Additionally, we'll from here select just one channel, to reduce the complexity 
 
 {% include image src="/assets/img/tutorial/nirs_singlechannel/nirs_tut1_fig3_databrowser_one_chan.png" width="400" %}
 
-_Figure: Databrowser with one channel selected._
+_Figure 3: Display of one channel pair (two wavelengths) in the databrowser._
 
 #### Exercise 1
 
@@ -229,7 +229,7 @@ Note that we left out the brackets around the output variable as we have a singl
 
 {% include image src="/assets/img/tutorial/nirs_singlechannel/nirs_tut1_fig3_ft_define_trial_v2.png" width="400" %}
 
-_Figure: Databrowser for 12 trials._
+_Figure 4: Databrowser showing the filtered data for one of the 12 trials._
 
 We can now remove the trials containing the artifacts that we determined earlier.
 
@@ -285,7 +285,7 @@ Below we plotted the averaged O2Hb and HHb traces from A-10 seconds to A+35 seco
 
 {% include image src="/assets/img/tutorial/nirs_singlechannel/nirs_tut1_fig4_ft_average_hem_respons.png" width="400" %}
 
-_Figure: Averaged O2Hb and HHb traces. This figure closely resembles the text-book fNIRS model of cortical activation, which describes an increase in oxygen demand from the tissue instigating an increase in O2Hb due to neuro-vascular coupling as depicted by Scholkmann et al. in figure 5 of their 2014 review article (http://www.sciencedirect.com/science/article/pii/S1053811913004941)._
+_Figure 5: Averaged O2Hb and HHb traces. This figure closely resembles the text-book fNIRS model of cortical activation, which results from an increase in oxygen demand from the tissue instigating an increase in O2Hb due to neuro-vascular coupling as depicted by Scholkmann et al. in figure 5 of their [2014 review article](http://www.sciencedirect.com/science/article/pii/S1053811913004941)._
 
 ## Summary and conclusion
 

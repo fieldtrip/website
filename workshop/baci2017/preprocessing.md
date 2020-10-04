@@ -152,7 +152,7 @@ We will use **[ft_rejectartifact](https://github.com/fieldtrip/fieldtrip/blob/re
 
 {% include image src="/assets/img/workshop/baci2017/preprocessing/artifactrejection.png" width="600" %}
 
-_figure 1: Example of visual rejection._
+_Figure 1: Example of visual rejection._
 
 ## Somatosensory Evoked Potentials (SEPs)
 
@@ -212,7 +212,7 @@ Using the plot functions **[ft_topoplotER](https://github.com/fieldtrip/fieldtri
 
 {% include image src="/assets/img/workshop/baci2017/preprocessing/baci_sep_singleploter.png" width="600" %}
 
-_figure 2: Representation of single trial (blue) and the global mean field power (red)._
+_Figure 2: Representation of single trial (blue) and the global mean field power (red)._
 
 We set up values to create the image you observe before.
 
@@ -258,7 +258,7 @@ Use **[ft_multiplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_mu
 
 {% include image src="/assets/img/workshop/baci2017/preprocessing/baci_sep_multiploter.png" width="600" %}
 
-_figure 3: Use of ft_multiplotER for representation of the single trial according to the EEG cap._
+_Figure 3: Use of ft_multiplotER for representation of the single trial according to the EEG cap._
 
 Use **[ft_topoplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_topoplotER.m)** to plot the topographic distribution over the head:
 
@@ -278,7 +278,7 @@ Use **[ft_topoplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_top
 
 {% include image src="/assets/img/workshop/baci2017/preprocessing/baci_sep_topo.png" width="400" %}
 
-_figure 4: Representation of the P20/N20 component using the function, ft_topoplotER._
+_Figure 4: Representation of the P20/N20 component using the function, ft_topoplotER._
 
 ## Summary and suggested further reading
 

@@ -22,7 +22,7 @@ Finally, this example page shows how you can very simply stratify with the Field
 
 {% include image src="/assets/img/example/stratify/twodistributions.png" width="500" %}
 
-**Figure 1** Two distributions with different means
+_Figure 1: Two distributions with different means._
 
     % trim the extremes
     s1 = sort(s1);
@@ -45,7 +45,9 @@ Finally, this example page shows how you can very simply stratify with the Field
 
 {% include image src="/assets/img/example/stratify/rmextremes.png" width="500" %}
 
-**Figure 2** Here we have made the means of the two distributions approximately the same by removing the extreme values of the tails of the two distributions
+_Figure 2_
+
+Here we have made the means of the two distributions approximately the same by removing the extreme values of the tails of the two distributions
 
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -95,7 +97,9 @@ Finally, this example page shows how you can very simply stratify with the Field
 
 {% include image src="/assets/img/example/stratify/align_distib.png" width="500" %}
 
-**Figure 3** Now we have taken only the part of the two distributions that overlap. Note that this method preserves fewer trials than trimming the extremes.
+_Figure 3_
+
+Now we have taken only the part of the two distributions that overlap. Note that this method preserves fewer trials than trimming the extremes.
 
 Note that this easily can be achieved with the FieldTrip **[ft_stratify](https://github.com/fieldtrip/fieldtrip/blob/release/ft_stratify.m)** function like this
 

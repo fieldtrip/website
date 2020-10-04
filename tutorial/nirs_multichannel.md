@@ -47,6 +47,8 @@ The fNIRS data was recorded using four Oxymon systems from Artinis that were lin
 
 {% include image src="/assets/img/tutorial/nirs_multichannel/nirs_cap.png" width="400" %}
 
+_Figure 1: Photo of the recording setup._
+
 Half of the optode fibers (n = 16) were placed over left temporal cortex, the other half over the right temporal cortex (Fig. 1 grey text). Of the optodes, half were detectors (or receivers, Rx), and the other half were sources (or transmitters, Tx). The source and detector optodes were positioned such that there were deep and shallow channels of 3 cm and 1.5 cm, respectively (black text indicating both receivers and transmitters).
 
 Sampling was done at 250 Hz. This sampling rate is much higher than needed for NIRS data, so we will downsample the data before starting any fancy analyses.
@@ -69,7 +71,7 @@ Analyses can be conducted in many different ways and in different orders, depend
 
 {% include image src="/assets/img/tutorial/nirs_multichannel/nirs_tut2_multichannel_analysis_steps.png" width="400" %}
 
-**Figure2; Overview of the fNIRS analysis procedure for the data set of this tutorial.**
+_Figure 2: Overview of the fNIRS analysis procedure for the data set of this tutorial._
 
 ### Read data and downsample
 
@@ -104,7 +106,7 @@ To retrieve the layout from the data file as shown above, you can use:
 
 {% include image src="/assets/img/tutorial/nirs_multichannel/nirs_tut2_optodepositions.png" width="600" %}
 
-**Figure: Layout of the optode positions.**
+_Figure 3: Layout of the optode positions._
 
 #### Detecting triggers
 
@@ -125,7 +127,7 @@ Plotting the data from ADC001 and ADC002 will yield the figure below, showing th
 
 {% include image src="/assets/img/tutorial/nirs_multichannel/nirs_tut2_datatrigger.png" width="600" %}
 
-**Figure: Oddball paradigm trigger. All stimuli onsets are indicated by the blue lines. Red dotted lines indicate onsets of the deviants. You can recognize four blocks of events.**
+_Figure: Oddball paradigm trigger. All stimuli onsets are indicated by the blue lines. Red dotted lines indicate onsets of the deviants. You can recognize four blocks of events._
 
 {% include markup/info %}
 **Exercise 1**:
@@ -173,7 +175,7 @@ We can now plot the data and see what it looks like. In cfg.preproc we can speci
 
 {% include image src="/assets/img/tutorial/nirs_multichannel/nirs_tut2_databrowser.png" width="600" %}
 
-**Figure: Optical density traces for down-sampled data before high-pass filtering.**
+_Figure: Optical density traces for down-sampled data before high-pass filtering._
 
 This is very noisy! Do not give up hope. In the next steps, you will remove most of the noise.
 
@@ -196,7 +198,7 @@ This step has removed some of the variability in the hemodynamic response betwee
 
 {% include image src="/assets/img/tutorial/nirs_multichannel/nirs_tut2_opticaldensitytracesafterhighpass.png" width="600" %}
 
-**Figure: Optical density traces for down-sampled data after high-pass filtering. Note that the DC (offset) has been largely removed by this step (cf. Fig. 5).**
+_Figure: Optical density traces for down-sampled data after high-pass filtering. Note that the DC (offset) has been largely removed by this step (cf. Fig. 5)._
 
 ### Epoch
 
@@ -281,7 +283,7 @@ Let's take a look at what happens around the first deviant, by plotting the aver
 
 {% include image src="/assets/img/tutorial/nirs_multichannel/nirs_tut2_epocheddata.png" width="600" %}
 
-**Figure: Epoched optical density data around the first deviant stimulus.**
+_Figure: Epoched optical density data around the first deviant stimulus._
 
 The most obvious thing you should see, is the heartbeat. This is great! It means that your subject is alive and has some blood flowing through his/her brain (or skin). Importantly, this is an indicative sign of a good measurement. If you would not see this, you could throw this data in the bin (see next paragraph).
 
@@ -334,7 +336,7 @@ Check the data again using **[ft_singleplotER](https://github.com/fieldtrip/fiel
 
 {% include image src="/assets/img/tutorial/nirs_multichannel/nirs_tut2_hemoglobinovertime.png" width="600" %}
 
-**Figure: Hemoglobin concentration as a function of time, averaged over all channels for the epoch around the first deviant**
+_Figure: Hemoglobin concentration as a function of time, averaged over all channels for the epoch around the first deviant._
 
 ### Separate functional from systemic responses
 
@@ -351,7 +353,7 @@ The changes in average concentration now reveals a perfect example of the hemody
 
 {% include image src="/assets/img/tutorial/nirs_multichannel/nirs_tut2_hemoglobinovertimeafterlowpass.png" width="600" %}
 
-**Figure: Low-pass filtered hemoglobin concentrations (cf. two previous figs.).**
+_Figure: Low-pass filtered hemoglobin concentrations (cf. two previous figs.)._
 
 ### Plot results
 
@@ -387,7 +389,7 @@ The channel layout can be read the `nirs_48ch_layout.mat` file using the standar
 
 {% include image src="/assets/img/tutorial/nirs_multichannel/nirs_tut2_layout.png" width="800" %}
 
-**Figure 10; Channel layout for multiplot and topoplot.**
+_Figure 10; Channel layout for multiplot and topoplot._
 
 There are a number of FieldTrip options available for visualizing the results, such as **[ft_singleplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_singleplotER.m)** (ER stands for Event Related), which allows you to plot a single channel, and **[ft_multiplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_multiplotER.m)**, which allows you to plot multiple channels on a schematic representation of the head. The **[ft_multiplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_multiplotER.m)** can also be used in interactive mode to select pieces of the data of interest (for instance specific channels and a specific time window).
 
@@ -404,7 +406,7 @@ Important to remember is that for **[ft_multiplotER](https://github.com/fieldtri
 
 {% include image src="/assets/img/tutorial/nirs_multichannel/nirs_tut2_multiploter.png" width="800" %}
 
-**Figure 11; A so-called multiplot of the data: the average time course displayed per channel.**
+_Figure 11; A so-called multiplot of the data: the average time course displayed per channel._
 
 You can also generate a spatial representation of the signal at a certain time point, or averaged over a time window. To plot the response that was found during a specific time window, you will need to specify this by setting limitations to the time dimension. The time window can be set by using `cfg.xlim = [5 7];`. The scale for the strength of the response can be set from -0.2 to 0.2, but this depends on your data: many fNIRS researchers use block designs, and depending on the block duration, the response may gain a larger amplitude. In the current data, the scale can be derived from the previous figure, which was generated an automatic scaling of the response amplitude.
 
@@ -430,7 +432,7 @@ Per default FieldTrip uses the minimum and the maximum in the selected part of t
 
 {% include image src="/assets/img/tutorial/nirs_multichannel/nirs_tut2_topoplot.png" width="600" %}
 
-**Figure 12; Topographical representation of the measured signal.**
+_Figure 12; Topographical representation of the measured signal._
 
 ## Summary and conclusion
 

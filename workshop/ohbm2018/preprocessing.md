@@ -169,7 +169,7 @@ We will use **[ft_rejectartifact](https://github.com/fieldtrip/fieldtrip/blob/re
 
 {% include image src="/assets/img/workshop/ohbm2018/preprocessing/artifactrejection.png" width="600" %}
 
-_figure 1: Example of visual rejection._
+_Figure 1: Example of visual rejection._
 
 ## Somatosensory Evoked Potentials/Fields (SEPs/SEFs)
 
@@ -236,7 +236,7 @@ Using the plot functions **[ft_topoplotER](https://github.com/fieldtrip/fieldtri
 
 {% include image src="/assets/img/workshop/ohbm2018/preprocessing/baci_sep_singleploter.png" width="600" %}
 
-_figure 2: Representation of single trial (blue) and the global mean field power of EEG (red)._
+_Figure 2: Representation of single trial (blue) and the global mean field power of EEG (red)._
 
     figure;
 
@@ -252,7 +252,7 @@ _figure 2: Representation of single trial (blue) and the global mean field power
 
 {% include image src="/assets/img/workshop/ohbm2018/preprocessing/baci_sef_singleploter.png" width="600" %}
 
-_figure 3: Representation of single trial (blue) and the global mean field power of MEG (red)._
+_Figure 3: Representation of single trial (blue) and the global mean field power of MEG (red)._
 
 We set up values to create the image you observe before for EEG.
 
@@ -283,7 +283,7 @@ Use **[ft_multiplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_mu
 
 {% include image src="/assets/img/workshop/ohbm2018/preprocessing/baci_sep_multiploter.png" width="600" %}
 
-_figure 4: Use of ft_multiplotER for representation of the single trial according to the EEG cap._
+_Figure 4: Use of ft_multiplotER for representation of the single trial according to the EEG cap._
 
 And now we create it for MEG
 
@@ -314,7 +314,7 @@ Use **[ft_multiplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_mu
 
 {% include image src="/assets/img/workshop/ohbm2018/preprocessing/baci_sef_multiploter.png" width="600" %}
 
-_figure 5: Use of ft_multiplotER for representation of the single trial according to the EEG cap._
+_Figure 5: Use of ft_multiplotER for representation of the single trial according to the EEG cap._
 
 Use **[ft_topoplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_topoplotER.m)** to plot the topographic distribution over the head:
 
@@ -334,7 +334,7 @@ Use **[ft_topoplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_top
 
 {% include image src="/assets/img/workshop/ohbm2018/preprocessing/baci_sep_topo.png" width="400" %}
 
-_figure 6: Representation of the P20/N20 component using the function, ft_topoplotER._
+_Figure 6: Representation of the P20/N20 component using the function, ft_topoplotER._
 
 Use **[ft_topoplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_topoplotER.m)** to plot the topographic distribution over the head:
 
@@ -354,7 +354,7 @@ Use **[ft_topoplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_top
 
 {% include image src="/assets/img/workshop/ohbm2018/preprocessing/baci_sef_topo.png" width="400" %}
 
-_figure 7: Representation of the P20/N20 component using the function, ft_topoplotER._
+_Figure 7: Representation of the P20/N20 component using the function, ft_topoplotER._
 
 ## Summary and suggested further reading
 
