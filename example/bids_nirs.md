@@ -33,7 +33,7 @@ The raw data is available on our FTP server, together with the script to convert
 
     %%
 
-    % this data is from http://www.fieldtriptoolbox.org/tutorial/nirs_multichannel/
+    % this data is from https://www.fieldtriptoolbox.org/tutorial/nirs_multichannel/
 
     filelist = {
       'LR-01-2015-06-01-0002.oxy3'
@@ -66,7 +66,7 @@ The raw data is available on our FTP server, together with the script to convert
       % the following settings relate to the dataset_description.json
       cfg.dataset_description.Name                = '48-channel NIRS measured during auditory oddball task';
       cfg.dataset_description.Authors             = 'Marc van Wanrooij';
-      cfg.dataset_description.ReferencesAndLinks  = {'http://www.fieldtriptoolbox.org/tutorial/nirs_multichannel/'}; % this can be a list
+      cfg.dataset_description.ReferencesAndLinks  = {'https://www.fieldtriptoolbox.org/tutorial/nirs_multichannel/'}; % this can be a list
       cfg.dataset_description.BIDSVersion         = 'BEP030'; % this does not correspnd to an official version, but a BIDS Extension Proposal. See http://bids.neuroimaging.io/bep030
 
       data2bids(cfg)
@@ -128,7 +128,7 @@ The complete original dataset is available from Mendeley, a subset of the raw da
       cfg.dataset_description.Authors             = 'Defenderfer, Jessica; Buss, Aaron ';
       cfg.dataset_description.DatasetDOI          = 'http://dx.doi.org/10.17632/4cjgvyg5p2.1';
       cfg.dataset_description.License             = 'CC BY 4.0';
-      cfg.dataset_description.ReferencesAndLinks  = {'http://www.fieldtriptoolbox.org/example/nirs_speech/'}; % this can be a list
+      cfg.dataset_description.ReferencesAndLinks  = {'https://www.fieldtriptoolbox.org/example/nirs_speech/'}; % this can be a list
       cfg.dataset_description.BIDSVersion         = 'BEP030'; % this does not correspnd to an official version, but a BIDS Extension Proposal. See http://bids.neuroimaging.io/bep030
 
       data2bids(cfg)
@@ -173,7 +173,7 @@ The raw data is available on our FTP server, together with the script to convert
       % the following settings relate to the dataset_description.json
       cfg.dataset_description.Name                = '48-channel NIRS measured during auditory oddball task';
       cfg.dataset_description.Authors             = 'Marc van Wanrooij';
-      cfg.dataset_description.ReferencesAndLinks  = {'http://www.fieldtriptoolbox.org/tutorial/nirs_multichannel/'}; % this can be a list
+      cfg.dataset_description.ReferencesAndLinks  = {'https://www.fieldtriptoolbox.org/tutorial/nirs_multichannel/'}; % this can be a list
       cfg.dataset_description.BIDSVersion         = 'BEP030'; % this does not correspnd to an official version, but a BIDS Extension Proposal. See http://bids.neuroimaging.io/bep030
 
       data2bids(cfg)

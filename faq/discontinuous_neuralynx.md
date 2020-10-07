@@ -23,7 +23,7 @@ You can then construct a timestamp vector with all timestamps for all samples, i
     data        = ft_preprocessing(cfg);
 
     Warning: discontinuous recording, predicted number of timestamps and observed number of timestamps differ by 1693523717.00
-    Please consult http://www.fieldtriptoolbox.org/faq/discontinuous_neuralynx
+    Please consult https://www.fieldtriptoolbox.org/faq/discontinuous_neuralynx
 
     > In fileio/private/read_neuralynx_ncs at 94
     In ft_read_header at 1196

@@ -7,7 +7,7 @@ tags: [references]
 
 Here we try to compile a list of background reading/studying material. If you know of good papers or other material, please add it by clicking on the "edit this page" link at the bottom.
 
-If you are new to FieldTrip, please start by reading the reference paper [FieldTrip: Open Source Software for Advanced Analysis of MEG, EEG, and Invasive Electrophysiological Data.](http://www.hindawi.com/journals/cin/2011/156869) or have a look at oner of the introduction [videos](http://www.fieldtriptoolbox.org/video/).
+If you are new to FieldTrip, please start by reading the reference paper [FieldTrip: Open Source Software for Advanced Analysis of MEG, EEG, and Invasive Electrophysiological Data.](http://www.hindawi.com/journals/cin/2011/156869) or have a look at oner of the introduction [videos](https://www.fieldtriptoolbox.org/video/).
 
 ## EEG and MEG
 

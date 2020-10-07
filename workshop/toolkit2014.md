@@ -47,7 +47,7 @@ A [PDF with the detailed program](/assets/pdf/workshop/toolkit2014/program.pdf) 
   - 1h welcome and intro lecture
   - 1h data acquisition demo
 - afternoon
-  - 2h hands-on <http://www.fieldtriptoolbox.org/tutorial/eventrelatedaveraging>
+  - 2h hands-on <https://www.fieldtriptoolbox.org/tutorial/eventrelatedaveraging>
   - 1h neuronal oscillations lecture
   - 1h wrap-up session
 - evening
@@ -56,11 +56,11 @@ A [PDF with the detailed program](/assets/pdf/workshop/toolkit2014/program.pdf) 
 ### Wednesday 7 May
 
 - morning
-  - 2h hands-on <http://www.fieldtriptoolbox.org/tutorial/timefrequencyanalysis>
+  - 2h hands-on <https://www.fieldtriptoolbox.org/tutorial/timefrequencyanalysis>
   - 1h forward and inverse modeling lecture
 - afternoon
   - 1h beamforming lecture
-  - 2h hands on <http://www.fieldtriptoolbox.org/tutorial/beamformer>
+  - 2h hands on <https://www.fieldtriptoolbox.org/tutorial/beamformer>
   - 1h wrap-up session
 - evening
   - dinner <http://goo.gl/maps/jwrEI>
@@ -71,12 +71,12 @@ A [PDF with the detailed program](/assets/pdf/workshop/toolkit2014/program.pdf) 
 
   - 1h non-parametric permutation statistics lecture
   - 2h hands-on
-    - <http://www.fieldtriptoolbox.org/tutorial/cluster_permutation_timelock>
-    - <http://www.fieldtriptoolbox.org/tutorial/cluster_permutation_freq>
+    - <https://www.fieldtriptoolbox.org/tutorial/cluster_permutation_timelock>
+    - <https://www.fieldtriptoolbox.org/tutorial/cluster_permutation_freq>
 
 - afternoon
   - 1h connectivity lecture
-  - 2h hands on <http://www.fieldtriptoolbox.org/tutorial/connectivity>
+  - 2h hands on <https://www.fieldtriptoolbox.org/tutorial/connectivity>
   - 1h wrap-up session
 
 ### Friday 9 May

@@ -9,7 +9,7 @@ The FieldTrip-peer toolbox facilitates you to do distributed computing on an ad-
 
 The peer toolbox is inspired by the situation that many neuroscience research environments have plenty of computational power in the form of workstations that are idling most of the time, but that only few research institutes have the resources to set up a full-fledged Torque, SGE or Condir Linux cluster. With the peer toolbox you can easily take a few of the computers of your room mates if they are not around, and combine those with your own workstation to speed up your computations.
 
-This toolbox has been developed as part of the FieldTrip toolbox, but can be used separately. See http://www.fieldtriptoolbox.org for general details on the FieldTrip project, http://www.fieldtriptoolbox.org/development/module/peer for specific details on the peer toolbox or see http://www.fieldtriptoolbox.org/faq for questions.
+This toolbox has been developed as part of the FieldTrip toolbox, but can be used separately. See https://www.fieldtriptoolbox.org for general details on the FieldTrip project, https://www.fieldtriptoolbox.org/development/module/peer for specific details on the peer toolbox or see https://www.fieldtriptoolbox.org/faq for questions.
 
 ## Requirements
 

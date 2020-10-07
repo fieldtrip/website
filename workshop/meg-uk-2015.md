@@ -31,7 +31,7 @@ For SPM (all taken from <http://www.fil.ion.ucl.ac.uk/spm/course/video>)
 - [Principles of Dynamic Causal Modelling](http://www.fil.ion.ucl.ac.uk/spm/course/video/#MEEG_PrincipleDCM)
 - [DCM for evoked responses](http://www.fil.ion.ucl.ac.uk/spm/course/video/#MEEG_DCM_ERP)
 
-For FieldTrip (all taken from <http://www.fieldtriptoolbox.org/video>)
+For FieldTrip (all taken from <https://www.fieldtriptoolbox.org/video>)
 
 - [FieldTrip toolbox introduction](https://www.youtube.com/watch?v=zOxCqcYmIfA)
 - [Beamformer source reconstruction](https://www.youtube.com/watch?v=7eS11DtbIPw)

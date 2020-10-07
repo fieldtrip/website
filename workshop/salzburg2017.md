@@ -57,12 +57,12 @@ After installing FieldTrip to your path, you need to change into the hands-on sp
 - morning
 
   - 1h welcome and intro lecture - [slides](/assets/pdf/workshop/salzburg_introduction.pdf)
-  - 2h hands-on <http://www.fieldtriptoolbox.org/tutorial/eventrelatedaveraging>
+  - 2h hands-on <https://www.fieldtriptoolbox.org/tutorial/eventrelatedaveraging>
 
 - afternoon
 
   - 1h neuronal oscillations lecture - [slides](/assets/pdf/workshop/salzburg_frequency_analysis.pdf)
-  - 2h hands-on <http://www.fieldtriptoolbox.org/tutorial/timefrequencyanalysis>
+  - 2h hands-on <https://www.fieldtriptoolbox.org/tutorial/timefrequencyanalysis>
   - wrap up of the day
 
 - evening
@@ -73,14 +73,14 @@ After installing FieldTrip to your path, you need to change into the hands-on sp
 - morning
 
   - 1h forward and inverse modeling lecture - [slides](/assets/pdf/workshop/salzburg_source_reconstruction.pdf)
-  - 2h hands on <http://www.fieldtriptoolbox.org/tutorial/beamformer>
+  - 2h hands on <https://www.fieldtriptoolbox.org/tutorial/beamformer>
 
 - afternoon
 
   - 1h non-parametric permutation statistics lecture - [slides](/assets/pdf/workshop/salzburg_cluster_statistics.pdf)
   - 2h hands-on
-    - <http://www.fieldtriptoolbox.org/tutorial/cluster_permutation_timelock>
-    - <http://www.fieldtriptoolbox.org/tutorial/cluster_permutation_freq>
+    - <https://www.fieldtriptoolbox.org/tutorial/cluster_permutation_timelock>
+    - <https://www.fieldtriptoolbox.org/tutorial/cluster_permutation_freq>
   - wrap up of the day
 
 - evening

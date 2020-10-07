@@ -25,7 +25,7 @@ Connect to the MEG acquisition computer at 131.174.44.180 with
 
 ## Relevant links
 
-- <http://www.fieldtriptoolbox.org/development/realtime>
+- <https://www.fieldtriptoolbox.org/development/realtime>
 - <http://www.nici.ru.nl/brainstream/twiki/bin/view/BrainStreamDocs/WebHome>
 - <https://intranet.donders.ru.nl/index.php?id=4231>
 - <https://intranet.donders.ru.nl/index.php?id=4438> including channel layout

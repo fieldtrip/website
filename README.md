@@ -1,8 +1,8 @@
 # FieldTrip website
 
-This repository contains the FieldTrip documentation hosted on <http://www.fieldtriptoolbox.org>.
+This repository contains the FieldTrip documentation hosted on <https://www.fieldtriptoolbox.org>.
 
-Feel free to contribute by doing edits here and sending a pull request. See <http://www.fieldtriptoolbox.org/development/git> for a complete tutorial and <http://www.fieldtriptoolbox.org/development/guideline/website> for formatting instructions.
+Feel free to contribute by doing edits here and sending a pull request. See <https://www.fieldtriptoolbox.org/development/git> for a complete tutorial and <https://www.fieldtriptoolbox.org/development/guideline/website> for formatting instructions.
 
 ## Technical notes
 
