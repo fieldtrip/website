@@ -11,7 +11,7 @@ You first have to [sign up for an account](https://github.com/join) or log in on
 
 ## Bug reporting
 
-1. Please search on both the [FieldTrip discussion list](https://www.fieldtriptoolbox.org/discussion_list)
+1. Please search on both the [FieldTrip discussion list](/discussion_list)
    and the [GitHub issue list](https://github.com/fieldtrip/fieldtrip/issues)
    to see if anybody else has lodged a similar observation.
 
@@ -22,7 +22,7 @@ You first have to [sign up for an account](https://github.com/join) or log in on
       select the "bug report" issue template to get started.
 
    -  *Not so confident*: That's fine! Consider instead creating a new topic
-      on the [FieldTrip discussion list](https://www.fieldtriptoolbox.org/discussion_list);
+      on the [FieldTrip discussion list](/discussion_list);
       others can then comment on your observation and determine the
       appropriate level of escalation.
 
