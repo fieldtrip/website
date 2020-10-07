@@ -6,7 +6,7 @@ tags: [dataformat, cyberkinetics, blackrock, lfp, spike]
 # Getting started with Cyberkinetics data
 
 {% include markup/danger %}
-The support for the 'cyberkinetics' format using neuroshare has never been fully operational. Moreover, the limited functionality was restricted to the Windows platform. Nowadays, this file format has been adopted by Blackrock microsystems, and cross-platform support for the file format in FieldTrip is being implemented. Please see <http://www.fieldtriptoolbox.org/getting_started/blackrock> and <http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=2964> for more information.
+The support for the 'cyberkinetics' format using neuroshare has never been fully operational. Moreover, the limited functionality was restricted to the Windows platform. Nowadays, this file format has been adopted by Blackrock microsystems, and cross-platform support for the file format in FieldTrip is being implemented. Please see <https://www.fieldtriptoolbox.org/getting_started/blackrock> and <http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=2964> for more information.
 {% include markup/end %}
 
 ## Introduction

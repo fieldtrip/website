@@ -64,12 +64,12 @@ After installing FieldTrip to your path, you change into the data directory
 - morning
 
   - 1h intro lecture
-  - 2h handson <http://www.fieldtriptoolbox.org/tutorial/eventrelatedaveraging>
+  - 2h handson <https://www.fieldtriptoolbox.org/tutorial/eventrelatedaveraging>
 
 - afternoon
 
   - 1h spectral analysis lecture
-  - 2h handson <http://www.fieldtriptoolbox.org/tutorial/timefrequencyanalysis>
+  - 2h handson <https://www.fieldtriptoolbox.org/tutorial/timefrequencyanalysis>
 
 - evening
   - food and drinks
@@ -79,13 +79,13 @@ After installing FieldTrip to your path, you change into the data directory
 - morning
 
   - 1h beamforming lecture
-  - 2h hands on <http://www.fieldtriptoolbox.org/tutorial/beamformer>
+  - 2h hands on <https://www.fieldtriptoolbox.org/tutorial/beamformer>
 
 - afternoon
 
   - 1h nonparametric statistics lecture
-  - 1h hands on <http://www.fieldtriptoolbox.org/tutorial/cluster_permutation_timelock>
-  - 1h hands on <http://www.fieldtriptoolbox.org/tutorial/cluster_permutation_freq>
+  - 1h hands on <https://www.fieldtriptoolbox.org/tutorial/cluster_permutation_timelock>
+  - 1h hands on <https://www.fieldtriptoolbox.org/tutorial/cluster_permutation_freq>
 
 - evening
   - food and drinks

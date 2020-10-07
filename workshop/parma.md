@@ -28,14 +28,14 @@ Sebo Uithol is the host and local organizer
   - 10:05 - 11:00 Lecture: An introduction to the MEG and the FieldTrip toolbox
   - 11:00 - 11:15 Coffee Break
   - 11:15 - 12:45 Hands-on: Getting started with event-related fields
-    - <http://www.fieldtriptoolbox.org/tutorial/eventrelatedaveraging>
+    - <https://www.fieldtriptoolbox.org/tutorial/eventrelatedaveraging>
   - 12:45 - 13:45 Lunch
 
 - Session II
   - 13:45 - 14:45 Lecture: Fundamentals of neuronal oscillations and synchrony
   - 14:45 - 15:00 Coffee Break
   - 15:00 - 16:45 Hands-on: Time-frequency analysis of power
-    - <http://www.fieldtriptoolbox.org/tutorial/timefrequencyanalysis>
+    - <https://www.fieldtriptoolbox.org/tutorial/timefrequencyanalysis>
   - 16:45 - 17:30 Wrap-up-the-day: Ask the experts session
 
 #### Tuesday April 29
@@ -45,7 +45,7 @@ Sebo Uithol is the host and local organizer
   - 10:00 - 11:00 Lecture: Beamformer techniques for source reconstruction
   - 11:00 - 11:15 Coffee break
   - 11:15 - 13:00 Hands-on: Identifying oscillatory sources using beamformer techniques
-    - <http://www.fieldtriptoolbox.org/tutorial/beamformer>
+    - <https://www.fieldtriptoolbox.org/tutorial/beamformer>
   - 13:00 - 14:00 Lunch
 
 - Session IV
@@ -53,8 +53,8 @@ Sebo Uithol is the host and local organizer
   - 14:00 - 15:15 Lecture: Non-parametric randomization techniques
   - 15:15 - 15:30 Coffee break
   - 15:30 - 17:15 Hands-on: Parametric and non-parametric statistics on event related fields
-    - <http://www.fieldtriptoolbox.org/tutorial/eventrelatedstatistics>
-    - <http://www.fieldtriptoolbox.org/tutorial/cluster_permutation_freq>
+    - <https://www.fieldtriptoolbox.org/tutorial/eventrelatedstatistics>
+    - <https://www.fieldtriptoolbox.org/tutorial/cluster_permutation_freq>
   - 17:15 - 18:00 Wrap-up-the-day: Ask the experts session
 
   - 20:00 Workshop Dinner @ ???

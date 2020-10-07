@@ -21,9 +21,9 @@ The corresponding group analysis was also done in other free software package
 
 A single subject from this dataset was also analyzed for the MEG-UK workshop
 
-- <http://www.fieldtriptoolbox.org/workshop/meg-uk-2015>
-- <http://www.fieldtriptoolbox.org/workshop/meg-uk-2015/fieldtrip-stats-demo>
-- <http://www.fieldtriptoolbox.org/workshop/meg-uk-2015/fieldtrip-beamformer-demo>
+- <https://www.fieldtriptoolbox.org/workshop/meg-uk-2015>
+- <https://www.fieldtriptoolbox.org/workshop/meg-uk-2015/fieldtrip-stats-demo>
+- <https://www.fieldtriptoolbox.org/workshop/meg-uk-2015/fieldtrip-beamformer-demo>
 
 ### Abstract (of the satellite meeting)
 

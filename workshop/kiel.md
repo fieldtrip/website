@@ -17,8 +17,8 @@ We will keep this page up to date and post new information here when available.
   - 10:00 – 11:00 Lecture: Beamformer techniques for source reconstruction
   - 11:00 – 11:15 Coffee break
   - 11:15 – 13:00 Hands-on: Identifying oscillatory sources using beamformer techniques
-    _ <http://www.fieldtriptoolbox.org/tutorial/headmodel_eeg_bem>
-    _ <http://www.fieldtriptoolbox.org/tutorial/beamformer>
+    _ <https://www.fieldtriptoolbox.org/tutorial/headmodel_eeg_bem>
+    _ <https://www.fieldtriptoolbox.org/tutorial/beamformer>
   - 13:00 – 14:00 Lunch
 
 - Session II
@@ -26,8 +26,8 @@ We will keep this page up to date and post new information here when available.
   - 14:00 – 15:15 Lecture: Non-parametric randomization techniques
   - 15:15 – 15:30 Coffee break
   - 15:30 – 17:15 Hands-on: Parametric and non-parametric statistics on event related fields
-    _ <http://www.fieldtriptoolbox.org/tutorial/eventrelatedstatistics>
-    _ <http://www.fieldtriptoolbox.org/tutorial/cluster_permutation_freq>
+    _ <https://www.fieldtriptoolbox.org/tutorial/eventrelatedstatistics>
+    _ <https://www.fieldtriptoolbox.org/tutorial/cluster_permutation_freq>
   - 17:15 – 18:00 Wrap-up-the-day: “Ask the expert” session
 
 - Evening : ... social activity
@@ -38,14 +38,14 @@ We will keep this page up to date and post new information here when available.
 
   - 10:00 – 11:00 Lecture: Connectivity analysis
   - 11:00 – 11:15 Coffee break
-  - 11:15 – 13:00 Hands-on: Analysis of sensor- and source-level connectivity \* <http://www.fieldtriptoolbox.org/tutorial/connectivityextended>
+  - 11:15 – 13:00 Hands-on: Analysis of sensor- and source-level connectivity \* <https://www.fieldtriptoolbox.org/tutorial/connectivityextended>
   - 13:00 – 14:00 Lunch
 
 - Session IV
 
-  - 14:00 – 15:15 Hands-on: Virtual sensors' connectivity \* <http://www.fieldtriptoolbox.org/workshop/meg-uk-2015/fieldtrip-beamformer-demo>
+  - 14:00 – 15:15 Hands-on: Virtual sensors' connectivity \* <https://www.fieldtriptoolbox.org/workshop/meg-uk-2015/fieldtrip-beamformer-demo>
   - 15:15 – 15:30 Coffee break
-  - 15:30 – 17:15 Hands-on: Whole brain network and connectivity analysis \* <http://www.fieldtriptoolbox.org/tutorial/networkanalysis>
+  - 15:30 – 17:15 Hands-on: Whole brain network and connectivity analysis \* <https://www.fieldtriptoolbox.org/tutorial/networkanalysis>
   - 17:15 – 18:00 Wrap-up-the-day: “Ask the expert” session
 
   - Evening : ... social activity

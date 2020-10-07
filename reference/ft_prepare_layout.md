@@ -30,7 +30,7 @@ title: ft_prepare_layout
  this file format is no longer recommended, since there is less control over the outline 
  of the head and the mask within which the interpolation is done. A large number of 
  template layout files is provided in the fieldtrip/template/layout directory. See 
- also http://www.fieldtriptoolbox.org/template/layout
+ also https://www.fieldtriptoolbox.org/template/layout
 
  You can specify any one of the following configuration options
    cfg.layout      = filename containg the input layout (*.mat or *.lay file), this can also be a layout

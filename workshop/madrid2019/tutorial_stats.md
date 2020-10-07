@@ -283,7 +283,7 @@ fields that are unique to
     cfg.tail             = 0;                           % test the left, right or both tails of the distribution
     cfg.clustertail      = cfg.tail;
     cfg.alpha            = 0.05;                        % alpha level of the permutation test
-    cfg.correcttail      = 'alpha';                     % see http://www.fieldtriptoolbox.org/faq/why_should_i_use_the_cfg.correcttail_option_when_using_statistics_montecarlo/
+    cfg.correcttail      = 'alpha';                     % see https://www.fieldtriptoolbox.org/faq/why_should_i_use_the_cfg.correcttail_option_when_using_statistics_montecarlo/
     cfg.computeprob      = 'yes';
     cfg.numrandomization = 500;                         % number of random permutations
     cfg.neighbours       = cfg_neigh.neighbours;        % the neighbours for each sensor to form clusters

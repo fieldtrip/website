@@ -48,12 +48,12 @@ After installing FieldTrip to your path, you change into the tutorial directory
 - morning
 
   - 1h intro lecture [ppt](https://db.tt/wNf4lyNH)
-  - 2h hands-on <http://www.fieldtriptoolbox.org/tutorial/eventrelatedaveraging>
+  - 2h hands-on <https://www.fieldtriptoolbox.org/tutorial/eventrelatedaveraging>
 
 - afternoon
 
   - 1h oscillations lecture [ppt](https://db.tt/IRxD9rDb)
-  - 2h handson <http://www.fieldtriptoolbox.org/tutorial/timefrequencyanalysis>
+  - 2h handson <https://www.fieldtriptoolbox.org/tutorial/timefrequencyanalysis>
 
 - evening
   - pub
@@ -63,13 +63,13 @@ After installing FieldTrip to your path, you change into the tutorial directory
 - morning
 
   - 1h beamforming lecture [ppt](https://db.tt/kR4N2pSp)
-  - 2h hands on <http://www.fieldtriptoolbox.org/tutorial/beamformer>
+  - 2h hands on <https://www.fieldtriptoolbox.org/tutorial/beamformer>
 
 - afternoon
 
   - 1h nonparametric statistics lecture [ppt](https://db.tt/x9E0jmDG)
-  - 1h hands on <http://www.fieldtriptoolbox.org/tutorial/eventrelatedstatistics>
-  - 1h hands on <http://www.fieldtriptoolbox.org/tutorial/cluster_permutation_freq>
+  - 1h hands on <https://www.fieldtriptoolbox.org/tutorial/eventrelatedstatistics>
+  - 1h hands on <https://www.fieldtriptoolbox.org/tutorial/cluster_permutation_freq>
 
 - evening
   - dinner <http://goo.gl/maps/IM6yX>

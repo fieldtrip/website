@@ -23,12 +23,12 @@ Thilo Womelsdorf is the host and local organizer. Robert Oostenveld (Donders, Ni
 - morning
 
   - 1h lecture - Introduction to FieldTrip and LFP/EEG analysis (Robert Oostenveld)
-  - 2h handson <http://www.fieldtriptoolbox.org/tutorial/eventrelatedaveraging>
+  - 2h handson <https://www.fieldtriptoolbox.org/tutorial/eventrelatedaveraging>
 
 - afternoon
 
   - 1h lecture - Spike, and Spike-LFP Analysis (Martin Vinck)
-  - 1h handson <http://www.fieldtriptoolbox.org/tutorial/spike>
+  - 1h handson <https://www.fieldtriptoolbox.org/tutorial/spike>
   - 1h people work on own data with ERFs and/or spikes
 
 - evening - special interest lectures on decoding methods
@@ -41,13 +41,13 @@ Thilo Womelsdorf is the host and local organizer. Robert Oostenveld (Donders, Ni
 - morning
 
   - 1h lecture - Frequency analysis of power and coherence (Robert)
-  - 2h handson <http://www.fieldtriptoolbox.org/tutorial/timefrequencyanalysis>
+  - 2h handson <https://www.fieldtriptoolbox.org/tutorial/timefrequencyanalysis>
 
 - afternoon
 
   - 1h lecture - Connectivity analysis (Martin)
-  - 1h handson <http://www.fieldtriptoolbox.org/tutorial/spikefield>
-  - 1h handson <http://www.fieldtriptoolbox.org/tutorial/connectivity>
+  - 1h handson <https://www.fieldtriptoolbox.org/tutorial/spikefield>
+  - 1h handson <https://www.fieldtriptoolbox.org/tutorial/connectivity>
 
 - evening
   - short project presentations from participants
