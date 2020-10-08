@@ -26,7 +26,7 @@ title: ft_trackusage
  See the following online documentation for more information
    http://en.wikipedia.org/wiki/MD5
    http://en.wikipedia.org/wiki/Salt_(cryptography)
-   https://www.fieldtriptoolbox.org/faq/tracking
+   http://www.fieldtriptoolbox.org/faq/tracking
 
  See also FT_DEFAULTS
 ```

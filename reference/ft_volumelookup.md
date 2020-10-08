@@ -63,7 +63,7 @@ title: ft_volumelookup
  input MRI is transformed betweem MNI and Talairach-Tournoux coordinates
  See http://www.mrc-cbu.cam.ac.uk/Imaging/Common/mnispace.shtml for more details.
 
- See https://www.fieldtriptoolbox.org/template/atlas for a list of templates and
+ See http://www.fieldtriptoolbox.org/template/atlas for a list of templates and
  atlasses that are included in the FieldTrip release.
 
  See also FT_READ_ATLAS, FT_SOURCEPLOT

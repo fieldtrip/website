@@ -6,7 +6,7 @@ title: ft_documentationreference
  documentation.
 
  Normal users will not be calling this function, but will rather look at
- https://www.fieldtriptoolbox.org/reference where the output of this function can
+ http://www.fieldtriptoolbox.org/reference where the output of this function can
  be found.
 
  See also FT_DOCUMENTATIONCONFIGURATION, MATLAB2MARKDOWN
