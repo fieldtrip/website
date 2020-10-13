@@ -19,7 +19,9 @@ Information that need to be further considered to be documented in the metadata 
 
 If the online analysis in the eye tracker software also detects blinks, saccades, and other events with a distinct time (i.e. non-continuous), those can also be added to the `_events.tsv` file.
 
+{% include markup/success %}
 All data for the following examples is available from our [FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/example/bids_eyetracker/).
+{% include markup/end %}
 
 The examples includes the original log files under the “original” directory. It also has a copy of the script to do the conversion under “code”. The reorganized data is under the “bids” directory. According to [the documentation](https://bids-specification.readthedocs.io/en/stable/02-common-principles.html#source-vs-raw-vs-derived-data) the original data can be added to the BIDS dataset under the “sourcedata” directory and code can be added to the “code” directory. This way no information is lost and the conversion/reorganization is fully reproducible.
 

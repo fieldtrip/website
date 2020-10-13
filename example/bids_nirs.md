@@ -21,7 +21,9 @@ The windows software that comes with the Arinis system is called "Oxysoft", it w
 
 The example here is based on the dataset that is also used in the tutorial on [preprocessing and averaging of multi-channel NIRS data](/tutorial/nirs_multichannel). The data was recorded in an auditory oddball task. Details can be found in the tutorial.
 
+{% include markup/success %}
 The raw data is available on our FTP server, together with the script to convert the data to BIDS and the resulting BIDS dataset. You can find all three [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/example/bids_nirs/artinis/).
+{% include markup/end %}
 
     % the Artinis oxy3 files come with an optodetemplates.xml file, this has to be in
     % the same directory as the oxy3 file and it cannot be a subdirectory
@@ -94,7 +96,9 @@ For the example here we are using the dataset that is shared on Mendeley by Jess
 
 To convert the dataset from Homer `.nirs` format to BIDS and SNIRF, we use the following script. Since we do not have so much information about the actual dataset, we can only provide some general metadata. The original data is shared under the "CC BY 4.0 license", which allows redistribution of the data and derived data. This is also one of the fields in the required `dataset_description.json`.
 
+{% include markup/success %}
 The complete original dataset is available from Mendeley, a subset of the raw data has been made available on our FTP server, together with the script to convert the data to BIDS and the resulting BIDS dataset. You can find all three [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/example/bids_nirs/homer/).
+{% include markup/end %}
 
     % the original dataset includes data from 40 subjects
     % we are just using a subset here to demonstrate the principle

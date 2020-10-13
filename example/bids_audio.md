@@ -13,7 +13,9 @@ In language studies, and especially speech production experiments, audio might b
 
 ## Example
 
+{% include markup/success %}
 The example data is available from our [FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/example/bids_audio/).
+{% include markup/end %}
 
 The example is a short recording of someone speaking into a microphone. In the example there is no specific task involved, but task details and events could in principle be coded/represented similar to how they are represented for other data types.
 

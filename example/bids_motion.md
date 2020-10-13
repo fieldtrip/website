@@ -6,7 +6,7 @@ tags: [example, bids, sharing, motion, qualisys, optotrak, xsens]
 # Converting an example motion tracking dataset for sharing in BIDS
 
 {% include markup/danger %}
-BIDS does currently not specify how to represent motion tracking data. This example - and the support that is implemented in the **[data2bids](https://github.com/fieldtrip/fieldtrip/blob/release/data2bids.m)** function - should be considered as a preliminary proposal to help researchers with their existing data. 
+BIDS does currently not specify how to represent motion tracking data. This example - and the support that is implemented in the **[data2bids](https://github.com/fieldtrip/fieldtrip/blob/release/data2bids.m)** function - should be considered as a preliminary proposal to help researchers with their existing data.
 
 See [this issue](https://github.com/bids-standard/bids-specification/issues/443) on GitHub and [this Google doc](https://docs.google.com/document/d/1iaaLKgWjK5pcISD1MVxHKexB3PZWfE2aAC5HF_pCZWo/edit?usp=sharing) with the draft specification that is being discussed.
 {% include markup/end %}
@@ -27,7 +27,9 @@ Besides storing the output of the motion capture system, the position of the (op
 
 The example that we present here was recorded using a [Qualisys](https://www.qualisys.com) camera-based motion capture system. The data was exported from the proprietary Qualisys `.qtm` format to the standard biomechanics `.c3d` format (see [this link](https://www.c3d.org) for the standard) and to the `.tsv` (tab-separated-values) format; data in both exported formats can directly be read and processed by FieldTrip.
 
+{% include markup/success %}
 The original data for the following example and the converted BIDS representation are available from our [FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/example/bids_motion/).
+{% include markup/end %}
 
 ```
 cfg = [];
@@ -79,7 +81,9 @@ The data was exported using the Optotrak software to TSV (tab separated values) 
 
 FieldTrip does not have direct support for the Optotrak file format, nor for the specific format in which the data is exported to the TSV files. However, it is trivial to read the TSV files using MATLABs **[readtable](https://nl.mathworks.com/help/matlab/ref/readtable.html.m)** function. Subsequently, we will use the approach explained [here](/faq/how_can_i_import_my_own_dataformat/#circumvent-the-fieldtrip-reading-functions) to convert the tabular data to a FieldTrip data structure, similar to what would have been returned by **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)**. The data2bids function can take this as input and will export it in the right format, including the required metadata.
 
+{% include markup/success %}
 The original data for the following example and the converted BIDS representation are available from our [FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/example/bids_motion/).
+{% include markup/end %}
 
 ```
 % although the files have the extension tsv, they use a comma as separator
@@ -174,7 +178,9 @@ data2bids(cfg, data_combined);
 
 Here is a short example that demonstrates how XSens data can be converted to BIDS, starting from either C3D files or from MVNX files.
 
+{% include markup/success %}
 The original data for the following example and the converted BIDS representation are available from our [FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/example/bids_motion/).
+{% include markup/end %}
 
 ```
 

@@ -13,7 +13,9 @@ In many experiments video data can be recorded along with other measurements. Th
 
 ## Example
 
+{% include markup/success %}
 The example data is available from our [FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/example/bids_video/).
+{% include markup/end %}
 
 The example includes the original video recording under the “original” directory. It also has a copy of the script to do the conversion under “code”. The reorganized data is under the “bids” directory. According to [the documentation](https://bids-specification.readthedocs.io/en/stable/02-common-principles.html#source-vs-raw-vs-derived-data) the original data can be added to the BIDS dataset under the “sourcedata” directory and code can be added to the “code” directory. This way no information is lost and the conversion/reorganization is fully reproducible.
 
