@@ -156,6 +156,8 @@ The **CTF** coordinate system is expressed in centimeter (except the MRI, which 
 - y increases from anterior to posterior
 - z increases from inferior to superior
 
+See [this page](http://dicomiseasy.blogspot.com/2013/06/getting-oriented-using-image-plane.html) for more information about the DICOM coordinate system.
+
 ## Details of the FreeSurfer coordinate system
 
 FreeSurfer is a software package that can be used to process anatomical MRIs, to obtain segmentations, cortical meshes, and inflated surfaces. The orientation of the coordinate system is RAS, and for volumetric (i.e. anatomical MRI) data the origin is defined to be the centre of a 256x256x256 isotropic 1 mm volume. Note that if the head is not centered in the volume, the origin of the coordinate system will not coincide with the center of the head.
