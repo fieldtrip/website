@@ -74,7 +74,7 @@ We visualize the mesh surface
 
 _Figure 1: Mesh recorded with 3D-scanner_
 
-In the next step we will transform our mesh into [CTF coordinates](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined/). For this we have to specify the nasion (NAS), left preauricular (LPA) and right preauricular (RPA) points.
+In the next step we will transform our mesh into [CTF coordinates](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined/). For this we have to specify the nasion (NAS), right preauricular (RPA) and left preauricular (LPA) points. See the video at [178 seconds](https://youtu.be/d6FZlZTf-Hg?t=178) for how to select anatomical landmarks for MATLAB version 2018 and earlier. The 3-D image rotation in figures has changed with MATLAB 2019: for this and later versions you first select the anatomical landmark, then select the electrode label ("1" for the first fiducial), then enable rotate, then rotate the head, then disable rotate, and repeat.
 
     cfg = [];
     cfg.method = 'headshape';
