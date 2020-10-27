@@ -95,6 +95,10 @@ Tallon-Baudry C, Bertrand O, Delpuech C, Permier J. [Oscillatory gamma-band (30-
 
 Wen H, Liu Z. [Separating fractal and oscillatory components in the power spectrum of neurophysiological signal.](https://www.ncbi.nlm.nih.gov/pubmed/26318848) Brain Topogr. 2016 Jan;29(1):13-26.
 
+### On the differences and similarities between short-time Fourier, wavelet, and Hilbert transform
+
+Bruns A, [Fourier-, Hilbert-and wavelet-based signal analysis: are they really different approaches?.](https://doi.org/10.1016/j.jneumeth.2004.03.002) J.Neurosci.Meth. 2004 Aug;137(2):321-332
+
 ## Dealing with different head positions and with movements
 
 Knosche TR. [Transformation of whole-head MEG recordings between different sensor positions.](http://www.ncbi.nlm.nih.gov/pubmed/11977444) Biomed Tech (Berl). 2002 Mar;47(3):59-62.
