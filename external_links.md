@@ -42,7 +42,7 @@ Feel free to edit this page and add links that you think are appropriate.
 - [CTF](http://www.ctf.com)
 - [Neuromag/Elekta/Megis](http://www.neuromag.com)
 - [BTi/4D](http://www.4dneuroimaging.com)
-- [Yokogawa/Ricoh](http://www.yokogawa.com/rd/pdf/TR/rd-tr-r00038-006.pdf)
+- [Yokogawa/Ricoh](https://www.ricoh-usa.com/en/industries/healthcare/what-is-meg-brain-scanner)
 
 ## EEG hardware companies
 
