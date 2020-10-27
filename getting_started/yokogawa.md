@@ -7,13 +7,13 @@ tags: [dataformat, meg, yokogawa, coordinate]
 
 ## Introduction
 
-The datafiles for the 64-, 160- and 440-channel Yokogawa MEG systems are supported by using the precompiled (i.e. closed source) p-files that are supplied by Yokogawa. The data in the following files can be read and used in FieldTrip: .sqe, .ave, .con, .raw. Furthermore, gradiometer positions and orientations are read from the header (see below).
+The datafiles for the 64-, 160- and 440-channel Yokogawa MEG systems are supported by using the precompiled (i.e. closed source) p-files that are supplied by Yokogawa. The data in the following files can be read and used in FieldTrip: .sqd, .ave, .con, .raw. Furthermore, gradiometer positions and orientations are read from the header (see below).
 
 The low-level MATLAB reading functions are included in the FieldTrip release. Note that these files are not open source and **not covered by the GPL license**, but they are copyrighted by Yokogawa.
 
 FieldTrip includes reading functions for the Yokogawa MEG system in the fieldtrip/external/yokogawa directory. Using those reading functions, FieldTrip can process Yokogawa data just like any other data type. That means that the default reading functions **[ft_read_header](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_header.m)**, **[ft_read_data](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_data.m)** and **[ft_read_event](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_event.m)** work just like expected. The gradiometer information is also correctly represented, which means that you can use FieldTrip or SPM (which uses FieldTrip for the forward computations) for forward and inverse source estimation.
 
-The following Yokogawa file formats are recognized by FieldTri
+The following Yokogawa file formats are recognized by FieldTrip
 
 - yokogawa_sqd _Continuous data_
 - yokogawa_con _Continuous data_
@@ -27,7 +27,7 @@ The following Yokogawa file formats are recognized by FieldTri
 - yokogawa_textdata
 - yokogawa_fll
 
-Usually you will be starting your FieldTrip analysis with raw continuous data which is stored in files with the .con or the .sqd extention.
+Usually you will be starting your FieldTrip analysis with raw continuous data which is stored in files with the .con or the .sqd extension.
 
 ## Set path
 
@@ -38,7 +38,7 @@ To get started, you should add the FieldTrip main directory to your path, and ex
 
 ## Testing that the reading into MATLAB works
 
-To test that the reading of the continuous data works on your computer, you can try something like the following on your own data fil
+To test that the reading of the continuous data works on your computer, you can try something like the following on your own data file
 
     >> hdr = ft_read_header('Continuous1.con')
 
@@ -139,7 +139,7 @@ For example
 
 We can then proceed in the standard way of defining trials and reading data as follows.
 Note that except for the MEG channels which are prefixed by 'AG', the labels of the channels are just a string representation of the index number of the channel (starting with 1). The labels of our trigger channels are therefor '161', '162' and '163', etc.
-Also realize that how the Yokogawa system is recording events through individual (analogue) channels, one is in most cases limited to one event 'type' per channel. In FieldTrip the channel label (which is a string of the index number) is given in the .type field of every event. In this example this is used by feeding `cfg.trialdef.trigchannel = '162'`{matlab} into the trialfunctio
+Also realize that how the Yokogawa system is recording events through individual (analogue) channels, one is in most cases limited to one event 'type' per channel. In FieldTrip the channel label (which is a string of the index number) is given in the .type field of every event. In this example this is used by feeding `cfg.trialdef.trigchannel = '162'`{matlab} into the trialfunction
 
     cfg = [];
     cfg.dataset                 = data.sqd;
@@ -169,7 +169,7 @@ The general principle of coordinate system coregistration is to measure the same
 
 In general MEG analyses are performed in a ["head coordinate system"](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined) that relates to the anatomical landmarks. To get a clear picture of the head coordinate system, you should consider how the location of the origin (i.e. the point [0 0 0]) and the direction of the axes of the coordinate system (i.e. the x-, y- and z-axis) are defined in relation to the anatomical landmarks. For example, the origin of the coordinate system can be defined exactly between the two ears and the x-axis (or the y-axis) can be defined to point towards the nasion. Note that different hardware manufacturers and software packages use [different conventions](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined), e.g. the x-axis can point either to the nose (CTF) or to the right ear (Neuromag), and that different labs also use slightly different conventions for the "ear" landmarks.
 
-Alternative to anatomically defined landmarks, it is also possible to use fiducials on other locations, as long as the position of the same fiducials can be detected with the different scanners. For the Yokogawa system three coils (MEG) or three vitamine capsules (MRI) can used that are placed on the forehea
+Alternative to anatomically defined landmarks, it is also possible to use fiducials on other locations, as long as the position of the same fiducials can be detected with the different scanners. For the Yokogawa system three coils (MEG) or three vitamine capsules (MRI) can used that are placed on the forehead
 
 {% include image src="/assets/img/getting_started/yokogawa/coordinate_systems.png" %}
 
@@ -208,7 +208,7 @@ With the MEG we have determined the position of the forehead marker coils relati
     cfg.interactive = 'yes';
     ft_sourceplot(cfg,mri_aligned);
 
-By clicking in one of the panels of the figure, the position of the crosshair will be updated and the three orthogonal slices will be redrawn. If you look in the MATLAB command-line window, you will also see that the current position of the crosshair is displayed. You should see something like this every time you clic
+By clicking in one of the panels of the figure, the position of the crosshair will be updated and the three orthogonal slices will be redrawn. If you look in the MATLAB command-line window, you will also see that the current position of the crosshair is displayed. You should see something like this every time you click
 
     click with mouse button to reposition the cursor
     press n/l/r on keyboard to record a fiducial position

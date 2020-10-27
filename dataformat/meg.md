@@ -35,7 +35,7 @@ You may want to continue reading the section on [getting started with BTi/4D](/g
 
 ## Support for Yokogawa MEG data
 
-The datafiles for the 64-, 160- and 440-channel Yokogawa MEG systems are supported by using the precompiled (i.e. closed source) p-files that are supplied by Yokogawa. The data in the following files can be read and used in FieldTrip: .sqe, .ave, .con, .raw. Furthermore, gradiometer positions and orientations are read from the header.
+The datafiles for the 64-, 160- and 440-channel Yokogawa MEG systems are supported by using the precompiled (i.e. closed source) p-files that are supplied by Yokogawa. The data in the following files can be read and used in FieldTrip: .sqd, .ave, .con, .raw. Furthermore, gradiometer positions and orientations are read from the header.
 
 The low-level MATLAB reading functions are included in the FieldTrip release. Note that these files are not open source and **not covered by the GPL license**, but they are copyrighted by Yokogawa.
 
