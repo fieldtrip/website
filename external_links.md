@@ -32,9 +32,9 @@ Feel free to edit this page and add links that you think are appropriate.
 
 ## EEG/MEG software (commercial)
 
-- [Neuroscan](http://www.neuro.com) (Curry)
+- [ANT Neuro](https://www.ant-neuro.com) (ASA)
 - [BESA](http://www.besa.de) (BESA Research)
-- [Advanced Neuro Technology](http://www.ant-software.nl) (ASA)
+- [Neuroscan](http://www.neuro.com) (Curry)
 - [Source Signal Imaging](http://www.sourcesignal.com) (EMSE)
 
 ## MEG hardware companies
@@ -46,10 +46,11 @@ Feel free to edit this page and add links that you think are appropriate.
 
 ## EEG hardware companies
 
-- [BrainProducts](http://www.brainproducts.com)
 - [Biosemi](http://www.biosemi.com)
-- [EGI](http://www.egi.com)
+- [BrainProducts](http://www.brainproducts.com)
+- [ANT Neuro](https://www.ant-neuro.com)
 - [Compumedics Neuroscan](https://compumedicsneuroscan.com/) (also MEG)
+- [EGI](http://www.egi.com)
 
 ## NIRS hardware companies
 
