@@ -1,3 +1,6 @@
+- name:  Use denoising source separation (DSS) to remove ECG artifacts
+  link:  /example/use_denoising_source_separation_dss_to_remove_ecg_artifacts
+
 - name:  Use independent component analysis (ICA) to remove ECG artifacts
   link:  /example/use_independent_component_analysis_ica_to_remove_ecg_artifacts
 
