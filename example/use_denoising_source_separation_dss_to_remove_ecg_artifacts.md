@@ -1,5 +1,6 @@
 ---
 title: Use denoising source separation (DSS) to remove ECG artifacts
+tags: [example, artifact, preprocessing, ica]
 ---
 
 ## Use denoising source separation (DSS) to remove ECG artifacts
@@ -13,11 +14,11 @@ This script demonstrates how you can use denoising source separation (DSS) for c
 2.  selection of a number of components to remove from MEEG data
 3.  removal of the identified components
 
-DSS is a blind source separation technique that is akin to ICA, with the added functionality of that it can use prior information to unmix the signals into sources that have certain characteristics. While in ICA the defining characteristic of the sources is statistical independence, in DSS one can for instance steer the unmixing towards the identification of sources that are timelocked to certain events. This is the exact feature that we are going to exploit in this example, because it shows how to remove the ECG artifact, using information about the timing of the QRS-complexes. What is therefore needed, is a sufficiently clean ECG-like signal to begin with, to allow for the identification of those peaks. This will be done, using the ft_artifact_zvalue function. Next, the output of ft_artifact_zvalue will be used to call ft_componentanalysis with 'dss' as method. 
+DSS is a blind source separation technique that is akin to ICA, with the added functionality of that it can use prior information to unmix the signals into sources that have certain characteristics. While in ICA the defining characteristic of the sources is statistical independence, in DSS one can for instance steer the unmixing towards the identification of sources that are timelocked to certain events. This is the exact feature that we are going to exploit in this example, because it shows how to remove the ECG artifact, using information about the timing of the QRS-complexes. What is therefore needed, is a sufficiently clean ECG-like signal to begin with, to allow for the identification of those peaks. This will be done, using the ft_artifact_zvalue function. Next, the output of ft_artifact_zvalue will be used to call ft_componentanalysis with 'dss' as method.
 
 ### Example dataset
 
-You can run the code below on your own data. Alternatively, try with the example MEG dataset [ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/ArtifactRemoval.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/ArtifactRemoval.zip). All figures in this example script are based on these data. 
+You can run the code below on your own data. Alternatively, try with the example MEG dataset [ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/ArtifactRemoval.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/ArtifactRemoval.zip). All figures in this example script are based on these data.
 
 To load this dataset into MATLAB and preprocess with FieldTrip, use:
 
