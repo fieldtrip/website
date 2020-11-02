@@ -37,16 +37,16 @@ The LCMV beamformer spatial filter for the location of interest will pass the ac
     cfg.channel           = 'MEG';
     cfg.vartrllength      = 2;
     cfg.covariancewindow  = 'all';
-    tlock                 = ft_timelockanalysis(cfg, data_cmb);
+    tlock = ft_timelockanalysis(cfg, data_cmb);
 
-    cfg              = [];
-    cfg.method       = 'lcmv';
-    cfg.headmodel    = hdm;
+    cfg                     = [];
+    cfg.method              = 'lcmv';
+    cfg.headmodel           = hdm;
     cfg.sourcemodel.pos     = sourcemodel.pos([maxcohindx maxpowindx], :);
     cfg.sourcemodel.inside  = true(2,1);
-    cfg.unit    = sourcemodel.unit;
-    cfg.lcmv.keepfilter = 'yes';
-    source_idx       = ft_sourceanalysis(cfg, tlock);
+    cfg.unit                = sourcemodel.unit;
+    cfg.lcmv.keepfilter     = 'yes';
+    source_idx = ft_sourceanalysis(cfg, tlock);
 
 The source reconstruction contains the estimated power and the source-level time series of the averaged ERF, but here we are not interested in those. The _cfg.keepfilter_ option results in the spatial filter being kept in the output source structure. That spatial filter can be used to reconstruct the single-trial time series as a virtual channel by multiplying it with the original MEG data.
 
@@ -55,18 +55,20 @@ The source reconstruction contains the estimated power and the source-level time
     beamformer_lft_coh = source_idx.avg.filter{1};
     beamformer_gam_pow = source_idx.avg.filter{2};
 
-    chansel = ft_channelselection('MEG', data_cmb.label); % find MEG sensor names
-    chansel = match_str(data_cmb.label, chansel);         % find MEG sensor indices
+    chansel  = ft_channelselection('MEG', data_cmb.label); % find MEG sensor names
+    chanindx = match_str(data_cmb.label, chansel);         % find MEG sensor indices
 
     coh_lft_data = [];
     coh_lft_data.label = {'coh_lft_x', 'coh_lft_y', 'coh_lft_z'};
     coh_lft_data.time = data_cmb.time;
+
     gam_pow_data = [];
     gam_pow_data.label = {'gam_pow_x', 'gam_pow_y', 'gam_pow_z'};
-    gam_pow_data.time = data_cmb.time;
+    gam_pow_data.time  = data_cmb.time;
+
     for i=1:length(data_cmb.trial)
-    coh_lft_data.trial{i} = beamformer_lft_coh * data_cmb.trial{i}(chansel,:);
-    gam_pow_data.trial{i} = beamformer_gam_pow * data_cmb.trial{i}(chansel,:);
+      coh_lft_data.trial{i} = beamformer_lft_coh * data_cmb.trial{i}(chanindx,:);
+      gam_pow_data.trial{i} = beamformer_gam_pow * data_cmb.trial{i}(chanindx,:);
     end
 
 {% include markup/warning %}
