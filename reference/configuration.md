@@ -89,9 +89,6 @@ A detailed description of each function is available in the [reference documenta
 **cfg.artfctdef.ecg.inspect** - [ft_artifact_ecg](/reference/ft_artifact_ecg)  
 
 
-**cfg.artfctdef.ecg.method** - [ft_artifact_ecg](/reference/ft_artifact_ecg)  
-
-
 **cfg.artfctdef.ecg.pretim** - [ft_artifact_ecg](/reference/ft_artifact_ecg)  
 
 
@@ -150,6 +147,9 @@ A detailed description of each function is available in the [reference documenta
 
 
 **cfg.artfctdef.jump.cutoff** - [ft_artifact_jump](/reference/ft_artifact_jump)  
+
+
+**cfg.artfctdef.jump.fltpadding** - [ft_artifact_jump](/reference/ft_artifact_jump)  
 
 
 **cfg.artfctdef.jump.medianfilter** - [ft_artifact_jump](/reference/ft_artifact_jump)  
@@ -261,6 +261,9 @@ A detailed description of each function is available in the [reference documenta
 
 
 **cfg.artfctdef.zvalue.artfctpeak** - [ft_artifact_zvalue](/reference/ft_artifact_zvalue)  
+
+
+**cfg.artfctdef.zvalue.artfctpeakrange** - [ft_artifact_zvalue](/reference/ft_artifact_zvalue)  
 
 
 **cfg.artfctdef.zvalue.artifact** - [ft_rejectartifact](/reference/ft_rejectartifact)  
@@ -705,7 +708,10 @@ A detailed description of each function is available in the [reference documenta
 **cfg.confound** - [ft_regressconfound](/reference/ft_regressconfound)  
 
 
-**cfg.continuous** - [ft_artifact_clip](/reference/ft_artifact_clip), [ft_artifact_ecg](/reference/ft_artifact_ecg), [ft_artifact_eog](/reference/ft_artifact_eog), [ft_artifact_jump](/reference/ft_artifact_jump), [ft_artifact_muscle](/reference/ft_artifact_muscle), [ft_artifact_threshold](/reference/ft_artifact_threshold), [ft_artifact_tms](/reference/ft_artifact_tms), [ft_artifact_zvalue](/reference/ft_artifact_zvalue), [ft_databrowser](/reference/ft_databrowser), [ft_preprocessing](/reference/ft_preprocessing)  
+**cfg.continuous** - [ft_artifact_clip](/reference/ft_artifact_clip), [ft_artifact_ecg](/reference/ft_artifact_ecg), [ft_artifact_eog](/reference/ft_artifact_eog), [ft_artifact_jump](/reference/ft_artifact_jump), [ft_artifact_muscle](/reference/ft_artifact_muscle), [ft_artifact_threshold](/reference/ft_artifact_threshold), [ft_artifact_tms](/reference/ft_artifact_tms), [ft_artifact_zvalue](/reference/ft_artifact_zvalue), [ft_artifact_zvalue](/reference/ft_artifact_zvalue), [ft_databrowser](/reference/ft_databrowser), [ft_preprocessing](/reference/ft_preprocessing)  
+
+
+**cfg.contournum** - [ft_databrowser](/reference/ft_databrowser)  
 
 
 **cfg.coordsys** - [ft_meshrealign](/reference/ft_meshrealign), [ft_preprocessing](/reference/ft_preprocessing), [ft_volumerealign](/reference/ft_volumerealign)  
@@ -1262,7 +1268,7 @@ A detailed description of each function is available in the [reference documenta
 **cfg.grid.corner4** - [ft_electrodeplacement](/reference/ft_electrodeplacement)  
 
 
-**cfg.gridscale** - [ft_topoplotER](/reference/ft_topoplotER), [ft_topoplotIC](/reference/ft_topoplotIC), [ft_topoplotTFR](/reference/ft_topoplotTFR)  
+**cfg.gridscale** - [ft_databrowser](/reference/ft_databrowser), [ft_topoplotER](/reference/ft_topoplotER), [ft_topoplotIC](/reference/ft_topoplotIC), [ft_topoplotTFR](/reference/ft_topoplotTFR)  
 
 
 **cfg.gridsearch** - [ft_dipolefitting](/reference/ft_dipolefitting)  
@@ -1431,7 +1437,7 @@ A detailed description of each function is available in the [reference documenta
 **cfg.intermediatename** - [ft_volumenormalise](/reference/ft_volumenormalise)  
 
 
-**cfg.interplimits** - [ft_topoplotER](/reference/ft_topoplotER), [ft_topoplotIC](/reference/ft_topoplotIC), [ft_topoplotTFR](/reference/ft_topoplotTFR)  
+**cfg.interplimits** - [ft_databrowser](/reference/ft_databrowser), [ft_topoplotER](/reference/ft_topoplotER), [ft_topoplotIC](/reference/ft_topoplotIC), [ft_topoplotTFR](/reference/ft_topoplotTFR)  
 
 
 **cfg.interpmethod** - [ft_sourceinterpolate](/reference/ft_sourceinterpolate)  
@@ -1443,7 +1449,7 @@ A detailed description of each function is available in the [reference documenta
 **cfg.interpolatenan** - [ft_topoplotER](/reference/ft_topoplotER), [ft_topoplotTFR](/reference/ft_topoplotTFR)  
 
 
-**cfg.interpolation** - [ft_topoplotER](/reference/ft_topoplotER), [ft_topoplotIC](/reference/ft_topoplotIC), [ft_topoplotTFR](/reference/ft_topoplotTFR)  
+**cfg.interpolation** - [ft_databrowser](/reference/ft_databrowser), [ft_topoplotER](/reference/ft_topoplotER), [ft_topoplotIC](/reference/ft_topoplotIC), [ft_topoplotTFR](/reference/ft_topoplotTFR)  
 
 
 **cfg.interptoi** - [ft_spiketriggeredinterpolation](/reference/ft_spiketriggeredinterpolation)  
@@ -2069,7 +2075,10 @@ A detailed description of each function is available in the [reference documenta
 **cfg.params** - [ft_connectivitysimulation](/reference/ft_connectivitysimulation)  
 
 
-**cfg.parcellation** - [ft_sourceparcellate](/reference/ft_sourceparcellate)  
+**cfg.parcel** - [ft_virtualchannel](/reference/ft_virtualchannel)  
+
+
+**cfg.parcellation** - [ft_sourceparcellate](/reference/ft_sourceparcellate), [ft_virtualchannel](/reference/ft_virtualchannel)  
 
 
 **cfg.path** - [ft_icabrowser](/reference/ft_icabrowser)  
@@ -2127,6 +2136,9 @@ A detailed description of each function is available in the [reference documenta
 
 
 **cfg.port** - [ft_realtime_brainampproxy](/reference/ft_realtime_brainampproxy), [ft_realtime_jaga16proxy](/reference/ft_realtime_jaga16proxy)  
+
+
+**cfg.pos** - [ft_virtualchannel](/reference/ft_virtualchannel)  
 
 
 **cfg.position** - [ft_clusterplot](/reference/ft_clusterplot), [ft_databrowser](/reference/ft_databrowser), [ft_layoutplot](/reference/ft_layoutplot), [ft_neighbourplot](/reference/ft_neighbourplot), [ft_sourceplot](/reference/ft_sourceplot), [ft_topoplotCC](/reference/ft_topoplotCC)  
@@ -2543,7 +2555,7 @@ A detailed description of each function is available in the [reference documenta
 **cfg.serial** - [ft_omri_quality](/reference/ft_omri_quality)  
 
 
-**cfg.shading** - [ft_topoplotER](/reference/ft_topoplotER), [ft_topoplotIC](/reference/ft_topoplotIC), [ft_topoplotTFR](/reference/ft_topoplotTFR)  
+**cfg.shading** - [ft_databrowser](/reference/ft_databrowser), [ft_topoplotER](/reference/ft_topoplotER), [ft_topoplotIC](/reference/ft_topoplotIC), [ft_topoplotTFR](/reference/ft_topoplotTFR)  
 
 
 **cfg.shaft.along** - [ft_electrodeplacement](/reference/ft_electrodeplacement)  
@@ -3016,7 +3028,7 @@ A detailed description of each function is available in the [reference documenta
 **cfg.trigger** - [ft_realtime_synchronous](/reference/ft_realtime_synchronous)  
 
 
-**cfg.trl** - [ft_artifact_ecg](/reference/ft_artifact_ecg), [ft_artifact_eog](/reference/ft_artifact_eog), [ft_artifact_jump](/reference/ft_artifact_jump), [ft_artifact_muscle](/reference/ft_artifact_muscle), [ft_artifact_threshold](/reference/ft_artifact_threshold), [ft_artifact_tms](/reference/ft_artifact_tms), [ft_artifact_zvalue](/reference/ft_artifact_zvalue), [ft_audiovideobrowser](/reference/ft_audiovideobrowser), [ft_databrowser](/reference/ft_databrowser), [ft_headmovement](/reference/ft_headmovement), [ft_preprocessing](/reference/ft_preprocessing), [ft_redefinetrial](/reference/ft_redefinetrial), [ft_spike_maketrials](/reference/ft_spike_maketrials)  
+**cfg.trl** - [ft_artifact_clip](/reference/ft_artifact_clip), [ft_artifact_ecg](/reference/ft_artifact_ecg), [ft_artifact_eog](/reference/ft_artifact_eog), [ft_artifact_jump](/reference/ft_artifact_jump), [ft_artifact_muscle](/reference/ft_artifact_muscle), [ft_artifact_threshold](/reference/ft_artifact_threshold), [ft_artifact_tms](/reference/ft_artifact_tms), [ft_artifact_zvalue](/reference/ft_artifact_zvalue), [ft_artifact_zvalue](/reference/ft_artifact_zvalue), [ft_audiovideobrowser](/reference/ft_audiovideobrowser), [ft_databrowser](/reference/ft_databrowser), [ft_headmovement](/reference/ft_headmovement), [ft_preprocessing](/reference/ft_preprocessing), [ft_redefinetrial](/reference/ft_redefinetrial), [ft_spike_maketrials](/reference/ft_spike_maketrials)  
 
 
 **cfg.trllen** - [ft_dipolesimulation](/reference/ft_dipolesimulation), [ft_freqsimulation](/reference/ft_freqsimulation), [ft_timelocksimulation](/reference/ft_timelocksimulation)  

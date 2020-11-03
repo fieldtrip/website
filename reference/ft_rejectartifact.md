@@ -36,8 +36,8 @@ title: ft_rejectartifact
    cfg.artfctdef.xxx.artifact    = Nx2 matrix with artifact segments, this could be added by your own artifact detection function
 
  A trial that contains an artifact can be rejected completely or partially. In case
- of partial rejection, a minimum length of the resulting sub-trials can be
- specified using minaccepttim.
+ of partial rejection, a minimum length of the resulting sub-trials can be specified
+ using minaccepttim.
 
  Output:
    If cfg is the only input parameter, the output is a cfg structure with an updated trl.
@@ -49,6 +49,7 @@ title: ft_rejectartifact
  file on disk. This mat files should contain only a single variable named 'data',
  corresponding to the input structure.
 
- See also FT_ARTIFACT_EOG, FT_ARTIFACT_MUSCLE, FT_ARTIFACT_JUMP, FT_ARTIFACT_THRESHOLD,
- FT_ARTIFACT_CLIP, FT_ARTIFACT_ECG, FT_DATABROWSER, FT_REJECTVISUAL
+ See also FT_ARTIFACT_ZVALUE, FT_ARTIFACT_EOG, FT_ARTIFACT_MUSCLE, FT_ARTIFACT_JUMP,
+ FT_ARTIFACT_THRESHOLD, FT_ARTIFACT_CLIP, FT_ARTIFACT_ECG, FT_DATABROWSER,
+ FT_REJECTVISUAL
 ```

@@ -83,6 +83,12 @@ title: ft_databrowser
    cfg.layout                  = filename of the layout, see FT_PREPARE_LAYOUT
    cfg.elec                    = structure with electrode positions or filename, see FT_READ_SENS
    cfg.grad                    = structure with gradiometer definition or filename, see FT_READ_SENS
+ Additional plotting options for the component viewmode:
+   cfg.gridscale               = scalar, number of points along both directions for interpolation (default = 45 here)
+   cfg.shading                 = string, 'none', 'flat', 'interp' (default = 'flat')
+   cfg.interplimits            = string, 'electrodes' or 'mask' (default here = 'mask')
+   cfg.interpolation           = string, 'nearest', 'linear', 'natural', 'cubic' or 'v4' (default = 'v4')
+   cfg.contournum              = topoplot contour lines
 
  The default font size might be too small or too large, depending on the number of
  channels. You can use the following options to change the size of text inside the

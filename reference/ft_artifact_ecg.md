@@ -27,15 +27,14 @@ title: ft_artifact_ecg
    cfg.continuous = 'yes' or 'no' whether the file contains continuous data
  and
    cfg.artfctdef.ecg.channel = Nx1 cell-array with selection of channels, see FT_CHANNELSELECTION for details
-   cfg.artfctdef.ecg.pretim  = 0.05; pre-artifact rejection-interval in seconds
-   cfg.artfctdef.ecg.psttim  = 0.3;  post-artifact rejection-interval in seconds
-   cfg.artfctdef.ecg.method  = 'zvalue'; peak-detection method
-   cfg.artfctdef.ecg.cutoff  = 3; peak-threshold
-   cfg.artfctdef.ecg.inspect = Nx1 list of channels which will be shown in a QRS-locked average
+   cfg.artfctdef.ecg.pretim  = pre-artifact rejection interval in seconds (default = 0.05)
+   cfg.artfctdef.ecg.psttim  = post-artifact rejection interval in seconds (default = 0.3)
+   cfg.artfctdef.ecg.cutoff  = peak threshold (default = 3)
+   cfg.artfctdef.ecg.inspect = Nx1 list of channels which will be shown as a QRS-locked average
 
  The output argument "artifact" is a Nx2 matrix comparable to the "trl" matrix of
- FT_DEFINETRIAL. The first column of which specifying the beginsamples of an
- artifact period, the second column contains the endsamples of the artifactperiods.
+ FT_DEFINETRIAL. The first column of which specifying the begin samples of an
+ artifact period, the second column contains the end samples of the QRS periods.
 
  To facilitate data-handling and distributed computing, you can use
    cfg.inputfile   =  ...

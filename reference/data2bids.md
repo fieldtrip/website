@@ -107,6 +107,10 @@ title: data2bids
  FT_DATATYPE_SENS as an "elec" field in the input data, or you can specify it as
  cfg.elec or you can specify a filename with electrode information.
    cfg.elec                    = structure with electrode positions or filename, see FT_READ_SENS
+ For NIRS data you can specify an optode definition according to
+ FT_DATATYPE_SENS as an "opto" field in the input data, or you can specify
+ it as cfg.opto or you can specify a filename with optode information.
+   cfg.opto                    = structure with optode positions or filename,see FT_READ_SENS
 
  General BIDS options that apply to all data types are
    cfg.InstitutionName             = string
@@ -145,11 +149,14 @@ title: data2bids
    cfg.meg.SomeOption              = string, please check the MATLAB code
    cfg.eeg.SomeOption              = string, please check the MATLAB code
    cfg.ieeg.SomeOption             = string, please check the MATLAB code
+   cfg.nirs.SomeOption             = string, please check the MATLAB code
    cfg.coordsystem.someoption      = string, please check the MATLAB code
  The information for TSV files is specified with a column header in lowercase or
  snake_case and represents a list of items
    cfg.channels.someoption         = cell-array, please check the MATLAB code
    cfg.events.someoption           = cell-array, please check the MATLAB code
+   cfg.electrodes.someoption       = cell-array, please check the MATLAB code
+   cfg.optodes.someoption          = cell-array, please check the MATLAB code
 
  The implementation in this function corresponds to BIDS version 1.2.0. See
  https://bids-specification.readthedocs.io/ for the full specification and

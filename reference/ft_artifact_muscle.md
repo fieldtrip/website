@@ -2,16 +2,15 @@
 title: ft_artifact_muscle
 ---
 ```plaintext
- FT_ARTIFACT_MUSCLE reads the data segments of interest from file and identifies
- muscle artifacts.
+ FT_ARTIFACT_MUSCLE scans data segments of interest for muscle artifacts.
 
  Use as
    [cfg, artifact] = ft_artifact_muscle(cfg)
  with the configuration options
-   cfg.dataset     = string with the filename
+   cfg.dataset    = string with the filename
  or
-   cfg.headerfile  = string with the filename
-   cfg.datafile    = string with the filename
+   cfg.headerfile = string with the filename
+   cfg.datafile   = string with the filename
  and optionally
    cfg.headerformat
    cfg.dataformat
@@ -21,11 +20,11 @@ title: ft_artifact_muscle
  where the input data is a structure as obtained from FT_PREPROCESSING.
 
  In both cases the configuration should also contain
-   cfg.trl        = structure that defines the data segments of interest. See FT_DEFINETRIAL
+   cfg.trl        = structure that defines the data segments of interest, see FT_DEFINETRIAL
    cfg.continuous = 'yes' or 'no' whether the file contains continuous data
 
- The data is preprocessed (again) with the following configuration parameters,
- which are optimal for identifying muscle artifacts.
+ Prior to artifact detection, the data is preprocessed (again) with the following
+ configuration parameters, which are optimal for identifying muscle artifacts.
    cfg.artfctdef.muscle.bpfilter    = 'yes'
    cfg.artfctdef.muscle.bpfreq      = [110 140]
    cfg.artfctdef.muscle.bpfiltord   = 8
@@ -37,9 +36,9 @@ title: ft_artifact_muscle
  of the preprocessed data.
    cfg.artfctdef.muscle.channel     = Nx1 cell-array with selection of channels, see FT_CHANNELSELECTION for details
    cfg.artfctdef.muscle.cutoff      = z-value at which to threshold (default = 4)
-   cfg.artfctdef.muscle.trlpadding  = 0.1
-   cfg.artfctdef.muscle.fltpadding  = 0.1
-   cfg.artfctdef.muscle.artpadding  = 0.1
+   cfg.artfctdef.muscle.trlpadding  = number in seconds (default = 0.1)
+   cfg.artfctdef.muscle.fltpadding  = number in seconds (default = 0.1)
+   cfg.artfctdef.muscle.artpadding  = number in seconds (default = 0.1)
 
  The output argument "artifact" is a Nx2 matrix comparable to the "trl" matrix of
  FT_DEFINETRIAL. The first column of which specifying the beginsamples of an

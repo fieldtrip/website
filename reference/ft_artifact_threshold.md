@@ -2,9 +2,9 @@
 title: ft_artifact_threshold
 ---
 ```plaintext
- FT_ARTIFACT_THRESHOLD scans for trials in which the range, i.e. the minimum, the
- maximum, or the range (min-max difference) of the signal in any channel exceeds a
- specified threshold.
+ FT_ARTIFACT_THRESHOLD scans data segments of interest for channels in which the
+ signal exceeds a specified minimum or maximum value, or in which the peak-to-peak
+ range within the trial exceeds a specified threshold.
 
  Use as
    [cfg, artifact] = ft_artifact_threshold(cfg)
@@ -24,15 +24,15 @@ title: ft_artifact_threshold
  In both cases the configuration should also contain
    cfg.trl        = structure that defines the data segments of interest, see FT_DEFINETRIAL
    cfg.continuous = 'yes' or 'no' whether the file contains continuous data
-
- The following configuration options can be specified
+ and
    cfg.artfctdef.threshold.channel   = cell-array with channel labels
    cfg.artfctdef.threshold.bpfilter  = 'no' or 'yes' (default = 'yes')
    cfg.artfctdef.threshold.bpfreq    = [0.3 30]
    cfg.artfctdef.threshold.bpfiltord = 4
 
- It is also possible to use other filter (lpfilter, hpfilter, bsfilter, dftfilter or
- medianfilter) instead of a bpfilter for preprocessing, see FT_PREPROCESSING.
+ In the same way as specifying the options for band-pass filtering, it is also
+ possible to specify lpfilter, hpfilter, bsfilter, dftfilter or medianfilter, see
+ FT_PREPROCESSING.
 
  The detection of artifacts is done according to the following settings,
  you should specify at least one of these thresholds
@@ -51,7 +51,7 @@ title: ft_artifact_threshold
  positive, the data will be thresholded above their values. In case both onset and
  offset are negative, the data will be thresholded below their values.
 
- Note that this function does not support artifact- or filterpadding.
+ Note that this function does not support artifactpadding or filterpadding.
 
  The output argument "artifact" is a Nx2 matrix comparable to the "trl" matrix of
  FT_DEFINETRIAL. The first column of which specifying the beginsamples of an

@@ -2,16 +2,15 @@
 title: ft_artifact_jump
 ---
 ```plaintext
- FT_ARTIFACT_JUMP reads the data segments of interest from file and identifies SQUID
- jump artifacts.
+ FT_ARTIFACT_JUMP scans data segments of interest for SQUID jump artifacts.
 
  Use as
    [cfg, artifact] = ft_artifact_jump(cfg)
  with the configuration options
-   cfg.dataset     = string with the filename
+   cfg.dataset    = string with the filename
  or
-   cfg.headerfile  = string with the filename
-   cfg.datafile    = string with the filename
+   cfg.headerfile = string with the filename
+   cfg.datafile   = string with the filename
  and optionally
    cfg.headerformat
    cfg.dataformat
@@ -21,11 +20,11 @@ title: ft_artifact_jump
  where the input data is a structure as obtained from FT_PREPROCESSING.
 
  In both cases the configuration should also contain
-   cfg.trl        = structure that defines the data segments of interest. See FT_DEFINETRIAL
+   cfg.trl        = structure that defines the data segments of interest, see FT_DEFINETRIAL
    cfg.continuous = 'yes' or 'no' whether the file contains continuous data
 
- The data is preprocessed (again) with the following configuration parameters,
- which are optimal for identifying jump artifacts.
+ Prior to artifact detection, the data is preprocessed (again) with the following
+ configuration parameters, which are optimal for identifying SQUID jump artifacts.
    cfg.artfctdef.jump.medianfilter  = 'yes'
    cfg.artfctdef.jump.medianfiltord = 9
    cfg.artfctdef.jump.absdiff       = 'yes'
@@ -34,8 +33,9 @@ title: ft_artifact_jump
  of the preprocessed data.
    cfg.artfctdef.jump.channel       = Nx1 cell-array with selection of channels, see FT_CHANNELSELECTION for details
    cfg.artfctdef.jump.cutoff        = z-value at which to threshold (default = 20)
-   cfg.artfctdef.jump.trlpadding    = automatically determined based on the filter padding (cfg.padding)
-   cfg.artfctdef.jump.artpadding    = automatically determined based on the filter padding (cfg.padding)
+   cfg.artfctdef.jump.trlpadding    = number in seconds (default = 0.0)
+   cfg.artfctdef.jump.fltpadding    = number in seconds (default = 0.0)
+   cfg.artfctdef.jump.artpadding    = number in seconds (default = 0.0)
 
  The output argument "artifact" is a Nx2 matrix comparable to the "trl" matrix of
  FT_DEFINETRIAL. The first column of which specifying the beginsamples of an
