@@ -10,6 +10,9 @@
 - name:  Plotting the result of source reconstructing on a cortical mesh
   link:  /example/plotting_the_result_of_source_reconstructing_on_a_cortical_mesh
 
+- name:  Making a synchronous movie of EEG or NIRS combined with video recordings
+  link:  /example/video_eeg
+
 - name:  How can I define neighbouring sensors?
   link:  /faq/how_can_i_define_neighbouring_sensors
 
