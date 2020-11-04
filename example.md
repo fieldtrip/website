@@ -52,7 +52,6 @@ See also the [tutorials](/tutorial) and [frequently asked questions](/faq).
 - [How to create a head model if you do not have an individual MRI](/example/fittemplate)
 - [Localizing the sources underlying the difference in event related fields](/example/difference_erf)
 - [Make leadfields using different headmodels](/example/make_leadfields_using_different_headmodels)
-- [Plotting the result of source reconstructing on a cortical mesh](/example/plotting_the_result_of_source_reconstructing_on_a_cortical_mesh)
 - [Read neuromag .fif mri and create MNI-aligned single_shell grids in individual head-space](/example/read_neuromag_mri_and_create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_mni_space)
 - [Testing BEM created lead fields](/example/testing_bem_created_leadfields)
 - [Use your own forward leadfield model in an inverse beamformer computation](/example/use_your_own_forward_leadfield_model_in_an_inverse_beamformer_computation)
@@ -77,6 +76,12 @@ See also the [tutorials](/tutorial) and [frequently asked questions](/faq).
 - [Measuring the timing delay and jitter for a real-time application](/example/measuring_the_timing_delay_and_jitter_for_a_real-time_application)
 - [Realtime neurofeedback application based on Hilbert phase estimation](/example/ft_realtime_hilbert)
 
+## Visualizing the results of an analysis
+
+- [Creating a layout for plotting NIRS optodes and channels](/example/nirs_layout)
+- [Plotting the result of source reconstructing on a cortical mesh](/example/plotting_the_result_of_source_reconstructing_on_a_cortical_mesh)
+- [Making a synchronous movie of EEG or NIRS combined with video recordings]((/example/video_eeg)
+
 ### Miscellaneous
 
 - [BIDS - the brain imaging data structure](/example/bids)
@@ -91,7 +96,6 @@ See also the [tutorials](/tutorial) and [frequently asked questions](/faq).
 - [Converting an example video dataset for sharing in BIDS](/example/bids_video)
 - [Converting the combined MEG/fMRI MOUS dataset for sharing in BIDS](/example/bids_mous)
 - [Correlation analysis in fMRI data](/example/correlation_analysis_in_fmri_data)
-- [Creating a layout for plotting NIRS optodes and channels](/example/nirs_layout)
 - [Example analysis pipeline for Biosemi bdf data](/example/biosemi)
 - [Find the orientation of planar gradiometer channels](/example/planar_orientation)
 - [How to import data from MNE-Python and FreeSurfer](/example/import_mne)
