@@ -80,7 +80,7 @@ See also the [tutorials](/tutorial) and [frequently asked questions](/faq).
 
 - [Creating a layout for plotting NIRS optodes and channels](/example/nirs_layout)
 - [Plotting the result of source reconstructing on a cortical mesh](/example/plotting_the_result_of_source_reconstructing_on_a_cortical_mesh)
-- [Making a synchronous movie of EEG or NIRS combined with video recordings]((/example/video_eeg)
+- [Making a synchronous movie of EEG or NIRS combined with video recordings](/example/video_eeg)
 
 ### Miscellaneous
 
