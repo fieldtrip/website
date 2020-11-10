@@ -31,12 +31,12 @@ title: ft_databrowser
    cfg.continuous              = 'yes' or 'no', whether the data should be interpreted as continuous or trial-based
    cfg.allowoverlap            = 'yes' or 'no', whether data that is overlapping in multiple trials is allowed (default = 'no')
    cfg.channel                 = cell-array with channel labels, see FT_CHANNELSELECTION
-   cfg.channelclamped          = cell-array with channel labels, that (when using the 'vertical' viewmode) will always be shown at the bottom. This is useful for showing ECG/EOG channels along with the other channels
+   cfg.channelclamped          = cell-array with channel labels, that when using the 'vertical' viewmode will always be shown at the bottom. This is useful for showing ECG/EOG channels along with the other channels
    cfg.compscale               = string, 'global' or 'local', defines whether the colormap for the topographic scaling is applied per topography or on all visualized components (default 'global')
-   cfg.plotlabels              = 'yes', 'no' or 'some', whether to plot channel labels in vertical viewmode. The option 'some' plots one label for every ten channels, which is useful if there are many channels. (default = 'yes')
-   cfg.ploteventlabels         = 'type=value', 'colorvalue' (default = 'type=value');
-   cfg.plotevents              = 'no' or 'yes', whether to plot event markers. (default is 'yes')
    cfg.viewmode                = string, 'butterfly', 'vertical', 'component' for visualizing ICA/PCA components (default is 'butterfly')
+   cfg.plotlabels              = 'yes', 'no' or 'some', whether to plot channel labels in vertical viewmode. The option 'some' plots one label for every ten channels, which is useful if there are many channels (default = 'some')
+   cfg.plotevents              = 'no' or 'yes', whether to plot event markers. (default is 'yes')
+   cfg.ploteventlabels         = 'type=value', 'colorvalue' (default = 'type=value')
    cfg.artfctdef.xxx.artifact  = Nx2 matrix with artifact segments see FT_ARTIFACT_xxx functions
    cfg.selectfeature           = string, name of feature to be selected/added (default = 'visual')
    cfg.selectmode              = 'markartifact', 'markpeakevent', 'marktroughevent' (default = 'markartifact')
@@ -114,8 +114,8 @@ title: ft_databrowser
  first column corresponds to the begin samples of an artifact period, the second
  column contains the end samples of the artifact periods.
 
- Note for debugging: in case the databrowser crashes, use delete(gcf) to kill the
- figure.
+ In case the databrowser crashes and you cannot close the window, use delete(gcf) to
+ get rid of the figure.
 
  See also FT_PREPROCESSING, FT_REJECTARTIFACT, FT_ARTIFACT_EOG, FT_ARTIFACT_MUSCLE,
  FT_ARTIFACT_JUMP, FT_ARTIFACT_MANUAL, FT_ARTIFACT_THRESHOLD, FT_ARTIFACT_CLIP,
