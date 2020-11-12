@@ -55,6 +55,9 @@
 - name:  Does the FieldTrip realtime buffer only work with MATLAB?
   link:  /faq/does_the_fieldtrip_realtime_buffer_only_work_with_matlab
 
+- name:  Does it make sense to subtract the ERP prior to time frequency analysis, to distinguish evoked from induced power?
+  link:  /faq/evoked_vs_induced
+
 - name:  Which external toolboxes are used by FieldTrip?
   link:  /faq/external
 
