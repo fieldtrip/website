@@ -1,4 +1,3 @@
-ft_default2
 ---
 title: Frequently Asked Questions
 tags: [faq]
