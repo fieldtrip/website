@@ -47,7 +47,7 @@ When interpreting the time-frequency representation of the data, one needs to be
 
 Figure 1: simulated data on 4 channels, each with a slightly different transient superimposed on ongoing activity
 
-{% include image src="/assets/img/faq/evoked_vs_induced/data_raw.png" width="400" %}
+{% include image src="/assets/img/faq/evoked_vs_induced/data_raw.png" width="500" %}
 
 ### step 3: create an ft-like data structure
     
@@ -69,7 +69,7 @@ Figure 1: simulated data on 4 channels, each with a slightly different transient
 
 Figure 2: ERP 
 
-{% include image src="/assets/img/faq/evoked_vs_induced/tlck.png" width="400" %}
+{% include image src="/assets/img/faq/evoked_vs_induced/tlck.png" width="500" %}
 
 ### step 5: subtract the ERP from the data
     
@@ -122,8 +122,8 @@ Figure 2: ERP
 
 Figure 3: TRF 
 
-{% include image src="/assets/img/faq/evoked_vs_induced/multi1.png" width="400" %}
+{% include image src="/assets/img/faq/evoked_vs_induced/multi1.png" width="500" %}
 
 Figure 4: TRF after ERP subtraction 
 
-{% include image src="/assets/img/faq/evoked_vs_induced/multi2.png" width="400" %}
+{% include image src="/assets/img/faq/evoked_vs_induced/multi2.png" width="500" %}
