@@ -1,3 +1,4 @@
+ft_default2
 ---
 title: Frequently Asked Questions
 tags: [faq]
@@ -56,6 +57,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [Why does my TFR look strange (part II, detrending)?](/faq/why_does_my_tfr_look_strange_part_ii)
 - [Why does my output.freq not match my cfg.foi when using 'mtmconvol' in ft_freqanalyis?](/faq/why_does_my_output.freq_not_match_my_cfg.foi_when_using_mtmconvol_in_ft_freqanalyis)
 - [Why does my output.freq not match my cfg.foi when using 'wavelet' (formerly 'wltconvol') in ft_freqanalyis?](/faq/why_does_my_output.freq_not_match_my_cfg.foi_when_using_wavelet_formerly_wltconvol_in_ft_freqanalyis)
+- [Does it make sense to subtract the ERP prior to time frequency analysis, to distinguish evoked from induced power?](/faq/evoked_vs_induced)
 
 ## Source reconstruction
 
