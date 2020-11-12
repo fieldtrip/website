@@ -1,3 +1,11 @@
+---
+title: Does it make sense to subtract the ERP prior to time frequency analysis, to distinguish evoked from induced power?
+tags: [faq, freq]
+---
+
+# Does it make sense to subtract the ERP prior to time frequency analysis, to distinguish evoked from induced power?
+
+When interpreting the time-frequency representation of the data, one needs to be aware of the fact that transient signal components (often denoted as phase-locked, or evoked components) contribute to the TFR. Sometimes one wishes to distinguish between stimulus-induced and stimulus-evoked activity in the interpretation of the results. For instance, if an observed effect in the data can be explained in terms of changes in power of ongoing rhythmic activity (induced). To make this distinction, it has been suggested to subtract the trial-averaged ERP/ERF from the data, prior to computing the time-frequency representation. One could seriously question the validity of this suggested subtraction, because the ERP is not a robot-like repetition of exactly the same transient on each and every trial. Rather, the ERP is by definition the average across trials, and thus averages out trial-specific noise (as intended), but also averages out trial-specific morphological differences of the transient (slight jitter in latency and/or amplitude from one trial to the next). The toy example provide below demonstrates the effect of ERP subtraction on the resulting TFR. As can be seen, if the transient is super constant across trials, the subtraction method makes sense, but once the transient becomes variable across trials (i.e. introducing trial-specific latency shifts and amplitude variations) the subtraction does not work anymore.  
 
 create signal (ongoing alpha) + some noise
     n = 100;
@@ -26,11 +34,14 @@ create a transient and add this to the ongoing signal in 4 flavours
       q(k,1001:1150) = q(k,1001:1150)+amp.*transient;
       
     end
-    figure;plot(z');
-    figure;plot(y');
-    figure;plot(x');
-    figure;plot(q');
+    subplot(2,2,1);plot(x'); abc = axis;
+    subplot(2,2,2);plot(q'); axis(abc);
+    subplot(2,2,3);plot(y'); axis(abc);
+    subplot(2,2,4);plot(z'); axis(abc);
 
+## Figure: simulated data on 4 channels, each with a slightly different transient superimposed on ongoing activity
+
+{% include image src="/assets/img/faq/evoked_vs_induced/data_raw.png" width="400" %}
 
 create an ft-like data structure
     data = [];
@@ -46,6 +57,12 @@ create an ft-like data structure
 estimate the ERP
     tlck = ft_timelockanalysis([], data);
     figure;plot(tlck.time, tlck.avg); legend(tlck.label);
+
+
+## Figure: ERP 
+
+{% include image src="/assets/img/faq/evoked_vs_induced/tlck.png" width="400" %}
+
 subtract the ERP from the data
     data_minus_erp = data;
     for k = 1:numel(data.trial)
@@ -89,3 +106,10 @@ create an ordered layout for the 4 channels
     ft_multiplotTFR(cfg,fd); % note there's an issue with recent versions (i.e. mid 2020) of ft_multiplotTFR so one needs the latest version of FT for this to work
     ft_multiplotTFR(cfg,fd_minus_erp); 
 
+## Figure: TRF 
+
+{% include image src="/assets/img/faq/evoked_vs_induced/mult1.png" width="400" %}
+
+## Figure: TRF after ERP subtraction 
+
+{% include image src="/assets/img/faq/evoked_vs_induced/multi2.png" width="400" %}
