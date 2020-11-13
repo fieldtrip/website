@@ -4,6 +4,9 @@
 - name:  Analyzing NIRS data recorded during unilateral finger- and foot-tapping
   link:  /example/nirs_fingertapping
 
+- name:  Using GLM to analyze NIRS timeseries data
+  link:  /example/nirs_glm
+
 - name:  Creating a layout for plotting NIRS optodes and channels
   link:  /example/nirs_layout
 
