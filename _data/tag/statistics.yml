@@ -7,6 +7,9 @@
 - name:  Using General Linear Modeling on time series data
   link:  /example/glm_timeseries
 
+- name:  Using GLM to analyze NIRS timeseries data
+  link:  /example/nirs_glm
+
 - name:  Source statistics
   link:  /example/source_statistics
 
