@@ -262,7 +262,8 @@ CRITICAL STEP Accuracy of the spatial normalization step is important for correc
 
     [ftver, ftpath] = ft_version;
     load([ftpath filesep 'template/anatomy/surface_pial_left.mat']);
-    ft_plot_mesh(mesh);
+    template_lh = mesh;
+    ft_plot_mesh(template_lh);
     ft_plot_sens(elec_mni_frv);
     view([-90 20]);
     material dull;
