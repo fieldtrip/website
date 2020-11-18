@@ -1,9 +1,11 @@
 ---
-title: Example use of the ft_compute_leadfield function
-tags: [example, headmodel, source]
+title: Compute forward simulated data with the low-level ft_compute_leadfield
+tags: [example, eeg, source, headmodel, dipole]
 ---
 
 # Example use of the ft_compute_leadfield function
+
+Rather than using the high-level **[ft_dipolesimulation](https://github.com/fieldtrip/fieldtrip/blob/master/ft_dipolesimulation.m)**, this uses the low-level **[ft_compute_leadfield](https://github.com/fieldtrip/fieldtrip/blob/master/forward/ft_compute_leadfield.m)**. Note that this makes you responsible of more bookkeeping.
 
     % create a set of electrodes, randomly placed on a sphere
     elec = [];
