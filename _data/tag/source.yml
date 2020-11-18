@@ -7,13 +7,16 @@
 - name:  Common filters in beamforming
   link:  /example/common_filters_in_beamforming
 
+- name:  Compute forward simulated data using ft_dipolesimulation
+  link:  /example/compute_forward_simulated_data
+
 - name:  Compute forward simulated data and apply a beamformer scan
   link:  /example/compute_forward_simulated_data_and_apply_a_beamformer_scan
 
 - name:  Compute forward simulated data and apply a dipole fit
   link:  /example/compute_forward_simulated_data_and_apply_a_dipole_fit
 
-- name:  Example use of the ft_compute_leadfield function
+- name:  Compute forward simulated data with the low-level ft_compute_leadfield
   link:  /example/compute_leadfield
 
 - name:  Check the quality of the anatomical coregistration

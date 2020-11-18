@@ -7,7 +7,10 @@
 - name:  Combined EEG and MEG source reconstruction
   link:  /example/combined_eeg_and_meg_source_reconstruction
 
-- name:  Example use of the ft_compute_leadfield function
+- name:  Compute forward simulated data using ft_dipolesimulation
+  link:  /example/compute_forward_simulated_data
+
+- name:  Compute forward simulated data with the low-level ft_compute_leadfield
   link:  /example/compute_leadfield
 
 - name:  Create MNI-aligned grids in individual head-space
