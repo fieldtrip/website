@@ -562,14 +562,30 @@ To interactively explore higher-dimensional data (such as TFR data) on the surfa
 
 Since source-level function data requires three dimensions for "space" and uses the color dimension for "strength", there is no graphical dimension in which the temporal evolution or the spectral distribution can be visualized in full detail. The **[ft_sourceplot](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceplot.m)** function allows you with method=ortho to use the lower right corner of the figure to show the timecourse or spectrum of the functional activity at a specific location (the one you click). The ft_sourcemovie function allows you to use time (as in a movie) to explore the changes of cortical activity over time and/or frequency.
 
-### Using external tools
+## Using external tools
 
-Although MATLAB is a very flexible development and analysis environment, it is not super-fast in visualization. Hence external visualization tools are sometimes more useful for exploring your data. Volumetric and surface based data can be exported to standard file formats using **[ft_sourcewrite](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourcewrite.m)**. Subsequently, you can use external tools such as
+Although MATLAB is a very flexible development and analysis environment, it is not super-fast in visualization. Hence external visualization tools are sometimes more useful for exploring your data.
+
+Volumetric and surface based data can be exported to standard file formats using **[ft_sourcewrite](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourcewrite.m)**. Subsequently, you can use external tools such as
 
 - [MRIcron](http://www.mccauslandcenter.sc.edu/mricro/mricron/index.html)
 - [OpenWallnut](http://www.openwalnut.org)
 - [Connectome Workbench](http://www.humanconnectome.org/software/connectome-workbench.html)
+
+For geometrical data, such as segmented anatomical MRIs, triangulated surfaces, or tesselated meshes, you can use
+
+- [meshlab](https://www.meshlab.net)
+- [Seg3D](https://www.sci.utah.edu/cibc-software/seg3d.html)
+- [ImageVis3D](https://www.sci.utah.edu/software/imagevis3d.html)
+
+For time-series data for which you otherwise would use **[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_databrowser.m)**, you can use
+
+- [AnyWave](http://meg.univ-amu.fr/wiki/AnyWave), see [this page](/getting_started/anywave) for an introduction
+
+More general approaches for visualisation of data are
+
 - [gramm](https://github.com/piermorel/gramm)
+- [plotly](https://plotly.com/matlab/)
 
 ## Suggested further reading
 
