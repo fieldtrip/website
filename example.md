@@ -84,7 +84,7 @@ See also the [tutorials](/tutorial) and [frequently asked questions](/faq).
 - [Plotting the result of source reconstructing on a cortical mesh](/example/plotting_the_result_of_source_reconstructing_on_a_cortical_mesh)
 - [Making a synchronous movie of EEG or NIRS combined with video recordings](/example/video_eeg)
 
-### Miscellaneous
+## Miscellaneous
 
 - [BIDS - the brain imaging data structure](/example/bids)
 - [Combining simultaneous recordings in BIDS](/example/bids_pom)
