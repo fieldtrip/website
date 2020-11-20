@@ -37,6 +37,9 @@
 - name:  Use your own forward leadfield model in an inverse beamformer computation
   link:  /example/use_your_own_forward_leadfield_model_in_an_inverse_beamformer_computation
 
+- name:  Making a synchronous movie of EEG or NIRS combined with video recordings
+  link:  /example/video_eeg
+
 - name:  Can I do combined EEG and MEG source reconstruction?
   link:  /faq/can_i_do_combined_eeg_and_meg_source_reconstruction
 

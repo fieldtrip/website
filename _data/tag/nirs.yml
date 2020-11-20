@@ -13,6 +13,9 @@
 - name:  Analyzing NIRS data recorded during listening to and repeating speech
   link:  /example/nirs_speech
 
+- name:  Making a synchronous movie of EEG or NIRS combined with video recordings
+  link:  /example/video_eeg
+
 - name:  Which datasets are used in the documentation and where are they used?
   link:  /faq/what_types_of_datasets_and_their_respective_analyses_are_used_on_fieldtrip
 
