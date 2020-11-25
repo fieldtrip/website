@@ -1,5 +1,5 @@
 ---
-title: 25 November 2020 - Bug in sourceanalysis DICS
+title: 25 November 2020 - Bug in ft_sourceanalysis for DICS
 categories: [news]
 tweet: Attention fieldtrippers! Sadly, we found a bug in FieldTrip starting from release 20200701. It concerns ft_sourceanalysis with the DICS method. See https://www.fieldtriptoolbox.org/#25-november-2020 for more information.
 ---
