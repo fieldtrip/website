@@ -5,7 +5,7 @@ categories: [news]
 
 ### 25 November, 2020
 
-We are sorry to report a bug in recent FieldTrip releases, starting from release [20200701](https://github.com/fieldtrip/fieldtrip/releases/tag/20200701), which might have affected your computations.
+Regretfully we identified a bug in FieldTrip releases starting from release [20200701](https://github.com/fieldtrip/fieldtrip/releases/tag/20200701), which might have affected your computations.
 
 Specifically, if you have been using `ft_sourceanalysis` with DICS as a method, **and** if the order of the channels of the input data structure was not alphabetical, the results might have been wrong. The cause of all this was an accidental reordering of the order of the channels in the data cross-spectral density matrix (according to alphabet), which was not mirrored by a similar reordering in the leadfields. We are grateful to Alexandra Steina to point us to the problem, and to help us resolve it. See [Github issue #1587](https://github.com/fieldtrip/fieldtrip/issues/1587) for more information. 
 
