@@ -15,6 +15,7 @@ title: ft_read_sens
    'senstype'       = string, can be 'eeg', 'meg' or 'nirs', specifies which type of sensors to read from the file (default = 'eeg')
    'coordsys'       = string, 'head' or 'dewar' (default = 'head')
    'coilaccuracy'   = scalar, can be empty or a number (0, 1 or 2) to specify the accuracy (default = [])
+   'readbids'       = boolean, whether to read information from the BIDS sidecar files (default = true)
 
  The electrode, gradiometer and optode structures are defined in more detail
  in FT_DATATYPE_SENS.

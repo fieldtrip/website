@@ -86,8 +86,7 @@ title: ft_sourceanalysis
                          for the size of the corresponding patch (default = 1)
 
  Other configuration options are
-   cfg.channel       = Nx1 cell-array with selection of channels (default = 'all'),
-                       see FT_CHANNELSELECTION for details
+   cfg.channel       = Nx1 cell-array with selection of channels (default = 'all'), see FT_CHANNELSELECTION for details
    cfg.frequency     = single number (in Hz)
    cfg.latency       = single number in seconds, for time-frequency analysis
    cfg.lambda        = number or empty for automatic default
