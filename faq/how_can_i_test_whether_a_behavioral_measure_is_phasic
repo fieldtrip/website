@@ -75,7 +75,7 @@ One way to evaluate this, would be to fit a sine/cosine function to the dependen
         ylabel = 'estimate';
         legend({'unbinned';'binned'});
 
-    The relevant function that computes the cosinefit is provided below:
+The relevant function that computes the cosinefit is provided below:
       
         function [s, cfg] = ft_statfun_cosinefit(cfg, dat, design)
 
