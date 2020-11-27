@@ -196,7 +196,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [MATLAB version 7.3 (2006b)_crashes_when_I_try_to_do_...](/faq/matlab_version_7.3_2006b_crashes_when_i_try_to_do)
 - [Should I add FieldTrip with all subdirectories to my MATLAB path?](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path)
 - [What are the MATLAB requirements for using FieldTrip?](/faq/requirements)
-- [What is the relation between "events" (such*as_triggers)\_and*"trials"?](/faq/what_is_the_relation_between_events_such_as_triggers_and_trials)
+- [What is the relation between "events" (such as_triggers)_and "trials"?](/faq/what_is_the_relation_between_events_such_as_triggers_and_trials)
 - [Which external toolboxes are used by FieldTrip?](/faq/external)
 - [Why are so many of the interesting functions in the private directories?](/faq/why_are_so_many_of_the_interesting_functions_in_the_private_directories)
 
