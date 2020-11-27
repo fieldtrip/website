@@ -1,6 +1,6 @@
 ---
 title: Virtual channel analysis of epilepsy MEG data
-tags: [tutorial, meg-epilepsy]
+tags: [tutorial, meg-epilepsy, anywave, mricro]
 ---
 
 # Virtual channel analysis of epilepsy MEG data
