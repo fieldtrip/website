@@ -1,3 +1,6 @@
 - name:  How can I use AnyWave for reviewing continuous data?
   link:  /getting_started/anywave
 
+- name:  Virtual channel analysis of epilepsy MEG data
+  link:  /tutorial/epilepsy
+
