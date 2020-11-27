@@ -31,6 +31,9 @@
 - name:  How can I do time-frequency analysis on continuous data?
   link:  /faq/how_can_i_do_time-frequency_analysis_on_continuous_data
 
+- name:  How can I test whether a behavioral measure is phasic?
+  link:  /faq/how_can_i_test_whether_a_behavioral_measure_is_phasic
+
 - name:  In what way can frequency domain data be represented in FieldTrip?
   link:  /faq/in_what_way_can_frequency_domain_data_be_represented_in_fieldtrip
 

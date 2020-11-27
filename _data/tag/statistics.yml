@@ -31,6 +31,9 @@
 - name:  How can I test for correlations between neuronal data and quantitative stimulus and behavioral variables?
   link:  /faq/how_can_i_test_for_correlations_between_neuronal_data_and_quantitative_stimulus_and_behavioural_variables
 
+- name:  How can I test whether a behavioral measure is phasic?
+  link:  /faq/how_can_i_test_whether_a_behavioral_measure_is_phasic
+
 - name:  How can I use the ivar, uvar, wvar and cvar options to precisely control the permutations?
   link:  /faq/how_can_i_use_the_ivar_uvar_wvar_and_cvar_options_to_precisely_control_the_permutations
 
