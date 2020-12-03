@@ -69,30 +69,30 @@ If it worked well, you will see the coordinate system specified in the mri struc
     cfg.coordsys = 'ctf';
     mri          = ft_volumerealign(cfg, mri);
 
-#### Optional step: Include headshape information
+#### 3. Incorporate headshape information (optional)
 
-If you have collected additional information about the location of headposition markers (for example by means of the Polhemus), you can refine your alignment accordingly. For this you can use **[ft_read_headshape](https://github.com/fieldtrip/fieldtrip/blob/release/ft_read_headshape.m)** and **[ft_volumerealign](https://github.com/fieldtrip/fieldtrip/blob/release/ft_volumerealign.m)** with method 'headshape' to either automatically or interactively rotate, scale and translate the mri until it matches the recorded headshape best. In this example we use information about the headshape for illustration even though it does not add additional information beyond the mri. The output will contain an updated transformation matrix.
+If you have additionally used the Polhemus to record the headshape and the location of the head localizer coils, you can use these to refine the alignment between the MEG and MRI data. For this you can use **[ft_read_headshape](https://github.com/fieldtrip/fieldtrip/blob/release/ft_read_headshape.m)** and **[ft_volumerealign](https://github.com/fieldtrip/fieldtrip/blob/release/ft_volumerealign.m)** with method 'headshape' to either automatically or interactively rotate, scale and translate the MRI until it matches the recorded headshape best. In this example it does not add additional information beyond the MRI, since the headshape was not recorded but obtained from the anatomical MRI (post-coregistration) using the CTF MRIViewer software. The output will contain an updated transformation matrix.
 
-  hs = ft_read_headshape('Subject01.shape');
+  headshape = ft_read_headshape('Subject01.shape');
 
-  %first align to headshape automatically
+  % first align to headshape automatically
   cfg                       = [];
   cfg.method                = 'headshape';
-  cfg.headshape.headshape   = hs;
+  cfg.headshape.headshape   = headshape;
   cfg.headshape.icp         = 'yes';
   cfg.headshape.interactive = 'no';
-  mri                       = ft_volumerealign(cfg,mri);
+  mri                       = ft_volumerealign(cfg, mri);
 
-  %second call, but this time interactive to check result and potentially perform manual correction.
+  % second call, but this time interactive to check result and potentially perform manual correction.
   cfg.headshape.interactive = 'yes';
-  mri                       = ft_volumerealign(cfg,mri);
+  mri                       = ft_volumerealign(cfg, mri);
 
 {% include markup/danger %}
-Note that it really only makes sense to take additional information into account for alignment if it is congruent with the data acquisition. for example if you record information about the headposition markers such as fiducials and nasion marker, make sure they correspond to how those positions were tracked during the MEG session.
+Note that it really only makes sense to take additional head shape information into account if it is congruent with the data acquisition. If you record information about the head shape in relation to the head localizer coils (fuiducials) on LPA/RPA and on nasion, you should make sure to use the same fiducial locations as those used during the MEG session.
 {% include markup/end %}
 
 
-#### 3. Preparation of the anatomical MRI: reslicing
+#### 4. Preparation of the anatomical MRI: reslicing
 
 This step reslices the anatomical volume in a way that voxels will be isotropic. We use 1 mm resolution and we specify the dimension as 256X256X256, because this is the format which FreeSurfer works with. Note that this will also affect the transformation matrix, which is why we save it to file only after the reslicing.
 
@@ -107,7 +107,7 @@ For later use, we also save the transformation matrix.
   save(fullfile(mripath,sprintf('%s_transform_vox2ctf',subjectname)), 'transform_vox2ctf');
 
 
-#### 4. Preparation of the anatomical MRI: save to disk
+#### 5. Preparation of the anatomical MRI: save to disk
 
     % save the resliced anatomy in a FreeSurfer compatible format
     cfg             = [];
@@ -120,7 +120,7 @@ For later use, we also save the transformation matrix.
 Importantly, the mgz-filetype is not fully supported on Windows platforms. Reading **and** writing can be done on Linux and Mac platforms. When you are processing the anatomical information on one of these platforms it is OK to save as mgz (and useful too, because it compresses the files and uses less diskspace as a consequence). These files cannot be saved on a Windows PC (although reading is possible). If you use MATLAB on Windows, you can save the volume as a nifti file using cfg.filetype = 'nifti'. Subsequently, if needed, you can convert it to mgz using [mri_convert](http://surfer.nmr.mgh.harvard.edu/fswiki/mri_convert) with FreeSurfer. Note, however, that as far as the writer of this tutorial knows, FreeSurfer itself does not run on Windows.
 {% include markup/end %}
 
-#### 5. Preparation of the anatomical MRI: coregister to coordinate system according to the 'acpc' convention
+#### 6. Preparation of the anatomical MRI: coregister to coordinate system according to the 'acpc' convention
 
 In order for the freesurfer pipeline to work, the anatomical image needs to be also be coregistered to the 'acpc' coordinate system, otherwise freesurfer does not know where to start. 'acpc' stands for anterior commissure and posterior commissure, and refers to the origin of the coordinate system, as well as the line that defines the posterior-anterior (Y) axis of the coordinate system. It is a RAS-based coordinate system.
 
