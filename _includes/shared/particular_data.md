@@ -48,14 +48,15 @@ In general you should get started with the [tutorials](/tutorial). The pages tha
 - [Getting started with XSens motion capture data](/getting_started/xsens)
 - [Getting started with Neurodata Without Borders (NWB) data](/getting_started/nwb)
 
-## Getting started with data from other software
+## Getting started with (data from) other software
 
 - [Getting started with BIDS](/getting_started/bids)
+- [Getting started with AnyWave](/getting_started/anywave)
+- [Getting started with Seg3D](/getting_started/seg3d)
 - [Getting started with data from EEGLAB](/getting_started/eeglab)
 - [Getting started with data from SPM](/getting_started/spm)
 - [Getting started with data from LORETA](/getting_started/loreta)
 - [Getting started with data from the BIOIMAGE suite](/getting_started/bioimage)
-- [Getting started with data from AnyWave](/getting_started/anywave)
 - [Getting started with data from Homer](/getting_started/homer)
 
 ## Getting started with real-time data analysis
