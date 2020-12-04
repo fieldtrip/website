@@ -31,6 +31,9 @@
 - name:  Using General Linear Modeling on time series data
   link:  /example/glm_timeseries
 
+- name:  Re-reference EEG and iEEG data
+  link:  /example/rereference
+
 - name:  Testing BEM created EEG lead fields
   link:  /example/testing_bem_created_leadfields
 
