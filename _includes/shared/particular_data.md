@@ -57,6 +57,7 @@ In general you should get started with the [tutorials](/tutorial). The pages tha
 - [Getting started with data from the BIOIMAGE suite](/getting_started/bioimage)
 - [Getting started with data from AnyWave](/getting_started/anywave)
 - [Getting started with data from Homer](/getting_started/homer)
+- [Getting started with data from Seg3D](/getting_started/seg3d)
 
 ## Getting started with real-time data analysis
 
