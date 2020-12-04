@@ -1,6 +1,6 @@
 ---
 title: How can I use Seg3D to check and modify segmentation results?
-tags: [segmentation, seg3d, volume]
+tags: [segmentation, volume, headmodel, eeg, seg3d]
 ---
 
 # How can I use Seg3D to check and modify segmentation results?
