@@ -16,5 +16,8 @@ title: ft_preproc_denoise
                  the hilbert transformed signal. Only meaningful for narrow
                  band reference data
 
+ If the data contains NaNs, the output of the affected channel(s) will be
+ all(NaN).
+
  See also PREPROC
 ```

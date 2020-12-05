@@ -13,7 +13,7 @@ title: ft_preproc_hilbert
    dat        data matrix (Nchans X Ntime)
    option     string that determines whether and how the Hilbert transform
               should be post-processed, can be
-                'abs'
+                'abs' (default)
                 'complex'
                 'real'
                 'imag'
@@ -21,7 +21,8 @@ title: ft_preproc_hilbert
                 'absimag'
                 'angle'
 
- The default is to return the absolute value of the Hilbert transform.
+ If the data contains NaNs, the output of the affected channel(s) will be
+ all(NaN).
 
  See also PREPROC
 ```

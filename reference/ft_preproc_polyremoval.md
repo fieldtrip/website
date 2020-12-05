@@ -27,5 +27,8 @@ title: ft_preproc_polyremoval
    ft_preproc_polyremoval(dat, 1)
  removes the mean and the linear trend.
 
+ If the data contains NaNs, these are ignored for the computation, but
+ retained in the output.
+
  See also FT_PREPROC_BASELINECORRECT, FT_PREPROC_DETREND
 ```
