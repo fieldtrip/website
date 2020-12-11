@@ -69,8 +69,9 @@ The segmentation is defined at a 1 mm isotropic voxel grid in Talairach space, w
 
 The discrete model is represented in a MATLAB .mat file as
 
-    >> load brainweb_discrete
-    >> disp(segmentation)
+    load brainweb_discrete
+    disp(segmentation)
+    
     segmentation =
               dim: [181 217 181]
         transform: [4x4 double]
@@ -80,9 +81,9 @@ The discrete model is represented in a MATLAB .mat file as
 
 The fuzzy model is represented in a MATLAB .mat file as
 
-    >> load brainweb_fuzzy
-    >> disp(segmentation)
-
+    load brainweb_fuzzy
+    disp(segmentation)
+    
     segmentation =
                   dim: [181 217 181]
             transform: [4x4 double]
@@ -108,8 +109,8 @@ The atlas and the toolbox are described in the publication belo
 
 S.B. Eickhoff, K.E. Stephan, H. Mohlberg, C. Grefkes, G.R. Fink, K. Amunts, K. Zilles, _A new SPM toolbox for combining probabilistic cytoarchitectonic maps and functional imaging data_, NeuroImage, Volume 25, Issue 4, 1 May 2005, Pages 1325-1335.
 
-    >> atlas = ft_read_atlas('fieldtrip/template/atlas/spm_anatomy/AllAreas_v17_MPM')
-
+    atlas = ft_read_atlas('fieldtrip/template/atlas/spm_anatomy/AllAreas_v17_MPM')
+    
     atlas =
               dim: [151 188 154]
               hdr: [1x1 struct]
@@ -130,10 +131,9 @@ The atlas is described in the publication below
 Wang L, Mruczek REB, Arcaro MJ, Kastner S. (2015) Probabilistic Maps of Visual Topography in Human
 Cortex. Cerebral Cortex. 25: 3911-3931
 
-    >> load ('fieldtrip/template/atlas/vtpm.mat')
-
+    load ('fieldtrip/template/atlas/vtpm.mat')
+    
     vtpm =
-
               dim: [182 218 182]
               hdr: [1x1 struct]
         transform: [4x4 double]
@@ -161,9 +161,8 @@ Fan, L., Li, H., Zhuo, J., Zhang, Y., Wang, J., Chen, L., Yang, Z., Chu, C., Xie
 In FieldTrip, the atlas is included as a nifti file, complemented with a text file with the tissue labels. You can read it like this:
 
     brainnetome = ft_read_atlas('template/atlas/brainnetome/BNA_MPM_thr25_1.25mm.nii')
-
+    
     brainnetome =
-
               dim: [145 173 145]
               hdr: [1x1 struct]
         transform: [4x4 double]
@@ -188,9 +187,8 @@ Yeo BT, Krienen FM, Sepulcre J, Sabuncu MR, Lashkari D, Hollinshead M, Roffman J
 In FieldTrip, the two atlases are included as nifti files. You can read them like this:
 
     yeo7 = ft_read_atlas('/template/atlas/yeo/Yeo2011_7Networks_MNI152_FreeSurferConformed1mm_LiberalMask_colin27.nii')
-    
+        
     yeo7 = 
-
             dim: [256 256 256]
             hdr: [1x1 struct]
       transform: [4x4 double]
@@ -202,7 +200,6 @@ In FieldTrip, the two atlases are included as nifti files. You can read them lik
     yeo17 = ft_read_atlas('/template/atlas/yeo/Yeo2011_17Networks_MNI152_FreeSurferConformed1mm_LiberalMask_colin27.nii')
     
     yeo17 = 
-
             dim: [256 256 256]
             hdr: [1x1 struct]
       transform: [4x4 double]
@@ -215,7 +212,7 @@ In FieldTrip, the two atlases are included as nifti files. You can read them lik
 
 The Melbourne Subcortical Atlas is a volumetric parcellation of the human subcortex. The atlas was created using functional and structural MRI data from 1000 healthy adult subjects, using functional connectivity gradient mapping. The atlas will be useful for those interested in subcortical structures, and can be easily combined with other cortical atlases. Please note that there is emerging evidence that hippocampal activity can be detected using MEG (see: https://doi.org/10.1002/hbm.24445 and https://doi.org/10.1038/s41467-019-08665-5).
 
-The scale I atlas has been implemented in Fieldtrip and includes the following regions (all bilateral): 
+The "scale I" atlas has been implemented in Fieldtrip and includes the following regions (all bilateral): 
 - Amygdala (AMY)
 - Hippocampus (HIP)
 - Globus Pallidus (GP)
@@ -227,7 +224,7 @@ The scale I atlas has been implemented in Fieldtrip and includes the following r
 
 The atlas can be read into Fieldtrip using the following code:
 
-    >> atlas = ft_read_atlas('/template/atlas/melb_subcortical/melb_sub.mat);
+    atlas = ft_read_atlas('/template/atlas/melb_subcortical/melb_sub.mat)
 
 
 ## References
