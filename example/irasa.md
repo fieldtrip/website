@@ -70,7 +70,7 @@ Below we demonstrate the use of the [IRASA technique](https://link.springer.com/
         title('mixed signal');
     end
 
-FIXME: add figure
+{% include image src="/assets/img/example/irasa/example.png" %}
 
 ## Updates and usage of ft_specest_irasa
 
@@ -79,8 +79,9 @@ The current implementation ([2020](https://github.com/fieldtrip/fieldtrip/blob/m
 - The current implementation enables IRASA and FFT for estimating the fractal(arrhythmic) and original power-spectra, respectively. Users do not have to apply cfg.method = 'mtmfft' for computing the original power-spectrum. Instead, it is recommended to compute both of them with ft_specest_irasa to ensure a consistent frequency resolution of the fractal and original power-spectra. To do so, users need to specify the output option as cfg.output = 'fractal' (default) or cfg.output = 'original'. The previous output option cfg.output = 'pow' is no longer compatible with cfg.method = 'irasa'.
 - The current implementation was made for correcting the computational order of geometric and arithmetic means of the previous implementation. 
 
-FIXME: add figure
+{% include image src="/assets/img/example/irasa/order.png" %}
 
-FIXME: add figure
+{% include image src="/assets/img/example/irasa/fract.png" %}
 
-FIXME: add figure
+{% include image src="/assets/img/example/irasa/mixed.png" %}
+
