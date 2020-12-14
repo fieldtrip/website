@@ -63,13 +63,13 @@ title: ft_datatype_spike
 
          label:           {'unit1'  'unit2'  'unit3'}
          timestamp:       {[1x504 double] [1x50 double] [1x101 double]}
+         timestampdimord: '{chan}_spike'
          time:            {[1x504 double] [1x50 double] [1x101 double]}
          trial:           {[1x504 double] [1x50 double] [1x101 double]}
          trialtime:       [100x2 double]
          sampleinfo:      [100x2 double]
          waveform:        {[1x32x504 double] [1x32x50 double] [1x32x101 double]}
          waveformdimord: '{chan}_lead_time_spike'
-         cfg
 
  For analysing the relation between the spikes and the local field
  potential (e.g. phase-locking), the SPIKE structure can have additional
@@ -77,27 +77,29 @@ title: ft_datatype_spike
 
  For example, from the structure above we may obtain
 
-         label:          {'unit1'  'unit2'  'unit3'}
-         timestamp:      {[1x504 double] [1x50 double] [1x101 double]}
-         time:           {[1x504 double] [1x50 double] [1x101 double]}
-         trial:          {[1x504 double] [1x50 double] [1x101 double]}
-         trialtime:      [100x2 double]
-         waveform:       {[1x32x504 double] [1x32x50 double] [1x32x101 double]}
-         waveformdimord: '{chan}_lead_time_spike'
-         fourierspctrm:  {504x2x20, 50x2x20, 101x2x20}
+         label:               {'unit1'  'unit2'  'unit3'}
+         time:                {[1x504 double] [1x50 double] [1x101 double]}
+         trial:               {[1x504 double] [1x50 double] [1x101 double]}
+         trialtime:           [100x2 double]
+         timestamp:           {[1x504 double] [1x50 double] [1x101 double]}
+         timestampdimord:     '{chan}_spike'
+         waveform:            {[1x32x504 double] [1x32x50 double] [1x32x101 double]}
+         waveformdimord:      '{chan}_lead_time_spike'
+         fourierspctrm:       {504x2x20, 50x2x20, 101x2x20}
          fourierspctrmdimord: '{chan}_spike_lfplabel_freq'
-         lfplabel:       {'lfpchan1', 'lfpchan2'}
-         freq:           [1x20 double]
+         lfplabel:            {'lfpchan1', 'lfpchan2'}
+         freq:                [1x20 double]
 
  Required fields:
    - label
    - timestamp
 
  Optional fields:
-   - unit
    - time, trial, trialtime
+   - timestampdimord
+   - unit, unitdimord
    - waveform, waveformdimord
-   - fourierspctrm, fourierspctrmdimord, freq, lfplabel  (these are extra outputs from FT_SPIKETRIGGEREDSPECTRUM and FT_SPIKE_TRIGGEREDSPECTRUM)
+   - fourierspctrm, fourierspctrmdimord, freq, lfplabel (these are extra outputs from FT_SPIKETRIGGEREDSPECTRUM and FT_SPIKE_TRIGGEREDSPECTRUM)
    - hdr
    - cfg
 
@@ -109,10 +111,12 @@ title: ft_datatype_spike
 
  Revision history:
 
+ (2020/latest) Add an explicit xxxdimord for each of the known fields.
+
  (2012) Changed the dimensionality of the waveform to allow both
  stereotrode and tetrode data to be represented.
- 
- (2011/latest) Defined a consistent spike data representation that can
+
+ (2011) Defined a consistent spike data representation that can
  also contain the Fourier spectrum and other fields. Use the xxxdimord
  to indicate the dimensions of the field.
 
