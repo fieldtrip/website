@@ -219,7 +219,7 @@ The "scale I" atlas has been implemented in Fieldtrip and includes the following
 - Globus Pallidus (GP)
 - Nucleus Accumbens (NAc)
 - Caudate (CAU)
-- Putament (PUT)
+- Putamen (PUT)
 - Anterior Thalamus (aTHA)
 - Posterior Thalamus (pTHA)
 
