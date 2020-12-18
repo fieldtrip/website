@@ -68,6 +68,7 @@ See also the [tutorials](/tutorial) and [frequently asked questions](/faq).
 - [Use simulated ERPs to explore cluster statistics](/example/use_simulated_erps_to_explore_cluster_statistics)
 - [Using General Linear Modeling on time series data](/example/glm_timeseries)
 - [Using GLM to analyze NIRS timeseries data](/example/nirs_glm)
+- [Defining electrodes as neighbours for cluster-level statistics](/example/neighbours)
 
 ### Real-time analysis
 
