@@ -14,6 +14,8 @@ title: ft_write_mri
    'transform'    = 4x4 homogenous transformation matrix, specifying the transformation from voxel coordinates to head coordinates
    'unit'         = string, desired units for the image data on disk, for example 'mm'
    'spmversion'   = version of SPM to be used, in case data needs to be written in analyze format
+   'scl_slope'    = slope parameter for nifti files
+   'scl_inter'    = intersect parameter for nifti files
 
  The specified filename can already contain the filename extention, but that is not
  required since it will be added automatically.

@@ -19,23 +19,32 @@ title: ft_volumewrite
    cfg.parameter     = string, describing the functional data to be processed,
                          e.g. 'pow', 'coh', 'nai' or 'anatomy'
    cfg.filename      = filename without the extension
-   cfg.filetype      = 'analyze', 'nifti', 'nifti_img', 'analyze_spm', 'mgz',
-                         'vmp' or 'vmr'
+   cfg.filetype      = 'analyze_old', 'nifti', 'nifti_img', 'analyze_spm',
+                       'nifti_spm', 'mgz', 'mgh', 'vmp' or 'vmr'
    cfg.vmpversion    = 1 or 2 (default) version of the vmp-format to use
+   cfg.spmversion    = 'spm12' (default) version of spm to use
 
  The default filetype is 'nifti', which means that a single *.nii file
- will be written using the freesurfer toolbox. The 'nifti_img' filetype uses SPM for
- a dual file (*.img/*.hdr) nifti-format file.
- The analyze, analyze_spm, nifti, nifti_img and mgz filetypes support a homogeneous
+ will be written using code from the freesurfer toolbox. The 'nifti_img' filetype
+ uses SPM for a dual file (*.img/*.hdr) nifti-format file. The 'nifti_spm'
+ filetype uses SPM for a single 'nifti' file. 
+ The analyze, analyze_spm, nifti, nifti_img, nifti_spm and mgz filetypes support a homogeneous
  transformation matrix, the other filetypes do not support a homogeneous transformation
  matrix and hence will be written in their native coordinate system.
 
- You can specify the datatype for the analyze_spm and analyze formats using
-   cfg.datatype      = 'bit1', 'uint8', 'int16', 'int32', 'float' or 'double'
+ You can specify the datatype for the nifti, analyze_spm and analyze_old
+ formats. If not specified, the class of the input data will be preserved,
+ if the file format allows. Although the higher level function may make an
+ attempt to typecast the data, only the nifti fileformat preserves the
+ datatype. Also, only when filetype = 'nifti', the slope and intercept
+ parameters are stored in the file, so that, when reading the data from
+ file, the original values are restored (up to the bit resolution).
+   cfg.datatype      = 'uint8', 'int8', 'int16', 'int32', 'single' or 'double'
 
  By default, integer datatypes will be scaled to the maximum value of the
  physical or statistical parameter, floating point datatypes will not be
- scaled. This can be modified with
+ scaled. This can be modified, for instance if the data contains only integers with
+ indices into a parcellation, by
    cfg.scaling       = 'yes' or 'no'
 
  Optional configuration items are

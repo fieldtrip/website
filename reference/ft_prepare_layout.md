@@ -36,6 +36,7 @@ title: ft_prepare_layout
    cfg.layout      = filename containg the input layout (*.mat or *.lay file), this can also be a layout
                      structure, which is simply returned as-is (see below for details)
    cfg.output      = filename (ending in .mat or .lay) to which the layout will be written (default = [])
+   cfg.feedback    = 'yes' or 'no', whether to show an image of the layout (default = 'no')
    cfg.elec        = structure with electrode positions or filename, see FT_READ_SENS
    cfg.grad        = structure with gradiometer definition or filename, see FT_READ_SENS
    cfg.opto        = structure with optode definition or filename, see FT_READ_SENS

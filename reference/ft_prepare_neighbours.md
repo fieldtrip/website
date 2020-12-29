@@ -16,10 +16,11 @@ title: ft_prepare_neighbours
  sensor description.
 
  The configuration can contain
+   cfg.channel       = channels in the data for which neighbours should be determined
    cfg.method        = 'distance', 'triangulation' or 'template'
    cfg.template      = name of the template file, e.g. CTF275_neighb.mat
-   cfg.neighbourdist = number, maximum distance between neighbouring sensors (only for 'distance')
-   cfg.channel       = channels for which neighbours should be found
+   cfg.neighbourdist = number, maximum distance between neighbouring sensors (only for 'distance', default is 40 mm)
+   cfg.compress      = 'yes' or 'no', add extra edges by compressing in the x- and y-direction (only for 'triangulation', default is yes)
    cfg.feedback      = 'yes' or 'no' (default = 'no')
 
  The 3D sensor positions can be present in the data or can be specified as
