@@ -94,7 +94,7 @@ To be added.
 
 ## montage
 
-Using the `cfg.montage` option, you can specify an arbirarily complex "montage". All of the previous methods (except for the median) could in principle be implemented with this.
+Using the `cfg.montage` option, you can specify an arbitrarily complex "montage". All of the previous methods (except for the median) could in principle be implemented with this.
 
 A montage (also known as a "linear derivation") specifies a linear mapping or combination from the (old) channels in the original data to the new channels in the re-referenced data. Basically it is implemented by a matrix multiplication, following some shuffling of the the rows of the data matrix. The montage is explained in more detail in the low-level **[ft_apply_montage](https://github.com/fieldtrip/fieldtrip/blob/release/forward/ft_apply_montage.m)**  function.
 
