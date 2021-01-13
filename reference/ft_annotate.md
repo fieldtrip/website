@@ -9,7 +9,7 @@ title: ft_annotate
  structure, whereby some provenance information is missing.
 
  Use as
-   outdata = ft_examplefunction(cfg, indata)
+   outdata = ft_annotate(cfg, indata)
  where the input data structure can be any of the FieldTrip data structures and
  the configuration structure should contain
    cfg.comment    = string
