@@ -72,13 +72,17 @@ Below we demonstrate the use of the [IRASA technique](https://link.springer.com/
 
 {% include image src="/assets/img/example/irasa/example.png" %}
 
-## Updates and usage of ft_specest_irasa
+## Updates to the IRASA implementation
 
 {% include markup/warning %}
-  The current implementation ([2020](https://github.com/fieldtrip/fieldtrip/blob/master/specest/ft_specest_irasa.m)) of IRASA contains the following features comparing to the previous version ([2019](https://github.com/fieldtrip/fieldtrip/blob/efa674bee0b328cfac2d876c55ad0797912b21f9/specest/ft_specest_irasa.m)). Owing to these new features, users may want to adapt their analysis pipelines accordingly, if the pipelines were developed based on the example script for the previous implementation of IRASA.
-  - The current implementation partition the trials as 90% long as the original ones automatically. Users do not have to call ft_redefinetrial. However, if you are analyzing a continuous trial or trials with unequal lengthes, it is recommended to segment the data following [the Welch's method](https://en.wikipedia.org/wiki/Welch%27s_method) before spectrum estimation, as illurstrated in the example script above. The frequency resolution of the output will be 1/2^floor(log2(L*0.9)) (L is the length of the segments in samples instead of seconds).
-  - The current implementation enables IRASA and FFT for estimating the fractal(arrhythmic) and original power-spectra, respectively. Users do not have to apply cfg.method = 'mtmfft' for computing the original power-spectrum. Instead, it is recommended to compute both of them with ft_specest_irasa to ensure a consistent frequency resolution of the fractal and original power-spectra. To do so, users need to specify the output option as cfg.output = 'fractal' (default) or cfg.output = 'original'. The previous output option cfg.output = 'pow' is no longer compatible with cfg.method = 'irasa'.
-  - The current implementation was made for correcting the computational order of geometric and arithmetic means of the previous implementation. 
+Starting from version 20210114 the **[ft_specest_irasa](https://github.com/fieldtrip/fieldtrip/blob/master/specest/ft_specest_irasa.m)** function has been updated with some non-backward-compatible changes. If you have used the previous implementation of IRASA, you must adapt your analysis scripts accordingly.
+
+  - The current implementation implements the correct computational order of geometric and arithmetic means, which were swapped in the previous implementation (see [issue 1546](https://github.com/fieldtrip/fieldtrip/pull/1602)). 
+
+  - The current implementation enables IRASA and FFT for estimating both the fractal (arrhythmic) and original power-spectra, respectively. You do not have to use cfg.method='mtmfft' any more for computing the original power-spectrum. We recommend to compute both of them with cfg.method='irasa' to ensure a consistent frequency resolution and tapering of the fractal and original power-spectra. For that you should call **[ft_freqanalysis](https://github.com/fieldtrip/fieldtrip/blob/master/ft_freqanalysis.m)** twice, once with cfg.output='fractal', and once with cfg.output='original'.
+
+- The current implementation partition the trials as 90% long as the original ones automatically. Users do not have to call **[ft_redefinetrial](https://github.com/fieldtrip/fieldtrip/blob/master/ft_redefinetrial.m)**. However, if you are analyzing a continuous trial or trials with unequal lengthes, it is recommended to segment the data following [the Welch's method](https://en.wikipedia.org/wiki/Welch%27s_method) before spectrum estimation, as illustrated in the example script above. The frequency resolution of the output will be `1/2^floor(log2(L*0.9))` where L is the length of the segments in samples instead of seconds.
+
 {% include markup/end %}
 
 {% include image src="/assets/img/example/irasa/order.png" %}
@@ -88,5 +92,5 @@ Below we demonstrate the use of the [IRASA technique](https://link.springer.com/
 {% include image src="/assets/img/example/irasa/mixed.png" %}
 
 {% include markup/danger %}
-Note that the upper limit of cfg.foilim has to be specified 1.9 (the maximal resampling factor) times as large as your intent, due to the resampling procedure of IRASA. For instance, you are interested in 100 Hz, the upper limit shall be set as 1.9 * 100 = 190 Hz. The same logic holds when you apply IRASA onto a band-pass or low-pass filtered dataset. Keep in mind, the filters might done with your own analysis piplines and/or with the acquisition system itself. Your 'raw' MEG data aquired at the DCCN had already subjected to a 300 Hz low-pass filter during the data acquisition.
+Note that the upper limit of cfg.foilim has to be specified 1.9 (the maximal resampling factor) times as large as your intent, due to the resampling procedure of IRASA. For instance, you are interested in 100 Hz, the upper limit shall be set as 1.9 * 100 = 190 Hz. The same logic holds when you apply IRASA onto a band-pass or low-pass filtered dataset. Keep in mind, the filters might done with your own analysis piplines and/or with the acquisition system itself. For example, MEG data aquired at the DCCN with standard acquisition settings at 1200 Hz will have been subjected to a 300 Hz low-pass filter.
 {% include markup/end %}
