@@ -206,6 +206,7 @@ Note that this reference documentation is identical to the help text that is dis
 - [ft_specest_wavelet](https://github.com/fieldtrip/fieldtrip/blob/release/specest/ft_specest_wavelet.m)
 - [ft_specest_mtmconvol](https://github.com/fieldtrip/fieldtrip/blob/release/specest/ft_specest_mtmconvol.m)
 - [ft_specest_hilbert](https://github.com/fieldtrip/fieldtrip/blob/release/specest/ft_specest_hilbert.m)
+- [ft_specest_irasa](https://github.com/fieldtrip/fieldtrip/blob/release/specest/ft_specest_irasa.m)
 
 ### ... for distributed computing on a Torque or SGE cluster
 
