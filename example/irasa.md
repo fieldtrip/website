@@ -87,3 +87,6 @@ Below we demonstrate the use of the [IRASA technique](https://link.springer.com/
 
 {% include image src="/assets/img/example/irasa/mixed.png" %}
 
+{% include markup/danger %}
+Note that the upper limit of cfg.foilim has to be specified 1.9 (the maximal resampling factor) times as large as your intent, due to the resampling procedure of IRASA. For instance, you are interested in 100 Hz, the upper limit shall be set as 1.9 * 100 = 190 Hz. The same logic holds when you apply IRASA onto a band-pass or low-pass filtered dataset. Keep in mind, the filters might done with your own analysis piplines and/or with the acquisition system itself. Your 'raw' MEG data aquired at the DCCN had already subjected to a 300 Hz low-pass filter during the data acquisition.
+{% include markup/end %}
