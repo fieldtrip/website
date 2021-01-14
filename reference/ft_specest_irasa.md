@@ -2,8 +2,8 @@
 title: ft_specest_irasa
 ---
 ```plaintext
- FT_SPECEST_IRASA separates fractal components from the orginal
- power spectrum using Irregular-Resampling Auto-Spectral Analysis (IRASA)
+ FT_SPECEST_IRASA estimates the powerspectral arrythmic component of the 
+ time-domain using Irregular-Resampling Auto-Spectral Analysis (IRASA)
 
  Use as
    [spectrum,ntaper,freqoi] = ft_specest_irasa(dat,time...)
@@ -15,18 +15,22 @@ title: ft_specest_irasa
    freqoi     = vector of frequencies in spectrum
 
  Optional arguments should be specified in key-value pairs and can include
+   taper      = 'dpss', 'hanning' or many others, see WINDOW (default = 'hanning')
    pad        = number, total length of data after zero padding (in seconds)
    padtype    = string, indicating type of padding to be used (see ft_preproc_padding, default: zero)
    freqoi     = vector, containing frequencies of interest
+   tapsmofrq  = the amount of spectral smoothing through multi-tapering. Note: 4 Hz smoothing means plus-minus 4 Hz, i.e. a 8 Hz smoothing box
+   dimord     = 'tap_chan_freq' (default) or 'chan_time_freqtap' for memory efficiency (only used when variable number slepian tapers)
    polyorder  = number, the order of the polynomial to fitted to and removed from the data prior to the fourier transform (default = 0 -> remove DC-component)
-   verbose    = boolean, output progress to console (0 or 1, default 1)
-   output     = string, indicating type of output('fractal' or 'orignal', default 'fractal')
+   taperopt   = additional taper options to be used in the WINDOW function, see WINDOW
+   verbose    = output progress to console (0 or 1, default 1)
 
- This implements: Wen.H. & Liu.Z.(2016), Separating fractal and oscillatory components in the power 
- spectrum of neurophysiological signal. Brain Topogr. 29(1):13-26. The source code accompanying the 
- original paper is avaible from https://purr.purdue.edu/publications/1987/1
+ This implements: Wen H, Liu Z. Separating fractal and oscillatory components in the power spectrum of neurophysiological signal. Brain Topogr. 2016 Jan;29(1):13-26.
+   For application, see Stolk et al., Electrocorticographic dissociation of 
+   alpha and beta rhythmic activity in the human sensorimotor system. It
+   is recommended the user first sub-segments the data using ft_redefinetrial 
+   and specifies cfg.pad = 'nextpow2' when calling ft_frequencyanalysis in 
+   order to implement steps A and B of the original algorithm in Wen & liu.
 
- For more information about the current version(2020) and application, see https://www.fieldtriptoolbox.org/example/irasa/
- 
  See also FT_FREQANALYSIS, FT_SPECEST_MTMFFT, FT_SPECEST_MTMCONVOL, FT_SPECEST_TFR, FT_SPECEST_HILBERT, FT_SPECEST_WAVELET
 ```
