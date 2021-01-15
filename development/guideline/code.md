@@ -308,12 +308,14 @@ Please consider the general [requirements](/faq/requirements) when extending or 
 
 ## Ensure that it runs on older MATLAB versions
 
-Although you may be developing FieldTrip on the latest MATLAB version, we try to support it for previous MATLAB versions up to five years old. As of March 2019, this means supporting MATLAB R2014a and newer.
+Although you may be developing FieldTrip on the latest MATLAB version, we try to support it for previous MATLAB versions up to five years old. As of the end of 2020, this means supporting MATLAB version R2015b and newer.
 
 Here is a list of MATLAB release dates; a complete list can be found on [Wikipedia](https://en.wikipedia.org/wiki/MATLAB#Release_history).
 
 | version number | release name | release date |
 | -------------- | ------------ | ------------ |
+| MATLAB 9.9     | R2020b		| 17 Sep 2020 |
+| MATLAB 9.8     | R2020a       | 19 Mar 2020 |
 | MATLAB 9.6     | R2019a       | 20 Mar 2019  |
 | MATLAB 9.5     | R2018b       | 12 Sep 2018  |
 | MATLAB 9.4     | R2018a       | 15 Mar 2018  |
