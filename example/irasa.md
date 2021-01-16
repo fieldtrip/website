@@ -7,7 +7,7 @@ tags: [example, irasa]
 
 IRASA allows distinguishing rhythmic activity from concurrent power-spectral 1/f modulations. The technique virtually compresses and expands the time-domain data with a set of non-integer resampling factors prior to Fourier-based spectral decomposition. As a result, rhythmic components in the power-spectrum are redistributed while the arrhythmic 1/f distribution is left intact. Taking the median of the resulting auto-spectral distributions extracts the power-spectral 1/f component, and the subsequent removal of the 1/f component from the original power-spectrum offers a power-spectral estimate of rhythmic content in the recorded signal. Below we demonstrate the [IRASA](https://link.springer.com/article/10.1007/s10548-015-0448-0) technique on simulated data containing both rhythmic and arrhythmic content.
 
-Further below, we demonstrate the [extraction of spectral features](https://elifesciences.org/articles/48065) based on IRASA. This adaptive approach defines rhythm frequency bands on a participant-by-participant basis (e.g., alpha and beta frequency bands), avoiding having to rely on canonical frequency bands that may not accurately capture the neural phenomena of interest in each individual.
+Further below, we demonstrate the [extraction of spectral features](https://elifesciences.org/articles/48065) based on IRASA. This adaptive approach allows defining rhythm frequency bands on a participant-by-participant basis (e.g., alpha and beta frequency bands), avoiding having to rely on canonical frequency bands that may not accurately capture the neural phenomena of interest in each individual.
 
 ## Separating fractal and oscillatory components in the power-spectrum of simulated data
 
