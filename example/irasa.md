@@ -72,9 +72,9 @@ Further below, we demonstrate the [extraction of spectral features](https://elif
 
 {% include image src="/assets/img/example/irasa/example.png" %}
 
-## Extracting spectral features from the human sensorimotor cortex (ECoG data)
+## Extracting spectral features from human ECoG data
 
-To run this example, download S5_raw_segmented.mat from the [OSF repository](https://osf.io/z4hfm/). Additionally, download S5_lh.pial used to plot rhythmic power on the cortical surface in a next step.
+To run this example, download S5_raw_segmented.mat from the [OSF repository](https://osf.io/z4hfm/). Additionally, download S5_lh.pial used to localize rhythmic activity in the sensorimotor cortex in a next step.
 
     % load the raw raw data
     load('S5_raw_segmented.mat')
@@ -94,7 +94,7 @@ To run this example, download S5_raw_segmented.mat from the [OSF repository](htt
     cfg.refchannel    = 'all';
     data_filt = ft_preprocessing(cfg, data);
     
-    % select sensorimotor channels
+    % select electrodes placed over the sensorimotor cortex
     cfg               = [];
     cfg.channel       = {'chan007','chan008','chan015','chan016','chan024', ...
       'chan092','chan093','chan094','chan095', ...
@@ -139,7 +139,7 @@ To run this example, download S5_raw_segmented.mat from the [OSF repository](htt
 
 {% include image src="/assets/img/example/irasa/IRASA_S5.png" %}
 
-## Localizing spectral features in the human sensorimotor cortex 
+## Localizing spectral features in the sensorimotor cortex 
 
     % read in the cortical surface
     cortex = ft_read_headshape('S5_lh.pial');
@@ -190,9 +190,9 @@ To run this example, download S5_raw_segmented.mat from the [OSF repository](htt
 
 {% include image src="/assets/img/example/irasa/IRASA_S5_beta.png" %}
 
-Consistent with the [original study](https://elifesciences.org/articles/48065), alpha rhythmic activity is maximal at electrodes on the postcentral gyrus. In contrast, beta rhythmic activity is strongest at electrodes placed over the central sulcus. 
+Consistent with the findings of the [original study](https://elifesciences.org/articles/48065), alpha rhythmic activity is maximal at electrodes on the postcentral gyrus, and beta rhythmic activity is strongest at electrodes placed over the central sulcus. 
 
 
 {% include markup/warning %}
-Starting from version 20210114 the implementation of **[ft_specest_irasa](https://github.com/fieldtrip/fieldtrip/blob/master/specest/ft_specest_irasa.m)** has been updated. We recommend adopting the procedure demonstrate above, even if you have used the previous implementation of IRASA before. Further details of this update can be found at [PR 1546](https://github.com/fieldtrip/fieldtrip/pull/1602).
+Update: Starting from version 20210114 the implementation of **[ft_specest_irasa](https://github.com/fieldtrip/fieldtrip/blob/master/specest/ft_specest_irasa.m)** has changed. In short, the current implementation incorporates sub-segmentation of the data and, hence, the sub-segmentation and recombination steps no longer have to be performed outside IRASA. More details regarding this update can be found in [PR 1546](https://github.com/fieldtrip/fieldtrip/pull/1602).
 {% include markup/end %}
