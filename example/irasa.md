@@ -6,9 +6,9 @@ tags: [example, irasa]
 # Irregular Resampling Auto-Spectral Analysis (IRASA)
 
 IRASA allows distinguishing rhythmic activity from concurrent power-spectral 1/f modulations. The technique virtually compresses and expands the time-domain data with a set of non-integer resampling factors prior to Fourier-based spectral decomposition. As a result, rhythmic components in the power-spectrum are redistributed while the arrhythmic 1/f distribution is left intact. Taking the median of the resulting auto-spectral distributions extracts the power-spectral 1/f component, and the subsequent removal of the 1/f component from the original power-spectrum offers a power-spectral estimate of rhythmic content in the recorded signal.
-Below we demonstrate extraction of spectral features in a simulated dataset and real human ECoG data based on [the IRASA algorithm (Wen & Liu, 2016)](https://link.springer.com/article/10.1007/s10548-015-0448-0).
+Below we provide two examples, a simulated dataset and real human ECoG dataset[(Stolk et al. 2019)](https://elifesciences.org/articles/48065), to demostrate [the IRASA algorithm (Wen & Liu, 2016)](https://link.springer.com/article/10.1007/s10548-015-0448-0) extracting of spectral feature.
 
-## Separating fractal and oscillatory components in the power-spectrum of simulated data
+## Extracting spectral features of simulated data
 
 ```
     % simulate data
@@ -204,7 +204,7 @@ Now we will work on the example of a ECoG dataset [(Stolk et al. 2019)](https://
     ft_plot_sens(beta.elec, 'elecshape', 'disc', 'facecolor', [0 0 0])
 ```
 
-Alpha rhythmic activity is maximal at electrodes on the postcentral gyrus, and beta rhythmic activity is strongest at electrodes placed over the central sulcus.
+Consistent with [(Stolk et al. 2019)](https://elifesciences.org/articles/48065), alpha rhythmic activity is maximal at electrodes on the postcentral gyrus, and beta rhythmic activity is strongest at electrodes placed over the central sulcus.
 {% include image src="/assets/img/example/irasa/IRASA_S5_beta.png" %}
 
 
@@ -213,11 +213,11 @@ Alpha rhythmic activity is maximal at electrodes on the postcentral gyrus, and b
 {% include markup/warning %}
 Update: Starting from version 20210114 the implementation of **[ft_specest_irasa](https://github.com/fieldtrip/fieldtrip/blob/master/specest/ft_specest_irasa.m)** has been changed. If you have used the previous implementation of IRASA, you must adapt your analysis scripts accordingly.
 
-- The current implementation corrects the computational order of geometric and arithmetic means, which were swapped in the previous implementation (see [issue 1546](https://github.com/fieldtrip/fieldtrip/pull/1602)).
+- The current implementation corrects the computational order of geometric and arithmetic means for esitmating the fractal power-spectrum [(Wen & Liu, 2016)](https://link.springer.com/article/10.1007/s10548-015-0448-0), which were swapped in the previous implementation (see [issue 1546](https://github.com/fieldtrip/fieldtrip/pull/1602)).
 
-- The current implementation enables IRASA and FFT for estimating both the fractal (arrhythmic) and original power-spectra, respectively. You do not have to use cfg.method='mtmfft' any more for computing the original power-spectrum. We recommend to compute both of them with cfg.method='irasa' to ensure a consistent frequency resolution and tapering of the fractal and original power-spectra. For that you should call **[ft_freqanalysis](https://github.com/fieldtrip/fieldtrip/blob/master/ft_freqanalysis.m)** twice, once with cfg.output='fractal', and once with cfg.output='original'.
+- The current implementation enables IRASA and FFT for estimating both the fractal and original power-spectra, respectively. You do not have to use cfg.method='mtmfft' any more for computing the original power-spectrum. We recommend to compute both of them with cfg.method='irasa' to ensure a consistent frequency resolution and tapering of the fractal and original power-spectra. For that you should call **[ft_freqanalysis](https://github.com/fieldtrip/fieldtrip/blob/master/ft_freqanalysis.m)** twice, once with cfg.output='fractal', and once with cfg.output='original'.
 
-- The current implementation partition the trials as 90% long as the original ones automatically. Users do not have to call **[ft_redefinetrial](https://github.com/fieldtrip/fieldtrip/blob/master/ft_redefinetrial.m)**. However, if you are analyzing a continuous trial or trials with unequal lengthes, it is recommended to segment the data following [the Welch's method](https://en.wikipedia.org/wiki/Welch%27s_method) before spectrum estimation, as illustrated in the example script above. The frequency resolution of the output will be `fs/2^floor(log2(L*fs*0.9))` where L is the length of the segments in seconds and fs refers to the sampling rate.
+- The current implementation partition the trials automatically, so you do not have to call **[ft_redefinetrial](https://github.com/fieldtrip/fieldtrip/blob/master/ft_redefinetrial.m)**. However, if you are analyzing a continuous trial or trials with unequal lengthes, it is recommended to segment the data following [the Welch's method](https://en.wikipedia.org/wiki/Welch%27s_method) before spectrum estimation, as illustrated in the example scripts above. The frequency resolution of the output will be `fs/2^floor(log2(L*fs*0.9))` where L is the length of the segments in seconds and fs refers to the sampling rate.
 
-Note that the upper limit of cfg.foilim has to be specified 1.9 (the maximal resampling factor) times as large as your intent, due to the resampling procedure of IRASA. For instance, you are interested in 100 Hz, the upper limit shall be set as 1.9 * 100 = 190 Hz. The same logic holds when you apply IRASA onto a band-pass or low-pass filtered dataset. Keep in mind, the filters might done with your own analysis piplines and/or with the acquisition system itself. For example, MEG data aquired at the DCCN with standard acquisition settings at 1200 Hz will have been subjected to a 300 Hz low-pass filter.
+Note that the upper limit of cfg.foilim has to be specified 1.9 (the maximal resampling factor of IRASA) times as large as your intent, due to the resampling procedure of IRASA. For instance, you are interested in 100 Hz, the upper limit shall be set as 1.9 * 100 = 190 Hz. The same logic holds when you apply IRASA onto a band-pass or low-pass filtered dataset. Keep in mind, the filters might be done with your own analysis piplines and/or with the acquisition system itself. For example, MEG data aquired at the DCCN with standard acquisition settings at 1200 Hz will have been subjected to a 300 Hz low-pass filter.
 {% include markup/end %}
