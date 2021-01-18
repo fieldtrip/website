@@ -6,7 +6,7 @@ tags: [example, irasa]
 # Irregular Resampling Auto-Spectral Analysis (IRASA)
 
 IRASA allows distinguishing rhythmic activity from concurrent power-spectral 1/f modulations. The technique virtually compresses and expands the time-domain data with a set of non-integer resampling factors prior to Fourier-based spectral decomposition. As a result, rhythmic components in the power-spectrum are redistributed while the arrhythmic 1/f distribution is left intact. Taking the median of the resulting auto-spectral distributions extracts the power-spectral 1/f component, and the subsequent removal of the 1/f component from the original power-spectrum offers a power-spectral estimate of rhythmic content in the recorded signal.
-Below we provide two examples, a simulated dataset and real human ECoG dataset[(Stolk et al. 2019)](https://elifesciences.org/articles/48065), to demostrate [the IRASA algorithm (Wen & Liu, 2016)](https://link.springer.com/article/10.1007/s10548-015-0448-0) extracting of spectral feature.
+Below we provide two examples, a simulated dataset and a real human ECoG dataset [(Stolk et al. 2019)](https://elifesciences.org/articles/48065), including how to extract spectral features based on [the IRASA technique (Wen & Liu, 2016)](https://link.springer.com/article/10.1007/s10548-015-0448-0).
 
 ## Extracting spectral features of simulated data
 
@@ -211,9 +211,9 @@ Consistent with [(Stolk et al. 2019)](https://elifesciences.org/articles/48065),
 ## Updates to the IRASA implementation
 
 {% include markup/warning %}
-Update: Starting from version 20210114 the implementation of **[ft_specest_irasa](https://github.com/fieldtrip/fieldtrip/blob/master/specest/ft_specest_irasa.m)** has been changed. If you have used the previous implementation of IRASA, you must adapt your analysis scripts accordingly.
+Starting from version 20210114 the implementation of **[ft_specest_irasa](https://github.com/fieldtrip/fieldtrip/blob/master/specest/ft_specest_irasa.m)** has been changed. The current implementation corrects the computational order of geometric and arithmetic means for esitmating the fractal power-spectrum [(Wen & Liu, 2016)](https://link.springer.com/article/10.1007/s10548-015-0448-0), which were swapped in the previous implementation (see [issue 1546](https://github.com/fieldtrip/fieldtrip/pull/1602)).
 
-- The current implementation corrects the computational order of geometric and arithmetic means for esitmating the fractal power-spectrum [(Wen & Liu, 2016)](https://link.springer.com/article/10.1007/s10548-015-0448-0), which were swapped in the previous implementation (see [issue 1546](https://github.com/fieldtrip/fieldtrip/pull/1602)).
+If you have used the previous implementation of IRASA, we recommend you to adapt your analysis script according the the following points:
 
 - The current implementation enables IRASA and FFT for estimating both the fractal and original power-spectra, respectively. You do not have to use cfg.method='mtmfft' any more for computing the original power-spectrum. We recommend to compute both of them with cfg.method='irasa' to ensure a consistent frequency resolution and tapering of the fractal and original power-spectra. For that you should call **[ft_freqanalysis](https://github.com/fieldtrip/fieldtrip/blob/master/ft_freqanalysis.m)** twice, once with cfg.output='fractal', and once with cfg.output='original'.
 
