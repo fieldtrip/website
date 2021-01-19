@@ -8,15 +8,12 @@ tags: [tutorial, eeg, meg, multivariate, timelock, freq]
 ## Introduction
 
 The objective of this tutorial is to give an introduction to the classification of event related
-data using the [MVPA-Light](https://github.com/treder/MVPA-Light) toolbox. For a general introduction and background on multivariate analysis, refer to the
-[Multivariate analysis of electrophysiological data tutorial](/tutorial/multivariateanalysis)
-and the [MVPA-Light readme file](https://github.com/treder/MVPA-Light/blob/master/README.md).
-This tutorial builds on skills acquired in the [preprocessing](/tutorial/preprocessing), [event related averaging](/tutorial/eventrelatedaveraging) and [time-frequency analysis](/tutorial/timefrequencyanalysis) tutorials.
+data using the [MVPA-Light](https://github.com/treder/MVPA-Light) toolbox. For a general introduction to the toolbox refer to the [MVPA-Light paper](https://www.frontiersin.org/articles/10.3389/fnins.2020.00289/full). The [MVPA-Light readme file](https://github.com/treder/MVPA-Light/blob/master/README.md) is the most up to date reference. This tutorial builds on skills acquired in the [preprocessing](/tutorial/preprocessing), [event related averaging](/tutorial/eventrelatedaveraging) and [time-frequency analysis](/tutorial/timefrequencyanalysis) tutorials.
 
 
 ## Installation
 
-MVPA-Light is a stand-alone MATLAB toolbox for multivariate pattern analysis. FieldTrip provides a high-level interface to its functions so one does not need to directly interact with the toolbox.
+MVPA-Light is a stand-alone MATLAB toolbox for multivariate pattern analysis involving classification or regression. It features cross-validation, various classifiers, regression models, performance metrics, as well as nested preprocessing and hyperparameter selection. FieldTrip provides a high-level interface to its functions so one does not need to directly interact with the toolbox.
 However, it needs to be installed and included in
 MATLAB's search path. To this end, [follow the installation instructions](https://github.com/treder/MVPA-Light#installation-) on its GitHub
 page.
@@ -57,6 +54,8 @@ Define the configuration struct
 
     cfg = [] ;
     cfg.method          = 'mvpa';
+    cfg.mvpa            = [];
+    cfg.mvpa.features   = 'chan';
     cfg.mvpa.classifier = 'multiclass_lda';
     cfg.mvpa.metric     = 'accuracy';
     cfg.mvpa.k          = 3;
@@ -66,11 +65,15 @@ Define the configuration struct
 
 Let us unpack this:
 
+- `cfg.method = 'mvpa'` indicates that we want to perform multivariate pattern analysis using [MVPA-Light](https://github.com/treder/MVPA-Light).
+classification is performed for every time point (see section _Classification across time_).
+- `cfg.mvpa` is a struct that controls properties of the multivariate analysis including cross-validation settings, selection of the classifier and performance metrics. It is passed on to [MVPA-Light](https://github.com/treder/MVPA-Light).
+- `cfg.mvpa.features` indicates which of the data dimensions we want to use as features (channels in this case). The name should correspond to the name of the dimension in the `cfg.dimord` field. All data dimensions that are not samples or features are considered as _search dimensions_. A separate multivariate analysis is conducted for every coordinate in the search dimensions. For instance, imagine the dimensions of the data are [samples x chan x time]. If `cfg.features = 'chan'` then _time_ serves as a search dimension and a separate analysis is performed for every time point. If `cfg.features = 'time'` then _chan_ serves as the search dimension and a separate analysis is performed for every channel.
 - `cfg.mvpa.classifier` indicates which classifier we want to use. Here, we use multi-class Linear Discriminant Analysis (LDA).  [Click here](https://github.com/treder/MVPA-Light#classifiers-for-two-classes) for a full list of available classifiers.
 - `cfg.metric` indicates the metric we use to measure classifier performance. Here, _classification accuracy_ is used. Other metrics such as AUC and F1-score are available. [Click here](https://github.com/treder/MVPA-Light#classifier-performance-metrics) for a full list of available metrics.
 - `cfg.mvpa.k` specifies the number of folds used to calculate the cross-validated performance. Cross-validation is explained in more detail in the next section.
 - `cfg.latency` restricts the classification analysis to a specific time window (here 0.5-0.7s).
-- `cfg.avgovertime` specifies whether the activity in latency window should be averaged prior to classification. If `'no'`, a separate classification is performed for every time point (see section _Classification across time_).
+- `cfg.avgovertime` specifies whether the activity in latency window should be averaged prior to classification. If `'no'`, a separate - 
 - `cfg.design` specifies the vector of _class labels_. Class labels indicate which class (or experimental condition) trials belong to. The task of the classifier is to predict these class labels given the data. To this end, we create a vector with _1_'s for the trials belonging to class 1, _2_'s for trials
 belonging to class 2, and so on. The [MEG-language dataset](/faq/what_types_of_datasets_and_their_respective_analyses_are_used_on_fieldtrip),
 comprises three classes, namely FIC (class 1), FC (class 2), and IC (class 3). You can also use
@@ -118,13 +121,14 @@ classification results in a format required by the function.
 
 ## Cross-validation
 
-To obtain a realistic estimate of classifier performance and control for overfitting, a classifier should be tested on an independent dataset that has not been used for training. In most neuroimaging experiments, there is only one dataset with a restricted number of trials. K-fold [cross-validation](https://en.wikipedia.org/wiki/Cross-validation) makes efficient use of this data by splitting it into k different folds. In each iteration, one of the k folds is held out and used as test set, whereas all other folds are used for training the model. This process is repeated until every fold has been used as test set once. Cross-validation is controlled by the following parameters:
+To obtain a realistic estimate of classifier performance and control for overfitting, a classifier should be tested on an independent dataset that has not been used for training. In most neuroimaging experiments, there is only one dataset with a restricted number of trials. K-fold [cross-validation](https://en.wikipedia.org/wiki/Cross-validation) makes efficient use of this data by splitting it into k different folds. In each iteration, one of the k folds is held out and used as test set, whereas all other folds are used for training the model. This process is repeated until every fold has been used as test set once. Other cross-validation schemes supported by MVPA-Light are leave-one-out cross-validation, holdout, and predefined folds. Cross-validation is controlled by the following parameters:
 
-- `cfg.mvpa.cv`: cross-validation type, either 'kfold', 'leaveout' or 'holdout' (default 'kfold')
+- `cfg.mvpa.cv`: cross-validation type, either 'kfold', 'leaveout', 'holdout', or 'predefined' (default 'kfold')
 - `cfg.mvpa.k`: number of folds or partitions in k-fold cross-validation (default 5)
 - `cfg.mvpa.repeat`: number of times the whole cross-validation analysis is repeated with new randomly assigned folds (default 5)
 - `cfg.mvpa.p`: if `cfg.mvpa.cv` is 'holdout', `p` is the fraction of test samples (default 0.1)
 - `cfg.mvpa.stratify`: if 1, the class proportions are approximately preserved in each test fold (default 1)
+- `cfg.mvpa.fold`: if cv='predefined', fold is a vector of length #samples that specifies the fold each sample belongs to
 
 The total number of training and testing iterations is equal to `cfg.k * cfg.repeat`. The result returned by `ft_timelockstatistics` is an average across the test folds.
 
@@ -132,15 +136,16 @@ The total number of training and testing iterations is equal to `cfg.k * cfg.rep
 
 {% include markup/info %}
 What is the effect of setting k to a very large vs very small value? Why is it
-useful to repeat the cross-validation multiple times?
+useful to repeat the cross-validation multiple times? (hint: samples are randomly assigned to folds)
 {% include markup/end %}
 
-## Classification across time ('when')
+## Search across time ('when')
 
 Many neuroimaging datasets have a 3-D structure (trials x channels x time). Classification across time can help identify the time points in a trial _when_ discriminative information shows up. To this end, classification is performed for each time point separately. First, we need to make sure that the time dimension is not averaged out. We can set `cfg.avgovertime = 'no'`, but since the default value is `'no'` we can simply omit this parameter.
 
     cfg = [] ;  
     cfg.method           = 'mvpa';
+    cfg.mvpa.features    = 'chan';
     cfg.mvpa.classifier  = 'lda';
     cfg.mvpa.metric      = 'auc';
     cfg.mvpa.k           = 10;
@@ -180,21 +185,22 @@ classifier, use kernel FDA. As metric, use classification accuracy.
 {% include markup/end %}
 
 
-## Searchlight analysis ('where')
+## Search across channels ('where')
 
-Which channels contribute most to classification performance? The answer to this question can be used to better interpret the data or to perform feature selection. To this end, we will perform a separate classification analysis for each channel.
+Which channels contribute most to classification performance? The answer to this question can be used to better interpret the data or to perform feature selection. To this end, we will perform a separate classification analysis for each channel. 
 
     cfg = [] ;  
-    cfg.method      = 'mvpa';
-    cfg.searchlight = 'yes';
-    cfg.design      = [ones(nFIC,1); 2*ones(nFC,1)];
-    cfg.latency     = [0.3, 0.7];
-    cfg.avgovertime = 'yes';
+    cfg.method        = 'mvpa';
+    cfg.latency       = [0.3, 0.7];
+    cfg.avgovertime   = 'yes';
+    cfg.mvpa.features = 'time';
+    cfg.design        = [ones(nFIC,1); 2*ones(nFC,1)];
     stat = ft_timelockstatistics(cfg, dataFIC_LP, dataFC_LP)
 
 Since we did not specify a classifier and a metric, the default values (LDA as classifier and classification accuracy as metric) are used. In searchlight analysis, the _time points_ in a trial are used as
 features, for each channel separately. Set `cfg.latency` to restrict the analysis to
-a specific time window. Set `cfg.avgovertime='yes'` if you prefer to average the values in the time window to a single feature.
+a specific time window. Set `cfg.features = 'time'` to indicate that the time dimension serves as features. 
+If we would set `cfg.features = 'chan'`, _all_ channels would be used as features at once. Note that since the time dimension is a singleton dimension (we are averaging over time) you could also set `cfg.features = []` instead of `cfg.features = 'time'`.
 
 Since a classification result is obtained for each channel, classification accuracy can be plotted as a topography.
 We call `ft_topoplotER` to do the plotting.
@@ -208,6 +214,16 @@ We call `ft_topoplotER` to do the plotting.
 
 
 {% include image src="/assets/img/tutorial/mvpa_light/searchlight_topo1.png" width="200" %}
+
+
+#### Exercise 3
+
+{% include markup/info %}
+Although we set `cfg.features = 'time'`, there was acually only one time point since `cfg.avgovertime='yes'`.
+To use the multiple time points as separate features, repeat the analysis setting `cfg.avgovertime = 'no'`. This time, for each channel, all time points in the 0.3-0.7 s window 
+are used as features rather than just their average. The maximum performance should increase slightly.
+{% include markup/end %}
+
 
 In the previous analysis, classification has been performed for each channel separately.
 However, the spatial arrangement of MEG channels can be exploited in order to
@@ -225,11 +241,11 @@ We are now ready to re-run the searchlight analysis. We can pass the neighbourho
 via the parameter `cfg.mvpa.neighbours`.
 
       cfg = [] ;  
-      cfg.method      = 'mvpa';
-      cfg.searchlight = 'yes';
-      cfg.design      = [ones(nFIC,1); 2*ones(nFC,1)];
-      cfg.latency     = [0.3, 0.7];
-      cfg.avgovertime = 'yes';
+      cfg.method        = 'mvpa';
+      cfg.mvpa.features = 'time';
+      cfg.design        = [ones(nFIC,1); 2*ones(nFC,1)];
+      cfg.latency       = [0.3, 0.7];
+      cfg.avgovertime   = 'yes';
 
       cfg.mvpa.neighbours  = neighbours;
 
@@ -250,6 +266,11 @@ As expected, the resultant topography is slightly more smeared out. Peak classif
       {% include image src="/assets/img/tutorial/mvpa_light/searchlight_topo2.png" width="200" %}
 
 
+## Search across both time and channels
+
+Notice the symmetry between the previous two analyses: for the 'when' analysis, we performed a classification for each time point using channels as features, for the 'where' analysis we performed a classification for each channel using time points as features. We select between these two analyses by setting `cfg.features` to either `'chan'` or `'time'`.
+
+
 ## Time generalization (time x time classification)
 
 Classification across time does not give insight into whether information is shared across different time points. For example, is the information that the classifier uses early in a trial (t=80 ms) the same that it uses later (t=300ms)? In time generalization, this question is answered by training the classifier at a certain time point t. The classifer is then tested at the same time point t but it is also tested at all other time points in the trial ([King and Dehaene, 2014](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5635958/)). This procedure is then repeated for every
@@ -258,9 +279,9 @@ time x time classification, we only need to set the `cfg.generalize` parameter:
 
 
     cfg = [] ;  
-    cfg.method      = 'mvpa';
-    cfg.generalize  = 'time';
-    cfg.design      = [ones(nFIC,1); 2*ones(nFC,1)];
+    cfg.method           = 'mvpa';
+    cfg.mvpa.generalize  = 'time';
+    cfg.design           = [ones(nFIC,1); 2*ones(nFC,1)];
 
     stat = ft_timelockstatistics(cfg, dataFIC_LP, dataFC_LP);
 
