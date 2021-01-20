@@ -91,7 +91,7 @@ dataset `dat`. To illustrate this, append the data and then pass it to `ft_timel
     dat = ft_appenddata([], dataFIC_LP, dataFC_LP, dataIC_LP);
     stat = ft_timelockstatistics(cfg, dat);
 
-Let us print the resulting classification accuracy
+The resulting classification accuracy can slighty vary due to the random assignment of samples into folds. Let us print the resulting classification accuracy
 
     fprintf('Classification accuracy: %0.2f\n', stat.accuracy)
 
@@ -268,8 +268,21 @@ As expected, the resultant topography is slightly more smeared out. Peak classif
 
 ## Search across both time and channels
 
-Notice the symmetry between the previous two analyses: for the 'when' analysis, we performed a classification for each time point using channels as features, for the 'where' analysis we performed a classification for each channel using time points as features. We select between these two analyses by setting `cfg.features` to either `'chan'` or `'time'`.
+Notice the symmetry between the previous two analyses: for the 'when' analysis, we performed a classification for each time point using channels as features, for the 'where' analysis we performed a classification for each channel using time points as features. We select between these two analyses by setting `cfg.mvpa.features` to either `'chan'` or `'time'`. What happens if we set `cfg.mvpa.features = []`?
 
+    cfg = [] ;  
+    cfg.method        = 'mvpa';
+    cfg.latency       = [-0.1, 0.8];
+    cfg.mvpa.features = [];
+    cfg.mvpa.repeat   = 2;
+    cfg.design        = [ones(nFIC,1); 2*ones(nFC,1)];
+    stat = ft_timelockstatistics(cfg, dataFIC_LP, dataFC_LP)
+
+In this case, both channels and time points act as search dimensions and the result is a _chan x time_ matrix of classification accuracies. If we plot the result, we can see which of the channels carry discriminative information and when
+
+    mv_plot_result(stat.mvpa, stat.time)
+    set(gca, 'YTick', 1:2:length(stat.label), 'YTickLabel', stat.label(1:2:end))
+    
 
 ## Time generalization (time x time classification)
 
@@ -308,6 +321,12 @@ determined by the research question, though it may be useful to run all of these
 since they contain partly complementary information. To start we first perform a
 time-frequency analysis of the data (see [Time-frequency analysis using Hanning window, multitapers and wavelets](http://www.fieldtriptoolbox.org/tutorial/timefrequencyanalysis/)
  for details on time-frequency analysis).
+
+
+`cfg.mvpa.features = `
+
+- `'time'`: if time serves as features, a search is performed across channels and frequencies, yielding a _chan x freq_ matrix of classification accuracies.
+- `'freq'`: if time serves as features, a search is performed across channels and frequencies, yielding a _chan x freq_ matrix of classification accuracies.
 
     cfg              = [];
     cfg.output       = 'pow';
