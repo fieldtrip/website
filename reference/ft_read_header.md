@@ -18,17 +18,17 @@ title: ft_read_header
    'coordsys'       = string, 'head' or 'dewar' (default = 'head')
    'headerformat'   = name of a MATLAB function that takes the filename as input (default is automatic)
    'password'       = password structure for encrypted data set (only for mayo_mef30 and mayo_mef21)
-   'readbids'       = boolean, whether to read information from the BIDS sidecar files (default = true)
+   'readbids'       = string, 'yes', no', or 'ifmakessense', whether to read information from the BIDS sidecar files (default = 'ifmakessense')
 
- This returns a header structure with the following elements
-   hdr.Fs                  sampling frequency
-   hdr.nChans              number of channels
-   hdr.nSamples            number of samples per trial
-   hdr.nSamplesPre         number of pre-trigger samples in each trial
-   hdr.nTrials             number of trials
-   hdr.label               Nx1 cell-array with the label of each channel
-   hdr.chantype            Nx1 cell-array with the channel type, see FT_CHANTYPE
-   hdr.chanunit            Nx1 cell-array with the physical units, see FT_CHANUNIT
+ This returns a header structure with the following fields
+   hdr.Fs          = sampling frequency
+   hdr.nChans      = number of channels
+   hdr.nSamples    = number of samples per trial
+   hdr.nSamplesPre = number of pre-trigger samples in each trial
+   hdr.nTrials     = number of trials
+   hdr.label       = Nx1 cell-array with the label of each channel
+   hdr.chantype    = Nx1 cell-array with the channel type, see FT_CHANTYPE
+   hdr.chanunit    = Nx1 cell-array with the physical units, see FT_CHANUNIT
 
  For continuously recorded data, this will return nSamplesPre=0 and nTrials=1.
 

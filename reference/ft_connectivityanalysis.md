@@ -44,6 +44,7 @@ title: ft_connectivityanalysis
      'wppc'       weighted pairwise phase consistency
      'corr'       Pearson correlation, support for timelock or raw data
      'laggedcoherence', lagged coherence estimate
+     'plm'        phase linearity measurement
 
  Additional configuration options are
    cfg.channel    = Nx1 cell-array containing a list of channels which are
