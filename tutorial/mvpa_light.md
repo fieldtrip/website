@@ -312,46 +312,48 @@ to a time point at which the respective classifier was tested. The classifier at
 
 ## Classification of time-frequency data
 
-There are many possible ways in which to classify time-frequency data: performing
- classification for each time point and frequency yields a two-dimensional result
- that can be plotted as an image in the time-frequency plane. Alternatively, a one-dimensional
- result is obtained by performing a separate classification for every
-time point (treating both frequencies and channels as features), or for every frequency point (treating both time points and channels as features). Which of these analyses is the most reasonable is ultimately
-determined by the research question, though it may be useful to run all of these analyses
-since they contain partly complementary information. To start we first perform a
+The techniques we explored for _samples x chan x time_ data seamlessly generalize to more complex datasets. 
+For instance, let us consider a 4-D _samples x chan x freq x time_ dataset. To start we first perform a
 time-frequency analysis of the data (see [Time-frequency analysis using Hanning window, multitapers and wavelets](http://www.fieldtriptoolbox.org/tutorial/timefrequencyanalysis/)
  for details on time-frequency analysis).
 
 
+
+
+      cfg              = [];
+      cfg.output       = 'pow';
+      cfg.method       = 'mtmconvol';
+      cfg.taper        = 'hanning';
+      cfg.keeptrials   = 'yes';
+      cfg.foi          = 2:1:30;
+      cfg.t_ftimwin    = ones(length(cfg.foi),1) * 0.5;
+      cfg.toi          = -0.5:0.05:1.5;
+
+      freqFIC = ft_freqanalysis(cfg, dataFIC_LP);
+      freqFC = ft_freqanalysis(cfg, dataFC_LP);
+
+
+We aim to perform classification for
+each time-frequency point separately using channels as features. To this end, 
+we only need to set `cfg.mvpa.features = 'chan'`.
+
+    cfg = [] ;  
+    cfg.method        = 'mvpa';
+    cfg.mvpa.features = 'chan';
+    cfg.design        = [ones(nFIC,1); 2*ones(nFC,1)];
+
+    stat = ft_freqstatistics(cfg, freqFIC, freqFC);
+
+This yields a _freq x time_ matrix of classification accuracies. 
+A large array of different multivariate analyses can be realised by setting 
 `cfg.mvpa.features = `
 
 - `'time'`: if time serves as features, a search is performed across channels and frequencies, yielding a _chan x freq_ matrix of classification accuracies.
 - `'freq'`: if time serves as features, a search is performed across channels and frequencies, yielding a _chan x freq_ matrix of classification accuracies.
+- `[]`: 
 
-    cfg              = [];
-    cfg.output       = 'pow';
-    cfg.method       = 'mtmconvol';
-    cfg.taper        = 'hanning';
-    cfg.keeptrials   = 'yes';
-    cfg.foi          = 2:1:30;
-    cfg.t_ftimwin    = ones(length(cfg.foi),1) * 0.5;
-    cfg.toi          = -0.5:0.05:1.5;
 
-    freqFIC = ft_freqanalysis(cfg, dataFIC_LP);
-    freqFC = ft_freqanalysis(cfg, dataFC_LP);
-
-We can now perform classification for
-each time-frequency point separately by setting `cfg.search = {'freq' 'time'}`,
-that is, specifying both time and frequency as search dimensions.
-
-    cfg = [] ;  
-    cfg.method      = 'mvpa';
-    cfg.search      = {'freq' 'time'}
-    cfg.design      = [ones(nFIC,1); 2*ones(nFC,1)];
-
-    stat = ft_freqstatistics(cfg, freqFIC, freqFC);
-
-This yields a two-dimensional result in the time-frequency plane. What if, instead
+What if, instead
 of considering each time-frequency point on its own, we want to include the information
 from the immediately preceding/following time point and the immediately preceding/following
 frequency point? This corresponds to a time-frequency searchlight analysis. To this end,
