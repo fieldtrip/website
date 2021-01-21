@@ -177,7 +177,7 @@ cross-validation.
 
 
 
-#### Exercise 2
+### Exercise 2
 
 {% include markup/info %}
 Perform classification across time using all three classes FIC, FC, and IC. As
@@ -216,7 +216,7 @@ We call `ft_topoplotER` to do the plotting.
 {% include image src="/assets/img/tutorial/mvpa_light/searchlight_topo1.png" width="200" %}
 
 
-#### Exercise 3
+### Exercise 3
 
 {% include markup/info %}
 Although we set `cfg.features = 'time'`, there was acually only one time point since `cfg.avgovertime='yes'`.
@@ -312,9 +312,9 @@ to a time point at which the respective classifier was tested. The classifier at
 
 ## Classification of time-frequency data
 
-The techniques we explored for _samples x chan x time_ data seamlessly generalize to more complex datasets. 
-For instance, let us consider a 4-D _samples x chan x freq x time_ dataset. To start we first perform a
-time-frequency analysis of the data (see [Time-frequency analysis using Hanning window, multitapers and wavelets](http://www.fieldtriptoolbox.org/tutorial/timefrequencyanalysis/)
+The techniques we explored for 3-D _samples x chan x time_ data seamlessly generalize to higher-dimensional datasets. 
+For instance, let us consider 4-D _samples x chan x freq x time_ data. We create such a dataset by performing a
+time-frequency analysis on the timelocked data (see [Time-frequency analysis using Hanning window, multitapers and wavelets](http://www.fieldtriptoolbox.org/tutorial/timefrequencyanalysis/)
  for details on time-frequency analysis).
 
 
@@ -344,67 +344,22 @@ we only need to set `cfg.mvpa.features = 'chan'`.
 
     stat = ft_freqstatistics(cfg, freqFIC, freqFC);
 
-This yields a _freq x time_ matrix of classification accuracies. 
-A large array of different multivariate analyses can be realised by setting 
-`cfg.mvpa.features = `
+    mv_plot_result(stat.mvpa, stat.time, stat.freq)
 
-- `'time'`: if time serves as features, a search is performed across channels and frequencies, yielding a _chan x freq_ matrix of classification accuracies.
-- `'freq'`: if time serves as features, a search is performed across channels and frequencies, yielding a _chan x freq_ matrix of classification accuracies.
-- `[]`: 
+This yields a _freq x time_ matrix of classification accuracies. However, we are not limited 
+to a classification for every time-frequency point. A large array of different multivariate analyses can be realized by changing 
+the values of `cfg.mvpa.features`, let us look at some of the options:
 
+- `'time'`: if time serves as features, a search is performed across channels and frequencies. Therefore, the result is a _chan x freq_ matrix of classification accuracies.
+- `'freq'`: the result  _chan x time_ matrix of classification accuracies.
+- `[]`: in this case, a search is performed across all dimensions yielding a _chan x freq x time_ array.
+- `{'chan' 'freq'}`: multiple feature dimensions can be specified by providing a cell array. In this example, channels and frequencies are combined into a long feature vector and a classification is performed for every time point, yielding _time x 1_ vector.
 
-What if, instead
-of considering each time-frequency point on its own, we want to include the information
-from the immediately preceding/following time point and the immediately preceding/following
-frequency point? This corresponds to a time-frequency searchlight analysis. To this end,
-we can define a binary frequency x frequency matrix that, for every time point,
-specifies which other time points are used as features.
-
-    freq_neigh = ones(numel(freqFIC.freq));
-    freq_neigh = freq_neigh - triu(freq_neigh,2) - tril(freq_neigh,-2);
-
-This yields a matrix with 1's on the diagonal and immediate off-diagonals and 0's elsewhere.
-To see this, let us look at the first few rows/columns of the matrix
-
-    freq_neigh(1:6, 1:6)
-
-Now we do the same for the time dimension
-
-    time_neigh = ones(numel(freqFIC.time));
-    time_neigh = time_neigh - triu(time_neigh,2) - tril(time_neigh,-2);
-
-    time_neigh(1:10, 1:10)
+As before, we can also specify neighbours for each of the search dimensions. TODO
 
 
-We can provide these two matrices as a cell array in `cfg.mvpa.neighbours` and
-then re-run the analysis.
 
-    cfg.mvpa.neighbours = {freq_neigh, time_neigh};
-    stat = ft_freqstatistics(cfg, freqFIC, freqFC);
-
-The analysis will take longer since the feature space is now
-3 freqs x 3 times = 9 times as large.
-
-What if we want to perform a classification for every time point only, using
-both the channels and the frequencies as features? This is as easy as simply
-setting `cfg.search = 'time'`. The feature space is now large
-(149 channels x 29 frequencies = 4321 features), so it is expedient to use a kernel-based
-classifier. For kernel classifiers, computation time is mostly affected by the number of samples
-rather than the number of features. We can use kernel FDA with a linear kernel,
-which is equivalent to LDA but is more efficient when the number of features
-is much larger than the number of samples.
-
-    cfg = [] ;  
-    cfg.method      = 'mvpa';
-    cfg.search      = 'time';
-    cfg.design      = [ones(nFIC,1); 2*ones(nFC,1)];
-    cfg.mvpa.classifier             = 'kernel_fda';
-    cfg.mvpa.hyperparameter.kernel  = 'linear';
-
-    stat = ft_freqstatistics(cfg, freqFIC, freqFC);
-
-
-#### Exercise 3
+### Exercise 4
 
 {% include markup/info %}
 Building on the previous example, perform an analysis for every frequency bin,
@@ -413,6 +368,35 @@ kernel is indeed faster than ordinary LDA by running the analysis for both
 classifiers and stopping the time using the `tic` and `toc` functions.
 {% include markup/end %}
 
+
+## Hyperparameters
+
+Many classifiers have parameters that control their properties and need to
+be set by the user, so-called *hyperparameters*. For a list of hyperparameters for each classifier, see the respective `train_`
+functions in the [model folder](https://github.com/treder/MVPA-Light/tree/master/model).
+The default values suffice for many scenarios, but sometimes you may want to manually change the parameters. 
+This can be easily done using the `hyperparameter` substruct. For instance, in Support
+Vector Machines (SVM), the type of kernel is a hyperparameter. If an RBF kernel is used the parameter `gamma` controls the
+kernel width
+
+
+    cfg.mvpa.hyperparameter           = [];
+    cfg.mvpa.hyperparameter.kernel    = 'rbf';
+    cfg.mvpa.hyperparameter.gamma     = 1;
+
+See [train_svm](https://github.com/treder/MVPA-Light/blob/master/model/train_svm.m) for a list of SVM hyperparameters and their default values.
+To give another example, in LDA the `lambda` parameter controls the amount of regularization of the covariance matrix.
+
+    cfg.hyperparameter           = [];
+    cfg.hyperparameter.lambda    = 'auto';
+
+See [train_lda](https://github.com/treder/MVPA-Light/blob/master/model/train_svm.m) for a list of LDA hyperparameters and their default values.
+
+### Exercise 5
+
+{% include markup/info %}
+For SVM, define a polynomial kernel of degree 3. Refer to [train_svm](https://github.com/treder/MVPA-Light/blob/master/model/train_svm.m) to find the corresponding names for the two hyperparameters you need to set.
+{% include markup/end %}
 
 
 <!--
