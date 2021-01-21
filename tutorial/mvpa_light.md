@@ -130,7 +130,7 @@ To obtain a realistic estimate of classifier performance and control for overfit
 - `cfg.mvpa.stratify`: if 1, the class proportions are approximately preserved in each test fold (default 1)
 - `cfg.mvpa.fold`: if cv='predefined', fold is a vector of length #samples that specifies the fold each sample belongs to
 
-The total number of training and testing iterations is equal to `cfg.k * cfg.repeat`. The result returned by `ft_timelockstatistics` is an average across the test folds.
+For k-fold cross-validation, the total number of training and testing iterations is equal to `cfg.k * cfg.repeat`. The result returned by `ft_timelockstatistics` is always the average across all test folds and repetitions.
 
 ### Exercise 1
 
@@ -387,8 +387,8 @@ kernel width
 See [train_svm](https://github.com/treder/MVPA-Light/blob/master/model/train_svm.m) for a list of SVM hyperparameters and their default values.
 To give another example, in LDA the `lambda` parameter controls the amount of regularization of the covariance matrix.
 
-    cfg.hyperparameter           = [];
-    cfg.hyperparameter.lambda    = 'auto';
+    cfg.mvpa.hyperparameter           = [];
+    cfg.mvpa.hyperparameter.lambda    = 'auto';
 
 See [train_lda](https://github.com/treder/MVPA-Light/blob/master/model/train_svm.m) for a list of LDA hyperparameters and their default values.
 
@@ -398,36 +398,73 @@ See [train_lda](https://github.com/treder/MVPA-Light/blob/master/model/train_svm
 For SVM, define a polynomial kernel of degree 3. Refer to [train_svm](https://github.com/treder/MVPA-Light/blob/master/model/train_svm.m) to find the corresponding names for the two hyperparameters you need to set.
 {% include markup/end %}
 
+## Preprocessing 
+
+In this example we look into preprocessing pipelines. Preprocessing
+includes demeaning, z-scoring, PCA, sample averaging, feature
+extraction methods such as PCA, and any other
+approaches that operate on the data prior to training.
+
+An important distinction is between _global_ vs _nested_ preprocessing: In _global_ preprocessing, an
+operation is applied to the whole dataset (including both train and
+test data) at once before classification is done. This holds the possibility 
+of information transfer between train and test set, 
+since the operation applied to the train data is affected by the properties 
+of the test data.
+
+Nested preprocessing avoids this by obtaining the parameters for an
+operation solely from the train data. The parameters (e.g. principal 
+components) extracted from the train set are then applied to the test 
+set. This assures that no information from the test set goes into the 
+preprocessing of the train data. Nested preprocessing can be triggered 
+by using the `cfg.mvpa.preprocess` field.
+Let us first copy-paste the code used for the classification of the ERP peak from the beginning
+of this tutorial
+
+    cfg = [] ;
+    cfg.method          = 'mvpa';
+    cfg.mvpa            = [];
+    cfg.mvpa.features   = 'chan';
+    cfg.mvpa.classifier = 'multiclass_lda';
+    cfg.mvpa.metric     = 'accuracy';
+    cfg.mvpa.k          = 3;
+    cfg.latency         = [0.5, 0.7];
+    cfg.avgovertime     = 'yes';
+    cfg.design          = [ones(nFIC,1); 2*ones(nFC,1); 3*ones(nIC,1)];
+
+To perform nested z-scoring, we add the following line
+
+    cfg.mvpa.preprocess = 'zscore';
+
+Nested z-scoring means that the means and standard deviations are calculated on the train data 
+and then applied to both the train and the test data. This assures that no information 
+from the test set flows into the processing of the train set. The available preprocessing functions 
+are listed in the [preprocess folder](https://github.com/treder/MVPA-Light/tree/master/preprocess) on the GitHub page. 
+You can specify an operation by omitting `mv_preprocess_`. For instance, the file `mv_preprocess_demean` corresponds to the string `'demean'`. 
+We can follow up the z-score with a Principal Components Analysis (PCA) by providing both strings as a cell array
+
+    cfg.mvpa.preprocess = {'zscore' 'pca'};
+
+Preprocessing functions also have parameters that change their behaviour. For instance, 
+in PCA the number of PCs is such a parameter. Its default value is 20. Studying the help of the PCA function
+
+    help mv_preprocess_pca
+
+we see that the parameter `n` controls the number of PCs. To change it, 
+you can use the `cfg.preprocess_param` field. Since our preprocessing pipeline contains 
+two operations `cfg.preprocess_param` is a cell array with two elements.
+PCA is the second preprocessing operation, so we need to set the second cell. We can provide parameters as key-value pairs. 
+For instance, to set the number of PCs `n = 10` we write:
+
+    cfg.mvpa.preprocess_param = {};
+    cfg.mvpa.preprocess_param{2} = {'n' 10};
+
+The [understanding preprocessing tutorial](https://github.com/treder/MVPA-Light/blob/master/examples/understanding_preprocessing.m) 
+on the GitHub page covers preprocessing in more detail. Although tutorial uses MVPA-Light directly, not through its FieldTrip interface, 
+you can translate the code into FieldTrip by replacing all instances of `cfg.preprocess` by `cfg.mvpa.preprocess`.
+
 
 <!--
-
-## Advanced topics
-
-In this section we address slightly more advanced topics that might become important
-once one starts using MVPA on a regular basis.
-
-### Hyperparameters
-
-Many classifiers have parameters that control their properties and need to
-be set by the user, so-called *hyperparameters*. For a list of hyperparameters for each classifier, see the respective train_
-functions in the [classifier folder](https://github.com/treder/MVPA-Light/tree/master/classifier).
-Hyperparameters can be set using the `param` substruct. For instance, in Support
-Vector Machines (SVM) the kernel is a hyperparameter and `gamma` controls the
-kernel width for an RBF kernel.
-
-
-    cfg.mvpa.param           = [];
-    cfg.mvpa.param.kernel    = 'rbf';
-    cfg.mvpa.param.gamma     = 1;
-
-See [train_svm](https://github.com/treder/MVPA-Light/blob/master/classifier/train_svm.m)) for a list of SVM hyperparameters and their default values.
-To give another example, in LDA the `lambda` parameter controls the amount of regularisation of the covariance matrix.
-
-    cfg.param           = [];
-    cfg.param.lambda    = 'auto';
-
-See [train_lda](https://github.com/treder/MVPA-Light/blob/master/classifier/train_svm.m)) for a list of LDA hyperparameters and their default values.
-In many cases the default values suffice.
 
 
 ### Unbalanced classes
