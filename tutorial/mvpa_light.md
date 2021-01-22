@@ -68,12 +68,12 @@ Let us unpack this:
 - `cfg.method = 'mvpa'` indicates that we want to perform multivariate pattern analysis using [MVPA-Light](https://github.com/treder/MVPA-Light).
 classification is performed for every time point (see section _Classification across time_).
 - `cfg.mvpa` is a struct that controls properties of the multivariate analysis including cross-validation settings, selection of the classifier and performance metrics. It is passed on to [MVPA-Light](https://github.com/treder/MVPA-Light).
-- `cfg.mvpa.features` indicates which of the data dimensions we want to use as features (channels in this case). The name should correspond to the name of the dimension in the `cfg.dimord` field. All data dimensions that are not samples or features are considered as _search dimensions_. A separate multivariate analysis is conducted for every coordinate in the search dimensions. For instance, imagine the dimensions of the data are [samples x chan x time]. If `cfg.features = 'chan'` then _time_ serves as a search dimension and a separate analysis is performed for every time point. If `cfg.features = 'time'` then _chan_ serves as the search dimension and a separate analysis is performed for every channel.
-- `cfg.mvpa.classifier` indicates which classifier we want to use. Here, we use multi-class Linear Discriminant Analysis (LDA).  [Click here](https://github.com/treder/MVPA-Light#classifiers-for-two-classes) for a full list of available classifiers.
-- `cfg.metric` indicates the metric we use to measure classifier performance. Here, _classification accuracy_ is used. Other metrics such as AUC and F1-score are available. [Click here](https://github.com/treder/MVPA-Light#classifier-performance-metrics) for a full list of available metrics.
+- `cfg.mvpa.features` indicates which of the data dimensions we want to use as features (channels in this case). The name should correspond to the name of the dimension in the `cfg.dimord` field. All data dimensions that are not samples or features are considered as _search dimensions_. A separate multivariate analysis is conducted for every coordinate in the search dimensions. For instance, imagine the dimensions of the data are _[samples x chan x time]_. If `cfg.features = 'chan'` then _time_ serves as a search dimension and a separate analysis is performed for every time point. If `cfg.features = 'time'` then _chan_ serves as the search dimension and a separate analysis is performed for every channel.
+- `cfg.mvpa.classifier` indicates which classifier we want to use. Here, we use multi-class Linear Discriminant Analysis (LDA).  [Click here](https://github.com/treder/MVPA-Light#classifiers-for-two-classes-) for a full list of available classifiers.
+- `cfg.metric` indicates the metric we use to measure classifier performance. Here, _classification accuracy_ is used. Other metrics such as AUC and F1-score are available. [Click here](https://github.com/treder/MVPA-Light#classification-performance-metrics-) for a full list of available metrics.
 - `cfg.mvpa.k` specifies the number of folds used to calculate the cross-validated performance. Cross-validation is explained in more detail in the next section.
 - `cfg.latency` restricts the classification analysis to a specific time window (here 0.5-0.7s).
-- `cfg.avgovertime` specifies whether the activity in latency window should be averaged prior to classification. If `'no'`, a separate - 
+- `cfg.avgovertime` specifies whether the activity in latency window should be averaged prior to classification. 
 - `cfg.design` specifies the vector of _class labels_. Class labels indicate which class (or experimental condition) trials belong to. The task of the classifier is to predict these class labels given the data. To this end, we create a vector with _1_'s for the trials belonging to class 1, _2_'s for trials
 belonging to class 2, and so on. The [MEG-language dataset](/faq/what_types_of_datasets_and_their_respective_analyses_are_used_on_fieldtrip),
 comprises three classes, namely FIC (class 1), FC (class 2), and IC (class 3). You can also use
@@ -141,7 +141,7 @@ useful to repeat the cross-validation multiple times? (hint: samples are randoml
 
 ## Search across time ('when')
 
-Many neuroimaging datasets have a 3-D structure (trials x channels x time). Classification across time can help identify the time points in a trial _when_ discriminative information shows up. To this end, classification is performed for each time point separately. First, we need to make sure that the time dimension is not averaged out. We can set `cfg.avgovertime = 'no'`, but since the default value is `'no'` we can simply omit this parameter.
+Many neuroimaging datasets have a 3-D structure _[trials x channels x time]_. Classification across time can help identify the time points in a trial _when_ discriminative information shows up. To this end, classification is performed for each time point separately. First, we need to make sure that the time dimension is not averaged out. We can set `cfg.avgovertime = 'no'`, but since the default value is `'no'` we can simply omit this parameter.
 
     cfg = [] ;  
     cfg.method           = 'mvpa';
@@ -166,7 +166,7 @@ It can be plotted as a function of time using
 For a slightly nicer plot, one can again use `mv_plot_result`. As a second parameter,
 we pass the time values to make sure that the x-axis is formatted correctly.
 
-    mv_plot_result(stat.mvpa, dataFC_LP.time{1})
+    mv_plot_result(stat.mvpa, stat.time)
 
 The resultant plot shows AUC across time in the trial. The shaded area
 is the standard deviation of the AUC metric across the different test sets in the
@@ -229,7 +229,7 @@ In the previous analysis, classification has been performed for each channel sep
 However, the spatial arrangement of MEG channels can be exploited in order to
  group neighbouring channels as features in the searchlight. To build the neighbourhood
 structure, we use
-[`ft_prepare_neighbours`](/faq/how_does_ft_prepare_neighbours_work/):
+`ft_prepare_neighbours`.
 
     cfg = [];
     cfg.method      = 'triangulation';
@@ -278,7 +278,7 @@ Notice the symmetry between the previous two analyses: for the 'when' analysis, 
     cfg.design        = [ones(nFIC,1); 2*ones(nFC,1)];
     stat = ft_timelockstatistics(cfg, dataFIC_LP, dataFC_LP)
 
-In this case, both channels and time points act as search dimensions and the result is a _chan x time_ matrix of classification accuracies. If we plot the result, we can see which of the channels carry discriminative information and when
+In this case, both channels and time points act as search dimensions and the result is a _[chan x time]_ matrix of classification accuracies. If we plot the result, we can see which of the channels carry discriminative information and when.
 
     mv_plot_result(stat.mvpa, stat.time)
     set(gca, 'YTick', 1:2:length(stat.label), 'YTickLabel', stat.label(1:2:end))
@@ -299,9 +299,9 @@ time x time classification, we only need to set the `cfg.generalize` parameter:
     stat = ft_timelockstatistics(cfg, dataFIC_LP, dataFC_LP);
 
 It returns a 2-D matrix of classification performances, with performance calculated for each combination of training time point and testing time point. We plot the
-result using [`mv_plot_result`](https://github.com/treder/MVPA-Light/blob/master/plot/mv_plot_result.m). As parameters, we pass the classification result and an additional parameter specifying the time axis.
+result using [`mv_plot_result`](https://github.com/treder/MVPA-Light/blob/master/plot/mv_plot_result.m). As parameters, we pass the classification result. To lay out the axes, we pass `stat.time` twice, once for the x-axis and once for the y-axis. 
 
-    mv_plot_result(stat.mvpa, dataFC_LP.time{1})
+    mv_plot_result(stat.mvpa, stat.time, stat.time)
 
 In the resultant plot, each row (corresponding to a value of on the y-axis)  corresponds to the
 time point at which the classifier was trained. Each point on the x-axis corresponds
@@ -312,8 +312,8 @@ to a time point at which the respective classifier was tested. The classifier at
 
 ## Classification of time-frequency data
 
-The techniques we explored for 3-D _samples x chan x time_ data seamlessly generalize to higher-dimensional datasets. 
-For instance, let us consider 4-D _samples x chan x freq x time_ data. We create such a dataset by performing a
+The techniques we explored for 3-D _[samples x chan x time]_ data seamlessly generalize to higher-dimensional datasets. 
+For instance, let us consider 4-D _[samples x chan x freq x time]_ data. We create such a dataset by performing a
 time-frequency analysis on the timelocked data (see [Time-frequency analysis using Hanning window, multitapers and wavelets](http://www.fieldtriptoolbox.org/tutorial/timefrequencyanalysis/)
  for details on time-frequency analysis).
 
@@ -346,14 +346,14 @@ we only need to set `cfg.mvpa.features = 'chan'`.
 
     mv_plot_result(stat.mvpa, stat.time, stat.freq)
 
-This yields a _freq x time_ matrix of classification accuracies. However, we are not limited 
+This yields a _[freq x time]_ matrix of classification accuracies. However, we are not limited 
 to a classification for every time-frequency point. A large array of different multivariate analyses can be realized by changing 
 the values of `cfg.mvpa.features`, let us look at some of the options:
 
-- `'time'`: if time serves as features, a search is performed across channels and frequencies. Therefore, the result is a _chan x freq_ matrix of classification accuracies.
-- `'freq'`: the result  _chan x time_ matrix of classification accuracies.
-- `[]`: in this case, a search is performed across all dimensions yielding a _chan x freq x time_ array.
-- `{'chan' 'freq'}`: multiple feature dimensions can be specified by providing a cell array. In this example, channels and frequencies are combined into a long feature vector and a classification is performed for every time point, yielding _time x 1_ vector.
+- `'time'`: if time serves as features, a search is performed across channels and frequencies. Therefore, the result is a _[chan x freq]_ matrix of classification accuracies.
+- `'freq'`: the result is a _[chan x time]_ matrix of classification accuracies.
+- `[]`: in this case, a search is performed across all dimensions yielding a _[chan x freq x time]_ array.
+- `{'chan' 'freq'}`: multiple feature dimensions can be specified by providing a cell array. In this example, channels and frequencies are combined into a long feature vector and a classification is performed for every time point, yielding _[time x 1]_ vector.
 
 As before, we can also specify neighbours for each of the search dimensions. TODO
 
@@ -459,6 +459,11 @@ For instance, to set the number of PCs `n = 10` we write:
     cfg.mvpa.preprocess_param = {};
     cfg.mvpa.preprocess_param{2} = {'n' 10};
 
+Finally, let's carry out the analysis.
+
+    stat = ft_timelockstatistics(cfg, dataFIC_LP, dataFC_LP, dataIC_LP)
+
+
 The [understanding preprocessing tutorial](https://github.com/treder/MVPA-Light/blob/master/examples/understanding_preprocessing.m) 
 on the GitHub page covers preprocessing in more detail. Although tutorial uses MVPA-Light directly, not through its FieldTrip interface, 
 you can translate the code into FieldTrip by replacing all instances of `cfg.preprocess` by `cfg.mvpa.preprocess`.
@@ -483,11 +488,10 @@ TODO
 
 ## Summary
 
-In this tutorial, classification across time, searchlight analysis, and time generalization
-(time x time classification) were used to pinpoint _where_ and _when_ there is discriminative
-information within MEG trials. It is worth stressing that searchlight analysis and classification across time yield complementary information: in searchlight analysis,
-the time points serve as features and classification is performed for each channel separately.
-In classification across time, the channels serve as features and classification is performed for each time point separately.
+In this tutorial, we explored the usage of [MVPA-Light](https://github.com/treder/MVPA-Light) for the classification 
+of time-locked and time-frequency data. By setting the parameters `cfg.mvpa.features` and `cfg.mvpa.generalize` 
+cross-validated multivariate analyses can be flexibly designed. We further investigated the setting of hyperparameters 
+and the addition of a nested preprocessing pipeline.
 
 <!--
 TODO:
