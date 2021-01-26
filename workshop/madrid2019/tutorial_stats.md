@@ -51,7 +51,7 @@ states.
 To test the difference between the baseline and moderate sedative states, we use
 data for all subjects that has been preprocessed and for which the power spectra
 have been computed. You can download
-[freq_resting.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/madrid2019/tutorial_stats/freq_resting.mat)
+[freq_resting.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/madrid2019/tutorial_stats/freq_resting.mat)
 from our FTP server. The MATLAB file contains four data structures, one for each
 sedation level.
 
