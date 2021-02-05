@@ -2729,7 +2729,7 @@ A detailed description of each function is available in the [reference documenta
 **cfg.spikesel** - [ft_spiketriggeredspectrum_stat](/reference/ft_spiketriggeredspectrum_stat)  
 
 
-**cfg.split** - [ft_denoise_prewhiten](/reference/ft_denoise_prewhiten)  
+**cfg.split** - [ft_componentanalysis](/reference/ft_componentanalysis), [ft_denoise_prewhiten](/reference/ft_denoise_prewhiten)  
 
 
 **cfg.spm.cost_fun** - [ft_volumerealign](/reference/ft_volumerealign)  

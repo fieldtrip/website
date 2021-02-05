@@ -14,16 +14,21 @@ title: ft_componentanalysis
  FT_PREPROCESSING or from FT_TIMELOCKANALYSIS.
 
  The configuration should contain
-   cfg.method       = 'runica', 'fastica', 'binica', 'pca', 'svd', 'jader', 'varimax', 'dss', 'cca', 'sobi', 'white' or 'csp' (default = 'runica')
-   cfg.channel      = cell-array with channel selection (default = 'all'), see FT_CHANNELSELECTION for details
+   cfg.method       = 'runica', 'fastica', 'binica', 'pca', 'svd', 'jader',
+                      'varimax', 'dss', 'cca', 'sobi', 'white' or 'csp' 
+                      (default = 'runica')
+   cfg.channel      = cell-array with channel selection (default = 'all'),
+                      see FT_CHANNELSELECTION for details
+   cfg.split        = cell-array of channel types between which covariance
+                      is split, it can also be 'all' or 'no' (default = 'no')
    cfg.trials       = 'all' or a selection given as a 1xN vector (default = 'all')
    cfg.numcomponent = 'all' or number (default = 'all')
    cfg.demean       = 'no' or 'yes', whether to demean the input data (default = 'yes')
    cfg.updatesens   = 'no' or 'yes' (default = 'yes')
    cfg.feedback     = 'no', 'text', 'textbar', 'gui' (default = 'text')
 
- The runica method supports the following method-specific options. The values that
- these options can take can be found with HELP RUNICA.
+ The runica method supports the following method-specific options. The
+ values that these options can take can be found with HELP RUNICA.
    cfg.runica.extended
    cfg.runica.pca
    cfg.runica.sphering
@@ -42,8 +47,8 @@ title: ft_componentanalysis
    cfg.runica.logfile
    cfg.runica.interput
 
- The fastica method supports the following method-specific options. The values that
- these options can take can be found with HELP FASTICA.
+ The fastica method supports the following method-specific options. The 
+ values that these options can take can be found with HELP FASTICA.
    cfg.fastica.approach
    cfg.fastica.numOfIC
    cfg.fastica.g
@@ -70,8 +75,8 @@ title: ft_componentanalysis
    cfg.fastica.dewhiteMat
    cfg.fastica.only
 
- The binica method supports the following method-specific options. The values that
- these options can take can be found with HELP BINICA.
+ The binica method supports the following method-specific options. The
+ values that these options can take can be found with HELP BINICA.
    cfg.binica.extended
    cfg.binica.pca
    cfg.binica.sphering
@@ -89,13 +94,13 @@ title: ft_componentanalysis
    cfg.binica.momentum
 
  The dss method requires the following method-specific option and supports
- a whole lot of other options. The values that these options can take can be
- found with HELP DSS_CREATE_STATE.
+ a whole lot of other options. The values that these options can take can 
+ be found with HELP DSS_CREATE_STATE.
    cfg.dss.denf.function
    cfg.dss.denf.params
 
- The sobi method supports the following method-specific options. The values that
- these options can take can be found with HELP SOBI.
+ The sobi method supports the following method-specific options. The 
+ values that these options can take can be found with HELP SOBI.
    cfg.sobi.n_sources
    cfg.sobi.p_correlations
 
