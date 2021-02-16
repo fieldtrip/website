@@ -13,8 +13,8 @@ export GEM_HOME="/home/mrphys/roboos/.rvm/gems/ruby-2.5.3"
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 # this runs from a cron-job, so paths are not set as in an interactive terminal
+rvm use ruby-2.5.3
 GIT=/usr/bin/git
-BUNDLE=$HOME/.rvm/rubies/ruby-2.5.3/bin/bundle
 CP=/usr/bin/cp
 
 LOCKFILE=$HOME/website.lock
