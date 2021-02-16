@@ -17,11 +17,11 @@ If there is no information listed for a potential workshop below, then we don't 
 
 We are considering and/or concretely planning to have FieldTrip workshops in
 
--   currently nothing is planned
+-   2021, [MEG/EEG toolkit](/workshop/toolkit2021) - (online) Nijmegen, NL
 
 Previous FieldTrip workshops took place at
 
--   2020, [MEG/EEG toolkit](/workshop/toolkit2020) - Nijmegen, NL
+-   2020, [MEG/EEG toolkit](/workshop/toolkit2020) - (online) Nijmegen, NL
 -   2019, [PracticalMEEG in Paris](/workshop/paris2019) - combined with BrainStorm and MNE-Python
 -   2019, [EEG workshop](/workshop/oslo2019) - Oslo, Norway
 -   2019, [Oxford, UK](/workshop/oxford2019) - Oxford, UK
