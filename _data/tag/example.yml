@@ -1,6 +1,9 @@
 - name:  Example script for leadfield based on FEM headmodel
   link:  /development/project/example_fem
 
+- name:  Example MATLAB scripts
+  link:  /example
+
 - name:  Align EEG electrode positions to BEM headmodel
   link:  /example/align_eeg_electrode_positions_to_bem_headmodel
 
@@ -55,14 +58,14 @@
 - name:  Common filters in beamforming
   link:  /example/common_filters_in_beamforming
 
+- name:  Compute forward simulated data using ft_dipolesimulation
+  link:  /example/compute_forward_simulated_data
+
 - name:  Compute forward simulated data and apply a beamformer scan
   link:  /example/compute_forward_simulated_data_and_apply_a_beamformer_scan
 
 - name:  Compute forward simulated data and apply a dipole fit
   link:  /example/compute_forward_simulated_data_and_apply_a_dipole_fit
-
-- name:  Compute forward simulated data using ft_dipolesimulation
-  link:  /example/compute_forward_simulated_data
 
 - name:  Compute forward simulated data with the low-level ft_compute_leadfield
   link:  /example/compute_leadfield
@@ -94,11 +97,11 @@
 - name:  Analysis of high-gamma band signals in human ECoG
   link:  /example/ecog_ny
 
-- name:  Computing and reporting the effect size
-  link:  /example/effectsize
-
 - name:  Effects of tapering for power estimates
   link:  /example/effects_of_tapering_for_power_estimates_in_the_frequency_domain
+
+- name:  Computing and reporting the effect size
+  link:  /example/effectsize
 
 - name:  Performing modified Multiscale Entropy (mMSE) analysis on EEG/MEG/LFP data
   link:  /example/entropy_analysis
@@ -150,9 +153,6 @@
 
 - name:  Making your own trialfun for conditional trial definition
   link:  /example/making_your_own_trialfun_for_conditional_trial_definition
-
-- name:  Example MATLAB scripts
-  link:  /example
 
 - name:  Measuring the timing delay and jitter for a real-time application
   link:  /example/measuring_the_timing_delay_and_jitter_for_a_real-time_application
