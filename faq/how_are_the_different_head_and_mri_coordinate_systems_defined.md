@@ -41,6 +41,7 @@ Imaging methods such as MRI and CT result in 3-D volumetric representations of t
 | CapTrak            | mm    | RAS         | approximately between the ears              |                                                                                                           |                              |
 | Chieti ITAB        | mm    | RAS         | between the ears                            | native                                                                                                    |                              |
 | DICOM              | mm    | LPS         |                                             | native                                                                                                    |                              |
+| EEGLAB             | mm    | ALS         | between the ears                            | native                                                                                                    |                              |
 | FreeSurfer         | mm    | RAS         | center of isotropic 1 mm 256x256x256 volume |                                                                                                           |                              |
 | MNI                | mm    | RAS         | anterior commissure                         | scaled to match averaged template                                                                         |                              |
 | NIfTI              | mm    | RAS         | scanner origin (centre of gradient coil)    | see [here](https://brainder.org/2012/09/23/the-nifti-file-format/), search for "Orientation information". |                              |
@@ -137,9 +138,9 @@ The **ITAB** coordinate system is expressed in meter, with the principal (X, Y, 
 - Z-axis from the origin upwards orthogonal to the XY-plane
 - Origin: Intersection of the line through LPA and RPA and a line orthogonal to L passing through the nasion.
 
-## Details of the CTF coordinate system
+## Details of the CTF and EEGLAB coordinate system
 
-The **CTF** coordinate system is expressed in centimeter (except the MRI, which is expressed in millimeter), with the principal (X, Y, Z) axes going through fiducials placed on external landmarks. The fiducials are small coils that prior to the MEG measurement are placed on the landmarks. At the DCCN we usually place them on nasion and on a tube that extends from the left and right ear canal, see [here](/faq/how_are_the_lpa_and_rpa_points_defined) for details. Although the left and right ear markers do not always correspond to the definition of the pre-auricular points (which is in front of the ear), they are commonly referred to in the CTF system as LPA and RPA. The definition of the coordinate system is
+The **CTF** coordinate system is expressed in centimeter (except the MRI, which is expressed in millimeter), with the principal (X, Y, Z) axes going through fiducials placed on external landmarks. The fiducials are small coils that prior to the MEG measurement are placed on the landmarks. At the DCCN we usually place them on nasion and on a tube that extends from the left and right ear canal, see [here](/faq/how_are_the_lpa_and_rpa_points_defined) for details. Although the left and right ear markers do not always correspond to the definition of the pre-auricular points (which is in front of the ear), they are commonly referred to in the CTF system as LPA and RPA. The **EEGLAB** coordinate system is identical to the CTF coordinate system except that it is expressed in millimeters. The definition of the coordinate system is
 
 - the origin is exactly between LPA and RPA
 - the X-axis goes towards NAS
