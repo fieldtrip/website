@@ -138,9 +138,9 @@ The **ITAB** coordinate system is expressed in meter, with the principal (X, Y, 
 - Z-axis from the origin upwards orthogonal to the XY-plane
 - Origin: Intersection of the line through LPA and RPA and a line orthogonal to L passing through the nasion.
 
-## Details of the CTF and EEGLAB coordinate system
+## Details of the CTF coordinate system
 
-The **CTF** coordinate system is expressed in centimeter (except the MRI, which is expressed in millimeter), with the principal (X, Y, Z) axes going through fiducials placed on external landmarks. The fiducials are small coils that prior to the MEG measurement are placed on the landmarks. At the DCCN we usually place them on nasion and on a tube that extends from the left and right ear canal, see [here](/faq/how_are_the_lpa_and_rpa_points_defined) for details. Although the left and right ear markers do not always correspond to the definition of the pre-auricular points (which is in front of the ear), they are commonly referred to in the CTF system as LPA and RPA. The **EEGLAB** coordinate system is identical to the CTF coordinate system except that it is expressed in millimeters. The definition of the coordinate system is
+The **CTF** coordinate system is expressed in centimeter (except the MRI, which is expressed in millimeter), with the principal (X, Y, Z) axes going through fiducials placed on external landmarks. The fiducials are small coils that prior to the MEG measurement are placed on the landmarks. At the DCCN we usually place them on nasion and on a tube that extends from the left and right ear canal, see [here](/faq/how_are_the_lpa_and_rpa_points_defined) for details. Although the left and right ear markers do not always correspond to the definition of the pre-auricular points (which is in front of the ear), they are commonly referred to in the CTF system as LPA and RPA. The definition of the coordinate system is
 
 - the origin is exactly between LPA and RPA
 - the X-axis goes towards NAS
@@ -158,6 +158,15 @@ The **CTF** coordinate system is expressed in centimeter (except the MRI, which 
 - z increases from inferior to superior
 
 See [this page](http://dicomiseasy.blogspot.com/2013/06/getting-oriented-using-image-plane.html) for more information about the DICOM coordinate system.
+
+## Details of the EEGLAB coordinate system
+
+The **EEGLAB** coordinate system is identical to the CTF coordinate system (see above), except that it is always expressed in millimeters. 
+
+- the origin is exactly between LPA and RPA
+- the X-axis goes towards NAS
+- the Y-axis goes approximately towards LPA, orthogonal to X and in the plane spanned by the fiducials
+- the Z-axis goes approximately towards the vertex, orthogonal to X and Y
 
 ## Details of the FreeSurfer coordinate system
 
