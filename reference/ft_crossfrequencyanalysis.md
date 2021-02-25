@@ -47,8 +47,9 @@ title: ft_crossfrequencyanalysis
                      'plv' - phase locking value
                      'mvl' - mean vector length
                      'mi'  - modulation index
+                     'pac' - phase amplitude coupling
 
- The modulation index implements
+ The modulation index and phase amplitude coupling implement
    Tort A. B. L., Komorowski R., Eichenbaum H., Kopell N. (2010). Measuring Phase-Amplitude
    Coupling Between Neuronal Oscillations of Different Frequencies. J Neurophysiol 104:
    1195?1210. doi:10.1152/jn.00106.2010

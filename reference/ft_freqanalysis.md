@@ -119,6 +119,30 @@ title: ft_freqanalysis
  defined as: st = 1/(2*pi*sf)
 
 
+ SUPERLET performs time-frequency analysis on any time series trial data using the
+ 'wavelet method' based on a frequency-wise combination of Morlet wavelets of varying cycle 
+ widths (see Moca et al. 2019, https://doi.org/10.1101/583732).
+   cfg.foi                 = vector 1 x numfoi, frequencies of interest
+       OR
+   cfg.foilim              = [begin end], frequency band of interest
+   cfg.toi                 = vector 1 x numtoi, the times on which the analysis
+                             windows should be centered (in seconds)
+   cfg.superlet.basewidth  = 'width', or number of cycles, of the base wavelet (default = 3)
+   cfg.superlet.gwidth     = determines the length of the used wavelets in standard
+                             deviations of the implicit Gaussian kernel and should
+                             be choosen >= 3; (default = 3)
+   cfg.superlet.combine    = 'additive', 'multiplicative' (default = 'additive')
+                             determines if cycle numbers of wavelets comprising a superlet 
+                             are chosen additively or multiplicatively
+   cfg.superlet.order      = vector 1 x numfoi, superlet order, i.e. number of combined 
+                             wavelets, for individual frequencies of interest.
+
+ The standard deviation in the frequency domain (sf) at frequency f0 is
+ defined as: sf = f0/width
+ The standard deviation in the temporal domain (st) at frequency f0 is
+ defined as: st = 1/(2*pi*sf)
+
+
  TFR performs time-frequency analysis on any time series trial data using the
  'wavelet method' based on Morlet wavelets. Using convolution in the time domain
  instead of multiplication in the frequency domain.
