@@ -6,14 +6,14 @@
 export PATH="$PATH:$HOME/.rvm/bin"
 export PATH="$PATH:$HOME/.rvm/rubies/ruby-2.5.3/bin"
 export PATH="$PATH:$HOME/.rvm/gems/ruby-2.5.3/bin"
-export GEM_PATH="/home/mrphys/roboos/.rvm/gems/ruby-2.5.3:/home/mrphys/roboos/.rvm/gems/ruby-2.5.3@global"
-export GEM_HOME="/home/mrphys/roboos/.rvm/gems/ruby-2.5.3"
+export GEM_PATH="$HOME/.rvm/gems/ruby-2.5.3:$HOME/.rvm/gems/ruby-2.5.3@global"
+export GEM_HOME="$HOME/.rvm/gems/ruby-2.5.3"
 
 # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+rvm use ruby-2.5.3
 
 # this runs from a cron-job, so paths are not set as in an interactive terminal
-rvm use ruby-2.5.3
 GIT=/usr/bin/git
 CP=/usr/bin/cp
 
