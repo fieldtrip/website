@@ -74,9 +74,9 @@ Note that the eog, jump and muscle detection functions are all just wrappers aro
 
 More information about automatic detection of artifacts is found in the [automatic artifact rejection](/tutorial/automatic_artifact_rejection) tutorial.
 
-### Removing artifacts from the data
+### Rejecting segments with artifacts from the data data 
 
-If you use manual or automatic detection of time segments that contain an artifact, you usually would proceed to reject those segments from subsequent analysis with **[ft_rejectartifact](https://github.com/fieldtrip/fieldtrip/blob/release/ft_rejectartifact.m)**. FieldTrip supports variable trial length data, which allows you to reject only those pieces of data containing the artifact, keeping the rest of the trial. This is especially useful if your experiment consists of very long trials.
+If you use manual or automatic detection of segments that contain an artifact, you usually would proceed to reject those segments from subsequent analysis with **[ft_rejectartifact](https://github.com/fieldtrip/fieldtrip/blob/release/ft_rejectartifact.m)**. FieldTrip supports variable trial length data, which allows you to reject only those pieces of data containing the artifact, keeping the rest of the trial. This is especially useful if your experiment consists of very long trials.
 
 ## Subtracting spatial/temporal/spectral aspects of data reflecting artifacts
 
@@ -88,7 +88,9 @@ Another commonly used approach is to make a linear decomposition of the data usi
 
 ### Removing artifacts from the data
 
-If you use ICA to detect artifacts, you usually would proceed with projecting the decomposed data (excluding the artifact components) back to the sensor level. This is done with **[ft_rejectcomponent](https://github.com/fieldtrip/fieldtrip/blob/release/ft_rejectcomponent.m)**.
+If artifacts are represented at specific frequency bands which differ from those of interest, e.g. the artifacts are at very low frequencies or ar 50 Hz, then you can use a temporal filter in **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)**.
+
+If you use ICA to detect artifacts, you usually would proceed with projecting the decomposed data (excluding the artifact components) back to the sensor level. This is done with **[ft_rejectcomponent](https://github.com/fieldtrip/fieldtrip/blob/release/ft_rejectcomponent.m)** and allows you to do spatial filtering.
 
 The following example scripts explain how to use ICA to detect and remove [EOG](/example/use_independent_component_analysis_ica_to_remove_eog_artifacts) and [ECG](/example/use_independent_component_analysis_ica_to_remove_ecg_artifacts) artifacts.
 
