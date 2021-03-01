@@ -51,8 +51,8 @@ title: ft_volumerealign
                         'spm'         match to template anatomical MRI
                         'fsl'         match to template anatomical MRI
    cfg.coordsys       = string specifying the origin and the axes of the coordinate
-                        system. Supported coordinate systems are 'ctf', '4d',
-                        'bti', 'yokogawa', 'asa', 'itab', 'neuromag', 'acpc',
+                        system. Supported coordinate systems are 'ctf', '4d', 'bti', 
+                        'eeglab', 'neuromag', 'itab', 'yokogawa', 'asa', 'acpc',
                         and 'paxinos'. See http://tinyurl.com/ojkuhqz
    cfg.clim           = [min max], scaling of the anatomy color (default
                         is to adjust to the minimum and maximum)

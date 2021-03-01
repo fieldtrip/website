@@ -35,14 +35,12 @@ title: ft_virtualchannel
    cfg.parcel = string, or cell-array of strings, specifying for which
                   parcels to return the output. (default = 'all')
 
- The values within a parcel or parcel-combination can be combined with different methods:
-   'mean'      compute the mean
-   'median'    compute the median (unsupported for fields that are represented in a cell-array)
-   'eig'       compute the largest eigenvector
-   'min'       take the minimal value
-   'max'       take the maximal value
-   'maxabs'    take the signed maxabs value
-   'std'       take the standard deviation
+ Moreover, the cfg structure can contain
+   cfg.method = string, determines how the components of the specified virtual
+                channel(s) are to to be combined. 'svd' (default), 'none', 'pca', 
+                'runica', 'fastica', 'dss'.
+   cfg.numcomponent = scalar (or 'all'), determines the number of components per virtual
+                channel in the output. (default = 1)
 
- See also FT_SOURCEANALYSIS, FT_DATATYPE_PARCELLATION, FT_DATATYPE_SEGMENTATION
+ See also FT_SOURCEANALYSIS, FT_DATATYPE_PARCELLATION, FT_DATATYPE_SEGMENTATION, FT_SOURCEPARCELLATE, FT_COMPONENTANALYSIS
 ```
