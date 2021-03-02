@@ -1,9 +1,9 @@
 ---
-title: Introduction - dealing with artifacts
+title: Introduction on dealing with artifacts
 tags: [tutorial, artifact, preprocessing, eeg, meg]
 ---
 
-# Introduction - dealing with artifacts
+# Introduction on dealing with artifacts
 
 This tutorial explains the general approach on how to deal with artifacts in FieldTrip.
 
@@ -13,7 +13,7 @@ Since FieldTrip supports the data of many different acquisition systems, the par
 At the end of an automated procedure, consider always to visual inspect your data, after rejection.
 {% include markup/end %}
 
-## Background - What is an artifact?
+## Background
 
 Generally speaking, an artifact (or artefact) is some unexpected or unwanted feature in the data that we acquired with our EEG or MEG system. Artifacts can be physiological or non-physiological in origin.
 
