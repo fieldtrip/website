@@ -124,7 +124,7 @@
 - name:  References to implemented methods
   link:  /references_to_implemented_methods
 
-- name:  Introduction - dealing with artifacts
+- name:  Introduction on dealing with artifacts
   link:  /tutorial/artifacts
 
 - name:  Cluster-based permutation tests on time-frequency data
