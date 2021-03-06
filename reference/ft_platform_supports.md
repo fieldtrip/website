@@ -39,6 +39,7 @@ title: ft_platform_supports
    'uimenu'                        uimenu(...)
    'weboptions'                    weboptions(...)
    'parula'                        parula(...)
+   'datetime'                      datetime structure
    'html'                          html rendering in desktop
 
  See also FT_VERSION, VERSION, VER, VERLESSTHAN

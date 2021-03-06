@@ -10,7 +10,7 @@ by Chennu et al. (2015) was converted to the Brain Imaging Data Structure (BIDS)
 
 The BIDS background is explained on <http://bids.neuroimaging.io>, details on the specification can be found on <https://bids-specification.readthedocs.io/>.
 
-This conversion makes use of the **[data2bids](/reference/data2bids)** function to convert the data and to write the associated metadata to the accompanying TSV and JSON files. The converted data in the BIDS organization is available from our [FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/madrid2019/extra/complete_resting_data/).
+This conversion makes use of the **[data2bids](https://github.com/fieldtrip/fieldtrip/blob/release/data2bids.m)** function to convert the data and to write the associated metadata to the accompanying TSV and JSON files. The converted data in the BIDS organization is available from our [FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/madrid2019/extra/complete_resting_data/).
 
 ```
 sourcedata = '/Volumes/Samsung T3/data/eeg-sedation/sourcedata';
@@ -89,7 +89,7 @@ for i=1:length(datainfo)
 
   % these details should go in the dataset_description.json file
   cfg.dataset_description.Name                = 'Research data supporting ''Brain connectivity during propofol sedation''';
-  cfg.dataset_description.Authors             = {'Chennu, S.', 'O’Connor, S.', 'Adapa, R.', 'Menon, D. K.', 'Bekinschtein, T. A.'};
+  cfg.dataset_description.Authors             = {'Chennu, S.', 'O'Connor, S.', 'Adapa, R.', 'Menon, D. K.', 'Bekinschtein, T. A.'};
   cfg.dataset_description.KeyWords            = {'Consciousness', 'Electroencephalography', 'Sedation', 'Propofol', 'Brain Connectivity'};
   cfg.dataset_description.ReferencesAndLinks  = {'http://dx.doi.org/10.1371/journal.pcbi.1004669', 'https://www.repository.cam.ac.uk/handle/1810/252736'};
   cfg.dataset_description.Abstract            = 'Accurately measuring the neural correlates of consciousness is a grand challenge for neuroscience. Despite theoretical advances, developing reliable brain measures to track the loss of reportable consciousness during sedation is hampered by significant individual variability in susceptibility to anaesthetics. We addressed this challenge using high-density electroencephalography to characterise changes in brain networks during propofol sedation. Assessments of spectral connectivity networks before, during and after sedation were combined with measurements of behavioural responsiveness and drug concentrations in blood. Strikingly, we found that participants who had weaker alpha band networks at baseline were more likely to become unresponsive during sedation, despite registering similar levels of drug in blood. In contrast, phase-amplitude coupling between slow and alpha oscillations correlated with drug concentrations in blood. Our findings highlight novel markers that prognosticate individual differences in susceptibility to propofol and track drug exposure. These advances could inform accurate drug titration and brain state monitoring during anaesthesia.';

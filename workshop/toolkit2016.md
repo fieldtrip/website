@@ -13,7 +13,7 @@ The code in line 1604-1606 in ft_volumerealign.m should be commented out to work
 
 {% include markup/end %}
 
-On April 18-21, 2016 we will host the "Toolkit of Cognitive Neuroscience: advanced data analysis and source modelling of EEG and MEG data" at the Donders Institute in Nijmegen.
+On April 18-21, 2016 we will host the "Toolkit of Cognitive Neuroscience: advanced data analysis and source modeling of EEG and MEG data" at the Donders Institute in Nijmegen.
 
 This intense 4-day toolkit course will teach you advanced MEG and EEG data analysis skills. Preprocessing, frequency analysis, source reconstruction, connectivity and various statistical methods will be covered. The toolkit will consist of a number of lectures, followed by hands-on sessions in which you will be tutored through the complete analysis of a MEG data set using the FieldTrip toolbox. The lectures and tutoring will be provided by the core FieldTrip development team, and there will also be plenty of opportunity to interact and ask questions to us about your research and data. On the final day you will have the opportunity to work on your own dataset under supervision of the tutors.
 

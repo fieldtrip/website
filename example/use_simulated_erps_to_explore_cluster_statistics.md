@@ -10,7 +10,7 @@ The following code starts off with an ERP in two conditions, where it is slightl
 {% include markup/info %}
 See this paper for more details
 
-Maris E., Oostenveld R. //[Nonparametric statistical testing of EEG- and MEG-data.](http://www.ncbi.nlm.nih.gov/sites/entrez?Db=pubmed&Cmd=ShowDetailView&TermToSearch=17517438)// J Neurosci Methods. 2007 Apr 10;
+Maris E., Oostenveld R. [Nonparametric statistical testing of EEG- and MEG-data.](http://www.ncbi.nlm.nih.gov/sites/entrez?Db=pubmed&Cmd=ShowDetailView&TermToSearch=17517438) J Neurosci Methods. 2007 Apr 10;
 
 and look in the [reference](/references_to_implemented_methods) section for more literature pointers.
 {% include markup/end %}
@@ -43,13 +43,13 @@ and look in the [reference](/references_to_implemented_methods) section for more
     %%
 
     cfg = [];
-    cfg.keeptrials = 'yes';
-    timelock1 = ft_timelockanalysis(cfg, data1);
-    timelock2 = ft_timelockanalysis(cfg, data2);
+    cfg.keeptrials = 'no';
+    avg1 = ft_timelockanalysis(cfg, data1);
+    avg2 = ft_timelockanalysis(cfg, data2);
 
     figure
     cfg = [];
-    ft_singleplotER(cfg, timelock1, timelock2);
+    ft_singleplotER(cfg, avg1, avg2);
     legend({'condition 1', 'condition 2'})
 
     %%
@@ -57,15 +57,21 @@ and look in the [reference](/references_to_implemented_methods) section for more
     cfg = [];
     cfg.operation = 'x1-x2';
     cfg.parameter = 'avg';
-    difference = ft_math(cfg, timelock1, timelock2);
+    difference = ft_math(cfg, avg1, avg2);
 
     figure
     cfg = [];
     ft_singleplotER(cfg, difference);
     legend({'difference'})
 
-
     %%
+
+    % for the statistics we need the variance over the individual trials
+    cfg = [];
+    cfg.keeptrials = 'yes';
+    timelock1 = ft_timelockanalysis(cfg, data1);
+    timelock2 = ft_timelockanalysis(cfg, data2);
+
 
     cfg = [];
     cfg.design = [ 1*ones(1,100) 2*ones(1,100) ];
@@ -75,6 +81,7 @@ and look in the [reference](/references_to_implemented_methods) section for more
     cfg.correctm = 'cluster';
     cfg.numrandomization = 2000;
     % cfg.neighbours = []; % only cluster over time, not over channels
+    cfg.spmversion = 'spm12'; % the default spm8 has mex file problems on recent macOS versions
     stat = ft_timelockstatistics(cfg, timelock1, timelock2);
 
     %%

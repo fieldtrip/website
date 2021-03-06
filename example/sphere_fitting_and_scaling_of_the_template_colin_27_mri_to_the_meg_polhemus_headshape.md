@@ -14,12 +14,12 @@ This example script demonstrates how to fit a sphere to the MEG Polhemus recorde
     load standard_mri % Colin 27 template in fieldtrip
 
     % read MEG sensor location
-    MEG_sens = ft_read_sens('/nashome1/wexu/MNE_data/CN/MEG/CN19/CN19_raw_tsss_mc.fif');
-    MEG_sens = ft_convert_units(MEG_sens,'mm');
+    MEG_sens = ft_read_sens('/nashome1/wexu/MNE_data/CN/MEG/CN19/CN19_raw_tsss_mc.fif', 'senstype', 'meg');
+    MEG_sens = ft_convert_units(MEG_sens, 'mm');
 
     % read polhemus headshape
     headshape = ft_read_headshape('/nashome1/wexu/MNE_data/CN/MEG/CN19/CN19_raw_tsss_mc.fif');
-    headshape    = ft_convert_units(headshape,'mm');
+    headshape = ft_convert_units(headshape, 'mm');
 
     save headshape headshape
     save MEG_sens MEG_sens

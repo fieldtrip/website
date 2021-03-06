@@ -1,12 +1,12 @@
 ---
 title: Getting started with CTF data
-tags: [ctf, meg, dataformat]
+tags: [dataformat, ctf, meg]
 ---
 
 # Getting started with CTF data
 
 {% include markup/success %}
-The company based in Coquitlam (BC, Canada) making these MEG systems was initially called CTF, later renamed to VSM-MedTech, then operated as MISL (MEG International Services), and now goes with the name CTF again. We refer to all incarnations of these MEG systems with "CTF".  
+The company based in Coquitlam (BC, Canada) making these MEG systems was initially called CTF, later renamed to VSM-MedTech, then operated as MISL (MEG International Services Ltd.), and now goes with the name CTF again. We refer to all of these incarnations with "CTF".
 {% include markup/end %}
 
 ## Introduction
@@ -44,14 +44,14 @@ You should not store any scripts or mat files in the xxx.ds folder. When analyzi
 
 ## Set path
 
-To get started, you should add the FieldTrip main directory to your path, and execute the **[ft_defaults](/reference/ft_defaults)** function, which sets the defaults and configures up the minimal required path settings. See also this [frequently asked question](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path).
+To get started, you should add the FieldTrip main directory to your path, and execute the **[ft_defaults](https://github.com/fieldtrip/fieldtrip/blob/release/ft_defaults.m)** function, which sets the defaults and configures up the minimal required path settings. See also this [frequently asked question](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path).
 
     addpath <path_to_fieldtrip>
     ft_defaults
 
 ## Reading MEG data
 
-To analyze your CTF MEG data in FieldTrip, you would usually start by calling high-level functions such as **[ft_definetrial](/reference/ft_definetrial)** or **[ft_preprocessing](/reference/ft_preprocessing)** (see the [tutorial documentation](/tutorial)). These functions read the raw MEG data by calling low-level functions such as **[ft_read_header](/reference/ft_read_header)** and **[ft_read_data](/reference/ft_read_data)**.
+To analyze your CTF MEG data in FieldTrip, you would usually start by calling high-level functions such as **[ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_definetrial.m)** or **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** (see the [tutorial documentation](/tutorial)). These functions read the raw MEG data by calling low-level functions such as **[ft_read_header](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_header.m)** and **[ft_read_data](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_data.m)**.
 The header and data are in different files, and the data itself can be split over multiple 2GB files. You specify the combination of files as a dataset, i.e. with the directory
 
     cfg.dataset = 'Subject01.ds';
@@ -62,7 +62,7 @@ To get started with reading your CTF MEG data into FieldTrip, it might be a good
 
 ### Read header
 
-The **[ft_read_header](/reference/ft_read_header)** function reads header information and represents it in a common data-independent
+The **[ft_read_header](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_header.m)** function reads header information and represents it in a common data-independent
 format. It takes the dataset filename as input. Alternatively, you can directly specify the header file.
 
 To read the header from the tutorial dataset, use
@@ -90,7 +90,7 @@ Make sure that the header information is correctly read.
 
 ### Read data
 
-The **[ft_read_data](/reference/ft_read_data)** function reads the CTF MEG data and represents it in a common data-independent format. It takes the dataset filename as input. Alternatively, you can directly specify the data file.
+The **[ft_read_data](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_data.m)** function reads the CTF MEG data and represents it in a common data-independent format. It takes the dataset filename as input. Alternatively, you can directly specify the data file.
 
 To read the data from the tutorial dataset, use
 
@@ -101,7 +101,7 @@ or
     dat = ft_read_data('Subject01.ds/Subject01.meg4');
 
 This returns a 3-D matrix of size Nchans*Nsamples*Ntrials: 187x900x266 in case of the tutorial data, which is a trial-based dataset. In case of continuous data, this function returns a 2-D matrix of size Nchans\*Nsamples.
-Additional options should be specified in key-value pairs (see **[ft_read_data](/reference/ft_read_data)**). When only the filename is specified, all data in the dataset will be read. To only read the first 3 trials from channels 5-9, us
+Additional options should be specified in key-value pairs (see **[ft_read_data](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_data.m)**). When only the filename is specified, all data in the dataset will be read. To only read the first 3 trials from channels 5-9, us
 
     dat = ft_read_data('Subject01.ds', 'begtrial', 1, 'endtrial', 3, 'chanindx', [5:9]);
 
@@ -113,7 +113,7 @@ You can explicitly specify the data format (also [see below](#Specifying the low
 
 ### Preprocessing
 
-After checking that the low-level reading functions successfully read your CTF dataset, you are ready to start working with the high-level FieldTrip functions, such as **[ft_preprocessing](/reference/ft_preprocessing)**. To preprocess the tutorial data, us
+After checking that the low-level reading functions successfully read your CTF dataset, you are ready to start working with the high-level FieldTrip functions, such as **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)**. To preprocess the tutorial data, us
 
     cfg=[];
     cfg.dataset = 'Subject01.ds';
@@ -142,7 +142,7 @@ The default low-level reading functions for the MEG data are the functions suppl
     cfg.headerformat = 'ctf_old'
     cfg.dataformat   = 'ctf_old'
 
-in **[ft_preprocessing](/reference/ft_preprocessing)** or in any of the other FieldTrip functions that reads the data from disk.
+in **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** or in any of the other FieldTrip functions that reads the data from disk.
 Other dataformat options include 'ctf_ds', 'ctf_meg4' and 'ctf_res4'.
 
 ### Reading 64-channel CTF data
@@ -151,9 +151,9 @@ The old 64-channel CTF datasets are not supported in the native CTF reading func
 
 ## Reading events
 
-Usually, you would call **[ft_definetrial](/reference/ft_definetrial)** to select pieces of data around those events in the data that interest you, either using a generic definition or using your own “trialfun”. The trialfunction calls the low-level reading function **[ft_read_event](/reference/ft_read_event)**. The **[ft_read_event](/reference/ft_read_event)** function reads event information and represents it in a common data-independent format. It takes the dataset filename as input. Alternatively, you can directly specify the data file.
+Usually, you would call **[ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_definetrial.m)** to select pieces of data around those events in the data that interest you, either using a generic definition or using your own “trialfun”. The trialfunction calls the low-level reading function **[ft_read_event](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_event.m)**. The **[ft_read_event](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_event.m)** function reads event information and represents it in a common data-independent format. It takes the dataset filename as input. Alternatively, you can directly specify the data file.
 
-**[ft_read_event](/reference/ft_read_event)** reads the triggers from the trigger channels in the MEG dataset (.meg4), and if available classified trials from the classification file (ClassFile.cls) and markers from the marker file (MarkerFile.mrk), and combines all the available events into one structure. For more information on events, triggers and trials refer to the [faq](/faq/what_is_the_relation_between_events_such_as_triggers_and_trials?).
+**[ft_read_event](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_event.m)** reads the triggers from the trigger channels in the MEG dataset (.meg4), and if available classified trials from the classification file (ClassFile.cls) and markers from the marker file (MarkerFile.mrk), and combines all the available events into one structure. For more information on events, triggers and trials refer to the [faq](/faq/what_is_the_relation_between_events_such_as_triggers_and_trials?).
 
 To read the events from the [tutorial data](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip), use
 
@@ -193,7 +193,7 @@ So please be aware that "frontpanel" and "backpanel" are Donders conventions tha
 
 ## Reading headmodels
 
-Single sphere and multi sphere headmodels can be prepared using the CTF software MRIViewer and the CTF command-line utility localSpheres. Both CTF programs will write the headmodel to a .hdm file. The .hdm headmodel files can be read using **[ft_read_headmodel](/reference/ft_read_headmodel)** and visualized using **[ft_plot_headmodel](/reference/ft_plot_headmodel)**. Alternative to using the CTF software, you can also use the FieldTrip function **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)** to create MEG headmodels.
+Single sphere and multi sphere headmodels can be prepared using the CTF software MRIViewer and the CTF command-line utility localSpheres. Both CTF programs will write the headmodel to a .hdm file. The .hdm headmodel files can be read using **[ft_read_headmodel](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_headmodel.m)** and visualized using **[ft_plot_headmodel](https://github.com/fieldtrip/fieldtrip/blob/release/plotting/ft_plot_headmodel.m)**. Alternative to using the CTF software, you can also use the FieldTrip function **[ft_prepare_headmodel](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_headmodel.m)** to create MEG headmodels.
 
 For example, to read and plot the single sphere model produced with CTF software for the [tutorial data](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip), use
 
@@ -225,11 +225,11 @@ Anatomical MRI files can be converted into CTF compatible data using the CTF sof
 - Mark the fiducials: left and right ear and nasion; they should reflect the location of the MEG coils
 - Save the changes in the .mri file
 
-The .mri file can be read into FieldTrip using **[ft_read_mri](/reference/ft_read_mri)**. To read the mri file of the [tutorial data](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip), use
+The .mri file can be read into FieldTrip using **[ft_read_mri](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_mri.m)**. To read the mri file of the [tutorial data](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip), use
 
     mri = ft_read_mri('Subject01.mri');
 
-The FieldTrip mri can be visualized using **[ft_sourceplot](/reference/ft_sourceplot)**,
+The FieldTrip mri can be visualized using **[ft_sourceplot](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceplot.m)**,
 
     cfg = [];
     figure

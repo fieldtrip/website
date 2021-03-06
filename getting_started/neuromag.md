@@ -1,9 +1,9 @@
 ---
 title: Getting started with Neuromag/Elekta/Megin data
-tags: [elekta, neuromag, megin, dataformat, meg]
+tags: [dataformat, neuromag, elekta, megin, meg]
 ---
 
-# Getting started with Neuromag//Megin data
+# Getting started with Neuromag/Elekta/Megin data
 
 {% include markup/success %}
 The company based in Helsinki (Finland) making these MEG systems started as Neuromag, and later was acquired by Elekta, a much larger Swedish company. Since 2018 it operates under the name Megin and now is part of [Croton Healthcare](https://crotonhealthcare.com) (which also happens to be the parent company of York Instruments). We usually refer to these systems as "Neuromag" systems.
@@ -19,7 +19,7 @@ Note that the MEG-PD toolbox will only function on 32-bit machines, and requires
 
 ## Set Path
 
-To get started, you need to add the paths where the FieldTrip and MNE toolboxes can be found. You should add the FieldTrip main directory to your path, and execute the **[ft_defaults](/reference/ft_defaults)** function, which sets the defaults and configures up the minimal required path settings. See also this [frequently asked question](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path).
+To get started, you need to add the paths where the FieldTrip and MNE toolboxes can be found. You should add the FieldTrip main directory to your path, and execute the **[ft_defaults](https://github.com/fieldtrip/fieldtrip/blob/release/ft_defaults.m)** function, which sets the defaults and configures up the minimal required path settings. See also this [frequently asked question](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path).
 
     addpath <path_to_fieldtrip>
     ft_defaults
@@ -28,7 +28,7 @@ To get started, you need to add the paths where the FieldTrip and MNE toolboxes 
 
 The first step is to see if you can read in the data using both the toolboxes by typing the following in the command window:
 
-    >> hdr = ft_read_header(filename); %your fif-filename
+    >> hdr = ft_read_header(filename); % your fif-filename
     >> hdr
 
     hdr =

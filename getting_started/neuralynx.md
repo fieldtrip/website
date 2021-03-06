@@ -1,6 +1,6 @@
 ---
 title: Getting started with Neuralynx data
-tags: [neuralynx, lfp, spike, dataformat]
+tags: [dataformat, neuralynx, lfp, spike]
 ---
 
 # Getting started with Neuralynx data
@@ -22,7 +22,7 @@ Neuralynx also writes a raw data file (.nrd) in which all the channels are sampl
 
 ## Set Path
 
-To get started, you should add the FieldTrip main directory to your path, and execute the **[ft_defaults](/reference/ft_defaults)** function, which sets the defaults and configures up the minimal required path settings. See also this [frequently asked question](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path).
+To get started, you should add the FieldTrip main directory to your path, and execute the **[ft_defaults](https://github.com/fieldtrip/fieldtrip/blob/release/ft_defaults.m)** function, which sets the defaults and configures up the minimal required path settings. See also this [frequently asked question](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path).
 
     addpath <path_to_fieldtrip>
     ft_defaults
@@ -54,9 +54,9 @@ This returns the content of a single-channel file as a MATLAB structure.
 
 ## Working with a complete dataset
 
-To facilitate working with multichannel recordings, FieldTrip has an additional layer on top of the low level Neuralynx file reading functions. The idea is that all files belonging to a single recording are located in a single directory, which represents the "dataset" as a whole. The FieldTrip functions **[ft_read_header](/reference/ft_read_header)**, **[ft_read_data](/reference/ft_read_data)**, **[ft_read_event](/reference/ft_read_event)** operate on the LFP and spike files in the dataset directory.
+To facilitate working with multichannel recordings, FieldTrip has an additional layer on top of the low-level Neuralynx file reading functions. The idea is that all files belonging to a single recording are located in a single directory, which represents the "dataset" as a whole. The FieldTrip functions **[ft_read_header](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_header.m)**, **[ft_read_data](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_data.m)**, **[ft_read_event](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_event.m)** operate on the LFP and spike files in the dataset directory.
 
-The LFP files are used for setting the sample "time" axis. If you only have spike files during a recording, you cannot merge them automatically. Merging is done by reading the LFP files (.nsc), determining the first and last timestamp, and subsequently the spikes are represented as "1" in an other wise "0" channel. So the spike and LFP channels are jointly represented by **[ft_read_data](/reference/ft_read_data)** in a nchan X nsamples matrix. This is also how the FieldTrip high level **[ft_preprocessing](/reference/ft_preprocessing)** function accesses the collection of LFP and spike channels in the dataset.
+The LFP files are used for setting the sample "time" axis. If you only have spike files during a recording, you cannot merge them automatically. Merging is done by reading the LFP files (.nsc), determining the first and last timestamp, and subsequently the spikes are represented as "1" in an other wise "0" channel. So the spike and LFP channels are jointly represented by **[ft_read_data](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_data.m)** in a nchan X nsamples matrix. This is also how the FieldTrip high-level **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** function accesses the collection of LFP and spike channels in the dataset.
 
     >> ls dataset/
     Events.Nev  csc01.ncs  csc02.ncs  csc03.ncs  sc1.nse    sc2.nse
@@ -78,7 +78,7 @@ The LFP files are used for setting the sample "time" axis. If you only have spik
 
 You can see from the header that some additional fields are included, such as the filename (needed to link a channel label to the corresponding file), the first timestamp, the last timestamp and the number of timestamps per channel.
 
-It might be that you first only want to process the LFP channels and keep the spike channels separate. You can do that using the **[ft_read_spike](/reference/ft_read_spike)** function and the **[ft_appendspike](/reference/ft_appendspike)** function.
+It might be that you first only want to process the LFP channels and keep the spike channels separate. You can do that using the **[ft_read_spike](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_spike.m)** function and the **[ft_appendspike](https://github.com/fieldtrip/fieldtrip/blob/release/ft_appendspike.m)** function.
 
 ## Regarding events
 
@@ -95,3 +95,5 @@ The events.nev file (which you probably use) only contains timestamps and not sa
 ## See also
 
 {% include seealso tag="neuralynx" %}
+
+- [Data File Formats](https://support.neuralynx.com/hc/en-us/articles/360040444811-TechTip-Neuralynx-Data-File-Formats) explained by Neuralynx

@@ -511,7 +511,7 @@ Biosemi BDF data should always be off-line referenced to one of the electrodes t
     cfg.elec = elec;
     source2 = ft_dipolefitting(cfg, before);
 
-    % plot timecourses of both dipoles
+    % plot time courses of both dipoles
     figure; hold;
     plot(source2.time, source2.dip.mom(1:3,:), '-')
     plot(source2.time, source2.dip.mom(4:6,:), ':')

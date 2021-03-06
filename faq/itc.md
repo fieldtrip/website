@@ -1,26 +1,27 @@
 ---
 title: How can I compute inter-trial coherence?
-tags: [faq, freq]
+tags: [faq, coherence]
 ---
 
 # How can I compute inter-trial coherence?
 
-Inter-trial coherence is a measure of phase consistency over trials. It is not a connectivity measure, as it does not relate the phase in one channel to that of another channel. You can compute it following frequency decomposition of your data. You can use cfg.method='mtmfft', 'mtmconvol' or 'wavelet, but in either case you should use cfg.output='fourier'. Here is an example
+Inter-trial coherence (ITC, also referred to as inter-trial phase-locking factor) is a measure of phase consistency over trials (typically within the range of zero to one). An ITC value close to 0 reflects high variability of phase angles across trials. It is not a connectivity measure, as it does not relate the phase in one channel to that of another channel. You can compute it following frequency decomposition of your data.
+You can use cfg.method='mtmfft', 'mtmconvol' or 'wavelet, but in either case you should use cfg.output='fourier'. Here is an example:
 
-    cfg = [];
+    cfg        = [];
     cfg.numtrl = 100
-    data = ft_freqsimulation(cfg); % simulate some data
+    data       = ft_freqsimulation(cfg); % simulate some data
 
-    cfg = [];
+    cfg        = [];
     cfg.method = 'wavelet';
     cfg.toi    = 0:0.01:1;
     cfg.output = 'fourier';
-    freq = ft_freqanalysis(cfg, data);
+    freq       = ft_freqanalysis(cfg, data);
 
     % make a new FieldTrip-style data structure containing the ITC
     % copy the descriptive fields over from the frequency decomposition
 
-    itc = [];
+    itc           = [];
     itc.label     = freq.label;
     itc.freq      = freq.freq;
     itc.time      = freq.time;
@@ -52,6 +53,9 @@ Finally we can plot it, just like a regular time-frequency representation
     imagesc(itc.time, itc.freq, squeeze(itc.itlc(1,:,:)));
     axis xy
     title('inter-trial linear coherence');
+
+
+For interpretation of the ITC metric, we recommend the following paper for caveats: van Diepen, R. M., & Mazaheri, A. (2018). _The caveats of observing inter-trial phase-coherence in cognitive neuroscience._ Scientific reports, 8(1), 1-9. 
 
 ### Reference
 

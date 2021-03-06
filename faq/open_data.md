@@ -1,17 +1,21 @@
 ---
 title: Where can I find open access MEG/EEG data?
-tags: [faq, dataset]
+tags: [faq, dataset, sharing]
 ---
 
 # Where can I find open access MEG/EEG data?
 
 {% include markup/warning %}
-Feel free to hit the **edit** button to share links to other open access datasets here.
+Feel free to hit the **edit** button at the bottom of this page to add more links to other open access datasets.
 {% include markup/end %}
 
 The FieldTrip tutorials include a lot of smaller datasets that are available for download. These datasets are listed in [this frequently asked question](/faq/what_types_of_datasets_and_their_respective_analyses_are_used_on_fieldtrip).
 
-Note that other MEG/EEG data analysis toolboxes like SPM, MNE, EEGLAB and BrainStorm also share tutorial datasets.
+On the [Donders Repository](https://data.donders.ru.nl/collections/published), [OpenNeuro](https://openneuro.org), [DataDryad](https://datadryad.org/stash/) and on [Zenodo](https://zenodo.org) you can find many publicly accessible EEG, MEG and fMRI datasets.
+
+On [DataCite](https://search.datacite.org) and on [Google Dataset Search](https://datasetsearch.research.google.com) you san search for datasets that are hosted in publicly accessible repositories.
+
+Other MEG/EEG data analysis toolboxes like SPM, MNE, EEGLAB and BrainStorm also share tutorial datasets.
 
 ## Other MEG datasets
 
@@ -25,15 +29,33 @@ The [Kymata Atlas](https://kymata-atlas.org) also shares datasets with electroma
 
 Wakeman and Henson have shared [A multi-subject, multi-modal human neuroimaging dataset](http://www.nature.com/articles/sdata20151) that includes raw MEG and EEG data from 16 subjects. This data also forms the basis for the SPM documentation.
 
+The [Mother Of Unification Studies (MOUS) dataset](https://doi.org/10.34973/37n0-yc51) contains MEG and fMRI data acquired from 204 healthy human subjects during rest and while they performed a language task. During the language task they processed linguistic utterances that either consisted of normal or scrambled sentences. Half of the subjects were reading the stimuli, the other half listened to the stimuli. The resting state measurements consisted of 5 minutes eyes-open for the MEG and 7 minutes eyes-closed for fMRI. The neuroimaging data, as well as the information about the experimental events are shared according to the Brain Imaging Data Structure (BIDS) format.
+
 ## Other EEG datasets
 
+The [FieldTrip made easy](https://doi.org/10.3389/fnins.2018.00711) paper includes [high-density EEG data](https://doi.org/10.34973/fkgz-8d22) from 29 healthy human participants, recorded in an auditory steady state responses (ASSR) paradigm. The data collection contains not only all data, but also the analysis scripts to reproduce the results presented in the paper.
+
+From the lab of Steve Luck and Emily Kappenman you can download the [ERP CORE](https://erpinfo.org/erp-core), a freely available online resource consisting of optimized paradigms, experiment control scripts, example data from 40 participants, data processing pipelines and analysis scripts, and a broad set of results for 7 different ERP components obtained from 6 different ERP paradigms: N170 (Face Perception Paradigm), MMN (Passive Auditory Oddball Paradigm), N2pc (Simple Visual Search Paradigm), N400 (Word Pair Judgement Paradigm), P3b (Active Visual Oddball Paradigm), LRP and ERN (Flankers Paradigm).
+
 The [BNCI Horizon 2020 consortium](http://bnci-horizon-2020.eu/database/data-sets) hosts a repository of datasets from brain-computer interface (BCI) and decoding experiments available for free download. The datasets include EEG, fNIRS, and ECoG data collected mainly by the consortium partners in several European countries.
+
+The [National Sleep Research Resource](https://sleepdata.org) website links to a large collection of sleep EEG datasets.
+
+The Child Mind Institute provides both raw and preprocessed EEG data in the [Multimodal Resource for Studying Information Processing in the Developing Brain (MIPDB) dataset](http://fcon_1000.projects.nitrc.org/indi/cmi_eeg/eeg.html). This includes data from subject in different age ranges from 9 years up to 44 years. The Child Mind Institute also shares EEG data from more than 600 subjects in the [Healthy Brain Network dataset](http://fcon_1000.projects.nitrc.org/indi/cmi_healthy_brain_network/index.html).
+
+The Max Planck Institut in Leipzig shares the [LEMON Mind-Brain-Body Dataset](http://fcon_1000.projects.nitrc.org/indi/retro/MPI_LEMON.html) which includes data from 228 healthy participants comprising a young (N=154, range 20–35 years) and an elderly group (N=74, range 59–77 years). During a two-day assessment, participants completed 3T MRI and a 62-channel EEG experiment at rest.
+
+On [Physionet](https://physionet.org/about/database/#neuro) you can find a list of clinical and cognitive EEG datasets, plus also various other ExG and physiological datasets. They are especially useful when developing and/or testing new data analysis methods.
+
+On the [BNCI Horizon 2020](http://bnci-horizon-2020.eu) project page you can find more than 25 well-documented [datasets for BCI research](http://bnci-horizon-2020.eu/database/data-sets).
 
 The [Brain Signals](http://www.brainsignals.de) website has a list of references to shared EEG data sets.
 
 Arno Delorme maintains a list of [Open EEG datasets](https://sccn.ucsd.edu/~arno/fam2data/publicly_available_EEG_data.html).
 
 Brad Voytek maintains a list of [Open Datasets in Human Electrophysiology](https://github.com/voytekresearch/OpenData).
+
+NeuroTechX maintains a list of [Open EEG datasets](https://github.com/NeuroTechX/awesome-bci#brain-databases).
 
 ## Other ECoG datasets
 
@@ -42,3 +64,5 @@ Kahana and Rizutto have released [EGoG data from 251 subjects](http://memory.psy
 ## Other LFP and spike datasets
 
 A collection of intracranial animal datasets is shared on the [Collaborative Research in Computational Neuroscience](http://crcns.org/) data sharing website.
+
+The [DANDI Archive](https://gui.dandiarchive.org/#/) of the BRAIN Initiative contains shared cellular neurophysiology data.

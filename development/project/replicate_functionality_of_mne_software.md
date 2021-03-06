@@ -16,7 +16,7 @@ MNE is a software package that is developed in the A. A. Martinos Center for Bio
 
 ##### What is FreeSurfer?
 
-FreeSurfer is a software for the study of cortical and subcortical anatomy. Among other functions, it constructs models of the boundary between white matter and cortical gray matter as well as the pial surface. The surfaces can be inflated or flattened for improved visualisation. The surfaces can be also used to constrain the solutions to inverse EEG and MEG problems.
+FreeSurfer is a software for the study of cortical and subcortical anatomy. Among other functions, it constructs models of the boundary between white matter and cortical gray matter as well as the pial surface. The surfaces can be inflated or flattened for improved visualization. The surfaces can be also used to constrain the solutions to inverse EEG and MEG problems.
 
 ## Overview
 

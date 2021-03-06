@@ -13,7 +13,7 @@ Geometrical objects have the units expressed in the "unit" field of the data str
 
 Raw data structures with EEG or MEG data may include the "hdr" field, which is the header of the original data file. The header can contain the "chanunit" subfield. The channel unit can be something like "V" or "uV" for EEG channels, and "T" or "fT" for MEG magnetometers.
 
-Your EEG or MEG data structures may also contain sensor descriptions, which may have the chanunit field (especially relevant for Neuromag/Elekta data) and the unit field. Planar gradiometers in the Neuromag/Elekta system have "T/m" or "T/cm" as units (field per distance), although axial gradiometer data in the CTF system is expressed as "T" (field difference between bottom and top coil, not divided by the distance).
+Your EEG or MEG data structures may also contain sensor descriptions, which may have the chanunit field (especially relevant for Neuromag/Elekta/MEGIN data) and the unit field. Planar gradiometers in the Neuromag/Elekta/MEGIN system have "T/m" or "T/cm" as units (field per distance), although axial gradiometer data in the CTF system is expressed as "T" (field difference between bottom and top coil, not divided by the distance).
 
 {% include markup/warning %}
 If you want to ensure that all computations are done correctly, you should ensure that all physical quantities are expressed according to the [International System of Units](https://en.wikipedia.org/wiki/International_System_of_Units) (SI). That means: meter, volt, tesla, ohm, amperes, kilogram, etc.

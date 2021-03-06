@@ -5,9 +5,10 @@ title: ft_version
  FT_VERSION returns the version of FieldTrip and the path where it is installed
 
  FieldTrip is not released with version numbers as "2.0", "2.1", etc. Instead, we
- share our development version on http://github.com/fieldtrip/fieldtrip. You can
- use git to make a local version of the repository. Furthermore, we make daily
- releases of the code available as zip file on our FTP server.
+ share our development version on http://github.com/fieldtrip/fieldtrip. You can use
+ git to make a local clone of the development version. Furthermore, we make
+ more-or-less daily releases of the code available on
+ https://github.com/fieldtrip/fieldtrip/releases and as zip file on our FTP server.
 
  If you use git with the development version, the version is labeled with the hash
  of the latest commit like "128c693". You can access the specific version "XXXXXX"

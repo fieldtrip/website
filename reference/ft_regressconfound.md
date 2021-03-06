@@ -22,8 +22,7 @@ title: ft_regressconfound
  The following configuration options are supported:
    cfg.reject      = vector, [1 X Nconfounds], listing the confounds that
                      are to be rejected (default = 'all')
-   cfg.normalize   = string, 'yes' or 'no', normalization to
-                     make the confounds orthogonal (default = 'yes')
+   cfg.normalize   = string, 'yes' or 'no', normalizing confounds (default = 'yes')
    cfg.output      = 'residual' (default), 'beta', or 'model'.
                      If 'residual' is specified, the output is a data
                      structure containing the residuals after regressing

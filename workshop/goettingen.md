@@ -1,8 +1,8 @@
 ---
-title: FieldTrip workshop in Göttingen
+title: FieldTrip workshop in Göttingen in 2014
 ---
 
-# FieldTrip workshop in Göttingen
+# FieldTrip workshop in Göttingen in 2014
 
 ## Where
 

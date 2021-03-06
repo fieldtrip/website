@@ -1,6 +1,9 @@
 - name:  MEG dataformats
   link:  /dataformat/meg
 
+- name:  Connectivity estimates for EEG/MEG time series data
+  link:  /development/module/connectivity
+
 - name:  CTF
   link:  /development/realtime/ctf
 
@@ -19,6 +22,9 @@
 - name:  Interpolating data from the CTF151 to the CTF275 sensor array using megrealign
   link:  /example/megrealign
 
+- name:  Use denoising source separation (DSS) to remove ECG artifacts
+  link:  /example/use_denoising_source_separation_dss_to_remove_ecg_artifacts
+
 - name:  Use independent component analysis (ICA) to remove ECG artifacts
   link:  /example/use_independent_component_analysis_ica_to_remove_ecg_artifacts
 
@@ -30,6 +36,15 @@
 
 - name:  Can I use Octave instead of MATLAB?
   link:  /faq/can_i_use_octave_instead_of_matlab
+
+- name:  Can I compare EEG channels between different electrode caps?
+  link:  /faq/capmapping
+
+- name:  How should I specify the fiducials for electrode realignment?
+  link:  /faq/fiducial
+
+- name:  How are electrodes, magnetometers or gradiometers described?
+  link:  /faq/how_are_electrodes_magnetometers_or_gradiometers_described
 
 - name:  How are the Left and Right Pre-Auricular (LPA and RPA) points defined?
   link:  /faq/how_are_the_lpa_and_rpa_points_defined
@@ -55,6 +70,9 @@
 - name:  How can I fix a corrupt CTF res4 header file?
   link:  /faq/how_can_i_fix_a_corrupt_ctf_res4_header_file
 
+- name:  How can I inspect the electrode impedances of my data?
+  link:  /faq/how_can_i_inspect_the_electrode_impedances_of_my_data
+
 - name:  How can I interpret the different types of padding in FieldTrip?
   link:  /faq/how_can_i_interpret_the_different_types_of_padding_that_i_find_when_dealing_with_artifacts
 
@@ -69,6 +87,9 @@
 
 - name:  How does the filter padding in preprocessing work?
   link:  /faq/how_does_the_filter_padding_in_preprocessing_work
+
+- name:  How should I report the positions of the fiducial points on the head?
+  link:  /faq/how_should_i_report_the_positions_of_the_fiducial_points_on_the_head
 
 - name:  I am getting strange artifacts in figures that use opacity
   link:  /faq/i_am_getting_strange_artifacts_in_figures_that_use_opacity
@@ -106,10 +127,7 @@
 - name:  Getting started with CTF data
   link:  /getting_started/ctf
 
-- name:  Human ECoG
-  link:  /getting_started/human_ecog
-
-- name:  Introduction - dealing with artifacts
+- name:  Introduction on dealing with artifacts
   link:  /tutorial/artifacts
 
 - name:  Automatic artifact rejection
@@ -134,6 +152,9 @@
   link:  /tutorial/networkanalysis
 
 - name:  Whole brain connectivity and network analysis
+  link:  /tutorial/networkanalysis_eeg
+
+- name:  Whole brain connectivity and network analysis
   link:  /tutorial/networkanalysis_old
 
 - name:  Preprocessing of EEG data and computing ERPs
@@ -146,7 +167,7 @@
   link:  /tutorial/visual_artifact_rejection
 
 - name:  Simulating and estimating, what about model (mis)match?
-  link:  /workshop/chieti/simulation
+  link:  /workshop/chieti2015/simulation
 
 - name:  FieldTrip connectivity demo
   link:  /workshop/meg-uk-2015/fieldtrip-connectivity-demo

@@ -6,18 +6,20 @@ tags: [example, bids, sharing, emg]
 # Converting an example EMG dataset for sharing in BIDS
 
 {% include markup/danger %}
-BIDS does currently not specify how to represent EMG recordings. This example - and the support that is implemented in the **[data2bids](/reference/data2bids)** function - should be considered as a preliminary proposal to help researchers with their existing data. This example may also serve to start a discussion on whether and how this data type should be added to the [BIDS specification](http://bids-specification.readthedocs.io/).  
+BIDS does currently not specify how to represent EMG recordings. This example - and the support that is implemented in the **[data2bids](https://github.com/fieldtrip/fieldtrip/blob/release/data2bids.m)** function - should be considered as a preliminary proposal to help researchers with their existing data. This example may also serve to start a discussion on whether and how this data type should be added to the [BIDS specification](http://bids-specification.readthedocs.io/).  
 {% include markup/end %}
 
 EMG is often recorded along with other experiments, such as MEG or functional MRI recordings, but can also be recorded by itself. EMG can for example be used to check compliance with the task, to detect movements and compute reaction times, or to check the activation pattern of specific muscles in a task.
 
-EMG is not part as an individual data type in the BIDS specification. In the **[data2bids](/reference/data2bids)** function we are mostly treating it similar to EEG data, with only some differences in the metadata. E.g., the `EEGPlacementScheme`, `CapManufacturer`, and `CapManufacturersModelName` do not apply.  Other than that, we have implemented it the same, with the same data formats and the same way to code events.
+EMG is not part as an individual data type in the BIDS specification. In the **[data2bids](https://github.com/fieldtrip/fieldtrip/blob/release/data2bids.m)** function we are mostly treating it similar to EEG data, with only some differences in the metadata. E.g., the `EEGPlacementScheme`, `CapManufacturer`, and `CapManufacturersModelName` do not apply.  Other than that, we have implemented it the same, with the same data formats and the same way to code events.
 
 ## Example
 
+{% include markup/success %}
 The example data is available from our [FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/example/bids_emg/)
+{% include markup/end %}
 
-The examples includes the original log files under the “original” directory. It also has a copy of the script to do the conversion under “code”. The reorganized data is under the “bids” directory. According to [the documentation](https://bids-specification.readthedocs.io/en/stable/02-common-principles.html#source-vs-raw-vs-derived-data) the original data can be added to the BIDS dataset under the “sourcedata” directory and code can be added to the “code” directory. This way no information is lost and the conversion/reorganization is fully reproducible.
+The example includes the original log files under the “original” directory. It also has a copy of the script to do the conversion under “code”. The reorganized data is under the “bids” directory. According to [the documentation](https://bids-specification.readthedocs.io/en/stable/02-common-principles.html#source-vs-raw-vs-derived-data) the original data can be added to the BIDS dataset under the “sourcedata” directory and code can be added to the “code” directory. This way no information is lost and the conversion/reorganization is fully reproducible.
 
 In general: if your original data is in a different format than the BIDS representation (e.g. DICOMs instead of NIfTI, or data from an EMG system in an unsupported format), you might want to keep the sourcedata, e.g. on a data acquisition collection on the Donders Repository. If it is in the same format (as here), you could simply delete the copy in sourcedata. Your own analyses and the sharing of the data would be based on the BIDS representation.
 

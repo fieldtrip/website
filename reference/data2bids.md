@@ -21,7 +21,7 @@ title: data2bids
  and/or realigned and defaced anatomical MRI to disk.
 
  The configuration structure should contains
-   cfg.method       = string, can be 'decorate', 'convert' or 'copy', see below (default is automatic)
+   cfg.method       = string, can be 'decorate', 'copy' or 'convert', see below (default is automatic)
    cfg.dataset      = string, filename of the input data
    cfg.outputfile   = string, optional filename for the output data (default is automatic)
    cfg.writejson    = string, 'yes', 'replace', 'merge' or 'no' (default = 'yes')
@@ -56,7 +56,7 @@ title: data2bids
    cfg.ses                     = string, optional session name
    cfg.run                     = number, optional
    cfg.task                    = string, task name is required for functional data
-   cfg.datatype                = string, can be any of 'FLAIR', 'FLASH', 'PD', 'PDT2', 'PDmap', 'T1map', 'T1rho', 'T1w', 'T2map', 'T2star', 'T2w', 'angio', 'bold', 'bval', 'bvec', 'channels', 'coordsystem', 'defacemask', 'dwi', 'eeg', 'epi', 'events', 'fieldmap', 'headshape', 'ieeg', 'inplaneT1', 'inplaneT2', 'magnitude', 'magnitude1', 'magnitude2', 'meg', 'phase1', 'phase2', 'phasediff', 'photo', 'physio', 'sbref', 'stim'
+   cfg.datatype                = string, can be any of 'FLAIR', 'FLASH', 'PD', 'PDT2', 'PDmap', 'T1map', 'T1rho', 'T1w', 'T2map', 'T2star', 'T2w', 'angio', 'audio', 'bold', 'bval', 'bvec', 'channels', 'coordsystem', 'defacemask', 'dwi', 'eeg', 'emg', 'epi', 'events', 'exg', 'eyetracker', 'fieldmap', 'headshape', 'ieeg', 'inplaneT1', 'inplaneT2', 'magnitude', 'magnitude1', 'magnitude2', 'meg', 'motion', 'nirs', 'phase1', 'phase2', 'phasediff', 'photo', 'physio', 'sbref', 'stim', 'video'
    cfg.acq                     = string
    cfg.ce                      = string
    cfg.rec                     = string
@@ -68,10 +68,9 @@ title: data2bids
  When specifying the output directory in cfg.bidsroot, you can also specify
  additional information to be added as extra columns in the participants.tsv and
  scans.tsv files. For example:
-   cfg.participant.age         = scalar
-   cfg.participant.sex         = string, 'm' or 'f'
+   cfg.participants.age        = scalar
+   cfg.participants.sex        = string, 'm' or 'f'
    cfg.scans.acq_time          = string, should be formatted according to  RFC3339 as '2019-05-22T15:13:38'
-   cfg.dataset_description     = structure with additional fields, see below
  In case any of these values is specified as empty (i.e. []) or as nan, it will be
  written to the tsv file as 'n/a'.
 
@@ -108,6 +107,10 @@ title: data2bids
  FT_DATATYPE_SENS as an "elec" field in the input data, or you can specify it as
  cfg.elec or you can specify a filename with electrode information.
    cfg.elec                    = structure with electrode positions or filename, see FT_READ_SENS
+ For NIRS data you can specify an optode definition according to
+ FT_DATATYPE_SENS as an "opto" field in the input data, or you can specify
+ it as cfg.opto or you can specify a filename with optode information.
+   cfg.opto                    = structure with optode positions or filename,see FT_READ_SENS
 
  General BIDS options that apply to all data types are
    cfg.InstitutionName             = string
@@ -138,18 +141,22 @@ title: data2bids
    cfg.CogAtlasID                  = string
    cfg.CogPOID                     = string
 
- There are more BIDS options for the mri/meg/eeg/ieeg data type specific sidecars.
+ There are more BIDS options for the mri/meg/eeg/ieegÂ data type specific sidecars.
  Rather than listing them all here, please open this function in the MATLAB editor,
  and scroll down a bit to see what those are. In general the information in the JSON
- files is specified in CamelCase, whereas the information for TSV files is in
- lowercase.
-   cfg.mri.SomeOption              = string in CamelCase, please check the MATLAB code
-   cfg.meg.SomeOption              = string in CamelCase, please check the MATLAB code
-   cfg.eeg.SomeOption              = string in CamelCase, please check the MATLAB code
-   cfg.ieeg.SomeOption             = string in CamelCase, please check the MATLAB code
-   cfg.channels.someoption         = string in lowercase, please check the MATLAB code
-   cfg.events.someoption           = string in lowercase, please check the MATLAB code
-   cfg.coordsystem.someoption      = string in lowercase, please check the MATLAB code
+ files is specified by a field that is specified in CamelCase
+   cfg.mri.SomeOption              = string, please check the MATLAB code
+   cfg.meg.SomeOption              = string, please check the MATLAB code
+   cfg.eeg.SomeOption              = string, please check the MATLAB code
+   cfg.ieeg.SomeOption             = string, please check the MATLAB code
+   cfg.nirs.SomeOption             = string, please check the MATLAB code
+   cfg.coordsystem.someoption      = string, please check the MATLAB code
+ The information for TSV files is specified with a column header in lowercase or
+ snake_case and represents a list of items
+   cfg.channels.someoption         = cell-array, please check the MATLAB code
+   cfg.events.someoption           = cell-array, please check the MATLAB code
+   cfg.electrodes.someoption       = cell-array, please check the MATLAB code
+   cfg.optodes.someoption          = cell-array, please check the MATLAB code
 
  The implementation in this function corresponds to BIDS version 1.2.0. See
  https://bids-specification.readthedocs.io/ for the full specification and

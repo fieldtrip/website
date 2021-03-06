@@ -11,9 +11,9 @@ The [BIDS specification](https://bids-specification.readthedocs.io/en/stable/04-
 
 ## The data to consider
 
-The raw data that is acquired in a typical behavioural experiment consists of one or multiple ASCII log files on disk. Additional data that is not stored in a systematic way may include demographic information of the participant, the details of the task and the instruction, but also the detailed stimulus material (e.g. wav and png files). Some results might already be derived during the experiment, such as whether responses were correct or incorrect (coded in the ASCII file), but might also be processed offline (e.g. rejecting trials with a response that is too fast or slow, excluding trials at the start of the experiment, or immediately following an incorrect trial). This processing is limited to some a-priori design choices, and excludes the processing and analysis related to the research question.
+The raw data that is acquired in a typical behavioural experiment consists of one or multiple ASCII log files on disk. Additional data that is not stored in a systematic way may include demographic information of the participant, the details of the task and the instruction, but also the detailed stimulus material (e.g. wav and png files). Some results might already be derived during the experiment, such as whether responses were correct or incorrect (coded in the ASCII file), but might also be processed offline (e.g. rejecting trials with a response that is too fast or slow, excluding trials at the start of the experiment, or immediately following an incorrect trial). This processing is limited to some a priori design choices, and excludes the processing and analysis related to the research question.
 
-The data that you want to store for analysis and/or reuse combines the original raw ASCII log files, the non-systematic subject and task information, and potentially also the results of minimal processing. The example below shows how MATLAB and **[data2bids](/reference/data2bids)** are used to organize the data in a reusable format.
+The data that you want to store for analysis and/or reuse combines the original raw ASCII log files, the non-systematic subject and task information, and potentially also the results of minimal processing. The example below shows how MATLAB and **[data2bids](https://github.com/fieldtrip/fieldtrip/blob/release/data2bids.m)** are used to organize the data in a reusable format.
 
 ## Examples
 
@@ -21,7 +21,9 @@ When using NBS Presentation, you can write the timing of stimuli and responses i
 
 The example consists of data from 2 subjects, each participating in 3 experiments that were part of a single session. In one experiment the Presentation log file was stored, in the other two events were stored in a custom log file.
 
+{% include markup/success %}
 All data for the following examples is available from our [FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/example/bids_presentation/).
+{% include markup/end %}
 
 The examples includes the original log files under the “original” directory. It also has a copy of the script to do the conversion under “code”. The reorganized data is under the “bids” directory. According to [the documentation](https://bids-specification.readthedocs.io/en/stable/02-common-principles.html#source-vs-raw-vs-derived-data) the original data can be added to the BIDS dataset under the “sourcedata” directory and code can be added to the “code” directory. This way no information is lost and the conversion/reorganization is fully reproducible.
 

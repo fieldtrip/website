@@ -4,8 +4,8 @@ title: ft_spike_isi
 ```plaintext
  FT_SPIKE_ISI computes the interspike interval histogram
 
- The input SPIKE should be organised as 
- a) the spike datatype, obtained from FT_SPIKE_MAKETRIALS 
+ The input SPIKE should be organised as
+ a) the spike datatype, obtained from FT_SPIKE_MAKETRIALS
  b) the raw datatype, containing binary spike trains, obtained from
  FT_APPENDSPIKE or FT_CHECKDATA. In this case the raw datatype is
  converted to the spike datatype.

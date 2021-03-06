@@ -1,3 +1,6 @@
+- name:  Distributed computing using a Linux compute cluster
+  link:  /development/module/qsub
+
 - name:  How to compile MATLAB code into stand-alone executables?
   link:  /faq/how_to_compile_matlab_code_into_stand-alone_executables
 

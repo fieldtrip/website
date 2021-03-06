@@ -1,6 +1,6 @@
 ---
 title: Plotting of channel-level, source-level and other geometrical data related to EEG/MEG
-tags: [development, plot]
+tags: [development, plotting]
 ---
 
 # Plotting of channel-level, source-level and other geometrical data related to EEG/MEG
@@ -9,7 +9,7 @@ FieldTrip supports plotting of channel-level and source-level data using functio
 
 The goal of the shared plotting functions (compared to MATLAB) is to reuse the same functionality in different functions and be able to improve the functionality everywhere.
 
-Furthermore, the shared plotting functions allow a power-user to construct more detailled data visualisations.
+Furthermore, the shared plotting functions allow a power-user to construct more detailled data visualizations.
 
 ## Module layout
 
@@ -21,7 +21,7 @@ The remainder of this page mainly describes the core features for plotting chann
 
 These are the low-level functions that are be called by the higher-level FieldTrip functions. These functions usually take matrices or vectors as input, as opposed to FieldTrip data structures.
 
-For data objects with a 2D representation, i.e. for a flat screen or pape
+For data objects with a 2D representation, i.e. for a flat screen or paper:
 
 - ft_plot_vector - visualizes a vector as a line, similar to PLOT
 - ft_plot_matrix - visualizes a matrix as an image, similar to IMAGESC
@@ -31,7 +31,7 @@ For data objects with a 2D representation, i.e. for a flat screen or pape
 - ft_plot_layout - plots a two-dimensional layout
 - ft_plot_box - plots the outline of a box that is specified by its lower
 
-For data objects with a 3D geometrical representatio
+For data objects with a 3D geometrical representation:
 
 - ft_plot_cloud - visualizes 3-D data as spherical clouds of points
 - ft_plot_crosshair - plots a crosshair in two or three dimensions
@@ -45,7 +45,7 @@ For data objects with a 3D geometrical representatio
 - ft_plot_topo3d - makes a 3-D topographic representation of the electric
 - ft_plot_headmodel - visualizes the boundaries in the volume conduction model of the head as
 
-A number of functions serves to construct interactive graphical user interfaces.
+A number of functions serves to construct interactive graphical user interfaces:
 
 - ft_select_box - helper function for selecting a rectangular region
 - ft_select_channel - is a helper function that can be used as callback function

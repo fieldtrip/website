@@ -21,7 +21,7 @@ The function should always start with a help section, that explains the purpose 
 
 ### The best-practice example function
 
-The easiest way to get started with writing a new high-level FieldTrip function is to take a close look at [ft_examplefunction](/reference/ft_examplefunction), which is located in FT's core (root) directory. (Note: this is true as of Feb 11, 2011.) It shows the best practices that one should adhere to concerning input and output structure and data handling. Also, it demonstrates how one should document the function according to FT standard guidelines.
+The easiest way to get started with writing a new high-level FieldTrip function is to take a close look at [ft_examplefunction](https://github.com/fieldtrip/fieldtrip/blob/release/ft_examplefunction), which is located in FT's core (root) directory. (Note: this is true as of Feb 11, 2011.) It shows the best practices that one should adhere to concerning input and output structure and data handling. Also, it demonstrates how one should document the function according to FT standard guidelines.
 
 ## Provide reference documentation in the function help
 
@@ -34,7 +34,7 @@ To explain what the input and output data structures of the function are, please
 [output] = ft_xxxxxx(cfg, input)
 [output] = ft_xxxxxx(cfg, input1, input2)
 
-where output and input, input1, input2 are the standard names of data types, such as raw, timelock, freq, source, volume, spike. Pleae look in **[ft_datatype](/reference/ft_datatype)** for a complete list and pointers to the detailed documentation on the standard datatypes.
+where output and input, input1, input2 are the standard names of data types, such as raw, timelock, freq, source, volume, spike. Pleae look in **[ft_datatype](https://github.com/fieldtrip/fieldtrip/blob/release/ft_datatype.m)** for a complete list and pointers to the detailed documentation on the standard datatypes.
 
 ## Provide the appropriate level of feedback to the user
 
@@ -50,7 +50,7 @@ There are 5 different ways of doing this.
 
 When a new function is written in FieldTrip, it is important to include these feedbacks. Each warning and error should have an **identifier**. By using identifiers, the individual warnings can be switched off by the user in MATLAB. Hence, `warning_once` should be used cautiously.
 
-The short text messages which accompany errors and warnings on the screen are often not enough to provide insight for the users. The text message on screen should be kept short, but a **[Frequently Asked Question](/faq)** should explain the warning and why an error occurred. The identifiers should help the user to find the relevant FAQ. The FAQ
+The short text messages which accompany errors and warnings on the screen are often not enough to provide insight for the users. The text message on screen should be kept short, but a [Frequently Asked Question](/faq) should explain the warning and why an error occurred. The identifiers should help the user to find the relevant FAQ. The FAQ
 should also have the same 'warning' or 'error' tag (e.g. `FieldTrip:fileio:fileNotExisting`).
 
 ## Use the dimord field to describe or deciper the data
@@ -58,16 +58,16 @@ should also have the same 'warning' or 'error' tag (e.g. `FieldTrip:fileio:fileN
 In general (although some exceptions apply, see below) the specification of the dimensions in the data structure is like this
 
     datastructure.aaa = 2-D array
-    datastructure.aaadimord = ‘xxx_yyy’
+    datastructure.aaadimord = 'xxx_yyy'
     datastructure.xxx = scalar vector or cell-array that describes the 1st dimension
     datastructure.yyy = scalar vector or cell-array that describes the 2st dimension
 
 This can be extended like
 
     datastructure.aaa
-    datastructure.aaadimord = ‘xxx_yyy’
+    datastructure.aaadimord = 'xxx_yyy'
     datastructure.bbb
-    datastructure.bbbdimord = ‘yyy_zzz’
+    datastructure.bbbdimord = 'yyy_zzz'
     datastructure.xxx
     datastructure.yyy
     datastructure.zzz
@@ -76,7 +76,7 @@ In case multiple fields in a structure have the same dimord, it is allowed to sp
 
     datastructure.aaa
     datastructure.bbb
-    datastructure.dimord = ‘xxx_yyy’ % applies to aaa and bbb
+    datastructure.dimord = 'xxx_yyy' % applies to aaa and bbb
     datastructure.xxx
     datastructure.yyy
 
@@ -84,9 +84,9 @@ And furthermore
 
     datastructure.aaa
     datastructure.bbb
-    datastructure.dimord = ‘xxx_yyy’ % applies to all fields that do not specify their own dimord
+    datastructure.dimord = 'xxx_yyy' % applies to all fields that do not specify their own dimord
     datastructure.ccc
-    datastructure.cccdimord = ‘yyy_zzz’ % applies only to ccc
+    datastructure.cccdimord = 'yyy_zzz' % applies only to ccc
     datastructure.xxx
     datastructure.yyy
     datastructure.zzz
@@ -94,7 +94,7 @@ And furthermore
 If a structure only contains a single data field, all fields (i.e. the only one) have the same dimensions and therefore a general dimord can be used instead of a field-specific one. So the structure would be
 
     datastructure.aaa = 2-D array
-    datastructure.dimord = ‘xxx_yyy’
+    datastructure.dimord = 'xxx_yyy'
     datastructure.xxx = scalar vector or cell-array that describes the 1st dimension
     datastructure.yyy = scalar vector or cell-array that describes the 2st dimension
 
@@ -102,10 +102,10 @@ Some high-level FieldTrip functions allow or require the specification of the pa
 
 The known exceptions are
 
-- the dimension ‘chan’ is described with the cell-array vector ‘label'
-- the dimension ‘chancmb’ is described with the cell-array ‘labelcmb’, which is a Nx2 array
-- if the dimension is indicated as '{xxx}’, then it refers to a cell-array description. An example is ‘{pos}\_ori_time’ for vector dipole moments as a function of time, that are estimated for multiple dipole positions. The positions are here represented in a cell-array to allow for positions (from a 3-D regular grid) outside the brain where the computation is not done. The alternative would be to use a 3D array with pos_ori_time with NaNs to indicate that the data at some positions does not apply, but that is memory-wise inefficient.
-- if the dimension is indicated as ‘(xxx)’, then it refers to a struct-array description. We don’t have this worked out in detail and we don’t use it.
+- the dimension 'chan' is described with the cell-array vector 'label'
+- the dimension 'chancmb' is described with the cell-array 'labelcmb', which is a Nx2 array
+- if the dimension is indicated as '{xxx}', then it refers to a cell-array description. An example is '{pos}\_ori_time' for vector dipole moments as a function of time, that are estimated for multiple dipole positions. The positions are here represented in a cell-array to allow for positions (from a 3-D regular grid) outside the brain where the computation is not done. The alternative would be to use a 3D array with pos_ori_time with NaNs to indicate that the data at some positions does not apply, but that is memory-wise inefficient.
+- if the dimension is indicated as '(xxx)', then it refers to a struct-array description. We don't have this worked out in detail and we don't use it.
 - some fields contain supportive information and not actual data, and therefore are not described with a dimord. Examples are cumtapcnt, sampleinfo, trialinfo.
 - some dimensions do not have an explicit description and are only implicitly numbered. examples are “comp” and “rpt”.
 - rpt is used for repetitions, which are usually trials, but in timelock (ERP) structures we use “rpt" and “subj” interchangeably. The dimord “subj_chan_time" is used to represent an ERP that cas been concatenated over subjects.
@@ -116,7 +116,7 @@ To determine the dimord, you should use the **fieldtrip/private/getdimord** func
 
 Any new configuration option should have a default set at the beginning of the function. If you don't know a good default value, you should specify the default value as empty, i.e. `cfg.newoption = []`.
 
-If you add a configuration option, you should check in the [configuration index](/reference/configuration) whether a cfg option with similar functionality already exists in another function. Use identical names for identical functionality and try to keep the help similar if possible.
+If you add a configuration option, you should check in the [configuration index](https://github.com/fieldtrip/fieldtrip/blob/release/configuration) whether a cfg option with similar functionality already exists in another function. Use identical names for identical functionality and try to keep the help similar if possible.
 
 ## Renaming configuration options or values
 
@@ -308,12 +308,14 @@ Please consider the general [requirements](/faq/requirements) when extending or 
 
 ## Ensure that it runs on older MATLAB versions
 
-Although you may be developing FieldTrip on the latest MATLAB version, we try to support it for previous MATLAB versions up to five years old. As of March 2019, this means supporting MATLAB R2014a and newer.
+Although you may be developing FieldTrip on the latest MATLAB version, we try to support it for previous MATLAB versions up to five years old. As of the end of 2020, this means supporting MATLAB version R2015b and newer.
 
 Here is a list of MATLAB release dates; a complete list can be found on [Wikipedia](https://en.wikipedia.org/wiki/MATLAB#Release_history).
 
 | version number | release name | release date |
 | -------------- | ------------ | ------------ |
+| MATLAB 9.9     | R2020b		| 17 Sep 2020 |
+| MATLAB 9.8     | R2020a       | 19 Mar 2020 |
 | MATLAB 9.6     | R2019a       | 20 Mar 2019  |
 | MATLAB 9.5     | R2018b       | 12 Sep 2018  |
 | MATLAB 9.4     | R2018a       | 15 Mar 2018  |
@@ -351,7 +353,7 @@ To facilitate supporting older MATLAB versions, below we list some known incompa
 
 FieldTrip has to run on a large variety of platforms, with different operating systems and MATLAB versions. Therefore, we try to keep the compiled mex files reasonably consistent. Since mex files are added in the course of the development, and we don't want to recompile them too often, we cannot be too strict on the compile environment. If possible you should compile the mex files with a MATLAB version that is two years old, i.e. not the latest, but also not a version that is very old.
 
-In most cases the mex file source code should be located in fieldtrip/src. The `ft_compile_mex` function is used to compile the mex files and the `synchronize-private.sh` BASH script is used to copy the updated mex files to all required (private) directories.
+In most cases the mex file source code should be located in fieldtrip/src. The `ft_compile_mex` function is used to compile the mex files and the `synchronize-private.sh` Bash script is used to copy the updated mex files to all required (private) directories.
 
 If the mex file is part of a collection of related mex files and only present on a single location (e.g. fieldtrip/@config/private), the mex file source code should be present in _that_ specific directory together with a compilation script.
 
@@ -456,32 +458,7 @@ You should add something like this to code that you have written yourself, or to
     %
     %    You should have received a copy of the GNU General Public License
     %    along with FieldTrip. If not, see <http://www.gnu.org/licenses/>.
-    %
-    % $Id: ft_preprocessing.m 6987 2012-11-26 11:56:08Z jorhor $
 
-Note the Id tag at the bottom (see below).
-
-## Include the SVN revision number in the file
-
-FIXME this should be updated to reflect the migration to Git
-
-| NOTE: This section is obsolete: FieldTrip has migrated from SVN to Git, and Git does not support `$Id:` tags.|
-|---|
-
-You should include a line like this.
-
-    % $Id: ft_preprocessing.m 6987 2012-11-26 11:56:08Z jorhor $
-
-or simply like this
-
-    % $Id: $
-
-The $Id$ line will be automatically updated when you SVN commit. It helps your co-developers to quickly see when the last change was made and by whom.
-
-This requires that the Id keyword is detected by SVN, which relies on
-[this SVN configuration setting](/development/svn#keeping_the_svn_repository_tidy). You can also do
-
-    svn propset svn:keywords "Rev Id" <yourfile.m>
 
 ## Ask for help
 

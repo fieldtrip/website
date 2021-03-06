@@ -32,9 +32,11 @@ title: ft_layoutplot
    cfg.output      = filename to which the layout will be written (default = [])
    cfg.montage     = 'no' or a montage structure (default = 'no')
    cfg.image       = filename, use an image to construct a layout (e.g. usefull for ECoG grids)
-   cfg.visible     = string, 'yes' or 'no' whether figure will be visible (default = 'yes')
    cfg.box         = string, 'yes' or 'no' whether box should be plotted around electrode (default = 'yes')
    cfg.mask        = string, 'yes' or 'no' whether the mask should be plotted (default = 'yes')
+   cfg.visible     = string, 'on' or 'off' whether figure will be visible (default = 'on')
+   cfg.position    = location and size of the figure, specified as a vector of the form [left bottom width height]
+   cfg.renderer    = string, 'opengl', 'zbuffer', 'painters', see MATLAB Figure Properties. If this function crashes, you should try 'painters'.
 
  Alternatively the layout can be constructed from either
    data.elec     structure with electrode positions

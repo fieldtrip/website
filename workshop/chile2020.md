@@ -9,7 +9,7 @@ We are still planning for this workshop; more details than those listed here are
 
 ## Where
 
-[CINPSI-Neurocog](www.labpsicologiaucm.com)
+[CINPSI-Neurocog](http://www.labpsicologiaucm.com)
 Facultad de Ciencias de la Salud
 [Universidad Católica del Maule](https://goo.gl/maps/JouDQAeLcatLK6jCA), Chile
 

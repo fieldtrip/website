@@ -1,1 +1,10 @@
-<iframe width="500" height="281" src="https://player.vimeo.com/video/{{ include.id }}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<div id="vimeo-{{ include.id }}">
+<p><em>Embedded video is disabled due to your <a href="/privacy">privacy settings</a>, you can find the video on <a href="https://vimeo.com/{{ include.id }}">Vimeo</a>.</em></p>
+</div>
+
+<script>
+if(readCookie('allow-external-cookies')=='true') {
+  let elem = document.getElementById('vimeo-{{ include.id }}');
+  elem.innerHTML = '<iframe width="500" height="281" src="https://player.vimeo.com/video/{{ include.id }}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>'
+}
+</script>

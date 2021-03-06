@@ -13,7 +13,7 @@ tags: [video]
 
 {% include youtube id="zOxCqcYmIfA" %}
 
-## Forward modelling in MEG and EEG by Robert Oostenveld
+## Forward modeling in MEG and EEG by Robert Oostenveld
 
 {% include youtube id="4pVaY6f25w0" %}
 

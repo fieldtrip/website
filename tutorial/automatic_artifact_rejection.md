@@ -1,6 +1,6 @@
 ---
 title: Automatic artifact rejection
-tags: [fixme, tutorial, artifact, meg, raw, preprocessing, meg-artifact]
+tags: [tutorial, artifact, meg, raw, preprocessing, meg-artifact]
 ---
 
 # Automatic artifact rejection
@@ -20,19 +20,19 @@ Of course it is best to try to avoid those artifacts in the first place. For ins
 ## Procedure
 
 {% include markup/info %}
-The functions **[ft_artifact_eog](/reference/ft_artifact_eog)**, **[ft_artifact_muscle](/reference/ft_artifact_muscle)** and **[ft_artifact_jump](/reference/ft_artifact_jump)** are just wrappers around the **[ft_artifact_zvalue](/reference/ft_artifact_zvalue)** function with some default parameters set. Please look at that function if you want to know in detail how it works.
+The functions **[ft_artifact_eog](https://github.com/fieldtrip/fieldtrip/blob/release/ft_artifact_eog.m)**, **[ft_artifact_muscle](https://github.com/fieldtrip/fieldtrip/blob/release/ft_artifact_muscle.m)** and **[ft_artifact_jump](https://github.com/fieldtrip/fieldtrip/blob/release/ft_artifact_jump.m)** are just wrappers around the **[ft_artifact_zvalue](https://github.com/fieldtrip/fieldtrip/blob/release/ft_artifact_zvalue.m)** function with some default parameters set. Please look at that function if you want to know in detail how it works.
 {% include markup/end %}
 
 The following steps are used to detect artifacts in FieldTrip's automatic artifact rejection (see figure below
 
-1.  Defining segments of interest using [ft_definetrial](/reference/ft_definetrial)
-2.  Detecting artifacts using [ft_artifact_zvalue](/reference/ft_artifact_zvalue), this consists of
+1.  Defining segments of interest using [ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_definetrial)
+2.  Detecting artifacts using [ft_artifact_zvalue](https://github.com/fieldtrip/fieldtrip/blob/release/ft_artifact_zvalue), this consists of
     - Reading the data (with padding) from disk
     - Filtering the data
     - Z-transforming the filtered data and averaging it over channels
     - Threshold the accumulated z-score
 
-This procedure will result in an artifact definition, a two column array with the onset and offset sample number of every detected artifact. This 'artifact definition' (''.artfctdef'') can then, in a separate step, be used to reject (parts of) trials in your trialdefinition (so before reading the data in using ft_preprocessing for your subsequent analysis), or rejecting (parts of) data already in memory. Both methods use [ft_rejectartifact](/reference/ft_rejectartifact). All the steps that the automatic artifact rejection routine takes will now be explained in detail.
+This procedure will result in an artifact definition, a two column array with the onset and offset sample number of every detected artifact. This 'artifact definition' (''.artfctdef'') can then, in a separate step, be used to reject (parts of) trials in your trialdefinition (so before reading the data in using ft_preprocessing for your subsequent analysis), or rejecting (parts of) data already in memory. Both methods use [ft_rejectartifact](https://github.com/fieldtrip/fieldtrip/blob/release/ft_rejectartifact). All the steps that the automatic artifact rejection routine takes will now be explained in detail.
 
 {% include image src="/assets/img/tutorial/automatic_artifact_rejection/overview_artifact_detection.png" width="600" %}
 _Figure: Automatic artifact rejection processes the data in several steps to allow rejection of artifactual time intervals from the trial definition_
@@ -143,7 +143,7 @@ To remove the detected artifacts from the trial definition (trl) you can add you
     cfg.artfctdef.muscle.artifact = artifact_muscle;
     data_no_artifacts = ft_rejectartifact(cfg,data);
 
-The output of ft_rejectartifact will contain the cfg.trl, which is the cleaned trial definition, and cfg.trlold which contains the old trl (the output of **[ft_definetrial](/reference/ft_definetrial)**).
+The output of ft_rejectartifact will contain the cfg.trl, which is the cleaned trial definition, and cfg.trlold which contains the old trl (the output of **[ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_definetrial.m)**).
 
 If you call ft_artifact_zvalue with cfg as output argument (e.g. ''cfg = ft_artifact_zvalue(cfg)''), you can directly feed that output into ft_rejectartifact. Examples of this will be given below.
 
@@ -217,12 +217,12 @@ _A typical SQUID jump can be observed on channel MLT42, trial 18._
 In this example you can easily increase the threshold for the artifact
 detection to a value of 150. If you subsequently hit the 'stop' button
 you will return to the MATLAB command-line, and the output variable of
-**[ft_artifact_zvalue](/reference/ft_artifact_zvalue)** contains the
+**[ft_artifact_zvalue](https://github.com/fieldtrip/fieldtrip/blob/release/ft_artifact_zvalue.m)** contains the
 definition of the artifacts in cfg.artfctdef.zvalue.artifact.
 
 ### Detection of muscle artifacts
 
-The same way as **[ft_artifact_zvalue](/reference/ft_artifact_zvalue)** is used to detect jump artifacts, it can be used to detect muscle artifacts.
+The same way as **[ft_artifact_zvalue](https://github.com/fieldtrip/fieldtrip/blob/release/ft_artifact_zvalue.m)** is used to detect jump artifacts, it can be used to detect muscle artifacts.
 
     % muscle
     cfg            = [];
@@ -257,7 +257,7 @@ _A typical muscle artifact can be observed on channel MRT12, trial 32._
 
 ### Detection of EOG artifacts
 
-The same way as **[ft_artifact_zvalue](/reference/ft_artifact_zvalue)** is used to detect jump artifacts,it can be used to detect eye blinks artifacts (EOG).
+The same way as **[ft_artifact_zvalue](https://github.com/fieldtrip/fieldtrip/blob/release/ft_artifact_zvalue.m)** is used to detect jump artifacts,it can be used to detect eye blinks artifacts (EOG).
 Note that only the EOG is scanned in the eye artifacts case, which will take less time than scanning all MEG channels, which was needed for jump and muscle artifacts.
 
      % EOG
@@ -291,3 +291,7 @@ Note that only the EOG is scanned in the eye artifacts case, which will take les
 _Typical eyeblink artifacts can be observed in trial 4. Note that the trial considers artifacts to precede and last longer than the threshold crossing, by padding data with 0.1 seconds on the left and 0.1 sec on the right_
 
 See also this [FAQ](/faq/how_can_i_interpret_the_different_types_of_padding_that_i_find_when_dealing_with_artifacts) on the different types of padding.
+
+## Suggested further reading
+
+For an introduction to how you can deal with artifacts in FieldTrip in general, you can go back to the [Introduction: dealing with artifacts](/tutorial/artifacts) tutorial. As an alternative to automatic artifact detection, you can manually inspect the trial- and channel-data, see the [visual artifact rejection](/tutorial/visual_artifact_rejection) tutorial. More information on dealing with artifacts can also be found in some example scripts and frequently asked questions. Furthermore, this topic is often discussed on the email discussion list which can be searched [like this](http://www.google.com/search?q=artifact&sitesearch=mailman.science.ru.nl%2Fpipermail%2Ffieldtrip%2F).

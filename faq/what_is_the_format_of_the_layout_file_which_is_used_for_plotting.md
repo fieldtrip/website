@@ -1,6 +1,6 @@
 ---
 title: What is the format of the layout file which is used for plotting?
-tags: [faq, layout, plot]
+tags: [faq, layout, plotting]
 ---
 
 # What is the format of the layout file which is used for plotting?
@@ -24,9 +24,9 @@ The 2nd and 3rd are the X-position and Y-position.
 The 4th and 5th column specify the width and height
 The 6th column is a string with the channel label.
 
-The width and height are used for the subplot that will be made in **[ft_multiplotER](/reference/ft_multiplotER)** and **[ft_multiplotTFR](/reference/ft_multiplotTFR)**. The width and height represent 80 and 60% of the smallest 2D channel distance respectively. The channels in the data are matched case sensitive to the channels in the layout. There are two additional labels, SCALE and COMNT, which specify the location and size of the comment and scale.
+The width and height are used for the subplot that will be made in **[ft_multiplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_multiplotER.m)** and **[ft_multiplotTFR](https://github.com/fieldtrip/fieldtrip/blob/release/ft_multiplotTFR.m)**. The width and height represent 80 and 60% of the smallest 2D channel distance respectively. The channels in the data are matched case sensitive to the channels in the layout. There are two additional labels, SCALE and COMNT, which specify the location and size of the comment and scale.
 
-Instead of constructing an ASCII layout file, you can also specify one of the supported electrode or gradiometer files (e.g. Polhemus file, or CTF .res4 header file). The **[ft_prepare_layout](/reference/ft_prepare_layout)** function will read the 3-D sensor positions from the file and will projected these to a 2-D plane. Furthermore, if no layout file is specified, but if electrodes or gradiometers are present in the data, the **[ft_prepare_layout](/reference/ft_prepare_layout)** function will use those to create a 2-D layout on the fly.
+Instead of constructing an ASCII layout file, you can also specify one of the supported electrode or gradiometer files (e.g. Polhemus file, or CTF .res4 header file). The **[ft_prepare_layout](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_layout.m)** function will read the 3-D sensor positions from the file and will projected these to a 2-D plane. Furthermore, if no layout file is specified, but if electrodes or gradiometers are present in the data, the **[ft_prepare_layout](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_layout.m)** function will use those to create a 2-D layout on the fly.
 
 Alternative to the ASCII layout file, you can also use a MATLAB layout file. It should be a .mat file containing a single variable with the name "lay". The lay variable should be a structure with
 
@@ -39,10 +39,10 @@ outline: {[101x2 double][3x2 double] [10x2 double][10x2 double]}
 mask: {[101x2 double]}
 `</code>`
 
-This structure describes the position of each channel, the width and height of the box for **[ft_multiplotER](/reference/ft_multiplotER)** and **[ft_multiplotTFR](/reference/ft_multiplotTFR)**, and the label. Furthermore, it optionally can contain the outline and the mask.
+This structure describes the position of each channel, the width and height of the box for **[ft_multiplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_multiplotER.m)** and **[ft_multiplotTFR](https://github.com/fieldtrip/fieldtrip/blob/release/ft_multiplotTFR.m)**, and the label. Furthermore, it optionally can contain the outline and the mask.
 
 The optional outline in the layout defines the black lines that are drawn on top of the color-coded interpolated values. In this case it contains four line segments: a circle that represents the outline of the head (101x2), a triangle (3x2) that represents the nose and two other shapes (10x2) that represent both ears. These outlines just contain the 2-D points that should be connected with a black line. The default is to use a head-shaped outline, but especially for ECoG data it makes sense to use the sulcal pattern as outline.
 
-The optional mask in the layout defines the region over which **[ft_topoplotER](/reference/ft_topoplotER)** and **[ft_topoplotTFR](/reference/ft_topoplotTFR)** should interpolate the values. Usually the values should be interpolated over the whole head, and in this example it therefore corresponds to the first outline that is a circle representing the head. For ECoG data the mask should represent the area of the cortex that is covered by the electrode grid. If the recording was done with multiple electrode grids that are spaced, i.e. such that the topographical values should not be interpolated between the separate grids, you can specify one mask for each grid.
+The optional mask in the layout defines the region over which **[ft_topoplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_topoplotER.m)** and **[ft_topoplotTFR](https://github.com/fieldtrip/fieldtrip/blob/release/ft_topoplotTFR.m)** should interpolate the values. Usually the values should be interpolated over the whole head, and in this example it therefore corresponds to the first outline that is a circle representing the head. For ECoG data the mask should represent the area of the cortex that is covered by the electrode grid. If the recording was done with multiple electrode grids that are spaced, i.e. such that the topographical values should not be interpolated between the separate grids, you can specify one mask for each grid.
 
 See the [layout](/tutorial/layout) tutorial for more information.

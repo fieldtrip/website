@@ -22,17 +22,17 @@ When adding or contributing to the tutorials please consider the [documentation 
 
 ## Preprocessing of MEG and EEG data
 
-- [Introduction on artifacts](/tutorial/artifacts)
-- [Visual artifact detection](/tutorial/visual_artifact_rejection)
-- [Automatic artifact detection](/tutorial/automatic_artifact_rejection)
+- [Preprocessing - Reading continuous EEG and MEG data](/tutorial/continuous)
 - [Preprocessing - Trigger based trial selection](/tutorial/preprocessing)
-- [Preprocessing - Reading continuous EEG data](/tutorial/continuous)
-- [Preprocessing and event-related activity in combined MEG/EEG data](/workshop/natmeg/preprocessing)
+- [Introduction on dealing with artifacts](/tutorial/artifacts)
+- [Visual artifact rejection](/tutorial/visual_artifact_rejection)
+- [Automatic artifact rejection](/tutorial/automatic_artifact_rejection)
 
 ## Sensor-level analyses of MEG and EEG data
 
 - [Event related fields and MEG planar gradient](/tutorial/eventrelatedaveraging)
 - [Preprocessing of EEG data and computing ERPs](/tutorial/preprocessing_erp)
+- [Preprocessing and event-related activity in combined MEG/EEG data](/workshop/natmeg/preprocessing)
 - [Time-frequency analysis using Hanning window, multitapers and wavelets](/tutorial/timefrequencyanalysis)
 - [Time-frequency analysis of combined MEG/EEG](/workshop/natmeg/timefrequency)
 - [Sensor-level ERF, TFR and connectivity analyses](/tutorial/sensor_analysis)
@@ -74,7 +74,9 @@ When adding or contributing to the tutorials please consider the [documentation 
 
 - [Analysis of corticomuscular coherence](/tutorial/coherence)
 - [Analysis of sensor- and source-level connectivity](/tutorial/connectivity)
+- [Extended analysis of sensor- and source-level connectivity](/tutorial/connectivityextended)
 - [Whole brain connectivity and network analysis](/tutorial/networkanalysis)
+- [Whole brain connectivity and network analysis (2) - EEG](/tutorial/networkanalysis_eeg)
 
 ## Statistics
 

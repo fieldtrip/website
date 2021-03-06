@@ -22,6 +22,7 @@ title: ft_checkopt
    'struct'
    'function_handle'
  Furthermore, the following custom types can be specified
+   'empty'
    'doublescalar'
    'doublevector'
    'doublebivector'             i.e. [1 1] or [1 2]

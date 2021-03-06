@@ -1,12 +1,12 @@
 ---
 title: Getting started with Blackrock data
-tags: [blackrock, lfp, spike, dataformat]
+tags: [dataformat, blackrock, lfp, spike]
 ---
 
 # Getting started with Blackrock data
 
-FIXME This getting started guide and the reading code are still under development,
-see [bugzilla](http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=2964).
+FIXME This getting started guide and the reading code are still under development, see [bugzilla](http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=2964).
+
 However, we very much welcome you to start using this functionality, and would be happy with any feedback provided.
 
 ## Introduction
@@ -15,7 +15,7 @@ The specifications of this data format can be found on [the company's website](h
 
 To read Blackrock data into FieldTrip, you will need the NPMK toolbox. The latest version of it can be cloned from github: https://github.com/BlackrockMicrosystems/NPMK. This is a MATLAB-toolbox provided by Blackrock microsystems. FieldTrip relies on the low-level reading functionality of this code. Make sure that the .m files in the NPMK toolbox are on the MATLAB path.
 
-To get started, you should add the FieldTrip main directory to your path, and execute the **[ft_defaults](/reference/ft_defaults)** function, which sets the defaults and configures up the minimal required path settings. See also this [frequently asked question](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path).
+To get started, you should add the FieldTrip main directory to your path, and execute the **[ft_defaults](https://github.com/fieldtrip/fieldtrip/blob/release/ft_defaults.m)** function, which sets the defaults and configures up the minimal required path settings. See also this [frequently asked question](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path).
 
     addpath <path_to_fieldtrip>
     ft_defaults
@@ -47,7 +47,7 @@ To read analog data, use
 
 This calls the NPMK toolbox (using the function _openNSx_) and gives back a data structure in FieldTrip format.
 
-Optional input arguments should be specified in key-value pairs and may includ
+Optional input arguments should be specified in key-value pairs and may include
 
     %   'chanindx'   = list with channel indices to read
     %   'begsample   = first sample to read
@@ -66,4 +66,4 @@ TO BE DONE.
 
 ## External links
 
-- http://www.blackrockmicro.com Blackrock Microsystems (formerly the Research Products Division of Cyberkinetics Inc.)
+- [Blackrock Microsystems](http://www.blackrockmicro.com), formerly the Research Products Division of Cyberkinetics Inc.

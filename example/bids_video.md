@@ -6,18 +6,20 @@ tags: [example, bids, sharing, video]
 # Converting an example video dataset for sharing in BIDS
 
 {% include markup/danger %}
-BIDS does currently not specify how to represent video recordings. This example - and the support that is implemented in the **[data2bids](/reference/data2bids)** function - should be considered as a preliminary proposal to help researchers with their existing data. This example may also serve to start a discussion on whether and how this data type should be added to the [BIDS specification](http://bids-specification.readthedocs.io/).  
+BIDS does currently not specify how to represent video recordings. This example - and the support that is implemented in the **[data2bids](https://github.com/fieldtrip/fieldtrip/blob/release/data2bids.m)** function - should be considered as a preliminary proposal to help researchers with their existing data. This example may also serve to start a discussion on whether and how this data type should be added to the [BIDS specification](http://bids-specification.readthedocs.io/).  
 {% include markup/end %}
 
 In many experiments video data can be recorded along with other measurements. This is often used to off-line screen the subjects behavior and to annotate the video, i.e. note the time segments with specific (desired or undesired) behavior. Neither the video recording  (which can be considered as raw data), nor the annotations (which can be considered as derived data) are currently formally part of BIDS, although it is not so difficult to come up with a way that these can be represented in a BIDS-like fashion.
 
 ## Example
 
+{% include markup/success %}
 The example data is available from our [FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/example/bids_video/).
+{% include markup/end %}
 
-The examples includes the original log files under the “original” directory. It also has a copy of the script to do the conversion under “code”. The reorganized data is under the “bids” directory. According to [the documentation](https://bids-specification.readthedocs.io/en/stable/02-common-principles.html#source-vs-raw-vs-derived-data) the original data can be added to the BIDS dataset under the “sourcedata” directory and code can be added to the “code” directory. This way no information is lost and the conversion/reorganization is fully reproducible.
+The example includes the original video recording under the “original” directory. It also has a copy of the script to do the conversion under “code”. The reorganized data is under the “bids” directory. According to [the documentation](https://bids-specification.readthedocs.io/en/stable/02-common-principles.html#source-vs-raw-vs-derived-data) the original data can be added to the BIDS dataset under the “sourcedata” directory and code can be added to the “code” directory. This way no information is lost and the conversion/reorganization is fully reproducible.
 
-In general: if your original data is in a different format than the BIDS representation (e.g. DICOM instead of NIFTI), you probably want  to keep a copy of the original data, e.g. on a data acquisition collection on the Donders Repository. If it is in the same format like here - since we are not converting the video file, you could simply delete the original files after conversion. In either case - your own analyses and the shared data would be based on the BIDS representation.
+In general: if your original data is in a different format than the BIDS representation (e.g. DICOM instead of NIFTI), you probably want to keep a copy of the original data, e.g. on a data acquisition collection on the Donders Repository. If it is in the same format like here - since we are not converting the video file, you could simply delete the original files after conversion. In either case - your own analyses and the shared data would be based on the BIDS representation.
 
 ```
 cfg = [];

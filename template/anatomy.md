@@ -5,7 +5,7 @@ tags: [template]
 
 # Anatomical templates for visualizing source reconstructed activity
 
-When visualizing source reconstructed activity, one can interpolate the activity maps onto a subject-specific anatomical image, using [ft_sourceinterpolate](/reference/ft_sourceinterpolate). Subsequently, the interpolated activity can be spatially normalized (using volumetric normalization) using [ft_volumenormalise](/reference/ft_volumenormalise). The activity can also be rendered onto the cortical surface. FieldTrip includes a set of template surfaces that have been derived from the Colin27 brain (in MNI152 space) with FreeSurfer. These surfaces have been derived from the SPM Canonical Brain.
+When visualizing source reconstructed activity, one can interpolate the activity maps onto a subject-specific anatomical image, using [ft_sourceinterpolate](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceinterpolate). Subsequently, the interpolated activity can be spatially normalized (using volumetric normalization) using [ft_volumenormalise](https://github.com/fieldtrip/fieldtrip/blob/release/ft_volumenormalise). The activity can also be rendered onto the cortical surface. FieldTrip includes a set of template surfaces that have been derived from the "colin27" brain (in MNI152 space) with FreeSurfer. These surfaces have been derived from the SPM Canonical Brain.
 
 {% include markup/warning %}
 You can find the anatomical templates included in FieldTrip [here](https://github.com/fieldtrip/fieldtrip/tree/master/template/anatomy).
@@ -13,7 +13,7 @@ You can find the anatomical templates included in FieldTrip [here](https://githu
 
 ## High resolution triangulations of the neocortical sheet
 
-The FreeSurfer cortical sheets can be downloaded from the [SurfRend toolbox website](http://spmsurfrend.sourceforge.net/). The mat-files that are in FieldTrip have been obtained using [ft_read_headshape](/reference/ft_read_headshape). The following sheets are included:
+The FreeSurfer cortical sheets can be downloaded from the [SurfRend toolbox website](http://spmsurfrend.sourceforge.net/). The mat-files that are in FieldTrip have been obtained using [ft_read_headshape](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_headshape). The following sheets are included:
 
 - surface defined at the gray/white matter boundary: surface_white_both/left/right.
 - surface defined at the pial surface: surface_pial_both/left/right.
@@ -28,8 +28,8 @@ FieldTrip versions 9031-9400 (Dec 13, 2013 - April 12, 2014) contain the surface
 
 ## Volumetric anatomical image at 1mm isotropic resolution
 
-The volumetric image fieldtrip/template/anatomy/single_subj_T1_1mm.nii is the colin27 brain at 1 mm resolution downloaded from the web: [http://www.bic.mni.mcgill.ca/ServicesAtlases/Colin27](http://www.bic.mni.mcgill.ca/ServicesAtlases/Colin27).
+The volumetric image `fieldtrip/template/anatomy/single_subj_T1_1mm.nii` is the "colin27" brain at 1 mm resolution downloaded from <http://www.bic.mni.mcgill.ca/ServicesAtlases/Colin27>.
 
 ## Volumetric anatomical image at 2mm isotropic resolution
 
-The volumetric image fieldtrip/template/anatomy/single_subj_T1 is a downsampled version of single_subj_T1_1mm.nii, obtained with [ft_volumedownsample](/reference/ft_volumedownsample), using cfg.downsample=2. The anatomical volume was written back to disk, using [ft_volumewrite](/reference/ft_volumewrite).
+The volumetric image `fieldtrip/template/anatomy/single_subj_T1.nii` is a downsampled version of single_subj_T1_1mm.nii, obtained with [ft_volumedownsample](https://github.com/fieldtrip/fieldtrip/blob/release/ft_volumedownsample), using cfg.downsample=2. The anatomical volume was written back to disk, using [ft_volumewrite](https://github.com/fieldtrip/fieldtrip/blob/release/ft_volumewrite).

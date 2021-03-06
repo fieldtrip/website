@@ -10,23 +10,39 @@ title: ft_volumenormalise
  where the input mri should be a single anatomical volume that was for
  example read with FT_READ_MRI.
 
- Configuration options are
-   cfg.spmversion  = string, 'spm2', 'spm8', 'spm12' (default = 'spm8')
-   cfg.template    = string, filename of the template anatomical MRI (default = 'T1.mnc'
-                     for spm2 or 'T1.nii' for spm8)
-   cfg.parameter   = cell-array with the functional data to be normalised (default = 'all')
-   cfg.downsample  = integer number (default = 1, i.e. no downsampling)
-   cfg.name        = string for output filename
-   cfg.write       = 'no' (default) or 'yes', writes the segmented volumes to SPM2
-                     compatible analyze-file, with the suffix
-                     _anatomy for the anatomical MRI volume
-                     _param   for each of the functional volumes
-   cfg.nonlinear   = 'yes' (default) or 'no', estimates a nonlinear transformation
-                     in addition to the linear affine registration. If a reasonably
-                     accurate normalisation is sufficient, a purely linearly transformed
-                     image allows for 'reverse-normalisation', which might come in handy
-                     when for example a region of interest is defined on the normalised
-                     group-average.
+ The configuration options can be
+   cfg.parameter        = cell-array with the functional data to be normalised (default = 'all')
+   cfg.keepinside       = 'yes' or 'no', keep the inside/outside labeling (default = 'yes')
+   cfg.downsample       = integer number (default = 1, i.e. no downsampling)
+   cfg.spmversion       = string, 'spm2', 'spm8', 'spm12' (default = 'spm12')
+   cfg.spmmethod        = 'old', 'new' or 'mars', to switch between the different
+                          spm12 implementations. The methods 'new' or 'mars'
+                          uses SPM tissue probability maps instead of the
+                          template MRI specified in cfg.template.
+   cfg.opts             = structure with normalisation options, see SPM documentation for details
+   cfg.template         = string, filename of the template anatomical MRI (default = 'T1.mnc'
+                          for spm2 or 'T1.nii' for spm8 and for spm12).
+   cfg.templatecoordsys = the coordinate system of the template when using a template other
+                          than the default
+   cfg.tpm              = string, file name of the SPM tissue probablility map to use in
+                          case spmversion is 'spm12' and spmmethod is 'new' or 'mars'
+   cfg.write            = 'yes' or 'no' (default = 'no'), writes the segmented volumes to SPM2
+                          compatible analyze-file, with the suffix
+                          _anatomy for the anatomical MRI volume
+                          _param   for each of the functional volumes
+   cfg.name             = string for output filename
+   cfg.keepintermediate = 'yes' or 'no' (default = 'no')
+   cfg.intermediatename = string, prefix of the the coregistered images and of the original
+                          images in the original headcoordinate system
+   cfg.nonlinear        = 'yes' (default) or 'no', estimates a nonlinear transformation
+                          in addition to the linear affine registration. If a reasonably
+                          accurate normalisation is sufficient, a purely linearly transformed
+                          image allows for 'reverse-normalisation', which might come in handy
+                          when for example a region of interest is defined on the normalised
+                          group-average
+   cfg.spmparams        = you can feed in the parameters from a prior normalisation, for example
+                          to apply the parameters determined from an aantomical MRI to an
+                          interpolated source resontruction
 
  To facilitate data-handling and distributed computing you can use
    cfg.inputfile   =  ...

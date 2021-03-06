@@ -1,6 +1,6 @@
 ---
 title: Getting started with Philips/EGI data
-tags: [egi, eeg, dataformat]
+tags: [dataformat, egi, eeg]
 ---
 
 # Getting started with EGI/Philips data
@@ -40,7 +40,7 @@ At this moment the default is to use the egi_mff_v1 implementation. This can be 
     cfg.dataformat = 'egi_mff_v3'
     cfg.headerformat = 'egi_mff_v3'
 
-to **[ft_preprocessing](/reference/ft_preprocessing)** and all other high-level FT functions that read data. Furthermore, by specifying
+to **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** and all other high-level FT functions that read data. Furthermore, by specifying
 
     ft_read_header(...., 'headerformat', 'egi_mff_v3')
     ft_read_data(...., 'headerformat', 'egi_mff_v2', 'dataformat', 'egi_mff_v3')

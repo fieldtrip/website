@@ -31,18 +31,18 @@ The brain is divided in a regular three dimensional grid and the source strength
 
 To localize the evoked sources for the example dataset we will perform the following step
 
-- Read the data into MATLAB using **[ft_definetrial](/reference/ft_definetrial)** and **[ft_preprocessing](/reference/ft_preprocessing)**
-- Compute the covariance matrix using the function **[ft_timelockanalysis](/reference/ft_timelockanalysis)**
-- Construct a forward model and lead field matrix using **[ft_volumesegment](/reference/ft_volumesegment)**, **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)** and **[ft_prepare_leadfield](/reference/ft_prepare_leadfield)**
+- Read the data into MATLAB using **[ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_definetrial.m)** and **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)**
+- Compute the covariance matrix using the function **[ft_timelockanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockanalysis.m)**
+- Construct a forward model and lead field matrix using **[ft_volumesegment](https://github.com/fieldtrip/fieldtrip/blob/release/ft_volumesegment.m)**, **[ft_prepare_headmodel](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_headmodel.m)** and **[ft_prepare_leadfield](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_leadfield.m)**
 
-- Compute a spatial filter and estimate the amplitude of the sources using **[ft_sourceanalysis](/reference/ft_sourceanalysis)**
-  - Visualize the results, by first interpolating the sources to the anatomical MRI using **[ft_sourceinterpolate](/reference/ft_sourceinterpolate)** and plotting this with **[ft_sourceplot](/reference/ft_sourceplot)**.
+- Compute a spatial filter and estimate the amplitude of the sources using **[ft_sourceanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceanalysis.m)**
+  - Visualize the results, by first interpolating the sources to the anatomical MRI using **[ft_sourceinterpolate](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceinterpolate.m)** and plotting this with **[ft_sourceplot](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceplot.m)**.
 
 ## Preprocessing
 
 ### Reading the data
 
-The aim is to identify the sources underlying somatosensory evoked fields. We seek to compare the activation in the post-stimulus to the activation in the pre-stimulus interval. We first use **[ft_preprocessing](/reference/ft_preprocessing)** and **[ft_redefinetrial](/reference/ft_redefinetrial)** to extract relevant data. We know that the subject's median nerve was stimulated almost at 3Hz (every 0.36 sec), which influences our selection of the pre- and post-stimulus interval (i.e. as short as possible).
+The aim is to identify the sources underlying somatosensory evoked fields. We seek to compare the activation in the post-stimulus to the activation in the pre-stimulus interval. We first use **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** and **[ft_redefinetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_redefinetrial.m)** to extract relevant data. We know that the subject's median nerve was stimulated almost at 3Hz (every 0.36 sec), which influences our selection of the pre- and post-stimulus interval (i.e. as short as possible).
 
 The ft_definetrial and ft_preprocessing functions require the original MEG dataset, which is available from <ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/SubjectSEF.zip>.
 
@@ -86,11 +86,11 @@ We can plot the results with the MATLAB plot command to get a first impression
 We can additionally explore the spatiotemporal dynamics using FieldTrip interactive plotting function
 
 
-	% view the results
-	cfg        = [];
-	cfg.layout = 'CTF275_helmet.mat';
-        cfg.xlim   = [0.045 0.050];
-	ft_topoplotER(cfg, timelock);
+    % view the results
+    cfg        = [];
+    cfg.layout = 'CTF275_helmet.mat';
+    cfg.xlim   = [0.045 0.050];
+    ft_topoplotER(cfg, timelock);
 
 {% include image src="/assets/img/tutorial/beamformer_lcmv/subjectseftopo.png" width="400" %}
 
@@ -99,9 +99,9 @@ We can additionally explore the spatiotemporal dynamics using FieldTrip interact
 
 The present dataset was recorded with a CTF MEG system which has first-order axial gradiometer sensors that measure the gradient of the magnetic field in the radial direction, i.e. orthogonal to the scalp. Often it is helpful to interpret the MEG fields after transforming the data to a planar gradient configuration, i.e. by computing the gradient tangential to the scalp. This representation of MEG data is comparable to the field measured by planar gradiometer sensors. One advantage of the planar gradient transformation is that the signal amplitude typically is largest directly above a source.
 
-With **[ft_megplanar](/reference/ft_megplanar)** we calculate the planar gradient of the averaged data. **[Ft_megplanar](/reference/ft_megplanar)** is used to compute the amplitude of the planar gradient by combining the horizontal and vertical components of the planar gradient;
+With **[ft_megplanar](https://github.com/fieldtrip/fieldtrip/blob/release/ft_megplanar.m)** we calculate the planar gradient of the averaged data. **[Ft_combineplanar](https://github.com/fieldtrip/fieldtrip/blob/release/ft_combineplanar.m)** is used to compute the magnitude of the planar gradient by combining the horizontal and vertical components of the planar gradient;
 
-The planar gradient at a given sensor location can be approximated by comparing the field at that sensor with its neighbours (i.e. finite difference estimate of the derivative). The planar gradient at one location is computed in both the horizontal and the vertical direction with the FieldTrip function **[ft_megplanar](/reference/ft_megplanar)**. These two orthogonal gradients on a single sensor location can be combined using Pythagoras rule with the FieldTrip function **[ft_combineplanar](/reference/ft_combineplanar)**.
+The planar gradient at a given sensor location can be approximated by comparing the field at that sensor with its neighbours (i.e. finite difference estimate of the derivative). The planar gradient at one location is computed in both the horizontal and the vertical direction with the FieldTrip function **[ft_megplanar](https://github.com/fieldtrip/fieldtrip/blob/release/ft_megplanar.m)**. These two orthogonal gradients on a single sensor location can be combined using Pythagoras rule with the FieldTrip function **[ft_combineplanar](https://github.com/fieldtrip/fieldtrip/blob/release/ft_combineplanar.m)**.
 
 Calculate the planar gradient of the averaged dat
 
@@ -111,7 +111,7 @@ Calculate the planar gradient of the averaged dat
     cfg.method          = 'template';
     cfg.template        = 'ctf275_neighb.mat';
     cfg.neighbours      = ft_prepare_neighbours(cfg, timelock);
-
+    
     cfg.planarmethod    = 'sincos';
     timelock_planar     = ft_megplanar(cfg, timelock);
 
@@ -120,13 +120,12 @@ Compute the amplitude of the planar gradient by combining the horizontal and ver
     % combine planar gradients
     cfg                 = [];
     timelock_planarcomb = ft_combineplanar(cfg, timelock_planar);
-
-
-	% view the results
-	cfg        = [];
-	cfg.layout = 'CTF275_helmet.mat';
-        cfg.xlim   = [0.045 0.050];
-	ft_topoplotER(cfg, timelock_planarcomb);
+    
+    % view the results
+    cfg        = [];
+    cfg.layout = 'CTF275_helmet.mat';
+    cfg.xlim   = [0.045 0.050];
+    ft_topoplotER(cfg, timelock_planarcomb);
 
 
 ## The forward model and lead field matrix
@@ -135,7 +134,7 @@ Compute the amplitude of the planar gradient by combining the horizontal and ver
 
 The first step in the procedure is to construct a forward model. The forward model allows us to calculate an estimate of the field measured by the MEG sensors for a given current distribution. In MEG analysis a forward model is typically constructed for each subject. There are many types of forward models which to various degrees take the individual anatomy into account. We will here use a semi-realistic head model developed by Nolte (2003). It is based on a correction of the lead field for a spherical volume conductor by a superposition of basis functions, gradients of harmonic functions constructed from spherical harmonics.
 
-The first step in constructing the forward model is to find the brain surface from the subject's MRI, using [ft_volumesegment](/reference/ft_volumesegment). The MRI scan used in this tutorial has already been realigned to the same coordinate system as the MEG data (in this case 'CTF', see [this page](/faq/how_can_i_convert_an_anatomical_mri_from_dicom_into_ctf_format) on how to realign your subject's brain volume.
+The first step in constructing the forward model is to find the brain surface from the subject's MRI, using [ft_volumesegment](https://github.com/fieldtrip/fieldtrip/blob/release/ft_volumesegment). The MRI scan used in this tutorial has already been realigned to the same coordinate system as the MEG data (in this case 'CTF', see [this page](/faq/how_can_i_convert_an_anatomical_mri_from_dicom_into_ctf_format) on how to realign your subject's brain volume.
 
     % read and segment the subject's anatomical scan
     load('SubjectSEF_mri.mat'); % matfile containing the realigned anatomical scan
@@ -143,7 +142,7 @@ The first step in constructing the forward model is to find the brain surface fr
     cfg        = [];
     cfg.output = 'brain';
     seg = ft_volumesegment(cfg, mri);
-
+    
     % make a figure of the mri and segmented volumes
     segmentedmri           = seg;
     segmentedmri.transform = mri.transform;
@@ -155,11 +154,11 @@ The first step in constructing the forward model is to find the brain surface fr
 Now prepare the head model from the segmented brain surface:
 
 
-	% compute the subject's headmodel/volume conductor model
-	cfg                = [];
-	cfg.method         = 'singleshell';
-	headmodel          = ft_prepare_headmodel(cfg, seg);
-	headmodel          = ft_convert_units(headmodel, 'cm'); % mm to cm, since the grid will also be expressed in cm
+    % compute the subject's headmodel/volume conductor model
+    cfg                = [];
+    cfg.method         = 'singleshell';
+    headmodel          = ft_prepare_headmodel(cfg, seg);
+    headmodel          = ft_convert_units(headmodel, 'cm'); % mm to cm, just to be sure
 
 {% include markup/warning %}
 If you want to do a beamformer source reconstruction on EEG data, you have to pay special attention to the EEG referencing. The forward model will be made with an common average reference (except in some rare cases like with bipolar iEEG electrode montages), i.e. the mean value over all electrodes is zero. Consequently, this also has to be true in your data.
@@ -174,43 +173,42 @@ Furthermore, after selecting the channels you want to use in the sourcereconstru
 Now prepare the source model. Here one has the option to make a 'normalized grid', such that the grid points in different subjects are aligned in MNI-space. For more details on how to make a normalized grid, see [here](/example/create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_mni_space). In this tutorial, we continue with non-normalized grid points:
 
 
-	% create the subject specific grid
-        grad = ft_read_sens('SubjectSEF.ds');
-
-	cfg             = [];
-	cfg.grad        = grad;
-	cfg.headmodel   = headmodel;
-	cfg.resolution  = 0.5;
-	cfg.inwardshift = -1;
-	sourcemodel     = ft_prepare_sourcemodel(cfg);
-
-	% make a figure of the single subject headmodel, and grid positions
-        figure;
-	ft_plot_sens(grad, 'style', '*b');
-	ft_plot_headmodel(headmodel, 'edgecolor', 'none'); alpha 0.4;
-	ft_plot_mesh(sourcemodel.pos(sourcemodel.inside,:));
+    % create the subject specific grid
+    grad = ft_read_sens('SubjectSEF.ds', 'senstype', 'meg');
+    
+    cfg             = [];
+    cfg.grad        = grad;
+    cfg.headmodel   = headmodel;
+    cfg.resolution  = 0.5;
+    cfg.inwardshift = -1;
+    sourcemodel     = ft_prepare_sourcemodel(cfg);
+    
+    % make a figure of the single subject headmodel, and grid positions
+    figure;
+    ft_plot_sens(grad, 'style', '*b');
+    ft_plot_headmodel(headmodel, 'edgecolor', 'none'); alpha 0.4;
+    ft_plot_mesh(sourcemodel.pos(sourcemodel.inside,:));
 
 ### Leadfield
 
 Combine all the information into the leadfield matrix:
 
-
-	% create leadfield
-	cfg                  = [];
-	cfg.grad             = grad;  % gradiometer distances
-	cfg.headmodel        = headmodel;   % volume conduction headmodel
-	cfg.sourcemodel      = sourcemodel;
-	cfg.channel          = {'MEG'};
-	cfg.singleshell.batchsize = 2000;
-        lf                   = ft_prepare_leadfield(cfg);
+    % create leadfield
+    cfg                  = [];
+    cfg.grad             = grad;  % gradiometer distances
+    cfg.headmodel        = headmodel;   % volume conduction headmodel
+    cfg.sourcemodel      = sourcemodel;
+    cfg.channel          = {'MEG'};
+    cfg.singleshell.batchsize = 2000;
+    lf                   = ft_prepare_leadfield(cfg);
 
 ## Source analysis
 
-	% create spatial filter using the lcmv beamformer
-	cfg                  = [];
-	cfg.method           = 'lcmv';
-	cfg.sourcemodel      = lf; % leadfield
-	cfg.headmodel        = headmodel; % volume conduction model (headmodel)
-	cfg.lcmv.keepfilter  = 'yes';
-	cfg.lcmv.fixedori    = 'yes'; % project on axis of most variance using SVD
-	source               = ft_sourceanalysis(cfg, timelock);
+    % create spatial filter using the lcmv beamformer
+    cfg                  = [];
+    cfg.method           = 'lcmv';
+    cfg.sourcemodel      = lf; % leadfield
+    cfg.headmodel        = headmodel; % volume conduction model (headmodel)
+    cfg.lcmv.keepfilter  = 'yes';
+    cfg.lcmv.fixedori    = 'yes'; % project on axis of most variance using SVD
+    source               = ft_sourceanalysis(cfg, timelock);

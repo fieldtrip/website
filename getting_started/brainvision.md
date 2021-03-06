@@ -1,15 +1,17 @@
 ---
 title: Getting started with BrainVision Analyzer and Easycap
-tags: [dataformat, brainvision, eeg, layout]
+tags: [dataformat, brainvision, easycap, eeg, layout]
 ---
 
 # Getting started with BrainVision Analyzer and Easycap
 
-### Introduction
+## Introduction
 
-[Brain Products GmbH](http://www.brainproducts.com) provides technical and software solutions for neurophysiological and psychophysiological research and clinical applications. Their BrainAmp ExG amplifier allows to record signals with a sampling rate up to 5000 Hz and a broad hardware bandwidth ranging from DC to 1000 Hz. Brain Products also provides EEG caps with the electrodes distributed over the head according to some standard schemes. Most of the caps provided by BrainProducts are actually fabricated by [EasyCap](http://www.easycap.de), on whose website you can also find more information. Although it is possible to use a BrainAmp amplifier with another type of cap, or to use an Easycap with an different amplifier, the most common case is to use them together and that is why we describe them jointly on this page.
+[Brain Products GmbH](http://www.brainproducts.com) provides technical and software solutions for neurophysiological and psychophysiological research and clinical applications. Their BrainAmp ExG amplifier allows to record signals with a sampling rate up to 5000 Hz and a broad hardware bandwidth ranging from DC to 1000 Hz. 
 
-The BrainVision data format
+Brain Products also provides EEG caps with the electrodes distributed over the head according to the 1020 standard or to an equidistant scheme. Most of the caps provided by BrainProducts are actually fabricated by [EasyCap](http://www.easycap.de), on whose website you can find more information. Although it is possible to use a BrainAmp amplifier with another type of cap, or to use an Easycap with an different amplifier, the most common case is to use them together and that is why we describe them jointly on this page.
+
+##  BrainVision data format
 
 The BrainVision data format consists of three separate files:
 
@@ -46,7 +48,7 @@ Manually renaming BrainVision datasets may lead to errors, since the .vhdr and .
 For validation of BrainVision file triplets, you can use the [brainvision-validator](https://github.com/sappelhoff/brainvision-validator), which is a command line tool developed in nodejs.
 {% include markup/end %}
 
-### Preprocessing of raw EEG data
+## Preprocessing of raw EEG data
 
 FieldTrip needs the user to define what file to read in. The BrainVision Recorder software usually stores different filetypes (.vhdr, .eeg, .vmrk). For reading the data into FieldTrip you can refer to the .eeg file, for exampl
 
@@ -56,16 +58,16 @@ FieldTrip needs the user to define what file to read in. The BrainVision Recorde
 
 The .eeg files are the raw data files, i.e. they contain the data as it has been stored upon acquisition.
 
-You can subsequently epoch your data using [ft_definetrial](/reference/ft_definetrial), and you can read in the data and preprocess it using [ft_preprocessing](/reference/ft_preprocessing). Note that in FieldTrip, no unit conversion takes place.
+You can subsequently epoch your data using [ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_definetrial), and you can read in the data and preprocess it using [ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing). Note that in FieldTrip, no unit conversion takes place.
 
-### Exporting raw EEG data after doing processing in BVA
+## Exporting raw EEG data after doing processing in BrainVision Analyzer
 
-Sometimes users have already done some processing (e.g., rereferencing, epoching, artifact identification) in BrainVision Analyzer, and in order to avoid repeating the time consuming / subjective selection steps it might be preferable to start from the processed data. BrainVision Analyzer stores the processing steps in a so called history file, keeping the raw data unchanged, and applying the processing steps on-the-fly. This is not something that FieldTrip can work with, so you need to export your data first.
+Sometimes users have already done some processing (e.g., rereferencing, epoching, artifact identification) in BrainVision Analyzer, and in order to avoid repeating the time consuming / subjective selection steps, it might be preferable to start from the processed data. BrainVision Analyzer stores the processing steps in a so called history file, keeping the raw data unchanged, and applying the processing steps on-the-fly. This is not something that FieldTrip can work with, so you need to export your data first.
 
 The following describes the recipe to export the processed data into a format the FieldTrip can deal with. It produces a triplet of files (.vhdr, .vmrk and .seg (instead of .eeg)), that can be imported into FieldTrip, in much the same way as described above.
 You can do all the preprocessing you want to do in BrainVision Analyzer (e.g. iltering and re-referencing can be done too) and once you have the data segmented the way you want it select 'export > generic data'. You'll get a window (maybe 2 consecutive windows) popping up asking for various settings. Leave everything as it is, except make sure the following are set:
 
-1.  For the filename output you should set it to be .seg instead of .eeg (which I think is the default).
+1.  The filename for output should be .seg instead of .eeg (which I think is the default)
 2.  DataFormat should be 'BINARY'
 3.  DataOrientation should be 'MULTIPLEXED'
 4.  Encoding should be 'UTF-8'
@@ -76,11 +78,13 @@ You can do all the preprocessing you want to do in BrainVision Analyzer (e.g. il
 When comparing your preprocessed data from FieldTrip to preprocessed data from BrainVision Analyzer, you might notice subtle differences. This might be due to two reasons: First, the filtersettings of BVA are hard to mimic using FieldTrip, because FieldTrip is using different defaults. Also, the order of preprocessing steps is fixed in FieldTrip, whereas you have to perform them manually, which makes it possible to do them in any order in BVA. The effect filters have on your data depend on the order of the preprocessing steps.
 {% include markup/end %}
 
-### Plotting
+## Plotting
 
-FieldTrip provides electrode layouts for the purpose of plotting data recorded by means of an easycap. These layouts are stored in .mat files and are based on the manufacturer's original drawings, which can also be found as .gif files in the /template/layout directory.
+Using FieldTrip, data recorded with Brain Vision hard- and software is readily plotted. It is important that the channel labels match that of the manufacturer specifications. 
 
-Using FieldTrip, data recorded with Brain Vision hard- and software is readily plotted. It is important that the channel labels match that of the manufacturer specifications. Specify the layout that matches your set-up/easycap when plotting, e.g.
+FieldTrip provides template electrode layouts for plotting data recorded with Easycap EEG caps. These layouts are stored in .mat files and are based on the manufacturer's original drawings, which can also be found bitmaps on the [template layout](https://www.fieldtriptoolbox.org/template/layout/#easycap) page.
+
+Specify the layout that matches your set-up/easycap when plotting, e.g.
 
     cfg.layout = 'easycapM1.lay';
 

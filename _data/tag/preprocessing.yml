@@ -13,6 +13,12 @@
 - name:  Making your own trialfun for conditional trial definition
   link:  /example/making_your_own_trialfun_for_conditional_trial_definition
 
+- name:  Re-reference EEG and iEEG data
+  link:  /example/rereference
+
+- name:  Use denoising source separation (DSS) to remove ECG artifacts
+  link:  /example/use_denoising_source_separation_dss_to_remove_ecg_artifacts
+
 - name:  Use independent component analysis (ICA) to remove ECG artifacts
   link:  /example/use_independent_component_analysis_ica_to_remove_ecg_artifacts
 
@@ -22,17 +28,17 @@
 - name:  What dataformats are supported?
   link:  /faq/dataformat
 
-- name:  How can I deal with a discontinuous Neuralynx recording
+- name:  How can I deal with a discontinuous Neuralynx recording?
   link:  /faq/discontinuous_neuralynx
-
-- name:  How can I extend the reading functions with a new dataformat?
-  link:  /faq/how_can_extend_the_reading_functions_with_a_new_dataformat
 
 - name:  How can I consistently represent artifacts in my data?
   link:  /faq/how_can_i_consistently_represent_artifacts_in_my_data
 
 - name:  How can I convert one dataformat into an other?
   link:  /faq/how_can_i_convert_one_dataformat_into_an_other
+
+- name:  How can I extend the reading functions with a new dataformat?
+  link:  /faq/how_can_i_extend_the_reading_functions_with_a_new_dataformat
 
 - name:  How can I find out what eventvalues and eventtypes there are in my data?
   link:  /faq/how_can_i_find_out_what_eventvalues_and_eventtypes_there_are_in_my_data
@@ -88,7 +94,7 @@
 - name:  Why is there a residual 50Hz line-noise component after applying a DFT filter?
   link:  /faq/why_is_there_a_residual_50hz_line-noise_component_after_applying_a_dft_filter
 
-- name:  Introduction - dealing with artifacts
+- name:  Introduction on dealing with artifacts
   link:  /tutorial/artifacts
 
 - name:  Automatic artifact rejection
@@ -126,4 +132,7 @@
 
 - name:  Reading in data and performing sensor-level ERF and TFR analyses
   link:  /workshop/oxford2019/sensor_analysis_plusminus
+
+- name:  From raw data to ERP
+  link:  /workshop/paris2019/handson_raw2erp
 

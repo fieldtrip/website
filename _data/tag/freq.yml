@@ -25,14 +25,17 @@
 - name:  Analyze Steady-State Visual Evoked Potentials (SSVEPs)
   link:  /example/ssvep
 
+- name:  Does it make sense to subtract the ERP prior to time frequency analysis, to distinguish evoked from induced power?
+  link:  /faq/evoked_vs_induced
+
 - name:  How can I do time-frequency analysis on continuous data?
   link:  /faq/how_can_i_do_time-frequency_analysis_on_continuous_data
 
+- name:  How can I test whether a behavioral measure is phasic?
+  link:  /faq/how_can_i_test_whether_a_behavioral_measure_is_phasic
+
 - name:  In what way can frequency domain data be represented in FieldTrip?
   link:  /faq/in_what_way_can_frequency_domain_data_be_represented_in_fieldtrip
-
-- name:  How can I compute inter-trial coherence?
-  link:  /faq/itc
 
 - name:  How does MTMCONVOL work?
   link:  /faq/mtmconvol
@@ -119,7 +122,7 @@
   link:  /walkthrough
 
 - name:  Simulating and estimating, what about model (mis)match?
-  link:  /workshop/chieti/simulation
+  link:  /workshop/chieti2015/simulation
 
 - name:  Time-frequency analysis of combined MEG/EEG data
   link:  /workshop/natmeg/timefrequency
@@ -129,4 +132,7 @@
 
 - name:  Reading in data and performing sensor-level ERF and TFR analyses
   link:  /workshop/oxford2019/sensor_analysis_plusminus
+
+- name:  Time-frequency analysis using Hanning window, multitapers and wavelets
+  link:  /workshop/paris2019/handson_sensoranalysis
 

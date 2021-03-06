@@ -2,13 +2,15 @@
 title: ft_freqsimulation
 ---
 ```plaintext
- FT_FREQSIMULATION makes simulated data in FieldTrip format. The data is
- built up from fifferent frequencies and can contain a signal in which the
- different frequencies interact (i.e. cross-frequency coherent). Different
- methods are possible to make data with special properties.
+ FT_FREQSIMULATION simulates channel-level time-series data . The data is built up
+ from different frequencies and can contain a signal in which the different
+ frequencies interact (i.e. cross-frequency coherent). Different methods are
+ possible to make data with specific properties.
 
  Use as
    [data] = ft_freqsimulation(cfg)
+ which will return a raw data structure that resembles the output of
+ FT_PREPROCESSING.
 
  The configuration options can include
    cfg.method     = The methods are explained in more detail below, but they can be
@@ -22,9 +24,10 @@ title: ft_freqsimulation
    cfg.randomseed = 'yes' or a number or vector with the seed value (default = 'yes')
 
  The number of trials and the time axes of the trials can be specified by
-   cfg.fsample    = simulated sample frequency
-   cfg.trllen     = length of simulated trials in seconds
-   cfg.numtrl     = number of simulated trials
+   cfg.fsample    = simulated sample frequency (default = 1200)
+   cfg.trllen     = length of simulated trials in seconds (default = 1)
+   cfg.numtrl     = number of simulated trials (default = 1)
+   cfg.baseline   = number (default = 0)
  or by
    cfg.time       = cell-array with one time axis per trial, which are for example obtained from an existing dataset
 

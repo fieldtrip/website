@@ -2,10 +2,11 @@
 title: ft_plot_mesh
 ---
 ```plaintext
- FT_PLOT_MESH visualizes a surface or volumetric mesh, for example describing the
- realistic shape of the head. Surface meshes should be described by triangles and
- contain the fields "pos" and "tri". Volumetric meshes should be described with
- tetraheders or hexaheders and have the fields "pos" and "tet" or "hex".
+ FT_PLOT_MESH visualizes a surface or volumetric mesh, for example with the cortical
+ folding of the brain, or the scalp surface of the head. Surface meshes are
+ described by triangles and consist of a structure with the fields "pos" and "tri".
+ Volumetric meshes are described with tetraheders or hexaheders and have the fields
+ "pos" and "tet" or "hex".
 
  Use as
    ft_plot_mesh(mesh, ...)
@@ -25,7 +26,7 @@ title: ft_plot_mesh
    'vertexsize'   = scalar or vector with the size for each vertex (default = 10)
    'unit'         = string, convert to the specified geometrical units (default = [])
    'maskstyle',   = 'opacity' or 'colormix', if the latter is specified, opacity masked color values
-                    are converted (in combination with a background color) to rgb. This bypasses
+                    are converted (in combination with a background color) to RGB. This bypasses
                     openGL functionality, which behaves unpredictably on some platforms (e.g. when
                     using software opengl)
 

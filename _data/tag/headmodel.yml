@@ -7,7 +7,10 @@
 - name:  Combined EEG and MEG source reconstruction
   link:  /example/combined_eeg_and_meg_source_reconstruction
 
-- name:  Example use of the ft_compute_leadfield function
+- name:  Compute forward simulated data using ft_dipolesimulation
+  link:  /example/compute_forward_simulated_data
+
+- name:  Compute forward simulated data with the low-level ft_compute_leadfield
   link:  /example/compute_leadfield
 
 - name:  Create MNI-aligned grids in individual head-space
@@ -34,9 +37,6 @@
 - name:  How can I fine-tune my BEM volume conduction model?
   link:  /faq/how_can_i_fine-tune_my_bem_volume_conduction_model
 
-- name:  How can I use OpenMEEG for forward modeling?
-  link:  /faq/how_can_i_use_openmeeg_for_forward_modelling
-
 - name:  How can I visualize a localspheres volume conductor model?
   link:  /faq/how_can_i_visualize_a_localspheres_volume_conductor_model
 
@@ -61,6 +61,9 @@
 - name:  Where can I find the dipoli command-line executable?
   link:  /faq/where_can_i_find_the_dipoli_command-line_executable
 
+- name:  How can I use Seg3D to check and modify segmentation results?
+  link:  /getting_started/seg3d
+
 - name:  Reference documentation
   link:  /reference
 
@@ -84,4 +87,7 @@
 
 - name:  Forward modeling for EEG source reconstruction
   link:  /workshop/oslo2019/forward_modeling
+
+- name:  Creation of headmodels and sourcemodels for source reconstruction
+  link:  /workshop/paris2019/handson_anatomy
 

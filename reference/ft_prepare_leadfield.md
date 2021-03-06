@@ -8,12 +8,12 @@ title: ft_prepare_leadfield
  Use as
    [sourcemodel] = ft_prepare_leadfield(cfg, data)
 
- It is necessary to input the data on which you want to perform the
- inverse computations, since that data generally contain the gradiometer
- information and information about the channels that should be included in
- the forward model computation. The data structure can be either obtained
- from FT_PREPROCESSING, FT_FREQANALYSIS or FT_TIMELOCKANALYSIS. If the data is empty,
- all channels will be included in the forward model.
+ It is necessary to input the data on which you want to perform the inverse
+ computations, since that data generally contain the gradiometer information and
+ information about the channels that should be included in the forward model
+ computation. The data structure can be either obtained from FT_PREPROCESSING,
+ FT_FREQANALYSIS or FT_TIMELOCKANALYSIS. If the data is empty, all channels will be
+ included in the forward model.
 
  The configuration should contain
    cfg.channel            = Nx1 cell-array with selection of channels (default = 'all'),
@@ -25,6 +25,7 @@ title: ft_prepare_leadfield
    cfg.ygrid      = vector (e.g. -20:1:20) or 'auto' (default = 'auto')
    cfg.zgrid      = vector (e.g.   0:1:20) or 'auto' (default = 'auto')
    cfg.resolution = number (e.g. 1 cm) for automatic sourcemodel generation
+
  Alternatively the position of a few sources at locations of interest can
  be specified, for example obtained from an anatomical or functional MRI
    cfg.sourcemodel.pos        = N*3 matrix with position of each source
@@ -38,20 +39,22 @@ title: ft_prepare_leadfield
    cfg.elec          = structure with electrode positions or filename, see FT_READ_SENS
    cfg.grad          = structure with gradiometer definition or filename, see FT_READ_SENS
 
- Optionally, you can modify the leadfields by reducing the rank (i.e.
- remove the weakest orientation), or by normalizing each column.
+ Optionally, you can modify the leadfields by reducing the rank (i.e. remove the
+ weakest orientation), or by normalizing each column.
    cfg.reducerank      = 'no', or number (default = 3 for EEG, 2 for MEG)
+   cfg.backproject     = 'yes' or 'no',  determines when reducerank is applied whether the
+                         lower rank leadfield is projected back onto the original linear
+                         subspace, or not (default = 'yes')
    cfg.normalize       = 'yes' or 'no' (default = 'no')
    cfg.normalizeparam  = depth normalization parameter (default = 0.5)
-   cfg.backproject     = 'yes' or 'no' (default = 'yes') determines when reducerank is applied
-                         whether the lower rank leadfield is projected back onto the original
-                         linear subspace, or not.
+   cfg.weight          = number or Nx1 vector, weight for each dipole position to compensate
+                         for the size of the corresponding patch (default = 1)
 
  Depending on the type of headmodel, some additional options may be
  specified.
 
  For OPENMEEG based headmodels:
-   cfg.openmeeg.batchsize    = scalar (default 100e3), number of dipoles
+   cfg.openmeeg.batchsize    = scalar (default 1e4), number of dipoles
                                for which the leadfield is computed in a
                                single call to the low-level code. Trades off
                                memory efficiency for speed.

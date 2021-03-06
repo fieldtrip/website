@@ -32,9 +32,9 @@ Feel free to edit this page and add links that you think are appropriate.
 
 ## EEG/MEG software (commercial)
 
-- [Neuroscan](http://www.neuro.com) (Curry)
+- [ANT Neuro](https://www.ant-neuro.com) (ASA)
 - [BESA](http://www.besa.de) (BESA Research)
-- [Advanced Neuro Technology](http://www.ant-software.nl) (ASA)
+- [Neuroscan](http://www.neuro.com) (Curry)
 - [Source Signal Imaging](http://www.sourcesignal.com) (EMSE)
 
 ## MEG hardware companies
@@ -42,14 +42,15 @@ Feel free to edit this page and add links that you think are appropriate.
 - [CTF](http://www.ctf.com)
 - [Neuromag/Elekta/Megis](http://www.neuromag.com)
 - [BTi/4D](http://www.4dneuroimaging.com)
-- [Yokogawa/Ricoh](http://www.yokogawa.com/rd/pdf/TR/rd-tr-r00038-006.pdf)
+- [Yokogawa/Ricoh](https://www.ricoh-usa.com/en/industries/healthcare/what-is-meg-brain-scanner)
 
 ## EEG hardware companies
 
-- [BrainProducts](http://www.brainproducts.com)
 - [Biosemi](http://www.biosemi.com)
-- [EGI](http://www.egi.com)
+- [BrainProducts](http://www.brainproducts.com)
+- [ANT Neuro](https://www.ant-neuro.com)
 - [Compumedics Neuroscan](https://compumedicsneuroscan.com/) (also MEG)
+- [EGI](http://www.egi.com)
 
 ## NIRS hardware companies
 

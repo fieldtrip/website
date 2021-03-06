@@ -67,4 +67,4 @@ Local organizers: Klaus Kessler and Ian Holliday.
 
 ### Extra playground material
 
-- The Neuromag/Elekta data is described in detail on <http://natmeg.se/wp/activities/data-analysis-workshop/>
+- The Neuromag/Elekta/MEGIN data is described in detail on <http://natmeg.se/wp/activities/data-analysis-workshop/>

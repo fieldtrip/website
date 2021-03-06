@@ -19,7 +19,7 @@ title: ft_sourceanalysis
    cfg.method     = 'lcmv'    linear constrained minimum variance beamformer
                     'sam'     synthetic aperture magnetometry
                     'dics'    dynamic imaging of coherent sources
-                    'pcc'     partial cannonical correlation/coherence
+                    'pcc'     partial canonical correlation/coherence
                     'mne'     minimum norm estimation
                     'rv'      scan residual variance with single dipole
                     'music'   multiple signal classification
@@ -72,17 +72,21 @@ title: ft_sourceanalysis
    cfg.numrandomization   = number, e.g. 500
    cfg.numpermutation     = number, e.g. 500 or 'all'
 
- If you have not specified a sourcemodel with pre-computed leadfields,
- the leadfield for each source position will be computed on the fly.
- In that case you can modify the leadfields by reducing the rank
- (i.e.  remove the weakest orientation), or by normalizing each
- column.
-   cfg.reducerank  = 'no', or number (default = 3 for EEG, 2 for MEG)
-   cfg.normalize   = 'no' or 'yes' (default = 'no')
+ If you have not specified a sourcemodel with pre-computed leadfields, the leadfield
+ for each source position will be computed on the fly. In that case you can modify
+ the leadfields by reducing the rank (i.e. remove the weakest orientation), or by
+ normalizing each column.
+   cfg.reducerank      = 'no', or number (default = 3 for EEG, 2 for MEG)
+   cfg.backproject     = 'yes' or 'no',  determines when reducerank is applied whether the
+                         lower rank leadfield is projected back onto the original linear
+                         subspace, or not (default = 'yes')
+   cfg.normalize       = 'yes' or 'no' (default = 'no')
+   cfg.normalizeparam  = depth normalization parameter (default = 0.5)
+   cfg.weight          = number or Nx1 vector, weight for each dipole position to compensate
+                         for the size of the corresponding patch (default = 1)
 
  Other configuration options are
-   cfg.channel       = Nx1 cell-array with selection of channels (default = 'all'),
-                       see FT_CHANNELSELECTION for details
+   cfg.channel       = Nx1 cell-array with selection of channels (default = 'all'), see FT_CHANNELSELECTION for details
    cfg.frequency     = single number (in Hz)
    cfg.latency       = single number in seconds, for time-frequency analysis
    cfg.lambda        = number or empty for automatic default

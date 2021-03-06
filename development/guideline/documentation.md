@@ -8,7 +8,7 @@ tags: [guidelines, development]
 When you add documentation, please consider the following documentation guidelines to keep it consistent with other documentation and to facilitate cross-linking.
 
 - FieldTrip should be written with capital "F" and capital "T"
-- All FieldTrip functions should be written in the text made **bold**, without .m, and with a link to the reference documentation: i.e. **[ft_preprocessing](/reference/ft_preprocessing)**
+- All FieldTrip functions should be written in the text made **bold**, without .m, and with a link to the reference documentation: i.e. **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)**
 - When you add a new page, please give it relevant [tags](#how_to_add_tags).
 - If you see something that needs to be fixed in the documentation, report it as issue on [GitHub](https://github.com/fieldtrip/website/issues)
 - Please structure new tutorials [in the following way](#how_to_structure_a_tutorial).
@@ -17,9 +17,9 @@ When you add documentation, please consider the following documentation guidelin
 
 ## Where to add documentation on the website?
 
-There are several places where you are especially encouraged to add your own input to the FieldTrip website. On the [frequently asked questions](/faq) page you can add answers to a variety of FieldTrip-related questions. On the [example scripts](/example) page you can put parts of your own scripts of specific analysis done in FieldTrip or in conjunction with FieldTrip. If these scripts get very elaborate and use example data, you can alternatively add a tutorial on the [tutorials](/tutorial) page and [contact](/contact) us to [send](/faq/how_should_i_send_example_data_to_the_developers) the example data so it can be put on the ftp-server (ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/).
+There are several places where you are especially encouraged to add your own input to the FieldTrip website. On the [frequently asked questions](/faq) page you can add answers to a variety of FieldTrip-related questions. On the [example scripts](/example) page you can put parts of your own scripts of specific analysis done in FieldTrip or in conjunction with FieldTrip. If these scripts get very elaborate and use example data, you can alternatively add a tutorial on the [tutorials](/tutorial) page and [contact](/contact) us to [send](/faq/how_should_i_send_example_data_to_the_developers) the example data so it can be put on the FTP server <ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/>.
 
-To submit changes to the FieldTrip website, make a Pull Request on the [`fieldtrip/website` repo on GitHub](https://github.com/fieldtrip/website).
+To submit changes to the FieldTrip website, make a Pull Request on the corresponding [website repository](https://github.com/fieldtrip/website) on GitHub.
 
 ## How to structure a tutorial?
 
@@ -87,7 +87,7 @@ Making schematic figures in SVG is easy in Microsoft Word or Microsoft Powerpoin
 
 If you make schematic figures yourself we suggest the default Office 2007 color scheme. The lighter (pastel) colors are made by making the images 50% transparent (_right-button_ click on figure, then change transparency under _format shape_), or by using the RGB values in the boxes below. Also, we suggest using the Calibri or Arial font in figures. Here you can find an example of the colors.
 
-{% include image src="/assets/img/development/guideline/documentation/fieltrip_palette.png" %}
+{% include image src="/assets/img/development/guideline/documentation/fieldtrip_palette.png" %}
 
 ## Suggested further reading
 

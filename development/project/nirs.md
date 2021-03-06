@@ -21,39 +21,39 @@ Mark van Wanrooij (DCN/biophysics) and his group might substantially contribute 
 
 ## Header
 
-The FieldTrip header contains meta information about the recording. More information be found in the respective reading file [ft_read_header](/reference/ft_read_header). For MEG data, the header also contains a .grad field, which contains information about the gradiometers. The respective counterpart for EEG data is .elec, but is commonly not stored together with the recorded data and thus not represented in the header.
+The FieldTrip header contains meta information about the recording. More information be found in the respective reading file [ft_read_header](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_header). For MEG data, the header also contains a .grad field, which contains information about the gradiometers. The respective counterpart for EEG data is .elec, but is commonly not stored together with the recorded data and thus not represented in the header.
 
 NIRS data has another kind of sensor called "optode". An optode can either emit light, laser light or LED light, called a "transmitter", or receive light, e.g. by avalanching photodiodes, called "receiver". A channel is defined by the amount of transmitted light from the "transmitter" that is received by the "receiver" (hence the nomenclature). I propose the header of NIRS data to contain a .opto field, that includes optode specific information. These types need to be incorporated in ft_senstype and ft_chantype.
 
 In a similar vein as for MEG data, the .opto field should contain a .tra matrix, that contains information on how the channels are defined in terms of transmitters and receivers. Note that, in contrast to electrophysiological measurements, this is a 1-1-1 mapping, i.e. exactly one transmitter and exactly one receiver make up one channel (technically this is commonly achieved by multiplexing).
 
-Optode specifications:
+Optode specifications, where M is the number of channels, N is the number of optodes and K is the number of wavelengths:
 
-    hdr.opto            - contains information about the optodes.
-    hdr.opto.tra        - NxC matrix, boolean, contains information about how receiver and transmitter form channels.
-    hdr.opto.optopos    - contains information about the position of the optodes.
-    hdr.opto.optotype   - contains information about the type of optode (receiver or transmitter).
-    hdr.opto.chanpos    - contains information about the position of the channels (i.e. average of optopos)
-    hdr.opto.chantype   - contains information about the channel type (NIRS)
-    hdr.opto.wavelength - 1xM vector of all wavelengths that were used
-    hdr.opto.transmits  - NxM matrix, boolean, where N is the number of optodes and M the number of wavelengths per transmitter. Specifies what optode is transmitting at what wavelength (or nothing at all, which indicates that it is a receiver)
-    hdr.opto.laserstrength - 1xM vector of the strength of the emitted light of the lasers.
+    opto.label         = Mx1 cell-array with channel labels
+    opto.chanpos       = contains information about the position of the channels (usually halfway the transmitter and receiver)
+    opto.optopos       = contains information about the position of individual optodes
+    opto.optotype      = contains information about the type of optode (receiver or transmitter)
+    opto.optolabel     = Nx1 cell-array with optode labels
+    opto.transmits     = NxK matrix, boolean, where N is the number of optodes and K the number of wavelengths. Specifies which optode is transmitting at what wavelength (or nothing at all, indicating that it is a receiver)
+    opto.wavelength    = 1xK vector of all wavelengths that were used
+    opto.laserstrength = 1xK vector of the strength of the emitted light of the lasers
+    opto.tra           = MxN matrix, boolean, contains information about how N receivers and transmitters form M channels
 
 ## Datatype
 
-There are different datatypes in FieldTrip. The basic starting point is a raw data, see [ft_datatype_raw](/reference/ft_datatype_raw) for more information. There will be no changes requires for NIRS data structures. Labels will be represented as 'RxY - TxZ [type]', where Y and Z are integer numbers indexing the receiver number and type can be the type of chromophore or the wavelength at which the measurement was taken.
+There are different datatypes in FieldTrip. The basic starting point is a raw data, see **[ft_datatype_raw](https://github.com/fieldtrip/fieldtrip/blob/release/utilities/ft_datatype_raw.m)** for more information. There will be no changes requires for NIRS data structures. Labels will be represented as 'RxY - TxZ [type]', where Y and Z are integer numbers indexing the receiver number and type can be the type of chromophore or the wavelength at which the measurement was taken.
 
 ## Chantype
 
-New channels for ft_chantype should be 'nirs', 'receiver' and 'transmitter'.
+New channels for **[ft_chantype](https://github.com/fieldtrip/fieldtrip/blob/release/ft_chantype.m)** should be 'nirs', 'receiver' and 'transmitter'.
 
 ## Filetype
 
-[ft_filetype](/reference/ft_filetype) need to be able to identify NIRS data files correctly. Die to copyright issues, these files should be best put into fieldtrip\external\manufacturer. The following table shows manufacturers and systems and the respective extension of the data files. Note that I do not know all these different types, and below is just an example tabl
+**[ft_filetype](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_filetype.m)** need to be able to identify NIRS data files correctly. Die to copyright issues, these files should be best put into fieldtrip\external\manufacturer. The following table shows manufacturers and systems and the respective extension of the data files. Note that I do not know all these different types, and below is just an example table:
 
 | Manufacturer                                                                                               | System(s)                            | File format | Proprietary file format |
 | ---------------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------- | ----------------------- |
-| [Artinis Medical Systems](http://www.artinis.com)                                                          | Oxymon, Octamon, Portamon, Portalite | .oxy3       | yes                     |
+| [Artinis Medical Systems](http://www.artinis.com)                                                          | Oxymon, Octamon, Portamon, Portalite | .oxy3/.oxy4 | yes                     |
 | [Hitachi Medical Systems](http://www.hitachi-medical-systems.nl/products-and-services/optical-topography/) | ETG-4000                             | .csv        | no                      |
 
 ## Transformations
@@ -61,15 +61,18 @@ New channels for ft_chantype should be 'nirs', 'receiver' and 'transmitter'.
 NIRS data requires transformations from (changes in) optical densities to (changes in) concentrations (oxygenated hemoglobin and changes in deoxygenated hemoglobin). These changes can be expressed in log-ratios or ln-ratios. Different labs have different preferences. In either case, we need a respective lookup table for the absorption coefficient (or extinction coefficient, which is proportional. The absorption coefficient is measured in natural logarithm, whereas the extinction coefficient uses the base 10 logarithm) for different wavelengths. ft_chanunit needs to be adjusted to incorporate the respective units (molar for concentrations, Watt for transmitter). The transformation is dependent on the wavelengths of the transmitter, the change in optical density (fraction of received light), the distance between transmitter and receiver and the differential path length factor (DPF), which is mostly estimated by the age of the participant and a lookup table.
 
 Robert and me settled on creating a forward- and an inverse-function for this purpose.
-function [transform] = ft_convertODs(cfg, opto)
+
+    function [transform] = ft_convertODs(cfg, opto)
+
 with
 
     cfg.channel = cell-array of strings or 1xN vector, defines on which channels the transformation matrix should be computed
     cfg.target = string, can be 'HbO' (oxygenated hemoglobin) or 'HbR' (deoxygenated hemoglobin')
     cfg.age = scalar, age of the participant
+
 or
 
-  cfg.dpf = scalar, differential path length factor
+    cfg.dpf = scalar, differential path length factor
 
 additional fields can contain the lookup table for the absorption coefficient or dpf.
 
@@ -100,6 +103,8 @@ In case a high-level FieldTrip function calls a NIRS function, ft_hastoolbox wil
 
 The original [NIRS-SPM](http://bispl.weebly.com/nirs-spm.html) was developed by Korea Advanced Institute of Science & Technology. The general NIRS-SPM approach is to solve a GLM based on different approaches of nongaussian random field theory. One of the developers, Sungho Tak, is now working at UCL in Will Penny's group. He reworked NIRS-SPM, which can now be found as on [NIRTC as SPM for fNIRS toolbox](http://www.nitrc.org/projects/spm_fnirs). SPM-fNIRS includes DCM as well.
 
-[Homer2](http://www.nmr.mgh.harvard.edu/PMI/resources/homer2/home.htm), developed by the Martinos Centre in Harvard, and primarily maintained by Ted Huppert from University in Pittsburgh. Is the most commonly used toolbox for NIRS analysis. Includes some forward modelling in the AtlasViewer.
+[Homer2](http://www.nmr.mgh.harvard.edu/PMI/resources/homer2/home.htm), developed by the Martinos Centre in Harvard, and primarily maintained by Ted Huppert from University in Pittsburgh. Is the most commonly used toolbox for NIRS analysis. Includes some forward modeling in the AtlasViewer.
+
+The [NIRS toolbox](https://bitbucket.org/huppertt/nirs-toolbox/) for analysis of functional Near-Infrared Spectroscopy developed by the Huppert lab at the University of Pittsburgh is one of the best toolboxes available at the moment.
 
 Other available toolboxes such as [EasyTopo](https://sites.google.com/site/fenghuatian/software/easytopo) (for visualization) or the [NIRS Analysis package (NAP)](https://sites.google.com/site/tomerfekete2/) are not widely used.

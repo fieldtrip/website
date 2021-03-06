@@ -5,9 +5,9 @@ tags: [example, cfg]
 
 # How to use ft_checkconfig
 
-The function **[ft_checkconfig](/reference/ft_checkconfig)** checks the input configuration (cfg) for the main FieldTrip functions. This is similar to what **[ft_checkdata](/reference/ft_checkdata)** does for the input data. The **[ft_checkconfig](/reference/ft_checkconfig)** function is automatically called when you use a FieldTrip function. You may not even notice this, unless it gives you feedback about your cfg (i.e., warning or error messages).
+The function **[ft_checkconfig](https://github.com/fieldtrip/fieldtrip/blob/release/ft_checkconfig.m)** checks the input configuration (cfg) for the main FieldTrip functions. This is similar to what **[ft_checkdata](https://github.com/fieldtrip/fieldtrip/blob/release/ft_checkdata.m)** does for the input data. The **[ft_checkconfig](https://github.com/fieldtrip/fieldtrip/blob/release/ft_checkconfig.m)** function is automatically called when you use a FieldTrip function. You may not even notice this, unless it gives you feedback about your cfg (i.e., warning or error messages).
 
-**[ft_checkconfig](/reference/ft_checkconfig)** can also control the output cfg (i.e., the cfg that is given back by the function, usually data.cfg) and give more elaborate feedback to the user. This tutorial explains what **[ft_checkconfig](/reference/ft_checkconfig)** does, and importantly, how you can control it and use it to your advantage!
+**[ft_checkconfig](https://github.com/fieldtrip/fieldtrip/blob/release/ft_checkconfig.m)** can also control the output cfg (i.e., the cfg that is given back by the function, usually data.cfg) and give more elaborate feedback to the user. This tutorial explains what **[ft_checkconfig](https://github.com/fieldtrip/fieldtrip/blob/release/ft_checkconfig.m)** does, and importantly, how you can control it and use it to your advantage!
 
 ## Introduction to ft_checkconfig
 
@@ -30,7 +30,7 @@ controlled: fields exceeding a certain maximum size are emptied.
 
 ## How to control the behavior of ft_checkconfig
 
-When you use a FieldTrip function, this automatically calls **[ft_checkconfig](/reference/ft_checkconfig)** to check the cfg you supplied. If necessary, **[ft_checkconfig](/reference/ft_checkconfig)** will give you feedback. How can you control this feedback? As explained in the help documentation
+When you use a FieldTrip function, this automatically calls **[ft_checkconfig](https://github.com/fieldtrip/fieldtrip/blob/release/ft_checkconfig.m)** to check the cfg you supplied. If necessary, **[ft_checkconfig](https://github.com/fieldtrip/fieldtrip/blob/release/ft_checkconfig.m)** will give you feedback. How can you control this feedback? As explained in the help documentation
 
     % The behavior of checkconfig can be controlled by the following cfg options,
     % which can be set as global FieldTrip defaults (see FT_DEFAULTS
@@ -38,19 +38,19 @@ When you use a FieldTrip function, this automatically calls **[ft_checkconfig](/
     %   cfg.trackconfig = 'cleanup', 'report' or 'off'
     %   cfg.checksize   = number in bytes, can be inf (set max size allowed for output cfg fields)
 
-When you use a FieldTrip function, this automatically calls ft_defaults. ft_defaults is a function that takes care of path setting, plus it sets defaults to be used throughout fieldtrip. It does this by creating a global variable called ft_defaults (i.e. a variable that is available to all functions, but not directly visible to the user. You can make it visible by typing 'global ft_default'). The variable ft_default has the following fields and default settings that pertain to \*_[ft_checkconfig](/reference/ft_checkconfig)_
+When you use a FieldTrip function, this automatically calls the function `ft_defaults`, which takes care of path setting, plus it sets defaults to be used throughout FieldTrip. It does this by creating a global variable called `ft_default`, i.e. a variable that is available to all functions, but not directly visible to the user. You can make it visible by typing `global ft_default`. The variable `ft_default` has the following fields and default settings that pertain to **[ft_checkconfig](https://github.com/fieldtrip/fieldtrip/blob/release/ft_checkconfig.m)**.
 
     ft_default.checkconfig = 'loose';
     ft_default.trackconfig = 'off';
     ft_default.checksize   = 1e5;
 
-These settings control the behavior of **[ft_checkconfig](/reference/ft_checkconfig)**. If you want to change these settings, either do it via the global variable (this way they will apply to all FieldTrip functions and automatically be added to the cfg), or do it directly via the cfg when you call a specific function. What are the available options?
+These settings control the behavior of **[ft_checkconfig](https://github.com/fieldtrip/fieldtrip/blob/release/ft_checkconfig.m)**. If you want to change these settings, either do it via the global variable (this way they will apply to all FieldTrip functions and automatically be added to the cfg), or do it directly via the cfg when you call a specific function. What are the available options?
 
 **cfg.checkconfig: 'pedantic', 'loose' or 'silent'**
 
-This setting determines the type of feedback **[ft_checkconfig](/reference/ft_checkconfig)** gives about the input cfg. An important function of **[ft_checkconfig](/reference/ft_checkconfig)** is to check whether the input cfg contains all the required options, and no renamed, unused, deprecated or forbidden options. If possible, **[ft_checkconfig](/reference/ft_checkconfig)** will adjust the cfg to the input requirements and give feedback to the user. You can control the type of feedback given. This can either be **'silent'**, which means no feedback is given at all, or **'loose'** which means warnings are given for all inconsistencies, or **'pedantic'**, which means errors are given for each inconsistency in your input cfg. Note that a missing required field in the cfg will always lead to an error, because FieldTrip simply will not run without it.
+This setting determines the type of feedback **[ft_checkconfig](https://github.com/fieldtrip/fieldtrip/blob/release/ft_checkconfig.m)** gives about the input cfg. An important function of **[ft_checkconfig](https://github.com/fieldtrip/fieldtrip/blob/release/ft_checkconfig.m)** is to check whether the input cfg contains all the required options, and no renamed, unused, deprecated or forbidden options. If possible, **[ft_checkconfig](https://github.com/fieldtrip/fieldtrip/blob/release/ft_checkconfig.m)** will adjust the cfg to the input requirements and give feedback to the user. You can control the type of feedback given. This can either be **'silent'**, which means no feedback is given at all, or **'loose'** which means warnings are given for all inconsistencies, or **'pedantic'**, which means errors are given for each inconsistency in your input cfg. Note that a missing required field in the cfg will always lead to an error, because FieldTrip simply will not run without it.
 
-To give an example using **[ft_freqdescriptives](/reference/ft_freqdescriptives)**, if your cfg contains the field 'jacknife' (which was used in a previous version of FieldTrip but has since been renamed to 'jackknife'
+To give an example using **[ft_freqdescriptives](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqdescriptives.m)**, if your cfg contains the field 'jacknife' (which was used in a previous version of FieldTrip but has since been renamed to 'jackknife'
 
     cfg = [];
     cfg.jacknife = 'no';
@@ -60,17 +60,17 @@ You will get the following feedback
 
     Warning: use cfg.jackknife instead of cfg.jacknife
 
-In this case, you don't have to do anything: **[ft_checkconfig](/reference/ft_checkconfig)** will rename the field for you, and **[ft_freqdescriptives](/reference/ft_freqdescriptives)** can do its job. Of course the idea is, that you will use this feedback to improve your scripts!
+In this case, you don't have to do anything: **[ft_checkconfig](https://github.com/fieldtrip/fieldtrip/blob/release/ft_checkconfig.m)** will rename the field for you, and **[ft_freqdescriptives](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqdescriptives.m)** can do its job. Of course the idea is, that you will use this feedback to improve your scripts!
 
-_Note: the feedback **[ft_checkconfig](/reference/ft_checkconfig)** gives on your input cfg is not exhaustive, meaning that not all possible options you could come up with will be taken care of. It mainly ensures backward compatibility of old scripts, and checks some important required and forbidden fields._
+_Note: the feedback **[ft_checkconfig](https://github.com/fieldtrip/fieldtrip/blob/release/ft_checkconfig.m)** gives on your input cfg is not exhaustive, meaning that not all possible options you could come up with will be taken care of. It mainly ensures backward compatibility of old scripts, and checks some important required and forbidden fields._
 
 **cfg.trackconfig: 'cleanup', 'report' or 'off'**
 
-**[ft_checkconfig](/reference/ft_checkconfig)** can also control the output cfg. It tracks the cfg from the moment you put it into a function until it comes out again (usually as data.cfg). This can provide you with useful feedback: which of the options you specified were actually used? Which options have been added as defaults by the FieldTrip function? You can control the behavior of configtracking: **'report'** will only give you a report, **'cleanup'** will give both a report and a cleaned output cfg. If you do not want to use configtracking at all, use **'off'**.
+**[ft_checkconfig](https://github.com/fieldtrip/fieldtrip/blob/release/ft_checkconfig.m)** can also control the output cfg. It tracks the cfg from the moment you put it into a function until it comes out again (usually as data.cfg). This can provide you with useful feedback: which of the options you specified were actually used? Which options have been added as defaults by the FieldTrip function? You can control the behavior of configtracking: **'report'** will only give you a report, **'cleanup'** will give both a report and a cleaned output cfg. If you do not want to use configtracking at all, use **'off'**.
 
 **cfg.checksize: number in bytes, can be inf**
 
-This determines the maximum size allowed for output cfg fields (i.e. the data.cfg). Some fields in the output cfg can be very large, e.g. the cfg.grid field when you do sourceanalysis. To avoid that several MBs or even GBs of your disk space are taken up by the data.cfg, you can set a maximum and **[ft_checkconfig](/reference/ft_checkconfig)** will empty all the cfg fields that are too big, before adding the cfg to the data. Crucial fields such as the cfg.trl and cfg.event will never be removed ((currently, the following fields are ignored: 'checksize', 'trl', 'trlold', 'event', 'artifact', 'artfctdef', 'previous')). The default is set to **100000** bytes, but you can change this to anything you want. If you do not want any fields to be removed, set checksize to **inf**.
+This determines the maximum size allowed for output cfg fields (i.e. the data.cfg). Some fields in the output cfg can be very large, e.g. the cfg.grid field when you do sourceanalysis. To avoid that several MBs or even GBs of your disk space are taken up by the data.cfg, you can set a maximum and **[ft_checkconfig](https://github.com/fieldtrip/fieldtrip/blob/release/ft_checkconfig.m)** will empty all the cfg fields that are too big, before adding the cfg to the data. Crucial fields such as the cfg.trl and cfg.event will never be removed (currently, the following fields are ignored: 'checksize', 'trl', 'trlold', 'event', 'artifact', 'artfctdef', 'previous'). The default is set to **100000** bytes, but you can change this to anything you want. If you do not want any fields to be removed, set checksize to **inf**.
 
 ## How to use trackconfig to figure out which options were and were not used
 
@@ -86,7 +86,7 @@ If you are using the tutorial dataset, first get the trial definitio
     cfg.trialdef.eventvalue  = 3;
     cfg = ft_definetrial(cfg);
 
-Now, run **[ft_preprocessing](/reference/ft_preprocessing)** with trackconfig set to cleanup. This will give you both a report (on screen) and a cleaned data.cfg:
+Now, run **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** with trackconfig set to cleanup. This will give you both a report (on screen) and a cleaned data.cfg:
 
     cfg.trackconfig = 'cleanup';
     cfg.unused = 1; % to test whether it works!
@@ -155,7 +155,7 @@ The report will look like this:
       cfg.dftfreq
       cfg.dftinvert
 
-Thus, it specifies which options were set by you and whether they were used. As you can see, the cfg.unused indeed ends up as "set by you, not used". Furthermore, the report shows the options that were added by the **[ft_preprocessing](/reference/ft_preprocessing)** function, and whether they were actually used for your analysis. There is quite a list of unused defaults. When we now look at the output cfg we see that it is nicely cleaned. Compare this with a call to **[ft_preprocessing](/reference/ft_preprocessing)** without using trackconfig.
+Thus, it specifies which options were set by you and whether they were used. As you can see, the cfg.unused indeed ends up as "set by you, not used". Furthermore, the report shows the options that were added by the **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** function, and whether they were actually used for your analysis. There is quite a list of unused defaults. When we now look at the output cfg we see that it is nicely cleaned. Compare this with a call to **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** without using trackconfig.
 
     cfg.trackconfig = 'off';
     data2 = ft_preprocessing(cfg);
@@ -167,7 +167,7 @@ This example showed how trackconfig can be used when doing preprocessing. The sa
 
 ## How to use checksize to save disk space
 
-As explained above, you can use cfg.checksize to set a limit to the size of fields in the output cfg, **[ft_checkconfig](/reference/ft_checkconfig)** then empties fields that are too big. Crucial fields such as the trl will never be removed. This all pertains to the output cfg, i.e. the cfg that comes out of the function (depending on the FieldTrip function you are using, this is either cfg or data.cfg). This does _not_ change any data.cfg.previous fields.
+As explained above, you can use cfg.checksize to set a limit to the size of fields in the output cfg, **[ft_checkconfig](https://github.com/fieldtrip/fieldtrip/blob/release/ft_checkconfig.m)** then empties fields that are too big. Crucial fields such as the trl will never be removed. This all pertains to the output cfg, i.e. the cfg that comes out of the function (depending on the FieldTrip function you are using, this is either cfg or data.cfg). This does _not_ change any data.cfg.previous fields.
 
 However, you may have lots of analysed data on disk, with data.cfgs that might be taking up quite some of your disk space. Especially after doing beamforming (sourceanalysis) the output cfg can be large, since the grid is always kept in the data.cfg. If you would like to free some disk space (and are sure you can do without these fields), the following trick can be applie
 
@@ -188,4 +188,4 @@ However, you may have lots of analysed data on disk, with data.cfgs that might b
       save(downsizefiles{k}, 'data')
     end
 
-This way **[ft_checkconfig](/reference/ft_checkconfig)** will run recursively through the entire data.cfg, including all the previous fields, and empty the fields that are larger than the specified maximum. This can be used on all FieldTrip data.
+This way **[ft_checkconfig](https://github.com/fieldtrip/fieldtrip/blob/release/ft_checkconfig.m)** will run recursively through the entire data.cfg, including all the previous fields, and empty the fields that are larger than the specified maximum. This can be used on all FieldTrip data.

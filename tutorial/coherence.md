@@ -1,6 +1,6 @@
 ---
 title: Analysis of corticomuscular coherence
-tags: [tutorial, coherence, meg, emg, plot, source, connectivity, meg-visuomotor275]
+tags: [tutorial, coherence, meg, emg, plotting, source, connectivity, meg-visuomotor151]
 ---
 
 # Analysis of corticomuscular coherence
@@ -21,10 +21,10 @@ To study the oscillatory synchrony between two signals, one can compute the cohe
 
 To compute the coherence between the MEG and EMG signals for the example dataset we will perform the following step
 
-- Read the data into MATLAB using **[ft_preprocessing](/reference/ft_preprocessing)**
-- Compute the power spectra and cross-spectral densities using the function **[ft_freqanalysis](/reference/ft_freqanalysis)** and subsequently compute the coherence using **[ft_connectivityanalysis](/reference/ft_connectivityanalysis)**
-- Visualize the results using **[ft_singleplotER](/reference/ft_singleplotER)**, **[ft_multiplotER](/reference/ft_multiplotER)**, and **[ft_topoplotER](/reference/ft_topoplotER)**
-- Subsequently it is possible to localise the neuronal sources coherent with the EMG, using **[ft_sourceanalysis](/reference/ft_sourceanalysis)**
+- Read the data into MATLAB using **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)**
+- Compute the power spectra and cross-spectral densities using the function **[ft_freqanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqanalysis.m)** and subsequently compute the coherence using **[ft_connectivityanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_connectivityanalysis.m)**
+- Visualize the results using **[ft_singleplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_singleplotER.m)**, **[ft_multiplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_multiplotER.m)**, and **[ft_topoplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_topoplotER.m)**
+- Subsequently it is possible to localise the neuronal sources coherent with the EMG, using **[ft_sourceanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceanalysis.m)**
 
 ## Preprocessing
 
@@ -94,7 +94,7 @@ Note, that due to the artifact rejection, this procedure is very slow and we typ
 
     save data data
 
-The preprocessed data is available as a mat-file from the [FieldTrip ftp server (data.mat)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/coherence/data.mat) and you can skip the preprocessing above by loading the data like this:
+The preprocessed data is available as a mat-file from the [FieldTrip FTP server (data.mat)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/coherence/data.mat) and you can skip the preprocessing above by loading the data like this:
 
     load data
 
@@ -113,7 +113,7 @@ To get a feel for the data, plot a trial from a sensor overlying the left motor-
 
 {% include image src="/assets/img/tutorial/coherence/figure1c.png" width="400" %}
 
-_Figure: An example of the raw MEG data from sensor MLC21 (upper frame) and the EMG data (lower frame). The signals are from the output of **[ft_preprocessing](/reference/ft_preprocessing)** and plotted using the MATLAB plot function. Note that the signal strength of the left EMG is bigger than that of the right EMG._
+_Figure: An example of the raw MEG data from sensor MLC21 (upper frame) and the EMG data (lower frame). The signals are from the output of **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** and plotted using the MATLAB plot function. Note that the signal strength of the left EMG is bigger than that of the right EMG._
 
 #### Exercise 1
 
@@ -123,17 +123,17 @@ Explore the MEG and EMG in figure 1, e.g. by zooming in. How are the signals dif
 
 ## Computing the coherence
 
-Using **[ft_freqanalysis](/reference/ft_freqanalysis)**, the characteristics in the frequency domain will be computed. This step requires the preprocessed MEG and EMG data (see above or download from [ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/coherence/data.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/coherence/data.mat)). Load the data with:
+Using **[ft_freqanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqanalysis.m)**, the characteristics in the frequency domain will be computed. This step requires the preprocessed MEG and EMG data (see above or download from [ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/coherence/data.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/coherence/data.mat)). Load the data with:
 
     load data
 
-After the computation of the frequency domain representation **[ft_connectivityanalysis](/reference/ft_connectivityanalysis)** will be used to compute the coherence. There are essentially two ways of achieving the same coherence, and these will be explained below. The main difference is the way in which the frequency domain representation is computed. You can also check out [the different ways of representing frequency domain data](/faq/in_what_way_can_frequency_domain_data_be_represented_in_fieldtrip)
+After the computation of the frequency domain representation **[ft_connectivityanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_connectivityanalysis.m)** will be used to compute the coherence. There are essentially two ways of achieving the same coherence, and these will be explained below. The main difference is the way in which the frequency domain representation is computed. You can also check out [the different ways of representing frequency domain data](/faq/in_what_way_can_frequency_domain_data_be_represented_in_fieldtrip)
 
 ##### Method 1
 
-In this 'method' we will use **[ft_freqanalysis](/reference/ft_freqanalysis)** for the computation of the fourier spectra, which is the 'bare' frequency domain representation of the signal, where both amplitude and phase information of the oscillations are represented in a complex number for each frequency.
+In this 'method' we will use **[ft_freqanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqanalysis.m)** for the computation of the fourier spectra, which is the 'bare' frequency domain representation of the signal, where both amplitude and phase information of the oscillations are represented in a complex number for each frequency.
 
-First, a configuration structure (cfg) must be defined. The FFT-algorithm will be used to compute the Fourier representation of each signal. To optimize the estimation, spectral smoothing using ‘multitapers’ will be applied. In this context, the degree of ‘smoothing’ (as defined in the parameter cfg.tapsmofrq) is critical. We will return to this parameter later.
+First, a configuration structure (cfg) must be defined. The FFT-algorithm will be used to compute the Fourier representation of each signal. To optimize the estimation, spectral smoothing using 'multitapers' will be applied. In this context, the degree of 'smoothing' (as defined in the parameter cfg.tapsmofrq) is critical. We will return to this parameter later.
 
     cfg            = [];
     cfg.output     = 'fourier';
@@ -146,7 +146,7 @@ First, a configuration structure (cfg) must be defined. The FFT-algorithm will b
 
 ##### Method 2
 
-In this 'method' we will use **[ft_freqanalysis](/reference/ft_freqanalysis)** for the computation of the cross- and power spectra, which are mathematically constructed from the multiplication of a complex-valued fourier spectrum with the complex conjugate of another fourier spectrum. If the two fourier spectra are derived from the same channel, the cross spectrum is called the auto spectrum, and this is exactly the same as the power spectrum. Rather than in method 1 (see above), where the phase in the fourier spectra represented the _phase_ of the oscillation, the phase in the cross spectra represent the _phase difference_ between the oscillations of a specific channel pair. For this reason, we need to specify in the cfg between which pairs we want to compute the cross spectra.
+In this 'method' we will use **[ft_freqanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqanalysis.m)** for the computation of the cross- and power spectra, which are mathematically constructed from the multiplication of a complex-valued fourier spectrum with the complex conjugate of another fourier spectrum. If the two fourier spectra are derived from the same channel, the cross spectrum is called the auto spectrum, and this is exactly the same as the power spectrum. Rather than in method 1 (see above), where the phase in the fourier spectra represented the _phase_ of the oscillation, the phase in the cross spectra represent the _phase difference_ between the oscillations of a specific channel pair. For this reason, we need to specify in the cfg between which pairs we want to compute the cross spectra.
 
     cfg            = [];
     cfg.output     = 'powandcsd';
@@ -184,7 +184,7 @@ Visualize the coherence between the EMG and all the MEG sensor
 
 _Figure: The coherence between the left EMG and all the MEG sensors calculated using ft_freqanalysis and ft_connectivityanalysis. Plotting was done with ft_multiplotER._
 
-Plot the coherence for sensor MRC21 (using the same settings as in **[ft_multiplotER](/reference/ft_multiplotER)**
+Plot the coherence for sensor MRC21 (using the same settings as in **[ft_multiplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_multiplotER.m)**
 
     cfg.channel = 'MRC21';
     figure; ft_singleplotER(cfg, fd);
@@ -277,7 +277,7 @@ Plot the results of the 5, 2, and 10 Hz smoothin
     cfg.ylim          = [0 0.2];
     cfg.refchannel    = 'EMGlft';
     cfg.channel       = 'MRC21';
-    figure;ft_singleplotER(cfg, fd, fd2, fd10);
+    figure; ft_singleplotER(cfg, fd, fd2, fd10);
 
 Which degree of smoothing do you consider optimal in the calculations above?
 {% include markup/end %}
@@ -320,7 +320,7 @@ Compare the results with figure 3. Pay special attention to the noise bias.
 
 ## Summary and further reading
 
-This tutorial demonstrated how to compute one specific measure of connectivity. Using **[ft_connectivityanalysis](/reference/ft_connectivityanalysis)** you can also compute other undirected and directed connectivity measures, such as Granger causality. This is explained in more detail in the [connectivity tutorial](/tutorial/connectivity).
+This tutorial demonstrated how to compute one specific measure of connectivity. Using **[ft_connectivityanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_connectivityanalysis.m)** you can also compute other undirected and directed connectivity measures, such as Granger causality. This is explained in more detail in the [connectivity tutorial](/tutorial/connectivity).
 
 FAQ
 {% include seealso tag1="faq" tag2="connectivity" %}
@@ -349,7 +349,7 @@ Compute the cross-spectral density matrix for 18 H
     cfg.channelcmb = {'MEG' 'MEG';'MEG' 'EMGlft'};
     freq           = ft_freqanalysis(cfg, data);
 
-Once we computed this, we can use **[ft_sourceanalysis](/reference/ft_sourceanalysis)** using the following configuration.
+Once we computed this, we can use **[ft_sourceanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceanalysis.m)** using the following configuration.
 This step requires the subject's headmodel, which is available from [ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/SubjectCMC.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/SubjectCMC.zip).
 
     cfg                 = [];
@@ -377,7 +377,7 @@ Next, we can proceed with the interpolation.
     cfg.downsample = 2;
     interp         = ft_sourceinterpolate(cfg, source, mri);
 
-There are various ways to visualise the volumetric interpolated data. The most straightforward way is using **[ft_sourceplot](/reference/ft_sourceplot)**.
+There are various ways to visualise the volumetric interpolated data. The most straightforward way is using **[ft_sourceplot](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceplot.m)**.
 
     cfg              = [];
     cfg.method       = 'ortho';
@@ -387,7 +387,7 @@ There are various ways to visualise the volumetric interpolated data. The most s
 
 {% include image src="/assets/img/tutorial/coherence/figure5.png" %}
 
-_Figure: The neuronal source showing maximum coherence with the left EMG at 18 Hz. The plot was created with **[ft_sourceplot](/reference/ft_sourceplot)**._
+_Figure: The neuronal source showing maximum coherence with the left EMG at 18 Hz. The plot was created with **[ft_sourceplot](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceplot.m)**._
 
 ## Appendix 2: trialfun_left
 

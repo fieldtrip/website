@@ -14,7 +14,7 @@ title: ft_select_channel
  Additional options should be specified in key-value pairs and can be
    'callback'  = function handle to be executed after channels have been selected
 
- You can pass additional arguments to the callback function in a cell-array
+ You can pass additional arguments to the callback function in a cell-array 
  like {@function_handle,arg1,arg2}
 
  Example 1
@@ -27,11 +27,11 @@ title: ft_select_channel
    ft_plot_layout(lay)
 
    % add the required guidata
-   info       = guidata(gcf)
+   info       = guidata(gcf);
    info.x     = lay.pos(:,1);
    info.y     = lay.pos(:,2);
-   info.label = lay.label
-   guidata(gcf, info)
+   info.label = lay.label;
+   guidata(gcf, info);
 
    % add this function as the callback to make a single selection
    set(gcf, 'WindowButtonDownFcn', {@ft_select_channel, 'callback', @disp})
@@ -41,7 +41,7 @@ title: ft_select_channel
    set(gcf, 'WindowButtonUpFcn',     {@ft_select_channel, 'multiple', true, 'callback', @disp, 'event', 'WindowButtonDownFcn'})
    set(gcf, 'WindowButtonMotionFcn', {@ft_select_channel, 'multiple', true, 'callback', @disp, 'event', 'WindowButtonDownFcn'})
 
- Example 2 (executed from within a subplot
+ Example 2, executed from within a subplot
    % create a figure
    figure
    subplot(2,2,1)
@@ -49,7 +49,7 @@ title: ft_select_channel
    cfg.channel = {'chan1', 'chan2', 'chan3', 'chan4'};
    cfg.layout  = 'ordered';
    lay = ft_prepare_layout(cfg);
-   ft_plot_layout(lay) 
+   ft_plot_layout(lay)
 
    % add the channel information to guidata under identifier linked to this axis
    ident              = ['axh' num2str(round(sum(clock.*1e6)))]; % unique identifier for this axis
@@ -58,7 +58,7 @@ title: ft_select_channel
    info.(ident).x     = lay.pos(:, 1);
    info.(ident).y     = lay.pos(:, 2);
    info.(ident).label = lay.label;
-   guidata(gcf, info)
+   guidata(gcf, info);
 
    % add this function as the callback to make a single selection
    set(gcf, 'WindowButtonDownFcn', {@ft_select_channel, 'callback', @disp})
@@ -67,11 +67,10 @@ title: ft_select_channel
    set(gcf, 'WindowButtonDownFcn',   {@ft_select_channel, 'multiple', true, 'callback', @disp, 'event', 'WindowButtonDownFcn'})
    set(gcf, 'WindowButtonUpFcn',     {@ft_select_channel, 'multiple', true, 'callback', @disp, 'event', 'WindowButtonDownFcn'})
    set(gcf, 'WindowButtonMotionFcn', {@ft_select_channel, 'multiple', true, 'callback', @disp, 'event', 'WindowButtonDownFcn'})
-      
 
  Subsequently you can click in the figure and you'll see that the disp
  function is executed as callback and that it displays the selected
  channels.
 
- See also FT_SELECT_BOX, FT_SELECT_POINT, FT_SELECT_POINT3D, FT_SELECT_RANGE, FT_SELECT_VOXEL 
+ See also FT_SELECT_BOX, FT_SELECT_POINT, FT_SELECT_POINT3D, FT_SELECT_RANGE, FT_SELECT_VOXEL
 ```

@@ -34,7 +34,7 @@ In constrast to the familiar parametric statistical framework, it is straightfor
 
 The preprocessing and time-frequency computation is similar to how it is done in the previous tutorials, and hence not explained in further detail.
 
-The MEG dataset that we use in this tutorial is available as [oddball1_mc_downsampled.fif](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/natmeg/oddball1_mc_downsampled.fif) from our ftp server. Furthermore, you should download and save the custom trial function [trialfun_oddball_responselocked.m](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/natmeg/trialfun_oddball_responselocked.m) to a directory that is on your MATLAB path.
+The MEG dataset that we use in this tutorial is available as [oddball1_mc_downsampled.fif](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/natmeg/oddball1_mc_downsampled.fif) from our FTP server. Furthermore, you should download and save the custom trial function [trialfun_oddball_responselocked.m](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/natmeg/trialfun_oddball_responselocked.m) to a directory that is on your MATLAB path.
 
 ### Preprocessing the response-locked data
 
@@ -102,7 +102,7 @@ The MEG dataset that we use in this tutorial is available as [oddball1_mc_downsa
 
 ### Single-trial time-frequency responses
 
-To perform the statistical test we need to compute single-trial time-frequency responses. This is done using the cfg.keeptrials configuratino option, which by default is ‘no’. Since we compute the TFR for each individual trial, we don’t have to split the data in the two conditions. The condition to which each trial belongs is kept with the data in teh _trialinfo_ field.
+To perform the statistical test we need to compute single-trial time-frequency responses. This is done using the cfg.keeptrials configuratino option, which by default is 'no'. Since we compute the TFR for each individual trial, we don't have to split the data in the two conditions. The condition to which each trial belongs is kept with the data in the _trialinfo_ field.
 
     cfg              = [];
     cfg.output       = 'pow';
@@ -194,7 +194,7 @@ The neighbourhood structure contains for each channel a list of other channels t
     cfg.correctm  = 'no';
     TFR_stat1     = ft_freqstatistics(cfg, TFR_logpow);
 
-The result of **[ft_freqstatistics](/reference/ft_freqstatistics)** is a structure that is organized just like most other FieldTrip structures, i.e. it has a _dimord_ field which explains how the data contained in the structure can be interpreted. This also means that the statistical output can be visualized like any other FieldTrip structure, in this case with **[ft_multiplotTFR](/reference/ft_multiplotTFR)**, **[ft_singleplotTFR](/reference/ft_singleplotTFR)** or **[ft_topoplotTFR](/reference/ft_topoplotTFR)**.
+The result of **[ft_freqstatistics](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqstatistics.m)** is a structure that is organized just like most other FieldTrip structures, i.e. it has a _dimord_ field which explains how the data contained in the structure can be interpreted. This also means that the statistical output can be visualized like any other FieldTrip structure, in this case with **[ft_multiplotTFR](https://github.com/fieldtrip/fieldtrip/blob/release/ft_multiplotTFR.m)**, **[ft_singleplotTFR](https://github.com/fieldtrip/fieldtrip/blob/release/ft_singleplotTFR.m)** or **[ft_topoplotTFR](https://github.com/fieldtrip/fieldtrip/blob/release/ft_topoplotTFR.m)**.
 
     disp(TFR_stat1)
 
@@ -289,7 +289,7 @@ We can compute the ERFs for the two experimental conditions by selecting the sta
     ERF_dev     = ft_timelockanalysis(cfg, data_stimlocked);
 
 {% include markup/exercise %}
-The **[ft_selectdata](/reference/ft_selectdata)** function is a very handy general purpose function that allows making selections in any dimension of the data. Furthermore, it allows you to compute averages over any of the dimensions. In case you would need the ERF topography as a vector that is averaged over 80 to 110 ms, you could do
+The **[ft_selectdata](https://github.com/fieldtrip/fieldtrip/blob/release/ft_selectdata.m)** function is a very handy general purpose function that allows making selections in any dimension of the data. Furthermore, it allows you to compute averages over any of the dimensions. In case you would need the ERF topography as a vector that is averaged over 80 to 110 ms, you could do
 
     cfg = [];
     cfg.latency = [0.08 0.11];
@@ -304,7 +304,7 @@ The **[ft_selectdata](/reference/ft_selectdata)** function is a very handy gener
 
 {% include image src="/assets/img/workshop/natmeg/statistics/natmeg_stat_erf.png" width="500" %}
 
-To assess whether there is a significant difference between the two conditions, we also need to know what the variance in the data is. In principle we could use the variance that is estimated by **[ft_timelockanalysis](/reference/ft_timelockanalysis)** and manualy compute the [t-test](http://en.wikipedia.org/wiki/Student%27s_t-test).
+To assess whether there is a significant difference between the two conditions, we also need to know what the variance in the data is. In principle we could use the variance that is estimated by **[ft_timelockanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockanalysis.m)** and manualy compute the [t-test](http://en.wikipedia.org/wiki/Student%27s_t-test).
 
     disp(ERF_std)
 
@@ -318,7 +318,7 @@ To assess whether there is a significant difference between the two conditions, 
       elec: [1x1 struct]
        cfg: [1x1 struct]
 
-However, we will leave the statistical evaluation to the **[ft_timelockstatistics](/reference/ft_timelockstatistics)** function, which expects single-trial input in the case of a within-subject test. The **[ft_timelockanalysis](/reference/ft_timelockanalysis)** function has the cfg.keeptrials option, which tells the function to keep the individual trials. This basically amounts to a reorganization of the data, since the single trials are also present in the segmented raw data structure.
+However, we will leave the statistical evaluation to the **[ft_timelockstatistics](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockstatistics.m)** function, which expects single-trial input in the case of a within-subject test. The **[ft_timelockanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockanalysis.m)** function has the cfg.keeptrials option, which tells the function to keep the individual trials. This basically amounts to a reorganization of the data, since the single trials are also present in the segmented raw data structure.
 
     cfg             = [];
     cfg.keeptrials  = 'yes';
@@ -340,7 +340,7 @@ However, we will leave the statistical evaluation to the **[ft_timelockstatistic
 
 Note that the dimord is _rpt_chan_time_, i.e. trials by channels by time, which matches with the size of the ERF_all.trial array.
 
-We proceed by computing the statistical tets, which returns the t-value, the probability and a binary mask that contains a 0 for all data points where the probability is below the a-prior threshold, and 1 where it is above the threshold. The _cfg.design_ field specifies the condition in which each of the trials is observed. For the _indepsamplesT_ statistic, it should contain 1’s and 2’s.
+We proceed by computing the statistical tets, which returns the t-value, the probability and a binary mask that contains a 0 for all data points where the probability is below the a-prior threshold, and 1 where it is above the threshold. The _cfg.design_ field specifies the condition in which each of the trials is observed. For the _indepsamplesT_ statistic, it should contain 1's and 2's.
 
     cfg           = [];
     cfg.statistic = 'indepsamplesT';
@@ -370,7 +370,7 @@ We proceed by computing the statistical tets, which returns the t-value, the pro
 
 ### Visualise the results
 
-Again we can visualize the results of the statistical comparison. Since we have simple ERF data in two conditions, we can plot the original ERFs in combination with the statistical significance. The **[ft_multiplotER](/reference/ft_multiplotER)** function has a number of options for highlighting the data that is significant. These are specified using the cfg.maskstyle parameter.
+Again we can visualize the results of the statistical comparison. Since we have simple ERF data in two conditions, we can plot the original ERFs in combination with the statistical significance. The **[ft_multiplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_multiplotER.m)** function has a number of options for highlighting the data that is significant. These are specified using the cfg.maskstyle parameter.
 
     cfg = [];
     cfg.layout        = 'neuromag306mag.lay';

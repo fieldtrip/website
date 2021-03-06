@@ -9,7 +9,7 @@ title: ft_rejectartifact
  You should start by detecting the artifacts in the data using the function
  FT_ARTIFACT_xxx where xxx is the type of artifact. Subsequently FT_REJECTARTIFACT
  looks at the detected artifacts and removes them from the trial definition or from
- the data. In case you wish to replace bad parts by nans, you have to specify data
+ the data. In case you wish to replace bad parts by NaNs, you have to specify data
  as an input parameter.
 
  Use as
@@ -18,7 +18,7 @@ title: ft_rejectartifact
    data = ft_rejectartifact(cfg, data)
  with the data as obtained from FT_PREPROCESSING
 
- The following configuration options are supported:
+ The following configuration options are supported
    cfg.artfctdef.reject          = 'none', 'partial', 'complete', 'nan', or 'value' (default = 'complete')
    cfg.artfctdef.minaccepttim    = when using partial rejection, minimum length
                                    in seconds of remaining trial (default = 0.1)
@@ -36,11 +36,11 @@ title: ft_rejectartifact
    cfg.artfctdef.xxx.artifact    = Nx2 matrix with artifact segments, this could be added by your own artifact detection function
 
  A trial that contains an artifact can be rejected completely or partially. In case
- of partial rejection, a minimum length of the resulting sub-trials can be
- specified using minaccepttim.
+ of partial rejection, a minimum length of the resulting sub-trials can be specified
+ using minaccepttim.
 
  Output:
-   If cfg is used as the only input parameter, the output is a cfg structure with an updated trl.
+   If cfg is the only input parameter, the output is a cfg structure with an updated trl.
    If cfg and data are both input parameters, the output is an updated raw data structure with only the clean data segments.
 
  To facilitate data-handling and distributed computing you can use
@@ -49,6 +49,7 @@ title: ft_rejectartifact
  file on disk. This mat files should contain only a single variable named 'data',
  corresponding to the input structure.
 
- See also FT_ARTIFACT_EOG, FT_ARTIFACT_MUSCLE, FT_ARTIFACT_JUMP, FT_ARTIFACT_THRESHOLD,
- FT_ARTIFACT_CLIP, FT_ARTIFACT_ECG, FT_DATABROWSER, FT_REJECTVISUAL
+ See also FT_ARTIFACT_ZVALUE, FT_ARTIFACT_EOG, FT_ARTIFACT_MUSCLE, FT_ARTIFACT_JUMP,
+ FT_ARTIFACT_THRESHOLD, FT_ARTIFACT_CLIP, FT_ARTIFACT_ECG, FT_DATABROWSER,
+ FT_REJECTVISUAL
 ```

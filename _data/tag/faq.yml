@@ -46,7 +46,7 @@
 - name:  What dataformats are supported?
   link:  /faq/dataformat
 
-- name:  How can I deal with a discontinuous Neuralynx recording
+- name:  How can I deal with a discontinuous Neuralynx recording?
   link:  /faq/discontinuous_neuralynx
 
 - name:  Does a firewall affect the communication between peers?
@@ -54,6 +54,9 @@
 
 - name:  Does the FieldTrip realtime buffer only work with MATLAB?
   link:  /faq/does_the_fieldtrip_realtime_buffer_only_work_with_matlab
+
+- name:  Does it make sense to subtract the ERP prior to time frequency analysis, to distinguish evoked from induced power?
+  link:  /faq/evoked_vs_induced
 
 - name:  Which external toolboxes are used by FieldTrip?
   link:  /faq/external
@@ -76,8 +79,8 @@
 - name:  How are the various MATLAB data structures defined?
   link:  /faq/how_are_the_various_data_structures_defined
 
-- name:  How can I extend the reading functions with a new dataformat?
-  link:  /faq/how_can_extend_the_reading_functions_with_a_new_dataformat
+- name:  How can I anonymize or deidentify a BrainVision dataset?
+  link:  /faq/how_can_i_anonymize_a_brainvision_dataset
 
 - name:  How can I anonymize or deidentify a CTF dataset?
   link:  /faq/how_can_i_anonymize_a_ctf_dataset
@@ -85,7 +88,7 @@
 - name:  How can I anonymize or deidentify an anatomical MRI?
   link:  /faq/how_can_i_anonymize_an_anatomical_mri
 
-- name:  How can I anonymize DICOM files?
+- name:  How can I anonymize or deidentify DICOM files?
   link:  /faq/how_can_i_anonymize_dicom_files
 
 - name:  How can I anonymize data processed in FieldTrip?
@@ -124,9 +127,6 @@
 - name:  How can I debug my analysis script if a FieldTrip function gives an error?
   link:  /faq/how_can_i_debug_my_analysis_script_if_a_fieldtrip_function_gives_an_error
 
-- name:  How can I define my own neighbourhood templates or updating an already existing template?
-  link:  /faq/how_can_i_define_my_own_neighbourhood_template
-
 - name:  How can I define neighbouring sensors?
   link:  /faq/how_can_i_define_neighbouring_sensors
 
@@ -142,6 +142,9 @@
 - name:  How can I do time-frequency analysis on continuous data?
   link:  /faq/how_can_i_do_time-frequency_analysis_on_continuous_data
 
+- name:  How can I extend the reading functions with a new dataformat?
+  link:  /faq/how_can_i_extend_the_reading_functions_with_a_new_dataformat
+
 - name:  How can I find out what eventvalues and eventtypes there are in my data?
   link:  /faq/how_can_i_find_out_what_eventvalues_and_eventtypes_there_are_in_my_data
 
@@ -156,6 +159,9 @@
 
 - name:  How can I import my own data format?
   link:  /faq/how_can_i_import_my_own_dataformat
+
+- name:  How can I inspect the electrode impedances of my data?
+  link:  /faq/how_can_i_inspect_the_electrode_impedances_of_my_data
 
 - name:  How can I interpret the different types of padding in FieldTrip?
   link:  /faq/how_can_i_interpret_the_different_types_of_padding_that_i_find_when_dealing_with_artifacts
@@ -199,8 +205,8 @@
 - name:  How can I set up the peer distributed computing on a small number of computers?
   link:  /faq/how_can_i_set_up_the_peer_distributed_computing_on_a_small_number_of_computers
 
-- name:  How can I stop the different threads created by peermaster and peerslave?
-  link:  /faq/how_can_i_stop_the_different_threads_created_by_peermaster_and_peerslave
+- name:  How can I stop the different threads created by peercontroller and peerworker?
+  link:  /faq/how_can_i_stop_the_different_threads_created_by_peercontroller_and_peerworker
 
 - name:  How to test an interaction effect using cluster-based permutation tests?
   link:  /faq/how_can_i_test_an_interaction_effect_using_cluster-based_permutation_tests
@@ -211,17 +217,17 @@
 - name:  What kind of cable do I need for a serial port connection between two computers?
   link:  /faq/how_can_i_test_the_serial_port_connection_between_two_computers
 
+- name:  How can I test whether a behavioral measure is phasic?
+  link:  /faq/how_can_i_test_whether_a_behavioral_measure_is_phasic
+
 - name:  How can I transform trigger values from bits to decimal representation with a trialfun?
   link:  /faq/how_can_i_transform_trigger_values_from_bits_to_decimal_representation_with_a_trialfun
 
 - name:  How can I use my MacBook Pro for stimulus presentation in the MEG lab?
   link:  /faq/how_can_i_use_my_macbook_pro_for_stimulus_presentation_in_the_meg_lab
 
-- name:  How can I use OpenMEEG for forward modeling?
-  link:  /faq/how_can_i_use_openmeeg_for_forward_modelling
-
-- name:  How can I use the command-line peerslave and optimize the MATLAB licenses?
-  link:  /faq/how_can_i_use_the_command-line_peerslave_and_optimize_the_matlab_licenses
+- name:  How can I use the command-line peerworker and optimize the MATLAB licenses?
+  link:  /faq/how_can_i_use_the_command-line_peerworker_and_optimize_the_matlab_licenses
 
 - name:  How can I use the databrowser?
   link:  /faq/how_can_i_use_the_databrowser
@@ -298,6 +304,9 @@
 - name:  How should I refer to FieldTrip in my publication?
   link:  /faq/how_should_i_refer_to_fieldtrip_in_my_publication
 
+- name:  How should I report the positions of the fiducial points on the head?
+  link:  /faq/how_should_i_report_the_positions_of_the_fiducial_points_on_the_head
+
 - name:  How should I share example data with the email list or developers?
   link:  /faq/how_should_i_send_example_data_to_the_developers
 
@@ -364,7 +373,7 @@
 - name:  How can I compute inter-trial coherence?
   link:  /faq/itc
 
-- name:  MATLAB complains about a missing or invalid MEX file, what should I do?
+- name:  MATLAB complains about a missing or invalid mex file, what should I do?
   link:  /faq/matlab_complains_about_a_missing_or_invalid_mex_file_what_should_i_do
 
 - name:  Replacements for functions from MathWorks toolboxes
@@ -375,6 +384,9 @@
 
 - name:  MATLAB version 7.3 (2006b) crashes when I try to do ...
   link:  /faq/matlab_version_7.3_2006b_crashes_when_i_try_to_do
+
+- name:  MATLAB complains that mexmaci64 cannot be opened because the developer cannot be verified
+  link:  /faq/mexmaci64_cannot_be_opened_because_the_developer_cannot_be_verified
 
 - name:  How does MTMCONVOL work?
   link:  /faq/mtmconvol
@@ -403,9 +415,6 @@
 - name:  The databrowser crashes and destroys the whole MATLAB session, how can I resolve this?
   link:  /faq/the_databrowser_crashes_and_destroys_the_whole_matlab_session_how_can_i_resolve_this
 
-- name:  What usage information is FieldTrip tracking?
-  link:  /faq/tracking
-
 - name:  How can I check or decipher the sequence of triggers in my data?
   link:  /faq/triggers
 
@@ -427,7 +436,7 @@
 - name:  What are the different approaches I can take for distributed computing?
   link:  /faq/what_are_the_different_approaches_i_can_take_for_distributed_computing
 
-- name:  What are the different Neuromag/Elekta and Yokogawa layouts good for?
+- name:  What are the different Neuromag/Elekta/Megin and Yokogawa layouts good for?
   link:  /faq/what_are_the_different_neuromag_and_yokogawa_layouts_good_for
 
 - name:  What convention is used to define absolute phase in 'mtmconvol', 'wavelet' and 'mtmfft'?
@@ -442,8 +451,8 @@
 - name:  What happens if a peer distributed job fails to execute properly?
   link:  /faq/what_happens_if_a_job_fails_to_execute_properly
 
-- name:  What happens with a peer distributed job that has an error on the slave?
-  link:  /faq/what_happens_with_a_job_that_has_an_error_on_the_slave
+- name:  What happens with a peer distributed job that has an error on the worker?
+  link:  /faq/what_happens_with_a_job_that_has_an_error_on_the_worker
 
 - name:  What is the conductivity of the brain, CSF, skull and skin tissue?
   link:  /faq/what_is_the_conductivity_of_the_brain_csf_skull_and_skin_tissue
@@ -475,7 +484,7 @@
 - name:  Where can I find the dipoli command-line executable?
   link:  /faq/where_can_i_find_the_dipoli_command-line_executable
 
-- name:  Which version of FieldTrip should I download from the ftp server?
+- name:  Which version of FieldTrip should I download from the FTP server?
   link:  /faq/which_version_of_fieldtrip_should_i_download_from_the_ftp_server
 
 - name:  Why am I not allowed to post to the discussion list?

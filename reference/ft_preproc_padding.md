@@ -19,5 +19,9 @@ title: ft_preproc_padding
  If padlength is used instead of prepadlength and postpadlength, padding
  will be symmetrical (i.e. padlength = prepadlength = postpadlength)
 
+ If the data contains NaNs, these are ignored for the computation, but
+ retained in the output. Depending on the type of padding, NaNs may spread
+ to the pads.
+
  See also FT_PREPROCESSING
 ```

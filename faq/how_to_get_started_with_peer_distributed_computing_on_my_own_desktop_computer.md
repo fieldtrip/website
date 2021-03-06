@@ -11,15 +11,15 @@ Let's assume that you have a single computer with a dual- or quad-core CPU and t
 
 On the first (your own) computer, you start MATLAB and type
 
-    peermaster
+    peercontroller
 
 On all N-1 subsequent computers (or the same computer if has multiple CPUs or cores), you start MATLAB and type
 
-    peerslave
+    peerworker
 
-You will see the **[peerslave](/reference/peerslave)** printing the date and time every second. Each of the slaves is now waiting for a job to be executed.
+You will see the **[peerworker](https://github.com/fieldtrip/fieldtrip/blob/release/peer/peerworker.m)** printing the date and time every second. Each of the workers is now waiting for a job to be executed.
 
-Then you go back to the first "master" MATLAB session and type
+Then you go back to the first "controller" MATLAB session and type
 
     peercellfun(@power, {1, 2, 3}, {2, 2, 2})
 
@@ -27,13 +27,13 @@ which should return
 
     [1, 4, 9]
 
-What happened is that **[peercellfun](/reference/peercellfun)** distributed the execution of these three jobs over all slaves
+What happened is that **[peercellfun](https://github.com/fieldtrip/fieldtrip/blob/release/peer/peercellfun.m)** distributed the execution of these three jobs over all workers
 
     power(1, 2)
     power(2, 2)
     power(3, 2)
 
-Most applications of **[peercellfun](/reference/peercellfun)** will return non-scalar values, which cannot be appended into a single vector. In that case, consistent with cellfun, it will return an error unless you specify that the output will be non-uniform. E.g.
+Most applications of **[peercellfun](https://github.com/fieldtrip/fieldtrip/blob/release/peer/peercellfun.m)** will return non-scalar values, which cannot be appended into a single vector. In that case, consistent with cellfun, it will return an error unless you specify that the output will be non-uniform. E.g.
 
     peercellfun(@rand, {1, 2, 3}, 'UniformOutput', false)
 
@@ -59,6 +59,6 @@ which evaluates 100 times a 6 second pause, resulting in 600 seconds of "work" i
 
 Whether your specific computational job can be efficiently distributed depends on the amount of data per individual job (i.e. the fixed plus variable overhead in sending/receiving) compared to the computational time per job.
 
-## Peerslave command-line executable
+## Peerworker command-line executable
 
-The example above describes how to start the peerslaves within a MATLAB session. The disadvantage of that is that the peerslaves are always using a MATLAB license, even if they are not doing any computations. To solve this license inefficiency we have implemented a [command-line peerslave executable](/faq/how_can_i_use_the_command-line_peerslave_and_optimize_the_matlab_licenses).
+The example above describes how to start the peerworkers within a MATLAB session. The disadvantage of that is that the peerworkers are always using a MATLAB license, even if they are not doing any computations. To solve this license inefficiency we have implemented a [command-line peerworker executable](/faq/how_can_i_use_the_command-line_peerworker_and_optimize_the_matlab_licenses).

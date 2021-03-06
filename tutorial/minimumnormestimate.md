@@ -1,6 +1,6 @@
 ---
 title: Source reconstruction of event-related fields using minimum-norm estimation
-tags: [tutorial, timelock, source, meg, headmodel, mri, plot, meg-language]
+tags: [tutorial, timelock, source, meg, headmodel, mri, plotting, meg-language]
 ---
 
 # Source reconstruction of event-related fields using minimum-norm estimation
@@ -15,7 +15,7 @@ This tutorial will not show how to do group-averaging and statistics on the sour
 
 In the [Event related averaging and planar gradient](/tutorial/eventrelatedaveraging) tutorial time-locked averages of event related fields of three conditions have been computed and the [Cluster-based permutation tests on event related fields](/tutorial/cluster_permutation_timelock) tutorial showed that there was a significant difference among two conditions. The topographical distribution of the ERFs belonging to each conditions and ERFs belonging to those differences have been plotted. The aim of this tutorial is to calculate a distributed representation of the underlying neuronal activity that resulted in the brain activity observed at the sensor level.
 
-To calculate distributed neuronal activation we will use the minimum-norm estimation. This approach is favored for analyzing evoked responses and for tracking the wide-spread activation over time. It is a distributed inverse solution that discretizes the source space into locations on the cortical surface or in the brain volume using a large number of equivalent current dipoles. It estimates the amplitude of all modeled source locations simultaneously and recovers a source distribution with minimum overall energy that produces data consistent with the measurement ((Ou, W., Hämäläinen, M., Golland, P., 2008, A Distributed Spatio-temporal EEG/MEG Inverse Solver)) ((Jensen, O., Hesse, C., 2010, Estimating distributed representation of evoked responses and oscillatory brain activity, In: MEG: An Introduction to Methods, ed. by Hansen, P., Kringelbach, M., Salmelin, R., doi:10.1093/acprof:oso/9780195307238.001.0001)). The reference for the implemented method is [Dale et al. (2000)](/references_to_implemented_methods).
+To calculate distributed neuronal activation we will use the minimum-norm estimation. This approach is favored for analyzing evoked responses and for tracking the wide-spread activation over time. It is a distributed inverse solution that discretizes the source space into locations on the cortical surface or in the brain volume using a large number of equivalent current dipoles. It estimates the amplitude of all modeled source locations simultaneously and recovers a source distribution with minimum overall energy that produces data consistent with the measurement (Ou, W., Hämäläinen, M., Golland, P., 2008, A Distributed Spatio-temporal EEG/MEG Inverse Solver. Jensen, O., Hesse, C., 2010, Estimating distributed representation of evoked responses and oscillatory brain activity, In: MEG: An Introduction to Methods, ed. by Hansen, P., Kringelbach, M., Salmelin, R., doi:10.1093/acprof:oso/9780195307238.001.0001). The reference for the implemented method is [Dale et al. (2000)](/references_to_implemented_methods).
 
 ## Procedure
 
@@ -38,11 +38,11 @@ The sourcemodel and headmodel are ideally generated from a subject-specific MRI 
 
 Once we have the headmodel and sourcemodel, we perform the following step
 
-- compute the forward solution using **[ft_prepare_leadfield](/reference/ft_prepare_leadfield)**;
-- preprocess the MEG data using **[ft_definetrial](/reference/ft_definetrial)** and **[ft_preprocessing](/reference/ft_preprocessing)**;
-- compute the average over trials and estimate the noise-covariance using **[ft_timelockanalysis](/reference/ft_timelockanalysis)**;
-- compute the inverse solution using **[ft_sourceanalysis](/reference/ft_sourceanalysis)** and **[ft_sourcedescriptives](/reference/ft_sourcedescriptives)**;
-- visualize the results with **[ft_plot_mesh](/reference/ft_plot_mesh)** and **[ft_sourcemovie](/reference/ft_sourcemovie)**.
+- compute the forward solution using **[ft_prepare_leadfield](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_leadfield.m)**;
+- preprocess the MEG data using **[ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_definetrial.m)** and **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)**;
+- compute the average over trials and estimate the noise-covariance using **[ft_timelockanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockanalysis.m)**;
+- compute the inverse solution using **[ft_sourceanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceanalysis.m)** and **[ft_sourcedescriptives](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourcedescriptives.m)**;
+- visualize the results with **[ft_plot_mesh](https://github.com/fieldtrip/fieldtrip/blob/release/plotting/ft_plot_mesh.m)** and **[ft_sourcemovie](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourcemovie.m)**.
 
 ## Processing of functional data
 
@@ -51,15 +51,34 @@ For both preprocessing and averaging, we will follow the steps that have been wr
 
 ### Preprocessing of MEG data
 
-{% include /shared/tutorial/preprocessing_fc_lp.md %}
+We will now read and preprocess the data. If you would like to continue directly with the already preprocessed data, you can download it from the FieldTrip FTP server ([dataFIC_LP.mat ](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/beamformer/dataFIC.mat) [& dataFC)LP.mat ](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/beamformer/dataFC.mat). Load the data into MATLAB with the  command 'load' and skip to Averaging and noise-covariance estimation.
 
-{% include /shared/tutorial/preprocessing_fic_lp.md %}
+Otherwise run the following code:
+
+{% include /shared/tutorial/definetrial_all.md %}
+
+### Cleaning
+
+{% include /shared/tutorial/preprocessing_lp.md %}
+
+    cfg = [];
+    cfg.trials = data_all.trialinfo == 3;
+    dataFIC_LP = ft_redefinetrial(cfg, data_all);
+
+    cfg = [];
+    cfg.trials = data_all.trialinfo == 9;
+    dataFC_LP = ft_redefinetrial(cfg, data_all);
+
+Subsequently you can save the data to disk.
+
+      save dataFIC_LP dataFIC_LP
+      save dataFC_LP dataFC_LP
 
 ### Averaging and noise-covariance estimation
 
-The function **[ft_timelockanalysis](/reference/ft_timelockanalysis)** makes averages of all the trials in a data structure and also estimates the noise-covariance. For a correct noise-covariance estimation it is important that you used the cfg.demean = 'yes' option when the function **[ft_preprocessing](/reference/ft_preprocessing)** was applied.
+The function **[ft_timelockanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockanalysis.m)** makes averages of all the trials in a data structure and also estimates the noise-covariance. For a correct noise-covariance estimation it is important that you used the cfg.demean = 'yes' option when the function **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** was applied.
 
-The trials belonging to one condition will now be averaged with the onset of the stimulus time aligned to the zero-time point (the onset of the last word in the sentence). This is done with the function **[ft_timelockanalysis](/reference/ft_timelockanalysis)**. The input to this procedure is the dataFC_LP structure generated by **[ft_preprocessing](/reference/ft_preprocessing)**. At the same time, we need to compute the noise-covariance matrix, therefore cfg.covariance = 'yes' has to be specified as well as the time window where the noise-covariance will be estimated. Here, we use the baseline where there is no signal of interest yet.
+The trials belonging to one condition will now be averaged with the onset of the stimulus time aligned to the zero-time point (the onset of the last word in the sentence). This is done with the function **[ft_timelockanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockanalysis.m)**. The input to this procedure is the dataFC_LP structure generated by **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)**. At the same time, we need to compute the noise-covariance matrix, therefore cfg.covariance = 'yes' has to be specified as well as the time window where the noise-covariance will be estimated. Here, we use the baseline where there is no signal of interest yet.
 
       load dataFC_LP;
       load dataFIC_LP;
@@ -74,7 +93,7 @@ The trials belonging to one condition will now be averaged with the onset of the
 
 ## Forward solution
 
-The source space, the volume conduction model and the position of the sensors are necessary inputs for creating the leadfield (forward solution) with the **[ft_prepare_leadfield](/reference/ft_prepare_leadfield)** function. The sensor positions are contained in the grad field of the averaged data. However, the grad field contains the positions of all channels, therefore, the used channels have to be also specified. The source model file can be obtained at [ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/sourcemodel/Subject01_sourcemodel_15684.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/sourcemodel/Subject01_sourcemodel_15684.mat) and the head model file at [ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/sourcemodel/Subject01_headmodel.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/sourcemodel/Subject01_headmodel.mat).
+The source space, the volume conduction model and the position of the sensors are necessary inputs for creating the leadfield (forward solution) with the **[ft_prepare_leadfield](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_leadfield.m)** function. The sensor positions are contained in the grad field of the averaged data. However, the grad field contains the positions of all channels, therefore, the used channels have to be also specified. The source model file can be obtained at [ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/sourcemodel/Subject01_sourcemodel_15684.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/sourcemodel/Subject01_sourcemodel_15684.mat) and the head model file at [ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/sourcemodel/Subject01_headmodel.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/sourcemodel/Subject01_headmodel.mat).
 
     load tlck;
     load Subject01_sourcemodel_15684;
@@ -92,7 +111,7 @@ The source space, the volume conduction model and the position of the sensors ar
 
 ## Inverse solution
 
-The **[ft_sourceanalysis](/reference/ft_sourceanalysis)** function calculates the inverse solution. The method used (minimum-norm estimation) has to be specified with the cfg.method option. The averaged functional data, the forward solution (the output of the **[ft_prepare_leadfield](/reference/ft_prepare_leadfield)** function), the volume conduction model (in this case, the output of the **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)** function) and the noise-covariance matrix (the cov field of the output of the **[ft_timelockanalysis](/reference/ft_timelockanalysis)** function) have to be provided.
+The **[ft_sourceanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceanalysis.m)** function calculates the inverse solution. The method used (minimum-norm estimation) has to be specified with the cfg.method option. The averaged functional data, the forward solution (the output of the **[ft_prepare_leadfield](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_leadfield.m)** function), the volume conduction model (in this case, the output of the **[ft_prepare_headmodel](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_headmodel.m)** function) and the noise-covariance matrix (the cov field of the output of the **[ft_timelockanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockanalysis.m)** function) have to be provided.
 
 The lambda value is a scaling factor that is responsible for scaling the noise-covariance matrix. If it is zero the noise-covariance estimation will be not taken into account during the computation of the inverse solution. Noise-covariance is estimated in each trial separately and then averaged, while the functional data (of which we calculate the source-analysis) is simply averaged across all the trials. Therefore, the higher the number of trials the lower the noise is in the averaged, functional data, but the number trials is not reducing the noise in the noise-covariance estimation. This is the reason while it is useful to use a scaling factor for the noise-covariance matrix if we want to estimate more realistically the amount of noise.
 
@@ -116,7 +135,7 @@ You do not have to specify of the noise-covariance matrix separatly, because it 
 
 ## Visualization
 
-You can plot the inverse solution onto the source-space at a specific time-point with the **[ft_plot_mesh](/reference/ft_plot_mesh)** function.
+You can plot the inverse solution onto the source-space at a specific time-point with the **[ft_plot_mesh](https://github.com/fieldtrip/fieldtrip/blob/release/plotting/ft_plot_mesh.m)** function.
 
     load source;
 
@@ -129,7 +148,7 @@ You can plot the inverse solution onto the source-space at a specific time-point
 
 _Figure 6. The result of the source-reconstruction of the FIC condition plotted onto the source-space at 500 ms after the 0 time-point_
 
-But we would like to know where the difference between the conditions can be localized. Therefore, we calculate the difference of the two conditions, and we use **[ft_sourcemovie](/reference/ft_sourcemovie)** to visualize the results.
+But we would like to know where the difference between the conditions can be localized. Therefore, we calculate the difference of the two conditions, and we use **[ft_sourcemovie](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourcemovie.m)** to visualize the results.
 
     cfg = [];
     cfg.projectmom = 'yes';

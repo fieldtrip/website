@@ -14,8 +14,10 @@ title: ft_neighbourplot
  Where the configuration can contain
    cfg.verbose       = string, 'yes' or 'no', whether the function will print feedback text in the command window
    cfg.neighbours    = neighbourhood structure, see FT_PREPARE_NEIGHBOURS (optional)
-   cfg.visible       = string, 'on' or 'off', whether figure will be visible (default = 'on')
    cfg.enableedit    = string, 'yes' or 'no', allows you to interactively add or remove edges between vertices (default = 'no')
+   cfg.visible       = string, 'on' or 'off' whether figure will be visible (default = 'on')
+   cfg.position      = location and size of the figure, specified as a vector of the form [left bottom width height]
+   cfg.renderer      = string, 'opengl', 'zbuffer', 'painters', see MATLAB Figure Properties. If this function crashes, you should try 'painters'.
 
  and either one of the following options
    cfg.layout        = filename of the layout, see FT_PREPARE_LAYOUT

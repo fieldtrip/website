@@ -16,6 +16,7 @@ title: ft_plot_axes
    'axisscale'    = scaling factor for the reference axes and sphere (default = 1)
    'unit'         = string, convert the data to the specified geometrical units (default = [])
    'coordsys'     = string, assume the data to be in the specified coordinate system (default = 'unknown')
+   'transform'    = empty or 4x4 homogenous transformation matrix (default = [])
    'fontcolor'    = string, color specification (default = [1 .5 0], i.e. orange)
    'fontsize'     = number, sets the size of the text (default is automatic)
    'fontunits'    =

@@ -24,10 +24,9 @@ title: ft_dipolefitting
    cfg.nonlinear   = 'yes' or 'no', perform nonlinear search for optimal
                      dipole parameters (default = 'yes')
 
- If you start with a grid search, the complete grid with dipole positions and
- optionally precomputed leadfields is constructed using FT_PREPARE_SOURCEMODEL. It
- can be specified as as a regular 3-D grid that is aligned with the axes of the head
- coordinate system using
+ If you start with a grid search, the complete grid with dipole positions is
+ constructed using FT_PREPARE_SOURCEMODEL. It can be specified as as a regular 3-D
+ grid that is aligned with the axes of the head coordinate system using
    cfg.xgrid               = vector (e.g. -20:1:20) or 'auto' (default = 'auto')
    cfg.ygrid               = vector (e.g. -20:1:20) or 'auto' (default = 'auto')
    cfg.zgrid               = vector (e.g.   0:1:20) or 'auto' (default = 'auto')
@@ -71,11 +70,10 @@ title: ft_dipolefitting
    cfg.dipfit.checkinside  = boolean, check that the dipole remains in the source compartment (default = false)
 
  Optionally, you can modify the leadfields by reducing the rank, i.e. remove the weakest orientation
-   cfg.reducerank      = 'no', or number (default = 3 for EEG, 2 for MEG)
-   cfg.normalize       = 'no', 'yes' or 'column'
-   cfg.normalizeparam  = parameter for depth normalization (default = 0.5)
-   cfg.weight          = number or 1xN vector, weight for each dipole position to compensate for the size of the corresponding patch (default = 1)
-   cfg.backproject     = 'yes' (default) or 'no', in the case of a rank reduction this parameter determines whether the result will be backprojected onto the original subspace
+   cfg.reducerank    = 'no', or number (default = 3 for EEG, 2 for MEG)
+   cfg.backproject   = 'yes' or 'no',  determines when reducerank is applied whether the 
+                       lower rank leadfield is projected back onto the original linear 
+                       subspace, or not (default = 'yes')
 
  The volume conduction model of the head should be specified as
    cfg.headmodel     = structure with volume conduction model, see FT_PREPARE_HEADMODEL

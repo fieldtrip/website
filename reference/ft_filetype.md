@@ -68,4 +68,8 @@ title: ft_filetype
   - AnyWave *.ades
   - Qualisys *.tsv
   - Mrtrix *.mif
+  - MAUS *.TextGrid
+  - Neurodata Without Borders *.nwb
+  - PhysioNet *.hea and *.dat
+  - NIRx *.tpl, *.wl1 and *.wl2
 ```

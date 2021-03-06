@@ -1,12 +1,13 @@
 # FieldTrip website
 
-This repository contains the FieldTrip documentation hosted on <http://www.fieldtriptoolbox.org>.
+This repository contains the FieldTrip documentation hosted on <https://www.fieldtriptoolbox.org>.
 
-Feel free to contribute by doing edits here and sending a pull request. See <http://www.fieldtriptoolbox.org/development/git> for a complete tutorial.
+Feel free to contribute by doing edits here and sending a pull request. See <https://www.fieldtriptoolbox.org/development/git> for a complete tutorial and <https://www.fieldtriptoolbox.org/development/guideline/website> for formatting instructions.
 
 ## Technical notes
 
 - The website is rebuilt after every pushed commit; this can take up to 5 minutes.
+- File names should not contain spaces or other special characters.
 - Pages that contain tags must have a title.
 - Tags should be in lower case.
 - All tags should appear on a single line.

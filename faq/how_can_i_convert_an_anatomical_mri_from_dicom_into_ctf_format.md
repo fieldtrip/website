@@ -31,7 +31,7 @@ You don't have to use the CTF software to convert the DICOM images and to assign
 
     % done!
 
-Following coregistration, you can use the **[ft_volumereslice](/reference/ft_volumereslice)** function to reslice the MRI, i.e. to interpolate the anatomy onto a new 3D grid that is aligned with the axes of the coordinate system. This prevents problems such as described [here](/faq/why_does_my_anatomical_mri_show_upside-down_when_plotting_it_with_ft_sourceplot).
+Following coregistration, you can use the **[ft_volumereslice](https://github.com/fieldtrip/fieldtrip/blob/release/ft_volumereslice.m)** function to reslice the MRI, i.e. to interpolate the anatomy onto a new 3D grid that is aligned with the axes of the coordinate system. This prevents problems such as described [here](/faq/why_does_my_anatomical_mri_show_upside-down_when_plotting_it_with_ft_sourceplot).
 
 ## Doing it the old and difficult way
 
@@ -60,21 +60,21 @@ Where '\$subjectcode' is the coded name of your subject data, for instance: subj
 
 Do the following before starting.the actual conversion procedur
 
-- Create a directory ‘\$subjectcode’
+- Create a directory '\$subjectcode'
 - Create the directory structure as depicted in the format outline.
-- Copy MRI data set to ‘/\$subjectcode/dicom’.
-- Park localizer files (optional): An anatomical MRI data set consist of localizer files and the actual slices that we are interested in. If the localizer files are still present in the data set, please park them in a ‘misc’ directory that you should create in ‘\$subjectcode/dicom’.
+- Copy MRI data set to '/\$subjectcode/dicom'.
+- Park localizer files (optional): An anatomical MRI data set consist of localizer files and the actual slices that we are interested in. If the localizer files are still present in the data set, please park them in a 'misc' directory that you should create in '\$subjectcode/dicom'.
 - Analyze files are only created when using older CTF software versions (e.g. 4.17)
 
 Now that you have prepared the directory structure for the subject data, you can start with the conversion procedure!
 
 ### Convert from DICOM to CTF .mri file
 
-- Start MRIViewer. At the moment (Jan11) the current version on the mentats at the DCCN is release 5.40-linux-20061212. Start it by typing ‘MRIViewer’ in the command line.
+- Start MRIViewer. At the moment (Jan11) the current version on the mentats at the DCCN is release 5.40-linux-20061212. Start it by typing 'MRIViewer' in the command line.
 - Press file -> Import DICOM series...
-- Find the .ima files in ‘/home/.../\$subjectcode/dicom’, select the first one, and press OK. This opens all .ima files
+- Find the .ima files in '/home/.../\$subjectcode/dicom', select the first one, and press OK. This opens all .ima files
 - A new window will open ('Save MRI file') asking you to name the .mri file that will be created
-- Name the file $subject and place it in the ‘/home/.../$subjectcode’ directory.
+- Name the file $subject and place it in the '/home/.../$subjectcode' directory.
 
 ### Assign the head coordinate system
 
@@ -84,9 +84,9 @@ While still in MRIViewer, perform the following action
 
 At the DCCN we use ear-molds that come in a variety of sizes to position the MEG head localiser coils just outside the left and right ear . For the MRI we use the same ear-molds, but now with small MRI markers.
 
-{% include image src="/assets/img/faq/how_can_i_convert_an_anatomical_mri_from_dicom_into_ctf_format/ear_molds_1.jpg" width="0x3" %}--00)
+{% include image src="/assets/img/faq/how_can_i_convert_an_anatomical_mri_from_dicom_into_ctf_format/ear_molds_1.jpg" width="400" %}
 
-{% include image src="/assets/img/faq/how_can_i_convert_an_anatomical_mri_from_dicom_into_ctf_format/ear_molds_2.jpg" width="0x3" %}--00)
+{% include image src="/assets/img/faq/how_can_i_convert_an_anatomical_mri_from_dicom_into_ctf_format/ear_molds_2.jpg" width="400" %}
 
 On top of that, the right ear also contains a large vitamine E marker to help distinguish left and right. At the location of the nasion we don't put a marker. Below you see three slices with the right-ear marker. Note that the ear marker is the small dot in the middle of the ear shell (yellow arrow), not the large dot close to the ear lobe (red arrow; that is the vitamine E capsule to indicate the right side).
 
@@ -100,7 +100,7 @@ The most elegant way to identify the markers would include:
 - click with your mouse at the voxels where you want to put a marker (an orange cross appears)
 - click with your right mouse and hold the button to get a drop down menu where you click fiducials and choose one of the three options.
 - you can check all marked fiducials under options and then fiduciary points to see if you have done them all.
-- Save the changes in the MRI file (‘File> Save’)
+- Save the changes in the MRI file ('File> Save')
 - Make the .mri file compatible with FieldTrip: choose File -> Convert to CTF v2 format and replace the .mri file
 
 ### Create a headshape

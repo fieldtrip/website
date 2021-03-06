@@ -101,7 +101,7 @@ original
 
 Each of these directories contain either a few files (for emg, eyetracker and task) or many files (for the MR scans).
 
-After converting/reorganizing the data to the BIDS structure using [bidscoin](https://github.com/Donders-Institute/bidscoin) for the MR data and **[data2bids](/reference/data2bids)** for the rest (see below), we obtain the following directory and file structure.
+After converting/reorganizing the data to the BIDS structure using [bidscoin](https://github.com/Donders-Institute/bidscoin) for the MR data and **[data2bids](https://github.com/fieldtrip/fieldtrip/blob/release/data2bids.m)** for the rest (see below), we obtain the following directory and file structure.
 
 ```bash
 bids
@@ -327,11 +327,13 @@ The anat, dwi, and fmap directories relate to static/structural data. The func, 
 
 ## Converting the MRI data to BIDS
 
-The MRI data was converted from DICOM to BIDS using [bidscoin](https://github.com/Donders-Institute/bidscoin). Marcel (involved in the POM project and informed about the DICOM sequence details) assisted with the conversion by providig a '.yaml' file.
+The MRI data was converted from DICOM to BIDS using [bidscoin](https://github.com/Donders-Institute/bidscoin). Marcel Zwiers (involved in the POM project and informed about the DICOM sequence details) assisted with the conversion by providing a `.yaml` file.
 
 ## Converting the non-MRI data to BIDS
 
-The conversion of the EMG, eyetracker and behavioral data to BIDS uses [data2bids](/example/data2bids) and follows the [other examples](/example/bids) that you can find on this website. The code is as follows.
+The conversion of the EMG, eye tracker and behavioral data to BIDS uses **[data2bids](https://github.com/fieldtrip/fieldtrip/blob/release/data2bids.m)** and follows the [other examples](/example/bids) that you can find on this website. Note that in the following code the Presentation files are converted to `_events.tsv` files, but these are not only linked the fMRI data, but also to the EMG and to the eye tracker, and therefore we choose here to place the events in the beh directory, rather than alongside the fMRI in the func directory.
+
+The first part of the code is general metadata/documentation and applies to all data:
 
 ```
 sourcepath = './original';
@@ -355,9 +357,11 @@ general.dataset_description.License             = 'n/a';
 general.dataset_description.Acknowledgements    = 'n/a';
 general.dataset_description.Funding             = 'n/a';
 general.dataset_description.ReferencesAndLinks  = {'https://www.parkinsonopmaat.nl'};
+```
 
-%% EMG
+### Converting the EMG files
 
+```
 filename = {
  'POM1FM0023671_rest1.vhdr'
  'POM1FM0023671_task1.vhdr'
@@ -388,9 +392,11 @@ for i=1:numel(filename)
  data2bids(cfg);
 
 end
+```
 
-%% Presentation custom .txt files
+### Converting the Presentation custom .txt files
 
+```
 filename = {
  'POM1FM0031237_prac1_logfile.txt'
  'POM1FM0023671_prac1_logfile.txt'
@@ -434,9 +440,11 @@ for i=1:numel(filename)
  cfg.events = log;
  data2bids(cfg);
 end
+```
 
-%% Presentation standard .log files
+### Converting the Presentation standard .log files
 
+```
 filename = {
  'POM1FM0031237_task1-MotorTaskEv_left.log'
  'POM1FM0023671_task1-MotorTaskEv_right.log'
@@ -461,9 +469,13 @@ for i=1:numel(filename)
 
  data2bids(cfg);
 end
+```
 
-%% SMI eye tracker data
+### Converting the SMI eye tracker files
 
+Note that the SMI eye tracker files were first converted from the `.idf` format using the SMI converter software, since the `.idf` files cannot be read in MATLAB nor in most other software.
+
+```
 filename = {
  'POM1FM0023671_rest1 Samples.txt'
  'POM1FM0023671_task1 Samples.txt'
@@ -614,9 +626,9 @@ This shows that for both EMG and eyetracker there are 805 triggers, which corres
       struct with fields:
 
               dim: [88 88 64 805]
-          anatomy: [88×88×64×805 int16]
-              hdr: [1×1 struct]
-        transform: [4×4 double]
+          anatomy: [88x88x64x805 int16]
+              hdr: [1x1 struct]
+        transform: [4x4 double]
              unit: 'mm'
 
 #### Eye tracker data
@@ -679,7 +691,7 @@ The events from the presentation log file can also be aligned using the MRI trig
 
 #### Presentation custom log file (.txt)
 
-The events in the custom `.txt` log file from presentation was not processed by the **[ft_read_event](/reference/ft_read_event)** function, but rather using MATLAB [readtable](https://www.mathworks.com/help/matlab/ref/readtable.html). As a consequence, it has many more details, i.e. rows, however the rows are not standardized. Also, it does not contain one "event" per row, but it contains one "trial" per row, which consists of both a stimulus and response. Furthermore, each trial is scored as correct/oincorrect.
+The events in the custom `.txt` log file from presentation was not processed by the **[ft_read_event](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_event.m)** function, but rather using MATLAB [readtable](https://www.mathworks.com/help/matlab/ref/readtable.html). As a consequence, it has many more details, i.e. rows, however the rows are not standardized. Also, it does not contain one "event" per row, but it contains one "trial" per row, which consists of both a stimulus and response. Furthermore, each trial is scored as correct/oincorrect.
 
 There are 132 trials in the `.txt` file, hence we expect 132 corresponding events for the presentation log and the EMG.
 
@@ -706,7 +718,7 @@ The following code shows each event value of the presentation `.log` file, and h
     9   132
     10  595
 
-It reveals that value 8 and 9 both happen 132 times. It also shows 595 occurrences for value 10, which probably corresponds to the triggers of the functional MRI scan. This is something we could again check using **[ft_read_mri](/reference/ft_read_mri)**.
+It reveals that value 8 and 9 both happen 132 times. It also shows 595 occurrences for value 10, which probably corresponds to the triggers of the functional MRI scan. This is something we could again check using **[ft_read_mri](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_mri.m)**.
 
 The first trial in the presentation `.txt` file is specified to be at 83.307391 seconds. The first "Picture 8" in the presentation log file is at 83.3074 seconds, which is nearly the same. It also matches that there are 132 "Picture 8" events. Hence the time of the presentation `.log` and `.txt` files is the same, which could have been expected since both are written by the same software on the same computer. The corresponding entry in the `_scans.tsv` file should therefore become '1900-01-01T19:10:03.769'.
 

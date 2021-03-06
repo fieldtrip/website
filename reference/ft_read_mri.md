@@ -13,6 +13,9 @@ title: ft_read_mri
    'dataformat' = string specifying the file format, determining the low-
                   level reading routine to be used. If no explicit format
                   is given, it is determined automatically from the filename.
+   'outputfield' = string specifying the name of the field in the
+                  structure in which the numeric data is stored. The
+                  default is 'anatomy'
 
  The following values apply for the dataformat
    'afni_head'/'afni_brik'      uses AFNI code
@@ -44,7 +47,7 @@ title: ft_read_mri
    AFNI (*.head, *.brik)
    FreeSurfer (*.mgz, *.mgh)
    MINC (*.mnc)
-   Neuromag/Elekta (*.fif)
+   Neuromag/Elekta/Megin (*.fif)
    ANT - Advanced Neuro Technology (*.mri)
    Yokogawa (*.mrk, incomplete)
    Mrtrix image format (*.mif)

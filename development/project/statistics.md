@@ -26,7 +26,7 @@ The current structure consists of a collection of stand-alone functions which do
 - clusterrandanalysis, sourcestatistics_parametric, sourcestatistics_shiftpredict, freqstatistics_shiftpredict (\*)
 - timelockstatistics, freqstatistics, sourcestatistics
 
-The timelockstatistics, freqstatistics and sourcestatistics functions provide the user interface to the common statistics structure. Each of these functions calls the general statistics_wrapper, which subsequently dispatches teh computation to a dataformat independent statistics function. The functionality provided by the functions marked by (\*) can be merged into the common framework.
+The timelockstatistics, freqstatistics and sourcestatistics functions provide the user interface to the common statistics structure. Each of these functions calls the general statistics_wrapper, which subsequently dispatches the computation to a dataformat independent statistics function. The functionality provided by the functions marked by (\*) can be merged into the common framework.
 
 The suggested structure is
 

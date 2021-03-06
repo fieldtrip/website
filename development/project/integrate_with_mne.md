@@ -6,12 +6,12 @@ title: Integrate FieldTrip and MNE-Python
 
 Not all the information contained in either MATLAB or Python can be completely copied into the other format.
 
-We cannot assure that the API in MNE-Python will remain the same in the future. Please, report any error on [bugzilla](/bugzilla) and include this address ''bugzilla@gpiantoni.com'' to the CC list in the bugreport.
+We cannot assure that the API in MNE-Python will remain the same in the future. Please, report any error on [bugzilla](/development/issues) and include this address ''bugzilla@gpiantoni.com'' to the CC list in the bugreport.
 
-Code under development, the mne-python community currently works on reader functions for FieldTrip data structure
+Code under development, the MNE-Python community currently works on reader functions for FieldTrip data structure
 [https://github.com/mne-tools/mne-python/pull/5141](https://github.com/mne-tools/mne-python/pull/5141), [https://github.com/mne-tools/mne-python/issues/4833](https://github.com/mne-tools/mne-python/issues/4833)
 
-More functions to work with files coming from MNE-python in MATLAB are available at [https://github.com/mne-tools/mne-matlab](https://github.com/mne-tools/mne-matlab).
+More functions to work with files coming from MNE-Python in MATLAB are available at [https://github.com/mne-tools/mne-matlab](https://github.com/mne-tools/mne-matlab).
 
 # Integrate FieldTrip and MNE-Python
 
@@ -27,23 +27,23 @@ Primary use cases for the integration of FieldTrip and MNE-Python are
 
 ## Background
 
-FieldTrip and MNE-Python have similar but not identical processing pipelines. A common pipeline in FieldTrip is to create trials by reading the data directly from disk (in order to have a **[ft_datatype_raw](/reference/ft_datatype_raw)**) and then use this preprocessed data to create ERP (**[ft_datatype_timelock](/reference/ft_datatype_timelock)**). In MNE-Python, the whole continuous recording is imported (with the **Raw** class), then trials are extracted with the **Epochs** class and finally trials are averaged into the **Evoked** class. To recap, this is the correspondence between datatypes in the two package
+FieldTrip and MNE-Python have similar but not identical processing pipelines. A common pipeline in FieldTrip is to create trials by reading the data directly from disk (in order to have a **[ft_datatype_raw](https://github.com/fieldtrip/fieldtrip/blob/release/utilities/ft_datatype_raw.m)**) and then use this preprocessed data to create ERP (**[ft_datatype_timelock](https://github.com/fieldtrip/fieldtrip/blob/release/utilities/ft_datatype_timelock.m)**). In MNE-Python, the whole continuous recording is imported (with the **Raw** class), then trials are extracted with the **Epochs** class and finally trials are averaged into the **Evoked** class. To recap, this is the correspondence between datatypes in the two package
 
 | Conceptual                                   | FieldTrip                                               | MNE-Python                                                                  |
 | -------------------------------------------- | ------------------------------------------------------- | --------------------------------------------------------------------------- |
-| one continuous segment of data               | [ft_datatype_raw](/reference/ft_datatype_raw)           | Raw                                                                         |
-| multiple segments of data, e.g. trials       | [ft_datatype_raw](/reference/ft_datatype_raw)           | Epochs ((This datatype is not part of the original MNE Suite written in C)) |
-| averaged ERFs for one or multiple conditions | [ft_datatype_timelock](/reference/ft_datatype_timelock) | Evoked                                                                      |
+| one continuous segment of data               | [ft_datatype_raw](https://github.com/fieldtrip/fieldtrip/blob/release/utilities/ft_datatype_raw)           | Raw                                                                         |
+| multiple segments of data, e.g. trials       | [ft_datatype_raw](https://github.com/fieldtrip/fieldtrip/blob/release/utilities/ft_datatype_raw)           | Epochs (This datatype is not part of the original MNE Suite written in C) |
+| averaged ERFs for one or multiple conditions | [ft_datatype_timelock](https://github.com/fieldtrip/fieldtrip/blob/release/utilities/ft_datatype_timelock) | Evoked                                                                      |
 
 Therefore, we will need to import and export Raw, Epochs, and Evoked datatypes.
 
-The aim is to pass the channel=level data between FieldTrip and MNE. Reading is implemented through the **[ft_read_header](/reference/ft_read_header)** and **[ft_read_data](/reference/ft_read_data)** functions. Writing is implemented through the ad-hoc **[fieldtrip2fiff](/reference/fieldtrip2fiff)** function.
+The aim is to pass the channel=level data between FieldTrip and MNE. Reading is implemented through the **[ft_read_header](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_header.m)** and **[ft_read_data](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_data.m)** functions. Writing is implemented through the ad-hoc **[fieldtrip2fiff](https://github.com/fieldtrip/fieldtrip/blob/release/fieldtrip2fiff.m)** function.
 
 ## Procedure
 
 ### datatype_raw (one trial) `<->` Raw
 
-For these examples, we'll use the example data of [dataset 10](/faq/what_types_of_datasets_and_their_respective_analyses_are_used_on_fieldtrip#meg-tactile_dipole_fitting). Download [SubjectBraille.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/SubjectBraille.zip) and extract the ''.ds'' folder in a convenient location.
+For these examples, we'll use the example data of [dataset 10](/faq/what_types_of_datasets_and_their_respective_analyses_are_used_on_fieldtrip#meg-tactile_dipole_fitting). Download [SubjectBraille.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/SubjectBraille.zip) and extract the `.ds` folder in a convenient location.
 
 #### Export to Raw
 
@@ -152,7 +152,7 @@ And then in MATLAB
 
 where ''data1'' contains the data organized in multiple trials.
 
-Better, one could also use the inbuilt-function [ft_definetrial](/reference/ft_definetrial
+Better, one could also use the inbuilt-function [ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_definetrial
 
     fiff_file = 'mne_python-epo.fif';
     cfg = [];

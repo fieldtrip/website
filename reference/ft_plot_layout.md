@@ -28,6 +28,7 @@ title: ft_plot_layout
    'fontunits'   =
    'fontname'    =
    'fontweight'  =
+   'interpreter' = string, 'none', 'tex' or 'latex'
 
  It is possible to plot the object in a local pseudo-axis (c.f. subplot), which is specfied as follows
    'hpos'        = horizontal position of the lower left corner of the local axes

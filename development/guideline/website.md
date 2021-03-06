@@ -7,7 +7,7 @@ tags: [website, syntax, guidelines, development]
 
 This page describes the syntax and formatting for the FieldTrip website. The content of the website is maintained on <http://github.com/fieldtrip/website> and we have a complete [tutorial](/development/git/) that explains how to contribute. You can also use the GitHub web interface by opening a specific page page and clicking on the pen symbol ("Edit this file") in the upper right corner.
 
-The website pages are written in Markdown format, which are converted into html using [Jekyll](https://jekyllrb.com). The Markdown pages includes sections in the [Liquid](https://shopify.github.io/liquid/) makeup language for more detailed formatting. The resulting static html pages and style sheets also make use of [Bootstrap](https://getbootstrap.com/docs/4.0/getting-started/introduction/).
+The website pages are written in Markdown format, which are converted into html using [Jekyll](https://jekyllrb.com). The Markdown pages includes sections in the [Liquid](https://shopify.github.io/liquid/) makeup language for more detailed formatting, for which the Shopify [Liquid cheat sheet](http://cheat.markdunkley.com) is a good resource. The resulting static html pages and style sheets also make use of [Bootstrap](https://getbootstrap.com/docs/4.0/getting-started/introduction/).
 
 This Markdown [cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) is a very good place to start. It is also helpful to check the formatting in an online Markdown editor like <https://stackedit.io> or <https://dillinger.io>.
 
@@ -32,7 +32,7 @@ Workshop tutorials in general should only contain two tags: one for the workshop
 
 ## Datasets
 
-Each dataset that is used in the tutorials or examples has an identifier which should be included as a tag. This helps readers to find all documentation that pertains to that dataset. All datasets must also be listed in [this FAQ](faq/what_types_of_datasets_and_their_respective_analyses_are_used_on_fieldtrip).
+Each dataset that is used in the tutorials or examples has an identifier which should be included as a tag. This helps readers to find all documentation that pertains to that dataset. All datasets must also be listed in [this FAQ](/faq/what_types_of_datasets_and_their_respective_analyses_are_used_on_fieldtrip).
 
 ## Menu
 
@@ -114,6 +114,18 @@ The last option is useful for MATLAB command window output, which in itself is n
 
 Tags are displayed at the top of the page. If you click on a tag, you are brought to an overview page with all pages that share the same tag. Those overview pages are automatically build on the web server after every change.
 
+## Redirection
+
+If you rename a page, the URL (i.e. the link on the web) that points to it will not be valid any more. That is problematic if that link is for example used in other documentation, on other websites, or in the email archive. To prevent broken links, you can redirect from the old page to the new page; this requires that you including `redirect_from` in the page header of the new page. You can also use it to redirect links to multiple old pages to a new single page in which the documentation has been merged.
+
+```plaintext
+---
+title: New page title
+redirect_from:
+  - /olddir/oldname/
+---
+```
+
 ## See also
 
 You can include an automatically generated list of pages with specific tags like this
@@ -131,6 +143,10 @@ which results in the following list
 {% include seealso tag1="guidelines" %}
 
 Tags are indicated with `tag`, `tag1`, `tag2` etcetera, and multiple tags are logically combined with **and**, not with **or**.
+
+## Line breaks
+
+If you have a short piece of text, such as an address, that you want to appear over multiple lines _without_ converting it into a list, you can add two spaces to the end of each line. This will cause explicit line breaks to be inserted.
 
 ## Images
 
@@ -189,7 +205,6 @@ and a Vimeo video like this
 ```
 
 {% endraw %}
-
 
 ## News items
 

@@ -1,6 +1,6 @@
 ---
 title: Localizing electrodes using a 3D-scanner
-tags: [tutorial, source, electrode]
+tags: [tutorial, source, electrode, fiducial, coordinate]
 ---
 
 # Localizing electrodes using a 3D-scanner
@@ -11,9 +11,15 @@ This tutorial demonstrates how to construct an electrode model based on a single
 
 This tutorial does not cover how to create a 2-D channel layout for plotting, nor how to do the source estimation itself.
 
+{% include markup/warning %}
+Please cite this paper when using our implementation for localizing electrodes with the Structure Sensor 3D-scanner.
+
+Homölle S, Oostenveld R. [Using a structured-light 3D scanner to improve EEG source modeling with more accurate electrode positions.](https://doi.org/10.1016/j.jneumeth.2019.108378) J Neurosci Methods. 2019 Oct 1;326:108378.
+{% include markup/end %}
+
 ### Background
 
-The quality of EEG source estimates depends on the accuracy of the volume conduction models and of the sensor positions. The volume conduction model comprises a description of the geometry, of the conductivities and of a computational approach for solving Poisson’s equations. The current golden standard is to measure the head geometry with an MRI and the EEG electrode positions with a [Polhemus](https://polhemus.com) electromagnetic digitizer. However, the Polhemus device is expensive and measuring the sensor positions with the Polhemus is time consuming, which can make it challenging or even impossible on specific subject groups.
+The quality of EEG source estimates depends on the accuracy of the volume conduction models and of the sensor positions. The volume conduction model comprises a description of the geometry, of the conductivities and of a computational approach for solving Poisson's equations. The current golden standard is to measure the head geometry with an MRI and the EEG electrode positions with a [Polhemus](https://polhemus.com) electromagnetic digitizer. However, the Polhemus device is expensive and measuring the sensor positions with the Polhemus is time consuming, which can make it challenging or even impossible on specific subject groups.
 
 In this tutorial we demonstrate the localization of EEG electrodes based on 3D-scan of a subject's head. The specific device we are using is the [structure sensor](http://structure.io) by Occipital. However, other 3D scanning devices would also work, as long as you can read the output of the 3D-scanner into MATLAB.
 
@@ -28,11 +34,11 @@ This youtube video shows the procedure that is explained in this tutorial
 In this section we describe the procedure to acquire electrode positions with a 3D-Scanner
 
 - First we have to record the data using the 3D-scanner
-- then we will read the surface me with **[ft_read_headshape](/reference/ft_read_headshape)**
-- we convert the units of the mesh **[ft_convert_units](/reference/ft_convert_units)**
-- we localise the fiducials on the head surface **[ft_electrodeplacement](/reference/ft_electrodeplacement)**
-- we realign the mesh on the bases of the fiducials to ctf-coordiantes **[ft_meshrealign](/reference/ft_meshrealign)**
-- now we are able to localise the electrode locations **[ft_electrodeplacement](/reference/ft_electrodeplacement)**
+- then we will read the surface me with **[ft_read_headshape](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_headshape.m)**
+- we convert the units of the mesh **[ft_convert_units](https://github.com/fieldtrip/fieldtrip/blob/release/ft_convert_units.m)**
+- we localise the fiducials on the head surface **[ft_electrodeplacement](https://github.com/fieldtrip/fieldtrip/blob/release/ft_electrodeplacement.m)**
+- we realign the mesh on the bases of the fiducials to ctf-coordiantes **[ft_meshrealign](https://github.com/fieldtrip/fieldtrip/blob/release/ft_meshrealign.m)**
+- now we are able to localise the electrode locations **[ft_electrodeplacement](https://github.com/fieldtrip/fieldtrip/blob/release/ft_electrodeplacement.m)**
 - finally we assign the electrode labels
 
 ### Recording data
@@ -68,7 +74,7 @@ We visualize the mesh surface
 
 _Figure 1: Mesh recorded with 3D-scanner_
 
-In the next step we will transform our mesh into [CTF coordinates](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined/). For this we have to specify the nasion (NAS), left preauricular (LPA) and right preauricular (RPA) points.
+In the next step we will transform our mesh into [CTF coordinates](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined/). For this we have to specify the nasion (NAS), right preauricular (RPA) and left preauricular (LPA) points. See the video at [178 seconds](https://youtu.be/d6FZlZTf-Hg?t=178) for how to select anatomical landmarks for MATLAB version 2018 and earlier. The 3-D image rotation in figures has changed with MATLAB 2019: for this and later versions you first select the anatomical landmark, then select the electrode label ("1" for the first fiducial), then enable rotate, then rotate the head, then disable rotate, and repeat.
 
     cfg = [];
     cfg.method = 'headshape';
@@ -115,7 +121,7 @@ _Figure: Identifying electrode locations_
 
 The next step is to assign the labels to all electrodes. In the specific case, we used an electrode cap from [Easycap](https://www.easycap.de) that has the electrodes in the [M10](http://www.easycap.de/e/electrodes/13_M10.htm) arrangement.
 
-The call to **[ft_electrodeplacement](/reference/ft_electrodeplacement)** returns default electrode labels as '1','2',... and so on, which is correct for the first 60 electrodes. To assign the correct labels to the reference, ground and to the anatomical landmarks (NAS, LPA and RPA), we use the following piece of MATLAB code:
+The call to **[ft_electrodeplacement](https://github.com/fieldtrip/fieldtrip/blob/release/ft_electrodeplacement.m)** returns default electrode labels as '1','2',... and so on, which is correct for the first 60 electrodes. To assign the correct labels to the reference, ground and to the anatomical landmarks (NAS, LPA and RPA), we use the following piece of MATLAB code:
 
     elec.label(61:65) = { ...
         'GND'
@@ -151,3 +157,7 @@ The electrode location are now digitized on the outer surface of the scanned sur
 In this tutorial we demonstrated how to extract electrode positions from a 3D scanned head surface. The resulting electrode model can be used for volume conduction model, or in the construction of a [2D layout](/tutorial/layout/) for data visualization.
 
 We suggest you read the frequently asked question about [coordinate systems](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined) to understand the different coordinate systemsin which data can be expressed. Since electrode models are often used in source reconstruction, we also suggest you to read the tutorials about [BEM](/tutorial/headmodel_eeg_bem) and [FEM](/tutorial/headmodel_eeg_fem) volume conduction models.
+
+Frequently asked questions that relate to electrodes are:
+
+{% include seealso tag1="electrode" tag2="faq" %}

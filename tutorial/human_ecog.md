@@ -14,7 +14,7 @@ Before we start, it is important to emphasize that human iEEG datasets are solel
 The tutorial demonstrates the analysis of task-related high-frequency-band activity (~70 to 150 Hz), a prominent neural signature in intracranial data that has been associated with neuron population level firing rate. Many other supported analyses such as event-related potential analysis, connectivity analysis, and statistical analysis have been described in detail elsewhere (Oostenveld et al., 2011; Maris & Oostenveld, 2007; Bastos & Schoffelen, 2016). You will need the iEEG data of SubjectUCI29, which can be obtained from [here](https://doi.org/10.5281/zenodo.1201560). If you are getting started with FieldTrip, download the most recent version from its homepage or GitHub and [set up your MATLAB path](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path).
 
 {% include markup/warning %}
-The information on this page originates from the human intracranial data analysis protocol described in Stolk, Griffin et al., **[Integrated analysis of anatomical and electrophysiological human intracranial data](https://www.nature.com/articles/s41596-018-0009-6)**, Nature Protocols, 2018. Please cite that paper when you use the methods described here.
+The information on this page originates from the human intracranial data analysis protocol described in Stolk, Griffin et al., **[Integrated analysis of anatomical and electrophysiological human intracranial data](https://doi.org/10.1038/s41596-018-0009-6)**, Nature Protocols, 2018. Please cite that paper when you use the methods described here.
 {% include markup/end %}
 
 ## Background
@@ -51,7 +51,7 @@ The two workflows become intrinsically connected for the first time during the e
 
 CRITICAL STEP To correctly fuse the MRI and CT scans at a later step, accuracy in demarcating the right hemisphere landmark in the following step is important for avoiding an otherwise hard to detect flip of the scan's left and right orientation.
 
-**4**) Align the anatomical MRI to the ACPC coordinate system, a preferred convention for the FreeSurfer operation optionally used in a later step. In this coordinate system, the origin (coordinate [0,0,0]) is at the anterior commissure (AC), the Y-axis runs along the line between the anterior and posterior commissure (PC), and the Z-axis lies in the midline dividing the two cerebral hemispheres. Specify the anterior and posterior commissure, an interhemispheric location along the midline at the top of the brain, and a location in the brain’s right hemisphere. If the scan was found to have a left-to-right orientation in the previous step, the right hemisphere is identified as the hemisphere having larger values along the left-right axis. Vice versa, in a right-to-left system, the right hemisphere has smaller values along that axis than its left counterpart ([Supplementary Video 2](https://static-content.springer.com/esm/art%3A10.1038%2Fs41596-018-0009-6/MediaObjects/41596_2018_9_MOESM7_ESM.mp4)).
+**4**) Align the anatomical MRI to the ACPC coordinate system, a preferred convention for the FreeSurfer operation optionally used in a later step. In this coordinate system, the origin (coordinate [0,0,0]) is at the anterior commissure (AC), the Y-axis runs along the line between the anterior and posterior commissure (PC), and the Z-axis lies in the midline dividing the two cerebral hemispheres. Specify the anterior and posterior commissure, an interhemispheric location along the midline at the top of the brain, and a location in the brain's right hemisphere. If the scan was found to have a left-to-right orientation in the previous step, the right hemisphere is identified as the hemisphere having larger values along the left-right axis. Vice versa, in a right-to-left system, the right hemisphere has smaller values along that axis than its left counterpart ([Supplementary Video 2](https://static-content.springer.com/esm/art%3A10.1038%2Fs41596-018-0009-6/MediaObjects/41596_2018_9_MOESM7_ESM.mp4)).
 
     cfg           = [];
     cfg.method    = 'interactive';
@@ -68,7 +68,7 @@ CRITICAL STEP To correctly fuse the MRI and CT scans at a later step, accuracy i
 
 ### Cortical surface extraction with FreeSurfer (optional)
 
-**6**) Execute FreeSurfer's recon-all functionality from the Linux or MacOS terminal (Windows via VirtualBox), or from the MATLAB command window as below. This set of commands will create a folder named ‘freesurfer’ in the subject directory, with subdirectories containing a multitude of FreeSurfer-generated files.
+**6**) Execute FreeSurfer's recon-all functionality from the Linux or MacOS terminal (Windows via VirtualBox), or from the MATLAB command window as below. This set of commands will create a folder named 'freesurfer' in the subject directory, with subdirectories containing a multitude of FreeSurfer-generated files.
 
 {% include markup/warning %}
 For tutorial purposes, the example dataset contains the output from FreeSurfer, a folder named 'freesurfer', for continuation with the protocol. You can therefore skip this time-consuming computation and continue with step 7.
@@ -262,7 +262,11 @@ CRITICAL STEP Accuracy of the spatial normalization step is important for correc
 
     [ftver, ftpath] = ft_version;
     load([ftpath filesep 'template/anatomy/surface_pial_left.mat']);
-    ft_plot_mesh(mesh);
+    
+    % rename the variable that we read from the file, as not to confuse it with the MATLAB mesh plotting function   
+    template_lh = mesh; clear mesh;
+    
+    ft_plot_mesh(template_lh);
     ft_plot_sens(elec_mni_frv);
     view([-90 20]);
     material dull;
@@ -313,7 +317,7 @@ CRITICAL STEP Accuracy of the spatial normalization step is important for correc
 
     atlas = ft_read_atlas([ftpath filesep 'template/atlas/aal/ROI_MNI_V4.nii']);
 
-**34**) Look up the corresponding anatomical label of an electrode of interest, e.g., electrode LHH1, targeting the left hemisphere’s hippocampus. [Supplementary File 3](https://static-content.springer.com/esm/art%3A10.1038%2Fs41596-018-0009-6/MediaObjects/41596_2018_9_MOESM5_ESM.pdf) represents a tool that automatically overlays all channels in an electrode structure with all of the above atlases and stores the resulting anatomical labels in an excel table (e.g., SubjectUCI29_electable.xlsx in the zip file). A more recent version of this tool can be found [here](/faq/how_can_i_determine_the_anatomical_label_of_a_source).
+**34**) Look up the corresponding anatomical label of an electrode of interest, e.g., electrode LHH1, targeting the left hemisphere's hippocampus. [Supplementary File 3](https://static-content.springer.com/esm/art%3A10.1038%2Fs41596-018-0009-6/MediaObjects/41596_2018_9_MOESM5_ESM.pdf) represents a tool that automatically overlays all channels in an electrode structure with all of the above atlases and stores the resulting anatomical labels in an excel table (e.g., SubjectUCI29_electable.xlsx in the zip file). A more recent version of this tool can be found [here](/faq/how_can_i_determine_the_anatomical_label_of_a_source).
 
     cfg            = [];
     cfg.roi        = elec_mni_frv.chanpos(match_str(elec_mni_frv.label,'LHH1'),:);
@@ -334,7 +338,7 @@ CRITICAL STEP Accuracy of the spatial normalization step is important for correc
 
 ### Preprocessing of the neural recordings
 
-**35**) Define the trials, that is, the segments of data that will be used for further processing and analysis. This step produces a matrix cfg.trl containing for each segment the begin and end sample in the recording file. In the case of the example provided in the shared data, the segments of interest begin 400 ms before tone onset, are marked with a ‘4’ in the trigger channel, and end 900 ms thereafter.
+**35**) Define the trials, that is, the segments of data that will be used for further processing and analysis. This step produces a matrix cfg.trl containing for each segment the begin and end sample in the recording file. In the case of the example provided in the shared data, the segments of interest begin 400 ms before tone onset, are marked with a '4' in the trigger channel, and end 900 ms thereafter.
 
 {% include markup/warning %}
 Raw recording files are not shared, in order to protect the subject's identity. For tutorial purposes, load the preprocessed data, which is the product of steps 35 & 36, and continue with step 37: load([subjID '_data.mat'], 'data');
@@ -361,7 +365,7 @@ Raw recording files are not shared, in order to protect the subject's identity. 
     cfg.bsfreq         = [59 61; 119 121; 179 181];
     data = ft_preprocessing(cfg);
 
-**37**) Examine whether the variables in the output data structure match the recording and preprocessing parameters, i.e. the sampling rate (fsample), number of recording channels (label), and segmentation into the experiment’s twenty-six trials (trial, and their respective time axes in time).
+**37**) Examine whether the variables in the output data structure match the recording and preprocessing parameters, i.e. the sampling rate (fsample), number of recording channels (label), and segmentation into the experiment's twenty-six trials (trial, and their respective time axes in time).
 
     data =
 
@@ -389,7 +393,7 @@ CRITICAL STEP Identifying bad channels is important for avoiding the contaminati
 
     data = ft_rejectartifact(cfg, data);
 
-**41**) Re-montage the cortical grids to a common average reference in order to remove noise that is shared across all channels. Box 4 provides a background on re- montaging. Bad channels identified in Step 39 can be excluded from this step by adding those channels to cfg.channel with a minus prefix. That is, cfg.channel = {'LPG*', 'LTG*', '-LPG1'} if one were to exclude the LPG1 channel from the list of LPG and LTG channels.
+**41**) Re-montage the cortical grids to a common average reference in order to remove noise that is shared across all channels. Box 4 provides a background on re-montaging. Bad channels identified in Step 39 can be excluded from this step by adding those channels to cfg.channel with a minus prefix. That is, cfg.channel = {'LPG*', 'LTG*', '-LPG1'} if one were to exclude the LPG1 channel from the list of LPG and LTG channels.
 
     cfg             = [];
     cfg.channel     = {'LPG*', 'LTG*'};
@@ -423,7 +427,7 @@ CRITICAL STEP Identifying bad channels is important for avoiding the contaminati
 
 ### Time-frequency analysis (optional)
 
-**45**) Decompose the signal in time and frequency bins using time-resolved Fourier- based spectral decomposition. The settings for spectral decomposition depend on the clinical or research question at hand and contingencies in the experimental paradigm. Given that we plan to look at task-related changes in high-frequency-band activity (70 to 150 Hz) in a following step, we sample the neural activity using cfg.toi throughout the 300 ms baseline period before tone onset at 0 ms and until after the approximate button press time at 700 ms. At each time point, we estimate spectral content using 200 ms windows (cfg.t_ftimwin). This time window captures 20 cycles of a 100 Hz rhythm, which is well over the 3 cycles minimally required to unambiguously recover the spectral information. For a broader view of powerspectral modulations, we extend the frequency range using cfg.foi from 5 to 200 Hz. Finally, note that cfg.keeptrials is set to 'no' here (as it is by default), meaning that the average spectral content across all trials is returned (see the documentation of ft_freqanalysis).
+**45**) Decompose the signal in time and frequency bins using time-resolved Fourier-based spectral decomposition. The settings for spectral decomposition depend on the clinical or research question at hand and contingencies in the experimental paradigm. Given that we plan to look at task-related changes in high-frequency-band activity (70 to 150 Hz) in a following step, we sample the neural activity using cfg.toi throughout the 300 ms baseline period before tone onset at 0 ms and until after the approximate button press time at 700 ms. At each time point, we estimate spectral content using 200 ms windows (cfg.t_ftimwin). This time window captures 20 cycles of a 100 Hz rhythm, which is well over the 3 cycles minimally required to unambiguously recover the spectral information. For a broader view of powerspectral modulations, we extend the frequency range using cfg.foi from 5 to 200 Hz. Finally, note that cfg.keeptrials is set to 'no' here (as it is by default), meaning that the average spectral content across all trials is returned (see the documentation of ft_freqanalysis).
 
     cfg            = [];
     cfg.method     = 'mtmconvol';
@@ -479,7 +483,7 @@ CRITICAL STEP Identifying bad channels is important for avoiding the contaminati
     cfg.avgovertime = 'yes';
     freq_sel = ft_selectdata(cfg, freq_blc);
 
-**51**) Visualize the spatial distribution of high-frequency-band activity on a cortical mesh of the subject’s brain.
+**51**) Visualize the spatial distribution of high-frequency-band activity on a cortical mesh of the subject's brain.
 
     cfg              = [];
     cfg.funparameter = 'powspctrm';

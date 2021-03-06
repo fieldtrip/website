@@ -1,6 +1,6 @@
 ---
 title: 22 November,2018 - New website running
-categories: []
+categories: [news]
 ---
 
 ### 22 November,2018

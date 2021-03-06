@@ -5,7 +5,7 @@ tags: [faq, trigger, trialfun, preprocessing]
 
 # How can I check or decipher the sequence of triggers in my data?
 
-Triggers, stimuli, responses, annotations, etcetera in the recording are in FieldTrip jointly represented as "events" and read from the dataset using **[ft_read_event](/reference/ft_read_event)**. The following code demonstrates how you can do a visual check of the triggers and export them to an excel file.
+Triggers, stimuli, responses, annotations, etcetera in the recording are in FieldTrip jointly represented as "events" and read from the dataset using **[ft_read_event](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_event.m)**. The following code demonstrates how you can do a visual check of the triggers and export them to an excel file.
 
 We start by reading the header (which we need for the sampling frequency) and the events. In case of Neuromag .fif data that was recorded with internal active shielding (IAS) and that has not been maxfiltered yet, you can disable the check for maxfilter.
 
@@ -69,4 +69,4 @@ The table can easily be exported to Excel or LibreOffice, where you can do addit
 
 The STI101 channel represents stimuli, in STI102 you can see the response codes corresponding to button presses.
 
-Note that the event type "Trigger" replicates the event type "STI101". We recommend that you use STI101 for consistency with Neuromag/Elekta and MNE software.
+Note that the event type "Trigger" replicates the event type "STI101". We recommend that you use STI101 for consistency with Neuromag/Elekta/Megin and MNE software.

@@ -4,6 +4,9 @@
 - name:  Code guidelines
   link:  /development/guideline/code
 
+- name:  Communication guidelines
+  link:  /development/guideline/communication
+
 - name:  Documentation guidelines this is the title, it should also be the first top-level heading
   link:  /development/guideline/documentation
 
@@ -13,6 +16,6 @@
 - name:  Guidelines for audio and video material
   link:  /development/guideline/video
 
-- name:  Website syntax and formatting Website syntax and formatting
+- name:  Website syntax and formatting Website syntax and formatting New page title
   link:  /development/guideline/website
 

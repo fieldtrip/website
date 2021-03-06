@@ -18,7 +18,7 @@ title: ft_audiovideobrowser
    cfg.audiofile   = string with the filename
    cfg.videofile   = string with the filename
    cfg.trl         = Nx3 matrix, expressed in the MEG/EEG data samples, see FT_DEFINETRIAL
-   cfg.anonimize   = [x1 x2 y1 y2], range in pixels for placing a bar over the eyes (default = [])
+   cfg.anonymize   = [x1 x2 y1 y2], range in pixels for placing a bar over the eyes (default = [])
    cfg.interactive = 'yes' or 'no' (default = 'yes')
 
  If you do NOT specify cfg.datahdr, the header must be present in the input data.

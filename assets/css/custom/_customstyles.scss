@@ -122,3 +122,23 @@ table {
       margin-top: 0; }
     table tr th :last-child, table tr td :last-child {
       margin-bottom: 0; }
+
+/* -------------------------------------------------- */
+/* Styles for homepage release and news item posts */
+
+#sec-news {
+  border-top: 1px solid #bbb;
+  padding-top: 0em;
+  padding-bottom: 0em;
+}
+#sec-news .post-excerpt {
+  border-top: 1px dashed #ccc;
+  padding-top: 1em;
+  padding-bottom: 0em;
+}
+#sec-news .post-excerpt:last-child {
+  border-top: 1px dashed #ccc;
+  padding-top: 1em;
+  // border-bottom: 1px dashed #ccc;
+  padding-bottom: 0em;
+}

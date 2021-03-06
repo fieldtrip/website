@@ -74,7 +74,7 @@ tags: [example, mne, source]
     mri_orig.coordsys='neuromag';
 
     %% Read sensor and headpoints
-    grad    = ft_read_sens(dataset,'senstype','meg');
+    grad    = ft_read_sens(dataset, 'senstype', 'meg');
     grad    = ft_convert_units(grad, 'cm');
     %     ft_datatype_sens(grad)
     shape   = ft_read_headshape(dataset);

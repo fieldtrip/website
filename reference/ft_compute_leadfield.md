@@ -3,10 +3,9 @@ title: ft_compute_leadfield
 ---
 ```plaintext
  FT_COMPUTE_LEADFIELD computes a forward solution for a dipole in a a volume
- conductor model. The forward solution is expressed as the leadfield
- matrix (Nchan*3), where each column corresponds with the potential or field
- distributions on all sensors for one of the x,y,z-orientations of the
- dipole.
+ conductor model. The forward solution is expressed as the leadfield matrix
+ (Nchan*3), where each column corresponds with the potential or field distributions
+ on all sensors for one of the x,y,z-orientations of the dipole.
 
  Use as
    [lf] = ft_compute_leadfield(dippos, sens, headmodel, ...)
@@ -29,20 +28,19 @@ title: ft_compute_leadfield
 
  Additional input arguments can be specified as key-value pairs, supported
  optional arguments are
-   'reducerank'      = 'no' or number
-   'normalize'       = 'no', 'yes' or 'column'
+   'reducerank'      = 'no' or number (default = 3 for EEG, 2 for MEG)
+   'backproject'     = 'yes' or 'no', in the case of a rank reduction this parameter determines whether the result will be backprojected onto the original subspace (default = 'yes')
+   'normalize'       = 'no', 'yes' or 'column' (default = 'no')
    'normalizeparam'  = parameter for depth normalization (default = 0.5)
-   'weight'          = number or 1xN vector, weight for each dipole position to compensate for the size of the corresponding patch (default = 1)
-   'backproject'     = 'yes' (default) or 'no', in the case of a rank reduction this parameter determines whether the result will be backprojected onto the original subspace
+   'weight'          = number or Nx1 vector, weight for each dipole position to compensate for the size of the corresponding patch (default = 1)
 
- The leadfield weight may be used to specify a (normalized)
- corresponding surface area for each dipole, e.g. when the dipoles
- represent a folded cortical surface with varying triangle size.
+ The leadfield weight may be used to specify a (normalized) corresponding surface
+ area for each dipole, e.g. when the dipoles represent a folded cortical surface
+ with varying triangle size.
 
- Depending on the specific input arguments for the sensor and volume, this
- function will select the appropriate low-level EEG or MEG forward model.
- The leadfield matrix for EEG will have an average reference over all the
- electrodes.
+ Depending on the specific input arguments for the sensor and volume, this function
+ will select the appropriate low-level EEG or MEG forward model. The leadfield
+ matrix for EEG will have an average reference over all the electrodes.
 
  The supported forward solutions for MEG are
    infinite homogenous medium
@@ -59,10 +57,11 @@ title: ft_compute_leadfield
    multiple concentric spheres (up to 4 spheres)
    leadfield interpolation using a precomputed sourcemodel
    boundary element method (BEM)
+   finite element method (FEM)
 
  See also FT_PREPARE_VOL_SENS, FT_HEADMODEL_ASA, FT_HEADMODEL_BEMCP,
  FT_HEADMODEL_CONCENTRICSPHERES, FT_HEADMODEL_DIPOLI, FT_HEADMODEL_HALFSPACE,
  FT_HEADMODEL_INFINITE, FT_HEADMODEL_LOCALSPHERES, FT_HEADMODEL_OPENMEEG,
  FT_HEADMODEL_SINGLESHELL, FT_HEADMODEL_SINGLESPHERE,
- FT_HEADMODEL_HALFSPACE
+ FT_HEADMODEL_HALFSPACE, FT_HEADMODEL_DUNEURO
 ```

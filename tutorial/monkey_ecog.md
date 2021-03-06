@@ -7,7 +7,7 @@ tags: [tutorial, ieeg, ecog, neurotycho, animal]
 
 ## Introduction
 
-In the following tutorial we will analyze a whole hemisphere EcoG grid implanted in a macaque monkey. This data set has been recorded in the Laboratory for Adaptive Intelligence, BSI, RIKEN, Japan and has been shared as part of the [NeuroTycho](<(http://neurotycho.org/)>) project. The NeuroTycho homepage also provides some information about why and how the data is shared so that we will not expand on this here. Instead this tutorial provides some overview of how to get started with ECoG data by using this particular data set as an example.
+In the following tutorial we will analyze a whole hemisphere EcoG grid implanted in a macaque monkey. This data set has been recorded in the Laboratory for Adaptive Intelligence, BSI, RIKEN, Japan and has been shared as part of the [NeuroTycho](http://neurotycho.org/) project. The NeuroTycho homepage also provides some information about why and how the data is shared so that we will not expand on this here. Instead this tutorial provides some overview of how to get started with ECoG data by using this particular data set as an example.
 
 ## Background
 
@@ -20,13 +20,13 @@ _Figure 1: X-ray with electrode coverage illustrating the position of the electr
 
 The tutorial will follow the steps:
 
-- prepare a 2D electrode layout for visualisation that will be used throughout the tutorial with **[ft_prepare_layout](/reference/ft_prepare_layout)** and plot it with **[ft_layoutplot](/reference/ft_layoutplot)**
+- prepare a 2D electrode layout for visualization that will be used throughout the tutorial with **[ft_prepare_layout](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_layout.m)** and plot it with **[ft_layoutplot](https://github.com/fieldtrip/fieldtrip/blob/release/ft_layoutplot.m)**
 - load data into MATLAB and assemble it into a format FieldTrip can deal with
-- define a trial sturcture and subsequently use **[ft_redefinetrial](/reference/ft_redefinetrial)** in order to separate the eight conditions/orientations.
-- append the data into a common dataset **[ft_appenddata](/reference/ft_appenddata)** apply an independent component analysis using **[ft_componentanalysis](/reference/ft_componentanalysis)** after which we will plot and explore some components using **[ft_databrowser](/reference/ft_databrowser)**
-- Compute time-frequency representaions of power and plot using **[ft_freqanalysis](/reference/ft_freqanalysis)** and **[ft_multiplotTFR](/reference/ft_multiplotTFR)** respectively.
-- Compute coherence between reference electrode and the remaining electrodes using **[ft_connectivityanalysis](/reference/ft_connectivityanalysis)**.
-- Perform networkanalysis using **[ft_networkanalysis](/reference/ft_networkanalysis)**
+- define a trial sturcture and subsequently use **[ft_redefinetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_redefinetrial.m)** in order to separate the eight conditions/orientations.
+- append the data into a common dataset **[ft_appenddata](https://github.com/fieldtrip/fieldtrip/blob/release/ft_appenddata.m)** apply an independent component analysis using **[ft_componentanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_componentanalysis.m)** after which we will plot and explore some components using **[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_databrowser.m)**
+- Compute time-frequency representaions of power and plot using **[ft_freqanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqanalysis.m)** and **[ft_multiplotTFR](https://github.com/fieldtrip/fieldtrip/blob/release/ft_multiplotTFR.m)** respectively.
+- Compute coherence between reference electrode and the remaining electrodes using **[ft_connectivityanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_connectivityanalysis.m)**.
+- Perform networkanalysis using **[ft_networkanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_networkanalysis.m)**
 
 ### Preprocessing
 
@@ -52,7 +52,7 @@ First we will generate the layout along the guidelines explained in the layout t
     data.label{129} = 'event';
     clear ECoG*
 
-Using the information provided in the "readme.txt" file, we can build a trial structure that can be used during the call to **[ft_redefinetrial](/reference/ft_redefinetrial)**
+Using the information provided in the "readme.txt" file, we can build a trial structure that can be used during the call to **[ft_redefinetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_redefinetrial.m)**
 
     trigger = EventData;
     sample  = EventIndex;
@@ -81,7 +81,7 @@ Using the information provided in the "readme.txt" file, we can build a trial st
       end
     end
 
-The structure **trl** is now a 20 rows by 3 columns matrix containing the begin, end and offset(i.e. baseline) samples for each trial of type _45° orientation_. Subsequently we call **[ft_redefinetrial](/reference/ft_redefinetrial)** where we provide the trial structure computed in the previous step **cfg.trl = trl;**.
+The structure **trl** is now a 20 rows by 3 columns matrix containing the begin, end and offset(i.e. baseline) samples for each trial of type _45° orientation_. Subsequently we call **[ft_redefinetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_redefinetrial.m)** where we provide the trial structure computed in the previous step **cfg.trl = trl;**.
 
     cfg     = [];
     cfg.trl = trl;
@@ -120,13 +120,13 @@ Next, we will use independent component analysis to identify the presence of art
     cfg.topolabel = comp.topolabel;
     comp = ft_componentanalysis(cfg, data);
 
-We will use **[ft_databrowser](/reference/ft_databrowser)** again in order to plot the topography of the components and corresponding time courses. In the present case only particular components bearing artifacts (component 22) and clear oscillatory signatures (11,43,44) are plotted.
+We will use **[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_databrowser.m)** again in order to plot the topography of the components and corresponding time courses. In the present case only particular components bearing artifacts (component 22) and clear oscillatory signatures (11,43,44) are plotted.
 
 {% include image src="/assets/img/tutorial/monkey_ecog/components_plot.png" width="400" %}
 
 _Figure 3: Independent components illustrating some clear visual (1 and 11) and sensorimotor (43,44) topography and oscillatory time course._
 
-The build-in functionality of **[ft_databrowser](/reference/ft_databrowser)** allows for interactively mark a time window and perform a spectral analysis via left mouse click. This launches an additional figure that allows for adding and removing of component's power spectra and (log/linear) scale adjustments. Doing so we can confirm the presence of 10.89 Hz alpha peak (compontent 11) over occipito-posterior electrodes (component 11 topography in Figure 3).
+The build-in functionality of **[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_databrowser.m)** allows for interactively mark a time window and perform a spectral analysis via left mouse click. This launches an additional figure that allows for adding and removing of component's power spectra and (log/linear) scale adjustments. Doing so we can confirm the presence of 10.89 Hz alpha peak (compontent 11) over occipito-posterior electrodes (component 11 topography in Figure 3).
 
 {% include image src="/assets/img/tutorial/monkey_ecog/powspctrm_components.png" width="400" %}
 
@@ -134,7 +134,7 @@ _Figure 4: Power spectrum of components #11 and #43 illustrating a clear 10.89 H
 
 ### Time-frequency analysis
 
-After rejecting bad components with **[ft_rejectcomponent](/reference/ft_rejectcomponent)** a time-frequency analysis can be performed. Detailed information regarding this analysis step is extensively covered [here](/tutorial/timefrequencyanalysis). Furthermore, we will use different settings for the estimates of low (`<40Hz) and high (>`40Hz) frequencies. The rational behind this strategy is also covered in the time-freuqncy tutorial and extensively explained by Robert in the video lecture [here](https://www.youtube.com/watch?v=6EIBh5lHNSc). The time-frequency representation of power is calculated with **[ft_freqanalysis](/reference/ft_freqanalysis)**. Subsequently the power estimates are baseline corrected with **[ft_freqbaseline](/reference/ft_freqbaseline)** and plotted with **[ft_multiplotTFR](/reference/ft_multiplotTFR)**.
+After rejecting bad components with **[ft_rejectcomponent](https://github.com/fieldtrip/fieldtrip/blob/release/ft_rejectcomponent.m)** a time-frequency analysis can be performed. Detailed information regarding this analysis step is extensively covered [here](/tutorial/timefrequencyanalysis). Furthermore, we will use different settings for the estimates of low (`<40Hz) and high (>`40Hz) frequencies. The rational behind this strategy is also covered in the time-freuqncy tutorial and extensively explained by Robert in the video lecture [here](https://www.youtube.com/watch?v=6EIBh5lHNSc). The time-frequency representation of power is calculated with **[ft_freqanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqanalysis.m)**. Subsequently the power estimates are baseline corrected with **[ft_freqbaseline](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqbaseline.m)** and plotted with **[ft_multiplotTFR](https://github.com/fieldtrip/fieldtrip/blob/release/ft_multiplotTFR.m)**.
 
     % perform time-frequency analysis
     cfg              = [];
@@ -172,7 +172,7 @@ _Figure 5: Time-frequency representation of power using ft_multiplotTFR and the 
 
 _Figure 6: Time-frequency representation of power averaged across the electrodes highlighted in the previous figure. Note the initial evoked power in the low frequency range followed by induced depression of oscillatory power in the alpha frequency range._
 
-Typically, visual grating tasks reliably elicit sustained gamma band response ~60-80 Hz in both humans ((Hoogenboom N1, Schoffelen JM, Oostenveld R, Parkes LM, Fries P. (2006) Localizing human visual gamma-band activity in frequency, time and space. Neuroimage. 2006 Feb 1;29(3):764-73. Epub 2005 Oct 10.)) and non human primates ((Fries P, Scheeringa R, Oostenveld R. (2008) Finding Gamma. Neuron. 2008 May 8;58(3):303-5. doi: 10.1016/j.neuron.2008.04.020.)). The following lines will estimate oscillatory power in the higher frequencies > 40 Hz, baseline correct and plot the rusult.
+Typically, visual grating tasks reliably elicit sustained gamma band response ~60-80 Hz in both humans (Hoogenboom N1, Schoffelen JM, Oostenveld R, Parkes LM, Fries P. (2006) Localizing human visual gamma-band activity in frequency, time and space. Neuroimage. 2006 Feb 1;29(3):764-73. Epub 2005 Oct 10.) and non human primates (Fries P, Scheeringa R, Oostenveld R. (2008) Finding Gamma. Neuron. 2008 May 8;58(3):303-5. doi: 10.1016/j.neuron.2008.04.020.). The following lines will estimate oscillatory power in the higher frequencies > 40 Hz, baseline correct and plot the rusult.
 
     % estimate high frequency gamma
     cfg            = [];
@@ -212,7 +212,7 @@ _Figure 7: Left- topography of the induced gamma band response centered around ~
 
 ### Connectivity analysis
 
-Now we can analysis the connectivity patterns that may arise due to coherence in the gamma band. Towards this end we'll use **[ft_connectivityanalysis](/reference/ft_connectivityanalysis)** and imaginary coherence as a metric of communication between electrodes. First, we take advantage of multitapering in order to estimated gamma power at 60 Hz and compute the connectivity between all possible electrode pairs.
+Now we can analysis the connectivity patterns that may arise due to coherence in the gamma band. Towards this end we'll use **[ft_connectivityanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_connectivityanalysis.m)** and imaginary coherence as a metric of communication between electrodes. First, we take advantage of multitapering in order to estimated gamma power at 60 Hz and compute the connectivity between all possible electrode pairs.
 
     % estimate 60 Hz power
     cfg            = [];
@@ -259,7 +259,7 @@ Now we plot the coherence of a reference electrode with maximal gamma power rela
 
 _Figure 8: Coherence between a reference occipital electrode (magenta) and all of the remaining electrodes._
 
-Finally, we use **[ft_networkanalysis](/reference/ft_networkanalysis)** to illustrate a rather formal description of the connectivity pattern in the form of a graph.
+Finally, we use **[ft_networkanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_networkanalysis.m)** to illustrate a rather formal description of the connectivity pattern in the form of a graph.
 
     % calculate graph theoretical metric
     fn=fieldnames(conn);

@@ -13,7 +13,7 @@ In this example we will show a few ways on how to create an individual head mode
 
 ## Download
 
-These approaches will be demonstrated using the same dataset, which you can find on the [ftp server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/epilepsy). More information on this dataset can be found [here](/tutorial/epilepsy/).
+These approaches will be demonstrated using the same dataset, which you can find on the [FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/epilepsy). More information on this dataset can be found [here](/tutorial/epilepsy/).
 
 ## Loading the data
 
@@ -25,7 +25,16 @@ You load the head shape measured during the MEG recording with the Polhemus and 
     template = ft_read_headmodel('standard_bem.mat');
     template = ft_convert_units(template, 'mm');
 
-Note that the template head model contains three surfaces describing the three compartments of scalp, skull and brain.    
+Note that the template head model contains three surfaces describing the three compartments of scalp, skull and brain. Furthermore, it descibes the conductivities and the BEM system matrix, computed with dipoli. Here is how the complete structure looks like
+
+    template = 
+      struct with fields:
+
+         bnd: [1x3 struct]
+        cond: [0.3300 0.0041 0.3300]
+         mat: [3000x3000 double]
+        type: 'dipoli'
+        unit: 'mm'
 
 ## Coregistration
 
@@ -94,7 +103,7 @@ This requires an external toolbox, which can be downloaded [here](https://sites.
 
 We determine an affine transformation that fits the template scalp surface to the Polhemus surface. This not only applies a translation and rotation, but also a scaling in the different directions and some skewing.
 
-It is important that the template scalp surface only contains features that are also in the Polhemus surface, and vice versa. We can use **[ft_defacemesh](/reference/ft_defacemesh)** to remove some features.
+It is important that the template scalp surface only contains features that are also in the Polhemus surface, and vice versa. We can use **[ft_defacemesh](https://github.com/fieldtrip/fieldtrip/blob/release/ft_defacemesh.m)** to remove some features.
 
 We visualize both meshes:
 
@@ -145,10 +154,9 @@ We can compute the volume conduction model on the basis of the refined template 
     template_fit_surface = ft_convert_units(template_fit_surface,'m');
 
 
-
 ### Openmeeg
 
-We create the volume conduction models using Openmeeg. This model can be later used for EEG or MEG volume conduction modelling.
+We create the volume conduction models using Openmeeg. This model can be later used for EEG or MEG volume conduction modeling.
 
     cfg              = [];
     cfg.conductivity = [0.33 0.0042 0.33];
@@ -159,7 +167,7 @@ We create the volume conduction models using Openmeeg. This model can be later u
     ft_plot_mesh(headmodel_sphere.bnd(1))
     ft_plot_mesh(polhemus)
 
-{% include image src="\assets\img\example\fittemplate\headmodel_sphere_polhemus.png" %}
+{% include image src="/assets/img/example/fittemplate/headmodel_sphere_polhemus.png" %}
 
     cfg               = [];
     cfg.conductivity  = [0.33 0.0042 0.33];
@@ -170,11 +178,11 @@ We create the volume conduction models using Openmeeg. This model can be later u
     ft_plot_mesh(headmodel_sphere.bnd(1))
     ft_plot_mesh(polhemus)
 
-{% include image src="\assets\img\example\fittemplate\headmodel_surface_polhemus.png" %}
+{% include image src="/assets/img/example/fittemplate/headmodel_surface_polhemus.png" %}
 
-### Taking the inner shell for a single shell model
+### Taking the inner shell for a single-shell model
 
-Another option for MEG is to create a single shell model on the basis of the brain compartment.
+Another option for MEG is to create a single-shell model on the basis of the brain compartment.
 
     cfg                          = [];
     cfg.method                   = 'singlesphere';

@@ -1,6 +1,6 @@
 ---
 title: Reading in data and performing sensor-level ERF and TFR analyses
-tags: [tutorial, meg, freq, timelock, preprocessing, plot, meg-visuomotor151]
+tags: [oxford2019, tutorial, meg, freq, timelock, preprocessing, plotting, meg-visuomotor151-k]
 ---
 
 # Reading in data and performing sensor-level ERF and TFR analyses
@@ -11,8 +11,7 @@ This tutorial was written specifically for the workshop in Oxford in May 2019, a
 
 ## Introduction
 
-In this tutorial, we will provide an overview of several sensor-level analyses to help you get started working with FieldTrip. We will work on a dataset (Schoffelen, Poort, Oostenveld, & Fries (2011) Selective Movement Preparation Is Subserved by Selective
-Increases in Corticomuscular Gamma-Band Coherence. J Neurosci. 31(18):6750-6758) collected during an experiment where subjects were instructed to fixate on a screen. Each trial started with the presentation of a cue pointing either rightward or leftward. This cue indicated which hand the subject had to use for the trial's response. Next, the subjects were instructed to extend both their wrists. After a baseline interval of 1s, an inward drifting grating was visually presented. Then, after an unpredictable delay, the stimulus changed speed, after which the subjects had to increase their wrist extension on the one cued side only. This experimental design is illustrated in Figure 1. Magneto-encephalography (MEG) data was collected using a 151-channel CTF system. Also, electromyography (EMG) data was collected from electrodes attached to the bilateral musculus extensor carpi radialis longus.
+In this tutorial, we will provide an overview of several sensor-level analyses to help you get started working with FieldTrip. We will work on a dataset (Schoffelen, Poort, Oostenveld, & Fries (2011) Selective Movement Preparation Is Subserved by Selective Increases in Corticomuscular Gamma-Band Coherence. J Neurosci. 31(18):6750-6758) collected during an experiment where subjects were instructed to fixate on a screen. Each trial started with the presentation of a cue pointing either rightward or leftward. This cue indicated which hand the subject had to use for the trial's response. Next, the subjects were instructed to extend both their wrists. After a baseline interval of 1s, an inward drifting grating was visually presented. Then, after an unpredictable delay, the stimulus changed speed, after which the subjects had to increase their wrist extension on the one cued side only. This experimental design is illustrated in Figure 1. Magneto-encephalography (MEG) data was collected using a 151-channel CTF system. Also, electromyography (EMG) data was collected from electrodes attached to the bilateral musculus extensor carpi radialis longus.
 
 {% include image src="/assets/img/tutorial/sensor_analysis/design.png" %}
 
@@ -24,7 +23,7 @@ This tutorial only briefly covers the steps required to import data into FieldTr
 
 ## Reading in raw data from disk
 
-In FieldTrip the preprocessing of data refers to the reading of the data, segmenting the data around interesting events such as triggers, temporal filtering and optionally rereferencing. The **[ft_preprocessing](/reference/ft_preprocessing)** function takes care of all these steps, i.e., it reads the data and applies the preprocessing options.
+In FieldTrip the preprocessing of data refers to the reading of the data, segmenting the data around interesting events such as triggers, temporal filtering and optionally rereferencing. The **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** function takes care of all these steps, i.e., it reads the data and applies the preprocessing options.
 
 There are largely two alternative approaches for preprocessing, which especially differ in the amount of memory required. The first approach is to read all data from the file into memory, apply filters, and subsequently cut the data into interesting segments. The second approach is to first identify the interesting segments, read those segments from the data file and apply the filters to those segments only. The remainder of this tutorial explains the second approach, as that is the most appropriate for large data sets such as the MEG data used in this tutorial. The approach for reading and filtering continuous data and segmenting afterwards is explained in another tutorial.
 
@@ -33,11 +32,11 @@ Preprocessing involves several steps including identifying individual trials fro
 - according to a specified trigger channel
 - according to your own criteria when you write your own trial function
 
-This tutorial will focus on the first way, and briefly mention the second. Both ways depend on **[ft_definetrial](/reference/ft_definetrial)**. For more details, see the [preprocessing](/tutorial/preprocessing) tutorial.
+This tutorial will focus on the first way, and briefly mention the second. Both ways depend on **[ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_definetrial.m)**. For more details, see the [preprocessing](/tutorial/preprocessing) tutorial.
 
-The output of ft_definetrial is a configuration structure containing the field cfg.trl. This is a matrix representing the relevant parts of the raw datafile which are to be selected for further processing. Each row in the trl-matrix represents a single epoch-of-interest, and the trl-matrix has at least 3 columns. The first column defines (in samples) the beginpoint of each epoch with respect to how the data are stored in the raw datafile. The second column defines (in samples) the endpoint of each epoch, and the third column specifies the offset (in samples) of the first sample within each epoch with respect to timepoint 0 within that epoch.
+The output of ft_definetrial is a configuration structure containing the field cfg.trl. This is a matrix representing the relevant parts of the raw datafile which are to be selected for further processing. Each row in the `trl` matrix represents a single epoch-of-interest, and the `trl` matrix has at least 3 columns. The first column defines (in samples) the beginpoint of each epoch with respect to how the data are stored in the raw datafile. The second column defines (in samples) the endpoint of each epoch, and the third column specifies the offset (in samples) of the first sample within each epoch with respect to timepoint 0 within that epoch.
 
-We will demonstrate reading in data based on the localizer task for the experiment that was described at the start. These data are available from the [FieldTrip ftp server (SubjectCMC.zip)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/SubjectCMC.zip). In this localizer task, a simple cue was presented 50 times, instructing the participant to lift the left or right wrist and keep the muscle contracted for 10 seconds. We will use the default trialfun `ft_trialfun_general` to define trials based on the triggers sent alongside these cues. We want to read in 1s of data before each trigger, and 10s of data after each trigger. This is achieved by the following:
+We will demonstrate reading in data based on the localizer task for the experiment that was described at the start. These data are available from the [FieldTrip FTP server (SubjectCMC.zip)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/SubjectCMC.zip). In this localizer task, a simple cue was presented 50 times, instructing the participant to lift the left or right wrist and keep the muscle contracted for 10 seconds. We will use the default trialfun `ft_trialfun_general` to define trials based on the triggers sent alongside these cues. We want to read in 1s of data before each trigger, and 10s of data after each trigger. This is achieved by the following:
 
     cfg = [];
     cfg.dataset = 'SubjectCMC.ds';
@@ -76,7 +75,7 @@ For the rest of this tutorial we will be focusing on the data that were recorded
     clear data;
     load subjectK;
 
-The data file is available from the [FieldTrip ftp server (subjectK.mat)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/sensor_analysis/subjectK.mat). Loading this will give you two data structures in your workspace: data_left, containing the trials where the subjects had to respond with the left wrist; and data_right, where the right wrist was cued.
+The data file is available from the [FieldTrip FTP server (subjectK.mat)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/sensor_analysis/subjectK.mat). Loading this will give you two data structures in your workspace: data_left, containing the trials where the subjects had to respond with the left wrist; and data_right, where the right wrist was cued.
 
 Take a look at one of the data structure
 
@@ -122,7 +121,7 @@ _Figure 1a: Some example trials, with time t=0 marked._
 
 When analyzing EEG or MEG signals, the aim is to investigate the modulation of the measured brain signals with respect to a certain event. However, due to intrinsic and extrinsic noise in the signals - which in single trials is often higher than the signal evoked by the brain - it is typically required to average data from several trials to increase the signal-to-noise ratio (SNR). One approach is to repeat a given event in your experiment and average the corresponding EEG/MEG signals. The assumption is that the noise is independent of the events and thus reduced when averaging, while the effect of interest is time-locked to the event. The approach results in ERPs and ERFs for respectively EEG and MEG. Timelock analysis can be used to calculate ERPs/ERFs.
 
-In FieldTrip, ERPs and ERFs are calculated by **[ft_timelockanalysis](/reference/ft_timelockanalysis)**. For this particular dataset, we are interested in the ERF locked to visual stimulation. Since visual stimulation was the same in both the response-right and response-left conditions, we can combine the two data sets using \*_[ft_appenddata](/reference/ft_appenddata)_
+In FieldTrip, ERPs and ERFs are calculated by **[ft_timelockanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockanalysis.m)**. For this particular dataset, we are interested in the ERF locked to visual stimulation. Since visual stimulation was the same in both the response-right and response-left conditions, we can combine the two data sets using **[ft_appenddata](https://github.com/fieldtrip/fieldtrip/blob/release/ft_appenddata.m)**:
 
     cfg  = [];
     data = ft_appenddata(cfg, data_left, data_right);
@@ -135,7 +134,7 @@ Next, proceed to compute the ER
 
 ### Plotting the results
 
-FieldTrip provides several options for visualizing the results of event-related analyses: **[ft_singleplotER](/reference/ft_singleplotER)**, **[ft_multiplotER](/reference/ft_multiplotER)**, and **[ft_topoplotER](/reference/ft_topoplotER)** (see the [plotting tutorial](/tutorial/plotting) for an extensive introduction to your plotting options). In most cases, **[ft_multiplotER](/reference/ft_multiplotER)** is the most convenient start, as it provides easy access to the other two visualization methods through the graphical user interface. Call it like this:
+FieldTrip provides several options for visualizing the results of event-related analyses: **[ft_singleplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_singleplotER.m)**, **[ft_multiplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_multiplotER.m)**, and **[ft_topoplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_topoplotER.m)** (see the [plotting tutorial](/tutorial/plotting) for an extensive introduction to your plotting options). In most cases, **[ft_multiplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_multiplotER.m)** is the most convenient start, as it provides easy access to the other two visualization methods through the graphical user interface. Call it like this:
 
     cfg                 = [];
     cfg.showlabels      = 'yes';
@@ -151,7 +150,7 @@ _Figure 2: event-related field for each MEG sensor._
 
 As you can see, the event-related field for each MEG sensor is displayed at a location corresponding to the approximate location of each sensor.
 
-The nice thing about this multiplot is that it is interactive: it is possible to select sensors and view an average plot (corresponding to an **[ft_singleplotER](/reference/ft_singleplotER)**) of those sensors. There seems to be an interesting deflection in the ERF around the left occipitoparietal sensors. Go ahead and select those, and click the selection box that comes up.
+The nice thing about this multiplot is that it is interactive: it is possible to select sensors and view an average plot (corresponding to an **[ft_singleplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_singleplotER.m)**) of those sensors. There seems to be an interesting deflection in the ERF around the left occipitoparietal sensors. Go ahead and select those, and click the selection box that comes up.
 
 {% include image src="/assets/img/tutorial/sensor_analysis/multiploter_interactive.png" %}
 
@@ -163,7 +162,7 @@ The plot that comes up shows a major deflection around 300m
 
 _Figure 4: average ERF for some left posterior sensors._
 
-Again, you can select a time range and click it to bring up a topographical plot (**[ft_topoplotER](/reference/ft_topoplotER)**) of the ERF averaged over the selected time window. Select the peak around 300ms and click it.
+Again, you can select a time range and click it to bring up a topographical plot (**[ft_topoplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_topoplotER.m)**) of the ERF averaged over the selected time window. Select the peak around 300ms and click it.
 
 {% include image src="/assets/img/tutorial/sensor_analysis/topoploter.png" %}
 
@@ -181,7 +180,7 @@ Use the cfg.baseline option in ft_multplotER to correct the ERF for the baseline
 
 The CTF MEG system has (151 in this dataset, or 275 in newer systems) first-order axial gradiometer sensors that measure the gradient of the magnetic field in the radial direction, i.e. orthogonal to the scalp. Often it is helpful to interpret the MEG fields after transforming the data to a planar gradient configuration, i.e. by computing the gradient tangential to the scalp. This representation of MEG data is comparable to the field measured by planar gradiometer sensors. One advantage of the planar gradient transformation is that the signal amplitude typically is largest directly above a source, whereas with axial gradient the signal amplitude is largest away from the source.
 
-We can compute the planar magnetic gradient using **[ft_megplanar](/reference/ft_megplanar)**, which gives us the planar gradient in the vertical and horizontal orientations. For visualization, and many subsequent analysis steps, these components need to be combined, which is implemented by **[ft_combineplanar](/reference/ft_combineplanar)**. Since averaging is a linear operation, it does not matter if we convert the data to planar gradient before or after the call to **[ft_timelockanalysis](/reference/ft_timelockanalysis)**. However, later on we will do frequency analysis, where the order _does_ matter, so we will use the same order here. To compute the planar gradient and recompute the ERFs on this dataset:
+We can compute the planar magnetic gradient using **[ft_megplanar](https://github.com/fieldtrip/fieldtrip/blob/release/ft_megplanar.m)**, which gives us the planar gradient in the vertical and horizontal orientations. For visualization, and many subsequent analysis steps, these components need to be combined, which is implemented by **[ft_combineplanar](https://github.com/fieldtrip/fieldtrip/blob/release/ft_combineplanar.m)**. Since averaging is a linear operation, it does not matter if we convert the data to planar gradient before or after the call to **[ft_timelockanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockanalysis.m)**. However, later on we will do frequency analysis, where the order _does_ matter, so we will use the same order here. To compute the planar gradient and recompute the ERFs on this dataset:
 
     cfg                 = [];
     cfg.method          = 'template';
@@ -200,7 +199,7 @@ We can compute the planar magnetic gradient using **[ft_megplanar](/reference/ft
     cfg                 = [];
     tl_plancmb          = ft_combineplanar(cfg, tl_planar);
 
-Note that we create a 'neighbours' structure before calling **[ft_megplanar](/reference/ft_megplanar)**. This is required by **[ft_megplanar](/reference/ft_megplanar)** because the 'sincos' algorithm needs to know which channels are adjacent to one another. Plot the results again:
+Note that we create a 'neighbours' structure before calling **[ft_megplanar](https://github.com/fieldtrip/fieldtrip/blob/release/ft_megplanar.m)**. This is required by **[ft_megplanar](https://github.com/fieldtrip/fieldtrip/blob/release/ft_megplanar.m)** because the 'sincos' algorithm needs to know which channels are adjacent to one another. Plot the results again:
 
     cfg                 = [];
     cfg.showlabels      = 'yes';
@@ -233,14 +232,14 @@ If you want to know more about tapers/ window functions you can have a look at t
 
 We will here describe how to calculate time frequency representations using Hanning tapers. When choosing for a fixed window length procedure the frequency resolution is defined according to the length of the time window (delta T). The frequency resolution (delta f in figure 1) = 1/length of time window in sec (delta T in figure 1). Thus a 500 ms time window results in a 2 Hz frequency resolution (1/0.5 sec= 2 Hz) meaning that power can be calculated for 2 Hz, 4 Hz, 6 Hz etc. An integer number of cycles must fit in the time window.
 
-To compute our time-frequency representation (TFR), we will first subselect a piece of our trials using **[ft_redefinetrial](/reference/ft_redefinetrial)**. This is done to increase the speed at which the subsequent analysis will run. We need a part of the baseline interval and a part of the stimulation interval, so we choose the interval from -0.8s to 1.0s
+To compute our time-frequency representation (TFR), we will first subselect a piece of our trials using **[ft_redefinetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_redefinetrial.m)**. This is done to increase the speed at which the subsequent analysis will run. We need a part of the baseline interval and a part of the stimulation interval, so we choose the interval from -0.8s to 1.0s
 
     cfg                 = [];
     cfg.toilim          = [-0.8 1];
     cfg.minlength       = 'maxperlen'; % this ensures all resulting trials are equal length
     data_small          = ft_redefinetrial(cfg, data_planar);
 
-The structure data_small contains less trials than the original data, because we want trials that last until at least 1s after stimulus onset. Recall that not all trials last that long, because the visual stimulus speed change might have happened before t=1s already. Note that we are again using the planar gradient data, in order to make interpreting the results easier. Now we move on to using **[ft_freqanalysis](/reference/ft_freqanalysis)** to compute our TFR using a 0.2s window size:
+The structure data_small contains less trials than the original data, because we want trials that last until at least 1s after stimulus onset. Recall that not all trials last that long, because the visual stimulus speed change might have happened before t=1s already. Note that we are again using the planar gradient data, in order to make interpreting the results easier. Now we move on to using **[ft_freqanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqanalysis.m)** to compute our TFR using a 0.2s window size:
 
     cfg                 = [];
     cfg.method          = 'mtmconvol';
@@ -271,7 +270,7 @@ Again we have to combine the two components of the planar gradien
 
 ### Plotting
 
-Then we can plot the results using **[ft_multiplotTFR](/reference/ft_multiplotTFR)**:
+Then we can plot the results using **[ft_multiplotTFR](https://github.com/fieldtrip/fieldtrip/blob/release/ft_multiplotTFR.m)**:
 
     cfg                 = [];
     cfg.interactive     = 'yes';
@@ -300,7 +299,7 @@ In a next step, you can get an overview of your analyses by clicking on the Fiel
 
 {% include image src="/assets/img/tutorial/sensor_analysis/figurepipeline.png" %}
 
-Exactly the same can be achieved using **[ft_analysispipeline](/reference/ft_analysispipeline)** as follow
+Exactly the same can be achieved using **[ft_analysispipeline](https://github.com/fieldtrip/fieldtrip/blob/release/ft_analysispipeline.m)** as follow
 
     cfg = [];
     ft_analysispipeline(cfg, freq);

@@ -7,7 +7,7 @@ tags: [template]
 
 An atlas is a volumetric or surface based description of the geometry of the brain, where each anatomical coordinate is labeled according to some scheme, e.g. as [Brodmann area](http://en.wikipedia.org/wiki/Brodmann_area). A recent review of brain templates and atlases is presented in [Brain templates and atlases (2012)](http://www.ncbi.nlm.nih.gov/pubmed/22248580) in NeuroImage.
 
-In general an atlas can be read with **[ft_read_atlas](/reference/ft_read_atlas)**. It is represented as a volumetric segmentation as in **[ft_datatype_segmentation](/reference/ft_datatype_segmentation)**, or as a surface-based parcellation as in **[ft_datatype_parcellation](/reference/ft_datatype_parcellation)**. The volume based representation can be used with **[ft_volumelookup](/reference/ft_volumelookup)** or with the cfg.atlas option in **[ft_sourceplot](/reference/ft_sourceplot)**.
+In general an atlas can be read with **[ft_read_atlas](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_atlas.m)**. It is represented as a volumetric segmentation as in **[ft_datatype_segmentation](https://github.com/fieldtrip/fieldtrip/blob/release/utilities/ft_datatype_segmentation.m)**, or as a surface-based parcellation as in **[ft_datatype_parcellation](https://github.com/fieldtrip/fieldtrip/blob/release/utilities/ft_datatype_parcellation.m)**. The volume based representation can be used with **[ft_volumelookup](https://github.com/fieldtrip/fieldtrip/blob/release/ft_volumelookup.m)** or with the cfg.atlas option in **[ft_sourceplot](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceplot.m)**.
 
 In the FieldTrip release, you can find the volumetric or surface based atlases in the fieldtrip/template/xxx directory, with XXX being the specific template (e.g. "aal" or "afni").
 
@@ -71,6 +71,7 @@ The discrete model is represented in a MATLAB .mat file as
 
     >> load brainweb_discrete
     >> disp(segmentation)
+    
     segmentation =
               dim: [181 217 181]
         transform: [4x4 double]
@@ -82,7 +83,7 @@ The fuzzy model is represented in a MATLAB .mat file as
 
     >> load brainweb_fuzzy
     >> disp(segmentation)
-
+    
     segmentation =
                   dim: [181 217 181]
             transform: [4x4 double]
@@ -98,7 +99,7 @@ The fuzzy model is represented in a MATLAB .mat file as
            connective: [181x217x181 double]
            background: [181x217x181 double]
 
-Both discrete and fuzzy model are consistent with the data representation descibed in **[ft_datatype_segmentation](/reference/ft_datatype_segmentation)**.
+Both discrete and fuzzy model are consistent with the data representation descibed in **[ft_datatype_segmentation](https://github.com/fieldtrip/fieldtrip/blob/release/utilities/ft_datatype_segmentation.m)**.
 
 ## The Eickhoff/Zilles/Amunts cytoarchitectonic atlas
 
@@ -109,7 +110,7 @@ The atlas and the toolbox are described in the publication belo
 S.B. Eickhoff, K.E. Stephan, H. Mohlberg, C. Grefkes, G.R. Fink, K. Amunts, K. Zilles, _A new SPM toolbox for combining probabilistic cytoarchitectonic maps and functional imaging data_, NeuroImage, Volume 25, Issue 4, 1 May 2005, Pages 1325-1335.
 
     >> atlas = ft_read_atlas('fieldtrip/template/atlas/spm_anatomy/AllAreas_v17_MPM')
-
+    
     atlas =
               dim: [151 188 154]
               hdr: [1x1 struct]
@@ -123,30 +124,30 @@ Besides the 'v17' version, the 'v18' is also supported.
 
 ## The VTPM Atlas
 
-The VTPM atlas was downloaded from [here](http://www.princeton.edu/~napl/vtpm.htm).The atlas was constructed from a population of 53 subjects and contains probabilistic maps for 22 visual areas. The version of the atlas included with FieldTrip was created by transforming data into standardized space using surface-based anatomical registration approaches.
+The VTPM atlas was downloaded from [here](http://www.princeton.edu/~napl/vtpm.htm).The atlas was constructed from a population of 53 subjects and contains probabilistic maps for 25 visual areas. The version of the atlas included with FieldTrip was created by the authors of the original paper, by transforming data into standardized space using surface-based anatomical registration approaches, and subsequently assigning a voxel-wise label based on a maximum probability criterion. For convenience, the version of the atlas that is distributed with FieldTrip has the original left and right hemispheres merged in a single file. One known issue is the absence of the right IPS5 parcel.
 
-The atlas is described in the publication belo
+The atlas is described in the publication below
 
 Wang L, Mruczek REB, Arcaro MJ, Kastner S. (2015) Probabilistic Maps of Visual Topography in Human
 Cortex. Cerebral Cortex. 25: 3911-3931
 
     >> load ('fieldtrip/template/atlas/vtpm.mat')
-
+    >> disp(vtpm)
+    
     vtpm =
-
               dim: [182 218 182]
               hdr: [1x1 struct]
         transform: [4x4 double]
              unit: 'mm'
-      tissuelabel: {1x50 cell}
+      tissuelabel: {50x1 cell}
            tissue: [182x218x182 double]
          coordsys: 'mni'
 
-    figure;
-    subplot(2,2,1);imagesc(vtpm.tissue(:,:,70))
-    subplot(2,2,2);imagesc(vtpm.tissue(:,:,80))
-    subplot(2,2,3);imagesc(vtpm.tissue(:,:,90))
-    subplot(2,2,4);imagesc(vtpm.tissue(:,:,100))
+    >> figure;
+    >> subplot(2,2,1);imagesc(vtpm.tissue(:,:,70))
+    >> subplot(2,2,2);imagesc(vtpm.tissue(:,:,80))
+    >> subplot(2,2,3);imagesc(vtpm.tissue(:,:,90))
+    >> subplot(2,2,4);imagesc(vtpm.tissue(:,:,100))
 
 {% include image src="/assets/img/template/atlas/vtpm.png" width="400" %}
 
@@ -160,10 +161,9 @@ Fan, L., Li, H., Zhuo, J., Zhang, Y., Wang, J., Chen, L., Yang, Z., Chu, C., Xie
 
 In FieldTrip, the atlas is included as a nifti file, complemented with a text file with the tissue labels. You can read it like this:
 
-    brainnetome = ft_read_atlas('template/atlas/brainnetome/BNA_MPM_thr25_1.25mm.nii')
-
+    >> brainnetome = ft_read_atlas('template/atlas/brainnetome/BNA_MPM_thr25_1.25mm.nii')
+    
     brainnetome =
-
               dim: [145 173 145]
               hdr: [1x1 struct]
         transform: [4x4 double]
@@ -172,7 +172,7 @@ In FieldTrip, the atlas is included as a nifti file, complemented with a text fi
          coordsys: 'mni'
       tissuelabel: {1x246 cell}
 
-    imagesc(brainnetome.tissue(:,:,68))
+    >> imagesc(brainnetome.tissue(:,:,68))
 
 {% include image src="/assets/img/template/atlas/brainnetome_atlas2.png" width="400" %}
 
@@ -187,29 +187,45 @@ Yeo BT, Krienen FM, Sepulcre J, Sabuncu MR, Lashkari D, Hollinshead M, Roffman J
 
 In FieldTrip, the two atlases are included as nifti files. You can read them like this:
 
-    yeo7 = ft_read_atlas('/template/atlas/yeo/Yeo2011_7Networks_MNI152_FreeSurferConformed1mm_LiberalMask_colin27.nii')
-    
+    >> yeo7 = ft_read_atlas('/template/atlas/yeo/Yeo2011_7Networks_MNI152_FreeSurferConformed1mm_LiberalMask_colin27.nii')
+        
     yeo7 = 
-
             dim: [256 256 256]
-            hdr: [1×1 struct]
-      transform: [4×4 double]
+            hdr: [1x1 struct]
+      transform: [4x4 double]
            unit: 'mm'
-         tissue: [256×256×256 double]
-    tissuelabel: {7×1 cell}
+         tissue: [256x256x256 double]
+    tissuelabel: {7x1 cell}
        coordsys: 'mni'
 
-    yeo17 = ft_read_atlas('/template/atlas/yeo/Yeo2011_17Networks_MNI152_FreeSurferConformed1mm_LiberalMask_colin27.nii')
+    >> yeo17 = ft_read_atlas('/template/atlas/yeo/Yeo2011_17Networks_MNI152_FreeSurferConformed1mm_LiberalMask_colin27.nii')
     
     yeo17 = 
-
             dim: [256 256 256]
-            hdr: [1×1 struct]
-      transform: [4×4 double]
+            hdr: [1x1 struct]
+      transform: [4x4 double]
            unit: 'mm'
-         tissue: [256×256×256 double]
-    tissuelabel: {17×1 cell}
+         tissue: [256x256x256 double]
+    tissuelabel: {17x1 cell}
        coordsys: 'mni'
+
+## Melbourne Subcortical Atlas (Tian et al., 2020)
+
+The Melbourne Subcortical Atlas is a volumetric parcellation of the human subcortex. The atlas was created using functional and structural MRI data from 1000 healthy adult subjects, using functional connectivity gradient mapping. The atlas will be useful for those interested in subcortical structures, and can be easily combined with other cortical atlases. Please note that there is emerging evidence that hippocampal activity can be detected using MEG (see: https://doi.org/10.1002/hbm.24445 and https://doi.org/10.1038/s41467-019-08665-5).
+
+The "scale I" atlas has been implemented in Fieldtrip and includes the following regions (all bilateral): 
+- Amygdala (AMY)
+- Hippocampus (HIP)
+- Globus Pallidus (GP)
+- Nucleus Accumbens (NAc)
+- Caudate (CAU)
+- Putamen (PUT)
+- Anterior Thalamus (aTHA)
+- Posterior Thalamus (pTHA)
+
+The atlas can be read into Fieldtrip using the following code:
+
+    >> atlas = ft_read_atlas('/template/atlas/melb_subcortical/melb_sub.mat')
 
 
 ## References
@@ -220,4 +236,5 @@ In FieldTrip, the two atlases are included as nifti files. You can read them lik
 - R.K.-S. Kwan, A.C. Evans, G.B. Pike : "An Extensible MRI Simulator for Post-Processing Evaluation" Visualization in Biomedical Computing (VBC'96). Lecture Notes in Computer Science, vol. 1131. Springer-Verlag, 1996. 135-140.
 - D.L. Collins, A.P. Zijdenbos, V. Kollokian, J.G. Sled, N.J. Kabani, C.J. Holmes, A.C. Evans : "Design and Construction of a Realistic Digital Brain Phantom" IEEE Transactions on Medical Imaging, vol.17, No.3, p.463--468, June 1998.
 - S.B. Eickhoff, K.E. Stephan, H. Mohlberg, C. Grefkes, G.R. Fink, K. Amunts, K. Zilles, A new SPM toolbox for combining probabilistic cytoarchitectonic maps and functional imaging data, NeuroImage 25(4), 2005, 1325-1335.
+- Tian, Y., Margulies, D.S., Breakspear, M. et al. Topographic organization of the human subcortex unveiled with functional connectivity gradients. Nat Neurosci 23, 1421–1432 (2020). https://doi.org/10.1038/s41593-020-00711-6
 - Wang L, Mruczek REB, Arcaro MJ, Kastner S. (2015) Probabilistic Maps of Visual Topography in Human Cortex. Cerebral Cortex. 25: 3911-3931

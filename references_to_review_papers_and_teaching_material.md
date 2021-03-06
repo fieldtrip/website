@@ -5,19 +5,29 @@ tags: [references]
 
 # References to review papers and teaching material
 
-Here we try to compile a list of background reading/studying material. If you know of good papers or other material, please add it by clicking on the edit button.
+Here we try to compile a list of background reading/studying material. If you know of good papers or other material, please add it by clicking on the "edit this page" link at the bottom.
+
+If you are new to FieldTrip, please start by reading the reference paper [FieldTrip: Open Source Software for Advanced Analysis of MEG, EEG, and Invasive Electrophysiological Data.](http://www.hindawi.com/journals/cin/2011/156869) or have a look at one of the introduction [videos](/video).
 
 ## EEG and MEG
 
 Sylvain Baillet wrote a recent review manuscript on [Magnetoencephalography for brain electrophysiology and imaging](http://www.nature.com/neuro/journal/v20/n3/full/nn.4504.html) in Nature Neuroscience (2017).
 
+[The brain in time: insights from neuromagnetic recordings](http://onlinelibrary.wiley.com/doi/10.1111/j.1749-6632.2010.05438.x/abstract) by Riitta Hari, Lauri Parkkonen and Cathy Nangini gives a comprehensive introduction to MEG.
+
+Two somewhat older, but certainly not outdated papers on SQUID-based MEG instrumentation and signal analysis is [Magnetoencephalography—theory, instrumentation, and applications to noninvasive studies of the working human brain](https://doi.org/10.1103/RevModPhys.65.413) by Hämäläinen et al. (1993) and [Signal Processing in Magnetoencephalography](https://pdfs.semanticscholar.org/94b1/1b4e0bec484376f810a557492fa776b40b28.pdf) by Vrbra and Robinson (2001). 
+
+A recent review of advancements in OPM-based MEG research is given in [Moving magnetoencephalography towards real-world applications with a wearable system](https://doi.org/10.1038/nature26147) by Boto et al. (2018).  
+
+### Books
+
 A comprehensive introduction in the neurophysiology and biophysics of EEG (also relevant for MEG) is given in [Electric Fields of the Brain: The Neurophysics of EEG, 2nd Edition](http://www.amazon.com/Electric-Fields-Brain-Neurophysics-EEG/dp/019505038X/ref=sr_1_1?s=books&ie=UTF8&qid=1375859032&sr=1-1) by Paul L. Nunez and Ramesh Srinivasan.
 
 Steven J Luck, [An Introduction to the Event-Related Potential Technique](http://www.amazon.com/Introduction-Event-Related-Potential-Technique-Neuroscience/dp/0262621967), MIT Press: 2005, ISBN 0262621967. This book is reviewed here: Peter Hagoort (2006) [Event-related potentials from the user's perspective](http://www.nature.com/neuro/journal/v9/n4/full/nn0406-463.html); Nature Neuroscience 9, 463.
 
-[The brain in time: insights from neuromagnetic recordings](http://onlinelibrary.wiley.com/doi/10.1111/j.1749-6632.2010.05438.x/abstract) by Riitta Hari, Lauri Parkkonen and Cathy Nangini gives a comprehensive introduction to MEG.
+[MEG: An Introduction to Methods](http://www.amazon.com/MEG-Introduction-Methods-Peter-Hansen/dp/0195307232/ref=sr_1_2?s=books&ie=UTF8&qid=1375859237&sr=1-2&keywords=magnetoencephalography) by Peter Hansen, Morten Kringelbach, Riitta Salmelin (2010). [Pdf](http://brainmaster.com/software/pubs/brain/MEG%20-%20An%20Intro.pdf). 
 
-MEG: An Introduction to Methods. by Peter Hansen, Morten Kringelbach, Riitta Salmelin. [Pdf](http://brainmaster.com/software/pubs/brain/MEG%20-%20An%20Intro.pdf), [Amazon](http://www.amazon.com/MEG-Introduction-Methods-Peter-Hansen/dp/0195307232/ref=sr_1_2?s=books&ie=UTF8&qid=1375859237&sr=1-2&keywords=magnetoencephalography).
+[Magnetoencephalography - From Signals to Dynamic Cortical Networks](https://www.springer.com/gp/book/9783662521113) by Selma Supek and Cheryl J Aine (2014). 
 
 ## Guidelines for acquisition, analysis and publication
 
@@ -47,9 +57,13 @@ Mike X. Cohen, [MATLAB for Brain and Cognitive Scientists](https://www.amazon.co
 
 Wilson G, Aruliah DA, Brown CT, Chue Hong NP, Davis M, Guy RT, et al. (2014) [Best Practices for Scientific Computing](http://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1001745). PLoS Biol 12(1): e1001745. https://doi.org/10.1371/journal.pbio.1001745
 
+In MATLAB you have the command window, on Linux, macOS and Windows you have the terminal and the Bash command line. With [Discovering the terminal](https://blog.balthazar-rouberol.com/discovering-the-terminal) you can get a 30-minute introduction in how to use the Bash command line.
+
+Richard Johnson has written a [MATLAB style guide](https://nl.mathworks.com/matlabcentral/fileexchange/46056-matlab-style-guidelines-2-0) that explains how to write code that is more likely to be correct, understandable, sharable and maintainable.
+
 ## Data Sharing
 
-For data sharing we recommend that you consider organizing your data along the lines of the [BIDS standard](http://bids.neuroimaging.io). See [The brain imaging data structure, a format for organizing and describing outputs of neuroimaging experiments](http://www.nature.com/articles/sdata201644) for an introduction and [MEG-BIDS, the brain imaging data structure extended to magnetoencephalography](https://www.nature.com/articles/sdata2018110). The ** [data2bids](/reference/data2bids)** function helps to organize your data in the BIDS structure.
+For data sharing we recommend that you consider organizing your data along the lines of the [BIDS standard](http://bids.neuroimaging.io). See [The brain imaging data structure, a format for organizing and describing outputs of neuroimaging experiments](http://www.nature.com/articles/sdata201644) for an introduction and [MEG-BIDS, the brain imaging data structure extended to magnetoencephalography](https://www.nature.com/articles/sdata2018110). The **[data2bids](https://github.com/fieldtrip/fieldtrip/blob/release/data2bids.m)** function helps to organize your data in the BIDS structure.
 
 A good example for a data publication is given in [A multi-subject, multi-modal human neuroimaging dataset](http://dx.doi.org/10.1038/sdata.2015.1), which includes MEG, EEG and fMRI. The dataset itself is available from [OpenfMRI](https://openfmri.org/dataset/ds000117).
 
@@ -69,7 +83,12 @@ The [Brief History of the EEG Surface Laplacian](http://ssltool.sourceforge.net/
 
 The following paper illustrates several problems associated with the lack of robustness and gives recommendations: Rousselet, G.A. & Pernet, C.R. (2012) [Improving standards in brain-behavior correlation analyses](https://www.frontiersin.org/articles/10.3389/fnhum.2012.00119/full). Frontiers in human neuroscience, 6, 119.
 
+The paper [How to get statistically significant effects in any ERP experiment (and why you shouldn’t)](https://doi.org/10.1111/psyp.12639) by Steve Luck and Nicholas Gaspelin demonstrates how common methods for quantifying and analyzing ERP effects can lead to very high rates of significant but bogus effects.
+
+
 The blog post [Correlations in neuroscience: are small n, interaction fallacies, lack of illustrations and confidence intervals the norm?](https://garstats.wordpress.com/2018/06/11/ejn2017) by Guillaume Rousselet has some interesting observations and recommendations.
+
+[The Meaningfulness of Effect Sizes in Psychological Research: Differences Between Sub-Disciplines and the Impact of Potential Biases](https://doi.org/10.3389/fpsyg.2019.00813) by Thomas Schäfer and Marcus A. Schwarz discusses the relevance and challenges of using and reporting effect sizes.
 
 ## Source estimation
 
@@ -87,4 +106,4 @@ Schoffelen JM, Gross J. [Source connectivity analysis with MEG and EEG.](http://
 
 Bastos AM, Schoffelen JM. [A Tutorial Review of Functional Connectivity Analysis Methods and Their Interpretational Pitfalls.](http://doi.org/10.3389/fnsys.2015.00175) Front Syst Neurosci. 2016 Jan 8;9:175. doi: 10.3389/fnsys.2015.00175
 
-O’Neill GC, Barratt EL, Hunt BAE, Tewarie PK, Brookes, MJ. [Measuring electrophysiological connectivity by power envelope correlation: a technical review on MEG methods](https://doi.org/10.1088/0031-9155/60/21/R271). Physics in Medicine and Biology, 2015 60(21), R271–R295.
+O'Neill GC, Barratt EL, Hunt BAE, Tewarie PK, Brookes, MJ. [Measuring electrophysiological connectivity by power envelope correlation: a technical review on MEG methods](https://doi.org/10.1088/0031-9155/60/21/R271). Physics in Medicine and Biology, 2015 60(21), R271–R295.

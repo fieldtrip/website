@@ -16,7 +16,7 @@ title: ft_volumesegment
  The configuration structure can contain
    cfg.output         = string or cell-array of strings, see below (default = 'tpm')
    cfg.spmversion     = string, 'spm2', 'spm8', 'spm12' (default = 'spm12')
-   cfg.spmmethod      = string, 'old', 'new', 'mars' (default = 'old'). This pertains 
+   cfg.spmmethod      = string, 'old', 'new', 'mars' (default = 'old'). This pertains
                         to the algorithm used when cfg.spmversion='spm12', see below.
    cfg.opts           = struct, containing spm-version specific options. See
                         the code and/or the SPM-documentation for more detail.
@@ -89,11 +89,11 @@ title: ft_volumesegment
                 because it doesn't require to create the tissue probabilty maps before creating
                 the mask.
 
- It is not possible to request tissue-probability map (tpm)  in combination with binary masks
- (brain, scalp or skull) or skull-stripped anatomy. The output will return only the probabilistic
+ It is not possible to request tissue-probability maps (tpm) in combination with binary masks
+ (brain, scalp or skull) or with a skull-stripped anatomy. The output will return only the probabilistic
  maps in segmented.gray, white and csf. However, when a segmentation with the probabilistic gray, white
- and csf representations is available, it is possible to use it as input for brain or skull binary mask.
- For example:
+ and csf representations is available, it is possible to use it as input to create the brain or skull
+ binary mask. For example:
    cfg           = [];
    cfg.output    = {'tpm'};
    segment_tpm   = ft_volumesegment(cfg, mri);
@@ -113,10 +113,6 @@ title: ft_volumesegment
    z-axis pointing to the top of the head
    origin in the anterior commissure.
  Note that the segmentation only works if the template MRI is in SPM coordinates.
-
- If the input mri is a string pointing to a CTF *.mri file, the x-axis is assumed to point to the
- nose, and the origin is assumed to be on the interauricular line. In this specific case, when
- ft_read_mri is used to read in the mri, the coordsys field is automatically attached.
 
  To facilitate data-handling and distributed computing you can use
    cfg.inputfile   =  ...

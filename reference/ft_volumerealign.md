@@ -51,8 +51,8 @@ title: ft_volumerealign
                         'spm'         match to template anatomical MRI
                         'fsl'         match to template anatomical MRI
    cfg.coordsys       = string specifying the origin and the axes of the coordinate
-                        system. Supported coordinate systems are 'ctf', '4d',
-                        'bti', 'yokogawa', 'asa', 'itab', 'neuromag', 'acpc',
+                        system. Supported coordinate systems are 'ctf', '4d', 'bti', 
+                        'eeglab', 'neuromag', 'itab', 'yokogawa', 'asa', 'acpc',
                         and 'paxinos'. See http://tinyurl.com/ojkuhqz
    cfg.clim           = [min max], scaling of the anatomy color (default
                         is to adjust to the minimum and maximum)
@@ -140,7 +140,7 @@ title: ft_volumerealign
  When cfg.method = 'spm', a third input argument is required. The input volume is
  coregistered to this target volume, using SPM. You can specify the version of
  the SPM toolbox to use with
-   cfg.spmversion       = string, 'spm2', 'spm8', 'spm12' (default = 'spm8')
+   cfg.spmversion       = string, 'spm2', 'spm8', 'spm12' (default = 'spm12')
  Additional options pertaining to SPM2 and SPM8 should be defined in the
  sub-structure cfg.spm and can include:
    cfg.spm.regtype      = 'subj', 'rigid'

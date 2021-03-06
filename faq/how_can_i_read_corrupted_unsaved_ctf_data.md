@@ -26,7 +26,7 @@ sensType: [356x1 double]
 label: {356x1 cell}
 nameALL: [356x32 char]
 Chan: [1x356 struct]
-  
+
 See whether you can find the correct number of trials.
 
      ft_read_header('/home/arjsto/MEG/subjectx.ds/subjectx.res4')
@@ -57,7 +57,7 @@ Now re-read the res4 file again and correct for the number of trials. Then read 
 
 
 
-If you want to do the same with high level FieldTrip functions, invoke the above mentioned low level functions by specifying the 'ctf_old' header- and dataformat. In your trialfunctio
+If you want to do the same with high-level FieldTrip functions, invoke the above mentioned low-level functions by specifying the 'ctf_old' header- and dataformat. In your trialfunctio
 
     hdr   = ft_read_header(cfg.dataset,'headerformat','ctf_old','dataformat','ctf_old');
     hdr.nTrials = 75;

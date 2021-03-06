@@ -9,11 +9,11 @@ This page describes the interface between the 8-channel [OpenBCI](http://www.ope
 
 {% include image src="/assets/img/development/realtime/openbci/8_perspective_1024x1024.jpg" width="400" %}
 
-The FTDI chip on the OpenBCI dongle requires you to install the FTDI drivers on your machine. You may already have these installed, if you’ve worked with Arduino or other USB hardware accessories. You can download the latest FTDI drivers for your operating system [here](http://www.ftdichip.com/Drivers/VCP.htm).
+The FTDI chip on the OpenBCI dongle requires you to install the FTDI drivers on your machine. You may already have these installed, if you've worked with Arduino or other USB hardware accessories. You can download the latest FTDI drivers for your operating system [here](http://www.ftdichip.com/Drivers/VCP.htm).
 
 ## Standalone interface with openbci2ft
 
-You can use **openbci2ft** to transport data from the UDP network connection to a FieldTrip buffer. The **openbci2ft** application is written in C and takes 1 required and 2 optional command line arguments
+You can use **openbci2ft** to transport data from the Cyton USB dongle to a FieldTrip buffer. The **openbci2ft** application is written in C and takes 1 required and 2 optional command line arguments
 
     openbci2ft <device> [ftHostname] [ftPort]
 

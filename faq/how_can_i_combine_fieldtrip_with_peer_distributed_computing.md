@@ -125,7 +125,7 @@ And then you would call it in parallel for many subjects and conditions like thi
 
     sourceall = peercellfun(@preproc_freq_source, cfg1, cfg2, cfg3);
 
-Here all the source reconstructions will be returned to the master MATLAB session. Of course you can also save them to disk using unique filenames for each subject and condition. Alternatively you can use the cfg.inputfile option for the first step in your bundle of FieldTrip functions, and cfg.outputfile in the last step.
+Here all the source reconstructions will be returned to the controller MATLAB session. Of course you can also save them to disk using unique filenames for each subject and condition. Alternatively you can use the cfg.inputfile option for the first step in your bundle of FieldTrip functions, and cfg.outputfile in the last step.
 
 ## Effective distribution of jobs
 

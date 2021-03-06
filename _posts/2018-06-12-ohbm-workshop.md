@@ -1,6 +1,6 @@
 ---
 title: 12 June, 2018 - OHBM workshop
-categories: []
+categories: [news]
 ---
 
 ### 12 June, 2018

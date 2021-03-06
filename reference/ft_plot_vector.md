@@ -15,7 +15,7 @@ title: ft_plot_vector
    'highlight'       = a logical vector of size Y, where 1 means that the corresponding values in Y are highlighted (according to the highlightstyle)
    'highlightstyle'  = can be 'box', 'thickness', 'saturation', 'difference' (default='box')
    'color'           = see MATLAB standard line properties and see below
-   'facecolor'       = color for the highlighted box (default = [0.6 0.6 0.6])
+   'facecolor'       = color for the highlighted box/difference (default = [0.6 0.6 0.6])
    'facealpha'       = transparency for the highlighted box, between 0 and 1 (default = 1)
    'linewidth'       = see MATLAB standard line properties
    'markersize'      = see MATLAB standard line properties
@@ -38,7 +38,8 @@ title: ft_plot_vector
    'vlim'            = vertical scaling limits within the local axes
 
  When using a local pseudo-axis, you can plot a label next to the data
-   'label'           = string, label to be plotted at the upper left corner
+   'label'           = string, label to be plotted in the corner of the box
+   'labelpos'        = string, position for the label (default = 'upperleft')
    'fontcolor'       = string, color specification (default = 'k')
    'fontsize'        = number, sets the size of the text (default = 10)
    'fontunits'       =

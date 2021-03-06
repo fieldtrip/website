@@ -45,7 +45,7 @@ Immediately after preprocessing data1 and data2 represent the same segments of d
     xlabel('time (s)')
     legend({'dataset1', 'dataset2'});
 
-The idea now is to interpolate the timeseries of one dataset to the same resolution/frequency as the other dataset using **[ft_resampledata](/reference/ft_resampledata)**. Subsequently the datasets can be merged with **[ft_appenddata](/reference/ft_appenddata)**.
+The idea now is to interpolate the timeseries of one dataset to the same resolution/frequency as the other dataset using **[ft_resampledata](https://github.com/fieldtrip/fieldtrip/blob/release/ft_resampledata.m)**. Subsequently the datasets can be merged with **[ft_appenddata](https://github.com/fieldtrip/fieldtrip/blob/release/ft_appenddata.m)**.
 
     % resample/interpolate dataset1 onto the sampled timepoints of dataset2
     cfg = [];

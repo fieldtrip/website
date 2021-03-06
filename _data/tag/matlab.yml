@@ -19,7 +19,7 @@
 - name:  How fast is the FieldTrip buffer for realtime data streaming?
   link:  /faq/how_fast_is_the_fieldtrip_buffer_for_realtime_data_streaming
 
-- name:  MATLAB complains about a missing or invalid MEX file, what should I do?
+- name:  MATLAB complains about a missing or invalid mex file, what should I do?
   link:  /faq/matlab_complains_about_a_missing_or_invalid_mex_file_what_should_i_do
 
 - name:  Replacements for functions from MathWorks toolboxes
@@ -30,6 +30,9 @@
 
 - name:  MATLAB version 7.3 (2006b) crashes when I try to do ...
   link:  /faq/matlab_version_7.3_2006b_crashes_when_i_try_to_do
+
+- name:  MATLAB complains that mexmaci64 cannot be opened because the developer cannot be verified
+  link:  /faq/mexmaci64_cannot_be_opened_because_the_developer_cannot_be_verified
 
 - name:  What are the MATLAB and external requirements?
   link:  /faq/requirements

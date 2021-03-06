@@ -16,7 +16,7 @@ title: ft_spike_waveform
    cfg.rejectonpeak     = 'yes' (default) or 'no': takes away waveforms with too late peak, and no
                            rising AP towards peak of other waveforms
    cfg.rejectclippedspikes = 'yes' (default) or 'no': removes spikes that
-                           saturated the voltage range. 
+                           saturated the voltage range.
    cfg.normalize        = 'yes' (default) or 'no': normalizes all
    waveforms
                            to have peak-to-through amp of 2

@@ -11,5 +11,8 @@ title: ft_preproc_derivative
    dat        data matrix (Nchans X Ntime)
    order      number representing the Nth derivative (default = 1)
 
+ If the data contains NaNs, these are ignored for the computation, but
+ retained in the output.
+
  See also PREPROC
 ```

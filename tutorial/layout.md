@@ -1,20 +1,29 @@
 ---
 title: Specifying the channel layout for plotting
-tags: [tutorial, plot, eeg, meg, ecog, layout]
+tags: [tutorial, plotting, layout, eeg, meg, seeg, ecog, nirs]
 ---
 
 # Specifying the channel layout for plotting
 
 The 2D channel layout is a representation of the channel positions, together with the outline of the head or other anatomical features, that allows data to be plotted in a topographically consistent manner on a 2D computer screen (or piece of paper). The 2D channel layout is _not an exact representation_ of the channel positions, just a projection for the purpose of visualization.
 
+The layout is a MATLAB structure with the following elements
+
+    layout.pos     = Nx2 matrix with the position where each channel should be plotted
+    layout.label   = Nx1 cell-array with the channel labels
+    layout.width   = Nx1 vector with the width of each box for multiplotting
+    layout.height  = Nx1 vector with the height of each box for multiplotting
+    layout.mask    = optional cell-array with line segments that determine the area for topographic interpolation
+    layout.outline = optional cell-array with line segments that represent the head, nose, ears, sulci or other anatomical features
+
 ## Constructing a layout
 
-Many of the FieldTrip plotting functions use a 2D layout of the channels for plotting. The layout is a schematic 2D representation for displaying the data on the computer screen or in print on paper. The layout results from **[ft_prepare_layout](/reference/ft_prepare_layout)** and can be constructed from
+Many of the FieldTrip plotting functions use a 2D layout of the channels for plotting. The layout is a schematic 2D representation for displaying the data on the computer screen or in print on paper. The layout results from **[ft_prepare_layout](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_layout.m)** and can be constructed from
 
-- position of the sensor positions in 3D space
-- existing (template) layout on disk
-- photo or drawing of the sensor positions
-- schematic representation
+- the position of the sensor positions in 3D space
+- an existing (template) layout on disk
+- a photo or drawing of the sensor positions
+- a schematic representation
 
 ### 3D sensor positions
 
@@ -38,7 +47,7 @@ Sometimes a schematic layout is more convenient, since it "flattens" the head an
 
 Since MEG sensors are in generally fixed in a rigid helmet inside the dewar, and since the arrangement of sensors is the same for all MEG systemsof the same type (e.g. CTT275, Neuromag306), it is not common to construct individual-subject MEG layouts. Instead, most people will simply use one of the [template layouts](/template/layout).
 
-For future [OPM-based MEG systems](https://dx.doi.org/10.1038/nature26147) it is more likely that MEG sensor layouts will differ from one subject to another subject. Constructing 2D layouts for OPM based systems can be done similar to the way that they are constructed for EEG systems. If you have the 3D description of the MEG sensors, you can also specify that as `cfg.grad` into **[ft_prepare_layout](/reference/ft_prepare_layout)** to make a 3D layout.
+For future [OPM-based MEG systems](https://dx.doi.org/10.1038/nature26147) it is more likely that MEG sensor layouts will differ from one subject to another subject. Constructing 2D layouts for OPM based systems can be done similar to the way that they are constructed for EEG systems. If you have the 3D description of the MEG sensors, you can also specify that as `cfg.grad` into **[ft_prepare_layout](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_layout.m)** to make a 3D layout.
 
 ### Creating a layout from sensor positions
 
@@ -102,7 +111,7 @@ Many labs use identical (or very similar) EEG caps. Consequently, the [template]
 
 ### Creating a layout from 3D electrode positions
 
-If you have recorded electrode positions, you can use the **[ft_prepare_layout](/reference/ft_prepare_layout)** function to make a layout by projecting the electrodes on the 2D plane.
+If you have recorded electrode positions, you can use the **[ft_prepare_layout](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_layout.m)** function to make a layout by projecting the electrodes on the 2D plane.
 
 ### Creating a layout from an image
 
@@ -110,7 +119,7 @@ You can also make a layout based on a bitmap image with the electrode arrangemen
 
 {% include image src="/assets/img/tutorial/layout/easycap_m10_equidistant61chan.gif" width="400" %}
 
-You can specify cfg.image in **[ft_prepare_layout](/reference/ft_prepare_layout)** and subsequently click on the location of each electrode. After specifying each electrode location, you'll be asked to specify the outlines of the head (i.e. the circle around the head, the nose and ears and optionally some lines representing other important landmarks). Finally you will have to specify the mask for the topographic interpolation, this is the same circle around the head (without ears and nose).
+You can specify cfg.image in **[ft_prepare_layout](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_layout.m)** and subsequently click on the location of each electrode. After specifying each electrode location, you'll be asked to specify the outlines of the head (i.e. the circle around the head, the nose and ears and optionally some lines representing other important landmarks). Finally you will have to specify the mask for the topographic interpolation, this is the same circle around the head (without ears and nose).
 
     cfg = [];
     cfg.image = 'easycap_m10_equidistant61chan.gif';
@@ -124,7 +133,7 @@ The sEEG and ECoG electrodes can be localized in 3D from a CT and/or MRI scan as
 
 {% include markup/warning %}
 
-The procedure for anatomical coregistration and subsequent localizing of the electrodes explained in the [ECoG and sEEG tutorial](/tutorial/human_ecog) is based on the paper by Stolk, Griffin et al., **[Integrated analysis of anatomical and electrophysiological human intracranial data](https://www.nature.com/articles/s41596-018-0009-6)**, Nature Protocols, 2018.
+The procedure for anatomical coregistration and subsequent localizing of the electrodes explained in the [ECoG and sEEG tutorial](/tutorial/human_ecog) is based on the paper by Stolk, Griffin et al., **[Integrated analysis of anatomical and electrophysiological human intracranial data](https://www.nature.com/articles/s41596-018-0009-6.m)**, Nature Protocols, 2018.
 
 {% include markup/end %}
 
@@ -134,7 +143,7 @@ The placement of iEEG electrodes differs from one patient to the next patient. I
 
 {% include image src="/assets/img/tutorial/layout/dalal_ecog.png" width="400" %}
 
-As in the EEG case, you can specify cfg.image in **[ft_prepare_layout](/reference/ft_prepare_layout)** and subsequently click on the location of each electrode. Instead of specifying the complete outline of the head as we usually do in EEG (as a circle), you may want to identify other important landmarks such as the major sulci and the outline of the trepanation.
+As in the EEG case, you can specify cfg.image in **[ft_prepare_layout](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_layout.m)** and subsequently click on the location of each electrode. Instead of specifying the complete outline of the head as we usually do in EEG (as a circle), you may want to identify other important landmarks such as the major sulci and the outline of the trepanation.
 
 You can also specify the mask for the topographic interpolation. If you have a large trepanation with multiple smaller grids without coverage in-between, you probably want to make a mask for the topographic interpolation around each grid, to avoid the ECoG potential from being interpolated in the gaps between the grids.
 
@@ -142,7 +151,7 @@ You can also specify the mask for the topographic interpolation. If you have a l
     cfg.image = 'dalal_ecog.png';
     layout_ecog = ft_prepare_layout(cfg);
 
-After creating the layout, you should check and/or manually assign the correct name of the channel labels in the label cell-array. Furthermore, you can place the SCALE and COMNT locations at a convenient place in the figure and modify the width and height of the boxes that are used for multiplotting. You can use **[ft_layoutplot](/reference/ft_layoutplot)** for a visual inspection of the complete layout.
+After creating the layout, you should check and/or manually assign the correct name of the channel labels in the label cell-array. Furthermore, you can place the SCALE and COMNT locations at a convenient place in the figure and modify the width and height of the boxes that are used for multiplotting. You can use **[ft_layoutplot](https://github.com/fieldtrip/fieldtrip/blob/release/ft_layoutplot.m)** for a visual inspection of the complete layout.
 
     cfg = [];
     cfg.layout = layout_ecog;   % this is the layout structure that you created before
@@ -173,7 +182,7 @@ The advantage of the MATLAB file over the ASCII file, is that the MATLAB file ca
 
 ### Creating a schematic iEEG layout
 
-Sometimes you want to construct an iEEG layout prior to doing the full anatomical pipeline, e.g. to check the iEEG data quality and/or whether the expected experimental effects are present in the functional data. You can use **[ft_prepare_layout](/reference/ft_prepare_layout)** in combination with the **[ft_appendlayout](/reference/ft_appendlayout)** function.
+Sometimes you want to construct an iEEG layout prior to doing the full anatomical pipeline, e.g. to check the iEEG data quality and/or whether the expected experimental effects are present in the functional data. You can use **[ft_prepare_layout](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_layout.m)** in combination with the **[ft_appendlayout](https://github.com/fieldtrip/fieldtrip/blob/release/ft_appendlayout.m)** function.
 
 A schematic layout can also be convenient, since it "flattens" the head and allows to see all channels better. Furthermore, for sEEG shafts it can be difficult to come up with a geometrically accurate representation of the electrode contacts in 2D space.
 
@@ -194,7 +203,7 @@ vertical.
 You can also use the raw or processed iEEG data to specify channel names. For
 example the dataset used in the [ECoG and sEEG tutorial](/tutorial/human_ecog) has
 sEEG electrode shafts that start with the letters LAM, LHH, LTH, RAM, RHH, RTH and
-ROC. You can download the spectrally analyzed data from the [FieldTrip ftp server
+ROC. You can download the spectrally analyzed data from the [FieldTrip FTP server
 (SubjectUCI29_freq.mat)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/human_ecog/SubjectUCI29/SubjectUCI29_freq.mat)
 and use the following
 
@@ -230,7 +239,7 @@ In the same way you can make layouts for all other shafts
 
 {% include image src="/assets/img/tutorial/layout/layoutLAM.png" width="400" %}
 
-You can combine the layouts using **[ft_appendlayout](/reference/ft_appendlayout)** like this
+You can combine the layouts using **[ft_appendlayout](https://github.com/fieldtrip/fieldtrip/blob/release/ft_appendlayout.m)** like this
 
     cfg = [];
     layoutL = ft_appendlayout(cfg, layoutLAM, layoutLHH, layoutLTH);
@@ -340,17 +349,17 @@ but the color-coded interpolated values on the shafts should be interpreted with
 
 Layouts are used in all 2D plotting functions in FieldTrip:
 
-- **[ft_multiplotER](/reference/ft_multiplotER)**
-- **[ft_multiplotTFR](/reference/ft_multiplotTFR)**
-- **[ft_topoplotER](/reference/ft_topoplotER)**
-- **[ft_topoplotTFR](/reference/ft_topoplotTFR)**
-- **[ft_movieplotER](/reference/ft_movieplotER)**
-- **[ft_movieplotTFR](/reference/ft_movieplotTFR)**
-- **[ft_databrowser](/reference/ft_databrowser)**
-- **[ft_neighbourplot](/reference/ft_neighbourplot)**
-- **[ft_layoutplot](/reference/ft_layoutplot)**
+- **[ft_multiplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_multiplotER.m)**
+- **[ft_multiplotTFR](https://github.com/fieldtrip/fieldtrip/blob/release/ft_multiplotTFR.m)**
+- **[ft_topoplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_topoplotER.m)**
+- **[ft_topoplotTFR](https://github.com/fieldtrip/fieldtrip/blob/release/ft_topoplotTFR.m)**
+- **[ft_movieplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_movieplotER.m)**
+- **[ft_movieplotTFR](https://github.com/fieldtrip/fieldtrip/blob/release/ft_movieplotTFR.m)**
+- **[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_databrowser.m)**
+- **[ft_neighbourplot](https://github.com/fieldtrip/fieldtrip/blob/release/ft_neighbourplot.m)**
+- **[ft_layoutplot](https://github.com/fieldtrip/fieldtrip/blob/release/ft_layoutplot.m)**
 
-Furthermore, the **[ft_prepare_neighbours](/reference/ft_prepare_neighbours)** function allows you to specify a channel layout to determine neighboring channels. Please note that it is more accurate to determine neighbors from the 3D representation of the channel positions, you should only use the layout if you don't have actual 3D channel positions.
+Furthermore, the **[ft_prepare_neighbours](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_neighbours.m)** function allows you to specify a channel layout to determine neighboring channels. Please note that it is more accurate to determine neighbors from the 3D representation of the channel positions, you should only use the layout if you don't have actual 3D channel positions.
 
 ## The format of layout files
 

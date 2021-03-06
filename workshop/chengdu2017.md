@@ -2,7 +2,7 @@
 title: Chengdu, China
 ---
 
-# Chengdu, China
+# FieldTrip workshop in Chengdu, China
 
 - By whom: Robert Oostenveld
 - When: 27-29 September 2017
@@ -328,7 +328,7 @@ After installing FieldTrip to your path, you need to change into the hands-on sp
     mri = ft_determine_coordsys(mri);
     % in the GUI: press r, a, s, n
 
-    % see http://www.fieldtriptoolbox.org/tutorial/sourcemodel
+    % see https://www.fieldtriptoolbox.org/tutorial/sourcemodel
 
     cfg = [];
     ft_sourceplot(cfg, mri);
@@ -449,5 +449,5 @@ After installing FieldTrip to your path, you need to change into the hands-on sp
 
     % This shows that the cortical sheet is currently not coregistered
     % with the headmodel and electrodes. Also the sensity (number of
-    % vertices) is too high. See http://www.fieldtriptoolbox.org/tutorial/sourcemodel
+    % vertices) is too high. See https://www.fieldtriptoolbox.org/tutorial/sourcemodel
     % for the preferred pipeline.

@@ -25,16 +25,17 @@ title: ft_read_data
    'fallback'       can be empty or 'biosig' (default = [])
    'blocking'       wait for the selected number of events (default = 'no')
    'timeout'        amount of time in seconds to wait when blocking (default = 5)
+   'password'       password structure for encrypted data set (only for mayo_mef30 and mayo_mef21)
 
  This function returns a 2-D matrix of size Nchans*Nsamples for continuous
  data when begevent and endevent are specified, or a 3-D matrix of size
  Nchans*Nsamples*Ntrials for epoched or trial-based data when begtrial
  and endtrial are specified.
 
- To use an external reading function, you can specify a function as the 'dataformat'
- option. This function should take five input arguments: filename, hdr, begsample,
- endsample, chanindx. Please check the code of this function for details, and search
- for BIDS_TSV as example.
+ To use an external reading function, you can specify an external function as the
+ 'dataformat' option. This function should take five input arguments: filename, hdr,
+ begsample, endsample, chanindx. Please check the code of this function for details,
+ and search for BIDS_TSV as example.
 
  See also FT_READ_HEADER, FT_READ_EVENT, FT_WRITE_DATA, FT_WRITE_EVENT
 ```

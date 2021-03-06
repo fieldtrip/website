@@ -1,13 +1,13 @@
 ---
 title: Getting started with Cyberkinetics data
-tags: [cyberkinetics, lfp, spike, dataformat]
+tags: [dataformat, cyberkinetics, blackrock, lfp, spike]
 ---
 
-{% include markup/danger %}
-The support for the 'cyberkinetics' format using neuroshare has never been fully operational. Moreover, the limited functionality was restricted to the Windows platform. Nowadays, this file format has been adopted by Blackrock microsystems, and cross-platform support for the file format in FieldTrip is being implemented. Please see <http://www.fieldtriptoolbox.org/getting_started/blackrock> and <http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=2964> for more information.
-{% include markup/end %}
-
 # Getting started with Cyberkinetics data
+
+{% include markup/danger %}
+The support for the 'cyberkinetics' format using neuroshare has never been fully operational. Moreover, the limited functionality was restricted to the Windows platform. Nowadays, this file format has been adopted by Blackrock microsystems, and cross-platform support for the file format in FieldTrip is being implemented. Please see <https://www.fieldtriptoolbox.org/getting_started/blackrock> and <http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=2964> for more information.
+{% include markup/end %}
 
 ## Introduction
 
@@ -18,7 +18,7 @@ You will need to download the "MATLAB Import Filter" and the Cyberkinetics libra
 The low-level FieldTrip reading function that is used to read Cyberkinetics dat
 fieldtrip/fileio/private/read_neuroshare.m
 
-To get started, you should add the FieldTrip main directory to your path, and execute the **[ft_defaults](/reference/ft_defaults)** function, which sets the defaults and configures up the minimal required path settings. See also this [frequently asked question](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path).
+To get started, you should add the FieldTrip main directory to your path, and execute the **[ft_defaults](https://github.com/fieldtrip/fieldtrip/blob/release/ft_defaults.m)** function, which sets the defaults and configures up the minimal required path settings. See also this [frequently asked question](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path).
 
     addpath <path_to_fieldtrip>
     ft_defaults
@@ -71,6 +71,5 @@ This calls the neuroshare toolbox (using the functions _ns_GetSegmentData_ or _n
 
 ## External links
 
-- [http://neuroshare.org](http://neuroshare.org)
-
-- http://www.blackrockmicro.com Blackrock Microsystems (formerly the Research Products Division of Cyberkinetics Inc.)
+- [NeuroShare](http://neuroshare.org)
+- [Blackrock Microsystems](http://www.blackrockmicro.com), formerly the Research Products Division of Cyberkinetics Inc.

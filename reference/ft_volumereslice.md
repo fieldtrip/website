@@ -20,10 +20,10 @@ title: ft_volumereslice
  also be interpolated on a regular voxel grid.
 
  For the interpolation methods you should specify
-   cfg.resolution = number, in physical units
-   cfg.xrange     = [min max], in physical units
-   cfg.yrange     = [min max], in physical units
-   cfg.zrange     = [min max], in physical units
+   cfg.resolution = number, in units of distance (e.g. mm)
+   cfg.xrange     = [min max], in units of distance (e.g. mm)
+   cfg.yrange     = [min max], in units of distance (e.g. mm)
+   cfg.zrange     = [min max], in units of distance (e.g. mm)
  or alternatively with
    cfg.dim        = [nx ny nz], size of the volume in each direction
 

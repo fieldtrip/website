@@ -1,3 +1,6 @@
+- name:  Distributed computing using the MATLAB engine system
+  link:  /development/module/engine
+
 - name:  How to get started with distributed computing using engine?
   link:  /faq/how_to_get_started_with_distributed_computing_using_engine
 

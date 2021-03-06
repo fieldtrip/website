@@ -1,23 +1,23 @@
-- name:  Bugzilla and GitHub issue tracking
-  link:  /bugzilla
-
-- name:  Contribute
-  link:  /contribute
-
 - name:  Development
   link:  /development
+
+- name:  Contribute
+  link:  /development/contribute
 
 - name:  Accessing the FieldTrip source code through CVS
   link:  /development/cvs
 
-- name:  Code testing and release
-  link:  /development/dashboard
+- name:  Data structures used by FieldTrip
+  link:  /development/datastructure
 
 - name:  Accessing the FieldTrip source code through Git
   link:  /development/git
 
 - name:  Code guidelines
   link:  /development/guideline/code
+
+- name:  Communication guidelines
+  link:  /development/guideline/communication
 
 - name:  Documentation guidelines this is the title, it should also be the first top-level heading
   link:  /development/guideline/documentation
@@ -28,8 +28,11 @@
 - name:  Guidelines for audio and video material
   link:  /development/guideline/video
 
-- name:  Website syntax and formatting Website syntax and formatting
+- name:  Website syntax and formatting Website syntax and formatting New page title
   link:  /development/guideline/website
+
+- name:  Reporting issues
+  link:  /development/issues
 
 - name:  Meetings
   link:  /development/meeting
@@ -37,11 +40,35 @@
 - name:  Modular organization of the source code
   link:  /development/module
 
+- name:  Connectivity estimates for EEG/MEG time series data
+  link:  /development/module/connectivity
+
+- name:  Distributed computing using the MATLAB engine system
+  link:  /development/module/engine
+
 - name:  Reading and writing of EEG/MEG time series data
   link:  /development/module/fileio
 
+- name:  Forward computation of EEG/MEG source models
+  link:  /development/module/forward
+
+- name:  Inverse source parameter estimates from EEG/MEG data
+  link:  /development/module/inverse
+
+- name:  Distributed computing using a peer-to-peer cluster
+  link:  /development/module/peer
+
 - name:  Plotting of channel-level, source-level and other geometrical data related to EEG/MEG
   link:  /development/module/plotting
+
+- name:  Preprocessing of EEG/MEG time series data
+  link:  /development/module/preproc
+
+- name:  Distributed computing using a Linux compute cluster
+  link:  /development/module/qsub
+
+- name:  Spectral estimation of of EEG/MEG time series data
+  link:  /development/module/specest
 
 - name:  Project overview
   link:  /development/project
@@ -84,6 +111,9 @@
 
 - name:  Accessing the FieldTrip source code through SVN
   link:  /development/svn
+
+- name:  Code testing and release versions
+  link:  /development/testing
 
 - name:  How can I keep track of changes to the code?
   link:  /faq/how_can_i_keep_track_of_the_changes_to_the_code

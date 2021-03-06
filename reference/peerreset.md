@@ -9,5 +9,5 @@ title: peerreset
  Use as
    peerreset
 
- See also PEERMASTER, PEERSLAVE, PEERZOMBIE
+ See also PEERCONTROLLER, PEERWORKER, PEERZOMBIE
 ```

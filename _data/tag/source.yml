@@ -7,13 +7,16 @@
 - name:  Common filters in beamforming
   link:  /example/common_filters_in_beamforming
 
+- name:  Compute forward simulated data using ft_dipolesimulation
+  link:  /example/compute_forward_simulated_data
+
 - name:  Compute forward simulated data and apply a beamformer scan
   link:  /example/compute_forward_simulated_data_and_apply_a_beamformer_scan
 
 - name:  Compute forward simulated data and apply a dipole fit
   link:  /example/compute_forward_simulated_data_and_apply_a_dipole_fit
 
-- name:  Example use of the ft_compute_leadfield function
+- name:  Compute forward simulated data with the low-level ft_compute_leadfield
   link:  /example/compute_leadfield
 
 - name:  Check the quality of the anatomical coregistration
@@ -75,9 +78,6 @@
 
 - name:  How can I map source locations onto an anatomical label in an atlas?
   link:  /faq/how_can_i_map_source_locations_between_two_different_representations
-
-- name:  How can I use OpenMEEG for forward modeling?
-  link:  /faq/how_can_i_use_openmeeg_for_forward_modelling
 
 - name:  How can I visualize the different geometrical objects that are needed for forward and inverse computations?
   link:  /faq/how_can_i_visualize_the_different_geometrical_objects_that_are_needed_for_forward_and_inverse_computations
@@ -153,4 +153,10 @@
 
 - name:  Beamforming oscillatory responses in MEG data
   link:  /workshop/oslo2019/beamforming
+
+- name:  Creation of headmodels and sourcemodels for source reconstruction
+  link:  /workshop/paris2019/handson_anatomy
+
+- name:  Localizing sources of neural sources using beamformer techniques
+  link:  /workshop/paris2019/handson_sourceanalysis
 

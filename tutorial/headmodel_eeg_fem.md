@@ -1,19 +1,19 @@
 ---
 title: Creating a FEM volume conduction model of the head for source-reconstruction of EEG data
-tags: [tutorial, eeg, source, headmodel, mri, plot, meg-language]
+tags: [tutorial, eeg, source, headmodel, mri, plotting, meg-language]
 ---
 
 # Creating a FEM volume conduction model of the head for source-reconstruction of EEG data
 
 ## Introduction
 
-This tutorial demonstrates how to construct a volume conduction model of the head based on a single subject's MRI. We will use the anatomical images that belong to the same subject whose data was analyzed in other tutorials. The anatomical MRI data is available from the [FieldTrip ftp server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip). Here, an EEG specific FEM model will be shown. In reality, we do not have corresponding EEG data for the subject we will use in this tutorial, rather we will use a template EEG electrode set to demonstrate how to build a FEM model for EEG and how to align the electrodes to anatomical data.
+This tutorial demonstrates how to construct a volume conduction model of the head based on a single subject's MRI. We will use the anatomical images that belong to the same subject whose data was analyzed in other tutorials. The anatomical MRI data is available from the [FieldTrip FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip). Here, an EEG specific FEM model will be shown. In reality, we do not have corresponding EEG data for the subject we will use in this tutorial, rather we will use a template EEG electrode set to demonstrate how to build a FEM model for EEG and how to align the electrodes to anatomical data.
 
 This tutorial will **not** show how to perform the source reconstruction itself. If you are interested in source reconstruction methods, you can go to the [Localizing oscillatory sources using beamformer techniques](/tutorial/beamformer) and to the [Source reconstruction of event-related fields using minimum-norm estimate](/tutorial/minimumnormestimate) tutorials.
 
 Furthermore, elsewhere on this website you can find also information [about MEG headmodels](/tutorial/headmodel_meg) and about other [EEG headmodels](/tutorial/headmodel_eeg).
 
-We want to note that the FEM modelling works only on MATLAB versions 2011 and above.
+We want to note that the FEM modeling works only on MATLAB versions 2011 and above.
 
 {% include markup/warning %}
 The SimBio software is described in detail [here](https://www.mrt.uni-jena.de/simbio/index.php/Main_Page#Welcome). The integration with FieldTrip is described in the reference below. Please cite this reference if you use the FieldTrip-SimBio pipeline in your research.
@@ -43,16 +43,16 @@ The anatomical mri of the [tutorial data set](/tutorial/meg_language) is availab
 
 _Figure 2. Pipeline for creating a FEM model_
 
-- First, we will read the anatomical data with **[ft_read_mri](/reference/ft_read_mri)**;
-- then we reslice the anatomical data with **[ft_volumereslice](/reference/ft_volumereslice)**;
-- segment the anatomical information into different tissue types with **[ft_volumesegment](/reference/ft_volumesegment)**;
-- create a geometrical description of the head (mesh) with **[ft_prepare_mesh](/reference/ft_prepare_mesh)**;
-- create the headmodel with **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)**;
-- and visualize the geometry of the head by **[ft_plot_mesh](/reference/ft_plot_mesh)**
+- First, we will read the anatomical data with **[ft_read_mri](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_mri.m)**;
+- then we reslice the anatomical data with **[ft_volumereslice](https://github.com/fieldtrip/fieldtrip/blob/release/ft_volumereslice.m)**;
+- segment the anatomical information into different tissue types with **[ft_volumesegment](https://github.com/fieldtrip/fieldtrip/blob/release/ft_volumesegment.m)**;
+- create a geometrical description of the head (mesh) with **[ft_prepare_mesh](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_mesh.m)**;
+- create the headmodel with **[ft_prepare_headmodel](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_headmodel.m)**;
+- and visualize the geometry of the head by **[ft_plot_mesh](https://github.com/fieldtrip/fieldtrip/blob/release/plotting/ft_plot_mesh.m)**
 
 ## Reading in the anatomical data
 
-Before starting with FieldTrip, it is important that you set up your [matlab path](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path) properly.
+Before starting with FieldTrip, it is important that you set up your [MATLAB path](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path) properly.
 
     cd PATH_TO_FIELDTRIP
     ft_defaults
@@ -82,24 +82,24 @@ You can see that the **coordsys** field of anatomical data that we read in is al
 
 When you prepare a head model for EEG, the head model should be in the same coordinate system as the electrodes. It is not relevant in which coordinate system the geometrical information is defined, until all are [aligned](/faq/how_to_coregister_an_anatomical_mri_with_the_gradiometer_or_electrode_positions). For this, you can do two thing
 
-- either you need to align the anatomical MRI (before the segmentation) into the same coordinate system in which the electrodes will be expressed. For example, if you want to align the anatomical MRI to the ctf coordinate system, it can be aligned with using the **[ft_volumerealign](/reference/ft_volumerealign)** function. For this alignment, you will need to align your MRI to the fiducial points (LPA, RPA and nasion). The output of any later processing step (segmentation, mesh, headmodel) will be expressed in the same coordinate system as your anatomical mri. And then, you can also align the electrodes to the same points.
+- either you need to align the anatomical MRI (before the segmentation) into the same coordinate system in which the electrodes will be expressed. For example, if you want to align the anatomical MRI to the ctf coordinate system, it can be aligned with using the **[ft_volumerealign](https://github.com/fieldtrip/fieldtrip/blob/release/ft_volumerealign.m)** function. For this alignment, you will need to align your MRI to the fiducial points (LPA, RPA and nasion). The output of any later processing step (segmentation, mesh, headmodel) will be expressed in the same coordinate system as your anatomical mri. And then, you can also align the electrodes to the same points.
 
 - or you can also align later your electrodes interactively or manually to an existing head model.
 
 The anatomical MRI that we use in this tutorial is already aligned to the CTF head coordinate system](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined#details_of_the_ctf_coordinate_system). We also have information (see later) how the EEG electrodes are positioned relative to the fiducials. Therefore, there is no reason to align the anatomical MRI to any other coordinate system.
 
-It is also possible to read in anatomical MRI data in [other formats](/faq/dataformat), which are defined in [a different coordinate system](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined). When you read in your own anatomical data, it may does not give information on the coordinate system in which the anatomical data is expressed and/or maybe there is no transformation matrix specified. In this case, you can check the coordinate-system with the **[ft_determine_coordsys](/reference/ft_determine_coordsys)** function.
+It is also possible to read in anatomical MRI data in [other formats](/faq/dataformat), which are defined in [a different coordinate system](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined). When you read in your own anatomical data, it may does not give information on the coordinate system in which the anatomical data is expressed and/or maybe there is no transformation matrix specified. In this case, you can check the coordinate-system with the **[ft_determine_coordsys](https://github.com/fieldtrip/fieldtrip/blob/release/ft_determine_coordsys.m)** function.
 
 ## Reslice the volume
 
-In the next step of this tutorial, we will segment the anatomical MRI. Segmentation works properly when the voxels of the anatomical images are homogenous (i.e. the size of the voxel is the same into each direction). If you do not have homogenous voxels (or you are not sure of), you can use the **[ft_volumereslice](/reference/ft_volumereslice)** function on the anatomical data before segmentation. Read more about re-slicing [here](/faq/how_change_mri_orientation_size_fov).
+In the next step of this tutorial, we will segment the anatomical MRI. Segmentation works properly when the voxels of the anatomical images are homogenous (i.e. the size of the voxel is the same into each direction). If you do not have homogenous voxels (or you are not sure of), you can use the **[ft_volumereslice](https://github.com/fieldtrip/fieldtrip/blob/release/ft_volumereslice.m)** function on the anatomical data before segmentation. Read more about re-slicing [here](/faq/how_change_mri_orientation_size_fov).
 
     cfg     = [];
     cfg.dim = mri.dim;
     mri     = ft_volumereslice(cfg,mri);
 
 {% include markup/info %}
-Reslicing will apply the coordinate transformation on your anatomical data. (While **[ft_volumerealign](/reference/ft_volumerealign)** does not change the anatomical data, but it adjusts the transformation matrix of the data, **[ft_volumereslice](/reference/ft_volumereslice)** will change the anatomical data, i.e. it will arrange data in field **anatomy** according to the coordinate system.) Do not use this function if later you need to recover the original orientation of the voxels.
+Reslicing will apply the coordinate transformation on your anatomical data. (While **[ft_volumerealign](https://github.com/fieldtrip/fieldtrip/blob/release/ft_volumerealign.m)** does not change the anatomical data, but it adjusts the transformation matrix of the data, **[ft_volumereslice](https://github.com/fieldtrip/fieldtrip/blob/release/ft_volumereslice.m)** will change the anatomical data, i.e. it will arrange data in field **anatomy** according to the coordinate system.) Do not use this function if later you need to recover the original orientation of the voxels.
 {% include markup/end %}
 
 We check if the resolution and the dimensions were well specified, and the reslicement did not cause any loss in the anatomical information (i.e. if all parts of the head are present in the resliced images).
@@ -114,10 +114,10 @@ _Figure 3. Mri plotted before reslicement (left) and after reslicement (right)_
 
 ## Segmentation
 
-In this step, the voxels of the anatomical MRI are segmented (i.e. separated) into the five different tissue types: scalp, skull, csf (cerebro-spinal fluid), gray and white matter. These latest three tissues belong to the brain. The function **[ft_volumesegment](/reference/ft_volumesegment)** will produce the required output. You can read more about how the tissue-types are represented in the output of this function in this [FAQ](/faq/how_is_the_segmentation_defined). The segmentation should contain a binary representation of 5 tissue types which do not overlap.
+In this step, the voxels of the anatomical MRI are segmented (i.e. separated) into the five different tissue types: scalp, skull, csf (cerebro-spinal fluid), gray and white matter. These latest three tissues belong to the brain. The function **[ft_volumesegment](https://github.com/fieldtrip/fieldtrip/blob/release/ft_volumesegment.m)** will produce the required output. You can read more about how the tissue-types are represented in the output of this function in this [FAQ](/faq/how_is_the_segmentation_defined). The segmentation should contain a binary representation of 5 tissue types which do not overlap.
 
 {% include markup/warning %}
-Note that the segmentation is quite time consuming (~15mins) and if you want you can load the result and skip ahead to the next step. You can download the segmented MRI of this tutorial data from the from the [ftp server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/headmodel_fem/segmentedmri.mat) (segmentedmri.mat).
+Note that the segmentation is quite time consuming (~15mins) and if you want you can load the result and skip ahead to the next step. You can download the segmented MRI of this tutorial data from the from the [FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/headmodel_fem/segmentedmri.mat) (segmentedmri.mat).
 {% include markup/end %}
 
     cfg           = [];
@@ -150,7 +150,7 @@ The segmentedmri data structure is similar to the mri data structure, but contai
 
 The segmentation does not change the coordinate system, nor the size of the volume. You can see this in the first three fields (dim, transform and coordsys) which are the same as the corresponding fields of the input mri data structure. But now, the field **transform** aligns the matrix in fields **skull**, **scalp**... etc. to the coordinate system defined in the **coordsys** field.
 
-The function **[ft_sourceplot](/reference/ft_sourceplot)** can be used to plot the segmented tissues. In order, to see all tissues in one image, **[ft_datatype_segmentation](/reference/ft_datatype_segmentation)** can convert the segmentation structure to an [indexed representation](/faq/how_is_the_segmentation_defined). Each tissue-types will be shown by a different color in the image.
+The function **[ft_sourceplot](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceplot.m)** can be used to plot the segmented tissues. In order, to see all tissues in one image, **[ft_datatype_segmentation](https://github.com/fieldtrip/fieldtrip/blob/release/utilities/ft_datatype_segmentation.m)** can convert the segmentation structure to an [indexed representation](/faq/how_is_the_segmentation_defined). Each tissue-types will be shown by a different color in the image.
 
     seg_i = ft_datatype_segmentation(segmentedmri,'segmentationstyle','indexed');
 
@@ -167,7 +167,7 @@ _Figure 4. Binary representations of scalp, skull tissues, gray and white matter
 
 ## Mesh
 
-In this step, a geometrical description of the head is created by the **[ft_prepare_mesh](/reference/ft_prepare_mesh)** function. The output of this function is a hexahedral mesh (i.e. the points of the mesh are connected in such way that they create hexahedrons). Each hexahedron is assigned to one of the five tissue-types.
+In this step, a geometrical description of the head is created by the **[ft_prepare_mesh](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_mesh.m)** function. The output of this function is a hexahedral mesh (i.e. the points of the mesh are connected in such way that they create hexahedrons). Each hexahedron is assigned to one of the five tissue-types.
 In order to improve the geometrical properties of the mesh (i. e. its approximation of the head shape), a node-shift approach can be applied which shifts boundary vertices in the direction of those hexahedrons that represent the minority around it(see figure. The magnitude of the shift is controlled by a shift parameter which can range from 0 (no shift) to 0.49(maximum shift). However, choosing the shift parameter too large can result in degenerated hexahedrons. For starters we recommend a shift parameter of 0.3.
 {% include image src="/assets/img/tutorial/headmodel_eeg_fem/slide_mesh_detailed.png" width="300" %}
 {% include image src="/assets/img/tutorial/headmodel_eeg_fem/slide_mesh_ns_detailed.png" width="300" %}
@@ -199,12 +199,12 @@ The mesh contains the following field
 
 - **tissuelabel**: Names of tissue-types.
 
-At the moment FieldTrip only supports hexahedrons for FEM modelling.
+At the moment FieldTrip only supports hexahedrons for FEM modeling.
 
 ## Head model
 
-Gray and white matter, csf, skull and skin has been differentiated in the geometrical description of the head. Now, we will create the volume conduction model. We will specify method 'simbio' in the cfg.method field of **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)**. This methods also requires to specify the conductivities for each tissue-types.
-The vol can also be downloaded here [ftp server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/headmodel_fem/vol.mat).
+Gray and white matter, csf, skull and skin has been differentiated in the geometrical description of the head. Now, we will create the volume conduction model. We will specify method 'simbio' in the cfg.method field of **[ft_prepare_headmodel](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_headmodel.m)**. This methods also requires to specify the conductivities for each tissue-types.
+The vol can also be downloaded here [FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/headmodel_fem/vol.mat).
 
     cfg        = [];
     cfg.method ='simbio';
@@ -236,7 +236,7 @@ Note that the unit of measurement used in the geometrical description of vol is 
 
 ## Visualization
 
-The hexahedral mesh is a geometrical description of the head. It is built up from hexahedrons. For visualization, it is possible to use the **[ft_plot_mesh](/reference/ft_plot_mesh)** function which is generally used for plotting any type of meshes in FieldTrip. Because of the large number of points in a mesh, it is advised to use the 'surfaceonly' option. In this case, the function will plot hexagonal surfaces of those hexahedrons which create the outside surface of the head.
+The hexahedral mesh is a geometrical description of the head. It is built up from hexahedrons. For visualization, it is possible to use the **[ft_plot_mesh](https://github.com/fieldtrip/fieldtrip/blob/release/plotting/ft_plot_mesh.m)** function which is generally used for plotting any type of meshes in FieldTrip. Because of the large number of points in a mesh, it is advised to use the 'surfaceonly' option. In this case, the function will plot hexagonal surfaces of those hexahedrons which create the outside surface of the head.
 
     ft_plot_mesh(mesh, 'surfaceonly', 'yes');
 
@@ -244,7 +244,7 @@ The hexahedral mesh is a geometrical description of the head. It is built up fro
 
 _Figure 6._ Plot of the FEM mesh
 
-Alternatively, you can write the mesh into another format with **[ft_write_headshape](/reference/ft_write_headshape)** and use an external (free) software [ParaView](http://www.paraview.org/) or [MeshLab](http://www.meshlab.org) for visualization.
+Alternatively, you can write the mesh into another format with **[ft_write_headshape](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_write_headshape.m)** and use an external (free) software [ParaView](http://www.paraview.org/) or [MeshLab](http://www.meshlab.org) for visualization.
 
 ## Align the electrodes
 
@@ -304,10 +304,10 @@ In the template set of electrodes, the first three labels are: 'Nz', 'LPA' and '
         rpa: [144 142 158]
 
 {% include markup/warning %}
-If you do not have the position of the anatomical landmarks in your volume, you can use the **[ft_volumerealign](/reference/ft_volumerealign)** function to get those positions.
+If you do not have the position of the anatomical landmarks in your volume, you can use the **[ft_volumerealign](https://github.com/fieldtrip/fieldtrip/blob/release/ft_volumerealign.m)** function to get those positions.
 {% include markup/end %}
 
-First, we convert the fiducial positions from voxel into CTF headcoordinate system using the [transformation matrix](/faq/what_is_the_plotting_convention_for_anatomical_mris) and the **[ft_warp_apply](/reference/ft_warp_apply)** function.
+First, we convert the fiducial positions from voxel into CTF headcoordinate system using the [transformation matrix](/faq/what_is_the_plotting_convention_for_anatomical_mris) and the **[ft_warp_apply](https://github.com/fieldtrip/fieldtrip/blob/release/ft_warp_apply.m)** function.
 
     nas = mri.hdr.fiducial.mri.nas;
     lpa = mri.hdr.fiducial.mri.lpa;
@@ -371,7 +371,7 @@ _Figure 9. Aligned electrodes plotted together with the head surface_
 {% include markup/info %}
 Create a head model with method 'concentricspheres' that you fit on scalp, skull and brain surfaces, i.e. using the already made mesh.
 
-Plot the head model in the same figure with the brain surface and scalp. Check the help of **[ft_plot_headmodel](/reference/ft_plot_headmodel)** for further options of the visualization (e.g. color, transparency) which help to see the spheres and the brain surface together.
+Plot the head model in the same figure with the brain surface and scalp. Check the help of **[ft_plot_headmodel](https://github.com/fieldtrip/fieldtrip/blob/release/plotting/ft_plot_headmodel.m)** for further options of the visualization (e.g. color, transparency) which help to see the spheres and the brain surface together.
 
 What is the difference between this head model and the FEM?
 {% include markup/end %}

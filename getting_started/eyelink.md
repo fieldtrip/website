@@ -1,5 +1,6 @@
 ---
 title: Getting started with SR-Research EyeLink eye-tracker data
+tags: [dataformat, eyelink]
 ---
 
 # Getting started with SR-Research EyeLink eye-tracker data
@@ -55,7 +56,7 @@ The output data contains this
 
 Channel 1 represents time, channel 2 is the horizontal x-coordinate, channel 3 is the vertical y-coordinate and channel 4 is the pupil dilation.
 
-If you want your channel names to be more consistent, you can use the following montage (see **[ft_apply_montage](/reference/ft_apply_montage)**) to rename the channels while preprocessing:
+If you want your channel names to be more consistent, you can use the following montage (see **[ft_apply_montage](https://github.com/fieldtrip/fieldtrip/blob/release/ft_apply_montage.m)**) to rename the channels while preprocessing:
 
     cfg = [];
     cfg.dataset          = filename_eye;
@@ -66,7 +67,7 @@ If you want your channel names to be more consistent, you can use the following 
 
 Typically you would want to analyze the eye movements relative to certain events (e.g. stimuli). For that you would use a trial-based representation, where each trial is time-locked to the event of interest.
 
-The events represented in the eye-tracker datafile can be explored using **[ft_read_event](/reference/ft_read_event)** like this:
+The events represented in the eye-tracker datafile can be explored using **[ft_read_event](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_event.m)** like this:
 
     event_eye = ft_read_event(filename_eye);
 
@@ -84,7 +85,7 @@ You can see that all events are coded as type "INPUT". The following plots the e
 
 {% include image src="/assets/img/getting_started/eyelink/screen_shot_2015-10-14_at_10.30.26.png" width="500" %}
 
-You can also visualise the eye-tracker data in combination with the INPUT triggers using **[ft_databrowser](/reference/ft_databrowser)**
+You can also visualise the eye-tracker data in combination with the INPUT triggers using **[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_databrowser.m)**
 
     cfg = [];
     cfg.viewmode       = 'vertical';
@@ -185,7 +186,7 @@ There are 9 triggers (without doubling) in the EDF explained by the fact that th
 There are then still 2 surplus Triggers with a value of 0 in the EDF file, which appear at the start and the end of the EDF. These are software generated and hence not in the CTF dataset.
 {% include markup/end %}
 
-Again using the **[ft_databrowser](/reference/ft_databrowser)** you can check the data relative to the events.
+Again using the **[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_databrowser.m)** you can check the data relative to the events.
 
     cfg = [];
     cfg.dataset = filename_eeg;
@@ -197,7 +198,7 @@ Again using the **[ft_databrowser](/reference/ft_databrowser)** you can check th
 
 {% include image src="/assets/img/getting_started/eyelink/screen_shot_2015-10-14_at_16.11.50.png" width="500" %}
 
-To do a combined analysis of the eye-tracker and the EEG data, you would use the stimulus triggers that are present in both. Using a trial function and **[ft_definetrial](/reference/ft_definetrial)** you would do **[ft_preprocessing](/reference/ft_preprocessing)** on both eye-tracker and EEG data, cutting out exactly the same segment of data around each event of interest.
+To do a combined analysis of the eye-tracker and the EEG data, you would use the stimulus triggers that are present in both. Using a trial function and **[ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_definetrial.m)** you would do **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** on both eye-tracker and EEG data, cutting out exactly the same segment of data around each event of interest.
 
     cfg = [];
     cfg.trialfun = 'your_custom_trialfun';
@@ -240,7 +241,7 @@ Again, using the procedure as described for the EEG, you can combine the recordi
 The DAC conversion in the Eyelink system takes some time, and therefore the UADC channels in the MEG recording have a small (but fixed) delay relative to the actual eye movements.
 {% include markup/end %}
 
-Since both MEG and Eyelink get the same triggers, you can use FieldTrip **[ft_definetrial](/reference/ft_definetrial)** on both to read the same segments.
+Since both MEG and Eyelink get the same triggers, you can use FieldTrip **[ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_definetrial.m)** on both to read the same segments.
 
     cfg = [];
     cfg.dataset = filename_meg;

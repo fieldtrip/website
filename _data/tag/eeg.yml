@@ -13,8 +13,14 @@
 - name:  Combined EEG and MEG source reconstruction
   link:  /example/combined_eeg_and_meg_source_reconstruction
 
+- name:  Compute forward simulated data using ft_dipolesimulation
+  link:  /example/compute_forward_simulated_data
+
 - name:  Compute forward simulated data and apply a dipole fit
   link:  /example/compute_forward_simulated_data_and_apply_a_dipole_fit
+
+- name:  Compute forward simulated data with the low-level ft_compute_leadfield
+  link:  /example/compute_leadfield
 
 - name:  Analysis of high-gamma band signals in human ECoG
   link:  /example/ecog_ny
@@ -22,11 +28,20 @@
 - name:  Getting started with reading raw EEG or MEG data
   link:  /example/getting_started_with_reading_raw_eeg_or_meg_data
 
+- name:  Using General Linear Modeling on time series data
+  link:  /example/glm_timeseries
+
+- name:  Re-reference EEG and iEEG data
+  link:  /example/rereference
+
 - name:  Testing BEM created EEG lead fields
   link:  /example/testing_bem_created_leadfields
 
 - name:  Use your own forward leadfield model in an inverse beamformer computation
   link:  /example/use_your_own_forward_leadfield_model_in_an_inverse_beamformer_computation
+
+- name:  Making a synchronous movie of EEG or NIRS combined with video recordings
+  link:  /example/video_eeg
 
 - name:  Can I do combined EEG and MEG source reconstruction?
   link:  /faq/can_i_do_combined_eeg_and_meg_source_reconstruction
@@ -40,11 +55,11 @@
 - name:  How are electrodes, magnetometers or gradiometers described?
   link:  /faq/how_are_electrodes_magnetometers_or_gradiometers_described
 
+- name:  How can I inspect the electrode impedances of my data?
+  link:  /faq/how_can_i_inspect_the_electrode_impedances_of_my_data
+
 - name:  How can I merge two datasets that were acquired simultaneously with different amplifiers?
   link:  /faq/how_can_i_merge_two_datasets_that_were_acquired_simultaneously_with_different_amplifiers
-
-- name:  How can I use OpenMEEG for forward modeling?
-  link:  /faq/how_can_i_use_openmeeg_for_forward_modelling
 
 - name:  How do I install the OpenMEEG binaries
   link:  /faq/how_do_i_install_the_openmeeg_binaries
@@ -88,6 +103,9 @@
 - name:  Getting started with EDF (European Data Format) data
   link:  /getting_started/edf
 
+- name:  Getting started with EEGLAB
+  link:  /getting_started/eeglab
+
 - name:  Getting started with Philips/EGI data
   link:  /getting_started/egi
 
@@ -97,13 +115,16 @@
 - name:  Getting started with Nicolet data
   link:  /getting_started/nicolet
 
+- name:  How can I use Seg3D to check and modify segmentation results?
+  link:  /getting_started/seg3d
+
 - name:  Importing your data
   link:  /reading_data
 
 - name:  References to implemented methods
   link:  /references_to_implemented_methods
 
-- name:  Introduction - dealing with artifacts
+- name:  Introduction on dealing with artifacts
   link:  /tutorial/artifacts
 
 - name:  Cluster-based permutation tests on time-frequency data

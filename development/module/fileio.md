@@ -1,11 +1,11 @@
 ---
 title: Reading and writing of EEG/MEG time series data
-tags: [development]
+tags: [development, fileio]
 ---
 
 # Reading and writing of EEG/MEG time series data
 
-FieldTrip has a flexible way of supporting dataformats. It uses three wrapper functions that provide a common interface to all electrophysiological file formats: **[ft_read_header](/reference/ft_read_header)**, **[ft_read_data](/reference/ft_read_data)** and **[ft_read_event](/reference/ft_read_event)**. Other data that is commonly used in electrophysiological analysis such as anatomical measurements can be read with **[ft_read_mri](/reference/ft_read_mri)**, **[ft_read_sens](/reference/ft_read_sens)** and **[ft_read_headshape](/reference/ft_read_headshape)**. Furthermore, **[ft_read_headmodel](/reference/ft_read_headmodel)** can be used for reading EEG and MEG volume conduction models of the head, and neuronal spiking data can be read with **[ft_read_spike](/reference/ft_read_spike)**.
+FieldTrip has a flexible way of supporting dataformats. It uses three wrapper functions that provide a common interface to all electrophysiological file formats: **[ft_read_header](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_header.m)**, **[ft_read_data](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_data.m)** and **[ft_read_event](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_event.m)**. Other data that is commonly used in electrophysiological analysis such as anatomical measurements can be read with **[ft_read_mri](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_mri.m)**, **[ft_read_sens](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_sens.m)** and **[ft_read_headshape](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_headshape.m)**. Furthermore, **[ft_read_headmodel](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_headmodel.m)** can be used for reading EEG and MEG volume conduction models of the head, and neuronal spiking data can be read with **[ft_read_spike](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_spike.m)**.
 
 All these ft_read_xxx functions automatically detect the file format and subsequently will call the appropriate low-level function for each file format. Some of the low-level functions are written by ourselves, some are supplied by the manufacturers and some are obtained from other open source toolboxes.
 
@@ -199,13 +199,13 @@ To deal with the more detailed structure in the file, the output of ft_read_even
 
 So if in case 3 you want to know where a trigger is relative to its corresponding trial, you have to look in the events at both the triggers AND at the trials, which are both represented in the event array.
 
-If you want to know which trigger (or triggers) happen in which trial, you have to make some combinatorial MATLAB code (i.e. the "trialfun" that you specify in **[ft_definetrial](/reference/ft_definetrial)**). In the trialfun you write the code that parses the sequence of events, combining them where needed. E.g. you might have trials, each with a target and a response event, but in some trials there is no response trigger because the subject was too late to respond. Some of the trials might be catch trials in which no target was presented (and no response was given). But you might also have trials in which the subject (inadvertently) pressed the response button twice. In short: there does not have to be a one-to-one mapping between triggers and trials, and hence you have use your expert knowledge about the experiment to decipher the sequence of events and pick the data segments that are of interest to your analysis.
+If you want to know which trigger (or triggers) happen in which trial, you have to make some combinatorial MATLAB code (i.e. the "trialfun" that you specify in **[ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_definetrial.m)**). In the trialfun you write the code that parses the sequence of events, combining them where needed. E.g. you might have trials, each with a target and a response event, but in some trials there is no response trigger because the subject was too late to respond. Some of the trials might be catch trials in which no target was presented (and no response was given). But you might also have trials in which the subject (inadvertently) pressed the response button twice. In short: there does not have to be a one-to-one mapping between triggers and trials, and hence you have use your expert knowledge about the experiment to decipher the sequence of events and pick the data segments that are of interest to your analysis.
 
 ## Guidelines for adding support for other file formats
 
-The ft_read_data, ft_read_header and ft_read_event functions strongly depend on the **[ft_filetype](/reference/ft_filetype)** helper function. That function automatically determines the format of the file, for example by looking at the extension, by looking at the first few bytes of the file or any other characteristic feature. So adding support for a new file format also requires that new file format to be added to the ft_filetype function.
+The ft_read_data, ft_read_header and ft_read_event functions strongly depend on the **[ft_filetype](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_filetype.m)** helper function. That function automatically determines the format of the file, for example by looking at the extension, by looking at the first few bytes of the file or any other characteristic feature. So adding support for a new file format also requires that new file format to be added to the ft_filetype function.
 
-The **[ft_filetype](/reference/ft_filetype)** function is often called like this (e.g. in ft_read_data)
+The **[ft_filetype](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_filetype.m)** function is often called like this (e.g. in ft_read_data)
 
     var = ft_filetype(filename)
     if strcmp(var, something)
@@ -235,8 +235,3 @@ Related projects on electrophysiology (EEG, MEG) data I/O are
 - [NeuroShare](http://www.neuroshare.org/)
 - [EEG toolbox](http://eeg.sourceforge.net/)
 - [FIFF access](http://ltl.tkk.fi/~kuutela/meg-pd/)
-
-Lists of EEG and MEG file formats can be found here
-
-- <http://www.eemagine.com/fileformats.htm>
-- <http://bci.tugraz.at/~schloegl/biosig/TESTED>

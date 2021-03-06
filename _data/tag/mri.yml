@@ -31,7 +31,7 @@
 - name:  How can I anonymize or deidentify an anatomical MRI?
   link:  /faq/how_can_i_anonymize_an_anatomical_mri
 
-- name:  How can I anonymize DICOM files?
+- name:  How can I anonymize or deidentify DICOM files?
   link:  /faq/how_can_i_anonymize_dicom_files
 
 - name:  How can I convert an anatomical MRI from DICOM into CTF format?
@@ -55,11 +55,11 @@
 - name:  Why is the source model deformed or incorrectly aligned after warping template?
   link:  /faq/why_is_the_source_model_deformed_or_incorrectly_aligned_after_warping_template
 
-- name:  Human ECoG
-  link:  /getting_started/human_ecog
-
 - name:  Localizing oscillatory sources using beamformer techniques
   link:  /tutorial/beamformer
+
+- name:  Virtual channel analysis of epilepsy MEG data
+  link:  /tutorial/epilepsy
 
 - name:  Creating a BEM volume conduction model of the head for source-reconstruction of EEG data
   link:  /tutorial/headmodel_eeg_bem

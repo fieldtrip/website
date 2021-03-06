@@ -7,7 +7,7 @@ tags: [video]
 
 This page lists the video documentation that we have made publicly available. Note that none of us are expert on-screen presenters, most of us are not native English speakers, nor experts on recording and editing video material. We are doing our best to make this video material as good as we can and to make it available, but please be considerate that it sometimes is not as professional or polished as we would like it to be.
 
-Please use the menu below to get an overview and to navigate through the workshops and video's. Some lecture material has been presented and recorded multiple times. In general, we recommend you start with the most recent lecture.
+Please use the menu below to get an overview and to navigate through the workshops and videos. Some lecture material has been presented and recorded multiple times. In general, we recommend you start with the most recent lecture.
 
 ## General introduction
 
@@ -22,6 +22,7 @@ Please use the menu below to get an overview and to navigate through the worksho
 ## ECoG/sEEG bootcamp, UC Davis (March 2019)
 
 - [Anatomical reconstruction of intracranial data](https://youtu.be/NdIqUSPPAeM) by Arjen Stolk
+- [Insights into human cognition from intracranial recordings](https://youtu.be/3SN9kR9s58o) by Bob Knight
 
 ## Advanced MEG/EEG data analysis toolkit course, Nijmegen (April 2018)
 
@@ -47,7 +48,7 @@ Please note that the recording of the lecture on Sleep and continuous EEG by Mar
 
 - [Introduction to MEG (vs. EEG) instrumentation](https://www.youtube.com/watch?v=15Qs4fuPpes) by Stephen Whitmarsh
 - [Introducing FieldTrip](https://www.youtube.com/watch?v=zOxCqcYmIfA) by Robert Oostenveld
-- [Forward modelling in MEG and EEG](https://www.youtube.com/watch?v=4pVaY6f25w0) by Robert Oostenveld
+- [Forward modeling in MEG and EEG](https://www.youtube.com/watch?v=4pVaY6f25w0) by Robert Oostenveld
 - [Principles of frequency analysis](https://www.youtube.com/watch?v=QLvsa1r1Voc) by Robert Oostenveld
 - [Connectivity analysis in MEG and EEG: metrics and issues](https://www.youtube.com/watch?v=-RpQklxbCsg) by Robert Oostenveld
 - [Beamforming EEG and MEG data](https://www.youtube.com/watch?v=7eS11DtbIPw) by Robert Oostenveld
@@ -84,18 +85,18 @@ Please note that the recording of the lecture on Sleep and continuous EEG by Mar
 
 ## Other online video resources
 
-### FieldTrip Videos
+### FieldTrip videos
 
 We have a [YouTube channel](https://www.youtube.com/fieldtriptoolbox) on which we post our own video material and on which we link to relevant material from others.
 
-### NatMEG Videos
+### NatMEG videos
 
-The [NatMEG](https://www.natmeg.se), the Swedish National MEG Facility at the [Karolinska Institute](http://www.ki.se) in Stockholm, has recorded a set of scientific lectures and instructional video's on MEG. These can be viewed online [here](http://natmeg.se/learnaboutmeg/meglectures/index.html).
+The [NatMEG](https://www.natmeg.se), the Swedish National MEG Facility at the [Karolinska Institute](http://www.ki.se) in Stockholm, has recorded a set of scientific lectures and instructional videos on MEG. These can be viewed online [here](http://natmeg.se/learnaboutmeg/meglectures/index.html).
 
-### SPM Course Videos
+### SPM course videos
 
-The SPM team at the [Wellcome Trust Centre for Neuroimaging](http://www.fil.ion.ucl.ac.uk) at UCL has also made a number of really nice [course lecture video's available](http://www.fil.ion.ucl.ac.uk/spm/course/video/).
+The SPM team at the [Wellcome Trust Centre for Neuroimaging](http://www.fil.ion.ucl.ac.uk) at UCL has also made a number of really nice [course lecture videos available](http://www.fil.ion.ucl.ac.uk/spm/course/video/).
 
-### EEGLAB Course Videos
+### EEGLAB course videos
 
 The EEGLAB team at the [Swartz Center for Computational Neuroscience](https://sccn.ucsd.edu) at the UCSD has recorded and published the [video lectures at one of their training workshops](http://thesciencenetwork.org/programs/12th-eeglab-workshop). This includes lectures on Mining event-related brain dynamics, independent component analysis, localizing sources, statistics, mobile and real-time EEG, etc.

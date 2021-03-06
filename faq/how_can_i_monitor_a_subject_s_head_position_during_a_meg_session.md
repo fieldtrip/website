@@ -10,10 +10,10 @@ The CTF/Neuromag acquisition software provides a shared memory in which the the 
 {% include markup/warning %}
 Please cite this paper when you use the realtime head localizer in your research:
 
-Stolk A, Todorovic A, Schoffelen JM, Oostenveld R. **[Online and offline tools for head movement compensation in MEG.](https://doi.org/10.1016/j.neuroimage.2012.11.047)** Neuroimage. 2013 Mar;68:39-48. doi: 10.1016/j.neuroimage.2012.11.047.
+Stolk A, Todorovic A, Schoffelen JM, Oostenveld R. **[Online and offline tools for head movement compensation in MEG.](https://doi.org/10.1016/j.neuroimage.2012.11.047.m)** Neuroimage, 2013.
 {% include markup/end %}
 
-## Acquiring the head shape for more realistic visualisation
+## Acquiring the head shape for more realistic visualization
 
 Monitoring the head position can be done by visualizing the head shape in 3 different ways: as a sphere, using head shape points acquired with the Polhemus (mostly from the upper part of the head) or with a realistic head shape including facial details acquired with a 3D-Scanner like [this](https://structure.io/structure-sensor).
 
@@ -51,9 +51,9 @@ Now we have the head shape in the correct coordinate system and can use it for o
 
 After initializing the MEG system, one starts the **acq2ft/neuromag2ft application**. When subsequently starting Acquisition, the data is transferred in realtime to the FieldTrip buffer which can be read from any computer connected through a network. Point to the location of the buffer by correctly specifying cfg.dataset like this:
 
-      cfg = [];
-      cfg.dataset = 'buffer://hostname:1972';     % get data from buffer
-      ft_realtime_headlocalizer(cfg)
+    cfg = [];
+    cfg.dataset = 'buffer://hostname:1972';     % get data from buffer
+    ft_realtime_headlocalizer(cfg)
 
 To improve the real time head movement compensation, we can also specify a realistic head shape and a realistic model of the dewar:
 
@@ -76,26 +76,26 @@ You can reposition to i.e. to a previous recording session by specifying cfg.tem
 
 {% include image src="/assets/img/faq/how_can_i_monitor_a_subject_s_head_position_during_a_meg_session/anims1.gif" width="600" %}
 
-_Figure 1; Top (left plot) and back view (right plot) of the subject's head. Nasion is represented by a triangular marker and both aurical points by circular markers. To aid the subject with repositioning, the real-time fiducial positions are color coded to indicate the distances to the targets (green `< 1.5 mm, orange < 3 mm, and red >` 3 mm). If all three markers are within limits, the head turns light blue (CTF only). Click on the image for the animation._
+_Figure 1: Top (left plot) and back view (right plot) of the subject's head. Nasion is represented by a triangular marker and both aurical points by circular markers. To aid the subject with repositioning, the real-time fiducial positions are color coded to indicate the distances to the targets (green `< 1.5 mm, orange < 3 mm, and red >` 3 mm). If all three markers are within limits, the head turns light blue (CTF only). Click on the image for the animation._
 
 ### Replaying a subject's recorded head position
 
 In stead of reading data from the shared memory, one now reads data from a previously recorded MEG dataset. This can be done offline, on any computer running a recent version of MATLAB.
 
-      cfg.bufferdata = 'first';                 % read data from first until last segment
-      cfg.template   = 'previousdataset.ds';
-      cfg.dataset    = 'previousdataset.ds';
-      ft_realtime_headlocalizer(cfg)
+    cfg.bufferdata = 'first';                 % read data from first until last segment
+    cfg.template   = 'previousdataset.ds';
+    cfg.dataset    = 'previousdataset.ds';
+    ft_realtime_headlocalizer(cfg)
 
-Before we can replay the data acquired with the Neuromag/Elekta system, the data has to be preprocessed with maxfilter. The first possibility is to add the relevant information to .fif file with MaxMove (see also under further reading).
+Before we can replay the data acquired with the Neuromag/Elekta/MEGIN system, the data has to be preprocessed with maxfilter. The first possibility is to add the relevant information to .fif file with MaxMove (see also under further reading).
 
-The other option is to use maxfilter to create an ASCII file containing the relevant information about head movement. Under ‘Head position estimation’ the button ‘Save head postions in an ASCII file’ just need to be pressed (see also under further reading).
+The other option is to use maxfilter to create an ASCII file containing the relevant information about head movement. Under 'Head position estimation' the button 'Save head postions in an ASCII file' just need to be pressed (see also under further reading).
 
-      cfg.bufferdata   = 'first';                 % read data from first until last segment
-      cfg.template     = 'previousdataset';
-      cfg.dataset      = 'previousdataset';
-      cfg.headmovement = 'maxfilter.pos';
-      ft_realtime_headlocalizer(cfg)
+    cfg.bufferdata   = 'first';                 % read data from first until last segment
+    cfg.template     = 'previousdataset';
+    cfg.dataset      = 'previousdataset';
+    cfg.headmovement = 'maxfilter.pos';
+    ft_realtime_headlocalizer(cfg)
 
 ### CTF specific protocol
 
@@ -107,25 +107,25 @@ The other option is to use maxfilter to create an ASCII file containing the rele
 
 4. Start MATLAB on the 'real-time computer' by typing on the Linux command line
 
-   matlab79
+       matlab79
 
 5. Visualize the subject's head in real-time. At the Donders, Odin is the default FieldTrip buffer location and therefore, cfg.dataset does not need specification.
 
-   cfg = [];
-   ft_realtime_headlocalizer(cfg)
+       cfg = [];
+       ft_realtime_headlocalizer(cfg)
 
 6. You can project the head localizer into the MSR by one buttonclick. Click the left button on the video matrix and the signal from the presentation computer is being overwritten by the head localizer computer. This way both experimenter and subject get to see the virtual representation of the subject's head.
 
 7. You can also reposition the subject according to a previous session. The headlocalizer dedicated computer has access to Odin's data directory, and thus, the headcoil coordinates. This is the .hc file, located in the .ds directory. Specify the template as follows and run the headlocalizer which should give you the markers from the start.
 
-   cfg.template = '/mnt/megdata/20100812/ArjSto_1200hz_20100812_01.ds';
-   ft_realtime_headlocalizer(cfg)
+       cfg.template = '/mnt/megdata/20100812/ArjSto_1200hz_20100812_01.ds';
+       ft_realtime_headlocalizer(cfg)
 
 Keep in mind that Odin's data directory is automatically cleaned every now and then. If your template dataset has been removed, you could still read it from your own M disk in case you have backed it up there. Logout the meg user on the headlocalizer dedicated computer and login as yourself. Now run the headlocalizer with specifying the file location on your M disk (e.g. cfg.template = '/home/action/arjsto/MEG/ArjSto_1200hz_20100812_01.ds').
 
 ### Elekta specific protocol
 
-Currently the option for online monitoring is only available for the CTF system. The Neuromag/Elekta real-time data stream can already be processed in FieldTrip, however, the relevant information in real time data stream is currently missing. However, in principle it would look similar to CTF specific protocol
+Currently the option for online monitoring is only available for the CTF system. The Neuromag/Elekta/Megin real-time data stream can already be processed in FieldTrip, however, the relevant information in real time data stream is currently missing. However, in principle it would look similar to CTF specific protocol
 
 1. 'Initialize the MEG system'.
 2. 'Start neuromag2ft for real-time head localization'.
@@ -133,18 +133,18 @@ Currently the option for online monitoring is only available for the CTF system.
 4. Start MATLAB on the 'real-time computer'
 5. Visualize the subject's head in real-time.
 
-   cfg = [];
-   cfg.dataset = 'buffer://server:port'
-   ft_realtime_headlocalizer(cfg)
+       cfg = [];
+       cfg.dataset = 'buffer://server:port'
+       ft_realtime_headlocalizer(cfg)
 
 ## Further reading
 
 For further reading of real time head localizer please read [this paper](https://doi.org/10.1016/j.neuroimage.2012.11.047).
 
-The above online head localization procedure can substantially reduce the influence of head movement within a session, e.g. using short repositioning instructions between experimental blocks, and also allows for accurate repositioning between sessions. However, residual head movement is likely to negatively impact statistical sensitivity and one may want to consider to incorporate information about these head movements into the offline analysis. For instance, incorporation of head position time series into the general linear model, using **[ft_regressconfound](/reference/ft_regressconfound)**, has been found to improve statistical sensitivity up to 30%.
+The above online head localization procedure can substantially reduce the influence of head movement within a session, e.g. using short repositioning instructions between experimental blocks, and also allows for accurate repositioning between sessions. However, residual head movement is likely to negatively impact statistical sensitivity and one may want to consider to incorporate information about these head movements into the offline analysis. For instance, incorporation of head position time series into the general linear model, using **[ft_regressconfound](https://github.com/fieldtrip/fieldtrip/blob/release/ft_regressconfound.m)**, has been found to improve statistical sensitivity up to 30%.
 
 Furthermore, despite using the Polhemus to localize electrode locations we can use the structure.io to localize them. You can find the tutorial [here](/tutorial/electrode). This means we do not need the Polhemus for our experimental procedure and therefore reduce the preparation time by having less to measure.
 
-For the Neuromag/Elekta system the Maxfilter [User’s guide Chapter 4 MaxMove](https://www.google.nl/search?hl=nl&dcr=0&source=hp&ei=HtczWtaeGMbawAKP0JiYBg&q=maxfilter+user%E2%80%99s+guide&oq=maxfilter+user%E2%80%99s+guide&gs_l=psy-ab.3...708.708.0.1007.1.1.0.0.0.0.81.81.1.1.0....0...1c.2.64.psy-ab..0.0.0....0.PPP2C6Blbso) provides further information on offline head movement visualization and compensation.
+For the Neuromag/Elekta/MEGIN system the Maxfilter [User's guide Chapter 4 MaxMove](https://www.google.nl/search?hl=nl&dcr=0&source=hp&ei=HtczWtaeGMbawAKP0JiYBg&q=maxfilter+user%E2%80%99s+guide&oq=maxfilter+user%E2%80%99s+guide&gs_l=psy-ab.3...708.708.0.1007.1.1.0.0.0.0.81.81.1.1.0....0...1c.2.64.psy-ab..0.0.0....0.PPP2C6Blbso) provides further information on offline head movement visualization and compensation.
 
 For more information about the CTF head localization we recommend [Head Localization Guide CTF MEG Software](https://www.google.nl/search?ei=htczWqiUCs2VsAefoZP4BA&q=Head+Localization+Guide+CTF+MEGTM+Software&oq=Head+Localization+Guide+CTF+MEGTM+Software&gs_l=psy-ab.3...665.2032.0.2495.2.2.0.0.0.0.127.197.1j1.2.0....0...1c.1.64.psy-ab..0.0.0....0.S5__Ll6gens).

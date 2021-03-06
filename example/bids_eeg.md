@@ -1,11 +1,11 @@
 ---
 title: Converting an example EEG dataset for sharing in BIDS
-tags: [example, bids, sharing, anonymize]
+tags: [example, bids, sharing]
 ---
 
 # Converting an example EEG dataset for sharing in BIDS
 
-This example describes how to use **[data2bids](/reference/data2bids)** to convert an EEG dataset for sharing according to the BIDS standard.  
+This example describes how to use **[data2bids](https://github.com/fieldtrip/fieldtrip/blob/release/data2bids.m)** to convert an EEG dataset for sharing according to the BIDS standard.  
 
 {% include markup/warning %}
 If you want to share data, there are multiple things to consider. For example the file format of the data, the place to share the data (openneuro/zenodo/figshare/dataverse), the access mechanism for the data (ftp/http/sftp), the license or data use agreement, whether all data or only part of the data is shared, using pseudonyms in the description of the data, scrubbing the date and time of recording, removing identifying features from the data, etc.

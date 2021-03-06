@@ -1,6 +1,6 @@
 ---
 title: 04 September, 2018 - EU decides on open access
-categories: []
+categories: [news]
 ---
 
 ### 04 September, 2018

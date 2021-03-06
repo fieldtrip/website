@@ -2,8 +2,8 @@
 title: ft_meshrealign
 ---
 ```plaintext
- FT_MESHREALIGN rotates, translates and optionally scales electrode positions. The
- different methods are described in detail below.
+ FT_MESHREALIGN rotates, translates and optionally scales a surface description of
+ the head or of the cortex. The different methods are described in detail below.
 
  INTERACTIVE - You can display the mesh surface together with axis coordinate
  system, and manually (using the graphical user interface) adjust the rotation,
@@ -19,13 +19,16 @@ title: ft_meshrealign
  where the mesh input argument comes from FT_READ_HEADSHAPE or FT_PREPARE_MESH and
  cfg is a configuration structure that should contain
 
-  cfg.method    = string, can be 'interactive' or fiducial' (default = 'interactive')
+   cfg.method          = string, can be 'interactive' or fiducial' (default = 'interactive')
 
  The configuration can furthermore contain
-   cfg.coordsys        = string, can be 'ctf', 'neuromag', '4d', 'bti', 'itab'
-   cfg.fiducial.nas    = [x y z], position of nasion
-   cfg.fiducial.lpa    = [x y z], position of LPA
-   cfg.fiducial.rpa    = [x y z], position of RPA
+   cfg.coordsys       = string specifying the origin and the axes of the coordinate
+                        system. Supported coordinate systems are 'ctf', '4d', 'bti', 
+                        'eeglab', 'neuromag', 'itab', 'yokogawa', 'asa', 'acpc',
+                        and 'paxinos'. See http://tinyurl.com/ojkuhqz
+   cfg.fiducial.nas   = [x y z], position of nasion
+   cfg.fiducial.lpa   = [x y z], position of LPA
+   cfg.fiducial.rpa   = [x y z], position of RPA
 
  The fiducials should be expressed in the coordinates and units of the input mesh.
 

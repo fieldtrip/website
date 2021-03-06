@@ -19,7 +19,7 @@ To check that the serial connection between a Linux computer and a windows compu
 
 Here we need a computer with two serial ports(or two computers). We can send commands on one serial port and receive them on the other and then estimate the delay.
 
-This is what I did on my office PC using FieldTrip commands **[ft_read_event](/reference/ft_read_event)** and **[ft_write_event](/reference/ft_write_event)**.
+This is what I did on my office PC using FieldTrip commands **[ft_read_event](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_event.m)** and **[ft_write_event](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_write_event.m)**.
 
     delete(instrfind);
     fclose('all');
@@ -78,7 +78,7 @@ What I got looks like this:
 
 {% include image src="/assets/img/faq/how_can_i_test_the_serial_port_connection_between_two_computers/serial_connect_write_read_event.jpg" width="400" %}
 
-Alternatively, one can simply use MATLAB serial objects and low level reading function fread or fscan
+Alternatively, one can simply use MATLAB serial objects and low-level reading function fread or fscan
 
     %% objects are cleared
     clear all;

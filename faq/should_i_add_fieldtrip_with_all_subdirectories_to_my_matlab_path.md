@@ -35,15 +35,15 @@ whereas on your personal computer it might be
 
 ## Step 2
 
-After adding the FieldTrip main path, you should execute the **[ft_defaults](/reference/ft_defaults)** function (formerly called fieldtripdefs.m), which sets the defaults and configures up the minimal required path settings.
+After adding the FieldTrip main path, you should execute the **[ft_defaults](https://github.com/fieldtrip/fieldtrip/blob/release/ft_defaults.m)** function (formerly called fieldtripdefs.m), which sets the defaults and configures up the minimal required path settings.
 
     ft_defaults
 
-If a subsequent FieldTrip function need an external toolbox that is present in fieldtrip/external, the **[ft_hastoolbox](/reference/ft_hastoolbox)** function will be called by the respective function and the path will be updated on the fly.
+If a subsequent FieldTrip function need an external toolbox that is present in fieldtrip/external, the **[ft_hastoolbox](https://github.com/fieldtrip/fieldtrip/blob/release/ft_hastoolbox.m)** function will be called by the respective function and the path will be updated on the fly.
 
 ## Making it persistent
 
-It is most convenient to have the addpath and **[ft_defaults](/reference/ft_defaults)** in a script with the name **startup.m**, which is located in your own MATLAB directory. See [this information from MathWorks](http://www.mathworks.com/access/helpdesk/help/techdoc/ref/startup.html).
+It is most convenient to have the addpath and **[ft_defaults](https://github.com/fieldtrip/fieldtrip/blob/release/ft_defaults.m)** in a script with the name **startup.m**, which is located in your own MATLAB directory. See [this information from MathWorks](http://www.mathworks.com/access/helpdesk/help/techdoc/ref/startup.html).
 
 ## Clean up your path
 
@@ -57,8 +57,8 @@ All other dependencies will subsequently be added automatically when needed.
 
 ## How to deal with toolboxes that FieldTrip uses?
 
-In case FieldTrip function needs additional functions (e.g. for reading a specific data format such as CTF, or for performing a specific computation such as runica), it uses the **[ft_hastoolbox](/reference/ft_hastoolbox)** helper function to determine whether a toolbox is present. If the toolbox is present on your path, it will not add it once more. If the toolbox "xxx" is not yet present, but the directory seems to be present in fieldtrip/external/xxx, then it will add that directory to your path.
+In case FieldTrip function needs additional functions (e.g. for reading a specific data format such as CTF, or for performing a specific computation such as runica), it uses the **[ft_hastoolbox](https://github.com/fieldtrip/fieldtrip/blob/release/ft_hastoolbox.m)** helper function to determine whether a toolbox is present. If the toolbox is present on your path, it will not add it once more. If the toolbox "xxx" is not yet present, but the directory seems to be present in fieldtrip/external/xxx, then it will add that directory to your path.
 
-The main FieldTrip functions such as **[ft_preprocessing](/reference/ft_preprocessing)** and **[ft_freqanalysis](/reference/ft_freqanalysis)** all call the **[ft_defaults](/reference/ft_defaults)** function at the beginning. The **[ft_defaults](/reference/ft_defaults)** function ensures that the required subdirectories such as fieldtrip/preproc and fieldtrip/fileio are added. All other toolboxes in fieldtrip/external will only be added upon request, i.e. only when a function from one of those toolboxes is really needed.
+The main FieldTrip functions such as **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** and **[ft_freqanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqanalysis.m)** all call the **[ft_defaults](https://github.com/fieldtrip/fieldtrip/blob/release/ft_defaults.m)** function at the beginning. The **[ft_defaults](https://github.com/fieldtrip/fieldtrip/blob/release/ft_defaults.m)** function ensures that the required subdirectories such as fieldtrip/preproc and fieldtrip/fileio are added. All other toolboxes in fieldtrip/external will only be added upon request, i.e. only when a function from one of those toolboxes is really needed.
 
-You might be worried that this automatic path-checking and path-adding on every function call makes it slow. The **[ft_hastoolbox](/reference/ft_hastoolbox)** function remembers (with a persistent variable) whether a certain toolbox has already been checked, and therefore does not check the same toolbox twice. In case FieldTrip folders are removed, for instance by using rmpath or restoredefaultpath, make sure to reset the persistent variable in the ft_hastoolbox function again by executing "clear ft_hastoolbox".
+You might be worried that this automatic path-checking and path-adding on every function call makes it slow. The **[ft_hastoolbox](https://github.com/fieldtrip/fieldtrip/blob/release/ft_hastoolbox.m)** function remembers (with a persistent variable) whether a certain toolbox has already been checked, and therefore does not check the same toolbox twice. In case FieldTrip folders are removed, for instance by using rmpath or restoredefaultpath, make sure to reset the persistent variable in the ft_hastoolbox function again by executing "clear ft_hastoolbox".

@@ -6,16 +6,18 @@ title: ft_read_sens
  further down for the list of file types that are supported.
 
  Use as
-   grad = ft_read_sens(filename, ...)  % for gradiometers
-   elec = ft_read_sens(filename, ...)  % for electrodes
+   elec = ft_read_sens(filename, 'senstype', 'eeg', ...)  % for EEG electrodes
+   grad = ft_read_sens(filename, 'senstype', 'meg', ...)  % for MEG gradiometers
+   opto = ft_read_sens(filename, 'senstype', 'nirs', ...) % for NIRS optodes
 
  Additional options should be specified in key-value pairs and can be
    'fileformat'     = string, see the list of supported file formats (the default is determined automatically)
    'senstype'       = string, can be 'eeg', 'meg' or 'nirs', specifies which type of sensors to read from the file (default = 'eeg')
    'coordsys'       = string, 'head' or 'dewar' (default = 'head')
    'coilaccuracy'   = scalar, can be empty or a number (0, 1 or 2) to specify the accuracy (default = [])
+   'readbids'       = string, 'yes', no', or 'ifmakessense', whether to read information from the BIDS sidecar files (default = 'ifmakessense')
 
- The electrode, gradiometer and optode structures are defined in more detail 
+ The electrode, gradiometer and optode structures are defined in more detail
  in FT_DATATYPE_SENS.
 
  Files from the following acquisition systems and analysis platforms file formats

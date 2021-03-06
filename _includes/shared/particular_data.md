@@ -1,5 +1,5 @@
 {% include markup/danger %}
-In general you should get started with the [tutorials](/tutorial). The subsequent pages listed below serve to explain system specific details, but lack the complete overview that the tutorials provide. If you have questions, please post them on the [email discussion list](/discussion_list).
+In general you should get started with the [tutorials](/tutorial). The pages that are listed below only serve to explain system specific details and peculiarities, but lack the complete overview that the tutorials provide.
 {% include markup/end %}
 
 ## Getting started with particular MEG data types
@@ -10,6 +10,7 @@ In general you should get started with the [tutorials](/tutorial). The subsequen
 - [Getting started with BabySQUID data](/getting_started/babysquid)
 - [Getting started with Yokogawa data](/getting_started/yokogawa)
 - [Getting started with Ricoh data](/getting_started/ricoh)
+- [Getting started with OPM data recorded at the FIL](/getting_started/opm_fil)
 
 ## Getting started with particular EEG data types
 
@@ -23,25 +24,40 @@ In general you should get started with the [tutorials](/tutorial). The subsequen
 - [Getting started with EGI/Philips data](/getting_started/egi)
 - [Getting started with Nicolet data](/getting_started/nicolet)
 
+## Getting started with intracranial data
+
+- [Getting started with Blackrock data](/getting_started/blackrock)
+- [Getting started with Cyberkinetics data](/getting_started/cyberkinetics)
+- [Getting started with Neuralynx data](/getting_started/neuralynx)
+- [Getting started with Neuralynx data recorded at the Donders Institute](/getting_started/neuralynx_fcdc)
+- [Getting started with Plexon data](/getting_started/plexon)
+- [Getting started with animal electrophysiology data, including spikes](/getting_started/animal)
+- [Getting started with human intracranial electrophysiology data](/getting_started/human_ecog)
+
+## Getting started with NIRS data
+
+- [Getting started with Artinis NIRS data](/getting_started/artinis)
+- [Getting started with Hitachi NIRS data](/getting_started/hitachi)
+- [Getting started with NIRx NIRS data](/getting_started/nirx)
+- [Getting started with Shimadzu NIRS data](/getting_started/shimadzu)
+- [Getting started with SNIRF NIRS data](/getting_started/snirf)
 
 ## Getting started with other types of data
 
-- [Getting started with Artinis NIRS data](/getting_started/artinis)
-- [Getting started with Blackrock data](/getting_started/blackrock)
-- [Getting started with Neuralynx data](/getting_started/neuralynx)
-- [Getting started with Plexon data](/getting_started/plexon)
 - [Getting started with SR-Research EyeLink eye-tracker data](/getting_started/eyelink)
-- [Getting started with animal electrophysiology data, including spikes](/getting_started/animal)
-- [Getting started with human intracranial electrophysiology data](/getting_started/human_ecog)
-- [Getting started with the Neuralynx data recorded at the Donders Institute](/getting_started/neuralynx_fcdc)
+- [Getting started with XSens motion capture data](/getting_started/xsens)
+- [Getting started with Neurodata Without Borders (NWB) data](/getting_started/nwb)
 
-## Getting started with data from other software
+## Getting started with (data from) other software
 
-- [Getting started with data from SPM](/getting_started/spm)
+- [Getting started with BIDS](/getting_started/bids)
+- [Getting started with AnyWave](/getting_started/anywave)
+- [Getting started with Seg3D](/getting_started/seg3d)
 - [Getting started with data from EEGLAB](/getting_started/eeglab)
+- [Getting started with data from SPM](/getting_started/spm)
 - [Getting started with data from LORETA](/getting_started/loreta)
 - [Getting started with data from the BIOIMAGE suite](/getting_started/bioimage)
-- [Getting started with data from AnyWave](/getting_started/anywave)
+- [Getting started with data from Homer](/getting_started/homer)
 
 ## Getting started with real-time data analysis
 

@@ -14,8 +14,7 @@ We will sketch the background of permutation tests and apply it to different
 experimental questions. In this tutorial we will continue with the Chennu et al.
 dataset. We will use data that has already been preprocessed and spectrally
 analyzed, but if you are interested in the raw data from all subjects, you can
-download it from our [FTP
-Server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/madrid2019/extra/).
+download it from our [FTP Server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/madrid2019/extra/).
 Please note that you **do not** have to download all subjects for this tutorial.
 
 In a step-by-step fashion, this tutorial will show how to
@@ -31,9 +30,8 @@ Toward the end of the tutorial there are some more challenging exercises:
 
 ## Overview
 
-EEG data in the study by **[Chennu et al.,
-2016](https://doi.org/10.1371/journal.pcbi.1004669)** was recorded from multiple
-participants in multiple experimental conditions, i.e. levels of sedation. Data
+EEG data in the study by **[Chennu et al., 2016](https://doi.org/10.1371/journal.pcbi.1004669.m)**
+was recorded from multiple participants in multiple experimental conditions, i.e. levels of sedation. Data
 is recorded in in blocks (runs) of 10 mins, in which the participants received
 varying amounts of Propofol, an anesthetic drug, aimed to produce a relaxed but
 still responsive behavioral state. For more details on the dataset
@@ -53,7 +51,7 @@ states.
 To test the difference between the baseline and moderate sedative states, we use
 data for all subjects that has been preprocessed and for which the power spectra
 have been computed. You can download
-[freq_resting.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/madrid19/tutorial_stats/freq_resting.mat)
+[freq_resting.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/madrid2019/tutorial_stats/freq_resting.mat)
 from our FTP server. The MATLAB file contains four data structures, one for each
 sedation level.
 
@@ -81,7 +79,7 @@ Also load the electrode positions
 
     elec = prepare_elec_chennu2016(base_sedation.label);
 
-In the **[frequency analysis](/workshop/madrid2019/tutorial_freq)** we learnt
+In the [frequency analysis tutorial](/workshop/madrid2019/tutorial_freq) we learnt
 different ways to normalize the power spectra, here we can employ one of them.
 We will normalize the power spectra for each of the individuals, using the mean
 power over a frequency range defined in **freq_norm**.
@@ -249,25 +247,25 @@ independent of the experimental conditions.
 ### Permutation test
 
 Cluster-level permutation tests for power spectra are performed by the function
-**[ft_freqstatistics](/reference/ft_freqstatistics)**. This
+**[ft_freqstatistics](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqstatistics.m)**. This
 function takes as its input arguments a configuration structure (cfg) and
 one or multiple data structures. These data structures must be produced by
-**[ft_freqanalysis](/reference/ft_freqanalysis)** or
-**[ft_freqgrandaverage](/reference/ft_freqgrandaverage)**. The argument list of
-**[ft_freqstatistics](/reference/ft_freqstatistics)** contains
+**[ft_freqanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqanalysis.m)** or
+**[ft_freqgrandaverage](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqgrandaverage.m)**. The argument list of
+**[ft_freqstatistics](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqstatistics.m)** contains
 one data structure for every experimental condition. For
 comparing the data structures base_sedation and mode_sedation, you must call
-**[ft_freqstatistics](/reference/ft_freqstatistics)** as follows:
+**[ft_freqstatistics](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqstatistics.m)** as follows:
 
     % do NOT EXECUTE this yet, it is just to introduce the function
     [stat] = ft_freqstatistics(cfg, base_sedation, mode_sedation);
 
 Many fields of the configuration (cfg), such as the selection of channels, are
 not unique to
-**[ft_freqstatistics](/reference/ft_freqstatistics)**; their role
+**[ft_freqstatistics](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqstatistics.m)**; their role
 is similar in other FieldTrip functions. We first concentrate on the
 fields that are unique to
-**[ft_freqstatistics](/reference/ft_freqstatistics)**.
+**[ft_freqstatistics](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqstatistics.m)**.
 
     foi_contrast = [0.5 30];
 
@@ -285,7 +283,7 @@ fields that are unique to
     cfg.tail             = 0;                           % test the left, right or both tails of the distribution
     cfg.clustertail      = cfg.tail;
     cfg.alpha            = 0.05;                        % alpha level of the permutation test
-    cfg.correcttail      = 'alpha';                     % see http://www.fieldtriptoolbox.org/faq/why_should_i_use_the_cfg.correcttail_option_when_using_statistics_montecarlo/
+    cfg.correcttail      = 'alpha';                     % see https://www.fieldtriptoolbox.org/faq/why_should_i_use_the_cfg.correcttail_option_when_using_statistics_montecarlo/
     cfg.computeprob      = 'yes';
     cfg.numrandomization = 500;                         % number of random permutations
     cfg.neighbours       = cfg_neigh.neighbours;        % the neighbours for each sensor to form clusters
@@ -303,22 +301,22 @@ fields that are unique to
 
 In the following section we will describe the various options one-by-one.
 
-- With **cfg.method** = **[ft_statistics_montecarlo](/reference/ft_statistics_montecarlo)**
+- With **cfg.method** = **[ft_statistics_montecarlo](https://github.com/fieldtrip/fieldtrip/blob/release/ft_statistics_montecarlo.m)**
   we choose the Monte Carlo method for calculating the significance probability.
   This significance probability is a Monte Carlo estimate of the p-value under the
   permutation distribution.
 
-- With **cfg.statistic** = **[ft_statfun_depsamplesT](/reference/ft_statfun_depsamplesT)**
+- With **cfg.statistic** = **[ft_statfun_depsamplesT](https://github.com/fieldtrip/fieldtrip/blob/release/statfun/ft_statfun_depsamplesT.m)**
   we choose the dependent samples T-statistic to evaluate the effect (the
   difference between the baseline and the moderate condition) at the sample level.
   In cfg.statistic, many other test statistics can be specified. Which test
   statistic is appropriate depends on your research question and your experimental
   design. For instance, in a within-UO design (present one), one must use the
   dependent samples T-statistic
-  (**[ft_statfun_depsamplesT](/reference/ft_statfun_depsamplesT)**). And if you
+  (**[ft_statfun_depsamplesT](https://github.com/fieldtrip/fieldtrip/blob/release/statfun/ft_statfun_depsamplesT.m)**). And if you
   want to compare more than two experimental conditions, you should choose an
-  F-statistic (**[ft_statfun_indepsamplesT](/reference/ft_statfun_indepsamplesT)**
-  or **[ft_statfun_depsamplesFmultivariate](/reference/ft_statfun_depsamplesFmultivariate)**;
+  F-statistic (**[ft_statfun_indepsamplesT](https://github.com/fieldtrip/fieldtrip/blob/release/statfun/ft_statfun_indepsamplesT.m)**
+  or **[ft_statfun_depsamplesFmultivariate](https://github.com/fieldtrip/fieldtrip/blob/release/statfun/ft_statfun_depsamplesFmultivariate.m)**;
   you can give a try in the Challenging exercise section below).
 
 - We use **cfg.clusteralpha** to choose the critical value that will be
@@ -355,7 +353,7 @@ In the following section we will describe the various options one-by-one.
   independently of the data.
 
 - **cfg.neighbours** is a structure that you need to have previously
-  created using **[ft_prepare_neighbours](/reference/ft_prepare_neighbours)**.
+  created using **[ft_prepare_neighbours](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_neighbours.m)**.
 
 - We use **cfg.tail** to choose between a one-sided and a two-sided
   statistical test. Choosing cfg.tail = 0 affects the calculations in three
@@ -385,7 +383,7 @@ corresponding to a false alarm rate of 0.05 in a two-sided test.\*
 
 - We use **cfg.numrandomization** to control the number of draws from
   the permutation distribution. Remember that
-  **[ft_freqstatistics](/reference/ft_freqstatistics)** approximates the
+  **[ft_freqstatistics](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqstatistics.m)** approximates the
   permutation distribution by means of a histogram with a Monte Carlo approximation of the true permutation distribution. In this tutorial,
   we use cfg.numrandomization = 500 to keep the computational time low. In general you should set this to a higher value (1000 or up). If it turns out that estimated p-value is very close to the the critical
   alpha-level (0.05 or 0.01), you should increase this number.
@@ -423,7 +421,7 @@ no prior information, you must compare the experimental conditions over the
 complete frequency interval. This is accomplished by choosing cfg.frequency =
 'all'.
 
-Now, run **[ft_freqstatistics](/reference/ft_freqstatistics)** to
+Now, run **[ft_freqstatistics](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqstatistics.m)** to
 compare base_sedation and mode_sedation using the configuration described
 above.
 
@@ -431,7 +429,7 @@ above.
 
 ### The format of the output
 
-The output of **[ft_freqstatistics](/reference/ft_freqstatistics)** has
+The output of **[ft_freqstatistics](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqstatistics.m)** has
 separate fields for positive and negative clusters. For the positive
 clusters, the output is given in the following pair of fields:
 stat1.posclusters and stat1.posclusterslabelmat. The field
@@ -487,7 +485,7 @@ And by typing stat.negclusters(1), you should obtain the following:
         cirange: 0.0039
 
 It is likely that the p-values in your specific output are a bit different. This
-is because **[ft_freqstatistics](/reference/ft_freqstatistics)** calculated a
+is because **[ft_freqstatistics](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqstatistics.m)** calculated a
 Monte Carlo approximation of the permutation p-values: the p-value for the k-th
 positive cluster is calculated as the proportion of random draws from the
 permutation distribution in which the maximum of the cluster-level statistics is
@@ -553,7 +551,7 @@ Figure 1B of the [original paper](https://doi.org/10.1371/journal.pcbi.1004669).
 We now describe how to statistically evaluate the power spectra difference
 between the responsive and the drowsy groups. The format for these variables,
 are a prime example of how you should organize your data to be suitable for
-**[ft_freqstatistics](/reference/ft_freqstatistics)**. Specifically, each
+**[ft_freqstatistics](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqstatistics.m)**. Specifically, each
 variable is a structure, with each subject's averaged stored in one cell. To
 create this data structure we will make copies and we will select the subgroups
 based on the behavioral performance (see below). Note that this subgroup
@@ -595,7 +593,7 @@ copy the datasets and select the relevant subgroups
     reco_sedation_drowsy = ft_selectdata(cfg, reco_sedation_drowsy);
 
 We now perform the permutation test using
-**[ft_freqstatistics](/reference/ft_freqstatistics)**. The configuration
+**[ft_freqstatistics](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqstatistics.m)**. The configuration
 settings for this analysis differ from the previous settings in several fields:
 
 1.  We have to select a different statistic for the sample level effect (in cfg.statistic)
@@ -637,7 +635,7 @@ configuration for a within-trials experiment.
 
 - Instead of an dependent samples T-statistic, we use the **independent
   samples T-statistic** to evaluate the effect at the sample level
-  (cfg.statistic = **[ft_statfun_indepsamplesT](/reference/ft_statfun_indepsamplesT)**). This is because we are
+  (cfg.statistic = **[ft_statfun_indepsamplesT](https://github.com/fieldtrip/fieldtrip/blob/release/statfun/ft_statfun_indepsamplesT.m)**). This is because we are
   dealing with a between-UO instead of a within-UO design.
 
 - The **design matrix** in a between-UO design is different from the
@@ -825,7 +823,7 @@ experimental conditions.
     cfg.ivar   = 1; % sedation level
     cfg.uvar   = 2; % subject number
 
-- We use the **[ft_statfun_depsamplesFmultivariate](/reference/ft_statfun_depsamplesFmultivariate)** for a repeated-measures (i.e. dependent samples) multivariate ANOVA.
+- We use the **[ft_statfun_depsamplesFmultivariate](https://github.com/fieldtrip/fieldtrip/blob/release/statfun/ft_statfun_depsamplesFmultivariate.m)** for a repeated-measures (i.e. dependent samples) multivariate ANOVA.
 
 - The **design matrix**, the **cfg.ivar** and the **cfg.uvar** will be
   the same as in the within-UO design

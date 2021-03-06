@@ -13,7 +13,7 @@ title: ft_spike_psth
  the raw datatype is converted to the spike datatype.
 
  Configurations:
-   cfg.binsize          =  [binsize] in sec or string. 
+   cfg.binsize          =  [binsize] in sec or string.
                           If 'scott', we estimate the optimal bin width
                           using Scott's formula (1979). If 'sqrt', we take
                           the number of bins as the square root of the
@@ -52,8 +52,8 @@ title: ft_spike_psth
    Psth is a timelock datatype (see FT_DATATYPE_TIMELOCK)
      Psth.time        = center histogram bin points
 	    Psth.fsample     = 1/binsize;
-     Psth.avg         = contains average PSTH per unit 
-     Psth.trial       = contains PSTH per unit per trial 
+     Psth.avg         = contains average PSTH per unit
+     Psth.trial       = contains PSTH per unit per trial
      Psth.var         = contains variance of PSTH per unit across trials
 
  For subsequent processing you can use

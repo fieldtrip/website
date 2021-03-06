@@ -87,7 +87,7 @@ Alternatively, you can add one sample (in seconds) to the poststim specification
 
 ## Using ft_redefinetrial with INCLUSIVE and/or EXCLUSIVE interval selection
 
-You might wonder what to do if you preprocessed using ft_trialfun_general and you want to select a shorter time window, for example to epoch continuous data. This can be done using **[ft_redefinetrial](/reference/ft_redefinetrial)**. Using the proper cfg option, you can do bot
+You might wonder what to do if you preprocessed using ft_trialfun_general and you want to select a shorter time window, for example to epoch continuous data. This can be done using **[ft_redefinetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_redefinetrial.m)**. Using the proper cfg option, you can do bot
 
 ## cfg.toilim
 
@@ -95,7 +95,7 @@ The specification
 
     cfg.toilim    = [tmin tmax]
 
-will work in INCLUSIVE terms: both tmin and tmax will be included in the data selection. The same it’s true for cfg.latency and cfg.foilim in **[ft_selectdata](/reference/ft_selectdata)**.
+will work in INCLUSIVE terms: both tmin and tmax will be included in the data selection. The same it's true for cfg.latency and cfg.foilim in **[ft_selectdata](https://github.com/fieldtrip/fieldtrip/blob/release/ft_selectdata.m)**.
 
 If you want to follow the ft_trialfun_general convention and exclude the last sample, then you should exclude it from the input:
 

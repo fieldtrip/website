@@ -9,8 +9,9 @@ title: ft_megrealign
 
  Use as
    [interp] = ft_megrealign(cfg, data)
+ where the input data corresponds to the output from FT_PREPROCESSING.
 
- Required configuration options:
+ Required configuration options are
    cfg.template
    cfg.inwardshift
 
@@ -31,7 +32,7 @@ title: ft_megrealign
 
  A source model (i.e. a superficial layer with distributed sources) can be
  constructed from a headshape file, or from inner surface of the volume conduction
- model using FT_PREPARE_SOIURCEMODEL using the following options
+ model using FT_PREPARE_SOURCEMODEL using the following options
    cfg.spheremesh  = number of dipoles in the source layer (default = 642)
    cfg.inwardshift = depth of the source layer relative to the headshape
                      surface or volume conduction model (no default
@@ -52,13 +53,15 @@ title: ft_megrealign
  For a realistic single-shell volume conduction model based on the brain surface, you
  should probably use an inward shift of about 1 cm.
 
- Other options are
- cfg.pruneratio  = for singular values, default is 1e-3
- cfg.verify      = 'yes' or 'no', show the percentage difference (default = 'yes')
- cfg.feedback    = 'yes' or 'no' (default = 'no')
- cfg.channel     =  Nx1 cell-array with selection of channels (default = 'MEG'),
-                      see FT_CHANNELSELECTION for details
- cfg.trials      = 'all' or a selection given as a 1xN vector (default = 'all')
+ Other configuration options are
+   cfg.tolerance  = tolerance ratio for leadfield matrix inverse based on a truncated svd,
+                    reflects the relative magnitude of the largest singular value
+                    to retain (default =s 1e-3)
+   cfg.verify     = 'yes' or 'no', show the percentage difference (default = 'yes')
+   cfg.feedback   = 'yes' or 'no' (default = 'no')
+   cfg.channel    =  Nx1 cell-array with selection of channels (default = 'MEG'),
+                     see FT_CHANNELSELECTION for details
+   cfg.trials     = 'all' or a selection given as a 1xN vector (default = 'all')
 
  This implements the method described by T.R. Knosche, Transformation
  of whole-head MEG recordings between different sensor positions.

@@ -9,12 +9,12 @@ There are cases where you have recorded continuous data without specific events 
 
 In continuous data you primarily would expect the EEG or MEG signal to be stationary, i.e. not change over time. Hence there is no point in doing time-frequency analysis, because you don't expect changes in the power spectrum over time, at least not on a very short time scale.
 
-However, you might be interested in changes in the power spectrum at a much longer time scale. Regular time-frequency analysis (e.g. with method wavelet or mtmconvol in **[ft_freqanalysis](/reference/ft_freqanalysis)**) is not appropriate to reveal the dynamics of spectral changes over a long time scale. Below we outline an alternative approach that does work well and that is computationally efficient.
+However, you might be interested in changes in the power spectrum at a much longer time scale. Regular time-frequency analysis (e.g. with method wavelet or mtmconvol in **[ft_freqanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqanalysis.m)**) is not appropriate to reveal the dynamics of spectral changes over a long time scale. Below we outline an alternative approach that does work well and that is computationally efficient.
 
 We start by reading the data as one long continuous segment. It may be useful at this stage to apply a high-pass filter to remove the slow drift from the data
 
     cfg = [];
-    cfg.dataset  = 'subj2.vhdr''
+    cfg.dataset  = 'subj2.vhdr'
     cfg.hpfilter = 'yes'
     cfg.hpfreq   = 1;
     data_continuous = ft_preprocessing(cfg)
@@ -28,11 +28,11 @@ Let us visually inspect the data
 Subsequently, we proceed by segmenting the data into "trials", i.e. data segments of constant length. If we were to concatenate all segments, we would again have the original data.
 
     cfg = [];
-    cfg.length  = 1;
+    cfg.length = 1;
     cfg.overlap = 0;
     data_segmented = ft_redefinetrial(cfg, data_continuous)
 
-Using **[ft_freqanalysis](/reference/ft_freqanalysis)** with method mtmfft, we can compute the power spectrum for each trial/segment. Note that we keep the spectra for all individual trials/segments.
+Using **[ft_freqanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqanalysis.m)** with method mtmfft, we can compute the power spectrum for each trial/segment. Note that we keep the spectra for all individual trials/segments.
 
     cfg = [];
     cfg.method     = 'mtmfft'

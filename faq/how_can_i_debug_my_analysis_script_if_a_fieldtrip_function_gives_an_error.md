@@ -42,7 +42,7 @@ For example, the following will result in an error because of the invalid input 
     Error in ft_timelockanalysis (line 105)
     data = ft_checkdata(data, 'datatype', {'raw+comp', 'raw'}, 'feedback', 'yes', 'hassampleinfo', 'yes');
 
-Although the error is not resolved, you can load the file from disk and directly zoom in on the problematic piece of code. It might be that your configuration is inconsistent with the data, that the data is incompatible with the function (as above), or that there is a bug in the FieldTrip code (see [bugzilla](/bugzilla)).
+Although the error is not resolved, you can load the file from disk and directly zoom in on the problematic piece of code. It might be that your configuration is inconsistent with the data, that the data is incompatible with the function (as above), or that there is a bug in the FieldTrip code (see [issues](/development/issues)).
 
 You can load the input variables to the function (and some extra information from the file).
 
@@ -69,9 +69,9 @@ It is likely that you don't want to edit all of your analysis scripts to add
 
     cfg.debug = 'saveonerror'
 
-to each individual function call. It is possible to enable this behavior globally, using the ft_default global variable.
+to each individual function call. It is possible to enable this behavior globally, using the `ft_default` global variable.
 
     global ft_default
     ft_default.debug = 'saveonerror'
 
-The fields in ft_default are merged with the input cfg structure to all FieldTrip functions. This is explained in more detail in **[ft_defaults](/reference/ft_defaults)**.
+The fields in `ft_default` are merged with the input cfg structure to all FieldTrip functions. This is explained in more detail in **[ft_defaults](https://github.com/fieldtrip/fieldtrip/blob/release/ft_defaults.m)**.

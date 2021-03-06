@@ -11,4 +11,9 @@ title: ft_preproc_smooth
 
  Where dat is an Nchan x Ntimepoints data matrix, and n the length
  of the boxcar smoothing kernel
+
+ If the data contains NaNs, these are ignored for the computation, but
+ retained in the output.
+
+ See also PREPROC
 ```

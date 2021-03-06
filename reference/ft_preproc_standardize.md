@@ -16,5 +16,8 @@ title: ft_preproc_standardize
  If no begin and end sample are specified, it will be estimated on the
  complete data.
 
+ If the data contains NaNs, these are ignored for the computation, but
+ retained in the output.
+
  See also PREPROC
 ```

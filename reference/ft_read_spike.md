@@ -20,10 +20,12 @@ title: ft_read_spike
    'neuralynx_nts'
    'plexon_ddt'
    'plexon_nex'
+   'plexon_nex5'
    'plexon_plx'
    'neuroshare'
    'neurosim_spikes'
    'wave_clus'
+   'nwb'
 
  The output spike structure usually contains
    spike.label     = 1xNchans cell-array, with channel labels

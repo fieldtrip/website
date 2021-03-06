@@ -22,17 +22,18 @@ title: ft_plot_sens
  The following options apply to MEG magnetometers and/or gradiometers
    'coil'            = true/false, plot each individual coil (default = false)
    'orientation'     = true/false, plot a line for the orientation of each coil (default = false)
-   'coilshape'       = 'point', 'circle', 'square', or 'sphere' (default is automatic)
+   'coilshape'       = 'point', 'circle', 'square', 'sphere', or 'disc' (default is automatic)
    'coilsize'        = diameter or edge length of the coils (default is automatic)
  The following options apply to EEG electrodes
    'elec'            = true/false, plot each individual electrode (default = false)
    'orientation'     = true/false, plot a line for the orientation of each electrode (default = false)
-   'elecshape'       = 'point', 'circle', 'square', or 'sphere' (default is automatic)
+   'elecshape'       = 'point', 'circle', 'square', 'sphere', or 'disc' (default is automatic)
    'elecsize'        = diameter of the electrodes (default is automatic)
+   'headshape'       = headshape, required for elecshape 'disc'
  The following options apply to NIRS optodes
    'opto'            = true/false, plot each individual optode (default = false)
    'orientation'     = true/false, plot a line for the orientation of each optode (default = false)
-   'optoshape'       = 'point', 'circle', 'square', or 'sphere' (default is automatic)
+   'optoshape'       = 'point', 'circle', 'square', 'sphere', or 'disc' (default is automatic)
    'optosize'        = diameter of the optodes (default is automatic)
 
  The following options apply when electrodes/coils/optodes are NOT plotted individually
@@ -45,7 +46,7 @@ title: ft_plot_sens
    'edgealpha'       = transparency, between 0 and 1 (default = 1)
 
  Example
-   sens = ft_read_sens('Subject01.ds');
+   sens = ft_read_sens('Subject01.ds', 'senstype', 'meg');
    figure; ft_plot_sens(sens, 'coilshape', 'point', 'style', 'r*')
    figure; ft_plot_sens(sens, 'coilshape', 'circle')
    figure; ft_plot_sens(sens, 'coilshape', 'circle', 'coil', true, 'chantype', 'meggrad')

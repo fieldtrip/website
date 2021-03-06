@@ -19,7 +19,7 @@ This data in this tutorial is originally from the [NatMEG workshop](/workshop/na
 
 ## Background
 
-In FieldTrip, the preprocessing of data refers to the reading of the data, segmenting the data around interesting events, which are defined by triggers in the data, temporal filtering and (optionally) re-referencing. The **[ft_preprocessing](/reference/ft_preprocessiing)** function takes care of all these steps, i.e., it reads the data and applies the preprocessing options.
+In FieldTrip, the preprocessing of data refers to the reading of the data, segmenting the data around interesting events, which are defined by triggers in the data, temporal filtering and (optionally) re-referencing. The **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** function takes care of all these steps, i.e., it reads the data and applies the preprocessing options.
 
 There are largely two alternative approaches for preprocessing, which especially differ in the amount of memory required.
 
@@ -30,7 +30,7 @@ An advantage of the first approach is that it allows you to apply most temporal 
  Here we are using the second approach. The approach for reading and filtering continuous data and segmenting afterwards is explained in [another tutorial](/tutorial/continuous).
 
 We are going to define segments of interest (epochs/trials) based on triggers encoded in a specific trigger channel.
-This depends on the function **[ft_definetrial](/reference/ft_preprocessing)**. The output of **[ft_definetrial](/reference/ft_preprocessing)** is a so-called configuration structure (typically called _cfg_), which contains the field _cfg.trl_. This is a matrix representing the relevant parts of the raw data, which are to be selected for further processing. Each row in trl-matrix represents a single epoch-of-interest (trial), and the trl-matrix has three or more columns. The first column defines (in samples) the beginning point of each epoch with respect to how the data are stored in the raw data file. The second column defines (in samples) the end point of each epoch. The third column specifies the offset (in sample) of the first sample within each epoch with respect to time point 0 within than epoch. In essence they contain information about when the epoch begins, end and when time 0 appears. The trial matrix can contain more columns with more (user-chosen) information about the trial.
+This depends on the function **[ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)**. The output of **[ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** is a so-called configuration structure (typically called _cfg_), which contains the field _cfg.trl_. This is a matrix representing the relevant parts of the raw data, which are to be selected for further processing. Each row in `trl` matrix represents a single epoch-of-interest (trial), and the `trl` matrix has three or more columns. The first column defines (in samples) the beginning point of each epoch with respect to how the data are stored in the raw data file. The second column defines (in samples) the end point of each epoch. The third column specifies the offset (in sample) of the first sample within each epoch with respect to time point 0 within than epoch. In essence they contain information about when the epoch begins, end and when time 0 appears. The trial matrix can contain more columns with more (user-chosen) information about the trial.
 
 You can either use a default trial function or design your own. When using the default trial function, the fourth column will contain the trigger value of the trigger channel. If you do use your own trial function, you can add as many columns as you wish to the _trl_ matrix, which will be contained in your segmented data in the _.trialinfo_ field. Here, you can add information of for example response buttons, response times.
 
@@ -40,15 +40,15 @@ You can either use a default trial function or design your own. When using the d
 
 ## Have a look at the data prior to preprocessing
 
-Before we start preprocessing our data and calculate event-related potentials (ERPs), we will first have a look at our data while it is unprocessed and not yet cut into trial (following FieldTrip nomenclature: _raw_-data). To do this, we use **[ft_databrowser](/reference/ft_databrowser)**. Note that **[ft_databrowser](/reference/ft_databrowser)** is very memory efficient, as it does not read all data into memory - only the part that it displays.
+Before we start preprocessing our data and calculate event-related potentials (ERPs), we will first have a look at our data while it is unprocessed and not yet cut into trial (following FieldTrip nomenclature: _raw_-data). To do this, we use **[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_databrowser.m)**. Note that **[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_databrowser.m)** is very memory efficient, as it does not read all data into memory - only the part that it displays.
 
 ### How can I use the data browser?
 
 The data browser can be used to look at your raw or preprocessed data. The main purpose is to do quality checks and visual artifact detection and also annotate time periods during which specific artifacts happens. However, it also supports annotation of the data, such as annotating sleep spindles or epileptic spikes.
 
-The data browser supports three view modes: _butterfly_, _vertical_ and _component_. In _butterfly_, all signal traces will be plotted on top of one another; in _vertical_, the traces will be below one another. The _component_ view mode is to be used for data that is decomposed into independent components (see **[ft_componentanalysis](/reference/ft_componentanalysis)**. Components will be plotted as in the vertical view mode, but will include the component topography to the left of the time trace. As an alternative to these three view modes, you can provide a _cfg.layout_, and **[ft_databrowser](/reference/ft_databrowser)** will try to plot the data according to the sensor positions specified in that layout.
+The data browser supports three view modes: _butterfly_, _vertical_ and _component_. In _butterfly_, all signal traces will be plotted on top of one another; in _vertical_, the traces will be below one another. The _component_ view mode is to be used for data that is decomposed into independent components (see **[ft_componentanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_componentanalysis.m)**. Components will be plotted as in the vertical view mode, but will include the component topography to the left of the time trace. As an alternative to these three view modes, you can provide a _cfg.layout_, and **[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_databrowser.m)** will try to plot the data according to the sensor positions specified in that layout.
 
-When the data browser opens, you will see button to navigate along the bottom of the screen and buttons for artifact annotation to the right. Note that also artifacts that were marked with automatic artifact detection methods will be displayed here (see **[automatic artifact rejection](/tutorial/automatic_artifact_rejection)**. You can click on one of the artifact types, drag over a time window to select the beginning and the end of the artifact and then double-click in the selected area to mark it as an artifact. Double-clicking again will remove the selection.
+When the data browser opens, you will see button to navigate along the bottom of the screen and buttons for artifact annotation to the right. Note that also artifacts that were marked with automatic artifact detection methods will be displayed here (see the [automatic artifact rejection tutorial](/tutorial/automatic_artifact_rejection)). You can click on one of the artifact types, drag over a time window to select the beginning and the end of the artifact and then double-click in the selected area to mark it as an artifact. Double-clicking again will remove the selection.
 
 {% include markup/warning %}
 The data browser will **not** change your data in an way. If you specify a _cfg_ as output, it will just store your selected artifacts in that output cfg.
@@ -98,11 +98,11 @@ In this step, we will preprocess and subsequently average our epochs/trials to o
 
 We will take the following steps
 
-- Define segments of data of interest (the trial definition) using **[ft_definetrial](/reference/ft_definetrial)**
-- Read the data into MATLAB using **[ft_preprocessing](/reference/ft_preprocessing)**
-- Clean the data in a semi-automatic way using **[ft_rejectvisual](/reference/ft_rejectvisual)**
-- Calculate event-related potentials (ERPs) using **[ft_timelockanalysis](/reference/ft_timelockanalysis)**
-- Visualize the results using **[ft_multiplotER](/reference/ft_multiplotER)**, **[ft_singleplotER](/reference/ft_singleplotER)** and **[ft_topoplotER](/reference/ft_topoplotER)**
+- Define segments of data of interest (the trial definition) using **[ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_definetrial.m)**
+- Read the data into MATLAB using **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)**
+- Clean the data in a semi-automatic way using **[ft_rejectvisual](https://github.com/fieldtrip/fieldtrip/blob/release/ft_rejectvisual.m)**
+- Calculate event-related potentials (ERPs) using **[ft_timelockanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockanalysis.m)**
+- Visualize the results using **[ft_multiplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_multiplotER.m)**, **[ft_singleplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_singleplotER.m)** and **[ft_topoplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_topoplotER.m)**
 
 ### Reading and preprocessing the epochs/trials of interest
 
@@ -177,7 +177,7 @@ Let's have a closer look at the first entries in _time_ and _trial_:
 
 ### Cleaning data using visual summaries
 
-In this tutorial, we are going to use a visual summary tool for rejecting bad trials. It is also possible to annotate artifacts using a more automatic procedure (see **[automatic artifact rejection](/tutorial/automatic_artifact_rejection)**
+In this tutorial, we are going to use a visual summary tool for rejecting bad trials. It is also possible to annotate artifacts using a more automatic procedure (see the  [automatic artifact rejection tutorial](/tutorial/automatic_artifact_rejection)).
 
     cfg        = [];
     cfg.layout = 'natmeg_customized_eeg1005.lay';
@@ -212,7 +212,7 @@ If you want to carry on with the data cleaned by the organizers, load the data u
 
 ### Event-Related Potentials (ERPs) (also unfortunately known as time-locked responses)
 
-The function **[ft_timelockanalysis](/reference/ft_timelockanalysis)** makes an average (ERP) over all the trials in a segmented data structure. For purposes of visualization, we will also apply a low-pass filter. Note that we could have done that earlier as well, but rather we decided to clean before applying low- or high-pass filters.
+The function **[ft_timelockanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockanalysis.m)** makes an average (ERP) over all the trials in a segmented data structure. For purposes of visualization, we will also apply a low-pass filter. Note that we could have done that earlier as well, but rather we decided to clean before applying low- or high-pass filters.
 
     cfg                = [];
     cfg.lpfilter       = 'yes';
@@ -232,7 +232,7 @@ We are creating two ERPs, one for the standard and one for the deviant.
     cfg.trials  = find(data_EEG_filt.trialinfo == 2);
     ERP_deviant = ft_timelockanalysis(cfg, data_EEG_filt);
 
-The output of **[ft_timelockanalysis](/reference/ft_timelockanalysis)** looks like this:
+The output of **[ft_timelockanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockanalysis.m)** looks like this:
 
     ERP_standard =
 
@@ -252,7 +252,7 @@ The output of **[ft_timelockanalysis](/reference/ft_timelockanalysis)** looks li
 - _dimord_ indicates the ordering of dimensions, rows are channels and columns are time
 - _cfg_ shows the cfg that gave rise to this structure
 
-These can be plotted using **[ft_multiplotER](/reference/ft_multiplotER)**, **[ft_singleplotER](/reference/ft_singleplotER)** and **[ft_topoplotER](/reference/ft_topoplotER)**
+These can be plotted using **[ft_multiplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_multiplotER.m)**, **[ft_singleplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_singleplotER.m)** and **[ft_topoplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_topoplotER.m)**
 
 #### Multiplot
 
@@ -387,5 +387,5 @@ _Figure 9: A topographical plot showing the MMN (average over 100 to 170 ms)_
 Play around with the _zlim_ to get a feeling for how the _difference_wave_ changes topography. Try also plotting the the ERPs themselves.
 
 {% include markup/exercise %}
-**Exercise:** The topographies that we have seen in the figures and movie have a rather loose fit of the circle (representing the head) around the electrodes. Explore the **[ft_prepare_layout](/reference/ft_prepare_layout)** function and [documentation](/tutorial/layout/) to improve the topographic representation.
+**Exercise:** The topographies that we have seen in the figures and movie have a rather loose fit of the circle (representing the head) around the electrodes. Explore the **[ft_prepare_layout](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_layout.m)** function and [documentation](/tutorial/layout/) to improve the topographic representation.
 {% include markup/end %}

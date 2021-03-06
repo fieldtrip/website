@@ -9,14 +9,13 @@ tags: [oslo2019, eeg-audodd, headmodel]
 
 This tutorial goes through the necessary steps for creating a robust forward model for EEG source reconstruction.  
 
-It is part of the [Oslo 2019 workshop tutorials](/workshop/oslo2019/), where tutorials can be found on [preprocessing and ERPs](/workshop/oslo2019/introduction), [time-frequency representations](link missing), [statistics](/workshop/oslo2019/statistics) and [source reconstruction](link missing).
+It is part of the [Oslo 2019 workshop tutorials](/workshop/oslo2019/), where tutorials can be found on [preprocessing and ERPs](/workshop/oslo2019/introduction), [time-frequency representations](/workshop/oslo2019/timefrequency), [statistics](/workshop/oslo2019/statistics) and [source reconstruction](/workshop/oslo2019/beamforming/).
 
 The data for the tutorial is available [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/oslo2019/)
 
 ## Background
 
-To do source reconstruction, a so-called forward model is needed. The forward model constrains the solution space for the inverse models (source reconstructions) that we may wish to apply to our data sets. If we had no constraints at all, there would be an infinite number of solutions (inverse models) that would satisfy the problem that we are trying to solve, which is: which are the _latent/unobserved_ variables (sources) that give rise to the _observed_ variables (the time courses observed on electrodes, i.e. the EEG data).  
-By constraining the solution in sensible ways and applying sensible algorithms we can find a unique solution for the inverse model. In this tutorial, we will focus on constraining the solution, i.e. providing a sensible _forward model_. The application of sensible algorithms is the source reconstruction presented by Britta Westner yesterday.
+To do source reconstruction, a so-called forward model is needed. The forward model constrains the solution space for the inverse models (source reconstructions) that we may wish to apply to our data sets. If we had no constraints at all, there would be an infinite number of solutions (inverse models) that would satisfy the problem that we are trying to solve, which is: which are the _latent/unobserved_ variables (sources) that give rise to the _observed_ variables (the time courses observed on electrodes, i.e. the EEG data). By constraining the solution in sensible ways and applying sensible algorithms we can find a unique solution for the inverse model. In this tutorial, we will focus on constraining the solution, i.e. providing a sensible _forward model_. The application of sensible algorithms is the source reconstruction presented by Britta Westner yesterday.
 
 Optimally, we have individual Magnetic Resonance Images (MRIs) available for each subject. If this is not so, it is also possible to use a template brain for source reconstruction. See [here](/template/sourcemodel). In this tutorial we will assume that you have individual structural MRIs at your disposal.
 
@@ -55,12 +54,12 @@ The anatomical MRI data available here comes directly from the scanner in the DI
 
 DICOM datasets consist of a large number of files, one per slice. As filename you have to specify a single file, the reading function will automatically determine which other slices are part of the same anatomical volume and put them in the correct order.
 
-We read in the data using **[ft_read_mri](/reference/ft_read_mri)**
+We read in the data using **[ft_read_mri](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_mri.m)**
 
     mri_file = './dicom/00000001.dcm';
     mri = ft_read_mri(mri_file);
 
-And plot it using **[ft_sourceplot](/reference/ft_sourceplot)** with an empty _cfg_. This is the same function that can be used to overlay MRIs with functional data.
+And plot it using **[ft_sourceplot](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceplot.m)** with an empty _cfg_. This is the same function that can be used to overlay MRIs with functional data.
 
     cfg = [];
 
@@ -93,7 +92,7 @@ In this case, we also have extra head shape points digitized with the Polhemus s
 
     mri_aligned_headshape = ft_volumerealign(cfg, mri_aligned_fiducials);
 
-We follow this up by a check running **[ft_volumerealign](/reference/ft_volumerealign)** again
+We follow this up by a check running **[ft_volumerealign](https://github.com/fieldtrip/fieldtrip/blob/release/ft_volumerealign.m)** again
 
     ft_volumerealign(cfg, mri_aligned_headshape);
 
@@ -102,7 +101,7 @@ _Figure 2: Plot of the co-registration after applying Iterative Closest Points o
 
 {% include markup/info %}
 A version of _mri_aligned_headshape_ is already included in the FTP. Using this, you will achieve the same solutions as us, but do try to do the co-registration yourself as well.  
-Note also that _neuromag_ coordinates are seen under the voxel indices when you run **[ft_sourceplot](/reference/ft_sourceplot)** on _mri_aligned_headshape_.
+Note also that _neuromag_ coordinates are seen under the voxel indices when you run **[ft_sourceplot](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceplot.m)** on _mri_aligned_headshape_.
 {% include markup/end %}
 
     load mri_aligned_headshape
@@ -133,7 +132,7 @@ Make sure that the coordinate system is correct, i.e. _up_ is _z-positive_, _ant
 
 ### Segment the brain
 
-The next step is to segment our co-registered and resliced MR image into the three kinds of tissues that we need to care about in our forward model for EEG data, namely the _brain_ tissue, the _skull_ tissue and the _scalp_ tissue. We use **[ft_volumesegment](/reference/ft_volumesegment)** for this. (This function relies on implementations from [SPM](https://www.fil.ion.ucl.ac.uk/spm/))
+The next step is to segment our coregistered and resliced MR image into the three kinds of tissues that we need to care about in our forward model for EEG data, namely the _brain_ tissue, the _skull_ tissue and the _scalp_ tissue. We use **[ft_volumesegment](https://github.com/fieldtrip/fieldtrip/blob/release/ft_volumesegment.m)** for this. (This function relies on implementations from [SPM](https://www.fil.ion.ucl.ac.uk/spm/))
 
     cfg        = [];
     cfg.output = {'brain' 'skull' 'scalp'};
@@ -449,7 +448,7 @@ When plotting the lead field topographies, try to change _source_index_ and _sen
 {% include markup/end %}
 
 {% include markup/info %}
-Do always check the lead field of both a superficial source, as this is where errors are most prone, and a central source. If you see errors for the superficial sources, you can use _cfg.inwardshift_ from **[ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)** as this removes sources from the outermost parts of the brain
+Do always check the lead field of both a superficial source, as this is where errors are most prone, and a central source. If you see errors for the superficial sources, you can use _cfg.inwardshift_ from **[ft_prepare_sourcemodel](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_sourcemodel.m)** as this removes sources from the outermost parts of the brain
 {% include markup/end %}
 
 We can also plot the vectors - note that they are more or less normal to the scalp surface. Also note that we are using an unrealistic source current here, 1 mAm. This is just to make sure that they are visible. Do play around with it to see its effect.
@@ -512,6 +511,6 @@ _Figure 15: The_ brain _(white),_ skull _(yellow) and_ scalp _surfaces (red). No
 
 ## Which BEM algorithm to use?
 
-If possible, you should use the [OpenMEEG algorihtm](https://openmeeg.github.io/) implemented in FieldTrip (in **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)** use _cfg.method = 'openmeeg'_. This may require some [careful installation](/faq/how_do_i_install_the_openmeeg_binaries) before it works, and it only works on Linux and Mac systems.
+If possible, you should use the [OpenMEEG algorihtm](https://openmeeg.github.io/) implemented in FieldTrip (in **[ft_prepare_headmodel](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_headmodel.m)** use _cfg.method = 'openmeeg'_. This may require some [careful installation](/faq/how_do_i_install_the_openmeeg_binaries) before it works, and it only works on Linux and Mac systems.
 
 If you cannot make this work, then _dipoli_, which also only works on Linux and Mac systems (at the moment) is your next choice, and finally _bemcp_ which works on all platforms.

@@ -1,19 +1,19 @@
 ---
-title: How can I anonymize DICOM files?
+title: How can I anonymize or deidentify DICOM files?
 tags: [faq, mri, anonymize, sharing]
 ---
 
-# How can I anonymize DICOM files?
+# How can I anonymize or deidentify DICOM files?
 
 DICOM files contain a lot of header details that might provide information about your subject, such as the name and date of birth, but also the date and time at which the scan was performed.
 
 {% include markup/danger %}
-Besides the potentially identifying data in the header of the DICOM file, the facial information in an anatomical MRI can in principle also be reconstructed into a facial picture that can be used for identification. Furthermore, the cortical folding or the specific anatomical connectivity in a DTi scan can be considered as a "fingerprint". Both in the case of facial details and the cortical or anatomical "fingerprints", an external database would be needed to match them against, e.g. facial reconstructions can be matched against the database formed by Google images.
+Besides the potentially identifying data in the header of the DICOM file, the facial information in an anatomical MRI can be reconstructed into picture that might be used for identification. Furthermore, the cortical folding or the specific anatomical connectivity in a DTi scan might be considered as a "fingerprint". In both cases an external database would be required to match the data against subject identifiers, e.g. a facial reconstructed picture could be matched against the database formed by Google images.
 
-The remainder of this FAQ is only about the metadata in the header, not about [defacing](/faq/how_can_i_anonymize_an_anatomical_mri) or about imposing legal restrictions to prevent matching data against external databases.
+The remainder of this FAQ is only about the metadata in the header, not about [defacing](/faq/how_can_i_anonymize_an_anatomical_mri) the data or about imposing legal restrictions to prevent matching data against external databases.
 {% include markup/end %}
 
-Since it is not easy to determine if there is potentially identifying data in the DICOM headers, many researchers choose to share the data in NIfTI format rather than DICOM format. The NIfTI format is used by most neuroimaging software anyway, and the NIfTI header is very simple and does not allow to store any identifying information. However, there are also situations where it is desired to share the original DICOM files.
+Since it is not easy to determine if there is potentially identifying data in the DICOM headers, many researchers choose to share the data in NIfTI format rather than DICOM format. The NIfTI format is used by most neuroimaging software anyway, and the NIfTI header is very simple and does store any identifying information. However, there are also situations where it is desired to share the original DICOM files.
 
 ## Using MATLAB
 
@@ -41,11 +41,11 @@ The default behavior of the anonymize option is that only the metadata in own in
 
 to add it to your path. Subsequently you can use the [gdcmanon](http://gdcm.sourceforge.net/html/gdcmanon.html) command to anonymize individual files
 
-    gdcmanon `<file-in>` `<file-out>`
+    gdcmanon <file-in> <file-out>
 
 or a whole directory with many DICOM files at once
 
-    gdcmanon `<dir-in>` `<dir-out>`
+    gdcmanon <dir-in> <dir-out>
 
 You can use the [gdcmdump](http://gdcm.sourceforge.net/html/gdcmdump.html) command line program to dump one of the output DICOM file to the console and to check that all metadata fields have been anonymized.
 
@@ -57,11 +57,11 @@ You can use the [gdcmdump](http://gdcm.sourceforge.net/html/gdcmdump.html) comma
 
 to add it to your path. Subsequently you can use the [dcmdump](http://support.dcmtk.org/docs/dcmdump.html) command to show all DICOM header data
 
-    dcmdump `<file>`
+    dcmdump <file>
 
 and the [dcmodify](http://support.dcmtk.org/docs/dcmodify.html) command
 
-    dcmodify -ea "(0010,0010)" `<file>`
+    dcmodify -ea "(0010,0010)" <file>
 
 to erase the specific tags. In this case the "PatientName" tag (0010,0010) is erased from the file. Note that this overwrites the existing file, but keeps a backup of the original. You may have to erase other fields as well.
 

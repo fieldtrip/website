@@ -1,11 +1,11 @@
 ---
 title: Plotting the result of source reconstructing on a cortical mesh
-tags: [example, plot, source]
+tags: [example, plotting, source]
 ---
 
 # Plotting the result of source reconstructing on a cortical mesh
 
-The following function can be used to plot the results of source reconstruction on a cortical surface sheet. It assumes a cortical sheet _surf_, described by vertices (pnt) and triangles (tri). The vertices can be used as positions in **[ft_sourceanalysis](/reference/ft_sourceanalysis)** by specifying cfg.sourcemodel.pos = surf.pnt.
+The following function can be used to plot the results of source reconstruction on a cortical surface sheet. It assumes a cortical sheet _surf_, described by vertices (pnt) and triangles (tri). The vertices can be used as positions in **[ft_sourceanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceanalysis.m)** by specifying cfg.sourcemodel.pos = surf.pnt.
 
     function [handles] = myownsurfplot(cfg,surf,source)
 

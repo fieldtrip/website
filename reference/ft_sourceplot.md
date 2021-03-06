@@ -52,7 +52,9 @@ title: ft_sourceplot
    cfg.downsample    = downsampling for resolution reduction, integer value (default = 1) (orig: from surface)
    cfg.atlas         = string, filename of atlas to use (default = []) see FT_READ_ATLAS
                         for ROI masking (see 'masking' below) or for orthogonal plots (see method='ortho' below)
-   cfg.visible       = string, 'on' or 'off', whether figure will be visible (default = 'on')
+   cfg.visible       = string, 'on' or 'off' whether figure will be visible (default = 'on')
+   cfg.position      = location and size of the figure, specified as a vector of the form [left bottom width height]
+   cfg.renderer      = string, 'opengl', 'zbuffer', 'painters', see MATLAB Figure Properties. If this function crashes, you should try 'painters'.
 
  The following parameters can be used for the functional data:
    cfg.funcolormap   = colormap for functional data, see COLORMAP (default = 'auto')
@@ -176,7 +178,7 @@ title: ft_sourceplot
  a single or multiple triangulated surface mesh(es) in an Nx1 cell-array
  to be plotted with the interpolated functional data (see FT_PLOT_CLOUD)
 
- The following parameters apply to cfg.method='elec'
+ The following parameters apply to cfg.method='cloud'
    cfg.cloudtype       = 'point' plots a single point at each sensor position
                          'cloud' (default) plots each a group of spherically arranged points at each sensor position
                          'surf' plots a single spherical surface mesh at each sensor position

@@ -19,13 +19,13 @@ In general there are multiple ways that you can use the continuous head localiza
 3. you can compensate the raw data for the movements
 4. you can correct the forward model (i.e. the leadfield) for the spatial blurring that is due to the movements
 
-The first way of dealing with it requires that you visualize and decide on the movements. This is demonstrated in the first half of the example script. A more general description of the data, also containing information on the head movements, is made using **[ft_qualitycheck](/faq/how_can_i_check_the_quality_of_an_meeg_dataset?)**. At the donders, this function is run automatically on each new MEG dataset every night.
+The first way of dealing with it requires that you visualize and decide on the movements. This is demonstrated in the first half of the example script. A more general description of the data, also containing information on the head movements, is made using **[ft_qualitycheck](/faq/how_can_i_check_the_quality_of_an_meeg_dataset?.m)**. At the donders, this function is run automatically on each new MEG dataset every night.
 
-The second way of dealing with the movements means that you perform **[ft_timelockanalysis](/reference/ft_timelockanalysis)**, **[ft_freqanalysis](/reference/ft_freqanalysis)** or **[ft_sourceanalysis](/reference/ft_sourceanalysis)** with the option keeptrials=yes. This will give trial estimates of the ERF, the power or the source strength for each trial. The effect that the variable head position has on those single-trial estimates can be estimated and removed from the data using **[ft_regressconfound](/reference/ft_regressconfound)**. This method has been found to significantly improve statistical sensivity following head movements, [up to 30%](https://doi.org/10.1016/j.neuroimage.2012.11.047), and is therefore demonstrated in the second half of the example script.
+The second way of dealing with the movements means that you perform **[ft_timelockanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockanalysis.m)**, **[ft_freqanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqanalysis.m)** or **[ft_sourceanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceanalysis.m)** with the option keeptrials=yes. This will give trial estimates of the ERF, the power or the source strength for each trial. The effect that the variable head position has on those single-trial estimates can be estimated and removed from the data using **[ft_regressconfound](https://github.com/fieldtrip/fieldtrip/blob/release/ft_regressconfound.m)**. This method has been found to significantly improve statistical sensivity following head movements, [up to 30%](https://doi.org/10.1016/j.neuroimage.2012.11.047), and is therefore demonstrated in the second half of the example script.
 
-The third way of dealing with the movements requires that you make a spatial interpolation of the raw MEG data at each moment in time, in which you correct for the movements. In principle this could be done using the **[ft_megrealign](/reference/ft_megrealign)** function, but at this moment (May 2012) that function cannot yet deal with within-session movements.
+The third way of dealing with the movements requires that you make a spatial interpolation of the raw MEG data at each moment in time, in which you correct for the movements. In principle this could be done using the **[ft_megrealign](https://github.com/fieldtrip/fieldtrip/blob/release/ft_megrealign.m)** function, but at this moment (May 2012) that function cannot yet deal with within-session movements.
 
-The fourth way of dealing with the movements is implemented in the **[ft_headmovement](/reference/ft_headmovement)** function. It is not explained in further detail on this example page.
+The fourth way of dealing with the movements is implemented in the **[ft_headmovement](https://github.com/fieldtrip/fieldtrip/blob/release/ft_headmovement.m)** function. It is not explained in further detail on this example page.
 
 ## Reading-in and visualizing the head localization
 
@@ -91,70 +91,70 @@ MEG experiments typically involve repeated trials of an evoked or induced brain 
 
 1. Preprocess the MEG data, for instance pertaining to an ERF analysis at the sensor level. Note the keeptrials = 'yes' when calling ft_timelockanalysis.
 
-   % define trials
-   cfg = [];
-   cfg.dataset = 'TacStimRegressConfound.ds';
-   cfg.trialdef.eventtype = 'UPPT001';
-   cfg.trialdef.eventvalue = 4;
-   cfg.trialdef.prestim = 0.2;
-   cfg.trialdef.poststim = 0.3;
-   cfg.continuous = 'yes';
-   cfg = ft_definetrial(cfg);
-
-   % preprocess the MEG data
-   cfg.channel = {'MEG'};
-   cfg.demean = 'yes';
-   cfg.baselinewindow = [-0.2 0];
-   cfg.dftfilter = 'yes'; % notch filter to filter out 50Hz
-   data = ft_preprocessing(cfg);
-
-   % timelock analysis
-   cfg = [];
-   cfg.keeptrials = 'yes';
-   timelock = ft_timelockanalysis(cfg, data);
+        % define trials
+        cfg = [];
+        cfg.dataset = 'TacStimRegressConfound.ds';
+        cfg.trialdef.eventtype = 'UPPT001';
+        cfg.trialdef.eventvalue = 4;
+        cfg.trialdef.prestim = 0.2;
+        cfg.trialdef.poststim = 0.3;
+        cfg.continuous = 'yes';
+        cfg = ft_definetrial(cfg);
+        
+        % preprocess the MEG data
+        cfg.channel = {'MEG'};
+        cfg.demean = 'yes';
+        cfg.baselinewindow = [-0.2 0];
+        cfg.dftfilter = 'yes'; % notch filter to filter out 50Hz
+        data = ft_preprocessing(cfg);
+        
+        % timelock analysis
+        cfg = [];
+        cfg.keeptrials = 'yes';
+        timelock = ft_timelockanalysis(cfg, data);
 
 2. Create trial-by-trial estimates of head movement. Here one may assume that the head is a rigid body that can be described by 6 parameters (3 translations and 3 rotations). The circumcenter function (see below) gives us these parameters. By demeaning, we obtain the deviations. In other words; translations and rotations relative to the average head position and orientation.
 
-   % define trials
-   cfg = [];
-   cfg.dataset = 'TacStimRegressConfound.ds';
-   cfg.trialdef.eventtype = 'UPPT001';
-   cfg.trialdef.eventvalue = 4;
-   cfg.trialdef.prestim = 0.2;
-   cfg.trialdef.poststim = 0.3;
-   cfg.continuous = 'yes';
-   cfg = ft_definetrial(cfg);
+        % define trials
+        cfg = [];
+        cfg.dataset = 'TacStimRegressConfound.ds';
+        cfg.trialdef.eventtype = 'UPPT001';
+        cfg.trialdef.eventvalue = 4;
+        cfg.trialdef.prestim = 0.2;
+        cfg.trialdef.poststim = 0.3;
+        cfg.continuous = 'yes';
+        cfg = ft_definetrial(cfg);
+        
+        % preprocess the headposition data
+        cfg.channel = {'HLC0011','HLC0012','HLC0013', ...
+                       'HLC0021','HLC0022','HLC0023', ...
+                       'HLC0031','HLC0032','HLC0033'};
+        headpos = ft_preprocessing(cfg);
+        
+        % calculate the mean coil position per trial
+        ntrials = length(headpos.sampleinfo)
+        for t = 1:ntrials
+          coil1(:,t) = [mean(headpos.trial{1,t}(1,:)); mean(headpos.trial{1,t}(2,:)); mean(headpos.trial{1,t}(3,:))];
+          coil2(:,t) = [mean(headpos.trial{1,t}(4,:)); mean(headpos.trial{1,t}(5,:)); mean(headpos.trial{1,t}(6,:))];
+          coil3(:,t) = [mean(headpos.trial{1,t}(7,:)); mean(headpos.trial{1,t}(8,:)); mean(headpos.trial{1,t}(9,:))];
+         end
 
-   % preprocess the headposition data
-   cfg.channel = {'HLC0011','HLC0012','HLC0013', ...
-   'HLC0021','HLC0022','HLC0023', ...
-   'HLC0031','HLC0032','HLC0033'};
-   headpos = ft_preprocessing(cfg);
+        % calculate the headposition and orientation per trial
+        cc = circumcenter(coil1, coil2, coil3)
 
-   % calculate the mean coil position per trial
-   ntrials = length(headpos.sampleinfo)
-   for t = 1:ntrials
-   coil1(:,t) = [mean(headpos.trial{1,t}(1,:)); mean(headpos.trial{1,t}(2,:)); mean(headpos.trial{1,t}(3,:))];
-   coil2(:,t) = [mean(headpos.trial{1,t}(4,:)); mean(headpos.trial{1,t}(5,:)); mean(headpos.trial{1,t}(6,:))];
-   coil3(:,t) = [mean(headpos.trial{1,t}(7,:)); mean(headpos.trial{1,t}(8,:)); mean(headpos.trial{1,t}(9,:))];
-   end
-
-   % calculate the headposition and orientation per trial
-   cc = circumcenter(coil1, coil2, coil3)
-
-   % demean to obtain translations and rotations from the average position and orientation
-   cc_dem = [cc - repmat(mean(cc,2),1,size(cc,2))]';
+        % demean to obtain translations and rotations from the average position and orientation
+        cc_dem = [cc - repmat(mean(cc,2),1,size(cc,2))]';
 
 3. Fit the headmovement regressors to the data and remove variance that can be explained by these confounds.
 
-   % add head movements to the regressorlist. also add the constant (at the end; column 7)
-   confound = [cc_dem ones(size(cc_dem,1),1)];
+        % add head movements to the regressorlist. also add the constant (at the end; column 7)
+        confound = [cc_dem ones(size(cc_dem,1),1)];
 
-   % regress out headposition confounds
-   cfg = [];
-   cfg.confound = confound;
-   cfg.reject = [1:6]; % keeping the constant (nr 7)
-   regr = ft_regressconfound(cfg, timelock);
+        % regress out headposition confounds
+        cfg = [];
+        cfg.confound = confound;
+        cfg.reject = [1:6]; % keeping the constant (nr 7)
+        regr = ft_regressconfound(cfg, timelock);
 
 ## Figure
 
@@ -177,7 +177,7 @@ Finally, note that the circumcenter function is a helper function that calculate
 {% include markup/warning %}
 Please cite this paper when you have used the offline head movement compensation in your study:
 
-Stolk A, Todorovic A, Schoffelen JM, Oostenveld R. **[Online and offline tools for head movement compensation in MEG.](https://doi.org/10.1016/j.neuroimage.2012.11.047)** Neuroimage. 2013 Mar;68:39-48. doi: 10.1016/j.neuroimage.2012.11.047.
+Stolk A, Todorovic A, Schoffelen JM, Oostenveld R. **[Online and offline tools for head movement compensation in MEG.](https://doi.org/10.1016/j.neuroimage.2012.11.047.m)** Neuroimage. 2013 Mar;68:39-48. doi: 10.1016/j.neuroimage.2012.11.047.
 {% include markup/end %}
 
 ## Appendix: circumcenter

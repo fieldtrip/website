@@ -5,7 +5,7 @@ tags: [development]
 
 # Project overview
 
-This section of the website lists information aimed at developers of FieldTrip and collaborating software projects. Most of the pages here are just meant as scratchpads for sharing ideas and for keeping track of the "to do" list and therefore will be of limited use to end-users. We also use [GitHub](/development/git) and [Bugzilla](/bugzilla) to track projects; those projects are typically not listed here.
+This section of the website lists information aimed at developers of FieldTrip and collaborating software projects. Most of the pages here are just meant as scratchpads for sharing ideas and for keeping track of the "to do" list and therefore will be of limited use to end-users. We also use [GitHub](/development/git) to track the development of specific projects; those are typically not listed here.
 
 ## Open projects
 
@@ -31,7 +31,6 @@ This section of the website lists information aimed at developers of FieldTrip a
 - [Restructure and rework all visualization functions](/development/project/restructure_and_rework_all_visualization_functions)
 - [Checkdata and make source-structure definition consistent with other datatypes](/development/project/checkdata)
 - [Import and export data to and from MNE-Python](/development/project/integrate_with_mne)
-- [Example use of DSS for BCG removal](/development/project/dss)
 - [Source-reconstruction using two dipoles - example script under construction](/development/project/symmetric_dipoles), see [1559](http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=1559)
 - [Improve the documentation of the source reconstruction methods](/development/project/documentation_source)
 
@@ -88,3 +87,4 @@ This section of the website lists information aimed at developers of FieldTrip a
 - [Reimplement the avg/cov/trial handling](/development/project/timelockanalysis) (done)
 - [integration with NUTMEG](/development/project/nutmeg) (will probably never happen, no active nutmeg development anymore)
 - [transform_grid](/development/project/transform_grid) (done, ft_transform_geometry)
+- [Example use of DSS for BCG removal](done /example/use_denoising_source_separation_dss_to_remove_ecg_artifacts)

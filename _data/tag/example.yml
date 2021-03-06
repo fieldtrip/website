@@ -10,6 +10,9 @@
 - name:  Apply clusterrandanalysis on TFRs of power that were computed with BESA
   link:  /example/apply_clusterrandanalysis_on_tfrs_of_power_that_were_computed_with_besa
 
+- name:  Converting an example audio dataset for sharing in BIDS
+  link:  /example/bids_audio
+
 - name:  Converting an example behavioral dataset for sharing in BIDS
   link:  /example/bids_behavioral
 
@@ -27,6 +30,9 @@
 
 - name:  Converting the combined MEG/fMRI MOUS dataset for sharing in BIDS
   link:  /example/bids_mous
+
+- name:  Converting an example NIRS dataset for sharing in BIDS
+  link:  /example/bids_nirs
 
 - name:  Combining simultaneous recordings in BIDS
   link:  /example/bids_pom
@@ -52,13 +58,16 @@
 - name:  Common filters in beamforming
   link:  /example/common_filters_in_beamforming
 
+- name:  Compute forward simulated data using ft_dipolesimulation
+  link:  /example/compute_forward_simulated_data
+
 - name:  Compute forward simulated data and apply a beamformer scan
   link:  /example/compute_forward_simulated_data_and_apply_a_beamformer_scan
 
 - name:  Compute forward simulated data and apply a dipole fit
   link:  /example/compute_forward_simulated_data_and_apply_a_dipole_fit
 
-- name:  Example use of the ft_compute_leadfield function
+- name:  Compute forward simulated data with the low-level ft_compute_leadfield
   link:  /example/compute_leadfield
 
 - name:  Conditional Granger causality in the frequency domain
@@ -91,8 +100,11 @@
 - name:  Effects of tapering for power estimates
   link:  /example/effects_of_tapering_for_power_estimates_in_the_frequency_domain
 
-- name:  Computing and using estimates of effect size
+- name:  Computing and reporting the effect size
   link:  /example/effectsize
+
+- name:  Performing modified Multiscale Entropy (mMSE) analysis on EEG/MEG/LFP data
+  link:  /example/entropy_analysis
 
 - name:  Fit a dipole to the tactile ERF after mechanical stimulation
   link:  /example/fit_a_dipole_to_the_tactile_erf_after_mechanical_stimulation
@@ -124,6 +136,9 @@
 - name:  Getting started with reading raw EEG or MEG data
   link:  /example/getting_started_with_reading_raw_eeg_or_meg_data
 
+- name:  Using General Linear Modeling on time series data
+  link:  /example/glm_timeseries
+
 - name:  How to incorporate head movements in MEG analysis
   link:  /example/how_to_incorporate_head_movements_in_meg_analysis
 
@@ -145,11 +160,29 @@
 - name:  Interpolating data from the CTF151 to the CTF275 sensor array using megrealign
   link:  /example/megrealign
 
+- name:  Defining electrodes as neighbours for cluster-level statistics
+  link:  /example/neighbours
+
+- name:  Analyzing NIRS data recorded during unilateral finger- and foot-tapping
+  link:  /example/nirs_fingertapping
+
+- name:  Using GLM to analyze NIRS timeseries data
+  link:  /example/nirs_glm
+
+- name:  Creating a layout for plotting NIRS optodes and channels
+  link:  /example/nirs_layout
+
+- name:  Analyzing NIRS data recorded during listening to and repeating speech
+  link:  /example/nirs_speech
+
 - name:  Simulate an oscillatory signal with phase resetting
   link:  /example/phase_reset
 
 - name:  Plotting the result of source reconstructing on a cortical mesh
   link:  /example/plotting_the_result_of_source_reconstructing_on_a_cortical_mesh
+
+- name:  Re-reference EEG and iEEG data
+  link:  /example/rereference
 
 - name:  Source statistics
   link:  /example/source_statistics
@@ -163,6 +196,9 @@
 - name:  Testing BEM created EEG lead fields
   link:  /example/testing_bem_created_leadfields
 
+- name:  Use denoising source separation (DSS) to remove ECG artifacts
+  link:  /example/use_denoising_source_separation_dss_to_remove_ecg_artifacts
+
 - name:  Use independent component analysis (ICA) to remove ECG artifacts
   link:  /example/use_independent_component_analysis_ica_to_remove_ecg_artifacts
 
@@ -174,6 +210,9 @@
 
 - name:  Use your own forward leadfield model in an inverse beamformer computation
   link:  /example/use_your_own_forward_leadfield_model_in_an_inverse_beamformer_computation
+
+- name:  Making a synchronous movie of EEG or NIRS combined with video recordings
+  link:  /example/video_eeg
 
 - name:  Can I create an artificial CTF dataset using MATLAB?
   link:  /example/writing_simulated_data_to_a_ctf_dataset

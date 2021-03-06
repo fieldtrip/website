@@ -12,7 +12,7 @@ title: ft_preproc_bandpassfilter
    dat        data matrix (Nchans X Ntime)
    Fsample    sampling frequency in Hz
    Fbp        frequency band, specified as [Fhp Flp]
-   N          optional filter order, default is 4 (but) or dependent upon
+   N          optional filter order, default is 4 (but) or dependent on
               frequency band and data length (fir/firls)
    type       optional filter type, can be
                 'but' Butterworth IIR filter (default)
@@ -51,6 +51,11 @@ title: ft_preproc_bandpassfilter
  but may have severe issues. For instance, it has the implication that the time
  domain signal is periodic. Another issue pertains to that frequencies are
  not well defined over short time intervals; particularly for low frequencies.
+
+ If the data contains NaNs, these will affect the output. With an IIR
+ filter, and/or with FFT-filtering, local NaNs will spread to the whole
+ time series. With a FIR filter, local NaNs will spread locally, depending
+ on the filter order.
 
  See also PREPROC
 ```

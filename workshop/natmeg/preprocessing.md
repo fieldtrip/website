@@ -19,7 +19,7 @@ This tutorial contains the hands-on material of the [NatMEG workshop](/workshop/
 
 ## Background
 
-In FieldTrip the preprocessing of data refers to the reading of the data, segmenting the data around interesting events such as triggers, temporal filtering and (optionally) rereferencing. The **[ft_preprocessing](/reference/ft_preprocessing)** function takes care of all these steps, i.e., it reads the data and applies the preprocessing options.
+In FieldTrip the preprocessing of data refers to the reading of the data, segmenting the data around interesting events such as triggers, temporal filtering and (optionally) rereferencing. The **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** function takes care of all these steps, i.e., it reads the data and applies the preprocessing options.
 
 There are largely two alternative approaches for preprocessing, which especially differ in the amount of memory required. The first approach is to read all data from the file into memory, apply filters, and subsequently cut the data into interesting segments. The second approach is to first identify the interesting segments, read those segments from the data file and apply the filters to those segments only. The remainder of this tutorial explains the second approach, as that is the most appropriate for large data sets such as the MEG data used in this tutorial. The approach for reading and filtering continuous data and segmenting afterwards is explained in [another tutorial](/tutorial/continuous).
 
@@ -28,7 +28,7 @@ Preprocessing involves several steps including identifying individual trials fro
 - according to a specific trigger channel
 - according to your own criteria when you write your own trial function, e.g. for conditional trigger sequences, or by detecting EMG onset
 
-Both depend on **[ft_definetrial](/reference/ft_definetrial)**. The output of **[ft_definetrial](/reference/ft_definetrial)** is a configuration structure containing the field _cfg.trl_. This is a matrix representing the relevant parts of the raw datafile which are to be selected for further processing. Each row in the trl-matrix represents a single epoch-of-interest, and the trl-matrix has 3 or more columns. The first column defines (in samples) the beginpoint of each epoch with respect to how the data are stored in the raw datafile. The second column defines (in samples) the endpoint of each epoch, and the third column specifies the offset (in samples) of the first sample within each epoch with respect to timepoint 0 within that epoch. The subsequent columns can be used to keep information about each trial.
+Both depend on **[ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_definetrial.m)**. The output of **[ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_definetrial.m)** is a configuration structure containing the field _cfg.trl_. This is a matrix representing the relevant parts of the raw datafile which are to be selected for further processing. Each row in the `trl` matrix represents a single epoch-of-interest, and the `trl` matrix has 3 or more columns. The first column defines (in samples) the beginpoint of each epoch with respect to how the data are stored in the raw datafile. The second column defines (in samples) the endpoint of each epoch, and the third column specifies the offset (in samples) of the first sample within each epoch with respect to timepoint 0 within that epoch. The subsequent columns can be used to keep information about each trial.
 
 If you do not specify your own triallfunction, the 4th column will by default contain the trigger value. When you use your own triallfunction, you can add any number of extra columns to the _trl_ matrix. These will be added to the data in the _.trialinfo_ field. This is very handy if you want to add information of e.g. response-buttons, response-times, etc., to each trial. As you will see, we will use this functionality to preprocess both the standard and deviant tones together, and then separating them later for averaging.
 
@@ -38,15 +38,15 @@ If you do not specify your own triallfunction, the 4th column will by default co
 
 ## Browsing the data prior to preprocessing
 
-Before we start preprocessing our data and calculating event-related fields and potentials, we will first have a look at our data while it unprocessed and not yet cut-up into trials (in FieldTrip parlour: _raw_-data). To do this, we use **[ft_databrowser](/reference/ft_databrowser)**. Note that **[ft_databrowser](/reference/ft_databrowser)** is very memory efficient, as it does not read all data in memory - only the part that it displays.
+Before we start preprocessing our data and calculating event-related fields and potentials, we will first have a look at our data while it unprocessed and not yet cut-up into trials (in FieldTrip parlour: _raw_-data). To do this, we use **[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_databrowser.m)**. Note that **[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_databrowser.m)** is very memory efficient, as it does not read all data in memory - only the part that it displays.
 
 ### How can I use the databrowser?
 
 The databrowser can be used to look at your raw or preprocessed data and annotate time periods at which specific events happen. Originally designed to identify sleep spindles, it's current main purpose is to do quality checks and visual artifact detection.
 
-The databrowser supports three viewmodes: butterfly, vertical or component. In 'butterfly' viewmode, all signal traces will be plotted on top of each other, in 'vertical' viewmode, the traces will be below each other. The 'component' viewmode is to be used for data that is decomposed into independent components, see **[ft_componentanalysis](/reference/ft_componentanalysis)**. Components will be plotted as in the vertical viewmode, but including the coponent topography to the left of the time trace. As an alternative to these three viewmodes, if you provide a cfg.layout, then the function will try to plot your data according to the sensor positions specified in the layout.
+The databrowser supports three viewmodes: butterfly, vertical or component. In 'butterfly' viewmode, all signal traces will be plotted on top of each other, in 'vertical' viewmode, the traces will be below each other. The 'component' viewmode is to be used for data that is decomposed into independent components, see **[ft_componentanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_componentanalysis.m)**. Components will be plotted as in the vertical viewmode, but including the coponent topography to the left of the time trace. As an alternative to these three viewmodes, if you provide a cfg.layout, then the function will try to plot your data according to the sensor positions specified in the layout.
 
-When the databrowser opens, you will see buttons to navigate along the bottom of the screen and buttons for artifact annotation to the right. Note that also artifacts that were marked with the automatic artifact detection methods will be displayed here, see **[automatic artifact rejection](/tutorial/automatic_artifact_rejection)**. You can click on one of the artifact types, drag over a timewindow to select the start and the end of the artifact and then double click into the selected area to mark this artifact. To remove such an artifact, simply repeat the same procedure.
+When the databrowser opens, you will see buttons to navigate along the bottom of the screen and buttons for artifact annotation to the right. Note that also artifacts that were marked with the automatic artifact detection methods will be displayed here, see the [automatic artifact rejection tutorial](/tutorial/automatic_artifact_rejection). You can click on one of the artifact types, drag over a timewindow to select the start and the end of the artifact and then double click into the selected area to mark this artifact. To remove such an artifact, simply repeat the same procedure.
 
 {% include markup/warning %}
 The databrowser will **not** change your data in any way. If you specify a cfg as output, it will just store your selected or de-selected artifacts in your cfg.
@@ -54,9 +54,9 @@ The databrowser will **not** change your data in any way. If you specify a cfg a
 
 ### Visualization combined data
 
-Since we have a dataset that contains both MEG and EEG data, we will browse through the dataset looking at different channel subsets at a time. We will first look at the MEG data. As you know, the Neuromag/Elekta MEG data has two types of channels; magnetometers and planar gradiometers, we will look at them separately as well. If you are not familiar yet with the difference between different MEG sensor designs, take a look [here in this video](http://www.youtube.com/watch?v=CPj4jJACeIs&t=5m58s).
+Since we have a dataset that contains both MEG and EEG data, we will browse through the dataset looking at different channel subsets at a time. We will first look at the MEG data. As you know, the Neuromag/Elekta/Megin MEG data has two types of channels; magnetometers and planar gradiometers, we will look at them separately as well. If you are not familiar yet with the difference between different MEG sensor designs, take a look [here in this video](http://www.youtube.com/watch?v=CPj4jJACeIs&t=5m58s).
 
-The MEG dataset that we use in this tutorial is available as [oddball1_mc_downsampled.fif](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/natmeg/oddball1_mc_downsampled.fif) from our ftp server.
+The MEG dataset that we use in this tutorial is available as [oddball1_mc_downsampled.fif](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/natmeg/oddball1_mc_downsampled.fif) from our FTP server.
 
 We will first start with the magnetometer
 
@@ -123,13 +123,13 @@ At first glance, can you see any differences between the MEG and EEG data or art
 
 The following steps are taken in the MEG section of the tutorial:
 
-- Define segments of data of interest (the trial definition) using **[ft_definetrial](/reference/ft_definetrial)**
-- Read the data into Matlab using **[ft_preprocessing](/reference/ft_preprocessing)**
-- Clean the data in a semi-automatic way using **[ft_rejectvisual](/reference/ft_rejectvisual)**
-- Compute event-related fields using **[ft_timelockanalysis](/reference/ft_timelockanalysis)**
-- Visualize the magnetometer results. You can plot the ERF of one channel with **[ft_singleplotER](/reference/ft_singleplotER)** or several channels with **[ft_multiplotER](/reference/ft_multiplotER)**, or by creating a topographic plot for a specified time- interval with **[ft_topoplotER](/reference/ft_topoplotER)**
-- Combine horizontal and vertical planar gradiometers with **[ft_combineplanar](/reference/ft_combineplanar)**
-- Plot the gradiometer data using **[ft_multiplotER](/reference/ft_multiplotER)**, **[ft_singleplotER](/reference/ft_singleplotER)**, and **[ft_topoplotER](/reference/ft_topoplotER)**
+- Define segments of data of interest (the trial definition) using **[ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_definetrial.m)**
+- Read the data into Matlab using **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)**
+- Clean the data in a semi-automatic way using **[ft_rejectvisual](https://github.com/fieldtrip/fieldtrip/blob/release/ft_rejectvisual.m)**
+- Compute event-related fields using **[ft_timelockanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockanalysis.m)**
+- Visualize the magnetometer results. You can plot the ERF of one channel with **[ft_singleplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_singleplotER.m)** or several channels with **[ft_multiplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_multiplotER.m)**, or by creating a topographic plot for a specified time- interval with **[ft_topoplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_topoplotER.m)**
+- Combine horizontal and vertical planar gradiometers with **[ft_combineplanar](https://github.com/fieldtrip/fieldtrip/blob/release/ft_combineplanar.m)**
+- Plot the gradiometer data using **[ft_multiplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_multiplotER.m)**, **[ft_singleplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_singleplotER.m)**, and **[ft_topoplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_topoplotER.m)**
 
 {% include image src="/assets/img/workshop/natmeg/preprocessing/natmeg_flowchart1.png" width="400" %}
 
@@ -137,9 +137,9 @@ _Figure: A schematic overview of the steps in averaging of event related fields_
 
 ### Reading and preprocessing the interesting trials
 
-Using the FieldTrip function **[ft_definetrial](/reference/ft_definetrial)** you can define the segments of data that will be read in for preprocessing. Trials are defined by their _begin_ and _end_-sample in the data file and each trial has an _offset_ that defines where the relative t=0 point (usually the moment of stimulus onset, i.e. on the stimulus-trigger) is for that trial.
+Using the FieldTrip function **[ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_definetrial.m)** you can define the segments of data that will be read in for preprocessing. Trials are defined by their _begin_ and _end_-sample in the data file and each trial has an _offset_ that defines where the relative t=0 point (usually the moment of stimulus onset, i.e. on the stimulus-trigger) is for that trial.
 
-The MEG dataset that we use in this tutorial is available as [oddball1_mc_downsampled.fif](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/natmeg/oddball1_mc_downsampled.fif) from our ftp server. Furthermore, you should download and save the custom trial function [trialfun_oddball_stimlocked.m](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/natmeg/trialfun_oddball_stimlocked.m) to a directory that is on your MATLAB path.
+The MEG dataset that we use in this tutorial is available as [oddball1_mc_downsampled.fif](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/natmeg/oddball1_mc_downsampled.fif) from our FTP server. Furthermore, you should download and save the custom trial function [trialfun_oddball_stimlocked.m](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/natmeg/trialfun_oddball_stimlocked.m) to a directory that is on your MATLAB path.
 
 We will now do the trial definition for both the standard and deviant trial
 
@@ -157,7 +157,7 @@ We will now do the trial definition for both the standard and deviant trial
 
 This results in a cfg.trl in which the beginning, the trigger offset and the end of each trial relative to the beginning of the raw data is defined. In addition, we've added an extra column in the _.trl_ that describing whether the trial consist of a normal tone (1) or deviant (2). We will use this later to separately average these conditions. You can find more details about the trialinfo field in the [FAQ: Is it possible to keep track of trial-specific information in my FieldTrip analysis pipeline?](/faq/is_it_possible_to_keep_track_of_trial-specific_information_in_my_fieldtrip_analysis_pipeline) and [Making your own trialfun for conditional trial definition](/example/making_your_own_trialfun_for_conditional_trial_definition).
 
-The output of **[ft_definetrial](/reference/ft_definetrial)** is an updated _cfg_ strucure that can be used for **[ft_preprocessing](/reference/ft_preprocessing)**, which uses the information about the start-sample, end-sample and offset to cut it up in separate trials and to align the segments to each other.
+The output of **[ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_definetrial.m)** is an updated _cfg_ strucure that can be used for **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)**, which uses the information about the start-sample, end-sample and offset to cut it up in separate trials and to align the segments to each other.
 
     cfg.continuous              = 'yes';
     cfg.hpfilter                = 'no';
@@ -174,7 +174,7 @@ Save the preprocessed data to dis
 
     save data_MEG data_MEG -v7.3
 
-The output of **[ft_preprocessing](/reference/ft_preprocessing)** is the structure data_MEG which has the following field
+The output of **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** is the structure data_MEG which has the following field
 
     data_MEG =
 
@@ -232,11 +232,11 @@ We analyze EEG or MEG signals to investigate the modulation of the measured brai
 
 #### Timelockanalysis
 
-The function **[ft_timelockanalysis](/reference/ft_timelockanalysis)** makes an average over all the trials in a segmented raw data structure. It requires preprocessed data, i.e. what we just did.
+The function **[ft_timelockanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockanalysis.m)** makes an average over all the trials in a segmented raw data structure. It requires preprocessed data, i.e. what we just did.
 
     load data_MEG_clean
 
-We will first apply some additional filters for visualization purposes using **[ft_preprocessing](/reference/ft_preprocessing)**.
+We will first apply some additional filters for visualization purposes using **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)**.
 
     cfg = [];
     cfg.lpfilter        = 'yes';
@@ -245,7 +245,7 @@ We will first apply some additional filters for visualization purposes using **[
     cfg.baselinewindow  = [-0.5 0];
     data_MEG_filt       = ft_preprocessing(cfg,data_MEG_clean);
 
-The trials belonging to one condition will now be averaged with the onset of the stimulus time aligned to the zero-time point (the onset of the last word in the sentence). This is done with the function **[ft_timelockanalysis](/reference/ft_timelockanalysis)**. The input to this procedure is the data_EEG structure generated by **[ft_preprocessing](/reference/ft_preprocessing)**.
+The trials belonging to one condition will now be averaged with the onset of the stimulus time aligned to the zero-time point (the onset of the last word in the sentence). This is done with the function **[ft_timelockanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockanalysis.m)**. The input to this procedure is the data_EEG structure generated by **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)**.
 
 We will use cfg.trials to specify which trials should go into the average. We will use this to split the data into the oddball and standard trials. The cfg.trials field is simply a vector with the trial indices of the trials we want to average. Since the trigger core is in data.trialinfo, we can use that to select the trials of interest.
 
@@ -256,7 +256,7 @@ We will use cfg.trials to specify which trials should go into the average. We wi
     cfg.trials          = find(data_MEG_filt.trialinfo(:,1) == 2);
     ERF_oddball         = ft_timelockanalysis(cfg,data_MEG_filt);
 
-We will also calculate the difference between both conditions using **[ft_math](/reference/ft_math)**.
+We will also calculate the difference between both conditions using **[ft_math](https://github.com/fieldtrip/fieldtrip/blob/release/ft_math.m)**.
 
     cfg = [];
     cfg.operation = 'subtract';
@@ -282,9 +282,9 @@ The most important field is ERF_standard.avg, containing the average over all tr
 
 #### Plotting the results using the magnetometers
 
-Using the plot functions **[ft_multiplotER](/reference/ft_multiplotER)**, **[ft_singleplotER](/reference/ft_singleplotER)** and **[ft_topoplotER](/reference/ft_topoplotER)** you can make plots of the average. You can find information about plotting also in the [Plotting data at the channel and source level](/tutorial/plotting) tutorial.
+Using the plot functions **[ft_multiplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_multiplotER.m)**, **[ft_singleplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_singleplotER.m)** and **[ft_topoplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_topoplotER.m)** you can make plots of the average. You can find information about plotting also in the [Plotting data at the channel and source level](/tutorial/plotting) tutorial.
 
-Use **[ft_multiplotER](/reference/ft_multiplotER)** to plot all sensors in one figure:
+Use **[ft_multiplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_multiplotER.m)** to plot all sensors in one figure:
 
     cfg = [];
     cfg.fontsize = 6;
@@ -305,7 +305,7 @@ _Figure: A plot of the average of all conditions for all channels plotted using 
 
 This plots the event related fields for all sensors arranged topographically according to their position in the helmet. You can use the zoom button (magnifying glass) to enlarge parts of the figure.
 
-To plot one sensor data use **[ft_singleplotER](/reference/ft_singleplotER)** and specify the name of the channel you are interested in, for instance 'MEG0211
+To plot one sensor data use **[ft_singleplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_singleplotER.m)** and specify the name of the channel you are interested in, for instance 'MEG0211
 
     cfg = [];
     cfg.fontsize = 6;
@@ -375,7 +375,7 @@ As you could see in the previous section, the magnetometers may give a topograph
 
 We are now going to create the same plots as before, but for the combined planar gradiometers.
 
-Use **[ft_multiplotER](/reference/ft_multiplotER)** to plot all sensors in one figure:
+Use **[ft_multiplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_multiplotER.m)** to plot all sensors in one figure:
 
     cfg = [];
     cfg.fontsize = 6;
@@ -385,7 +385,7 @@ Use **[ft_multiplotER](/reference/ft_multiplotER)** to plot all sensors in one f
 
     figure;
     ft_multiplotER(cfg, ERF_standard_cmb, ERF_oddball_cmb, ERF_diff_cmb);
-    legend({'Standard’, ‘Oddball’, ‘Difference'});
+    legend({'Standard', 'Oddball', 'Difference'});
 
     set(gcf,'Position',[1 1 1239 945]);
     print -dpng natmeg_erf4.png
@@ -398,7 +398,7 @@ _Figure: The event related fields plotted using ft_multiplotER. The event relate
 How does this figure compare to the plot with the magnetometer data? Do you understand why these are different?
 {% include markup/end %}
 
-We will now zoom in on one combined channel, for instance in the combined channel ‘MEG0222+0223
+We will now zoom in on one combined channel, for instance in the combined channel 'MEG0222+0223
 
     cfg = [];
     cfg.showlabels = 'yes';
@@ -410,7 +410,7 @@ We will now zoom in on one combined channel, for instance in the combined channe
 
     figure;
     ft_singleplotER(cfg, ERF_standard_cmb, ERF_oddball_cmb, ERF_diff_cmb);
-    legend({'Standard’, ‘Oddball’, ‘Difference'});
+    legend({'Standard', 'Oddball', 'Difference'});
 
     print -dpng natmeg_erf5.png
 
@@ -465,12 +465,12 @@ Now that you have looked at the data using the MEG sensors we are going to switc
 
 The EEG section of this tutorial resembles the MEG section. We will take the following steps:
 
-- Define segments of data of interest (the trial definition) using **[ft_definetrial](/reference/ft_definetrial)**
-- Read the data into Matlab using **[ft_preprocessing](/reference/ft_preprocessing)**
-- Clean the data in a semi-automatic way using **[ft_rejectvisual](/reference/ft_rejectvisual)**
-- Calculate event-related potentials using **[ft_timelockanalysis](/reference/ft_timelockanalysis)**
-- Visualize the results using **[ft_multiplotER](/reference/ft_multiplotER)**, **[ft_singleplotER](/reference/ft_singleplotER)**, and **[ft_topoplotER](/reference/ft_topoplotER)**
-- Calculate scalp-current density with **[ft_scalpcurrentdensity](/reference/ft_scalpcurrentdensity)**
+- Define segments of data of interest (the trial definition) using **[ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_definetrial.m)**
+- Read the data into Matlab using **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)**
+- Clean the data in a semi-automatic way using **[ft_rejectvisual](https://github.com/fieldtrip/fieldtrip/blob/release/ft_rejectvisual.m)**
+- Calculate event-related potentials using **[ft_timelockanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockanalysis.m)**
+- Visualize the results using **[ft_multiplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_multiplotER.m)**, **[ft_singleplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_singleplotER.m)**, and **[ft_topoplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_topoplotER.m)**
+- Calculate scalp-current density with **[ft_scalpcurrentdensity](https://github.com/fieldtrip/fieldtrip/blob/release/ft_scalpcurrentdensity.m)**
 
 {% include image src="/assets/img/workshop/natmeg/preprocessing/natmeg_flowchart2.png" width="400" %}
 
@@ -478,7 +478,7 @@ _A schematic overview of the steps in averaging of event related potentials_
 
 ### Reading and preprocessing the interesting trials
 
-We start by repeating the same preprocessing procedure as with the MEG. We start with the trial definition for the standard and oddball trials using **[ft_definetrial](/reference/ft_definetrial)** and **[ft_preprocessing](/reference/ft_preprocessing)**.
+We start by repeating the same preprocessing procedure as with the MEG. We start with the trial definition for the standard and oddball trials using **[ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_definetrial.m)** and **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)**.
 
     cfg = [];
     cfg.dataset = 'oddball1_mc_downsampled.fif';
@@ -525,7 +525,7 @@ The output of data_EEG is the structure data_EEG which has the following field
             elec: [1x1 struct]
              cfg: [1x1 struct]
 
-As before, we will use **[ft_rejectartifact](/reference/ft_rejectartifact)** to clean the data of bad trials (and perhaps channels).
+As before, we will use **[ft_rejectartifact](https://github.com/fieldtrip/fieldtrip/blob/release/ft_rejectartifact.m)** to clean the data of bad trials (and perhaps channels).
 
     cfg               = [];
     cfg.metric        = 'zvalue';
@@ -534,13 +534,13 @@ As before, we will use **[ft_rejectartifact](/reference/ft_rejectartifact)** to 
 
 ### Event-related potentials (ERPs)
 
-The EEG equivalent of the Event-Related Field (ERF) is the Event-Related Potential (ERP). As with the MEG data we will first filter the data using **[ft_preprocessing](/reference/ft_preprocessing)** before calculating the ERP with **[ft_timelockanalysis](/reference/ft_timelockanalysis)**
+The EEG equivalent of the Event-Related Field (ERF) is the Event-Related Potential (ERP). As with the MEG data we will first filter the data using **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** before calculating the ERP with **[ft_timelockanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockanalysis.m)**
 
 #### Timelockanalysis
 
-The function **[ft_timelockanalysis](/reference/ft_timelockanalysis)** makes an average over all the trials in a segmented raw data structure. It requires preprocessed data, i.e. what we just did.
+The function **[ft_timelockanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockanalysis.m)** makes an average over all the trials in a segmented raw data structure. It requires preprocessed data, i.e. what we just did.
 
-We will first apply some additional filters for visualization purposes using **[ft_preprocessing](/reference/ft_preprocessing)**.
+We will first apply some additional filters for visualization purposes using **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)**.
 
     cfg = [];
     cfg.lpfilter        = 'yes';
@@ -549,7 +549,7 @@ We will first apply some additional filters for visualization purposes using **[
     cfg.baselinewindow  = [-0.5 0];
     data_EEG_filt       = ft_preprocessing(cfg,data_EEG_clean);
 
-The trials belonging to one condition will now be averaged with the onset of the stimulus time aligned to the zero-time point (the onset of the last word in the sentence). This is done with the function **[ft_timelockanalysis](/reference/ft_timelockanalysis)**. The input to this procedure is the data_EEG structure generated by **[ft_preprocessing](/reference/ft_preprocessing)**. We will use _cfg.trials_ to specify which trials should go into the average and thereby split between the oddball and standard trials.
+The trials belonging to one condition will now be averaged with the onset of the stimulus time aligned to the zero-time point (the onset of the last word in the sentence). This is done with the function **[ft_timelockanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockanalysis.m)**. The input to this procedure is the data_EEG structure generated by **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)**. We will use _cfg.trials_ to specify which trials should go into the average and thereby split between the oddball and standard trials.
 
     cfg = [];
     cfg.trials          = find(data_EEG_filt.trialinfo(:,1) == 1);
@@ -558,7 +558,7 @@ The trials belonging to one condition will now be averaged with the onset of the
     cfg.trials          = find(data_EEG_filt.trialinfo(:,1) == 2);
     ERP_oddball         = ft_timelockanalysis(cfg, data_EEG_filt);
 
-We will also calculate the difference between both conditions using **[ft_math](/reference/ft_math)**.
+We will also calculate the difference between both conditions using **[ft_math](https://github.com/fieldtrip/fieldtrip/blob/release/ft_math.m)**.
 
     cfg = [];
     cfg.operation = 'subtract';
@@ -584,9 +584,9 @@ The most important field is _ERP_oddball.avg_, containing the average over all t
 
 #### Plotting the results of EEG
 
-Using the plot functions **[ft_multiplotER](/reference/ft_multiplotER)**, **[ft_singleplotER](/reference/ft_singleplotER)** and **[ft_topoplotER](/reference/ft_topoplotER)** you can make plots of the average. You can find information about plotting also in the [Plotting data at the channel and source level](/tutorial/plotting) tutorial.
+Using the plot functions **[ft_multiplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_multiplotER.m)**, **[ft_singleplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_singleplotER.m)** and **[ft_topoplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_topoplotER.m)** you can make plots of the average. You can find information about plotting also in the [Plotting data at the channel and source level](/tutorial/plotting) tutorial.
 
-Use **[ft_multiplotER](/reference/ft_multiplotER)** to plot all sensors in one figure:
+Use **[ft_multiplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_multiplotER.m)** to plot all sensors in one figure:
 
     cfg          = [];
     cfg.fontsize = 6;
@@ -606,7 +606,7 @@ _Figure: The event related potentials plotted using ft_multiplotER. The event re
 
 This plots the event related fields for all sensors arranged topographically according to their position in the helmet. You can use the zoom button (magnifying glass) to enlarge parts of the figure.
 
-Using **[ft_singleplotER](/reference/ft_singleplotER)** we are going to plot a single EEG channel, for instance 'EEG020
+Using **[ft_singleplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_singleplotER.m)** we are going to plot a single EEG channel, for instance 'EEG020
 
     cfg            = [];
     cfg.showlabels = 'yes';
@@ -735,7 +735,7 @@ How do these results compare to the MEG results?
 
 ## Combining MEG and EEG
 
-So far we have been splitting our combined dataset into separate EEG and MEG datasets. At some point it can be useful to recombine both data subsets into one combined dataset. We can do this using **[ft_appenddata](/reference/ft_appenddata)**.
+So far we have been splitting our combined dataset into separate EEG and MEG datasets. At some point it can be useful to recombine both data subsets into one combined dataset. We can do this using **[ft_appenddata](https://github.com/fieldtrip/fieldtrip/blob/release/ft_appenddata.m)**.
 
 First we will load our data subset
 
@@ -761,7 +761,7 @@ As we can see, the new dataset contains all 434 channels (128 EEG + 306 MEG) aga
          fsample: 250
              cfg: [1x1 struct]
 
-Early on we used **[ft_rejectvisual](/reference/ft_rejectvisual)** to reject trials for the EEG and MEG data separately. The consequence of this is that it is likely that we rejected different trials in the EEG and in the MEG data subset. To avoid this we can run **[ft_rejectvisual](/reference/ft_rejectvisual)** on the complete dataset while still only using a subset of channels for visualization. We can iteratively clean the dataset while looking at a separate subset of channels on each iteration.
+Early on we used **[ft_rejectvisual](https://github.com/fieldtrip/fieldtrip/blob/release/ft_rejectvisual.m)** to reject trials for the EEG and MEG data separately. The consequence of this is that it is likely that we rejected different trials in the EEG and in the MEG data subset. To avoid this we can run **[ft_rejectvisual](https://github.com/fieldtrip/fieldtrip/blob/release/ft_rejectvisual.m)** on the complete dataset while still only using a subset of channels for visualization. We can iteratively clean the dataset while looking at a separate subset of channels on each iteration.
 
 First we will clean the dataset based on the EEG channel
 
@@ -786,6 +786,6 @@ We now have the same amount of trials for each type of sensor.
 
 ## Summary and suggested further reading
 
-In this tutorial we learned how to look at raw MEG and EEG data, define trials based on trigger codes, preprocess the data - including filtering and re-referencing, and average the data to ERPs and ERFs. We then learned how to display the results in terms of their timecourses as well as their corresponding topographies. We also got a good sense of the differences in topographies of fields and potentials when we compared MEG magnetometers with gradiometers and EEG. Finally, we also showed you how you are able to combine EEG and MEG if you would like to do analysis on them simultaneously.
+In this tutorial we learned how to look at raw MEG and EEG data, define trials based on trigger codes, preprocess the data - including filtering and re-referencing, and average the data to ERPs and ERFs. We then learned how to display the results in terms of their time courses as well as their corresponding topographies. We also got a good sense of the differences in topographies of fields and potentials when we compared MEG magnetometers with gradiometers and EEG. Finally, we also showed you how you are able to combine EEG and MEG if you would like to do analysis on them simultaneously.
 
 If you are interested in a different analysis of your data that shows event related changes in the oscillatory components of the signal, you can continue with the [combined EEG-MEG timefrequency tutorial](/workshop/natmeg/timefrequency) or the standard [time-frequency analysis](/tutorial/timefrequencyanalysis) tutorial.

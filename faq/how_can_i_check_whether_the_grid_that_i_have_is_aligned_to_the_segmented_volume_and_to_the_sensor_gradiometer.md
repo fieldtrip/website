@@ -5,9 +5,9 @@ tags: [faq, source, headmodel, seg]
 
 # How can I check whether the grid that I have is aligned to the segmented volume and to the sensor gradiometer?
 
-Having 'grid', 'vol', and 'grad', you can use the following:
+Having a source model (i.e., positions of the dipoles), a head model (i.e., volume conduction model of the head), and the 'grad' structure, (i.e., information of the gradiometers) you can use the following:
 
-    Hold on
-    plot3(grid.pos(:,1),grid.pos(:,2),grid.pos(:,3),'.');
-    ft_plot_headmodel(vol);
+    hold on
+    plot3(sourcemodel.pos(:,1), sourcemodel.pos(:,2), sourcemodel.pos(:,3),'.');
+    ft_plot_headmodel(headmodel);
     ft_plot_sens(grad);

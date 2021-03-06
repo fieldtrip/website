@@ -5,7 +5,7 @@ tags: [bids, sharing]
 
 # BIDS - the brain imaging data structure
 
-FieldTrip can read data from all MEG, EEG, iEEG and MRI file formats that are supported in BIDS. Furthermore, it includes the **[data2bids](/reference/data2bids)** function to convert data to the BIDS structure. This function can convert data formats (if needed), and writes the accompanying "sidecar files" that contain metadata about channels, coordinates, events, etcetera to the .json and .tsv format.
+FieldTrip can read data from all MEG, EEG, iEEG and MRI file formats that are supported in BIDS. Furthermore, it includes the **[data2bids](https://github.com/fieldtrip/fieldtrip/blob/release/data2bids.m)** function to convert data to the BIDS structure. This function can convert data formats (if needed), and writes the accompanying "sidecar files" that contain metadata about channels, coordinates, events, etcetera to the .json and .tsv format.
 
 {% include markup/warning %}
 We recommend that you convert your raw data to BIDS **prior** to implementing your analyses scripts. That will make it much easier to share the scripts and derived data.

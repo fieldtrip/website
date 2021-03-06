@@ -25,8 +25,8 @@ In the [Preprocessing and event-related activity](/workshop/natmeg/preprocessing
 
 ### Source model
 
-In this tutorial we will use the dipole fitting approach (1) to localise the neuronal activity and (2) to estimate the time course of the activity. This approach is most suitable for relatively early cortical activity which is not spread over many or large cortical areas. Dipole fitting assumes that a small number of point-like equivalent current dipoles (ECDs) can describe the measured topography. It optimises the location, the orientation and the amplitude of the model dipoles in order to minimise the difference between the model and measured topography. A good introduction to dipole fitting is provided by Scherg (1990) ((Source localization by fitting an equivalent current dipole model
-Scherg M. [Fundamentals of dipole source potential analysis](http://sputnik.ece.ucsb.edu/wcsl/courses/ECE594/594C_F10Madhow/dipole_model_scherg90.pdf). In: Auditory evoked magnetic fields and electric potentials. eds. F. Grandori, M. Hoke and G.L. Romani. Advances in Audiology, vol. 6. Karger, Basel, pp 40-69, 1990)).
+In this tutorial we will use the dipole fitting approach (1) to localise the neuronal activity and (2) to estimate the time course of the activity. This approach is most suitable for relatively early cortical activity which is not spread over many or large cortical areas. Dipole fitting assumes that a small number of point-like equivalent current dipoles (ECDs) can describe the measured topography. It optimises the location, the orientation and the amplitude of the model dipoles in order to minimise the difference between the model and measured topography. A good introduction to dipole fitting is provided by Scherg (Source localization by fitting an equivalent current dipole model
+Scherg M. [Fundamentals of dipole source potential analysis](http://sputnik.ece.ucsb.edu/wcsl/courses/ECE594/594C_F10Madhow/dipole_model_scherg90.pdf). In: Auditory evoked magnetic fields and electric potentials. eds. F. Grandori, M. Hoke and G.L. Romani. Advances in Audiology, vol. 6. Karger, Basel, pp 40-69, 1990).
 
 ### Volume conduction model
 
@@ -36,16 +36,16 @@ Scherg M. [Fundamentals of dipole source potential analysis](http://sputnik.ece.
 
 To fit the dipole models to the data, we will perform the following steps:
 
-- We will preprocess the anatomical images in MATLAB. First, the mri image is read in with **[ft_read_mri](/reference/ft_read_mri)**, then the mri is aligned with the MEG data using **[ft_volumerealign](/reference/ft_volumerealign)**, and subsequently it is resliced with **[ft_volumereslice](/reference/ft_volumereslice)** to ensure that the volume is isotropic and to align the volume with the cardinal axes of the coordinate system.
-- The resliced volume is segmented to obtain the anatomical description of the brain, skull and skin with **[ft_volumesegment](/reference/ft_volumesegment)**.
-- After creating meshes with the triangulated description of the outer brain, skull and skin compartment with **[ft_prepare_mesh](/reference/ft_prepare_mesh)**, we create a volume conduction model using **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)**;
-- We preprocess the MEG and EEG data using **[ft_definetrial](/reference/ft_definetrial)** and **[ft_preprocessing](/reference/ft_preprocessing)** and compute the average over trials using **[ft_timelockanalysis](/reference/ft_timelockanalysis)**.
-- Using **[ft_dipolefitting](/reference/ft_dipolefitting)** we will fit dipole models to the averaged data for each condition and to the difference between the conditions.
-- Throughout this tutorial, we will use the [high-level plotting](/tutorial/plotting) functions to look at the data, and some [lower-level plotting](/development/module/plotting) functions to make detailled visualisations.
+- We will preprocess the anatomical images in MATLAB. First, the mri image is read in with **[ft_read_mri](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_mri.m)**, then the mri is aligned with the MEG data using **[ft_volumerealign](https://github.com/fieldtrip/fieldtrip/blob/release/ft_volumerealign.m)**, and subsequently it is resliced with **[ft_volumereslice](https://github.com/fieldtrip/fieldtrip/blob/release/ft_volumereslice.m)** to ensure that the volume is isotropic and to align the volume with the cardinal axes of the coordinate system.
+- The resliced volume is segmented to obtain the anatomical description of the brain, skull and skin with **[ft_volumesegment](https://github.com/fieldtrip/fieldtrip/blob/release/ft_volumesegment.m)**.
+- After creating meshes with the triangulated description of the outer brain, skull and skin compartment with **[ft_prepare_mesh](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_mesh.m)**, we create a volume conduction model using **[ft_prepare_headmodel](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_headmodel.m)**;
+- We preprocess the MEG and EEG data using **[ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_definetrial.m)** and **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** and compute the average over trials using **[ft_timelockanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockanalysis.m)**.
+- Using **[ft_dipolefitting](https://github.com/fieldtrip/fieldtrip/blob/release/ft_dipolefitting.m)** we will fit dipole models to the averaged data for each condition and to the difference between the conditions.
+- Throughout this tutorial, we will use the [high-level plotting](/tutorial/plotting) functions to look at the data, and some [lower-level plotting](/development/module/plotting) functions to make detailled visualizations.
 
 ### Read and visualise the anatomical data
 
-We start with the anatomical MRI data, which comes directly from the scanner in DICOM format. You can download the [dicom.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/natmeg/dicom.zip) from our ftp server. We suggest that you unzip the dicom files in a separate directory.
+We start with the anatomical MRI data, which comes directly from the scanner in DICOM format. You can download the [dicom.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/natmeg/dicom.zip) from our FTP server. We suggest that you unzip the dicom files in a separate directory.
 
 DICOM datasets consist of a large number of files, one per slice. As filename you have to specify a single file, the reading function will automatically determine which other slices are part of the same anatomical volume and put them in the correct order.
 
@@ -54,13 +54,13 @@ DICOM datasets consist of a large number of files, one per slice. As filename yo
 
 We also read the geometrical data from the fif file. It contains information about the MEG magnetometer and gradiometer positions (the “grad” structure), about the EEG electrodes (the “elec” structure) and about the head shape.
 
-The MEG dataset is available as [oddball1_mc_downsampled.fif](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/natmeg/oddball1_mc_downsampled.fif) from our ftp server.
+The MEG dataset is available as [oddball1_mc_downsampled.fif](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/natmeg/oddball1_mc_downsampled.fif) from our FTP server.
 
     dataset = 'oddball1_mc_downsampled.fif';
 
-    grad    = ft_read_sens(dataset,'senstype','meg');
-    elec    = ft_read_sens(dataset,'senstype','eeg');
-    shape   = ft_read_headshape(dataset,'unit','cm');
+    grad    = ft_read_sens(dataset, 'senstype', 'meg');
+    elec    = ft_read_sens(dataset, 'senstype', 'eeg');
+    shape   = ft_read_headshape(dataset, 'unit', 'cm');
 
 The high-level plotting functions do not offer support for flexible plotting of the geometrical information. The [plotting module](/development/module/plotting), i.e. the set of functions in the fieldtrip/plotting directory, includes a number of lower-level functions to make nice figures of the various geometrical data objects. In contrast to the high-level functions, these plotting functions do **not** take a cfg as first input argument.
 
@@ -74,7 +74,7 @@ The high-level plotting functions do not offer support for flexible plotting of 
 
 {% include image src="/assets/img/workshop/natmeg/dipolefitting/natmeg_dip_geometry1.png" width="500" %}
 
-It is possible to visualise the anatomical MRI using the **[ft_sourceplot](/reference/ft_sourceplot)** function. Usually we use the function to overlay functional data from a beamformer source reconstruction on the anatomical MRI, but in the absence of the functional data it will simply show the anatomical MRI. Besides showing the MRI, you can also use the function to see how the MRI is aligned with the coordinate system, and how the voxel indices [i j k] map onto geometrical coordinates [x y z].
+It is possible to visualise the anatomical MRI using the **[ft_sourceplot](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceplot.m)** function. Usually we use the function to overlay functional data from a beamformer source reconstruction on the anatomical MRI, but in the absence of the functional data it will simply show the anatomical MRI. Besides showing the MRI, you can also use the function to see how the MRI is aligned with the coordinate system, and how the voxel indices [i j k] map onto geometrical coordinates [x y z].
 
     figure
     cfg = [];
@@ -90,7 +90,7 @@ You can see that the MRI is displayed upside down. That in itself is not a probl
 
 The coregistration of the anatomical MRI with the Neuromag head coordinate system is required to express the anatomical MRI in a consistent fashion relative to the MEG and EEG sensors. Since we will use the anatomical MRI to construct the volume conduction model of the head, coregistration is also a prerequisite to ensure that the volume conduction model is aligned with the sensors.
 
-The first step consists of a coarse coregistration, based on three anatomical landmarks at the nasion (i.e. at the top of the bridge of the nose) and two [pre-auricular points](/faq/how_are_the_lpa_and_rpa_points_defined). We use **[ft_volumerealign](/reference)** with cfg.method=‘interactive’. It allows us to click on a voxel, and to press ’n’, ‘l’ or ‘r’ to indicate the nasion, left and right pre-auricular point respectively.
+The first step consists of a coarse coregistration, based on three anatomical landmarks at the nasion (i.e. at the top of the bridge of the nose) and two [pre-auricular points](/faq/how_are_the_lpa_and_rpa_points_defined). We use **[ft_volumerealign](https://github.com/fieldtrip/fieldtrip/blob/release/ft_volumerealign.m)** with cfg.method='interactive'. It allows us to click on a voxel, and to press 'n', 'l' or 'r' to indicate the nasion, left and right pre-auricular point respectively.
 
     cfg = [];
     cfg.method = 'interactive';
@@ -111,7 +111,7 @@ The headshape based coregistration starts with an interactive step to improve th
     save mri_realigned2 mri_realigned2
 
 {% include markup/info %}
-Check once more with **[ft_sourceplot](/reference/ft_sourceplot)** whether the coordinate system is consistent with the MRI. Is the problem of the MRI being upside down resolved? Is the coordinate system correct?
+Check once more with **[ft_sourceplot](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceplot.m)** whether the coordinate system is consistent with the MRI. Is the problem of the MRI being upside down resolved? Is the coordinate system correct?
 {% include markup/end %}
 
 We reslice the MRI on to a 1x1x1 mm cubic grid which is aligned with the coordinate axes. This is not only convenient for plotting, but we also need it later on for the imerode/imdilate image processing functions.
@@ -131,7 +131,7 @@ We reslice the MRI on to a 1x1x1 mm cubic grid which is aligned with the coordin
 
 {% include image src="/assets/img/workshop/natmeg/dipolefitting/natmeg_dip_mri_resliced.png" width="500" %}
 
-    % the low level plotting functions do not know how to deal with units,
+    % the low-level plotting functions do not know how to deal with units,
     % so make sure we have the MRI expressed in cm as well
     mri_resliced_cm = ft_convert_units(mri_resliced, 'cm');
 
@@ -150,7 +150,7 @@ Now that we have the anatomical MRI coregistered and resliced in to [isotropic](
 
     save mri_segmented mri_segmented
 
-By treating the segmentation of brain/skull/scalp as a “functional” volume, we can trick **[ft_sourceplot](/reference/ft_sourceplot)** into plotting it on top of the anatomical MRI.
+By treating the segmentation of brain/skull/scalp as a “functional” volume, we can trick **[ft_sourceplot](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceplot.m)** into plotting it on top of the anatomical MRI.
 
     cfg = [];
     cfg.funparameter = 'brain';
@@ -199,7 +199,7 @@ After having confirmed that the segmentations are consistent with the anatomical
 Why do we use fewer vertices for the outer mesh than for the inner mesh?
 {% include markup/end %}
 
-These meshes are all relatively coarse and don’t look so nice in a visualisation. Using the _isosurface_ method (also known as [Marching Cubes](http://en.wikipedia.org/wiki/Marching_cubes)) we can extract a much nicer looking skin conpartment.
+These meshes are all relatively coarse and don't look so nice in a visualization. Using the _isosurface_ method (also known as [Marching Cubes](http://en.wikipedia.org/wiki/Marching_cubes)) we can extract a much nicer looking skin conpartment.
 
     cfg = [];
     cfg.method = 'isosurface';
@@ -241,7 +241,7 @@ Now that we have the meshes, we use them to compute the volume conduction model.
     cfg.method = 'singleshell';
     headmodel_meg = ft_prepare_headmodel(cfg, mesh_brain);
 
-    headmodel_meg = ft_convert_units(headmodel_meg,'cm');
+    headmodel_meg = ft_convert_units(headmodel_meg, 'cm');
 
     save headmodel_meg headmodel_meg
 
@@ -293,7 +293,7 @@ The processing of the MEG dataset is done similar to the [Preprocessing and even
 
 #### Remove bad trials
 
-We screen for bad trials using **[ft_rejectvisual](/reference/ft_rejectvisual)**. Using your mouse, you can click-and-drag in the lower left figure to select trials that are to be removed.
+We screen for bad trials using **[ft_rejectvisual](https://github.com/fieldtrip/fieldtrip/blob/release/ft_rejectvisual.m)**. Using your mouse, you can click-and-drag in the lower left figure to select trials that are to be removed.
 
     cfg = [];
     cfg.method = 'summary';
@@ -371,7 +371,7 @@ Having constructed the volume conduction model and completed the processing of t
 Inspect the content of the source_mag structure. Can you identify where the position of the two dipoles is represented? And the orientation?
 {% include markup/end %}
 
-We can use **[ft_sourceplot](/reference/ft_sourceplot)** to plot the cross-section of the MRI at the location of the first dipole.
+We can use **[ft_sourceplot](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceplot.m)** to plot the cross-section of the MRI at the location of the first dipole.
 
     cfg = [];
     cfg.location = source_planar.dip.pos(1,:);
@@ -448,7 +448,7 @@ Now that we have a better starting point for the dipole fit, we can release the 
 
 You can see that the dipoles have moved a little bit from their original location and that they are not symmetric any more.
 
-Using the dipole locations that we fitted to the rather short time window of the M100, we can estimate the timecourse of activity. That is also done using **[ft_dipolefitting](/reference/ft_dipolefitting)**, now using both cfg.nonlinear=‘no’ and cfg.gridsearch='no’.
+Using the dipole locations that we fitted to the rather short time window of the M100, we can estimate the timecourse of activity. That is also done using **[ft_dipolefitting](https://github.com/fieldtrip/fieldtrip/blob/release/ft_dipolefitting.m)**, now using both cfg.nonlinear='no' and cfg.gridsearch='no'.
 
     cfg = [];
     cfg.latency = 'all';
@@ -628,7 +628,7 @@ This does address the problem, however also causes the skin to become thicker al
 
 A better approach is to return to the segmented anatomical MRI and to use image processing tools to fix the segmentation. The tools we will use are [imerode](http://www.mathworks.nl/help/images/ref/imerode.html) and [imdilate](http://www.mathworks.nl/help/images/ref/imdilate.html). Their effect is demonstrated in one of the [frequently asked questions](/faq/how_can_i_fine-tune_my_bem_volume_conduction_model#converting_segmentation_to_segmentation).
 
-Here we will divert from FieldTrip and use some off-the-shelf MATLAB code. We start by copying the 3-D arrays of the segmentation into three separate variables. Using |, i.e. the logical “OR” operator, we can combine the brain skull and scalp into filled volumes.
+Here we will divert from FieldTrip and use some off-the-shelf MATLAB code. We start by copying the 3-D arrays of the segmentation into three separate variables. Using \|, i.e. the logical “OR” operator, we can combine the brain skull and scalp into filled volumes.
 
     binary_brain = mri_segmented.brain;
     binary_skull = mri_segmented.skull | binary_brain;
@@ -638,7 +638,7 @@ The following code demonstrates the effect of the imdilate function. It makes fo
 
     close all
 
-    % using ft_sourceplot I identified the crossection with voxel
+    % using ft_sourceplot I identified the cross-section with voxel
     % indices [107 100 100] where the problem is visible and I will
     % plot that intersection multiple times
 
@@ -708,7 +708,7 @@ Having completed the manual refinement of the segmentation on the three temporar
 
     save mri_segmented2 mri_segmented2
 
-The “combined” field contains the sum of the three segmentations, which means that it is 1 for scalp, 2 for skull and 3 for brain. This allows us to look at all three segmentations at once in **[ft_sourceplot](/reference/ft_sourceplot)**.
+The “combined” field contains the sum of the three segmentations, which means that it is 1 for scalp, 2 for skull and 3 for brain. This allows us to look at all three segmentations at once in **[ft_sourceplot](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceplot.m)**.
 
     cfg = [];
     cfg.funparameter = 'combined';
@@ -744,7 +744,7 @@ Using the updated segmentation, we reconstruct the three triangulated meshes.
 
     save mesh_eeg mesh_eeg
 
-The three meshes are combined in one struct-array and used as input to **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)**. We also have to specify the conductivity of each of the tissue types.
+The three meshes are combined in one struct-array and used as input to **[ft_prepare_headmodel](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_headmodel.m)**. We also have to specify the conductivity of each of the tissue types.
 
     cfg = [];
     cfg.method = 'bemcp';
@@ -933,7 +933,7 @@ We demonstrated how to use dipole fitting to estimate the location and timecours
 
 This tutorial demonstrates how you can use different assumptions to get stable and meaningful dipole fit locations. However, it also demonstrates that in the dipole fitting procedure there are many choices than can be made, and that it is not easy to get all parameters right for a meaningful dipole fit solution. This explains why commercial software packages such as [BESA](http://www.besa.de) have elaborate graphical user interfaces in which you can more easily explore the effect of the constraints on the dipoles, and why sequential dipole fitting strategies are required to construct dipole models for more complicated source configurations.
 
-More details on constructing volume conduction models of the head can be found [here for MEG](/tutorial/headmodel_meg) and [here for EEG](/tutorial/headmodel_meg). Other tutorials are available that demonstrate the [MNE](/tutorial/minimumnormestimate) and [Beamformer](/tutorial/beamformer) methods. An alternative method for computing the activity timeseries at regions of interest using beamformers is described [here](/tutorial/virtual_sensors).
+More details on constructing volume conduction models of the head can be found [here for MEG](/tutorial/headmodel_meg) and [here for EEG](/tutorial/headmodel_meg). Other tutorials are available that demonstrate the [MNE](/tutorial/minimumnormestimate) and [Beamformer](/tutorial/beamformer) methods. An alternative method for computing the activity time series at regions of interest using beamformers is described [here](/tutorial/virtual_sensors).
 
 ### Suggested further reading
 

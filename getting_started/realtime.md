@@ -13,7 +13,7 @@ The general idea behind the real-time processing of EEG/MEG data in FieldTrip in
 To get some quick satisfaction with streaming data, you might want to try out the example given in this [frequently asked question](/faq/how_should_i_get_started_with_the_fieldtrip_realtime_buffer).
 {% include markup/end %}
 
-To get started, you should add the FieldTrip main directory to your path, and execute the **[ft_defaults](/reference/ft_defaults)** function, which sets the defaults and configures up the minimal required path settings. See also this [frequently asked question](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path).
+To get started, you should add the FieldTrip main directory to your path, and execute the **[ft_defaults](https://github.com/fieldtrip/fieldtrip/blob/release/ft_defaults.m)** function, which sets the defaults and configures up the minimal required path settings. See also this [frequently asked question](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path).
 
     addpath <path_to_fieldtrip>
     ft_defaults
@@ -34,15 +34,15 @@ Although in the end you'll want to analyze real data from your acquisition syste
 
 ### Simulating real-time data from a file
 
-Since the real-time processing in FieldTrip relies on the **[ft_read_header](/reference/ft_read_header)** and **[ft_read_data](/reference/ft_read_data)** functions and the [FieldTrip buffer](/development/realtime/buffer), you can get started with all online processing functions that are listed below by just pointing your real-time application to one of your data files on disk.
+Since the real-time processing in FieldTrip relies on the **[ft_read_header](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_header.m)** and **[ft_read_data](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_data.m)** functions and the [FieldTrip buffer](/development/realtime/buffer), you can get started with all online processing functions that are listed below by just pointing your real-time application to one of your data files on disk.
 
-Instead of reading the data that you want to analyze from file, you can also emulate the acquisition by reading small segments to file and copying it to the FieldTrip buffer, which is implemented in the **[ft_realtime_fileproxy](/reference/ft_realtime_fileproxy)** function. The rt-fileproxy allows you to "replay" previously acquired data in real-time, just as if it is streaming from your acquisition system. The code to analyze the data in real-time would be running in another MATLAB session and would read the data from the buffer as it comes in.
+Instead of reading the data that you want to analyze from file, you can also emulate the acquisition by reading small segments to file and copying it to the FieldTrip buffer, which is implemented in the **[ft_realtime_fileproxy](https://github.com/fieldtrip/fieldtrip/blob/release/ft_realtime_fileproxy.m)** function. The rt-fileproxy allows you to "replay" previously acquired data in real-time, just as if it is streaming from your acquisition system. The code to analyze the data in real-time would be running in another MATLAB session and would read the data from the buffer as it comes in.
 
 ### Simulating real-time data using random numbers
 
-Instead of playing back real data to get a realistic experience , you can also simulate random data using the **[ft_realtime_signalproxy](/reference/ft_realtime_signalproxy)** function. It generates a random signal according to your specification of the number of channels and the sampling frequency. Subsequently the random signal is filtered and written to the buffer. In another MATLAB instance you can then read the signal from that buffer and analyze it. The ft_realtime_signalproxy function is especially useful to test the timing of your analysis code or to do a quick test of the network-transparent data streaming/buffering.
+Instead of playing back real data to get a realistic experience , you can also simulate random data using the **[ft_realtime_signalproxy](https://github.com/fieldtrip/fieldtrip/blob/release/ft_realtime_signalproxy.m)** function. It generates a random signal according to your specification of the number of channels and the sampling frequency. Subsequently the random signal is filtered and written to the buffer. In another MATLAB instance you can then read the signal from that buffer and analyze it. The ft_realtime_signalproxy function is especially useful to test the timing of your analysis code or to do a quick test of the network-transparent data streaming/buffering.
 
-Both the **[ft_realtime_signalproxy](/reference/ft_realtime_signalproxy)** and **[ft_realtime_fileproxy](/reference/ft_realtime_fileproxy)** should be started in a separate MATLAB session, just like all other ft_realtime_XXXproxy functions, i.e. you should have one MATLAB session that generates or reads data from file or acquisition system and writes it to the buffer. In the other MATLAB session, which can be on another computer, you read from the buffer to do real-time analysis and visualization.
+Both the **[ft_realtime_signalproxy](https://github.com/fieldtrip/fieldtrip/blob/release/ft_realtime_signalproxy.m)** and **[ft_realtime_fileproxy](https://github.com/fieldtrip/fieldtrip/blob/release/ft_realtime_fileproxy.m)** should be started in a separate MATLAB session, just like all other ft_realtime_XXXproxy functions, i.e. you should have one MATLAB session that generates or reads data from file or acquisition system and writes it to the buffer. In the other MATLAB session, which can be on another computer, you read from the buffer to do real-time analysis and visualization.
 
 ## Analyzing the data stream
 

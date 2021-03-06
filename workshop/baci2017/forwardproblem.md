@@ -1,8 +1,9 @@
 ---
 title: Solving the EEG forward problem using BEM and FEM
+tags: [baci2017]
 ---
 
-## Solving the EEG forward problem using BEM and FEM
+# Solving the EEG forward problem using BEM and FEM
 
 ## Introduction
 
@@ -17,15 +18,15 @@ The aim of this tutorial is to solve the EEG forward problem using two different
 As already mentioned, the goal of this session is to solve the EEG forward problem, more precisely we want to compute EEG leadfields so that the inverse problem can be solved in the next session ([inverse problem](/workshop/baci2017/inverseproblem)).
 In order to compute leadfields, there are 9 main steps that have to be followed.
 
-1.  Load and read the anatomical data, namely a T1-MRI (**[ft_read_mri](/reference/ft_read_mri)**);
-2.  Align the MRI to the electrodes. As the electrodes are expressed in the CTF coordinate system, we translate the MRI in the CTF coordinate system (**[ft_volumerealign](/reference/ft_volumerealign)**);
-3.  Reslice the MRI image so that the voxels of the anatonical data are homogeneous (i.e. the size of the voxel is the same into each direction). This step will facilitate the segmentation step. (**[ft_volumereslice](/reference/ft_volumereslice)**)
-4.  Segment the MRI: 3 compartments for BEM (scalp, skull, brain) and 5 compartments for FEM (scalp, skull, CSF, grey matter and white matter) (**[ft_volumesegment](/reference/ft_volumesegment)**);
-5.  then we create the mesh: triangulated surface mesh for BEM and hexahedral volume mesh for FEM (**[ft_prepare_mesh](/reference/ft_prepare_mesh)**).
-6.  Create the headmodels (headmodel_bem and headmodel_fem) where geometrical and electrical information are merged together (**[ft_prepare_headmodel](/reference/ft_prepare_headmodel)**);
-7.  Align the electrodes to the MRI (**[ft_electroderealign](/reference/ft_electroderealign)**);
-8.  The sourcemodel is created, where the location of the sources is restrained to the brain compartment (from the BEM mesh) (**[ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)**);
-9.  Leadfields can be computed (**[ft_prepare_leadfield](/reference/ft_prepare_leadfield)**).
+1.  Load and read the anatomical data, namely a T1-MRI (**[ft_read_mri](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_mri.m)**);
+2.  Align the MRI to the electrodes. As the electrodes are expressed in the CTF coordinate system, we translate the MRI in the CTF coordinate system (**[ft_volumerealign](https://github.com/fieldtrip/fieldtrip/blob/release/ft_volumerealign.m)**);
+3.  Reslice the MRI image so that the voxels of the anatonical data are homogeneous (i.e. the size of the voxel is the same into each direction). This step will facilitate the segmentation step. (**[ft_volumereslice](https://github.com/fieldtrip/fieldtrip/blob/release/ft_volumereslice.m)**)
+4.  Segment the MRI: 3 compartments for BEM (scalp, skull, brain) and 5 compartments for FEM (scalp, skull, CSF, grey matter and white matter) (**[ft_volumesegment](https://github.com/fieldtrip/fieldtrip/blob/release/ft_volumesegment.m)**);
+5.  then we create the mesh: triangulated surface mesh for BEM and hexahedral volume mesh for FEM (**[ft_prepare_mesh](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_mesh.m)**).
+6.  Create the headmodels (headmodel_bem and headmodel_fem) where geometrical and electrical information are merged together (**[ft_prepare_headmodel](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_headmodel.m)**);
+7.  Align the electrodes to the MRI (**[ft_electroderealign](https://github.com/fieldtrip/fieldtrip/blob/release/ft_electroderealign.m)**);
+8.  The sourcemodel is created, where the location of the sources is restrained to the brain compartment (from the BEM mesh) (**[ft_prepare_sourcemodel](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_sourcemodel.m)**);
+9.  Leadfields can be computed (**[ft_prepare_leadfield](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_leadfield.m)**).
 
 The first 3 steps are the same for BEM and FEM. Steps from 4 to 8 differ between BEM and FEM.
 A more detailed description of these steps is following.

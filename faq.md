@@ -27,7 +27,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [How can I read all channels from an EDF file that contains multiple sampling rates?](/faq/how_can_i_read_all_channels_from_an_edf_file_that_contains_multiple_sampling_rates)
 - [How can I transform trigger values from bits to decimal representation with a trialfun?](/faq/how_can_i_transform_trigger_values_from_bits_to_decimal_representation_with_a_trialfun)
 - [How can I use the databrowser?](/faq/how_can_i_use_the_databrowser)
-- [How can extend the reading functions with a new dataformat?](/faq/how_can_extend_the_reading_functions_with_a_new_dataformat)
+- [How can I extend the reading functions with a new dataformat?](/faq/how_can_i_extend_the_reading_functions_with_a_new_dataformat)
 - [How does the CTF higher-order gradiometer work?](/faq/how_does_the_ctf_higher-order_gradiometer_work)
 - [How does the filter padding in preprocessing work?](/faq/how_does_the_filter_padding_in_preprocessing_work)
 - [I have problems reading in neuroscan .cnt files. How can I fix this?](/faq/i_have_problems_reading_in_neuroscan_.cnt_files._how_can_i_fix_this)
@@ -56,6 +56,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [Why does my TFR look strange (part II, detrending)?](/faq/why_does_my_tfr_look_strange_part_ii)
 - [Why does my output.freq not match my cfg.foi when using 'mtmconvol' in ft_freqanalyis?](/faq/why_does_my_output.freq_not_match_my_cfg.foi_when_using_mtmconvol_in_ft_freqanalyis)
 - [Why does my output.freq not match my cfg.foi when using 'wavelet' (formerly 'wltconvol') in ft_freqanalyis?](/faq/why_does_my_output.freq_not_match_my_cfg.foi_when_using_wavelet_formerly_wltconvol_in_ft_freqanalyis)
+- [Does it make sense to subtract the ERP prior to time frequency analysis, to distinguish evoked from induced power?](/faq/evoked_vs_induced)
 
 ## Source reconstruction
 
@@ -69,7 +70,6 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [How can I determine the anatomical label of a source or electrode?](/faq/how_can_i_determine_the_anatomical_label_of_a_source)
 - [How can I fine-tune my BEM volume conduction model?](/faq/how_can_i_fine-tune_my_bem_volume_conduction_model)
 - [How can I map source locations onto an anatomical label in an atlas?](/faq/how_can_i_map_source_locations_between_two_different_representations)
-- [How can I use OpenMEEG for forward modelling?](/faq/how_can_i_use_openmeeg_for_forward_modelling)
 - [How can I visualize the different geometrical objects that are needed for forward and inverse computations?](/faq/how_can_i_visualize_the_different_geometrical_objects_that_are_needed_for_forward_and_inverse_computations)
 - [How do I install the OpenMEEG binaries?](/faq/how_do_i_install_the_openmeeg_binaries)
 - [How do homogenous coordinate transformation matrices work?](/faq/homogenous)
@@ -93,11 +93,11 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 ## Statistical analysis
 
 - [How NOT to interpret results from a cluster-based permutation test?](/faq/how_not_to_interpret_results_from_a_cluster-based_permutation_test)
-- [How can I define my own neighbourhood template?](/faq/how_can_i_define_my_own_neighbourhood_template)
 - [How can I define neighbouring sensors?](/faq/how_can_i_define_neighbouring_sensors)
 - [How can I determine the onset of an effect?](/faq/how_can_i_determine_the_onset_of_an_effect)
 - [How can I test an interaction effect using cluster-based permutation tests?](/faq/how_can_i_test_an_interaction_effect_using_cluster-based_permutation_tests)
 - [How can I test for correlations between neuronal data and quantitative stimulus and behavioural variables?](/faq/how_can_i_test_for_correlations_between_neuronal_data_and_quantitative_stimulus_and_behavioural_variables)
+- [How can I test whether a behavioral measure is phasic?](/faq/how_can_i_test_whether_a_behavioral_measure_is_phasic)
 - [How can I use the ivar, uvar, wvar and cvar options to precisely control the permutations?](/faq/how_can_i_use_the_ivar_uvar_wvar_and_cvar_options_to_precisely_control_the_permutations)
 - [How does ft_prepare_neighbours work?](/faq/how_does_ft_prepare_neighbours_work)
 - [What is the idea behind statistical inference at the second-level?](/faq/what_is_the_idea_behind_statistical_inference_at_the_second-level)
@@ -120,7 +120,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 ## Experimental questions
 
 - [How can I change the head localization in a CTF dataset?](/faq/how_can_i_change_the_head_localization_in_a_ctf_dataset)
-- [How can I check the quality of an MEEG dataset?](/faq/how_can_i_check_the_quality_of_an_meeg_dataset)
+- [How can I check the quality of an M/EEG dataset?](/faq/how_can_i_check_the_quality_of_an_meeg_dataset)
 - [How can I monitor a subject's head position during a MEG session?](/faq/how_can_i_monitor_a_subject_s_head_position_during_a_meg_session)
 - [How can I test the serial port connection between two computers?](/faq/how_can_i_test_the_serial_port_connection_between_two_computers)
 - [How can I use my MacBook Pro for stimulus presentation in the MEG lab?](/faq/how_can_i_use_my_macbook_pro_for_stimulus_presentation_in_the_meg_lab)
@@ -167,16 +167,16 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [How can I set up the peer distributed computing on a large Linux cluster?](/faq/how_can_i_set_up_the_peer_distributed_computing_on_a_large_linux_cluster)
 - [How can I set up the peer distributed computing on a single multicore computer?](/faq/how_can_i_set_up_the_peer_distributed_computing_on_a_single_multicore_computer)
 - [How can I set up the peer distributed computing on a small number of computers?](/faq/how_can_i_set_up_the_peer_distributed_computing_on_a_small_number_of_computers)
-- [How can I stop the different threads created by peermaster and peerslave?](/faq/how_can_i_stop_the_different_threads_created_by_peermaster_and_peerslave)
-- [How can I use the command-line peerslave and optimize the MATLAB licenses?](/faq/how_can_i_use_the_command-line_peerslave_and_optimize_the_matlab_licenses)
+- [How can I stop the different threads created by peercontroller and peerworker?](/faq/how_can_i_stop_the_different_threads_created_by_peercontroller_and_peerworker)
+- [How can I use the command-line peerworker and optimize the MATLAB licenses?](/faq/how_can_i_use_the_command-line_peerworker_and_optimize_the_matlab_licenses)
 - [How do I avoid having to allocate N copies of my data if I want to execute N jobs?](/faq/how_do_i_avoid_having_to_allocate_n_copies_of_my_data_if_i_want_to_execute_n_jobs)
 - [How does the peer smartmem algorithm work?](/faq/how_does_the_peer_smartmem_algorithm_work)
 - [How does the peer smartshare algorithm work?](/faq/how_does_the_peer_smartshare_algorithm_work)
 - [How should I call peercellfun when a function requires many inputs (e.g. key-value pairs)?](/faq/how_should_i_call_peercellfun_when_a_function_requires_many_inputs_e.g._key-value_pairs)
 - [How to get started with peer distributed computing on my own desktop computer?](/faq/how_to_get_started_with_peer_distributed_computing_on_my_own_desktop_computer)
 - [What happens if a job fails to execute properly?](/faq/what_happens_if_a_job_fails_to_execute_properly)
-- [What happens with a job that has an error on the slave?](/faq/what_happens_with_a_job_that_has_an_error_on_the_slave)
-- [Why are the peers using multicast to announce themselves?](/faq/why_are_the_peers_using_multicast_to_announce_themselves)\_\_\_
+- [What happens with a job that has an error on the worker?](/faq/what_happens_with_a_job_that_has_an_error_on_the_worker)
+- [Why are the peers using multicast to announce themselves?](/faq/why_are_the_peers_using_multicast_to_announce_themselves)
 - [Why does peercellfun resubmit jobs that take too long to get started?](/faq/why_does_peercellfun_resubmit_jobs_that_take_too_long_to_get_started)
 
 ## MATLAB questions
@@ -191,11 +191,12 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [How many lines of code does FieldTrip consist of?](/faq/how_many_lines_of_code_does_fieldtrip_consist_of)
 - [How to select the correct SPM toolbox?](/faq/how_to_select_the_correct_spm_toolbox)
 - [MATLAB complains about a missing or invalid MEX file, what should I do?](/faq/matlab_complains_about_a_missing_or_invalid_mex_file_what_should_i_do)
+- [MATLAB complains that mexmaci64 cannot be opened because the developer cannot be verified](/faq/mexmaci64_cannot_be_opened_because_the_developer_cannot_be_verified)
 - [MATLAB does not see the functions in the "private" directory](/faq/matlab_does_not_see_the_functions_in_the_private_directory)
 - [MATLAB version 7.3 (2006b)_crashes_when_I_try_to_do_...](/faq/matlab_version_7.3_2006b_crashes_when_i_try_to_do)
 - [Should I add FieldTrip with all subdirectories to my MATLAB path?](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path)
 - [What are the MATLAB requirements for using FieldTrip?](/faq/requirements)
-- [What is the relation between "events" (such*as_triggers)\_and*"trials"?](/faq/what_is_the_relation_between_events_such_as_triggers_and_trials)
+- [What is the relation between "events" (such as_triggers) and "trials"?](/faq/what_is_the_relation_between_events_such_as_triggers_and_trials)
 - [Which external toolboxes are used by FieldTrip?](/faq/external)
 - [Why are so many of the interesting functions in the private directories?](/faq/why_are_so_many_of_the_interesting_functions_in_the_private_directories)
 
@@ -215,9 +216,9 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [How should I refer to FieldTrip in my publication?](/faq/how_should_i_refer_to_fieldtrip_in_my_publication)
 - [How should I send example data to the developers?](/faq/how_should_i_send_example_data_to_the_developers)
 - [How to ask good questions to the community?](/faq/how_to_ask_good_questions_to_the_community)
-- [I am having problems downloading from the ftp server](/faq/i_am_having_problems_downloading_from_the_ftp_server)
+- [I am having problems downloading from the FTP server](/faq/i_am_having_problems_downloading_from_the_ftp_server)
 - [I am working at the Donders, should I also download FieldTrip?](/faq/i_am_working_at_the_donders_should_i_also_download_fieldtrip)
-- [Which version of FieldTrip should I download from the ftp server?](/faq/which_version_of_fieldtrip_should_i_download_from_the_ftp_server)
+- [Which version of FieldTrip should I download from the FTP server?](/faq/which_version_of_fieldtrip_should_i_download_from_the_ftp_server)
 - [Why am I not allowed to post to the discussion list?](/faq/why_am_i_not_allowed_to_post_to_the_discussion_list)
 - [Why am I not receiving emails from the discussion list?](/faq/why_am_i_not_receiving_emails_from_the_discussion_list)
 - [Why am I receiving warnings about too many bouncing emails?](/faq/why_am_i_receiving_warnings_about_too_many_bouncing_emails)
@@ -234,7 +235,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [How can I anonymize data processed in FieldTrip?](/faq/how_can_i_anonymize_fieldtrip_data)
 - [How can I anonymize or deidentify an anatomical MRI?](/faq/how_can_i_anonymize_an_anatomical_mri)
 - [How can I convert an anatomical MRI from DICOM into CTF format?](/faq/how_can_i_convert_an_anatomical_mri_from_dicom_into_ctf_format)
-- [How can I share my MEG or EEG dataset?](/faq/data_sharing)
+- [How can I share my MEG data?](/faq/data_sharing)
 - [How do I prevent FieldTrip from printing the time and memory after each function call?](/faq/how_do_i_prevent_fieldtrip_from_printing_the_time_and_memory_after_each_function_call)
 - [How should I prepare for the upcoming FieldTrip workshop?](/faq/how_should_i_prepare_for_the_upcoming_fieldtrip_workshop)
 - [How should I specify the coordinate systems in a BIDS dataset?](/faq/bids_coordsystem)

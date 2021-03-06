@@ -7,7 +7,7 @@
 - name:  Overview of all tutorials
   link:  /tutorial
 
-- name:  Introduction - dealing with artifacts
+- name:  Introduction on dealing with artifacts
   link:  /tutorial/artifacts
 
 - name:  Automatic artifact rejection
@@ -89,6 +89,9 @@
   link:  /tutorial/networkanalysis
 
 - name:  Whole brain connectivity and network analysis
+  link:  /tutorial/networkanalysis_eeg
+
+- name:  Whole brain connectivity and network analysis
   link:  /tutorial/networkanalysis_old
 
 - name:  Preprocessing and averaging of multi-channel NIRS data
@@ -96,6 +99,9 @@
 
 - name:  Preprocessing and averaging of single-channel NIRS data
   link:  /tutorial/nirs_singlechannel
+
+- name:  Plotting data at the channel and source level
+  link:  /tutorial/plotting
 
 - name:  Trigger-based trial selection
   link:  /tutorial/preprocessing
@@ -115,6 +121,9 @@
 - name:  Creating a sourcemodel for source-reconstruction of MEG or EEG data
   link:  /tutorial/sourcemodel
 
+- name:  Preprocessing and analysis of spike-train data
+  link:  /tutorial/spike
+
 - name:  Preprocessing and analysis of spike and local field potential data
   link:  /tutorial/spikefield
 
@@ -131,7 +140,7 @@
   link:  /workshop/aarhus/beamformingerf
 
 - name:  Simulating and estimating, what about model (mis)match?
-  link:  /workshop/chieti/simulation
+  link:  /workshop/chieti2015/simulation
 
 - name:  Beamforming oscillatory responses in combined MEG/EEG data
   link:  /workshop/natmeg/beamforming

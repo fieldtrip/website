@@ -7,3 +7,6 @@
 - name:  Analysis of human ECoG and sEEG recordings
   link:  /tutorial/human_ecog
 
+- name:  Specifying the channel layout for plotting
+  link:  /tutorial/layout
+

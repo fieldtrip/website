@@ -88,5 +88,9 @@ title: ft_electrodeplacement
    cfg.grid.corner3   = 1x3 position of the lower left corner point
    cfg.grid.corner4   = 1x3 position of the lower right corner point
 
+ In the interactive 'headshape' and 'volume' methods you can click once on an
+ already assigned electrode to jump to that electrode position and you can click
+ twice to remove the assigned electrode position.
+
  See also FT_ELECTRODEREALIGN, FT_VOLUMEREALIGN, FT_VOLUMESEGMENT, FT_PREPARE_MESH
 ```

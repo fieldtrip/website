@@ -1,9 +1,9 @@
-The FieldTrip toolbox is developed and released under the GPL license (see below). The toolbox depends on some external software contributions, which may **not** be covered under the GPL. All external software that is distributed along with the FieldTrip release version contains an explicit README and an explicit COPYING file that detail the copyrights for that specific part and the license under which that software is distributed.
+The FieldTrip toolbox is developed and released under the GPL license (see below). The toolbox depends on some external software contributions, which may **not** be covered under the GPL. All external software that is distributed along with the FieldTrip release version contains an explicit README and an explicit COPYING or LICENSE file that details the copyrights for that specific software and the license under which that specific software is distributed.
 
 The FieldTrip toolbox is
 
-Copyright (C) 2008-2018, Donders Institute, Radboud University, The Netherlands (DCCN, DCC, DCN, DCMN)  
-Copyright (C) 2014-2018, Karolinska Institute, Stockholm, Sweden (NatMEG)  
+Copyright (C) 2008-2020, Donders Institute, Radboud University, The Netherlands (DCCN, DCC, DCN, DCMN)  
+Copyright (C) 2014-2020, Karolinska Institute, Stockholm, Sweden (NatMEG)  
 Copyright (C) 2012-2016, Max Planck Institute for Psycholinguistics, The Netherlands (MPI)  
 Copyright (C) 2010-2013, Swammerdam Institute for Life Sciences, University of Amsterdam (SILS)  
 Copyright (C) 2008-2009, Centre for Cognitive Neuroimaging in Glasgow, United Kingdom (CCNi)  

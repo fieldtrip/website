@@ -34,6 +34,9 @@ title: ft_read_headshape
    'matlab'       containing FieldTrip or BrainStorm headshapes or cortical meshes
    'stl'          STereoLithography file format, for use with CAD and/or generic 3D mesh editing programs
    'vtk'          Visualization ToolKit file format, for use with Paraview
+   'vtk_xml'      Visualization ToolKit file format
+   'tck'          Mrtrix track file
+   'trk'          Trackvis trk file
    'mne_*'        MNE surface description in ASCII format ('mne_tri') or MNE source grid in ascii format, described as 3D points ('mne_pos')
    'obj'          Wavefront .obj file obtained with the structure.io
    'off'

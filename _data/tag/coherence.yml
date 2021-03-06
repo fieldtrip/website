@@ -7,6 +7,9 @@
 - name:  In what way can frequency domain data be represented in FieldTrip?
   link:  /faq/in_what_way_can_frequency_domain_data_be_represented_in_fieldtrip
 
+- name:  How can I compute inter-trial coherence?
+  link:  /faq/itc
+
 - name:  What is the difference between coherence and coherency?
   link:  /faq/what_is_the_difference_between_coherence_and_coherency
 
@@ -29,5 +32,5 @@
   link:  /tutorial/fourier
 
 - name:  Simulating and estimating, what about model (mis)match?
-  link:  /workshop/chieti/simulation
+  link:  /workshop/chieti2015/simulation
 

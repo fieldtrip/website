@@ -11,12 +11,18 @@ title: ft_determine_units
    from 50.000 to 500.000 -> millimeter
 
  Use as
-   dataout = ft_determine_units(datain)
- where the input obj structure can be
-  - an anatomical MRI
-  - an electrode or gradiometer definition
-  - a volume conduction model of the head
- or most other FieldTrip structures that represent geometrical information.
+   [output] = ft_determine_units(input)
 
- See also FT_CONVERT_UNITS, FT_DETERMINE_COODSYS, FT_CONVERT_COORDSYS
+ The following input data structures are supported
+   electrode or gradiometer array, see FT_DATATYPE_SENS
+   volume conduction model, see FT_DATATYPE_HEADMODEL
+   source model, see FT_DATATYPE_SOURCE and FT_PREPARE_SOURCEMODEL
+   anatomical mri, see FT_DATATYPE_VOLUME
+   segmented mri, see FT_DATATYPE_SEGMENTATION
+   anatomical or functional atlas, see FT_READ_ATLAS
+
+ This function will add the field 'unit' to the output data structure with the
+ possible values 'm', 'dm', 'cm ' or 'mm'.
+
+ See also FT_CONVERT_UNITS, FT_DETERMINE_COODSYS, FT_CONVERT_COORDSYS, FT_PLOT_AXES, FT_PLOT_XXX
 ```

@@ -31,14 +31,14 @@ Applications for this workshop are now closed. Please check out our other upcomi
 Session I
 
 - **10:00 - 10:15** Registration, welcome and coffee
-- **10:15 - 11:15** Lecture: Introduction to MEG and the FieldTrip Toolbox | _Nietzsche Lam_
+- **10:15 - 11:15** Lecture: Introduction to MEG and the FieldTrip Toolbox (_by Nietzsche Lam_)
 - **11:15 - 11:30** Coffee break
 - **11:30 - 13:30** Hands-on: Initiation to FieldTrip; Analyzing MEG data (event-related fields)
 
 Session II
 
 - **13:30 - 14:45** Lunch
-- **14:45 - 15:45** Lecture: Introduction to EEG; Comparing EEG with MEG | _Nietzsche Lam_
+- **14:45 - 15:45** Lecture: Introduction to EEG; Comparing EEG with MEG (_by Nietzsche Lam_)
 - **15:45 - 16:00** Coffee break
 - **16:00 - 18:00** Hands-on: Analyzing EEG data
 - **18:00 - 18:30** Wrap-up-the-day and Summary
@@ -47,14 +47,14 @@ Session II
 
 Session III
 
-- **9:00 - 10:15** Lecture: Fundamentals of neuronal oscillations and synchrony | _Nietzsche Lam_
+- **9:00 - 10:15** Lecture: Fundamentals of neuronal oscillations and synchrony  (_by Nietzsche Lam_)
 - **10:15- 10:30** Coffee break
 - **10:30- 12:30** Hands-On: Time-frequency Analysis of Power
 - **12:30- 13:45** Lunch
 
 Session IV
 
-- **13:45 - 14:45** Lecture: Source reconstruction in FieldTrip | _Tzvetan Popov_
+- **13:45 - 14:45** Lecture: Source reconstruction in FieldTrip (_by Tzvetan Popov_)
 - **14:45 - 15:00** Coffee break
 - **15:00 - 17:00** Hands-on: Source Reconstruction on Oscillatory data (beamformer)
 - **17:00 - 17:30** Wrap-up-the-day and Summary
@@ -64,14 +64,14 @@ Session IV
 
 Session V
 
-- **9:00 - 10:15** Lecture: Non-parametric permutation techniques | _Tzvetan Popov_
+- **9:00 - 10:15** Lecture: Non-parametric permutation techniques (_by Tzvetan Popov_)
 - **10:15- 10:30** Coffee break
 - **10:30- 12:30** Hands-On: Statistical Analyses
 - **12:30- 13:45** Lunch
 
 Session VI
 
-- **13:45 - 14:45** FieldTrip Playground (bring your own data) | _Tzvetan Popov and Nietzsche Lam_
+- **13:45 - 14:45** FieldTrip Playground (bring your own data) (_by Tzvetan Popov and Nietzsche Lam_)
 - **14:45 - 15:00** Coffee break
 - **15:00 - 17:00** FieldTrip Playground (bring your own data)
 - **17:00 - 17:30** Wrap-up-the-day and Closing remarks
