@@ -55,6 +55,6 @@ To ensure that we always can find each other, that we can share links and materi
 
 Since you will be working at home on your own computer (and occasionally share your screen with us), we recommend that you [test your MATLAB and FieldTrip installation in advance](/workshop/toolkit2021/test_installation). This not only served to test their installation, but also to check that all participants knew how to share their notes in a Google doc with the tutors.
 
-### Code of conduct
+## Code of conduct
 
 Please spend a couple of minutes to have a look at our [Code of Conduct](/workshop/toolkit2021/code_of_conduct) to make sure we all are taking responsibility to look after each other and make sure we are contributing towards an inclusive and supportive community. Please let us know if you have any questions regarding it. All toolkit participants are responsible to follow the rules listed here, as well as making sure that everyone in the toolkit follows it.
