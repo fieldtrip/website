@@ -54,10 +54,10 @@ Define the configuration struct
 
     cfg = [] ;
     cfg.method          = 'mvpa';
-    cfg.features        = 'chan';
     cfg.latency         = [0.5, 0.7];
     cfg.avgovertime     = 'yes';
     cfg.design          = [ones(nFIC,1); 2*ones(nFC,1); 3*ones(nIC,1)];
+    cfg.features        = 'chan';
     cfg.mvpa            = [];
     cfg.mvpa.classifier = 'multiclass_lda';
     cfg.mvpa.metric     = 'accuracy';
@@ -65,8 +65,7 @@ Define the configuration struct
 
 Let us unpack this:
 
-- `cfg.method = 'mvpa'` indicates that we want to perform multivariate pattern analysis using [MVPA-Light](https://github.com/treder/MVPA-Light).
-classification is performed for every time point (see section _Classification across time_).
+- `cfg.method = 'mvpa'` indicates that we want to perform multivariate pattern analysis using [MVPA-Light](https://github.com/treder/MVPA-Light). Classification is performed for every time point (see section _Classification across time_).
 - `cfg.latency` restricts the classification analysis to a specific time window (here 0.5-0.7s).
 - `cfg.avgovertime` specifies whether the activity in latency window should be averaged prior to classification.
 - `cfg.design` specifies the vector of _class labels_. Class labels indicate which class (or experimental condition) trials belong to. The task of the classifier is to predict these class labels given the data. To this end, we create a vector with _1_'s for the trials belonging to class 1, _2_'s for trials belonging to class 2, and so on. The [MEG-language dataset](/faq/what_types_of_datasets_and_their_respective_analyses_are_used_on_fieldtrip),
@@ -285,13 +284,14 @@ In this case, both channels and time points act as search dimensions and the res
 
 ## Time generalization (time x time classification)
 
-Classification across time does not give insight into whether information is shared across different time points. For example, is the information that the classifier uses early in a trial (t=80 ms) the same that it uses later (t=300ms)? In time generalization, this question is answered by training the classifier at a certain time point t. The classifer is then tested at the same time point t but it is also tested at all other time points in the trial ([King and Dehaene, 2014](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5635958/)). This procedure is then repeated for every
+Classification across time does not give insight into whether information is shared across different time points. For example, is the information that the classifier uses early in a trial (t=80 ms) the same that it uses later (t=300ms)? In time generalization, this question is answered by training the classifier at a certain time point t. The classifier is then tested at the same time point t but it is also tested at all other time points in the trial ([King and Dehaene, 2014](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5635958/)). This procedure is then repeated for every
 possible training time point. To perform
-time x time classification, we only need to set the `cfg.generalize` parameter:
+time x time classification, we need to set the `cfg.generalize` parameter:
 
 
     cfg = [] ;  
     cfg.method           = 'mvpa';
+    cfg.features         = 'chan';
     cfg.generalize       = 'time';
     cfg.design           = [ones(nFIC,1); 2*ones(nFC,1)];
 
@@ -346,7 +346,7 @@ we only need to set `cfg.features = 'chan'`.
     mv_plot_result(stat.mvpa, stat.time, stat.freq)
 
 This yields a _[freq x time]_ matrix of classification accuracies. However, we are not limited
-to a classification for every time-frequency point. A large array of different multivariate analyses can be realized by changing the values of `cfg.features`, let us look at some of the options:
+to a classification for every time-frequency point. A large array of different multivariate analyses can be realized by changing the value of `cfg.features`, let us look at some of the options:
 
 - `'time'`: if time serves as features, a search is performed across channels and frequencies. Therefore, the result is a _[chan x freq]_ matrix of classification accuracies.
 - `'freq'`: the result is a _[chan x time]_ matrix of classification accuracies.
@@ -373,7 +373,7 @@ To this end, we set `cfg.timwin = 5` which means that a total of 5 time points i
 considered in each analysis: the given center time point and its two immediately
 preceding and following time points. It is worth noting that including neighbouring
 channels/frequencies/time points increases the feature space for the classifier.
-In current example, the feature space has the dimension 149 channel x 5 time points = 745.
+In the current example, the feature space has the dimension 149 channel x 5 time points = 745.
 A larger feature space provides more information to the classifier but it also is more
 computationally demanding and holds the danger of overfitting.
 
@@ -388,7 +388,7 @@ computationally demanding and holds the danger of overfitting.
     mv_plot_result(stat.mvpa, stat.time, stat.freq)
 
 Note that setting `cfg.timwin` is only useful if time is not used as features, and the same
-applies to `cfg.freqwin` (for frequencies) and `cfg.neighbours` (for channels).
+logic applies to `cfg.freqwin` (for frequencies) and `cfg.neighbours` (for channels).
 
 ### Exercise 5
 
