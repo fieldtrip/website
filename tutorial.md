@@ -24,9 +24,9 @@ When adding or contributing to the tutorials please consider the [documentation 
 
 - [Preprocessing - Reading continuous EEG and MEG data](/tutorial/continuous)
 - [Preprocessing - Trigger based trial selection](/tutorial/preprocessing)
-- [Introduction on artifacts](/tutorial/artifacts)
-- [Visual artifact detection](/tutorial/visual_artifact_rejection)
-- [Automatic artifact detection](/tutorial/automatic_artifact_rejection)
+- [Introduction on dealing with artifacts](/tutorial/artifacts)
+- [Visual artifact rejection](/tutorial/visual_artifact_rejection)
+- [Automatic artifact rejection](/tutorial/automatic_artifact_rejection)
 
 ## Sensor-level analyses of MEG and EEG data
 

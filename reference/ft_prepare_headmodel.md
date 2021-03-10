@@ -81,41 +81,9 @@ title: ft_prepare_headmodel
  SIMBIO
    cfg.conductivity
 
- SINGLESHELL
-   cfg.tissue            see above; in combination with 'seg' input; default options are 'brain' or 'scalp'
-   cfg.order             (optional)
-
- SINGLESPHERE
-   cfg.tissue            see above; in combination with 'seg' input; default options are 'brain' or 'scalp'; must be only 1 value
-
- INTERPOLATE
-    cfg.outputfile       (required) string, filename prefix for the output files
-
- BESA
-   cfg.headmodel         (required) string, filename of precomputed FEM leadfield
-   cfg.elec              (required) structure with electrode positions or filename, see FT_READ_SENS
-   cfg.outputfile        (required) string, filename prefix for the output files
-
- FNS
-   cfg.tissue
-   cfg.tissueval
-   cfg.conductivity
-   cfg.elec
-   cfg.grad
-   cfg.transform
-
- HALFSPACE
-   cfg.point
-   cfg.submethod         (optional)
-
- More details for each of the specific methods can be found in the corresponding
- low-level function which is called FT_HEADMODEL_XXX where XXX is the method
- of choise.
-
- See also FT_PREPARE_MESH, FT_PREPARE_SOURCEMODEL, FT_PREPARE_LEADFIELD,
- FT_HEADMODEL_BEMCP, FT_HEADMODEL_ASA, FT_HEADMODEL_DIPOLI,
- FT_HEADMODEL_SIMBIO, FT_HEADMODEL_FNS, FT_HEADMODEL_HALFSPACE,
- FT_HEADMODEL_INFINITE, FT_HEADMODEL_OPENMEEG, FT_HEADMODEL_SINGLESPHERE,
- FT_HEADMODEL_CONCENTRICSPHERES, FT_HEADMODEL_LOCALSPHERES,
- FT_HEADMODEL_SINGLESHELL, FT_HEADMODEL_INTERPOLATE
+ DUNEURO
+   cfg.conductivity      An array with the conductivities must be provided. (see above)
+   cfg.grid_filename     Alternatively,  a filename for the grid and a filename for the conductivities can be passed.
+   cfg.tensors_filename  "
+   cfg.duneuro_settings  (optional) Additional settings can be provided for duneuro (see http://www.duneuro.org).
 ```

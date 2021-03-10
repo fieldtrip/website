@@ -36,27 +36,29 @@ title: ft_headcoordinates
 
  The fourth argument fid4 is optional and can be specified as an an extra point
  which is assumed to have a positive Z-coordinate. It will be used to ensure correct
- orientation of the z-axis (ctf, 4d, yokogawa, itab, neuromag) or X-axis (tal, spm).
- The specification of this extra point may result in the handedness of the
- transformation to be changed, but ensures consistency with the handedness of the
- input coordinate system.
+ orientation of the Z-axis (ctf, 4d, bti, eeglab, yokogawa, neuromag, itab) or
+ X-axis (acpc, spm, mni, tal). The specification of this extra point may result in
+ the handedness of the transformation to be changed, but ensures consistency with
+ the handedness of the input coordinate system.
 
  The coordsys input argument is a string that determines how the location of the
- origin and the direction of the axis is to be defined relative to the fiducials
+ origin and the direction of the axis is to be defined relative to the fiducials:
    according to CTF conventions:             coordsys = 'ctf'
    according to 4D conventions:              coordsys = '4d' or 'bti'
-   according to YOKOGAWA conventions:        coordsys = 'yokogawa'
-   according to ASA conventions:             coordsys = 'asa'
+   according to EEGLAB conventions:          coordsys = 'eeglab'
    according to NEUROMAG conventions:        coordsys = 'itab'
    according to ITAB conventions:            coordsys = 'neuromag'
+   according to YOKOGAWA conventions:        coordsys = 'yokogawa'
+   according to ASA conventions:             coordsys = 'asa'
    according to FTG conventions:             coordsys = 'ftg'
-   according to Talairach conventions:       coordsys = 'tal'
-   according to SPM conventions:             coordsys = 'spm'
    according to ACPC conventions:            coordsys = 'acpc'
+   according to SPM conventions:             coordsys = 'spm'
+   according to MNI conventions:             coordsys = 'mni'
+   according to Talairach conventions:       coordsys = 'tal'
    according to PAXINOS conventions:         coordsys = 'paxinos'
- If coordsys is not specified, it will default to 'ctf'.
+ If the coordsys input argument is not specified, it will default to 'ctf'.
 
- The CTF, 4D and YOKOGAWA coordinate systems are defined as follows:
+ The CTF, 4D, YOKOGAWA and EEGLAB coordinate systems are defined as follows:
    the origin is exactly between lpa and rpa
    the X-axis goes towards nas
    the Y-axis goes approximately towards lpa, orthogonal to X and in the plane spanned by the fiducials

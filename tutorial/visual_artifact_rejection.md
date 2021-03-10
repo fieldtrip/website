@@ -7,15 +7,15 @@ tags: [tutorial, artifact, meg, raw, preprocessing, meg-language]
 
 ## Introduction
 
-This tutorial makes use of the preprocessed data from [Preprocessing - Trigger based trial selection](/tutorial/preprocessing). Run the script from that section in order to produce the single trial data structure, or download it from [ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/rejectvisual/PreprocData.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/rejectvisual/PreprocData.mat). Load the data with the following command:
+This tutorial makes use of the preprocessed data from [Preprocessing - Trigger based trial selection](/tutorial/preprocessing). Run the script from that section in order to produce the single trial data structure, or download it from [ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/rejectvisual/PreprocData.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/rejectvisual/PreprocData.mat). Load the data into MATLAB memory with the following command:
 
     load PreprocData data_all
 
-Before further analysis in any of the other tutorials, it is best to have artifact free data. Within FieldTrip you can choose to do visual/manual or automatic artifact detection and rejection.
 
 ## Background
 
-For a successful analysis of EEG or MEG signals, "clean" data is required. That means that you should try to reduce the amount of variance in the data due to factors that you cannot influence. One of the factors that is difficult to control are the presence of artifacts in the data. These artifact are physiological or can result from the acquisition electronics. The strongest physiological artifacts stem from eye blinks, eye movements and head movements. Muscle artifact from swallowing and neck contraction can be a problem as well. Artifacts related to the electronics are 'SQUID jumps' or spikes seen in several channels.
+For a successful analysis of EEG or MEG signals, "clean" data is required. That means that you should try to reduce the amount of variance in the data due to factors that you cannot influence. One of the factors that is difficult to control is the presence of artifacts in the data. These artifact can be physiological, can relate to the behaviour of the subject, or can result from the acquisition electronics. The strongest physiological artifacts stem from eye blinks, eye movements and head movements. Muscle artifact from swallowing and neck contraction can be a problem as well. Artifacts related to the electronics are 'SQUID jumps' or spikes seen in several channels.
+
 To start with, it is best to avoid those artifacts during the recording. You can instruct the subject not to blink during the trial, but instead give him some well-defined time between the trials in which he is allowed to blink. But of course there will always be some artifacts in the raw data.
 
 While detecting artifacts by visual inspection, keep in mind that it is a subjective decision to reject certain trials and keep other trials. Which type of artifacts should be rejected depends on the analysis you would like to do on the clean data. If you would like to do a time-frequency analysis of power in the gamma band it is important to reject all trials with muscle artifacts, but for a ERF analysis it is more important to reject trials with drifts and eye artifacts.
@@ -39,7 +39,7 @@ The following steps are taken to do visual artifact rejection
 
 - Read the data into MATLAB using **[ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_definetrial.m)** and **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)**, as explained in the [previous tutorial](/tutorial/preprocessing)
 - Visual inspection of the trials and rejection of artifacts using **[ft_rejectvisual](https://github.com/fieldtrip/fieldtrip/blob/release/ft_rejectvisual.m)**
-- Alternatively: use **[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_databrowser.m)** and mark the artifacts manually by interactively paging trial by trial
+- Alternatively you can use **[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_databrowser.m)** and mark the artifacts manually by interactively paging trial by trial
 
 ### Manual artifact rejection - display one trial at a time
 
@@ -185,9 +185,7 @@ The previous example of calling ft_rejectvisual sequentially does not allow to e
 
 {% include markup/end %}
 
----
-
-### Use ft_databrowser to mark the artifacts manually
+### Use ft_databrowser to mark the artifacts
 
 An alternative way to remove artifacts is to page through the butterfly plots of the single trials, by using the ft_databrowser function.
 Call the function like
@@ -196,20 +194,21 @@ Call the function like
     cfg = [];
     cfg.channel = 'MEG';
     data = ft_preprocessing(cfg,data_all);
+
     % open the browser and page through the trials
     cfg=[];
     cfg.channel = 'MEG';
     artf=ft_databrowser(cfg,data);
 
-In the image below are two figures for the same trial (trial 228). As in the left figure first drag the mouse on the artifact to create dotted lines on either side of the artifact (left image). Then, as in the right figure click within the dotted line
+In the image below are two figures for the same trial (trial 228). As in the left figure first drag the mouse on the artifact to create dotted lines on either side of the artifact (left image). Then, as in the right figure click within the dotted lines
 
 {% include image src="/assets/img/tutorial/visual_artifact_rejection/fig4.png" width="600" %}
 
 The resulting variable contains the field
 
-artf.artfctdef.visual.artifact = [begartf endartf]
+artf.artfctdef.visual.artifact = [begsample endsample]
 
-with the beginning and ending sample for all marked sections.
+with the begin and end sample for all marked sections.
 
 ## Summary
 
@@ -223,8 +222,6 @@ Per condition, this corresponds to the following trials:
 - FIC: 15, 36, 39, 42, 43, 49, 50, 81, 82, 84
 - IC: 1, 2, 3, 4, 14, 15, 16, 17, 20, 35, 39, 40, 47, 78, 79, 80, 86
 - FC: 2, 3, 4, 30, 39, 40, 41, 45, 46, 47, 51, 53, 59, 77, 85
-
-
 
 ## Suggested further reading
 

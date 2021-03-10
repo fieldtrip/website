@@ -22,10 +22,13 @@ title: ft_meshrealign
    cfg.method          = string, can be 'interactive' or fiducial' (default = 'interactive')
 
  The configuration can furthermore contain
-   cfg.coordsys        = string, can be 'ctf', 'neuromag', '4d', 'bti', 'itab'
-   cfg.fiducial.nas    = [x y z], position of nasion
-   cfg.fiducial.lpa    = [x y z], position of LPA
-   cfg.fiducial.rpa    = [x y z], position of RPA
+   cfg.coordsys       = string specifying the origin and the axes of the coordinate
+                        system. Supported coordinate systems are 'ctf', '4d', 'bti', 
+                        'eeglab', 'neuromag', 'itab', 'yokogawa', 'asa', 'acpc',
+                        and 'paxinos'. See http://tinyurl.com/ojkuhqz
+   cfg.fiducial.nas   = [x y z], position of nasion
+   cfg.fiducial.lpa   = [x y z], position of LPA
+   cfg.fiducial.rpa   = [x y z], position of RPA
 
  The fiducials should be expressed in the coordinates and units of the input mesh.
 

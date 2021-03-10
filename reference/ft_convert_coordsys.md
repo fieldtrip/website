@@ -27,8 +27,8 @@ title: ft_convert_coordsys
    segmented mri, see FT_DATATYPE_SEGMENTATION
    anatomical or functional atlas, see FT_READ_ATLAS
 
- Possible input coordinate systems are 'ctf', 'bti', '4d', 'neuromag' and 'itab'.
- Possible target coordinate systems are 'acpc'.
+ Possible input coordinate systems are 'ctf', '4d', 'bti', 'yokogawa', 'eeglab', 'neuromag' and 'itab'.
+ Possible target coordinate systems are 'acpc', 'ras', 'als', etc.
 
  Note that the conversion will be an automatic and approximate conversion, not
  taking into account differences in individual anatomies/differences in conventions

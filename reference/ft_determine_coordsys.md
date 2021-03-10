@@ -27,8 +27,8 @@ title: ft_determine_coordsys
  see the figure from all angles. To change the anatomical labels of the
  coordinate system, you should press the corresponding keyboard button.
 
- Recognized and supported coordinate systems are 'ctf', '4d', 'bti', 'itab',
- 'neuromag', 'spm', 'mni', 'tal', 'acpc', 'als', 'ras', 'paxinos'.
+ Recognized and supported coordinate systems are 'ctf', '4d', 'bti', 'eeglab',
+ 'neuromag', 'itab', 'acpc', 'spm', 'mni', 'tal', 'als', 'ras', 'paxinos'.
 
  See also FT_CONVERT_COORDSYS, FT_DETERMINE_UNITS, FT_CONVERT_UNITS, FT_PLOT_AXES, FT_PLOT_XXX
 ```

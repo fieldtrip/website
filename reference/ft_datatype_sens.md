@@ -48,7 +48,7 @@ title: ft_datatype_sens
     sens.chanunit = Mx1 cell-array with the units of the channel signal, e.g. 'V', 'fT' or 'T/cm', see FT_CHANUNIT
 
  Optional fields:
-    type, unit, fid, chantype, chanunit
+    type, unit, fid, chantype, chanunit, coordsys
 
  Historical fields:
     pnt, pos, ori, pnt1, pnt2, fiberpos, fibertype, fiberlabel, transceiver, transmits, laserstrength
