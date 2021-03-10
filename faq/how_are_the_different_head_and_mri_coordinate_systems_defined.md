@@ -41,7 +41,7 @@ Imaging methods such as MRI and CT result in 3-D volumetric representations of t
 | CapTrak            | mm    | RAS         | approximately between the ears              |                                                                                                           |                              |
 | Chieti ITAB        | mm    | RAS         | between the ears                            | native                                                                                                    |                              |
 | DICOM              | mm    | LPS         |                                             | native                                                                                                    |                              |
-| EEGLAB             | mm    | ALS         | between the ears                            | native or template                                                                                                    |                              |
+| EEGLAB             | mm    | ALS         | between the ears                            | native                                                                                                    |                              |
 | FreeSurfer         | mm    | RAS         | center of isotropic 1 mm 256x256x256 volume |                                                                                                           |                              |
 | MNI                | mm    | RAS         | anterior commissure                         | scaled to match averaged template                                                                         |                              |
 | NIfTI              | mm    | RAS         | scanner origin (centre of gradient coil)    | see [here](https://brainder.org/2012/09/23/the-nifti-file-format/), search for "Orientation information". |                              |
@@ -158,6 +158,15 @@ The **CTF** coordinate system is expressed in centimeter (except the MRI, which 
 - z increases from inferior to superior
 
 See [this page](http://dicomiseasy.blogspot.com/2013/06/getting-oriented-using-image-plane.html) for more information about the DICOM coordinate system.
+
+## Details of the EEGLAB coordinate system
+
+The **EEGLAB** coordinate system is identical to the CTF coordinate system (see above), except that it is always expressed in millimeters. 
+
+- the origin is exactly between LPA and RPA
+- the X-axis goes towards NAS
+- the Y-axis goes approximately towards LPA, orthogonal to X and in the plane spanned by the fiducials
+- the Z-axis goes approximately towards the vertex, orthogonal to X and Y
 
 ## Details of the FreeSurfer coordinate system
 

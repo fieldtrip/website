@@ -23,7 +23,6 @@ title: ft_rejectvisual
                      'yes'         keep deselected channels in the output data
                      'nan'         fill the channels that are deselected with NaNs
                      'repair'      repair the deselected channels using FT_CHANNELREPAIR
-   cfg.neighbours  = neighbourhood structure, see also FT_PREPARE_NEIGHBOURS (required for repairing channels)
    cfg.trials      = 'all' or a selection given as a 1xN vector (default = 'all')
    cfg.keeptrial   = string, determines how to deal with trials that are
                      not selected, can be
@@ -39,6 +38,7 @@ title: ft_rejectvisual
                      'range'     range from min to max in each channel
                      'kurtosis'  kurtosis, i.e. measure of peakedness of the amplitude distribution
                      'zvalue'    mean and std computed over all time and trials, per channel
+   cfg.neighbours  = neighbourhood structure, see FT_PREPARE_NEIGHBOURS for details
    cfg.latency     = [begin end] in seconds, or 'all', 'minperiod', 'maxperiod', 'prestim', 'poststim' (default = 'all')
    cfg.viewmode    = 'remove', 'toggle' or 'hide', only applies to summary mode (default = 'remove')
    cfg.box         = string, 'yes' or 'no' whether to draw a box around each graph (default = 'no')
