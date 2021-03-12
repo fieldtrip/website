@@ -282,6 +282,8 @@ In this case, both channels and time points act as search dimensions and the res
     set(gca, 'YTick', 1:2:length(stat.label), 'YTickLabel', stat.label(1:2:end))
 
 
+    {% include image src="/assets/img/tutorial/mvpa_light/searchlight_time_chan.png" width="300" %}
+
 ## Time generalization (time x time classification)
 
 Classification across time does not give insight into whether information is shared across different time points. For example, is the information that the classifier uses early in a trial (t=80 ms) the same that it uses later (t=300ms)? In time generalization, this question is answered by training the classifier at a certain time point t. The classifier is then tested at the same time point t but it is also tested at all other time points in the trial ([King and Dehaene, 2014](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5635958/)). This procedure is then repeated for every
@@ -317,8 +319,6 @@ time-frequency analysis on the timelocked data (see [Time-frequency analysis usi
  for details on time-frequency analysis).
 
 
-
-
       cfg              = [];
       cfg.output       = 'pow';
       cfg.method       = 'mtmconvol';
@@ -344,6 +344,10 @@ we only need to set `cfg.features = 'chan'`.
     stat = ft_freqstatistics(cfg, freqFIC, freqFC);
 
     mv_plot_result(stat.mvpa, stat.time, stat.freq)
+
+
+{% include image src="/assets/img/tutorial/mvpa_light/tfr_classification1.png" width="300" %}
+
 
 This yields a _[freq x time]_ matrix of classification accuracies. However, we are not limited
 to a classification for every time-frequency point. A large array of different multivariate analyses can be realized by changing the value of `cfg.features`. Let us look at some of the options:
@@ -386,6 +390,9 @@ computationally demanding and potentially holds the danger of overfitting.
     stat = ft_freqstatistics(cfg, freqFIC, freqFC);
 
     mv_plot_result(stat.mvpa, stat.time, stat.freq)
+
+
+{% include image src="/assets/img/tutorial/mvpa_light/tfr_classification2.png" width="300" %}
 
 Note that setting `cfg.timwin` is only useful if time is not used as features, and the same
 logic applies to `cfg.freqwin` (for frequencies) and `cfg.neighbours` (for channels).
