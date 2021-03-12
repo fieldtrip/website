@@ -107,7 +107,7 @@ the confusion matrix, all we need to do is to change the `metric` field:
 
 Looking at the diagonal of the matrix tells us that the classifier is better
 at predicting classes 1 and 2 than it is at predicting class 3.
-For a simple visualisation of this result, we can use a plotting function in  [MVPA-Light](https://github.com/treder/MVPA-Light)
+For a simple visualization of this result, we can use a plotting function in  [MVPA-Light](https://github.com/treder/MVPA-Light)
 called [`mv_plot_result`](https://github.com/treder/MVPA-Light/blob/master/plot/mv_plot_result.m).
 It takes the result structure returned in `stat.mvpa` which contains the
 classification results in a format required by the function.
@@ -119,7 +119,7 @@ classification results in a format required by the function.
 
 ## Cross-validation
 
-To obtain a realistic estimate of classifier performance and control for overfitting, a classifier should be tested on an independent dataset that has not been used for training. In most neuroimaging experiments, there is only one dataset with a restricted number of trials. K-fold [cross-validation](https://en.wikipedia.org/wiki/Cross-validation) makes efficient use of this data by splitting it into k different folds. In each iteration, one of the k folds is held out and used as test set, whereas all other folds are used for training the model. This process is repeated until every fold has been used as test set once. Other cross-validation schemes supported by MVPA-Light are leave-one-out cross-validation, holdout, and predefined folds. Cross-validation is controlled by the following parameters:
+To obtain a realistic estimate of classifier performance and control for overfitting, a classifier should be tested on an independent dataset that has not been used for training. In most neuroimaging experiments, there is only one dataset with a restricted number of trials. K-fold [cross-validation](https://en.wikipedia.org/wiki/Cross-validation_(statistics)) makes efficient use of this data by splitting it into k different folds. In each iteration, one of the k folds is held out and used as test set, whereas all other folds are used for training the model. This process is repeated until every fold has been used as test set once. Other cross-validation schemes supported by MVPA-Light are leave-one-out cross-validation, holdout, and predefined folds. Cross-validation is controlled by the following parameters:
 
 - `cfg.mvpa.cv`: cross-validation type, either 'kfold', 'leaveout', 'holdout', or 'predefined' (default 'kfold')
 - `cfg.mvpa.k`: number of folds or partitions in k-fold cross-validation (default 5)
@@ -346,19 +346,19 @@ we only need to set `cfg.features = 'chan'`.
     mv_plot_result(stat.mvpa, stat.time, stat.freq)
 
 This yields a _[freq x time]_ matrix of classification accuracies. However, we are not limited
-to a classification for every time-frequency point. A large array of different multivariate analyses can be realized by changing the value of `cfg.features`, let us look at some of the options:
+to a classification for every time-frequency point. A large array of different multivariate analyses can be realized by changing the value of `cfg.features`. Let us look at some of the options:
 
-- `'time'`: if time serves as features, a search is performed across channels and frequencies. Therefore, the result is a _[chan x freq]_ matrix of classification accuracies.
-- `'freq'`: the result is a _[chan x time]_ matrix of classification accuracies.
-- `[]`: in this case, a search is performed across all dimensions yielding a _[chan x freq x time]_ array.
-- `{'chan' 'freq'}`: multiple feature dimensions can be specified by providing a cell array. In this example, channels and frequencies are combined into a long feature vector and a classification is performed for every time point, yielding a _[time x 1]_ vector.
+- `cfg.features = 'time'`: if time serves as features, a search is performed across channels and frequencies. Therefore, the result is a _[chan x freq]_ matrix of classification accuracies.
+- `cfg.features = 'freq'`: the result is a _[chan x time]_ matrix of classification accuracies.
+- `cfg.features = []`: in this case, a search is performed across all dimensions yielding a _[chan x freq x time]_ array.
+- `cfg.features = {'chan' 'freq'}`: multiple feature dimensions can be specified by providing a cell array. In this example, channels and frequencies are combined into a long feature vector and a classification is performed for every time point, yielding a _[time x 1]_ vector.
 
 
 ### Exercise 4
 
 {% include markup/info %}
-Building on the previous example, perform an analysis for every frequency bin,
-using channels and time points as features.
+Building on the previous example, perform a classification analysis for every frequency bin.
+To this end, use channels and time points as features.
 {% include markup/end %}
 <!--
 Confirm that kernel FDA with a linear
@@ -366,16 +366,16 @@ kernel is indeed faster than ordinary LDA by running the analysis for both
 classifiers and stopping the time using the `tic` and `toc` functions.
 -->
 
-We can further control the searchlight by specifying neighbouring channels/times/frequencies
+Similar to what we did in the 'where' analysis, we can control the size of the searchlight by specifying neighbouring channels/times/frequencies
 for each of the search dimensions. As an example, let us run an analysis across
 frequencies and time, this time taking into account neighbouring time points as well.
 To this end, we set `cfg.timwin = 5` which means that a total of 5 time points is
 considered in each analysis: the given center time point and its two immediately
-preceding and following time points. It is worth noting that including neighbouring
-channels/frequencies/time points increases the feature space for the classifier.
-In the current example, the feature space has the dimension 149 channel x 5 time points = 745.
+preceding and following time points. Including neighbouring
+channels/frequencies/time points increases the dimensionality of the feature space.
+In this example, the feature space has the dimension 149 (channel) x 5 (time points) = 745.
 A larger feature space provides more information to the classifier but it also is more
-computationally demanding and holds the danger of overfitting.
+computationally demanding and potentially holds the danger of overfitting.
 
     cfg = [] ;  
     cfg.method        = 'mvpa';
@@ -406,21 +406,20 @@ be set by the user, so-called *hyperparameters*. For a list of hyperparameters f
 functions in the [model folder](https://github.com/treder/MVPA-Light/tree/master/model).
 The default values suffice for many scenarios, but sometimes you may want to manually change the parameters.
 This can be easily done using the `hyperparameter` substruct. For instance, in Support
-Vector Machines (SVM), the type of kernel is a hyperparameter. If an RBF kernel is used the parameter `gamma` controls the
-kernel width
+Vector Machines (SVM), the type of kernel is a hyperparameter. If an RBF kernel is used the parameter `gamma` controls the kernel width:
 
 
     cfg.mvpa.hyperparameter           = [];
     cfg.mvpa.hyperparameter.kernel    = 'rbf';
     cfg.mvpa.hyperparameter.gamma     = 1;
 
-See [train_svm](https://github.com/treder/MVPA-Light/blob/master/model/train_svm.m) for a list of SVM hyperparameters and their default values.
-To give another example, in LDA the `lambda` parameter controls the amount of regularization of the covariance matrix.
+See [train_svm](https://github.com/treder/MVPA-Light/blob/master/model/train_svm.m) for a full list of SVM hyperparameters and their default values.
+To give another example, in LDA the `lambda` parameter controls the amount of regularization of the covariance matrix. The default value `'auto'` is usually sufficient but we can also set it to a specific value:
 
     cfg.mvpa.hyperparameter           = [];
-    cfg.mvpa.hyperparameter.lambda    = 'auto';
+    cfg.mvpa.hyperparameter.lambda    = 0.01;
 
-See [train_lda](https://github.com/treder/MVPA-Light/blob/master/model/train_lda.m) for a list of LDA hyperparameters and their default values.
+See [train_lda](https://github.com/treder/MVPA-Light/blob/master/model/train_lda.m) for a full list of LDA hyperparameters and their default values.
 
 ### Exercise 6
 
@@ -435,14 +434,14 @@ includes demeaning, z-scoring, PCA, sample averaging, feature
 extraction methods such as PCA, and any other
 approaches that operate on the data prior to training.
 
-An important distinction is between _global_ vs _nested_ preprocessing: In _global_ preprocessing, an
+It is important to distinguish between _global_ vs _nested_ preprocessing. In _global_ preprocessing, an
 operation is applied to the whole dataset (including both train and
 test data) at once before classification is done. This holds the possibility
 of information transfer between train and test set,
 since the operation applied to the train data is affected by the properties
 of the test data.
 
-Nested preprocessing avoids this by obtaining the parameters for an
+_Nested_ preprocessing avoids this by obtaining the parameters for an
 operation solely from the train data. The parameters (e.g. principal
 components) extracted from the train set are then applied to the test
 set. This assures that no information from the test set goes into the
@@ -467,7 +466,7 @@ To perform nested z-scoring, we add the following line
     cfg.mvpa.preprocess = 'zscore';
 
 Nested z-scoring means that the means and standard deviations are calculated on the train data
-and then applied to both the train and the test data. This assures that no information
+and then applied to both train and test data. This assures that no information
 from the test set flows into the processing of the train set. The available preprocessing functions
 are listed in the [preprocess folder](https://github.com/treder/MVPA-Light/tree/master/preprocess) on the GitHub page.
 You can specify an operation by omitting `mv_preprocess_`. For instance, the file `mv_preprocess_demean` corresponds to the string `'demean'`.
@@ -475,7 +474,7 @@ We can follow up the z-score with a Principal Components Analysis (PCA) by provi
 
     cfg.mvpa.preprocess = {'zscore' 'pca'};
 
-Preprocessing functions also have parameters that change their behaviour. For instance,
+Preprocessing functions also have parameters that control their behaviour. For instance,
 in PCA the number of PCs is such a parameter. Its default value is 20. Studying the help of the PCA function
 
     help mv_preprocess_pca
@@ -521,7 +520,7 @@ TODO
 In this tutorial, we explored the usage of [MVPA-Light](https://github.com/treder/MVPA-Light) for the classification
 of time-locked and time-frequency data. By setting the parameters `cfg.features` and `cfg.generalize`
 cross-validated multivariate analyses can be flexibly designed. We further investigated the setting of hyperparameters
-and the addition of a nested preprocessing pipeline.
+and the construction of a nested preprocessing pipeline.
 
 <!--
 TODO:
