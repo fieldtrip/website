@@ -79,6 +79,8 @@ Bruns A. [Fourier-, Hilbert- and wavelet-based signal analysis: are they really 
 
 The [Brief History of the EEG Surface Laplacian](http://ssltool.sourceforge.net/history.html) by Paul L. Nunez explains how the surface Laplacian and SCD relate. The surface laplacian is further explained on the [EGI website](ftp://ftp.egi.com/pub/documentation/technotes/SurfaceLaplacian.pdf).
 
+A must read on the use of filters has recently been published by Alain de Chéveigné and Israel Nelken in Neuron: [Filters: when, why and how (not) to use them](https://doi.org/10.1016/j.neuron.2019.02.039).
+
 ## Statistics
 
 The following paper illustrates several problems associated with the lack of robustness and gives recommendations: Rousselet, G.A. & Pernet, C.R. (2012) [Improving standards in brain-behavior correlation analyses](https://www.frontiersin.org/articles/10.3389/fnhum.2012.00119/full). Frontiers in human neuroscience, 6, 119.
