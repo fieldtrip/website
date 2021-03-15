@@ -32,7 +32,7 @@ Imaging methods such as MRI and CT result in 3-D volumetric representations of t
 
 | system             | units | orientation | origin                                      | scaling                                                                                                   | notes                        |
 | ------------------ | ----- | ----------- | ------------------------------------------- | --------------------------------------------------------------------------------------------------------- | ---------------------------- |
-| ACPC               | mm    | RAS         | anterior commissure                         | individual brain, not normalized to a template                                                            |                              |
+| ACPC               | mm    | RAS         | anterior commissure                         | native, i.e., not normalized to a template                                                            |                              |
 | Allen Institute    | mm    | RAS         | Bregma point                                |                                                                                                           |                              |
 | Analyze            | mm    | LAS         |                                             | native                                                                                                    |                              |
 | BTi/4D             | m     | ALS         | between the ears                            | native                                                                                                    |                              |
