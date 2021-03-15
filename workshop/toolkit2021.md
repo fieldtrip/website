@@ -14,7 +14,7 @@ The toolkit course is aimed at PhD and postdoctoral researchers that already hav
 {% include markup/info %}
 To ensure that we can give sufficient individual attention to everyone, we will limited the number of participants. From past experience we expect the course to be oversubscribed, hence we will start with pre-registration. The final selection of the participants will be based on the motivation, background experience and research interests that you provided in the registration form. The deadline for pre-registration is March 31, 2021.
 
-For registration please go to the [Donders website](https://www.ru.nl/donders/agenda/donders-tool-kits/vm-tool-kits/donders-meg-eeg-toolkit/).
+For (pre)registration please go to the [Donders website](https://www.ru.nl/donders/agenda/donders-tool-kits/vm-tool-kits/donders-meg-eeg-toolkit/).
 {% include markup/end %}
 
 The toolkit will consist of a number of interactive online lectures, followed by Q&A sessions. Besides lectures we will have interactive hands-on sessions in which you will be tutored through the complete analysis of a MEG/EEG data set using the FieldTrip toolbox. There will be plenty of opportunity to interact and also ask questions about your research and data. On the final day you will have the opportunity to work on your own dataset under supervision of skilled tutors.
