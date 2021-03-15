@@ -81,6 +81,8 @@ The [Brief History of the EEG Surface Laplacian](http://ssltool.sourceforge.net/
 
 A must read on the use of filters has recently been published by Alain de Chéveigné and Israel Nelken in Neuron: [Filters: when, why and how (not) to use them](https://doi.org/10.1016/j.neuron.2019.02.039).
 
+Another good paper about filtering has been written by Andreas Widmann and colleagues: [Digital filter design for electrophysiological data—A practical approach](https://doi.org/10.1016/j.jneumeth.2014.08.002).
+
 ## Statistics
 
 The following paper illustrates several problems associated with the lack of robustness and gives recommendations: Rousselet, G.A. & Pernet, C.R. (2012) [Improving standards in brain-behavior correlation analyses](https://www.frontiersin.org/articles/10.3389/fnhum.2012.00119/full). Frontiers in human neuroscience, 6, 119.
