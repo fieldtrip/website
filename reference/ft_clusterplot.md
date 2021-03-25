@@ -20,6 +20,9 @@ title: ft_clusterplot
    cfg.visible                 = string, 'on' or 'off' whether figure will be visible (default = 'on')
    cfg.position                = location and size of the figure, specified as a vector of the form [left bottom width height]
    cfg.renderer                = string, 'opengl', 'zbuffer', 'painters', see MATLAB Figure Properties. If this function crashes, you should try 'painters'.
+   cfg.toi                     = vector, or 'all' (default) indicates which time
+                                 points (or frequency bins) are to be plotted. If specified as 'all' only the
+                                 data points with identified clusters are plotted
 
  You can also specify most configuration options that apply to FT_TOPOPLOTER or FT_TOPOPLOTTFR,
  except for cfg.xlim, any of the highlight options, cfg.comment and cfg.commentpos.

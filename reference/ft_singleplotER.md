@@ -17,7 +17,7 @@ title: ft_singleplotER
 
  The configuration can have the following parameters:
    cfg.parameter     = field to be plotted on y-axis, for example 'avg', 'powspctrm' or 'cohspctrm' (default is automatic)
-   cfg.maskparameter = field in the first dataset to be used for masking of data; this is not supported when 
+   cfg.maskparameter = field in the first dataset to be used for masking of data; this is not supported when
                        computing the mean over multiple channels, or when giving multiple input datasets (default = [])
    cfg.maskstyle     = style used for masking of data, 'box', 'thickness' or 'saturation' (default = 'box')
    cfg.maskfacealpha = mask transparency value between 0 and 1
