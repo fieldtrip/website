@@ -30,7 +30,7 @@ Suppose we are presented with a coin and we want to know whether it is fair (50%
 -   Null hypothesis H0: the coin is fair, i.e., 50% chance for heads and 50% chance for tails
 -   Alternative hypothesis H1: the coin is totally unfair, e.g., 100% chance to land on head
 -   Sample size: 2 or 5 samples (tosses)
--   Power: the probability of rejecting the null hypothesis when H0 is false
+-   **Power: the probability of rejecting the null hypothesis when H0 is false**
 
 The power of a statistical test quantifies how sure we can be to decide the coin is unfair (i.e., rejecting the null hypothesis). By definition, we can calculate power by doing the same experiment a large number of times (e.g., 5000 times), and then calculating the proportion of the number of times in which null hypothesis can be rejected to 5000. However, even a simple task such as coin-tossing will be very time-consuming and tedious when you need to repeat it 5000 times. Luckily, we don’t really have to toss a coin, as MATLAB can simulate the results for us. We know the outcome of tossing a coin conforms to a binomial distribution. Using this distribution, we can simulate the outcome of each experiment (i.e., the number of heads out of a certain number of tosses).
 
