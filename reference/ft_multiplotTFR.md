@@ -23,7 +23,7 @@ title: ft_multiplotTFR
                         'outline' can only be used with a logical cfg.maskparameter
                         use 'saturation' or 'outline' when saving to vector-format (like *.eps) to avoid all sorts of image-problems
    cfg.maskalpha        = alpha value between 0 (transparent) and 1 (opaque) used for masking areas dictated by cfg.maskparameter (default = 1)
-                        (will be ignored in case of numeric cfg.maskparameter or if cfg.maskstyle = 'outline')   
+                        (will be ignored in case of numeric cfg.maskparameter or if cfg.maskstyle = 'outline')
    cfg.masknans         = 'yes' or 'no' (default = 'yes')
    cfg.xlim             = 'maxmin' or [xmin xmax] (default = 'maxmin')
    cfg.ylim             = 'maxmin' or [ymin ymax] (default = 'maxmin')

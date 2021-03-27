@@ -8,9 +8,6 @@ title: ft_nirs_transform_ODs
 
  Use as either
    [data]      = ft_nirs_transform_ODs(cfg, data)
-   [freq]      = ft_nirs_transform_ODs(cfg, freq)
-   [timelock]  = ft_nirs_transform_ODs(cfg, timelock)
-   [component] = ft_nirs_transform_ODs(cfg, component)
 
  The configuration "cfg" is a structure containing information about
  target of the transformation. The configuration should contain

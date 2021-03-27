@@ -2,7 +2,7 @@
 title: ft_source2sparse
 ---
 ```plaintext
- FT_SOURCE2SPARSE removes the grid locations outside the brain from the source 
+ FT_SOURCE2SPARSE removes the grid locations outside the brain from the source
  reconstruction, thereby saving memory.
 
  This invalidates the fields that describe the grid, and also makes it
