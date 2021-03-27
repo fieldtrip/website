@@ -1,0 +1,279 @@
+---
+title: How to use simulations to estimate sample size for cluster-based permutation test
+tags: [example, statistics, sample size, permutation]
+---
+
+# How to use simulations to estimate sample size for cluster-based permutation test
+
+It is usually required to provide justification for sample size when reporting a study [(Clayson et al., 2019)](https://onlinelibrary.wiley.com/doi/full/10.1111/psyp.13437). Many researchers use G\*Power to estimate the sample size required for their studies. However, this popular software is not suitable for EEG research that uses the cluster-based permutation test to estimate the statistical significance of an effect, because of the non-parametric nature of the test. 
+
+Here, I provide two easy-to-use MATLAB functions which use simulations to estimate the sample size for cluster-based permutation tests. These functions can be used for EEG/MEG research involving contrasts between **two conditions** (paired or independent samples). They were written for and first used in [Wang and Zhang (2021)](https://doi.org/10.1111/psyp.13775). Please cite this paper where appropriate.
+
+From this [OSF website](https://osf.io/rmqhc/files/), you can download the functions and corresponding demo files. MATLAB functions are stored in the *functions* folder. 
+- **sampleSize_erp.m**  is for ERP analysis
+- **sampleSize_timefreq.m**  is for time frequency analysis
+
+Two demo files demonstrating how to use the functions are in the *demo* folder:
+- **demo_erp.m** 
+- **demo_timefreq.m**
+
+In this example, I will first briefly introduce how to estimate sample size through simulations using an intuitive example of coin-tossing. Then, I will demonstrate how to estimate sample size through simulations for t-tests and cluster-based permutation tests.
+
+## Power analysis through simulations – an intuitive example of coin-toss
+Let's start by a brief introduction to estimate sample size using an intuitive example of coin-tossing. For a more detailed and excellent introduction, please see [Dr. Julian Quandt’s website] (https://julianquandt.com/post/power-analysis-by-data-simulation-in-r-part-i/). This section is inspired by Dr. Quandt’s excellent introduction.
+
+Suppose we are presented with a coin and we want to know whether it is fair (50% chance lands on head). We can test it by running coin-tossing experiments. Consider the following two experiment scenarios. In Experiment 1, we tossed it 2 times, and observed 2 heads; In Experiment 2, we tossed it 5 times and observed 5 heads. With either experiment, we are inclined to think the coin is unfair. But intuitively, we are much surer of the coin’s unfairness in Experiment 2 than in Experiment 2. But still, we don’t know how sure we are. We can clarify this issue in an inferential statistic way.
+
+- Null hypothesis: the coin is fair (50% chance to land on head)
+- Alternative hypothesis: the coin is unfair (e.g., 100% chance to land on head)
+- Sample size: 2 or 5 samples (tosses)
+- Power: the probability of rejecting the null hypothesis when the null hypothesis is false
+
+The power of a statistical test can quantify how sure we can be to decide the coin is unfair (i.e., rejecting the null hypothesis). By definition, we can calculate power by doing the experiments a large number of times (e.g., 5000 times), and then calculating the proportion of the number of times in which null hypothesis can be rejected to 5000. However, even a simple task such as coin-tossing will be very time-consuming and tedious, when you need to repeat doing it 5000 times. Luckily, we don’t really have to toss a coin, as MATLAB can simulate the results for us. We know the outcome of tossing a coin conform to a binomial distribution. Using this distribution, we can simulate the outcome of each experiment (i.e., the number of heads out of a certain number of tosses). 
+
+First, we need to “guess”, based usually on pilot studies or prior similar studies, the key parameters of the binomial distributions for each of the null and alternative hypotheses. In the current example, the chance of a coin to land on head under the null hypothesis is undoubtedly 50%. And under the alternative hypothesis, we can assume the coin has a chance of 100% to land on head, based on the result of Experiment 2. Only with these parameters specified can data be sampled from the distributions. Note that the difference (50% vs. 100%) between the two hypotheses can be construed as the effect size, which has great influence on power: power tends to be greater with larger effect size.
+
+Second, we need to decide the criterion for rejecting the null hypothesis. Conventionally, we reject the null hypothesis if the probability of its being correct is less than 0.05, which is the so-called alpha level. In each experiment, if the outcome is unlikely (i.e., probability < 0.05) to happen under the null hypothesis, we reject the null hypothesis. 
+
+Finally, power is calculated as the proportion of rejecting null hypothesis to the whole number of experiments. Take the current case for example, the outcome of tossing a 100% unfair coin 5 times can be sampled from the binomial distribution, and the results would always be 5 heads. The probability of 5 heads out of 5 tosses under the null hypothesis is 1/(2^5) = 0.0313 < 0.05. So, in all of the 5000 experiments, the null hypothesis is rejected. Thus, the power is 1 = 5000/5000. 
+
+All of the above steps can be done using the following block of MATLAB code:
+
+```matlab
+% settings
+p_heads_h1  = 1;     % chance to land on head under H1, aka, the effect size
+n_sample    = 5;     % sample size, i.e., number of toss
+alpha_level = 0.05;  % alpha level
+n_sim       = 5000;  % number of simulations/experiments 
+
+% calculate power
+n_heads = binornd(n_sample, p_heads_h1, [1,n_sim]);   % run 5000 experiments of tossing a 100% unfair coin 5 times, store the number of heads generated in each experiment 
+p_h0  = 1-binocdf(n_heads -1, n_sample, 0.5);  % calculate the probability of getting at least that many heads if the coin would be fair
+power = sum(p_h0 < alpha_level)/n_sim;  % calculate power.
+```
+
+A 100% unfair coin is an extreme and simplified example. You can try other settings in the above MATLAB code, and see what you get. For example, if we guess the coin has a chance of 55% to land on head, and the sample size is 100, we can get a power of 0.254. 
+
+The above code only shows how to calculate power with a specified sample size through simulation. The next block of code shows how to estimate the required sample size for a desired power (e.g., 0.9). Basically, what the code does is calculating the power through simulations for each sample size (starting from 21, increasing in steps of 1 until reaching a power of 0.90). The program stops when power reaches a desired level, and the sample size corresponding to this desired power is the sample size we need for this test.
+
+```matlab
+% settings
+alpha_level = 0.001;   % alpha level
+power_level = 0.9;     % desired power level
+p_heads_h1  = 0.55;    % chance to land on head under H1
+n_start     = 20;      % sample size to start
+n_sim       = 1000;    % number of experiments 
+
+% run simulations for each sample size until power reaches desired level
+power      = 0;                  % initialize the variable
+power_at_n = zeros(1,n_start);   % initialize 
+n_sample   = n_start;            % sample size
+while power < power_level  % continue increasing sample-size until power reach desired level
+    n_sample = n_sample + 1;     % sample size in current iteration
+    n_heads = binornd(n_sample, p_heads_h1, [1,n_sim]);   
+    p_h0  = 1-binocdf(n_heads-1, n_sample, 0.5);  
+    power = sum(p_h0 < alpha_level)/n_sim;  % calculate power for the current sample size
+    power_at_n(n_sample) = power;
+end
+
+% plot the result
+plot(1:n_sample, power_at_n, 'ko'); hold on
+plot([0 n_sample],[power_level power_level],'r'); 
+xlim([n_start+1 n_sample]); ylim([0 1])
+xlabel('Sample size'); ylabel('Power')
+title(['Required sample size is' num2str(n_sample)])
+```
+
+{% include image src="/assets/img/example/sample_size/Fig1.png" width="400" %}
+
+From the above example, we can summarize the basic steps to estimate sample size through simulation:
+- 1). Specify a null hypothesis, an alpha-level, and a desired power,
+- 2). Specify an alternative hypothesis, which is per se a theoretical distribution from which data can be sampled or simulated. This will also determine the effect size. 
+- 3). Start from a small sample size. simulate data 1000 times from the distribution with this sample size. In each time, estimate the probability of the simulated data happening under the null hypothesis. If the probability is less than the alpha level, reject the null hypothesis. Then calculate power as the proportion of the number of times rejecting null hypothesis to 1000.
+- 4). Continue increasing sample size until power reaches the desired level.
+
+## Estimating sample size through simulations – t-test
+A more realistic problem we might encounter in our daily research life is comparing two conditions. Suppose we have two conditions of (independent) data, how can we estimate the required sample size through simulations? We can do it following the above four steps.
+- 1). Null hypothesis: no difference between the two conditions; for instance, alpha = 0.05; desired power = 0.8.
+- 2). Alternative hypothesis: significant difference between the two conditions. The key is to define the two normal distributions from which the two groups of data can be sampled. So, the means and standard deviations need to be specified, based on pilot studies or prior existing studies, for each of the two conditions. Usually, standard deviations should be equal, whereas means be different. The distance between the two means reflects the effect size.
+- 3). Starting from a small sample size, use the theoretical distribution to simulate the two groups of data 1000 times. In each time, estimate the significance (i.e., p values) of difference between the two conditions using t-test. If probability < 0.05, reject the null hypothesis. Then, calculate power as the proportion of the number of times rejecting null hypothesis to 1000.
+- 4). Continue increasing sample size until power reaches the desired level.
+
+The following block of MATLAB code does exactly what these steps. 
+
+```matlab
+% settings
+alpha_level = 0.05;      % alpha level
+power_level = 0.80;      % desired power level
+mu          = [3 4];     % means for the two conditions
+sd          = [2 2];     % standard deviations for the two conditions
+n_start     = 10;        % sample size to start
+n_sim       = 1000;      % number of experiment 
+
+% run simulations for each sample size until power reaches desired level
+power      = 0;                  % initialize the variable
+power_at_n = zeros(1,n_start);   % initialize 
+n_sample   = n_start;            % sample size
+while power < power_level  % continue increasing sample-size until power reach desired level
+    n_sample = n_sample + 1;   % sample size in current iteration
+    p_vals   = ones(1,n_sim);  % initialize
+    for i=1:n_sim
+        rd1 = normrnd(mu(1), sd(1), n_sample, 1);  % sampling data from a normal distribution for group1
+        rd2 = normrnd(mu(2), sd(2), n_sample, 1);  % sampling data from a normal distribution for group2
+        [~,p_vals(i),~,~] = ttest(rd1,rd2);  % t-test, store the p values
+    end
+    power = sum(p_vals < alpha_level)/n_sim;  % calculate power for the current sample size
+    power_at_n(n_sample) = power;
+end
+
+% plot the result
+figure
+plot(1:n_sample, power_at_n, 'ko'); hold on
+plot([0 n_sample],[power_level power_level],'r'); ylim([0 1])
+xlim([n_start+1 n_sample]); ylim([0 1])
+xlabel('Sample size'); ylabel('Power')
+title(['Required sample size is ' num2str(n_sample)])
+```
+
+The result shows that the sample size required for 80% power in an independent t-test (means: 3 vs. 4; SDs = 2) is 65, which is very close to the result gotten from G*Power. 
+
+{% include image src="/assets/img/example/sample_size/Fig2.png" width="400" %}
+
+{% include image src="/assets/img/example/sample_size/Fig3.png" width="400" %}
+
+## Estimating sample size through simulations - cluster-based permutation test
+
+For cluster-based permutation tests in MEG/EEG data, the method of estimating sample size through simulations is the same to that for t-tests, except that Step 3 is somewhat different. In the Step 3 for cluster-based permutation tests, two groups of ERP (2 dimensions: channel×time) or time-frequency (3 dimensions: channel×frequency×time) data are simulated. In each sample of the ERP/time-frequency data, we simulate a cluster of interest with a predefined time window (e.g., 50-250 ms) and frequency band (e.g., 4-8 Hz) in neighboring channels (e.g., C1, CZ, CP1, CPZ). The time, frequency, and spatial ranges of the cluster can be chosen to be similar to those of cluster displaying effect of interest in your pilot studies or prior existing studies. The cluster's peak values in the two conditions were sampled from two normal distributions (for a between-subject design) or a bivariate normal distribution (for a within-subject design). The means and standard deviations of the distributions can be chosen to be similar to those in your pilot studies or prior existing studies. Then a cluster-based permutation test is performed on the simulated dataset to test whether any cluster exhibited significant difference between the two conditions with an alpha level of 0.05. The simulations was run for 1000 times, and the power was calculated as the proportion of the number of times finding significant clusters to 1000. These simulations are done for each of the continually increasing sample size (starting from 10, increasing in steps of 1) until reaching a desired power (e.g., 0.8). The above processing is implemented in the two aforementioned MATLAB functions (*sampleSize_erp.m* and *sampleSize_timefreq.m*). 
+
+Next, I will demonstrate how to use the *sampleSize_timefreq.m* function (the usage of *sampleSize_erp.m* is very similar). See also the two demo files. 
+
+First, you need to have a time-frequency dataset that is generated by the *ft_freqanalysis* function in Fieldtrip. You can also use the *exempleData_timefreq.mat* dataset which can be downloaded with the functions (https://osf.io/rmqhc/). This dataset is used only for retrieving the fieldtrip data structure for simulating time-frequency data. The *sampleSize_timefreq.m* function has two parts of parameters, which are respectively stored in *cfg* and *stat_cfg*. Parameter *cfg* stores the configurations for simulating data, and *stat_cfg* stores the configurations for cluster-based permutation tests.
+
+```matlab
+%%
+clear, close all
+cd('F:\SampleSize\functions')
+load('exampleData_timefreq.mat');   % load a time-freq data obtained from the ft_freqanalysis function, 
+                                    % to retrieve the fieldtrip data structure
+                                    
+%=========== set configuration for data simulation ================
+% parameters for the time-freq data, should be matched to your own time-freq data 
+cfg = [];
+cfg.time           = exampleData.time;   % exampleData is the variable loaded from 'exampleData_timefreq.mat'
+cfg.freq           = exampleData.freq;
+cfg.label          = exampleData.label;
+
+% parameters for the simulated cluster 
+cfg.clusterfreq    = [4 8];                    % freq range you want to be included in the significant cluster, 
+cfg.clustertime    = [0.03 0.25];              % time range you want to be included in the significant cluster, 
+cfg.clusterchan    = {'CZ','C1','CPZ','CP1'};  % channles you want to be included in the significant cluster
+% These three parameters above should be set to be similar to those of the cluster of your preliminary results
+cfg.bufferchan     = {'FC3','FC1','FCZ','FC2','C2','CP2','P2','PZ','P1','P3','CP3','C3'}; 
+                      % channels surrounding the cluster channels, used as a buffer zone from peak values in the cluster channels to 0
+cfg.layout         = 'NeuroScan_quickcap64_layout.lay';  % your layout file
+
+% parameters for the power analysis
+cfg.alpha_level = 0.05;    % desired alpha-level
+cfg.power_level = 0.8;     % desired power
+cfg.num_sims    = 500;     % number of randomizations, should be >= 500 
+cfg.n_start     = 13;      % sample size to start with, should be <=10
+
+% parameters for normal distribution from which the simulated data are sampled
+cfg.ExpDesign   = 'indepsamplesT';  % 'depsamplesT' or 'indepsamplesT' for within- or between-subject design, respectively
+cfg.mu          = [3 5];   % means of the two conditions, the first entry must be SMALLER than the second
+cfg.sd          = [2 2];   % standard deviations of the two conditions
+cfg.cor         = 0.75;    % correlation between paried samples, ONLY needed for within-subject designs
+% mu, sd, and cor should be corresponding values that you expect from your own data, they can be set to be similar to those in your preliminary results
+% mu is particularly important, as its two entries determine the amount of difference between the two conditions
+                     
+%=========== set configuration for cluster permutation test ================
+neighbour_cfg = [];
+neighbour_cfg.method      = 'triangulation'; 
+neighbour_cfg.layout      = cfg.layout;
+neighbour_cfg.feedback    = 'no';                             
+neighbours = ft_prepare_neighbours(neighbour_cfg, exampleData); 
+
+stat_cfg = [];
+stat_cfg.neighbours       = neighbours;
+stat_cfg.minnbchan        = 3; 
+stat_cfg.channel          = {'all','-HEOG','-VEOG'};
+stat_cfg.avgoverchan      = 'no';
+stat_cfg.latency          = [0 0.5];     % in second
+stat_cfg.avgovertime      = 'no'; 
+stat_cfg.frequency        = 'all';
+stat_cfg.avgoverfreq      = 'no'; 
+stat_cfg.method           = 'montecarlo';
+stat_cfg.statistic        = cfg.ExpDesign;  % 'depsamplesT' or 'indepsamplesT', same as cfg.ExpDesign
+stat_cfg.correctm         = 'cluster';
+stat_cfg.clusteralpha     = 0.025;
+stat_cfg.clustertail      = 0;
+stat_cfg.clusterstatistic = 'maxsum';
+stat_cfg.tail             = 0;
+stat_cfg.alpha            = cfg.alpha_level/2; 
+stat_cfg.numrandomization = 500;    % number of randomizations for permutation, should be >= 500 
+
+%%% Run the function
+MyPar = parpool; % start parallel pool
+res = sampleSize_timefreq(cfg,stat_cfg);
+save('results_timefreq_pairedSamples.mat','res')
+delete(MyPar) 
+```
+
+Running this function would be quite time-consuming, with a lot of simulations to run. It’s time-saving to open parpool to use parallel computing. The results are stored in *res*. The following block of code plot the results.
+
+```matlab
+%% plot the results of power analysis
+cfg = res.cfg;
+figure
+scatter(cfg.n_start:res.sample_size, res.power_at_n(cfg.n_start:end),400,[0.5 0.5 0.5],'Marker','.'); hold on
+plot([cfg.n_start res.sample_size],[cfg.power_level cfg.power_level], 'r')
+text(cfg.n_start+0.5, 0.8,'0.8')
+xlabel('Sample size'); ylabel('Power'),xlim([cfg.n_start res.sample_size])
+```
+
+{% include image src="/assets/img/example/sample_size/Fig4.png" width="400" %}
+
+
+We can also have a look at the simulated data for the required sample size. The datasets for the two conditions are stored in *res.condA* and *res.condB*
+
+```matlab
+% compute grand average
+cfg1 = [];
+cfg1.channel   = 'all';
+cfg1.toilim    = 'all';
+cfg1.foilim    = 'all';
+A_avg = ft_freqgrandaverage(cfg1, res.condA{:});        % condition A
+B_avg = ft_freqgrandaverage(cfg1, res.condB{:});        % condition B
+A_vs_B = A_avg;
+A_vs_B.powspctrm = A_avg.powspctrm - B_avg.powspctrm;  % condition difference
+
+% average cross cluster channels
+clusterchan_idx = match_str(cfg.label,cfg.clusterchan);
+powA      =  squeeze(mean(A_avg.powspctrm(clusterchan_idx,:,:),1)); 
+powB      =  squeeze(mean(B_avg.powspctrm(clusterchan_idx,:,:),1));
+pow_diff  = squeeze(mean(A_vs_B.powspctrm(clusterchan_idx,:,:),1));
+lim_a     = round(max([max(powA(:)) max(powB(:))]),1);
+lim_b     = round(max([abs(max(pow_diff(:))) abs(min(pow_diff(:)))]),1);
+
+% plot
+figure
+subplot(221)
+contourf(cfg.time,cfg.freq,powA,40,'linecolor','none')  % condition A
+set(gca,'clim',[-lim_a lim_a]); colorbar; colormap(jet); 
+title('Condition A'); xlabel('Time (ms)'); ylabel('Frequency (Hz)')
+colorbar('YTick',[-lim_a 0 lim_a]);
+
+subplot(222)
+contourf(cfg.time,cfg.freq,powB,40,'linecolor','none')  % condition B
+set(gca,'clim',[-lim_a lim_a]); colorbar; colormap(jet); 
+title('Condition B'); xlabel('Time (ms)'); ylabel('Frequency (Hz)')
+colorbar('YTick',[-lim_a 0 lim_a]);
+
+subplot(223)
+contourf(cfg.time,cfg.freq,pow_diff,40,'linecolor','none')  % A minus B
+set(gca,'clim',[-lim_b lim_b]); colormap(jet); 
+title('A - B'); xlabel('Time (ms)'); ylabel('Frequency (Hz)') 
+colorbar('YTick',[-lim_b 0 lim_b]);
+```
+
+{% include image src="/assets/img/example/sample_size/Fig5.png" width="400" %}
