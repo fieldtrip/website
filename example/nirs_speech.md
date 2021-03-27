@@ -97,7 +97,7 @@ We will first use the low-level reading functions to check on some basic charact
 
 ## Look at the optode positions
 
-FieldTrip uses the `opto` structure (see **[ft_datatype_sens](https://github.com/fieldtrip/fieldtrip/blob/release/utilities/ft_datatype_sens.m)**) to describe the physical characteristics of the sensor array, and the `layout` structure (see **[ft_prepare_layout](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_layout.m)** and the [plotting](tutorial/plotting) and [layout](tutorial/layout) tutorials) to describe how the channel-level results are to be plotted schematically in 2D on the screen.
+FieldTrip uses the `opto` structure (see **[ft_datatype_sens](https://github.com/fieldtrip/fieldtrip/blob/release/utilities/ft_datatype_sens.m)**) to describe the physical characteristics of the sensor array, and the `layout` structure (see **[ft_prepare_layout](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_layout.m)** and the [plotting](/tutorial/plotting) and [layout](/tutorial/layout) tutorials) to describe how the channel-level results are to be plotted schematically in 2D on the screen.
 
     optoR = opto;
     optoR.optopos(strcmp(opto.optotype, 'transmitter'),:) = nan;
