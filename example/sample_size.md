@@ -7,7 +7,7 @@ tags: [example, statistics, cluster, simulation]
 
 It is recommended and sometimes even required to provide justification for sample size prior to starting a study and when reporting about it [(Clayson et al., 2019)](https://onlinelibrary.wiley.com/doi/full/10.1111/psyp.13437). Many researchers use G\*Power to estimate the sample size required for their studies. However, although very useful and popular, this software is not suitable for multivariate data or for non-parametric tests. For EEG and MEG we often use a cluster-based permutation test, which is a non-parametric test that exploits the multivariate structure in the data.
 
-Here, we remonstrate two easy-to-use MATLAB functions that use simulations to estimate the sample size for cluster-based permutation tests. These functions can be used for EEG/MEG research involving contrasts between **two conditions** (paired or independent samples). They were written for, and first used in [Wang and Zhang (2021)](https://doi.org/10.1111/psyp.13775). Please cite this paper where appropriate.
+Here, we demonstrate two easy-to-use MATLAB functions that use simulations to estimate the sample size for cluster-based permutation tests. These functions can be used for EEG/MEG research involving contrasts between **two conditions** (paired or independent samples). They were written for, and first used in [Wang and Zhang (2021)](https://doi.org/10.1111/psyp.13775). Please cite this paper where appropriate.
 
 From this [OSF project](https://osf.io/rmqhc/files/), you can download the functions and the corresponding demo files. The MATLAB functions are stored in the _functions_ folder.
 
@@ -160,7 +160,7 @@ The result shows that the sample size required for 80% power in an independent t
 
 For cluster-based permutation tests in MEG/EEG data, the method of estimating sample size through simulations is the same to that for t-tests, except that Step 3 is somewhat different. In the Step 3 for cluster-based permutation tests, two groups of ERP (2 dimensions: channel×time) or time-frequency (3 dimensions: channel×frequency×time) data are simulated. In each sample of the ERP/time-frequency data, we simulate a cluster of interest with a predefined time window (e.g., 50-250 ms) and frequency band (e.g., 4-8 Hz) in neighboring channels (e.g., C1, CZ, CP1, CPZ). The time, frequency, and spatial ranges of the cluster can be chosen to be similar to those of cluster displaying effect of interest in your pilot studies or prior existing studies. The cluster's peak values in the two conditions were sampled from two normal distributions (for a between-subject design) or a bivariate normal distribution (for a within-subject design). The means and standard deviations of the distributions can be chosen to be similar to those in prior existing or pilot studies.
 
-Then a cluster-based permutation test is performed on the simulated dataset to test whether there is a significant difference between the two conditions. We run the simulations for 1000 times, and the power is calculated as the proportion of the number of times that the null hypothesis is rejected. These simulations can subsequently be repeated for an incrementally increasing sample size, starting from 10, increasing in steps of 1, until thwe power reached the desired threshold (e.g., 0.8). The above processing is implemented in the two aforementioned MATLAB functions `sampleSize_erp.m` and `sampleSize_timefreq.m`.
+Then a cluster-based permutation test is performed on the simulated dataset to test whether there is a significant difference between the two conditions. We run the simulations for 1000 times, and the power is calculated as the proportion of the number of times that the null hypothesis is rejected. These simulations can subsequently be repeated for an incrementally increasing sample size, starting from 10, increasing in steps of 1, until the power reached the desired threshold (e.g., 0.8). The above processing is implemented in the two aforementioned MATLAB functions `sampleSize_erp.m` and `sampleSize_timefreq.m`.
 
 Next, we will demonstrate how to use the `sampleSize_timefreq.m` function; the usage of `sampleSize_erp.m` is very similar. See also the two demo files.
 
@@ -181,10 +181,10 @@ cfg.freq           = exampleData.freq;
 cfg.label          = exampleData.label;
 
 % parameters for the simulated cluster
-cfg.clusterfreq    = [4 8];                    % freq range you want to be included in the significant cluster,
-cfg.clustertime    = [0.03 0.25];              % time range you want to be included in the significant cluster,
-cfg.clusterchan    = {'CZ','C1','CPZ','CP1'};  % channles you want to be included in the significant cluster
-% These three parameters above should be set to be similar to those of the cluster of your preliminary results
+cfg.clusterfreq    = [4 8];                    % freq range you want to be included in the cluster displaying effect of interest,
+cfg.clustertime    = [0.03 0.25];              % time range you want to be included in the cluster displaying effect of interest,
+cfg.clusterchan    = {'CZ','C1','CPZ','CP1'};  % channles you want to be included in the cluster displaying effect of interest
+% These three parameters above should be set to be similar to those of the cluster in prior existing or pilot studies
 cfg.bufferchan     = {'FC3','FC1','FCZ','FC2','C2','CP2','P2','PZ','P1','P3','CP3','C3'};
                       % channels surrounding the cluster channels, used as a buffer zone from peak values in the cluster channels to 0
 cfg.layout         = 'NeuroScan_quickcap64_layout.lay';  % your layout file
@@ -200,7 +200,7 @@ cfg.ExpDesign   = 'indepsamplesT';  % 'depsamplesT' or 'indepsamplesT' for withi
 cfg.mu          = [3 5];            % means of the two conditions, the first entry must be SMALLER than the second
 cfg.sd          = [2 2];            % standard deviations of the two conditions
 cfg.cor         = 0.75;             % correlation between paried samples, ONLY needed for within-subject designs
-% mu, sd, and cor should be corresponding values that you expect from your own data, they can be set to be similar to those in your preliminary results
+% mu, sd, and cor should be corresponding values that you expect from your own data, they can be set to be similar to those in prior existing or pilot studies
 % mu is particularly important, as its two entries determine the amount of difference between the two conditions
                      
 %=========== set configuration for cluster permutation test ================
