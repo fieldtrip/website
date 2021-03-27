@@ -78,7 +78,7 @@ and change the line width or colo
     cfg.ylim = [-1e-13 3e-13];
     cfg.channel = 'MLC24';
     cfg.linewidth = 10;
-    cfg.graphcolor = 'g';
+    cfg.linecolor = 'g';
     figure; ft_singleplotER(cfg,avgFC);
 
 {% include image src="/assets/img/tutorial/plotting/fig4.png" %}

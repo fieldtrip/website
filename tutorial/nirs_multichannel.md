@@ -405,7 +405,7 @@ Important to remember is that for **[ft_multiplotER](https://github.com/fieldtri
     cfg.showlabels        = 'yes';
     cfg.layout            = lay;      % you could also specify the name of the mat file
     cfg.interactive       = 'yes';
-    cfg.graphcolor        = 'rb';
+    cfg.linecolor         = 'rb';
     cfg.colorgroups(contains(timelockDEV.label, 'O2Hb')) = 1; % these will be red
     cfg.colorgroups(contains(timelockDEV.label, 'HHb'))  = 2; % these will be blue
     ft_multiplotER(cfg, timelockDEV);
