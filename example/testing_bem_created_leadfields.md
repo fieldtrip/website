@@ -1,6 +1,6 @@
 ---
 title: Testing BEM created EEG lead fields
-tags: [example, eeg, mri, headmodel, source]
+tags: [example, eeg, mri, headmodel, source, simulation]
 ---
 
 # Testing BEM created EEG lead fields

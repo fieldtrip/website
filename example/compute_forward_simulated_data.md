@@ -1,6 +1,6 @@
 ---
 title: Compute forward simulated data using ft_dipolesimulation
-tags: [example, eeg, source, headmodel, dipole]
+tags: [example, eeg, source, headmodel, dipole, simulation]
 ---
 
 # Compute forward simulated data using ft_dipolesimulation

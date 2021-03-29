@@ -1,6 +1,6 @@
 ---
 title: Computing and reporting the effect size
-tags: [example, statistics, meg-language]
+tags: [example, statistics, cluster, meg-language]
 ---
 
 # Computing and reporting the effect size
@@ -441,3 +441,4 @@ Regardless of _how_ you compute the effect size that you report: as long as you 
 ## See also
 
 - There is an interesting crowdsourced document on [Effect size, confidence intervals, and power analyses](https://docs.google.com/document/d/1_vNjPCI7H52T8tav1reYgWx6puMT03JZVY1wvEPHrWU/edit) with practical guidance
+- Other pages on this website that are tagged with [statistics](/tag/statistics)
