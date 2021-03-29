@@ -5,6 +5,12 @@ tags: [example, statistics, cluster, simulation]
 
 # Use simulations to estimate the sample size for cluster-based permutation test
 
+{% include markup/success %}
+
+This example is contributed by [Dr. Cheng Wang](https://www.researchgate.net/profile/Cheng-Wang-93).
+
+{% include markup/end %}
+
 It is recommended and sometimes even required to provide justification for sample size prior to starting a study and when reporting about it [(Clayson et al., 2019)](https://onlinelibrary.wiley.com/doi/full/10.1111/psyp.13437). Many researchers use G\*Power to estimate the sample size required for their studies. However, although very useful and popular, this software is not suitable for multivariate data or for non-parametric tests. For EEG and MEG we often use a cluster-based permutation test, which is a non-parametric test that exploits the multivariate structure in the data.
 
 Here, we demonstrate two easy-to-use MATLAB functions that use simulations to estimate the sample size for cluster-based permutation tests. These functions can be used for EEG/MEG research involving contrasts between **two conditions** (paired or independent samples). They were written for, and first used in [Wang and Zhang (2021)](https://doi.org/10.1111/psyp.13775). Please cite this paper where appropriate.
@@ -36,7 +42,7 @@ The power of a statistical test quantifies how sure we can be to decide the coin
 
 First, we need to “guess”, based usually on pilot studies or prior similar studies, the key parameters of the binomial distributions for each of the null and alternative hypotheses. In the current example, the chance of a coin to land on head under the null hypothesis is undoubtedly 50%. And under the alternative hypothesis, we will assume that the coin has a chance of 100% to land on head, based on the result our observations so far. Only with these parameters specified can data be sampled from the distributions. Note that the difference (50% vs. 100%) between the two hypotheses can be construed as the effect size, which has great influence on power: statistical power tends to be greater with larger effect size.
 
-{% include markup/success %}
+{% include markup/info %}
 
 Once you are done with this example, you may want to continue reading this [example on estimating and reporting the sample size following a cluster-based test](/example/effectsize).
 
