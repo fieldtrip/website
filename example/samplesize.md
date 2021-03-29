@@ -96,7 +96,7 @@ xlabel('Sample size'); ylabel('Power')
 title(['Required sample size is' num2str(n_sample)])
 ```
 
-{% include image src="/assets/img/example/sample_size/Fig1.png" width="400" %}
+{% include image src="/assets/img/example/samplesize/Fig1.png" width="400" %}
 
 From the above example, we can summarize the basic steps to estimate sample size through simulation:
 
@@ -152,9 +152,9 @@ title(['Required sample size is ' num2str(n_sample)])
 
 The result shows that the sample size required for 80% power in an independent t-test (means: 3 vs. 4; SDs = 2) is 65, which is very close to the result that we can obtain from G\*Power.
 
-{% include image src="/assets/img/example/sample_size/Fig2.png" width="400" %}
+{% include image src="/assets/img/example/samplesize/Fig2.png" width="400" %}
 
-{% include image src="/assets/img/example/sample_size/Fig3.png" width="400" %}
+{% include image src="/assets/img/example/samplesize/Fig3.png" width="400" %}
 
 ## Estimating sample size through simulations - cluster-based permutation test
 
@@ -242,13 +242,13 @@ Running this function would be quite time-consuming, with a lot of simulations t
 %% plot the results of power analysis
 cfg = res.cfg;
 figure
-scatter(cfg.n_start:res.sample_size, res.power_at_n(cfg.n_start:end),400,[0.5 0.5 0.5],'Marker','.'); hold on
-plot([cfg.n_start res.sample_size],[cfg.power_level cfg.power_level], 'r')
+scatter(cfg.n_start:res.samplesize, res.power_at_n(cfg.n_start:end),400,[0.5 0.5 0.5],'Marker','.'); hold on
+plot([cfg.n_start res.samplesize],[cfg.power_level cfg.power_level], 'r')
 text(cfg.n_start+0.5, 0.8,'0.8')
-xlabel('Sample size'); ylabel('Power'),xlim([cfg.n_start res.sample_size])
+xlabel('Sample size'); ylabel('Power'),xlim([cfg.n_start res.samplesize])
 ```
 
-{% include image src="/assets/img/example/sample_size/Fig4.png" width="400" %}
+{% include image src="/assets/img/example/samplesize/Fig4.png" width="400" %}
 
 We can also have a look at the simulated data for the required sample size. The datasets for the two conditions are stored in `res.condA` and `res.condB`.
 
@@ -296,7 +296,7 @@ title('A - B'); xlabel('Time (ms)'); ylabel('Frequency (Hz)')
 colorbar('YTick',[-lim_b 0 lim_b]);
 ```
 
-{% include image src="/assets/img/example/sample_size/Fig5.png" width="400" %}
+{% include image src="/assets/img/example/samplesize/Fig5.png" width="400" %}
 
 
 ## See also
