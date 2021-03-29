@@ -8,7 +8,7 @@
   link:  /example/neighbours
 
 - name:  Use simulations to estimate the sample size for cluster-based permutation test
-  link:  /example/sample_size
+  link:  /example/samplesize
 
 - name:  Use simulated ERPs to explore cluster statistics
   link:  /example/use_simulated_erps_to_explore_cluster_statistics

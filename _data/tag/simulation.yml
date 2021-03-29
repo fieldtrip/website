@@ -8,7 +8,7 @@
   link:  /example/effects_of_tapering_for_power_estimates_in_the_frequency_domain
 
 - name:  Use simulations to estimate the sample size for cluster-based permutation test
-  link:  /example/sample_size
+  link:  /example/samplesize
 
 - name:  Testing BEM created EEG lead fields
   link:  /example/testing_bem_created_leadfields

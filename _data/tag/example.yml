@@ -185,7 +185,7 @@
   link:  /example/rereference
 
 - name:  Use simulations to estimate the sample size for cluster-based permutation test
-  link:  /example/sample_size
+  link:  /example/samplesize
 
 - name:  Source statistics
   link:  /example/source_statistics
