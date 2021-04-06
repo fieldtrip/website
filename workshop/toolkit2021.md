@@ -59,7 +59,7 @@ To ensure that we always can find each other, that we can share links and materi
 
 ### Test your MATLAB and FieldTrip installation in advance
 
-Since you will be working at home on your own computer (and occasionally share your screen with us), we recommend that you [test your MATLAB and FieldTrip installation in advance](/workshop/toolkit2021/test_installation). This not only served to test their installation, but also to check that all participants knew how to share their notes in a Google doc with the tutors.
+Since you will be working at home on your own computer (and occasionally share your screen with us), we recommend that you [test your MATLAB and FieldTrip installation in advance](/workshop/toolkit2021/test_installation). This check does not only serve to test your installation, but also checks that you know how to share your notes in a Google doc with the tutors.
 
 ## Code of conduct
 
