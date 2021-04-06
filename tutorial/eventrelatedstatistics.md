@@ -412,6 +412,10 @@ So far we predefined a time window over which the effect was averaged, and teste
 To properly write up your results in a manuscript, you should check the guidelines on [how NOT to interpret results from a cluster-based permutation test](/faq/how_not_to_interpret_results_from_a_cluster-based_permutation_test).
 {% include markup/end %}
 
+{% include markup/info %}
+As you may have noticed, the cfg.clusteralpha is set rather arbitrarily. One way to get around this is to use the Threshold Free Cluster Enhancement (TFCE) method, which is implemented since Jan 2021. You may find further info here: [Using the Threshold Free Cluster Enhancement method in cluster-based permutation test](/faq/using_the_threshold_free_cluster_enhancement_method_in_cluster-based_permutation_test).
+{% include markup/end %}
+
 ## Summary and suggested further reading
 
 This tutorial showed you how to perform parametric and non-parametric statistics in FieldTrip, as well as the the equivalent t-test and Bonferroni correction with MATLAB functions. Furthermore, it demonstrated how to plot the channels that contribute to a significant difference.
