@@ -66,7 +66,7 @@ This should be a MATLAB version > 2016b. For people who use a computer at the DC
 For people that do not use a computer at the DCCN:
   
   Download the latest release version of the FieldTrip toolbox from [here](https://github.com/fieldtrip/fieldtrip/releases). For those of you familiar with git, you can also clone directly from GitHub with
-
+  
         git clone https://github.com/fieldtrip/fieldtrip.git
 
   Please note that the release version corresponds to the release branch, and the development version to the master branch (which might be a few steps ahead).
@@ -80,7 +80,7 @@ For people that use a computer at the DCCN (either a PC via remote desktop or th
 For people that do not use a computer at the DCCN:
 
   Download the tutorial data required for the hands-on from the ftp server by going to <ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/> and download   Subject01.zip
-
+  
   You should also download some pre-computed intermediate results for each tutorial: 	
 
     -   <ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/eventrelatedaveraging/>
@@ -100,7 +100,7 @@ For people that use a computer at the DCCN (either a PC via remote desktop or th
     -   `/home/common/matlab/fieldtrip/data/ftp/tutorial/timefrequencyanalysis`
     -   `/home/common/matlab/fieldtrip/data/ftp/tutorial/beamformer`
     -   `/home/common/matlab/fieldtrip/data/ftp/tutorial/cluster_permutation_timelock`
-
+    -   
 ### 5. Test your MATLAB and FieldTrip installation in advance
 
 Since you will be working at home on your own computer (and occasionally share your screen with us), we recommend that you [test your MATLAB and FieldTrip installation in advance](/workshop/toolkit2021/test_installation). This check does not only serve to test your installation, but also checks that you know how to share your notes in a Google doc with the tutors. 
