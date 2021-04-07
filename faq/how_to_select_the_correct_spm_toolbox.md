@@ -1,6 +1,6 @@
 ---
 title: How to select the correct SPM toolbox?
-tags: [faq, spm, toolbox, path]
+tags: [faq, spm, mex, toolbox, path]
 ---
 
 # How to select the correct SPM toolbox?
