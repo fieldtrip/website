@@ -43,7 +43,7 @@ During the Q&A following the lectures we will go through any remaining questions
 
 ## Hands-on sessions
 
-In the hands-on sessions we will take you through selected FieldTrip tutorials. You execute these yourself on your own computer, that is why you need to have access to MATLAB. In the hands-on sessions we will focus on consolidating the kn owledge you aquired during the lectures and we translate it into practical steps in your analysis.
+In the hands-on sessions we will take you through selected FieldTrip tutorials. You execute these yourself on your own computer, that is why you need to have access to MATLAB. In the hands-on sessions we will focus on consolidating the knowledge you aquired during the lectures and we translate it into practical steps in your analysis.
 
 ## Playground
 
@@ -57,9 +57,53 @@ It is easy to get lost in the online world. Not finding the right Zoom link or G
 
 To ensure that we always can find each other, that we can share links and material, and that you can reach the team of tutors (which changes a bit from day to day), we will use Slack. All participants will receive an invitation to join and we will already start using this a few days in advance.
 
+### Ensure that you have MATLAB installed on your computer
+
+This should be a MATLAB version > 2016b. For people who use a computer at the DCCN we recommend using a VNC session on the compute cluster, rather than using a remote desktop connection to your PC.
+
+### Ensure that you have an up-to-date version of FieldTrip
+
+For people that do not use a computer at the DCCN:
+
+Download the latest release version of the FieldTrip toolbox from [here](https://github.com/fieldtrip/fieldtrip/releases). For those of you familiar with git, you can also clone directly from GitHub with
+
+        git clone https://github.com/fieldtrip/fieldtrip.git
+
+Please note that the release version corresponds to the release branch, and the development version to the master branch (which might be a few steps ahead).
+
+For people that use a computer at the DCCN (either a PC via remote desktop or the DCCN cluster):
+
+FieldTrip is installed on the cluster, on /home/common/matlab/fieldtrip. (on Windows PCs, this is usually mounted on H:\\common\\matlab\\fieldrip. So you don’t need to download the latest release version of the FieldTrip toolbox from here or from here. 
+
+### Download the handson data in advance, or check whether you can access it
+
+For people that do not use a computer at the DCCN:
+
+Download the tutorial data required for the hands-on from the ftp server by going to <ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/> and download Subject01.zip
+
+You should also download some pre-computed intermediate results for each tutorial: 	
+
+  -   <ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/eventrelatedaveraging/>
+  -   <ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/timefrequencyanalysis/>
+  -   <ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/beamformer/>
+  -   <ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_timelock/>
+
+Downloading will take some time, especially if everyone tries to do it at the same moment. So please download in advance! If downloading from the FTP server in the web browser gives problems, please try with [CyberDuck](https://cyberduck.io) or [FileZilla](https://filezilla-project.org).
+
+For people that use a computer at the DCCN (either a PC via remote desktop or the DCCN cluster):
+
+The data needed for the tutorials are available on `/home/common`, so if you are working on the compute cluster at the DCCN, you don’t need to download this in advance. If you insist on downloading the data in advance, you can follow the instructions below.
+
+The raw MEG data set of ‘Subject01’, and associated data are located in `/home/common/matlab/fieldtrip/data`. Additional hands-on session specific data are located in  `/home/common/matlab/fieldtrip/data/ftp/tutorial`. These data are needed once we get to the respective hands-on session:
+
+  -   `/home/common/matlab/fieldtrip/data/ftp/tutorial/eventrelatedaveraging`
+  -   `/home/common/matlab/fieldtrip/data/ftp/tutorial/timefrequencyanalysis`
+  -   `/home/common/matlab/fieldtrip/data/ftp/tutorial/beamformer`
+  -   `/home/common/matlab/fieldtrip/data/ftp/tutorial/cluster_permutation_timelock`
+
 ### Test your MATLAB and FieldTrip installation in advance
 
-Since you will be working at home on your own computer (and occasionally share your screen with us), we recommend that you [test your MATLAB and FieldTrip installation in advance](/workshop/toolkit2021/test_installation). This check does not only serve to test your installation, but also checks that you know how to share your notes in a Google doc with the tutors.
+Since you will be working at home on your own computer (and occasionally share your screen with us), we recommend that you [test your MATLAB and FieldTrip installation in advance](/workshop/toolkit2021/test_installation). This check does not only serve to test your installation, but also checks that you know how to share your notes in a Google doc with the tutors. 
 
 ## Code of conduct
 
