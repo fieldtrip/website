@@ -1,6 +1,6 @@
 ---
 title: MATLAB complains that mexmaci64 cannot be opened because the developer cannot be verified
-tags: [faq, matlab]
+tags: [faq, matlab, mex]
 ---
 
 # MATLAB complains that mexmaci64 cannot be opened because the developer cannot be verified
