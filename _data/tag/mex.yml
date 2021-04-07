@@ -13,3 +13,6 @@
 - name:  MATLAB complains about a missing or invalid mex file, what should I do?
   link:  /faq/matlab_complains_about_a_missing_or_invalid_mex_file_what_should_i_do
 
+- name:  MATLAB complains that mexmaci64 cannot be opened because the developer cannot be verified
+  link:  /faq/mexmaci64_cannot_be_opened_because_the_developer_cannot_be_verified
+
