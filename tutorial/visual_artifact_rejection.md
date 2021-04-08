@@ -47,22 +47,22 @@ The function **[ft_rejectvisual](https://github.com/fieldtrip/fieldtrip/blob/rel
 
 The configuration option cfg.method provides the possibility of browsing through the data channel by channel (cfg.method= 'channel'), trial by trial (cfg.method = 'trial') or displaying all the data at once (cfg.method = 'summary'). The field cfg.latency determines the time window of interest with respect to the trigger signals. In the example below the whole trial is inspected (i.e. cfg.latency is per default assigned to the whole trial).
 
-The scaling of the plots is automatically adjusted according to the maximum amplitude over all channels. The scaling can be set using cfg.alim. For EOG/EEG channels cfg.alim=5e-5 (50 micro Volt) is a useful scale and for the MEG channels cfg.alim=1e-12 (10 fT/cm).
+The scaling of the plots is automatically adjusted according to the maximum amplitude over all channels. The scaling can be set using cfg.ylim. For EOG/EEG channels cfg.ylim=[-5e-5 5e-5] (50 micro Volt) is a useful scale and for the MEG channels cfg.ylim=[-1e-12 1e-12] (10 fT/cm).
 
 To browse through the data trial by trial while viewing all channels writ
 
     cfg          = [];
     cfg.method   = 'trial';
-    cfg.alim     = 1e-12;
+    cfg.ylim     = [-1e-12 1e-12];
     dummy        = ft_rejectvisual(cfg,dataFIC);
 
 Click through the trials using the > button to inspect each trial.
 
-If your dataset contains MEG and EEG channels (like this dataset), the MEG and EEG channels are scaled differently when using only cfg.alim (the EEG channels show up as big black bars on the screen). One of the reasons to record EOG, EMG or ECG is to check these channels while identifying eye, muscle and heart artifacts. The following code can be used to scale MEG and EEG channels both properl
+If your dataset contains MEG and EEG channels (like this dataset), the MEG and EEG channels are scaled differently when using only cfg.ylim (the EEG channels show up as big black bars on the screen). One of the reasons to record EOG, EMG or ECG is to check these channels while identifying eye, muscle and heart artifacts. The following code can be used to scale MEG and EEG channels both properl
 
     cfg          = [];
     cfg.method   = 'trial';
-    cfg.alim     = 1e-12;
+    cfg.ylim     = [-1e-12 1e-12];
     cfg.megscale = 1;
     cfg.eogscale = 5e-8;
     dummy        = ft_rejectvisual(cfg,dataFIC);
@@ -85,7 +85,7 @@ It can also be convenient to view data from one channel at a time. This can be p
 
     cfg          = [];
     cfg.method   = 'channel';
-    cfg.alim     = 1e-12;
+    cfg.ylim     = [-1e-12 1e-12];
     cfg.megscale = 1;
     cfg.eogscale = 5e-8;
     dummy        = ft_rejectvisual(cfg,dataFIC);
@@ -101,7 +101,7 @@ To produce an overview of the data choose the cfg.method 'summary
 
     cfg          = [];
     cfg.method   = 'summary';
-    cfg.alim     = 1e-12;
+    cfg.ylim     = [-1e-12 1e-12];
     dummy        = ft_rejectvisual(cfg,dataFIC);
 
 This gives you a plot with the variance for each channel and trial.
