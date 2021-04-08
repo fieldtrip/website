@@ -242,22 +242,20 @@ To compare the axial gradient data to the planar gradient data we plot them both
 Plot the results of the field of the axial gradiometers and the planar gradient to compare the
 
     clf
-    subplot(121);
 
     cfg = [];
     cfg.xlim = [0.3 0.5];
     cfg.zlim = 'maxmin';
     cfg.colorbar = 'yes';
     cfg.layout = 'CTF151_helmet.mat';
-    cfg.figure  = 'gcf';
+    cfg.figure  = subplot(121);
     ft_topoplotER(cfg, avgFIC)
 
     colorbar; % you can also try out cfg.colorbar = 'south'
-    subplot(122);
-
+    
     cfg.zlim = 'maxabs';
     cfg.layout = 'CTF151_helmet.mat';
-    cfg.figure  = 'gcf';
+    cfg.figure  = subplot(122);
     ft_topoplotER(cfg, avgFICplanarComb);
 
 {% include image src="/assets/img/tutorial/eventrelatedaveraging/topoplot_axialplanar_4mar20_erf.png" width="500" %}
