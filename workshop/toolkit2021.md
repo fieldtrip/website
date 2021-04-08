@@ -83,10 +83,10 @@ For people that do not use a computer at the DCCN:
   
   You should also download some pre-computed intermediate results for each tutorial: 	
 
-    -   <ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/eventrelatedaveraging/>
-    -   <ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/timefrequencyanalysis/>
-    -   <ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/beamformer/>
-    -   <ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_timelock/>
+    [eventrelatedaveraging]<ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/eventrelatedaveraging/>
+    [timefrequencyanalysis]<ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/timefrequencyanalysis/>
+    [beamformer]<ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/beamformer/>
+    [statistics]<ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_timelock/>
   
   Downloading will take some time, especially if everyone tries to do it at the same moment. So please download in advance! If downloading from the FTP server in  the web browser gives problems, please try with [CyberDuck](https://cyberduck.io) or [FileZilla](https://filezilla-project.org).
 
@@ -96,11 +96,12 @@ For people that use a computer at the DCCN (either a PC via remote desktop or th
   
   The raw MEG data set of ‘Subject01’, and associated data are located in `/home/common/matlab/fieldtrip/data`. Additional hands-on session specific data are located in  `/home/common/matlab/fieldtrip/data/ftp/tutorial`. These data are needed once we get to the respective hands-on session:
   
-    -   `/home/common/matlab/fieldtrip/data/ftp/tutorial/eventrelatedaveraging`
-    -   `/home/common/matlab/fieldtrip/data/ftp/tutorial/timefrequencyanalysis`
-    -   `/home/common/matlab/fieldtrip/data/ftp/tutorial/beamformer`
-    -   `/home/common/matlab/fieldtrip/data/ftp/tutorial/cluster_permutation_timelock`
-    -   
+    -   '/home/common/matlab/fieldtrip/data/ftp/tutorial/eventrelatedaveraging'
+    -   '/home/common/matlab/fieldtrip/data/ftp/tutorial/timefrequencyanalysis'
+    -   '/home/common/matlab/fieldtrip/data/ftp/tutorial/beamformer'
+    -   '/home/common/matlab/fieldtrip/data/ftp/tutorial/cluster_permutation_timelock'
+
+
 ### 5. Test your MATLAB and FieldTrip installation in advance
 
 Since you will be working at home on your own computer (and occasionally share your screen with us), we recommend that you [test your MATLAB and FieldTrip installation in advance](/workshop/toolkit2021/test_installation). This check does not only serve to test your installation, but also checks that you know how to share your notes in a Google doc with the tutors. 
