@@ -249,6 +249,7 @@ Plot the results of the field of the axial gradiometers and the planar gradient 
     cfg.zlim = 'maxmin';
     cfg.colorbar = 'yes';
     cfg.layout = 'CTF151_helmet.mat';
+    cfg.figure  = 'gcf';
     ft_topoplotER(cfg, avgFIC)
 
     colorbar; % you can also try out cfg.colorbar = 'south'
@@ -256,6 +257,7 @@ Plot the results of the field of the axial gradiometers and the planar gradient 
 
     cfg.zlim = 'maxabs';
     cfg.layout = 'CTF151_helmet.mat';
+    cfg.figure  = 'gcf';
     ft_topoplotER(cfg, avgFICplanarComb);
 
 {% include image src="/assets/img/tutorial/eventrelatedaveraging/topoplot_axialplanar_4mar20_erf.png" width="500" %}
