@@ -14,26 +14,25 @@ title: ft_crossfrequencyanalysis
    cfg.freqlow    = scalar or vector, selection of frequencies for the low frequency data
    cfg.freqhigh   = scalar or vector, selection of frequencies for the high frequency data
 
- Channel selection can be specified according to whether one wants to perform within- or
+ Channel selection can be specified according to whether one wants to perform within- or 
  cross-channel analysis.
 
- For within-channel analysis (default), you should specifies only a single channel selection:
+ For within-channel analysis (default), one specifies only a single channel
+ selection:
    cfg.channel    = cell-array with selection of channels, see FT_CHANNELSELECTION
- In this case, the output "dimord" will be "chan_freqlow_freqhigh"
+ In this case, the "dimord" will be "chan_freqlow_freqhigh"
 
- For cross-channel analysis, you should specifies two channel selections:
-   cfg.chanlow    = cell-array with selection of channels for the phase providing channels from the
+ For cross-channel analysis, one specifies two sets:
+   cfg.chanlow    = cell-array with selection of channels for the phase providing channels from the 
                     freqlow data argument, with wildcards allowed, see FT_CHANNELSELECTION
-   cfg.chanhigh   = cell-array with selection of channels for the amplitude providing channels from the
+   cfg.chanhigh   = cell-array with selection of channels for the amplitude providing channels from the 
                     freqhigh data argument, with wildcards allowed, see FT_CHANNELSELECTION
- In this case, the output "dimord" will be "chancmb_freqlow_freqhigh" and "label"
- field will be replaced with "labelcmb" (corresponding to the dimension "chancmb")
- describing the pairs of channel combinations as
-   {'chanlow01' 'chanhigh01'
-    'chanlow01' 'chanhigh02'
-    ... 
-    'chanlow02' 'chanhigh01'
-    'chanlow02' 'chanhigh02'
+ In this case, the "dimord" will be "chancmb_freqlow_freqhigh" and "label" field will be replaced with
+ "labelcmb" (corresponding to the dimension "chancmb") describing the pairs of channel combinations as 
+   {'chanlow01' 'chanhigh01';
+    'chanlow01' 'chanhigh02';
+    ... ;
+    'chanlow02' 'chanhigh01';
     ...
     }
  N.B.: The order of channels corresponds to their order in the original "label" field

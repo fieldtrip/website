@@ -120,7 +120,7 @@ title: ft_freqanalysis
 
 
  SUPERLET performs time-frequency analysis on any time series trial data using the
- 'wavelet method' based on a frequency-wise combination of Morlet wavelets of varying cycle
+ 'wavelet method' based on a frequency-wise combination of Morlet wavelets of varying cycle 
  widths (see Moca et al. 2019, https://doi.org/10.1101/583732).
    cfg.foi                 = vector 1 x numfoi, frequencies of interest
        OR
@@ -132,9 +132,9 @@ title: ft_freqanalysis
                              deviations of the implicit Gaussian kernel and should
                              be choosen >= 3; (default = 3)
    cfg.superlet.combine    = 'additive', 'multiplicative' (default = 'additive')
-                             determines if cycle numbers of wavelets comprising a superlet
+                             determines if cycle numbers of wavelets comprising a superlet 
                              are chosen additively or multiplicatively
-   cfg.superlet.order      = vector 1 x numfoi, superlet order, i.e. number of combined
+   cfg.superlet.order      = vector 1 x numfoi, superlet order, i.e. number of combined 
                              wavelets, for individual frequencies of interest.
 
  The standard deviation in the frequency domain (sf) at frequency f0 is
