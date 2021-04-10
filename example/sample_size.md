@@ -25,7 +25,7 @@ In this example, we will first briefly introduce how to estimate sample size thr
 
 Let's start by a brief introduction to estimate sample size using an intuitive example of coin-tossing. For a more detailed and excellent introduction, please see [Dr. Julian Quandt’s website](https://julianquandt.com/post/power-analysis-by-data-simulation-in-r-part-i/). The following section is inspired by Dr. Quandt’s excellent introduction.
 
-Suppose we are presented with a coin and we want to know whether it is fair (50% chance lands on head). We can test it by running coin-tossing experiments. Consider the following two experiment scenarios. In Experiment 1, we tossed it 2 times, and observed 2 heads; In Experiment 2, we tossed it 5 times and observed 5 heads. With either experiment, we are inclined to think the coin is unfair. But intuitively, we will be more confident of the coin’s unfairness following Experiment 2 than following Experiment 2. But still, we don’t know how sure we are about our decision to call the coin unfair. We can clarify this using  inferential statistics.
+Suppose we are presented with a coin and we want to know whether it is fair (50% chance lands on head). We can test it by running coin-tossing experiments. Consider the following two experiment scenarios. In Experiment 1, we tossed it 2 times, and observed 2 heads; In Experiment 2, we tossed it 5 times and observed 5 heads. With either experiment, we are inclined to think the coin is unfair. But intuitively, we will be more confident of the coin’s unfairness following Experiment 2 than following Experiment 1. But still, we don’t know how sure we are about our decision to call the coin unfair. We can clarify this using  inferential statistics.
 
 -   Null hypothesis H0: the coin is fair, i.e., 50% chance for heads and 50% chance for tails
 -   Alternative hypothesis H1: the coin is totally unfair, e.g., 100% chance to land on head
@@ -38,7 +38,7 @@ First, we need to “guess”, based usually on pilot studies or prior similar s
 
 {% include markup/success %}
 
-Once you are done with this example, you may want to continue reading this [example on estimating and reporting the sample size following a cluster-based test](/example/effectsize).
+Once you are done with this example, you may want to continue reading this [example on estimating and reporting the effect size following a cluster-based test](/example/effectsize).
 
 {% include markup/end %}
 
@@ -265,7 +265,7 @@ B_avg = ft_freqgrandaverage(cfg1, res.condB{:});        % condition B
 cfg = [];
 cfg.parameter = 'powspctrm';
 cfg.operation = 'subtract';
-A_vs_B = ft_math(cfg, A_avg.powspctrm, B_avg.powspctrm)
+A_vs_B = ft_math(cfg, A_avg, B_avg)
 
 % average cross cluster channels
 clusterchan_idx = match_str(cfg.label,cfg.clusterchan);
