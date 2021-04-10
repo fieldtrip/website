@@ -303,5 +303,5 @@ colorbar('YTick',[-lim_b 0 lim_b]);
 
 - <https://osf.io/rmqhc>
 - <https://www.psychologie.hhu.de/arbeitsgruppen/allgemeine-psychologie-und-arbeitspsychologie/gpower.html>
-- Example script for [estimating and reporting the sample size following a cluster-based test](/example/effectsize)
+- Example script for [estimating and reporting the effect size following a cluster-based test](/example/effectsize)
 - Other pages on this website that are tagged with [statistics](/tag/statistics)
