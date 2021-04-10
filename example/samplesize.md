@@ -5,6 +5,12 @@ tags: [example, statistics, cluster, simulation]
 
 # Use simulations to estimate the sample size for cluster-based permutation test
 
+{% include markup/success %}
+
+This example is contributed by [Dr. Cheng Wang](https://www.researchgate.net/profile/Cheng-Wang-93).
+
+{% include markup/end %}
+
 It is recommended and sometimes even required to provide justification for sample size prior to starting a study and when reporting about it [(Clayson et al., 2019)](https://onlinelibrary.wiley.com/doi/full/10.1111/psyp.13437). Many researchers use G\*Power to estimate the sample size required for their studies. However, although very useful and popular, this software is not suitable for multivariate data or for non-parametric tests. For EEG and MEG we often use a cluster-based permutation test, which is a non-parametric test that exploits the multivariate structure in the data.
 
 Here, we demonstrate two easy-to-use MATLAB functions that use simulations to estimate the sample size for cluster-based permutation tests. These functions can be used for EEG/MEG research involving contrasts between **two conditions** (paired or independent samples). They were written for, and first used in [Wang and Zhang (2021)](https://doi.org/10.1111/psyp.13775). Please cite this paper where appropriate.
@@ -36,7 +42,7 @@ The power of a statistical test quantifies how sure we can be to decide the coin
 
 First, we need to “guess”, based usually on pilot studies or prior similar studies, the key parameters of the binomial distributions for each of the null and alternative hypotheses. In the current example, the chance of a coin to land on head under the null hypothesis is undoubtedly 50%. And under the alternative hypothesis, we will assume that the coin has a chance of 100% to land on head, based on the result our observations so far. Only with these parameters specified can data be sampled from the distributions. Note that the difference (50% vs. 100%) between the two hypotheses can be construed as the effect size, which has great influence on power: statistical power tends to be greater with larger effect size.
 
-{% include markup/success %}
+{% include markup/info %}
 
 Once you are done with this example, you may want to continue reading this [example on estimating and reporting the sample size following a cluster-based test](/example/effectsize).
 
@@ -96,7 +102,7 @@ xlabel('Sample size'); ylabel('Power')
 title(['Required sample size is' num2str(n_sample)])
 ```
 
-{% include image src="/assets/img/example/sample_size/Fig1.png" width="400" %}
+{% include image src="/assets/img/example/samplesize/Fig1.png" width="400" %}
 
 From the above example, we can summarize the basic steps to estimate sample size through simulation:
 
@@ -152,9 +158,9 @@ title(['Required sample size is ' num2str(n_sample)])
 
 The result shows that the sample size required for 80% power in an independent t-test (means: 3 vs. 4; SDs = 2) is 65, which is very close to the result that we can obtain from G\*Power.
 
-{% include image src="/assets/img/example/sample_size/Fig2.png" width="400" %}
+{% include image src="/assets/img/example/samplesize/Fig2.png" width="400" %}
 
-{% include image src="/assets/img/example/sample_size/Fig3.png" width="400" %}
+{% include image src="/assets/img/example/samplesize/Fig3.png" width="400" %}
 
 ## Estimating sample size through simulations - cluster-based permutation test
 
@@ -242,13 +248,13 @@ Running this function would be quite time-consuming, with a lot of simulations t
 %% plot the results of power analysis
 cfg = res.cfg;
 figure
-scatter(cfg.n_start:res.sample_size, res.power_at_n(cfg.n_start:end),400,[0.5 0.5 0.5],'Marker','.'); hold on
-plot([cfg.n_start res.sample_size],[cfg.power_level cfg.power_level], 'r')
+scatter(cfg.n_start:res.samplesize, res.power_at_n(cfg.n_start:end),400,[0.5 0.5 0.5],'Marker','.'); hold on
+plot([cfg.n_start res.samplesize],[cfg.power_level cfg.power_level], 'r')
 text(cfg.n_start+0.5, 0.8,'0.8')
-xlabel('Sample size'); ylabel('Power'),xlim([cfg.n_start res.sample_size])
+xlabel('Sample size'); ylabel('Power'),xlim([cfg.n_start res.samplesize])
 ```
 
-{% include image src="/assets/img/example/sample_size/Fig4.png" width="400" %}
+{% include image src="/assets/img/example/samplesize/Fig4.png" width="400" %}
 
 We can also have a look at the simulated data for the required sample size. The datasets for the two conditions are stored in `res.condA` and `res.condB`.
 
@@ -296,7 +302,7 @@ title('A - B'); xlabel('Time (ms)'); ylabel('Frequency (Hz)')
 colorbar('YTick',[-lim_b 0 lim_b]);
 ```
 
-{% include image src="/assets/img/example/sample_size/Fig5.png" width="400" %}
+{% include image src="/assets/img/example/samplesize/Fig5.png" width="400" %}
 
 
 ## See also

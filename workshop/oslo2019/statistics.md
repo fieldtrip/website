@@ -50,7 +50,7 @@ We will clear all variables that we have in the workspace, restore the default p
     load difference_wave.mat
     load elec.mat
 
-First, we load the data that we created in the [ERP tutorial](workshop/oslo2019/introduction)
+First, we load the data that we created in the [ERP tutorial](/workshop/oslo2019/introduction)
 
 {% include markup/info %}
 Note the naming convention used - each saved _.mat-file_ contains _one and only one_ variable, which has the _same_ name as the _.mat-file_  

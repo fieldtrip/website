@@ -23,7 +23,7 @@ Typically, a detector optode can detect light that originates from multiple sour
 
 ### Dataset information
 
-The data used in this tutorial is available from <ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/nirs_multichannel/>.
+The data used in this tutorial is available from our FTP server on <ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/nirs_multichannel/>.
 
 For the XML file you probably have to _right-click_ and use the _save-as_ option, otherwise it will display the XML content in your browser.
 
@@ -405,7 +405,7 @@ Important to remember is that for **[ft_multiplotER](https://github.com/fieldtri
     cfg.showlabels        = 'yes';
     cfg.layout            = lay;      % you could also specify the name of the mat file
     cfg.interactive       = 'yes';
-    cfg.graphcolor        = 'rb';
+    cfg.linecolor         = 'rb';
     cfg.colorgroups(contains(timelockDEV.label, 'O2Hb')) = 1; % these will be red
     cfg.colorgroups(contains(timelockDEV.label, 'HHb'))  = 2; % these will be blue
     ft_multiplotER(cfg, timelockDEV);

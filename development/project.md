@@ -87,4 +87,4 @@ This section of the website lists information aimed at developers of FieldTrip a
 - [Reimplement the avg/cov/trial handling](/development/project/timelockanalysis) (done)
 - [integration with NUTMEG](/development/project/nutmeg) (will probably never happen, no active nutmeg development anymore)
 - [transform_grid](/development/project/transform_grid) (done, ft_transform_geometry)
-- [Example use of DSS for BCG removal](done /example/use_denoising_source_separation_dss_to_remove_ecg_artifacts)
+- [Example use of DSS for BCG removal](/example/use_denoising_source_separation_dss_to_remove_ecg_artifacts) (done)

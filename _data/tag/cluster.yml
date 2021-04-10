@@ -1,8 +1,14 @@
 - name:  Apply clusterrandanalysis on TFRs of power that were computed with BESA
   link:  /example/apply_clusterrandanalysis_on_tfrs_of_power_that_were_computed_with_besa
 
+- name:  Computing and reporting the effect size
+  link:  /example/effectsize
+
 - name:  Defining electrodes as neighbours for cluster-level statistics
   link:  /example/neighbours
+
+- name:  Use simulations to estimate the sample size for cluster-based permutation test
+  link:  /example/samplesize
 
 - name:  Use simulated ERPs to explore cluster statistics
   link:  /example/use_simulated_erps_to_explore_cluster_statistics

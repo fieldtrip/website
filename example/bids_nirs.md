@@ -8,7 +8,7 @@ tags: [example, bids, sharing, nirs, artinis, homer, snirf]
 {% include markup/danger %}
 BIDS does currently not specify how to represent NIRS data. This example - and the support that is implemented in the **[data2bids](https://github.com/fieldtrip/fieldtrip/blob/release/data2bids.m)** function - should be considered as a preliminary proposal to help researchers with their existing data.
 
-See this [Google doc](/https://bids.neuroimaging.io/bep030) with the draft specification that is being discussed.
+See this [Google doc](https://bids.neuroimaging.io/bep030) with the draft specification that is being discussed.
 {% include markup/end %}
 
 ## Artinis
