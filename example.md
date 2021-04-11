@@ -96,6 +96,7 @@ See also the [tutorials](/tutorial) and [frequently asked questions](/faq).
 - [Converting an example EEG dataset for sharing in BIDS](/example/bids_eeg)
 - [Converting an example EMG dataset for sharing in BIDS](/example/bids_emg)
 - [Converting an example eyetracker dataset for sharing in BIDS](/example/bids_eyetracker)
+- [Converting an example MEG dataset for sharing in BIDS](/example/bids_meg)
 - [Converting an example motion tracking dataset for sharing in BIDS](/example/bids_motion)
 - [Converting an example NIRS dataset for sharing in BIDS](/example/bids_nirs)
 - [Converting an example video dataset for sharing in BIDS](/example/bids_video)
