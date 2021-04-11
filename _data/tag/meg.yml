@@ -1,6 +1,9 @@
 - name:  MEG dataformats
   link:  /dataformat/meg
 
+- name:  Converting an example MEG dataset for sharing in BIDS
+  link:  /example/bids_meg
+
 - name:  Combined EEG and MEG source reconstruction
   link:  /example/combined_eeg_and_meg_source_reconstruction
 

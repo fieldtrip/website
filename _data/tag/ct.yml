@@ -7,6 +7,9 @@
 - name:  CTF
   link:  /development/realtime/ctf
 
+- name:  Converting an example MEG dataset for sharing in BIDS
+  link:  /example/bids_meg
+
 - name:  Conditional Granger causality in the frequency domain
   link:  /example/connectivity_conditional_granger
 

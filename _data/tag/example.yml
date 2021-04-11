@@ -25,6 +25,9 @@
 - name:  Converting an example eyetracker dataset for sharing in BIDS
   link:  /example/bids_eyetracker
 
+- name:  Converting an example MEG dataset for sharing in BIDS
+  link:  /example/bids_meg
+
 - name:  Converting an example motion tracking dataset for sharing in BIDS
   link:  /example/bids_motion
 
