@@ -15,12 +15,6 @@ title: ft_sourceplot_interactive
  Input data needs to be source+mesh, so has to contain a tri, pos, and one
  functional field plus a time- or frequency axis.
 
- Use e.g. like so:
-
- cfg = [];
- cfg.data_labels = {'Congruent', 'Incongruent'};
- ft_sourceplot_interactive(cfg, sourceFC, sourceFIC);
-
  Configuration options (all optional) include:
    cfg.parameter       = string, functional parameter to plot. Default = 'pow'.
    cfg.data_labels     = cell array of strings, describing each data input argument. Default =
@@ -30,7 +24,7 @@ title: ft_sourceplot_interactive
                          freq dimension.
    cfg.pow_label       = string, ylabel for line graphs of functional data. Default = 'Current
                          density (a.u.)'.
-   cfg.clim            = 2-element numeric vector, color limits for surface plots. Default = 
+   cfg.clim            = 2-element numeric vector, color limits for surface plots. Default =
                          [0 max(data)*0.75], and [-max(data)*0.75, max(data)*0.75] for an
                          optional last functional input argument reflecting a difference score
                          (see 'has_diff' option below).
@@ -47,7 +41,11 @@ title: ft_sourceplot_interactive
                          the line graphs corresponding to 'virtual electrodes' placed on the
                          surface plots. Atlas must be in the coordinate system of the
                          specified data input arguments. See FT_READ_ATLAS.
-   
 
- Copyright (C) 2019 Eelke Spaak, Donders Institute. e.spaak@donders.ru.nl
+ Example use:
+   cfg = [];
+   cfg.data_labels = {'Congruent', 'Incongruent'};
+   ft_sourceplot_interactive(cfg, sourceFC, sourceFIC);
+
+ See also FT_SOURCEPLOT, FT_SOURCEMOVIE
 ```
