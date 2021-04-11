@@ -4,6 +4,9 @@
 - name:  CTF
   link:  /development/realtime/ctf
 
+- name:  Converting an example MEG dataset for sharing in BIDS
+  link:  /example/bids_meg
+
 - name:  Fixing a missing channel
   link:  /example/fixing_a_missing_sensor
 
