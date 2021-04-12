@@ -80,7 +80,7 @@ FieldTrip is installed on the cluster, on /home/common/matlab/fieldtrip. (on Win
 
 For people that **do not** use a computer at the DCCN:
 
-Download the tutorial data required for the hands-on from the ftp server by going to <ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/> and download   the file `Subject01.zip`. You need to log in as anonymous on ftp://ftp.fieldtriptoolbox.org, and you don't need a password for this.
+Download the tutorial data required for the hands-on from the ftp server by going to <ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/> and download   the file `Subject01.zip`. You need to log in as anonymous (or guest) on ftp://ftp.fieldtriptoolbox.org, and you don't need a password for this.
 
 You should also download some pre-computed intermediate results for each tutorial: 	
 
