@@ -87,7 +87,7 @@ You should also download some pre-computed intermediate results for each tutoria
 -  [eventrelatedaveraging](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/eventrelatedaveraging/)
 -  [timefrequencyanalysis](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/timefrequencyanalysis/)
 -  [beamformer](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/beamformer/)
--  [statistics](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_timelock/)
+-  [statistics](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_timelock/) (cluster_permutation_timelock)
 
 Downloading will take some time, especially if everyone tries to do it at the same moment. So please download in advance! If downloading from the FTP server in  the web browser gives problems, please try with another web browser, [CyberDuck](https://cyberduck.io), or [FileZilla](https://filezilla-project.org).
 
