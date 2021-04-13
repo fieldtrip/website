@@ -32,6 +32,12 @@ On macOS you open "System Ppreferences" and then "Default Apps". Under the secti
 
 If your difficulties are with the Linux or macOS command line ftp client, you can try to turn off "Extended Passive Mode" by typing `epsv`.
 
+## CyberDuck
+
+A strategy that was reported to work for CyberDuck is to add a bookmark ("plus" sign at the bottom left). Then it still needed a restart before it would actually connect. See the screenshot below.
+
+{% include image src="/assets/img/faq/ftp/cyberduck.png" width="500" %}
+
 ## GitHub as alternative to the FTP download
 
 The FieldTrip release versions are also available as zip-files from <https://github.com/fieldtrip/fieldtrip/releases>.
