@@ -11,7 +11,9 @@ title: xdf2fieldtrip
    data = xdf2fieldtrip(filename, ...)
 
  Optional arguments should come in key-value pairs and can include
-   streamindx = list, indices of the streams to read (default is all)
+   streamindx      = list, indices of the streams to read (default is all)
+   sraterange      = range of sampling rate in Hz in data streams to read [lowerbound, upperbound] 
+   streamkeywords  = cell array of keywords in stream names to index streams to read {keyword1, keyword2}
 
  You can also use the standard procedure with FT_DEFINETRIAL and FT_PREPROCESSING
  for XDF files. This will return (only) the continuously sampled stream with the
