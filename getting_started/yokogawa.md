@@ -120,7 +120,7 @@ For example
 
     function [trl, event] = mytrialfun(cfg)
 
-    % read the header information and the events from the data
+    % read the header information (including the sampling rate) and the events from the data
     hdr   = ft_read_header(cfg.dataset);
     event = ft_read_event(cfg.dataset, chanindx', 161:166, 'threshold', 1e4, 'detectflank', 'up');
 
@@ -131,11 +131,11 @@ For example
     % creating your own trialdefinition based upon the events
     trl = [];
     for j = 1:length(value);
-      trlbegin = sample(j) + cfg.trialdef.prestim * cfg.Fs;
-      trlend   = sample(j) + cfg.trialdef.poststim * cfg.Fs;
-      offset   = 1;
+      trlbegin = sample(j) - round(cfg.trialdef.prestim  * hdr.Fs);
+      trlend   = sample(j) + round(cfg.trialdef.poststim * hdr.Fs);
+      offset   = -round(cfg.trialdef.prestim  * hdr.Fs);
       newtrl   = [ trlbegin trlend offset];
-      trl      = [ trl; newtrl];
+      trl      = [ trl ; newtrl];
     end
 
 We can then proceed in the standard way of defining trials and reading data as follows.
@@ -146,14 +146,13 @@ Also realize that how the Yokogawa system is recording events through individual
     cfg.dataset                 = data.sqd;
     cfg.hpfilter                = 'yes';
     cfg.hpfreq                  = 1;
-    cfg.Fs                      = 500; % this could be taken from hdr.Fs if not known
     cfg.continuous              = 'yes';
-    cfg.trialdef.prestim        = -1; % in seconds, negative if before trigger
-    cfg.trialdef.poststim       = 1; % in seconds
+    cfg.trialdef.prestim        = 1; % in seconds, time before the trigger
+    cfg.trialdef.poststim       = 1; % in seconds, time after the trigger
     cfg.trialdef.trigchannel    = '161';
     cfg.trialfun                = 'mytrialfun';
 
-    % enter trl in cfg
+    % add the "trl" array to the cfg
     cfg           = ft_definetrial(cfg);
 
     % read data
