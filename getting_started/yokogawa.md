@@ -129,10 +129,11 @@ For example
     sample = [event(find(strcmp(cfg.trialdef.trigchannel, {event.type}))).sample]';
 
     % creating your own trialdefinition based upon the events
+    trl = [];
     for j = 1:length(value);
-      trlbegin = sample(j) + pretrig;
-      trlend   = sample(j) + posttrig;
-      offset   = pretrig;
+      trlbegin = sample(j) + cfg.trialdef.prestim * cfg.Fs;
+      trlend   = sample(j) + cfg.trialdef.poststim * cfg.Fs;
+      offset   = 1;
       newtrl   = [ trlbegin trlend offset];
       trl      = [ trl; newtrl];
     end
@@ -145,9 +146,10 @@ Also realize that how the Yokogawa system is recording events through individual
     cfg.dataset                 = data.sqd;
     cfg.hpfilter                = 'yes';
     cfg.hpfreq                  = 1;
+    cfg.Fs                      = 500; % this could be taken from hdr.Fs if not known
     cfg.continuous              = 'yes';
-    cfg.trialdef.prestim        = 1;
-    cfg.trialdef.poststim       = 1;
+    cfg.trialdef.prestim        = -1; % in seconds, negative if before trigger
+    cfg.trialdef.poststim       = 1; % in seconds
     cfg.trialdef.trigchannel    = '161';
     cfg.trialfun                = 'mytrialfun';
 
