@@ -19,6 +19,8 @@ Two somewhat older, but certainly not outdated papers on SQUID-based MEG instrum
 
 A recent review of advancements in OPM-based MEG research is given in [Moving magnetoencephalography towards real-world applications with a wearable system](https://doi.org/10.1038/nature26147) by Boto et al. (2018).  
 
+Original works on the biophysics of MEG and EEG (free ebook) [Bioelectromagnetism](https://www.bem.fi/book/) by Jaakko Malmivuo and Robert Plosney
+
 ### Books
 
 A comprehensive introduction in the neurophysiology and biophysics of EEG (also relevant for MEG) is given in [Electric Fields of the Brain: The Neurophysics of EEG, 2nd Edition](http://www.amazon.com/Electric-Fields-Brain-Neurophysics-EEG/dp/019505038X/ref=sr_1_1?s=books&ie=UTF8&qid=1375859032&sr=1-1) by Paul L. Nunez and Ramesh Srinivasan.
