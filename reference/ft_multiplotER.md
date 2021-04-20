@@ -2,10 +2,10 @@
 title: ft_multiplotER
 ---
 ```plaintext
- FT_MULTIPLOTER plots the event-related potentials or event-related fields verus
- time, or the oscillatory activity (power or coherence) versus frequency. Multiple
- datasets can be overlayed. The plots are arranged according to their location
- specified in the layout.
+ FT_MULTIPLOTER plots the event-related potentials or event-related fields
+ versus time, or the oscillatory activity (power or coherence) versus frequency. 
+ Multiple datasets can be overlayed. The plots are arranged according to
+ the location of the channels specified in the layout.
 
  Use as
    ft_multiplotER(cfg, data)
@@ -57,4 +57,8 @@ title: ft_multiplotER
                        inflow into a node, or the outflow from a node is plotted. The (default) behavior
                        of this option depends on the dimord of the input data (see below).
    cfg.layout        = specify the channel layout for plotting using one of the supported ways (see below).
+   cfg.select        = 'intersect' or 'union' (default = 'intersect')
+                       with multiple input arguments determines the
+                       pre-selection of the data that is considered for
+                       plotting.
 ```

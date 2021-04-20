@@ -2549,6 +2549,9 @@ A detailed description of each function is available in the [reference documenta
 **cfg.seldat** - [ft_databrowser](/reference/ft_databrowser)  
 
 
+**cfg.select** - [ft_multiplotER](/reference/ft_multiplotER), [ft_singleplotER](/reference/ft_singleplotER)  
+
+
 **cfg.selectfeature** - [ft_databrowser](/reference/ft_databrowser)  
 
 
