@@ -29,6 +29,8 @@ Steven J Luck, [An Introduction to the Event-Related Potential Technique](http:/
 
 [Magnetoencephalography - From Signals to Dynamic Cortical Networks](https://www.springer.com/gp/book/9783662521113) by Selma Supek and Cheryl J Aine (2014). 
 
+Original work on the biophysics of MEG and EEG (free ebook) [Bioelectromagnetism - Principles and Applications of Bioelectric and Biomagnetic Fields](https://www.bem.fi/book/) by Jaakko Malmivuo & Robert Plonsey, Oxford University Press, New York, 1995.
+
 ## Guidelines for acquisition, analysis and publication
 
 Specifically for MEG we recommend the [Good practice for conducting and reporting MEG research](http://www.sciencedirect.com/science/article/pii/S1053811912009895) paper by Joachim Gross et al. that was published in 2012 in NeuroImage.
@@ -89,7 +91,6 @@ The following paper illustrates several problems associated with the lack of rob
 
 The paper [How to get statistically significant effects in any ERP experiment (and why you shouldn’t)](https://doi.org/10.1111/psyp.12639) by Steve Luck and Nicholas Gaspelin demonstrates how common methods for quantifying and analyzing ERP effects can lead to very high rates of significant but bogus effects.
 
-
 The blog post [Correlations in neuroscience: are small n, interaction fallacies, lack of illustrations and confidence intervals the norm?](https://garstats.wordpress.com/2018/06/11/ejn2017) by Guillaume Rousselet has some interesting observations and recommendations.
 
 [The Meaningfulness of Effect Sizes in Psychological Research: Differences Between Sub-Disciplines and the Impact of Potential Biases](https://doi.org/10.3389/fpsyg.2019.00813) by Thomas Schäfer and Marcus A. Schwarz discusses the relevance and challenges of using and reporting effect sizes.
@@ -100,8 +101,7 @@ Michel, C.M. et al. [EEG source imaging.](http://www.ncbi.nlm.nih.gov/pubmed/153
 
 Baillet, S and Mosher, J.C. [Electomagnetic Brain Mapping](http://cogimage.dsi.cnrs.fr/hmtc/references/files/BailletMosherLeahy_IEEESPMAG_No.pdf) IEEE Signal Processing Magazine, 2001; November:14-30.
 
-The following paper is a review and gentle introduction into beamformin
-Hillebrand A, Singh KD, Holliday IE, Furlong PL, Barnes GR.
+The following paper is a review and gentle introduction into beamforming: Hillebrand A, Singh KD, Holliday IE, Furlong PL, Barnes GR.
 [A new approach to neuroimaging with magnetoencephalography.](http://dx.doi.org/10.1002/hbm.20102) Hum Brain Mapp. 2005 Jun;25(2):199-211.
 
 ## Connectivity
