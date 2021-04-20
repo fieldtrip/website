@@ -23,6 +23,7 @@ In general you should get started with the [tutorials](/tutorial). The pages tha
 - [Getting started with EDF data](/getting_started/edf)
 - [Getting started with EGI/Philips data](/getting_started/egi)
 - [Getting started with Nicolet data](/getting_started/nicolet)
+- [Getting started with TMSi data](/getting_started/tmsi)
 
 ## Getting started with intracranial data
 
@@ -33,6 +34,7 @@ In general you should get started with the [tutorials](/tutorial). The pages tha
 - [Getting started with Plexon data](/getting_started/plexon)
 - [Getting started with animal electrophysiology data, including spikes](/getting_started/animal)
 - [Getting started with human intracranial electrophysiology data](/getting_started/human_ecog)
+- [Getting started with Neurodata Without Borders (NWB) data](/getting_started/nwb)
 
 ## Getting started with NIRS data
 
@@ -42,11 +44,19 @@ In general you should get started with the [tutorials](/tutorial). The pages tha
 - [Getting started with Shimadzu NIRS data](/getting_started/shimadzu)
 - [Getting started with SNIRF NIRS data](/getting_started/snirf)
 
-## Getting started with other types of data
+## Getting started with eyetracker data
 
 - [Getting started with SR-Research EyeLink eye-tracker data](/getting_started/eyelink)
+
+## Getting started with motion capture data
+
 - [Getting started with XSens motion capture data](/getting_started/xsens)
-- [Getting started with Neurodata Without Borders (NWB) data](/getting_started/nwb)
+
+## Getting started with other types of data
+
+- [Getting started with fMRI timeseries data](/getting_started/fmri)
+- [Getting started with video data](/getting_started/video)
+- [Getting started with audio data](/getting_started/audio)
 
 ## Getting started with (data from) other software
 
