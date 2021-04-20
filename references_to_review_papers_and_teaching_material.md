@@ -19,8 +19,6 @@ Two somewhat older, but certainly not outdated papers on SQUID-based MEG instrum
 
 A recent review of advancements in OPM-based MEG research is given in [Moving magnetoencephalography towards real-world applications with a wearable system](https://doi.org/10.1038/nature26147) by Boto et al. (2018).  
 
-Original works on the biophysics of MEG and EEG (free ebook) [Bioelectromagnetism](https://www.bem.fi/book/) by Jaakko Malmivuo and Robert Plosney
-
 ### Books
 
 A comprehensive introduction in the neurophysiology and biophysics of EEG (also relevant for MEG) is given in [Electric Fields of the Brain: The Neurophysics of EEG, 2nd Edition](http://www.amazon.com/Electric-Fields-Brain-Neurophysics-EEG/dp/019505038X/ref=sr_1_1?s=books&ie=UTF8&qid=1375859032&sr=1-1) by Paul L. Nunez and Ramesh Srinivasan.
@@ -30,6 +28,8 @@ Steven J Luck, [An Introduction to the Event-Related Potential Technique](http:/
 [MEG: An Introduction to Methods](http://www.amazon.com/MEG-Introduction-Methods-Peter-Hansen/dp/0195307232/ref=sr_1_2?s=books&ie=UTF8&qid=1375859237&sr=1-2&keywords=magnetoencephalography) by Peter Hansen, Morten Kringelbach, Riitta Salmelin (2010). [Pdf](http://brainmaster.com/software/pubs/brain/MEG%20-%20An%20Intro.pdf). 
 
 [Magnetoencephalography - From Signals to Dynamic Cortical Networks](https://www.springer.com/gp/book/9783662521113) by Selma Supek and Cheryl J Aine (2014). 
+
+Original work on the biophysics of MEG and EEG (free ebook) [Bioelectromagnetism - Principles and Applications of Bioelectric and Biomagnetic Fields](https://www.bem.fi/book/) by Jaakko Malmivuo & Robert Plonsey, Oxford University Press, New York, 1995.
 
 ## Guidelines for acquisition, analysis and publication
 
@@ -91,7 +91,6 @@ The following paper illustrates several problems associated with the lack of rob
 
 The paper [How to get statistically significant effects in any ERP experiment (and why you shouldn’t)](https://doi.org/10.1111/psyp.12639) by Steve Luck and Nicholas Gaspelin demonstrates how common methods for quantifying and analyzing ERP effects can lead to very high rates of significant but bogus effects.
 
-
 The blog post [Correlations in neuroscience: are small n, interaction fallacies, lack of illustrations and confidence intervals the norm?](https://garstats.wordpress.com/2018/06/11/ejn2017) by Guillaume Rousselet has some interesting observations and recommendations.
 
 [The Meaningfulness of Effect Sizes in Psychological Research: Differences Between Sub-Disciplines and the Impact of Potential Biases](https://doi.org/10.3389/fpsyg.2019.00813) by Thomas Schäfer and Marcus A. Schwarz discusses the relevance and challenges of using and reporting effect sizes.
@@ -102,8 +101,7 @@ Michel, C.M. et al. [EEG source imaging.](http://www.ncbi.nlm.nih.gov/pubmed/153
 
 Baillet, S and Mosher, J.C. [Electomagnetic Brain Mapping](http://cogimage.dsi.cnrs.fr/hmtc/references/files/BailletMosherLeahy_IEEESPMAG_No.pdf) IEEE Signal Processing Magazine, 2001; November:14-30.
 
-The following paper is a review and gentle introduction into beamformin
-Hillebrand A, Singh KD, Holliday IE, Furlong PL, Barnes GR.
+The following paper is a review and gentle introduction into beamforming: Hillebrand A, Singh KD, Holliday IE, Furlong PL, Barnes GR.
 [A new approach to neuroimaging with magnetoencephalography.](http://dx.doi.org/10.1002/hbm.20102) Hum Brain Mapp. 2005 Jun;25(2):199-211.
 
 ## Connectivity
