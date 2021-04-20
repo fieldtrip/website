@@ -158,6 +158,41 @@ Also realize that how the Yokogawa system is recording events through individual
     % read data
     preproc                     = ft_preprocessing(cfg);
 
+## Creating a custom channel layout
+
+Many FieldTrip plotting functions, such as `ft_topoplotER`, make use of a channel layout that specifies the position of the MEG channels. For some systems, FieldTrip has saved the layout files and these are loaded when data are plotted. For Yokogawa systems, however, there exist many different layouts across labs, making it impractical to have every layout file available in FieldTrip. Moreover, for some systems with the same number of channels (e.g., Yokogawa systems with 160 channels), the layouts may be different across labs.
+
+Rather than loading a layout from file, it is possible to create a layout for your system using your data. In the example below, `ft_read_sens` is used to read in the position of the sensors from .con or .sqd data files. `ft_prepare_layout` is then used to define a layout based on these positions.
+In this example, the CTF151 helmet and mask are added to the KIT/Yokogawa layout, since this information was not available. For visualization, the position of the sensors are stretched and scaled to match the helmet. Users may wish to change these parameters if their own layouts do not look correct. The last two channels in the system (with names `COMNT` and `SCALE`) are removed prior to scaling.
+
+```
+% read the position of the sensors from the data
+grad                        = ft_read_sens('data.sqd'); % this can be inspected with ft_plot_sens(grad)
+
+% prepare the custom channel layout
+cfg                         = [];
+cfg.grad                    = grad;
+layout                      = ft_prepare_layout(cfg);
+sel                         = 1:(length(layout.label)-2); % the last two are COMNT and SCALE
+
+% scale & stretch the position of the sensors
+layout.pos(sel,:)           = layout.pos(sel,:) * 1.05;
+layout.pos(sel,2)           = layout.pos(sel,2) * 1.08 + 0.02;
+
+% load the CTF151 helmet and mask
+cfg                         = [];
+cfg.layout                  = 'CTF151_helmet';
+ctf151                      = ft_prepare_layout(cfg);
+layout.outline              = ctf151.outline;
+layout.mask                 = ctf151.mask;
+
+% plot the custom layout
+figure;
+ft_plot_layout(layout, 'box', 1);
+```
+
+`layout` may then be passed to plotting functions such as `ft_topoplotER`, in `cfg.layout`.
+
 ## Coordinate system coregistration
 
 Each of the scanners used in neuroimaging research in principle has its own hardware-based coordinate system: the MRI has a coordinate system that relates to the bore, the MEG has a coordinate system that relates to the dewar, and the polhemus tracker has a coordinate system relative to the transmitter (the two-inch gray cube). Using a combination of the three systems (MRI, MEG, Polhemus) we try to relate the neuronal activity in the MEG to an anatomical location in the MRI.
