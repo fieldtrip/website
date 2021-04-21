@@ -138,9 +138,7 @@ For example
       trl      = [ trl ; newtrl];
     end
 
-We can then proceed in the standard way of defining trials and reading data as follows.
-Note that except for the MEG channels which are prefixed by 'AG', the labels of the channels are just a string representation of the index number of the channel (starting with 1). The labels of our trigger channels are therefor '161', '162' and '163', etc.
-Also realize that how the Yokogawa system is recording events through individual (analogue) channels, one is in most cases limited to one event 'type' per channel. In FieldTrip the channel label (which is a string of the index number) is given in the .type field of every event. In this example this is used by feeding `cfg.trialdef.trigchannel = '162'`{matlab} into the trialfunction
+We can then proceed in the standard way of defining trials and reading data as follows. Note that except for the MEG channels which are prefixed by 'AG', the labels of the channels are just a string representation of the index number of the channel (starting with 1). The labels of our trigger channels are therefor '161', '162' and '163', etc. Also realize that how the Yokogawa system is recording events through individual (analogue) channels, one is in most cases limited to one event 'type' per channel. In FieldTrip the channel label (which is a string of the index number) is given in the .type field of every event. In this example this is used by feeding `cfg.trialdef.trigchannel = '162'`{matlab} into the trialfunction
 
     cfg = [];
     cfg.dataset                 = data.sqd;
@@ -160,10 +158,11 @@ Also realize that how the Yokogawa system is recording events through individual
 
 ## Creating a custom channel layout
 
-Many FieldTrip plotting functions, such as `ft_topoplotER`, make use of a channel layout that specifies the position of the MEG channels. For some systems, FieldTrip has saved the layout files and these are loaded when data are plotted. For Yokogawa systems, however, there exist many different layouts across labs, making it impractical to have every layout file available in FieldTrip. Moreover, for some systems with the same number of channels (e.g., Yokogawa systems with 160 channels), the layouts may be different across labs.
+Many FieldTrip plotting functions, such as `ft_topoplotER`, make use of a channel layout that specifies the position of the MEG channels. For some systems, FieldTrip includes [template layout](/template/layout) files and these are loaded when data are plotted. For Yokogawa systems, however, there exist many different layouts across labs, making it impractical to have a layout file available for every system in FieldTrip. Moreover, for some systems with the same number of channels (e.g., Yokogawa systems with 160 channels), the layouts are slightly different across systems/labs.
 
-Rather than loading a layout from file, it is possible to create a layout for your system using your data. In the example below, `ft_read_sens` is used to read in the position of the sensors from .con or .sqd data files. `ft_prepare_layout` is then used to define a layout based on these positions.
-In this example, the CTF151 helmet and mask are added to the KIT/Yokogawa layout, since this information was not available. For visualization, the position of the sensors are stretched and scaled to match the helmet. Users may wish to change these parameters if their own layouts do not look correct. The last two channels in the system (with names `COMNT` and `SCALE`) are removed prior to scaling.
+Rather than using a template layout, it is also possible to create a layout specifically for your system using your own data. In the example below, `ft_read_sens` is used to read in the position of the sensors from .con or .sqd data files. The **[ft_prepare_layout](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_layout.m)** function is then used to define a layout based on these positions.
+
+In this example, the CTF151 helmet "outline" and "mask" are added to the KIT/Yokogawa layout to replace the standard sphere-with-triangle-for nose. For visualization, the position of the sensors are stretched and scaled to match the helmet and extend a bit beyond the ears. You can change these parameters if your own layout do not look correct yet. The last two channels in the layout (`COMNT` and `SCALE`) are excluded from the scaling and shifting, so that they stay in the same position.
 
 ```
 % read the position of the sensors from the data
@@ -183,6 +182,8 @@ layout.pos(sel,2)           = layout.pos(sel,2) * 1.08 + 0.02;
 cfg                         = [];
 cfg.layout                  = 'CTF151_helmet';
 ctf151                      = ft_prepare_layout(cfg);
+
+% use the CTF151 outlint and mask instead of the circle
 layout.outline              = ctf151.outline;
 layout.mask                 = ctf151.mask;
 
@@ -191,7 +192,7 @@ figure;
 ft_plot_layout(layout, 'box', 1);
 ```
 
-`layout` may then be passed to plotting functions such as `ft_topoplotER`, in `cfg.layout`.
+The `layout` structure may then be passed in `cfg.layout` to plotting functions such as **[ft_topoplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_topoplotER.m)** and **[ft_multiplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_multiplotER.m)**.
 
 ## Coordinate system coregistration
 
