@@ -19,7 +19,7 @@ This short tutorial introduces the design of the FieldTrip toolbox. If you have 
 
 When performing EEG/MEG experiments, the aim is to gain insight into the functioning of the brain while it is engaged in certain activities. When analyzing EEG/MEG data, we hope to identify the aspects of the data that relate to the experimental question. This means that we seek to reduce the data to interpretable concepts or statements regarding hypotheses underlying the experiment. The successful analysis of EEG/MEG data does not only depend on acquiring good quality data, but also on incorporating the researcher's knowledge and assumptions into the analysis protocol.
 
-The analysis protocol includes tools and/or algorithms used, and how they are used. The knowledge or assumptions incorporated by the researcher in the protocol might b
+The analysis protocol includes tools and/or algorithms used, and how they are used. The knowledge or assumptions incorporated by the researcher in the protocol might be
 
 - At a certain time after the presentation of a stimulus, the brain will process the stimulus.
 - The brain will process repeated stimuli similarly.
