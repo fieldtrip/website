@@ -37,6 +37,42 @@ Subsequently you can save it to a MATLAB file or to a NIFTI file using
 
     ft_write_mri('subjectXX_anon.nii', mri_anon.anatomy, 'transform', mri_anon.transform, 'dataformat', 'nifti');
 
+You can also combine defacing with brain segmentation to ensure that you do not accidently remove the orbitofrontal cortex. To do that, first we segment the anatomical MRI to extract the skull-stripped brain (including csf, white and gray matter) using **[ft_volumesegment](https://github.com/fieldtrip/fieldtrip/blob/release/ft_volumesegment.m)**. Then we inflate the brain compartment a little bit using the MATLAB **[imdilate](https://nl.mathworks.com/help/images/ref/imdilate.html)** function, for example, with a 5-voxel padding all around the brain. After defacing the MRI with **[ft_defacevolume](https://github.com/fieldtrip/fieldtrip/blob/release/ft_defacevolume.m)** function and possibly cutting off the orbitofrontal cortex, we can re-insert the brain anatomy back into the defaced MRI using the padded segmentation of the brain. The following script demonstrates this:
+
+    cfg = [];
+    cfg.output    = {'brain'};
+    seg = ft_volumesegment(cfg, mri);
+
+    % copy the anatomy into the segmentation for plotting
+    seg.anatomy = mri.anatomy;
+
+    cfg = [];
+    cfg.funparameter = 'brain';
+    ft_sourceplot(cfg, seg);
+
+    % add some padding to the brain by inflating it
+    se = strel('sphere', 5);
+    seg.brain = imdilate(seg.brain, se);
+
+    cfg = [];
+    cfg.funparameter = 'brain';
+    ft_sourceplot(cfg, seg);
+
+    % we do the MRI defacing here
+    cfg = [];
+    cfg.method = 'box';
+    cfg.rotate = [-15 0 0];
+    cfg.scale = [150 75 100];
+    cfg.translate = [0 100 -30];
+    defaced_mri = ft_defacevolume(cfg, mri);
+
+    % put the brain anatomy back using the padded brain segmentation
+    defaced_mri.anatomy(seg.brain) = mri.anatomy(seg.brain);
+
+    cfg = [];
+    ft_sourceplot(cfg, defaced_mri);
+
+
 See also this frequently asked question on [how to anonymize a CTF MEG dataset](/faq/how_can_i_anonymize_a_ctf_dataset).
 
 {% include markup/danger %}
