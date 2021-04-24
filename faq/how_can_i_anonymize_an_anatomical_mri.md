@@ -37,6 +37,42 @@ Subsequently you can save it to a MATLAB file or to a NIFTI file using
 
     ft_write_mri('subjectXX_anon.nii', mri_anon.anatomy, 'transform', mri_anon.transform, 'dataformat', 'nifti');
 
+You can also combine defacing with brain segmentation to ensure that you do not accidently remove part of the brain (especially the frontal cortex). To do that, first we segmented the anatomy to extract the skull-stripped brain (including csf, white and gray matter) using **[ft_volumesegment](https://github.com/fieldtrip/fieldtrip/blob/release/ft_volumesegment.m)** function. Then we inflate the brain a little bit (MATLAB imdilate), for example, a 5-voxel padding on the brain. After defacing the MRI with **[ft_defacevolume](https://github.com/fieldtrip/fieldtrip/blob/release/ft_defacevolume.m)** function, we can put/overwrite the brain anatomy back to the defaced MRI using the padded brain segmentation. The following is an example script:
+
+    cfg = [];
+    cfg.output    = {'brain'};
+    seg = ft_volumesegment(cfg, mri);
+    % copy the anatomy over for plotting
+    seg.anatomy = mri.anatomy;
+
+    cfg = [];
+    cfg.funparameter = 'brain';
+    ft_sourceplot(cfg, seg);
+
+    % add some padding to the brain by inflating it with some amount on all sides
+    se = strel('sphere',5);
+    seg.brain = imdilate(seg.brain, se);
+
+    cfg = [];
+    cfg.funparameter = 'brain';
+    ft_sourceplot(cfg, seg);
+
+    % we do the MRI defacing here
+    cfg = [];
+    cfg.method = 'box';
+    cfg.rotate = [-15 0 0];
+    cfg.scale = [150 75 100];
+    cfg.translate = [0 100 -30];
+    defaced_mri = ft_defacevolume(cfg, mri);
+
+    % put the anatomy back using the padded brain segmentation
+    defaced_mri.anatomy(seg.brain) = mri.anatomy(seg.brain);
+
+    cfg = [];
+    ft_sourceplot(cfg, defaced_mri);
+
+
+
 See also this frequently asked question on [how to anonymize a CTF MEG dataset](/faq/how_can_i_anonymize_a_ctf_dataset).
 
 {% include markup/danger %}
