@@ -21,5 +21,5 @@ title: ft_convert_units
  specified, this function will only determine the geometrical units of the input
  object.
 
- See also FT_DETERMINE_UNITS, FT_DETERMINE_COODSYS, FT_CONVERT_COORDSYS, FT_PLOT_AXES, FT_PLOT_XXX
+ See also FT_DETERMINE_UNITS, FT_DETERMINE_COORDSYS, FT_CONVERT_COORDSYS, FT_PLOT_AXES, FT_PLOT_XXX
 ```
