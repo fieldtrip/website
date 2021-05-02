@@ -187,6 +187,18 @@ The following template layouts are for an electrode cap based on a standard 10-X
 {% include image src="/assets/img/template/layout/elec1010.lay.png" width="200" %}
 {% include image src="/assets/img/template/layout/elec1020.lay.png" width="200" %}
 
+## EGI-system sensor nets
+
+The following template layouts were created from the files that define the 3D electrode positions for EGI sensor nets(*.sfp files). The code to generate these layouts is in fieldtrip/test/test_layout_egi.m
+
+{% include image src="/assets/img/template/layout/GSN-HydroCel-32.png" width="400" %}
+{% include image src="/assets/img/template/layout/GSN-HydroCel-64_1.png" width="400" %}
+{% include image src="/assets/img/template/layout/GSN-HydroCel-65.png" width="400" %}
+{% include image src="/assets/img/template/layout/GSN-HydroCel-128.png" width="400" %}
+{% include image src="/assets/img/template/layout/GSN-HydroCel-129.png" width="400" %}
+{% include image src="/assets/img/template/layout/GSN-HydroCel-256.png" width="400" %}
+{% include image src="/assets/img/template/layout/GSN-HydroCel-257.png" width="400" %}
+
 ## BTi/4D system
 
 The following template layouts are for the sensor arrays of the BTi/4D MEG system.

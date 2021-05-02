@@ -19,7 +19,7 @@ title: ft_sourceinterpolate
    example with a low-res grid for the functional data and a high-res grid for the
    anatomy.
 
- - The functional data is defined on a 3D regular grid and the anatomical data is 
+ - The functional data is defined on a 3D regular grid and the anatomical data is
    defined on an irregular point cloud, which can be a 2D triangulated surface mesh.
 
  - The functional data is defined on an irregular point cloud, which can be a 2D
@@ -29,7 +29,7 @@ title: ft_sourceinterpolate
    cloud, which can be a 2D triangulated mesh.
 
  - The functional data is defined on a low-resolution 2D triangulated surface mesh and the
-   anatomical data is defined on a high-resolution 2D triangulated surface mesh, where the 
+   anatomical data is defined on a high-resolution 2D triangulated surface mesh, where the
    low-res vertices form a subset of the high-res vertices. This allows for mesh-based
    interpolation. The algorithm currently implemented is so-called 'smudging' as it is
    also applied by the MNE-suite software.

@@ -19,7 +19,7 @@ title: ft_checkdata
    datatype           = raw, freq, timelock, comp, spike, source, mesh, dip, volume, segmentation, parcellation
    dimord             = any combination of time, freq, chan, refchan, rpt, subj, chancmb, rpttap, pos
    senstype           = ctf151, ctf275, ctf151_planar, ctf275_planar, neuromag122, neuromag306, bti148, bti248, bti248_planar, magnetometer, electrode
-   inside             = logical, index
+   fsample            = sampling frequency to use to go from SPIKE to RAW representation
    ismeg              = yes, no
    iseeg              = yes, no
    isnirs             = yes, no
@@ -31,11 +31,11 @@ title: ft_checkdata
    hascumtapcnt       = yes, no (only applies to freq data)
    hasdim             = yes, no
    hasdof             = yes, no
-   cmbrepresentation  = sparse, full (applies to covariance and cross-spectral density)
-   fsample            = sampling frequency to use to go from SPIKE to RAW representation
+   hasbrain           = yes, no (only applies to segmentation)
+   insidestyle        = logical, index, can also be empty
+   cmbstyle           = sparse, sparsewithpow, full, fullfast, fourier (applies to covariance and cross-spectral density)
    segmentationstyle  = indexed, probabilistic (only applies to segmentation)
    parcellationstyle  = indexed, probabilistic (only applies to parcellation)
-   hasbrain           = yes, no (only applies to segmentation)
    trialinfostyle     = matrix, table or empty
 
  For some options you can specify multiple values, e.g.

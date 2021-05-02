@@ -515,8 +515,7 @@ With the output, we can now create the plots
 
     % plot
     for k = 1:20;
-       subplot(4,5,k);
-       cfg            = [];
+       cfg.figure     = subplot(4,5,k);
        cfg.xlim       = [j(k) j(k+1)];
        cfg.zlim       = [-5e-14 5e-14];
        pos_int        = zeros(numel(GA_FICvsFC.label),1);

@@ -47,6 +47,10 @@ title: ft_singleplotER
                        node, or the outflow from a node is plotted. The
                        (default) behavior of this option depends on the dimor
                        of the input data (see below).
+   cfg.select        = 'intersect' or 'union' (default = 'intersect')
+                       with multiple input arguments determines the
+                       pre-selection of the data that is considered for
+                       plotting.
 
  The following options for the scaling of the EEG, EOG, ECG, EMG, MEG and NIRS channels
  is optional and can be used to bring the absolute numbers of the different
