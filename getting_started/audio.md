@@ -30,12 +30,9 @@ The following information will be printed on screen:
          fsample: 44100
       sampleinfo: [1 211355]
              cfg: [1×1 struct]
-             
 
 Also usefull can be to use **[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_databrowser.m)** to have a quick look at the time series.
 
     cfg = [];
     cfg.dataset = '4ch.wav';
     ft_databrowser(cfg);
-    
-    
