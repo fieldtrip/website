@@ -1,11 +1,11 @@
 ---
 title: Correlation analysis in fMRI data
-tags: [example, mri, raw, freq, coherence]
+tags: [example, fmri, raw, freq, coherence]
 ---
 
 # Correlation analysis in fMRI data
 
-This script demonstrates how FieldTrip can be used for time series analysis of fMRI data.
+This script demonstrates how FieldTrip can be used for time-series analysis of fMRI data.
 
 ## Get the data in a "raw" data structure, similar to preprocessed MEG data
 
