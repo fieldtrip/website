@@ -7,3 +7,6 @@
 - name:  How can I play back EEG/MEG and synchronous audio or video?
   link:  /faq/audiovideo
 
+- name:  Getting started with audio data
+  link:  /getting_started/audio
+

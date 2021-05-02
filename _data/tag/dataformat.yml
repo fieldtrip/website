@@ -46,6 +46,9 @@
 - name:  Getting started with Artinis NIRS data
   link:  /getting_started/artinis
 
+- name:  Getting started with audio data
+  link:  /getting_started/audio
+
 - name:  Getting started with ABM's B-Alert EEG data
   link:  /getting_started/b_alert
 
@@ -91,6 +94,9 @@
 - name:  Getting started with SR-Research EyeLink eye-tracker data
   link:  /getting_started/eyelink
 
+- name:  Getting started with fMRI timeseries data
+  link:  /getting_started/fmri
+
 - name:  Getting started with Hitachi NIRS data
   link:  /getting_started/hitachi
 
@@ -132,6 +138,12 @@
 
 - name:  Getting started with SNIRF data
   link:  /getting_started/snirf
+
+- name:  Getting started with TMSi data
+  link:  /getting_started/tmsi
+
+- name:  Getting started with video data
+  link:  /getting_started/video
 
 - name:  Getting started with XSens motion capture data
   link:  /getting_started/xsens

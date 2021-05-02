@@ -118,6 +118,9 @@
 - name:  How can I use Seg3D to check and modify segmentation results?
   link:  /getting_started/seg3d
 
+- name:  Getting started with TMSi data
+  link:  /getting_started/tmsi
+
 - name:  Importing your data
   link:  /reading_data
 
