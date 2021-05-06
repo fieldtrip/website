@@ -20,6 +20,7 @@ title: ft_math
  Rather than specifying the operation as a string that is evaluated, you can also
  specify it as a single operation. The advantage is that it is computed faster.
     cfg.operation = string, can be 'add', 'subtract', 'divide', 'multiply', 'log10', 'abs'
+                     'sqrt', 'square'
  If you specify only a single input data structure and the operation is 'add',
  'subtract', 'divide' or 'multiply', the configuration should also contain:
    cfg.scalar    = scalar value to be used in the operation
