@@ -5,8 +5,6 @@ tags: [faq, ica]
 
 # Should I rereference prior to or after ICA for artifact removal?
 
-HOW CAN I ADD IMAGES? I HAVE CREATED A COUPLE FOR ILLUSTRATION PURPOSES (SEE LAST 2 PARAGRAPHS) AND WOULD BE HAPPY TO SHARE THEM...
-
 The short answer is: It does not really matter. There are however a few things to keep in mind.
 
 Let's assume your data was recorded with a system comprising N channels with the Nth channel being the reference. From this, one can derive N-1 unique time series:
@@ -21,6 +19,25 @@ The vectros Xre_i are linearly dependendt since sum_i^(N-1) Xre_i = 0. By rerefe
 
 ICA is often used as a means for artifact removal. In this case, certain independent components are removed and the remaining ones are projected back to the original electrode space. One could now pose the question, whether the independent components one obtains from the ICA differ depending on whether the input data was rerefeenced or not. It turns out that due to the nature of ICA-algorithms, the ICs obtained in the two cases will in general be very similar but not identical. It is safe to assume that obvious artifactual (and other meaningful) components will be detected and can thus be removed (or kept) in both cases. Therefore, rereferencing to the average reference after ICA for artefact removal will lead to very similar result as compared to not rereferencing before the ICA. 
 
-In the following, an illustration of the above, theoretical explanation is provided. First, we have computed the correlation between independent components obtained from rereferenced and non-rereferenced data (Fig 1). It can be seen that in each line of the correlation matrix there is one correlation value that is significantly larger than the rest. This means that each element in one set of ICs has a matching counterpart in the other set. This can be made clearer by rearranging the lines and columns of the correlation matrix such that 1.) the index of a certain component in one set matches the index of its counterpart in the other set and 2.) the indices are ordered according to the descending order of correlation values (Fig. 2). The dominant diagonal illustrates that the ICA is relatively invariant with respect to the rereferencing.
+In the following, an illustration of the above, theoretical explanation is provided. First, we have computed the correlation between independent components obtained from rereferenced and non-rereferenced data (Fig 1). 
 
-In a next step, we randomly selected roughly half of the matching pairs from both sets of ICs, removed those and computed the inverse ICA. In Fig. 3 it can be seen, again, that the results obtained from the two strategies (i.e. the "clean data") are close to identical.
+{% include image src="/assets/img/faq/sould_I_rereference_prior_to_or_after_ica_for_artifact_removal/correlation.eps" width="400" %}
+
+It can be seen that in each line of the correlation matrix there is one correlation value that is significantly larger than the rest. This means that each element in one set of ICs has a matching counterpart in the other set. This can be made clearer by rearranging the lines and columns of the correlation matrix such that 1.) the index of a certain component in one set matches the index of its counterpart in the other set and 2.) the indices are ordered according to the descending order of correlation values (Fig. 2). 
+
+{% include image src="/assets/img/faq/sould_I_rereference_prior_to_or_after_ica_for_artifact_removal/correlation_sorted.eps" width="400" %}
+
+The dominant diagonal illustrates that the ICA is relatively invariant with respect to the rereferencing.
+
+In a next step, we randomly selected roughly half of the matching pairs from both sets of ICs, removed those and computed the inverse ICA. In Fig. 3 and Fig. 4 it can be seen, again, that the results obtained from the two strategies (i.e. the "clean data") are close to identical.
+
+{% include image src="/assets/img/faq/sould_I_rereference_prior_to_or_after_ica_for_artifact_removal/multiplot.eps" width="400" %}
+
+{% include image src="/assets/img/faq/sould_I_rereference_prior_to_or_after_ica_for_artifact_removal/singleplot_FC1.eps" width="400" %}
+
+
+
+
+
+
+
