@@ -21,19 +21,19 @@ ICA is often used as a means for artifact removal. In this case, certain indepen
 
 In the following, an illustration of the above, theoretical explanation is provided. First, we have computed the correlation between independent components obtained from rereferenced and non-rereferenced data (Fig 1). 
 
-{% include image src="/assets/img/faq/sould_I_rereference_prior_to_or_after_ica_for_artifact_removal/correlation.eps" width="400" %}
+{% include image src="/assets/img/faq/sould_I_rereference_prior_to_or_after_ica_for_artifact_removal/correlation.png" width="400" %}
 
 It can be seen that in each line of the correlation matrix there is one correlation value that is significantly larger than the rest. This means that each element in one set of ICs has a matching counterpart in the other set. This can be made clearer by rearranging the lines and columns of the correlation matrix such that 1.) the index of a certain component in one set matches the index of its counterpart in the other set and 2.) the indices are ordered according to the descending order of correlation values (Fig. 2). 
 
-{% include image src="/assets/img/faq/sould_I_rereference_prior_to_or_after_ica_for_artifact_removal/correlation_sorted.eps" width="400" %}
+{% include image src="/assets/img/faq/sould_I_rereference_prior_to_or_after_ica_for_artifact_removal/correlation_sorted.png" width="400" %}
 
 The dominant diagonal illustrates that the ICA is relatively invariant with respect to the rereferencing.
 
 In a next step, we randomly selected roughly half of the matching pairs from both sets of ICs, removed those and computed the inverse ICA. In Fig. 3 and Fig. 4 it can be seen, again, that the results obtained from the two strategies (i.e. the "clean data") are close to identical.
 
-{% include image src="/assets/img/faq/sould_I_rereference_prior_to_or_after_ica_for_artifact_removal/multiplot.eps" width="400" %}
+{% include image src="/assets/img/faq/sould_I_rereference_prior_to_or_after_ica_for_artifact_removal/multiplot.png" width="400" %}
 
-{% include image src="/assets/img/faq/sould_I_rereference_prior_to_or_after_ica_for_artifact_removal/singleplot_FC1.eps" width="400" %}
+{% include image src="/assets/img/faq/sould_I_rereference_prior_to_or_after_ica_for_artifact_removal/singleplot_FC1.png" width="400" %}
 
 
 
