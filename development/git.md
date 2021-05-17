@@ -356,6 +356,17 @@ The following figure gives a graphical summary of some of the steps and terms.
 
 {% include image src="/assets/img/development/git/local_remote.png" %}
 
+## Some notes with respect to contributing to the website through git.
+
+### Edits to existing webpages.
+
+Simple edits to the website can be made through the online github interface. At the bottom of each page there's an "edit this page on GitHub" link, which takes you to github, and allows you to make changes in the the markdown files. Once you commit the changes, a Pull Request is generated automatically.
+
+### Creation of new content.
+
+If you want to create new content, e.g. a frequently asked question, or want to add (or replace) figures, you need to create a fork of the website repository, and make a clone locally. For instance, if you then want to create a new faq, you should create a new markdown file in the faq-directory of the repository (to keep things somewhat organised). In order for this page to be found, a link to it should be created in the faq.md file, which is in the website's repo top folder. Links to other files in the repo, both to webpages and figures, are to be formatted as follows: _[<some text>](/<some path>/<file>)_. If linking to a markdown file, the extension .md is to be omitted from the link. Thus, if you want to link to a markdown file in the folder 'faq' called thebestfaqever.md, you can link to it as: _[The best faq ever](/faq/thebestfaqever)_. 
+If you want to update an existing figure, you can locate the original figure by looking at the link in the markdown file. You'll notice that the figure are all stored somewhere in the assets/img folder. If you are to update an existing figure, please put the new figure in the same sub-directory. If you are creating new figures, consider the file structure. For instance, tutorials have a dedicated sub-directory in which the figures pertaining to the specific tutorial page are stored. Figure files should be in a sufficiently high resolution bitmap image format (png or jpeg).
+
 ## Want more?
 
 [github.com](https://github.com) offers lots of documentation. In particular, see the detailed instructions to [fork a repository](https://help.github.com/articles/fork-a-repo) and to [create a pull request](https://help.github.com/articles/using-pull-requests). If you plan to continue development, I suggest to set up your remotes with _origin_ pointing to your personal remote repository and _upstream_ pointing to <https://github.com/fieldtrip/fieldtrip>, as described in [fork a repository](https://help.github.com/articles/fork-a-repo).
