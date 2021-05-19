@@ -3191,7 +3191,7 @@ A detailed description of each function is available in the [reference documenta
 **cfg.ygrid** - [ft_dipolefitting](/reference/ft_dipolefitting), [ft_prepare_leadfield](/reference/ft_prepare_leadfield), [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel), [ft_sourceanalysis](/reference/ft_sourceanalysis)  
 
 
-**cfg.ylim** - [ft_connectivityplot](/reference/ft_connectivityplot), [ft_databrowser](/reference/ft_databrowser), [ft_movieplotTFR](/reference/ft_movieplotTFR), [ft_multiplotER](/reference/ft_multiplotER), [ft_multiplotTFR](/reference/ft_multiplotTFR), [ft_realtime_headlocalizer](/reference/ft_realtime_headlocalizer), [ft_singleplotER](/reference/ft_singleplotER), [ft_singleplotTFR](/reference/ft_singleplotTFR), [ft_spike_plot_isi](/reference/ft_spike_plot_isi), [ft_spike_plot_psth](/reference/ft_spike_plot_psth), [ft_topoplotTFR](/reference/ft_topoplotTFR)  
+**cfg.ylim** - [ft_connectivityplot](/reference/ft_connectivityplot), [ft_databrowser](/reference/ft_databrowser), [ft_movieplotTFR](/reference/ft_movieplotTFR), [ft_multiplotER](/reference/ft_multiplotER), [ft_multiplotTFR](/reference/ft_multiplotTFR), [ft_realtime_headlocalizer](/reference/ft_realtime_headlocalizer), [ft_rejectvisual](/reference/ft_rejectvisual), [ft_singleplotER](/reference/ft_singleplotER), [ft_singleplotTFR](/reference/ft_singleplotTFR), [ft_spike_plot_isi](/reference/ft_spike_plot_isi), [ft_spike_plot_psth](/reference/ft_spike_plot_psth), [ft_topoplotTFR](/reference/ft_topoplotTFR)  
 
 
 **cfg.yrange** - [ft_volumereslice](/reference/ft_volumereslice)  
