@@ -23,14 +23,14 @@ The data files created by Jinga-hi software can also be read using **[ft_read_he
 
 ## MATLAB-based interface
 
-The JAGA16 device streams the data over UDP network connection. The **[ft_realtime_jaga16proxy](https://github.com/fieldtrip/fieldtrip/blob/release/ft_realtime_jaga16proxy.m)** function (part of the realtime module in FieldTrip) sets up a UDP server that listens to port 55000and writes all data it receives to a [FieldTrip buffer](/development/realtime). The FieldTrip buffer is a multi-threaded and network transparent buffer that allows data to be streamed to it, while at the same time allowing another MATLAB session on the same or another computer to read data from the buffer for analysis.
+The JAGA16 device streams the data over UDP network connection. The **[ft_realtime_jaga16proxy](https://github.com/fieldtrip/fieldtrip/blob/release/realtime/example/ft_realtime_jaga16proxy.m)** function (part of the realtime module in FieldTrip) sets up a UDP server that listens to port 55000and writes all data it receives to a [FieldTrip buffer](/development/realtime). The FieldTrip buffer is a multi-threaded and network transparent buffer that allows data to be streamed to it, while at the same time allowing another MATLAB session on the same or another computer to read data from the buffer for analysis.
 
 Subsequently in another MATLAB session you can read from the FieldTrip buffer using the **[ft_read_header](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_header.m)**, **[ft_read_data](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_data.m)** and **[ft_read_event](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_event.m)** functions by specifying %%'buffer://hostname:port'%% as the filename to the reading functions, e.g.
 
     hdr = ft_read_header('buffer://hostname:port');
     dat = ft_read_data('buffer://hostname:port', 'begsample', 1, 'endsample', hdr.Fs);
 
-The UDP network interface in MATLAB is implemented in the freely available [TCP/UDP/IP toolbox](http://mathworks.com/matlabcentral/fileexchange/345). You should download this toolbox and add it to your MATLAB path if you want to use the **[ft_realtime_jaga16proxy](https://github.com/fieldtrip/fieldtrip/blob/release/ft_realtime_jaga16proxy.m)** function.
+The UDP network interface in MATLAB is implemented in the freely available [TCP/UDP/IP toolbox](http://mathworks.com/matlabcentral/fileexchange/345). You should download this toolbox and add it to your MATLAB path if you want to use the **[ft_realtime_jaga16proxy](https://github.com/fieldtrip/fieldtrip/blob/release/realtime/example/ft_realtime_jaga16proxy.m)** function.
 
 {% include markup/info %}
 The MATLAB implementation is mainly for educational and testing purposes. For proper real-time analyses we recommend you to use the standalone interface, which is faster and requires less system resources.
@@ -38,7 +38,7 @@ The MATLAB implementation is mainly for educational and testing purposes. For pr
 
 ## Standalone interface with jaga2ft
 
-Instead of **[ft_realtime_jaga16proxy](https://github.com/fieldtrip/fieldtrip/blob/release/ft_realtime_jaga16proxy.m)** and MATLAB, you can use ** jaga2ft** to transport data from the UDP network connection to a FieldTrip buffer. **jaga2ft** is written in C and takes 2 optional command line arguments
+Instead of **[ft_realtime_jaga16proxy](https://github.com/fieldtrip/fieldtrip/blob/release/realtime/example/ft_realtime_jaga16proxy.m)** and MATLAB, you can use ** jaga2ft** to transport data from the UDP network connection to a FieldTrip buffer. **jaga2ft** is written in C and takes 2 optional command line arguments
 
     jaga2ft [ftHostname] [ftPort]
 

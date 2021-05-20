@@ -45,7 +45,7 @@ The FieldTrip toolbox is not a program with a user interface where you can click
 - Functions for source analysis (e.g. **[ft_sourceanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceanalysis.m)**)
 - Functions for statistical analysis (e.g. **[ft_timelockstatistics](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockstatistics.m)**)
 - Functions for plotting and displaying the data (e.g. **[ft_multiplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_multiplotER.m)**)
-- Function for real-time acquisition and analysis (e.g. **[ft_realtime_average](https://github.com/fieldtrip/fieldtrip/blob/release/ft_realtime_average.m)**)
+- Function for real-time acquisition and analysis (e.g. **[ft_realtime_average](https://github.com/fieldtrip/fieldtrip/blob/release/realtime/example/ft_realtime_average.m)**)
 
 The full list of functions can be found [here](/reference). Each of the functions of the toolbox takes as input the (intermediate) data that was produced by the previous function.
 There is a difference between high- and low-level functions. The high-level functions are the ones that are used by the user, while the low-level functions are automatically called by the higher level functions. The user does not have to be aware of the low-level functions.

@@ -161,6 +161,6 @@ We provide a simple "Makefile" for the MinGW compiler on Windows or GCC on other
 
 ## Testing with pre-recorded fMRI data
 
-You can use the MATLAB function **[ft_realtime_fmriproxy](https://github.com/fieldtrip/fieldtrip/blob/release/ft_realtime_fmriproxy.m)**, which emulates an fMRI acquisition system by writing volumes in a cycle of about 2 seconds. The data is simulated on the fly.
+You can use the MATLAB function **[ft_realtime_fmriproxy](https://github.com/fieldtrip/fieldtrip/blob/release/realtime/example/ft_realtime_fmriproxy.m)**, which emulates an fMRI acquisition system by writing volumes in a cycle of about 2 seconds. The data is simulated on the fly.
 
-Alternatively, you can use **[ft_realtime_dicomproxy](https://github.com/fieldtrip/fieldtrip/blob/release/ft_realtime_dicomproxy.m)**, which emulates an fMRI acquisition system by reading a series of DICOM files from disk.
+Alternatively, you can use **[ft_realtime_dicomproxy](https://github.com/fieldtrip/fieldtrip/blob/release/realtime/example/ft_realtime_dicomproxy.m)**, which emulates an fMRI acquisition system by reading a series of DICOM files from disk.
