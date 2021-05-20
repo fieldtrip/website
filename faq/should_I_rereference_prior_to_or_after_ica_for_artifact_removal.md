@@ -36,6 +36,101 @@ In a next step, we randomly selected roughly half of the matching pairs from bot
 {% include image src="/assets/img/faq/sould_I_rereference_prior_to_or_after_ica_for_artifact_removal/singleplot_FC1.png" width="400" %}
 
 
+## Code
+
+In the following, the code used to generate above images is provided. The example datadet used in this example can be downloaded *here*.
+
+```
+load data_selectedTrial % load data
+load ../fieldtrip/template/layout/acticap-64ch-standard2.mat % load electrode layout
+
+% make sure results are reproducible
+seed = 1;
+rng(seed);
+
+% determine number of channels
+nChannel = length(data_selectedTrial.label);
+
+% add row of zeros to the data
+cfg = [];
+cfg.implicitref = 'my_implicitref'; 
+data_selectedTrial = ft_preprocessing(cfg, data_selectedTrial);
+
+% rereference individual trials to average reference
+cfg = [];
+cfg.channel = 'all'; % this is the default
+cfg.reref = 'yes';
+cfg.refmethod = 'avg';
+cfg.refchannel = 'all';
+data_selectedTrial_avgreref = ft_preprocessing(cfg, data_selectedTrial);
+
+% compute ICAs ============================================================
+cfg        = [];
+cfg.method = 'runica'; 
+cfg.numcomponent = nChannel;
+comp_selectedTrial = ft_componentanalysis(cfg, data_selectedTrial);
+comp_selectedTrial_avgreref = ft_componentanalysis(cfg, data_selectedTrial_avgreref);
+
+% visulaize ICs ===========================================================
+% compute correlation coefficient between all component time courses
+correlation = corr(comp_selectedTrial.trial{1}', comp_selectedTrial_avgreref.trial{1}');
+correlation_abs = abs(correlation);
+
+% determine maximum correlation values in each column of the correlation
+% matrix
+[max_vals, max_inds] = max(correlation_abs);
+
+% Order according to degree of correlation
+[sortedVal, sortedInd] = sort(diag(correlation_abs(max_inds, :)), 'descend');
+mean_diag_corr = num2str(mean(diag(correlation_abs(max_inds(sortedInd), sortedInd))),3);
+
+figure;
+imagesc(correlation_abs);
+axis square
+colorbar;
+pause(0.5) % for some weird reason omitting this lead to the title not being displayed
+title(['correlation between ICs obtained from the two strategies'])
+
+% plot
+figure;
+imagesc(correlation_abs(max_inds(sortedInd), sortedInd));
+axis square
+colorbar;
+pause(0.5) % for some weird reason this is required to show an image title
+title(['correlation between sorted ICs obtained from the two strategies (mean diag corr:', mean_diag_corr, ')'])
+
+% reject ICs ==============================================================
+nRemove = 30;
+remove_inds = randperm(length(comp_selectedTrial.label), nRemove); 
+
+% reject components in comp_selectedTrial
+cfg = [];
+cfg.component = max_inds(sortedInd(remove_inds)); % to be removed component(s)
+data_clean = ft_rejectcomponent(cfg, comp_selectedTrial, data_selectedTrial);
+
+% rereference trials in data_clean to average reference
+cfg = [];
+cfg.channel = 'all'; % this is the default
+cfg.reref = 'yes';
+cfg.refmethod = 'avg';
+cfg.refchannel = 'all';
+data_clean_reref_post = ft_preprocessing(cfg, data_clean);
+
+% reject components in comp_selectedTrial_avgreref
+cfg = [];
+cfg.component = sortedInd(remove_inds); % to be removed component(s)
+data_clean_reref_pre = ft_rejectcomponent(cfg, comp_selectedTrial_avgreref, data_selectedTrial_avgreref);
+
+% Visulaize results ===================================================
+cfg = [];
+cfg.layout = lay;
+cfg.xlim = [-0.2, 0.5];
+ft_multiplotER(cfg, data_clean_reref_pre, data_clean_reref_post)
+```
+
+
+
+
 
 
 
