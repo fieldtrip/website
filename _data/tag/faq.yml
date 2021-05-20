@@ -406,6 +406,9 @@
 - name:  Should I add FieldTrip with all subdirectories to my MATLAB path?
   link:  /faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path
 
+- name:  Should I rereference prior to or after ICA for artifact removal?
+  link:  /faq/sould_I_rereference_prior_to_or_after_ica_for_artifact_removal
+
 - name:  Is it OK for vertices/dipoles to stick out of the volume conductor?
   link:  /faq/sticking_out
 
