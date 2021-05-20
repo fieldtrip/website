@@ -38,7 +38,7 @@ In a next step, we randomly selected roughly half of the matching pairs from bot
 
 ## Code
 
-In the following, the code used to generate above images is provided. The example datadet used in this example can be downloaded *here*.
+In the following, the code used to generate above figures is provided. The dataset used in this example can be downloaded *here*.
 
 ```
 load data_selectedTrial % load data
