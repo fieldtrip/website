@@ -86,11 +86,53 @@ To be added.
 
 ## bipolar
 
-To be added.
+Often the activity recorded by a channel is contaminated by the signal coming from nearby regions, that diffuses in its surroundings. This might cause the mis-classification of channels which are not correlated with the experimental task as if they were indeed task-correlated. To ensure a better detection of task-related channels, it is recommended to adopt a more localized re-referencing scheme, which could better take into account the activity relative to each channel's surroundings. For this purpose, the **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** allows the possibility to perform bipolar rereferencing and Laplacian rereferencing.
+
+The bipolar rereferencing scheme consists of the rereferencing of each channel against its closest neighboring channel. Before calling **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** it is important to make sure that the channels are ordered on the basis of their proximity to each other. Bipolar rereferencing can be performed by simply configuring `cfg.refmethod = 'bipolar'` as in the following example:
+
+    cfg = [];
+    cfg.channel = 'all'; % this is the default
+    cfg.reref = 'yes';
+    cfg.refmethod = 'bipolar';
+    cfg.refchannel = 'all';
+    data_avg = ft_preprocessing(cfg, data_orig);
+
+Note that, since each of the N original channels is rereferenced against the next one in order, the last channel cannot be rereferenced and, at the end of the process, the dataset will contain N-1 channels. To emphasize the fact that the signal of each channel now derives from the subtraction between two neighbouring channels, all labels are modified. As an example, in place of the channels `C1`, `C2` and `C3`, the re-referenced dataset will present the channels `C1-C2` and `C2-C3`.
+
+If you are analysing an iEEG dataset, you might want to rereference separately channels belonging to different electrode shafts. It is possible to do so by setting `cfg.groupchans = 'yes'` and by labelling the channels in a precise way. 
+
+    cfg = [];
+    cfg.channel = 'all'; % this is the default
+    cfg.reref = 'yes';
+    cfg.refmethod = 'bipolar';
+    cfg.refchannel = 'all';
+    cfg.groupchans = 'yes';
+    data_avg = ft_preprocessing(cfg, data_orig);
+
+Labels should consist of an alphabetic code followed by a number, the alphabetic code being specific for the electrode (and being the same for all channels belonging to the same elctrode) and the number giving an indication about the order of the channels along the electrode. As an example, channels `'LT1'` and `'LT2'` will be rereferenced together, but separately from channels `'LP1'` and `'LP2'`. The grouping and ordering of channels is automatic, therefore, particular attention should be paid to their labelling. In case you were interested in separetely rereferencing specific groups of EEG channels, this is also possible: simply make sure that they are correctly labelled.
 
 ## laplace
 
-To be added.
+The Laplacian rereferencing scheme is quite similar to the bipolar one and can be applied to both EEG and iEEG data. This method allows to reduce the number of task-correlated channels by increaseing the degree of correlation between the signal and the task. This scheme consists of the rereferencing of each channel against the mean of its two clostest neighbours. As for the bipolar rereferencing, channels should be given in input to **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** in the order that should be used to rereference them. In this case, the first and last channels of the order will be simply rereferenced against their closest neighbor. Laplacian rereferencing can be performed by setting `cfg.refmethod = 'laplace'`.
+
+    cfg = [];
+    cfg.channel = 'all'; % this is the default
+    cfg.reref = 'yes';
+    cfg.refmethod = 'laplace';
+    cfg.refchannel = 'all';
+    data_avg = ft_preprocessing(cfg, data_orig);
+
+Note: differently from the bipolar method, in this case the number of channels does not vary after rereferencing and their original labels are maintained.
+
+If you are analysing iEEG data, you are probably interested in rereferencing channels separately for each electrode shaft. This can be done exactly as it was described above for bipolar rereferencing, by configuring `cfg.groupchans = 'yes'` and by making sure that channels are correctly labelled.
+
+    cfg = [];
+    cfg.channel = 'all'; % this is the default
+    cfg.reref = 'yes';
+    cfg.refmethod = 'laplace';
+    cfg.refchannel = 'all';
+    cfg.groupchans = 'yes';
+    data_avg = ft_preprocessing(cfg, data_orig);
 
 ## montage
 
