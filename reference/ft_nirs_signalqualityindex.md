@@ -13,7 +13,7 @@ title: ft_nirs_signalqualityindex
 
 
    cfg.threshold    = scalar, the SQI (signal quality index) value that 
-                      has to be exceeded to be labelled as a 'good' 
+                      has to be exceeded to be labeled as a 'good' 
                       channel (default = 3.5)
    cfg.windowlength = scalar, the length (in seconds) of the signal
                       segments to be analyzed (default = 10)

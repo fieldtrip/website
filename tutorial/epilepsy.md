@@ -389,7 +389,7 @@ When we read in the data earlier, we filtered it, but here it is more useful to 
     hdr.nChans = hdr.nChans+npeaks;
     ft_write_data('Case3_timeseries', dat, 'header', hdr, 'dataformat', 'anywave_ades');
 
-Finally we can automatically mark potential spikes in the source time series data and create labels in AnyWave marker file format. We use the convention (from the original CTF SAMg2 software) of placing a marker wherever the source time series exceeds 6 standard deviations of its mean. In our marker file, there is one label for each source, so events on the marker labelled 'S1' correspond to spikes on the time series from peak number 1 in the image. Marker S2 indicates events occurring at peak number 2, etc., etc.
+Finally we can automatically mark potential spikes in the source time series data and create labels in AnyWave marker file format. We use the convention (from the original CTF SAMg2 software) of placing a marker wherever the source time series exceeds 6 standard deviations of its mean. In our marker file, there is one label for each source, so events on the marker labeled 'S1' correspond to spikes on the time series from peak number 1 in the image. Marker S2 indicates events occurring at peak number 2, etc., etc.
 
     fid = fopen('Case3_timeseries.mrk', 'w');
     fprintf(fid,'%s\r\n','// AnyWave Marker File ');

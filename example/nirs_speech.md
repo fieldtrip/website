@@ -341,7 +341,7 @@ Now we convert from optical densities into HbO and HbR concentrations, this uses
     cfg.dpf = 6; % FIXME I don't know what the correct value is
     data_segmented_conc = ft_nirs_transform_ODs(cfg, data_segmented);
 
-During **[ft_nirs_transform_ODs](https://github.com/fieldtrip/fieldtrip/blob/master/external/artinis/ft_nirs_transform_ODs.m)** we loose the aux channels, here we add them again. The reason for adding them will become more clear further down, it helps us to identify where in each trial the (jittered) response happens.
+During **[ft_nirs_transform_ODs](https://github.com/fieldtrip/fieldtrip/blob/release/external/artinis/ft_nirs_transform_ODs.m)** we loose the aux channels, here we add them again. The reason for adding them will become more clear further down, it helps us to identify where in each trial the (jittered) response happens.
 
     cfg = [];
     cfg.channel = {'aux1', 'aux2'};

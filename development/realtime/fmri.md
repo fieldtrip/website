@@ -36,7 +36,7 @@ correspond to the scans that are written to the buffer from the streaming tool o
 
 The directory "fieldtrip/realtime/online_mri" contains some functions that are useful for realtime processing of fMRI data.
 In the MRI lab of the FC Donders centre, we use the function **ft_omri_quality** to monitor head movement and signal quality.
-In order to start this, e.g. on the lab machine "lab-mri004" close to the Avanto scanner, simply click on the icon labelled "fMRI quality control".
+In order to start this, e.g. on the lab machine "lab-mri004" close to the Avanto scanner, simply click on the icon labeled "fMRI quality control".
 This will first fire up a FieldTrip buffer server on port 1972, and subsequently a MATLAB session that automatically runs **ft_omri_quality**.
 Once the buffer server has started (visible in a new terminal window), you can start the **gui_streamer** on the scanner host and connect
 to the address (in the Donders centre, a link in the start menu of the scanner host starts the tool with the right hostname:port combination).

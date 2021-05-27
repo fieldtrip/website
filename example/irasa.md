@@ -211,7 +211,7 @@ Consistent with [(Stolk et al. 2019)](https://elifesciences.org/articles/48065),
 ## Updates to the IRASA implementation
 
 {% include markup/warning %}
-Starting from version 20210114 the implementation of **[ft_specest_irasa](https://github.com/fieldtrip/fieldtrip/blob/master/specest/ft_specest_irasa.m)** has been changed. The current implementation corrects the computational order of geometric and arithmetic means for esitmating the fractal power-spectrum [(Wen & Liu, 2016)](https://link.springer.com/article/10.1007/s10548-015-0448-0), which were swapped in the previous implementation (see [issue 1546](https://github.com/fieldtrip/fieldtrip/pull/1602)).
+Starting from version 20210114 the implementation of **[ft_specest_irasa](https://github.com/fieldtrip/fieldtrip/blob/release/specest/ft_specest_irasa.m)** has been changed. The current implementation corrects the computational order of geometric and arithmetic means for esitmating the fractal power-spectrum [(Wen & Liu, 2016)](https://link.springer.com/article/10.1007/s10548-015-0448-0), which were swapped in the previous implementation (see [issue 1546](https://github.com/fieldtrip/fieldtrip/pull/1602)).
 
 If you have used the previous implementation of IRASA, we recommend you to adapt your analysis script according the the following points:
 

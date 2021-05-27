@@ -5,7 +5,7 @@ tags: [example, eeg, source, headmodel, dipole, simulation]
 
 # Example use of the ft_compute_leadfield function
 
-Rather than using the high-level **[ft_dipolesimulation](https://github.com/fieldtrip/fieldtrip/blob/release/ft_dipolesimulation.m)**, this uses the low-level **[ft_compute_leadfield](https://github.com/fieldtrip/fieldtrip/blob/master/forward/ft_compute_leadfield.m)**. Note that this makes you responsible of more bookkeeping.
+Rather than using the high-level **[ft_dipolesimulation](https://github.com/fieldtrip/fieldtrip/blob/release/ft_dipolesimulation.m)**, this uses the low-level **[ft_compute_leadfield](https://github.com/fieldtrip/fieldtrip/blob/release/forward/ft_compute_leadfield.m)**. Note that this makes you responsible of more bookkeeping.
 
     % create a set of electrodes, randomly placed on a sphere
     elec = [];
