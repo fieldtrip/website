@@ -176,7 +176,7 @@ If you are analysing iEEG data, you are probably interested in re-referencing ch
     cfg.refmethod = 'laplace';
     cfg.refchannel = 'all';
     cfg.groupchans = 'yes';
-    data_avg = ft_preprocessing(cfg, data_orig);
+    data_laplace = ft_preprocessing(cfg, data_orig);
 
 ## montage
 
