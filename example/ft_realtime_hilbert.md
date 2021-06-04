@@ -27,7 +27,7 @@ Now it will start the function realtime_baseline that for 2 minutes will record 
 Basically there are 12 channels: 4 for EEG (I used F3-P3-F4-P4), 4 for the EOG, 4 for the EMG (front and neck). In this script, those are selected from the forty originally recorded channels you can find in the variable 'lab'.
 The algorithm will care to take away both EOG and EMG artifacts.
 
-## Source code for realtime_hilbert
+## MATLAB code for ft_realtime_hilbert
 
     function ft_realtime_hilbert()
 
@@ -35,7 +35,7 @@ The algorithm will care to take away both EOG and EMG artifacts.
     %
     % Use as
     %   ft_realtime_hilbert()
-    % with the following configuration options
+    % with the following configuration options that are coded inside the function
     %   cfg.channel    = cell-array, see FT_CHANNELSELECTION (default = 'gui')
     %   cfg.foilim     = [Flow Fhigh] (default = [0 120])
     %   cfg.blocksize  = number, size of the blocks/chuncks that are processed (default = 1 second)
@@ -402,15 +402,15 @@ The algorithm will care to take away both EOG and EMG artifacts.
 
     end % while true
 
-## Source code for realtime_baseline
+## MATLAB code for ft_realtime_baseline
 
-    function realtime_baseline()
+    function ft_realtime_baseline()
 
-    % realtime_hilbert is a neurofeedback application based on hilbert phase estimation.
+    % FT_REALTIME_BASELINE is a neurofeedback application based on Hilbert phase estimation.
     %
     % Use as
-    %   realtime_hilbert()
-    % with the following configuration options
+    %   ft_realtime_baseline()
+    % with the following configuration options that are coded inside the function
     %   cfg.channel    = cell-array, see FT_CHANNELSELECTION (default = 'gui')
     %   cfg.foilim     = [Flow Fhigh] (default = [0 120])
     %   cfg.blocksize  = number, size of the blocks/chuncks that are processed (default = 1 second)

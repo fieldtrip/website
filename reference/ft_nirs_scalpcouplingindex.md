@@ -11,7 +11,7 @@ title: ft_nirs_scalpcouplingindex
  and cfg is a configuration structure that should contain
 
    cfg.threshold    = scalar, the correlation value which has to be
-                      exceeded to be labelled a 'good' channel (default = 0.75)
+                      exceeded to be labeled a 'good' channel (default = 0.75)
 
  To facilitate data-handling and distributed computing you can use
    cfg.inputfile   =  ...

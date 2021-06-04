@@ -36,7 +36,7 @@ correspond to the scans that are written to the buffer from the streaming tool o
 
 The directory "fieldtrip/realtime/online_mri" contains some functions that are useful for realtime processing of fMRI data.
 In the MRI lab of the FC Donders centre, we use the function **ft_omri_quality** to monitor head movement and signal quality.
-In order to start this, e.g. on the lab machine "lab-mri004" close to the Avanto scanner, simply click on the icon labelled "fMRI quality control".
+In order to start this, e.g. on the lab machine "lab-mri004" close to the Avanto scanner, simply click on the icon labeled "fMRI quality control".
 This will first fire up a FieldTrip buffer server on port 1972, and subsequently a MATLAB session that automatically runs **ft_omri_quality**.
 Once the buffer server has started (visible in a new terminal window), you can start the **gui_streamer** on the scanner host and connect
 to the address (in the Donders centre, a link in the start menu of the scanner host starts the tool with the right hostname:port combination).
@@ -161,6 +161,6 @@ We provide a simple "Makefile" for the MinGW compiler on Windows or GCC on other
 
 ## Testing with pre-recorded fMRI data
 
-You can use the MATLAB function **[ft_realtime_fmriproxy](https://github.com/fieldtrip/fieldtrip/blob/release/ft_realtime_fmriproxy.m)**, which emulates an fMRI acquisition system by writing volumes in a cycle of about 2 seconds. The data is simulated on the fly.
+You can use the MATLAB function **[ft_realtime_fmriproxy](https://github.com/fieldtrip/fieldtrip/blob/release/realtime/example/ft_realtime_fmriproxy.m)**, which emulates an fMRI acquisition system by writing volumes in a cycle of about 2 seconds. The data is simulated on the fly.
 
-Alternatively, you can use **[ft_realtime_dicomproxy](https://github.com/fieldtrip/fieldtrip/blob/release/ft_realtime_dicomproxy.m)**, which emulates an fMRI acquisition system by reading a series of DICOM files from disk.
+Alternatively, you can use **[ft_realtime_dicomproxy](https://github.com/fieldtrip/fieldtrip/blob/release/realtime/example/ft_realtime_dicomproxy.m)**, which emulates an fMRI acquisition system by reading a series of DICOM files from disk.

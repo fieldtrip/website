@@ -8,7 +8,7 @@ To test the FieldTrip buffer interface between MATLAB and/or other software, you
 
 ## MATLAB test function
 
-The **[ft_realtime_signalproxy](https://github.com/fieldtrip/fieldtrip/blob/release/ft_realtime_signalproxy.m)** is a small MATLAB function that writes data to the buffer. It creates band-pass filtered random noise and streams it continuously to the buffer.
+The **[ft_realtime_signalproxy](https://github.com/fieldtrip/fieldtrip/blob/release/realtime/example/ft_realtime_signalproxy.m)** is a small MATLAB function that writes data to the buffer. It creates band-pass filtered random noise and streams it continuously to the buffer.
 
 ## Stand-alone test application
 

@@ -46,23 +46,3 @@ For test scripts that read data from disk, it is required that the data files ar
 {% include markup/info %}
 Perhaps the best way to learn how to write a test script is by looking at some other random [test scripts](https://github.com/fieldtrip/fieldtrip/tree/master/test) and using them as example.
 {% include markup/end %}
-   
-## Running the tests yourself
-
-You can simply execute the tests that don't rely on data on our network share. You can also run them using the **[ft_test](https://github.com/fieldtrip/fieldtrip/blob/release/ft_test.m)** function like this
-
-    ft_test run test_bug46
-
-When using `ft_test`, the results are stored (together with details on the MATLAB version and operating system) in the dashboard database. You can query previous results of the tests using the **[ft_test](https://github.com/fieldtrip/fieldtrip/blob/release/ft_test.m)** function like this
-
-    ft_test report test_bug46
-
-to get the results of a specific test script, or
-
-    ft_test report test_bug46 matlabversion 2017b
-
-to get the results of a specific test script for a specific MATLAB version, or
-
-    ft_test report matlabversion 2012b arch maci64
-
-to get the results of all tests with a specific MATLAB version and on a specific platform.

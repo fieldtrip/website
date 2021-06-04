@@ -91,8 +91,8 @@ For subsequent analysis we extract the trials of the fully incongruent condition
 
 Subsequently you can save the data to disk.
 
-  save dataFIC dataFIC
-  save dataFC dataFC
+    save dataFIC dataFIC
+    save dataFC dataFC
 
 ### Calculation of the planar gradient and time-frequency analysis
 

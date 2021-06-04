@@ -77,7 +77,7 @@ In FieldTrip it is possible to use the fileio module to read from shared memory.
 
 ### Using MATLAB to copy data from shared memory to FieldTrip buffer
 
-The **[ft_realtime_ctfproxy](https://github.com/fieldtrip/fieldtrip/blob/release/ft_realtime_ctfproxy.m)** function (part of the realtime module in FieldTrip) reads the MEG data from shared memory and writes to a [FieldTrip buffer](/development/realtime/buffer). The FieldTrip buffer is a multi-threaded and network transparent buffer that allows data to be streamed to it, while at the same time allowing another MATLAB session on the same or another computer to read data from the buffer for analysis.
+The **[ft_realtime_ctfproxy](https://github.com/fieldtrip/fieldtrip/blob/release/realtime/example/ft_realtime_ctfproxy.m)** function (part of the realtime module in FieldTrip) reads the MEG data from shared memory and writes to a [FieldTrip buffer](/development/realtime/buffer). The FieldTrip buffer is a multi-threaded and network transparent buffer that allows data to be streamed to it, while at the same time allowing another MATLAB session on the same or another computer to read data from the buffer for analysis.
 
 Subsequently in another MATLAB session you can read from the FieldTrip buffer using the **[ft_read_header](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_header.m)**, **[ft_read_data](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_data.m)** and **[ft_read_event](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_event.m)** functions by specifying %%'buffer://hostname:port'%% as the filename to the reading functions.
 

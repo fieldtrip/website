@@ -17,14 +17,14 @@ To facilitate using the same processing logic (e.g., FieldTrip functions) for da
 
 ### MATLAB-based interface
 
-The RDA interface of the BrainVision Recorder can stream the data over a TCP/IP connection. The **[ft_realtime_brainampproxy](https://github.com/fieldtrip/fieldtrip/blob/release/ft_realtime_brainampproxy.m)** function (part of the realtime module in FieldTrip) reads the EEG data stream from the TCP/IP connection and writes to a [FieldTrip buffer](/development/realtime). The FieldTrip buffer is a multi-threaded and network transparent buffer that allows data to be streamed to it, while at the same time allowing another MATLAB session on the same or another computer to read data from the buffer for analysis.
+The RDA interface of the BrainVision Recorder can stream the data over a TCP/IP connection. The **[ft_realtime_brainampproxy](https://github.com/fieldtrip/fieldtrip/blob/release/realtime/example/ft_realtime_brainampproxy.m)** function (part of the realtime module in FieldTrip) reads the EEG data stream from the TCP/IP connection and writes to a [FieldTrip buffer](/development/realtime). The FieldTrip buffer is a multi-threaded and network transparent buffer that allows data to be streamed to it, while at the same time allowing another MATLAB session on the same or another computer to read data from the buffer for analysis.
 
 Subsequently in another MATLAB session you can read from the FieldTrip buffer using the **[ft_read_header](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_header.m)**, **[ft_read_data](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_data.m)** and **[ft_read_event](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_event.m)** functions by specifying %%'buffer://hostname:port'%% as the filename to the reading functions, e.g.
 
     hdr = ft_read_header('buffer://hostname:port');
     dat = ft_read_data('buffer://hostname:port', 'begsample', 1, 'endsample', hdr.Fs);
 
-The TCP/IP interface in MATLAB is implemented in the freely available [TCP/UDP/IP toolbox](http://mathworks.com/matlabcentral/fileexchange/345). You should download this toolbox and add it to your MATLAB path if you want to use the **[ft_realtime_brainampproxy](https://github.com/fieldtrip/fieldtrip/blob/release/ft_realtime_brainampproxy.m)** function.
+The TCP/IP interface in MATLAB is implemented in the freely available [TCP/UDP/IP toolbox](http://mathworks.com/matlabcentral/fileexchange/345). You should download this toolbox and add it to your MATLAB path if you want to use the **[ft_realtime_brainampproxy](https://github.com/fieldtrip/fieldtrip/blob/release/realtime/example/ft_realtime_brainampproxy.m)** function.
 
 {% include markup/info %}
 The MATLAB implementation is mainly for educational and testing purposes. For proper real-time analyses we recommend you to use the standalone interface, which is faster and requires less system resources.
@@ -32,30 +32,29 @@ The MATLAB implementation is mainly for educational and testing purposes. For pr
 
 ### Standalone interface with rda2ft
 
-Instead of **[ft_realtime_brainampproxy](https://github.com/fieldtrip/fieldtrip/blob/release/ft_realtime_brainampproxy.m)** and MATLAB, you can use **rda2ft** to transport data from an RDA server to a FieldTrip buffer. **rda2ft** is written in C and takes 4 command line arguments, where the first two are mandator
+Instead of **[ft_realtime_brainampproxy](https://github.com/fieldtrip/fieldtrip/blob/release/realtime/example/ft_realtime_brainampproxy.m)** and MATLAB, you can use **rda2ft** to transport data from an RDA server to a FieldTrip buffer. **rda2ft** is written in C and takes 4 command line arguments, where the first two are mandator
 
     rda2ft rdaHostname rdaPort [ftHostname] [ftPort]
 
-For example, if you run rda2ft on the BrainVision acquisition computer (i.e. the 32-bit RDA server is running on localhost) and if you want to stream the data to a remote buffer on mentat205:1972, you would type
+For example, if you run rda2ft on the BrainVision acquisition computer (i.e. the 32-bit RDA server is running on localhost) and if you want to stream the data to a remote buffer on mentat205:1972, you would type:
 
     rda2ft localhost 51244 mentat205 1972
 
-For spawning a local FieldTrip buffer within **rda2ft** at port 1234, you would use a dash (-) instead of the second hostname and write
+For spawning a local FieldTrip buffer within **rda2ft** at port 1234, you would use a dash (-) instead of the second hostname and write:
 
     rda2ft localhost 51244 - 1234
 
-Leaving out the last two arguments spawns a local buffer on the default port 197
+Leaving out the last two arguments spawns a local buffer on the default port 1972.
 
     rda2ft localhost 51244
 
 #### Compilation
 
-On the command line, change to the "realtime/datasource/BrainAmp" directory and type "make". The Makefile will also work with the MinGW compiler on
-Windows. You will need to [compile](/development/realtime/reference_implementation#compiling_the_code) the **libbuffer** library first.
+On the command line, change to the "realtime/datasource/BrainAmp" directory and type "make". The Makefile will also work with the MinGW compiler on Windows. You will need to [compile](/development/realtime/reference_implementation#compiling_the_code) the **libbuffer** library first.
 
 ### Alternative interface using BCI2000
 
-The RDA interface to BrainVision Recorder is also supported by [BCI2000](http://www.bci2000.org), which means that you can use the interface between BCI2000 and FieldTrip as an alternative to the **[ft_realtime_brainampproxy](https://github.com/fieldtrip/fieldtrip/blob/release/ft_realtime_brainampproxy.m)**. That interface is documented [here](/development/realtime/bci2000) and [here](http://www.bci2000.org/wiki/index.php/Contributions:FieldTripBuffer).
+The RDA interface to BrainVision Recorder is also supported by [BCI2000](http://www.bci2000.org), which means that you can use the interface between BCI2000 and FieldTrip as an alternative to the **[ft_realtime_brainampproxy](https://github.com/fieldtrip/fieldtrip/blob/release/realtime/example/ft_realtime_brainampproxy.m)**. That interface is documented [here](/development/realtime/bci2000) and [here](http://www.bci2000.org/wiki/index.php/Contributions:FieldTripBuffer).
 
 ## Streaming data from a FieldTrip buffer to an RDA client
 
@@ -75,25 +74,24 @@ All data packets in an RDA stream contain a block number, which is unknown in th
 
 ### Translation of events to markers
 
-In the FieldTrip buffer, **events** are represented by a triple (//sample,offset,duration//) for the timing, as well as _type_ and _value_ fields, where the latter two can contain an arbitrary number of almost arbitrary elements (integers, characters, real numbers, ...). Somehow this needs to be matched to the **markers** that RDA knows about, which means a representation by (//nPosition,nPoints//) for the timing, a channel number _nChannel_ that refers to the source of the event, and a single _type_ string.
+In the FieldTrip buffer, **events** are represented by a triple (sample,offset,duration) for the timing, as well as _type_ and _value_ fields, where the latter two can contain an arbitrary number of almost arbitrary elements (integers, characters, real numbers, ...). Somehow this needs to be matched to the **markers** that RDA knows about, which means a representation by (nPosition,nPoints) for the timing, a channel number _nChannel_ that refers to the source of the event, and a single _type_ string.
 
-Currently, the translation scheme is the followin
+Currently, the translation scheme is the following:
+
 | FT event element | RDA marker element |
 | ---------------- | ------------------ |
-| sample | nPosition (*) |
-| duration | nPoints |
-| offset | - |
-| - | nChannel = -1 |
-| type:value | typeString |
+| sample           | nPosition (*)      |
+| duration         | nPoints            |
+| offset           | -                  |
+| -                | nChannel = -1      |
+| type:value       | typeString         |
+
 where the fixed value -1 for *nChannel* is defined as the "don't care" value by the RDA protocol.
-To clarify the last row, the following rules are applied for the *type* and *value\* field
+To clarify the last row, the following rules are applied for the *type* and *value\* field:
 
 - If both are strings, e.g. _type_="button" and _value_="right", the RDA marker will contain the type string "button:right"
-
 - If the _value_ field is not a string, it will be replace by "-". For example, if button presses are encoded by a number, the RDA marker might look like "button:-"
-
 - If the _type_ field is not a string, it will be replaced by "FT", yielding something like "FT:right"
-
 - If neither _type_ nor _value_ are strings, the marker description is always "FT:-"
 
 (*) Actually, the *nPosition* field of RDA markers is supposed to be relative
@@ -121,7 +119,5 @@ RDA -> FieldTrip: Channel number field of RDA markers should be matched to value
 ## External links
 
 - http://www.brainproducts.com
-
 - http://www.bci2000.org
-
 - http://mathworks.com/matlabcentral/fileexchange/345

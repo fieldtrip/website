@@ -388,7 +388,7 @@ This is possible using **[ft_connectivityplot](https://github.com/fieldtrip/fiel
 
 ### Plotting Principal or Independent Components (PCA/ICA)
 
-To plot PCA, ICA or other decompositions that result from **[ft_componentanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_componentanalysis.m)** you can use ft_topoplotIC for the topographies and ft_databrowser for the topographies combined with the time series. For a viewer that displays the power spectrum, topography and variance over time of each component, see [https://github.com/fieldtrip/fieldtrip/blob/master/contrib/misc/ft_icabrowser.m](https://github.com/fieldtrip/fieldtrip/blob/master/contrib/misc/ft_icabrowser.m).
+To plot PCA, ICA or other decompositions that result from **[ft_componentanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_componentanalysis.m)** you can use ft_topoplotIC for the topographies and ft_databrowser for the topographies combined with the time series. For a viewer that displays the power spectrum, topography and variance over time of each component, see [https://github.com/fieldtrip/fieldtrip/blob/release/contrib/misc/ft_icabrowser.m](https://github.com/fieldtrip/fieldtrip/blob/release/contrib/misc/ft_icabrowser.m).
 
 ## Plotting data at the source level
 

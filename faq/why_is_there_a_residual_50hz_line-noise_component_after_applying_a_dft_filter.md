@@ -40,7 +40,7 @@ So computed over the whole time interval of the cleaned data, the 5 Hz amplitude
     figure; plot(t, s3, 'k');
 
     % bandstopfilter: remove 4.9 to 5.1 Hz
-    s4 = ft_preproc_bandpstopfilter(s1, fs, [4.9 5.1], 2);
+    s4 = ft_preproc_bandstopfilter(s1, fs, [4.9 5.1], 2);
     hold on; plot(t, s4, 'm');
 
 {% include image src="/assets/img/faq/why_is_there_a_residual_50hz_line-noise_component_after_applying_a_dft_filter/dftfilter2.png" width="500" %}
