@@ -38,7 +38,7 @@ In a next step, we randomly selected roughly half of the matching pairs from bot
 
 ## Code
 
-In the following, the code used to generate above images is provided. The example data set used in this example can be downloaded [here.](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/example/rereference/)
+In the following, the code used to generate above figures is provided. The example dataset used in this example can be downloaded [here.](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/example/rereference/)
 
 ```
 load data_selectedTrial % load data
