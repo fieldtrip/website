@@ -11,7 +11,7 @@
   link:  /faq/i_used_ica_on_my_meg_data_from_before_2012_and_now_fieldtrip_crashes_why_is_that
 
 - name:  Should I rereference prior to or after ICA for artifact removal?
-  link:  /faq/sould_I_rereference_prior_to_or_after_ica_for_artifact_removal
+  link:  /faq/should_I_rereference_prior_to_or_after_ica_for_artifact_removal
 
 - name:  The databrowser crashes and destroys the whole MATLAB session, how can I resolve this?
   link:  /faq/the_databrowser_crashes_and_destroys_the_whole_matlab_session_how_can_i_resolve_this
