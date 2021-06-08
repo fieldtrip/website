@@ -29,7 +29,7 @@ This section of the website lists information aimed at developers of FieldTrip a
 - [Improve interactive and non-interactive plotting of 4D bivariate data](/development/project/visualization)
 - [Improve the documentation of the source reconstruction methods](/development/project/documentation_source)
 - [Restructure and rework all visualization functions](/development/project/restructure_and_rework_all_visualization_functions)
-- [Source-reconstruction using two dipoles - example script under construction](/development/project/symmetric_dipoles), see [1559](http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=1
+- [Source-reconstruction using two dipoles - example script under construction](/development/project/symmetric_dipoles), see [1559](http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=1559)
 - [Write a tutorial on how to work with the MEGSIM data](/development/project/megsim)
 - [Z-scores](/development/project/zscores)
 - [read_neuroshare](/development/project/read_neuroshare)
