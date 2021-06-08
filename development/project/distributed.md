@@ -1,6 +1,6 @@
 ---
 title: Core idea
-<---
+---
 
 {% include /shared/development/warning.md %}
 
