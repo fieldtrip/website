@@ -1,6 +1,6 @@
 ---
 title: Core idea
----
+<---
 
 {% include /shared/development/warning.md %}
 
@@ -86,22 +86,14 @@ Q (Robert): what are the defining features of the various systems? E.g.
 
 (Robert): I have already listed some potential collaborators with access to specific setups that we might want to consider. The main reason for point 2 is to get the end-user software teams involved (e.g. Guillaume, Arno). Any ideas on trying to find relevant open source projects outside of neuroscience. And what about Octave?
 
-### related links
+### Related links
 
-- http://www.cambridgeneuroimaging.com/aawiki/
-
-- http://code.google.com/p/psom/
-
-- http://deltacloud.apache.org/
-
-- http://aws.amazon.com/ec2/
-
-- http://research.cs.wisc.edu/condor/
-
-- http://www.adaptivecomputing.com/resources/docs/torque/2-5-9/index.php
-
-- http://gridscheduler.sourceforge.net/
-
-- http://svn.oscar.openclustergroup.org/trac/oscar/wiki
-
-- http://www.mosix.org/
+- <http://www.cambridgeneuroimaging.com/aawiki/>
+- <http://code.google.com/p/psom/>
+- <http://deltacloud.apache.org/>
+- <http://aws.amazon.com/ec2/>
+- <http://research.cs.wisc.edu/condor/>
+- <http://www.adaptivecomputing.com/resources/docs/torque/2-5-9/index.php>
+- <http://gridscheduler.sourceforge.net/>
+- <http://svn.oscar.openclustergroup.org/trac/oscar/wiki>
+- <http://www.mosix.org/>
