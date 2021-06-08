@@ -1,5 +1,5 @@
 ---
-title: cleanup the functions in the private folders
+title: Cleanup the functions in the private folders
 ---
 
 {% include /shared/development/warning.md %}

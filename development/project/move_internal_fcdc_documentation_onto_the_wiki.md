@@ -2,7 +2,7 @@
 title:
 ---
 
-the IKEA beamforming manual points to internal FCDC intranet pages, which should be moved to the website.
+The IKEA beamforming manual points to internal FCDC intranet pages, which should be moved to the website.
 
 To do:
 
