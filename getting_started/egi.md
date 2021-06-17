@@ -11,9 +11,10 @@ Please add information if you're using EGI/Philips data and want to share info w
 
 Net Station can export data to several data formats that FieldTrip can read in.
 
-- .egis, .sbin, and .mff can be read in by FieldTrip (I have no details on how well they work, and what the known issues are). Other formats like .ave, .gave, .ses are not supported but the data can be read by exporting to one of the supported formats.
-- **Simple binary** (.raw), only the channels from the hdEEG net are exported, the PIB channels, for instance, are not. Channel labels are not present in this format, and are thus made on the fly by FieldTrip. Events are present and read in correctly. Data sets containing multiple epochs are exported by NetStation as separate .raw files. The events are, however, exported as one file, which make it tricky (read impossible) to align data and events properly when having multiple discontinuous epochs.
-- **EDF+** (.edf) All channels, including PIB channels, are read in correctly, including channel labels. However, the events, which are stored on the annotation channel, are written in a way by Net Station that is not compatible with the edf+ reading implementation in FieldTrip. So, events do not come out properly. Also discontinuous epochs are "glued" together as one "continuous" data stream.
+- Data in the .egis, .sbin, and .mff formats can be read in by FieldTrip. We don't have details on how well they work, and what the known issues are. 
+- For the simple binary (.raw) format only the channels from the hdEEG net are exported, the PIB channels, for instance, are not. Channel labels are not present in this format, and are thus made on the fly by FieldTrip. Events are present and read in correctly. Data sets containing multiple epochs are exported by NetStation as separate .raw files. The events are, however, exported as one file, which make it tricky (read impossible) to align data and events properly when having multiple discontinuous epochs.
+- After exporting to EDF/EDF+ (.edf) all channels, including PIB channels, are read in correctly, including channel labels. However, the events, which are stored on the annotation channel, are written in a way by Net Station that is not compatible with the edf+ reading implementation in FieldTrip. So, events do not come out properly. Also discontinuous epochs are "glued" together as one "continuous" data stream.
+- Other formats like .ave, .gave, .ses are not supported, but the data can be read by exporting to one of the supported formats.
 
 ## Meta File Format (mff)
 
@@ -28,12 +29,11 @@ The third (v3) implementation is partially provided by EGI and has been reworked
 In short, the code in ft_read_header and ft_read_data does
 
     case {'egi_mff_v1' 'egi_mff'}
-
-    % do the old stuff
+      % do the old stuff
     case {'egi_mff_v2'}
-    % do the newer stuff
+      % do the newer stuff
     case {'egi_mff_v3'}
-    % do the newest stuff
+      % do the newest stuff
 
 At this moment the default is to use the egi_mff_v1 implementation. This can be overruled by specifying
 
@@ -59,4 +59,4 @@ For more information have a look at [javaaddpath](http://www.mathworks.nl/help/t
 
 ### Installing the EGI Java implementation for version 3
 
-Download the source code from https://github.com/arnodelorme/mffmatlabio and add it to your path.
+Download the source code from <https://github.com/arnodelorme/mffmatlabio> and add it to your path.
