@@ -1,9 +1,9 @@
 ---
-title: Use simulations to estimate the sample size for cluster-based permutation test
+title: Using simulations to estimate the sample size for cluster-based permutation test
 tags: [example, statistics, cluster, simulation]
 ---
 
-# Use simulations to estimate the sample size for cluster-based permutation test
+# Using simulations to estimate the sample size for cluster-based permutation test
 
 {% include markup/success %}
 
