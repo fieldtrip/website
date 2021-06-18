@@ -412,10 +412,6 @@ So far we predefined a time window over which the effect was averaged, and teste
 To properly write up your results in a manuscript, you should check the guidelines on [how NOT to interpret results from a cluster-based permutation test](/faq/how_not_to_interpret_results_from_a_cluster-based_permutation_test).
 {% include markup/end %}
 
-{% include markup/info %}
-As you may have noticed, the cfg.clusteralpha is set rather arbitrarily. One way to get around this is to use the Threshold Free Cluster Enhancement (TFCE) method, which is implemented since Jan 2021. You may find further info here: [Using the Threshold Free Cluster Enhancement method in cluster-based permutation test](/faq/using_the_threshold_free_cluster_enhancement_method_in_cluster-based_permutation_test).
-{% include markup/end %}
-
 ## Summary and suggested further reading
 
 This tutorial showed you how to perform parametric and non-parametric statistics in FieldTrip, as well as the the equivalent t-test and Bonferroni correction with MATLAB functions. Furthermore, it demonstrated how to plot the channels that contribute to a significant difference.
@@ -434,8 +430,9 @@ If you would like to read about neighborhood selection, you can read the followi
 - [How can I define neighbouring sensors?](/faq/how_can_i_define_neighbouring_sensors)
 - [How does ft_prepare_neighbours work?](/faq/how_does_ft_prepare_neighbours_work)
 
-Or you can look also at the following example scripts:
+And you can look also at the following example scripts:
 
+- [Using threshold-free cluster enhancement for cluster statistics](/example/threshold_free_cluster_enhancement)
 - [Apply clusterrandanalysis on TFRs of power that were computed with BESA](/example/apply_clusterrandanalysis_on_tfrs_of_power_that_were_computed_with_besa)
 - [Source statistics](/example/source_statistics)
 - [Stratify the distribution of one variable that differs in two conditions](/example/stratify)
