@@ -430,8 +430,9 @@ If you would like to read about neighborhood selection, you can read the followi
 - [How can I define neighbouring sensors?](/faq/how_can_i_define_neighbouring_sensors)
 - [How does ft_prepare_neighbours work?](/faq/how_does_ft_prepare_neighbours_work)
 
-Or you can look also at the following example scripts:
+And you can look also at the following example scripts:
 
+- [Using threshold-free cluster enhancement for cluster statistics](/example/threshold_free_cluster_enhancement)
 - [Apply clusterrandanalysis on TFRs of power that were computed with BESA](/example/apply_clusterrandanalysis_on_tfrs_of_power_that_were_computed_with_besa)
 - [Source statistics](/example/source_statistics)
 - [Stratify the distribution of one variable that differs in two conditions](/example/stratify)
