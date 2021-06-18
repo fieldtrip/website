@@ -63,13 +63,14 @@ See also the [tutorials](/tutorial) and [frequently asked questions](/faq).
 
 - [Apply clusterrandanalysis on TFRs of power that were computed with BESA](/example/apply_clusterrandanalysis_on_tfrs_of_power_that_were_computed_with_besa)
 - [Computing and reporting the effect size](/example/effectsize)
-- [Use simulations to estimate the sample size for cluster-based permutation test](/example/samplesize)
+- [Defining electrodes as neighbours for cluster-level statistics](/example/neighbours)
 - [Source statistics](/example/source_statistics)
 - [Stratify the distribution of two variables](/example/stratify)
 - [Use simulated ERPs to explore cluster statistics](/example/use_simulated_erps_to_explore_cluster_statistics)
-- [Using General Linear Modeling on time series data](/example/glm_timeseries)
 - [Using GLM to analyze NIRS timeseries data](/example/nirs_glm)
-- [Defining electrodes as neighbours for cluster-level statistics](/example/neighbours)
+- [Using General Linear Modeling on time series data](/example/glm_timeseries)
+- [Using simulations to estimate the sample size for cluster-based permutation test](/example/samplesize)
+- [Using threshold-free cluster enhancement for cluster statistics](/example/threshold_free_cluster_enhancement)
 
 ### Real-time analysis
 
