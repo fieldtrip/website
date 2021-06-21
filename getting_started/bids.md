@@ -48,8 +48,8 @@ If you want to avoid reading the channels and/or events from the BIDS sidecar fi
 Using the **[data2bids](https://github.com/fieldtrip/fieldtrip/blob/release/data2bids.m)** function you can organize your data according to BIDS. It supports three methods:
 
 - **decorate**: use this if the data is already in the right file format, with the right filename and in the right directory
-- **copy**: use this if the data is already in the right file format, but not with the filename and not in the right directrory
-- **convert**: use this if the data is in a file format that is not supported according to the BIDS specification, or with raw or minimally preprocessed data in memory
+- **copy**: use this if the data is already in the right file format, but not with the right filename and not in the right directory
+- **convert**: use this if the data is in a file format that is not supported by BIDS, or with raw or minimally preprocessed data in MATLAB memory
 
 There are various examples that show how to convert different types of data:
 
