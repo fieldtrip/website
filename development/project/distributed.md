@@ -43,7 +43,9 @@ Most EEG/MEG projects include the analysis of data from multiple subjects, follo
 
 {% include image src="/assets/img/development/project/distributed/pipelines.jpg" width="500" %}
 
-The researcher can first analyze one subject completely (green box), and then move on with the next. Or the researcher can do a certain step for all subjects, and then move on with the next step for all subjects. In my (=Robert's) experience, the researchers will switch between the two strategies during the development of their analysis pipeline.
+The researcher can first analyze one subject completely (green box), and then move on with the next. Or the researcher can do a certain step for all subjects (blue box), and then move on with the next step for all subjects. 
+
+In my (=Robert's) experience, the researchers will switch between the two strategies during the development of their analysis pipeline.
 
 ## Some thoughts on using aa
 
