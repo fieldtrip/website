@@ -225,12 +225,12 @@ Note that this reference documentation is identical to the help text that is dis
 
 ### ... for distributed computing using peer-to-peer
 
-- [peercellfun](https://github.com/fieldtrip/fieldtrip/blob/release/peer/peer/peercellfun.m)
-- [peerfeval](https://github.com/fieldtrip/fieldtrip/blob/release/peer/peer/peerfeval.m)
-- [peerget](https://github.com/fieldtrip/fieldtrip/blob/release/peer/peer/peerget.m)
-- [peercontroller](https://github.com/fieldtrip/fieldtrip/blob/release/peer/peer/peercontroller.m)
-- [peerworker](https://github.com/fieldtrip/fieldtrip/blob/release/peer/peer/peerworker.m)
-- [peerzombie](https://github.com/fieldtrip/fieldtrip/blob/release/peer/peer/peerzombie.m)
-- [peerinfo](https://github.com/fieldtrip/fieldtrip/blob/release/peer/peer/peerinfo.m)
-- [peerlist](https://github.com/fieldtrip/fieldtrip/blob/release/peer/peer/peerlist.m)
-- [peerreset](https://github.com/fieldtrip/fieldtrip/blob/release/peer/peer/peerreset.m)
+- [peercellfun](https://github.com/fieldtrip/fieldtrip/blob/release/peer/peercellfun.m)
+- [peerfeval](https://github.com/fieldtrip/fieldtrip/blob/release/peer/peerfeval.m)
+- [peerget](https://github.com/fieldtrip/fieldtrip/blob/release/peer/peerget.m)
+- [peercontroller](https://github.com/fieldtrip/fieldtrip/blob/release/peer/peercontroller.m)
+- [peerworker](https://github.com/fieldtrip/fieldtrip/blob/release/peer/peerworker.m)
+- [peerzombie](https://github.com/fieldtrip/fieldtrip/blob/release/peer/peerzombie.m)
+- [peerinfo](https://github.com/fieldtrip/fieldtrip/blob/release/peer/peerinfo.m)
+- [peerlist](https://github.com/fieldtrip/fieldtrip/blob/release/peer/peerlist.m)
+- [peerreset](https://github.com/fieldtrip/fieldtrip/blob/release/peer/peerreset.m)
