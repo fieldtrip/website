@@ -1,10 +1,11 @@
 ---
-title:
+title: Implement a function which computes a variety of bivariate coupling measures from the input data
 ---
 
 {% include /shared/development/warning.md %}
 
-Status: the connectivityanalysis and connectivitysimulation function have been implemented.
+# Implement a function which computes a variety of bivariate coupling measures from the input data
+
 
 The goal is to create a multi-purpose function which takes raw/timelock/freq/source/mvar data as an input and computes coupling measures such as
 
@@ -24,3 +25,5 @@ Furthermore create a simulator for
 1.  dipolesimulation
 2.  freqsimulation
 3.  connectivitysimulation
+
+Status: the connectivityanalysis and connectivitysimulation function have been implemented.

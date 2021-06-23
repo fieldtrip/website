@@ -1,16 +1,12 @@
 ---
-title: Checkconfig
+title: Implement function that checks consistency of cfgs
 ---
 
 {% include /shared/development/warning.md %}
 
-# Checkconfig
-
-Implement function checkconfig that checks the consistency of cfgs, similar to checkdata for data structure.
+# Implement function that checks consistency of cfgs
 
 ## Objectives
-
-Implement function checkconfig that checks consistency of cfg
 
 1.  For the user: input cfgs should be adjusted when necessary and possible, and feedback (warning/error) should be given when **required** options are missing or when **forbidden** or **deprecated** options are used. This should replace the current 'backward compatibility' code.
 2.  Internal use: checkconfig should control the relevant cfg options that are being passed on to other functions.
@@ -18,7 +14,7 @@ Implement function checkconfig that checks consistency of cfg
 
 ## Relevant functions
 
-Overview of relevant functions (where checkconfig should be implemented
+Overview of relevant functions where checkconfig should be implemented:
 
 - preprocessing ------step1=done------
 - private/preproc (uses cfg.preproc)
@@ -60,14 +56,14 @@ Add the check (objective 1) to the existing functions.
 
 ## Step 2
 
-Incorporate existing functions in checkconfi
+Incorporate existing functions in checkconfig:
 
 - createsubcfg - done -
 - dataset2files - done -
 
 ## Step 3
 
-Control the output cf
+Control the output cfg:
 
 - report on used/unused fields (trackconfig)
 - remove unused fields from output cfg (trackconfig)

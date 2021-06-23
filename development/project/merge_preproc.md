@@ -26,17 +26,12 @@ The most obvious function to start in is fieldtrip/private/preproc, but other Fi
 ## To do
 
 - discuss the required changes to the code
-
 - inventorize affected functions
-
   - which functions will be removed
   - which functions will be modified
   - which old and unsupported functions will break (not necessarily a problem if deprecated)
-
 - modify the fieldtrip/private/preproc function
-
 - modify all other affected functions
-
 - remove the code that has become obsolete
 
 ## Affected functions
@@ -44,37 +39,25 @@ The most obvious function to start in is fieldtrip/private/preproc, but other Fi
 **avgref:**
 
 - dipolefitting.m
-
 - private/prepare_headmodel.m
-
 - private/preproc.m -done-
 
 **blc:**
 
 - artifact_ecg.m -done-
-
 - combineplanar.m
-
 - componentanalysis.m -done-
-
 - resampledata.m -done-
-
 - timelockanalysis.m -done-
-
 - timelockbaseline.m -done-
-
 - private/artifact_viewer_old.m
-
 - private/preproc.m -done-
 
 **bandpassfilter:**
 
 - freqsimulation.m -done-
-
 - spikeanalysis.m
-
 - spikesimulation.m -done-
-
 - private/preproc.m -done-
 
 **all other filters:**
@@ -84,15 +67,12 @@ The most obvious function to start in is fieldtrip/private/preproc, but other Fi
 **detrend:**
 
 - componentanalysis.m -done-
-
 - resampledata.m -done-
-
 - private/preproc.m -done-
 
 **hilbert:**
 
 - spikeanalysis.m
-
 - private/preproc.m -done-
 
 ## Functions that Robert should look into
@@ -100,13 +80,11 @@ The most obvious function to start in is fieldtrip/private/preproc, but other Fi
 **avgref:**
 
 - dipolefitting.m
-
 - private/prepare_headmodel.m
 
 **blc:**
 
 - combineplanar.m
-
 - private/artifact_viewer_old.m
 
 **bandpassfilter:**

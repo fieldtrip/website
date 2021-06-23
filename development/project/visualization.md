@@ -1,18 +1,18 @@
 ---
-title: Visualization Concept for 4D Bivariate data
+title: Visualization concept for 4D bivariate data
 ---
 
 {% include /shared/development/warning.md %}
 
-# Visualization Concept for 4D Bivariate data
+# Visualization concept for 4D bivariate data
 
-#### Goals
+## Goals
 
 1. Provide the various plotting functions with a unified (as much as possible) way to handle chan_chan_freq_time data.
 2. Provide options to plot data of this format using averages and singletons of different dimensions, i.e. plot a single frequency or time point, or the mean of two frequencies or time points across time or frequency space using the ft_singleplot, and ft_multiplot frameworks.
 3. Provide an interactive plotting scenario which capitalizes on 1) and 2)
 
-#### Explanation of Diagram
+## Explanation of Diagram
 
 The figure below depicts a flow from the 4D bivariate data (chan_chan_freq_time) itself, represented as the 'time-varying cube' in the bottom left hand corner, through various visualization scenarios.
 
@@ -24,11 +24,11 @@ There are 3 visualization path
 
 {% include image src="/assets/img/development/project/visualization/4d_plotting_flow.jpg" %}
 
-#### Sample Data For Development
+## Sample Data For Development
 
 a link to sample data will be provided here
 
-#### Steps to be taken
+## Steps to be taken
 
 - Inventorise how (dis)similar the different high-level plotting routines are, in particular with respect how the data are handled. The intention should be that the backbones of the functions should be very similar (particularly between the singleplotXXX, between the topoplotXXX and between the multiplotXXXs).
 - Make the backbones as identical as possible

@@ -1,10 +1,10 @@
 ---
-title: Resolution - see faq
+title: Document grad.tra, modifications to it, and effects on inverse
 ---
 
 {% include /shared/development/warning.md %}
 
-# Document "tra"
+# Document grad.tra, modifications to it, and effects on inverse
 
 ## Resolution: see faq
 

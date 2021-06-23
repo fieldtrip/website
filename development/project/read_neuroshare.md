@@ -1,10 +1,10 @@
 ---
-title: Function to read data from any file format supported by neuroshare
+title: Add support for reading data from any file format supported by neuroshare
 ---
 
 {% include /shared/development/warning.md %}
 
-# Function to read data from any file format supported by neuroshare
+# Add support for reading data from any file format supported by neuroshare
 
 ## Objectives
 

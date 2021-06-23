@@ -1,24 +1,21 @@
 ---
-title: Example script for leadfield based on FEM headmodel
+title: Compute EEG leadfields using a FEM headmodel
 tags: [example, eeg, fem, leadfield, headmodel]
 ---
 
-# Example script for leadfield based on FEM headmodel
+# Compute EEG leadfields using a FEM headmodel
 
+    [ftver, ftpath] = ft_version;
+    
     %% read mri
-    if ispc
-      datadir = 'H:';
-    else
-      datadir = '/home';
-    end
 
-    mri = ft_read_mri(strcat(datadir,'/common/matlab/fieldtrip/data/Subject01.mri'));
+    mri = ft_read_mri('Subject01.mri');
 
     %% segmentation
 
     cfg          = [];
-    cfg.output   = {'gray', 'white', 'csf','skull','scalp'};
-    segmentedmri = ft_volumesegment(cfg,mri);
+    cfg.output   = {'gray', 'white', 'csf', 'skull', 'scalp'};
+    segmentedmri = ft_volumesegment(cfg, mri);
 
     %% mesh
 
@@ -36,9 +33,7 @@ tags: [example, eeg, fem, leadfield, headmodel]
 
     %% electrode alignment
 
-    elec = ft_read_sens(strcat(datadir,'/common/matlab/fieldtrip/template/electrode/standard_1020.elc'));
-    mri = ft_read_mri(strcat(datadir,'/common/matlab/fieldtrip/data/Subject01.mri'));
-
+    elec = ft_read_sens(fullfile(ftpath,'template/electrode/standard_1020.elc'));
 
     nas = mri.hdr.fiducial.head.nas;
     lpa = mri.hdr.fiducial.head.lpa;
@@ -69,7 +64,8 @@ tags: [example, eeg, fem, leadfield, headmodel]
     % hold on;
     % ft_plot_mesh(mesh,'edgeonly','yes','vertexcolor','none','facecolor',[0.5 0.5 0.5],'facealpha',1,'edgealpha',0.1)
 
-    %% make grid (sourcemodel):
+    %% make the sourcemodel/grid
+
     % At the moment the sourcemodel is defined prior
     % to the leadfield because ft_prepare_sourcemodel does not automatically create
     % a sourcemodel based on a hexahedral vol.
@@ -79,15 +75,13 @@ tags: [example, eeg, fem, leadfield, headmodel]
     cfg.sourceunits     = vol.unit;
     grid                = ft_prepare_sourcemodel(cfg);
 
-
     cfg            = [];
     cfg.headmodel  = vol;
     cfg.elec       = elec_align;
     cfg.grid       = grid;
     lf             = ft_prepare_leadfield(cfg);
 
-    % plot the leadfield for a few representative locations: points around
-    % z-axis with increasing z values
+    % plot the leadfield for a few representative locations: points around z-axis with increasing z values
 
     plotpos = [];
     positions=[];
@@ -103,14 +97,13 @@ tags: [example, eeg, fem, leadfield, headmodel]
 
     positions;
 
-    %n=length(plotpos);
+    % n=length(plotpos);
 
     figure;
     for i=1:20
 
       subplot(4,5,i);
       ft_plot_topo3d(lf.cfg.elec.chanpos,lf.leadfield{plotpos(i)}(:,3));
-      %view([0 0]);
-
+      % view([0 0]);
 
     end

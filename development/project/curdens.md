@@ -4,26 +4,30 @@ title: How to create a volumetric current density
 
 {% include /shared/development/warning.md %}
 
-{% include markup/info %}
-Upon reviewing this page on the website, it seems to me that this project is not going to happen. Although the FieldTrip code base might be used (in combination with other code), the release code will not be extended to specifically facilitate this.
-{% include markup/end %}
-
 # How to create a volumetric current density
+
+{% include markup/info %}
+Upon reviewing this page on the website, it seems to me that this project is not going to happen. Although the FieldTrip code base might be used (in combination with other code), the released code will not be extended to specifically facilitate this.
+{% include markup/end %}
 
 ## Introduction
 
 What is the tutorial about
+
 This is relevant for TMS tDCS ....
 
 ## Background
 
 What is TMS/tDCS
+
 Why we need current densities
+
 Overview about the methods which are used
 
 ## Procedure
 
 A set of logical steps describing the pipeline, in MATLAB, FieldTrip code or also from somewhere else (e.g. FreeSurfer)
+
 Examples with code/command lines instructions
 
 **@Cristiano**

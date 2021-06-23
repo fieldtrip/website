@@ -6,7 +6,7 @@ title: Source-reconstruction using two dipoles
 
 ## Source-reconstruction using two dipoles
 
-### Description
+## Description
 
 This example script shows you how to work with more advanced source models in case of correlated sources. This can be used to reconstruct the location of activity (power) in case of correlated sources, but also for more accurate reconstruction of coherence with a muscular reference channel (c.f. Schoffelen 2008).
 
@@ -18,7 +18,7 @@ A double-dipole source model in the beamformer scan can be used to circumvent th
 
 NOTE: the example below uses some low-level functions from the FieldTrip/private directory that will not be found in the default installation of FieldTrip. For the example below to work, you should rename the FieldTrip/private directory and add it explicitely to your path.
 
-### Generate simulated data
+## Generate simulated data
 
 FIXME in the following section the simulated data should consist of two dipoles with more appropriate time courses
 
@@ -67,7 +67,7 @@ FIXME the following code should do freqanalysis instead of timelockanalysis
     cfg.covariance = 'yes';
     timelock = ft_timelockanalysis(cfg, data);
 
-### Conventional beamformer source reconstruction fails for correlated sources
+## Conventional beamformer source reconstruction fails for correlated sources
 
 The following code demonstrates how to do beamformer source reconstruction with a single-dipole source model, i.e. conventional beamforming.
 
@@ -93,12 +93,12 @@ FIMXE insert figure at the end of the following block of code
     cfg.funcolorlim = [1.6 2.2];  % the voxel in the center of the volume conductor messes up the autoscaling
     ft_sourceplot(cfg, source);
 
-### Beamformer source reconstruction with a two-dipole source model
+## Beamformer source reconstruction with a two-dipole source model
 
 The following code demonstrates how to do beamformer source reconstruction with a two-dipole source model.
 
 FIMXE insert subsequent code, based on prepare_leadfield, sourceanalysis with method=dics/pcc, and sourcedescriptives.
 
-### Beaming cortico-muscular coherence with a two-dipole source model
+## Beaming cortico-muscular coherence with a two-dipole source model
 
 FIXME extend with refchan, e.g. repeat dipolesimulation and add the timecourse of a nice signal to an additional channel in the data.

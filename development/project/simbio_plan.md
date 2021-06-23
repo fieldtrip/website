@@ -1,16 +1,16 @@
 ---
-title: SIMBIO integration
+title: FieldTrip/SIMBIO integration plan
 ---
 
 {% include /shared/development/warning.md %}
 
+# FieldTrip/SIMBIO integration plan
+
+The goal is to integrate the SIMBIO FEM model into FieldTrip.
+
 this involves ft_prepare_vol_sens and ft_compute_leadfield
 
 vgrid - geometric cube meshes will be discussed in the next meeting 18th of April
-
-# SIMBIO integration
-
-The goal is to integrate the SIMBIO FEM model into FieldTrip.
 
 ## Scenarios
 

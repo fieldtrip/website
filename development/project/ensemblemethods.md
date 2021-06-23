@@ -1,8 +1,10 @@
 ---
-title:
+title: Ensemble methods
 ---
 
 {% include /shared/development/warning.md %}
+
+# Ensemble methods
 
 At the moment the ft_mv_gridsearch class produces the classifier of all
 candidate classifiers, which are defined in the input, with the best performance.

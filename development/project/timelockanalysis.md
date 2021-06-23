@@ -1,8 +1,10 @@
 ---
-title:
+title: Reimplement the avg/cov/trial handling
 ---
 
 {% include /shared/development/warning.md %}
+
+# Reimplement the avg/cov/trial handling
 
     cfg.output     = trial, cov
     cfg.keeptrials = yes, no
@@ -13,4 +15,5 @@ title:
     timelock.cov      = Nrpt X Nchan X Nchan
 
 compute average over the single-trial covariance
+
 compute the covariance of the average

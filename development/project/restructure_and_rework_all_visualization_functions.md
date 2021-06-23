@@ -4,11 +4,11 @@ title: Restructure and rework all visualization functions
 
 {% include /shared/development/warning.md %}
 
-## Restructure and rework all visualization functions
+# Restructure and rework all visualization functions
 
 The current naming scheme is ambiguous and/or inefficient for end-users and developers. The goal of this page is to develop a new scheme for naming functions and structuring the underlying code.
 
-##### Goals of the new scheme
+## Goals of the new scheme
 
 - be intuitive to the end-user
   - the name of any plotting function should be grouped by data-type (e.g. freq/timelock), followed by the intended plotting-mode (e.g. single/multi/topo/etc).
@@ -18,7 +18,7 @@ The current naming scheme is ambiguous and/or inefficient for end-users and deve
   - 2d/3d data should be plotted by the same underlying 2d or 3d code (irrespective of freq/timelock)
   - handling of options/data should be done in the higher-level functions.
 
-##### What is wrong with the current format
+## What is wrong with the current format
 
 - Event-Related (ER) versus Time-Frequency-Representation (TFR) are not exclusive categories, but they are used as if they were
 
@@ -30,7 +30,7 @@ The current naming scheme is ambiguous and/or inefficient for end-users and deve
 
 - ft_multiplotCC depends on ft_topoplotTFR, which is confusing for developers
 
-##### Existing implicated functions
+## Existing implicated functions
 
 - ft_singleplotER
 - ft_singleplotTFR
@@ -47,7 +47,7 @@ The current naming scheme is ambiguous and/or inefficient for end-users and deve
 - ft_multiplotCC (wraps around ft_topoplotTFR)
 - ft_topoplotCC
 
-##### Naming proposal
+## Naming proposal
 
 **Top-level functions**
 

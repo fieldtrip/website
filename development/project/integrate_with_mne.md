@@ -1,8 +1,10 @@
 ---
-title: Integrate FieldTrip and MNE-Python
+title: Import and export data to and from MNE-Python
 ---
 
 {% include /shared/development/warning.md %}
+
+# Import and export data to and from MNE-Python
 
 Not all the information contained in either MATLAB or Python can be completely copied into the other format.
 
@@ -13,12 +15,9 @@ Code under development, the MNE-Python community currently works on reader funct
 
 More functions to work with files coming from MNE-Python in MATLAB are available at [https://github.com/mne-tools/mne-matlab](https://github.com/mne-tools/mne-matlab).
 
-# Integrate FieldTrip and MNE-Python
-
 ## Introduction
 
-FieldTrip and MNE-Python offer tools to analyze electrophysiological activity.
-[MNE-Python](http://martinos.org/mne/stable/index.html), with code available at [github.com](https://github.com/mne-tools/mne-python), facilitates the access to the FIFF files and integrates with the [MNE suite](http://martinos.org/mne/stable/index.html), written in C (FieldTrip can also use some of the functions in the MNE suite, as explained in the [minimum-norm estimate tutorial](/tutorial/minimumnormestimate)). In addition, MNE-Python allows for a variety of tools for the analysis of electrophysiological data, as demonstrated in the [example gallery](http://martinos.org/mne/stable/auto_examples/index.html).
+FieldTrip and MNE-Python offer tools to analyze electrophysiological activity. [MNE-Python](http://martinos.org/mne/stable/index.html), with code available at [github.com](https://github.com/mne-tools/mne-python), facilitates the access to the FIFF files and integrates with the [MNE suite](http://martinos.org/mne/stable/index.html), written in C (FieldTrip can also use some of the functions in the MNE suite, as explained in the [minimum-norm estimate tutorial](/tutorial/minimumnormestimate)). In addition, MNE-Python allows for a variety of tools for the analysis of electrophysiological data, as demonstrated in the [example gallery](http://martinos.org/mne/stable/auto_examples/index.html).
 
 Primary use cases for the integration of FieldTrip and MNE-Python are
 

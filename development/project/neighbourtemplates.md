@@ -2,6 +2,10 @@
 title: Neighbour templates
 ---
 
+{% include /shared/development/warning.md %}
+
+# Neighbour templates
+
 This project has been completed and it's result can be found here:
 
 - <http://fieldtrip.fieldtriptoolbox.org/faq/how_can_i_define_neighbouring_sensors>
@@ -16,8 +20,6 @@ Related bugzilla bugs:
 - <http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=1929>
 
 Find below the old project notes
-
-# Neighbour templates
 
 #### Goals
 

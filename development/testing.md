@@ -19,6 +19,14 @@ If you suspect a problem with the FieldTrip code, the best way to resolve it is 
 
 The [master branch](https://github.com/fieldtrip/fieldtrip/tree/release) is tested every evening; all functions in the test directory are executed using the FieldTrip [dashboard scripts](https://github.com/fieldtrip/dashboard) that are running as a cron job on the [DCCN compute cluster](https://dccn-hpc-wiki.readthedocs.io). If the complete test batch passes, the changes on the master branch are automatically merged into the [release branch](https://github.com/fieldtrip/fieldtrip/tree/release). If there is a problems with one of the test scripts, an email is sent to the main developers and the updates are *not* merged from master into release.
 
+### How to implement algorithmic tests
+
+**Method A:** If possible, the scripts should check against an internal reference solution, i.e., the outcome of the algorithm on particular ideal data is known, therefore the correctness of the algorithm can be tested using simulated data.
+
+**Method B:** If that is not possible or difficult, the scripts should check the consistency of one implementation with another implementation.
+
+**Method C:** If that is also not possible, the result of the algorithm on a particular real-world dataset has to be interpreted as being correct, and that solution should be reused as reference solution (i.e. regression testing).
+
 ## Releasing the code
 
 Every evening one of the FieldTrip [automation scripts](https://github.com/fieldtrip/automation) is executed as a cron job. It checks whether there are new commits on the [release branch](https://github.com/fieldtrip/fieldtrip/tree/release), and if so, it makes a new zip file of fieldtrip, fieldtrip-lite, and some of the modules, and copies those to the FTP server. It also tags the corresponding commit on the release branch on GitHub with the date (YYYYMMDD), consistent with the naming of the zip files.

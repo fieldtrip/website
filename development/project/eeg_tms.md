@@ -1,7 +1,9 @@
 ---
-title:
+title: Dealing with TMS-EEG datasets
 ---
 
-{% include markup/warning %}
-This tutorial has now been moved to: [Dealing with TMS-EEG datasets](/tutorial/tms-eeg)
-{% include markup/end %}
+{% include /shared/development/warning.md %}
+
+# Dealing with TMS-EEG datasets
+
+This tutorial has been moved [here](/tutorial/tms-eeg).

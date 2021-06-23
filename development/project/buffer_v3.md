@@ -1,8 +1,10 @@
 ---
-title:
+title: Clean up the buffer implementation
 ---
 
 {% include /shared/development/warning.md %}
+
+# Clean up the buffer implementation
 
 The public interface should consist of
 

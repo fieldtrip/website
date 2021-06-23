@@ -1,14 +1,14 @@
 ---
-title:
+title: Clean up the code of sourceanalysis, sourcedescriptives, freqdescriptives using checkdata
 ---
 
 {% include /shared/development/warning.md %}
 
-Goal: clean up code of sourceanalysis, sourcedescriptives, freqdescriptives.
+# Clean up the code of sourceanalysis, sourcedescriptives, freqdescriptives using checkdata
 
 - Ad sourceanalysis:
 
-bookkeeping of the data is quite complicated. Identify commonalities and differences between different inputs (time-domain data vs. frequency-domain data), and the different methods (pcc vs. dics initially, also lcmv eventually). For this, a more consistent representation of the data from the input side is required. Candidate function to take care of this will be checkdata. After calling checkdata, the input data will be converted into something containing a covariance/csd, and potentially trial-data (timelocked or fourier coefficients). This will make prepare_freq_matrices superfluous eventually.
+the bookkeeping of the data is quite complicated. Identify commonalities and differences between different inputs (time-domain data vs. frequency-domain data), and the different methods (pcc vs. dics initially, also lcmv eventually). For this, a more consistent representation of the data from the input side is required. Candidate function to take care of this will be checkdata. After calling checkdata, the input data will be converted into something containing a covariance/csd, and potentially trial-data (timelocked or fourier coefficients). This will make prepare_freq_matrices superfluous eventually.
 
 - Ad sourceanalysis:
 
@@ -26,7 +26,7 @@ identify commonalities in required functionality. With more consistent data repr
 
 if necessary, sacrifice backward compatibility but try to limit this as much as possible.
 
-Follow up jan 29 2010
+Follow up Jan 29 2010
 
 Detailed plan for tackling the cleaning up of the source-structure format will be as follows:
 

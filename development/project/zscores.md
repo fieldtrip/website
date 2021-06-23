@@ -1,10 +1,10 @@
 ---
-title: What is the best way to homogenize data?
+title: What is the best way to homogenize data using z-scores?
 ---
 
 {% include /shared/development/warning.md %}
 
-# What is the best way to homogenize data?
+# What is the best way to homogenize data using z-scores?
 
 Z-scores are being used as a means to 'normalize' the data before doing over-subjects statistics. However, there are many ways of implementing this and at the moment there is not much consensus what the best method is.
 
@@ -18,8 +18,6 @@ Z-scores are being used as a means to 'normalize' the data before doing over-sub
 2.  which problems should be solved / why does one need to 'normalize' in the first place?
 3.  what are the possible solutions?
 4.  what are the underlying assumptions?
-
----
 
 ##### 1. Goal
 
@@ -72,7 +70,6 @@ The choice of the 'best' solution will (probably) depend on the characteristics 
 1.  develop realistic effect and noise models
 2.  find optimal noise and effect range
 
----
 
 ##### 1. Effect and noise model
 
@@ -105,7 +102,7 @@ This way we can vary the size/range of effect and noise, have multiple trials an
 
 We need a range of effect and noise size where at the edges the effect is always found (effect high, noise low) resp. never found (effect low, noise high). In the range in between, it will sometimes turn up, sometimes not. If we repeat the statistical test several times (using the chan dim) and average the results we have a nice measure of the statistical power. Now we can go to the next step and repeat this using the different homogenization methods and see whether they improve the statistical power.
 
-\*To illustrate (using additive effect model)
+To illustrate (using additive effect model):
 
 The results of using 1 repetition of the stats test (i.e., 1 channel). The left figure shows 'stat', right shows 'mask'. On the x-axis is noise level, on y-axis effect level, the colouring codes the stat (t values) resp. mask (1=sig effect, 0=no sig effect).
 
@@ -117,7 +114,7 @@ The results of using 500 repetitions of the stats test. Since the noise is rando
 {% include image src="/assets/img/development/project/zscores/stat_noise_4_10_effect_1_4_n500.png" width="500" %}
 {% include image src="/assets/img/development/project/zscores/mask_noise_4_10_effect_1_4_n500.png" width="500" %}
 
-\*To illustrate (using multiplicative effect model)
+To illustrate (using multiplicative effect model):
 
 The results of using 500 repetitions of the stats test. The left figure shows 'stat', right shows 'mask'.
 
