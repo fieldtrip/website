@@ -9,11 +9,11 @@ This section lists information aimed at developers of FieldTrip and collaboratin
 
 ## Active projects
 
-- [Implement a common distributed computing backend](/development/project/distributed)
-- [Import and export data to and from MNE-Python](/development/project/integrate_with_mne)
 - [Improve artifact handling](/development/project/artifacts)
 - [Improve integration with other toolboxes](/development/project/integration)
 - [Improve regression testing](/development/project/regression)
+- [Implement a common distributed computing backend](/development/project/distributed)
+- [Import and export data to and from MNE-Python](/development/project/integrate_with_mne)
 
 ## Stale projects
 
