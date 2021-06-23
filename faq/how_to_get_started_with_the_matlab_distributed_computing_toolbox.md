@@ -44,13 +44,13 @@ Alternatively you can use the [batch](https://www.mathworks.com/help/distcomp/ba
 
 The batch function works similar to the standard MATLAB cellfun function, and thereby to the FieldTrip **[qsubcellfun](https://github.com/fieldtrip/fieldtrip/blob/release/qsubcellfun.m)** and **[peercellfun](https://github.com/fieldtrip/fieldtrip/blob/release/peer/peercellfun.m)** functions.
 
-A third approach that is available in the distributed computing toolbox is to use the spmd construct. Given the same definition of the dataset as a cell-array with three strings as above, this would look like
+A third approach that is available in the distributed computing toolbox is to use the [spmd](https://nl.mathworks.com/help/parallel-computing/spmd.html) construct. Given the same definition of the dataset as a cell-array with three strings as above, this would look like
 
     matlabpool local 3
     spmd 3
-    cfg = [];
-    cfg.dataset = dataset{labindex};
-    data{labindex} = ft_preprocessing(cfg);
+      cfg = [];
+      cfg.dataset = dataset{labindex};
+      data{labindex} = ft_preprocessing(cfg);
     end
 
 The labindex variable is automatically replaced by the number of the worker. Note that this only works if your matlabpool is greater than or equal to the number of jobs.
