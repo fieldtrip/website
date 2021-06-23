@@ -1,3 +1,3 @@
-- name:  Example script for leadfield based on FEM headmodel
-  link:  /development/project/example_fem
+- name:  Compute EEG leadfields using a FEM headmodel
+  link:  /example/fem
 

@@ -1,6 +1,3 @@
-- name:  Example script for leadfield based on FEM headmodel
-  link:  /development/project/example_fem
-
 - name:  Align EEG electrode positions to BEM headmodel
   link:  /example/align_eeg_electrode_positions_to_bem_headmodel
 
@@ -15,6 +12,9 @@
 
 - name:  Create MNI-aligned grids in individual head-space
   link:  /example/create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_mni_space
+
+- name:  Compute EEG leadfields using a FEM headmodel
+  link:  /example/fem
 
 - name:  Make leadfields using different headmodels
   link:  /example/make_leadfields_using_different_headmodels
