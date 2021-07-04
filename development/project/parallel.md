@@ -36,7 +36,7 @@ If a researcher has a single do-single-subject-analysis script, it is not too ha
 
 ## Parallel computing in each high-level function
 
-Rather than doing the parallelization at the level of the users' scripts (the top red arrow in the figure above), an alternativs is to parallelize closer to the actual implementation of the algorithm. In this case it would be below the level of bookkeeping by the user, and preferably also below the level of the (shared) bookeeping with regard to the data handling. The batch here would e.g. consist of doing a FFT for every trial, computing some feature for each channel, or scalling a section of the brain (rather than the whole brain).
+Rather than doing the parallelization at the level of the users' scripts (the top red arrow in the figure above), an alternativs is to parallelize closer to the actual implementation of the algorithm just below the FieldTrip function interface (the bottom red arrow in the figure above). In this case it would be below the level of bookkeeping by the user in his/her script, and preferably also just below the level of the (shared) bookeeping with regard to the data structure handling. The batch here would e.g. consist of doing a FFT for every trial, computing some feature for each channel, or scanning a section of the brain (rather than the whole brain).
 
 Possibly this could be implemented something like this:
 
