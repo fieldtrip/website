@@ -408,10 +408,10 @@ As you are well aware, however, the decision we make using the statistical test 
 
 Once the design matrix is specified and the test statistic is defined we only need to decide how we are going to test our hypothesis. Of course the statistical methods one will use are somewhat dependent on the design matrix you specified but let's just summarize them all here:
 
-- [ft_statistics_analytic](https://github.com/fieldtrip/fieldtrip/blob/release/ft_statistics_analytic)
-- [ft_statistics_crossvalidate](https://github.com/fieldtrip/fieldtrip/blob/release/ft_statistics_crossvalidate)
-- [ft_statistics_montecarlo](https://github.com/fieldtrip/fieldtrip/blob/release/ft_statistics_montecarlo)
-- [ft_statistics_stats](https://github.com/fieldtrip/fieldtrip/blob/release/ft_statistics_stats)
+- [ft_statistics_analytic](https://github.com/fieldtrip/fieldtrip/blob/release/ft_statistics_analytic.m)
+- [ft_statistics_crossvalidate](https://github.com/fieldtrip/fieldtrip/blob/release/ft_statistics_crossvalidate.m)
+- [ft_statistics_montecarlo](https://github.com/fieldtrip/fieldtrip/blob/release/ft_statistics_montecarlo.m)
+- [ft_statistics_stats](https://github.com/fieldtrip/fieldtrip/blob/release/ft_statistics_stats.m)
 
 #### Calling ft_freqanalysis
 
