@@ -25,7 +25,7 @@ The developers of SPM have a formal collaboration with the developers of FieldTr
 
 Fieldtrip mainly uses SPM software for operations on volume data (e.g. MRI). Usual pipelines consist of high-level FieldTrip functions calling lower-level FieldTrip functions using SPM tools to perform specific operations on volume (e.g. normalise, smooth or realign). The following figure shows main FieldTrip functions that uses SPM:
 
-{% include image src="/assets/img/getting_started/spm/SPM_fieldTrip.png" %}
+![FieldTrip-SPM pipeline](/assets/img/getting_started/spm/SPM_fieldTrip.png)
 
 The flexibility of FieldTrip can be complemented by the SPM GUI tools that allow rapid development of simple GUI's and also SPM12's new powerful batching system. Within this framework the power users in a lab can easily and rapidly develop specialized analysis tools with GUI that can then also be used by non-proficient MATLAB users through ```spm eeg``` command. Some examples of such tools are available for [GLM](https://www.fieldtriptoolbox.org/workshop/meg-uk-2015/spm_stats/), [source analysis](https://www.fieldtriptoolbox.org/workshop/meg-uk-2015/spm_source/) and [DCM](https://www.fieldtriptoolbox.org/workshop/meg-uk-2015/dcm_tutorial/).
 
