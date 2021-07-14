@@ -286,7 +286,13 @@ end
 
 {% include image src="/assets/img/example/samplesize/Fig5.png" width="400" %}
 
-The functions can also
+
+**The two functions can also be used to estimate sample size for 2-by-N (N>=2) interaction effect**; however, the first factor must be a within-subjects factor, and the second can be a within- or between-subjects factor. 
+
+Take a 2×3 design for example, the first and second factors can be respectively denoted A and B, and the six cells in this design can be denoted A1B1, A2B1, A1B2, A2B2, A1B3 and A2B3. For each subject, we can get a difference data between A1 and A2, denoted as diff11_21, diff12_22, and diff13_23. Now testing an interaction effect between A and B can be treated as comparing diff11_21, diff12_22, and diff13_23, which can be done by a one-way ANOVA (using ft_statfun_depsamplesFmultivariate if B is a within-subjects factor, or ft_statfun_indepsamplesF if B is a between-subjects factor). If B has only two levels, simply use a t-test to compare the two differences (i.e., diff11_21 and diff12_22). Uing this approach, we can test an interaction effect using cluster-based permutation test. See [this page]( https://www.fieldtriptoolbox.org/faq/how_can_i_test_an_interaction_effect_using_cluster-based_permutation_tests/) for more details.
+
+Thus, we can treat two-way ANOVA as comparing differences by using t-tests or one-way ANOVAs. As to the configuration of the functions, simply enter the means, standard deviations, and correlations of these differences you expect for your data respectively into the cfg.mu, cfg.sd, and cfg.cor fields in the demo m-files. 
+
 
 ## See also
 
