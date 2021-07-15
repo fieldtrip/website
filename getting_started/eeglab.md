@@ -27,7 +27,10 @@ The alternative to **eeglab2fieldtrip** is to save the data to disk and use the 
 
 ## Converting data between EEGLAB and FieldTrip
 
-Both EEGLAB and FieldTrip work with data structures in MATLAB memory. The design philosophy in EEGLAB is to gather all data from one subject in a single "EEG" structure, and all data from a group of subjects in a "STUDY" structure. This is different from the design philosophy of FieldTrip, which does not gather all results in a single structure, but keeps the results from different analyses in [different structures](/faq/how_are_the_various_data_structures_defined).
+Both EEGLAB and FieldTrip work with data structures in MATLAB memory. The design philosophy in EEGLAB is to gather all data from one subject in a single "EEG" structure, and all data from a group of subjects in a "STUDY" structure. This is different from the design philosophy of FieldTrip, which does not gather all results in a single structure, but keeps the results from different analyses in [different structures](/faq/how_are_the_various_data_structures_defined). The following example shows this philosophycal difference:
+
+![FieldTrip-EEGLAB philosophy](/assets/img/getting_started/eeglab/eeglab_FieldTrip_philosophy.png)
+
 
 Together with the EEGLAB developers we maintain two functions for converting the data back and forth: **fieldtrip2eeglab** and **eeglab2fieldtrip**.
 
