@@ -189,7 +189,7 @@ cfg.n_start     = 10;      % sample size to start with, should be <=10
 
 % parameters for normal distribution from which the simulated data are sampled
 cfg.ExpDesign   = 'within-subjects';  % 'within-subjects' or 'between-subjects'
-cfg.mu          = [4 3];   % mean of each condition. Can have two or more conditions, the function will automatically select
+cfg.mu          = [5 3];   % mean of each condition. Can have two or more conditions, the function will automatically select
                            % a t-test for two conditions, and a F-test for three or more conditions for the cluster-based permutation test
 cfg.sd          = [2 2];   % standard deviation of each condition
 cfg.cor         = 0.7;     % minimum correlation between paried samples, ONLY needed for a within-subject design
@@ -231,9 +231,9 @@ stat_cfg.avgoverfreq      = 'no';
 stat_cfg.method           = 'montecarlo';
 stat_cfg.correctm         = 'cluster';
 stat_cfg.clusterstatistic = 'maxsum';   % 'maxsum' or 'maxsize'
-stat_cfg.clustertail      = 1;          % 0 for t-test (two tails); 1 for F test (right tail)
+stat_cfg.clustertail      = 0;          % 0 for t-test (two tails); 1 for F test (right tail)
 stat_cfg.clusteralpha     = 0.05;
-stat_cfg.tail             = 1;          % 0 for t-test (two tails); 1 for F test (right tail)
+stat_cfg.tail             = 0;          % 0 for t-test (two tails); 1 for F test (right tail)
 stat_cfg.alpha            = 0.05; 
 stat_cfg.numrandomization = 500;    % number of randomizations, should be >= 500 
 
