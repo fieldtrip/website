@@ -13,7 +13,7 @@ This example is contributed by [Dr. Cheng Wang](https://www.researchgate.net/pro
 
 It is recommended and sometimes even required to provide justification for sample size prior to starting a study and when reporting about it [(Clayson et al., 2019)](https://onlinelibrary.wiley.com/doi/full/10.1111/psyp.13437). Many researchers use G\*Power to estimate the sample size required for their studies. However, although very useful and popular, this software is not suitable for multivariate data or for non-parametric tests. For EEG and MEG we often use a cluster-based permutation test, which is a non-parametric test that exploits the multivariate structure in the data.
 
-Here, we demonstrate two easy-to-use MATLAB functions that use simulations to estimate the sample size for cluster-based permutation tests. These functions can be used for EEG/MEG research involving **t-test** between two conditions, **one-way ANOVA** with three or more conditions, or **2×N interactions**. The experiment can be of a with-subjects or between-subjects design. The functions were written for, and first used in [Wang and Zhang (2021)](https://doi.org/10.1111/psyp.13775). Please cite this paper where appropriate.
+Here, we demonstrate two easy-to-use MATLAB functions that use simulations to estimate the sample size for cluster-based permutation tests. These functions can be used for EEG/MEG research involving **t-test** between two conditions, **one-way ANOVA** with three or more conditions, or **2×N interactions**. The experiment can be of a with-subjects, between-subjects, or mixed design. The functions were written for, and first used in [Wang and Zhang (2021)](https://doi.org/10.1111/psyp.13775). Please cite this paper where appropriate.
 
 From this [OSF project](https://osf.io/rmqhc/files/), you can download the functions and the corresponding demo files. The MATLAB functions are stored in the _functions_ folder.
 
@@ -185,7 +185,7 @@ cfg = [];
 cfg.alpha_level = 0.05;    % desired alpha-level
 cfg.power_level = 0.8;     % desired power
 cfg.num_sims    = 500;     % number of randomizations, should be >= 500 
-cfg.n_start     = 13;      % sample size to start with, should be <=10
+cfg.n_start     = 10;      % sample size to start with, should be <=10
 
 % parameters for normal distribution from which the simulated data are sampled
 cfg.ExpDesign   = 'within-subjects';  % 'within-subjects' or 'between-subjects'
