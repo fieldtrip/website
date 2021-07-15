@@ -277,7 +277,7 @@ lim = round(max(abs(pow(:))),1);
 nrow = ceil(sqrt(length(cfg.mu)));
 for ci=1:length(cfg.mu)
     subplot(nrow,nrow,ci)
-    contourf(cfg.time,cfg.freq,squeeze(pow(ci,:,:)),40,'linecolor','none')  % condition A
+    contourf(cfg.time,cfg.freq,squeeze(pow(ci,:,:)),40,'linecolor','none')  
     set(gca,'clim',[-lim lim]); colorbar; colormap(jet); 
     xlabel('Time (ms)'); ylabel('Frequency (Hz)')
     colorbar('YTick',[-lim 0 lim]); 
