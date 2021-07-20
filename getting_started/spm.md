@@ -17,17 +17,39 @@ tags: [spm]
 
 - Dynamic Causal Modelling (DCM)- a spatiotemporal network model to estimate effective connectivity in a network of sources. It is an easy to use, but nevertheless very sophisticated tool which makes it possible to model brain's electrical activity with biologically plausible neuronal models, make inferences about physiologically meaningful parameters and compare different models for the same data. DCM is presently available for evoked responses (ERP), steady state responses (a.k.a. power spectra and cross-spectral densities) and induced responses (a.k.a. event-related spectral perturbations, a.k.a. time-frequency images).
 
+The developers of SPM have a formal collaboration with the developers of FieldTrip on many analysis issues. For example, SPM and FieldTrip share routines for converting data to MATLAB, forward modeling for M/EEG source reconstruction and the SPM12 distribution contains a version of FieldTrip so that you can combine FieldTrip and SPM functions in your custom scripts. SPM and FieldTrip complement each other well as SPM is geared toward very specific analysis tools whereas FieldTrip is a more general repository of different methods that can be put together in flexible ways to perform a variety of analyses.
+
 [Reference paper](https://www.hindawi.com/journals/cin/2011/852961/), [courses](https://www.fil.ion.ucl.ac.uk/spm/course/video/) and [tutorials](https://jsheunis.github.io/2018-06-28-spm12-matlab-scripting-tutorial-1/) are also available
 
 
-## FieldTrip <-> SPM12 Relation
-The developers of SPM have a formal collaboration with the developers of FieldTrip on many analysis issues. For example, SPM and FieldTrip share routines for converting data to MATLAB, forward modeling for M/EEG source reconstruction and the SPM12 distribution contains a version of FieldTrip so that you can combine FieldTrip and SPM functions in your custom scripts. SPM and FieldTrip complement each other well as SPM is geared toward very specific analysis tools whereas FieldTrip is a more general repository of different methods that can be put together in flexible ways to perform a variety of analyses.
+## How FieldTrip uses SPM?
 
-Fieldtrip mainly uses SPM software for operations on volume data (e.g. MRI). Usual pipelines consist of high-level FieldTrip functions calling lower-level FieldTrip functions using SPM tools to perform specific operations on volume (e.g. normalise, smooth or realign). The following figure shows main FieldTrip functions that uses SPM:
+As SPM expertise is mainly oriented to volume data (MRI, fMRI), FieldTrip integrates some SPM functions to perform specific operations on 3D structures such as normalising, smoothing or realigning. The following figure shows main FieldTrip functions using SPM:
 
-![FieldTrip-SPM pipeline](/assets/img/getting_started/spm/SPM_fieldTrip.png)
+![How FieldTrip uses SPM](/assets/img/getting_started/spm/FieldTrip_uses_SPM.png)
 
-The flexibility of FieldTrip can be complemented by the SPM GUI tools that allow rapid development of simple GUI's and also SPM12's new powerful batching system. Within this framework the power users in a lab can easily and rapidly develop specialized analysis tools with GUI that can then also be used by non-proficient MATLAB users through ```spm eeg``` command. Some examples of such tools are available for [GLM](https://www.fieldtriptoolbox.org/workshop/meg-uk-2015/spm_stats/), [source analysis](https://www.fieldtriptoolbox.org/workshop/meg-uk-2015/spm_source/) and [DCM](https://www.fieldtriptoolbox.org/workshop/meg-uk-2015/dcm_tutorial/).
+
+## How SPM uses FieldTrip?
+
+SPM integrates some FieldTrip functions to perform operations on EEG data such as reading, format checking, plotting, preprocessing or frequency analysis. The following figure illustrates some SPM functions using FieldTrip: 
+
+![How SPM uses FieldTrip](/assets/img/getting_started/spm/SPM_uses_FieldTrip.png)
+
+## Complementary use of both toolboxes
+
+Users can take advantage of both SPM and FieldTrip toolboxes to run a wider range of analyses on an experiment. Let's have a look at the specific tools available within each of them:
+
+- FieldTrip offers highly customisable analyses through scripting, while SPM allows non-proficient MATLAB users to run their analyses through GUI tools. The graphical interface is simply called through ```spm xxxx``` where the xxxx corresponds to the data type to be analysed (e.g. ```spm eeg```).
+
+- Statistical analysis can be performed trough various custom statfun within FieldTrip (cf. [demo](https://www.fieldtriptoolbox.org/workshop/meg-uk-2015/fieldtrip-stats-demo/)), while SPM uses general linear model (GLM) consisting of a 2-level analysis with 1st level corresponding to a subject-by-subject regression as explained in [this tutorial](https://www.youtube.com/watch?v=KdB9F8cf0L0&list=PLx_IWc-RN82uKTWzgho2ARVGan8TNlb9d&index=12) and the 2nd level corresponding to group analysis (cf. [this tutorial](https://www.youtube.com/watch?v=_7jzkV7oUXg&list=PLx_IWc-RN82uKTWzgho2ARVGan8TNlb9d&index=13)). Another example of SPM sensor-level stats can be found [here](https://www.fieldtriptoolbox.org/workshop/meg-uk-2015/spm_stats/).
+
+- FieldTrip source reconstruction tool includes multiple methods such as linear constrained minimum variance beamformer (LCMV), dynamic imaging of coherent sources (DICS), minimum norm estimation (MNE), etc. as described in [ft_sourceanalysis](https://www.fieldtriptoolbox.org/reference/ft_sourceanalysis/) (cf. [demo](https://www.fieldtriptoolbox.org/workshop/meg-uk-2015/fieldtrip-beamformer-demo/)), while SPM focuses on Bayesian 3D imaging source reconstruction as shown in [this example](https://www.fieldtriptoolbox.org/workshop/meg-uk-2015/spm_source/).
+
+- Connectivity analysis can be done using various methods. FieldTrip leaves the user the opportunity to choose between various methods (coherence, correlation, cross-spectral density, phase-locking value, Granger causality), as described in [ft_connectivityanalysis](https://www.fieldtriptoolbox.org/reference/ft_connectivityanalysis/) (cf. [demo](https://www.fieldtriptoolbox.org/workshop/meg-uk-2015/fieldtrip-connectivity-demo/)), while SPM focuses on dynamic causal modelling (DCM) offering a very sophisticated analysis as shown in [this example](https://www.fieldtriptoolbox.org/workshop/meg-uk-2015/dcm_tutorial/).
+
+In summary, FieldTrip leaves more freedom to the user with highly customisable tools, while SPM tools are very specific to achieve maximum efficiency. This complementarity is illustrated in the following figure:
+
+![FieldTrip-SPM complmentarity](/assets/img/getting_started/spm/FieldTrip_SPM_complement.png)
 
 ## Practical issues
 
