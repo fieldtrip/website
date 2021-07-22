@@ -22,14 +22,14 @@ The developers of SPM have a formal collaboration with the developers of FieldTr
 [Reference paper](https://www.hindawi.com/journals/cin/2011/852961/), [courses](https://www.fil.ion.ucl.ac.uk/spm/course/video/) and [tutorials](https://jsheunis.github.io/2018-06-28-spm12-matlab-scripting-tutorial-1/) are also available
 
 
-## How FieldTrip uses SPM?
+## How does FieldTrip use SPM?
 
-As SPM expertise is mainly oriented to volume data (MRI, fMRI), FieldTrip integrates some SPM functions to perform specific operations on 3D structures such as normalising, smoothing or realigning. The following figure shows main FieldTrip functions using SPM:
+As SPM's core expertise is mainly oriented to volumetric data (MRI, fMRI), FieldTrip integrates some SPM functions to perform specific operations on 3D structural images such as spatial normalisation, tissue segmentation, smoothing and realignment. The following figure shows main FieldTrip functions using SPM:
 
 ![How FieldTrip uses SPM](/assets/img/getting_started/spm/FieldTrip_uses_SPM.png)
 
 
-## How SPM uses FieldTrip?
+## How does SPM use FieldTrip?
 
 SPM integrates some FieldTrip functions to perform operations on EEG data such as reading, format checking, plotting, preprocessing or frequency analysis. The following figure illustrates some SPM functions using FieldTrip: 
 
@@ -37,7 +37,7 @@ SPM integrates some FieldTrip functions to perform operations on EEG data such a
 
 ## Complementary use of both toolboxes
 
-Users can take advantage of both SPM and FieldTrip toolboxes to run a wider range of analyses on an experiment. Let's have a look at the specific tools available within each of them:
+Users can take advantage of both SPM and FieldTrip toolboxes to run a wider range of analyses on a dataset. Let's have a look at the specific tools available within each of them:
 
 - FieldTrip offers highly customisable analyses through scripting, while SPM allows non-proficient MATLAB users to run their analyses through GUI tools. The graphical interface is simply called through ```spm xxxx``` where the xxxx corresponds to the data type to be analysed (e.g. ```spm eeg```).
 
