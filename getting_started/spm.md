@@ -22,30 +22,45 @@ The developers of SPM have a formal collaboration with the developers of FieldTr
 [Reference paper](https://www.hindawi.com/journals/cin/2011/852961/), [courses](https://www.fil.ion.ucl.ac.uk/spm/course/video/) and [tutorials](https://jsheunis.github.io/2018-06-28-spm12-matlab-scripting-tutorial-1/) are also available
 
 
-## How FieldTrip uses SPM?
+## How does FieldTrip use SPM?
 
-As SPM expertise is mainly oriented to volume data (MRI, fMRI), FieldTrip integrates some SPM functions to perform specific operations on 3D structures such as normalising, smoothing or realigning. The following figure shows main FieldTrip functions using SPM:
+As SPM expertise is mainly oriented to 3D volumetric data processing (MRI, fMRI), FieldTrip integrates SPM functionalities to deal with two main operations:
+1. Creation of the geometries needed for accurate forward modelling (e.g. spm_create_vol, spm_segment)
+2. Spatial normalisation of volumetric images for efficient group statistics at the source level (e.g. spm_normalise, spm_deformations)
+The following figure shows main FieldTrip functions using SPM:
 
 ![How FieldTrip uses SPM](/assets/img/getting_started/spm/FieldTrip_uses_SPM.png)
 
 
-## How SPM uses FieldTrip?
+## How does SPM use FieldTrip?
 
-SPM integrates some FieldTrip functions to perform operations on EEG data such as reading, format checking, plotting, preprocessing or frequency analysis. The following figure illustrates some SPM functions using FieldTrip: 
+SPM integrates some FieldTrip functions to perform operations on M/EEG data such as reading, format checking, plotting, preprocessing or frequency analysis. Specifically, SPM needs FieldTrip to create forward models (ft_compute_leadfield, ft_prepare_vol_sens).
+The following figure illustrates some SPM functions using FieldTrip: 
 
 ![How SPM uses FieldTrip](/assets/img/getting_started/spm/SPM_uses_FieldTrip.png)
 
+
 ## Complementary use of both toolboxes
 
-Users can take advantage of both SPM and FieldTrip toolboxes to run a wider range of analyses on an experiment. Let's have a look at the specific tools available within each of them:
+Users can take advantage of both SPM and FieldTrip toolboxes to run a wider range of analyses on an experiment. To convert data from SPM object to FieldTrip structure, the user can use ```spm2fieldtrip``` and ```fieldtrip2spm``` functions as shown in this example:
+```
+ft_hastoolbox('spm8',1);
+D 		= spm_eeg_load(spm_filename);
+data 	= spm2fieldtrip(D);
+```
+
+Let's have a look at the specific tools available within each of them:
 
 - FieldTrip offers highly customisable analyses through scripting, while SPM allows non-proficient MATLAB users to run their analyses through GUI tools. The graphical interface is simply called through ```spm xxxx``` where the xxxx corresponds to the data type to be analysed (e.g. ```spm eeg```).
 
-- Statistical analysis can be performed trough various custom statfun within FieldTrip (cf. [demo](https://www.fieldtriptoolbox.org/workshop/meg-uk-2015/fieldtrip-stats-demo/)), while SPM uses general linear model (GLM) consisting of a 2-level analysis with 1st level corresponding to a subject-by-subject regression as explained in [this tutorial](https://www.youtube.com/watch?v=KdB9F8cf0L0&list=PLx_IWc-RN82uKTWzgho2ARVGan8TNlb9d&index=12) and the 2nd level corresponding to group analysis (cf. [this tutorial](https://www.youtube.com/watch?v=_7jzkV7oUXg&list=PLx_IWc-RN82uKTWzgho2ARVGan8TNlb9d&index=13)). Another example of SPM sensor-level stats can be found [here](https://www.fieldtriptoolbox.org/workshop/meg-uk-2015/spm_stats/).
+- Statistical analysis in FieldTrip can be performed through various statistical tests, either parametric (T/F-statistic, ANOVA, etc.), non-parametric (Montecarlo) (cf. [demo](https://www.fieldtriptoolbox.org/workshop/meg-uk-2015/fieldtrip-stats-demo/)). The user also have the opportunity to design his/her own custom statfun implementing multiple tests. On the other hand, SPM uses general linear model (GLM) computing parametric statistics (T or F tests) based on specific contrasts following a 2-level approach: 1st level = subject-by-subject regression (cf. [tutorial](https://www.youtube.com/watch?v=KdB9F8cf0L0&list=PLx_IWc-RN82uKTWzgho2ARVGan8TNlb9d&index=12)); 2nd level = group analysis (cf. [tutorial](https://www.youtube.com/watch?v=_7jzkV7oUXg&list=PLx_IWc-RN82uKTWzgho2ARVGan8TNlb9d&index=13)).  Another example of SPM sensor-level stats can be found [here](https://www.fieldtriptoolbox.org/workshop/meg-uk-2015/spm_stats/).
+On top of that, the way both toolboxes deal with the multiple comparison problem is also different. FieldTrip implements clustering method, while SPM exploits the random field theory ([RFT](https://www.fil.ion.ucl.ac.uk/spm/doc/books/hbf2/pdfs/Ch14.pdf)).
 
-- FieldTrip source reconstruction tool includes multiple methods such as linear constrained minimum variance beamformer (LCMV), dynamic imaging of coherent sources (DICS), minimum norm estimation (MNE), etc. as described in [ft_sourceanalysis](https://www.fieldtriptoolbox.org/reference/ft_sourceanalysis/) (cf. [demo](https://www.fieldtriptoolbox.org/workshop/meg-uk-2015/fieldtrip-beamformer-demo/)), while SPM focuses on Bayesian 3D imaging source reconstruction as shown in [this example](https://www.fieldtriptoolbox.org/workshop/meg-uk-2015/spm_source/).
+- FieldTrip source reconstruction tool includes multiple methods such as [dipole fitting](https://www.fieldtriptoolbox.org/workshop/natmeg/dipolefitting/), linear constrained minimum variance beamformer ([LCMV](https://www.fieldtriptoolbox.org/tutorial/beamformer_lcmv/)), dynamic imaging of coherent sources ([DICS](https://www.fieldtriptoolbox.org/tutorial/beamformer/)), minimum norm estimation ([MNE](https://www.fieldtriptoolbox.org/tutorial/minimumnormestimate/)), etc. as described in [ft_sourceanalysis](https://www.fieldtriptoolbox.org/reference/ft_sourceanalysis/), while SPM focuses on [Bayesian 3D imaging source reconstruction](https://www.fieldtriptoolbox.org/workshop/meg-uk-2015/spm_source/) or variational Bayesian dipole fitting using ```spm_eeg_dipole_waveforms```.
 
 - Connectivity analysis can be done using various methods. FieldTrip leaves the user the opportunity to choose between various methods (coherence, correlation, cross-spectral density, phase-locking value, Granger causality), as described in [ft_connectivityanalysis](https://www.fieldtriptoolbox.org/reference/ft_connectivityanalysis/) (cf. [demo](https://www.fieldtriptoolbox.org/workshop/meg-uk-2015/fieldtrip-connectivity-demo/)), while SPM focuses on dynamic causal modelling (DCM) offering a very sophisticated analysis as shown in [this example](https://www.fieldtriptoolbox.org/workshop/meg-uk-2015/dcm_tutorial/).
+
+- Spectral analysis provided by FieldTrip offers several way to estimate the spectrum of the signal, including fast Fourier transform using multitaper, frequential convolution, wavelet transform and multivariate autoregressive model as described in [ft_freqanalysis](https://www.fieldtriptoolbox.org/reference/ft_freqanalysis/) (cf. [demo](https://www.fieldtriptoolbox.org/workshop/oslo2019/timefrequency/)). SPM mainly uses FieldTrip functions ```ft_specest_xxxx``` to run spectral analysis except for Morlet wavelet transform that is computed through ```spm_eeg_morlet``` function.
 
 In summary, FieldTrip leaves more freedom to the user with highly customisable tools, while SPM tools are very specific to achieve maximum efficiency. This complementarity is illustrated in the following figure:
 
