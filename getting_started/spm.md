@@ -45,8 +45,8 @@ The following figure illustrates some SPM functions using FieldTrip:
 Users can take advantage of both SPM and FieldTrip toolboxes to run a wider range of analyses on an experiment. To convert data from SPM object to FieldTrip structure, the user can use ```spm2fieldtrip``` and ```fieldtrip2spm``` functions as shown in this example:
 ```
 ft_hastoolbox('spm8',1);
-D 		= spm_eeg_load(spm_filename);
-data 	= spm2fieldtrip(D);
+D = spm_eeg_load(spm_filename);
+data = spm2fieldtrip(D);
 ```
 
 Let's have a look at the specific tools available within each of them:
