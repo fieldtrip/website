@@ -24,7 +24,7 @@ The developers of SPM have a formal collaboration with the developers of FieldTr
 
 ## How does FieldTrip use SPM?
 
-As SPM expertise is mainly oriented to 3D volumetric data processing (MRI, fMRI), FieldTrip integrates SPM functionalities to deal with two main operations:
+As SPM's core expertise is mainly oriented to volumetric data processing (MRI, fMRI), FieldTrip integrates SPM functionalities to deal with two main operations:
 1. Creation of the geometries needed for accurate forward modelling (e.g. spm_create_vol, spm_segment)
 2. Spatial normalisation of volumetric images for efficient group statistics at the source level (e.g. spm_normalise, spm_deformations)
 The following figure shows main FieldTrip functions using SPM:
@@ -35,7 +35,7 @@ The following figure shows main FieldTrip functions using SPM:
 ## How does SPM use FieldTrip?
 
 SPM integrates some FieldTrip functions to perform operations on M/EEG data such as reading, format checking, plotting, preprocessing or frequency analysis. Specifically, SPM needs FieldTrip to create forward models (ft_compute_leadfield, ft_prepare_vol_sens).
-The following figure illustrates some SPM functions using FieldTrip: 
+The following figure illustrates some SPM functions using FieldTrip:
 
 ![How SPM uses FieldTrip](/assets/img/getting_started/spm/SPM_uses_FieldTrip.png)
 
