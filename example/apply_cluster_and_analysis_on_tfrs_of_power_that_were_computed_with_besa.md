@@ -1,9 +1,9 @@
 ---
-title: Apply clusterrandanalysis on TFRs of power that were computed with BESA
+title: Apply cluster and analysis on TFRs of power that were computed with BESA
 tags: [example, statistics, freq, cluster]
 ---
 
-# Apply clusterrandanalysis on TFRs of power that were computed with BESA
+# Apply cluster and analysis on TFRs of power that were computed with BESA
 
     % this is the list of BESA data files in one condition
     filename_ld = {
