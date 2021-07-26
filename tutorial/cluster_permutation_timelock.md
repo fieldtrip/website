@@ -25,7 +25,7 @@ This tutorial contains hands-on material that we use for the [MEG/EEG toolkit co
 
 ## Procedure
 
-In this tutorial we will consider a **between-trials** experiment, in which we analye the data of a single subject. The statistical analysis for this experiment we perform both on _axial_ and _planar_ ERFs. The steps we perform are as follow
+In this tutorial we will consider a **between-trials** experiment, in which we analyse the data of a single subject. The statistical analysis for this experiment we perform both on _axial_ and _planar_ ERFs. The steps we perform are as follow
 
 - Preprocessing and time-locked analysis with the **[ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_definetrial.m)**, **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** and **[ft_timelockanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockanalysis.m)** functions
 - (Calculation of the planar gradient with the **[ft_megplanar](https://github.com/fieldtrip/fieldtrip/blob/release/ft_megplanar.m)** and **[ft_combineplanar](https://github.com/fieldtrip/fieldtrip/blob/release/ft_combineplanar.m)** functions)
