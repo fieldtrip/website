@@ -3,7 +3,7 @@ title: Apply non-parametric statistics with clustering on TFRs of power that wer
 tags: [example, statistics, freq, cluster]
 ---
 
-# Apply cluster and analysis on TFRs of power that were computed with BESA
+# Apply non-parametric statistics with clustering on TFRs of power that were computed with BESA
 
     % this is the list of BESA data files in one condition
     filename_ld = {
