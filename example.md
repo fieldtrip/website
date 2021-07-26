@@ -62,7 +62,7 @@ See also the [tutorials](/tutorial) and [frequently asked questions](/faq).
 
 ### Statistical analysis
 
-- [Apply clusterrandanalysis on TFRs of power that were computed with BESA](/example/apply_clusterrandanalysis_on_tfrs_of_power_that_were_computed_with_besa)
+- [Apply non-parametric statistics with clustering on TFRs of power that were computed with BESA](/example/apply_clusterrandanalysis_on_tfrs_of_power_that_were_computed_with_besa)
 - [Computing and reporting the effect size](/example/effectsize)
 - [Defining electrodes as neighbours for cluster-level statistics](/example/neighbours)
 - [Source statistics](/example/source_statistics)
