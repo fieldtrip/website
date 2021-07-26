@@ -1,5 +1,5 @@
 ---
-title: Apply cluster and analysis on TFRs of power that were computed with BESA
+title: Apply non-parametric statistics with clustering on TFRs of power that were computed with BESA
 tags: [example, statistics, freq, cluster]
 ---
 
