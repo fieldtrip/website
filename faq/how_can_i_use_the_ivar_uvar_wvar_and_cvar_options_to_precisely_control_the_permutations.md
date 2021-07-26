@@ -7,7 +7,7 @@ tags: [faq, statistics]
 
 In **[ft_timelockstatistics](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockstatistics.m)**, **[ft_freqstatistics](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqstatistics.m)**, and **[ft_sourcestatistics](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourcestatistics.m)** you can specify cfg.method='montecarlo' to use the permutation framework to get an estimate of the probability of the null-hypothesis that the data can be exchanged over the conditions. If that probability is low, you usually reject the null-hypothesis (H0) in favor of the alternative hypothesis (H1).
 
-However, not all permutations of the data are relevant for making a decision between the H0 and H1 in which you are interested. It might for example be that your have observed data for two conditions in 10 subjects. In that case, you probably are interested in whether the data is different for the conditions within a subject. So, you don't want to randomly shuffle the data over all subjects, but instead would like to now whether or not shuffling _within_ the subjects destroys the difference between the conditions. In conventional statistics, you might use a [paired two-samples t-test](http://en.wikipedia.org/wiki/Student's_t-test).
+However, not all permutations of the data are relevant for making a decision between the H0 and H1 in which you are interested. It might for example be that you have observed data for two conditions in 10 subjects. In that case, you probably are interested in whether the data is different for the conditions within a subject. So, you don't want to randomly shuffle the data over all subjects, but instead would like to know whether or not shuffling _within_ the subjects destroys the difference between the conditions. In conventional statistics, you might use a [paired two-samples t-test](http://en.wikipedia.org/wiki/Student's_t-test).
 
 The Monte Carlo method (cfg.method='montecarlo') allows you to specify in detail the allowed permutations for the columns of your experimental design matrix. You can use the following options.
 
@@ -21,7 +21,7 @@ The "Independent variable" codes the condition numbers. This is the crucial vari
 The "Unit of observation variable" corresponds to the subject number (in a
 within-subject manipulation) or the trial number (in a within-trial
 manipulation). It is best understood by considering that it corresponds
-to the "pairing" of the data in a paired T-test or repeared measures
+to the "pairing" of the data in a paired T-test or repeated measures
 ANOVA. The uvar affects the "resampling" (a bit of a confusing name) outcome in the way that only
 permutations of condition numbers within one unit of observation are returned.
 
@@ -38,4 +38,4 @@ blocks but not the individual trials in a block.
 The "Control variable" allows you to specify blocks within which the permutation should
 be done, while controlling that repetitions are not permuted _between_ different control blocks. Specifying a control variable is an excellent way to control for a potentially confounding variable that associated with your independent variable.
 
-If you want to understand in detail what the consequences are of specifying these options, I suggest you do "cd fieldtrip/private" and "edit resampledesign". That is the low-level function used for the permutations and other resamplings.
+If you want to understand in detail what the consequences are of specifying these options, I suggest you to do "cd fieldtrip/private" and "edit resampledesign". That is the low-level function used for the permutations and other resamplings.
