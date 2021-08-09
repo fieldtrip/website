@@ -23,21 +23,13 @@ Without any arguments, the software creates the FieldTrip buffer in the same com
 The following are the optional arguments available to the use
 
 - chunksize: sets the size of the chunks of data (number of samples, i.e. buffer length) to be sent to the FieldTrip buffer, which determines how many data points (per channel) will be sent to the FieldTrip buffer. This changes the value set in the real-time computer (rtMEG sets it back to the previous value when the program is terminated). The smaller the buffer length, the shorter the delay in the system, but the higher the load in the computer running rtMEG. However, given that in the default settings the DSPs communicate 28 samples to the real-time computer per packet, setting buflen to a value smaller than 28 is unwise (see below for further information on how the system works). In our experiments, the Acquisition computer was able to handle a buffer with length 29 with a delay smaller than 50ms without any problems.
-
 - bufhost: specifies the hostname of the computer hosting the FieldTrip buffer. This option automatically makes rtMEG communicate with an external host and not lunch its own thread of the FieldTrip buffer.
-
 - bufport: what port to use for communications. If --ftbuffer is specified, this is the port to send the data to in the computer hosting the FieldTrip buffer. If 'ftbuffer' was not specified, then this is the port the buffer will be listening to for reading requests.
-
 - fixchunksize: **ONLY USE IT IN CASE OF ABNORMAL PROGRAM TERMINATION!** If a problem occur and the program unlikely crashes with an unclean exit, it might not properly reset the chunk size to the old value (i.e. if the program was invoked with the chunksize flag when it crashed). Therefore, this argument sets the chunk size to the parameter set in the argument and then quits the program.
-
 - magmul: scales the MEG magnetometer signals by a given factor (no scaling by default).
-
 - gradmul: scales the MEG gradiometer signals by a given factor (no scaling by default).
-
 - eegmul: scales the EEG signals by a given factor (no scaling by default).
-
 - version: displays version information and exits the program.
-
 - help: shows the help text for the different arguments.
 
 ## Example scenario
@@ -65,4 +57,4 @@ The data received from the real-time computer are then stored in a local buffer 
 
 Binaries have been provided for the HP-UX and Linux platforms, which are the two platforms where the Neuromag acquisition software runs. But, if you need to re-compile the software, the sources have also been provided to compile the binary file neuromag2ft. You'll need gcc, gmake, the **buffer** library (provided by FieldTrip), as well as a few libraries provided by Neuromag/Elekta.
 
-Questions / suggestions / reporting a bug, please email Gustavo Sudre or Lauri Parkkonen. The source code and binaries for rtMEG are available in the FieldTrip repository, or can also be obtained by contacting one of the authors.
+For questions, suggestions, or reporting a bug, please email Gustavo Sudre or Lauri Parkkonen. The source code and binaries for rtMEG are available in the FieldTrip repository, or can also be obtained by contacting one of the authors.

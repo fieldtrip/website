@@ -58,34 +58,35 @@ The device that we have at the Donders has a "BlueSmirf FireFly" bluetooth inter
 
 ## Native MATLAB implementation
 
+{% include markup/info %}
+The MATLAB implementation is mainly for educational and testing purposes. For proper real-time analyses we recommend you to use the standalone interface, which is faster and requires less system resources.
+{% include markup/end %}
+
 On Linux and macOS it is also possible to read from a serial port or bluetooth interface from within MATLAB. To help in decoding the communication protocol, i.e. the byte stream that is sent over the serial interface, we also made a MATLAB implementation.
 
-The MATLAB implementation can be found in "realtime/example/ft_realtime_modeegproxy".
-
-It reads the data from the serial interface and copies the first two channels to a FieldTrip [buffer](/development/realtime/buffer_overview).
+The MATLAB implementation can be found in **[ft_realtime_modeegproxy](https://github.com/fieldtrip/fieldtrip/blob/release/realtime/example/ft_realtime_modeegproxy)**. It reads the data from the serial interface and copies the first two channels to a FieldTrip [buffer](/development/realtime/buffer_overview).
 
 ## Serial port communication protocol
 
 The page <http://openeeg.sourceforge.net/doc/modeeg/firmware/modeeg-p2.c> describes the communication protocol as follows
 
-// Packet Format Version 2
-// 17-byte packets are transmitted from the ModularEEG at 256Hz,
-// using 1 start bit, 8 data bits, 1 stop bit, no parity, 57600 bits per second.
-// Minimial transmission speed is 256Hz _ sizeof(modeeg_packet) _ 10 = 43520 bps.
+    // Packet Format Version 2
+    // 17-byte packets are transmitted from the ModularEEG at 256Hz,
+    // using 1 start bit, 8 data bits, 1 stop bit, no parity, 57600 bits per second.
+    // Minimial transmission speed is 256Hz _ sizeof(modeeg_packet) _ 10 = 43520 bps.
 
- struct modeeg_packet
-{
-uint8_t sync0; // = 0xA5
-uint8_t sync1; // = 0x5A
-uint8_t version; // = 2
-uint8_t count; // packet counter. Increases by 1 each packet
-uint16_t data[6]; // 10-bit sample (= 0 - 1023) in big endian (Motorola) format
-uint8_t switches; // State of PD5 to PD2, in bits 3 to 0
-};
+     struct modeeg_packet {
+        uint8_t sync0; // = 0xA5
+        uint8_t sync1; // = 0x5A
+        uint8_t version; // = 2
+        uint8_t count; // packet counter. Increases by 1 each packet
+        uint16_t data[6]; // 10-bit sample (= 0 - 1023) in big endian (Motorola) format
+        uint8_t switches; // State of PD5 to PD2, in bits 3 to 0
+    };
 
- // Note that data is transmitted in big-endian format.
-// By this measure together with the unique pattern in sync0 and sync1 it is guaranteed,
-// that re-sync (i.e after disconnecting the data line) is always safe.
+    // Note that data is transmitted in big-endian format.
+    // By this measure together with the unique pattern in sync0 and sync1 it is guaranteed,
+    // that re-sync (i.e after disconnecting the data line) is always safe.
 
 ## External links
 

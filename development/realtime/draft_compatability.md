@@ -26,21 +26,15 @@ The logic would involve detecting the server version by sending requests with de
 #### Disadvantages
 
 - Probably hard to maintain for developers in the long run
-
 - Might be frustrating for power users (e.g., for debugging), since the involved version switches add one more layer of code and complexity.
-
 - Hard to introduce changes on data structure level, e.g., for adding a _timestamp_ field to events: If two different versions of "dmarequest" can write events to the same ringbuffer, we effectively get mixed data structures in there. If such a change becomes necessary at V5, we would need to change the server code for V1-V4 as well.
-
 - Since the client cannot be sure that a certain feature is available (e.g. polling for new samples with a timeout, asking for events by number), higher-level code needs to stick to V1-type operations for compatibility.
-
 - Existing users (providers of acquisition clients) have little incentive to upgrade to a more recent, more powerful protocol, since new users can already connect. This makes the point mentioned above more severe.
-
 - How to add new language bindings (e.g., Python / Java)? Should a language binding initiated at V4 include support for V1-V3 as well?
 
 #### Practical notes
 
 - Old versions of the "dmarequest" function should be kept, starting with V2 it should get a version number suffix. Protocol data structures, when modified, should also be duplicated and renamed to get a version number suffix, so the old functions (based on old data structures) still compile.
-
 - It would probably be worthwhile to clean up the code in the sense that (now) static variables get moved to a C "struct" that corresponds to a logical unit and a specific version number. This includes the various pointers to data, events, and header information, but also the mutexes to protect them. If all data fields that make up a V1-buffer are contained in a struct called, e.g., "ft_buffer_container_v1", later versions can derive similar data structures by including the previous one as a field, and adding new facilities (e.g., an array of chunks) at the end of their own (native-version) structure.
 
 ### Providing adapters for compatibility

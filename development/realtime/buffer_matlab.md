@@ -8,13 +8,9 @@ tags: [realtime, development]
 The FieldTrip toolbox includes an interface to the buffer through the following functions
 
 - **[ft_read_header](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_header.m)**
-
 - **[ft_read_data](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_data.m)**
-
 - **[ft_read_event](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_event.m)**
-
 - **[ft_write_data](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_write_data.m)**
-
 - **[ft_write_event](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_write_event.m)**
 
 Access to the real-time buffer provided by the standard FieldTrip reading functions from the fileio module. The API allows for reading header information, event information, and blocks of data.
@@ -23,10 +19,10 @@ Access to the real-time buffer provided by the standard FieldTrip reading functi
     hdr    = ft_read_header('buffer://localhost:port')
 
     % this returns a structure with event/trigger information
-    event  = ft_read_event ('buffer://localhost:port')
+    event  = ft_read_event('buffer://localhost:port')
 
     % this returns a Nchans X Nsamples matrix with the data
-    dat    = ft_read_data  ('buffer://localhost:port', ...)
+    dat    = ft_read_data('buffer://localhost:port', ...)
 
 The interface between MATLAB and the real-time buffer is network transparent. That means that the buffering can be done on one computer, e.g. the one attached to the EEG amplifier, and the computations in MATLAB can be done on another.
 

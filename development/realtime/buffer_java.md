@@ -15,7 +15,7 @@ The directory "realtime/src/buffer/java/bufferserver" contains a Java implementa
 
 The directory "realtime/src/buffer/java" contains a couple of Java classes that implement a client-side interface to the FieldTrip buffer (socket connections only). The classes wrap FieldTrip-style header structures, events, and client connections to a server.
 
-The following Java code example demonstrates how to use the interfac
+The following Java code example demonstrates how to use the interface:
 
 ```java
     import java.io.*;

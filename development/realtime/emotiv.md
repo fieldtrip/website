@@ -9,9 +9,7 @@ This page describes the interface between the 14-channel Emotiv neuroheadset and
 
 {% include image src="/assets/img/development/realtime/emotiv/emotiv.jpg" %}
 
-The acquisition setup consists of the headset itself and a bluetooth dongle, which we talk to using the Emotiv SDK on Windows. We provide a standalone
-tool called **emotiv2ft** (see "realtime/datasource/emotiv") to grab data from the headset, and stream it to a FieldTrip buffer.
-You can call this tool with the usual command line arguments, that is,
+The acquisition setup consists of the headset itself and a bluetooth dongle, which we talk to using the Emotiv SDK on Windows. We provide a standalone tool called **emotiv2ft** (see "realtime/datasource/emotiv") to grab data from the headset, and stream it to a FieldTrip buffer. You can call this tool with the usual command line arguments, that is,
 
     emotiv2ft <configfile> [hostname=localhost [port=1972 [ctrlPort=8000]]]
 
@@ -22,7 +20,7 @@ from all the channels.
 
 The default config file is emotiv_config.txt which can be found in the same directory with emotiv2ft.
 
-Note: If port 1972 cannot be accessed on a Windows machine it may help to first initialize the port from matlab, e.g., via ft_realtime_fileproxy
+Note: If port 1972 cannot be accessed on a Windows machine it may help to first initialize the port from MATLAB, e.g., via ft_realtime_fileproxy
 
 ### Installation
 
@@ -30,9 +28,7 @@ Please follow instructions [here](https://emotiv.com/quickstart-guides/QuickStar
 
 ### Compilation
 
-We provide a simple "Makefile" for the MinGW compiler, but you will need the Emotiv SDK.
-Please go to the "realtime/datasource/emotiv" directory and type "make" or "mingw32-make".
-Note that you might need to [compile](/development/realtime/buffer) the **libbuffer** library first.
+We provide a simple "Makefile" for the MinGW compiler, but you will need the Emotiv SDK. Please go to the "realtime/datasource/emotiv" directory and type "make" or "mingw32-make". Note that you might need to [compile](/development/realtime/buffer) the **libbuffer** library first.
 
 ## External links
 

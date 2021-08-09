@@ -52,18 +52,12 @@ Given the symmetry in the design, it is possible to have a standalone buffer, i.
 
 ## Compiling the code
 
-Building the source code on different platforms can appear challenging. The
-buffer has been successfully compiled and tested on Linux (32 and 64-bit),
-Windows (32-bit) and macOS (32-bit PowerPC and 32 and 64-bit Intel platform). We
-try to facilitate the compilation of the source code by supplying various build
-methods.
+Building the source code on different platforms can appear challenging. The buffer has been successfully compiled and tested on Linux (32 and 64-bit), Windows (32-bit) and macOS (32-bit PowerPC and 32 and 64-bit Intel platform). We try to facilitate the compilation of the source code by supplying various build methods.
 
 Generally, please note that no matter which platform, there are three different parts of the code, which are compiled in different steps.
 
 - `.../buffer/src` contains the core buffer functions written in C. These are compiled into a library "libbuffer.[a/lib]" by using Makefiles or project files **outside** of MATLAB.
-
 - `.../buffer/test` contains demos and test applications written in C. These are also compiled outside of MATLAB, but since they depend on "libbuffer", they can only be compiled after that.
-
 - `.../buffer/matlab` contains the sources of the MEX file "buffer.mex???". Since MATLAB installations vary so much, we rely on the command "mex" to compile this part **inside** MATLAB. As of October 2010, the MEX files are not linked against "libbuffer" anymore, but rather the same source files are directly pulled in using "mex".
 
 The best tested method for compilation of the stand-alone tools is by using the Makefile (only for Linux, macOS and MinGW). For Windows, Borland C++ (version 6.0) project files are supplied. The buffer can also be compiled on Linux, macOS, and Windows using [cmake](http://www.cmake.org). Compiling on Linux and macOS is pretty straight forward while doing that on Windows is a bit more tricky.
@@ -154,7 +148,6 @@ If your favorite compiler is not listed above, or you have some special non-stan
 
 ### Endiannes
 
-As of 18-05-2010, the FieldTrip buffer TCP server provides an automatic adaptation
-of requests and its responses to the [endianness](http://en.wikipedia.org/wiki/Endianness) of the client. For example, if the buffer resides on an Intel x86 computer, and data is written to it from a PPC G4 computer, the server will automatically convert the incoming packets (data/events/header information) to its own (little-endian) format, process the request, and then convert the response back to the (big-endian) format of the client. The opposite happens if the PPC G4 is the server, and the PC the client. No conversion is done if both the server and the client run on the same type of machine (which includes the _dmarequest_ as a notable case).
+As of 18-05-2010, the FieldTrip buffer TCP server provides an automatic adaptation of requests and its responses to the [endianness](http://en.wikipedia.org/wiki/Endianness) of the client. For example, if the buffer resides on an Intel x86 computer, and data is written to it from a PPC G4 computer, the server will automatically convert the incoming packets (data/events/header information) to its own (little-endian) format, process the request, and then convert the response back to the (big-endian) format of the client. The opposite happens if the PPC G4 is the server, and the PC the client. No conversion is done if both the server and the client run on the same type of machine (which includes the _dmarequest_ as a notable case).
 
 Besides the G4 and G5 Apple PPC platform, the Raspberry Pi is also a big-endian computer.

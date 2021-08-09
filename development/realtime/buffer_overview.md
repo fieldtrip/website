@@ -28,7 +28,6 @@ The source code of the buffer can be integrated in any EEG/MEG acquisition or an
 The buffer is compiled into a MATLAB mex file, which means that you can read from, and write to, the buffer in MATLAB. This allows you to process small segments of the real-time streaming EEG data in MATLAB, while incoming new data are buffered in a separate thread. Since the buffer allows multiple concurrent read connections, multiple MATLAB clients can connect to it, each analyzing a specific aspect of the data concurrently. The MATLAB mex file can be used to
 
 - access a remote buffer linked to the acquisition software, which runs as a separate program and possibly even on a separate computer
-
 - instantiate a local buffer, linked to the MATLAB process as a separate thread
 
 Besides the native C/C++ and the MATLAB implementation, we also provide implementations for [Java](/development/realtime/buffer_java) and [Python](/development/realtime/buffer_python).

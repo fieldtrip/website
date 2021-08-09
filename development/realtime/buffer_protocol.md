@@ -27,7 +27,7 @@ The binary TCP/IP network protocol allows client applications to be developed in
 
 ### Outside our scope
 
-We do not aim to provide or specify:
+We do **not** aim to provide or specify:
 
 - any kind of remote procedure calls, or direct communication between clients,
 - an explicit way of setting up experiments,
