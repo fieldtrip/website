@@ -30,11 +30,11 @@ In Fieltrip this is contained within in a single data matrix of [channels x time
 
     data.trial{1}: [32x1000 double]
 
-For now you can ignore that fact that it is within a field called 'trial'. At the moment there is only one trial so this is just to be able to generalize to the case then we have segmented the data into separate trials. So if you, for instance, want to refer to the 10th sample of the second channel, you might simply typ
+For now you can ignore that fact that it is within a field called 'trial'. At the moment there is only one trial so this is just to be able to generalize to the case then we have segmented the data into separate trials. So if you, for instance, want to refer to the 10th sample of the second channel, you might simply type
 
     data.trial{1}(2,10)
 
-Note that the exact timing can't be derived from the data itself. For that we need to know the samplerate (in samples per second, or Hertz). This is found in the data structure as an extra field called 'fsample'. For example:
+Note that the exact timing can't be derived from the data itself. For that we need to know the sample rate (in samples per second, or Hertz). This is found in the data structure as an extra field called 'fsample'. For example:
 
     data.fsample = 600;
 
@@ -110,11 +110,11 @@ Now, the last thing we need to do is to point to the datafile where to read the 
 
     cfg.dataset = 'subject01.eeg';
 
-We can now call our first FieldTrip functio
+We can now call our first FieldTrip function
 
     cfg = ft_definetrial(cfg);
 
-Notice that what is happening here is that a cfg structure is fed into ft_definetrial, which returns it again but with an added field called cfg.trl. This is a simple list of three columns where every row describes a separate trial start, end and offset (interval before the event) in sample numbers, relative to the event values we specifie
+Notice that what is happening here is that a cfg structure is fed into ft_definetrial, which returns it again but with an added field called cfg.trl. This is a simple list of three columns where every row describes a separate trial start, end and offset (interval before the event) in sample numbers, relative to the event values we specified
 
     cfg.trl: [50x3 double]
 
@@ -210,7 +210,7 @@ The ICA will return as many components as you put channels in. Each component co
 
 {% include image src="/assets/img/walkthrough/wt_fig7.png" width="600" %}
 
-When ft_componentanalysis is done (it could take a while) we have to find those components we want to substract from our data. We'll use ft_databrowser for this again, only looking at ten 'channels' (components) at a time:
+When ft_componentanalysis is done (it could take a while) we have to find those components we want to subtract from our data. We'll use ft_databrowser for this again, only looking at ten 'channels' (components) at a time:
 
     cfg = \[];
     cfg.viewmode = 'component';
@@ -301,7 +301,7 @@ The most used method for frequency analysis in FieldTrip besides ''mtmfft'' is '
 
 ##### Sliding time windows
 
-If you are interested in the development of the power (or other frequency information beyond the scope of this document) over time, you need to cut up the time course into pieces and calculate the power for every piece separatel
+If you are interested in the development of the power (or other frequency information beyond the scope of this document) over time, you need to cut up the time course into pieces and calculate the power for every piece separately
 
 {% include image src="/assets/img/walkthrough/wt_fig10.png" width="600" %}
 
@@ -364,11 +364,11 @@ FieldTrip distinguishes itself perhaps most in its flexibility in statistical ap
 The difference between descriptive and inferential statistic is often implicit in neuroimaging analysis packages, or in research articles for that matter. It really pays off to consider them separately here and to entertain the many possibilities of combining descriptive statistics with statistical methods. It is paramount in understanding the philosophy and appreciating the full statistical potential of FieldTrip.
 
 So what do we mean with descriptive statistic? It's the single value you end up with after reducing your data(set) and representing an aspect of its distribution which you would want to use for statistical comparison. Think for instance about “average alpha power over trials”, “variance of the P300 amplitude” or “the latency of maximal mu-rhythm suppression”. You might calculate a descriptive statistic for every subject, e.g. the difference between conditions (which you want to compare over subjects). Conversely, you might want to use one descriptive for every trial (which you will compare within a subject). A descriptive statistic is not limited to averages of power or amplitude but can be any output of a statistical procedure itself, such as a Z-value, t-value, variance, mean-difference or Beta-value.
-The inferential statistic is what you get when you test your descriptive statistics against the null-hypothesis, e.g. is your p-value. Again, there are many ways to do your null-hypothesis testing, e.g. using a (paired) t-test or Montecarlo approach.
+The inferential statistic is what you get when you test your descriptive statistics against the null-hypothesis, e.g. is your p-value. Again, there are many ways to do your null-hypothesis testing, e.g. using a (paired) t-test or Monte Carlo approach.
 
 ### Input – output structure of ft_freqstatistics
 
-Also when it comes to your statistical analysis FieldTrip doesn't let you down: The structure of its output is consistent with the datastructure of its input. We will revisit the following figure a couple of times, but for now please notice:
+Also when it comes to your statistical analysis FieldTrip doesn't let you down: The structure of its output is consistent with the data structure of its input. We will revisit the following figure a couple of times, but for now please notice:
 
 1.  Unless you specify otherwise through averaging on a certain dimension, the structure of the output will have the same structure as the input
 2.  Those values of the output – the descriptive statistics, the inferential statistics and the decisions (to reject your null-hypothesis), are dependent on cfg.statistic, cfg.method and cfg.alpha, respectively.
@@ -408,10 +408,10 @@ As you are well aware, however, the decision we make using the statistical test 
 
 Once the design matrix is specified and the test statistic is defined we only need to decide how we are going to test our hypothesis. Of course the statistical methods one will use are somewhat dependent on the design matrix you specified but let's just summarize them all here:
 
-- [ft_statistics_analytic](https://github.com/fieldtrip/fieldtrip/blob/release/ft_statistics_analytic)
-- [ft_statistics_crossvalidate](https://github.com/fieldtrip/fieldtrip/blob/release/ft_statistics_crossvalidate)
-- [ft_statistics_montecarlo](https://github.com/fieldtrip/fieldtrip/blob/release/ft_statistics_montecarlo)
-- [ft_statistics_stats](https://github.com/fieldtrip/fieldtrip/blob/release/ft_statistics_stats)
+- [ft_statistics_analytic](https://github.com/fieldtrip/fieldtrip/blob/release/ft_statistics_analytic.m)
+- [ft_statistics_crossvalidate](https://github.com/fieldtrip/fieldtrip/blob/release/ft_statistics_crossvalidate.m)
+- [ft_statistics_montecarlo](https://github.com/fieldtrip/fieldtrip/blob/release/ft_statistics_montecarlo.m)
+- [ft_statistics_stats](https://github.com/fieldtrip/fieldtrip/blob/release/ft_statistics_stats.m)
 
 #### Calling ft_freqanalysis
 

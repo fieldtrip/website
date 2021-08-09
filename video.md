@@ -100,3 +100,16 @@ The SPM team at the [Wellcome Trust Centre for Neuroimaging](http://www.fil.ion.
 ### EEGLAB course videos
 
 The EEGLAB team at the [Swartz Center for Computational Neuroscience](https://sccn.ucsd.edu) at the UCSD has recorded and published the [video lectures at one of their training workshops](http://thesciencenetwork.org/programs/12th-eeglab-workshop). This includes lectures on Mining event-related brain dynamics, independent component analysis, localizing sources, statistics, mobile and real-time EEG, etc.
+
+### Dr. Mike X Cohen's Lecture Series on Analyzing Neural Time Series Data
+
+Includes a set of lecture series from Dr. Cohen from Donders Centre for Neuroscience (DCN), Radboud University, based on his book on [Analyzing Neural Time Series Data.](https://mitpress.mit.edu/books/analyzing-neural-time-series-data)
+
+* [Introduction to EEG Time Series](https://www.youtube.com/watch?v=ukjuFUghieg&list=PLn0OLiymPak0t1moK3sn4Sl1seXlEOPHT)
+* [Static Spectral Analysis](https://www.youtube.com/watch?v=fYtVHhk3xJ0&list=PLn0OLiymPak2jxGCbWrcgmXUtt9Lbjj_A)
+* [Time Frequency Analysis](https://www.youtube.com/watch?v=7ahrcB5HL0k&list=PLn0OLiymPak2BYu--bR0ADNBJsC4kuRWs)
+* [Synchronization](https://www.youtube.com/watch?v=ardi0hO6lOU&list=PLn0OLiymPak1wp4wMQ7tbYrtyFUatMVJs)
+* [Permutation Based Statistics](https://www.youtube.com/watch?v=7W11BOlM02I&list=PLn0OLiymPak1Ch2ce47MqwpIw0x3m6iZ7)
+
+You can also reach the older version of the lecture series from [here](https://www.youtube.com/channel/UCUR_LsXk7IYyueSnXcNextQ/playlists?view=50&sort=dd&shelf_id=2). 
+

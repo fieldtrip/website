@@ -1,13 +1,13 @@
 ---
-title: Integrating with SPM12
+title: Integrating with SPM
 tags: [spm]
 ---
 
-# Integrating with SPM8
+# Integrating with SPM
 
 ## Background
 
-[SPM12](http://www.fil.ion.ucl.ac.uk/spm/software/spm8b/) is the newest version of [SPM software](http://www.fil.ion.ucl.ac.uk/spm/) developed by the Methods Group at the Wellcome Trust Centre for Neuroimaging, Institute of Neurology, University College London, UK and collaborators. SPM12 implements several advanced methods for M/EEG analysis:
+[SPM12](http://www.fil.ion.ucl.ac.uk/spm/software/spm8b/) is the latest version of [SPM software](http://www.fil.ion.ucl.ac.uk/spm/) developed by the Methods Group at the Wellcome Trust Centre for Neuroimaging, Institute of Neurology, University College London, UK and collaborators. SPM12 implements several advanced methods for M/EEG analysis:
 
 - Statistical analysis at both scalp and source level and also analysis of time-frequency images using the General Linear Model (GLM) with thresholding based on Random Field Theory (RFT).
 

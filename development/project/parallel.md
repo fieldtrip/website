@@ -40,17 +40,17 @@ Rather than doing the parallelization at the level of the users' scripts (the to
 
 Possibly this could be implemented something like this:
 
-   poolobj = parpool;
-   
-   cfg = [];
-   cfg.method = 'mtmfft';
-   cfg.taper = 'hanning';
-   cfg.foilim = [0 100];
-   cfg.trials = 1:100;
-   cfg.parallel = poolobj; % this allows looking up the pool details and number of workers
-   freq = ft_freqanalysis(cfg, data)
-   
-   delete(poolobj);
+    poolobj = parpool;
+    
+    cfg = [];
+    cfg.method = 'mtmfft';
+    cfg.taper = 'hanning';
+    cfg.foilim = [0 100];
+    cfg.trials = 1:100;
+    cfg.parallel = poolobj; % this allows looking up the pool details and number of workers
+    freq = ft_freqanalysis(cfg, data)
+    
+    delete(poolobj);
 
 This would distribute 100 jobs for the 100 trials over the workers in the parallel pool.
 

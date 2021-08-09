@@ -10,7 +10,7 @@ tags: [tutorial, natmeg, meg+eeg, statistics, meg-audodd]
 The objective of this tutorial is to give an introduction to the statistical analysis of MEG data using different methods to control for the false alarm rate. The tutorial starts with sketching
 the background of cluster-based permutation tests. Subsequently it is shown how to use FieldTrip to perform statistical analysis (including cluster-based permutation tests) on the time-frequency response to a movement, and to the auditory mismatch negativity. The tutorial makes use of a between-trials (within-subject) design.
 
-In this tutorial we will continue working on the dataset described in the [Preprocessing and event-related activity](/workshop/natmeg/preprocessing) and the [Time-frequency analysis of MEG and EEG](/workshop/natmeg/timefrequency) tutorials. We will repeat some code here to select the trials and preprocess the data. We assume that the preprocessingand the computation of the ERFs/TFRs are already clear to the reader.
+In this tutorial we will continue working on the dataset described in the [Preprocessing and event-related activity](/workshop/natmeg/preprocessing) and the [Time-frequency analysis of MEG and EEG](/workshop/natmeg/timefrequency) tutorials. We will repeat some code here to select the trials and preprocess the data. We assume that the preprocessing and the computation of the ERFs/TFRs are already clear to the reader.
 
 This tutorial is not covering group analysis. If you are interested in that, you can read the other tutorials that cover cluster-based permutation tests on [event related fields](/tutorial/cluster_permutation_timelock) and on [time-frequency data](/tutorial/cluster_permutation_freq). If you are interested in a more gentle introduction as to how parametric statistical tests can be used with FieldTrip, you can read the [Parametric and non-parametric statistics on event-related fields](/tutorial/eventrelatedstatistics) tutorial.
 
@@ -28,7 +28,7 @@ An important feature of the MEG and EEG data is that it has a spatial temporal s
 
 When parametric statistics are used, one method that addresses this problem is the so-called Bonferroni correction. The idea is if the experimenter is conducting _n_ number of statistical tests then each of the individual tests should be tested under a significance level that is divided by _n_. The Bonferroni correction was derived from the observation that if _n_ tests are performed with an _alpha_ significance level then the probability that one comes out significantly is smaller than or equal to _n_ times _alpha_ (Boole's inequality). In order to keep this probability lower, we can use an _alpha_ that is divided by _n_ for each test. However, the correction comes at the cost of increasing the probability of false negatives, i.e. the test does not have enough power to reveal differences among conditions.
 
-In constrast to the familiar parametric statistical framework, it is straightforward to solve the MCP in the nonparametric framework. Nonparametric tests offer more freedom to the experimenter regarding which test statistics are used for comparing conditions, and help to maximize the sensitivity to the expected effect. For more details see the publication by [Maris and Oostenveld (2007)](/references_to_implemented_methods#statistical_inference_by_means_of_permutation).
+In contrast to the familiar parametric statistical framework, it is straightforward to solve the MCP in the nonparametric framework. Nonparametric tests offer more freedom to the experimenter regarding which test statistics are used for comparing conditions, and help to maximize the sensitivity to the expected effect. For more details see the publication by [Maris and Oostenveld (2007)](/references_to_implemented_methods#statistical_inference_by_means_of_permutation).
 
 ## Procedure
 
@@ -102,7 +102,7 @@ The MEG dataset that we use in this tutorial is available as [oddball1_mc_downsa
 
 ### Single-trial time-frequency responses
 
-To perform the statistical test we need to compute single-trial time-frequency responses. This is done using the cfg.keeptrials configuratino option, which by default is 'no'. Since we compute the TFR for each individual trial, we don't have to split the data in the two conditions. The condition to which each trial belongs is kept with the data in the _trialinfo_ field.
+To perform the statistical test we need to compute single-trial time-frequency responses. This is done using the cfg.keeptrials configuration option, which by default is 'no'. Since we compute the TFR for each individual trial, we don't have to split the data in the two conditions. The condition to which each trial belongs is kept with the data in the _trialinfo_ field.
 
     cfg              = [];
     cfg.output       = 'pow';
@@ -340,7 +340,7 @@ However, we will leave the statistical evaluation to the **[ft_timelockstatistic
 
 Note that the dimord is _rpt_chan_time_, i.e. trials by channels by time, which matches with the size of the ERF_all.trial array.
 
-We proceed by computing the statistical tets, which returns the t-value, the probability and a binary mask that contains a 0 for all data points where the probability is below the a-prior threshold, and 1 where it is above the threshold. The _cfg.design_ field specifies the condition in which each of the trials is observed. For the _indepsamplesT_ statistic, it should contain 1's and 2's.
+We proceed by computing the statistical test, which returns the t-value, the probability and a binary mask that contains a 0 for all data points where the probability is below the a-prior threshold, and 1 where it is above the threshold. The _cfg.design_ field specifies the condition in which each of the trials is observed. For the _indepsamplesT_ statistic, it should contain 1's and 2's.
 
     cfg           = [];
     cfg.statistic = 'indepsamplesT';

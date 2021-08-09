@@ -28,7 +28,7 @@ An important feature of EEG data is that it has spatio-temporal structure, i.e. 
 
 When parametric statistics are used, one method that addresses this problem is the so-called Bonferroni correction. The idea is if the experimenter is conducting _n_ number of statistical tests then each of the individual tests should be tested under a significance level that is divided by _n_. The Bonferroni correction was derived from the observation that if _n_ tests are performed with an _alpha_ significance level then the probability that one test comes out significant is smaller than or equal to _n_ times _alpha_ (Boole's inequality). In order to keep this probability lower, we can use an _alpha_ that is divided by _n_ for each test. However, the correction comes at the cost of increasing the probability of false negatives, i.e. the test does not have enough power to reveal differences among conditions.
 
-In constrast to the familiar parametric statistical framework, it is straightforward to solve the MCP in the nonparametric framework. Nonparametric tests offer more freedom to the experimenter regarding which test statistics are used for comparing conditions, and help to maximize the sensitivity to the expected effect. For more details see the publication by [Maris and Oostenveld (2007)](/references_to_implemented_methods#statistical_inference_by_means_of_permutation).
+In contrast to the familiar parametric statistical framework, it is straightforward to solve the MCP in the nonparametric framework. Nonparametric tests offer more freedom to the experimenter regarding which test statistics are used for comparing conditions, and help to maximize the sensitivity to the expected effect. For more details see the publication by [Maris and Oostenveld (2007)](/references_to_implemented_methods#statistical_inference_by_means_of_permutation).
 
 ## Procedure for ERPs
 
@@ -54,10 +54,10 @@ First, we load the data that we created in the [ERP tutorial](/workshop/oslo2019
 
 {% include markup/info %}
 Note the naming convention used - each saved _.mat-file_ contains _one and only one_ variable, which has the _same_ name as the _.mat-file_  
-This makes it clear what variables are loaded into the workspace
+This makes it clear what variables are loaded into the workspace.
 {% include markup/end %}
 
-We then apply the same preprocessing as before
+We then apply the same preprocessing as before.
 
     cfg                = [];
     cfg.lpfilter       = 'yes';
@@ -70,15 +70,15 @@ We then apply the same preprocessing as before
 
 #### The Student's t-test
 
-A ubiquitous test used to assess statistical significance is the Student's t-test [Wikipedia entry](https://en.wikipedia.org/wiki/Student's_t-test) [original article](https://doi.org/10.1093/biomet/6.1.1)  
-To perform the t-test, _t-values_ need to be calculated, which a bit simplified are: \frac{µ}{SEM}, where µ is the mean difference between the conditions and SEM is the standard devation divided by \sqrt{n}, where _n_ is the number of observations.
+A ubiquitous test used to assess statistical significance is the Student's t-test [Wikipedia entry](https://en.wikipedia.org/wiki/Student's_t-test) [original article](https://doi.org/10.1093/biomet/6.1.1).  
+To perform the t-test, _t-values_ need to be calculated, which a bit simplified are: \frac{µ}{SEM}, where µ is the mean difference between the conditions and SEM is the standard deviation divided by \sqrt{n}, where _n_ is the number of observations.
 
-We will do a within-subject between-trials statistical test  
-We proceed by computing the statistical tets, which returns the t-value, the probability and a binary mask that contains a 0 for all data points where the probability is below the a-priori threshold, and 1 where it is above the threshold. The _cfg.design_ field specifies the condition in which each of the trials is observed. For the _indepsamplesT_ statistic, it should contain 1's and 2's.
+We will do a within-subject between-trials statistical test.
+We proceed by computing the statistical test, which returns the t-value, the probability and a binary mask that contains a 0 for all data points where the probability is below the a-priori threshold, and 1 where it is above the threshold. The _cfg.design_ field specifies the condition in which each of the trials is observed. For the _indepsamplesT_ statistic, it should contain 1's and 2's.
 
     cfg           = [];
 
-    cfg.method    = 'analytic'; % using a paarmetric test
+    cfg.method    = 'analytic'; % using a parametric test
     cfg.statistic = 'ft_statfun_indepsamplesT'; % using independent samples
     cfg.correctm  = 'no'; % no multiple comparisons correction
     cfg.alpha     = 0.05;
@@ -177,7 +177,7 @@ The Bonferroni correction has eliminated some likely _false positives_, but prob
 
 #### Cluster-based correction for multiple comparisons
 
-As noted above, EEG data is smooth over the spatio-temporal dimensions. We can easily imaging how we can build clusters in the temporal dimension. These are simply data points that are neighboring each other in time. For the spatial dimension, it is necessary to build a neighbor structure using **[ft_prepare_neighbours](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_neighbours.m)**. This uses the (digitized) positions of the electrodes.
+As noted above, EEG data is smooth over the spatio-temporal dimensions. We can easily imaging how we can build clusters in the temporal dimension. These are simply data points that are neighbouring each other in time. For the spatial dimension, it is necessary to build a neighbour structure using **[ft_prepare_neighbours](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_neighbours.m)**. This uses the (digitized) positions of the electrodes.
 
 ##### Neighbors
 
@@ -222,7 +222,7 @@ We will first run it and then discuss some of the options and details afterwards
     cfg.design           = data_EEG_filt.trialinfo; % same design as before
     cfg.ivar             = 1; % indicating that the independent variable is found in ...
                               % first row of cfg.design
-    cfg.neighbours       = neighbors; % the spatial structire
+    cfg.neighbours       = neighbors; % the spatial structure
     cfg.minnbchan        = 2; % minimum number of channels required to form a cluster
 
     stat_t_cluster = ft_timelockstatistics(cfg, data_EEG_filt);
@@ -247,13 +247,13 @@ The output of _stat_t_cluster_ is:
                        time: [1x200 double]
                         cfg: [1x1 struct]
 
-- _prob_ contains the _p-values_ for each channel/time pair inhterited from the cluster that pair is part of
+- _prob_ contains the _p-values_ for each channel/time pair inherited from the cluster that pair is part of
 - _posclusters_ contains a structure for each positive cluster found that contains
   - _prob_ contains the _p-value_ associated with the cluster
   - _clusterstat_ contains the _T-value_ associated with this cluster
   - _stddev_ contains the standard deviation of the _prob_ of this cluster
   - _cirange_ contains the 95% confidence interval for the _prob_ of thus cluster - if this range include _cfg.alpha_ a warning is issued recommending increasing the number of permutations
-- _posclusterslabelmat_ contains a matrix with a number indicating which positive cluster each channel/time pair belongs (0 if is doens't belong to any)
+- _posclusterslabelmat_ contains a matrix with a number indicating which positive cluster each channel/time pair belongs (0 if it doesn't belong to
 - _posdistribution_ contains a row vector containing the _T-value_ for each of the permutations
 - _negclusters_ contains the negative equivalent of _posclusters_
 - _negclusterslabelmat_ contains the negative equivalent of _negclusterslabelmat_
@@ -267,7 +267,7 @@ The output of _stat_t_cluster_ is:
 - _time_ is a row vector with the time points in seconds
 - _cfg_ shows the cfg that gave rise to this structure
 
-There's quite a lot to unpack here. It is critical to distinguish between _t-values_ and _T-values_ here. We will now state the procedure step by step
+There's quite a lot to unpack here. It is critical to distinguish between _t-values_ and _T-values_ here. We will now state the procedure step by step.
 
 1. Do a _t-test_ similar to above (_stat_t_) - these provide the _t-values_ in _stat_t_cluster.stat_
 2. Find the _T-values_ for each cluster of _t-values_ that pass the analytic significance test based on _cfg.clusteralpha_. The _T-value_ for a cluster is the sum of all the _t-values_ in that cluster
@@ -302,7 +302,7 @@ _Figure 6: The observed positive and negative_ T-values compared to the permuted
 ###### Compare against _cfg.alpha_ (steps 5 and 6)
 
 Since both the _positive_ and _negative p-values_ are lesser than _cfg.alpha_ (0.025), we reject the null hypothesis for both the positive and negative directions.  
-_Put informally_: **our way of labeling the conditions _does_ matter**
+_Put informally_: **our way of labelling the conditions _does_ matter**
 
 Let's have a look at the cluster corrected channel:
 
@@ -356,7 +356,7 @@ _Figure 10: Difference wave showing the difference in masks coming from stat_t a
 Do note that we, in EEG, most of the time do not make the inference at the level of the individual subject, but it is relevant to do so in for example diagnostic measurements.
 {% include markup/end %}
 
-We will now do a quick example of applying this to time-frequency data (TFR)
+We will now do a quick example of applying this to time-frequency data (TFR).
 
 ## Procedure for TFRs
 
@@ -396,7 +396,7 @@ We can see the sizes and ordering of dimensions using the in-built function _siz
     rpt_chan_freq_time
 
 meaning that we have 110 trials on 128 channels at 20 frequencies and at 26 time points.  
-For the difference betweem the averages, we have:
+For the difference between the averages, we have:
 
     >> size(tfr_difference.powspctrm)
 
