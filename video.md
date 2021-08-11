@@ -111,5 +111,4 @@ Includes a set of lecture series from Dr. Cohen from Donders Centre for Neurosci
 * [Synchronization](https://www.youtube.com/watch?v=ardi0hO6lOU&list=PLn0OLiymPak1wp4wMQ7tbYrtyFUatMVJs)
 * [Permutation Based Statistics](https://www.youtube.com/watch?v=7W11BOlM02I&list=PLn0OLiymPak1Ch2ce47MqwpIw0x3m6iZ7)
 
-You can also reach the older version of the lecture series from [here](https://www.youtube.com/channel/UCUR_LsXk7IYyueSnXcNextQ/playlists?view=50&sort=dd&shelf_id=2). 
-
+You can also reach the older version of the lecture series from [here](https://www.youtube.com/channel/UCUR_LsXk7IYyueSnXcNextQ/playlists?view=50&sort=dd&shelf_id=2).
