@@ -32,7 +32,7 @@ The TCP/IP interface in MATLAB is implemented in the freely available [TCP/UDP/I
 
 ### Standalone interface with rda2ft
 
-Instead of **[ft_realtime_brainampproxy](https://github.com/fieldtrip/fieldtrip/blob/release/realtime/example/ft_realtime_brainampproxy.m)** and MATLAB, you can use **rda2ft** to transport data from an RDA server to a FieldTrip buffer. **rda2ft** is written in C and takes 4 command line arguments, where the first two are mandator
+Instead of **[ft_realtime_brainampproxy](https://github.com/fieldtrip/fieldtrip/blob/release/realtime/example/ft_realtime_brainampproxy.m)** and MATLAB, you can use **rda2ft** to transport data from an RDA server to a FieldTrip buffer. **rda2ft** is written in C and takes 4 command line arguments, where the first two are mandatory:
 
     rda2ft rdaHostname rdaPort [ftHostname] [ftPort]
 
