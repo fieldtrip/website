@@ -13,7 +13,7 @@ EEGLAB is an interactive MATLAB toolbox for processing continuous and event-rela
 
 FieldTrip integrates EEGLAB functionalities to deal with component analysis. The function **[ft_componentanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_componentanalysis.m)** directly calls EEGLAB functions to perform the desired analysis as represented in the following figure:
 
-![How does FieldTrip use EEGLAB](/assets/img/getting_started/eeglab/EEGLAB_uses_FieldTrip.png)
+![How does FieldTrip use EEGLAB](/assets/img/getting_started/eeglab/FieldTrip_uses_EEGLAB.png)
 
 Note: DIPFIT graphical interface can be used in EEGLAB, but FieldTrip should be installed on the MATLAB path.
 
@@ -22,7 +22,7 @@ Note: DIPFIT graphical interface can be used in EEGLAB, but FieldTrip should be 
 EEGLAB integrates FieldTrip functions through the DIPFIT plug-in. This tool allows the localisation of the source signals from the components that have been separated using ICA. The main function used by DIPFIT is **[ft_dipolefitting](https://github.com/fieldtrip/fieldtrip/blob/release/ft_dipolefitting.m)**. It performs a grid search and non-linear fit with one or multiple dipoles and try to find the location where the dipole model is best able to explain the measured EEG topography, using realistic BEM and FEM volume conduction models.
 The following figure illustrates some FieldTrip functions used in DIPFIT:
 
-![How does EEGLAB use FieldTrip](/assets/img/getting_started/eeglab/FieldTrip_uses_EEGLAB.png)
+![How does EEGLAB use FieldTrip](/assets/img/getting_started/eeglab/EEGLAB_uses_FieldTrip.png)
 
 
 ## Complementary use of both toolboxes
