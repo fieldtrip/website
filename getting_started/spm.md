@@ -29,7 +29,7 @@ As SPM's core expertise is mainly oriented to volumetric data processing (MRI, f
 2. Spatial normalisation of volumetric images for efficient group statistics at the source level (e.g. spm_normalise, spm_deformations)
 The following figure shows main FieldTrip functions using SPM:
 
-![How FieldTrip uses SPM](/assets/img/getting_started/spm/FieldTrip_uses_SPM.png)
+{% include image src="/assets/img/getting_started/spm/FieldTrip_uses_SPM.png" width="300" %}
 
 
 ## How does SPM use FieldTrip?
@@ -37,7 +37,8 @@ The following figure shows main FieldTrip functions using SPM:
 SPM integrates some FieldTrip functions to perform operations on M/EEG data such as reading, format checking, plotting, preprocessing or frequency analysis. Specifically, SPM needs FieldTrip to create forward models (ft_compute_leadfield, ft_prepare_vol_sens).
 The following figure illustrates some SPM functions using FieldTrip:
 
-![How SPM uses FieldTrip](/assets/img/getting_started/spm/SPM_uses_FieldTrip.png)
+{% include image src="/assets/img/getting_started/spm/SPM_uses_FieldTrip.png" width="300" %}
+
 
 
 ## Complementary use of both toolboxes
@@ -64,7 +65,8 @@ On top of that, the way both toolboxes deal with the multiple comparison problem
 
 In summary, FieldTrip leaves more freedom to the user with highly customisable tools, while SPM tools are very specific to achieve maximum efficiency. This complementarity is illustrated in the following figure:
 
-![FieldTrip-SPM complmentarity](/assets/img/getting_started/spm/FieldTrip_SPM_complement.png)
+{% include image src="/assets/img/getting_started/spm/FieldTrip_SPM_complement.png" width="300" %}
+
 
 ## Practical issues
 
