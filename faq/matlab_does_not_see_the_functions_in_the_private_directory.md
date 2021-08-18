@@ -1,5 +1,6 @@
 ---
 title: MATLAB does not see the functions in the "private" directory
+tags: [faq, function, matlab]
 ---
 
 # MATLAB does not see the functions in the "private" directory
@@ -25,3 +26,4 @@ The private directory provides a convenient way of separating the high-level fun
     addpath /your/path/to/fieldtrip
     addpath /your/path/to/fieldtrip_private
 
+See also this FAQ that explains [why so many of the interesting functions are in the private directories](/faq/why_are_so_many_of_the_interesting_functions_in_the_private_directories).
