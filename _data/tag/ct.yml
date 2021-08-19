@@ -133,6 +133,9 @@
 - name:  Getting started with CTF data
   link:  /getting_started/ctf
 
+- name:  Template 3-D electrode sets
+  link:  /template/electrode
+
 - name:  Introduction on dealing with artifacts
   link:  /tutorial/artifacts
 

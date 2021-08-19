@@ -73,6 +73,9 @@
 - name:  References to implemented methods
   link:  /references_to_implemented_methods
 
+- name:  Template head models for forward volume conduction modeling
+  link:  /template/headmodel
+
 - name:  Localizing oscillatory sources using beamformer techniques
   link:  /tutorial/beamformer
 
