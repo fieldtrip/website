@@ -1,6 +1,6 @@
 ---
 title: Template 3-D electrode sets
-tags: [template]
+tags: [template, electrode]
 ---
 
 # Template 3-D electrode sets
