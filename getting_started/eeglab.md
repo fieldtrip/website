@@ -13,7 +13,7 @@ EEGLAB is an interactive MATLAB toolbox for processing continuous and event-rela
 
 FieldTrip integrates EEGLAB functionalities to deal with component analysis. The function **[ft_componentanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_componentanalysis.m)** directly calls EEGLAB functions to perform the desired analysis as represented in the following figure:
 
-{% include image src="/assets/img/getting_started/eeglab/FieldTrip_uses_EEGLAB.png" width="300" %}
+{% include image src="/assets/img/getting_started/eeglab/FieldTrip_uses_EEGLAB.png" width="500" %}
 
 ## How does EEGLAB use FieldTrip?
 
@@ -25,7 +25,7 @@ The DIPFIT plugin allows the localization of the sources that have been separate
 
 The following figure illustrates some FieldTrip functions used in DIPFIT:
 
-{% include image src="/assets/img/getting_started/eeglab/EEGLAB_uses_FieldTrip.png" width="300" %}
+{% include image src="/assets/img/getting_started/eeglab/EEGLAB_uses_FieldTrip.png" width="500" %}
 
 Note: FieldTrip should be added to the MATLAB path in order to use the DIPFIT plug-in.
 
@@ -55,7 +55,7 @@ eeglab_data = fieldtrip2eeglab(ft_data.hdr,cat(3,ft_data.trial{:}));
 pop_saveset(eeglab_data, 'filename', 'myfilename.set')
 ```
 
-Notes: 
+Notes:
 - To import frequency or timelock data to FieldTrip, **[ft_freqanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqanalysis.m)** or **[ft_timelockanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockanalysis.m)** can be used instead of ft_preprocessing, respectively.
 
 - The EEGLAB `.set` and `.fdt` formats are directly supported by the low-level **[ft_read_header](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_header.m)**, **[ft_read_data](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_data.m)** and **[ft_read_event](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_event.m)** functions as well as the high-level function **[ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_definetrial.m)**.
@@ -65,6 +65,6 @@ Notes:
 
 Both EEGLAB and FieldTrip work with data structures in MATLAB memory. The design philosophy in EEGLAB is to gather all data from one subject in a single "EEG" structure, and all data from a group of subjects in a "STUDY" structure. This is different from the design philosophy of FieldTrip, which does not gather all results in a single structure, but keeps the results from different analyses in [different structures](/faq/how_are_the_various_data_structures_defined). The following example shows this philosophycal difference:
 
-{% include image src="/assets/img/getting_started/eeglab/eeglab_FieldTrip_philosophy.png" width="300" %}
+{% include image src="/assets/img/getting_started/eeglab/eeglab_FieldTrip_philosophy.png" width="500" %}
 
 Together with the EEGLAB developers we maintain two functions for converting the data back and forth: **[fieldtrip2eeglab](https://github.com/fieldtrip/fieldtrip/blob/release/external/eeglab/eeglab2fieldtrip.m) and **[eeglab2fieldtrip](https://github.com/fieldtrip/fieldtrip/blob/release/external/eeglab/eeglab2fieldtrip.m)**.
