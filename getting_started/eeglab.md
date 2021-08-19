@@ -27,7 +27,7 @@ The following figure illustrates some FieldTrip functions used in DIPFIT:
 
 {% include image src="/assets/img/getting_started/eeglab/EEGLAB_uses_FieldTrip.png" width="500" %}
 
-Note: FieldTrip should be added to the MATLAB path in order to use the DIPFIT plug-in.
+Note that FieldTrip should be added to the MATLAB path in order to use the DIPFIT plug-in.
 
 ## Complementary use of both toolboxes
 
@@ -36,30 +36,22 @@ Here is an example code showing how to use those functions:
 
 - For users working on EEGLAB, first save data on disk: File → Save current dataset (must be a `.set` file)
 
-- (EEGLAB -> FieldTrip) Two methods can be used to import the `.set` file as a FieldTrip structure:
-	1. (recommended) Using **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)**:
-	```
-	cfg 		= [];
-	cfg.dataset = 'filename.set';
-	ft_data1	= ft_preprocessing(cfg);
-	```
-	2. Load the dataset through **[pop_loadset](https://sccn.ucsd.edu/~arno/eeglab/auto/pop_loadset.html)** and transform it to FieldTrip structure using **[eeglab2fieldtrip](https://github.com/fieldtrip/fieldtrip/blob/release/external/eeglab/eeglab2fieldtrip.m)** function:
-	```
-	EEG = pop_loadset(filename);
-	ft_data2 = eeglab2fieldtrip(EEG, 'raw');
-	```
+- (EEGLAB -> FieldTrip) Two methods can be used to import the `.set` file as a FieldTrip structure: 1. (recommended) Using **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)**:
+  `cfg = []; cfg.dataset = 'filename.set'; ft_data1 = ft_preprocessing(cfg);` 2. Load the dataset through **[pop_loadset](https://sccn.ucsd.edu/~arno/eeglab/auto/pop_loadset.html)** and transform it to FieldTrip structure using **[eeglab2fieldtrip](https://github.com/fieldtrip/fieldtrip/blob/release/external/eeglab/eeglab2fieldtrip.m)** function:
+  `EEG = pop_loadset(filename); ft_data2 = eeglab2fieldtrip(EEG, 'raw');`
 
 - (FieldTrip -> EEGLAB) For data that has been processed in FieldTrip, it can be converted to EEGLAB format using **[fieldtrip2eeglab](https://github.com/fieldtrip/fieldtrip/blob/release/external/eeglab/eeglab2fieldtrip.m)** function. Note that the data (second argument) have to be passed as an array (not a cell):
+
 ```
 eeglab_data = fieldtrip2eeglab(ft_data.hdr,cat(3,ft_data.trial{:}));
 pop_saveset(eeglab_data, 'filename', 'myfilename.set')
 ```
 
 Notes:
+
 - To import frequency or timelock data to FieldTrip, **[ft_freqanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqanalysis.m)** or **[ft_timelockanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockanalysis.m)** can be used instead of ft_preprocessing, respectively.
 
 - The EEGLAB `.set` and `.fdt` formats are directly supported by the low-level **[ft_read_header](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_header.m)**, **[ft_read_data](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_data.m)** and **[ft_read_event](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_event.m)** functions as well as the high-level function **[ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_definetrial.m)**.
-
 
 ## Design philosophies
 
@@ -67,4 +59,4 @@ Both EEGLAB and FieldTrip work with data structures in MATLAB memory. The design
 
 {% include image src="/assets/img/getting_started/eeglab/eeglab_FieldTrip_philosophy.png" width="500" %}
 
-Together with the EEGLAB developers we maintain two functions for converting the data back and forth: **[fieldtrip2eeglab](https://github.com/fieldtrip/fieldtrip/blob/release/external/eeglab/eeglab2fieldtrip.m) and **[eeglab2fieldtrip](https://github.com/fieldtrip/fieldtrip/blob/release/external/eeglab/eeglab2fieldtrip.m)**.
+Together with the EEGLAB developers we maintain two functions for converting the data back and forth: **[fieldtrip2eeglab](https://github.com/fieldtrip/fieldtrip/blob/release/external/eeglab/eeglab2fieldtrip.m)** and **[eeglab2fieldtrip](https://github.com/fieldtrip/fieldtrip/blob/release/external/eeglab/eeglab2fieldtrip.m)**.
