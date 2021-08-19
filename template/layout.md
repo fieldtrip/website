@@ -9,20 +9,20 @@ Electrode positions in the layouts are represented as points in 2-D Carthesian s
 
 You can use the following snippet of code to get a quick overview of the template layout sets.
 
-    dirlist  = dir('template/layout/*');
-    filename = {dirlist(~[dirlist.isdir]).name}'
+    dirlist  = dir('template/layout/*.*');
+    filename = {dirlist(~[dirlist.isdir]).name}';
+    
     for i=1:length(filename)
-    cfg = [];
-    cfg.layout = filename{i};
-    layout = ft_prepare_layout(cfg);
+      cfg = [];
+      cfg.layout = filename{i};
+      layout = ft_prepare_layout(cfg);
 
-    figure
-    ft_plot_layout(layout);
-    h = title(filename{i});
-    set(h, 'Interpreter', 'none');
+      figure
+      ft_plot_layout(layout);
+      title(filename{i}, 'Interpreter', 'none');
 
-    [p, f, x] = fileparts(filename{i});
-    print([lower(f) '.png'], '-dpng');
+      [p, f, x] = fileparts(filename{i});
+      print([lower(f) '.png'], '-dpng');
     end
 
 {% include markup/warning %}
