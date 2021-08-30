@@ -5,6 +5,8 @@ tags: [bids, sharing]
 
 # BIDS - the brain imaging data structure
 
+The BIDS standard aims to organise and describe neuroimaging data in a uniform way to simplify data sharing through the scientific community.
+
 FieldTrip can read data from all MEG, EEG, iEEG and MRI file formats that are supported in BIDS. Furthermore, it includes the **[data2bids](https://github.com/fieldtrip/fieldtrip/blob/release/data2bids.m)** function to convert data to the BIDS structure. This function can convert data formats (if needed), and writes the accompanying "sidecar files" that contain metadata about channels, coordinates, events, etcetera to the .json and .tsv format.
 
 {% include markup/warning %}
@@ -12,6 +14,13 @@ We recommend that you convert your raw data to BIDS **prior** to implementing yo
 {% include markup/end %}
 
 The BIDS project overview is presented on <http://bids.neuroimaging.io>. You can read the full specification on <https://bids-specification.readthedocs.io>. Please note that BIDS is not only relevant for FieldTrip, but that it also been embraced by the SPM, EEGLAB, MNE-Python and BrainStorm developers, and of course by the MRI and fMRI community, for example on <https://openneuro.org>.
+
+The following figure gives an example of BIDS EEG dataset:
+
+![BIDS EEG dataset](/assets/img/example/bids/BIDS_example.png)
+{% include image src="/assets/img/example/bids/BIDS_example.png" width="300" %}
+
+As we can see in this example, BIDS standard specifies the directory structures as well as the file names not only for the data (1), but also includes information about acquisition parameters (2), stimuli (3), channels (4), electrodes position (5) and coordinate system (6).
 
 {% include markup/success %}
 The [EEG sedation](/workshop/madrid2019/bids_sedation) example is currently the most clean and comprehensive FieldTrip-specific demonstration of how to convert existing raw EEG data to BIDS.

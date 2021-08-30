@@ -7,7 +7,7 @@ tags: [statistics, GLM, limo, eeg]
 
 ## Background
 
-**[LIMO EEG](https://github.com/LIMO-EEG-Toolbox/limo_tools/wiki)** is a free open source and open development toolbox for the statistical analysis of EEG data. The main goal of the toolbox is the analysis and formal testing for experimental effects at all electrodes/sensors and
+**[LIMO EEG](https://github.com/LIMO-EEG-Toolbox/limo_tools/wiki)** is a free open source and open development toolbox for the statistical analysis of EEG data ([Pernet *et al.*, 2011](https://doi.org/10.1155/2011/831409)). The main goal of the toolbox is the analysis and formal testing for experimental effects at all electrodes/sensors and
 all time points of EEG recordings, as well as in source space. LIMO EEG offers a large range of statistical features:
 - Tests (including many popular designs): linear regressions, ANOVAs, ANCOVAs.
 - Methods: mass univariate general linear analysis, spatiotemporal clustering and bootstrapping for multiple comparison correction
@@ -15,7 +15,7 @@ all time points of EEG recordings, as well as in source space. LIMO EEG offers a
 	1. within-subject variance (single trial analyses)
 	2. between-subject variance
 
-The following figure illustrates the hierarchical analysis [1]:
+The following figure illustrates the hierarchical analysis:
 ![LIMO hierarchical analysis](/assets/img/getting_started/limo/herarchical_analysis.png)
 {% include image src="/assets/img/getting_started/limo/herarchical_analysis.png" width="300" %}
 
@@ -28,27 +28,42 @@ Although the toolbox is primarily designed for EEG data, LIMO EEG can process ME
 
 ## Data format
 
-As LIMO EEG directly reads and writes data from/to disk, the recommended way to design the dataset is through **[Brain Imaging Data Structure (BIDS) standard](https://bids.neuroimaging.io/index.html)**. This standard aims to organise and describe neuroimaging data in a uniform way to simplify data sharing through the scientific community. The following figure gives an example of BIDS EEG dataset [2]:
-![BIDS EEG dataset](/assets/img/getting_started/limo/BIDS_example.png)
-{% include image src="/assets/img/getting_started/limo/BIDS_example.png" width="300" %}
+As LIMO EEG directly reads and writes data from/to disk, the recommended way to design the dataset is through **[Brain Imaging Data Structure (BIDS) standard](https://bids.neuroimaging.io/index.html)**. This standard aims to organise and describe neuroimaging data in a uniform way to simplify data sharing through the scientific community. An example of BIDS EEG dataset can be found [here](https://www.fieldtriptoolbox.org/example/bids/).
+
+The inputs of LIMO statistical analyses are preprocessed and segmented data (EEG or source signal). Following BIDS standard, those data are stored as derivatives data. 
+
+** !!!!!** LIMO reads BIDS ** DERIVATIVES ** ! => ....
 
 Organising a dataset following BIDS standard can be done through [data2bids](https://github.com/fieldtrip/fieldtrip/blob/release/data2bids.m) function. We also designed a simplified function to reorganise a dataset through the [create_bids](https://github.com/LucaLaFisca/LIMO-for-FieldTrip/blob/main/utils/create_bids.m) function.
 
+** ADD LINKS TO https://www.fieldtriptoolbox.org/example/bids/, https://www.fieldtriptoolbox.org/example/bids_eeg/ instead of GitHub page**
+** MOVE THE FIGURE TO BIDS EXAMPLE DOC  => https://www.fieldtriptoolbox.org/example/bids/   so, add an overview of BIDS and what FT can do with it (read and create BIDS data)**
+
+
 ## How does FieldTrip use LIMO EEG?
 
-Currently, there is no FieldTrip function that directly calls LIMO tools. However, a statfun could be created to perform specific statistical analyses with LIMO. The following figure shows how it could be implemented:
+Currently, there is no FieldTrip function that directly calls LIMO tools. Does not fit the way ft_statistics works... memory vs disk...
+
+However, a "statfun" could be created to perform specific statistical analyses with LIMO. The following figure shows how it could be implemented:
 ![FieldTrip uses LIMO](/assets/img/getting_started/limo/FieldTrip_uses_LIMO.png)
 {% include image src="/assets/img/getting_started/limo/FieldTrip_uses_LIMO.png" width="300" %}
 
 ## How does LIMO EEG use FieldTrip?
+
+** CHANGE THE FIGURE TO KEEP ANALOGY BETWEEN EEGLAB AND FIELDTRIP **
 LIMO EEG integrates FieldTrip functions to deal with FieldTrip data structures. As the statistical analyses require specific information, **[ft_datatype](https://www.fieldtriptoolbox.org/reference/ft_datatype/)** function allows the algorithm to define the structure and extract required field. Then, LIMO functions convert them to the appropriate format. The following figure illustrates this process:
 ![LIMO uses FieldTrip](/assets/img/getting_started/limo/LIMO_uses_FieldTrip.png)
 {% include image src="/assets/img/getting_started/limo/LIMO_uses_FieldTrip.png" width="300" %}
 
-
-## Complementary use of both toolboxes
+** example framework **
 
 Processing data through FieldTrip functions and performing statistical analyses on the proceesed data is made easy by the compatibility of LIMO EEG to FieldTrip data structures. The users can directly design a model with FieldTrip data as input (following BIDS standard). The following code gives an example of how to perform a statistical analysis on a dataset containing 2 categories and 4 covariates:
+
+** CHANGE THE STUDY TO FACE PAPER (https://github.com/fieldtrip/fieldtrip/blob/release/data2bids.m) AND EXPLAIN WHAT ARE THE CATEGORIES AND WHAT IS THE COVARIATE (TIME FROM 1ST PRESENTATION) **
+
+** ADD trialinfo screenshot to explain the dataset (cat, cov, ...) **
+
+** ADD information about specific subfunctions so that it can be understood by spm, ft and EEGLAB users (e.g. expectations about computation time)**
 
 ```
 % define the required paths
