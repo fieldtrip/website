@@ -121,9 +121,3 @@ LIMOPath = limo_random_select('one sample t-test',expected_chanlocs,'LIMOfiles',
 Then, results can be plot by calling `limo_results` function. By selecting "clustering" as MC correction and the generated "one_sample_ttest_parameter_1.mat" through "image all", you obtain the regions of significant difference between the categories as shown by this figure:
 ![LIMO T-test](/assets/img/getting_started/limo/ttest_example.jpg)
 {% include image src="/assets/img/getting_started/limo/ttest_example.jpg" width="300" %}
-
-
-## References
-[1] Cyril R. Pernet, Nicolas Chauveau, Carl Gaspar, Guillaume A. Rousselet, "LIMO EEG: A Toolbox for Hierarchical LInear MOdeling of ElectroEncephaloGraphic Data", Computational Intelligence and Neuroscience, vol. 2011, Article ID 831409, 11 pages, 2011. https://doi.org/10.1155/2011/831409
-
-[2] Pernet, C.R., Appelhoff, S., Gorgolewski, K.J. et al. EEG-BIDS, an extension to the brain imaging data structure for electroencephalography. Sci Data 6, 103 (2019). https://doi.org/10.1038/s41597-019-0104-8
