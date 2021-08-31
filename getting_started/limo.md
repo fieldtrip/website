@@ -118,7 +118,7 @@ cd(PATH_TO_DERIV)
 option = 'both'; %'model specification', 'contrast only' or 'both'
 ```
 
-Now that everything is properly defined, we can run the computation (Almost all your CPU cores will be requested for this task, it's time to grasp a coffee...)
+Now that everything is properly defined, we can run the computation (Almost all your CPU cores will be requested for this task, it's time to grab a coffee...)
 ```
 [LIMO_files, procstatus] = limo_batch(option,model,contrast); %writes beta and contrast estimates to disk in derivatives 2 folder
 ```
@@ -155,5 +155,5 @@ LIMOPath = limo_random_select(stat_test,expected_chanlocs,'LIMOfiles',...
 ```
 
 Then, results can be plot by calling `limo_results` function. By selecting "clustering" as MC correction and the generated "one_sample_ttest_parameter_1.mat" through "image all", you obtain the regions of significant difference between the categories as shown by this figure:
-![LIMO T-test](/assets/img/getting_started/limo/example_results.jpg)
-{% include image src="/assets/img/getting_started/limo/example_results.jpg" width="300" %}
+![LIMO T-test](/assets/img/getting_started/limo/example_results.png)
+{% include image src="/assets/img/getting_started/limo/example_results.png" width="300" %}
