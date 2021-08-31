@@ -61,6 +61,9 @@
 - name:  Why should I use the cfg.correcttail option when using statistics_montecarlo?
   link:  /faq/why_should_i_use_the_cfg.correcttail_option_when_using_statistics_montecarlo
 
+- name:  Getting started with LIMO EEG
+  link:  /getting_started/limo
+
 - name:  Reference documentation
   link:  /reference
 

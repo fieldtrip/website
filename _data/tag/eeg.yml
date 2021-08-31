@@ -112,6 +112,9 @@
 - name:  Human ECoG
   link:  /getting_started/human_ecog
 
+- name:  Getting started with LIMO EEG
+  link:  /getting_started/limo
+
 - name:  Getting started with Nicolet data
   link:  /getting_started/nicolet
 
