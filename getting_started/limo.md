@@ -7,7 +7,7 @@ tags: [statistics, GLM, limo, eeg]
 
 ## Background
 
-**[LIMO EEG](https://github.com/LIMO-EEG-Toolbox/limo_tools/wiki)** is an open source toolbox for statistical analysis of EEG data ([Pernet *et al.*, 2011](https://doi.org/10.1155/2011/831409)). The main goal of the toolbox is the analysis and statistical testing of experimental ERP effects in all channels and 
+**[LIMO EEG](https://github.com/LIMO-EEG-Toolbox/limo_tools/wiki)** is an open source toolbox for statistical analysis of EEG data ([Pernet *et al.*, 2011](https://doi.org/10.1155/2011/831409)). The main goal of the toolbox is the analysis and statistical testing of experimental ERP effects in all channels and
 time points, and for source reconstructions. It is implemented in MATLAB and depends on the MathWorks statistics toolbox.
 
 LIMO offers a large range of statistical features:
@@ -34,131 +34,110 @@ The inputs of LIMO consists of preprocessed and segmented data (EEG or source-le
 
 The outputs of LIMO are generated at each levels:
 
-1. First level analysis derives subject specific parameter estimates (`n_channels x n_timeframes x n_variables` matrix) for any effects as well as contrast estimates (`n_channels x n_timeframes x n_stat_variables` matrix). 
+1. First level analysis derives subject specific parameter estimates (`n_channels x n_timeframes x n_variables` matrix) for any effects as well as contrast estimates (`n_channels x n_timeframes x n_stat_variables` matrix).
 2. Second level analysis results of a `n_channels x n_timeframes x n_stat_variables` matrix corresponding to the group analysis.
 
 The following figure gives an example of inputs and outputs within the whole BIDS structure:
 
-{% include image src="/assets/img/getting_started/limo/BIDS_derivatives_example.png" width="300" %}
+{% include image src="/assets/img/getting_started/limo/BIDS_derivatives_example.png" width="500" %}
 
 ## How does LIMO use FieldTrip?
 
 LIMO integrates with some FieldTrip functions to deal with FieldTrip data structures. The **[ft_datatype](https://www.fieldtriptoolbox.org/reference/ft_datatype/)** function is used to determine the type of data structure in the `.mat` file, ensures that the data structure is valid and that it has the required fields. Subsequently, LIMO convert the data to its appropriate low-level format. The following figure illustrates this process:
 
-{% include image src="/assets/img/getting_started/limo/LIMO_uses_FieldTrip.png" width="300" %}
+{% include image src="/assets/img/getting_started/limo/LIMO_uses_FieldTrip.png" width="500" %}
 
 After having estimated the betas with the 1st-level analysis, LIMO continues with the 2nd-level (group level) analysis.
 
 ### Global framework
 
-Processing data through FieldTrip functions and performing statistical analyses on the proceesed data in LIMO is easy. The users can specify the experimental design (the GLM model) and the FieldTrip data as input. Using BIDS raw and derived data, the whole pipeline going from raw data, preprocessing, 1st-level analysis and 2nd-level testing, can be considered as follows: 
+Processing data through FieldTrip functions and performing statistical analyses on the proceesed data in LIMO is easy. The users can specify the experimental design (the GLM model) and the FieldTrip data as input. Using BIDS raw and derived data, the whole pipeline going from raw data, preprocessing, 1st-level analysis and 2nd-level testing, can be considered as follows:
 
-{% include image src="/assets/img/getting_started/limo/block_schematic_pipeline.png" width="300" %}
+{% include image src="/assets/img/getting_started/limo/block_schematic_pipeline.png" width="500" %}
 
 The example that follows uses the EEG of the multimodal [Wakeman & Henson (2015)](https://www.nature.com/articles/sdata20151) dataset. This data is aquired during visual stimulation with 3 face categories (famous, unknown and scrambled) and 1 covariate (the time between the first and the second repeated presentation of the same face). With the statistical analysis we want to identify spatio-temporal regions with a significant effect of the face type on the ERP, as well as the effect of the time between the repeated presentations of the same face. Categories have been coded as integer values: 1 (famous), 2 (unknown), 3 (scrambled), and the covariates are continuous values.
 
-1. **Model Design**
+#### Model Design
 
 The first step is to design the model corresponding to the study. This design consists of different steps:
 
-- The required paths and some additional informations have to be defined
-```
-PATH_TO_ROOT  = bids_root_folder;        % location of the top level BIDS directory with the raw data
-PATH_TO_DERIV = bids_derivatives_folder; % location of the preprocessed EEG data
+The required paths and some additional informations have to be defined
 
-% define the case (sensor or source level analysis)
-SOURCE_ANALYSIS = false; % set to true if you analyse source data
+    PATH_TO_ROOT  = bids_root_folder;        % location of the top level BIDS directory with the raw data
+    PATH_TO_DERIV = bids_derivatives_folder; % location of the preprocessed EEG data
 
-% define the task to analyse
-task_name = 'faceStudy';
+    % define the case (sensor or source level analysis)
+    SOURCE_ANALYSIS = false; % set to true if you analyse source data
 
-% trial start and end
-trial_start = -200; % starting time of the trial in ms
-trial_end   =  500; % ending time of the trial in ms
-```
+    % define the task to analyse
+    task_name = 'faceStudy';
 
-- We define the contrast we want to study
+    % trial start and end
+    trial_start = -200; % starting time of the trial in ms
+    trial_end   =  500; % ending time of the trial in ms
 
-```
-contrast.mat = [1 -0.5 -0.5]; % contrast between famous (the first value) and other categories (the sum of the 2nd and 3rd value)
-```
+We define the contrast we want to study
 
-- The split of the covariates (regressors) has to be defined. Here we want to create 1 column of covariates-by-regressor to analyse the influence on each condition:
+    contrast.mat = [1 -0.5 -0.5]; % contrast between famous (the first value) and other categories (the sum of the 2nd and 3rd value)
 
-```
-regress_cat = { 1 , 1;   
-                2 , 2;
-                3 , 3};  % correspondance between covariate and categories. Here, we create 1 column of covariate by category.
+The split of the covariates (regressors) has to be defined. Here we want to create 1 column of covariates-by-regressor to analyse the influence on each condition:
 
-% Note: the following syntax has to be respected for the mapping (/!\ don't use the value 0 /!\):
-% { first_regressor_merging,  corresponding_value;
-%   second_regressor_merging, corresponding_value;
-%   nth_regressor_merging,    corresponding_value    }
-```
+    regress_cat = { 1 , 1;   
+                    2 , 2;
+                    3 , 3};  % correspondance between covariate and categories. Here, we create 1 column of covariate by category.
 
-- In case there are several covariates, we select the desired covariates (regressors) to study. Here there is only one covariate
+    % Note: the following syntax has to be respected for the mapping (/!\ don't use the value 0 /!\):
+    % { first_regressor_merging,  corresponding_value;
+    %   second_regressor_merging, corresponding_value;
+    %   nth_regressor_merging,    corresponding_value    }
 
-```
-my_trialinfo = 'trialinfo.mat'; % information about trials for each subject, as defined by FT_DEFINETRIAL and FT_PREPROCESSING
-selected_regressors = 4;        % selection from trialinfo.Properties.VariableNames (here, the first 3 columns correspond to the categories and the 4th one is the covariate)
-```
+In case there are several covariates, we select the desired covariates (regressors) to study. Here there is only one covariate
 
-- Create the model. This calls raw data of each subject and designs the required matrices and can take a few minutes.
+    my_trialinfo = 'trialinfo.mat'; % information about trials for each subject, as defined by FT_DEFINETRIAL and FT_PREPROCESSING
+    selected_regressors = 4;        % selection from trialinfo.Properties.VariableNames (here, the first 3 columns correspond to the categories and the 4th one is the covariate)
 
-```
-model = create_model(PATH_TO_DERIV, PATH_TO_SOURCE, SOURCE_ANALYSIS, task_name, my_trialinfo, trial_start, trial_end, selected_regressors, regress_cat);
-```
+Create the model. This calls raw data of each subject and designs the required matrices and can take a few minutes.
 
-2. **First level analysis**
+    model = create_model(PATH_TO_DERIV, PATH_TO_SOURCE, SOURCE_ANALYSIS, task_name, my_trialinfo, trial_start, trial_end, selected_regressors, regress_cat);
 
-The beta and contrast estimates are computed subject-by-subject through a parallel computing pipeline.
+#### First level analysis
 
-As we want both the betas (i.e. the ERP model) and contrast (the conditional difference) to be computed and stored as "derivatives 2" (cf. the pipeline figure above), we do the following:
+The beta and contrast estimates are computed subject-by-subject through a parallel computing pipeline. As we want both the betas (i.e. the ERP model) and contrast (the conditional difference) to be computed and stored as "derivatives 2" (cf. the pipeline figure above), we do the following:
 
-```
-cd(PATH_TO_DERIV)
-option = 'both';    % 'model specification', 'contrast only' or 'both'
-```
+    cd(PATH_TO_DERIV)
+    option = 'both';    % 'model specification', 'contrast only' or 'both'
 
 Now that everything is properly defined, we can run the computation (Almost all your CPU cores will be requested for this task, it's time to grab a coffee...)
 
-```
-[LIMO_files, procstatus] = limo_batch(option, model, contrast); % this writes beta and contrast estimates to disk in derivatives 2 folder
-```
+    [LIMO_files, procstatus] = limo_batch(option, model, contrast); % this writes beta and contrast estimates to disk in derivatives 2 folder
 
-3. **Second level analysis**
+#### Second level analysis
 
 The group-level analysis will run as a parallel computing pipeline on contrast estimates (in this example).
 
 We first need an estimates of the channel locations representing all the subjects. Here we consider the channel-by-channel average position:
 
-```
- expected_chanlocs = limo_avg_expected_chanlocs(PATH_TO_DERIV, model.defaults);
-```
+    expected_chanlocs = limo_avg_expected_chanlocs(PATH_TO_DERIV, model.defaults);
 
 We then select the targeted first-level estimates (here the first contrast, corresponding to face type comparison) and the name of the corresponding statistical test we want to perform
 
-```
-my_con = 'con_1'
-cd('derivatives/eeg') %path to 1st level analysis output
-LIMOfiles = fullfile(pwd,sprintf('%s_files_GLM_OLS_Time_Channels.txt', my_con));
-if ~exist(['derivatives/t_test_' my_con],'dir')
-    mkdir(['derivatives/t_test_' my_con])
-end
-cd(['derivatives/t_test_' my_con])
-```
+    my_con = 'con_1'
+    cd('derivatives/eeg') %path to 1st level analysis output
+    LIMOfiles = fullfile(pwd,sprintf('%s_files_GLM_OLS_Time_Channels.txt', my_con));
+    if ~exist(['derivatives/t_test_' my_con],'dir')
+        mkdir(['derivatives/t_test_' my_con])
+    end
+    cd(['derivatives/t_test_' my_con])
 
 Finally, we run the second level analysis specifying the desired statistical test, the desired number of bootstrap repetitions, and specifying whether a threshold free cluster enhancement (TFCE, [Pernel *et al.*, 2015](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4510917/)) has to be computed. Another parallel computing pipeline will start which will not take much time.
 
-```
-stat_test = 'one sample t-test';  % desired statistical test
-nboot = 1000;                     % number of boostrap repetition
-tfce = 1;                         % set this to 0 if TFCE does not have to be run
-
-LIMOPath = limo_random_select(stat_test,expected_chanlocs,'LIMOfiles',... 
-    LIMOfiles,'analysis_type','Full scalp analysis',...
-    'type','Channels','nboot',nboot,'tfce',tfce,'skip design check','yes');
-```
+    stat_test = 'one sample t-test';  % desired statistical test
+    nboot = 1000;                     % number of boostrap repetition
+    tfce = true;                      % set this to false if TFCE does not have to be run
+    
+    LIMOPath = limo_random_select(stat_test,expected_chanlocs,'LIMOfiles',...
+        LIMOfiles,'analysis_type','Full scalp analysis',...
+        'type','Channels','nboot',nboot,'tfce',tfce,'skip design check','yes');
 
 The results can be plotted by calling the `limo_results` function. By selecting "clustering" as correction for multiple comparisons and the generated "one_sample_ttest_parameter_1.mat" through "image all", you obtain the regions of significant difference between the categories as shown by this figure:
 
