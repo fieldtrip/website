@@ -32,23 +32,24 @@ Imaging methods such as MRI and CT result in 3-D volumetric representations of t
 
 | system             | units | orientation | origin                                      | scaling                                                                                                   | notes                        |
 | ------------------ | ----- | ----------- | ------------------------------------------- | --------------------------------------------------------------------------------------------------------- | ---------------------------- |
-| ACPC               | mm    | RAS         | anterior commissure                         | native, i.e., not normalized to a template                                                            |                              |
-| Allen Institute    | mm    | RAS         | Bregma point                                |                                                                                                           |                              |
-| Analyze            | mm    | LAS         |                                             | native                                                                                                    |                              |
-| BTi/4D             | m     | ALS         | between the ears                            | native                                                                                                    |                              |
-| CTF MRI            | mm    | ALS         | between the ears                            | native                                                                                                    | voxel order can be arbitrary |
-| CTF gradiometer    | cm    | ALS         | between the ears                            | native                                                                                                    |                              |
-| CapTrak            | mm    | RAS         | approximately between the ears              |                                                                                                           |                              |
-| Chieti ITAB        | mm    | RAS         | between the ears                            | native                                                                                                    |                              |
-| DICOM              | mm    | LPS         |                                             | native                                                                                                    |                              |
-| EEGLAB             | mm    | ALS         | between the ears                            | native                                                                                                    |                              |
-| FreeSurfer         | mm    | RAS         | center of isotropic 1 mm 256x256x256 volume |                                                                                                           |                              |
-| MNI                | mm    | RAS         | anterior commissure                         | scaled to match averaged template                                                                         |                              |
-| NIfTI              | mm    | RAS         | scanner origin (centre of gradient coil)    | see [here](https://brainder.org/2012/09/23/the-nifti-file-format/), search for "Orientation information". |                              |
-| Neuromag/Elekta/Megin    | m     | RAS         | between the ears                            | native                                                                                                    |                              |
-| Paxinos-Franklin   | mm    | RSP         | Bregma point                                |                                                                                                           |                              |
-| Talairach-Tournoux | mm    | RAS         | anterior commissure                         | scaled to match atlas                                                                                     |                              |
-| Yokogawa           |       | ALS         | center of device                            |                                                                                                           |                              |
+| ACPC                    | mm    | RAS         | anterior commissure                         | native, i.e., not normalized to a template                                                            |                              |
+| Allen Institute         | mm    | RAS         | Bregma point                                |                                                                                                           |                              |
+| Analyze                 | mm    | LAS         |                                             | native                                                                                                    |                              |
+| BTi/4D                  | m     | ALS         | between the ears                            | native                                                                                                    |                              |
+| CTF MRI                 | mm    | ALS         | between the ears                            | native                                                                                                    | voxel order can be arbitrary |
+| CTF gradiometer         | cm    | ALS         | between the ears                            | native                                                                                                    |                              |
+| CapTrak                 | mm    | RAS         | approximately between the ears              |                                                                                                           |                              |
+| Chieti ITAB             | mm    | RAS         | between the ears                            | native                                                                                                    |                              |
+| DICOM                   | mm    | LPS         |                                             | native                                                                                                    |                              |
+| EEGLAB                  | mm    | ALS         | between the ears                            | native                                                                                                    |                              |
+| FreeSurfer              | mm    | RAS         | center of isotropic 1 mm 256x256x256 volume |                                                                                                           |                              |
+| MNI                     | mm    | RAS         | anterior commissure                         | scaled to match averaged template                                                                         |                              |
+| NIfTI                   | mm    | RAS         | scanner origin (centre of gradient coil)    | see [here](https://brainder.org/2012/09/23/the-nifti-file-format/), search for "Orientation information". |                              |
+| Neuromag/Elekta/Megin   | m     | RAS         | between the ears                            | native                                                                                                    |                              |
+| Paxinos-Franklin        | mm    | RSP         | Bregma point                                |                                                                                                           |                              |
+| Scanner RAS (`scanras`) | mm    | RAS         | scanner origin                              | native                                                                                                    |                              |
+| Talairach-Tournoux      | mm    | RAS         | anterior commissure                         | scaled to match atlas                                                                                     |                              |
+| Yokogawa                |       | ALS         | center of device                            |                                                                                                           |                              |
 
 A/P means anterior/posterior
 L/R means left/right
@@ -251,6 +252,16 @@ The most common definition of the head coordinate system used by the software th
 - the X-axis goes towards NAS
 - the Y-axis goes approximately towards LPA, orthogonal to X and in the plane spanned by the fiducials
 - the Z-axis goes approximately towards the vertex, orthogonal to X and Y
+
+## Details of the Scanner RAS coordinate system
+
+The **Scanner RAS** coordinate system is centered at the native scanner origin with the axes reordered and flipped so that
+
+- The x-axis increases from left to right
+- The y-axis increases from posterior to anterior
+- The z-axis increases from inferior to superior
+
+The process to generate this coordinate system can be done for any standard image format (e.g. `.nii`, `nii.gz`, `.mgz`) and is described in more detail in the [Nipy Documentation](https://nipy.org/nibabel/coordinate_systems.html).
 
 ## Details of the Talairach-Tournoux coordinate system
 
