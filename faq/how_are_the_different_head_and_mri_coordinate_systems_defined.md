@@ -261,7 +261,7 @@ The **Scanner RAS** coordinate system is centered at the native scanner origin w
 - The y-axis increases from posterior to anterior
 - The z-axis increases from inferior to superior
 
-The process to generate this coordinate system can be done for any standard image format (e.g. `.nii`, `nii.gz`, `.mgz`) and is described in more detail in the [Nipy Documentation](https://nipy.org/nibabel/coordinate_systems.html).
+The process to generate this coordinate system can be done for any standard image format (e.g. `.nii`, `nii.gz`, `.mgz`) and is described in more detail in the [Nipy Documentation](https://nipy.org/nibabel/coordinate_systems.html). Note that the **Scanner RAS** origin is defined differently than the **Freesurfer** (also known as surface RAS or TkReg RAS) origin so they are generally not the same.
 
 ## Details of the Talairach-Tournoux coordinate system
 
