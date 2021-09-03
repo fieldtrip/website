@@ -1,6 +1,6 @@
 ---
 title: Fitting oscillations and one-over-F (FOOOF).
-tags: [example, irasa]
+tags: [example, fooof]
 ---
 
 # Fitting oscillations and one-over-F (FOOOF)
