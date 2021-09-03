@@ -5,7 +5,7 @@ tags: [example, fooof]
 
 # Fitting oscillations and one-over-F (FOOOF)
 
-FOOOF allows distinguishing rhythmic activity from concurrent power-spectral 1/f modulations. 
+FOOOF allows distinguishing rhythmic activity from concurrent power-spectral 1/f modulations. The implementation in FieldTrip is using code from the Brainstorm toolbox. The Brainstorm website has a [tutorial](https://neuroimage.usc.edu/brainstorm/Tutorials/Fooof) that provides some more details. 
 
 ## Extracting spectral features of simulated data
 
