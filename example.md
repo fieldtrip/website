@@ -37,6 +37,7 @@ See also the [tutorials](/tutorial) and [frequently asked questions](/faq).
 - [Fourier analysis of oscillatory power and coherence](/tutorial/fourier)
 - [Simulate an oscillatory signal with phase resetting](/example/phase_reset)
 - [Irregular Resampling Auto-Spectral Analysis (IRASA)](/example/irasa)
+- [Finding oscillations and one-over-F (FOOOF)](/example/fooof)
 - [Conditional Granger causality in the frequency domain](/example/connectivity_conditional_granger)
 
 ### Source reconstruction
