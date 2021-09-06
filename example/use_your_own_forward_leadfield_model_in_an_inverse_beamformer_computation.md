@@ -19,7 +19,7 @@ That can be demonstrated using the following code
     end
 
 I suggest that you do not use these electrodes, but instead that
-you get more meaningfull electrode locations. See for example http://robertoostenveld.nl/?p=5
+you get more meaningful electrode locations. See for example http://robertoostenveld.nl/?p=5
 
     % create a concentric 3-sphere volume conductor, the radius is the same as for the electrodes
     vol   = [];

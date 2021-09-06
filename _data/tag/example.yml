@@ -118,6 +118,9 @@
 - name:  Fixing a missing channel
   link:  /example/fixing_a_missing_sensor
 
+- name:  Fitting oscillations and one-over-F (FOOOF).
+  link:  /example/fooof
+
 - name:  Example real-time average
   link:  /example/ft_realtime_average
 
