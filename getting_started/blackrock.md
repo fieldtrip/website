@@ -9,4 +9,36 @@ The specifications of the Blackrock file formats can be found on [the company's 
 
 To read Blackrock data, you will need the NPMK toolbox. The latest version is available from <https://github.com/BlackrockMicrosystems/NPMK>.
 
-At this moment FieldTrip does not offer a complete implementation for importing Blackrock data. We are looking for people to help with implementing it. See [bug #2964](http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=2964) and [issue #1323](https://github.com/fieldtrip/fieldtrip/issues/1323).
+## Set the path
+
+To get started, you should add the FieldTrip main directory to your path, and execute the **[ft_defaults](https://github.com/fieldtrip/fieldtrip/blob/release/ft_defaults.m)** function, which sets the defaults and configures up the minimal required path settings. See also this [frequently asked question](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path).
+
+    addpath <path_to_fieldtrip>
+    ft_defaults
+
+## Reading spike data
+
+To read spike data from `.nev` files, you would do the following
+
+    spike = ft_read_spike('yourfile.nev')
+
+This returns the spike timestamps and waveforms in a format according to **[ft_datatype_spike](https://github.com/fieldtrip/fieldtrip/blob/release/utilities/ft_datatype_spike.m)**.
+
+## Reading continuous LFP data
+
+To read continuous LFP data from `.nsX` files, you can use the following high-level FieldTrip code
+
+    cfg = [];
+    cfg.dataset = 'yourfile.nsX'
+    % you can specify additional preprocessing options, such as filters
+    data = ft_preprocessing(cfg)
+
+This returns the LFP data in a format according to **[ft_datatype_raw](https://github.com/fieldtrip/fieldtrip/blob/release/utilities/ft_datatype_raw.m)**.
+
+You can also use the low-level reading functions like this
+
+    hdr = ft_read_header ('yourfile.nsX')
+    dat = ft_read_data   ('yourfile.nsX')
+    evt = ft_read_event  ('yourfile.nev')  % note that the nsX file does not contain trigger events, but the corresponding nev file does
+
+See this [FAQ](/faq/how_can_i_import_my_own_dataformat) for more details about the high-level and low-level functions.

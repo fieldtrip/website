@@ -34,7 +34,7 @@ Each runname/-directory usually contains the following file
 
 FieldTrip knows how to deal with raw, i.e. unprocessed, data files. Data files which have been obtained using BTi/4D software (such as averaging, digital weight computation etc) can probably not be handled by FieldTrip.
 
-## Set path
+## Set the path
 
 To get started, you should add the FieldTrip main directory to your path, and execute the **[ft_defaults](https://github.com/fieldtrip/fieldtrip/blob/release/ft_defaults.m)** function, which sets the defaults and configures up the minimal required path settings. See also this [frequently asked question](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path).
 

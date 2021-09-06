@@ -42,7 +42,7 @@ You should not store any scripts or mat files in the xxx.ds folder. When analyzi
 2.  a folder that contains your MATLAB scripts
 3.  a folder that contains the MATLAB/FieldTrip data that you want to save
 
-## Set path
+## Set the path
 
 To get started, you should add the FieldTrip main directory to your path, and execute the **[ft_defaults](https://github.com/fieldtrip/fieldtrip/blob/release/ft_defaults.m)** function, which sets the defaults and configures up the minimal required path settings. See also this [frequently asked question](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path).
 
