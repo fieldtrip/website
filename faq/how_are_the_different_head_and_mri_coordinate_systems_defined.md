@@ -255,17 +255,21 @@ The most common definition of the head coordinate system used by the software th
 
 ## Details of the Scanner RAS coordinate system
 
-The **Scanner RAS** coordinate system is centered at the native scanner origin with the axes reordered and flipped so that
+The **Scanner RAS** coordinate system has the same origin as the DICOM coordinate system, but is rotated 180 degrees around the z-axis. The Scanner RAS coordinate system is identical to the NIfTI scanner coordinate system (qform). It is defined as
 
-- The x-axis increases from left to right
-- The y-axis increases from posterior to anterior
-- The z-axis increases from inferior to superior
+- the origin corresponds to the scanner origin, which is the center of the gradient coil
+- the x-axis increases from left to right
+- the y-axis increases from posterior to anterior
+- the z-axis increases from inferior to superior
 
-The process to generate this coordinate system can be done for any standard image format (e.g. `.nii`, `nii.gz`, `.mgz`) and is described in more detail in the [Nipy Documentation](https://nipy.org/nibabel/coordinate_systems.html). Note that the **Scanner RAS** origin is defined differently than the **Freesurfer** (also known as surface RAS or TkReg RAS) origin so they are generally not the same.
+The process to generate data in this coordinate system can be done for any standard image format (e.g. `.nii`, `nii.gz`, `.mgz`) and is described in more detail in the [Nipy Documentation](https://nipy.org/nibabel/coordinate_systems.html). 
+
+Note that the origin of the **Scanner RAS** is defined differently than that of the **Freesurfer** (also known as "Surface RAS" or "TkReg RAS") origin, so they are generally not the same.
 
 ## Details of the Talairach-Tournoux coordinate system
 
 The [Co-Planar Stereotaxic Atlas of the Human Brain](https://www.thieme.com/books-main/neurosurgery/product/414-co-planar-stereotaxic-atlas-of-the-human-brain) (1988) by Talairach and Tournoux defines a coordinate system using the Anterior and Posterior Commissure and applies that on a post-mortem dissection of an individual human brain. Furthermore, it introduces a strategy for piece-wise linear scaling to allow other brains to be compared to the template brain that is featured in the atlas.
+
 The Talairach-Tournoux coordinate system is comparable to, but [not exactly the same as the MNI coordinate system](http://imaging.mrc-cbu.cam.ac.uk/imaging/MniTalairach). It is defined using landmarks inside the brain and therefore can only be determined from an MRI scan, CT scan, or X-ray photo. This is in contrast to the external landmarks that are used for EEG/MEG recording. The landmarks used in the TT coordinate system are the anterior and posterior commisura (AC and PC) and the coordinate axes are defined according to
 
 - the origin of the TT coordinate system is in the AC
