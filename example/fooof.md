@@ -5,19 +5,17 @@ tags: [example, fooof]
 
 # Fitting oscillations and one-over-F (FOOOF)
 
-FOOOF allows distinguishing rhythmic activity from concurrent power-spectral 1/f modulations. The implementation in FieldTrip is using code from the Brainstorm toolbox. The Brainstorm website has a [tutorial](https://neuroimage.usc.edu/brainstorm/Tutorials/Fooof) that provides some more details. 
+FOOOF allows distinguishing rhythmic activity from concurrent power-spectral 1/f modulations. The implementation in FieldTrip is using code from the Brainstorm toolbox. The Brainstorm website has a [tutorial](https://neuroimage.usc.edu/brainstorm/Tutorials/Fooof) that provides some more details, there is a [GitHub project](https://fooof-tools.github.io/fooof/) with more tutorials and documentation, and the [FOOOF reference paper](https://doi.org/10.1038/s41593-020-00744-x) explains and demonstrates it.
 
-## Extracting spectral features of simulated data
+The following code shows how to extract spectral features from simulated data.
 
-```
     % simulate data
     F = 1; % weight of (F)ractal components of the simulated data
     O = 1; % weight of (O)scillatory components of the simulated data
     t = (1:60000)/1000; % time axis
     for rpt = 1:1
-        % use a simple method to make pink noise
-        % that does not rely on the digital signal processing toolbox
-        fn = cumsum(randn(1,length(t))); 
+        % use a simple method to make pink noise that does not rely on the digital signal processing toolbox
+        fn = cumsum(randn(1,length(t)));
         fn = fn./max(abs(fn));        
 
         sgn10 = ft_preproc_bandpassfilter(randn(1,length(t)),1000,[8 12],[],'firws');
@@ -56,7 +54,7 @@ FOOOF allows distinguishing rhythmic activity from concurrent power-spectral 1/f
     cfg.operation     = 'x2-x1';
     oscillatory = ft_math(cfg, fractal, original);
 
-    % display the spectra in log-log scale
+    % display the spectra on a log-log scale
     figure();
     hold on;
     plot(log(original.freq), log(original.powspctrm),'k');
@@ -71,7 +69,5 @@ FOOOF allows distinguishing rhythmic activity from concurrent power-spectral 1/f
     elseif F~=0 && O~=0
       title('mixed signal');
     end
-```
 
 {% include image src="/assets/img/example/fooof/example.png" %}
-
