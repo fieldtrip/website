@@ -32,7 +32,7 @@ Imaging methods such as MRI and CT result in 3-D volumetric representations of t
 
 | system             | units | orientation | origin                                      | scaling                                                                                                   | notes                        |
 | ------------------ | ----- | ----------- | ------------------------------------------- | --------------------------------------------------------------------------------------------------------- | ---------------------------- |
-| ACPC               | mm    | RAS         | anterior commissure                         | native, i.e., not normalized to a template                                                            |                              |
+| ACPC               | mm    | RAS         | anterior commissure                         | native, i.e., not normalized to a template                                                                |                              |
 | Allen Institute    | mm    | RAS         | Bregma point                                |                                                                                                           |                              |
 | Analyze            | mm    | LAS         |                                             | native                                                                                                    |                              |
 | BTi/4D             | m     | ALS         | between the ears                            | native                                                                                                    |                              |
@@ -40,11 +40,11 @@ Imaging methods such as MRI and CT result in 3-D volumetric representations of t
 | CTF gradiometer    | cm    | ALS         | between the ears                            | native                                                                                                    |                              |
 | CapTrak            | mm    | RAS         | approximately between the ears              |                                                                                                           |                              |
 | Chieti ITAB        | mm    | RAS         | between the ears                            | native                                                                                                    |                              |
-| DICOM              | mm    | LPS         |                                             | native                                                                                                    |                              |
+| DICOM              | mm    | LPS         | centre of gradient coil                     | native, see [here](https://doi.org/10.1016/j.jneumeth.2016.03.001)                                        |                              |
 | EEGLAB             | mm    | ALS         | between the ears                            | native                                                                                                    |                              |
 | FreeSurfer         | mm    | RAS         | center of isotropic 1 mm 256x256x256 volume |                                                                                                           |                              |
 | MNI                | mm    | RAS         | anterior commissure                         | scaled to match averaged template                                                                         |                              |
-| NIfTI              | mm    | RAS         | scanner origin (centre of gradient coil)    | see [here](https://brainder.org/2012/09/23/the-nifti-file-format/), search for "Orientation information". |                              |
+| NIfTI              | mm    | RAS         | centre of gradient coil                     | see [here](https://brainder.org/2012/09/23/the-nifti-file-format/), search for "Orientation information". |                              |
 | Neuromag/Elekta/Megin    | m     | RAS         | between the ears                            | native                                                                                                    |                              |
 | Paxinos-Franklin   | mm    | RSP         | Bregma point                                |                                                                                                           |                              |
 | Talairach-Tournoux | mm    | RAS         | anterior commissure                         | scaled to match atlas                                                                                     |                              |
@@ -151,17 +151,20 @@ The **CTF** coordinate system is expressed in centimeter (except the MRI, which 
 
 ## Details of the DICOM coordinate system
 
-**DICOM** is a standard for handling digital imaging in medicine, and as such uses a radiological coordinate system, defined as
+**DICOM** is a standard for handling digital imaging in medicine. DICOM is also used for ultrasound and X-ray photography and each DICOM file by itself stores a 2D image. For MRI data a stack of those files is used to describe the volumetric data and the origin is at the magnet isocenter, which coincides with the center of the gradient coils. The definition of the coordinate system is
 
+- the origin is at the scanner origin, which is the center of the gradient coil
 - x increases from right to left
 - y increases from anterior to posterior
 - z increases from inferior to superior
 
-See [this page](http://dicomiseasy.blogspot.com/2013/06/getting-oriented-using-image-plane.html) for more information about the DICOM coordinate system.
+{% include image src="/assets/img/faq/how_are_the_different_head_and_mri_coordinate_systems_defined/coordinatesystem_dicom.jpg" width="200" %}
+
+The paper [The first step for neuroimaging data analysis: DICOM to NIfTI conversion](https://doi.org/10.1016/j.jneumeth.2016.03.001) explains it very well. See also [this page](http://dicomiseasy.blogspot.com/2013/06/getting-oriented-using-image-plane.html) for more information about the DICOM coordinate system.
 
 ## Details of the EEGLAB coordinate system
 
-The **EEGLAB** coordinate system is identical to the CTF coordinate system (see above), except that it is always expressed in millimeters. 
+The **EEGLAB** coordinate system is identical to the CTF coordinate system (see above), except that it is always expressed in millimeters.
 
 - the origin is exactly between LPA and RPA
 - the X-axis goes towards NAS
@@ -199,9 +202,9 @@ The **Neuromag** coordinate system is expressed in meter, with the principal (X,
 
 ## Details of the NIfTI coordinate system
 
-**NIfTI** is adapted from the Analyze 7.5 format (see [this page](http://nifti.nimh.nih.gov/) for more information). It allows two coordinate systems: one related to the scanner coordinate system (qform) and one related to a standard coordinate system (sform) such as MNI or Talairach-Tournoux (see below). The default scanner coordinate system is defined as
+The **NIfTI** format has been adapted from the Analyze 7.5 format (see [this page](http://nifti.nimh.nih.gov/) for more information). It allows two coordinate systems: one related to the scanner coordinate system (qform) and one related to a standard coordinate system (sform) such as MNI or Talairach-Tournoux (see below). The default scanner coordinate system is defined as
 
-- The origin is generally the scanner origin, for example the center of the gradient coil
+- The origin is at the scanner origin, which is the center of the gradient coil
 - The x-axis increases from left to right
 - The y-axis increases from posterior to anterior
 - The z-axis increases from inferior to superior
