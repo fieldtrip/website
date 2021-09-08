@@ -2,7 +2,7 @@
 title: How are the different head and MRI coordinate systems defined?
 tags: [faq, headmodel, mri, source, fiducial, coordinate]
 redirect_from:
-  - /faq/coordsys/
+  - /faq/how_are_the_different_head_and_mri_coordinate_systems_defined/
 ---
 
 # How are the different head and MRI coordinate systems defined?
