@@ -1,14 +1,14 @@
 - name:  Where is the anterior commissure?
   link:  /faq/anterior_commissure
 
+- name:  How are the different head and MRI coordinate systems defined?
+  link:  /faq/coordsys
+
 - name:  How should I specify the fiducials for electrode realignment?
   link:  /faq/fiducial
 
 - name:  How are electrodes, magnetometers or gradiometers described?
   link:  /faq/how_are_electrodes_magnetometers_or_gradiometers_described
-
-- name:  How are the different head and MRI coordinate systems defined?
-  link:  /faq/how_are_the_different_head_and_mri_coordinate_systems_defined
 
 - name:  How are the Left and Right Pre-Auricular (LPA and RPA) points defined?
   link:  /faq/how_are_the_lpa_and_rpa_points_defined
