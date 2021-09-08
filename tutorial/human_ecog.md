@@ -241,7 +241,7 @@ CRITICAL STEP Accuracy of the realignment operation is important for correctly p
 
 ### Volume-based registration (optional)
 
-**26 & 27**) To generalize the electrode coordinates to other brains or MNI-based neuroanatomical atlases in a later step, register the subject's brain to the standard MNI brain and use the resulting deformation parameters to obtain the electrodes in standard MNI space. The volume-based registration technique considers the overall geometry of the brain and can be used for the spatial normalization of all types of electrodes, whether depth or on the surface.
+**26** & **27**) To generalize the electrode coordinates to other brains or MNI-based neuroanatomical atlases in a later step, register the subject's brain to the standard MNI brain and use the resulting deformation parameters to obtain the electrodes in standard MNI space. The volume-based registration technique considers the overall geometry of the brain and can be used for the spatial normalization of all types of electrodes, whether depth or on the surface.
 
     cfg            = [];
     cfg.elec       = elec_acpc_fr;
