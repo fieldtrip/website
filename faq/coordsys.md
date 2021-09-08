@@ -1,6 +1,8 @@
 ---
 title: How are the different head and MRI coordinate systems defined?
 tags: [faq, headmodel, mri, source, fiducial, coordinate]
+redirect_from:
+  - /faq/coordsys/
 ---
 
 # How are the different head and MRI coordinate systems defined?
@@ -110,7 +112,7 @@ The BTi or "4D Neuroimaging" coordinate system is expressed in meter, with the p
 - the Y-axis goes approximately towards LPA, orthogonal to X and in the plane spanned by the fiducials
 - the Z-axis goes approximately towards the vertex, orthogonal to X and Y
 
-{% include image src="/assets/img/faq/how_are_the_different_head_and_mri_coordinate_systems_defined/coordinatesystem_bti.png" width="200" %}
+{% include image src="/assets/img/faq/coordsys/coordinatesystem_bti.png" width="200" %}
 
 ## Details of the CapTrak coordinate system
 
@@ -126,7 +128,7 @@ If the ears are not symmetric, the origin will not be precisely between the ears
 
 See below a visualization of the coordinate system.
 
-{% include image src="/assets/img/faq/how_are_the_different_head_and_mri_coordinate_systems_defined/captrak.png" width="300" %}
+{% include image src="/assets/img/faq/coordsys/captrak.png" width="300" %}
 
 ## Details of the Chieti ITAB coordinate system
 
@@ -146,7 +148,7 @@ The **CTF** coordinate system is expressed in centimeter (except the MRI, which 
 - the Y-axis goes approximately towards LPA, orthogonal to X and in the plane spanned by the fiducials
 - the Z-axis goes approximately towards the vertex, orthogonal to X and Y
 
-{% include image src="/assets/img/faq/how_are_the_different_head_and_mri_coordinate_systems_defined/coordinatesystem_ctf.png" width="200" %}
+{% include image src="/assets/img/faq/coordsys/coordinatesystem_ctf.png" width="200" %}
 
 ## Details of the DICOM coordinate system
 
@@ -157,7 +159,7 @@ The **CTF** coordinate system is expressed in centimeter (except the MRI, which 
 - y increases from anterior to posterior
 - z increases from inferior to superior
 
-{% include image src="/assets/img/faq/how_are_the_different_head_and_mri_coordinate_systems_defined/coordinatesystem_dicom.jpg" width="200" %}
+{% include image src="/assets/img/faq/coordsys/coordinatesystem_dicom.jpg" width="200" %}
 
 The paper [The first step for neuroimaging data analysis: DICOM to NIfTI conversion](https://doi.org/10.1016/j.jneumeth.2016.03.001) explains it very well. See also [this page](http://dicomiseasy.blogspot.com/2013/06/getting-oriented-using-image-plane.html) for more information about the DICOM coordinate system.
 
@@ -197,7 +199,7 @@ The **Neuromag** coordinate system is expressed in meter, with the principal (X,
 - Z-axis from the origin upwards orthogonal to the XY-plane
 - Origin: Intersection of the line through LPA and RPA and a line orthogonal to L passing through the nasion.
 
-{% include image src="/assets/img/faq/how_are_the_different_head_and_mri_coordinate_systems_defined/coordinatesystem_neuromag.png" width="200" %}
+{% include image src="/assets/img/faq/coordsys/coordinatesystem_neuromag.png" width="200" %}
 
 ## Details of the NIfTI coordinate system
 

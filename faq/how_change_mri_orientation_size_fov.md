@@ -27,7 +27,7 @@ An example volume structure is
       coordsys: 'ctf'                % description of the (head) coordinate system
            hdr: [1x1 struct]
 
-This volume is already aligned to the CTF head [coordinate system](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined). But the alignment by itself does not change the orientation of the original `anatomy` field, it just adds a transformation matrix which allows for relating each voxel intensity to the corresponding voxel location in the CTF head coordinate system. Note that the transformation matrix is taken into account at all subsequent computations.
+This volume is already aligned to the CTF head [coordinate system](/faq/coordsys). But the alignment by itself does not change the orientation of the original `anatomy` field, it just adds a transformation matrix which allows for relating each voxel intensity to the corresponding voxel location in the CTF head coordinate system. Note that the transformation matrix is taken into account at all subsequent computations.
 
 When the anatomical data is plotted, the default behavior is to plot the anatomical data as it is in the `anatomy` field, without changing its orientation according to the transformation matrix. This is the reason why anatomical data is sometimes plotted with the top of the head pointing to the bottom of the screen (figure 1).
 
