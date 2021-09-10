@@ -25,7 +25,7 @@ FEMfuns is a python based open-source pipeline and will be called externally fro
 
 {% include image src="/assets/img/development/project/femfuns/workflow.jpg" width="500" %}
 
-The workflow consists of calling a shell script from FieldTrip passing the volume conduction parameters (e.g., mesh, tissue and electrode type, source model) which sets up the right anaconda environment (i.e., the required version of Python and associated packages) after which FEMfuns runs the forward simulation. Subsequently, the lead field matrices are imported back into FieldTrip for further analysis, e.g., source reconstruction analysis.
+The workflow consists of calling many subroutines (comparable to a Russian doll), start-ing within the toolbox FieldTrip. First, a FieldTrip script in MATLAB loads data and calls the routine to compute the forward solution. Via this routine, a shell script is written and executed under the hood. This shell script sets up the required version of Python and associated packages (using Anaconda), passes the volume conduction parameters (e.g., mesh, tissue and electrode type, source model), and launches FEMfuns. Then, FEMfuns runs the forward simulation. Finally, the lead field matrices are imported back into FieldTrip for further analysis, e.g., source reconstruction analysis.
 
 Currently (September 2021), the matlab fuctions to add electrodes to an existing finite element head model are available [here](https://github.com/meronvermaas/fieldtrip/tree/femfuns/external/femfuns)
 
