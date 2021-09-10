@@ -63,6 +63,7 @@ In general you should get started with the [tutorials](/tutorial). The pages tha
 - [Getting started with BIDS](/getting_started/bids)
 - [Getting started with AnyWave](/getting_started/anywave)
 - [Getting started with Seg3D](/getting_started/seg3d)
+- [Getting started with LIMO EEG](/getting_started/limo)
 - [Getting started with data from EEGLAB](/getting_started/eeglab)
 - [Getting started with data from SPM](/getting_started/spm)
 - [Getting started with data from LORETA](/getting_started/loreta)
