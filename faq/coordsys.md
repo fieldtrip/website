@@ -46,7 +46,7 @@ Imaging methods such as MRI and CT result in 3-D volumetric representations of t
 | EEGLAB                  | mm    | ALS         | between the ears                            | native                                                                                                    |                              |
 | FreeSurfer              | mm    | RAS         | center of isotropic 1 mm 256x256x256 volume |                                                                                                           |                              |
 | MNI                     | mm    | RAS         | anterior commissure                         | scaled to match averaged template                                                                         |                              |
-| NIfTI                   | mm    | RAS         | centre of MRI gradient coil                 | see [here](https://brainder.org/2012/09/23/the-nifti-file-format/), search for "Orientation information". |                              |
+| NIfTI                   | mm    | RAS         |                                             | see [here](https://brainder.org/2012/09/23/the-nifti-file-format/), search for "Orientation information". |                              |
 | Neuromag/Elekta/Megin   | m     | RAS         | between the ears                            | native                                                                                                    |                              |
 | Paxinos-Franklin        | mm    | RSP         | Bregma point                                |                                                                                                           |                              |
 | Scanner RAS (`scanras`) | mm    | RAS         | scanner origin                              | native                                                                                                    |                              |
@@ -203,14 +203,15 @@ The **Neuromag** coordinate system is expressed in meter, with the principal (X,
 
 ## Details of the NIfTI coordinate system
 
-The **NIfTI** format has been adapted from the Analyze 7.5 format (see [this page](http://nifti.nimh.nih.gov/) for more information). It allows two coordinate systems: one related to the scanner coordinate system (qform) and one related to a standard coordinate system (sform) such as MNI or Talairach-Tournoux (see below). The default scanner coordinate system is defined as
+The **NIfTI** format has been adapted from the Analyze 7.5 format (see [this page](http://nifti.nimh.nih.gov/) for more information). It supports two methods to specify the coordinate systems: one related to the scanner coordinate system (qform) and one related to a standard coordinate system (sform). Technically both can be used interchangeably. Depending on the `qform_code` or `sform_code`, the origin of the coordinate system corresponds (1) to the scanner origin, (2) is arbitrary, or (3,4) is aligned with AC according to the MNI or Talairach-Tournoux coordinate systems. The default orientation of the coordinate system axes is rotated 180 degrees compared to DICOM and corresponds to 
 
-- The origin is at the scanner origin, which is the center of the gradient coil
 - The x-axis increases from left to right
 - The y-axis increases from posterior to anterior
 - The z-axis increases from inferior to superior
 
-Note that this coordinate system applies when images are not registered to a standard space; if they are, the coordinate system of the relevant standard space applies (e.g. MNI or Talairach-Tournoux). See also [here](https://brainder.org/2012/09/23/the-nifti-file-format/) (search for "Orientation information").
+See also [here](https://brainder.org/2012/09/23/the-nifti-file-format/) (search for "Orientation information"). In case the `qform_code` or `sform_code` is 2, the coordinates are aligned to another file, or to the “truth” (with an arbitrary coordinate center). In that case the assumption that the orientation of the world coordinate system is RAS may not hold.
+
+Various software implementations that write NIfTI files are inconsistent with assigning the `qform_code` and/or `sform_code`, hence you should be cautious with the interpretation of the coordinate system.
 
 ## Details on the Paxinos-Franklin mouse coordinate system
 
