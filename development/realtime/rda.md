@@ -32,7 +32,7 @@ The TCP/IP interface in MATLAB is implemented in the freely available [TCP/UDP/I
 
 ### Standalone interface with rda2ft
 
-Instead of **[ft_realtime_brainampproxy](https://github.com/fieldtrip/fieldtrip/blob/release/realtime/example/ft_realtime_brainampproxy.m)** and MATLAB, you can use **rda2ft** (https://github.com/fieldtrip/fieldtrip/blob/master/realtime/bin/win64/rda2ft.exe) or (https://github.com/fieldtrip/fieldtrip/blob/master/realtime/bin/ARCH/rda2ft.exe) to transport data from an RDA server to a FieldTrip buffer. **rda2ft** is written in C and takes 4 command line arguments, where the first two are mandatory:
+Instead of **[ft_realtime_brainampproxy](https://github.com/fieldtrip/fieldtrip/blob/release/realtime/example/ft_realtime_brainampproxy.m)** and MATLAB, you can use **rda2ft**. It transports data from an RDA server to a FieldTrip buffer and is availble in source code or compiled for [different operating systems]((https://github.com/fieldtrip/fieldtrip/blob/release/realtime/bin/)). **rda2ft** is written in C and takes 4 command line arguments, where the first two are mandatory:
 
     rda2ft rdaHostname rdaPort [ftHostname] [ftPort]
 
@@ -48,7 +48,7 @@ Leaving out the last two arguments spawns a local buffer on the default port 197
 
     rda2ft localhost 51244
     
-After running this command on the terminal, to run with mne, modify this code (https://mne.tools/mne-realtime/auto_examples/plot_ftclient_rt_average.html) to run the above command. The FieldTrip Client will get the data.
+To execute this in combination with MNE, you can modify [this code](https://mne.tools/mne-realtime/auto_examples/plot_ftclient_rt_average.html) to run the above command. The `FieldTripClient` class will receive the data.
 
 #### Compilation
 
