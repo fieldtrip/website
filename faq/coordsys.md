@@ -203,7 +203,7 @@ The **Neuromag** coordinate system is expressed in meter, with the principal (X,
 
 ## Details of the NIfTI coordinate system
 
-The **NIfTI** format has been adapted from the Analyze 7.5 format (see [this page](http://nifti.nimh.nih.gov/) for more information). It supports two methods to specify the coordinate systems: one related to the scanner coordinate system (qform) and one related to a standard coordinate system (sform). Technically both can be used interchangeably. Depending on the `qform_code` or `sform_code`, the origin of the coordinate system corresponds (1) to the scanner origin, (2) is arbitrary, or (3,4) is aligned with AC according to the MNI or Talairach-Tournoux coordinate systems. The default orientation of the coordinate system axes is rotated 180 degrees compared to DICOM and corresponds to 
+The **NIfTI** format has been adapted from the Analyze 7.5 format (see [this website](http://nifti.nimh.nih.gov/) for more information). It supports two methods to specify the coordinate systems: one related to the scanner coordinate system (qform) and one related to a standard coordinate system (sform). From a technical point of view both can be used simultaneously and/or interchangeably. Depending on the `qform_code` or `sform_code`, the origin of the coordinate system corresponds (1) to the scanner origin, (2) is arbitrary, or (3,4) is aligned with AC according to the MNI or Talairach-Tournoux coordinate systems. The default orientation of the coordinate system axes is assumed to be 
 
 - The x-axis increases from left to right
 - The y-axis increases from posterior to anterior
@@ -211,7 +211,7 @@ The **NIfTI** format has been adapted from the Analyze 7.5 format (see [this pag
 
 See also [here](https://brainder.org/2012/09/23/the-nifti-file-format/) (search for "Orientation information"). In case the `qform_code` or `sform_code` is 2, the coordinates are aligned to another file, or to the “truth” (with an arbitrary coordinate center). In that case the assumption that the orientation of the world coordinate system is RAS may not hold.
 
-Various software implementations that write NIfTI files are inconsistent with assigning the `qform_code` and/or `sform_code`, hence you should be cautious with the interpretation of the coordinate system.
+Warning: various software implementations that write NIfTI files are inconsistent with assigning the `qform_code` and/or `sform_code`, hence you should be cautious with the interpretation of the coordinate system.
 
 ## Details on the Paxinos-Franklin mouse coordinate system
 
