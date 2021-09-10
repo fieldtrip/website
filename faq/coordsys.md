@@ -112,7 +112,7 @@ The BTi or "4D Neuroimaging" coordinate system is expressed in meter, with the p
 - the Y-axis goes approximately towards LPA, orthogonal to X and in the plane spanned by the fiducials
 - the Z-axis goes approximately towards the vertex, orthogonal to X and Y
 
-{% include image src="/assets/img/faq/coordsys/coordinatesystem_bti.png" width="200" %}
+{% include image src="/assets/img/faq/coordsys/bti.png" width="200" %}
 
 ## Details of the CapTrak coordinate system
 
@@ -148,7 +148,7 @@ The **CTF** coordinate system is expressed in centimeter (except the MRI, which 
 - the Y-axis goes approximately towards LPA, orthogonal to X and in the plane spanned by the fiducials
 - the Z-axis goes approximately towards the vertex, orthogonal to X and Y
 
-{% include image src="/assets/img/faq/coordsys/coordinatesystem_ctf.png" width="200" %}
+{% include image src="/assets/img/faq/coordsys/ctf.png" width="200" %}
 
 ## Details of the DICOM coordinate system
 
@@ -159,7 +159,7 @@ The **CTF** coordinate system is expressed in centimeter (except the MRI, which 
 - y increases from anterior to posterior
 - z increases from inferior to superior
 
-{% include image src="/assets/img/faq/coordsys/coordinatesystem_dicom.jpg" width="200" %}
+{% include image src="/assets/img/faq/coordsys/dicom.jpg" width="200" %}
 
 The paper [The first step for neuroimaging data analysis: DICOM to NIfTI conversion](https://doi.org/10.1016/j.jneumeth.2016.03.001) explains it very well. See also [this page](http://dicomiseasy.blogspot.com/2013/06/getting-oriented-using-image-plane.html) for more information about the DICOM coordinate system.
 
@@ -199,11 +199,11 @@ The **Neuromag** coordinate system is expressed in meter, with the principal (X,
 - Z-axis from the origin upwards orthogonal to the XY-plane
 - Origin: Intersection of the line through LPA and RPA and a line orthogonal to L passing through the nasion.
 
-{% include image src="/assets/img/faq/coordsys/coordinatesystem_neuromag.png" width="200" %}
+{% include image src="/assets/img/faq/coordsys/neuromag.png" width="200" %}
 
 ## Details of the NIfTI coordinate system
 
-The **NIfTI** format has been adapted from the Analyze 7.5 format (see [this website](http://nifti.nimh.nih.gov/) for more information). It supports two methods to specify the coordinate systems: one related to the scanner coordinate system (qform) and one related to a standard coordinate system (sform). From a technical point of view both can be used simultaneously and/or interchangeably. Depending on the `qform_code` or `sform_code`, the origin of the coordinate system corresponds (1) to the scanner origin, (2) is arbitrary, or (3,4) is aligned with AC according to the MNI or Talairach-Tournoux coordinate systems. The default orientation of the coordinate system axes is assumed to be 
+The **NIfTI** format has been adapted from the Analyze 7.5 format (see [this website](http://nifti.nimh.nih.gov/) for more information). It supports two methods to specify the coordinate systems: one related to the scanner coordinate system (qform) and one related to a standard coordinate system (sform). From a technical point of view both can be used simultaneously and/or interchangeably. Depending on the `qform_code` or `sform_code`, the origin of the coordinate system corresponds (1) to the scanner origin, (2) is arbitrary, or (3,4) is aligned with AC according to the MNI or Talairach-Tournoux coordinate systems. The default orientation of the coordinate system axes is assumed to be
 
 - The x-axis increases from left to right
 - The y-axis increases from posterior to anterior
