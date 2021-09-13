@@ -44,8 +44,8 @@ The simplest method for preprocessing and reading the data into memory is by cal
     data_eeg =
         hdr: [1x1 struct]
       label: {64x1 cell}
-      trial: {[64x1974550 double]}
-       time: {[1x1974550 double]}
+      trial: {[64x2011220 double]}
+       time: {[1x2011220 double]}
     fsample: 500
         cfg: [1x1 struct]
 
