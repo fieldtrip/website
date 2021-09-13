@@ -193,6 +193,9 @@
 - name:  Beamforming evoked fields and potentials in combined MEG/EEG data
   link:  /workshop/aarhus/beamformingerf
 
+- name:  FieldTrip tutorial at CuttingEEG 2021 in Marseille
+  link:  /workshop/cuttingeeg2021
+
 - name:  FieldTrip workshop in Madrid
   link:  /workshop/madrid2019
 
