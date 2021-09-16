@@ -1,9 +1,9 @@
 ---
-title: FieldTrip tutorial at CuttingEEG 2021 in Marseille
+title: FieldTrip tutorial at CuttingEEG 2021 in Aix-en-Provence
 tags: [cuttingeeg2021]
 ---
 
-# FieldTrip tutorial at CuttingEEG 2021 in Marseille
+# FieldTrip tutorial at CuttingEEG 2021 in Aix-en-Provence
 
 - Who: Jan-Mathijs Schoffelen and Robert Oostenveld
 - When: 4 October 2021
