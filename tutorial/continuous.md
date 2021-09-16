@@ -28,7 +28,7 @@ The following steps are taken to read data, to apply filters and to reference th
 
 In this tutorial we will be using two datasets, one with EEG data and one with MEG data.
 
-The EEG dataset [SubjectEEG.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/SubjectEEG.zip) was acquired by Irina Siminova in a study investigating semantic processing of stimuli presented as pictures, visually displayed text or as auditory presented words. Data was acquired with a 64-channel BrainProducts BrainAmp EEG amplifier from 60 scalp electrodes placed in an electrode cap, one electrode placed under the right eye; signals "EOGv" and "EOGh" are computed after acquisition using re-referencing. During acquisition all channels were referenced to the left mastoid and an electrode placed at the earlobe was used as the ground. Channels 1-60 correspond to electrodes that are located on the head, except for channel 53 which is located at the right mastoid. Channels 61, 62, 63 are not connected to an electrode at all. Channel 64 is connected to an electrode placed below the left eye. Hence we have 62 channels of interest: 60 from the head + eogh + eogv.
+The EEG dataset [SubjectEEG.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/SubjectEEG.zip) was acquired by Irina Siminova in a study investigating semantic processing of stimuli presented as pictures, visually displayed text or as auditory presented words. Data was acquired with a 64-channel BrainProducts BrainAmp EEG amplifier from 60 scalp electrodes placed in an electrode cap, one electrode placed under the right eye; signals "EOGv" and "EOGh" are computed after acquisition using re-referencing. During acquisition all channels were referenced to the left mastoid and an electrode placed at the earlobe was used as the ground. Channels 1-60 correspond to electrodes that are located on the head, except for channel 53 which is located at the right mastoid. Channels 61, 62, 63 are not connected to an electrode at all. Channel 64 is connected to an electrode placed below the left eye. Hence we have 62 channels of interest: 60 from the head + eogh + eogv. More details on the experiment and data can be found [here](/tutorial/eeg_language).
 
 The MEG dataset [Subject01.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip) was acquired by Lin Wang in language study on semantically congruent and incongruent sentences. Three types of sentences were used in the experiment: fully congruent (FC), fully incongruent (FIC), and initially congruent (IC). There were 87 trials per condition for each of the three conditions, and a set of 87 filler sentences were added.
 
@@ -37,8 +37,8 @@ The MEG dataset [Subject01.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tut
 The simplest method for preprocessing and reading the data into memory is by calling the **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** function with only the dataset as configuration argument.
 
     cfg = [];
-    cfg.dataset     = 'subj2.vhdr';
-    data_eeg        = ft_preprocessing(cfg)
+    cfg.dataset = 'subj2.vhdr';
+    data_eeg    = ft_preprocessing(cfg)
 
     >> data_eeg
     data_eeg =
@@ -51,7 +51,7 @@ The simplest method for preprocessing and reading the data into memory is by cal
 
 This reads the data from file as one long continuous segment without any additional filtering. The resulting data is represented as one very long trial. To plot the potential in one of the channels, you can simply use the MATLAB plot function.
 
-    chansel  = 1;
+    chansel = 1;
     plot(data_eeg.time{1}, data_eeg.trial{1}(chansel, :))
     xlabel('time (s)')
     ylabel('channel amplitude (uV)')
