@@ -70,6 +70,7 @@ See also the [tutorials](/tutorial) and [frequently asked questions](/faq).
 - [Stratify the distribution of two variables](/example/stratify)
 - [Use simulated ERPs to explore cluster statistics](/example/use_simulated_erps_to_explore_cluster_statistics)
 - [Using GLM to analyze NIRS timeseries data](/example/nirs_glm)
+- [Using General Linear Modeling over trials](/example/glm_trials)
 - [Using General Linear Modeling on time series data](/example/glm_timeseries)
 - [Using simulations to estimate the sample size for cluster-based permutation test](/example/samplesize)
 - [Using threshold-free cluster enhancement for cluster statistics](/example/threshold_free_cluster_enhancement)
