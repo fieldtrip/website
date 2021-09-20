@@ -13,6 +13,12 @@
 - name:  Details on the EEG language dataset
   link:  /tutorial/eeg_language
 
+- name:  Convert the EEG language dataset for sharing in BIDS
+  link:  /workshop/cuttingeeg2021/bids_language
+
+- name:  Time-frequency analysis on short and long timescales
+  link:  /workshop/cuttingeeg2021/tutorial_freq
+
 - name:  FieldTrip workshop in Madrid
   link:  /workshop/madrid2019
 
