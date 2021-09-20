@@ -1,6 +1,6 @@
 ---
 title: Convert the EEG sedation dataset for sharing in BIDS
-tags: [bids, eeg-sedation]
+tags: [bids, eeg-sedation, madrid2019]
 ---
 
 # Convert the EEG sedation dataset for sharing in BIDS
@@ -12,7 +12,7 @@ The BIDS background is explained on <http://bids.neuroimaging.io>, details on th
 
 This conversion makes use of the **[data2bids](https://github.com/fieldtrip/fieldtrip/blob/release/data2bids.m)** function to convert the data and to write the associated metadata to the accompanying TSV and JSON files. The converted data in the BIDS organization is available from our [FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/madrid2019/extra/complete_resting_data/).
 
-```
+```` matlab
 sourcedata = '/Volumes/Samsung T3/data/eeg-sedation/sourcedata';
 bidsroot   = '/Volumes/Samsung T3/data/eeg-sedation/bids';
 
@@ -101,4 +101,4 @@ for i=1:length(datainfo)
 
 end
 
-```
+````
