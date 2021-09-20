@@ -35,7 +35,7 @@ For example, see this excerpt from a BrainVision header file (.vhdr):
     ; Data synthesized by MNE-BIDS
 
     [Common Infos]
-    DataFile=test.eeg
+    DataFile=test.dat
     MarkerFile=test.vmrk
 
 In this short example we can observe a challenge that is caused by having three separate files for each dataset: It means that the single files have internal pointers to each other's locations (see the DataFile and MarkerFile keys in the example).
@@ -50,15 +50,17 @@ For validation of BrainVision file triplets, you can use the [brainvision-valida
 
 ## Preprocessing of raw EEG data
 
-FieldTrip needs the user to define what file to read in. The BrainVision Recorder software usually stores different filetypes (.vhdr, .eeg, .vmrk). For reading the data into FieldTrip you can refer to the .eeg file, for exampl
+FieldTrip needs the user to define what file to read in. The BrainVision Recorder software usually stores different filetypes (.vhdr, .dat, .vmrk). For reading the data into FieldTrip you can refer to the .dat file, for example. In order for FieldTrip to read the data file, it has to be exported as a .dat file from BrainVision.
 
     cfg = [];
-    cfg.dataset = '/users/karlheinz/EEG/myrecording.eeg';
+    cfg.dataset = '/users/karlheinz/EEG/myrecording.dat';
     ...
 
-The .eeg files are the raw data files, i.e. they contain the data as it has been stored upon acquisition.
+The .dat files are the raw data files, i.e. they contain the data as it has been stored upon acquisition.
 
 You can subsequently epoch your data using [ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_definetrial), and you can read in the data and preprocess it using [ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing). Note that in FieldTrip, no unit conversion takes place.
+
+Even for raw data, the data are considered segmented by FieldTrip. The data file is considered as a very long segment starting with the event "New Segment" and ending at the end of the recording. As a way to investigate the specificities of the BrainVision file, I would recommend always checking the .vmrk file by either opening it in a text editor, or using the function ft_definetrial with configuration cfg.trialdef.eventtype = '?'.
 
 ## Exporting raw EEG data after doing processing in BrainVision Analyzer
 
@@ -67,7 +69,7 @@ Sometimes users have already done some processing (e.g., rereferencing, epoching
 The following describes the recipe to export the processed data into a format the FieldTrip can deal with. It produces a triplet of files (.vhdr, .vmrk and .seg (instead of .eeg)), that can be imported into FieldTrip, in much the same way as described above.
 You can do all the preprocessing you want to do in BrainVision Analyzer (e.g. iltering and re-referencing can be done too) and once you have the data segmented the way you want it select 'export > generic data'. You'll get a window (maybe 2 consecutive windows) popping up asking for various settings. Leave everything as it is, except make sure the following are set:
 
-1.  The filename for output should be .seg instead of .eeg (which I think is the default)
+1.  The filename for output should be .dat instead of .eeg (which I think is the default)
 2.  DataFormat should be 'BINARY'
 3.  DataOrientation should be 'MULTIPLEXED'
 4.  Encoding should be 'UTF-8'
