@@ -4,6 +4,9 @@
 - name:  Correlation analysis in fMRI data
   link:  /example/correlation_analysis_in_fmri_data
 
+- name:  How to interpret the sign of the phase slope index?
+  link:  /faq/how_to_interpret_the_sign_of_the_phase_slope_index
+
 - name:  In what way can frequency domain data be represented in FieldTrip?
   link:  /faq/in_what_way_can_frequency_domain_data_be_represented_in_fieldtrip
 
