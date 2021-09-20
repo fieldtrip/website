@@ -145,6 +145,9 @@
 - name:  Using General Linear Modeling on time series data
   link:  /example/glm_timeseries
 
+- name:  Using General Linear Modeling over trials
+  link:  /example/glm_trials
+
 - name:  How to incorporate head movements in MEG analysis
   link:  /example/how_to_incorporate_head_movements_in_meg_analysis
 

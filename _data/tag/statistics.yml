@@ -7,6 +7,9 @@
 - name:  Using General Linear Modeling on time series data
   link:  /example/glm_timeseries
 
+- name:  Using General Linear Modeling over trials
+  link:  /example/glm_trials
+
 - name:  Defining electrodes as neighbours for cluster-level statistics
   link:  /example/neighbours
 

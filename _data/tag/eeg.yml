@@ -31,6 +31,9 @@
 - name:  Using General Linear Modeling on time series data
   link:  /example/glm_timeseries
 
+- name:  Using General Linear Modeling over trials
+  link:  /example/glm_trials
+
 - name:  Re-reference EEG and iEEG data
   link:  /example/rereference
 
