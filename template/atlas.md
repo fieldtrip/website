@@ -238,3 +238,7 @@ The atlas can be read into Fieldtrip using the following code:
 - S.B. Eickhoff, K.E. Stephan, H. Mohlberg, C. Grefkes, G.R. Fink, K. Amunts, K. Zilles, A new SPM toolbox for combining probabilistic cytoarchitectonic maps and functional imaging data, NeuroImage 25(4), 2005, 1325-1335.
 - Tian, Y., Margulies, D.S., Breakspear, M. et al. Topographic organization of the human subcortex unveiled with functional connectivity gradients. Nat Neurosci 23, 1421–1432 (2020). https://doi.org/10.1038/s41593-020-00711-6
 - Wang L, Mruczek REB, Arcaro MJ, Kastner S. (2015) Probabilistic Maps of Visual Topography in Human Cortex. Cerebral Cortex. 25: 3911-3931
+
+## See also
+
+You can find more atlasses on <https://www.loni.usc.edu/research/atlases>.
