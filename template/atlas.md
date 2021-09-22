@@ -241,4 +241,4 @@ The atlas can be read into Fieldtrip using the following code:
 
 ## See also
 
-You can find more atlasses on <https://www.loni.usc.edu/research/atlases>.
+You can find more atlasses on <https://www.loni.usc.edu/research/atlases> and on <http://www.bmap.ucla.edu/portfolio/atlases>. 
