@@ -12,15 +12,15 @@ tags: [cuttingeeg2021]
 
 _We will keep this page up to date and post new information here when available._
 
-## Introduction
+## Introduction and preparatory remarks
 
-In this hands-on session we will go over preprocessing and time-frequency analysis, and specifically look at how your selection of data segments, filtering and handling of artifacts can be optimized to get the best time-frequency estimates of the EEG and MEG activity. If time allows, we will also look at how non-parametric cluster-based statistics can be used to test for differences between conditions.
+In this hands-on session we will go over preprocessing and time-frequency analysis, and specifically look at how your selection of data segments, rereferencing, filtering and handling of artifacts can be optimized to get the best time-frequency estimates of the EEG and MEG activity. If you are entirely new to time-frequency analysis in general, we recommend you to watch one of our [youtube lectures]<https://youtu.be/dHTuzMsjVJA> in advance.
 
 ## The data used in this tutorial
 
 To be decided, the data will be shared on <https://zenodo.org/communities/cuttingeeg>.
 
-## Getting started with the hands-on sessions
+## Getting started with the hands-on session
 
 To ensure that everything runs smoothly, please download and unzip a recent version of FieldTrip from <https://github.com/fieldtrip/fieldtrip/releases>. We made some last minute changes for a smooth user experience so you should pick a copy that is as young as (or younger than) 20210924. To get going, you need to start MATLAB. Then, you need to issue the following commands:
 
@@ -41,4 +41,6 @@ The `restoredefaultpath` command clears your path, keeping only the official MAT
 
 If you get the error "can't find the command ft_defaults" you should check that you are in the correct directory.
 
-After installing FieldTrip to your path, you need to change into the hands-on specific directory, containing the data that is necessary to run the specific hands-on session.
+After installing FieldTrip to your path, you need to change into the hands-on specific directory, containing the data that is necessary to run the hands-on session.
+
+The actual tutorial can be found on <https://www.fieldtriptoolbox.org/workshop/cuttingeeg2021/tutorial_freq/>
