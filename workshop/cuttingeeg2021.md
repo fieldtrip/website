@@ -22,12 +22,14 @@ To be decided, the data will be shared on <https://zenodo.org/communities/cuttin
 
 ## Getting started with the hands-on sessions
 
-To ensure that everything runs smooth, please use a recent version of FieldTrip. To get going, you need to start MATLAB. Then, you need to issue the following command
+To ensure that everything runs smoothly, please download and unzip a recent version of FieldTrip from https://github.com/fieldtrip/fieldtrip/releases. We made some last minute changes for a smooth user experience so you should pick a copy that is as young as (or younger than) 20210924. To get going, you need to start MATLAB. Then, you need to issue the following commands:
 
     restoredefaultpath
-    cd C:\your_fieldtrip_location
+    cd <your_fieldtrip_location>
     addpath(pwd)
     ft_defaults
+
+The `<your_fieldtrip_location>` is the directory in which all the code is after you have unzipped the downloaded folder. 
 
 {% include markup/danger %}
 Please do NOT use the graphical path management tool from MATLAB. In this hands-on session we'll manage the path from the command line, but in general you are much better off using the startup.m file than the path GUI.
