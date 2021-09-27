@@ -14,7 +14,7 @@ _We will keep this page up to date and post new information here when available.
 
 ## Introduction and preparatory remarks
 
-In this hands-on session we will go over preprocessing and time-frequency analysis, and specifically look at how your selection of data segments, rereferencing, filtering and handling of artifacts can be optimized to get the best time-frequency estimates of the EEG and MEG activity. If you are entirely new to time-frequency analysis in general, we recommend you to watch one of our [youtube lectures]<https://youtu.be/dHTuzMsjVJA> in advance.
+In this hands-on session we will go over preprocessing and time-frequency analysis, and specifically look at how your selection of data segments, rereferencing, filtering and handling of artifacts can be optimized to get the best time-frequency estimates of the EEG and MEG activity. If you are entirely new to time-frequency analysis in general, we recommend you to watch one of our [youtube lectures](<https://youtu.be/dHTuzMsjVJA>) in advance.
 
 ## The data used in this tutorial
 
