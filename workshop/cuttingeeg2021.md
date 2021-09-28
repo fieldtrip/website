@@ -22,7 +22,7 @@ To be decided, the data will be shared on <https://zenodo.org/communities/cuttin
 
 ## Getting started with the hands-on session
 
-To ensure that everything runs smoothly, please download and unzip a recent version of FieldTrip from <https://github.com/fieldtrip/fieldtrip/releases>. We made some last minute changes for a smooth user experience so you should pick a copy that is as young as (or younger than) 20210924. To get going, you need to start MATLAB. Then, you need to issue the following commands:
+To ensure that everything runs smoothly, please download and unzip a recent version of FieldTrip from <https://github.com/fieldtrip/fieldtrip/releases>. We made some last minute changes for a smooth user experience so you should pick a copy that is as young as (or younger than) 20210927. To get going, you need to start MATLAB. Then, you need to issue the following commands:
 
     restoredefaultpath
     cd <your_fieldtrip_location>
