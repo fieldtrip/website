@@ -52,7 +52,7 @@ The relevant field that is added to the cfg by **[ft_definetrial]()** is the so 
 
     ans =
 
-      3×12 table
+      3x12 table
 
     begsample     endsample     offset    onset     duration      sample          type         value          task         category        item       modality
     __________    __________    ______    ______    ________    __________    ____________    ________    ____________    ___________    ________    ___________
