@@ -153,7 +153,7 @@ The **[ft_math]()** function allows to perform mathematical operations on the nu
 
 which will show the following figure. You can click on the individual boxes to see the cfg details of the corresponding step.
 
-{% include image src="/assets/img/workshop/cuttingeeg2021/RFxPQuR.png" width="300" %}
+{% include image src="/assets/img/workshop/cuttingeeg2021/RFxPQuR.png" width="400" %}
 
 
 ### Visualize the main effect of modality
@@ -249,13 +249,13 @@ Given the typical 1/f profile of spectra, i.e., low frequencies typically have o
     cfg.colormap = {'*RdBu', 30};
     figure; ft_multiplotTFR(cfg, freq_written);
 
-{% include image src="/assets/img/workshop/cuttingeeg2021/NUXbBYC.png" width="300" %}
-{% include image src="/assets/img/workshop/cuttingeeg2021/QSF4eQN.png" width="300" %}
-{% include image src="/assets/img/workshop/cuttingeeg2021/Zr0cj1P.png" width="300" %}
+{% include image src="/assets/img/workshop/cuttingeeg2021/NUXbBYC.png" width="400" %}
+{% include image src="/assets/img/workshop/cuttingeeg2021/QSF4eQN.png" width="400" %}
+{% include image src="/assets/img/workshop/cuttingeeg2021/Zr0cj1P.png" width="400" %}
 
-{% include image src="/assets/img/workshop/cuttingeeg2021/QIpnMgJ.png" width="300" %}
-{% include image src="/assets/img/workshop/cuttingeeg2021/Na271s9.png" width="300" %}
-{% include image src="/assets/img/workshop/cuttingeeg2021/deEjBZi.png" width="300" %}
+{% include image src="/assets/img/workshop/cuttingeeg2021/QIpnMgJ.png" width="400" %}
+{% include image src="/assets/img/workshop/cuttingeeg2021/Na271s9.png" width="400" %}
+{% include image src="/assets/img/workshop/cuttingeeg2021/deEjBZi.png" width="400" %}
 
 Based on the figures that we have produced, we can make a few observations:
 
@@ -374,7 +374,7 @@ DSS is a blind source separation algorithm that aims at identifying underlying s
     cfg.blocksize = 10;
     ft_databrowser(cfg, ft_appenddata([], eogv, comp));
 
-{% include image src="/assets/img/workshop/cuttingeeg2021/WX8uuzB.png" width="300" %}
+{% include image src="/assets/img/workshop/cuttingeeg2021/WX8uuzB.png" width="400" %}
 
 Judging from the topographies and the time courses of the components, components 1 and 2 are identified as eye-related, so they are removed in the next step.
 
@@ -439,13 +439,13 @@ Proceed with the rest of the analysis, but now on the cleaned data. This is most
     cfg.colormap = {'*RdBu', 30};
     figure;ft_multiplotTFR(cfg, freqdss_written);
 
-{% include image src="/assets/img/workshop/cuttingeeg2021/m1VgSKb.png" width="300" %}
-{% include image src="/assets/img/workshop/cuttingeeg2021/zBLwRvQ.png" width="300" %}
-{% include image src="/assets/img/workshop/cuttingeeg2021/MDl7Kgj.png" width="300" %}
+{% include image src="/assets/img/workshop/cuttingeeg2021/m1VgSKb.png" width="400" %}
+{% include image src="/assets/img/workshop/cuttingeeg2021/zBLwRvQ.png" width="400" %}
+{% include image src="/assets/img/workshop/cuttingeeg2021/MDl7Kgj.png" width="400" %}
 
-{% include image src="/assets/img/workshop/cuttingeeg2021/H9FPGf2.png" width="300" %}
-{% include image src="/assets/img/workshop/cuttingeeg2021/SvdJR21.png" width="300" %}
-{% include image src="/assets/img/workshop/cuttingeeg2021/HclvbVT.png" width="300" %}
+{% include image src="/assets/img/workshop/cuttingeeg2021/H9FPGf2.png" width="400" %}
+{% include image src="/assets/img/workshop/cuttingeeg2021/SvdJR21.png" width="400" %}
+{% include image src="/assets/img/workshop/cuttingeeg2021/HclvbVT.png" width="400" %}
 
 The figures investigate the same individual channels' TFRs, and the corresponding topographies of prominent features therein. As can be seen, the effect of the eye blink removal has hardly an effect on the TFR in the right occipital electrode, but makes a big difference for the frontal electrode. Even though there still seems to be a residual of the eye blinks in the TFR after DSS, the TFR now reveals more clearly an occipital increase in power between 8 and 15 Hz, around 100-200 ms after stimulus onset. This is most likely the frequency transform of the stimulus-evoked transient, and does not necessarily reflect an oscillation in the alpha band/low beta band.
 
@@ -522,9 +522,9 @@ After cutting the continuous data into artificial epochs for spectral analysis, 
     cfg.colormap  = {'*RdBu', 30};
     ft_multiplotER(cfg, freq_spectrum);
 
-{% include image src="/assets/img/workshop/cuttingeeg2021/z77evr8.png" width="300" %}
-{% include image src="/assets/img/workshop/cuttingeeg2021/hrytDh9.png" width="300" %}
-{% include image src="/assets/img/workshop/cuttingeeg2021/hBEX7vF.png" width="300" %}
+{% include image src="/assets/img/workshop/cuttingeeg2021/z77evr8.png" width="400" %}
+{% include image src="/assets/img/workshop/cuttingeeg2021/hrytDh9.png" width="400" %}
+{% include image src="/assets/img/workshop/cuttingeeg2021/hBEX7vF.png" width="400" %}
 
 
 ### Reorganize the data
@@ -554,9 +554,9 @@ Note that here the plotting function takes care of the baselining under the hood
     cfg.colormap = {'*RdBu', 30};
     ft_multiplotTFR(cfg, freq_continuous);
 
-{% include image src="/assets/img/workshop/cuttingeeg2021/sVEgbVu.png" width="300" %}
-{% include image src="/assets/img/workshop/cuttingeeg2021/ptConsG.png" width="300" %}
-{% include image src="/assets/img/workshop/cuttingeeg2021/wSmniJF.png" width="300" %}
+{% include image src="/assets/img/workshop/cuttingeeg2021/sVEgbVu.png" width="400" %}
+{% include image src="/assets/img/workshop/cuttingeeg2021/ptConsG.png" width="400" %}
+{% include image src="/assets/img/workshop/cuttingeeg2021/wSmniJF.png" width="400" %}
 
 
 ### Extract the almost alpha band power
@@ -583,8 +583,8 @@ Note that here the plotting function takes care of the baselining under the hood
     cfg.colormap = {'*RdBu', 30};
     ft_multiplotER(cfg, timelock_alpha);
 
-{% include image src="/assets/img/workshop/cuttingeeg2021/fUw5Y1N.png" width="300" %}
-{% include image src="/assets/img/workshop/cuttingeeg2021/956va1C.png" width="300" %}
+{% include image src="/assets/img/workshop/cuttingeeg2021/fUw5Y1N.png" width="400" %}
+{% include image src="/assets/img/workshop/cuttingeeg2021/956va1C.png" width="400" %}
 
 ## Summary and conclusion
 
