@@ -234,8 +234,7 @@ To plot the results of the permutation test, we use the plotting function **[ft_
 
 We then construct a boolean matrix indicating whether a channel/time point belongs to a cluster that we deem interesting to inspect. This matrix has size [Number_of_MEG_channels x Number_of_time_samples], like stat.posclusterslabelmat. We'll make two such matrices: one for positive clusters (named pos), and one for negative (neg). All (channel,time)-pairs belonging to the large clusters whose probability of occurrence is sufficiently low in relation to the associated randomization distribution of clusterstats will be coded in the new boolean matrix as 1, and all those that don't will be coded as 0.
 
-% Make a vector of all p-values associated with the clusters from ft_timelockstatistics.
-
+    % Make a vector of all p-values associated with the clusters from ft_timelockstatistics.
     pos_cluster_pvals = [stat.posclusters(:).prob];
 
     % Then, find which clusters are deemed interesting to visualize, here we use a cutoff criterion based on the
@@ -249,7 +248,7 @@ We then construct a boolean matrix indicating whether a channel/time point belon
     neg_clust         = find(neg_cluster_pvals < 0.025);
     neg               = ismember(stat.negclusterslabelmat, neg_clust);
 
-Alternatively, we can manually select which clusters we want to plot. If we only want to see the extext of the first (i.e. most significant) positive and negative clusters, for instance, we can do so as follows:
+Alternatively, we can manually select which clusters we want to plot. If we only want to see the extent of the first (i.e. most significant) positive and negative clusters, for instance, we can do so as follows:
 
     pos = stat.posclusterslabelmat == 1; % or == 2, or 3, etc.
     neg = stat.negclusterslabelmat == 1;
@@ -271,7 +270,7 @@ To plot the data use the following for-loop:
     % This might not be the case, because ft_math might shuffle the order
     [i1,i2] = match_str(raweffectFICvsFC.label, stat.label);
 
-    for k = 1:20;
+    for k = 1:20
        subplot(4,5,k);
        cfg = [];
        cfg.xlim = [j(k) j(k+1)];   % time interval of the subplot
