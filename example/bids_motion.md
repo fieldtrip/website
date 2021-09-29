@@ -6,7 +6,7 @@ tags: [example, bids, sharing, motion, qualisys, optotrak, xsens]
 # Converting an example motion tracking dataset for sharing in BIDS
 
 {% include markup/danger %}
-BIDS does currently not specify how to represent motion tracking data. This example - and the support that is implemented in the **[data2bids](https://github.com/fieldtrip/fieldtrip/blob/release/data2bids.m)** function - should be considered as a preliminary proposal to help researchers with their existing data.
+The [BIDS standard](https://bids.neuroimaging.io) does currently not specify how to represent motion tracking data. This example - and the support that is implemented in the **[data2bids](https://github.com/fieldtrip/fieldtrip/blob/release/data2bids.m)** function - should be considered as a preliminary proposal to help researchers with their existing data.
 
 See [this issue](https://github.com/bids-standard/bids-specification/issues/443) on GitHub and [this Google doc](https://docs.google.com/document/d/1iaaLKgWjK5pcISD1MVxHKexB3PZWfE2aAC5HF_pCZWo/edit?usp=sharing) with the draft specification that is being discussed.
 {% include markup/end %}

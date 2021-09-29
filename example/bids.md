@@ -5,7 +5,7 @@ tags: [bids, sharing]
 
 # BIDS - the brain imaging data structure
 
-The BIDS standard aims to organise and describe neuroimaging data in a uniform way to simplify data sharing through the scientific community.
+The [BIDS standard](https://bids.neuroimaging.io) aims to organise and describe neuroimaging data in a uniform way to simplify data sharing through the scientific community.
 
 FieldTrip can read data from all MEG, EEG, iEEG and MRI file formats that are supported in BIDS. Furthermore, it includes the **[data2bids](https://github.com/fieldtrip/fieldtrip/blob/release/data2bids.m)** function to convert data to the BIDS structure. This function can convert data formats (if needed), and writes the accompanying "sidecar files" that contain metadata about channels, coordinates, events, etcetera to the .json and .tsv format.
 
