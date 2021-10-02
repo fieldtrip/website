@@ -34,7 +34,7 @@ The EEG data was acquired with a 64-channel BrainProducts BrainAmp EEG amplifier
 
 ### Define the epochs
 
-This part creates a definition of epochs, based on the events that are stored in the BIDS format, i.e. in an events.tsv file. This is a file in tabular format, which allows for the representation of events in a format that is more human-readable, and more directly interpretable, than the more abstracted trigger codes as returned by **[ft_read_event]()**.
+This part creates a definition of epochs, based on the events that are stored in the BIDS format, i.e. in an events.tsv file. This is a file in tabular format, which allows for the representation of events in a format that is more human-readable, and more directly interpretable, than the more abstracted trigger codes as returned by **[ft_read_event](https://github.com/fieldtrip/fieldtrip/blob/master/fileio/ft_read_event.m)**.
 
     cfg                   = [];
     cfg.dataset           = 'sub-02/eeg/sub-02_task-language_eeg.vhdr';
@@ -46,7 +46,7 @@ This part creates a definition of epochs, based on the events that are stored in
 
     cfg = ft_definetrial(cfg);
 
-The relevant field that is added to the cfg by **[ft_definetrial]()** is the so called `trl` field, which contains a specification of begin and end samples of the requested epochs, where the samples are expressed relative to the start of the recording. Here, the trl is actually a [table](https://nl.mathworks.com/help/matlab/tables.html), containing a lot more useful - and directly interpretable - information. Don't forget to scroll to the right, because that's where the interesting info is located, note that the below code prints a subset of 3 trials, which intends to show that the modality of stimulation occurred in blocks of 400 repetitions:
+The relevant field that is added to the cfg by **[ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/master/ft_definetrial.m)** is the so called `trl` field, which contains a specification of begin and end samples of the requested epochs, where the samples are expressed relative to the start of the recording. Here, the trl is actually a [table](https://nl.mathworks.com/help/matlab/tables.html), containing a lot more useful - and directly interpretable - information. Don't forget to scroll to the right, because that's where the interesting info is located, note that the below code prints a subset of 3 trials, which intends to show that the modality of stimulation occurred in blocks of 400 repetitions:
 
     >> cfg.trl([1 401 801],:)
 
@@ -83,6 +83,7 @@ This step allows to do a relatively quick and dirty visual rejection of data seg
     cfg.method      = 'summary';
     cfg.keepchannel = 'yes';
     cfg.keeptrial   = 'nan';
+    cfg.layout      = 'dccn_customized_acticap64.mat';
     data_segmented_clean = ft_rejectvisual(cfg, data_segmented);
 
 
@@ -96,8 +97,9 @@ In the next step we compute the average for groups of trials that belong to spec
     cfg.preproc.lpfilter   = 'yes';
     cfg.preproc.lpfreq     = 30;
     cfg.preproc.lpfilttype = 'firws';
-    cfg.trials             = strcmp(data_segmented_clean.trialinfo.modality, 'spoken');
-    timelock_spoken        = ft_timelockanalysis(cfg, data_segmented_clean);
+    
+    cfg.trials       = strcmp(data_segmented_clean.trialinfo.modality, 'spoken');
+    timelock_spoken  = ft_timelockanalysis(cfg, data_segmented_clean);
 
     cfg.trials       = strcmp(data_segmented_clean.trialinfo.modality, 'written');
     timelock_written = ft_timelockanalysis(cfg, data_segmented_clean);
@@ -124,8 +126,9 @@ Repeat the filtering and averaging, but now for a different partitioning of the 
     cfg.preproc.lpfilter   = 'yes';
     cfg.preproc.lpfreq     = 30;
     cfg.preproc.lpfilttype = 'firws';
-    cfg.trials             = strcmp(data_segmented_clean.trialinfo.category, 'animals');
-    timelock_animals       = ft_timelockanalysis(cfg, data_segmented_clean);
+    
+    cfg.trials       = strcmp(data_segmented_clean.trialinfo.category, 'animals');
+    timelock_animals = ft_timelockanalysis(cfg, data_segmented_clean);
 
     cfg.trials       = strcmp(data_segmented_clean.trialinfo.category, 'tools');
     timelock_tools   = ft_timelockanalysis(cfg, data_segmented_clean);
@@ -147,7 +150,7 @@ Repeat the filtering and averaging, but now for a different partitioning of the 
     animals_minus_tools  = ft_math(cfg, timelock_animals, timelock_tools);
     spoken_minus_written = ft_math(cfg, timelock_spoken, timelock_written);
 
-The **[ft_math]()** function allows to perform mathematical operations on the numeric data, while keeping track of the processing steps. This is beneficial in relation to reproducibility of results. Specifically, the below could also easily be obtained by the creation of a new variable `animals_minus_tools`, and storing the difference in its 'avg' field: `animals_minus_tools.avg = timelock_animals.avg - timelock_tools.avg`. This is not ideal, since we could easily lose track of how the numeric data were actually generated. As an bonus exercise, you could explore the history of a FieldTrip variable by looking in its cfg field:
+The **[ft_math](https://github.com/fieldtrip/fieldtrip/blob/master/ft_math.m)** function allows to perform mathematical operations on the numeric data, while keeping track of the processing steps. This is beneficial in relation to reproducibility of results. Specifically, the below could also easily be obtained by the creation of a new variable `animals_minus_tools`, and storing the difference in its 'avg' field: `animals_minus_tools.avg = timelock_animals.avg - timelock_tools.avg`. This is not ideal, since we could easily lose track of how the numeric data were actually generated. As an bonus exercise, you could explore the history of a FieldTrip variable by looking in its cfg field:
 
     ft_analysispipeline([], spoken_minus_written);
 
@@ -200,6 +203,7 @@ As before, we will take this cfg with the added `trl` field to the next step of 
 
     cfg         = [];
     cfg.method  = 'summary';
+    cfg.layout  = 'dccn_customized_acticap64.mat';
     data_segmented_clean = ft_rejectvisual(cfg, data_segmented);
 
 
@@ -325,6 +329,7 @@ The intention is to identify time points at which the blinks occurred, expressed
     cfg            = [];
     cfg.method     = 'summary';
     cfg.keeptrial  = 'nan';
+    cfg.layout     = 'dccn_customized_acticap64.mat';
     eogv_segmented_clean = ft_rejectvisual(cfg, eogv_segmented);
 
     cfg            = [];
@@ -354,9 +359,9 @@ In this step, the approximate onsets of eye blinks are identified. This is based
 DSS is a blind source separation algorithm that aims at identifying underlying sources based on some constraints. Here, the sources are separated based on the constraint that they show a large signal time-locked to the eye blink (hence the peak detection in the previous step).
 
     % specify the DSS parameters for ft_componentanalysis
-    params.tr  = cfg.artfctdef.zvalue.peaks_indx;
-    params.pre = 0.20 * data.fsample;
-    params.pst = 0.80 * data.fsample;
+    params.tr     = cfg.artfctdef.zvalue.peaks_indx;
+    params.pre    = 0.20 * data.fsample;
+    params.pst    = 0.80 * data.fsample;
     params.demean = true;
 
     cfg                   = [];
@@ -380,6 +385,7 @@ Judging from the topographies and the time courses of the components, components
 
     cfg           = [];
     cfg.component = [1 2];
+    cfg.layout    = 'dccn_customized_acticap64.mat';
     data_dss      = ft_rejectcomponent(cfg, comp, data);
 
 
@@ -387,8 +393,8 @@ Judging from the topographies and the time courses of the components, components
 
 Proceed with the rest of the analysis, but now on the cleaned data. This is mostly the same as how it was done above.
 
-    cfg           = [];
-    cfg.trl       = trl;
+    cfg     = [];
+    cfg.trl = trl;
     data_dss_segmented = ft_redefinetrial(cfg, data_dss);
 
 
@@ -396,23 +402,24 @@ Proceed with the rest of the analysis, but now on the cleaned data. This is most
 
     cfg         = [];
     cfg.method  = 'summary';
+    cfg.layout  = 'dccn_customized_acticap64.mat';
     data_dss_segmented_clean = ft_rejectvisual(cfg, data_dss_segmented);
 
 
 ### Time-frequency analysis
 
     cfg = [];
-    cfg.method = 'mtmconvol';
-    cfg.foi    = 1.25:1.25:40;
-    cfg.t_ftimwin = 4./cfg.foi;%0.8.*ones(size(cfg.foi));
-    cfg.taper  = 'hanning';
-    cfg.pad    = 4;
-    cfg.toi    = -0.5:0.02:0.9;
+    cfg.method    = 'mtmconvol';
+    cfg.foi       = 1.25:1.25:40;
+    cfg.t_ftimwin = 4./cfg.foi; % 0.8.*ones(size(cfg.foi));
+    cfg.taper     = 'hanning';
+    cfg.pad       = 4;
+    cfg.toi       = -0.5:0.02:0.9;
 
-    cfg.trials   = strcmp(data_dss_segmented_clean.trialinfo.modality, 'written');
+    cfg.trials      = strcmp(data_dss_segmented_clean.trialinfo.modality, 'written');
     freqdss_written = ft_freqanalysis(cfg, data_dss_segmented_clean);
 
-    cfg.trials   = strcmp(data_dss_segmented_clean.trialinfo.modality, 'spoken');
+    cfg.trials      = strcmp(data_dss_segmented_clean.trialinfo.modality, 'spoken');
     freqdss_spoken  = ft_freqanalysis(cfg, data_dss_segmented_clean);
 
 
@@ -437,7 +444,7 @@ Proceed with the rest of the analysis, but now on the cleaned data. This is most
     cfg.layout   = 'dccn_customized_acticap64.mat';
     cfg.zlim     = 'maxabs';
     cfg.colormap = {'*RdBu', 30};
-    figure;ft_multiplotTFR(cfg, freqdss_written);
+    figure; ft_multiplotTFR(cfg, freqdss_written);
 
 {% include image src="/assets/img/workshop/cuttingeeg2021/m1VgSKb.png" width="400" %}
 {% include image src="/assets/img/workshop/cuttingeeg2021/zBLwRvQ.png" width="400" %}
@@ -489,7 +496,8 @@ After cutting the continuous data into artificial epochs for spectral analysis, 
 
     cfg = [];
     cfg.keepchannel = 'yes';
-    cfg.keeptrial = 'nan';
+    cfg.keeptrial   = 'nan';
+    cfg.layout      = 'dccn_customized_acticap64.mat';
     data_segmented_clean = ft_rejectvisual(cfg, data_segmented);
 
 
@@ -497,11 +505,10 @@ After cutting the continuous data into artificial epochs for spectral analysis, 
 
     ft_warning off FieldTrip:dataContainsNaN
 
-
     cfg = [];
-    cfg.method = 'mtmfft';
-    cfg.taper = 'dpss';
-    cfg.tapsmofrq = 0.5;
+    cfg.method     = 'mtmfft';
+    cfg.taper      = 'dpss';
+    cfg.tapsmofrq  = 0.5;
     cfg.keeptrials = 'yes';
     freq_segmented = ft_freqanalysis(cfg, data_segmented_clean);
 
