@@ -37,7 +37,7 @@ The EEG data was acquired with a 64-channel BrainProducts BrainAmp EEG amplifier
 This part creates a definition of epochs, based on the events that are stored in the BIDS format, i.e. in an events.tsv file. This is a file in tabular format, which allows for the representation of events in a format that is more human-readable, and more directly interpretable, than the more abstracted trigger codes as returned by **[ft_read_event]()**.
 
     cfg                   = [];
-    cfg.dataset           = 'bids/sub-02/eeg/sub-02_task-language_eeg.vhdr';
+    cfg.dataset           = 'sub-02/eeg/sub-02_task-language_eeg.vhdr';
     cfg.trialfun          = 'ft_trialfun_bids'; % this will find the events.tsv file
     cfg.trialdef.prestim  = 0.2;
     cfg.trialdef.poststim = 0.8;
@@ -173,7 +173,7 @@ Besides looking at the "evoked" effects that are captured in the event-related p
 The preprocessing here is very similar to that above, with the only difference that a longer time window is selected around each event, for the purpose of baseline correction (see below).
 
     cfg         = [];
-    cfg.dataset = 'bids/sub-02/eeg/sub-02_task-language_eeg.vhdr';
+    cfg.dataset = 'sub-02/eeg/sub-02_task-language_eeg.vhdr';
     cfg.trialfun = 'ft_trialfun_bids';
     cfg.trialdef.prestim  = 0.8;
     cfg.trialdef.poststim = 1.2;
@@ -275,7 +275,7 @@ In this experiment we have both visual/written and auditory/spoken stimulus mate
 The `trl` array is used later.
 
     cfg         = [];
-    cfg.dataset = 'bids/sub-02/eeg/sub-02_task-language_eeg.vhdr';
+    cfg.dataset = 'sub-02/eeg/sub-02_task-language_eeg.vhdr';
     cfg.trialfun = 'ft_trialfun_bids';
     cfg.trialdef.prestim  = 0.8;
     cfg.trialdef.poststim = 1.2;
@@ -291,7 +291,7 @@ The `trl` array is used later.
 We want to use as much data as possible to identify the eye movement related activity, hence we do not epoch yet.
 
     cfg             = [];
-    cfg.dataset     = 'bids/sub-02/eeg/sub-02_task-language_eeg.vhdr';
+    cfg.dataset     = 'sub-02/eeg/sub-02_task-language_eeg.vhdr';
     cfg.reref       = 'yes';
     cfg.channel     = {'all' '-61' '-62' '-63' '-64'};
     cfg.implicitref = 'M1';             % the implicit (non-recorded) reference channel is added to the data
@@ -304,7 +304,7 @@ We want to use as much data as possible to identify the eye movement related act
 Identify and remove eye blinks using the DSS algorithm. See [this example](/example/use_denoising_source_separation_dss_to_remove_ecg_artifacts/) for details.
 
     cfg              = [];
-    cfg.dataset      = 'bids/sub-02/eeg/sub-02_task-language_eeg.vhdr';
+    cfg.dataset      = 'sub-02/eeg/sub-02_task-language_eeg.vhdr';
     cfg.channel      = {'50' '64'};
     cfg.reref        = 'yes';
     cfg.implicitref  = []; % this is the default, we mention it here to be explicit
@@ -461,7 +461,7 @@ And now for something completely different. The next part of this tutorial deals
 If you did not perform the previous parts of the tutorial, you should start from scratch:
 
     cfg             = [];
-    cfg.dataset     = 'bids/sub-02/eeg/sub-02_task-language_eeg.vhdr';
+    cfg.dataset     = 'sub-02/eeg/sub-02_task-language_eeg.vhdr';
     cfg.reref       = 'yes';
     cfg.channel     = {'all' '-61' '-62' '-63' '-64'};
     cfg.implicitref = 'M1';             % the implicit (non-recorded) reference channel is added to the data
