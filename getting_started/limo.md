@@ -113,7 +113,7 @@ Now that everything is properly defined, we can run the computation (Almost all 
 
 The group-level analysis will run as a parallel computing pipeline on contrast estimates (in this example).
 
-We first need an estimates of the channel locations representing all the subjects. Here we consider the channel-by-channel average position:
+We first need an estimate of the channel locations representing all the subjects. Here we consider the channel-by-channel average position:
 
     expected_chanlocs = limo_avg_expected_chanlocs(PATH_TO_DERIV, model.defaults);
 
@@ -127,7 +127,7 @@ We then select the targeted first-level estimates (here the first contrast, corr
     end
     cd(['derivatives/t_test_' my_con])
 
-Finally, we run the second level analysis specifying the desired statistical test, the desired number of bootstrap repetitions, and specifying whether a threshold free cluster enhancement (TFCE, [Pernel *et al.*, 2015](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4510917/)) has to be computed. Another parallel computing pipeline will start which will not take much time.
+Finally, we run the second level analysis specifying the desired statistical test, the desired number of bootstrap repetitions, and specifying whether a threshold free cluster enhancement (TFCE, [Pernet *et al.*, 2015](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4510917/)) has to be computed. Another parallel computing pipeline will start which will not take much time.
 
     stat_test = 'one sample t-test';  % desired statistical test
     nboot = 1000;                     % number of boostrap repetition
