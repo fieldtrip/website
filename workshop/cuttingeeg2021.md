@@ -7,7 +7,7 @@ tags: [cuttingeeg2021]
 
 - Who: Jan-Mathijs Schoffelen and Robert Oostenveld
 - When: 4 October 2021
-- Where: Le Cube Université Aix-Marseille (AMU)
+- Where: Le Cube Université Aix-Marseille (AMU) and screen sharing on zoom 889 8100 0507.
 - See <https://cuttingeeg2021.org> for more details
 
 _We will keep this page up to date and post new information here when available._
