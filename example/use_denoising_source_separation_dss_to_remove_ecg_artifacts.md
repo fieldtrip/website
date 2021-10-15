@@ -51,9 +51,7 @@ We will use ft_artifact_zvalue for this step. To this end, we read in the ECG ch
 
 The DSS code wants a 'params' structure which contains peak time points, expressed in samples. These peak time points should either be expressed relative to the onset of the corresponding trial (which will only work, if the consecutive data that is to be subjected to ft_componentanalysis is epoched in the same way, as the data that was used for the peak identification), or relative to the onset of the recording. In the first case, you can use the peaks_indx cell-array for the params structure, in the second case, you'd need to use the peaks vector. We will use the cell-array mode, (in combination with cfg.cellmode for ft_componentanalysis) since that allows for a much more memory efficient implementation of the decomposition. In addition to the peak indices, you also need to specify a 'pre' and 'pst' window.
 
-    params.tr  = cfg.artfctdef.zvalue.peaks_indx;
-    params.pre = 0.25*meg.fsample;
-    params.pst = 0.50*meg.fsample;
+    params.artifact = cfg.artfctdef.zvalue.artifact;
     params.demean = true;
     
 ### DSS component rejection
