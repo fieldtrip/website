@@ -359,9 +359,7 @@ In this step, the approximate onsets of eye blinks are identified. This is based
 DSS is a blind source separation algorithm that aims at identifying underlying sources based on some constraints. Here, the sources are separated based on the constraint that they show a large signal time-locked to the eye blink (hence the peak detection in the previous step).
 
     % specify the DSS parameters for ft_componentanalysis
-    params.tr     = cfg.artfctdef.zvalue.peaks_indx;
-    params.pre    = 0.20 * data.fsample;
-    params.pst    = 0.80 * data.fsample;
+    params.artifact = cfg.artfctdef.zvalue.artifact;
     params.demean = true;
 
     cfg                   = [];
