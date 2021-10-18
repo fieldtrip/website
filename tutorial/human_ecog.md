@@ -241,20 +241,16 @@ CRITICAL STEP Accuracy of the realignment operation is important for correctly p
 
 ### Volume-based registration (optional)
 
-**26**) To generalize the electrode coordinates to other brains or MNI-based neuroanatomical atlases in a later step, register the subject's brain to the standard MNI brain. The volume-based registration technique considers the overall geometry of the brain and can be used for the spatial normalization of all types of electrodes, whether depth or on the surface.
+**26** & **27**) To generalize the electrode coordinates to other brains or MNI-based neuroanatomical atlases in a later step, register the subject's brain to the standard MNI brain and use the resulting deformation parameters to obtain the electrodes in standard MNI space. The volume-based registration technique considers the overall geometry of the brain and can be used for the spatial normalization of all types of electrodes, whether depth or on the surface.
 
     cfg            = [];
-    cfg.nonlinear  = 'yes';
+    cfg.elec       = elec_acpc_fr;
+    cfg.method     = 'mni';
+    cfg.mri        = fsmri_acpc;
     cfg.spmversion = 'spm12';
     cfg.spmmethod  = 'new';
-    fsmri_mni = ft_volumenormalise(cfg, fsmri_acpc);
-
-**27**) Use the resulting deformation parameters to obtain the electrode positions in standard MNI space.
-
-    elec_mni_frv = elec_acpc_fr;
-    elec_mni_frv.elecpos = ft_warp_apply(fsmri_mni.params, elec_acpc_fr.elecpos, 'individual2sn');
-    elec_mni_frv.chanpos = ft_warp_apply(fsmri_mni.params, elec_acpc_fr.chanpos, 'individual2sn');
-    elec_mni_frv.coordsys = 'mni';
+    cfg.nonlinear  = 'yes';
+    elec_mni_frv = ft_electroderealign(cfg);
 
 **28**) Visualize the cortical mesh extracted from the standard MNI brain along with the spatially normalized electrodes and examine whether they show expected behavior given the electrodes' original anatomical locations (top right in the figure below).
 

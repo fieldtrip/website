@@ -1,6 +1,6 @@
 ---
 title: Template anatomical atlases and parcellation schemes
-tags: [template]
+tags: [template, atlas]
 ---
 
 # Template anatomical atlases and parcellation schemes
@@ -189,7 +189,7 @@ In FieldTrip, the two atlases are included as nifti files. You can read them lik
 
     >> yeo7 = ft_read_atlas('/template/atlas/yeo/Yeo2011_7Networks_MNI152_FreeSurferConformed1mm_LiberalMask_colin27.nii')
         
-    yeo7 = 
+    yeo7 =
             dim: [256 256 256]
             hdr: [1x1 struct]
       transform: [4x4 double]
@@ -200,7 +200,7 @@ In FieldTrip, the two atlases are included as nifti files. You can read them lik
 
     >> yeo17 = ft_read_atlas('/template/atlas/yeo/Yeo2011_17Networks_MNI152_FreeSurferConformed1mm_LiberalMask_colin27.nii')
     
-    yeo17 = 
+    yeo17 =
             dim: [256 256 256]
             hdr: [1x1 struct]
       transform: [4x4 double]
@@ -213,7 +213,7 @@ In FieldTrip, the two atlases are included as nifti files. You can read them lik
 
 The Melbourne Subcortical Atlas is a volumetric parcellation of the human subcortex. The atlas was created using functional and structural MRI data from 1000 healthy adult subjects, using functional connectivity gradient mapping. The atlas will be useful for those interested in subcortical structures, and can be easily combined with other cortical atlases. Please note that there is emerging evidence that hippocampal activity can be detected using MEG (see: https://doi.org/10.1002/hbm.24445 and https://doi.org/10.1038/s41467-019-08665-5).
 
-The "scale I" atlas has been implemented in Fieldtrip and includes the following regions (all bilateral): 
+The "scale I" atlas has been implemented in Fieldtrip and includes the following regions (all bilateral):
 - Amygdala (AMY)
 - Hippocampus (HIP)
 - Globus Pallidus (GP)
@@ -238,3 +238,7 @@ The atlas can be read into Fieldtrip using the following code:
 - S.B. Eickhoff, K.E. Stephan, H. Mohlberg, C. Grefkes, G.R. Fink, K. Amunts, K. Zilles, A new SPM toolbox for combining probabilistic cytoarchitectonic maps and functional imaging data, NeuroImage 25(4), 2005, 1325-1335.
 - Tian, Y., Margulies, D.S., Breakspear, M. et al. Topographic organization of the human subcortex unveiled with functional connectivity gradients. Nat Neurosci 23, 1421–1432 (2020). https://doi.org/10.1038/s41593-020-00711-6
 - Wang L, Mruczek REB, Arcaro MJ, Kastner S. (2015) Probabilistic Maps of Visual Topography in Human Cortex. Cerebral Cortex. 25: 3911-3931
+
+## See also
+
+You can find more atlasses on <https://www.loni.usc.edu/research/atlases> and on <http://www.bmap.ucla.edu/portfolio/atlases>. 

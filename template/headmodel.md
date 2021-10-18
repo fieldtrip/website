@@ -1,6 +1,6 @@
 ---
 title: Template head models for forward volume conduction modeling
-tags: [template]
+tags: [template, headmodel]
 ---
 
 # Template head models for forward volume conduction modeling

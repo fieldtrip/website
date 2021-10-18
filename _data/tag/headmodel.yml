@@ -29,7 +29,7 @@
   link:  /faq/can_i_restrict_the_source_reconstruction_to_the_grey_matter
 
 - name:  How are the different head and MRI coordinate systems defined?
-  link:  /faq/how_are_the_different_head_and_mri_coordinate_systems_defined
+  link:  /faq/coordsys
 
 - name:  How can I check whether the grid that I have is aligned to the segmented volume and to the sensor gradiometer?
   link:  /faq/how_can_i_check_whether_the_grid_that_i_have_is_aligned_to_the_segmented_volume_and_to_the_sensor_gradiometer
@@ -69,6 +69,9 @@
 
 - name:  References to implemented methods
   link:  /references_to_implemented_methods
+
+- name:  Template head models for forward volume conduction modeling
+  link:  /template/headmodel
 
 - name:  Localizing oscillatory sources using beamformer techniques
   link:  /tutorial/beamformer

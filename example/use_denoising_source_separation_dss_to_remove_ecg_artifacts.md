@@ -14,7 +14,7 @@ This script demonstrates how you can use denoising source separation (DSS) for c
 2.  selection of a number of components to remove from MEEG data
 3.  removal of the identified components
 
-DSS is a blind source separation technique that is akin to ICA, with the added functionality of that it can use prior information to unmix the signals into sources that have certain characteristics. While in ICA the defining characteristic of the sources is statistical independence, in DSS one can for instance steer the unmixing towards the identification of sources that are timelocked to certain events. This is the exact feature that we are going to exploit in this example, because it shows how to remove the ECG artifact, using information about the timing of the QRS-complexes. What is therefore needed, is a sufficiently clean ECG-like signal to begin with, to allow for the identification of those peaks. This will be done, using the ft_artifact_zvalue function. Next, the output of ft_artifact_zvalue will be used to call ft_componentanalysis with 'dss' as method.
+DSS is a blind source separation technique that is akin to ICA, with the added functionality of that it can use prior information to unmix the signals into sources that have certain characteristics. While in ICA the defining characteristic of the sources is statistical independence, in DSS one can for instance steer the unmixing towards the identification of sources that are timelocked to certain events. This is the exact feature that we are going to exploit in this example, because it shows how to remove the ECG artifact, using information about the timing of the QRS-complexes. What is therefore needed, is a sufficiently clean ECG-like signal to begin with, to allow for the identification of those peaks. This will be done, using the ft_artifact_zvalue function. Next, the output of ft_artifact_zvalue will be used to call ft_componentanalysis with 'dss' as method. The original paper describing the method was published in the [journal of machine learning research](https://www.jmlr.org/papers/volume6/sarela05a/sarela05a.pdf): Särelä J. and Valpola H., Denoising Source Separation, Journal of Machine Learning 6 (2005) 233-272.
 
 ### Example dataset
 
@@ -51,9 +51,7 @@ We will use ft_artifact_zvalue for this step. To this end, we read in the ECG ch
 
 The DSS code wants a 'params' structure which contains peak time points, expressed in samples. These peak time points should either be expressed relative to the onset of the corresponding trial (which will only work, if the consecutive data that is to be subjected to ft_componentanalysis is epoched in the same way, as the data that was used for the peak identification), or relative to the onset of the recording. In the first case, you can use the peaks_indx cell-array for the params structure, in the second case, you'd need to use the peaks vector. We will use the cell-array mode, (in combination with cfg.cellmode for ft_componentanalysis) since that allows for a much more memory efficient implementation of the decomposition. In addition to the peak indices, you also need to specify a 'pre' and 'pst' window.
 
-    params.tr  = cfg.artfctdef.zvalue.peaks_indx;
-    params.pre = 0.25*meg.fsample;
-    params.pst = 0.50*meg.fsample;
+    params.artifact = cfg.artfctdef.zvalue.artifact;
     params.demean = true;
     
 ### DSS component rejection

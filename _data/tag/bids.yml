@@ -40,6 +40,9 @@
 - name:  Getting started with BIDS
   link:  /getting_started/bids
 
+- name:  Convert the EEG language dataset for sharing in BIDS
+  link:  /workshop/cuttingeeg2021/bids_language
+
 - name:  Convert the EEG sedation dataset for sharing in BIDS
   link:  /workshop/madrid2019/bids_sedation
 

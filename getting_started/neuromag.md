@@ -17,7 +17,7 @@ Alternative support for Neuromag data is implemented by calling the mex files fr
 
 Note that the MEG-PD toolbox will only function on 32-bit machines, and requires either a Linux or HP-UX system to run. As the mex files are compiled code, it is not possible to modify these to run on 64-bit machines (which are becoming increasingly common), at present.
 
-## Set Path
+## Set the path
 
 To get started, you need to add the paths where the FieldTrip and MNE toolboxes can be found. You should add the FieldTrip main directory to your path, and execute the **[ft_defaults](https://github.com/fieldtrip/fieldtrip/blob/release/ft_defaults.m)** function, which sets the defaults and configures up the minimal required path settings. See also this [frequently asked question](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path).
 

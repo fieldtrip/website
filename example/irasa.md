@@ -16,14 +16,10 @@ Below we provide two examples, a simulated dataset and a real human ECoG dataset
     O = 1; % weight of (O)scillatory components of the simulated data
     t = (1:60000)/1000; % time axis
     for rpt = 1:1
-        try
-          % generate pink noise
-            dspobj = dsp.ColoredNoise('Color', 'pink', 'SamplesPerFrame', length(t));
-            fn = dspobj()';
-        catch
-            % use another method to make pink noise when dsp.ColoredNoise returns license error
-            fn = cumsum(randn(1,length(t))); 
-        end
+        % use a simple method to make pink noise
+        % that does not rely on the digital signal processing toolbox
+        fn = cumsum(randn(1,length(t))); 
+        fn = fn./max(abs(fn));        
 
         % add a 10 Hz and 60 Hz oscillation
         data.trial{1,rpt} = F * fn + O * cos(2*pi*10*t) + O * cos(2*pi*60*t);
@@ -63,11 +59,11 @@ Below we provide two examples, a simulated dataset and a real human ECoG dataset
     xlabel('log-freq'); ylabel('log-power');
     legend({'original','fractal','oscillatory'},'location','southwest');
     if F~=0 && O==0
-        title('pure fractal signal');
+      title('pure fractal signal');
     elseif F==0 && O~=0
-        title('pure oscillatory signal');
+      title('pure oscillatory signal');
     elseif F~=0 && O~=0
-        title('mixed signal');
+      title('mixed signal');
     end
 ```
 

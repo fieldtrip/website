@@ -1,6 +1,6 @@
 ---
 title: Cluster-based permutation tests on event related fields
-tags: [tutorial, statistics, eeg, meg, timelock, plotting, meg-language]
+tags: [tutorial, statistics, eeg, meg, timelock, plotting, meg-language, neighbours]
 ---
 
 # Cluster-based permutation tests on event related fields
@@ -25,7 +25,7 @@ This tutorial contains hands-on material that we use for the [MEG/EEG toolkit co
 
 ## Procedure
 
-In this tutorial we will consider a **between-trials** experiment, in which we analyze the data of a single subject. The statistical analysis for this experiment we perform both on _axial_ and _planar_ ERFs. The steps we perform are as follow
+In this tutorial we will consider a **between-trials** experiment, in which we analyse the data of a single subject. The statistical analysis for this experiment we perform both on _axial_ and _planar_ ERFs. The steps we perform are as follow
 
 - Preprocessing and time-locked analysis with the **[ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_definetrial.m)**, **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** and **[ft_timelockanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockanalysis.m)** functions
 - (Calculation of the planar gradient with the **[ft_megplanar](https://github.com/fieldtrip/fieldtrip/blob/release/ft_megplanar.m)** and **[ft_combineplanar](https://github.com/fieldtrip/fieldtrip/blob/release/ft_combineplanar.m)** functions)
@@ -141,7 +141,7 @@ We now describe these options one-by-one.
 
 - We use **cfg.clusterstatistic** to choose the test statistic that will be evaluated under the permutation distribution. This is the actual test statistic and it must be distinguished from the sample-specific T-statistics that are used for thresholding. With cfg.clusterstatistic = 'maxsum', the actual test statistic is the maximum of the cluster-level statistics. A cluster-level statistic is equal to the sum of the sample-specific T-statistics that belong to this cluster. Taking the largest of these cluster-level statistics of the different clusters produces the actual test statistic.
 
-- The value of **cfg.minnbchan** is a tuning parameter that determines the way the clusters are formed. More specifically, we use cfg.minnbchan to specify the minimum number of neighborhood channels that is required for a selected sample (i.e., a sample who's T-value exceeds the threshold) to be included in the clustering algorithm. With cfg.minnbchan = 0 (the default), it sometimes happens that two clusters are spatially connected via a narrow bridge of samples. Because they are connected, these two clusters are considered as a single cluster. If clusters are interpreted as reflecting spatially distinct sources, such a combined cluster does not make much sense. To suppress this type of combined clusters, one can choose to ignore all selected samples (on the basis of their T-values) if they have less than some minimum number of neighbors that were also selected. This minimum number is assigned to cfg.minnbchan. This number must be chosen independently of the data.
+- The value of **cfg.minnbchan** is a tuning parameter that determines the way the clusters are formed. More specifically, we use cfg.minnbchan to specify the minimum number of neighbourhood channels that is required for a selected sample (i.e., a sample who's T-value exceeds the threshold) to be included in the clustering algorithm. With cfg.minnbchan = 0 (the default), it sometimes happens that two clusters are spatially connected via a narrow bridge of samples. Because they are connected, these two clusters are considered as a single cluster. If clusters are interpreted as reflecting spatially distinct sources, such a combined cluster does not make much sense. To suppress this type of combined clusters, one can choose to ignore all selected samples (on the basis of their T-values) if they have less than some minimum number of neighbors that were also selected. This minimum number is assigned to cfg.minnbchan. This number must be chosen independently of the data.
 
 - **cfg.neighbours** is a structure that you need to have previously created using [ft_prepare_neighbours](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_neighbours).
 
@@ -234,8 +234,7 @@ To plot the results of the permutation test, we use the plotting function **[ft_
 
 We then construct a boolean matrix indicating whether a channel/time point belongs to a cluster that we deem interesting to inspect. This matrix has size [Number_of_MEG_channels x Number_of_time_samples], like stat.posclusterslabelmat. We'll make two such matrices: one for positive clusters (named pos), and one for negative (neg). All (channel,time)-pairs belonging to the large clusters whose probability of occurrence is sufficiently low in relation to the associated randomization distribution of clusterstats will be coded in the new boolean matrix as 1, and all those that don't will be coded as 0.
 
-% Make a vector of all p-values associated with the clusters from ft_timelockstatistics.
-
+    % Make a vector of all p-values associated with the clusters from ft_timelockstatistics.
     pos_cluster_pvals = [stat.posclusters(:).prob];
 
     % Then, find which clusters are deemed interesting to visualize, here we use a cutoff criterion based on the
@@ -249,12 +248,12 @@ We then construct a boolean matrix indicating whether a channel/time point belon
     neg_clust         = find(neg_cluster_pvals < 0.025);
     neg               = ismember(stat.negclusterslabelmat, neg_clust);
 
-Alternatively, we can manually select which clusters we want to plot. If we only want to see the extext of the first (i.e. most significant) positive and negative clusters, for instance, we can do so as follows:
+Alternatively, we can manually select which clusters we want to plot. If we only want to see the extent of the first (i.e. most significant) positive and negative clusters, for instance, we can do so as follows:
 
     pos = stat.posclusterslabelmat == 1; % or == 2, or 3, etc.
     neg = stat.negclusterslabelmat == 1;
 
-To plot a sequence of twenty topographic plots equally spaced between 0 and 1 second, we define the vector j of time steps. These time intervals correspond to the samples m in stat and in the variables pos and neg. m and j must, therefore, have the same length.
+To plot a sequence of twenty topographic plots equally spaced between 0 and 1 second, we define the vector j of time steps. These time intervals correspond to the samples m in stat and in the variables pos. and neg. m and j must, therefore, have the same length.
 
 To be sure that your sample-based time windows align with your time windows in seconds, check the following:
 
@@ -271,7 +270,7 @@ To plot the data use the following for-loop:
     % This might not be the case, because ft_math might shuffle the order
     [i1,i2] = match_str(raweffectFICvsFC.label, stat.label);
 
-    for k = 1:20;
+    for k = 1:20
        subplot(4,5,k);
        cfg = [];
        cfg.xlim = [j(k) j(k+1)];   % time interval of the subplot
@@ -458,7 +457,7 @@ We now describe the differences between this configuration and the configuration
 
 - Instead of an independent samples T-statistic, we use the **dependent samples T-statistic** to evaluate the effect at the sample level (cfg.statistic = 'depsamplesT'). This is because we are dealing with a within-UO instead of a between-UO design.
 
-- The **design matrix** in a within-UO design is different from the design matrix in a between-UO design. In the design matix for a within-UO design, you have to specify the unit variable. The unit variable specifies the units that have produced the different condition-specific data structures. For example, consider a hypothetical study with 4 subjects and 2 experimental conditions. The design matrix may then look like this: design = [1 2 3 4 1 2 3 4; 1 1 1 1 2 2 2 2 ]. The first row of this matrix is the unit variable: it specifies that the first subject produced the first and the fifth data structure, the second subject produced the second and the sixth data structure, etc. The second row of the design matrix is the independent variable.
+- The **design matrix** in a within-UO design is different from the design matrix in a between-UO design. In the design matrix for a within-UO design, you have to specify the unit variable. The unit variable specifies the units that have produced the different condition-specific data structures. For example, consider a hypothetical study with 4 subjects and 2 experimental conditions. The design matrix may then look like this: design = [1 2 3 4 1 2 3 4; 1 1 1 1 2 2 2 2 ]. The first row of this matrix is the unit variable: it specifies that the first subject produced the first and the fifth data structure, the second subject produced the second and the sixth data structure, etc. The second row of the design matrix is the independent variable.
 
 - Because the design matrix contains both a unit variable and an independent variable, it has to be specified in the configuration which row contains which variable. This information is passed in the fields **cfg.uvar** (for the unit variable) and **cfg.ivar** (for the independent variable).
 
@@ -476,7 +475,7 @@ From inspection of stat.posclusters and stat.negclusters, we observe that there 
 
 ### Plotting the results
 
-For plotting we first use [ft_timelockgrandaverage](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockgrandaverage) to calculate the grand average (average across all subject's average).
+For plotting we first use [ft_timelockgrandaverage](https://github.com/fieldtrip/fieldtrip/blob/master/ft_timelockgrandaverage.m) to calculate the grand average (average across all subject's average).
 
     % load individual subject data
     load('ERF_orig');

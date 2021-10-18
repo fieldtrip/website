@@ -5,10 +5,10 @@ tags: [example, bids, sharing, anonymize]
 
 # Converting the combined MEG/fMRI MOUS dataset for sharing in BIDS
 
-This example describes how we prepared a combined MEG/fMRI dataset for sharing. The project involved 204 subjects, which participated in either a auditory or a visual version of a language experiment. For every subject resting-state and task MEG and fMRI was recorded. The data and the experiment are described in more details in the references that you find at the end of this page.
+The [BIDS standard](https://bids.neuroimaging.io) describes a simple and easy to adopt way of organizing neuroimaging and behavioral data. This example describes how we prepared a combined MEG/fMRI dataset in BIDS format for sharing. The project involved 204 subjects, which participated in either a auditory or a visual version of a language experiment. For every subject resting-state and task MEG and fMRI was recorded. The data and the experiment are described in more details in the references that you find at the end of this page.
 
 {% include markup/success %}
-The data is shared on the Donders Repository with the persistent identifier [11633/di.dccn.DSC_3011020.09_236](http://hdl.handle.net/11633/di.dccn.DSC_3011020.09_236) and the corresponding publication "A 204-subject multimodal neuroimaging dataset to study language processing" has been published as [10.1038/s41597-019-0020-y](https://doi.org/10.1038/s41597-019-0020-y).
+The data is shared on the Donders Repository with the digital object identifier [10.34973/37n0-yc51](https://doi.org/10.34973/37n0-yc51) and the corresponding publication "A 204-subject multimodal neuroimaging dataset to study language processing" has been published as [10.1038/s41597-019-0020-y](https://doi.org/10.1038/s41597-019-0020-y).
 {% include markup/end %}
 
 Although we acquired slightly more data than published, the part that we share for these 204 subjects consists of

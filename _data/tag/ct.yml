@@ -103,6 +103,9 @@
 - name:  In what way can frequency domain data be represented in FieldTrip?
   link:  /faq/in_what_way_can_frequency_domain_data_be_represented_in_fieldtrip
 
+- name:  MATLAB does not see the functions in the "private" directory
+  link:  /faq/matlab_does_not_see_the_functions_in_the_private_directory
+
 - name:  Should I use a Polhemus or a Structure Sensor to record electrode positions?
   link:  /faq/structuresensor
 
@@ -129,6 +132,9 @@
 
 - name:  Getting started with CTF data
   link:  /getting_started/ctf
+
+- name:  Template 3-D electrode sets
+  link:  /template/electrode
 
 - name:  Introduction on dealing with artifacts
   link:  /tutorial/artifacts

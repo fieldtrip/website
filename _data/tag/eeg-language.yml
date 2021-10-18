@@ -1,6 +1,9 @@
 - name:  Using General Linear Modeling on time series data
   link:  /example/glm_timeseries
 
+- name:  Using General Linear Modeling over trials
+  link:  /example/glm_trials
+
 - name:  Which datasets are used in the documentation and where are they used?
   link:  /faq/what_types_of_datasets_and_their_respective_analyses_are_used_on_fieldtrip
 
@@ -9,6 +12,12 @@
 
 - name:  Details on the EEG language dataset
   link:  /tutorial/eeg_language
+
+- name:  Convert the EEG language dataset for sharing in BIDS
+  link:  /workshop/cuttingeeg2021/bids_language
+
+- name:  Time-frequency analysis on short and long timescales
+  link:  /workshop/cuttingeeg2021/tutorial_freq
 
 - name:  FieldTrip workshop in Madrid
   link:  /workshop/madrid2019

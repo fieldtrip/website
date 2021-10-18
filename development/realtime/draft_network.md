@@ -87,12 +87,7 @@ filtering out duplicate events on the client side. _AND_ seems more useful.
 
 ### Timestamp field of events
 
-Some of the offline file formats supported by FieldTrip have a _timestamp_ field for events. We should
-think about including this in the FieldTrip buffer as well. The type should be 64-bit double precision, with
-the IEEE standard NaN (not a number) indicating that this field is not filled. Otherwise, the content can be
-application specific, or for example contain the system time of a specific machine at which an event happened,
-maybe encoded as UNIX time (seconds and fractions thereof since the epoch / 1970). Currently the timing is
-based on samples alone, which makes it hard to fuse data from different sources.
+Some of the offline file formats supported by FieldTrip have a _timestamp_ field for events. We should think about including this in the FieldTrip buffer as well. The type should be 64-bit double precision, with the IEEE standard NaN (not a number) indicating that this field is not filled. Otherwise, the content can be application specific, or for example contain the system time of a specific machine at which an event happened, maybe encoded as UNIX time (seconds and fractions thereof since the epoch / 1970). Currently the timing is based on samples alone, which makes it hard to fuse data from different sources.
 
 #### WAIT_GET_DAT: Block the request until the desired data samples are available
 

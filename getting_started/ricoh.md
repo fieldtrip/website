@@ -29,7 +29,7 @@ In general, the first step of analyzing MEG data is composed of **MEG data read-
 
 The functions in FieldTrip that allows you to execute the pre-processing and co-registration are: **[ft_read_header](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_header.m)**, **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)**, **[ft_read_event](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_event.m)**, **[ft_read_headshape](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_headshape.m)**, and **[ft_read_sens](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_sens.m)**. This page will describe how these FieldTrip functions perform for Ricoh and Yokogawa data by showing several examples on pre-processing and co-registration. As for the co-registration, you need to prepare MRI file with formats supported in FieldTrip. An MRI file with NIfTI (.nii) or DICOM format is assumed to be used in this page.
 
-## Set path
+## Set the path
 
 To get started, you should add the FieldTrip main directory to your path, and execute the **[ft_defaults](https://github.com/fieldtrip/fieldtrip/blob/release/ft_defaults.m)** function, which sets the defaults and configures up the minimal required path settings. See also this [frequently asked question](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path). You also need to set the path to your data files.
 

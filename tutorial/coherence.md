@@ -338,7 +338,7 @@ This requires the preprocessed data, see above, or download from [ftp://ftp.fiel
 
     load data
 
-Compute the cross-spectral density matrix for 18 H
+Compute the cross-spectral density matrix for 18 Hz
 
     cfg            = [];
     cfg.method     = 'mtmfft';

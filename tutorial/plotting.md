@@ -250,7 +250,7 @@ The baseline correction computes the power difference compared to the pre-stimul
 
 {% include image src="/assets/img/tutorial/plotting/fig18.png" %}
 
-The interpretation becomes more clear with
+The interpretation becomes more clear with a different colormap
 
     cfg = [];
     cfg.xlim = [0.9 1.3];
@@ -259,11 +259,8 @@ The interpretation becomes more clear with
     cfg.baseline = [-0.5 -0.1];
     cfg.baselinetype = 'relative';
     cfg.layout = 'CTF151_helmet';
+    cfg.colormap = '*RdBu';
     figure; ft_topoplotTFR(cfg,TFRhann); colorbar
-
-    % so far it was the same as above, now change the colormap
-    ft_hastoolbox('brewermap', 1);         % ensure this toolbox is on the path
-    colormap(flipud(brewermap(64,'RdBu'))) % change the colormap
 
 {% include image src="/assets/img/tutorial/plotting/fig19.png" %}
 

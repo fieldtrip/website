@@ -47,6 +47,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [How can I compute inter-trial coherence?](/faq/itc)
 - [How can I do time-frequency analysis on continuous data?](/faq/how_can_i_do_time-frequency_analysis_on_continuous_data)
 - [How does mtmconvol work?](/faq/mtmconvol)
+- [How to interpret the sign of the phase slope index?](/faq/how_to_interpret_the_sign_of_the_phase_slope_index)
 - [In what way can frequency domain data be represented in FieldTrip?](/faq/in_what_way_can_frequency_domain_data_be_represented_in_fieldtrip)
 - [What convention is used to define absolute phase in 'mtmconvol', 'wavelet' and 'mtmfft'](/faq/what_convention_is_used_to_define_absolute_phase_in_mtmconvol_wavelet_and_mtmfft)
 - [What does "padding not sufficient for requested frequency resolution" mean?](/faq/what_does_padding_not_sufficient_for_requested_frequency_resolution_mean)

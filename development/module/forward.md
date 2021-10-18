@@ -50,13 +50,11 @@ The following forward methods are implemented for computing the magnetic field (
 
 Normally, end-users of the FieldTrip toolbox would use the functions in the main FieldTrip directory and not be calling the functions that are part of the forward module directly . The high-level FieldTrip functions characterize themself by having a cfg argument as the first input, doing data handling, conversions of objects and try to support backward-compatibility with older end-user analysis scripts.
 
-Some high-level functions that are of relevance for forward modeling ar
+Some high-level functions that are of relevance for forward modeling are
 
-- **[ft_read_mri](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_mri.m)**
-- **[ft_read_sens](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_sens.m)**
-- **[ft_volumerealign](https://github.com/fieldtrip/fieldtrip/blob/release/ft_volumerealign.m)** and **[ft_volumereslice](https://github.com/fieldtrip/fieldtrip/blob/release/ft_volumereslice.m)**
+- **[ft_read_mri](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_mri.m)** and **[ft_read_sens](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_sens.m)**
+- **[ft_volumerealign](https://github.com/fieldtrip/fieldtrip/blob/release/ft_volumerealign.m)**, **[ft_volumereslice](https://github.com/fieldtrip/fieldtrip/blob/release/ft_volumereslice.m)**, and **[ft_volumesegment](https://github.com/fieldtrip/fieldtrip/blob/release/ft_volumesegment.m)**
 - **[ft_electroderealign](https://github.com/fieldtrip/fieldtrip/blob/release/ft_electroderealign.m)**
-- **[ft_volumesegment](https://github.com/fieldtrip/fieldtrip/blob/release/ft_volumesegment.m)**
 - **[ft_prepare_mesh](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_mesh.m)**
 - **[ft_prepare_headmodel](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_headmodel.m)**, this calls ft_headmodel_xxx (see below)
 - **[ft_prepare_leadfield](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_leadfield.m)**, this calls ft_prepare_vol_sens and ft_compute_leadfield (see below)
@@ -65,12 +63,12 @@ These are explained in more detail in the appropriate [tutorials](/tutorial).
 
 ## Definition of the low-level function-calls (API)
 
-Volume conduction models of the head are represented as a MATLAB structure, which content depends on the model details. In the subsequent documentation the volume conduction model structure is referred to as **headmodel**. The electrodes in case of EEG, or magnetometers or gradiometers in case of MEG, are described as a MATLAB structure. In the subsequent documentation this is referred to as **elec** for electrodes, **grad** for magmetometers and/or gradiometers, or **sens** to represent either electrodes or gradiometers.
+Volume conduction models of the head are represented as a MATLAB structure, which content depends on the model details. In the subsequent documentation the volume conduction model structure is referred to as **headmodel**. The electrodes in case of EEG, or magnetometers or gradiometers in case of MEG, are described as a MATLAB structure. In the subsequent documentation this is referred to as `elec` for electrodes, `grad` for magnetometers and/or gradiometers, or `sens` to represent either electrodes or gradiometers.
 
 Using the FieldTrip [fileio](/development/module/fileio) module one can read in volume conduction models and the definition of the sensor array (electrodes or gradiometers) from file by using the **[ft_read_headmodel](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_headmodel.m)** and/or **[ft_read_sens](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_sens.m)** functions.
 
     [headmodel] = ft_read_headmodel(filename)
-    [sens] = ft_read_sens(filename)
+    [sens]      = ft_read_sens(filename)
 
 This assumes that the volume conduction model was created in external software (e.g. CTF, Neuromag, or ASA) and that the sensor description is stored in an external acquisition-specific file format.
 
@@ -104,20 +102,20 @@ Detailed information for each of the functions that creates a head model can be 
 
 If desired the volume conduction model and the sensor array can be spatially transformed using a 4x4 homogenous transformation matrix. E.g. the electrodes can be translated and rotated to align them with head coordinate system, or they can be translated and rotated to switch to another coordinate system.
 
-    [headmodel] = ft_transform_vol(transform, headmodel)
-    [sens] = ft_transform_sens(transform, sens)
+    [headmodel] = ft_transform_geometry(transform, headmodel)
+    [sens]      = ft_transform_geometry(transform, sens)
 
-The reason for using the **[ft_transform_sens](https://github.com/fieldtrip/fieldtrip/blob/release/ft_transform_sens.m)** and **[ft_transform_vol](https://github.com/fieldtrip/fieldtrip/blob/release/ft_transform_vol.m)** functions is that they allow you to transform any sensor type (EEG and/or MEG) and any volume conduction model without you having to manipulate the elements within the sens or headmodel structure.
+The reason for using the **[ft_transform_geometry](https://github.com/fieldtrip/fieldtrip/blob/release/ft_transform_geometry.m)** function is that they allow you to transform any sensor type (EEG and/or MEG) and any volume conduction model without you having to manipulate the elements within the `sens` or `headmodel` structure.
 
-Up to here the head model only depends on the geometrical description of the volume conductor and is independent of the data, with exception of the MEG localspheres model. The consequence is that the head model can be used for multiple experimental sessions, multiple electrode or gradiometer placements, or different selections of channels for a single session. The head model, i.e. the **headmodel** structure, can be saved to disk and re-used in an analysis on the next day.
+Up to here the head model only depends on the geometrical description of the volume conductor and is independent of the data, with exception of the MEG localspheres model. The consequence is that the head model can be used for multiple experimental sessions, multiple electrode or gradiometer placements, or different selections of channels for a single session. The head model, i.e. the `headmodel` structure, can be saved to disk and re-used in an analysis on the next day.
 
-Following the initial set-up of the head model, but prior to the actual forward computations, the **[ft_prepare_vol_sens](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_vol_sens.m)** function should be called to link the head model and the sensors and make a data dependent forward model (consisting of the headmodel and sens).
+Following the initial set-up of the head model, but prior to the actual forward computations, the **[ft_prepare_vol_sens](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_vol_sens.m)** function should be called to link the head model and the sensors and make a data dependent forward model (consisting of the `headmodel` and `sens`).
 
     [headmodel, sens] = ft_prepare_vol_sens(headmodel, sens, ...)
 
 The **[ft_prepare_vol_sens](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_vol_sens.m)** function does a variety of things, depending on the peculiarities of the sensors and head model. It can be used for channel selection, which sometimes involves both the sensors and volume conduction model (e.g. in case of a localspheres MEG model). It will project EEG electrodes (which are described as a Nx3 set of points) onto the scalp surface. It will provide an interpolation of the BEM potential (which is usually computed at the vertices) onto the electrodes. In general the **[ft_prepare_vol_sens](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_vol_sens.m)** function tries to carry out as many preparations as possible, so that subsequently the leadfields can be computed as efficiently as possible.
 
-Finally the subsequent computation of the EEG potential or MEG field distribution is done with the **[ft_compute_leadfield](https://github.com/fieldtrip/fieldtrip/blob/release/ft_compute_leadfield.m)** function:
+Finally the subsequent computation of the EEG potential or MEG field distribution is done with the **[ft_compute_leadfield](https://github.com/fieldtrip/fieldtrip/blob/release/ft_compute_leadfield.m)** function, which returns a nchan\*3 matrix or a nchan\*(3*ndipoles) matrix if you specify more than one dipole position.
 
     [lf] = ft_compute_leadfield(pos, sens, headmodel, ...)
 

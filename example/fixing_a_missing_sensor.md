@@ -1,6 +1,6 @@
 ---
 title: Fixing a missing channel
-tags: [example, meg, preprocessing, ctf]
+tags: [example, meg, preprocessing, ctf, neighbours]
 ---
 
 # Fixing a missing channel
@@ -10,8 +10,8 @@ Use this script when one or more channels in the 275 channel CTF system are dead
     [notmissing, dummy] = match_str(label, data.label);
     newtrial = cell(size(data.trial));
     for k = 1:numel(data.trial)
-    newtrial{k} = zeros(numel(label), size(data.trial{k},2));
-    newtrial{k}(notmissing,:) = data.trial{k};
+      newtrial{k} = zeros(numel(label), size(data.trial{k},2));
+      newtrial{k}(notmissing,:) = data.trial{k};
     end
     goodchans   = false(numel(label),1);
     goodchans(notmissing) = true;
@@ -24,7 +24,7 @@ Use this script when one or more channels in the 275 channel CTF system are dead
 
 Subsequently you can use **[ft_channelrepair](https://github.com/fieldtrip/fieldtrip/blob/release/ft_channelrepair.m)** for nearest neighbourhood averaging. This replaces the zeros in the broken channel with more appropriate values.
 
-    cfgmr               = []
-    cfgmr.badchannel    = data.label(badchanindx);
-    cfgmr.neighbourdist = 4;
-    data = ft_channelrepair(cfgmr,data);
+    cfg               = []
+    cfg.badchannel    = data.label(badchanindx);
+    cfg.neighbourdist = 4;
+    data = ft_channelrepair(cfg, data);

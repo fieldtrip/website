@@ -1,6 +1,6 @@
 ---
 title: Template MEG dewar shapes
-tags: [template]
+tags: [template, dewar]
 ---
 
 # Template MEG dewar shapes

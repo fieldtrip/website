@@ -17,6 +17,7 @@ If there is no information listed for a potential workshop below, then we don't 
 
 We are considering and/or concretely planning to have FieldTrip workshops in
 
+-   2021, [CuttingEEG 2021](/workshop/cuttingeeg2021) - Aix-en-Provence, France
 -   2022, MEG/EEG toolkit - Nijmegen, NL
 
 Previous FieldTrip workshops took place at

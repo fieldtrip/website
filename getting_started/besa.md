@@ -5,11 +5,11 @@ tags: [dataformat, besa]
 
 # Getting started with BESA data
 
-Please add information if you're using BESA data and want to share info with other FieldTrip users.
+A lot of valuable information can be found on the [BESA wiki](http://wiki.besa.de/). Please add your information and experiences here if you're using BESA data.
 
 ## Background
 
-BESA is a commercial software package for EEG and MEG data analysis (see www.besa.de). One of BESA's strong points is source analysis, in particular concerning dipole modeling. By including prior anatomical or functional knowledge as constraints on the source model, it is possible to make robust estimations of relatively complex source configurations. This is further facilitated by the easy to use GUI. Computation can be done using a number of pre-defined head models that can be extended to individual head models (FEM) when using the extension package BESA MRI or adapting your FEM to BESA standards. BESA's source analysis methods also include some beamformers.
+BESA is a commercial software package for EEG and MEG data analysis (see <http://www.besa.de>). One of BESA's strong points is source analysis, in particular concerning dipole modeling. By including prior anatomical or functional knowledge as constraints on the source model, it is possible to make robust estimations of relatively complex source configurations. This is further facilitated by the easy to use GUI. Computation can be done using a number of pre-defined head models that can be extended to individual head models (FEM) when using the extension package BESA MRI or adapting your FEM to BESA standards. BESA's source analysis methods also include some beamformers.
 
 FieldTrip has very extensive support for advanced frequency and time-frequency analysis of EEG and MEG data. The main approach for source analysis that is currently implemented in FieldTrip uses various beamformer methods in the time, but especially in the frequency domain. In that respect, it differs a little bit from BESA. However, a large difference between BESA and FieldTrip is that the latter also includes support for advanced statistical analysis of channel and source level data.
 
@@ -21,21 +21,21 @@ BESA has its own file formats for storing various aspects of the data. Most of t
 
 FieldTrip directly supports the following BESA file format
 
-- .avr contains an averaged ERP/ERF
-- .mul contains an averaged ERP/ERF stored in a multiplexed format
-- .elp contains electrode labels-
-- .sfp contains electrode labels and positions
-- .pdg contains the settings of an analysis paradigm
-- .tfc contains a time-frequency representation of power or coherence
-- .dat contains multiple source beamformer output on a regular 3D grid
+- `.avr` contains an averaged ERP/ERF
+- `.mul` contains an averaged ERP/ERF stored in a multiplexed format
+- `.elp` contains electrode labels-
+- `.sfp` contains electrode labels and positions
+- `.pdg` contains the settings of an analysis paradigm
+- `.tfc` contains a time-frequency representation of power or coherence
+- `.dat` contains multiple source beamformer output on a regular 3D grid
 
-It is possible to use the low-level functions in FieldTrip to read in the BESA data into MATLAB, but it is preferred to use the high-level besa2fieldtrip function. That function will read the data and format it into a structure that is compatible with fieldtrip. Depending of the content of the file, the data will be formatted to appear similar to the output of one of the FieldTrip function
+It is possible to use the low-level functions in FieldTrip to read in the BESA data into MATLAB, but it is preferred to use the high-level **[besa2fieldtrip](https://github.com/fieldtrip/fieldtrip/blob/release/besa2fieldtrip.m)** function. That function will read the data and format it into a structure that is compatible with FieldTrip. Depending of the content of the file, the data will be formatted to appear similar to the output of one of the FieldTrip function
 
-- .avr converted to ft_timelockanalysis
-- .mul converted to ft_timelockanalysis
-- .tfc converted to ft_freqanalysis
+- `.avr` converted to ft_timelockanalysis
+- `.mul` converted to ft_timelockanalysis
+- `.tfc` converted to ft_freqanalysis
 
-For example, you can read in event-related potential data using
+For example, you can read in event-related potentials using
 
     timelock = besa2fieldtrip('filename.avr');
 
@@ -45,9 +45,9 @@ or a time-frequency estimate of power using
 
 ## BESA MATLAB toolbox
 
-For some of the file formats, there happen to be two low-level conversion functions importers. FieldTrip comes with the low-level functions of itself, but there is also a BESA toolbox written by Karsten Hochstatter. The preferred method for using BESA2FIELDTRIP is to download the BESA toolbox and to add it to your MATLAB path. The conversion function will automatically detect and use it when available on your path.
+For some of the file formats, there happen to be two low-level conversion functions importers. FieldTrip comes with the low-level functions of itself, but there is also a BESA toolbox written by Karsten Hochstatter. The preferred method for using **[besa2fieldtrip](https://github.com/fieldtrip/fieldtrip/blob/release/besa2fieldtrip.m)** is to download the BESA toolbox and to add it to your MATLAB path. The conversion function will automatically detect and use it when available on your path.
 
-The BESA toolbox is maintained by [BESA](http://www.besa.de) and included in the FieldTrip release as `fieldtrip/external/besa` for your convenience.
+The BESA toolbox is maintained by [BESA](http://www.besa.de) and included in the FieldTrip release in `fieldtrip/external/besa`.
 
 ## Electrode information
 
@@ -58,7 +58,7 @@ BESA electrode files can also be read into MATLAB, using the **[ft_read_sens](ht
 
 ## Reading .dat files with source reconstructions
 
-Because BESA .dat files do not include mask information, the resulting data structure will not have the .inside and .outside fields assigned correctly, which will lead to errors in subsequent analyses in fieldtrip. Consequently these fields much be set for each subject. The following code is an example of how to develop a reasonable mask and apply it to all subjects (it masks out only those coordinates with a value of 0 for all subjects
+Because BESA `.dat` files do not include mask information, the resulting data structure will not have the `.inside` field assigned correctly, which will lead to errors in subsequent analyses. Consequently these fields much be set for each subject. The following code is an example of how to develop a reasonable mask and apply it to all subjects (it masks out only those coordinates with a value of 0 for all subjects
 
     files=dir(['yoursubjectdirectory' filesep '.dat']);
     inside=[];
@@ -79,7 +79,7 @@ Because BESA .dat files do not include mask information, the resulting data stru
 
 ## Continuous data in the .besa format
 
-The .besa format contains continuous (unprocessed) data, including header and event details.
+The `.besa` format contains continuous (unprocessed) data, including header and event details.
 
 FIXME: needs elaboration
 
@@ -91,7 +91,7 @@ Events can also be stored in a data channel appended to the brain data channels.
     cfg.trialfun   = 'trialfun_besa';
     cfg            = ft_definetrial(cfg);
 
-where 'trialfun_besa' is a self-specified MATLAB function for conditional selection of data segments or trials of interest. See below and [this page](/example/making_your_own_trialfun_for_conditional_trial_definition) for examples.
+where `trialfun_besa` is your own MATLAB function for conditional selection of data segments or trials of interest. See below and [this page](/example/making_your_own_trialfun_for_conditional_trial_definition) for examples.
 
     % read and preprocess the data
     cfg.continuous = 'yes';
@@ -109,7 +109,7 @@ Note that filtering, re-referencing, etcetera can be performed at the preprocess
 
 Hereunder are two examples of a trial function. See also [this page](/example/making_your_own_trialfun_for_conditional_trial_definition) for more examples. Ensure that your trial function is available on the MATLAB path for it to be found by MATLAB and invoked by the call to ft_define_trial (see above). The below examples assume that the experiment events are stored in a data channel whose name or index (referred to as chanindx in the code) is known to the user.
 
-The example scripts also assume that the event is marked by an 'up flank' in the recorded signal (e.g., by virtue of an increase in light on the photodiode transducer). Down flanks can also be detected by specifying cfg.detectflank = 'down'. The trigger threshold can be a hard threshold, i.e. numeric, or flexibly defined by an executable string (e.g., to calculate the 'median' of the analog signal). In the first example, we define a 'segment' as one second preceding this trigger until 2 seconds thereafter:
+The example scripts also assume that the event is marked by an 'up flank' in the recorded signal (e.g., by virtue of an increase in light on the photodiode transducer). Down flanks can also be detected by specifying `cfg.detectflank = 'down'`. The trigger threshold can be a hard threshold, i.e. numeric, or flexibly defined by an executable string (e.g., to calculate the 'median' of the analog signal). In the first example, we define a 'segment' as one second preceding this trigger until 2 seconds thereafter:
 
     function [trl, event] = trialfun_besa(cfg)
 
@@ -164,5 +164,6 @@ In this second example, we define a data segment as the time the trigger was 'on
     end
     end
 
-Alternatively, when the event channel index is unknown, but its name, or a part thereof (e.g., 'DC01'), is, one may us
-chanindx = find(ismember(hdr.label, ft_channelselection('\_DC01*', hdr.label)));
+Alternatively, when the exact event channel index is unknown, but its name, or a part thereof (e.g., `'DC01'`), is, you can use a wildcard
+
+    chanindx = find(ismember(hdr.label, ft_channelselection('DC01*', hdr.label)));

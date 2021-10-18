@@ -6,7 +6,7 @@ tags: [example, bids, sharing, eyelink, smi, tobii]
 # Converting an example eye tracker dataset for sharing in BIDS
 
 {% include markup/danger %}
-BIDS does currently not specify how to represent eye tracker data. This example - and the support that is implemented in the **[data2bids](https://github.com/fieldtrip/fieldtrip/blob/release/data2bids.m)** function - should be considered as a preliminary proposal to help researchers with their existing data. This example may also serve to start a discussion on whether and how this data type should be added to the [BIDS specification](http://bids-specification.readthedocs.io/).
+The [BIDS standard](https://bids.neuroimaging.io) does currently not specify how to represent eye tracker data. This example - and the support that is implemented in the **[data2bids](https://github.com/fieldtrip/fieldtrip/blob/release/data2bids.m)** function - should be considered as a preliminary proposal to help researchers with their existing data. This example may also serve to start a discussion on whether and how this data type should be added to the [BIDS specification](http://bids-specification.readthedocs.io/).
 {% include markup/end %}
 
 Eye tracking data can be stored in the BIDS representation similar to [behavioral data](https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/07-behavioral-experiments.html). This not only includes the gaze position, pupil diameter, but also allows for presentation (stimulus and response events) and saccades to be represented in the events.tsv file.

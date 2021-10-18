@@ -14,4 +14,5 @@ BrainStream focuses on building a generic easy-to-use user/programmer interface 
 ## Integration with FieldTrip
 
 BrainStream makes use of the [FieldTrip fileio module](/development/module/fileio) to read data. The fileio interface allows BrainStream to read offline data (i.e. from disk) from any of the ~30 supported fileformats. Furthermore, the fileio interface allows BrainStream to read data and events in real-time from the [FieldTrip buffer](/development/realtime/buffer).
+
 Instructions on how to use BrainStream in general can be found [here](http://www.nici.ru.nl/brainstream/twiki/bin/view/BrainStreamDocs), or take a look at the [sentences](http://www.nici.ru.nl/brainstream/twiki/bin/view/BrainStreamDocs/DocsSectionsExampleSentences) and [speller](http://www.nici.ru.nl/brainstream/twiki/bin/view/BrainStreamDocs/DocsSectionsExampleSpellerIntro) examples.

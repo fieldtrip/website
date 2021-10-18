@@ -14,11 +14,8 @@ If you want to implement the buffer in your own application, you should consider
 The best way to get started with incorporating the FieldTrip buffer in your own software project, is by looking at the example applications in the buffer/test directory. It contains a number of examples
 
 - "buffer" implements a standalone buffer (middle box in the figure above)
-
 - "demo_sinewave" implements a standalone data acquisition client (left box in the figure above)
-
 - "demo_combined" implements both the buffer and the data acquisition in a single executable (left+middle box)
-
 - "demo_event" writes events to the buffer, c.f. demo_sinewave which writes only data
 
 ### The buffer will be attached to your local application

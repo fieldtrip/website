@@ -33,6 +33,6 @@ The Helix-Tragus Junction (i.e. LHJ and RHJ) is the best defined in anatomical M
 ## See also
 
 - [How are the Left and Right Pre-Auricular (LPA and RPA) points defined?](/faq/how_are_the_lpa_and_rpa_points_defined)
-- [How are the different head and MRI coordinate systems defined?](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined)
+- [How are the different head and MRI coordinate systems defined?](/faq/coordsys)
 - BrainStorm documentation on [coordinate systems](http://neuroimage.usc.edu/brainstorm/CoordinateSystems)
 - EEGLAB documentation on [lateral fiducials](https://sccn.ucsd.edu/mediawiki/images/1/19/Fiducials.pdf)

@@ -42,14 +42,15 @@ required.
 
 To compile tia2ft, you can do the followin
 
-1.  build "libbuffer.a" in "/realtime/buffer/src" by issuing "make",
-2.  build "tia2ft" by issuing "make" in "/realtime/acquisition/tobi/".
+1.  build `libbuffer.a` in `/realtime/buffer/src` by issuing `make`,
+2.  build `tia2ft` by issuing `make` in `/realtime/acquisition/tobi/`.
 
 Then, it can simply be run with:
-\$ ./tia2ft.sh --serve-ft-buffer
+
+    tia2ft.sh --serve-ft-buffer
 
 The shell script adds the TiA library to the search path, and starts the
-executable "tia2ft".
+executable `tia2ft`.
 
 ### Windows
 
@@ -65,9 +66,9 @@ To test tia2ft, one can use the TOBI signal server to generate artificial
 signals. With the TOBI signal servers version 8ea1376, a TiA serving
 sine-waves can be started as follow
 
-    $ ./server.sh bin/server_config.xml
+    server.sh bin/server_config.xml
 
-When this sever is running, "tia2ft" can connect to this server.
+When this sever is running, `tia2ft` can connect to this server.
 
 ## References
 

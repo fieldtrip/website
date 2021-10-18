@@ -15,6 +15,10 @@ The acquisition setup consists of the Digital Lynx amplifier hardware and the Ch
 
 ## MATLAB-based interface
 
+{% include markup/info %}
+The MATLAB implementation is mainly for educational and testing purposes. For proper real-time analyses we recommend you to use the standalone interface, which is faster and requires less system resources.
+{% include markup/end %}
+
 The **[ft_realtime_neuralynxproxy](https://github.com/fieldtrip/fieldtrip/blob/release/realtime/example/ft_realtime_neuralynxproxy.m)** function implements the interface between the Cheetah software and the [FieldTrip buffer](/development/realtime/buffer). Using the dll files that have been made available by Neuralynx, it reads the data and event streams over the network from the Cheetah system and copies them into the buffer. The **[ft_realtime_neuralynxproxy](https://github.com/fieldtrip/fieldtrip/blob/release/realtime/example/ft_realtime_neuralynxproxy.m)** function should be started in a stand-alone MATLAB session because Neuralynx only provides the dlls for Windows.
 
 There is also an older attempt implemented in the code which allows to access the data in pseudo-real time while it is written to disk (i.e. end-of-file chasing). It turned out that that resulted in highly varying delays of up to 10 seconds and therefore we did not pursue this further.

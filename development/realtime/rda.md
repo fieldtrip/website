@@ -17,7 +17,11 @@ To facilitate using the same processing logic (e.g., FieldTrip functions) for da
 
 ### MATLAB-based interface
 
-The RDA interface of the BrainVision Recorder can stream the data over a TCP/IP connection. The **[ft_realtime_brainampproxy](https://github.com/fieldtrip/fieldtrip/blob/release/realtime/example/ft_realtime_brainampproxy.m)** function (part of the realtime module in FieldTrip) reads the EEG data stream from the TCP/IP connection and writes to a [FieldTrip buffer](/development/realtime). The FieldTrip buffer is a multi-threaded and network transparent buffer that allows data to be streamed to it, while at the same time allowing another MATLAB session on the same or another computer to read data from the buffer for analysis.
+{% include markup/info %}
+The MATLAB implementation is mainly for educational and testing purposes. For proper real-time analyses we recommend you to use the standalone interface, which is faster and requires less system resources.
+{% include markup/end %}
+
+The remote data access (RDA) interface of the BrainVision Recorder can stream the data over a TCP/IP connection. The **[ft_realtime_brainampproxy](https://github.com/fieldtrip/fieldtrip/blob/release/realtime/example/ft_realtime_brainampproxy.m)** function (part of the realtime module in FieldTrip) reads the EEG data stream from the TCP/IP connection and writes to a [FieldTrip buffer](/development/realtime). The FieldTrip buffer is a multi-threaded and network transparent buffer that allows data to be streamed to it, while at the same time allowing another MATLAB session on the same or another computer to read data from the buffer for analysis.
 
 Subsequently in another MATLAB session you can read from the FieldTrip buffer using the **[ft_read_header](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_header.m)**, **[ft_read_data](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_data.m)** and **[ft_read_event](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_event.m)** functions by specifying %%'buffer://hostname:port'%% as the filename to the reading functions, e.g.
 
@@ -26,13 +30,9 @@ Subsequently in another MATLAB session you can read from the FieldTrip buffer us
 
 The TCP/IP interface in MATLAB is implemented in the freely available [TCP/UDP/IP toolbox](http://mathworks.com/matlabcentral/fileexchange/345). You should download this toolbox and add it to your MATLAB path if you want to use the **[ft_realtime_brainampproxy](https://github.com/fieldtrip/fieldtrip/blob/release/realtime/example/ft_realtime_brainampproxy.m)** function.
 
-{% include markup/info %}
-The MATLAB implementation is mainly for educational and testing purposes. For proper real-time analyses we recommend you to use the standalone interface, which is faster and requires less system resources.
-{% include markup/end %}
-
 ### Standalone interface with rda2ft
 
-Instead of **[ft_realtime_brainampproxy](https://github.com/fieldtrip/fieldtrip/blob/release/realtime/example/ft_realtime_brainampproxy.m)** and MATLAB, you can use **rda2ft** to transport data from an RDA server to a FieldTrip buffer. **rda2ft** is written in C and takes 4 command line arguments, where the first two are mandator
+Instead of **[ft_realtime_brainampproxy](https://github.com/fieldtrip/fieldtrip/blob/release/realtime/example/ft_realtime_brainampproxy.m)** and MATLAB, you can use **rda2ft**. It transports data from an RDA server to a FieldTrip buffer and is availble in source code or compiled for [different operating systems]((https://github.com/fieldtrip/fieldtrip/blob/release/realtime/bin/)). **rda2ft** is written in C and takes 4 command line arguments, where the first two are mandatory:
 
     rda2ft rdaHostname rdaPort [ftHostname] [ftPort]
 
@@ -47,6 +47,8 @@ For spawning a local FieldTrip buffer within **rda2ft** at port 1234, you would 
 Leaving out the last two arguments spawns a local buffer on the default port 1972.
 
     rda2ft localhost 51244
+    
+To execute this in combination with MNE, you can modify [this code](https://mne.tools/mne-realtime/auto_examples/plot_ftclient_rt_average.html) to run the above command. The `FieldTripClient` class will receive the data.
 
 #### Compilation
 
@@ -58,7 +60,7 @@ The RDA interface to BrainVision Recorder is also supported by [BCI2000](http://
 
 ## Streaming data from a FieldTrip buffer to an RDA client
 
-We have developed a tool that acts as an RDA server with a FieldTrip buffer as its data source. This enables users to connect any data acquisition system that can write to a FieldTrip buffer to any piece of analysis software that uses the RDA client interface. This tool (the RDA server) is written in C with a simple API to spawn the server thread, and as such can be easily embedded in bigger applications. So far we only provide one example, namely **demo_buffer_rda** in the "realtime/buffer/test" directory. Usually the RDA server will be spawned by the same application that hosts the FieldTrip buffer, but this is not necessary - actually the two servers can even run on different machines.
+We have also developed a tool that acts as an RDA _server_ with a FieldTrip buffer as its data source. This enables users to connect any data acquisition system that can write to a FieldTrip buffer to any piece of analysis software that can read from the RDA client interface. This tool is written in C with a simple API to spawn the server thread, and as such can be easily embedded in bigger applications. So far we only provide one example, namely **demo_buffer_rda** in the `realtime/buffer/test` directory. Usually the RDA server will be spawned by the same application that hosts the FieldTrip buffer, but this is not necessary - actually the two servers can even run on different machines.
 
 Users can spawn both a server for 16-bit integer data (default port 51234), which only streams out data if the FieldTrip buffer actually contains 16-bit data itself, and a server for 32-bit floating point data (default port 51244), which automatically converts the data contained in the FieldTrip buffer on the fly.
 
@@ -80,37 +82,25 @@ Currently, the translation scheme is the following:
 
 | FT event element | RDA marker element |
 | ---------------- | ------------------ |
-| sample           | nPosition (*)      |
+| sample           | nPosition (\*)     |
 | duration         | nPoints            |
 | offset           | -                  |
 | -                | nChannel = -1      |
 | type:value       | typeString         |
 
-where the fixed value -1 for *nChannel* is defined as the "don't care" value by the RDA protocol.
-To clarify the last row, the following rules are applied for the *type* and *value\* field:
+where the fixed value -1 for _nChannel_ is defined as the "don't care" value by the RDA protocol.
+To clarify the last row, the following rules are applied for the _type_ and \*value\* field:
 
 - If both are strings, e.g. _type_="button" and _value_="right", the RDA marker will contain the type string "button:right"
 - If the _value_ field is not a string, it will be replace by "-". For example, if button presses are encoded by a number, the RDA marker might look like "button:-"
 - If the _type_ field is not a string, it will be replaced by "FT", yielding something like "FT:right"
 - If neither _type_ nor _value_ are strings, the marker description is always "FT:-"
 
-(*) Actually, the *nPosition* field of RDA markers is supposed to be relative
-to the same data block, that is, if the current data block starts at sample
-index 4000, and a marker with *nPosition=10* is sent along, the corresponding
-*sample\* index would be 4010. Now, a difficulty lies in the fact that in the
-FieldTrip buffer, events that relate to a certain sample might only be present
-after that specific sample has already been sent out by the RDA server. This means
-that it needs to be send as a marker in the next data block, but then the sample
-index cannot be represented as a positive number anymore, because it refers to a block
-in the past.
+(_) Actually, the \_nPosition_ field of RDA markers is supposed to be relative to the same data block, that is, if the current data block starts at sample index 4000, and a marker with _nPosition=10_ is sent along, the corresponding \_sample\* index would be 4010. Now, a difficulty lies in the fact that in the FieldTrip buffer, events that relate to a certain sample might only be present after that specific sample has already been sent out by the RDA server. This means that it needs to be send as a marker in the next data block, but then the sample index cannot be represented as a positive number anymore, because it refers to a block in the past.
 
 ### Block size setting in BCI2000
 
-If the FieldTrip-to-RDA streaming tool is used for sending data to BCI2000, care should be taken to
-select a reasonable block size in the BCI2000 RDA client setup: This should match the block size of
-the acquisition system that writes to the FieldTrip buffer, since the attached RDA server will
-usually stream out the data using the same blocks. However, there is no guarantee that all
-data blocks sent out will be of equal size.
+If the FieldTrip-to-RDA streaming tool is used for sending data to BCI2000, care should be taken to select a reasonable block size in the BCI2000 RDA client setup: This should match the block size of the acquisition system that writes to the FieldTrip buffer, since the attached RDA server will usually stream out the data using the same blocks. However, there is no guarantee that all data blocks sent out will be of equal size.
 
 ## Differences in the format of events
 
@@ -118,6 +108,6 @@ RDA -> FieldTrip: Channel number field of RDA markers should be matched to value
 
 ## External links
 
-- http://www.brainproducts.com
-- http://www.bci2000.org
-- http://mathworks.com/matlabcentral/fileexchange/345
+- <http://www.brainproducts.com>
+- <http://www.bci2000.org>
+- <http://mathworks.com/matlabcentral/fileexchange/345>

@@ -37,6 +37,7 @@ See also the [tutorials](/tutorial) and [frequently asked questions](/faq).
 - [Fourier analysis of oscillatory power and coherence](/tutorial/fourier)
 - [Simulate an oscillatory signal with phase resetting](/example/phase_reset)
 - [Irregular Resampling Auto-Spectral Analysis (IRASA)](/example/irasa)
+- [Fitting oscillations and one-over-F (FOOOF)](/example/fooof)
 - [Conditional Granger causality in the frequency domain](/example/connectivity_conditional_granger)
 
 ### Source reconstruction
@@ -62,13 +63,14 @@ See also the [tutorials](/tutorial) and [frequently asked questions](/faq).
 
 ### Statistical analysis
 
-- [Apply clusterrandanalysis on TFRs of power that were computed with BESA](/example/apply_clusterrandanalysis_on_tfrs_of_power_that_were_computed_with_besa)
+- [Apply non-parametric statistics with clustering on TFRs of power that were computed with BESA](/example/apply_clusterrandanalysis_on_tfrs_of_power_that_were_computed_with_besa)
 - [Computing and reporting the effect size](/example/effectsize)
 - [Defining electrodes as neighbours for cluster-level statistics](/example/neighbours)
 - [Source statistics](/example/source_statistics)
 - [Stratify the distribution of two variables](/example/stratify)
 - [Use simulated ERPs to explore cluster statistics](/example/use_simulated_erps_to_explore_cluster_statistics)
 - [Using GLM to analyze NIRS timeseries data](/example/nirs_glm)
+- [Using General Linear Modeling over trials](/example/glm_trials)
 - [Using General Linear Modeling on time series data](/example/glm_timeseries)
 - [Using simulations to estimate the sample size for cluster-based permutation test](/example/samplesize)
 - [Using threshold-free cluster enhancement for cluster statistics](/example/threshold_free_cluster_enhancement)

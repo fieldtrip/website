@@ -5,7 +5,7 @@ tags: [faq, fiducial, mri, ctf, source, coordinate]
 
 # How are the Left and Right Pre-Auricular (LPA and RPA) points defined?
 
-The correct definition (taken from http://www.medilexicon.com) of the pre-auriciular point is _"a point of the posterior root of the zygomatic arch lying immediately in front of the upper end of the tragus"_. The [zygomatic arch](http://en.wikipedia.org/wiki/Zygomatic_arch) or cheek bone is the skull bone in front of the ear as depicted in this figure
+The definition of the pre-auriciular point taken from <http://www.medilexicon.com> is _"a point of the posterior root of the zygomatic arch lying immediately in front of the upper end of the tragus"_. The [zygomatic arch](http://en.wikipedia.org/wiki/Zygomatic_arch) or cheek bone is the skull bone in front of the ear as depicted in this figure
 
 {% include image src="/assets/img/faq/how_are_the_lpa_and_rpa_points_defined/zygomatic_arch.png" width="200" %}
 

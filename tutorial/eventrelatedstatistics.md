@@ -1,6 +1,6 @@
 ---
 title: Parametric and non-parametric statistics on event-related fields
-tags: [tutorial, statistics, meg, eeg, timelock, freq, meg-language]
+tags: [tutorial, statistics, meg, eeg, timelock, freq, meg-language, neighbours]
 ---
 
 # Parametric and non-parametric statistics on event-related fields
@@ -224,7 +224,7 @@ In the previous paragraph we picked a channel and time window by hand after eyeb
 
 However, since now you are performing 151 individual tests, you can no longer control the false alarm rate. Given the null-hypothesis and an alpha of 5%, you have a 5% chance of making a false alarm and incorrectly concluding that the null-hypothesis should be rejected. As this false alarm rate applies to each test that you perform, the chance of making a false alarm for 151 tests in parallel is much larger than the desired 5%. This is the multiple comparison problem.
 
-To ensure that the false alarm rate is controlled at the desired alpha level over all channels, you should do a correction for multiple comparisons. The best known correction is the Bonferroni correction, which controls the false alarm rate for multiple independent tests. To do this, divide your initial alpha level (i.e. the desired upper boundary for the false alarm rate) by the number of tests that you perform. In this case with 151 channels the alpha level would become 0.05/151 which is 0.00033113. With this alpha value the effect is no longer significant on any channel. In some cases, as in this one, a Bonferroni correction is then too conservative because the effect on one MEG channel is highly correlated with neighboring channels (in space, and also in time). In sum, even though the Bonferroni correction achieves the desired control of the type-I error (false alarm rate), the type-II error (chance of not rejecting H0 when in fact it should be rejected) is much larger than desired.
+To ensure that the false alarm rate is controlled at the desired alpha level over all channels, you should do a correction for multiple comparisons. The best known correction is the Bonferroni correction, which controls the false alarm rate for multiple independent tests. To do this, divide your initial alpha level (i.e. the desired upper boundary for the false alarm rate) by the number of tests that you perform. In this case with 151 channels the alpha level would become 0.05/151 which is 0.00033113. With this alpha value the effect is no longer significant on any channel. In some cases, as in this one, a Bonferroni correction is then too conservative because the effect on one MEG channel is highly correlated with neighbouring channels (in space, and also in time). In sum, even though the Bonferroni correction achieves the desired control of the type-I error (false alarm rate), the type-II error (chance of not rejecting H0 when in fact it should be rejected) is much larger than desired.
 
 Below you can see the means by which to implement a Bonferroni correction. However, there are other options on FieldTrip to control for multiple comparisons which are less conservative, and hence more sensitive.
 
@@ -363,7 +363,7 @@ With the cluster-based permutation method for multiple comparisons the following
 
 {% include image src="/assets/img/tutorial/eventrelatedstatistics/figure7.png" width="400" %}
 
-So far we predefined a time window over which the effect was averaged, and tested the difference of that between conditions. You can also chose to not average over the predefine time window, and instead cluster simultaneously over neighboring channels and neighboring time points within your time window of interest . From the example below, we now find a channel-time cluster is found from 0.33 s until 0.52 s in which p < 0.05.
+So far we predefined a time window over which the effect was averaged, and tested the difference of that between conditions. You can also chose to not average over the predefine time window, and instead cluster simultaneously over neighbouring channels and neighbouring time points within your time window of interest . From the example below, we now find a channel-time cluster is found from 0.33 s until 0.52 s in which p < 0.05.
 
     cfg = [];
     cfg.channel     = 'MEG';
@@ -424,7 +424,7 @@ If you would like to read more about issues related to statistical analysis, you
 - [Why should I use the cfg.correcttail option when using statistics_montecarlo?](/faq/why_should_i_use_the_cfg.correcttail_option_when_using_statistics_montecarlo)
 - [What is the idea behind statistical inference at the second-level?](/faq/what_is_the_idea_behind_statistical_inference_at_the_second-level)
 
-If you would like to read about neighborhood selection, you can read the following FAQs:
+If you would like to read about neighbourhood selection, you can read the following FAQs:
 
 - [How can I define my own neighbourhood templates or updating an already existing template?](/faq/how_can_i_define_my_own_neighbourhood_template)
 - [How can I define neighbouring sensors?](/faq/how_can_i_define_neighbouring_sensors)
@@ -433,7 +433,7 @@ If you would like to read about neighborhood selection, you can read the followi
 And you can look also at the following example scripts:
 
 - [Using threshold-free cluster enhancement for cluster statistics](/example/threshold_free_cluster_enhancement)
-- [Apply clusterrandanalysis on TFRs of power that were computed with BESA](/example/apply_clusterrandanalysis_on_tfrs_of_power_that_were_computed_with_besa)
+- [Apply cluster and analysis on TFRs of power that were computed with BESA](/example/apply_clusterrandanalysis_on_tfrs_of_power_that_were_computed_with_besa)
 - [Source statistics](/example/source_statistics)
 - [Stratify the distribution of one variable that differs in two conditions](/example/stratify)
 - [Computing and reporting the effect size](/example/effectsize)

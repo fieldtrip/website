@@ -1,6 +1,6 @@
 ---
 title: Templates for defining neighbouring channels
-tags: [template]
+tags: [template, neighbours]
 ---
 
 # Templates for defining neighbouring channels

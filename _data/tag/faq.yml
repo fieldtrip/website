@@ -40,6 +40,9 @@
 - name:  Can I use FieldTrip without MATLAB license?
   link:  /faq/compiled
 
+- name:  How are the different head and MRI coordinate systems defined?
+  link:  /faq/coordsys
+
 - name:  How can I share my MEG data?
   link:  /faq/data_sharing
 
@@ -69,9 +72,6 @@
 
 - name:  How are electrodes, magnetometers or gradiometers described?
   link:  /faq/how_are_electrodes_magnetometers_or_gradiometers_described
-
-- name:  How are the different head and MRI coordinate systems defined?
-  link:  /faq/how_are_the_different_head_and_mri_coordinate_systems_defined
 
 - name:  How are the Left and Right Pre-Auricular (LPA and RPA) points defined?
   link:  /faq/how_are_the_lpa_and_rpa_points_defined
@@ -331,6 +331,9 @@
 - name:  How to get started with the MATLAB distributed computing toolbox?
   link:  /faq/how_to_get_started_with_the_matlab_distributed_computing_toolbox
 
+- name:  How to interpret the sign of the phase slope index?
+  link:  /faq/how_to_interpret_the_sign_of_the_phase_slope_index
+
 - name:  How to select the correct SPM toolbox?
   link:  /faq/how_to_select_the_correct_spm_toolbox
 
@@ -375,6 +378,9 @@
 
 - name:  MATLAB complains about a missing or invalid mex file, what should I do?
   link:  /faq/matlab_complains_about_a_missing_or_invalid_mex_file_what_should_i_do
+
+- name:  MATLAB does not see the functions in the "private" directory
+  link:  /faq/matlab_does_not_see_the_functions_in_the_private_directory
 
 - name:  Replacements for functions from MathWorks toolboxes
   link:  /faq/matlab_replacements

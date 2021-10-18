@@ -31,6 +31,9 @@
 - name:  Using General Linear Modeling on time series data
   link:  /example/glm_timeseries
 
+- name:  Using General Linear Modeling over trials
+  link:  /example/glm_trials
+
 - name:  Re-reference EEG and iEEG data
   link:  /example/rereference
 
@@ -112,6 +115,9 @@
 - name:  Human ECoG
   link:  /getting_started/human_ecog
 
+- name:  Getting started with LIMO MEEG
+  link:  /getting_started/limo
+
 - name:  Getting started with Nicolet data
   link:  /getting_started/nicolet
 
@@ -189,6 +195,15 @@
 
 - name:  Beamforming evoked fields and potentials in combined MEG/EEG data
   link:  /workshop/aarhus/beamformingerf
+
+- name:  FieldTrip tutorial at CuttingEEG 2021 in Aix-en-Provence
+  link:  /workshop/cuttingeeg2021
+
+- name:  Convert the EEG language dataset for sharing in BIDS
+  link:  /workshop/cuttingeeg2021/bids_language
+
+- name:  Time-frequency analysis on short and long timescales
+  link:  /workshop/cuttingeeg2021/tutorial_freq
 
 - name:  FieldTrip workshop in Madrid
   link:  /workshop/madrid2019

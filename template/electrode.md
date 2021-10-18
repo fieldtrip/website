@@ -1,6 +1,6 @@
 ---
 title: Template 3-D electrode sets
-tags: [template]
+tags: [template, electrode]
 ---
 
 # Template 3-D electrode sets
@@ -9,15 +9,21 @@ Electrodes are represented as points in 3-D Carthesian space, i.e. with an X, Y 
 
 You can use the following snippet of code to get a quick overview of the template electrode sets.
 
-    dirlist  = dir('template/electrode/*');
-    filename = {dirlist(~[dirlist.isdir]).name}'
+    dirlist  = dir('template/electrode/*.*');
+    filename = {dirlist(~[dirlist.isdir]).name}';
+
     for i=1:length(filename)
-    elec = ft_read_sens(filename{i});
-    figure
-    ft_plot_sens(elec);
-    title(filename{i});
-    grid on
-    rotate3d
+      elec = ft_read_sens(filename{i});
+
+      figure
+      ft_plot_sens(elec, 'label', 'yes');
+      grid on
+      rotate3d
+      view(135, 20);
+      title(filename{i}, 'Interpreter', 'none');
+      
+      [p, f, x] = fileparts(filename{i});
+      print([lower(f) '.png'], '-dpng');
     end
 
 {% include markup/warning %}
