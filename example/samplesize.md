@@ -6,19 +6,17 @@ tags: [example, statistics, cluster, neighbours, simulation]
 # Using simulations to estimate the sample size for cluster-based permutation test
 
 {% include markup/success %}
-
 This example is contributed by [Dr. Cheng Wang](https://www.researchgate.net/profile/Cheng-Wang-93).
-
 {% include markup/end %}
 
 It is recommended and sometimes even required to provide justification for sample size prior to starting a study and when reporting about it [(Clayson et al., 2019)](https://onlinelibrary.wiley.com/doi/full/10.1111/psyp.13437). Many researchers use G\*Power to estimate the sample size required for their studies. However, although very useful and popular, this software is not suitable for multivariate data or for non-parametric tests. For EEG and MEG we often use a cluster-based permutation test, which is a non-parametric test that exploits the multivariate structure in the data.
 
-Here, we demonstrate two easy-to-use MATLAB functions that use simulations to estimate the sample size for cluster-based permutation tests. These functions can be used for EEG/MEG research involving contrasts between **two conditions** (paired or independent samples). They were written for, and first used in [Wang and Zhang (2021)](https://doi.org/10.1111/psyp.13775). Please cite this paper where appropriate.
+Here, we demonstrate two easy-to-use MATLAB functions that use simulations to estimate the sample size for cluster-based permutation tests. These functions can be used for EEG/MEG research involving **t-test** between two conditions, **one-way ANOVA** with three or more conditions, or **2×N interactions**. The experiment can be of a with-subjects, between-subjects, or mixed design. The functions were written for, and first used in [Wang and Zhang (2021)](https://doi.org/10.1111/psyp.13775). Please cite this paper where appropriate.
 
 From this [OSF project](https://osf.io/rmqhc/files/), you can download the functions and the corresponding demo files. The MATLAB functions are stored in the _functions_ folder.
 
--   **sampleSize_erp.m**  is for ERP analysis
--   **sampleSize_timefreq.m**  is for time frequency analysis
+-   **sampleSize_erp.m**  is for ERP data
+-   **sampleSize_timefreq.m**  is for time-frequency data
 
 Two demo files demonstrating how to use the functions are in the _demo_ folder:
 
@@ -141,7 +139,7 @@ while power < power_level  % continue increasing sample-size until power reach d
     for i=1:n_sim
         rd1 = normrnd(mu(1), sd(1), n_sample, 1);  % sampling data from a normal distribution for group1
         rd2 = normrnd(mu(2), sd(2), n_sample, 1);  % sampling data from a normal distribution for group2
-        [~,p_vals(i),~,~] = ttest(rd1,rd2);  % t-test, store the p values
+        [~,p_vals(i),~,~] = ttest2(rd1,rd2);  % t-test, store the p values
     end
     power = sum(p_vals < alpha_level)/n_sim;  % calculate power for the current sample size
     power_at_n(n_sample) = power;
@@ -164,94 +162,96 @@ The result shows that the sample size required for 80% power in an independent t
 
 ## Estimating sample size through simulations - cluster-based permutation test
 
-For cluster-based permutation tests in MEG/EEG data, the method of estimating sample size through simulations is the same to that for t-tests, except that Step 3 is somewhat different. In the Step 3 for cluster-based permutation tests, two groups of ERP (2 dimensions: channel×time) or time-frequency (3 dimensions: channel×frequency×time) data are simulated. In each sample of the ERP/time-frequency data, we simulate a cluster of interest with a predefined time window (e.g., 50-250 ms) and frequency band (e.g., 4-8 Hz) in neighboring channels (e.g., C1, CZ, CP1, CPZ). The time, frequency, and spatial ranges of the cluster can be chosen to be similar to those of cluster displaying effect of interest in your pilot studies or prior existing studies. The cluster's peak values in the two conditions were sampled from two normal distributions (for a between-subject design) or a bivariate normal distribution (for a within-subject design). The means and standard deviations of the distributions can be chosen to be similar to those in prior existing or pilot studies.
+For cluster-based permutation tests in MEG/EEG data, the method of estimating sample size through simulations is the same to that for t-tests, except that Step 3 is somewhat different. In the Step 3 for cluster-based permutation tests, several groups of ERP (2 dimensions: channel×time) or time-frequency (3 dimensions: channel×frequency×time) data are simulated. In each sample of the ERP/time-frequency data, we simulate a cluster of interest with a predefined time window (e.g., 50-250 ms) and frequency band (e.g., 4-8 Hz) in neighboring channels (e.g., C1, CZ, CP1, CPZ). The time, frequency, and spatial ranges of the cluster can be chosen to be similar to those of cluster displaying effect of interest in your pilot studies or prior existing studies. The cluster's peak values in the two conditions were sampled from two normal distributions (for a between-subject design) or a bivariate normal distribution (for a within-subject design). The means and standard deviations of the distributions can be chosen to be similar to those in prior existing or pilot studies.
 
 Then a cluster-based permutation test is performed on the simulated dataset to test whether there is a significant difference between the two conditions. We run the simulations for 1000 times, and the power is calculated as the proportion of the number of times that the null hypothesis is rejected. These simulations can subsequently be repeated for an incrementally increasing sample size, starting from 10, increasing in steps of 1, until the power reached the desired threshold (e.g., 0.8). The above processing is implemented in the two aforementioned MATLAB functions `sampleSize_erp.m` and `sampleSize_timefreq.m`.
 
 Next, we will demonstrate how to use the `sampleSize_timefreq.m` function; the usage of `sampleSize_erp.m` is very similar. See also the two demo files.
 
-First, you need to have a time-frequency dataset that is generated by the **[ft_freqanalysis]()** function in FieldTrip. You can also use the _exempleData_timefreq.mat_ dataset which can be downloaded with the functions from [OSF](https://osf.io/rmqhc). This dataset is used only for retrieving the data structure for simulating time-frequency data. The `sampleSize_timefreq.m` function has two parts of parameters, which are respectively stored in `cfg` and `stat_cfg`. The structure `cfg` stores the configurations for simulating the data, and `stat_cfg` stores the configurations for the cluster-based permutation tests.
+First, you need to have a time-frequency dataset that is generated by the **[ft_freqanalysis](http://github.com/fieldtrip/fieldtrip/blob/release/ft_freqanalysis.m)** function. You can also use the _exempleData_timefreq.mat_ dataset which can be downloaded with the functions from [OSF](https://osf.io/rmqhc). This dataset is used only for retrieving the data structure for simulating time-frequency data. The `sampleSize_timefreq.m` function has two parts of parameters, which are respectively stored in `cfg` and `stat_cfg`. The structure `cfg` stores the configurations for simulating the data, and `stat_cfg` stores the configurations for the cluster-based permutation tests.
 
 ```matlab
 %%
-clear, close all
-cd('F:\SampleSize\functions')
-load('exampleData_timefreq.mat');   % load a time-freq data obtained from the ft_freqanalysis function,
+clear; close all;
+addpath('F:\SampleSize\functions')
+load('exampleData_timefreq.mat');   % load a time-freq data obtained from the ft_freqanalysis function, 
                                     % to retrieve the fieldtrip data structure
                                     
 %=========== set configuration for data simulation ================
-% parameters for the time-freq data, should be matched to your own time-freq data
+% parameters for the power analysis
 cfg = [];
+cfg.alpha_level = 0.05;    % desired alpha-level
+cfg.power_level = 0.8;     % desired power
+cfg.num_sims    = 500;     % number of randomizations, should be >= 500 
+cfg.n_start     = 10;      % sample size to start with, should be <=10
+
+% parameters for normal distribution from which the simulated data are sampled
+cfg.ExpDesign   = 'within-subjects';  % 'within-subjects' or 'between-subjects'
+cfg.mu          = [5 3];   % mean of each condition. Can have two or more conditions, the function will automatically select
+                           % a t-test for two conditions, and a F-test for three or more conditions for the cluster-based permutation test
+cfg.sd          = [2 2];   % standard deviation of each condition
+cfg.cor         = 0.7;     % minimum correlation between paried samples, ONLY needed for a within-subject design
+% mu, sd, and cor should be corresponding values that you expect from your own data, they can be set to be similar to those in pilot or prior existing studies
+% mu is particularly important, as it determines the amount of difference between conditions
+
+% parameters for the time-freq data, should be matched to your own time-freq data 
 cfg.time           = exampleData.time;   % exampleData is the variable loaded from 'exampleData_timefreq.mat'
 cfg.freq           = exampleData.freq;
 cfg.label          = exampleData.label;
+cfg.dimord         = exampleData.dimord;
 
-% parameters for the simulated cluster
-cfg.clusterfreq    = [4 8];                    % freq range you want to be included in the cluster displaying effect of interest,
-cfg.clustertime    = [0.03 0.25];              % time range you want to be included in the cluster displaying effect of interest,
+% parameters for the simulated cluster of interest
+% these three parameters should be set similar to those of the cluster in pilot or prior existing studies
+cfg.clusterfreq    = [4 8];                    % freq range you want to be included in the cluster displaying effect of interest, 
+cfg.clustertime    = [0.03 0.25];              % time range you want to be included in the cluster displaying effect of interest, 
 cfg.clusterchan    = {'CZ','C1','CPZ','CP1'};  % channles you want to be included in the cluster displaying effect of interest
-% These three parameters above should be set to be similar to those of the cluster in prior existing or pilot studies
-cfg.bufferchan     = {'FC3','FC1','FCZ','FC2','C2','CP2','P2','PZ','P1','P3','CP3','C3'};
-                      % channels surrounding the cluster channels, used as a buffer zone from peak values in the cluster channels to 0
+
+% channels surrounding the cluster channels, used as a buffer zone from peak values in the cluster channels to 0
+cfg.bufferchan     = {'FC3','FC1','FCZ','FC2','C2','CP2','P2','PZ','P1','P3','CP3','C3'}; 
 cfg.layout         = 'NeuroScan_quickcap64_layout.lay';  % your layout file
-
-% parameters for the power analysis
-cfg.alpha_level = 0.05;    % desired alpha-level
-cfg.power_level = 0.8;     % desired power
-cfg.num_sims    = 500;     % number of randomizations, should be >= 500
-cfg.n_start     = 13;      % sample size to start with, should be <=10
-
-% parameters for normal distribution from which the simulated data are sampled
-cfg.ExpDesign   = 'indepsamplesT';  % 'depsamplesT' or 'indepsamplesT' for within- or between-subject design, respectively
-cfg.mu          = [3 5];            % means of the two conditions, the first entry must be SMALLER than the second
-cfg.sd          = [2 2];            % standard deviations of the two conditions
-cfg.cor         = 0.75;             % correlation between paried samples, ONLY needed for within-subject designs
-% mu, sd, and cor should be corresponding values that you expect from your own data, they can be set to be similar to those in prior existing or pilot studies
-% mu is particularly important, as its two entries determine the amount of difference between the two conditions
                      
 %=========== set configuration for cluster permutation test ================
 neighbour_cfg = [];
-neighbour_cfg.method      = 'triangulation';
+neighbour_cfg.method      = 'triangulation'; 
 neighbour_cfg.layout      = cfg.layout;
 neighbour_cfg.feedback    = 'no';                             
-neighbours = ft_prepare_neighbours(neighbour_cfg, exampleData);
+neighbours = ft_prepare_neighbours(neighbour_cfg, exampleData); 
 
 stat_cfg = [];
 stat_cfg.neighbours       = neighbours;
-stat_cfg.minnbchan        = 3;
+stat_cfg.minnbchan        = 3; 
 stat_cfg.channel          = {'all','-HEOG','-VEOG'};
 stat_cfg.avgoverchan      = 'no';
-stat_cfg.latency          = [0 0.5];            % in second
-stat_cfg.avgovertime      = 'no';
+stat_cfg.latency          = [0 0.5];     % in second
+stat_cfg.avgovertime      = 'no'; 
 stat_cfg.frequency        = 'all';
-stat_cfg.avgoverfreq      = 'no';
+stat_cfg.avgoverfreq      = 'no'; 
 stat_cfg.method           = 'montecarlo';
-stat_cfg.statistic        = cfg.ExpDesign;      % 'depsamplesT' or 'indepsamplesT', same as cfg.ExpDesign
 stat_cfg.correctm         = 'cluster';
-stat_cfg.clusteralpha     = 0.025;
-stat_cfg.clustertail      = 0;
-stat_cfg.clusterstatistic = 'maxsum';
-stat_cfg.tail             = 0;                  % two tails
-stat_cfg.alpha            = cfg.alpha_level/2;  % since we are creating clusters for both tails
-stat_cfg.numrandomization = 500;                % number of randomizations for permutation, should be >= 500
+stat_cfg.clusterstatistic = 'maxsum';   % 'maxsum' or 'maxsize'
+stat_cfg.clustertail      = 0;          % 0 for t-test (two tails); 1 for F test (right tail)
+stat_cfg.clusteralpha     = 0.05;
+stat_cfg.tail             = 0;          % 0 for t-test (two tails); 1 for F test (right tail)
+stat_cfg.alpha            = 0.05; 
+stat_cfg.numrandomization = 500;        % number of randomizations, should be >= 500 
 
 %%% Run the function
 MyPar = parpool; % start parallel pool
 res = sampleSize_timefreq(cfg,stat_cfg);
 save('results_timefreq_pairedSamples.mat','res')
-delete(MyPar)
+delete(MyPar) 
 ```
 
-Running this function would be quite time-consuming, with a lot of simulations to run. It’s time-saving to open `parpool` to use parallel computing. The results are stored in `res`. The following block of code plots the results.
+Running this function would be quite time-consuming, with a lot of simulations to run. It can therefore be time-saving to open `parpool` to use parallel computing. The results are stored in `res`. The following block of code plots the results.
 
 ```matlab
 %% plot the results of power analysis
 cfg = res.cfg;
 figure
-scatter(cfg.n_start:res.samplesize, res.power_at_n(cfg.n_start:end),400,[0.5 0.5 0.5],'Marker','.'); hold on
-plot([cfg.n_start res.samplesize],[cfg.power_level cfg.power_level], 'r')
+scatter(cfg.n_start:res.sample_size, res.power_at_n(cfg.n_start:end),400,[0.5 0.5 0.5],'Marker','.'); hold on
+plot([cfg.n_start res.sample_size],[cfg.power_level cfg.power_level], 'r')
 text(cfg.n_start+0.5, 0.8,'0.8')
-xlabel('Sample size'); ylabel('Power'),xlim([cfg.n_start res.samplesize])
+xlabel('Sample size'); ylabel('Power'),xlim([cfg.n_start res.sample_size])
 ```
 
 {% include image src="/assets/img/example/samplesize/Fig4.png" width="400" %}
@@ -264,46 +264,33 @@ cfg1 = [];
 cfg1.channel   = 'all';
 cfg1.toilim    = 'all';
 cfg1.foilim    = 'all';
-A_avg = ft_freqgrandaverage(cfg1, res.condA{:});        % condition A
-B_avg = ft_freqgrandaverage(cfg1, res.condB{:});        % condition B
+for ci=1:length(cfg.mu)
+    grand = ft_freqgrandaverage(cfg1, res.allsub{ci}{:});  % grand-avg
+    clusterchan_idx = match_str(cfg.label,cfg.clusterchan);
+    pow(ci,:,:)     = squeeze(mean(grand.powspctrm(clusterchan_idx,:,:),1));    % average cross cluster channels
+end
 
-% condition difference
-cfg = [];
-cfg.parameter = 'powspctrm';
-cfg.operation = 'subtract';
-A_vs_B = ft_math(cfg, A_avg, B_avg)
-
-% average cross cluster channels
-clusterchan_idx = match_str(cfg.label,cfg.clusterchan);
-powA      =  squeeze(mean(A_avg.powspctrm(clusterchan_idx,:,:),1));
-powB      =  squeeze(mean(B_avg.powspctrm(clusterchan_idx,:,:),1));
-pow_diff  = squeeze(mean(A_vs_B.powspctrm(clusterchan_idx,:,:),1));
-lim_a     = round(max([max(powA(:)) max(powB(:))]),1);
-lim_b     = round(max([abs(max(pow_diff(:))) abs(min(pow_diff(:)))]),1);
-
-% plot
 figure
-subplot(221)
-contourf(cfg.time,cfg.freq,powA,40,'linecolor','none')  % condition A
-set(gca,'clim',[-lim_a lim_a]); colorbar; colormap(jet);
-title('Condition A'); xlabel('Time (ms)'); ylabel('Frequency (Hz)')
-colorbar('YTick',[-lim_a 0 lim_a]);
-
-subplot(222)
-contourf(cfg.time,cfg.freq,powB,40,'linecolor','none')  % condition B
-set(gca,'clim',[-lim_a lim_a]); colorbar; colormap(jet);
-title('Condition B'); xlabel('Time (ms)'); ylabel('Frequency (Hz)')
-colorbar('YTick',[-lim_a 0 lim_a]);
-
-subplot(223)
-contourf(cfg.time,cfg.freq,pow_diff,40,'linecolor','none')  % A minus B
-set(gca,'clim',[-lim_b lim_b]); colormap(jet);
-title('A - B'); xlabel('Time (ms)'); ylabel('Frequency (Hz)')
-colorbar('YTick',[-lim_b 0 lim_b]);
+lim = round(max(abs(pow(:))),1);
+nrow = ceil(sqrt(length(cfg.mu)));
+for ci=1:length(cfg.mu)
+    subplot(nrow,nrow,ci)
+    contourf(cfg.time, cfg.freq, squeeze(pow(ci,:,:)), 40, 'linecolor','none')  
+    set(gca, 'clim', [-lim lim]); colorbar; colormap(jet); 
+    xlabel('Time (ms)'); ylabel('Frequency (Hz)')
+    colorbar('YTick', [-lim 0 lim]); 
+end
 ```
 
 {% include image src="/assets/img/example/samplesize/Fig5.png" width="400" %}
 
+## Testing interactions
+
+The two functions can also be used to estimate the sample size for 2-by-N (N>=2) interaction effect, however, the first factor must be a within-subjects factor and the second can be a within- or between-subjects factor. 
+
+Take a 2×3 design for example, the first and second factors can be respectively denoted A and B, and the six cells in this design can be denoted A1B1, A2B1, A1B2, A2B2, A1B3 and A2B3. For each subject, we can compute the difference between the two levels of A, denoted as A1B1minusA2B1, A1B2minusA2B2, and A1B3minusA2B3. Now testing an interaction effect between A and B can be treated as comparing these three difference scores, which can be done by a one-way ANOVA using `ft_statfun_depsamplesFmultivariate` if B is a within-subjects factor, or `ft_statfun_indepsamplesF` if B is a between-subjects factor. If B has only two levels, you can simply use a t-test to compare the two differences (i.e., A1B1minusA2B1 and A1B2minusA2B2). Uing this approach, we can test an interaction effect using cluster-based permutation test. See [this page](/faq/how_can_i_test_an_interaction_effect_using_cluster-based_permutation_tests/) for more details.
+
+Thus, we can treat two-way ANOVA as comparing differences by using t-tests or one-way ANOVAs. As to the configuration of the functions, simply enter the means, standard deviations, and correlations of these differences you expect for your data respectively into the `cfg.mu`, `cfg.sd`, and `cfg.cor` fields in the demo m-files.
 
 ## See also
 
