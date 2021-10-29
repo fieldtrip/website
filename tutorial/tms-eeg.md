@@ -157,7 +157,7 @@ The cfg structure we obtained from **[ft_definetrial](https://github.com/fieldtr
 
 Here you have to make sure that the .mat file is located in the present working directory of MATLAB. **You can skip the following block of code if you have downloaded data_tms_raw in the previous step.**
 
-To read the trials from the original data file on disk, use the followin
+To read the trials from the original data file on disk, use the following:
 
     cfg.channel = {'all' '-5' '-mastoid L' '-mastoid R'}; % indicate the channels we would like to read and/or exclude.
     cfg.reref = 'yes';        % We want to rereference our data

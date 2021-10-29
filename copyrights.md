@@ -142,7 +142,7 @@ the scope of this License.
 
 3. You may copy and distribute the Program (or a work based on it,
    under Section 2) in object code or executable form under the terms of
-   Sections 1 and 2 above provided that you also do one of the followin
+   Sections 1 and 2 above provided that you also do one of the following:
 
 a) Accompany it with the complete corresponding machine-readable
 source code, which must be distributed under the terms of Sections
@@ -270,7 +270,7 @@ the scope of this License.
 
 3. You may copy and distribute the Program (or a work based on it,
    under Section 2) in object code or executable form under the terms of
-   Sections 1 and 2 above provided that you also do one of the followin
+   Sections 1 and 2 above provided that you also do one of the following:
 
 a) Accompany it with the complete corresponding machine-readable
 source code, which must be distributed under the terms of Sections

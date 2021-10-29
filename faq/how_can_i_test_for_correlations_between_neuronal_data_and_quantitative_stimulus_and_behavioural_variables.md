@@ -29,7 +29,7 @@ And for studies with a within-UO design and a categorical independent variable, 
 - The _dependent-_ or _paired-samples T-statistic_ when the number of categories is equal to 2. In FieldTrip, this is implemented as **ft_statfun_depsamplesT**.
 - The _dependent-_ or _repeated-measures F-statistic_ when the number of categories is larger than 2. In FieldTrip, this is implemented as **ft_statfun_depsamplesF**.
 
-For quantitative independent variables, we have two test statistics, one for a between-UO and one for a within-UO design. In both cases, the test statistic is based on a regression of the dependent on the quantitative independent variable. In fact, the test statistic is a function of the regression coefficient and its standard error. The two test statistics are the followin
+For quantitative independent variables, we have two test statistics, one for a between-UO and one for a within-UO design. In both cases, the test statistic is based on a regression of the dependent on the quantitative independent variable. In fact, the test statistic is a function of the regression coefficient and its standard error. The two test statistics are the following:
 
 - In a between-UO design we use the _independent samples regression T-statistic_. In FieldTrip, this is implemented as **ft_statfun_indepsamplesregrT**.
 - In a within-UO design we use the _dependent samples regression T-statistic_. In FieldTrip, this is implemented as **ft_statfun_depsamplesregrT**.

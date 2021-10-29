@@ -258,7 +258,7 @@ Using **[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_
 
 FIXME insert figure (3 datatrial browser)
 
-The HL1 channel contains the analog representation of the stimulus, which is of much larger amplitude than all other channels. We can exclude it in the guy (click "channel" button) or using the followin
+The HL1 channel contains the analog representation of the stimulus, which is of much larger amplitude than all other channels. We can exclude it in the guy (click "channel" button) or using the following:
 
     cfg = [];
     cfg.viewmode = 'vertical';

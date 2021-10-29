@@ -118,7 +118,7 @@ On 32-bit Windows platforms, MATLAB ships with the LCC compiler, which can be us
 
 [MinGW](http://www.mingw.org/) is a port of GCC that produces executables without special dependencies (or rather, they only depend on the Microsoft C run-time which is present on any Windows system). For compiling the code in both the "src" and "test" directories, you can just use the same "Makefile" as the one on Linux and macOS.
 
-Unfortunately, MATLAB doesn't recognise MinGW by itself, so for compiling the MEX-file, you will need to get [Gnumex](http://gnumex.sourceforge.net/). This is a small collection of tools that wrap the MinGW utilities for usage by the "mex" command. Both MinGW and Gnumex are relatively easy to install, and you should stick to the defaults (in particular, please place MinGW in "C:\MinGW"). You should also put "C:\MinGW\bin" into your path. After installing, you do the followin
+Unfortunately, MATLAB doesn't recognise MinGW by itself, so for compiling the MEX-file, you will need to get [Gnumex](http://gnumex.sourceforge.net/). This is a small collection of tools that wrap the MinGW utilities for usage by the "mex" command. Both MinGW and Gnumex are relatively easy to install, and you should stick to the defaults (in particular, please place MinGW in "C:\MinGW"). You should also put "C:\MinGW\bin" into your path. After installing, you do the following:
 
 1.  In a command prompt window, change to the "src" directory and type "mingw32-make". If everything works, you should get a "libbuffer.a" file
 2.  Change to the "test" directory and type "mingw32-make". This should produce "demo_buffer.exe" and further executables.

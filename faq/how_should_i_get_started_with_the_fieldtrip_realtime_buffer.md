@@ -39,11 +39,11 @@ If you click "start" in the sine2ft window, and subsequently "connect" in the vi
 
 ## Connect from MATLAB
 
-Subsequently you could start MATLAB, while keeping the three programs running, and run the followin
+Subsequently you could start MATLAB, while keeping the three programs running, and run the following:
 
     while true
-    hdr = ft_read_header('buffer://localhost:1972')
-    pause(1)
+      hdr = ft_read_header('buffer://localhost:1972')
+      pause(1)
     end
 
 which will show something like this, being updated every second.
@@ -64,9 +64,9 @@ You should see hdr.nSamples increasing over time.
 Subsequently you could do
 
     while true
-    dat = ft_read_data('buffer://localhost:1972', 'begsample', 1, 'endsample', inf);
-    plot(dat');
-    pause(1)
+      dat = ft_read_data('buffer://localhost:1972', 'begsample', 1, 'endsample', inf);
+      plot(dat');
+      pause(1)
     end
 
 to see the amount of data in the buffer steadily increasing over time. Note that all channels have exactly the same value, hence you will only see a single sine wave.

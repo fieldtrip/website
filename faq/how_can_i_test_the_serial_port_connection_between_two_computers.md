@@ -9,7 +9,7 @@ For the type of connection we are talking about here, you need a so called 'null
 
 ## How can I test the serial port connection between two computers?
 
-To check that the serial connection between a Linux computer and a windows computer is functional, you can do the followin
+To check that the serial connection between a Linux computer and a windows computer is functional, you can do the following:
 
 - On the Linux PC, open up a putty session by typing putty. Choose serial and type the path for the serial port (e.g. /dev/ttyS0/). The main thing to consider is the baud rate (e.g. 115200), which has to be the same on sending and receiving end.
 - On the windows PC, open up a putty session and setup a serial port connection (click on serial), and specify the name of the port where the serial device is connected to (e.g. 'COM3)', make sure baud rate is the same as on the Linux machine(i.e. 115200).

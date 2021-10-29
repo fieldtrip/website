@@ -40,7 +40,7 @@ supporte
 To recompile tia2ft, a C++ compiler with the STL and Boost libraries is
 required.
 
-To compile tia2ft, you can do the followin
+To compile tia2ft, you can do the following:
 
 1.  build `libbuffer.a` in `/realtime/buffer/src` by issuing `make`,
 2.  build `tia2ft` by issuing `make` in `/realtime/acquisition/tobi/`.

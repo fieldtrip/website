@@ -45,11 +45,9 @@ You can see that the first trial is 900 samples long, starting at sample 901 and
 
 where you see that the first sample is at time -1 seconds and the last sample is at time 1.9967 seconds, i.e. 2 seconds minus one sample.
 
-The interval notation here is therefore followin
-[cfg.trialdef.prestim cfg.trialdef.poststim)
-where the square bracket “[” indicates the INCLUSION of the cfg.trialdef.prestim value and the rounded bracket “)” indicates the EXCLUSION of the value cfg.trialdef.poststim, being the convention that the last sample will not be included.
+The interval notation here is therefore `[cfg.trialdef.prestim cfg.trialdef.poststim)` where the square bracket `[]` according to [math notation](https://en.wikipedia.org/wiki/Interval_(mathematics)) indicates the INCLUSION of the cfg.trialdef.prestim value and the rounded bracket `)` indicates the EXCLUSION of the value cfg.trialdef.poststim, being the convention that the last sample will not be included.
 
-You can define your time window in inclusive terms. i.e. as [-1 2] with square brackets on both sides, by creating your own trialfun as the example below.
+You can define your time window in inclusive terms. i.e. as `[-1 2]` with square brackets on both sides, by creating your own trialfun as the example below.
 
     function trl = trialfun_inclusive(cfg)
 

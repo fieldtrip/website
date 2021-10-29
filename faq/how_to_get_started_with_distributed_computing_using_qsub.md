@@ -15,7 +15,7 @@ You should start by adding the qsub toolbox to your MATLAB pat
 
 To submit a job to the cluster, you will use **[qsubfeval](https://github.com/fieldtrip/fieldtrip/blob/release/qsubfeval.m)**. It stands for “qsub – evaluation - function”. As an input you specify a name of your function, an argument, and time and memory requirements (see below).
 
-Try the followin
+Try the following:
 
     qsubfeval('rand', 100, 'timreq', 60, 'memreq', 1024)
 
@@ -23,15 +23,14 @@ Try the followin
 Besides the memory requirements for your computation, MATLAB also requires memory for itself. The **[qsubfeval](https://github.com/fieldtrip/fieldtrip/blob/release/qsubfeval.m)** and **[qsubcellfun](https://github.com/fieldtrip/fieldtrip/blob/release/qsubcellfun.m)** functions have the option **memoverhead** for this, which is by default 1GB. The **memreq** option itself does not have a default value. The torque job is started with a memory reservation of **memreq+memoverhead**.
 {% include markup/end %}
 
-You will get the job ID as the outpu
+You will get the job ID as the output:
 
     submitting job username_dccn_c004_p23910_b1_j001... qstat job id 1066196.dccn-l014.dccn.nl
 
     ans =
+      username_dccn_c004_p23910_b1_j001
 
-    username_dccn_c004_p23910_b1_j001
-
-Note, that Qsubfeval does not return the output of your function to the command window! You only get the job ID. Your function thus has to include a command for writing the output on disk.
+Note, that qsubfeval does not return the output of your function to the command window! You only get the job ID. Your function thus has to include a command for writing the output on disk.
 
 You can check the status of your submitted job with qstat command in Linux terminal.
 
@@ -96,7 +95,7 @@ Qsubcellfun works as a wrapper for qsubfeval. If you use qsubcellfun, all the te
 
 #### Time and memory management
 
-You will have noticed that you have to specify the time and memory requirements for the individual jobs using the 'timreq' and 'memreq' arguments to **[qsubcellfun](https://github.com/fieldtrip/fieldtrip/blob/release/qsubcellfun.m)**. These time and memory requirements are passed to the batch queueing system, which uses them to find an appropriate execution host (i.e one that has enough free memory) and to monitor the usage.
+You will have noticed that you have to specify the time and memory requirements for the individual jobs using the 'timreq' and 'memreq' arguments to **[qsubcellfun](https://github.com/fieldtrip/fieldtrip/blob/release/qsubcellfun.m)**. These time and memory requirements are passed to the batch queueing system, which uses them to find an appropriate execution host (i.e., one that has enough free memory) and to monitor the usage.
 
 Do not set the requirements too tight, because if the job exceeds the requested resources, it will be killed. However, if you grossly overestimate them, your jobs will be scheduled in a “slow” queue, where only a few jobs can run simultaneously. The queueing and throttling policies on the number and the size of the jobs is to prevent a few large jobs from a single user from blocking all computational resources of the cluster. So the most optimal approach to get your jobs executed is to try and estimate the memory and time requirements as good as you can.
 

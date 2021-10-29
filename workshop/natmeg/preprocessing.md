@@ -189,7 +189,7 @@ The output of **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/r
             elec: [1x1 struct]    % Electrode positions etc
              cfg: [1x1 struct]    % Settings used in computing this time-locked analysis
 
-The most important fields are data_MEG.trial containing the individual trials and data_MEG.time containing the time vector for each trial. To visualize the single trial data (trial 1) on one channel (channel 130) do the followin
+The most important fields are data_MEG.trial containing the individual trials and data_MEG.time containing the time vector for each trial. To visualize the single trial data (trial 1) on one channel (channel 130) do the following:
 
     plot(data_MEG.time{1}, data_MEG.trial{1}(130,:))
     print -dpng natmeg_preproc1.png
