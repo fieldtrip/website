@@ -292,7 +292,7 @@
 - name:  How NOT to interpret results from a cluster-based permutation test
   link:  /faq/how_not_to_interpret_results_from_a_cluster-based_permutation_test
 
-- name:  How should I call peercellfun when a function requires many inputs (e.g. key-value pairs)?
+- name:  How should I call peercellfun when a function requires many inputs (e.g., key-value pairs)?
   link:  /faq/how_should_i_call_peercellfun_when_a_function_requires_many_inputs_e.g._key-value_pairs
 
 - name:  How should I get started with the FieldTrip realtime buffer?

@@ -43,7 +43,7 @@
 - name:  How does the peer smartshare algorithm work?
   link:  /faq/how_does_the_peer_smartshare_algorithm_work
 
-- name:  How should I call peercellfun when a function requires many inputs (e.g. key-value pairs)?
+- name:  How should I call peercellfun when a function requires many inputs (e.g., key-value pairs)?
   link:  /faq/how_should_i_call_peercellfun_when_a_function_requires_many_inputs_e.g._key-value_pairs
 
 - name:  How to get started with peer distributed computing on my own desktop computer?
