@@ -16,7 +16,7 @@ After starting MATLAB, please ensure that the right version of FieldTrip is used
 
     which ft_defaults
 
-If you see that ft_defaults is found by MATLAB, you are all set. Otherwise (e.g. if you are working on personal laptop on the last day), you will have to set the path to FieldTrip using
+If you see that ft_defaults is found by MATLAB, you are all set. Otherwise (e.g., if you are working on personal laptop on the last day), you will have to set the path to FieldTrip using
 
     restoredefaultpath
     cd path_to_directory/fieldtrip-xxxxxxxx

@@ -5,7 +5,7 @@ tags: [example, eeg, preprocessing, laplace, bipolar]
 
 # Re-reference EEG and iEEG data
 
-EEG and intracranial EEG (iEEG) data, which includes sEEG and ECoG, is often recorded relative to a reference electrode that is good for the signal quality and for noise suppression (e.g. with an electrode firmly attached on the mastoid behind the ear), but that is not neccessarily the most optimal for subsequent analysis or interpretation of the data. Hence, it is common to apply some re-referencing in the preprocessing of EEG and iEEG data.
+EEG and intracranial EEG (iEEG) data, which includes sEEG and ECoG, is often recorded relative to a reference electrode that is good for the signal quality and for noise suppression (e.g., with an electrode firmly attached on the mastoid behind the ear), but that is not neccessarily the most optimal for subsequent analysis or interpretation of the data. Hence, it is common to apply some re-referencing in the preprocessing of EEG and iEEG data.
 
 FieldTrip implements multiple methods for re-referencing in the **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** function. To use these, you specify `cfg.reref='yes'` and give the specific method as `cfg.refmethod`. Alternatively, if you have a more complex referencing scheme or want more control over the re-referencing, you can specify `cfg.reref='no'` and rather use `cfg.montage` in combination with **[ft_prepare_montage](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_montage.m)**.
  

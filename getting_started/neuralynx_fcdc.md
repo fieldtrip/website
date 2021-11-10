@@ -163,7 +163,7 @@ The specification of the dataformat and headerformat options as _combined_ds_ en
 
 ### Dealing with changing of channel labels
 
-Neuralynx uses the expression **csc** (from *c*ontinuous *s*ampled *c*hannel) in addition with a number (e.g. _010_) to label the channels. This labels are different from the names assigned to the electrodes in the electrode array. To keep consistency on the labels (this is especially important for plotting the channels), we apply a **montage structure** that consist of a matrix of correspondences that changes the original labels by the new ones. By using the FieldTrip function **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)**, with the montage as a part of the cfg option **montage**, channel labels can be modified.
+Neuralynx uses the expression **csc** (from *c*ontinuous *s*ampled *c*hannel) in addition with a number (e.g., _010_) to label the channels. This labels are different from the names assigned to the electrodes in the electrode array. To keep consistency on the labels (this is especially important for plotting the channels), we apply a **montage structure** that consist of a matrix of correspondences that changes the original labels by the new ones. By using the FieldTrip function **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)**, with the montage as a part of the cfg option **montage**, channel labels can be modified.
 
 All montage files for our particular experiment are available upon request. An example of changing the channel labels is provided belo
 

@@ -13,7 +13,7 @@ This tutorial will **not** show how to perform the source reconstruction itself.
 
 ## Background
 
-Depending of the source reconstruction algorithm you want to use, you have to a priori specify a model that describes the locations of the sources (and sometimes the orientation) that you want to take into account. Specifically, this pertains to distributed source modeling approaches (e.g. Minimum Norm Estimation procedures), and for scanning approaches (e.g. beamformers). Dipolefitting approaches in general do not require an a priori source model (apart from when you want to use the option 'gridsearch').
+Depending of the source reconstruction algorithm you want to use, you have to a priori specify a model that describes the locations of the sources (and sometimes the orientation) that you want to take into account. Specifically, this pertains to distributed source modeling approaches (e.g., Minimum Norm Estimation procedures), and for scanning approaches (e.g., beamformers). Dipolefitting approaches in general do not require an a priori source model (apart from when you want to use the option 'gridsearch').
 In general, one could construct a source model that defines positions of dipoles on a 3-dimensional grid (this is sometimes referred to as a volumetric source model), or on a 2-dimensional surface (typically the cortical sheet).
 
 ## Procedure
@@ -62,7 +62,7 @@ To find out about the coordinate system of your mri, you can use the following f
 
     mri = ft_determine_coordsys(mri, 'interactive', 'yes');
 
-If it worked well, you will see the coordinate system specified in the mri structure in the mri.coordsys field. If 'coordsys' is not 'ctf' (in this example), or according to the mnemonic that is used to designate the coordinate system in which the M/EEG sensors/electrodes are expressed, you will need to align your mri, e.g. using anatomical landmarks (typically nasion, and left/right pre-auricular points) with the **[ft_volumerealign](https://github.com/fieldtrip/fieldtrip/blob/release/ft_volumerealign.m)** function. The mnemonic 'ctf' for the coordsys is used to indicate the coordinate system used here. Ft_volumerealign does not change the anatomical data, instead it creates a transformation matrix that aligns the anatomical data to the intended coordinate system. Note that the following step can be skipped for the example MRI image used here.
+If it worked well, you will see the coordinate system specified in the mri structure in the mri.coordsys field. If 'coordsys' is not 'ctf' (in this example), or according to the mnemonic that is used to designate the coordinate system in which the M/EEG sensors/electrodes are expressed, you will need to align your mri, e.g., using anatomical landmarks (typically nasion, and left/right pre-auricular points) with the **[ft_volumerealign](https://github.com/fieldtrip/fieldtrip/blob/release/ft_volumerealign.m)** function. The mnemonic 'ctf' for the coordsys is used to indicate the coordinate system used here. Ft_volumerealign does not change the anatomical data, instead it creates a transformation matrix that aligns the anatomical data to the intended coordinate system. Note that the following step can be skipped for the example MRI image used here.
 
     cfg          = [];
     cfg.method   = 'interactive';
@@ -263,7 +263,7 @@ This is the simplest method, but not the most efficient. You start with a single
 
 ##### Procedure
 
-The idea is to use a template grid that is defined in normalized space, e.g. based on a template anatomical MRI in MNI coordinates. Subsequently, each individual MRI is warped to this template MRI, and the inverse of this warp is applied to the template dipole grid. Hereby the individual subjects' grids are not regularly spaced anymore (meaning the distance between 2 grid points can vary), see figure 1. However, as a consequence of this warping procedure, homologous grid points across subjects are located at exactly the same location in normalized MNI space. As a consequence, the source-reconstructed activity can be directly averaged across subjects. You can either define a template grid yourself, or use one from a set of predefined template grids that are included in fieldtrip: fieldtrip/template/sourcemodel/standard_gridXmm.mat.
+The idea is to use a template grid that is defined in normalized space, e.g., based on a template anatomical MRI in MNI coordinates. Subsequently, each individual MRI is warped to this template MRI, and the inverse of this warp is applied to the template dipole grid. Hereby the individual subjects' grids are not regularly spaced anymore (meaning the distance between 2 grid points can vary), see figure 1. However, as a consequence of this warping procedure, homologous grid points across subjects are located at exactly the same location in normalized MNI space. As a consequence, the source-reconstructed activity can be directly averaged across subjects. You can either define a template grid yourself, or use one from a set of predefined template grids that are included in fieldtrip: fieldtrip/template/sourcemodel/standard_gridXmm.mat.
 
 {% include image src="/assets/img/tutorial/sourcemodel/brains.gif" width="500" %}
 

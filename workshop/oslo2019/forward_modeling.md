@@ -80,7 +80,7 @@ The next step is to bring the two coordinate systems (DICOM and Polhemus) togeth
 
     mri_aligned_fiducials = ft_volumerealign(cfg, mri);
 
-In this case, we also have extra head shape points digitized with the Polhemus system. We are going to better the co-registration using these as well. If the initial looks okay (e.g. nose points are around the MRI-nose), then just press quit, and the Iterative Closest Point algorithm do its work (_cfg.headshape.icp_)
+In this case, we also have extra head shape points digitized with the Polhemus system. We are going to better the co-registration using these as well. If the initial looks okay (e.g., nose points are around the MRI-nose), then just press quit, and the Iterative Closest Point algorithm do its work (_cfg.headshape.icp_)
 
     load headshape.mat
 

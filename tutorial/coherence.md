@@ -118,7 +118,7 @@ _Figure: An example of the raw MEG data from sensor MLC21 (upper frame) and the 
 #### Exercise 1
 
 {% include markup/info %}
-Explore the MEG and EMG in figure 1, e.g. by zooming in. How are the signals different from one another?
+Explore the MEG and EMG in figure 1, e.g., by zooming in. How are the signals different from one another?
 {% include markup/end %}
 
 ## Computing the coherence
@@ -252,7 +252,7 @@ Plot the results of the 5 and 2Hz smoothing:
     cfg.channel       = 'MRC21';
     figure; ft_singleplotER(cfg, fd, fd2);
 
-b) 10 Hz smoothing (e.g. cfg.tapsmofrq = 10 Hz)
+b) 10 Hz smoothing (e.g., cfg.tapsmofrq = 10 Hz)
 
     cfg            = [];
     cfg.output     = 'powandcsd';

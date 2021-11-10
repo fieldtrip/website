@@ -102,7 +102,7 @@ make
 
 You should similarly modify MATLABARCH and MATLABPATH in `peer/peerworker`.
 
-If you want to compile a 32-bit version on a 64-bit platform, e.g. if you are using an older 32-bit MATLAB version on a newer 64-bit operating system, you should also specify
+If you want to compile a 32-bit version on a 64-bit platform, e.g., if you are using an older 32-bit MATLAB version on a newer 64-bit operating system, you should also specify
 
 ```Makefile
 # override the architecture defaults

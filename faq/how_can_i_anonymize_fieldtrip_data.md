@@ -22,5 +22,5 @@ In the [Human Connectome Project](http://www.humanconnectome.org) (HCP) we decid
 
 You may want to review the [elements](http://www.humanconnectome.org/data/data-use-terms/restricted-data-reference.html) of the HCP related to the gradual sensitivity of human data and the [data use terms](http://www.humanconnectome.org/data/data-use-terms/) for the open and restricted access elements of the HCP data.
 
-Note that the important difference between e.g. the [Creative Commons](http://creativecommons.org/licenses/) licenses and the data use terms that were designed for the HCP is that the latter ones explicitly deal with identifying the data subjects.
+Note that the important difference between e.g., the [Creative Commons](http://creativecommons.org/licenses/) licenses and the data use terms that were designed for the HCP is that the latter ones explicitly deal with identifying the data subjects.
 {% include markup/end %}

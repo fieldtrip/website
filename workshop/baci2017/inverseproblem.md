@@ -175,7 +175,7 @@ Can you think of reasons why the dipoles are at different locations?
 #### Exercise 3
 
 {% include markup/info %}
-Changing parameters of the forward model influences the Inverse solutions. Play around with different parameters of the BEM forward model (e.g. changing conductivity values) and redo the inverse solution. If you need more input for this please ask us!
+Changing parameters of the forward model influences the Inverse solutions. Play around with different parameters of the BEM forward model (e.g., changing conductivity values) and redo the inverse solution. If you need more input for this please ask us!
 {% include markup/end %}
 
 ## Summary and suggested further reading

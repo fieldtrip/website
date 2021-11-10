@@ -7,7 +7,7 @@ tags: [meg, eeg, raw, freq, cfg, trialfun, trialdef]
 
 ### Foreword
 
-This walkthrough is intended to give a little background in the use of FieldTrip. It is not a manual, nor is it meant to be canonical or generic for all possible uses. I am making this from my limited experience as a user, not as a developer. Also, at the time of making this, many modifications on the code, both in detail as well as more substantive ones (e.g. a different implementation of data structure in its main functions) are planned. I do believe, however, that an absolute beginner might benefit from a bit of overview, especially those who want to end up using FieldTrip for frequency and time-locked (MEG) data-analysis within a cognitive paradigm in humans, from sensor to source level. It is meant to be read before one commences with the analysis as a background on which to explore the already detailed documentation available at the FieldTrip website. However, some experience in programming, and of MATLAB in particular, is definitely needed. I would like to refer to the MATLAB knowledge database on intranet for those that need help getting started (at the Donders Center). Finally, please see this attempt itself as experimental. Because of the fact that FieldTrip, from the developers point of view, is investing most of its efforts in innovation, a full manual will never be up to date, or even correct, at least not for long.
+This walkthrough is intended to give a little background in the use of FieldTrip. It is not a manual, nor is it meant to be canonical or generic for all possible uses. I am making this from my limited experience as a user, not as a developer. Also, at the time of making this, many modifications on the code, both in detail as well as more substantive ones (e.g., a different implementation of data structure in its main functions) are planned. I do believe, however, that an absolute beginner might benefit from a bit of overview, especially those who want to end up using FieldTrip for frequency and time-locked (MEG) data-analysis within a cognitive paradigm in humans, from sensor to source level. It is meant to be read before one commences with the analysis as a background on which to explore the already detailed documentation available at the FieldTrip website. However, some experience in programming, and of MATLAB in particular, is definitely needed. I would like to refer to the MATLAB knowledge database on intranet for those that need help getting started (at the Donders Center). Finally, please see this attempt itself as experimental. Because of the fact that FieldTrip, from the developers point of view, is investing most of its efforts in innovation, a full manual will never be up to date, or even correct, at least not for long.
 
 Happy FieldTripping,
 Stephen Whitmarsh
@@ -16,7 +16,7 @@ Stephen Whitmarsh
 
 ### Introduction
 
-In most cases you would like to analyze your data in respect to stimulus/condition markers recorded within the data. Alternatively, you might want to define trials based upon visual inspection of the data, or based upon recordings of external device (eye-tracker, EOG, SCR, TMS, etc) or log file. For the sake of the purpose of overview only go into the first option although all these latter options are certainly supported in FieldTrip. If possible always record stimulus/condition markers in your EEG/MEG data. It will make the analysis, if not life itself, substantially easier. You might have coded every stimulus with its own code, or rather used the marker to code the condition number. In any case, most probably the first step you want to do is to load your data and segment it into conditions according to the markers in the data. In the end you'll just need to find a nice test-statistic, e.g. average alpha-power, and do your statistical comparison:
+In most cases you would like to analyze your data in respect to stimulus/condition markers recorded within the data. Alternatively, you might want to define trials based upon visual inspection of the data, or based upon recordings of external device (eye-tracker, EOG, SCR, TMS, etc) or log file. For the sake of the purpose of overview only go into the first option although all these latter options are certainly supported in FieldTrip. If possible always record stimulus/condition markers in your EEG/MEG data. It will make the analysis, if not life itself, substantially easier. You might have coded every stimulus with its own code, or rather used the marker to code the condition number. In any case, most probably the first step you want to do is to load your data and segment it into conditions according to the markers in the data. In the end you'll just need to find a nice test-statistic, e.g., average alpha-power, and do your statistical comparison:
 
 {% include image src="/assets/img/walkthrough/wt_fig1b.png" width="400" %}
 
@@ -54,7 +54,7 @@ Looking at one trial separately gives us the familiar channels x time structure:
 
     data.trial{5}: [32x1000 double]
 
-Most often every trial has the same time axis. E.g. they all go from one second before the marker until three second after the marker. This is not always the case however, and this is why every trial has its own time axis. It has the same length as the data, defining a (relative) time point in seconds for every sample in the data, for instance:
+Most often every trial has the same time axis. e.g., they all go from one second before the marker until three second after the marker. This is not always the case however, and this is why every trial has its own time axis. It has the same length as the data, defining a (relative) time point in seconds for every sample in the data, for instance:
 
     data.time{5}: [1x1000 double]    % of which a small part might be:  [… 1.06 1.07 1.08 1.09 …]
 
@@ -146,7 +146,7 @@ Preprocessing (ft_preprocessing.m) was the second main function implemented duri
 
 Besides loading the data all the other functionalities can be done at any later stage. They are not set by default. We'll go through them in their own time and use ft_preprocessing only for the first two steps.
 
-If we don't specify the trial definition we made previously, ft_preprocessing would load all data and put them into a [channels x time] array of a single trial (e.g. in data.trial{1}). To save memory it is sometimes preferred to load only the data that is actually used, and you'll need to segment the data into trials sooner or later anyway. To do so we supply ft_preprocessing with the trl we made previously. You might have everything you need already specified within the cfg, but just to be sure we'll repeat it here:
+If we don't specify the trial definition we made previously, ft_preprocessing would load all data and put them into a [channels x time] array of a single trial (e.g., in data.trial{1}). To save memory it is sometimes preferred to load only the data that is actually used, and you'll need to segment the data into trials sooner or later anyway. To do so we supply ft_preprocessing with the trl we made previously. You might have everything you need already specified within the cfg, but just to be sure we'll repeat it here:
 
     cfg.trl = trl;                      % saved somewhere previously
     cfg.dataset = 'exampledata.eeg';    % data file, you might also need to add the path to it
@@ -289,7 +289,7 @@ The most used method for frequency analysis in FieldTrip besides ''mtmfft'' is '
 
 ''Mtmfft'' consists of 2 main steps.
 
-1.  Your raw data is windowed/tapered by a taper you selected in cfg.taper (e.g. hanning, dpss, etc.). This is important for various reasons explained in the next section.
+1.  Your raw data is windowed/tapered by a taper you selected in cfg.taper (e.g., hanning, dpss, etc.). This is important for various reasons explained in the next section.
 2.  the Fast-Fourier-Fransform (FFT) of your data is taken, and parts of this are selected as output.
 
 ''Mtmconvol'' works a little differently. One of several methods to get a time-frequency representation of your data is by using wavelet-convolution, where a wavelet is 'sliding' over your raw data, at each time-point taking the average of a element-wise multiplication of all the data that 'lies under' your wavelet. ''Mtmconvol'' does exactly this, but then by multiplication in the frequency domain (which is much faster than convolution in the time-domain).
@@ -313,7 +313,7 @@ As you can see using such a taper will make you lose data between the time windo
 
 {% include image src="/assets/img/walkthrough/wt_fig12.png" width="600" %}
 
-One consideration in choosing the width of your time-window is the wavelength of the frequency you want to calculate. As we view an oscillation as consisting of several cycles, this needs to be reflected in the time-window. Also, you need several cycles captured in your time-window to have a relative reliable estimate of its power during that time. This means that for a signal of 2 Hz the time window should be several times 0.5 seconds (T = 1/f). For higher frequencies this can be much shorter, 30Hz giving you a period of about 33 milliseconds. To not make concessions for one or the other extreme you can make your time-windows dependent on the frequency by making it a multiple of its period. It is recommended to not use less than 3 cycles. Remember, the way you define your window biases your results towards that particular view. If you are searching for long-lasting oscillations and therefore use time-windows of e.g. 10 cycles, your results will reflect that portion of your data most strongly. If, instead, you use a window of 1 cycle, do not expect to see (although you might) oscillations evolving over time, as you are biasing your results against it.
+One consideration in choosing the width of your time-window is the wavelength of the frequency you want to calculate. As we view an oscillation as consisting of several cycles, this needs to be reflected in the time-window. Also, you need several cycles captured in your time-window to have a relative reliable estimate of its power during that time. This means that for a signal of 2 Hz the time window should be several times 0.5 seconds (T = 1/f). For higher frequencies this can be much shorter, 30Hz giving you a period of about 33 milliseconds. To not make concessions for one or the other extreme you can make your time-windows dependent on the frequency by making it a multiple of its period. It is recommended to not use less than 3 cycles. Remember, the way you define your window biases your results towards that particular view. If you are searching for long-lasting oscillations and therefore use time-windows of e.g., 10 cycles, your results will reflect that portion of your data most strongly. If, instead, you use a window of 1 cycle, do not expect to see (although you might) oscillations evolving over time, as you are biasing your results against it.
 
 {% include image src="/assets/img/walkthrough/wt_fig13.png" width="600" %}
 
@@ -363,8 +363,8 @@ FieldTrip distinguishes itself perhaps most in its flexibility in statistical ap
 
 The difference between descriptive and inferential statistic is often implicit in neuroimaging analysis packages, or in research articles for that matter. It really pays off to consider them separately here and to entertain the many possibilities of combining descriptive statistics with statistical methods. It is paramount in understanding the philosophy and appreciating the full statistical potential of FieldTrip.
 
-So what do we mean with descriptive statistic? It's the single value you end up with after reducing your data(set) and representing an aspect of its distribution which you would want to use for statistical comparison. Think for instance about “average alpha power over trials”, “variance of the P300 amplitude” or “the latency of maximal mu-rhythm suppression”. You might calculate a descriptive statistic for every subject, e.g. the difference between conditions (which you want to compare over subjects). Conversely, you might want to use one descriptive for every trial (which you will compare within a subject). A descriptive statistic is not limited to averages of power or amplitude but can be any output of a statistical procedure itself, such as a Z-value, t-value, variance, mean-difference or Beta-value.
-The inferential statistic is what you get when you test your descriptive statistics against the null-hypothesis, e.g. is your p-value. Again, there are many ways to do your null-hypothesis testing, e.g. using a (paired) t-test or Monte Carlo approach.
+So what do we mean with descriptive statistic? It's the single value you end up with after reducing your data(set) and representing an aspect of its distribution which you would want to use for statistical comparison. Think for instance about “average alpha power over trials”, “variance of the P300 amplitude” or “the latency of maximal mu-rhythm suppression”. You might calculate a descriptive statistic for every subject, e.g., the difference between conditions (which you want to compare over subjects). Conversely, you might want to use one descriptive for every trial (which you will compare within a subject). A descriptive statistic is not limited to averages of power or amplitude but can be any output of a statistical procedure itself, such as a Z-value, t-value, variance, mean-difference or Beta-value.
+The inferential statistic is what you get when you test your descriptive statistics against the null-hypothesis, e.g., is your p-value. Again, there are many ways to do your null-hypothesis testing, e.g., using a (paired) t-test or Monte Carlo approach.
 
 ### Input – output structure of ft_freqstatistics
 
@@ -382,7 +382,7 @@ It should be obvious that besides feeding data we need to specify how the separa
 
 #### Non-paired comparison
 
-This could be simply the condition number as we have in the case of a (non-paired) comparison of two series of data entries. Note that this is the same regardless if we are dealing with a within-subject (e.g. condition A versus B) or a between-subject design (e.g. group A versus B, session A versus B):
+This could be simply the condition number as we have in the case of a (non-paired) comparison of two series of data entries. Note that this is the same regardless if we are dealing with a within-subject (e.g., condition A versus B) or a between-subject design (e.g., group A versus B, session A versus B):
 
 {% include image src="/assets/img/walkthrough/wt_fig15.png" width="300" %}
 

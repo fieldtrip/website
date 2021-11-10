@@ -22,14 +22,14 @@ OpenMEEG can be downloaded from <https://openmeeg.github.io>.
 ### Install from the tar.gz file
 
 -   untar the .tar file
--   Set the PATH environment variable in the appropriate .rc configuration file (e.g. .bashrc or .bash_profile)
+-   Set the PATH environment variable in the appropriate .rc configuration file (e.g., .bashrc or .bash_profile)
 -   Example (for a Bash shell): `export PATH=\$PATH:openmeeg_folder/bin`
 -   Set the LIB environment variable
 -   Example (for a Bash shell): `export LD_LIBRARY_PATH=\$LD_LIBRARY_PATH:openmeeg_folder/lib`
 
 ### Install from the RPM
 
--   open the RPM file with `rpm` from command line in Linux or with an alternative front-end program (e.g. `up2date` for CentOS or `yum` for Fedora/RedHat)
+-   open the RPM file with `rpm` from command line in Linux or with an alternative front-end program (e.g., `up2date` for CentOS or `yum` for Fedora/RedHat)
 
 ```bash
 $ rpm -ivh OpenMEEG-2.0-0.x86_64.rpm
@@ -65,7 +65,7 @@ gcc version 4.3.2 (GCC)
 
 ## Make sure that MATLAB can find them
 
-You should add the location of the OpenMEEG binaries and dynamic link libraries to your path, e.g. by adding a line like this to your .profile script on macOS
+You should add the location of the OpenMEEG binaries and dynamic link libraries to your path, e.g., by adding a line like this to your .profile script on macOS
 
 ```bash
 export PATH=$PATH:/opt/openmeeg/bin
@@ -117,7 +117,7 @@ A good start is the example script `openmeeg_eeg_leadfield_example.m` found in `
 ## If it does not seem to work
 
 {% include markup/info %}
-Some of the pre-compiled packages could have issues running on a particular Linux OS (e.g. Fedora, CentOS), if you use the OpenMEEG 2 packages. Try then to download the OpenMEEG statically linked version (OpenMEEG-2.1.0-Linux.amd64-gcc-4.1.2-OpenMP-static.tar.gz or OpenMEEG-2.1.0-Linux.i386-gcc-4.1.2-static.tar.gz for Linux)
+Some of the pre-compiled packages could have issues running on a particular Linux OS (e.g., Fedora, CentOS), if you use the OpenMEEG 2 packages. Try then to download the OpenMEEG statically linked version (OpenMEEG-2.1.0-Linux.amd64-gcc-4.1.2-OpenMP-static.tar.gz or OpenMEEG-2.1.0-Linux.i386-gcc-4.1.2-static.tar.gz for Linux)
 {% include markup/end %}
 
 If you still meet any difficulty do not hesitate to contact the OpenMEEG team: openmeeg-info@lists.gforge.inria.fr

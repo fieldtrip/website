@@ -130,7 +130,7 @@ How it's currently implemented in these function
 
 the code for adjusting the trl should look something like this:
 
-finding the trl (see e.g. appenddata.m
+finding the trl (see e.g., appenddata.m
 
     % adjust the trial definition (trl) in case of trial selection
     if ~strcmp(cfg.trials, 'all')

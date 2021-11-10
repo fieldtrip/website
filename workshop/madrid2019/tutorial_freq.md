@@ -19,7 +19,7 @@ Oscillatory components contained in the ongoing EEG or MEG signal often change
 relative to experimental manipulations, such as stimulus events. These
 oscillatory signals are not necessarily phase-locked to the event and will not be
 represented as event related fields (ERFs) in MEG or event related potentials
-(ERPs) in EEG (see e.g. Tallon-Baudry and Bertrand (1999) [Oscillatory gamma
+(ERPs) in EEG (see e.g., Tallon-Baudry and Bertrand (1999) [Oscillatory gamma
 activity in humans and its role in object
 representation](https://www.ncbi.nlm.nih.gov/pubmed/10322469)). The goal of the
 first section is to compute and visualize event related changes by calculating
@@ -372,7 +372,7 @@ High frequency smoothing is particularly advantageous when dealing with
 electrophysiological brain signals above 30 Hz. Oscillatory gamma activity
 (30-100 Hz) is quite broad band and thus analysis of such signals benefit from
 multitapering. For signals lower than 30 Hz it is recommend to use only a single
-taper, e.g. a Hanning taper as shown above. Beware that in the example below
+taper, e.g., a Hanning taper as shown above. Beware that in the example below
 multitapers are used to analyze low frequencies, because there are no gamma band
 effects in this particular dataset.
 

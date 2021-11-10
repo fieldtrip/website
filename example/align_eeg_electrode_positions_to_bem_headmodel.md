@@ -26,8 +26,8 @@ Furthermore, it is necessary to provide the voxel coordinates of the same fiduci
     Lpa = elec.chanpos(strcmp(elec.label, 'left'),:);
     Rpa = elec.chanpos(strcmp(elec.label, 'right'),:);
 
-    % determine the same marker locations in voxel coordinates, e.g. [57,127,15])
-    % find fiducials e.g. by using ft_sourceplot(cfg, mri) which plots a figure in which
+    % determine the same marker locations in voxel coordinates, e.g., [57,127,15])
+    % find fiducials e.g., by using ft_sourceplot(cfg, mri) which plots a figure in which
     % you can interactively select slices of the mri
     % You can also use ft_volumerealign with cfg.interactive='yes' and obtain the fiducials from the output.cfg.fiducial
 

@@ -24,7 +24,7 @@ Access to the real-time buffer provided by the standard FieldTrip reading functi
     % this returns a Nchans X Nsamples matrix with the data
     dat    = ft_read_data('buffer://localhost:port', ...)
 
-The interface between MATLAB and the real-time buffer is network transparent. That means that the buffering can be done on one computer, e.g. the one attached to the EEG amplifier, and the computations in MATLAB can be done on another.
+The interface between MATLAB and the real-time buffer is network transparent. That means that the buffering can be done on one computer, e.g., the one attached to the EEG amplifier, and the computations in MATLAB can be done on another.
 
 ### Details on the MATLAB mex-file implementation
 
@@ -36,6 +36,6 @@ Furthermore, it is possible to instantiate the buffer as network transparent ser
 
 ### Writing a new proxy for acquring data in MATLAB
 
-You should start by studying the example scripts in the 'realtime' directory, e.g. **[ft_realtime_signalproxy](https://github.com/fieldtrip/fieldtrip/blob/release/realtime/example/ft_realtime_signalproxy.m)** as an example of how to write random data to a buffer, or **[ft_realtime_pooraudioproxy](https://github.com/fieldtrip/fieldtrip/blob/release/realtime/example/ft_realtime_pooraudioproxy.m)** as a simple example for reading data from some hardware device and writing into a buffer.
+You should start by studying the example scripts in the 'realtime' directory, e.g., **[ft_realtime_signalproxy](https://github.com/fieldtrip/fieldtrip/blob/release/realtime/example/ft_realtime_signalproxy.m)** as an example of how to write random data to a buffer, or **[ft_realtime_pooraudioproxy](https://github.com/fieldtrip/fieldtrip/blob/release/realtime/example/ft_realtime_pooraudioproxy.m)** as a simple example for reading data from some hardware device and writing into a buffer.
 
-Therefore we have decided to link the streaming of the data with a buffer, i.e. instead of having MATLAB read one sample at a time, we created another standalone application that buffers the data. In MATLAB, you can read any data from this buffer at a time that suits you. E.g. you can read the last 100 milliseconds of data (as a Nchans X Nsamples matrix) and then do your computation on that. During the computation MATLAB will be busy, but the standalone buffer still captures the new data that comes in.
+Therefore we have decided to link the streaming of the data with a buffer, i.e. instead of having MATLAB read one sample at a time, we created another standalone application that buffers the data. In MATLAB, you can read any data from this buffer at a time that suits you. e.g., you can read the last 100 milliseconds of data (as a Nchans X Nsamples matrix) and then do your computation on that. During the computation MATLAB will be busy, but the standalone buffer still captures the new data that comes in.

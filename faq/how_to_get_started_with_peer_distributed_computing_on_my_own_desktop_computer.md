@@ -7,7 +7,7 @@ tags: [faq, peer]
 
 The [FieldTrip peer toolbox](https://github.com/fieldtrip/fieldtrip/tree/master/peer) is a small stand-alone toolbox to facilitate distributed computing on an ad-hoc cluster. You can use the peer system on multiple computers or on a single computer with multiple CPUs or multiple cores. Note that starting multiple MATLAB sessions on a single computer only requires one MATLAB license.
 
-Let's assume that you have a single computer with a dual- or quad-core CPU and that you want to run some jobs in parallel. Or even better, lets assume that you have N computers (e.g. those of your room-mates) on which you want to run jobs.
+Let's assume that you have a single computer with a dual- or quad-core CPU and that you want to run some jobs in parallel. Or even better, lets assume that you have N computers (e.g., those of your room-mates) on which you want to run jobs.
 
 On the first (your own) computer, you start MATLAB and type
 

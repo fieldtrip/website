@@ -15,9 +15,9 @@ Of course you can also use the standard MATLAB functions like `plot`, `plot3`, `
 
 ## Background
 
-The goal of the plotting functions in FieldTrip is to ease the visualization of complex data structures with multiple dimensions and with data that is not trivial to interpret spatially. This is accomplished with high-level functions (e.g. **[ft_topoplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_topoplotER.m)** or **[ft_multiplotTFR](https://github.com/fieldtrip/fieldtrip/blob/release/ft_multiplotTFR.m)**) and low-level functions (with prefixes 'ft_plot_\*' and 'ft_select_\*', e.g. ft_plot_matrix or ft_select_box). For more simple data, such as a set of reaction times of the subject, we expect you to use the standard MATLAB plotting functions.
+The goal of the plotting functions in FieldTrip is to ease the visualization of complex data structures with multiple dimensions and with data that is not trivial to interpret spatially. This is accomplished with high-level functions (e.g., **[ft_topoplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_topoplotER.m)** or **[ft_multiplotTFR](https://github.com/fieldtrip/fieldtrip/blob/release/ft_multiplotTFR.m)**) and low-level functions (with prefixes 'ft_plot_\*' and 'ft_select_\*', e.g., ft_plot_matrix or ft_select_box). For more simple data, such as a set of reaction times of the subject, we expect you to use the standard MATLAB plotting functions.
 
-The high-level functions take care of the data bookkeeping and call the low-level function. If you want to make more complex figures or tweak all options, you can bypass the high-level functions and call the low-level functions instead. This is especially useful if there is no data selection and bookkeeping involved, e.g. when you want to plot multiple geometrical objects (like sensors, source model, head surface, etc).
+The high-level functions take care of the data bookkeeping and call the low-level function. If you want to make more complex figures or tweak all options, you can bypass the high-level functions and call the low-level functions instead. This is especially useful if there is no data selection and bookkeeping involved, e.g., when you want to plot multiple geometrical objects (like sensors, source model, head surface, etc).
 
 To determine which high-level functions are suitable for you depends on the type of data you have: sensor or source space data. In this tutorial we assume that you already have the data from the event related averaging tutorial, the time-frequency representations of power tutorial and the applying beamforming techniques in the frequency domain tutorial, and we will demonstrate plotting at both the sensor and source level.
 
@@ -61,7 +61,7 @@ You could make the same plot by the following cod
 
 {% include image src="/assets/img/tutorial/plotting/fig2.png" %}
 
-The advantage of **[ft_singleplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_singleplotER.m)** is that it does the bookeeping for you. E.g. you can plot the mean over all MLC channels, which are MEG channels over left-central region
+The advantage of **[ft_singleplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_singleplotER.m)** is that it does the bookeeping for you. e.g., you can plot the mean over all MLC channels, which are MEG channels over left-central region
 
     cfg = [];
     cfg.xlim = [-0.2 1.0];
@@ -532,7 +532,7 @@ Scalar data (e.g., time-averaged activity, frequency-specific power estimates, s
 
 {% include image src="/assets/img/tutorial/plotting/fig34.png" %}
 
-If you enable the camera toolbar (menu option "view", "camera toolbar") you have more options for controlling the 3-dimensional rendering, e.g. change perspective, change the position of the light (used for relection and shadows).
+If you enable the camera toolbar (menu option "view", "camera toolbar") you have more options for controlling the 3-dimensional rendering, e.g., change perspective, change the position of the light (used for relection and shadows).
 
 As with the channel-level multiplots, you can change the colormap that maps the functional values on the colors.
 

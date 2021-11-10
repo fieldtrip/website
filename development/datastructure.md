@@ -78,6 +78,6 @@ Most data fields are represented as a N-dimensional numeric array; the dimord is
 
 ### Data as a cell-array
 
-Some data fields are represented as a cell-array. This is sometimes used to represent data elements of different size (e.g. spike timings). This is also used to to represent data that is sparse and partially empty (e.g. leadfields and beamformer filters). For these type of data structures the cell-array is always the outer-most (first) dimension and the corresponding dimension is described as `{xxx}`, i.e. with curly brackets. For a multi-dimensional cell-array this could be `{xxx_yyy_zzz}`.
+Some data fields are represented as a cell-array. This is sometimes used to represent data elements of different size (e.g., spike timings). This is also used to to represent data that is sparse and partially empty (e.g., leadfields and beamformer filters). For these type of data structures the cell-array is always the outer-most (first) dimension and the corresponding dimension is described as `{xxx}`, i.e. with curly brackets. For a multi-dimensional cell-array this could be `{xxx_yyy_zzz}`.
 
 The subsequent dimensions of the arrays that are contained in each cell are described as before, subsequently the dimord can be for example `{pos}_chan_ori` (for leadfields) or `{pos_pos}_freq` for a source-level connectivity metric that is frequency resolved.

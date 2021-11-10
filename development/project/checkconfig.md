@@ -10,7 +10,7 @@ title: Implement function that checks consistency of cfgs
 
 1.  For the user: input cfgs should be adjusted when necessary and possible, and feedback (warning/error) should be given when **required** options are missing or when **forbidden** or **deprecated** options are used. This should replace the current 'backward compatibility' code.
 2.  Internal use: checkconfig should control the relevant cfg options that are being passed on to other functions.
-3.  Output: only relevant cfg fields should be contained in the output (data.cfg), e.g. it should not contain unused default settings.
+3.  Output: only relevant cfg fields should be contained in the output (data.cfg), e.g., it should not contain unused default settings.
 
 ## Relevant functions
 
@@ -52,7 +52,7 @@ Add the check (objective 1) to the existing functions.
 
 **Forbidden**: give error when forbidden option is used
 
-- e.g. cfg.trl when calling preprocessing on data that has already been read
+- e.g., cfg.trl when calling preprocessing on data that has already been read
 
 ## Step 2
 

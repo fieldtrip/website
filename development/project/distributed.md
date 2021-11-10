@@ -101,14 +101,14 @@ Q (Robert): are there other important generic backends that we want to support?
 Q (Robert): what are the defining features of the various systems? E.g.
 
 1.  allow for job dependencies
-2.  managing specific hardware resource (e.g. GPUs)
+2.  managing specific hardware resource (e.g., GPUs)
 3.  keep workers open between calls
 4.  suitable for MPI
 5.  ...
 
 2) Get more people interested/involved.
 
-(Robert): I have already listed some potential collaborators with access to specific setups that we might want to consider. The main reason for point 2 is to get the end-user software teams involved (e.g. Guillaume, Arno). Any ideas on trying to find relevant open source projects outside of neuroscience. And what about Octave?
+(Robert): I have already listed some potential collaborators with access to specific setups that we might want to consider. The main reason for point 2 is to get the end-user software teams involved (e.g., Guillaume, Arno). Any ideas on trying to find relevant open source projects outside of neuroscience. And what about Octave?
 
 ## Related links
 

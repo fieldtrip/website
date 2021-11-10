@@ -73,11 +73,11 @@ The initial implementation was based on the first external toolbox. It turned ou
 
 The third toolbox contains the completely renewed import functions from the Yokogawa company, which they released to us end 2011. This is the one which probably works the best and most (memory and speed) efficient in most cases, that is why this is the default. If you don't want to use it, please delete it from the fieldtrip/external directory or change its name into "yokogawa_meg_reader_unused" or something similar.
 
-Due to possible differences in e.g. calibration it is strictly recommended to use one codebase consistently for all your analysis.
+Due to possible differences in e.g., calibration it is strictly recommended to use one codebase consistently for all your analysis.
 
 ## Reading triggers into an event-structure
 
-Yokogawa uses analogue channels as trigger channels, often in a binary way. Which is to say that e.g. a 5 volt signal is transiently put on the channel when a stimulus is presented. Often several channels are used to be able to encode several trigger 'codes'.
+Yokogawa uses analogue channels as trigger channels, often in a binary way. Which is to say that e.g., a 5 volt signal is transiently put on the channel when a stimulus is presented. Often several channels are used to be able to encode several trigger 'codes'.
 
 This means that the user (you!) needs to know exactly which channels are used, whether a trigger is encoded by an up-flank or down-flank and what the threshold should be. One way of figuring out these is to just take a look at the trigger channel.
 
@@ -198,13 +198,13 @@ The `layout` structure may then be passed in `cfg.layout` to plotting functions 
 
 Each of the scanners used in neuroimaging research in principle has its own hardware-based coordinate system: the MRI has a coordinate system that relates to the bore, the MEG has a coordinate system that relates to the dewar, and the polhemus tracker has a coordinate system relative to the transmitter (the two-inch gray cube). Using a combination of the three systems (MRI, MEG, Polhemus) we try to relate the neuronal activity in the MEG to an anatomical location in the MRI.
 
-The general principle of coordinate system coregistration is to measure the same fiducial locations as points of reference with the different systems. Often, but not always, the fiducial locations are chosen to match clearly defined anatomical landmarks, such as the nasion (the bridge of the nose) and points that relate to the ear (e.g. pre-auricular points, mastoids, the ear canal). To ensure that the same points can be recorded with the different types of scanners, the points are marke
+The general principle of coordinate system coregistration is to measure the same fiducial locations as points of reference with the different systems. Often, but not always, the fiducial locations are chosen to match clearly defined anatomical landmarks, such as the nasion (the bridge of the nose) and points that relate to the ear (e.g., pre-auricular points, mastoids, the ear canal). To ensure that the same points can be recorded with the different types of scanners, the points are marke
 
 1.  MRI using vitamine E capsules or another oily substance that has a large MR contrast
 2.  MEG using coils through which an alternating electrical current can be passed, resulting in a small but well-localized magnetic field
 3.  Polhemus using a felt-tip pen
 
-In general MEG analyses are performed in a ["head coordinate system"](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined) that relates to the anatomical landmarks. To get a clear picture of the head coordinate system, you should consider how the location of the origin (i.e. the point [0 0 0]) and the direction of the axes of the coordinate system (i.e. the x-, y- and z-axis) are defined in relation to the anatomical landmarks. For example, the origin of the coordinate system can be defined exactly between the two ears and the x-axis (or the y-axis) can be defined to point towards the nasion. Note that different hardware manufacturers and software packages use [different conventions](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined), e.g. the x-axis can point either to the nose (CTF) or to the right ear (Neuromag), and that different labs also use slightly different conventions for the "ear" landmarks.
+In general MEG analyses are performed in a ["head coordinate system"](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined) that relates to the anatomical landmarks. To get a clear picture of the head coordinate system, you should consider how the location of the origin (i.e. the point [0 0 0]) and the direction of the axes of the coordinate system (i.e. the x-, y- and z-axis) are defined in relation to the anatomical landmarks. For example, the origin of the coordinate system can be defined exactly between the two ears and the x-axis (or the y-axis) can be defined to point towards the nasion. Note that different hardware manufacturers and software packages use [different conventions](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined), e.g., the x-axis can point either to the nose (CTF) or to the right ear (Neuromag), and that different labs also use slightly different conventions for the "ear" landmarks.
 
 Alternative to anatomically defined landmarks, it is also possible to use fiducials on other locations, as long as the position of the same fiducials can be detected with the different scanners. For the Yokogawa system three coils (MEG) or three vitamine capsules (MRI) can used that are placed on the forehead
 
@@ -220,7 +220,7 @@ Unlike other systems, the Yokogawa system software does not automatically analyz
 
 ### Coregistration using forehead coils/markers
 
-If you used standard fiducial locations (nasion, left/right ear) for the MEG coils as well as during MR scanning (using e.g. vitamin pill) the procedure of co-registration is relatively standard after this. However, in the following example dataset, co-registration points on the forehead were used.
+If you used standard fiducial locations (nasion, left/right ear) for the MEG coils as well as during MR scanning (using e.g., vitamin pill) the procedure of co-registration is relatively standard after this. However, in the following example dataset, co-registration points on the forehead were used.
 
 ### Aligning the MRI with the head coordinate system
 

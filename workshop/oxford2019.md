@@ -62,5 +62,5 @@ All the code (correct FieldTrip version) and data for the tutorials are already 
 Note: **do not** add the folder recursively, i.e., do not use `addpath(genpath('path_to_fieldtrip'))`.
 
 - Run 'ft_defaults' in MATLAB.
-- Then change directory to the one specifically holding the data for the particular tutorial, e.g. the first is sensor_analysis_plusminus.
+- Then change directory to the one specifically holding the data for the particular tutorial, e.g., the first is sensor_analysis_plusminus.
 - Confirm that FT has been successfully added to your path, for example by typing 'which ft_preprocessing' in Matlab; the correct path should be displayed.

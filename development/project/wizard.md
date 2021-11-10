@@ -8,7 +8,7 @@ title: Implement a graphical user interface as a "wizard" for certain analysis p
 
 _This project has been completed, the documentation below is only provided for future reference._
 
-The idea is to make a graphical user interface that allows the user to step through a sequence of functions, where for example each block consists of a computation with the associated graphical feedback. E.g. consider the following analysis protocol:
+The idea is to make a graphical user interface that allows the user to step through a sequence of functions, where for example each block consists of a computation with the associated graphical feedback. e.g., consider the following analysis protocol:
 
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     % Step 1: do the preprocessing
@@ -70,8 +70,8 @@ The wizard would have to read and parse the MATLAB script that contains the docu
 
 When the wizard has reached the end of the script, it would have to show that it is finished. Perhaps the code execution can be done in a separate workspace and all variables copied to the main workspace when finished.
 
-Using a key combination (e.g. Ctrl-R) the script can be reloaded.
+Using a key combination (e.g., Ctrl-R) the script can be reloaded.
 
-Using a key combination (e.g. Ctrl-S) the modifications made to the script using the GUI can be saved.
+Using a key combination (e.g., Ctrl-S) the modifications made to the script using the GUI can be saved.
 
 If graphical display of the data does not apply to a specific step, then the textual output could be displayed in a dialog with only an "OK" button.

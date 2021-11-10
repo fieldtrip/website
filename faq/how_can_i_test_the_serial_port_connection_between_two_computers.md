@@ -11,8 +11,8 @@ For the type of connection we are talking about here, you need a so called 'null
 
 To check that the serial connection between a Linux computer and a windows computer is functional, you can do the following:
 
-- On the Linux PC, open up a putty session by typing putty. Choose serial and type the path for the serial port (e.g. /dev/ttyS0/). The main thing to consider is the baud rate (e.g. 115200), which has to be the same on sending and receiving end.
-- On the windows PC, open up a putty session and setup a serial port connection (click on serial), and specify the name of the port where the serial device is connected to (e.g. 'COM3)', make sure baud rate is the same as on the Linux machine(i.e. 115200).
+- On the Linux PC, open up a putty session by typing putty. Choose serial and type the path for the serial port (e.g., /dev/ttyS0/). The main thing to consider is the baud rate (e.g., 115200), which has to be the same on sending and receiving end.
+- On the windows PC, open up a putty session and setup a serial port connection (click on serial), and specify the name of the port where the serial device is connected to (e.g., 'COM3)', make sure baud rate is the same as on the Linux machine(i.e. 115200).
 - Then once the connection is established you can type in the windows putty display and can then read it from the Linux putty display and vice versa. If this doesn't work just check the hardware connections.
 
 ## How to measure the delays of sending and receiving using a serial port connection
@@ -36,7 +36,7 @@ This is what I did on my office PC using FieldTrip commands **[ft_read_event](ht
     cfg.istream ='serial:COM4?BaudRate=115200';
     %% and receive it on serial port 1 (serila ports are physically connected)
     cfg.ostream ='serial:COM1?BaudRate=115200';
-    event.value=5; %% This can be a string or an integer, e.g. 1 or 'Rock_n_Roll_will_never_dye', however longer strings will take longer to be communicated
+    event.value=5; %% This can be a string or an integer, e.g., 1 or 'Rock_n_Roll_will_never_dye', however longer strings will take longer to be communicated
     count=0;
     tlop=[];
     while true

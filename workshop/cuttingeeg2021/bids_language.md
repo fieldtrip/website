@@ -30,7 +30,7 @@ originalid = {
   };
 
 for i=1:length(originalid)
-  % keep the original number as the identifier, but zero pad it to two digits (e.g. 01, 02, ...)
+  % keep the original number as the identifier, but zero pad it to two digits (e.g., 01, 02, ...)
   number = sscanf(originalid{i}, 'subj%d');
   newid = sprintf('%02d', number);
   

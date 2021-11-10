@@ -146,4 +146,4 @@ Since it is not a whole head MEG array, but a small array with limited coverage,
 
 ## OPM specific signal processing and denoising
 
-The OPM sensors have different noise characteristics. It is important to deal with the noise, to filter the data and to use e.g. reference channels to remove environmental interference. However, that falls outside the scope of this tutorial. The [OPM GitHub repository](https://github.com/tierneytim/OPM) of Tim Tierney provides SPM code to do that.
+The OPM sensors have different noise characteristics. It is important to deal with the noise, to filter the data and to use e.g., reference channels to remove environmental interference. However, that falls outside the scope of this tutorial. The [OPM GitHub repository](https://github.com/tierneytim/OPM) of Tim Tierney provides SPM code to do that.

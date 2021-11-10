@@ -1,9 +1,9 @@
 ---
-title: How should I call peercellfun when a function requires many inputs (e.g. key-value pairs)?
+title: How should I call peercellfun when a function requires many inputs (e.g., key-value pairs)?
 tags: [faq, peer]
 ---
 
-# How should I call peercellfun when a function requires many inputs (e.g. key-value pairs)?
+# How should I call peercellfun when a function requires many inputs (e.g., key-value pairs)?
 
 If you want to call a function n times, there should a cell-array of size(n,1) for each input argument you want to give. Peercellfun will then call the function n times (distributed over peers) with all input arguments sitting in the n-th position of each input cell-array.
 

@@ -36,7 +36,7 @@ If you also want to prevent case two, you can modify your jobs such that they ar
 ...
 save(outfile);
 
-Prior to reading the data, starting the computations and writing the results to disk, you can use a lockfile to prevent the job from being executed twice, e.g. change the job into
+Prior to reading the data, starting the computations and writing the results to disk, you can use a lockfile to prevent the job from being executed twice, e.g., change the job into
 
     function jobfunction(id)
     switch id

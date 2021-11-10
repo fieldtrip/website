@@ -50,7 +50,7 @@ for i=1:length(datainfo)
   % copying would have also been an option, but the BrainVision format is more widely supported
   cfg.method = 'convert';
 
-  % what to do with existing files, e.g. on re-runs of this script
+  % what to do with existing files, e.g., on re-runs of this script
   cfg.eeg.writesidecar            = 'replace';
   cfg.channels.writesidecar       = 'replace';
   cfg.events.writesidecar         = 'replace';

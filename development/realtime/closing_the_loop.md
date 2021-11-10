@@ -5,7 +5,7 @@ tags: [realtime]
 
 # Closing the loop in a real-time BCI application
 
-To close the loop in your BCI application, you have to communicate the control signal from the application/computer that does the feature extraction and feature translation to the application that is controlled by the BCI system. The application that is controlled by the BCI signal can be anything from a generic stimulus presentation software (e.g. NeuroBS Presentation, ERTS, ANT EEvoke, ...) to a spelling device or to custom-built hardware device (e.g. robot arm).
+To close the loop in your BCI application, you have to communicate the control signal from the application/computer that does the feature extraction and feature translation to the application that is controlled by the BCI system. The application that is controlled by the BCI signal can be anything from a generic stimulus presentation software (e.g., NeuroBS Presentation, ERTS, ANT EEvoke, ...) to a spelling device or to custom-built hardware device (e.g., robot arm).
 
 Before you attempt to close the loop, please make sure that the data is streaming properly and that you are able to process it fast enough. Some examples are given in the [getting started](/getting_started/realtime) section.
 
@@ -20,7 +20,7 @@ The **[ft_write_event](https://github.com/fieldtrip/fieldtrip/blob/release/filei
 
 ## Communicating to a serial port using a TCP network connection
 
-[HW VSP](http://www.hw-group.com/products/hw_vsp/index_en.html) is a software driver that adds a virtual serial port (e.g. COM5) to the operating system and redirects the data from this port via a TCP/IP network to another hardware interface, which is specified by its IP address and port number. Alternative products are listed here <http://en.wikipedia.org/wiki/COM_port_redirector>.
+[HW VSP](http://www.hw-group.com/products/hw_vsp/index_en.html) is a software driver that adds a virtual serial port (e.g., COM5) to the operating system and redirects the data from this port via a TCP/IP network to another hardware interface, which is specified by its IP address and port number. Alternative products are listed here <http://en.wikipedia.org/wiki/COM_port_redirector>.
 
 ## Communicating over a parallel port connection
 

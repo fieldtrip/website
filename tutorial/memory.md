@@ -16,13 +16,13 @@ Neurophysiological data can become quite large with the result that disk space, 
 ## Memory efficient coding tips
 
 - Work on your programming _style_. Take a look [here](http://www.datatool.com/downloads/matlab_style_guidelines.pdf) for a concise summary of the recommended style of programming.
-- Downsample your data (but backup your original data), e.g. using **[ft_resampledata](https://github.com/fieldtrip/fieldtrip/blob/release/ft_resampledata.m)**
+- Downsample your data (but backup your original data), e.g., using **[ft_resampledata](https://github.com/fieldtrip/fieldtrip/blob/release/ft_resampledata.m)**
 - Change data to single-precision (after preprocessing by using **[ft_struct2single](https://github.com/fieldtrip/fieldtrip/blob/release/ft_struct2single.m)** or by using `cfg.precision = 'single'` in certain functions)
 - Check if you really have to “cfg.keeptrials = 'yes'” in **[ft_freqanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqanalysis.m)**.
 - If you are working on a single subject, make sure other subjects are no longer in memory. This might seem trivial, but many people assign unique variables to subjects and forget to clear them.
 - Perhaps most importantly – once in a while let someone else go through your scripts to see if they can be optimized.
 - Within a script or function make sure you clear large variables that you don't need anymore using the clear statement. Note that MATLAB's memory use might not be intuitive. For instance, reloading a large dataset into the same variable may result in MATLAB allocating twice the memory you actually need.
-- The `cfg` field in your FieldTrip data structures stores the history of the processing steps performed on the data. This field can get quite large after many such steps and specifically after appending several data structures, because each `cfg` is stored in a cell array within the `cfg.previous` field. You can look at the cfg using **[ft_analysispipeline](https://github.com/fieldtrip/fieldtrip/blob/release/ft_analysispipeline.m)**. Simply emptying this field (e.g. by doing `freq.cfg = []`) will free up space. Remember to keep a copy of the cfg field on disk if you want to keep track of your analysis pipeline. 
+- The `cfg` field in your FieldTrip data structures stores the history of the processing steps performed on the data. This field can get quite large after many such steps and specifically after appending several data structures, because each `cfg` is stored in a cell array within the `cfg.previous` field. You can look at the cfg using **[ft_analysispipeline](https://github.com/fieldtrip/fieldtrip/blob/release/ft_analysispipeline.m)**. Simply emptying this field (e.g., by doing `freq.cfg = []`) will free up space. Remember to keep a copy of the cfg field on disk if you want to keep track of your analysis pipeline. 
 
 {% include markup/warning %}
 If you have any more suggestions please add them here.
@@ -32,11 +32,11 @@ If you have any more suggestions please add them here.
 
 Remember to always backup your original data that was acquired on external hard disks, CDs or DVDs for long-term storage. If possible, the backup should include the presentation code that was used in the experiment and a small ASCII .txt file with the recording details.
 
-When using FieldTrip for large analyses, it is recommended to save one MATLAB variable to a single file. That will result in a lot of files in your data directory and in first instance you may consider that to look messy. However, the advantage is that you can easily manage the data, delete results that you don't need any more, check that the results are complete for all subjects, check that the timestamps of the files with certain results are consistent for all subjects (e.g. after you have updated some parameters and rerun part of the analysis), ...
+When using FieldTrip for large analyses, it is recommended to save one MATLAB variable to a single file. That will result in a lot of files in your data directory and in first instance you may consider that to look messy. However, the advantage is that you can easily manage the data, delete results that you don't need any more, check that the results are complete for all subjects, check that the timestamps of the files with certain results are consistent for all subjects (e.g., after you have updated some parameters and rerun part of the analysis), ...
 
 When writing intermediate results, consider if you really need to save all intermediate steps in your analysis pipeline. For instance with MEG data it might not take that much time to calculate your planar gradient. It will save you a lot of disk space if you only have to write your axial data to disk. When using a high sampling frequency during acquisition, you may be able to downsample your data to save disk space and speed up all subsequent processing steps.
 
-Do make sure you save the important parameters (e.g. rejected trials) so you can always rerun your script. Subject specific information should be added to the subject specific script.
+Do make sure you save the important parameters (e.g., rejected trials) so you can always rerun your script. Subject specific information should be added to the subject specific script.
 
 ## Load only as much data as you need
 

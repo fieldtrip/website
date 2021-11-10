@@ -214,7 +214,7 @@ You can also play around with other parameters for the MNE. To find out more abo
 #### Exercise 4
 
 {% include markup/info %}
-Changing parameters of the forward model influences the Inverse solutions. Play around with different parameters of the FEM forward model (e.g. changing conductivity values, move electrodes or play around with the segmentation) and redo the inverse solution. If you need more input for this please ask us!
+Changing parameters of the forward model influences the Inverse solutions. Play around with different parameters of the FEM forward model (e.g., changing conductivity values, move electrodes or play around with the segmentation) and redo the inverse solution. If you need more input for this please ask us!
 {% include markup/end %}
 
 ## Summary and suggested further reading

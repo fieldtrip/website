@@ -5,16 +5,16 @@ tags: [faq, audio, video]
 
 # How can I play back EEG/MEG and synchronous audio or video?
 
-In epilepsy recordings it is common to record video along with the EEG. Also for some cognitive tasks, e.g. involving communicative expressions or spoken feedback, it is possible to record video and/or audio along with the EEG or MEG.
+In epilepsy recordings it is common to record video along with the EEG. Also for some cognitive tasks, e.g., involving communicative expressions or spoken feedback, it is possible to record video and/or audio along with the EEG or MEG.
 
 FieldTrip has two functions to facilitate the exploration of EEG/MEG recorded in synchrony with audio/video: **[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_databrowser.m)** and **[ft_audiovideobrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_audiovideobrowser.m)**.
 
 For both functions you should consider that:
 
 - the moment at which the recordings started will in general be different,
-- the sampling rate of the two recordings will be different (e.g. much higher for audio, but much lower for video).
+- the sampling rate of the two recordings will be different (e.g., much higher for audio, but much lower for video).
 
-The synchronization between the two recordings is realized by specifying both in _timestamps_ that are expressed relative a common temporal reference (e.g. the time on an external clock) using the offset and slope, where _timestamp=offset+slope\*sample_.
+The synchronization between the two recordings is realized by specifying both in _timestamps_ that are expressed relative a common temporal reference (e.g., the time on an external clock) using the offset and slope, where _timestamp=offset+slope\*sample_.
 
 {% include markup/info %}
 This functionality has been implemented specifically for the [VideoMEG](https://github.com/andreyzhd/VideoMEG) software, but also works with audio and video recordings stored in another format as demonstrated above. For the VideoMEG system the synchronization between audio/video and MEG is realized by triggers that are sent by the VideoMEG to the MEG data stream.

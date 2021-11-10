@@ -6,7 +6,7 @@ title: Refurbishing the FORWARD module
 
 # Refurbishing the FORWARD module
 
-The forward module routines generate leadfields which are used used in different contexts (e.g. beamformer). To build the forward model we make use of various methods and we start from very different geometrical descriptions, generally representing the head shape.
+The forward module routines generate leadfields which are used used in different contexts (e.g., beamformer). To build the forward model we make use of various methods and we start from very different geometrical descriptions, generally representing the head shape.
 
 Let's list some of the the methods currently supported by FieldTrip (in parentheses which modality they are used for):
 
@@ -30,7 +30,7 @@ According to the different anatomy acquisition techniques it is possible to dist
 - Headshape, closed surface
 - Nothing
 
-All the routines which create a forward model need a description of the volume conductor model as input. This model is represented in a vol structure which contains a set of fields, among which vol.method (e.g. vol.method = 'dipoli'). All other fields are specific for the various methods and are generated in a pipeline which can be summarized in the following pictur
+All the routines which create a forward model need a description of the volume conductor model as input. This model is represented in a vol structure which contains a set of fields, among which vol.method (e.g., vol.method = 'dipoli'). All other fields are specific for the various methods and are generated in a pipeline which can be summarized in the following pictur
 
 {% include image src="/assets/img/development/project/fwdarch/wikie_scheme2.jpg" width="600" %})
 
@@ -71,7 +71,7 @@ For MEG
 
 ## Overview on the methods
 
-The following paragraphs describe in synthesis the pipelines for the various methods sketched in the tables. The methods are ordered according to the input type (e.g. CT scans) they use to generate the 'vol' structure.
+The following paragraphs describe in synthesis the pipelines for the various methods sketched in the tables. The methods are ordered according to the input type (e.g., CT scans) they use to generate the 'vol' structure.
 
 ## Having a CT scan and EEG data
 
@@ -85,7 +85,7 @@ From CT to Infinite space
 
 FROM CT TO Infinite halfspace
 
-This applies for example when the set of electrodes is distributed on a flat surface (e.g. Utah array)
+This applies for example when the set of electrodes is distributed on a flat surface (e.g., Utah array)
 Method:
 {% include /shared/development/forwsegm.md %}
 {% include /shared/development/forwslab.md %}
@@ -95,7 +95,7 @@ Method:
 
 FROM CT TO Infinite slab
 
-This applies for example when the set of electrodes is distributed on a flat surface (e.g. Utah array)
+This applies for example when the set of electrodes is distributed on a flat surface (e.g., Utah array)
 {% include /shared/development/forwsegm.md %}
 {% include /shared/development/forwslab.md %}
 [Back](#Architecture/ defining a table for the possible implementations)
@@ -226,7 +226,7 @@ From MRI to Infinite space
 
 FROM MRI TO Infinite halfspace
 
-This applies for example when the set of electrodes is distributed on a very flat surface (e.g. Utah array)
+This applies for example when the set of electrodes is distributed on a very flat surface (e.g., Utah array)
 Method:
 {% include /shared/development/forwsegmmri.md %}
 {% include /shared/development/forwslab.md %}
@@ -236,7 +236,7 @@ Method:
 
 FROM MRI TO Infinite slab
 
-This applies for example when the set of electrodes is distributed on a flat surface (e.g. Utah array)
+This applies for example when the set of electrodes is distributed on a flat surface (e.g., Utah array)
 {% include /shared/development/forwsegmmri.md %}
 {% include /shared/development/forwslab.md %}
 [Back](#Architecture/ defining a table for the possible implementations)
@@ -317,7 +317,7 @@ From Headshape points to Infinite space
 
 FROM Headshape points TO Infinite halfspace
 
-Headshape points are the 3D electrodes positions in this case. This is the case, for example, of a set of points manually poked on a rendering of the brain surface (e.g. in the case of ECoG surgical pictures availability).
+Headshape points are the 3D electrodes positions in this case. This is the case, for example, of a set of points manually poked on a rendering of the brain surface (e.g., in the case of ECoG surgical pictures availability).
 
 Method:
 -With the available points consider if it is necessary to further process the inner skull surface. Avoid the next point if no further processing is necessary.
@@ -399,7 +399,7 @@ Method:
 
 FROM Headshape triangulation TO Slab
 
-The user has a closed boundary, e.g. representing the brain, and an estimate of the average cortical thickness. This is the case for example of a boundary calculated in another software and read in MATLAB, with points and edges.
+The user has a closed boundary, e.g., representing the brain, and an estimate of the average cortical thickness. This is the case for example of a boundary calculated in another software and read in MATLAB, with points and edges.
 
 Method:
 -With the available points consider if it is necessary to further process the inner skull/brain surface. Avoid the next point if no further processing is necessary.
@@ -476,7 +476,7 @@ FROM Nothing TO Infinite halfspace
 FROM Nothing TO Infinite slab
 
 - Determine one point on the non-conductive side of the electrodes
-- Determine the thickness of the slab (e.g. cortical thickness)
+- Determine the thickness of the slab (e.g., cortical thickness)
 - Electrodes are not allowed to be in the vacuum side, therefore faulty electrodes are automatically reprojected on the plane
 
 [Back](#Architecture/ defining a table for the possible implementations)
@@ -598,7 +598,7 @@ become
 
 ## Triangulation methods
 
-The triangulation methods are generally applied to pre-processed volumetric objects (e.g. segmented brain compartments) to generate a geometrical description expressed in terms of points and edges (a connectivity matrix).
+The triangulation methods are generally applied to pre-processed volumetric objects (e.g., segmented brain compartments) to generate a geometrical description expressed in terms of points and edges (a connectivity matrix).
 
 These methods are commonly used in FieldTri
 
@@ -615,7 +615,7 @@ The second method is more stable in case of noise in the volumetric compartment
 The morphology operators are a set of functions which manipulates volumetric data.
 Some of the most common operators are **imfill**, **imdilate**, **bwlabeln**, etc.
 
-In particular **imdilate** can be used to augment the volume of a closed surface (e.g. the inner skull) in order to render the other surrounding tissues (e.g. the outer skull).
+In particular **imdilate** can be used to augment the volume of a closed surface (e.g., the inner skull) in order to render the other surrounding tissues (e.g., the outer skull).
 An example is reported belo
 
 {% include image src="/assets/img/development/project/fwdarch/wiki12.png" %}
@@ -702,7 +702,7 @@ Examples of volumetric functions are:
 
 **seg2seg functions:**
 
-- e.g. the functions from the image processing toolbox
+- e.g., the functions from the image processing toolbox
 
 **seg2mesh functions:**
 
@@ -740,7 +740,7 @@ We want to check
 5. the presence of redundant vertices
 6. the surface represents a closed area (i.e. the brain)
 
-The reason for this function to exist is to understand if the mesh represents a regular and correct triangulation (e.g. the area is in cm2 and not km2).
+The reason for this function to exist is to understand if the mesh represents a regular and correct triangulation (e.g., the area is in cm2 and not km2).
 These checks are required in order to generate a correct forward model and are model dependent. Some of the steps might require direct interaction with the operator for a further visual inspection.
 
 ### The implementation of the volume and mesh routines

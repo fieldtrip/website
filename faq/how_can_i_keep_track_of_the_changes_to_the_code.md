@@ -9,7 +9,7 @@ The FieldTrip code is accessible using [git](http://git-scm.com/) at [github.com
 
     git clone https://github.com/fieldtrip/fieldtrip
 
-To update automatically, you could schedule a job (e.g. using cron) to run "git pull" every night.
+To update automatically, you could schedule a job (e.g., using cron) to run "git pull" every night.
 
 Please see our [git and GitHub](/development/git) tutorial for details.
 

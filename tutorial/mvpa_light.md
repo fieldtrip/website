@@ -70,7 +70,7 @@ Let us unpack this:
 - `cfg.avgovertime` specifies whether the activity in latency window should be averaged prior to classification.
 - `cfg.design` specifies the vector of _class labels_. Class labels indicate which class (or experimental condition) trials belong to. The task of the classifier is to predict these class labels given the data. To this end, we create a vector with _1_'s for the trials belonging to class 1, _2_'s for trials belonging to class 2, and so on. The [MEG-language dataset](/faq/what_types_of_datasets_and_their_respective_analyses_are_used_on_fieldtrip),
 comprises three classes, namely FIC (class 1), FC (class 2), and IC (class 3). You can also use
-a different set of numbers (e.g. trigger codes) to denote the classes. MVPA-Light then
+a different set of numbers (e.g., trigger codes) to denote the classes. MVPA-Light then
 internally translates them into _1_'s, _2_'s and _3_'s.
 - `cfg.features` indicates which of the data dimensions we want to use as features (channels in this case). The name should correspond to the name of the dimension in the `cfg.dimord` field. All data dimensions that are not samples or features are considered as _search dimensions_. A separate multivariate analysis is conducted for every coordinate in the search dimensions. For instance, imagine the dimensions of the data are _[samples x chan x time]_. If `cfg.features = 'chan'` then _time_ serves as a search dimension and a separate analysis is performed for every time point. If `cfg.features = 'time'` then _chan_ serves as the search dimension and a separate analysis is performed for every channel.
 - `cfg.mvpa` is a struct that controls properties of the multivariate analysis including cross-validation settings, selection of the classifier and performance metrics. It is directly passed on to [MVPA-Light](https://github.com/treder/MVPA-Light).
@@ -449,7 +449,7 @@ since the operation applied to the train data is affected by the properties
 of the test data.
 
 _Nested_ preprocessing avoids this by obtaining the parameters for an
-operation solely from the train data. The parameters (e.g. principal
+operation solely from the train data. The parameters (e.g., principal
 components) extracted from the train set are then applied to the test
 set. This assures that no information from the test set goes into the
 preprocessing of the train data. Nested preprocessing can be triggered

@@ -5,7 +5,7 @@ tags: [dataformat, audio]
 
 # Getting started with audio data
 
-You can read, preprocess and analyze audio files in the same way as EEG or MEG files. This can for example be handy to determine the spectrogram (e.g. using a time-frequency analysis) or to determine the onset of speech.
+You can read, preprocess and analyze audio files in the same way as EEG or MEG files. This can for example be handy to determine the spectrogram (e.g., using a time-frequency analysis) or to determine the onset of speech.
 
 The following reads the continuous audio data, in this case from a 4-channel WAV file. Most other audio file formats are also supported.
 

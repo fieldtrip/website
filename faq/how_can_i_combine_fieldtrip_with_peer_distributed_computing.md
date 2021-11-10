@@ -89,7 +89,7 @@ The MEG data used in the FieldTrip tutorials is available from <ftp://ftp.fieldt
     % load the raw data from disk, average it and save the result
     peercellfun(@ft_timelockanalysis, cfg);
 
-Please note that file permissions can be problematic if you use peers that are running under another user (e.g. public). If you use a publicly writeable directory, e.g. in Linux:
+Please note that file permissions can be problematic if you use peers that are running under another user (e.g., public). If you use a publicly writeable directory, e.g., in Linux:
 
     mkdir ~/public
     chmod 777 ~/public

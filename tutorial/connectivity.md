@@ -119,7 +119,7 @@ In this case, the headmodel coordinates were defined in cm, this might be differ
 {% include markup/warning %}
 The LCMV spatial filter is computed using data in the time domain. However, no time-domain spatial filters (during preprocessing e.g., low-pass or high-pass filters) have been applied before hand. Consequently, the filter will suppress all noise in the data in all frequency bands. The spatial filter derived from the broadband data allows us to compute a broadband source level time series.
 
-If you would know that the subsequent analysis would be limited to a specific frequency range in the data (e.g. everything above 30 Hz), you could first apply a filter using **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** (e.g. _cfg.hpfilter=yes_ and _cfg.hpfreq=30_) prior to computing the covariance and the spatial filter.  
+If you would know that the subsequent analysis would be limited to a specific frequency range in the data (e.g., everything above 30 Hz), you could first apply a filter using **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** (e.g., _cfg.hpfilter=yes_ and _cfg.hpfreq=30_) prior to computing the covariance and the spatial filter.  
 {% include markup/end %}
 
 The _sourcedata_ structure resembles the raw-data output of **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** and consequently can be used in any follow-up function. You can for example visualize the single-trial virtual channel time series using **[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_databrowser.m)**:
@@ -244,7 +244,7 @@ Rather than looking at undirected coherence, the virtual channel level data can 
 #### Exercise 11
 
 {% include markup/info %}
-Let's say you wanted to look at cortico-cortical connectivity, e.g. interactions between visual and motor cortex in a particular frequency band. How would you approach this?
+Let's say you wanted to look at cortico-cortical connectivity, e.g., interactions between visual and motor cortex in a particular frequency band. How would you approach this?
 {% include markup/end %}
 
 ## Summary and further reading

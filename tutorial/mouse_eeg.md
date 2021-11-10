@@ -265,7 +265,7 @@ The HL1 channel contains the analog representation of the stimulus, which is of 
     cfg.channel = {'all', '-HL1'};
     cfg = ft_databrowser(cfg, data);
 
-We see that some channels show a much lower noise level than others (e.g. AF8). This might be due to differences in electrode-skull impedance.
+We see that some channels show a much lower noise level than others (e.g., AF8). This might be due to differences in electrode-skull impedance.
 
 FIXME insert figure (4 check the impedance and report it here)
 
@@ -363,7 +363,7 @@ To confirm your calibration,
 
 :!: This is discussed on <http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=2602>
 
-The current standards to deal with differences in mouse brain size are very comparable to those adopted in the Talairach-Tournoux anatomical atlas of the human brain. For human EEG it is easy to make use of a template and to compare or average subjects, since EEG recording caps scale along with the size of the human head. E.g. at the Donders we have caps in different sizes, ranging from 52 to 60 cm head circumference in 2cm steps, thereby accommodating approximately a 15% variance in head circumference.
+The current standards to deal with differences in mouse brain size are very comparable to those adopted in the Talairach-Tournoux anatomical atlas of the human brain. For human EEG it is easy to make use of a template and to compare or average subjects, since EEG recording caps scale along with the size of the human head. e.g., at the Donders we have caps in different sizes, ranging from 52 to 60 cm head circumference in 2cm steps, thereby accommodating approximately a 15% variance in head circumference.
 
 For the mouse the electrode grids are however of fixed dimensions, but the head sizes still differ.
 

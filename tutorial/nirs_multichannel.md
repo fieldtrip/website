@@ -335,7 +335,7 @@ Like in the [single channel tutorial](/tutorial/nirs_singlechannel), we will now
 
     cfg                 = [];
     cfg.target          = {'O2Hb', 'HHb'};
-    cfg.channel         = 'nirs'; % e.g. one channel incl. wildcards, you can also use ?all? to select all NIRS channels
+    cfg.channel         = 'nirs'; % e.g., one channel incl. wildcards, you can also use ?all? to select all NIRS channels
     data_conc           = ft_nirs_transform_ODs(cfg, data_sci);
 
 Check the data again using **[ft_singleplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_singleplotER.m)**. You should see a clear heartbeat in the signal.

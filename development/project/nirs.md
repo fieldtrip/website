@@ -23,7 +23,7 @@ Mark van Wanrooij (DCN/biophysics) and his group might substantially contribute 
 
 The FieldTrip header contains meta information about the recording. More information be found in the respective reading file [ft_read_header](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_header). For MEG data, the header also contains a .grad field, which contains information about the gradiometers. The respective counterpart for EEG data is .elec, but is commonly not stored together with the recorded data and thus not represented in the header.
 
-NIRS data has another kind of sensor called "optode". An optode can either emit light, laser light or LED light, called a "transmitter", or receive light, e.g. by avalanching photodiodes, called "receiver". A channel is defined by the amount of transmitted light from the "transmitter" that is received by the "receiver" (hence the nomenclature). I propose the header of NIRS data to contain a .opto field, that includes optode specific information. These types need to be incorporated in ft_senstype and ft_chantype.
+NIRS data has another kind of sensor called "optode". An optode can either emit light, laser light or LED light, called a "transmitter", or receive light, e.g., by avalanching photodiodes, called "receiver". A channel is defined by the amount of transmitted light from the "transmitter" that is received by the "receiver" (hence the nomenclature). I propose the header of NIRS data to contain a .opto field, that includes optode specific information. These types need to be incorporated in ft_senstype and ft_chantype.
 
 In a similar vein as for MEG data, the .opto field should contain a .tra matrix, that contains information on how the channels are defined in terms of transmitters and receivers. Note that, in contrast to electrophysiological measurements, this is a 1-1-1 mapping, i.e. exactly one transmitter and exactly one receiver make up one channel (technically this is commonly achieved by multiplexing).
 
@@ -92,7 +92,7 @@ The most crucial step in preprocessing is to transform the optical densities to 
 
 ## Layouts
 
-Layouts should be created on-the-fly by ft_prepare_layout. Neuromag layouts can be taken as an example, where within the same data, different sensortypes are present at the same/nearby locations. The function should create an outline where optode positions are indicated (i.e. by a circle), and space for the different numbers of measures (concentrations) is computed and reserved, e.g. for multiplotting. The space depends on the cfg, i.e. desired channels/concentrations to be plotted (reminder: concentrations will be read out by the data labels).
+Layouts should be created on-the-fly by ft_prepare_layout. Neuromag layouts can be taken as an example, where within the same data, different sensortypes are present at the same/nearby locations. The function should create an outline where optode positions are indicated (i.e. by a circle), and space for the different numbers of measures (concentrations) is computed and reserved, e.g., for multiplotting. The space depends on the cfg, i.e. desired channels/concentrations to be plotted (reminder: concentrations will be read out by the data labels).
 
 ## Code structure
 

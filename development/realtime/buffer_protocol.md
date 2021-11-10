@@ -23,7 +23,7 @@ The FieldTrip buffer is designed to facilitate transporting of data samples and 
 
 The FieldTrip buffer represents three elements: the header structure, the data matrix and a list of event structures. Since we target real-time usage, both the data matrix and the list of events will usually be implemented as a **ring buffer**, which means that after a time, old data samples and events will not be accessible anymore.
 
-The binary TCP/IP network protocol allows client applications to be developed in an arbitrary programming language, e.g. C, MATLAB, Java or Python. The [network protocol](/development/realtime/buffer_protocol) documents the low-level protocol used for serializing requests and responses.
+The binary TCP/IP network protocol allows client applications to be developed in an arbitrary programming language, e.g., C, MATLAB, Java or Python. The [network protocol](/development/realtime/buffer_protocol) documents the low-level protocol used for serializing requests and responses.
 
 ### Outside our scope
 
@@ -33,12 +33,12 @@ We do **not** aim to provide or specify:
 - an explicit way of setting up experiments,
 - merging data from different acquisition systems,
 - writing data to disk,
-- a complete implementation for all possible programming languages (e.g. FORTRAN, COBOL),
-- a complete implementation for all possible operating systems (e.g. Amiga, OS/2 Warp, Windows 95).
+- a complete implementation for all possible programming languages (e.g., FORTRAN, COBOL),
+- a complete implementation for all possible operating systems (e.g., Amiga, OS/2 Warp, Windows 95).
 
 ## FieldTrip buffer definition
 
-For the communication the client sends a request, which always results in a response from the server. The request can for example be GET_DAT, and the response would contain the data. In case the request cannot be fulfilled (e.g. the requested data are not available), the server responds with an error. The request and the response consist of a binary message sent over TCP, which is described in detail below.
+For the communication the client sends a request, which always results in a response from the server. The request can for example be GET_DAT, and the response would contain the data. In case the request cannot be fulfilled (e.g., the requested data are not available), the server responds with an error. The request and the response consist of a binary message sent over TCP, which is described in detail below.
 
 The buffer represents three elements: the header structure, the data matrix, and a list of event structures. The data matrix and the event list are both implemented as a ring buffer.
 
@@ -344,7 +344,7 @@ This chunk is used for labelling the channels (or elements of the feature vector
 
 #### Channel flags
 
-This chunk is useful for specifying that a channel can have one of a discrete number of different types, e.g. `data` = "meg_ad_eog\0\1\1\1\1\3\3\2\2" could be used for a system with 8 channels, the first four of which are for MEG, then 2 channels EOG, then 2 channels A/D.
+This chunk is useful for specifying that a channel can have one of a discrete number of different types, e.g., `data` = "meg_ad_eog\0\1\1\1\1\3\3\2\2" could be used for a system with 8 channels, the first four of which are for MEG, then 2 channels EOG, then 2 channels A/D.
 
 This chunk is used for labelling the channels (or elements of the feature vector) that are represented in the buffer.
 

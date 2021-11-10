@@ -18,7 +18,7 @@ Recent Siemens software versions (VB17) include an option for realtime export of
 
 There are essentially two steps involved for using this mechanis
 
-1.  Start a FieldTrip buffer server on some machine and port number in the network, e.g. on mentat069:1972.
+1.  Start a FieldTrip buffer server on some machine and port number in the network, e.g., on mentat069:1972.
 2.  On the scanner console, start **gui_streamer** and enter "mentat069" as well as "1972" in the "hostname" and "port" input fields, then press "Connect".
     If the connection could be made, the color of the input fields will switch to green. You can now start scanning and have a look at the **gui_streamer** window
     to monitor the number of scans etc.
@@ -36,7 +36,7 @@ correspond to the scans that are written to the buffer from the streaming tool o
 
 The directory "fieldtrip/realtime/online_mri" contains some functions that are useful for realtime processing of fMRI data.
 In the MRI lab of the FC Donders centre, we use the function **ft_omri_quality** to monitor head movement and signal quality.
-In order to start this, e.g. on the lab machine "lab-mri004" close to the Avanto scanner, simply click on the icon labeled "fMRI quality control".
+In order to start this, e.g., on the lab machine "lab-mri004" close to the Avanto scanner, simply click on the icon labeled "fMRI quality control".
 This will first fire up a FieldTrip buffer server on port 1972, and subsequently a MATLAB session that automatically runs **ft_omri_quality**.
 Once the buffer server has started (visible in a new terminal window), you can start the **gui_streamer** on the scanner host and connect
 to the address (in the Donders centre, a link in the start menu of the scanner host starts the tool with the right hostname:port combination).
@@ -65,7 +65,7 @@ Apart from motion correction and other pre-processing steps, it is necessary to 
 
 1.  you should start up the FieldTrip buffer servers. In case you **do not** want to save the incoming scans and events, you can use the plain **buffer** application `/home/common/matlab/fieldtrip/realtime/bin/glnxa64/buffer`. In case you *do want to save* the data for later offline analysis or for debugging, you should use the **recording** application. In detail, open a terminal window and type `/home/common/matlab/fieldtrip/realtime/bin/glnxa64/playback path_to_raw_data 1972` where "path_to_raw_data" is the name of a new directory (will be created for you) that will receive the unprocessed scans. Then, in a second terminal, similarly type `/home/common/matlab/fieldtrip/realtime/bin/glnxa64/playback path_to_processed_data 1973` to spawn a second buffer server on another port.
 2.  you should start **serial_event**, the tool for translating the TTL pulses to FieldTrip events. In the DCCN MRI labs, this application is available on "D:\TTL_to_FieldTrip" on the machine "Presentation010" close to the Avanto. The configuration file "serial_event.conf" should already contain the right settings.
-3.  you should start the MATLAB script that does the preprocessing, e.g. **ft_omri_pipeline**. The script takes a "cfg" structure as an input argument, where you can tweak some settings, which notably includes the address of the two FieldTrip buffers. If you run the script on the same machine as the two buffer servers, the default options of "localhost:1972" and "localhost:1973" for "cfg.input" and "cfg.output" are already fine.
+3.  you should start the MATLAB script that does the preprocessing, e.g., **ft_omri_pipeline**. The script takes a "cfg" structure as an input argument, where you can tweak some settings, which notably includes the address of the two FieldTrip buffers. If you run the script on the same machine as the two buffer servers, the default options of "localhost:1972" and "localhost:1973" for "cfg.input" and "cfg.output" are already fine.
 4.  you should start **gui_streamer** on the scanner host. Make sure that the address of the buffer servers is correct (in the example above, this should be "lab-mri004" and "1972"), and that the connection is made (press "Connect", after which the address fields should be green). Also make sure that you enter the name of the presentation machine (e.g., "Presentation010") in the input field on the bottom of the **gui_streamer** dialog window, and that the port number (e.g., 1990) is the same as in the **serial_event** configuration file. Press "Enable" to send "RESET" messages at the start of each MR sequence.
 5.  you should now be ready to start the sequence on the scanner.
 
@@ -147,7 +147,7 @@ There are many more variables that the "PixelDataGrabber" will react to, but des
 "Siemensap", a plain C library in "fieldtrip/realtime/datasource/siemens" provides some functions and datatypes to parse
 the ASCII format Siemens protocol data into a list or tree of key/value items. Currently supported value types are
 strings, long integers, and double precision numbers. Field types are determined automatically to a large extend
-(e.g. a dot in a number implies a double precision value), but some special rules are added. For example, a field
+(e.g., a dot in a number implies a double precision value), but some special rules are added. For example, a field
 name that starts with "d" will always be parsed as a double precision value, even if the value given in ASCII form
 looks like an integer. Please see siemensap.h for Doxygen-style documentation of the API.
 

@@ -19,7 +19,7 @@ oscillations like the alpha oscillations over occipital cortex or the beta oscil
 sensorimotor cortex during rest. However, in the time series, the information about those
 oscillations is distributed over many samples: We observe an oscillation through the fact that there
 are peaks in the time series that recur at regular intervals. Since the information about the
-oscillations is distributed over many samples, it cannot be used immediately. We can e.g. not tell
+oscillations is distributed over many samples, it cannot be used immediately. We can e.g., not tell
 directly the main frequency of such an oscillation. In order to concentrate all information about an
 oscillation, we use spectral analysis. Any signal that is measured as a function of time can also be
 expressed as a function of frequency. The transformation from the so-called time-domain into the
@@ -250,7 +250,7 @@ When we have two signals, we might want to know whether they are related. One wa
 is to quantify whether there is a consistent phase relation between two signals. We have learned
 that the Fourier transform gives, for each frequency component, the amplitude and the phase of the
 signal. Thus, in order to determine whether there is a consistent phase relationship between two
-signal, we could e.g. analyze the difference in phases between two signals.
+signal, we could e.g., analyze the difference in phases between two signals.
 
 If two signals are related, there should be a consistent phase difference between them – or in other
 words, the phase difference should not be random. It turns out that the phase difference between two

@@ -7,9 +7,9 @@ tags: [faq]
 
 It depends. FieldTrip tries to adhere to the units of the original manufacturer file formats, which are not always consistent. Furthermore, not all file formats clearly specify the units, so sometimes the units are not even known.
 
-For geometrical objects that do not specify the units, FieldTrip estimates the units, assuming that the object approximates a human head. E.g. if the span of the geometrical object is about 200, FieldTrip assumes the units to be in "mm". If the span of the object is 0.2, FieldTrip assumes the units to be in "m".
+For geometrical objects that do not specify the units, FieldTrip estimates the units, assuming that the object approximates a human head. e.g., if the span of the geometrical object is about 200, FieldTrip assumes the units to be in "mm". If the span of the object is 0.2, FieldTrip assumes the units to be in "m".
 
-Geometrical objects have the units expressed in the "unit" field of the data structure. Where needed, the units of geometrical objects are converted on the fly to match other geometrical objects (e.g. electrode positions measured with a Polhemus are matched to an anatomical MRI).
+Geometrical objects have the units expressed in the "unit" field of the data structure. Where needed, the units of geometrical objects are converted on the fly to match other geometrical objects (e.g., electrode positions measured with a Polhemus are matched to an anatomical MRI).
 
 Raw data structures with EEG or MEG data may include the "hdr" field, which is the header of the original data file. The header can contain the "chanunit" subfield. The channel unit can be something like "V" or "uV" for EEG channels, and "T" or "fT" for MEG magnetometers.
 

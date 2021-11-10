@@ -26,7 +26,7 @@ This tutorial is focusing on how to build the **volume conduction model for the 
 {% include markup/info %}
 If an anatomical MRI is not available for your EEG subject, you can consider to use a template MRI or a template head model that is located in the FieldTrip template directory. See [here](/template/headmodel) for more info.
 
-If you do not have an MRI, but do have a measurement of the scalp surface or electrodes (e.g. with a Polhemus tracker), you can fit a concentric spheres volume conduction model to the scalp.
+If you do not have an MRI, but do have a measurement of the scalp surface or electrodes (e.g., with a Polhemus tracker), you can fit a concentric spheres volume conduction model to the scalp.
 {% include markup/end %}
 
 ## Procedure
@@ -348,7 +348,7 @@ This electrode structure can be used later when the leadfield is computed during
 {% include markup/info %}
 Create a head model with method 'concentricspheres' that you fit on scalp, skull and brain surfaces, i.e. using the already made mesh.
 
-Plot the head model in the same figure with the brain surface and scalp. Check the help of **[ft_plot_headmodel](https://github.com/fieldtrip/fieldtrip/blob/release/plotting/ft_plot_headmodel.m)** for further options of the visualization (e.g. color, transparency) which help to see the spheres and the brain surface together.
+Plot the head model in the same figure with the brain surface and scalp. Check the help of **[ft_plot_headmodel](https://github.com/fieldtrip/fieldtrip/blob/release/plotting/ft_plot_headmodel.m)** for further options of the visualization (e.g., color, transparency) which help to see the spheres and the brain surface together.
 
 What is the difference between this head model and the BEM?
 {% include markup/end %}

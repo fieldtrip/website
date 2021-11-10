@@ -10,7 +10,7 @@ The function **[ft_volumereslice](https://github.com/fieldtrip/fieldtrip/blob/re
 1.  align the anatomical MRI or functional volume along the x,y,z axis, i.e. put it right side up
 2.  ensure that the voxels are isotropic, i.e. having equal size in all 3 dimensions
 3.  zoom in or on a part of the volume, i.e. changing the number of voxels and FOV
-4.  change the resolution, e.g. changing the voxel size from 1 mm to 2 mm
+4.  change the resolution, e.g., changing the voxel size from 1 mm to 2 mm
 
 Anatomical data, for example an anatomical MRI or other volumentric representations (such as a [segmentation](/faq/how_is_the_segmentation_defined)) are represented as a [volume](https://github.com/fieldtrip/fieldtrip/blob/release/utilities/ft_datatype_volume) MATLAB structure in FieldTrip.
 
@@ -56,11 +56,11 @@ _Figure 2. Plot of the anatomical mri after using ft_volumereslice_
 
 The **[ft_volumereslice](https://github.com/fieldtrip/fieldtrip/blob/release/ft_volumereslice.m)** function also ensures that the voxels are isotropic (i.e. of equal distance in all three directions). Voxels of an MRI scan are not isotropic when there is a different voxel resolution within the MRI slices than the gap size between the slices. This means that the size of a voxel is not equal in all three directions.
 
-Isotropic voxels are necessary if we want to apply morphological operators to the anatomical volume (e.g. dilating, opening, etc.). These operations occur for example when the skull tissue is segmented in an anatomical volume (e.g. see [this tutorial](/workshop/natmeg/dipolefitting)).
+Isotropic voxels are necessary if we want to apply morphological operators to the anatomical volume (e.g., dilating, opening, etc.). These operations occur for example when the skull tissue is segmented in an anatomical volume (e.g., see [this tutorial](/workshop/natmeg/dipolefitting)).
 
 ## Change the field-of-view (FOV)
 
-The **[ft_volumereslice](https://github.com/fieldtrip/fieldtrip/blob/release/ft_volumereslice.m)** function is also able to change the number of voxels along each direction. This can be useful for example, when the preprocessing of the anatomical images requires a specific image size (e.g. see [this tutorial](/tutorial/minimumnormestimate)).
+The **[ft_volumereslice](https://github.com/fieldtrip/fieldtrip/blob/release/ft_volumereslice.m)** function is also able to change the number of voxels along each direction. This can be useful for example, when the preprocessing of the anatomical images requires a specific image size (e.g., see [this tutorial](/tutorial/minimumnormestimate)).
 
 In the figures above you can appreciate the change in the FOV by considering the MRI in the original representation not being in the centre of the picture, whereas after reslicing it is in the centre and better fills the available space.
 

@@ -43,7 +43,7 @@ followed by a visual inspection with
 
 In **[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_databrowser.m)** you can mark segments as artifacts, which can subsequently be removed with **[ft_rejectartifact](https://github.com/fieldtrip/fieldtrip/blob/release/ft_rejectartifact.m)**. You can also use **[ft_componentanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_componentanalysis.m)** and **[ft_rejectcomponent](https://github.com/fieldtrip/fieldtrip/blob/release/ft_rejectcomponent.m)** to subtract the artifactual EOG and ECG contributions from the data.
 
-The code above reads the data as one long continuous segment (or trial). A common analysis strategy for continuous data is to use **[ft_redefinetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_redefinetrial.m)** to cut it into shorter segments (e.g. one second) and **[ft_freqanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqanalysis.m)** with cfg.method='mtmfft' to compute the averaged power spectrum.
+The code above reads the data as one long continuous segment (or trial). A common analysis strategy for continuous data is to use **[ft_redefinetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_redefinetrial.m)** to cut it into shorter segments (e.g., one second) and **[ft_freqanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqanalysis.m)** with cfg.method='mtmfft' to compute the averaged power spectrum.
 
 ### Preprocessing of data with trials or events
 

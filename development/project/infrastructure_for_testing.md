@@ -31,7 +31,7 @@ suggested directory layout
 - Should be
 
 * easy to use with as little hassle as possible during code modification
-* low on memory: simulate (e.g. random) as many datasets as possible on the fly
+* low on memory: simulate (e.g., random) as many datasets as possible on the fly
 * make use of mtest from MathWorks (link needed), especially for reference checks
   http://www.mathworks.com/matlabcentral/fx_files/22846/7/content/matlab_xunit/doc/html/exQuickStart.html
 * should test as many different aspects of function as reasonable
@@ -96,5 +96,5 @@ Directory/file layout example:
 * Open issues and challenges
 
 - how and what to reference with?
-- make a distinction between low-level math tests (e.g. specest_mtmconvol) and high-level tests (e.g. topoplotER)?
+- make a distinction between low-level math tests (e.g., specest_mtmconvol) and high-level tests (e.g., topoplotER)?
 - how to reference the output of plotting functions?

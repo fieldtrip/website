@@ -5,7 +5,7 @@ tags: [example, nirs, layout, plotting]
 
 # Creating a layout for plotting NIRS optodes and channels
 
-FieldTrip uses layouts to specify in 2D (e.g. on screen) where channels are to be
+FieldTrip uses layouts to specify in 2D (e.g., on screen) where channels are to be
 plotted. This is used for example in ft_multiplotER and ft_multiplotTFR, and also
 in ft_topoplotER and ft_topoplotTFR. The layout does not only describe wher ethe
 channel is located (which is required for the topographies), but also how large the
@@ -64,7 +64,7 @@ To localize the optodes in a drawing, we can use the functionality of **[ft_prep
 - press "c" to close the contour and continue with the next, this starts the localization of the next polygon contour
 - press "q" to quit the localization, this brings us to the next step
 - click with the mouse on the cornerpoint of each of the contours that we want as (visible) outlines
-- press "c" to close the contour (e.g. for the circle) or "n" if we do not want to close it (e.g. with the nose)
+- press "c" to close the contour (e.g., for the circle) or "n" if we do not want to close it (e.g., with the nose)
 - continue making the contours for the head (circle), nose, and for both ears
 - after completing the final contour, press "q" to quit
 
@@ -249,7 +249,7 @@ wavelengths, and these can be combined side-by-side or overlapping as well.
 ## Split the oxy- and deoxyhemoglobin into separate layouts
 
 If you have a layout that already combines the oxy and deoxy channels in a
-particular way (e.g. overlapping) and you want to change it (e.g. into
+particular way (e.g., overlapping) and you want to change it (e.g., into
 side-by-side), you can use the following code to split the different channels again.
 
     layout_channel_O2Hb = layout_channel_v2; % start with a copy of the combined one

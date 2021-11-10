@@ -35,7 +35,7 @@ The following are the optional arguments available to the use
 ## Example scenario
 
 1.  Open a terminal window in the Acquisition computer and go to the folder where you copied the neuromag2ft executable (cd folder). Run it by typing ./neuromag2ft
-2.  Because no extra parameters were specified, rtMEG runs its own FieldTrip buffer on port 1972. Start your software that will read from the FieldTrip buffer (see above for options) and point it the acquisition computer's address (e.g. hostname=sinuhe, port=1972).
+2.  Because no extra parameters were specified, rtMEG runs its own FieldTrip buffer on port 1972. Start your software that will read from the FieldTrip buffer (see above for options) and point it the acquisition computer's address (e.g., hostname=sinuhe, port=1972).
 3.  Start you measurement as you would usually do. Right after you press the Go button, you should start to see MEG data being read by your program. If you don't, there's something wrong.
 4.  When you're done, press Ctrl+C in the terminal window where you executed rtMEG.
 
@@ -43,7 +43,7 @@ The following are the optional arguments available to the use
 
 This section gives a simplistic overview of the Acquisition system and how rtMEG fits in. This knowledge is not necessary to run the program, but it might come handy if you want to understand a bit of what is going on behind the scenes.
 
-Each DSP (Digital Signal Processor) manages 12 different channels in the MEG machine (in the most common setup). The several DSPs then send the data they acquire from the channels to the real-time computer (in packets of 28 samples per channel, in the usual setup). The real-time computer sorts the data and applies some calibration values to them. The Acquisition computer talks to the real-time computer to receive the data. It receives the data by requesting "buflen" datapoints per packet, and hence the need for the 'buflen' option. If not used, rtMEG uses the default settings, which are usually around 1s second of data (e.g. buflen=1000 for sampling rate of 1Khz), which is fine for the regular data saving operations, but will be too long for a real-time application.
+Each DSP (Digital Signal Processor) manages 12 different channels in the MEG machine (in the most common setup). The several DSPs then send the data they acquire from the channels to the real-time computer (in packets of 28 samples per channel, in the usual setup). The real-time computer sorts the data and applies some calibration values to them. The Acquisition computer talks to the real-time computer to receive the data. It receives the data by requesting "buflen" datapoints per packet, and hence the need for the 'buflen' option. If not used, rtMEG uses the default settings, which are usually around 1s second of data (e.g., buflen=1000 for sampling rate of 1Khz), which is fine for the regular data saving operations, but will be too long for a real-time application.
 
 The data received from the real-time computer are then stored in a local buffer that is used by different Neuromag programs, such as the visualization interface. So, rtMEG taps into this local buffer and reads the data being retrieved from the real-time computer. Once the data has been read, rtMEG writes them to a FieldTrip buffer, which can be easily read by several different clients (see above) using an open source format. This FieldTrip buffer can be run by rtMEG itself, or by a separate computer in the network (i.e. the 'ftbuffer' option).
 

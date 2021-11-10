@@ -11,9 +11,9 @@ The low-level functions are combined in the **specest** toolbox which is self-co
 
 ## Specest Functions
 
-1.  **[ft_specest_mtmconvol](https://github.com/fieldtrip/fieldtrip/blob/release/specest/ft_specest_mtmconvol.m)** Wavelet convolution in the time-domain by multiplication in the frequency domain. Wavelets used are complex sinusoids multiplied with a windowing function (e.g. Slepian, Hanning, Hamming, ...).
+1.  **[ft_specest_mtmconvol](https://github.com/fieldtrip/fieldtrip/blob/release/specest/ft_specest_mtmconvol.m)** Wavelet convolution in the time-domain by multiplication in the frequency domain. Wavelets used are complex sinusoids multiplied with a windowing function (e.g., Slepian, Hanning, Hamming, ...).
 
-2.  **[ft_specest_mtmfft](https://github.com/fieldtrip/fieldtrip/blob/release/specest/ft_specest_mtmfft.m)** Non-time resolved spectral estimation by tapering the data with a windowing function (e.g. Slepian, Hanning, Hamming,...) prior to compution the Fourier transform.
+2.  **[ft_specest_mtmfft](https://github.com/fieldtrip/fieldtrip/blob/release/specest/ft_specest_mtmfft.m)** Non-time resolved spectral estimation by tapering the data with a windowing function (e.g., Slepian, Hanning, Hamming,...) prior to compution the Fourier transform.
 
 3.  **[ft_specest_hilbert](https://github.com/fieldtrip/fieldtrip/blob/release/specest/ft_specest_hilbert.m)** Spectral estimation by bandpass filtering the data prior to computing the Hilbert transform.
 

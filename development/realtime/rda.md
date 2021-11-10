@@ -91,7 +91,7 @@ Currently, the translation scheme is the following:
 where the fixed value -1 for _nChannel_ is defined as the "don't care" value by the RDA protocol.
 To clarify the last row, the following rules are applied for the _type_ and \*value\* field:
 
-- If both are strings, e.g. _type_="button" and _value_="right", the RDA marker will contain the type string "button:right"
+- If both are strings, e.g., _type_="button" and _value_="right", the RDA marker will contain the type string "button:right"
 - If the _value_ field is not a string, it will be replace by "-". For example, if button presses are encoded by a number, the RDA marker might look like "button:-"
 - If the _type_ field is not a string, it will be replaced by "FT", yielding something like "FT:right"
 - If neither _type_ nor _value_ are strings, the marker description is always "FT:-"

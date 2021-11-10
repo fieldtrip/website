@@ -247,7 +247,7 @@ The output of **[ft_timelockanalysis](https://github.com/fieldtrip/fieldtrip/blo
 - _time_ is now just a row vector with the time points in seconds (before we had a cell array with 600 cells in it)
 - _label_ is still our 128 names
 - _avg_ contains our averages for each of the 128 channels at each of the 200 time points
-- _var_ contains the variance for each of the 128 channels at each of the 200 time points (can be used e.g. for calculating standard deviations)
+- _var_ contains the variance for each of the 128 channels at each of the 200 time points (can be used e.g., for calculating standard deviations)
 - _dof_ contains the degrees of freedoms for each of the 128 channels at each of the 200 time points
 - _dimord_ indicates the ordering of dimensions, rows are channels and columns are time
 - _cfg_ shows the cfg that gave rise to this structure

@@ -7,7 +7,7 @@ tags: [dataformat, eyelink]
 
 At the Donders we have an [Eyelink 1000 eyetracker](http://www.sr-research.com/eyelink1000plus.html) that supports sampling rates up to 2000Hz for monocular and 1000Hz for binocular tracking. For a technical overview about Eyelink 1000 characteristics look [here](http://www.sr-research.com/el1000plus_baseunit.html)
 
-The eye-tracker can be used on itself, or in combination with other data acquisition techniques (e.g. EEG, MEG, TMS or fMRI). FieldTrip allows you to analyze the eye-tracker data in all of these situations. In the following I will provide the background of the data acquisition and present some examples on how to analyze eye-tracker data.
+The eye-tracker can be used on itself, or in combination with other data acquisition techniques (e.g., EEG, MEG, TMS or fMRI). FieldTrip allows you to analyze the eye-tracker data in all of these situations. In the following I will provide the background of the data acquisition and present some examples on how to analyze eye-tracker data.
 
 {% include markup/info %}
 With your presentation script on the stimulus presentation computer you can also write "data" to disk in the form of behavioral log files. In the subsequent examples we will not consider integrating the physiological measurements with the "data" in these behavioral log files. We will only consider physiological data from the eye-tracker, from the EEG system and from the MEG system.
@@ -65,7 +65,7 @@ If you want your channel names to be more consistent, you can use the following 
     cfg.montage.labelnew = {'EYE_TIMESTAMP', 'EYE_HORIZONTAL', 'EYE_VERTICAL', 'EYE_DIAMETER'};
     data_eye = ft_preprocessing(cfg);
 
-Typically you would want to analyze the eye movements relative to certain events (e.g. stimuli). For that you would use a trial-based representation, where each trial is time-locked to the event of interest.
+Typically you would want to analyze the eye movements relative to certain events (e.g., stimuli). For that you would use a trial-based representation, where each trial is time-locked to the event of interest.
 
 The events represented in the eye-tracker datafile can be explored using **[ft_read_event](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_event.m)** like this:
 

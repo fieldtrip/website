@@ -216,7 +216,7 @@ FAQ: Combining modalities: Furthermore, they might require different numeric
 representations. Experimental settings that require this should use two buffers
 for the raw data and a single piece of real-time analysis software that reads
 from both and integrates the two (if desired). Writing two modalities into one
-buffer representation (e.g. fMRI and simultaneous EEG) is not supported. In
+buffer representation (e.g., fMRI and simultaneous EEG) is not supported. In
 general it is unlikely that the two modalities have the same sampling rate and
 are synchronized.
 

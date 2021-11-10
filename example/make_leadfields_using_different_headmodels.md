@@ -243,7 +243,7 @@ If you download this data into a folder named 'testdata', the directory should l
     %--------------------------------------------------------------------------------------------
     % compute the correlations between the different leadfields
     % NOTE: to be able to compare them you should recalculate the leadfields with the grid
-    % specifications that are the same for all models, e.g. taking them from the single-shell model,
+    % specifications that are the same for all models, e.g., taking them from the single-shell model,
     % so rather than specifying cfg.resolution you would specify
     % cfg.sourcemodel.pos     = sourcemodel_singleshell.pos;
     % cfg.sourcemodel.unit    = sourcemodel_singleshell.unit;

@@ -237,7 +237,7 @@ We compute the covariance matrix during the call to **[ft_timelockanalysis](http
     avgpre = ft_timelockanalysis(cfg,datapre);
     avgpst = ft_timelockanalysis(cfg,datapost);
 
-Now using the headmodel and the precomputed leadfield we make three subsequent calls to **[ft_sourceanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceanalysis.m)**. First we compute one spatial filter per location (e.g. voxel) on the basis of the entire latency interval of pre and post-response data. Specifying the **cfg.keepfilter = 'yes';** allows for a subsequent application of the spatial filters on the pre and post-response data separately. The purpose of lambda is discussed in Exercise 6. By using cfg.keepfilter = 'yes', we let **[ft_sourceanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceanalysis.m)** return the filter matrix in the source structure.
+Now using the headmodel and the precomputed leadfield we make three subsequent calls to **[ft_sourceanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceanalysis.m)**. First we compute one spatial filter per location (e.g., voxel) on the basis of the entire latency interval of pre and post-response data. Specifying the **cfg.keepfilter = 'yes';** allows for a subsequent application of the spatial filters on the pre and post-response data separately. The purpose of lambda is discussed in Exercise 6. By using cfg.keepfilter = 'yes', we let **[ft_sourceanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceanalysis.m)** return the filter matrix in the source structure.
 
     %% first call to ft_sourceanalysis keeping the spatial filters
     cfg=[];
@@ -422,7 +422,7 @@ Now we can statistically compare the difference between the pre and post respons
     cfg.uvar     = 2;
     stat = ft_sourcestatistics(cfg,sourcepstM1,sourcepreM1);
 
-Note, we make two subsequent calls to **[ft_sourceinterpolate](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceinterpolate.m)**. One for the functional data (e.g. t-value distribution) and the other for a binary mask of 0 and 1 indexing voxels of significant condition differences.
+Note, we make two subsequent calls to **[ft_sourceinterpolate](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceinterpolate.m)**. One for the functional data (e.g., t-value distribution) and the other for a binary mask of 0 and 1 indexing voxels of significant condition differences.
 
     cfg              = [];
     cfg.voxelcoord   = 'no';
@@ -455,7 +455,7 @@ Uncomment the option **cfg.maskparameter = 'mask';** and try to interpret what y
 
 ## (MEG) Reconstructing the time course of activity in the primary motor cortex
 
-The ultimate motivation of source analysis of M/EEG data is the reconstruction of the time course of the neural activity at a particular location. The following section will demonstrate how to achieve this. First we have to compute a leadfield at the desired location (e.g. M1 identified in the previous steps) using **[ft_prepare_leadfield](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_leadfield.m)**. The only difference to the previous leadfield computation is that instead of discretizing the brain into multiple grid locations we now focus only on the location within the primary motor cortex. Next, we repeat the above steps, i.e. covariance matrix computation using **[ft_timelockanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockanalysis.m)** and **[ft_sourceanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceanalysis.m)**. Finally, we will multiply the data consisting the single trial observations with the spatial filters at the desired location. This is commonly known as virtual sensor computation and has been also covered in [the virtual sensors tutorial](/tutorial/virtual_sensors) in the context of different task demands.
+The ultimate motivation of source analysis of M/EEG data is the reconstruction of the time course of the neural activity at a particular location. The following section will demonstrate how to achieve this. First we have to compute a leadfield at the desired location (e.g., M1 identified in the previous steps) using **[ft_prepare_leadfield](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_leadfield.m)**. The only difference to the previous leadfield computation is that instead of discretizing the brain into multiple grid locations we now focus only on the location within the primary motor cortex. Next, we repeat the above steps, i.e. covariance matrix computation using **[ft_timelockanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockanalysis.m)** and **[ft_sourceanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceanalysis.m)**. Finally, we will multiply the data consisting the single trial observations with the spatial filters at the desired location. This is commonly known as virtual sensor computation and has been also covered in [the virtual sensors tutorial](/tutorial/virtual_sensors) in the context of different task demands.
 
 ##### Compute leadfield at desired location
 

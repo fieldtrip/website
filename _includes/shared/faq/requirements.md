@@ -8,7 +8,7 @@ An online poll in April 2011 showed that a large proportion (>98%) of our users 
 
 ## MathWorks toolboxes
 
-MATLAB includes a large number of functions in standard toolboxes that come with every installation, but certain functions are included in additional (commercial) toolboxes from MathWorks, such as the Signal Processing or the Statistics toolbox. Whether you need to buy these toolboxes depends on whether you want to use specific functionality in FieldTrip. We try to avoid using these additional MathWorks toolboxes to the extent that we will look for alternatives (e.g. from [GNU Octave](https://www.gnu.org/software/octave)) or use drop-in replacement functions for certain functions, as long as the time required to implement these alternatives is not too large.
+MATLAB includes a large number of functions in standard toolboxes that come with every installation, but certain functions are included in additional (commercial) toolboxes from MathWorks, such as the Signal Processing or the Statistics toolbox. Whether you need to buy these toolboxes depends on whether you want to use specific functionality in FieldTrip. We try to avoid using these additional MathWorks toolboxes to the extent that we will look for alternatives (e.g., from [GNU Octave](https://www.gnu.org/software/octave)) or use drop-in replacement functions for certain functions, as long as the time required to implement these alternatives is not too large.
 
 The following functions depend on the MathWorks [Image Processing Toolbox](https://www.mathworks.com/products/image.html) (images)
 

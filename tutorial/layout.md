@@ -31,7 +31,7 @@ The geometrically most accurate layout representation can be obtained from a 3D 
 
 ### Template layout from disk
 
-A [template layout](/template/layout) from disk is easy to use. Furthermore, it has the advantage that care has been taken to add an outline of geometric features (e.g. the ears and nose, or the outline of the MEG helmet) and that a well-fitting interpolation mask (i.e. the region in which the topoplot functions should interpolate) is present. For example the [CTF helmet layouts](/template/layout/#with-a-more-realistic-display-of-temporal-sensors-1) looks much more realistic than what you would get by projecting the 3D sensors onto a 2D place and drawing a circle with nose and ears around it.
+A [template layout](/template/layout) from disk is easy to use. Furthermore, it has the advantage that care has been taken to add an outline of geometric features (e.g., the ears and nose, or the outline of the MEG helmet) and that a well-fitting interpolation mask (i.e. the region in which the topoplot functions should interpolate) is present. For example the [CTF helmet layouts](/template/layout/#with-a-more-realistic-display-of-temporal-sensors-1) looks much more realistic than what you would get by projecting the 3D sensors onto a 2D place and drawing a circle with nose and ears around it.
 
 ### From a picture
 
@@ -45,7 +45,7 @@ Sometimes a schematic layout is more convenient, since it "flattens" the head an
 
 ### Using a template layout
 
-Since MEG sensors are in generally fixed in a rigid helmet inside the dewar, and since the arrangement of sensors is the same for all MEG systemsof the same type (e.g. CTT275, Neuromag306), it is not common to construct individual-subject MEG layouts. Instead, most people will simply use one of the [template layouts](/template/layout).
+Since MEG sensors are in generally fixed in a rigid helmet inside the dewar, and since the arrangement of sensors is the same for all MEG systemsof the same type (e.g., CTT275, Neuromag306), it is not common to construct individual-subject MEG layouts. Instead, most people will simply use one of the [template layouts](/template/layout).
 
 For future [OPM-based MEG systems](https://dx.doi.org/10.1038/nature26147) it is more likely that MEG sensor layouts will differ from one subject to another subject. Constructing 2D layouts for OPM based systems can be done similar to the way that they are constructed for EEG systems. If you have the 3D description of the MEG sensors, you can also specify that as `cfg.grad` into **[ft_prepare_layout](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_layout.m)** to make a 3D layout.
 
@@ -182,7 +182,7 @@ The advantage of the MATLAB file over the ASCII file, is that the MATLAB file ca
 
 ### Creating a schematic iEEG layout
 
-Sometimes you want to construct an iEEG layout prior to doing the full anatomical pipeline, e.g. to check the iEEG data quality and/or whether the expected experimental effects are present in the functional data. You can use **[ft_prepare_layout](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_layout.m)** in combination with the **[ft_appendlayout](https://github.com/fieldtrip/fieldtrip/blob/release/ft_appendlayout.m)** function.
+Sometimes you want to construct an iEEG layout prior to doing the full anatomical pipeline, e.g., to check the iEEG data quality and/or whether the expected experimental effects are present in the functional data. You can use **[ft_prepare_layout](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_layout.m)** in combination with the **[ft_appendlayout](https://github.com/fieldtrip/fieldtrip/blob/release/ft_appendlayout.m)** function.
 
 A schematic layout can also be convenient, since it "flattens" the head and allows to see all channels better. Furthermore, for sEEG shafts it can be difficult to come up with a geometrically accurate representation of the electrode contacts in 2D space.
 

@@ -20,7 +20,7 @@ This will give you a raw data structure containing all continuous data represent
 
 ## Reading subsequent segments from disk
 
-For some analyses, e.g. spectral power estimation, it is better to have the data in smaller chunks. You can segment the continuous data while reading it in using the following configuration:
+For some analyses, e.g., spectral power estimation, it is better to have the data in smaller chunks. You can segment the continuous data while reading it in using the following configuration:
 
     cfg = [];
     cfg.dataset              = 'yourfile.ext';

@@ -38,7 +38,7 @@ integers, you would call something like
   GDF_Writer gdfWriter = new GDF_Writer(1+10, 500, GDF_INT32);
   gdfWriter->setLabel(0, "Status");
   for (int i=0;i<10;i++) {
-     gdfWriter->setLabel(1+i, yourLabel[i]);   // e.g. yourLabel[0] is label of first cont. channel
+     gdfWriter->setLabel(1+i, yourLabel[i]);   // e.g., yourLabel[0] is label of first cont. channel
      gdfWriter->setPhysicalLimits(1+i, -262144.0, 262144.0);   // maximum physical value = 262144 ...
      gdfWriter->setPhysDimCode(1+i, GDF_MICRO + GDF_VOLT);     // ... in units of microVolt
   }
@@ -96,7 +96,7 @@ The OnlineDataManager will listen on a certain TCP port for incoming commands gi
 
 - "STREAM START" will enable streaming.
 - "STREAM STOP" will disable streaming.
-- "STREAM SELECT index=label index=label ..." to select channels for streaming. Spaces can be used in labels by using double quotes, e.g. "STREAM SELECT 1="Channel 1""
+- "STREAM SELECT index=label index=label ..." to select channels for streaming. Spaces can be used in labels by using double quotes, e.g., "STREAM SELECT 1="Channel 1""
 - "STREAM FILTER bandwidth order factor" to enable low-pass filtering and downsampling
 - "STREAM STATUS" to retrieve information about running state. The response will be of the form `numacquired=N numstreamed=S downsample=D bandwidth=B bworder=O` where "N" is the number of continuously sampled channels from the hardware, "S" is the number of channels selected for streaming, "D" is the downsampling factor, "B" is the bandwidth (cut-off frequency of lowpass filter), and "O" is the order of the Butterworth filter used. Notice that for "O=0" no filtering takes place, no matter which bandwidth is reported.
 - "SAVE START" will enable saving to GDF. In case no new filename has been set (see below), a suffix "\_Si" with "i" being a counter will be appended.

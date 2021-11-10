@@ -242,4 +242,4 @@ To enter interactive mode (i.e, to browse through the volume), use
     figure
     ft_sourceplot(cfg, mri)
 
-The mri file can subsequently be used for e.g. plotting source localization results (see the [plotting tutorial](/tutorial/plotting#plotting_data_at_the_source_level)) or for preparing a headmodel (see the [beamformer tutorial](/tutorial/beamformer#the_forward_model_and_lead_field_matrix)).
+The mri file can subsequently be used for e.g., plotting source localization results (see the [plotting tutorial](/tutorial/plotting#plotting_data_at_the_source_level)) or for preparing a headmodel (see the [beamformer tutorial](/tutorial/beamformer#the_forward_model_and_lead_field_matrix)).

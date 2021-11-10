@@ -42,7 +42,7 @@ _3. detect and interpolate temporally-local channel-specific glitches,_
 
 _4. robust re-reference,_
 
-_5. project out eye artifacts (e.g. using ICA or DSS),_
+_5. project out eye artifacts (e.g., using ICA or DSS),_
 
 _6. fit and remove, or project out, 50 Hz and harmonics,_
 
@@ -404,7 +404,7 @@ so step 4 can be done as follows:
 
 ## Eye artifact removal with ICA
 
-This brings us to step _5. project out eye artifacts (e.g. using ICA or
+This brings us to step _5. project out eye artifacts (e.g., using ICA or
 DSS)_. A reliable ICA decomposition requires as much data as possible. In
 theory, the spatial distribution of the eye artifacts should not be different in
 the different experimental conditions. However, the estimate of the independent

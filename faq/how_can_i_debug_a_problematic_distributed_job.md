@@ -38,7 +38,7 @@ Subsequently, you can restart the **[peercellfun](https://github.com/fieldtrip/f
 
 ## Start a worker as another user
 
-A common, but difficult to diagnose, problem is that the worker does not have the permissions to read the function m-file that you are requesting to be evaluated, e.g. because your home directory is not accessible to other users.
+A common, but difficult to diagnose, problem is that the worker does not have the permissions to read the function m-file that you are requesting to be evaluated, e.g., because your home directory is not accessible to other users.
 
 To test this, you can log in using the public account, which has the password "public".
 

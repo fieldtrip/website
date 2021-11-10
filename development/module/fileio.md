@@ -11,7 +11,7 @@ All these ft_read_xxx functions automatically detect the file format and subsequ
 
 The objective of supplying the low-level EEG and MEG reading functions as a separate module/toolbox are to
 
-1.  facilitate the reuse of the ft_read_xxx functions in other open source projects (e.g. EEGLAB, SPM)
+1.  facilitate the reuse of the ft_read_xxx functions in other open source projects (e.g., EEGLAB, SPM)
 2.  facilitate the implementation and support for new data formats, esp. for external users/contributors
 3.  facilitate the implementation of advanced features without complicating the standard use
 
@@ -51,7 +51,7 @@ The API allows for reading header information, event information and blocks of d
 
 The data-reading function has additional variable input arguments for selecting segments and channels.
 
-The motivation for separating the reading into header/event/data is (among others) inspired by the CTF and by the BrainVision data formats. Based on the header, you want to decide how to approach reading the data, e.g. read everything for an average ERP, read an epoch for trial-based data, read a segment for continuous data. Based on the events (triggers and such), you want to decide which segments of data to read, e.g. read a pre/post-stimulus data segment around each trigger. These decisions are part of the FieldTrip/SPM/EEGLAB/enduser code.
+The motivation for separating the reading into header/event/data is (among others) inspired by the CTF and by the BrainVision data formats. Based on the header, you want to decide how to approach reading the data, e.g., read everything for an average ERP, read an epoch for trial-based data, read a segment for continuous data. Based on the events (triggers and such), you want to decide which segments of data to read, e.g., read a pre/post-stimulus data segment around each trigger. These decisions are part of the FieldTrip/SPM/EEGLAB/enduser code.
 
 ### Header format
 
@@ -166,13 +166,13 @@ dat = ft_read_data(filename, 'begsample', begsample, 'endsample', endsample);
 The event.sample relates to the sample index into the file, disregarding any internal structure in the file. Different data formats that are supported allow for
 
 1. fully continuous data
-2. continuous recordings that are stored in blocks, with no gaps in between (e.g. EDF)
+2. continuous recordings that are stored in blocks, with no gaps in between (e.g., EDF)
 3. epoched recordings, i.e. a fixed block representation with known or unknown gaps in between
-4. continuous recordings with an occasional break (e.g. a pause)
+4. continuous recordings with an occasional break (e.g., a pause)
 
 1 and 2 are continuous or pseudo-continuous respectively.
 
-2 and 3 can most of the times not be distinguished based on the file content, but can sometimes be distinguished by external information (e.g. EDF is meant to represent continuous data, but for CTF it can be either continuous or have gaps in between).
+2 and 3 can most of the times not be distinguished based on the file content, but can sometimes be distinguished by external information (e.g., EDF is meant to represent continuous data, but for CTF it can be either continuous or have gaps in between).
 
 4 has segments ("trials" in fieldtrip-speak) of unequal length.
 
@@ -195,17 +195,17 @@ To deal with the more detailed structure in the file, the output of ft_read_even
 - In case 1, there are events for each trigger.
 - In case 2, there are events for each trigger, but there is also a "trial" event for each segment in the file
 - In case 3, there are events for each trigger, but there is also a "trial" event for each segment in the file.
-- In case 4, it is the same as case 2, but sometimes it has another name (e.g. BrainVision calls them "New Segment" markers).
+- In case 4, it is the same as case 2, but sometimes it has another name (e.g., BrainVision calls them "New Segment" markers).
 
 So if in case 3 you want to know where a trigger is relative to its corresponding trial, you have to look in the events at both the triggers AND at the trials, which are both represented in the event array.
 
-If you want to know which trigger (or triggers) happen in which trial, you have to make some combinatorial MATLAB code (i.e. the "trialfun" that you specify in **[ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_definetrial.m)**). In the trialfun you write the code that parses the sequence of events, combining them where needed. E.g. you might have trials, each with a target and a response event, but in some trials there is no response trigger because the subject was too late to respond. Some of the trials might be catch trials in which no target was presented (and no response was given). But you might also have trials in which the subject (inadvertently) pressed the response button twice. In short: there does not have to be a one-to-one mapping between triggers and trials, and hence you have use your expert knowledge about the experiment to decipher the sequence of events and pick the data segments that are of interest to your analysis.
+If you want to know which trigger (or triggers) happen in which trial, you have to make some combinatorial MATLAB code (i.e. the "trialfun" that you specify in **[ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_definetrial.m)**). In the trialfun you write the code that parses the sequence of events, combining them where needed. e.g., you might have trials, each with a target and a response event, but in some trials there is no response trigger because the subject was too late to respond. Some of the trials might be catch trials in which no target was presented (and no response was given). But you might also have trials in which the subject (inadvertently) pressed the response button twice. In short: there does not have to be a one-to-one mapping between triggers and trials, and hence you have use your expert knowledge about the experiment to decipher the sequence of events and pick the data segments that are of interest to your analysis.
 
 ## Guidelines for adding support for other file formats
 
 The ft_read_data, ft_read_header and ft_read_event functions strongly depend on the **[ft_filetype](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_filetype.m)** helper function. That function automatically determines the format of the file, for example by looking at the extension, by looking at the first few bytes of the file or any other characteristic feature. So adding support for a new file format also requires that new file format to be added to the ft_filetype function.
 
-The **[ft_filetype](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_filetype.m)** function is often called like this (e.g. in ft_read_data)
+The **[ft_filetype](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_filetype.m)** function is often called like this (e.g., in ft_read_data)
 
     var = ft_filetype(filename)
     if strcmp(var, something)
@@ -223,9 +223,9 @@ or like this
     % do something else
     ...
 
-The ft_filetype function does its checks in one long if-elseif-elseif ladder. The consequence is that the detection sometimes is order sensitive: the first match in ft_filetype will be the one returned. So for common file extensions like ".dat" it can be problematic. The solution for identical file extensions is to have the most stringent check first (e.g. "extension is .dat and header contains a few magic bytes") followed by the less stringent check ("extension is .dat").
+The ft_filetype function does its checks in one long if-elseif-elseif ladder. The consequence is that the detection sometimes is order sensitive: the first match in ft_filetype will be the one returned. So for common file extensions like ".dat" it can be problematic. The solution for identical file extensions is to have the most stringent check first (e.g., "extension is .dat and header contains a few magic bytes") followed by the less stringent check ("extension is .dat").
 
-Another recommendation for file type detection is to use the potential context, e.g. the simultaneous presence of multiple files. That is used for example in BrainAnalyzer, which always has a set of three files (an ASCII .vhdr, another ASCII .vmrk and one binary file with extension .dat, .eeg or .seg). The .dat file in then easy to recognize because it is always accompanied by the .vhdr and .vmrk file.
+Another recommendation for file type detection is to use the potential context, e.g., the simultaneous presence of multiple files. That is used for example in BrainAnalyzer, which always has a set of three files (an ASCII .vhdr, another ASCII .vmrk and one binary file with extension .dat, .eeg or .seg). The .dat file in then easy to recognize because it is always accompanied by the .vhdr and .vmrk file.
 
 ## Related documentation
 

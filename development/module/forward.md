@@ -11,7 +11,7 @@ The forward module comprises a complete toolbox of high-quality forward methods,
 
 The objective of supplying these low-level functions as a separate module/toolbox are to
 
-1.  facilitate the reuse of these functions in other open source projects (e.g. EEGLAB, SPM)
+1.  facilitate the reuse of these functions in other open source projects (e.g., EEGLAB, SPM)
 2.  facilitate the implementation and support for new inverse methods, esp. for external users/contributors
 3.  facilitate the implementation of advanced features
 
@@ -70,7 +70,7 @@ Using the FieldTrip [fileio](/development/module/fileio) module one can read in 
     [headmodel] = ft_read_headmodel(filename)
     [sens]      = ft_read_sens(filename)
 
-This assumes that the volume conduction model was created in external software (e.g. CTF, Neuromag, or ASA) and that the sensor description is stored in an external acquisition-specific file format.
+This assumes that the volume conduction model was created in external software (e.g., CTF, Neuromag, or ASA) and that the sensor description is stored in an external acquisition-specific file format.
 
 Alternative to reading the volume conduction model from an external file, you can of course also generate a volume conduction model based on a geometrical description of the head. For example, you can fit a single or multiple spheres to a set of points that describes the head surface. FieldTrip provides a separate function for the constructing of a head model for each of the EEG/MEG computational forward method
 
@@ -100,7 +100,7 @@ Detailed information for each of the functions that creates a head model can be 
 - **[ft_headmodel_singleshell](https://github.com/fieldtrip/fieldtrip/blob/release/ft_headmodel_singleshell.m)**
 - **[ft_headmodel_singlesphere](https://github.com/fieldtrip/fieldtrip/blob/release/ft_headmodel_singlesphere.m)**
 
-If desired the volume conduction model and the sensor array can be spatially transformed using a 4x4 homogenous transformation matrix. E.g. the electrodes can be translated and rotated to align them with head coordinate system, or they can be translated and rotated to switch to another coordinate system.
+If desired the volume conduction model and the sensor array can be spatially transformed using a 4x4 homogenous transformation matrix. e.g., the electrodes can be translated and rotated to align them with head coordinate system, or they can be translated and rotated to switch to another coordinate system.
 
     [headmodel] = ft_transform_geometry(transform, headmodel)
     [sens]      = ft_transform_geometry(transform, sens)
@@ -113,7 +113,7 @@ Following the initial set-up of the head model, but prior to the actual forward 
 
     [headmodel, sens] = ft_prepare_vol_sens(headmodel, sens, ...)
 
-The **[ft_prepare_vol_sens](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_vol_sens.m)** function does a variety of things, depending on the peculiarities of the sensors and head model. It can be used for channel selection, which sometimes involves both the sensors and volume conduction model (e.g. in case of a localspheres MEG model). It will project EEG electrodes (which are described as a Nx3 set of points) onto the scalp surface. It will provide an interpolation of the BEM potential (which is usually computed at the vertices) onto the electrodes. In general the **[ft_prepare_vol_sens](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_vol_sens.m)** function tries to carry out as many preparations as possible, so that subsequently the leadfields can be computed as efficiently as possible.
+The **[ft_prepare_vol_sens](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_vol_sens.m)** function does a variety of things, depending on the peculiarities of the sensors and head model. It can be used for channel selection, which sometimes involves both the sensors and volume conduction model (e.g., in case of a localspheres MEG model). It will project EEG electrodes (which are described as a Nx3 set of points) onto the scalp surface. It will provide an interpolation of the BEM potential (which is usually computed at the vertices) onto the electrodes. In general the **[ft_prepare_vol_sens](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_vol_sens.m)** function tries to carry out as many preparations as possible, so that subsequently the leadfields can be computed as efficiently as possible.
 
 Finally the subsequent computation of the EEG potential or MEG field distribution is done with the **[ft_compute_leadfield](https://github.com/fieldtrip/fieldtrip/blob/release/ft_compute_leadfield.m)** function, which returns a nchan\*3 matrix or a nchan\*(3*ndipoles) matrix if you specify more than one dipole position.
 
@@ -155,10 +155,10 @@ MATLAB allows the representation of any data in arrays, but does not have an exp
 - the conductive properties of the volume conduction model
 - the geometrical properties of the sensor description
 - the geometrical properties of the source model
-- the units of the channel level values (e.g. T, uV or fT/cm)
+- the units of the channel level values (e.g., T, uV or fT/cm)
 - the units of of dipole strength
 
-The forward module functions are written such that they operate correctly if all input data to the functions is specified according to the [International System of Units](http://en.wikipedia.org/wiki/International_System_of_Units), i.e. in meter, Volt, Tesla, Ohm, Ampere, etc. The high-level FieldTrip code or any other code that calls the forward module functions (e.g. EEGLAB) is responsible for data handling and bookkeeping and for converting MATLAB arrays and structures that represent units into SI units prior to passing the arrays and structures to the forward code.
+The forward module functions are written such that they operate correctly if all input data to the functions is specified according to the [International System of Units](http://en.wikipedia.org/wiki/International_System_of_Units), i.e. in meter, Volt, Tesla, Ohm, Ampere, etc. The high-level FieldTrip code or any other code that calls the forward module functions (e.g., EEGLAB) is responsible for data handling and bookkeeping and for converting MATLAB arrays and structures that represent units into SI units prior to passing the arrays and structures to the forward code.
 
 ## Related documentation
 

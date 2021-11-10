@@ -39,13 +39,13 @@ We will use the FieldTrip toolbox for EEG/MEG analysis that is developed within 
 
 The FieldTrip toolbox is not a program with a user interface where you can click around in, but rather a collection of functions. The functions can be grouped into a few major categories:
 
-- Functions for preprocessing, reading and converting data (e.g. **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)**)
-- Functions for analyzing event-related fields or potentials (ERF/ERP) (e.g. **[ft_timelockanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockanalysis.m)**)
-- Functions for frequency and time-frequency analysis (e.g. **[ft_freqanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqanalysis.m)**)
-- Functions for source analysis (e.g. **[ft_sourceanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceanalysis.m)**)
-- Functions for statistical analysis (e.g. **[ft_timelockstatistics](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockstatistics.m)**)
-- Functions for plotting and displaying the data (e.g. **[ft_multiplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_multiplotER.m)**)
-- Function for real-time acquisition and analysis (e.g. **[ft_realtime_average](https://github.com/fieldtrip/fieldtrip/blob/release/realtime/example/ft_realtime_average.m)**)
+- Functions for preprocessing, reading and converting data (e.g., **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)**)
+- Functions for analyzing event-related fields or potentials (ERF/ERP) (e.g., **[ft_timelockanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockanalysis.m)**)
+- Functions for frequency and time-frequency analysis (e.g., **[ft_freqanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqanalysis.m)**)
+- Functions for source analysis (e.g., **[ft_sourceanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceanalysis.m)**)
+- Functions for statistical analysis (e.g., **[ft_timelockstatistics](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockstatistics.m)**)
+- Functions for plotting and displaying the data (e.g., **[ft_multiplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_multiplotER.m)**)
+- Function for real-time acquisition and analysis (e.g., **[ft_realtime_average](https://github.com/fieldtrip/fieldtrip/blob/release/realtime/example/ft_realtime_average.m)**)
 
 The full list of functions can be found [here](/reference). Each of the functions of the toolbox takes as input the (intermediate) data that was produced by the previous function.
 There is a difference between high- and low-level functions. The high-level functions are the ones that are used by the user, while the low-level functions are automatically called by the higher level functions. The user does not have to be aware of the low-level functions.
@@ -90,7 +90,7 @@ How to make analysis protocols for different types of analysis using the FieldTr
 
 FieldTrip is composed of a collection of scripts running in MATLAB. The toolbox is platform independent (i.e. can run under Linux, macOS and Windows). To start MATLAB on Linux at the DCC
 
-    matlab2014b (or use another version number, e.g. 2016a)
+    matlab2014b (or use another version number, e.g., 2016a)
 
 It is now possible to execute the MATLAB scripts by copying/pasting the relevant text from the tutorials (To copy from a Window browser to MATLAB running under Linux from X-Win32, use the mouse to highlight the text in the browser and press Crtl-c. Then use Ctrl-v or the middle mouse button to paste in MATLAB).
 

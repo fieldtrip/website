@@ -39,7 +39,7 @@ For consistency the tutorials should preferably be structured in the following w
   - What has not been covered but is relevant in the context of the tutorial?
   - Provide links to suggested further reading, related FAQs and example scripts.
 
-To check that the tutorial meets the expected didactical qualities, the introduction should spell out what the reader will learn, what is expected from him/her (e.g. that he/she already has done another tutorial) and what will not be covered. The summary should link to follow up documentation and to the more advanced topics that relate to the tutorial.
+To check that the tutorial meets the expected didactical qualities, the introduction should spell out what the reader will learn, what is expected from him/her (e.g., that he/she already has done another tutorial) and what will not be covered. The summary should link to follow up documentation and to the more advanced topics that relate to the tutorial.
 
 For an example of a well-structured tutorial see the [tutorial on event related fields](/tutorial/eventrelatedaveraging).
 
@@ -54,7 +54,7 @@ The tutorial mat-files are made available on <ftp://ftp.fieldtriptoolbox.org/pub
 When using example data in tutorials, please use consistent naming.
 
 - Add a prefix to the data-name that shows what kind of data it is. Prefixes are: data (for raw/preprocessed data), timelock, freq, stat and source. For example, if you have timelocked data (ERP/ERF) of condition FIC, you can call it timelockFIC. So do not use 'data' for everything.
-- Save the data as a .mat file with the same name, e.g. save the variable freqFIC to the file freqFIC.mat.
+- Save the data as a .mat file with the same name, e.g., save the variable freqFIC to the file freqFIC.mat.
 - Store only one variable in every .mat file.
 
 ## How to add tags?

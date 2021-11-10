@@ -19,7 +19,7 @@ A "preproc" module has been made that contains all low-level functionality that 
 - highpassfilter.m
 - notchfilter.m
 
-Also all use of other low-level code for preprocessing (e.g. detrending or median filtering) should be changed to use the respective preproc_xxx function.
+Also all use of other low-level code for preprocessing (e.g., detrending or median filtering) should be changed to use the respective preproc_xxx function.
 
 The most obvious function to start in is fieldtrip/private/preproc, but other FieldTrip functions are also affected (a.o. freqsimulation->bandpassfilter and probably the older artifact detection functions).
 

@@ -7,7 +7,7 @@ tags: [tutorial, meg, raw, preprocessing, meg-language]
 
 ## Introduction
 
-This tutorial describes how to define epochs-of-interest (trials) from your recorded MEG-data, and how to apply the different preprocessing steps. This tutorial does not show yet how to analyze (e.g. average) your data.
+This tutorial describes how to define epochs-of-interest (trials) from your recorded MEG-data, and how to apply the different preprocessing steps. This tutorial does not show yet how to analyze (e.g., average) your data.
 
 If you are interested in how to do preprocessing on your data prior to segmenting it into trials, you can check the [Preprocessing - Reading continuous data](/tutorial/continuous) tutorial. There, you can also find information about how to preprocess EEG data. If you want to learn how to segment EEG data into trials, check the tutorial on [Preprocessing of EEG data and computing ERPs](/tutorial/preprocessing_erp).
 

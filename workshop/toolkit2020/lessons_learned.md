@@ -25,7 +25,7 @@ General announcements in Zoom (that span over all breakout rooms) are easily mis
 
 Once people spread out over two pages of webcam thumbnails in Zoom, you cannot look at them any more like you normally would do when scanning the audience in a physical meeting/lecture.
 
-Besides a lecturer or presenter, you need a moderator or sidekick in large online meetings. While the lecturer presents or answers questions, the assistant keeps an eye on the audience (e.g. checking the Slack channel, raising hands in the Zoom, new additions to the google doc). So the “lecturer” focuses on the content, whereas the “assistant” acts as moderator.  The lecturer needs his full attention (and his full screen) for the content, whereas the assistant keeps an eye on the different communication channels.
+Besides a lecturer or presenter, you need a moderator or sidekick in large online meetings. While the lecturer presents or answers questions, the assistant keeps an eye on the audience (e.g., checking the Slack channel, raising hands in the Zoom, new additions to the google doc). So the “lecturer” focuses on the content, whereas the “assistant” acts as moderator.  The lecturer needs his full attention (and his full screen) for the content, whereas the assistant keeps an eye on the different communication channels.
 
 During the hands-on sessions all people move to Zoom breakout rooms. At that moment it is helpful to have a single tutor that stays in the general (starting) room. Participants occasionally leave the Zoom meeting or drop out of it (Zoom crashes, network interruptions, laptop battery empty) which means that the later join again. The "doorman" can welcome them and ensure that hey become co-host again and get assigned to a breakout room. The doorman could in principle also act as the bouncer, but luckily that was not needed.
 
@@ -33,7 +33,7 @@ Shared google docs to collect questions during the talks works fine. The majorit
 
 Having the shared Q&A documents makes people take the exercises in the tutorials more serious than they are actually meant to be. People really want an answer, and sometimes they just serve to activate the people but don’t have clear answers.
 
-If - as presenter on Zoom - you want to share a link, you can just ask someone to post it on Slack or in the comments. There is always someone (e.g. a tutor) available who know what you mean and who will post it for you.
+If - as presenter on Zoom - you want to share a link, you can just ask someone to post it on Slack or in the comments. There is always someone (e.g., a tutor) available who know what you mean and who will post it for you.
 
 When people want to share their screen, MATLAB code is often too small to be visible to others. Instead, ask participants to copy-paste it into their personal Q&A document. This way, tutors can easy see it and even provide (copy-paste) their own code below it.
 Alternatively, ask participants to copy-paste their code into a .txt file (minimal formatting) and increase font size.

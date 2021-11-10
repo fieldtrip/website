@@ -13,7 +13,7 @@ title: Implement support for CTF synthetic gradiometers
 
 ## Step 1: read the coefficients
 
-The coefficients are stored in a site specific .coef file (e.g. /opt/ctf/hardware/M016/M017_1706.coef). Those should **not** be used, instead they should be read from the res4 file (see CTF comments in the appendix).
+The coefficients are stored in a site specific .coef file (e.g., /opt/ctf/hardware/M016/M017_1706.coef). Those should **not** be used, instead they should be read from the res4 file (see CTF comments in the appendix).
 
 The coefficients should be put into a Nchan X Nchan matrix, where Nchan = Nref+Nmeg. Assuming that the uncorrected data has been read in for all channels, the conversion of 0th order to 3rd order only requires a multiplication with this matrix.
 
@@ -36,13 +36,13 @@ data0 = inv(T03) _ data3;
 so for example
 data1 = T01 _ inv(T03) _ data3;
 
-TODO: This requires testing on real data using the CTF software as gold standard, i.e. use the newDs command to construct a 1st, 2nd and 3rd order dataset from an original 0th order dataset (only one trial required, e.g. average). Regarding MATLAB code, fieldtrip/syntheticgradient.m performs the conversions of the data.
+TODO: This requires testing on real data using the CTF software as gold standard, i.e. use the newDs command to construct a 1st, 2nd and 3rd order dataset from an original 0th order dataset (only one trial required, e.g., average). Regarding MATLAB code, fieldtrip/syntheticgradient.m performs the conversions of the data.
 
 ## Step 3: apply the coefficients to the gradiometer array
 
 The gradiometer array is described by all coil (positions and orientations) and the weights (+1 or -1) to combine the coils into hardware channels. From the FAQ:
 
-_The gradiometer definition generally consists of multiple coils per channel, e.g. two coils for a 1st order gradiometer in which the orientation of the coils is opposite. Each coil is described separately and one large matrix (can be sparse) has to be given that defines how the forward computed field is combined over the coils to generate the output of each channel. The gradiometer definition constsis of the following fields_
+_The gradiometer definition generally consists of multiple coils per channel, e.g., two coils for a 1st order gradiometer in which the orientation of the coils is opposite. Each coil is described separately and one large matrix (can be sparse) has to be given that defines how the forward computed field is combined over the coils to generate the output of each channel. The gradiometer definition constsis of the following fields_
 
     grad.pnt   % Mx3 matrix with the position of each coil
     grad.ori   % Mx3 matrix with the orientation of each coil
@@ -64,9 +64,9 @@ TODO: This requires a smarter implementation for linking the local spheres (one 
 
 The res4 file should specify somewhere how the raw data has been written (i.e. with 0th, 1st, 2nd or 3rd order balancing). That information should be added to the dataset in MATLAB memory, and the gradiometer structure (grad.tra) should be consistent.
 
-When changing the balancing (e.g. using the fieldtrip/ft_denoise_synthetic.m function), the data structure should remain internally consistent and should describe the balancing.
+When changing the balancing (e.g., using the fieldtrip/ft_denoise_synthetic.m function), the data structure should remain internally consistent and should describe the balancing.
 
-TODO: think of a way of adding this information to the output of fieldtrip/preprocessing and related functions (e.g. have a field data.grad.order='G1BR').
+TODO: think of a way of adding this information to the output of fieldtrip/preprocessing and related functions (e.g., have a field data.grad.order='G1BR').
 
 ## Appendix: description from CTF
 

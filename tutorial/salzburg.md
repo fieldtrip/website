@@ -18,7 +18,7 @@ The data in this tutorial has been acquired with 148 sensor magnetometer system 
 
 ### Loading the data
 
-In the following section we will read and epoch the data. Subsequently we will apply some processing steps, e.g. rejecting bad trials by visual inspection and decomposing the data by means of independent component analysis. The late step will allow us to disregard data components likely reflective for cardiac and ocular activity.
+In the following section we will read and epoch the data. Subsequently we will apply some processing steps, e.g., rejecting bad trials by visual inspection and decomposing the data by means of independent component analysis. The late step will allow us to disregard data components likely reflective for cardiac and ocular activity.
 
 The following steps had been performed:
 
@@ -265,7 +265,7 @@ Before you continue it is recommended to make your self familiar with the releva
 {% include youtube id="7eS11DtbIPw" %}
 {% include markup/end %}
 
-Furthermore the details around how to compute the ingredients needed herein (e.g. headmodel, leadfield) are not further explained here. All of the necessary steps in head modeling are explained here, and source modeling [here](/example/create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_brain_atlas_based_mni_space).
+Furthermore the details around how to compute the ingredients needed herein (e.g., headmodel, leadfield) are not further explained here. All of the necessary steps in head modeling are explained here, and source modeling [here](/example/create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_brain_atlas_based_mni_space).
 
 We will start with loading a precomputed headmodel [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/salzburg/hdm.mat). We will first construct a regular dipole grid using **[ft_prepare_sourcemodel](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_sourcemodel.m)**. Subsequently we want to determine the grid locations corresponding to particular brain areas (parcels). For this step we will read an anatomical atlas using **[ft_read_atlas](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_atlas.m)** and generate a binary mask with entries of ones indicating grid points corresponding to brain parcels using **[ft_volumelookup](https://github.com/fieldtrip/fieldtrip/blob/release/ft_volumelookup.m)**. Finally, on the basis of the individual anatomy we will construct a source model that is inverse-warped to this atlas-based source model in mni space.
 
@@ -631,7 +631,7 @@ So far we have identified three potential "nodes" involved in the processing of 
 
 Based on visual inspection of the data provided by the interactive navigation after the call to **[ft_sourceplot](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceplot.m)** we can determine the coordinates of the locations subject to further examination.
 
-Alternative approach is enabled due to the utilized parcellation strategy. We can derive the coordinates of all locations corresponding to a particular parcel, e.g. left heschl gyrus. In the following we will reduce the data to three loacations: left and right heschl gyri and left Cingulum_Mid in the frontal cortex.
+Alternative approach is enabled due to the utilized parcellation strategy. We can derive the coordinates of all locations corresponding to a particular parcel, e.g., left heschl gyrus. In the following we will reduce the data to three loacations: left and right heschl gyri and left Cingulum_Mid in the frontal cortex.
 
 {% include markup/warning %}
 We used statistics to reject the hypothesis that: the data in the pre and post stimulus intervals is exchangeable. It might appear that the decision about which nodes to choose is based on this statistical evaluation. However this is false. The spatial aspect of the data is not subject to hypothesis testing. We motivate our decision on the basis of our interpretation of the conclusion- the data is not exchangeable. The interpretation and not the statistical testing per se is based on prior knowledge, knowledge about function-anatomy, credible expectations of spatial patterns in the context of the experimental design and many other factors. Consulting this [FAQ](/faq/how_not_to_interpret_results_from_a_cluster-based_permutation_test) is recommended.  

@@ -16,7 +16,7 @@ Plan: investigate at which locations knowledge about the units is assumed/needed
 4.  gradiometer/sensor definition
 5.  volume-conductor specification
 6.  grid computation
-7.  leadfield computation e.g. meg_ini
+7.  leadfield computation e.g., meg_ini
 8.  mri related functions: transformation matrix!
 9.  sourceinterpolate
 

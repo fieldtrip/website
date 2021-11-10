@@ -28,7 +28,7 @@ This tutorial is focusing on how to build the **volume conduction model for the 
 In this specific tutorial we will use a semi-realistic head model developed by Nolte (2003) that assumes a realistic information about the interface between the brain and the skull. This outer brain surface will be extracted from the anatomical MRI images of the subject. First, we will use anatomical MRI of the subject to extract the brain surface from the anatomical images, which is termed **segmentation**. Note that the segmentation procedure is quite time consuming. Following the segmentation of the anatomical images, a description of the surface using vertices and triangles is constructed. Finally, the single-shell head model will be computed.
 
 {% include markup/info %}
-If an anatomical MRI is not available for your MEG subject, you can consider to use a template MRI or a template head model that is located in the FieldTrip template directory. If you do not have an MRI, but if you do have a measurement of the scalp surface (e.g. with a Polhemus tracker), you can use a local spheres volume conduction model. If you do not want to (or cannot) use any realistic information about the brain-surface or the head-shape, you can resort to the single sphere volume conduction model.
+If an anatomical MRI is not available for your MEG subject, you can consider to use a template MRI or a template head model that is located in the FieldTrip template directory. If you do not have an MRI, but if you do have a measurement of the scalp surface (e.g., with a Polhemus tracker), you can use a local spheres volume conduction model. If you do not want to (or cannot) use any realistic information about the brain-surface or the head-shape, you can resort to the single sphere volume conduction model.
 {% include markup/end %}
 
 ## Procedure
@@ -182,7 +182,7 @@ When the figure is plotted, you can look at the figure from different views usin
 {% include markup/info %}
 Create a head model with method 'singlesphere' that you fit on the inside brain surface, i.e. using the output of the already made segmentation.
 
-Plot both head models in the same figure, check the help of **[ft_plot_headmodel](https://github.com/fieldtrip/fieldtrip/blob/release/plotting/ft_plot_headmodel.m)** for further options of the visualization (e.g. color, transparency) which help to see the two head models together.
+Plot both head models in the same figure, check the help of **[ft_plot_headmodel](https://github.com/fieldtrip/fieldtrip/blob/release/plotting/ft_plot_headmodel.m)** for further options of the visualization (e.g., color, transparency) which help to see the two head models together.
 
 What is the difference between the head models?
 {% include markup/end %}

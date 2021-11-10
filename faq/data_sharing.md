@@ -33,8 +33,8 @@ Furthermore, you can consider sharing the following:
 
 - minimally processed data
 - specification of bad channels and bad segments
-- cortical sheet source models (e.g. obtained from FreeSurfer)
-- volume conduction models (e.g. the boundaries that define brain, skull and scalp)
+- cortical sheet source models (e.g., obtained from FreeSurfer)
+- volume conduction models (e.g., the boundaries that define brain, skull and scalp)
 
 ## How should I deidentify the data?
 
@@ -50,7 +50,7 @@ The MEG and corresponding imaging data should be pseudonomized (i.e. using subje
 For CTF data, you can look in this [FAQ on anonymizing a CTF dataset](/faq/how_can_i_anonymize_a_ctf_dataset).
 
 {% include markup/danger %}
-Note that "anonymous" or "pseudonomized" does not imply that it is impossible to link the data, just that the link is not directly provided with the data. E.g. am photo of a participant without its name or social security number is anonymous, but could nevertheless still be linked to the participants identity using Google reverse image search. That is why you should also consider to use deidentification methods.
+Note that "anonymous" or "pseudonomized" does not imply that it is impossible to link the data, just that the link is not directly provided with the data. e.g., am photo of a participant without its name or social security number is anonymous, but could nevertheless still be linked to the participants identity using Google reverse image search. That is why you should also consider to use deidentification methods.
 {% include markup/end %}
 
 See [this presentation](http://slideshare.net/RobertOostenveld/cuttingeeg-open-science-open-data-and-bids-for-eeg) with a conceptual explanation of how to deal with directly and indirectly identifying personal data.

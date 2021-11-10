@@ -101,4 +101,4 @@ FIMXE insert subsequent code, based on prepare_leadfield, sourceanalysis with me
 
 ## Beaming cortico-muscular coherence with a two-dipole source model
 
-FIXME extend with refchan, e.g. repeat dipolesimulation and add the timecourse of a nice signal to an additional channel in the data.
+FIXME extend with refchan, e.g., repeat dipolesimulation and add the timecourse of a nice signal to an additional channel in the data.

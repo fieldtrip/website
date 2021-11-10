@@ -43,7 +43,7 @@ Inside **[ft_prepare_mesh](https://github.com/fieldtrip/fieldtrip/blob/release/f
 
 The MATLAB image processing toolbox includes a number of morphological operations that are very useful for manipulating binary segmentations. Some of the most common operators are imfill, imdilate, bwlabeln, etc.
 
-In particular imdilate can be used to augment the volume of a closed surface (e.g. the inner skull) in order to render the other surrounding tissues (e.g. the outer skull). An example is shown below:
+In particular imdilate can be used to augment the volume of a closed surface (e.g., the inner skull) in order to render the other surrounding tissues (e.g., the outer skull). An example is shown below:
 
 {% include image src="/assets/img/faq/how_can_i_fine-tune_my_bem_volume_conduction_model/wiki12.png" width="300" %}
 

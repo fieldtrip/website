@@ -111,7 +111,7 @@ _stat_t_ contains:
 - _prob_ contains the _p-values_ assciated with the _t-values_ given the degrees of freedom (_df_)
 - _mask_ is a _logical_ matrix, 0's are where _p-values_ (_prob_) are greater than _cfg.alpha_, 1's are where they are lesser than _cfg.alpha_
 - _dimord_ indicates the ordering of dimensions, rows are channels and columns are time
-- _elec_ contains information about the electrodes, e.g. positions and names
+- _elec_ contains information about the electrodes, e.g., positions and names
 - _label_ contains the names of all channels
 - _time_ is a row vector with the time points in seconds
 - _cfg_ shows the cfg that gave rise to this structure
@@ -201,7 +201,7 @@ _Figure 3: Electrode neighbor structure_
 
 ##### Permutation
 
-The cluster correction is not meaningful for parametric statistics, e.g. _t-tests_, therefore we are going to use a non-parameteric test.  
+The cluster correction is not meaningful for parametric statistics, e.g., _t-tests_, therefore we are going to use a non-parameteric test.  
 We will first run it and then discuss some of the options and details afterwards.
 
     cfg                  = [];

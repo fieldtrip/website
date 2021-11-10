@@ -33,7 +33,7 @@ What we want to accomplish is at the same time control the false alarm rate, and
 Ad 1)
 
 - slow drifts in the data, independent of conditions: this increases variance/reduces the sensitivity (with respect to the effect one is interested in)
-- different size of effect at different locations and/or frequencies (e.g. 1/f effect in power, or depth bias of beamed power)
+- different size of effect at different locations and/or frequencies (e.g., 1/f effect in power, or depth bias of beamed power)
   Ad 2)
 - large individual differences
 
@@ -81,7 +81,7 @@ The data should be of the for
     activation = phys * e1 + e2 + noise
 
 - with for the additive effect model: e1 = 1, e2 > 0, and for the multiplicative effect model: e1 > 1, e2 = 0.
-- phys is the physiological signal, consisting of a 'constant' (e.g. alpha oscillation) modulated by a slow drift
+- phys is the physiological signal, consisting of a 'constant' (e.g., alpha oscillation) modulated by a slow drift
 - noise is the 'real' external noise, which is random
 
   phys = phys_constant + phys_noise _ lambda_phys

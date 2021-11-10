@@ -13,7 +13,7 @@ tags: [faq, bids, sharing]
 - Head localizer coils are expressed in HeadCoilCoordinateSystem
 - Digitized head points are expressed DigitizedHeadPointsCoordinateSystem
 
-When we say that the "thing" _xxx_ is expressed in the _XXXCoordinatesystem_, we mean that the position of _xxx_ is expressed (in the data file) as numbers, and those numbers are relative to some known origin [0,0,0], with the x, y and z-axis pointing in known directions (e.g. x to the right) and in some units (e.g. mm). So the position indicated with the three numbers [70,0,0] can be interpreted properly.
+When we say that the "thing" _xxx_ is expressed in the _XXXCoordinatesystem_, we mean that the position of _xxx_ is expressed (in the data file) as numbers, and those numbers are relative to some known origin [0,0,0], with the x, y and z-axis pointing in known directions (e.g., x to the right) and in some units (e.g., mm). So the position indicated with the three numbers [70,0,0] can be interpreted properly.
 
 {% include markup/info %}
 Note that MRI measurements are not measurements of space, but measurements of intensity or grey-scale values. The position of voxels (after reconstruction) are the a-priori specified locations at which intensity is measured.
@@ -63,4 +63,4 @@ So the T1w.json would have AnatomicalLandmarkCoordinates, AnatomicalLandmarkCoor
 
 ## Fiducials
 
-In the FiducialsDescription you can add some optional text (i.e. story) that explains the procedure that is used in the specific lab. E.g. at the Donders we attach the head coils (and the vitamine E capsules in the MR lab) to ear molds, instead of attaching them with tape on the pre-auricular anatomical landmarks (i.e. points in front of the ears).
+In the FiducialsDescription you can add some optional text (i.e. story) that explains the procedure that is used in the specific lab. e.g., at the Donders we attach the head coils (and the vitamine E capsules in the MR lab) to ear molds, instead of attaching them with tape on the pre-auricular anatomical landmarks (i.e. points in front of the ears).

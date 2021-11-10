@@ -5,11 +5,11 @@ tags: [faq, continuous, freq]
 
 # How can I do time-frequency analysis on continuous data?
 
-There are cases where you have recorded continuous data without specific events of interest, e.g. resting state data. In the absence of events on the basis of which to segment the data into trials, you would proceed processing the data as [continuous data](/tutorial/continuous).
+There are cases where you have recorded continuous data without specific events of interest, e.g., resting state data. In the absence of events on the basis of which to segment the data into trials, you would proceed processing the data as [continuous data](/tutorial/continuous).
 
 In continuous data you primarily would expect the EEG or MEG signal to be stationary, i.e. not change over time. Hence there is no point in doing time-frequency analysis, because you don't expect changes in the power spectrum over time, at least not on a very short time scale.
 
-However, you might be interested in changes in the power spectrum at a much longer time scale. Regular time-frequency analysis (e.g. with method wavelet or mtmconvol in **[ft_freqanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqanalysis.m)**) is not appropriate to reveal the dynamics of spectral changes over a long time scale. Below we outline an alternative approach that does work well and that is computationally efficient.
+However, you might be interested in changes in the power spectrum at a much longer time scale. Regular time-frequency analysis (e.g., with method wavelet or mtmconvol in **[ft_freqanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqanalysis.m)**) is not appropriate to reveal the dynamics of spectral changes over a long time scale. Below we outline an alternative approach that does work well and that is computationally efficient.
 
 We start by reading the data as one long continuous segment. It may be useful at this stage to apply a high-pass filter to remove the slow drift from the data
 

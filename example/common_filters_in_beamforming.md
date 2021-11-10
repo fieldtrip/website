@@ -20,7 +20,7 @@ It is a requirement that the time windows in all conditions are of equal length.
 
 ## How to do this in FieldTrip
 
-In FieldTrip, common filters can be used both with the DICS and the PCC beamformer approach. If you are interested in calculating source reconstructed power, both methods can be used and will lead to similar results. PCC is faster but more memory-demanding, whereas DICS is slower but more memory-friendly. The choice of methods depends on personal preferences, your data (e.g. number of trials, number of tapers) and computer specs.
+In FieldTrip, common filters can be used both with the DICS and the PCC beamformer approach. If you are interested in calculating source reconstructed power, both methods can be used and will lead to similar results. PCC is faster but more memory-demanding, whereas DICS is slower but more memory-friendly. The choice of methods depends on personal preferences, your data (e.g., number of trials, number of tapers) and computer specs.
 
 The general procedure is as follow
 

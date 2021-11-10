@@ -21,7 +21,7 @@ This topic is important and its implementation impacts both on FT and SPM users,
 
 ## Some actions to take (Cristiano)
 
-Here is the list of the functions in the module Forward (folders: \_fieldtrip/forward and \_fieldtrip/forwar/private) that need the units to be documented in their help (this is necessary also for other modules, like e.g. the fileio module
+Here is the list of the functions in the module Forward (folders: \_fieldtrip/forward and \_fieldtrip/forwar/private) that need the units to be documented in their help (this is necessary also for other modules, like e.g., the fileio module
 
 ### \_fieldtrip/forward
 

@@ -38,7 +38,7 @@ The operation mode of the tool is controlled by given a configuration file. A do
     character=H
 
   # type: Type of event as either an integer, double
-  # precision number, or string (e.g. "serial")
+  # precision number, or string (e.g., "serial")
     type="serial"
 
   # value: Value of event, can be integer/double/string
@@ -46,7 +46,7 @@ The operation mode of the tool is controlled by given a configuration file. A do
     value="click"
 
   # sample: number to transmit with first pulse plus
-  # increment per pulse, e.g. 0+1  (sends 0,1,2,3,...)
+  # increment per pulse, e.g., 0+1  (sends 0,1,2,3,...)
     sample=-5+1
 
   # offset and duration: integer numbers

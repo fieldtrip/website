@@ -11,7 +11,7 @@ The current naming scheme is ambiguous and/or inefficient for end-users and deve
 ## Goals of the new scheme
 
 - be intuitive to the end-user
-  - the name of any plotting function should be grouped by data-type (e.g. freq/timelock), followed by the intended plotting-mode (e.g. single/multi/topo/etc).
+  - the name of any plotting function should be grouped by data-type (e.g., freq/timelock), followed by the intended plotting-mode (e.g., single/multi/topo/etc).
   - whether data is 2d or 3d should not determine in choosing which plotting function to call
 
 - underlying code should be easy to distinguish functionality-wise

@@ -51,7 +51,7 @@ There are 5 different ways of doing this.
 When a new function is written in FieldTrip, it is important to include these feedbacks. Each warning and error should have an **identifier**. By using identifiers, the individual warnings can be switched off by the user in MATLAB. Hence, `warning_once` should be used cautiously.
 
 The short text messages which accompany errors and warnings on the screen are often not enough to provide insight for the users. The text message on screen should be kept short, but a [Frequently Asked Question](/faq) should explain the warning and why an error occurred. The identifiers should help the user to find the relevant FAQ. The FAQ
-should also have the same 'warning' or 'error' tag (e.g. `FieldTrip:fileio:fileNotExisting`).
+should also have the same 'warning' or 'error' tag (e.g., `FieldTrip:fileio:fileNotExisting`).
 
 ## Use the dimord field to describe or deciper the data
 
@@ -144,7 +144,7 @@ In case the user still specifies the option, he/she will get warning or error (d
 
 Sometimes it is necessary to rename or remove a function, an option or a piece of code. We should try to keep FieldTrip backward compatible whenever we replace a function or an option with something else. However, it is not possible to maintain backward compatibility for ever and sometimes the requirements for the deprecated functionality interferes with other maintenance to the code or the implementation of new functionality. Therefore we should accommodate the possibility to remove deprecated functionality, i.e. make the functionality unsupported.
 
-Sections of code or functions that are deprecated should be documented in the code as such, including the name of the person who deprecated it, the date at which it was deprecated, and possibly also a link to some background (e.g. link to GitHub Issues) and an estimate of when the support for the deprecated functionality can be removed altogether (i.e. an "expiration date"). Deprecated functions and options should also be added to [this list](/development/deprecated).
+Sections of code or functions that are deprecated should be documented in the code as such, including the name of the person who deprecated it, the date at which it was deprecated, and possibly also a link to some background (e.g., link to GitHub Issues) and an estimate of when the support for the deprecated functionality can be removed altogether (i.e. an "expiration date"). Deprecated functions and options should also be added to [this list](/development/deprecated).
 
 An example is
 
@@ -156,11 +156,11 @@ An example is
 
 ### Graphical-User Interfaces (GUI)
 
-If you want to add a user interface (ui) to a figure, use the functions uicontrol and ft_uilayout for setting it up. This helps to manage the different components. Try to keep ui-definitions at one place in the code to make the code more manageable for other developers. Please make yourself familiar with other functions with a GUI before programming one your own, e.g. ft_databrowser.
+If you want to add a user interface (ui) to a figure, use the functions uicontrol and ft_uilayout for setting it up. This helps to manage the different components. Try to keep ui-definitions at one place in the code to make the code more manageable for other developers. Please make yourself familiar with other functions with a GUI before programming one your own, e.g., ft_databrowser.
 
 Some practical issue
 
-- Use tags to identify components. Tags should have a sensible name to facilitate code readability. Tags should be named according to function (e.g. 'channelui') or according to type ('buttonui') or position in the ui ('leftui').
+- Use tags to identify components. Tags should have a sensible name to facilitate code readability. Tags should be named according to function (e.g., 'channelui') or according to type ('buttonui') or position in the ui ('leftui').
 - If it makes sense to group ui elements together, do it as early as possible – it makes life easier. Do not retag otherwise!
 
 Example of good ui code:
@@ -241,13 +241,13 @@ Low-level functions that are only supposed to be called by other FieldTrip funct
 
 ## Calling functions that are located elsewhere
 
-Functions in a module, i.e. sub-directory, should **not** be calling any FieldTrip functions at a higher level. E.g. a function like fileio/xxx.m should only call other functions in fileio, in fileio/private or in an external toolbox.
+Functions in a module, i.e. sub-directory, should **not** be calling any FieldTrip functions at a higher level. e.g., a function like fileio/xxx.m should only call other functions in fileio, in fileio/private or in an external toolbox.
 
 This requirement on the dependencies ensures the [modular design](/development/module).
 
 ## Varargin arguments
 
-Generally functions (e.g. in the plotting directory) have optional arguments as a pair
+Generally functions (e.g., in the plotting directory) have optional arguments as a pair
 of inputs describing the name of one property and its value.
 These arguments have to be handled at the very beginning inside the function, by setting a default value,
 like this:
@@ -264,7 +264,7 @@ In this way the variables which are used in the function are always correctly in
 
 ## File names for executable/compiled binaries
 
-Since we support FieldTrip on most currently popular platforms regarding hardware and software, we have to create executables for all platforms that we can. If an executable cannot be compiled on a particular platform, e.g. because it depends on Windows-specific DLLs, then you of course don't have to bother.
+Since we support FieldTrip on most currently popular platforms regarding hardware and software, we have to create executables for all platforms that we can. If an executable cannot be compiled on a particular platform, e.g., because it depends on Windows-specific DLLs, then you of course don't have to bother.
 
 Ensuring that all executables can co-exist on all platforms (and especially on the Unix base platforms) means that they should have unique file names. The choice for that is based on the specification according to the MATLAB function "computer", i.e.
 
@@ -291,7 +291,7 @@ Ensuring that all executables can co-exist on all platforms (and especially on t
 
       See also ispc, isunix, ismac.
 
-The binaries for the different versions of the unix platforms (Linux, macOS) should have an extension corresponding to the computer type, e.g. the buffer executable would be named
+The binaries for the different versions of the unix platforms (Linux, macOS) should have an extension corresponding to the computer type, e.g., the buffer executable would be named
 
 - buffer.exe for Microsoft Windows
 - buffer.glnx86 for 32-bit Linux
@@ -357,7 +357,7 @@ FieldTrip has to run on a large variety of platforms, with different operating s
 
 In most cases the mex file source code should be located in fieldtrip/src. The `ft_compile_mex` function is used to compile the mex files and the `synchronize-private.sh` Bash script is used to copy the updated mex files to all required (private) directories.
 
-If the mex file is part of a collection of related mex files and only present on a single location (e.g. fieldtrip/@config/private), the mex file source code should be present in _that_ specific directory together with a compilation script.
+If the mex file is part of a collection of related mex files and only present on a single location (e.g., fieldtrip/@config/private), the mex file source code should be present in _that_ specific directory together with a compilation script.
 
 For Unix-like platforms (Linux and macOS), it it also possible to compile all mex files from the Unix shell command line interface (on macOS called ''Terminal.app'') using ''make'' with target ''mex'', which uses the ''Makefile'' in FieldTrip's root directory. This approach is supported with Matlab and Octave, and requires providing the path to the MATLAB or octave binary. For example,
 
@@ -431,7 +431,7 @@ With Ctrl-A, Ctrl-I you can auto-indent the whole m-file and ensure that the hor
 
 ## Avoid changing the order of the channels in the data, if possible
 
-FieldTrip functions should not rely on the channels being represented in a particular order, but should always explicitly look into the list with the channel labels in order to determine on which elements in the numeric data a particular computation is required. Functions may operate on several data-arguments that have data that belong to channels, e.g. channel position, coil-to-channel mappings for MEG gradiometer arrays, time series of electrophysiological data, parameters of a sphere fitted to the headsurface directly underlying a particular channel, a set of neighbours relative to a particular channel etc.
+FieldTrip functions should not rely on the channels being represented in a particular order, but should always explicitly look into the list with the channel labels in order to determine on which elements in the numeric data a particular computation is required. Functions may operate on several data-arguments that have data that belong to channels, e.g., channel position, coil-to-channel mappings for MEG gradiometer arrays, time series of electrophysiological data, parameters of a sphere fitted to the headsurface directly underlying a particular channel, a set of neighbours relative to a particular channel etc.
 
 In this case we aim at imposing the following behavior of the function:
 

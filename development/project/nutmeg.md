@@ -21,7 +21,7 @@ See [/development/compat](/development/project/compat) for mydepfun example
 
 ### 2) fileio questions
 
-- How is it recommended to deal with datasets larger than one's RAM? i.e. is there a recommended pipeline to follow? (e.g. load in trials individually, do separate filtering computations, then bring it all together to compute an inverse weight, apply weights to trials separately again, etc).
+- How is it recommended to deal with datasets larger than one's RAM? i.e. is there a recommended pipeline to follow? (e.g., load in trials individually, do separate filtering computations, then bring it all together to compute an inverse weight, apply weights to trials separately again, etc).
 - BTi_UCSF support? (No)
 - Can all data formats be read in as single?  
    _ CTF can, not sure with other formats. (file bug if not true for all formats)
@@ -44,9 +44,9 @@ See [/development/compat](/development/project/compat) for mydepfun example
 - nut_beamforming_gui
 - rumour has it that some people prefer the interactive fiducial selection in NM over FT.
 - simplified pipeline for OpenMEEG with BrainVisa segmentations (Sarang to write wiki on BrainVisa use, then OM creates BEM, then import to MATLAB
-- single precision used as long as double not needed (e.g. initial loading single but covariance computation double)
+- single precision used as long as double not needed (e.g., initial loading single but covariance computation double)
 - how does FT reduce/display data computed with vector inverse method and therefore the source data has 3 components per voxel?
-  _ Specifically, can the s_perp (1 or 2 extra components not of primary direction) be displayed or further manipulated (e.g. in statistics)?
+  _ Specifically, can the s_perp (1 or 2 extra components not of primary direction) be displayed or further manipulated (e.g., in statistics)?
   _ How is s_perp computed 'on the fly' after weights and/or leadfield not present anymore? \* (see email correspondene with Sarang called '3-dim orientation' in 2008)
 - option of when in pipeline to normalise leadfield (specific to scalar LCMV)
 - Wilcoxon ranksum test in NM: uses single trial info per time-freq bin on the fly to compute Z/p values, but then only saves these averages, not save out single-trial info for each time-freq bin (assuming 20000 voxels, 100 time, 10 freq, that would be too large!)
@@ -65,7 +65,7 @@ See [/development/compat](/development/project/compat) for mydepfun example
 
 ### 7) Changes to FT for compatibility with NM
 
-- any function/tool that plots should 'play nice' with Nutmeg figures concurrently open \* Specifically, can FT plotting tools call 'figure' prior to the plot, to avoid plotting over an existing open figure (e.g. Nutmeg GUI figures)
+- any function/tool that plots should 'play nice' with Nutmeg figures concurrently open \* Specifically, can FT plotting tools call 'figure' prior to the plot, to avoid plotting over an existing open figure (e.g., Nutmeg GUI figures)
 
 ### 8) Conversion functions
 
@@ -84,9 +84,9 @@ The conversion from NUTMEG to FieldTrip is done with the following functions ins
 
 ### 9) Examples of why/how to switch between toolboxes
 
-##### 9.1 Load data not supported by NM (e.g. Yokogawa), then do source-loc in NM
+##### 9.1 Load data not supported by NM (e.g., Yokogawa), then do source-loc in NM
 
-##### 9.2 Preprocess data in FT (e.g. ft_rejectvisual) then do source-loc in NM
+##### 9.2 Preprocess data in FT (e.g., ft_rejectvisual) then do source-loc in NM
 
 ##### 9.3 ft_freqanalysis and DICS in FT, then view results in NM
 

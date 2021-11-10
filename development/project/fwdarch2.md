@@ -116,7 +116,7 @@ ft_volumesegment
 ## method 13
 
 From seg TO seg
-All morphological operators, e.g. imopen
+All morphological operators, e.g., imopen
 [Back](#Dealing with the geometry of the forward model)
 
 ## method 14

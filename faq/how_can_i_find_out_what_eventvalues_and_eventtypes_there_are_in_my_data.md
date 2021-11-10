@@ -14,7 +14,7 @@ If you recorded data and do not know what eventvalues or eventtypes there are in
 
 This will print in the command window an overview of all eventtypes with associated eventvalues for subsequent trigger-based trial selection.
 
-Another way to find out eventvalues is to use **[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_databrowser.m)**. When calling the databrowser in mode `cfg.continuous = 'yes'` and with not resampled-data (e.g. with the raw dataset), vertical lines will indicate the onset time of the triggers (and text will indicate the associated value
+Another way to find out eventvalues is to use **[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_databrowser.m)**. When calling the databrowser in mode `cfg.continuous = 'yes'` and with not resampled-data (e.g., with the raw dataset), vertical lines will indicate the onset time of the triggers (and text will indicate the associated value
 
     cfg = [];
     cfg.dataset    = 'yourfile.ext';

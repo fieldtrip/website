@@ -13,9 +13,9 @@ The following function can be used to plot the results of source reconstruction 
     %
     % allows to plot source results obtained from a cortical mesh
     %
-    % cfg - opacity: specifies the opacities of the vertices e.g. [0,1]
-    % cfg - colormapping: defines the colorrange of the vertices e.g. [0,1]
-    % cfg - edgealpha: defines the transparency of the edges for identifying gyri & sulci, e.g. 0.2
+    % cfg - opacity: specifies the opacities of the vertices e.g., [0,1]
+    % cfg - colormapping: defines the colorrange of the vertices e.g., [0,1]
+    % cfg - edgealpha: defines the transparency of the edges for identifying gyri & sulci, e.g., 0.2
     % cfg - mask matrix specifying opacity, format: [n,1] for n vertices
 
     if nargin < 3

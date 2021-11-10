@@ -180,7 +180,7 @@ The preferred format for screenshots is png. The preferred format for photo's is
 
 ## Pdf documents
 
-Pdf documents can be used on the FieldTrip website, but are not managed in git on GitHub. Since they are binary files and often very large (e.g. slides of presentations), storing them in git would be inefficient. Please send pdf file that you want on the website to Robert, he will copy it to .
+Pdf documents can be used on the FieldTrip website, but are not managed in git on GitHub. Since they are binary files and often very large (e.g., slides of presentations), storing them in git would be inefficient. Please send pdf file that you want on the website to Robert, he will copy it to .
 
 ## Videos
 

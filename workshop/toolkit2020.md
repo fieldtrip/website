@@ -67,7 +67,7 @@ We would be very happy if you could spend a couple of minutes of your time to ha
 
 To access the shared calendar using Google Calendar in your browser, you go to “other calendars”, then “add from URL” and use [this shortened link](https://bit.ly/2UPK5YJ).
 
-To access the shared calendar from another application (e.g. Apple Calendar), you can use the [full subscription link](https://calendar.google.com/calendar/ical/vmikkt3gfq3q2dt7b65q9h5nqo%40group.calendar.google.com/private-0dc443093b11255847b13f35483465d7/basic.ics).
+To access the shared calendar from another application (e.g., Apple Calendar), you can use the [full subscription link](https://calendar.google.com/calendar/ical/vmikkt3gfq3q2dt7b65q9h5nqo%40group.calendar.google.com/private-0dc443093b11255847b13f35483465d7/basic.ics).
 
 If you want read/write access (to help maintain/update the schedule), please give your Google account name to Robert, Joey or Jan-Mathijs.
 

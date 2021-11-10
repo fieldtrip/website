@@ -53,7 +53,7 @@ Neurons often fire in synchrony, meaning that action potentials from different n
 ### Reading in spike data
 
 Make sure you run **[ft_defaults](https://github.com/fieldtrip/fieldtrip/blob/release/ft_defaults.m)**
-after having added the main FieldTrip path (e.g. addpath('path_to_fieldtrip')), ensuring that the required functions are in your MATLAB path.
+after having added the main FieldTrip path (e.g., addpath('path_to_fieldtrip')), ensuring that the required functions are in your MATLAB path.
 For spike analysis there is spike toolbox that is located in fieldtrip/contrib/spike.
 
 Spike data can be read out using the function **[ft_read_spike](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_spike.m)**. At the time of writing this tutorial the supported formats are neurosim, mclust t files, neuralynx (nse, nst, ntt, nts) and plexon (nex and plx) files..
@@ -260,7 +260,7 @@ The field spikeTrials.cfg.trl tells us what the start and ends of the trials was
          2872531     3024606
          3662529     3886687]
 
-The advantage of the spike structure is that it is very memory efficient as compared to e.g. a binary (zeros and integers) format, and that data from hundreds of neurons can easily be stored in this structure. For many functions, e.g. PSTHs, raster-plots and cross-correlations, it is also the most natural format to perform computations. Furthermore, the format makes it easy to associate certain data with single spikes, for example spike-triggered LFP spectra and waveform information.
+The advantage of the spike structure is that it is very memory efficient as compared to e.g., a binary (zeros and integers) format, and that data from hundreds of neurons can easily be stored in this structure. For many functions, e.g., PSTHs, raster-plots and cross-correlations, it is also the most natural format to perform computations. Furthermore, the format makes it easy to associate certain data with single spikes, for example spike-triggered LFP spectra and waveform information.
 
 It is also possible to create only one trial. This is useful for two reasons. First of all, we explicitly convert timestamps to time. Secondly, we can correct for the fact the first recorded timestamp often does not start at zero (for example, with Neuralynx data).
 In this case, the first recorded timestamp does correspond to zero. To this end, we run:
@@ -322,7 +322,7 @@ Note that these conversions are automatically performed in all the spike functio
 
 ### Characterizing inter-spike-interval (ISI) distributions
 
-If spike trains are governed by a Poisson process, then the statistics of the spike train can be fully described: the distribution of waiting times between subsequent spikes is exponential, and the distribution of spike counts is Poisson. However, neurons show various non-Poissonian behaviors, such as refractory periods, bursting, and rhythmicity. These behaviors may arise from intrinsic dynamics (e.g. due to certain ion channel time constants), or from network processes (e.g. oscillations). To investigate whether the recorded spike trains reveal such non-Poissonian history effects, we study the ISI distribution.
+If spike trains are governed by a Poisson process, then the statistics of the spike train can be fully described: the distribution of waiting times between subsequent spikes is exponential, and the distribution of spike counts is Poisson. However, neurons show various non-Poissonian behaviors, such as refractory periods, bursting, and rhythmicity. These behaviors may arise from intrinsic dynamics (e.g., due to certain ion channel time constants), or from network processes (e.g., oscillations). To investigate whether the recorded spike trains reveal such non-Poissonian history effects, we study the ISI distribution.
 For the current dataset, we study the ISI distribution for the stimulus period, using the functions **[ft_spike_isi](https://github.com/fieldtrip/fieldtrip/blob/release/ft_spike_isi.m)** and **[ft_spike_plot_isireturn](https://github.com/fieldtrip/fieldtrip/blob/release/ft_spike_plot_isireturn.m)**.
 We compute the isi histogram using
 
@@ -343,7 +343,7 @@ The resulting structure isih has the following content
         coeffvar: [1.6898 1.1453]
              cfg: [1x1 struct]
 
-The field isih.isi contains the isi per spike (w.r.t the previous spike) and contains NaNs at the beginning of the trials. The field isih.avg contains the average isi histogram per unit, and isih.coeffvar the computed parameter summarizing the statistics of the isi histogram (e.g. see Shinomoto et al., 2009) .We then plot the isi histogram (which can be plotted alone using **[ft_spike_plot_isi](https://github.com/fieldtrip/fieldtrip/blob/release/ft_spike_plot_isi.m)**) together with the isi (Poincare) return plot, which plots the current isi(n) against the next isi(n+1), thereby giving insight into the second order statistics of the isi distribution:
+The field isih.isi contains the isi per spike (w.r.t the previous spike) and contains NaNs at the beginning of the trials. The field isih.avg contains the average isi histogram per unit, and isih.coeffvar the computed parameter summarizing the statistics of the isi histogram (e.g., see Shinomoto et al., 2009) .We then plot the isi histogram (which can be plotted alone using **[ft_spike_plot_isi](https://github.com/fieldtrip/fieldtrip/blob/release/ft_spike_plot_isi.m)**) together with the isi (Poincare) return plot, which plots the current isi(n) against the next isi(n+1), thereby giving insight into the second order statistics of the isi distribution:
 
     for k = [1 2] % only do for the single units
       cfg              = [];
@@ -510,7 +510,7 @@ The output rate is a timelock structure with content
          trial: [600x2 double]
            cfg: [1x1 struct]
 
-An important question in neurophysiology is whether neurons are capable of transmitting information independent from each other, or whether neurons have shared trial-by-trial fluctuations (called 'noise correlations') in their firing rate (given an identical stimulus) that diminish the coding capacity of the population (e.g. see Ecker et al., 2010).
+An important question in neurophysiology is whether neurons are capable of transmitting information independent from each other, or whether neurons have shared trial-by-trial fluctuations (called 'noise correlations') in their firing rate (given an identical stimulus) that diminish the coding capacity of the population (e.g., see Ecker et al., 2010).
 One can compute noise correlations between units by doing
 
     [R,P] = corrcoef(rate.trial)
@@ -528,7 +528,7 @@ One can compute noise correlations between units by doing
 ### Computing cross-correlations between spike trains
 
 Auto- and cross-correlations between spike trains are computed using **[ft_spike_xcorr](https://github.com/fieldtrip/fieldtrip/blob/release/ft_spike_xcorr.m)**.
-The cross-correlogram is one of the classic techniques to show rhythmic synchronization between different neurons (e.g. see Gray et al., 1989) but also to identify synaptic connections between recorded neurons (e.g. see Bartho et al., 2004). The auto-correlogram typically offers a more sensitive measure of the degree to which a single neuronal source displays rhythmic firing than the ISI distribution, especially if firing rates are high. For this analysis we select the unsorted multi-units from the same data-set, as they give more reliable cross-correlations. The observed cross-correlogram should always be compared against a cross-correlogram obtained by shuffling the trials. Cross-correlations between neurons can either arise because of common, time-locked fluctuations in the firing rate (Brody et al., 1999). These correlations are invariant to a change in the order of trials. The shuffling of trials in **[ft_spike_xcorr](https://github.com/fieldtrip/fieldtrip/blob/release/ft_spike_xcorr.m)** always pertains to two subsequent trials, in order to avoid an influence of slow changes in the firing rate across trials. We refer to this cross-correlogram that is obtained under a permutation of subsequent trials as the 'shift-predictor' cross-correlogram. If the observed features of the cross-correlogram that are not present in the shift-predictor cross-correlogram, then this indicates that they arise because of induced synchronous activity. Note that for the shift-predictor, it is required that the trials cover the full latency window that is specified by cfg.latency. For example, if the first trial has a duration of 3 sec. and the second of 2 sec., we can only compute the contribution to the shift-predictor based on the spikes from the first 2 seconds. Hence, cfg.vartriallen must be specified to 'no'.
+The cross-correlogram is one of the classic techniques to show rhythmic synchronization between different neurons (e.g., see Gray et al., 1989) but also to identify synaptic connections between recorded neurons (e.g., see Bartho et al., 2004). The auto-correlogram typically offers a more sensitive measure of the degree to which a single neuronal source displays rhythmic firing than the ISI distribution, especially if firing rates are high. For this analysis we select the unsorted multi-units from the same data-set, as they give more reliable cross-correlations. The observed cross-correlogram should always be compared against a cross-correlogram obtained by shuffling the trials. Cross-correlations between neurons can either arise because of common, time-locked fluctuations in the firing rate (Brody et al., 1999). These correlations are invariant to a change in the order of trials. The shuffling of trials in **[ft_spike_xcorr](https://github.com/fieldtrip/fieldtrip/blob/release/ft_spike_xcorr.m)** always pertains to two subsequent trials, in order to avoid an influence of slow changes in the firing rate across trials. We refer to this cross-correlogram that is obtained under a permutation of subsequent trials as the 'shift-predictor' cross-correlogram. If the observed features of the cross-correlogram that are not present in the shift-predictor cross-correlogram, then this indicates that they arise because of induced synchronous activity. Note that for the shift-predictor, it is required that the trials cover the full latency window that is specified by cfg.latency. For example, if the first trial has a duration of 3 sec. and the second of 2 sec., we can only compute the contribution to the shift-predictor based on the spikes from the first 2 seconds. Hence, cfg.vartriallen must be specified to 'no'.
 
 We run
 
@@ -637,4 +637,4 @@ giving the normalized jpsth, the shuffle corrected normalized jpsth, and the dif
 
 ## Summary
 
-We have shown how to perform several common spike train analyses. As the outputs from many functions are standard FieldTrip functions (e.g. the output from **[ft_spikedensity](https://github.com/fieldtrip/fieldtrip/blob/release/ft_spikedensity.m)**), the powerful statistical methods available in FieldTrip can be readily applied on them. Also not discussed was the joint analysis of LFP and spike data. but this is dealt with in the [spikefield](/tutorial/spikefield) tutorial.
+We have shown how to perform several common spike train analyses. As the outputs from many functions are standard FieldTrip functions (e.g., the output from **[ft_spikedensity](https://github.com/fieldtrip/fieldtrip/blob/release/ft_spikedensity.m)**), the powerful statistical methods available in FieldTrip can be readily applied on them. Also not discussed was the joint analysis of LFP and spike data. but this is dealt with in the [spikefield](/tutorial/spikefield) tutorial.

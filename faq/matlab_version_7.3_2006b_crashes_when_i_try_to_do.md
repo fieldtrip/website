@@ -5,7 +5,7 @@ tags: [faq, matlab]
 
 # MATLAB version 7.3 (2006b) crashes when I try to do ...
 
-This may relate to a known bug in MATLAB 2006b with persistent variables. The bug relates to aggressive optimization of for-loops introduced in MATLAB 2006b, which is incompatible with persistent variables inside the for-loop. The progress indicator used in FieldTrip (i.e. the one that is dealing with the cfg.feedback options) is using a persistent variable so that it only updates the progress bar maximum ~100 times, instead of 10000 times (e.g. if you do a dipole scan for 10000 grid points).
+This may relate to a known bug in MATLAB 2006b with persistent variables. The bug relates to aggressive optimization of for-loops introduced in MATLAB 2006b, which is incompatible with persistent variables inside the for-loop. The progress indicator used in FieldTrip (i.e. the one that is dealing with the cfg.feedback options) is using a persistent variable so that it only updates the progress bar maximum ~100 times, instead of 10000 times (e.g., if you do a dipole scan for 10000 grid points).
 
 You can determine whether this bug is actually the problem for MATLAB crashing by
 

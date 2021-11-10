@@ -17,7 +17,7 @@ This tutorial assumes that the steps of [preprocessing](/tutorial/preprocessing)
 
 ### Multi-modal sleep recordings
 
-Discrete events and continuous shifts in activity during sleep are not easily observed in one modality by itself. They have to be identified and marked by using the combination of the different modalities. This is why sleep recordings span multiple modalities, each with clearly defined changes in the activity that are relatively easy to predict. We have some good understanding about the physiological relationships between the events and what is happening to the different body parts during sleep. Finally, most of the activity which we usually consider as artifacts in our task-related EEG recordings (e.g. eye movements, muscle and heart activity) occur here in a systematic manner and are considered important features of a sleep state rather than an artifact. Thus using sleep data allows us to safely explore how to identify changes in brain state in a well studied example. Here we can gain some skills to explore cross-modality relations in recordings that are less well defined, e.g. task or resting state recordings, or parallel recordings that expand the interpretability by adding features of other or related modalities (e.g. motion sensors, MEG, fMRI).
+Discrete events and continuous shifts in activity during sleep are not easily observed in one modality by itself. They have to be identified and marked by using the combination of the different modalities. This is why sleep recordings span multiple modalities, each with clearly defined changes in the activity that are relatively easy to predict. We have some good understanding about the physiological relationships between the events and what is happening to the different body parts during sleep. Finally, most of the activity which we usually consider as artifacts in our task-related EEG recordings (e.g., eye movements, muscle and heart activity) occur here in a systematic manner and are considered important features of a sleep state rather than an artifact. Thus using sleep data allows us to safely explore how to identify changes in brain state in a well studied example. Here we can gain some skills to explore cross-modality relations in recordings that are less well defined, e.g., task or resting state recordings, or parallel recordings that expand the interpretability by adding features of other or related modalities (e.g., motion sensors, MEG, fMRI).
 
 ### Sleep states by Polysomnography
 
@@ -48,7 +48,7 @@ To explore the sleep data, we will perform the following step
 
 ## Preprocessing
 
-The **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** function requires the modified sleep datasets and Subject loading code (e.g. Subject05.m), which is available from [our FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/sleep/)
+The **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** function requires the modified sleep datasets and Subject loading code (e.g., Subject05.m), which is available from [our FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/sleep/)
 
 Load the subject specific information. Then read and preprocess the continuous sleep data
 
@@ -853,18 +853,18 @@ Try to visualize an average QRS complex around the R-wave like was done for slee
 
 In this tutorial we learned how to read and interpret continuous sleep data. We learned how to use modalities EMG, EOG, EEG and ECG to gain more information about the changing states during a long recording. We used EMG and EOG to find epochs of Wake that we considered artifacts for further analysis of non-REM sleep.
 
-Also we looked at the distribution of different sleep frequency bands, their fluctuation in sleep cycles and how we can extract epochs from the data that contains useful information for further analysis while at the same time deciding to exclude epochs with other (artifactual) activity (e.g. Wake). We thus constructed a partial estimate of a sleep profile (hypnogram) to aid us further.
+Also we looked at the distribution of different sleep frequency bands, their fluctuation in sleep cycles and how we can extract epochs from the data that contains useful information for further analysis while at the same time deciding to exclude epochs with other (artifactual) activity (e.g., Wake). We thus constructed a partial estimate of a sleep profile (hypnogram) to aid us further.
 
-Finally we explored how easy it is to detect spontaneous events in signals like ECG and EEG by using simple filtering and thresholding of the cleaned data epochs as a basis, e.g. we found R-waves, sleep slow waves and spindles. These have been then viewed in the **[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_databrowser.m)** and we looked at the typical spontaneous events by aligning them by time (ERP) and look at time-locked frequency activity (ERF), all in a single channel.
+Finally we explored how easy it is to detect spontaneous events in signals like ECG and EEG by using simple filtering and thresholding of the cleaned data epochs as a basis, e.g., we found R-waves, sleep slow waves and spindles. These have been then viewed in the **[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_databrowser.m)** and we looked at the typical spontaneous events by aligning them by time (ERP) and look at time-locked frequency activity (ERF), all in a single channel.
 
 This should give you a basis of also recognizing other data and see that recordings are highly dependent on the current state. Importantly, this might also apply to wake recordings of task in which the subjects might doze off, loose focus or have their eyes closed or directed away at important periods of the task. The techinques here can thus also be used as sanity check in other data.
 
 Interesting to continue the analysis if you want to go further:
 
-- do the analyis on data with multiple EEG channels and topographic plots (e.g. [Time-frequency analysis of combined MEG/EEG](/workshop/natmeg/timefrequency))
+- do the analyis on data with multiple EEG channels and topographic plots (e.g., [Time-frequency analysis of combined MEG/EEG](/workshop/natmeg/timefrequency))
 - using **[ft_freqgrandaverage](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqgrandaverage.m)** and **[ft_timelockgrandaverage](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockgrandaverage.m)** to average the results of different recordings/subjects
-- Practicing or trying to automatically find different kind of events, e.g. rapid eye movements and blinks (in the first derivative of a filtered EOG signal), epileptic spikes have similar properties to slow waves (but have different amplitudes and shapes) ...
-- find the timelocking/co-occurrence between different events (e.g. spindles that occur at the same time as slow waves.) and only look at the ones that occur together or the ones that do not.
+- Practicing or trying to automatically find different kind of events, e.g., rapid eye movements and blinks (in the first derivative of a filtered EOG signal), epileptic spikes have similar properties to slow waves (but have different amplitudes and shapes) ...
+- find the timelocking/co-occurrence between different events (e.g., spindles that occur at the same time as slow waves.) and only look at the ones that occur together or the ones that do not.
 
 Suggested tutorials for further reading:
 

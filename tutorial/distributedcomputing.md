@@ -7,7 +7,7 @@ tags: [tutorial, qsub, peer, distcomp, matlab, meg-language]
 
 ## Introduction
 
-Many times you are faced with the analysis of multiple subjects and experimental conditions, or with the analysis of your data using multiple analysis parameters (e.g. frequency bands). Parallel computing in MATLAB can help you to speed up these types of analysis.
+Many times you are faced with the analysis of multiple subjects and experimental conditions, or with the analysis of your data using multiple analysis parameters (e.g., frequency bands). Parallel computing in MATLAB can help you to speed up these types of analysis.
 
 Note that this is usually referred to as **distributed computing** if you are submitting multiple independent computations to multiple computers. The term **parallel computing** is usually reserved for multiple CPUs or computers working simultaneously at the same problem that requires constant sharing of small snippets of data between the CPUs. Since the analyses of multiple subjects are done independently of each other, we call it distributed computing.
 
@@ -15,7 +15,7 @@ This tutorial describes two approaches for distributing the analysis of multiple
 
 After this tutorial you should be able to execute your multi-subject analysis in parallel and design analysis scripts that allow for easy parallelization, either over subjects or over parameters used in the analysis.
 
-In this tutorial we use the qsub toolbox that is released along with FieldTrip. There are alternative methods for distributed computing, such as the [MATLAB Parallel Computing toolbox](http://www.mathworks.com/products/parallel-computing/) (e.g. using parfor or batch) or with the peer-to-peer toolbox (also included with FieldTrip). More general information about the different approaches for distributed processing in MATLAB can be found in the [frequently asked questions](/faq#distributed_computing_with_fieldtrip_and_matlab).
+In this tutorial we use the qsub toolbox that is released along with FieldTrip. There are alternative methods for distributed computing, such as the [MATLAB Parallel Computing toolbox](http://www.mathworks.com/products/parallel-computing/) (e.g., using parfor or batch) or with the peer-to-peer toolbox (also included with FieldTrip). More general information about the different approaches for distributed processing in MATLAB can be found in the [frequently asked questions](/faq#distributed_computing_with_fieldtrip_and_matlab).
 
 ## Background
 
@@ -252,7 +252,7 @@ This example script demonstrates how you can efficiently design your custom code
     cfg.layout = 'CTF151_helmet.mat';
     ft_multiplotER(cfg, avgFC, avgFIC, avgIC)
 
-This way you can distribute your custom function (e.g. see below) along with the input and output parameters.
+This way you can distribute your custom function (e.g., see below) along with the input and output parameters.
 
     function preproc_timelock_planar(cfg1, cfg2, cfg3, cfg4, outputfile)
 

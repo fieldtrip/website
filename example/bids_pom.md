@@ -20,7 +20,7 @@ Here are some pieces of equipment that we use at the Donders Institute _and_ tha
   - Qualisys, binary data in a proprietary `.qtm` format
   - NDI Optotrak
   - Virtual Reality (VR) setups
-  - recording of static positions, e.g. for EEG electrodes
+  - recording of static positions, e.g., for EEG electrodes
     - Polhemus electromagnetic tracker, ascii file with positions
     - Occipital Structure Sensor, 3D meshes and texture mapping in an `.obj` file
 - eye tracker
@@ -532,11 +532,11 @@ All measurements that were performed are represented in the `_scans.tsv` file. T
 Contrary to most simple examples of functional MRI data on the [BIDS website](https://bids.neuroimaging.io), where the presentation log file is converted into an `_events.tsv` that is placed besides the functional `_bold.nii.gz` file as a "sidecar", here we represent the behavioral data explicitly in the `beh` folder. This allows the behavioral data to also be expressed in relation to the eyetracker data, or in relation to the EMG data.
 
 {% include markup/warning %}
-We use the strategy that _each recording_ of data to disk is as important as _any other recording_. E.g. for people studying eye movements the eyetracker data is the most important, for people studying tremor the EMG might be the most important, and neuroimaging people would consider the MR data as the most important.
+We use the strategy that _each recording_ of data to disk is as important as _any other recording_. e.g., for people studying eye movements the eyetracker data is the most important, for people studying tremor the EMG might be the most important, and neuroimaging people would consider the MR data as the most important.
 
-Keeping the different types of data represented symmetrically allows for arbitrary combinations of data to be recorded and investigated, e.g. video in combination with EEG, audio in combination with motion capture, iEEG in combination with MEG, or functional MRI in relation with behavior.
+Keeping the different types of data represented symmetrically allows for arbitrary combinations of data to be recorded and investigated, e.g., video in combination with EEG, audio in combination with motion capture, iEEG in combination with MEG, or functional MRI in relation with behavior.
 
-In cognitive or behavioral studies, it is very common to control the experiment using stimulus presentation software that records the timing of stimuli and responses. If during the experiment only one type of physiological data is recorded (e.g. fMRI, EEG, MEG or iEEG) the presentation events can be stored in the `_events.tsv` sidecar file that accompanies the physiological data, and the onset column in the events file should match the time of the corresponding recording. In cases with multiple recordings we recommend representing them separately, which means that behavioral events (stimuli and responses) are in the `beh` folder. The same holds for `physio` recordings in relation to functional MRI.
+In cognitive or behavioral studies, it is very common to control the experiment using stimulus presentation software that records the timing of stimuli and responses. If during the experiment only one type of physiological data is recorded (e.g., fMRI, EEG, MEG or iEEG) the presentation events can be stored in the `_events.tsv` sidecar file that accompanies the physiological data, and the onset column in the events file should match the time of the corresponding recording. In cases with multiple recordings we recommend representing them separately, which means that behavioral events (stimuli and responses) are in the `beh` folder. The same holds for `physio` recordings in relation to functional MRI.
 {% include markup/end %}
 
 For the MR scans the acquisition time has been extracted from the DICOM files. The date of acquisition has been set to 1900-01-01 by [dcm2niix](https://www.nitrc.org/projects/dcm2nii) for privacy reasons, the time of acquisition does correspond to the actual time the scan was performed.

@@ -489,7 +489,7 @@ Now, I will use the leadfield from the MNE Suite analysis of the phantom data.
     %% make same source space
     %%%%%
 
-    % look for the points that are different (e.g. missing from the MNE suite fwd)
+    % look for the points that are different (e.g., missing from the MNE suite fwd)
 
     vertno = fwd.src.vertno; % this contains the indices of the used source points
     v_st = int2str(vertno');

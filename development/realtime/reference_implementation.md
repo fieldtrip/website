@@ -70,7 +70,7 @@ Compiling the buffer library should simply work by changing into the directory "
 
 The MEX-file is compiled within MATLAB. Just change into "...realtime/buffer/matlab" and type "compile". This should only fail in case your version of GCC is either too old or (more likely) too recent, and MATLAB will give you a corresponding warning. In particular, GCC>=4.2 doesn't seem to be supported by MATLAB versions as new as 2009b.
 
-If you have an unsupported GCC version, you should check whether your Linux distribution offers older packages of GCC. You can also compile GCC from source and install multiple versions of GCC alongside, but please refer to <http://gcc.gnu.org> for more information on this. If you have multiple versions of GCC, you will also have to tweak the file "~/.matlab/matlabXXXX/mexopts.sh" where "XXXX" denotes the version of MATLAB you are using: First locate the right "case" segment for your operation system, e.g. glnx86 for 32-bit Linux flavours. Then, modify the variables "CC" and "CXX" such that they point to the binaries of the right version. As a hint, these are often called "gcc-4.2" and "g++-4.2", that is, the version number forms part of the name. Maybe try and find the right files on the command line first.
+If you have an unsupported GCC version, you should check whether your Linux distribution offers older packages of GCC. You can also compile GCC from source and install multiple versions of GCC alongside, but please refer to <http://gcc.gnu.org> for more information on this. If you have multiple versions of GCC, you will also have to tweak the file "~/.matlab/matlabXXXX/mexopts.sh" where "XXXX" denotes the version of MATLAB you are using: First locate the right "case" segment for your operation system, e.g., glnx86 for 32-bit Linux flavours. Then, modify the variables "CC" and "CXX" such that they point to the binaries of the right version. As a hint, these are often called "gcc-4.2" and "g++-4.2", that is, the version number forms part of the name. Maybe try and find the right files on the command line first.
 
 #### Buffer MEX-file with various MATLAB versions
 
@@ -102,7 +102,7 @@ using the same platform. If you get strange build errors, you might try to link 
 
 On macOS the cmake software has to be downloaded and installed from [here](http://www.cmake.org), or using FinkCommander.
 
-In the top-level directory of the source-tree (the place where you see e.g. the "src" folder) create a new directory called e.g. "build" and enter it. Now issue "cmake ../". This checks for dependencies. If cmake complains about not finding something, it must be installed first.
+In the top-level directory of the source-tree (the place where you see e.g., the "src" folder) create a new directory called e.g., "build" and enter it. Now issue "cmake ../". This checks for dependencies. If cmake complains about not finding something, it must be installed first.
 
 Typing "make" compiles and links the libaries and some executables all of which can be found in the "src" directory (n.b. not the "src" directory where the sources are but the newly created one in the folder cmake was called from).
 

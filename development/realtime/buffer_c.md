@@ -5,7 +5,7 @@ tags: [realtime, development]
 
 ## FieldTrip buffer C implementation
 
-The best example for integrating the FieldTrip buffer in your own application is in the "demo_sinewave" and the "demo_combined" command-line applications. They implement a sinewave signal generator that writes its data to the buffer. The "demo_sinewave" has to be used in combination with the "buffer" application, whereas "demo_combined" contains both. Subsequently another application (e.g. implemented in MATLAB) can read from the buffer.
+The best example for integrating the FieldTrip buffer in your own application is in the "demo_sinewave" and the "demo_combined" command-line applications. They implement a sinewave signal generator that writes its data to the buffer. The "demo_sinewave" has to be used in combination with the "buffer" application, whereas "demo_combined" contains both. Subsequently another application (e.g., implemented in MATLAB) can read from the buffer.
 
 If you want to implement the buffer in your own application, you should consider whether your application should maintain the buffer itself, or whether your application would be writing to a buffer that is maintained by another application.
 

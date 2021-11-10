@@ -31,7 +31,7 @@ FieldTrip and MNE-Python have similar but not identical processing pipelines. A 
 | Conceptual                                   | FieldTrip                                               | MNE-Python                                                                  |
 | -------------------------------------------- | ------------------------------------------------------- | --------------------------------------------------------------------------- |
 | one continuous segment of data               | [ft_datatype_raw](https://github.com/fieldtrip/fieldtrip/blob/release/utilities/ft_datatype_raw)           | Raw                                                                         |
-| multiple segments of data, e.g. trials       | [ft_datatype_raw](https://github.com/fieldtrip/fieldtrip/blob/release/utilities/ft_datatype_raw)           | Epochs (This datatype is not part of the original MNE Suite written in C) |
+| multiple segments of data, e.g., trials       | [ft_datatype_raw](https://github.com/fieldtrip/fieldtrip/blob/release/utilities/ft_datatype_raw)           | Epochs (This datatype is not part of the original MNE Suite written in C) |
 | averaged ERFs for one or multiple conditions | [ft_datatype_timelock](https://github.com/fieldtrip/fieldtrip/blob/release/utilities/ft_datatype_timelock) | Evoked                                                                      |
 
 Therefore, we will need to import and export Raw, Epochs, and Evoked datatypes.
@@ -215,7 +215,7 @@ In addition, we can read multiple conditions too, if there are present in the ''
 
     cfg = [];
     cfg.dataset = fiff_file;
-    data1 = ft_preprocessing(cfg);  % E.g. with 3 conditions -> mapped to 3 trials
+    data1 = ft_preprocessing(cfg);  % e.g., with 3 conditions -> mapped to 3 trials
 
     cfg = [];
     cfg.trials = 1;

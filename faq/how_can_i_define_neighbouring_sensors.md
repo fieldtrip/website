@@ -29,7 +29,7 @@ We recommend that you check with ft_neighbourplot whether the 'template' method 
 
 Note that we do not take responsibility for any wrongly drawn conclusions. The choice how to select neighbours has to be made by you!
 
-Also note that ft_prepare_neighbours will first try to deduce the neighbours from the config (e.g. from the optional cfg.layout field) before it will try searching your data for sensor position information.
+Also note that ft_prepare_neighbours will first try to deduce the neighbours from the config (e.g., from the optional cfg.layout field) before it will try searching your data for sensor position information.
 {% include markup/end %}
 
 You can of course also manually define a neighbourhood struct-array, or manually adjust an existing neighbourhood structure. Currently, each entry of the neighbour-structure array needs to have two fields: 'label' and 'neighblabel', see below. the 'label' is a string that contains the label of the current channel, the neighblabel is a cell array of strings that defines the direct neighbours for that given channel.

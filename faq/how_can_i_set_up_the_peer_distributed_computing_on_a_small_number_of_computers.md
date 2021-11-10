@@ -36,6 +36,6 @@ will only execute the jobs on your own workers.
 
 ## The next morning...
 
-In the morning, your colleagues might arrive earlier to their desk than you, and of course then they want their computer back. If the workers are idle, they can simply exit the MATLAB sessions you started and regain control. If the workers are still busy executing their job, they can simply kick you out (e.g. reboot, or ctrl-c your MATLAB workers). The **[peercellfun](https://github.com/fieldtrip/fieldtrip/blob/release/peer/peercellfun.m)** will automatically resubmit the jobs that fail, i.e. if one of the workers disappears, the job that it was running will be resubmitted elsewhere.
+In the morning, your colleagues might arrive earlier to their desk than you, and of course then they want their computer back. If the workers are idle, they can simply exit the MATLAB sessions you started and regain control. If the workers are still busy executing their job, they can simply kick you out (e.g., reboot, or ctrl-c your MATLAB workers). The **[peercellfun](https://github.com/fieldtrip/fieldtrip/blob/release/peer/peercellfun.m)** will automatically resubmit the jobs that fail, i.e. if one of the workers disappears, the job that it was running will be resubmitted elsewhere.
 
 That is why you want also to have a few workers running on your own computer: these will take over the remaining jobs, once all your colleagues' computers are confiscated again by their respective owners.

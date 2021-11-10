@@ -13,7 +13,7 @@ This page is part of the documentation series of the FieldTrip buffer for realti
 4.  specific [implementations](/development/realtime/implementation) that interface with acquisition software, or software platforms.
 5.  the [getting started](/getting_started/realtime) documentation which takes you through the first steps of real-time data streaming and analysis in MATLAB
 
-This page deals with specific implemenations of the FieldTrip buffer protocol. This includes interfacing with specific hardware (e.g. TMSi, Biosemi, CTF), software platforms (e.g. BCI2000, BrainStream) and links to the implementation in specific programming languages (e.g. MATLAB, Java, C/C++, Python).
+This page deals with specific implemenations of the FieldTrip buffer protocol. This includes interfacing with specific hardware (e.g., TMSi, Biosemi, CTF), software platforms (e.g., BCI2000, BrainStream) and links to the implementation in specific programming languages (e.g., MATLAB, Java, C/C++, Python).
 
 ## Implementations for specific aquisition systems
 

@@ -174,7 +174,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [How do I avoid having to allocate N copies of my data if I want to execute N jobs?](/faq/how_do_i_avoid_having_to_allocate_n_copies_of_my_data_if_i_want_to_execute_n_jobs)
 - [How does the peer smartmem algorithm work?](/faq/how_does_the_peer_smartmem_algorithm_work)
 - [How does the peer smartshare algorithm work?](/faq/how_does_the_peer_smartshare_algorithm_work)
-- [How should I call peercellfun when a function requires many inputs (e.g. key-value pairs)?](/faq/how_should_i_call_peercellfun_when_a_function_requires_many_inputs_e.g._key-value_pairs)
+- [How should I call peercellfun when a function requires many inputs (e.g., key-value pairs)?](/faq/how_should_i_call_peercellfun_when_a_function_requires_many_inputs_e.g._key-value_pairs)
 - [How to get started with peer distributed computing on my own desktop computer?](/faq/how_to_get_started_with_peer_distributed_computing_on_my_own_desktop_computer)
 - [What happens if a job fails to execute properly?](/faq/what_happens_if_a_job_fails_to_execute_properly)
 - [What happens with a job that has an error on the worker?](/faq/what_happens_with_a_job_that_has_an_error_on_the_worker)

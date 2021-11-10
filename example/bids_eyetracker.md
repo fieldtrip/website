@@ -25,7 +25,7 @@ All data for the following examples is available from our [FTP server](ftp://ftp
 
 The examples includes the original log files under the “original” directory. It also has a copy of the script to do the conversion under “code”. The reorganized data is under the “bids” directory. According to [the documentation](https://bids-specification.readthedocs.io/en/stable/02-common-principles.html#source-vs-raw-vs-derived-data) the original data can be added to the BIDS dataset under the “sourcedata” directory and code can be added to the “code” directory. This way no information is lost and the conversion/reorganization is fully reproducible.
 
-In general: if your original data is in a different format than the BIDS representation (e.g. DICOM instead of NIFTI, or the original binary data from the eye tracker software), you probably want  to keep a copy of the original data as well, e.g. on a data acquisition collection on the Donders Repository. If it is in the same format (which is not the case here), you could simply delete the original data after conversion. In either case - your own analyses and the shared data would be based on the BIDS representation.
+In general: if your original data is in a different format than the BIDS representation (e.g., DICOM instead of NIFTI, or the original binary data from the eye tracker software), you probably want  to keep a copy of the original data as well, e.g., on a data acquisition collection on the Donders Repository. If it is in the same format (which is not the case here), you could simply delete the original data after conversion. In either case - your own analyses and the shared data would be based on the BIDS representation.
 
 There are numerous eye tracking systems, such as SR Research EyeLink, Tobii, EyeTech, GazePoint, SmartEye and Pupil Labs. We cannot provide examples for all of them, but in principle data from each system would be stored in the same standard BIDS representation, allowing it to be reused by others.
 
@@ -224,7 +224,7 @@ The SMI eye tracker stores the raw data in an `.idf` file. That file cannot be r
 
 ### Example
 
-In the following example we are converting two runs of eye tracker data for two subjects. The data was recorded at the DCCN. Since additional information is missing (e.g. units, origin, calibration procedure), the metadata is very sparse.
+In the following example we are converting two runs of eye tracker data for two subjects. The data was recorded at the DCCN. Since additional information is missing (e.g., units, origin, calibration procedure), the metadata is very sparse.
 
 ```
 filename = {

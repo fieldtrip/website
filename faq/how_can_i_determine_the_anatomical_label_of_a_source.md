@@ -5,7 +5,7 @@ tags: [faq, source]
 
 # How can I determine the anatomical label of a source?
 
-FieldTrip supports the use of an anatomical atlas to look up the anatomical label of a source that you have localized. Vice versa you can also first look up the location of an anatomical region and subsequently use that in source analysis, e.g. as region of interest for beamforming or as starting point for dipole fitting.
+FieldTrip supports the use of an anatomical atlas to look up the anatomical label of a source that you have localized. Vice versa you can also first look up the location of an anatomical region and subsequently use that in source analysis, e.g., as region of interest for beamforming or as starting point for dipole fitting.
 
 The function **[ft_read_atlas](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_atlas.m)** reads in a specified atlas with coordinates and anatomical labels. It either uses the [AFNI brik file](https://www.google.com/search?q=afni+brik+file+format), or it uses one of the [WFU atlases](http://fmri.wfubmc.edu) (see also https://www.nitrc.org/projects/wfu_pickatlas/). The following example code shows a simple demonstration:
 
@@ -64,7 +64,7 @@ The function below represents a tool that automatically overlays all channels in
     %
     %   elec_nat    = electrode structure, with positions in native space
     %   fsdir       = string, path to freesurfer directory for the subject
-    %                 (e.g. 'SubjectUCI29/freesurfer')
+    %                 (e.g., 'SubjectUCI29/freesurfer')
     %
     % Ensure FieldTrip is correcty added to the MATLAB path:
     %   addpath <path to fieldtrip home directory>
@@ -72,7 +72,7 @@ The function below represents a tool that automatically overlays all channels in
     %
     % On Mac and Linux, the freely available xlwrite plugin is needed,
     % hosted at: http://www.mathworks.com/matlabcentral/fileexchange/38591
-    %   xldir       = string, path to xlwrite dir (e.g. 'MATLAB/xlwrite')
+    %   xldir       = string, path to xlwrite dir (e.g., 'MATLAB/xlwrite')
     %
     % This function is part of Stolk, Griffin et al., Integrated analysis
     % of anatomical and electrophysiological human intracranial data

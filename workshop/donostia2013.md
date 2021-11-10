@@ -26,10 +26,10 @@ downloaded but will also be distributed on the USB stick.
 
 1.  Copy the contents from the USB stick to your computer
 2.  Unzip the fieldtrip-xxxxxxxx.zip file.
-3.  Unzip the "data.zip" file, you should place the contents in the same directory, e.g. in a newly created directory called 'toolkit'.
+3.  Unzip the "data.zip" file, you should place the contents in the same directory, e.g., in a newly created directory called 'toolkit'.
 
 {% include markup/danger %}
-Depending on the unzip program you are using (e.g. Winrar), the name of the zip file might also appear as directiory, resulting in path_to_directory/fieldtrip-xxxxxxxx/fieldtrip-xxxxxxxx, i.e. the FieldTrip directory in a FieldTrip directory. Please fix that by moving all files one level up.
+Depending on the unzip program you are using (e.g., Winrar), the name of the zip file might also appear as directiory, resulting in path_to_directory/fieldtrip-xxxxxxxx/fieldtrip-xxxxxxxx, i.e. the FieldTrip directory in a FieldTrip directory. Please fix that by moving all files one level up.
 {% include markup/end %}
 
 After copying all files to your computer and unzipping then, you start MATLAB. To ensure that the right version of FieldTrip is used, and not another version (such as the one included in SPM or EEGLAB), you type in the MATLAB command window

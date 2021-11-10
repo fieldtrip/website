@@ -26,7 +26,7 @@ Both text files are based on the Microsoft Windows INI format consisting of:
 - key-value pairs marked as `key=value`
 
 {% include markup/info %}
-The BrainVision Recorded and Analyzer software packages use a well-defined file format that is supported by many software packages (e.g. FieldTrip, EEGLAB, SPM, MNE-Python) and that is used in [BIDS for EEG](https://psyarxiv.com/63a4y). The details of the BrainVision data format are available from the [Brain Products website](https://www.brainproducts.com/productdetails.php?id=21&tab=5).
+The BrainVision Recorded and Analyzer software packages use a well-defined file format that is supported by many software packages (e.g., FieldTrip, EEGLAB, SPM, MNE-Python) and that is used in [BIDS for EEG](https://psyarxiv.com/63a4y). The details of the BrainVision data format are available from the [Brain Products website](https://www.brainproducts.com/productdetails.php?id=21&tab=5).
 {% include markup/end %}
 
 For example, see this excerpt from a BrainVision header file (.vhdr):
@@ -67,7 +67,7 @@ Even for raw data, the data are considered segmented by FieldTrip. The data file
 Sometimes users have already done some processing (e.g., rereferencing, epoching, artifact identification) in BrainVision Analyzer, and in order to avoid repeating the time consuming / subjective selection steps, it might be preferable to start from the processed data. BrainVision Analyzer stores the processing steps in a so called history file, keeping the raw data unchanged, and applying the processing steps on-the-fly. This is not something that FieldTrip can work with, so you need to export your data first.
 
 The following describes the recipe to export the processed data into a format the FieldTrip can deal with. It produces a triplet of files (.vhdr, .vmrk and .dat (instead of .eeg)), that can be imported into FieldTrip, in much the same way as described above.
-You can do all the preprocessing you want to do in BrainVision Analyzer (e.g. iltering and re-referencing can be done too) and once you have the data segmented the way you want it select 'export > generic data'. You'll get a window (maybe 2 consecutive windows) popping up asking for various settings. Leave everything as it is, except make sure the following are set:
+You can do all the preprocessing you want to do in BrainVision Analyzer (e.g., iltering and re-referencing can be done too) and once you have the data segmented the way you want it select 'export > generic data'. You'll get a window (maybe 2 consecutive windows) popping up asking for various settings. Leave everything as it is, except make sure the following are set:
 
 1.  The filename for output should be .dat instead of .eeg (which I think is the default)
 2.  DataFormat should be 'BINARY'

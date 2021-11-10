@@ -8,7 +8,7 @@ tags: [faq, mri, anonymize, sharing]
 DICOM files contain a lot of header details that might provide information about your subject, such as the name and date of birth, but also the date and time at which the scan was performed.
 
 {% include markup/danger %}
-Besides the potentially identifying data in the header of the DICOM file, the facial information in an anatomical MRI can be reconstructed into picture that might be used for identification. Furthermore, the cortical folding or the specific anatomical connectivity in a DTi scan might be considered as a "fingerprint". In both cases an external database would be required to match the data against subject identifiers, e.g. a facial reconstructed picture could be matched against the database formed by Google images.
+Besides the potentially identifying data in the header of the DICOM file, the facial information in an anatomical MRI can be reconstructed into picture that might be used for identification. Furthermore, the cortical folding or the specific anatomical connectivity in a DTi scan might be considered as a "fingerprint". In both cases an external database would be required to match the data against subject identifiers, e.g., a facial reconstructed picture could be matched against the database formed by Google images.
 
 The remainder of this FAQ is only about the metadata in the header, not about [defacing](/faq/how_can_i_anonymize_an_anatomical_mri) the data or about imposing legal restrictions to prevent matching data against external databases.
 {% include markup/end %}

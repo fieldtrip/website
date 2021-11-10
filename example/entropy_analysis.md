@@ -76,7 +76,7 @@ The `mmse` output struct has the following fields:
 
 The `mmse` struct is structurally comparable to a `freq` structure as obtained from **[ft_freqanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqanalysis.m)**, with the following exceptions: `timescales` replaces the `frequency` field, indicating the timescales axis; `sampen` replaces the `powspctrm` field, containing the resulting sample entropy values; `fsample` indicates the sampling rate of the data at each coarsegraining step; `r` contains the r values computed at each channel-by-timescales-by-time location.
 
-If, after computing mMSE, you would like to use the FieldTrip functions for plotting, e.g. **[ft_multiplotTFR](https://github.com/fieldtrip/fieldtrip/blob/release/ft_multiplotTFR.m)** and computing statistics, i.e. **[ft_freqstatistics](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqstatistics.m)**, the easiest way is to place the mMSE output into a freq structure (see **[ft_datatype_freq](https://github.com/fieldtrip/fieldtrip/blob/release/utilities/ft_datatype_freq.m)**) so you can just plug the mMSE values into these functions.
+If, after computing mMSE, you would like to use the FieldTrip functions for plotting, e.g., **[ft_multiplotTFR](https://github.com/fieldtrip/fieldtrip/blob/release/ft_multiplotTFR.m)** and computing statistics, i.e. **[ft_freqstatistics](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqstatistics.m)**, the easiest way is to place the mMSE output into a freq structure (see **[ft_datatype_freq](https://github.com/fieldtrip/fieldtrip/blob/release/utilities/ft_datatype_freq.m)**) so you can just plug the mMSE values into these functions.
 
 # Run standard MSE analysis on your data
 

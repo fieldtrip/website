@@ -37,7 +37,7 @@ The following steps provide a good standard approach for analyzing fNIRS data, s
 
 - read continuous data
 - (optinally) trim the beginning and the end of the recording if these are noisy and not of interest
-- remove bad segments in the channels of interest, e.g. due to motion artifacts
+- remove bad segments in the channels of interest, e.g., due to motion artifacts
 - transform optical densities to changes in oxyhemoglobin (oxyHb) and deoxyhemoglobin (deoxyHb) concentration
 - separate functional from systemic responses; which can be done using either one of, or a combination of
   - filtering; i.e. temporal processing
@@ -171,7 +171,7 @@ What is the optimal threshold to get rid off short-lived transient peaks?
 
 ### Transform to changes in oxyHB/deoxyHB
 
-You might have noticed that you were looking at optical density (OD) values rather than at oxygenated and deoxygenated hemoglobin concentrations, because the channel labels mention the wavelengths. The optical density values directly relates to the light intensity that picked up by the the optodes. We can transform our data to concentrations using **[ft_nirs_transform_ODs](https://github.com/fieldtrip/fieldtrip/blob/release/ft_nirs_transform_ODs.m)**. One of the choices to make when using **[ft_nirs_transform_ODs](https://github.com/fieldtrip/fieldtrip/blob/release/ft_nirs_transform_ODs.m)** is the differential path-length factor or DPF, which differs depending on the age of the participant and the tissue type under investigation (e.g. when analyzing changes in blood oxygenation in muscle rather than brain).
+You might have noticed that you were looking at optical density (OD) values rather than at oxygenated and deoxygenated hemoglobin concentrations, because the channel labels mention the wavelengths. The optical density values directly relates to the light intensity that picked up by the the optodes. We can transform our data to concentrations using **[ft_nirs_transform_ODs](https://github.com/fieldtrip/fieldtrip/blob/release/ft_nirs_transform_ODs.m)**. One of the choices to make when using **[ft_nirs_transform_ODs](https://github.com/fieldtrip/fieldtrip/blob/release/ft_nirs_transform_ODs.m)** is the differential path-length factor or DPF, which differs depending on the age of the participant and the tissue type under investigation (e.g., when analyzing changes in blood oxygenation in muscle rather than brain).
 
     cfg = [];
     cfg.dpf = 5.9;

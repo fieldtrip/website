@@ -13,7 +13,7 @@ _"If I am interested at the onset of an effect that is present in one condition 
 The answer below starts from the idea of cluster-based statistics, but applies to determining onset in general.
 {% include markup/end %}
 
-The cluster represents the thresholded uncorrected massive univariate statistics. The onset of where the uncorrected massive univariate statistics exceeds the threshold depends on the statistical sensitivity. E.g. consider that you use a [t-score](http://en.wikipedia.org/wiki/Student%27s_t-test) to quantify the condition difference
+The cluster represents the thresholded uncorrected massive univariate statistics. The onset of where the uncorrected massive univariate statistics exceeds the threshold depends on the statistical sensitivity. e.g., consider that you use a [t-score](http://en.wikipedia.org/wiki/Student%27s_t-test) to quantify the condition difference
 
     t = sqrt(N) * (mean(x1) - mean(x2)) / std(x)
 

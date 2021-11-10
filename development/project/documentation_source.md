@@ -54,7 +54,7 @@ beamforming: lcmv - ?
 (see Hesse, Jensen (2010) and Background of the MNE tutorial)
 
 - _Does it depend on a priori hypothesis of the source involved?_ (cortical sheets vs. 3D grid)
-- _Does it depend on what kind of information I am interested in?_ (e.g. changes in time or not)
+- _Does it depend on what kind of information I am interested in?_ (e.g., changes in time or not)
 
 ## What kind of data I need for source-reconstruction?
 
