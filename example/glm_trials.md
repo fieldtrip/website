@@ -19,11 +19,18 @@ For example, in the [eeg-language](/tutorial/eeg_language) dataset, there are tr
 
 -   preprocess the data in both conditions
 -   average per condition and compute condition difference
--   contrast with t-test
+-   compute contrast with t-test
 
-## GLMs for more than two conditions
+## GLMs for three conditions
 
-Considering an experiment with multiple conditions from the perspective of an ANOVA, we can have multiple factors and/or multiple levels per factor.
+Considering an experimental manipulation with three conditions, we can describe this as an ANOVA with one factor and three levels. We could use pair-wise t-tests, which puts us back in the previous situation. We need an F-test for testing an overall effect of the three conditions (or levels).
+
+-   preprocess the data in all three conditions
+-   compute an F-test
+
+## GLMs for a multi-factorial design
+
+Considering an experiment from the general perspective of an ANOVA, we can have multiple factors and/or multiple levels per factor.
 
 In the [eeg-language](/tutorial/eeg_language) dataset there is one factor for "stimulus modality" with three levels for pictures, visual, and auditory. Another factor is the "stimulus category" with two levels for animals and tools. This can be represented in a 3-by-2 table.
 
