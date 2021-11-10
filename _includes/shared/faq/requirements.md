@@ -10,18 +10,18 @@ An online poll in April 2011 showed that a large proportion (>98%) of our users 
 
 MATLAB includes a large number of functions in standard toolboxes that come with every installation, but certain functions are included in additional (commercial) toolboxes from MathWorks, such as the Signal Processing or the Statistics toolbox. Whether you need to buy these toolboxes depends on whether you want to use specific functionality in FieldTrip. We try to avoid using these additional MathWorks toolboxes to the extent that we will look for alternatives (e.g. from [GNU Octave](https://www.gnu.org/software/octave)) or use drop-in replacement functions for certain functions, as long as the time required to implement these alternatives is not too large.
 
-The following functions depend on the MathWorks [Image Processing Toolbox](https://www.mathworks.com/products/image.html)
+The following functions depend on the MathWorks [Image Processing Toolbox](https://www.mathworks.com/products/image.html) (images)
 
 - ft_sourceplot
 - ft_volumesegment
 - ft_read_mri
 
-The following functions depend on the MathWorks [Optimization Toolbox](https://www.mathworks.com/products/optimization.html)
+The following functions depend on the MathWorks [Optimization Toolbox](https://www.mathworks.com/products/optimization.html) (optim)
 
 - warp_optim
 - dipole_fit
 
-The following functions depend on the MathWorks [Signal Processing Toolbox](https://www.mathworks.com/products/signal.html)
+The following functions depend on the MathWorks [Signal Processing Toolbox](https://www.mathworks.com/products/signal.html) (signal)
 
 - ft_mvaranalysis
 - ft_resampledata
@@ -39,7 +39,7 @@ The following functions depend on the MathWorks [Signal Processing Toolbox](http
 - ft_spiketriggeredspectrum_convol
 - ft_spiketriggeredspectrum_fft
 
-The following functions depend on the MathWorks [Statistics and Machine Learning Toolbox](https://www.mathworks.com/products/statistics.html)
+The following functions depend on the MathWorks [Statistics and Machine Learning Toolbox](https://www.mathworks.com/products/statistics.html) (stats)
 
 - ft_connectivitysimulation
 - ft_headmovement

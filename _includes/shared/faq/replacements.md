@@ -1,6 +1,6 @@
 To avoid unnecessary dependencies on functions from non-standard MathWorks toolboxes, FieldTrip includes a number of drop-in replacement functions that have the same functionality as their MATLAB counterparts. Have a look at [this FAQ](/faq/can_i_prevent_external_toolboxes_from_being_added_to_my_matlab_path) how you can control whether these are added to your path.
 
-Alternatives are provided for the following functions from the Statistics Toolbox (stats)
+Alternatives are provided for the following functions from the MathWorks [Statistics Toolbox](https://www.mathworks.com/products/statistics.html) (stats)
 
 - nansum, nanstd, etc.
 - biocdf
@@ -8,7 +8,7 @@ Alternatives are provided for the following functions from the Statistics Toolbo
 - tcdf
 - range
 
-Alternatives are provided for the following functions from the Signal Processing Toolbox (signal)
+Alternatives are provided for the following functions from the MathWorks [Signal Processing Toolbox](https://www.mathworks.com/products/signal.html) (signal)
 
 - barthannwin
 - bilinear
@@ -30,6 +30,6 @@ Alternatives are provided for the following functions from the Signal Processing
 - tukeywin
 - window
 
-Alternatives are provided for the following functions from the Image Processing Toolbox (images)
+Alternatives are provided for the following functions from the MathWorks [Image Processing Toolbox](https://www.mathworks.com/products/image.html) (images)
 
 - rgb2hsv
