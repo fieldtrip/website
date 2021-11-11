@@ -8,39 +8,33 @@ tags: [example, eeg, fem, leadfield, headmodel]
     [ftver, ftpath] = ft_version;
     
     %% read mri
-
     mri = ft_read_mri('Subject01.mri');
 
     %% segmentation
-
     cfg          = [];
     cfg.output   = {'gray', 'white', 'csf', 'skull', 'scalp'};
     segmentedmri = ft_volumesegment(cfg, mri);
 
     %% mesh
-
     cfg        = [];
     cfg.shift  = 0.3;
     cfg.method = 'hexahedral';
     mesh       = ft_prepare_mesh(cfg,segmentedmri);
 
     %% volume conductor
-
     cfg              = [];
     cfg.method       = 'simbio';
     cfg.conductivity = [0.33 0.14 1.79 0.01 0.43];
-    vol              = ft_prepare_headmodel(cfg, mesh);
+    headmodel        = ft_prepare_headmodel(cfg, mesh);
 
     %% electrode alignment
-
     elec = ft_read_sens(fullfile(ftpath,'template/electrode/standard_1020.elc'));
 
     nas = mri.hdr.fiducial.head.nas;
     lpa = mri.hdr.fiducial.head.lpa;
     rpa = mri.hdr.fiducial.head.rpa;
 
-
-    fiducials.chanpos = [nas; lpa; rpa];
+    fiducials.pos     = [nas; lpa; rpa];
     fiducials.label   = {'Nz','LPA','RPA'};
     fiducials.unit    = 'mm';
 
@@ -51,34 +45,29 @@ tags: [example, eeg, fem, leadfield, headmodel]
     cfg.fiducial = {'Nz', 'LPA', 'RPA'};
     elec_align   = ft_electroderealign(cfg);
 
-    % add 12 mm to x-axis
-
+    %% add 12 mm to x-axis, this is because we here know that it needs to be done, otherwise
+    % an interactive realignment is recommended
     n=size(elec_align.chanpos,1);
     for i=1:n
      elec_align.chanpos(i,1)=elec_align.chanpos(i,1)+12;
      elec_align.elecpos(i,1)=elec_align.elecpos(i,1)+12;
     end
 
-    % figure;
-    % ft_plot_sens(elec_align,'style','sr','label','label');
-    % hold on;
-    % ft_plot_mesh(mesh,'edgeonly','yes','vertexcolor','none','facecolor',[0.5 0.5 0.5],'facealpha',1,'edgealpha',0.1)
+    figure;
+    ft_plot_sens(elec_align,'label','label');
+    hold on;
+    ft_plot_mesh(mesh,'edgeonly','yes','vertexcolor','none','facecolor',[0.5 0.5 0.5],'facealpha',1,'edgealpha',0.1)
 
     %% make the sourcemodel/grid
-
-    % At the moment the sourcemodel is defined prior
-    % to the leadfield because ft_prepare_sourcemodel does not automatically create
-    % a sourcemodel based on a hexahedral vol.
-
     cfg                 = [];
     cfg.mri             = mri;
-    cfg.sourceunits     = vol.unit;
-    grid                = ft_prepare_sourcemodel(cfg);
+    sourcemodel         = ft_prepare_sourcemodel(cfg);
+    sourcemodel         = ft_convert_units(sourcemodel, headmodel.unit);
 
     cfg            = [];
-    cfg.headmodel  = vol;
+    cfg.headmodel  = headmodel;
     cfg.elec       = elec_align;
-    cfg.grid       = grid;
+    cfg.grid       = sourcemodel;
     lf             = ft_prepare_leadfield(cfg);
 
     % plot the leadfield for a few representative locations: points around z-axis with increasing z values
@@ -94,10 +83,6 @@ tags: [example, eeg, fem, leadfield, headmodel]
           p=p+1;
       end
     end
-
-    positions;
-
-    % n=length(plotpos);
 
     figure;
     for i=1:20
