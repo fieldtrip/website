@@ -59,16 +59,16 @@ Before starting with FieldTrip, it is important that you set up your [MATLAB pat
 
 Then, you can read in the mri data.
 
-    mri = ft_read_mri('Subject01.mri');
+    mri_orig = ft_read_mri('Subject01.mri');
 
-    disp(mri)
+    disp(mri_orig)
               dim: [256 256 256]
           anatomy: [256x256x256 int16]
               hdr: [1x1 struct]
         transform: [4x4 double]
          coordsys: 'ctf'
 
-The structure of your mri variable contains the following field
+The structure of your mri_orig variable contains the following field
 
 - **dim**: This field gives information on the size (i.e. the number of voxels) of the anatomical volume into each direction.
 - **anatomy**: This is a matrix (with the size and number of dimensions specified in **dim**) that contains the anatomical information represented by numbers.
@@ -95,8 +95,8 @@ It is also possible to read in anatomical MRI data in [other formats](/faq/dataf
 In the next step of this tutorial, we will segment the anatomical MRI. Segmentation works properly when the voxels of the anatomical images are homogenous (i.e. the size of the voxel is the same into each direction). If you do not have homogenous voxels (or you are not sure of), you can use the **[ft_volumereslice](https://github.com/fieldtrip/fieldtrip/blob/release/ft_volumereslice.m)** function on the anatomical data before segmentation. Read more about re-slicing [here](/faq/how_change_mri_orientation_size_fov).
 
     cfg     = [];
-    cfg.dim = mri.dim;
-    mri     = ft_volumereslice(cfg,mri);
+    cfg.dim = mri_orig.dim;
+    mri     = ft_volumereslice(cfg,mri_orig);
 
 {% include markup/info %}
 Reslicing will apply the coordinate transformation on your anatomical data. (While **[ft_volumerealign](https://github.com/fieldtrip/fieldtrip/blob/release/ft_volumerealign.m)** does not change the anatomical data, but it adjusts the transformation matrix of the data, **[ft_volumereslice](https://github.com/fieldtrip/fieldtrip/blob/release/ft_volumereslice.m)** will change the anatomical data, i.e. it will arrange data in field **anatomy** according to the coordinate system.) Do not use this function if later you need to recover the original orientation of the voxels.
@@ -204,16 +204,16 @@ At the moment FieldTrip only supports hexahedrons for FEM modeling.
 ## Head model
 
 Gray and white matter, csf, skull and skin has been differentiated in the geometrical description of the head. Now, we will create the volume conduction model. We will specify method 'simbio' in the cfg.method field of **[ft_prepare_headmodel](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_headmodel.m)**. This methods also requires to specify the conductivities for each tissue-types.
-The vol can also be downloaded here [FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/headmodel_fem/vol.mat).
+The headmodel can also be downloaded here [FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/headmodel_fem/headmodel.mat).
 
     cfg        = [];
     cfg.method ='simbio';
-    cfg.conductivity = [0.33 0.14 1.79 0.01 0.43];   % order follows mesh.tissyelabel
-    vol        = ft_prepare_headmodel(cfg, mesh);
+    cfg.conductivity = [0.33 0.14 1.79 0.01 0.43];   % order follows mesh.tissuelabel
+    headmodel  = ft_prepare_headmodel(cfg, mesh);
 
-    save vol vol
+    save headmodel headmodel
 
-    disp(vol)
+    disp(headmodel)
                 pos: [4354427x3 double]
                 hex: [4253761x8 double]
              tissue: [4253761x1 double]
@@ -224,7 +224,7 @@ The vol can also be downloaded here [FTP server](ftp://ftp.fieldtriptoolbox.org/
                unit: 'mm'
                 cfg: [1x1 struct]
 
-The vol data structure contains the same information in the **pos** (**pnt** in mesh), **hex**, **tissue** and **tissulabel** fields than the mesh we created earlier. And it has also new field
+The headmodel data structure contains the same information in the **pos** (**pnt** in mesh), **hex**, **tissue** and **tissulabel** fields than the mesh we created earlier. And it has also new field
 
 - **cond**: conductivity of each tissue-type (in order of tissuelabel)
 - **stiff**: matrix
@@ -232,7 +232,7 @@ The vol data structure contains the same information in the **pos** (**pnt** in 
 - **unit**: the unit of measurement of the geometrical data in the pos field
 - **cfg**: configuration of the function that was used to create vol
 
-Note that the unit of measurement used in the geometrical description of vol is in 'mm'. The EEG sensors should be also defined in 'mm'. The units of all type of geometrical information should be the same when a leadfield is computed for source-reconstruction.
+Note that the unit of measurement used in the geometrical description of headmodel is in 'mm'. The EEG sensors should be also defined in 'mm'. The units of all type of geometrical information should be the same when a leadfield is computed for source-reconstruction.
 
 ## Visualization
 
@@ -269,7 +269,7 @@ are described in the **chanpos** and **elecpos** field. The **label** field cont
     ft_plot_mesh(mesh,'surfaceonly','yes','vertexcolor','none','edgecolor','none','facecolor',[0.5 0.5 0.5],'face alpha',0.7)
     camlight
 
-    ft_plot_sens(elec,'style', 'sr');
+    ft_plot_sens(elec);
 
 {% include image src="/assets/img/tutorial/headmodel_eeg_fem/fem_mesh_misaligned_electrodes.png" width="500" %}
 
@@ -278,19 +278,19 @@ _Figure 7._ FEM mesh surface plotted with electrode-positions (not aligned).
 The figure shows that the channels are not aligned with the surface of the head. In FieldTrip, electrode and channel positions are [differentiated](/faq/how_are_electrodes_magnetometers_or_gradiometers_described), but
 the positions of the channels and electrodes should be the same for the alignment. Therefore, we will use electrodes and channels interchangeably.
 
-The electrodes can be aligned in two way
+The electrodes can be aligned in two ways
 
 - if there are anatomical landmarks which positions are known in the anatomical mri and also relative to the electrodes, we can automatically align the electrode positions with a few lines of script or
 
 - if the exact position of anatomical landmarks are not known relative to the electrodes, we visualize the surface of the head and the electrodes on the same image, and we transform, rotate and scale the electrodes until they fit to the head surface according to our visual judgement.
 
-Now, we will show how to do the alignment in both way
+Now, we will show how to do the alignment in both ways
 
 ### Automatic alignment
 
 First, we will align the electrodes automatically to the anatomical landmarks (to the fiducials: nasion, [left and right Pre-Auricular points](/faq/how_are_the_lpa_and_rpa_points_defined)) of the anatomical mri. The head model was created from the same mri, therefore the electrodes will also be aligned to the head-model.
 
-For the automatic alignment, we need three informatio
+For the automatic alignment, we need to know the following:
 
 - electrode positions
 - position of fiducial landmarks relative to the electrodes
@@ -298,7 +298,7 @@ For the automatic alignment, we need three informatio
 
 In the template set of electrodes, the first three labels are: 'Nz', 'LPA' and 'RPA'. These labels show that the first three rows of the **elec.chanpos** field defines the position of the nasion, left and right PA (the landmarks of the CTF ) in _"electrode" coordinates_. We can use this information for the automatic alignment. But we also need to know the position of the same points in the anatomical mri. We use an anatomical mri which has been already aligned to these points, therefore we can find these coordinates in the header information.
 
-    disp(mri.hdr.fiducial.mri)
+    disp(mri_orig.hdr.fiducial.mri)
         nas: [87 60 116]
         lpa: [29 145 155]
         rpa: [144 142 158]
@@ -309,11 +309,11 @@ If you do not have the position of the anatomical landmarks in your volume, you 
 
 First, we convert the fiducial positions from voxel into CTF headcoordinate system using the [transformation matrix](/faq/what_is_the_plotting_convention_for_anatomical_mris) and the **[ft_warp_apply](https://github.com/fieldtrip/fieldtrip/blob/release/ft_warp_apply.m)** function.
 
-    nas = mri.hdr.fiducial.mri.nas;
-    lpa = mri.hdr.fiducial.mri.lpa;
-    rpa = mri.hdr.fiducial.mri.rpa;
+    nas = mri_orig.hdr.fiducial.mri.nas;
+    lpa = mri_orig.hdr.fiducial.mri.lpa;
+    rpa = mri_orig.hdr.fiducial.mri.rpa;
 
-    vox2head = mri.transform;
+    vox2head = mri_orig.transform;
 
     nas = ft_warp_apply(vox2head, nas, 'homogenous');
     lpa = ft_warp_apply(vox2head, lpa, 'homogenous');
@@ -322,7 +322,7 @@ First, we convert the fiducial positions from voxel into CTF headcoordinate syst
 Then, we determine the translation and rotation that is needed to get the position of the fiducials in the electrode structure (defined with labels 'Nz', 'LPA', 'RPA') to their counterparts in the CTF head coordinate system that we acquired from the anatomical mri (nas, lpa, rpa).
 
     % create a structure similar to a template set of electrodes
-    fid.chanpos       = [nas; lpa; rpa];       % CTF head coordinates of fiducials
+    fid.pos           = [nas; lpa; rpa];       % CTF head coordinates of fiducials
     fid.label         = {'Nz','LPA','RPA'};    % use the same labels as those in elec
     fid.unit          = 'mm';                  % use the same units as those in mri
 
@@ -340,7 +340,7 @@ We can check the alignment by plotting together the scalp surface with the elect
     hold on;
     ft_plot_mesh(mesh,'surfaceonly','yes','vertexcolor','none','edgecolor','none','facecolor',[0.5 0.5 0.5],'face alpha',0.5)
     camlight
-    ft_plot_sens(elec_aligned,'style','sr');
+    ft_plot_sens(elec_aligned);
 
 {% include image src="/assets/img/tutorial/headmodel_eeg_fem/fem_mesh_misaligned_electrodes_corrected.png" width="500" %}
 
@@ -353,7 +353,7 @@ The alignment is much better, but not perfect. Some of the electrodes are below 
     cfg          = [];
     cfg.method   = 'interactive';
     cfg.elec     = elec_aligned;
-    cfg.headshape = vol;
+    cfg.headshape = headmodel;
     elec_aligned = ft_electroderealign(cfg);
 
     save elec_aligned elec_aligned;
