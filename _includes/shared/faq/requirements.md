@@ -43,7 +43,6 @@ The following functions depend on the MathWorks [Statistics and Machine Learning
 
 - ft_connectivitysimulation
 - ft_headmovement
-- ft_qualitycheck
 - ft_regressconfound
 - ft_sourcedescriptives
 - ft_statistics_stats
