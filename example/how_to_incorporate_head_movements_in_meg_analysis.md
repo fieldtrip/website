@@ -12,14 +12,14 @@ Changes in head position during MEG sessions may cause a significant error in th
 Continuous head localization information is stored in HLC channels (Head Localization Channels) in CTF MEG system. An example script here shows how to read these channels in FieldTrip and estimate the amount of movement offline. Information from these channels can also be used to [track the head position in real time.](/faq/how_can_i_monitor_a_subject_s_head_position_during_a_meg_session)
 The data used in this example script [can be obtained here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/example/regressconfound/TacStimRegressConfound.zip)
 
-In general there are multiple ways that you can use the continuous head localization information.
+In general there are various ways that you can use the continuous head localization information.
 
 1. you can discard a subject or trial(s) from subsequent analysis if he/she moved too much
 2. you can regress out the movements from the processed data
 3. you can compensate the raw data for the movements
 4. you can correct the forward model (i.e. the leadfield) for the spatial blurring that is due to the movements
 
-The first way of dealing with it requires that you visualize and decide on the movements. This is demonstrated in the first half of the example script. A more general description of the data, also containing information on the head movements, is made using **[ft_qualitycheck](/faq/how_can_i_check_the_quality_of_an_meeg_dataset?.m)**. At the donders, this function is run automatically on each new MEG dataset every night.
+The first way of dealing with it requires that you visualize and decide on the movements. This is demonstrated in the first half of the example script.
 
 The second way of dealing with the movements means that you perform **[ft_timelockanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockanalysis.m)**, **[ft_freqanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqanalysis.m)** or **[ft_sourceanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceanalysis.m)** with the option keeptrials=yes. This will give trial estimates of the ERF, the power or the source strength for each trial. The effect that the variable head position has on those single-trial estimates can be estimated and removed from the data using **[ft_regressconfound](https://github.com/fieldtrip/fieldtrip/blob/release/ft_regressconfound.m)**. This method has been found to significantly improve statistical sensivity following head movements, [up to 30%](https://doi.org/10.1016/j.neuroimage.2012.11.047), and is therefore demonstrated in the second half of the example script.
 
