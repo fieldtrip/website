@@ -122,7 +122,6 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 ## Experimental questions
 
 - [How can I change the head localization in a CTF dataset?](/faq/how_can_i_change_the_head_localization_in_a_ctf_dataset)
-- [How can I check the quality of an M/EEG dataset?](/faq/how_can_i_check_the_quality_of_an_meeg_dataset)
 - [How can I monitor a subject's head position during a MEG session?](/faq/how_can_i_monitor_a_subject_s_head_position_during_a_meg_session)
 - [How can I test the serial port connection between two computers?](/faq/how_can_i_test_the_serial_port_connection_between_two_computers)
 - [How can I use my MacBook Pro for stimulus presentation in the MEG lab?](/faq/how_can_i_use_my_macbook_pro_for_stimulus_presentation_in_the_meg_lab)
