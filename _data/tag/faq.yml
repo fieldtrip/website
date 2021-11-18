@@ -97,9 +97,6 @@
 - name:  How can I change the head localization in a CTF dataset?
   link:  /faq/how_can_i_change_the_head_localization_in_a_ctf_dataset
 
-- name:  How can I check the quality of an EEG or MEG recording ?
-  link:  /faq/how_can_i_check_the_quality_of_an_meeg_dataset
-
 - name:  How can I check whether the grid that I have is aligned to the segmented volume and to the sensor gradiometer?
   link:  /faq/how_can_i_check_whether_the_grid_that_i_have_is_aligned_to_the_segmented_volume_and_to_the_sensor_gradiometer
 

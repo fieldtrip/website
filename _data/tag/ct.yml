@@ -58,9 +58,6 @@
 - name:  How can I change the head localization in a CTF dataset?
   link:  /faq/how_can_i_change_the_head_localization_in_a_ctf_dataset
 
-- name:  How can I check the quality of an EEG or MEG recording ?
-  link:  /faq/how_can_i_check_the_quality_of_an_meeg_dataset
-
 - name:  How can I consistently represent artifacts in my data?
   link:  /faq/how_can_i_consistently_represent_artifacts_in_my_data
 
