@@ -111,4 +111,3 @@ See also the [tutorials](/tutorial) and [frequently asked questions](/faq).
 - [How to import data from MNE-Python and FreeSurfer](/example/import_mne)
 - [How to use ft_checkconfig](/example/checkconfig)
 - [Performing modified Multiscale Entropy (mMSE) analysis](/example/entropy_analysis)
-- [Writing simulated data to a CTF dataset](/example/writing_simulated_data_to_a_ctf_dataset)
