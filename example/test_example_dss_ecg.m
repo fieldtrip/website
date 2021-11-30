@@ -1,7 +1,7 @@
-function functionname
+function test_example_dss_ecg
 
-% MEM 4gb
-% WALLTIME 00:10:00
+% MEM 8gb
+% WALLTIME 00:30:00
 
 %
 %% # Use denoising source separation (DSS) to remove ECG artifacts
@@ -24,7 +24,7 @@ function functionname
 % To load this dataset into MATLAB and preprocess with FieldTrip, use:
 %
 cfg         = [];
-cfg.dataset = 'ArtifactRemoval.ds'; % ensure that you are in the correct folder for this to run
+cfg.dataset = dccnpath('/home/common/matlab/fieldtrip/data/ArtifactRemoval.ds');
 cfg.trialdef.eventtype = 'trial';
 cfg     = ft_definetrial(cfg);
 cfg.trl = cfg.trl(1:end-1,:); % remove the last one, because it clips.
@@ -40,7 +40,7 @@ meg         = ft_preprocessing(cfg);
 cfg = removefields(cfg, {'channel', 'demean'});
 cfg.artfctdef.zvalue.channel         = 'EEG058';
 cfg.artfctdef.zvalue.cutoff          = 2;
-cfg.artfctdef.zvalue.interactive     = 'yes';
+cfg.artfctdef.zvalue.interactive     = 'no';
 cfg.artfctdef.zvalue.bpfilter        = 'yes';
 cfg.artfctdef.zvalue.bpfreq          = [5 30];
 cfg.artfctdef.zvalue.hilbert         = 'yes';
