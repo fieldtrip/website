@@ -28,7 +28,7 @@ simcfg.method      = 'ar';
 %
 % They will have the covariances &zeta;, &eta; and &epsilon;. We also require a paramters &mu;=0.5.
 %
-parmeters of the model itself
+% parameters of the model itself
 mu                 = 0.5;
 absnoise           = [ 1.0   0.2   0.3 ];
 
@@ -38,14 +38,14 @@ absnoise           = [ 1.0   0.2   0.3 ];
 %
 % which we can do like this:
 %
-params(i,j,k): j -> i at t=k
+% params(i,j,k): j -> i at t=k
 simcfg.params(:,:,1) = [   0      0      0;
                          1.0      0      0;
                            0    1.0     mu];
 
 % Note that the matrix representation for the covariance reads from columns to row, other than the MVAR-model is read intuitively. But we still need to hand the parameters of the noise to the model:
 %
-paper defines stds, not cov:
+% paper defines stds, not cov:
 simcfg.noisecov      = diag(absnoise.^2);
 
 data2           = ft_connectivitysimulation(simcfg);
@@ -69,7 +69,7 @@ data1           = ft_connectivitysimulation(simcfg);
 % #
 %
 figure
-plot(data.time{1}, data.trial{1})
+plot(data1.time{1}, data1.trial{1})
 legend(data1.label)
 xlabel('time (s)')
 
@@ -106,7 +106,7 @@ grangercfg.channelcmb  = {'signal001', 'signal002', 'signal003'};
 grangercfg.granger.sfmethod = 'multivariate';
 grangercfg.granger.conditional = 'yes';
 
-block-wise causality
+% block-wise causality
 grangercfg.granger.block(1).name   = freqdata1.label{1};
 grangercfg.granger.block(1).label  = freqdata1.label(1);
 grangercfg.granger.block(2).name   = freqdata1.label{2};
