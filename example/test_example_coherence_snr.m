@@ -1,4 +1,4 @@
-function functionname
+function test_example_coherence_snr
 
 % MEM 4gb
 % WALLTIME 00:10:00
@@ -24,6 +24,7 @@ taper     = 'hanning';
 % you could explore the effect of different numbers of trials
 ntrials1   = 100;
 ntrials2   = 100;
+ntrials    = ntrials1 + ntrials2;
 
 % introduce a random phase difference between the two channels on each trial
 phaseFz = 2*pi * (zeros(1,ntrials)                      );
