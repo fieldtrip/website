@@ -1,6 +1,6 @@
-function functionname
+function test_example_megrealign
 
-% MEM 4gb
+% MEM 6gb
 % WALLTIME 00:10:00
 
 %
@@ -9,8 +9,8 @@ function functionname
 % the two example files with the 151 and 275 channel CTF specifications are available from
 % ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/example/megrealign/
 
-grad151 = ft_read_sens('ctf151.mat');
-grad275 = ft_read_sens('ctf275.mat');
+grad151 = ft_read_sens(dccnpath('/home/common/matlab/fieldtrip/data/ftp/example/megrealign/ctf151.mat'));
+grad275 = ft_read_sens(dccnpath('/home/common/matlab/fieldtrip/data/ftp/example/megrealign/ctf275.mat'));
 
 vol = [];
 vol.r = 12;
@@ -49,29 +49,29 @@ cfg.template{1} = grad275; avg275_275 = ft_timelockanalysis([], ft_megrealign(cf
 cfg = [];
 figure; ft_multiplotER(cfg, avg151_151);
 title('Interpolated from 151 to 151');
-orient portrait; print -dpng -r300 avg151_151.png
+orient portrait; %print -dpng -r300 avg151_151.png
 
 %
 figure; ft_multiplotER(cfg, avg151_275);
 title('Interpolated from 151 to 151');
-orient portrait; print -dpng -r300 avg151_275.png
+orient portrait; %print -dpng -r300 avg151_275.png
 
 %
 figure; ft_multiplotER(cfg, avg275_151);
 title('Interpolated from 151 to 151');
-orient portrait; print -dpng -r300 avg275_151.png
+orient portrait; %print -dpng -r300 avg275_151.png
 
 %
 figure; ft_multiplotER(cfg, avg275_275);
 title('Interpolated from 151 to 151');
-orient portrait; print -dpng -r300 avg275_275.png
+orient portrait; %print -dpng -r300 avg275_275.png
 
 %
 % now plot them together
 cfg = [];
 figure; ft_multiplotER(cfg, avg151, avg151_151, avg275_151);
-orient portrait; print -dpng -r300 compare151.png
+orient portrait; %print -dpng -r300 compare151.png
 
 %
 figure; ft_multiplotER(cfg, avg275, avg275_275, avg151_275);
-orient portrait; print -dpng -r300 compare275.png
+orient portrait; %print -dpng -r300 compare275.png
