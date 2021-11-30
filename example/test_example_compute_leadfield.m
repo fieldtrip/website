@@ -1,4 +1,4 @@
-function functionname
+function test_example_compute_leadfield
 
 % MEM 4gb
 % WALLTIME 00:10:00
@@ -19,9 +19,9 @@ end
 elec.elecpos = elec.pnt;
 
 % create a concentric 3-sphere volume conductor, the radius is the same as for the electrodes
-vol = [];
+vol   = [];
 vol.r = [0.88 0.92 1.00]; % radii of spheres
-vol.c = [1 1/80 1];       % conductivity
+vol.cond = [1 1/80 1];       % conductivity
 vol.o = [0 0 0];          % center of sphere
 
 % compute the leadfield for a dipole at position [0 0 0.5]
