@@ -1,4 +1,4 @@
-function functionname
+function test_example_rereference
 
 % MEM 4gb
 % WALLTIME 00:10:00
@@ -15,8 +15,13 @@ function functionname
 %
 % You can use this to compute an average reference over all electrodes like this:
 %
+
+% grab a file from the DCCN filesystem: this is different from what is
+% mentioned on the example page.
+filename = dccnpath('/home/common/matlab/fieldtrip/data/test/latest/raw/eeg/preproc_neuroscan32.mat')
+
 cfg = [];
-cfg.dataset = 'somefile.eeg';
+cfg.dataset = filename; %'somefile.eeg';
 data_orig = ft_preprocessing(cfg);
 
 cfg = [];
@@ -31,7 +36,7 @@ data_avg = ft_preprocessing(cfg, data_orig);
 % Note that you can also do the reading and re-referencing in one step like this:
 %
 cfg = [];
-cfg.dataset = 'somefile.eeg';
+cfg.dataset = filename; %'somefile.eeg';
 cfg.channel = 'all'; % this is the default
 cfg.reref = 'yes';
 cfg.refmethod = 'avg';
@@ -145,13 +150,15 @@ data_bipolar = ft_preprocessing(cfg, data_orig);
 %
 % If you are analysing an iEEG dataset, you might want to re-reference separately channels belonging to different electrode shafts. It is possible to do so by setting `cfg.groupchans = 'yes'` and by ensuring your channels are labeled correctly. Channels of each shaft should start with one or multiple letters (e.g., 'LT', 'LP', ...) and the subsequent electrodes should be numbered (e.g., 'LT1', 'LT2', ...).
 %
+
+% JM: this does not work sufficiently robust for normal EEG 
 cfg = [];
 cfg.channel = 'all'; % this is the default
 cfg.reref = 'yes';
 cfg.refmethod = 'bipolar';
 cfg.refchannel = 'all';
 cfg.groupchans = 'yes';
-data_bipolar = ft_preprocessing(cfg, data_orig);
+%data_bipolar = ft_preprocessing(cfg, data_orig);
 
 %% # laplace
 %
@@ -174,7 +181,7 @@ cfg.reref = 'yes';
 cfg.refmethod = 'laplace';
 cfg.refchannel = 'all';
 cfg.groupchans = 'yes';
-data_laplace = ft_preprocessing(cfg, data_orig);
+%data_laplace = ft_preprocessing(cfg, data_orig);
 
 %% # montage
 %
