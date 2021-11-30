@@ -1,6 +1,8 @@
 ---
 title: Use independent component analysis (ICA) to remove ECG artifacts
 tags: [example, artifact, preprocessing, ica]
+redirect_from:
+   - /example/use_independent_component_analysis_ica_to_remove_ecg_artifacts.md/
 ---
 
 # Use independent component analysis (ICA) to remove ECG artifacts
@@ -41,29 +43,25 @@ You can now preprocess the data:
     % split the ECG and MEG datasets, since ICA will be performed on MEG data but not on ECG channel
     % 1 - ECG dataset
     cfg              = [];
-    cfg.channel      = {'EEG'};
+    cfg.channel      = {'EEG058'};
     ecg              = ft_selectdata(cfg, data);
-    ecg.label{:}     = 'ECG'; % for clarity and consistency rename the label of the ECG channel
+    ecg.label{1}     = 'ECG'; % for clarity and consistency rename the label of the ECG channel
     % 2 - MEG dataset
     cfg              = [];
     cfg.channel      = {'MEG'};
-    data              = ft_selectdata(cfg, data);
+    data_orig        = ft_selectdata(cfg, data);
 
 Finally, you should downsample your data before continuing, otherwise ICA decomposition will take too long.
 
-    data_orig = data; %save the original data for later use
     cfg            = [];
     cfg.resamplefs = 150;
     cfg.detrend    = 'no';
-    data           = ft_resampledata(cfg, data);
+    data           = ft_resampledata(cfg, data_orig);
 
 ## Code
 
 This script demonstrates how you can use ICA for cleaning the ECG artifacts from your MEG data. It starts by first doing a decomposition of the MEG data in the data segments of interest (i.e. the real trials in your experiment). Subsequently goes back to the original raw datafile and it reads the data segments around the QRS peaks that can easily be detected in the ECG channel.
 It uses the decomposition from the original data to estimate the timecourse of the components around the ECG artifacts. By looking at the component time courses (averaged), the coherence between the components and the ECG channel, and the spatial topographies, it is possible to determine which components are responsible for the ECG artifact in the MEG channels. Those components can then be removed from the original data.
-
-    % read the already preprocessed MEG data from a MATLAB file
-    load datfile.mat data
 
     cfg            = [];
     cfg.method     = 'runica';
@@ -93,8 +91,6 @@ However, given that you measured the heartbeat on a separate channel, you can us
 
     % go back to the raw data on disk and detect the peaks in the ECG channel, i.e. the QRS-complex
     cfg                       = [];
-    cfg.trl                   = data_orig.cfg.previous.trl;
-    cfg.dataset               = data_orig.cfg.previous.dataset;
     cfg.continuous            = 'yes';
     cfg.artfctdef.ecg.pretim  = 0.25;
     cfg.artfctdef.ecg.psttim  = 0.50-1/1200;
@@ -112,17 +108,13 @@ You can go on with the analysis now.
 
     % preproces the data around the QRS-complex, i.e. read the segments of raw data containing the ECG artifact
     cfg            = [];
-    cfg.dataset    = data_orig.cfg.previous.dataset;
     cfg.continuous = 'yes';
     cfg.padding    = 10;
     cfg.dftfilter  = 'yes';
     cfg.demean     = 'yes';
     cfg.trl        = [artifact zeros(size(artifact,1),1)];
     cfg.channel    = {'MEG'};
-    data_ecg       = ft_preprocessing(cfg);
-    cfg.channel    = {'EEG058'};
-    ecg            = ft_preprocessing(cfg);
-    ecg.channel{:} = 'ECG'; % renaming is purely for clarity and consistency
+    data_ecg       = ft_preprocessing(cfg, data_orig);
 
     % resample to speed up the decomposition and frequency analysis, especially usefull for 1200Hz MEG data
     cfg            = [];
