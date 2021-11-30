@@ -170,7 +170,7 @@ Furthermore, after selecting the channels you want to use in the sourcereconstru
 
 ### Source model
 
-Now prepare the source model. Here one has the option to make a 'normalized grid', such that the grid points in different subjects are aligned in MNI-space. For more details on how to make a normalized grid, see [here](/example/create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_mni_space). In this tutorial, we continue with non-normalized grid points:
+Now prepare the source model. Here one has the option to make a 'normalized grid', such that the grid points in different subjects are aligned in MNI-space. For more details on how to make a normalized grid, see [here](/example/sourcemodel_aligned2mni). In this tutorial, we continue with non-normalized grid points:
 
 
     % create the subject specific grid

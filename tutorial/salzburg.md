@@ -265,7 +265,7 @@ Before you continue it is recommended to make your self familiar with the releva
 {% include youtube id="7eS11DtbIPw" %}
 {% include markup/end %}
 
-Furthermore the details around how to compute the ingredients needed herein (e.g., headmodel, leadfield) are not further explained here. All of the necessary steps in head modeling are explained here, and source modeling [here](/example/create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_brain_atlas_based_mni_space).
+Furthermore the details around how to compute the ingredients needed herein (e.g., headmodel, leadfield) are not further explained here. All of the necessary steps in head modeling are explained here, and source modeling [here](/example/sourcemodel_aligned2mni_atlas).
 
 We will start with loading a precomputed headmodel [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/salzburg/hdm.mat). We will first construct a regular dipole grid using **[ft_prepare_sourcemodel](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_sourcemodel.m)**. Subsequently we want to determine the grid locations corresponding to particular brain areas (parcels). For this step we will read an anatomical atlas using **[ft_read_atlas](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_atlas.m)** and generate a binary mask with entries of ones indicating grid points corresponding to brain parcels using **[ft_volumelookup](https://github.com/fieldtrip/fieldtrip/blob/release/ft_volumelookup.m)**. Finally, on the basis of the individual anatomy we will construct a source model that is inverse-warped to this atlas-based source model in mni space.
 

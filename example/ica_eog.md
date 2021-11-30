@@ -2,7 +2,7 @@
 title: Use independent component analysis (ICA) to remove EOG artifacts
 tags: [example, artifact, preprocessing, ica]
 redirect_from:
-  - /example/use_independent_component_analysis_ica_to_remove_eog_artifacts.md/
+  - /example/use_independent_component_analysis_ica_to_remove_eog_artifacts/
 ---
 
 # Use independent component analysis (ICA) to remove EOG artifacts

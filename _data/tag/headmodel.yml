@@ -1,5 +1,5 @@
 - name:  Align EEG electrode positions to BEM headmodel
-  link:  /example/align_eeg_electrode_positions_to_bem_headmodel
+  link:  /example/electrodes2bem
 
 - name:  Combined EEG and MEG source reconstruction
   link:  /example/combined_eeg_and_meg_source_reconstruction
@@ -11,7 +11,7 @@
   link:  /example/compute_leadfield
 
 - name:  Create MNI-aligned grids in individual head-space
-  link:  /example/create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_mni_space
+  link:  /example/sourcemodel_aligned2mni
 
 - name:  Compute EEG leadfields using a FEM headmodel
   link:  /example/fem

@@ -1,6 +1,8 @@
 ---
 title: Create MNI-aligned grids in individual head-space
 tags: [example, meg, mri, headmodel, source]
+redirect_from:
+   - /example/sourcemodel_aligned2mni/
 ---
 
 # Create MNI-aligned grids in individual head-space

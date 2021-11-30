@@ -3,10 +3,10 @@ title: Doing source-analysis with the created headmodel
 ---
 
 {% include markup/danger %}
-The below example code is hopelessly outdated (thus deprecated) and will probably not work anymore. This page is kept in place just for reference. If you ended up on this page because you are curious to learn about the creation of dipole grids from .fif MRI, please look at [this](/example/create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_mni_space) example script.
+The below example code is hopelessly outdated (thus deprecated) and will probably not work anymore. This page is kept in place just for reference. If you ended up on this page because you are curious to learn about the creation of dipole grids from .fif MRI, please look at [this](/example/sourcemodel_aligned2mni) example script.
 {% include markup/end %}
 
-This example script relies on the example script [Create MNI-aligned grids in individual head_space](/example/create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_mni_space). But for Neuromag data there are some differences. First make a MNI template as is done in the above mentioned example script.
+This example script relies on the example script [Create MNI-aligned grids in individual head_space](/example/sourcemodel_aligned2mni). But for Neuromag data there are some differences. First make a MNI template as is done in the above mentioned example script.
 
     %==================================================================
     % Load the MRI of a single subject and make a single shell head model
@@ -61,7 +61,7 @@ This example script relies on the example script [Create MNI-aligned grids in in
     ft_sourceplot(cfg, test);
 
 ** Figure 1 The segmented mri**
-{% include image src="/assets/img/example/read_neuromag_mri_and_create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_mni_space/segmri.jpg" %}
+{% include image src="/assets/img/example/read_neuromag_mri_and_sourcemodel_aligned2mni/segmri.jpg" %}
 
     %make the single_shell headmodel
     cfg                = [];
@@ -97,9 +97,9 @@ This example script relies on the example script [Create MNI-aligned grids in in
     ft_plot_sens(hdr.grad)
     ft_plot_headmodel(headmodel)
 
-{% include image src="/assets/img/example/read_neuromag_mri_and_create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_mni_space/headmodel.png" %}
+{% include image src="/assets/img/example/read_neuromag_mri_and_sourcemodel_aligned2mni/headmodel.png" %}
 
-{% include image src="/assets/img/example/read_neuromag_mri_and_create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_mni_space/headmodel2.png" %}
+{% include image src="/assets/img/example/read_neuromag_mri_and_sourcemodel_aligned2mni/headmodel2.png" %}
 
 ## Doing source-analysis with the created headmodel
 

@@ -2,7 +2,7 @@
   link:  /development/realtime/fmri
 
 - name:  Align EEG electrode positions to BEM headmodel
-  link:  /example/align_eeg_electrode_positions_to_bem_headmodel
+  link:  /example/electrodes2bem
 
 - name:  Check the quality of the anatomical coregistration
   link:  /example/coregistration_quality_control
@@ -11,7 +11,7 @@
   link:  /example/correlation_analysis_in_fmri_data
 
 - name:  Create MNI-aligned grids in individual head-space
-  link:  /example/create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_mni_space
+  link:  /example/sourcemodel_aligned2mni
 
 - name:  Testing BEM created EEG lead fields
   link:  /example/testing_bem_created_leadfields

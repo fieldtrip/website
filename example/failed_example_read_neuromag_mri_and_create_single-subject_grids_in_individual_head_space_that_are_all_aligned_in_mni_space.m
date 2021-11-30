@@ -4,9 +4,9 @@ function functionname
 % WALLTIME 00:10:00
 
 %
-% The below example code is hopelessly outdated (thus deprecated) and will probably not work anymore. This page is kept in place just for reference. If you ended up on this page because you are curious to learn about the creation of dipole grids from .fif MRI, please look at [this](/example/create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_mni_space) example script.
+% The below example code is hopelessly outdated (thus deprecated) and will probably not work anymore. This page is kept in place just for reference. If you ended up on this page because you are curious to learn about the creation of dipole grids from .fif MRI, please look at [this](/example/sourcemodel_aligned2mni) example script.
 %
-% This example script relies on the example script [Create MNI-aligned grids in individual head_space](/example/create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_mni_space). But for Neuromag data there are some differences. First make a MNI template as is done in the above mentioned example script.
+% This example script relies on the example script [Create MNI-aligned grids in individual head_space](/example/sourcemodel_aligned2mni). But for Neuromag data there are some differences. First make a MNI template as is done in the above mentioned example script.
 %
 %==================================================================
 % Load the MRI of a single subject and make a single shell head model

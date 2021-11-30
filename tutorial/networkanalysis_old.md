@@ -158,7 +158,7 @@ _Figure 2: Top- scalp topography of oscillatory power centered at 10 Hz. Bottom-
 
 ### Source analysis
 
-In the following section we will compute the ingredients for accurate reconstruction of the underlying sources. First computing the source model with **[ft_prepare_sourcemodel](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_sourcemodel.m)**. We will use the individual MRI and a mni template source model, which can be downloaded [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/networkanalysis/). If you are not familiar with this strategy, please have a look [here](/example/create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_mni_space).
+In the following section we will compute the ingredients for accurate reconstruction of the underlying sources. First computing the source model with **[ft_prepare_sourcemodel](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_sourcemodel.m)**. We will use the individual MRI and a mni template source model, which can be downloaded [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/networkanalysis/). If you are not familiar with this strategy, please have a look [here](/example/sourcemodel_aligned2mni).
 
     %% load the required geometrical information
 

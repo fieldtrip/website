@@ -118,7 +118,7 @@ We want to visualise the various geometrical objects that we read into memory. F
 
 {% include image src="/assets/img/workshop/chieti2015/virtualchannel/screen_shot_2015-09-17_at_09.37.41.png" width="500" %}
 
-You can see that the grid locations of the source model are not exactly aligned with the axes of the coordinate systems. This is because the grid positions have been defines in MNI space and subsequently non-linearly transformed into the individual's space according to the [procedure described here](/example/create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_mni_space).
+You can see that the grid locations of the source model are not exactly aligned with the axes of the coordinate systems. This is because the grid positions have been defines in MNI space and subsequently non-linearly transformed into the individual's space according to the [procedure described here](/example/sourcemodel_aligned2mni).
 
     % the figures of ft_determine_coordsys will open in their own figure
     ft_determine_coordsys(template_mri, 'interactive', false); title('template_mri')

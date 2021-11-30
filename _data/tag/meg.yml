@@ -14,7 +14,7 @@
   link:  /example/compute_forward_simulated_data_and_apply_a_beamformer_scan
 
 - name:  Create MNI-aligned grids in individual head-space
-  link:  /example/create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_mni_space
+  link:  /example/sourcemodel_aligned2mni
 
 - name:  Computing and reporting the effect size
   link:  /example/effectsize

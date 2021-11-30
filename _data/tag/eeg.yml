@@ -2,7 +2,7 @@
   link:  /development/realtime/modulareeg
 
 - name:  Align EEG electrode positions to BEM headmodel
-  link:  /example/align_eeg_electrode_positions_to_bem_headmodel
+  link:  /example/electrodes2bem
 
 - name:  Example analysis pipeline for Biosemi data
   link:  /example/biosemi

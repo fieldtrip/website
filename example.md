@@ -42,7 +42,7 @@ See also the [tutorials](/tutorial) and [frequently asked questions](/faq).
 
 ### Source reconstruction
 
-- [Align EEG electrode positions to BEM headmodel](/example/align_eeg_electrode_positions_to_bem_headmodel)
+- [Align EEG electrode positions to BEM headmodel](/example/electrodes2bem)
 - [Check the quality of the anatomical coregistration](/example/coregistration_quality_control)
 - [Combined EEG and MEG source reconstruction](/example/combined_eeg_and_meg_source_reconstruction)
 - [Common filters in beamforming](/example/common_filters_in_beamforming)
@@ -51,13 +51,13 @@ See also the [tutorials](/tutorial) and [frequently asked questions](/faq).
 - [Compute forward simulated data and apply a dipole fit](/example/compute_forward_simulated_data_and_apply_a_dipole_fit)
 - [Compute forward simulated data using ft_dipolesimulation](/example/compute_forward_simulated_data)
 - [Compute forward simulated data with the low-level ft_compute_leadfield](/example/compute_leadfield)
-- [Create MNI-aligned grids in individual head-space](/example/create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_mni_space)
+- [Create MNI-aligned grids in individual head-space](/example/sourcemodel_aligned2mni)
 - [Determine the filter characteristics](/example/determine_the_filter_characteristics)
 - [Fit a dipole to the tactile ERF after mechanical stimulation](/example/fit_a_dipole_to_the_tactile_erf_after_mechanical_stimulation)
 - [How to create a head model if you do not have an individual MRI](/example/fittemplate)
 - [Localizing the sources underlying the difference in event related fields](/example/difference_erf)
 - [Make leadfields using different headmodels](/example/make_leadfields_using_different_headmodels)
-- [Read neuromag .fif mri and create MNI-aligned single_shell grids in individual head-space](/example/read_neuromag_mri_and_create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_mni_space)
+- [Read neuromag .fif mri and create MNI-aligned single_shell grids in individual head-space](/example/read_neuromag_mri_and_sourcemodel_aligned2mni)
 - [Testing BEM created lead fields](/example/testing_bem_created_leadfields)
 - [Use your own forward leadfield model in an inverse beamformer computation](/example/use_your_own_forward_leadfield_model_in_an_inverse_beamformer_computation)
 
