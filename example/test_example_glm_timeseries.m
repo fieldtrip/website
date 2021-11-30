@@ -1,7 +1,7 @@
-function functionname
+function test_example_glm_timeseries
 
-% MEM 4gb
-% WALLTIME 00:10:00
+% MEM 16gb
+% WALLTIME 00:30:00
 
 %
 %% Using General Linear Modeling on time series data
@@ -24,7 +24,7 @@ function functionname
 % The preprocessing of the EEG dataset is done largely similar as elsewhere on the website. Since we don't want to segment the data in trials yet, and don't use an explicit baselinecorrection, we apply a bandpass filter from 0.5 to 30 Hz.
 %
 cfg = [];
-cfg.dataset     = 'subj2.vhdr';
+cfg.dataset     = dccnpath('/home/common/matlab/fieldtrip/data/ftp/workshop/cuttingeeg2021/data-minimal/sub-02/eeg/sub-02_task-language_eeg.vhdr'); % JM NOTE: this is the same as subj2.vhdr';
 
 cfg.bpfilter    = 'yes';
 cfg.bpfreq      = [0.5 30];
@@ -50,22 +50,22 @@ sel = strcmp({event.type}, 'Stimulus');
 event = event(sel);
 
 disp(unique({event.value}))
-ans =
-   1x41 cell array
-   Columns 1 through 6
-     {'S  1'}    {'S 12'}    {'S 13'}    {'S 21'}    {'S 27'}    {'S111'}
-   Columns 7 through 12
-     {'S112'}    {'S113'}    {'S121'}    {'S122'}    {'S123'}    {'S131'}
-   Columns 13 through 18
-     {'S132'}    {'S133'}    {'S141'}    {'S142'}    {'S143'}    {'S151'}
-   Columns 19 through 24
-     {'S152'}    {'S153'}    {'S161'}    {'S162'}    {'S163'}    {'S171'}
-   Columns 25 through 30
-     {'S172'}    {'S173'}    {'S181'}    {'S182'}    {'S183'}    {'S211'}
-   Columns 31 through 36
-     {'S212'}    {'S213'}    {'S221'}    {'S222'}    {'S223'}    {'S231'}
-   Columns 37 through 41
-     {'S232'}    {'S233'}    {'S241'}    {'S242'}    {'S243'}
+% ans =
+%    1x41 cell array
+%    Columns 1 through 6
+%      {'S  1'}    {'S 12'}    {'S 13'}    {'S 21'}    {'S 27'}    {'S111'}
+%    Columns 7 through 12
+%      {'S112'}    {'S113'}    {'S121'}    {'S122'}    {'S123'}    {'S131'}
+%    Columns 13 through 18
+%      {'S132'}    {'S133'}    {'S141'}    {'S142'}    {'S143'}    {'S151'}
+%    Columns 19 through 24
+%      {'S152'}    {'S153'}    {'S161'}    {'S162'}    {'S163'}    {'S171'}
+%    Columns 25 through 30
+%      {'S172'}    {'S173'}    {'S181'}    {'S182'}    {'S183'}    {'S211'}
+%    Columns 31 through 36
+%      {'S212'}    {'S213'}    {'S221'}    {'S222'}    {'S223'}    {'S231'}
+%    Columns 37 through 41
+%      {'S232'}    {'S233'}    {'S241'}    {'S242'}    {'S243'}
 
 % The trigger codes S112, S122, S132, S142 (animals) S152, S162, S172, S182 (tools)
 % correspond to the presented visual stimuli. The trigger codes S113, S123, S133,
@@ -92,7 +92,7 @@ xlabel('time (s)')
 % By inspecting the figure, we can learn multiple things: The visual and auditory stimuli are not randomized, but presented in a visual and in an auditory block. The whole experiment apparently lasted more than 4000 seconds, which is slightly more than an hour. Since we will process the data ac continuous time series, it is relevant to realize that there is also a lot of time in the recordings in which no interesting events happened.
 %
 cfg = [];
-cfg.dataset             = 'subj2.vhdr';
+cfg.dataset     = dccnpath('/home/common/matlab/fieldtrip/data/ftp/workshop/cuttingeeg2021/data-minimal/sub-02/eeg/sub-02_task-language_eeg.vhdr'); % JM NOTE: this is the same as subj2.vhdr';
 cfg.trialdef.eventtype  = 'Stimulus';
 cfg.trialfun = 'ft_trialfun_general';
 cfg.trialdef.prestim    = 0.2;
@@ -103,7 +103,7 @@ cfg                     = ft_definetrial(cfg);
 dataVIS = ft_redefinetrial(cfg, data);
 
 cfg = [];
-cfg.dataset             = 'subj2.vhdr';
+cfg.dataset     = dccnpath('/home/common/matlab/fieldtrip/data/ftp/workshop/cuttingeeg2021/data-minimal/sub-02/eeg/sub-02_task-language_eeg.vhdr'); % JM NOTE: this is the same as subj2.vhdr';
 cfg.trialdef.eventtype  = 'Stimulus';
 cfg.trialfun = 'ft_trialfun_general';
 cfg.trialdef.prestim    = 0.2;
@@ -139,23 +139,23 @@ ft_topoplotER(cfg, timelockVIS, timelockAUD)
 %
 % We define the GLM model as
 %
-Y = X * B + err
+% Y = X * B + err
 
 % where Y is data, X is the model, and B are the regression coefficients.
 %
 %
-Best = X\Y
+%Best = X\Y
 
 %
-Best = pinv(X)*Y
+% Best = pinv(X)*Y
 
 %
- Yest      = X * Best
- Yresidual = Y * Best
+% Yest      = X * Best
+% Yresidual = Y * Best
 
 %
-Yest      =     X * X\Y
-Yresidual = Y - X * X\Y
+% Yest      =     X * X\Y
+% Yresidual = Y - X * X\Y
 
 % The data Y has the time series of one channel (or voxel) in a column, which means that we have to transpose the data from the usual EEG representation.
 % Let us first only consider a single channel. We will pick channel '1', which corresponds to the vertex electrode. It should display a large AEP and a small VEP.
@@ -217,8 +217,8 @@ end
 
 % In principle we can use the following code to plot the GLM design matrix. However, the number of elements (2 million times 1000) is too large to see much on a computer screen, which has way fewer pixels. If you zoom in on the right spot, you can recognize the design matrix, similar to how it is often displayed [for example in SPM](https://www.google.com/search?q=spm+design+matrix&client=safari&rls=en&sxsrf=ALeKk00mzX-O3LOdR9wLjSLY38iE2ifjmA:1588334957981&source=lnms&tbm=isch&sa=X&ved=2ahUKEwj2sdHn0JLpAhUMDOwKHbjYDhUQ_AUoAXoECAwQAw&biw=1757&bih=941).
 %
-figure
-imagesc(X)
+%figure
+%imagesc(X)
 
 %
 % If we were to represent X as a normal matrix, it would be approximately 2e6 times 1000 times 8 bytes, corresponding to 16 GB of memory. By representing X as a [sparse matrix](https://en.wikipedia.org/wiki/Sparse_matrix), it not only makes the memory footprint much smaller, the computation is also much faster.
@@ -252,7 +252,6 @@ Yresidual = Y - X * Best;
 
 data_combined = [];
 data_combined.time{1} = data.time{1};
-data_combined.trialinfo = data.trialinfo;
 data_combined.fsample = data.fsample;
 data_combined.trial{1} = [
   Y'

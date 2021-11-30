@@ -262,7 +262,6 @@ We can also look at how well the model explains the data
 
     data_combined = [];
     data_combined.time{1} = data.time{1};
-    data_combined.trialinfo = data.trialinfo;
     data_combined.fsample = data.fsample;
     data_combined.trial{1} = [
       Y'
