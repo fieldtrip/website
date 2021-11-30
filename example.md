@@ -16,7 +16,7 @@ See also the [tutorials](/tutorial) and [frequently asked questions](/faq).
 - [Detect the muscle activity in an EMG channel and use that as trial definition](/example/detect_the_muscle_activity_in_an_emg_channel_and_use_that_as_trial_definition)
 - [Fixing a missing sensor](/example/fixing_a_missing_sensor)
 - [Getting started with reading raw EEG or MEG data](/example/getting_started_with_reading_raw_eeg_or_meg_data)
-- [How to incorporate head movements in MEG analysis](/example/how_to_incorporate_head_movements_in_meg_analysis)
+- [How to incorporate head movements in MEG analysis](/example/headmovement_meg)
 - [Interpolating data from the CTF151 to the CTF275 sensor array using ft_megrealign](/example/megrealign)
 - [Making your own trialfun for conditional trial definition](/example/making_your_own_trialfun_for_conditional_trial_definition)
 - [Analyzing NIRS data recorded during unilateral finger- and foot-tapping](/example/nirs_fingertapping)

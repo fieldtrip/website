@@ -29,7 +29,7 @@
   link:  /example/getting_started_with_reading_raw_eeg_or_meg_data
 
 - name:  How to incorporate head movements in MEG analysis
-  link:  /example/how_to_incorporate_head_movements_in_meg_analysis
+  link:  /example/headmovement_meg
 
 - name:  Make leadfields using different headmodels
   link:  /example/make_leadfields_using_different_headmodels

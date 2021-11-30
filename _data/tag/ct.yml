@@ -20,7 +20,7 @@
   link:  /example/fixing_a_missing_sensor
 
 - name:  How to incorporate head movements in MEG analysis
-  link:  /example/how_to_incorporate_head_movements_in_meg_analysis
+  link:  /example/headmovement_meg
 
 - name:  Interpolating data from the CTF151 to the CTF275 sensor array using megrealign
   link:  /example/megrealign

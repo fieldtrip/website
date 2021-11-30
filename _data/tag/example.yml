@@ -149,7 +149,7 @@
   link:  /example/glm_trials
 
 - name:  How to incorporate head movements in MEG analysis
-  link:  /example/how_to_incorporate_head_movements_in_meg_analysis
+  link:  /example/headmovement_meg
 
 - name:  How to import data from MNE-Python and FreeSurfer
   link:  /example/import_mne
