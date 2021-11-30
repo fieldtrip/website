@@ -17,7 +17,7 @@
   link:  /example/crossfreq
 
 - name:  Effects of tapering for power estimates
-  link:  /example/effects_of_tapering_for_power_estimates_in_the_frequency_domain
+  link:  /example/effects_of_tapering
 
 - name:  Simulate an oscillatory signal with phase resetting
   link:  /example/phase_reset

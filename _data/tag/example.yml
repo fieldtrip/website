@@ -98,7 +98,7 @@
   link:  /example/ecog_ny
 
 - name:  Effects of tapering for power estimates
-  link:  /example/effects_of_tapering_for_power_estimates_in_the_frequency_domain
+  link:  /example/effects_of_tapering
 
 - name:  Computing and reporting the effect size
   link:  /example/effectsize
