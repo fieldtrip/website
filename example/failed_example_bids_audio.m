@@ -42,8 +42,8 @@ cfg.dataset_description.DatasetDOI          = 'n/a';
 cfg.TaskDescription = 'The subject was instructed to speak a random sentence into the microphone';
 
 cfg.method    = 'copy'; % the audio should simply be copied, not converted
-cfg.dataset   = './original/short_sentence.mp3';
-cfg.bidsroot  = './bids';
+cfg.dataset   = dccnpath('/home/common/matlab/fieldtrip/data/ftp/example/bids_audio/original/short_sentence.mp3');
+cfg.bidsroot  = fullfile(tempdir, 'bids');
 cfg.datatype  = 'audio';
 cfg.sub       = '01';
 cfg.task      = 'speech';

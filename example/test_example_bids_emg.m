@@ -39,7 +39,7 @@ cfg.dataset_description.DatasetDOI          = 'n/a';
 
 cfg.method = 'copy'; % the original data is in a BIDS -compliant format and can simply be copied
 
-cfg.bidsroot = './bids';  % write to the present working directory
+cfg.bidsroot = fullfile(tempdir, 'bids');  % write to the some scratch directory
 cfg.datatype = 'emg';
 cfg.sub = 'NT05';
 
@@ -58,7 +58,7 @@ cfg.emg.EMGChannelCount    = 13; % it might actually be that some channels are r
 
 cfg.TaskDescription = 'The subject was lying in the MRI scanner during a resting-state BOLD scan, while EMG was being recorded';
 cfg.task = 'resting';
-cfg.dataset = './original/nt05_EMG_SESS1_RS_RAW.vhdr';
+cfg.dataset = dccnpath('/home/common/matlab/fieldtrip/data/ftp/example/bids_emg/original/nt05_EMG_SESS1_RS_RAW.vhdr');
 cfg.run = 1;
 
 % write the first EMG recording as run-1
@@ -66,7 +66,7 @@ data2bids(cfg);
 
 cfg.TaskDescription = 'The subject was lying in the MRI scanner during a GABA MRS scan, while EMG was being recorded';
 cfg.task = 'resting';
-cfg.dataset = './original/nt05_EMG_SESS1_GABA_RAW.vhdr';
+cfg.dataset = dccnpath('/home/common/matlab/fieldtrip/data/ftp/example/bids_emg/original/nt05_EMG_SESS1_GABA_RAW.vhdr');
 cfg.run = 2;
 
 % write the first EMG recording as run-2

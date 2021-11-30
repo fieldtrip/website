@@ -1,7 +1,9 @@
-function functionname
+function test_example_bids_eeg
 
 % MEM 4gb
 % WALLTIME 00:10:00
+
+
 
 %
 %% Converting an example EEG dataset for sharing in BIDS
@@ -37,10 +39,10 @@ for subindx=1:numel(sub)
   cfg.datatype  = 'eeg';
 
   % specify the input file name, here we are using the same file for every subject
-  cfg.dataset   = 'Eeglab_data.set';
+  cfg.dataset   = dccnpath('/home/common/matlab/fieldtrip/data/ftp/example/bids_eeg/original/Eeglab_data.set');
 
   % specify the output directory
-  cfg.bidsroot  = 'bids';
+  cfg.bidsroot  = fullfile(tempdir,'bids');
   cfg.sub       = sub{subindx};
 
   % specify the information for the participants.tsv file
@@ -100,10 +102,10 @@ for subindx=1:numel(sub)
       cfg.datatype  = 'eeg';
 
       % specify the input file name, here we are using the same file for every subject
-      cfg.dataset   = 'Eeglab_data.set';
+      cfg.dataset   = dccnpath('/home/common/matlab/fieldtrip/data/ftp/example/bids_eeg/original/Eeglab_data.set');
 
       % specify the output directory
-      cfg.bidsroot  = 'bids';
+      cfg.bidsroot  = fullfile(tempdir,'bids');
       cfg.sub       = sub{subindx};
       cfg.ses       = ses{sesindx};
       cfg.run       = run(runindx);
