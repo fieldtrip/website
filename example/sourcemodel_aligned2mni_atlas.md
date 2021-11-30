@@ -22,6 +22,7 @@ The procedure is as follows. First, a template grid is computed on the basis of 
     cfg.inwardshift = -1.5;
     cfg.headmodel   = vol;
     template_grid   = ft_prepare_sourcemodel(cfg);
+    template_grid.coordsys = 'mni';
 
     template_grid = ft_convert_units(template_grid,'cm');
 
@@ -42,7 +43,6 @@ Read the atlas, convert to units of cm and create the binary mask.
     cfg = [];
     cfg.atlas      = atlas;
     cfg.roi        = atlas.tissuelabel;  % here you can also specify a single label, i.e. single ROI
-    cfg.inputcoord = 'mni';
     mask           = ft_volumelookup(cfg, template_grid);
 
 Now we determine all indices of the binary mask to be considered as inside the head model. And plot the result. Note the missing dipole locations for example in the vicinity of the ventricles.

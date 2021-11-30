@@ -1,4 +1,4 @@
-function functionname
+function test_example_sourcemodel_aligned2mni_atlas
 
 % MEM 4gb
 % WALLTIME 00:10:00
@@ -22,6 +22,7 @@ cfg.tight  = 'yes';
 cfg.inwardshift = -1.5;
 cfg.headmodel   = vol;
 template_grid   = ft_prepare_sourcemodel(cfg);
+template_grid.coordsys = 'mni';
 
 template_grid = ft_convert_units(template_grid,'cm');
 
@@ -42,7 +43,6 @@ atlas = ft_convert_units(atlas,'cm');
 cfg = [];
 cfg.atlas      = atlas;
 cfg.roi        = atlas.tissuelabel;  % here you can also specify a single label, i.e. single ROI
-cfg.inputcoord = 'mni';
 mask           = ft_volumelookup(cfg, template_grid);
 
 % Now we determine all indices of the binary mask to be considered as inside the head model. And plot the result. Note the missing dipole locations for example in the vicinity of the ventricles.
@@ -56,7 +56,7 @@ ft_plot_mesh(template_grid.pos(template_grid.inside,:));
 %
 % Load the subject-specific MRI from [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/salzburg/mri.mat) and inverse-warp the subject specific grid to the template grid.
 %
-mri = ft_read_mri(dccnpath('/home/common/matlab/fieldtrip/dataftp/tutorial/salzburg/mri.mat'));
+mri = ft_read_mri(dccnpath('/home/common/matlab/fieldtrip/data/ftp/tutorial/salzburg/mri.mat'));
 
 cfg                = [];
 cfg.warpmni   = 'yes';
@@ -69,7 +69,7 @@ sourcemodel        = ft_prepare_sourcemodel(cfg);
 %
 close all
 
-hdm = ft_read_mri(dccnpath('/home/common/matlab/fieldtrip/dataftp/tutorial/salzburg/hdm.mat'));
+hdm = ft_read_mri(dccnpath('/home/common/matlab/fieldtrip/data/ftp/tutorial/salzburg/hdm.mat'));
 
 hdm         = ft_convert_units(hdm, 'm');
 sourcemodel = ft_convert_units(sourcemodel, 'm');

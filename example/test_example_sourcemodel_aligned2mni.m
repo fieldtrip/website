@@ -1,4 +1,4 @@
-function test_example_sourcemodel_aligned2mni
+function functionname
 
 % MEM 4gb
 % WALLTIME 00:10:00
