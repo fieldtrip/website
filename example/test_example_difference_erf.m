@@ -1,4 +1,4 @@
-function functionname
+function test_example_difference_erf
 
 % MEM 4gb
 % WALLTIME 00:10:00
@@ -14,15 +14,15 @@ function functionname
 %
 % Consider a source in area A1 with a channel-level spatial field distribution F1 of and another source in area A2 with field distribution F2. If the source 1 is active with strength one and source 2 with strength zero, the field distribution can be described as “one times F1”. If both sources are active, the field distribution is “one times F1 plus one times F2”. In general the field distribution of source 1 with strength S1 and source 2 with strength S2 is
 %
-F(combined)  = S1 * F1  + S2 * F2
+% F(combined)  = S1 * F1  + S2 * F2
 
 % If the source strength S1 and/or S2 can be differentiated by an experimental manipulation, the respective contributions to the combined field distributions will differ. For example
 %
-F(condA) = 1.0 * F1 + 0.3 * F2
+% F(condA) = 1.0 * F1 + 0.3 * F2
 
 % and
 %
-F(condB) = 1.0 * F1 + 0.2 * F2
+% F(condB) = 1.0 * F1 + 0.2 * F2
 
 % In this example the activity of source 1 is not different in the two conditions, but the strength of source 2 is slightly weaker in the second condition.
 %
@@ -32,21 +32,21 @@ F(condB) = 1.0 * F1 + 0.2 * F2
 %
 % Now consider computing the difference event-related field as
 %
-F(diff) = F(condA) - F(condB)
-F(diff) = (1.0 * F1 + 0.3 * F2) - (1.0 * F1 + 0.2 * F2)
-F(diff) = 1.0 * F1 - 1.0 * F1 + 0.3 * F2 - 0.2 * F2
-F(diff) = 0.1 * F2
+% F(diff) = F(condA) - F(condB)
+% F(diff) = (1.0 * F1 + 0.3 * F2) - (1.0 * F1 + 0.2 * F2)
+% F(diff) = 1.0 * F1 - 1.0 * F1 + 0.3 * F2 - 0.2 * F2
+% F(diff) = 0.1 * F2
 
 % i.e. the difference field reflects only the weak difference of source 2, and the equal-strength contribution of source 1 is completely gone in the difference field. A source reconstruction of the resulting field distribution will result in a dipole at the location of source 2.
 %
 % To summarise, the source reconstruction of combined activity with a single-dipole model results in the dipole reflecting the center of mass of the activity. If the activity of a single contributing source can be experimentally manipulated, the source reconstruction of the difference field will result in a dipole at the exact location of that differentially strong source.
 %
 % In reality, it is more likely that the experimental manipulation will not only affect the strength of one source, but rather that of both sources. Even in that case looking at the distribution of the difference field is instructive. For example, if
-F(condA) = 1.0 * F1 + 0.3 * F2
+% F(condA) = 1.0 * F1 + 0.3 * F2
 % and
-F(condB) = 0.9 * F1 + 0.2 * F2
+% F(condB) = 0.9 * F1 + 0.2 * F2
 % then
-F(diff) = 0.1 * F1 + 0.1 * F2
+% F(diff) = 0.1 * F1 + 0.1 * F2
 
 % Here the original field distributions in both conditions are dominated by the strongest source 1, whereas the difference field reveals source 1 and 2 equally strong. Source reconstruction of the difference field in this case would involves a fit with a two-dipole model. Important is that just by eye-balling the spatial distribution it is already possible to distinguish the two sources, whereas the original field distributions of the two original conditions will be difficult, if not impossible, to distinguish.
 %
