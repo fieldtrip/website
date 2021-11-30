@@ -5,7 +5,6 @@
 %
 % Create and plot a simulated signal. The simulated data contains only one trial, with a length of one second and a 50Hz sine wave.
 %
-clear all
 close all
 
 cfg = [];

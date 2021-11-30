@@ -5,7 +5,6 @@
 %
 % The following code simulates a clean oscillating signal with a phase reset at time zero.
 %
-clear all
 close all
 
 f = 5;
@@ -31,7 +30,6 @@ plot(t, mean(d,1))
 %
 % The following code also includes a small "random walk" in the phase, i.e. the signal is a little bit broad-band and over time there is some phase dispersion. At t=0 there is still a phase reset. The phase dispersion causes the average ERF again to disappear some time following the phase reset.
 %
-clear all
 close all
 f = 5;
 t = (-2000:1:5000)/1000;

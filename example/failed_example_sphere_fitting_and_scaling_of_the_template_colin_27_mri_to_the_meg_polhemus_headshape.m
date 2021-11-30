@@ -3,7 +3,7 @@
 %
 % This example script demonstrates how to fit a sphere to the MEG Polhemus recorded head shape, how to fit a sphere to a template MRI, and subsequently use the two fitted spheres to scale the template MRI such that it fits the MEG Polhemus head shape.
 %
-clc; clear; close all;
+clc; close all;
 restoredefaultpath
 addpath('/nashome1/wexu/matlab/fieldtrip')
 ft_defaults

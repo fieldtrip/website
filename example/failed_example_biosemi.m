@@ -66,7 +66,6 @@ save elec160.mat elec
 
 %% ## Preprocessing
 %
-clear all
 
 cond = {'Pitch20', 'Pitch40', 'Timbre490', 'Timbre510'};
 
@@ -117,7 +116,6 @@ end
 
 %% ## Artifact rejection
 %
-clear all
 cond = {'Pitch20' 'Pitch40', 'Timbre490', 'Timbre510'};
 
 % concatenate all trials/blocks
@@ -202,8 +200,6 @@ save('analysis/data_clean', 'data')
 
 %% ## Timelock Analysis
 %
-clear all
-
 cond = {'Pitch20' 'Pitch40', 'Timbre490', 'Timbre510'};
 
 load('analysis/data_clean', 'data')

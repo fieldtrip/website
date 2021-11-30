@@ -228,7 +228,6 @@ diff_in_sampl=out_sample-in_sample;
 % # We now start the MEG data acquisition, on Acq.
 %
 %
-clear all;
 close all;
 delete(instrfind);
 fclose('all');
