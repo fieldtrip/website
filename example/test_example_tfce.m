@@ -1,4 +1,4 @@
-function functionname
+function test_example_threshold_free_cluster_enhancement
 
 % MEM 4gb
 % WALLTIME 00:10:00
@@ -23,7 +23,7 @@ function functionname
 %
 % The data used in this example is available from our [FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/example/threshold_free_cluster_enhancement/).
 %
-load ERF_orig
+load(dccnpath('/home/common/matlab/fieldtrip/data/ftp/example/threshold_free_cluster_enhancement/ERF_orig'));
 
 Nsubj       = 10;
 design      = zeros(2, Nsubj*2);
@@ -89,7 +89,7 @@ figure(1), clf, hold on,
 set(gcf, 'units','centimeters','position',[0 0 18 10] );
 subplot(2,2,1), hold on, grid on,
 title( 'TFCE: H=2, E=0.5' );
-plot( statA.time, stat.stat_tfce, 'r');
+plot( statA.time, statA.stat_tfce, 'r');
 plot( statA.time(statA.mask), 400*ones(sum(statA.mask),1), 'r', 'linewidth',2 );
 ylabel( 'TFCE' );
 ylim( [-20, 420] );
