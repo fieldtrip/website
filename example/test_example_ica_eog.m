@@ -1,7 +1,7 @@
-function functionname
+function test_example_ica_eog
 
-% MEM 4gb
-% WALLTIME 00:10:00
+% MEM 8gb
+% WALLTIME 00:30:00
 
 %
 %% Use independent component analysis (ICA) to remove EOG artifacts
@@ -22,7 +22,7 @@ function functionname
 %
 % preprocessing of example dataset
 cfg = [];
-cfg.dataset            = 'ArtifactMEG.ds';
+cfg.dataset            = dccnpath('/home/common/matlab/fieldtrip/data/ArtifactMEG.ds');
 cfg.trialdef.eventtype = 'trial';
 cfg = ft_definetrial(cfg);
 
@@ -46,17 +46,17 @@ cfg.method = 'runica'; % this is the default and uses the implementation from EE
 
 comp = ft_componentanalysis(cfg, data);
 
-% Note that this is a time-consuming step. The output "comp" structure resembles the input raw data structure, i.e. it contains a time course for each component and each trial. Furthermore, it contains the spatial mixing matrix. In principle you can continue analyzing the data on the component level by doing
-%
-  cfg = [];
-  cfg = ...
-  freq = ft_freqanalysis(cfg, comp);
-
-% or
-%
-  cfg = [];
-  cfg = ...
-  timelock = ft_timelockanalysis(cfg, comp);
+% % Note that this is a time-consuming step. The output "comp" structure resembles the input raw data structure, i.e. it contains a time course for each component and each trial. Furthermore, it contains the spatial mixing matrix. In principle you can continue analyzing the data on the component level by doing
+% %
+%   cfg = [];
+%   cfg = ...
+%   freq = ft_freqanalysis(cfg, comp);
+% 
+% % or
+% %
+%   cfg = [];
+%   cfg = ...
+%   timelock = ft_timelockanalysis(cfg, comp);
 
 % but for this example we want to analyze the data eventually on the original channel level and only remove the components that represent the artifacts.
 %
@@ -92,7 +92,7 @@ ft_databrowser(cfg, comp)
 % remove the bad components and backproject the data
 cfg = [];
 cfg.component = [9 10 14 24]; % to be removed component(s)
-data = ft_rejectcomponent(cfg, comp, data)
+data = ft_rejectcomponent(cfg, comp, data);
 
 % Compare the data before (red trace) and after (blue trace) the EOG removal - for example trial 4, channel MLF1
 %
