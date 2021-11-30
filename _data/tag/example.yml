@@ -218,7 +218,7 @@
   link:  /example/ica_ecg
 
 - name:  Use independent component analysis (ICA) to remove EOG artifacts
-  link:  /example/use_independent_component_analysis_ica_to_remove_eog_artifacts
+  link:  /example/ica_eog
 
 - name:  Use simulated ERPs to explore cluster statistics
   link:  /example/use_simulated_erps_to_explore_cluster_statistics

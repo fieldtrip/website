@@ -8,7 +8,7 @@
   link:  /example/ica_ecg
 
 - name:  Use independent component analysis (ICA) to remove EOG artifacts
-  link:  /example/use_independent_component_analysis_ica_to_remove_eog_artifacts
+  link:  /example/ica_eog
 
 - name:  How can I consistently represent artifacts in my data?
   link:  /faq/how_can_i_consistently_represent_artifacts_in_my_data
