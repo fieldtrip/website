@@ -47,14 +47,14 @@ function functionname
 % The |mmse| output struct has the following fields:
 %
 %
-  dimord: 'chan_timescales_time'     defines how the numeric data should be interpreted
-  sampen: [48x42x26 double]          sample entropy
-   label: {48x1 cell}                the channel labels
- fsample: [1x42 double]              data sampling rate at each coarse graining step (timescale)
-    time: [1x26 double]              the time, expressed in seconds
-       r: [48x42x26 double]          the boundary similarity parameter computed for each bin
-     cfg: [1x1 struct]               the configuration used by the function that generated this data structure
-
+%   dimord: 'chan_timescales_time'     defines how the numeric data should be interpreted
+%   sampen: [48x42x26 double]          sample entropy
+%    label: {48x1 cell}                the channel labels
+%  fsample: [1x42 double]              data sampling rate at each coarse graining step (timescale)
+%     time: [1x26 double]              the time, expressed in seconds
+%        r: [48x42x26 double]          the boundary similarity parameter computed for each bin
+%      cfg: [1x1 struct]               the configuration used by the function that generated this data structure
+% 
 % The |mmse| struct is structurally comparable to a |freq| structure as obtained from **[ft_freqanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqanalysis.m)**, with the following exceptions: |timescales| replaces the |frequency| field, indicating the timescales axis; |sampen| replaces the |powspctrm| field, containing the resulting sample entropy values; |fsample| indicates the sampling rate of the data at each coarsegraining step; |r| contains the r values computed at each channel-by-timescales-by-time location.
 %
 % If, after computing mMSE, you would like to use the FieldTrip functions for plotting, e.g., **[ft_multiplotTFR](https://github.com/fieldtrip/fieldtrip/blob/release/ft_multiplotTFR.m)** and computing statistics, i.e. **[ft_freqstatistics](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqstatistics.m)**, the easiest way is to place the mMSE output into a freq structure (see **[ft_datatype_freq](https://github.com/fieldtrip/fieldtrip/blob/release/utilities/ft_datatype_freq.m)**) so you can just plug the mMSE values into these functions.
