@@ -1,7 +1,12 @@
+function functionname
+
+% MEM 4gb
+% WALLTIME 00:10:00
+
 %
 %% Converting an example video dataset for sharing in BIDS
 %
-% The [BIDS standard](https://bids.neuroimaging.io) does currently not specify how to represent video recordings. This example - and the support that is implemented in the **[data2bids](https://github.com/fieldtrip/fieldtrip/blob/release/data2bids.m)** function - should be considered as a preliminary proposal to help researchers with their existing data. This example may also serve to start a discussion on whether and how this data type should be added to the [BIDS specification](http://bids-specification.readthedocs.io/).  
+% The [BIDS standard](https://bids.neuroimaging.io) does currently not specify how to represent video recordings. This example - and the support that is implemented in the **[data2bids](https://github.com/fieldtrip/fieldtrip/blob/release/data2bids.m)** function - should be considered as a preliminary proposal to help researchers with their existing data. This example may also serve to start a discussion on whether and how this data type should be added to the [BIDS specification](http://bids-specification.readthedocs.io/).
 %
 % In many experiments video data can be recorded along with other measurements. This is often used to off-line screen the subjects behavior and to annotate the video, i.e. note the time segments with specific (desired or undesired) behavior. Neither the video recording  (which can be considered as raw data), nor the annotations (which can be considered as derived data) are currently formally part of BIDS, although it is not so difficult to come up with a way that these can be represented in a BIDS-like fashion.
 %

@@ -1,3 +1,8 @@
+function functionname
+
+% MEM 4gb
+% WALLTIME 00:10:00
+
 %
 %% Getting started with reading raw EEG or MEG data
 %
@@ -136,4 +141,3 @@ data_raw =
        time: {[1x300 double]  [1x300 double]  [1x300 double]  [1x300 double]  [1x300 double]}
     fsample: 300
        grad: [1x1 struct]
-

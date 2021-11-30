@@ -1,3 +1,8 @@
+function functionname
+
+% MEM 4gb
+% WALLTIME 00:10:00
+
 %
 %% The correct pipeline order for combining planar MEG channels
 %

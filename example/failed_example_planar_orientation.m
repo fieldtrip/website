@@ -1,3 +1,8 @@
+function functionname
+
+% MEM 4gb
+% WALLTIME 00:10:00
+
 %
 %% Find the orientation of planar gradiometers
 %
@@ -26,4 +31,3 @@ figure
 quiver3(pos(:,1), pos(:,2), pos(:,3), ori(:,1), ori(:,2), ori(:,3))
 axis equal
 axis vis3d
-

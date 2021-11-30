@@ -1,3 +1,8 @@
+function functionname
+
+% MEM 4gb
+% WALLTIME 00:10:00
+
 %
 %% Creating a layout for plotting NIRS optodes and channels
 %

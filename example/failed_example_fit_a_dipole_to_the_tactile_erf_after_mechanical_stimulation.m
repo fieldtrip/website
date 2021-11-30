@@ -1,3 +1,8 @@
+function functionname
+
+% MEM 4gb
+% WALLTIME 00:10:00
+
 %
 %% Fit a dipole to the tactile ERF after mechanical stimulation
 %

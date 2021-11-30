@@ -1,3 +1,8 @@
+function functionname
+
+% MEM 4gb
+% WALLTIME 00:10:00
+
 %
 %% How to create a head model if you do not have an individual MRI
 %
@@ -23,7 +28,7 @@ template = ft_convert_units(template, 'mm');
 
 % Note that the template head model contains three surfaces describing the three compartments of scalp, skull and brain. Furthermore, it descibes the conductivities and the BEM system matrix, computed with dipoli. Here is how the complete structure looks like
 %
-template = 
+template =
   struct with fields:
 
      bnd: [1x3 struct]
@@ -104,8 +109,8 @@ template_fit_sphere = ft_transform_geometry(transformation, template);
 % We visualize both meshes:
 %
 figure;
-ft_plot_mesh(template.bnd(1));  
-ft_plot_mesh(polhemus);  
+ft_plot_mesh(template.bnd(1));
+ft_plot_mesh(polhemus);
 
 %
 % The Polhemus has facial details which are not in the template scalp surface, and the Polhemus does not cover the lower back of the head. These details need to be removed.
@@ -128,8 +133,8 @@ defaced_polhemus =  ft_defacemesh(cfg, polhemus);
 % We have another look how well the surfaces match
 %
 figure;
-ft_plot_mesh(defaced_template);  
-ft_plot_mesh(defaced_polhemus);  
+ft_plot_mesh(defaced_template);
+ft_plot_mesh(defaced_polhemus);
 
 %
 % We determine the transformation and apply it to all 3 surfaces of the template head model.
@@ -165,7 +170,7 @@ ft_plot_mesh(polhemus)
 cfg               = [];
 cfg.conductivity  = [0.33 0.0042 0.33];
 cfg.method        = 'openmeeg';
-headmodel_surface = ft_prepare_headmodel(cfg, template_fit_surface);    
+headmodel_surface = ft_prepare_headmodel(cfg, template_fit_surface);
 
 figure;
 ft_plot_mesh(headmodel_sphere.bnd(1))

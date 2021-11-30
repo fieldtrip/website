@@ -1,3 +1,8 @@
+function functionname
+
+% MEM 4gb
+% WALLTIME 00:10:00
+
 %
 %% Check the quality of the anatomical coregistration
 %
@@ -80,4 +85,3 @@ camlight right
 material dull
 alpha 0.3
 ft_plot_mesh(headshapeMEG.fid, 'vertexcolor', 'k', 'vertexsize', 10);
-

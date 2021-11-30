@@ -1,7 +1,12 @@
+function functionname
+
+% MEM 4gb
+% WALLTIME 00:10:00
+
 %
 %% Converting an example EEG dataset for sharing in BIDS
 %
-% This example describes how to use **[data2bids](https://github.com/fieldtrip/fieldtrip/blob/release/data2bids.m)** to convert an EEG dataset for sharing according to the [BIDS standard](https://bids.neuroimaging.io).  
+% This example describes how to use **[data2bids](https://github.com/fieldtrip/fieldtrip/blob/release/data2bids.m)** to convert an EEG dataset for sharing according to the [BIDS standard](https://bids.neuroimaging.io).
 %
 % If you want to share data, there are multiple things to consider. For example the file format of the data, the place to share the data (openneuro/zenodo/figshare/dataverse), the access mechanism for the data (ftp/http/sftp), the license or data use agreement, whether all data or only part of the data is shared, using pseudonyms in the description of the data, scrubbing the date and time of recording, removing identifying features from the data, etc.
 %
@@ -76,7 +81,7 @@ cfg.method = 'copy';
 %
 cfg.method = 'convert';
 
-% The BrainVision format consists of a separate header, data and marker file. This means that each dataset now consists of three files, plus the TSV and JSON sidecar files for BIDS.  
+% The BrainVision format consists of a separate header, data and marker file. This means that each dataset now consists of three files, plus the TSV and JSON sidecar files for BIDS.
 %
 %% # Multiple sessions and/or runs
 %
@@ -119,7 +124,7 @@ end % for sub
 %
 % In converting data from one to another format there is always a chance of loosing information. Therefore you should store the data files in their original format in the `bids/sourcedata` directory. This also applies to auxiliary files, lab notes, presentation log files and other information that you do not want to loose.
 %
-% Furthermore, it is recommended to store the script that you used for converting the data in the `bids/code`. See the [BIDS specification](https://bids-specification.readthedocs.io/en/stable/) for further details.  
+% Furthermore, it is recommended to store the script that you used for converting the data in the `bids/code`. See the [BIDS specification](https://bids-specification.readthedocs.io/en/stable/) for further details.
 %
 %% # Concluding remarks
 %

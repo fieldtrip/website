@@ -1,3 +1,8 @@
+function functionname
+
+% MEM 4gb
+% WALLTIME 00:10:00
+
 %
 %% Apply non-parametric statistics with clustering on TFRs of power that were computed with BESA
 %

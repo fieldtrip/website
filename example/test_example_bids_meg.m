@@ -1,3 +1,8 @@
+function functionname
+
+% MEM 4gb
+% WALLTIME 00:10:00
+
 %
 %% Converting an example MEG dataset for sharing in BIDS
 %
@@ -6,7 +11,7 @@
 %
 %% # CTF
 %
-% The CTF MEG file format consists of recordings that are represented in a directory with the extension `*.ds`. The directory contains multiple files, where the `*.res4` contains most of the header information, and the `*.meg4` files (there can be multiple) contain the data. However, also the other files contain relevant data and/or metadata, such as markers and information on how the data has been processed.  
+% The CTF MEG file format consists of recordings that are represented in a directory with the extension `*.ds`. The directory contains multiple files, where the `*.res4` contains most of the header information, and the `*.meg4` files (there can be multiple) contain the data. However, also the other files contain relevant data and/or metadata, such as markers and information on how the data has been processed.
 %
 % In general you **should not** simply rename the directory, or mess with the files in the directory by hand, since there are multiple files that need to have a consistent file naming structure. The CTF Linux command-line software includes tools for anonimizing and renaming datasets in a consistent fashion and [this example page](/faq/how_can_i_anonymize_a_ctf_dataset/) also presents a way of doing it directly in MATLAB.
 %
@@ -61,8 +66,8 @@ for subindx=1:numel(subj)
   for runindx=1:2
     
     % the number 3018009.04 in the dataset name refers to the DCCN project identifier
-    % all data acquisition was done using study-specific participant identifiers rather than names  
-    % the CTF dataset name contains the recording date, but here we use a wildcard instead  
+    % all data acquisition was done using study-specific participant identifiers rather than names
+    % the CTF dataset name contains the recording date, but here we use a wildcard instead
 
     d = dir(sprintf('../original/301800904eritwoe%s00%d_1200hz_*_01.ds', subj{subindx}, runindx));
     if isempty(d)

@@ -1,3 +1,8 @@
+function functionname
+
+% MEM 4gb
+% WALLTIME 00:10:00
+
 %
 %% Effects of tapering for power estimates
 %
@@ -91,4 +96,3 @@ hold on
 semilogy(freq.freq, freq.powspctrm(1,:), 'r-');
 
 legend({'1s', '5s', '10s'});
-

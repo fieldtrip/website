@@ -1,3 +1,8 @@
+function functionname
+
+% MEM 4gb
+% WALLTIME 00:10:00
+
 %
 %% Converting the combined MEG/fMRI MOUS dataset for sharing in BIDS
 %

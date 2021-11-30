@@ -1,3 +1,8 @@
+function functionname
+
+% MEM 4gb
+% WALLTIME 00:10:00
+
 %
 %% # Use denoising source separation (DSS) to remove ECG artifacts
 %

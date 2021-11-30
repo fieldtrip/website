@@ -1,3 +1,8 @@
+function functionname
+
+% MEM 4gb
+% WALLTIME 00:10:00
+
 %
 %% Computing and reporting the effect size
 %
@@ -9,7 +14,7 @@
 %
 % If you are doing hypothesis-driven research, you should _not_ guide your statistical analysis by a visual inspection of the data; you should state your hypothesis up-front and avoid [data dredging or p-hacking](https://en.wikipedia.org/wiki/Data_dredging).
 %
-% On the other hand: if you are doing exploratory research, you should not compute p-values. Effect sizes are interesting and relevant to report for both exploratory and hypothesis-driven research.   
+% On the other hand: if you are doing exploratory research, you should not compute p-values. Effect sizes are interesting and relevant to report for both exploratory and hypothesis-driven research.
 %
 % The [ERF_orig.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/example/effectsize/ERF_orig.mat) data that is used in this example script is available from our FTP server. The same data is used in the other statistics tutorials; the example here specifically follows the [Parametric and non-parametric statistics on event-related fields](/tutorial/eventrelatedstatistics) tutorial.
 %
@@ -366,7 +371,7 @@ ans =
     {'MLT41'}
     {'MLT42'}
     {'MLT43'}
-    {'MLT44'}  
+    {'MLT44'}
 
 %
 % The advantage of the list of channels and the begin- and end-latency is that these are easy to report in a written manuscript/paper. As before, these can be used to compute the average in the region of interest, and to compute the effect size for that rectangle:
@@ -395,7 +400,7 @@ difference: 1.9677e-14
     dimord: 'chan_time'
      label: {'mean(MLF23, MLF33, MLF34, MLF44, MLT11, MLT12, MLT13, MLT14, MLT23, MLT24, MLT31, MLT32, MLT33, MLT34, MLT41, MLT42, MLT43, MLT44)'}
       time: 0.4283
-       cfg: [1x1 struct]    
+       cfg: [1x1 struct]
 
 % The effect size for the data averaged in the circumscribed rectangle is 1.43.
 %

@@ -1,3 +1,8 @@
+function functionname
+
+% MEM 4gb
+% WALLTIME 00:10:00
+
 %
 %% Compute forward simulated data and apply a beamformer scan
 %
@@ -57,4 +62,3 @@ cfg.method = 'ortho';
 cfg.funparameter = 'nai';
 cfg.funcolorlim = [1.4 1.5];  % the voxel in the center of the volume conductor messes up the autoscaling
 ft_sourceplot(cfg, source_nai);
-

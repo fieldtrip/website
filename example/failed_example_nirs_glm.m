@@ -1,4 +1,8 @@
-%
+function functionname
+
+% MEM 4gb
+% WALLTIME 00:10:00
+
 %% Using GLM to analyze NIRS timeseries data
 %
 % This is an example MATLAB script that demonstrates how to compute a simple GLM on the fingertapping NIRS data that is also used in the tutorial on [preprocessing and averaging of single-channel NIRS data](/tutorial/nirs_singlechannel). The data is available from our [FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/nirs_singlechannel/).

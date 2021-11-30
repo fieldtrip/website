@@ -1,3 +1,8 @@
+function functionname
+
+% MEM 4gb
+% WALLTIME 00:10:00
+
 %
 %% Conditional Granger causality in the frequency domain
 %
@@ -61,7 +66,7 @@ simcfg.params(:,:,2) = [   0      0      0;
 %
 data1           = ft_connectivitysimulation(simcfg);
 
-% # 
+% #
 %
 figure
 plot(data.time{1}, data.trial{1})

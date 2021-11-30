@@ -1,3 +1,8 @@
+function functionname
+
+% MEM 4gb
+% WALLTIME 00:10:00
+
 %
 %% Use independent component analysis (ICA) to remove ECG artifacts
 %

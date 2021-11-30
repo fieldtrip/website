@@ -1,3 +1,8 @@
+function functionname
+
+% MEM 4gb
+% WALLTIME 00:10:00
+
 %
 %% Using simulations to estimate the sample size for cluster-based permutation test
 %
@@ -51,9 +56,9 @@ alpha_level = 0.05;  % alpha level
 n_sim       = 5000;  % number of simulations/experiments
 
 % run 5000 experiments of tossing a 100% unfair coin 5 times, store the number of heads generated in each experiment
-n_heads = binornd(n_sample, p_heads_h1, [1,n_sim]);   
+n_heads = binornd(n_sample, p_heads_h1, [1,n_sim]);
 % calculate the probability of getting at least that many heads if the coin would be fair
-p_h0  = 1-binocdf(n_heads -1, n_sample, 0.5);  
+p_h0  = 1-binocdf(n_heads -1, n_sample, 0.5);
 % calculate power
 power = sum(p_h0 < alpha_level)/n_sim;
 %
@@ -75,8 +80,8 @@ n_sample   = n_start;            % sample size
 while power < power_level        % continue increasing sample-size until power reach desired level
     n_sample = n_sample + 1;     % sample size in current iteration
     %disp(n_sample);
-    n_heads = binornd(n_sample, p_heads_h1, [1,n_sim]);   
-    p_h0  = 1-binocdf(n_heads-1, n_sample, 0.5);  
+    n_heads = binornd(n_sample, p_heads_h1, [1,n_sim]);
+    p_h0  = 1-binocdf(n_heads-1, n_sample, 0.5);
     power = sum(p_h0 < alpha_level)/n_sim;  % calculate power for the current sample size
     power_at_n(n_sample) = power;
 end
@@ -156,7 +161,7 @@ title(['Required sample size is ' num2str(n_sample)])
 %%
 close all;
 addpath('F:\SampleSize\functions')
-load('exampleData_timefreq.mat');   % load a time-freq data obtained from the ft_freqanalysis function, 
+load('exampleData_timefreq.mat');   % load a time-freq data obtained from the ft_freqanalysis function,
                                     % to retrieve the fieldtrip data structure
                                     
 %=========== set configuration for data simulation ================
@@ -164,7 +169,7 @@ load('exampleData_timefreq.mat');   % load a time-freq data obtained from the ft
 cfg = [];
 cfg.alpha_level = 0.05;    % desired alpha-level
 cfg.power_level = 0.8;     % desired power
-cfg.num_sims    = 500;     % number of randomizations, should be >= 500 
+cfg.num_sims    = 500;     % number of randomizations, should be >= 500
 cfg.n_start     = 10;      % sample size to start with, should be <=10
 
 % parameters for normal distribution from which the simulated data are sampled
@@ -176,7 +181,7 @@ cfg.cor         = 0.7;     % minimum correlation between paried samples, ONLY ne
 % mu, sd, and cor should be corresponding values that you expect from your own data, they can be set to be similar to those in pilot or prior existing studies
 % mu is particularly important, as it determines the amount of difference between conditions
 
-% parameters for the time-freq data, should be matched to your own time-freq data 
+% parameters for the time-freq data, should be matched to your own time-freq data
 cfg.time           = exampleData.time;   % exampleData is the variable loaded from 'exampleData_timefreq.mat'
 cfg.freq           = exampleData.freq;
 cfg.label          = exampleData.label;
@@ -184,44 +189,44 @@ cfg.dimord         = exampleData.dimord;
 
 % parameters for the simulated cluster of interest
 % these three parameters should be set similar to those of the cluster in pilot or prior existing studies
-cfg.clusterfreq    = [4 8];                    % freq range you want to be included in the cluster displaying effect of interest, 
-cfg.clustertime    = [0.03 0.25];              % time range you want to be included in the cluster displaying effect of interest, 
+cfg.clusterfreq    = [4 8];                    % freq range you want to be included in the cluster displaying effect of interest,
+cfg.clustertime    = [0.03 0.25];              % time range you want to be included in the cluster displaying effect of interest,
 cfg.clusterchan    = {'CZ','C1','CPZ','CP1'};  % channles you want to be included in the cluster displaying effect of interest
 
 % channels surrounding the cluster channels, used as a buffer zone from peak values in the cluster channels to 0
-cfg.bufferchan     = {'FC3','FC1','FCZ','FC2','C2','CP2','P2','PZ','P1','P3','CP3','C3'}; 
+cfg.bufferchan     = {'FC3','FC1','FCZ','FC2','C2','CP2','P2','PZ','P1','P3','CP3','C3'};
 cfg.layout         = 'NeuroScan_quickcap64_layout.lay';  % your layout file
                      
 %=========== set configuration for cluster permutation test ================
 neighbour_cfg = [];
-neighbour_cfg.method      = 'triangulation'; 
+neighbour_cfg.method      = 'triangulation';
 neighbour_cfg.layout      = cfg.layout;
-neighbour_cfg.feedback    = 'no';                             
-neighbours = ft_prepare_neighbours(neighbour_cfg, exampleData); 
+neighbour_cfg.feedback    = 'no';
+neighbours = ft_prepare_neighbours(neighbour_cfg, exampleData);
 
 stat_cfg = [];
 stat_cfg.neighbours       = neighbours;
-stat_cfg.minnbchan        = 3; 
+stat_cfg.minnbchan        = 3;
 stat_cfg.channel          = {'all','-HEOG','-VEOG'};
 stat_cfg.avgoverchan      = 'no';
 stat_cfg.latency          = [0 0.5];     % in second
-stat_cfg.avgovertime      = 'no'; 
+stat_cfg.avgovertime      = 'no';
 stat_cfg.frequency        = 'all';
-stat_cfg.avgoverfreq      = 'no'; 
+stat_cfg.avgoverfreq      = 'no';
 stat_cfg.method           = 'montecarlo';
 stat_cfg.correctm         = 'cluster';
 stat_cfg.clusterstatistic = 'maxsum';   % 'maxsum' or 'maxsize'
 stat_cfg.clustertail      = 0;          % 0 for t-test (two tails); 1 for F test (right tail)
 stat_cfg.clusteralpha     = 0.05;
 stat_cfg.tail             = 0;          % 0 for t-test (two tails); 1 for F test (right tail)
-stat_cfg.alpha            = 0.05; 
-stat_cfg.numrandomization = 500;        % number of randomizations, should be >= 500 
+stat_cfg.alpha            = 0.05;
+stat_cfg.numrandomization = 500;        % number of randomizations, should be >= 500
 
 %%% Run the function
 MyPar = parpool; % start parallel pool
 res = sampleSize_timefreq(cfg,stat_cfg);
 save('results_timefreq_pairedSamples.mat','res')
-delete(MyPar) 
+delete(MyPar)
 %
 % Running this function would be quite time-consuming, with a lot of simulations to run. It can therefore be time-saving to open |parpool| to use parallel computing. The results are stored in |res|. The following block of code plots the results.
 %
@@ -252,16 +257,16 @@ lim = round(max(abs(pow(:))),1);
 nrow = ceil(sqrt(length(cfg.mu)));
 for ci=1:length(cfg.mu)
     subplot(nrow,nrow,ci)
-    contourf(cfg.time, cfg.freq, squeeze(pow(ci,:,:)), 40, 'linecolor','none')  
-    set(gca, 'clim', [-lim lim]); colorbar; colormap(jet); 
+    contourf(cfg.time, cfg.freq, squeeze(pow(ci,:,:)), 40, 'linecolor','none')
+    set(gca, 'clim', [-lim lim]); colorbar; colormap(jet);
     xlabel('Time (ms)'); ylabel('Frequency (Hz)')
-    colorbar('YTick', [-lim 0 lim]); 
+    colorbar('YTick', [-lim 0 lim]);
 end
 %
 %
 %% # Testing interactions
 %
-% The two functions can also be used to estimate the sample size for 2-by-N (N>=2) interaction effect, however, the first factor must be a within-subjects factor and the second can be a within- or between-subjects factor. 
+% The two functions can also be used to estimate the sample size for 2-by-N (N>=2) interaction effect, however, the first factor must be a within-subjects factor and the second can be a within- or between-subjects factor.
 %
 % Take a 2×3 design for example, the first and second factors can be respectively denoted A and B, and the six cells in this design can be denoted A1B1, A2B1, A1B2, A2B2, A1B3 and A2B3. For each subject, we can compute the difference between the two levels of A, denoted as A1B1minusA2B1, A1B2minusA2B2, and A1B3minusA2B3. Now testing an interaction effect between A and B can be treated as comparing these three difference scores, which can be done by a one-way ANOVA using `ft_statfun_depsamplesFmultivariate` if B is a within-subjects factor, or `ft_statfun_indepsamplesF` if B is a between-subjects factor. If B has only two levels, you can simply use a t-test to compare the two differences (i.e., A1B1minusA2B1 and A1B2minusA2B2). Uing this approach, we can test an interaction effect using cluster-based permutation test. See [this page](/faq/how_can_i_test_an_interaction_effect_using_cluster-based_permutation_tests/) for more details.
 %

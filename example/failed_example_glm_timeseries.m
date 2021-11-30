@@ -1,3 +1,8 @@
+function functionname
+
+% MEM 4gb
+% WALLTIME 00:10:00
+
 %
 %% Using General Linear Modeling on time series data
 %
@@ -269,4 +274,4 @@ cfg.mychanscale = 10;           % scale the model with a factor of 10x
 ft_databrowser(cfg, data_combined);
 
 %
-% Note that in the visualization of the time series we are scaling the continuous representation of the model ERP potentials with a factor of 10. The averaged ERPs are of much smaller amplitude than the continuous EEG, and without scaling we could hardly recognize them.   
+% Note that in the visualization of the time series we are scaling the continuous representation of the model ERP potentials with a factor of 10. The averaged ERPs are of much smaller amplitude than the continuous EEG, and without scaling we could hardly recognize them.

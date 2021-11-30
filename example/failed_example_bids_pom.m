@@ -1,3 +1,8 @@
+function functionname
+
+% MEM 4gb
+% WALLTIME 00:10:00
+
 %
 %% Combining simultaneous recordings in BIDS
 %
@@ -408,7 +413,7 @@ for i=1:numel(filename)
    cfg.task = 'prac';
  case 'task1'
    cfg.task = 'motor';
- end   
+ end
  cfg.acq = 'txt'; % this is needed to distinguish the different recordings of the events
 
  cfg.writetsv = 'replace';
@@ -487,7 +492,7 @@ for i=1:numel(filename)
    cfg.task = 'rest';
  case 'task1'
    cfg.task = 'motor';
- end   
+ end
  cfg.acq = 'smi'; % this is needed to distinguish the different recordings of the events
 
  data2bids(cfg);

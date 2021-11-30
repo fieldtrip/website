@@ -1,3 +1,8 @@
+function functionname
+
+% MEM 4gb
+% WALLTIME 00:10:00
+
 %
 %% Interpolating data from the CTF151 to the CTF275 sensor array using megrealign
 %
@@ -70,4 +75,3 @@ orient portrait; print -dpng -r300 compare151.png
 %
 figure; ft_multiplotER(cfg, avg275, avg275_275, avg151_275);
 orient portrait; print -dpng -r300 compare275.png
-

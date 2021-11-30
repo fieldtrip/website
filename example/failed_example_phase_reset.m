@@ -1,3 +1,8 @@
+function functionname
+
+% MEM 4gb
+% WALLTIME 00:10:00
+
 %
 %% Simulate an oscillatory signal with phase resetting
 %
@@ -52,4 +57,3 @@ axis auto
 
 figure;
 plot(t, mean(d,1))
-

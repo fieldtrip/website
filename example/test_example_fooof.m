@@ -1,3 +1,8 @@
+function functionname
+
+% MEM 4gb
+% WALLTIME 00:10:00
+
 %
 %% Fitting oscillations and one-over-F (FOOOF)
 %
@@ -12,7 +17,7 @@ t = (1:60000)/1000; % time axis
 for rpt = 1:1
     % use a simple method to make pink noise that does not rely on the digital signal processing toolbox
     fn = cumsum(randn(1,length(t)));
-    fn = fn./max(abs(fn));        
+    fn = fn./max(abs(fn));
 
     sgn10 = ft_preproc_bandpassfilter(randn(1,length(t)),1000,[8 12],[],'firws');
     sgn10 = 0.15.*sgn10./max(abs(sgn10));
@@ -65,4 +70,3 @@ elseif F==0 && O~=0
 elseif F~=0 && O~=0
   title('mixed signal');
 end
-

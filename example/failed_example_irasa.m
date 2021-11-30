@@ -1,3 +1,8 @@
+function functionname
+
+% MEM 4gb
+% WALLTIME 00:10:00
+
 %
 %% Irregular Resampling Auto-Spectral Analysis (IRASA)
 %
@@ -13,8 +18,8 @@
     for rpt = 1:1
         % use a simple method to make pink noise
         % that does not rely on the digital signal processing toolbox
-        fn = cumsum(randn(1,length(t))); 
-        fn = fn./max(abs(fn));        
+        fn = cumsum(randn(1,length(t)));
+        fn = fn./max(abs(fn));
 
         % add a 10 Hz and 60 Hz oscillation
         data.trial{1,rpt} = F * fn + O * cos(2*pi*10*t) + O * cos(2*pi*60*t);
@@ -135,7 +140,7 @@
 %
 %
 %
-%* Localizing spectral features in the sensorimotor cortex 
+%* Localizing spectral features in the sensorimotor cortex
 %
     % read in the cortical surface
     cortex = ft_read_headshape('S5_lh.pial');
