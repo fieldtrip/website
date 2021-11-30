@@ -1,4 +1,4 @@
-function functionname
+function test_example_headmovement_meg
 
 % MEM 4gb
 % WALLTIME 00:10:00
@@ -33,7 +33,7 @@ function functionname
 % Prepare configuration to define trials:
 %
 cfg                         = [];
-cfg.dataset                 = 'TacStimRegressConfound.ds';
+cfg.dataset                 = dccnpath('/home/common/matlab/fieldtrip/data/ftp/example/regressconfound/TacStimRegressConfound.ds');
 cfg.trialdef.eventtype      = 'UPPT001';
 cfg.trialdef.eventvalue     = 4;
 cfg.trialdef.prestim        = 0.2;
