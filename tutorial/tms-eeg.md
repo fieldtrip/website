@@ -513,7 +513,7 @@ Due to various factors it is likely that you will not be able to fully capture b
 #### Exercise: removing other types of noise
 
 {% include markup/exercise %}
-At this stage you can also use your ICA data to remove other types of artifacts/noise. ICA is particularly well-suited to deal with eye-blinks and saccades, and can potentially remove other types of noise as well (also see the examples on [EOG artifacts](/example/use_independent_component_analysis_ica_to_remove_eog_artifacts) and [ECG artifacts](/example/use_independent_component_analysis_ica_to_remove_ecg_artifacts)).
+At this stage you can also use your ICA data to remove other types of artifacts/noise. ICA is particularly well-suited to deal with eye-blinks and saccades, and can potentially remove other types of noise as well (also see the examples on [EOG artifacts](/example/use_independent_component_analysis_ica_to_remove_eog_artifacts) and [ECG artifacts](/example/ica_ecg)).
 
 As these types of noise are not time-locked to onset of the TMS-pulse you can use **[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_databrowser.m)** to browse through the trials in a component view. Be aware that in this case you are browsing the segments of the original trials.
 

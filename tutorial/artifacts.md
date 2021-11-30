@@ -103,7 +103,7 @@ Some artifacts are represented in specific frequency bands. For example, artifac
 
 You can make a linear decomposition of the data using independent component analysis (ICA) or principal component analysis (PCA). With these methods you apply  a set of spatial filters to the data, after which the data is no longer represented at the level of recorded (scalp) channels, but as a set of virtual channels or components. In the case of ICA decomposition, the filters are chosen to produce maximally independent time courses of the components. In the case of PCA, the filters produce orthogonal time courses. Certain artifacts, such as those caused by eye blinks, are often reflected by a few components which are fairly easy to identify. These visually identified components can then be removed from the data and the remaining components can be projected back to the channel level with **[ft_rejectcomponent](https://github.com/fieldtrip/fieldtrip/blob/release/ft_rejectcomponent.m)**.
 
-The following example scripts explain how to use ICA to detect and remove [EOG](/example/use_independent_component_analysis_ica_to_remove_eog_artifacts) and [ECG](/example/use_independent_component_analysis_ica_to_remove_ecg_artifacts) artifacts.
+The following example scripts explain how to use ICA to detect and remove [EOG](/example/use_independent_component_analysis_ica_to_remove_eog_artifacts) and [ECG](/example/ica_ecg) artifacts.
 
 ## Suggested further reading
 
