@@ -1,4 +1,4 @@
-function functionname
+function test_example_fittemplate
 
 % MEM 4gb
 % WALLTIME 00:10:00
@@ -20,22 +20,25 @@ function functionname
 %
 % You load the head shape measured during the MEG recording with the Polhemus and a template volume conduction model. We have to ensure that they have consistent units, hence we will convert the units into mm. Expressing the data in mm will give a better expression of the data (i.e. 90mm vs. 0.09m).
 %
-polhemus = ft_read_headshape('epilepsy/case1/ctf_data/case1.pos');
+
+filename = dccnpath('/home/common/matlab/fieldtrip/data/ftp/tutorial/epilepsy/raw/case1/ctf/case1.pos');
+polhemus = ft_read_headshape(filename);
 polhemus = ft_convert_units(polhemus, 'mm');
 
 template = ft_read_headmodel('standard_bem.mat');
 template = ft_convert_units(template, 'mm');
+template = rmfield(template, {'mat' 'type'});
 
 % Note that the template head model contains three surfaces describing the three compartments of scalp, skull and brain. Furthermore, it descibes the conductivities and the BEM system matrix, computed with dipoli. Here is how the complete structure looks like
 %
-template =
-  struct with fields:
-
-     bnd: [1x3 struct]
-    cond: [0.3300 0.0041 0.3300]
-     mat: [3000x3000 double]
-    type: 'dipoli'
-    unit: 'mm'
+% template =
+%   struct with fields:
+% 
+%      bnd: [1x3 struct]
+%     cond: [0.3300 0.0041 0.3300]
+%      mat: [3000x3000 double]
+%     type: 'dipoli'
+%     unit: 'mm'
 
 %% # Coregistration
 %
@@ -45,8 +48,12 @@ cfg = [];
 cfg.template.headshape      = polhemus;
 cfg.checksize               = inf;
 cfg.individual.headmodel    = template;
-cfg                         = ft_interactiverealign(cfg);
-template                    = ft_transform_geometry(cfg.m, template);
+% cfg                         = ft_interactiverealign(cfg);
+% template                    = ft_transform_geometry(cfg.m, template); %
+%JM: this is interactive and won't work here
+% workaround is to convert the template into 'ctf' coordinates
+template.coordsys = 'acpc';
+template = ft_convert_coordsys(template, 'ctf');
 
 % For the method that uses spheres to transform the template it is important to get the rotation correct, as spheres are not sensitive to rotations.
 %
@@ -112,45 +119,50 @@ figure;
 ft_plot_mesh(template.bnd(1));
 ft_plot_mesh(polhemus);
 
-%
-% The Polhemus has facial details which are not in the template scalp surface, and the Polhemus does not cover the lower back of the head. These details need to be removed.
-%
-defaced_template      = template.bnd(1);
-defaced_template.unit = template.unit
-
-cfg              = [];
-cfg.translate    = [-40 0 -50];
-cfg.scale        = [200 200 200];
-cfg.rotate       = [0 0 0];
-defaced_template =  ft_defacemesh(cfg, defaced_template);
-
-cfg              = [];
-cfg.translate    = [-40 0 -50];
-cfg.scale        = [200 200 200];
-cfg.rotate       = [0 0 0];
-defaced_polhemus =  ft_defacemesh(cfg, polhemus);
-
-% We have another look how well the surfaces match
-%
-figure;
-ft_plot_mesh(defaced_template);
-ft_plot_mesh(defaced_polhemus);
-
-%
-% We determine the transformation and apply it to all 3 surfaces of the template head model.
-%
-cfg                  = [];
-cfg.headshape        = defaced_polhemus;
-cfg.template         = defaced_template;
-cfg.method           = 'fittemplate';
-template_fit_surface = ft_prepare_mesh(cfg, template.bnd);
+% JM: the below will not work in a test function, because it contains
+% interactive steps
+% %
+% % The Polhemus has facial details which are not in the template scalp surface, and the Polhemus does not cover the lower back of the head. These details need to be removed.
+% %
+% defaced_template      = template.bnd(1);
+% defaced_template.unit = template.unit;
+% 
+% cfg              = [];
+% cfg.translate    = [-40 0 -50];
+% cfg.scale        = [200 200 200];
+% cfg.rotate       = [0 0 0];
+% defaced_template =  ft_defacemesh(cfg, defaced_template);
+% 
+% cfg              = [];
+% cfg.translate    = [-40 0 -50];
+% cfg.scale        = [200 200 200];
+% cfg.rotate       = [0 0 0];
+% defaced_polhemus =  ft_defacemesh(cfg, polhemus);
+% 
+% % We have another look how well the surfaces match
+% %
+% figure;
+% ft_plot_mesh(defaced_template);
+% ft_plot_mesh(defaced_polhemus);
+% 
+% %
+% % We determine the transformation and apply it to all 3 surfaces of the template head model.
+% %
+% cfg                  = [];
+% cfg.headshape        = defaced_polhemus;
+% cfg.template         = defaced_template;
+% cfg.method           = 'fittemplate';
+% template_fit_surface = ft_prepare_mesh(cfg, template.bnd);
 
 %% # Computing the head models
 %
 % We can compute the volume conduction model on the basis of the refined template head models. For this we need to specify conductivities for each compartment (scalp, skull and brain). We specify these conductivities in SI units. Therefore the refined models need to be expressed in SI units as well.
 %
 template_fit_sphere  = ft_convert_units(template_fit_sphere,'m');
-template_fit_surface = ft_convert_units(template_fit_surface,'m');
+
+% JM: this one does not exist
+% template_fit_surface = ft_convert_units(template_fit_surface,'m');
+template_fit_surface = template_fit_sphere;
 
 %
 %% ## Openmeeg
@@ -183,8 +195,8 @@ ft_plot_mesh(polhemus)
 %
 cfg                          = [];
 cfg.method                   = 'singlesphere';
-headmodel_singleshell_sphere = ft_prepare_headmodel(cfg, template_t_sphere.bnd(3));
+headmodel_singleshell_sphere = ft_prepare_headmodel(cfg, template_fit_sphere.bnd(3));
 
 cfg                          = [];
 cfg.method                   = 'singlesphere';
-headmodel_singleshell_sphere = ft_prepare_headmodel(cfg, template_surface(3));
+headmodel_singleshell_sphere = ft_prepare_headmodel(cfg, template_fit_surface.bnd(3));
