@@ -1,4 +1,4 @@
-function functionname
+function test_example_glm_nirs
 
 % MEM 4gb
 % WALLTIME 00:10:00
@@ -10,7 +10,7 @@ function functionname
 % We start with reading the NIRS data from disk.
 %
 cfg = [];
-cfg.dataset = 'motor_cortex.oxy3';
+cfg.dataset = dccnpath('/home/common/matlab/fieldtrip/data/ftp/tutorial/nirs_singlechannel/motor_cortex.oxy3');
 data_nirs = ft_preprocessing(cfg);
 
 %% # Construct a number of additional channels with the task/stimulus details
@@ -110,8 +110,8 @@ figure
 hold on
 plot(y(:,chan), 'b')
 plot(e(:,chan), 'g')
-plot(model(:,chan), 'r')
-set(h, 'LineWidth', 1)
+plot(model(:,chan), 'r', 'linewidth', 2)
+%set(h, 'LineWidth', 1)
 legend({'data', 'noise', 'model'});
 title('fit to data')
 
