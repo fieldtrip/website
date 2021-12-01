@@ -1,4 +1,4 @@
-function functionname
+function test_example_planar_orientation
 
 % MEM 4gb
 % WALLTIME 00:10:00
@@ -12,6 +12,8 @@ function functionname
 %
 % The following code demonstrates how you can determine the orientation of the two planar channels at each location.
 %
+
+filename = dccnpath('/home/common/matlab/fieldtrip/data/ftp/workshop/natmeg/oddball1_mc_downsampled.fif');
 grad = ft_read_sens(filename, 'senstype', 'meg');
 
 sel = find(strcmp(grad.chantype, 'megplanar'));
