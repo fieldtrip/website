@@ -1,7 +1,7 @@
-function functionname
+function test_example_effectsize
 
-% MEM 4gb
-% WALLTIME 00:10:00
+% MEM 8gb
+% WALLTIME 00:20:00
 
 %
 %% Computing and reporting the effect size
@@ -20,7 +20,14 @@ function functionname
 %
 % The already preprocessed data is based on 151-channel MEG recordings from 10 subjects and consists of single-subject event-related averages for an auditory language task with two conditions: fully incongruent (FIC) and fully congruent (FC) sentence endings. See the other tutorials on the [meg-language dataset](/tag/meg-language) for more details.
 %
-load ERF_orig;    % averages for each individual subject, for each condition
+
+% JM hack: currently (20211201) running the functions with a finite
+% checksize takes forever, change it for now
+global ft_default;
+ft_default.checksize = inf;
+
+load(dccnpath('/home/common/matlab/fieldtrip/data/ftp/example/effectsize/ERF_orig.mat'));    % averages for each individual subject, for each condition
+
 
 % Using **[ft_timelockgrandaverage](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockgrandaverage.m)** with the `cfg.keepindividual` option allows us to represent the data in a more convenient format for the subsequent computations:
 %
@@ -58,7 +65,7 @@ pooled_sd = sqrt( ((n1-1)*std(x1)^2 + (n2-1)*std(x2)^2) / (n1+n2-1) );
 cohensd = abs(mean(x1)-mean(x2)) / pooled_sd;
 
 disp(cohensd)
-  1.1800
+%  1.1800
 
 % According to [Sawilowsky, S (2009)](https://doi.org/10.22237%2Fjmasm%2F1257035100) as a rule of thumb these can be interpreted as follows.
 %
@@ -79,15 +86,15 @@ cfg.design = [
 effect_roi_unpaired = ft_timelockstatistics(cfg, roiFIC, roiFC);
 
 disp(effect_roi_unpaired)
-      stat: NaN
-      prob: NaN
-   cohensd: 1.1800
-difference: 3.8744e-14
-      mask: 0
-    dimord: 'chan_time'
-     label: {'MLT12'}
-      time: 0.5000
-       cfg: [1x1 struct]
+%       stat: NaN
+%       prob: NaN
+%    cohensd: 1.1800
+% difference: 3.8744e-14
+%       mask: 0
+%     dimord: 'chan_time'
+%      label: {'MLT12'}
+%       time: 0.5000
+%        cfg: [1x1 struct]
 
 %
 %
@@ -98,7 +105,7 @@ difference: 3.8744e-14
 cohensd = mean(x1-x2) ./ std(x1-x2);
 
 disp(cohensd)
-  1.5811
+%  1.5811
 
 % This is larger than the previous estimate, part of the variance is explained by between-subject differences that are the same for both conditions.
 %
@@ -120,15 +127,15 @@ cfg.design = [
 effect_roi = ft_timelockstatistics(cfg, roiFIC, roiFC);
 
 disp(effect_roi)
-      stat: NaN
-      prob: NaN
-   cohensd: 1.5811
-difference: 3.8744e-14
-      mask: 0
-    dimord: 'chan_time'
-     label: {'MLT12'}
-      time: 0.5000
-       cfg: [1x1 struct]
+%       stat: NaN
+%       prob: NaN
+%    cohensd: 1.5811
+% difference: 3.8744e-14
+%       mask: 0
+%     dimord: 'chan_time'
+%      label: {'MLT12'}
+%       time: 0.5000
+%        cfg: [1x1 struct]
 
 %% # Computing the maximum effect size
 %
@@ -161,7 +168,7 @@ ft_multiplotER(cfg, effect_all);
 [i, j]   = ind2sub(size(effect_all.cohensd), ind);
 fprintf('maximum effect of %g on channel %s at latency %g\n', effect_all.cohensd(i,j), effect_all.label{i}, effect_all.time(j));
 
-maximum effect of 2.28609 on channel MLT13 at latency 0.406667
+%maximum effect of 2.28609 on channel MLT13 at latency 0.406667
 
 % The maximum effect of 2.29 is observed on channel MLT13 at 407 milliseconds following stimulus onset.
 %
@@ -185,15 +192,15 @@ cfg.design = [
 effect_avg = ft_timelockstatistics(cfg, grandavgFIC, grandavgFC);
 
 disp(effect_avg)
-      stat: NaN
-      prob: NaN
-   cohensd: 1.4708
-difference: 3.1082e-14
-      mask: 0
-    dimord: 'chan_time'
-     label: {'mean(MLT12, MLT13, MLT23, MLT24, MLT32, MLT33, MLT41)'}
-      time: 0.4500
-       cfg: [1x1 struct]
+%       stat: NaN
+%       prob: NaN
+%    cohensd: 1.4708
+% difference: 3.1082e-14
+%       mask: 0
+%     dimord: 'chan_time'
+%      label: {'mean(MLT12, MLT13, MLT23, MLT24, MLT32, MLT33, MLT41)'}
+%       time: 0.4500
+%        cfg: [1x1 struct]
 
 % The effect size is 1.47 when averaging over 7 left-temporal channels, and from 350 to 550 milliseconds.
 %
@@ -343,35 +350,35 @@ disp(cohensd)
 % Another way of computing and reporting the effect size following a cluster-based test is to determine the circumscribed square area that spans the cluster, i.e. a rectangle (in channels and time and/or frequency) that fits tightly around the cluster. See also <https://en.wikipedia.org/wiki/Circumscribed_circle> for an explanation. This can be computed by converting the Boolean mask into a logical row-vector and finding the minimum and maximum corresponding time points like this:
 %
 min(inference.time(any(inference.mask,1)))
-ans =
-    0.3300
+% ans =
+%     0.3300
 max(inference.time(any(inference.mask,1)))
-ans =
-    0.5267
+% ans =
+%     0.5267
 
 % For the channels it is similar, except that we form a Boolean column-vector to find all channels that are part of the cluster at any given time.
 %
 inference.label(any(inference.mask,2))
-ans =
-  18x1 cell array
-    {'MLF23'}
-    {'MLF33'}
-    {'MLF34'}
-    {'MLF44'}
-    {'MLT11'}
-    {'MLT12'}
-    {'MLT13'}
-    {'MLT14'}
-    {'MLT23'}
-    {'MLT24'}
-    {'MLT31'}
-    {'MLT32'}
-    {'MLT33'}
-    {'MLT34'}
-    {'MLT41'}
-    {'MLT42'}
-    {'MLT43'}
-    {'MLT44'}
+% ans =
+%   18x1 cell array
+%     {'MLF23'}
+%     {'MLF33'}
+%     {'MLF34'}
+%     {'MLF44'}
+%     {'MLT11'}
+%     {'MLT12'}
+%     {'MLT13'}
+%     {'MLT14'}
+%     {'MLT23'}
+%     {'MLT24'}
+%     {'MLT31'}
+%     {'MLT32'}
+%     {'MLT33'}
+%     {'MLT34'}
+%     {'MLT41'}
+%     {'MLT42'}
+%     {'MLT43'}
+%     {'MLT44'}
 
 %
 % The advantage of the list of channels and the begin- and end-latency is that these are easy to report in a written manuscript/paper. As before, these can be used to compute the average in the region of interest, and to compute the effect size for that rectangle:
@@ -392,15 +399,15 @@ cfg.design = [
 effect_rectangle = ft_timelockstatistics(cfg, grandavgFIC, grandavgFC);
 
 disp(effect_rectangle)
-      stat: NaN
-      prob: NaN
-   cohensd: 1.4356
-difference: 1.9677e-14
-      mask: 0
-    dimord: 'chan_time'
-     label: {'mean(MLF23, MLF33, MLF34, MLF44, MLT11, MLT12, MLT13, MLT14, MLT23, MLT24, MLT31, MLT32, MLT33, MLT34, MLT41, MLT42, MLT43, MLT44)'}
-      time: 0.4283
-       cfg: [1x1 struct]
+%       stat: NaN
+%       prob: NaN
+%    cohensd: 1.4356
+% difference: 1.9677e-14
+%       mask: 0
+%     dimord: 'chan_time'
+%      label: {'mean(MLF23, MLF33, MLF34, MLF44, MLT11, MLT12, MLT13, MLT14, MLT23, MLT24, MLT31, MLT32, MLT33, MLT34, MLT41, MLT42, MLT43, MLT44)'}
+%       time: 0.4283
+%        cfg: [1x1 struct]
 
 % The effect size for the data averaged in the circumscribed rectangle is 1.43.
 %
