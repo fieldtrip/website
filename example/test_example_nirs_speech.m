@@ -1,7 +1,7 @@
-function functionname
+function test_example_nirs_speech
 
-% MEM 4gb
-% WALLTIME 00:10:00
+% MEM 8gb
+% WALLTIME 00:30:00
 
 %
 %% Analyzing NIRS data recorded during listening to and repeating speech
@@ -39,46 +39,50 @@ function functionname
 %
 %% # Building a MATLAB analysis script
 %
-filenames = {
-  'S1001_run01.nirs'
-  'S1003_run01.nirs'
-  'S1004_run01.nirs'
-  'S1005_run01.nirs'
-  'S1006_run01.nirs'
-  'S1007_run01.nirs'
-  'S1008_run01.nirs'
-  'S1009_run01.nirs'
-  'S1010_run01.nirs'
-  'S1011_run01.nirs'
-  'S1012_run01.nirs'
-  'S1013_run01.nirs'
-  'S1014_run01.nirs'
-  'S1016_run01.nirs'
-  'S1017_run01.nirs'
-  'S1018_run01.nirs'
-  'S1019_run01.nirs'
-  'S1020_run01.nirs'
-  'S1021_run01.nirs'
-  'S1022_run01.nirs'
-  'S1023_run01.nirs'
-  'S1024_run01.nirs'
-  'S1025_run01.nirs'
-  'S1026_run01.nirs'
-  'S1027_run01.nirs'
-  'S1028_run01.nirs'
-  'S1029_run01.nirs'
-  'S1030_run01.nirs'
-  'S1031_run01.nirs'
-  'S1032_run01.nirs'
-  'S1033_run01.nirs'
-  'S1034_run01.nirs'
-  'S1035_run01.nirs'
-  'S1036_run01.nirs'
-  'S1037_run01.nirs'
-  'S1038_run01.nirs'
-  'S1039_run01.nirs'
-  'S1040_run01.nirs'
-  };
+
+t = tempdir;
+filenames = unzip('https://md-datasets-cache-zipfiles-prod.s3.eu-west-1.amazonaws.com/4cjgvyg5p2-1.zip', t);
+
+% filenames = {
+%   'S1001_run01.nirs'
+%   'S1003_run01.nirs'
+%   'S1004_run01.nirs'
+%   'S1005_run01.nirs'
+%   'S1006_run01.nirs'
+%   'S1007_run01.nirs'
+%   'S1008_run01.nirs'
+%   'S1009_run01.nirs'
+%   'S1010_run01.nirs'
+%   'S1011_run01.nirs'
+%   'S1012_run01.nirs'
+%   'S1013_run01.nirs'
+%   'S1014_run01.nirs'
+%   'S1016_run01.nirs'
+%   'S1017_run01.nirs'
+%   'S1018_run01.nirs'
+%   'S1019_run01.nirs'
+%   'S1020_run01.nirs'
+%   'S1021_run01.nirs'
+%   'S1022_run01.nirs'
+%   'S1023_run01.nirs'
+%   'S1024_run01.nirs'
+%   'S1025_run01.nirs'
+%   'S1026_run01.nirs'
+%   'S1027_run01.nirs'
+%   'S1028_run01.nirs'
+%   'S1029_run01.nirs'
+%   'S1030_run01.nirs'
+%   'S1031_run01.nirs'
+%   'S1032_run01.nirs'
+%   'S1033_run01.nirs'
+%   'S1034_run01.nirs'
+%   'S1035_run01.nirs'
+%   'S1036_run01.nirs'
+%   'S1037_run01.nirs'
+%   'S1038_run01.nirs'
+%   'S1039_run01.nirs'
+%   'S1040_run01.nirs'
+%   };
 
 filename = filenames{1};
 
@@ -214,20 +218,10 @@ block5 = find(sample>boundary(5) & sample<inf);
 % We can look at the number of trials per block (or condition):
 %
 numel(block1)
-ans =
-    36
 numel(block2)
-ans =
-    33
 numel(block3)
-ans =
-    46
 numel(block4)
-ans =
-    46
 numel(block5)
-ans =
-    33
 
 %
 % Again this does not match the PDF manuscript, which mentions three blocks of 96 trials each. When we do the same for the 2nd dataset, we recognize the same number of trials in the different blocks, but they occur in another order (46, 36, 46, 33, 33). This is consistent with the description in the PDF manuscript that condition blocks were randomized over subjects. So it seems that the experiment described in the PDF document is very similar to, but not exactly the same, as the one in the shared data. We do not know which 5 conditions were employed in the shared dataset; we also do not know in which order they were presented to each of the subjects. If each of the blocks would have had a unique number of trials (and indentical over subjects), then we could at least have matched the blocks over subjects. Now we have two blocks with 46 and two blocks of 33 trials, which makes matching the (unknown) conditions over subjects impossible. The only condition/block that can be matched over subjects is the one with 36 trials.
@@ -303,7 +297,7 @@ data_filt = ft_preprocessing(cfg, data_raw);
 
 % Do not filter the aux channels, but append them as they are.
 %
-cfg = \[];
+cfg = [];
 cfg.channel = {'aux1', 'aux2'};
 data_aux = ft_selectdata(cfg, data_raw);
 
@@ -330,15 +324,6 @@ ft_hastoolbox('artinis', 1)
 cfg = [];
 cfg.dpf = 6; % FIXME I don't know what the correct value is
 data_segmented_conc = ft_nirs_transform_ODs(cfg, data_segmented);
-
-% During **[ft_nirs_transform_ODs](https://github.com/fieldtrip/fieldtrip/blob/release/external/artinis/ft_nirs_transform_ODs.m)** we loose the aux channels, here we add them again. The reason for adding them will become more clear further down, it helps us to identify where in each trial the (jittered) response happens.
-%
-cfg = [];
-cfg.channel = {'aux1', 'aux2'};
-data_segmented_aux = ft_selectdata(cfg, data_segmented);
-
-cfg = [];
-data_segmented_conc = ft_appenddata(cfg, data_segmented_conc, data_segmented_aux);
 
 %% # Looking at the NIRS data in each trial
 %
