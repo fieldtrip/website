@@ -1,4 +1,4 @@
-function functionname
+function test_example_nirs_fingertapping
 
 % MEM 4gb
 % WALLTIME 00:10:00
@@ -29,38 +29,43 @@ function functionname
 %
 %% # Building a MATLAB analysis script
 %
-filenames = {
-  'v2/fNIRS 01.mat'
-  'v2/fNIRS 02.mat'
-  'v2/fNIRS 03.mat'
-  'v2/fNIRS 04.mat'
-  'v2/fNIRS 05.mat'
-  'v2/fNIRS 06.mat'
-  'v2/fNIRS 07.mat'
-  'v2/fNIRS 08.mat'
-  'v2/fNIRS 09.mat'
-  'v2/fNIRS 10.mat'
-  'v2/fNIRS 11.mat'
-  'v2/fNIRS 12.mat'
-  'v2/fNIRS 13.mat'
-  'v2/fNIRS 14.mat'
-  'v2/fNIRS 15.mat'
-  'v2/fNIRS 16.mat'
-  'v2/fNIRS 17.mat'
-  'v2/fNIRS 18.mat'
-  'v2/fNIRS 19.mat'
-  'v2/fNIRS 20.mat'
-  'v2/fNIRS 21.mat'
-  'v2/fNIRS 22.mat'
-  'v2/fNIRS 23.mat'
-  'v2/fNIRS 24.mat'
-  'v2/fNIRS 25.mat'
-  'v2/fNIRS 26.mat'
-  'v2/fNIRS 27.mat'
-  'v2/fNIRS 28.mat'
-  'v2/fNIRS 29.mat'
-  'v2/fNIRS 30.mat'
-  };
+
+% for now, getting the data from the below URL and unzipping it, works (JM added 20211201)
+t = tempdir;
+filenames = unzip('https://figshare.com/ndownloader/files/18069143', t);
+
+% filenames = {
+%   'v2/fNIRS 01.mat'
+%   'v2/fNIRS 02.mat'
+%   'v2/fNIRS 03.mat'
+%   'v2/fNIRS 04.mat'
+%   'v2/fNIRS 05.mat'
+%   'v2/fNIRS 06.mat'
+%   'v2/fNIRS 07.mat'
+%   'v2/fNIRS 08.mat'
+%   'v2/fNIRS 09.mat'
+%   'v2/fNIRS 10.mat'
+%   'v2/fNIRS 11.mat'
+%   'v2/fNIRS 12.mat'
+%   'v2/fNIRS 13.mat'
+%   'v2/fNIRS 14.mat'
+%   'v2/fNIRS 15.mat'
+%   'v2/fNIRS 16.mat'
+%   'v2/fNIRS 17.mat'
+%   'v2/fNIRS 18.mat'
+%   'v2/fNIRS 19.mat'
+%   'v2/fNIRS 20.mat'
+%   'v2/fNIRS 21.mat'
+%   'v2/fNIRS 22.mat'
+%   'v2/fNIRS 23.mat'
+%   'v2/fNIRS 24.mat'
+%   'v2/fNIRS 25.mat'
+%   'v2/fNIRS 26.mat'
+%   'v2/fNIRS 27.mat'
+%   'v2/fNIRS 28.mat'
+%   'v2/fNIRS 29.mat'
+%   'v2/fNIRS 30.mat'
+%   };
 
 % this allows switching easily between subjects, and eventually looping over all 30 subjects
 filename = filenames{1};
@@ -71,92 +76,92 @@ filename = filenames{1};
 %
 nirs = load(filename);
 
->> nirs
-nirs =
-  struct with fields:
-     mrk: [1x1 struct]
-     mnt: [1x1 struct]
-     nfo: [1x1 struct]
-     ch1: [30003x1 double]
-     ch2: [30003x1 double]
-     ch3: [30003x1 double]
-     ch4: [30003x1 double]
-     ch5: [30003x1 double]
-     ch6: [30003x1 double]
-     ch7: [30003x1 double]
-     ch8: [30003x1 double]
-     ch9: [30003x1 double]
-    ch10: [30003x1 double]
-    ch11: [30003x1 double]
-    ch12: [30003x1 double]
-    ch13: [30003x1 double]
-    ch14: [30003x1 double]
-    ch15: [30003x1 double]
-    ch16: [30003x1 double]
-    ch17: [30003x1 double]
-    ch18: [30003x1 double]
-    ch19: [30003x1 double]
-    ch20: [30003x1 double]
-    ch21: [30003x1 double]
-    ch22: [30003x1 double]
-    ch23: [30003x1 double]
-    ch24: [30003x1 double]
-    ch25: [30003x1 double]
-    ch26: [30003x1 double]
-    ch27: [30003x1 double]
-    ch28: [30003x1 double]
-    ch29: [30003x1 double]
-    ch30: [30003x1 double]
-    ch31: [30003x1 double]
-    ch32: [30003x1 double]
-    ch33: [30003x1 double]
-    ch34: [30003x1 double]
-    ch35: [30003x1 double]
-    ch36: [30003x1 double]
-    ch37: [30003x1 double]
-    ch38: [30003x1 double]
-    ch39: [30003x1 double]
-    ch40: [30003x1 double]
-     dat: [1x1 struct]
+% >> nirs
+% nirs =
+%   struct with fields:
+%      mrk: [1x1 struct]
+%      mnt: [1x1 struct]
+%      nfo: [1x1 struct]
+%      ch1: [30003x1 double]
+%      ch2: [30003x1 double]
+%      ch3: [30003x1 double]
+%      ch4: [30003x1 double]
+%      ch5: [30003x1 double]
+%      ch6: [30003x1 double]
+%      ch7: [30003x1 double]
+%      ch8: [30003x1 double]
+%      ch9: [30003x1 double]
+%     ch10: [30003x1 double]
+%     ch11: [30003x1 double]
+%     ch12: [30003x1 double]
+%     ch13: [30003x1 double]
+%     ch14: [30003x1 double]
+%     ch15: [30003x1 double]
+%     ch16: [30003x1 double]
+%     ch17: [30003x1 double]
+%     ch18: [30003x1 double]
+%     ch19: [30003x1 double]
+%     ch20: [30003x1 double]
+%     ch21: [30003x1 double]
+%     ch22: [30003x1 double]
+%     ch23: [30003x1 double]
+%     ch24: [30003x1 double]
+%     ch25: [30003x1 double]
+%     ch26: [30003x1 double]
+%     ch27: [30003x1 double]
+%     ch28: [30003x1 double]
+%     ch29: [30003x1 double]
+%     ch30: [30003x1 double]
+%     ch31: [30003x1 double]
+%     ch32: [30003x1 double]
+%     ch33: [30003x1 double]
+%     ch34: [30003x1 double]
+%     ch35: [30003x1 double]
+%     ch36: [30003x1 double]
+%     ch37: [30003x1 double]
+%     ch38: [30003x1 double]
+%     ch39: [30003x1 double]
+%     ch40: [30003x1 double]
+%      dat: [1x1 struct]
 
 % Contrary to the description in the accompanying publication (see table 1 in the PDF manuscript) and in the GitHub repository, the MATLAB files do _not_ contain the variables |cntHb|, |clab|, etc. However, it is not so hard to make sense of the data: each channel is represented as a vector, there is header information, there is information about the optode montage, and there is information about the events.
 %
->> nirs.nfo
-ans =
-  struct with fields:
-            fs: 13.3333
-          clab: {1x40 cell}
-             T: 30003
-       nEpochs: 1
-        length: 2.2502e+03
-        format: 'DOUBLE'
-    resolution: [1x40 double]
-          file: 'D:\Experimental data\NIRS motor imagery\matdata\fNIRS 01'
-       nEvents: 75
-      nClasses: 3
-     className: {'RIGHT'  'LEFT'  'FOOT'}
+% >> nirs.nfo
+% ans =
+%   struct with fields:
+%             fs: 13.3333
+%           clab: {1x40 cell}
+%              T: 30003
+%        nEpochs: 1
+%         length: 2.2502e+03
+%         format: 'DOUBLE'
+%     resolution: [1x40 double]
+%           file: 'D:\Experimental data\NIRS motor imagery\matdata\fNIRS 01'
+%        nEvents: 75
+%       nClasses: 3
+%      className: {'RIGHT'  'LEFT'  'FOOT'}
 
 %
->> nirs.mnt
-ans =
- struct with fields:
-              x: [40x1 double]
-              y: [40x1 double]
-         pos_3d: [3x40 double]
-           clab: {1x40 cell}
-            box: [2x41 double]
-         box_sz: [2x41 double]
-      scale_box: [2x1 double]
-   scale_box_sz: [2x1 double]
+% >> nirs.mnt
+% ans =
+%  struct with fields:
+%               x: [40x1 double]
+%               y: [40x1 double]
+%          pos_3d: [3x40 double]
+%            clab: {1x40 cell}
+%             box: [2x41 double]
+%          box_sz: [2x41 double]
+%       scale_box: [2x1 double]
+%    scale_box_sz: [2x1 double]
 
 %
->> nirs.mrk
-ans =
- struct with fields:
-       event: [1x1 struct]
-        time: [1x75 double]
-           y: [3x75 double]
-   className: {'RIGHT'  'LEFT'  'FOOT'}
+% >> nirs.mrk
+% ans =
+%  struct with fields:
+%        event: [1x1 struct]
+%         time: [1x75 double]
+%            y: [3x75 double]
+%    className: {'RIGHT'  'LEFT'  'FOOT'}
 
 %% Convering the MATLAB structure to a FieldTrip raw data structure
 %
@@ -300,10 +305,10 @@ ft_plot_layout(layout, 'label', true, 'outline', true, 'mask', true)
 %
 % The |mrk| field contains times
 %
->> nirs.mrk.time
-ans =
-  Columns 1 through 9
-        1950    30975    60975    91950    ...
+% >> nirs.mrk.time
+% ans =
+%   Columns 1 through 9
+%         1950    30975    60975    91950    ...
 
 % These numbers are larger than the total number of samples, so they do not directly map onto samples. I started off assuming that the marker time is expressed in milliseconds, but that turned out not to be correct. Therefore I experimented with the following piece of code until I had something that made sense.
 %
