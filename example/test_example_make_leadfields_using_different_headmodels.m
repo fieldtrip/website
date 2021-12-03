@@ -1,7 +1,7 @@
-function functionname
+function test_example_make_leadfield_using_different_headmodels
 
-% MEM 4gb
-% WALLTIME 00:10:00
+% MEM 12gb
+% WALLTIME 00:30:00
 
 %
 %% Make leadfields using different headmodels
@@ -16,10 +16,10 @@ function functionname
 %
 % If you download this data into a folder named 'testdata', the directory should look like this:
 %
->> cd testdata
->> ls
-Subject01.ds   Subject01.mri    Subject01.shape_info
-Subject01.hdm  Subject01.shape
+% >> cd testdata
+% >> ls
+% Subject01.ds   Subject01.mri    Subject01.shape_info
+% Subject01.hdm  Subject01.shape
 
 %% # Single sphere model from CTF
 %
@@ -28,16 +28,18 @@ Subject01.hdm  Subject01.shape
 % produced with CTF software
 %--------------------------------------------------------------------------------------
 
+fpath = dccnpath('/home/common/matlab/fieldtrip/data');
+
 % read header, which contains the gradiometer description
-hdr  = ft_read_header('Subject01.ds');
+hdr  = ft_read_header(fullfile(fpath,'Subject01.ds'));
 grad = hdr.grad;
 
 % read headshape
-shape = ft_read_headshape('Subject01.shape');
-shape = rmfield(shape, 'fid'); %remove the fiducials->these are stored in MRI-voxel
+shape = ft_read_headshape(fullfile(fpath,'Subject01.shape'));
+%shape = rmfield(shape, 'fid'); %remove the fiducials->these are stored in MRI-voxel
 
 % read in the single sphere models produced with CTF software
-ctf_ss = ft_read_headmodel('Subject01.hdm');
+ctf_ss = ft_read_headmodel(fullfile(fpath,'Subject01.hdm'));
 
 % plotting the head model together with the head shape
 ft_plot_sens(grad);
@@ -49,8 +51,8 @@ cfg                  = [];
 cfg.grad             = grad;
 cfg.headmodel        = ctf_ss;
 cfg.resolution       = 1;
-cfg.unit             = 'cm';
 sourcemodel_ctf_ss   = ft_prepare_leadfield(cfg);
+sourcemodel          = removefields(sourcemodel_ctf_ss, {'leadfield', 'label', 'leadfielddimord'});
 
 %
 %
@@ -61,7 +63,7 @@ sourcemodel_ctf_ss   = ft_prepare_leadfield(cfg);
 %--------------------------------------------------------------------------------------
 
 % read in the local spheres model produced with CTF software
-ctf_ls = ft_read_headmodel(fullfile('Subject01.ds', 'default.hdm'));
+ctf_ls = ft_read_headmodel(fullfile(fpath, 'Subject01.ds', 'default.hdm'));
 
 % plotting the headmodel
 ft_plot_sens(grad, 'unit', 'cm');
@@ -72,8 +74,7 @@ ft_plot_headshape(shape, 'unit', 'cm');
 cfg                 = [];
 cfg.grad            = hdr.grad;
 cfg.headmodel       = ctf_ls;
-cfg.resolution      = 1;
-cfg.unit            = 'cm';
+cfg.sourcemodel     = sourcemodel;
 sourcemodel_ctf_ls  = ft_prepare_leadfield(cfg);
 
 %
@@ -88,7 +89,7 @@ sourcemodel_ctf_ls  = ft_prepare_leadfield(cfg);
 % ft_prepare_headmodel using localspheres (for information type 'help ft_prepare_headmodel')
 cfg           = [];
 cfg.method    = 'localspheres';
-cfg.geom      = shape;
+cfg.headshape = shape;
 cfg.grad      = grad;
 cfg.feedback  = false;
 ls_headshape  = ft_prepare_headmodel(cfg);
@@ -102,8 +103,7 @@ ft_plot_headshape(shape, 'unit', 'cm');
 cfg                 = [];
 cfg.grad            = hdr.grad;
 cfg.headmodel       = ls_headshape;
-cfg.resolution      = 1;
-cfg.unit            = 'cm';
+cfg.sourcemodel     = sourcemodel;
 sourcemodel_ls_headshape = ft_prepare_leadfield(cfg);
 
 %
@@ -118,7 +118,7 @@ sourcemodel_ls_headshape = ft_prepare_leadfield(cfg);
 %--------------------------------------------------------------------------------------
 
 % read mri and reslice
-mri = ft_read_mri('Subject01.mri');
+mri = ft_read_mri(fullfile(fpath, 'Subject01.mri'));
 cfg = [];
 cfg.dim = mri.dim;
 mri = ft_volumereslice(cfg, mri);
@@ -128,13 +128,13 @@ cfg = [];
 ft_sourceplot(cfg, mri);
 
 % save mri for future use
-save mri mri
+%save mri mri
 
 % segmentation
 cfg = [];
 cfg.output = {'gray', 'white', 'csf', 'skull', 'scalp'};
 segmentedmri = ft_volumesegment(cfg, mri);
-save segmentedmri segmentedmri
+%save segmentedmri segmentedmri
 
 % ft_prepare_headmodel (for information type 'help ft_prepare_headmodel' in matlab)
 cfg           = [];
@@ -142,6 +142,7 @@ cfg.grad      = grad;
 cfg.method    = 'localspheres';
 cfg.tissue    = 'brain'; % will be constructed on the fly from white+grey+csf
 ls_mri        = ft_prepare_headmodel(cfg, segmentedmri);
+ls_mri        = ft_convert_units(ls_mri, 'cm');
 
 % plotting the headmodel
 ft_plot_sens(grad);
@@ -151,8 +152,7 @@ ft_plot_headmodel(ls_mri, 'facecolor', 'cortex');
 cfg                  = [];
 cfg.grad             = grad;
 cfg.headmodel        = ls_mri;
-cfg.resolution       = 1;
-cfg.unit             = 'cm';
+cfg.sourcemodel      = sourcemodel;
 sourcemodel_ls_mri   = ft_prepare_leadfield(cfg);
 
 %
@@ -172,6 +172,7 @@ cfg.grad      = grad;
 cfg.method    = 'singleshell';
 cfg.tissue    = 'brain'; % will be constructed on the fly from white+grey+csf
 singleshell   = ft_prepare_headmodel(cfg, segmentedmri);
+singleshell   = ft_convert_units(singleshell, 'cm');
 
 % plotting the headmodel
 ft_plot_sens(grad, 'unit', 'cm');
@@ -181,8 +182,7 @@ ft_plot_headmodel(singleshell, 'facecolor', 'cortex', 'unit', 'cm');
 cfg                = [];
 cfg.grad           = grad;
 cfg.headmodel      = singleshell;
-cfg.resolution     = 1;
-cfg.unit           = 'cm';
+cfg.sourcemodel    = sourcemodel;
 sourcemodel_singleshell   = ft_prepare_leadfield(cfg);
 
 %
@@ -205,7 +205,7 @@ ampl = {};
 for i=1:5
   ampl{i} = nan(grid{i}.dim);
   for k=find(grid{i}.inside(:)')
-    ampl{i}(k) = sqrt(sum(a.leadfield{k}(:).^2));
+    ampl{i}(k) = sqrt(sum(grid{i}.leadfield{k}(:).^2));
   end
 end
 
@@ -255,19 +255,20 @@ end
 
 % interpolate the data on an mri for plotting the correlations between the leadfields
 cfg                 = [];
+cfg.parameter       = 'pow';
 source              = grid{1};
 source.dim          = grid{5}.dim;
 sourceinterp        = {};
 for i=1:5
   for j=(i+1):5
-    source.avg.pow     = comp{i, j}.corrcoef;
+    source.avg.pow     = comp{i, j};
     sourceinterp{i, j} = ft_sourceinterpolate(cfg, source, mri);
   end
 end
 
 % plotting the correlations
 cfg                 = [];
-cfg.funparameter    = 'avg.pow';
+cfg.funparameter    = 'pow';
 cfg.nslices         = 12;
 cfg.colmax          = 1;
 cfg.colmin          = 0.8;
@@ -286,7 +287,7 @@ ft_sliceinterp(cfg, sourceinterp{2, 3}); % etcetera...
 % make segmented mri with volumesegment
 %-------------------------------------------------------------------------------
 
-mri          = ft_read_mri('Subject01.mri');
+mri          = ft_read_mri(fullfile(fpath, 'Subject01.mri'));
 cfg          = [];
 cfg.name     = 'segment';
 segmentedmri = ft_volumesegment(cfg, mri);
