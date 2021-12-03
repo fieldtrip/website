@@ -1,7 +1,7 @@
-function functionname
+function test_example_dipolefit_somatosensory
 
-% MEM 4gb
-% WALLTIME 00:10:00
+% MEM 8gb
+% WALLTIME 00:15:00
 
 %
 %% Fit a dipole to the tactile ERF after mechanical stimulation
@@ -31,7 +31,7 @@ function functionname
 % determine interesting segments in the data
 
 cfg                     = [];
-cfg.dataset             = 'SubjectBraille.ds';
+cfg.dataset             = dccnpath('/home/common/matlab/fieldtrip/data/SubjectBraille.ds');
 cfg.continuous          = 'yes';
 cfg.trialdef.eventtype  = 'backpanel trigger';
 cfg.trialdef.eventvalue = [4,8];
@@ -63,15 +63,17 @@ cfg.channel           = 'MEG';     % only read in the MEG channels
 % detect eye artifacts
 % use only defaults
 cfg.artfctdef.eog.sgn         = 'EOG'; % {'MLT21' 'MRT21' 'MLT31' 'MRT31' 'MLF12' 'MRF12'};
-cfg.artfctdef.eog.feedback    = 'yes';
+cfg.artfctdef.eog.feedback    = 'no';
+cfg.artfctdef.eog.interactive = 'no'; % JM ADDED, otherwise function not automatic
 cfg = ft_artifact_eog(cfg);
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % detect muscle artifacts
 % the temporal and the occipital channels pick up most of the muscle activity
-cfg.artfctdef.muscle.sgn      = {'MLT' 'MRT'} % 'MRO' 'MLO'};
-cfg.artfctdef.muscle.feedback = 'yes';
+cfg.artfctdef.muscle.sgn      = {'MLT' 'MRT'}; % 'MRO' 'MLO'};
+cfg.artfctdef.muscle.feedback = 'no';
 cfg.artfctdef.muscle.cutoff   = 40;  % has been determined by visual inspection
+cfg.artfctdef.muscle.interactive = 'no'; % JM ADDED, otherwise function not automatic
 cfg = ft_artifact_muscle(cfg);
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
