@@ -110,7 +110,7 @@
   link:  /example/fem
 
 - name:  Fit a dipole to the tactile ERF after mechanical stimulation
-  link:  /example/fit_a_dipole_to_the_tactile_erf_after_mechanical_stimulation
+  link:  /example/dipolefit_somatosensory_erf
 
 - name:  How to create a head model if you do not have an individual MRI
   link:  /example/fittemplate
@@ -188,7 +188,7 @@
   link:  /example/phase_reset
 
 - name:  Plotting the result of source reconstructing on a cortical mesh
-  link:  /example/plotting_the_result_of_source_reconstructing_on_a_cortical_mesh
+  link:  /example/plotting_source_surface
 
 - name:  Re-reference EEG and iEEG data
   link:  /example/rereference

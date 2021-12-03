@@ -53,7 +53,7 @@ See also the [tutorials](/tutorial) and [frequently asked questions](/faq).
 - [Compute forward simulated data with the low-level ft_compute_leadfield](/example/compute_leadfield)
 - [Create MNI-aligned grids in individual head-space](/example/sourcemodel_aligned2mni)
 - [Determine the filter characteristics](/example/determine_the_filter_characteristics)
-- [Fit a dipole to the tactile ERF after mechanical stimulation](/example/fit_a_dipole_to_the_tactile_erf_after_mechanical_stimulation)
+- [Fit a dipole to the tactile ERF after mechanical stimulation](/example/dipolefit_somatosensory_erf)
 - [How to create a head model if you do not have an individual MRI](/example/fittemplate)
 - [Localizing the sources underlying the difference in event related fields](/example/difference_erf)
 - [Make leadfields using different headmodels](/example/make_leadfields_using_different_headmodels)
@@ -88,7 +88,7 @@ See also the [tutorials](/tutorial) and [frequently asked questions](/faq).
 ## Visualizing the results of an analysis
 
 - [Creating a layout for plotting NIRS optodes and channels](/example/nirs_layout)
-- [Plotting the result of source reconstructing on a cortical mesh](/example/plotting_the_result_of_source_reconstructing_on_a_cortical_mesh)
+- [Plotting the result of source reconstructing on a cortical mesh](/example/plotting_source_surface)
 - [Making a synchronous movie of EEG or NIRS combined with video recordings](/example/video_eeg)
 
 ## Miscellaneous

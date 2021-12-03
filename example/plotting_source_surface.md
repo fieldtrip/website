@@ -1,6 +1,8 @@
 ---
 title: Plotting the result of source reconstructing on a cortical mesh
 tags: [example, plotting, source]
+redirect_from:
+   - failed_example_plotting_source_surface
 ---
 
 # Plotting the result of source reconstructing on a cortical mesh
