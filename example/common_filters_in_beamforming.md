@@ -22,7 +22,7 @@ It is a requirement that the time windows in all conditions are of equal length.
 
 In FieldTrip, common filters can be used both with the DICS and the PCC beamformer approach. If you are interested in calculating source reconstructed power, both methods can be used and will lead to similar results. PCC is faster but more memory-demanding, whereas DICS is slower but more memory-friendly. The choice of methods depends on personal preferences, your data (e.g., number of trials, number of tapers) and computer specs.
 
-The general procedure is as follow
+The general procedure is as follows
 
 1.  calculate the cross-spectral density matrix of the combined conditions
 2.  compute the spatial filters
@@ -36,10 +36,16 @@ FIXME Code for reconstruction of single trial data is incomplete
 In the following, scripts for both approaches are presented.
 Let's say we have data for two conditions, condition A and B, and we assume that the same sources are active in both, but to a different extent.
 
-We have the preprocessed data for both conditions (_dataA_ and _dataB_) and we precomputed the grid and the volume conduction model (_grid_ and _vol_). For more information on how to do this, have a look at the [beamformer tutorial](/tutorial/beamformer) and the FieldTrip functions **[ft_prepare_leadfield](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_leadfield.m)** and **[ft_prepare_headmodel](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_headmodel.m)** with method='singleshell'.
+We have the preprocessed data for both conditions (_dataA_ and _dataB_) and we precomputed the sourcemodel and the volume conduction model (_sourcemodel_ and _headmodel_). For more information on how to do this, have a look at the [beamformer tutorial](/tutorial/beamformer) and the FieldTrip functions **[ft_prepare_leadfield](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_leadfield.m)** and **[ft_prepare_headmodel](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_headmodel.m)** with method='singleshell'. In order to have some data to begin with, we could use the [beamformer tutorial](/tutorial/beamformer) data, e.g. rename the _dataPre_ and _dataPost_ variables into _dataA_ and _dataB_ respectively, and use the _headmodel_ and _sourcemodel_ that have been created in that tutorial.
 
 ### PCC
-
+    
+    % the below lines work when you have access to the file system of the DCCN
+    load(dccnpath('/home/common/matlab/fieldtrip/data/ftp/tutorial/beamformer/dataPre.mat')); dataA = dataPre; clear dataPre;
+    load(dccnpath('/home/common/matlab/fieldtrip/data/ftp/tutorial/beamformer/dataPost.mat')); dataB = dataPost; clear dataPost;
+    load(dccnpath('/home/common/matlab/fieldtrip/data/ftp/tutorial/beamformer/headmodel.mat'));
+    load(dccnpath('/home/common/matlab/fieldtrip/data/ftp/tutorial/beamformer/sourcemodel.mat'));
+    
     % append the two conditions and remember the design %
     data = ft_appenddata([], dataA, dataB);
     design = [ones(1,length(dataA.trial)) ones(1,length(dataB.trial))*2]; % only necessary if you are interested in reconstructing single trial data
@@ -59,8 +65,8 @@ We have the preprocessed data for both conditions (_dataA_ and _dataB_) and we p
     % compute common spatial filter AND project all trials through it %
     cfg=[];
     cfg.method      = 'pcc';
-    cfg.grid        = grid;       % previously computed grid
-    cfg.headmodel   = vol;        % previously computed volume conduction model
+    cfg.sourcemodel = sourcemodel;       % previously computed sourcemodel
+    cfg.headmodel   = headmodel;        % previously computed volume conduction model
     cfg.frequency   = 60;
     cfg.keeptrials  = 'yes';      % keep single trials. Only necessary if you are interested in reconstructing single trial data
 
@@ -112,8 +118,8 @@ We have the preprocessed data for both conditions (_dataA_ and _dataB_) and we p
     % compute common spatial filter %
     cfg=[];
     cfg.method      = 'dics';
-    cfg.grid        = grid;         % previously computed grid
-    cfg.headmodel   = vol;          % previously computed volume conduction model
+    cfg.sourcemodel = sourcemodel;         % previously computed sourcemodel
+    cfg.headmodel   = headmodel;          % previously computed volume conduction model
     cfg.frequency   = 60;
     cfg.dics.keepfilter  = 'yes';        % remember the filter
 
@@ -122,8 +128,8 @@ We have the preprocessed data for both conditions (_dataA_ and _dataB_) and we p
     % project all trials through common spatial filter %
     cfg=[];
     cfg.method      = 'dics';
-    cfg.grid        = grid;       % previously computed grid
-    cfg.headmodel   = vol;        % previously computed volume conduction model
+    cfg.sourcemodel = sourcemodel;       % previously computed sourcemodel
+    cfg.headmodel   = headmodel;        % previously computed volume conduction model
     cfg.sourcemodel.filter = source.avg.filter; % use the common filter computed in the previous step!
     cfg.frequency   = 60;
     cfg.rawtrial    = 'yes';      % project each single trial through the filter. Only necessary if you are interested in reconstructing single trial data
