@@ -76,6 +76,9 @@
 - name:  Getting started with CTF data
   link:  /getting_started/ctf
 
+- name:  Getting started with FieldLine OPM data
+  link:  /getting_started/fieldline
+
 - name:  Getting started with LIMO MEEG
   link:  /getting_started/limo
 

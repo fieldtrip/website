@@ -121,6 +121,9 @@
 - name:  Getting started with SR-Research EyeLink eye-tracker data
   link:  /getting_started/eyelink
 
+- name:  Getting started with FieldLine OPM data
+  link:  /getting_started/fieldline
+
 - name:  Getting started with fMRI timeseries data
   link:  /getting_started/fmri
 
