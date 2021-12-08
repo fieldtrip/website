@@ -33,7 +33,7 @@ The outputs of LIMO are generated at each levels:
 1. First level analysis derives subject specific parameter estimates (`n_channels x n_timeframes x n_variables` matrix) for any effects as well as contrast estimates (`n_channels x n_timeframes x n_stat_variables` matrix).
 2. Second level analysis results of a `n_channels x n_timeframes x n_stat_variables` matrix corresponding to the group analysis.
 
-The following figure gives an example of inputs and outputs within the whole BIDS structure:
+The following outline shows the BIDS raw data and derivatives structure that represents the pipeline inputs and outputs, going from raw -> preproc -> timelock -> LIMO 1st level -> LIMO 2nd level analysis:
 
 ```bash
 /
