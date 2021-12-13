@@ -157,8 +157,8 @@ To calculate HGP, we will first perform **[ft_freqanalysis](https://github.com/f
     TFR_face   = ft_freqanalysis(cfg,epoch_data_clean);
 
     % create HGP as empty timelock structure with same dimensions as ERP, values will be filled in in the next steps
-    HGP_object = rmfield(ERP_object,{'trial','avg','var'});
-    HGP_face   = rmfield(ERP_face,{'trial','avg','var'});
+    HGP_object = rmfield(ERP_object,{'trial'});
+    HGP_face   = rmfield(ERP_face,{'trial'});
 
     % correct for the 1/f dropoff
     freqcorr = reshape(TFR_object.freq.^2,[1 1 length(TFR_object.freq)]); %this vector accounts for the 1/f dropoff
@@ -169,12 +169,6 @@ To calculate HGP, we will first perform **[ft_freqanalysis](https://github.com/f
     % multiply data with freqcorr matrix and average over frequencies
     HGP_object.trial = squeeze(nanmean(TFR_object.powspctrm(:,:,:,:) .* freqcorr_object,3));
     HGP_face.trial   = squeeze(nanmean(TFR_face.powspctrm(:,:,:,:) .* freqcorr_face,3));
-
-    % calculate mean and variance
-    HGP_object.avg = squeeze(nanmean(HGP_object.trial,1));
-    HGP_object.var = squeeze(nanvar(HGP_object.trial,1));
-    HGP_face.avg   = squeeze(nanmean(HGP_face.trial,1));
-    HGP_face.var   = squeeze(nanvar(HGP_face.trial,1));
 
     % baseline correction
     cfg          = [];
@@ -188,7 +182,6 @@ To calculate HGP, we will first perform **[ft_freqanalysis](https://github.com/f
 Again, we decided to plot channel 'IO_03'. As was the case for the ERPs, the HGP response at this channel was larger for 'face' stimuli than 'object' stimuli.
 
     cfg           = [];
-    cfg.parameter = 'avg';
     cfg.xlim      = [-.3 .6];
     cfg.channel   = 'EEG IO_03-REF'; % other responsive channels: 'EEG PT_03-REF', 'EEG PT_04-REF', 'EEG IO_02-REF', 'EEG IO_04-REF', 'EEG SO_01-REF', 'EEG SO_02-REF''EEG SO_03-REF'
 

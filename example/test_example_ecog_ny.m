@@ -1,7 +1,7 @@
-function functionname
+function test_example_ecog_ny
 
-% MEM 4gb
-% WALLTIME 00:10:00
+% MEM 8gb
+% WALLTIME 00:30:00
 
 %
 %% Analysis of high-gamma band signals in human ECoG
@@ -22,6 +22,13 @@ function functionname
 %
 % In line with the [main tutorial](/tutorial/human_ecog), you can use the following code for surface rendering and the plotting of electrodes. Note that in this dataset many steps are skipped and we are just plotting the result of the anatomical coregistration and electrode placement.
 %
+
+
+T = tempdir;
+zipfile = fullfile(dccnpath('/home/common/matlab/fieldtrip/data/ftp/tutorial'), 'SubjectNY394.zip');
+unzip(zipfile, T);
+cd(fullfile(T, 'SubjectNY394'));
+
 %% load electrode locations
 fid = fopen('NY394_MRI_coor.txt');
 elec_info = textscan(fid,'%s %f %f %f %s');
@@ -74,20 +81,22 @@ cfg         = [];
 cfg.channel = 'EEG*'; % select 'EEG' channles
 epoch_data = ft_selectdata(cfg,epoch_data);
 
-% Artifact rejection can be done by visually inspecting individual trials and channels, or by using summary statistics that are calculated across trials and channels (see tutorial [here](/tutorial/visual_artifact_rejection)). We will first visually reject bad channels by browsing through the data channel-wise using **[ft_rejectvisual](https://github.com/fieldtrip/fieldtrip/blob/release/ft_rejectvisual.m)** with the method 'channel'. You will notice that the data from channel 23 appear very noisy after about a quarter of trials. This is probably a technical artifact due to a bad electrode contact. Therefore, the channel should be marked as bad.
-%
-cfg         = [];
-cfg.method  = 'channel'; % browse through channels
-cfg.channel = 'all';
-epoch_data_clean_chan = ft_rejectvisual(cfg, epoch_data);
-
-%
-% For rejecting artifact trials, we will use the 'summary' method in **[ft_rejectvisual](https://github.com/fieldtrip/fieldtrip/blob/release/ft_rejectvisual.m)**. Identifying artifact trials in ECoG is similar to EEG analysis and can be done according to the tutorial on [visual artifact rejection](/tutorial/visual_artifact_rejection). Note, that ECoG data typically have higher amplitudes and better signal-to-noise ratios compared with data from scalp EEG, because they are recorded directly from the cortex. Still, a number of technical and physiological artifacts can be present in the data. Due to the clinical - and therefore less rigorously controlled - environment during the recording process, technical artifacts are quite common. The present dataset is relatively clean and, hence, does not need much rejection. Some moderate outliers can be found for the metrics: maxabs, zvalue and maxzvalue.
-%
-cfg         = [];
-cfg.method  = 'summary'; % summary statistics across channels and trials
-cfg.channel = 'all';
-epoch_data_clean = ft_rejectvisual(cfg, epoch_data_clean_chan);
+% JM: skip the below for the test function, because it's interactive
+% % Artifact rejection can be done by visually inspecting individual trials and channels, or by using summary statistics that are calculated across trials and channels (see tutorial [here](/tutorial/visual_artifact_rejection)). We will first visually reject bad channels by browsing through the data channel-wise using **[ft_rejectvisual](https://github.com/fieldtrip/fieldtrip/blob/release/ft_rejectvisual.m)** with the method 'channel'. You will notice that the data from channel 23 appear very noisy after about a quarter of trials. This is probably a technical artifact due to a bad electrode contact. Therefore, the channel should be marked as bad.
+% %
+% cfg         = [];
+% cfg.method  = 'channel'; % browse through channels
+% cfg.channel = 'all';
+% epoch_data_clean_chan = ft_rejectvisual(cfg, epoch_data);
+% 
+% %
+% % For rejecting artifact trials, we will use the 'summary' method in **[ft_rejectvisual](https://github.com/fieldtrip/fieldtrip/blob/release/ft_rejectvisual.m)**. Identifying artifact trials in ECoG is similar to EEG analysis and can be done according to the tutorial on [visual artifact rejection](/tutorial/visual_artifact_rejection). Note, that ECoG data typically have higher amplitudes and better signal-to-noise ratios compared with data from scalp EEG, because they are recorded directly from the cortex. Still, a number of technical and physiological artifacts can be present in the data. Due to the clinical - and therefore less rigorously controlled - environment during the recording process, technical artifacts are quite common. The present dataset is relatively clean and, hence, does not need much rejection. Some moderate outliers can be found for the metrics: maxabs, zvalue and maxzvalue.
+% %
+% cfg         = [];
+% cfg.method  = 'summary'; % summary statistics across channels and trials
+% cfg.channel = 'all';
+% epoch_data_clean = ft_rejectvisual(cfg, epoch_data_clean_chan);
+epoch_data_clean = epoch_data;
 
 %% ## 2. Re-reference the data
 %
@@ -155,8 +164,8 @@ cfg.trials = find(epoch_data_clean.trialinfo == 7); % select 'face' trials
 TFR_face   = ft_freqanalysis(cfg,epoch_data_clean);
 
 % create HGP as empty timelock structure with same dimensions as ERP, values will be filled in in the next steps
-HGP_object = rmfield(ERP_object,{'trial','avg','var'});
-HGP_face   = rmfield(ERP_face,{'trial','avg','var'});
+HGP_object = rmfield(ERP_object,{'trial'});
+HGP_face   = rmfield(ERP_face,{'trial'});
 
 % correct for the 1/f dropoff
 freqcorr = reshape(TFR_object.freq.^2,[1 1 length(TFR_object.freq)]); %this vector accounts for the 1/f dropoff
@@ -167,12 +176,6 @@ freqcorr_face   = repmat(freqcorr,[size(TFR_face.powspctrm,1) size(TFR_face.pows
 % multiply data with freqcorr matrix and average over frequencies
 HGP_object.trial = squeeze(nanmean(TFR_object.powspctrm(:,:,:,:) .* freqcorr_object,3));
 HGP_face.trial   = squeeze(nanmean(TFR_face.powspctrm(:,:,:,:) .* freqcorr_face,3));
-
-% calculate mean and variance
-HGP_object.avg = squeeze(nanmean(HGP_object.trial,1));
-HGP_object.var = squeeze(nanvar(HGP_object.trial,1));
-HGP_face.avg   = squeeze(nanmean(HGP_face.trial,1));
-HGP_face.var   = squeeze(nanvar(HGP_face.trial,1));
 
 % baseline correction
 cfg          = [];
@@ -186,7 +189,6 @@ clear TFR*
 % Again, we decided to plot channel 'IO_03'. As was the case for the ERPs, the HGP response at this channel was larger for 'face' stimuli than 'object' stimuli.
 %
 cfg           = [];
-cfg.parameter = 'avg';
 cfg.xlim      = [-.3 .6];
 cfg.channel   = 'EEG IO_03-REF'; % other responsive channels: 'EEG PT_03-REF', 'EEG PT_04-REF', 'EEG IO_02-REF', 'EEG IO_04-REF', 'EEG SO_01-REF', 'EEG SO_02-REF''EEG SO_03-REF'
 
