@@ -1,6 +1,3 @@
-- name:  BIDS - the brain imaging data structure
-  link:  /example/bids
-
 - name:  Converting an example audio dataset for sharing in BIDS
   link:  /example/bids_audio
 
@@ -15,6 +12,9 @@
 
 - name:  Converting an example eyetracker dataset for sharing in BIDS
   link:  /example/bids_eyetracker
+
+- name:  BIDS - the brain imaging data structure
+  link:  /example/bids
 
 - name:  Converting an example MEG dataset for sharing in BIDS
   link:  /example/bids_meg
