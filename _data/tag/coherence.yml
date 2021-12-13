@@ -25,11 +25,11 @@
 - name:  Analysis of corticomuscular coherence
   link:  /tutorial/coherence
 
-- name:  Extended analysis of sensor- and source-level connectivity
-  link:  /tutorial/connectivityextended
-
 - name:  Analysis of sensor- and source-level connectivity
   link:  /tutorial/connectivity
+
+- name:  Extended analysis of sensor- and source-level connectivity
+  link:  /tutorial/connectivityextended
 
 - name:  Fourier analysis of neuronal oscillations and synchronization
   link:  /tutorial/fourier
