@@ -55,6 +55,9 @@ LATEST=$(git log -1 --format=%H)
 
 if [ "$LATEST" != "$PREVIOUS" ] ; then
 
+# copy the large assets that are not in the repository to the released site
+$CP assets/root/* _site/
+
 # update the tags, this uses a bash script
 _scripts/tags.sh
 $GIT add _data/tag/*.yml
@@ -69,9 +72,6 @@ echo $LATEST > $LOGFILE
 JEKYLL_ENV=production
 $BUNDLE install           > /dev/null 2>&1
 $BUNDLE exec jekyll build > /dev/null 2>&1
-
-# copy the large assets that are not in the repository to the released site
-$CP assets/root/* _site/
 
 fi
 
