@@ -34,14 +34,14 @@
 - name:  How can I use the command-line peerworker and optimize the MATLAB licenses?
   link:  /faq/how_can_i_use_the_command-line_peerworker_and_optimize_the_matlab_licenses
 
-- name:  How do I avoid having to allocate N copies of my data if I want to execute N jobs?
-  link:  /faq/how_do_i_avoid_having_to_allocate_n_copies_of_my_data_if_i_want_to_execute_n_jobs
-
 - name:  How does the smartmem algorithm work?
   link:  /faq/how_does_the_peer_smartmem_algorithm_work
 
 - name:  How does the peer smartshare algorithm work?
   link:  /faq/how_does_the_peer_smartshare_algorithm_work
+
+- name:  How do I avoid having to allocate N copies of my data if I want to execute N jobs?
+  link:  /faq/how_do_i_avoid_having_to_allocate_n_copies_of_my_data_if_i_want_to_execute_n_jobs
 
 - name:  How should I call peercellfun when a function requires many inputs (e.g., key-value pairs)?
   link:  /faq/how_should_i_call_peercellfun_when_a_function_requires_many_inputs_e.g._key-value_pairs
