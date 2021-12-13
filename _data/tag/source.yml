@@ -7,14 +7,14 @@
 - name:  Common filters in beamforming
   link:  /example/common_filters_in_beamforming
 
+- name:  Compute forward simulated data using ft_dipolesimulation
+  link:  /example/compute_forward_simulated_data
+
 - name:  Compute forward simulated data and apply a beamformer scan
   link:  /example/compute_forward_simulated_data_and_apply_a_beamformer_scan
 
 - name:  Compute forward simulated data and apply a dipole fit
   link:  /example/compute_forward_simulated_data_and_apply_a_dipole_fit
-
-- name:  Compute forward simulated data using ft_dipolesimulation
-  link:  /example/compute_forward_simulated_data
 
 - name:  Compute forward simulated data with the low-level ft_compute_leadfield
   link:  /example/compute_leadfield
@@ -103,11 +103,11 @@
 - name:  Where can I find the dipoli command-line executable?
   link:  /faq/where_can_i_find_the_dipoli_command-line_executable
 
-- name:  Why is there a rim around the brain for which the source reconstruction is not computed?
-  link:  /faq/why_is_there_a_rim_around_the_brain_for_which_the_source_reconstruction_is_not_computed
-
 - name:  Why is the source model deformed or incorrectly aligned after warping template?
   link:  /faq/why_is_the_source_model_deformed_or_incorrectly_aligned_after_warping_template
+
+- name:  Why is there a rim around the brain for which the source reconstruction is not computed?
+  link:  /faq/why_is_there_a_rim_around_the_brain_for_which_the_source_reconstruction_is_not_computed
 
 - name:  Why should I use an average reference for EEG source reconstruction?
   link:  /faq/why_should_i_use_an_average_reference_for_eeg_source_reconstruction
