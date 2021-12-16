@@ -51,38 +51,29 @@ The following outline shows the BIDS raw data and derivatives structure that re
 ├── sub-02
 ├── ...
 ├── derivatives
-│   └── preproc
+│   └── preproc_and_segment
 │       ├── dataset_description.json
 │       ├── sub-01
 │       │   └── eeg
-│       │       ├── sub-01_preproc.mat
-│       │       └── sub-01_preproc.json
+│       │       ├── sub-01_timelock.mat
+│       │       └── sub-01_timelock.json
 │       ├── sub-02
 │       ├── ...
 │       ├── derivatives
-│       │   └── timelock
+│       │   └── 1st_level
 │       │       ├── dataset_description.json
+│       │       │   └── limo
+│       │       │       ├── sub-01_betas.mat
+│       │       │       ├── sub-01_con_1.mat
+│       │       │       └── ...
 │       │       ├── sub-01
-│       │       │   └── eeg
-│       │       │       ├── sub-01_timelock.mat
-│       │       │       └── sub-01_timelock.json
 │       │       ├── sub-02
 │       │       ├── ...
 │       │       ├── derivatives
-│       │       │   └── 1st_level
+│       │       │   └── one_sample_t_test
 │       │       │       ├── dataset_description.json
-│       │       │       │   └── limo
-│       │       │       │       ├── sub-01_betas.mat
-│       │       │       │       ├── sub-01_con_1.mat
-│       │       │       │       └── ...
-│       │       │       ├── sub-01
-│       │       │       ├── sub-02
-│       │       │       ├── ...
-│       │       │       ├── derivatives
-│       │       │       │   └── one_sample_t_test
-│       │       │       │       ├── dataset_description.json
-│       │       │       │       ├── one_sample_t_test_parameter_1.mat
-│       │       │       │       └── ...
+│       │       │       ├── one_sample_t_test_parameter_1.mat
+│       │       │       └── ...
 ```
 
 ## How does LIMO use FieldTrip?
