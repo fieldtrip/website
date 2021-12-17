@@ -93,6 +93,8 @@ Realistic intracranial electrode surfaces are added to the inner sphere (represe
     %label the electrode surfaces where they make contact with the brain
     el_faces = label_surf(tet_elem, 3:7, 1);
 
+{% include image src="/assets/img/development/project/femfuns/sphere_elecs_paraview.png" width="500" %}
+
 Currently volumes and surfaces are not combined in FieldTrip mesh structures. This is being integrated at this moment. For now, a FieldTrip mesh structure is created separately including both volume and surface information:
 
     %Construct the FT mesh structure
