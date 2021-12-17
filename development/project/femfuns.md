@@ -29,6 +29,32 @@ Currently (September 2021), the MATLAB fuctions to add electrodes to an existing
 ## Running a simulation with FieldTrip and FEMfuns combined
 The following section illustrates an example where the FEMfuns pipeline is embedded in FieldTrip. The geometry, electrodes and source-model are created in FieldTrip. These are used in FEMfuns to calculate lead fields by means of FEM with optional properties such as an electrode surface conductance and stimulating electrodes. For the simplest case, a 2-sphere geometry is used with several realistic electrodes on the upper half of the sphere.
 
+The instructions to set up FEMfuns can be found on the [Github page](https://github.com/meronvermaas/FEMfuns).
+Setting up is achieved in three steps:
+
+Step 1: Download Anaconda: https://docs.continuum.io/anaconda/install/ 
+
+    wget https://repo.anaconda.com/archive/Anaconda3-2021.05-Linux-x86_64.sh
+    bash ./Anaconda3-2021.05-Linux-x86_64.sh
+
+Step 2: Clone FEMfuns
+
+    git clone https://github.com/meronvermaas/FEMfuns.git
+OR
+
+    wget https://github.com/meronvermaas/FEMfuns/archive/refs/heads/master.zip
+
+Step 3: Set-up the environment
+
+Move to the  cloned FEMfuns directory and create the conda environment.
+
+    cd FEMfunsDir
+    conda env create -f environment.yml
+    conda activate femfuns
+    conda develop pipeline_code/
+    
+Creating the environment is only needed once, but every new session where FEMfuns is needed the environment needs to be activated using "conda activate femfuns".
+
 Before starting with FieldTrip, it is important that you set up your [MATLAB path](https://www.fieldtriptoolbox.org/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path) properly.
 
     cd PATH_TO_FIELDTRIP
