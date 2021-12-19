@@ -82,3 +82,13 @@ exclude:
 #  - tutorial/
 #  - video/
 #  - workshop/
+
+keep_files:
+  - biositemap.rdf
+  - download.php
+  - google88883c5d6c57aca6.html
+  - jquery.layout+d3+dagre+dagre-d3.min.js
+  - pipeline.css
+  - pipeline.js
+  - tree-graph.png
+
