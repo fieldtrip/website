@@ -5,10 +5,14 @@ tags: [faq, path, download]
 
 # I am working at the Donders, should I also download FieldTrip?
 
-If you want to use FieldTrip inside the DCCN, you should **not use the ftp version**. Instead you should add h:\common\matlab\fieldtrip (on Windows) or /home/common/matlab/fieldtrip (on Linux) to your MATLAB path.
+If you want to use FieldTrip inside the DCCN, you do not have to use the ftp version. Instead you can add `h:\common\matlab\fieldtrip` (on Windows) or `/home/common/matlab/fieldtrip` (on Linux) to your MATLAB path.
 
-This common FieldTrip version on our network is automatically updated with each improvement to the code. That is also the reason why you should add that directory to your path, and not make your own copy (otherwise you would not benefit from the ongoing updates and improvements).
+{% include markup/warning %}
+To have precise control over the FieldTrip version that you are using in your analysis, we recommend that you use the github version.
+{% include markup/end %}
 
-If you want to do your computations on your laptop or at home, i.e. if you cannot access the h: drive, you can use the ftp or git version.
+The common FieldTrip version on our network is automatically updated with each improvement to the code. That is also the reason why you should add that directory to your path, and not make your own copy (otherwise you would not benefit from the ongoing updates and improvements).
+
+If you want to do your computations on your laptop or at home, you can use the ftp or github version.
 
 See also this FAQ on [how to setup your FieldTrip path in MATLAB](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path).
