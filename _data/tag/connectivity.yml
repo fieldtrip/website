@@ -10,17 +10,17 @@
 - name:  Analysis of corticomuscular coherence
   link:  /tutorial/coherence
 
-- name:  Analysis of sensor- and source-level connectivity
-  link:  /tutorial/connectivity
-
 - name:  Extended analysis of sensor- and source-level connectivity
   link:  /tutorial/connectivityextended
 
-- name:  Whole brain connectivity and network analysis
-  link:  /tutorial/networkanalysis
+- name:  Analysis of sensor- and source-level connectivity
+  link:  /tutorial/connectivity
 
 - name:  Whole brain connectivity and network analysis
   link:  /tutorial/networkanalysis_eeg
+
+- name:  Whole brain connectivity and network analysis
+  link:  /tutorial/networkanalysis
 
 - name:  Whole brain connectivity and network analysis
   link:  /tutorial/networkanalysis_old
