@@ -56,9 +56,11 @@ toc:
 permalink: pretty
 markdown: kramdown
 highlighter: rouge
+
 kramdown:
   syntax_highlighter_opts:
     default_lang: matlab
+
 plugins:
   - jekyll-last-modified-at
   - jekyll-toc           # https://github.com/toshimaru/jekyll-toc
@@ -91,4 +93,3 @@ keep_files:
   - pipeline.css
   - pipeline.js
   - tree-graph.png
-
