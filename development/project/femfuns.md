@@ -62,7 +62,7 @@ Before starting with FieldTrip, it is important that you set up your [MATLAB pat
 
 Then surfaces of two spheres can be created using FieldTrip:
 
-    % Create a spherical volume conductor with two spheres of radius 7 and 10 at the origin
+    % Create a spherical volume conductor with two spheres of radius 7 and 10 cm at the origin
     csvol.o = [0, 0,0];
     csvol.r = [7 10];
     cfg = [];
