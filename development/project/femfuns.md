@@ -1,10 +1,10 @@
 ---
-title: Implemention of realistic electrode properties in forward volume conduction models
+title: Implementation of realistic electrode properties in forward volume conduction models
 ---
 
 {% include /shared/development/warning.md %}
 
-# Implemention of realistic electrode properties in forward volume conduction models
+# Implementation of realistic electrode properties in forward volume conduction models
 
 ## Description
 
@@ -22,13 +22,16 @@ FEMfuns is a python based open-source pipeline and will be called externally fro
 
 {% include image src="/assets/img/development/project/femfuns/workflow.jpg" width="500" %}
 
-The workflow consists of calling many subroutines (comparable to a Russian doll), start-ing within the toolbox FieldTrip. First, a FieldTrip script in MATLAB loads data and calls the routine to compute the forward solution. Via this routine, a shell script is written and executed under the hood. This shell script sets up the required version of Python and associated packages (using Anaconda), passes the volume conduction parameters (e.g., mesh, tissue and electrode type, source model), and launches FEMfuns. Then, FEMfuns runs the forward simulation. Finally, the lead field matrices are imported back into FieldTrip for further analysis, e.g., source reconstruction analysis.
+The workflow consists of calling many subroutines (comparable to a Russian doll), starting within the toolbox FieldTrip. First, a FieldTrip script in MATLAB loads data and calls the routine to compute the forward solution. Via this routine, a shell script is written and executed under the hood. This shell script passes the volume conduction parameters (e.g., mesh, tissue and electrode type, source model), and launches FEMfuns. Then, FEMfuns runs the forward simulation. Finally, the lead field matrices are imported back into FieldTrip for further analysis, e.g., source reconstruction analysis. This means that the interaction between FEMfuns and Fieldtrip is fully dependent on reading and writing data. Each is essentially used independantly, as visualized in this schematic:
+
+{% include image src="/assets/img/development/project/femfuns/workflow_doll_embedded.png" width="500" %}
 
 Currently (September 2021), the MATLAB fuctions to add electrodes to an existing finite element head model are available [here](https://github.com/meronvermaas/fieldtrip/tree/femfuns/external/femfuns)
 
 ## Running a simulation with FieldTrip and FEMfuns combined
 The following section illustrates an example where the FEMfuns pipeline is embedded in FieldTrip. The geometry, electrodes and source-model are created in FieldTrip. These are used in FEMfuns to calculate lead fields by means of FEM with optional properties such as an electrode surface conductance and stimulating electrodes. For the simplest case, a 2-sphere geometry is used representing brain and skull compartment and several realistic electrodes on the upper half of the sphere representing the brain.
 
+### Setting-up
 The instructions to set up FEMfuns can be found on the [Github page](https://github.com/meronvermaas/FEMfuns).
 Setting up is achieved in three steps:
 
@@ -60,6 +63,7 @@ Before starting with FieldTrip, it is important that you set up your [MATLAB pat
     cd PATH_TO_FIELDTRIP
     ft_defaults
 
+### Simulation
 Then surfaces of two spheres can be created using FieldTrip:
 
     % Create a spherical volume conductor with two spheres of radius 7 and 10 cm at the origin
@@ -129,7 +133,16 @@ Finally, the geometry and parameters are used by FEMfuns externally and the resu
     conductivities = [0.33 0.01 1e10 1e10 1e10 1e10 1e10];
     lf_rec = femfuns_leadfield(mesh,conductivities,sourcemodel,elec);
     
- After this, the leadfield structure can be used in FieldTrip, for example:
+    disp(lf_rec)
+          dim: [3 3 3]
+          pos: [27×3 double]
+         unit: 'cm'
+       inside: [27×1 logical]
+          cfg: [1×1 struct]
+    leadfield: {1×27 cell}
+        label: {'elec1'  'elec2'  'elec3'  'elec4'  'elec5'}
+
+The structure of this leadfield grid can be used in FieldTrip, for example:
     
     filename = fullfile(tempname, 'femfuns_leadfield');
     ft_headmodel_interpolate(filename, elec, lf_rec, 'smooth', false);
