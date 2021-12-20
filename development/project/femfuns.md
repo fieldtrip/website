@@ -123,11 +123,14 @@ Next the FieldTrip sourcemodel is created:
     cfg.inwardshift     = 1; %shifts dipoles away from surfaces
     sourcemodel         = ft_prepare_sourcemodel(cfg);
 
-Finally, the geometry and parameters are used by FEMfuns externally. (HOW?) The resulting leadfield is imported back into matlab after which they can be used by FieldTrip:
+Finally, the geometry and parameters are used by FEMfuns externally.
 
     % conductivities for brain, scalp and metal electrodes are set
     conductivities = [0.33 0.01 1e10 1e10 1e10 1e10 1e10];
     lf_rec = femfuns_leadfield(mesh,conductivities,sourcemodel,elec);
+    
+The resulting leadfield is imported back into matlab after which they can be used by FieldTrip:
+    
     filename = fullfile(tempname, 'femfuns_leadfield');
     ft_headmodel_interpolate(filename, elec, lf_rec, 'smooth', false); %HERE WE NEED TO EXPLAIN
 
