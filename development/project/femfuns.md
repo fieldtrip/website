@@ -27,7 +27,7 @@ The workflow consists of calling many subroutines (comparable to a Russian doll)
 Currently (September 2021), the MATLAB fuctions to add electrodes to an existing finite element head model are available [here](https://github.com/meronvermaas/fieldtrip/tree/femfuns/external/femfuns)
 
 ## Running a simulation with FieldTrip and FEMfuns combined
-The following section illustrates an example where the FEMfuns pipeline is embedded in FieldTrip. The geometry, electrodes and source-model are created in FieldTrip. These are used in FEMfuns to calculate lead fields by means of FEM with optional properties such as an electrode surface conductance and stimulating electrodes. For the simplest case, a 2-sphere geometry is used with several realistic electrodes on the upper half of the sphere.
+The following section illustrates an example where the FEMfuns pipeline is embedded in FieldTrip. The geometry, electrodes and source-model are created in FieldTrip. These are used in FEMfuns to calculate lead fields by means of FEM with optional properties such as an electrode surface conductance and stimulating electrodes. For the simplest case, a 2-sphere geometry is used representing brain and skull compartment and several realistic electrodes on the upper half of the sphere representing the brain.
 
 The instructions to set up FEMfuns can be found on the [Github page](https://github.com/meronvermaas/FEMfuns).
 Setting up is achieved in three steps:
@@ -82,7 +82,7 @@ Realistic intracranial electrode surfaces are added to the inner sphere (represe
     % update the electrode sets to the latest standards
     elec = ft_datatype_sens(elec);
     
-    % combine the brain surface with electrode surfaces and get inner points of the electrodes
+    % combine the brain surface with electrode surfaces and get inner points of the electrodes (here 'elecmarkers')
     dp_elec = 0.5; %height  of the electrode cylinder
     rad_elec = 0.2; %radius of the electrode cylinder
      [dented_elsurf,elecmarkers] = add_electrodes(csbnd(1), elec.elecpos, rad_elec, dp_elec);
@@ -95,7 +95,7 @@ Realistic intracranial electrode surfaces are added to the inner sphere (represe
 
 {% include image src="/assets/img/development/project/femfuns/sphere_elecs_paraview.png" width="500" %}
 
-Currently volumes and surfaces are not combined in FieldTrip mesh structures. This is being integrated at this moment. For now, a FieldTrip mesh structure is created separately including both volume and surface information:
+Currently volumes and surfaces are not combined in FieldTrip mesh structures. This is being integrated at this moment. (NOT UNDERSTOOD) For now, a FieldTrip mesh structure is created separately including both volume and surface information:
 
     %Construct the FT mesh structure
     mesh.unit = 'cm';
@@ -123,13 +123,13 @@ Next the FieldTrip sourcemodel is created:
     cfg.inwardshift     = 1; %shifts dipoles away from surfaces
     sourcemodel         = ft_prepare_sourcemodel(cfg);
 
-Finally, the geometry and parameters are used by FEMfuns externally. The resulting leadfield is imported back into matlab after which they can be used by FieldTrip:
+Finally, the geometry and parameters are used by FEMfuns externally. (HOW?) The resulting leadfield is imported back into matlab after which they can be used by FieldTrip:
 
     % conductivities for brain, scalp and metal electrodes are set
     conductivities = [0.33 0.01 1e10 1e10 1e10 1e10 1e10];
     lf_rec = femfuns_leadfield(mesh,conductivities,sourcemodel,elec);
     filename = fullfile(tempname, 'femfuns_leadfield');
-    ft_headmodel_interpolate(filename, elec, lf_rec, 'smooth', false);
+    ft_headmodel_interpolate(filename, elec, lf_rec, 'smooth', false); %HERE WE NEED TO EXPLAIN
 
 Alternatively, stimulating electrodes can be used:
 
