@@ -130,7 +130,7 @@ Next the FieldTrip sourcemodel is created:
 Finally, the geometry and parameters are used by FEMfuns externally and the resulting leadfield is imported back into MATLAB with femfuns_leadfield.
 
     % conductivities for brain, scalp and metal electrodes are set
-    conductivities = [0.33 0.01 1e10 1e10 1e10 1e10 1e10];
+    conductivities = [0.33 0.01 0 0 1e10 1e10 1e10];
     lf_rec = femfuns_leadfield(mesh,conductivities,sourcemodel,elec);
     
     disp(lf_rec)
@@ -141,6 +141,10 @@ Finally, the geometry and parameters are used by FEMfuns externally and the resu
           cfg: [1×1 struct]
     leadfield: {1×27 cell}
         label: {'elec1'  'elec2'  'elec3'  'elec4'  'elec5'}
+
+An example of the potential distribution on the inner sphere representing the brain (visualized using https://www.paraview.org/):
+
+{% include image src="/assets/img/development/project/femfuns/innersphere_bipole.png" width="500" %}
 
 The structure of this leadfield grid can be used in FieldTrip, for example:
     
@@ -160,5 +164,8 @@ Alternatively, stimulating electrodes can be used:
     conductivities = [0.33 0.01 0 0 0 0 0];
     lf_stim = femfuns_leadfield(mesh,conductivities,sourcemodel,elec);
 
+An example of the potential distribution on the inner sphere with the stimulating and ground electrode (visualized using https://www.paraview.org/):
+
+{% include image src="/assets/img/development/project/femfuns/innersphere_stim.png" width="500" %}
 
 This work is supported by a grant from stichting IT projecten ([StITPro](https://stitpro.nl/)).
