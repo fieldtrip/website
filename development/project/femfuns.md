@@ -26,7 +26,7 @@ The workflow consists of calling many subroutines (comparable to a Russian doll)
 
 {% include image src="/assets/img/development/project/femfuns/workflow_doll_embedded.png" width="500" %}
 
-Currently (September 2021), the MATLAB fuctions to add electrodes to an existing finite element head model are available [here](https://github.com/meronvermaas/fieldtrip/tree/femfuns/external/femfuns)
+Currently (December 2021), the MATLAB fuctions to add electrodes to an existing finite element head model and use leadfields computed in FEMfuns in FieldTrip analysis are available [here](https://github.com/meronvermaas/FEMfuns/tree/master/external/fieldtrip)
 
 ## Running a simulation with FieldTrip and FEMfuns combined
 The following section illustrates an example where the FEMfuns pipeline is embedded in FieldTrip. The geometry, electrodes and source-model are created in FieldTrip. These are used in FEMfuns to calculate lead fields by means of FEM with optional properties such as an electrode surface conductance and stimulating electrodes. For the simplest case, a 2-sphere geometry is used representing brain and skull compartment and several realistic electrodes on the upper half of the sphere representing the brain.
