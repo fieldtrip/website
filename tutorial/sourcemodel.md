@@ -73,19 +73,19 @@ If it worked well, you will see the coordinate system specified in the mri struc
 
 If you have additionally used the Polhemus to record the headshape and the location of the head localizer coils, you can use these to refine the alignment between the MEG and MRI data. For this you can use **[ft_read_headshape](https://github.com/fieldtrip/fieldtrip/blob/release/ft_read_headshape.m)** and **[ft_volumerealign](https://github.com/fieldtrip/fieldtrip/blob/release/ft_volumerealign.m)** with method 'headshape' to either automatically or interactively rotate, scale and translate the MRI until it matches the recorded headshape best. In this example it does not add additional information beyond the MRI, since the headshape was not recorded but obtained from the anatomical MRI (post-coregistration) using the CTF MRIViewer software. The output will contain an updated transformation matrix.
 
-  headshape = ft_read_headshape('Subject01.shape');
+    headshape = ft_read_headshape('Subject01.shape');
 
-  % first align to headshape automatically
-  cfg                       = [];
-  cfg.method                = 'headshape';
-  cfg.headshape.headshape   = headshape;
-  cfg.headshape.icp         = 'yes';
-  cfg.headshape.interactive = 'no';
-  mri                       = ft_volumerealign(cfg, mri);
+    % first align to headshape automatically
+    cfg                       = [];
+    cfg.method                = 'headshape';
+    cfg.headshape.headshape   = headshape;
+    cfg.headshape.icp         = 'yes';
+    cfg.headshape.interactive = 'no';
+    mri                       = ft_volumerealign(cfg, mri);
 
-  % second call, but this time interactive to check result and potentially perform manual correction.
-  cfg.headshape.interactive = 'yes';
-  mri                       = ft_volumerealign(cfg, mri);
+    % second call, but this time interactive to check result and potentially perform manual correction.
+    cfg.headshape.interactive = 'yes';
+    mri                       = ft_volumerealign(cfg, mri);
 
 {% include markup/danger %}
 Note that it really only makes sense to take additional head shape information into account if it is congruent with the data acquisition. If you record information about the head shape in relation to the head localizer coils (fuiducials) on LPA/RPA and on nasion, you should make sure to use the same fiducial locations as those used during the MEG session.
