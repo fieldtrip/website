@@ -1,4 +1,4 @@
-function functionname
+function test_example_bids_behavioral
 
 % MEM 4gb
 % WALLTIME 00:10:00
@@ -33,9 +33,10 @@ function functionname
 % - the second part describes the task
 % - the extension shows whether it is the original NBS Presentation log file itself (.log) or the custom text file written by the Presentation script (.txt)
 
-sourcepath = './original/sourcedata';
-targetpath = './bids';
-
+%sourcepath = './original/sourcedata';
+sourcepath = dccnpath('/home/common/matlab/fieldtrip/data/ftp/example/bids_presentation/original');
+%targetpath = './bids';
+targetpath = fullfile(tempdir, 'bids');
 
 %%
 % general information that applies to all

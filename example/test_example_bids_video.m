@@ -1,4 +1,4 @@
-function functionname
+function test_example_bids_video
 
 % MEM 4gb
 % WALLTIME 00:10:00

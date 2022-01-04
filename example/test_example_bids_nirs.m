@@ -1,7 +1,7 @@
-function functionname
+function test_example_bids_nirs
 
-% MEM 4gb
-% WALLTIME 00:10:00
+% MEM 8gb
+% WALLTIME 00:30:00
 
 %
 %% Converting an example NIRS dataset for sharing in BIDS
@@ -28,12 +28,17 @@ function functionname
 
 % if we don't change to the data directory, a graphical user interface dialog will pop up
 
-cd('original')
+%cd('original')
+
+% FIXME the artinis code cannot read data with a full path included it
+% seems, it gives a low level error in the reading functions
+cd(dccnpath('/home/common/matlab/fieldtrip/data/ftp/example/bids_nirs/artinis/original'));
 
 %%
 
 % this data is from https://www.fieldtriptoolbox.org/tutorial/nirs_multichannel/
-
+bidsroot = fullfile(tempdir, 'bids');
+datadir  = dccnpath('/home/common/matlab/fieldtrip/data/ftp/example/bids_nirs/artinis/original');
 filelist = {
   'LR-01-2015-06-01-0002.oxy3'
   'LR-02-2015-06-08-0001.oxy3'
@@ -46,6 +51,7 @@ filelist = {
 %%
 
 for i=1:length(filelist)
+  %filename = fullfile(datadir, filelist{i});
   filename = filelist{i};
 
   cfg = [];
@@ -55,8 +61,9 @@ for i=1:length(filelist)
   cfg.writetsv = 'replace';
 
   % the following settings relate to the directory structure and file names
-  cfg.bidsroot = '../bids'; % we are running this code in the "original" directory
-  cfg.sub = filename([1 2 4 5]); % the first characters minus the "-"
+  %cfg.bidsroot = '../bids'; % we are running this code in the "original" directory
+  cfg.bidsroot = bidsroot;
+  cfg.sub = filelist{i}([1 2 4 5]); % the first characters minus the "-"
   cfg.ses = [];
   cfg.run = [];
   cfg.task = 'auditoryoddball';
@@ -75,13 +82,17 @@ end
 %
 % For data that is in the BIDS format, FieldTrip version 20200911 or later uses the BIDS `.json` and `.tsv` sidecar files to overrule the header and event details. You can see that with the following code
 %
-hdr1   = ft_read_header('../bids/sub-LR01/nirs/sub-LR01_task-auditoryoddball_nirs.snirf', 'readbids', true)
-event1 = ft_read_event('../bids/sub-LR01/nirs/sub-LR01_task-auditoryoddball_nirs.snirf', 'readbids', true)
+%hdr1   = ft_read_header('../bids/sub-LR01/nirs/sub-LR01_task-auditoryoddball_nirs.snirf', 'readbids', true)
+%event1 = ft_read_event('../bids/sub-LR01/nirs/sub-LR01_task-auditoryoddball_nirs.snirf', 'readbids', true)
+hdr1   = ft_read_header(fullfile(bidsroot, 'sub-LR01/nirs/sub-LR01_task-auditoryoddball_nirs.snirf'), 'readbids', true)
+event1 = ft_read_event(fullfile(bidsroot, 'sub-LR01/nirs/sub-LR01_task-auditoryoddball_nirs.snirf'), 'readbids', true)
 
 % which will return the channel names as `'Rx-Tx'` according to the Artinis standard, since that is represented in the `_channels.tsv` sidecar. By specifying the readbids option as false, you can skip the BIDS json and tsv and the channel names correspond to the SNIRF defaults, i.e., `'Sx-Dx'` rather than `'Rx-Tx'`.
 %
-hdr2   = ft_read_header('../bids/sub-LR01/nirs/sub-LR01_task-auditoryoddball_nirs.snirf', 'readbids', false)
-event2 = ft_read_event('../bids/sub-LR01/nirs/sub-LR01_task-auditoryoddball_nirs.snirf', 'readbids', false)
+%hdr2   = ft_read_header('../bids/sub-LR01/nirs/sub-LR01_task-auditoryoddball_nirs.snirf', 'readbids', false)
+%event2 = ft_read_event('../bids/sub-LR01/nirs/sub-LR01_task-auditoryoddball_nirs.snirf', 'readbids', false)
+hdr2   = ft_read_header(fullfile(bidsroot, 'sub-LR01/nirs/sub-LR01_task-auditoryoddball_nirs.snirf'), 'readbids', false)
+event2 = ft_read_event(fullfile(bidsroot, 'sub-LR01/nirs/sub-LR01_task-auditoryoddball_nirs.snirf'), 'readbids', false)
 
 %% # Homer
 %
@@ -98,6 +109,8 @@ event2 = ft_read_event('../bids/sub-LR01/nirs/sub-LR01_task-auditoryoddball_nirs
 % the original dataset includes data from 40 subjects
 % we are just using a subset here to demonstrate the principle
 
+bidsroot  = fullfile(tempdir, 'bids');
+datadir   = dccnpath('/home/common/matlab/fieldtrip/data/ftp/example/bids_nirs/homer/original');
 filenames = {
   'S1001_run01.nirs'
   'S1003_run01.nirs'
@@ -108,15 +121,15 @@ filenames = {
 %%
 
 for i=1:length(filenames)
-  filename = filenames{i};
+  filename = fullfile(datadir, filenames{i});
 
   cfg = [];
-  cfg.dataset = fullfile('original', filename);
+  cfg.dataset = filename;
   cfg.method = 'convert';
 
   % the following settings relate to the directory structure and file names
-  cfg.bidsroot = 'bids';
-  cfg.sub = filename(1:5);
+  cfg.bidsroot = bidsroot;
+  cfg.sub = filenames{i}(1:5);
   cfg.ses = [];
   cfg.run = [];
   cfg.task = 'listenandrepeat';
@@ -143,6 +156,9 @@ end
 %
 % The raw data is available on our FTP server, together with the script to convert the data to BIDS and the resulting BIDS dataset. You can find all three [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/example/bids_nirs/snirf/).
 %
+
+bidsroot  = fullfile(tempdir, 'bids');
+datadir   = dccnpath('/home/common/matlab/fieldtrip/data/ftp/example/bids_nirs/snirf/original');
 filelist = {
   'LR01_rawdata.snirf'
   'LR02_rawdata.snirf'
@@ -155,15 +171,15 @@ filelist = {
 
 for i=1:numel(filelist)
 
-  filename = filelist{i};
+  filename = fullfile(datadir, filelist{i});
 
   cfg = [];
-  cfg.dataset = fullfile('original', filename);
+  cfg.dataset = filename;
   cfg.method = 'copy';
 
   % the following settings relate to the directory structure and file names
-  cfg.bidsroot = 'bids';
-  cfg.sub = filename(1:4); % the first four characters
+  cfg.bidsroot = bidsroot;
+  cfg.sub = filelist{i}(1:4); % the first four characters
   cfg.ses = [];
   cfg.run = [];
   cfg.task = 'auditoryoddball';

@@ -1,30 +1,28 @@
-function functionname
+function test_example_sphere_fitting
 
-% MEM 4gb
-% WALLTIME 00:10:00
+% MEM 8gb
+% WALLTIME 00:20:00
 
 %
 %% Fitting a template MRI to the MEG Polhemus head shape
 %
 % This example script demonstrates how to fit a sphere to the MEG Polhemus recorded head shape, how to fit a sphere to a template MRI, and subsequently use the two fitted spheres to scale the template MRI such that it fits the MEG Polhemus head shape.
 %
-clc; close all;
-restoredefaultpath
-addpath('/nashome1/wexu/matlab/fieldtrip')
-ft_defaults
 
 load standard_mri % Colin 27 template in fieldtrip
 
+dataset = dccnpath('/home/common/matlab/fieldtrip/data/test/original/meg/neuromag306/sub-15_ses-meg_task-facerecognition_run-01_meg.fif');
+
 % read MEG sensor location
-MEG_sens = ft_read_sens('/nashome1/wexu/MNE_data/CN/MEG/CN19/CN19_raw_tsss_mc.fif', 'senstype', 'meg');
+MEG_sens = ft_read_sens(dataset, 'senstype', 'meg');
 MEG_sens = ft_convert_units(MEG_sens, 'mm');
 
 % read polhemus headshape
-headshape = ft_read_headshape('/nashome1/wexu/MNE_data/CN/MEG/CN19/CN19_raw_tsss_mc.fif');
+headshape = ft_read_headshape(dataset);
 headshape = ft_convert_units(headshape, 'mm');
 
-save headshape headshape
-save MEG_sens MEG_sens
+%save headshape headshape
+%save MEG_sens MEG_sens
 
 % realign to neuromag coordinate system
 lpa    = [  7 104  26];
@@ -60,18 +58,22 @@ cfg.numvertices = [3600];
 bnd             = ft_prepare_mesh(cfg, segmentedmri);
 
 % remove the lower part of the head
-cfg = [];
-cfg.translate = [0 0 -140];
-cfg.scale     = [300 300 300];
-cfg.selection = 'outside';
-bnd_deface = ft_defacemesh(cfg,bnd);
+% THIS IS INTERACTIVE AND WON'T WORK IN A TEST FUNCTION, HENCE COMMENTED
+% cfg = [];
+% cfg.translate = [0 0 -140];
+% cfg.scale     = [300 300 300];
+% cfg.selection = 'outside';
+% bnd_deface = ft_defacemesh(cfg,bnd);
+bnd_deface = bnd;
 
 % remove digitized head points on the nose
-cfg = [];
-cfg.translate = [0 90 -50];
-cfg.scale     = [400 400 100];
-cfg.selection = 'outside';
-headshape_denosed = ft_defacemesh(cfg, headshape);
+% THIS IS INTERACTIVE AND WON'T WORK IN A TEST FUNCTION, HENCE COMMENTED
+% cfg = [];
+% cfg.translate = [0 90 -50];
+% cfg.scale     = [400 400 100];
+% cfg.selection = 'outside';
+% headshape_denosed = ft_defacemesh(cfg, headshape);
+headshape_denosed = headshape;
 
 %
 figure

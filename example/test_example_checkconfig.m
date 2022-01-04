@@ -1,4 +1,4 @@
-function functionname
+function test_example_checkconfig
 
 % MEM 4gb
 % WALLTIME 00:10:00
@@ -48,13 +48,17 @@ ft_default.checksize   = 1e5;
 %
 % To give an example using **[ft_freqdescriptives](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqdescriptives.m)**, if your cfg contains the field 'jacknife' (which was used in a previous version of FieldTrip but has since been renamed to 'jackknife'
 %
+
+% JM added this to make the function functional:
+load(dccnpath('/home/common/matlab/fieldtrip/data/test/latest/freq/meg/freq_mtmfft_trl_ctf151.mat'));
+
 cfg = [];
 cfg.jacknife = 'no';
 test = ft_freqdescriptives(cfg, freq)
 
 % You will get the following feedback
 %
-Warning: use cfg.jackknife instead of cfg.jacknife
+% Warning: use cfg.jackknife instead of cfg.jacknife
 
 % In this case, you don't have to do anything: **[ft_checkconfig](https://github.com/fieldtrip/fieldtrip/blob/release/ft_checkconfig.m)** will rename the field for you, and **[ft_freqdescriptives](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqdescriptives.m)** can do its job. Of course the idea is, that you will use this feedback to improve your scripts!
 %
@@ -71,7 +75,7 @@ Warning: use cfg.jackknife instead of cfg.jacknife
 % If you are using the tutorial dataset, first get the trial definitio
 %
 cfg = [];
-cfg.dataset              = 'Subject01.ds';
+cfg.dataset              = dccnpath('/home/common/matlab/fieldtrip/data/Subject01.ds');
 cfg.trialdef.eventtype   = 'backpanel trigger';
 cfg.trialdef.prestim     = 1;
 cfg.trialdef.poststim    = 2;
@@ -84,68 +88,68 @@ cfg.trackconfig = 'cleanup';
 cfg.unused = 1; % to test whether it works!
 data = ft_preprocessing(cfg);
 
-% The report will look like this:
-%
-The following config fields were specified by YOU and were USED
-  cfg.dataset
-  cfg.trackconfig
-  cfg.checkconfig
-  cfg.datafile
-  cfg.headerfile
-
-The following config fields were specified by YOU and were NOT USED
-  cfg.trialdef
-  cfg.trialfun
-  cfg.unused
-
-The following config fields were set to DEFAULTS and were USED
-  cfg.channel
-  cfg.removemcg
-  cfg.feedback
-  cfg.precision
-  cfg.padding
-  cfg.headerformat
-  cfg.dataformat
-  cfg.dftfilter
-  cfg.lpfilter
-  cfg.hpfilter
-  cfg.bpfilter
-  cfg.bsfilter
-  cfg.medianfilter
-  cfg.reref
-  cfg.refchannel
-  cfg.implicitref
-  cfg.continuous
-  cfg.polyremoval
-  cfg.detrend
-  cfg.blc
-  cfg.hilbert
-  cfg.derivative
-  cfg.rectify
-  cfg.boxcar
-  cfg.absdiff
-  cfg.conv
-  cfg.montage
-
-The following config fields were set to DEFAULTS and were NOT USED
-  cfg.removeeog
-  cfg.polyorder
-  cfg.blcwindow
-  cfg.lpfiltord
-  cfg.hpfiltord
-  cfg.bpfiltord
-  cfg.bsfiltord
-  cfg.lpfilttype
-  cfg.hpfilttype
-  cfg.bpfilttype
-  cfg.bsfilttype
-  cfg.lpfiltdir
-  cfg.hpfiltdir
-  cfg.bpfiltdir
-  cfg.bsfiltdir
-  cfg.medianfiltord
-  cfg.dftfreq
-  cfg.dftinvert
+% % The report will look like this:
+% %
+% The following config fields were specified by YOU and were USED
+%   cfg.dataset
+%   cfg.trackconfig
+%   cfg.checkconfig
+%   cfg.datafile
+%   cfg.headerfile
+% 
+% The following config fields were specified by YOU and were NOT USED
+%   cfg.trialdef
+%   cfg.trialfun
+%   cfg.unused
+% 
+% The following config fields were set to DEFAULTS and were USED
+%   cfg.channel
+%   cfg.removemcg
+%   cfg.feedback
+%   cfg.precision
+%   cfg.padding
+%   cfg.headerformat
+%   cfg.dataformat
+%   cfg.dftfilter
+%   cfg.lpfilter
+%   cfg.hpfilter
+%   cfg.bpfilter
+%   cfg.bsfilter
+%   cfg.medianfilter
+%   cfg.reref
+%   cfg.refchannel
+%   cfg.implicitref
+%   cfg.continuous
+%   cfg.polyremoval
+%   cfg.detrend
+%   cfg.blc
+%   cfg.hilbert
+%   cfg.derivative
+%   cfg.rectify
+%   cfg.boxcar
+%   cfg.absdiff
+%   cfg.conv
+%   cfg.montage
+% 
+% The following config fields were set to DEFAULTS and were NOT USED
+%   cfg.removeeog
+%   cfg.polyorder
+%   cfg.blcwindow
+%   cfg.lpfiltord
+%   cfg.hpfiltord
+%   cfg.bpfiltord
+%   cfg.bsfiltord
+%   cfg.lpfilttype
+%   cfg.hpfilttype
+%   cfg.bpfilttype
+%   cfg.bsfilttype
+%   cfg.lpfiltdir
+%   cfg.hpfiltdir
+%   cfg.bpfiltdir
+%   cfg.bsfiltdir
+%   cfg.medianfiltord
+%   cfg.dftfreq
+%   cfg.dftinvert
 
 % Thus, it specifies which options were set by you and whether they were used. As you can see, the cfg.unused indeed ends up as "set by you, not used". Furthermore, the report shows the options that were added by the **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** function, and whether they were actually used for your analysis. There is quite a list of unused defaults. When we now look at the output cfg we see that it is nicely cleaned. Compare this with a call to **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** without using trackconfig.
 %
@@ -166,18 +170,19 @@ data2.cfg % not cleaned
 %%% script to downsize cfgs of stored data
 %%% this can free up significant amounts of disk space
 
-downsizefiles={
-  '/mydir/dataset1'
-  '/mydir/dataset2'
-  '/mydir/etc.'};
-
-for k=1:length(downsizefiles)
-  load(downsizefiles{k})
-
-  data.cfg.checksize=100000;
-  data.cfg=ft_checkconfig(data.cfg, 'checksize', 'yes');
-
-  save(downsizefiles{k}, 'data')
-end
+% JM commented this out because this is based on dummy data
+% downsizefiles={
+%   '/mydir/dataset1'
+%   '/mydir/dataset2'
+%   '/mydir/etc.'};
+% 
+% for k=1:length(downsizefiles)
+%   load(downsizefiles{k})
+% 
+%   data.cfg.checksize=100000;
+%   data.cfg=ft_checkconfig(data.cfg, 'checksize', 'yes');
+% 
+%   save(fullfile(tempdir, downsizefiles{k}), 'data')
+% end
 
 % This way **[ft_checkconfig](https://github.com/fieldtrip/fieldtrip/blob/release/ft_checkconfig.m)** will run recursively through the entire data.cfg, including all the previous fields, and empty the fields that are larger than the specified maximum. This can be used on all FieldTrip data.

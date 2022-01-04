@@ -1,7 +1,7 @@
-function functionname
+function test_example_custom_forwinv
 
 % MEM 4gb
-% WALLTIME 00:10:00
+% WALLTIME 00:20:00
 
 %
 %% Use your own forward leadfield model in an inverse beamformer computation

@@ -1,7 +1,7 @@
-function functionname
+function test_example_samplesize
 
-% MEM 4gb
-% WALLTIME 00:10:00
+% MEM 8gb
+% WALLTIME 01:30:00
 
 %
 %% Using simulations to estimate the sample size for cluster-based permutation test
@@ -48,7 +48,18 @@ function functionname
 % Finally, power is calculated as the proportion of the null hypothesis being rejected following a very large number (say 5000) of repetitions of the experiment. Take the current case for example, the outcome of tossing a 100% unfair coin 5 times can be sampled from the binomial distribution, and the results would always be 5 heads. The probability of 5 heads out of 5 tosses under the null hypothesis is 1/(2^5) = 0.0313 &lt; 0.05. So, in all of the 5000 experiments, the null hypothesis is rejected. Thus, the power is 1 = 5000/5000.
 %
 % All of the above steps can be done using the following block of MATLAB code:
-%
+
+% JM added:
+t = tempdir;
+unzip('https://files.osf.io/v1/resources/rmqhc/providers/osfstorage/60347b1e88ea1a0471ee8da7/?zip=');
+addpath(t);
+% JM added: one of the downloaded functions requires the financial
+% toolbox's corr2cov function. This is such a no-brainer that it's created
+% here on the fly
+fid=fopen(fullfile(t,'corr2cov.m'),'w');
+fprintf(fid,'function out = corr2cov(sd,cor)\nout=diag(sd)*cor*diag(sd);\n');
+fclose(fid);
+
 % settings
 p_heads_h1  = 1;     % chance to land on head under H1, aka, the effect size
 n_sample    = 5;     % sample size, i.e., number of toss
@@ -169,7 +180,7 @@ load('exampleData_timefreq.mat');   % load a time-freq data obtained from the ft
 cfg = [];
 cfg.alpha_level = 0.05;    % desired alpha-level
 cfg.power_level = 0.8;     % desired power
-cfg.num_sims    = 500;     % number of randomizations, should be >= 500
+cfg.num_sims    = 100;%500;     % number of randomizations, should be >= 500, JM set to 100 for time considerations
 cfg.n_start     = 10;      % sample size to start with, should be <=10
 
 % parameters for normal distribution from which the simulated data are sampled
@@ -220,12 +231,12 @@ stat_cfg.clustertail      = 0;          % 0 for t-test (two tails); 1 for F test
 stat_cfg.clusteralpha     = 0.05;
 stat_cfg.tail             = 0;          % 0 for t-test (two tails); 1 for F test (right tail)
 stat_cfg.alpha            = 0.05;
-stat_cfg.numrandomization = 500;        % number of randomizations, should be >= 500
+stat_cfg.numrandomization = 100;%500;        % number of randomizations, should be >= 500, JM set to 100 for time considerations
 
 %%% Run the function
-MyPar = parpool; % start parallel pool
+MyPar = parpool; % start parallel pool; 
 res = sampleSize_timefreq(cfg,stat_cfg);
-save('results_timefreq_pairedSamples.mat','res')
+save(fullfile(t,'results_timefreq_pairedSamples.mat'),'res')
 delete(MyPar)
 %
 % Running this function would be quite time-consuming, with a lot of simulations to run. It can therefore be time-saving to open |parpool| to use parallel computing. The results are stored in |res|. The following block of code plots the results.
@@ -236,7 +247,7 @@ figure
 scatter(cfg.n_start:res.sample_size, res.power_at_n(cfg.n_start:end),400,[0.5 0.5 0.5],'Marker','.'); hold on
 plot([cfg.n_start res.sample_size],[cfg.power_level cfg.power_level], 'r')
 text(cfg.n_start+0.5, 0.8,'0.8')
-xlabel('Sample size'); ylabel('Power'),xlim([cfg.n_start res.sample_size])
+xlabel('Sample size'); ylabel('Power');%xlim([cfg.n_start res.sample_size])
 %
 %
 % We can also have a look at the simulated data for the required sample size. The datasets for the two conditions are stored in `res.condA` and `res.condB`.

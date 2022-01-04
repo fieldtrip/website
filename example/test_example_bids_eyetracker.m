@@ -1,7 +1,7 @@
-function functionname
+function test_example_bids_eyetracker
 
 % MEM 4gb
-% WALLTIME 00:10:00
+% WALLTIME 00:20:00
 
 %
 %% Converting an example eye tracker dataset for sharing in BIDS
@@ -57,8 +57,10 @@ cfg.dataset_description.ReferencesAndLinks  = 'n/a';
 cfg.dataset_description.DatasetDOI          = 'n/a';
 
 cfg.method    = 'convert'; % the eyelink-specific format is not supported, convert it to plain TSV
-cfg.dataset   = './original/ashcal.asc';
-cfg.bidsroot  = './bids';  % write to the working directory
+%cfg.dataset   = './original/ashcal.asc';
+%cfg.bidsroot  = './bids';  % write to the working directory
+cfg.dataset   = dccnpath(fullfile('/home/common/matlab/fieldtrip/data/ftp/example/bids_eyetracker/eyelink_short/original', 'ashcal.asc'));
+cfg.bidsroot  = fullfile(tempdir, 'bids');
 cfg.datatype  = 'eyetracker';
 cfg.task      = 'calibration';
 
@@ -148,8 +150,10 @@ filename = {
 % identifier is not totally consistent. Furthermore, some subjects have two, some
 % have three recordings.
 
-sourcepath = './original/ascData';
-targetpath = './bids';
+%sourcepath = './original/ascData';
+%targetpath = './bids';
+sourcepath = dccnpath('/home/common/matlab/fieldtrip/data/ftp/example/bids_eyetracker/eyelink_long/original/ascData');
+targetpath = fullfile(tempdir, 'bids');
 
 %% find the unique subject identifiers
 
@@ -202,7 +206,9 @@ for i=1:numel(subjid)
     % this is additional information that ends up in the sidecar JSON file
     cfg.TaskDescription = 'orientation adaptation paradigm';
 
-    data2bids(cfg);
+    % FIXME the data on /home/common/ is empty, files exist, all with 0
+    % bytes
+    %data2bids(cfg);
 
   end % for fileselection
 end % for subjid
@@ -215,11 +221,12 @@ end % for subjid
 %
 % In the following example we are converting two runs of eye tracker data for two subjects. The data was recorded at the DCCN. Since additional information is missing (e.g., units, origin, calibration procedure), the metadata is very sparse.
 %
+datadir = dccnpath('/home/common/matlab/fieldtrip/data/ftp/example/bids_eyetracker/smi/original');
 filename = {
-  'original/pp23671_rest1_samples.txt'
-  'original/pp23671_task1_samples.txt'
-  'original/pp31237_rest1_samples.txt'
-  'original/pp31237_task1_samples.txt'
+  fullfile(datadir, 'pp23671_rest1_samples.txt')
+  fullfile(datadir, 'pp23671_task1_samples.txt')
+  fullfile(datadir, 'pp31237_rest1_samples.txt')
+  fullfile(datadir, 'pp31237_task1_samples.txt')
   };
 
 % note that the original filename includes the subject identifier and the task
@@ -247,7 +254,8 @@ cfg.Manufacturer          = 'SMI';
 cfg.ManufacturerModelName = 'iView X MRI-LR';
 
 cfg.method    = 'convert'; % the SMI-specific format is not supported, convert it to plain TSV
-cfg.bidsroot  = './bids';  % write to the working directory
+%cfg.bidsroot  = './bids';  % write to the working directory
+cfg.bidsroot  = fullfile(tempdir, 'bids');
 cfg.datatype  = 'eyetracker';
 
 for i=1:4

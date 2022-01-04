@@ -1,4 +1,4 @@
-function functionname
+function test_example_combined_eeg_and_meg_source_reconstruction
 
 % MEM 4gb
 % WALLTIME 00:10:00
@@ -66,17 +66,17 @@ leadfield   = ft_compute_leadfield(pos, combined_sens, combined_vol) * mom;
 figure; plot(leadfield(1:32)); title('eeg');
 figure; plot(leadfield(33:end)); title('meg');
 
-whos leadfield
-
-Name            Size            Bytes  Class     Attributes
-leadfield      96x1               768  double
-
->> senstype(combined_sens)
-
-ans =
-  'electrode'    'meg'
-
->> ft_voltype(combined_vol)
-
-ans =
-  'concentric'    'singlesphere'
+% whos leadfield
+% 
+% Name            Size            Bytes  Class     Attributes
+% leadfield      96x1               768  double
+% 
+% >> senstype(combined_sens)
+% 
+% ans =
+%   'electrode'    'meg'
+% 
+% >> ft_voltype(combined_vol)
+% 
+% ans =
+%   'concentric'    'singlesphere'

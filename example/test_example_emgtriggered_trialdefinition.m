@@ -1,6 +1,6 @@
-function functionname
+function test_example_emgtriggered_trialdefinition
 
-% MEM 4gb
+% MEM 8gb
 % WALLTIME 00:10:00
 
 %
@@ -11,9 +11,15 @@ function functionname
 %
 % You would use this function as follows
 %
+
+dataset = fullfile(dccnpath('/home/common/matlab/fieldtrip/data/ftp/tutorial'), 'SubjectCMC.zip');
+t = tempdir;
+unzip(dataset, t);
+
 cfg           = [];
-cfg.dataset   = string, containing filename or directory
-cfg.trialfun  = 'trialfun_emgdetect';
+cfg.dataset   = fullfile(t, 'SubjectCMC.ds');
+cfg.trialfun  = 'ft_trialfun_emgdetect';
+cfg.continuous = 'yes';
 cfg           = ft_definetrial(cfg);
 data          = ft_preprocessing(cfg);
 
@@ -21,7 +27,7 @@ data          = ft_preprocessing(cfg);
 % processing that is done on the EMG channel data, which are hardcoded in
 % this trial function. You should change these parameters if necessary.
 %
-function [trl] = trialfun_emgdetect(cfg);
+function [trl] = ft_trialfun_emgdetect(cfg)
 
 % read the header and determine the channel number corresponding with the EMG
 hdr         = ft_read_header(cfg.headerfile);

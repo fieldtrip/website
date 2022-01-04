@@ -1,4 +1,4 @@
-function functionname
+function test_example_bids_motion
 
 % MEM 4gb
 % WALLTIME 00:10:00
@@ -42,10 +42,13 @@ cfg.dataset_description.Funding             = 'n/a';
 cfg.dataset_description.ReferencesAndLinks  = 'n/a';
 cfg.dataset_description.DatasetDOI          = 'n/a';
 
-cfg.dataset = './original/self_test_30April2015_ADA.c3d';  % exported from Qualisys
-% cfg.dataset = './original/self_test_30April2015_ADA.tsv'; % alternative export format
+datadir = dccnpath('/home/common/matlab/fieldtrip/data/ftp/example/bids_motion');
 
-cfg.bidsroot = './bids';  % write to the present working directory
+%cfg.dataset = './original/self_test_30April2015_ADA.c3d';  % exported from Qualisys
+cfg.dataset = fullfile(datadir, 'qualysis/original/self_test_30April2015_ADA.c3d');
+% cfg.dataset = './original/self_test_30April2015_ADA.tsv'; % alternative export format
+cfg.bidsroot = fullfile(tempdir, 'bids');
+%cfg.bidsroot = './bids';  % write to the present working directory
 cfg.datatype = 'motion';
 cfg.sub = 'S01';
 
@@ -77,8 +80,12 @@ data2bids(cfg);
 % although the files have the extension tsv, they use a comma as separator
 % they also contain 4 heading lines
 
-table_3d   = readtable('./original/dataOptotrak/HandChoiceSwitch_EEG_01_001_3d.tsv', 'FileType', 'text', 'Delimiter', ',', 'HeaderLines', 4);
-table_0dau = readtable('./original/dataOptotrak/HandChoiceSwitch_EEG_01_001_Odau_1.tsv', 'FileType', 'text', 'Delimiter', ',', 'HeaderLines', 4);
+%table_3d   = readtable('./original/dataOptotrak/HandChoiceSwitch_EEG_01_001_3d.tsv', 'FileType', 'text', 'Delimiter', ',', 'HeaderLines', 4);
+%table_0dau = readtable('./original/dataOptotrak/HandChoiceSwitch_EEG_01_001_Odau_1.tsv', 'FileType', 'text', 'Delimiter', ',', 'HeaderLines', 4);
+%table_3d   = readtable('./original/dataOptotrak/HandChoiceSwitch_EEG_01_001_3d.tsv', 'FileType', 'text', 'Delimiter', ',', 'HeaderLines', 4);
+%table_0dau = readtable('./original/dataOptotrak/HandChoiceSwitch_EEG_01_001_Odau_1.tsv', 'FileType', 'text', 'Delimiter', ',', 'HeaderLines', 4);
+table_3d   = readtable(fullfile(datadir, 'optotrak/original/dataOptotrak', 'HandChoiceSwitch_EEG_01_001_3d.tsv'), 'FileType', 'text', 'Delimiter', ',', 'HeaderLines', 4);
+table_0dau = readtable(fullfile(datadir, 'optotrak/original/dataOptotrak', 'HandChoiceSwitch_EEG_01_001_Odau_1.tsv'), 'FileType', 'text', 'Delimiter', ',', 'HeaderLines', 4);
 
 % the last column is empty
 table_3d = table_3d(:,1:end-1);
@@ -141,10 +148,12 @@ cfg.dataset_description.Funding             = 'n/a';
 cfg.dataset_description.ReferencesAndLinks  = 'n/a';
 cfg.dataset_description.DatasetDOI          = 'n/a';
 
-cfg.dataset = './original/dataOptotrak/HandChoiceSwitch_EEG_01_001_3d.tsv';  % exported from Qualisys
+%cfg.dataset = './original/dataOptotrak/HandChoiceSwitch_EEG_01_001_3d.tsv';  % exported from Qualisys
 % cfg.dataset = './original/self_test_30April2015_ADA.tsv'; % alternative export format
+cfg.dataset = fullfile(datadir, 'optotrak/original/dataOptotrak', 'HandChoiceSwitch_EEG_01_001_3d.tsv');
 
-cfg.bidsroot = './bids';  % write to the present working directory
+%cfg.bidsroot = './bids';  % write to the present working directory
+cfg.bidsroot = fullfile(tempdir, 'bids'); % write to a temporary directory
 cfg.datatype = 'motion';
 cfg.sub = 'S01';
 
@@ -167,8 +176,12 @@ data2bids(cfg, data_combined);
 % The original data for the following example and the converted BIDS representation are available from our [FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/example/bids_motion/).
 %
 
-c3dfile  = './original/example1.c3d';
-mvnxfile = './original/example2.mvnx';
+%c3dfile  = './original/example1.c3d';
+%mvnxfile = './original/example2.mvnx';
+
+datadir  = dccnpath('/home/common/matlab/fieldtrip/data/ftp/example/bids_motion/xsens/original');
+c3dfile  = fullfile(datadir, 'example1.c3d');
+mvnxfile = fullfile(datadir, 'example2.mvnx');
 
 %%
 
@@ -197,7 +210,8 @@ cfg.ManufacturersModelName = 'Awinda';
 cfg.TaskDescription = 'Walking in a corridor';
 cfg.task = 'walking';
 
-cfg.bidsroot = './bids';  % write to the present working directory
+%cfg.bidsroot = './bids';  % write to the present working directory
+cfg.bidsroot = fullfile(tempdir, 'bids');
 cfg.datatype = 'motion';
 
 %% we can export c3d files, here for subject one
@@ -207,7 +221,9 @@ cfg.participants.gender = 'm';
 cfg.participants.height = 186;
 cfg.dataset = c3dfile;
 
-data2bids(cfg);
+% FIXME does not yet work for anybody other than roboos due to file reading
+% permission issues.
+% data2bids(cfg);
 
 %% we can also export mvnx files, here for subject two
 cfg.sub = 'S02';
@@ -216,4 +232,6 @@ cfg.participants.gender = 'f';
 cfg.participants.height = 167;
 cfg.dataset = mvnxfile;
 
-data2bids(cfg);
+% FIXME does not yet work for anybody other than roboos due to file reading
+% permission issues.
+% data2bids(cfg);
