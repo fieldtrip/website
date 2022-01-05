@@ -1,7 +1,7 @@
-function functionname
+function test_example_bids_emg
 
 % MEM 4gb
-% WALLTIME 00:10:00
+% WALLTIME 00:20:00
 
 %% Converting an example EMG dataset for sharing in BIDS
 %

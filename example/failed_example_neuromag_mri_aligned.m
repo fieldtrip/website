@@ -27,7 +27,7 @@ hdr                = ft_read_header(filename_hdr);
 
 rpa                = [y x z];
 nas                = [y x z];
-lpa                = [y x z]
+lpa                = [y x z];
 
 %----realign the mri to the correct coordinate system.
 %determine head coordinate system

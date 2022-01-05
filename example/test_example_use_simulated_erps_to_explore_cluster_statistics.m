@@ -1,4 +1,4 @@
-function functionname
+function test_example_use_simulated_erps_to_explore_cluster_statistics
 
 % MEM 4gb
 % WALLTIME 00:10:00

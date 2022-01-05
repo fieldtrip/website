@@ -1,4 +1,4 @@
-function functionname
+function test_example_bids_pom
 
 % MEM 4gb
 % WALLTIME 00:10:00
@@ -45,279 +45,279 @@ function functionname
 %
 % The original collection of data is organized in a directory structure like this.
 %
-original
-|-- emg
-|-- eyetracker
-|-- mri
-|   |-- sub-POM1FM0023671
-|   |   |-- 001-localizer
-|   |   |-- 002-AAHead_Scout_32ch-head-coil
-|   |   |-- 003-AAHead_Scout_32ch-head-coil_MPR_sag
-|   |   |-- 004-AAHead_Scout_32ch-head-coil_MPR_cor
-|   |   |-- 005-AAHead_Scout_32ch-head-coil_MPR_tra
-|   |   |-- 006-T1_p2_1mm_fov256_sag_TI_880ukbiobank
-|   |   |-- 007-T1_p2_1mm_fov256_sag_TI_880ukbiobank
-|   |   |-- 008-MB8_fMRI_fov210_2.4mm_ukbiobank_SBRef
-|   |   |-- 009-MB8_fMRI_fov210_2.4mm_ukbiobank
-|   |   |-- 010-MB6_fMRI_2.0iso_TR1000TE34
-|   |   |-- 011-diff_UkBioBankAdapted_MB3_50b1000_50b2000_8b0_SBRef
-|   |   |-- 012-diff_UkBioBankAdapted_MB3_50b1000_50b2000_8b0
-|   |   |-- 013-diff_UkBioBankAdapted_MB3_50b1000_50b2000_8b0_SBRef
-|   |   |-- 014-diff_UkBioBankAdapted_MB3_50b1000_50b2000_8b0
-|   |   |-- 015-diff_UKBioBankAdapted_MB3_inverted_SBRef
-|   |   |-- 016-diff_UKBioBankAdapted_MB3_inverted
-|   |   |-- 017-3dflair_1mm-serialimagingadapted_ND
-|   |   |-- 018-3dflair_1mm-serialimagingadapted
-|   |   |-- 019-AlternativeGRE5echos_PFshorter
-|   |   |-- 020-AlternativeGRE5echos_PFshorter
-|   |   |-- 021-tse_vfl_iso_1mm
-|   |   `-- 022-tse_vfl_iso_1mm
-|   `-- sub-POM1FM0031237
-|       |-- 001-localizer
-|       |-- 002-AAHead_Scout_32ch-head-coil
-|       |-- 003-AAHead_Scout_32ch-head-coil_MPR_sag
-|       |-- 004-AAHead_Scout_32ch-head-coil_MPR_cor
-|       |-- 005-AAHead_Scout_32ch-head-coil_MPR_tra
-|       |-- 006-T1_p2_1mm_fov256_sag_TI_880ukbiobank
-|       |-- 007-T1_p2_1mm_fov256_sag_TI_880ukbiobank
-|       |-- 008-MB8_fMRI_fov210_2.4mm_ukbiobank_SBRef
-|       |-- 009-MB8_fMRI_fov210_2.4mm_ukbiobank
-|       |-- 010-MB6_fMRI_2.0iso_TR1000TE34
-|       |-- 011-diff_UkBioBankAdapted_MB3_50b1000_50b2000_8b0_SBRef
-|       |-- 012-diff_UkBioBankAdapted_MB3_50b1000_50b2000_8b0
-|       |-- 013-diff_UKBioBankAdapted_MB3_inverted_SBRef
-|       |-- 014-diff_UKBioBankAdapted_MB3_inverted
-|       |-- 015-3dflair_1mm-serialimagingadapted_ND
-|       |-- 016-3dflair_1mm-serialimagingadapted
-|       |-- 017-AlternativeGRE5echos_PFshorter
-|       |-- 018-AlternativeGRE5echos_PFshorter
-|       |-- 019-tse_vfl_iso_1mm
-|       `-- 020-tse_vfl_iso_1mm
-`-- task
-
-48 directories, 12268 files
+% original
+% |-- emg
+% |-- eyetracker
+% |-- mri
+% |   |-- sub-POM1FM0023671
+% |   |   |-- 001-localizer
+% |   |   |-- 002-AAHead_Scout_32ch-head-coil
+% |   |   |-- 003-AAHead_Scout_32ch-head-coil_MPR_sag
+% |   |   |-- 004-AAHead_Scout_32ch-head-coil_MPR_cor
+% |   |   |-- 005-AAHead_Scout_32ch-head-coil_MPR_tra
+% |   |   |-- 006-T1_p2_1mm_fov256_sag_TI_880ukbiobank
+% |   |   |-- 007-T1_p2_1mm_fov256_sag_TI_880ukbiobank
+% |   |   |-- 008-MB8_fMRI_fov210_2.4mm_ukbiobank_SBRef
+% |   |   |-- 009-MB8_fMRI_fov210_2.4mm_ukbiobank
+% |   |   |-- 010-MB6_fMRI_2.0iso_TR1000TE34
+% |   |   |-- 011-diff_UkBioBankAdapted_MB3_50b1000_50b2000_8b0_SBRef
+% |   |   |-- 012-diff_UkBioBankAdapted_MB3_50b1000_50b2000_8b0
+% |   |   |-- 013-diff_UkBioBankAdapted_MB3_50b1000_50b2000_8b0_SBRef
+% |   |   |-- 014-diff_UkBioBankAdapted_MB3_50b1000_50b2000_8b0
+% |   |   |-- 015-diff_UKBioBankAdapted_MB3_inverted_SBRef
+% |   |   |-- 016-diff_UKBioBankAdapted_MB3_inverted
+% |   |   |-- 017-3dflair_1mm-serialimagingadapted_ND
+% |   |   |-- 018-3dflair_1mm-serialimagingadapted
+% |   |   |-- 019-AlternativeGRE5echos_PFshorter
+% |   |   |-- 020-AlternativeGRE5echos_PFshorter
+% |   |   |-- 021-tse_vfl_iso_1mm
+% |   |   `-- 022-tse_vfl_iso_1mm
+% |   `-- sub-POM1FM0031237
+% |       |-- 001-localizer
+% |       |-- 002-AAHead_Scout_32ch-head-coil
+% |       |-- 003-AAHead_Scout_32ch-head-coil_MPR_sag
+% |       |-- 004-AAHead_Scout_32ch-head-coil_MPR_cor
+% |       |-- 005-AAHead_Scout_32ch-head-coil_MPR_tra
+% |       |-- 006-T1_p2_1mm_fov256_sag_TI_880ukbiobank
+% |       |-- 007-T1_p2_1mm_fov256_sag_TI_880ukbiobank
+% |       |-- 008-MB8_fMRI_fov210_2.4mm_ukbiobank_SBRef
+% |       |-- 009-MB8_fMRI_fov210_2.4mm_ukbiobank
+% |       |-- 010-MB6_fMRI_2.0iso_TR1000TE34
+% |       |-- 011-diff_UkBioBankAdapted_MB3_50b1000_50b2000_8b0_SBRef
+% |       |-- 012-diff_UkBioBankAdapted_MB3_50b1000_50b2000_8b0
+% |       |-- 013-diff_UKBioBankAdapted_MB3_inverted_SBRef
+% |       |-- 014-diff_UKBioBankAdapted_MB3_inverted
+% |       |-- 015-3dflair_1mm-serialimagingadapted_ND
+% |       |-- 016-3dflair_1mm-serialimagingadapted
+% |       |-- 017-AlternativeGRE5echos_PFshorter
+% |       |-- 018-AlternativeGRE5echos_PFshorter
+% |       |-- 019-tse_vfl_iso_1mm
+% |       `-- 020-tse_vfl_iso_1mm
+% `-- task
+% 
+% 48 directories, 12268 files
 %
 % Each of these directories contain either a few files (for emg, eyetracker and task) or many files (for the MR scans).
 %
 % After converting/reorganizing the data to the BIDS structure using [bidscoin](https://github.com/Donders-Institute/bidscoin) for the MR data and **[data2bids](https://github.com/fieldtrip/fieldtrip/blob/release/data2bids.m)** for the rest (see below), we obtain the following directory and file structure.
 %
-bids
-|-- README
-|-- code
-|   |-- bidscoin
-|   |   |-- bidscoiner.errors
-|   |   |-- bidscoiner.log
-|   |   |-- bidsmap.yaml
-|   |   |-- bidsmapper.errors
-|   |   `-- bidsmapper.log
-|   |-- bidseditor.log
-|   |-- bidsmapper.log
-|   `-- convert_to_bids.m
-|-- dataset_description.json
-|-- participants.json
-|-- participants.tsv
-|-- sub-POM1FM0023671
-|   |-- anat
-|   |   |-- sub-POM1FM0023671_acq-3D_run-1_FLAIR.json
-|   |   |-- sub-POM1FM0023671_acq-3D_run-1_FLAIR.nii.gz
-|   |   |-- sub-POM1FM0023671_acq-GREhighresE01_rec-magnitude_run-1_T2star.json
-|   |   |-- sub-POM1FM0023671_acq-GREhighresE01_rec-magnitude_run-1_T2star.nii.gz
-|   |   |-- sub-POM1FM0023671_acq-GREhighresE01_rec-phase_run-1_T2star.json
-|   |   |-- sub-POM1FM0023671_acq-GREhighresE01_rec-phase_run-1_T2star.nii.gz
-|   |   |-- sub-POM1FM0023671_acq-GREhighresE02_rec-magnitude_run-1_T2star.json
-|   |   |-- sub-POM1FM0023671_acq-GREhighresE02_rec-magnitude_run-1_T2star.nii.gz
-|   |   |-- sub-POM1FM0023671_acq-GREhighresE02_rec-phase_run-1_T2star.json
-|   |   |-- sub-POM1FM0023671_acq-GREhighresE02_rec-phase_run-1_T2star.nii.gz
-|   |   |-- sub-POM1FM0023671_acq-GREhighresE03_rec-magnitude_run-1_T2star.json
-|   |   |-- sub-POM1FM0023671_acq-GREhighresE03_rec-magnitude_run-1_T2star.nii.gz
-|   |   |-- sub-POM1FM0023671_acq-GREhighresE03_rec-phase_run-1_T2star.json
-|   |   |-- sub-POM1FM0023671_acq-GREhighresE03_rec-phase_run-1_T2star.nii.gz
-|   |   |-- sub-POM1FM0023671_acq-GREhighresE04_rec-magnitude_run-1_T2star.json
-|   |   |-- sub-POM1FM0023671_acq-GREhighresE04_rec-magnitude_run-1_T2star.nii.gz
-|   |   |-- sub-POM1FM0023671_acq-GREhighresE04_rec-phase_run-1_T2star.json
-|   |   |-- sub-POM1FM0023671_acq-GREhighresE04_rec-phase_run-1_T2star.nii.gz
-|   |   |-- sub-POM1FM0023671_acq-GREhighresE05_rec-magnitude_run-1_T2star.json
-|   |   |-- sub-POM1FM0023671_acq-GREhighresE05_rec-magnitude_run-1_T2star.nii.gz
-|   |   |-- sub-POM1FM0023671_acq-GREhighresE05_rec-phase_run-1_T2star.json
-|   |   |-- sub-POM1FM0023671_acq-GREhighresE05_rec-phase_run-1_T2star.nii.gz
-|   |   |-- sub-POM1FM0023671_acq-GREhighresE06_rec-magnitude_run-1_T2star.json
-|   |   |-- sub-POM1FM0023671_acq-GREhighresE06_rec-magnitude_run-1_T2star.nii.gz
-|   |   |-- sub-POM1FM0023671_acq-GREhighresE06_rec-phase_run-1_T2star.json
-|   |   |-- sub-POM1FM0023671_acq-GREhighresE06_rec-phase_run-1_T2star.nii.gz
-|   |   |-- sub-POM1FM0023671_acq-GREhighresE07_rec-magnitude_run-1_T2star.json
-|   |   |-- sub-POM1FM0023671_acq-GREhighresE07_rec-magnitude_run-1_T2star.nii.gz
-|   |   |-- sub-POM1FM0023671_acq-GREhighresE07_rec-phase_run-1_T2star.json
-|   |   |-- sub-POM1FM0023671_acq-GREhighresE07_rec-phase_run-1_T2star.nii.gz
-|   |   |-- sub-POM1FM0023671_acq-GREhighresE08_rec-magnitude_run-1_T2star.json
-|   |   |-- sub-POM1FM0023671_acq-GREhighresE08_rec-magnitude_run-1_T2star.nii.gz
-|   |   |-- sub-POM1FM0023671_acq-GREhighresE08_rec-phase_run-1_T2star.json
-|   |   |-- sub-POM1FM0023671_acq-GREhighresE08_rec-phase_run-1_T2star.nii.gz
-|   |   |-- sub-POM1FM0023671_acq-GREhighresE09_rec-magnitude_run-1_T2star.json
-|   |   |-- sub-POM1FM0023671_acq-GREhighresE09_rec-magnitude_run-1_T2star.nii.gz
-|   |   |-- sub-POM1FM0023671_acq-GREhighresE09_rec-phase_run-1_T2star.json
-|   |   |-- sub-POM1FM0023671_acq-GREhighresE09_rec-phase_run-1_T2star.nii.gz
-|   |   |-- sub-POM1FM0023671_acq-MPRAGE_rec-norm_run-1_T1w.json
-|   |   |-- sub-POM1FM0023671_acq-MPRAGE_rec-norm_run-1_T1w.nii.gz
-|   |   |-- sub-POM1FM0023671_acq-TSE_rec-norm_run-1_T2w.json
-|   |   `-- sub-POM1FM0023671_acq-TSE_rec-norm_run-1_T2w.nii.gz
-|   |-- beh
-|   |   |-- sub-POM1FM0023671_task-prac_acq-txt_events.tsv
-|   |   |-- sub-POM1FM0023671_task-rest_acq-smi_events.tsv
-|   |   |-- sub-POM1FM0023671_task-rest_acq-smi_eyetracker.json
-|   |   |-- sub-POM1FM0023671_task-rest_acq-smi_eyetracker.tsv
-|   |   |-- sub-POM1FM0023671_task-motor_acq-log_events.tsv
-|   |   |-- sub-POM1FM0023671_task-motor_acq-txt_events.tsv
-|   |   |-- sub-POM1FM0023671_task-motor_acq-smi_events.tsv
-|   |   |-- sub-POM1FM0023671_task-motor_acq-smi_eyetracker.json
-|   |   `-- sub-POM1FM0023671_task-motor_acq-smi_eyetracker.tsv
-|   |-- dwi
-|   |   |-- sub-POM1FM0023671_acq-UkBioBankAdapted_dir-COL_run-1_dwi.bval
-|   |   |-- sub-POM1FM0023671_acq-UkBioBankAdapted_dir-COL_run-1_dwi.bvec
-|   |   |-- sub-POM1FM0023671_acq-UkBioBankAdapted_dir-COL_run-1_dwi.json
-|   |   |-- sub-POM1FM0023671_acq-UkBioBankAdapted_dir-COL_run-1_dwi.nii.gz
-|   |   |-- sub-POM1FM0023671_acq-UkBioBankAdapted_dir-COL_run-1_sbref.bval
-|   |   |-- sub-POM1FM0023671_acq-UkBioBankAdapted_dir-COL_run-1_sbref.bvec
-|   |   |-- sub-POM1FM0023671_acq-UkBioBankAdapted_dir-COL_run-1_sbref.json
-|   |   |-- sub-POM1FM0023671_acq-UkBioBankAdapted_dir-COL_run-1_sbref.nii.gz
-|   |   |-- sub-POM1FM0023671_acq-UkBioBankAdapted_dir-COL_run-2_dwi.bval
-|   |   |-- sub-POM1FM0023671_acq-UkBioBankAdapted_dir-COL_run-2_dwi.bvec
-|   |   |-- sub-POM1FM0023671_acq-UkBioBankAdapted_dir-COL_run-2_dwi.json
-|   |   |-- sub-POM1FM0023671_acq-UkBioBankAdapted_dir-COL_run-2_dwi.nii.gz
-|   |   |-- sub-POM1FM0023671_acq-UkBioBankAdapted_dir-COL_run-2_sbref.bval
-|   |   |-- sub-POM1FM0023671_acq-UkBioBankAdapted_dir-COL_run-2_sbref.bvec
-|   |   |-- sub-POM1FM0023671_acq-UkBioBankAdapted_dir-COL_run-2_sbref.json
-|   |   `-- sub-POM1FM0023671_acq-UkBioBankAdapted_dir-COL_run-2_sbref.nii.gz
-|   |-- emg
-|   |   |-- sub-POM1FM0023671_task-rest_channels.tsv
-|   |   |-- sub-POM1FM0023671_task-rest_emg.eeg
-|   |   |-- sub-POM1FM0023671_task-rest_emg.json
-|   |   |-- sub-POM1FM0023671_task-rest_emg.vhdr
-|   |   |-- sub-POM1FM0023671_task-rest_emg.vmrk
-|   |   |-- sub-POM1FM0023671_task-rest_events.tsv
-|   |   |-- sub-POM1FM0023671_task-motor_channels.tsv
-|   |   |-- sub-POM1FM0023671_task-motor_emg.eeg
-|   |   |-- sub-POM1FM0023671_task-motor_emg.json
-|   |   |-- sub-POM1FM0023671_task-motor_emg.vhdr
-|   |   |-- sub-POM1FM0023671_task-motor_emg.vmrk
-|   |   `-- sub-POM1FM0023671_task-motor_events.tsv
-|   |-- extra_data
-|   |   |-- sub-POM1FM0023671_acq-3D_rec-ND_run-1_FLAIR.json
-|   |   |-- sub-POM1FM0023671_acq-3D_rec-ND_run-1_FLAIR.nii.gz
-|   |   |-- sub-POM1FM0023671_acq-MPRAGE_run-1_T1w.json
-|   |   |-- sub-POM1FM0023671_acq-MPRAGE_run-1_T1w.nii.gz
-|   |   |-- sub-POM1FM0023671_acq-TSE_run-1_T2w.json
-|   |   `-- sub-POM1FM0023671_acq-TSE_run-1_T2w.nii.gz
-|   |-- fmap
-|   |   |-- sub-POM1FM0023671_acq-UKBioBankAdaptedSBRef_dir-COL_run-1_epi.json
-|   |   |-- sub-POM1FM0023671_acq-UKBioBankAdaptedSBRef_dir-COL_run-1_epi.nii.gz
-|   |   |-- sub-POM1FM0023671_acq-UKBioBankAdapted_dir-COL_run-1_epi.json
-|   |   `-- sub-POM1FM0023671_acq-UKBioBankAdapted_dir-COL_run-1_epi.nii.gz
-|   |-- func
-|   |   |-- sub-POM1FM0023671_task-motor_acq-MB6_run-1_bold.json
-|   |   |-- sub-POM1FM0023671_task-motor_acq-MB6_run-1_bold.nii.gz
-|   |   |-- sub-POM1FM0023671_task-rest_acq-MB8_run-1_bold.json
-|   |   |-- sub-POM1FM0023671_task-rest_acq-MB8_run-1_bold.nii.gz
-|   |   |-- sub-POM1FM0023671_task-rest_acq-MB8_run-1_sbref.json
-|   |   `-- sub-POM1FM0023671_task-rest_acq-MB8_run-1_sbref.nii.gz
-|   `-- sub-POM1FM0023671_scans.tsv
-`-- sub-POM1FM0031237
-    |-- anat
-    |   |-- sub-POM1FM0031237_acq-3D_run-1_FLAIR.json
-    |   |-- sub-POM1FM0031237_acq-3D_run-1_FLAIR.nii.gz
-    |   |-- sub-POM1FM0031237_acq-GREhighresE01_rec-magnitude_run-1_T2star.json
-    |   |-- sub-POM1FM0031237_acq-GREhighresE01_rec-magnitude_run-1_T2star.nii.gz
-    |   |-- sub-POM1FM0031237_acq-GREhighresE01_rec-phase_run-1_T2star.json
-    |   |-- sub-POM1FM0031237_acq-GREhighresE01_rec-phase_run-1_T2star.nii.gz
-    |   |-- sub-POM1FM0031237_acq-GREhighresE02_rec-magnitude_run-1_T2star.json
-    |   |-- sub-POM1FM0031237_acq-GREhighresE02_rec-magnitude_run-1_T2star.nii.gz
-    |   |-- sub-POM1FM0031237_acq-GREhighresE02_rec-phase_run-1_T2star.json
-    |   |-- sub-POM1FM0031237_acq-GREhighresE02_rec-phase_run-1_T2star.nii.gz
-    |   |-- sub-POM1FM0031237_acq-GREhighresE03_rec-magnitude_run-1_T2star.json
-    |   |-- sub-POM1FM0031237_acq-GREhighresE03_rec-magnitude_run-1_T2star.nii.gz
-    |   |-- sub-POM1FM0031237_acq-GREhighresE03_rec-phase_run-1_T2star.json
-    |   |-- sub-POM1FM0031237_acq-GREhighresE03_rec-phase_run-1_T2star.nii.gz
-    |   |-- sub-POM1FM0031237_acq-GREhighresE04_rec-magnitude_run-1_T2star.json
-    |   |-- sub-POM1FM0031237_acq-GREhighresE04_rec-magnitude_run-1_T2star.nii.gz
-    |   |-- sub-POM1FM0031237_acq-GREhighresE04_rec-phase_run-1_T2star.json
-    |   |-- sub-POM1FM0031237_acq-GREhighresE04_rec-phase_run-1_T2star.nii.gz
-    |   |-- sub-POM1FM0031237_acq-GREhighresE05_rec-magnitude_run-1_T2star.json
-    |   |-- sub-POM1FM0031237_acq-GREhighresE05_rec-magnitude_run-1_T2star.nii.gz
-    |   |-- sub-POM1FM0031237_acq-GREhighresE05_rec-phase_run-1_T2star.json
-    |   |-- sub-POM1FM0031237_acq-GREhighresE05_rec-phase_run-1_T2star.nii.gz
-    |   |-- sub-POM1FM0031237_acq-GREhighresE06_rec-magnitude_run-1_T2star.json
-    |   |-- sub-POM1FM0031237_acq-GREhighresE06_rec-magnitude_run-1_T2star.nii.gz
-    |   |-- sub-POM1FM0031237_acq-GREhighresE06_rec-phase_run-1_T2star.json
-    |   |-- sub-POM1FM0031237_acq-GREhighresE06_rec-phase_run-1_T2star.nii.gz
-    |   |-- sub-POM1FM0031237_acq-GREhighresE07_rec-magnitude_run-1_T2star.json
-    |   |-- sub-POM1FM0031237_acq-GREhighresE07_rec-magnitude_run-1_T2star.nii.gz
-    |   |-- sub-POM1FM0031237_acq-GREhighresE07_rec-phase_run-1_T2star.json
-    |   |-- sub-POM1FM0031237_acq-GREhighresE07_rec-phase_run-1_T2star.nii.gz
-    |   |-- sub-POM1FM0031237_acq-GREhighresE08_rec-magnitude_run-1_T2star.json
-    |   |-- sub-POM1FM0031237_acq-GREhighresE08_rec-magnitude_run-1_T2star.nii.gz
-    |   |-- sub-POM1FM0031237_acq-GREhighresE08_rec-phase_run-1_T2star.json
-    |   |-- sub-POM1FM0031237_acq-GREhighresE08_rec-phase_run-1_T2star.nii.gz
-    |   |-- sub-POM1FM0031237_acq-GREhighresE09_rec-magnitude_run-1_T2star.json
-    |   |-- sub-POM1FM0031237_acq-GREhighresE09_rec-magnitude_run-1_T2star.nii.gz
-    |   |-- sub-POM1FM0031237_acq-GREhighresE09_rec-phase_run-1_T2star.json
-    |   |-- sub-POM1FM0031237_acq-GREhighresE09_rec-phase_run-1_T2star.nii.gz
-    |   |-- sub-POM1FM0031237_acq-MPRAGE_rec-norm_run-1_T1w.json
-    |   |-- sub-POM1FM0031237_acq-MPRAGE_rec-norm_run-1_T1w.nii.gz
-    |   |-- sub-POM1FM0031237_acq-TSE_rec-norm_run-1_T2w.json
-    |   `-- sub-POM1FM0031237_acq-TSE_rec-norm_run-1_T2w.nii.gz
-    |-- beh
-    |   |-- sub-POM1FM0031237_task-prac_acq-txt_events.tsv
-    |   |-- sub-POM1FM0031237_task-rest_acq-smi_events.tsv
-    |   |-- sub-POM1FM0031237_task-rest_acq-smi_eyetracker.json
-    |   |-- sub-POM1FM0031237_task-rest_acq-smi_eyetracker.tsv
-    |   |-- sub-POM1FM0031237_task-motor_acq-log_events.tsv
-    |   |-- sub-POM1FM0031237_task-motor_acq-txt_events.tsv
-    |   |-- sub-POM1FM0031237_task-motor_acq-smi_events.tsv
-    |   |-- sub-POM1FM0031237_task-motor_acq-smi_eyetracker.json
-    |   `-- sub-POM1FM0031237_task-motor_acq-smi_eyetracker.tsv
-    |-- dwi
-    |   |-- sub-POM1FM0031237_acq-UkBioBankAdapted_dir-COL_run-1_dwi.bval
-    |   |-- sub-POM1FM0031237_acq-UkBioBankAdapted_dir-COL_run-1_dwi.bvec
-    |   |-- sub-POM1FM0031237_acq-UkBioBankAdapted_dir-COL_run-1_dwi.json
-    |   |-- sub-POM1FM0031237_acq-UkBioBankAdapted_dir-COL_run-1_dwi.nii.gz
-    |   |-- sub-POM1FM0031237_acq-UkBioBankAdapted_dir-COL_run-1_sbref.bval
-    |   |-- sub-POM1FM0031237_acq-UkBioBankAdapted_dir-COL_run-1_sbref.bvec
-    |   |-- sub-POM1FM0031237_acq-UkBioBankAdapted_dir-COL_run-1_sbref.json
-    |   `-- sub-POM1FM0031237_acq-UkBioBankAdapted_dir-COL_run-1_sbref.nii.gz
-    |-- emg
-    |   |-- sub-POM1FM0031237_task-rest_channels.tsv
-    |   |-- sub-POM1FM0031237_task-rest_emg.eeg
-    |   |-- sub-POM1FM0031237_task-rest_emg.json
-    |   |-- sub-POM1FM0031237_task-rest_emg.vhdr
-    |   |-- sub-POM1FM0031237_task-rest_emg.vmrk
-    |   |-- sub-POM1FM0031237_task-rest_events.tsv
-    |   |-- sub-POM1FM0031237_task-motor_channels.tsv
-    |   |-- sub-POM1FM0031237_task-motor_emg.eeg
-    |   |-- sub-POM1FM0031237_task-motor_emg.json
-    |   |-- sub-POM1FM0031237_task-motor_emg.vhdr
-    |   |-- sub-POM1FM0031237_task-motor_emg.vmrk
-    |   `-- sub-POM1FM0031237_task-motor_events.tsv
-    |-- extra_data
-    |   |-- sub-POM1FM0031237_acq-3D_rec-ND_run-1_FLAIR.json
-    |   |-- sub-POM1FM0031237_acq-3D_rec-ND_run-1_FLAIR.nii.gz
-    |   |-- sub-POM1FM0031237_acq-MPRAGE_run-1_T1w.json
-    |   |-- sub-POM1FM0031237_acq-MPRAGE_run-1_T1w.nii.gz
-    |   |-- sub-POM1FM0031237_acq-TSE_run-1_T2w.json
-    |   `-- sub-POM1FM0031237_acq-TSE_run-1_T2w.nii.gz
-    |-- fmap
-    |   |-- sub-POM1FM0031237_acq-UKBioBankAdaptedSBRef_dir-COL_run-1_epi.json
-    |   |-- sub-POM1FM0031237_acq-UKBioBankAdaptedSBRef_dir-COL_run-1_epi.nii.gz
-    |   |-- sub-POM1FM0031237_acq-UKBioBankAdapted_dir-COL_run-1_epi.json
-    |   `-- sub-POM1FM0031237_acq-UKBioBankAdapted_dir-COL_run-1_epi.nii.gz
-    |-- func
-    |   |-- sub-POM1FM0031237_task-motor_acq-MB6_run-1_bold.json
-    |   |-- sub-POM1FM0031237_task-motor_acq-MB6_run-1_bold.nii.gz
-    |   |-- sub-POM1FM0031237_task-rest_acq-MB8_run-1_bold.json
-    |   |-- sub-POM1FM0031237_task-rest_acq-MB8_run-1_bold.nii.gz
-    |   |-- sub-POM1FM0031237_task-rest_acq-MB8_run-1_sbref.json
-    |   `-- sub-POM1FM0031237_task-rest_acq-MB8_run-1_sbref.nii.gz
-    `-- sub-POM1FM0031237_scans.tsv
-
-18 directories, 196 files
+% bids
+% |-- README
+% |-- code
+% |   |-- bidscoin
+% |   |   |-- bidscoiner.errors
+% |   |   |-- bidscoiner.log
+% |   |   |-- bidsmap.yaml
+% |   |   |-- bidsmapper.errors
+% |   |   `-- bidsmapper.log
+% |   |-- bidseditor.log
+% |   |-- bidsmapper.log
+% |   `-- convert_to_bids.m
+% |-- dataset_description.json
+% |-- participants.json
+% |-- participants.tsv
+% |-- sub-POM1FM0023671
+% |   |-- anat
+% |   |   |-- sub-POM1FM0023671_acq-3D_run-1_FLAIR.json
+% |   |   |-- sub-POM1FM0023671_acq-3D_run-1_FLAIR.nii.gz
+% |   |   |-- sub-POM1FM0023671_acq-GREhighresE01_rec-magnitude_run-1_T2star.json
+% |   |   |-- sub-POM1FM0023671_acq-GREhighresE01_rec-magnitude_run-1_T2star.nii.gz
+% |   |   |-- sub-POM1FM0023671_acq-GREhighresE01_rec-phase_run-1_T2star.json
+% |   |   |-- sub-POM1FM0023671_acq-GREhighresE01_rec-phase_run-1_T2star.nii.gz
+% |   |   |-- sub-POM1FM0023671_acq-GREhighresE02_rec-magnitude_run-1_T2star.json
+% |   |   |-- sub-POM1FM0023671_acq-GREhighresE02_rec-magnitude_run-1_T2star.nii.gz
+% |   |   |-- sub-POM1FM0023671_acq-GREhighresE02_rec-phase_run-1_T2star.json
+% |   |   |-- sub-POM1FM0023671_acq-GREhighresE02_rec-phase_run-1_T2star.nii.gz
+% |   |   |-- sub-POM1FM0023671_acq-GREhighresE03_rec-magnitude_run-1_T2star.json
+% |   |   |-- sub-POM1FM0023671_acq-GREhighresE03_rec-magnitude_run-1_T2star.nii.gz
+% |   |   |-- sub-POM1FM0023671_acq-GREhighresE03_rec-phase_run-1_T2star.json
+% |   |   |-- sub-POM1FM0023671_acq-GREhighresE03_rec-phase_run-1_T2star.nii.gz
+% |   |   |-- sub-POM1FM0023671_acq-GREhighresE04_rec-magnitude_run-1_T2star.json
+% |   |   |-- sub-POM1FM0023671_acq-GREhighresE04_rec-magnitude_run-1_T2star.nii.gz
+% |   |   |-- sub-POM1FM0023671_acq-GREhighresE04_rec-phase_run-1_T2star.json
+% |   |   |-- sub-POM1FM0023671_acq-GREhighresE04_rec-phase_run-1_T2star.nii.gz
+% |   |   |-- sub-POM1FM0023671_acq-GREhighresE05_rec-magnitude_run-1_T2star.json
+% |   |   |-- sub-POM1FM0023671_acq-GREhighresE05_rec-magnitude_run-1_T2star.nii.gz
+% |   |   |-- sub-POM1FM0023671_acq-GREhighresE05_rec-phase_run-1_T2star.json
+% |   |   |-- sub-POM1FM0023671_acq-GREhighresE05_rec-phase_run-1_T2star.nii.gz
+% |   |   |-- sub-POM1FM0023671_acq-GREhighresE06_rec-magnitude_run-1_T2star.json
+% |   |   |-- sub-POM1FM0023671_acq-GREhighresE06_rec-magnitude_run-1_T2star.nii.gz
+% |   |   |-- sub-POM1FM0023671_acq-GREhighresE06_rec-phase_run-1_T2star.json
+% |   |   |-- sub-POM1FM0023671_acq-GREhighresE06_rec-phase_run-1_T2star.nii.gz
+% |   |   |-- sub-POM1FM0023671_acq-GREhighresE07_rec-magnitude_run-1_T2star.json
+% |   |   |-- sub-POM1FM0023671_acq-GREhighresE07_rec-magnitude_run-1_T2star.nii.gz
+% |   |   |-- sub-POM1FM0023671_acq-GREhighresE07_rec-phase_run-1_T2star.json
+% |   |   |-- sub-POM1FM0023671_acq-GREhighresE07_rec-phase_run-1_T2star.nii.gz
+% |   |   |-- sub-POM1FM0023671_acq-GREhighresE08_rec-magnitude_run-1_T2star.json
+% |   |   |-- sub-POM1FM0023671_acq-GREhighresE08_rec-magnitude_run-1_T2star.nii.gz
+% |   |   |-- sub-POM1FM0023671_acq-GREhighresE08_rec-phase_run-1_T2star.json
+% |   |   |-- sub-POM1FM0023671_acq-GREhighresE08_rec-phase_run-1_T2star.nii.gz
+% |   |   |-- sub-POM1FM0023671_acq-GREhighresE09_rec-magnitude_run-1_T2star.json
+% |   |   |-- sub-POM1FM0023671_acq-GREhighresE09_rec-magnitude_run-1_T2star.nii.gz
+% |   |   |-- sub-POM1FM0023671_acq-GREhighresE09_rec-phase_run-1_T2star.json
+% |   |   |-- sub-POM1FM0023671_acq-GREhighresE09_rec-phase_run-1_T2star.nii.gz
+% |   |   |-- sub-POM1FM0023671_acq-MPRAGE_rec-norm_run-1_T1w.json
+% |   |   |-- sub-POM1FM0023671_acq-MPRAGE_rec-norm_run-1_T1w.nii.gz
+% |   |   |-- sub-POM1FM0023671_acq-TSE_rec-norm_run-1_T2w.json
+% |   |   `-- sub-POM1FM0023671_acq-TSE_rec-norm_run-1_T2w.nii.gz
+% |   |-- beh
+% |   |   |-- sub-POM1FM0023671_task-prac_acq-txt_events.tsv
+% |   |   |-- sub-POM1FM0023671_task-rest_acq-smi_events.tsv
+% |   |   |-- sub-POM1FM0023671_task-rest_acq-smi_eyetracker.json
+% |   |   |-- sub-POM1FM0023671_task-rest_acq-smi_eyetracker.tsv
+% |   |   |-- sub-POM1FM0023671_task-motor_acq-log_events.tsv
+% |   |   |-- sub-POM1FM0023671_task-motor_acq-txt_events.tsv
+% |   |   |-- sub-POM1FM0023671_task-motor_acq-smi_events.tsv
+% |   |   |-- sub-POM1FM0023671_task-motor_acq-smi_eyetracker.json
+% |   |   `-- sub-POM1FM0023671_task-motor_acq-smi_eyetracker.tsv
+% |   |-- dwi
+% |   |   |-- sub-POM1FM0023671_acq-UkBioBankAdapted_dir-COL_run-1_dwi.bval
+% |   |   |-- sub-POM1FM0023671_acq-UkBioBankAdapted_dir-COL_run-1_dwi.bvec
+% |   |   |-- sub-POM1FM0023671_acq-UkBioBankAdapted_dir-COL_run-1_dwi.json
+% |   |   |-- sub-POM1FM0023671_acq-UkBioBankAdapted_dir-COL_run-1_dwi.nii.gz
+% |   |   |-- sub-POM1FM0023671_acq-UkBioBankAdapted_dir-COL_run-1_sbref.bval
+% |   |   |-- sub-POM1FM0023671_acq-UkBioBankAdapted_dir-COL_run-1_sbref.bvec
+% |   |   |-- sub-POM1FM0023671_acq-UkBioBankAdapted_dir-COL_run-1_sbref.json
+% |   |   |-- sub-POM1FM0023671_acq-UkBioBankAdapted_dir-COL_run-1_sbref.nii.gz
+% |   |   |-- sub-POM1FM0023671_acq-UkBioBankAdapted_dir-COL_run-2_dwi.bval
+% |   |   |-- sub-POM1FM0023671_acq-UkBioBankAdapted_dir-COL_run-2_dwi.bvec
+% |   |   |-- sub-POM1FM0023671_acq-UkBioBankAdapted_dir-COL_run-2_dwi.json
+% |   |   |-- sub-POM1FM0023671_acq-UkBioBankAdapted_dir-COL_run-2_dwi.nii.gz
+% |   |   |-- sub-POM1FM0023671_acq-UkBioBankAdapted_dir-COL_run-2_sbref.bval
+% |   |   |-- sub-POM1FM0023671_acq-UkBioBankAdapted_dir-COL_run-2_sbref.bvec
+% |   |   |-- sub-POM1FM0023671_acq-UkBioBankAdapted_dir-COL_run-2_sbref.json
+% |   |   `-- sub-POM1FM0023671_acq-UkBioBankAdapted_dir-COL_run-2_sbref.nii.gz
+% |   |-- emg
+% |   |   |-- sub-POM1FM0023671_task-rest_channels.tsv
+% |   |   |-- sub-POM1FM0023671_task-rest_emg.eeg
+% |   |   |-- sub-POM1FM0023671_task-rest_emg.json
+% |   |   |-- sub-POM1FM0023671_task-rest_emg.vhdr
+% |   |   |-- sub-POM1FM0023671_task-rest_emg.vmrk
+% |   |   |-- sub-POM1FM0023671_task-rest_events.tsv
+% |   |   |-- sub-POM1FM0023671_task-motor_channels.tsv
+% |   |   |-- sub-POM1FM0023671_task-motor_emg.eeg
+% |   |   |-- sub-POM1FM0023671_task-motor_emg.json
+% |   |   |-- sub-POM1FM0023671_task-motor_emg.vhdr
+% |   |   |-- sub-POM1FM0023671_task-motor_emg.vmrk
+% |   |   `-- sub-POM1FM0023671_task-motor_events.tsv
+% |   |-- extra_data
+% |   |   |-- sub-POM1FM0023671_acq-3D_rec-ND_run-1_FLAIR.json
+% |   |   |-- sub-POM1FM0023671_acq-3D_rec-ND_run-1_FLAIR.nii.gz
+% |   |   |-- sub-POM1FM0023671_acq-MPRAGE_run-1_T1w.json
+% |   |   |-- sub-POM1FM0023671_acq-MPRAGE_run-1_T1w.nii.gz
+% |   |   |-- sub-POM1FM0023671_acq-TSE_run-1_T2w.json
+% |   |   `-- sub-POM1FM0023671_acq-TSE_run-1_T2w.nii.gz
+% |   |-- fmap
+% |   |   |-- sub-POM1FM0023671_acq-UKBioBankAdaptedSBRef_dir-COL_run-1_epi.json
+% |   |   |-- sub-POM1FM0023671_acq-UKBioBankAdaptedSBRef_dir-COL_run-1_epi.nii.gz
+% |   |   |-- sub-POM1FM0023671_acq-UKBioBankAdapted_dir-COL_run-1_epi.json
+% |   |   `-- sub-POM1FM0023671_acq-UKBioBankAdapted_dir-COL_run-1_epi.nii.gz
+% |   |-- func
+% |   |   |-- sub-POM1FM0023671_task-motor_acq-MB6_run-1_bold.json
+% |   |   |-- sub-POM1FM0023671_task-motor_acq-MB6_run-1_bold.nii.gz
+% |   |   |-- sub-POM1FM0023671_task-rest_acq-MB8_run-1_bold.json
+% |   |   |-- sub-POM1FM0023671_task-rest_acq-MB8_run-1_bold.nii.gz
+% |   |   |-- sub-POM1FM0023671_task-rest_acq-MB8_run-1_sbref.json
+% |   |   `-- sub-POM1FM0023671_task-rest_acq-MB8_run-1_sbref.nii.gz
+% |   `-- sub-POM1FM0023671_scans.tsv
+% `-- sub-POM1FM0031237
+%     |-- anat
+%     |   |-- sub-POM1FM0031237_acq-3D_run-1_FLAIR.json
+%     |   |-- sub-POM1FM0031237_acq-3D_run-1_FLAIR.nii.gz
+%     |   |-- sub-POM1FM0031237_acq-GREhighresE01_rec-magnitude_run-1_T2star.json
+%     |   |-- sub-POM1FM0031237_acq-GREhighresE01_rec-magnitude_run-1_T2star.nii.gz
+%     |   |-- sub-POM1FM0031237_acq-GREhighresE01_rec-phase_run-1_T2star.json
+%     |   |-- sub-POM1FM0031237_acq-GREhighresE01_rec-phase_run-1_T2star.nii.gz
+%     |   |-- sub-POM1FM0031237_acq-GREhighresE02_rec-magnitude_run-1_T2star.json
+%     |   |-- sub-POM1FM0031237_acq-GREhighresE02_rec-magnitude_run-1_T2star.nii.gz
+%     |   |-- sub-POM1FM0031237_acq-GREhighresE02_rec-phase_run-1_T2star.json
+%     |   |-- sub-POM1FM0031237_acq-GREhighresE02_rec-phase_run-1_T2star.nii.gz
+%     |   |-- sub-POM1FM0031237_acq-GREhighresE03_rec-magnitude_run-1_T2star.json
+%     |   |-- sub-POM1FM0031237_acq-GREhighresE03_rec-magnitude_run-1_T2star.nii.gz
+%     |   |-- sub-POM1FM0031237_acq-GREhighresE03_rec-phase_run-1_T2star.json
+%     |   |-- sub-POM1FM0031237_acq-GREhighresE03_rec-phase_run-1_T2star.nii.gz
+%     |   |-- sub-POM1FM0031237_acq-GREhighresE04_rec-magnitude_run-1_T2star.json
+%     |   |-- sub-POM1FM0031237_acq-GREhighresE04_rec-magnitude_run-1_T2star.nii.gz
+%     |   |-- sub-POM1FM0031237_acq-GREhighresE04_rec-phase_run-1_T2star.json
+%     |   |-- sub-POM1FM0031237_acq-GREhighresE04_rec-phase_run-1_T2star.nii.gz
+%     |   |-- sub-POM1FM0031237_acq-GREhighresE05_rec-magnitude_run-1_T2star.json
+%     |   |-- sub-POM1FM0031237_acq-GREhighresE05_rec-magnitude_run-1_T2star.nii.gz
+%     |   |-- sub-POM1FM0031237_acq-GREhighresE05_rec-phase_run-1_T2star.json
+%     |   |-- sub-POM1FM0031237_acq-GREhighresE05_rec-phase_run-1_T2star.nii.gz
+%     |   |-- sub-POM1FM0031237_acq-GREhighresE06_rec-magnitude_run-1_T2star.json
+%     |   |-- sub-POM1FM0031237_acq-GREhighresE06_rec-magnitude_run-1_T2star.nii.gz
+%     |   |-- sub-POM1FM0031237_acq-GREhighresE06_rec-phase_run-1_T2star.json
+%     |   |-- sub-POM1FM0031237_acq-GREhighresE06_rec-phase_run-1_T2star.nii.gz
+%     |   |-- sub-POM1FM0031237_acq-GREhighresE07_rec-magnitude_run-1_T2star.json
+%     |   |-- sub-POM1FM0031237_acq-GREhighresE07_rec-magnitude_run-1_T2star.nii.gz
+%     |   |-- sub-POM1FM0031237_acq-GREhighresE07_rec-phase_run-1_T2star.json
+%     |   |-- sub-POM1FM0031237_acq-GREhighresE07_rec-phase_run-1_T2star.nii.gz
+%     |   |-- sub-POM1FM0031237_acq-GREhighresE08_rec-magnitude_run-1_T2star.json
+%     |   |-- sub-POM1FM0031237_acq-GREhighresE08_rec-magnitude_run-1_T2star.nii.gz
+%     |   |-- sub-POM1FM0031237_acq-GREhighresE08_rec-phase_run-1_T2star.json
+%     |   |-- sub-POM1FM0031237_acq-GREhighresE08_rec-phase_run-1_T2star.nii.gz
+%     |   |-- sub-POM1FM0031237_acq-GREhighresE09_rec-magnitude_run-1_T2star.json
+%     |   |-- sub-POM1FM0031237_acq-GREhighresE09_rec-magnitude_run-1_T2star.nii.gz
+%     |   |-- sub-POM1FM0031237_acq-GREhighresE09_rec-phase_run-1_T2star.json
+%     |   |-- sub-POM1FM0031237_acq-GREhighresE09_rec-phase_run-1_T2star.nii.gz
+%     |   |-- sub-POM1FM0031237_acq-MPRAGE_rec-norm_run-1_T1w.json
+%     |   |-- sub-POM1FM0031237_acq-MPRAGE_rec-norm_run-1_T1w.nii.gz
+%     |   |-- sub-POM1FM0031237_acq-TSE_rec-norm_run-1_T2w.json
+%     |   `-- sub-POM1FM0031237_acq-TSE_rec-norm_run-1_T2w.nii.gz
+%     |-- beh
+%     |   |-- sub-POM1FM0031237_task-prac_acq-txt_events.tsv
+%     |   |-- sub-POM1FM0031237_task-rest_acq-smi_events.tsv
+%     |   |-- sub-POM1FM0031237_task-rest_acq-smi_eyetracker.json
+%     |   |-- sub-POM1FM0031237_task-rest_acq-smi_eyetracker.tsv
+%     |   |-- sub-POM1FM0031237_task-motor_acq-log_events.tsv
+%     |   |-- sub-POM1FM0031237_task-motor_acq-txt_events.tsv
+%     |   |-- sub-POM1FM0031237_task-motor_acq-smi_events.tsv
+%     |   |-- sub-POM1FM0031237_task-motor_acq-smi_eyetracker.json
+%     |   `-- sub-POM1FM0031237_task-motor_acq-smi_eyetracker.tsv
+%     |-- dwi
+%     |   |-- sub-POM1FM0031237_acq-UkBioBankAdapted_dir-COL_run-1_dwi.bval
+%     |   |-- sub-POM1FM0031237_acq-UkBioBankAdapted_dir-COL_run-1_dwi.bvec
+%     |   |-- sub-POM1FM0031237_acq-UkBioBankAdapted_dir-COL_run-1_dwi.json
+%     |   |-- sub-POM1FM0031237_acq-UkBioBankAdapted_dir-COL_run-1_dwi.nii.gz
+%     |   |-- sub-POM1FM0031237_acq-UkBioBankAdapted_dir-COL_run-1_sbref.bval
+%     |   |-- sub-POM1FM0031237_acq-UkBioBankAdapted_dir-COL_run-1_sbref.bvec
+%     |   |-- sub-POM1FM0031237_acq-UkBioBankAdapted_dir-COL_run-1_sbref.json
+%     |   `-- sub-POM1FM0031237_acq-UkBioBankAdapted_dir-COL_run-1_sbref.nii.gz
+%     |-- emg
+%     |   |-- sub-POM1FM0031237_task-rest_channels.tsv
+%     |   |-- sub-POM1FM0031237_task-rest_emg.eeg
+%     |   |-- sub-POM1FM0031237_task-rest_emg.json
+%     |   |-- sub-POM1FM0031237_task-rest_emg.vhdr
+%     |   |-- sub-POM1FM0031237_task-rest_emg.vmrk
+%     |   |-- sub-POM1FM0031237_task-rest_events.tsv
+%     |   |-- sub-POM1FM0031237_task-motor_channels.tsv
+%     |   |-- sub-POM1FM0031237_task-motor_emg.eeg
+%     |   |-- sub-POM1FM0031237_task-motor_emg.json
+%     |   |-- sub-POM1FM0031237_task-motor_emg.vhdr
+%     |   |-- sub-POM1FM0031237_task-motor_emg.vmrk
+%     |   `-- sub-POM1FM0031237_task-motor_events.tsv
+%     |-- extra_data
+%     |   |-- sub-POM1FM0031237_acq-3D_rec-ND_run-1_FLAIR.json
+%     |   |-- sub-POM1FM0031237_acq-3D_rec-ND_run-1_FLAIR.nii.gz
+%     |   |-- sub-POM1FM0031237_acq-MPRAGE_run-1_T1w.json
+%     |   |-- sub-POM1FM0031237_acq-MPRAGE_run-1_T1w.nii.gz
+%     |   |-- sub-POM1FM0031237_acq-TSE_run-1_T2w.json
+%     |   `-- sub-POM1FM0031237_acq-TSE_run-1_T2w.nii.gz
+%     |-- fmap
+%     |   |-- sub-POM1FM0031237_acq-UKBioBankAdaptedSBRef_dir-COL_run-1_epi.json
+%     |   |-- sub-POM1FM0031237_acq-UKBioBankAdaptedSBRef_dir-COL_run-1_epi.nii.gz
+%     |   |-- sub-POM1FM0031237_acq-UKBioBankAdapted_dir-COL_run-1_epi.json
+%     |   `-- sub-POM1FM0031237_acq-UKBioBankAdapted_dir-COL_run-1_epi.nii.gz
+%     |-- func
+%     |   |-- sub-POM1FM0031237_task-motor_acq-MB6_run-1_bold.json
+%     |   |-- sub-POM1FM0031237_task-motor_acq-MB6_run-1_bold.nii.gz
+%     |   |-- sub-POM1FM0031237_task-rest_acq-MB8_run-1_bold.json
+%     |   |-- sub-POM1FM0031237_task-rest_acq-MB8_run-1_bold.nii.gz
+%     |   |-- sub-POM1FM0031237_task-rest_acq-MB8_run-1_sbref.json
+%     |   `-- sub-POM1FM0031237_task-rest_acq-MB8_run-1_sbref.nii.gz
+%     `-- sub-POM1FM0031237_scans.tsv
+% 
+% 18 directories, 196 files
 %
 % The anat, dwi, and fmap directories relate to static/structural data. The func, beh and emg directories relate to dynamic data, i.e. data with a time dimension where the participants behavior and physiology are simultaneously recorded, while the subject was executing a task.
 %

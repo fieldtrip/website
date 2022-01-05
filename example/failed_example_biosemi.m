@@ -15,9 +15,9 @@ function functionname
 % load biosemi160 into q (which has sensor locations in polar coordinates
 % add fiducials then save
 
-% cfg=[];
-% cfg.layout='biosemi160.lay';
-% q=ft_prepare_layout(cfg);
+cfg=[];
+cfg.layout='biosemi160.lay';
+q=ft_prepare_layout(cfg);
 
 zeroline = 92/40*50;
 

@@ -1,4 +1,4 @@
-function functionname
+function test_example_ft_realtime_hilbert
 
 % MEM 4gb
 % WALLTIME 00:10:00

@@ -1,4 +1,4 @@
-function functionname
+function failed_example_making_your_own_trialfun_for_conditional_trial_definition
 
 % MEM 4gb
 % WALLTIME 00:10:00

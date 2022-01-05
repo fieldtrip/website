@@ -25,7 +25,7 @@ data.grad  = grad;
 
 % Subsequently you can use **[ft_channelrepair](https://github.com/fieldtrip/fieldtrip/blob/release/ft_channelrepair.m)** for nearest neighbourhood averaging. This replaces the zeros in the broken channel with more appropriate values.
 %
-cfg               = []
+cfg               = [];
 cfg.badchannel    = data.label(badchanindx);
 cfg.neighbourdist = 4;
 data = ft_channelrepair(cfg, data);
