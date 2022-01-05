@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '28559791'
+- idtype: doi
+  value: 10.3389/fnins.2017.00264
+- idtype: pmcid
+  value: PMC5432580
+authors:
+- authtype: Author
+  name: Clausner T
+- authtype: Author
+  name: Dalal SS
+- authtype: Author
+  name: Crespo-García M
+epubdate: 2017 May 16
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '264'
+pmclivedate: 2017/05/30
+printpubdate: ''
+pubdate: 2017 May 16
+sortdate: 2017/05/16 00:00
+source: Front Neurosci
+title: Photogrammetry-Based Head Digitization for Rapid and Accurate Localization
+  of EEG Electrodes and MEG Fiducial Markers Using a Single Digital SLR Camera
+uid: '5432580'
+volume: '11'

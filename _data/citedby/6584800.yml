@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '31263397'
+- idtype: doi
+  value: 10.3389/fnins.2019.00563
+- idtype: pmcid
+  value: PMC6584800
+authors:
+- authtype: Author
+  name: Musaeus CS
+- authtype: Author
+  name: Nielsen MS
+- authtype: Author
+  name: Høgh P
+epubdate: 2019 Jun 11
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '563'
+pmclivedate: 2019/07/01
+printpubdate: ''
+pubdate: 2019 Jun 11
+sortdate: 2019/06/11 00:00
+source: Front Neurosci
+title: Microstates as Disease and Progression Markers in Patients With Mild Cognitive
+  Impairment
+uid: '6584800'
+volume: '13'

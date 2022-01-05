@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '29888819'
+- idtype: doi
+  value: 10.1111/ejn.13992
+- idtype: pmcid
+  value: PMC6289876
+- idtype: MID
+  value: NIHMS974213
+authors:
+- authtype: Author
+  name: Micheli C
+- authtype: Author
+  name: Schepers I
+- authtype: Author
+  name: Ozker M
+- authtype: Author
+  name: Yoshor D
+- authtype: Author
+  name: Beauchamp M
+- authtype: Author
+  name: Rieger J
+epubdate: 2018 Aug 12
+fulljournalname: The European journal of neuroscience
+issue: '5'
+pages: 1364-1376
+pmclivedate: 2021/03/01
+printpubdate: 2020 Mar
+pubdate: 2018 Aug 12
+sortdate: 2018/08/12 00:00
+source: Eur J Neurosci
+title: Electrocorticography reveals continuous auditory and visual speech tracking
+  in temporal and occipital cortex
+uid: '6289876'
+volume: '51'

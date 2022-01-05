@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '34637706'
+- idtype: doi
+  value: 10.1016/j.neuron.2021.09.037
+- idtype: pmcid
+  value: PMC8691951
+authors:
+- authtype: Author
+  name: Schneider M
+- authtype: Author
+  name: Broggini AC
+- authtype: Author
+  name: Dann B
+- authtype: Author
+  name: Tzanou A
+- authtype: Author
+  name: Uran C
+- authtype: Author
+  name: Sheshadri S
+- authtype: Author
+  name: Scherberger H
+- authtype: Author
+  name: Vinck M
+epubdate: ''
+fulljournalname: Neuron
+issue: '24'
+pages: 4050-4067.e12
+pmclivedate: 2022/01/03
+printpubdate: 2021 Dec 15
+pubdate: 2021 Dec 15
+sortdate: 2021/12/15 00:00
+source: Neuron
+title: A mechanism for inter-areal coherence through communication based on connectivity
+  and oscillatory power
+uid: '8691951'
+volume: '109'

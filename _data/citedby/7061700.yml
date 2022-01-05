@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1098/rsif.2019.0831
+- idtype: pmcid
+  value: PMC7061700
+authors:
+- authtype: Author
+  name: Hashemzadeh P
+- authtype: Author
+  name: Fokas AS
+- authtype: Author
+  name: Schönlieb CB
+epubdate: 2020 Feb 12
+fulljournalname: Journal of the Royal Society Interface
+issue: '163'
+pages: '20190831'
+pmclivedate: 2021/02/01
+printpubdate: 2020 Feb
+pubdate: 2020 Feb 12
+sortdate: 2020/02/12 00:00
+source: J R Soc Interface
+title: A hybrid analytical–numerical algorithm for determining the neuronal current
+  via electroencephalography
+uid: '7061700'
+volume: '17'

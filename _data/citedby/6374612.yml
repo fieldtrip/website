@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '30576533'
+- idtype: doi
+  value: 10.1093/scan/nsy116
+- idtype: pmcid
+  value: PMC6374612
+authors:
+- authtype: Author
+  name: van den Berg B
+- authtype: Author
+  name: Geib BR
+- authtype: Author
+  name: San Martín R
+- authtype: Author
+  name: Woldorff MG
+epubdate: 2018 Dec 20
+fulljournalname: Social Cognitive and Affective Neuroscience
+issue: '2'
+pages: 173-187
+pmclivedate: 2019/02/21
+printpubdate: ''
+pubdate: 2018 Dec 20
+sortdate: 2018/12/20 00:00
+source: Soc Cogn Affect Neurosci
+title: A key role for stimulus-specific updating of the sensory cortices in the learning
+  of stimulus–reward associations
+uid: '6374612'
+volume: '14'

@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '25874576'
+- idtype: doi
+  value: 10.1371/journal.pone.0121146
+- idtype: pmcid
+  value: PMC4395362
+authors:
+- authtype: Author
+  name: Brederoo SG
+- authtype: Author
+  name: Bos LS
+- authtype: Author
+  name: Dragoy O
+- authtype: Author
+  name: Bastiaanse R
+- authtype: Author
+  name: Baggio G
+epubdate: 2015 Apr 13
+fulljournalname: PLoS ONE
+issue: '4'
+pages: e0121146
+pmclivedate: 2015/04/21
+printpubdate: ''
+pubdate: 2015 Apr 13
+sortdate: 2015/04/13 00:00
+source: PLoS One
+title: Gamma Oscillations as a Neural Signature of Shifting Times in Narrative Language
+uid: '4395362'
+volume: '10'

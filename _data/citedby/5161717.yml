@@ -1,0 +1,65 @@
+articleids:
+- idtype: pmid
+  value: '27567313'
+- idtype: doi
+  value: 10.1016/j.biopsych.2016.06.008
+- idtype: pmcid
+  value: PMC5161717
+- idtype: MID
+  value: NIHMS812401
+authors:
+- authtype: Author
+  name: Schoch H
+- authtype: Author
+  name: Kreibich AS
+- authtype: Author
+  name: Ferri SL
+- authtype: Author
+  name: White RS
+- authtype: Author
+  name: Bohorquez D
+- authtype: Author
+  name: Banerjee A
+- authtype: Author
+  name: Port RG
+- authtype: Author
+  name: Dow HC
+- authtype: Author
+  name: Cordero L
+- authtype: Author
+  name: Pallathra AA
+- authtype: Author
+  name: Kim H
+- authtype: Author
+  name: Li H
+- authtype: Author
+  name: Bilker WB
+- authtype: Author
+  name: Hirano S
+- authtype: Author
+  name: Schultz RT
+- authtype: Author
+  name: Borgmann-Winter K
+- authtype: Author
+  name: Hahn CG
+- authtype: Author
+  name: Feldmeyer D
+- authtype: Author
+  name: Carlson GC
+- authtype: Author
+  name: Abel T
+- authtype: Author
+  name: Brodkin ES
+epubdate: 2016 Jun 16
+fulljournalname: Biological psychiatry
+issue: '3'
+pages: 193-202
+pmclivedate: 2018/02/01
+printpubdate: 2017 Feb 1
+pubdate: 2016 Jun 16
+sortdate: 2016/06/16 00:00
+source: Biol Psychiatry
+title: SOCIABILITY DEFICITS AND ALTERED AMYGDALA CIRCUITS IN MICE LACKING Pcdh10,
+  AN AUTISM ASSOCIATED GENE
+uid: '5161717'
+volume: '81'

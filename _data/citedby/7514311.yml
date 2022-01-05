@@ -1,0 +1,24 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3390/e21100981
+- idtype: pmcid
+  value: PMC7514311
+authors:
+- authtype: Author
+  name: Kim H
+- authtype: Author
+  name: Lee U
+epubdate: 2019 Oct 8
+fulljournalname: Entropy
+issue: '10'
+pages: '981'
+pmclivedate: 2020/11/09
+printpubdate: ''
+pubdate: 2019 Oct 8
+sortdate: 2019/10/08 00:00
+source: Entropy (Basel)
+title: Criticality as a Determinant of Integrated Information Φ in Human Brain Networks
+uid: '7514311'
+volume: '21'

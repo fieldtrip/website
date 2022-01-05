@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '24936429'
+- idtype: doi
+  value: 10.1016/j.nicl.2014.05.001
+- idtype: pmcid
+  value: PMC4055893
+authors:
+- authtype: Author
+  name: Cruse D
+- authtype: Author
+  name: Beukema S
+- authtype: Author
+  name: Chennu S
+- authtype: Author
+  name: Malins JG
+- authtype: Author
+  name: Owen AM
+- authtype: Author
+  name: McRae K
+epubdate: 2014 May 9
+fulljournalname: 'NeuroImage : Clinical'
+issue: ''
+pages: 788-799
+pmclivedate: 2014/06/16
+printpubdate: ''
+pubdate: 2014 May 9
+sortdate: 2014/05/09 00:00
+source: Neuroimage Clin
+title: 'The reliability of the N400 in single subjects: Implications for patients
+  with disorders of consciousness'
+uid: '4055893'
+volume: '4'

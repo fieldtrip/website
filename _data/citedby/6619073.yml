@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '23575847'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.3928-12.2013
+- idtype: pmcid
+  value: PMC6619073
+authors:
+- authtype: Author
+  name: Verhagen L
+- authtype: Author
+  name: Dijkerman HC
+- authtype: Author
+  name: Medendorp WP
+- authtype: Author
+  name: Toni I
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '15'
+pages: 6492-6503
+pmclivedate: 2019/07/11
+printpubdate: 2013 Apr 10
+pubdate: 2013 Apr 10
+sortdate: 2013/04/10 00:00
+source: J Neurosci
+title: Hierarchical Organization of Parietofrontal Circuits during Goal-Directed Action
+uid: '6619073'
+volume: '33'

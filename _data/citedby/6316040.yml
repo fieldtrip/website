@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '30501073'
+- idtype: doi
+  value: 10.3390/brainsci8120210
+- idtype: pmcid
+  value: PMC6316040
+authors:
+- authtype: Author
+  name: Fotidzis TS
+- authtype: Author
+  name: Moon H
+- authtype: Author
+  name: Steele JR
+- authtype: Author
+  name: Magne CL
+epubdate: 2018 Nov 29
+fulljournalname: Brain Sciences
+issue: '12'
+pages: '210'
+pmclivedate: 2019/01/11
+printpubdate: ''
+pubdate: 2018 Nov 29
+sortdate: 2018/11/29 00:00
+source: Brain Sci
+title: Cross-Modal Priming Effect of Rhythm on Visual Word Recognition and Its Relationships
+  to Music Aptitude and Reading Achievement
+uid: '6316040'
+volume: '8'

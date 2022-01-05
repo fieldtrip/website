@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '23390539'
+- idtype: doi
+  value: 10.1371/journal.pone.0055557
+- idtype: pmcid
+  value: PMC3563643
+authors:
+- authtype: Author
+  name: Müller N
+- authtype: Author
+  name: Lorenz I
+- authtype: Author
+  name: Langguth B
+- authtype: Author
+  name: Weisz N
+epubdate: 2013 Feb 4
+fulljournalname: PLoS ONE
+issue: '2'
+pages: e55557
+pmclivedate: 2013/02/06
+printpubdate: ''
+pubdate: 2013 Feb 4
+sortdate: 2013/02/04 00:00
+source: PLoS One
+title: rTMS Induced Tinnitus Relief Is Related to an Increase in Auditory Cortical
+  Alpha Activity
+uid: '3563643'
+volume: '8'

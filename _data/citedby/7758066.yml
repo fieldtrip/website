@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '33320084'
+- idtype: doi
+  value: 10.7554/eLife.61048
+- idtype: pmcid
+  value: PMC7758066
+authors:
+- authtype: Author
+  name: van Moorselaar D
+- authtype: Author
+  name: Lampers E
+- authtype: Author
+  name: Cordesius E
+- authtype: Author
+  name: Slagter HA
+epubdate: 2020 Dec 15
+fulljournalname: eLife
+issue: ''
+pages: e61048
+pmclivedate: 2020/12/28
+printpubdate: ''
+pubdate: 2020 Dec 15
+sortdate: 2020/12/15 00:00
+source: eLife
+title: Neural mechanisms underlying expectation-dependent inhibition of distracting
+  information
+uid: '7758066'
+volume: '9'

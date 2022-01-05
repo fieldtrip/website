@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '32920161'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2020.117341
+- idtype: pmcid
+  value: PMC7821728
+- idtype: MID
+  value: NIHMS1657555
+authors:
+- authtype: Author
+  name: Magnotti JF
+- authtype: Author
+  name: Wang Z
+- authtype: Author
+  name: Beauchamp MS
+epubdate: 2020 Sep 10
+fulljournalname: NeuroImage
+issue: ''
+pages: '117341'
+pmclivedate: 2021/01/22
+printpubdate: 2020 Dec
+pubdate: 2020 Sep 10
+sortdate: 2020/09/10 00:00
+source: Neuroimage
+title: 'RAVE: Comprehensive open-source software for reproducible analysis and visualization
+  of intracranial EEG data'
+uid: '7821728'
+volume: '223'

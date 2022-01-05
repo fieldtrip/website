@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '30865624'
+- idtype: doi
+  value: 10.1371/journal.pone.0211026
+- idtype: pmcid
+  value: PMC6415856
+authors:
+- authtype: Author
+  name: Heimann K
+- authtype: Author
+  name: Uithol S
+- authtype: Author
+  name: Calbi M
+- authtype: Author
+  name: Umiltà MA
+- authtype: Author
+  name: Guerra M
+- authtype: Author
+  name: Fingerhut J
+- authtype: Author
+  name: Gallese V
+epubdate: 2019 Mar 13
+fulljournalname: PLoS ONE
+issue: '3'
+pages: e0211026
+pmclivedate: 2019/04/02
+printpubdate: ''
+pubdate: 2019 Mar 13
+sortdate: 2019/03/13 00:00
+source: PLoS One
+title: 'Embodying the camera: An EEG study on the effect of camera movements on film
+  spectators´ sensorimotor cortex activation'
+uid: '6415856'
+volume: '14'

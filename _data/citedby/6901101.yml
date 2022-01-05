@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '31775030'
+- idtype: doi
+  value: 10.1016/j.celrep.2019.10.072
+- idtype: pmcid
+  value: PMC6901101
+- idtype: MID
+  value: NIHMS1544762
+authors:
+- authtype: Author
+  name: Alagapan S
+- authtype: Author
+  name: Riddle J
+- authtype: Author
+  name: Huang WA
+- authtype: Author
+  name: Hadar E
+- authtype: Author
+  name: Shin HW
+- authtype: Author
+  name: Fröhlich F
+epubdate: ''
+fulljournalname: Cell reports
+issue: '9'
+pages: 2590-2598.e4
+pmclivedate: 2019/12/09
+printpubdate: 2019 Nov 26
+pubdate: 2019 Nov 26
+sortdate: 2019/11/26 00:00
+source: Cell Rep
+title: Network-Targeted, Multi-site Direct Cortical Stimulation Enhances Working Memory
+  by Modulating Phase Lag of Low-Frequency Oscillations
+uid: '6901101'
+volume: '29'

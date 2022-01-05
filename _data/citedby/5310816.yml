@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '28229115'
+- idtype: doi
+  value: 10.1016/j.dib.2017.02.007
+- idtype: pmcid
+  value: PMC5310816
+authors:
+- authtype: Author
+  name: Wiens S
+- authtype: Author
+  name: Szychowska M
+- authtype: Author
+  name: Eklund R
+- authtype: Author
+  name: Nilsson ME
+epubdate: 2017 Feb 8
+fulljournalname: Data in Brief
+issue: ''
+pages: 159-164
+pmclivedate: 2017/02/22
+printpubdate: ''
+pubdate: 2017 Feb 8
+sortdate: 2017/02/08 00:00
+source: Data Brief
+title: Data on the auditory duration mismatch negativity for different sound pressure
+  levels and visual perceptual loads
+uid: '5310816'
+volume: '11'

@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '32053681'
+- idtype: doi
+  value: 10.1371/journal.pone.0228937
+- idtype: pmcid
+  value: PMC7018047
+authors:
+- authtype: Author
+  name: Orekhova EV
+- authtype: Author
+  name: Prokofyev AO
+- authtype: Author
+  name: Nikolaeva AY
+- authtype: Author
+  name: Schneiderman JF
+- authtype: Author
+  name: Stroganova TA
+epubdate: 2020 Feb 13
+fulljournalname: PLoS ONE
+issue: '2'
+pages: e0228937
+pmclivedate: 2020/02/26
+printpubdate: ''
+pubdate: 2020 Feb 13
+sortdate: 2020/02/13 00:00
+source: PLoS One
+title: Additive effect of contrast and velocity suggests the role of strong excitatory
+  drive in suppression of visual gamma response
+uid: '7018047'
+volume: '15'

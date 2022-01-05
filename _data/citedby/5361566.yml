@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '28382013'
+- idtype: doi
+  value: 10.3389/fpsyg.2017.00421
+- idtype: pmcid
+  value: PMC5361566
+authors:
+- authtype: Author
+  name: Baumgarten TJ
+- authtype: Author
+  name: Schnitzler A
+- authtype: Author
+  name: Lange J
+epubdate: 2017 Mar 22
+fulljournalname: Frontiers in Psychology
+issue: ''
+pages: '421'
+pmclivedate: 2017/04/05
+printpubdate: ''
+pubdate: 2017 Mar 22
+sortdate: 2017/03/22 00:00
+source: Front Psychol
+title: Beyond the Peak – Tactile Temporal Discrimination Does Not Correlate with Individual
+  Peak Frequencies in Somatosensory Cortex
+uid: '5361566'
+volume: '8'

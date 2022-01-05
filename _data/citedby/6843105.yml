@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '31389754'
+- idtype: doi
+  value: 10.1152/jn.00279.2019
+- idtype: pmcid
+  value: PMC6843105
+authors:
+- authtype: Author
+  name: Furman AJ
+- authtype: Author
+  name: Thapa T
+- authtype: Author
+  name: Summers SJ
+- authtype: Author
+  name: Cavaleri R
+- authtype: Author
+  name: Fogarty JS
+- authtype: Author
+  name: Steiner GZ
+- authtype: Author
+  name: Schabrun SM
+- authtype: Author
+  name: Seminowicz DA
+epubdate: 2019 Aug 7
+fulljournalname: Journal of Neurophysiology
+issue: '4'
+pages: 1784-1793
+pmclivedate: 2020/10/01
+printpubdate: 2019 Oct 1
+pubdate: 2019 Aug 7
+sortdate: 2019/08/07 00:00
+source: J Neurophysiol
+title: Cerebral peak alpha frequency reflects average pain severity in a human model
+  of sustained, musculoskeletal pain
+uid: '6843105'
+volume: '122'

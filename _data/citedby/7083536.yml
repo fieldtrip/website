@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '32034067'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1982-19.2020
+- idtype: pmcid
+  value: PMC7083536
+authors:
+- authtype: Author
+  name: Martín-Buro MC
+- authtype: Author
+  name: Wimber M
+- authtype: Author
+  name: Henson RN
+- authtype: Author
+  name: Staresina BP
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '12'
+pages: 2510-2518
+pmclivedate: 2020/03/23
+printpubdate: 2020 Mar 18
+pubdate: 2020 Mar 18
+sortdate: 2020/03/18 00:00
+source: J Neurosci
+title: Alpha Rhythms Reveal When and Where Item and Associative Memories Are Retrieved
+uid: '7083536'
+volume: '40'

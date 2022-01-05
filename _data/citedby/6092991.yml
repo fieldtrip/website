@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '30154834'
+- idtype: doi
+  value: 10.1155/2018/7957408
+- idtype: pmcid
+  value: PMC6092991
+authors:
+- authtype: Author
+  name: Xygonakis I
+- authtype: Author
+  name: Athanasiou A
+- authtype: Author
+  name: Pandria N
+- authtype: Author
+  name: Kugiumtzis D
+- authtype: Author
+  name: Bamidis PD
+epubdate: 2018 Aug 1
+fulljournalname: Computational Intelligence and Neuroscience
+issue: ''
+pages: '7957408'
+pmclivedate: 2018/08/28
+printpubdate: ''
+pubdate: 2018 Aug 1
+sortdate: 2018/08/01 00:00
+source: Comput Intell Neurosci
+title: Decoding Motor Imagery through Common Spatial Pattern Filters at the EEG Source
+  Space
+uid: '6092991'
+volume: '2018'

@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '26416785'
+- idtype: doi
+  value: 10.1093/scan/nsv121
+- idtype: pmcid
+  value: PMC4769624
+authors:
+- authtype: Author
+  name: Kiat J
+- authtype: Author
+  name: Straley E
+- authtype: Author
+  name: Cheadle JE
+epubdate: 2015 Sep 28
+fulljournalname: Social Cognitive and Affective Neuroscience
+issue: '3'
+pages: 377-386
+pmclivedate: 2017/03/01
+printpubdate: 2016 Mar
+pubdate: 2015 Sep 28
+sortdate: 2015/09/28 00:00
+source: Soc Cogn Affect Neurosci
+title: Escalating risk and the moderating effect of resistance to peer influence on
+  the P200 and feedback-related negativity
+uid: '4769624'
+volume: '11'

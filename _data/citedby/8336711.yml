@@ -1,0 +1,24 @@
+articleids:
+- idtype: pmid
+  value: '34193552'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1887-20.2021
+- idtype: pmcid
+  value: PMC8336711
+authors:
+- authtype: Author
+  name: Skerritt-Davis B
+- authtype: Author
+  name: Elhilali M
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '31'
+pages: 6726-6739
+pmclivedate: 2021/08/05
+printpubdate: 2021 Aug 4
+pubdate: 2021 Aug 4
+sortdate: 2021/08/04 00:00
+source: J Neurosci
+title: Neural Encoding of Auditory Statistics
+uid: '8336711'
+volume: '41'

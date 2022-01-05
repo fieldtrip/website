@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '26594626'
+- idtype: doi
+  value: 10.1016/j.nicl.2015.09.013
+- idtype: pmcid
+  value: PMC4596926
+authors:
+- authtype: Author
+  name: Gulberti A
+- authtype: Author
+  name: Moll CK
+- authtype: Author
+  name: Hamel W
+- authtype: Author
+  name: Buhmann C
+- authtype: Author
+  name: Koeppen JA
+- authtype: Author
+  name: Boelmans K
+- authtype: Author
+  name: Zittel S
+- authtype: Author
+  name: Gerloff C
+- authtype: Author
+  name: Westphal M
+- authtype: Author
+  name: Schneider TR
+- authtype: Author
+  name: Engel AK
+epubdate: 2015 Sep 25
+fulljournalname: 'NeuroImage : Clinical'
+issue: ''
+pages: 436-449
+pmclivedate: 2015/11/20
+printpubdate: ''
+pubdate: 2015 Sep 25
+sortdate: 2015/09/25 00:00
+source: Neuroimage Clin
+title: Predictive timing functions of cortical beta oscillations are impaired in Parkinson's
+  disease and influenced by L-DOPA and deep brain stimulation of the subthalamic nucleus
+uid: '4596926'
+volume: '9'

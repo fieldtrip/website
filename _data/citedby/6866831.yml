@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '28643879'
+- idtype: doi
+  value: 10.1002/hbm.23689
+- idtype: pmcid
+  value: PMC6866831
+authors:
+- authtype: Author
+  name: Zhang Q
+- authtype: Author
+  name: Borst JP
+- authtype: Author
+  name: Kass RE
+- authtype: Author
+  name: Anderson JR
+epubdate: 2017 Jun 23
+fulljournalname: Human Brain Mapping
+issue: '9'
+pages: 4287-4301
+pmclivedate: 2020/06/12
+printpubdate: ''
+pubdate: 2017 Jun 23
+sortdate: 2017/06/23 00:00
+source: Hum Brain Mapp
+title: Inter‐subject alignment of MEG datasets in a common representational space
+uid: '6866831'
+volume: '38'

@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '31845589'
+- idtype: doi
+  value: 10.1177/1362361319893196
+- idtype: pmcid
+  value: PMC7297652
+- idtype: MID
+  value: NIHMS1543801
+authors:
+- authtype: Author
+  name: Donkers FC
+- authtype: Author
+  name: Carlson M
+- authtype: Author
+  name: Schipul SE
+- authtype: Author
+  name: Belger A
+- authtype: Author
+  name: Baranek GT
+epubdate: 2019 Dec 17
+fulljournalname: 'Autism : the international journal of research and practice'
+issue: '5'
+pages: 1093-1110
+pmclivedate: 2021/07/01
+printpubdate: 2020 Jul
+pubdate: 2019 Dec 17
+sortdate: 2019/12/17 00:00
+source: Autism
+title: Auditory Event-Related Potentials and Associations with Sensory Patterns in
+  Children with Autism Spectrum Disorder, Developmental Delay, and Typical Development
+uid: '7297652'
+volume: '24'

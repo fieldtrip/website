@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '33804366'
+- idtype: doi
+  value: 10.3390/s21051678
+- idtype: pmcid
+  value: PMC7957771
+authors:
+- authtype: Author
+  name: Keelawat P
+- authtype: Author
+  name: Thammasan N
+- authtype: Author
+  name: Numao M
+- authtype: Author
+  name: Kijsirikul B
+epubdate: 2021 Mar 1
+fulljournalname: Sensors (Basel, Switzerland)
+issue: '5'
+pages: '1678'
+pmclivedate: 2021/03/16
+printpubdate: ''
+pubdate: 2021 Mar 1
+sortdate: 2021/03/01 00:00
+source: Sensors (Basel)
+title: A Comparative Study of Window Size and Channel Arrangement on EEG-Emotion Recognition
+  Using Deep CNN
+uid: '7957771'
+volume: '21'

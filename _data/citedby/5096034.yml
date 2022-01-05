@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '27146646'
+- idtype: doi
+  value: 10.1002/ejp.892
+- idtype: pmcid
+  value: PMC5096034
+authors:
+- authtype: Author
+  name: Ljungquist B
+- authtype: Author
+  name: Jensen T
+- authtype: Author
+  name: Etemadi L
+- authtype: Author
+  name: Thelin J
+- authtype: Author
+  name: Lind G
+- authtype: Author
+  name: Garwicz M
+- authtype: Author
+  name: Petersson P
+- authtype: Author
+  name: Tsanakalis F
+- authtype: Author
+  name: Schouenborg J
+epubdate: 2016 May 5
+fulljournalname: European Journal of Pain (London, England)
+issue: '10'
+pages: 1689-1699
+pmclivedate: 2016/11/09
+printpubdate: 2016 Nov
+pubdate: 2016 May 5
+sortdate: 2016/05/05 00:00
+source: Eur J Pain
+title: Discrepancies between cortical and behavioural long‐term readouts of hyperalgesia
+  in awake freely moving rats
+uid: '5096034'
+volume: '20'

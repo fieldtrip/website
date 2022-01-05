@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '34097718'
+- idtype: doi
+  value: 10.1371/journal.pone.0252717
+- idtype: pmcid
+  value: PMC8183996
+authors:
+- authtype: Author
+  name: Lee SY
+- authtype: Author
+  name: Han JH
+- authtype: Author
+  name: Song HK
+- authtype: Author
+  name: Kim NJ
+- authtype: Author
+  name: Yi N
+- authtype: Author
+  name: Kyong JS
+- authtype: Author
+  name: Choi BY
+epubdate: 2021 Jun 7
+fulljournalname: PLoS ONE
+issue: '6'
+pages: e0252717
+pmclivedate: 2021/06/21
+printpubdate: ''
+pubdate: 2021 Jun 7
+sortdate: 2021/06/07 00:00
+source: PLoS One
+title: 'Central auditory maturation and behavioral outcomes after cochlear implantation
+  in prelingual auditory neuropathy spectrum disorder related to OTOF variants (DFNB9):
+  Lessons from pilot study'
+uid: '8183996'
+volume: '16'

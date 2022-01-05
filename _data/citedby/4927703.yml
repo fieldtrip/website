@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '27286467'
+- idtype: doi
+  value: 10.3791/53466
+- idtype: pmcid
+  value: PMC4927703
+authors:
+- authtype: Author
+  name: Trenado C
+- authtype: Author
+  name: Elben S
+- authtype: Author
+  name: Petri D
+- authtype: Author
+  name: Hirschmann J
+- authtype: Author
+  name: Groiss SJ
+- authtype: Author
+  name: Vesper J
+- authtype: Author
+  name: Schnitzler A
+- authtype: Author
+  name: Wojtecki L
+epubdate: 2016 May 19
+fulljournalname: 'Journal of Visualized Experiments : JoVE'
+issue: '111'
+pages: '53466'
+pmclivedate: 2018/05/19
+printpubdate: ''
+pubdate: 2016 May 19
+sortdate: 2016/05/19 00:00
+source: J Vis Exp
+title: Combined Invasive Subcortical and Non-invasive Surface Neurophysiological Recordings
+  for the Assessment of Cognitive and Emotional Functions in Humans
+uid: '4927703'
+volume: ''

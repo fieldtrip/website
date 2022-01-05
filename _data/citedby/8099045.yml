@@ -1,0 +1,38 @@
+articleids:
+- idtype: pmid
+  value: '33453303'
+- idtype: doi
+  value: 10.1016/j.ijpsycho.2021.01.005
+- idtype: pmcid
+  value: PMC8099045
+- idtype: MID
+  value: NIHMS1664943
+authors:
+- authtype: Author
+  name: Koshiyama D
+- authtype: Author
+  name: Miyakoshi M
+- authtype: Author
+  name: Joshi YB
+- authtype: Author
+  name: Nakanishi M
+- authtype: Author
+  name: Tanaka-Koshiyama K
+- authtype: Author
+  name: Sprock J
+- authtype: Author
+  name: Light GA
+epubdate: 2021 Jan 13
+fulljournalname: 'International journal of psychophysiology : official journal of
+  the International Organization of Psychophysiology'
+issue: ''
+pages: 76-85
+pmclivedate: ''
+printpubdate: 2021 Mar
+pubdate: 2021 Jan 13
+sortdate: 2021/01/13 00:00
+source: Int J Psychophysiol
+title: Sources of the Frontocentral Mismatch Negativity and P3a Responses in Schizophrenia
+  Patients and Healthy Comparison Subjects
+uid: '8099045'
+volume: '161'

@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '32166625'
+- idtype: doi
+  value: 10.3758/s13415-020-00778-5
+- idtype: pmcid
+  value: PMC7105445
+authors:
+- authtype: Author
+  name: Kaminska OK
+- authtype: Author
+  name: Magnuski M
+- authtype: Author
+  name: Olszanowski M
+- authtype: Author
+  name: Gola M
+- authtype: Author
+  name: Brzezicka A
+- authtype: Author
+  name: Winkielman P
+epubdate: 2020 Mar 12
+fulljournalname: Cognitive, Affective & Behavioral Neuroscience
+issue: '2'
+pages: 441-454
+pmclivedate: 2020/04/03
+printpubdate: '2020'
+pubdate: 2020 Mar 12
+sortdate: 2020/03/12 00:00
+source: Cogn Affect Behav Neurosci
+title: 'Ambiguous at the second sight: Mixed facial expressions trigger late electrophysiological
+  responses linked to lower social impressions'
+uid: '7105445'
+volume: '20'

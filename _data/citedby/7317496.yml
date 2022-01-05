@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '31943418'
+- idtype: doi
+  value: 10.1111/ejn.14677
+- idtype: pmcid
+  value: PMC7317496
+authors:
+- authtype: Author
+  name: de Graaf TA
+- authtype: Author
+  name: Thomson A
+- authtype: Author
+  name: Janssens SE
+- authtype: Author
+  name: van Bree S
+- authtype: Author
+  name: ten Oever S
+- authtype: Author
+  name: Sack AT
+epubdate: 2020 Jan 29
+fulljournalname: The European Journal of Neuroscience
+issue: '11'
+pages: 2299-2313
+pmclivedate: 2020/06/30
+printpubdate: 2020 Jun
+pubdate: 2020 Jan 29
+sortdate: 2020/01/29 00:00
+source: Eur J Neurosci
+title: Does alpha phase modulate visual target detection? Three experiments with tACS‐phase‐based
+  stimulus presentation
+uid: '7317496'
+volume: '51'

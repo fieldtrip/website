@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '27460070'
+- idtype: doi
+  value: 10.1186/s12984-016-0179-9
+- idtype: pmcid
+  value: PMC4962511
+authors:
+- authtype: Author
+  name: Wu Y
+- authtype: Author
+  name: Li M
+- authtype: Author
+  name: Wang J
+epubdate: 2016 Jul 26
+fulljournalname: Journal of NeuroEngineering and Rehabilitation
+issue: ''
+pages: '66'
+pmclivedate: 2016/07/28
+printpubdate: ''
+pubdate: 2016 Jul 26
+sortdate: 2016/07/26 00:00
+source: J Neuroeng Rehabil
+title: Toward a hybrid brain-computer interface based on repetitive visual stimuli
+  with missing events
+uid: '4962511'
+volume: '13'

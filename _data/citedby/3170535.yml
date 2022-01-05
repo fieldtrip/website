@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '21840892'
+- idtype: doi
+  value: 10.1093/brain/awr196
+- idtype: pmcid
+  value: PMC3170535
+authors:
+- authtype: Author
+  name: Hughes LE
+- authtype: Author
+  name: Nestor PJ
+- authtype: Author
+  name: Hodges JR
+- authtype: Author
+  name: Rowe JB
+epubdate: 2011 Aug 11
+fulljournalname: Brain
+issue: '9'
+pages: 2513-2522
+pmclivedate: 2011/09/12
+printpubdate: 2011 Sep
+pubdate: 2011 Aug 11
+sortdate: 2011/08/11 00:00
+source: Brain
+title: 'Magnetoencephalography of frontotemporal dementia: spatiotemporally localized
+  changes during semantic decisions'
+uid: '3170535'
+volume: '134'

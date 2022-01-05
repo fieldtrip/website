@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '25964499'
+- idtype: doi
+  value: 10.1093/scan/nsv054
+- idtype: pmcid
+  value: PMC4666104
+authors:
+- authtype: Author
+  name: Cristofori I
+- authtype: Author
+  name: Harquel S
+- authtype: Author
+  name: Isnard J
+- authtype: Author
+  name: Mauguière F
+- authtype: Author
+  name: Sirigu A
+epubdate: 2015 May 11
+fulljournalname: Social Cognitive and Affective Neuroscience
+issue: '12'
+pages: 1668-1676
+pmclivedate: 2016/12/01
+printpubdate: 2015 Dec
+pubdate: 2015 May 11
+sortdate: 2015/05/11 00:00
+source: Soc Cogn Affect Neurosci
+title: Monetary reward suppresses anterior insula activity during social pain
+uid: '4666104'
+volume: '10'

@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '34003291'
+- idtype: doi
+  value: 10.1093/sleep/zsab127
+- idtype: pmcid
+  value: PMC8503833
+authors:
+- authtype: Author
+  name: Dehnavi F
+- authtype: Author
+  name: Koo-Poeggel PC
+- authtype: Author
+  name: Ghorbani M
+- authtype: Author
+  name: Marshall L
+epubdate: 2021 May 18
+fulljournalname: Sleep
+issue: '10'
+pages: zsab127
+pmclivedate: 2021/10/13
+printpubdate: ''
+pubdate: 2021 May 18
+sortdate: 2021/05/18 00:00
+source: Sleep
+title: Spontaneous slow oscillation—slow spindle features predict induced overnight
+  memory retention
+uid: '8503833'
+volume: '44'

@@ -1,0 +1,42 @@
+articleids:
+- idtype: pmid
+  value: '26421727'
+- idtype: doi
+  value: 10.1371/journal.pone.0137202
+- idtype: pmcid
+  value: PMC4589238
+authors:
+- authtype: Author
+  name: Schenberg EE
+- authtype: Author
+  name: Alexandre JF
+- authtype: Author
+  name: Filev R
+- authtype: Author
+  name: Cravo AM
+- authtype: Author
+  name: Sato JR
+- authtype: Author
+  name: Muthukumaraswamy SD
+- authtype: Author
+  name: Yonamine M
+- authtype: Author
+  name: Waguespack M
+- authtype: Author
+  name: Lomnicka I
+- authtype: Author
+  name: Barker SA
+- authtype: Author
+  name: da Silveira DX
+epubdate: 2015 Sep 30
+fulljournalname: PLoS ONE
+issue: '9'
+pages: e0137202
+pmclivedate: 2015/10/02
+printpubdate: ''
+pubdate: 2015 Sep 30
+sortdate: 2015/09/30 00:00
+source: PLoS One
+title: Acute Biphasic Effects of Ayahuasca
+uid: '4589238'
+volume: '10'

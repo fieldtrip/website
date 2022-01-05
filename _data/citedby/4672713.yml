@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '25757652'
+- idtype: doi
+  value: 10.1002/hbm.22778
+- idtype: pmcid
+  value: PMC4672713
+authors:
+- authtype: Author
+  name: Cousijn H
+- authtype: Author
+  name: Tunbridge EM
+- authtype: Author
+  name: Rolinski M
+- authtype: Author
+  name: Wallis G
+- authtype: Author
+  name: Colclough GL
+- authtype: Author
+  name: Woolrich MW
+- authtype: Author
+  name: Nobre AC
+- authtype: Author
+  name: Harrison PJ
+epubdate: 2015 Mar 10
+fulljournalname: Human Brain Mapping
+issue: '6'
+pages: 2387-2395
+pmclivedate: 2015/12/16
+printpubdate: ''
+pubdate: 2015 Mar 10
+sortdate: 2015/03/10 00:00
+source: Hum Brain Mapp
+title: Modulation of hippocampal theta and hippocampal‐prefrontal cortex function
+  by a schizophrenia risk gene
+uid: '4672713'
+volume: '36'

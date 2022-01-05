@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '29095816'
+- idtype: doi
+  value: 10.1371/journal.pbio.2000812
+- idtype: pmcid
+  value: PMC5667736
+authors:
+- authtype: Author
+  name: Teng X
+- authtype: Author
+  name: Tian X
+- authtype: Author
+  name: Rowland J
+- authtype: Author
+  name: Poeppel D
+epubdate: 2017 Nov 2
+fulljournalname: PLoS Biology
+issue: '11'
+pages: e2000812
+pmclivedate: 2017/11/17
+printpubdate: ''
+pubdate: 2017 Nov 2
+sortdate: 2017/11/02 00:00
+source: PLoS Biol
+title: 'Concurrent temporal channels for auditory processing: Oscillatory neural entrainment
+  reveals segregation of function at different scales'
+uid: '5667736'
+volume: '15'

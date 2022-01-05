@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '26377456'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.4892-14.2015
+- idtype: pmcid
+  value: PMC6795203
+authors:
+- authtype: Author
+  name: Brovelli A
+- authtype: Author
+  name: Chicharro D
+- authtype: Author
+  name: Badier JM
+- authtype: Author
+  name: Wang H
+- authtype: Author
+  name: Jirsa V
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '37'
+pages: 12643-12658
+pmclivedate: 2019/10/17
+printpubdate: 2015 Sep 16
+pubdate: 2015 Sep 16
+sortdate: 2015/09/16 00:00
+source: J Neurosci
+title: Characterization of Cortical Networks and Corticocortical Functional Connectivity
+  Mediating Arbitrary Visuomotor Mapping
+uid: '6795203'
+volume: '35'

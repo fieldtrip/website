@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '27355236'
+- idtype: doi
+  value: 10.1371/journal.pbio.1002498
+- idtype: pmcid
+  value: PMC4927181
+authors:
+- authtype: Author
+  name: Keitel A
+- authtype: Author
+  name: Gross J
+epubdate: 2016 Jun 29
+fulljournalname: PLoS Biology
+issue: '6'
+pages: e1002498
+pmclivedate: 2016/07/18
+printpubdate: ''
+pubdate: 2016 Jun 29
+sortdate: 2016/06/29 00:00
+source: PLoS Biol
+title: Individual Human Brain Areas Can Be Identified from Their Characteristic Spectral
+  Activation Fingerprints
+uid: '4927181'
+volume: '14'

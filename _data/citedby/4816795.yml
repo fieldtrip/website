@@ -1,0 +1,57 @@
+articleids:
+- idtype: pmid
+  value: '25899708'
+- idtype: doi
+  value: 10.1093/cercor/bhv076
+- idtype: pmcid
+  value: PMC4816795
+authors:
+- authtype: Author
+  name: Canales-Johnson A
+- authtype: Author
+  name: Silva C
+- authtype: Author
+  name: Huepe D
+- authtype: Author
+  name: Rivera-Rei Á
+- authtype: Author
+  name: Noreika V
+- authtype: Author
+  name: Garcia MD
+- authtype: Author
+  name: Silva W
+- authtype: Author
+  name: Ciraolo C
+- authtype: Author
+  name: Vaucheret E
+- authtype: Author
+  name: Sedeño L
+- authtype: Author
+  name: Couto B
+- authtype: Author
+  name: Kargieman L
+- authtype: Author
+  name: Baglivo F
+- authtype: Author
+  name: Sigman M
+- authtype: Author
+  name: Chennu S
+- authtype: Author
+  name: Ibáñez A
+- authtype: Author
+  name: Rodríguez E
+- authtype: Author
+  name: Bekinschtein TA
+epubdate: 2015 Apr 21
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '11'
+pages: 4490-4503
+pmclivedate: 2016/04/04
+printpubdate: 2015 Nov
+pubdate: 2015 Apr 21
+sortdate: 2015/04/21 00:00
+source: Cereb Cortex
+title: Auditory Feedback Differentially Modulates Behavioral and Neural Markers of
+  Objective and Subjective Performance When Tapping to Your Heartbeat
+uid: '4816795'
+volume: '25'

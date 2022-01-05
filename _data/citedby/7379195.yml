@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '30246255'
+- idtype: doi
+  value: 10.1111/psyp.13280
+- idtype: pmcid
+  value: PMC7379195
+authors:
+- authtype: Author
+  name: Wiens S
+- authtype: Author
+  name: Szychowska M
+- authtype: Author
+  name: Eklund R
+- authtype: Author
+  name: van Berlekom E
+epubdate: 2018 Sep 24
+fulljournalname: Psychophysiology
+issue: '1'
+pages: e13280
+pmclivedate: 2020/07/24
+printpubdate: 2019 Jan
+pubdate: 2018 Sep 24
+sortdate: 2018/09/24 00:00
+source: Psychophysiology
+title: Cascade and no‐repetition rules are comparable controls for the auditory frequency
+  mismatch negativity in oddball tasks
+uid: '7379195'
+volume: '56'

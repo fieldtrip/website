@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '27808418'
+- idtype: doi
+  value: 10.1111/epi.13599
+- idtype: pmcid
+  value: PMC5244669
+authors:
+- authtype: Author
+  name: Premoli I
+- authtype: Author
+  name: Biondi A
+- authtype: Author
+  name: Carlesso S
+- authtype: Author
+  name: Rivolta D
+- authtype: Author
+  name: Richardson MP
+epubdate: 2016 Nov 3
+fulljournalname: Epilepsia
+issue: '1'
+pages: 42-50
+pmclivedate: 2017/01/25
+printpubdate: 2017 Jan
+pubdate: 2016 Nov 3
+sortdate: 2016/11/03 00:00
+source: Epilepsia
+title: Lamotrigine and levetiracetam exert a similar modulation of TMS‐evoked EEG
+  potentials
+uid: '5244669'
+volume: '58'

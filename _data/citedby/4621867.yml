@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '26578937'
+- idtype: doi
+  value: 10.3389/fnhum.2015.00593
+- idtype: pmcid
+  value: PMC4621867
+authors:
+- authtype: Author
+  name: Bruijn SM
+- authtype: Author
+  name: Van Dieën JH
+- authtype: Author
+  name: Daffertshofer A
+epubdate: 2015 Oct 27
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '593'
+pmclivedate: 2015/11/17
+printpubdate: ''
+pubdate: 2015 Oct 27
+sortdate: 2015/10/27 00:00
+source: Front Hum Neurosci
+title: Beta activity in the premotor cortex is increased during stabilized as compared
+  to normal walking
+uid: '4621867'
+volume: '9'

@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '32939354'
+- idtype: doi
+  value: 10.1080/23273798.2018.1506589
+- idtype: pmcid
+  value: PMC7446042
+authors:
+- authtype: Author
+  name: Park H
+- authtype: Author
+  name: Thut G
+- authtype: Author
+  name: Gross J
+epubdate: 2018 Sep 26
+fulljournalname: Language, Cognition and Neuroscience
+issue: '6'
+pages: 739-751
+pmclivedate: 2020/09/14
+printpubdate: ''
+pubdate: 2018 Sep 26
+sortdate: 2018/09/26 00:00
+source: Lang Cogn Neurosci
+title: Predictive entrainment of natural speech through two fronto-motor top-down
+  channels
+uid: '7446042'
+volume: '35'

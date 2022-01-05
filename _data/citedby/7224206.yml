@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '32409738'
+- idtype: doi
+  value: 10.1038/s41598-020-64758-y
+- idtype: pmcid
+  value: PMC7224206
+authors:
+- authtype: Author
+  name: Foldal MD
+- authtype: Author
+  name: Blenkmann AO
+- authtype: Author
+  name: Llorens A
+- authtype: Author
+  name: Knight RT
+- authtype: Author
+  name: Solbakk AK
+- authtype: Author
+  name: Endestad T
+epubdate: 2020 May 14
+fulljournalname: Scientific Reports
+issue: ''
+pages: '7975'
+pmclivedate: 2020/05/20
+printpubdate: ''
+pubdate: 2020 May 14
+sortdate: 2020/05/14 00:00
+source: Sci Rep
+title: The brain tracks auditory rhythm predictability independent of selective attention
+uid: '7224206'
+volume: '10'

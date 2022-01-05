@@ -1,0 +1,24 @@
+articleids:
+- idtype: pmid
+  value: '31019487'
+- idtype: doi
+  value: 10.3389/fneur.2019.00325
+- idtype: pmcid
+  value: PMC6458265
+authors:
+- authtype: Author
+  name: Michel CM
+- authtype: Author
+  name: Brunet D
+epubdate: 2019 Apr 4
+fulljournalname: Frontiers in Neurology
+issue: ''
+pages: '325'
+pmclivedate: 2019/04/24
+printpubdate: ''
+pubdate: 2019 Apr 4
+sortdate: 2019/04/04 00:00
+source: Front Neurol
+title: 'EEG Source Imaging: A Practical Review of the Analysis Steps'
+uid: '6458265'
+volume: '10'

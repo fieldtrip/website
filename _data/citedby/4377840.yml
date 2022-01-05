@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '25844308'
+- idtype: doi
+  value: 10.1016/j.nicl.2014.11.002
+- idtype: pmcid
+  value: PMC4377840
+authors:
+- authtype: Author
+  name: Riwkes S
+- authtype: Author
+  name: Goldstein A
+- authtype: Author
+  name: Gilboa-Schechtman E
+epubdate: 2014 Nov 8
+fulljournalname: 'NeuroImage : Clinical'
+issue: ''
+pages: 678-687
+pmclivedate: 2015/04/03
+printpubdate: ''
+pubdate: 2014 Nov 8
+sortdate: 2014/11/08 00:00
+source: Neuroimage Clin
+title: The temporal unfolding of face processing in social anxiety disorder — a MEG
+  study
+uid: '4377840'
+volume: '7'

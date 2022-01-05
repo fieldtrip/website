@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '30765744'
+- idtype: doi
+  value: 10.1038/s41598-018-37985-7
+- idtype: pmcid
+  value: PMC6375974
+authors:
+- authtype: Author
+  name: Lüttjohann A
+- authtype: Author
+  name: Pape HC
+epubdate: 2019 Feb 14
+fulljournalname: Scientific Reports
+issue: ''
+pages: '2100'
+pmclivedate: 2019/02/19
+printpubdate: ''
+pubdate: 2019 Feb 14
+sortdate: 2019/02/14 00:00
+source: Sci Rep
+title: Regional specificity of cortico-thalamic coupling strength and directionality
+  during waxing and waning of spike and wave discharges
+uid: '6375974'
+volume: '9'

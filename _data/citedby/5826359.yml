@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '29515363'
+- idtype: doi
+  value: 10.3389/fnins.2018.00093
+- idtype: pmcid
+  value: PMC5826359
+authors:
+- authtype: Author
+  name: Shu X
+- authtype: Author
+  name: Chen S
+- authtype: Author
+  name: Yao L
+- authtype: Author
+  name: Sheng X
+- authtype: Author
+  name: Zhang D
+- authtype: Author
+  name: Jiang N
+- authtype: Author
+  name: Jia J
+- authtype: Author
+  name: Zhu X
+epubdate: 2018 Feb 21
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '93'
+pmclivedate: 2018/03/07
+printpubdate: ''
+pubdate: 2018 Feb 21
+sortdate: 2018/02/21 00:00
+source: Front Neurosci
+title: 'Fast Recognition of BCI-Inefficient Users Using Physiological Features from
+  EEG Signals: A Screening Study of Stroke Patients'
+uid: '5826359'
+volume: '12'

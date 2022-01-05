@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '32072933'
+- idtype: doi
+  value: 10.1016/j.dcn.2020.100760
+- idtype: pmcid
+  value: PMC7013163
+authors:
+- authtype: Author
+  name: Zaadnoordijk L
+- authtype: Author
+  name: Meyer M
+- authtype: Author
+  name: Zaharieva M
+- authtype: Author
+  name: Kemalasari F
+- authtype: Author
+  name: van Pelt S
+- authtype: Author
+  name: Hunnius S
+epubdate: 2020 Jan 21
+fulljournalname: Developmental Cognitive Neuroscience
+issue: ''
+pages: '100760'
+pmclivedate: 2020/02/18
+printpubdate: ''
+pubdate: 2020 Jan 21
+sortdate: 2020/01/21 00:00
+source: Dev Cogn Neurosci
+title: 'From movement to action: An EEG study into the emerging sense of agency in
+  early infancy'
+uid: '7013163'
+volume: '42'

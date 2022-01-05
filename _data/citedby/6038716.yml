@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '30018529'
+- idtype: doi
+  value: 10.3389/fnins.2018.00368
+- idtype: pmcid
+  value: PMC6038716
+authors:
+- authtype: Author
+  name: Fahrenfort JJ
+- authtype: Author
+  name: van Driel J
+- authtype: Author
+  name: van Gaal S
+- authtype: Author
+  name: Olivers CN
+epubdate: 2018 Jul 3
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '368'
+pmclivedate: 2018/07/17
+printpubdate: ''
+pubdate: 2018 Jul 3
+sortdate: 2018/07/03 00:00
+source: Front Neurosci
+title: From ERPs to MVPA Using the Amsterdam Decoding and Modeling Toolbox (ADAM)
+uid: '6038716'
+volume: '12'

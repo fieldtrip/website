@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '31110515'
+- idtype: doi
+  value: 10.1155/2019/7084618
+- idtype: pmcid
+  value: PMC6487113
+authors:
+- authtype: Author
+  name: Carino-Escobar RI
+- authtype: Author
+  name: Carrillo-Mora P
+- authtype: Author
+  name: Valdés-Cristerna R
+- authtype: Author
+  name: Rodriguez-Barragan MA
+- authtype: Author
+  name: Hernandez-Arenas C
+- authtype: Author
+  name: Quinzaños-Fresnedo J
+- authtype: Author
+  name: Galicia-Alvarado MA
+- authtype: Author
+  name: Cantillo-Negrete J
+epubdate: 2019 Apr 14
+fulljournalname: Neural Plasticity
+issue: ''
+pages: '7084618'
+pmclivedate: 2019/05/20
+printpubdate: ''
+pubdate: 2019 Apr 14
+sortdate: 2019/04/14 00:00
+source: Neural Plast
+title: Longitudinal Analysis of Stroke Patients' Brain Rhythms during an Intervention
+  with a Brain-Computer Interface
+uid: '6487113'
+volume: '2019'

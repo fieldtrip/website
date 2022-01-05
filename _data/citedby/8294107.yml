@@ -1,0 +1,45 @@
+articleids:
+- idtype: pmid
+  value: '34305315'
+- idtype: doi
+  value: 10.1016/j.jneuroling.2021.101019
+- idtype: pmcid
+  value: PMC8294107
+- idtype: MID
+  value: NIHMS1721616
+authors:
+- authtype: Author
+  name: Chrabaszcz A
+- authtype: Author
+  name: Wang D
+- authtype: Author
+  name: Lipski WJ
+- authtype: Author
+  name: Bush A
+- authtype: Author
+  name: Crammond DJ
+- authtype: Author
+  name: Shaiman S
+- authtype: Author
+  name: Dickey MW
+- authtype: Author
+  name: Holt LL
+- authtype: Author
+  name: Turner RS
+- authtype: Author
+  name: Fiez JA
+- authtype: Author
+  name: Richardson RM
+epubdate: 2021 Jun 28
+fulljournalname: Journal of neurolinguistics
+issue: ''
+pages: '101019'
+pmclivedate: ''
+printpubdate: 2021 Nov
+pubdate: 2021 Jun 28
+sortdate: 2021/06/28 00:00
+source: J Neurolinguistics
+title: Simultaneously recorded subthalamic and cortical LFPs reveal different lexicality
+  effects during reading aloud
+uid: '8294107'
+volume: '60'

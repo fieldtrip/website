@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '24123535'
+- idtype: doi
+  value: 10.1002/hbm.22388
+- idtype: pmcid
+  value: PMC6868941
+authors:
+- authtype: Author
+  name: Senkowski D
+- authtype: Author
+  name: Pomper U
+- authtype: Author
+  name: Fitzner I
+- authtype: Author
+  name: Engel AK
+- authtype: Author
+  name: Kral A
+epubdate: 2013 Oct 7
+fulljournalname: Human Brain Mapping
+issue: '7'
+pages: 3107-3121
+pmclivedate: 2020/06/12
+printpubdate: ''
+pubdate: 2013 Oct 7
+sortdate: 2013/10/07 00:00
+source: Hum Brain Mapp
+title: Beta‐band activity in auditory pathways reflects speech localization and recognition
+  in bilateral cochlear implant users
+uid: '6868941'
+volume: '35'

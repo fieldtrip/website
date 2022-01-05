@@ -1,0 +1,24 @@
+articleids:
+- idtype: pmid
+  value: '34858154'
+- idtype: doi
+  value: 10.3389/fnhum.2021.749017
+- idtype: pmcid
+  value: PMC8631362
+authors:
+- authtype: Author
+  name: Song S
+- authtype: Author
+  name: Nordin AD
+epubdate: 2021 Nov 10
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '749017'
+pmclivedate: 2021/12/01
+printpubdate: ''
+pubdate: 2021 Nov 10
+sortdate: 2021/11/10 00:00
+source: Front Hum Neurosci
+title: Mobile Electroencephalography for Studying Neural Control of Human Locomotion
+uid: '8631362'
+volume: '15'

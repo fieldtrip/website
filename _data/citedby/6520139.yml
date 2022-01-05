@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '30946057'
+- idtype: doi
+  value: 10.1097/ALN.0000000000002677
+- idtype: pmcid
+  value: PMC6520139
+- idtype: MID
+  value: NIHMS1521065
+authors:
+- authtype: Author
+  name: Vlisides PE
+- authtype: Author
+  name: Li D
+- authtype: Author
+  name: Zierau M
+- authtype: Author
+  name: Lapointe AP
+- authtype: Author
+  name: Ip KI
+- authtype: Author
+  name: McKinney AM
+- authtype: Author
+  name: Mashour GA
+epubdate: ''
+fulljournalname: Anesthesiology
+issue: '6'
+pages: 885-897
+pmclivedate: 2020/06/01
+printpubdate: 2019 Jun
+pubdate: 2019 Jun
+sortdate: 2019/06/01 00:00
+source: Anesthesiology
+title: Dynamic Cortical Connectivity during General Anesthesia in Surgical Patients
+uid: '6520139'
+volume: '130'

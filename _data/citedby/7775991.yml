@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '33617132'
+- idtype: doi
+  value: 10.1002/hbm.25236
+- idtype: pmcid
+  value: PMC7775991
+authors:
+- authtype: Author
+  name: Kaiser M
+- authtype: Author
+  name: Senkowski D
+- authtype: Author
+  name: Keil J
+epubdate: 2020 Oct 14
+fulljournalname: Human Brain Mapping
+issue: '2'
+pages: 452-466
+pmclivedate: 2021/01/07
+printpubdate: ''
+pubdate: 2020 Oct 14
+sortdate: 2020/10/14 00:00
+source: Hum Brain Mapp
+title: Mediofrontal theta‐band oscillations reflect top‐down influence in the ventriloquist
+  illusion
+uid: '7775991'
+volume: '42'

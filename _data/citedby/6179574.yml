@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '30310862'
+- idtype: doi
+  value: 10.1523/ENEURO.0401-17.2018
+- idtype: pmcid
+  value: PMC6179574
+authors:
+- authtype: Author
+  name: Mostert P
+- authtype: Author
+  name: Albers AM
+- authtype: Author
+  name: Brinkman L
+- authtype: Author
+  name: Todorova L
+- authtype: Author
+  name: Kok P
+- authtype: Author
+  name: de Lange FP
+epubdate: 2018 Oct 10
+fulljournalname: eNeuro
+issue: '4'
+pages: ENEURO.0401-17.2018
+pmclivedate: 2018/10/11
+printpubdate: ''
+pubdate: 2018 Oct 10
+sortdate: 2018/10/10 00:00
+source: eNeuro
+title: Eye Movement-Related Confounds in Neural Decoding of Visual Working Memory
+  Representations
+uid: '6179574'
+volume: '5'

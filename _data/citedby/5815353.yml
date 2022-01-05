@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '29311143'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1779-17.2017
+- idtype: pmcid
+  value: PMC5815353
+authors:
+- authtype: Author
+  name: Maniscalco B
+- authtype: Author
+  name: Lee JL
+- authtype: Author
+  name: Abry P
+- authtype: Author
+  name: Lin A
+- authtype: Author
+  name: Holroyd T
+- authtype: Author
+  name: He BJ
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '6'
+pages: 1541-1557
+pmclivedate: 2018/08/07
+printpubdate: 2018 Feb 7
+pubdate: 2018 Feb 7
+sortdate: 2018/02/07 00:00
+source: J Neurosci
+title: Neural Integration of Stimulus History Underlies Prediction for Naturalistically
+  Evolving Sequences
+uid: '5815353'
+volume: '38'

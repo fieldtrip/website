@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '26763781'
+- idtype: doi
+  value: 10.1152/jn.01059.2015
+- idtype: pmcid
+  value: PMC4808123
+authors:
+- authtype: Author
+  name: Uppal N
+- authtype: Author
+  name: Foxe JJ
+- authtype: Author
+  name: Butler JS
+- authtype: Author
+  name: Acluche F
+- authtype: Author
+  name: Molholm S
+epubdate: 2016 Jan 13
+fulljournalname: Journal of Neurophysiology
+issue: '3'
+pages: 1605-1619
+pmclivedate: 2017/03/01
+printpubdate: 2016 Mar 1
+pubdate: 2016 Jan 13
+sortdate: 2016/01/13 00:00
+source: J Neurophysiol
+title: 'The neural dynamics of somatosensory processing and adaptation across childhood:
+  a high-density electrical mapping study'
+uid: '4808123'
+volume: '115'

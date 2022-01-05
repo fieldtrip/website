@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '31557168'
+- idtype: doi
+  value: 10.1371/journal.pone.0222420
+- idtype: pmcid
+  value: PMC6762064
+authors:
+- authtype: Author
+  name: Tavano A
+- authtype: Author
+  name: Schröger E
+- authtype: Author
+  name: Kotz SA
+epubdate: 2019 Sep 26
+fulljournalname: PLoS ONE
+issue: '9'
+pages: e0222420
+pmclivedate: 2019/10/13
+printpubdate: ''
+pubdate: 2019 Sep 26
+sortdate: 2019/09/26 00:00
+source: PLoS One
+title: Beta power encodes contextual estimates of temporal event probability in the
+  human brain
+uid: '6762064'
+volume: '14'

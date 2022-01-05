@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '25540223'
+- idtype: doi
+  value: 10.1152/jn.00616.2014
+- idtype: pmcid
+  value: PMC4359987
+authors:
+- authtype: Author
+  name: Stenner MP
+- authtype: Author
+  name: Bauer M
+- authtype: Author
+  name: Heinze HJ
+- authtype: Author
+  name: Haggard P
+- authtype: Author
+  name: Dolan RJ
+epubdate: 2014 Dec 24
+fulljournalname: Journal of Neurophysiology
+issue: '6'
+pages: 1752-1762
+pmclivedate: 2015/03/18
+printpubdate: 2015 Mar 15
+pubdate: 2014 Dec 24
+sortdate: 2014/12/24 00:00
+source: J Neurophysiol
+title: Parallel processing streams for motor output and sensory prediction during
+  action preparation
+uid: '4359987'
+volume: '113'

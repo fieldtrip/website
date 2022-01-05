@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '25340347'
+- idtype: doi
+  value: 10.1371/journal.pone.0111473
+- idtype: pmcid
+  value: PMC4207813
+authors:
+- authtype: Author
+  name: Marstaller L
+- authtype: Author
+  name: Burianová H
+- authtype: Author
+  name: Sowman PF
+epubdate: 2014 Oct 23
+fulljournalname: PLoS ONE
+issue: '10'
+pages: e111473
+pmclivedate: 2014/10/27
+printpubdate: ''
+pubdate: 2014 Oct 23
+sortdate: 2014/10/23 00:00
+source: PLoS One
+title: High Gamma Oscillations in Medial Temporal Lobe during Overt Production of
+  Speech and Gestures
+uid: '4207813'
+volume: '9'

@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '30739843'
+- idtype: doi
+  value: 10.1016/j.nicl.2019.101701
+- idtype: pmcid
+  value: PMC6370851
+authors:
+- authtype: Author
+  name: Perogamvros L
+- authtype: Author
+  name: Park HD
+- authtype: Author
+  name: Bayer L
+- authtype: Author
+  name: Perrault AA
+- authtype: Author
+  name: Blanke O
+- authtype: Author
+  name: Schwartz S
+epubdate: 2019 Jan 29
+fulljournalname: 'NeuroImage : Clinical'
+issue: ''
+pages: '101701'
+pmclivedate: 2019/02/21
+printpubdate: ''
+pubdate: 2019 Jan 29
+sortdate: 2019/01/29 00:00
+source: Neuroimage Clin
+title: Increased heartbeat-evoked potential during REM sleep in nightmare disorder
+uid: '6370851'
+volume: '22'

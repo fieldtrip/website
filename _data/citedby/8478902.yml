@@ -1,0 +1,47 @@
+articleids:
+- idtype: pmid
+  value: '34488012'
+- idtype: doi
+  value: 10.1016/j.clinph.2021.04.023
+- idtype: pmcid
+  value: PMC8478902
+- idtype: MID
+  value: NIHMS1734353
+authors:
+- authtype: Author
+  name: Hallett M
+- authtype: Author
+  name: DelRosso LM
+- authtype: Author
+  name: Elble R
+- authtype: Author
+  name: Ferri R
+- authtype: Author
+  name: Horak FB
+- authtype: Author
+  name: Lehericy S
+- authtype: Author
+  name: Mancini M
+- authtype: Author
+  name: Matsuhashi M
+- authtype: Author
+  name: Matsumoto R
+- authtype: Author
+  name: Muthuraman M
+- authtype: Author
+  name: Raethjen J
+- authtype: Author
+  name: Shibasaki H
+epubdate: 2021 Aug 19
+fulljournalname: 'Clinical neurophysiology : official journal of the International
+  Federation of Clinical Neurophysiology'
+issue: '10'
+pages: 2608-2638
+pmclivedate: 2021/10/01
+printpubdate: 2021 Oct
+pubdate: 2021 Aug 19
+sortdate: 2021/08/19 00:00
+source: Clin Neurophysiol
+title: Evaluation of movement and brain activity
+uid: '8478902'
+volume: '132'

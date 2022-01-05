@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '23981719'
+- idtype: doi
+  value: 10.1113/jphysiol.2013.258228
+- idtype: pmcid
+  value: PMC3936368
+authors:
+- authtype: Author
+  name: Waldert S
+- authtype: Author
+  name: Lemon RN
+- authtype: Author
+  name: Kraskov A
+epubdate: 2013 Aug 27
+fulljournalname: The Journal of Physiology
+issue: Pt 21
+pages: 5291-5303
+pmclivedate: 2014/07/16
+printpubdate: 2013 Nov 1
+pubdate: 2013 Aug 27
+sortdate: 2013/08/27 00:00
+source: J Physiol
+title: Influence of spiking activity on cortical local field potentials
+uid: '3936368'
+volume: '591'

@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '31121480'
+- idtype: doi
+  value: 10.1016/j.dcn.2019.100658
+- idtype: pmcid
+  value: PMC6969352
+authors:
+- authtype: Author
+  name: Levy J
+- authtype: Author
+  name: Yirmiya K
+- authtype: Author
+  name: Goldstein A
+- authtype: Author
+  name: Feldman R
+epubdate: 2019 May 14
+fulljournalname: Developmental Cognitive Neuroscience
+issue: ''
+pages: '100658'
+pmclivedate: 2020/01/21
+printpubdate: ''
+pubdate: 2019 May 14
+sortdate: 2019/05/14 00:00
+source: Dev Cogn Neurosci
+title: 'Chronic trauma impairs the neural basis of empathy in mothers: Relations to
+  parenting and children’s empathic abilities'
+uid: '6969352'
+volume: '38'

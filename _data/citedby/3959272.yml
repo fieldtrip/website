@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '24530007'
+- idtype: doi
+  value: 10.1016/j.alcohol.2013.12.004
+- idtype: pmcid
+  value: PMC3959272
+- idtype: MID
+  value: NIHMS557929
+authors:
+- authtype: Author
+  name: Rosen BQ
+- authtype: Author
+  name: O’Hara R
+- authtype: Author
+  name: Kovacevic S
+- authtype: Author
+  name: Schulman A
+- authtype: Author
+  name: Padovan N
+- authtype: Author
+  name: Marinkovic K
+epubdate: 2014 Jan 18
+fulljournalname: Alcohol (Fayetteville, N.Y.)
+issue: '2'
+pages: 89-97
+pmclivedate: 2015/03/01
+printpubdate: 2014 Mar
+pubdate: 2014 Jan 18
+sortdate: 2014/01/18 00:00
+source: Alcohol
+title: 'Oscillatory spatial profile of alcohol’s effects on the resting state: Anatomically-constrained
+  MEG'
+uid: '3959272'
+volume: '48'

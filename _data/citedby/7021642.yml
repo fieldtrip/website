@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '32062566'
+- idtype: doi
+  value: 10.1016/j.nicl.2020.102206
+- idtype: pmcid
+  value: PMC7021642
+authors:
+- authtype: Author
+  name: Alyagon U
+- authtype: Author
+  name: Shahar H
+- authtype: Author
+  name: Hadar A
+- authtype: Author
+  name: Barnea-Ygael N
+- authtype: Author
+  name: Lazarovits A
+- authtype: Author
+  name: Shalev H
+- authtype: Author
+  name: Zangen A
+epubdate: 2020 Feb 6
+fulljournalname: 'NeuroImage : Clinical'
+issue: ''
+pages: '102206'
+pmclivedate: 2020/02/20
+printpubdate: ''
+pubdate: 2020 Feb 6
+sortdate: 2020/02/06 00:00
+source: Neuroimage Clin
+title: Alleviation of ADHD symptoms by non-invasive right prefrontal stimulation is
+  correlated with EEG activity
+uid: '7021642'
+volume: '26'

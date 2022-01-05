@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '30030396'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0307-18.2018
+- idtype: pmcid
+  value: PMC6705972
+authors:
+- authtype: Author
+  name: Meindertsma T
+- authtype: Author
+  name: Kloosterman NA
+- authtype: Author
+  name: Engel AK
+- authtype: Author
+  name: Wagenmakers EJ
+- authtype: Author
+  name: Donner TH
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '35'
+pages: 7600-7610
+pmclivedate: 2019/08/23
+printpubdate: 2018 Aug 29
+pubdate: 2018 Aug 29
+sortdate: 2018/08/29 00:00
+source: J Neurosci
+title: Surprise About Sensory Event Timing Drives Cortical Transients in the Beta
+  Frequency Band
+uid: '6705972'
+volume: '38'

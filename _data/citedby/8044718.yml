@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '33583764'
+- idtype: doi
+  value: 10.1016/j.nicl.2021.102569
+- idtype: pmcid
+  value: PMC8044718
+authors:
+- authtype: Author
+  name: McClelland VM
+- authtype: Author
+  name: Fischer P
+- authtype: Author
+  name: Foddai E
+- authtype: Author
+  name: Dall'Orso S
+- authtype: Author
+  name: Burdet E
+- authtype: Author
+  name: Brown P
+- authtype: Author
+  name: Lin JP
+epubdate: 2021 Jan 19
+fulljournalname: 'NeuroImage : Clinical'
+issue: ''
+pages: '102569'
+pmclivedate: 2021/04/16
+printpubdate: ''
+pubdate: 2021 Jan 19
+sortdate: 2021/01/19 00:00
+source: Neuroimage Clin
+title: EEG measures of sensorimotor processing and their development are abnormal
+  in children with isolated dystonia and dystonic cerebral palsy
+uid: '8044718'
+volume: '30'

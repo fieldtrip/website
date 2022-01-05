@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '33986653'
+- idtype: doi
+  value: 10.3389/fnagi.2021.550180
+- idtype: pmcid
+  value: PMC8111015
+authors:
+- authtype: Author
+  name: Nijmeijer SE
+- authtype: Author
+  name: van Tol MJ
+- authtype: Author
+  name: Aleman A
+- authtype: Author
+  name: Keijzer M
+epubdate: 2021 Apr 27
+fulljournalname: Frontiers in Aging Neuroscience
+issue: ''
+pages: '550180'
+pmclivedate: 2021/05/12
+printpubdate: ''
+pubdate: 2021 Apr 27
+sortdate: 2021/04/27 00:00
+source: Front Aging Neurosci
+title: Foreign Language Learning as Cognitive Training to Prevent Old Age Disorders?
+  Protocol of a Randomized Controlled Trial of Language Training vs. Musical Training
+  and Social Interaction in Elderly With Subjective Cognitive Decline
+uid: '8111015'
+volume: '13'

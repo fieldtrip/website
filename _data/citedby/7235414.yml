@@ -1,0 +1,38 @@
+articleids:
+- idtype: pmid
+  value: '32477056'
+- idtype: doi
+  value: 10.3389/fnins.2020.00449
+- idtype: pmcid
+  value: PMC7235414
+authors:
+- authtype: Author
+  name: Eichenlaub JB
+- authtype: Author
+  name: Biswal S
+- authtype: Author
+  name: Peled N
+- authtype: Author
+  name: Rivilis N
+- authtype: Author
+  name: Golby AJ
+- authtype: Author
+  name: Lee JW
+- authtype: Author
+  name: Westover MB
+- authtype: Author
+  name: Halgren E
+- authtype: Author
+  name: Cash SS
+epubdate: 2020 May 12
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '449'
+pmclivedate: 2020/05/29
+printpubdate: ''
+pubdate: 2020 May 12
+sortdate: 2020/05/12 00:00
+source: Front Neurosci
+title: Reactivation of Motor-Related Gamma Activity in Human NREM Sleep
+uid: '7235414'
+volume: '14'

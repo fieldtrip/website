@@ -1,0 +1,44 @@
+articleids:
+- idtype: pmid
+  value: '26539089'
+- idtype: doi
+  value: 10.3389/fnbeh.2015.00269
+- idtype: pmcid
+  value: PMC4611064
+authors:
+- authtype: Author
+  name: Ray AM
+- authtype: Author
+  name: Sitaram R
+- authtype: Author
+  name: Rana M
+- authtype: Author
+  name: Pasqualotto E
+- authtype: Author
+  name: Buyukturkoglu K
+- authtype: Author
+  name: Guan C
+- authtype: Author
+  name: Ang KK
+- authtype: Author
+  name: Tejos C
+- authtype: Author
+  name: Zamorano F
+- authtype: Author
+  name: Aboitiz F
+- authtype: Author
+  name: Birbaumer N
+- authtype: Author
+  name: Ruiz S
+epubdate: 2015 Oct 20
+fulljournalname: Frontiers in Behavioral Neuroscience
+issue: ''
+pages: '269'
+pmclivedate: 2015/11/04
+printpubdate: ''
+pubdate: 2015 Oct 20
+sortdate: 2015/10/20 00:00
+source: Front Behav Neurosci
+title: A subject-independent pattern-based Brain-Computer Interface
+uid: '4611064'
+volume: '9'

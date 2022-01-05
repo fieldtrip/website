@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '29379042'
+- idtype: doi
+  value: 10.1038/s41598-018-19810-3
+- idtype: pmcid
+  value: PMC5788915
+authors:
+- authtype: Author
+  name: Levy J
+- authtype: Author
+  name: Goldstein A
+- authtype: Author
+  name: Pratt M
+- authtype: Author
+  name: Feldman R
+epubdate: 2018 Jan 29
+fulljournalname: Scientific Reports
+issue: ''
+pages: '1810'
+pmclivedate: 2018/02/08
+printpubdate: ''
+pubdate: 2018 Jan 29
+sortdate: 2018/01/29 00:00
+source: Sci Rep
+title: Maturation of Pain Empathy from Child to Adult Shifts from Single to Multiple
+  Neural Rhythms to Support Interoceptive Representations
+uid: '5788915'
+volume: '8'

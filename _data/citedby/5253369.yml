@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '28167896'
+- idtype: doi
+  value: 10.3389/fnins.2016.00619
+- idtype: pmcid
+  value: PMC5253369
+authors:
+- authtype: Author
+  name: Kia SM
+- authtype: Author
+  name: Vega Pons S
+- authtype: Author
+  name: Weisz N
+- authtype: Author
+  name: Passerini A
+epubdate: 2017 Jan 23
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '619'
+pmclivedate: 2017/02/06
+printpubdate: ''
+pubdate: 2017 Jan 23
+sortdate: 2017/01/23 00:00
+source: Front Neurosci
+title: 'Interpretability of Multivariate Brain Maps in Linear Brain Decoding: Definition,
+  and Heuristic Quantification in Multivariate Analysis of MEG Time-Locked Effects'
+uid: '5253369'
+volume: '10'

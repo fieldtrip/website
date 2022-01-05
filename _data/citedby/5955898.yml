@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '29769646'
+- idtype: doi
+  value: 10.1038/s41598-018-26067-3
+- idtype: pmcid
+  value: PMC5955898
+authors:
+- authtype: Author
+  name: Ilg L
+- authtype: Author
+  name: Klados M
+- authtype: Author
+  name: Alexander N
+- authtype: Author
+  name: Kirschbaum C
+- authtype: Author
+  name: Li SC
+epubdate: 2018 May 16
+fulljournalname: Scientific Reports
+issue: ''
+pages: '7715'
+pmclivedate: 2018/05/21
+printpubdate: ''
+pubdate: 2018 May 16
+sortdate: 2018/05/16 00:00
+source: Sci Rep
+title: Long-term impacts of prenatal synthetic glucocorticoids exposure on functional
+  brain correlates of cognitive monitoring in adolescence
+uid: '5955898'
+volume: '8'

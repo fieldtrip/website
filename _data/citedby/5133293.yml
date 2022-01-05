@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '27628205'
+- idtype: doi
+  value: 10.1152/jn.00460.2016
+- idtype: pmcid
+  value: PMC5133293
+authors:
+- authtype: Author
+  name: de Vries IE
+- authtype: Author
+  name: Daffertshofer A
+- authtype: Author
+  name: Stegeman DF
+- authtype: Author
+  name: Boonstra TW
+epubdate: 2016 Sep 14
+fulljournalname: Journal of Neurophysiology
+issue: '6'
+pages: 2576-2585
+pmclivedate: 2017/12/01
+printpubdate: 2016 Dec 1
+pubdate: 2016 Sep 14
+sortdate: 2016/09/14 00:00
+source: J Neurophysiol
+title: Functional connectivity in the neuromuscular system underlying bimanual coordination
+uid: '5133293'
+volume: '116'

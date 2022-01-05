@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '32973429'
+- idtype: doi
+  value: 10.3389/fnins.2020.00828
+- idtype: pmcid
+  value: PMC7468433
+authors:
+- authtype: Author
+  name: Arendsen LJ
+- authtype: Author
+  name: Henshaw J
+- authtype: Author
+  name: Brown CA
+- authtype: Author
+  name: Sivan M
+- authtype: Author
+  name: Taylor JR
+- authtype: Author
+  name: Trujillo-Barreto NJ
+- authtype: Author
+  name: Casson AJ
+- authtype: Author
+  name: Jones AK
+epubdate: 2020 Aug 20
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '828'
+pmclivedate: 2020/09/23
+printpubdate: ''
+pubdate: 2020 Aug 20
+sortdate: 2020/08/20 00:00
+source: Front Neurosci
+title: 'Entraining Alpha Activity Using Visual Stimulation in Patients With Chronic
+  Musculoskeletal Pain: A Feasibility Study'
+uid: '7468433'
+volume: '14'

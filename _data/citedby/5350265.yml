@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '28077669'
+- idtype: doi
+  value: 10.1152/jn.00856.2016
+- idtype: pmcid
+  value: PMC5350265
+authors:
+- authtype: Author
+  name: Wildegger T
+- authtype: Author
+  name: van Ede F
+- authtype: Author
+  name: Woolrich M
+- authtype: Author
+  name: Gillebert CR
+- authtype: Author
+  name: Nobre AC
+epubdate: 2017 Jan 11
+fulljournalname: Journal of Neurophysiology
+issue: '3'
+pages: 1385-1394
+pmclivedate: 2018/03/01
+printpubdate: 2017 Mar 1
+pubdate: 2017 Jan 11
+sortdate: 2017/01/11 00:00
+source: J Neurophysiol
+title: Preparatory α-band oscillations reflect spatial gating independently of predictions
+  regarding target identity
+uid: '5350265'
+volume: '117'

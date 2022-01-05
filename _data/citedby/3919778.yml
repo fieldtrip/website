@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '24520387'
+- idtype: doi
+  value: 10.1371/journal.pone.0088428
+- idtype: pmcid
+  value: PMC3919778
+authors:
+- authtype: Author
+  name: van Asseldonk EH
+- authtype: Author
+  name: Campfens SF
+- authtype: Author
+  name: Verwer SJ
+- authtype: Author
+  name: van Putten MJ
+- authtype: Author
+  name: Stegeman DF
+epubdate: 2014 Feb 10
+fulljournalname: PLoS ONE
+issue: '2'
+pages: e88428
+pmclivedate: 2014/02/11
+printpubdate: ''
+pubdate: 2014 Feb 10
+sortdate: 2014/02/10 00:00
+source: PLoS One
+title: Reliability and Agreement of Intramuscular Coherence in Tibialis Anterior Muscle
+uid: '3919778'
+volume: '9'

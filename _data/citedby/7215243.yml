@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '32388346'
+- idtype: doi
+  value: 10.1016/j.nicl.2020.102261
+- idtype: pmcid
+  value: PMC7215243
+authors:
+- authtype: Author
+  name: Binder M
+- authtype: Author
+  name: Górska U
+- authtype: Author
+  name: Pipinis E
+- authtype: Author
+  name: Voicikas A
+- authtype: Author
+  name: Griskova-Bulanova I
+epubdate: 2020 Apr 22
+fulljournalname: 'NeuroImage : Clinical'
+issue: ''
+pages: '102261'
+pmclivedate: 2020/05/15
+printpubdate: ''
+pubdate: 2020 Apr 22
+sortdate: 2020/04/22 00:00
+source: Neuroimage Clin
+title: 'Auditory steady-state response to chirp-modulated tones: A pilot study in
+  patients with disorders of consciousness'
+uid: '7215243'
+volume: '27'

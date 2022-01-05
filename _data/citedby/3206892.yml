@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '22073259'
+- idtype: doi
+  value: 10.1371/journal.pone.0027088
+- idtype: pmcid
+  value: PMC3206892
+authors:
+- authtype: Author
+  name: Schecklmann M
+- authtype: Author
+  name: Volberg G
+- authtype: Author
+  name: Frank G
+- authtype: Author
+  name: Hadersdorfer J
+- authtype: Author
+  name: Steffens T
+- authtype: Author
+  name: Weisz N
+- authtype: Author
+  name: Landgrebe M
+- authtype: Author
+  name: Hajak G
+- authtype: Author
+  name: Greenlee M
+- authtype: Author
+  name: Classen J
+- authtype: Author
+  name: Langguth B
+epubdate: 2011 Nov 2
+fulljournalname: PLoS ONE
+issue: '11'
+pages: e27088
+pmclivedate: 2011/11/09
+printpubdate: ''
+pubdate: 2011 Nov 2
+sortdate: 2011/11/02 00:00
+source: PLoS One
+title: 'Paired Associative Stimulation of the Auditory System: A Proof-Of-Principle
+  Study'
+uid: '3206892'
+volume: '6'

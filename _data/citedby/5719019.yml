@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '29213107'
+- idtype: doi
+  value: 10.1038/s41598-017-17339-5
+- idtype: pmcid
+  value: PMC5719019
+authors:
+- authtype: Author
+  name: Kinreich S
+- authtype: Author
+  name: Djalovski A
+- authtype: Author
+  name: Kraus L
+- authtype: Author
+  name: Louzoun Y
+- authtype: Author
+  name: Feldman R
+epubdate: 2017 Dec 6
+fulljournalname: Scientific Reports
+issue: ''
+pages: '17060'
+pmclivedate: 2017/12/08
+printpubdate: ''
+pubdate: 2017 Dec 6
+sortdate: 2017/12/06 00:00
+source: Sci Rep
+title: Brain-to-Brain Synchrony during Naturalistic Social Interactions
+uid: '5719019'
+volume: '7'

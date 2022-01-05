@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '27065797'
+- idtype: doi
+  value: 10.3389/fnins.2016.00143
+- idtype: pmcid
+  value: PMC4815534
+authors:
+- authtype: Author
+  name: Adebimpe A
+- authtype: Author
+  name: Aarabi A
+- authtype: Author
+  name: Bourel-Ponchel E
+- authtype: Author
+  name: Mahmoudzadeh M
+- authtype: Author
+  name: Wallois F
+epubdate: 2016 Mar 31
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '143'
+pmclivedate: 2016/04/08
+printpubdate: ''
+pubdate: 2016 Mar 31
+sortdate: 2016/03/31 00:00
+source: Front Neurosci
+title: EEG Resting State Functional Connectivity Analysis in Children with Benign
+  Epilepsy with Centrotemporal Spikes
+uid: '4815534'
+volume: '10'

@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '30233345'
+- idtype: doi
+  value: 10.3389/fnhum.2018.00354
+- idtype: pmcid
+  value: PMC6131611
+authors:
+- authtype: Author
+  name: Bermúdez-Margaretto B
+- authtype: Author
+  name: Beltrán D
+- authtype: Author
+  name: Cuetos F
+- authtype: Author
+  name: Domínguez A
+epubdate: 2018 Sep 4
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '354'
+pmclivedate: 2018/09/19
+printpubdate: ''
+pubdate: 2018 Sep 4
+sortdate: 2018/09/04 00:00
+source: Front Hum Neurosci
+title: 'Brain Signatures of New (Pseudo-) Words: Visual Repetition in Associative
+  and Non-associative Contexts'
+uid: '6131611'
+volume: '12'

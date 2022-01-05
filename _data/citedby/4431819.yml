@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '25973607'
+- idtype: doi
+  value: 10.1371/journal.pone.0126299
+- idtype: pmcid
+  value: PMC4431819
+authors:
+- authtype: Author
+  name: Dimitrova DV
+- authtype: Author
+  name: Stowe LA
+- authtype: Author
+  name: Hoeks JC
+epubdate: 2015 May 14
+fulljournalname: PLoS ONE
+issue: '5'
+pages: e0126299
+pmclivedate: 2015/05/27
+printpubdate: ''
+pubdate: 2015 May 14
+sortdate: 2015/05/14 00:00
+source: PLoS One
+title: 'When Correction Turns Positive: Processing Corrective Prosody in Dutch'
+uid: '4431819'
+volume: '10'

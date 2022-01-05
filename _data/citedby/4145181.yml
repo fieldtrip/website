@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '25164679'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0509-14.2014
+- idtype: pmcid
+  value: PMC4145181
+authors:
+- authtype: Author
+  name: Schmiedt JT
+- authtype: Author
+  name: Maier A
+- authtype: Author
+  name: Fries P
+- authtype: Author
+  name: Saunders RC
+- authtype: Author
+  name: Leopold DA
+- authtype: Author
+  name: Schmid MC
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '35'
+pages: 11857-11864
+pmclivedate: 2014/09/09
+printpubdate: 2014 Aug 27
+pubdate: 2014 Aug 27
+sortdate: 2014/08/27 00:00
+source: J Neurosci
+title: Beta Oscillation Dynamics in Extrastriate Cortex after Removal of Primary Visual
+  Cortex
+uid: '4145181'
+volume: '34'

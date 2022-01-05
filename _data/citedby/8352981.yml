@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '34373486'
+- idtype: doi
+  value: 10.1038/s41598-021-95295-x
+- idtype: pmcid
+  value: PMC8352981
+authors:
+- authtype: Author
+  name: Saurels BW
+- authtype: Author
+  name: Hohaia W
+- authtype: Author
+  name: Yarrow K
+- authtype: Author
+  name: Johnston A
+- authtype: Author
+  name: Arnold DH
+epubdate: 2021 Aug 9
+fulljournalname: Scientific Reports
+issue: ''
+pages: '16127'
+pmclivedate: 2021/08/11
+printpubdate: ''
+pubdate: 2021 Aug 9
+sortdate: 2021/08/09 00:00
+source: Sci Rep
+title: Visual predictions, neural oscillations and naïve physics
+uid: '8352981'
+volume: '11'

@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '31354804'
+- idtype: doi
+  value: 10.1155/2019/9680697
+- idtype: pmcid
+  value: PMC6636533
+authors:
+- authtype: Author
+  name: Choi KM
+- authtype: Author
+  name: Park S
+- authtype: Author
+  name: Im CH
+epubdate: 2019 Jul 1
+fulljournalname: Computational Intelligence and Neuroscience
+issue: ''
+pages: '9680697'
+pmclivedate: 2019/07/28
+printpubdate: ''
+pubdate: 2019 Jul 1
+sortdate: 2019/07/01 00:00
+source: Comput Intell Neurosci
+title: Comparison of Visual Stimuli for Steady-State Visual Evoked Potential-Based
+  Brain-Computer Interfaces in Virtual Reality Environment in terms of Classification
+  Accuracy and Visual Comfort
+uid: '6636533'
+volume: '2019'

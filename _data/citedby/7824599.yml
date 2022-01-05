@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '33375449'
+- idtype: doi
+  value: 10.3390/brainsci11010022
+- idtype: pmcid
+  value: PMC7824599
+authors:
+- authtype: Author
+  name: Griskova-Bulanova I
+- authtype: Author
+  name: Voicikas A
+- authtype: Author
+  name: Dapsys K
+- authtype: Author
+  name: Melynyte S
+- authtype: Author
+  name: Andruskevicius S
+- authtype: Author
+  name: Pipinis E
+epubdate: 2020 Dec 27
+fulljournalname: Brain Sciences
+issue: '1'
+pages: '22'
+pmclivedate: 2021/01/24
+printpubdate: ''
+pubdate: 2020 Dec 27
+sortdate: 2020/12/27 00:00
+source: Brain Sci
+title: Envelope Following Response to 440 Hz Carrier Chirp-Modulated Tones Show Clinically
+  Relevant Changes in Schizophrenia
+uid: '7824599'
+volume: '11'

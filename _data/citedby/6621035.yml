@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '22399760'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.5592-11.2012
+- idtype: pmcid
+  value: PMC6621035
+authors:
+- authtype: Author
+  name: van Pelt S
+- authtype: Author
+  name: Boomsma DI
+- authtype: Author
+  name: Fries P
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '10'
+pages: 3388-3392
+pmclivedate: 2019/07/16
+printpubdate: 2012 Mar 7
+pubdate: 2012 Mar 7
+sortdate: 2012/03/07 00:00
+source: J Neurosci
+title: Magnetoencephalography in Twins Reveals a Strong Genetic Determination of the
+  Peak Frequency of Visually Induced Gamma-Band Synchronization
+uid: '6621035'
+volume: '32'

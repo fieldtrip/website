@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '30723232'
+- idtype: doi
+  value: 10.1038/s41598-018-38273-0
+- idtype: pmcid
+  value: PMC6363806
+authors:
+- authtype: Author
+  name: Burkhard A
+- authtype: Author
+  name: Elmer S
+- authtype: Author
+  name: Jäncke L
+epubdate: 2019 Feb 5
+fulljournalname: Scientific Reports
+issue: ''
+pages: '1419'
+pmclivedate: 2019/02/07
+printpubdate: ''
+pubdate: 2019 Feb 5
+sortdate: 2019/02/05 00:00
+source: Sci Rep
+title: Early tone categorization in absolute pitch musicians is subserved by the right-sided
+  perisylvian brain
+uid: '6363806'
+volume: '9'

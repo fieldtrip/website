@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '30617208'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.2547-18.2018
+- idtype: pmcid
+  value: PMC6391569
+authors:
+- authtype: Author
+  name: van Driel J
+- authtype: Author
+  name: Ort E
+- authtype: Author
+  name: Fahrenfort JJ
+- authtype: Author
+  name: Olivers CN
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '9'
+pages: 1733-1743
+pmclivedate: 2019/08/27
+printpubdate: 2019 Feb 27
+pubdate: 2019 Feb 27
+sortdate: 2019/02/27 00:00
+source: J Neurosci
+title: Beta and Theta Oscillations Differentially Support Free Versus Forced Control
+  over Multiple-Target Search
+uid: '6391569'
+volume: '39'

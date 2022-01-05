@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '24428900'
+- idtype: doi
+  value: 10.1186/1743-0003-11-7
+- idtype: pmcid
+  value: PMC3898245
+authors:
+- authtype: Author
+  name: Kaufmann T
+- authtype: Author
+  name: Herweg A
+- authtype: Author
+  name: Kübler A
+epubdate: 2014 Jan 16
+fulljournalname: Journal of NeuroEngineering and Rehabilitation
+issue: ''
+pages: '7'
+pmclivedate: 2014/01/23
+printpubdate: ''
+pubdate: 2014 Jan 16
+sortdate: 2014/01/16 00:00
+source: J Neuroeng Rehabil
+title: Toward brain-computer interface based wheelchair control utilizing tactually-evoked
+  event-related potentials
+uid: '3898245'
+volume: '11'

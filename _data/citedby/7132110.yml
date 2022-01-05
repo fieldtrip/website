@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '32184331'
+- idtype: doi
+  value: 10.1073/pnas.1912584117
+- idtype: pmcid
+  value: PMC7132110
+authors:
+- authtype: Author
+  name: Sanchez G
+- authtype: Author
+  name: Hartmann T
+- authtype: Author
+  name: Fuscà M
+- authtype: Author
+  name: Demarchi G
+- authtype: Author
+  name: Weisz N
+epubdate: 2020 Mar 17
+fulljournalname: Proceedings of the National Academy of Sciences of the United States
+  of America
+issue: '13'
+pages: 7437-7446
+pmclivedate: 2020/04/09
+printpubdate: 2020 Mar 31
+pubdate: 2020 Mar 17
+sortdate: 2020/03/17 00:00
+source: Proc Natl Acad Sci U S A
+title: Decoding across sensory modalities reveals common supramodal signatures of
+  conscious perception
+uid: '7132110'
+volume: '117'

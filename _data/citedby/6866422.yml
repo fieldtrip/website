@@ -1,0 +1,49 @@
+articleids:
+- idtype: pmid
+  value: '29617056'
+- idtype: doi
+  value: 10.1002/hbm.24072
+- idtype: pmcid
+  value: PMC6866422
+authors:
+- authtype: Author
+  name: Brodski‐Guerniero A
+- authtype: Author
+  name: Naumer MJ
+- authtype: Author
+  name: Moliadze V
+- authtype: Author
+  name: Chan J
+- authtype: Author
+  name: Althen H
+- authtype: Author
+  name: Ferreira‐Santos F
+- authtype: Author
+  name: Lizier JT
+- authtype: Author
+  name: Schlitt S
+- authtype: Author
+  name: Kitzerow J
+- authtype: Author
+  name: Schütz M
+- authtype: Author
+  name: Langer A
+- authtype: Author
+  name: Kaiser J
+- authtype: Author
+  name: Freitag CM
+- authtype: Author
+  name: Wibral M
+epubdate: 2018 Apr 4
+fulljournalname: Human Brain Mapping
+issue: '8'
+pages: 3227-3240
+pmclivedate: 2020/06/12
+printpubdate: ''
+pubdate: 2018 Apr 4
+sortdate: 2018/04/04 00:00
+source: Hum Brain Mapp
+title: Predictable information in neural signals during resting state is reduced in
+  autism spectrum disorder
+uid: '6866422'
+volume: '39'

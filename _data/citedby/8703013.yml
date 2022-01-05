@@ -1,0 +1,40 @@
+articleids:
+- idtype: pmid
+  value: '34955775'
+- idtype: doi
+  value: 10.3389/fnbeh.2021.712278
+- idtype: pmcid
+  value: PMC8703013
+authors:
+- authtype: Author
+  name: Wang J
+- authtype: Author
+  name: Zheng L
+- authtype: Author
+  name: Wang Z
+- authtype: Author
+  name: Wu X
+- authtype: Author
+  name: Ma N
+- authtype: Author
+  name: Zhang T
+- authtype: Author
+  name: Chen K
+- authtype: Author
+  name: Biswal BB
+- authtype: Author
+  name: Yang Q
+- authtype: Author
+  name: Ma H
+epubdate: 2021 Dec 10
+fulljournalname: Frontiers in Behavioral Neuroscience
+issue: ''
+pages: '712278'
+pmclivedate: 2021/12/25
+printpubdate: ''
+pubdate: 2021 Dec 10
+sortdate: 2021/12/10 00:00
+source: Front Behav Neurosci
+title: Alteration of Behavioral Inhibitory Control in High-Altitude Immigrants
+uid: '8703013'
+volume: '15'

@@ -1,0 +1,24 @@
+articleids:
+- idtype: pmid
+  value: '31935522'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2020.116538
+- idtype: pmcid
+  value: PMC7068703
+authors:
+- authtype: Author
+  name: Siems M
+- authtype: Author
+  name: Siegel M
+epubdate: ''
+fulljournalname: Neuroimage
+issue: ''
+pages: '116538'
+pmclivedate: 2020/04/01
+printpubdate: 2020 Apr 1
+pubdate: 2020 Apr 1
+sortdate: 2020/04/01 00:00
+source: Neuroimage
+title: Dissociated neuronal phase- and amplitude-coupling patterns in the human brain
+uid: '7068703'
+volume: '209'

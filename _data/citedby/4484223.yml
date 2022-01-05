@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '26175681'
+- idtype: doi
+  value: 10.3389/fnhum.2015.00381
+- idtype: pmcid
+  value: PMC4484223
+authors:
+- authtype: Author
+  name: Kwon G
+- authtype: Author
+  name: Lim S
+- authtype: Author
+  name: Kim MY
+- authtype: Author
+  name: Kwon H
+- authtype: Author
+  name: Lee YH
+- authtype: Author
+  name: Kim K
+- authtype: Author
+  name: Lee EJ
+- authtype: Author
+  name: Suh M
+epubdate: 2015 Jun 29
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '381'
+pmclivedate: 2015/07/14
+printpubdate: ''
+pubdate: 2015 Jun 29
+sortdate: 2015/06/29 00:00
+source: Front Hum Neurosci
+title: Individual differences in oscillatory brain activity in response to varying
+  attentional demands during a word recall and oculomotor dual task
+uid: '4484223'
+volume: '9'

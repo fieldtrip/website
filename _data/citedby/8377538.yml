@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '34416703'
+- idtype: doi
+  value: 10.1016/j.dcn.2021.101003
+- idtype: pmcid
+  value: PMC8377538
+authors:
+- authtype: Author
+  name: Safar K
+- authtype: Author
+  name: Vandewouw MM
+- authtype: Author
+  name: Taylor MJ
+epubdate: 2021 Aug 9
+fulljournalname: Developmental Cognitive Neuroscience
+issue: ''
+pages: '101003'
+pmclivedate: 2021/08/26
+printpubdate: ''
+pubdate: 2021 Aug 9
+sortdate: 2021/08/09 00:00
+source: Dev Cogn Neurosci
+title: Atypical development of emotional face processing networks in autism spectrum
+  disorder from childhood through to adulthood
+uid: '8377538'
+volume: '51'

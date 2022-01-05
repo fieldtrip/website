@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '24285905'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1797-13.2013
+- idtype: pmcid
+  value: PMC6618708
+authors:
+- authtype: Author
+  name: Cashdollar N
+- authtype: Author
+  name: Lavie N
+- authtype: Author
+  name: Düzel E
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '48'
+pages: 19012-19022
+pmclivedate: 2019/07/11
+printpubdate: 2013 Nov 27
+pubdate: 2013 Nov 27
+sortdate: 2013/11/27 00:00
+source: J Neurosci
+title: Alleviating Memory Impairment through Distraction
+uid: '6618708'
+volume: '33'

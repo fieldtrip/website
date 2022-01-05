@@ -1,0 +1,50 @@
+articleids:
+- idtype: pmid
+  value: '29917016'
+- idtype: doi
+  value: 10.1038/sdata.2018.110
+- idtype: pmcid
+  value: PMC6007085
+authors:
+- authtype: Author
+  name: Niso G
+- authtype: Author
+  name: Gorgolewski KJ
+- authtype: Author
+  name: Bock E
+- authtype: Author
+  name: Brooks TL
+- authtype: Author
+  name: Flandin G
+- authtype: Author
+  name: Gramfort A
+- authtype: Author
+  name: Henson RN
+- authtype: Author
+  name: Jas M
+- authtype: Author
+  name: Litvak V
+- authtype: Author
+  name: T. Moreau J
+- authtype: Author
+  name: Oostenveld R
+- authtype: Author
+  name: Schoffelen JM
+- authtype: Author
+  name: Tadel F
+- authtype: Author
+  name: Wexler J
+- authtype: Author
+  name: Baillet S
+epubdate: 2018 Jun 19
+fulljournalname: Scientific Data
+issue: ''
+pages: '180110'
+pmclivedate: 2018/06/27
+printpubdate: ''
+pubdate: 2018 Jun 19
+sortdate: 2018/06/19 00:00
+source: Sci Data
+title: MEG-BIDS, the brain imaging data structure extended to magnetoencephalography
+uid: '6007085'
+volume: '5'

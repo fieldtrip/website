@@ -1,0 +1,42 @@
+articleids:
+- idtype: pmid
+  value: '33068110'
+- idtype: doi
+  value: 10.1093/scan/nsaa142
+- idtype: pmcid
+  value: PMC7745151
+authors:
+- authtype: Author
+  name: Dikker S
+- authtype: Author
+  name: Haegens S
+- authtype: Author
+  name: Bevilacqua D
+- authtype: Author
+  name: Davidesco I
+- authtype: Author
+  name: Wan L
+- authtype: Author
+  name: Kaggen L
+- authtype: Author
+  name: McClintock J
+- authtype: Author
+  name: Chaloner K
+- authtype: Author
+  name: Ding M
+- authtype: Author
+  name: West T
+- authtype: Author
+  name: Poeppel D
+epubdate: 2020 Oct 17
+fulljournalname: Social Cognitive and Affective Neuroscience
+issue: '11'
+pages: 1193-1202
+pmclivedate: 2020/12/22
+printpubdate: ''
+pubdate: 2020 Oct 17
+sortdate: 2020/10/17 00:00
+source: Soc Cogn Affect Neurosci
+title: 'Morning brain: real-world neural evidence that high school class times matter'
+uid: '7745151'
+volume: '15'

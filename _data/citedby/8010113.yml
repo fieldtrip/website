@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '33785813'
+- idtype: doi
+  value: 10.1038/s42003-021-01768-0
+- idtype: pmcid
+  value: PMC8010113
+authors:
+- authtype: Author
+  name: Chamanzar A
+- authtype: Author
+  name: Behrmann M
+- authtype: Author
+  name: Grover P
+epubdate: 2021 Mar 30
+fulljournalname: Communications Biology
+issue: ''
+pages: '429'
+pmclivedate: 2021/04/16
+printpubdate: ''
+pubdate: 2021 Mar 30
+sortdate: 2021/03/30 00:00
+source: Commun Biol
+title: Neural silences can be localized rapidly using noninvasive scalp EEG
+uid: '8010113'
+volume: '4'

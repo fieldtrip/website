@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '30355634'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1470-18.2018
+- idtype: pmcid
+  value: PMC6596251
+authors:
+- authtype: Author
+  name: Stefanou MI
+- authtype: Author
+  name: Desideri D
+- authtype: Author
+  name: Belardinelli P
+- authtype: Author
+  name: Zrenner C
+- authtype: Author
+  name: Ziemann U
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '49'
+pages: 10525-10534
+pmclivedate: 2019/06/27
+printpubdate: 2018 Dec 5
+pubdate: 2018 Dec 5
+sortdate: 2018/12/05 00:00
+source: J Neurosci
+title: Phase Synchronicity of μ-Rhythm Determines Efficacy of Interhemispheric Communication
+  Between Human Motor Cortices
+uid: '6596251'
+volume: '38'

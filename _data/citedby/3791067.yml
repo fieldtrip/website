@@ -1,0 +1,38 @@
+articleids:
+- idtype: pmid
+  value: '22689218'
+- idtype: doi
+  value: 10.1093/scan/nss068
+- idtype: pmcid
+  value: PMC3791067
+authors:
+- authtype: Author
+  name: Carretié L
+- authtype: Author
+  name: Kessel D
+- authtype: Author
+  name: Carboni A
+- authtype: Author
+  name: López-Martín S
+- authtype: Author
+  name: Albert J
+- authtype: Author
+  name: Tapia M
+- authtype: Author
+  name: Mercado F
+- authtype: Author
+  name: Capilla A
+- authtype: Author
+  name: Hinojosa JA
+epubdate: 2012 Jun 11
+fulljournalname: Social Cognitive and Affective Neuroscience
+issue: '7'
+pages: 764-773
+pmclivedate: 2014/10/01
+printpubdate: 2013 Oct
+pubdate: 2012 Jun 11
+sortdate: 2012/06/11 00:00
+source: Soc Cogn Affect Neurosci
+title: Exogenous attention to facial vs non-facial emotional visual stimuli
+uid: '3791067'
+volume: '8'

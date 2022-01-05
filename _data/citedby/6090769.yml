@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '30131667'
+- idtype: doi
+  value: 10.3389/fnins.2018.00513
+- idtype: pmcid
+  value: PMC6090769
+authors:
+- authtype: Author
+  name: Levin AR
+- authtype: Author
+  name: Méndez Leal AS
+- authtype: Author
+  name: Gabard-Durnam LJ
+- authtype: Author
+  name: O’Leary HM
+epubdate: 2018 Aug 7
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '513'
+pmclivedate: 2018/08/21
+printpubdate: ''
+pubdate: 2018 Aug 7
+sortdate: 2018/08/07 00:00
+source: Front Neurosci
+title: 'BEAPP: The Batch Electroencephalography Automated Processing Platform'
+uid: '6090769'
+volume: '12'

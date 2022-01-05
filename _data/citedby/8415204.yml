@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '33957336'
+- idtype: doi
+  value: 10.1016/j.euroneuro.2021.04.005
+- idtype: pmcid
+  value: PMC8415204
+authors:
+- authtype: Author
+  name: Shaw AD
+- authtype: Author
+  name: Chandler HL
+- authtype: Author
+  name: Hamandi K
+- authtype: Author
+  name: Muthukumaraswamy SD
+- authtype: Author
+  name: Hammers A
+- authtype: Author
+  name: Singh KD
+epubdate: ''
+fulljournalname: European Neuropsychopharmacology
+issue: ''
+pages: 34-45
+pmclivedate: 2021/09/08
+printpubdate: 2021 Sep
+pubdate: 2021 Sep
+sortdate: 2021/09/01 00:00
+source: Eur Neuropsychopharmacol
+title: Tiagabine induced modulation of oscillatory connectivity and activity match
+  PET-derived, canonical GABA-A receptor distributions
+uid: '8415204'
+volume: '50'

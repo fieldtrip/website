@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '23908618'
+- idtype: doi
+  value: 10.3389/fnhum.2013.00407
+- idtype: pmcid
+  value: PMC3725431
+authors:
+- authtype: Author
+  name: SanMiguel I
+- authtype: Author
+  name: Saupe K
+- authtype: Author
+  name: Schröger E
+epubdate: 2013 Jul 29
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '407'
+pmclivedate: 2013/08/01
+printpubdate: ''
+pubdate: 2013 Jul 29
+sortdate: 2013/07/29 00:00
+source: Front Hum Neurosci
+title: 'I know what is missing here: electrophysiological prediction error signals
+  elicited by omissions of predicted ”what” but not ”when”'
+uid: '3725431'
+volume: '7'

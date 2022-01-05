@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '28790906'
+- idtype: doi
+  value: 10.3389/fnhum.2017.00377
+- idtype: pmcid
+  value: PMC5524680
+authors:
+- authtype: Author
+  name: Rao IS
+- authtype: Author
+  name: Kayser C
+epubdate: 2017 Jul 25
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '377'
+pmclivedate: 2017/08/08
+printpubdate: ''
+pubdate: 2017 Jul 25
+sortdate: 2017/07/25 00:00
+source: Front Hum Neurosci
+title: Neurophysiological Correlates of the Rubber Hand Illusion in Late Evoked and
+  Alpha/Beta Band Activity
+uid: '5524680'
+volume: '11'

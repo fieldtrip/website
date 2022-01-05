@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '26106575'
+- idtype: doi
+  value: 10.1016/j.nicl.2015.05.008
+- idtype: pmcid
+  value: PMC4475779
+authors:
+- authtype: Author
+  name: Niso G
+- authtype: Author
+  name: Carrasco S
+- authtype: Author
+  name: Gudín M
+- authtype: Author
+  name: Maestú F
+- authtype: Author
+  name: del-Pozo F
+- authtype: Author
+  name: Pereda E
+epubdate: 2015 May 23
+fulljournalname: 'NeuroImage : Clinical'
+issue: ''
+pages: 503-515
+pmclivedate: 2015/06/23
+printpubdate: ''
+pubdate: 2015 May 23
+sortdate: 2015/05/23 00:00
+source: Neuroimage Clin
+title: What graph theory actually tells us about resting state interictal MEG epileptic
+  activity
+uid: '4475779'
+volume: '8'

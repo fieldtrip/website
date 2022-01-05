@@ -1,0 +1,40 @@
+articleids:
+- idtype: pmid
+  value: '29268099'
+- idtype: doi
+  value: 10.1016/j.neuron.2017.11.033
+- idtype: pmcid
+  value: PMC5864125
+- idtype: MID
+  value: NIHMS922853
+authors:
+- authtype: Author
+  name: Chen G
+- authtype: Author
+  name: Zhang Y
+- authtype: Author
+  name: Li X
+- authtype: Author
+  name: Zhao X
+- authtype: Author
+  name: Ye Q
+- authtype: Author
+  name: Lin Y
+- authtype: Author
+  name: Tao HW
+- authtype: Author
+  name: Rasch MJ
+- authtype: Author
+  name: Zhang X
+epubdate: ''
+fulljournalname: Neuron
+issue: '6'
+pages: 1403-1418.e6
+pmclivedate: 2018/12/20
+printpubdate: 2017 Dec 20
+pubdate: 2017 Dec 20
+sortdate: 2017/12/20 00:00
+source: Neuron
+title: Distinct Inhibitory Circuits Orchestrate Cortical beta and gamma Band Oscillations
+uid: '5864125'
+volume: '96'

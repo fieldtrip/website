@@ -1,0 +1,40 @@
+articleids:
+- idtype: pmid
+  value: '31419211'
+- idtype: doi
+  value: 10.1088/1741-2552/ab2c58
+- idtype: pmcid
+  value: PMC6765221
+- idtype: MID
+  value: NIHMS1051269
+authors:
+- authtype: Author
+  name: Provenza NR
+- authtype: Author
+  name: Paulk AC
+- authtype: Author
+  name: Peled N
+- authtype: Author
+  name: Restrepo MI
+- authtype: Author
+  name: Cash SS
+- authtype: Author
+  name: Dougherty DD
+- authtype: Author
+  name: Eskandar EN
+- authtype: Author
+  name: Borton DA
+- authtype: Author
+  name: Widge AS
+epubdate: 2019 Aug 16
+fulljournalname: Journal of neural engineering
+issue: '5'
+pages: '056015'
+pmclivedate: 2019/09/28
+printpubdate: ''
+pubdate: 2019 Aug 16
+sortdate: 2019/08/16 00:00
+source: J Neural Eng
+title: Decoding task engagement from distributed network electrophysiology in humans
+uid: '6765221'
+volume: '16'

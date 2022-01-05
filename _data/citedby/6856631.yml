@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '31787866'
+- idtype: doi
+  value: 10.3389/fnins.2019.01159
+- idtype: pmcid
+  value: PMC6856631
+authors:
+- authtype: Author
+  name: Shirazi SY
+- authtype: Author
+  name: Huang HJ
+epubdate: 2019 Nov 6
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '1159'
+pmclivedate: 2019/11/29
+printpubdate: ''
+pubdate: 2019 Nov 6
+sortdate: 2019/11/06 00:00
+source: Front Neurosci
+title: More Reliable EEG Electrode Digitizing Methods Can Reduce Source Estimation
+  Uncertainty, but Current Methods Already Accurately Identify Brodmann Areas
+uid: '6856631'
+volume: '13'

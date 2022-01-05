@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '31239461'
+- idtype: doi
+  value: 10.1038/s41598-019-45396-5
+- idtype: pmcid
+  value: PMC6592922
+authors:
+- authtype: Author
+  name: Cortney Bradford J
+- authtype: Author
+  name: Lukos JR
+- authtype: Author
+  name: Passaro A
+- authtype: Author
+  name: Ries A
+- authtype: Author
+  name: Ferris DP
+epubdate: 2019 Jun 25
+fulljournalname: Scientific Reports
+issue: ''
+pages: '9234'
+pmclivedate: 2019/07/03
+printpubdate: ''
+pubdate: 2019 Jun 25
+sortdate: 2019/06/25 00:00
+source: Sci Rep
+title: Effect of locomotor demands on cognitive processing
+uid: '6592922'
+volume: '9'

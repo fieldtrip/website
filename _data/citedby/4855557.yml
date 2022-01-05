@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '27071110'
+- idtype: doi
+  value: 10.1073/pnas.1524087113
+- idtype: pmcid
+  value: PMC4855557
+authors:
+- authtype: Author
+  name: Kayser SJ
+- authtype: Author
+  name: McNair SW
+- authtype: Author
+  name: Kayser C
+epubdate: 2016 Apr 11
+fulljournalname: Proceedings of the National Academy of Sciences of the United States
+  of America
+issue: '17'
+pages: 4842-4847
+pmclivedate: 2016/05/10
+printpubdate: 2016 Apr 26
+pubdate: 2016 Apr 11
+sortdate: 2016/04/11 00:00
+source: Proc Natl Acad Sci U S A
+title: Prestimulus influences on auditory perception from sensory representations
+  and decision processes
+uid: '4855557'
+volume: '113'

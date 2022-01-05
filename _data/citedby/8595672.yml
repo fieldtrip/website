@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '34450244'
+- idtype: doi
+  value: 10.1016/j.nlm.2021.107508
+- idtype: pmcid
+  value: PMC8595672
+- idtype: MID
+  value: NIHMS1737385
+authors:
+- authtype: Author
+  name: Fitzroy AB
+- authtype: Author
+  name: Kainec KA
+- authtype: Author
+  name: Seo J
+- authtype: Author
+  name: Spencer RM
+epubdate: 2021 Aug 25
+fulljournalname: Neurobiology of learning and memory
+issue: ''
+pages: '107508'
+pmclivedate: ''
+printpubdate: 2021 Nov
+pubdate: 2021 Aug 25
+sortdate: 2021/08/25 00:00
+source: Neurobiol Learn Mem
+title: Encoding and consolidation of motor sequence learning in young and older adults
+uid: '8595672'
+volume: '185'

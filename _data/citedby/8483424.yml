@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '34592931'
+- idtype: doi
+  value: 10.1186/s11689-021-09383-0
+- idtype: pmcid
+  value: PMC8483424
+authors:
+- authtype: Author
+  name: Beker S
+- authtype: Author
+  name: Foxe JJ
+- authtype: Author
+  name: Venticinque J
+- authtype: Author
+  name: Bates J
+- authtype: Author
+  name: Ridgeway EM
+- authtype: Author
+  name: Schaaf RC
+- authtype: Author
+  name: Molholm S
+epubdate: 2021 Sep 30
+fulljournalname: Journal of Neurodevelopmental Disorders
+issue: ''
+pages: '43'
+pmclivedate: 2021/09/30
+printpubdate: ''
+pubdate: 2021 Sep 30
+sortdate: 2021/09/30 00:00
+source: J Neurodev Disord
+title: 'Looking for consistency in an uncertain world: test-retest reliability of
+  neurophysiological and behavioral readouts in autism'
+uid: '8483424'
+volume: '13'

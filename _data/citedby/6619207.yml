@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '23407974'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.3755-12.2013
+- idtype: pmcid
+  value: PMC6619207
+authors:
+- authtype: Author
+  name: Lange J
+- authtype: Author
+  name: Oostenveld R
+- authtype: Author
+  name: Fries P
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '7'
+pages: 3212-3220
+pmclivedate: 2019/07/11
+printpubdate: 2013 Feb 13
+pubdate: 2013 Feb 13
+sortdate: 2013/02/13 00:00
+source: J Neurosci
+title: Reduced Occipital Alpha Power Indexes Enhanced Excitability Rather than Improved
+  Visual Perception
+uid: '6619207'
+volume: '33'

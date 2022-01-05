@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '32205896'
+- idtype: doi
+  value: 10.1109/tim.2019.2906967
+- idtype: pmcid
+  value: PMC7088455
+- idtype: MID
+  value: NIHMS1069549
+authors:
+- authtype: Author
+  name: Mucarquer JA
+- authtype: Author
+  name: Prado P
+- authtype: Author
+  name: Escobar MJ
+- authtype: Author
+  name: El-Deredy W
+- authtype: Author
+  name: Zañartu M
+epubdate: 2019 May 1
+fulljournalname: IEEE transactions on instrumentation and measurement
+issue: '3'
+pages: 815-824
+pmclivedate: 2021/03/01
+printpubdate: 2020 Mar
+pubdate: 2019 May 1
+sortdate: 2019/05/01 00:00
+source: IEEE Trans Instrum Meas
+title: Improving EEG Muscle Artifact Removal With an EMG Array
+uid: '7088455'
+volume: '69'

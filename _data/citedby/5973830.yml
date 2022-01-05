@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '29807570'
+- idtype: doi
+  value: 10.7554/eLife.33904
+- idtype: pmcid
+  value: PMC5973830
+authors:
+- authtype: Author
+  name: Dijkstra N
+- authtype: Author
+  name: Mostert P
+- authtype: Author
+  name: de Lange FP
+- authtype: Author
+  name: Bosch S
+- authtype: Author
+  name: van Gerven MA
+epubdate: 2018 May 29
+fulljournalname: eLife
+issue: ''
+pages: e33904
+pmclivedate: 2018/05/30
+printpubdate: ''
+pubdate: 2018 May 29
+sortdate: 2018/05/29 00:00
+source: eLife
+title: Differential temporal dynamics during visual imagery and perception
+uid: '5973830'
+volume: '7'

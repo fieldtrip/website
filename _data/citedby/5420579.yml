@@ -1,0 +1,51 @@
+articleids:
+- idtype: pmid
+  value: '28533746'
+- idtype: doi
+  value: 10.3389/fnsys.2017.00024
+- idtype: pmcid
+  value: PMC5420579
+authors:
+- authtype: Author
+  name: Giattino CM
+- authtype: Author
+  name: Gardner JE
+- authtype: Author
+  name: Sbahi FM
+- authtype: Author
+  name: Roberts KC
+- authtype: Author
+  name: Cooter M
+- authtype: Author
+  name: Moretti E
+- authtype: Author
+  name: Browndyke JN
+- authtype: Author
+  name: Mathew JP
+- authtype: Author
+  name: Woldorff MG
+- authtype: Author
+  name: Berger M
+- authtype: CollectiveName
+  name: the MADCO-PC InvestigatorsBergerMilesMBrigmanBrian E.BEBrowndykeJeffrey N.JNBullockW.
+    MichaelWMCarterJessicaJChapmanJosephJColinBrianBCooterMaryMD’AmicoThomas A.TADeOrioJames
+    K.JKEsclamadoRamon M.RMFerrandinoMichael N.MNGadsdenJeffreyJGarriguesGrant E.GEGrantStuartSGuercioJasonJGuptaDhaneshDHabibAshrafAHarpoleDavid
+    H.DHHartwigMathew G.MGIboayaEhimemenEInmanBrant A.BAKhanAnverALagoo-DeenadayalanSandhyaSLeePaula
+    S.PSLeeWalter T.WTLemmJohnJLevinsonHowardHMantyhChristopherCMathewJosephJMcDonaghDavid
+    L.DLMigalyJohnJMithaniSuhail K.SKMorettiEugeneEMoulJudd W.JWNewmanMark F.MFOhlendorfBrianBPerezAlexanderAPetersonAndrew
+    C.ACPremingerGlenn M.GMQuinonesQuintinQRobertsonCary N.CNRomanSanziana A.SARunyonScottSSandlerAaronASbahiFaris
+    M.FMScheriRandall P.RPSmithS. KendallSKTalbotLeonardLThackerJulie K. M.JKThomasJakeJTongBetty
+    C.BCVaslefSteven N.SNWaldronNathanNWangXueyuanXYoungChristopherC
+epubdate: 2017 May 8
+fulljournalname: Frontiers in Systems Neuroscience
+issue: ''
+pages: '24'
+pmclivedate: 2017/05/22
+printpubdate: ''
+pubdate: 2017 May 8
+sortdate: 2017/05/08 00:00
+source: Front Syst Neurosci
+title: Intraoperative Frontal Alpha-Band Power Correlates with Preoperative Neurocognitive
+  Function in Older Adults
+uid: '5420579'
+volume: '11'

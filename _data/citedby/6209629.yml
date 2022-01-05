@@ -1,0 +1,23 @@
+articleids:
+- idtype: pmid
+  value: '30410431'
+- idtype: doi
+  value: 10.3389/fnins.2018.00765
+- idtype: pmcid
+  value: PMC6209629
+authors:
+- authtype: Author
+  name: Liesefeld HR
+epubdate: 2018 Oct 25
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '765'
+pmclivedate: 2018/11/08
+printpubdate: ''
+pubdate: 2018 Oct 25
+sortdate: 2018/10/25 00:00
+source: Front Neurosci
+title: 'Estimating the Timing of Cognitive Operations With MEG/EEG Latency Measures:
+  A Primer, a Brief Tutorial, and an Implementation of Various Methods'
+uid: '6209629'
+volume: '12'

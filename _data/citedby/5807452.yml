@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '29426859'
+- idtype: doi
+  value: 10.1038/s41598-018-20824-0
+- idtype: pmcid
+  value: PMC5807452
+authors:
+- authtype: Author
+  name: Nacar Garcia L
+- authtype: Author
+  name: Guerrero-Mosquera C
+- authtype: Author
+  name: Colomer M
+- authtype: Author
+  name: Sebastian-Galles N
+epubdate: 2018 Feb 9
+fulljournalname: Scientific Reports
+issue: ''
+pages: '2770'
+pmclivedate: 2018/02/14
+printpubdate: ''
+pubdate: 2018 Feb 9
+sortdate: 2018/02/09 00:00
+source: Sci Rep
+title: Evoked and oscillatory EEG activity differentiates language discrimination
+  in young monolingual and bilingual infants
+uid: '5807452'
+volume: '8'

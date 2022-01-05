@@ -1,0 +1,53 @@
+articleids:
+- idtype: pmid
+  value: '30849510'
+- idtype: doi
+  value: 10.1016/j.nbd.2019.03.004
+- idtype: pmcid
+  value: PMC6517271
+- idtype: MID
+  value: EMS82447
+authors:
+- authtype: Author
+  name: Fischer P
+- authtype: Author
+  name: Pogosyan A
+- authtype: Author
+  name: Green AL
+- authtype: Author
+  name: Aziz TZ
+- authtype: Author
+  name: Hyam J
+- authtype: Author
+  name: Foltynie T
+- authtype: Author
+  name: Limousin P
+- authtype: Author
+  name: Zrinzo L
+- authtype: Author
+  name: Samuel M
+- authtype: Author
+  name: Ashkan K
+- authtype: Author
+  name: Da Lio M
+- authtype: Author
+  name: De Cecco M
+- authtype: Author
+  name: Fornaser A
+- authtype: Author
+  name: Brown P
+- authtype: Author
+  name: Tan H
+epubdate: 2019 Mar 6
+fulljournalname: Neurobiology of disease
+issue: ''
+pages: 253-263
+pmclivedate: 2019/05/15
+printpubdate: ''
+pubdate: 2019 Mar 6
+sortdate: 2019/03/06 00:00
+source: Neurobiol Dis
+title: Beta synchrony in the cortico-basal ganglia network during regulation of force
+  control on and off dopamine
+uid: '6517271'
+volume: '127'

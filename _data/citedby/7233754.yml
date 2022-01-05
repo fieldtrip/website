@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '32431963'
+- idtype: doi
+  value: 10.1109/JTEHM.2020.2989768
+- idtype: pmcid
+  value: PMC7233754
+authors:
+- authtype: Unknown
+  name: ''
+- authtype: Unknown
+  name: ''
+- authtype: Unknown
+  name: ''
+- authtype: Unknown
+  name: ''
+- authtype: Unknown
+  name: ''
+- authtype: Unknown
+  name: ''
+- authtype: Unknown
+  name: ''
+epubdate: 2020 May 6
+fulljournalname: IEEE Journal of Translational Engineering in Health and Medicine
+issue: ''
+pages: '2200208'
+pmclivedate: 2020/05/19
+printpubdate: ''
+pubdate: 2020 May 6
+sortdate: 2020/05/06 00:00
+source: IEEE J Transl Eng Health Med
+title: Integrated Development Environment for EEG-Driven Cognitive-Neuropsychological
+  Research
+uid: '7233754'
+volume: '8'

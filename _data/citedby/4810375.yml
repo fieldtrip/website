@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '27020961'
+- idtype: doi
+  value: 10.1038/srep23073
+- idtype: pmcid
+  value: PMC4810375
+authors:
+- authtype: Author
+  name: Grandy TH
+- authtype: Author
+  name: Garrett DD
+- authtype: Author
+  name: Schmiedek F
+- authtype: Author
+  name: Werkle-Bergner M
+epubdate: 2016 Mar 29
+fulljournalname: Scientific Reports
+issue: ''
+pages: '23073'
+pmclivedate: 2016/04/04
+printpubdate: ''
+pubdate: 2016 Mar 29
+sortdate: 2016/03/29 00:00
+source: Sci Rep
+title: On the estimation of brain signal entropy from sparse neuroimaging data
+uid: '4810375'
+volume: '6'

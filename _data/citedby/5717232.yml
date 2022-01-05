@@ -1,0 +1,24 @@
+articleids:
+- idtype: pmid
+  value: '29208892'
+- idtype: doi
+  value: 10.1038/s41467-017-02079-x
+- idtype: pmcid
+  value: PMC5717232
+authors:
+- authtype: Author
+  name: Marti S
+- authtype: Author
+  name: Dehaene S
+epubdate: 2017 Dec 5
+fulljournalname: Nature Communications
+issue: ''
+pages: '1955'
+pmclivedate: 2017/12/08
+printpubdate: ''
+pubdate: 2017 Dec 5
+sortdate: 2017/12/05 00:00
+source: Nat Commun
+title: Discrete and continuous mechanisms of temporal selection in rapid visual streams
+uid: '5717232'
+volume: '8'

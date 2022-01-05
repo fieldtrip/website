@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '30225355'
+- idtype: doi
+  value: 10.1523/ENEURO.0141-18.2018
+- idtype: pmcid
+  value: PMC6140117
+authors:
+- authtype: Author
+  name: ElShafei HA
+- authtype: Author
+  name: Bouet R
+- authtype: Author
+  name: Bertrand O
+- authtype: Author
+  name: Bidet-Caulet A
+epubdate: 2018 Sep 17
+fulljournalname: eNeuro
+issue: '4'
+pages: ENEURO.0141-18.2018
+pmclivedate: 2018/09/17
+printpubdate: ''
+pubdate: 2018 Sep 17
+sortdate: 2018/09/17 00:00
+source: eNeuro
+title: 'Two Sides of the Same Coin: Distinct Sub-Bands in the α Rhythm Reflect Facilitation
+  and Suppression Mechanisms during Auditory Anticipatory Attention'
+uid: '6140117'
+volume: '5'

@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '30927608'
+- idtype: doi
+  value: 10.1016/j.nicl.2019.101760
+- idtype: pmcid
+  value: PMC6444292
+authors:
+- authtype: Author
+  name: Randau M
+- authtype: Author
+  name: Oranje B
+- authtype: Author
+  name: Miyakoshi M
+- authtype: Author
+  name: Makeig S
+- authtype: Author
+  name: Fagerlund B
+- authtype: Author
+  name: Glenthøj B
+- authtype: Author
+  name: Bak N
+epubdate: 2019 Mar 12
+fulljournalname: 'NeuroImage : Clinical'
+issue: ''
+pages: '101760'
+pmclivedate: 2019/04/12
+printpubdate: ''
+pubdate: 2019 Mar 12
+sortdate: 2019/03/12 00:00
+source: Neuroimage Clin
+title: Attenuated mismatch negativity in patients with first-episode antipsychotic-naive
+  schizophrenia using a source-resolved method
+uid: '6444292'
+volume: '22'

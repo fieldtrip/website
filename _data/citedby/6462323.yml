@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '31049054'
+- idtype: doi
+  value: 10.1155/2019/6263907
+- idtype: pmcid
+  value: PMC6462323
+authors:
+- authtype: Author
+  name: Glim S
+- authtype: Author
+  name: Okazaki YO
+- authtype: Author
+  name: Nakagawa Y
+- authtype: Author
+  name: Mizuno Y
+- authtype: Author
+  name: Hanakawa T
+- authtype: Author
+  name: Kitajo K
+epubdate: 2019 Mar 31
+fulljournalname: Neural Plasticity
+issue: ''
+pages: '6263907'
+pmclivedate: 2019/05/02
+printpubdate: ''
+pubdate: 2019 Mar 31
+sortdate: 2019/03/31 00:00
+source: Neural Plast
+title: Phase-Amplitude Coupling of Neural Oscillations Can Be Effectively Probed with
+  Concurrent TMS-EEG
+uid: '6462323'
+volume: '2019'

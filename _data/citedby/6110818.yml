@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '30186220'
+- idtype: doi
+  value: 10.3389/fneur.2018.00676
+- idtype: pmcid
+  value: PMC6110818
+authors:
+- authtype: Author
+  name: Bareham CA
+- authtype: Author
+  name: Allanson J
+- authtype: Author
+  name: Roberts N
+- authtype: Author
+  name: Hutchinson PJ
+- authtype: Author
+  name: Pickard JD
+- authtype: Author
+  name: Menon DK
+- authtype: Author
+  name: Chennu S
+epubdate: 2018 Aug 21
+fulljournalname: Frontiers in Neurology
+issue: ''
+pages: '676'
+pmclivedate: 2018/09/05
+printpubdate: ''
+pubdate: 2018 Aug 21
+sortdate: 2018/08/21 00:00
+source: Front Neurol
+title: 'Longitudinal Bedside Assessments of Brain Networks in Disorders of Consciousness:
+  Case Reports From the Field'
+uid: '6110818'
+volume: '9'

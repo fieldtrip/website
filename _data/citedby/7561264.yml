@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '33017389'
+- idtype: doi
+  value: 10.1371/journal.pbio.3000504
+- idtype: pmcid
+  value: PMC7561264
+authors:
+- authtype: Author
+  name: Li Y
+- authtype: Author
+  name: Luo H
+- authtype: Author
+  name: Tian X
+epubdate: 2020 Oct 5
+fulljournalname: PLoS Biology
+issue: '10'
+pages: e3000504
+pmclivedate: 2020/10/21
+printpubdate: ''
+pubdate: 2020 Oct 5
+sortdate: 2020/10/05 00:00
+source: PLoS Biol
+title: 'Mental operations in rhythm: Motor-to-sensory transformation mediates imagined
+  singing'
+uid: '7561264'
+volume: '18'

@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '32060396'
+- idtype: doi
+  value: 10.1038/s42003-020-0801-z
+- idtype: pmcid
+  value: PMC7021904
+authors:
+- authtype: Author
+  name: Karvat G
+- authtype: Author
+  name: Schneider A
+- authtype: Author
+  name: Alyahyay M
+- authtype: Author
+  name: Steenbergen F
+- authtype: Author
+  name: Tangermann M
+- authtype: Author
+  name: Diester I
+epubdate: 2020 Feb 14
+fulljournalname: Communications Biology
+issue: ''
+pages: '72'
+pmclivedate: 2020/03/03
+printpubdate: ''
+pubdate: 2020 Feb 14
+sortdate: 2020/02/14 00:00
+source: Commun Biol
+title: Real-time detection of neural oscillation bursts allows behaviourally relevant
+  neurofeedback
+uid: '7021904'
+volume: '3'

@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '26289925'
+- idtype: doi
+  value: 10.1038/srep12503
+- idtype: pmcid
+  value: PMC4542339
+authors:
+- authtype: Author
+  name: Ora H
+- authtype: Author
+  name: Sekiguchi T
+- authtype: Author
+  name: Miyake Y
+epubdate: 2015 Aug 20
+fulljournalname: Scientific Reports
+issue: ''
+pages: '12503'
+pmclivedate: 2015/09/01
+printpubdate: ''
+pubdate: 2015 Aug 20
+sortdate: 2015/08/20 00:00
+source: Sci Rep
+title: Dynamic scalp topography reveals neural signs just before performance errors
+uid: '4542339'
+volume: '5'

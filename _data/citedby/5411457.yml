@@ -1,0 +1,24 @@
+articleids:
+- idtype: pmid
+  value: '28512438'
+- idtype: doi
+  value: 10.3389/fpsyg.2017.00644
+- idtype: pmcid
+  value: PMC5411457
+authors:
+- authtype: Author
+  name: Stevens RH
+- authtype: Author
+  name: Galloway TL
+epubdate: 2017 May 2
+fulljournalname: Frontiers in Psychology
+issue: ''
+pages: '644'
+pmclivedate: 2017/05/16
+printpubdate: ''
+pubdate: 2017 May 2
+sortdate: 2017/05/02 00:00
+source: Front Psychol
+title: Are Neurodynamic Organizations A Fundamental Property of Teamwork?
+uid: '5411457'
+volume: '8'

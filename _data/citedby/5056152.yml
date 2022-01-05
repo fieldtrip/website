@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '27573707'
+- idtype: doi
+  value: 10.1111/epi.13493
+- idtype: pmcid
+  value: PMC5056152
+- idtype: MID
+  value: NIHMS804325
+authors:
+- authtype: Author
+  name: Ding L
+- authtype: Author
+  name: Gallagher MJ
+epubdate: 2016 Aug 30
+fulljournalname: Epilepsia
+issue: '10'
+pages: 1568-1580
+pmclivedate: 2017/10/01
+printpubdate: 2016 Oct
+pubdate: 2016 Aug 30
+sortdate: 2016/08/30 00:00
+source: Epilepsia
+title: Dynamics of Sensorimotor Cortex Activation During Absence and Myoclonic Seizures
+  in a Mouse Model of Juvenile Myoclonic Epilepsy
+uid: '5056152'
+volume: '57'

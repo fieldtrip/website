@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '28808233'
+- idtype: doi
+  value: 10.1038/s41598-017-07249-x
+- idtype: pmcid
+  value: PMC5556118
+authors:
+- authtype: Author
+  name: Carboni A
+- authtype: Author
+  name: Kessel D
+- authtype: Author
+  name: Capilla A
+- authtype: Author
+  name: Carretié L
+epubdate: 2017 Aug 14
+fulljournalname: Scientific Reports
+issue: ''
+pages: '8068'
+pmclivedate: 2017/08/16
+printpubdate: ''
+pubdate: 2017 Aug 14
+sortdate: 2017/08/14 00:00
+source: Sci Rep
+title: 'The influence of affective state on exogenous attention to emotional distractors:
+  behavioral and electrophysiological correlates'
+uid: '5556118'
+volume: '7'

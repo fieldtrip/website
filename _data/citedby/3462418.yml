@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '23049617'
+- idtype: doi
+  value: 10.1155/2012/186353
+- idtype: pmcid
+  value: PMC3462418
+authors:
+- authtype: Author
+  name: Ortiz E
+- authtype: Author
+  name: Stingl K
+- authtype: Author
+  name: Münßinger J
+- authtype: Author
+  name: Braun C
+- authtype: Author
+  name: Preissl H
+- authtype: Author
+  name: Belardinelli P
+epubdate: 2012 Sep 24
+fulljournalname: Computational and Mathematical Methods in Medicine
+issue: ''
+pages: '186353'
+pmclivedate: 2012/10/04
+printpubdate: '2012'
+pubdate: 2012 Sep 24
+sortdate: 2012/09/24 00:00
+source: Comput Math Methods Med
+title: 'Weighted Phase Lag Index and Graph Analysis: Preliminary Investigation of
+  Functional Connectivity during Resting State in Children'
+uid: '3462418'
+volume: '2012'

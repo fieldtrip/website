@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '29360843'
+- idtype: doi
+  value: 10.1371/journal.pone.0191673
+- idtype: pmcid
+  value: PMC5779700
+authors:
+- authtype: Author
+  name: İşcan Z
+- authtype: Author
+  name: Nikulin VV
+epubdate: 2018 Jan 23
+fulljournalname: PLoS ONE
+issue: '1'
+pages: e0191673
+pmclivedate: 2018/02/08
+printpubdate: ''
+pubdate: 2018 Jan 23
+sortdate: 2018/01/23 00:00
+source: PLoS One
+title: Steady state visual evoked potential (SSVEP) based brain-computer interface
+  (BCI) performance under different perturbations
+uid: '5779700'
+volume: '13'

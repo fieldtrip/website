@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '28090203'
+- idtype: doi
+  value: 10.1155/2016/4292145
+- idtype: pmcid
+  value: PMC5206474
+authors:
+- authtype: Author
+  name: Cho H
+- authtype: Author
+  name: Kwon M
+- authtype: Author
+  name: Jang H
+- authtype: Author
+  name: Lee JB
+- authtype: Author
+  name: Yoon KC
+- authtype: Author
+  name: Jun SC
+epubdate: 2016 Dec 20
+fulljournalname: Computational Intelligence and Neuroscience
+issue: ''
+pages: '4292145'
+pmclivedate: 2017/01/15
+printpubdate: '2016'
+pubdate: 2016 Dec 20
+sortdate: 2016/12/20 00:00
+source: Comput Intell Neurosci
+title: Herbal Extracts That Reduce Ocular Oxidative Stress May Enhance Attentive Performance
+  in Humans
+uid: '5206474'
+volume: '2016'

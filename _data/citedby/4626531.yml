@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '26001643'
+- idtype: doi
+  value: 10.1007/s12021-015-9271-8
+- idtype: pmcid
+  value: PMC4626531
+authors:
+- authtype: Author
+  name: Venthur B
+- authtype: Author
+  name: Dähne S
+- authtype: Author
+  name: Höhne J
+- authtype: Author
+  name: Heller H
+- authtype: Author
+  name: Blankertz B
+epubdate: 2015 May 24
+fulljournalname: Neuroinformatics
+issue: '4'
+pages: 471-486
+pmclivedate: 2015/11/04
+printpubdate: '2015'
+pubdate: 2015 May 24
+sortdate: 2015/05/24 00:00
+source: Neuroinformatics
+title: 'Wyrm: A Brain-Computer Interface Toolbox in Python'
+uid: '4626531'
+volume: '13'

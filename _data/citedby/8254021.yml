@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '34198217'
+- idtype: doi
+  value: 10.1016/j.dcn.2021.100981
+- idtype: pmcid
+  value: PMC8254021
+authors:
+- authtype: Author
+  name: Jensen SK
+- authtype: Author
+  name: Xie W
+- authtype: Author
+  name: Kumar S
+- authtype: Author
+  name: Haque R
+- authtype: Author
+  name: Petri WA
+- authtype: Author
+  name: Nelson CA III
+epubdate: 2021 Jun 18
+fulljournalname: Developmental Cognitive Neuroscience
+issue: ''
+pages: '100981'
+pmclivedate: 2021/07/12
+printpubdate: ''
+pubdate: 2021 Jun 18
+sortdate: 2021/06/18 00:00
+source: Dev Cogn Neurosci
+title: Associations of socioeconomic and other environmental factors with early brain
+  development in Bangladeshi infants and children
+uid: '8254021'
+volume: '50'

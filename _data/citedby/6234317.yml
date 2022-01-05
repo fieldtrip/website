@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '29883733'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2018.06.005
+- idtype: pmcid
+  value: PMC6234317
+- idtype: MID
+  value: NIHMS976068
+authors:
+- authtype: Author
+  name: van Pelt S
+- authtype: Author
+  name: Shumskaya E
+- authtype: Author
+  name: Fries P
+epubdate: 2018 Jun 5
+fulljournalname: NeuroImage
+issue: ''
+pages: 702-712
+pmclivedate: 2019/09/01
+printpubdate: 2018 Sep
+pubdate: 2018 Jun 5
+sortdate: 2018/06/05 00:00
+source: Neuroimage
+title: Cortical volume and sex influence visual gamma
+uid: '6234317'
+volume: '178'

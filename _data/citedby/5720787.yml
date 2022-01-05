@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '29216195'
+- idtype: doi
+  value: 10.1371/journal.pone.0187763
+- idtype: pmcid
+  value: PMC5720787
+authors:
+- authtype: Author
+  name: Feldmann-Wüstefeld T
+- authtype: Author
+  name: Miyakoshi M
+- authtype: Author
+  name: Petilli MA
+- authtype: Author
+  name: Schubö A
+- authtype: Author
+  name: Makeig S
+epubdate: 2017 Dec 7
+fulljournalname: PLoS ONE
+issue: '12'
+pages: e0187763
+pmclivedate: 2017/12/15
+printpubdate: ''
+pubdate: 2017 Dec 7
+sortdate: 2017/12/07 00:00
+source: PLoS One
+title: Reduced visual attention in heterogeneous textures is reflected in occipital
+  alpha and theta band activity
+uid: '5720787'
+volume: '12'

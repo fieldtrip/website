@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '28944474'
+- idtype: doi
+  value: 10.1111/acer.13510
+- idtype: pmcid
+  value: PMC5711625
+- idtype: MID
+  value: NIHMS908478
+authors:
+- authtype: Author
+  name: Bolaños AD
+- authtype: Author
+  name: Coffman BA
+- authtype: Author
+  name: Candelaria-Cook FT
+- authtype: Author
+  name: Kodituwakku P
+- authtype: Author
+  name: Stephen JM
+epubdate: 2017 Oct 30
+fulljournalname: Alcoholism, clinical and experimental research
+issue: '12'
+pages: 2173-2184
+pmclivedate: 2018/12/01
+printpubdate: 2017 Dec
+pubdate: 2017 Oct 30
+sortdate: 2017/10/30 00:00
+source: Alcohol Clin Exp Res
+title: Altered neural oscillations during multisensory integration in adolescents
+  with fetal alcohol spectrum disorder
+uid: '5711625'
+volume: '41'

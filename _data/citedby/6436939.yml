@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '30744987'
+- idtype: doi
+  value: 10.1016/j.neuron.2019.01.018
+- idtype: pmcid
+  value: PMC6436939
+authors:
+- authtype: Author
+  name: Kornysheva K
+- authtype: Author
+  name: Bush D
+- authtype: Author
+  name: Meyer SS
+- authtype: Author
+  name: Sadnicka A
+- authtype: Author
+  name: Barnes G
+- authtype: Author
+  name: Burgess N
+epubdate: ''
+fulljournalname: Neuron
+issue: '6'
+pages: 1166-1180.e3
+pmclivedate: 2019/04/10
+printpubdate: 2019 Mar 20
+pubdate: 2019 Mar 20
+sortdate: 2019/03/20 00:00
+source: Neuron
+title: Neural Competitive Queuing of Ordinal Structure Underlies Skilled Sequential
+  Action
+uid: '6436939'
+volume: '101'

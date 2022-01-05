@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '32038197'
+- idtype: doi
+  value: 10.3389/fnhum.2019.00460
+- idtype: pmcid
+  value: PMC6984336
+authors:
+- authtype: Author
+  name: Kanayama N
+- authtype: Author
+  name: Mio S
+- authtype: Author
+  name: Yaita R
+- authtype: Author
+  name: Ohashi T
+- authtype: Author
+  name: Yamawaki S
+epubdate: 2020 Jan 20
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '460'
+pmclivedate: 2020/02/07
+printpubdate: ''
+pubdate: 2020 Jan 20
+sortdate: 2020/01/20 00:00
+source: Front Hum Neurosci
+title: The Shape of Water Stream Induces Differences in P300 and Alpha Oscillation
+uid: '6984336'
+volume: '13'

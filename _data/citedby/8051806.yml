@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '33861789'
+- idtype: doi
+  value: 10.1371/journal.pone.0250214
+- idtype: pmcid
+  value: PMC8051806
+authors:
+- authtype: Author
+  name: Plante-Hébert J
+- authtype: Author
+  name: Boucher VJ
+- authtype: Author
+  name: Jemel B
+epubdate: 2021 Apr 16
+fulljournalname: PLoS ONE
+issue: '4'
+pages: e0250214
+pmclivedate: 2021/04/28
+printpubdate: ''
+pubdate: 2021 Apr 16
+sortdate: 2021/04/16 00:00
+source: PLoS One
+title: 'The processing of intimately familiar and unfamiliar voices: Specific neural
+  responses of speaker recognition and identification'
+uid: '8051806'
+volume: '16'

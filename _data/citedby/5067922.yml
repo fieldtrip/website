@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '27803651'
+- idtype: doi
+  value: 10.3389/fncel.2016.00240
+- idtype: pmcid
+  value: PMC5067922
+authors:
+- authtype: Author
+  name: ten Oever S
+- authtype: Author
+  name: de Graaf TA
+- authtype: Author
+  name: Bonnemayer C
+- authtype: Author
+  name: Ronner J
+- authtype: Author
+  name: Sack AT
+- authtype: Author
+  name: Riecke L
+epubdate: 2016 Oct 18
+fulljournalname: Frontiers in Cellular Neuroscience
+issue: ''
+pages: '240'
+pmclivedate: 2016/11/01
+printpubdate: ''
+pubdate: 2016 Oct 18
+sortdate: 2016/10/18 00:00
+source: Front Cell Neurosci
+title: 'Stimulus Presentation at Specific Neuronal Oscillatory Phases Experimentally
+  Controlled with tACS: Implementation and Applications'
+uid: '5067922'
+volume: '10'

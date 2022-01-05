@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '31931401'
+- idtype: doi
+  value: 10.1016/j.nicl.2019.102122
+- idtype: pmcid
+  value: PMC6957816
+authors:
+- authtype: Author
+  name: Fong CY
+- authtype: Author
+  name: Law WH
+- authtype: Author
+  name: Braithwaite J
+- authtype: Author
+  name: Mazaheri A
+epubdate: 2019 Dec 16
+fulljournalname: 'NeuroImage : Clinical'
+issue: ''
+pages: '102122'
+pmclivedate: 2020/01/17
+printpubdate: ''
+pubdate: 2019 Dec 16
+sortdate: 2019/12/16 00:00
+source: Neuroimage Clin
+title: Differences in early and late pattern-onset visual-evoked potentials between
+  self- reported migraineurs and controls
+uid: '6957816'
+volume: '25'

@@ -1,0 +1,24 @@
+articleids:
+- idtype: pmid
+  value: '29765297'
+- idtype: doi
+  value: 10.3389/fnins.2018.00261
+- idtype: pmcid
+  value: PMC5938406
+authors:
+- authtype: Author
+  name: Andersen LM
+epubdate: 2018 May 1
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '261'
+pmclivedate: 2018/05/14
+printpubdate: ''
+pubdate: 2018 May 1
+sortdate: 2018/05/01 00:00
+source: Front Neurosci
+title: 'Group Analysis in FieldTrip of Time-Frequency Responses: A Pipeline for Reproducibility
+  at Every Step of Processing, Going From Individual Sensor Space Representations
+  to an Across-Group Source Space Representation'
+uid: '5938406'
+volume: '12'

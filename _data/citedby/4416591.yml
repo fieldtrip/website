@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '25568160'
+- idtype: doi
+  value: 10.1152/jn.00783.2014
+- idtype: pmcid
+  value: PMC4416591
+authors:
+- authtype: Author
+  name: Roa Romero Y
+- authtype: Author
+  name: Senkowski D
+- authtype: Author
+  name: Keil J
+epubdate: 2015 Jan 7
+fulljournalname: Journal of Neurophysiology
+issue: '7'
+pages: 2342-2350
+pmclivedate: 2016/04/01
+printpubdate: 2015 Apr
+pubdate: 2015 Jan 7
+sortdate: 2015/01/07 00:00
+source: J Neurophysiol
+title: Early and late beta-band power reflect audiovisual perception in the McGurk
+  illusion
+uid: '4416591'
+volume: '113'

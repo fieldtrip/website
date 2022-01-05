@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '25628554'
+- idtype: doi
+  value: 10.3389/fnhum.2014.01048
+- idtype: pmcid
+  value: PMC4290602
+authors:
+- authtype: Author
+  name: Knakker B
+- authtype: Author
+  name: Weiss B
+- authtype: Author
+  name: Vidnyánszky Z
+epubdate: 2015 Jan 12
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '1048'
+pmclivedate: 2015/01/27
+printpubdate: ''
+pubdate: 2015 Jan 12
+sortdate: 2015/01/12 00:00
+source: Front Hum Neurosci
+title: Object-based attentional selection modulates anticipatory alpha oscillations
+uid: '4290602'
+volume: '8'

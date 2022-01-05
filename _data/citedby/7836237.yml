@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '33186722'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2020.117551
+- idtype: pmcid
+  value: PMC7836237
+authors:
+- authtype: Author
+  name: Godfrey M
+- authtype: Author
+  name: Singh KD
+epubdate: ''
+fulljournalname: Neuroimage
+issue: ''
+pages: '117551'
+pmclivedate: 2021/02/01
+printpubdate: 2021 Feb 1
+pubdate: 2021 Feb 1
+sortdate: 2021/02/01 00:00
+source: Neuroimage
+title: Measuring robust functional connectivity from resting-state MEG using amplitude
+  and entropy correlation across frequency bands and temporal scales
+uid: '7836237'
+volume: '226'

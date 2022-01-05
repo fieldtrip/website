@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '30065636'
+- idtype: doi
+  value: 10.3389/fnint.2018.00028
+- idtype: pmcid
+  value: PMC6056658
+authors:
+- authtype: Author
+  name: Gouet C
+- authtype: Author
+  name: Gutiérrez Silva CA
+- authtype: Author
+  name: Guedes B
+- authtype: Author
+  name: Peña M
+epubdate: 2018 Jul 17
+fulljournalname: Frontiers in Integrative Neuroscience
+issue: ''
+pages: '28'
+pmclivedate: 2018/07/31
+printpubdate: ''
+pubdate: 2018 Jul 17
+sortdate: 2018/07/17 00:00
+source: Front Integr Neurosci
+title: Cognitive and Neural Effects of a Brief Nonsymbolic Approximate Arithmetic
+  Training in Healthy First Grade Children
+uid: '6056658'
+volume: '12'

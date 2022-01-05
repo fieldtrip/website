@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '24349462'
+- idtype: doi
+  value: 10.1371/journal.pone.0083206
+- idtype: pmcid
+  value: PMC3861488
+authors:
+- authtype: Author
+  name: Wang L
+- authtype: Author
+  name: Yang Y
+epubdate: 2013 Dec 12
+fulljournalname: PLoS ONE
+issue: '12'
+pages: e83206
+pmclivedate: 2013/12/17
+printpubdate: ''
+pubdate: 2013 Dec 12
+sortdate: 2013/12/12 00:00
+source: PLoS One
+title: 'Integrating the Meaning of Person Names into Discourse Context: An Event-Related
+  Potential Study'
+uid: '3861488'
+volume: '8'

@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '34188023'
+- idtype: doi
+  value: 10.1038/s41467-021-23890-7
+- idtype: pmcid
+  value: PMC8241869
+authors:
+- authtype: Author
+  name: Andrillon T
+- authtype: Author
+  name: Burns A
+- authtype: Author
+  name: Mackay T
+- authtype: Author
+  name: Windt J
+- authtype: Author
+  name: Tsuchiya N
+epubdate: 2021 Jun 29
+fulljournalname: Nature Communications
+issue: ''
+pages: '3657'
+pmclivedate: 2021/07/20
+printpubdate: ''
+pubdate: 2021 Jun 29
+sortdate: 2021/06/29 00:00
+source: Nat Commun
+title: Predicting lapses of attention with sleep-like slow waves
+uid: '8241869'
+volume: '12'

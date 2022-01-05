@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '25864927'
+- idtype: doi
+  value: 10.1002/hbm.22798
+- idtype: pmcid
+  value: PMC6869115
+authors:
+- authtype: Author
+  name: van der Meij R
+- authtype: Author
+  name: Jacobs J
+- authtype: Author
+  name: Maris E
+epubdate: 2015 Apr 12
+fulljournalname: Human Brain Mapping
+issue: '7'
+pages: 2655-2680
+pmclivedate: 2020/06/12
+printpubdate: ''
+pubdate: 2015 Apr 12
+sortdate: 2015/04/12 00:00
+source: Hum Brain Mapp
+title: Uncovering phase‐coupled oscillatory networks in electrophysiological data
+uid: '6869115'
+volume: '36'

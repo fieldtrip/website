@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '31533977'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.2857-18.2019
+- idtype: pmcid
+  value: PMC6820213
+authors:
+- authtype: Author
+  name: Jiang X
+- authtype: Author
+  name: Gonzalez-Martinez J
+- authtype: Author
+  name: Halgren E
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '44'
+pages: 8744-8761
+pmclivedate: 2020/04/30
+printpubdate: 2019 Oct 30
+pubdate: 2019 Oct 30
+sortdate: 2019/10/30 00:00
+source: J Neurosci
+title: Coordination of Human Hippocampal Sharpwave Ripples during NREM Sleep with
+  Cortical Theta Bursts, Spindles, Downstates, and Upstates
+uid: '6820213'
+volume: '39'

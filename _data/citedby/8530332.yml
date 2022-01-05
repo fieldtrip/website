@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '34634031'
+- idtype: doi
+  value: 10.1371/journal.pbio.3001410
+- idtype: pmcid
+  value: PMC8530332
+authors:
+- authtype: Author
+  name: Alavash M
+- authtype: Author
+  name: Tune S
+- authtype: Author
+  name: Obleser J
+epubdate: 2021 Oct 11
+fulljournalname: PLoS Biology
+issue: '10'
+pages: e3001410
+pmclivedate: 2021/10/22
+printpubdate: ''
+pubdate: 2021 Oct 11
+sortdate: 2021/10/11 00:00
+source: PLoS Biol
+title: Dynamic large-scale connectivity of intrinsic cortical oscillations supports
+  adaptive listening in challenging conditions
+uid: '8530332'
+volume: '19'

@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '24760786'
+- idtype: doi
+  value: 10.1152/jn.00127.2014
+- idtype: pmcid
+  value: PMC4064405
+authors:
+- authtype: Author
+  name: Grent-’t-Jong T
+- authtype: Author
+  name: Oostenveld R
+- authtype: Author
+  name: Jensen O
+- authtype: Author
+  name: Medendorp WP
+- authtype: Author
+  name: Praamstra P
+epubdate: 2014 Apr 23
+fulljournalname: Journal of Neurophysiology
+issue: '2'
+pages: 224-232
+pmclivedate: 2015/07/15
+printpubdate: 2014 Jul 15
+pubdate: 2014 Apr 23
+sortdate: 2014/04/23 00:00
+source: J Neurophysiol
+title: 'Competitive interactions in sensorimotor cortex: oscillations express separation
+  between alternative movement targets'
+uid: '4064405'
+volume: '112'

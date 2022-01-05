@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '33391054'
+- idtype: doi
+  value: 10.3389/fpsyt.2020.590567
+- idtype: pmcid
+  value: PMC7772351
+authors:
+- authtype: Author
+  name: Hamilton HK
+- authtype: Author
+  name: Roach BJ
+- authtype: Author
+  name: Cavus I
+- authtype: Author
+  name: Teyler TJ
+- authtype: Author
+  name: Clapp WC
+- authtype: Author
+  name: Ford JM
+- authtype: Author
+  name: Tarakci E
+- authtype: Author
+  name: Krystal JH
+- authtype: Author
+  name: Mathalon DH
+epubdate: 2020 Dec 16
+fulljournalname: Frontiers in Psychiatry
+issue: ''
+pages: '590567'
+pmclivedate: 2020/12/31
+printpubdate: ''
+pubdate: 2020 Dec 16
+sortdate: 2020/12/16 00:00
+source: Front Psychiatry
+title: Impaired Potentiation of Theta Oscillations During a Visual Cortical Plasticity
+  Paradigm in Individuals With Schizophrenia
+uid: '7772351'
+volume: '11'

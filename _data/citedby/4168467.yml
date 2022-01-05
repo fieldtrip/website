@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '25006995'
+- idtype: doi
+  value: 10.3390/s140712114
+- idtype: pmcid
+  value: PMC4168467
+authors:
+- authtype: Author
+  name: Rombetto S
+- authtype: Author
+  name: Granata C
+- authtype: Author
+  name: Vettoliere A
+- authtype: Author
+  name: Russo M
+epubdate: 2014 Jul 8
+fulljournalname: Sensors (Basel, Switzerland)
+issue: '7'
+pages: 12114-12126
+pmclivedate: 2014/09/19
+printpubdate: ''
+pubdate: 2014 Jul 8
+sortdate: 2014/07/08 00:00
+source: Sensors (Basel)
+title: Multichannel System Based on a High Sensitivity Superconductive Sensor for
+  Magnetoencephalography
+uid: '4168467'
+volume: '14'

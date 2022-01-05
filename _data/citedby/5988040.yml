@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '29876277'
+- idtype: doi
+  value: 10.1016/j.nicl.2018.03.024
+- idtype: pmcid
+  value: PMC5988040
+authors:
+- authtype: Author
+  name: Solís-Vivanco R
+- authtype: Author
+  name: Rodríguez-Violante M
+- authtype: Author
+  name: Cervantes-Arriaga A
+- authtype: Author
+  name: Justo-Guillén E
+- authtype: Author
+  name: Ricardo-Garcell J
+epubdate: 2018 Mar 22
+fulljournalname: 'NeuroImage : Clinical'
+issue: ''
+pages: 923-931
+pmclivedate: 2018/06/06
+printpubdate: ''
+pubdate: 2018 Mar 22
+sortdate: 2018/03/22 00:00
+source: Neuroimage Clin
+title: Brain oscillations reveal impaired novelty detection from early stages of Parkinson's
+  disease
+uid: '5988040'
+volume: '18'

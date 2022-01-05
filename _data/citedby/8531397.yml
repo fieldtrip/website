@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '34675341'
+- idtype: doi
+  value: 10.1038/s42003-021-02738-2
+- idtype: pmcid
+  value: PMC8531397
+authors:
+- authtype: Author
+  name: Mofakham S
+- authtype: Author
+  name: Fry A
+- authtype: Author
+  name: Adachi J
+- authtype: Author
+  name: Stefancin PL
+- authtype: Author
+  name: Duong TQ
+- authtype: Author
+  name: Saadon JR
+- authtype: Author
+  name: Winans NJ
+- authtype: Author
+  name: Sharma H
+- authtype: Author
+  name: Feng G
+- authtype: Author
+  name: Djuric PM
+- authtype: Author
+  name: Mikell CB
+epubdate: 2021 Oct 21
+fulljournalname: Communications Biology
+issue: ''
+pages: '1210'
+pmclivedate: 2021/11/15
+printpubdate: ''
+pubdate: 2021 Oct 21
+sortdate: 2021/10/21 00:00
+source: Commun Biol
+title: Electrocorticography reveals thalamic control of cortical dynamics following
+  traumatic brain injury
+uid: '8531397'
+volume: '4'

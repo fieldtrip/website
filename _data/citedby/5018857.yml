@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '27616188'
+- idtype: doi
+  value: 10.1038/srep32065
+- idtype: pmcid
+  value: PMC5018857
+authors:
+- authtype: Author
+  name: Stonkus R
+- authtype: Author
+  name: Braun V
+- authtype: Author
+  name: Kerlin JR
+- authtype: Author
+  name: Volberg G
+- authtype: Author
+  name: Hanslmayr S
+epubdate: 2016 Sep 12
+fulljournalname: Scientific Reports
+issue: ''
+pages: '32065'
+pmclivedate: 2016/09/19
+printpubdate: ''
+pubdate: 2016 Sep 12
+sortdate: 2016/09/12 00:00
+source: Sci Rep
+title: Probing the causal role of prestimulus interregional synchrony for perceptual
+  integration via tACS
+uid: '5018857'
+volume: '6'

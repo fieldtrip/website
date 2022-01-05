@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '31431918'
+- idtype: doi
+  value: 10.1016/j.dadm.2019.04.009
+- idtype: pmcid
+  value: PMC6579903
+authors:
+- authtype: Author
+  name: Hughes LE
+- authtype: Author
+  name: Henson RN
+- authtype: Author
+  name: Pereda E
+- authtype: Author
+  name: Bruña R
+- authtype: Author
+  name: López-Sanz D
+- authtype: Author
+  name: Quinn AJ
+- authtype: Author
+  name: Woolrich MW
+- authtype: Author
+  name: Nobre AC
+- authtype: Author
+  name: Rowe JB
+- authtype: Author
+  name: Maestú F
+- authtype: CollectiveName
+  name: the BioFIND Working Group
+epubdate: 2019 Jun 14
+fulljournalname: 'Alzheimer''s & Dementia : Diagnosis, Assessment & Disease Monitoring'
+issue: ''
+pages: 450-462
+pmclivedate: 2019/08/20
+printpubdate: ''
+pubdate: 2019 Jun 14
+sortdate: 2019/06/14 00:00
+source: Alzheimers Dement (Amst)
+title: 'Biomagnetic biomarkers for dementia: A pilot multicentre study with a recommended
+  methodological framework for magnetoencephalography'
+uid: '6579903'
+volume: '11'

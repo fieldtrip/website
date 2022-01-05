@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '31993002'
+- idtype: doi
+  value: 10.3389/fpsyg.2019.02838
+- idtype: pmcid
+  value: PMC6964796
+authors:
+- authtype: Author
+  name: Faro HK
+- authtype: Author
+  name: Machado DG
+- authtype: Author
+  name: Bortolotti H
+- authtype: Author
+  name: do Nascimento PH
+- authtype: Author
+  name: Moioli RC
+- authtype: Author
+  name: Elsangedy HM
+- authtype: Author
+  name: Fontes EB
+epubdate: 2020 Jan 9
+fulljournalname: Frontiers in Psychology
+issue: ''
+pages: '2838'
+pmclivedate: 2020/01/28
+printpubdate: ''
+pubdate: 2020 Jan 9
+sortdate: 2020/01/09 00:00
+source: Front Psychol
+title: Influence of Judo Experience on Neuroelectric Activity During a Selective Attention
+  Task
+uid: '6964796'
+volume: '10'

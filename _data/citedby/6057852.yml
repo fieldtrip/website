@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '29363844'
+- idtype: doi
+  value: 10.1111/ejn.13843
+- idtype: pmcid
+  value: PMC6057852
+- idtype: MID
+  value: NIHMS937086
+authors:
+- authtype: Author
+  name: Shatzer H
+- authtype: Author
+  name: Shen S
+- authtype: Author
+  name: Kerlin JR
+- authtype: Author
+  name: Pitt MA
+- authtype: Author
+  name: Shahin AJ
+epubdate: 2018 Feb 9
+fulljournalname: The European journal of neuroscience
+issue: '8'
+pages: 2836-2848
+pmclivedate: 2019/10/01
+printpubdate: 2018 Oct
+pubdate: 2018 Feb 9
+sortdate: 2018/02/09 00:00
+source: Eur J Neurosci
+title: Neurophysiology underlying influence of stimulus reliability on audiovisual
+  integration
+uid: '6057852'
+volume: '48'

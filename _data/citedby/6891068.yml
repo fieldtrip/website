@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '31641052'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1954-19.2019
+- idtype: pmcid
+  value: PMC6891068
+authors:
+- authtype: Author
+  name: Wöstmann M
+- authtype: Author
+  name: Alavash M
+- authtype: Author
+  name: Obleser J
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '49'
+pages: 9797-9805
+pmclivedate: 2020/06/04
+printpubdate: 2019 Dec 4
+pubdate: 2019 Dec 4
+sortdate: 2019/12/04 00:00
+source: J Neurosci
+title: Alpha Oscillations in the Human Brain Implement Distractor Suppression Independent
+  of Target Selection
+uid: '6891068'
+volume: '39'

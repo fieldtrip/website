@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '30276933'
+- idtype: doi
+  value: 10.1111/desc.12758
+- idtype: pmcid
+  value: PMC6443490
+- idtype: MID
+  value: NIHMS991024
+authors:
+- authtype: Author
+  name: Xie W
+- authtype: Author
+  name: McCormick SA
+- authtype: Author
+  name: Westerlund A
+- authtype: Author
+  name: Bowman LC
+- authtype: Author
+  name: Nelson CA
+epubdate: 2018 Oct 16
+fulljournalname: Developmental science
+issue: '3'
+pages: e12758
+pmclivedate: 2020/05/01
+printpubdate: 2019 May
+pubdate: 2018 Oct 16
+sortdate: 2018/10/16 00:00
+source: Dev Sci
+title: Neural Correlates of Facial Emotion Processing in Infancy
+uid: '6443490'
+volume: '22'

@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '31344371'
+- idtype: doi
+  value: 10.1016/j.biopsycho.2019.107732
+- idtype: pmcid
+  value: PMC6718351
+- idtype: MID
+  value: NIHMS1536119
+authors:
+- authtype: Author
+  name: Holcomb LA
+- authtype: Author
+  name: Huang S
+- authtype: Author
+  name: Cruz SM
+- authtype: Author
+  name: Marinkovic K
+epubdate: 2019 Jul 22
+fulljournalname: Biological psychology
+issue: ''
+pages: '107732'
+pmclivedate: 2020/09/01
+printpubdate: 2019 Sep
+pubdate: 2019 Jul 22
+sortdate: 2019/07/22 00:00
+source: Biol Psychol
+title: Neural oscillatory dynamics of inhibitory control in young adult binge drinkers
+uid: '6718351'
+volume: '146'

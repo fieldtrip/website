@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '22007165'
+- idtype: doi
+  value: 10.3389/fnhum.2011.00091
+- idtype: pmcid
+  value: PMC3188815
+authors:
+- authtype: Author
+  name: Whitmarsh S
+- authtype: Author
+  name: Nieuwenhuis IL
+- authtype: Author
+  name: Barendregt HP
+- authtype: Author
+  name: Jensen O
+epubdate: 2011 Oct 4
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '91'
+pmclivedate: 2011/10/17
+printpubdate: ''
+pubdate: 2011 Oct 4
+sortdate: 2011/10/04 00:00
+source: Front Hum Neurosci
+title: Sensorimotor Alpha Activity is Modulated in Response to the Observation of
+  Pain in Others
+uid: '3188815'
+volume: '5'

@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '25088693'
+- idtype: doi
+  value: 10.1016/j.jneumeth.2014.07.015
+- idtype: pmcid
+  value: PMC4383720
+- idtype: MID
+  value: NIHMS626690
+authors:
+- authtype: Author
+  name: Cottereau BR
+- authtype: Author
+  name: Ales JM
+- authtype: Author
+  name: Norcia AM
+epubdate: 2014 Aug 1
+fulljournalname: Journal of neuroscience methods
+issue: ''
+pages: 64-73
+pmclivedate: 2016/07/30
+printpubdate: 2015 Jul 30
+pubdate: 2014 Aug 1
+sortdate: 2014/08/01 00:00
+source: J Neurosci Methods
+title: How to use fMRI functional localizers to improve EEG/MEG source estimation
+uid: '4383720'
+volume: '250'

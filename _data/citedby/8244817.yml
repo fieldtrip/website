@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '33345686'
+- idtype: doi
+  value: 10.1080/14992027.2020.1860260
+- idtype: pmcid
+  value: PMC8244817
+- idtype: MID
+  value: NIHMS1713836
+authors:
+- authtype: Author
+  name: So W
+- authtype: Author
+  name: Smith SB
+epubdate: 2020 Dec 21
+fulljournalname: International journal of audiology
+issue: '11'
+pages: 875-884
+pmclivedate: ''
+printpubdate: 2021 Nov
+pubdate: 2020 Dec 21
+sortdate: 2020/12/21 00:00
+source: Int J Audiol
+title: Comparison of two cortical measures of binaural hearing acuity
+uid: '8244817'
+volume: '60'

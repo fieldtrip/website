@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '34283328'
+- idtype: doi
+  value: 10.1186/s40708-021-00135-3
+- idtype: pmcid
+  value: PMC8292498
+authors:
+- authtype: Author
+  name: Fabietti M
+- authtype: Author
+  name: Mahmud M
+- authtype: Author
+  name: Lotfi A
+- authtype: Author
+  name: Kaiser  MS
+- authtype: Author
+  name: Averna A
+- authtype: Author
+  name: Guggenmos DJ
+- authtype: Author
+  name: Nudo RJ
+- authtype: Author
+  name: Chiappalone M
+- authtype: Author
+  name: Chen J
+epubdate: 2021 Jul 20
+fulljournalname: Brain Informatics
+issue: '1'
+pages: '14'
+pmclivedate: 2021/08/05
+printpubdate: ''
+pubdate: 2021 Jul 20
+sortdate: 2021/07/20 00:00
+source: Brain Inform
+title: 'SANTIA: a Matlab-based open-source toolbox for artifact detection and removal
+  from extracellular neuronal signals'
+uid: '8292498'
+volume: '8'

@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '28367109'
+- idtype: doi
+  value: 10.3389/fnins.2017.00126
+- idtype: pmcid
+  value: PMC5355476
+authors:
+- authtype: Author
+  name: Ibáñez J
+- authtype: Author
+  name: Monge-Pereira E
+- authtype: Author
+  name: Molina-Rueda F
+- authtype: Author
+  name: Serrano JI
+- authtype: Author
+  name: del Castillo MD
+- authtype: Author
+  name: Cuesta-Gómez A
+- authtype: Author
+  name: Carratalá-Tejada M
+- authtype: Author
+  name: Cano-de-la-Cuerda R
+- authtype: Author
+  name: Alguacil-Diego IM
+- authtype: Author
+  name: Miangolarra-Page JC
+- authtype: Author
+  name: Pons JL
+epubdate: 2017 Mar 17
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '126'
+pmclivedate: 2017/03/31
+printpubdate: ''
+pubdate: 2017 Mar 17
+sortdate: 2017/03/17 00:00
+source: Front Neurosci
+title: 'Low Latency Estimation of Motor Intentions to Assist Reaching Movements along
+  Multiple Sessions in Chronic Stroke Patients: A Feasibility Study'
+uid: '5355476'
+volume: '11'

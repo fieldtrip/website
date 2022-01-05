@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '27066535'
+- idtype: doi
+  value: 10.1523/ENEURO.0020-16.2016
+- idtype: pmcid
+  value: PMC4821904
+authors:
+- authtype: Author
+  name: Zimmermann M
+- authtype: Author
+  name: Verhagen L
+- authtype: Author
+  name: de Lange FP
+- authtype: Author
+  name: Toni I
+epubdate: 2016 Apr 5
+fulljournalname: eNeuro
+issue: '2'
+pages: ENEURO.0020-16.2016
+pmclivedate: 2016/04/08
+printpubdate: ''
+pubdate: 2016 Apr 5
+sortdate: 2016/04/05 00:00
+source: eNeuro
+title: The Extrastriate Body Area Computes Desired Goal States during Action Planning
+uid: '4821904'
+volume: '3'

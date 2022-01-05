@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '32929036'
+- idtype: doi
+  value: 10.1073/pnas.2013432117
+- idtype: pmcid
+  value: PMC7533705
+authors:
+- authtype: Author
+  name: van Ede F
+- authtype: Author
+  name: Board AG
+- authtype: Author
+  name: Nobre AC
+epubdate: 2020 Sep 14
+fulljournalname: Proceedings of the National Academy of Sciences of the United States
+  of America
+issue: '39'
+pages: 24590-24598
+pmclivedate: 2020/10/13
+printpubdate: 2020 Sep 29
+pubdate: 2020 Sep 14
+sortdate: 2020/09/14 00:00
+source: Proc Natl Acad Sci U S A
+title: Goal-directed and stimulus-driven selection of internal representations
+uid: '7533705'
+volume: '117'

@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '33026425'
+- idtype: doi
+  value: 10.1093/cercor/bhaa267
+- idtype: pmcid
+  value: PMC7786352
+authors:
+- authtype: Author
+  name: Somervail R
+- authtype: Author
+  name: Zhang F
+- authtype: Author
+  name: Novembre G
+- authtype: Author
+  name: Bufacchi RJ
+- authtype: Author
+  name: Guo Y
+- authtype: Author
+  name: Crepaldi M
+- authtype: Author
+  name: Hu L
+- authtype: Author
+  name: Iannetti GD
+epubdate: 2020 Oct 7
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '2'
+pages: 949-960
+pmclivedate: 2021/01/12
+printpubdate: ''
+pubdate: 2020 Oct 7
+sortdate: 2020/10/07 00:00
+source: Cereb Cortex
+title: 'Waves of Change: Brain Sensitivity to Differential, not Absolute, Stimulus
+  Intensity is Conserved Across Humans and Rats'
+uid: '7786352'
+volume: '31'

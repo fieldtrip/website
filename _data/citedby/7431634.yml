@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '32848563'
+- idtype: doi
+  value: 10.3389/fnins.2020.00790
+- idtype: pmcid
+  value: PMC7431634
+authors:
+- authtype: Author
+  name: Musaeus CS
+- authtype: Author
+  name: Nielsen MS
+- authtype: Author
+  name: Musaeus JS
+- authtype: Author
+  name: Høgh P
+epubdate: 2020 Aug 11
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '790'
+pmclivedate: 2020/08/25
+printpubdate: ''
+pubdate: 2020 Aug 11
+sortdate: 2020/08/11 00:00
+source: Front Neurosci
+title: 'Electroencephalographic Cross-Frequency Coupling as a Sign of Disease Progression
+  in Patients With Mild Cognitive Impairment: A Pilot Study'
+uid: '7431634'
+volume: '14'

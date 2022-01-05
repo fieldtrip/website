@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '31736729'
+- idtype: doi
+  value: 10.3389/fnhum.2019.00381
+- idtype: pmcid
+  value: PMC6828612
+authors:
+- authtype: Author
+  name: Keute M
+- authtype: Author
+  name: Stenner MP
+- authtype: Author
+  name: Mueller MK
+- authtype: Author
+  name: Zaehle T
+- authtype: Author
+  name: Krauel K
+epubdate: 2019 Oct 29
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '381'
+pmclivedate: 2019/11/15
+printpubdate: ''
+pubdate: 2019 Oct 29
+sortdate: 2019/10/29 00:00
+source: Front Hum Neurosci
+title: Error-Related Dynamics of Reaction Time and Frontal Midline Theta Activity
+  in Attention Deficit Hyperactivity Disorder (ADHD) During a Subliminal Motor Priming
+  Task
+uid: '6828612'
+volume: '13'

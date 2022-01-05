@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '27903440'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2016.11.062
+- idtype: pmcid
+  value: PMC5315055
+authors:
+- authtype: Author
+  name: Keitel A
+- authtype: Author
+  name: Ince RA
+- authtype: Author
+  name: Gross J
+- authtype: Author
+  name: Kayser C
+epubdate: ''
+fulljournalname: Neuroimage
+issue: ''
+pages: 32-42
+pmclivedate: 2017/02/26
+printpubdate: 2017 Feb 15
+pubdate: 2017 Feb 15
+sortdate: 2017/02/15 00:00
+source: Neuroimage
+title: Auditory cortical delta-entrainment interacts with oscillatory power in multiple
+  fronto-parietal networks
+uid: '5315055'
+volume: '147'

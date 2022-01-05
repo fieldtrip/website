@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '23555945'
+- idtype: doi
+  value: 10.1371/journal.pone.0060291
+- idtype: pmcid
+  value: PMC3605387
+authors:
+- authtype: Author
+  name: Chen S
+- authtype: Author
+  name: Entakli J
+- authtype: Author
+  name: Bonnard M
+- authtype: Author
+  name: Berton E
+- authtype: Author
+  name: De Graaf JB
+epubdate: 2013 Mar 21
+fulljournalname: PLoS ONE
+issue: '3'
+pages: e60291
+pmclivedate: 2013/04/03
+printpubdate: ''
+pubdate: 2013 Mar 21
+sortdate: 2013/03/21 00:00
+source: PLoS One
+title: Functional Corticospinal Projections from Human Supplementary Motor Area Revealed
+  by Corticomuscular Coherence during Precise Grip Force Control
+uid: '3605387'
+volume: '8'

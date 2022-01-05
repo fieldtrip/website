@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '29885055'
+- idtype: doi
+  value: 10.1002/hbm.24226
+- idtype: pmcid
+  value: PMC6175429
+authors:
+- authtype: Author
+  name: Dima DC
+- authtype: Author
+  name: Perry G
+- authtype: Author
+  name: Messaritaki E
+- authtype: Author
+  name: Zhang J
+- authtype: Author
+  name: Singh KD
+epubdate: 2018 Jun 8
+fulljournalname: Human Brain Mapping
+issue: '10'
+pages: 3993-4006
+pmclivedate: 2018/10/19
+printpubdate: ''
+pubdate: 2018 Jun 8
+sortdate: 2018/06/08 00:00
+source: Hum Brain Mapp
+title: Spatiotemporal dynamics in human visual cortex rapidly encode the emotional
+  content of faces
+uid: '6175429'
+volume: '39'

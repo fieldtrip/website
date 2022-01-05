@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '34219311'
+- idtype: doi
+  value: 10.1002/hbm.25578
+- idtype: pmcid
+  value: PMC8410546
+authors:
+- authtype: Author
+  name: Tait L
+- authtype: Author
+  name: Özkan A
+- authtype: Author
+  name: Szul MJ
+- authtype: Author
+  name: Zhang J
+epubdate: 2021 Jul 5
+fulljournalname: Human Brain Mapping
+issue: '14'
+pages: 4685-4707
+pmclivedate: 2021/09/03
+printpubdate: ''
+pubdate: 2021 Jul 5
+sortdate: 2021/07/05 00:00
+source: Hum Brain Mapp
+title: 'A systematic evaluation of source reconstruction of resting MEG of the human
+  brain with a new high‐resolution atlas: Performance, precision, and parcellation'
+uid: '8410546'
+volume: '42'

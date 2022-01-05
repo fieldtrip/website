@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '25781470'
+- idtype: doi
+  value: 10.1371/journal.pone.0118009
+- idtype: pmcid
+  value: PMC4364617
+authors:
+- authtype: Author
+  name: Varnet L
+- authtype: Author
+  name: Knoblauch K
+- authtype: Author
+  name: Serniclaes W
+- authtype: Author
+  name: Meunier F
+- authtype: Author
+  name: Hoen M
+epubdate: 2015 Mar 17
+fulljournalname: PLoS ONE
+issue: '3'
+pages: e0118009
+pmclivedate: 2015/03/23
+printpubdate: ''
+pubdate: 2015 Mar 17
+sortdate: 2015/03/17 00:00
+source: PLoS One
+title: 'A Psychophysical Imaging Method Evidencing Auditory Cue Extraction during
+  Speech Perception: A Group Analysis of Auditory Classification Images'
+uid: '4364617'
+volume: '10'

@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '26408799'
+- idtype: doi
+  value: 10.1093/cercor/bhv212
+- idtype: pmcid
+  value: PMC4635927
+authors:
+- authtype: Author
+  name: Leske S
+- authtype: Author
+  name: Ruhnau P
+- authtype: Author
+  name: Frey J
+- authtype: Author
+  name: Lithari C
+- authtype: Author
+  name: Müller N
+- authtype: Author
+  name: Hartmann T
+- authtype: Author
+  name: Weisz N
+epubdate: 2015 Sep 25
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '12'
+pages: 4898-4907
+pmclivedate: 2015/11/09
+printpubdate: 2015 Dec
+pubdate: 2015 Sep 25
+sortdate: 2015/09/25 00:00
+source: Cereb Cortex
+title: Prestimulus Network Integration of Auditory Cortex Predisposes Near-Threshold
+  Perception Independently of Local Excitability
+uid: '4635927'
+volume: '25'

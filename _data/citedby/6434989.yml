@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '30941024'
+- idtype: doi
+  value: 10.3389/fnhum.2019.00082
+- idtype: pmcid
+  value: PMC6434989
+authors:
+- authtype: Author
+  name: Bianchi B
+- authtype: Author
+  name: Shalom DE
+- authtype: Author
+  name: Kamienkowski JE
+epubdate: 2019 Mar 18
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '82'
+pmclivedate: 2019/04/02
+printpubdate: ''
+pubdate: 2019 Mar 18
+sortdate: 2019/03/18 00:00
+source: Front Hum Neurosci
+title: 'Predicting Known Sentences: Neural Basis of Proverb Reading Using Non-parametric
+  Statistical Testing and Mixed-Effects Models'
+uid: '6434989'
+volume: '13'

@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '29773984'
+- idtype: doi
+  value: 10.3389/fnhum.2018.00175
+- idtype: pmcid
+  value: PMC5943601
+authors:
+- authtype: Author
+  name: Jiang J
+- authtype: Author
+  name: Bailey K
+- authtype: Author
+  name: Xiao X
+epubdate: 2018 May 3
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '175'
+pmclivedate: 2018/05/17
+printpubdate: ''
+pubdate: 2018 May 3
+sortdate: 2018/05/03 00:00
+source: Front Hum Neurosci
+title: Midfrontal Theta and Posterior Parietal Alpha Band Oscillations Support Conflict
+  Resolution in a Masked Affective Priming Task
+uid: '5943601'
+volume: '12'

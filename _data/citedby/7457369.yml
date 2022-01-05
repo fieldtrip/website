@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '32492509'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2020.117001
+- idtype: pmcid
+  value: PMC7457369
+- idtype: MID
+  value: NIHMS1619265
+authors:
+- authtype: Author
+  name: Nentwich M
+- authtype: Author
+  name: Ai L
+- authtype: Author
+  name: Madsen J
+- authtype: Author
+  name: Telesford QK
+- authtype: Author
+  name: Haufe S
+- authtype: Author
+  name: Milham MP
+- authtype: Author
+  name: Parra LC
+epubdate: 2020 May 31
+fulljournalname: NeuroImage
+issue: ''
+pages: '117001'
+pmclivedate: 2020/09/01
+printpubdate: 2020 Sep
+pubdate: 2020 May 31
+sortdate: 2020/05/31 00:00
+source: Neuroimage
+title: Functional connectivity of EEG is subject-specific, associated with phenotype,
+  and different from fMRI
+uid: '7457369'
+volume: '218'

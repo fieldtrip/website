@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '31366985'
+- idtype: doi
+  value: 10.1038/s41598-019-47640-4
+- idtype: pmcid
+  value: PMC6668476
+authors:
+- authtype: Author
+  name: Job X
+- authtype: Author
+  name: Golemme M
+- authtype: Author
+  name: Bhattacharya J
+- authtype: Author
+  name: Cappelletti M
+- authtype: Author
+  name: de Fockert J
+- authtype: Author
+  name: van Velzen J
+epubdate: 2019 Jul 31
+fulljournalname: Scientific Reports
+issue: ''
+pages: '11084'
+pmclivedate: 2019/08/06
+printpubdate: ''
+pubdate: 2019 Jul 31
+sortdate: 2019/07/31 00:00
+source: Sci Rep
+title: The influence of motor preparation on the processing of action-relevant visual
+  features
+uid: '6668476'
+volume: '9'

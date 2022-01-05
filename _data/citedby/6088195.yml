@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '30127710'
+- idtype: doi
+  value: 10.3389/fnins.2018.00506
+- idtype: pmcid
+  value: PMC6088195
+authors:
+- authtype: Author
+  name: Dimitriadis SI
+- authtype: Author
+  name: Routley B
+- authtype: Author
+  name: Linden DE
+- authtype: Author
+  name: Singh KD
+epubdate: 2018 Aug 3
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '506'
+pmclivedate: 2018/08/20
+printpubdate: ''
+pubdate: 2018 Aug 3
+sortdate: 2018/08/03 00:00
+source: Front Neurosci
+title: 'Reliability of Static and Dynamic Network Metrics in the Resting-State: A
+  MEG-Beamformed Connectivity Analysis'
+uid: '6088195'
+volume: '12'

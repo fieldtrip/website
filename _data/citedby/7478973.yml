@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '32901008'
+- idtype: doi
+  value: 10.1038/s41597-020-00621-z
+- idtype: pmcid
+  value: PMC7478973
+authors:
+- authtype: Author
+  name: Hwang E
+- authtype: Author
+  name: Han HB
+- authtype: Author
+  name: Kim JY
+- authtype: Author
+  name: Choi JH
+epubdate: 2020 Sep 8
+fulljournalname: Scientific Data
+issue: ''
+pages: '288'
+pmclivedate: 2020/09/21
+printpubdate: ''
+pubdate: 2020 Sep 8
+sortdate: 2020/09/08 00:00
+source: Sci Data
+title: High-density EEG of auditory steady-state responses during stimulation of basal
+  forebrain parvalbumin neurons
+uid: '7478973'
+volume: '7'

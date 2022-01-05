@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '34086558'
+- idtype: doi
+  value: 10.7554/eLife.65118
+- idtype: pmcid
+  value: PMC8177885
+authors:
+- authtype: Author
+  name: Yuan P
+- authtype: Author
+  name: Hu R
+- authtype: Author
+  name: Zhang X
+- authtype: Author
+  name: Wang Y
+- authtype: Author
+  name: Jiang Y
+epubdate: 2021 Jun 4
+fulljournalname: eLife
+issue: ''
+pages: e65118
+pmclivedate: 2021/06/07
+printpubdate: ''
+pubdate: 2021 Jun 4
+sortdate: 2021/06/04 00:00
+source: eLife
+title: Cortical entrainment to hierarchical contextual rhythms recomposes dynamic
+  attending in visual perception
+uid: '8177885'
+volume: '10'

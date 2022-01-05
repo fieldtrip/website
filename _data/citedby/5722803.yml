@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '29255408'
+- idtype: doi
+  value: 10.3389/fnhum.2017.00576
+- idtype: pmcid
+  value: PMC5722803
+authors:
+- authtype: Author
+  name: von Lautz AH
+- authtype: Author
+  name: Herding J
+- authtype: Author
+  name: Ludwig S
+- authtype: Author
+  name: Nierhaus T
+- authtype: Author
+  name: Maess B
+- authtype: Author
+  name: Villringer A
+- authtype: Author
+  name: Blankenburg F
+epubdate: 2017 Dec 4
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '576'
+pmclivedate: 2017/12/18
+printpubdate: ''
+pubdate: 2017 Dec 4
+sortdate: 2017/12/04 00:00
+source: Front Hum Neurosci
+title: Gamma and Beta Oscillations in Human MEG Encode the Contents of Vibrotactile
+  Working Memory
+uid: '5722803'
+volume: '11'

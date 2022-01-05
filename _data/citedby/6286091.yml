@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '30138591'
+- idtype: doi
+  value: 10.1016/j.neuron.2018.07.032
+- idtype: pmcid
+  value: PMC6286091
+- idtype: MID
+  value: NIHMS990410
+authors:
+- authtype: Author
+  name: Helfrich RF
+- authtype: Author
+  name: Fiebelkorn IC
+- authtype: Author
+  name: Szczepanski SM
+- authtype: Author
+  name: Lin JJ
+- authtype: Author
+  name: Parvizi J
+- authtype: Author
+  name: Knight RT
+- authtype: Author
+  name: Kastner S
+epubdate: ''
+fulljournalname: Neuron
+issue: '4'
+pages: 854-865.e5
+pmclivedate: 2019/08/22
+printpubdate: 2018 Aug 22
+pubdate: 2018 Aug 22
+sortdate: 2018/08/22 00:00
+source: Neuron
+title: Neural mechanisms of sustained attention are rhythmic
+uid: '6286091'
+volume: '99'

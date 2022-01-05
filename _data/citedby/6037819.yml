@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '30018530'
+- idtype: doi
+  value: 10.3389/fnins.2018.00433
+- idtype: pmcid
+  value: PMC6037819
+authors:
+- authtype: Author
+  name: van Schouwenburg MR
+- authtype: Author
+  name: Sörensen LK
+- authtype: Author
+  name: de Klerk R
+- authtype: Author
+  name: Reteig LC
+- authtype: Author
+  name: Slagter HA
+epubdate: 2018 Jul 3
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '433'
+pmclivedate: 2018/07/17
+printpubdate: ''
+pubdate: 2018 Jul 3
+sortdate: 2018/07/03 00:00
+source: Front Neurosci
+title: No Differential Effects of Two Different Alpha-Band Electrical Stimulation
+  Protocols Over Fronto-Parietal Regions on Spatial Attention
+uid: '6037819'
+volume: '12'

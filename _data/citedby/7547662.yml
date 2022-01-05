@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '33037209'
+- idtype: doi
+  value: 10.1038/s41467-020-18826-6
+- idtype: pmcid
+  value: PMC7547662
+authors:
+- authtype: Author
+  name: Wilming N
+- authtype: Author
+  name: Murphy PR
+- authtype: Author
+  name: Meyniel F
+- authtype: Author
+  name: Donner TH
+epubdate: 2020 Oct 9
+fulljournalname: Nature Communications
+issue: ''
+pages: '5109'
+pmclivedate: 2020/10/19
+printpubdate: ''
+pubdate: 2020 Oct 9
+sortdate: 2020/10/09 00:00
+source: Nat Commun
+title: Large-scale dynamics of perceptual decision information across human cortex
+uid: '7547662'
+volume: '11'

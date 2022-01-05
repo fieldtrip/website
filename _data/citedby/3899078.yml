@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '24465679'
+- idtype: doi
+  value: 10.1371/journal.pone.0085748
+- idtype: pmcid
+  value: PMC3899078
+authors:
+- authtype: Author
+  name: McFadden KL
+- authtype: Author
+  name: Steinmetz SE
+- authtype: Author
+  name: Carroll AM
+- authtype: Author
+  name: Simon ST
+- authtype: Author
+  name: Wallace A
+- authtype: Author
+  name: Rojas DC
+epubdate: 2014 Jan 22
+fulljournalname: PLoS ONE
+issue: '1'
+pages: e85748
+pmclivedate: 2014/01/24
+printpubdate: ''
+pubdate: 2014 Jan 22
+sortdate: 2014/01/22 00:00
+source: PLoS One
+title: Test-Retest Reliability of the 40 Hz EEG Auditory Steady-State Response
+uid: '3899078'
+volume: '9'

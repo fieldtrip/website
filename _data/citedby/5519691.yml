@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '28729738'
+- idtype: doi
+  value: 10.1038/s41598-017-06477-5
+- idtype: pmcid
+  value: PMC5519691
+authors:
+- authtype: Author
+  name: Jafarpour A
+- authtype: Author
+  name: Piai V
+- authtype: Author
+  name: Lin JJ
+- authtype: Author
+  name: Knight RT
+epubdate: 2017 Jul 20
+fulljournalname: Scientific Reports
+issue: ''
+pages: '5959'
+pmclivedate: 2017/07/26
+printpubdate: ''
+pubdate: 2017 Jul 20
+sortdate: 2017/07/20 00:00
+source: Sci Rep
+title: Human hippocampal pre-activation predicts behavior
+uid: '5519691'
+volume: '7'

@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '27442445'
+- idtype: doi
+  value: 10.1371/journal.pone.0159429
+- idtype: pmcid
+  value: PMC4956258
+authors:
+- authtype: Author
+  name: del Giudice R
+- authtype: Author
+  name: Blume C
+- authtype: Author
+  name: Wislowska M
+- authtype: Author
+  name: Wielek T
+- authtype: Author
+  name: Heib DP
+- authtype: Author
+  name: Schabus M
+epubdate: 2016 Jul 21
+fulljournalname: PLoS ONE
+issue: '7'
+pages: e0159429
+pmclivedate: 2016/08/08
+printpubdate: ''
+pubdate: 2016 Jul 21
+sortdate: 2016/07/21 00:00
+source: PLoS One
+title: 'The Voice of Anger: Oscillatory EEG Responses to Emotional Prosody'
+uid: '4956258'
+volume: '11'

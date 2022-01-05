@@ -1,0 +1,24 @@
+articleids:
+- idtype: pmid
+  value: '30814942'
+- idtype: doi
+  value: 10.3389/fnhum.2019.00033
+- idtype: pmcid
+  value: PMC6381075
+authors:
+- authtype: Author
+  name: Mapelli I
+- authtype: Author
+  name: Özkurt TE
+epubdate: 2019 Feb 13
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '33'
+pmclivedate: 2019/02/27
+printpubdate: ''
+pubdate: 2019 Feb 13
+sortdate: 2019/02/13 00:00
+source: Front Hum Neurosci
+title: Brain Oscillatory Correlates of Visual Short-Term Memory Errors
+uid: '6381075'
+volume: '13'

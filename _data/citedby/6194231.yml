@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '30369900'
+- idtype: doi
+  value: 10.3389/fpsyg.2018.01960
+- idtype: pmcid
+  value: PMC6194231
+authors:
+- authtype: Author
+  name: White EJ
+- authtype: Author
+  name: Nayman C
+- authtype: Author
+  name: Dunkley BT
+- authtype: Author
+  name: Keller AE
+- authtype: Author
+  name: Valiante TA
+- authtype: Author
+  name: Pang EW
+epubdate: 2018 Oct 12
+fulljournalname: Frontiers in Psychology
+issue: ''
+pages: '1960'
+pmclivedate: 2018/10/26
+printpubdate: ''
+pubdate: 2018 Oct 12
+sortdate: 2018/10/12 00:00
+source: Front Psychol
+title: Addressing the Language Binding Problem With Dynamic Functional Connectivity
+  During Meaningful Spoken Language Comprehension
+uid: '6194231'
+volume: '9'

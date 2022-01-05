@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '30082719'
+- idtype: doi
+  value: 10.1038/s41598-018-30105-5
+- idtype: pmcid
+  value: PMC6079006
+authors:
+- authtype: Author
+  name: Farthouat J
+- authtype: Author
+  name: Atas A
+- authtype: Author
+  name: Wens V
+- authtype: Author
+  name: De Tiege X
+- authtype: Author
+  name: Peigneux P
+epubdate: 2018 Aug 6
+fulljournalname: Scientific Reports
+issue: ''
+pages: '11719'
+pmclivedate: 2018/08/09
+printpubdate: ''
+pubdate: 2018 Aug 6
+sortdate: 2018/08/06 00:00
+source: Sci Rep
+title: Lack of frequency-tagged magnetic responses suggests statistical regularities
+  remain undetected during NREM sleep
+uid: '6079006'
+volume: '8'

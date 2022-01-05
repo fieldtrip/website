@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '31745223'
+- idtype: doi
+  value: 10.1038/s41598-019-53565-9
+- idtype: pmcid
+  value: PMC6864053
+authors:
+- authtype: Author
+  name: Tangwiriyasakul C
+- authtype: Author
+  name: Premoli I
+- authtype: Author
+  name: Spyrou L
+- authtype: Author
+  name: Chin RF
+- authtype: Author
+  name: Escudero J
+- authtype: Author
+  name: Richardson MP
+epubdate: 2019 Nov 19
+fulljournalname: Scientific Reports
+issue: ''
+pages: '17057'
+pmclivedate: 2019/12/03
+printpubdate: ''
+pubdate: 2019 Nov 19
+sortdate: 2019/11/19 00:00
+source: Sci Rep
+title: Tensor decomposition of TMS-induced EEG oscillations reveals data-driven profiles
+  of antiepileptic drug effects
+uid: '6864053'
+volume: '9'

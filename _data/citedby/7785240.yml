@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '33400717'
+- idtype: doi
+  value: 10.1371/journal.pone.0244756
+- idtype: pmcid
+  value: PMC7785240
+authors:
+- authtype: Author
+  name: Choe AS
+- authtype: Author
+  name: Tang B
+- authtype: Author
+  name: Smith KR
+- authtype: Author
+  name: Honari H
+- authtype: Author
+  name: Lindquist MA
+- authtype: Author
+  name: Caffo BS
+- authtype: Author
+  name: Pekar JJ
+epubdate: 2021 Jan 5
+fulljournalname: PLoS ONE
+issue: '1'
+pages: e0244756
+pmclivedate: 2021/01/13
+printpubdate: ''
+pubdate: 2021 Jan 5
+sortdate: 2021/01/05 00:00
+source: PLoS One
+title: Phase-locking of resting-state brain networks with the gastric basal electrical
+  rhythm
+uid: '7785240'
+volume: '16'

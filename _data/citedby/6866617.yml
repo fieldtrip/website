@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '29717524'
+- idtype: doi
+  value: 10.1002/hbm.24198
+- idtype: pmcid
+  value: PMC6866617
+authors:
+- authtype: Author
+  name: Ludwig S
+- authtype: Author
+  name: Herding J
+- authtype: Author
+  name: Blankenburg F
+epubdate: 2018 May 2
+fulljournalname: Human Brain Mapping
+issue: '9'
+pages: 3611-3624
+pmclivedate: 2020/06/12
+printpubdate: ''
+pubdate: 2018 May 2
+sortdate: 2018/05/02 00:00
+source: Hum Brain Mapp
+title: Oscillatory EEG signatures of postponed somatosensory decisions
+uid: '6866617'
+volume: '39'

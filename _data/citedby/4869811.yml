@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '26045564'
+- idtype: doi
+  value: 10.1093/cercor/bhv128
+- idtype: pmcid
+  value: PMC4869811
+authors:
+- authtype: Author
+  name: Skoblenick KJ
+- authtype: Author
+  name: Womelsdorf T
+- authtype: Author
+  name: Everling S
+epubdate: 2015 Jun 3
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '6'
+pages: 2743-2752
+pmclivedate: 2017/06/01
+printpubdate: 2016 Jun
+pubdate: 2015 Jun 3
+sortdate: 2015/06/03 00:00
+source: Cereb Cortex
+title: Ketamine Alters Outcome-Related Local Field Potentials in Monkey Prefrontal
+  Cortex
+uid: '4869811'
+volume: '26'

@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '26150963'
+- idtype: doi
+  value: 10.1016/j.mex.2014.10.008
+- idtype: pmcid
+  value: PMC4473032
+authors:
+- authtype: Author
+  name: Little G
+- authtype: Author
+  name: Boe S
+- authtype: Author
+  name: Bardouille T
+epubdate: 2014 Nov 3
+fulljournalname: MethodsX
+issue: ''
+pages: 275-282
+pmclivedate: 2015/07/06
+printpubdate: ''
+pubdate: 2014 Nov 3
+sortdate: 2014/11/03 00:00
+source: MethodsX
+title: Head movement compensation in real-time magnetoencephalographic recordings
+uid: '4473032'
+volume: '1'

@@ -1,0 +1,69 @@
+articleids:
+- idtype: pmid
+  value: '30899211'
+- idtype: doi
+  value: 10.3389/fnins.2019.00053
+- idtype: pmcid
+  value: PMC6417367
+authors:
+- authtype: Author
+  name: Remsik AB
+- authtype: Author
+  name: Williams L Jr
+- authtype: Author
+  name: Gjini K
+- authtype: Author
+  name: Dodd K
+- authtype: Author
+  name: Thoma J
+- authtype: Author
+  name: Jacobson T
+- authtype: Author
+  name: Walczak M
+- authtype: Author
+  name: McMillan M
+- authtype: Author
+  name: Rajan S
+- authtype: Author
+  name: Young BM
+- authtype: Author
+  name: Nigogosyan Z
+- authtype: Author
+  name: Advani H
+- authtype: Author
+  name: Mohanty R
+- authtype: Author
+  name: Tellapragada N
+- authtype: Author
+  name: Allen J
+- authtype: Author
+  name: Mazrooyisebdani M
+- authtype: Author
+  name: Walton LM
+- authtype: Author
+  name: van Kan PL
+- authtype: Author
+  name: Kang TJ
+- authtype: Author
+  name: Sattin JA
+- authtype: Author
+  name: Nair VA
+- authtype: Author
+  name: Edwards DF
+- authtype: Author
+  name: Williams JC
+- authtype: Author
+  name: Prabhakaran V
+epubdate: 2019 Mar 6
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '53'
+pmclivedate: 2019/03/21
+printpubdate: ''
+pubdate: 2019 Mar 6
+sortdate: 2019/03/06 00:00
+source: Front Neurosci
+title: Ipsilesional Mu Rhythm Desynchronization and Changes in Motor Behavior Following
+  Post Stroke BCI Intervention for Motor Rehabilitation
+uid: '6417367'
+volume: '13'

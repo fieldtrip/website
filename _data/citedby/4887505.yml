@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '27313555'
+- idtype: doi
+  value: 10.3389/fpsyg.2016.00822
+- idtype: pmcid
+  value: PMC4887505
+authors:
+- authtype: Author
+  name: Naber M
+- authtype: Author
+  name: Vedder A
+- authtype: Author
+  name: Brown SB
+- authtype: Author
+  name: Nieuwenhuis S
+epubdate: 2016 Jun 1
+fulljournalname: Frontiers in Psychology
+issue: ''
+pages: '822'
+pmclivedate: 2016/06/16
+printpubdate: ''
+pubdate: 2016 Jun 1
+sortdate: 2016/06/01 00:00
+source: Front Psychol
+title: Speed and Lateral Inhibition of Stimulus Processing Contribute to Individual
+  Differences in Stroop-Task Performance
+uid: '4887505'
+volume: '7'

@@ -1,0 +1,45 @@
+articleids:
+- idtype: pmid
+  value: '25161892'
+- idtype: doi
+  value: 10.1016/j.nicl.2014.06.012
+- idtype: pmcid
+  value: PMC4141980
+authors:
+- authtype: Author
+  name: Singh H
+- authtype: Author
+  name: Cooper RJ
+- authtype: Author
+  name: Wai Lee C
+- authtype: Author
+  name: Dempsey L
+- authtype: Author
+  name: Edwards A
+- authtype: Author
+  name: Brigadoi S
+- authtype: Author
+  name: Airantzis D
+- authtype: Author
+  name: Everdell N
+- authtype: Author
+  name: Michell A
+- authtype: Author
+  name: Holder D
+- authtype: Author
+  name: Hebden JC
+- authtype: Author
+  name: Austin T
+epubdate: 2014 Jul 6
+fulljournalname: 'NeuroImage : Clinical'
+issue: ''
+pages: 256-265
+pmclivedate: 2014/08/26
+printpubdate: ''
+pubdate: 2014 Jul 6
+sortdate: 2014/07/06 00:00
+source: Neuroimage Clin
+title: 'Mapping cortical haemodynamics during neonatal seizures using diffuse optical
+  tomography: A case study'
+uid: '4141980'
+volume: '5'

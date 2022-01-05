@@ -1,0 +1,38 @@
+articleids:
+- idtype: pmid
+  value: '32954306'
+- idtype: doi
+  value: 10.1093/braincomms/fcaa056
+- idtype: pmcid
+  value: PMC7425403
+authors:
+- authtype: Author
+  name: Gouveris H
+- authtype: Author
+  name: Bahr K
+- authtype: Author
+  name: Schmitt E
+- authtype: Author
+  name: Abriani A
+- authtype: Author
+  name: Boekstegers T
+- authtype: Author
+  name: Fassnacht S
+- authtype: Author
+  name: Huppertz T
+- authtype: Author
+  name: Groppa S
+- authtype: Author
+  name: Muthuraman M
+epubdate: 2020 May 11
+fulljournalname: Brain Communications
+issue: '1'
+pages: fcaa056
+pmclivedate: 2020/09/17
+printpubdate: ''
+pubdate: 2020 May 11
+sortdate: 2020/05/11 00:00
+source: Brain Commun
+title: Corticoperipheral neuromuscular disconnection in obstructive sleep apnoea
+uid: '7425403'
+volume: '2'

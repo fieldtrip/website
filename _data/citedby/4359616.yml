@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '25562827'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2014.12.065
+- idtype: pmcid
+  value: PMC4359616
+authors:
+- authtype: Author
+  name: Hauswald A
+- authtype: Author
+  name: Übelacker T
+- authtype: Author
+  name: Leske S
+- authtype: Author
+  name: Weisz N
+epubdate: ''
+fulljournalname: Neuroimage
+issue: ''
+pages: 265-273
+pmclivedate: 2015/03/31
+printpubdate: 2015 Mar
+pubdate: 2015 Mar
+sortdate: 2015/03/01 00:00
+source: Neuroimage
+title: 'What it means to be Zen: Marked modulations of local and interareal synchronization
+  during open monitoring meditation'
+uid: '4359616'
+volume: '108'

@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '33828478'
+- idtype: doi
+  value: 10.3389/fnagi.2021.643132
+- idtype: pmcid
+  value: PMC8019720
+authors:
+- authtype: Author
+  name: Bootsma JM
+- authtype: Author
+  name: Caljouw SR
+- authtype: Author
+  name: Veldman MP
+- authtype: Author
+  name: Maurits NM
+- authtype: Author
+  name: Rothwell JC
+- authtype: Author
+  name: Hortobágyi T
+epubdate: 2021 Mar 22
+fulljournalname: Frontiers in Aging Neuroscience
+issue: ''
+pages: '643132'
+pmclivedate: 2021/04/06
+printpubdate: ''
+pubdate: 2021 Mar 22
+sortdate: 2021/03/22 00:00
+source: Front Aging Neurosci
+title: Neural Correlates of Motor Skill Learning Are Dependent on Both Age and Task
+  Difficulty
+uid: '8019720'
+volume: '13'

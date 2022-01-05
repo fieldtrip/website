@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '28580720'
+- idtype: doi
+  value: 10.1002/hbm.23663
+- idtype: pmcid
+  value: PMC6867064
+authors:
+- authtype: Author
+  name: Kajal DS
+- authtype: Author
+  name: Braun C
+- authtype: Author
+  name: Mellinger J
+- authtype: Author
+  name: Sacchet MD
+- authtype: Author
+  name: Ruiz S
+- authtype: Author
+  name: Fetz E
+- authtype: Author
+  name: Birbaumer N
+- authtype: Author
+  name: Sitaram R
+epubdate: 2017 Jun 5
+fulljournalname: Human Brain Mapping
+issue: '9'
+pages: 4353-4369
+pmclivedate: 2020/06/12
+printpubdate: ''
+pubdate: 2017 Jun 5
+sortdate: 2017/06/05 00:00
+source: Hum Brain Mapp
+title: 'Learned control of inter‐hemispheric connectivity: Effects on bimanual motor
+  performance'
+uid: '6867064'
+volume: '38'

@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '30574083'
+- idtype: doi
+  value: 10.3389/fncom.2018.00096
+- idtype: pmcid
+  value: PMC6291451
+authors:
+- authtype: Author
+  name: Tian R
+- authtype: Author
+  name: Yang Y
+- authtype: Author
+  name: van der Helm FC
+- authtype: Author
+  name: Dewald JP
+epubdate: 2018 Dec 6
+fulljournalname: Frontiers in Computational Neuroscience
+issue: ''
+pages: '96'
+pmclivedate: 2018/12/20
+printpubdate: ''
+pubdate: 2018 Dec 6
+sortdate: 2018/12/06 00:00
+source: Front Comput Neurosci
+title: A Novel Approach for Modeling Neural Responses to Joint Perturbations Using
+  the NARMAX Method and a Hierarchical Neural Network
+uid: '6291451'
+volume: '12'

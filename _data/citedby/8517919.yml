@@ -1,0 +1,51 @@
+articleids:
+- idtype: pmid
+  value: '34653838'
+- idtype: doi
+  value: 10.1016/j.nicl.2021.102841
+- idtype: pmcid
+  value: PMC8517919
+authors:
+- authtype: Author
+  name: Rier L
+- authtype: Author
+  name: Zamyadi R
+- authtype: Author
+  name: Zhang J
+- authtype: Author
+  name: Emami Z
+- authtype: Author
+  name: Seedat ZA
+- authtype: Author
+  name: Mocanu S
+- authtype: Author
+  name: Gascoyne LE
+- authtype: Author
+  name: Allen CM
+- authtype: Author
+  name: Scadding JW
+- authtype: Author
+  name: Furlong PL
+- authtype: Author
+  name: Gooding-Williams G
+- authtype: Author
+  name: Woolrich MW
+- authtype: Author
+  name: Evangelou N
+- authtype: Author
+  name: Brookes MJ
+- authtype: Author
+  name: Dunkley BT
+epubdate: 2021 Oct 1
+fulljournalname: 'NeuroImage : Clinical'
+issue: ''
+pages: '102841'
+pmclivedate: 2021/10/21
+printpubdate: ''
+pubdate: 2021 Oct 1
+sortdate: 2021/10/01 00:00
+source: Neuroimage Clin
+title: Mild traumatic brain injury impairs the coordination of intrinsic and motor-related
+  neural dynamics
+uid: '8517919'
+volume: '32'

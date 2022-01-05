@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '32337586'
+- idtype: doi
+  value: 10.1093/scan/nsaa056
+- idtype: pmcid
+  value: PMC7812620
+authors:
+- authtype: Author
+  name: Heggli OA
+- authtype: Author
+  name: Konvalinka I
+- authtype: Author
+  name: Cabral J
+- authtype: Author
+  name: Brattico E
+- authtype: Author
+  name: Kringelbach ML
+- authtype: Author
+  name: Vuust P
+epubdate: 2020 Apr 27
+fulljournalname: Social Cognitive and Affective Neuroscience
+issue: 1-2
+pages: 19-30
+pmclivedate: 2021/01/25
+printpubdate: ''
+pubdate: 2020 Apr 27
+sortdate: 2020/04/27 00:00
+source: Soc Cogn Affect Neurosci
+title: Transient brain networks underlying interpersonal strategies during synchronized
+  action
+uid: '7812620'
+volume: '16'

@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '32379389'
+- idtype: doi
+  value: 10.1002/hbm.24975
+- idtype: pmcid
+  value: PMC7294059
+authors:
+- authtype: Author
+  name: Raffin E
+- authtype: Author
+  name: Harquel S
+- authtype: Author
+  name: Passera B
+- authtype: Author
+  name: Chauvin A
+- authtype: Author
+  name: Bougerol T
+- authtype: Author
+  name: David O
+epubdate: 2020 May 7
+fulljournalname: Human Brain Mapping
+issue: '10'
+pages: 2741-2761
+pmclivedate: 2020/06/15
+printpubdate: ''
+pubdate: 2020 May 7
+sortdate: 2020/05/07 00:00
+source: Hum Brain Mapp
+title: Probing regional cortical excitability via input–output properties using transcranial
+  magnetic stimulation and electroencephalography coupling
+uid: '7294059'
+volume: '41'

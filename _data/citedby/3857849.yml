@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '24349088'
+- idtype: doi
+  value: 10.1371/journal.pone.0081553
+- idtype: pmcid
+  value: PMC3857849
+authors:
+- authtype: Author
+  name: Drakesmith M
+- authtype: Author
+  name: El-Deredy W
+- authtype: Author
+  name: Welbourne S
+epubdate: 2013 Dec 2
+fulljournalname: PLoS ONE
+issue: '12'
+pages: e81553
+pmclivedate: 2013/12/12
+printpubdate: ''
+pubdate: 2013 Dec 2
+sortdate: 2013/12/02 00:00
+source: PLoS One
+title: Reconstructing Coherent Networks from Electroencephalography and Magnetoencephalography
+  with Reduced Contamination from Volume Conduction or Magnetic Field Spread
+uid: '3857849'
+volume: '8'

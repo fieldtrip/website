@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '34469696'
+- idtype: doi
+  value: 10.1152/jn.00068.2021
+- idtype: pmcid
+  value: PMC8560423
+authors:
+- authtype: Author
+  name: McFerren A
+- authtype: Author
+  name: Riddle J
+- authtype: Author
+  name: Walker C
+- authtype: Author
+  name: Buse JB
+- authtype: Author
+  name: Frohlich F
+epubdate: 2021 Sep 1
+fulljournalname: Journal of Neurophysiology
+issue: '4'
+pages: 1221-1233
+pmclivedate: ''
+printpubdate: 2021 Oct 1
+pubdate: 2021 Sep 1
+sortdate: 2021/09/01 00:00
+source: J Neurophysiol
+title: 'Causal role of frontal-midline theta in cognitive effort: a pilot study'
+uid: '8560423'
+volume: '126'

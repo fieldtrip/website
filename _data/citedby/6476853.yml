@@ -1,0 +1,38 @@
+articleids:
+- idtype: pmid
+  value: '30895423'
+- idtype: doi
+  value: 10.1007/s10548-019-00703-1
+- idtype: pmcid
+  value: PMC6476853
+authors:
+- authtype: Author
+  name: Foley E
+- authtype: Author
+  name: Cross JH
+- authtype: Author
+  name: Thai NJ
+- authtype: Author
+  name: Walsh AR
+- authtype: Author
+  name: Bill P
+- authtype: Author
+  name: Furlong P
+- authtype: Author
+  name: Wood AG
+- authtype: Author
+  name: Cerquiglini A
+- authtype: Author
+  name: Seri S
+epubdate: 2019 Mar 20
+fulljournalname: Brain Topography
+issue: '3'
+pages: 492-503
+pmclivedate: 2019/05/14
+printpubdate: '2019'
+pubdate: 2019 Mar 20
+sortdate: 2019/03/20 00:00
+source: Brain Topogr
+title: MEG Assessment of Expressive Language in Children Evaluated for Epilepsy Surgery
+uid: '6476853'
+volume: '32'

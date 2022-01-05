@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '32273536'
+- idtype: doi
+  value: 10.1038/s41598-020-63103-7
+- idtype: pmcid
+  value: PMC7145807
+authors:
+- authtype: Author
+  name: Paul BT
+- authtype: Author
+  name: Uzelac M
+- authtype: Author
+  name: Chan E
+- authtype: Author
+  name: Dimitrijevic A
+epubdate: 2020 Apr 9
+fulljournalname: Scientific Reports
+issue: ''
+pages: '6141'
+pmclivedate: 2020/04/15
+printpubdate: ''
+pubdate: 2020 Apr 9
+sortdate: 2020/04/09 00:00
+source: Sci Rep
+title: Poor early cortical differentiation of speech predicts perceptual difficulties
+  of severely hearing-impaired listeners in multi-talker environments
+uid: '7145807'
+volume: '10'

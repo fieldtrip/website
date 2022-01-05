@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '22561454'
+- idtype: doi
+  value: 10.1038/nn.3101
+- idtype: pmcid
+  value: PMC3861400
+- idtype: MID
+  value: NIHMS526816
+authors:
+- authtype: Author
+  name: Hipp JF
+- authtype: Author
+  name: Hawellek DJ
+- authtype: Author
+  name: Corbetta M
+- authtype: Author
+  name: Siegel M
+- authtype: Author
+  name: Engel AK
+epubdate: ''
+fulljournalname: Nature neuroscience
+issue: '6'
+pages: 10.1038/nn.3101
+pmclivedate: 2013/12/12
+printpubdate: 2012 Jun
+pubdate: 2012 Jun
+sortdate: 2012/06/01 00:00
+source: Nat Neurosci
+title: Large-scale cortical correlation structure of spontaneous oscillatory activity
+uid: '3861400'
+volume: '15'

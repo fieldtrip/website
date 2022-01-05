@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '30477765'
+- idtype: doi
+  value: 10.1016/j.nicl.2018.11.009
+- idtype: pmcid
+  value: PMC6411610
+authors:
+- authtype: Author
+  name: Case M
+- authtype: Author
+  name: Shirinpour S
+- authtype: Author
+  name: Vijayakumar V
+- authtype: Author
+  name: Zhang H
+- authtype: Author
+  name: Datta Y
+- authtype: Author
+  name: Nelson S
+- authtype: Author
+  name: Pergami P
+- authtype: Author
+  name: Darbari DS
+- authtype: Author
+  name: Gupta K
+- authtype: Author
+  name: He B
+epubdate: 2018 Nov 14
+fulljournalname: 'NeuroImage : Clinical'
+issue: ''
+pages: '101599'
+pmclivedate: 2019/03/22
+printpubdate: ''
+pubdate: 2018 Nov 14
+sortdate: 2018/11/14 00:00
+source: Neuroimage Clin
+title: Graph theory analysis reveals how sickle cell disease impacts neural networks
+  of patients with more severe disease
+uid: '6411610'
+volume: '21'

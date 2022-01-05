@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '28928647'
+- idtype: doi
+  value: 10.3389/fnhum.2017.00433
+- idtype: pmcid
+  value: PMC5591792
+authors:
+- authtype: Author
+  name: Cox R
+- authtype: Author
+  name: Schapiro AC
+- authtype: Author
+  name: Manoach DS
+- authtype: Author
+  name: Stickgold R
+epubdate: 2017 Sep 5
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '433'
+pmclivedate: 2017/09/19
+printpubdate: ''
+pubdate: 2017 Sep 5
+sortdate: 2017/09/05 00:00
+source: Front Hum Neurosci
+title: Individual Differences in Frequency and Topography of Slow and Fast Sleep Spindles
+uid: '5591792'
+volume: '11'

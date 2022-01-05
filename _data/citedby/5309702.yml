@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '28169987'
+- idtype: doi
+  value: 10.1038/ncomms13967
+- idtype: pmcid
+  value: PMC5309702
+authors:
+- authtype: Author
+  name: Babapoor-Farrokhran S
+- authtype: Author
+  name: Vinck M
+- authtype: Author
+  name: Womelsdorf T
+- authtype: Author
+  name: Everling S
+epubdate: 2017 Feb 7
+fulljournalname: Nature Communications
+issue: ''
+pages: '13967'
+pmclivedate: 2017/02/27
+printpubdate: ''
+pubdate: 2017 Feb 7
+sortdate: 2017/02/07 00:00
+source: Nat Commun
+title: Theta and beta synchrony coordinate frontal eye fields and anterior cingulate
+  cortex during sensorimotor mapping
+uid: '5309702'
+volume: '8'

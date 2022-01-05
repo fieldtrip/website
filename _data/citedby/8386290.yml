@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '34447943'
+- idtype: doi
+  value: 10.1162/nol_a_00040
+- idtype: pmcid
+  value: PMC8386290
+- idtype: MID
+  value: NIHMS1710488
+authors:
+- authtype: Author
+  name: Schneider JM
+- authtype: Author
+  name: Abel AD
+- authtype: Author
+  name: Momsen J
+- authtype: Author
+  name: Melamed TC
+- authtype: Author
+  name: Maguire MJ
+epubdate: 2021 Jul 13
+fulljournalname: Neurobiology of language (Cambridge, Mass.)
+issue: '3'
+pages: 372-388
+pmclivedate: 2021/08/25
+printpubdate: '2021'
+pubdate: 2021 Jul 13
+sortdate: 2021/07/13 00:00
+source: Neurobiol Lang (Camb)
+title: Neural oscillations reveal differences in the process of word learning among
+  school-aged children from lower socioeconomic status backgrounds
+uid: '8386290'
+volume: '2'

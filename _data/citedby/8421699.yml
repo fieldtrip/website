@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '34514395'
+- idtype: doi
+  value: 10.1093/braincomms/fcab179
+- idtype: pmcid
+  value: PMC8421699
+authors:
+- authtype: Author
+  name: Zokaei N
+- authtype: Author
+  name: Quinn AJ
+- authtype: Author
+  name: Hu MT
+- authtype: Author
+  name: Husain M
+- authtype: Author
+  name: van Ede F
+- authtype: Author
+  name: Nobre AC
+epubdate: 2021 Aug 23
+fulljournalname: Brain Communications
+issue: '3'
+pages: fcab179
+pmclivedate: 2021/09/09
+printpubdate: ''
+pubdate: 2021 Aug 23
+sortdate: 2021/08/23 00:00
+source: Brain Commun
+title: Reduced cortico-muscular beta coupling in Parkinson’s disease predicts motor
+  impairment
+uid: '8421699'
+volume: '3'

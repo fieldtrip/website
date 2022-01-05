@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '32581245'
+- idtype: doi
+  value: 10.1038/s41598-020-67275-0
+- idtype: pmcid
+  value: PMC7314850
+authors:
+- authtype: Author
+  name: Valakos D
+- authtype: Author
+  name: d’Avossa G
+- authtype: Author
+  name: Mylonas D
+- authtype: Author
+  name: Butler J
+- authtype: Author
+  name: Klein C
+- authtype: Author
+  name: Smyrnis N
+epubdate: 2020 Jun 24
+fulljournalname: Scientific Reports
+issue: ''
+pages: '10254'
+pmclivedate: 2020/06/26
+printpubdate: ''
+pubdate: 2020 Jun 24
+sortdate: 2020/06/24 00:00
+source: Sci Rep
+title: P300 response modulation reflects breaches of non-probabilistic expectations
+uid: '7314850'
+volume: '10'

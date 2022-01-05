@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '22958827'
+- idtype: doi
+  value: 10.1016/j.neuron.2012.06.037
+- idtype: pmcid
+  value: PMC3457649
+- idtype: MID
+  value: NIHMS402820
+authors:
+- authtype: Author
+  name: Bosman CA
+- authtype: Author
+  name: Schoffelen JM
+- authtype: Author
+  name: Brunet N
+- authtype: Author
+  name: Oostenveld R
+- authtype: Author
+  name: Bastos AM
+- authtype: Author
+  name: Womelsdorf T
+- authtype: Author
+  name: Rubehn B
+- authtype: Author
+  name: Stieglitz T
+- authtype: Author
+  name: De Weerd P
+- authtype: Author
+  name: Fries P
+epubdate: ''
+fulljournalname: Neuron
+issue: '5'
+pages: 875-888
+pmclivedate: 2013/09/06
+printpubdate: 2012 Sep 6
+pubdate: 2012 Sep 6
+sortdate: 2012/09/06 00:00
+source: Neuron
+title: Attentional Stimulus Selection through Selective Synchronization between Monkey
+  Visual Areas
+uid: '3457649'
+volume: '75'

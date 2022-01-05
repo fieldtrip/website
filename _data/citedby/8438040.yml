@@ -1,0 +1,45 @@
+articleids:
+- idtype: pmid
+  value: '34518520'
+- idtype: doi
+  value: 10.1038/s41467-021-25376-y
+- idtype: pmcid
+  value: PMC8438040
+authors:
+- authtype: Author
+  name: Michelmann S
+- authtype: Author
+  name: Price AR
+- authtype: Author
+  name: Aubrey B
+- authtype: Author
+  name: Strauss CK
+- authtype: Author
+  name: Doyle WK
+- authtype: Author
+  name: Friedman D
+- authtype: Author
+  name: Dugan PC
+- authtype: Author
+  name: Devinsky O
+- authtype: Author
+  name: Devore S
+- authtype: Author
+  name: Flinker A
+- authtype: Author
+  name: Hasson U
+- authtype: Author
+  name: Norman KA
+epubdate: 2021 Sep 13
+fulljournalname: Nature Communications
+issue: ''
+pages: '5394'
+pmclivedate: 2021/10/04
+printpubdate: ''
+pubdate: 2021 Sep 13
+sortdate: 2021/09/13 00:00
+source: Nat Commun
+title: Moment-by-moment tracking of naturalistic learning and its underlying hippocampo-cortical
+  interactions
+uid: '8438040'
+volume: '12'

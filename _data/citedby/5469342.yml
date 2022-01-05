@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '28468250'
+- idtype: doi
+  value: 10.3390/s17050989
+- idtype: pmcid
+  value: PMC5469342
+authors:
+- authtype: Author
+  name: Amo C
+- authtype: Author
+  name: de Santiago L
+- authtype: Author
+  name: Barea R
+- authtype: Author
+  name: López-Dorado A
+- authtype: Author
+  name: Boquete L
+epubdate: 2017 Apr 29
+fulljournalname: Sensors (Basel, Switzerland)
+issue: '5'
+pages: '989'
+pmclivedate: 2017/06/16
+printpubdate: ''
+pubdate: 2017 Apr 29
+sortdate: 2017/04/29 00:00
+source: Sensors (Basel)
+title: Analysis of Gamma-Band Activity from Human EEG Using Empirical Mode Decomposition
+uid: '5469342'
+volume: '17'

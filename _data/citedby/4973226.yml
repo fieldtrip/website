@@ -1,0 +1,34 @@
+articleids:
+- idtype: pmid
+  value: '27488504'
+- idtype: doi
+  value: 10.1038/srep31220
+- idtype: pmcid
+  value: PMC4973226
+authors:
+- authtype: Author
+  name: Bonnard M
+- authtype: Author
+  name: Chen S
+- authtype: Author
+  name: Gaychet J
+- authtype: Author
+  name: Carrere M
+- authtype: Author
+  name: Woodman M
+- authtype: Author
+  name: Giusiano B
+- authtype: Author
+  name: Jirsa V
+epubdate: 2016 Aug 4
+fulljournalname: Scientific Reports
+issue: ''
+pages: '31220'
+pmclivedate: 2016/08/11
+printpubdate: ''
+pubdate: 2016 Aug 4
+sortdate: 2016/08/04 00:00
+source: Sci Rep
+title: 'Resting state brain dynamics and its transients: a combined TMS-EEG study'
+uid: '4973226'
+volume: '6'

@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '31236577'
+- idtype: doi
+  value: 10.1093/brain/awz169
+- idtype: pmcid
+  value: PMC6931391
+authors:
+- authtype: Author
+  name: Malekmohammadi M
+- authtype: Author
+  name: Price CM
+- authtype: Author
+  name: Hudson AE
+- authtype: Author
+  name: DiCesare JA
+- authtype: Author
+  name: Pouratian N
+epubdate: 2019 Jun 24
+fulljournalname: Brain
+issue: '8'
+pages: 2288-2302
+pmclivedate: 2020/08/01
+printpubdate: 2019 Aug
+pubdate: 2019 Jun 24
+sortdate: 2019/06/24 00:00
+source: Brain
+title: Propofol-induced loss of consciousness is associated with a decrease in thalamocortical
+  connectivity in humans
+uid: '6931391'
+volume: '142'

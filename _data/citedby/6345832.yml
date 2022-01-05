@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '30679512'
+- idtype: doi
+  value: 10.1038/s41598-018-36793-3
+- idtype: pmcid
+  value: PMC6345832
+authors:
+- authtype: Author
+  name: Steiger TK
+- authtype: Author
+  name: Herweg NA
+- authtype: Author
+  name: Menz MM
+- authtype: Author
+  name: Bunzeck N
+epubdate: 2019 Jan 24
+fulljournalname: Scientific Reports
+issue: ''
+pages: '706'
+pmclivedate: 2019/01/29
+printpubdate: ''
+pubdate: 2019 Jan 24
+sortdate: 2019/01/24 00:00
+source: Sci Rep
+title: Working memory performance in the elderly relates to theta-alpha oscillations
+  and is predicted by parahippocampal and striatal integrity
+uid: '6345832'
+volume: '9'

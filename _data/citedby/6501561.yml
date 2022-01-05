@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '28887896'
+- idtype: doi
+  value: 10.1111/ejn.13695
+- idtype: pmcid
+  value: PMC6501561
+- idtype: MID
+  value: NIHMS904945
+authors:
+- authtype: Author
+  name: Piai V
+- authtype: Author
+  name: Rommers J
+- authtype: Author
+  name: Knight RT
+epubdate: 2017 Oct 5
+fulljournalname: The European journal of neuroscience
+issue: '7'
+pages: 2622-2629
+pmclivedate: 2019/10/01
+printpubdate: 2018 Oct
+pubdate: 2017 Oct 5
+sortdate: 2017/10/05 00:00
+source: Eur J Neurosci
+title: Lesion evidence for a critical role of left posterior but not frontal areas
+  in alpha-beta power decreases during context-driven word production
+uid: '6501561'
+volume: '48'

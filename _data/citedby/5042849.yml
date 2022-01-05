@@ -1,0 +1,49 @@
+articleids:
+- idtype: pmid
+  value: '27472071'
+- idtype: doi
+  value: 10.1002/ana.24752
+- idtype: pmcid
+  value: PMC5042849
+- idtype: MID
+  value: NIHMS806884
+authors:
+- authtype: Author
+  name: Claassen J
+- authtype: Author
+  name: Velasquez A
+- authtype: Author
+  name: Meyers E
+- authtype: Author
+  name: Witsch J
+- authtype: Author
+  name: Falo CM
+- authtype: Author
+  name: Park S
+- authtype: Author
+  name: Agarwal S
+- authtype: Author
+  name: Schmidt JM
+- authtype: Author
+  name: Schiff ND
+- authtype: Author
+  name: Sitt JD
+- authtype: Author
+  name: Naccache L
+- authtype: Author
+  name: Connolly ES
+- authtype: Author
+  name: Frey HP
+epubdate: 2016 Aug 16
+fulljournalname: Annals of neurology
+issue: '4'
+pages: 541-553
+pmclivedate: 2017/10/01
+printpubdate: 2016 Oct
+pubdate: 2016 Aug 16
+sortdate: 2016/08/16 00:00
+source: Ann Neurol
+title: Bedside quantitative EEG improves assessment of consciousness in comatose subarachnoid
+  hemorrhage patients
+uid: '5042849'
+volume: '80'

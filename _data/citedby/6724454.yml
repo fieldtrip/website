@@ -1,0 +1,34 @@
+articleids:
+- idtype: pmid
+  value: '30758278'
+- idtype: doi
+  value: 10.1177/1747493019830312
+- idtype: pmcid
+  value: PMC6724454
+authors:
+- authtype: Author
+  name: Zandvliet SB
+- authtype: Author
+  name: Meskers CG
+- authtype: Author
+  name: Nijland RH
+- authtype: Author
+  name: Daffertshofer A
+- authtype: Author
+  name: Kwakkel G
+- authtype: Author
+  name: van Wegen EE
+epubdate: 2019 Feb 13
+fulljournalname: International Journal of Stroke
+issue: '6'
+pages: 650-657
+pmclivedate: 2019/10/03
+printpubdate: 2019 Aug
+pubdate: 2019 Feb 13
+sortdate: 2019/02/13 00:00
+source: Int J Stroke
+title: The effect of cerebellar transcranial direct current stimulation to improve
+  standing balance performance early post-stroke, study protocol of a randomized controlled
+  trial
+uid: '6724454'
+volume: '14'

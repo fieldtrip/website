@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '29691330'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.2407-17.2018
+- idtype: pmcid
+  value: PMC6596014
+authors:
+- authtype: Author
+  name: Donohue SE
+- authtype: Author
+  name: Bartsch MV
+- authtype: Author
+  name: Heinze HJ
+- authtype: Author
+  name: Schoenfeld MA
+- authtype: Author
+  name: Hopf JM
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '20'
+pages: 4738-4748
+pmclivedate: 2019/06/27
+printpubdate: 2018 May 16
+pubdate: 2018 May 16
+sortdate: 2018/05/16 00:00
+source: J Neurosci
+title: Cortical Mechanisms of Prioritizing Selection for Rejection in Visual Search
+uid: '6596014'
+volume: '38'

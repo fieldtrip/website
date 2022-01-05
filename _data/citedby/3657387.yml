@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '23163410'
+- idtype: doi
+  value: 10.1162/jocn_a_00328
+- idtype: pmcid
+  value: PMC3657387
+- idtype: MID
+  value: NIHMS462351
+authors:
+- authtype: Author
+  name: Lau EF
+- authtype: Author
+  name: Holcomb PJ
+- authtype: Author
+  name: Kuperberg GR
+epubdate: 2012 Nov 19
+fulljournalname: Journal of cognitive neuroscience
+issue: '3'
+pages: 484-502
+pmclivedate: 2013/05/19
+printpubdate: 2013 Mar
+pubdate: 2012 Nov 19
+sortdate: 2012/11/19 00:00
+source: J Cogn Neurosci
+title: DISSOCIATING N400 EFFECTS OF PREDICTION FROM ASSOCIATION IN SINGLE WORD CONTEXTS
+uid: '3657387'
+volume: '25'

@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '33795429'
+- idtype: doi
+  value: 10.1126/science.abf3119
+- idtype: pmcid
+  value: PMC8285088
+- idtype: MID
+  value: NIHMS1720052
+authors:
+- authtype: Author
+  name: Fernández-Ruiz A
+- authtype: Author
+  name: Oliva A
+- authtype: Author
+  name: Soula M
+- authtype: Author
+  name: Rocha-Almeida F
+- authtype: Author
+  name: Nagy GA
+- authtype: Author
+  name: Martin-Vazquez G
+- authtype: Author
+  name: Buzsáki G
+epubdate: ''
+fulljournalname: Science (New York, N.Y.)
+issue: '6537'
+pages: eabf3119
+pmclivedate: 2021/07/16
+printpubdate: 2021 Apr 2
+pubdate: 2021 Apr 2
+sortdate: 2021/04/02 00:00
+source: Science
+title: Gamma rhythm communication between entorhinal cortex and dentate gyrus neuronal
+  assemblies
+uid: '8285088'
+volume: '372'

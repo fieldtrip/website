@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '25044024'
+- idtype: doi
+  value: 10.1002/hbm.22588
+- idtype: pmcid
+  value: PMC4776755
+authors:
+- authtype: Author
+  name: Tinaz S
+- authtype: Author
+  name: Belluscio BA
+- authtype: Author
+  name: Malone P
+- authtype: Author
+  name: van der Veen JW
+- authtype: Author
+  name: Hallett M
+- authtype: Author
+  name: Horovitz SG
+epubdate: 2014 Jul 15
+fulljournalname: Human Brain Mapping
+issue: '12'
+pages: 5834-5846
+pmclivedate: 2016/03/03
+printpubdate: ''
+pubdate: 2014 Jul 15
+sortdate: 2014/07/15 00:00
+source: Hum Brain Mapp
+title: Role of the sensorimotor cortex in tourette syndrome using multimodal imaging
+uid: '4776755'
+volume: '35'

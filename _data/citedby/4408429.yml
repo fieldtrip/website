@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '25558877'
+- idtype: doi
+  value: 10.1093/brain/awu380
+- idtype: pmcid
+  value: PMC4408429
+authors:
+- authtype: Author
+  name: Weiss D
+- authtype: Author
+  name: Klotz R
+- authtype: Author
+  name: Govindan RB
+- authtype: Author
+  name: Scholten M
+- authtype: Author
+  name: Naros G
+- authtype: Author
+  name: Ramos-Murguialday A
+- authtype: Author
+  name: Bunjes F
+- authtype: Author
+  name: Meisner C
+- authtype: Author
+  name: Plewnia C
+- authtype: Author
+  name: Krüger R
+- authtype: Author
+  name: Gharabaghi A
+epubdate: 2015 Jan 2
+fulljournalname: Brain
+issue: '3'
+pages: 679-693
+pmclivedate: 2016/03/01
+printpubdate: 2015 Mar
+pubdate: 2015 Jan 2
+sortdate: 2015/01/02 00:00
+source: Brain
+title: Subthalamic stimulation modulates cortical motor network activity and synchronization
+  in Parkinson’s disease
+uid: '4408429'
+volume: '138'

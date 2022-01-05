@@ -1,0 +1,24 @@
+articleids:
+- idtype: pmid
+  value: '31603894'
+- idtype: doi
+  value: 10.1371/journal.pbio.3000511
+- idtype: pmcid
+  value: PMC6808500
+authors:
+- authtype: Author
+  name: Cao L
+- authtype: Author
+  name: Händel B
+epubdate: 2019 Oct 11
+fulljournalname: PLoS Biology
+issue: '10'
+pages: e3000511
+pmclivedate: 2019/11/01
+printpubdate: ''
+pubdate: 2019 Oct 11
+sortdate: 2019/10/11 00:00
+source: PLoS Biol
+title: Walking enhances peripheral visual processing in humans
+uid: '6808500'
+volume: '17'

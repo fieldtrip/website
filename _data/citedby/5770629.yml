@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '29375411'
+- idtype: doi
+  value: 10.3389/fpsyg.2017.02117
+- idtype: pmcid
+  value: PMC5770629
+authors:
+- authtype: Author
+  name: Ströberg K
+- authtype: Author
+  name: Andersen LM
+- authtype: Author
+  name: Wiens S
+epubdate: 2017 Dec 5
+fulljournalname: Frontiers in Psychology
+issue: ''
+pages: '2117'
+pmclivedate: 2018/01/26
+printpubdate: ''
+pubdate: 2017 Dec 5
+sortdate: 2017/12/05 00:00
+source: Front Psychol
+title: Electrocortical N400 Effects of Semantic Satiation
+uid: '5770629'
+volume: '8'

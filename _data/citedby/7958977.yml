@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '33732101'
+- idtype: doi
+  value: 10.3389/fnins.2020.620666
+- idtype: pmcid
+  value: PMC7958977
+authors:
+- authtype: Author
+  name: Patel K
+- authtype: Author
+  name: Henshaw J
+- authtype: Author
+  name: Sutherland H
+- authtype: Author
+  name: Taylor JR
+- authtype: Author
+  name: Casson AJ
+- authtype: Author
+  name: Lopez-Diaz K
+- authtype: Author
+  name: Brown CA
+- authtype: Author
+  name: Jones AK
+- authtype: Author
+  name: Sivan M
+- authtype: Author
+  name: Trujillo-Barreto NJ
+epubdate: 2021 Feb 22
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '620666'
+pmclivedate: 2021/03/16
+printpubdate: ''
+pubdate: 2021 Feb 22
+sortdate: 2021/02/22 00:00
+source: Front Neurosci
+title: Using EEG Alpha States to Understand Learning During Alpha Neurofeedback Training
+  for Chronic Pain
+uid: '7958977'
+volume: '14'

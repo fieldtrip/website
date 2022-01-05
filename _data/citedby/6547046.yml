@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '30930309'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2019.03.056
+- idtype: pmcid
+  value: PMC6547046
+authors:
+- authtype: Author
+  name: Zhigalov A
+- authtype: Author
+  name: Herring JD
+- authtype: Author
+  name: Herpers J
+- authtype: Author
+  name: Bergmann TO
+- authtype: Author
+  name: Jensen O
+epubdate: ''
+fulljournalname: Neuroimage
+issue: ''
+pages: 59-66
+pmclivedate: 2019/07/15
+printpubdate: 2019 Jul 15
+pubdate: 2019 Jul 15
+sortdate: 2019/07/15 00:00
+source: Neuroimage
+title: Probing cortical excitability using rapid frequency tagging
+uid: '6547046'
+volume: '195'

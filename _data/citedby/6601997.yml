@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '26791216'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.2191-15.2016
+- idtype: pmcid
+  value: PMC6601997
+authors:
+- authtype: Author
+  name: Henry MJ
+- authtype: Author
+  name: Herrmann B
+- authtype: Author
+  name: Obleser J
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '3'
+pages: 860-871
+pmclivedate: 2019/07/11
+printpubdate: 2016 Jan 20
+pubdate: 2016 Jan 20
+sortdate: 2016/01/20 00:00
+source: J Neurosci
+title: Neural Microstates Govern Perception of Auditory Input without Rhythmic Structure
+uid: '6601997'
+volume: '36'

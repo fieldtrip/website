@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '25906070'
+- idtype: doi
+  value: 10.1371/journal.pone.0124798
+- idtype: pmcid
+  value: PMC4408014
+authors:
+- authtype: Author
+  name: Perry G
+- authtype: Author
+  name: Randle JM
+- authtype: Author
+  name: Koelewijn L
+- authtype: Author
+  name: Routley BC
+- authtype: Author
+  name: Singh KD
+epubdate: 2015 Apr 23
+fulljournalname: PLoS ONE
+issue: '4'
+pages: e0124798
+pmclivedate: 2015/05/04
+printpubdate: ''
+pubdate: 2015 Apr 23
+sortdate: 2015/04/23 00:00
+source: PLoS One
+title: 'Linear Tuning of Gamma Amplitude and Frequency to Luminance Contrast: Evidence
+  from a Continuous Mapping Paradigm'
+uid: '4408014'
+volume: '10'

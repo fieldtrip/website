@@ -1,0 +1,46 @@
+articleids:
+- idtype: pmid
+  value: '29735015'
+- idtype: doi
+  value: 10.7554/eLife.32740
+- idtype: pmcid
+  value: PMC5973831
+authors:
+- authtype: Author
+  name: Gallo S
+- authtype: Author
+  name: Paracampo R
+- authtype: Author
+  name: Müller-Pinzler L
+- authtype: Author
+  name: Severo MC
+- authtype: Author
+  name: Blömer L
+- authtype: Author
+  name: Fernandes-Henriques C
+- authtype: Author
+  name: Henschel A
+- authtype: Author
+  name: Lammes BK
+- authtype: Author
+  name: Maskaljunas T
+- authtype: Author
+  name: Suttrup J
+- authtype: Author
+  name: Avenanti A
+- authtype: Author
+  name: Keysers C
+- authtype: Author
+  name: Gazzola V
+epubdate: 2018 May 8
+fulljournalname: eLife
+issue: ''
+pages: e32740
+pmclivedate: 2018/05/30
+printpubdate: ''
+pubdate: 2018 May 8
+sortdate: 2018/05/08 00:00
+source: eLife
+title: The causal role of the somatosensory cortex in prosocial behaviour
+uid: '5973831'
+volume: '7'

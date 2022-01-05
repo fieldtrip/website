@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '32443512'
+- idtype: doi
+  value: 10.3390/s20102860
+- idtype: pmcid
+  value: PMC7288035
+authors:
+- authtype: Author
+  name: Schmidt D
+- authtype: Author
+  name: Villalba Diez J
+- authtype: Author
+  name: Ordieres-Meré J
+- authtype: Author
+  name: Gevers R
+- authtype: Author
+  name: Schwiep J
+- authtype: Author
+  name: Molina M
+epubdate: 2020 May 18
+fulljournalname: Sensors (Basel, Switzerland)
+issue: '10'
+pages: '2860'
+pmclivedate: 2020/06/15
+printpubdate: ''
+pubdate: 2020 May 18
+sortdate: 2020/05/18 00:00
+source: Sensors (Basel)
+title: Industry 4.0 Lean Shopfloor Management Characterization Using EEG Sensors and
+  Deep Learning
+uid: '7288035'
+volume: '20'

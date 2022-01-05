@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '32194280'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2020.116754
+- idtype: pmcid
+  value: PMC7181170
+authors:
+- authtype: Author
+  name: Alzueta E
+- authtype: Author
+  name: Melcón M
+- authtype: Author
+  name: Jensen O
+- authtype: Author
+  name: Capilla A
+epubdate: ''
+fulljournalname: Neuroimage
+issue: ''
+pages: '116754'
+pmclivedate: 2020/06/01
+printpubdate: 2020 Jun
+pubdate: 2020 Jun
+sortdate: 2020/06/01 00:00
+source: Neuroimage
+title: 'The ‘Narcissus Effect’: Top-down alpha-beta band modulation of face-related
+  brain areas during self-face processing'
+uid: '7181170'
+volume: '213'

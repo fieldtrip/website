@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '34867218'
+- idtype: doi
+  value: 10.3389/fnsys.2021.716897
+- idtype: pmcid
+  value: PMC8635058
+authors:
+- authtype: Author
+  name: Kuc A
+- authtype: Author
+  name: Korchagin S
+- authtype: Author
+  name: Maksimenko VA
+- authtype: Author
+  name: Shusharina N
+- authtype: Author
+  name: Hramov AE
+epubdate: 2021 Nov 16
+fulljournalname: Frontiers in Systems Neuroscience
+issue: ''
+pages: '716897'
+pmclivedate: 2021/12/02
+printpubdate: ''
+pubdate: 2021 Nov 16
+sortdate: 2021/11/16 00:00
+source: Front Syst Neurosci
+title: Combining Statistical Analysis and Machine Learning for EEG Scalp Topograms
+  Classification
+uid: '8635058'
+volume: '15'

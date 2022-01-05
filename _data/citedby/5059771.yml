@@ -1,0 +1,24 @@
+articleids:
+- idtype: pmid
+  value: '27713396'
+- idtype: doi
+  value: 10.1038/ncomms13098
+- idtype: pmcid
+  value: PMC5059771
+authors:
+- authtype: Author
+  name: Pape AA
+- authtype: Author
+  name: Siegel M
+epubdate: 2016 Oct 7
+fulljournalname: Nature Communications
+issue: ''
+pages: '13098'
+pmclivedate: 2016/10/26
+printpubdate: ''
+pubdate: 2016 Oct 7
+sortdate: 2016/10/07 00:00
+source: Nat Commun
+title: Motor cortex activity predicts response alternation during sensorimotor decisions
+uid: '5059771'
+volume: '7'

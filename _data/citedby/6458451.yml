@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '30974326'
+- idtype: doi
+  value: 10.1016/j.nicl.2019.101815
+- idtype: pmcid
+  value: PMC6458451
+authors:
+- authtype: Author
+  name: Mehnert J
+- authtype: Author
+  name: Bader D
+- authtype: Author
+  name: Nolte G
+- authtype: Author
+  name: May A
+epubdate: 2019 Apr 3
+fulljournalname: 'NeuroImage : Clinical'
+issue: ''
+pages: '101815'
+pmclivedate: 2019/04/19
+printpubdate: ''
+pubdate: 2019 Apr 3
+sortdate: 2019/04/03 00:00
+source: Neuroimage Clin
+title: Visual input drives increased occipital responsiveness and harmonized oscillations
+  in multiple cortical areas in migraineurs
+uid: '6458451'
+volume: '23'

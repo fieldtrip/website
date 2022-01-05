@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '24089487'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1434-13.2013
+- idtype: pmcid
+  value: PMC6618472
+authors:
+- authtype: Author
+  name: Herrmann B
+- authtype: Author
+  name: Henry MJ
+- authtype: Author
+  name: Grigutsch M
+- authtype: Author
+  name: Obleser J
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '40'
+pages: 15799-15809
+pmclivedate: 2019/07/16
+printpubdate: 2013 Oct 2
+pubdate: 2013 Oct 2
+sortdate: 2013/10/02 00:00
+source: J Neurosci
+title: Oscillatory Phase Dynamics in Neural Entrainment Underpin Illusory Percepts
+  of Time
+uid: '6618472'
+volume: '33'

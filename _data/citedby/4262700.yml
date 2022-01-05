@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '24285891'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.2455-13.2013
+- idtype: pmcid
+  value: PMC4262700
+authors:
+- authtype: Author
+  name: Bahramisharif A
+- authtype: Author
+  name: van Gerven MA
+- authtype: Author
+  name: Aarnoutse EJ
+- authtype: Author
+  name: Mercier MR
+- authtype: Author
+  name: Schwartz TH
+- authtype: Author
+  name: Foxe JJ
+- authtype: Author
+  name: Ramsey NF
+- authtype: Author
+  name: Jensen O
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '48'
+pages: 18849-18854
+pmclivedate: 2014/12/23
+printpubdate: 2013 Nov 27
+pubdate: 2013 Nov 27
+sortdate: 2013/11/27 00:00
+source: J Neurosci
+title: Propagating Neocortical Gamma Bursts Are Coordinated by Traveling Alpha Waves
+uid: '4262700'
+volume: '33'

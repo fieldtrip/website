@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '24508648'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2014.01.049
+- idtype: pmcid
+  value: PMC4013551
+authors:
+- authtype: Author
+  name: Haegens S
+- authtype: Author
+  name: Cousijn H
+- authtype: Author
+  name: Wallis G
+- authtype: Author
+  name: Harrison PJ
+- authtype: Author
+  name: Nobre AC
+epubdate: ''
+fulljournalname: Neuroimage
+issue: '100'
+pages: 46-55
+pmclivedate: 2014/05/15
+printpubdate: 2014 May 15
+pubdate: 2014 May 15
+sortdate: 2014/05/15 00:00
+source: Neuroimage
+title: Inter- and intra-individual variability in alpha peak frequency
+uid: '4013551'
+volume: '92'

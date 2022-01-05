@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '29085774'
+- idtype: doi
+  value: 10.1016/j.nicl.2017.09.023
+- idtype: pmcid
+  value: PMC5650680
+authors:
+- authtype: Author
+  name: Lambrechts A
+- authtype: Author
+  name: Falter-Wagner CM
+- authtype: Author
+  name: van Wassenhove V
+epubdate: 2017 Sep 28
+fulljournalname: 'NeuroImage : Clinical'
+issue: ''
+pages: 124-136
+pmclivedate: 2017/10/30
+printpubdate: ''
+pubdate: 2017 Sep 28
+sortdate: 2017/09/28 00:00
+source: Neuroimage Clin
+title: Diminished neural resources allocation to time processing in Autism Spectrum
+  Disorders
+uid: '5650680'
+volume: '17'

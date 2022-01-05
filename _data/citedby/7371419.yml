@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '32686645'
+- idtype: doi
+  value: 10.7554/eLife.53588
+- idtype: pmcid
+  value: PMC7371419
+authors:
+- authtype: Author
+  name: Dijkstra N
+- authtype: Author
+  name: Ambrogioni L
+- authtype: Author
+  name: Vidaurre D
+- authtype: Author
+  name: van Gerven M
+epubdate: 2020 Jul 20
+fulljournalname: eLife
+issue: ''
+pages: e53588
+pmclivedate: 2020/07/22
+printpubdate: ''
+pubdate: 2020 Jul 20
+sortdate: 2020/07/20 00:00
+source: eLife
+title: Neural dynamics of perceptual inference and its reversal during imagery
+uid: '7371419'
+volume: '9'

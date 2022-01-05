@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '22815506'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0275-12.2012
+- idtype: pmcid
+  value: PMC3752071
+authors:
+- authtype: Author
+  name: Oswal A
+- authtype: Author
+  name: Litvak V
+- authtype: Author
+  name: Sauleau P
+- authtype: Author
+  name: Brown P
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '29'
+pages: 9909-9916
+pmclivedate: 2013/08/27
+printpubdate: 2012 Jul 18
+pubdate: 2012 Jul 18
+sortdate: 2012/07/18 00:00
+source: J Neurosci
+title: Beta Reactivity, Prospective Facilitation of Executive Processing, and Its
+  Dependence on Dopaminergic Therapy in Parkinson's Disease
+uid: '3752071'
+volume: '32'

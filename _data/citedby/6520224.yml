@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '30898668'
+- idtype: doi
+  value: 10.1016/j.nbd.2019.03.013
+- idtype: pmcid
+  value: PMC6520224
+authors:
+- authtype: Author
+  name: Lofredi R
+- authtype: Author
+  name: Tan H
+- authtype: Author
+  name: Neumann WJ
+- authtype: Author
+  name: Yeh CH
+- authtype: Author
+  name: Schneider GH
+- authtype: Author
+  name: Kühn AA
+- authtype: Author
+  name: Brown P
+epubdate: ''
+fulljournalname: Neurobiology of Disease
+issue: ''
+pages: 462-471
+pmclivedate: 2019/05/16
+printpubdate: 2019 Jul
+pubdate: 2019 Jul
+sortdate: 2019/07/01 00:00
+source: Neurobiol Dis
+title: Beta bursts during continuous movements accompany the velocity decrement in
+  Parkinson's disease patients
+uid: '6520224'
+volume: '127'

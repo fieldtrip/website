@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '29209195'
+- idtype: doi
+  value: 10.3389/fninf.2017.00067
+- idtype: pmcid
+  value: PMC5702317
+authors:
+- authtype: Author
+  name: Cavanagh JF
+- authtype: Author
+  name: Napolitano A
+- authtype: Author
+  name: Wu C
+- authtype: Author
+  name: Mueen A
+epubdate: 2017 Nov 21
+fulljournalname: Frontiers in Neuroinformatics
+issue: ''
+pages: '67'
+pmclivedate: 2017/12/05
+printpubdate: ''
+pubdate: 2017 Nov 21
+sortdate: 2017/11/21 00:00
+source: Front Neuroinform
+title: The Patient Repository for EEG Data + Computational Tools (PRED+CT)
+uid: '5702317'
+volume: '11'

@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '32226371'
+- idtype: doi
+  value: 10.3389/fnhum.2020.00082
+- idtype: pmcid
+  value: PMC7080990
+authors:
+- authtype: Author
+  name: Piazza C
+- authtype: Author
+  name: Cantiani C
+- authtype: Author
+  name: Miyakoshi M
+- authtype: Author
+  name: Riva V
+- authtype: Author
+  name: Molteni M
+- authtype: Author
+  name: Reni G
+- authtype: Author
+  name: Makeig S
+epubdate: 2020 Mar 12
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '82'
+pmclivedate: 2020/03/27
+printpubdate: ''
+pubdate: 2020 Mar 12
+sortdate: 2020/03/12 00:00
+source: Front Hum Neurosci
+title: EEG Effective Source Projections Are More Bilaterally Symmetric in Infants
+  Than in Adults
+uid: '7080990'
+volume: '14'

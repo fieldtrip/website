@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '30335444'
+- idtype: doi
+  value: 10.1037/xge0000494
+- idtype: pmcid
+  value: PMC6388670
+authors:
+- authtype: Author
+  name: Degno F
+- authtype: Author
+  name: Loberg O
+- authtype: Author
+  name: Zang C
+- authtype: Author
+  name: Zhang M
+- authtype: Author
+  name: Donnelly N
+- authtype: Author
+  name: Liversedge SP
+epubdate: 2018 Oct 18
+fulljournalname: Journal of Experimental Psychology. General
+issue: '3'
+pages: 453-474
+pmclivedate: 2019/02/27
+printpubdate: 2019 Mar
+pubdate: 2018 Oct 18
+sortdate: 2018/10/18 00:00
+source: J Exp Psychol Gen
+title: 'Parafoveal Previews and Lexical Frequency in Natural Reading: Evidence From
+  Eye Movements and Fixation-Related Potentials'
+uid: '6388670'
+volume: '148'

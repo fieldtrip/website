@@ -1,0 +1,24 @@
+articleids:
+- idtype: pmid
+  value: '29187819'
+- idtype: doi
+  value: 10.3389/fnhum.2017.00557
+- idtype: pmcid
+  value: PMC5694826
+authors:
+- authtype: Author
+  name: López-Caballero F
+- authtype: Author
+  name: Escera C
+epubdate: 2017 Nov 15
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '557'
+pmclivedate: 2017/11/29
+printpubdate: ''
+pubdate: 2017 Nov 15
+sortdate: 2017/11/15 00:00
+source: Front Hum Neurosci
+title: 'Binaural Beat: A Failure to Enhance EEG Power and Emotional Arousal'
+uid: '5694826'
+volume: '11'

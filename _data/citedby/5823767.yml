@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '29398360'
+- idtype: doi
+  value: 10.1016/j.neuron.2018.01.012
+- idtype: pmcid
+  value: PMC5823767
+- idtype: MID
+  value: NIHMS933618
+authors:
+- authtype: Author
+  name: Bahmani Z
+- authtype: Author
+  name: Daliri MR
+- authtype: Author
+  name: Merrikhi Y
+- authtype: Author
+  name: Clark K
+- authtype: Author
+  name: Noudoost B
+epubdate: 2018 Feb 1
+fulljournalname: Neuron
+issue: '4'
+pages: 967-979.e6
+pmclivedate: 2019/02/21
+printpubdate: 2018 Feb 21
+pubdate: 2018 Feb 1
+sortdate: 2018/02/01 00:00
+source: Neuron
+title: Working Memory Enhances Cortical Representations via Spatially-specific Coordination
+  of Spike Times
+uid: '5823767'
+volume: '97'

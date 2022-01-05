@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '32519577'
+- idtype: doi
+  value: 10.1152/jn.00164.2020
+- idtype: pmcid
+  value: PMC7474449
+authors:
+- authtype: Author
+  name: Kaiser D
+- authtype: Author
+  name: Häberle G
+- authtype: Author
+  name: Cichy RM
+epubdate: 2020 Jun 10
+fulljournalname: Journal of Neurophysiology
+issue: '1'
+pages: 145-151
+pmclivedate: 2021/07/01
+printpubdate: 2020 Jul 1
+pubdate: 2020 Jun 10
+sortdate: 2020/06/10 00:00
+source: J Neurophysiol
+title: Real-world structure facilitates the rapid emergence of scene category information
+  in visual brain signals
+uid: '7474449'
+volume: '124'

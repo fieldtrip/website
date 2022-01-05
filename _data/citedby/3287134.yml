@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '22098775'
+- idtype: doi
+  value: 10.1186/1471-2202-12-119
+- idtype: pmcid
+  value: PMC3287134
+authors:
+- authtype: Author
+  name: Lindner M
+- authtype: Author
+  name: Vicente R
+- authtype: Author
+  name: Priesemann V
+- authtype: Author
+  name: Wibral M
+epubdate: 2011 Nov 18
+fulljournalname: BMC Neuroscience
+issue: ''
+pages: '119'
+pmclivedate: 2012/02/29
+printpubdate: ''
+pubdate: 2011 Nov 18
+sortdate: 2011/11/18 00:00
+source: BMC Neurosci
+title: 'TRENTOOL: A Matlab open source toolbox to analyse information flow in time
+  series data with transfer entropy'
+uid: '3287134'
+volume: '12'

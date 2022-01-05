@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '21687463'
+- idtype: doi
+  value: 10.3389/fpsyg.2011.00100
+- idtype: pmcid
+  value: PMC3108578
+authors:
+- authtype: Author
+  name: Jensen O
+- authtype: Author
+  name: Bahramisharif A
+- authtype: Author
+  name: Oostenveld R
+- authtype: Author
+  name: Klanke S
+- authtype: Author
+  name: Hadjipapas A
+- authtype: Author
+  name: Okazaki YO
+- authtype: Author
+  name: van Gerven MA
+epubdate: 2011 May 27
+fulljournalname: Frontiers in Psychology
+issue: ''
+pages: '100'
+pmclivedate: 2011/06/16
+printpubdate: ''
+pubdate: 2011 May 27
+sortdate: 2011/05/27 00:00
+source: Front Psychol
+title: Using Brain–Computer Interfaces and Brain-State Dependent Stimulation as Tools
+  in Cognitive Neuroscience
+uid: '3108578'
+volume: '2'

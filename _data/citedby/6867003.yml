@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '28782869'
+- idtype: doi
+  value: 10.1002/hbm.23757
+- idtype: pmcid
+  value: PMC6867003
+authors:
+- authtype: Author
+  name: Mückschel M
+- authtype: Author
+  name: Dippel G
+- authtype: Author
+  name: Beste C
+epubdate: 2017 Aug 7
+fulljournalname: Human Brain Mapping
+issue: '11'
+pages: 5681-5690
+pmclivedate: 2020/06/12
+printpubdate: ''
+pubdate: 2017 Aug 7
+sortdate: 2017/08/07 00:00
+source: Hum Brain Mapp
+title: Distinguishing stimulus and response codes in theta oscillations in prefrontal
+  areas during inhibitory control of automated responses
+uid: '6867003'
+volume: '38'

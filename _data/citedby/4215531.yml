@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '25379427'
+- idtype: doi
+  value: 10.1016/j.nicl.2014.08.026
+- idtype: pmcid
+  value: PMC4215531
+authors:
+- authtype: Author
+  name: Popova P
+- authtype: Author
+  name: Popov TG
+- authtype: Author
+  name: Wienbruch C
+- authtype: Author
+  name: Carolus AM
+- authtype: Author
+  name: Miller GA
+- authtype: Author
+  name: Rockstroh BS
+epubdate: 2014 Sep 4
+fulljournalname: 'NeuroImage : Clinical'
+issue: ''
+pages: 156-165
+pmclivedate: 2014/11/06
+printpubdate: ''
+pubdate: 2014 Sep 4
+sortdate: 2014/09/04 00:00
+source: Neuroimage Clin
+title: 'Changing facial affect recognition in schizophrenia: Effects of training on
+  brain dynamics'
+uid: '4215531'
+volume: '6'

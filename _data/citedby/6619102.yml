@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '23365240'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.2565-12.2013
+- idtype: pmcid
+  value: PMC6619102
+authors:
+- authtype: Author
+  name: Luft CD
+- authtype: Author
+  name: Nolte G
+- authtype: Author
+  name: Bhattacharya J
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '5'
+pages: 2029-2038
+pmclivedate: 2019/07/11
+printpubdate: 2013 Jan 30
+pubdate: 2013 Jan 30
+sortdate: 2013/01/30 00:00
+source: J Neurosci
+title: High-Learners Present Larger Mid-Frontal Theta Power and Connectivity in Response
+  to Incorrect Performance Feedback
+uid: '6619102'
+volume: '33'

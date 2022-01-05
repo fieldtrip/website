@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '27375462'
+- idtype: doi
+  value: 10.3389/fnhum.2016.00270
+- idtype: pmcid
+  value: PMC4893480
+authors:
+- authtype: Author
+  name: Boonstra TW
+- authtype: Author
+  name: Nikolin S
+- authtype: Author
+  name: Meisener AC
+- authtype: Author
+  name: Martin DM
+- authtype: Author
+  name: Loo CK
+epubdate: 2016 Jun 6
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '270'
+pmclivedate: 2016/07/01
+printpubdate: ''
+pubdate: 2016 Jun 6
+sortdate: 2016/06/06 00:00
+source: Front Hum Neurosci
+title: Change in Mean Frequency of Resting-State Electroencephalography after Transcranial
+  Direct Current Stimulation
+uid: '4893480'
+volume: '10'

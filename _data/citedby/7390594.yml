@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '32766469'
+- idtype: doi
+  value: 10.1097/PR9.0000000000000833
+- idtype: pmcid
+  value: PMC7390594
+authors:
+- authtype: Author
+  name: Seminowicz DA
+- authtype: Author
+  name: Bilska K
+- authtype: Author
+  name: Chowdhury NS
+- authtype: Author
+  name: Skippen P
+- authtype: Author
+  name: Millard SK
+- authtype: Author
+  name: Chiang AK
+- authtype: Author
+  name: Chen S
+- authtype: Author
+  name: Furman AJ
+- authtype: Author
+  name: Schabrun SM
+epubdate: 2020 Jul 27
+fulljournalname: Pain Reports
+issue: '4'
+pages: e833
+pmclivedate: 2020/08/05
+printpubdate: ''
+pubdate: 2020 Jul 27
+sortdate: 2020/07/27 00:00
+source: Pain Rep
+title: 'A novel cortical biomarker signature for predicting pain sensitivity: protocol
+  for the PREDICT longitudinal analytical validation study'
+uid: '7390594'
+volume: '5'

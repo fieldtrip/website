@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '31310616'
+- idtype: doi
+  value: 10.1371/journal.pone.0219744
+- idtype: pmcid
+  value: PMC6634411
+authors:
+- authtype: Author
+  name: Lindborg A
+- authtype: Author
+  name: Baart M
+- authtype: Author
+  name: Stekelenburg JJ
+- authtype: Author
+  name: Vroomen J
+- authtype: Author
+  name: Andersen TS
+epubdate: 2019 Jul 16
+fulljournalname: PLoS ONE
+issue: '7'
+pages: e0219744
+pmclivedate: 2019/07/25
+printpubdate: ''
+pubdate: 2019 Jul 16
+sortdate: 2019/07/16 00:00
+source: PLoS One
+title: Speech-specific audiovisual integration modulates induced theta-band oscillations
+uid: '6634411'
+volume: '14'

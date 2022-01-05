@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '28253074'
+- idtype: doi
+  value: 10.1162/jocn_a_01110
+- idtype: pmcid
+  value: PMC5604231
+- idtype: MID
+  value: NIHMS904237
+authors:
+- authtype: Author
+  name: Ozker M
+- authtype: Author
+  name: Schepers IM
+- authtype: Author
+  name: Magnotti JF
+- authtype: Author
+  name: Yoshor D
+- authtype: Author
+  name: Beauchamp MS
+epubdate: 2017 Mar 2
+fulljournalname: Journal of cognitive neuroscience
+issue: '6'
+pages: 1044-1060
+pmclivedate: 2017/09/19
+printpubdate: 2017 Jun
+pubdate: 2017 Mar 2
+sortdate: 2017/03/02 00:00
+source: J Cogn Neurosci
+title: A Double Dissociation between Anterior and Posterior Superior Temporal Gyrus
+  for Processing Audiovisual Speech Demonstrated by Electrocorticography
+uid: '5604231'
+volume: '29'

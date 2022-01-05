@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '25698760'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.3357-14.2015
+- idtype: pmcid
+  value: PMC6605582
+authors:
+- authtype: Author
+  name: Strauß A
+- authtype: Author
+  name: Henry MJ
+- authtype: Author
+  name: Scharinger M
+- authtype: Author
+  name: Obleser J
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '7'
+pages: 3256-3262
+pmclivedate: 2019/07/09
+printpubdate: 2015 Feb 18
+pubdate: 2015 Feb 18
+sortdate: 2015/02/18 00:00
+source: J Neurosci
+title: Alpha Phase Determines Successful Lexical Decision in Noise
+uid: '6605582'
+volume: '35'

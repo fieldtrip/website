@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '26852071'
+- idtype: doi
+  value: 10.1016/j.biopsych.2015.10.029
+- idtype: pmcid
+  value: PMC5770190
+- idtype: MID
+  value: NIHMS932665
+authors:
+- authtype: Author
+  name: Widge AS
+- authtype: Author
+  name: Zorowitz S
+- authtype: Author
+  name: Link K
+- authtype: Author
+  name: Miller EK
+- authtype: Author
+  name: Deckersbach T
+- authtype: Author
+  name: Eskandar EN
+- authtype: Author
+  name: Dougherty DD
+epubdate: 2015 Dec 18
+fulljournalname: Biological psychiatry
+issue: '7'
+pages: e59-e60
+pmclivedate: 2018/01/16
+printpubdate: 2016 Oct 1
+pubdate: 2015 Dec 18
+sortdate: 2015/12/18 00:00
+source: Biol Psychiatry
+title: Ventral Capsule/Ventral Striatum Deep Brain Stimulation Does Not Consistently
+  Diminish Occipital Cross-Frequency Coupling
+uid: '5770190'
+volume: '80'

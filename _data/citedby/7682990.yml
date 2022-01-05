@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '33170121'
+- idtype: doi
+  value: 10.7554/eLife.60031
+- idtype: pmcid
+  value: PMC7682990
+authors:
+- authtype: Author
+  name: Davidson MJ
+- authtype: Author
+  name: Mithen W
+- authtype: Author
+  name: Hogendoorn H
+- authtype: Author
+  name: van Boxtel JJ
+- authtype: Author
+  name: Tsuchiya N
+epubdate: 2020 Nov 10
+fulljournalname: eLife
+issue: ''
+pages: e60031
+pmclivedate: 2020/11/25
+printpubdate: ''
+pubdate: 2020 Nov 10
+sortdate: 2020/11/10 00:00
+source: eLife
+title: The SSVEP tracks attention, not consciousness, during perceptual filling-in
+uid: '7682990'
+volume: '9'

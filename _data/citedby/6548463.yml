@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '29988107'
+- idtype: doi
+  value: 10.1038/s41596-018-0009-6
+- idtype: pmcid
+  value: PMC6548463
+- idtype: MID
+  value: NIHMS975762
+authors:
+- authtype: Author
+  name: Stolk A
+- authtype: Author
+  name: Griffin SM
+- authtype: Author
+  name: van der Meij R
+- authtype: Author
+  name: Dewar C
+- authtype: Author
+  name: Saez I
+- authtype: Author
+  name: Lin JJ
+- authtype: Author
+  name: Piantoni G
+- authtype: Author
+  name: Schoffelen JM
+- authtype: Author
+  name: Knight RT
+- authtype: Author
+  name: Oostenveld R
+epubdate: ''
+fulljournalname: Nature protocols
+issue: '7'
+pages: 1699-1723
+pmclivedate: 2019/06/04
+printpubdate: 2018 Jul
+pubdate: 2018 Jul
+sortdate: 2018/07/01 00:00
+source: Nat Protoc
+title: Integrated analysis of anatomical and electrophysiological human intracranial
+  data
+uid: '6548463'
+volume: '13'

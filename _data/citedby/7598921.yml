@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '33079930'
+- idtype: doi
+  value: 10.1371/journal.pbio.3000898
+- idtype: pmcid
+  value: PMC7598921
+authors:
+- authtype: Author
+  name: Tomassini A
+- authtype: Author
+  name: Maris E
+- authtype: Author
+  name: Hilt P
+- authtype: Author
+  name: Fadiga L
+- authtype: Author
+  name: D’Ausilio A
+epubdate: 2020 Oct 20
+fulljournalname: PLoS Biology
+issue: '10'
+pages: e3000898
+pmclivedate: 2020/11/03
+printpubdate: ''
+pubdate: 2020 Oct 20
+sortdate: 2020/10/20 00:00
+source: PLoS Biol
+title: Visual detection is locked to the internal dynamics of cortico-motor control
+uid: '7598921'
+volume: '18'

@@ -1,0 +1,38 @@
+articleids:
+- idtype: pmid
+  value: '28882629'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2017.08.074
+- idtype: pmcid
+  value: PMC5705422
+- idtype: MID
+  value: NIHMS907466
+authors:
+- authtype: Author
+  name: Baroni F
+- authtype: Author
+  name: van Kempen J
+- authtype: Author
+  name: Kawasaki H
+- authtype: Author
+  name: Kovach CK
+- authtype: Author
+  name: Oya H
+- authtype: Author
+  name: Howard MA
+- authtype: Author
+  name: Adolphs R
+- authtype: Author
+  name: Tsuchiya N
+epubdate: 2017 Sep 4
+fulljournalname: NeuroImage
+issue: ''
+pages: 322-343
+pmclivedate: 2018/11/15
+printpubdate: 2017 Nov 15
+pubdate: 2017 Sep 4
+sortdate: 2017/09/04 00:00
+source: Neuroimage
+title: Intracranial Markers of Conscious Face Perception in Humans
+uid: '5705422'
+volume: '162'

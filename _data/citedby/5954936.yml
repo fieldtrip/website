@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '29853852'
+- idtype: doi
+  value: 10.1155/2018/9354207
+- idtype: pmcid
+  value: PMC5954936
+authors:
+- authtype: Author
+  name: Athanasiou A
+- authtype: Author
+  name: Terzopoulos N
+- authtype: Author
+  name: Pandria N
+- authtype: Author
+  name: Xygonakis I
+- authtype: Author
+  name: Foroglou N
+- authtype: Author
+  name: Polyzoidis K
+- authtype: Author
+  name: Bamidis PD
+epubdate: 2018 May 2
+fulljournalname: Neural Plasticity
+issue: ''
+pages: '9354207'
+pmclivedate: 2018/05/31
+printpubdate: ''
+pubdate: 2018 May 2
+sortdate: 2018/05/02 00:00
+source: Neural Plast
+title: Functional Brain Connectivity during Multiple Motor Imagery Tasks in Spinal
+  Cord Injury
+uid: '5954936'
+volume: '2018'

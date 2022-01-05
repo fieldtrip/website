@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '33100961'
+- idtype: doi
+  value: 10.3389/fnins.2020.573254
+- idtype: pmcid
+  value: PMC7546411
+authors:
+- authtype: Author
+  name: Signoret C
+- authtype: Author
+  name: Andersen LM
+- authtype: Author
+  name: Dahlström Ö
+- authtype: Author
+  name: Blomberg R
+- authtype: Author
+  name: Lundqvist D
+- authtype: Author
+  name: Rudner M
+- authtype: Author
+  name: Rönnberg J
+epubdate: 2020 Sep 25
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '573254'
+pmclivedate: 2020/10/22
+printpubdate: ''
+pubdate: 2020 Sep 25
+sortdate: 2020/09/25 00:00
+source: Front Neurosci
+title: 'The Influence of Form- and Meaning-Based Predictions on Cortical Speech Processing
+  Under Challenging Listening Conditions: A MEG Study'
+uid: '7546411'
+volume: '14'

@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '31857602'
+- idtype: doi
+  value: 10.1038/s41598-019-55369-3
+- idtype: pmcid
+  value: PMC6923477
+authors:
+- authtype: Author
+  name: Zhao M
+- authtype: Author
+  name: Marino M
+- authtype: Author
+  name: Samogin J
+- authtype: Author
+  name: Swinnen SP
+- authtype: Author
+  name: Mantini D
+epubdate: 2019 Dec 19
+fulljournalname: Scientific Reports
+issue: ''
+pages: '19464'
+pmclivedate: 2019/12/23
+printpubdate: ''
+pubdate: 2019 Dec 19
+sortdate: 2019/12/19 00:00
+source: Sci Rep
+title: 'Hand, foot and lip representations in primary sensorimotor cortex: a high-density
+  electroencephalography study'
+uid: '6923477'
+volume: '9'

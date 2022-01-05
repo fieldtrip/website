@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '29785037'
+- idtype: doi
+  value: 10.1038/s41598-018-26091-3
+- idtype: pmcid
+  value: PMC5962640
+authors:
+- authtype: Author
+  name: Lewis AG
+- authtype: Author
+  name: Schriefers H
+- authtype: Author
+  name: Bastiaansen M
+- authtype: Author
+  name: Schoffelen JM
+epubdate: 2018 May 21
+fulljournalname: Scientific Reports
+issue: ''
+pages: '7897'
+pmclivedate: 2018/05/24
+printpubdate: ''
+pubdate: 2018 May 21
+sortdate: 2018/05/21 00:00
+source: Sci Rep
+title: Assessing the utility of frequency tagging for tracking memory-based reactivation
+  of word representations
+uid: '5962640'
+volume: '8'

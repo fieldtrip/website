@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '26085962'
+- idtype: doi
+  value: 10.1002/brb3.336
+- idtype: pmcid
+  value: PMC4467771
+authors:
+- authtype: Author
+  name: Kirschner A
+- authtype: Author
+  name: Cruse D
+- authtype: Author
+  name: Chennu S
+- authtype: Author
+  name: Owen AM
+- authtype: Author
+  name: Hampshire A
+epubdate: 2015 Apr 23
+fulljournalname: Brain and Behavior
+issue: '6'
+pages: e00336
+pmclivedate: 2015/06/17
+printpubdate: 2015 Jun
+pubdate: 2015 Apr 23
+sortdate: 2015/04/23 00:00
+source: Brain Behav
+title: A P300-based cognitive assessment battery
+uid: '4467771'
+volume: '5'

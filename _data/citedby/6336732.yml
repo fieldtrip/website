@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '30687035'
+- idtype: doi
+  value: 10.3389/fnbeh.2018.00333
+- idtype: pmcid
+  value: PMC6336732
+authors:
+- authtype: Author
+  name: Torriero S
+- authtype: Author
+  name: Mattavelli G
+- authtype: Author
+  name: Lo Gerfo E
+- authtype: Author
+  name: Romero Lauro L
+- authtype: Author
+  name: Actis-Grosso R
+- authtype: Author
+  name: Ricciardelli P
+epubdate: 2019 Jan 11
+fulljournalname: Frontiers in Behavioral Neuroscience
+issue: ''
+pages: '333'
+pmclivedate: 2019/01/25
+printpubdate: ''
+pubdate: 2019 Jan 11
+sortdate: 2019/01/11 00:00
+source: Front Behav Neurosci
+title: 'FEF Excitability in Attentional Bias: A TMS-EEG Study'
+uid: '6336732'
+volume: '12'

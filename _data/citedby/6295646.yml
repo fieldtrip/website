@@ -1,0 +1,24 @@
+articleids:
+- idtype: pmid
+  value: '30618690'
+- idtype: doi
+  value: 10.3389/fncom.2018.00095
+- idtype: pmcid
+  value: PMC6295646
+authors:
+- authtype: Author
+  name: Meng L
+- authtype: Author
+  name: Xiang J
+epubdate: 2018 Dec 10
+fulljournalname: Frontiers in Computational Neuroscience
+issue: ''
+pages: '95'
+pmclivedate: 2019/01/07
+printpubdate: ''
+pubdate: 2018 Dec 10
+sortdate: 2018/12/10 00:00
+source: Front Comput Neurosci
+title: Brain Network Analysis and Classification Based on Convolutional Neural Network
+uid: '6295646'
+volume: '12'

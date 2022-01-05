@@ -1,0 +1,24 @@
+articleids:
+- idtype: pmid
+  value: '25767446'
+- idtype: doi
+  value: 10.3389/fncom.2015.00026
+- idtype: pmcid
+  value: PMC4341563
+authors:
+- authtype: Author
+  name: Azodi-Avval R
+- authtype: Author
+  name: Gharabaghi A
+epubdate: 2015 Feb 26
+fulljournalname: Frontiers in Computational Neuroscience
+issue: ''
+pages: '26'
+pmclivedate: 2015/03/12
+printpubdate: ''
+pubdate: 2015 Feb 26
+sortdate: 2015/02/26 00:00
+source: Front Comput Neurosci
+title: Phase-dependent modulation as a novel approach for therapeutic brain stimulation
+uid: '4341563'
+volume: '9'

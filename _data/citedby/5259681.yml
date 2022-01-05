@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '28174529'
+- idtype: doi
+  value: 10.3389/fnhum.2016.00658
+- idtype: pmcid
+  value: PMC5259681
+authors:
+- authtype: Author
+  name: van Schouwenburg MR
+- authtype: Author
+  name: Zanto TP
+- authtype: Author
+  name: Gazzaley A
+epubdate: 2017 Jan 24
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '658'
+pmclivedate: 2017/02/07
+printpubdate: ''
+pubdate: 2017 Jan 24
+sortdate: 2017/01/24 00:00
+source: Front Hum Neurosci
+title: Spatial Attention and the Effects of Frontoparietal Alpha Band Stimulation
+uid: '5259681'
+volume: '10'

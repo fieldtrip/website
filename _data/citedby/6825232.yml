@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '31741689'
+- idtype: doi
+  value: 10.1007/s11571-019-09550-z
+- idtype: pmcid
+  value: PMC6825232
+authors:
+- authtype: Author
+  name: Khajehpour H
+- authtype: Author
+  name: Mohagheghian F
+- authtype: Author
+  name: Ekhtiari H
+- authtype: Author
+  name: Makkiabadi B
+- authtype: Author
+  name: Jafari AH
+- authtype: Author
+  name: Eqlimi E
+- authtype: Author
+  name: Harirchian MH
+epubdate: 2019 Aug 7
+fulljournalname: Cognitive Neurodynamics
+issue: '6'
+pages: 519-530
+pmclivedate: 2020/12/01
+printpubdate: 2019 Dec
+pubdate: 2019 Aug 7
+sortdate: 2019/08/07 00:00
+source: Cogn Neurodyn
+title: Computer-aided classifying and characterizing of methamphetamine use disorder
+  using resting-state EEG
+uid: '6825232'
+volume: '13'

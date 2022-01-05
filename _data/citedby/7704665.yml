@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '33130438'
+- idtype: doi
+  value: 10.1016/j.clinph.2020.09.010
+- idtype: pmcid
+  value: PMC7704665
+- idtype: MID
+  value: NIHMS1638401
+authors:
+- authtype: Author
+  name: Mitsuhashi T
+- authtype: Author
+  name: Sonoda M
+- authtype: Author
+  name: Iwaki H
+- authtype: Author
+  name: Luat AF
+- authtype: Author
+  name: Sood S
+- authtype: Author
+  name: Asano E
+epubdate: 2020 Oct 14
+fulljournalname: 'Clinical neurophysiology : official journal of the International
+  Federation of Clinical Neurophysiology'
+issue: '12'
+pages: 2781-2792
+pmclivedate: 2021/12/01
+printpubdate: 2020 Dec
+pubdate: 2020 Oct 14
+sortdate: 2020/10/14 00:00
+source: Clin Neurophysiol
+title: Effects of depth electrode montage and single-pulse electrical stimulation
+  sites on neuronal responses and effective connectivity
+uid: '7704665'
+volume: '131'

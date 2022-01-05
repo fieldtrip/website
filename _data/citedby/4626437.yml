@@ -1,0 +1,62 @@
+articleids:
+- idtype: pmid
+  value: '25934470'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2015.04.046
+- idtype: pmcid
+  value: PMC4626437
+- idtype: MID
+  value: NIHMS686025
+authors:
+- authtype: Author
+  name: Hodge MR
+- authtype: Author
+  name: Horton W
+- authtype: Author
+  name: Brown T
+- authtype: Author
+  name: Herrick R
+- authtype: Author
+  name: Olsen T
+- authtype: Author
+  name: Hileman ME
+- authtype: Author
+  name: McKay M
+- authtype: Author
+  name: Archie KA
+- authtype: Author
+  name: Cler E
+- authtype: Author
+  name: Harms MP
+- authtype: Author
+  name: Burgess GC
+- authtype: Author
+  name: Glasser MF
+- authtype: Author
+  name: Elam JS
+- authtype: Author
+  name: Curtiss SW
+- authtype: Author
+  name: Barch DM
+- authtype: Author
+  name: Oostenveld R
+- authtype: Author
+  name: Larson-Prior LJ
+- authtype: Author
+  name: Ugurbil K
+- authtype: Author
+  name: Van Essen DC
+- authtype: Author
+  name: Marcus DS
+epubdate: 2015 Apr 29
+fulljournalname: NeuroImage
+issue: 0 0
+pages: 1102-1107
+pmclivedate: 2017/01/01
+printpubdate: 2016 Jan 1
+pubdate: 2015 Apr 29
+sortdate: 2015/04/29 00:00
+source: Neuroimage
+title: ConnectomeDB – Sharing Human Brain Connectivity Data
+uid: '4626437'
+volume: '124'

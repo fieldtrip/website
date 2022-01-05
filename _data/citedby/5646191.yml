@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '28768745'
+- idtype: doi
+  value: 10.1152/jn.00878.2016
+- idtype: pmcid
+  value: PMC5646191
+authors:
+- authtype: Author
+  name: Foldes ST
+- authtype: Author
+  name: Weber DJ
+- authtype: Author
+  name: Collinger JL
+epubdate: 2017 Aug 2
+fulljournalname: Journal of Neurophysiology
+issue: '4'
+pages: 2412-2420
+pmclivedate: 2018/10/01
+printpubdate: 2017 Oct 1
+pubdate: 2017 Aug 2
+sortdate: 2017/08/02 00:00
+source: J Neurophysiol
+title: Altered modulation of sensorimotor rhythms with chronic paralysis
+uid: '5646191'
+volume: '118'

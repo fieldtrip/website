@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '28867996'
+- idtype: doi
+  value: 10.3389/fnhum.2017.00401
+- idtype: pmcid
+  value: PMC5563328
+authors:
+- authtype: Author
+  name: Wichary S
+- authtype: Author
+  name: Magnuski M
+- authtype: Author
+  name: Oleksy T
+- authtype: Author
+  name: Brzezicka A
+epubdate: 2017 Aug 18
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '401'
+pmclivedate: 2017/09/01
+printpubdate: ''
+pubdate: 2017 Aug 18
+sortdate: 2017/08/18 00:00
+source: Front Hum Neurosci
+title: 'Neural Signatures of Rational and Heuristic Choice Strategies: A Single Trial
+  ERP Analysis'
+uid: '5563328'
+volume: '11'

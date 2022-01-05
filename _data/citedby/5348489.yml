@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '28352223'
+- idtype: doi
+  value: 10.3389/fnhum.2017.00114
+- idtype: pmcid
+  value: PMC5348489
+authors:
+- authtype: Author
+  name: Mandikal Vasuki PR
+- authtype: Author
+  name: Sharma M
+- authtype: Author
+  name: Ibrahim RK
+- authtype: Author
+  name: Arciuli J
+epubdate: 2017 Mar 14
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '114'
+pmclivedate: 2017/03/28
+printpubdate: ''
+pubdate: 2017 Mar 14
+sortdate: 2017/03/14 00:00
+source: Front Hum Neurosci
+title: Musicians’ Online Performance during Auditory and Visual Statistical Learning
+  Tasks
+uid: '5348489'
+volume: '11'

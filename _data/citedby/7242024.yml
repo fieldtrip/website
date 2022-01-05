@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '32378513'
+- idtype: doi
+  value: 10.7554/eLife.55508
+- idtype: pmcid
+  value: PMC7242024
+authors:
+- authtype: Author
+  name: Weisz N
+- authtype: Author
+  name: Kraft NG
+- authtype: Author
+  name: Demarchi G
+epubdate: 2020 May 7
+fulljournalname: eLife
+issue: ''
+pages: e55508
+pmclivedate: 2020/05/26
+printpubdate: ''
+pubdate: 2020 May 7
+sortdate: 2020/05/07 00:00
+source: eLife
+title: Auditory cortical alpha/beta desynchronization prioritizes the representation
+  of memory items during a retention period
+uid: '7242024'
+volume: '9'

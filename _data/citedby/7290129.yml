@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '32581695'
+- idtype: doi
+  value: 10.3389/fnins.2020.00570
+- idtype: pmcid
+  value: PMC7290129
+authors:
+- authtype: Author
+  name: Gruber T
+- authtype: Author
+  name: Debracque C
+- authtype: Author
+  name: Ceravolo L
+- authtype: Author
+  name: Igloi K
+- authtype: Author
+  name: Marin Bosch B
+- authtype: Author
+  name: Frühholz S
+- authtype: Author
+  name: Grandjean D
+epubdate: 2020 Jun 5
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '570'
+pmclivedate: 2020/06/23
+printpubdate: ''
+pubdate: 2020 Jun 5
+sortdate: 2020/06/05 00:00
+source: Front Neurosci
+title: 'Human Discrimination and Categorization of Emotions in Voices: A Functional
+  Near-Infrared Spectroscopy (fNIRS) Study'
+uid: '7290129'
+volume: '14'

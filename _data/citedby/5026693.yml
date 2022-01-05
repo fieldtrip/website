@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '27668176'
+- idtype: doi
+  value: 10.1016/j.nicl.2016.08.017
+- idtype: pmcid
+  value: PMC5026693
+authors:
+- authtype: Author
+  name: Meconi F
+- authtype: Author
+  name: Anderl-Straub S
+- authtype: Author
+  name: Raum H
+- authtype: Author
+  name: Landgrebe M
+- authtype: Author
+  name: Langguth B
+- authtype: Author
+  name: Bäuml KH
+- authtype: Author
+  name: Hanslmayr S
+epubdate: 2016 Aug 30
+fulljournalname: 'NeuroImage : Clinical'
+issue: ''
+pages: 499-505
+pmclivedate: 2016/09/23
+printpubdate: ''
+pubdate: 2016 Aug 30
+sortdate: 2016/08/30 00:00
+source: Neuroimage Clin
+title: Aberrant prefrontal beta oscillations predict episodic memory encoding deficits
+  in schizophrenia
+uid: '5026693'
+volume: '12'

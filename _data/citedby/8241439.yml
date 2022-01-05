@@ -1,0 +1,47 @@
+articleids:
+- idtype: pmid
+  value: '34155973'
+- idtype: doi
+  value: 10.7554/eLife.63905
+- idtype: pmcid
+  value: PMC8241439
+authors:
+- authtype: Author
+  name: Borghesani V
+- authtype: Author
+  name: Dale C
+- authtype: Author
+  name: Lukic S
+- authtype: Author
+  name: Hinkley L
+- authtype: Author
+  name: Lauricella M
+- authtype: Author
+  name: Shwe W
+- authtype: Author
+  name: Mizuiri D
+- authtype: Author
+  name: Honma S
+- authtype: Author
+  name: Miller Z
+- authtype: Author
+  name: Miller B
+- authtype: Author
+  name: Houde J
+- authtype: Author
+  name: Gorno-Tempini M
+- authtype: Author
+  name: Nagarajan S
+epubdate: 2021 Jun 22
+fulljournalname: eLife
+issue: ''
+pages: e63905
+pmclivedate: 2021/06/30
+printpubdate: ''
+pubdate: 2021 Jun 22
+sortdate: 2021/06/22 00:00
+source: eLife
+title: Neural dynamics of semantic categorization in semantic variant of primary progressive
+  aphasia
+uid: '8241439'
+volume: '10'

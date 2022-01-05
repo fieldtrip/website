@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '23277109'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2012.12.041
+- idtype: pmcid
+  value: PMC3591253
+authors:
+- authtype: Author
+  name: Oswal A
+- authtype: Author
+  name: Brown P
+- authtype: Author
+  name: Litvak V
+epubdate: ''
+fulljournalname: Neuroimage
+issue: ''
+pages: 132-142
+pmclivedate: 2013/04/15
+printpubdate: 2013 Apr 15
+pubdate: 2013 Apr 15
+sortdate: 2013/04/15 00:00
+source: Neuroimage
+title: Movement related dynamics of subthalmo-cortical alpha connectivity in Parkinson's
+  disease
+uid: '3591253'
+volume: '70'

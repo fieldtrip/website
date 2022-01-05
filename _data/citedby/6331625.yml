@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '30643124'
+- idtype: doi
+  value: 10.1038/s41467-018-08080-2
+- idtype: pmcid
+  value: PMC6331625
+authors:
+- authtype: Author
+  name: Linde-Domingo J
+- authtype: Author
+  name: Treder MS
+- authtype: Author
+  name: Kerrén C
+- authtype: Author
+  name: Wimber M
+epubdate: 2019 Jan 14
+fulljournalname: Nature Communications
+issue: ''
+pages: '179'
+pmclivedate: 2019/01/16
+printpubdate: ''
+pubdate: 2019 Jan 14
+sortdate: 2019/01/14 00:00
+source: Nat Commun
+title: Evidence that neural information flow is reversed between object perception
+  and object reconstruction from memory
+uid: '6331625'
+volume: '10'

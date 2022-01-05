@@ -1,0 +1,34 @@
+articleids:
+- idtype: pmid
+  value: '32090281'
+- idtype: doi
+  value: 10.1007/s10548-020-00757-6
+- idtype: pmcid
+  value: PMC7191224
+- idtype: MID
+  value: NIHMS1565710
+authors:
+- authtype: Author
+  name: Vink JJ
+- authtype: Author
+  name: Klooster DC
+- authtype: Author
+  name: Ozdemir RA
+- authtype: Author
+  name: Westover MB
+- authtype: Author
+  name: Pascual-Leone A
+- authtype: Author
+  name: Shafi MM
+epubdate: 2020 Feb 24
+fulljournalname: Brain topography
+issue: '2'
+pages: 221-237
+pmclivedate: 2021/03/01
+printpubdate: 2020 Mar
+pubdate: 2020 Feb 24
+sortdate: 2020/02/24 00:00
+source: Brain Topogr
+title: EEG functional connectivity is a weak predictor of causal brain interactions
+uid: '7191224'
+volume: '33'

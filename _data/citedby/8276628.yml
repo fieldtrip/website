@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '33634855'
+- idtype: doi
+  value: 10.1111/epi.16841
+- idtype: pmcid
+  value: PMC8276628
+- idtype: MID
+  value: NIHMS1688313
+authors:
+- authtype: Author
+  name: Kleen JK
+- authtype: Author
+  name: Speidel B
+- authtype: Author
+  name: Baud MO
+- authtype: Author
+  name: Rao VR
+- authtype: Author
+  name: Ammanuel SG
+- authtype: Author
+  name: Hamilton LS
+- authtype: Author
+  name: Chang EF
+- authtype: Author
+  name: Knowlton RC
+epubdate: 2021 Feb 26
+fulljournalname: Epilepsia
+issue: '4'
+pages: 947-959
+pmclivedate: 2021/07/13
+printpubdate: 2021 Apr
+pubdate: 2021 Feb 26
+sortdate: 2021/02/26 00:00
+source: Epilepsia
+title: Accuracy of omni-planar and surface casting of epileptiform activity for intracranial
+  seizure localization
+uid: '8276628'
+volume: '62'

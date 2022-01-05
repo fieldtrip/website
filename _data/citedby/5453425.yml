@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '28570661'
+- idtype: doi
+  value: 10.1371/journal.pcbi.1005511
+- idtype: pmcid
+  value: PMC5453425
+authors:
+- authtype: Author
+  name: Wollstadt P
+- authtype: Author
+  name: Sellers KK
+- authtype: Author
+  name: Rudelt L
+- authtype: Author
+  name: Priesemann V
+- authtype: Author
+  name: Hutt A
+- authtype: Author
+  name: Fröhlich F
+- authtype: Author
+  name: Wibral M
+epubdate: 2017 Jun 1
+fulljournalname: PLoS Computational Biology
+issue: '6'
+pages: e1005511
+pmclivedate: 2017/06/12
+printpubdate: ''
+pubdate: 2017 Jun 1
+sortdate: 2017/06/01 00:00
+source: PLoS Comput Biol
+title: Breakdown of local information processing may underlie isoflurane anesthesia
+  effects
+uid: '5453425'
+volume: '13'

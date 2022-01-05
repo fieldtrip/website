@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '32556583'
+- idtype: doi
+  value: 10.1007/s00429-020-02099-2
+- idtype: pmcid
+  value: PMC7405940
+- idtype: MID
+  value: NIHMS1605372
+authors:
+- authtype: Author
+  name: Hsu CC
+- authtype: Author
+  name: Madsen TE
+- authtype: Author
+  name: O’Gorman E
+- authtype: Author
+  name: Gourley SL
+- authtype: Author
+  name: Rainnie DG
+epubdate: 2020 Jun 18
+fulljournalname: Brain structure & function
+issue: '6'
+pages: 1873-1888
+pmclivedate: 2021/07/01
+printpubdate: 2020 Jul
+pubdate: 2020 Jun 18
+sortdate: 2020/06/18 00:00
+source: Brain Struct Funct
+title: Reward-related dynamical coupling between basolateral amygdala and nucleus
+  accumbens
+uid: '7405940'
+volume: '225'

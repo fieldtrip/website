@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '29249289'
+- idtype: doi
+  value: 10.1016/j.neuron.2017.11.020
+- idtype: pmcid
+  value: PMC5754239
+- idtype: MID
+  value: NIHMS921945
+authors:
+- authtype: Author
+  name: Helfrich RF
+- authtype: Author
+  name: Mander BA
+- authtype: Author
+  name: Jagust WJ
+- authtype: Author
+  name: Knight RT
+- authtype: Author
+  name: Walker MP
+epubdate: 2017 Dec 14
+fulljournalname: Neuron
+issue: '1'
+pages: 221-230.e4
+pmclivedate: 2019/01/03
+printpubdate: 2018 Jan 3
+pubdate: 2017 Dec 14
+sortdate: 2017/12/14 00:00
+source: Neuron
+title: Old brains come uncoupled in sleep – Slow wave-spindle synchrony, brain atrophy
+  and forgetting
+uid: '5754239'
+volume: '97'

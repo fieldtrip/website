@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '28512633'
+- idtype: doi
+  value: 10.3389/fvets.2017.00057
+- idtype: pmcid
+  value: PMC5411420
+authors:
+- authtype: Author
+  name: Cousillas H
+- authtype: Author
+  name: Oger M
+- authtype: Author
+  name: Rochais C
+- authtype: Author
+  name: Pettoello C
+- authtype: Author
+  name: Ménoret M
+- authtype: Author
+  name: Henry S
+- authtype: Author
+  name: Hausberger M
+epubdate: 2017 May 2
+fulljournalname: Frontiers in Veterinary Science
+issue: ''
+pages: '57'
+pmclivedate: 2017/05/16
+printpubdate: ''
+pubdate: 2017 May 2
+sortdate: 2017/05/02 00:00
+source: Front Vet Sci
+title: 'An Ambulatory Electroencephalography System for Freely Moving Horses: An Innovating
+  Approach'
+uid: '5411420'
+volume: '4'

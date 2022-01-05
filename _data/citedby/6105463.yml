@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '29871826'
+- idtype: doi
+  value: 10.1016/j.heares.2018.05.018
+- idtype: pmcid
+  value: PMC6105463
+- idtype: MID
+  value: NIHMS971010
+authors:
+- authtype: Author
+  name: Bidelman GM
+- authtype: Author
+  name: Davis MK
+- authtype: Author
+  name: Pridgen MH
+epubdate: 2018 May 26
+fulljournalname: Hearing research
+issue: ''
+pages: 149-160
+pmclivedate: 2019/09/01
+printpubdate: 2018 Sep
+pubdate: 2018 May 26
+sortdate: 2018/05/26 00:00
+source: Hear Res
+title: Brainstem-cortical functional connectivity for speech is differentially challenged
+  by noise and reverberation
+uid: '6105463'
+volume: '367'

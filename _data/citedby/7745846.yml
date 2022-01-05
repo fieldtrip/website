@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '31658449'
+- idtype: doi
+  value: 10.1088/1741-2552/ab51a5
+- idtype: pmcid
+  value: PMC7745846
+- idtype: MID
+  value: NIHMS1609025
+authors:
+- authtype: Author
+  name: Li G
+- authtype: Author
+  name: Jiang S
+- authtype: Author
+  name: Chen C
+- authtype: Author
+  name: Brunner P
+- authtype: Author
+  name: Wu Z
+- authtype: Author
+  name: Schalk G
+- authtype: Author
+  name: Chen L
+- authtype: Author
+  name: Zhang D
+epubdate: 2019 Dec 23
+fulljournalname: Journal of neural engineering
+issue: '1'
+pages: '016016'
+pmclivedate: 2020/12/17
+printpubdate: ''
+pubdate: 2019 Dec 23
+sortdate: 2019/12/23 00:00
+source: J Neural Eng
+title: 'iEEGview: An Open-source Multifunction GUI-based Matlab Toolbox for Localization
+  and Visualization of Human Intracranial Electrodes'
+uid: '7745846'
+volume: '17'

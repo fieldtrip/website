@@ -1,0 +1,24 @@
+articleids:
+- idtype: pmid
+  value: '29093486'
+- idtype: doi
+  value: 10.1038/s41598-017-13861-8
+- idtype: pmcid
+  value: PMC5665990
+authors:
+- authtype: Author
+  name: Pfeiffer C
+- authtype: Author
+  name: De Lucia M
+epubdate: 2017 Nov 1
+fulljournalname: Scientific Reports
+issue: ''
+pages: '14842'
+pmclivedate: 2017/11/08
+printpubdate: ''
+pubdate: 2017 Nov 1
+sortdate: 2017/11/01 00:00
+source: Sci Rep
+title: Cardio-audio synchronization drives neural surprise response
+uid: '5665990'
+volume: '7'

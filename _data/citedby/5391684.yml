@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '28314817'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.3015-16.2017
+- idtype: pmcid
+  value: PMC5391684
+authors:
+- authtype: Author
+  name: Popov T
+- authtype: Author
+  name: Kastner S
+- authtype: Author
+  name: Jensen O
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '15'
+pages: 4117-4127
+pmclivedate: 2017/10/12
+printpubdate: 2017 Apr 12
+pubdate: 2017 Apr 12
+sortdate: 2017/04/12 00:00
+source: J Neurosci
+title: FEF-Controlled Alpha Delay Activity Precedes Stimulus-Induced Gamma-Band Activity
+  in Visual Cortex
+uid: '5391684'
+volume: '37'

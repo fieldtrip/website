@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '29546509'
+- idtype: doi
+  value: 10.1007/s10548-018-0640-0
+- idtype: pmcid
+  value: PMC6182573
+authors:
+- authtype: Author
+  name: Sanchez Bornot JM
+- authtype: Author
+  name: Wong-Lin K
+- authtype: Author
+  name: Ahmad AL
+- authtype: Author
+  name: Prasad G
+epubdate: 2018 Mar 15
+fulljournalname: Brain Topography
+issue: '6'
+pages: 895-916
+pmclivedate: 2018/10/22
+printpubdate: '2018'
+pubdate: 2018 Mar 15
+sortdate: 2018/03/15 00:00
+source: Brain Topogr
+title: 'Robust EEG/MEG Based Functional Connectivity with the Envelope of the Imaginary
+  Coherence: Sensor Space Analysis'
+uid: '6182573'
+volume: '31'

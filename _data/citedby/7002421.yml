@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '32024855'
+- idtype: doi
+  value: 10.1038/s41598-020-57902-1
+- idtype: pmcid
+  value: PMC7002421
+authors:
+- authtype: Author
+  name: Isaev DY
+- authtype: Author
+  name: Major S
+- authtype: Author
+  name: Murias M
+- authtype: Author
+  name: Carpenter KL
+- authtype: Author
+  name: Carlson D
+- authtype: Author
+  name: Sapiro G
+- authtype: Author
+  name: Dawson G
+epubdate: 2020 Feb 5
+fulljournalname: Scientific Reports
+issue: ''
+pages: '1912'
+pmclivedate: 2020/02/14
+printpubdate: ''
+pubdate: 2020 Feb 5
+sortdate: 2020/02/05 00:00
+source: Sci Rep
+title: Relative Average Look Duration and its Association with Neurophysiological
+  Activity in Young Children with Autism Spectrum Disorder
+uid: '7002421'
+volume: '10'

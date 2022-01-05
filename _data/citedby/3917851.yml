@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '24516552'
+- idtype: doi
+  value: 10.1371/journal.pone.0087511
+- idtype: pmcid
+  value: PMC3917851
+authors:
+- authtype: Author
+  name: Geuze J
+- authtype: Author
+  name: Farquhar J
+- authtype: Author
+  name: Desain P
+epubdate: 2014 Feb 7
+fulljournalname: PLoS ONE
+issue: '2'
+pages: e87511
+pmclivedate: 2014/02/10
+printpubdate: ''
+pubdate: 2014 Feb 7
+sortdate: 2014/02/07 00:00
+source: PLoS One
+title: Towards a Communication Brain Computer Interface Based on Semantic Relations
+uid: '3917851'
+volume: '9'

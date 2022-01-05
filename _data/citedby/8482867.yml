@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '34385361'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0243-21.2021
+- idtype: pmcid
+  value: PMC8482867
+authors:
+- authtype: Author
+  name: Renton AI
+- authtype: Author
+  name: Painter DR
+- authtype: Author
+  name: Mattingley JB
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '39'
+pages: 8233-8248
+pmclivedate: ''
+printpubdate: 2021 Sep 29
+pubdate: 2021 Sep 29
+sortdate: 2021/09/29 00:00
+source: J Neurosci
+title: Implicit Neurofeedback Training of Feature-Based Attention Promotes Biased
+  Sensory Processing during Integrative Decision-Making
+uid: '8482867'
+volume: '41'

@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '27999537'
+- idtype: doi
+  value: 10.3389/fncom.2016.00126
+- idtype: pmcid
+  value: PMC5138209
+authors:
+- authtype: Author
+  name: Yang Y
+- authtype: Author
+  name: Solis-Escalante T
+- authtype: Author
+  name: van de Ruit M
+- authtype: Author
+  name: van der Helm FC
+- authtype: Author
+  name: Schouten AC
+epubdate: 2016 Dec 6
+fulljournalname: Frontiers in Computational Neuroscience
+issue: ''
+pages: '126'
+pmclivedate: 2016/12/20
+printpubdate: ''
+pubdate: 2016 Dec 6
+sortdate: 2016/12/06 00:00
+source: Front Comput Neurosci
+title: Nonlinear Coupling between Cortical Oscillations and Muscle Activity during
+  Isotonic Wrist Flexion
+uid: '5138209'
+volume: '10'

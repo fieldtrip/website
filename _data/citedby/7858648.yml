@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '33551719'
+- idtype: doi
+  value: 10.3389/fnins.2020.584971
+- idtype: pmcid
+  value: PMC7858648
+authors:
+- authtype: Author
+  name: Jiang X
+- authtype: Author
+  name: Lopez E
+- authtype: Author
+  name: Stieger JR
+- authtype: Author
+  name: Greco CM
+- authtype: Author
+  name: He B
+epubdate: 2021 Jan 21
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '584971'
+pmclivedate: 2021/02/05
+printpubdate: ''
+pubdate: 2021 Jan 21
+sortdate: 2021/01/21 00:00
+source: Front Neurosci
+title: Effects of Long-Term Meditation Practices on Sensorimotor Rhythm-Based Brain-Computer
+  Interface Learning
+uid: '7858648'
+volume: '14'

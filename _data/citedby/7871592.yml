@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '33557811'
+- idtype: doi
+  value: 10.1186/s12915-021-00950-4
+- idtype: pmcid
+  value: PMC7871592
+authors:
+- authtype: Author
+  name: Strahnen D
+- authtype: Author
+  name: Kapanaiah SK
+- authtype: Author
+  name: Bygrave AM
+- authtype: Author
+  name: Kätzel D
+epubdate: 2021 Feb 8
+fulljournalname: BMC Biology
+issue: ''
+pages: '24'
+pmclivedate: 2021/02/09
+printpubdate: ''
+pubdate: 2021 Feb 8
+sortdate: 2021/02/08 00:00
+source: BMC Biol
+title: Lack of redundancy between electrophysiological measures of long-range neuronal
+  communication
+uid: '7871592'
+volume: '19'

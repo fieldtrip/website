@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '26324922'
+- idtype: doi
+  value: 10.1073/pnas.1501438112
+- idtype: pmcid
+  value: PMC4593118
+authors:
+- authtype: Author
+  name: Baumgarten TJ
+- authtype: Author
+  name: Schnitzler A
+- authtype: Author
+  name: Lange J
+epubdate: 2015 Aug 31
+fulljournalname: Proceedings of the National Academy of Sciences of the United States
+  of America
+issue: '39'
+pages: 12187-12192
+pmclivedate: 2016/03/29
+printpubdate: 2015 Sep 29
+pubdate: 2015 Aug 31
+sortdate: 2015/08/31 00:00
+source: Proc Natl Acad Sci U S A
+title: Beta oscillations define discrete perceptual cycles in the somatosensory domain
+uid: '4593118'
+volume: '112'

@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '27499741'
+- idtype: doi
+  value: 10.3389/fninf.2016.00027
+- idtype: pmcid
+  value: PMC4956688
+authors:
+- authtype: Author
+  name: Oosterhof NN
+- authtype: Author
+  name: Connolly AC
+- authtype: Author
+  name: Haxby JV
+epubdate: 2016 Jul 22
+fulljournalname: Frontiers in Neuroinformatics
+issue: ''
+pages: '27'
+pmclivedate: 2016/08/05
+printpubdate: ''
+pubdate: 2016 Jul 22
+sortdate: 2016/07/22 00:00
+source: Front Neuroinform
+title: 'CoSMoMVPA: Multi-Modal Multivariate Pattern Analysis of Neuroimaging Data
+  in Matlab/GNU Octave'
+uid: '4956688'
+volume: '10'

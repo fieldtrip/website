@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '34372405'
+- idtype: doi
+  value: 10.3390/s21155169
+- idtype: pmcid
+  value: PMC8347755
+authors:
+- authtype: Author
+  name: Piorecky M
+- authtype: Author
+  name: Koudelka V
+- authtype: Author
+  name: Piorecka V
+- authtype: Author
+  name: Strobl J
+- authtype: Author
+  name: Dudysova D
+- authtype: Author
+  name: Koprivova J
+epubdate: 2021 Jul 30
+fulljournalname: Sensors (Basel, Switzerland)
+issue: '15'
+pages: '5169'
+pmclivedate: 2021/08/08
+printpubdate: ''
+pubdate: 2021 Jul 30
+sortdate: 2021/07/30 00:00
+source: Sensors (Basel)
+title: Real-Time Excitation of Slow Oscillations during Deep Sleep Using Acoustic
+  Stimulation
+uid: '8347755'
+volume: '21'

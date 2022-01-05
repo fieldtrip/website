@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '29234075'
+- idtype: doi
+  value: 10.1038/s41598-017-17469-w
+- idtype: pmcid
+  value: PMC5727134
+authors:
+- authtype: Author
+  name: Jiang X
+- authtype: Author
+  name: Shamie I
+- authtype: Author
+  name: K. Doyle W
+- authtype: Author
+  name: Friedman D
+- authtype: Author
+  name: Dugan P
+- authtype: Author
+  name: Devinsky O
+- authtype: Author
+  name: Eskandar E
+- authtype: Author
+  name: Cash SS
+- authtype: Author
+  name: Thesen T
+- authtype: Author
+  name: Halgren E
+epubdate: 2017 Dec 12
+fulljournalname: Scientific Reports
+issue: ''
+pages: '17380'
+pmclivedate: 2017/12/13
+printpubdate: ''
+pubdate: 2017 Dec 12
+sortdate: 2017/12/12 00:00
+source: Sci Rep
+title: Replay of large-scale spatio-temporal patterns from waking during subsequent
+  NREM sleep in human cortex
+uid: '5727134'
+volume: '7'

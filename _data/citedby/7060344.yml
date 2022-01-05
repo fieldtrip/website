@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '32144331'
+- idtype: doi
+  value: 10.1038/s41598-020-61171-3
+- idtype: pmcid
+  value: PMC7060344
+authors:
+- authtype: Author
+  name: Schwedhelm P
+- authtype: Author
+  name: Baldauf D
+- authtype: Author
+  name: Treue S
+epubdate: 2020 Mar 6
+fulljournalname: Scientific Reports
+issue: ''
+pages: '4216'
+pmclivedate: 2020/03/18
+printpubdate: ''
+pubdate: 2020 Mar 6
+sortdate: 2020/03/06 00:00
+source: Sci Rep
+title: The lateral prefrontal cortex of primates encodes stimulus colors and their
+  behavioral relevance during a match-to-sample task
+uid: '7060344'
+volume: '10'

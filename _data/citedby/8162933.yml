@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '33400645'
+- idtype: doi
+  value: 10.1109/TBME.2021.3049199
+- idtype: pmcid
+  value: PMC8162933
+- idtype: MID
+  value: NIHMS1696162
+authors:
+- authtype: Author
+  name: Xu M
+- authtype: Author
+  name: Sanz DL
+- authtype: Author
+  name: Garces P
+- authtype: Author
+  name: Maestu F
+- authtype: Author
+  name: Li Q
+- authtype: Author
+  name: Pantazis D
+epubdate: 2021 Apr 21
+fulljournalname: IEEE transactions on bio-medical engineering
+issue: '5'
+pages: 1579-1588
+pmclivedate: ''
+printpubdate: 2021 May
+pubdate: 2021 Apr 21
+sortdate: 2021/04/21 00:00
+source: IEEE Trans Biomed Eng
+title: A Graph Gaussian Embedding Method for Predicting Alzheimer’s Disease Progression
+  with MEG Brain Networks
+uid: '8162933'
+volume: '68'

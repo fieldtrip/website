@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '33594976'
+- idtype: doi
+  value: 10.7554/eLife.62809
+- idtype: pmcid
+  value: PMC7924946
+authors:
+- authtype: Author
+  name: Strube A
+- authtype: Author
+  name: Rose M
+- authtype: Author
+  name: Fazeli S
+- authtype: Author
+  name: Büchel C
+epubdate: 2021 Feb 17
+fulljournalname: eLife
+issue: ''
+pages: e62809
+pmclivedate: 2021/03/03
+printpubdate: ''
+pubdate: 2021 Feb 17
+sortdate: 2021/02/17 00:00
+source: eLife
+title: The temporal and spectral characteristics of expectations and prediction errors
+  in pain and thermoception
+uid: '7924946'
+volume: '10'

@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '27247416'
+- idtype: doi
+  value: 10.1073/pnas.1522577113
+- idtype: pmcid
+  value: PMC4914170
+authors:
+- authtype: Author
+  name: Scheeringa R
+- authtype: Author
+  name: Koopmans PJ
+- authtype: Author
+  name: van Mourik T
+- authtype: Author
+  name: Jensen O
+- authtype: Author
+  name: Norris DG
+epubdate: 2016 May 31
+fulljournalname: Proceedings of the National Academy of Sciences of the United States
+  of America
+issue: '24'
+pages: 6761-6766
+pmclivedate: 2016/12/14
+printpubdate: 2016 Jun 14
+pubdate: 2016 May 31
+sortdate: 2016/05/31 00:00
+source: Proc Natl Acad Sci U S A
+title: The relationship between oscillatory EEG activity and the laminar-specific
+  BOLD signal
+uid: '4914170'
+volume: '113'

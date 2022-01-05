@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '25007074'
+- idtype: doi
+  value: 10.1371/journal.pone.0101042
+- idtype: pmcid
+  value: PMC4090000
+authors:
+- authtype: Author
+  name: van Ackeren MJ
+- authtype: Author
+  name: Rueschemeyer SA
+epubdate: 2014 Jul 9
+fulljournalname: PLoS ONE
+issue: '7'
+pages: e101042
+pmclivedate: 2014/07/14
+printpubdate: ''
+pubdate: 2014 Jul 9
+sortdate: 2014/07/09 00:00
+source: PLoS One
+title: 'Cross-Modal Integration of Lexical-Semantic Features during Word Processing:
+  Evidence from Oscillatory Dynamics during EEG'
+uid: '4090000'
+volume: '9'

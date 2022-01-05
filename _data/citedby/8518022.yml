@@ -1,0 +1,48 @@
+articleids:
+- idtype: pmid
+  value: '34265253'
+- idtype: doi
+  value: 10.1016/j.neuron.2021.06.019
+- idtype: pmcid
+  value: PMC8518022
+- idtype: MID
+  value: NIHMS1718829
+authors:
+- authtype: Author
+  name: Kunz L
+- authtype: Author
+  name: Brandt A
+- authtype: Author
+  name: Reinacher PC
+- authtype: Author
+  name: Staresina BP
+- authtype: Author
+  name: Reifenstein ET
+- authtype: Author
+  name: Weidemann CT
+- authtype: Author
+  name: Herweg NA
+- authtype: Author
+  name: Patel A
+- authtype: Author
+  name: Tsitsiklis M
+- authtype: Author
+  name: Kempter R
+- authtype: Author
+  name: Kahana MJ
+- authtype: Author
+  name: Schulze-Bonhage A
+- authtype: Author
+  name: Jacobs J
+epubdate: 2021 Jul 14
+fulljournalname: Neuron
+issue: '17'
+pages: 2781-2796.e10
+pmclivedate: ''
+printpubdate: 2021 Sep 1
+pubdate: 2021 Jul 14
+sortdate: 2021/07/14 00:00
+source: Neuron
+title: A neural code for egocentric spatial maps in the human medial temporal lobe
+uid: '8518022'
+volume: '109'

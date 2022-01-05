@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '28819123'
+- idtype: doi
+  value: 10.1038/s41598-017-09325-8
+- idtype: pmcid
+  value: PMC5561114
+authors:
+- authtype: Author
+  name: Merkel C
+- authtype: Author
+  name: Hausmann J
+- authtype: Author
+  name: Hopf JM
+- authtype: Author
+  name: Heinze HJ
+- authtype: Author
+  name: Buentjen L
+- authtype: Author
+  name: Schoenfeld MA
+epubdate: 2017 Aug 17
+fulljournalname: Scientific Reports
+issue: ''
+pages: '8680'
+pmclivedate: 2017/08/18
+printpubdate: ''
+pubdate: 2017 Aug 17
+sortdate: 2017/08/17 00:00
+source: Sci Rep
+title: Active prosthesis dependent functional cortical reorganization following stroke
+uid: '5561114'
+volume: '7'

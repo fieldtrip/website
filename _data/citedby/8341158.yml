@@ -1,0 +1,40 @@
+articleids:
+- idtype: pmid
+  value: '32289453'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2020.116778
+- idtype: pmcid
+  value: PMC8341158
+- idtype: MID
+  value: NIHMS1597833
+authors:
+- authtype: Author
+  name: Martínez-Cancino R
+- authtype: Author
+  name: Delorme A
+- authtype: Author
+  name: Truong D
+- authtype: Author
+  name: Artoni F
+- authtype: Author
+  name: Kreutz-Delgado K
+- authtype: Author
+  name: Sivagnanam S
+- authtype: Author
+  name: Yoshimoto K
+- authtype: Author
+  name: Majumdar A
+- authtype: Author
+  name: Makeig S
+epubdate: 2020 Apr 11
+fulljournalname: NeuroImage
+issue: ''
+pages: '116778'
+pmclivedate: 2022/01/01
+printpubdate: 2021 Jan 1
+pubdate: 2020 Apr 11
+sortdate: 2020/04/11 00:00
+source: Neuroimage
+title: 'The Open EEGLAB Portal Interface: High-Performance Computing with EEGLAB'
+uid: '8341158'
+volume: '224'

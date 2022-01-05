@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '26039691'
+- idtype: doi
+  value: 10.1371/journal.pone.0128667
+- idtype: pmcid
+  value: PMC4454652
+authors:
+- authtype: Author
+  name: Bonnefond M
+- authtype: Author
+  name: Jensen O
+epubdate: 2015 Jun 3
+fulljournalname: PLoS ONE
+issue: '6'
+pages: e0128667
+pmclivedate: 2015/06/09
+printpubdate: ''
+pubdate: 2015 Jun 3
+sortdate: 2015/06/03 00:00
+source: PLoS One
+title: Gamma Activity Coupled to Alpha Phase as a Mechanism for Top-Down Controlled
+  Gating
+uid: '4454652'
+volume: '10'

@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '32118262'
+- idtype: doi
+  value: 10.1093/cercor/bhaa004
+- idtype: pmcid
+  value: PMC7264684
+authors:
+- authtype: Author
+  name: Dhami P
+- authtype: Author
+  name: Atluri S
+- authtype: Author
+  name: Lee JC
+- authtype: Author
+  name: Knyahnytska Y
+- authtype: Author
+  name: Croarkin PE
+- authtype: Author
+  name: Blumberger DM
+- authtype: Author
+  name: Daskalakis ZJ
+- authtype: Author
+  name: Farzan F
+epubdate: 2020 Feb 17
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '7'
+pages: 3884-3894
+pmclivedate: 2021/06/01
+printpubdate: 2020 Jun
+pubdate: 2020 Feb 17
+sortdate: 2020/02/17 00:00
+source: Cereb Cortex
+title: Prefrontal Cortical Reactivity and Connectivity Markers Distinguish Youth Depression
+  from Healthy Youth
+uid: '7264684'
+volume: '30'

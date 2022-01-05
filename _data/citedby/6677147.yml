@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '30799848'
+- idtype: doi
+  value: 10.3791/58839
+- idtype: pmcid
+  value: PMC6677147
+- idtype: MID
+  value: NIHMS1036768
+authors:
+- authtype: Author
+  name: Marinkovic K
+- authtype: Author
+  name: Beaton LE
+- authtype: Author
+  name: Rosen BQ
+- authtype: Author
+  name: Happer JP
+- authtype: Author
+  name: Wagner LC
+epubdate: 2019 Feb 6
+fulljournalname: 'Journal of visualized experiments : JoVE'
+issue: '144'
+pages: 10.3791/58839
+pmclivedate: 2019/08/02
+printpubdate: ''
+pubdate: 2019 Feb 6
+sortdate: 2019/02/06 00:00
+source: J Vis Exp
+title: Disruption of frontal lobe neural synchrony during cognitive control by alcohol
+  intoxication
+uid: '6677147'
+volume: ''

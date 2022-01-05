@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '33119593'
+- idtype: doi
+  value: 10.1371/journal.pcbi.1008302
+- idtype: pmcid
+  value: PMC7654762
+authors:
+- authtype: Author
+  name: Combrisson E
+- authtype: Author
+  name: Nest T
+- authtype: Author
+  name: Brovelli A
+- authtype: Author
+  name: Ince RA
+- authtype: Author
+  name: Soto JL
+- authtype: Author
+  name: Guillot A
+- authtype: Author
+  name: Jerbi K
+epubdate: 2020 Oct 29
+fulljournalname: PLoS Computational Biology
+issue: '10'
+pages: e1008302
+pmclivedate: 2020/11/18
+printpubdate: ''
+pubdate: 2020 Oct 29
+sortdate: 2020/10/29 00:00
+source: PLoS Comput Biol
+title: 'Tensorpac: An open-source Python toolbox for tensor-based phase-amplitude
+  coupling measurement in electrophysiological brain signals'
+uid: '7654762'
+volume: '16'

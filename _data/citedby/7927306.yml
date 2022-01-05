@@ -1,0 +1,45 @@
+articleids:
+- idtype: pmid
+  value: '33247542'
+- idtype: doi
+  value: 10.1002/hbm.25299
+- idtype: pmcid
+  value: PMC7927306
+authors:
+- authtype: Author
+  name: Costers L
+- authtype: Author
+  name: Van Schependom J
+- authtype: Author
+  name: Laton J
+- authtype: Author
+  name: Baijot J
+- authtype: Author
+  name: Sjøgård M
+- authtype: Author
+  name: Wens V
+- authtype: Author
+  name: De Tiège X
+- authtype: Author
+  name: Goldman S
+- authtype: Author
+  name: D'Haeseleer M
+- authtype: Author
+  name: D'hooghe MB
+- authtype: Author
+  name: Woolrich M
+- authtype: Author
+  name: Nagels G
+epubdate: 2020 Nov 28
+fulljournalname: Human Brain Mapping
+issue: '5'
+pages: 1376-1390
+pmclivedate: 2021/03/12
+printpubdate: ''
+pubdate: 2020 Nov 28
+sortdate: 2020/11/28 00:00
+source: Hum Brain Mapp
+title: The role of hippocampal theta oscillations in working memory impairment in
+  multiple sclerosis
+uid: '7927306'
+volume: '42'

@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '34007432'
+- idtype: doi
+  value: 10.1155/2021/9938646
+- idtype: pmcid
+  value: PMC8099528
+authors:
+- authtype: Author
+  name: Frikha T
+- authtype: Author
+  name: Abdennour N
+- authtype: Author
+  name: Chaabane F
+- authtype: Author
+  name: Ghorbel O
+- authtype: Author
+  name: Ayedi R
+- authtype: Author
+  name: Shahin OR
+- authtype: Author
+  name: Cheikhrouhou O
+epubdate: 2021 Apr 28
+fulljournalname: Journal of Healthcare Engineering
+issue: ''
+pages: '9938646'
+pmclivedate: 2021/05/17
+printpubdate: ''
+pubdate: 2021 Apr 28
+sortdate: 2021/04/28 00:00
+source: J Healthc Eng
+title: Source Localization of EEG Brainwaves Activities via Mother Wavelets Families
+  for SWT Decomposition
+uid: '8099528'
+volume: '2021'

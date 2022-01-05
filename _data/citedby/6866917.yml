@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '28703919'
+- idtype: doi
+  value: 10.1002/hbm.23722
+- idtype: pmcid
+  value: PMC6866917
+authors:
+- authtype: Author
+  name: Herrojo Ruiz M
+- authtype: Author
+  name: Maess B
+- authtype: Author
+  name: Altenmüller E
+- authtype: Author
+  name: Curio G
+- authtype: Author
+  name: Nikulin VV
+epubdate: 2017 Jul 13
+fulljournalname: Human Brain Mapping
+issue: '10'
+pages: 5161-5179
+pmclivedate: 2020/06/12
+printpubdate: ''
+pubdate: 2017 Jul 13
+sortdate: 2017/07/13 00:00
+source: Hum Brain Mapp
+title: Cingulate and cerebellar beta oscillations are engaged in the acquisition of
+  auditory‐motor sequences
+uid: '6866917'
+volume: '38'

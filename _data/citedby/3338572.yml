@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '22563436'
+- idtype: doi
+  value: 10.1371/journal.pone.0036036
+- idtype: pmcid
+  value: PMC3338572
+authors:
+- authtype: Author
+  name: Brookshire G
+- authtype: Author
+  name: Casasanto D
+epubdate: 2012 Apr 26
+fulljournalname: PLoS ONE
+issue: '4'
+pages: e36036
+pmclivedate: 2012/05/04
+printpubdate: ''
+pubdate: 2012 Apr 26
+sortdate: 2012/04/26 00:00
+source: PLoS One
+title: 'Motivation and Motor Control: Hemispheric Specialization for Approach Motivation
+  Reverses with Handedness'
+uid: '3338572'
+volume: '7'

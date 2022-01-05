@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '25886858'
+- idtype: doi
+  value: 10.1186/s12868-015-0144-8
+- idtype: pmcid
+  value: PMC4352290
+authors:
+- authtype: Author
+  name: Craddock M
+- authtype: Author
+  name: Martinovic J
+- authtype: Author
+  name: Müller MM
+epubdate: 2015 Feb 26
+fulljournalname: BMC Neuroscience
+issue: ''
+pages: '6'
+pmclivedate: 2015/03/08
+printpubdate: ''
+pubdate: 2015 Feb 26
+sortdate: 2015/02/26 00:00
+source: BMC Neurosci
+title: Early and late effects of objecthood and spatial frequency on event-related
+  potentials and gamma band activity
+uid: '4352290'
+volume: '16'

@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '30894822'
+- idtype: doi
+  value: 10.3389/fpsyg.2019.00376
+- idtype: pmcid
+  value: PMC6414433
+authors:
+- authtype: Author
+  name: Liu M
+- authtype: Author
+  name: König P
+- authtype: Author
+  name: Mueller JL
+epubdate: 2019 Mar 6
+fulljournalname: Frontiers in Psychology
+issue: ''
+pages: '376'
+pmclivedate: 2019/03/20
+printpubdate: ''
+pubdate: 2019 Mar 6
+sortdate: 2019/03/06 00:00
+source: Front Psychol
+title: Novel ERP Evidence for Processing Differences Between Negative and Positive
+  Polarity Items in German
+uid: '6414433'
+volume: '10'

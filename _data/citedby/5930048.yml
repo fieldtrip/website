@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '29422442'
+- idtype: doi
+  value: 10.1016/j.brs.2018.01.028
+- idtype: pmcid
+  value: PMC5930048
+- idtype: MID
+  value: NIHMS938598
+authors:
+- authtype: Author
+  name: Malekmohammadi M
+- authtype: Author
+  name: AuYong N
+- authtype: Author
+  name: Ricks-Oddie J
+- authtype: Author
+  name: Bordelon Y
+- authtype: Author
+  name: Pouratian N
+epubdate: 2018 Jan 31
+fulljournalname: Brain stimulation
+issue: '3'
+pages: 607-617
+pmclivedate: 2019/05/01
+printpubdate: 2018 May-Jun
+pubdate: 2018 Jan 31
+sortdate: 2018/01/31 00:00
+source: Brain Stimul
+title: Pallidal deep brain stimulation modulates excessive cortical high β phase amplitude
+  coupling in Parkinson disease
+uid: '5930048'
+volume: '11'

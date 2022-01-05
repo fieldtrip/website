@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '30982647'
+- idtype: doi
+  value: 10.1016/j.cub.2019.03.024
+- idtype: pmcid
+  value: PMC6488290
+authors:
+- authtype: Author
+  name: Carrillo M
+- authtype: Author
+  name: Han Y
+- authtype: Author
+  name: Migliorati F
+- authtype: Author
+  name: Liu M
+- authtype: Author
+  name: Gazzola V
+- authtype: Author
+  name: Keysers C
+epubdate: ''
+fulljournalname: Current Biology
+issue: '8'
+pages: 1301-1312.e6
+pmclivedate: 2019/05/06
+printpubdate: 2019 Apr 22
+pubdate: 2019 Apr 22
+sortdate: 2019/04/22 00:00
+source: Curr Biol
+title: Emotional Mirror Neurons in the Rat’s Anterior Cingulate Cortex
+uid: '6488290'
+volume: '29'

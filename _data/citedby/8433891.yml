@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '34502629'
+- idtype: doi
+  value: 10.3390/s21175740
+- idtype: pmcid
+  value: PMC8433891
+authors:
+- authtype: Author
+  name: Appriou A
+- authtype: Author
+  name: Pillette L
+- authtype: Author
+  name: Trocellier D
+- authtype: Author
+  name: Dutartre D
+- authtype: Author
+  name: Cichocki A
+- authtype: Author
+  name: Lotte F
+epubdate: 2021 Aug 26
+fulljournalname: Sensors (Basel, Switzerland)
+issue: '17'
+pages: '5740'
+pmclivedate: 2021/09/12
+printpubdate: ''
+pubdate: 2021 Aug 26
+sortdate: 2021/08/26 00:00
+source: Sensors (Basel)
+title: BioPyC, an Open-Source Python Toolbox for Offline Electroencephalographic and
+  Physiological Signals Classification
+uid: '8433891'
+volume: '21'

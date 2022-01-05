@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '31754009'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1194-19.2019
+- idtype: pmcid
+  value: PMC6961985
+authors:
+- authtype: Author
+  name: Wolff MJ
+- authtype: Author
+  name: Kandemir G
+- authtype: Author
+  name: Stokes MG
+- authtype: Author
+  name: Akyürek EG
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '3'
+pages: 671-681
+pmclivedate: 2020/07/15
+printpubdate: 2020 Jan 15
+pubdate: 2020 Jan 15
+sortdate: 2020/01/15 00:00
+source: J Neurosci
+title: Unimodal and Bimodal Access to Sensory Working Memories by Auditory and Visual
+  Impulses
+uid: '6961985'
+volume: '40'

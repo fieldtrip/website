@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '26400919'
+- idtype: doi
+  value: 10.1093/cercor/bhv210
+- idtype: pmcid
+  value: PMC5066824
+authors:
+- authtype: Author
+  name: Spaak E
+- authtype: Author
+  name: Fonken Y
+- authtype: Author
+  name: Jensen O
+- authtype: Author
+  name: de Lange FP
+epubdate: 2016 Oct 17
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '11'
+pages: 4327-4336
+pmclivedate: 2017/10/01
+printpubdate: 2016 Oct
+pubdate: 2016 Oct 17
+sortdate: 2016/10/17 00:00
+source: Cereb Cortex
+title: The Neural Mechanisms of Prediction in Visual Search
+uid: '5066824'
+volume: '26'

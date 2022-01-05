@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '28103303'
+- idtype: doi
+  value: 10.1371/journal.pone.0170370
+- idtype: pmcid
+  value: PMC5245833
+authors:
+- authtype: Author
+  name: Duma GM
+- authtype: Author
+  name: Mento G
+- authtype: Author
+  name: Manari T
+- authtype: Author
+  name: Martinelli M
+- authtype: Author
+  name: Tressoldi P
+epubdate: 2017 Jan 19
+fulljournalname: PLoS ONE
+issue: '1'
+pages: e0170370
+pmclivedate: 2017/02/06
+printpubdate: ''
+pubdate: 2017 Jan 19
+sortdate: 2017/01/19 00:00
+source: PLoS One
+title: 'Driving with Intuition: A Preregistered Study about the EEG Anticipation of
+  Simulated Random Car Accidents'
+uid: '5245833'
+volume: '12'

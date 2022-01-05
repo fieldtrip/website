@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '28620287'
+- idtype: doi
+  value: 10.3389/fnbeh.2017.00107
+- idtype: pmcid
+  value: PMC5449767
+authors:
+- authtype: Author
+  name: Han Y
+- authtype: Author
+  name: Wang K
+- authtype: Author
+  name: Jia J
+- authtype: Author
+  name: Wu W
+epubdate: 2017 May 31
+fulljournalname: Frontiers in Behavioral Neuroscience
+issue: ''
+pages: '107'
+pmclivedate: 2017/06/15
+printpubdate: ''
+pubdate: 2017 May 31
+sortdate: 2017/05/31 00:00
+source: Front Behav Neurosci
+title: Changes of EEG Spectra and Functional Connectivity during an Object-Location
+  Memory Task in Alzheimer’s Disease
+uid: '5449767'
+volume: '11'

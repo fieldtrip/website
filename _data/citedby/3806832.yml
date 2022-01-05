@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '24194931'
+- idtype: doi
+  value: 10.1371/journal.pone.0078422
+- idtype: pmcid
+  value: PMC3806832
+authors:
+- authtype: Author
+  name: Elshoff L
+- authtype: Author
+  name: Muthuraman M
+- authtype: Author
+  name: Anwar AR
+- authtype: Author
+  name: Deuschl G
+- authtype: Author
+  name: Stephani U
+- authtype: Author
+  name: Raethjen J
+- authtype: Author
+  name: Siniatchkin M
+epubdate: 2013 Oct 23
+fulljournalname: PLoS ONE
+issue: '10'
+pages: e78422
+pmclivedate: 2013/11/05
+printpubdate: ''
+pubdate: 2013 Oct 23
+sortdate: 2013/10/23 00:00
+source: PLoS One
+title: Dynamic Imaging of Coherent Sources Reveals Different Network Connectivity
+  Underlying the Generation and Perpetuation of Epileptic Seizures
+uid: '3806832'
+volume: '8'

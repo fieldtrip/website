@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '29934613'
+- idtype: doi
+  value: 10.1038/s41598-018-27898-w
+- idtype: pmcid
+  value: PMC6015046
+authors:
+- authtype: Author
+  name: Monsalve IF
+- authtype: Author
+  name: Bourguignon M
+- authtype: Author
+  name: Molinaro N
+epubdate: 2018 Jun 22
+fulljournalname: Scientific Reports
+issue: ''
+pages: '9503'
+pmclivedate: 2018/07/06
+printpubdate: ''
+pubdate: 2018 Jun 22
+sortdate: 2018/06/22 00:00
+source: Sci Rep
+title: Theta oscillations mediate pre-activation of highly expected word initial phonemes
+uid: '6015046'
+volume: '8'

@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '23936181'
+- idtype: doi
+  value: 10.1371/journal.pone.0070293
+- idtype: pmcid
+  value: PMC3729457
+authors:
+- authtype: Author
+  name: Craddock M
+- authtype: Author
+  name: Martinovic J
+- authtype: Author
+  name: Müller MM
+epubdate: 2013 Jul 31
+fulljournalname: PLoS ONE
+issue: '7'
+pages: e70293
+pmclivedate: 2013/08/09
+printpubdate: ''
+pubdate: 2013 Jul 31
+sortdate: 2013/07/31 00:00
+source: PLoS One
+title: 'Task and Spatial Frequency Modulations of Object Processing: An EEG Study'
+uid: '3729457'
+volume: '8'

@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '28303098'
+- idtype: doi
+  value: 10.3389/fninf.2017.00014
+- idtype: pmcid
+  value: PMC5333374
+authors:
+- authtype: Author
+  name: Blenkmann AO
+- authtype: Author
+  name: Phillips HN
+- authtype: Author
+  name: Princich JP
+- authtype: Author
+  name: Rowe JB
+- authtype: Author
+  name: Bekinschtein TA
+- authtype: Author
+  name: Muravchik CH
+- authtype: Author
+  name: Kochen S
+epubdate: 2017 Mar 2
+fulljournalname: Frontiers in Neuroinformatics
+issue: ''
+pages: '14'
+pmclivedate: 2017/03/16
+printpubdate: ''
+pubdate: 2017 Mar 2
+sortdate: 2017/03/02 00:00
+source: Front Neuroinform
+title: 'iElectrodes: A Comprehensive Open-Source Toolbox for Depth and Subdural Grid
+  Electrode Localization'
+uid: '5333374'
+volume: '11'

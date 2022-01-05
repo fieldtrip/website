@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '30559115'
+- idtype: doi
+  value: 10.1101/lm.048199.118
+- idtype: pmcid
+  value: PMC6298542
+authors:
+- authtype: Author
+  name: van Buuren M
+- authtype: Author
+  name: Wagner IC
+- authtype: Author
+  name: Fernández G
+epubdate: 2019 Jan
+fulljournalname: Learning & Memory
+issue: '1'
+pages: 9-19
+pmclivedate: 2020/01/01
+printpubdate: ''
+pubdate: 2019 Jan
+sortdate: 2019/01/01 00:00
+source: Learn Mem
+title: Functional network interactions at rest underlie individual differences in
+  memory ability
+uid: '6298542'
+volume: '26'

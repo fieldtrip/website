@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '30214406'
+- idtype: doi
+  value: 10.3389/fnagi.2018.00242
+- idtype: pmcid
+  value: PMC6125692
+authors:
+- authtype: Author
+  name: Schättin A
+- authtype: Author
+  name: Gennaro F
+- authtype: Author
+  name: Egloff M
+- authtype: Author
+  name: Vogt S
+- authtype: Author
+  name: de Bruin ED
+epubdate: 2018 Aug 30
+fulljournalname: Frontiers in Aging Neuroscience
+issue: ''
+pages: '242'
+pmclivedate: 2018/09/13
+printpubdate: ''
+pubdate: 2018 Aug 30
+sortdate: 2018/08/30 00:00
+source: Front Aging Neurosci
+title: 'Physical Activity, Nutrition, Cognition, Neurophysiology, and Short-Time Synaptic
+  Plasticity in Healthy Older Adults: A Cross-Sectional Study'
+uid: '6125692'
+volume: '10'

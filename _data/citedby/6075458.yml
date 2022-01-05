@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '28334943'
+- idtype: doi
+  value: 10.1093/brain/awx031
+- idtype: pmcid
+  value: PMC6075458
+authors:
+- authtype: Author
+  name: Perry A
+- authtype: Author
+  name: Saunders SN
+- authtype: Author
+  name: Stiso J
+- authtype: Author
+  name: Dewar C
+- authtype: Author
+  name: Lubell J
+- authtype: Author
+  name: Meling TR
+- authtype: Author
+  name: Solbakk AK
+- authtype: Author
+  name: Endestad T
+- authtype: Author
+  name: Knight RT
+epubdate: 2017 Feb 22
+fulljournalname: Brain
+issue: '4'
+pages: 1086-1099
+pmclivedate: 2018/08/09
+printpubdate: 2017 Apr
+pubdate: 2017 Feb 22
+sortdate: 2017/02/22 00:00
+source: Brain
+title: 'Effects of prefrontal cortex damage on emotion understanding: EEG and behavioural
+  evidence'
+uid: '6075458'
+volume: '140'

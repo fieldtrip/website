@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '33401153'
+- idtype: doi
+  value: 10.1016/j.dcn.2020.100900
+- idtype: pmcid
+  value: PMC7787925
+authors:
+- authtype: Author
+  name: Heffer T
+- authtype: Author
+  name: Willoughby T
+epubdate: 2020 Dec 24
+fulljournalname: Developmental Cognitive Neuroscience
+issue: ''
+pages: '100900'
+pmclivedate: 2021/01/11
+printpubdate: ''
+pubdate: 2020 Dec 24
+sortdate: 2020/12/24 00:00
+source: Dev Cogn Neurosci
+title: 'A person-centered examination of emotion dysregulation, sensitivity to threat,
+  and impulsivity among children and adolescents: An ERP study'
+uid: '7787925'
+volume: '47'

@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '32280464'
+- idtype: doi
+  value: 10.1186/s40337-020-00290-8
+- idtype: pmcid
+  value: PMC7137417
+authors:
+- authtype: Author
+  name: Biehl SC
+- authtype: Author
+  name: Keil J
+- authtype: Author
+  name: Naumann E
+- authtype: Author
+  name: Svaldi J
+epubdate: 2020 Apr 7
+fulljournalname: Journal of Eating Disorders
+issue: ''
+pages: '14'
+pmclivedate: 2020/04/11
+printpubdate: ''
+pubdate: 2020 Apr 7
+sortdate: 2020/04/07 00:00
+source: J Eat Disord
+title: ERP and oscillatory differences in overweight/obese and normal-weight adolescents
+  in response to food stimuli
+uid: '7137417'
+volume: '8'

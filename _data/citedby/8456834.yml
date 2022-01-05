@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '34128271'
+- idtype: doi
+  value: 10.1111/ejn.15352
+- idtype: pmcid
+  value: PMC8456834
+authors:
+- authtype: Author
+  name: Wurm MF
+- authtype: Author
+  name: Tagliabue CF
+- authtype: Author
+  name: Mazza V
+epubdate: 2021 Jul 13
+fulljournalname: The European Journal of Neuroscience
+issue: '3'
+pages: 4971-4984
+pmclivedate: 2021/09/27
+printpubdate: 2021 Aug
+pubdate: 2021 Jul 13
+sortdate: 2021/07/13 00:00
+source: Eur J Neurosci
+title: Decoding location‐specific and location‐invariant stages of numerosity processing
+  in subitizing
+uid: '8456834'
+volume: '54'

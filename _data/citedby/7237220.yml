@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '32423530'
+- idtype: doi
+  value: 10.7554/eLife.50654
+- idtype: pmcid
+  value: PMC7237220
+authors:
+- authtype: Author
+  name: Sporn S
+- authtype: Author
+  name: Hein T
+- authtype: Author
+  name: Herrojo Ruiz M
+epubdate: 2020 May 19
+fulljournalname: eLife
+issue: ''
+pages: e50654
+pmclivedate: 2020/05/20
+printpubdate: ''
+pubdate: 2020 May 19
+sortdate: 2020/05/19 00:00
+source: eLife
+title: Alterations in the amplitude and burst rate of beta oscillations impair reward-dependent
+  motor learning in anxiety
+uid: '7237220'
+volume: '9'

@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '26674862'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1442-15.2015
+- idtype: pmcid
+  value: PMC6605515
+authors:
+- authtype: Author
+  name: Peiker I
+- authtype: Author
+  name: David N
+- authtype: Author
+  name: Schneider TR
+- authtype: Author
+  name: Nolte G
+- authtype: Author
+  name: Schöttle D
+- authtype: Author
+  name: Engel AK
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '50'
+pages: 16352-16361
+pmclivedate: 2019/07/09
+printpubdate: 2015 Dec 16
+pubdate: 2015 Dec 16
+sortdate: 2015/12/16 00:00
+source: J Neurosci
+title: Perceptual Integration Deficits in Autism Spectrum Disorders Are Associated
+  with Reduced Interhemispheric Gamma-Band Coherence
+uid: '6605515'
+volume: '35'

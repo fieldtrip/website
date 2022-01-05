@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '33707658'
+- idtype: doi
+  value: 10.1038/s41562-021-01073-0
+- idtype: pmcid
+  value: PMC7611700
+- idtype: MID
+  value: EMS116179
+authors:
+- authtype: Author
+  name: Giordano BL
+- authtype: Author
+  name: Whiting C
+- authtype: Author
+  name: Kriegeskorte N
+- authtype: Author
+  name: Kotz SA
+- authtype: Author
+  name: Gross J
+- authtype: Author
+  name: Belin P
+epubdate: 2021 Mar 11
+fulljournalname: Nature human behaviour
+issue: '9'
+pages: 1203-1213
+pmclivedate: 2021/09/23
+printpubdate: 2021 Sep 1
+pubdate: 2021 Mar 11
+sortdate: 2021/03/11 00:00
+source: Nat Hum Behav
+title: The Representational Dynamics of Perceived Voice Emotions Evolve from Categories
+  to Dimensions
+uid: '7611700'
+volume: '5'

@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '32094201'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1936-19.2020
+- idtype: pmcid
+  value: PMC7083526
+authors:
+- authtype: Author
+  name: Fuglsang SA
+- authtype: Author
+  name: Märcher-Rørsted J
+- authtype: Author
+  name: Dau T
+- authtype: Author
+  name: Hjortkjær J
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '12'
+pages: 2562-2572
+pmclivedate: 2020/03/23
+printpubdate: 2020 Mar 18
+pubdate: 2020 Mar 18
+sortdate: 2020/03/18 00:00
+source: J Neurosci
+title: Effects of Sensorineural Hearing Loss on Cortical Synchronization to Competing
+  Speech during Selective Attention
+uid: '7083526'
+volume: '40'

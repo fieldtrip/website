@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '30080855'
+- idtype: doi
+  value: 10.1371/journal.pbio.2006558
+- idtype: pmcid
+  value: PMC6095613
+authors:
+- authtype: Author
+  name: Park H
+- authtype: Author
+  name: Ince RA
+- authtype: Author
+  name: Schyns PG
+- authtype: Author
+  name: Thut G
+- authtype: Author
+  name: Gross J
+epubdate: 2018 Aug 6
+fulljournalname: PLoS Biology
+issue: '8'
+pages: e2006558
+pmclivedate: 2018/08/30
+printpubdate: ''
+pubdate: 2018 Aug 6
+sortdate: 2018/08/06 00:00
+source: PLoS Biol
+title: 'Representational interactions during audiovisual speech entrainment: Redundancy
+  in left posterior superior temporal gyrus and synergy in left motor cortex'
+uid: '6095613'
+volume: '16'

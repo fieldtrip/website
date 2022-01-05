@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '26161072'
+- idtype: doi
+  value: 10.3389/fnint.2015.00043
+- idtype: pmcid
+  value: PMC4479727
+authors:
+- authtype: Author
+  name: Lange J
+- authtype: Author
+  name: Pavlidou A
+- authtype: Author
+  name: Schnitzler A
+epubdate: 2015 Jun 25
+fulljournalname: Frontiers in Integrative Neuroscience
+issue: ''
+pages: '43'
+pmclivedate: 2015/07/09
+printpubdate: ''
+pubdate: 2015 Jun 25
+sortdate: 2015/06/25 00:00
+source: Front Integr Neurosci
+title: Lateralized modulation of beta-band power in sensorimotor areas during action
+  observation
+uid: '4479727'
+volume: '9'

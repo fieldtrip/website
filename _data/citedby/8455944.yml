@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '34566602'
+- idtype: doi
+  value: 10.3389/fnhum.2021.718662
+- idtype: pmcid
+  value: PMC8455944
+authors:
+- authtype: Author
+  name: Mariner J
+- authtype: Author
+  name: Loetscher T
+- authtype: Author
+  name: Hordacre B
+epubdate: 2021 Sep 8
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '718662'
+pmclivedate: 2021/09/23
+printpubdate: ''
+pubdate: 2021 Sep 8
+sortdate: 2021/09/08 00:00
+source: Front Hum Neurosci
+title: Parietal Cortex Connectivity as a Marker of Shift in Spatial Attention Following
+  Continuous Theta Burst Stimulation
+uid: '8455944'
+volume: '15'

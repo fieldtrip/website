@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '31979321'
+- idtype: doi
+  value: 10.3390/brainsci10020061
+- idtype: pmcid
+  value: PMC7071462
+authors:
+- authtype: Author
+  name: Yang T
+- authtype: Author
+  name: Di Bernardi Luft C
+- authtype: Author
+  name: Sun P
+- authtype: Author
+  name: Bhattacharya J
+- authtype: Author
+  name: Banissy MJ
+epubdate: 2020 Jan 23
+fulljournalname: Brain Sciences
+issue: '2'
+pages: '61'
+pmclivedate: 2020/03/19
+printpubdate: ''
+pubdate: 2020 Jan 23
+sortdate: 2020/01/23 00:00
+source: Brain Sci
+title: Investigating Age-Related Neural Compensation During Emotion Perception Using
+  Electroencephalography
+uid: '7071462'
+volume: '10'

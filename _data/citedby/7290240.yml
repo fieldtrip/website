@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '32581700'
+- idtype: doi
+  value: 10.3389/fnins.2020.00589
+- idtype: pmcid
+  value: PMC7290240
+authors:
+- authtype: Author
+  name: Tinga AM
+- authtype: Author
+  name: de Back TT
+- authtype: Author
+  name: Louwerse MM
+epubdate: 2020 Jun 5
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '589'
+pmclivedate: 2020/06/23
+printpubdate: ''
+pubdate: 2020 Jun 5
+sortdate: 2020/06/05 00:00
+source: Front Neurosci
+title: 'Non-invasive Neurophysiology in Learning and Training: Mechanisms and a SWOT
+  Analysis'
+uid: '7290240'
+volume: '14'

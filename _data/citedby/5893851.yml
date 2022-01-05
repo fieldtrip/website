@@ -1,0 +1,23 @@
+articleids:
+- idtype: pmid
+  value: '29670518'
+- idtype: doi
+  value: 10.3389/fncom.2018.00023
+- idtype: pmcid
+  value: PMC5893851
+authors:
+- authtype: Author
+  name: Lozano-Soldevilla D
+epubdate: 2018 Apr 4
+fulljournalname: Frontiers in Computational Neuroscience
+issue: ''
+pages: '23'
+pmclivedate: 2018/04/18
+printpubdate: ''
+pubdate: 2018 Apr 4
+sortdate: 2018/04/04 00:00
+source: Front Comput Neurosci
+title: On the Physiological Modulation and Potential Mechanisms Underlying Parieto-Occipital
+  Alpha Oscillations
+uid: '5893851'
+volume: '12'

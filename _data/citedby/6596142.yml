@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '30030399'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0462-18.2018
+- idtype: pmcid
+  value: PMC6596142
+authors:
+- authtype: Author
+  name: Vinken K
+- authtype: Author
+  name: Op de Beeck HP
+- authtype: Author
+  name: Vogels R
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '34'
+pages: 7492-7504
+pmclivedate: 2019/06/27
+printpubdate: 2018 Aug 22
+pubdate: 2018 Aug 22
+sortdate: 2018/08/22 00:00
+source: J Neurosci
+title: Face Repetition Probability Does Not Affect Repetition Suppression in Macaque
+  Inferotemporal Cortex
+uid: '6596142'
+volume: '38'

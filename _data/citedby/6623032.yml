@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '22049435'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0957-11.2011
+- idtype: pmcid
+  value: PMC6623032
+authors:
+- authtype: Author
+  name: Lima B
+- authtype: Author
+  name: Singer W
+- authtype: Author
+  name: Neuenschwander S
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '44'
+pages: 15919-15931
+pmclivedate: 2019/07/19
+printpubdate: 2011 Nov 2
+pubdate: 2011 Nov 2
+sortdate: 2011/11/02 00:00
+source: J Neurosci
+title: Gamma Responses Correlate with Temporal Expectation in Monkey Primary Visual
+  Cortex
+uid: '6623032'
+volume: '31'

@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '31729790'
+- idtype: doi
+  value: 10.1002/hbm.24865
+- idtype: pmcid
+  value: PMC7268078
+authors:
+- authtype: Author
+  name: Hauser MF
+- authtype: Author
+  name: Heba S
+- authtype: Author
+  name: Schmidt‐Wilcke T
+- authtype: Author
+  name: Tegenthoff M
+- authtype: Author
+  name: Manahan‐Vaughan D
+epubdate: 2019 Nov 15
+fulljournalname: Human Brain Mapping
+issue: '5'
+pages: 1153-1166
+pmclivedate: 2020/06/12
+printpubdate: ''
+pubdate: 2019 Nov 15
+sortdate: 2019/11/15 00:00
+source: Hum Brain Mapp
+title: 'Cerebellar‐hippocampal processing in passive perception of visuospatial change:
+  An ego‐ and allocentric axis?'
+uid: '7268078'
+volume: '41'

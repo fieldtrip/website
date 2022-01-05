@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '30186105'
+- idtype: doi
+  value: 10.3389/fnins.2018.00581
+- idtype: pmcid
+  value: PMC6110823
+authors:
+- authtype: Author
+  name: Paredes-Gallardo A
+- authtype: Author
+  name: Innes-Brown H
+- authtype: Author
+  name: Madsen SM
+- authtype: Author
+  name: Dau T
+- authtype: Author
+  name: Marozeau J
+epubdate: 2018 Aug 21
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '581'
+pmclivedate: 2018/09/05
+printpubdate: ''
+pubdate: 2018 Aug 21
+sortdate: 2018/08/21 00:00
+source: Front Neurosci
+title: 'Auditory Stream Segregation and Selective Attention for Cochlear Implant Listeners:
+  Evidence From Behavioral Measures and Event-Related Potentials'
+uid: '6110823'
+volume: '12'

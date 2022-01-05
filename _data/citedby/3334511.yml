@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '22536192'
+- idtype: doi
+  value: 10.3389/fpsyg.2012.00121
+- idtype: pmcid
+  value: PMC3334511
+authors:
+- authtype: Author
+  name: Marinkovic K
+- authtype: Author
+  name: Rosen BQ
+- authtype: Author
+  name: Cox B
+- authtype: Author
+  name: Kovacevic S
+epubdate: 2012 Apr 24
+fulljournalname: Frontiers in Psychology
+issue: ''
+pages: '121'
+pmclivedate: 2012/04/25
+printpubdate: ''
+pubdate: 2012 Apr 24
+sortdate: 2012/04/24 00:00
+source: Front Psychol
+title: 'Event-Related Theta Power during Lexical-Semantic Retrieval and Decision Conflict
+  is Modulated by Alcohol Intoxication: Anatomically Constrained MEG'
+uid: '3334511'
+volume: '3'

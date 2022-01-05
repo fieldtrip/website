@@ -1,0 +1,45 @@
+articleids:
+- idtype: pmid
+  value: '33134915'
+- idtype: doi
+  value: 10.1093/braincomms/fcaa111
+- idtype: pmcid
+  value: PMC7585696
+authors:
+- authtype: Author
+  name: Quandt F
+- authtype: Author
+  name: Fischer F
+- authtype: Author
+  name: Schröder J
+- authtype: Author
+  name: Heinze M
+- authtype: Author
+  name: Lettow I
+- authtype: Author
+  name: Frey BM
+- authtype: Author
+  name: Kessner SS
+- authtype: Author
+  name: Schulz M
+- authtype: Author
+  name: Higgen FL
+- authtype: Author
+  name: Cheng B
+- authtype: Author
+  name: Gerloff C
+- authtype: Author
+  name: Thomalla G
+epubdate: 2020 Jul 20
+fulljournalname: Brain Communications
+issue: '2'
+pages: fcaa111
+pmclivedate: 2020/10/29
+printpubdate: ''
+pubdate: 2020 Jul 20
+sortdate: 2020/07/20 00:00
+source: Brain Commun
+title: Higher white matter hyperintensity lesion load is associated with reduced long-range
+  functional connectivity
+uid: '7585696'
+volume: '2'

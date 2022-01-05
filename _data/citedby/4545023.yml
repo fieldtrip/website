@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '26131755'
+- idtype: doi
+  value: 10.3791/52700
+- idtype: pmcid
+  value: PMC4545023
+authors:
+- authtype: Author
+  name: Bae J
+- authtype: Author
+  name: Deshmukh A
+- authtype: Author
+  name: Song Y
+- authtype: Author
+  name: Riera J
+epubdate: 2015 Jun 6
+fulljournalname: 'Journal of Visualized Experiments : JoVE'
+issue: '100'
+pages: '52700'
+pmclivedate: 2015/09/03
+printpubdate: ''
+pubdate: 2015 Jun 6
+sortdate: 2015/06/06 00:00
+source: J Vis Exp
+title: Brain Source Imaging in Preclinical Rat Models of Focal Epilepsy using High-Resolution
+  EEG Recordings
+uid: '4545023'
+volume: ''

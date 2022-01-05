@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '34380655'
+- idtype: doi
+  value: 10.1523/ENEURO.0030-21.2021
+- idtype: pmcid
+  value: PMC8425963
+authors:
+- authtype: Author
+  name: Grabot L
+- authtype: Author
+  name: Kayser C
+- authtype: Author
+  name: van Wassenhove V
+epubdate: 2021 Sep 7
+fulljournalname: eNeuro
+issue: '5'
+pages: ENEURO.0030-21.2021
+pmclivedate: 2021/09/09
+printpubdate: ''
+pubdate: 2021 Sep 7
+sortdate: 2021/09/07 00:00
+source: eNeuro
+title: 'Postdiction: When Temporal Regularity Drives Space Perception through Prestimulus
+  Alpha Oscillations'
+uid: '8425963'
+volume: '8'

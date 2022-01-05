@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '29665216'
+- idtype: doi
+  value: 10.1002/hbm.24069
+- idtype: pmcid
+  value: PMC6055613
+authors:
+- authtype: Author
+  name: Sumner RL
+- authtype: Author
+  name: McMillan RL
+- authtype: Author
+  name: Shaw AD
+- authtype: Author
+  name: Singh KD
+- authtype: Author
+  name: Sundram F
+- authtype: Author
+  name: Muthukumaraswamy SD
+epubdate: 2018 Apr 17
+fulljournalname: Human Brain Mapping
+issue: '8'
+pages: 3187-3202
+pmclivedate: 2018/07/23
+printpubdate: ''
+pubdate: 2018 Apr 17
+sortdate: 2018/04/17 00:00
+source: Hum Brain Mapp
+title: Peak visual gamma frequency is modified across the healthy menstrual cycle
+uid: '6055613'
+volume: '39'

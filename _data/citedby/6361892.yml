@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '30718487'
+- idtype: doi
+  value: 10.1038/s41398-019-0380-2
+- idtype: pmcid
+  value: PMC6361892
+authors:
+- authtype: Author
+  name: Haartsen R
+- authtype: Author
+  name: Jones EJ
+- authtype: Author
+  name: Orekhova EV
+- authtype: Author
+  name: Charman T
+- authtype: Author
+  name: Johnson MH
+- authtype: CollectiveName
+  name: The BASIS teamBaron-CohenS.SBedfordR.RBlasiA.ABoltonP.PChandlerS.SCheungC.CDaviesK.KElsabbaghM.MFernandesJ.JGammerI.IGarwoodH.HGligaT.TGuiraudJ.JHudryK.KLiewM.MLloyd-FoxS.SMarisH.HO’HaraL.LPascoG.GPicklesA.ARibeiroH.HSalomoneE.ETuckerL.LVoleinA.A
+epubdate: 2019 Feb 4
+fulljournalname: Translational Psychiatry
+issue: ''
+pages: '66'
+pmclivedate: 2019/02/06
+printpubdate: ''
+pubdate: 2019 Feb 4
+sortdate: 2019/02/04 00:00
+source: Transl Psychiatry
+title: Functional EEG connectivity in infants associates with later restricted and
+  repetitive behaviours in autism; a replication study
+uid: '6361892'
+volume: '9'

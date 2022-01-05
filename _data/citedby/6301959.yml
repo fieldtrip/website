@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '30573783'
+- idtype: doi
+  value: 10.1038/s41598-018-36353-9
+- idtype: pmcid
+  value: PMC6301959
+authors:
+- authtype: Author
+  name: Vecsei Z
+- authtype: Author
+  name: Knakker B
+- authtype: Author
+  name: Juhász P
+- authtype: Author
+  name: Thuróczy G
+- authtype: Author
+  name: Trunk A
+- authtype: Author
+  name: Hernádi I
+epubdate: 2018 Dec 20
+fulljournalname: Scientific Reports
+issue: ''
+pages: '18010'
+pmclivedate: 2018/12/26
+printpubdate: ''
+pubdate: 2018 Dec 20
+sortdate: 2018/12/20 00:00
+source: Sci Rep
+title: Short-term radiofrequency exposure from new generation mobile phones reduces
+  EEG alpha power with no effects on cognitive performance
+uid: '6301959'
+volume: '8'

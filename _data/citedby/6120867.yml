@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '30177846'
+- idtype: doi
+  value: 10.1038/s41598-018-31400-x
+- idtype: pmcid
+  value: PMC6120867
+authors:
+- authtype: Author
+  name: Waldhauser GT
+- authtype: Author
+  name: Dahl MJ
+- authtype: Author
+  name: Ruf-Leuschner M
+- authtype: Author
+  name: Müller-Bamouh V
+- authtype: Author
+  name: Schauer M
+- authtype: Author
+  name: Axmacher N
+- authtype: Author
+  name: Elbert T
+- authtype: Author
+  name: Hanslmayr S
+epubdate: 2018 Sep 3
+fulljournalname: Scientific Reports
+issue: ''
+pages: '13132'
+pmclivedate: 2018/09/06
+printpubdate: ''
+pubdate: 2018 Sep 3
+sortdate: 2018/09/03 00:00
+source: Sci Rep
+title: The neural dynamics of deficient memory control in heavily traumatized refugees
+uid: '6120867'
+volume: '8'

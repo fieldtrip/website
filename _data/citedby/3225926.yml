@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '22144972'
+- idtype: doi
+  value: 10.3389/fpsyg.2011.00352
+- idtype: pmcid
+  value: PMC3225926
+authors:
+- authtype: Author
+  name: Gordon RL
+- authtype: Author
+  name: Magne CL
+- authtype: Author
+  name: Large EW
+epubdate: 2011 Nov 29
+fulljournalname: Frontiers in Psychology
+issue: ''
+pages: '352'
+pmclivedate: 2011/12/05
+printpubdate: ''
+pubdate: 2011 Nov 29
+sortdate: 2011/11/29 00:00
+source: Front Psychol
+title: 'EEG Correlates of Song Prosody: A New Look at the Relationship between Linguistic
+  and Musical Rhythm'
+uid: '3225926'
+volume: '2'

@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '27557620'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2016.08.043
+- idtype: pmcid
+  value: PMC5312779
+authors:
+- authtype: Author
+  name: Richter CG
+- authtype: Author
+  name: Babo-Rebelo M
+- authtype: Author
+  name: Schwartz D
+- authtype: Author
+  name: Tallon-Baudry C
+epubdate: ''
+fulljournalname: Neuroimage
+issue: ''
+pages: 951-958
+pmclivedate: 2017/02/22
+printpubdate: 2017 Feb 1
+pubdate: 2017 Feb 1
+sortdate: 2017/02/01 00:00
+source: Neuroimage
+title: 'Phase-amplitude coupling at the organism level: The amplitude of spontaneous
+  alpha rhythm fluctuations varies with the phase of the infra-slow gastric basal
+  rhythm'
+uid: '5312779'
+volume: '146'

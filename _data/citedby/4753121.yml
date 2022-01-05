@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '26733321'
+- idtype: doi
+  value: 10.1016/j.clinph.2015.11.019
+- idtype: pmcid
+  value: PMC4753121
+- idtype: MID
+  value: NIHMS743125
+authors:
+- authtype: Author
+  name: Gopalakrishnan R
+- authtype: Author
+  name: Burgess RC
+- authtype: Author
+  name: Plow EB
+- authtype: Author
+  name: Floden D
+- authtype: Author
+  name: Machado AG
+epubdate: 2015 Dec 5
+fulljournalname: 'Clinical neurophysiology : official journal of the International
+  Federation of Clinical Neurophysiology'
+issue: '3'
+pages: 1855-1863
+pmclivedate: 2017/03/01
+printpubdate: 2016 Mar
+pubdate: 2015 Dec 5
+sortdate: 2015/12/05 00:00
+source: Clin Neurophysiol
+title: Early Event Related Fields during Visually Evoked Pain Anticipation
+uid: '4753121'
+volume: '127'

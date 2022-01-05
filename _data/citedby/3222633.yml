@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '22131904'
+- idtype: doi
+  value: 10.1371/journal.pbio.1001203
+- idtype: pmcid
+  value: PMC3222633
+authors:
+- authtype: Author
+  name: de Lange FP
+- authtype: Author
+  name: van Gaal S
+- authtype: Author
+  name: Lamme VA
+- authtype: Author
+  name: Dehaene S
+epubdate: 2011 Nov 22
+fulljournalname: PLoS Biology
+issue: '11'
+pages: e1001203
+pmclivedate: 2011/11/30
+printpubdate: ''
+pubdate: 2011 Nov 22
+sortdate: 2011/11/22 00:00
+source: PLoS Biol
+title: How Awareness Changes the Relative Weights of Evidence During Human Decision-Making
+uid: '3222633'
+volume: '9'

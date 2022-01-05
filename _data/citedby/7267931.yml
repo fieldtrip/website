@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '31758632'
+- idtype: doi
+  value: 10.1002/hbm.24875
+- idtype: pmcid
+  value: PMC7267931
+authors:
+- authtype: Author
+  name: Kaiser D
+- authtype: Author
+  name: Häberle G
+- authtype: Author
+  name: Cichy RM
+epubdate: 2019 Nov 22
+fulljournalname: Human Brain Mapping
+issue: '5'
+pages: 1286-1295
+pmclivedate: 2020/06/12
+printpubdate: ''
+pubdate: 2019 Nov 22
+sortdate: 2019/11/22 00:00
+source: Hum Brain Mapp
+title: Cortical sensitivity to natural scene structure
+uid: '7267931'
+volume: '41'

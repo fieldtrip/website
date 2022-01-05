@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '27733611'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0682-16.2016
+- idtype: pmcid
+  value: PMC6601928
+authors:
+- authtype: Author
+  name: Lansink CS
+- authtype: Author
+  name: Meijer GT
+- authtype: Author
+  name: Lankelma JV
+- authtype: Author
+  name: Vinck MA
+- authtype: Author
+  name: Jackson JC
+- authtype: Author
+  name: Pennartz CM
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '41'
+pages: 10598-10610
+pmclivedate: 2019/07/12
+printpubdate: 2016 Oct 12
+pubdate: 2016 Oct 12
+sortdate: 2016/10/12 00:00
+source: J Neurosci
+title: Reward Expectancy Strengthens CA1 Theta and Beta Band Synchronization and Hippocampal-Ventral
+  Striatal Coupling
+uid: '6601928'
+volume: '36'

@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '28857743'
+- idtype: doi
+  value: 10.7554/eLife.26642
+- idtype: pmcid
+  value: PMC5779232
+authors:
+- authtype: Author
+  name: Lowet E
+- authtype: Author
+  name: Roberts MJ
+- authtype: Author
+  name: Peter A
+- authtype: Author
+  name: Gips B
+- authtype: Author
+  name: De Weerd P
+epubdate: 2017 Aug 31
+fulljournalname: eLife
+issue: ''
+pages: e26642
+pmclivedate: 2018/01/25
+printpubdate: ''
+pubdate: 2017 Aug 31
+sortdate: 2017/08/31 00:00
+source: eLife
+title: A quantitative theory of gamma synchronization in macaque V1
+uid: '5779232'
+volume: '6'

@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '29755402'
+- idtype: doi
+  value: 10.3389/fneur.2018.00280
+- idtype: pmcid
+  value: PMC5932404
+authors:
+- authtype: Author
+  name: Dunkley BT
+- authtype: Author
+  name: Urban K
+- authtype: Author
+  name: Da Costa L
+- authtype: Author
+  name: Wong SM
+- authtype: Author
+  name: Pang EW
+- authtype: Author
+  name: Taylor MJ
+epubdate: 2018 Apr 26
+fulljournalname: Frontiers in Neurology
+issue: ''
+pages: '280'
+pmclivedate: 2018/05/11
+printpubdate: ''
+pubdate: 2018 Apr 26
+sortdate: 2018/04/26 00:00
+source: Front Neurol
+title: Default Mode Network Oscillatory Coupling Is Increased Following Concussion
+uid: '5932404'
+volume: '9'

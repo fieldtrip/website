@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '30104995'
+- idtype: doi
+  value: 10.3389/fpsyg.2018.01348
+- idtype: pmcid
+  value: PMC6077537
+authors:
+- authtype: Author
+  name: He Y
+- authtype: Author
+  name: Nagels A
+- authtype: Author
+  name: Schlesewsky M
+- authtype: Author
+  name: Straube B
+epubdate: 2018 Jul 30
+fulljournalname: Frontiers in Psychology
+issue: ''
+pages: '1348'
+pmclivedate: 2018/08/13
+printpubdate: ''
+pubdate: 2018 Jul 30
+sortdate: 2018/07/30 00:00
+source: Front Psychol
+title: The Role of Gamma Oscillations During Integration of Metaphoric Gestures and
+  Abstract Speech
+uid: '6077537'
+volume: '9'

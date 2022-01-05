@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '32564239'
+- idtype: doi
+  value: 10.1007/s12021-020-09464-w
+- idtype: pmcid
+  value: PMC7782389
+authors:
+- authtype: Author
+  name: Rykaczewski K
+- authtype: Author
+  name: Nikadon J
+- authtype: Author
+  name: Duch W
+- authtype: Author
+  name: Piotrowski T
+epubdate: 2020 Jun 21
+fulljournalname: Neuroinformatics
+issue: '1'
+pages: 107-125
+pmclivedate: 2021/01/11
+printpubdate: '2021'
+pubdate: 2020 Jun 21
+sortdate: 2020/06/21 00:00
+source: Neuroinformatics
+title: 'supFunSim: Spatial Filtering Toolbox for EEG'
+uid: '7782389'
+volume: '19'

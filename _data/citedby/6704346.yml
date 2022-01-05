@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '31456886'
+- idtype: doi
+  value: 10.1093/nc/niz011
+- idtype: pmcid
+  value: PMC6704346
+authors:
+- authtype: Author
+  name: Meijs EL
+- authtype: Author
+  name: Mostert P
+- authtype: Author
+  name: Slagter HA
+- authtype: Author
+  name: de Lange FP
+- authtype: Author
+  name: van Gaal S
+epubdate: 2019 Aug 21
+fulljournalname: Neuroscience of Consciousness
+issue: '1'
+pages: niz011
+pmclivedate: 2019/08/27
+printpubdate: ''
+pubdate: 2019 Aug 21
+sortdate: 2019/08/21 00:00
+source: Neurosci Conscious
+title: Exploring the role of expectations and stimulus relevance on stimulus-specific
+  neural representations and conscious report
+uid: '6704346'
+volume: '2019'

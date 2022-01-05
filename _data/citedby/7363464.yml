@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '32499378'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.2139-19.2020
+- idtype: pmcid
+  value: PMC7363464
+authors:
+- authtype: Author
+  name: Tovar DA
+- authtype: Author
+  name: Murray MM
+- authtype: Author
+  name: Wallace MT
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '29'
+pages: 5604-5615
+pmclivedate: 2021/01/15
+printpubdate: 2020 Jul 15
+pubdate: 2020 Jul 15
+sortdate: 2020/07/15 00:00
+source: J Neurosci
+title: Selective Enhancement of Object Representations through Multisensory Integration
+uid: '7363464'
+volume: '40'

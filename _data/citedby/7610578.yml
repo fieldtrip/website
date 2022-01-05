@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '33610790'
+- idtype: doi
+  value: 10.1016/j.brs.2021.02.007
+- idtype: pmcid
+  value: PMC7610578
+- idtype: MID
+  value: EMS120898
+authors:
+- authtype: Author
+  name: Ermolova M
+- authtype: Author
+  name: Metsomaa J
+- authtype: Author
+  name: Zrenner C
+- authtype: Author
+  name: Kozák G
+- authtype: Author
+  name: Marzetti L
+- authtype: Author
+  name: Ziemann U
+epubdate: 2021 Feb 18
+fulljournalname: Brain stimulation
+issue: '2'
+pages: 404-406
+pmclivedate: 2021/04/12
+printpubdate: 2021 Mar 1
+pubdate: 2021 Feb 18
+sortdate: 2021/02/18 00:00
+source: Brain Stimul
+title: 'Spontaneous phase-coupling within cortico-cortical networks: How time counts
+  for brain-state-dependent stimulation'
+uid: '7610578'
+volume: '14'

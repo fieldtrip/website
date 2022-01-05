@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '28481348'
+- idtype: doi
+  value: 10.1038/nn.4562
+- idtype: pmcid
+  value: PMC5511041
+- idtype: MID
+  value: NIHMS869898
+authors:
+- authtype: Author
+  name: Veit J
+- authtype: Author
+  name: Hakim R
+- authtype: Author
+  name: Jadi MP
+- authtype: Author
+  name: Sejnowski TJ
+- authtype: Author
+  name: Adesnik H
+epubdate: 2017 May 8
+fulljournalname: Nature neuroscience
+issue: '7'
+pages: 951-959
+pmclivedate: 2017/11/08
+printpubdate: 2017 Jul
+pubdate: 2017 May 8
+sortdate: 2017/05/08 00:00
+source: Nat Neurosci
+title: Cortical gamma band synchronization through somatostatin interneurons
+uid: '5511041'
+volume: '20'

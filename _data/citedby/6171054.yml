@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '29873615'
+- idtype: doi
+  value: 10.1152/jn.00306.2018
+- idtype: pmcid
+  value: PMC6171054
+authors:
+- authtype: Author
+  name: Hendrix CM
+- authtype: Author
+  name: Campbell BA
+- authtype: Author
+  name: Tittle BJ
+- authtype: Author
+  name: Johnson LA
+- authtype: Author
+  name: Baker KB
+- authtype: Author
+  name: Johnson MD
+- authtype: Author
+  name: Molnar GF
+- authtype: Author
+  name: Vitek JL
+epubdate: 2018 Jun 6
+fulljournalname: Journal of Neurophysiology
+issue: '3'
+pages: 1247-1255
+pmclivedate: 2019/09/01
+printpubdate: 2018 Sep 1
+pubdate: 2018 Jun 6
+sortdate: 2018/06/06 00:00
+source: J Neurophysiol
+title: Predictive encoding of motor behavior in the supplementary motor area is disrupted
+  in parkinsonism
+uid: '6171054'
+volume: '120'

@@ -1,0 +1,40 @@
+articleids:
+- idtype: pmid
+  value: '34588974'
+- idtype: doi
+  value: 10.3389/fnagi.2021.714220
+- idtype: pmcid
+  value: PMC8475188
+authors:
+- authtype: Author
+  name: Musaeus CS
+- authtype: Author
+  name: Pedersen JS
+- authtype: Author
+  name: Kjær TW
+- authtype: Author
+  name: Johannsen P
+- authtype: Author
+  name: Waldemar G
+- authtype: Author
+  name: Haverberg MJ
+- authtype: Author
+  name: Bacher T
+- authtype: Author
+  name: Nielsen JE
+- authtype: Author
+  name: Roos P
+- authtype: CollectiveName
+  name: The FReJA ConsortiumGydesenSSBrownJJIsaacsAMACollingeJJGadeAAEnglundEEFisherEENielsenTTTThusgaardTTHolmII
+epubdate: 2021 Sep 13
+fulljournalname: Frontiers in Aging Neuroscience
+issue: ''
+pages: '714220'
+pmclivedate: 2021/09/28
+printpubdate: ''
+pubdate: 2021 Sep 13
+sortdate: 2021/09/13 00:00
+source: Front Aging Neurosci
+title: Cortical Frontoparietal Network Dysfunction in CHMP2B-Frontotemporal Dementia
+uid: '8475188'
+volume: '13'

@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '34296123'
+- idtype: doi
+  value: 10.1093/texcom/tgaa060
+- idtype: pmcid
+  value: PMC8153056
+authors:
+- authtype: Author
+  name: Banellis L
+- authtype: Author
+  name: Cruse D
+epubdate: 2020 Sep 1
+fulljournalname: Cerebral Cortex Communications
+issue: '1'
+pages: tgaa060
+pmclivedate: 2021/07/21
+printpubdate: ''
+pubdate: 2020 Sep 1
+sortdate: 2020/09/01 00:00
+source: Cereb Cortex Commun
+title: 'Skipping a Beat: Heartbeat-Evoked Potentials Reflect Predictions during Interoceptive-Exteroceptive
+  Integration'
+uid: '8153056'
+volume: '1'

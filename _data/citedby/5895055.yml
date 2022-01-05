@@ -1,0 +1,38 @@
+articleids:
+- idtype: pmid
+  value: '29601574'
+- idtype: doi
+  value: 10.1371/journal.pbio.2004274
+- idtype: pmcid
+  value: PMC5895055
+authors:
+- authtype: Author
+  name: Johnson EL
+- authtype: Author
+  name: Adams JN
+- authtype: Author
+  name: Solbakk AK
+- authtype: Author
+  name: Endestad T
+- authtype: Author
+  name: Larsson PG
+- authtype: Author
+  name: Ivanovic J
+- authtype: Author
+  name: Meling TR
+- authtype: Author
+  name: Lin JJ
+- authtype: Author
+  name: Knight RT
+epubdate: 2018 Mar 30
+fulljournalname: PLoS Biology
+issue: '3'
+pages: e2004274
+pmclivedate: 2018/05/04
+printpubdate: ''
+pubdate: 2018 Mar 30
+sortdate: 2018/03/30 00:00
+source: PLoS Biol
+title: Dynamic frontotemporal systems process space and time in working memory
+uid: '5895055'
+volume: '16'

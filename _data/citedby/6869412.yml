@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '23008160'
+- idtype: doi
+  value: 10.1002/hbm.22152
+- idtype: pmcid
+  value: PMC6869412
+authors:
+- authtype: Author
+  name: Weisz N
+- authtype: Author
+  name: Lüchinger C
+- authtype: Author
+  name: Thut G
+- authtype: Author
+  name: Müller N
+epubdate: 2012 Sep 24
+fulljournalname: Human Brain Mapping
+issue: '1'
+pages: 14-29
+pmclivedate: 2020/06/12
+printpubdate: ''
+pubdate: 2012 Sep 24
+sortdate: 2012/09/24 00:00
+source: Hum Brain Mapp
+title: Effects of individual alpha rTMS applied to the auditory cortex and its implications
+  for the treatment of chronic tinnitus
+uid: '6869412'
+volume: '35'

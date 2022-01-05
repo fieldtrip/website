@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '30364114'
+- idtype: doi
+  value: 10.3389/fnhum.2018.00408
+- idtype: pmcid
+  value: PMC6191493
+authors:
+- authtype: Author
+  name: Safar K
+- authtype: Author
+  name: Wong SM
+- authtype: Author
+  name: Leung RC
+- authtype: Author
+  name: Dunkley BT
+- authtype: Author
+  name: Taylor MJ
+epubdate: 2018 Oct 10
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '408'
+pmclivedate: 2018/10/24
+printpubdate: ''
+pubdate: 2018 Oct 10
+sortdate: 2018/10/10 00:00
+source: Front Hum Neurosci
+title: Increased Functional Connectivity During Emotional Face Processing in Children
+  With Autism Spectrum Disorder
+uid: '6191493'
+volume: '12'

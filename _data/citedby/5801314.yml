@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '29456500'
+- idtype: doi
+  value: 10.3389/fnagi.2018.00005
+- idtype: pmcid
+  value: PMC5801314
+authors:
+- authtype: Author
+  name: Laptinskaya D
+- authtype: Author
+  name: Thurm F
+- authtype: Author
+  name: Küster OC
+- authtype: Author
+  name: Fissler P
+- authtype: Author
+  name: Schlee W
+- authtype: Author
+  name: Kolassa S
+- authtype: Author
+  name: von Arnim CA
+- authtype: Author
+  name: Kolassa IT
+epubdate: 2018 Feb 2
+fulljournalname: Frontiers in Aging Neuroscience
+issue: ''
+pages: '5'
+pmclivedate: 2018/02/16
+printpubdate: ''
+pubdate: 2018 Feb 2
+sortdate: 2018/02/02 00:00
+source: Front Aging Neurosci
+title: Auditory Memory Decay as Reflected by a New Mismatch Negativity Score Is Associated
+  with Episodic Memory in Older Adults at Risk of Dementia
+uid: '5801314'
+volume: '10'

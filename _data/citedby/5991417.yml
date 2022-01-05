@@ -1,0 +1,40 @@
+articleids:
+- idtype: pmid
+  value: '29874298'
+- idtype: doi
+  value: 10.1371/journal.pone.0198691
+- idtype: pmcid
+  value: PMC5991417
+authors:
+- authtype: Author
+  name: Arnulfo G
+- authtype: Author
+  name: Pozzi NG
+- authtype: Author
+  name: Palmisano C
+- authtype: Author
+  name: Leporini A
+- authtype: Author
+  name: Canessa A
+- authtype: Author
+  name: Brumberg J
+- authtype: Author
+  name: Pezzoli G
+- authtype: Author
+  name: Matthies C
+- authtype: Author
+  name: Volkmann J
+- authtype: Author
+  name: Isaias IU
+epubdate: 2018 Jun 6
+fulljournalname: PLoS ONE
+issue: '6'
+pages: e0198691
+pmclivedate: 2018/06/08
+printpubdate: ''
+pubdate: 2018 Jun 6
+sortdate: 2018/06/06 00:00
+source: PLoS One
+title: 'Phase matters: A role for the subthalamic network during gait'
+uid: '5991417'
+volume: '13'

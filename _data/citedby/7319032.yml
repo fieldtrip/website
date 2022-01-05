@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '32612892'
+- idtype: doi
+  value: 10.7717/peerj.9398
+- idtype: pmcid
+  value: PMC7319032
+authors:
+- authtype: Author
+  name: Mössing WA
+- authtype: Author
+  name: Busch NA
+epubdate: 2020 Jun 23
+fulljournalname: PeerJ
+issue: ''
+pages: e9398
+pmclivedate: 2020/06/30
+printpubdate: ''
+pubdate: 2020 Jun 23
+sortdate: 2020/06/23 00:00
+source: PeerJ
+title: Lateralized alpha oscillations are irrelevant for the behavioral retro-cueing
+  benefit in visual working memory
+uid: '7319032'
+volume: '8'

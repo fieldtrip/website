@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '29666574'
+- idtype: doi
+  value: 10.3389/fnhum.2018.00122
+- idtype: pmcid
+  value: PMC5891895
+authors:
+- authtype: Author
+  name: Quercia A
+- authtype: Author
+  name: Zappasodi F
+- authtype: Author
+  name: Committeri G
+- authtype: Author
+  name: Ferrara M
+epubdate: 2018 Apr 3
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '122'
+pmclivedate: 2018/04/17
+printpubdate: ''
+pubdate: 2018 Apr 3
+sortdate: 2018/04/03 00:00
+source: Front Hum Neurosci
+title: Local Use-Dependent Sleep in Wakefulness Links Performance Errors to Learning
+uid: '5891895'
+volume: '12'

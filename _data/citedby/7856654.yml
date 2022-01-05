@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '33156569'
+- idtype: doi
+  value: 10.1002/hbm.25272
+- idtype: pmcid
+  value: PMC7856654
+authors:
+- authtype: Author
+  name: Piastra MC
+- authtype: Author
+  name: Nüßing A
+- authtype: Author
+  name: Vorwerk J
+- authtype: Author
+  name: Clerc M
+- authtype: Author
+  name: Engwer C
+- authtype: Author
+  name: Wolters CH
+epubdate: 2020 Nov 6
+fulljournalname: Human Brain Mapping
+issue: '4'
+pages: 978-992
+pmclivedate: 2021/02/05
+printpubdate: ''
+pubdate: 2020 Nov 6
+sortdate: 2020/11/06 00:00
+source: Hum Brain Mapp
+title: A comprehensive study on electroencephalography and magnetoencephalography
+  sensitivity to cortical and subcortical sources
+uid: '7856654'
+volume: '42'

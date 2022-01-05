@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '30637763'
+- idtype: doi
+  value: 10.1111/psyp.13326
+- idtype: pmcid
+  value: PMC7311047
+- idtype: MID
+  value: NIHMS1599238
+authors:
+- authtype: Author
+  name: Ciria LF
+- authtype: Author
+  name: Luque-Casado A
+- authtype: Author
+  name: Sanabria D
+- authtype: Author
+  name: Holgado D
+- authtype: Author
+  name: Ivanov PC
+- authtype: Author
+  name: Perakakis P
+epubdate: 2019 Jan 13
+fulljournalname: Psychophysiology
+issue: '5'
+pages: e13326
+pmclivedate: 2020/06/23
+printpubdate: 2019 May
+pubdate: 2019 Jan 13
+sortdate: 2019/01/13 00:00
+source: Psychophysiology
+title: 'Oscillatory brain activity during acute exercise: Tonic and transient neural
+  response to an oddball task'
+uid: '7311047'
+volume: '56'

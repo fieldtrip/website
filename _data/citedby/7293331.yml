@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '32533068'
+- idtype: doi
+  value: 10.1038/s41598-020-66715-1
+- idtype: pmcid
+  value: PMC7293331
+authors:
+- authtype: Author
+  name: Herrmann B
+- authtype: Author
+  name: Augereau T
+- authtype: Author
+  name: Johnsrude IS
+epubdate: 2020 Jun 12
+fulljournalname: Scientific Reports
+issue: ''
+pages: '9571'
+pmclivedate: 2020/06/17
+printpubdate: ''
+pubdate: 2020 Jun 12
+sortdate: 2020/06/12 00:00
+source: Sci Rep
+title: Neural Responses and Perceptual Sensitivity to Sound Depend on Sound-Level
+  Statistics
+uid: '7293331'
+volume: '10'

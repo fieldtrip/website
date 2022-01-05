@@ -1,0 +1,40 @@
+articleids:
+- idtype: pmid
+  value: '24741050'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.5089-13.2014
+- idtype: pmcid
+  value: PMC6608220
+authors:
+- authtype: Author
+  name: Premoli I
+- authtype: Author
+  name: Castellanos N
+- authtype: Author
+  name: Rivolta D
+- authtype: Author
+  name: Belardinelli P
+- authtype: Author
+  name: Bajo R
+- authtype: Author
+  name: Zipser C
+- authtype: Author
+  name: Espenhahn S
+- authtype: Author
+  name: Heidegger T
+- authtype: Author
+  name: Müller-Dahlhaus F
+- authtype: Author
+  name: Ziemann U
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '16'
+pages: 5603-5612
+pmclivedate: 2019/07/10
+printpubdate: 2014 Apr 16
+pubdate: 2014 Apr 16
+sortdate: 2014/04/16 00:00
+source: J Neurosci
+title: TMS-EEG Signatures of GABAergic Neurotransmission in the Human Cortex
+uid: '6608220'
+volume: '34'

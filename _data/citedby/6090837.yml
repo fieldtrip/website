@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '30131670'
+- idtype: doi
+  value: 10.3389/fnins.2018.00531
+- idtype: pmcid
+  value: PMC6090837
+authors:
+- authtype: Author
+  name: Wong DD
+- authtype: Author
+  name: Fuglsang SA
+- authtype: Author
+  name: Hjortkjær J
+- authtype: Author
+  name: Ceolini E
+- authtype: Author
+  name: Slaney M
+- authtype: Author
+  name: de Cheveigné A
+epubdate: 2018 Aug 7
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '531'
+pmclivedate: 2018/08/21
+printpubdate: ''
+pubdate: 2018 Aug 7
+sortdate: 2018/08/07 00:00
+source: Front Neurosci
+title: A Comparison of Regularization Methods in Forward and Backward Models for Auditory
+  Attention Decoding
+uid: '6090837'
+volume: '12'

@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '27375410'
+- idtype: doi
+  value: 10.3389/fnins.2016.00244
+- idtype: pmcid
+  value: PMC4901068
+authors:
+- authtype: Author
+  name: Hettich DT
+- authtype: Author
+  name: Bolinger E
+- authtype: Author
+  name: Matuz T
+- authtype: Author
+  name: Birbaumer N
+- authtype: Author
+  name: Rosenstiel W
+- authtype: Author
+  name: Spüler M
+epubdate: 2016 Jun 10
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '244'
+pmclivedate: 2016/07/01
+printpubdate: ''
+pubdate: 2016 Jun 10
+sortdate: 2016/06/10 00:00
+source: Front Neurosci
+title: EEG Responses to Auditory Stimuli for Automatic Affect Recognition
+uid: '4901068'
+volume: '10'

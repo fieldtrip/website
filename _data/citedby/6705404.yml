@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '25834061'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.4198-14.2015
+- idtype: pmcid
+  value: PMC6705404
+authors:
+- authtype: Author
+  name: Staudigl T
+- authtype: Author
+  name: Vollmar C
+- authtype: Author
+  name: Noachtar S
+- authtype: Author
+  name: Hanslmayr S
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '13'
+pages: 5373-5384
+pmclivedate: 2019/08/26
+printpubdate: 2015 Apr 1
+pubdate: 2015 Apr 1
+sortdate: 2015/04/01 00:00
+source: J Neurosci
+title: Temporal-Pattern Similarity Analysis Reveals the Beneficial and Detrimental
+  Effects of Context Reinstatement on Human Memory
+uid: '6705404'
+volume: '35'

@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '33947867'
+- idtype: doi
+  value: 10.1038/s41467-021-22743-7
+- idtype: pmcid
+  value: PMC8097024
+authors:
+- authtype: Author
+  name: Yu K
+- authtype: Author
+  name: Niu X
+- authtype: Author
+  name: Krook-Magnuson E
+- authtype: Author
+  name: He B
+epubdate: 2021 May 4
+fulljournalname: Nature Communications
+issue: ''
+pages: '2519'
+pmclivedate: 2021/05/11
+printpubdate: ''
+pubdate: 2021 May 4
+sortdate: 2021/05/04 00:00
+source: Nat Commun
+title: Intrinsic functional neuron-type selectivity of transcranial focused ultrasound
+  neuromodulation
+uid: '8097024'
+volume: '12'

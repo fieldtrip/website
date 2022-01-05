@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '34220457'
+- idtype: doi
+  value: 10.3389/fnsys.2021.655980
+- idtype: pmcid
+  value: PMC8249816
+authors:
+- authtype: Author
+  name: Tia B
+- authtype: Author
+  name: Pifferi F
+epubdate: 2021 Jun 18
+fulljournalname: Frontiers in Systems Neuroscience
+issue: ''
+pages: '655980'
+pmclivedate: 2021/07/03
+printpubdate: ''
+pubdate: 2021 Jun 18
+sortdate: 2021/06/18 00:00
+source: Front Syst Neurosci
+title: Oscillatory Activity in Mouse Lemur Primary Motor Cortex During Natural Locomotor
+  Behavior
+uid: '8249816'
+volume: '15'

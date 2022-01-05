@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '31031684'
+- idtype: doi
+  value: 10.3389/fpsyg.2019.00830
+- idtype: pmcid
+  value: PMC6470259
+authors:
+- authtype: Author
+  name: Faísca L
+- authtype: Author
+  name: Reis A
+- authtype: Author
+  name: Araújo S
+epubdate: 2019 Apr 11
+fulljournalname: Frontiers in Psychology
+issue: ''
+pages: '830'
+pmclivedate: 2019/04/26
+printpubdate: ''
+pubdate: 2019 Apr 11
+sortdate: 2019/04/11 00:00
+source: Front Psychol
+title: Early Brain Sensitivity to Word Frequency and Lexicality During Reading Aloud
+  and Implicit Reading
+uid: '6470259'
+volume: '10'

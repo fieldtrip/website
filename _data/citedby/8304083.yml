@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '34300245'
+- idtype: doi
+  value: 10.3390/jcm10143078
+- idtype: pmcid
+  value: PMC8304083
+authors:
+- authtype: Author
+  name: Akbarzadeh S
+- authtype: Author
+  name: Lee S
+- authtype: Author
+  name: Tan CT
+epubdate: 2021 Jul 12
+fulljournalname: Journal of Clinical Medicine
+issue: '14'
+pages: '3078'
+pmclivedate: 2021/07/25
+printpubdate: ''
+pubdate: 2021 Jul 12
+sortdate: 2021/07/12 00:00
+source: J Clin Med
+title: The Spatial Selective Auditory Attention of Cochlear Implant Users in Different
+  Conversational Sound Levels
+uid: '8304083'
+volume: '10'

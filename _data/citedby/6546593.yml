@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '31089296'
+- idtype: doi
+  value: 10.1038/s41562-019-0549-y
+- idtype: pmcid
+  value: PMC6546593
+- idtype: MID
+  value: EMS81525
+authors:
+- authtype: Author
+  name: van Ede F
+- authtype: Author
+  name: Chekroud SR
+- authtype: Author
+  name: Nobre AC
+epubdate: 2019 Mar 4
+fulljournalname: Nature human behaviour
+issue: '5'
+pages: 462-470
+pmclivedate: 2019/09/04
+printpubdate: 2019 May
+pubdate: 2019 Mar 4
+sortdate: 2019/03/04 00:00
+source: Nat Hum Behav
+title: Human gaze tracks attentional focusing in memorized visual space
+uid: '6546593'
+volume: '3'

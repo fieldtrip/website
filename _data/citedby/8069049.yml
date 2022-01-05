@@ -1,0 +1,49 @@
+articleids:
+- idtype: pmid
+  value: '33920292'
+- idtype: doi
+  value: 10.3390/genes12040555
+- idtype: pmcid
+  value: PMC8069049
+authors:
+- authtype: Author
+  name: Erblang M
+- authtype: Author
+  name: Sauvet F
+- authtype: Author
+  name: Drogou C
+- authtype: Author
+  name: Quiquempoix M
+- authtype: Author
+  name: Van Beers P
+- authtype: Author
+  name: Guillard M
+- authtype: Author
+  name: Rabat A
+- authtype: Author
+  name: Trignol A
+- authtype: Author
+  name: Bourrilhon C
+- authtype: Author
+  name: Erkel MC
+- authtype: Author
+  name: Léger D
+- authtype: Author
+  name: Thomas C
+- authtype: Author
+  name: Gomez-Merino D
+- authtype: Author
+  name: Chennaoui M
+epubdate: 2021 Apr 10
+fulljournalname: Genes
+issue: '4'
+pages: '555'
+pmclivedate: 2021/04/26
+printpubdate: ''
+pubdate: 2021 Apr 10
+sortdate: 2021/04/10 00:00
+source: Genes (Basel)
+title: 'Genetic Determinants of Neurobehavioral Responses to Caffeine Administration
+  during Sleep Deprivation: A Randomized, Cross Over Study (NCT03859882)'
+uid: '8069049'
+volume: '12'

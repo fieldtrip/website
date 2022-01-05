@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '26834582'
+- idtype: doi
+  value: 10.3389/fnsys.2015.00187
+- idtype: pmcid
+  value: PMC4722130
+authors:
+- authtype: Author
+  name: Vinck M
+- authtype: Author
+  name: Bos JJ
+- authtype: Author
+  name: Van Mourik-Donga LA
+- authtype: Author
+  name: Oplaat KT
+- authtype: Author
+  name: Klein GA
+- authtype: Author
+  name: Jackson JC
+- authtype: Author
+  name: Gentet LJ
+- authtype: Author
+  name: Pennartz CM
+epubdate: 2016 Jan 22
+fulljournalname: Frontiers in Systems Neuroscience
+issue: ''
+pages: '187'
+pmclivedate: 2016/01/29
+printpubdate: ''
+pubdate: 2016 Jan 22
+sortdate: 2016/01/22 00:00
+source: Front Syst Neurosci
+title: Cell-Type and State-Dependent Synchronization among Rodent Somatosensory, Visual,
+  Perirhinal Cortex, and Hippocampus CA1
+uid: '4722130'
+volume: '9'

@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '30260531'
+- idtype: doi
+  value: 10.1002/hbm.24373
+- idtype: pmcid
+  value: PMC6585682
+authors:
+- authtype: Author
+  name: May ES
+- authtype: Author
+  name: Nickel MM
+- authtype: Author
+  name: Ta Dinh S
+- authtype: Author
+  name: Tiemann L
+- authtype: Author
+  name: Heitmann H
+- authtype: Author
+  name: Voth I
+- authtype: Author
+  name: Tölle TR
+- authtype: Author
+  name: Gross J
+- authtype: Author
+  name: Ploner M
+epubdate: 2018 Sep 10
+fulljournalname: Human Brain Mapping
+issue: '1'
+pages: 293-305
+pmclivedate: 2019/06/27
+printpubdate: ''
+pubdate: 2018 Sep 10
+sortdate: 2018/09/10 00:00
+source: Hum Brain Mapp
+title: Prefrontal gamma oscillations reflect ongoing pain intensity in chronic back
+  pain patients
+uid: '6585682'
+volume: '40'

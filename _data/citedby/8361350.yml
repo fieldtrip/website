@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '33743012'
+- idtype: doi
+  value: 10.1093/sleep/zsab056
+- idtype: pmcid
+  value: PMC8361350
+authors:
+- authtype: Author
+  name: Lutz ND
+- authtype: Author
+  name: Admard M
+- authtype: Author
+  name: Genzoni E
+- authtype: Author
+  name: Born J
+- authtype: Author
+  name: Rauss K
+epubdate: 2021 Mar 20
+fulljournalname: Sleep
+issue: '8'
+pages: zsab056
+pmclivedate: 2021/08/13
+printpubdate: ''
+pubdate: 2021 Mar 20
+sortdate: 2021/03/20 00:00
+source: Sleep
+title: Occipital sleep spindles predict sequence learning in a visuo-motor task
+uid: '8361350'
+volume: '44'

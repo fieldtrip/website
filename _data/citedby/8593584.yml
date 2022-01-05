@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '34781250'
+- idtype: doi
+  value: 10.1016/j.dcn.2021.101034
+- idtype: pmcid
+  value: PMC8593584
+authors:
+- authtype: Author
+  name: Jessen S
+- authtype: Author
+  name: Obleser J
+- authtype: Author
+  name: Tune S
+epubdate: 2021 Nov 9
+fulljournalname: Developmental Cognitive Neuroscience
+issue: ''
+pages: '101034'
+pmclivedate: 2021/11/22
+printpubdate: ''
+pubdate: 2021 Nov 9
+sortdate: 2021/11/09 00:00
+source: Dev Cogn Neurosci
+title: Neural tracking in infants – An analytical tool for multisensory social processing
+  in development
+uid: '8593584'
+volume: '52'

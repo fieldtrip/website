@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '24733899'
+- idtype: doi
+  value: 10.1073/pnas.1405516111
+- idtype: pmcid
+  value: PMC4035942
+authors:
+- authtype: Author
+  name: Haegens S
+- authtype: Author
+  name: Vázquez Y
+- authtype: Author
+  name: Zainos A
+- authtype: Author
+  name: Alvarez M
+- authtype: Author
+  name: Jensen O
+- authtype: Author
+  name: Romo R
+epubdate: 2014 Apr 14
+fulljournalname: Proceedings of the National Academy of Sciences of the United States
+  of America
+issue: '17'
+pages: E1797-E1805
+pmclivedate: 2014/10/29
+printpubdate: 2014 Apr 29
+pubdate: 2014 Apr 14
+sortdate: 2014/04/14 00:00
+source: Proc Natl Acad Sci U S A
+title: Thalamocortical rhythms during a vibrotactile detection task
+uid: '4035942'
+volume: '111'

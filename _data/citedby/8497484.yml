@@ -1,0 +1,24 @@
+articleids:
+- idtype: pmid
+  value: '34620955'
+- idtype: doi
+  value: 10.1038/s41598-021-99408-4
+- idtype: pmcid
+  value: PMC8497484
+authors:
+- authtype: Author
+  name: Stewardson HJ
+- authtype: Author
+  name: Sambrook TD
+epubdate: 2021 Oct 7
+fulljournalname: Scientific Reports
+issue: ''
+pages: '19912'
+pmclivedate: 2021/10/08
+printpubdate: ''
+pubdate: 2021 Oct 7
+sortdate: 2021/10/07 00:00
+source: Sci Rep
+title: Reward prediction error in the ERP following unconditioned aversive stimuli
+uid: '8497484'
+volume: '11'

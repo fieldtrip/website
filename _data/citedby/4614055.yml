@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '26516609'
+- idtype: doi
+  value: 10.1002/brb3.374
+- idtype: pmcid
+  value: PMC4614055
+authors:
+- authtype: Author
+  name: Moisello C
+- authtype: Author
+  name: Blanco D
+- authtype: Author
+  name: Lin J
+- authtype: Author
+  name: Panday P
+- authtype: Author
+  name: Kelly SP
+- authtype: Author
+  name: Quartarone A
+- authtype: Author
+  name: Di Rocco A
+- authtype: Author
+  name: Cirelli C
+- authtype: Author
+  name: Tononi G
+- authtype: Author
+  name: Ghilardi MF
+epubdate: 2015 Sep 23
+fulljournalname: Brain and Behavior
+issue: '10'
+pages: e00374
+pmclivedate: 2015/10/29
+printpubdate: ''
+pubdate: 2015 Sep 23
+sortdate: 2015/09/23 00:00
+source: Brain Behav
+title: Practice changes beta power at rest and its modulation during movement in healthy
+  subjects but not in patients with Parkinson's disease
+uid: '4614055'
+volume: '5'

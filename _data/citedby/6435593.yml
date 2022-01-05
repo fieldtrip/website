@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '30949040'
+- idtype: doi
+  value: 10.3389/fnhum.2019.00099
+- idtype: pmcid
+  value: PMC6435593
+authors:
+- authtype: Author
+  name: Sirous M
+- authtype: Author
+  name: Sinning N
+- authtype: Author
+  name: Schneider TR
+- authtype: Author
+  name: Friese U
+- authtype: Author
+  name: Lorenz J
+- authtype: Author
+  name: Engel AK
+epubdate: 2019 Mar 20
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '99'
+pmclivedate: 2019/04/04
+printpubdate: ''
+pubdate: 2019 Mar 20
+sortdate: 2019/03/20 00:00
+source: Front Hum Neurosci
+title: Chemosensory Event-Related Potentials in Response to Nasal Propylene Glycol
+  Stimulation
+uid: '6435593'
+volume: '13'

@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '27535903'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.4263-15.2016
+- idtype: pmcid
+  value: PMC4987431
+authors:
+- authtype: Author
+  name: Driver ID
+- authtype: Author
+  name: Whittaker JR
+- authtype: Author
+  name: Bright MG
+- authtype: Author
+  name: Muthukumaraswamy SD
+- authtype: Author
+  name: Murphy K
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '33'
+pages: 8541-8550
+pmclivedate: 2016/09/08
+printpubdate: 2016 Aug 17
+pubdate: 2016 Aug 17
+sortdate: 2016/08/17 00:00
+source: J Neurosci
+title: 'Arterial CO2 Fluctuations Modulate Neuronal Rhythmicity: Implications for
+  MEG and fMRI Studies of Resting-State Networks'
+uid: '4987431'
+volume: '36'

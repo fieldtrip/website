@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '32038152'
+- idtype: doi
+  value: 10.3389/fnins.2020.00002
+- idtype: pmcid
+  value: PMC6990974
+authors:
+- authtype: Author
+  name: Petersen B
+- authtype: Author
+  name: Andersen AS
+- authtype: Author
+  name: Haumann NT
+- authtype: Author
+  name: Højlund A
+- authtype: Author
+  name: Dietz MJ
+- authtype: Author
+  name: Michel F
+- authtype: Author
+  name: Riis SK
+- authtype: Author
+  name: Brattico E
+- authtype: Author
+  name: Vuust P
+epubdate: 2020 Jan 23
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '2'
+pmclivedate: 2020/02/07
+printpubdate: ''
+pubdate: 2020 Jan 23
+sortdate: 2020/01/23 00:00
+source: Front Neurosci
+title: The CI MuMuFe – A New MMN Paradigm for Measuring Music Discrimination in Electric
+  Hearing
+uid: '6990974'
+volume: '14'

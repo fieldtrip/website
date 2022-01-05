@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '28184194'
+- idtype: doi
+  value: 10.3389/fnhum.2017.00026
+- idtype: pmcid
+  value: PMC5266691
+authors:
+- authtype: Author
+  name: Hu X
+- authtype: Author
+  name: Yu J
+- authtype: Author
+  name: Song M
+- authtype: Author
+  name: Yu C
+- authtype: Author
+  name: Wang F
+- authtype: Author
+  name: Sun P
+- authtype: Author
+  name: Wang D
+- authtype: Author
+  name: Zhang D
+epubdate: 2017 Jan 26
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '26'
+pmclivedate: 2017/02/09
+printpubdate: ''
+pubdate: 2017 Jan 26
+sortdate: 2017/01/26 00:00
+source: Front Hum Neurosci
+title: EEG Correlates of Ten Positive Emotions
+uid: '5266691'
+volume: '11'

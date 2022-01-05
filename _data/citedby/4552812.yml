@@ -1,0 +1,61 @@
+articleids:
+- idtype: pmid
+  value: '26448910'
+- idtype: doi
+  value: 10.1016/j.nicl.2015.07.011
+- idtype: pmcid
+  value: PMC4552812
+authors:
+- authtype: Author
+  name: Maestú F
+- authtype: Author
+  name: Peña JM
+- authtype: Author
+  name: Garcés P
+- authtype: Author
+  name: González S
+- authtype: Author
+  name: Bajo R
+- authtype: Author
+  name: Bagic A
+- authtype: Author
+  name: Cuesta P
+- authtype: Author
+  name: Funke M
+- authtype: Author
+  name: Mäkelä JP
+- authtype: Author
+  name: Menasalvas E
+- authtype: Author
+  name: Nakamura A
+- authtype: Author
+  name: Parkkonen L
+- authtype: Author
+  name: López ME
+- authtype: Author
+  name: del Pozo F
+- authtype: Author
+  name: Sudre G
+- authtype: Author
+  name: Zamrini E
+- authtype: Author
+  name: Pekkonen E
+- authtype: Author
+  name: Henson RN
+- authtype: Author
+  name: Becker JT
+- authtype: CollectiveName
+  name: Magnetoencephalography International Consortium of Alzheimer's Disease
+epubdate: 2015 Aug 1
+fulljournalname: 'NeuroImage : Clinical'
+issue: ''
+pages: 103-109
+pmclivedate: 2015/10/07
+printpubdate: ''
+pubdate: 2015 Aug 1
+sortdate: 2015/08/01 00:00
+source: Neuroimage Clin
+title: A multicenter study of the early detection of synaptic dysfunction in Mild
+  Cognitive Impairment using Magnetoencephalography-derived functional connectivity
+uid: '4552812'
+volume: '9'

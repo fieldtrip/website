@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '30859292'
+- idtype: doi
+  value: 10.1007/s00429-019-01854-4
+- idtype: pmcid
+  value: PMC6509088
+authors:
+- authtype: Author
+  name: Hauser MF
+- authtype: Author
+  name: Wiescholleck V
+- authtype: Author
+  name: Colitti-Klausnitzer J
+- authtype: Author
+  name: Bellebaum C
+- authtype: Author
+  name: Manahan-Vaughan D
+epubdate: 2019 Mar 11
+fulljournalname: Brain Structure & Function
+issue: '4'
+pages: 1583-1597
+pmclivedate: 2019/05/28
+printpubdate: '2019'
+pubdate: 2019 Mar 11
+sortdate: 2019/03/11 00:00
+source: Brain Struct Funct
+title: Event-related potentials evoked by passive visuospatial perception in rats
+  and humans reveal common denominators in information processing
+uid: '6509088'
+volume: '224'

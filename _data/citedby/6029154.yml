@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '29997539'
+- idtype: doi
+  value: 10.3389/fpsyg.2018.01000
+- idtype: pmcid
+  value: PMC6029154
+authors:
+- authtype: Author
+  name: Syrjänen E
+- authtype: Author
+  name: Wiens S
+- authtype: Author
+  name: Fischer H
+- authtype: Author
+  name: Zakrzewska M
+- authtype: Author
+  name: Wartel A
+- authtype: Author
+  name: Larsson M
+- authtype: Author
+  name: Olofsson JK
+epubdate: 2018 Jun 26
+fulljournalname: Frontiers in Psychology
+issue: ''
+pages: '1000'
+pmclivedate: 2018/07/11
+printpubdate: ''
+pubdate: 2018 Jun 26
+sortdate: 2018/06/26 00:00
+source: Front Psychol
+title: Background Odors Modulate N170 ERP Component and Perception of Emotional Facial
+  Stimuli
+uid: '6029154'
+volume: '9'

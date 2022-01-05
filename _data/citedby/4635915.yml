@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '25037923'
+- idtype: doi
+  value: 10.1093/cercor/bhu154
+- idtype: pmcid
+  value: PMC4635915
+authors:
+- authtype: Author
+  name: Chan JL
+- authtype: Author
+  name: Koval MJ
+- authtype: Author
+  name: Womelsdorf T
+- authtype: Author
+  name: Lomber SG
+- authtype: Author
+  name: Everling S
+epubdate: 2014 Jul 17
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '12'
+pages: 4704-4714
+pmclivedate: 2016/12/01
+printpubdate: 2015 Dec
+pubdate: 2014 Jul 17
+sortdate: 2014/07/17 00:00
+source: Cereb Cortex
+title: Dorsolateral Prefrontal Cortex Deactivation in Monkeys Reduces Preparatory
+  Beta and Gamma Power in the Superior Colliculus
+uid: '4635915'
+volume: '25'

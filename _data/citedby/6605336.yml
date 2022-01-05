@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '26041909'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.4460-14.2015
+- idtype: pmcid
+  value: PMC6605336
+authors:
+- authtype: Author
+  name: Dannenberg H
+- authtype: Author
+  name: Pabst M
+- authtype: Author
+  name: Braganza O
+- authtype: Author
+  name: Schoch S
+- authtype: Author
+  name: Niediek J
+- authtype: Author
+  name: Bayraktar M
+- authtype: Author
+  name: Mormann F
+- authtype: Author
+  name: Beck H
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '22'
+pages: 8394-8410
+pmclivedate: 2019/07/08
+printpubdate: 2015 Jun 3
+pubdate: 2015 Jun 3
+sortdate: 2015/06/03 00:00
+source: J Neurosci
+title: Synergy of Direct and Indirect Cholinergic Septo-Hippocampal Pathways Coordinates
+  Firing in Hippocampal Networks
+uid: '6605336'
+volume: '35'

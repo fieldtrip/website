@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '21543604'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.4882-10.2011
+- idtype: pmcid
+  value: PMC6632864
+authors:
+- authtype: Author
+  name: Schoffelen JM
+- authtype: Author
+  name: Poort J
+- authtype: Author
+  name: Oostenveld R
+- authtype: Author
+  name: Fries P
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '18'
+pages: 6750-6758
+pmclivedate: 2019/07/25
+printpubdate: 2011 May 4
+pubdate: 2011 May 4
+sortdate: 2011/05/04 00:00
+source: J Neurosci
+title: Selective Movement Preparation Is Subserved by Selective Increases in Corticomuscular
+  Gamma-Band Coherence
+uid: '6632864'
+volume: '31'

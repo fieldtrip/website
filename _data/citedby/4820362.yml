@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '27012442'
+- idtype: doi
+  value: 10.1111/acer.13014
+- idtype: pmcid
+  value: PMC4820362
+authors:
+- authtype: Author
+  name: Rosen BQ
+- authtype: Author
+  name: Padovan N
+- authtype: Author
+  name: Marinkovic K
+epubdate: 2016 Mar 25
+fulljournalname: Alcoholism, Clinical and Experimental Research
+issue: '4'
+pages: 743-752
+pmclivedate: 2016/09/23
+printpubdate: 2016 Apr
+pubdate: 2016 Mar 25
+sortdate: 2016/03/25 00:00
+source: Alcohol Clin Exp Res
+title: 'Alcohol Hits You When It Is Hard: Intoxication, Task Difficulty, and Theta
+  Brain Oscillations'
+uid: '4820362'
+volume: '40'

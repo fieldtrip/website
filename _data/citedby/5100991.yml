@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '27824858'
+- idtype: doi
+  value: 10.1371/journal.pbio.1002576
+- idtype: pmcid
+  value: PMC5100991
+authors:
+- authtype: Author
+  name: Wilson CR
+- authtype: Author
+  name: Vezoli J
+- authtype: Author
+  name: Stoll FM
+- authtype: Author
+  name: Faraut MC
+- authtype: Author
+  name: Leviel V
+- authtype: Author
+  name: Knoblauch K
+- authtype: Author
+  name: Procyk E
+epubdate: 2016 Nov 8
+fulljournalname: PLoS Biology
+issue: '11'
+pages: e1002576
+pmclivedate: 2016/11/18
+printpubdate: ''
+pubdate: 2016 Nov 8
+sortdate: 2016/11/08 00:00
+source: PLoS Biol
+title: Prefrontal Markers and Cognitive Performance Are Dissociated during Progressive
+  Dopamine Lesion
+uid: '5100991'
+volume: '14'

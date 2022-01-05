@@ -1,0 +1,34 @@
+articleids:
+- idtype: pmid
+  value: '27849588'
+- idtype: doi
+  value: 10.1073/pnas.1612903113
+- idtype: pmcid
+  value: PMC5137744
+authors:
+- authtype: Author
+  name: Levy J
+- authtype: Author
+  name: Goldstein A
+- authtype: Author
+  name: Influs M
+- authtype: Author
+  name: Masalha S
+- authtype: Author
+  name: Zagoory-Sharon O
+- authtype: Author
+  name: Feldman R
+epubdate: 2016 Nov 14
+fulljournalname: Proceedings of the National Academy of Sciences of the United States
+  of America
+issue: '48'
+pages: 13696-13701
+pmclivedate: 2017/05/29
+printpubdate: 2016 Nov 29
+pubdate: 2016 Nov 14
+sortdate: 2016/11/14 00:00
+source: Proc Natl Acad Sci U S A
+title: Adolescents growing up amidst intractable conflict attenuate brain response
+  to pain of outgroup
+uid: '5137744'
+volume: '113'

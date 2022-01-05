@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '34248524'
+- idtype: doi
+  value: 10.3389/fnhum.2021.661432
+- idtype: pmcid
+  value: PMC8261289
+authors:
+- authtype: Author
+  name: Stecher HI
+- authtype: Author
+  name: Notbohm A
+- authtype: Author
+  name: Kasten FH
+- authtype: Author
+  name: Herrmann CS
+epubdate: 2021 Jun 23
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '661432'
+pmclivedate: 2021/07/08
+printpubdate: ''
+pubdate: 2021 Jun 23
+sortdate: 2021/06/23 00:00
+source: Front Hum Neurosci
+title: A Comparison of Closed Loop vs. Fixed Frequency tACS on Modulating Brain Oscillations
+  and Visual Detection
+uid: '8261289'
+volume: '15'

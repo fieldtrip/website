@@ -1,0 +1,45 @@
+articleids:
+- idtype: pmid
+  value: '28677252'
+- idtype: doi
+  value: 10.1002/hbm.23716
+- idtype: pmcid
+  value: PMC6866743
+authors:
+- authtype: Author
+  name: Sauer A
+- authtype: Author
+  name: Zeev‐Wolf M
+- authtype: Author
+  name: Grent‐'t‐Jong T
+- authtype: Author
+  name: Recasens M
+- authtype: Author
+  name: Wacongne C
+- authtype: Author
+  name: Wibral M
+- authtype: Author
+  name: Helbling S
+- authtype: Author
+  name: Peled A
+- authtype: Author
+  name: Grinshpoon A
+- authtype: Author
+  name: Singer W
+- authtype: Author
+  name: Goldstein A
+- authtype: Author
+  name: Uhlhaas PJ
+epubdate: 2017 Jul 5
+fulljournalname: Human Brain Mapping
+issue: '10'
+pages: 5082-5093
+pmclivedate: 2020/06/12
+printpubdate: ''
+pubdate: 2017 Jul 5
+sortdate: 2017/07/05 00:00
+source: Hum Brain Mapp
+title: 'Impairment in predictive processes during auditory mismatch negativity in
+  ScZ: Evidence from event‐related fields'
+uid: '6866743'
+volume: '38'

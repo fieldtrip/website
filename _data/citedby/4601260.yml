@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '26528164'
+- idtype: doi
+  value: 10.3389/fnhum.2015.00549
+- idtype: pmcid
+  value: PMC4601260
+authors:
+- authtype: Author
+  name: Piai V
+- authtype: Author
+  name: Roelofs A
+- authtype: Author
+  name: Rommers J
+- authtype: Author
+  name: Dahlslätt K
+- authtype: Author
+  name: Maris E
+epubdate: 2015 Oct 12
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '549'
+pmclivedate: 2015/11/02
+printpubdate: ''
+pubdate: 2015 Oct 12
+sortdate: 2015/10/12 00:00
+source: Front Hum Neurosci
+title: Withholding planned speech is reflected in synchronized beta-band oscillations
+uid: '4601260'
+volume: '9'

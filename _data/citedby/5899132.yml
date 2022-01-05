@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '29654312'
+- idtype: doi
+  value: 10.1038/s41467-018-03960-z
+- idtype: pmcid
+  value: PMC5899132
+authors:
+- authtype: Author
+  name: van Ede F
+- authtype: Author
+  name: Chekroud SR
+- authtype: Author
+  name: Stokes MG
+- authtype: Author
+  name: Nobre AC
+epubdate: 2018 Apr 13
+fulljournalname: Nature Communications
+issue: ''
+pages: '1449'
+pmclivedate: 2018/04/16
+printpubdate: ''
+pubdate: 2018 Apr 13
+sortdate: 2018/04/13 00:00
+source: Nat Commun
+title: Decoding the influence of anticipatory states on visual perception in the presence
+  of temporal distractors
+uid: '5899132'
+volume: '9'

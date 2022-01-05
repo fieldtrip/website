@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '33419711'
+- idtype: doi
+  value: 10.1016/j.bpsc.2020.10.003
+- idtype: pmcid
+  value: PMC8060366
+- idtype: MID
+  value: NIHMS1639903
+authors:
+- authtype: Author
+  name: Kasdan A
+- authtype: Author
+  name: Gordon RL
+- authtype: Author
+  name: Lense MD
+epubdate: 2020 Oct 22
+fulljournalname: Biological psychiatry. Cognitive neuroscience and neuroimaging
+issue: ''
+pages: S2451-9022(20)30306-2
+pmclivedate: ''
+printpubdate: ''
+pubdate: 2020 Oct 22
+sortdate: 2020/10/22 00:00
+source: Biol Psychiatry Cogn Neurosci Neuroimaging
+title: Neurophysiological correlates of dynamic beat tracking in individuals with
+  Williams syndrome
+uid: '8060366'
+volume: ''

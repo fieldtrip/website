@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '32562487'
+- idtype: doi
+  value: 10.1093/sleep/zsaa111
+- idtype: pmcid
+  value: PMC7734479
+authors:
+- authtype: Author
+  name: Schneider J
+- authtype: Author
+  name: Lewis PA
+- authtype: Author
+  name: Koester D
+- authtype: Author
+  name: Born J
+- authtype: Author
+  name: Ngo HV
+epubdate: 2020 Jun 2
+fulljournalname: Sleep
+issue: '12'
+pages: zsaa111
+pmclivedate: 2020/12/17
+printpubdate: ''
+pubdate: 2020 Jun 2
+sortdate: 2020/06/02 00:00
+source: Sleep
+title: Susceptibility to auditory closed-loop stimulation of sleep slow oscillations
+  changes with age
+uid: '7734479'
+volume: '43'

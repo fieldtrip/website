@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '29163132'
+- idtype: doi
+  value: 10.3389/fnagi.2017.00349
+- idtype: pmcid
+  value: PMC5671981
+authors:
+- authtype: Author
+  name: Zinchenko A
+- authtype: Author
+  name: Obermeier C
+- authtype: Author
+  name: Kanske P
+- authtype: Author
+  name: Schröger E
+- authtype: Author
+  name: Villringer A
+- authtype: Author
+  name: Kotz SA
+epubdate: 2017 Nov 1
+fulljournalname: Frontiers in Aging Neuroscience
+issue: ''
+pages: '349'
+pmclivedate: 2017/11/21
+printpubdate: ''
+pubdate: 2017 Nov 1
+sortdate: 2017/11/01 00:00
+source: Front Aging Neurosci
+title: The Influence of Negative Emotion on Cognitive and Emotional Control Remains
+  Intact in Aging
+uid: '5671981'
+volume: '9'

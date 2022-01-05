@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '33071722'
+- idtype: doi
+  value: 10.3389/fnins.2020.00846
+- idtype: pmcid
+  value: PMC7533612
+authors:
+- authtype: Author
+  name: Alickovic E
+- authtype: Author
+  name: Lunner T
+- authtype: Author
+  name: Wendt D
+- authtype: Author
+  name: Fiedler L
+- authtype: Author
+  name: Hietkamp R
+- authtype: Author
+  name: Ng EH
+- authtype: Author
+  name: Graversen C
+epubdate: 2020 Sep 10
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '846'
+pmclivedate: 2020/10/15
+printpubdate: ''
+pubdate: 2020 Sep 10
+sortdate: 2020/09/10 00:00
+source: Front Neurosci
+title: Neural Representation Enhanced for Speech and Reduced for Background Noise
+  With a Hearing Aid Noise Reduction Scheme During a Selective Attention Task
+uid: '7533612'
+volume: '14'

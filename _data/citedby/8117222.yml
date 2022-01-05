@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '33994912'
+- idtype: doi
+  value: 10.3389/fnins.2021.526257
+- idtype: pmcid
+  value: PMC8117222
+authors:
+- authtype: Author
+  name: Gallego Martínez EE
+- authtype: Author
+  name: González Mitjans A
+- authtype: Author
+  name: Garea-Llano E
+- authtype: Author
+  name: Bringas-Vega ML
+- authtype: Author
+  name: Valdes-Sosa PA
+epubdate: 2021 Apr 29
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '526257'
+pmclivedate: 2021/05/14
+printpubdate: ''
+pubdate: 2021 Apr 29
+sortdate: 2021/04/29 00:00
+source: Front Neurosci
+title: 'Automatic Detection of Fiducial Landmarks Toward the Development of an Application
+  for Digitizing the Locations of EEG Electrodes: Occipital Structure Sensor-Based
+  Work'
+uid: '8117222'
+volume: '15'

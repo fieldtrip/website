@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '30076326'
+- idtype: doi
+  value: 10.1038/s41598-018-29862-0
+- idtype: pmcid
+  value: PMC6076274
+authors:
+- authtype: Author
+  name: Nougaret S
+- authtype: Author
+  name: Genovesio A
+epubdate: 2018 Aug 3
+fulljournalname: Scientific Reports
+issue: ''
+pages: '11680'
+pmclivedate: 2018/08/07
+printpubdate: ''
+pubdate: 2018 Aug 3
+sortdate: 2018/08/03 00:00
+source: Sci Rep
+title: Learning the meaning of new stimuli increases the cross-correlated activity
+  of prefrontal neurons
+uid: '6076274'
+volume: '8'

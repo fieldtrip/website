@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '33805063'
+- idtype: doi
+  value: 10.3390/brainsci11040410
+- idtype: pmcid
+  value: PMC8064104
+authors:
+- authtype: Author
+  name: Ruch S
+- authtype: Author
+  name: Fehér K
+- authtype: Author
+  name: Homan S
+- authtype: Author
+  name: Morishima Y
+- authtype: Author
+  name: Mueller SM
+- authtype: Author
+  name: Mueller SV
+- authtype: Author
+  name: Dierks T
+- authtype: Author
+  name: Grieder M
+epubdate: 2021 Mar 24
+fulljournalname: Brain Sciences
+issue: '4'
+pages: '410'
+pmclivedate: 2021/04/24
+printpubdate: ''
+pubdate: 2021 Mar 24
+sortdate: 2021/03/24 00:00
+source: Brain Sci
+title: Bi-Temporal Anodal Transcranial Direct Current Stimulation during Slow-Wave
+  Sleep Boosts Slow-Wave Density but Not Memory Consolidation
+uid: '8064104'
+volume: '11'

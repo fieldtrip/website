@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '31965477'
+- idtype: doi
+  value: 10.3758/s13428-019-01338-7
+- idtype: pmcid
+  value: PMC7406487
+authors:
+- authtype: Author
+  name: van den Berg B
+- authtype: Author
+  name: Doll RJ
+- authtype: Author
+  name: Mentink AL
+- authtype: Author
+  name: Siebenga PS
+- authtype: Author
+  name: Groeneveld GJ
+- authtype: Author
+  name: Buitenweg JR
+epubdate: 2020 Jan 21
+fulljournalname: Behavior Research Methods
+issue: '4'
+pages: 1617-1628
+pmclivedate: 2020/08/13
+printpubdate: '2020'
+pubdate: 2020 Jan 21
+sortdate: 2020/01/21 00:00
+source: Behav Res Methods
+title: Simultaneous tracking of psychophysical detection thresholds and evoked potentials
+  to study nociceptive processing
+uid: '7406487'
+volume: '52'

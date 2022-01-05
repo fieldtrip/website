@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '29681807'
+- idtype: doi
+  value: 10.3389/fnhum.2018.00130
+- idtype: pmcid
+  value: PMC5897748
+authors:
+- authtype: Author
+  name: Tamás G
+- authtype: Author
+  name: Chirumamilla VC
+- authtype: Author
+  name: Anwar AR
+- authtype: Author
+  name: Raethjen J
+- authtype: Author
+  name: Deuschl G
+- authtype: Author
+  name: Groppa S
+- authtype: Author
+  name: Muthuraman M
+epubdate: 2018 Apr 6
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '130'
+pmclivedate: 2018/04/20
+printpubdate: ''
+pubdate: 2018 Apr 6
+sortdate: 2018/04/06 00:00
+source: Front Hum Neurosci
+title: Primary Sensorimotor Cortex Drives the Common Cortical Network for Gamma Synchronization
+  in Voluntary Hand Movements
+uid: '5897748'
+volume: '12'

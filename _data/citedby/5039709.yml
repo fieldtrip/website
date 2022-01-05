@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '27677352'
+- idtype: doi
+  value: 10.1038/srep34273
+- idtype: pmcid
+  value: PMC5039709
+authors:
+- authtype: Author
+  name: Peter V
+- authtype: Author
+  name: Kalashnikova M
+- authtype: Author
+  name: Santos A
+- authtype: Author
+  name: Burnham D
+epubdate: 2016 Sep 28
+fulljournalname: Scientific Reports
+issue: ''
+pages: '34273'
+pmclivedate: 2016/09/30
+printpubdate: ''
+pubdate: 2016 Sep 28
+sortdate: 2016/09/28 00:00
+source: Sci Rep
+title: Mature neural responses to Infant-Directed Speech but not Adult-Directed Speech
+  in Pre-Verbal Infants
+uid: '5039709'
+volume: '6'

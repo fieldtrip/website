@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '34712128'
+- idtype: doi
+  value: 10.3389/fnhum.2021.738200
+- idtype: pmcid
+  value: PMC8546262
+authors:
+- authtype: Author
+  name: van der Cruijsen J
+- authtype: Author
+  name: Piastra MC
+- authtype: Author
+  name: Selles RW
+- authtype: Author
+  name: Oostendorp TF
+epubdate: 2021 Oct 12
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '738200'
+pmclivedate: 2021/10/27
+printpubdate: ''
+pubdate: 2021 Oct 12
+sortdate: 2021/10/12 00:00
+source: Front Hum Neurosci
+title: 'A Method to Experimentally Estimate the Conductivity of Chronic Stroke Lesions:
+  A Tool to Individualize Transcranial Electric Stimulation'
+uid: '8546262'
+volume: '15'

@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '29124791'
+- idtype: doi
+  value: 10.1002/hbm.23882
+- idtype: pmcid
+  value: PMC6866298
+authors:
+- authtype: Author
+  name: Chung SW
+- authtype: Author
+  name: Rogasch NC
+- authtype: Author
+  name: Hoy KE
+- authtype: Author
+  name: Sullivan CM
+- authtype: Author
+  name: Cash RF
+- authtype: Author
+  name: Fitzgerald PB
+epubdate: 2017 Nov 9
+fulljournalname: Human Brain Mapping
+issue: '2'
+pages: 783-802
+pmclivedate: 2020/06/12
+printpubdate: ''
+pubdate: 2017 Nov 9
+sortdate: 2017/11/09 00:00
+source: Hum Brain Mapp
+title: Impact of different intensities of intermittent theta burst stimulation on
+  the cortical properties during TMS‐EEG and working memory performance
+uid: '6866298'
+volume: '39'

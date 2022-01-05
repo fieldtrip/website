@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '24009573'
+- idtype: doi
+  value: 10.3389/fnhum.2013.00511
+- idtype: pmcid
+  value: PMC3756226
+authors:
+- authtype: Author
+  name: Wach C
+- authtype: Author
+  name: Krause V
+- authtype: Author
+  name: Moliadze V
+- authtype: Author
+  name: Paulus W
+- authtype: Author
+  name: Schnitzler A
+- authtype: Author
+  name: Pollok B
+epubdate: 2013 Aug 29
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '511'
+pmclivedate: 2013/09/04
+printpubdate: ''
+pubdate: 2013 Aug 29
+sortdate: 2013/08/29 00:00
+source: Front Hum Neurosci
+title: The effect of 10 Hz transcranial alternating current stimulation (tACS) on
+  corticomuscular coherence
+uid: '3756226'
+volume: '7'

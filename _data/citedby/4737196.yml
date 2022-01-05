@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '25627861'
+- idtype: doi
+  value: 10.1002/hbm.22742
+- idtype: pmcid
+  value: PMC4737196
+authors:
+- authtype: Author
+  name: Joensson M
+- authtype: Author
+  name: Thomsen KR
+- authtype: Author
+  name: Andersen LM
+- authtype: Author
+  name: Gross J
+- authtype: Author
+  name: Mouridsen K
+- authtype: Author
+  name: Sandberg K
+- authtype: Author
+  name: Østergaard L
+- authtype: Author
+  name: Lou HC
+epubdate: 2015 Jan 27
+fulljournalname: Human Brain Mapping
+issue: '5'
+pages: 1866-1877
+pmclivedate: 2016/02/11
+printpubdate: ''
+pubdate: 2015 Jan 27
+sortdate: 2015/01/27 00:00
+source: Hum Brain Mapp
+title: 'Making sense: Dopamine activates conscious self‐monitoring through medial
+  prefrontal cortex'
+uid: '4737196'
+volume: '36'

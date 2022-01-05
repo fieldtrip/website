@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '30708350'
+- idtype: doi
+  value: 10.1016/j.nicl.2019.101689
+- idtype: pmcid
+  value: PMC6354441
+authors:
+- authtype: Author
+  name: Schoellmann A
+- authtype: Author
+  name: Scholten M
+- authtype: Author
+  name: Wasserka B
+- authtype: Author
+  name: Govindan RB
+- authtype: Author
+  name: Krüger R
+- authtype: Author
+  name: Gharabaghi A
+- authtype: Author
+  name: Plewnia C
+- authtype: Author
+  name: Weiss D
+epubdate: 2019 Jan 23
+fulljournalname: 'NeuroImage : Clinical'
+issue: ''
+pages: '101689'
+pmclivedate: 2019/02/07
+printpubdate: ''
+pubdate: 2019 Jan 23
+sortdate: 2019/01/23 00:00
+source: Neuroimage Clin
+title: Anodal tDCS modulates cortical activity and synchronization in Parkinson's
+  disease depending on motor processing
+uid: '6354441'
+volume: '22'

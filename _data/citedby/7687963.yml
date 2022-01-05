@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '33282521'
+- idtype: doi
+  value: 10.1364/BOE.409317
+- idtype: pmcid
+  value: PMC7687963
+authors:
+- authtype: Author
+  name: Sappia MS
+- authtype: Author
+  name: Hakimi N
+- authtype: Author
+  name: Colier WN
+- authtype: Author
+  name: Horschig JM
+epubdate: 2020 Oct 27
+fulljournalname: Biomedical Optics Express
+issue: '11'
+pages: 6732-6754
+pmclivedate: 2020/12/03
+printpubdate: ''
+pubdate: 2020 Oct 27
+sortdate: 2020/10/27 00:00
+source: Biomed Opt Express
+title: 'Signal quality index: an algorithm for quantitative assessment of functional
+  near infrared spectroscopy signal quality'
+uid: '7687963'
+volume: '11'

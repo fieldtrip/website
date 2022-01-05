@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '24755943'
+- idtype: doi
+  value: 10.1371/journal.pone.0095690
+- idtype: pmcid
+  value: PMC3995711
+authors:
+- authtype: Author
+  name: Banis S
+- authtype: Author
+  name: Geerligs L
+- authtype: Author
+  name: Lorist MM
+epubdate: 2014 Apr 22
+fulljournalname: PLoS ONE
+issue: '4'
+pages: e95690
+pmclivedate: 2014/04/25
+printpubdate: ''
+pubdate: 2014 Apr 22
+sortdate: 2014/04/22 00:00
+source: PLoS One
+title: 'Acute Stress Modulates Feedback Processing in Men and Women: Differential
+  Effects on the Feedback-Related Negativity and Theta and Beta Power'
+uid: '3995711'
+volume: '9'

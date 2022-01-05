@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '28559320'
+- idtype: doi
+  value: 10.1073/pnas.1620350114
+- idtype: pmcid
+  value: PMC5474824
+authors:
+- authtype: Author
+  name: Brookshire G
+- authtype: Author
+  name: Lu J
+- authtype: Author
+  name: Nusbaum HC
+- authtype: Author
+  name: Goldin-Meadow S
+- authtype: Author
+  name: Casasanto D
+epubdate: 2017 May 30
+fulljournalname: Proceedings of the National Academy of Sciences of the United States
+  of America
+issue: '24'
+pages: 6352-6357
+pmclivedate: 2017/06/22
+printpubdate: 2017 Jun 13
+pubdate: 2017 May 30
+sortdate: 2017/05/30 00:00
+source: Proc Natl Acad Sci U S A
+title: Visual cortex entrains to sign language
+uid: '5474824'
+volume: '114'

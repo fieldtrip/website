@@ -1,0 +1,42 @@
+articleids:
+- idtype: pmid
+  value: '34101939'
+- idtype: doi
+  value: 10.1002/hbm.25535
+- idtype: pmcid
+  value: PMC8288107
+authors:
+- authtype: Author
+  name: Uji M
+- authtype: Author
+  name: Cross N
+- authtype: Author
+  name: Pomares FB
+- authtype: Author
+  name: Perrault AA
+- authtype: Author
+  name: Jegou A
+- authtype: Author
+  name: Nguyen A
+- authtype: Author
+  name: Aydin U
+- authtype: Author
+  name: Lina J
+- authtype: Author
+  name: Dang‐Vu TT
+- authtype: Author
+  name: Grova C
+epubdate: 2021 Jun 8
+fulljournalname: Human Brain Mapping
+issue: '12'
+pages: 3993-4021
+pmclivedate: 2021/07/21
+printpubdate: ''
+pubdate: 2021 Jun 8
+sortdate: 2021/06/08 00:00
+source: Hum Brain Mapp
+title: Data‐driven beamforming technique to attenuate ballistocardiogram artefacts
+  in electroencephalography–functional magnetic resonance imaging without detecting
+  cardiac pulses in electrocardiography recordings
+uid: '8288107'
+volume: '42'

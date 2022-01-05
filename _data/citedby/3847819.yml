@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '24348455'
+- idtype: doi
+  value: 10.3389/fpsyg.2013.00912
+- idtype: pmcid
+  value: PMC3847819
+authors:
+- authtype: Author
+  name: Berkovich-Ohana A
+- authtype: Author
+  name: Dor-Ziderman Y
+- authtype: Author
+  name: Glicksohn J
+- authtype: Author
+  name: Goldstein A
+epubdate: 2013 Dec 3
+fulljournalname: Frontiers in Psychology
+issue: ''
+pages: '912'
+pmclivedate: 2013/12/17
+printpubdate: ''
+pubdate: 2013 Dec 3
+sortdate: 2013/12/03 00:00
+source: Front Psychol
+title: 'Alterations in the sense of time, space, and body in the mindfulness-trained
+  brain: a neurophenomenologically-guided MEG study'
+uid: '3847819'
+volume: '4'

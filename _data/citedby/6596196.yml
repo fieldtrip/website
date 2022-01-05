@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '29217684'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1315-17.2017
+- idtype: pmcid
+  value: PMC6596196
+authors:
+- authtype: Author
+  name: Herweg NA
+- authtype: Author
+  name: Sommer T
+- authtype: Author
+  name: Bunzeck N
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '3'
+pages: 745-754
+pmclivedate: 2019/06/27
+printpubdate: 2018 Jan 17
+pubdate: 2018 Jan 17
+sortdate: 2018/01/17 00:00
+source: J Neurosci
+title: Retrieval Demands Adaptively Change Striatal Old/New Signals and Boost Subsequent
+  Long-Term Memory
+uid: '6596196'
+volume: '38'

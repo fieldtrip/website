@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '23198894'
+- idtype: doi
+  value: 10.1162/jocn_a_00305
+- idtype: pmcid
+  value: PMC3775605
+- idtype: MID
+  value: NIHMS495587
+authors:
+- authtype: Author
+  name: LaRocque JJ
+- authtype: Author
+  name: Lewis-Peacock JA
+- authtype: Author
+  name: Drysdale AT
+- authtype: Author
+  name: Oberauer K
+- authtype: Author
+  name: Postle BR
+epubdate: ''
+fulljournalname: Journal of cognitive neuroscience
+issue: '1'
+pages: 127-142
+pmclivedate: 2013/09/17
+printpubdate: 2013 Jan
+pubdate: 2013 Jan
+sortdate: 2013/01/01 00:00
+source: J Cogn Neurosci
+title: 'Decoding Attended Information in Short-term Memory: An EEG Study'
+uid: '3775605'
+volume: '25'

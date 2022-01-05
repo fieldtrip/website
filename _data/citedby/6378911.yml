@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '30804887'
+- idtype: doi
+  value: 10.3389/fneur.2019.00094
+- idtype: pmcid
+  value: PMC6378911
+authors:
+- authtype: Author
+  name: Thomschewski A
+- authtype: Author
+  name: Hincapié AS
+- authtype: Author
+  name: Frauscher B
+epubdate: 2019 Feb 12
+fulljournalname: Frontiers in Neurology
+issue: ''
+pages: '94'
+pmclivedate: 2019/02/25
+printpubdate: ''
+pubdate: 2019 Feb 12
+sortdate: 2019/02/12 00:00
+source: Front Neurol
+title: Localization of the Epileptogenic Zone Using High Frequency Oscillations
+uid: '6378911'
+volume: '10'

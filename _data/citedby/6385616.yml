@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '30796340'
+- idtype: doi
+  value: 10.1038/s41598-019-39204-3
+- idtype: pmcid
+  value: PMC6385616
+authors:
+- authtype: Author
+  name: Vinding MC
+- authtype: Author
+  name: Tsitsi P
+- authtype: Author
+  name: Piitulainen H
+- authtype: Author
+  name: Waldthaler J
+- authtype: Author
+  name: Jousmäki V
+- authtype: Author
+  name: Ingvar M
+- authtype: Author
+  name: Svenningsson P
+- authtype: Author
+  name: Lundqvist D
+epubdate: 2019 Feb 22
+fulljournalname: Scientific Reports
+issue: ''
+pages: '2604'
+pmclivedate: 2019/02/27
+printpubdate: ''
+pubdate: 2019 Feb 22
+sortdate: 2019/02/22 00:00
+source: Sci Rep
+title: Attenuated beta rebound to proprioceptive afferent feedback in Parkinson’s
+  disease
+uid: '6385616'
+volume: '9'

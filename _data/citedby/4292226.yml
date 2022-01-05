@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '25628586'
+- idtype: doi
+  value: 10.3389/fpsyg.2014.01560
+- idtype: pmcid
+  value: PMC4292226
+authors:
+- authtype: Author
+  name: Piai V
+- authtype: Author
+  name: Riès SK
+- authtype: Author
+  name: Knight RT
+epubdate: 2015 Jan 13
+fulljournalname: Frontiers in Psychology
+issue: ''
+pages: '1560'
+pmclivedate: 2015/01/27
+printpubdate: ''
+pubdate: 2015 Jan 13
+sortdate: 2015/01/13 00:00
+source: Front Psychol
+title: 'The electrophysiology of language production: what could be improved'
+uid: '4292226'
+volume: '5'

@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '30258707'
+- idtype: doi
+  value: 10.7717/peerj.5543
+- idtype: pmcid
+  value: PMC6151115
+authors:
+- authtype: Author
+  name: van Lier B
+- authtype: Author
+  name: Hierlemann A
+- authtype: Author
+  name: Knoflach F
+epubdate: 2018 Sep 19
+fulljournalname: PeerJ
+issue: ''
+pages: e5543
+pmclivedate: 2018/09/26
+printpubdate: ''
+pubdate: 2018 Sep 19
+sortdate: 2018/09/19 00:00
+source: PeerJ
+title: Parvalbumin expression and gamma oscillation occurrence increase over time
+  in a neurodevelopmental model of NMDA receptor dysfunction
+uid: '6151115'
+volume: '6'

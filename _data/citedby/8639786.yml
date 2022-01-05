@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '34672985'
+- idtype: doi
+  value: 10.1016/j.neuron.2021.09.052
+- idtype: pmcid
+  value: PMC8639786
+authors:
+- authtype: Author
+  name: Vezoli J
+- authtype: Author
+  name: Vinck M
+- authtype: Author
+  name: Bosman CA
+- authtype: Author
+  name: Bastos AM
+- authtype: Author
+  name: Lewis CM
+- authtype: Author
+  name: Kennedy H
+- authtype: Author
+  name: Fries P
+epubdate: ''
+fulljournalname: Neuron
+issue: '23'
+pages: 3862-3878.e5
+pmclivedate: 2021/12/17
+printpubdate: 2021 Dec 1
+pubdate: 2021 Dec 1
+sortdate: 2021/12/01 00:00
+source: Neuron
+title: Brain rhythms define distinct interaction networks with differential dependence
+  on anatomy
+uid: '8639786'
+volume: '109'

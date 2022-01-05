@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '31292476'
+- idtype: doi
+  value: 10.1038/s41598-019-46214-8
+- idtype: pmcid
+  value: PMC6620337
+authors:
+- authtype: Author
+  name: Ferreira CS
+- authtype: Author
+  name: Maraver MJ
+- authtype: Author
+  name: Hanslmayr S
+- authtype: Author
+  name: Bajo T
+epubdate: 2019 Jul 10
+fulljournalname: Scientific Reports
+issue: ''
+pages: '9977'
+pmclivedate: 2019/07/18
+printpubdate: ''
+pubdate: 2019 Jul 10
+sortdate: 2019/07/10 00:00
+source: Sci Rep
+title: Theta oscillations show impaired interference detection in older adults during
+  selective memory retrieval
+uid: '6620337'
+volume: '9'

@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '26516605'
+- idtype: doi
+  value: 10.1002/brb3.369
+- idtype: pmcid
+  value: PMC4614049
+authors:
+- authtype: Author
+  name: Wahnoun R
+- authtype: Author
+  name: Benson M
+- authtype: Author
+  name: Helms‐Tillery S
+- authtype: Author
+  name: Adelson PD
+epubdate: 2015 Sep 20
+fulljournalname: Brain and Behavior
+issue: '10'
+pages: e00369
+pmclivedate: 2015/10/29
+printpubdate: ''
+pubdate: 2015 Sep 20
+sortdate: 2015/09/20 00:00
+source: Brain Behav
+title: Delineation of somatosensory finger areas using vibrotactile stimulation, an
+  ECoG study
+uid: '4614049'
+volume: '5'

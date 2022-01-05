@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '24179838'
+- idtype: doi
+  value: 10.1016/j.nicl.2013.06.003
+- idtype: pmcid
+  value: PMC3777687
+authors:
+- authtype: Author
+  name: Götz T
+- authtype: Author
+  name: Huonker R
+- authtype: Author
+  name: Kranczioch C
+- authtype: Author
+  name: Reuken P
+- authtype: Author
+  name: Witte OW
+- authtype: Author
+  name: Günther A
+- authtype: Author
+  name: Debener S
+epubdate: 2013 Jun 13
+fulljournalname: 'NeuroImage : Clinical'
+issue: ''
+pages: 873-882
+pmclivedate: 2013/10/31
+printpubdate: ''
+pubdate: 2013 Jun 13
+sortdate: 2013/06/13 00:00
+source: Neuroimage Clin
+title: Impaired evoked and resting-state brain oscillations in patients with liver
+  cirrhosis as revealed by magnetoencephalography
+uid: '3777687'
+volume: '2'

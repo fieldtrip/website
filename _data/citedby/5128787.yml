@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '27901053'
+- idtype: doi
+  value: 10.1038/srep37718
+- idtype: pmcid
+  value: PMC5128787
+authors:
+- authtype: Author
+  name: van den Berg B
+- authtype: Author
+  name: Appelbaum LG
+- authtype: Author
+  name: Clark K
+- authtype: Author
+  name: Lorist MM
+- authtype: Author
+  name: Woldorff MG
+epubdate: 2016 Nov 30
+fulljournalname: Scientific Reports
+issue: ''
+pages: '37718'
+pmclivedate: 2016/12/09
+printpubdate: ''
+pubdate: 2016 Nov 30
+sortdate: 2016/11/30 00:00
+source: Sci Rep
+title: Visual search performance is predicted by both prestimulus and poststimulus
+  electrical brain activity
+uid: '5128787'
+volume: '6'

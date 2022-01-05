@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '28559380'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.3393-16.2017
+- idtype: pmcid
+  value: PMC6596509
+authors:
+- authtype: Author
+  name: Coll MP
+- authtype: Author
+  name: Press C
+- authtype: Author
+  name: Hobson H
+- authtype: Author
+  name: Catmur C
+- authtype: Author
+  name: Bird G
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '24'
+pages: 5936-5947
+pmclivedate: 2019/07/02
+printpubdate: 2017 Jun 14
+pubdate: 2017 Jun 14
+sortdate: 2017/06/14 00:00
+source: J Neurosci
+title: Crossmodal Classification of Mu Rhythm Activity during Action Observation and
+  Execution Suggests Specificity to Somatosensory Features of Actions
+uid: '6596509'
+volume: '37'

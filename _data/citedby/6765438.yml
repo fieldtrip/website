@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '31310863'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2019.116022
+- idtype: pmcid
+  value: PMC6765438
+- idtype: MID
+  value: NIHMS1535020
+authors:
+- authtype: Author
+  name: Bidelman GM
+- authtype: Author
+  name: Walker B
+epubdate: 2019 Jul 13
+fulljournalname: NeuroImage
+issue: ''
+pages: '116022'
+pmclivedate: 2020/11/01
+printpubdate: 2019 Nov 1
+pubdate: 2019 Jul 13
+sortdate: 2019/07/13 00:00
+source: Neuroimage
+title: Plasticity in auditory categorization is supported by differential engagement
+  of the auditory-linguistic network
+uid: '6765438'
+volume: '201'

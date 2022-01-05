@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '34052291'
+- idtype: doi
+  value: 10.1016/j.jneumeth.2021.109224
+- idtype: pmcid
+  value: PMC8457529
+- idtype: MID
+  value: NIHMS1716528
+authors:
+- authtype: Author
+  name: Kam K
+- authtype: Author
+  name: Rapoport DM
+- authtype: Author
+  name: Parekh A
+- authtype: Author
+  name: Ayappa I
+- authtype: Author
+  name: Varga AW
+epubdate: 2021 May 28
+fulljournalname: Journal of neuroscience methods
+issue: ''
+pages: '109224'
+pmclivedate: ''
+printpubdate: 2021 Aug 1
+pubdate: 2021 May 28
+sortdate: 2021/05/28 00:00
+source: J Neurosci Methods
+title: 'WaveSleepNet: an interpretable deep convolutional neural network for the continuous
+  classification of mouse sleep and wake'
+uid: '8457529'
+volume: '360'

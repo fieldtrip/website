@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '33767254'
+- idtype: doi
+  value: 10.1038/s41598-021-86215-0
+- idtype: pmcid
+  value: PMC7994299
+authors:
+- authtype: Author
+  name: Jiang H
+- authtype: Author
+  name: Stieger J
+- authtype: Author
+  name: Kreitzer MJ
+- authtype: Author
+  name: Engel S
+- authtype: Author
+  name: He B
+epubdate: 2021 Mar 25
+fulljournalname: Scientific Reports
+issue: ''
+pages: '6818'
+pmclivedate: 2021/03/26
+printpubdate: ''
+pubdate: 2021 Mar 25
+sortdate: 2021/03/25 00:00
+source: Sci Rep
+title: Frontolimbic alpha activity tracks intentional rest BCI control improvement
+  through mindfulness meditation
+uid: '7994299'
+volume: '11'

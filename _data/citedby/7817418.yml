@@ -1,0 +1,49 @@
+articleids:
+- idtype: pmid
+  value: '33567379'
+- idtype: doi
+  value: 10.1016/j.clinph.2021.01.003
+- idtype: pmcid
+  value: PMC7817418
+authors:
+- authtype: Author
+  name: Michalak AJ
+- authtype: Author
+  name: Mendiratta A
+- authtype: Author
+  name: Eliseyev A
+- authtype: Author
+  name: Ramnath B
+- authtype: Author
+  name: Chung J
+- authtype: Author
+  name: Rasnow J
+- authtype: Author
+  name: Reid L
+- authtype: Author
+  name: Salerno S
+- authtype: Author
+  name: García PS
+- authtype: Author
+  name: Agarwal S
+- authtype: Author
+  name: Roh D
+- authtype: Author
+  name: Park S
+- authtype: Author
+  name: Bazil C
+- authtype: Author
+  name: Claassen J
+epubdate: 2021 Jan 20
+fulljournalname: Clinical Neurophysiology
+issue: '3'
+pages: 730-736
+pmclivedate: 2021/01/21
+printpubdate: 2021 Mar
+pubdate: 2021 Jan 20
+sortdate: 2021/01/20 00:00
+source: Clin Neurophysiol
+title: Frontotemporal EEG to guide sedation in COVID-19 related acute respiratory
+  distress syndrome
+uid: '7817418'
+volume: '132'

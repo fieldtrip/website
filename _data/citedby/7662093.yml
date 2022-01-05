@@ -1,0 +1,24 @@
+articleids:
+- idtype: pmid
+  value: '33192391'
+- idtype: doi
+  value: 10.3389/fnhum.2020.556457
+- idtype: pmcid
+  value: PMC7662093
+authors:
+- authtype: Author
+  name: Politzer-Ahles S
+- authtype: Author
+  name: Im S
+epubdate: 2020 Oct 30
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '556457'
+pmclivedate: 2020/11/13
+printpubdate: ''
+pubdate: 2020 Oct 30
+sortdate: 2020/10/30 00:00
+source: Front Hum Neurosci
+title: Mismatch Negativity Is Not Always Modulated by Lexicality
+uid: '7662093'
+volume: '14'

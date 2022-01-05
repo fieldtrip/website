@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '29689053'
+- idtype: doi
+  value: 10.1371/journal.pbio.2004752
+- idtype: pmcid
+  value: PMC5915684
+authors:
+- authtype: Author
+  name: Ereira S
+- authtype: Author
+  name: Dolan RJ
+- authtype: Author
+  name: Kurth-Nelson Z
+epubdate: 2018 Apr 24
+fulljournalname: PLoS Biology
+issue: '4'
+pages: e2004752
+pmclivedate: 2018/05/11
+printpubdate: ''
+pubdate: 2018 Apr 24
+sortdate: 2018/04/24 00:00
+source: PLoS Biol
+title: Agent-specific learning signals for self–other distinction during mentalising
+uid: '5915684'
+volume: '16'

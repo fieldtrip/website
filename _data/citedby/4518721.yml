@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '25878159'
+- idtype: doi
+  value: 10.1152/jn.00988.2014
+- idtype: pmcid
+  value: PMC4518721
+authors:
+- authtype: Author
+  name: Stenner MP
+- authtype: Author
+  name: Litvak V
+- authtype: Author
+  name: Rutledge RB
+- authtype: Author
+  name: Zaehle T
+- authtype: Author
+  name: Schmitt FC
+- authtype: Author
+  name: Voges J
+- authtype: Author
+  name: Heinze HJ
+- authtype: Author
+  name: Dolan RJ
+epubdate: 2015 Apr 15
+fulljournalname: Journal of Neurophysiology
+issue: '1'
+pages: 29-39
+pmclivedate: 2015/07/31
+printpubdate: 2015 Jul
+pubdate: 2015 Apr 15
+sortdate: 2015/04/15 00:00
+source: J Neurophysiol
+title: Cortical drive of low-frequency oscillations in the human nucleus accumbens
+  during action selection
+uid: '4518721'
+volume: '114'

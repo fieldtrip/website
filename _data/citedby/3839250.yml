@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '23791839'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2013.06.035
+- idtype: pmcid
+  value: PMC3839250
+- idtype: MID
+  value: NIHMS497200
+authors:
+- authtype: Author
+  name: Doelling K
+- authtype: Author
+  name: Arnal L
+- authtype: Author
+  name: Ghitza O
+- authtype: Author
+  name: Poeppel D
+epubdate: 2013 Jun 19
+fulljournalname: NeuroImage
+issue: 0 2
+pages: 10.1016/j.neuroimage.2013.06.035
+pmclivedate: 2015/01/15
+printpubdate: 2014 Jan 15
+pubdate: 2013 Jun 19
+sortdate: 2013/06/19 00:00
+source: Neuroimage
+title: Acoustic landmarks drive delta-theta oscillations to enable speech comprehension
+  by facilitating perceptual parsing
+uid: '3839250'
+volume: '85'

@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '29467635'
+- idtype: doi
+  value: 10.3389/fnhum.2018.00034
+- idtype: pmcid
+  value: PMC5808328
+authors:
+- authtype: Author
+  name: Gisladottir RS
+- authtype: Author
+  name: Bögels S
+- authtype: Author
+  name: Levinson SC
+epubdate: 2018 Feb 7
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '34'
+pmclivedate: 2018/02/21
+printpubdate: ''
+pubdate: 2018 Feb 7
+sortdate: 2018/02/07 00:00
+source: Front Hum Neurosci
+title: Oscillatory Brain Responses Reflect Anticipation during Comprehension of Speech
+  Acts in Spoken Dialog
+uid: '5808328'
+volume: '12'

@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '34358658'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2021.118454
+- idtype: pmcid
+  value: PMC8463840
+authors:
+- authtype: Author
+  name: Griffiths BJ
+- authtype: Author
+  name: Martín-Buro MC
+- authtype: Author
+  name: Staresina BP
+- authtype: Author
+  name: Hanslmayr S
+epubdate: ''
+fulljournalname: Neuroimage
+issue: ''
+pages: '118454'
+pmclivedate: 2021/11/15
+printpubdate: 2021 Nov 15
+pubdate: 2021 Nov 15
+sortdate: 2021/11/15 00:00
+source: Neuroimage
+title: Disentangling neocortical alpha/beta and hippocampal theta/gamma oscillations
+  in human episodic memory formation
+uid: '8463840'
+volume: '242'

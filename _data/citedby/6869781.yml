@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '23913800'
+- idtype: doi
+  value: 10.1002/hbm.22322
+- idtype: pmcid
+  value: PMC6869781
+authors:
+- authtype: Author
+  name: Notturno F
+- authtype: Author
+  name: Marzetti L
+- authtype: Author
+  name: Pizzella V
+- authtype: Author
+  name: Uncini A
+- authtype: Author
+  name: Zappasodi F
+epubdate: 2013 Aug 2
+fulljournalname: Human Brain Mapping
+issue: '5'
+pages: 2220-2232
+pmclivedate: 2020/06/12
+printpubdate: ''
+pubdate: 2013 Aug 2
+sortdate: 2013/08/02 00:00
+source: Hum Brain Mapp
+title: Local and remote effects of transcranial direct current stimulation on the
+  electrical activity of the motor cortical network
+uid: '6869781'
+volume: '35'

@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '31044241'
+- idtype: doi
+  value: 10.1093/scan/nsz030
+- idtype: pmcid
+  value: PMC6545538
+authors:
+- authtype: Author
+  name: Rachman L
+- authtype: Author
+  name: Dubal S
+- authtype: Author
+  name: Aucouturier JJ
+epubdate: 2019 May 1
+fulljournalname: Social Cognitive and Affective Neuroscience
+issue: '5'
+pages: 559-568
+pmclivedate: 2019/06/13
+printpubdate: ''
+pubdate: 2019 May 1
+sortdate: 2019/05/01 00:00
+source: Soc Cogn Affect Neurosci
+title: 'Happy you, happy me: expressive changes on a stranger’s voice recruit faster
+  implicit processes than self-produced expressions'
+uid: '6545538'
+volume: '14'

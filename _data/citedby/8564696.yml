@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '34544117'
+- idtype: doi
+  value: 10.1093/brain/awab154
+- idtype: pmcid
+  value: PMC8564696
+authors:
+- authtype: Author
+  name: Stothart G
+- authtype: Author
+  name: Smith LJ
+- authtype: Author
+  name: Milton A
+- authtype: Author
+  name: Coulthard E
+epubdate: 2021 Sep 20
+fulljournalname: Brain
+issue: '9'
+pages: 2812-2825
+pmclivedate: 2021/11/03
+printpubdate: ''
+pubdate: 2021 Sep 20
+sortdate: 2021/09/20 00:00
+source: Brain
+title: A passive and objective measure of recognition memory in Alzheimer’s disease
+  using Fastball memory assessment
+uid: '8564696'
+volume: '144'

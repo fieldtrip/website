@@ -1,0 +1,51 @@
+articleids:
+- idtype: pmid
+  value: '28342747'
+- idtype: doi
+  value: 10.1016/j.expneurol.2017.03.015
+- idtype: pmcid
+  value: PMC5429975
+authors:
+- authtype: Author
+  name: Fischer P
+- authtype: Author
+  name: Pogosyan A
+- authtype: Author
+  name: Cheeran B
+- authtype: Author
+  name: Green AL
+- authtype: Author
+  name: Aziz TZ
+- authtype: Author
+  name: Hyam J
+- authtype: Author
+  name: Little S
+- authtype: Author
+  name: Foltynie T
+- authtype: Author
+  name: Limousin P
+- authtype: Author
+  name: Zrinzo L
+- authtype: Author
+  name: Hariz M
+- authtype: Author
+  name: Samuel M
+- authtype: Author
+  name: Ashkan K
+- authtype: Author
+  name: Brown P
+- authtype: Author
+  name: Tan H
+epubdate: ''
+fulljournalname: Experimental Neurology
+issue: ''
+pages: 53-61
+pmclivedate: 2017/07/01
+printpubdate: 2017 Jul
+pubdate: 2017 Jul
+sortdate: 2017/07/01 00:00
+source: Exp Neurol
+title: Subthalamic nucleus beta and gamma activity is modulated depending on the level
+  of imagined grip force
+uid: '5429975'
+volume: '293'

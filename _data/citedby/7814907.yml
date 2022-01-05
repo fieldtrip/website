@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '33052766'
+- idtype: doi
+  value: 10.1152/jn.00534.2020
+- idtype: pmcid
+  value: PMC7814907
+authors:
+- authtype: Author
+  name: Bore JC
+- authtype: Author
+  name: Campbell BA
+- authtype: Author
+  name: Cho H
+- authtype: Author
+  name: Gopalakrishnan R
+- authtype: Author
+  name: Machado AG
+- authtype: Author
+  name: Baker KB
+epubdate: 2020 Oct 14
+fulljournalname: Journal of Neurophysiology
+issue: '6'
+pages: 1698-1705
+pmclivedate: 2021/12/01
+printpubdate: 2020 Dec 1
+pubdate: 2020 Oct 14
+sortdate: 2020/10/14 00:00
+source: J Neurophysiol
+title: Prediction of mild parkinsonism revealed by neural oscillatory changes and
+  machine learning
+uid: '7814907'
+volume: '124'

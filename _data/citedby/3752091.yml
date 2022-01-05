@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '22425066'
+- idtype: doi
+  value: 10.1016/j.brs.2011.11.006
+- idtype: pmcid
+  value: PMC3752091
+- idtype: MID
+  value: NIHMS488091
+authors:
+- authtype: Author
+  name: Connolly AT
+- authtype: Author
+  name: Bajwa JA
+- authtype: Author
+  name: Johnson MD
+epubdate: 2012 Feb 22
+fulljournalname: Brain stimulation
+issue: '4'
+pages: 616-624
+pmclivedate: 2013/10/01
+printpubdate: 2012 Oct
+pubdate: 2012 Feb 22
+sortdate: 2012/02/22 00:00
+source: Brain Stimul
+title: Cortical magnetoencephalography of deep brain stimulation for the treatment
+  of postural tremor
+uid: '3752091'
+volume: '5'

@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '30341044'
+- idtype: doi
+  value: 10.2196/10848
+- idtype: pmcid
+  value: PMC6231838
+authors:
+- authtype: Author
+  name: Welsby E
+- authtype: Author
+  name: Ridding M
+- authtype: Author
+  name: Hillier S
+- authtype: Author
+  name: Hordacre B
+epubdate: 2018 Oct 18
+fulljournalname: JMIR Research Protocols
+issue: '10'
+pages: e10848
+pmclivedate: 2018/12/03
+printpubdate: ''
+pubdate: 2018 Oct 18
+sortdate: 2018/10/18 00:00
+source: JMIR Res Protoc
+title: 'Connectivity as a Predictor of Responsiveness to Transcranial Direct Current
+  Stimulation in People with Stroke: Protocol for a Double-Blind Randomized Controlled
+  Trial'
+uid: '6231838'
+volume: '7'

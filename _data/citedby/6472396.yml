@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '30944338'
+- idtype: doi
+  value: 10.1038/s41597-019-0020-y
+- idtype: pmcid
+  value: PMC6472396
+authors:
+- authtype: Author
+  name: Schoffelen JM
+- authtype: Author
+  name: Oostenveld R
+- authtype: Author
+  name: Lam NH
+- authtype: Author
+  name: Uddén J
+- authtype: Author
+  name: Hultén A
+- authtype: Author
+  name: Hagoort P
+epubdate: 2019 Apr 3
+fulljournalname: Scientific Data
+issue: ''
+pages: '17'
+pmclivedate: 2019/04/19
+printpubdate: ''
+pubdate: 2019 Apr 3
+sortdate: 2019/04/03 00:00
+source: Sci Data
+title: A 204-subject multimodal neuroimaging dataset to study language processing
+uid: '6472396'
+volume: '6'

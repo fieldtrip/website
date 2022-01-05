@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '29991445'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2018.06.085
+- idtype: pmcid
+  value: PMC6468982
+- idtype: MID
+  value: NIHMS1008374
+authors:
+- authtype: Author
+  name: Powell PS
+- authtype: Author
+  name: Strunk J
+- authtype: Author
+  name: James T
+- authtype: Author
+  name: Polyn SM
+- authtype: Author
+  name: Duarte A
+epubdate: 2018 Jul 2
+fulljournalname: NeuroImage
+issue: ''
+pages: 95-107
+pmclivedate: 2019/04/17
+printpubdate: 2018 Nov 1
+pubdate: 2018 Jul 2
+sortdate: 2018/07/02 00:00
+source: Neuroimage
+title: 'Decoding selective attention to context memory: An aging study'
+uid: '6468982'
+volume: '181'

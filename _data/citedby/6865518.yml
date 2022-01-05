@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '30240542'
+- idtype: doi
+  value: 10.1002/hbm.24364
+- idtype: pmcid
+  value: PMC6865518
+authors:
+- authtype: Author
+  name: Mukherjee S
+- authtype: Author
+  name: Badino L
+- authtype: Author
+  name: Hilt PM
+- authtype: Author
+  name: Tomassini A
+- authtype: Author
+  name: Inuggi A
+- authtype: Author
+  name: Fadiga L
+- authtype: Author
+  name: Nguyen N
+- authtype: Author
+  name: D'Ausilio A
+epubdate: 2018 Sep 21
+fulljournalname: Human Brain Mapping
+issue: '1'
+pages: 187-201
+pmclivedate: 2020/06/12
+printpubdate: ''
+pubdate: 2018 Sep 21
+sortdate: 2018/09/21 00:00
+source: Hum Brain Mapp
+title: The neural oscillatory markers of phonetic convergence during verbal interaction
+uid: '6865518'
+volume: '40'

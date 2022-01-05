@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '32841260'
+- idtype: doi
+  value: 10.1371/journal.pone.0237641
+- idtype: pmcid
+  value: PMC7447055
+authors:
+- authtype: Author
+  name: Merrill J
+- authtype: Author
+  name: Omigie D
+- authtype: Author
+  name: Wald-Fuhrmann M
+epubdate: 2020 Aug 25
+fulljournalname: PLoS ONE
+issue: '8'
+pages: e0237641
+pmclivedate: 2020/08/31
+printpubdate: ''
+pubdate: 2020 Aug 25
+sortdate: 2020/08/25 00:00
+source: PLoS One
+title: Locus of emotion influences psychophysiological reactions to music
+uid: '7447055'
+volume: '15'

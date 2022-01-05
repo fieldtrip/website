@@ -1,0 +1,47 @@
+articleids:
+- idtype: pmid
+  value: '30662457'
+- idtype: doi
+  value: 10.1155/2018/5340717
+- idtype: pmcid
+  value: PMC6312586
+authors:
+- authtype: Author
+  name: Lardone A
+- authtype: Author
+  name: Liparoti M
+- authtype: Author
+  name: Sorrentino P
+- authtype: Author
+  name: Rucco R
+- authtype: Author
+  name: Jacini F
+- authtype: Author
+  name: Polverino A
+- authtype: Author
+  name: Minino R
+- authtype: Author
+  name: Pesoli M
+- authtype: Author
+  name: Baselice F
+- authtype: Author
+  name: Sorriso A
+- authtype: Author
+  name: Ferraioli G
+- authtype: Author
+  name: Sorrentino G
+- authtype: Author
+  name: Mandolesi L
+epubdate: 2018 Dec 18
+fulljournalname: Neural Plasticity
+issue: ''
+pages: '5340717'
+pmclivedate: 2019/01/20
+printpubdate: ''
+pubdate: 2018 Dec 18
+sortdate: 2018/12/18 00:00
+source: Neural Plast
+title: 'Mindfulness Meditation Is Related to Long-Lasting Changes in Hippocampal Functional
+  Topology during Resting State: A Magnetoencephalography Study'
+uid: '6312586'
+volume: '2018'

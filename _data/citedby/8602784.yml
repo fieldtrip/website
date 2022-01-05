@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '34592168'
+- idtype: doi
+  value: 10.1016/j.neuron.2021.09.002
+- idtype: pmcid
+  value: PMC8602784
+- idtype: MID
+  value: NIHMS1739298
+authors:
+- authtype: Author
+  name: Petersen PC
+- authtype: Author
+  name: Siegle JH
+- authtype: Author
+  name: Steinmetz NA
+- authtype: Author
+  name: Mahallati S
+- authtype: Author
+  name: Buzsáki G
+epubdate: 2021 Sep 29
+fulljournalname: Neuron
+issue: '22'
+pages: 3594-3608.e2
+pmclivedate: ''
+printpubdate: 2021 Nov 17
+pubdate: 2021 Sep 29
+sortdate: 2021/09/29 00:00
+source: Neuron
+title: 'CellExplorer: a framework for visualizing and characterizing single neurons'
+uid: '8602784'
+volume: '109'

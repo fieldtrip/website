@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '29721680'
+- idtype: doi
+  value: 10.1007/s12021-018-9375-z
+- idtype: pmcid
+  value: PMC6394452
+authors:
+- authtype: Author
+  name: Bode S
+- authtype: Author
+  name: Feuerriegel D
+- authtype: Author
+  name: Bennett D
+- authtype: Author
+  name: Alday PM
+epubdate: 2018 May 2
+fulljournalname: Neuroinformatics
+issue: '1'
+pages: 27-42
+pmclivedate: 2019/03/15
+printpubdate: '2019'
+pubdate: 2018 May 2
+sortdate: 2018/05/02 00:00
+source: Neuroinformatics
+title: The Decision Decoding ToolBOX (DDTBOX) – A Multivariate Pattern Analysis Toolbox
+  for Event-Related Potentials
+uid: '6394452'
+volume: '17'

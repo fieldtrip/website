@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '28982173'
+- idtype: doi
+  value: 10.1371/journal.pone.0186008
+- idtype: pmcid
+  value: PMC5628939
+authors:
+- authtype: Author
+  name: Amo C
+- authtype: Author
+  name: De Santiago L
+- authtype: Author
+  name: Zarza Luciáñez D
+- authtype: Author
+  name: León Alonso-Cortés JM
+- authtype: Author
+  name: Alonso-Alonso M
+- authtype: Author
+  name: Barea R
+- authtype: Author
+  name: Boquete L
+epubdate: 2017 Oct 5
+fulljournalname: PLoS ONE
+issue: '10'
+pages: e0186008
+pmclivedate: 2017/10/20
+printpubdate: ''
+pubdate: 2017 Oct 5
+sortdate: 2017/10/05 00:00
+source: PLoS One
+title: Induced gamma band activity from EEG as a possible index of training-related
+  brain plasticity in motor tasks
+uid: '5628939'
+volume: '12'

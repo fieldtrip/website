@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '31368118'
+- idtype: doi
+  value: 10.1111/epi.16306
+- idtype: pmcid
+  value: PMC6732052
+- idtype: MID
+  value: NIHMS1041444
+authors:
+- authtype: Author
+  name: Ding L
+- authtype: Author
+  name: Satish S
+- authtype: Author
+  name: Zhou C
+- authtype: Author
+  name: Gallagher MJ
+epubdate: 2019 Jul 31
+fulljournalname: Epilepsia
+issue: '9'
+pages: 1932-1941
+pmclivedate: 2020/09/01
+printpubdate: 2019 Sep
+pubdate: 2019 Jul 31
+sortdate: 2019/07/31 00:00
+source: Epilepsia
+title: Cortical Activation in Generalized Seizures
+uid: '6732052'
+volume: '60'

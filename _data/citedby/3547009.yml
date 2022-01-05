@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '23342146'
+- idtype: doi
+  value: 10.1371/journal.pone.0054396
+- idtype: pmcid
+  value: PMC3547009
+authors:
+- authtype: Author
+  name: Law SP
+- authtype: Author
+  name: Fung R
+- authtype: Author
+  name: Kung C
+epubdate: 2013 Jan 16
+fulljournalname: PLoS ONE
+issue: '1'
+pages: e54396
+pmclivedate: 2013/01/22
+printpubdate: ''
+pubdate: 2013 Jan 16
+sortdate: 2013/01/16 00:00
+source: PLoS One
+title: 'An ERP Study of Good Production vis-à-vis Poor Perception of Tones in Cantonese:
+  Implications for Top-Down Speech Processing'
+uid: '3547009'
+volume: '8'

@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '30639331'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2019.01.022
+- idtype: pmcid
+  value: PMC7664162
+- idtype: MID
+  value: NIHMS1042964
+authors:
+- authtype: Author
+  name: Cooper PS
+- authtype: Author
+  name: Karayanidis F
+- authtype: Author
+  name: McKewen M
+- authtype: Author
+  name: McLellan-Hall S
+- authtype: Author
+  name: Wong AS
+- authtype: Author
+  name: Skippen P
+- authtype: Author
+  name: Cavanagh JF
+epubdate: 2019 Jan 10
+fulljournalname: NeuroImage
+issue: ''
+pages: 130-140
+pmclivedate: 2020/11/13
+printpubdate: 2019 Apr 1
+pubdate: 2019 Jan 10
+sortdate: 2019/01/10 00:00
+source: Neuroimage
+title: Frontal theta predicts specific cognitive control-induced behavioural changes
+  beyond general reaction time slowing
+uid: '7664162'
+volume: '189'

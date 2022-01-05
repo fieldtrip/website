@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '29474352'
+- idtype: doi
+  value: 10.1371/journal.pcbi.1006007
+- idtype: pmcid
+  value: PMC5841816
+authors:
+- authtype: Author
+  name: Abeysuriya RG
+- authtype: Author
+  name: Hadida J
+- authtype: Author
+  name: Sotiropoulos SN
+- authtype: Author
+  name: Jbabdi S
+- authtype: Author
+  name: Becker R
+- authtype: Author
+  name: Hunt BA
+- authtype: Author
+  name: Brookes MJ
+- authtype: Author
+  name: Woolrich MW
+epubdate: 2018 Feb 23
+fulljournalname: PLoS Computational Biology
+issue: '2'
+pages: e1006007
+pmclivedate: 2018/03/23
+printpubdate: ''
+pubdate: 2018 Feb 23
+sortdate: 2018/02/23 00:00
+source: PLoS Comput Biol
+title: A biophysical model of dynamic balancing of excitation and inhibition in fast
+  oscillatory large-scale networks
+uid: '5841816'
+volume: '14'

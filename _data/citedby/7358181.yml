@@ -1,0 +1,24 @@
+articleids:
+- idtype: pmid
+  value: '32658760'
+- idtype: doi
+  value: 10.1016/j.dcn.2020.100809
+- idtype: pmcid
+  value: PMC7358181
+authors:
+- authtype: Author
+  name: van der Velde B
+- authtype: Author
+  name: Junge C
+epubdate: 2020 Jun 26
+fulljournalname: Developmental Cognitive Neuroscience
+issue: ''
+pages: '100809'
+pmclivedate: 2020/07/17
+printpubdate: ''
+pubdate: 2020 Jun 26
+sortdate: 2020/06/26 00:00
+source: Dev Cogn Neurosci
+title: 'Limiting data loss in infant EEG: putting hunches to the test'
+uid: '7358181'
+volume: '45'

@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '28654081'
+- idtype: doi
+  value: 10.1038/ncomms15801
+- idtype: pmcid
+  value: PMC5490185
+authors:
+- authtype: Author
+  name: Henry MJ
+- authtype: Author
+  name: Herrmann B
+- authtype: Author
+  name: Kunke D
+- authtype: Author
+  name: Obleser J
+epubdate: 2017 Jun 27
+fulljournalname: Nature Communications
+issue: ''
+pages: '15801'
+pmclivedate: 2017/07/06
+printpubdate: ''
+pubdate: 2017 Jun 27
+sortdate: 2017/06/27 00:00
+source: Nat Commun
+title: Aging affects the balance of neural entrainment and top-down neural modulation
+  in the listening brain
+uid: '5490185'
+volume: '8'

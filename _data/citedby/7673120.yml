@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '33203888'
+- idtype: doi
+  value: 10.1038/s41598-020-75297-x
+- idtype: pmcid
+  value: PMC7673120
+authors:
+- authtype: Author
+  name: Tagliabue CF
+- authtype: Author
+  name: Assecondi S
+- authtype: Author
+  name: Cristoforetti G
+- authtype: Author
+  name: Mazza V
+epubdate: 2020 Nov 17
+fulljournalname: Scientific Reports
+issue: ''
+pages: '19957'
+pmclivedate: 2020/11/19
+printpubdate: ''
+pubdate: 2020 Nov 17
+sortdate: 2020/11/17 00:00
+source: Sci Rep
+title: Learning by task repetition enhances object individuation and memorization
+  in the elderly
+uid: '7673120'
+volume: '10'

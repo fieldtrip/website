@@ -1,0 +1,49 @@
+articleids:
+- idtype: pmid
+  value: '23859924'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2013.07.013
+- idtype: pmcid
+  value: PMC5635957
+- idtype: MID
+  value: EMS74431
+authors:
+- authtype: Author
+  name: King JR
+- authtype: Author
+  name: Faugeras F
+- authtype: Author
+  name: Gramfort A
+- authtype: Author
+  name: Schurger A
+- authtype: Author
+  name: El Karoui I
+- authtype: Author
+  name: Sitt JD
+- authtype: Author
+  name: Rohaut B
+- authtype: Author
+  name: Wacongne C
+- authtype: Author
+  name: Labyt E
+- authtype: Author
+  name: Bekinschtein T
+- authtype: Author
+  name: Cohen L
+- authtype: Author
+  name: Naccache L
+- authtype: Author
+  name: Dehaene S
+epubdate: 2013 Jul 13
+fulljournalname: NeuroImage
+issue: ''
+pages: 726-738
+pmclivedate: 2017/10/11
+printpubdate: 2013 Dec
+pubdate: 2013 Jul 13
+sortdate: 2013/07/13 00:00
+source: Neuroimage
+title: Single-trial decoding of auditory novelty responses facilitates the detection
+  of residual consciousness
+uid: '5635957'
+volume: '83'

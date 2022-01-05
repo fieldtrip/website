@@ -1,0 +1,34 @@
+articleids:
+- idtype: pmid
+  value: '28816240'
+- idtype: doi
+  value: 10.1038/npp.2017.176
+- idtype: pmcid
+  value: PMC5770758
+authors:
+- authtype: Author
+  name: Lee M
+- authtype: Author
+  name: Balla A
+- authtype: Author
+  name: Sershen H
+- authtype: Author
+  name: Sehatpour P
+- authtype: Author
+  name: Lakatos P
+- authtype: Author
+  name: Javitt DC
+epubdate: 2017 Sep 20
+fulljournalname: Neuropsychopharmacology
+issue: '3'
+pages: 571-582
+pmclivedate: 2019/02/01
+printpubdate: 2018 Feb
+pubdate: 2017 Sep 20
+sortdate: 2017/09/20 00:00
+source: Neuropsychopharmacology
+title: Rodent Mismatch Negativity/theta Neuro-Oscillatory Response as a Translational
+  Neurophysiological Biomarker for N-Methyl-D-Aspartate Receptor-Based New Treatment
+  Development in Schizophrenia
+uid: '5770758'
+volume: '43'

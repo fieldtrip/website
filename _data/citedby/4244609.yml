@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '25505400'
+- idtype: doi
+  value: 10.3389/fnhum.2014.00950
+- idtype: pmcid
+  value: PMC4244609
+authors:
+- authtype: Author
+  name: Gibson RM
+- authtype: Author
+  name: Fernández-Espejo D
+- authtype: Author
+  name: Gonzalez-Lara LE
+- authtype: Author
+  name: Kwan BY
+- authtype: Author
+  name: Lee DH
+- authtype: Author
+  name: Owen AM
+- authtype: Author
+  name: Cruse D
+epubdate: 2014 Nov 26
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '950'
+pmclivedate: 2014/12/10
+printpubdate: ''
+pubdate: 2014 Nov 26
+sortdate: 2014/11/26 00:00
+source: Front Hum Neurosci
+title: Multiple tasks and neuroimaging modalities increase the likelihood of detecting
+  covert awareness in patients with disorders of consciousness
+uid: '4244609'
+volume: '8'

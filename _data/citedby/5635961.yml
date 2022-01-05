@@ -1,0 +1,47 @@
+articleids:
+- idtype: pmid
+  value: '24969472'
+- idtype: doi
+  value: 10.1093/cercor/bhu143
+- idtype: pmcid
+  value: PMC5635961
+- idtype: MID
+  value: EMS74422
+authors:
+- authtype: Author
+  name: El Karoui I
+- authtype: Author
+  name: King JR
+- authtype: Author
+  name: Sitt J
+- authtype: Author
+  name: Meyniel F
+- authtype: Author
+  name: Van Gaal S
+- authtype: Author
+  name: Hasboun D
+- authtype: Author
+  name: Adam C
+- authtype: Author
+  name: Navarro V
+- authtype: Author
+  name: Baulac M
+- authtype: Author
+  name: Dehaene S
+- authtype: Author
+  name: Cohen L
+- authtype: Author
+  name: Naccache L
+epubdate: 2014 Jun 26
+fulljournalname: 'Cerebral cortex (New York, N.Y. : 1991)'
+issue: '11'
+pages: 4203-4212
+pmclivedate: 2017/10/11
+printpubdate: 2015 Nov
+pubdate: 2014 Jun 26
+sortdate: 2014/06/26 00:00
+source: Cereb Cortex
+title: 'Event-Related Potential, Time-frequency, and Functional Connectivity Facets
+  of Local and Global Auditory Novelty Processing: An Intracranial Study in Humans'
+uid: '5635961'
+volume: '25'

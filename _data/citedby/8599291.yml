@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '33978758'
+- idtype: doi
+  value: 10.1093/scan/nsab064
+- idtype: pmcid
+  value: PMC8599291
+authors:
+- authtype: Author
+  name: Wang Y
+- authtype: Author
+  name: Lin Y
+- authtype: Author
+  name: Fu C
+- authtype: Author
+  name: Huang Z
+- authtype: Author
+  name: Xiao S
+- authtype: Author
+  name: Yu R
+epubdate: 2021 May 12
+fulljournalname: Social Cognitive and Affective Neuroscience
+issue: '11'
+pages: 1138-1149
+pmclivedate: 2021/11/18
+printpubdate: ''
+pubdate: 2021 May 12
+sortdate: 2021/05/12 00:00
+source: Soc Cogn Affect Neurosci
+title: 'Effortless retaliation: the neural dynamics of interpersonal intentions in
+  the Chicken Game using brain–computer interface'
+uid: '8599291'
+volume: '16'

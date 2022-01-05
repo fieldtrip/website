@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '26389842'
+- idtype: doi
+  value: 10.1038/nn.4119
+- idtype: pmcid
+  value: PMC4625581
+- idtype: MID
+  value: EMS64810
+authors:
+- authtype: Author
+  name: Staresina BP
+- authtype: Author
+  name: Bergmann TO
+- authtype: Author
+  name: Bonnefond M
+- authtype: Author
+  name: van der Meij R
+- authtype: Author
+  name: Jensen O
+- authtype: Author
+  name: Deuker L
+- authtype: Author
+  name: Elger CE
+- authtype: Author
+  name: Axmacher N
+- authtype: Author
+  name: Fell J
+epubdate: 2015 Sep 21
+fulljournalname: Nature neuroscience
+issue: '11'
+pages: 1679-1686
+pmclivedate: 2016/05/01
+printpubdate: 2015 Nov
+pubdate: 2015 Sep 21
+sortdate: 2015/09/21 00:00
+source: Nat Neurosci
+title: Hierarchical nesting of slow oscillations, spindles and ripples in the human
+  hippocampus during sleep
+uid: '4625581'
+volume: '18'

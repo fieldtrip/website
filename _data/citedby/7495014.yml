@@ -1,0 +1,22 @@
+articleids:
+- idtype: pmid
+  value: '32927245'
+- idtype: doi
+  value: 10.1016/j.dcn.2020.100858
+- idtype: pmcid
+  value: PMC7495014
+authors:
+- authtype: Author
+  name: Jessen S
+epubdate: 2020 Sep 8
+fulljournalname: Developmental Cognitive Neuroscience
+issue: ''
+pages: '100858'
+pmclivedate: 2020/09/24
+printpubdate: ''
+pubdate: 2020 Sep 8
+sortdate: 2020/09/08 00:00
+source: Dev Cogn Neurosci
+title: Maternal odor reduces the neural response to fearful faces in human infants
+uid: '7495014'
+volume: '45'

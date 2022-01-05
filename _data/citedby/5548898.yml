@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '28790302'
+- idtype: doi
+  value: 10.1038/s41467-017-00071-z
+- idtype: pmcid
+  value: PMC5548898
+authors:
+- authtype: Author
+  name: Andrillon T
+- authtype: Author
+  name: Pressnitzer D
+- authtype: Author
+  name: Léger D
+- authtype: Author
+  name: Kouider S
+epubdate: 2017 Aug 8
+fulljournalname: Nature Communications
+issue: ''
+pages: '179'
+pmclivedate: 2017/08/11
+printpubdate: ''
+pubdate: 2017 Aug 8
+sortdate: 2017/08/08 00:00
+source: Nat Commun
+title: Formation and suppression of acoustic memories during human sleep
+uid: '5548898'
+volume: '8'

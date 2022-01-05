@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '30644391'
+- idtype: doi
+  value: 10.1038/s41467-018-08151-4
+- idtype: pmcid
+  value: PMC6333835
+authors:
+- authtype: Author
+  name: Fiebelkorn IC
+- authtype: Author
+  name: Pinsk MA
+- authtype: Author
+  name: Kastner S
+epubdate: 2019 Jan 15
+fulljournalname: Nature Communications
+issue: ''
+pages: '215'
+pmclivedate: 2019/01/17
+printpubdate: ''
+pubdate: 2019 Jan 15
+sortdate: 2019/01/15 00:00
+source: Nat Commun
+title: The mediodorsal pulvinar coordinates the macaque fronto-parietal network during
+  rhythmic spatial attention
+uid: '6333835'
+volume: '10'

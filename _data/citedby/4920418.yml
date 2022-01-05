@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '27341033'
+- idtype: doi
+  value: 10.1371/journal.pone.0158276
+- idtype: pmcid
+  value: PMC4920418
+authors:
+- authtype: Author
+  name: Navarrete M
+- authtype: Author
+  name: Alvarado-Rojas C
+- authtype: Author
+  name: Le Van Quyen M
+- authtype: Author
+  name: Valderrama M
+epubdate: 2016 Jun 24
+fulljournalname: PLoS ONE
+issue: '6'
+pages: e0158276
+pmclivedate: 2016/07/18
+printpubdate: ''
+pubdate: 2016 Jun 24
+sortdate: 2016/06/24 00:00
+source: PLoS One
+title: 'RIPPLELAB: A Comprehensive Application for the Detection, Analysis and Classification
+  of High Frequency Oscillations in Electroencephalographic Signals'
+uid: '4920418'
+volume: '11'

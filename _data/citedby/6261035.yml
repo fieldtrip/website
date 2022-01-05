@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '30475805'
+- idtype: doi
+  value: 10.1371/journal.pone.0199847
+- idtype: pmcid
+  value: PMC6261035
+authors:
+- authtype: Author
+  name: Wang H
+- authtype: Author
+  name: Kleffner K
+- authtype: Author
+  name: Carolan PL
+- authtype: Author
+  name: Liotti M
+epubdate: 2018 Nov 26
+fulljournalname: PLoS ONE
+issue: '11'
+pages: e0199847
+pmclivedate: 2018/12/06
+printpubdate: ''
+pubdate: 2018 Nov 26
+sortdate: 2018/11/26 00:00
+source: PLoS One
+title: Spatiotemporal dynamics of reward and punishment effects induced by associative
+  learning
+uid: '6261035'
+volume: '13'

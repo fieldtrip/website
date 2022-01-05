@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '32397472'
+- idtype: doi
+  value: 10.3390/s20092706
+- idtype: pmcid
+  value: PMC7248938
+authors:
+- authtype: Author
+  name: Auboiroux V
+- authtype: Author
+  name: Larzabal C
+- authtype: Author
+  name: Langar L
+- authtype: Author
+  name: Rohu V
+- authtype: Author
+  name: Mishchenko A
+- authtype: Author
+  name: Arizumi N
+- authtype: Author
+  name: Labyt E
+- authtype: Author
+  name: Benabid AL
+- authtype: Author
+  name: Aksenova T
+epubdate: 2020 May 9
+fulljournalname: Sensors (Basel, Switzerland)
+issue: '9'
+pages: '2706'
+pmclivedate: 2020/06/10
+printpubdate: ''
+pubdate: 2020 May 9
+sortdate: 2020/05/09 00:00
+source: Sensors (Basel)
+title: Space–Time–Frequency Multi-Sensor Analysis for Motor Cortex Localization Using
+  Magnetoencephalography
+uid: '7248938'
+volume: '20'

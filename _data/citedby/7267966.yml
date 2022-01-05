@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '31498948'
+- idtype: doi
+  value: 10.1002/hbm.24784
+- idtype: pmcid
+  value: PMC7267966
+authors:
+- authtype: Author
+  name: Nickel MM
+- authtype: Author
+  name: Ta Dinh S
+- authtype: Author
+  name: May ES
+- authtype: Author
+  name: Tiemann L
+- authtype: Author
+  name: Hohn VD
+- authtype: Author
+  name: Gross J
+- authtype: Author
+  name: Ploner M
+epubdate: 2019 Sep 9
+fulljournalname: Human Brain Mapping
+issue: '1'
+pages: 17-29
+pmclivedate: 2020/06/12
+printpubdate: ''
+pubdate: 2019 Sep 9
+sortdate: 2019/09/09 00:00
+source: Hum Brain Mapp
+title: Neural oscillations and connectivity characterizing the state of tonic experimental
+  pain in humans
+uid: '7267966'
+volume: '41'

@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '34465846'
+- idtype: doi
+  value: 10.1038/s41598-021-97004-0
+- idtype: pmcid
+  value: PMC8408223
+authors:
+- authtype: Author
+  name: Tatti E
+- authtype: Author
+  name: Ferraioli F
+- authtype: Author
+  name: Peter J
+- authtype: Author
+  name: Alalade T
+- authtype: Author
+  name: Nelson AB
+- authtype: Author
+  name: Ricci S
+- authtype: Author
+  name: Quartarone A
+- authtype: Author
+  name: Ghilardi MF
+epubdate: 2021 Aug 31
+fulljournalname: Scientific Reports
+issue: ''
+pages: '17441'
+pmclivedate: 2021/09/01
+printpubdate: ''
+pubdate: 2021 Aug 31
+sortdate: 2021/08/31 00:00
+source: Sci Rep
+title: Frontal increase of beta modulation during the practice of a motor task is
+  enhanced by visuomotor learning
+uid: '8408223'
+volume: '11'

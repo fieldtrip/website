@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '27199698'
+- idtype: doi
+  value: 10.3389/fnhum.2016.00163
+- idtype: pmcid
+  value: PMC4844915
+authors:
+- authtype: Author
+  name: Dimitriadis SI
+- authtype: Author
+  name: Laskaris NA
+- authtype: Author
+  name: Simos PG
+- authtype: Author
+  name: Fletcher JM
+- authtype: Author
+  name: Papanicolaou AC
+epubdate: 2016 Apr 26
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '163'
+pmclivedate: 2016/05/19
+printpubdate: ''
+pubdate: 2016 Apr 26
+sortdate: 2016/04/26 00:00
+source: Front Hum Neurosci
+title: Greater Repertoire and Temporal Variability of Cross-Frequency Coupling (CFC)
+  Modes in Resting-State Neuromagnetic Recordings among Children with Reading Difficulties
+uid: '4844915'
+volume: '10'

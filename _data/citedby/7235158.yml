@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '32477609'
+- idtype: doi
+  value: 10.1007/s13534-020-00149-6
+- idtype: pmcid
+  value: PMC7235158
+authors:
+- authtype: Author
+  name: Veeramalla SK
+- authtype: Author
+  name: Talari VK
+epubdate: 2020 Feb 6
+fulljournalname: Biomedical Engineering Letters
+issue: '2'
+pages: 205-215
+pmclivedate: 2021/02/06
+printpubdate: ''
+pubdate: 2020 Feb 6
+sortdate: 2020/02/06 00:00
+source: Biomed Eng Lett
+title: Multiple dipole source localization of EEG measurements using particle filter
+  with partial stratified resampling
+uid: '7235158'
+volume: '10'

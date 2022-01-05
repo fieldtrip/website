@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '28921756'
+- idtype: doi
+  value: 10.1111/ejn.13700
+- idtype: pmcid
+  value: PMC6220967
+authors:
+- authtype: Author
+  name: Heideman SG
+- authtype: Author
+  name: van Ede F
+- authtype: Author
+  name: Nobre AC
+epubdate: 2017 Nov 6
+fulljournalname: The European Journal of Neuroscience
+issue: '8'
+pages: 2684-2695
+pmclivedate: 2018/11/15
+printpubdate: 2018 Oct
+pubdate: 2017 Nov 6
+sortdate: 2017/11/06 00:00
+source: Eur J Neurosci
+title: Temporal alignment of anticipatory motor cortical beta lateralisation in hidden
+  visual‐motor sequences
+uid: '6220967'
+volume: '48'

@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '28827336'
+- idtype: doi
+  value: 10.1073/pnas.1703247114
+- idtype: pmcid
+  value: PMC5594652
+authors:
+- authtype: Author
+  name: Baumgartner R
+- authtype: Author
+  name: Reed DK
+- authtype: Author
+  name: Tóth B
+- authtype: Author
+  name: Best V
+- authtype: Author
+  name: Majdak P
+- authtype: Author
+  name: Colburn HS
+- authtype: Author
+  name: Shinn-Cunningham B
+epubdate: 2017 Aug 21
+fulljournalname: Proceedings of the National Academy of Sciences of the United States
+  of America
+issue: '36'
+pages: 9743-9748
+pmclivedate: 2017/09/25
+printpubdate: 2017 Sep 5
+pubdate: 2017 Aug 21
+sortdate: 2017/08/21 00:00
+source: Proc Natl Acad Sci U S A
+title: Asymmetries in behavioral and neural responses to spectral cues demonstrate
+  the generality of auditory looming bias
+uid: '5594652'
+volume: '114'

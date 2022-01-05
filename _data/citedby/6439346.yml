@@ -1,0 +1,47 @@
+articleids:
+- idtype: pmid
+  value: '30967769'
+- idtype: doi
+  value: 10.3389/fninf.2019.00014
+- idtype: pmcid
+  value: PMC6439346
+authors:
+- authtype: Author
+  name: Combrisson E
+- authtype: Author
+  name: Vallat R
+- authtype: Author
+  name: O'Reilly C
+- authtype: Author
+  name: Jas M
+- authtype: Author
+  name: Pascarella A
+- authtype: Author
+  name: Saive AL
+- authtype: Author
+  name: Thiery T
+- authtype: Author
+  name: Meunier D
+- authtype: Author
+  name: Altukhov D
+- authtype: Author
+  name: Lajnef T
+- authtype: Author
+  name: Ruby P
+- authtype: Author
+  name: Guillot A
+- authtype: Author
+  name: Jerbi K
+epubdate: 2019 Mar 22
+fulljournalname: Frontiers in Neuroinformatics
+issue: ''
+pages: '14'
+pmclivedate: 2019/04/09
+printpubdate: ''
+pubdate: 2019 Mar 22
+sortdate: 2019/03/22 00:00
+source: Front Neuroinform
+title: 'Visbrain: A Multi-Purpose GPU-Accelerated Open-Source Suite for Multimodal
+  Brain Data Visualization'
+uid: '6439346'
+volume: '13'

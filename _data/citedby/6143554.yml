@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '30228366'
+- idtype: doi
+  value: 10.1038/s41598-018-32385-3
+- idtype: pmcid
+  value: PMC6143554
+authors:
+- authtype: Author
+  name: Recasens M
+- authtype: Author
+  name: Gross J
+- authtype: Author
+  name: Uhlhaas PJ
+epubdate: 2018 Sep 18
+fulljournalname: Scientific Reports
+issue: ''
+pages: '14007'
+pmclivedate: 2018/09/24
+printpubdate: ''
+pubdate: 2018 Sep 18
+sortdate: 2018/09/18 00:00
+source: Sci Rep
+title: 'Low-Frequency Oscillatory Correlates of Auditory Predictive Processing in
+  Cortical-Subcortical Networks: A MEG-Study'
+uid: '6143554'
+volume: '8'

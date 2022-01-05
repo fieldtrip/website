@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '28179479'
+- idtype: doi
+  value: 10.1152/jn.00547.2016
+- idtype: pmcid
+  value: PMC5411464
+authors:
+- authtype: Author
+  name: te Woerd ES
+- authtype: Author
+  name: Oostenveld R
+- authtype: Author
+  name: de Lange FP
+- authtype: Author
+  name: Praamstra P
+epubdate: 2017 Feb 8
+fulljournalname: Journal of Neurophysiology
+issue: '5'
+pages: 1853-1864
+pmclivedate: 2018/05/01
+printpubdate: 2017 May 1
+pubdate: 2017 Feb 8
+sortdate: 2017/02/08 00:00
+source: J Neurophysiol
+title: Impaired auditory-to-motor entrainment in Parkinson’s disease
+uid: '5411464'
+volume: '117'

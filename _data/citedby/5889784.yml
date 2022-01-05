@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '29353446'
+- idtype: doi
+  value: 10.1007/s10548-017-0617-4
+- idtype: pmcid
+  value: PMC5889784
+authors:
+- authtype: Author
+  name: Kalogianni K
+- authtype: Author
+  name: Daffertshofer A
+- authtype: Author
+  name: van der Helm FC
+- authtype: Author
+  name: Schouten AC
+- authtype: Author
+  name: de Munck JC
+- authtype: CollectiveName
+  name: on behalf of the 4DEEG consortiumKwakkelGertGMeskersCarel G. M.CGvan WegenErwin
+    E. H.EEAndringaAukje S.ASHoevenaarsDirkDWintersCarolineCZandvlietSarahSSolis-EscalanteTeodoroTYuan-YangVlaarMartijn
+    P.MPFilatovaLenaLDewaldJulius P. A.JPYaoJunJ
+epubdate: 2018 Jan 20
+fulljournalname: Brain Topography
+issue: '3'
+pages: 498-512
+pmclivedate: 2018/04/12
+printpubdate: '2018'
+pubdate: 2018 Jan 20
+sortdate: 2018/01/20 00:00
+source: Brain Topogr
+title: 'Disentangling Somatosensory Evoked Potentials of the Fingers: Limitations
+  and Clinical Potential'
+uid: '5889784'
+volume: '31'

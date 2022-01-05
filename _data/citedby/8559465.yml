@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '34582067'
+- idtype: doi
+  value: 10.1002/hbm.25651
+- idtype: pmcid
+  value: PMC8559465
+authors:
+- authtype: Author
+  name: Vandewouw MM
+- authtype: Author
+  name: Safar K
+- authtype: Author
+  name: Sato J
+- authtype: Author
+  name: Hunt BA
+- authtype: Author
+  name: Urbain CM
+- authtype: Author
+  name: Pang EW
+- authtype: Author
+  name: Anagnostou E
+- authtype: Author
+  name: Taylor MJ
+epubdate: 2021 Sep 28
+fulljournalname: Human Brain Mapping
+issue: '17'
+pages: 5747-5760
+pmclivedate: 2021/11/08
+printpubdate: ''
+pubdate: 2021 Sep 28
+sortdate: 2021/09/28 00:00
+source: Hum Brain Mapp
+title: 'Ignore the faces: Neural characterisation of emotional inhibition from childhood
+  to adulthood using MEG '
+uid: '8559465'
+volume: '42'

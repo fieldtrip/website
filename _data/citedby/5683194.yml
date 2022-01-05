@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '29159036'
+- idtype: doi
+  value: 10.1016/j.nicl.2017.10.009
+- idtype: pmcid
+  value: PMC5683194
+authors:
+- authtype: Author
+  name: Mazaheri A
+- authtype: Author
+  name: Segaert K
+- authtype: Author
+  name: Olichney J
+- authtype: Author
+  name: Yang JC
+- authtype: Author
+  name: Niu YQ
+- authtype: Author
+  name: Shapiro K
+- authtype: Author
+  name: Bowman H
+epubdate: 2017 Oct 9
+fulljournalname: 'NeuroImage : Clinical'
+issue: ''
+pages: 188-197
+pmclivedate: 2017/11/20
+printpubdate: ''
+pubdate: 2017 Oct 9
+sortdate: 2017/10/09 00:00
+source: Neuroimage Clin
+title: EEG oscillations during word processing predict MCI conversion to Alzheimer's
+  disease
+uid: '5683194'
+volume: '17'

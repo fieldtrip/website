@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '30144571'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2018.08.052
+- idtype: pmcid
+  value: PMC6197910
+- idtype: MID
+  value: NIHMS1505714
+authors:
+- authtype: Author
+  name: Young JJ
+- authtype: Author
+  name: Rudebeck PH
+- authtype: Author
+  name: Marcuse LV
+- authtype: Author
+  name: Fields MC
+- authtype: Author
+  name: Yoo JY
+- authtype: Author
+  name: Panov F
+- authtype: Author
+  name: Ghatan S
+- authtype: Author
+  name: Fazl A
+- authtype: Author
+  name: Mandelbaum S
+- authtype: Author
+  name: Baxter MG
+epubdate: 2018 Aug 23
+fulljournalname: NeuroImage
+issue: ''
+pages: 565-573
+pmclivedate: 2019/12/01
+printpubdate: 2018 Dec
+pubdate: 2018 Aug 23
+sortdate: 2018/08/23 00:00
+source: Neuroimage
+title: Theta Band Network Supporting Human Episodic Memory is Not Activated in the
+  Seizure Onset Zone
+uid: '6197910'
+volume: '183'

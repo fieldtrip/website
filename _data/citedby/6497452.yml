@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '29363843'
+- idtype: doi
+  value: 10.1111/ejn.13840
+- idtype: pmcid
+  value: PMC6497452
+- idtype: MID
+  value: NIHMS937085
+authors:
+- authtype: Author
+  name: Snyder AC
+- authtype: Author
+  name: Issar D
+- authtype: Author
+  name: Smith MA
+epubdate: 2018 Feb 13
+fulljournalname: The European journal of neuroscience
+issue: '7'
+pages: 2466-2481
+pmclivedate: 2019/10/01
+printpubdate: 2018 Oct
+pubdate: 2018 Feb 13
+sortdate: 2018/02/13 00:00
+source: Eur J Neurosci
+title: What Does Scalp EEG Coherence Tell Us About Long-range Cortical Networks?
+uid: '6497452'
+volume: '48'

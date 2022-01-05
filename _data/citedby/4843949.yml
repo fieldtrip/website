@@ -1,0 +1,51 @@
+articleids:
+- idtype: pmid
+  value: '26503033'
+- idtype: doi
+  value: 10.1002/hbm.23035
+- idtype: pmcid
+  value: PMC4843949
+authors:
+- authtype: Author
+  name: Ranlund S
+- authtype: Author
+  name: Adams RA
+- authtype: Author
+  name: Díez Á
+- authtype: Author
+  name: Constante M
+- authtype: Author
+  name: Dutt A
+- authtype: Author
+  name: Hall M
+- authtype: Author
+  name: Maestro Carbayo A
+- authtype: Author
+  name: McDonald C
+- authtype: Author
+  name: Petrella S
+- authtype: Author
+  name: Schulze K
+- authtype: Author
+  name: Shaikh M
+- authtype: Author
+  name: Walshe M
+- authtype: Author
+  name: Friston K
+- authtype: Author
+  name: Pinotsis D
+- authtype: Author
+  name: Bramon E
+epubdate: 2015 Oct 27
+fulljournalname: Human Brain Mapping
+issue: '1'
+pages: 351-365
+pmclivedate: 2016/04/29
+printpubdate: ''
+pubdate: 2015 Oct 27
+sortdate: 2015/10/27 00:00
+source: Hum Brain Mapp
+title: Impaired prefrontal synaptic gain in people with psychosis and their relatives
+  during the mismatch negativity
+uid: '4843949'
+volume: '37'

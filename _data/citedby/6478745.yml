@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '31015471'
+- idtype: doi
+  value: 10.1038/s41467-019-09927-y
+- idtype: pmcid
+  value: PMC6478745
+authors:
+- authtype: Author
+  name: Levy J
+- authtype: Author
+  name: Goldstein A
+- authtype: Author
+  name: Feldman R
+epubdate: 2019 Apr 23
+fulljournalname: Nature Communications
+issue: ''
+pages: '1905'
+pmclivedate: 2019/04/25
+printpubdate: ''
+pubdate: 2019 Apr 23
+sortdate: 2019/04/23 00:00
+source: Nat Commun
+title: The neural development of empathy is sensitive to caregiving and early trauma
+uid: '6478745'
+volume: '10'

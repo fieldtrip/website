@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '24244506'
+- idtype: doi
+  value: 10.1371/journal.pone.0079442
+- idtype: pmcid
+  value: PMC3828402
+authors:
+- authtype: Author
+  name: Lee C
+- authtype: Author
+  name: Oostenveld R
+- authtype: Author
+  name: Lee SH
+- authtype: Author
+  name: Kim LH
+- authtype: Author
+  name: Sung H
+- authtype: Author
+  name: Choi JH
+epubdate: 2013 Nov 14
+fulljournalname: PLoS ONE
+issue: '11'
+pages: e79442
+pmclivedate: 2013/11/16
+printpubdate: ''
+pubdate: 2013 Nov 14
+sortdate: 2013/11/14 00:00
+source: PLoS One
+title: Dipole Source Localization of Mouse Electroencephalogram Using the Fieldtrip
+  Toolbox
+uid: '3828402'
+volume: '8'

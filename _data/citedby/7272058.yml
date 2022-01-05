@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '32497075'
+- idtype: doi
+  value: 10.1371/journal.pone.0224053
+- idtype: pmcid
+  value: PMC7272058
+authors:
+- authtype: Author
+  name: Ruzzoli M
+- authtype: Author
+  name: McGuinness A
+- authtype: Author
+  name: Morís Fernández L
+- authtype: Author
+  name: Soto-Faraco S
+epubdate: 2020 Jun 4
+fulljournalname: PLoS ONE
+issue: '6'
+pages: e0224053
+pmclivedate: 2020/06/09
+printpubdate: ''
+pubdate: 2020 Jun 4
+sortdate: 2020/06/04 00:00
+source: PLoS One
+title: 'From cognitive control to visual incongruity: Conflict detection in surrealistic
+  images'
+uid: '7272058'
+volume: '15'

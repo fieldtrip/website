@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '30588822'
+- idtype: doi
+  value: 10.1089/brain.2018.0639
+- idtype: pmcid
+  value: PMC6479236
+authors:
+- authtype: Author
+  name: Port RG
+- authtype: Author
+  name: Berman JI
+- authtype: Author
+  name: Liu S
+- authtype: Author
+  name: Featherstone RE
+- authtype: Author
+  name: Roberts TP
+- authtype: Author
+  name: Siegel SJ
+epubdate: 2019 Apr 5
+fulljournalname: Brain Connectivity
+issue: '3'
+pages: 263-272
+pmclivedate: 2020/04/01
+printpubdate: 2019 Apr 1
+pubdate: 2019 Apr 5
+sortdate: 2019/04/05 00:00
+source: Brain Connect
+title: Parvalbumin Cell Ablation of NMDA-R1 Leads to Altered Phase, But Not Amplitude,
+  of Gamma-Band Cross-Frequency Coupling
+uid: '6479236'
+volume: '9'

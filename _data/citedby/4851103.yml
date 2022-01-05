@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '27120605'
+- idtype: doi
+  value: 10.3390/s16040590
+- idtype: pmcid
+  value: PMC4851103
+authors:
+- authtype: Author
+  name: Mur A
+- authtype: Author
+  name: Dormido R
+- authtype: Author
+  name: Vega J
+- authtype: Author
+  name: Duro N
+- authtype: Author
+  name: Dormido-Canto S
+epubdate: 2016 Apr 23
+fulljournalname: Sensors (Basel, Switzerland)
+issue: '4'
+pages: '590'
+pmclivedate: 2016/05/04
+printpubdate: ''
+pubdate: 2016 Apr 23
+sortdate: 2016/04/23 00:00
+source: Sensors (Basel)
+title: 'Unsupervised Event Characterization and Detection in Multichannel Signals:
+  An EEG application'
+uid: '4851103'
+volume: '16'

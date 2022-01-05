@@ -1,0 +1,49 @@
+articleids:
+- idtype: pmid
+  value: '32338460'
+- idtype: doi
+  value: 10.1002/brb3.1630
+- idtype: pmcid
+  value: PMC7303403
+authors:
+- authtype: Author
+  name: Musaeus CS
+- authtype: Author
+  name: Engedal K
+- authtype: Author
+  name: Høgh P
+- authtype: Author
+  name: Jelic V
+- authtype: Author
+  name: Khanna AR
+- authtype: Author
+  name: Kjær TW
+- authtype: Author
+  name: Mørup M
+- authtype: Author
+  name: Naik M
+- authtype: Author
+  name: Oeksengaard A
+- authtype: Author
+  name: Santarnecchi E
+- authtype: Author
+  name: Snaedal J
+- authtype: Author
+  name: Wahlund L
+- authtype: Author
+  name: Waldemar G
+- authtype: Author
+  name: Andersen BB
+epubdate: 2020 Apr 27
+fulljournalname: Brain and Behavior
+issue: '6'
+pages: e01630
+pmclivedate: 2020/06/19
+printpubdate: ''
+pubdate: 2020 Apr 27
+sortdate: 2020/04/27 00:00
+source: Brain Behav
+title: Changes in the left temporal microstate are a sign of cognitive decline in
+  patients with Alzheimer’s disease
+uid: '7303403'
+volume: '10'

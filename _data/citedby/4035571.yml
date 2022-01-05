@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '24904388'
+- idtype: doi
+  value: 10.3389/fnhum.2014.00354
+- idtype: pmcid
+  value: PMC4035571
+authors:
+- authtype: Author
+  name: Sowman PF
+- authtype: Author
+  name: Crain S
+- authtype: Author
+  name: Harrison E
+- authtype: Author
+  name: Johnson BW
+epubdate: 2014 May 28
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '354'
+pmclivedate: 2014/06/05
+printpubdate: ''
+pubdate: 2014 May 28
+sortdate: 2014/05/28 00:00
+source: Front Hum Neurosci
+title: 'Lateralization of Brain Activation in Fluent and Non-Fluent Preschool Children:
+  A Magnetoencephalographic Study of Picture-Naming'
+uid: '4035571'
+volume: '8'

@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '25476924'
+- idtype: doi
+  value: 10.1186/1475-925X-13-158
+- idtype: pmcid
+  value: PMC4286930
+authors:
+- authtype: Author
+  name: Cantillo-Negrete J
+- authtype: Author
+  name: Gutierrez-Martinez J
+- authtype: Author
+  name: Carino-Escobar RI
+- authtype: Author
+  name: Carrillo-Mora P
+- authtype: Author
+  name: Elias-Vinas D
+epubdate: 2014 Dec 4
+fulljournalname: BioMedical Engineering OnLine
+issue: ''
+pages: '158'
+pmclivedate: 2015/01/09
+printpubdate: ''
+pubdate: 2014 Dec 4
+sortdate: 2014/12/04 00:00
+source: Biomed Eng Online
+title: An approach to improve the performance of subject-independent BCIs-based on
+  motor imagery allocating subjects by gender
+uid: '4286930'
+volume: '13'

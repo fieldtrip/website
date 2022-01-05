@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '31434911'
+- idtype: doi
+  value: 10.1038/s41598-019-47654-y
+- idtype: pmcid
+  value: PMC6704077
+authors:
+- authtype: Author
+  name: Bhattacharjee S
+- authtype: Author
+  name: Kashyap R
+- authtype: Author
+  name: Rapp B
+- authtype: Author
+  name: Oishi K
+- authtype: Author
+  name: Desmond JE
+- authtype: Author
+  name: Chen SH
+epubdate: 2019 Aug 21
+fulljournalname: Scientific Reports
+issue: ''
+pages: '12178'
+pmclivedate: 2019/08/23
+printpubdate: ''
+pubdate: 2019 Aug 21
+sortdate: 2019/08/21 00:00
+source: Sci Rep
+title: Simulation Analyses of tDCS Montages for the Investigation of Dorsal and Ventral
+  Pathways
+uid: '6704077'
+volume: '9'

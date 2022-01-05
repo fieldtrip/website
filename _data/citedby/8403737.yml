@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '34461393'
+- idtype: doi
+  value: 10.1016/j.dcn.2021.101010
+- idtype: pmcid
+  value: PMC8403737
+authors:
+- authtype: Author
+  name: Ramos-Escobar N
+- authtype: Author
+  name: Segura E
+- authtype: Author
+  name: Olivé G
+- authtype: Author
+  name: Rodriguez-Fornells A
+- authtype: Author
+  name: François C
+epubdate: 2021 Aug 26
+fulljournalname: Developmental Cognitive Neuroscience
+issue: ''
+pages: '101010'
+pmclivedate: 2021/09/02
+printpubdate: ''
+pubdate: 2021 Aug 26
+sortdate: 2021/08/26 00:00
+source: Dev Cogn Neurosci
+title: Oscillatory activity and EEG phase synchrony of concurrent word segmentation
+  and meaning-mapping in 9-year-old children
+uid: '8403737'
+volume: '51'

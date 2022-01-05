@@ -1,0 +1,45 @@
+articleids:
+- idtype: pmid
+  value: '32681881'
+- idtype: doi
+  value: 10.1016/j.nbd.2020.105019
+- idtype: pmcid
+  value: PMC7115855
+authors:
+- authtype: Author
+  name: Wiest C
+- authtype: Author
+  name: Tinkhauser G
+- authtype: Author
+  name: Pogosyan A
+- authtype: Author
+  name: Bange M
+- authtype: Author
+  name: Muthuraman M
+- authtype: Author
+  name: Groppa S
+- authtype: Author
+  name: Baig F
+- authtype: Author
+  name: Mostofi A
+- authtype: Author
+  name: Pereira EA
+- authtype: Author
+  name: Tan H
+- authtype: Author
+  name: Brown P
+- authtype: Author
+  name: Torrecillos F
+epubdate: ''
+fulljournalname: Neurobiology of Disease
+issue: ''
+pages: '105019'
+pmclivedate: 2020/07/28
+printpubdate: 2020 Sep
+pubdate: 2020 Sep
+sortdate: 2020/09/01 00:00
+source: Neurobiol Dis
+title: Local field potential activity dynamics in response to deep brain stimulation
+  of the subthalamic nucleus in Parkinson's disease
+uid: '7115855'
+volume: '143'

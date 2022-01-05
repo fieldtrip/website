@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '28827599'
+- idtype: doi
+  value: 10.1038/s41598-017-09511-8
+- idtype: pmcid
+  value: PMC5566471
+authors:
+- authtype: Author
+  name: Liu Y
+- authtype: Author
+  name: McAfee SS
+- authtype: Author
+  name: Heck DH
+epubdate: 2017 Aug 21
+fulljournalname: Scientific Reports
+issue: ''
+pages: '8950'
+pmclivedate: 2017/08/23
+printpubdate: ''
+pubdate: 2017 Aug 21
+sortdate: 2017/08/21 00:00
+source: Sci Rep
+title: Hippocampal sharp-wave ripples in awake mice are entrained by respiration
+uid: '5566471'
+volume: '7'

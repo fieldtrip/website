@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '34583932'
+- idtype: doi
+  value: 10.1523/ENEURO.0022-21.2021
+- idtype: pmcid
+  value: PMC8503960
+authors:
+- authtype: Author
+  name: Scholz S
+- authtype: Author
+  name: Dutke S
+- authtype: Author
+  name: Busch NA
+epubdate: 2021 Oct 8
+fulljournalname: eNeuro
+issue: '5'
+pages: ENEURO.0022-21.2021
+pmclivedate: 2021/10/12
+printpubdate: ''
+pubdate: 2021 Oct 8
+sortdate: 2021/10/08 00:00
+source: eNeuro
+title: 'Oscillatory Correlates of Intentional Forgetting: The Role of Theta and Alpha
+  Power in Item-Method Directed Forgetting'
+uid: '8503960'
+volume: '8'

@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '28527986'
+- idtype: doi
+  value: 10.1016/j.dcn.2017.05.004
+- idtype: pmcid
+  value: PMC6987902
+authors:
+- authtype: Author
+  name: Urbain C
+- authtype: Author
+  name: Sato J
+- authtype: Author
+  name: Pang EW
+- authtype: Author
+  name: Taylor MJ
+epubdate: 2017 May 17
+fulljournalname: Developmental Cognitive Neuroscience
+issue: ''
+pages: 62-68
+pmclivedate: 2020/02/03
+printpubdate: ''
+pubdate: 2017 May 17
+sortdate: 2017/05/17 00:00
+source: Dev Cogn Neurosci
+title: The temporal and spatial brain dynamics of automatic emotion regulation in
+  children
+uid: '6987902'
+volume: '26'

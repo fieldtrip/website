@@ -1,0 +1,45 @@
+articleids:
+- idtype: pmid
+  value: '30020423'
+- idtype: doi
+  value: 10.1093/brain/awy175
+- idtype: pmcid
+  value: PMC6061682
+authors:
+- authtype: Author
+  name: Grent-‘t-Jong T
+- authtype: Author
+  name: Rivolta D
+- authtype: Author
+  name: Gross J
+- authtype: Author
+  name: Gajwani R
+- authtype: Author
+  name: Lawrie SM
+- authtype: Author
+  name: Schwannauer M
+- authtype: Author
+  name: Heidegger T
+- authtype: Author
+  name: Wibral M
+- authtype: Author
+  name: Singer W
+- authtype: Author
+  name: Sauer A
+- authtype: Author
+  name: Scheller B
+- authtype: Author
+  name: Uhlhaas PJ
+epubdate: 2018 Jul 17
+fulljournalname: Brain
+issue: '8'
+pages: 2511-2526
+pmclivedate: 2018/08/07
+printpubdate: 2018 Aug
+pubdate: 2018 Jul 17
+sortdate: 2018/07/17 00:00
+source: Brain
+title: Acute ketamine dysregulates task-related gamma-band oscillations in thalamo-cortical
+  circuits in schizophrenia
+uid: '6061682'
+volume: '141'

@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '30291240'
+- idtype: doi
+  value: 10.1038/s41467-018-06553-y
+- idtype: pmcid
+  value: PMC6173724
+authors:
+- authtype: Author
+  name: Zhang H
+- authtype: Author
+  name: Fell J
+- authtype: Author
+  name: Axmacher N
+epubdate: 2018 Oct 5
+fulljournalname: Nature Communications
+issue: ''
+pages: '4103'
+pmclivedate: 2018/10/09
+printpubdate: ''
+pubdate: 2018 Oct 5
+sortdate: 2018/10/05 00:00
+source: Nat Commun
+title: Electrophysiological mechanisms of human memory consolidation
+uid: '6173724'
+volume: '9'

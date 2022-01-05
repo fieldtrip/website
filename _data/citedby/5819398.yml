@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '29358390'
+- idtype: doi
+  value: 10.1073/pnas.1713318115
+- idtype: pmcid
+  value: PMC5819398
+authors:
+- authtype: Author
+  name: Wutz A
+- authtype: Author
+  name: Melcher D
+- authtype: Author
+  name: Samaha J
+epubdate: 2018 Jan 22
+fulljournalname: Proceedings of the National Academy of Sciences of the United States
+  of America
+issue: '6'
+pages: 1346-1351
+pmclivedate: 2018/08/06
+printpubdate: 2018 Feb 6
+pubdate: 2018 Jan 22
+sortdate: 2018/01/22 00:00
+source: Proc Natl Acad Sci U S A
+title: Frequency modulation of neural oscillations according to visual task demands
+uid: '5819398'
+volume: '115'

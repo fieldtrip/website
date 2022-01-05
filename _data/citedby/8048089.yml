@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '32534963'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2020.117044
+- idtype: pmcid
+  value: PMC8048089
+- idtype: MID
+  value: NIHMS1622639
+authors:
+- authtype: Author
+  name: Puonti O
+- authtype: Author
+  name: Van Leemput K
+- authtype: Author
+  name: Saturnino GB
+- authtype: Author
+  name: Siebner HR
+- authtype: Author
+  name: Madsen KH
+- authtype: Author
+  name: Thielscher A
+epubdate: 2020 Jun 11
+fulljournalname: NeuroImage
+issue: ''
+pages: '117044'
+pmclivedate: 2021/04/15
+printpubdate: 2020 Oct 1
+pubdate: 2020 Jun 11
+sortdate: 2020/06/11 00:00
+source: Neuroimage
+title: Accurate and robust whole-head segmentation from magnetic resonance images
+  for individualized head modeling
+uid: '8048089'
+volume: '219'

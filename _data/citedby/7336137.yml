@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '32400923'
+- idtype: doi
+  value: 10.1002/hbm.24990
+- idtype: pmcid
+  value: PMC7336137
+authors:
+- authtype: Author
+  name: Pourmotabbed H
+- authtype: Author
+  name: Wheless JW
+- authtype: Author
+  name: Babajani‐Feremi A
+epubdate: 2020 May 13
+fulljournalname: Human Brain Mapping
+issue: '11'
+pages: 2964-2979
+pmclivedate: 2020/07/08
+printpubdate: ''
+pubdate: 2020 May 13
+sortdate: 2020/05/13 00:00
+source: Hum Brain Mapp
+title: Lateralization of epilepsy using intra‐hemispheric brain networks based on
+  resting‐state MEG data
+uid: '7336137'
+volume: '41'

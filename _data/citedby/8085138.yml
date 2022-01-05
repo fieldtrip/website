@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '33927227'
+- idtype: doi
+  value: 10.1038/s41598-021-87572-6
+- idtype: pmcid
+  value: PMC8085138
+authors:
+- authtype: Author
+  name: Wagner I
+- authtype: Author
+  name: Wolf C
+- authtype: Author
+  name: Schütz AC
+epubdate: 2021 Apr 29
+fulljournalname: Scientific Reports
+issue: ''
+pages: '9331'
+pmclivedate: 2021/05/03
+printpubdate: ''
+pubdate: 2021 Apr 29
+sortdate: 2021/04/29 00:00
+source: Sci Rep
+title: Motor learning by selection in visual working memory
+uid: '8085138'
+volume: '11'

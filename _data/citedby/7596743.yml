@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '33177981'
+- idtype: doi
+  value: 10.3389/fnins.2020.573513
+- idtype: pmcid
+  value: PMC7596743
+authors:
+- authtype: Author
+  name: Kurthen I
+- authtype: Author
+  name: Meyer M
+- authtype: Author
+  name: Schlesewsky M
+- authtype: Author
+  name: Bornkessel-Schlesewsky I
+epubdate: 2020 Oct 16
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '573513'
+pmclivedate: 2020/11/10
+printpubdate: ''
+pubdate: 2020 Oct 16
+sortdate: 2020/10/16 00:00
+source: Front Neurosci
+title: Individual Differences in Peripheral Hearing and Cognition Reveal Sentence
+  Processing Differences in Healthy Older Adults
+uid: '7596743'
+volume: '14'

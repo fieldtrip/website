@@ -1,0 +1,40 @@
+articleids:
+- idtype: pmid
+  value: '32636485'
+- idtype: doi
+  value: 10.1038/s41598-020-67862-1
+- idtype: pmcid
+  value: PMC7340782
+authors:
+- authtype: Author
+  name: Guex R
+- authtype: Author
+  name: Méndez-Bértolo C
+- authtype: Author
+  name: Moratti S
+- authtype: Author
+  name: Strange BA
+- authtype: Author
+  name: Spinelli L
+- authtype: Author
+  name: Murray RJ
+- authtype: Author
+  name: Sander D
+- authtype: Author
+  name: Seeck M
+- authtype: Author
+  name: Vuilleumier P
+- authtype: Author
+  name: Domínguez-Borràs J
+epubdate: 2020 Jul 7
+fulljournalname: Scientific Reports
+issue: ''
+pages: '11138'
+pmclivedate: 2020/07/09
+printpubdate: ''
+pubdate: 2020 Jul 7
+sortdate: 2020/07/07 00:00
+source: Sci Rep
+title: Temporal dynamics of amygdala response to emotion- and action-relevance
+uid: '7340782'
+volume: '10'

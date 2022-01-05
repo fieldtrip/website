@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '30728363'
+- idtype: doi
+  value: 10.1038/s41598-018-36107-7
+- idtype: pmcid
+  value: PMC6365565
+authors:
+- authtype: Author
+  name: Lerner I
+- authtype: Author
+  name: Ketz NA
+- authtype: Author
+  name: Jones AP
+- authtype: Author
+  name: Bryant NB
+- authtype: Author
+  name: Robert B
+- authtype: Author
+  name: Skorheim SW
+- authtype: Author
+  name: Hartholt A
+- authtype: Author
+  name: Rizzo AS
+- authtype: Author
+  name: Gluck MA
+- authtype: Author
+  name: Clark VP
+- authtype: Author
+  name: Pilly PK
+epubdate: 2019 Feb 6
+fulljournalname: Scientific Reports
+issue: ''
+pages: '1516'
+pmclivedate: 2019/02/08
+printpubdate: ''
+pubdate: 2019 Feb 6
+sortdate: 2019/02/06 00:00
+source: Sci Rep
+title: Transcranial Current Stimulation During Sleep Facilitates Insight into Temporal
+  Rules, but does not Consolidate Memories of Individual Sequential Experiences
+uid: '6365565'
+volume: '9'

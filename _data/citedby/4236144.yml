@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '25405521'
+- idtype: doi
+  value: 10.1371/journal.pone.0112974
+- idtype: pmcid
+  value: PMC4236144
+authors:
+- authtype: Author
+  name: Diederich A
+- authtype: Author
+  name: Schomburg A
+- authtype: Author
+  name: van Vugt M
+epubdate: 2014 Nov 18
+fulljournalname: PLoS ONE
+issue: '11'
+pages: e112974
+pmclivedate: 2014/11/21
+printpubdate: ''
+pubdate: 2014 Nov 18
+sortdate: 2014/11/18 00:00
+source: PLoS One
+title: 'Fronto-Central Theta Oscillations Are Related to Oscillations in Saccadic
+  Response Times (SRT): An EEG and Behavioral Data Analysis'
+uid: '4236144'
+volume: '9'

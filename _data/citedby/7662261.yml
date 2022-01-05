@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '33158213'
+- idtype: doi
+  value: 10.3390/s20216285
+- idtype: pmcid
+  value: PMC7662261
+authors:
+- authtype: Author
+  name: Alam RU
+- authtype: Author
+  name: Zhao H
+- authtype: Author
+  name: Goodwin A
+- authtype: Author
+  name: Kavehei O
+- authtype: Author
+  name: McEwan A
+epubdate: 2020 Nov 4
+fulljournalname: Sensors (Basel, Switzerland)
+issue: '21'
+pages: '6285'
+pmclivedate: 2020/11/14
+printpubdate: ''
+pubdate: 2020 Nov 4
+sortdate: 2020/11/04 00:00
+source: Sensors (Basel)
+title: Differences in Power Spectral Densities and Phase Quantities Due to Processing
+  of EEG Signals
+uid: '7662261'
+volume: '20'

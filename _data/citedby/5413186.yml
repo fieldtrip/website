@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '28348136'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0098-17.2017
+- idtype: pmcid
+  value: PMC5413186
+authors:
+- authtype: Author
+  name: Nowak M
+- authtype: Author
+  name: Hinson E
+- authtype: Author
+  name: van Ede F
+- authtype: Author
+  name: Pogosyan A
+- authtype: Author
+  name: Guerra A
+- authtype: Author
+  name: Quinn A
+- authtype: Author
+  name: Brown P
+- authtype: Author
+  name: Stagg CJ
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '17'
+pages: 4481-4492
+pmclivedate: 2017/05/16
+printpubdate: 2017 Apr 26
+pubdate: 2017 Apr 26
+sortdate: 2017/04/26 00:00
+source: J Neurosci
+title: 'Driving Human Motor Cortical Oscillations Leads to Behaviorally Relevant Changes
+  in Local GABAA Inhibition: A tACS-TMS Study'
+uid: '5413186'
+volume: '37'

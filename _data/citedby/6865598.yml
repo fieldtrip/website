@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '30251765'
+- idtype: doi
+  value: 10.1002/hbm.24398
+- idtype: pmcid
+  value: PMC6865598
+authors:
+- authtype: Author
+  name: Chung SW
+- authtype: Author
+  name: Sullivan CM
+- authtype: Author
+  name: Rogasch NC
+- authtype: Author
+  name: Hoy KE
+- authtype: Author
+  name: Bailey NW
+- authtype: Author
+  name: Cash RF
+- authtype: Author
+  name: Fitzgerald PB
+epubdate: 2018 Sep 25
+fulljournalname: Human Brain Mapping
+issue: '2'
+pages: 608-627
+pmclivedate: 2020/06/12
+printpubdate: ''
+pubdate: 2018 Sep 25
+sortdate: 2018/09/25 00:00
+source: Hum Brain Mapp
+title: 'The effects of individualised intermittent theta burst stimulation in the
+  prefrontal cortex: A TMS‐EEG study'
+uid: '6865598'
+volume: '40'

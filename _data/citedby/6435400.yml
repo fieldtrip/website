@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '30833700'
+- idtype: doi
+  value: 10.1038/s41593-019-0353-z
+- idtype: pmcid
+  value: PMC6435400
+- idtype: MID
+  value: NIHMS1520594
+authors:
+- authtype: Author
+  name: Assaneo MF
+- authtype: Author
+  name: Ripolles P
+- authtype: Author
+  name: Orpella J
+- authtype: Author
+  name: Lin WM
+- authtype: Author
+  name: de Diego-Balaguer R
+- authtype: Author
+  name: Poeppel D
+epubdate: 2019 Mar 4
+fulljournalname: Nature neuroscience
+issue: '4'
+pages: 627-632
+pmclivedate: 2019/09/04
+printpubdate: 2019 Apr
+pubdate: 2019 Mar 4
+sortdate: 2019/03/04 00:00
+source: Nat Neurosci
+title: Spontaneous synchronization to speech reveals neural mechanisms facilitating
+  language learning
+uid: '6435400'
+volume: '22'

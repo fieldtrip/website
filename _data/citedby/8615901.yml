@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '34827394'
+- idtype: doi
+  value: 10.3390/brainsci11111396
+- idtype: pmcid
+  value: PMC8615901
+authors:
+- authtype: Author
+  name: Quadrelli E
+- authtype: Author
+  name: Roberti E
+- authtype: Author
+  name: Polver S
+- authtype: Author
+  name: Bulf H
+- authtype: Author
+  name: Turati C
+epubdate: 2021 Oct 24
+fulljournalname: Brain Sciences
+issue: '11'
+pages: '1396'
+pmclivedate: 2021/11/26
+printpubdate: ''
+pubdate: 2021 Oct 24
+sortdate: 2021/10/24 00:00
+source: Brain Sci
+title: Sensorimotor Activity and Network Connectivity to Dynamic and Static Emotional
+  Faces in 7-Month-Old Infants
+uid: '8615901'
+volume: '11'

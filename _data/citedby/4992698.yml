@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '27597822'
+- idtype: doi
+  value: 10.3389/fncom.2016.00087
+- idtype: pmcid
+  value: PMC4992698
+authors:
+- authtype: Author
+  name: Lozano-Soldevilla D
+- authtype: Author
+  name: ter Huurne N
+- authtype: Author
+  name: Oostenveld R
+epubdate: 2016 Aug 22
+fulljournalname: Frontiers in Computational Neuroscience
+issue: ''
+pages: '87'
+pmclivedate: 2016/09/05
+printpubdate: ''
+pubdate: 2016 Aug 22
+sortdate: 2016/08/22 00:00
+source: Front Comput Neurosci
+title: Neuronal Oscillations with Non-sinusoidal Morphology Produce Spurious Phase-to-Amplitude
+  Coupling and Directionality
+uid: '4992698'
+volume: '10'

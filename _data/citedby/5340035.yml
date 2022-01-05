@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '28264664'
+- idtype: doi
+  value: 10.1186/s12868-017-0349-0
+- idtype: pmcid
+  value: PMC5340035
+authors:
+- authtype: Author
+  name: Di Nota PM
+- authtype: Author
+  name: Chartrand JM
+- authtype: Author
+  name: Levkov GR
+- authtype: Author
+  name: Montefusco-Siegmund R
+- authtype: Author
+  name: DeSouza JF
+epubdate: 2017 Mar 6
+fulljournalname: BMC Neuroscience
+issue: ''
+pages: '28'
+pmclivedate: 2017/03/10
+printpubdate: ''
+pubdate: 2017 Mar 6
+sortdate: 2017/03/06 00:00
+source: BMC Neurosci
+title: Experience-dependent modulation of alpha and beta during action observation
+  and motor imagery
+uid: '5340035'
+volume: '18'

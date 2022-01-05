@@ -1,0 +1,78 @@
+articleids:
+- idtype: pmid
+  value: '22366334'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2012.02.018
+- idtype: pmcid
+  value: PMC3606888
+- idtype: MID
+  value: NIHMS358031
+authors:
+- authtype: Author
+  name: Van Essen DC
+- authtype: Author
+  name: Ugurbil K
+- authtype: Author
+  name: Auerbach E
+- authtype: Author
+  name: Barch D
+- authtype: Author
+  name: Behrens TE
+- authtype: Author
+  name: Bucholz R
+- authtype: Author
+  name: Chang A
+- authtype: Author
+  name: Chen L
+- authtype: Author
+  name: Corbetta M
+- authtype: Author
+  name: Curtiss SW
+- authtype: Author
+  name: Della Penna S
+- authtype: Author
+  name: Feinberg D
+- authtype: Author
+  name: Glasser MF
+- authtype: Author
+  name: Harel N
+- authtype: Author
+  name: Heath AC
+- authtype: Author
+  name: Larson-Prior L
+- authtype: Author
+  name: Marcus D
+- authtype: Author
+  name: Michalareas G
+- authtype: Author
+  name: Moeller S
+- authtype: Author
+  name: Oostenveld R
+- authtype: Author
+  name: Petersen SE
+- authtype: Author
+  name: Prior F
+- authtype: Author
+  name: Schlaggar BL
+- authtype: Author
+  name: Smith SM
+- authtype: Author
+  name: Snyder AZ
+- authtype: Author
+  name: Xu J
+- authtype: Author
+  name: Yacoub E
+- authtype: CollectiveName
+  name: WU-Minn HCP Consortium
+epubdate: 2012 Feb 17
+fulljournalname: NeuroImage
+issue: '4'
+pages: 2222-2231
+pmclivedate: 2013/10/01
+printpubdate: 2012 Oct 1
+pubdate: 2012 Feb 17
+sortdate: 2012/02/17 00:00
+source: Neuroimage
+title: 'The Human Connectome Project: A data acquisition perspective'
+uid: '3606888'
+volume: '62'

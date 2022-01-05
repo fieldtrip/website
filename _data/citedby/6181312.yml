@@ -1,0 +1,42 @@
+articleids:
+- idtype: pmid
+  value: '30181135'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1314-18.2018
+- idtype: pmcid
+  value: PMC6181312
+authors:
+- authtype: Author
+  name: Torrecillos F
+- authtype: Author
+  name: Tinkhauser G
+- authtype: Author
+  name: Fischer P
+- authtype: Author
+  name: Green AL
+- authtype: Author
+  name: Aziz TZ
+- authtype: Author
+  name: Foltynie T
+- authtype: Author
+  name: Limousin P
+- authtype: Author
+  name: Zrinzo L
+- authtype: Author
+  name: Ashkan K
+- authtype: Author
+  name: Brown P
+- authtype: Author
+  name: Tan H
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '41'
+pages: 8905-8917
+pmclivedate: 2019/04/10
+printpubdate: 2018 Oct 10
+pubdate: 2018 Oct 10
+sortdate: 2018/10/10 00:00
+source: J Neurosci
+title: Modulation of Beta Bursts in the Subthalamic Nucleus Predicts Motor Performance
+uid: '6181312'
+volume: '38'

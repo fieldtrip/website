@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '33214317'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1361-20.2020
+- idtype: pmcid
+  value: PMC7810665
+authors:
+- authtype: Author
+  name: Sharon O
+- authtype: Author
+  name: Fahoum F
+- authtype: Author
+  name: Nir Y
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '2'
+pages: 320-330
+pmclivedate: 2021/07/13
+printpubdate: 2021 Jan 13
+pubdate: 2021 Jan 13
+sortdate: 2021/01/13 00:00
+source: J Neurosci
+title: Transcutaneous Vagus Nerve Stimulation in Humans Induces Pupil Dilation and
+  Attenuates Alpha Oscillations
+uid: '7810665'
+volume: '41'

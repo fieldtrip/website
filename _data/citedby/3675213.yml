@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '23762253'
+- idtype: doi
+  value: 10.1371/journal.pone.0064784
+- idtype: pmcid
+  value: PMC3675213
+authors:
+- authtype: Author
+  name: Yao L
+- authtype: Author
+  name: Meng J
+- authtype: Author
+  name: Zhang D
+- authtype: Author
+  name: Sheng X
+- authtype: Author
+  name: Zhu X
+epubdate: 2013 Jun 6
+fulljournalname: PLoS ONE
+issue: '6'
+pages: e64784
+pmclivedate: 2013/06/12
+printpubdate: ''
+pubdate: 2013 Jun 6
+sortdate: 2013/06/06 00:00
+source: PLoS One
+title: Selective Sensation Based Brain-Computer Interface via Mechanical Vibrotactile
+  Stimulation
+uid: '3675213'
+volume: '8'

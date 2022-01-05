@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '29022224'
+- idtype: doi
+  value: 10.1007/s12264-017-0181-7
+- idtype: pmcid
+  value: PMC5856712
+authors:
+- authtype: Author
+  name: Chen Z
+- authtype: Author
+  name: Parkkonen L
+- authtype: Author
+  name: Wei J
+- authtype: Author
+  name: Dong JR
+- authtype: Author
+  name: Ma Y
+- authtype: Author
+  name: Carlson S
+epubdate: 2017 Oct 11
+fulljournalname: Neuroscience Bulletin
+issue: '2'
+pages: 291-302
+pmclivedate: 2019/04/01
+printpubdate: ''
+pubdate: 2017 Oct 11
+sortdate: 2017/10/11 00:00
+source: Neurosci Bull
+title: Prepulse Inhibition of Auditory Cortical Responses in the Caudolateral Superior
+  Temporal Gyrus in Macaca mulatta
+uid: '5856712'
+volume: '34'

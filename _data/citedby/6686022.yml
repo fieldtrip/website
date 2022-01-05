@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '31391537'
+- idtype: doi
+  value: 10.1038/s41598-019-47835-9
+- idtype: pmcid
+  value: PMC6686022
+authors:
+- authtype: Author
+  name: Sokoliuk R
+- authtype: Author
+  name: Calzolari S
+- authtype: Author
+  name: Cruse D
+epubdate: 2019 Aug 7
+fulljournalname: Scientific Reports
+issue: ''
+pages: '11482'
+pmclivedate: 2019/08/12
+printpubdate: ''
+pubdate: 2019 Aug 7
+sortdate: 2019/08/07 00:00
+source: Sci Rep
+title: Dissociable electrophysiological correlates of semantic access of motor and
+  non-motor concepts
+uid: '6686022'
+volume: '9'

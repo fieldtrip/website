@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '32916287'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2020.117356
+- idtype: pmcid
+  value: PMC8417768
+authors:
+- authtype: Author
+  name: Özkurt TE
+- authtype: Author
+  name: Akram H
+- authtype: Author
+  name: Zrinzo L
+- authtype: Author
+  name: Limousin P
+- authtype: Author
+  name: Foltynie T
+- authtype: Author
+  name: Oswal A
+- authtype: Author
+  name: Litvak V
+epubdate: ''
+fulljournalname: Neuroimage
+issue: ''
+pages: '117356'
+pmclivedate: 2021/09/08
+printpubdate: 2020 Dec
+pubdate: 2020 Dec
+sortdate: 2020/12/01 00:00
+source: Neuroimage
+title: Identification of nonlinear features in cortical and subcortical signals of
+  Parkinson's Disease patients via a novel efficient measure
+uid: '8417768'
+volume: '223'

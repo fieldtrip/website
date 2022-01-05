@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '29676529'
+- idtype: doi
+  value: 10.1002/aur.1954
+- idtype: pmcid
+  value: PMC6120494
+authors:
+- authtype: Author
+  name: Zwart FS
+- authtype: Author
+  name: Vissers CT
+- authtype: Author
+  name: Kessels RP
+- authtype: Author
+  name: Maes JH
+epubdate: 2018 Apr 20
+fulljournalname: Autism Research
+issue: '7'
+pages: 1050-1061
+pmclivedate: 2018/09/05
+printpubdate: 2018 Jul
+pubdate: 2018 Apr 20
+sortdate: 2018/04/20 00:00
+source: Autism Res
+title: 'Implicit learning seems to come naturally for children with autism, but not
+  for children with specific language impairment: Evidence from behavioral and ERP
+  data'
+uid: '6120494'
+volume: '11'

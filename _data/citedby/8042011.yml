@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '33846491'
+- idtype: doi
+  value: 10.1038/s41598-021-87191-1
+- idtype: pmcid
+  value: PMC8042011
+authors:
+- authtype: Author
+  name: Salto F
+- authtype: Author
+  name: Requena C
+- authtype: Author
+  name: Álvarez-Merino P
+- authtype: Author
+  name: Antón-Toro LF
+- authtype: Author
+  name: Maestú F
+epubdate: 2021 Apr 12
+fulljournalname: Scientific Reports
+issue: ''
+pages: '7982'
+pmclivedate: 2021/04/14
+printpubdate: ''
+pubdate: 2021 Apr 12
+sortdate: 2021/04/12 00:00
+source: Sci Rep
+title: Brain electrical traits of logical validity
+uid: '8042011'
+volume: '11'

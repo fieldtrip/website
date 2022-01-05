@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '26777277'
+- idtype: doi
+  value: 10.1016/j.neuron.2015.12.018
+- idtype: pmcid
+  value: PMC4871751
+- idtype: MID
+  value: NIHMS751586
+authors:
+- authtype: Author
+  name: Michalareas G
+- authtype: Author
+  name: Vezoli J
+- authtype: Author
+  name: van Pelt S
+- authtype: Author
+  name: Schoffelen JM
+- authtype: Author
+  name: Kennedy H
+- authtype: Author
+  name: Fries P
+epubdate: ''
+fulljournalname: Neuron
+issue: '2'
+pages: 384-397
+pmclivedate: 2017/01/20
+printpubdate: 2016 Jan 20
+pubdate: 2016 Jan 20
+sortdate: 2016/01/20 00:00
+source: Neuron
+title: Alpha-beta and gamma rhythms subserve feedback and feedforward influences among
+  human visual cortical areas
+uid: '4871751'
+volume: '89'

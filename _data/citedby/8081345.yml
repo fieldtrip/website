@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '33861737'
+- idtype: doi
+  value: 10.1371/journal.pcbi.1008929
+- idtype: pmcid
+  value: PMC8081345
+authors:
+- authtype: Author
+  name: Sase T
+- authtype: Author
+  name: Kitajo K
+epubdate: 2021 Apr 16
+fulljournalname: PLoS Computational Biology
+issue: '4'
+pages: e1008929
+pmclivedate: 2021/05/06
+printpubdate: ''
+pubdate: 2021 Apr 16
+sortdate: 2021/04/16 00:00
+source: PLoS Comput Biol
+title: The metastable brain associated with autistic-like traits of typically developing
+  individuals
+uid: '8081345'
+volume: '17'

@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '28116238'
+- idtype: doi
+  value: 10.1016/j.nicl.2016.12.004
+- idtype: pmcid
+  value: PMC5233797
+authors:
+- authtype: Author
+  name: Sergent C
+- authtype: Author
+  name: Faugeras F
+- authtype: Author
+  name: Rohaut B
+- authtype: Author
+  name: Perrin F
+- authtype: Author
+  name: Valente M
+- authtype: Author
+  name: Tallon-Baudry C
+- authtype: Author
+  name: Cohen L
+- authtype: Author
+  name: Naccache L
+epubdate: 2016 Dec 10
+fulljournalname: 'NeuroImage : Clinical'
+issue: ''
+pages: 455-469
+pmclivedate: 2017/01/23
+printpubdate: ''
+pubdate: 2016 Dec 10
+sortdate: 2016/12/10 00:00
+source: Neuroimage Clin
+title: 'Multidimensional cognitive evaluation of patients with disorders of consciousness
+  using EEG: A proof of concept study'
+uid: '5233797'
+volume: '13'

@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '24558410'
+- idtype: doi
+  value: 10.1371/journal.pone.0088674
+- idtype: pmcid
+  value: PMC3928283
+authors:
+- authtype: Author
+  name: Piai V
+- authtype: Author
+  name: Roelofs A
+- authtype: Author
+  name: Jensen O
+- authtype: Author
+  name: Schoffelen JM
+- authtype: Author
+  name: Bonnefond M
+epubdate: 2014 Feb 18
+fulljournalname: PLoS ONE
+issue: '2'
+pages: e88674
+pmclivedate: 2014/02/20
+printpubdate: ''
+pubdate: 2014 Feb 18
+sortdate: 2014/02/18 00:00
+source: PLoS One
+title: Distinct Patterns of Brain Activity Characterise Lexical Activation and Competition
+  in Spoken Word Production
+uid: '3928283'
+volume: '9'

@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '33488500'
+- idtype: doi
+  value: 10.3389/fneur.2020.605696
+- idtype: pmcid
+  value: PMC7815703
+authors:
+- authtype: Author
+  name: Greene P
+- authtype: Author
+  name: Li A
+- authtype: Author
+  name: González-Martínez J
+- authtype: Author
+  name: Sarma SV
+epubdate: 2021 Jan 6
+fulljournalname: Frontiers in Neurology
+issue: ''
+pages: '605696'
+pmclivedate: 2021/01/21
+printpubdate: ''
+pubdate: 2021 Jan 6
+sortdate: 2021/01/06 00:00
+source: Front Neurol
+title: Classification of Stereo-EEG Contacts in White Matter vs. Gray Matter Using
+  Recorded Activity
+uid: '7815703'
+volume: '11'

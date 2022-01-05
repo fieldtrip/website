@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '32533810'
+- idtype: doi
+  value: 10.1002/hbm.25088
+- idtype: pmcid
+  value: PMC7416058
+authors:
+- authtype: Author
+  name: Mossad SI
+- authtype: Author
+  name: Muscat C
+- authtype: Author
+  name: Pang EW
+- authtype: Author
+  name: Taylor M
+epubdate: 2020 Jun 13
+fulljournalname: Human Brain Mapping
+issue: '13'
+pages: 3794-3806
+pmclivedate: 2020/08/10
+printpubdate: ''
+pubdate: 2020 Jun 13
+sortdate: 2020/06/13 00:00
+source: Hum Brain Mapp
+title: Emerging atypical connectivity networks for processing angry and fearful faces
+  in very preterm born children
+uid: '7416058'
+volume: '41'

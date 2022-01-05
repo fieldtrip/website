@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '32650054'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2020.117143
+- idtype: pmcid
+  value: PMC7762843
+authors:
+- authtype: Author
+  name: Kozunov VV
+- authtype: Author
+  name: West TO
+- authtype: Author
+  name: Nikolaeva AY
+- authtype: Author
+  name: Stroganova TA
+- authtype: Author
+  name: Friston KJ
+epubdate: ''
+fulljournalname: Neuroimage
+issue: ''
+pages: '117143'
+pmclivedate: 2020/12/28
+printpubdate: 2020 Nov 1
+pubdate: 2020 Nov 1
+sortdate: 2020/11/01 00:00
+source: Neuroimage
+title: Object recognition is enabled by an experience-dependent appraisal of visual
+  features in the brain’s value system
+uid: '7762843'
+volume: '221'

@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '25799178'
+- idtype: doi
+  value: 10.1371/journal.pone.0120123
+- idtype: pmcid
+  value: PMC4370720
+authors:
+- authtype: Author
+  name: Zobay O
+- authtype: Author
+  name: Palmer AR
+- authtype: Author
+  name: Hall DA
+- authtype: Author
+  name: Sereda M
+- authtype: Author
+  name: Adjamian P
+epubdate: 2015 Mar 23
+fulljournalname: PLoS ONE
+issue: '3'
+pages: e0120123
+pmclivedate: 2015/04/04
+printpubdate: ''
+pubdate: 2015 Mar 23
+sortdate: 2015/03/23 00:00
+source: PLoS One
+title: Source Space Estimation of Oscillatory Power and Brain Connectivity in Tinnitus
+uid: '4370720'
+volume: '10'

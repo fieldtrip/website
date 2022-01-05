@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '27917105'
+- idtype: doi
+  value: 10.3389/fnins.2016.00528
+- idtype: pmcid
+  value: PMC5114310
+authors:
+- authtype: Author
+  name: Shishkin SL
+- authtype: Author
+  name: Nuzhdin YO
+- authtype: Author
+  name: Svirin EP
+- authtype: Author
+  name: Trofimov AG
+- authtype: Author
+  name: Fedorova AA
+- authtype: Author
+  name: Kozyrskiy BL
+- authtype: Author
+  name: Velichkovsky BM
+epubdate: 2016 Nov 18
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '528'
+pmclivedate: 2016/12/02
+printpubdate: ''
+pubdate: 2016 Nov 18
+sortdate: 2016/11/18 00:00
+source: Front Neurosci
+title: 'EEG Negativity in Fixations Used for Gaze-Based Control: Toward Converting
+  Intentions into Actions with an Eye-Brain-Computer Interface'
+uid: '5114310'
+volume: '10'

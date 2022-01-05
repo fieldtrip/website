@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '24872567'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.4216-13.2014
+- idtype: pmcid
+  value: PMC4035524
+authors:
+- authtype: Author
+  name: Bastos AM
+- authtype: Author
+  name: Briggs F
+- authtype: Author
+  name: Alitto HJ
+- authtype: Author
+  name: Mangun GR
+- authtype: Author
+  name: Usrey WM
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '22'
+pages: 7639-7644
+pmclivedate: 2014/11/28
+printpubdate: 2014 May 28
+pubdate: 2014 May 28
+sortdate: 2014/05/28 00:00
+source: J Neurosci
+title: Simultaneous Recordings from the Primary Visual Cortex and Lateral Geniculate
+  Nucleus Reveal Rhythmic Interactions and a Cortical Source for Gamma-Band Oscillations
+uid: '4035524'
+volume: '34'

@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '30086409'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2018.08.001
+- idtype: pmcid
+  value: PMC6205696
+- idtype: MID
+  value: NIHMS993729
+authors:
+- authtype: Author
+  name: Hsu SH
+- authtype: Author
+  name: Pion-Tonachini L
+- authtype: Author
+  name: Palmer J
+- authtype: Author
+  name: Miyakoshi M
+- authtype: Author
+  name: Makeig S
+- authtype: Author
+  name: Jung TP
+epubdate: 2018 Aug 4
+fulljournalname: NeuroImage
+issue: ''
+pages: 47-61
+pmclivedate: 2019/12/01
+printpubdate: 2018 Dec
+pubdate: 2018 Aug 4
+sortdate: 2018/08/04 00:00
+source: Neuroimage
+title: Modeling Brain Dynamic State Changes with Adaptive Mixture Independent Component
+  Analysis
+uid: '6205696'
+volume: '183'

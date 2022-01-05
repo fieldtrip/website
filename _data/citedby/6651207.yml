@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '31247966'
+- idtype: doi
+  value: 10.3390/s19132841
+- idtype: pmcid
+  value: PMC6651207
+authors:
+- authtype: Author
+  name: Villalba-Diez J
+- authtype: Author
+  name: Zheng X
+- authtype: Author
+  name: Schmidt D
+- authtype: Author
+  name: Molina M
+epubdate: 2019 Jun 26
+fulljournalname: Sensors (Basel, Switzerland)
+issue: '13'
+pages: '2841'
+pmclivedate: 2019/08/07
+printpubdate: ''
+pubdate: 2019 Jun 26
+sortdate: 2019/06/26 00:00
+source: Sensors (Basel)
+title: Characterization of Industry 4.0 Lean Management Problem-Solving Behavioral
+  Patterns Using EEG Sensors and Deep Learning
+uid: '6651207'
+volume: '19'

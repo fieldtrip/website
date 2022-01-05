@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '31073395'
+- idtype: doi
+  value: 10.1186/s13229-019-0272-6
+- idtype: pmcid
+  value: PMC6498518
+authors:
+- authtype: Author
+  name: Wenhart T
+- authtype: Author
+  name: Bethlehem RA
+- authtype: Author
+  name: Baron-Cohen S
+- authtype: Author
+  name: Altenmüller E
+epubdate: 2019 May 2
+fulljournalname: Molecular Autism
+issue: ''
+pages: '20'
+pmclivedate: 2019/05/09
+printpubdate: ''
+pubdate: 2019 May 2
+sortdate: 2019/05/02 00:00
+source: Mol Autism
+title: 'Autistic traits, resting-state connectivity, and absolute pitch in professional
+  musicians: shared and distinct neural features'
+uid: '6498518'
+volume: '10'

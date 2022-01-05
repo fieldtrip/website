@@ -1,0 +1,44 @@
+articleids:
+- idtype: pmid
+  value: '31848384'
+- idtype: doi
+  value: 10.1038/s41598-019-55591-z
+- idtype: pmcid
+  value: PMC6917705
+authors:
+- authtype: Author
+  name: Strauss I
+- authtype: Author
+  name: Valle G
+- authtype: Author
+  name: Artoni F
+- authtype: Author
+  name: D’Anna E
+- authtype: Author
+  name: Granata G
+- authtype: Author
+  name: Di Iorio R
+- authtype: Author
+  name: Guiraud D
+- authtype: Author
+  name: Stieglitz T
+- authtype: Author
+  name: Rossini PM
+- authtype: Author
+  name: Raspopovic S
+- authtype: Author
+  name: Petrini FM
+- authtype: Author
+  name: Micera S
+epubdate: 2019 Dec 17
+fulljournalname: Scientific Reports
+issue: ''
+pages: '19258'
+pmclivedate: 2019/12/18
+printpubdate: ''
+pubdate: 2019 Dec 17
+sortdate: 2019/12/17 00:00
+source: Sci Rep
+title: Characterization of multi-channel intraneural stimulation in transradial amputees
+uid: '6917705'
+volume: '9'

@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '29380945'
+- idtype: doi
+  value: 10.1002/hbm.23987
+- idtype: pmcid
+  value: PMC5947738
+authors:
+- authtype: Author
+  name: Drijvers L
+- authtype: Author
+  name: Özyürek A
+- authtype: Author
+  name: Jensen O
+epubdate: 2018 Jan 30
+fulljournalname: Human Brain Mapping
+issue: '5'
+pages: 2075-2087
+pmclivedate: 2018/05/17
+printpubdate: ''
+pubdate: 2018 Jan 30
+sortdate: 2018/01/30 00:00
+source: Hum Brain Mapp
+title: 'Hearing and seeing meaning in noise: Alpha, beta, and gamma oscillations predict
+  gestural enhancement of degraded speech comprehension'
+uid: '5947738'
+volume: '39'

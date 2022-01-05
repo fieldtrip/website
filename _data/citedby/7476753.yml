@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '32820722'
+- idtype: doi
+  value: 10.7554/eLife.53715
+- idtype: pmcid
+  value: PMC7476753
+authors:
+- authtype: Author
+  name: Mahjoory K
+- authtype: Author
+  name: Schoffelen JM
+- authtype: Author
+  name: Keitel A
+- authtype: Author
+  name: Gross J
+epubdate: 2020 Aug 21
+fulljournalname: eLife
+issue: ''
+pages: e53715
+pmclivedate: 2020/09/09
+printpubdate: ''
+pubdate: 2020 Aug 21
+sortdate: 2020/08/21 00:00
+source: eLife
+title: The frequency gradient of human resting-state brain oscillations follows cortical
+  hierarchies
+uid: '7476753'
+volume: '9'

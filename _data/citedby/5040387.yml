@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '27358316'
+- idtype: doi
+  value: 10.1152/jn.00215.2016
+- idtype: pmcid
+  value: PMC5040387
+authors:
+- authtype: Author
+  name: Gopalakrishnan R
+- authtype: Author
+  name: Burgess RC
+- authtype: Author
+  name: Lempka SF
+- authtype: Author
+  name: Gale JT
+- authtype: Author
+  name: Floden DP
+- authtype: Author
+  name: Machado AG
+epubdate: 2016 Jun 29
+fulljournalname: Journal of Neurophysiology
+issue: '3'
+pages: 1387-1395
+pmclivedate: 2017/09/01
+printpubdate: 2016 Sep 1
+pubdate: 2016 Jun 29
+sortdate: 2016/06/29 00:00
+source: J Neurophysiol
+title: 'Pain anticipatory phenomena in patients with central poststroke pain: a magnetoencephalography
+  study'
+uid: '5040387'
+volume: '116'

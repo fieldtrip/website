@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '26843646'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.2351-15.2016
+- idtype: pmcid
+  value: PMC6601987
+authors:
+- authtype: Author
+  name: Cambiaghi M
+- authtype: Author
+  name: Grosso A
+- authtype: Author
+  name: Likhtik E
+- authtype: Author
+  name: Mazziotti R
+- authtype: Author
+  name: Concina G
+- authtype: Author
+  name: Renna A
+- authtype: Author
+  name: Sacco T
+- authtype: Author
+  name: Gordon JA
+- authtype: Author
+  name: Sacchetti B
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '5'
+pages: 1647-1659
+pmclivedate: 2019/07/12
+printpubdate: 2016 Feb 3
+pubdate: 2016 Feb 3
+sortdate: 2016/02/03 00:00
+source: J Neurosci
+title: Higher-Order Sensory Cortex Drives Basolateral Amygdala Activity during the
+  Recall of Remote, but Not Recently Learned Fearful Memories
+uid: '6601987'
+volume: '36'

@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '29379426'
+- idtype: doi
+  value: 10.3389/fnhum.2017.00650
+- idtype: pmcid
+  value: PMC5770807
+authors:
+- authtype: Author
+  name: Kozunov V
+- authtype: Author
+  name: Nikolaeva A
+- authtype: Author
+  name: Stroganova TA
+epubdate: 2018 Jan 9
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '650'
+pmclivedate: 2018/01/29
+printpubdate: ''
+pubdate: 2018 Jan 9
+sortdate: 2018/01/09 00:00
+source: Front Hum Neurosci
+title: Categorization for Faces and Tools—Two Classes of Objects Shaped by Different
+  Experience—Differs in Processing Timing, Brain Areas Involved, and Repetition Effects
+uid: '5770807'
+volume: '11'

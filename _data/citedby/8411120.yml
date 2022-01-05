@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '34433059'
+- idtype: doi
+  value: 10.1016/j.celrep.2021.109554
+- idtype: pmcid
+  value: PMC8411120
+authors:
+- authtype: Author
+  name: Glomb K
+- authtype: Author
+  name: Kringelbach ML
+- authtype: Author
+  name: Deco G
+- authtype: Author
+  name: Hagmann P
+- authtype: Author
+  name: Pearson J
+- authtype: Author
+  name: Atasoy S
+epubdate: 2021 Aug 24
+fulljournalname: Cell Reports
+issue: '8'
+pages: '109554'
+pmclivedate: 2021/09/03
+printpubdate: ''
+pubdate: 2021 Aug 24
+sortdate: 2021/08/24 00:00
+source: Cell Rep
+title: Functional harmonics reveal multi-dimensional basis functions underlying cortical
+  organization
+uid: '8411120'
+volume: '36'

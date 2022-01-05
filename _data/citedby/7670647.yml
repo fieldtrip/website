@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '32822098'
+- idtype: doi
+  value: 10.1002/hbm.25183
+- idtype: pmcid
+  value: PMC7670647
+authors:
+- authtype: Author
+  name: Zhigalov A
+- authtype: Author
+  name: Jensen O
+epubdate: 2020 Aug 21
+fulljournalname: Human Brain Mapping
+issue: '18'
+pages: 5176-5186
+pmclivedate: 2020/11/23
+printpubdate: ''
+pubdate: 2020 Aug 21
+sortdate: 2020/08/21 00:00
+source: Hum Brain Mapp
+title: Alpha oscillations do not implement gain control in early visual cortex but
+  rather gating in parieto‐occipital regions
+uid: '7670647'
+volume: '41'

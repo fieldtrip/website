@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '29529085'
+- idtype: doi
+  value: 10.1371/journal.pone.0193107
+- idtype: pmcid
+  value: PMC5846788
+authors:
+- authtype: Author
+  name: Kupers ER
+- authtype: Author
+  name: Wang HX
+- authtype: Author
+  name: Amano K
+- authtype: Author
+  name: Kay KN
+- authtype: Author
+  name: Heeger DJ
+- authtype: Author
+  name: Winawer J
+epubdate: 2018 Mar 12
+fulljournalname: PLoS ONE
+issue: '3'
+pages: e0193107
+pmclivedate: 2018/03/23
+printpubdate: ''
+pubdate: 2018 Mar 12
+sortdate: 2018/03/12 00:00
+source: PLoS One
+title: A non-invasive, quantitative study of broadband spectral responses in human
+  visual cortex
+uid: '5846788'
+volume: '13'

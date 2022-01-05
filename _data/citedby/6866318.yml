@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '29024165'
+- idtype: doi
+  value: 10.1002/hbm.23837
+- idtype: pmcid
+  value: PMC6866318
+authors:
+- authtype: Author
+  name: Pellegrino G
+- authtype: Author
+  name: Hedrich T
+- authtype: Author
+  name: Chowdhury RA
+- authtype: Author
+  name: Hall JA
+- authtype: Author
+  name: Dubeau F
+- authtype: Author
+  name: Lina J
+- authtype: Author
+  name: Kobayashi E
+- authtype: Author
+  name: Grova C
+epubdate: 2017 Oct 11
+fulljournalname: Human Brain Mapping
+issue: '1'
+pages: 218-231
+pmclivedate: 2020/06/12
+printpubdate: ''
+pubdate: 2017 Oct 11
+sortdate: 2017/10/11 00:00
+source: Hum Brain Mapp
+title: 'Clinical yield of magnetoencephalography distributed source imaging in epilepsy:
+  A comparison with equivalent current dipole method'
+uid: '6866318'
+volume: '39'

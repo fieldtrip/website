@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '22973204'
+- idtype: doi
+  value: 10.3389/fnint.2012.00067
+- idtype: pmcid
+  value: PMC3434358
+authors:
+- authtype: Author
+  name: Krause H
+- authtype: Author
+  name: Schneider TR
+- authtype: Author
+  name: Engel AK
+- authtype: Author
+  name: Senkowski D
+epubdate: 2012 Sep 6
+fulljournalname: Frontiers in Integrative Neuroscience
+issue: ''
+pages: '67'
+pmclivedate: 2012/09/12
+printpubdate: ''
+pubdate: 2012 Sep 6
+sortdate: 2012/09/06 00:00
+source: Front Integr Neurosci
+title: Capture of visual attention interferes with multisensory speech processing
+uid: '3434358'
+volume: '6'

@@ -1,0 +1,99 @@
+articleids:
+- idtype: pmid
+  value: '31239438'
+- idtype: doi
+  value: 10.1038/s41597-019-0105-7
+- idtype: pmcid
+  value: PMC6592874
+authors:
+- authtype: Author
+  name: Holdgraf C
+- authtype: Author
+  name: Appelhoff S
+- authtype: Author
+  name: Bickel S
+- authtype: Author
+  name: Bouchard K
+- authtype: Author
+  name: D’Ambrosio S
+- authtype: Author
+  name: David O
+- authtype: Author
+  name: Devinsky O
+- authtype: Author
+  name: Dichter B
+- authtype: Author
+  name: Flinker A
+- authtype: Author
+  name: Foster BL
+- authtype: Author
+  name: Gorgolewski KJ
+- authtype: Author
+  name: Groen I
+- authtype: Author
+  name: Groppe D
+- authtype: Author
+  name: Gunduz A
+- authtype: Author
+  name: Hamilton L
+- authtype: Author
+  name: Honey CJ
+- authtype: Author
+  name: Jas M
+- authtype: Author
+  name: Knight R
+- authtype: Author
+  name: Lachaux JP
+- authtype: Author
+  name: Lau JC
+- authtype: Author
+  name: Lee-Messer C
+- authtype: Author
+  name: Lundstrom BN
+- authtype: Author
+  name: Miller KJ
+- authtype: Author
+  name: Ojemann JG
+- authtype: Author
+  name: Oostenveld R
+- authtype: Author
+  name: Petridou N
+- authtype: Author
+  name: Piantoni G
+- authtype: Author
+  name: Pigorini A
+- authtype: Author
+  name: Pouratian N
+- authtype: Author
+  name: Ramsey NF
+- authtype: Author
+  name: Stolk A
+- authtype: Author
+  name: Swann NC
+- authtype: Author
+  name: Tadel F
+- authtype: Author
+  name: Voytek B
+- authtype: Author
+  name: Wandell BA
+- authtype: Author
+  name: Winawer J
+- authtype: Author
+  name: Whitaker K
+- authtype: Author
+  name: Zehl L
+- authtype: Author
+  name: Hermes D
+epubdate: 2019 Jun 25
+fulljournalname: Scientific Data
+issue: ''
+pages: '102'
+pmclivedate: 2019/06/26
+printpubdate: ''
+pubdate: 2019 Jun 25
+sortdate: 2019/06/25 00:00
+source: Sci Data
+title: iEEG-BIDS, extending the Brain Imaging Data Structure specification to human
+  intracranial electrophysiology
+uid: '6592874'
+volume: '6'

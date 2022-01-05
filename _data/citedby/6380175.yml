@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '30809139'
+- idtype: doi
+  value: 10.3389/fnhum.2019.00043
+- idtype: pmcid
+  value: PMC6380175
+authors:
+- authtype: Author
+  name: Haberbosch L
+- authtype: Author
+  name: Schmidt S
+- authtype: Author
+  name: Jooss A
+- authtype: Author
+  name: Köhn A
+- authtype: Author
+  name: Kozarzewski L
+- authtype: Author
+  name: Rönnefarth M
+- authtype: Author
+  name: Scholz M
+- authtype: Author
+  name: Brandt SA
+epubdate: 2019 Feb 12
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '43'
+pmclivedate: 2019/02/26
+printpubdate: ''
+pubdate: 2019 Feb 12
+sortdate: 2019/02/12 00:00
+source: Front Hum Neurosci
+title: Rebound or Entrainment? The Influence of Alternating Current Stimulation on
+  Individual Alpha
+uid: '6380175'
+volume: '13'

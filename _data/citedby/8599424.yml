@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '34789746'
+- idtype: doi
+  value: 10.1038/s41598-021-00492-3
+- idtype: pmcid
+  value: PMC8599424
+authors:
+- authtype: Author
+  name: Czepiel A
+- authtype: Author
+  name: Fink LK
+- authtype: Author
+  name: Fink LT
+- authtype: Author
+  name: Wald-Fuhrmann M
+- authtype: Author
+  name: Tröndle M
+- authtype: Author
+  name: Merrill J
+epubdate: 2021 Nov 17
+fulljournalname: Scientific Reports
+issue: ''
+pages: '22457'
+pmclivedate: 2021/11/19
+printpubdate: ''
+pubdate: 2021 Nov 17
+sortdate: 2021/11/17 00:00
+source: Sci Rep
+title: 'Synchrony in the periphery: inter-subject correlation of physiological responses
+  during live music concerts'
+uid: '8599424'
+volume: '11'

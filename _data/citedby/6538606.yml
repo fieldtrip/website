@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '31138854'
+- idtype: doi
+  value: 10.1038/s41598-019-44403-z
+- idtype: pmcid
+  value: PMC6538606
+authors:
+- authtype: Author
+  name: Mamashli F
+- authtype: Author
+  name: Hämäläinen M
+- authtype: Author
+  name: Ahveninen J
+- authtype: Author
+  name: Kenet T
+- authtype: Author
+  name: Khan S
+epubdate: 2019 May 28
+fulljournalname: Scientific Reports
+issue: ''
+pages: '7942'
+pmclivedate: 2019/06/06
+printpubdate: ''
+pubdate: 2019 May 28
+sortdate: 2019/05/28 00:00
+source: Sci Rep
+title: Permutation Statistics for Connectivity Analysis between Regions of Interest
+  in EEG and MEG Data
+uid: '6538606'
+volume: '9'

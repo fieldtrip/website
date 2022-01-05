@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '22615686'
+- idtype: doi
+  value: 10.3389/fncir.2012.00029
+- idtype: pmcid
+  value: PMC3351760
+authors:
+- authtype: Author
+  name: Hales CM
+- authtype: Author
+  name: Zeller-Townson R
+- authtype: Author
+  name: Newman JP
+- authtype: Author
+  name: Shoemaker JT
+- authtype: Author
+  name: Killian NJ
+- authtype: Author
+  name: Potter SM
+epubdate: 2012 May 15
+fulljournalname: Frontiers in Neural Circuits
+issue: ''
+pages: '29'
+pmclivedate: 2012/05/21
+printpubdate: ''
+pubdate: 2012 May 15
+sortdate: 2012/05/15 00:00
+source: Front Neural Circuits
+title: Stimulus-evoked high frequency oscillations are present in neuronal networks
+  on microelectrode arrays
+uid: '3351760'
+volume: '6'

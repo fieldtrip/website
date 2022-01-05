@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '24831291'
+- idtype: doi
+  value: 10.1371/journal.pone.0097561
+- idtype: pmcid
+  value: PMC4022529
+authors:
+- authtype: Author
+  name: Tseng YJ
+- authtype: Author
+  name: Chen RS
+- authtype: Author
+  name: Hsu WY
+- authtype: Author
+  name: Hsiao FJ
+- authtype: Author
+  name: Lin YY
+epubdate: 2014 May 15
+fulljournalname: PLoS ONE
+issue: '5'
+pages: e97561
+pmclivedate: 2014/05/21
+printpubdate: ''
+pubdate: 2014 May 15
+sortdate: 2014/05/15 00:00
+source: PLoS One
+title: Reduced Motor Cortex Deactivation in Individuals Who Suffer from Writer's Cramp
+uid: '4022529'
+volume: '9'

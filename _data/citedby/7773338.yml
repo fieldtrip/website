@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '33300873'
+- idtype: doi
+  value: 10.7554/eLife.62500
+- idtype: pmcid
+  value: PMC7773338
+authors:
+- authtype: Author
+  name: Dannenberg H
+- authtype: Author
+  name: Lazaro H
+- authtype: Author
+  name: Nambiar P
+- authtype: Author
+  name: Hoyland A
+- authtype: Author
+  name: Hasselmo ME
+epubdate: 2020 Dec 10
+fulljournalname: eLife
+issue: ''
+pages: e62500
+pmclivedate: 2021/01/04
+printpubdate: ''
+pubdate: 2020 Dec 10
+sortdate: 2020/12/10 00:00
+source: eLife
+title: Effects of visual inputs on neural dynamics for coding of location and running
+  speed in medial entorhinal cortex
+uid: '7773338'
+volume: '9'

@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '25128255'
+- idtype: doi
+  value: 10.1016/j.jneumeth.2014.08.003
+- idtype: pmcid
+  value: PMC4510917
+authors:
+- authtype: Author
+  name: Pernet CR
+- authtype: Author
+  name: Latinus M
+- authtype: Author
+  name: Nichols TE
+- authtype: Author
+  name: Rousselet GA
+epubdate: ''
+fulljournalname: Journal of Neuroscience Methods
+issue: ''
+pages: 85-93
+pmclivedate: 2015/08/07
+printpubdate: 2015 Jul 30
+pubdate: 2015 Jul 30
+sortdate: 2015/07/30 00:00
+source: J Neurosci Methods
+title: 'Cluster-based computational methods for mass univariate analyses of event-related
+  brain potentials/fields: A simulation study'
+uid: '4510917'
+volume: '250'

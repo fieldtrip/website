@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '26356682'
+- idtype: doi
+  value: 10.1002/hbm.22986
+- idtype: pmcid
+  value: PMC6869042
+authors:
+- authtype: Author
+  name: Lizarazu M
+- authtype: Author
+  name: Lallier M
+- authtype: Author
+  name: Molinaro N
+- authtype: Author
+  name: Bourguignon M
+- authtype: Author
+  name: Paz‐Alonso PM
+- authtype: Author
+  name: Lerma‐Usabiaga G
+- authtype: Author
+  name: Carreiras M
+epubdate: 2015 Sep 10
+fulljournalname: Human Brain Mapping
+issue: '12'
+pages: 4986-5002
+pmclivedate: 2020/06/12
+printpubdate: ''
+pubdate: 2015 Sep 10
+sortdate: 2015/09/10 00:00
+source: Hum Brain Mapp
+title: 'Developmental evaluation of atypical auditory sampling in dyslexia: Functional
+  and structural evidence'
+uid: '6869042'
+volume: '36'

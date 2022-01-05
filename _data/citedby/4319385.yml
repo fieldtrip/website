@@ -1,0 +1,24 @@
+articleids:
+- idtype: pmid
+  value: '25705174'
+- idtype: doi
+  value: 10.3389/fnins.2015.00011
+- idtype: pmcid
+  value: PMC4319385
+authors:
+- authtype: Author
+  name: van Wassenhove V
+- authtype: Author
+  name: Grzeczkowski L
+epubdate: 2015 Feb 6
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '11'
+pmclivedate: 2015/02/20
+printpubdate: ''
+pubdate: 2015 Feb 6
+sortdate: 2015/02/06 00:00
+source: Front Neurosci
+title: Visual-induced expectations modulate auditory cortical responses
+uid: '4319385'
+volume: '9'

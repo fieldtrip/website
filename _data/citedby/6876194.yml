@@ -1,0 +1,53 @@
+articleids:
+- idtype: pmid
+  value: '31685634'
+- idtype: doi
+  value: 10.1073/pnas.1913092116
+- idtype: pmcid
+  value: PMC6876194
+authors:
+- authtype: Author
+  name: Halgren M
+- authtype: Author
+  name: Ulbert I
+- authtype: Author
+  name: Bastuji H
+- authtype: Author
+  name: Fabó D
+- authtype: Author
+  name: Erőss L
+- authtype: Author
+  name: Rey M
+- authtype: Author
+  name: Devinsky O
+- authtype: Author
+  name: Doyle WK
+- authtype: Author
+  name: Mak-McCully R
+- authtype: Author
+  name: Halgren E
+- authtype: Author
+  name: Wittner L
+- authtype: Author
+  name: Chauvel P
+- authtype: Author
+  name: Heit G
+- authtype: Author
+  name: Eskandar E
+- authtype: Author
+  name: Mandell A
+- authtype: Author
+  name: Cash SS
+epubdate: 2019 Nov 4
+fulljournalname: Proceedings of the National Academy of Sciences of the United States
+  of America
+issue: '47'
+pages: 23772-23782
+pmclivedate: 2020/05/04
+printpubdate: 2019 Nov 19
+pubdate: 2019 Nov 4
+sortdate: 2019/11/04 00:00
+source: Proc Natl Acad Sci U S A
+title: The generation and propagation of the human alpha rhythm
+uid: '6876194'
+volume: '116'

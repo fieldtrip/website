@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '32039100'
+- idtype: doi
+  value: 10.31661/jbpe.v0i0.937
+- idtype: pmcid
+  value: PMC6943854
+authors:
+- authtype: Author
+  name: Mohagheghian F
+- authtype: Author
+  name: Makkiabadi B
+- authtype: Author
+  name: Jalilvand H
+- authtype: Author
+  name: Khajehpoor H
+- authtype: Author
+  name: Samadzadehaghdam N
+- authtype: Author
+  name: Eqlimi E
+- authtype: Author
+  name: Deevband1 MR
+epubdate: 2019 Dec 1
+fulljournalname: Journal of Biomedical Physics & Engineering
+issue: '6'
+pages: 687-698
+pmclivedate: 2020/02/07
+printpubdate: ''
+pubdate: 2019 Dec 1
+sortdate: 2019/12/01 00:00
+source: J Biomed Phys Eng
+title: Computer-Aided Tinnitus Detection based on Brain Network Analysis of EEG Functional
+  Connectivity
+uid: '6943854'
+volume: '9'

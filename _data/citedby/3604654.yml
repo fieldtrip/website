@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '23519842'
+- idtype: doi
+  value: 10.3389/fnhum.2013.00091
+- idtype: pmcid
+  value: PMC3604654
+authors:
+- authtype: Author
+  name: Awasthi B
+- authtype: Author
+  name: Sowman PF
+- authtype: Author
+  name: Friedman J
+- authtype: Author
+  name: Williams MA
+epubdate: 2013 Mar 21
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '91'
+pmclivedate: 2013/03/21
+printpubdate: ''
+pubdate: 2013 Mar 21
+sortdate: 2013/03/21 00:00
+source: Front Hum Neurosci
+title: 'Distinct spatial scale sensitivities for early categorization of faces and
+  places: neuromagnetic and behavioral findings'
+uid: '3604654'
+volume: '7'

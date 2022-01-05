@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '28119184'
+- idtype: doi
+  value: 10.1016/j.dcn.2017.01.001
+- idtype: pmcid
+  value: PMC6987761
+authors:
+- authtype: Author
+  name: Endedijk HM
+- authtype: Author
+  name: Meyer M
+- authtype: Author
+  name: Bekkering H
+- authtype: Author
+  name: Cillessen AH
+- authtype: Author
+  name: Hunnius S
+epubdate: 2017 Jan 7
+fulljournalname: Developmental Cognitive Neuroscience
+issue: ''
+pages: 33-41
+pmclivedate: 2020/02/03
+printpubdate: ''
+pubdate: 2017 Jan 7
+sortdate: 2017/01/07 00:00
+source: Dev Cogn Neurosci
+title: 'Neural mirroring and social interaction: Motor system involvement during action
+  observation relates to early peer cooperation'
+uid: '6987761'
+volume: '24'

@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '30738205'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2019.02.012
+- idtype: pmcid
+  value: PMC6503945
+authors:
+- authtype: Author
+  name: Babo-Rebelo M
+- authtype: Author
+  name: Buot A
+- authtype: Author
+  name: Tallon-Baudry C
+epubdate: ''
+fulljournalname: Neuroimage
+issue: ''
+pages: 10-20
+pmclivedate: 2019/05/10
+printpubdate: 2019 May 1
+pubdate: 2019 May 1
+sortdate: 2019/05/01 00:00
+source: Neuroimage
+title: Neural responses to heartbeats distinguish self from other during imagination
+uid: '6503945'
+volume: '191'

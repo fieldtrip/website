@@ -1,0 +1,24 @@
+articleids:
+- idtype: pmid
+  value: '24959126'
+- idtype: doi
+  value: 10.3389/fnhum.2014.00374
+- idtype: pmcid
+  value: PMC4051129
+authors:
+- authtype: Author
+  name: Noyce A
+- authtype: Author
+  name: Sekuler R
+epubdate: 2014 Jun 10
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '374'
+pmclivedate: 2014/06/23
+printpubdate: ''
+pubdate: 2014 Jun 10
+sortdate: 2014/06/10 00:00
+source: Front Hum Neurosci
+title: Violations of newly-learned predictions elicit two distinct P3 components
+uid: '4051129'
+volume: '8'

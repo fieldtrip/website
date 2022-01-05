@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '34577225'
+- idtype: doi
+  value: 10.3390/s21186021
+- idtype: pmcid
+  value: PMC8472204
+authors:
+- authtype: Author
+  name: Khramova MV
+- authtype: Author
+  name: Kuc AK
+- authtype: Author
+  name: Maksimenko VA
+- authtype: Author
+  name: Frolov NS
+- authtype: Author
+  name: Grubov VV
+- authtype: Author
+  name: Kurkin SA
+- authtype: Author
+  name: Pisarchik AN
+- authtype: Author
+  name: Shusharina NN
+- authtype: Author
+  name: Fedorov AA
+- authtype: Author
+  name: Hramov AE
+epubdate: 2021 Sep 8
+fulljournalname: Sensors (Basel, Switzerland)
+issue: '18'
+pages: '6021'
+pmclivedate: 2021/09/28
+printpubdate: ''
+pubdate: 2021 Sep 8
+sortdate: 2021/09/08 00:00
+source: Sensors (Basel)
+title: Monitoring the Cortical Activity of Children and Adults during Cognitive Task
+  Completion
+uid: '8472204'
+volume: '21'

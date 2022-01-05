@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '31934855'
+- idtype: doi
+  value: 10.7554/eLife.48764
+- idtype: pmcid
+  value: PMC7000216
+authors:
+- authtype: Author
+  name: Fan X
+- authtype: Author
+  name: Wang F
+- authtype: Author
+  name: Shao H
+- authtype: Author
+  name: Zhang P
+- authtype: Author
+  name: He S
+epubdate: 2020 Jan 14
+fulljournalname: eLife
+issue: ''
+pages: e48764
+pmclivedate: 2020/02/06
+printpubdate: ''
+pubdate: 2020 Jan 14
+sortdate: 2020/01/14 00:00
+source: eLife
+title: The bottom-up and top-down processing of faces in the human occipitotemporal
+  cortex
+uid: '7000216'
+volume: '9'

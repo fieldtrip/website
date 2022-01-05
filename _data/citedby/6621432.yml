@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '23077059'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1777-12.2012
+- idtype: pmcid
+  value: PMC6621432
+authors:
+- authtype: Author
+  name: Hanslmayr S
+- authtype: Author
+  name: Volberg G
+- authtype: Author
+  name: Wimber M
+- authtype: Author
+  name: Oehler N
+- authtype: Author
+  name: Staudigl T
+- authtype: Author
+  name: Hartmann T
+- authtype: Author
+  name: Raabe M
+- authtype: Author
+  name: Greenlee MW
+- authtype: Author
+  name: Bäuml KH
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '42'
+pages: 14742-14751
+pmclivedate: 2019/07/18
+printpubdate: 2012 Oct 17
+pubdate: 2012 Oct 17
+sortdate: 2012/10/17 00:00
+source: J Neurosci
+title: Prefrontally Driven Downregulation of Neural Synchrony Mediates Goal-Directed
+  Forgetting
+uid: '6621432'
+volume: '32'

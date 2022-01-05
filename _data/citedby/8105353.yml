@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '33963226'
+- idtype: doi
+  value: 10.1038/s41598-021-89206-3
+- idtype: pmcid
+  value: PMC8105353
+authors:
+- authtype: Author
+  name: Taesler P
+- authtype: Author
+  name: Rose M
+epubdate: 2021 May 7
+fulljournalname: Scientific Reports
+issue: ''
+pages: '9795'
+pmclivedate: 2021/05/10
+printpubdate: ''
+pubdate: 2021 May 7
+sortdate: 2021/05/07 00:00
+source: Sci Rep
+title: The modulation of neural insular activity by a brain computer interface differentially
+  affects pain discrimination
+uid: '8105353'
+volume: '11'

@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '32499519'
+- idtype: doi
+  value: 10.1038/s41598-020-65872-7
+- idtype: pmcid
+  value: PMC7272459
+authors:
+- authtype: Author
+  name: Packard PA
+- authtype: Author
+  name: Steiger TK
+- authtype: Author
+  name: Fuentemilla L
+- authtype: Author
+  name: Bunzeck N
+epubdate: 2020 Jun 4
+fulljournalname: Scientific Reports
+issue: ''
+pages: '9116'
+pmclivedate: 2020/06/05
+printpubdate: ''
+pubdate: 2020 Jun 4
+sortdate: 2020/06/04 00:00
+source: Sci Rep
+title: Neural oscillations and event-related potentials reveal how semantic congruence
+  drives long-term memory in both young and older humans
+uid: '7272459'
+volume: '10'

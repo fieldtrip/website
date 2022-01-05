@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '34161612'
+- idtype: doi
+  value: 10.1111/psyp.13877
+- idtype: pmcid
+  value: PMC8355203
+- idtype: MID
+  value: NIHMS1708591
+authors:
+- authtype: Author
+  name: Wisniewski MG
+- authtype: Author
+  name: Zakrzewski AC
+- authtype: Author
+  name: Bell DR
+- authtype: Author
+  name: Wheeler M
+epubdate: 2021 Jun 23
+fulljournalname: Psychophysiology
+issue: '9'
+pages: e13877
+pmclivedate: ''
+printpubdate: 2021 Sep
+pubdate: 2021 Jun 23
+sortdate: 2021/06/23 00:00
+source: Psychophysiology
+title: EEG power spectral dynamics associated with listening in adverse conditions
+uid: '8355203'
+volume: '58'

@@ -1,0 +1,34 @@
+articleids:
+- idtype: pmid
+  value: '31782730'
+- idtype: doi
+  value: 10.7554/eLife.49562
+- idtype: pmcid
+  value: PMC6904219
+authors:
+- authtype: Author
+  name: Griffiths BJ
+- authtype: Author
+  name: Mayhew SD
+- authtype: Author
+  name: Mullinger KJ
+- authtype: Author
+  name: Jorge J
+- authtype: Author
+  name: Charest I
+- authtype: Author
+  name: Wimber M
+- authtype: Author
+  name: Hanslmayr S
+epubdate: 2019 Nov 29
+fulljournalname: eLife
+issue: ''
+pages: e49562
+pmclivedate: 2019/12/12
+printpubdate: ''
+pubdate: 2019 Nov 29
+sortdate: 2019/11/29 00:00
+source: eLife
+title: Alpha/beta power decreases track the fidelity of stimulus-specific information
+uid: '6904219'
+volume: '8'

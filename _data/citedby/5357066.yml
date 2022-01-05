@@ -1,0 +1,47 @@
+articleids:
+- idtype: pmid
+  value: '28316456'
+- idtype: doi
+  value: 10.1093/cercor/bhw340
+- idtype: pmcid
+  value: PMC5357066
+authors:
+- authtype: Author
+  name: Jha A
+- authtype: Author
+  name: Litvak V
+- authtype: Author
+  name: Taulu S
+- authtype: Author
+  name: Thevathasan W
+- authtype: Author
+  name: Hyam JA
+- authtype: Author
+  name: Foltynie T
+- authtype: Author
+  name: Limousin P
+- authtype: Author
+  name: Bogdanovic M
+- authtype: Author
+  name: Zrinzo L
+- authtype: Author
+  name: Green AL
+- authtype: Author
+  name: Aziz TZ
+- authtype: Author
+  name: Friston K
+- authtype: Author
+  name: Brown P
+epubdate: 2016 Nov 22
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '1'
+pages: 54-67
+pmclivedate: 2017/03/17
+printpubdate: 2017 Jan
+pubdate: 2016 Nov 22
+sortdate: 2016/11/22 00:00
+source: Cereb Cortex
+title: Functional Connectivity of the Pedunculopontine Nucleus and Surrounding Region
+  in Parkinson's Disease
+uid: '5357066'
+volume: '27'

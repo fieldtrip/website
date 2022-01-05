@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '27065793'
+- idtype: doi
+  value: 10.3389/fnins.2016.00135
+- idtype: pmcid
+  value: PMC4815559
+authors:
+- authtype: Author
+  name: Killian NJ
+- authtype: Author
+  name: Vernekar VN
+- authtype: Author
+  name: Potter SM
+- authtype: Author
+  name: Vukasinovic J
+epubdate: 2016 Mar 31
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '135'
+pmclivedate: 2016/04/08
+printpubdate: ''
+pubdate: 2016 Mar 31
+sortdate: 2016/03/31 00:00
+source: Front Neurosci
+title: A Device for Long-Term Perfusion, Imaging, and Electrical Interfacing of Brain
+  Tissue In vitro
+uid: '4815559'
+volume: '10'

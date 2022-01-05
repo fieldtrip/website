@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '26394404'
+- idtype: doi
+  value: 10.1371/journal.pone.0138685
+- idtype: pmcid
+  value: PMC4579059
+authors:
+- authtype: Author
+  name: Horschig JM
+- authtype: Author
+  name: Smolders R
+- authtype: Author
+  name: Bonnefond M
+- authtype: Author
+  name: Schoffelen JM
+- authtype: Author
+  name: van den Munckhof P
+- authtype: Author
+  name: Schuurman PR
+- authtype: Author
+  name: Cools R
+- authtype: Author
+  name: Denys D
+- authtype: Author
+  name: Jensen O
+epubdate: 2015 Sep 22
+fulljournalname: PLoS ONE
+issue: '9'
+pages: e0138685
+pmclivedate: 2015/10/01
+printpubdate: ''
+pubdate: 2015 Sep 22
+sortdate: 2015/09/22 00:00
+source: PLoS One
+title: Directed Communication between Nucleus Accumbens and Neocortex in Humans Is
+  Differentially Supported by Synchronization in the Theta and Alpha Band
+uid: '4579059'
+volume: '10'

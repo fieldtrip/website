@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '23500669'
+- idtype: doi
+  value: 10.1016/j.dcn.2013.02.002
+- idtype: pmcid
+  value: PMC6987827
+authors:
+- authtype: Author
+  name: Hauswald A
+- authtype: Author
+  name: Weisz N
+- authtype: Author
+  name: Bentin S
+- authtype: Author
+  name: Kissler J
+epubdate: 2013 Feb 18
+fulljournalname: Developmental Cognitive Neuroscience
+issue: ''
+pages: 95-105
+pmclivedate: 2020/02/03
+printpubdate: ''
+pubdate: 2013 Feb 18
+sortdate: 2013/02/18 00:00
+source: Dev Cogn Neurosci
+title: 'MEG premotor abnormalities in children with Asperger''s syndrome: Determinants
+  of social behavior?'
+uid: '6987827'
+volume: '5'

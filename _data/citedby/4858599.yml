@@ -1,0 +1,24 @@
+articleids:
+- idtype: pmid
+  value: '27199882'
+- idtype: doi
+  value: 10.3389/fpsyg.2016.00671
+- idtype: pmcid
+  value: PMC4858599
+authors:
+- authtype: Author
+  name: Gutteling TP
+- authtype: Author
+  name: Medendorp WP
+epubdate: 2016 May 6
+fulljournalname: Frontiers in Psychology
+issue: ''
+pages: '671'
+pmclivedate: 2016/05/19
+printpubdate: ''
+pubdate: 2016 May 6
+sortdate: 2016/05/06 00:00
+source: Front Psychol
+title: Role of Alpha-Band Oscillations in Spatial Updating across Whole Body Motion
+uid: '4858599'
+volume: '7'

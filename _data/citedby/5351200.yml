@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '28316771'
+- idtype: doi
+  value: 10.1186/s13229-017-0123-2
+- idtype: pmcid
+  value: PMC5351200
+authors:
+- authtype: Author
+  name: Mennella R
+- authtype: Author
+  name: Leung RC
+- authtype: Author
+  name: Taylor MJ
+- authtype: Author
+  name: Dunkley BT
+epubdate: 2017 Feb 22
+fulljournalname: Molecular Autism
+issue: ''
+pages: '7'
+pmclivedate: 2017/03/17
+printpubdate: ''
+pubdate: 2017 Feb 22
+sortdate: 2017/02/22 00:00
+source: Mol Autism
+title: 'Disconnection from others in autism is more than just a feeling: whole-brain
+  neural synchrony in adults during implicit processing of emotional faces'
+uid: '5351200'
+volume: '8'

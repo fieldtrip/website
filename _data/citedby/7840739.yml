@@ -1,0 +1,44 @@
+articleids:
+- idtype: pmid
+  value: '33504828'
+- idtype: doi
+  value: 10.1038/s41598-021-81336-y
+- idtype: pmcid
+  value: PMC7840739
+authors:
+- authtype: Author
+  name: Canales-Johnson A
+- authtype: Author
+  name: Lanfranco RC
+- authtype: Author
+  name: Morales JP
+- authtype: Author
+  name: Martínez-Pernía D
+- authtype: Author
+  name: Valdés J
+- authtype: Author
+  name: Ezquerro-Nassar A
+- authtype: Author
+  name: Rivera-Rei Á
+- authtype: Author
+  name: Ibanez A
+- authtype: Author
+  name: Chennu S
+- authtype: Author
+  name: Bekinschtein TA
+- authtype: Author
+  name: Huepe D
+- authtype: Author
+  name: Noreika V
+epubdate: 2021 Jan 27
+fulljournalname: Scientific Reports
+issue: ''
+pages: '2401'
+pmclivedate: 2021/01/28
+printpubdate: ''
+pubdate: 2021 Jan 27
+sortdate: 2021/01/27 00:00
+source: Sci Rep
+title: 'In your phase: neural phase synchronisation underlies visual imagery of faces'
+uid: '7840739'
+volume: '11'

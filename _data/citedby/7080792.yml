@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '32188883'
+- idtype: doi
+  value: 10.1038/s41598-020-61590-2
+- idtype: pmcid
+  value: PMC7080792
+authors:
+- authtype: Author
+  name: Okazaki YO
+- authtype: Author
+  name: Mizuno Y
+- authtype: Author
+  name: Kitajo K
+epubdate: 2020 Mar 18
+fulljournalname: Scientific Reports
+issue: ''
+pages: '4959'
+pmclivedate: 2020/03/23
+printpubdate: ''
+pubdate: 2020 Mar 18
+sortdate: 2020/03/18 00:00
+source: Sci Rep
+title: Probing dynamical cortical gating of attention with concurrent TMS-EEG
+uid: '7080792'
+volume: '10'

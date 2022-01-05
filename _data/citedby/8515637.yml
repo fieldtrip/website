@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '34358924'
+- idtype: doi
+  value: 10.1016/j.bandl.2021.104996
+- idtype: pmcid
+  value: PMC8515637
+- idtype: MID
+  value: NIHMS1732350
+authors:
+- authtype: Author
+  name: Lim SJ
+- authtype: Author
+  name: Carter YD
+- authtype: Author
+  name: Njoroge JM
+- authtype: Author
+  name: Shinn-Cunningham BG
+- authtype: Author
+  name: Perrachione TK
+epubdate: 2021 Aug 3
+fulljournalname: Brain and language
+issue: ''
+pages: '104996'
+pmclivedate: ''
+printpubdate: 2021 Oct
+pubdate: 2021 Aug 3
+sortdate: 2021/08/03 00:00
+source: Brain Lang
+title: 'Talker discontinuity disrupts attention to speech: Evidence from EEG and pupillometry'
+uid: '8515637'
+volume: '221'

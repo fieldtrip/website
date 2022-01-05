@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '29580963'
+- idtype: doi
+  value: 10.1016/j.neuroscience.2018.03.018
+- idtype: pmcid
+  value: PMC6458991
+authors:
+- authtype: Author
+  name: Stickland R
+- authtype: Author
+  name: Allen M
+- authtype: Author
+  name: Magazzini L
+- authtype: Author
+  name: Singh KD
+- authtype: Author
+  name: Wise RG
+- authtype: Author
+  name: Tomassini V
+epubdate: ''
+fulljournalname: Neuroscience
+issue: ''
+pages: 54-69
+pmclivedate: 2019/04/22
+printpubdate: 2019 Apr 1
+pubdate: 2019 Apr 1
+sortdate: 2019/04/01 00:00
+source: Neuroscience
+title: 'Neurovascular Coupling During Visual Stimulation in Multiple Sclerosis: A
+  MEG-fMRI Study'
+uid: '6458991'
+volume: '403'

@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '32965471'
+- idtype: doi
+  value: 10.1093/cercor/bhaa234
+- idtype: pmcid
+  value: PMC7727383
+authors:
+- authtype: Author
+  name: Stieger JR
+- authtype: Author
+  name: Engel S
+- authtype: Author
+  name: Jiang H
+- authtype: Author
+  name: Cline CC
+- authtype: Author
+  name: Kreitzer MJ
+- authtype: Author
+  name: He B
+epubdate: 2020 Sep 23
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '1'
+pages: 426-438
+pmclivedate: 2021/09/23
+printpubdate: ''
+pubdate: 2020 Sep 23
+sortdate: 2020/09/23 00:00
+source: Cereb Cortex
+title: Mindfulness Improves Brain–Computer Interface Performance by Increasing Control
+  Over Neural Activity in the Alpha Band
+uid: '7727383'
+volume: '31'

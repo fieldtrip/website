@@ -1,0 +1,24 @@
+articleids:
+- idtype: pmid
+  value: '32179571'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.2359-19.2020
+- idtype: pmcid
+  value: PMC7178915
+authors:
+- authtype: Author
+  name: Grabot L
+- authtype: Author
+  name: Kayser C
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '17'
+pages: 3443-3454
+pmclivedate: 2020/10/22
+printpubdate: 2020 Apr 22
+pubdate: 2020 Apr 22
+sortdate: 2020/04/22 00:00
+source: J Neurosci
+title: Alpha Activity Reflects the Magnitude of an Individual Bias in Human Perception
+uid: '7178915'
+volume: '40'

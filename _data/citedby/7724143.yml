@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '33097640'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0302-20.2020
+- idtype: pmcid
+  value: PMC7724143
+authors:
+- authtype: Author
+  name: Kaufeld G
+- authtype: Author
+  name: Bosker HR
+- authtype: Author
+  name: ten Oever S
+- authtype: Author
+  name: Alday PM
+- authtype: Author
+  name: Meyer AS
+- authtype: Author
+  name: Martin AE
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '49'
+pages: 9467-9475
+pmclivedate: 2021/06/02
+printpubdate: 2020 Dec 2
+pubdate: 2020 Dec 2
+sortdate: 2020/12/02 00:00
+source: J Neurosci
+title: Linguistic Structure and Meaning Organize Neural Oscillations into a Content-Specific
+  Hierarchy
+uid: '7724143'
+volume: '40'

@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '22791191'
+- idtype: doi
+  value: 10.1007/s10162-012-0340-5
+- idtype: pmcid
+  value: PMC3441951
+authors:
+- authtype: Author
+  name: Adjamian P
+- authtype: Author
+  name: Sereda M
+- authtype: Author
+  name: Zobay O
+- authtype: Author
+  name: Hall DA
+- authtype: Author
+  name: Palmer AR
+epubdate: 2012 Jul 12
+fulljournalname: 'JARO: Journal of the Association for Research in Otolaryngology'
+issue: '5'
+pages: 715-731
+pmclivedate: 2012/09/20
+printpubdate: 2012 Oct
+pubdate: 2012 Jul 12
+sortdate: 2012/07/12 00:00
+source: J Assoc Res Otolaryngol
+title: Neuromagnetic Indicators of Tinnitus and Tinnitus Masking in Patients with
+  and without Hearing Loss
+uid: '3441951'
+volume: '13'

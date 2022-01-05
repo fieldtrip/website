@@ -1,0 +1,65 @@
+articleids:
+- idtype: pmid
+  value: '26855826'
+- idtype: doi
+  value: 10.1002/brb3.427
+- idtype: pmcid
+  value: PMC4733105
+authors:
+- authtype: Author
+  name: Akimoto Y
+- authtype: Author
+  name: Nozawa T
+- authtype: Author
+  name: Kanno A
+- authtype: Author
+  name: Kambara T
+- authtype: Author
+  name: Ihara M
+- authtype: Author
+  name: Ogawa T
+- authtype: Author
+  name: Goto T
+- authtype: Author
+  name: Taki Y
+- authtype: Author
+  name: Yokoyama R
+- authtype: Author
+  name: Kotozaki Y
+- authtype: Author
+  name: Nouchi R
+- authtype: Author
+  name: Sekiguchi A
+- authtype: Author
+  name: Takeuchi H
+- authtype: Author
+  name: Miyauchi CM
+- authtype: Author
+  name: Sugiura M
+- authtype: Author
+  name: Okumura E
+- authtype: Author
+  name: Sunda T
+- authtype: Author
+  name: Shimizu T
+- authtype: Author
+  name: Tozuka E
+- authtype: Author
+  name: Hirose S
+- authtype: Author
+  name: Nanbu T
+- authtype: Author
+  name: Kawashima R
+epubdate: 2016 Jan 30
+fulljournalname: Brain and Behavior
+issue: '3'
+pages: e00427
+pmclivedate: 2016/02/05
+printpubdate: ''
+pubdate: 2016 Jan 30
+sortdate: 2016/01/30 00:00
+source: Brain Behav
+title: 'High‐gamma power changes after cognitive intervention: preliminary results
+  from twenty‐one senior adult subjects'
+uid: '4733105'
+volume: '6'

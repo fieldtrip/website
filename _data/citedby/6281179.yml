@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '30517122'
+- idtype: doi
+  value: 10.1371/journal.pone.0207452
+- idtype: pmcid
+  value: PMC6281179
+authors:
+- authtype: Author
+  name: Holt R
+- authtype: Author
+  name: Kung C
+- authtype: Author
+  name: Demuth K
+epubdate: 2018 Dec 5
+fulljournalname: PLoS ONE
+issue: '12'
+pages: e0207452
+pmclivedate: 2018/12/20
+printpubdate: ''
+pubdate: 2018 Dec 5
+sortdate: 2018/12/05 00:00
+source: PLoS One
+title: Listener characteristics modulate the semantic processing of native vs. foreign-accented
+  speech
+uid: '6281179'
+volume: '13'

@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '33524769'
+- idtype: doi
+  value: 10.1016/j.dcn.2021.100923
+- idtype: pmcid
+  value: PMC7848774
+authors:
+- authtype: Author
+  name: Lam-Cassettari C
+- authtype: Author
+  name: Peter V
+- authtype: Author
+  name: Antoniou M
+epubdate: 2021 Jan 21
+fulljournalname: Developmental Cognitive Neuroscience
+issue: ''
+pages: '100923'
+pmclivedate: 2021/02/04
+printpubdate: ''
+pubdate: 2021 Jan 21
+sortdate: 2021/01/21 00:00
+source: Dev Cogn Neurosci
+title: 'Babies detect when the timing is right: Evidence from event-related potentials
+  to a contingent mother-infant conversation'
+uid: '7848774'
+volume: '48'

@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '33418846'
+- idtype: doi
+  value: 10.3390/brainsci11010056
+- idtype: pmcid
+  value: PMC7824842
+authors:
+- authtype: Author
+  name: Yuan K
+- authtype: Author
+  name: Chen C
+- authtype: Author
+  name: Wang X
+- authtype: Author
+  name: Chu WC
+- authtype: Author
+  name: Tong RK
+epubdate: 2021 Jan 6
+fulljournalname: Brain Sciences
+issue: '1'
+pages: '56'
+pmclivedate: 2021/01/24
+printpubdate: ''
+pubdate: 2021 Jan 6
+sortdate: 2021/01/06 00:00
+source: Brain Sci
+title: 'BCI Training Effects on Chronic Stroke Correlate with Functional Reorganization
+  in Motor-Related Regions: A Concurrent EEG and fMRI Study'
+uid: '7824842'
+volume: '11'

@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '30686965'
+- idtype: doi
+  value: 10.3389/fnins.2018.00957
+- idtype: pmcid
+  value: PMC6336923
+authors:
+- authtype: Author
+  name: Yousefi A
+- authtype: Author
+  name: Paulk AC
+- authtype: Author
+  name: Basu I
+- authtype: Author
+  name: Mirsky JL
+- authtype: Author
+  name: Dougherty DD
+- authtype: Author
+  name: Eskandar EN
+- authtype: Author
+  name: Eden UT
+- authtype: Author
+  name: Widge AS
+epubdate: 2019 Jan 11
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '957'
+pmclivedate: 2019/01/25
+printpubdate: ''
+pubdate: 2019 Jan 11
+sortdate: 2019/01/11 00:00
+source: Front Neurosci
+title: 'COMPASS: An Open-Source, General-Purpose Software Toolkit for Computational
+  Psychiatry'
+uid: '6336923'
+volume: '12'

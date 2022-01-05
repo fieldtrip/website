@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '28118405'
+- idtype: doi
+  value: 10.1371/journal.pone.0170647
+- idtype: pmcid
+  value: PMC5261734
+authors:
+- authtype: Author
+  name: Braboszcz C
+- authtype: Author
+  name: Cahn BR
+- authtype: Author
+  name: Levy J
+- authtype: Author
+  name: Fernandez M
+- authtype: Author
+  name: Delorme A
+epubdate: 2017 Jan 24
+fulljournalname: PLoS ONE
+issue: '1'
+pages: e0170647
+pmclivedate: 2017/02/17
+printpubdate: ''
+pubdate: 2017 Jan 24
+sortdate: 2017/01/24 00:00
+source: PLoS One
+title: Increased Gamma Brainwave Amplitude Compared to Control in Three Different
+  Meditation Traditions
+uid: '5261734'
+volume: '12'

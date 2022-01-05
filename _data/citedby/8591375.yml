@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '34563683'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2021.118613
+- idtype: pmcid
+  value: PMC8591375
+authors:
+- authtype: Author
+  name: Petras K
+- authtype: Author
+  name: ten Oever S
+- authtype: Author
+  name: Dalal SS
+- authtype: Author
+  name: Goffaux V
+epubdate: ''
+fulljournalname: Neuroimage
+issue: ''
+pages: '118613'
+pmclivedate: 2021/12/01
+printpubdate: 2021 Dec 1
+pubdate: 2021 Dec 1
+sortdate: 2021/12/01 00:00
+source: Neuroimage
+title: Information redundancy across spatial scales modulates early visual cortical
+  processing
+uid: '8591375'
+volume: '244'

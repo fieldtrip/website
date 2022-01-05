@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '32439859'
+- idtype: doi
+  value: 10.1038/s41598-020-65455-6
+- idtype: pmcid
+  value: PMC7242439
+authors:
+- authtype: Author
+  name: Navarrete E
+- authtype: Author
+  name: Miozzo M
+- authtype: Author
+  name: Peressotti F
+epubdate: 2020 May 21
+fulljournalname: Scientific Reports
+issue: ''
+pages: '8409'
+pmclivedate: 2020/05/30
+printpubdate: ''
+pubdate: 2020 May 21
+sortdate: 2020/05/21 00:00
+source: Sci Rep
+title: Language can shape the perception of oriented objects
+uid: '7242439'
+volume: '10'

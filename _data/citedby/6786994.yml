@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '31601871'
+- idtype: doi
+  value: 10.1038/s41598-019-51011-4
+- idtype: pmcid
+  value: PMC6786994
+authors:
+- authtype: Author
+  name: Dijkstra K
+- authtype: Author
+  name: Farquhar J
+- authtype: Author
+  name: Desain P
+epubdate: 2019 Oct 10
+fulljournalname: Scientific Reports
+issue: ''
+pages: '14514'
+pmclivedate: 2019/10/17
+printpubdate: ''
+pubdate: 2019 Oct 10
+sortdate: 2019/10/10 00:00
+source: Sci Rep
+title: Electrophysiological responses of relatedness to consecutive word stimuli in
+  relation to an actively recollected target word
+uid: '6786994'
+volume: '9'

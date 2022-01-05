@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '32143383'
+- idtype: doi
+  value: 10.3390/brainsci10030147
+- idtype: pmcid
+  value: PMC7139433
+authors:
+- authtype: Author
+  name: Kheirkhah M
+- authtype: Author
+  name: Brodoehl S
+- authtype: Author
+  name: Leistritz L
+- authtype: Author
+  name: Götz T
+- authtype: Author
+  name: Baumbach P
+- authtype: Author
+  name: Huonker R
+- authtype: Author
+  name: Witte OW
+- authtype: Author
+  name: Volk GF
+- authtype: Author
+  name: Guntinas-Lichius O
+- authtype: Author
+  name: Klingner CM
+epubdate: 2020 Mar 4
+fulljournalname: Brain Sciences
+issue: '3'
+pages: '147'
+pmclivedate: 2020/04/10
+printpubdate: ''
+pubdate: 2020 Mar 4
+sortdate: 2020/03/04 00:00
+source: Brain Sci
+title: 'Abnormal Emotional Processing and Emotional Experience in Patients with Peripheral
+  Facial Nerve Paralysis: An MEG Study'
+uid: '7139433'
+volume: '10'

@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '33133640'
+- idtype: doi
+  value: 10.1093/nc/niaa022
+- idtype: pmcid
+  value: PMC7585676
+authors:
+- authtype: Author
+  name: Banellis L
+- authtype: Author
+  name: Sokoliuk R
+- authtype: Author
+  name: Wild CJ
+- authtype: Author
+  name: Bowman H
+- authtype: Author
+  name: Cruse D
+epubdate: 2020 Oct 25
+fulljournalname: Neuroscience of Consciousness
+issue: '1'
+pages: niaa022
+pmclivedate: 2020/10/29
+printpubdate: ''
+pubdate: 2020 Oct 25
+sortdate: 2020/10/25 00:00
+source: Neurosci Conscious
+title: Event-related potentials reflect prediction errors and pop-out during comprehension
+  of degraded speech
+uid: '7585676'
+volume: '2020'

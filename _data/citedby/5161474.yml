@@ -1,0 +1,24 @@
+articleids:
+- idtype: pmid
+  value: '27992574'
+- idtype: doi
+  value: 10.1371/journal.pone.0168766
+- idtype: pmcid
+  value: PMC5161474
+authors:
+- authtype: Author
+  name: Halme HL
+- authtype: Author
+  name: Parkkonen L
+epubdate: 2016 Dec 16
+fulljournalname: PLoS ONE
+issue: '12'
+pages: e0168766
+pmclivedate: 2017/01/04
+printpubdate: ''
+pubdate: 2016 Dec 16
+sortdate: 2016/12/16 00:00
+source: PLoS One
+title: Comparing Features for Classification of MEG Responses to Motor Imagery
+uid: '5161474'
+volume: '11'

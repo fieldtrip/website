@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '25248152'
+- idtype: doi
+  value: 10.1371/journal.pone.0108059
+- idtype: pmcid
+  value: PMC4172661
+authors:
+- authtype: Author
+  name: Niccolai V
+- authtype: Author
+  name: Klepp A
+- authtype: Author
+  name: Weissler H
+- authtype: Author
+  name: Hoogenboom N
+- authtype: Author
+  name: Schnitzler A
+- authtype: Author
+  name: Biermann-Ruben K
+epubdate: 2014 Sep 23
+fulljournalname: PLoS ONE
+issue: '9'
+pages: e108059
+pmclivedate: 2014/10/02
+printpubdate: ''
+pubdate: 2014 Sep 23
+sortdate: 2014/09/23 00:00
+source: PLoS One
+title: 'Grasping Hand Verbs: Oscillatory Beta and Alpha Correlates of Action-Word
+  Processing'
+uid: '4172661'
+volume: '9'

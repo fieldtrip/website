@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '24653694'
+- idtype: doi
+  value: 10.3389/fninf.2014.00022
+- idtype: pmcid
+  value: PMC3949292
+authors:
+- authtype: Author
+  name: Billinger M
+- authtype: Author
+  name: Brunner C
+- authtype: Author
+  name: Müller-Putz GR
+epubdate: 2014 Mar 11
+fulljournalname: Frontiers in Neuroinformatics
+issue: ''
+pages: '22'
+pmclivedate: 2014/03/20
+printpubdate: ''
+pubdate: 2014 Mar 11
+sortdate: 2014/03/11 00:00
+source: Front Neuroinform
+title: 'SCoT: a Python toolbox for EEG source connectivity'
+uid: '3949292'
+volume: '8'

@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '33008328'
+- idtype: doi
+  value: 10.1186/s10194-020-01187-2
+- idtype: pmcid
+  value: PMC7531083
+authors:
+- authtype: Author
+  name: Chen G
+- authtype: Author
+  name: Li Y
+- authtype: Author
+  name: Dong Z
+- authtype: Author
+  name: Wang R
+- authtype: Author
+  name: Zhao D
+- authtype: Author
+  name: Obeso I
+- authtype: Author
+  name: Yu S
+epubdate: 2020 Oct 2
+fulljournalname: The Journal of Headache and Pain
+issue: '1'
+pages: '119'
+pmclivedate: 2020/10/05
+printpubdate: ''
+pubdate: 2020 Oct 2
+sortdate: 2020/10/02 00:00
+source: J Headache Pain
+title: 'Response inhibition alterations in migraine: evidence from event-related potentials
+  and evoked oscillations'
+uid: '7531083'
+volume: '21'
