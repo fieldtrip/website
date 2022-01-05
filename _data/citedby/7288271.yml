@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '32349288'
+- idtype: doi
+  value: 10.3390/brainsci10050253
+- idtype: pmcid
+  value: PMC7288271
+authors:
+- authtype: Author
+  name: Navid MS
+- authtype: Author
+  name: Niazi IK
+- authtype: Author
+  name: Lelic D
+- authtype: Author
+  name: Nedergaard RB
+- authtype: Author
+  name: Holt K
+- authtype: Author
+  name: Amjad I
+- authtype: Author
+  name: Drewes AM
+- authtype: Author
+  name: Haavik H
+epubdate: 2020 Apr 27
+fulljournalname: Brain Sciences
+issue: '5'
+pages: '253'
+pmclivedate: 2020/06/17
+printpubdate: ''
+pubdate: 2020 Apr 27
+sortdate: 2020/04/27 00:00
+source: Brain Sci
+title: Investigating the Effects of Chiropractic Spinal Manipulation on EEG in Stroke
+  Patients
+uid: '7288271'
+volume: '10'

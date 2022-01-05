@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '25255217'
+- idtype: doi
+  value: 10.1371/journal.pcbi.1003855
+- idtype: pmcid
+  value: PMC4177663
+authors:
+- authtype: Author
+  name: Mak-McCully RA
+- authtype: Author
+  name: Deiss SR
+- authtype: Author
+  name: Rosen BQ
+- authtype: Author
+  name: Jung KY
+- authtype: Author
+  name: Sejnowski TJ
+- authtype: Author
+  name: Bastuji H
+- authtype: Author
+  name: Rey M
+- authtype: Author
+  name: Cash SS
+- authtype: Author
+  name: Bazhenov M
+- authtype: Author
+  name: Halgren E
+epubdate: 2014 Sep 25
+fulljournalname: PLoS Computational Biology
+issue: '9'
+pages: e1003855
+pmclivedate: 2014/10/02
+printpubdate: ''
+pubdate: 2014 Sep 25
+sortdate: 2014/09/25 00:00
+source: PLoS Comput Biol
+title: Synchronization of Isolated Downstates (K-Complexes) May Be Caused by Cortically-Induced
+  Disruption of Thalamic Spindling
+uid: '4177663'
+volume: '10'
