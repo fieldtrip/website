@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '27982120'
+- idtype: doi
+  value: 10.1038/srep39229
+- idtype: pmcid
+  value: PMC5159847
+authors:
+- authtype: Author
+  name: Lehmann M
+- authtype: Author
+  name: Schreiner T
+- authtype: Author
+  name: Seifritz E
+- authtype: Author
+  name: Rasch B
+epubdate: 2016 Dec 16
+fulljournalname: Scientific Reports
+issue: ''
+pages: '39229'
+pmclivedate: 2016/12/21
+printpubdate: ''
+pubdate: 2016 Dec 16
+sortdate: 2016/12/16 00:00
+source: Sci Rep
+title: Emotional arousal modulates oscillatory correlates of targeted memory reactivation
+  during NREM, but not REM sleep
+uid: '5159847'
+volume: '6'

@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '24285880'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.3923-13.2013
+- idtype: pmcid
+  value: PMC3841445
+authors:
+- authtype: Author
+  name: Schmid MC
+- authtype: Author
+  name: Schmiedt JT
+- authtype: Author
+  name: Peters AJ
+- authtype: Author
+  name: Saunders RC
+- authtype: Author
+  name: Maier A
+- authtype: Author
+  name: Leopold DA
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '48'
+pages: 18740-18745
+pmclivedate: 2014/05/27
+printpubdate: 2013 Nov 27
+pubdate: 2013 Nov 27
+sortdate: 2013/11/27 00:00
+source: J Neurosci
+title: Motion-Sensitive Responses in Visual Area V4 in the Absence of Primary Visual
+  Cortex
+uid: '3841445'
+volume: '33'

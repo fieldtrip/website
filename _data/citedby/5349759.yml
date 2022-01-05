@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '28069543'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2017.01.011
+- idtype: pmcid
+  value: PMC5349759
+authors:
+- authtype: Author
+  name: Nickel MM
+- authtype: Author
+  name: May ES
+- authtype: Author
+  name: Tiemann L
+- authtype: Author
+  name: Schmidt P
+- authtype: Author
+  name: Postorino M
+- authtype: Author
+  name: Ta Dinh S
+- authtype: Author
+  name: Gross J
+- authtype: Author
+  name: Ploner M
+epubdate: ''
+fulljournalname: Neuroimage
+issue: ''
+pages: 141-147
+pmclivedate: 2017/03/23
+printpubdate: 2017 Mar 1
+pubdate: 2017 Mar 1
+sortdate: 2017/03/01 00:00
+source: Neuroimage
+title: Brain oscillations differentially encode noxious stimulus intensity and pain
+  intensity
+uid: '5349759'
+volume: '148'

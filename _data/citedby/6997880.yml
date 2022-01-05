@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '31956024'
+- idtype: doi
+  value: 10.1016/j.cub.2019.11.072
+- idtype: pmcid
+  value: PMC6997880
+authors:
+- authtype: Author
+  name: Spanò G
+- authtype: Author
+  name: Weber FD
+- authtype: Author
+  name: Pizzamiglio G
+- authtype: Author
+  name: McCormick C
+- authtype: Author
+  name: Miller TD
+- authtype: Author
+  name: Rosenthal CR
+- authtype: Author
+  name: Edgin JO
+- authtype: Author
+  name: Maguire EA
+epubdate: ''
+fulljournalname: Current Biology
+issue: '3'
+pages: 523-529.e3
+pmclivedate: 2020/02/05
+printpubdate: 2020 Feb 3
+pubdate: 2020 Feb 3
+sortdate: 2020/02/03 00:00
+source: Curr Biol
+title: Sleeping with Hippocampal Damage
+uid: '6997880'
+volume: '30'

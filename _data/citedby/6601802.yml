@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '27170132'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.3634-15.2016
+- idtype: pmcid
+  value: PMC6601802
+authors:
+- authtype: Author
+  name: Dirkx MF
+- authtype: Author
+  name: den Ouden H
+- authtype: Author
+  name: Aarts E
+- authtype: Author
+  name: Timmer M
+- authtype: Author
+  name: Bloem BR
+- authtype: Author
+  name: Toni I
+- authtype: Author
+  name: Helmich RC
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '19'
+pages: 5362-5372
+pmclivedate: 2019/07/12
+printpubdate: 2016 May 11
+pubdate: 2016 May 11
+sortdate: 2016/05/11 00:00
+source: J Neurosci
+title: 'The Cerebral Network of Parkinson''s Tremor: An Effective Connectivity fMRI
+  Study'
+uid: '6601802'
+volume: '36'

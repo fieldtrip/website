@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '25749431'
+- idtype: doi
+  value: 10.1371/journal.pone.0119466
+- idtype: pmcid
+  value: PMC4352075
+authors:
+- authtype: Author
+  name: Cosme D
+- authtype: Author
+  name: Wiens S
+epubdate: 2015 Mar 6
+fulljournalname: PLoS ONE
+issue: '3'
+pages: e0119466
+pmclivedate: 2015/03/17
+printpubdate: ''
+pubdate: 2015 Mar 6
+sortdate: 2015/03/06 00:00
+source: PLoS One
+title: 'Self-Reported Trait Mindfulness and Affective Reactivity: A Motivational Approach
+  Using Multiple Psychophysiological Measures'
+uid: '4352075'
+volume: '10'

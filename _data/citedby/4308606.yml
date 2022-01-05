@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '25632139'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.3116-14.2015
+- idtype: pmcid
+  value: PMC4308606
+authors:
+- authtype: Author
+  name: Marshall TR
+- authtype: Author
+  name: O'Shea J
+- authtype: Author
+  name: Jensen O
+- authtype: Author
+  name: Bergmann TO
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '4'
+pages: 1638-1647
+pmclivedate: 2015/02/10
+printpubdate: 2015 Jan 28
+pubdate: 2015 Jan 28
+sortdate: 2015/01/28 00:00
+source: J Neurosci
+title: Frontal Eye Fields Control Attentional Modulation of Alpha and Gamma Oscillations
+  in Contralateral Occipitoparietal Cortex
+uid: '4308606'
+volume: '35'

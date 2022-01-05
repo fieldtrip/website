@@ -1,0 +1,48 @@
+articleids:
+- idtype: pmid
+  value: '30333719'
+- idtype: doi
+  value: 10.3389/fnins.2018.00684
+- idtype: pmcid
+  value: PMC6176075
+authors:
+- authtype: Author
+  name: Rodríguez-Rojo IC
+- authtype: Author
+  name: Cuesta P
+- authtype: Author
+  name: López ME
+- authtype: Author
+  name: de Frutos-Lucas J
+- authtype: Author
+  name: Bruña R
+- authtype: Author
+  name: Pereda E
+- authtype: Author
+  name: Barabash A
+- authtype: Author
+  name: Montejo P
+- authtype: Author
+  name: Montenegro-Peña M
+- authtype: Author
+  name: Marcos A
+- authtype: Author
+  name: López-Higes R
+- authtype: Author
+  name: Fernández A
+- authtype: Author
+  name: Maestú F
+epubdate: 2018 Oct 2
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '684'
+pmclivedate: 2018/10/17
+printpubdate: ''
+pubdate: 2018 Oct 2
+sortdate: 2018/10/02 00:00
+source: Front Neurosci
+title: 'BDNF Val66Met Polymorphism and Gamma Band Disruption in Resting State Brain
+  Functional Connectivity: A Magnetoencephalography Study in Cognitively Intact Older
+  Females'
+uid: '6176075'
+volume: '12'

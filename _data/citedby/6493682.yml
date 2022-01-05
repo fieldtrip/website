@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '30925509'
+- idtype: doi
+  value: 10.1097/WNP.0000000000000577
+- idtype: pmcid
+  value: PMC6493682
+authors:
+- authtype: Author
+  name: Young JJ
+- authtype: Author
+  name: Friedman JS
+- authtype: Author
+  name: Panov F
+- authtype: Author
+  name: Camara D
+- authtype: Author
+  name: Yoo JY
+- authtype: Author
+  name: Fields MC
+- authtype: Author
+  name: Marcuse LV
+- authtype: Author
+  name: Jette N
+- authtype: Author
+  name: Ghatan S
+epubdate: 2019 Mar 26
+fulljournalname: Journal of Clinical Neurophysiology
+issue: '3'
+pages: 195-203
+pmclivedate: 2019/05/29
+printpubdate: 2019 May
+pubdate: 2019 Mar 26
+sortdate: 2019/03/26 00:00
+source: J Clin Neurophysiol
+title: 'Quantitative Signal Characteristics of Electrocorticography and Stereoelectroencephalography:
+  The Effect of Contact Depth'
+uid: '6493682'
+volume: '36'

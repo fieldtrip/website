@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '30334735'
+- idtype: doi
+  value: 10.7554/eLife.35164
+- idtype: pmcid
+  value: PMC6231774
+authors:
+- authtype: Author
+  name: Huang Q
+- authtype: Author
+  name: Jia J
+- authtype: Author
+  name: Han Q
+- authtype: Author
+  name: Luo H
+epubdate: 2018 Oct 18
+fulljournalname: eLife
+issue: ''
+pages: e35164
+pmclivedate: 2018/11/16
+printpubdate: ''
+pubdate: 2018 Oct 18
+sortdate: 2018/10/18 00:00
+source: eLife
+title: Fast-backward replay of sequentially memorized items in humans
+uid: '6231774'
+volume: '7'

@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '28592697'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.3771-16.2017
+- idtype: pmcid
+  value: PMC5508256
+authors:
+- authtype: Author
+  name: Richter CG
+- authtype: Author
+  name: Thompson WH
+- authtype: Author
+  name: Bosman CA
+- authtype: Author
+  name: Fries P
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '28'
+pages: 6698-6711
+pmclivedate: 2017/08/08
+printpubdate: 2017 Jul 12
+pubdate: 2017 Jul 12
+sortdate: 2017/07/12 00:00
+source: J Neurosci
+title: Top-Down Beta Enhances Bottom-Up Gamma
+uid: '5508256'
+volume: '37'

@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '32053879'
+- idtype: doi
+  value: 10.3390/brainsci10020095
+- idtype: pmcid
+  value: PMC7071617
+authors:
+- authtype: Author
+  name: Parker T
+- authtype: Author
+  name: Huang Y
+- authtype: Author
+  name: Raghu AL
+- authtype: Author
+  name: FitzGerald JJ
+- authtype: Author
+  name: Green AL
+- authtype: Author
+  name: Aziz TZ
+epubdate: 2020 Feb 11
+fulljournalname: Brain Sciences
+issue: '2'
+pages: '95'
+pmclivedate: 2020/03/19
+printpubdate: ''
+pubdate: 2020 Feb 11
+sortdate: 2020/02/11 00:00
+source: Brain Sci
+title: Dorsal Root Ganglion Stimulation Modulates Cortical Gamma Activity in the Cognitive
+  Dimension of Chronic Pain
+uid: '7071617'
+volume: '10'

@@ -1,0 +1,45 @@
+articleids:
+- idtype: pmid
+  value: '31345780'
+- idtype: doi
+  value: 10.1016/j.bpsc.2019.05.009
+- idtype: pmcid
+  value: PMC6863387
+authors:
+- authtype: Author
+  name: Shephard E
+- authtype: Author
+  name: Fatori D
+- authtype: Author
+  name: Mauro LR
+- authtype: Author
+  name: de Medeiros Filho MV
+- authtype: Author
+  name: Hoexter MQ
+- authtype: Author
+  name: Chiesa AM
+- authtype: Author
+  name: Fracolli LA
+- authtype: Author
+  name: Brentani H
+- authtype: Author
+  name: Ferraro AA
+- authtype: Author
+  name: Nelson CA III
+- authtype: Author
+  name: Miguel EC
+- authtype: Author
+  name: Polanczyk GV
+epubdate: ''
+fulljournalname: Biological Psychiatry. Cognitive Neuroscience and Neuroimaging
+issue: '10'
+pages: 925-934
+pmclivedate: 2019/11/22
+printpubdate: 2019 Oct
+pubdate: 2019 Oct
+sortdate: 2019/10/01 00:00
+source: Biol Psychiatry Cogn Neurosci Neuroimaging
+title: Effects of Maternal Psychopathology and Education Level on Neurocognitive Development
+  in Infants of Adolescent Mothers Living in Poverty in Brazil
+uid: '6863387'
+volume: '4'

@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '31621126'
+- idtype: doi
+  value: 10.1111/cogs.12789
+- idtype: pmcid
+  value: PMC6790953
+authors:
+- authtype: Author
+  name: Drijvers L
+- authtype: Author
+  name: Vaitonytė J
+- authtype: Author
+  name: Özyürek A
+epubdate: 2019 Sep 20
+fulljournalname: Cognitive Science
+issue: '10'
+pages: e12789
+pmclivedate: 2019/10/21
+printpubdate: 2019 Oct
+pubdate: 2019 Sep 20
+sortdate: 2019/09/20 00:00
+source: Cogn Sci
+title: Degree of Language Experience Modulates Visual Attention to Visible Speech
+  and Iconic Gestures During Clear and Degraded Speech Comprehension
+uid: '6790953'
+volume: '43'

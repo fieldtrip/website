@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '32898188'
+- idtype: doi
+  value: 10.1371/journal.pbio.3000833
+- idtype: pmcid
+  value: PMC7478834
+authors:
+- authtype: Author
+  name: Marchesotti S
+- authtype: Author
+  name: Nicolle J
+- authtype: Author
+  name: Merlet I
+- authtype: Author
+  name: Arnal LH
+- authtype: Author
+  name: Donoghue JP
+- authtype: Author
+  name: Giraud AL
+epubdate: 2020 Sep 8
+fulljournalname: PLoS Biology
+issue: '9'
+pages: e3000833
+pmclivedate: 2020/09/18
+printpubdate: ''
+pubdate: 2020 Sep 8
+sortdate: 2020/09/08 00:00
+source: PLoS Biol
+title: Selective enhancement of low-gamma activity by tACS improves phonemic processing
+  and reading accuracy in dyslexia
+uid: '7478834'
+volume: '18'

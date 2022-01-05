@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '28484387'
+- idtype: doi
+  value: 10.3389/fnagi.2017.00109
+- idtype: pmcid
+  value: PMC5399035
+authors:
+- authtype: Author
+  name: López-Sanz D
+- authtype: Author
+  name: Bruña R
+- authtype: Author
+  name: Garcés P
+- authtype: Author
+  name: Martín-Buro MC
+- authtype: Author
+  name: Walter S
+- authtype: Author
+  name: Delgado ML
+- authtype: Author
+  name: Montenegro M
+- authtype: Author
+  name: López Higes R
+- authtype: Author
+  name: Marcos A
+- authtype: Author
+  name: Maestú F
+epubdate: 2017 Apr 21
+fulljournalname: Frontiers in Aging Neuroscience
+issue: ''
+pages: '109'
+pmclivedate: 2017/05/08
+printpubdate: ''
+pubdate: 2017 Apr 21
+sortdate: 2017/04/21 00:00
+source: Front Aging Neurosci
+title: 'Functional Connectivity Disruption in Subjective Cognitive Decline and Mild
+  Cognitive Impairment: A Common Pattern of Alterations'
+uid: '5399035'
+volume: '9'

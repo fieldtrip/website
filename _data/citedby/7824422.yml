@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '33396330'
+- idtype: doi
+  value: 10.3390/brainsci11010035
+- idtype: pmcid
+  value: PMC7824422
+authors:
+- authtype: Author
+  name: Vukelić M
+- authtype: Author
+  name: Lingelbach K
+- authtype: Author
+  name: Pollmann K
+- authtype: Author
+  name: Peissner M
+epubdate: 2020 Dec 31
+fulljournalname: Brain Sciences
+issue: '1'
+pages: '35'
+pmclivedate: 2021/01/24
+printpubdate: ''
+pubdate: 2020 Dec 31
+sortdate: 2020/12/31 00:00
+source: Brain Sci
+title: Oscillatory EEG Signatures of Affective Processes during Interaction with Adaptive
+  Computer Systems
+uid: '7824422'
+volume: '11'

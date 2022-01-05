@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '28617796'
+- idtype: doi
+  value: 10.1371/journal.pbio.2001878
+- idtype: pmcid
+  value: PMC5472254
+authors:
+- authtype: Author
+  name: Town SM
+- authtype: Author
+  name: Brimijoin WO
+- authtype: Author
+  name: Bizley JK
+epubdate: 2017 Jun 15
+fulljournalname: PLoS Biology
+issue: '6'
+pages: e2001878
+pmclivedate: 2017/07/03
+printpubdate: ''
+pubdate: 2017 Jun 15
+sortdate: 2017/06/15 00:00
+source: PLoS Biol
+title: Egocentric and allocentric representations in auditory cortex
+uid: '5472254'
+volume: '15'

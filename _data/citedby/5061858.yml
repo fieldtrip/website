@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '27790106'
+- idtype: doi
+  value: 10.3389/fnhum.2016.00513
+- idtype: pmcid
+  value: PMC5061858
+authors:
+- authtype: Author
+  name: Zhu W
+- authtype: Author
+  name: Drewes J
+- authtype: Author
+  name: Peatfield NA
+- authtype: Author
+  name: Melcher D
+epubdate: 2016 Oct 13
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '513'
+pmclivedate: 2016/10/27
+printpubdate: ''
+pubdate: 2016 Oct 13
+sortdate: 2016/10/13 00:00
+source: Front Hum Neurosci
+title: Differential Visual Processing of Animal Images, with and without Conscious
+  Awareness
+uid: '5061858'
+volume: '10'

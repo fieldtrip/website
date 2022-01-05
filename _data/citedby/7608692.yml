@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '33023884'
+- idtype: doi
+  value: 10.1523/ENEURO.0229-20.2020
+- idtype: pmcid
+  value: PMC7608692
+authors:
+- authtype: Author
+  name: Vidal-Gran C
+- authtype: Author
+  name: Sokoliuk R
+- authtype: Author
+  name: Bowman H
+- authtype: Author
+  name: Cruse D
+epubdate: 2020 Oct 19
+fulljournalname: eNeuro
+issue: '5'
+pages: ENEURO.0229-20.2020
+pmclivedate: 2020/11/04
+printpubdate: ''
+pubdate: 2020 Oct 19
+sortdate: 2020/10/19 00:00
+source: eNeuro
+title: Strategic and Non-Strategic Semantic Expectations Hierarchically Modulate Neural
+  Processing
+uid: '7608692'
+volume: '7'

@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '26503014'
+- idtype: doi
+  value: 10.1038/srep15717
+- idtype: pmcid
+  value: PMC4621540
+authors:
+- authtype: Author
+  name: Luft CD
+- authtype: Author
+  name: Bhattacharya J
+epubdate: 2015 Oct 27
+fulljournalname: Scientific Reports
+issue: ''
+pages: '15717'
+pmclivedate: 2015/10/29
+printpubdate: ''
+pubdate: 2015 Oct 27
+sortdate: 2015/10/27 00:00
+source: Sci Rep
+title: 'Aroused with heart: Modulation of heartbeat evoked potential by arousal induction
+  and its oscillatory correlates'
+uid: '4621540'
+volume: '5'

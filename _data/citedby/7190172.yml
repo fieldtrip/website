@@ -1,0 +1,24 @@
+articleids:
+- idtype: pmid
+  value: '32348350'
+- idtype: doi
+  value: 10.1371/journal.pone.0232100
+- idtype: pmcid
+  value: PMC7190172
+authors:
+- authtype: Author
+  name: Houck JM
+- authtype: Author
+  name: Claus ED
+epubdate: 2020 Apr 29
+fulljournalname: PLoS ONE
+issue: '4'
+pages: e0232100
+pmclivedate: 2020/05/06
+printpubdate: ''
+pubdate: 2020 Apr 29
+sortdate: 2020/04/29 00:00
+source: PLoS One
+title: A comparison of automated and manual co-registration for magnetoencephalography
+uid: '7190172'
+volume: '15'

@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '30842247'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.2291-18.2019
+- idtype: pmcid
+  value: PMC6510341
+authors:
+- authtype: Author
+  name: Kim K
+- authtype: Author
+  name: Ladenbauer J
+- authtype: Author
+  name: Babo-Rebelo M
+- authtype: Author
+  name: Buot A
+- authtype: Author
+  name: Lehongre K
+- authtype: Author
+  name: Adam C
+- authtype: Author
+  name: Hasboun D
+- authtype: Author
+  name: Lambrecq V
+- authtype: Author
+  name: Navarro V
+- authtype: Author
+  name: Ostojic S
+- authtype: Author
+  name: Tallon-Baudry C
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '19'
+pages: 3676-3686
+pmclivedate: 2019/05/16
+printpubdate: 2019 May 8
+pubdate: 2019 May 8
+sortdate: 2019/05/08 00:00
+source: J Neurosci
+title: Resting-State Neural Firing Rate Is Linked to Cardiac-Cycle Duration in the
+  Human Cingulate and Parahippocampal Cortices
+uid: '6510341'
+volume: '39'

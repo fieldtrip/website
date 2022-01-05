@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '31622665'
+- idtype: doi
+  value: 10.1016/j.nlm.2019.107100
+- idtype: pmcid
+  value: PMC6910722
+- idtype: MID
+  value: NIHMS1545113
+authors:
+- authtype: Author
+  name: Kam K
+- authtype: Author
+  name: Pettibone WD
+- authtype: Author
+  name: Shim K
+- authtype: Author
+  name: Chen RK
+- authtype: Author
+  name: Varga AW
+epubdate: 2019 Oct 14
+fulljournalname: Neurobiology of learning and memory
+issue: ''
+pages: '107100'
+pmclivedate: 2020/12/01
+printpubdate: 2019 Dec
+pubdate: 2019 Oct 14
+sortdate: 2019/10/14 00:00
+source: Neurobiol Learn Mem
+title: Dynamics of Sleep Spindles and Coupling to Slow Oscillations Following Motor
+  Learning in Adult Mice
+uid: '6910722'
+volume: '166'

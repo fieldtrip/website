@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '30009137'
+- idtype: doi
+  value: 10.1016/j.mex.2018.01.002
+- idtype: pmcid
+  value: PMC6043671
+authors:
+- authtype: Author
+  name: Zhdanov A
+- authtype: Author
+  name: Nurminen J
+- authtype: Author
+  name: Larson E
+epubdate: 2018 Jan 31
+fulljournalname: MethodsX
+issue: ''
+pages: 234-243
+pmclivedate: 2018/07/13
+printpubdate: ''
+pubdate: 2018 Jan 31
+sortdate: 2018/01/31 00:00
+source: MethodsX
+title: 'Helsinki VideoMEG Project: Augmenting magnetoencephalography with synchronized
+  video recordings'
+uid: '6043671'
+volume: '5'

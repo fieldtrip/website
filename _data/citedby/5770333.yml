@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '29104149'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2017.10.069
+- idtype: pmcid
+  value: PMC5770333
+authors:
+- authtype: Author
+  name: Magazzini L
+- authtype: Author
+  name: Singh KD
+epubdate: ''
+fulljournalname: Neuroimage
+issue: ''
+pages: 219-229
+pmclivedate: 2018/02/01
+printpubdate: 2018 Feb 1
+pubdate: 2018 Feb 1
+sortdate: 2018/02/01 00:00
+source: Neuroimage
+title: Spatial attention modulates visual gamma oscillations across the human ventral
+  stream
+uid: '5770333'
+volume: '166'

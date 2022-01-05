@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '25100934'
+- idtype: doi
+  value: 10.3389/fnins.2014.00203
+- idtype: pmcid
+  value: PMC4104552
+authors:
+- authtype: Author
+  name: Shuai L
+- authtype: Author
+  name: Elhilali M
+epubdate: 2014 Jul 21
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '203'
+pmclivedate: 2014/08/06
+printpubdate: ''
+pubdate: 2014 Jul 21
+sortdate: 2014/07/21 00:00
+source: Front Neurosci
+title: Task-dependent neural representations of salient events in dynamic auditory
+  scenes
+uid: '4104552'
+volume: '8'

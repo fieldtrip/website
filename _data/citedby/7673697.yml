@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '33148648'
+- idtype: doi
+  value: 10.1126/sciadv.abc6348
+- idtype: pmcid
+  value: PMC7673697
+authors:
+- authtype: Author
+  name: Thézé R
+- authtype: Author
+  name: Giraud AL
+- authtype: Author
+  name: Mégevand P
+epubdate: 2020 Nov 4
+fulljournalname: Science Advances
+issue: '45'
+pages: eabc6348
+pmclivedate: 2020/11/24
+printpubdate: ''
+pubdate: 2020 Nov 4
+sortdate: 2020/11/04 00:00
+source: Sci Adv
+title: The phase of cortical oscillations determines the perceptual fate of visual
+  cues in naturalistic audiovisual speech
+uid: '7673697'
+volume: '6'

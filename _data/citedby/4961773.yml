@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '27466329'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0262-16.2016
+- idtype: pmcid
+  value: PMC4961773
+authors:
+- authtype: Author
+  name: Babo-Rebelo M
+- authtype: Author
+  name: Richter CG
+- authtype: Author
+  name: Tallon-Baudry C
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '30'
+pages: 7829-7840
+pmclivedate: 2016/08/09
+printpubdate: 2016 Jul 27
+pubdate: 2016 Jul 27
+sortdate: 2016/07/27 00:00
+source: J Neurosci
+title: Neural Responses to Heartbeats in the Default Network Encode the Self in Spontaneous
+  Thoughts
+uid: '4961773'
+volume: '36'

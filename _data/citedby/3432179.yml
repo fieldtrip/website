@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '22789677'
+- idtype: doi
+  value: 10.1016/j.neuropsychologia.2012.06.027
+- idtype: pmcid
+  value: PMC3432179
+- idtype: MID
+  value: NIHMS393079
+authors:
+- authtype: Author
+  name: Mollison MV
+- authtype: Author
+  name: Curran T
+epubdate: 2012 Jul 10
+fulljournalname: Neuropsychologia
+issue: '11'
+pages: 2546-2565
+pmclivedate: 2013/09/01
+printpubdate: 2012 Sep
+pubdate: 2012 Jul 10
+sortdate: 2012/07/10 00:00
+source: Neuropsychologia
+title: Familiarity in Source Memory
+uid: '3432179'
+volume: '50'

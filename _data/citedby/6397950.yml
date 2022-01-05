@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '30834301'
+- idtype: doi
+  value: 10.1523/ENEURO.0268-18.2018
+- idtype: pmcid
+  value: PMC6397950
+authors:
+- authtype: Author
+  name: Weaver MD
+- authtype: Author
+  name: Fahrenfort JJ
+- authtype: Author
+  name: Belopolsky A
+- authtype: Author
+  name: van Gaal S
+epubdate: 2019 Feb 22
+fulljournalname: eNeuro
+issue: '1'
+pages: ENEURO.0268-18.2018
+pmclivedate: 2019/03/04
+printpubdate: ''
+pubdate: 2019 Feb 22
+sortdate: 2019/02/22 00:00
+source: eNeuro
+title: Independent Neural Activity Patterns for Sensory- and Confidence-Based Information
+  Maintenance during Category-Selective Visual Processing
+uid: '6397950'
+volume: '6'

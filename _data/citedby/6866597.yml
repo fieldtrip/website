@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '29024193'
+- idtype: doi
+  value: 10.1002/hbm.23834
+- idtype: pmcid
+  value: PMC6866597
+authors:
+- authtype: Author
+  name: Ahn S
+- authtype: Author
+  name: Cho H
+- authtype: Author
+  name: Kwon M
+- authtype: Author
+  name: Kim K
+- authtype: Author
+  name: Kwon H
+- authtype: Author
+  name: Kim BS
+- authtype: Author
+  name: Chang WS
+- authtype: Author
+  name: Chang JW
+- authtype: Author
+  name: Jun SC
+epubdate: 2017 Oct 11
+fulljournalname: Human Brain Mapping
+issue: '1'
+pages: 171-188
+pmclivedate: 2020/06/12
+printpubdate: ''
+pubdate: 2017 Oct 11
+sortdate: 2017/10/11 00:00
+source: Hum Brain Mapp
+title: Interbrain phase synchronization during turn‐taking verbal interaction—a hyperscanning
+  study using simultaneous EEG/MEG
+uid: '6866597'
+volume: '39'

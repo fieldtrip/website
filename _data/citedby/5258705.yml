@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '28174533'
+- idtype: doi
+  value: 10.3389/fnagi.2017.00001
+- idtype: pmcid
+  value: PMC5258705
+authors:
+- authtype: Author
+  name: Steiger TK
+- authtype: Author
+  name: Bunzeck N
+epubdate: 2017 Jan 24
+fulljournalname: Frontiers in Aging Neuroscience
+issue: ''
+pages: '1'
+pmclivedate: 2017/02/07
+printpubdate: ''
+pubdate: 2017 Jan 24
+sortdate: 2017/01/24 00:00
+source: Front Aging Neurosci
+title: Reward Dependent Invigoration Relates to Theta Oscillations and Is Predicted
+  by Dopaminergic Midbrain Integrity in Healthy Elderly
+uid: '5258705'
+volume: '9'

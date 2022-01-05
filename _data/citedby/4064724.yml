@@ -1,0 +1,45 @@
+articleids:
+- idtype: pmid
+  value: '24617580'
+- idtype: doi
+  value: 10.1089/brain.2013.0208
+- idtype: pmcid
+  value: PMC4064724
+authors:
+- authtype: Author
+  name: Pineda-Pardo JA
+- authtype: Author
+  name: Garcés P
+- authtype: Author
+  name: López ME
+- authtype: Author
+  name: Aurtenetxe S
+- authtype: Author
+  name: Cuesta P
+- authtype: Author
+  name: Marcos A
+- authtype: Author
+  name: Montejo P
+- authtype: Author
+  name: Yus M
+- authtype: Author
+  name: Hernández-Tamames JA
+- authtype: Author
+  name: del Pozo F
+- authtype: Author
+  name: Becker JT
+- authtype: Author
+  name: Maestú F
+epubdate: ''
+fulljournalname: Brain Connectivity
+issue: '5'
+pages: 312-322
+pmclivedate: 2015/06/01
+printpubdate: 2014 Jun 1
+pubdate: 2014 Jun 1
+sortdate: 2014/06/01 00:00
+source: Brain Connect
+title: White Matter Damage Disorganizes Brain Functional Networks in Amnestic Mild
+  Cognitive Impairment
+uid: '4064724'
+volume: '4'

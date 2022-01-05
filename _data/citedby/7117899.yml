@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '32122954'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.2077-19.2020
+- idtype: pmcid
+  value: PMC7117899
+authors:
+- authtype: Author
+  name: Schlossmacher I
+- authtype: Author
+  name: Dellert T
+- authtype: Author
+  name: Pitts M
+- authtype: Author
+  name: Bruchmann M
+- authtype: Author
+  name: Straube T
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '14'
+pages: 2906-2913
+pmclivedate: 2020/10/01
+printpubdate: 2020 Apr 1
+pubdate: 2020 Apr 1
+sortdate: 2020/04/01 00:00
+source: J Neurosci
+title: Differential Effects of Awareness and Task Relevance on Early and Late ERPs
+  in a No-Report Visual Oddball Paradigm
+uid: '7117899'
+volume: '40'

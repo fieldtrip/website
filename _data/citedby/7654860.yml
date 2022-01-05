@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '33173877'
+- idtype: doi
+  value: 10.1101/2020.10.30.20222448
+- idtype: pmcid
+  value: PMC7654860
+authors:
+- authtype: Author
+  name: Barnes-Davis ME
+- authtype: Author
+  name: Merhar SL
+- authtype: Author
+  name: Holland SK
+- authtype: Author
+  name: Parikh NA
+- authtype: Author
+  name: Kadis DS
+epubdate: 2020 Nov 4
+fulljournalname: medRxiv
+issue: ''
+pages: 2020.10.30.20222448
+pmclivedate: 2020/11/11
+printpubdate: ''
+pubdate: 2020 Nov 4
+sortdate: 2020/11/04 00:00
+source: medRxiv
+title: 'Extremely Preterm Children Demonstrate Interhemispheric Hyperconnectivity
+  During Verb Generation: a Multimodal Approach'
+uid: '7654860'
+volume: ''

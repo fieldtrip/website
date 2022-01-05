@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '33994913'
+- idtype: doi
+  value: 10.3389/fnins.2021.531915
+- idtype: pmcid
+  value: PMC8119766
+authors:
+- authtype: Author
+  name: Samadani A
+- authtype: Author
+  name: Kim S
+- authtype: Author
+  name: Moon J
+- authtype: Author
+  name: Kang K
+- authtype: Author
+  name: Chau T
+epubdate: 2021 Apr 30
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '531915'
+pmclivedate: 2021/05/15
+printpubdate: ''
+pubdate: 2021 Apr 30
+sortdate: 2021/04/30 00:00
+source: Front Neurosci
+title: Neurophysiological Synchrony Between Children With Severe Physical Disabilities
+  and Their Parents During Music Therapy
+uid: '8119766'
+volume: '15'

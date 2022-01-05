@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '24869503'
+- idtype: doi
+  value: 10.1038/srep05101
+- idtype: pmcid
+  value: PMC4037748
+authors:
+- authtype: Author
+  name: Vlahou EL
+- authtype: Author
+  name: Thurm F
+- authtype: Author
+  name: Kolassa IT
+- authtype: Author
+  name: Schlee W
+epubdate: 2014 May 29
+fulljournalname: Scientific Reports
+issue: ''
+pages: '5101'
+pmclivedate: 2014/05/30
+printpubdate: ''
+pubdate: 2014 May 29
+sortdate: 2014/05/29 00:00
+source: Sci Rep
+title: Resting-state slow wave power, healthy aging and cognitive performance
+uid: '4037748'
+volume: '4'

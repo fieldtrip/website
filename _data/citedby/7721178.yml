@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '33226982'
+- idtype: doi
+  value: 10.1371/journal.pcbi.1008286
+- idtype: pmcid
+  value: PMC7721178
+authors:
+- authtype: Author
+  name: Bowman H
+- authtype: Author
+  name: Brooks JL
+- authtype: Author
+  name: Hajilou O
+- authtype: Author
+  name: Zoumpoulaki A
+- authtype: Author
+  name: Litvak V
+epubdate: 2020 Nov 23
+fulljournalname: PLoS Computational Biology
+issue: '11'
+pages: e1008286
+pmclivedate: 2020/12/15
+printpubdate: ''
+pubdate: 2020 Nov 23
+sortdate: 2020/11/23 00:00
+source: PLoS Comput Biol
+title: 'Breaking the circularity in circular analyses: Simulations and formal treatment
+  of the flattened average approach'
+uid: '7721178'
+volume: '16'

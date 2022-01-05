@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '27794350'
+- idtype: doi
+  value: 10.1121/1.4963902
+- idtype: pmcid
+  value: PMC5849028
+authors:
+- authtype: Author
+  name: Mehta AH
+- authtype: Author
+  name: Yasin I
+- authtype: Author
+  name: Oxenham AJ
+- authtype: Author
+  name: Shamma S
+epubdate: 2016 Oct 3
+fulljournalname: The Journal of the Acoustical Society of America
+issue: '4'
+pages: 2225-2233
+pmclivedate: 2018/03/20
+printpubdate: 2016 Oct
+pubdate: 2016 Oct 3
+sortdate: 2016/10/03 00:00
+source: J Acoust Soc Am
+title: Neural correlates of attention and streaming in a perceptually multistable
+  auditory illusion
+uid: '5849028'
+volume: '140'

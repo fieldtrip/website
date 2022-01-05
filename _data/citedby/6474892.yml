@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '31004126'
+- idtype: doi
+  value: 10.1038/s41598-019-42693-x
+- idtype: pmcid
+  value: PMC6474892
+authors:
+- authtype: Author
+  name: Zomorrodi R
+- authtype: Author
+  name: Loheswaran G
+- authtype: Author
+  name: Pushparaj A
+- authtype: Author
+  name: Lim L
+epubdate: 2019 Apr 19
+fulljournalname: Scientific Reports
+issue: ''
+pages: '6309'
+pmclivedate: 2019/04/26
+printpubdate: ''
+pubdate: 2019 Apr 19
+sortdate: 2019/04/19 00:00
+source: Sci Rep
+title: 'Pulsed Near Infrared Transcranial and Intranasal Photobiomodulation Significantly
+  Modulates Neural Oscillations: a pilot exploratory study'
+uid: '6474892'
+volume: '9'

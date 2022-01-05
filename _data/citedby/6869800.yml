@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '26287369'
+- idtype: doi
+  value: 10.1002/hbm.22940
+- idtype: pmcid
+  value: PMC6869800
+authors:
+- authtype: Author
+  name: Lithari C
+- authtype: Author
+  name: Moratti S
+- authtype: Author
+  name: Weisz N
+epubdate: 2015 Aug 19
+fulljournalname: Human Brain Mapping
+issue: '11'
+pages: 4592-4603
+pmclivedate: 2020/06/12
+printpubdate: ''
+pubdate: 2015 Aug 19
+sortdate: 2015/08/19 00:00
+source: Hum Brain Mapp
+title: Thalamocortical interactions underlying visual fear conditioning in humans
+uid: '6869800'
+volume: '36'

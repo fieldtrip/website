@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '27242429'
+- idtype: doi
+  value: 10.3389/fncel.2016.00115
+- idtype: pmcid
+  value: PMC4861730
+authors:
+- authtype: Author
+  name: Royter V
+- authtype: Author
+  name: Gharabaghi A
+epubdate: 2016 May 10
+fulljournalname: Frontiers in Cellular Neuroscience
+issue: ''
+pages: '115'
+pmclivedate: 2016/05/30
+printpubdate: ''
+pubdate: 2016 May 10
+sortdate: 2016/05/10 00:00
+source: Front Cell Neurosci
+title: Brain State-Dependent Closed-Loop Modulation of Paired Associative Stimulation
+  Controlled by Sensorimotor Desynchronization
+uid: '4861730'
+volume: '10'

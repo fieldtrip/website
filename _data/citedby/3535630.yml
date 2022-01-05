@@ -1,0 +1,34 @@
+articleids:
+- idtype: pmid
+  value: '23236162'
+- idtype: doi
+  value: 10.1073/pnas.1207414110
+- idtype: pmcid
+  value: PMC3535630
+authors:
+- authtype: Author
+  name: Fahrenfort JJ
+- authtype: Author
+  name: Snijders TM
+- authtype: Author
+  name: Heinen K
+- authtype: Author
+  name: van Gaal S
+- authtype: Author
+  name: Scholte HS
+- authtype: Author
+  name: Lamme VA
+epubdate: 2012 Dec 10
+fulljournalname: Proceedings of the National Academy of Sciences of the United States
+  of America
+issue: '52'
+pages: 21504-21509
+pmclivedate: 2013/06/26
+printpubdate: 2012 Dec 26
+pubdate: 2012 Dec 10
+sortdate: 2012/12/10 00:00
+source: Proc Natl Acad Sci U S A
+title: Neuronal integration in visual cortex elevates face category tuning to conscious
+  face perception
+uid: '3535630'
+volume: '109'

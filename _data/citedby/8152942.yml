@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '34296091'
+- idtype: doi
+  value: 10.1093/texcom/tgaa012
+- idtype: pmcid
+  value: PMC8152942
+authors:
+- authtype: Author
+  name: Schwenk JC
+- authtype: Author
+  name: VanRullen R
+- authtype: Author
+  name: Bremmer F
+epubdate: 2020 Apr 13
+fulljournalname: Cerebral Cortex Communications
+issue: '1'
+pages: tgaa012
+pmclivedate: 2021/07/21
+printpubdate: ''
+pubdate: 2020 Apr 13
+sortdate: 2020/04/13 00:00
+source: Cereb Cortex Commun
+title: Dynamics of Visual Perceptual Echoes Following Short-Term Visual Deprivation
+uid: '8152942'
+volume: '1'

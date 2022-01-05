@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '31998097'
+- idtype: doi
+  value: 10.3389/fnhum.2019.00445
+- idtype: pmcid
+  value: PMC6960483
+authors:
+- authtype: Author
+  name: Llorens A
+- authtype: Author
+  name: Funderud I
+- authtype: Author
+  name: Blenkmann AO
+- authtype: Author
+  name: Lubell J
+- authtype: Author
+  name: Foldal M
+- authtype: Author
+  name: Leske S
+- authtype: Author
+  name: Huster R
+- authtype: Author
+  name: Meling TR
+- authtype: Author
+  name: Knight RT
+- authtype: Author
+  name: Solbakk AK
+- authtype: Author
+  name: Endestad T
+epubdate: 2020 Jan 8
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '445'
+pmclivedate: 2020/01/29
+printpubdate: ''
+pubdate: 2020 Jan 8
+sortdate: 2020/01/08 00:00
+source: Front Hum Neurosci
+title: Preservation of Interference Effects in Working Memory After Orbitofrontal
+  Damage
+uid: '6960483'
+volume: '13'

@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '33633576'
+- idtype: doi
+  value: 10.3389/fphys.2020.611125
+- idtype: pmcid
+  value: PMC7901889
+authors:
+- authtype: Author
+  name: Castelluzzo M
+- authtype: Author
+  name: Perinelli A
+- authtype: Author
+  name: Tabarelli D
+- authtype: Author
+  name: Ricci L
+epubdate: 2021 Jan 28
+fulljournalname: Frontiers in Physiology
+issue: ''
+pages: '611125'
+pmclivedate: 2021/02/24
+printpubdate: ''
+pubdate: 2021 Jan 28
+sortdate: 2021/01/28 00:00
+source: Front Physiol
+title: Dependence of Connectivity on the Logarithm of Geometric Distance in Brain
+  Networks
+uid: '7901889'
+volume: '11'

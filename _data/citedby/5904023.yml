@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '29044763'
+- idtype: doi
+  value: 10.1111/ejn.13742
+- idtype: pmcid
+  value: PMC5904023
+- idtype: MID
+  value: NIHMS913366
+authors:
+- authtype: Author
+  name: Teng X
+- authtype: Author
+  name: Tian X
+- authtype: Author
+  name: Doelling K
+- authtype: Author
+  name: Poeppel D
+epubdate: 2017 Nov 6
+fulljournalname: The European journal of neuroscience
+issue: '8'
+pages: 2770-2782
+pmclivedate: 2019/10/01
+printpubdate: 2018 Oct
+pubdate: 2017 Nov 6
+sortdate: 2017/11/06 00:00
+source: Eur J Neurosci
+title: 'Theta band oscillations reflect more than entrainment: behavioral and neural
+  evidence demonstrate an active chunking process'
+uid: '5904023'
+volume: '48'

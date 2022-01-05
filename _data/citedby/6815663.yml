@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '31660265'
+- idtype: doi
+  value: 10.7717/peerj.7838
+- idtype: pmcid
+  value: PMC6815663
+authors:
+- authtype: Author
+  name: Ehinger BV
+- authtype: Author
+  name: Dimigen O
+epubdate: 2019 Oct 24
+fulljournalname: PeerJ
+issue: ''
+pages: e7838
+pmclivedate: 2019/10/28
+printpubdate: ''
+pubdate: 2019 Oct 24
+sortdate: 2019/10/24 00:00
+source: PeerJ
+title: 'Unfold: an integrated toolbox for overlap correction, non-linear modeling,
+  and regression-based EEG analysis'
+uid: '6815663'
+volume: '7'

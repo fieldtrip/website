@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '27934762'
+- idtype: doi
+  value: 10.1126/science.aah7011
+- idtype: pmcid
+  value: PMC5221753
+- idtype: MID
+  value: NIHMS838742
+authors:
+- authtype: Author
+  name: Rose NS
+- authtype: Author
+  name: LaRocque JJ
+- authtype: Author
+  name: Riggall AC
+- authtype: Author
+  name: Gosseries O
+- authtype: Author
+  name: Starrett MJ
+- authtype: Author
+  name: Meyering EE
+- authtype: Author
+  name: Postle BR
+epubdate: ''
+fulljournalname: Science (New York, N.Y.)
+issue: '6316'
+pages: 1136-1139
+pmclivedate: 2017/06/02
+printpubdate: 2016 Dec 2
+pubdate: 2016 Dec 2
+sortdate: 2016/12/02 00:00
+source: Science
+title: Reactivation of Latent Working Memories with Transcranial Magnetic Stimulation
+uid: '5221753'
+volume: '354'

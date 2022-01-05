@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '33867913'
+- idtype: doi
+  value: 10.3389/fnins.2021.602437
+- idtype: pmcid
+  value: PMC8047478
+authors:
+- authtype: Author
+  name: Faramarzi M
+- authtype: Author
+  name: Kasten FH
+- authtype: Author
+  name: Altaş G
+- authtype: Author
+  name: Aleman A
+- authtype: Author
+  name: Ćurčić-Blake B
+- authtype: Author
+  name: Herrmann CS
+epubdate: 2021 Apr 1
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '602437'
+pmclivedate: 2021/04/16
+printpubdate: ''
+pubdate: 2021 Apr 1
+sortdate: 2021/04/01 00:00
+source: Front Neurosci
+title: Similar EEG Activity Patterns During Experimentally-Induced Auditory Illusions
+  and Veridical Perceptions
+uid: '8047478'
+volume: '15'

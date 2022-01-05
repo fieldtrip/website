@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '33938920'
+- idtype: doi
+  value: 10.1167/jov.21.5.1
+- idtype: pmcid
+  value: PMC8107484
+authors:
+- authtype: Author
+  name: Gamble C
+- authtype: Author
+  name: Song JH
+epubdate: 2021 May 3
+fulljournalname: Journal of Vision
+issue: '5'
+pages: '1'
+pmclivedate: 2021/05/17
+printpubdate: ''
+pubdate: 2021 May 3
+sortdate: 2021/05/03 00:00
+source: J Vis
+title: Modulation of visually guided action by the image and familiar sizes of real-world
+  objects
+uid: '8107484'
+volume: '21'

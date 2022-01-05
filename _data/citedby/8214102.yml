@@ -1,0 +1,58 @@
+articleids:
+- idtype: pmid
+  value: '33059052'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2020.117443
+- idtype: pmcid
+  value: PMC8214102
+authors:
+- authtype: Author
+  name: Tierney TM
+- authtype: Author
+  name: Levy A
+- authtype: Author
+  name: Barry DN
+- authtype: Author
+  name: Meyer SS
+- authtype: Author
+  name: Shigihara Y
+- authtype: Author
+  name: Everatt M
+- authtype: Author
+  name: Mellor S
+- authtype: Author
+  name: Lopez JD
+- authtype: Author
+  name: Bestmann S
+- authtype: Author
+  name: Holmes N
+- authtype: Author
+  name: Roberts G
+- authtype: Author
+  name: Hill RM
+- authtype: Author
+  name: Boto E
+- authtype: Author
+  name: Leggett J
+- authtype: Author
+  name: Shah V
+- authtype: Author
+  name: Brookes MJ
+- authtype: Author
+  name: Bowtell R
+- authtype: Author
+  name: Maguire EA
+- authtype: Author
+  name: Barnes GR
+epubdate: ''
+fulljournalname: Neuroimage
+issue: ''
+pages: '117443'
+pmclivedate: 2021/06/25
+printpubdate: 2021 Jan 15
+pubdate: 2021 Jan 15
+sortdate: 2021/01/15 00:00
+source: Neuroimage
+title: 'Mouth magnetoencephalography: A unique perspective on the human hippocampus'
+uid: '8214102'
+volume: '225'

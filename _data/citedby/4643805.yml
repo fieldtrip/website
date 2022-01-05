@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '26601226'
+- idtype: doi
+  value: 10.1126/sciadv.1500229
+- idtype: pmcid
+  value: PMC4643805
+authors:
+- authtype: Author
+  name: Stitt I
+- authtype: Author
+  name: Galindo-Leon E
+- authtype: Author
+  name: Pieper F
+- authtype: Author
+  name: Engler G
+- authtype: Author
+  name: Fiedler E
+- authtype: Author
+  name: Stieglitz T
+- authtype: Author
+  name: Engel AK
+epubdate: 2015 Aug 7
+fulljournalname: Science Advances
+issue: '7'
+pages: e1500229
+pmclivedate: 2015/11/23
+printpubdate: ''
+pubdate: 2015 Aug 7
+sortdate: 2015/08/07 00:00
+source: Sci Adv
+title: Intrinsic coupling modes reveal the functional architecture of cortico-tectal
+  networks
+uid: '4643805'
+volume: '1'
