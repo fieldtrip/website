@@ -1,0 +1,37 @@
+---
+title: Citations
+tag: literature
+---
+
+# Citations to the FieldTrip reference paper
+
+_These are citations on [Pubmed](https://pubmed.ncbi.nlm.nih.gov/21253357), you can find a more complete list on [Google Scholar](https://scholar.google.com/scholar?cites=3328911510682538425&scisbd=1)._
+
+<ul>
+{% for item in site.data.citedby %}
+  {% assign title = item[1].title %}
+  {% assign authors = item[1].authors | map: "name"  | join: ", " %}
+  {% assign pubdate = item[1].pubdate %}
+  {% assign fulljournalname = item[1].fulljournalname %}
+  {% assign volume = item[1].volume %}
+  {% assign issue = item[1].issue %}
+  {% assign pages = item[1].pages %}
+
+  {% assign doi = item[1].articleids | where: "idtype", "doi" %}
+  {% assign doi = doi[0].value %}
+
+  {% assign pmid = item[1].articleids | where: "idtype", "pmid" %}
+  {% assign pmid = pmid[0].value %}
+
+  {% assign pmcid = item[1].articleids | where: "idtype", "pmcid" %}
+  {% assign pmcid = pmcid[0].value %}
+
+  <li>
+  {% if issue.size == 0 %}
+    {{ authors }}. <a href="https://pubmed.ncbi.nlm.nih.gov/{{ pmid }}">{{ title }}</a> {{ fulljournalname }} {{ pubdate }}; {{volume}}:{{ pages }}. doi: <a href="https://doi.org/{{ doi }}">{{ doi }}</a>
+  {% else %}
+    {{ authors }}. <a href="https://pubmed.ncbi.nlm.nih.gov/{{ pmid }}">{{ title }}</a> {{ fulljournalname }} {{ pubdate }}; {{volume}}({{ issue }}):{{ pages }}. doi: <a href="https://doi.org/{{ doi }}">{{ doi }}</a>
+  {% endif %}
+  </li>
+{% endfor %}
+</ul>
