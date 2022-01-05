@@ -1,4 +1,4 @@
 ---
 layout: tag
-tag: references
+tag: literature
 ---
