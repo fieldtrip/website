@@ -57,3 +57,65 @@ _You can also follow us on [Twitter](http://twitter.com/fieldtriptoolbx)._
 {% endfor %}
 
 </section>
+
+## Recent citations
+
+_These are recent citations on [Pubmed](https://pubmed.ncbi.nlm.nih.gov/21253357), you can find a more complete list on [Google Scholar](https://scholar.google.com/scholar?cites=3328911510682538425&scisbd=1)._
+
+{% assign sortlist = "" %}
+{% for item in site.data.citedby %}
+{% assign this = item[1].sortdate | replace: "/" | replace: ":" | replace: " " | append: "-" | append: forloop.index0 %}
+{% assign sortlist = sortlist | append: " " | append: this %}
+{% endfor %}
+{% assign sortlist = sortlist | split: " " | sort | reverse | slice: 0,5 %}
+
+{% assign sortindex = "" %}
+{% for item in sortlist %}
+{% assign this = item | split: "-" %}
+{% assign sortindex = sortindex | append: " " | append: this[1] %}
+{% endfor %}
+{% assign sortindex = sortindex | split: " " %}
+
+{% for index in sortindex %}
+  {% for item in site.data.citedby %}
+    {% assign numericindex = index | times: 1 %}
+    {% if numericindex == forloop.index0 %}
+      {% assign title = item[1].title %}
+      {% assign authors = item[1].authors | map: "name"  | join: ", " %}
+      {% assign pubdate = item[1].pubdate %}
+      {% assign fulljournalname = item[1].fulljournalname %}
+      {% assign volume = item[1].volume %}
+      {% assign issue = item[1].issue %}
+      {% assign pages = item[1].pages %}
+
+      {% assign doi = item[1].articleids | where: "idtype", "doi" %}
+      {% assign doi = doi[0].value %}
+
+      {% assign pmid = item[1].articleids | where: "idtype", "pmid" %}
+      {% assign pmid = pmid[0].value %}
+
+      {% assign pmcid = item[1].articleids | where: "idtype", "pmcid" %}
+      {% assign pmcid = pmcid[0].value %}
+  
+<h3>{{ title }}</h3>
+{{ authors }}
+
+<em>
+{{ fulljournalname }} {{ pubdate }}; {{volume}}:{{ pages }}.
+doi: <a href="https://doi.org/{{ doi }}">{{ doi }}</a>.
+pmid: <a href="https://pubmed.ncbi.nlm.nih.gov/{{ pmid }}">{{ pmid }}</a>
+</em>
+
+{% comment %}
+      <li>
+      {% if issue.size == 0 %}
+        {{ authors }}. <a href="https://pubmed.ncbi.nlm.nih.gov/{{ pmid }}">{{ title }}</a> {{ fulljournalname }} {{ pubdate }}; {{volume}}:{{ pages }}. doi: <a href="https://doi.org/{{ doi }}">{{ doi }}</a>
+      {% else %}
+        {{ authors }}. <a href="https://pubmed.ncbi.nlm.nih.gov/{{ pmid }}">{{ title }}</a> {{ fulljournalname }} {{ pubdate }}; {{volume}}({{ issue }}):{{ pages }}. doi: <a href="https://doi.org/{{ doi }}">{{ doi }}</a>
+      {% endif %}
+      </li>
+{% endcomment %}
+
+    {% endif %}
+  {% endfor %}
+{% endfor %}
