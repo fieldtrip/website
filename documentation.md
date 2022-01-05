@@ -24,4 +24,3 @@ If you are very eager to get started with your specific data, please proceed to 
 - [Review and teaching material](/references_to_review_papers_and_teaching_material)
 - [Template models and data](/template)
 - [Realtime BCI](/development/realtime)
-

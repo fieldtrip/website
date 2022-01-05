@@ -1,6 +1,6 @@
 ---
 title: References to implemented methods
-tags: [references, eeg, meg, source, headmodel, freq, statistics, coherence]
+tags: [literature, eeg, meg, source, headmodel, freq, statistics, coherence]
 ---
 
 # References to implemented methods

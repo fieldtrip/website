@@ -1,6 +1,6 @@
 ---
 title: References to review papers and teaching material
-tags: [references]
+tags: [literature]
 ---
 
 # References to review papers and teaching material
@@ -15,7 +15,7 @@ Sylvain Baillet wrote a recent review manuscript on [Magnetoencephalography for 
 
 [The brain in time: insights from neuromagnetic recordings](http://onlinelibrary.wiley.com/doi/10.1111/j.1749-6632.2010.05438.x/abstract) by Riitta Hari, Lauri Parkkonen and Cathy Nangini gives a comprehensive introduction to MEG.
 
-Two somewhat older, but certainly not outdated papers on SQUID-based MEG instrumentation and signal analysis is [Magnetoencephalography—theory, instrumentation, and applications to noninvasive studies of the working human brain](https://doi.org/10.1103/RevModPhys.65.413) by Hämäläinen et al. (1993) and [Signal Processing in Magnetoencephalography](https://pdfs.semanticscholar.org/94b1/1b4e0bec484376f810a557492fa776b40b28.pdf) by Vrbra and Robinson (2001). 
+Two somewhat older, but certainly not outdated papers on SQUID-based MEG instrumentation and signal analysis is [Magnetoencephalography—theory, instrumentation, and applications to noninvasive studies of the working human brain](https://doi.org/10.1103/RevModPhys.65.413) by Hämäläinen et al. (1993) and [Signal Processing in Magnetoencephalography](https://pdfs.semanticscholar.org/94b1/1b4e0bec484376f810a557492fa776b40b28.pdf) by Vrbra and Robinson (2001).
 
 A recent review of advancements in OPM-based MEG research is given in [Moving magnetoencephalography towards real-world applications with a wearable system](https://doi.org/10.1038/nature26147) by Boto et al. (2018).  
 
@@ -25,9 +25,9 @@ A comprehensive introduction in the neurophysiology and biophysics of EEG (also 
 
 Steven J Luck, [An Introduction to the Event-Related Potential Technique](http://www.amazon.com/Introduction-Event-Related-Potential-Technique-Neuroscience/dp/0262621967), MIT Press: 2005, ISBN 0262621967. This book is reviewed here: Peter Hagoort (2006) [Event-related potentials from the user's perspective](http://www.nature.com/neuro/journal/v9/n4/full/nn0406-463.html); Nature Neuroscience 9, 463.
 
-[MEG: An Introduction to Methods](http://www.amazon.com/MEG-Introduction-Methods-Peter-Hansen/dp/0195307232/ref=sr_1_2?s=books&ie=UTF8&qid=1375859237&sr=1-2&keywords=magnetoencephalography) by Peter Hansen, Morten Kringelbach, Riitta Salmelin (2010). [Pdf](http://brainmaster.com/software/pubs/brain/MEG%20-%20An%20Intro.pdf). 
+[MEG: An Introduction to Methods](http://www.amazon.com/MEG-Introduction-Methods-Peter-Hansen/dp/0195307232/ref=sr_1_2?s=books&ie=UTF8&qid=1375859237&sr=1-2&keywords=magnetoencephalography) by Peter Hansen, Morten Kringelbach, Riitta Salmelin (2010). [Pdf](http://brainmaster.com/software/pubs/brain/MEG%20-%20An%20Intro.pdf).
 
-[Magnetoencephalography - From Signals to Dynamic Cortical Networks](https://www.springer.com/gp/book/9783662521113) by Selma Supek and Cheryl J Aine (2014). 
+[Magnetoencephalography - From Signals to Dynamic Cortical Networks](https://www.springer.com/gp/book/9783662521113) by Selma Supek and Cheryl J Aine (2014).
 
 Original work on the biophysics of MEG and EEG (free ebook) [Bioelectromagnetism - Principles and Applications of Bioelectric and Biomagnetic Fields](https://www.bem.fi/book/) by Jaakko Malmivuo & Robert Plonsey, Oxford University Press, New York, 1995.
 
