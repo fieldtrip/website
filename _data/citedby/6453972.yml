@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '30962490'
+- idtype: doi
+  value: 10.1038/s41598-019-42255-1
+- idtype: pmcid
+  value: PMC6453972
+authors:
+- authtype: Author
+  name: Heuer A
+- authtype: Author
+  name: Wolf C
+- authtype: Author
+  name: Schütz AC
+- authtype: Author
+  name: Schubö A
+epubdate: 2019 Apr 8
+fulljournalname: Scientific Reports
+issue: ''
+pages: '5749'
+pmclivedate: 2019/04/12
+printpubdate: ''
+pubdate: 2019 Apr 8
+sortdate: 2019/04/08 00:00
+source: Sci Rep
+title: The possibility to make choices modulates feature-based effects of reward
+uid: '6453972'
+volume: '9'

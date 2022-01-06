@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '26969862'
+- idtype: doi
+  value: 10.1093/scan/nsw033
+- idtype: pmcid
+  value: PMC4967795
+authors:
+- authtype: Author
+  name: Janssen DJ
+- authtype: Author
+  name: Poljac E
+- authtype: Author
+  name: Bekkering H
+epubdate: 2016 Mar 12
+fulljournalname: Social Cognitive and Affective Neuroscience
+issue: '8'
+pages: 1280-1289
+pmclivedate: 2017/05/01
+printpubdate: 2016 Aug
+pubdate: 2016 Mar 12
+sortdate: 2016/03/12 00:00
+source: Soc Cogn Affect Neurosci
+title: Binary sensitivity of theta activity for gain and loss when monitoring parametric
+  prediction errors
+uid: '4967795'
+volume: '11'

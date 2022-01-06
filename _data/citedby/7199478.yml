@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '32410940'
+- idtype: doi
+  value: 10.3389/fnins.2020.00352
+- idtype: pmcid
+  value: PMC7199478
+authors:
+- authtype: Author
+  name: Georgieva S
+- authtype: Author
+  name: Lester S
+- authtype: Author
+  name: Noreika V
+- authtype: Author
+  name: Yilmaz MN
+- authtype: Author
+  name: Wass S
+- authtype: Author
+  name: Leong V
+epubdate: 2020 Apr 28
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '352'
+pmclivedate: 2020/05/14
+printpubdate: ''
+pubdate: 2020 Apr 28
+sortdate: 2020/04/28 00:00
+source: Front Neurosci
+title: Toward the Understanding of Topographical and Spectral Signatures of Infant
+  Movement Artifacts in Naturalistic EEG
+uid: '7199478'
+volume: '14'

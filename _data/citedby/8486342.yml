@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '32746058'
+- idtype: doi
+  value: 10.1109/TBME.2020.3009053
+- idtype: pmcid
+  value: PMC8486342
+- idtype: MID
+  value: NIHMS1675257
+authors:
+- authtype: Author
+  name: Taulu S
+- authtype: Author
+  name: Taulu E
+epubdate: 2021 Feb 18
+fulljournalname: IEEE transactions on bio-medical engineering
+issue: '3'
+pages: 992-1004
+pmclivedate: 2021/10/01
+printpubdate: 2021 Mar
+pubdate: 2021 Feb 18
+sortdate: 2021/02/18 00:00
+source: IEEE Trans Biomed Eng
+title: 'Unified Expression of the Quasi-Static Electromagnetic Field: Demonstration
+  With MEG and EEG Signals'
+uid: '8486342'
+volume: '68'

@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '33174497'
+- idtype: doi
+  value: 10.1152/jn.00560.2019
+- idtype: pmcid
+  value: PMC7948137
+authors:
+- authtype: Author
+  name: Bufacchi RJ
+- authtype: Author
+  name: Magri C
+- authtype: Author
+  name: Novembre G
+- authtype: Author
+  name: Iannetti GD
+epubdate: 2020 Nov 11
+fulljournalname: Journal of Neurophysiology
+issue: '2'
+pages: 509-521
+pmclivedate: 2021/10/20
+printpubdate: 2021 Feb 1
+pubdate: 2020 Nov 11
+sortdate: 2020/11/11 00:00
+source: J Neurophysiol
+title: 'Local spatial analysis: an easy-to-use adaptive spatial EEG filter'
+uid: '7948137'
+volume: '125'

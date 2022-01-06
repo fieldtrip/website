@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '25941479'
+- idtype: doi
+  value: 10.3389/fnbeh.2015.00096
+- idtype: pmcid
+  value: PMC4403551
+authors:
+- authtype: Author
+  name: Gärtner M
+- authtype: Author
+  name: Grimm S
+- authtype: Author
+  name: Bajbouj M
+epubdate: 2015 Apr 20
+fulljournalname: Frontiers in Behavioral Neuroscience
+issue: ''
+pages: '96'
+pmclivedate: 2015/05/04
+printpubdate: ''
+pubdate: 2015 Apr 20
+sortdate: 2015/04/20 00:00
+source: Front Behav Neurosci
+title: 'Frontal midline theta oscillations during mental arithmetic: effects of stress'
+uid: '4403551'
+volume: '9'

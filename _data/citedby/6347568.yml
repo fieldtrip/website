@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '30391564'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2018.10.085
+- idtype: pmcid
+  value: PMC6347568
+authors:
+- authtype: Author
+  name: McNair SW
+- authtype: Author
+  name: Kayser SJ
+- authtype: Author
+  name: Kayser C
+epubdate: ''
+fulljournalname: Neuroimage
+issue: ''
+pages: 22-32
+pmclivedate: 2019/02/01
+printpubdate: 2019 Feb 1
+pubdate: 2019 Feb 1
+sortdate: 2019/02/01 00:00
+source: Neuroimage
+title: Consistent pre-stimulus influences on auditory perception across the lifespan
+uid: '6347568'
+volume: '186'

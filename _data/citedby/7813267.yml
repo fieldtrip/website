@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '33489257'
+- idtype: doi
+  value: 10.1098/rsos.200851
+- idtype: pmcid
+  value: PMC7813267
+authors:
+- authtype: Author
+  name: Magyari L
+- authtype: Author
+  name: Huszár Z
+- authtype: Author
+  name: Turzó A
+- authtype: Author
+  name: Andics A
+epubdate: 2020 Dec 9
+fulljournalname: Royal Society Open Science
+issue: '12'
+pages: '200851'
+pmclivedate: 2021/01/21
+printpubdate: ''
+pubdate: 2020 Dec 9
+sortdate: 2020/12/09 00:00
+source: R Soc Open Sci
+title: Event-related potentials reveal limited readiness to access phonetic details
+  during word processing in dogs
+uid: '7813267'
+volume: '7'

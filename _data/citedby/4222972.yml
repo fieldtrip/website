@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '25375957'
+- idtype: doi
+  value: 10.1371/journal.pone.0112103
+- idtype: pmcid
+  value: PMC4222972
+authors:
+- authtype: Author
+  name: Kuo CC
+- authtype: Author
+  name: Luu P
+- authtype: Author
+  name: Morgan KK
+- authtype: Author
+  name: Dow M
+- authtype: Author
+  name: Davey C
+- authtype: Author
+  name: Song J
+- authtype: Author
+  name: Malony AD
+- authtype: Author
+  name: Tucker DM
+epubdate: 2014 Nov 6
+fulljournalname: PLoS ONE
+issue: '11'
+pages: e112103
+pmclivedate: 2014/11/13
+printpubdate: ''
+pubdate: 2014 Nov 6
+sortdate: 2014/11/06 00:00
+source: PLoS One
+title: Localizing Movement-Related Primary Sensorimotor Cortices with Multi-Band EEG
+  Frequency Changes and Functional MRI
+uid: '4222972'
+volume: '9'

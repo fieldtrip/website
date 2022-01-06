@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '29249952'
+- idtype: doi
+  value: 10.3389/fnhum.2017.00585
+- idtype: pmcid
+  value: PMC5717029
+authors:
+- authtype: Author
+  name: Shu X
+- authtype: Author
+  name: Yao L
+- authtype: Author
+  name: Sheng X
+- authtype: Author
+  name: Zhang D
+- authtype: Author
+  name: Zhu X
+epubdate: 2017 Dec 1
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '585'
+pmclivedate: 2017/12/15
+printpubdate: ''
+pubdate: 2017 Dec 1
+sortdate: 2017/12/01 00:00
+source: Front Hum Neurosci
+title: Enhanced Motor Imagery-Based BCI Performance via Tactile Stimulation on Unilateral
+  Hand
+uid: '5717029'
+volume: '11'

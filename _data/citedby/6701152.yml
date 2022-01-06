@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '31426750'
+- idtype: doi
+  value: 10.1186/s11689-019-9280-2
+- idtype: pmcid
+  value: PMC6701152
+authors:
+- authtype: Author
+  name: Mogadam A
+- authtype: Author
+  name: Keller AE
+- authtype: Author
+  name: Arnold PD
+- authtype: Author
+  name: Schachar R
+- authtype: Author
+  name: Lerch JP
+- authtype: Author
+  name: Anagnostou E
+- authtype: Author
+  name: Pang EW
+epubdate: 2019 Aug 19
+fulljournalname: Journal of Neurodevelopmental Disorders
+issue: ''
+pages: '19'
+pmclivedate: 2019/08/26
+printpubdate: ''
+pubdate: 2019 Aug 19
+sortdate: 2019/08/19 00:00
+source: J Neurodev Disord
+title: Magnetoencephalographic (MEG) brain activity during a mental flexibility task
+  suggests some shared neurobiology in children with neurodevelopmental disorders
+uid: '6701152'
+volume: '11'

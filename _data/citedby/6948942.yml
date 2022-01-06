@@ -1,0 +1,22 @@
+articleids:
+- idtype: pmid
+  value: '31748375'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1887-19.2019
+- idtype: pmcid
+  value: PMC6948942
+authors:
+- authtype: Author
+  name: Wessel JR
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '2'
+pages: 411-423
+pmclivedate: 2020/07/08
+printpubdate: 2020 Jan 8
+pubdate: 2020 Jan 8
+sortdate: 2020/01/08 00:00
+source: J Neurosci
+title: β-Bursts Reveal the Trial-to-Trial Dynamics of Movement Initiation and Cancellation
+uid: '6948942'
+volume: '40'

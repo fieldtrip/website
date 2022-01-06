@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '30112275'
+- idtype: doi
+  value: 10.1016/j.nicl.2018.07.029
+- idtype: pmcid
+  value: PMC6091229
+authors:
+- authtype: Author
+  name: Mottaz A
+- authtype: Author
+  name: Corbet T
+- authtype: Author
+  name: Doganci N
+- authtype: Author
+  name: Magnin C
+- authtype: Author
+  name: Nicolo P
+- authtype: Author
+  name: Schnider A
+- authtype: Author
+  name: Guggisberg AG
+epubdate: 2018 Jul 30
+fulljournalname: 'NeuroImage : Clinical'
+issue: ''
+pages: 336-346
+pmclivedate: 2018/08/15
+printpubdate: ''
+pubdate: 2018 Jul 30
+sortdate: 2018/07/30 00:00
+source: Neuroimage Clin
+title: 'Modulating functional connectivity after stroke with neurofeedback: Effect
+  on motor deficits in a controlled cross-over study'
+uid: '6091229'
+volume: '20'

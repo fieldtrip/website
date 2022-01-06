@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '25632123'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.3250-14.2015
+- idtype: pmcid
+  value: PMC6795262
+authors:
+- authtype: Author
+  name: Wöstmann M
+- authtype: Author
+  name: Herrmann B
+- authtype: Author
+  name: Wilsch A
+- authtype: Author
+  name: Obleser J
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '4'
+pages: 1458-1467
+pmclivedate: 2019/10/17
+printpubdate: 2015 Jan 28
+pubdate: 2015 Jan 28
+sortdate: 2015/01/28 00:00
+source: J Neurosci
+title: Neural Alpha Dynamics in Younger and Older Listeners Reflect Acoustic Challenges
+  and Predictive Benefits
+uid: '6795262'
+volume: '35'

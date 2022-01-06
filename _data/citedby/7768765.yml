@@ -1,0 +1,44 @@
+articleids:
+- idtype: pmid
+  value: '33288707'
+- idtype: doi
+  value: 10.1073/pnas.2006752117
+- idtype: pmcid
+  value: PMC7768765
+authors:
+- authtype: Author
+  name: Liu J
+- authtype: Author
+  name: Zhang H
+- authtype: Author
+  name: Yu T
+- authtype: Author
+  name: Ni D
+- authtype: Author
+  name: Ren L
+- authtype: Author
+  name: Yang Q
+- authtype: Author
+  name: Lu B
+- authtype: Author
+  name: Wang D
+- authtype: Author
+  name: Heinen R
+- authtype: Author
+  name: Axmacher N
+- authtype: Author
+  name: Xue G
+epubdate: 2020 Dec 7
+fulljournalname: Proceedings of the National Academy of Sciences of the United States
+  of America
+issue: '51'
+pages: 32329-32339
+pmclivedate: 2021/06/07
+printpubdate: 2020 Dec 22
+pubdate: 2020 Dec 7
+sortdate: 2020/12/07 00:00
+source: Proc Natl Acad Sci U S A
+title: Stable maintenance of multiple representational formats in human visual short-term
+  memory
+uid: '7768765'
+volume: '117'

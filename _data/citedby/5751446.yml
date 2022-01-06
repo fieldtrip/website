@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '29258189'
+- idtype: doi
+  value: 10.3390/s17122926
+- idtype: pmcid
+  value: PMC5751446
+authors:
+- authtype: Author
+  name: Garcés P
+- authtype: Author
+  name: López-Sanz D
+- authtype: Author
+  name: Maestú F
+- authtype: Author
+  name: Pereda E
+epubdate: 2017 Dec 16
+fulljournalname: Sensors (Basel, Switzerland)
+issue: '12'
+pages: '2926'
+pmclivedate: 2018/01/10
+printpubdate: ''
+pubdate: 2017 Dec 16
+sortdate: 2017/12/16 00:00
+source: Sensors (Basel)
+title: Choice of Magnetometers and Gradiometers after Signal Space Separation
+uid: '5751446'
+volume: '17'

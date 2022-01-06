@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '27999553'
+- idtype: doi
+  value: 10.3389/fpsyg.2016.01896
+- idtype: pmcid
+  value: PMC5138197
+authors:
+- authtype: Author
+  name: Balz J
+- authtype: Author
+  name: Roa Romero Y
+- authtype: Author
+  name: Keil J
+- authtype: Author
+  name: Krebber M
+- authtype: Author
+  name: Niedeggen M
+- authtype: Author
+  name: Gallinat J
+- authtype: Author
+  name: Senkowski D
+epubdate: 2016 Dec 6
+fulljournalname: Frontiers in Psychology
+issue: ''
+pages: '1896'
+pmclivedate: 2016/12/20
+printpubdate: ''
+pubdate: 2016 Dec 6
+sortdate: 2016/12/06 00:00
+source: Front Psychol
+title: Beta/Gamma Oscillations and Event-Related Potentials Indicate Aberrant Multisensory
+  Processing in Schizophrenia
+uid: '5138197'
+volume: '7'

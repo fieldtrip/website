@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '31005638'
+- idtype: doi
+  value: 10.1016/j.cognition.2019.04.013
+- idtype: pmcid
+  value: PMC6562240
+authors:
+- authtype: Author
+  name: Wen Y
+- authtype: Author
+  name: Snell J
+- authtype: Author
+  name: Grainger J
+epubdate: ''
+fulljournalname: Cognition
+issue: ''
+pages: 221-226
+pmclivedate: 2019/08/01
+printpubdate: 2019 Aug
+pubdate: 2019 Aug
+sortdate: 2019/08/01 00:00
+source: Cognition
+title: Parallel, cascaded, interactive processing of words during sentence reading
+uid: '6562240'
+volume: '189'

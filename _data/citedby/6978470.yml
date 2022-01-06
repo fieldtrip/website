@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '31974370'
+- idtype: doi
+  value: 10.1038/s41467-019-14107-z
+- idtype: pmcid
+  value: PMC6978470
+authors:
+- authtype: Author
+  name: Tang MF
+- authtype: Author
+  name: Ford L
+- authtype: Author
+  name: Arabzadeh E
+- authtype: Author
+  name: Enns JT
+- authtype: Author
+  name: Visser TA
+- authtype: Author
+  name: Mattingley JB
+epubdate: 2020 Jan 23
+fulljournalname: Nature Communications
+issue: ''
+pages: '434'
+pmclivedate: 2020/01/27
+printpubdate: ''
+pubdate: 2020 Jan 23
+sortdate: 2020/01/23 00:00
+source: Nat Commun
+title: Neural dynamics of the attentional blink revealed by encoding orientation selectivity
+  during rapid visual presentation
+uid: '6978470'
+volume: '11'

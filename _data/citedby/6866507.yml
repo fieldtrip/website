@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '29575249'
+- idtype: doi
+  value: 10.1002/hbm.24047
+- idtype: pmcid
+  value: PMC6866507
+authors:
+- authtype: Author
+  name: Fouragnan E
+- authtype: Author
+  name: Retzler C
+- authtype: Author
+  name: Philiastides MG
+epubdate: 2018 Mar 25
+fulljournalname: Human Brain Mapping
+issue: '7'
+pages: 2887-2906
+pmclivedate: 2020/06/12
+printpubdate: ''
+pubdate: 2018 Mar 25
+sortdate: 2018/03/25 00:00
+source: Hum Brain Mapp
+title: 'Separate neural representations of prediction error valence and surprise:
+  Evidence from an fMRI meta‐analysis'
+uid: '6866507'
+volume: '39'

@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '33073290'
+- idtype: doi
+  value: 10.1093/cercor/bhaa279
+- idtype: pmcid
+  value: PMC7786353
+authors:
+- authtype: Author
+  name: You Y
+- authtype: Author
+  name: Correas A
+- authtype: Author
+  name: Jao Keehn RJ
+- authtype: Author
+  name: Wagner LC
+- authtype: Author
+  name: Rosen BQ
+- authtype: Author
+  name: Beaton LE
+- authtype: Author
+  name: Gao Y
+- authtype: Author
+  name: Brocklehurst WT
+- authtype: Author
+  name: Fishman I
+- authtype: Author
+  name: Müller RA
+- authtype: Author
+  name: Marinkovic K
+epubdate: 2020 Oct 19
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '2'
+pages: 1116-1130
+pmclivedate: 2021/10/19
+printpubdate: ''
+pubdate: 2020 Oct 19
+sortdate: 2020/10/19 00:00
+source: Cereb Cortex
+title: MEG Theta during Lexico-Semantic and Executive Processing Is Altered in High-Functioning
+  Adolescents with Autism
+uid: '7786353'
+volume: '31'

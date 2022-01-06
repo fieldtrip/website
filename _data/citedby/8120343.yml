@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '33220055'
+- idtype: doi
+  value: 10.1093/sleep/zsaa247
+- idtype: pmcid
+  value: PMC8120343
+authors:
+- authtype: Author
+  name: Imperatori LS
+- authtype: Author
+  name: Cataldi J
+- authtype: Author
+  name: Betta M
+- authtype: Author
+  name: Ricciardi E
+- authtype: Author
+  name: Ince RA
+- authtype: Author
+  name: Siclari F
+- authtype: Author
+  name: Bernardi G
+epubdate: 2020 Nov 21
+fulljournalname: Sleep
+issue: '5'
+pages: zsaa247
+pmclivedate: 2021/11/21
+printpubdate: ''
+pubdate: 2020 Nov 21
+sortdate: 2020/11/21 00:00
+source: Sleep
+title: Cross-participant prediction of vigilance stages through the combined use of
+  wPLI and wSMI EEG functional connectivity metrics
+uid: '8120343'
+volume: '44'

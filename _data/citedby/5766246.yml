@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '29267286'
+- idtype: doi
+  value: 10.1371/journal.pbio.2003404
+- idtype: pmcid
+  value: PMC5766246
+authors:
+- authtype: Author
+  name: Staudigl T
+- authtype: Author
+  name: Hartl E
+- authtype: Author
+  name: Noachtar S
+- authtype: Author
+  name: Doeller CF
+- authtype: Author
+  name: Jensen O
+epubdate: 2017 Dec 21
+fulljournalname: PLoS Biology
+issue: '12'
+pages: e2003404
+pmclivedate: 2018/01/26
+printpubdate: ''
+pubdate: 2017 Dec 21
+sortdate: 2017/12/21 00:00
+source: PLoS Biol
+title: Saccades are phase-locked to alpha oscillations in the occipital and medial
+  temporal lobe during successful memory encoding
+uid: '5766246'
+volume: '15'

@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '31596234'
+- idtype: doi
+  value: 10.7554/eLife.48182
+- idtype: pmcid
+  value: PMC6802952
+authors:
+- authtype: Author
+  name: Kaiser D
+- authtype: Author
+  name: Turini J
+- authtype: Author
+  name: Cichy RM
+epubdate: 2019 Oct 9
+fulljournalname: eLife
+issue: ''
+pages: e48182
+pmclivedate: 2019/10/24
+printpubdate: ''
+pubdate: 2019 Oct 9
+sortdate: 2019/10/09 00:00
+source: eLife
+title: A neural mechanism for contextualizing fragmented inputs during naturalistic
+  vision
+uid: '6802952'
+volume: '8'

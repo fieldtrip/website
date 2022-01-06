@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '29946246'
+- idtype: doi
+  value: 10.3389/fnhum.2018.00240
+- idtype: pmcid
+  value: PMC6005865
+authors:
+- authtype: Author
+  name: Michail G
+- authtype: Author
+  name: Nikulin VV
+- authtype: Author
+  name: Curio G
+- authtype: Author
+  name: Maess B
+- authtype: Author
+  name: Herrojo Ruiz M
+epubdate: 2018 Jun 12
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '240'
+pmclivedate: 2018/06/26
+printpubdate: ''
+pubdate: 2018 Jun 12
+sortdate: 2018/06/12 00:00
+source: Front Hum Neurosci
+title: 'Disruption of Boundary Encoding During Sensorimotor Sequence Learning: An
+  MEG Study'
+uid: '6005865'
+volume: '12'

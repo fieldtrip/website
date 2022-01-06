@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '30837830'
+- idtype: doi
+  value: 10.3389/fnins.2019.00105
+- idtype: pmcid
+  value: PMC6390231
+authors:
+- authtype: Author
+  name: Buard I
+- authtype: Author
+  name: Dewispelaere WB
+- authtype: Author
+  name: Thaut M
+- authtype: Author
+  name: Kluger BM
+epubdate: 2019 Feb 19
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '105'
+pmclivedate: 2019/03/05
+printpubdate: ''
+pubdate: 2019 Feb 19
+sortdate: 2019/02/19 00:00
+source: Front Neurosci
+title: Preliminary Neurophysiological Evidence of Altered Cortical Activity and Connectivity
+  With Neurologic Music Therapy in Parkinson's Disease
+uid: '6390231'
+volume: '13'

@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '33206441'
+- idtype: doi
+  value: 10.1002/hbm.25282
+- idtype: pmcid
+  value: PMC7856646
+authors:
+- authtype: Author
+  name: Drijvers L
+- authtype: Author
+  name: Jensen O
+- authtype: Author
+  name: Spaak E
+epubdate: 2020 Nov 18
+fulljournalname: Human Brain Mapping
+issue: '4'
+pages: 1138-1152
+pmclivedate: 2021/02/05
+printpubdate: ''
+pubdate: 2020 Nov 18
+sortdate: 2020/11/18 00:00
+source: Hum Brain Mapp
+title: Rapid invisible frequency tagging reveals nonlinear integration of auditory
+  and visual information
+uid: '7856646'
+volume: '42'

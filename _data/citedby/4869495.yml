@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '26864767'
+- idtype: doi
+  value: 10.1152/jn.00932.2015
+- idtype: pmcid
+  value: PMC4869495
+authors:
+- authtype: Author
+  name: Stienen PJ
+- authtype: Author
+  name: Venzi M
+- authtype: Author
+  name: Poppendieck W
+- authtype: Author
+  name: Hoffmann KP
+- authtype: Author
+  name: Åberg E
+epubdate: 2016 Feb 10
+fulljournalname: Journal of Neurophysiology
+issue: '4'
+pages: 1970-1977
+pmclivedate: 2017/04/01
+printpubdate: 2016 Apr 1
+pubdate: 2016 Feb 10
+sortdate: 2016/02/10 00:00
+source: J Neurophysiol
+title: Precaution for volume conduction in rodent cortical electroencephalography
+  using high-density polyimide-based microelectrode arrays on the skull
+uid: '4869495'
+volume: '115'

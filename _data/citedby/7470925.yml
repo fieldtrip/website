@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '32753515'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0231-20.2020
+- idtype: pmcid
+  value: PMC7470925
+authors:
+- authtype: Author
+  name: Wutz A
+- authtype: Author
+  name: Zazio A
+- authtype: Author
+  name: Weisz N
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '36'
+pages: 6927-6937
+pmclivedate: 2020/09/04
+printpubdate: 2020 Sep 2
+pubdate: 2020 Sep 2
+sortdate: 2020/09/02 00:00
+source: J Neurosci
+title: Oscillatory Bursts in Parietal Cortex Reflect Dynamic Attention between Multiple
+  Objects and Ensembles
+uid: '7470925'
+volume: '40'

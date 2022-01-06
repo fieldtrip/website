@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '26082679'
+- idtype: doi
+  value: 10.3389/fnins.2015.00179
+- idtype: pmcid
+  value: PMC4451343
+authors:
+- authtype: Author
+  name: Mock JR
+- authtype: Author
+  name: Seay MJ
+- authtype: Author
+  name: Charney DR
+- authtype: Author
+  name: Holmes JL
+- authtype: Author
+  name: Golob EJ
+epubdate: 2015 Jun 2
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '179'
+pmclivedate: 2015/06/16
+printpubdate: ''
+pubdate: 2015 Jun 2
+sortdate: 2015/06/02 00:00
+source: Front Neurosci
+title: Rapid cortical dynamics associated with auditory spatial attention gradients
+uid: '4451343'
+volume: '9'

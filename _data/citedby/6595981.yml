@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '29793973'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.3382-17.2018
+- idtype: pmcid
+  value: PMC6595981
+authors:
+- authtype: Author
+  name: Bramson B
+- authtype: Author
+  name: Jensen O
+- authtype: Author
+  name: Toni I
+- authtype: Author
+  name: Roelofs K
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '25'
+pages: 5739-5749
+pmclivedate: 2019/06/27
+printpubdate: 2018 Jun 20
+pubdate: 2018 Jun 20
+sortdate: 2018/06/20 00:00
+source: J Neurosci
+title: Cortical Oscillatory Mechanisms Supporting the Control of Human Social–Emotional
+  Actions
+uid: '6595981'
+volume: '38'

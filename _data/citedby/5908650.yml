@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '29364232'
+- idtype: doi
+  value: 10.3791/56881
+- idtype: pmcid
+  value: PMC5908650
+authors:
+- authtype: Author
+  name: Pelentritou A
+- authtype: Author
+  name: Kuhlmann L
+- authtype: Author
+  name: Cormack J
+- authtype: Author
+  name: Woods W
+- authtype: Author
+  name: Sleigh J
+- authtype: Author
+  name: Liley D
+epubdate: 2018 Jan 13
+fulljournalname: 'Journal of Visualized Experiments : JoVE'
+issue: '131'
+pages: '56881'
+pmclivedate: 2020/01/13
+printpubdate: ''
+pubdate: 2018 Jan 13
+sortdate: 2018/01/13 00:00
+source: J Vis Exp
+title: Recording Brain Electromagnetic Activity During the Administration of the Gaseous
+  Anesthetic Agents Xenon and Nitrous Oxide in Healthy Volunteers
+uid: '5908650'
+volume: ''

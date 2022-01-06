@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '25161630'
+- idtype: doi
+  value: 10.3389/fpsyg.2014.00847
+- idtype: pmcid
+  value: PMC4129372
+authors:
+- authtype: Author
+  name: Monsalve IF
+- authtype: Author
+  name: Pérez A
+- authtype: Author
+  name: Molinaro N
+epubdate: 2014 Aug 12
+fulljournalname: Frontiers in Psychology
+issue: ''
+pages: '847'
+pmclivedate: 2014/08/26
+printpubdate: ''
+pubdate: 2014 Aug 12
+sortdate: 2014/08/12 00:00
+source: Front Psychol
+title: 'Item parameters dissociate between expectation formats: a regression analysis
+  of time-frequency decomposed EEG data'
+uid: '4129372'
+volume: '5'

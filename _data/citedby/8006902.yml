@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '32746080'
+- idtype: doi
+  value: 10.1109/TBME.2020.3013545
+- idtype: pmcid
+  value: PMC8006902
+- idtype: MID
+  value: NIHMS1675258
+authors:
+- authtype: Author
+  name: Gu Y
+- authtype: Author
+  name: Yang Y
+- authtype: Author
+  name: Dewald JP
+- authtype: Author
+  name: van der Helm FC
+- authtype: Author
+  name: Schouten AC
+- authtype: Author
+  name: Wei HL
+epubdate: 2021 Feb 18
+fulljournalname: IEEE transactions on bio-medical engineering
+issue: '3'
+pages: 948-958
+pmclivedate: ''
+printpubdate: 2021 Mar
+pubdate: 2021 Feb 18
+sortdate: 2021/02/18 00:00
+source: IEEE Trans Biomed Eng
+title: Nonlinear Modeling of Cortical Responses to Mechanical Wrist Perturbations
+  using the NARMAX Method
+uid: '8006902'
+volume: '68'

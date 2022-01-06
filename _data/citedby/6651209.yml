@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '31379703'
+- idtype: doi
+  value: 10.3389/fneur.2019.00721
+- idtype: pmcid
+  value: PMC6651209
+authors:
+- authtype: Author
+  name: van Mierlo P
+- authtype: Author
+  name: Höller Y
+- authtype: Author
+  name: Focke NK
+- authtype: Author
+  name: Vulliemoz S
+epubdate: 2019 Jul 17
+fulljournalname: Frontiers in Neurology
+issue: ''
+pages: '721'
+pmclivedate: 2019/08/02
+printpubdate: ''
+pubdate: 2019 Jul 17
+sortdate: 2019/07/17 00:00
+source: Front Neurol
+title: Network Perspectives on Epilepsy Using EEG/MEG Source Connectivity
+uid: '6651209'
+volume: '10'

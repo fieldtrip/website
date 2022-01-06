@@ -1,0 +1,34 @@
+articleids:
+- idtype: pmid
+  value: '28161286'
+- idtype: doi
+  value: 10.1016/j.ijpsycho.2017.01.013
+- idtype: pmcid
+  value: PMC5348916
+- idtype: MID
+  value: NIHMS850656
+authors:
+- authtype: Author
+  name: Legget KT
+- authtype: Author
+  name: Hild AK
+- authtype: Author
+  name: Steinmetz SE
+- authtype: Author
+  name: Simon ST
+- authtype: Author
+  name: Rojas DC
+epubdate: 2017 Feb 1
+fulljournalname: 'International journal of psychophysiology : official journal of
+  the International Organization of Psychophysiology'
+issue: ''
+pages: 16-23
+pmclivedate: 2018/04/01
+printpubdate: 2017 Apr
+pubdate: 2017 Feb 1
+sortdate: 2017/02/01 00:00
+source: Int J Psychophysiol
+title: MEG and EEG demonstrate similar test-retest reliability of the 40 Hz auditory
+  steady-state response
+uid: '5348916'
+volume: '114'

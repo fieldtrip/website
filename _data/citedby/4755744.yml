@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '26653854'
+- idtype: doi
+  value: 10.7554/eLife.09000
+- idtype: pmcid
+  value: PMC4755744
+authors:
+- authtype: Author
+  name: Myers NE
+- authtype: Author
+  name: Rohenkohl G
+- authtype: Author
+  name: Wyart V
+- authtype: Author
+  name: Woolrich MW
+- authtype: Author
+  name: Nobre AC
+- authtype: Author
+  name: Stokes MG
+epubdate: 2015 Dec 14
+fulljournalname: eLife
+issue: ''
+pages: e09000
+pmclivedate: 2016/02/18
+printpubdate: ''
+pubdate: 2015 Dec 14
+sortdate: 2015/12/14 00:00
+source: eLife
+title: Testing sensory evidence against mnemonic templates
+uid: '4755744'
+volume: '4'

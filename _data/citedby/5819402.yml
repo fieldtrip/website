@@ -1,0 +1,38 @@
+articleids:
+- idtype: pmid
+  value: '29363598'
+- idtype: doi
+  value: 10.1073/pnas.1714279115
+- idtype: pmcid
+  value: PMC5819402
+authors:
+- authtype: Author
+  name: Bouton S
+- authtype: Author
+  name: Chambon V
+- authtype: Author
+  name: Tyrand R
+- authtype: Author
+  name: Guggisberg AG
+- authtype: Author
+  name: Seeck M
+- authtype: Author
+  name: Karkar S
+- authtype: Author
+  name: van de Ville D
+- authtype: Author
+  name: Giraud AL
+epubdate: 2018 Jan 23
+fulljournalname: Proceedings of the National Academy of Sciences of the United States
+  of America
+issue: '6'
+pages: E1299-E1308
+pmclivedate: 2018/02/21
+printpubdate: 2018 Feb 6
+pubdate: 2018 Jan 23
+sortdate: 2018/01/23 00:00
+source: Proc Natl Acad Sci U S A
+title: Focal versus distributed temporal cortex activity for speech sound category
+  assignment
+uid: '5819402'
+volume: '115'

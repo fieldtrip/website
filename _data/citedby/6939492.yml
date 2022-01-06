@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '31699887'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1660-19.2019
+- idtype: pmcid
+  value: PMC6939492
+authors:
+- authtype: Author
+  name: Spaak E
+- authtype: Author
+  name: de Lange FP
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '1'
+pages: 191-202
+pmclivedate: 2020/07/02
+printpubdate: 2020 Jan 2
+pubdate: 2020 Jan 2
+sortdate: 2020/01/02 00:00
+source: J Neurosci
+title: Hippocampal and Prefrontal Theta-Band Mechanisms Underpin Implicit Spatial
+  Context Learning
+uid: '6939492'
+volume: '40'

@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '30377895'
+- idtype: doi
+  value: 10.1007/s10484-018-9421-5
+- idtype: pmcid
+  value: PMC6373281
+authors:
+- authtype: Author
+  name: Tinga AM
+- authtype: Author
+  name: Nyklíček I
+- authtype: Author
+  name: Jansen MP
+- authtype: Author
+  name: de Back TT
+- authtype: Author
+  name: Louwerse MM
+epubdate: 2018 Oct 30
+fulljournalname: Applied Psychophysiology and Biofeedback
+issue: '1'
+pages: 51-59
+pmclivedate: 2019/03/01
+printpubdate: '2019'
+pubdate: 2018 Oct 30
+sortdate: 2018/10/30 00:00
+source: Appl Psychophysiol Biofeedback
+title: Respiratory Biofeedback Does Not Facilitate Lowering Arousal in Meditation
+  Through Virtual Reality
+uid: '6373281'
+volume: '44'

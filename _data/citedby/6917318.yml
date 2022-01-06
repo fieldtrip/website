@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '31682078'
+- idtype: doi
+  value: 10.1002/acn3.50932
+- idtype: pmcid
+  value: PMC6917318
+authors:
+- authtype: Author
+  name: Kay L
+- authtype: Author
+  name: Merkel N
+- authtype: Author
+  name: von Blomberg A
+- authtype: Author
+  name: Willems LM
+- authtype: Author
+  name: Bauer S
+- authtype: Author
+  name: Reif PS
+- authtype: Author
+  name: Schubert‐Bast S
+- authtype: Author
+  name: Rosenow F
+- authtype: Author
+  name: Strzelczyk A
+epubdate: 2019 Nov 4
+fulljournalname: Annals of Clinical and Translational Neurology
+issue: '12'
+pages: 2413-2425
+pmclivedate: 2019/12/23
+printpubdate: ''
+pubdate: 2019 Nov 4
+sortdate: 2019/11/04 00:00
+source: Ann Clin Transl Neurol
+title: 'Intranasal midazolam as first‐line inhospital treatment for status epilepticus:
+  a pharmaco‐EEG cohort study'
+uid: '6917318'
+volume: '6'

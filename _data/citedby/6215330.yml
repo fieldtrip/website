@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '30165253'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2018.08.056
+- idtype: pmcid
+  value: PMC6215330
+authors:
+- authtype: Author
+  name: Thomas RM
+- authtype: Author
+  name: De Sanctis T
+- authtype: Author
+  name: Gazzola V
+- authtype: Author
+  name: Keysers C
+epubdate: ''
+fulljournalname: Neuroimage
+issue: ''
+pages: 677-697
+pmclivedate: 2018/12/01
+printpubdate: 2018 Dec
+pubdate: 2018 Dec
+sortdate: 2018/12/01 00:00
+source: Neuroimage
+title: Where and how our brain represents the temporal structure of observed action
+uid: '6215330'
+volume: '183'

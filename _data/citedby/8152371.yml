@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '33903182'
+- idtype: doi
+  value: 10.1523/ENEURO.0362-20.2021
+- idtype: pmcid
+  value: PMC8152371
+authors:
+- authtype: Author
+  name: Reddy L
+- authtype: Author
+  name: Cichy RM
+- authtype: Author
+  name: VanRullen R
+epubdate: 2021 May 24
+fulljournalname: eNeuro
+issue: '3'
+pages: ENEURO.0362-20.2021
+pmclivedate: 2021/05/26
+printpubdate: ''
+pubdate: 2021 May 24
+sortdate: 2021/05/24 00:00
+source: eNeuro
+title: 'Representational Content of Oscillatory Brain Activity during Object Recognition:
+  Contrasting Cortical and Deep Neural Network Hierarchies'
+uid: '8152371'
+volume: '8'

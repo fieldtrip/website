@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '28345282'
+- idtype: doi
+  value: 10.1002/hbm.23581
+- idtype: pmcid
+  value: PMC5610921
+authors:
+- authtype: Author
+  name: Piai V
+- authtype: Author
+  name: Meyer L
+- authtype: Author
+  name: Dronkers NF
+- authtype: Author
+  name: Knight RT
+epubdate: 2017 Mar 27
+fulljournalname: Human Brain Mapping
+issue: '6'
+pages: 3151-3162
+pmclivedate: 2018/06/01
+printpubdate: ''
+pubdate: 2017 Mar 27
+sortdate: 2017/03/27 00:00
+source: Hum Brain Mapp
+title: 'Neuroplasticity of language in left‐hemisphere stroke: Evidence linking subsecond
+  electrophysiology and structural connections'
+uid: '5610921'
+volume: '38'

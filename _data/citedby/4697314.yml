@@ -1,0 +1,38 @@
+articleids:
+- idtype: pmid
+  value: '26718102'
+- idtype: doi
+  value: 10.1186/s13195-015-0163-9
+- idtype: pmcid
+  value: PMC4697314
+authors:
+- authtype: Author
+  name: Hatz F
+- authtype: Author
+  name: Hardmeier M
+- authtype: Author
+  name: Benz N
+- authtype: Author
+  name: Ehrensperger M
+- authtype: Author
+  name: Gschwandtner U
+- authtype: Author
+  name: Rüegg S
+- authtype: Author
+  name: Schindler C
+- authtype: Author
+  name: Monsch AU
+- authtype: Author
+  name: Fuhr P
+epubdate: 2015 Dec 31
+fulljournalname: Alzheimer's Research & Therapy
+issue: ''
+pages: '78'
+pmclivedate: 2016/01/01
+printpubdate: ''
+pubdate: 2015 Dec 31
+sortdate: 2015/12/31 00:00
+source: Alzheimers Res Ther
+title: Microstate connectivity alterations in patients with early Alzheimer’s disease
+uid: '4697314'
+volume: '7'

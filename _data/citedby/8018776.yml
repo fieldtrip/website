@@ -1,0 +1,45 @@
+articleids:
+- idtype: pmid
+  value: '33483430'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1591-20.2021
+- idtype: pmcid
+  value: PMC8018776
+authors:
+- authtype: Author
+  name: Yu Y
+- authtype: Author
+  name: Escobar Sanabria D
+- authtype: Author
+  name: Wang J
+- authtype: Author
+  name: Hendrix CM
+- authtype: Author
+  name: Zhang J
+- authtype: Author
+  name: Nebeck SD
+- authtype: Author
+  name: Amundson AM
+- authtype: Author
+  name: Busby ZB
+- authtype: Author
+  name: Bauer DL
+- authtype: Author
+  name: Johnson MD
+- authtype: Author
+  name: Johnson LA
+- authtype: Author
+  name: Vitek JL
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '10'
+pages: 2274-2286
+pmclivedate: 2021/09/10
+printpubdate: 2021 Mar 10
+pubdate: 2021 Mar 10
+sortdate: 2021/03/10 00:00
+source: J Neurosci
+title: Parkinsonism Alters Beta Burst Dynamics across the Basal Ganglia–Motor Cortical
+  Network
+uid: '8018776'
+volume: '41'

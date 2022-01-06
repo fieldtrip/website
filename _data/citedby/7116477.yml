@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '32325209'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2020.116796
+- idtype: pmcid
+  value: PMC7116477
+authors:
+- authtype: Author
+  name: West TO
+- authtype: Author
+  name: Halliday DM
+- authtype: Author
+  name: Bressler SL
+- authtype: Author
+  name: Farmer SF
+- authtype: Author
+  name: Litvak V
+epubdate: ''
+fulljournalname: Neuroimage
+issue: ''
+pages: '116796'
+pmclivedate: 2020/12/14
+printpubdate: 2020 Sep
+pubdate: 2020 Sep
+sortdate: 2020/09/01 00:00
+source: Neuroimage
+title: 'Measuring directed functional connectivity using non-parametric directionality
+  analysis: Validation and comparison with non-parametric Granger Causality'
+uid: '7116477'
+volume: '218'

@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '31862999'
+- idtype: doi
+  value: 10.1038/s41598-019-55085-y
+- idtype: pmcid
+  value: PMC6925299
+authors:
+- authtype: Author
+  name: McCarthy KM
+- authtype: Author
+  name: Skoruppa K
+- authtype: Author
+  name: Iverson P
+epubdate: 2019 Dec 20
+fulljournalname: Scientific Reports
+issue: ''
+pages: '19592'
+pmclivedate: 2019/12/24
+printpubdate: ''
+pubdate: 2019 Dec 20
+sortdate: 2019/12/20 00:00
+source: Sci Rep
+title: Development of neural perceptual vowel spaces during the first year of life
+uid: '6925299'
+volume: '9'

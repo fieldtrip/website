@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '31527749'
+- idtype: doi
+  value: 10.1038/s41598-019-49788-5
+- idtype: pmcid
+  value: PMC6746755
+authors:
+- authtype: Author
+  name: Arviv O
+- authtype: Author
+  name: Goldstein A
+- authtype: Author
+  name: Shriki O
+epubdate: 2019 Sep 16
+fulljournalname: Scientific Reports
+issue: ''
+pages: '13319'
+pmclivedate: 2019/09/27
+printpubdate: ''
+pubdate: 2019 Sep 16
+sortdate: 2019/09/16 00:00
+source: Sci Rep
+title: Neuronal avalanches and time-frequency representations in stimulus-evoked activity
+uid: '6746755'
+volume: '9'

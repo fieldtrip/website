@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '28125984'
+- idtype: doi
+  value: 10.1186/s12888-017-1206-5
+- idtype: pmcid
+  value: PMC5270216
+authors:
+- authtype: Author
+  name: Uhlhaas PJ
+- authtype: Author
+  name: Gajwani R
+- authtype: Author
+  name: Gross J
+- authtype: Author
+  name: Gumley AI
+- authtype: Author
+  name: Lawrie SM
+- authtype: Author
+  name: Schwannauer M
+epubdate: 2017 Jan 26
+fulljournalname: BMC Psychiatry
+issue: ''
+pages: '43'
+pmclivedate: 2017/02/01
+printpubdate: ''
+pubdate: 2017 Jan 26
+sortdate: 2017/01/26 00:00
+source: BMC Psychiatry
+title: The Youth Mental Health Risk and Resilience Study (YouR-Study)
+uid: '5270216'
+volume: '17'

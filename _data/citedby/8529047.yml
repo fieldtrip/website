@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '34690718'
+- idtype: doi
+  value: 10.3389/fnhum.2021.721206
+- idtype: pmcid
+  value: PMC8529047
+authors:
+- authtype: Author
+  name: Babaeeghazvini P
+- authtype: Author
+  name: Rueda-Delgado LM
+- authtype: Author
+  name: Gooijers J
+- authtype: Author
+  name: Swinnen SP
+- authtype: Author
+  name: Daffertshofer A
+epubdate: 2021 Oct 7
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '721206'
+pmclivedate: 2021/10/22
+printpubdate: ''
+pubdate: 2021 Oct 7
+sortdate: 2021/10/07 00:00
+source: Front Hum Neurosci
+title: 'Brain Structural and Functional Connectivity: A Review of Combined Works of
+  Diffusion Magnetic Resonance Imaging and Electro-Encephalography'
+uid: '8529047'
+volume: '15'

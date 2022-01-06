@@ -1,0 +1,42 @@
+articleids:
+- idtype: pmid
+  value: '29621570'
+- idtype: doi
+  value: 10.1016/j.jneumeth.2018.03.020
+- idtype: pmcid
+  value: PMC5940556
+- idtype: MID
+  value: NIHMS960582
+authors:
+- authtype: Author
+  name: Esch L
+- authtype: Author
+  name: Sun L
+- authtype: Author
+  name: Klüber V
+- authtype: Author
+  name: Lew S
+- authtype: Author
+  name: Baumgarten D
+- authtype: Author
+  name: Grant PE
+- authtype: Author
+  name: Okada Y
+- authtype: Author
+  name: Haueisen J
+- authtype: Author
+  name: Hämäläinen MS
+- authtype: Author
+  name: Dinh C
+epubdate: 2018 Apr 3
+fulljournalname: Journal of neuroscience methods
+issue: ''
+pages: 55-67
+pmclivedate: 2019/06/01
+printpubdate: 2018 Jun 1
+pubdate: 2018 Apr 3
+sortdate: 2018/04/03 00:00
+source: J Neurosci Methods
+title: 'MNE Scan: Software for Real-Time Processing of Electrophysiological Data'
+uid: '5940556'
+volume: '303'

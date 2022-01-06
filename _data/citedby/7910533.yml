@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '33637757'
+- idtype: doi
+  value: 10.1038/s41537-021-00146-3
+- idtype: pmcid
+  value: PMC7910533
+authors:
+- authtype: Author
+  name: Solís-Vivanco R
+- authtype: Author
+  name: Mondragón-Maya A
+- authtype: Author
+  name: Reyes-Madrigal F
+- authtype: Author
+  name: de la Fuente-Sandoval C
+epubdate: 2021 Feb 26
+fulljournalname: NPJ Schizophrenia
+issue: ''
+pages: '15'
+pmclivedate: 2021/03/04
+printpubdate: ''
+pubdate: 2021 Feb 26
+sortdate: 2021/02/26 00:00
+source: NPJ Schizophr
+title: Impairment of novelty-related theta oscillations and P3a in never medicated
+  first-episode psychosis patients
+uid: '7910533'
+volume: '7'

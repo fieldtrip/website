@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '32864218'
+- idtype: doi
+  value: 10.7717/peerj.9713
+- idtype: pmcid
+  value: PMC7427545
+authors:
+- authtype: Author
+  name: Williams NS
+- authtype: Author
+  name: McArthur GM
+- authtype: Author
+  name: de Wit B
+- authtype: Author
+  name: Ibrahim G
+- authtype: Author
+  name: Badcock NA
+epubdate: 2020 Aug 11
+fulljournalname: PeerJ
+issue: ''
+pages: e9713
+pmclivedate: 2020/08/27
+printpubdate: ''
+pubdate: 2020 Aug 11
+sortdate: 2020/08/11 00:00
+source: PeerJ
+title: A validation of Emotiv EPOC Flex saline for EEG and ERP research
+uid: '7427545'
+volume: '8'

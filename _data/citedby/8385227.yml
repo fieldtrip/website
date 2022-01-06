@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '34428790'
+- idtype: doi
+  value: 10.1162/jocn_a_01704
+- idtype: pmcid
+  value: PMC8385227
+- idtype: MID
+  value: NIHMS1699268
+authors:
+- authtype: Author
+  name: Epstein ML
+- authtype: Author
+  name: Emmanouil TA
+epubdate: ''
+fulljournalname: Journal of cognitive neuroscience
+issue: '6'
+pages: 1056-1068
+pmclivedate: 2021/08/25
+printpubdate: 2021 May 1
+pubdate: 2021 May 1
+sortdate: 2021/05/01 00:00
+source: J Cogn Neurosci
+title: 'Ensemble statistics can be available before individual item properties: EEG
+  evidence using the oddball paradigm'
+uid: '8385227'
+volume: '33'

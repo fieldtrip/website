@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '28714768'
+- idtype: doi
+  value: 10.1080/1028415X.2017.1347998
+- idtype: pmcid
+  value: PMC5924415
+- idtype: MID
+  value: NIHMS959993
+authors:
+- authtype: Author
+  name: Wilson TJ
+- authtype: Author
+  name: Gray MJ
+- authtype: Author
+  name: Van Klinken JW
+- authtype: Author
+  name: Kaczmarczyk M
+- authtype: Author
+  name: Foxe JJ
+epubdate: 2017 Jul 17
+fulljournalname: Nutritional neuroscience
+issue: '10'
+pages: 729-743
+pmclivedate: 2018/12/01
+printpubdate: 2018 Dec
+pubdate: 2017 Jul 17
+sortdate: 2017/07/17 00:00
+source: Nutr Neurosci
+title: Macronutrient composition of a morning meal and the maintenance of attention
+  throughout the morning
+uid: '5924415'
+volume: '21'

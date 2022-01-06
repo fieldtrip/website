@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '29118106'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1189-17.2017
+- idtype: pmcid
+  value: PMC6596821
+authors:
+- authtype: Author
+  name: Hanert A
+- authtype: Author
+  name: Weber FD
+- authtype: Author
+  name: Pedersen A
+- authtype: Author
+  name: Born J
+- authtype: Author
+  name: Bartsch T
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '50'
+pages: 12238-12246
+pmclivedate: 2019/07/01
+printpubdate: 2017 Dec 13
+pubdate: 2017 Dec 13
+sortdate: 2017/12/13 00:00
+source: J Neurosci
+title: Sleep in Humans Stabilizes Pattern Separation Performance
+uid: '6596821'
+volume: '37'

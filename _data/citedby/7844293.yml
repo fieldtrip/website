@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '33510230'
+- idtype: doi
+  value: 10.1038/s41598-021-81901-5
+- idtype: pmcid
+  value: PMC7844293
+authors:
+- authtype: Author
+  name: Burroughs A
+- authtype: Author
+  name: Kazanina N
+- authtype: Author
+  name: Houghton C
+epubdate: 2021 Jan 28
+fulljournalname: Scientific Reports
+issue: ''
+pages: '2446'
+pmclivedate: 2021/02/01
+printpubdate: ''
+pubdate: 2021 Jan 28
+sortdate: 2021/01/28 00:00
+source: Sci Rep
+title: Grammatical category and the neural processing of phrases
+uid: '7844293'
+volume: '11'

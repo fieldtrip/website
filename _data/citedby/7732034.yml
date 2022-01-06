@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '32591813'
+- idtype: doi
+  value: 10.1093/cercor/bhaa124
+- idtype: pmcid
+  value: PMC7732034
+authors:
+- authtype: Author
+  name: Furman AJ
+- authtype: Author
+  name: Prokhorenko M
+- authtype: Author
+  name: Keaser ML
+- authtype: Author
+  name: Zhang J
+- authtype: Author
+  name: Chen S
+- authtype: Author
+  name: Mazaheri A
+- authtype: Author
+  name: Seminowicz DA
+epubdate: 2020 Jun 27
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '12'
+pages: 6069-6082
+pmclivedate: 2021/06/27
+printpubdate: ''
+pubdate: 2020 Jun 27
+sortdate: 2020/06/27 00:00
+source: Cereb Cortex
+title: Sensorimotor Peak Alpha Frequency Is a Reliable Biomarker of Prolonged Pain
+  Sensitivity
+uid: '7732034'
+volume: '30'

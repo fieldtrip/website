@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '33463873'
+- idtype: doi
+  value: 10.1002/hbm.25150
+- idtype: pmcid
+  value: PMC7555093
+authors:
+- authtype: Author
+  name: Moghimi S
+- authtype: Author
+  name: Shadkam A
+- authtype: Author
+  name: Mahmoudzadeh M
+- authtype: Author
+  name: Calipe O
+- authtype: Author
+  name: Panzani M
+- authtype: Author
+  name: Edalati M
+- authtype: Author
+  name: Ghorbani M
+- authtype: Author
+  name: Routier L
+- authtype: Author
+  name: Wallois F
+epubdate: 2020 Jul 30
+fulljournalname: Human Brain Mapping
+issue: '16'
+pages: 4691-4703
+pmclivedate: 2020/10/19
+printpubdate: ''
+pubdate: 2020 Jul 30
+sortdate: 2020/07/30 00:00
+source: Hum Brain Mapp
+title: 'The intimate relationship between coalescent generators in very premature
+  human newborn brains: Quantifying the coupling of nested endogenous oscillations'
+uid: '7555093'
+volume: '41'

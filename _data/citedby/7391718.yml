@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '32728099'
+- idtype: doi
+  value: 10.1038/s41598-020-68981-5
+- idtype: pmcid
+  value: PMC7391718
+authors:
+- authtype: Author
+  name: Haartsen R
+- authtype: Author
+  name: van der Velde B
+- authtype: Author
+  name: Jones EJ
+- authtype: Author
+  name: Johnson MH
+- authtype: Author
+  name: Kemner C
+epubdate: 2020 Jul 29
+fulljournalname: Scientific Reports
+issue: ''
+pages: '12703'
+pmclivedate: 2020/07/31
+printpubdate: ''
+pubdate: 2020 Jul 29
+sortdate: 2020/07/29 00:00
+source: Sci Rep
+title: Using multiple short epochs optimises the stability of infant EEG connectivity
+  parameters
+uid: '7391718'
+volume: '10'

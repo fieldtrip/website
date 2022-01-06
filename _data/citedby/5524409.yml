@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '28742118'
+- idtype: doi
+  value: 10.1371/journal.pone.0178602
+- idtype: pmcid
+  value: PMC5524409
+authors:
+- authtype: Author
+  name: Andersen LM
+- authtype: Author
+  name: Oostenveld R
+- authtype: Author
+  name: Pfeiffer C
+- authtype: Author
+  name: Ruffieux S
+- authtype: Author
+  name: Jousmäki V
+- authtype: Author
+  name: Hämäläinen M
+- authtype: Author
+  name: Schneiderman JF
+- authtype: Author
+  name: Lundqvist D
+epubdate: 2017 Jul 24
+fulljournalname: PLoS ONE
+issue: '7'
+pages: e0178602
+pmclivedate: 2017/08/07
+printpubdate: ''
+pubdate: 2017 Jul 24
+sortdate: 2017/07/24 00:00
+source: PLoS One
+title: Similarities and differences between on-scalp and conventional in-helmet magnetoencephalography
+  recordings
+uid: '5524409'
+volume: '12'

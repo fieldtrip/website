@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '22855804'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0767-12.2012
+- idtype: pmcid
+  value: PMC3428626
+authors:
+- authtype: Author
+  name: Litvak V
+- authtype: Author
+  name: Eusebio A
+- authtype: Author
+  name: Jha A
+- authtype: Author
+  name: Oostenveld R
+- authtype: Author
+  name: Barnes G
+- authtype: Author
+  name: Foltynie T
+- authtype: Author
+  name: Limousin P
+- authtype: Author
+  name: Zrinzo L
+- authtype: Author
+  name: Hariz MI
+- authtype: Author
+  name: Friston K
+- authtype: Author
+  name: Brown P
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '31'
+pages: 10541-10553
+pmclivedate: 2013/02/01
+printpubdate: 2012 Aug 1
+pubdate: 2012 Aug 1
+sortdate: 2012/08/01 00:00
+source: J Neurosci
+title: Movement-Related Changes in Local and Long-Range Synchronization in Parkinson's
+  Disease Revealed by Simultaneous Magnetoencephalography and Intracranial Recordings
+uid: '3428626'
+volume: '32'

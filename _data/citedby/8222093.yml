@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '33780847'
+- idtype: doi
+  value: 10.1016/j.schres.2021.03.007
+- idtype: pmcid
+  value: PMC8222093
+- idtype: MID
+  value: NIHMS1688407
+authors:
+- authtype: Author
+  name: Koshiyama D
+- authtype: Author
+  name: Miyakoshi M
+- authtype: Author
+  name: Tanaka-Koshiyama K
+- authtype: Author
+  name: Joshi YB
+- authtype: Author
+  name: Sprock J
+- authtype: Author
+  name: Braff DL
+- authtype: Author
+  name: Light GA
+epubdate: 2021 Mar 27
+fulljournalname: Schizophrenia research
+issue: ''
+pages: 73-81
+pmclivedate: ''
+printpubdate: 2021 May
+pubdate: 2021 Mar 27
+sortdate: 2021/03/27 00:00
+source: Schizophr Res
+title: Abnormal phase discontinuity of alpha- and theta-frequency oscillations in
+  schizophrenia
+uid: '8222093'
+volume: '231'

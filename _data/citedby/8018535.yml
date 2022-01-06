@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '33278356'
+- idtype: doi
+  value: 10.1016/j.cub.2020.10.091
+- idtype: pmcid
+  value: PMC8018535
+- idtype: MID
+  value: NIHMS1645338
+authors:
+- authtype: Author
+  name: Kienitz R
+- authtype: Author
+  name: Cox MA
+- authtype: Author
+  name: Dougherty K
+- authtype: Author
+  name: Saunders RC
+- authtype: Author
+  name: Schmiedt JT
+- authtype: Author
+  name: Leopold DA
+- authtype: Author
+  name: Maier A
+- authtype: Author
+  name: Schmid MC
+epubdate: 2020 Dec 4
+fulljournalname: 'Current biology : CB'
+issue: '3'
+pages: 635-642.e3
+pmclivedate: ''
+printpubdate: 2021 Feb 8
+pubdate: 2020 Dec 4
+sortdate: 2020/12/04 00:00
+source: Curr Biol
+title: Theta but not gamma oscillations in area V4 depend on input from primary visual
+  cortex
+uid: '8018535'
+volume: '31'

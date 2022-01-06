@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '32717199'
+- idtype: doi
+  value: 10.1016/j.neuro.2020.07.006
+- idtype: pmcid
+  value: PMC7492457
+- idtype: MID
+  value: NIHMS1616766
+authors:
+- authtype: Author
+  name: Petroff R
+- authtype: Author
+  name: Murias M
+- authtype: Author
+  name: Grant KS
+- authtype: Author
+  name: Crouthamel B
+- authtype: Author
+  name: McKain N
+- authtype: Author
+  name: Shum S
+- authtype: Author
+  name: Jing J
+- authtype: Author
+  name: Isoherranen N
+- authtype: Author
+  name: Burbacher TM
+epubdate: 2020 Jul 24
+fulljournalname: Neurotoxicology
+issue: ''
+pages: 124-129
+pmclivedate: 2021/09/01
+printpubdate: 2020 Sep
+pubdate: 2020 Jul 24
+sortdate: 2020/07/24 00:00
+source: Neurotoxicology
+title: Power spectrum analysis of EEG in a translational nonhuman primate model after
+  chronic exposure to low levels of the common marine neurotoxin, domoic acid
+uid: '7492457'
+volume: '80'

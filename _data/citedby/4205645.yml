@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '25267634'
+- idtype: doi
+  value: 10.1073/pnas.1408741111
+- idtype: pmcid
+  value: PMC4205645
+authors:
+- authtype: Author
+  name: Henry MJ
+- authtype: Author
+  name: Herrmann B
+- authtype: Author
+  name: Obleser J
+epubdate: 2014 Sep 29
+fulljournalname: Proceedings of the National Academy of Sciences of the United States
+  of America
+issue: '41'
+pages: 14935-14940
+pmclivedate: 2015/04/14
+printpubdate: 2014 Oct 14
+pubdate: 2014 Sep 29
+sortdate: 2014/09/29 00:00
+source: Proc Natl Acad Sci U S A
+title: Entrained neural oscillations in multiple frequency bands comodulate behavior
+uid: '4205645'
+volume: '111'

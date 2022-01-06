@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '23950742'
+- idtype: doi
+  value: 10.3389/fnhum.2013.00454
+- idtype: pmcid
+  value: PMC3738857
+authors:
+- authtype: Author
+  name: Lehongre K
+- authtype: Author
+  name: Morillon B
+- authtype: Author
+  name: Giraud AL
+- authtype: Author
+  name: Ramus F
+epubdate: 2013 Aug 9
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '454'
+pmclivedate: 2013/08/15
+printpubdate: ''
+pubdate: 2013 Aug 9
+sortdate: 2013/08/09 00:00
+source: Front Hum Neurosci
+title: 'Impaired auditory sampling in dyslexia: further evidence from combined fMRI
+  and EEG'
+uid: '3738857'
+volume: '7'

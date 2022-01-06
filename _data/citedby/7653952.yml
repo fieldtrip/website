@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '33168854'
+- idtype: doi
+  value: 10.1038/s41598-020-76542-z
+- idtype: pmcid
+  value: PMC7653952
+authors:
+- authtype: Author
+  name: Hsiao YT
+- authtype: Author
+  name: Chen TC
+- authtype: Author
+  name: Yu PH
+- authtype: Author
+  name: Huang DS
+- authtype: Author
+  name: Hu FR
+- authtype: Author
+  name: Chuong CM
+- authtype: Author
+  name: Chang FC
+epubdate: 2020 Nov 9
+fulljournalname: Scientific Reports
+issue: ''
+pages: '19382'
+pmclivedate: 2020/11/12
+printpubdate: ''
+pubdate: 2020 Nov 9
+sortdate: 2020/11/09 00:00
+source: Sci Rep
+title: Connectivity between nidopallium caudolateral and visual pathways in color
+  perception of zebra finches
+uid: '7653952'
+volume: '10'

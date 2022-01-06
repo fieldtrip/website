@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '34207847'
+- idtype: doi
+  value: 10.3390/jpm11060536
+- idtype: pmcid
+  value: PMC8226921
+authors:
+- authtype: Author
+  name: Schoisswohl S
+- authtype: Author
+  name: Langguth B
+- authtype: Author
+  name: Hebel T
+- authtype: Author
+  name: Abdelnaim MA
+- authtype: Author
+  name: Volberg G
+- authtype: Author
+  name: Schecklmann M
+epubdate: 2021 Jun 9
+fulljournalname: Journal of Personalized Medicine
+issue: '6'
+pages: '536'
+pmclivedate: 2021/06/26
+printpubdate: ''
+pubdate: 2021 Jun 9
+sortdate: 2021/06/09 00:00
+source: J Pers Med
+title: 'Heading for Personalized rTMS in Tinnitus: Reliability of Individualized Stimulation
+  Protocols in Behavioral and Electrophysiological Responses'
+uid: '8226921'
+volume: '11'

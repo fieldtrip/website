@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '22328419'
+- idtype: doi
+  value: 10.1002/hbm.21482
+- idtype: pmcid
+  value: PMC3617463
+authors:
+- authtype: Author
+  name: Michalareas G
+- authtype: Author
+  name: Schoffelen J
+- authtype: Author
+  name: Paterson G
+- authtype: Author
+  name: Gross J
+epubdate: 2012 Feb 13
+fulljournalname: Human Brain Mapping
+issue: '4'
+pages: 890-913
+pmclivedate: 2013/04/05
+printpubdate: ''
+pubdate: 2012 Feb 13
+sortdate: 2012/02/13 00:00
+source: Hum Brain Mapp
+title: 'Investigating causality between interacting brain areas with multivariate
+  autoregressive models of MEG sensor data '
+uid: '3617463'
+volume: '34'

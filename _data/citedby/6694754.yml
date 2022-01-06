@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '31440181'
+- idtype: doi
+  value: 10.3389/fpsyg.2019.01782
+- idtype: pmcid
+  value: PMC6694754
+authors:
+- authtype: Author
+  name: Beltrán D
+- authtype: Author
+  name: Morera Y
+- authtype: Author
+  name: García-Marco E
+- authtype: Author
+  name: de Vega M
+epubdate: 2019 Aug 8
+fulljournalname: Frontiers in Psychology
+issue: ''
+pages: '1782'
+pmclivedate: 2019/08/22
+printpubdate: ''
+pubdate: 2019 Aug 8
+sortdate: 2019/08/08 00:00
+source: Front Psychol
+title: Brain Inhibitory Mechanisms Are Involved in the Processing of Sentential Negation,
+  Regardless of Its Content. Evidence From EEG Theta and Beta Rhythms
+uid: '6694754'
+volume: '10'

@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '26865606'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.2133-15.2016
+- idtype: pmcid
+  value: PMC4748069
+authors:
+- authtype: Author
+  name: Noonan MP
+- authtype: Author
+  name: Adamian N
+- authtype: Author
+  name: Pike A
+- authtype: Author
+  name: Printzlau F
+- authtype: Author
+  name: Crittenden BM
+- authtype: Author
+  name: Stokes MG
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '6'
+pages: 1797-1807
+pmclivedate: 2016/08/10
+printpubdate: 2016 Feb 10
+pubdate: 2016 Feb 10
+sortdate: 2016/02/10 00:00
+source: J Neurosci
+title: Distinct Mechanisms for Distractor Suppression and Target Facilitation
+uid: '4748069'
+volume: '36'

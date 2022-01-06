@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '31427917'
+- idtype: doi
+  value: 10.3389/fnins.2019.00791
+- idtype: pmcid
+  value: PMC6688653
+authors:
+- authtype: Author
+  name: ten Oever S
+- authtype: Author
+  name: Sack AT
+epubdate: 2019 Aug 2
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '791'
+pmclivedate: 2019/08/19
+printpubdate: ''
+pubdate: 2019 Aug 2
+sortdate: 2019/08/02 00:00
+source: Front Neurosci
+title: Interactions Between Rhythmic and Feature Predictions to Create Parallel Time-Content
+  Associations
+uid: '6688653'
+volume: '13'

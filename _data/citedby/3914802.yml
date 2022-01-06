@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '24505263'
+- idtype: doi
+  value: 10.1371/journal.pone.0086733
+- idtype: pmcid
+  value: PMC3914802
+authors:
+- authtype: Author
+  name: Stopczynski A
+- authtype: Author
+  name: Stahlhut C
+- authtype: Author
+  name: Larsen JE
+- authtype: Author
+  name: Petersen MK
+- authtype: Author
+  name: Hansen LK
+epubdate: 2014 Feb 5
+fulljournalname: PLoS ONE
+issue: '2'
+pages: e86733
+pmclivedate: 2014/02/06
+printpubdate: ''
+pubdate: 2014 Feb 5
+sortdate: 2014/02/05 00:00
+source: PLoS One
+title: 'The Smartphone Brain Scanner: A Portable Real-Time Neuroimaging System'
+uid: '3914802'
+volume: '9'

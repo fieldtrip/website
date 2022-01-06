@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '29344763'
+- idtype: doi
+  value: 10.3758/s13415-018-0562-z
+- idtype: pmcid
+  value: PMC5823961
+authors:
+- authtype: Author
+  name: Eklund R
+- authtype: Author
+  name: Wiens S
+epubdate: 2018 Jan 18
+fulljournalname: Cognitive, Affective & Behavioral Neuroscience
+issue: '1'
+pages: 176-188
+pmclivedate: 2018/02/28
+printpubdate: '2018'
+pubdate: 2018 Jan 18
+sortdate: 2018/01/18 00:00
+source: Cogn Affect Behav Neurosci
+title: 'Visual awareness negativity is an early neural correlate of awareness: A preregistered
+  study with two Gabor sizes'
+uid: '5823961'
+volume: '18'

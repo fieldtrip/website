@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '34146363'
+- idtype: doi
+  value: 10.1111/ejn.15365
+- idtype: pmcid
+  value: PMC8457219
+authors:
+- authtype: Author
+  name: Prince P
+- authtype: Author
+  name: Paul BT
+- authtype: Author
+  name: Chen J
+- authtype: Author
+  name: Le T
+- authtype: Author
+  name: Lin V
+- authtype: Author
+  name: Dimitrijevic A
+epubdate: 2021 Jul 9
+fulljournalname: The European Journal of Neuroscience
+issue: '3'
+pages: 5016-5037
+pmclivedate: 2021/09/28
+printpubdate: 2021 Aug
+pubdate: 2021 Jul 9
+sortdate: 2021/07/09 00:00
+source: Eur J Neurosci
+title: Neural correlates of visual stimulus encoding and verbal working memory differ
+  between cochlear implant users and normal‐hearing controls
+uid: '8457219'
+volume: '54'

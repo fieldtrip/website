@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '28698376'
+- idtype: doi
+  value: 10.1073/pnas.1703155114
+- idtype: pmcid
+  value: PMC5544297
+authors:
+- authtype: Author
+  name: Schoffelen JM
+- authtype: Author
+  name: Hultén A
+- authtype: Author
+  name: Lam N
+- authtype: Author
+  name: Marquand AF
+- authtype: Author
+  name: Uddén J
+- authtype: Author
+  name: Hagoort P
+epubdate: 2017 Jul 11
+fulljournalname: Proceedings of the National Academy of Sciences of the United States
+  of America
+issue: '30'
+pages: 8083-8088
+pmclivedate: 2018/01/25
+printpubdate: 2017 Jul 25
+pubdate: 2017 Jul 11
+sortdate: 2017/07/11 00:00
+source: Proc Natl Acad Sci U S A
+title: Frequency-specific directed interactions in the human brain network for language
+uid: '5544297'
+volume: '114'

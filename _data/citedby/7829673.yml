@@ -1,0 +1,34 @@
+articleids:
+- idtype: pmid
+  value: '33506071'
+- idtype: doi
+  value: 10.1117/1.NPh.8.1.010802
+- idtype: pmcid
+  value: PMC7829673
+authors:
+- authtype: Author
+  name: Hou X
+- authtype: Author
+  name: Zhang Z
+- authtype: Author
+  name: Zhao C
+- authtype: Author
+  name: Duan L
+- authtype: Author
+  name: Gong Y
+- authtype: Author
+  name: Li Z
+- authtype: Author
+  name: Zhu C
+epubdate: 2021 Jan 25
+fulljournalname: Neurophotonics
+issue: '1'
+pages: 010802
+pmclivedate: 2021/01/26
+printpubdate: 2021 Jan
+pubdate: 2021 Jan 25
+sortdate: 2021/01/25 00:00
+source: Neurophotonics
+title: 'NIRS-KIT: a MATLAB toolbox for both resting-state and task fNIRS data analysis'
+uid: '7829673'
+volume: '8'

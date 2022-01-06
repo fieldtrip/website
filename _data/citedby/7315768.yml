@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '31608388'
+- idtype: doi
+  value: 10.1093/sleep/zsz244
+- idtype: pmcid
+  value: PMC7315768
+authors:
+- authtype: Author
+  name: Kam K
+- authtype: Author
+  name: Kang M
+- authtype: Author
+  name: Eren CY
+- authtype: Author
+  name: Pettibone WD
+- authtype: Author
+  name: Bowling H
+- authtype: Author
+  name: Taveras S
+- authtype: Author
+  name: Ly A
+- authtype: Author
+  name: Chen RK
+- authtype: Author
+  name: Berryman NV
+- authtype: Author
+  name: Klann E
+- authtype: Author
+  name: Varga AW
+epubdate: 2019 Oct 14
+fulljournalname: Sleep
+issue: '3'
+pages: zsz244
+pmclivedate: 2020/10/14
+printpubdate: ''
+pubdate: 2019 Oct 14
+sortdate: 2019/10/14 00:00
+source: Sleep
+title: Interactions between sleep disruption, motor learning, and p70 S6 kinase 1
+  signaling
+uid: '7315768'
+volume: '43'

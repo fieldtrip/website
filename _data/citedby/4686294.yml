@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '26400256'
+- idtype: doi
+  value: 10.1152/jn.00504.2015
+- idtype: pmcid
+  value: PMC4686294
+authors:
+- authtype: Author
+  name: van Ede F
+- authtype: Author
+  name: Winner T
+- authtype: Author
+  name: Maris E
+epubdate: 2015 Sep 23
+fulljournalname: Journal of Neurophysiology
+issue: '6'
+pages: 3121-3130
+pmclivedate: 2016/12/01
+printpubdate: 2015 Dec 1
+pubdate: 2015 Sep 23
+sortdate: 2015/09/23 00:00
+source: J Neurophysiol
+title: Touch automatically upregulates motor readiness in humans
+uid: '4686294'
+volume: '114'

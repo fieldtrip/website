@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '26890254'
+- idtype: doi
+  value: 10.1371/journal.pbio.1002384
+- idtype: pmcid
+  value: PMC4758608
+authors:
+- authtype: Author
+  name: Grion N
+- authtype: Author
+  name: Akrami A
+- authtype: Author
+  name: Zuo Y
+- authtype: Author
+  name: Stella F
+- authtype: Author
+  name: Diamond ME
+epubdate: 2016 Feb 18
+fulljournalname: PLoS Biology
+issue: '2'
+pages: e1002384
+pmclivedate: 2016/02/26
+printpubdate: ''
+pubdate: 2016 Feb 18
+sortdate: 2016/02/18 00:00
+source: PLoS Biol
+title: Coherence between Rat Sensorimotor System and Hippocampus Is Enhanced during
+  Tactile Discrimination
+uid: '4758608'
+volume: '14'

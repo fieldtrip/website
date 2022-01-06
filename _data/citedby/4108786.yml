@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '25038817'
+- idtype: doi
+  value: 10.1186/1471-2202-15-88
+- idtype: pmcid
+  value: PMC4108786
+authors:
+- authtype: Author
+  name: Verweij IM
+- authtype: Author
+  name: Romeijn N
+- authtype: Author
+  name: Smit DJ
+- authtype: Author
+  name: Piantoni G
+- authtype: Author
+  name: Van Someren EJ
+- authtype: Author
+  name: van der Werf YD
+epubdate: 2014 Jul 19
+fulljournalname: BMC Neuroscience
+issue: ''
+pages: '88'
+pmclivedate: 2014/07/25
+printpubdate: ''
+pubdate: 2014 Jul 19
+sortdate: 2014/07/19 00:00
+source: BMC Neurosci
+title: Sleep deprivation leads to a loss of functional connectivity in frontal brain
+  regions
+uid: '4108786'
+volume: '15'

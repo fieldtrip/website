@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '27092179'
+- idtype: doi
+  value: 10.1155/2016/3979547
+- idtype: pmcid
+  value: PMC4820599
+authors:
+- authtype: Author
+  name: Hincapié AS
+- authtype: Author
+  name: Kujala J
+- authtype: Author
+  name: Mattout J
+- authtype: Author
+  name: Daligault S
+- authtype: Author
+  name: Delpuech C
+- authtype: Author
+  name: Mery D
+- authtype: Author
+  name: Cosmelli D
+- authtype: Author
+  name: Jerbi K
+epubdate: 2016 Mar 22
+fulljournalname: Computational Intelligence and Neuroscience
+issue: ''
+pages: '3979547'
+pmclivedate: 2016/04/18
+printpubdate: '2016'
+pubdate: 2016 Mar 22
+sortdate: 2016/03/22 00:00
+source: Comput Intell Neurosci
+title: MEG Connectivity and Power Detections with Minimum Norm Estimates Require Different
+  Regularization Parameters
+uid: '4820599'
+volume: '2016'

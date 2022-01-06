@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '33468671'
+- idtype: doi
+  value: 10.1073/pnas.2011796118
+- idtype: pmcid
+  value: PMC7848609
+authors:
+- authtype: Author
+  name: Kam JW
+- authtype: Author
+  name: Irving ZC
+- authtype: Author
+  name: Mills C
+- authtype: Author
+  name: Patel S
+- authtype: Author
+  name: Gopnik A
+- authtype: Author
+  name: Knight RT
+epubdate: 2021 Jan 18
+fulljournalname: Proceedings of the National Academy of Sciences of the United States
+  of America
+issue: '4'
+pages: e2011796118
+pmclivedate: 2021/07/18
+printpubdate: 2021 Jan 26
+pubdate: 2021 Jan 18
+sortdate: 2021/01/18 00:00
+source: Proc Natl Acad Sci U S A
+title: Distinct electrophysiological signatures of task-unrelated and dynamic thoughts
+uid: '7848609'
+volume: '118'

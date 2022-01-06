@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '34725348'
+- idtype: doi
+  value: 10.1038/s41467-021-26544-w
+- idtype: pmcid
+  value: PMC8560909
+authors:
+- authtype: Author
+  name: Hardstone R
+- authtype: Author
+  name: Zhu M
+- authtype: Author
+  name: Flinker A
+- authtype: Author
+  name: Melloni L
+- authtype: Author
+  name: Devore S
+- authtype: Author
+  name: Friedman D
+- authtype: Author
+  name: Dugan P
+- authtype: Author
+  name: Doyle WK
+- authtype: Author
+  name: Devinsky O
+- authtype: Author
+  name: He BJ
+epubdate: 2021 Nov 1
+fulljournalname: Nature Communications
+issue: ''
+pages: '6288'
+pmclivedate: 2021/11/15
+printpubdate: ''
+pubdate: 2021 Nov 1
+sortdate: 2021/11/01 00:00
+source: Nat Commun
+title: Long-term priors influence visual perception through recruitment of long-range
+  feedback
+uid: '8560909'
+volume: '12'

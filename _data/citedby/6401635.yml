@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '30873071'
+- idtype: doi
+  value: 10.3389/fpsyg.2019.00316
+- idtype: pmcid
+  value: PMC6401635
+authors:
+- authtype: Author
+  name: Langeloh M
+- authtype: Author
+  name: Buttelmann D
+- authtype: Author
+  name: Matthes D
+- authtype: Author
+  name: Grassmann S
+- authtype: Author
+  name: Pauen S
+- authtype: Author
+  name: Hoehl S
+epubdate: 2019 Feb 20
+fulljournalname: Frontiers in Psychology
+issue: ''
+pages: '316'
+pmclivedate: 2019/03/14
+printpubdate: ''
+pubdate: 2019 Feb 20
+sortdate: 2019/02/20 00:00
+source: Front Psychol
+title: 'Corrigendum: Reduced Mu Power in Response to Unusual Actions Is Context-Dependent
+  in 1-Year-Olds'
+uid: '6401635'
+volume: '10'

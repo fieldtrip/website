@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '29746486'
+- idtype: doi
+  value: 10.1371/journal.pone.0191111
+- idtype: pmcid
+  value: PMC5944911
+authors:
+- authtype: Author
+  name: Pfeiffer C
+- authtype: Author
+  name: Andersen LM
+- authtype: Author
+  name: Lundqvist D
+- authtype: Author
+  name: Hämäläinen M
+- authtype: Author
+  name: Schneiderman JF
+- authtype: Author
+  name: Oostenveld R
+epubdate: 2018 May 10
+fulljournalname: PLoS ONE
+issue: '5'
+pages: e0191111
+pmclivedate: 2018/05/18
+printpubdate: ''
+pubdate: 2018 May 10
+sortdate: 2018/05/10 00:00
+source: PLoS One
+title: Localizing on-scalp MEG sensors using an array of magnetic dipole coils
+uid: '5944911'
+volume: '13'

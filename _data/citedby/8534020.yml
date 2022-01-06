@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '34679336'
+- idtype: doi
+  value: 10.3390/brainsci11101271
+- idtype: pmcid
+  value: PMC8534020
+authors:
+- authtype: Author
+  name: Barnes-Davis ME
+- authtype: Author
+  name: Fujiwara H
+- authtype: Author
+  name: Drury G
+- authtype: Author
+  name: Merhar SL
+- authtype: Author
+  name: Parikh NA
+- authtype: Author
+  name: Kadis DS
+epubdate: 2021 Sep 26
+fulljournalname: Brain Sciences
+issue: '10'
+pages: '1271'
+pmclivedate: 2021/10/23
+printpubdate: ''
+pubdate: 2021 Sep 26
+sortdate: 2021/09/26 00:00
+source: Brain Sci
+title: Functional Hyperconnectivity during a Stories Listening Task in Magnetoencephalography
+  Is Associated with Language Gains for Children Born Extremely Preterm
+uid: '8534020'
+volume: '11'

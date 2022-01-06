@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '30085308'
+- idtype: doi
+  value: 10.1093/scan/nsy062
+- idtype: pmcid
+  value: PMC6137312
+authors:
+- authtype: Author
+  name: Pratt M
+- authtype: Author
+  name: Goldstein A
+- authtype: Author
+  name: Feldman R
+epubdate: 2018 Aug 22
+fulljournalname: Social Cognitive and Affective Neuroscience
+issue: '9'
+pages: 957-966
+pmclivedate: 2018/09/24
+printpubdate: ''
+pubdate: 2018 Aug 22
+sortdate: 2018/08/22 00:00
+source: Soc Cogn Affect Neurosci
+title: Child brain exhibits a multi-rhythmic response to attachment cues
+uid: '6137312'
+volume: '13'

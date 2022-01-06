@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '29343982'
+- idtype: doi
+  value: 10.2147/JPR.S145581
+- idtype: pmcid
+  value: PMC5749555
+authors:
+- authtype: Author
+  name: Case M
+- authtype: Author
+  name: Shirinpour S
+- authtype: Author
+  name: Zhang H
+- authtype: Author
+  name: Datta YH
+- authtype: Author
+  name: Nelson SC
+- authtype: Author
+  name: Sadak KT
+- authtype: Author
+  name: Gupta K
+- authtype: Author
+  name: He B
+epubdate: 2017 Dec 27
+fulljournalname: Journal of Pain Research
+issue: ''
+pages: 67-76
+pmclivedate: 2018/01/17
+printpubdate: ''
+pubdate: 2017 Dec 27
+sortdate: 2017/12/27 00:00
+source: J Pain Res
+title: Increased theta band EEG power in sickle cell disease patients
+uid: '5749555'
+volume: '11'

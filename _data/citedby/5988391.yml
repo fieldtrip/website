@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '29911668'
+- idtype: doi
+  value: 10.1162/NETN_a_00009
+- idtype: pmcid
+  value: PMC5988391
+authors:
+- authtype: Author
+  name: Alavash M
+- authtype: Author
+  name: Daube C
+- authtype: Author
+  name: Wöstmann M
+- authtype: Author
+  name: Brandmeyer A
+- authtype: Author
+  name: Obleser J
+epubdate: 2017 Jun 1
+fulljournalname: Network Neuroscience
+issue: '2'
+pages: 166-191
+pmclivedate: 2018/06/15
+printpubdate: ''
+pubdate: 2017 Jun 1
+sortdate: 2017/06/01 00:00
+source: Netw Neurosci
+title: Large-scale network dynamics of beta-band oscillations underlie auditory perceptual
+  decision-making
+uid: '5988391'
+volume: '1'

@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '29573366'
+- idtype: doi
+  value: 10.1002/hbm.24048
+- idtype: pmcid
+  value: PMC6866369
+authors:
+- authtype: Author
+  name: Taylor MJ
+- authtype: Author
+  name: Robertson A
+- authtype: Author
+  name: Keller AE
+- authtype: Author
+  name: Sato J
+- authtype: Author
+  name: Urbain C
+- authtype: Author
+  name: Pang EW
+epubdate: 2018 Mar 24
+fulljournalname: Human Brain Mapping
+issue: '7'
+pages: 2907-2916
+pmclivedate: 2020/06/12
+printpubdate: ''
+pubdate: 2018 Mar 24
+sortdate: 2018/03/24 00:00
+source: Hum Brain Mapp
+title: 'Inhibition in the face of emotion: Characterization of the spatial‐temporal
+  dynamics that facilitate automatic emotion regulation'
+uid: '6866369'
+volume: '39'

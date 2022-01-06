@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '28808023'
+- idtype: doi
+  value: 10.1073/pnas.1705965114
+- idtype: pmcid
+  value: PMC5584435
+authors:
+- authtype: Author
+  name: Helfrich RF
+- authtype: Author
+  name: Huang M
+- authtype: Author
+  name: Wilson G
+- authtype: Author
+  name: Knight RT
+epubdate: 2017 Aug 14
+fulljournalname: Proceedings of the National Academy of Sciences of the United States
+  of America
+issue: '35'
+pages: 9457-9462
+pmclivedate: 2018/02/28
+printpubdate: 2017 Aug 29
+pubdate: 2017 Aug 14
+sortdate: 2017/08/14 00:00
+source: Proc Natl Acad Sci U S A
+title: Prefrontal cortex modulates posterior alpha oscillations during top-down guided
+  visual perception
+uid: '5584435'
+volume: '114'

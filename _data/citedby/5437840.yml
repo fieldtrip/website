@@ -1,0 +1,34 @@
+articleids:
+- idtype: pmid
+  value: '28119183'
+- idtype: doi
+  value: 10.1016/j.dcn.2017.01.002
+- idtype: pmcid
+  value: PMC5437840
+authors:
+- authtype: Author
+  name: Caffarra S
+- authtype: Author
+  name: Martin CD
+- authtype: Author
+  name: Lizarazu M
+- authtype: Author
+  name: Lallier M
+- authtype: Author
+  name: Zarraga A
+- authtype: Author
+  name: Molinaro N
+- authtype: Author
+  name: Carreiras M
+epubdate: 2017 Jan 10
+fulljournalname: Developmental Cognitive Neuroscience
+issue: ''
+pages: 21-32
+pmclivedate: 2017/05/31
+printpubdate: ''
+pubdate: 2017 Jan 10
+sortdate: 2017/01/10 00:00
+source: Dev Cogn Neurosci
+title: 'Word and object recognition during reading acquisition: MEG evidence'
+uid: '5437840'
+volume: '24'

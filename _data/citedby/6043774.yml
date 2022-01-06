@@ -1,0 +1,34 @@
+articleids:
+- idtype: pmid
+  value: '30009197'
+- idtype: doi
+  value: 10.1002/acn3.574
+- idtype: pmcid
+  value: PMC6043774
+authors:
+- authtype: Author
+  name: Huneau C
+- authtype: Author
+  name: Houot M
+- authtype: Author
+  name: Joutel A
+- authtype: Author
+  name: Béranger B
+- authtype: Author
+  name: Giroux C
+- authtype: Author
+  name: Benali H
+- authtype: Author
+  name: Chabriat H
+epubdate: 2018 May 21
+fulljournalname: Annals of Clinical and Translational Neurology
+issue: '7'
+pages: 788-802
+pmclivedate: 2018/07/15
+printpubdate: ''
+pubdate: 2018 May 21
+sortdate: 2018/05/21 00:00
+source: Ann Clin Transl Neurol
+title: Altered dynamics of neurovascular coupling in CADASIL
+uid: '6043774'
+volume: '5'

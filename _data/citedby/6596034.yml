@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '30037830'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0273-18.2018
+- idtype: pmcid
+  value: PMC6596034
+authors:
+- authtype: Author
+  name: Ketz N
+- authtype: Author
+  name: Jones AP
+- authtype: Author
+  name: Bryant NB
+- authtype: Author
+  name: Clark VP
+- authtype: Author
+  name: Pilly PK
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '33'
+pages: 7314-7326
+pmclivedate: 2019/06/27
+printpubdate: 2018 Aug 15
+pubdate: 2018 Aug 15
+sortdate: 2018/08/15 00:00
+source: J Neurosci
+title: Closed-Loop Slow-Wave tACS Improves Sleep-Dependent Long-Term Memory Generalization
+  by Modulating Endogenous Oscillations
+uid: '6596034'
+volume: '38'

@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '25855167'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.2891-14.2015
+- idtype: pmcid
+  value: PMC4388917
+authors:
+- authtype: Author
+  name: Gray MJ
+- authtype: Author
+  name: Frey HP
+- authtype: Author
+  name: Wilson TJ
+- authtype: Author
+  name: Foxe JJ
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '14'
+pages: 5489-5503
+pmclivedate: 2015/10/08
+printpubdate: 2015 Apr 8
+pubdate: 2015 Apr 8
+sortdate: 2015/04/08 00:00
+source: J Neurosci
+title: Oscillatory Recruitment of Bilateral Visual Cortex during Spatial Attention
+  to Competing Rhythmic Inputs
+uid: '4388917'
+volume: '35'

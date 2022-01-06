@@ -1,0 +1,57 @@
+articleids:
+- idtype: pmid
+  value: '31281882'
+- idtype: doi
+  value: 10.1126/sciadv.aav8192
+- idtype: pmcid
+  value: PMC6609163
+authors:
+- authtype: Author
+  name: Kunz L
+- authtype: Author
+  name: Wang L
+- authtype: Author
+  name: Lachner-Piza D
+- authtype: Author
+  name: Zhang H
+- authtype: Author
+  name: Brandt A
+- authtype: Author
+  name: Dümpelmann M
+- authtype: Author
+  name: Reinacher PC
+- authtype: Author
+  name: Coenen VA
+- authtype: Author
+  name: Chen D
+- authtype: Author
+  name: Wang WX
+- authtype: Author
+  name: Zhou W
+- authtype: Author
+  name: Liang S
+- authtype: Author
+  name: Grewe P
+- authtype: Author
+  name: Bien CG
+- authtype: Author
+  name: Bierbrauer A
+- authtype: Author
+  name: Navarro Schröder T
+- authtype: Author
+  name: Schulze-Bonhage A
+- authtype: Author
+  name: Axmacher N
+epubdate: 2019 Jul 3
+fulljournalname: Science Advances
+issue: '7'
+pages: eaav8192
+pmclivedate: 2019/07/05
+printpubdate: ''
+pubdate: 2019 Jul 3
+sortdate: 2019/07/03 00:00
+source: Sci Adv
+title: Hippocampal theta phases organize the reactivation of large-scale electrophysiological
+  representations during goal-directed navigation
+uid: '6609163'
+volume: '5'

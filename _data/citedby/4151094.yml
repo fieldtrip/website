@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '25228878'
+- idtype: doi
+  value: 10.3389/fnhum.2014.00687
+- idtype: pmcid
+  value: PMC4151094
+authors:
+- authtype: Author
+  name: Stokes MG
+- authtype: Author
+  name: Myers NE
+- authtype: Author
+  name: Turnbull J
+- authtype: Author
+  name: Nobre AC
+epubdate: 2014 Sep 2
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '687'
+pmclivedate: 2014/09/16
+printpubdate: ''
+pubdate: 2014 Sep 2
+sortdate: 2014/09/02 00:00
+source: Front Hum Neurosci
+title: Preferential encoding of behaviorally relevant predictions revealed by EEG
+uid: '4151094'
+volume: '8'

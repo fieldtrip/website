@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '31191264'
+- idtype: doi
+  value: 10.3389/fnsys.2019.00023
+- idtype: pmcid
+  value: PMC6546028
+authors:
+- authtype: Author
+  name: Moser J
+- authtype: Author
+  name: Bensaid S
+- authtype: Author
+  name: Kroupi E
+- authtype: Author
+  name: Schleger F
+- authtype: Author
+  name: Wendling F
+- authtype: Author
+  name: Ruffini G
+- authtype: Author
+  name: Preißl H
+epubdate: 2019 May 27
+fulljournalname: Frontiers in Systems Neuroscience
+issue: ''
+pages: '23'
+pmclivedate: 2019/06/12
+printpubdate: ''
+pubdate: 2019 May 27
+sortdate: 2019/05/27 00:00
+source: Front Syst Neurosci
+title: 'Evaluating Complexity of Fetal MEG Signals: A Comparison of Different Metrics
+  and Their Applicability'
+uid: '6546028'
+volume: '13'

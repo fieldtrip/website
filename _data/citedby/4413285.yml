@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '25847997'
+- idtype: doi
+  value: 10.1073/pnas.1418730112
+- idtype: pmcid
+  value: PMC4413285
+authors:
+- authtype: Author
+  name: Schurger A
+- authtype: Author
+  name: Sarigiannidis I
+- authtype: Author
+  name: Naccache L
+- authtype: Author
+  name: Sitt JD
+- authtype: Author
+  name: Dehaene S
+epubdate: 2015 Apr 6
+fulljournalname: Proceedings of the National Academy of Sciences of the United States
+  of America
+issue: '16'
+pages: E2083-E2092
+pmclivedate: 2015/10/21
+printpubdate: 2015 Apr 21
+pubdate: 2015 Apr 6
+sortdate: 2015/04/06 00:00
+source: Proc Natl Acad Sci U S A
+title: Cortical activity is more stable when sensory stimuli are consciously perceived
+uid: '4413285'
+volume: '112'

@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '27669146'
+- idtype: doi
+  value: 10.7554/eLife.13451
+- idtype: pmcid
+  value: PMC5070951
+authors:
+- authtype: Author
+  name: Siebenhühner F
+- authtype: Author
+  name: Wang SH
+- authtype: Author
+  name: Palva JM
+- authtype: Author
+  name: Palva S
+epubdate: 2016 Sep 26
+fulljournalname: eLife
+issue: ''
+pages: e13451
+pmclivedate: 2016/10/20
+printpubdate: ''
+pubdate: 2016 Sep 26
+sortdate: 2016/09/26 00:00
+source: eLife
+title: Cross-frequency synchronization connects networks of fast and slow oscillations
+  during visual working memory maintenance
+uid: '5070951'
+volume: '5'

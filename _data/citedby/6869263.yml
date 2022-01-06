@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '23117670'
+- idtype: doi
+  value: 10.1002/hbm.22207
+- idtype: pmcid
+  value: PMC6869263
+authors:
+- authtype: Author
+  name: Pavlidou A
+- authtype: Author
+  name: Schnitzler A
+- authtype: Author
+  name: Lange J
+epubdate: 2012 Nov 1
+fulljournalname: Human Brain Mapping
+issue: '2'
+pages: 581-592
+pmclivedate: 2020/06/12
+printpubdate: ''
+pubdate: 2012 Nov 1
+sortdate: 2012/11/01 00:00
+source: Hum Brain Mapp
+title: Interactions between visual and motor areas during the recognition of plausible
+  actions as revealed by magnetoencephalography
+uid: '6869263'
+volume: '35'

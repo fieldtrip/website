@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '29384450'
+- idtype: doi
+  value: 10.1152/jn.00830.2017
+- idtype: pmcid
+  value: PMC6032114
+authors:
+- authtype: Author
+  name: Gopalakrishnan R
+- authtype: Author
+  name: Burgess RC
+- authtype: Author
+  name: Malone DA
+- authtype: Author
+  name: Lempka SF
+- authtype: Author
+  name: Gale JT
+- authtype: Author
+  name: Floden DP
+- authtype: Author
+  name: Baker KB
+- authtype: Author
+  name: Machado AG
+epubdate: 2018 Jan 31
+fulljournalname: Journal of Neurophysiology
+issue: '6'
+pages: 2118-2128
+pmclivedate: 2019/06/01
+printpubdate: 2018 Jun 1
+pubdate: 2018 Jan 31
+sortdate: 2018/01/31 00:00
+source: J Neurophysiol
+title: 'Deep brain stimulation of the ventral striatal area for poststroke pain syndrome:
+  a magnetoencephalography study'
+uid: '6032114'
+volume: '119'

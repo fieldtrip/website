@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '31295259'
+- idtype: doi
+  value: 10.1371/journal.pone.0218529
+- idtype: pmcid
+  value: PMC6622468
+authors:
+- authtype: Author
+  name: Bock EA
+- authtype: Author
+  name: Fesi JD
+- authtype: Author
+  name: Baillet S
+- authtype: Author
+  name: Mendola JD
+epubdate: 2019 Jul 11
+fulljournalname: PLoS ONE
+issue: '7'
+pages: e0218529
+pmclivedate: 2019/07/25
+printpubdate: ''
+pubdate: 2019 Jul 11
+sortdate: 2019/07/11 00:00
+source: PLoS One
+title: Tagged MEG measures binocular rivalry in a cortical network that predicts alternation
+  rate
+uid: '6622468'
+volume: '14'

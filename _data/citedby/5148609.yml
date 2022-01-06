@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '27841747'
+- idtype: doi
+  value: 10.7554/eLife.17822
+- idtype: pmcid
+  value: PMC5148609
+authors:
+- authtype: Author
+  name: Antzoulatos EG
+- authtype: Author
+  name: Miller EK
+epubdate: 2016 Nov 14
+fulljournalname: eLife
+issue: ''
+pages: e17822
+pmclivedate: 2016/12/12
+printpubdate: ''
+pubdate: 2016 Nov 14
+sortdate: 2016/11/14 00:00
+source: eLife
+title: Synchronous beta rhythms of frontoparietal networks support only behaviorally
+  relevant representations
+uid: '5148609'
+volume: '5'

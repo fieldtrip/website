@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '33046753'
+- idtype: doi
+  value: 10.1038/s41598-020-73139-4
+- idtype: pmcid
+  value: PMC7550330
+authors:
+- authtype: Author
+  name: Houtekamer MC
+- authtype: Author
+  name: Henckens MJ
+- authtype: Author
+  name: Mackey WE
+- authtype: Author
+  name: Dunsmoor JE
+- authtype: Author
+  name: Homberg JR
+- authtype: Author
+  name: Kroes MC
+epubdate: 2020 Oct 12
+fulljournalname: Scientific Reports
+issue: ''
+pages: '16991'
+pmclivedate: 2020/10/14
+printpubdate: ''
+pubdate: 2020 Oct 12
+sortdate: 2020/10/12 00:00
+source: Sci Rep
+title: Investigating the efficacy of the reminder-extinction procedure to disrupt
+  contextual threat memories in humans using immersive Virtual Reality
+uid: '7550330'
+volume: '10'

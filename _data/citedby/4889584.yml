@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '27313507'
+- idtype: doi
+  value: 10.3389/fnins.2016.00248
+- idtype: pmcid
+  value: PMC4889584
+authors:
+- authtype: Author
+  name: Mahmud M
+- authtype: Author
+  name: Vassanelli S
+epubdate: 2016 Jun 2
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '248'
+pmclivedate: 2016/06/16
+printpubdate: ''
+pubdate: 2016 Jun 2
+sortdate: 2016/06/02 00:00
+source: Front Neurosci
+title: 'Processing and Analysis of Multichannel Extracellular Neuronal Signals: State-of-the-Art
+  and Challenges'
+uid: '4889584'
+volume: '10'

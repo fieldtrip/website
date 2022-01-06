@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '33349647'
+- idtype: doi
+  value: 10.1038/s41598-020-79140-1
+- idtype: pmcid
+  value: PMC7752900
+authors:
+- authtype: Author
+  name: Peña M
+- authtype: Author
+  name: Jara C
+- authtype: Author
+  name: Flores JC
+- authtype: Author
+  name: Hoyos-Bachiloglu R
+- authtype: Author
+  name: Iturriaga C
+- authtype: Author
+  name: Medina M
+- authtype: Author
+  name: Carcey J
+- authtype: Author
+  name: Espinoza J
+- authtype: Author
+  name: Bohmwald K
+- authtype: Author
+  name: Kalergis AM
+- authtype: Author
+  name: Borzutzky A
+epubdate: 2020 Dec 21
+fulljournalname: Scientific Reports
+issue: ''
+pages: '22356'
+pmclivedate: 2020/12/22
+printpubdate: ''
+pubdate: 2020 Dec 21
+sortdate: 2020/12/21 00:00
+source: Sci Rep
+title: Severe respiratory disease caused by human respiratory syncytial virus impairs
+  language learning during early infancy
+uid: '7752900'
+volume: '10'

@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '24072639'
+- idtype: doi
+  value: 10.1007/s10803-013-1948-y
+- idtype: pmcid
+  value: PMC4556131
+- idtype: MID
+  value: NIHMS528139
+authors:
+- authtype: Author
+  name: Donkers FC
+- authtype: Author
+  name: Schipul SE
+- authtype: Author
+  name: Baranek GT
+- authtype: Author
+  name: Cleary KM
+- authtype: Author
+  name: Willoughby MT
+- authtype: Author
+  name: Evans AM
+- authtype: Author
+  name: Bulluck JC
+- authtype: Author
+  name: Lovmo JE
+- authtype: Author
+  name: Belger A
+epubdate: ''
+fulljournalname: Journal of autism and developmental disorders
+issue: '2'
+pages: 506-523
+pmclivedate: 2016/01/31
+printpubdate: 2015 Feb
+pubdate: 2015 Feb
+sortdate: 2015/02/01 00:00
+source: J Autism Dev Disord
+title: Attenuated Auditory Event-Related Potentials and Associations with Atypical
+  Sensory Response Patterns in Children with Autism
+uid: '4556131'
+volume: '45'

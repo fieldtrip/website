@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '29391478'
+- idtype: doi
+  value: 10.1038/s41598-017-18999-z
+- idtype: pmcid
+  value: PMC5794911
+authors:
+- authtype: Author
+  name: Choe MK
+- authtype: Author
+  name: Lim M
+- authtype: Author
+  name: Kim JS
+- authtype: Author
+  name: Lee DS
+- authtype: Author
+  name: Chung CK
+epubdate: 2018 Feb 1
+fulljournalname: Scientific Reports
+issue: ''
+pages: '2064'
+pmclivedate: 2018/02/12
+printpubdate: ''
+pubdate: 2018 Feb 1
+sortdate: 2018/02/01 00:00
+source: Sci Rep
+title: Disrupted Resting State Network of Fibromyalgia in Theta frequency
+uid: '5794911'
+volume: '8'

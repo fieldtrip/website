@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '32540355'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2020.117057
+- idtype: pmcid
+  value: PMC7443703
+authors:
+- authtype: Author
+  name: Kandemir AL
+- authtype: Author
+  name: Litvak V
+- authtype: Author
+  name: Florin E
+epubdate: ''
+fulljournalname: Neuroimage
+issue: ''
+pages: '117057'
+pmclivedate: 2020/10/01
+printpubdate: 2020 Oct 1
+pubdate: 2020 Oct 1
+sortdate: 2020/10/01 00:00
+source: Neuroimage
+title: The comparative performance of DBS artefact rejection methods for MEG recordings
+uid: '7443703'
+volume: '219'

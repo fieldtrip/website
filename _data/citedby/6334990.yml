@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '30650078'
+- idtype: doi
+  value: 10.1371/journal.pone.0207741
+- idtype: pmcid
+  value: PMC6334990
+authors:
+- authtype: Author
+  name: Brennan JR
+- authtype: Author
+  name: Hale JT
+epubdate: 2019 Jan 16
+fulljournalname: PLoS ONE
+issue: '1'
+pages: e0207741
+pmclivedate: 2019/01/31
+printpubdate: ''
+pubdate: 2019 Jan 16
+sortdate: 2019/01/16 00:00
+source: PLoS One
+title: Hierarchical structure guides rapid linguistic predictions during naturalistic
+  listening
+uid: '6334990'
+volume: '14'

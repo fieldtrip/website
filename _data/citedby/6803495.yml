@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '31680905'
+- idtype: doi
+  value: 10.3389/fnhum.2019.00347
+- idtype: pmcid
+  value: PMC6803495
+authors:
+- authtype: Author
+  name: Bermúdez-Margaretto B
+- authtype: Author
+  name: Beltrán D
+- authtype: Author
+  name: Cuetos F
+- authtype: Author
+  name: Domínguez A
+epubdate: 2019 Oct 15
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '347'
+pmclivedate: 2019/11/03
+printpubdate: ''
+pubdate: 2019 Oct 15
+sortdate: 2019/10/15 00:00
+source: Front Hum Neurosci
+title: 'Novel Word Learning: Event-Related Brain Potentials Reflect Pure Lexical and
+  Task-Related Effects'
+uid: '6803495'
+volume: '13'

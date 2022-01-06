@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '28017818'
+- idtype: doi
+  value: 10.1016/j.neuropsychologia.2016.12.022
+- idtype: pmcid
+  value: PMC5365079
+- idtype: MID
+  value: NIHMS846152
+authors:
+- authtype: Author
+  name: McKay CC
+- authtype: Author
+  name: van den Berg B
+- authtype: Author
+  name: Woldorff MG
+epubdate: 2016 Dec 23
+fulljournalname: Neuropsychologia
+issue: ''
+pages: 184-191
+pmclivedate: 2018/02/01
+printpubdate: 2017 Feb
+pubdate: 2016 Dec 23
+sortdate: 2016/12/23 00:00
+source: Neuropsychologia
+title: 'Neural cascade of conflict processing: not just time-on-task'
+uid: '5365079'
+volume: '96'

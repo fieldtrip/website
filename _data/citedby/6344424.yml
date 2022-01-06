@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '30705624'
+- idtype: doi
+  value: 10.3389/fnint.2019.00001
+- idtype: pmcid
+  value: PMC6344424
+authors:
+- authtype: Author
+  name: Tzagarakis C
+- authtype: Author
+  name: Thompson A
+- authtype: Author
+  name: Rogers RD
+- authtype: Author
+  name: Pellizzer G
+epubdate: 2019 Jan 17
+fulljournalname: Frontiers in Integrative Neuroscience
+issue: ''
+pages: '1'
+pmclivedate: 2019/01/31
+printpubdate: ''
+pubdate: 2019 Jan 17
+sortdate: 2019/01/17 00:00
+source: Front Integr Neurosci
+title: The Degree of Modulation of Beta Band Activity During Motor Planning Is Related
+  to Trait Impulsivity
+uid: '6344424'
+volume: '13'

@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '28119591'
+- idtype: doi
+  value: 10.3389/fnhum.2016.00685
+- idtype: pmcid
+  value: PMC5222813
+authors:
+- authtype: Author
+  name: Gratkowski M
+- authtype: Author
+  name: Storzer L
+- authtype: Author
+  name: Butz M
+- authtype: Author
+  name: Schnitzler A
+- authtype: Author
+  name: Saupe D
+- authtype: Author
+  name: Dalal SS
+epubdate: 2017 Jan 10
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '685'
+pmclivedate: 2017/01/24
+printpubdate: ''
+pubdate: 2017 Jan 10
+sortdate: 2017/01/10 00:00
+source: Front Hum Neurosci
+title: 'BrainCycles: Experimental Setup for the Combined Measurement of Cortical and
+  Subcortical Activity in Parkinson''s Disease Patients during Cycling'
+uid: '5222813'
+volume: '10'

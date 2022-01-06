@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '31883456'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2019.116490
+- idtype: pmcid
+  value: PMC7068706
+authors:
+- authtype: Author
+  name: Muehlroth BE
+- authtype: Author
+  name: Sander MC
+- authtype: Author
+  name: Fandakova Y
+- authtype: Author
+  name: Grandy TH
+- authtype: Author
+  name: Rasch B
+- authtype: Author
+  name: Lee Shing Y
+- authtype: Author
+  name: Werkle-Bergner M
+epubdate: ''
+fulljournalname: Neuroimage
+issue: ''
+pages: '116490'
+pmclivedate: 2020/04/01
+printpubdate: 2020 Apr 1
+pubdate: 2020 Apr 1
+sortdate: 2020/04/01 00:00
+source: Neuroimage
+title: 'Memory quality modulates the effect of aging on memory consolidation during
+  sleep: Reduced maintenance but intact gain'
+uid: '7068706'
+volume: '209'

@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '31673006'
+- idtype: doi
+  value: 10.1038/s41598-019-52219-0
+- idtype: pmcid
+  value: PMC6823447
+authors:
+- authtype: Author
+  name: Sato J
+- authtype: Author
+  name: Mossad SI
+- authtype: Author
+  name: Wong SM
+- authtype: Author
+  name: Hunt BA
+- authtype: Author
+  name: Dunkley BT
+- authtype: Author
+  name: Urbain C
+- authtype: Author
+  name: Taylor MJ
+epubdate: 2019 Oct 31
+fulljournalname: Scientific Reports
+issue: ''
+pages: '15757'
+pmclivedate: 2019/11/12
+printpubdate: ''
+pubdate: 2019 Oct 31
+sortdate: 2019/10/31 00:00
+source: Sci Rep
+title: Spectral slowing is associated with working memory performance in children
+  born very preterm
+uid: '6823447'
+volume: '9'

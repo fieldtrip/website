@@ -1,0 +1,34 @@
+articleids:
+- idtype: pmid
+  value: '28559379'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.2500-16.2017
+- idtype: pmcid
+  value: PMC5490067
+authors:
+- authtype: Author
+  name: Tal I
+- authtype: Author
+  name: Large EW
+- authtype: Author
+  name: Rabinovitch E
+- authtype: Author
+  name: Wei Y
+- authtype: Author
+  name: Schroeder CE
+- authtype: Author
+  name: Poeppel D
+- authtype: Author
+  name: Zion Golumbic E
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '26'
+pages: 6331-6341
+pmclivedate: 2017/12/28
+printpubdate: 2017 Jun 28
+pubdate: 2017 Jun 28
+sortdate: 2017/06/28 00:00
+source: J Neurosci
+title: 'Neural Entrainment to the Beat: The “Missing-Pulse” Phenomenon'
+uid: '5490067'
+volume: '37'

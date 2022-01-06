@@ -1,0 +1,38 @@
+articleids:
+- idtype: pmid
+  value: '25754338'
+- idtype: doi
+  value: 10.1093/cercor/bhv043
+- idtype: pmcid
+  value: PMC4816790
+authors:
+- authtype: Author
+  name: Schulz E
+- authtype: Author
+  name: May ES
+- authtype: Author
+  name: Postorino M
+- authtype: Author
+  name: Tiemann L
+- authtype: Author
+  name: Nickel MM
+- authtype: Author
+  name: Witkovsky V
+- authtype: Author
+  name: Schmidt P
+- authtype: Author
+  name: Gross J
+- authtype: Author
+  name: Ploner M
+epubdate: 2015 Mar 8
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '11'
+pages: 4407-4414
+pmclivedate: 2016/04/04
+printpubdate: 2015 Nov
+pubdate: 2015 Mar 8
+sortdate: 2015/03/08 00:00
+source: Cereb Cortex
+title: Prefrontal Gamma Oscillations Encode Tonic Pain in Humans
+uid: '4816790'
+volume: '25'

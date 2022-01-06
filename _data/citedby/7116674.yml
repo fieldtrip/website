@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '32276062'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2020.116818
+- idtype: pmcid
+  value: PMC7116674
+- idtype: MID
+  value: EMS109746
+authors:
+- authtype: Author
+  name: Becker R
+- authtype: Author
+  name: Vidaurre D
+- authtype: Author
+  name: Quinn AJ
+- authtype: Author
+  name: Abeysuriya RG
+- authtype: Author
+  name: Jones OP
+- authtype: Author
+  name: Jbabdi S
+- authtype: Author
+  name: Woolrich MW
+epubdate: 2020 Apr 7
+fulljournalname: NeuroImage
+issue: ''
+pages: '116818'
+pmclivedate: 2021/02/02
+printpubdate: 2020 Jul 15
+pubdate: 2020 Apr 7
+sortdate: 2020/04/07 00:00
+source: Neuroimage
+title: Transient spectral events in resting state MEG predict individual task responses
+uid: '7116674'
+volume: '215'

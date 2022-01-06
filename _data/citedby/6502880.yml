@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '31061511'
+- idtype: doi
+  value: 10.1038/s41598-019-42984-3
+- idtype: pmcid
+  value: PMC6502880
+authors:
+- authtype: Author
+  name: Navid MS
+- authtype: Author
+  name: Lelic D
+- authtype: Author
+  name: Niazi IK
+- authtype: Author
+  name: Holt K
+- authtype: Author
+  name: Mark EB
+- authtype: Author
+  name: Drewes AM
+- authtype: Author
+  name: Haavik H
+epubdate: 2019 May 6
+fulljournalname: Scientific Reports
+issue: ''
+pages: '6925'
+pmclivedate: 2019/05/20
+printpubdate: ''
+pubdate: 2019 May 6
+sortdate: 2019/05/06 00:00
+source: Sci Rep
+title: The effects of chiropractic spinal manipulation on central processing of tonic
+  pain - a pilot study using standardized low-resolution brain electromagnetic tomography
+  (sLORETA)
+uid: '6502880'
+volume: '9'

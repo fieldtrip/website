@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '29946247'
+- idtype: doi
+  value: 10.3389/fnhum.2018.00244
+- idtype: pmcid
+  value: PMC6007283
+authors:
+- authtype: Author
+  name: Garrido-Vásquez P
+- authtype: Author
+  name: Pell MD
+- authtype: Author
+  name: Paulmann S
+- authtype: Author
+  name: Kotz SA
+epubdate: 2018 Jun 12
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '244'
+pmclivedate: 2018/06/26
+printpubdate: ''
+pubdate: 2018 Jun 12
+sortdate: 2018/06/12 00:00
+source: Front Hum Neurosci
+title: Dynamic Facial Expressions Prime the Processing of Emotional Prosody
+uid: '6007283'
+volume: '12'

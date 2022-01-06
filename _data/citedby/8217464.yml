@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '34168536'
+- idtype: doi
+  value: 10.3389/fnins.2021.682419
+- idtype: pmcid
+  value: PMC8217464
+authors:
+- authtype: Author
+  name: Abbasi O
+- authtype: Author
+  name: Steingräber N
+- authtype: Author
+  name: Gross J
+epubdate: 2021 Jun 8
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '682419'
+pmclivedate: 2021/06/23
+printpubdate: ''
+pubdate: 2021 Jun 8
+sortdate: 2021/06/08 00:00
+source: Front Neurosci
+title: Correcting MEG Artifacts Caused by Overt Speech
+uid: '8217464'
+volume: '15'

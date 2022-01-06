@@ -1,0 +1,40 @@
+articleids:
+- idtype: pmid
+  value: '34240702'
+- idtype: doi
+  value: 10.7554/eLife.67400
+- idtype: pmcid
+  value: PMC8294846
+authors:
+- authtype: Author
+  name: Sorrentino P
+- authtype: Author
+  name: Seguin C
+- authtype: Author
+  name: Rucco R
+- authtype: Author
+  name: Liparoti M
+- authtype: Author
+  name: Troisi Lopez E
+- authtype: Author
+  name: Bonavita S
+- authtype: Author
+  name: Quarantelli M
+- authtype: Author
+  name: Sorrentino G
+- authtype: Author
+  name: Jirsa V
+- authtype: Author
+  name: Zalesky A
+epubdate: 2021 Jul 9
+fulljournalname: eLife
+issue: ''
+pages: e67400
+pmclivedate: 2021/07/23
+printpubdate: ''
+pubdate: 2021 Jul 9
+sortdate: 2021/07/09 00:00
+source: eLife
+title: The structural connectome constrains fast brain dynamics
+uid: '8294846'
+volume: '10'

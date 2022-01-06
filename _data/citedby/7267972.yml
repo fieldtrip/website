@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '31808268'
+- idtype: doi
+  value: 10.1002/hbm.24889
+- idtype: pmcid
+  value: PMC7267972
+authors:
+- authtype: Author
+  name: Forsyth A
+- authtype: Author
+  name: McMillan R
+- authtype: Author
+  name: Campbell D
+- authtype: Author
+  name: Malpas G
+- authtype: Author
+  name: Maxwell E
+- authtype: Author
+  name: Sleigh J
+- authtype: Author
+  name: Dukart J
+- authtype: Author
+  name: Hipp J
+- authtype: Author
+  name: Muthukumaraswamy SD
+epubdate: 2019 Dec 6
+fulljournalname: Human Brain Mapping
+issue: '6'
+pages: 1472-1494
+pmclivedate: 2020/06/12
+printpubdate: ''
+pubdate: 2019 Dec 6
+sortdate: 2019/12/06 00:00
+source: Hum Brain Mapp
+title: Modulation of simultaneously collected hemodynamic and electrophysiological
+  functional connectivity by ketamine and midazolam
+uid: '7267972'
+volume: '41'

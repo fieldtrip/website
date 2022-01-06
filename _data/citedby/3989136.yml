@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '23386738'
+- idtype: doi
+  value: 10.1093/scan/nst017
+- idtype: pmcid
+  value: PMC3989136
+authors:
+- authtype: Author
+  name: Lense MD
+- authtype: Author
+  name: Gordon RL
+- authtype: Author
+  name: Key AP
+- authtype: Author
+  name: Dykens EM
+epubdate: 2013 Mar 12
+fulljournalname: Social Cognitive and Affective Neuroscience
+issue: '4'
+pages: 529-537
+pmclivedate: 2015/04/01
+printpubdate: 2014 Apr
+pubdate: 2013 Mar 12
+sortdate: 2013/03/12 00:00
+source: Soc Cogn Affect Neurosci
+title: Neural correlates of cross-modal affective priming by music in Williams syndrome
+uid: '3989136'
+volume: '9'

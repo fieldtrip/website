@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '27856312'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2016.11.037
+- idtype: pmcid
+  value: PMC5321749
+- idtype: MID
+  value: NIHMS834432
+authors:
+- authtype: Author
+  name: Mill RD
+- authtype: Author
+  name: Bagic A
+- authtype: Author
+  name: Bostan A
+- authtype: Author
+  name: Schneider W
+- authtype: Author
+  name: Cole MW
+epubdate: 2016 Nov 14
+fulljournalname: NeuroImage
+issue: ''
+pages: 275-287
+pmclivedate: 2018/02/01
+printpubdate: 2017 Feb 1
+pubdate: 2016 Nov 14
+sortdate: 2016/11/14 00:00
+source: Neuroimage
+title: Empirical validation of directed functional connectivity
+uid: '5321749'
+volume: '146'

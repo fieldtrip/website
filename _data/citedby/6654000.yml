@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '31379561'
+- idtype: doi
+  value: 10.3389/fnagi.2019.00183
+- idtype: pmcid
+  value: PMC6654000
+authors:
+- authtype: Author
+  name: Beese C
+- authtype: Author
+  name: Vassileiou B
+- authtype: Author
+  name: Friederici AD
+- authtype: Author
+  name: Meyer L
+epubdate: 2019 Jul 17
+fulljournalname: Frontiers in Aging Neuroscience
+issue: ''
+pages: '183'
+pmclivedate: 2019/08/02
+printpubdate: ''
+pubdate: 2019 Jul 17
+sortdate: 2019/07/17 00:00
+source: Front Aging Neurosci
+title: Age Differences in Encoding-Related Alpha Power Reflect Sentence Comprehension
+  Difficulties
+uid: '6654000'
+volume: '11'

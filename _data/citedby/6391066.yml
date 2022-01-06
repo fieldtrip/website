@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '30714900'
+- idtype: doi
+  value: 10.7554/eLife.42101
+- idtype: pmcid
+  value: PMC6391066
+authors:
+- authtype: Author
+  name: Peter A
+- authtype: Author
+  name: Uran C
+- authtype: Author
+  name: Klon-Lipok J
+- authtype: Author
+  name: Roese R
+- authtype: Author
+  name: van Stijn S
+- authtype: Author
+  name: Barnes W
+- authtype: Author
+  name: Dowdall JR
+- authtype: Author
+  name: Singer W
+- authtype: Author
+  name: Fries P
+- authtype: Author
+  name: Vinck M
+epubdate: 2019 Feb 4
+fulljournalname: eLife
+issue: ''
+pages: e42101
+pmclivedate: 2019/02/27
+printpubdate: ''
+pubdate: 2019 Feb 4
+sortdate: 2019/02/04 00:00
+source: eLife
+title: Surface color and predictability determine contextual modulation of V1 firing
+  and gamma oscillations
+uid: '6391066'
+volume: '8'

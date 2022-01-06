@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '32982708'
+- idtype: doi
+  value: 10.3389/fnhum.2020.00367
+- idtype: pmcid
+  value: PMC7493128
+authors:
+- authtype: Author
+  name: Zhang L
+- authtype: Author
+  name: Wang P
+- authtype: Author
+  name: Zhang R
+- authtype: Author
+  name: Chen M
+- authtype: Author
+  name: Shi L
+- authtype: Author
+  name: Gao J
+- authtype: Author
+  name: Hu Y
+epubdate: 2020 Sep 2
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '367'
+pmclivedate: 2020/09/25
+printpubdate: ''
+pubdate: 2020 Sep 2
+sortdate: 2020/09/02 00:00
+source: Front Hum Neurosci
+title: The Influence of Different EEG References on Scalp EEG Functional Network Analysis
+  During Hand Movement Tasks
+uid: '7493128'
+volume: '14'

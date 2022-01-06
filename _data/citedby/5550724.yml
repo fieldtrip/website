@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '28848418'
+- idtype: doi
+  value: 10.3389/fninf.2017.00050
+- idtype: pmcid
+  value: PMC5550724
+authors:
+- authtype: Author
+  name: Gohel B
+- authtype: Author
+  name: Lim S
+- authtype: Author
+  name: Kim MY
+- authtype: Author
+  name: Kwon H
+- authtype: Author
+  name: Kim K
+epubdate: 2017 Aug 8
+fulljournalname: Frontiers in Neuroinformatics
+issue: ''
+pages: '50'
+pmclivedate: 2017/08/28
+printpubdate: ''
+pubdate: 2017 Aug 8
+sortdate: 2017/08/08 00:00
+source: Front Neuroinform
+title: Approximate Subject Specific Pseudo MRI from an Available MRI Dataset for MEG
+  Source Imaging
+uid: '5550724'
+volume: '11'

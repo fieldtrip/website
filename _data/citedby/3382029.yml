@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '22422432'
+- idtype: doi
+  value: 10.1002/hbm.22028
+- idtype: pmcid
+  value: PMC3382029
+authors:
+- authtype: Author
+  name: Gao Z
+- authtype: Author
+  name: Goldstein A
+- authtype: Author
+  name: Harpaz Y
+- authtype: Author
+  name: Hansel M
+- authtype: Author
+  name: Zion‐Golumbic E
+- authtype: Author
+  name: Bentin S
+epubdate: 2012 Mar 16
+fulljournalname: Human Brain Mapping
+issue: '8'
+pages: 1783-1795
+pmclivedate: 2014/08/01
+printpubdate: ''
+pubdate: 2012 Mar 16
+sortdate: 2012/03/16 00:00
+source: Hum Brain Mapp
+title: 'A magnetoencephalographic study of face processing: M170, gamma‐band oscillations
+  and source localization'
+uid: '3382029'
+volume: '34'

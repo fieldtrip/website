@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '25862259'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2015.03.071
+- idtype: pmcid
+  value: PMC4528074
+authors:
+- authtype: Author
+  name: Colclough GL
+- authtype: Author
+  name: Brookes MJ
+- authtype: Author
+  name: Smith SM
+- authtype: Author
+  name: Woolrich MW
+epubdate: ''
+fulljournalname: Neuroimage
+issue: ''
+pages: 439-448
+pmclivedate: 2015/08/15
+printpubdate: 2015 Aug 15
+pubdate: 2015 Aug 15
+sortdate: 2015/08/15 00:00
+source: Neuroimage
+title: A symmetric multivariate leakage correction for MEG connectomes
+uid: '4528074'
+volume: '117'

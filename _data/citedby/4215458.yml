@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '25379433'
+- idtype: doi
+  value: 10.1016/j.nicl.2014.09.004
+- idtype: pmcid
+  value: PMC4215458
+authors:
+- authtype: Author
+  name: Garcés P
+- authtype: Author
+  name: Ángel Pineda-Pardo J
+- authtype: Author
+  name: Canuet L
+- authtype: Author
+  name: Aurtenetxe S
+- authtype: Author
+  name: López ME
+- authtype: Author
+  name: Marcos A
+- authtype: Author
+  name: Yus M
+- authtype: Author
+  name: Llanero-Luque M
+- authtype: Author
+  name: del-Pozo F
+- authtype: Author
+  name: Sancho M
+- authtype: Author
+  name: Maestú F
+epubdate: 2014 Sep 10
+fulljournalname: 'NeuroImage : Clinical'
+issue: ''
+pages: 214-221
+pmclivedate: 2014/11/06
+printpubdate: ''
+pubdate: 2014 Sep 10
+sortdate: 2014/09/10 00:00
+source: Neuroimage Clin
+title: The Default Mode Network is functionally and structurally disrupted in amnestic
+  mild cognitive impairment — A bimodal MEG–DTI study
+uid: '4215458'
+volume: '6'

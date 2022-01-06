@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '25122911'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1568-14.2014
+- idtype: pmcid
+  value: PMC6705255
+authors:
+- authtype: Author
+  name: Widmann A
+- authtype: Author
+  name: Engbert R
+- authtype: Author
+  name: Schröger E
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '33'
+pages: 11152-11158
+pmclivedate: 2019/08/22
+printpubdate: 2014 Aug 13
+pubdate: 2014 Aug 13
+sortdate: 2014/08/13 00:00
+source: J Neurosci
+title: 'Microsaccadic Responses Indicate Fast Categorization of Sounds: A Novel Approach
+  to Study Auditory Cognition'
+uid: '6705255'
+volume: '34'

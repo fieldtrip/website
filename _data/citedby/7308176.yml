@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '32508080'
+- idtype: doi
+  value: 10.1163/22134808-20191423
+- idtype: pmcid
+  value: PMC7308176
+- idtype: MID
+  value: NIHMS1599650
+authors:
+- authtype: Author
+  name: Jaha N
+- authtype: Author
+  name: Shen S
+- authtype: Author
+  name: Kerlin JR
+- authtype: Author
+  name: Shahin AJ
+epubdate: 2020 Feb 18
+fulljournalname: Multisensory research
+issue: '3'
+pages: 277-294
+pmclivedate: 2021/02/28
+printpubdate: 2020 Feb 28
+pubdate: 2020 Feb 18
+sortdate: 2020/02/18 00:00
+source: Multisens Res
+title: Visual Enhancement of Relevant Speech in a ‘Cocktail Party’
+uid: '7308176'
+volume: '33'

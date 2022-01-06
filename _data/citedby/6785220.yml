@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '31596233'
+- idtype: doi
+  value: 10.7554/eLife.48065
+- idtype: pmcid
+  value: PMC6785220
+authors:
+- authtype: Author
+  name: Stolk A
+- authtype: Author
+  name: Brinkman L
+- authtype: Author
+  name: Vansteensel MJ
+- authtype: Author
+  name: Aarnoutse E
+- authtype: Author
+  name: Leijten FS
+- authtype: Author
+  name: Dijkerman CH
+- authtype: Author
+  name: Knight RT
+- authtype: Author
+  name: de Lange FP
+- authtype: Author
+  name: Toni I
+epubdate: 2019 Oct 9
+fulljournalname: eLife
+issue: ''
+pages: e48065
+pmclivedate: 2019/10/10
+printpubdate: ''
+pubdate: 2019 Oct 9
+sortdate: 2019/10/09 00:00
+source: eLife
+title: Electrocorticographic dissociation of alpha and beta rhythmic activity in the
+  human sensorimotor system
+uid: '6785220'
+volume: '8'

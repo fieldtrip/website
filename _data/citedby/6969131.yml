@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '29328980'
+- idtype: doi
+  value: 10.1016/j.dcn.2018.01.001
+- idtype: pmcid
+  value: PMC6969131
+authors:
+- authtype: Author
+  name: Mahmoudzadeh M
+- authtype: Author
+  name: Dehaene-Lambertz G
+- authtype: Author
+  name: Kongolo G
+- authtype: Author
+  name: Fournier M
+- authtype: Author
+  name: Goudjil S
+- authtype: Author
+  name: Wallois F
+epubdate: 2018 Jan 5
+fulljournalname: Developmental Cognitive Neuroscience
+issue: ''
+pages: 60-69
+pmclivedate: 2020/01/21
+printpubdate: ''
+pubdate: 2018 Jan 5
+sortdate: 2018/01/05 00:00
+source: Dev Cogn Neurosci
+title: Consequence of intraventricular hemorrhage on neurovascular coupling evoked
+  by speech syllables in preterm neonates
+uid: '6969131'
+volume: '30'

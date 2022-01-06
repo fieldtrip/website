@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '32300329'
+- idtype: doi
+  value: 10.3389/fneur.2020.00218
+- idtype: pmcid
+  value: PMC7145392
+authors:
+- authtype: Author
+  name: Monroe DC
+- authtype: Author
+  name: Cecchi NJ
+- authtype: Author
+  name: Gerges P
+- authtype: Author
+  name: Phreaner J
+- authtype: Author
+  name: Hicks JW
+- authtype: Author
+  name: Small SL
+epubdate: 2020 Apr 2
+fulljournalname: Frontiers in Neurology
+issue: ''
+pages: '218'
+pmclivedate: 2020/04/16
+printpubdate: ''
+pubdate: 2020 Apr 2
+sortdate: 2020/04/02 00:00
+source: Front Neurol
+title: A Dose Relationship Between Brain Functional Connectivity and Cumulative Head
+  Impact Exposure in Collegiate Water Polo Players
+uid: '7145392'
+volume: '11'

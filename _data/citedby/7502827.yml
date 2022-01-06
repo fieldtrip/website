@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '32662585'
+- idtype: doi
+  value: 10.1002/hbm.25134
+- idtype: pmcid
+  value: PMC7502827
+authors:
+- authtype: Author
+  name: Hua L
+- authtype: Author
+  name: Recasens M
+- authtype: Author
+  name: Grent‐'T‐Jong T
+- authtype: Author
+  name: Adams RA
+- authtype: Author
+  name: Gross J
+- authtype: Author
+  name: Uhlhaas PJ
+epubdate: 2020 Jul 14
+fulljournalname: Human Brain Mapping
+issue: '15'
+pages: 4419-4430
+pmclivedate: 2020/09/28
+printpubdate: ''
+pubdate: 2020 Jul 14
+sortdate: 2020/07/14 00:00
+source: Hum Brain Mapp
+title: 'Investigating cortico‐subcortical circuits during auditory sensory attenuation:
+  A combined magnetoencephalographic and dynamic causal modeling study'
+uid: '7502827'
+volume: '41'

@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '33233720'
+- idtype: doi
+  value: 10.3390/nu12113563
+- idtype: pmcid
+  value: PMC7699916
+authors:
+- authtype: Author
+  name: Aviram-Friedman R
+- authtype: Author
+  name: Kafri L
+- authtype: Author
+  name: Baz G
+- authtype: Author
+  name: Alyagon U
+- authtype: Author
+  name: Zangen A
+epubdate: 2020 Nov 20
+fulljournalname: Nutrients
+issue: '11'
+pages: '3563'
+pmclivedate: 2020/11/29
+printpubdate: ''
+pubdate: 2020 Nov 20
+sortdate: 2020/11/20 00:00
+source: Nutrients
+title: 'Prisoners of Addictive Cues: Biobehavioral Markers of Overweight and Obese
+  Adults with Food Addiction'
+uid: '7699916'
+volume: '12'

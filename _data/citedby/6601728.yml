@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '27013686'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.3629-15.2016
+- idtype: pmcid
+  value: PMC6601728
+authors:
+- authtype: Author
+  name: Herweg NA
+- authtype: Author
+  name: Apitz T
+- authtype: Author
+  name: Leicht G
+- authtype: Author
+  name: Mulert C
+- authtype: Author
+  name: Fuentemilla L
+- authtype: Author
+  name: Bunzeck N
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '12'
+pages: 3579-3587
+pmclivedate: 2019/07/12
+printpubdate: 2016 Mar 23
+pubdate: 2016 Mar 23
+sortdate: 2016/03/23 00:00
+source: J Neurosci
+title: 'Theta-Alpha Oscillations Bind the Hippocampus, Prefrontal Cortex, and Striatum
+  during Recollection: Evidence from Simultaneous EEG–fMRI'
+uid: '6601728'
+volume: '36'

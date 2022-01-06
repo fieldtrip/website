@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '32657268'
+- idtype: doi
+  value: 10.7554/eLife.57011
+- idtype: pmcid
+  value: PMC7363445
+authors:
+- authtype: Author
+  name: Ngo HV
+- authtype: Author
+  name: Fell J
+- authtype: Author
+  name: Staresina B
+epubdate: 2020 Jul 13
+fulljournalname: eLife
+issue: ''
+pages: e57011
+pmclivedate: 2020/07/17
+printpubdate: ''
+pubdate: 2020 Jul 13
+sortdate: 2020/07/13 00:00
+source: eLife
+title: Sleep spindles mediate hippocampal-neocortical coupling during long-duration
+  ripples
+uid: '7363445'
+volume: '9'

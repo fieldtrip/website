@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '22984367'
+- idtype: doi
+  value: 10.1080/17588928.2012.669364
+- idtype: pmcid
+  value: PMC3439853
+- idtype: MID
+  value: NIHMS373352
+authors:
+- authtype: Author
+  name: Herzmann G
+- authtype: Author
+  name: Jin M
+- authtype: Author
+  name: Cordes D
+- authtype: Author
+  name: Curran T
+epubdate: 2012 Feb 27
+fulljournalname: Cognitive neuroscience
+issue: 3-4
+pages: 174-192
+pmclivedate: 2013/09/01
+printpubdate: 2012 Sep 1
+pubdate: 2012 Feb 27
+sortdate: 2012/02/27 00:00
+source: Cogn Neurosci
+title: A within-subject ERP and fMRI investigation of orientation-specific recognition
+  memory for pictures
+uid: '3439853'
+volume: '3'

@@ -1,0 +1,47 @@
+articleids:
+- idtype: pmid
+  value: '30186760'
+- idtype: doi
+  value: 10.1016/j.nicl.2018.08.001
+- idtype: pmcid
+  value: PMC6120607
+authors:
+- authtype: Author
+  name: Sorrentino P
+- authtype: Author
+  name: Rucco R
+- authtype: Author
+  name: Jacini F
+- authtype: Author
+  name: Trojsi F
+- authtype: Author
+  name: Lardone A
+- authtype: Author
+  name: Baselice F
+- authtype: Author
+  name: Femiano C
+- authtype: Author
+  name: Santangelo G
+- authtype: Author
+  name: Granata C
+- authtype: Author
+  name: Vettoliere A
+- authtype: Author
+  name: Monsurrò MR
+- authtype: Author
+  name: Tedeschi G
+- authtype: Author
+  name: Sorrentino G
+epubdate: 2018 Aug 4
+fulljournalname: 'NeuroImage : Clinical'
+issue: ''
+pages: 564-571
+pmclivedate: 2018/09/05
+printpubdate: ''
+pubdate: 2018 Aug 4
+sortdate: 2018/08/04 00:00
+source: Neuroimage Clin
+title: 'Brain functional networks become more connected as amyotrophic lateral sclerosis
+  progresses: a source level magnetoencephalographic study'
+uid: '6120607'
+volume: '20'

@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '28250150'
+- idtype: doi
+  value: 10.1152/jn.00843.2016
+- idtype: pmcid
+  value: PMC5411475
+authors:
+- authtype: Author
+  name: Fardo F
+- authtype: Author
+  name: Vinding MC
+- authtype: Author
+  name: Allen M
+- authtype: Author
+  name: Jensen TS
+- authtype: Author
+  name: Finnerup NB
+epubdate: 2017 Mar 1
+fulljournalname: Journal of Neurophysiology
+issue: '5'
+pages: 1959-1968
+pmclivedate: 2017/05/25
+printpubdate: 2017 May 1
+pubdate: 2017 Mar 1
+sortdate: 2017/03/01 00:00
+source: J Neurophysiol
+title: Delta and gamma oscillations in operculo-insular cortex underlie innocuous
+  cold thermosensation
+uid: '5411475'
+volume: '117'

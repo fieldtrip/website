@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '29658746'
+- idtype: doi
+  value: 10.1037/pag0000238
+- idtype: pmcid
+  value: PMC5905720
+- idtype: MID
+  value: NIHMS946967
+authors:
+- authtype: Author
+  name: Rogers CS
+- authtype: Author
+  name: Payne L
+- authtype: Author
+  name: Maharjan S
+- authtype: Author
+  name: Wingfield A
+- authtype: Author
+  name: Sekuler R
+epubdate: ''
+fulljournalname: Psychology and aging
+issue: '2'
+pages: 246-258
+pmclivedate: 2019/03/01
+printpubdate: 2018 Mar
+pubdate: 2018 Mar
+sortdate: 2018/03/01 00:00
+source: Psychol Aging
+title: 'Older Adults Show Impaired Modulation of Attentional Alpha Oscillations: Evidence
+  From Dichotic Listening'
+uid: '5905720'
+volume: '33'

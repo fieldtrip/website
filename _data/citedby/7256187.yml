@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '32528417'
+- idtype: doi
+  value: 10.3389/fendo.2020.00335
+- idtype: pmcid
+  value: PMC7256187
+authors:
+- authtype: Author
+  name: Zeev-Wolf M
+- authtype: Author
+  name: Levy J
+- authtype: Author
+  name: Ebstein RP
+- authtype: Author
+  name: Feldman R
+epubdate: 2020 May 22
+fulljournalname: Frontiers in Endocrinology
+issue: ''
+pages: '335'
+pmclivedate: 2020/06/10
+printpubdate: ''
+pubdate: 2020 May 22
+sortdate: 2020/05/22 00:00
+source: Front Endocrinol (Lausanne)
+title: Cumulative Risk on Oxytocin-Pathway Genes Impairs Default Mode Network Connectivity
+  in Trauma-Exposed Youth
+uid: '7256187'
+volume: '11'

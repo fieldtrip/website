@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '32372908'
+- idtype: doi
+  value: 10.3389/fnins.2020.00323
+- idtype: pmcid
+  value: PMC7177188
+authors:
+- authtype: Author
+  name: Abreu R
+- authtype: Author
+  name: Simões M
+- authtype: Author
+  name: Castelo-Branco M
+epubdate: 2020 Apr 16
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '323'
+pmclivedate: 2020/05/05
+printpubdate: ''
+pubdate: 2020 Apr 16
+sortdate: 2020/04/16 00:00
+source: Front Neurosci
+title: 'Pushing the Limits of EEG: Estimation of Large-Scale Functional Brain Networks
+  and Their Dynamics Validated by Simultaneous fMRI'
+uid: '7177188'
+volume: '14'

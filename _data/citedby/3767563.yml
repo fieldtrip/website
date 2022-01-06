@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '23959895'
+- idtype: doi
+  value: 10.1073/pnas.1303170110
+- idtype: pmcid
+  value: PMC3767563
+authors:
+- authtype: Author
+  name: Stolk A
+- authtype: Author
+  name: Verhagen L
+- authtype: Author
+  name: Schoffelen JM
+- authtype: Author
+  name: Oostenveld R
+- authtype: Author
+  name: Blokpoel M
+- authtype: Author
+  name: Hagoort P
+- authtype: Author
+  name: van Rooij I
+- authtype: Author
+  name: Toni I
+epubdate: 2013 Aug 19
+fulljournalname: Proceedings of the National Academy of Sciences of the United States
+  of America
+issue: '36'
+pages: 14574-14579
+pmclivedate: 2013/09/19
+printpubdate: 2013 Sep 3
+pubdate: 2013 Aug 19
+sortdate: 2013/08/19 00:00
+source: Proc Natl Acad Sci U S A
+title: Neural mechanisms of communicative innovation
+uid: '3767563'
+volume: '110'

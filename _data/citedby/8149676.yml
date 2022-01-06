@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '34035303'
+- idtype: doi
+  value: 10.1038/s41467-021-23520-2
+- idtype: pmcid
+  value: PMC8149676
+authors:
+- authtype: Author
+  name: Schreiner T
+- authtype: Author
+  name: Petzka M
+- authtype: Author
+  name: Staudigl T
+- authtype: Author
+  name: Staresina BP
+epubdate: 2021 May 25
+fulljournalname: Nature Communications
+issue: ''
+pages: '3112'
+pmclivedate: 2021/06/01
+printpubdate: ''
+pubdate: 2021 May 25
+sortdate: 2021/05/25 00:00
+source: Nat Commun
+title: Endogenous memory reactivation during sleep in humans is clocked by slow oscillation-spindle
+  complexes
+uid: '8149676'
+volume: '12'

@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '31505548'
+- idtype: doi
+  value: 10.1093/brain/awz141
+- idtype: pmcid
+  value: PMC6598629
+authors:
+- authtype: Author
+  name: Pozzi NG
+- authtype: Author
+  name: Canessa A
+- authtype: Author
+  name: Palmisano C
+- authtype: Author
+  name: Brumberg J
+- authtype: Author
+  name: Steigerwald F
+- authtype: Author
+  name: Reich MM
+- authtype: Author
+  name: Minafra B
+- authtype: Author
+  name: Pacchetti C
+- authtype: Author
+  name: Pezzoli G
+- authtype: Author
+  name: Volkmann J
+- authtype: Author
+  name: Isaias IU
+epubdate: 2019 Jun 26
+fulljournalname: Brain
+issue: '7'
+pages: 2037-2050
+pmclivedate: 2019/07/03
+printpubdate: 2019 Jul
+pubdate: 2019 Jun 26
+sortdate: 2019/06/26 00:00
+source: Brain
+title: Freezing of gait in Parkinson’s disease reflects a sudden derangement of locomotor
+  network dynamics
+uid: '6598629'
+volume: '142'

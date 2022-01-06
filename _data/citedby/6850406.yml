@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '31020680'
+- idtype: doi
+  value: 10.1111/nyas.14099
+- idtype: pmcid
+  value: PMC6850406
+authors:
+- authtype: Author
+  name: Lizarazu M
+- authtype: Author
+  name: Lallier M
+- authtype: Author
+  name: Molinaro N
+epubdate: 2019 Apr 24
+fulljournalname: Annals of the New York Academy of Sciences
+issue: '1'
+pages: 140-152
+pmclivedate: 2019/11/18
+printpubdate: 2019 Oct
+pubdate: 2019 Apr 24
+sortdate: 2019/04/24 00:00
+source: Ann N Y Acad Sci
+title: Phase−amplitude coupling between theta and gamma oscillations adapts to speech
+  rate
+uid: '6850406'
+volume: '1453'

@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '32480286'
+- idtype: doi
+  value: 10.1016/j.nicl.2020.102275
+- idtype: pmcid
+  value: PMC7264077
+authors:
+- authtype: Author
+  name: Nunes AS
+- authtype: Author
+  name: Kozhemiako N
+- authtype: Author
+  name: Hutcheon E
+- authtype: Author
+  name: Chau C
+- authtype: Author
+  name: Ribary U
+- authtype: Author
+  name: Grunau RE
+- authtype: Author
+  name: Doesburg SM
+epubdate: 2020 May 19
+fulljournalname: 'NeuroImage : Clinical'
+issue: ''
+pages: '102275'
+pmclivedate: 2020/06/05
+printpubdate: ''
+pubdate: 2020 May 19
+sortdate: 2020/05/19 00:00
+source: Neuroimage Clin
+title: Atypical neuromagnetic resting activity associated with thalamic volume and
+  cognitive outcome in very preterm children
+uid: '7264077'
+volume: '27'

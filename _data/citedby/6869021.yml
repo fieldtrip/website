@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '25139521'
+- idtype: doi
+  value: 10.1002/hbm.22613
+- idtype: pmcid
+  value: PMC6869021
+authors:
+- authtype: Author
+  name: Piantoni G
+- authtype: Author
+  name: Van Der Werf YD
+- authtype: Author
+  name: Jensen O
+- authtype: Author
+  name: Van Someren EJ
+epubdate: 2014 Aug 20
+fulljournalname: Human Brain Mapping
+issue: '1'
+pages: 67-84
+pmclivedate: 2020/06/12
+printpubdate: ''
+pubdate: 2014 Aug 20
+sortdate: 2014/08/20 00:00
+source: Hum Brain Mapp
+title: Memory traces of long‐range coordinated oscillations in the sleeping human
+  brain
+uid: '6869021'
+volume: '36'

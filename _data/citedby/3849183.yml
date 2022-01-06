@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '24312477'
+- idtype: doi
+  value: 10.1371/journal.pone.0080489
+- idtype: pmcid
+  value: PMC3849183
+authors:
+- authtype: Author
+  name: Roijendijk L
+- authtype: Author
+  name: Farquhar J
+- authtype: Author
+  name: van Gerven M
+- authtype: Author
+  name: Jensen O
+- authtype: Author
+  name: Gielen S
+epubdate: 2013 Dec 3
+fulljournalname: PLoS ONE
+issue: '12'
+pages: e80489
+pmclivedate: 2013/12/05
+printpubdate: ''
+pubdate: 2013 Dec 3
+sortdate: 2013/12/03 00:00
+source: PLoS One
+title: Exploring the Impact of Target Eccentricity and Task Difficulty on Covert Visual
+  Spatial Attention and Its Implications for Brain Computer Interfacing
+uid: '3849183'
+volume: '8'

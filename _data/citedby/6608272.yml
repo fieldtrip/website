@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '25080602'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.3099-13.2014
+- idtype: pmcid
+  value: PMC6608272
+authors:
+- authtype: Author
+  name: Oehrn CR
+- authtype: Author
+  name: Hanslmayr S
+- authtype: Author
+  name: Fell J
+- authtype: Author
+  name: Deuker L
+- authtype: Author
+  name: Kremers NA
+- authtype: Author
+  name: Do Lam AT
+- authtype: Author
+  name: Elger CE
+- authtype: Author
+  name: Axmacher N
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '31'
+pages: 10438-10452
+pmclivedate: 2019/07/11
+printpubdate: 2014 Jul 30
+pubdate: 2014 Jul 30
+sortdate: 2014/07/30 00:00
+source: J Neurosci
+title: Neural Communication Patterns Underlying Conflict Detection, Resolution, and
+  Adaptation
+uid: '6608272'
+volume: '34'

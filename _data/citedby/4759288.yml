@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '26924977'
+- idtype: doi
+  value: 10.3389/fnhum.2016.00061
+- idtype: pmcid
+  value: PMC4759288
+authors:
+- authtype: Author
+  name: Storzer L
+- authtype: Author
+  name: Butz M
+- authtype: Author
+  name: Hirschmann J
+- authtype: Author
+  name: Abbasi O
+- authtype: Author
+  name: Gratkowski M
+- authtype: Author
+  name: Saupe D
+- authtype: Author
+  name: Schnitzler A
+- authtype: Author
+  name: Dalal SS
+epubdate: 2016 Feb 19
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '61'
+pmclivedate: 2016/02/26
+printpubdate: ''
+pubdate: 2016 Feb 19
+sortdate: 2016/02/19 00:00
+source: Front Hum Neurosci
+title: Bicycling and Walking are Associated with Different Cortical Oscillatory Dynamics
+uid: '4759288'
+volume: '10'

@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '30224452'
+- idtype: doi
+  value: 10.1073/pnas.1805724115
+- idtype: pmcid
+  value: PMC6176623
+authors:
+- authtype: Author
+  name: Stevenson RF
+- authtype: Author
+  name: Zheng J
+- authtype: Author
+  name: Mnatsakanyan L
+- authtype: Author
+  name: Vadera S
+- authtype: Author
+  name: Knight RT
+- authtype: Author
+  name: Lin JJ
+- authtype: Author
+  name: Yassa MA
+epubdate: 2018 Sep 17
+fulljournalname: Proceedings of the National Academy of Sciences of the United States
+  of America
+issue: '40'
+pages: 10148-10153
+pmclivedate: 2019/04/02
+printpubdate: 2018 Oct 2
+pubdate: 2018 Sep 17
+sortdate: 2018/09/17 00:00
+source: Proc Natl Acad Sci U S A
+title: Hippocampal CA1 gamma power predicts the precision of spatial memory judgments
+uid: '6176623'
+volume: '115'

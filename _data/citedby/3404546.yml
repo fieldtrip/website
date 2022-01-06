@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '22848195'
+- idtype: doi
+  value: 10.3389/fnhum.2012.00211
+- idtype: pmcid
+  value: PMC3404546
+authors:
+- authtype: Author
+  name: Liu Y
+- authtype: Author
+  name: Paradis AL
+- authtype: Author
+  name: Yahia-Cherif L
+- authtype: Author
+  name: Tallon-Baudry C
+epubdate: 2012 Jul 25
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '211'
+pmclivedate: 2012/07/30
+printpubdate: ''
+pubdate: 2012 Jul 25
+sortdate: 2012/07/25 00:00
+source: Front Hum Neurosci
+title: Activity in the lateral occipital cortex between 200 and 300 ms distinguishes
+  between physically identical seen and unseen stimuli
+uid: '3404546'
+volume: '6'

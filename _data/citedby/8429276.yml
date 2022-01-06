@@ -1,0 +1,34 @@
+articleids:
+- idtype: pmid
+  value: '34311031'
+- idtype: doi
+  value: 10.1016/j.biopsycho.2021.108152
+- idtype: pmcid
+  value: PMC8429276
+- idtype: MID
+  value: NIHMS1727775
+authors:
+- authtype: Author
+  name: Smith R
+- authtype: Author
+  name: Mayeli A
+- authtype: Author
+  name: Taylor S
+- authtype: Author
+  name: Al Zoubi O
+- authtype: Author
+  name: Naegele J
+- authtype: Author
+  name: Khalsa SS
+epubdate: 2021 Jul 24
+fulljournalname: Biological psychology
+issue: ''
+pages: '108152'
+pmclivedate: 2021/09/10
+printpubdate: 2021 Sep
+pubdate: 2021 Jul 24
+sortdate: 2021/07/24 00:00
+source: Biol Psychol
+title: 'Gut inference: A computational modelling approach'
+uid: '8429276'
+volume: '164'

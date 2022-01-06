@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '28819155'
+- idtype: doi
+  value: 10.1038/s41598-017-08184-7
+- idtype: pmcid
+  value: PMC5561126
+authors:
+- authtype: Author
+  name: Kroes MC
+- authtype: Author
+  name: Dunsmoor JE
+- authtype: Author
+  name: Mackey WE
+- authtype: Author
+  name: McClay M
+- authtype: Author
+  name: Phelps EA
+epubdate: 2017 Aug 17
+fulljournalname: Scientific Reports
+issue: ''
+pages: '8640'
+pmclivedate: 2017/08/18
+printpubdate: ''
+pubdate: 2017 Aug 17
+sortdate: 2017/08/17 00:00
+source: Sci Rep
+title: Context conditioning in humans using commercially available immersive Virtual
+  Reality
+uid: '5561126'
+volume: '7'

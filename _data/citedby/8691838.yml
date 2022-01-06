@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '34874267'
+- idtype: doi
+  value: 10.7554/eLife.70270
+- idtype: pmcid
+  value: PMC8691838
+authors:
+- authtype: Author
+  name: Diesburg DA
+- authtype: Author
+  name: Greenlee JD
+- authtype: Author
+  name: Wessel JR
+epubdate: 2021 Dec 7
+fulljournalname: eLife
+issue: ''
+pages: e70270
+pmclivedate: 2021/12/22
+printpubdate: ''
+pubdate: 2021 Dec 7
+sortdate: 2021/12/07 00:00
+source: eLife
+title: Cortico-subcortical β burst dynamics underlying movement cancellation in humans
+uid: '8691838'
+volume: '10'

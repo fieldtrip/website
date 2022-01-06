@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '31513563'
+- idtype: doi
+  value: 10.1371/journal.pbio.3000280
+- idtype: pmcid
+  value: PMC6759181
+authors:
+- authtype: Author
+  name: Decramer T
+- authtype: Author
+  name: Premereur E
+- authtype: Author
+  name: Uytterhoeven M
+- authtype: Author
+  name: Van Paesschen W
+- authtype: Author
+  name: van Loon J
+- authtype: Author
+  name: Janssen P
+- authtype: Author
+  name: Theys T
+epubdate: 2019 Sep 12
+fulljournalname: PLoS Biology
+issue: '9'
+pages: e3000280
+pmclivedate: 2019/10/04
+printpubdate: ''
+pubdate: 2019 Sep 12
+sortdate: 2019/09/12 00:00
+source: PLoS Biol
+title: Single-cell selectivity and functional architecture of human lateral occipital
+  complex
+uid: '6759181'
+volume: '17'

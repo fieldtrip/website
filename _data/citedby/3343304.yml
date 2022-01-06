@@ -1,0 +1,22 @@
+articleids:
+- idtype: pmid
+  value: '22586415'
+- idtype: doi
+  value: 10.3389/fpsyg.2012.00131
+- idtype: pmcid
+  value: PMC3343304
+authors:
+- authtype: Author
+  name: Rousselet GA
+epubdate: 2012 May 4
+fulljournalname: Frontiers in Psychology
+issue: ''
+pages: '131'
+pmclivedate: 2012/05/14
+printpubdate: ''
+pubdate: 2012 May 4
+sortdate: 2012/05/04 00:00
+source: Front Psychol
+title: Does Filtering Preclude Us from Studying ERP Time-Courses?
+uid: '3343304'
+volume: '3'

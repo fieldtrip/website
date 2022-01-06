@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '31287792'
+- idtype: doi
+  value: 10.7554/eLife.45645
+- idtype: pmcid
+  value: PMC6615858
+authors:
+- authtype: Author
+  name: Sandhaeger F
+- authtype: Author
+  name: von Nicolai C
+- authtype: Author
+  name: Miller EK
+- authtype: Author
+  name: Siegel M
+epubdate: 2019 Jul 9
+fulljournalname: eLife
+issue: ''
+pages: e45645
+pmclivedate: 2019/07/11
+printpubdate: ''
+pubdate: 2019 Jul 9
+sortdate: 2019/07/09 00:00
+source: eLife
+title: Monkey EEG links neuronal color and motion information across species and scales
+uid: '6615858'
+volume: '8'

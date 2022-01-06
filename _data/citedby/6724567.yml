@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '31555175'
+- idtype: doi
+  value: 10.3389/fpsyg.2019.01979
+- idtype: pmcid
+  value: PMC6724567
+authors:
+- authtype: Author
+  name: Zhu C
+- authtype: Author
+  name: Pan J
+- authtype: Author
+  name: Wang Y
+- authtype: Author
+  name: Li J
+- authtype: Author
+  name: Wang P
+epubdate: 2019 Aug 28
+fulljournalname: Frontiers in Psychology
+issue: ''
+pages: '1979'
+pmclivedate: 2019/09/25
+printpubdate: ''
+pubdate: 2019 Aug 28
+sortdate: 2019/08/28 00:00
+source: Front Psychol
+title: Neural Dynamics Underlying the Evaluation Process of Ambiguous Options During
+  Reward-Related Decision-Making
+uid: '6724567'
+volume: '10'

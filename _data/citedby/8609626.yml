@@ -1,0 +1,48 @@
+articleids:
+- idtype: pmid
+  value: '34753819'
+- idtype: doi
+  value: 10.1073/pnas.2108959118
+- idtype: pmcid
+  value: PMC8609626
+authors:
+- authtype: Author
+  name: Aabedi AA
+- authtype: Author
+  name: Lipkin B
+- authtype: Author
+  name: Kaur J
+- authtype: Author
+  name: Kakaizada S
+- authtype: Author
+  name: Valdivia C
+- authtype: Author
+  name: Reihl S
+- authtype: Author
+  name: Young JS
+- authtype: Author
+  name: Lee AT
+- authtype: Author
+  name: Krishna S
+- authtype: Author
+  name: Berger MS
+- authtype: Author
+  name: Chang EF
+- authtype: Author
+  name: Brang D
+- authtype: Author
+  name: Hervey-Jumper SL
+epubdate: 2021 Nov 9
+fulljournalname: Proceedings of the National Academy of Sciences of the United States
+  of America
+issue: '46'
+pages: e2108959118
+pmclivedate: ''
+printpubdate: 2021 Nov 16
+pubdate: 2021 Nov 9
+sortdate: 2021/11/09 00:00
+source: Proc Natl Acad Sci U S A
+title: Functional alterations in cortical processing of speech in glioma-infiltrated
+  cortex
+uid: '8609626'
+volume: '118'

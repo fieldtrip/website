@@ -1,0 +1,40 @@
+articleids:
+- idtype: pmid
+  value: '25927439'
+- idtype: doi
+  value: 10.1371/journal.pone.0123807
+- idtype: pmcid
+  value: PMC4415810
+authors:
+- authtype: Author
+  name: Japaridze N
+- authtype: Author
+  name: Muthuraman M
+- authtype: Author
+  name: Reinicke C
+- authtype: Author
+  name: Moeller F
+- authtype: Author
+  name: Anwar AR
+- authtype: Author
+  name: Mideksa KG
+- authtype: Author
+  name: Pressler R
+- authtype: Author
+  name: Deuschl G
+- authtype: Author
+  name: Stephani U
+- authtype: Author
+  name: Siniatchkin M
+epubdate: 2015 Apr 30
+fulljournalname: PLoS ONE
+issue: '4'
+pages: e0123807
+pmclivedate: 2015/05/07
+printpubdate: ''
+pubdate: 2015 Apr 30
+sortdate: 2015/04/30 00:00
+source: PLoS One
+title: Neuronal Networks during Burst Suppression as Revealed by Source Analysis
+uid: '4415810'
+volume: '10'

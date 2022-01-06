@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '31056820'
+- idtype: doi
+  value: 10.1002/hbm.24604
+- idtype: pmcid
+  value: PMC6865470
+authors:
+- authtype: Author
+  name: Urbain C
+- authtype: Author
+  name: Sato J
+- authtype: Author
+  name: Hammill C
+- authtype: Author
+  name: Duerden EG
+- authtype: Author
+  name: Taylor MJ
+epubdate: 2019 May 6
+fulljournalname: Human Brain Mapping
+issue: '11'
+pages: 3385-3397
+pmclivedate: 2020/06/12
+printpubdate: ''
+pubdate: 2019 May 6
+sortdate: 2019/05/06 00:00
+source: Hum Brain Mapp
+title: Converging function, structure, and behavioural features of emotion regulation
+  in very preterm children
+uid: '6865470'
+volume: '40'

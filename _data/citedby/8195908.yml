@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '33950323'
+- idtype: doi
+  value: 10.1007/s10548-021-00844-2
+- idtype: pmcid
+  value: PMC8195908
+authors:
+- authtype: Author
+  name: Dong L
+- authtype: Author
+  name: Zhao L
+- authtype: Author
+  name: Zhang Y
+- authtype: Author
+  name: Yu X
+- authtype: Author
+  name: Li F
+- authtype: Author
+  name: Li J
+- authtype: Author
+  name: Lai Y
+- authtype: Author
+  name: Liu T
+- authtype: Author
+  name: Yao D
+epubdate: 2021 May 5
+fulljournalname: Brain Topography
+issue: '4'
+pages: 403-414
+pmclivedate: 2021/06/28
+printpubdate: '2021'
+pubdate: 2021 May 5
+sortdate: 2021/05/05 00:00
+source: Brain Topogr
+title: 'Reference Electrode Standardization Interpolation Technique (RESIT): A Novel
+  Interpolation Method for Scalp EEG'
+uid: '8195908'
+volume: '34'

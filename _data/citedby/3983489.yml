@@ -1,0 +1,24 @@
+articleids:
+- idtype: pmid
+  value: '24772096'
+- idtype: doi
+  value: 10.3389/fpsyg.2014.00264
+- idtype: pmcid
+  value: PMC3983489
+authors:
+- authtype: Author
+  name: Volberg G
+- authtype: Author
+  name: Greenlee MW
+epubdate: 2014 Apr 4
+fulljournalname: Frontiers in Psychology
+issue: ''
+pages: '264'
+pmclivedate: 2014/04/25
+printpubdate: ''
+pubdate: 2014 Apr 4
+sortdate: 2014/04/04 00:00
+source: Front Psychol
+title: Brain networks supporting perceptual grouping and contour selection
+uid: '3983489'
+volume: '5'

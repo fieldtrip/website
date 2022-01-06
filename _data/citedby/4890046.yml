@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '27252047'
+- idtype: doi
+  value: 10.1038/srep27138
+- idtype: pmcid
+  value: PMC4890046
+authors:
+- authtype: Author
+  name: Ruhnau P
+- authtype: Author
+  name: Neuling T
+- authtype: Author
+  name: Fuscá M
+- authtype: Author
+  name: Herrmann CS
+- authtype: Author
+  name: Demarchi G
+- authtype: Author
+  name: Weisz N
+epubdate: 2016 Jun 2
+fulljournalname: Scientific Reports
+issue: ''
+pages: '27138'
+pmclivedate: 2016/06/09
+printpubdate: ''
+pubdate: 2016 Jun 2
+sortdate: 2016/06/02 00:00
+source: Sci Rep
+title: 'Eyes wide shut: Transcranial alternating current stimulation drives alpha
+  rhythm in a state dependent manner'
+uid: '4890046'
+volume: '6'

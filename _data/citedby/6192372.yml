@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '30356930'
+- idtype: doi
+  value: 10.1093/nc/niv009
+- idtype: pmcid
+  value: PMC6192372
+authors:
+- authtype: Author
+  name: Caspar EA
+- authtype: Author
+  name: Cleeremans A
+epubdate: 2015 Dec 31
+fulljournalname: Neuroscience of Consciousness
+issue: '1'
+pages: niv009
+pmclivedate: 2018/10/23
+printpubdate: ''
+pubdate: 2015 Dec 31
+sortdate: 2015/12/31 00:00
+source: Neurosci Conscious
+title: '“Free will”: are we all equal? A dynamical perspective of the conscious intention
+  to move'
+uid: '6192372'
+volume: '2015'

@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '34650417'
+- idtype: doi
+  value: 10.3389/fnhum.2021.734200
+- idtype: pmcid
+  value: PMC8505747
+authors:
+- authtype: Author
+  name: SanMiguel I
+- authtype: Author
+  name: Costa-Faidella J
+- authtype: Author
+  name: Lugo ZR
+- authtype: Author
+  name: Vilella E
+- authtype: Author
+  name: Escera C
+epubdate: 2021 Sep 28
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '734200'
+pmclivedate: 2021/10/13
+printpubdate: ''
+pubdate: 2021 Sep 28
+sortdate: 2021/09/28 00:00
+source: Front Hum Neurosci
+title: 'Standard Tone Stability as a Manipulation of Precision in the Oddball Paradigm:
+  Modulation of Prediction Error Responses to Fixed-Probability Deviants'
+uid: '8505747'
+volume: '15'

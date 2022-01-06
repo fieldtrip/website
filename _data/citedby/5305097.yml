@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '28192459'
+- idtype: doi
+  value: 10.1371/journal.pone.0171913
+- idtype: pmcid
+  value: PMC5305097
+authors:
+- authtype: Author
+  name: Scholz S
+- authtype: Author
+  name: Schneider SL
+- authtype: Author
+  name: Rose M
+epubdate: 2017 Feb 13
+fulljournalname: PLoS ONE
+issue: '2'
+pages: e0171913
+pmclivedate: 2017/02/28
+printpubdate: ''
+pubdate: 2017 Feb 13
+sortdate: 2017/02/13 00:00
+source: PLoS One
+title: Differential effects of ongoing EEG beta and theta power on memory formation
+uid: '5305097'
+volume: '12'

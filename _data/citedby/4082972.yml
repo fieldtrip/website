@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '23370059'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2013.01.040
+- idtype: pmcid
+  value: PMC4082972
+- idtype: MID
+  value: NIHMS450172
+authors:
+- authtype: Author
+  name: Bigdely-Shamlo N
+- authtype: Author
+  name: Mullen T
+- authtype: Author
+  name: Kreutz-Delgado K
+- authtype: Author
+  name: Makeig S
+epubdate: 2013 Jan 29
+fulljournalname: NeuroImage
+issue: ''
+pages: 287-303
+pmclivedate: 2014/07/06
+printpubdate: 2013 May 15
+pubdate: 2013 Jan 29
+sortdate: 2013/01/29 00:00
+source: Neuroimage
+title: 'Measure Projection Analysis: A Probabilistic Approach to EEG Source Comparison
+  and Multi-Subject Inference'
+uid: '4082972'
+volume: '72'

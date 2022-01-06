@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '26019312'
+- idtype: doi
+  value: 10.1152/jn.00260.2015
+- idtype: pmcid
+  value: PMC4533060
+authors:
+- authtype: Author
+  name: Stenner MP
+- authtype: Author
+  name: Rutledge RB
+- authtype: Author
+  name: Zaehle T
+- authtype: Author
+  name: Schmitt FC
+- authtype: Author
+  name: Kopitzki K
+- authtype: Author
+  name: Kowski AB
+- authtype: Author
+  name: Voges J
+- authtype: Author
+  name: Heinze HJ
+- authtype: Author
+  name: Dolan RJ
+epubdate: 2015 May 27
+fulljournalname: Journal of Neurophysiology
+issue: '2'
+pages: 781-792
+pmclivedate: 2015/08/14
+printpubdate: 2015 Aug
+pubdate: 2015 May 27
+sortdate: 2015/05/27 00:00
+source: J Neurophysiol
+title: 'No unified reward prediction error in local field potentials from the human
+  nucleus accumbens: evidence from epilepsy patients'
+uid: '4533060'
+volume: '114'

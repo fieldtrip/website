@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '33679344'
+- idtype: doi
+  value: 10.3389/fnhum.2021.612345
+- idtype: pmcid
+  value: PMC7930067
+authors:
+- authtype: Author
+  name: Riedinger M
+- authtype: Author
+  name: Nagels A
+- authtype: Author
+  name: Werth A
+- authtype: Author
+  name: Scharinger M
+epubdate: 2021 Feb 18
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '612345'
+pmclivedate: 2021/03/05
+printpubdate: ''
+pubdate: 2021 Feb 18
+sortdate: 2021/02/18 00:00
+source: Front Hum Neurosci
+title: 'Asymmetries in Accessing Vowel Representations Are Driven by Phonological
+  and Acoustic Properties: Neural and Behavioral Evidence From Natural German Minimal
+  Pairs'
+uid: '7930067'
+volume: '15'

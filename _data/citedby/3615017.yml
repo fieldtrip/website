@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '23565237'
+- idtype: doi
+  value: 10.1371/journal.pone.0060377
+- idtype: pmcid
+  value: PMC3615017
+authors:
+- authtype: Author
+  name: Geuze J
+- authtype: Author
+  name: van Gerven MA
+- authtype: Author
+  name: Farquhar J
+- authtype: Author
+  name: Desain P
+epubdate: 2013 Apr 2
+fulljournalname: PLoS ONE
+issue: '4'
+pages: e60377
+pmclivedate: 2013/04/05
+printpubdate: ''
+pubdate: 2013 Apr 2
+sortdate: 2013/04/02 00:00
+source: PLoS One
+title: Detecting Semantic Priming at the Single-Trial Level
+uid: '3615017'
+volume: '8'

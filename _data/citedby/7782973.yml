@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '33414709'
+- idtype: doi
+  value: 10.3389/fnhum.2020.561755
+- idtype: pmcid
+  value: PMC7782973
+authors:
+- authtype: Author
+  name: Cao L
+- authtype: Author
+  name: Chen X
+- authtype: Author
+  name: Haendel BF
+epubdate: 2020 Dec 22
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '561755'
+pmclivedate: 2021/01/06
+printpubdate: ''
+pubdate: 2020 Dec 22
+sortdate: 2020/12/22 00:00
+source: Front Hum Neurosci
+title: Overground Walking Decreases Alpha Activity and Entrains Eye Movements in Humans
+uid: '7782973'
+volume: '14'

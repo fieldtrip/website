@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '29541024'
+- idtype: doi
+  value: 10.3389/fncom.2018.00011
+- idtype: pmcid
+  value: PMC5835533
+authors:
+- authtype: Author
+  name: Schurr R
+- authtype: Author
+  name: Nitzan M
+- authtype: Author
+  name: Eliahou R
+- authtype: Author
+  name: Spinelli L
+- authtype: Author
+  name: Seeck M
+- authtype: Author
+  name: Blanke O
+- authtype: Author
+  name: Arzy S
+epubdate: 2018 Feb 28
+fulljournalname: Frontiers in Computational Neuroscience
+issue: ''
+pages: '11'
+pmclivedate: 2018/03/14
+printpubdate: ''
+pubdate: 2018 Feb 28
+sortdate: 2018/02/28 00:00
+source: Front Comput Neurosci
+title: Temporal Dissociation of Neocortical and Hippocampal Contributions to Mental
+  Time Travel Using Intracranial Recordings in Humans
+uid: '5835533'
+volume: '12'

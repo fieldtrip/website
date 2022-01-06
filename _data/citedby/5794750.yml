@@ -1,0 +1,40 @@
+articleids:
+- idtype: pmid
+  value: '29391596'
+- idtype: doi
+  value: 10.1038/s41598-018-20662-0
+- idtype: pmcid
+  value: PMC5794750
+authors:
+- authtype: Author
+  name: Halgren M
+- authtype: Author
+  name: Fabó D
+- authtype: Author
+  name: Ulbert I
+- authtype: Author
+  name: Madsen JR
+- authtype: Author
+  name: Erőss L
+- authtype: Author
+  name: Doyle WK
+- authtype: Author
+  name: Devinsky O
+- authtype: Author
+  name: Schomer D
+- authtype: Author
+  name: Cash SS
+- authtype: Author
+  name: Halgren E
+epubdate: 2018 Feb 1
+fulljournalname: Scientific Reports
+issue: ''
+pages: '2055'
+pmclivedate: 2018/02/12
+printpubdate: ''
+pubdate: 2018 Feb 1
+sortdate: 2018/02/01 00:00
+source: Sci Rep
+title: Superficial Slow Rhythms Integrate Cortical Processing in Humans
+uid: '5794750'
+volume: '8'

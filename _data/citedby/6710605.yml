@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '31362634'
+- idtype: doi
+  value: 10.1098/rspb.2019.1016
+- idtype: pmcid
+  value: PMC6710605
+authors:
+- authtype: Author
+  name: Javadi AH
+- authtype: Author
+  name: Patai EZ
+- authtype: Author
+  name: Marin-Garcia E
+- authtype: Author
+  name: Margois A
+- authtype: Author
+  name: Tan HR
+- authtype: Author
+  name: Kumaran D
+- authtype: Author
+  name: Nardini M
+- authtype: Author
+  name: Penny W
+- authtype: Author
+  name: Duzel E
+- authtype: Author
+  name: Dayan P
+- authtype: Author
+  name: Spiers HJ
+epubdate: 2019 Jul 31
+fulljournalname: 'Proceedings of the Royal Society B: Biological Sciences'
+issue: '1908'
+pages: '20191016'
+pmclivedate: 2019/08/29
+printpubdate: 2019 Aug 14
+pubdate: 2019 Jul 31
+sortdate: 2019/07/31 00:00
+source: Proc Biol Sci
+title: Backtracking during navigation is correlated with enhanced anterior cingulate
+  activity and suppression of alpha oscillations and the ‘default-mode’ network
+uid: '6710605'
+volume: '286'

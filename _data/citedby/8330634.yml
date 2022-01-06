@@ -1,0 +1,40 @@
+articleids:
+- idtype: pmid
+  value: '32286133'
+- idtype: doi
+  value: 10.1162/jocn_a_01561
+- idtype: pmcid
+  value: PMC8330634
+- idtype: MID
+  value: NIHMS1623438
+authors:
+- authtype: Author
+  name: Piai V
+- authtype: Author
+  name: Witte ED
+- authtype: Author
+  name: Sierpowska J
+- authtype: Author
+  name: Zheng X
+- authtype: Author
+  name: Hinkley LB
+- authtype: Author
+  name: Mizuiri D
+- authtype: Author
+  name: Knight RT
+- authtype: Author
+  name: Berger MS
+- authtype: Author
+  name: Nagarajan SS
+epubdate: 2020 Apr 14
+fulljournalname: Journal of cognitive neuroscience
+issue: '8'
+pages: 1497-1507
+pmclivedate: 2021/08/03
+printpubdate: 2020 Aug
+pubdate: 2020 Apr 14
+sortdate: 2020/04/14 00:00
+source: J Cogn Neurosci
+title: Language neuroplasticity in brain tumour patients revealed by magnetoencephalography
+uid: '8330634'
+volume: '32'

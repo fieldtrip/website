@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '29989944'
+- idtype: doi
+  value: 10.1109/TBME.2017.2785342
+- idtype: pmcid
+  value: PMC6393112
+- idtype: MID
+  value: NIHMS1504580
+authors:
+- authtype: Author
+  name: Dassios G
+- authtype: Author
+  name: Fokas AS
+- authtype: Author
+  name: Hashemzadeh P
+- authtype: Author
+  name: Leahy RM
+epubdate: 2017 Dec 20
+fulljournalname: IEEE transactions on bio-medical engineering
+issue: '9'
+pages: 2101-2108
+pmclivedate: 2019/09/01
+printpubdate: 2018 Sep
+pubdate: 2017 Dec 20
+sortdate: 2017/12/20 00:00
+source: IEEE Trans Biomed Eng
+title: EEG for current with two dimensional support.
+uid: '6393112'
+volume: '65'

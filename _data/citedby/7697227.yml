@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '33187287'
+- idtype: doi
+  value: 10.3390/brainsci10110837
+- idtype: pmcid
+  value: PMC7697227
+authors:
+- authtype: Author
+  name: Lang A
+- authtype: Author
+  name: Ott P
+- authtype: Author
+  name: del Giudice R
+- authtype: Author
+  name: Schabus M
+epubdate: 2020 Nov 11
+fulljournalname: Brain Sciences
+issue: '11'
+pages: '837'
+pmclivedate: 2020/11/29
+printpubdate: ''
+pubdate: 2020 Nov 11
+sortdate: 2020/11/11 00:00
+source: Brain Sci
+title: Memory Traces Formed in Utero—Newborns’ Autonomic and Neuronal Responses to
+  Prenatal Stimuli and the Maternal Voice
+uid: '7697227'
+volume: '10'

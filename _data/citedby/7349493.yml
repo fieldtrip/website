@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '32517238'
+- idtype: doi
+  value: 10.3390/brainsci10060352
+- idtype: pmcid
+  value: PMC7349493
+authors:
+- authtype: Author
+  name: Kheirkhah M
+- authtype: Author
+  name: Baumbach P
+- authtype: Author
+  name: Leistritz L
+- authtype: Author
+  name: Brodoehl S
+- authtype: Author
+  name: Götz T
+- authtype: Author
+  name: Huonker R
+- authtype: Author
+  name: Witte OW
+- authtype: Author
+  name: Klingner CM
+epubdate: 2020 Jun 6
+fulljournalname: Brain Sciences
+issue: '6'
+pages: '352'
+pmclivedate: 2020/07/14
+printpubdate: ''
+pubdate: 2020 Jun 6
+sortdate: 2020/06/06 00:00
+source: Brain Sci
+title: 'The Temporal and Spatial Dynamics of Cortical Emotion Processing in Different
+  Brain Frequencies as Assessed Using the Cluster-Based Permutation Test: An MEG Study'
+uid: '7349493'
+volume: '10'

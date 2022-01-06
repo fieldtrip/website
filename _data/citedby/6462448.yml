@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '30737309'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1887-18.2019
+- idtype: pmcid
+  value: PMC6462448
+authors:
+- authtype: Author
+  name: Savoie FA
+- authtype: Author
+  name: Hamel R
+- authtype: Author
+  name: Lacroix A
+- authtype: Author
+  name: Thénault F
+- authtype: Author
+  name: Whittingstall K
+- authtype: Author
+  name: Bernier PM
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '15'
+pages: 2903-2914
+pmclivedate: 2019/10/10
+printpubdate: 2019 Apr 10
+pubdate: 2019 Apr 10
+sortdate: 2019/04/10 00:00
+source: J Neurosci
+title: 'Luring the Motor System: Impact of Performance-Contingent Incentives on Pre-Movement
+  Beta-Band Activity and Motor Performance'
+uid: '6462448'
+volume: '39'

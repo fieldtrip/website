@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '34175428'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2021.118314
+- idtype: pmcid
+  value: PMC8363941
+authors:
+- authtype: Author
+  name: Nara S
+- authtype: Author
+  name: Lizarazu M
+- authtype: Author
+  name: Richter CG
+- authtype: Author
+  name: Dima DC
+- authtype: Author
+  name: Cichy RM
+- authtype: Author
+  name: Bourguignon M
+- authtype: Author
+  name: Molinaro N
+epubdate: ''
+fulljournalname: Neuroimage
+issue: ''
+pages: '118314'
+pmclivedate: 2021/10/01
+printpubdate: 2021 Oct 1
+pubdate: 2021 Oct 1
+sortdate: 2021/10/01 00:00
+source: Neuroimage
+title: Temporal uncertainty enhances suppression of neural responses to predictable
+  visual stimuli
+uid: '8363941'
+volume: '239'

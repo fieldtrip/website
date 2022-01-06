@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '31110325'
+- idtype: doi
+  value: 10.1038/s41598-019-44101-w
+- idtype: pmcid
+  value: PMC6527564
+authors:
+- authtype: Author
+  name: Shin DW
+- authtype: Author
+  name: Kim J
+- authtype: Author
+  name: Jeong B
+- authtype: Author
+  name: Kim KW
+- authtype: Author
+  name: Shim G
+- authtype: Author
+  name: Yoon T
+epubdate: 2019 May 20
+fulljournalname: Scientific Reports
+issue: ''
+pages: '7574'
+pmclivedate: 2019/05/30
+printpubdate: ''
+pubdate: 2019 May 20
+sortdate: 2019/05/20 00:00
+source: Sci Rep
+title: Social noise interferes with learning in a volatile environment
+uid: '6527564'
+volume: '9'

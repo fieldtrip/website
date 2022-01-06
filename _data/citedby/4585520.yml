@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '25410426'
+- idtype: doi
+  value: 10.1093/cercor/bhu271
+- idtype: pmcid
+  value: PMC4585520
+authors:
+- authtype: Author
+  name: Astle DE
+- authtype: Author
+  name: Luckhoo H
+- authtype: Author
+  name: Woolrich M
+- authtype: Author
+  name: Kuo BC
+- authtype: Author
+  name: Nobre AC
+- authtype: Author
+  name: Scerif G
+epubdate: 2014 Nov 19
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '10'
+pages: 3868-3876
+pmclivedate: 2015/09/29
+printpubdate: 2015 Oct
+pubdate: 2014 Nov 19
+sortdate: 2014/11/19 00:00
+source: Cereb Cortex
+title: The Neural Dynamics of Fronto-Parietal Networks in Childhood Revealed using
+  Magnetoencephalography
+uid: '4585520'
+volume: '25'

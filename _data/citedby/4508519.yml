@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '26257597'
+- idtype: doi
+  value: 10.3389/fnins.2015.00246
+- idtype: pmcid
+  value: PMC4508519
+authors:
+- authtype: Author
+  name: Tzagarakis C
+- authtype: Author
+  name: West S
+- authtype: Author
+  name: Pellizzer G
+epubdate: 2015 Jul 21
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '246'
+pmclivedate: 2015/08/07
+printpubdate: ''
+pubdate: 2015 Jul 21
+sortdate: 2015/07/21 00:00
+source: Front Neurosci
+title: 'Brain oscillatory activity during motor preparation: effect of directional
+  uncertainty on beta, but not alpha, frequency band'
+uid: '4508519'
+volume: '9'

@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '29331056'
+- idtype: doi
+  value: 10.1002/hbm.23943
+- idtype: pmcid
+  value: PMC6866630
+authors:
+- authtype: Author
+  name: Uji M
+- authtype: Author
+  name: Wilson R
+- authtype: Author
+  name: Francis ST
+- authtype: Author
+  name: Mullinger KJ
+- authtype: Author
+  name: Mayhew SD
+epubdate: 2018 Jan 13
+fulljournalname: Human Brain Mapping
+issue: '4'
+pages: 1673-1687
+pmclivedate: 2020/06/12
+printpubdate: ''
+pubdate: 2018 Jan 13
+sortdate: 2018/01/13 00:00
+source: Hum Brain Mapp
+title: Exploring the advantages of multiband fMRI with simultaneous EEG to investigate
+  coupling between gamma frequency neural activity and the BOLD response in humans
+uid: '6866630'
+volume: '39'

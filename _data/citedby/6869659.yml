@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '26032901'
+- idtype: doi
+  value: 10.1002/hbm.22845
+- idtype: pmcid
+  value: PMC6869659
+authors:
+- authtype: Author
+  name: Pomper U
+- authtype: Author
+  name: Keil J
+- authtype: Author
+  name: Foxe JJ
+- authtype: Author
+  name: Senkowski D
+epubdate: 2015 May 28
+fulljournalname: Human Brain Mapping
+issue: '8'
+pages: 3246-3259
+pmclivedate: 2020/06/12
+printpubdate: ''
+pubdate: 2015 May 28
+sortdate: 2015/05/28 00:00
+source: Hum Brain Mapp
+title: Intersensory selective attention and temporal orienting operate in parallel
+  and are instantiated in spatially distinct sensory and motor cortices
+uid: '6869659'
+volume: '36'

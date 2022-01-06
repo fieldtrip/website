@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '22938826'
+- idtype: doi
+  value: 10.1089/brain.2012.0088
+- idtype: pmcid
+  value: PMC3621304
+authors:
+- authtype: Author
+  name: Scheeringa R
+- authtype: Author
+  name: Petersson KM
+- authtype: Author
+  name: Kleinschmidt A
+- authtype: Author
+  name: Jensen O
+- authtype: Author
+  name: Bastiaansen MC
+epubdate: ''
+fulljournalname: Brain Connectivity
+issue: '5'
+pages: 254-264
+pmclivedate: 2013/10/01
+printpubdate: 2012 Oct
+pubdate: 2012 Oct
+sortdate: 2012/10/01 00:00
+source: Brain Connect
+title: EEG Alpha Power Modulation of fMRI Resting-State Connectivity
+uid: '3621304'
+volume: '2'

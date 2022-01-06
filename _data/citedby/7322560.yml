@@ -1,0 +1,44 @@
+articleids:
+- idtype: pmid
+  value: '32278091'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2020.116797
+- idtype: pmcid
+  value: PMC7322560
+authors:
+- authtype: Author
+  name: Jaiswal A
+- authtype: Author
+  name: Nenonen J
+- authtype: Author
+  name: Stenroos M
+- authtype: Author
+  name: Gramfort A
+- authtype: Author
+  name: Dalal SS
+- authtype: Author
+  name: Westner BU
+- authtype: Author
+  name: Litvak V
+- authtype: Author
+  name: Mosher JC
+- authtype: Author
+  name: Schoffelen JM
+- authtype: Author
+  name: Witton C
+- authtype: Author
+  name: Oostenveld R
+- authtype: Author
+  name: Parkkonen L
+epubdate: ''
+fulljournalname: Neuroimage
+issue: ''
+pages: '116797'
+pmclivedate: 2020/08/01
+printpubdate: 2020 Aug 1
+pubdate: 2020 Aug 1
+sortdate: 2020/08/01 00:00
+source: Neuroimage
+title: Comparison of beamformer implementations for MEG source localization
+uid: '7322560'
+volume: '216'

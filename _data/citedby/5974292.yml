@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '29844584'
+- idtype: doi
+  value: 10.1038/s41598-018-26609-9
+- idtype: pmcid
+  value: PMC5974292
+authors:
+- authtype: Author
+  name: Tanaka H
+- authtype: Author
+  name: Miyakoshi M
+- authtype: Author
+  name: Makeig S
+epubdate: 2018 May 29
+fulljournalname: Scientific Reports
+issue: ''
+pages: '8205'
+pmclivedate: 2018/05/31
+printpubdate: ''
+pubdate: 2018 May 29
+sortdate: 2018/05/29 00:00
+source: Sci Rep
+title: 'Dynamics of directional tuning and reference frames in humans: A high-density
+  EEG study'
+uid: '5974292'
+volume: '8'

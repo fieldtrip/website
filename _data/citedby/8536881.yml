@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '34703346'
+- idtype: doi
+  value: 10.2147/NSS.S326151
+- idtype: pmcid
+  value: PMC8536881
+authors:
+- authtype: Author
+  name: Thompson K
+- authtype: Author
+  name: Gibbings A
+- authtype: Author
+  name: Shaw J
+- authtype: Author
+  name: Ray L
+- authtype: Author
+  name: Hébert G
+- authtype: Author
+  name: De Koninck J
+- authtype: Author
+  name: Fogel S
+epubdate: 2021 Oct 18
+fulljournalname: Nature and Science of Sleep
+issue: ''
+pages: 1887-1902
+pmclivedate: 2021/10/25
+printpubdate: ''
+pubdate: 2021 Oct 18
+sortdate: 2021/10/18 00:00
+source: Nat Sci Sleep
+title: 'Sleep and Second-Language Acquisition Revisited: The Role of Sleep Spindles
+  and Rapid Eye Movements'
+uid: '8536881'
+volume: '13'

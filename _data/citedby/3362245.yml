@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '22323628'
+- idtype: doi
+  value: 10.1152/jn.00973.2011
+- idtype: pmcid
+  value: PMC3362245
+authors:
+- authtype: Author
+  name: Bauer M
+- authtype: Author
+  name: Kennett S
+- authtype: Author
+  name: Driver J
+epubdate: 2012 Feb 8
+fulljournalname: Journal of Neurophysiology
+issue: '9'
+pages: 2342-2351
+pmclivedate: 2013/05/01
+printpubdate: 2012 May 1
+pubdate: 2012 Feb 8
+sortdate: 2012/02/08 00:00
+source: J Neurophysiol
+title: Attentional selection of location and modality in vision and touch modulates
+  low-frequency activity in associated sensory cortices
+uid: '3362245'
+volume: '107'

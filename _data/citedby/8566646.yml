@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '33506384'
+- idtype: doi
+  value: 10.1007/s12021-020-09504-5
+- idtype: pmcid
+  value: PMC8566646
+authors:
+- authtype: Author
+  name: Taberna GA
+- authtype: Author
+  name: Samogin J
+- authtype: Author
+  name: Mantini D
+epubdate: 2021 Jan 27
+fulljournalname: Neuroinformatics
+issue: '4'
+pages: 585-596
+pmclivedate: 2021/11/15
+printpubdate: '2021'
+pubdate: 2021 Jan 27
+sortdate: 2021/01/27 00:00
+source: Neuroinformatics
+title: Automated Head Tissue Modelling Based on Structural Magnetic Resonance Images
+  for Electroencephalographic Source Reconstruction
+uid: '8566646'
+volume: '19'

@@ -1,0 +1,38 @@
+articleids:
+- idtype: pmid
+  value: '31382238'
+- idtype: doi
+  value: 10.1016/j.nicl.2019.101956
+- idtype: pmcid
+  value: PMC6698693
+authors:
+- authtype: Author
+  name: Loo SK
+- authtype: Author
+  name: Miyakoshi M
+- authtype: Author
+  name: Tung K
+- authtype: Author
+  name: Lloyd E
+- authtype: Author
+  name: Salgari G
+- authtype: Author
+  name: Dillon A
+- authtype: Author
+  name: Chang S
+- authtype: Author
+  name: Piacentini J
+- authtype: Author
+  name: Makeig S
+epubdate: 2019 Jul 27
+fulljournalname: 'NeuroImage : Clinical'
+issue: ''
+pages: '101956'
+pmclivedate: 2019/08/22
+printpubdate: ''
+pubdate: 2019 Jul 27
+sortdate: 2019/07/27 00:00
+source: Neuroimage Clin
+title: Neural activation and connectivity during cued eye blinks in Chronic Tic Disorders
+uid: '6698693'
+volume: '24'

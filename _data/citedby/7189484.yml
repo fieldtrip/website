@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '32156741'
+- idtype: doi
+  value: 10.1523/ENEURO.0224-19.2020
+- idtype: pmcid
+  value: PMC7189484
+authors:
+- authtype: Author
+  name: Minami S
+- authtype: Author
+  name: Oishi H
+- authtype: Author
+  name: Takemura H
+- authtype: Author
+  name: Amano K
+epubdate: 2020 Apr 7
+fulljournalname: eNeuro
+issue: '2'
+pages: ENEURO.0224-19.2020
+pmclivedate: 2020/04/29
+printpubdate: ''
+pubdate: 2020 Apr 7
+sortdate: 2020/04/07 00:00
+source: eNeuro
+title: Inter-individual Differences in Occipital Alpha Oscillations Correlate with
+  White Matter Tissue Properties of the Optic Radiation
+uid: '7189484'
+volume: '7'

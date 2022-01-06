@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '33441433'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1682-20.2020
+- idtype: pmcid
+  value: PMC8115891
+authors:
+- authtype: Author
+  name: Kaiser J
+- authtype: Author
+  name: Schütz-Bosbach S
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '8'
+pages: 1788-1801
+pmclivedate: 2021/08/24
+printpubdate: 2021 Feb 24
+pubdate: 2021 Feb 24
+sortdate: 2021/02/24 00:00
+source: J Neurosci
+title: Motor Interference, But Not Sensory Interference, Increases Midfrontal Theta
+  Activity and Brain Synchronization during Reactive Control
+uid: '8115891'
+volume: '41'

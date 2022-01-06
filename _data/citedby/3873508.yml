@@ -1,0 +1,44 @@
+articleids:
+- idtype: pmid
+  value: '24409145'
+- idtype: doi
+  value: 10.3389/fnagi.2013.00100
+- idtype: pmcid
+  value: PMC3873508
+authors:
+- authtype: Author
+  name: Garcés P
+- authtype: Author
+  name: Vicente R
+- authtype: Author
+  name: Wibral M
+- authtype: Author
+  name: Pineda-Pardo JÁ
+- authtype: Author
+  name: López ME
+- authtype: Author
+  name: Aurtenetxe S
+- authtype: Author
+  name: Marcos A
+- authtype: Author
+  name: de Andrés ME
+- authtype: Author
+  name: Yus M
+- authtype: Author
+  name: Sancho M
+- authtype: Author
+  name: Maestú F
+- authtype: Author
+  name: Fernández A
+epubdate: 2013 Dec 27
+fulljournalname: Frontiers in Aging Neuroscience
+issue: ''
+pages: '100'
+pmclivedate: 2014/01/09
+printpubdate: ''
+pubdate: 2013 Dec 27
+sortdate: 2013/12/27 00:00
+source: Front Aging Neurosci
+title: Brain-wide slowing of spontaneous alpha rhythms in mild cognitive impairment
+uid: '3873508'
+volume: '5'

@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '30523067'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0183-18.2018
+- idtype: pmcid
+  value: PMC6382983
+authors:
+- authtype: Author
+  name: Bacigalupo F
+- authtype: Author
+  name: Luck SJ
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '5'
+pages: 900-917
+pmclivedate: 2019/07/30
+printpubdate: 2019 Jan 30
+pubdate: 2019 Jan 30
+sortdate: 2019/01/30 00:00
+source: J Neurosci
+title: Lateralized Suppression of Alpha-Band EEG Activity As a Mechanism of Target
+  Processing
+uid: '6382983'
+volume: '39'

@@ -1,0 +1,34 @@
+articleids:
+- idtype: pmid
+  value: '24391472'
+- idtype: doi
+  value: 10.1371/journal.pbio.1001752
+- idtype: pmcid
+  value: PMC3876971
+authors:
+- authtype: Author
+  name: Gross J
+- authtype: Author
+  name: Hoogenboom N
+- authtype: Author
+  name: Thut G
+- authtype: Author
+  name: Schyns P
+- authtype: Author
+  name: Panzeri S
+- authtype: Author
+  name: Belin P
+- authtype: Author
+  name: Garrod S
+epubdate: 2013 Dec 31
+fulljournalname: PLoS Biology
+issue: '12'
+pages: e1001752
+pmclivedate: 2014/01/03
+printpubdate: ''
+pubdate: 2013 Dec 31
+sortdate: 2013/12/31 00:00
+source: PLoS Biol
+title: Speech Rhythms and Multiplexed Oscillatory Sensory Coding in the Human Brain
+uid: '3876971'
+volume: '11'

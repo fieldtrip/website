@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '27364852'
+- idtype: doi
+  value: 10.1111/ejn.13328
+- idtype: pmcid
+  value: PMC5014120
+authors:
+- authtype: Author
+  name: Fischer P
+- authtype: Author
+  name: Tan H
+- authtype: Author
+  name: Pogosyan A
+- authtype: Author
+  name: Brown P
+epubdate: 2016 Jul 20
+fulljournalname: The European Journal of Neuroscience
+issue: '5'
+pages: 2202-2213
+pmclivedate: 2016/09/07
+printpubdate: 2016 Sep
+pubdate: 2016 Jul 20
+sortdate: 2016/07/20 00:00
+source: Eur J Neurosci
+title: High post‐movement parietal low‐beta power during rhythmic tapping facilitates
+  performance in a stop task
+uid: '5014120'
+volume: '44'

@@ -1,0 +1,23 @@
+articleids:
+- idtype: pmid
+  value: '30137502'
+- idtype: doi
+  value: 10.1093/scan/nsy072
+- idtype: pmcid
+  value: PMC6204484
+authors:
+- authtype: Author
+  name: Coll MP
+epubdate: 2018 Aug 22
+fulljournalname: Social Cognitive and Affective Neuroscience
+issue: '10'
+pages: 1003-1017
+pmclivedate: 2018/10/31
+printpubdate: ''
+pubdate: 2018 Aug 22
+sortdate: 2018/08/22 00:00
+source: Soc Cogn Affect Neurosci
+title: Meta-analysis of ERP investigations of pain empathy underlines methodological
+  issues in ERP research
+uid: '6204484'
+volume: '13'

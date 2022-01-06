@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '25697588'
+- idtype: doi
+  value: 10.1016/j.brs.2014.12.010
+- idtype: pmcid
+  value: PMC4464303
+authors:
+- authtype: Author
+  name: Garside P
+- authtype: Author
+  name: Arizpe J
+- authtype: Author
+  name: Lau CI
+- authtype: Author
+  name: Goh C
+- authtype: Author
+  name: Walsh V
+epubdate: ''
+fulljournalname: Brain Stimulation
+issue: '3'
+pages: 520-527
+pmclivedate: 2015/06/16
+printpubdate: 2015 May-Jun
+pubdate: 2015 May-Jun
+sortdate: 2015/05/01 00:00
+source: Brain Stimul
+title: Cross-hemispheric Alternating Current Stimulation During a Nap Disrupts Slow
+  Wave Activity and Associated Memory Consolidation
+uid: '4464303'
+volume: '8'

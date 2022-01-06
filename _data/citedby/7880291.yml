@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '33273069'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.2091-20.2020
+- idtype: pmcid
+  value: PMC7880291
+authors:
+- authtype: Author
+  name: Park H
+- authtype: Author
+  name: Kayser C
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '5'
+pages: 1068-1079
+pmclivedate: 2021/02/16
+printpubdate: 2021 Feb 3
+pubdate: 2021 Feb 3
+sortdate: 2021/02/03 00:00
+source: J Neurosci
+title: The Neurophysiological Basis of the Trial-Wise and Cumulative Ventriloquism
+  Aftereffects
+uid: '7880291'
+volume: '41'

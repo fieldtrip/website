@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '30218769'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2018.09.012
+- idtype: pmcid
+  value: PMC6568010
+- idtype: MID
+  value: NIHMS1027335
+authors:
+- authtype: Author
+  name: Kam JW
+- authtype: Author
+  name: Griffin S
+- authtype: Author
+  name: Shen A
+- authtype: Author
+  name: Patel S
+- authtype: Author
+  name: Hinrichs H
+- authtype: Author
+  name: Heinze HJ
+- authtype: Author
+  name: Deouell LY
+- authtype: Author
+  name: Knight RT
+epubdate: 2018 Sep 12
+fulljournalname: NeuroImage
+issue: ''
+pages: 119-129
+pmclivedate: 2019/06/14
+printpubdate: 2019 Jan 1
+pubdate: 2018 Sep 12
+sortdate: 2018/09/12 00:00
+source: Neuroimage
+title: Systematic comparison between a wireless EEG system with dry electrodes and
+  a wired EEG system with wet electrodes
+uid: '6568010'
+volume: '184'

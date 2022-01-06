@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '23185489'
+- idtype: doi
+  value: 10.1371/journal.pone.0049933
+- idtype: pmcid
+  value: PMC3503880
+authors:
+- authtype: Author
+  name: Cruse D
+- authtype: Author
+  name: Chennu S
+- authtype: Author
+  name: Fernández-Espejo D
+- authtype: Author
+  name: Payne WL
+- authtype: Author
+  name: Young GB
+- authtype: Author
+  name: Owen AM
+epubdate: 2012 Nov 21
+fulljournalname: PLoS ONE
+issue: '11'
+pages: e49933
+pmclivedate: 2012/11/26
+printpubdate: ''
+pubdate: 2012 Nov 21
+sortdate: 2012/11/21 00:00
+source: PLoS One
+title: 'Detecting Awareness in the Vegetative State: Electroencephalographic Evidence
+  for Attempted Movements to Command'
+uid: '3503880'
+volume: '7'

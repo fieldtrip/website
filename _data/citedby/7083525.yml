@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '32034068'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1862-19.2020
+- idtype: pmcid
+  value: PMC7083525
+authors:
+- authtype: Author
+  name: Jahani A
+- authtype: Author
+  name: Schwey A
+- authtype: Author
+  name: Bernier PM
+- authtype: Author
+  name: Malfait N
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '12'
+pages: 2498-2509
+pmclivedate: 2020/09/18
+printpubdate: 2020 Mar 18
+pubdate: 2020 Mar 18
+sortdate: 2020/03/18 00:00
+source: J Neurosci
+title: Spatially Distinct Beta-Band Activities Reflect Implicit Sensorimotor Adaptation
+  and Explicit Re-aiming Strategy
+uid: '7083525'
+volume: '40'

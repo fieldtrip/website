@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '33001549'
+- idtype: doi
+  value: 10.1002/da.23100
+- idtype: pmcid
+  value: PMC8143862
+- idtype: MID
+  value: NIHMS1699974
+authors:
+- authtype: Author
+  name: Dhami P
+- authtype: Author
+  name: Atluri S
+- authtype: Author
+  name: Lee J
+- authtype: Author
+  name: Knyahnytska Y
+- authtype: Author
+  name: Croarkin PE
+- authtype: Author
+  name: Blumberger DM
+- authtype: Author
+  name: Daskalakis ZJ
+- authtype: Author
+  name: Farzan F
+epubdate: 2020 Oct 1
+fulljournalname: Depression and anxiety
+issue: '2'
+pages: 172-184
+pmclivedate: ''
+printpubdate: 2021 Feb
+pubdate: 2020 Oct 1
+sortdate: 2020/10/01 00:00
+source: Depress Anxiety
+title: Neurophysiological markers of response to theta burst stimulation in youth
+  depression
+uid: '8143862'
+volume: '38'

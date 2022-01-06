@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '30814533'
+- idtype: doi
+  value: 10.1038/s41598-018-36947-3
+- idtype: pmcid
+  value: PMC6393460
+authors:
+- authtype: Author
+  name: Santhana Gopalan PR
+- authtype: Author
+  name: Loberg O
+- authtype: Author
+  name: Hämäläinen JA
+- authtype: Author
+  name: Leppänen PH
+epubdate: 2019 Feb 27
+fulljournalname: Scientific Reports
+issue: ''
+pages: '2940'
+pmclivedate: 2019/03/01
+printpubdate: ''
+pubdate: 2019 Feb 27
+sortdate: 2019/02/27 00:00
+source: Sci Rep
+title: Attentional processes in typically developing children as revealed using brain
+  event-related potentials and their source localization in Attention Network Test
+uid: '6393460'
+volume: '9'

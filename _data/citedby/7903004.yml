@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '33610096'
+- idtype: doi
+  value: 10.1016/j.nicl.2021.102589
+- idtype: pmcid
+  value: PMC7903004
+authors:
+- authtype: Author
+  name: Barnes-Davis ME
+- authtype: Author
+  name: Merhar SL
+- authtype: Author
+  name: Holland SK
+- authtype: Author
+  name: Parikh NA
+- authtype: Author
+  name: Kadis DS
+epubdate: 2021 Feb 12
+fulljournalname: 'NeuroImage : Clinical'
+issue: ''
+pages: '102589'
+pmclivedate: 2021/03/03
+printpubdate: ''
+pubdate: 2021 Feb 12
+sortdate: 2021/02/12 00:00
+source: Neuroimage Clin
+title: 'Extremely preterm children demonstrate hyperconnectivity during verb generation:
+  A multimodal approach'
+uid: '7903004'
+volume: '30'

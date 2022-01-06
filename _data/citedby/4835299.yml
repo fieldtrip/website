@@ -1,0 +1,42 @@
+articleids:
+- idtype: pmid
+  value: '26951395'
+- idtype: doi
+  value: 10.5665/sleep.5744
+- idtype: pmcid
+  value: PMC4835299
+authors:
+- authtype: Author
+  name: Colombo MA
+- authtype: Author
+  name: Ramautar JR
+- authtype: Author
+  name: Wei Y
+- authtype: Author
+  name: Gomez-Herrero G
+- authtype: Author
+  name: Stoffers D
+- authtype: Author
+  name: Wassing R
+- authtype: Author
+  name: Benjamins JS
+- authtype: Author
+  name: Tagliazucchi E
+- authtype: Author
+  name: van der Werf YD
+- authtype: Author
+  name: Cajochen C
+- authtype: Author
+  name: Van Someren EJ
+epubdate: 2016 May 1
+fulljournalname: Sleep
+issue: '5'
+pages: 1015-1027
+pmclivedate: 2016/11/01
+printpubdate: ''
+pubdate: 2016 May 1
+sortdate: 2016/05/01 00:00
+source: Sleep
+title: Wake High-Density Electroencephalographic Spatiospectral Signatures of Insomnia
+uid: '4835299'
+volume: '39'

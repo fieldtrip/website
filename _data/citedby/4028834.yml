@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '22155040'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2011.11.053
+- idtype: pmcid
+  value: PMC4028834
+- idtype: MID
+  value: NIHMS347854
+authors:
+- authtype: Author
+  name: Quandt F
+- authtype: Author
+  name: Reichert C
+- authtype: Author
+  name: Hinrichs H
+- authtype: Author
+  name: Heinze HJ
+- authtype: Author
+  name: Knight RT
+- authtype: Author
+  name: Rieger JW
+epubdate: 2011 Nov 30
+fulljournalname: NeuroImage
+issue: '4'
+pages: 3316-3324
+pmclivedate: 2014/05/21
+printpubdate: 2012 Feb 15
+pubdate: 2011 Nov 30
+sortdate: 2011/11/30 00:00
+source: Neuroimage
+title: 'Single trial discrimination of individual finger movements on one hand: A
+  combined MEG and EEG study'
+uid: '4028834'
+volume: '59'

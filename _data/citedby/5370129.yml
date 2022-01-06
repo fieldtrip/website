@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '28350887'
+- idtype: doi
+  value: 10.1371/journal.pone.0174462
+- idtype: pmcid
+  value: PMC5370129
+authors:
+- authtype: Author
+  name: Mina F
+- authtype: Author
+  name: Attina V
+- authtype: Author
+  name: Duroc Y
+- authtype: Author
+  name: Veuillet E
+- authtype: Author
+  name: Truy E
+- authtype: Author
+  name: Thai-Van H
+epubdate: 2017 Mar 28
+fulljournalname: PLoS ONE
+issue: '3'
+pages: e0174462
+pmclivedate: 2017/04/06
+printpubdate: ''
+pubdate: 2017 Mar 28
+sortdate: 2017/03/28 00:00
+source: PLoS One
+title: 'Auditory steady state responses and cochlear implants: Modeling the artifact-response
+  mixture in the perspective of denoising'
+uid: '5370129'
+volume: '12'

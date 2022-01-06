@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '32900836'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1134-20.2020
+- idtype: pmcid
+  value: PMC7548698
+authors:
+- authtype: Author
+  name: van Ede F
+- authtype: Author
+  name: Rohenkohl G
+- authtype: Author
+  name: Gould I
+- authtype: Author
+  name: Nobre AC
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '41'
+pages: 7877-7886
+pmclivedate: 2020/10/13
+printpubdate: 2020 Oct 7
+pubdate: 2020 Oct 7
+sortdate: 2020/10/07 00:00
+source: J Neurosci
+title: Purpose-Dependent Consequences of Temporal Expectations Serving Perception
+  and Action
+uid: '7548698'
+volume: '40'

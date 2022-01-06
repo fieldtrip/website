@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '33589681'
+- idtype: doi
+  value: 10.1038/s41598-020-79812-y
+- idtype: pmcid
+  value: PMC7884390
+authors:
+- authtype: Author
+  name: Stengel C
+- authtype: Author
+  name: Vernet M
+- authtype: Author
+  name: Amengual JL
+- authtype: Author
+  name: Valero-Cabré A
+epubdate: 2021 Feb 15
+fulljournalname: Scientific Reports
+issue: ''
+pages: '3807'
+pmclivedate: 2021/02/16
+printpubdate: ''
+pubdate: 2021 Feb 15
+sortdate: 2021/02/15 00:00
+source: Sci Rep
+title: Causal modulation of right hemisphere fronto-parietal phase synchrony with
+  Transcranial Magnetic Stimulation during a conscious visual detection task
+uid: '7884390'
+volume: '11'

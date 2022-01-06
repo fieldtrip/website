@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '33338621'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2020.117648
+- idtype: pmcid
+  value: PMC7896041
+authors:
+- authtype: Author
+  name: Giehl J
+- authtype: Author
+  name: Noury N
+- authtype: Author
+  name: Siegel M
+epubdate: ''
+fulljournalname: Neuroimage
+issue: ''
+pages: '117648'
+pmclivedate: 2021/03/02
+printpubdate: 2021 Feb 15
+pubdate: 2021 Feb 15
+sortdate: 2021/02/15 00:00
+source: Neuroimage
+title: Dissociating harmonic and non-harmonic phase-amplitude coupling in the human
+  brain
+uid: '7896041'
+volume: '227'

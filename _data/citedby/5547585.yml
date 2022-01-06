@@ -1,0 +1,42 @@
+articleids:
+- idtype: pmid
+  value: '28652333'
+- idtype: doi
+  value: 10.1073/pnas.1618287114
+- idtype: pmcid
+  value: PMC5547585
+authors:
+- authtype: Author
+  name: Benetti S
+- authtype: Author
+  name: van Ackeren MJ
+- authtype: Author
+  name: Rabini G
+- authtype: Author
+  name: Zonca J
+- authtype: Author
+  name: Foa V
+- authtype: Author
+  name: Baruffaldi F
+- authtype: Author
+  name: Rezk M
+- authtype: Author
+  name: Pavani F
+- authtype: Author
+  name: Rossion B
+- authtype: Author
+  name: Collignon O
+epubdate: 2017 Jun 26
+fulljournalname: Proceedings of the National Academy of Sciences of the United States
+  of America
+issue: '31'
+pages: E6437-E6446
+pmclivedate: 2017/08/11
+printpubdate: 2017 Aug 1
+pubdate: 2017 Jun 26
+sortdate: 2017/06/26 00:00
+source: Proc Natl Acad Sci U S A
+title: Functional selectivity for face processing in the temporal voice area of early
+  deaf individuals
+uid: '5547585'
+volume: '114'

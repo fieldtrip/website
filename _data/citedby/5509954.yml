@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '28769831'
+- idtype: doi
+  value: 10.3389/fpsyg.2017.01170
+- idtype: pmcid
+  value: PMC5509954
+authors:
+- authtype: Author
+  name: Bache C
+- authtype: Author
+  name: Springer A
+- authtype: Author
+  name: Noack H
+- authtype: Author
+  name: Stadler W
+- authtype: Author
+  name: Kopp F
+- authtype: Author
+  name: Lindenberger U
+- authtype: Author
+  name: Werkle-Bergner M
+epubdate: 2017 Jul 14
+fulljournalname: Frontiers in Psychology
+issue: ''
+pages: '1170'
+pmclivedate: 2017/08/02
+printpubdate: ''
+pubdate: 2017 Jul 14
+sortdate: 2017/07/14 00:00
+source: Front Psychol
+title: '10-Month-Old Infants Are Sensitive to the Time Course of Perceived Actions:
+  Eye-Tracking and EEG Evidence'
+uid: '5509954'
+volume: '8'

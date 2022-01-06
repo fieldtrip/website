@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '30215669'
+- idtype: doi
+  value: 10.1093/cercor/bhy223
+- idtype: pmcid
+  value: PMC6188546
+authors:
+- authtype: Author
+  name: de Vries IE
+- authtype: Author
+  name: van Driel J
+- authtype: Author
+  name: Karacaoglu M
+- authtype: Author
+  name: Olivers CN
+epubdate: 2018 Sep 12
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '11'
+pages: 4090-4104
+pmclivedate: 2018/10/22
+printpubdate: 2018 Nov
+pubdate: 2018 Sep 12
+sortdate: 2018/09/12 00:00
+source: Cereb Cortex
+title: Priority Switches in Visual Working Memory are Supported by Frontal Delta and
+  Posterior Alpha Interactions
+uid: '6188546'
+volume: '28'

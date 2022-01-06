@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '26080310'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2015.06.026
+- idtype: pmcid
+  value: PMC4686537
+authors:
+- authtype: Author
+  name: Neuling T
+- authtype: Author
+  name: Ruhnau P
+- authtype: Author
+  name: Fuscà M
+- authtype: Author
+  name: Demarchi G
+- authtype: Author
+  name: Herrmann CS
+- authtype: Author
+  name: Weisz N
+epubdate: ''
+fulljournalname: Neuroimage
+issue: ''
+pages: 406-413
+pmclivedate: 2016/01/15
+printpubdate: 2015 Sep
+pubdate: 2015 Sep
+sortdate: 2015/09/01 00:00
+source: Neuroimage
+title: 'Friends, not foes: Magnetoencephalography as a tool to uncover brain dynamics
+  during transcranial alternating current stimulation'
+uid: '4686537'
+volume: '118'

@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '34230106'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.3134-20.2021
+- idtype: pmcid
+  value: PMC8336697
+authors:
+- authtype: Author
+  name: Duecker K
+- authtype: Author
+  name: Gutteling TP
+- authtype: Author
+  name: Herrmann CS
+- authtype: Author
+  name: Jensen O
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '31'
+pages: 6684-6698
+pmclivedate: 2021/08/05
+printpubdate: 2021 Aug 4
+pubdate: 2021 Aug 4
+sortdate: 2021/08/04 00:00
+source: J Neurosci
+title: 'No Evidence for Entrainment: Endogenous Gamma Oscillations and Rhythmic Flicker
+  Responses Coexist in Visual Cortex'
+uid: '8336697'
+volume: '41'

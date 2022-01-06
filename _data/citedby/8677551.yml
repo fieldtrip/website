@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '34849596'
+- idtype: doi
+  value: 10.1093/brain/awab225
+- idtype: pmcid
+  value: PMC8677551
+authors:
+- authtype: Author
+  name: Sonoda M
+- authtype: Author
+  name: Silverstein BH
+- authtype: Author
+  name: Jeong JW
+- authtype: Author
+  name: Sugiura A
+- authtype: Author
+  name: Nakai Y
+- authtype: Author
+  name: Mitsuhashi T
+- authtype: Author
+  name: Rothermel R
+- authtype: Author
+  name: Luat AF
+- authtype: Author
+  name: Sood S
+- authtype: Author
+  name: Asano E
+epubdate: 2021 Nov 29
+fulljournalname: Brain
+issue: '11'
+pages: 3340-3354
+pmclivedate: ''
+printpubdate: ''
+pubdate: 2021 Nov 29
+sortdate: 2021/11/29 00:00
+source: Brain
+title: Six-dimensional dynamic tractography atlas of language connectivity in the
+  developing brain
+uid: '8677551'
+volume: '144'

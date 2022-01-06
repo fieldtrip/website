@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '25954141'
+- idtype: doi
+  value: 10.3389/fnins.2015.00107
+- idtype: pmcid
+  value: PMC4404950
+authors:
+- authtype: Author
+  name: Kozunov VV
+- authtype: Author
+  name: Ossadtchi A
+epubdate: 2015 Apr 21
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '107'
+pmclivedate: 2015/05/07
+printpubdate: ''
+pubdate: 2015 Apr 21
+sortdate: 2015/04/21 00:00
+source: Front Neurosci
+title: 'GALA: group analysis leads to accuracy, a novel approach for solving the inverse
+  problem in exploratory analysis of group MEG recordings'
+uid: '4404950'
+volume: '9'

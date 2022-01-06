@@ -1,0 +1,34 @@
+articleids:
+- idtype: pmid
+  value: '30946953'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2019.03.077
+- idtype: pmcid
+  value: PMC6547049
+authors:
+- authtype: Author
+  name: Peng WW
+- authtype: Author
+  name: Tang ZY
+- authtype: Author
+  name: Zhang FR
+- authtype: Author
+  name: Li H
+- authtype: Author
+  name: Kong YZ
+- authtype: Author
+  name: Iannetti GD
+- authtype: Author
+  name: Hu L
+epubdate: ''
+fulljournalname: Neuroimage
+issue: ''
+pages: 396-408
+pmclivedate: 2019/07/15
+printpubdate: 2019 Jul 15
+pubdate: 2019 Jul 15
+sortdate: 2019/07/15 00:00
+source: Neuroimage
+title: Neurobiological mechanisms of TENS-induced analgesia
+uid: '6547049'
+volume: '195'

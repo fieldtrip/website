@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '29255004'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1422-17.2017
+- idtype: pmcid
+  value: PMC5792477
+authors:
+- authtype: Author
+  name: Bracco M
+- authtype: Author
+  name: Veniero D
+- authtype: Author
+  name: Oliveri M
+- authtype: Author
+  name: Thut G
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '5'
+pages: 1189-1201
+pmclivedate: 2018/02/15
+printpubdate: 2018 Jan 31
+pubdate: 2018 Jan 31
+sortdate: 2018/01/31 00:00
+source: J Neurosci
+title: Prismatic Adaptation Modulates Oscillatory EEG Correlates of Motor Preparation
+  but Not Visual Attention in Healthy Participants
+uid: '5792477'
+volume: '38'

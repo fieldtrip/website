@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '29229820'
+- idtype: doi
+  value: 10.1073/pnas.1714633115
+- idtype: pmcid
+  value: PMC5748206
+authors:
+- authtype: Author
+  name: Haegens S
+- authtype: Author
+  name: Vergara J
+- authtype: Author
+  name: Rossi-Pool R
+- authtype: Author
+  name: Lemus L
+- authtype: Author
+  name: Romo R
+epubdate: 2017 Dec 11
+fulljournalname: Proceedings of the National Academy of Sciences of the United States
+  of America
+issue: '52'
+pages: 13810-13815
+pmclivedate: 2018/06/26
+printpubdate: 2017 Dec 26
+pubdate: 2017 Dec 11
+sortdate: 2017/12/11 00:00
+source: Proc Natl Acad Sci U S A
+title: Beta oscillations reflect supramodal information during perceptual judgment
+uid: '5748206'
+volume: '114'

@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '26698227'
+- idtype: doi
+  value: 10.1016/j.jneumeth.2015.11.029
+- idtype: pmcid
+  value: PMC4758829
+authors:
+- authtype: Author
+  name: Oswal A
+- authtype: Author
+  name: Jha A
+- authtype: Author
+  name: Neal S
+- authtype: Author
+  name: Reid A
+- authtype: Author
+  name: Bradbury D
+- authtype: Author
+  name: Aston P
+- authtype: Author
+  name: Limousin P
+- authtype: Author
+  name: Foltynie T
+- authtype: Author
+  name: Zrinzo L
+- authtype: Author
+  name: Brown P
+- authtype: Author
+  name: Litvak V
+epubdate: ''
+fulljournalname: Journal of Neuroscience Methods
+issue: ''
+pages: 29-46
+pmclivedate: 2016/03/04
+printpubdate: 2016 Mar 1
+pubdate: 2016 Mar 1
+sortdate: 2016/03/01 00:00
+source: J Neurosci Methods
+title: 'Analysis of simultaneous MEG and intracranial LFP recordings during Deep Brain
+  Stimulation: a protocol and experimental validation'
+uid: '4758829'
+volume: '261'

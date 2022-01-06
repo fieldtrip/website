@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '31803033'
+- idtype: doi
+  value: 10.3389/fnhum.2019.00398
+- idtype: pmcid
+  value: PMC6870011
+authors:
+- authtype: Author
+  name: Nieuwland MS
+- authtype: Author
+  name: Coopmans CW
+- authtype: Author
+  name: Sommers RP
+epubdate: 2019 Nov 14
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '398'
+pmclivedate: 2019/12/04
+printpubdate: ''
+pubdate: 2019 Nov 14
+sortdate: 2019/11/14 00:00
+source: Front Hum Neurosci
+title: 'Distinguishing Old From New Referents During Discourse Comprehension: Evidence
+  From ERPs and Oscillations'
+uid: '6870011'
+volume: '13'

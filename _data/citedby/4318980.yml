@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '25424865'
+- idtype: doi
+  value: 10.1007/s00221-014-4149-9
+- idtype: pmcid
+  value: PMC4318980
+authors:
+- authtype: Author
+  name: Wyczesany M
+- authtype: Author
+  name: Ligeza TS
+epubdate: 2014 Nov 26
+fulljournalname: Experimental Brain Research
+issue: '3'
+pages: 723-733
+pmclivedate: 2015/02/10
+printpubdate: '2015'
+pubdate: 2014 Nov 26
+sortdate: 2014/11/26 00:00
+source: Exp Brain Res
+title: 'Towards a constructionist approach to emotions: verification of the three-dimensional
+  model of affect with EEG-independent component analysis'
+uid: '4318980'
+volume: '233'

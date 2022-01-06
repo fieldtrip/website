@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '30405379'
+- idtype: doi
+  value: 10.3389/fnhum.2018.00425
+- idtype: pmcid
+  value: PMC6206303
+authors:
+- authtype: Author
+  name: Ma X
+- authtype: Author
+  name: Ding N
+- authtype: Author
+  name: Tao Y
+- authtype: Author
+  name: Yang YF
+epubdate: 2018 Oct 23
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '425'
+pmclivedate: 2018/11/07
+printpubdate: ''
+pubdate: 2018 Oct 23
+sortdate: 2018/10/23 00:00
+source: Front Hum Neurosci
+title: Differences in Neurocognitive Mechanisms Underlying the Processing of Center-Embedded
+  and Non–embedded Musical Structures
+uid: '6206303'
+volume: '12'

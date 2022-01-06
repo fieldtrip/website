@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '23624493'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2013.04.060
+- idtype: pmcid
+  value: PMC3677511
+- idtype: MID
+  value: NIHMS472974
+authors:
+- authtype: Author
+  name: Mercier MR
+- authtype: Author
+  name: Foxe JJ
+- authtype: Author
+  name: Fiebelkorn IC
+- authtype: Author
+  name: Butler JS
+- authtype: Author
+  name: Schwartz TH
+- authtype: Author
+  name: Molholm S
+epubdate: 2013 Apr 26
+fulljournalname: NeuroImage
+issue: ''
+pages: 19-29
+pmclivedate: 2014/10/01
+printpubdate: 2013 Oct
+pubdate: 2013 Apr 26
+sortdate: 2013/04/26 00:00
+source: Neuroimage
+title: 'Auditory-driven phase reset in visual cortex: Human electrocorticography reveals
+  mechanisms of early multisensory integration'
+uid: '3677511'
+volume: '79'

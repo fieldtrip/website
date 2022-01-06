@@ -1,0 +1,45 @@
+articleids:
+- idtype: pmid
+  value: '34732525'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1311-21.2021
+- idtype: pmcid
+  value: PMC8660042
+authors:
+- authtype: Author
+  name: Mohanta S
+- authtype: Author
+  name: Afrasiabi M
+- authtype: Author
+  name: Casey CP
+- authtype: Author
+  name: Tanabe S
+- authtype: Author
+  name: Redinbaugh MJ
+- authtype: Author
+  name: Kambi NA
+- authtype: Author
+  name: Phillips JM
+- authtype: Author
+  name: Polyakov D
+- authtype: Author
+  name: Filbey W
+- authtype: Author
+  name: Austerweil JL
+- authtype: Author
+  name: Sanders RD
+- authtype: Author
+  name: Saalmann YB
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '49'
+pages: 10130-10147
+pmclivedate: ''
+printpubdate: 2021 Dec 8
+pubdate: 2021 Dec 8
+sortdate: 2021/12/08 00:00
+source: J Neurosci
+title: Predictive Feedback, Early Sensory Representations, and Fast Responses to Predicted
+  Stimuli Depend on NMDA Receptors
+uid: '8660042'
+volume: '41'

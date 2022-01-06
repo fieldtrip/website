@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '25244118'
+- idtype: doi
+  value: 10.1162/jocn_a_00727
+- idtype: pmcid
+  value: PMC4678590
+- idtype: MID
+  value: EMS66345
+authors:
+- authtype: Author
+  name: Myers NE
+- authtype: Author
+  name: Walther L
+- authtype: Author
+  name: Wallis G
+- authtype: Author
+  name: Stokes MG
+- authtype: Author
+  name: Nobre AC
+epubdate: 2014 Sep 22
+fulljournalname: Journal of cognitive neuroscience
+issue: '3'
+pages: 492-508
+pmclivedate: 2015/12/15
+printpubdate: 2015 Mar
+pubdate: 2014 Sep 22
+sortdate: 2014/09/22 00:00
+source: J Cogn Neurosci
+title: 'Temporal dynamics of attention during encoding vs. maintenance of working
+  memory: complementary views from event-related potentials and alpha-band oscillations'
+uid: '4678590'
+volume: '27'

@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '28276493'
+- idtype: doi
+  value: 10.1038/srep43937
+- idtype: pmcid
+  value: PMC5343432
+authors:
+- authtype: Author
+  name: Baumgarten TJ
+- authtype: Author
+  name: Königs S
+- authtype: Author
+  name: Schnitzler A
+- authtype: Author
+  name: Lange J
+epubdate: 2017 Mar 9
+fulljournalname: Scientific Reports
+issue: ''
+pages: '43937'
+pmclivedate: 2017/03/14
+printpubdate: ''
+pubdate: 2017 Mar 9
+sortdate: 2017/03/09 00:00
+source: Sci Rep
+title: Subliminal stimuli modulate somatosensory perception rhythmically and provide
+  evidence for discrete perception
+uid: '5343432'
+volume: '7'

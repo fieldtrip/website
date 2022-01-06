@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '28422113'
+- idtype: doi
+  value: 10.1038/srep46421
+- idtype: pmcid
+  value: PMC5396066
+authors:
+- authtype: Author
+  name: Schartner MM
+- authtype: Author
+  name: Carhart-Harris RL
+- authtype: Author
+  name: Barrett AB
+- authtype: Author
+  name: Seth AK
+- authtype: Author
+  name: Muthukumaraswamy SD
+epubdate: 2017 Apr 19
+fulljournalname: Scientific Reports
+issue: ''
+pages: '46421'
+pmclivedate: 2017/04/21
+printpubdate: ''
+pubdate: 2017 Apr 19
+sortdate: 2017/04/19 00:00
+source: Sci Rep
+title: Increased spontaneous MEG signal diversity for psychoactive doses of ketamine,
+  LSD and psilocybin
+uid: '5396066'
+volume: '7'

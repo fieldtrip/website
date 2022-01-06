@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '33755019'
+- idtype: doi
+  value: 10.7554/eLife.61679
+- idtype: pmcid
+  value: PMC8096430
+authors:
+- authtype: Author
+  name: Schaum M
+- authtype: Author
+  name: Pinzuti E
+- authtype: Author
+  name: Sebastian A
+- authtype: Author
+  name: Lieb K
+- authtype: Author
+  name: Fries P
+- authtype: Author
+  name: Mobascher A
+- authtype: Author
+  name: Jung P
+- authtype: Author
+  name: Wibral M
+- authtype: Author
+  name: Tüscher O
+epubdate: 2021 Mar 23
+fulljournalname: eLife
+issue: ''
+pages: e61679
+pmclivedate: 2021/05/06
+printpubdate: ''
+pubdate: 2021 Mar 23
+sortdate: 2021/03/23 00:00
+source: eLife
+title: Right inferior frontal gyrus implements motor inhibitory control via beta-band
+  oscillations in humans
+uid: '8096430'
+volume: '10'

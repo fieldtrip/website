@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '30109129'
+- idtype: doi
+  value: 10.1093/nc/niw010
+- idtype: pmcid
+  value: PMC6084553
+authors:
+- authtype: Author
+  name: Rohaut B
+- authtype: Author
+  name: Alario FX
+- authtype: Author
+  name: Meadow J
+- authtype: Author
+  name: Cohen L
+- authtype: Author
+  name: Naccache L
+epubdate: 2016 Aug 6
+fulljournalname: Neuroscience of Consciousness
+issue: '1'
+pages: niw010
+pmclivedate: 2018/08/14
+printpubdate: ''
+pubdate: 2016 Aug 6
+sortdate: 2016/08/06 00:00
+source: Neurosci Conscious
+title: Unconscious semantic processing of polysemous words is not automatic
+uid: '6084553'
+volume: '2016'

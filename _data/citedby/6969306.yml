@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '30336447'
+- idtype: doi
+  value: 10.1016/j.dcn.2018.09.001
+- idtype: pmcid
+  value: PMC6969306
+authors:
+- authtype: Author
+  name: Sato J
+- authtype: Author
+  name: Mossad SI
+- authtype: Author
+  name: Wong SM
+- authtype: Author
+  name: Hunt BA
+- authtype: Author
+  name: Dunkley BT
+- authtype: Author
+  name: Smith ML
+- authtype: Author
+  name: Urbain C
+- authtype: Author
+  name: Taylor MJ
+epubdate: 2018 Sep 29
+fulljournalname: Developmental Cognitive Neuroscience
+issue: ''
+pages: 114-123
+pmclivedate: 2020/01/21
+printpubdate: ''
+pubdate: 2018 Sep 29
+sortdate: 2018/09/29 00:00
+source: Dev Cogn Neurosci
+title: 'Alpha keeps it together: Alpha oscillatory synchrony underlies working memory
+  maintenance in young children'
+uid: '6969306'
+volume: '34'

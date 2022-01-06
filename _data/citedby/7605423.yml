@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '33023923'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0555-20.2020
+- idtype: pmcid
+  value: PMC7605423
+authors:
+- authtype: Author
+  name: Mégevand P
+- authtype: Author
+  name: Mercier MR
+- authtype: Author
+  name: Groppe DM
+- authtype: Author
+  name: Zion Golumbic E
+- authtype: Author
+  name: Mesgarani N
+- authtype: Author
+  name: Beauchamp MS
+- authtype: Author
+  name: Schroeder CE
+- authtype: Author
+  name: Mehta AD
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '44'
+pages: 8530-8542
+pmclivedate: 2021/04/28
+printpubdate: 2020 Oct 28
+pubdate: 2020 Oct 28
+sortdate: 2020/10/28 00:00
+source: J Neurosci
+title: Crossmodal Phase Reset and Evoked Responses Provide Complementary Mechanisms
+  for the Influence of Visual Speech in Auditory Cortex
+uid: '7605423'
+volume: '40'

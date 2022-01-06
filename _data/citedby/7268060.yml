@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '31778265'
+- idtype: doi
+  value: 10.1002/hbm.24876
+- idtype: pmcid
+  value: PMC7268060
+authors:
+- authtype: Author
+  name: Ray AM
+- authtype: Author
+  name: Figueiredo TD
+- authtype: Author
+  name: López‐Larraz E
+- authtype: Author
+  name: Birbaumer N
+- authtype: Author
+  name: Ramos‐Murguialday A
+epubdate: 2019 Nov 28
+fulljournalname: Human Brain Mapping
+issue: '5'
+pages: 1296-1308
+pmclivedate: 2020/06/12
+printpubdate: ''
+pubdate: 2019 Nov 28
+sortdate: 2019/11/28 00:00
+source: Hum Brain Mapp
+title: Brain oscillatory activity as a biomarker of motor recovery in chronic stroke
+uid: '7268060'
+volume: '41'

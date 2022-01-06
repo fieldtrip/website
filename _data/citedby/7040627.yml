@@ -1,0 +1,34 @@
+articleids:
+- idtype: pmid
+  value: '32132905'
+- idtype: doi
+  value: 10.3389/fnint.2020.00005
+- idtype: pmcid
+  value: PMC7040627
+authors:
+- authtype: Author
+  name: Bhattacharjee A
+- authtype: Author
+  name: Kajal DS
+- authtype: Author
+  name: Patrono A
+- authtype: Author
+  name: Li Hegner Y
+- authtype: Author
+  name: Zampini M
+- authtype: Author
+  name: Schwarz C
+- authtype: Author
+  name: Braun C
+epubdate: 2020 Feb 18
+fulljournalname: Frontiers in Integrative Neuroscience
+issue: ''
+pages: '5'
+pmclivedate: 2020/03/04
+printpubdate: ''
+pubdate: 2020 Feb 18
+sortdate: 2020/02/18 00:00
+source: Front Integr Neurosci
+title: A Tactile Virtual Reality for the Study of Active Somatosensation
+uid: '7040627'
+volume: '14'

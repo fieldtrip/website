@@ -1,0 +1,49 @@
+articleids:
+- idtype: pmid
+  value: '33340975'
+- idtype: doi
+  value: 10.1016/j.nicl.2020.102524
+- idtype: pmcid
+  value: PMC7750164
+authors:
+- authtype: Author
+  name: Gascoyne LE
+- authtype: Author
+  name: Brookes MJ
+- authtype: Author
+  name: Rathnaiah M
+- authtype: Author
+  name: Katshu MZ
+- authtype: Author
+  name: Koelewijn L
+- authtype: Author
+  name: Williams G
+- authtype: Author
+  name: Kumar J
+- authtype: Author
+  name: Walters JT
+- authtype: Author
+  name: Seedat ZA
+- authtype: Author
+  name: Palaniyappan L
+- authtype: Author
+  name: Deakin JF
+- authtype: Author
+  name: Singh KD
+- authtype: Author
+  name: Liddle PF
+- authtype: Author
+  name: Morris PG
+epubdate: 2020 Dec 3
+fulljournalname: 'NeuroImage : Clinical'
+issue: ''
+pages: '102524'
+pmclivedate: 2020/12/23
+printpubdate: ''
+pubdate: 2020 Dec 3
+sortdate: 2020/12/03 00:00
+source: Neuroimage Clin
+title: Motor-related oscillatory activity in schizophrenia according to phase of illness
+  and clinical symptom severity
+uid: '7750164'
+volume: '29'

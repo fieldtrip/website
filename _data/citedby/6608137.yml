@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '24806688'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.4813-13.2014
+- idtype: pmcid
+  value: PMC6608137
+authors:
+- authtype: Author
+  name: Frey JN
+- authtype: Author
+  name: Mainy N
+- authtype: Author
+  name: Lachaux JP
+- authtype: Author
+  name: Müller N
+- authtype: Author
+  name: Bertrand O
+- authtype: Author
+  name: Weisz N
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '19'
+pages: 6634-6639
+pmclivedate: 2019/07/10
+printpubdate: 2014 May 7
+pubdate: 2014 May 7
+sortdate: 2014/05/07 00:00
+source: J Neurosci
+title: Selective Modulation of Auditory Cortical Alpha Activity in an Audiovisual
+  Spatial Attention Task
+uid: '6608137'
+volume: '34'

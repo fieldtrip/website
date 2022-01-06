@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '33766782'
+- idtype: doi
+  value: 10.1016/j.nlm.2021.107424
+- idtype: pmcid
+  value: PMC8169598
+- idtype: MID
+  value: NIHMS1692755
+authors:
+- authtype: Author
+  name: Poskanzer C
+- authtype: Author
+  name: Denis D
+- authtype: Author
+  name: Herrick A
+- authtype: Author
+  name: Stickgold R
+epubdate: 2021 Mar 22
+fulljournalname: Neurobiology of learning and memory
+issue: ''
+pages: '107424'
+pmclivedate: ''
+printpubdate: 2021 May
+pubdate: 2021 Mar 22
+sortdate: 2021/03/22 00:00
+source: Neurobiol Learn Mem
+title: Using EEG Microstates to Examine Post-Encoding Quiet Rest and Subsequent Word-Pair
+  Memory
+uid: '8169598'
+volume: '181'

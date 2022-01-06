@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '24705497'
+- idtype: doi
+  value: 10.1371/journal.pone.0093728
+- idtype: pmcid
+  value: PMC3976316
+authors:
+- authtype: Author
+  name: Missana M
+- authtype: Author
+  name: Grigutsch M
+- authtype: Author
+  name: Grossmann T
+epubdate: 2014 Apr 4
+fulljournalname: PLoS ONE
+issue: '4'
+pages: e93728
+pmclivedate: 2014/04/08
+printpubdate: ''
+pubdate: 2014 Apr 4
+sortdate: 2014/04/04 00:00
+source: PLoS One
+title: Developmental and Individual Differences in the Neural Processing of Dynamic
+  Expressions of Pain and Anger
+uid: '3976316'
+volume: '9'

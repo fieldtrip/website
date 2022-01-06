@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '24820263'
+- idtype: doi
+  value: 10.3758/s13415-014-0281-z
+- idtype: pmcid
+  value: PMC4412026
+- idtype: MID
+  value: NIHMS595188
+authors:
+- authtype: Author
+  name: van den Berg B
+- authtype: Author
+  name: Krebs RM
+- authtype: Author
+  name: Lorist MM
+- authtype: Author
+  name: Woldorff MG
+epubdate: ''
+fulljournalname: Cognitive, affective & behavioral neuroscience
+issue: '2'
+pages: 561-577
+pmclivedate: 2015/06/01
+printpubdate: 2014 Jun
+pubdate: 2014 Jun
+sortdate: 2014/06/01 00:00
+source: Cogn Affect Behav Neurosci
+title: Utilization of reward-prospect enhances preparatory attention and reduces stimulus
+  conflict
+uid: '4412026'
+volume: '14'

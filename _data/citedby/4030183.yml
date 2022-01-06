@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '24860546'
+- idtype: doi
+  value: 10.3389/fneur.2014.00074
+- idtype: pmcid
+  value: PMC4030183
+authors:
+- authtype: Author
+  name: Takano K
+- authtype: Author
+  name: Ora H
+- authtype: Author
+  name: Sekihara K
+- authtype: Author
+  name: Iwaki S
+- authtype: Author
+  name: Kansaku K
+epubdate: 2014 May 15
+fulljournalname: Frontiers in Neurology
+issue: ''
+pages: '74'
+pmclivedate: 2014/05/23
+printpubdate: ''
+pubdate: 2014 May 15
+sortdate: 2014/05/15 00:00
+source: Front Neurol
+title: Coherent Activity in Bilateral Parieto-Occipital Cortices during P300-BCI Operation
+uid: '4030183'
+volume: '5'

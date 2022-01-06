@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '33343335'
+- idtype: doi
+  value: 10.3389/fnagi.2020.596551
+- idtype: pmcid
+  value: PMC7746817
+authors:
+- authtype: Author
+  name: Farahani ED
+- authtype: Author
+  name: Wouters J
+- authtype: Author
+  name: van Wieringen A
+epubdate: 2020 Dec 4
+fulljournalname: Frontiers in Aging Neuroscience
+issue: ''
+pages: '596551'
+pmclivedate: 2020/12/19
+printpubdate: ''
+pubdate: 2020 Dec 4
+sortdate: 2020/12/04 00:00
+source: Front Aging Neurosci
+title: Neural Generators Underlying Temporal Envelope Processing Show Altered Responses
+  and Hemispheric Asymmetry Across Age
+uid: '7746817'
+volume: '12'

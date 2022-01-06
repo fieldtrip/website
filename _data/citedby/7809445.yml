@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '33446834'
+- idtype: doi
+  value: 10.1038/s41598-020-80807-y
+- idtype: pmcid
+  value: PMC7809445
+authors:
+- authtype: Author
+  name: Kanayama N
+- authtype: Author
+  name: Hara M
+- authtype: Author
+  name: Kimura K
+epubdate: 2021 Jan 14
+fulljournalname: Scientific Reports
+issue: ''
+pages: '1436'
+pmclivedate: 2021/01/21
+printpubdate: ''
+pubdate: 2021 Jan 14
+sortdate: 2021/01/14 00:00
+source: Sci Rep
+title: Virtual reality alters cortical oscillations related to visuo-tactile integration
+  during rubber hand illusion
+uid: '7809445'
+volume: '11'

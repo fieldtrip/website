@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '28973563'
+- idtype: doi
+  value: 10.1167/17.11.9
+- idtype: pmcid
+  value: PMC6894406
+authors:
+- authtype: Author
+  name: Nunez V
+- authtype: Author
+  name: Shapley RM
+- authtype: Author
+  name: Gordon J
+epubdate: 2017 Sep 28
+fulljournalname: Journal of Vision
+issue: '11'
+pages: '9'
+pmclivedate: 2019/12/09
+printpubdate: ''
+pubdate: 2017 Sep 28
+sortdate: 2017/09/28 00:00
+source: J Vis
+title: Nonlinear dynamics of cortical responses to color in the human cVEP
+uid: '6894406'
+volume: '17'

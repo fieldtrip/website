@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '34483827'
+- idtype: doi
+  value: 10.3389/fnins.2021.706785
+- idtype: pmcid
+  value: PMC8414551
+authors:
+- authtype: Author
+  name: Cao F
+- authtype: Author
+  name: An N
+- authtype: Author
+  name: Xu W
+- authtype: Author
+  name: Wang W
+- authtype: Author
+  name: Yang Y
+- authtype: Author
+  name: Xiang M
+- authtype: Author
+  name: Gao Y
+- authtype: Author
+  name: Ning X
+epubdate: 2021 Aug 13
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '706785'
+pmclivedate: 2021/09/04
+printpubdate: ''
+pubdate: 2021 Aug 13
+sortdate: 2021/08/13 00:00
+source: Front Neurosci
+title: Co-registration Comparison of On-Scalp Magnetoencephalography and Magnetic
+  Resonance Imaging
+uid: '8414551'
+volume: '15'

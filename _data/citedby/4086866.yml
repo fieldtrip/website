@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '24084040'
+- idtype: doi
+  value: 10.1177/0956797613492426
+- idtype: pmcid
+  value: PMC4086866
+- idtype: MID
+  value: NIHMS594034
+authors:
+- authtype: Author
+  name: Dube C
+- authtype: Author
+  name: Payne L
+- authtype: Author
+  name: Sekuler R
+- authtype: Author
+  name: Rotello CM
+epubdate: 2013 Oct 1
+fulljournalname: Psychological science
+issue: '12'
+pages: 2398-2408
+pmclivedate: 2014/12/01
+printpubdate: 2013 Dec
+pubdate: 2013 Oct 1
+sortdate: 2013/10/01 00:00
+source: Psychol Sci
+title: 'Paying attention to attention in recognition memory: Insights from models
+  and electrophysiology'
+uid: '4086866'
+volume: '24'

@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '33863863'
+- idtype: doi
+  value: 10.1097/j.pain.0000000000002281
+- idtype: pmcid
+  value: PMC8600543
+authors:
+- authtype: Author
+  name: May ES
+- authtype: Author
+  name: Gil Ávila C
+- authtype: Author
+  name: Ta Dinh S
+- authtype: Author
+  name: Heitmann H
+- authtype: Author
+  name: Hohn VD
+- authtype: Author
+  name: Nickel MM
+- authtype: Author
+  name: Tiemann L
+- authtype: Author
+  name: Tölle TR
+- authtype: Author
+  name: Ploner M
+epubdate: 2021 Apr 8
+fulljournalname: Pain
+issue: '12'
+pages: 2894-2908
+pmclivedate: 2021/11/19
+printpubdate: 2021 Dec
+pubdate: 2021 Apr 8
+sortdate: 2021/04/08 00:00
+source: Pain
+title: Dynamics of brain function in patients with chronic pain assessed by microstate
+  analysis of resting-state electroencephalography
+uid: '8600543'
+volume: '162'

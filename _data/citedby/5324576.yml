@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '27860095'
+- idtype: doi
+  value: 10.1002/hbm.23471
+- idtype: pmcid
+  value: PMC5324576
+authors:
+- authtype: Author
+  name: Ince RA
+- authtype: Author
+  name: Giordano BL
+- authtype: Author
+  name: Kayser C
+- authtype: Author
+  name: Rousselet GA
+- authtype: Author
+  name: Gross J
+- authtype: Author
+  name: Schyns PG
+epubdate: 2016 Nov 17
+fulljournalname: Human Brain Mapping
+issue: '3'
+pages: 1541-1573
+pmclivedate: 2017/03/08
+printpubdate: ''
+pubdate: 2016 Nov 17
+sortdate: 2016/11/17 00:00
+source: Hum Brain Mapp
+title: A statistical framework for neuroimaging data analysis based on mutual information
+  estimated via a gaussian copula
+uid: '5324576'
+volume: '38'

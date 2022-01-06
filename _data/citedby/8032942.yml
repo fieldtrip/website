@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '33841081'
+- idtype: doi
+  value: 10.3389/fnins.2021.636060
+- idtype: pmcid
+  value: PMC8032942
+authors:
+- authtype: Author
+  name: Alickovic E
+- authtype: Author
+  name: Ng EH
+- authtype: Author
+  name: Fiedler L
+- authtype: Author
+  name: Santurette S
+- authtype: Author
+  name: Innes-Brown H
+- authtype: Author
+  name: Graversen C
+epubdate: 2021 Mar 26
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '636060'
+pmclivedate: 2021/04/10
+printpubdate: ''
+pubdate: 2021 Mar 26
+sortdate: 2021/03/26 00:00
+source: Front Neurosci
+title: Effects of Hearing Aid Noise Reduction on Early and Late Cortical Representations
+  of Competing Talkers in Noise
+uid: '8032942'
+volume: '15'

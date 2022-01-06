@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '25414652'
+- idtype: doi
+  value: 10.3389/fnhum.2014.00788
+- idtype: pmcid
+  value: PMC4220133
+authors:
+- authtype: Author
+  name: Stone DB
+- authtype: Author
+  name: Coffman BA
+- authtype: Author
+  name: Bustillo JR
+- authtype: Author
+  name: Aine CJ
+- authtype: Author
+  name: Stephen JM
+epubdate: 2014 Nov 4
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '788'
+pmclivedate: 2014/11/20
+printpubdate: ''
+pubdate: 2014 Nov 4
+sortdate: 2014/11/04 00:00
+source: Front Hum Neurosci
+title: Multisensory stimuli elicit altered oscillatory brain responses at gamma frequencies
+  in patients with schizophrenia
+uid: '4220133'
+volume: '8'

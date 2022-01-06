@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '27173759'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2016.05.017
+- idtype: pmcid
+  value: PMC4914451
+- idtype: MID
+  value: NIHMS788912
+authors:
+- authtype: Author
+  name: Hwang K
+- authtype: Author
+  name: Ghuman AS
+- authtype: Author
+  name: Manoach DS
+- authtype: Author
+  name: Jones SR
+- authtype: Author
+  name: Luna B
+epubdate: 2016 May 10
+fulljournalname: NeuroImage
+issue: ''
+pages: 139-148
+pmclivedate: 2017/08/01
+printpubdate: 2016 Aug 1
+pubdate: 2016 May 10
+sortdate: 2016/05/10 00:00
+source: Neuroimage
+title: 'Frontal Preparatory Neural Oscillations Associated with Cognitive Control:
+  A Developmental Study Comparing Young Adults and Adolescents'
+uid: '4914451'
+volume: '136'

@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '24453342'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.3187-13.2014
+- idtype: pmcid
+  value: PMC3898303
+authors:
+- authtype: Author
+  name: Wutz A
+- authtype: Author
+  name: Weisz N
+- authtype: Author
+  name: Braun C
+- authtype: Author
+  name: Melcher D
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '4'
+pages: 1554-1565
+pmclivedate: 2014/02/03
+printpubdate: 2014 Jan 22
+pubdate: 2014 Jan 22
+sortdate: 2014/01/22 00:00
+source: J Neurosci
+title: 'Temporal Windows in Visual Processing: “Prestimulus Brain State” and “Poststimulus
+  Phase Reset” Segregate Visual Transients on Different Temporal Scales'
+uid: '3898303'
+volume: '34'

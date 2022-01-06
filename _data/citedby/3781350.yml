@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '24068990'
+- idtype: doi
+  value: 10.3389/fnhum.2013.00582
+- idtype: pmcid
+  value: PMC3781350
+authors:
+- authtype: Author
+  name: Dor-Ziderman Y
+- authtype: Author
+  name: Berkovich-Ohana A
+- authtype: Author
+  name: Glicksohn J
+- authtype: Author
+  name: Goldstein A
+epubdate: 2013 Sep 24
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '582'
+pmclivedate: 2013/09/25
+printpubdate: ''
+pubdate: 2013 Sep 24
+sortdate: 2013/09/24 00:00
+source: Front Hum Neurosci
+title: 'Mindfulness-induced selflessness: a MEG neurophenomenological study'
+uid: '3781350'
+volume: '7'

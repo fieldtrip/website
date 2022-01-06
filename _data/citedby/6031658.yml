@@ -1,0 +1,24 @@
+articleids:
+- idtype: pmid
+  value: '29973645'
+- idtype: doi
+  value: 10.1038/s41598-018-28295-z
+- idtype: pmcid
+  value: PMC6031658
+authors:
+- authtype: Author
+  name: Halme HL
+- authtype: Author
+  name: Parkkonen L
+epubdate: 2018 Jul 4
+fulljournalname: Scientific Reports
+issue: ''
+pages: '10087'
+pmclivedate: 2018/07/12
+printpubdate: ''
+pubdate: 2018 Jul 4
+sortdate: 2018/07/04 00:00
+source: Sci Rep
+title: Across-subject offline decoding of motor imagery from MEG and EEG
+uid: '6031658'
+volume: '8'

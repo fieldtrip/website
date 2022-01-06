@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '25429152'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.3474-13.2014
+- idtype: pmcid
+  value: PMC4244475
+authors:
+- authtype: Author
+  name: Bauer M
+- authtype: Author
+  name: Stenner MP
+- authtype: Author
+  name: Friston KJ
+- authtype: Author
+  name: Dolan RJ
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '48'
+pages: 16117-16125
+pmclivedate: 2015/05/26
+printpubdate: 2014 Nov 26
+pubdate: 2014 Nov 26
+sortdate: 2014/11/26 00:00
+source: J Neurosci
+title: Attentional Modulation of Alpha/Beta and Gamma Oscillations Reflect Functionally
+  Distinct Processes
+uid: '4244475'
+volume: '34'

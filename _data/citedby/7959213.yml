@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '33747547'
+- idtype: doi
+  value: 10.1093/nc/niab004
+- idtype: pmcid
+  value: PMC7959213
+authors:
+- authtype: Author
+  name: Rebouillat B
+- authtype: Author
+  name: Leonetti JM
+- authtype: Author
+  name: Kouider S
+epubdate: 2021 Mar 10
+fulljournalname: Neuroscience of Consciousness
+issue: '1'
+pages: niab004
+pmclivedate: 2021/03/19
+printpubdate: ''
+pubdate: 2021 Mar 10
+sortdate: 2021/03/10 00:00
+source: Neurosci Conscious
+title: People confabulate with high confidence when their decisions are supported
+  by weak internal variables
+uid: '7959213'
+volume: '2021'

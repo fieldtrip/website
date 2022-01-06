@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '32258834'
+- idtype: doi
+  value: 10.1016/j.cnp.2020.02.003
+- idtype: pmcid
+  value: PMC7118275
+authors:
+- authtype: Author
+  name: Wilenius J
+- authtype: Author
+  name: Lauronen L
+- authtype: Author
+  name: Kirveskari E
+- authtype: Author
+  name: Gaily E
+- authtype: Author
+  name: Metsähonkala L
+- authtype: Author
+  name: Paetau R
+epubdate: 2020 Mar 10
+fulljournalname: Clinical Neurophysiology Practice
+issue: ''
+pages: 64-72
+pmclivedate: 2020/04/06
+printpubdate: ''
+pubdate: 2020 Mar 10
+sortdate: 2020/03/10 00:00
+source: Clin Neurophysiol Pract
+title: Interictal magnetoencephalography in parietal lobe epilepsy – Comparison of
+  equivalent current dipole and beamformer (SAMepi) analysis
+uid: '7118275'
+volume: '5'

@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '27927961'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.2586-16.2016
+- idtype: pmcid
+  value: PMC5148230
+authors:
+- authtype: Author
+  name: Zelano C
+- authtype: Author
+  name: Jiang H
+- authtype: Author
+  name: Zhou G
+- authtype: Author
+  name: Arora N
+- authtype: Author
+  name: Schuele S
+- authtype: Author
+  name: Rosenow J
+- authtype: Author
+  name: Gottfried JA
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '49'
+pages: 12448-12467
+pmclivedate: 2017/06/07
+printpubdate: 2016 Dec 7
+pubdate: 2016 Dec 7
+sortdate: 2016/12/07 00:00
+source: J Neurosci
+title: Nasal Respiration Entrains Human Limbic Oscillations and Modulates Cognitive
+  Function
+uid: '5148230'
+volume: '36'

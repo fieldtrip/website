@@ -1,0 +1,34 @@
+articleids:
+- idtype: pmid
+  value: '31998118'
+- idtype: doi
+  value: 10.3389/fnagi.2019.00371
+- idtype: pmcid
+  value: PMC6967734
+authors:
+- authtype: Author
+  name: Li D
+- authtype: Author
+  name: Puglia MP
+- authtype: Author
+  name: Lapointe AP
+- authtype: Author
+  name: Ip KI
+- authtype: Author
+  name: Zierau M
+- authtype: Author
+  name: McKinney A
+- authtype: Author
+  name: Vlisides PE
+epubdate: 2020 Jan 10
+fulljournalname: Frontiers in Aging Neuroscience
+issue: ''
+pages: '371'
+pmclivedate: 2020/01/29
+printpubdate: ''
+pubdate: 2020 Jan 10
+sortdate: 2020/01/10 00:00
+source: Front Aging Neurosci
+title: Age-Related Changes in Cortical Connectivity During Surgical Anesthesia
+uid: '6967734'
+volume: '11'

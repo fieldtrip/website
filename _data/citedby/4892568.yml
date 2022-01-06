@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '27258089'
+- idtype: doi
+  value: 10.1371/journal.pone.0156829
+- idtype: pmcid
+  value: PMC4892568
+authors:
+- authtype: Author
+  name: Baumgarten TJ
+- authtype: Author
+  name: Oeltzschner G
+- authtype: Author
+  name: Hoogenboom N
+- authtype: Author
+  name: Wittsack HJ
+- authtype: Author
+  name: Schnitzler A
+- authtype: Author
+  name: Lange J
+epubdate: 2016 Jun 3
+fulljournalname: PLoS ONE
+issue: '6'
+pages: e0156829
+pmclivedate: 2016/06/16
+printpubdate: ''
+pubdate: 2016 Jun 3
+sortdate: 2016/06/03 00:00
+source: PLoS One
+title: Beta Peak Frequencies at Rest Correlate with Endogenous GABA+/Cr Concentrations
+  in Sensorimotor Cortex Areas
+uid: '4892568'
+volume: '11'

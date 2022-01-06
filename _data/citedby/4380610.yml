@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '25791247'
+- idtype: doi
+  value: 10.1016/j.bandl.2015.02.003
+- idtype: pmcid
+  value: PMC4380610
+- idtype: MID
+  value: NIHMS668354
+authors:
+- authtype: Author
+  name: Lago S
+- authtype: Author
+  name: Scharinger M
+- authtype: Author
+  name: Kronrod Y
+- authtype: Author
+  name: Idsardi WJ
+epubdate: 2015 Mar 16
+fulljournalname: Brain and language
+issue: ''
+pages: 52-58
+pmclivedate: 2016/04/01
+printpubdate: 2015 Apr
+pubdate: 2015 Mar 16
+sortdate: 2015/03/16 00:00
+source: Brain Lang
+title: Categorical effects in fricative perception are reflected in cortical source
+  information
+uid: '4380610'
+volume: '143'

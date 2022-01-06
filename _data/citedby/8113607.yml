@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '33976118'
+- idtype: doi
+  value: 10.1038/s41467-021-22632-z
+- idtype: pmcid
+  value: PMC8113607
+authors:
+- authtype: Author
+  name: Baumgarten TJ
+- authtype: Author
+  name: Maniscalco B
+- authtype: Author
+  name: Lee JL
+- authtype: Author
+  name: Flounders MW
+- authtype: Author
+  name: Abry P
+- authtype: Author
+  name: He BJ
+epubdate: 2021 May 11
+fulljournalname: Nature Communications
+issue: ''
+pages: '2643'
+pmclivedate: 2021/05/14
+printpubdate: ''
+pubdate: 2021 May 11
+sortdate: 2021/05/11 00:00
+source: Nat Commun
+title: Neural integration underlying naturalistic prediction flexibly adapts to varying
+  sensory input rate
+uid: '8113607'
+volume: '12'

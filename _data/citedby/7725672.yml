@@ -1,0 +1,24 @@
+articleids:
+- idtype: pmid
+  value: '33296654'
+- idtype: doi
+  value: 10.1016/j.celrep.2020.108471
+- idtype: pmcid
+  value: PMC7725672
+authors:
+- authtype: Author
+  name: Deco G
+- authtype: Author
+  name: Kringelbach ML
+epubdate: 2020 Dec 8
+fulljournalname: Cell Reports
+issue: '10'
+pages: '108471'
+pmclivedate: 2020/12/13
+printpubdate: ''
+pubdate: 2020 Dec 8
+sortdate: 2020/12/08 00:00
+source: Cell Rep
+title: Turbulent-like Dynamics in the Human Brain
+uid: '7725672'
+volume: '33'

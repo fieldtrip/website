@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '29414458'
+- idtype: doi
+  value: 10.1016/j.cortex.2017.12.018
+- idtype: pmcid
+  value: PMC5869124
+- idtype: MID
+  value: NIHMS931506
+authors:
+- authtype: Author
+  name: Rommers J
+- authtype: Author
+  name: Federmeier KD
+epubdate: 2018 Jan 2
+fulljournalname: Cortex; a journal devoted to the study of the nervous system and
+  behavior
+issue: ''
+pages: 16-30
+pmclivedate: 2019/04/01
+printpubdate: 2018 Apr
+pubdate: 2018 Jan 2
+sortdate: 2018/01/02 00:00
+source: Cortex
+title: 'Predictability’s aftermath: Downstream consequences of word predictability
+  as revealed by repetition effects'
+uid: '5869124'
+volume: '101'

@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '33568980'
+- idtype: doi
+  value: 10.3389/fninf.2020.589228
+- idtype: pmcid
+  value: PMC7868391
+authors:
+- authtype: Author
+  name: Jiricek S
+- authtype: Author
+  name: Koudelka V
+- authtype: Author
+  name: Lacik J
+- authtype: Author
+  name: Vejmola C
+- authtype: Author
+  name: Kuratko D
+- authtype: Author
+  name: Wójcik DK
+- authtype: Author
+  name: Raida Z
+- authtype: Author
+  name: Hlinka J
+- authtype: Author
+  name: Palenicek T
+epubdate: 2021 Jan 25
+fulljournalname: Frontiers in Neuroinformatics
+issue: ''
+pages: '589228'
+pmclivedate: 2021/02/09
+printpubdate: ''
+pubdate: 2021 Jan 25
+sortdate: 2021/01/25 00:00
+source: Front Neuroinform
+title: 'Electrical Source Imaging in Freely Moving Rats: Evaluation of a 12-Electrode
+  Cortical Electroencephalography System'
+uid: '7868391'
+volume: '14'

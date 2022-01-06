@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '23804105'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.5629-12.2013
+- idtype: pmcid
+  value: PMC6618494
+authors:
+- authtype: Author
+  name: van Ede F
+- authtype: Author
+  name: Maris E
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '26'
+pages: 10849-10857
+pmclivedate: 2019/07/16
+printpubdate: 2013 Jun 26
+pubdate: 2013 Jun 26
+sortdate: 2013/06/26 00:00
+source: J Neurosci
+title: Somatosensory Demands Modulate Muscular Beta Oscillations, Independent of Motor
+  Demands
+uid: '6618494'
+volume: '33'

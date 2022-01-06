@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '34525129'
+- idtype: doi
+  value: 10.1371/journal.pone.0257380
+- idtype: pmcid
+  value: PMC8443036
+authors:
+- authtype: Author
+  name: Franz M
+- authtype: Author
+  name: Schmidt B
+- authtype: Author
+  name: Hecht H
+- authtype: Author
+  name: Naumann E
+- authtype: Author
+  name: Miltner WH
+epubdate: 2021 Sep 15
+fulljournalname: PLoS ONE
+issue: '9'
+pages: e0257380
+pmclivedate: 2021/09/16
+printpubdate: ''
+pubdate: 2021 Sep 15
+sortdate: 2021/09/15 00:00
+source: PLoS One
+title: 'Suggested visual blockade during hypnosis: Top-down modulation of stimulus
+  processing in a visual oddball task'
+uid: '8443036'
+volume: '16'

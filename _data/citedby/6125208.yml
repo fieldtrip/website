@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '29972146'
+- idtype: doi
+  value: 10.1088/1741-2552/aad0fb
+- idtype: pmcid
+  value: PMC6125208
+- idtype: MID
+  value: NIHMS1503139
+authors:
+- authtype: Author
+  name: Malekmohammadi M
+- authtype: Author
+  name: Shahriari Y
+- authtype: Author
+  name: AuYong N
+- authtype: Author
+  name: O’Keeffe A
+- authtype: Author
+  name: Bordelon Y
+- authtype: Author
+  name: Hu X
+- authtype: Author
+  name: Pouratian N
+epubdate: 2018 Jul 4
+fulljournalname: Journal of neural engineering
+issue: '5'
+pages: '056016'
+pmclivedate: 2019/10/01
+printpubdate: 2018 Oct
+pubdate: 2018 Jul 4
+sortdate: 2018/07/04 00:00
+source: J Neural Eng
+title: Pallidal stimulation in Parkinson disease differentially modulates local and
+  network β activity
+uid: '6125208'
+volume: '15'

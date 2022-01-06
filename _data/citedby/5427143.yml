@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '28553215'
+- idtype: doi
+  value: 10.3389/fnhum.2017.00237
+- idtype: pmcid
+  value: PMC5427143
+authors:
+- authtype: Author
+  name: Dai Z
+- authtype: Author
+  name: de Souza J
+- authtype: Author
+  name: Lim J
+- authtype: Author
+  name: Ho PM
+- authtype: Author
+  name: Chen Y
+- authtype: Author
+  name: Li J
+- authtype: Author
+  name: Thakor N
+- authtype: Author
+  name: Bezerianos A
+- authtype: Author
+  name: Sun Y
+epubdate: 2017 May 12
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '237'
+pmclivedate: 2017/05/26
+printpubdate: ''
+pubdate: 2017 May 12
+sortdate: 2017/05/12 00:00
+source: Front Hum Neurosci
+title: EEG Cortical Connectivity Analysis of Working Memory Reveals Topological Reorganization
+  in Theta and Alpha Bands
+uid: '5427143'
+volume: '11'

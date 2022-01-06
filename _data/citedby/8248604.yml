@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '34197554'
+- idtype: doi
+  value: 10.1371/journal.pone.0254045
+- idtype: pmcid
+  value: PMC8248604
+authors:
+- authtype: Author
+  name: Del Popolo Cristaldi F
+- authtype: Author
+  name: Mento G
+- authtype: Author
+  name: Sarlo M
+- authtype: Author
+  name: Buodo G
+epubdate: 2021 Jul 1
+fulljournalname: PLoS ONE
+issue: '7'
+pages: e0254045
+pmclivedate: 2021/07/09
+printpubdate: ''
+pubdate: 2021 Jul 1
+sortdate: 2021/07/01 00:00
+source: PLoS One
+title: 'Dealing with uncertainty: A high-density EEG investigation on how intolerance
+  of uncertainty affects emotional predictions'
+uid: '8248604'
+volume: '16'

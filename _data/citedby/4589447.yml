@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '26151604'
+- idtype: doi
+  value: 10.1162/jocn_a_00847
+- idtype: pmcid
+  value: PMC4589447
+- idtype: MID
+  value: NIHMS699934
+authors:
+- authtype: Author
+  name: Sawaki R
+- authtype: Author
+  name: Luck SJ
+- authtype: Author
+  name: Raymond JE
+epubdate: 2015 Jul 7
+fulljournalname: Journal of cognitive neuroscience
+issue: '11'
+pages: 2229-2239
+pmclivedate: 2016/11/01
+printpubdate: 2015 Nov
+pubdate: 2015 Jul 7
+sortdate: 2015/07/07 00:00
+source: J Cogn Neurosci
+title: How attention changes in response to incentives
+uid: '4589447'
+volume: '27'

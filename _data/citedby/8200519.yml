@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '33951439'
+- idtype: doi
+  value: 10.1016/j.celrep.2021.109083
+- idtype: pmcid
+  value: PMC8200519
+- idtype: MID
+  value: NIHMS1700575
+authors:
+- authtype: Author
+  name: Lewis CM
+- authtype: Author
+  name: Ni J
+- authtype: Author
+  name: Wunderle T
+- authtype: Author
+  name: Jendritza P
+- authtype: Author
+  name: Lazar A
+- authtype: Author
+  name: Diester I
+- authtype: Author
+  name: Fries P
+epubdate: ''
+fulljournalname: Cell reports
+issue: '5'
+pages: '109083'
+pmclivedate: 2021/06/14
+printpubdate: 2021 May 4
+pubdate: 2021 May 4
+sortdate: 2021/05/04 00:00
+source: Cell Rep
+title: Cortical gamma-band resonance preferentially transmits coherent input
+uid: '8200519'
+volume: '35'

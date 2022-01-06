@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '30128283'
+- idtype: doi
+  value: 10.1016/j.nicl.2018.08.009
+- idtype: pmcid
+  value: PMC6095950
+authors:
+- authtype: Author
+  name: Meissner SN
+- authtype: Author
+  name: Krause V
+- authtype: Author
+  name: Südmeyer M
+- authtype: Author
+  name: Hartmann CJ
+- authtype: Author
+  name: Pollok B
+epubdate: 2018 Aug 10
+fulljournalname: 'NeuroImage : Clinical'
+issue: ''
+pages: 448-457
+pmclivedate: 2018/08/20
+printpubdate: ''
+pubdate: 2018 Aug 10
+sortdate: 2018/08/10 00:00
+source: Neuroimage Clin
+title: 'The significance of brain oscillations in motor sequence learning: Insights
+  from Parkinson''s disease'
+uid: '6095950'
+volume: '20'

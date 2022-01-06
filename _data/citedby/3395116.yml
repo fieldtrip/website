@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '22811699'
+- idtype: doi
+  value: 10.1155/2012/206972
+- idtype: pmcid
+  value: PMC3395116
+authors:
+- authtype: Author
+  name: Raimondo F
+- authtype: Author
+  name: Kamienkowski JE
+- authtype: Author
+  name: Sigman M
+- authtype: Author
+  name: Fernandez Slezak D
+epubdate: 2012 Jul 3
+fulljournalname: Computational Intelligence and Neuroscience
+issue: ''
+pages: '206972'
+pmclivedate: 2012/07/18
+printpubdate: '2012'
+pubdate: 2012 Jul 3
+sortdate: 2012/07/03 00:00
+source: Comput Intell Neurosci
+title: 'CUDAICA: GPU Optimization of Infomax-ICA EEG Analysis'
+uid: '3395116'
+volume: '2012'

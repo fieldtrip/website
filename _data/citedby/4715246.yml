@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '24904069'
+- idtype: doi
+  value: 10.1093/cercor/bhu127
+- idtype: pmcid
+  value: PMC4715246
+authors:
+- authtype: Author
+  name: Schepers IM
+- authtype: Author
+  name: Yoshor D
+- authtype: Author
+  name: Beauchamp MS
+epubdate: 2014 Jun 5
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '11'
+pages: 4103-4110
+pmclivedate: 2016/11/01
+printpubdate: 2015 Nov
+pubdate: 2014 Jun 5
+sortdate: 2014/06/05 00:00
+source: Cereb Cortex
+title: Electrocorticography Reveals Enhanced Visual Cortex Responses to Visual Speech
+uid: '4715246'
+volume: '25'

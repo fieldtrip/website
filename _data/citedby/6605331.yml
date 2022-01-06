@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '26041921'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.4527-14.2015
+- idtype: pmcid
+  value: PMC6605331
+authors:
+- authtype: Author
+  name: Mercier MR
+- authtype: Author
+  name: Molholm S
+- authtype: Author
+  name: Fiebelkorn IC
+- authtype: Author
+  name: Butler JS
+- authtype: Author
+  name: Schwartz TH
+- authtype: Author
+  name: Foxe JJ
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '22'
+pages: 8546-8557
+pmclivedate: 2019/07/08
+printpubdate: 2015 Jun 3
+pubdate: 2015 Jun 3
+sortdate: 2015/06/03 00:00
+source: J Neurosci
+title: 'Neuro-Oscillatory Phase Alignment Drives Speeded Multisensory Response Times:
+  An Electro-Corticographic Investigation'
+uid: '6605331'
+volume: '35'

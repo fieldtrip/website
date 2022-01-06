@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '32686711'
+- idtype: doi
+  value: 10.1038/s41598-020-68687-8
+- idtype: pmcid
+  value: PMC7371859
+authors:
+- authtype: Author
+  name: Zmeykina E
+- authtype: Author
+  name: Mittner M
+- authtype: Author
+  name: Paulus W
+- authtype: Author
+  name: Turi Z
+epubdate: 2020 Jul 20
+fulljournalname: Scientific Reports
+issue: ''
+pages: '11994'
+pmclivedate: 2020/07/22
+printpubdate: ''
+pubdate: 2020 Jul 20
+sortdate: 2020/07/20 00:00
+source: Sci Rep
+title: Weak rTMS-induced electric fields produce neural entrainment in humans
+uid: '7371859'
+volume: '10'

@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '33977267'
+- idtype: doi
+  value: 10.1093/braincomms/fcab067
+- idtype: pmcid
+  value: PMC8093924
+authors:
+- authtype: Author
+  name: Jurgiel J
+- authtype: Author
+  name: Miyakoshi M
+- authtype: Author
+  name: Dillon A
+- authtype: Author
+  name: Piacentini J
+- authtype: Author
+  name: Makeig S
+- authtype: Author
+  name: Loo SK
+epubdate: 2021 Apr 9
+fulljournalname: Brain Communications
+issue: '2'
+pages: fcab067
+pmclivedate: 2021/05/10
+printpubdate: ''
+pubdate: 2021 Apr 9
+sortdate: 2021/04/09 00:00
+source: Brain Commun
+title: 'Inhibitory control in children with tic disorder: aberrant fronto-parietal
+  network activity and connectivity'
+uid: '8093924'
+volume: '3'

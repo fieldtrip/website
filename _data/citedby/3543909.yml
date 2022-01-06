@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '23346160'
+- idtype: doi
+  value: 10.3988/jcn.2013.9.1.43
+- idtype: pmcid
+  value: PMC3543909
+authors:
+- authtype: Author
+  name: Koo YS
+- authtype: Author
+  name: Ko D
+- authtype: Author
+  name: Lee GT
+- authtype: Author
+  name: Oh K
+- authtype: Author
+  name: Kim MS
+- authtype: Author
+  name: Kim KH
+- authtype: Author
+  name: Im CH
+- authtype: Author
+  name: Jung KY
+epubdate: 2013 Jan 3
+fulljournalname: Journal of Clinical Neurology (Seoul, Korea)
+issue: '1'
+pages: 43-50
+pmclivedate: 2013/01/23
+printpubdate: 2013 Jan
+pubdate: 2013 Jan 3
+sortdate: 2013/01/03 00:00
+source: J Clin Neurol
+title: Reduced Frontal P3a Amplitude in Migraine Patients during the Pain-Free Period
+uid: '3543909'
+volume: '9'

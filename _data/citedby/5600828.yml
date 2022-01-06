@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '28549796'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2017.05.045
+- idtype: pmcid
+  value: PMC5600828
+- idtype: MID
+  value: NIHMS881094
+authors:
+- authtype: Author
+  name: Buzzell GA
+- authtype: Author
+  name: Richards JE
+- authtype: Author
+  name: White LK
+- authtype: Author
+  name: Barker TV
+- authtype: Author
+  name: Pine DS
+- authtype: Author
+  name: Fox NA
+epubdate: 2017 May 24
+fulljournalname: NeuroImage
+issue: ''
+pages: 13-26
+pmclivedate: 2018/08/15
+printpubdate: 2017 Aug 15
+pubdate: 2017 May 24
+sortdate: 2017/05/24 00:00
+source: Neuroimage
+title: 'Development of the error-monitoring system from ages 9-35: unique insight
+  provided by MRI-constrained source localization of EEG'
+uid: '5600828'
+volume: '157'

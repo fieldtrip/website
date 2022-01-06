@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '30196280'
+- idtype: doi
+  value: 10.1159/000492231
+- idtype: pmcid
+  value: PMC6550291
+- idtype: MID
+  value: NIHMS1029317
+authors:
+- authtype: Author
+  name: Malekmohammadi M
+- authtype: Author
+  name: Sparks H
+- authtype: Author
+  name: AuYong N
+- authtype: Author
+  name: Hudson A
+- authtype: Author
+  name: Pouratian N
+epubdate: 2018 Sep 7
+fulljournalname: Stereotactic and functional neurosurgery
+issue: '4'
+pages: 249-258
+pmclivedate: 2019/09/07
+printpubdate: '2018'
+pubdate: 2018 Sep 7
+sortdate: 2018/09/07 00:00
+source: Stereotact Funct Neurosurg
+title: Propofol Anesthesia Precludes LFP-based Functional Mapping of Pallidum during
+  DBS Implantation
+uid: '6550291'
+volume: '96'

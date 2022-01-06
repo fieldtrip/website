@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '23041338'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2012.09.061
+- idtype: pmcid
+  value: PMC4380346
+- idtype: MID
+  value: NIHMS673908
+authors:
+- authtype: Author
+  name: Belyusar D
+- authtype: Author
+  name: Snyder AC
+- authtype: Author
+  name: Frey HP
+- authtype: Author
+  name: Harwood MR
+- authtype: Author
+  name: Wallman J
+- authtype: Author
+  name: Foxe JJ
+epubdate: 2012 Oct 5
+fulljournalname: NeuroImage
+issue: ''
+pages: 395-407
+pmclivedate: 2015/03/31
+printpubdate: 2013 Jan 15
+pubdate: 2012 Oct 5
+sortdate: 2012/10/05 00:00
+source: Neuroimage
+title: Oscillatory Alpha-Band Suppression Mechanisms during the Rapid Attentional
+  Shifts Required to Perform an Anti-Saccade Task
+uid: '4380346'
+volume: '65'

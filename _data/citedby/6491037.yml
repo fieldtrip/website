@@ -1,0 +1,49 @@
+articleids:
+- idtype: pmid
+  value: '31038453'
+- idtype: doi
+  value: 10.7554/eLife.36011
+- idtype: pmcid
+  value: PMC6491037
+authors:
+- authtype: Author
+  name: Koelewijn L
+- authtype: Author
+  name: Lancaster TM
+- authtype: Author
+  name: Linden D
+- authtype: Author
+  name: Dima DC
+- authtype: Author
+  name: Routley BC
+- authtype: Author
+  name: Magazzini L
+- authtype: Author
+  name: Barawi K
+- authtype: Author
+  name: Brindley L
+- authtype: Author
+  name: Adams R
+- authtype: Author
+  name: Tansey KE
+- authtype: Author
+  name: Bompas A
+- authtype: Author
+  name: Tales A
+- authtype: Author
+  name: Bayer A
+- authtype: Author
+  name: Singh K
+epubdate: 2019 Apr 30
+fulljournalname: eLife
+issue: ''
+pages: e36011
+pmclivedate: 2019/05/01
+printpubdate: ''
+pubdate: 2019 Apr 30
+sortdate: 2019/04/30 00:00
+source: eLife
+title: Oscillatory hyperactivity and hyperconnectivity in young APOE-ɛ4 carriers and
+  hypoconnectivity in Alzheimer’s disease
+uid: '6491037'
+volume: '8'

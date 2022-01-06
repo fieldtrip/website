@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '23035092'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.2200-12.2012
+- idtype: pmcid
+  value: PMC3491879
+authors:
+- authtype: Author
+  name: Gould IC
+- authtype: Author
+  name: Nobre AC
+- authtype: Author
+  name: Wyart V
+- authtype: Author
+  name: Rushworth MF
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '40'
+pages: 13805-13818
+pmclivedate: 2013/04/03
+printpubdate: 2012 Oct 3
+pubdate: 2012 Oct 3
+sortdate: 2012/10/03 00:00
+source: J Neurosci
+title: Effects of Decision Variables and Intraparietal Stimulation on Sensorimotor
+  Oscillatory Activity in the Human Brain
+uid: '3491879'
+volume: '32'

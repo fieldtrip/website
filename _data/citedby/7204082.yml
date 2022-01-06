@@ -1,0 +1,61 @@
+articleids:
+- idtype: pmid
+  value: '32269107'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.2727-19.2020
+- idtype: pmcid
+  value: PMC7204082
+authors:
+- authtype: Author
+  name: Cai DC
+- authtype: Author
+  name: Wang Z
+- authtype: Author
+  name: Bo T
+- authtype: Author
+  name: Yan S
+- authtype: Author
+  name: Liu Y
+- authtype: Author
+  name: Liu Z
+- authtype: Author
+  name: Zeljic K
+- authtype: Author
+  name: Chen X
+- authtype: Author
+  name: Zhan Y
+- authtype: Author
+  name: Xu X
+- authtype: Author
+  name: Du Y
+- authtype: Author
+  name: Wang Y
+- authtype: Author
+  name: Cang J
+- authtype: Author
+  name: Wang GZ
+- authtype: Author
+  name: Zhang J
+- authtype: Author
+  name: Sun Q
+- authtype: Author
+  name: Qiu Z
+- authtype: Author
+  name: Ge S
+- authtype: Author
+  name: Ye Z
+- authtype: Author
+  name: Wang Z
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '19'
+pages: 3799-3814
+pmclivedate: 2020/11/06
+printpubdate: 2020 May 6
+pubdate: 2020 May 6
+sortdate: 2020/05/06 00:00
+source: J Neurosci
+title: 'MECP2 Duplication Causes Aberrant GABA Pathways, Circuits and Behaviors in
+  Transgenic Monkeys: Neural Mappings to Patients with Autism'
+uid: '7204082'
+volume: '40'

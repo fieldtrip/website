@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '23530921'
+- idtype: doi
+  value: 10.1162/jocn_a_00395
+- idtype: pmcid
+  value: PMC3987899
+- idtype: MID
+  value: NIHMS561834
+authors:
+- authtype: Author
+  name: Payne L
+- authtype: Author
+  name: Guillory S
+- authtype: Author
+  name: Sekuler R
+epubdate: 2013 Mar 26
+fulljournalname: Journal of cognitive neuroscience
+issue: '9'
+pages: 1463-1476
+pmclivedate: 2014/04/15
+printpubdate: 2013 Sep
+pubdate: 2013 Mar 26
+sortdate: 2013/03/26 00:00
+source: J Cogn Neurosci
+title: Attention-modulated alpha-band oscillations protect against intrusion of irrelevant
+  information
+uid: '3987899'
+volume: '25'

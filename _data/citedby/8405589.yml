@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '34339719'
+- idtype: doi
+  value: 10.1016/j.neuropsychologia.2021.107979
+- idtype: pmcid
+  value: PMC8405589
+- idtype: MID
+  value: NIHMS1730907
+authors:
+- authtype: Author
+  name: Myers JC
+- authtype: Author
+  name: Chinn LK
+- authtype: Author
+  name: Sur S
+- authtype: Author
+  name: Golob EJ
+epubdate: 2021 Jul 31
+fulljournalname: Neuropsychologia
+issue: ''
+pages: '107979'
+pmclivedate: 2021/09/17
+printpubdate: 2021 Sep 17
+pubdate: 2021 Jul 31
+sortdate: 2021/07/31 00:00
+source: Neuropsychologia
+title: Widespread Theta Coherence during Spatial Cognitive Control
+uid: '8405589'
+volume: '160'

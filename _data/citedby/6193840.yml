@@ -1,0 +1,34 @@
+articleids:
+- idtype: pmid
+  value: '30094846'
+- idtype: doi
+  value: 10.1111/psyp.13211
+- idtype: pmcid
+  value: PMC6193840
+- idtype: MID
+  value: NIHMS969723
+authors:
+- authtype: Author
+  name: Tabachnick AR
+- authtype: Author
+  name: Valadez EA
+- authtype: Author
+  name: Palmwood EN
+- authtype: Author
+  name: Zajac L
+- authtype: Author
+  name: Simons RF
+- authtype: Author
+  name: Dozier M
+epubdate: 2018 Aug 10
+fulljournalname: Psychophysiology
+issue: '11'
+pages: e13211
+pmclivedate: 2019/11/01
+printpubdate: 2018 Nov
+pubdate: 2018 Aug 10
+sortdate: 2018/08/10 00:00
+source: Psychophysiology
+title: Depressive Symptoms and Error-Related Brain Activity in CPS-Referred Children
+uid: '6193840'
+volume: '55'

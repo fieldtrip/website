@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '27622645'
+- idtype: doi
+  value: 10.1016/j.brainres.2016.09.015
+- idtype: pmcid
+  value: PMC5069926
+authors:
+- authtype: Author
+  name: Zioga I
+- authtype: Author
+  name: Di Bernardi Luft C
+- authtype: Author
+  name: Bhattacharya J
+epubdate: ''
+fulljournalname: Brain Research
+issue: ''
+pages: 267-282
+pmclivedate: 2016/11/03
+printpubdate: 2016 Nov 1
+pubdate: 2016 Nov 1
+sortdate: 2016/11/01 00:00
+source: Brain Res
+title: Musical training shapes neural responses to melodic and prosodic expectation
+uid: '5069926'
+volume: '1650'

@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '27313523'
+- idtype: doi
+  value: 10.3389/fnhum.2016.00259
+- idtype: pmcid
+  value: PMC4889577
+authors:
+- authtype: Author
+  name: Naeije G
+- authtype: Author
+  name: Vaulet T
+- authtype: Author
+  name: Wens V
+- authtype: Author
+  name: Marty B
+- authtype: Author
+  name: Goldman S
+- authtype: Author
+  name: De Tiège X
+epubdate: 2016 Jun 2
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '259'
+pmclivedate: 2016/06/16
+printpubdate: ''
+pubdate: 2016 Jun 2
+sortdate: 2016/06/02 00:00
+source: Front Hum Neurosci
+title: 'Multilevel Cortical Processing of Somatosensory Novelty: A Magnetoencephalography
+  Study'
+uid: '4889577'
+volume: '10'

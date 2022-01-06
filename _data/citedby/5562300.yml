@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '28828401'
+- idtype: doi
+  value: 10.1523/ENEURO.0387-16.2017
+- idtype: pmcid
+  value: PMC5562300
+authors:
+- authtype: Author
+  name: Liu Y
+- authtype: Author
+  name: McAfee SS
+- authtype: Author
+  name: Guley NM
+- authtype: Author
+  name: Del Mar N
+- authtype: Author
+  name: Bu W
+- authtype: Author
+  name: Heldt SA
+- authtype: Author
+  name: Honig MG
+- authtype: Author
+  name: Moore BM II
+- authtype: Author
+  name: Reiner A
+- authtype: Author
+  name: Heck DH
+epubdate: 2017 Aug 18
+fulljournalname: eNeuro
+issue: '4'
+pages: ENEURO.0387-16.2017
+pmclivedate: 2017/08/21
+printpubdate: ''
+pubdate: 2017 Aug 18
+sortdate: 2017/08/18 00:00
+source: eNeuro
+title: Abnormalities in Dynamic Brain Activity Caused by Mild Traumatic Brain Injury
+  Are Partially Rescued by the Cannabinoid Type-2 Receptor Inverse Agonist SMM-189
+uid: '5562300'
+volume: '4'

@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '25969464'
+- idtype: doi
+  value: 10.14814/phy2.12400
+- idtype: pmcid
+  value: PMC4463829
+authors:
+- authtype: Author
+  name: Fleischer W
+- authtype: Author
+  name: Theiss S
+- authtype: Author
+  name: Slotta J
+- authtype: Author
+  name: Holland C
+- authtype: Author
+  name: Schnitzler A
+epubdate: 2015 May 11
+fulljournalname: Physiological Reports
+issue: '5'
+pages: e12400
+pmclivedate: 2015/06/16
+printpubdate: ''
+pubdate: 2015 May 11
+sortdate: 2015/05/11 00:00
+source: Physiol Rep
+title: High-frequency voltage oscillations in cultured astrocytes
+uid: '4463829'
+volume: '3'

@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '32109345'
+- idtype: doi
+  value: 10.14814/phy2.14378
+- idtype: pmcid
+  value: PMC7048377
+authors:
+- authtype: Author
+  name: Gennaro F
+- authtype: Author
+  name: de Bruin ED
+epubdate: 2020 Feb 28
+fulljournalname: Physiological Reports
+issue: '4'
+pages: e14378
+pmclivedate: 2020/03/05
+printpubdate: ''
+pubdate: 2020 Feb 28
+sortdate: 2020/02/28 00:00
+source: Physiol Rep
+title: A pilot study assessing reliability and age‐related differences in corticomuscular
+  and intramuscular coherence in ankle dorsiflexors during walking
+uid: '7048377'
+volume: '8'

@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '32733905'
+- idtype: doi
+  value: 10.3389/fmed.2020.00322
+- idtype: pmcid
+  value: PMC7360673
+authors:
+- authtype: Author
+  name: Suárez-Méndez I
+- authtype: Author
+  name: Doval S
+- authtype: Author
+  name: Walter S
+- authtype: Author
+  name: Pasquín N
+- authtype: Author
+  name: Bernabé R
+- authtype: Author
+  name: Gallo EC
+- authtype: Author
+  name: Valdés M
+- authtype: Author
+  name: Maestú F
+- authtype: Author
+  name: López-Sanz D
+- authtype: Author
+  name: Rodríguez-Mañas L
+epubdate: 2020 Jul 8
+fulljournalname: Frontiers in Medicine
+issue: ''
+pages: '322'
+pmclivedate: 2020/07/29
+printpubdate: ''
+pubdate: 2020 Jul 8
+sortdate: 2020/07/08 00:00
+source: Front Med (Lausanne)
+title: Functional Connectivity Disruption in Frail Older Adults Without Global Cognitive
+  Deficits
+uid: '7360673'
+volume: '7'

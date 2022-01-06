@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '30233341'
+- idtype: doi
+  value: 10.3389/fnhum.2018.00340
+- idtype: pmcid
+  value: PMC6129768
+authors:
+- authtype: Author
+  name: Seeland A
+- authtype: Author
+  name: Krell MM
+- authtype: Author
+  name: Straube S
+- authtype: Author
+  name: Kirchner EA
+epubdate: 2018 Sep 3
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '340'
+pmclivedate: 2018/09/19
+printpubdate: ''
+pubdate: 2018 Sep 3
+sortdate: 2018/09/03 00:00
+source: Front Hum Neurosci
+title: Empirical Comparison of Distributed Source Localization Methods for Single-Trial
+  Detection of Movement Preparation
+uid: '6129768'
+volume: '12'

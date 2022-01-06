@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '27163205'
+- idtype: doi
+  value: 10.1038/tp.2016.63
+- idtype: pmcid
+  value: PMC5070065
+authors:
+- authtype: Author
+  name: Andrade GN
+- authtype: Author
+  name: Butler JS
+- authtype: Author
+  name: Peters GA
+- authtype: Author
+  name: Molholm S
+- authtype: Author
+  name: Foxe JJ
+epubdate: 2016 May 10
+fulljournalname: Translational Psychiatry
+issue: '5'
+pages: e804-
+pmclivedate: 2016/10/19
+printpubdate: 2016 May
+pubdate: 2016 May 10
+sortdate: 2016/05/10 00:00
+source: Transl Psychiatry
+title: Atypical visual and somatosensory adaptation in schizophrenia-spectrum disorders
+uid: '5070065'
+volume: '6'

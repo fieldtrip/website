@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '26109518'
+- idtype: doi
+  value: 10.1002/hbm.22857
+- idtype: pmcid
+  value: PMC6869586
+authors:
+- authtype: Author
+  name: Leonardelli E
+- authtype: Author
+  name: Braun C
+- authtype: Author
+  name: Weisz N
+- authtype: Author
+  name: Lithari C
+- authtype: Author
+  name: Occelli V
+- authtype: Author
+  name: Zampini M
+epubdate: 2015 Jun 24
+fulljournalname: Human Brain Mapping
+issue: '9'
+pages: 3486-3498
+pmclivedate: 2020/06/12
+printpubdate: ''
+pubdate: 2015 Jun 24
+sortdate: 2015/06/24 00:00
+source: Hum Brain Mapp
+title: Prestimulus oscillatory alpha power and connectivity patterns predispose perceptual
+  integration of an audio and a tactile stimulus
+uid: '6869586'
+volume: '36'

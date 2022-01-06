@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '31705740'
+- idtype: doi
+  value: 10.1002/hbm.24860
+- idtype: pmcid
+  value: PMC7267941
+authors:
+- authtype: Author
+  name: Klaus J
+- authtype: Author
+  name: Schutter DJ
+- authtype: Author
+  name: Piai V
+epubdate: 2019 Nov 9
+fulljournalname: Human Brain Mapping
+issue: '4'
+pages: 1061-1071
+pmclivedate: 2020/06/12
+printpubdate: ''
+pubdate: 2019 Nov 9
+sortdate: 2019/11/09 00:00
+source: Hum Brain Mapp
+title: Transient perturbation of the left temporal cortex evokes plasticity‐related
+  reconfiguration of the lexical network
+uid: '7267941'
+volume: '41'

@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '34777199'
+- idtype: doi
+  value: 10.3389/fneur.2021.729703
+- idtype: pmcid
+  value: PMC8580405
+authors:
+- authtype: Author
+  name: Xu J
+- authtype: Author
+  name: Wu Z
+- authtype: Author
+  name: Nürnberger A
+- authtype: Author
+  name: Sabel BA
+epubdate: 2021 Oct 27
+fulljournalname: Frontiers in Neurology
+issue: ''
+pages: '729703'
+pmclivedate: 2021/11/11
+printpubdate: ''
+pubdate: 2021 Oct 27
+sortdate: 2021/10/27 00:00
+source: Front Neurol
+title: Reorganization of Brain Functional Connectivity Network and Vision Restoration
+  Following Combined tACS-tDCS Treatment After Occipital Stroke
+uid: '8580405'
+volume: '12'

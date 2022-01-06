@@ -1,0 +1,23 @@
+articleids:
+- idtype: pmid
+  value: '25333929'
+- idtype: doi
+  value: 10.1371/journal.pone.0109689
+- idtype: pmcid
+  value: PMC4204819
+authors:
+- authtype: Author
+  name: Jenison RL
+epubdate: 2014 Oct 21
+fulljournalname: PLoS ONE
+issue: '10'
+pages: e109689
+pmclivedate: 2014/10/27
+printpubdate: ''
+pubdate: 2014 Oct 21
+sortdate: 2014/10/21 00:00
+source: PLoS One
+title: Directional Influence between the Human Amygdala and Orbitofrontal Cortex at
+  the Time of Decision-Making
+uid: '4204819'
+volume: '9'

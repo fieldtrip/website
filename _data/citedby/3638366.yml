@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '23447609'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.4675-12.2013
+- idtype: pmcid
+  value: PMC3638366
+authors:
+- authtype: Author
+  name: Cravo AM
+- authtype: Author
+  name: Rohenkohl G
+- authtype: Author
+  name: Wyart V
+- authtype: Author
+  name: Nobre AC
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '9'
+pages: 4002-4010
+pmclivedate: 2013/08/28
+printpubdate: 2013 Feb 27
+pubdate: 2013 Feb 27
+sortdate: 2013/02/27 00:00
+source: J Neurosci
+title: Temporal Expectation Enhances Contrast Sensitivity by Phase Entrainment of
+  Low-Frequency Oscillations in Visual Cortex
+uid: '3638366'
+volume: '33'

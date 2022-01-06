@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '26787906'
+- idtype: doi
+  value: 10.1073/pnas.1513773113
+- idtype: pmcid
+  value: PMC4747694
+authors:
+- authtype: Author
+  name: Lewis CM
+- authtype: Author
+  name: Bosman CA
+- authtype: Author
+  name: Womelsdorf T
+- authtype: Author
+  name: Fries P
+epubdate: 2016 Jan 19
+fulljournalname: Proceedings of the National Academy of Sciences of the United States
+  of America
+issue: '5'
+pages: E606-E615
+pmclivedate: 2016/02/12
+printpubdate: 2016 Feb 2
+pubdate: 2016 Jan 19
+sortdate: 2016/01/19 00:00
+source: Proc Natl Acad Sci U S A
+title: Stimulus-induced visual cortical networks are recapitulated by spontaneous
+  local and interareal synchronization
+uid: '4747694'
+volume: '113'

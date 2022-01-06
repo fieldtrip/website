@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '27095660'
+- idtype: doi
+  value: 10.1038/srep24831
+- idtype: pmcid
+  value: PMC4837410
+authors:
+- authtype: Author
+  name: Meeren HK
+- authtype: Author
+  name: Hadjikhani N
+- authtype: Author
+  name: Ahlfors SP
+- authtype: Author
+  name: Hämäläinen MS
+- authtype: Author
+  name: de Gelder B
+epubdate: 2016 Apr 20
+fulljournalname: Scientific Reports
+issue: ''
+pages: '24831'
+pmclivedate: 2016/04/27
+printpubdate: ''
+pubdate: 2016 Apr 20
+sortdate: 2016/04/20 00:00
+source: Sci Rep
+title: Early Preferential Responses to Fear Stimuli in Human Right Dorsal Visual Stream
+  - A Meg Study
+uid: '4837410'
+volume: '6'

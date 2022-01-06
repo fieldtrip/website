@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '28411273'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.3658-16.2017
+- idtype: pmcid
+  value: PMC5426181
+authors:
+- authtype: Author
+  name: ten Oever S
+- authtype: Author
+  name: Schroeder CE
+- authtype: Author
+  name: Poeppel D
+- authtype: Author
+  name: van Atteveldt N
+- authtype: Author
+  name: Mehta AD
+- authtype: Author
+  name: Mégevand P
+- authtype: Author
+  name: Groppe DM
+- authtype: Author
+  name: Zion-Golumbic E
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '19'
+pages: 4903-4912
+pmclivedate: 2017/11/10
+printpubdate: 2017 May 10
+pubdate: 2017 May 10
+sortdate: 2017/05/10 00:00
+source: J Neurosci
+title: Low-Frequency Cortical Oscillations Entrain to Subthreshold Rhythmic Auditory
+  Stimuli
+uid: '5426181'
+volume: '37'

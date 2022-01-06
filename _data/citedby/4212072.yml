@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '25355230'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.2039-14.2014
+- idtype: pmcid
+  value: PMC4212072
+authors:
+- authtype: Author
+  name: Brinkman L
+- authtype: Author
+  name: Stolk A
+- authtype: Author
+  name: Dijkerman HC
+- authtype: Author
+  name: de Lange FP
+- authtype: Author
+  name: Toni I
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '44'
+pages: 14783-14792
+pmclivedate: 2014/11/10
+printpubdate: 2014 Oct 29
+pubdate: 2014 Oct 29
+sortdate: 2014/10/29 00:00
+source: J Neurosci
+title: Distinct Roles for Alpha- and Beta-Band Oscillations during Mental Simulation
+  of Goal-Directed Actions
+uid: '4212072'
+volume: '34'

@@ -1,0 +1,53 @@
+articleids:
+- idtype: pmid
+  value: '30300700'
+- idtype: doi
+  value: 10.1016/j.jneumeth.2018.10.002
+- idtype: pmcid
+  value: PMC6380919
+- idtype: MID
+  value: NIHMS993389
+authors:
+- authtype: Author
+  name: Rosen BQ
+- authtype: Author
+  name: Krishnan GP
+- authtype: Author
+  name: Sanda P
+- authtype: Author
+  name: Komarov M
+- authtype: Author
+  name: Sejnowski T
+- authtype: Author
+  name: Rulkov N
+- authtype: Author
+  name: Ulbert I
+- authtype: Author
+  name: Eross L
+- authtype: Author
+  name: Madsen J
+- authtype: Author
+  name: Devinsky O
+- authtype: Author
+  name: Doyle W
+- authtype: Author
+  name: Fabo D
+- authtype: Author
+  name: Cash S
+- authtype: Author
+  name: Bazhenov M
+- authtype: Author
+  name: Halgren E
+epubdate: 2018 Oct 6
+fulljournalname: Journal of neuroscience methods
+issue: ''
+pages: 46-57
+pmclivedate: 2020/03/15
+printpubdate: 2019 Mar 15
+pubdate: 2018 Oct 6
+sortdate: 2018/10/06 00:00
+source: J Neurosci Methods
+title: Simulating human sleep spindle MEG and EEG from ion channel and circuit level
+  dynamics
+uid: '6380919'
+volume: '316'

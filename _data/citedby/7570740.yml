@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '32947766'
+- idtype: doi
+  value: 10.3390/s20185283
+- idtype: pmcid
+  value: PMC7570740
+authors:
+- authtype: Author
+  name: Sadiq MT
+- authtype: Author
+  name: Yu X
+- authtype: Author
+  name: Yuan Z
+- authtype: Author
+  name: Aziz MZ
+epubdate: 2020 Sep 16
+fulljournalname: Sensors (Basel, Switzerland)
+issue: '18'
+pages: '5283'
+pmclivedate: 2020/10/28
+printpubdate: ''
+pubdate: 2020 Sep 16
+sortdate: 2020/09/16 00:00
+source: Sensors (Basel)
+title: Identification of Motor and Mental Imagery EEG in Two and Multiclass Subject-Dependent
+  Tasks Using Successive Decomposition Index
+uid: '7570740'
+volume: '20'

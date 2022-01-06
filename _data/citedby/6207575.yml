@@ -1,0 +1,45 @@
+articleids:
+- idtype: pmid
+  value: '30405353'
+- idtype: doi
+  value: 10.3389/fncel.2018.00369
+- idtype: pmcid
+  value: PMC6207575
+authors:
+- authtype: Author
+  name: Datunashvili M
+- authtype: Author
+  name: Chaudhary R
+- authtype: Author
+  name: Zobeiri M
+- authtype: Author
+  name: Lüttjohann A
+- authtype: Author
+  name: Mergia E
+- authtype: Author
+  name: Baumann A
+- authtype: Author
+  name: Balfanz S
+- authtype: Author
+  name: Budde B
+- authtype: Author
+  name: van Luijtelaar G
+- authtype: Author
+  name: Pape HC
+- authtype: Author
+  name: Koesling D
+- authtype: Author
+  name: Budde T
+epubdate: 2018 Oct 24
+fulljournalname: Frontiers in Cellular Neuroscience
+issue: ''
+pages: '369'
+pmclivedate: 2018/11/07
+printpubdate: ''
+pubdate: 2018 Oct 24
+sortdate: 2018/10/24 00:00
+source: Front Cell Neurosci
+title: Modulation of Hyperpolarization-Activated Inward Current and Thalamic Activity
+  Modes by Different Cyclic Nucleotides
+uid: '6207575'
+volume: '12'

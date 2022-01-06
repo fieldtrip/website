@@ -1,0 +1,62 @@
+articleids:
+- idtype: pmid
+  value: '31348605'
+- idtype: doi
+  value: 10.1002/hbm.24740
+- idtype: pmcid
+  value: PMC6852475
+authors:
+- authtype: Author
+  name: Dukic S
+- authtype: Author
+  name: McMackin R
+- authtype: Author
+  name: Buxo T
+- authtype: Author
+  name: Fasano A
+- authtype: Author
+  name: Chipika R
+- authtype: Author
+  name: Pinto‐Grau M
+- authtype: Author
+  name: Costello E
+- authtype: Author
+  name: Schuster C
+- authtype: Author
+  name: Hammond M
+- authtype: Author
+  name: Heverin M
+- authtype: Author
+  name: Coffey A
+- authtype: Author
+  name: Broderick M
+- authtype: Author
+  name: Iyer PM
+- authtype: Author
+  name: Mohr K
+- authtype: Author
+  name: Gavin B
+- authtype: Author
+  name: Pender N
+- authtype: Author
+  name: Bede P
+- authtype: Author
+  name: Muthuraman M
+- authtype: Author
+  name: Lalor EC
+- authtype: Author
+  name: Hardiman O
+- authtype: Author
+  name: Nasseroleslami B
+epubdate: 2019 Jul 26
+fulljournalname: Human Brain Mapping
+issue: '16'
+pages: 4827-4842
+pmclivedate: 2019/11/20
+printpubdate: ''
+pubdate: 2019 Jul 26
+sortdate: 2019/07/26 00:00
+source: Hum Brain Mapp
+title: Patterned functional network disruption in amyotrophic lateral sclerosis
+uid: '6852475'
+volume: '40'

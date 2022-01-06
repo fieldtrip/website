@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '25165437'
+- idtype: doi
+  value: 10.3389/fnint.2014.00064
+- idtype: pmcid
+  value: PMC4131516
+authors:
+- authtype: Author
+  name: Castellano M
+- authtype: Author
+  name: Plöchl M
+- authtype: Author
+  name: Vicente R
+- authtype: Author
+  name: Pipa G
+epubdate: 2014 Aug 13
+fulljournalname: Frontiers in Integrative Neuroscience
+issue: ''
+pages: '64'
+pmclivedate: 2014/08/27
+printpubdate: ''
+pubdate: 2014 Aug 13
+sortdate: 2014/08/13 00:00
+source: Front Integr Neurosci
+title: Neuronal oscillations form parietal/frontal networks during contour integration
+uid: '4131516'
+volume: '8'

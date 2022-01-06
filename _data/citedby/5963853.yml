@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '29626167'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0217-18.2018
+- idtype: pmcid
+  value: PMC5963853
+authors:
+- authtype: Author
+  name: Kucyi A
+- authtype: Author
+  name: Schrouff J
+- authtype: Author
+  name: Bickel S
+- authtype: Author
+  name: Foster BL
+- authtype: Author
+  name: Shine JM
+- authtype: Author
+  name: Parvizi J
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '17'
+pages: 4230-4242
+pmclivedate: 2018/10/25
+printpubdate: 2018 Apr 25
+pubdate: 2018 Apr 25
+sortdate: 2018/04/25 00:00
+source: J Neurosci
+title: Intracranial Electrophysiology Reveals Reproducible Intrinsic Functional Connectivity
+  within Human Brain Networks
+uid: '5963853'
+volume: '38'

@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '24844290'
+- idtype: doi
+  value: 10.1371/journal.pone.0096840
+- idtype: pmcid
+  value: PMC4028180
+authors:
+- authtype: Author
+  name: Regel S
+- authtype: Author
+  name: Meyer L
+- authtype: Author
+  name: Gunter TC
+epubdate: 2014 May 20
+fulljournalname: PLoS ONE
+issue: '5'
+pages: e96840
+pmclivedate: 2014/05/21
+printpubdate: ''
+pubdate: 2014 May 20
+sortdate: 2014/05/20 00:00
+source: PLoS One
+title: 'Distinguishing Neurocognitive Processes Reflected by P600 Effects: Evidence
+  from ERPs and Neural Oscillations'
+uid: '4028180'
+volume: '9'

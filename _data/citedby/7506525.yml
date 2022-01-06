@@ -1,0 +1,55 @@
+articleids:
+- idtype: pmid
+  value: '32958742'
+- idtype: doi
+  value: 10.1038/s41398-020-00998-w
+- idtype: pmcid
+  value: PMC7506525
+authors:
+- authtype: Author
+  name: Dima DC
+- authtype: Author
+  name: Adams R
+- authtype: Author
+  name: Linden SC
+- authtype: Author
+  name: Baird A
+- authtype: Author
+  name: Smith J
+- authtype: Author
+  name: Foley S
+- authtype: Author
+  name: Perry G
+- authtype: Author
+  name: Routley BC
+- authtype: Author
+  name: Magazzini L
+- authtype: Author
+  name: Drakesmith M
+- authtype: Author
+  name: Williams N
+- authtype: Author
+  name: Doherty J
+- authtype: Author
+  name: van den Bree MB
+- authtype: Author
+  name: Owen MJ
+- authtype: Author
+  name: Hall J
+- authtype: Author
+  name: Linden DE
+- authtype: Author
+  name: Singh KD
+epubdate: 2020 Sep 21
+fulljournalname: Translational Psychiatry
+issue: ''
+pages: '324'
+pmclivedate: 2020/10/05
+printpubdate: ''
+pubdate: 2020 Sep 21
+sortdate: 2020/09/21 00:00
+source: Transl Psychiatry
+title: Electrophysiological network alterations in adults with copy number variants
+  associated with high neurodevelopmental risk
+uid: '7506525'
+volume: '10'

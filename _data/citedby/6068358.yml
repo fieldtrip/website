@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '30090060'
+- idtype: doi
+  value: 10.3389/fnsys.2018.00030
+- idtype: pmcid
+  value: PMC6068358
+authors:
+- authtype: Author
+  name: Cohen D
+- authtype: Author
+  name: Tsuchiya N
+epubdate: 2018 Jul 25
+fulljournalname: Frontiers in Systems Neuroscience
+issue: ''
+pages: '30'
+pmclivedate: 2018/08/08
+printpubdate: ''
+pubdate: 2018 Jul 25
+sortdate: 2018/07/25 00:00
+source: Front Syst Neurosci
+title: 'The Effect of Common Signals on Power, Coherence and Granger Causality: Theoretical
+  Review, Simulations, and Empirical Analysis of Fruit Fly LFPs Data'
+uid: '6068358'
+volume: '12'

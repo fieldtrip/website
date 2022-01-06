@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '28174530'
+- idtype: doi
+  value: 10.3389/fnhum.2017.00012
+- idtype: pmcid
+  value: PMC5258726
+authors:
+- authtype: Author
+  name: Bastarrika A
+- authtype: Author
+  name: Davidson DJ
+epubdate: 2017 Jan 24
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '12'
+pmclivedate: 2017/02/07
+printpubdate: ''
+pubdate: 2017 Jan 24
+sortdate: 2017/01/24 00:00
+source: Front Hum Neurosci
+title: An Event Related Field Study of Rapid Grammatical Plasticity in Adult Second-Language
+  Learners
+uid: '5258726'
+volume: '11'

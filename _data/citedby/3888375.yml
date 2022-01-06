@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '23118197'
+- idtype: doi
+  value: 10.1093/cercor/bhs343
+- idtype: pmcid
+  value: PMC3888375
+authors:
+- authtype: Author
+  name: Capilla A
+- authtype: Author
+  name: Schoffelen JM
+- authtype: Author
+  name: Paterson G
+- authtype: Author
+  name: Thut G
+- authtype: Author
+  name: Gross J
+epubdate: 2012 Oct 31
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '2'
+pages: 550-561
+pmclivedate: 2015/02/01
+printpubdate: 2014 Feb
+pubdate: 2012 Oct 31
+sortdate: 2012/10/31 00:00
+source: Cereb Cortex
+title: Dissociated α-Band Modulations in the Dorsal and Ventral Visual Pathways in
+  Visuospatial Attention and Perception
+uid: '3888375'
+volume: '24'

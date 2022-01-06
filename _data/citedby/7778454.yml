@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '33437847'
+- idtype: doi
+  value: 10.1117/1.NPh.8.1.015002
+- idtype: pmcid
+  value: PMC7778454
+authors:
+- authtype: Author
+  name: Cao J
+- authtype: Author
+  name: Huppert TJ
+- authtype: Author
+  name: Grover P
+- authtype: Author
+  name: Kainerstorfer JM
+epubdate: 2021 Jan 1
+fulljournalname: Neurophotonics
+issue: '1'
+pages: '015002'
+pmclivedate: 2021/01/11
+printpubdate: 2021 Jan
+pubdate: 2021 Jan 1
+sortdate: 2021/01/01 00:00
+source: Neurophotonics
+title: Enhanced spatiotemporal resolution imaging of neuronal activity using joint
+  electroencephalography and diffuse optical tomography
+uid: '7778454'
+volume: '8'

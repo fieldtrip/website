@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '31920526'
+- idtype: doi
+  value: 10.3389/fnins.2019.01378
+- idtype: pmcid
+  value: PMC6933006
+authors:
+- authtype: Author
+  name: Nikmaram N
+- authtype: Author
+  name: Scholz DS
+- authtype: Author
+  name: Großbach M
+- authtype: Author
+  name: Schmidt SB
+- authtype: Author
+  name: Spogis J
+- authtype: Author
+  name: Belardinelli P
+- authtype: Author
+  name: Müller-Dahlhaus F
+- authtype: Author
+  name: Remy J
+- authtype: Author
+  name: Ziemann U
+- authtype: Author
+  name: Rollnik JD
+- authtype: Author
+  name: Altenmüller E
+epubdate: 2019 Dec 20
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '1378'
+pmclivedate: 2020/01/09
+printpubdate: ''
+pubdate: 2019 Dec 20
+sortdate: 2019/12/20 00:00
+source: Front Neurosci
+title: Musical Sonification of Arm Movements in Stroke Rehabilitation Yields Limited
+  Benefits
+uid: '6933006'
+volume: '13'

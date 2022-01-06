@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '22100769'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2011.11.010
+- idtype: pmcid
+  value: PMC3314919
+authors:
+- authtype: Author
+  name: Fellinger R
+- authtype: Author
+  name: Gruber W
+- authtype: Author
+  name: Zauner A
+- authtype: Author
+  name: Freunberger R
+- authtype: Author
+  name: Klimesch W
+epubdate: ''
+fulljournalname: Neuroimage
+issue: 4-12
+pages: 3379-3388
+pmclivedate: 2012/04/11
+printpubdate: 2012 Feb 15
+pubdate: 2012 Feb 15
+sortdate: 2012/02/15 00:00
+source: Neuroimage
+title: Evoked traveling alpha waves predict visual-semantic categorization-speed
+uid: '3314919'
+volume: 59-318

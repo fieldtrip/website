@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '26745498'
+- idtype: doi
+  value: 10.1371/journal.pone.0146443
+- idtype: pmcid
+  value: PMC4706353
+authors:
+- authtype: Author
+  name: Lowet E
+- authtype: Author
+  name: Roberts MJ
+- authtype: Author
+  name: Bonizzi P
+- authtype: Author
+  name: Karel J
+- authtype: Author
+  name: De Weerd P
+epubdate: 2016 Jan 8
+fulljournalname: PLoS ONE
+issue: '1'
+pages: e0146443
+pmclivedate: 2016/01/15
+printpubdate: ''
+pubdate: 2016 Jan 8
+sortdate: 2016/01/08 00:00
+source: PLoS One
+title: 'Quantifying Neural Oscillatory Synchronization: A Comparison between Spectral
+  Coherence and Phase-Locking Value Approaches'
+uid: '4706353'
+volume: '11'

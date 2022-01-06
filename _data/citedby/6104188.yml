@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '30158852'
+- idtype: doi
+  value: 10.3389/fnins.2018.00572
+- idtype: pmcid
+  value: PMC6104188
+authors:
+- authtype: Author
+  name: López-Sanz D
+- authtype: Author
+  name: Serrano N
+- authtype: Author
+  name: Maestú F
+epubdate: 2018 Aug 15
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '572'
+pmclivedate: 2018/08/29
+printpubdate: ''
+pubdate: 2018 Aug 15
+sortdate: 2018/08/15 00:00
+source: Front Neurosci
+title: The Role of Magnetoencephalography in the Early Stages of Alzheimer’s Disease
+uid: '6104188'
+volume: '12'

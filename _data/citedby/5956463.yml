@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '29681475'
+- idtype: doi
+  value: 10.1016/j.cub.2018.03.044
+- idtype: pmcid
+  value: PMC5956463
+authors:
+- authtype: Author
+  name: Hauswald A
+- authtype: Author
+  name: Lithari C
+- authtype: Author
+  name: Collignon O
+- authtype: Author
+  name: Leonardelli E
+- authtype: Author
+  name: Weisz N
+epubdate: ''
+fulljournalname: Current Biology
+issue: '9'
+pages: 1453-1459.e3
+pmclivedate: 2018/05/17
+printpubdate: 2018 May 7
+pubdate: 2018 May 7
+sortdate: 2018/05/07 00:00
+source: Curr Biol
+title: A Visual Cortical Network for Deriving Phonological Information from Intelligible
+  Lip Movements
+uid: '5956463'
+volume: '28'

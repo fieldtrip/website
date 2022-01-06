@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '32782303'
+- idtype: doi
+  value: 10.1038/s41467-020-17729-w
+- idtype: pmcid
+  value: PMC7419548
+authors:
+- authtype: Author
+  name: Li Y
+- authtype: Author
+  name: Ward MJ
+- authtype: Author
+  name: Richardson RM
+- authtype: Author
+  name: G’Sell M
+- authtype: Author
+  name: Ghuman AS
+epubdate: 2020 Aug 11
+fulljournalname: Nature Communications
+issue: ''
+pages: '4014'
+pmclivedate: 2020/08/18
+printpubdate: ''
+pubdate: 2020 Aug 11
+sortdate: 2020/08/11 00:00
+source: Nat Commun
+title: Endogenous activity modulates stimulus and circuit-specific neural tuning and
+  predicts perceptual behavior
+uid: '7419548'
+volume: '11'

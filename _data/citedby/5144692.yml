@@ -1,0 +1,40 @@
+articleids:
+- idtype: pmid
+  value: '27486103'
+- idtype: doi
+  value: 10.1152/jn.00142.2016
+- idtype: pmcid
+  value: PMC5144692
+authors:
+- authtype: Author
+  name: Stenner MP
+- authtype: Author
+  name: Dürschmid S
+- authtype: Author
+  name: Rutledge RB
+- authtype: Author
+  name: Zaehle T
+- authtype: Author
+  name: Schmitt FC
+- authtype: Author
+  name: Kaufmann J
+- authtype: Author
+  name: Voges J
+- authtype: Author
+  name: Heinze HJ
+- authtype: Author
+  name: Dolan RJ
+- authtype: Author
+  name: Schoenfeld MA
+epubdate: 2016 Jul 13
+fulljournalname: Journal of Neurophysiology
+issue: '4'
+pages: 1663-1672
+pmclivedate: 2017/01/13
+printpubdate: 2016 Oct 1
+pubdate: 2016 Jul 13
+sortdate: 2016/07/13 00:00
+source: J Neurophysiol
+title: Perimovement decrease of alpha/beta oscillations in the human nucleus accumbens
+uid: '5144692'
+volume: '116'

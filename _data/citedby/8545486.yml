@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '34645711'
+- idtype: doi
+  value: 10.1073/pnas.2101209118
+- idtype: pmcid
+  value: PMC8545486
+authors:
+- authtype: Author
+  name: Iravani B
+- authtype: Author
+  name: Schaefer M
+- authtype: Author
+  name: Wilson DA
+- authtype: Author
+  name: Arshamian A
+- authtype: Author
+  name: Lundström JN
+epubdate: 2021 Oct 13
+fulljournalname: Proceedings of the National Academy of Sciences of the United States
+  of America
+issue: '42'
+pages: e2101209118
+pmclivedate: 2021/10/27
+printpubdate: 2021 Oct 19
+pubdate: 2021 Oct 13
+sortdate: 2021/10/13 00:00
+source: Proc Natl Acad Sci U S A
+title: The human olfactory bulb processes odor valence representation and cues motor
+  avoidance behavior
+uid: '8545486'
+volume: '118'

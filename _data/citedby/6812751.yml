@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '31647833'
+- idtype: doi
+  value: 10.1371/journal.pone.0223843
+- idtype: pmcid
+  value: PMC6812751
+authors:
+- authtype: Author
+  name: Kornmeier J
+- authtype: Author
+  name: Friedel E
+- authtype: Author
+  name: Hecker L
+- authtype: Author
+  name: Schmidt S
+- authtype: Author
+  name: Wittmann M
+epubdate: 2019 Oct 24
+fulljournalname: PLoS ONE
+issue: '10'
+pages: e0223843
+pmclivedate: 2019/11/03
+printpubdate: ''
+pubdate: 2019 Oct 24
+sortdate: 2019/10/24 00:00
+source: PLoS One
+title: What happens in the brain of meditators when perception changes but not the
+  stimulus?
+uid: '6812751'
+volume: '14'

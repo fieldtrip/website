@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '27014035'
+- idtype: doi
+  value: 10.3389/fnhum.2016.00104
+- idtype: pmcid
+  value: PMC4789458
+authors:
+- authtype: Author
+  name: Keil J
+- authtype: Author
+  name: Roa Romero Y
+- authtype: Author
+  name: Balz J
+- authtype: Author
+  name: Henjes M
+- authtype: Author
+  name: Senkowski D
+epubdate: 2016 Mar 14
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '104'
+pmclivedate: 2016/03/24
+printpubdate: ''
+pubdate: 2016 Mar 14
+sortdate: 2016/03/14 00:00
+source: Front Hum Neurosci
+title: Positive and Negative Symptoms in Schizophrenia Relate to Distinct Oscillatory
+  Signatures of Sensory Gating
+uid: '4789458'
+volume: '10'

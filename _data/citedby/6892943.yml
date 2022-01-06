@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '31797890'
+- idtype: doi
+  value: 10.1038/s41598-019-54706-w
+- idtype: pmcid
+  value: PMC6892943
+authors:
+- authtype: Author
+  name: Hussain SJ
+- authtype: Author
+  name: Cohen LG
+- authtype: Author
+  name: Bönstrup M
+epubdate: 2019 Dec 4
+fulljournalname: Scientific Reports
+issue: ''
+pages: '18305'
+pmclivedate: 2019/12/11
+printpubdate: ''
+pubdate: 2019 Dec 4
+sortdate: 2019/12/04 00:00
+source: Sci Rep
+title: Beta rhythm events predict corticospinal motor output
+uid: '6892943'
+volume: '9'

@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '33741947'
+- idtype: doi
+  value: 10.1038/s41467-021-21979-7
+- idtype: pmcid
+  value: PMC7979788
+authors:
+- authtype: Author
+  name: Veniero D
+- authtype: Author
+  name: Gross J
+- authtype: Author
+  name: Morand S
+- authtype: Author
+  name: Duecker F
+- authtype: Author
+  name: Sack AT
+- authtype: Author
+  name: Thut G
+epubdate: 2021 Mar 19
+fulljournalname: Nature Communications
+issue: ''
+pages: '1757'
+pmclivedate: 2021/04/16
+printpubdate: ''
+pubdate: 2021 Mar 19
+sortdate: 2021/03/19 00:00
+source: Nat Commun
+title: Top-down control of visual cortex by the frontal eye fields through oscillatory
+  realignment
+uid: '7979788'
+volume: '12'

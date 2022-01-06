@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '22649719'
+- idtype: doi
+  value: 10.1155/2012/156529
+- idtype: pmcid
+  value: PMC3357925
+authors:
+- authtype: Author
+  name: Pietrek C
+- authtype: Author
+  name: Popov T
+- authtype: Author
+  name: Steffen A
+- authtype: Author
+  name: Miller GA
+- authtype: Author
+  name: Rockstroh B
+epubdate: 2012 May 10
+fulljournalname: Depression Research and Treatment
+issue: ''
+pages: '156529'
+pmclivedate: 2012/05/30
+printpubdate: '2012'
+pubdate: 2012 May 10
+sortdate: 2012/05/10 00:00
+source: Depress Res Treat
+title: Neuromagnetic Indication of Dysfunctional Emotion Regulation in Affective Disorders
+uid: '3357925'
+volume: '2012'

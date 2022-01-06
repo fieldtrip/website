@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '31133646'
+- idtype: doi
+  value: 10.1038/s41598-019-44311-2
+- idtype: pmcid
+  value: PMC6536519
+authors:
+- authtype: Author
+  name: Solberg Økland H
+- authtype: Author
+  name: Todorović A
+- authtype: Author
+  name: Lüttke CS
+- authtype: Author
+  name: McQueen JM
+- authtype: Author
+  name: de Lange FP
+epubdate: 2019 May 27
+fulljournalname: Scientific Reports
+issue: ''
+pages: '7870'
+pmclivedate: 2019/06/06
+printpubdate: ''
+pubdate: 2019 May 27
+sortdate: 2019/05/27 00:00
+source: Sci Rep
+title: Combined predictive effects of sentential and visual constraints in early audiovisual
+  speech processing
+uid: '6536519'
+volume: '9'

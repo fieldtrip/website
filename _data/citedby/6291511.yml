@@ -1,0 +1,49 @@
+articleids:
+- idtype: pmid
+  value: '30574086'
+- idtype: doi
+  value: 10.3389/fnagi.2018.00400
+- idtype: pmcid
+  value: PMC6291511
+authors:
+- authtype: Author
+  name: Jacini F
+- authtype: Author
+  name: Sorrentino P
+- authtype: Author
+  name: Lardone A
+- authtype: Author
+  name: Rucco R
+- authtype: Author
+  name: Baselice F
+- authtype: Author
+  name: Cavaliere C
+- authtype: Author
+  name: Aiello M
+- authtype: Author
+  name: Orsini M
+- authtype: Author
+  name: Iavarone A
+- authtype: Author
+  name: Manzo V
+- authtype: Author
+  name: Carotenuto A
+- authtype: Author
+  name: Granata C
+- authtype: Author
+  name: Hillebrand A
+- authtype: Author
+  name: Sorrentino G
+epubdate: 2018 Dec 6
+fulljournalname: Frontiers in Aging Neuroscience
+issue: ''
+pages: '400'
+pmclivedate: 2018/12/20
+printpubdate: ''
+pubdate: 2018 Dec 6
+sortdate: 2018/12/06 00:00
+source: Front Aging Neurosci
+title: Amnestic Mild Cognitive Impairment Is Associated With Frequency-Specific Brain
+  Network Alterations in Temporal Poles
+uid: '6291511'
+volume: '10'

@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '34011525'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.2288-20.2021
+- idtype: pmcid
+  value: PMC8276739
+authors:
+- authtype: Author
+  name: Liu Y
+- authtype: Author
+  name: Shi G
+- authtype: Author
+  name: Li M
+- authtype: Author
+  name: Xing H
+- authtype: Author
+  name: Song Y
+- authtype: Author
+  name: Xiao L
+- authtype: Author
+  name: Guan Y
+- authtype: Author
+  name: Han Z
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '28'
+pages: 6102-6115
+pmclivedate: ''
+printpubdate: 2021 Jul 14
+pubdate: 2021 Jul 14
+sortdate: 2021/07/14 00:00
+source: J Neurosci
+title: 'Early Top-Down Modulation in Visual Word Form Processing: Evidence From an
+  Intracranial SEEG Study'
+uid: '8276739'
+volume: '41'

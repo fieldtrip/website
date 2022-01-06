@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '25029468'
+- idtype: doi
+  value: 10.1371/journal.pone.0102576
+- idtype: pmcid
+  value: PMC4100931
+authors:
+- authtype: Author
+  name: McCracken CB
+- authtype: Author
+  name: Kiss ZH
+epubdate: 2014 Jul 16
+fulljournalname: PLoS ONE
+issue: '7'
+pages: e102576
+pmclivedate: 2014/07/18
+printpubdate: ''
+pubdate: 2014 Jul 16
+sortdate: 2014/07/16 00:00
+source: PLoS One
+title: Time and Frequency-Dependent Modulation of Local Field Potential Synchronization
+  by Deep Brain Stimulation
+uid: '4100931'
+volume: '9'

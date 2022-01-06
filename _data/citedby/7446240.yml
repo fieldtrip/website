@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '32864612'
+- idtype: doi
+  value: 10.1093/texcom/tgaa009
+- idtype: pmcid
+  value: PMC7446240
+authors:
+- authtype: Author
+  name: Kolasinski J
+- authtype: Author
+  name: Dima DC
+- authtype: Author
+  name: Mehler DM
+- authtype: Author
+  name: Stephenson A
+- authtype: Author
+  name: Valadan S
+- authtype: Author
+  name: Kusmia S
+- authtype: Author
+  name: Rossiter HE
+epubdate: 2020 Apr 4
+fulljournalname: Cerebral Cortex Communications
+issue: '1'
+pages: tgaa009
+pmclivedate: 2020/08/27
+printpubdate: ''
+pubdate: 2020 Apr 4
+sortdate: 2020/04/04 00:00
+source: Cereb Cortex Commun
+title: Spatially and Temporally Distinct Encoding of Muscle and Kinematic Information
+  in Rostral and Caudal Primary Motor Cortex
+uid: '7446240'
+volume: '1'

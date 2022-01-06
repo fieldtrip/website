@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '33994916'
+- idtype: doi
+  value: 10.3389/fnins.2021.608699
+- idtype: pmcid
+  value: PMC8113640
+authors:
+- authtype: Author
+  name: Azanova M
+- authtype: Author
+  name: Herrojo Ruiz M
+- authtype: Author
+  name: Belianin AV
+- authtype: Author
+  name: Klucharev V
+- authtype: Author
+  name: Nikulin VV
+epubdate: 2021 Apr 28
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '608699'
+pmclivedate: 2021/05/13
+printpubdate: ''
+pubdate: 2021 Apr 28
+sortdate: 2021/04/28 00:00
+source: Front Neurosci
+title: Resting-State Theta Oscillations and Reward Sensitivity in Risk Taking
+uid: '8113640'
+volume: '15'

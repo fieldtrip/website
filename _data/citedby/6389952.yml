@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '30804371'
+- idtype: doi
+  value: 10.1038/s41598-019-39178-2
+- idtype: pmcid
+  value: PMC6389952
+authors:
+- authtype: Author
+  name: Göldi M
+- authtype: Author
+  name: van Poppel EA
+- authtype: Author
+  name: Rasch B
+- authtype: Author
+  name: Schreiner T
+epubdate: 2019 Feb 25
+fulljournalname: Scientific Reports
+issue: ''
+pages: '2715'
+pmclivedate: 2019/02/28
+printpubdate: ''
+pubdate: 2019 Feb 25
+sortdate: 2019/02/25 00:00
+source: Sci Rep
+title: Increased neuronal signatures of targeted memory reactivation during slow-wave
+  up states
+uid: '6389952'
+volume: '9'

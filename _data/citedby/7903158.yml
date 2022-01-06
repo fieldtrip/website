@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '33385562'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2020.117711
+- idtype: pmcid
+  value: PMC7903158
+authors:
+- authtype: Author
+  name: Wöstmann M
+- authtype: Author
+  name: Maess B
+- authtype: Author
+  name: Obleser J
+epubdate: ''
+fulljournalname: Neuroimage
+issue: ''
+pages: '117711'
+pmclivedate: 2021/03/03
+printpubdate: 2021 Mar
+pubdate: 2021 Mar
+sortdate: 2021/03/01 00:00
+source: Neuroimage
+title: 'Orienting auditory attention in time: Lateralized alpha power reflects spatio-temporal
+  filtering'
+uid: '7903158'
+volume: '228'

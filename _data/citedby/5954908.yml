@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '29706512'
+- idtype: doi
+  value: 10.1016/j.cub.2018.03.038
+- idtype: pmcid
+  value: PMC5954908
+authors:
+- authtype: Author
+  name: Eldar E
+- authtype: Author
+  name: Roth C
+- authtype: Author
+  name: Dayan P
+- authtype: Author
+  name: Dolan RJ
+epubdate: ''
+fulljournalname: Current Biology
+issue: '9'
+pages: 1433-1439.e7
+pmclivedate: 2018/05/17
+printpubdate: 2018 May 7
+pubdate: 2018 May 7
+sortdate: 2018/05/07 00:00
+source: Curr Biol
+title: Decodability of Reward Learning Signals Predicts Mood Fluctuations
+uid: '5954908'
+volume: '28'

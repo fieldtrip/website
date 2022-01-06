@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '31816147'
+- idtype: doi
+  value: 10.1002/hbm.24896
+- idtype: pmcid
+  value: PMC7267959
+authors:
+- authtype: Author
+  name: Mehraram R
+- authtype: Author
+  name: Kaiser M
+- authtype: Author
+  name: Cromarty R
+- authtype: Author
+  name: Graziadio S
+- authtype: Author
+  name: O'Brien JT
+- authtype: Author
+  name: Killen A
+- authtype: Author
+  name: Taylor J
+- authtype: Author
+  name: Peraza LR
+epubdate: 2019 Dec 9
+fulljournalname: Human Brain Mapping
+issue: '6'
+pages: 1573-1590
+pmclivedate: 2020/06/12
+printpubdate: ''
+pubdate: 2019 Dec 9
+sortdate: 2019/12/09 00:00
+source: Hum Brain Mapp
+title: 'Weighted network measures reveal differences between dementia types: An EEG
+  study'
+uid: '7267959'
+volume: '41'

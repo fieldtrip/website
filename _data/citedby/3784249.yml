@@ -1,0 +1,61 @@
+articleids:
+- idtype: pmid
+  value: '23702419'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2013.05.056
+- idtype: pmcid
+  value: PMC3784249
+- idtype: MID
+  value: NIHMS483084
+authors:
+- authtype: Author
+  name: Larson-Prior LJ
+- authtype: Author
+  name: Oostenveld R
+- authtype: Author
+  name: Della Penna S
+- authtype: Author
+  name: Michalareas G
+- authtype: Author
+  name: Prior F
+- authtype: Author
+  name: Babajani-Feremi A
+- authtype: Author
+  name: Schoffelen JM
+- authtype: Author
+  name: Marzetti L
+- authtype: Author
+  name: de Pasquale F
+- authtype: Author
+  name: Di Pompeo F
+- authtype: Author
+  name: Stout J
+- authtype: Author
+  name: Woolrich M
+- authtype: Author
+  name: Luo Q
+- authtype: Author
+  name: Bucholz R
+- authtype: Author
+  name: Fries P
+- authtype: Author
+  name: Pizzella V
+- authtype: Author
+  name: Romani GL
+- authtype: Author
+  name: Corbetta M
+- authtype: Author
+  name: Snyder AZ
+epubdate: 2013 May 20
+fulljournalname: NeuroImage
+issue: ''
+pages: 190-201
+pmclivedate: 2014/10/15
+printpubdate: 2013 Oct 15
+pubdate: 2013 May 20
+sortdate: 2013/05/20 00:00
+source: Neuroimage
+title: 'Adding dynamics to the Human Connectome Project with MEG: Special NeuroImage
+  issue on ‘Mapping the Connectome’'
+uid: '3784249'
+volume: '80'

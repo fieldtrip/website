@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '24789812'
+- idtype: doi
+  value: 10.3758/s13415-014-0286-7
+- idtype: pmcid
+  value: PMC4218982
+authors:
+- authtype: Author
+  name: Horr NK
+- authtype: Author
+  name: Braun C
+- authtype: Author
+  name: Volz KG
+epubdate: 2014 May 1
+fulljournalname: Cognitive, Affective & Behavioral Neuroscience
+issue: '4'
+pages: 1271-1285
+pmclivedate: 2014/11/05
+printpubdate: '2014'
+pubdate: 2014 May 1
+sortdate: 2014/05/01 00:00
+source: Cogn Affect Behav Neurosci
+title: 'Feeling before knowing why: The role of the orbitofrontal cortex in intuitive
+  judgments—an MEG study'
+uid: '4218982'
+volume: '14'

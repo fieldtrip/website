@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '31801677'
+- idtype: doi
+  value: 10.1016/j.schres.2019.11.005
+- idtype: pmcid
+  value: PMC7239709
+- idtype: MID
+  value: NIHMS1545146
+authors:
+- authtype: Author
+  name: Ahn S
+- authtype: Author
+  name: Lustenberger C
+- authtype: Author
+  name: Jarskog LF
+- authtype: Author
+  name: Fröhlich F
+epubdate: 2019 Dec 2
+fulljournalname: Schizophrenia research
+issue: ''
+pages: 389-396
+pmclivedate: 2021/02/01
+printpubdate: 2020 Feb
+pubdate: 2019 Dec 2
+sortdate: 2019/12/02 00:00
+source: Schizophr Res
+title: Neurophysiological Substrates of Configural Face Perception in Schizotypy
+uid: '7239709'
+volume: '216'

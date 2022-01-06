@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '26758821'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0494-15.2016
+- idtype: pmcid
+  value: PMC6602032
+authors:
+- authtype: Author
+  name: Pavone EF
+- authtype: Author
+  name: Tieri G
+- authtype: Author
+  name: Rizza G
+- authtype: Author
+  name: Tidoni E
+- authtype: Author
+  name: Grisoni L
+- authtype: Author
+  name: Aglioti SM
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '2'
+pages: 268-279
+pmclivedate: 2019/07/12
+printpubdate: 2016 Jan 13
+pubdate: 2016 Jan 13
+sortdate: 2016/01/13 00:00
+source: J Neurosci
+title: 'Embodying Others in Immersive Virtual Reality: Electro-Cortical Signatures
+  of Monitoring the Errors in the Actions of an Avatar Seen from a First-Person Perspective'
+uid: '6602032'
+volume: '36'

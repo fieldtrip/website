@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '24948807'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.3801-13.2014
+- idtype: pmcid
+  value: PMC6608218
+authors:
+- authtype: Author
+  name: Werkle-Bergner M
+- authtype: Author
+  name: Grandy TH
+- authtype: Author
+  name: Chicherio C
+- authtype: Author
+  name: Schmiedek F
+- authtype: Author
+  name: Lövdén M
+- authtype: Author
+  name: Lindenberger U
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '25'
+pages: 8519-8528
+pmclivedate: 2019/07/10
+printpubdate: 2014 Jun 18
+pubdate: 2014 Jun 18
+sortdate: 2014/06/18 00:00
+source: J Neurosci
+title: Coordinated within-Trial Dynamics of Low-Frequency Neural Rhythms Controls
+  Evidence Accumulation
+uid: '6608218'
+volume: '34'

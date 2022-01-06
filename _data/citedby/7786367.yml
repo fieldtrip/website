@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '33068002'
+- idtype: doi
+  value: 10.1093/cercor/bhaa275
+- idtype: pmcid
+  value: PMC7786367
+authors:
+- authtype: Author
+  name: Tia B
+- authtype: Author
+  name: Takemi M
+- authtype: Author
+  name: Kosugi A
+- authtype: Author
+  name: Castagnola E
+- authtype: Author
+  name: Ricci D
+- authtype: Author
+  name: Ushiba J
+- authtype: Author
+  name: Fadiga L
+- authtype: Author
+  name: Iriki A
+epubdate: 2020 Oct 17
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '2'
+pages: 1077-1089
+pmclivedate: 2021/01/12
+printpubdate: ''
+pubdate: 2020 Oct 17
+sortdate: 2020/10/17 00:00
+source: Cereb Cortex
+title: Spectral Power in Marmoset Frontal Motor Cortex during Natural Locomotor Behavior
+uid: '7786367'
+volume: '31'

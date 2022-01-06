@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '32436141'
+- idtype: doi
+  value: 10.1007/s10484-020-09471-2
+- idtype: pmcid
+  value: PMC7391403
+authors:
+- authtype: Author
+  name: van Dijk H
+- authtype: Author
+  name: deBeus R
+- authtype: Author
+  name: Kerson C
+- authtype: Author
+  name: Roley-Roberts ME
+- authtype: Author
+  name: Monastra VJ
+- authtype: Author
+  name: Arnold LE
+- authtype: Author
+  name: Pan X
+- authtype: Author
+  name: Arns M
+epubdate: 2020 May 20
+fulljournalname: Applied Psychophysiology and Biofeedback
+issue: '3'
+pages: 165-173
+pmclivedate: 2020/08/12
+printpubdate: '2020'
+pubdate: 2020 May 20
+sortdate: 2020/05/20 00:00
+source: Appl Psychophysiol Biofeedback
+title: Different Spectral Analysis Methods for the Theta/Beta Ratio Calculate Different
+  Ratios But Do Not Distinguish ADHD from Controls
+uid: '7391403'
+volume: '45'

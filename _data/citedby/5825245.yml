@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '28898569'
+- idtype: doi
+  value: 10.1002/aur.1858
+- idtype: pmcid
+  value: PMC5825245
+- idtype: MID
+  value: NIHMS916088
+authors:
+- authtype: Author
+  name: Pillai AS
+- authtype: Author
+  name: McAuliffe D
+- authtype: Author
+  name: Lakshmanan BM
+- authtype: Author
+  name: Mostofsky SH
+- authtype: Author
+  name: Crone NE
+- authtype: Author
+  name: Ewen JB
+epubdate: 2017 Sep 12
+fulljournalname: 'Autism research : official journal of the International Society
+  for Autism Research'
+issue: '2'
+pages: 245-257
+pmclivedate: 2019/02/01
+printpubdate: 2018 Feb
+pubdate: 2017 Sep 12
+sortdate: 2017/09/12 00:00
+source: Autism Res
+title: Altered Task-Related Modulation of Long-Range Connectivity in Children with
+  Autism
+uid: '5825245'
+volume: '11'

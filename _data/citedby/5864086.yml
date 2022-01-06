@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '29529019'
+- idtype: doi
+  value: 10.1371/journal.pbio.2004473
+- idtype: pmcid
+  value: PMC5864086
+authors:
+- authtype: Author
+  name: Keitel A
+- authtype: Author
+  name: Gross J
+- authtype: Author
+  name: Kayser C
+epubdate: 2018 Mar 12
+fulljournalname: PLoS Biology
+issue: '3'
+pages: e2004473
+pmclivedate: 2018/03/28
+printpubdate: ''
+pubdate: 2018 Mar 12
+sortdate: 2018/03/12 00:00
+source: PLoS Biol
+title: Perceptually relevant speech tracking in auditory and motor cortex reflects
+  distinct linguistic features
+uid: '5864086'
+volume: '16'

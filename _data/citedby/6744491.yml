@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '31519984'
+- idtype: doi
+  value: 10.1038/s41598-019-49714-9
+- idtype: pmcid
+  value: PMC6744491
+authors:
+- authtype: Author
+  name: Andreu CI
+- authtype: Author
+  name: Palacios I
+- authtype: Author
+  name: Moënne-Loccoz C
+- authtype: Author
+  name: López V
+- authtype: Author
+  name: Franken IH
+- authtype: Author
+  name: Cosmelli D
+- authtype: Author
+  name: Slagter HA
+epubdate: 2019 Sep 13
+fulljournalname: Scientific Reports
+issue: ''
+pages: '13215'
+pmclivedate: 2019/09/27
+printpubdate: ''
+pubdate: 2019 Sep 13
+sortdate: 2019/09/13 00:00
+source: Sci Rep
+title: Enhanced response inhibition and reduced midfrontal theta activity in experienced
+  Vipassana meditators
+uid: '6744491'
+volume: '9'

@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '26627309'
+- idtype: doi
+  value: 10.1016/j.neuron.2015.10.040
+- idtype: pmcid
+  value: PMC5635959
+- idtype: MID
+  value: EMS74417
+authors:
+- authtype: Author
+  name: Marti S
+- authtype: Author
+  name: King JR
+- authtype: Author
+  name: Dehaene S
+epubdate: 2015 Nov 25
+fulljournalname: Neuron
+issue: '6'
+pages: 1297-1307
+pmclivedate: 2017/10/11
+printpubdate: 2015 Dec 16
+pubdate: 2015 Nov 25
+sortdate: 2015/11/25 00:00
+source: Neuron
+title: Time-Resolved Decoding of Two Processing Chains during Dual-Task Interference
+uid: '5635959'
+volume: '88'

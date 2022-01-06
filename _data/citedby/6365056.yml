@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '30724733'
+- idtype: doi
+  value: 10.7554/eLife.37321
+- idtype: pmcid
+  value: PMC6365056
+authors:
+- authtype: Author
+  name: Kloosterman NA
+- authtype: Author
+  name: de Gee JW
+- authtype: Author
+  name: Werkle-Bergner M
+- authtype: Author
+  name: Lindenberger U
+- authtype: Author
+  name: Garrett DD
+- authtype: Author
+  name: Fahrenfort JJ
+epubdate: 2019 Feb 6
+fulljournalname: eLife
+issue: ''
+pages: e37321
+pmclivedate: 2019/02/07
+printpubdate: ''
+pubdate: 2019 Feb 6
+sortdate: 2019/02/06 00:00
+source: eLife
+title: Humans strategically shift decision bias by flexibly adjusting sensory evidence
+  accumulation
+uid: '6365056'
+volume: '8'

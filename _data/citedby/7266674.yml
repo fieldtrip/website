@@ -1,0 +1,34 @@
+articleids:
+- idtype: pmid
+  value: '31296796'
+- idtype: doi
+  value: 10.1088/1741-2552/ab3189
+- idtype: pmcid
+  value: PMC7266674
+- idtype: MID
+  value: EMS86477
+authors:
+- authtype: Author
+  name: Branco MP
+- authtype: Author
+  name: Geukes SH
+- authtype: Author
+  name: Aarnoutse EJ
+- authtype: Author
+  name: Vansteensel MJ
+- authtype: Author
+  name: Freudenburg ZV
+- authtype: Author
+  name: Ramsey NF
+epubdate: 2019 Aug 6
+fulljournalname: Journal of neural engineering
+issue: '5'
+pages: 056009
+pmclivedate: 2020/08/06
+printpubdate: 2019 Aug 6
+pubdate: 2019 Aug 6
+sortdate: 2019/08/06 00:00
+source: J Neural Eng
+title: High-frequency band temporal dynamics in response to a grasp force task
+uid: '7266674'
+volume: '16'

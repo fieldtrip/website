@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '34070619'
+- idtype: doi
+  value: 10.3390/cancers13112593
+- idtype: pmcid
+  value: PMC8198785
+authors:
+- authtype: Author
+  name: Quiñones I
+- authtype: Author
+  name: Amoruso L
+- authtype: Author
+  name: Pomposo Gastelu IC
+- authtype: Author
+  name: Gil-Robles S
+- authtype: Author
+  name: Carreiras M
+epubdate: 2021 May 25
+fulljournalname: Cancers
+issue: '11'
+pages: '2593'
+pmclivedate: 2021/06/14
+printpubdate: ''
+pubdate: 2021 May 25
+sortdate: 2021/05/25 00:00
+source: Cancers (Basel)
+title: 'What Can Glioma Patients Teach Us about Language (Re)Organization in the Bilingual
+  Brain: Evidence from fMRI and MEG'
+uid: '8198785'
+volume: '13'

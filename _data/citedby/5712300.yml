@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '29234277'
+- idtype: doi
+  value: 10.3389/fnsys.2017.00085
+- idtype: pmcid
+  value: PMC5712300
+authors:
+- authtype: Author
+  name: Knols RH
+- authtype: Author
+  name: Swanenburg J
+- authtype: Author
+  name: De Bon D
+- authtype: Author
+  name: Gennaro F
+- authtype: Author
+  name: Wolf M
+- authtype: Author
+  name: Krüger B
+- authtype: Author
+  name: Bettex D
+- authtype: Author
+  name: de Bruin ED
+epubdate: 2017 Nov 28
+fulljournalname: Frontiers in Systems Neuroscience
+issue: ''
+pages: '85'
+pmclivedate: 2017/12/11
+printpubdate: ''
+pubdate: 2017 Nov 28
+sortdate: 2017/11/28 00:00
+source: Front Syst Neurosci
+title: 'Investigating the Usability and Acute Effects of a Bedside Video Console to
+  Prefrontal Cortical Activity Alterations: A Preclinical Study in Healthy Elderly'
+uid: '5712300'
+volume: '11'

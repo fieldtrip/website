@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '29084475'
+- idtype: doi
+  value: 10.1177/0269881117736915
+- idtype: pmcid
+  value: PMC5987991
+authors:
+- authtype: Author
+  name: Routley BC
+- authtype: Author
+  name: Singh KD
+- authtype: Author
+  name: Hamandi K
+- authtype: Author
+  name: Muthukumaraswamy SD
+epubdate: 2017 Oct 31
+fulljournalname: Journal of Psychopharmacology (Oxford, England)
+issue: '12'
+pages: 1527-1536
+pmclivedate: 2018/06/11
+printpubdate: 2017 Dec
+pubdate: 2017 Oct 31
+sortdate: 2017/10/31 00:00
+source: J Psychopharmacol
+title: The effects of AMPA receptor blockade on resting magnetoencephalography recordings
+uid: '5987991'
+volume: '31'

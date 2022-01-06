@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '23177968'
+- idtype: doi
+  value: 10.1016/j.neuron.2012.09.015
+- idtype: pmcid
+  value: PMC3975574
+- idtype: MID
+  value: EMS57887
+authors:
+- authtype: Author
+  name: Wyart V
+- authtype: Author
+  name: de Gardelle V
+- authtype: Author
+  name: Scholl J
+- authtype: Author
+  name: Summerfield C
+epubdate: ''
+fulljournalname: Neuron
+issue: '4'
+pages: 847-858
+pmclivedate: 2014/04/04
+printpubdate: 2012 Nov 21
+pubdate: 2012 Nov 21
+sortdate: 2012/11/21 00:00
+source: Neuron
+title: Rhythmic fluctuations in evidence accumulation during decision making in the
+  human brain
+uid: '3975574'
+volume: '76'

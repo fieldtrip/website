@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '30177399'
+- idtype: doi
+  value: 10.1016/j.cortex.2018.07.018
+- idtype: pmcid
+  value: PMC6542658
+- idtype: MID
+  value: EMS83035
+authors:
+- authtype: Author
+  name: Pinheiro-Chagas P
+- authtype: Author
+  name: Piazza M
+- authtype: Author
+  name: Dehaene S
+epubdate: 2018 Jul 31
+fulljournalname: Cortex; a journal devoted to the study of the nervous system and
+  behavior
+issue: ''
+pages: 124-139
+pmclivedate: 2020/05/01
+printpubdate: 2019 May 1
+pubdate: 2018 Jul 31
+sortdate: 2018/07/31 00:00
+source: Cortex
+title: Decoding the processing stages of mental arithmetic with magnetoencephalography
+uid: '6542658'
+volume: '114'

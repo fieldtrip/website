@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '33679373'
+- idtype: doi
+  value: 10.3389/fnagi.2021.609043
+- idtype: pmcid
+  value: PMC7935553
+authors:
+- authtype: Author
+  name: Suárez-Méndez I
+- authtype: Author
+  name: Walter S
+- authtype: Author
+  name: López-Sanz D
+- authtype: Author
+  name: Pasquín N
+- authtype: Author
+  name: Bernabé R
+- authtype: Author
+  name: Castillo Gallo E
+- authtype: Author
+  name: Valdés M
+- authtype: Author
+  name: del Pozo F
+- authtype: Author
+  name: Maestú F
+- authtype: Author
+  name: Rodríguez-Mañas L
+epubdate: 2021 Feb 18
+fulljournalname: Frontiers in Aging Neuroscience
+issue: ''
+pages: '609043'
+pmclivedate: 2021/03/06
+printpubdate: ''
+pubdate: 2021 Feb 18
+sortdate: 2021/02/18 00:00
+source: Front Aging Neurosci
+title: 'Ongoing Oscillatory Electrophysiological Alterations in Frail Older Adults:
+  A MEG Study'
+uid: '7935553'
+volume: '13'

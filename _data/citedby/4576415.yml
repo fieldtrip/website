@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '26509114'
+- idtype: doi
+  value: 10.1016/j.nicl.2015.08.014
+- idtype: pmcid
+  value: PMC4576415
+authors:
+- authtype: Author
+  name: Adebimpe A
+- authtype: Author
+  name: Aarabi A
+- authtype: Author
+  name: Bourel-Ponchel E
+- authtype: Author
+  name: Mahmoudzadeh M
+- authtype: Author
+  name: Wallois F
+epubdate: 2015 Sep 3
+fulljournalname: 'NeuroImage : Clinical'
+issue: ''
+pages: 275-282
+pmclivedate: 2015/10/27
+printpubdate: ''
+pubdate: 2015 Sep 3
+sortdate: 2015/09/03 00:00
+source: Neuroimage Clin
+title: EEG resting state analysis of cortical sources in patients with benign epilepsy
+  with centrotemporal spikes
+uid: '4576415'
+volume: '9'

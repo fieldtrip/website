@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '34296132'
+- idtype: doi
+  value: 10.1093/texcom/tgaa072
+- idtype: pmcid
+  value: PMC8153075
+authors:
+- authtype: Author
+  name: Chen L
+- authtype: Author
+  name: Liao HI
+epubdate: 2020 Sep 30
+fulljournalname: Cerebral Cortex Communications
+issue: '1'
+pages: tgaa072
+pmclivedate: 2021/07/21
+printpubdate: ''
+pubdate: 2020 Sep 30
+sortdate: 2020/09/30 00:00
+source: Cereb Cortex Commun
+title: Microsaccadic Eye Movements but not Pupillary Dilation Response Characterizes
+  the Crossmodal Freezing Effect
+uid: '8153075'
+volume: '1'

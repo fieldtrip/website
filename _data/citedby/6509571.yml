@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '31072907'
+- idtype: doi
+  value: 10.1523/ENEURO.0321-18.2019
+- idtype: pmcid
+  value: PMC6509571
+authors:
+- authtype: Author
+  name: Eisenhauer S
+- authtype: Author
+  name: Fiebach CJ
+- authtype: Author
+  name: Gagl B
+epubdate: 2019 May 8
+fulljournalname: eNeuro
+issue: '2'
+pages: ENEURO.0321-18.2019
+pmclivedate: 2019/05/10
+printpubdate: ''
+pubdate: 2019 May 8
+sortdate: 2019/05/08 00:00
+source: eNeuro
+title: 'Context-Based Facilitation in Visual Word Recognition: Evidence for Visual
+  and Lexical But Not Pre-Lexical Contributions '
+uid: '6509571'
+volume: '6'

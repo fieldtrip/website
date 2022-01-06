@@ -1,0 +1,42 @@
+articleids:
+- idtype: pmid
+  value: '34001599'
+- idtype: doi
+  value: 10.1073/pnas.2012075118
+- idtype: pmcid
+  value: PMC8166184
+authors:
+- authtype: Author
+  name: Skelin I
+- authtype: Author
+  name: Zhang H
+- authtype: Author
+  name: Zheng J
+- authtype: Author
+  name: Ma S
+- authtype: Author
+  name: Mander BA
+- authtype: Author
+  name: Kim McManus O
+- authtype: Author
+  name: Vadera S
+- authtype: Author
+  name: Knight RT
+- authtype: Author
+  name: McNaughton BL
+- authtype: Author
+  name: Lin JJ
+epubdate: 2021 May 17
+fulljournalname: Proceedings of the National Academy of Sciences of the United States
+  of America
+issue: '21'
+pages: e2012075118
+pmclivedate: 2021/11/17
+printpubdate: 2021 May 25
+pubdate: 2021 May 17
+sortdate: 2021/05/17 00:00
+source: Proc Natl Acad Sci U S A
+title: Coupling between slow waves and sharp-wave ripples engages distributed neural
+  activity during sleep in humans
+uid: '8166184'
+volume: '118'

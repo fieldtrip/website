@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '25411458'
+- idtype: doi
+  value: 10.1152/jn.00338.2014
+- idtype: pmcid
+  value: PMC4329440
+authors:
+- authtype: Author
+  name: Kloosterman NA
+- authtype: Author
+  name: Meindertsma T
+- authtype: Author
+  name: Hillebrand A
+- authtype: Author
+  name: van Dijk BW
+- authtype: Author
+  name: Lamme VA
+- authtype: Author
+  name: Donner TH
+epubdate: 2014 Nov 19
+fulljournalname: Journal of Neurophysiology
+issue: '4'
+pages: 1063-1076
+pmclivedate: 2016/02/15
+printpubdate: 2015 Feb 15
+pubdate: 2014 Nov 19
+sortdate: 2014/11/19 00:00
+source: J Neurophysiol
+title: Top-down modulation in human visual cortex predicts the stability of a perceptual
+  illusion
+uid: '4329440'
+volume: '113'

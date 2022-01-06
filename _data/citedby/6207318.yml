@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '30335745'
+- idtype: doi
+  value: 10.1371/journal.pbio.2005979
+- idtype: pmcid
+  value: PMC6207318
+authors:
+- authtype: Author
+  name: Swart JC
+- authtype: Author
+  name: Frank MJ
+- authtype: Author
+  name: Määttä JI
+- authtype: Author
+  name: Jensen O
+- authtype: Author
+  name: Cools R
+- authtype: Author
+  name: den Ouden HE
+epubdate: 2018 Oct 18
+fulljournalname: PLoS Biology
+issue: '10'
+pages: e2005979
+pmclivedate: 2018/11/19
+printpubdate: ''
+pubdate: 2018 Oct 18
+sortdate: 2018/10/18 00:00
+source: PLoS Biol
+title: Frontal network dynamics reflect neurocomputational mechanisms for reducing
+  maladaptive biases in motivated action
+uid: '6207318'
+volume: '16'

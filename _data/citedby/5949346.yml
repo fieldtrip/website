@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '29867423'
+- idtype: doi
+  value: 10.3389/fncom.2018.00030
+- idtype: pmcid
+  value: PMC5949346
+authors:
+- authtype: Author
+  name: Hashimoto Y
+- authtype: Author
+  name: Yotsumoto Y
+epubdate: 2018 May 7
+fulljournalname: Frontiers in Computational Neuroscience
+issue: ''
+pages: '30'
+pmclivedate: 2018/06/04
+printpubdate: ''
+pubdate: 2018 May 7
+sortdate: 2018/05/07 00:00
+source: Front Comput Neurosci
+title: The Amount of Time Dilation for Visual Flickers Corresponds to the Amount of
+  Neural Entrainments Measured by EEG
+uid: '5949346'
+volume: '12'

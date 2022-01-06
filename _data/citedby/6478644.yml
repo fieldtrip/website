@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '30737580'
+- idtype: doi
+  value: 10.1007/s10072-019-3725-y
+- idtype: pmcid
+  value: PMC6478644
+authors:
+- authtype: Author
+  name: Rucco R
+- authtype: Author
+  name: Liparoti M
+- authtype: Author
+  name: Jacini F
+- authtype: Author
+  name: Baselice F
+- authtype: Author
+  name: Antenora A
+- authtype: Author
+  name: De Michele G
+- authtype: Author
+  name: Criscuolo C
+- authtype: Author
+  name: Vettoliere A
+- authtype: Author
+  name: Mandolesi L
+- authtype: Author
+  name: Sorrentino G
+- authtype: Author
+  name: Sorrentino P
+epubdate: 2019 Feb 8
+fulljournalname: Neurological Sciences
+issue: '5'
+pages: 979-984
+pmclivedate: 2019/05/14
+printpubdate: '2019'
+pubdate: 2019 Feb 8
+sortdate: 2019/02/08 00:00
+source: Neurol Sci
+title: Mutations in the SPAST gene causing hereditary spastic paraplegia are related
+  to global topological alterations in brain functional networks
+uid: '6478644'
+volume: '40'

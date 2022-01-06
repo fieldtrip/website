@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '25512038'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2014.12.015
+- idtype: pmcid
+  value: PMC4306525
+authors:
+- authtype: Author
+  name: FitzGerald TH
+- authtype: Author
+  name: Moran RJ
+- authtype: Author
+  name: Friston KJ
+- authtype: Author
+  name: Dolan RJ
+epubdate: ''
+fulljournalname: Neuroimage
+issue: ''
+pages: 219-228
+pmclivedate: 2015/02/15
+printpubdate: 2015 Feb 15
+pubdate: 2015 Feb 15
+sortdate: 2015/02/15 00:00
+source: Neuroimage
+title: Precision and neuronal dynamics in the human posterior parietal cortex during
+  evidence accumulation
+uid: '4306525'
+volume: '107'

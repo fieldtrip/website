@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '34593605'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1114-21.2021
+- idtype: pmcid
+  value: PMC8612475
+authors:
+- authtype: Author
+  name: Zhou YJ
+- authtype: Author
+  name: Iemi L
+- authtype: Author
+  name: Schoffelen JM
+- authtype: Author
+  name: de Lange FP
+- authtype: Author
+  name: Haegens S
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '46'
+pages: 9581-9592
+pmclivedate: ''
+printpubdate: 2021 Nov 17
+pubdate: 2021 Nov 17
+sortdate: 2021/11/17 00:00
+source: J Neurosci
+title: Alpha Oscillations Shape Sensory Representation and Perceptual Sensitivity
+uid: '8612475'
+volume: '41'

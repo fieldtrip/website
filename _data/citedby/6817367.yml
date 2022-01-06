@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '29960089'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2018.06.067
+- idtype: pmcid
+  value: PMC6817367
+- idtype: MID
+  value: NIHMS994130
+authors:
+- authtype: Author
+  name: Mehraei G
+- authtype: Author
+  name: Shinn-Cunningham B
+- authtype: Author
+  name: Dau T
+epubdate: 2018 Jun 28
+fulljournalname: NeuroImage
+issue: ''
+pages: 548-556
+pmclivedate: 2019/10/28
+printpubdate: 2018 Oct 1
+pubdate: 2018 Jun 28
+sortdate: 2018/06/28 00:00
+source: Neuroimage
+title: Influence of talker discontinuity on cortical dynamics of auditory spatial
+  attention
+uid: '6817367'
+volume: '179'

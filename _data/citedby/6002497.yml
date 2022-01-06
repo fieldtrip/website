@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '29937712'
+- idtype: doi
+  value: 10.3389/fnins.2018.00393
+- idtype: pmcid
+  value: PMC6002497
+authors:
+- authtype: Author
+  name: Zipser CM
+- authtype: Author
+  name: Premoli I
+- authtype: Author
+  name: Belardinelli P
+- authtype: Author
+  name: Castellanos N
+- authtype: Author
+  name: Rivolta D
+- authtype: Author
+  name: Heidegger T
+- authtype: Author
+  name: Müller-Dahlhaus F
+- authtype: Author
+  name: Ziemann U
+epubdate: 2018 Jun 8
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '393'
+pmclivedate: 2018/06/22
+printpubdate: ''
+pubdate: 2018 Jun 8
+sortdate: 2018/06/08 00:00
+source: Front Neurosci
+title: Cortical Excitability and Interhemispheric Connectivity in Early Relapsing–Remitting
+  Multiple Sclerosis Studied With TMS-EEG
+uid: '6002497'
+volume: '12'

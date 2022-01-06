@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '27336159'
+- idtype: doi
+  value: 10.1371/journal.pone.0154881
+- idtype: pmcid
+  value: PMC4918966
+authors:
+- authtype: Author
+  name: van der Meij R
+- authtype: Author
+  name: van Ede F
+- authtype: Author
+  name: Maris E
+epubdate: 2016 Jun 23
+fulljournalname: PLoS ONE
+issue: '6'
+pages: e0154881
+pmclivedate: 2016/07/08
+printpubdate: ''
+pubdate: 2016 Jun 23
+sortdate: 2016/06/23 00:00
+source: PLoS One
+title: Rhythmic Components in Extracranial Brain Signals Reveal Multifaceted Task
+  Modulation of Overlapping Neuronal Activity
+uid: '4918966'
+volume: '11'

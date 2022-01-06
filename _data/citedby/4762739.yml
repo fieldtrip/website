@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '26780574'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2016.01.003
+- idtype: pmcid
+  value: PMC4762739
+- idtype: MID
+  value: NIHMS750736
+authors:
+- authtype: Author
+  name: Scharinger M
+- authtype: Author
+  name: Monahan PJ
+- authtype: Author
+  name: Idsardi WJ
+epubdate: 2016 Jan 11
+fulljournalname: NeuroImage
+issue: ''
+pages: 293-301
+pmclivedate: 2017/03/01
+printpubdate: 2016 Mar
+pubdate: 2016 Jan 11
+sortdate: 2016/01/11 00:00
+source: Neuroimage
+title: 'Linguistic category structure influences early auditory processing: Converging
+  evidence from mismatch responses and cortical oscillations'
+uid: '4762739'
+volume: '128'

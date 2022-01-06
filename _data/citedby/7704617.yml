@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '32746015'
+- idtype: doi
+  value: 10.1109/TBME.2020.2999271
+- idtype: pmcid
+  value: PMC7704617
+- idtype: MID
+  value: NIHMS1616388
+authors:
+- authtype: Author
+  name: Makarov SN
+- authtype: Author
+  name: Hämäläinen M
+- authtype: Author
+  name: Okada Y
+- authtype: Author
+  name: Noetscher GM
+- authtype: Author
+  name: Ahveninen J
+- authtype: Author
+  name: Nummenmaa A
+epubdate: 2020 Dec 21
+fulljournalname: IEEE transactions on bio-medical engineering
+issue: '1'
+pages: 308-318
+pmclivedate: 2022/01/01
+printpubdate: 2021 Jan
+pubdate: 2020 Dec 21
+sortdate: 2020/12/21 00:00
+source: IEEE Trans Biomed Eng
+title: Boundary Element Fast Multipole Method for Enhanced Modeling of Neurophysiological
+  Recordings
+uid: '7704617'
+volume: '68'

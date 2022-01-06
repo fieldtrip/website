@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '32044440'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2020.116615
+- idtype: pmcid
+  value: PMC7733399
+- idtype: MID
+  value: NIHMS1650719
+authors:
+- authtype: Author
+  name: Jones KT
+- authtype: Author
+  name: Johnson EL
+- authtype: Author
+  name: Berryhill ME
+epubdate: 2020 Feb 7
+fulljournalname: NeuroImage
+issue: ''
+pages: '116615'
+pmclivedate: 2020/12/12
+printpubdate: 2020 May 1
+pubdate: 2020 Feb 7
+sortdate: 2020/02/07 00:00
+source: Neuroimage
+title: Frontoparietal theta-gamma interactions track working memory enhancement with
+  training and tDCS
+uid: '7733399'
+volume: '211'

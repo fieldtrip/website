@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '30356712'
+- idtype: doi
+  value: 10.3389/fnins.2018.00711
+- idtype: pmcid
+  value: PMC6189392
+authors:
+- authtype: Author
+  name: Popov T
+- authtype: Author
+  name: Oostenveld R
+- authtype: Author
+  name: Schoffelen JM
+epubdate: 2018 Oct 9
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '711'
+pmclivedate: 2018/10/23
+printpubdate: ''
+pubdate: 2018 Oct 9
+sortdate: 2018/10/09 00:00
+source: Front Neurosci
+title: 'FieldTrip Made Easy: An Analysis Protocol for Group Analysis of the Auditory
+  Steady State Brain Response in Time, Frequency, and Space'
+uid: '6189392'
+volume: '12'

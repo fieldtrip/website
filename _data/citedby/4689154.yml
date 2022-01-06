@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '26779046'
+- idtype: doi
+  value: 10.3389/fpsyg.2015.01953
+- idtype: pmcid
+  value: PMC4689154
+authors:
+- authtype: Author
+  name: Canal P
+- authtype: Author
+  name: Garnham A
+- authtype: Author
+  name: Oakhill J
+epubdate: 2015 Dec 23
+fulljournalname: Frontiers in Psychology
+issue: ''
+pages: '1953'
+pmclivedate: 2016/01/15
+printpubdate: ''
+pubdate: 2015 Dec 23
+sortdate: 2015/12/23 00:00
+source: Front Psychol
+title: 'Beyond Gender Stereotypes in Language Comprehension: Self Sex-Role Descriptions
+  Affect the Brain’s Potentials Associated with Agreement Processing'
+uid: '4689154'
+volume: '6'

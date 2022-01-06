@@ -1,0 +1,51 @@
+articleids:
+- idtype: pmid
+  value: '25678630'
+- idtype: doi
+  value: 10.1093/cercor/bhv008
+- idtype: pmcid
+  value: PMC6276914
+authors:
+- authtype: Author
+  name: Jenkins J III
+- authtype: Author
+  name: Chow V
+- authtype: Author
+  name: Blaskey L
+- authtype: Author
+  name: Kuschner E
+- authtype: Author
+  name: Qasmieh S
+- authtype: Author
+  name: Gaetz L
+- authtype: Author
+  name: Edgar JC
+- authtype: Author
+  name: Mukherjee P
+- authtype: Author
+  name: Buckner R
+- authtype: Author
+  name: Nagarajan SS
+- authtype: Author
+  name: Chung WK
+- authtype: Author
+  name: Spiro JE
+- authtype: Author
+  name: Sherr EH
+- authtype: Author
+  name: Berman JI
+- authtype: Author
+  name: Roberts TP
+epubdate: 2015 Feb 11
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '5'
+pages: 1957-1964
+pmclivedate: 2018/12/11
+printpubdate: 2016 May
+pubdate: 2015 Feb 11
+sortdate: 2015/02/11 00:00
+source: Cereb Cortex
+title: Auditory Evoked M100 Response Latency is Delayed in Children with 16p11.2 Deletion
+  but not 16p11.2 Duplication
+uid: '6276914'
+volume: '26'

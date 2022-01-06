@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '29659125'
+- idtype: doi
+  value: 10.1111/desc.12669
+- idtype: pmcid
+  value: PMC6193851
+authors:
+- authtype: Author
+  name: Barnes‐Davis ME
+- authtype: Author
+  name: Merhar SL
+- authtype: Author
+  name: Holland SK
+- authtype: Author
+  name: Kadis DS
+epubdate: 2018 Apr 16
+fulljournalname: Developmental Science
+issue: '6'
+pages: e12669
+pmclivedate: 2018/11/01
+printpubdate: 2018 Nov
+pubdate: 2018 Apr 16
+sortdate: 2018/04/16 00:00
+source: Dev Sci
+title: 'Extremely preterm children exhibit increased interhemispheric connectivity
+  for language: findings from fMRI‐constrained MEG analysis'
+uid: '6193851'
+volume: '21'

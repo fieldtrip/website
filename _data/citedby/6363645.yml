@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '30721365'
+- idtype: doi
+  value: 10.1186/s40708-019-0094-5
+- idtype: pmcid
+  value: PMC6363645
+authors:
+- authtype: Author
+  name: Barik K
+- authtype: Author
+  name: Daimi SN
+- authtype: Author
+  name: Jones R
+- authtype: Author
+  name: Bhattacharya J
+- authtype: Author
+  name: Saha G
+epubdate: 2019 Feb 5
+fulljournalname: Brain Informatics
+issue: '1'
+pages: '2'
+pmclivedate: 2019/02/27
+printpubdate: ''
+pubdate: 2019 Feb 5
+sortdate: 2019/02/05 00:00
+source: Brain Inform
+title: 'A machine learning approach to predict perceptual decisions: an insight into
+  face pareidolia'
+uid: '6363645'
+volume: '6'

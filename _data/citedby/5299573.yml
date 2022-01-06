@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '28069918'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.2945-16.2016
+- idtype: pmcid
+  value: PMC5299573
+authors:
+- authtype: Author
+  name: de Vries IE
+- authtype: Author
+  name: van Driel J
+- authtype: Author
+  name: Olivers CN
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '6'
+pages: 1591-1603
+pmclivedate: 2017/03/01
+printpubdate: 2017 Feb 8
+pubdate: 2017 Feb 8
+sortdate: 2017/02/08 00:00
+source: J Neurosci
+title: Posterior α EEG Dynamics Dissociate Current from Future Goals in Working Memory-Guided
+  Visual Search
+uid: '5299573'
+volume: '37'

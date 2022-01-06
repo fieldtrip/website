@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '24125590'
+- idtype: doi
+  value: 10.1186/1471-2202-14-122
+- idtype: pmcid
+  value: PMC4015840
+authors:
+- authtype: Author
+  name: Schurger A
+- authtype: Author
+  name: Marti S
+- authtype: Author
+  name: Dehaene S
+epubdate: 2013 Oct 14
+fulljournalname: BMC Neuroscience
+issue: ''
+pages: '122'
+pmclivedate: 2014/05/23
+printpubdate: ''
+pubdate: 2013 Oct 14
+sortdate: 2013/10/14 00:00
+source: BMC Neurosci
+title: Reducing multi-sensor data to a single time course that reveals experimental
+  effects
+uid: '4015840'
+volume: '14'

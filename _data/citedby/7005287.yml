@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '32029711'
+- idtype: doi
+  value: 10.1038/s41467-019-13967-9
+- idtype: pmcid
+  value: PMC7005287
+authors:
+- authtype: Author
+  name: Park HD
+- authtype: Author
+  name: Barnoud C
+- authtype: Author
+  name: Trang H
+- authtype: Author
+  name: Kannape OA
+- authtype: Author
+  name: Schaller K
+- authtype: Author
+  name: Blanke O
+epubdate: 2020 Feb 6
+fulljournalname: Nature Communications
+issue: ''
+pages: '289'
+pmclivedate: 2020/02/10
+printpubdate: ''
+pubdate: 2020 Feb 6
+sortdate: 2020/02/06 00:00
+source: Nat Commun
+title: Breathing is coupled with voluntary action and the cortical readiness potential
+uid: '7005287'
+volume: '11'

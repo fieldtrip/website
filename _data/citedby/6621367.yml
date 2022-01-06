@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '23015429'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.2227-12.2012
+- idtype: pmcid
+  value: PMC6621367
+authors:
+- authtype: Author
+  name: Todorovic A
+- authtype: Author
+  name: de Lange FP
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '39'
+pages: 13389-13395
+pmclivedate: 2019/07/18
+printpubdate: 2012 Sep 26
+pubdate: 2012 Sep 26
+sortdate: 2012/09/26 00:00
+source: J Neurosci
+title: Repetition Suppression and Expectation Suppression Are Dissociable in Time
+  in Early Auditory Evoked Fields
+uid: '6621367'
+volume: '32'

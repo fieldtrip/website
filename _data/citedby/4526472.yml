@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '25556210'
+- idtype: doi
+  value: 10.1093/scan/nsu151
+- idtype: pmcid
+  value: PMC4526472
+authors:
+- authtype: Author
+  name: Leuthold H
+- authtype: Author
+  name: Kunkel A
+- authtype: Author
+  name: Mackenzie IG
+- authtype: Author
+  name: Filik R
+epubdate: 2015 Jan 1
+fulljournalname: Social Cognitive and Affective Neuroscience
+issue: '8'
+pages: 1021-1029
+pmclivedate: 2016/08/01
+printpubdate: 2015 Aug
+pubdate: 2015 Jan 1
+sortdate: 2015/01/01 00:00
+source: Soc Cogn Affect Neurosci
+title: 'Online processing of moral transgressions: ERP evidence for spontaneous evaluation'
+uid: '4526472'
+volume: '10'

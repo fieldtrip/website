@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '32080207'
+- idtype: doi
+  value: 10.1038/s41598-020-59322-7
+- idtype: pmcid
+  value: PMC7033100
+authors:
+- authtype: Author
+  name: Arnold DH
+- authtype: Author
+  name: Hohaia W
+- authtype: Author
+  name: Yarrow K
+epubdate: 2020 Feb 20
+fulljournalname: Scientific Reports
+issue: ''
+pages: '3098'
+pmclivedate: 2020/02/27
+printpubdate: ''
+pubdate: 2020 Feb 20
+sortdate: 2020/02/20 00:00
+source: Sci Rep
+title: Neural correlates of subjective timing precision and confidence
+uid: '7033100'
+volume: '10'

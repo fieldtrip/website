@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '33364603'
+- idtype: doi
+  value: 10.1093/braincomms/fcaa213
+- idtype: pmcid
+  value: PMC7749791
+authors:
+- authtype: Author
+  name: Xia J
+- authtype: Author
+  name: Mazaheri A
+- authtype: Author
+  name: Segaert K
+- authtype: Author
+  name: Salmon DP
+- authtype: Author
+  name: Harvey D
+- authtype: Author
+  name: Shapiro K
+- authtype: Author
+  name: Kutas M
+- authtype: Author
+  name: Olichney JM
+epubdate: 2020 Dec 10
+fulljournalname: Brain Communications
+issue: '2'
+pages: fcaa213
+pmclivedate: 2020/12/23
+printpubdate: ''
+pubdate: 2020 Dec 10
+sortdate: 2020/12/10 00:00
+source: Brain Commun
+title: Event-related potential and EEG oscillatory predictors of verbal memory in
+  mild cognitive impairment
+uid: '7749791'
+volume: '2'

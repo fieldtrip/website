@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '27080158'
+- idtype: doi
+  value: 10.1038/srep24683
+- idtype: pmcid
+  value: PMC4832338
+authors:
+- authtype: Author
+  name: Bottari D
+- authtype: Author
+  name: Troje NF
+- authtype: Author
+  name: Ley P
+- authtype: Author
+  name: Hense M
+- authtype: Author
+  name: Kekunnaya R
+- authtype: Author
+  name: Röder B
+epubdate: 2016 Apr 15
+fulljournalname: Scientific Reports
+issue: ''
+pages: '24683'
+pmclivedate: 2016/04/20
+printpubdate: ''
+pubdate: 2016 Apr 15
+sortdate: 2016/04/15 00:00
+source: Sci Rep
+title: Sight restoration after congenital blindness does not reinstate alpha oscillatory
+  activity in humans
+uid: '4832338'
+volume: '6'

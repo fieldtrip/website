@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '24381293'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.3974-13.2014
+- idtype: pmcid
+  value: PMC3866491
+authors:
+- authtype: Author
+  name: Herrmann B
+- authtype: Author
+  name: Schlichting N
+- authtype: Author
+  name: Obleser J
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '1'
+pages: 327-331
+pmclivedate: 2014/01/01
+printpubdate: 2014 Jan 1
+pubdate: 2014 Jan 1
+sortdate: 2014/01/01 00:00
+source: J Neurosci
+title: Dynamic Range Adaptation to Spectral Stimulus Statistics in Human Auditory
+  Cortex
+uid: '3866491'
+volume: '34'

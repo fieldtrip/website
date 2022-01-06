@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '29561263'
+- idtype: doi
+  value: 10.7554/eLife.33321
+- idtype: pmcid
+  value: PMC5935486
+authors:
+- authtype: Author
+  name: Rebollo I
+- authtype: Author
+  name: Devauchelle AD
+- authtype: Author
+  name: Béranger B
+- authtype: Author
+  name: Tallon-Baudry C
+epubdate: 2018 Mar 21
+fulljournalname: eLife
+issue: ''
+pages: e33321
+pmclivedate: 2018/05/07
+printpubdate: ''
+pubdate: 2018 Mar 21
+sortdate: 2018/03/21 00:00
+source: eLife
+title: Stomach-brain synchrony reveals a novel, delayed-connectivity resting-state
+  network in humans
+uid: '5935486'
+volume: '7'

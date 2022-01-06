@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '30877786'
+- idtype: doi
+  value: 10.1093/cercor/bhz042
+- idtype: pmcid
+  value: PMC6918928
+authors:
+- authtype: Author
+  name: Itthipuripat S
+- authtype: Author
+  name: Deering S
+- authtype: Author
+  name: Serences JT
+epubdate: 2019 Mar 16
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '12'
+pages: 5037-5048
+pmclivedate: 2020/12/17
+printpubdate: 2019 Dec
+pubdate: 2019 Mar 16
+sortdate: 2019/03/16 00:00
+source: Cereb Cortex
+title: 'When Conflict Cannot be Avoided: Relative Contributions of Early Selection
+  and Frontal Executive Control in Mitigating Stroop Conflict'
+uid: '6918928'
+volume: '29'

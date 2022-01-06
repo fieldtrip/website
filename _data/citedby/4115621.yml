@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '25126060'
+- idtype: doi
+  value: 10.3389/fnsys.2014.00132
+- idtype: pmcid
+  value: PMC4115621
+authors:
+- authtype: Author
+  name: Luft CD
+- authtype: Author
+  name: Pereda E
+- authtype: Author
+  name: Banissy MJ
+- authtype: Author
+  name: Bhattacharya J
+epubdate: 2014 Jul 30
+fulljournalname: Frontiers in Systems Neuroscience
+issue: ''
+pages: '132'
+pmclivedate: 2014/08/14
+printpubdate: ''
+pubdate: 2014 Jul 30
+sortdate: 2014/07/30 00:00
+source: Front Syst Neurosci
+title: 'Best of both worlds: promise of combining brain stimulation and brain connectome'
+uid: '4115621'
+volume: '8'

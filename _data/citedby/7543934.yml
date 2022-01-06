@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '33007782'
+- idtype: doi
+  value: 10.1093/scan/nsaa110
+- idtype: pmcid
+  value: PMC7543934
+authors:
+- authtype: Author
+  name: Volynets S
+- authtype: Author
+  name: Smirnov D
+- authtype: Author
+  name: Saarimäki H
+- authtype: Author
+  name: Nummenmaa L
+epubdate: 2020 Oct 2
+fulljournalname: Social Cognitive and Affective Neuroscience
+issue: '8'
+pages: 803-813
+pmclivedate: 2020/10/15
+printpubdate: ''
+pubdate: 2020 Oct 2
+sortdate: 2020/10/02 00:00
+source: Soc Cogn Affect Neurosci
+title: Statistical pattern recognition reveals shared neural signatures for displaying
+  and recognizing specific facial expressions
+uid: '7543934'
+volume: '15'

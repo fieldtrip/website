@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '34400530'
+- idtype: doi
+  value: 10.1101/lm.053412.121
+- idtype: pmcid
+  value: PMC8372568
+authors:
+- authtype: Author
+  name: Cunningham TJ
+- authtype: Author
+  name: Bottary R
+- authtype: Author
+  name: Denis D
+- authtype: Author
+  name: Payne JD
+epubdate: 2021 Sep
+fulljournalname: Learning & Memory
+issue: '9'
+pages: 291-299
+pmclivedate: ''
+printpubdate: ''
+pubdate: 2021 Sep
+sortdate: 2021/09/01 00:00
+source: Learn Mem
+title: Sleep spectral power correlates of prospective memory maintenance
+uid: '8372568'
+volume: '28'

@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '23251527'
+- idtype: doi
+  value: 10.1371/journal.pone.0051419
+- idtype: pmcid
+  value: PMC3519624
+authors:
+- authtype: Author
+  name: Otterbein S
+- authtype: Author
+  name: Abel C
+- authtype: Author
+  name: Heinemann LV
+- authtype: Author
+  name: Kaiser J
+- authtype: Author
+  name: Schmidt-Kassow M
+epubdate: 2012 Dec 10
+fulljournalname: PLoS ONE
+issue: '12'
+pages: e51419
+pmclivedate: 2012/12/18
+printpubdate: ''
+pubdate: 2012 Dec 10
+sortdate: 2012/12/10 00:00
+source: PLoS One
+title: P3b Reflects Periodicity in Linguistic Sequences
+uid: '3519624'
+volume: '7'

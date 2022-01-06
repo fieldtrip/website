@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '32615476'
+- idtype: doi
+  value: 10.1016/j.nicl.2020.102314
+- idtype: pmcid
+  value: PMC7330615
+authors:
+- authtype: Author
+  name: Guo J
+- authtype: Author
+  name: Luo X
+- authtype: Author
+  name: Li B
+- authtype: Author
+  name: Chang Q
+- authtype: Author
+  name: Sun L
+- authtype: Author
+  name: Song Y
+epubdate: 2020 Jun 17
+fulljournalname: 'NeuroImage : Clinical'
+issue: ''
+pages: '102314'
+pmclivedate: 2020/07/06
+printpubdate: ''
+pubdate: 2020 Jun 17
+sortdate: 2020/06/17 00:00
+source: Neuroimage Clin
+title: Abnormal modulation of theta oscillations in children with attention-deficit/hyperactivity
+  disorder
+uid: '7330615'
+volume: '27'

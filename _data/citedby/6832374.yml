@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '31615138'
+- idtype: doi
+  value: 10.3390/s19204454
+- idtype: pmcid
+  value: PMC6832374
+authors:
+- authtype: Author
+  name: Piorecky M
+- authtype: Author
+  name: Koudelka V
+- authtype: Author
+  name: Strobl J
+- authtype: Author
+  name: Brunovsky M
+- authtype: Author
+  name: Krajca V
+epubdate: 2019 Oct 14
+fulljournalname: Sensors (Basel, Switzerland)
+issue: '20'
+pages: '4454'
+pmclivedate: 2019/11/21
+printpubdate: ''
+pubdate: 2019 Oct 14
+sortdate: 2019/10/14 00:00
+source: Sensors (Basel)
+title: 'Artifacts in Simultaneous hdEEG/fMRI Imaging: A Nonlinear Dimensionality Reduction
+  Approach '
+uid: '6832374'
+volume: '19'

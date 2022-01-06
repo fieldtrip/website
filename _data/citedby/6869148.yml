@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '24845057'
+- idtype: doi
+  value: 10.1002/hbm.22546
+- idtype: pmcid
+  value: PMC6869148
+authors:
+- authtype: Author
+  name: Hege MA
+- authtype: Author
+  name: Preissl H
+- authtype: Author
+  name: Stingl KT
+epubdate: 2014 May 21
+fulljournalname: Human Brain Mapping
+issue: '10'
+pages: 5236-5248
+pmclivedate: 2020/06/12
+printpubdate: ''
+pubdate: 2014 May 21
+sortdate: 2014/05/21 00:00
+source: Hum Brain Mapp
+title: Magnetoencephalographic signatures of right prefrontal cortex involvement in
+  response inhibition
+uid: '6869148'
+volume: '35'

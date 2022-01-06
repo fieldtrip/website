@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '26379232'
+- idtype: doi
+  value: 10.1371/journal.pone.0138297
+- idtype: pmcid
+  value: PMC4574940
+authors:
+- authtype: Author
+  name: Hassan M
+- authtype: Author
+  name: Shamas M
+- authtype: Author
+  name: Khalil M
+- authtype: Author
+  name: El Falou W
+- authtype: Author
+  name: Wendling F
+epubdate: 2015 Sep 17
+fulljournalname: PLoS ONE
+issue: '9'
+pages: e0138297
+pmclivedate: 2015/09/25
+printpubdate: ''
+pubdate: 2015 Sep 17
+sortdate: 2015/09/17 00:00
+source: PLoS One
+title: 'EEGNET: An Open Source Tool for Analyzing and Visualizing M/EEG Connectome'
+uid: '4574940'
+volume: '10'

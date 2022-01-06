@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '30584648'
+- idtype: doi
+  value: 10.1007/s10548-018-00695-4
+- idtype: pmcid
+  value: PMC6476838
+authors:
+- authtype: Author
+  name: Markewitz R
+- authtype: Author
+  name: Engel S
+- authtype: Author
+  name: Langguth B
+- authtype: Author
+  name: Schecklmann M
+epubdate: 2018 Dec 24
+fulljournalname: Brain Topography
+issue: '3'
+pages: 343-353
+pmclivedate: 2019/05/14
+printpubdate: '2019'
+pubdate: 2018 Dec 24
+sortdate: 2018/12/24 00:00
+source: Brain Topogr
+title: Effects of Acoustic Paired Associative Stimulation on Late Auditory Evoked
+  Potentials
+uid: '6476838'
+volume: '32'

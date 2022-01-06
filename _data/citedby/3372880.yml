@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '22701443'
+- idtype: doi
+  value: 10.3389/fpsyg.2012.00187
+- idtype: pmcid
+  value: PMC3372880
+authors:
+- authtype: Author
+  name: Wang L
+- authtype: Author
+  name: Zhu Z
+- authtype: Author
+  name: Bastiaansen M
+epubdate: 2012 Jun 12
+fulljournalname: Frontiers in Psychology
+issue: ''
+pages: '187'
+pmclivedate: 2012/06/14
+printpubdate: ''
+pubdate: 2012 Jun 12
+sortdate: 2012/06/12 00:00
+source: Front Psychol
+title: Integration or Predictability? A Further Specification of the Functional Role
+  of Gamma Oscillations in Language Comprehension
+uid: '3372880'
+volume: '3'

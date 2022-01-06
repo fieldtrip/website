@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '28491032'
+- idtype: doi
+  value: 10.3389/fninf.2017.00028
+- idtype: pmcid
+  value: PMC5405139
+authors:
+- authtype: Author
+  name: Dimitriadis SI
+- authtype: Author
+  name: Salis C
+- authtype: Author
+  name: Tarnanas I
+- authtype: Author
+  name: Linden DE
+epubdate: 2017 Apr 26
+fulljournalname: Frontiers in Neuroinformatics
+issue: ''
+pages: '28'
+pmclivedate: 2017/05/10
+printpubdate: ''
+pubdate: 2017 Apr 26
+sortdate: 2017/04/26 00:00
+source: Front Neuroinform
+title: 'Topological Filtering of Dynamic Functional Brain Networks Unfolds Informative
+  Chronnectomics: A Novel Data-Driven Thresholding Scheme Based on Orthogonal Minimal
+  Spanning Trees (OMSTs)'
+uid: '5405139'
+volume: '11'

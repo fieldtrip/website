@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '29580236'
+- idtype: doi
+  value: 10.1186/s12938-018-0463-y
+- idtype: pmcid
+  value: PMC5870695
+authors:
+- authtype: Author
+  name: Vorwerk J
+- authtype: Author
+  name: Oostenveld R
+- authtype: Author
+  name: Piastra MC
+- authtype: Author
+  name: Magyari L
+- authtype: Author
+  name: Wolters CH
+epubdate: 2018 Mar 27
+fulljournalname: BioMedical Engineering OnLine
+issue: ''
+pages: '37'
+pmclivedate: 2018/03/29
+printpubdate: ''
+pubdate: 2018 Mar 27
+sortdate: 2018/03/27 00:00
+source: Biomed Eng Online
+title: The FieldTrip-SimBio pipeline for EEG forward solutions
+uid: '5870695'
+volume: '17'

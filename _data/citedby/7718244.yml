@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '33277601'
+- idtype: doi
+  value: 10.1038/s42003-020-01457-4
+- idtype: pmcid
+  value: PMC7718244
+authors:
+- authtype: Author
+  name: Forcato C
+- authtype: Author
+  name: Klinzing JG
+- authtype: Author
+  name: Carbone J
+- authtype: Author
+  name: Radloff M
+- authtype: Author
+  name: Weber FD
+- authtype: Author
+  name: Born J
+- authtype: Author
+  name: Diekelmann S
+epubdate: 2020 Dec 4
+fulljournalname: Communications Biology
+issue: ''
+pages: '733'
+pmclivedate: 2020/12/07
+printpubdate: ''
+pubdate: 2020 Dec 4
+sortdate: 2020/12/04 00:00
+source: Commun Biol
+title: Reactivation during sleep with incomplete reminder cues rather than complete
+  ones stabilizes long-term memory in humans
+uid: '7718244'
+volume: '3'

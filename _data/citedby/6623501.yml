@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '21697363'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1425-11.2011
+- idtype: pmcid
+  value: PMC6623501
+authors:
+- authtype: Author
+  name: Todorovic A
+- authtype: Author
+  name: van Ede F
+- authtype: Author
+  name: Maris E
+- authtype: Author
+  name: de Lange FP
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '25'
+pages: 9118-9123
+pmclivedate: 2019/07/23
+printpubdate: 2011 Jun 22
+pubdate: 2011 Jun 22
+sortdate: 2011/06/22 00:00
+source: J Neurosci
+title: 'Prior Expectation Mediates Neural Adaptation to Repeated Sounds in the Auditory
+  Cortex: An MEG Study'
+uid: '6623501'
+volume: '31'

@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '31151118'
+- idtype: doi
+  value: 10.1088/1741-2552/ab2610
+- idtype: pmcid
+  value: PMC6877351
+- idtype: MID
+  value: EMS84993
+authors:
+- authtype: Author
+  name: Petkos K
+- authtype: Author
+  name: Guiho T
+- authtype: Author
+  name: Degenaar P
+- authtype: Author
+  name: Jackson A
+- authtype: Author
+  name: Brown P
+- authtype: Author
+  name: Denison T
+- authtype: Author
+  name: Drakakis EM
+epubdate: 2019 Oct 9
+fulljournalname: Journal of neural engineering
+issue: '6'
+pages: '066003'
+pmclivedate: 2019/11/25
+printpubdate: 2019 Oct 9
+pubdate: 2019 Oct 9
+sortdate: 2019/10/09 00:00
+source: J Neural Eng
+title: A high-performance 4 nV (√Hz)−1 analog front-end architecture for artefact
+  suppression in local field potential recordings during deep brain stimulation
+uid: '6877351'
+volume: '16'

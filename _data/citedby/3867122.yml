@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '24391611'
+- idtype: doi
+  value: 10.3389/fpsyg.2013.00948
+- idtype: pmcid
+  value: PMC3867122
+authors:
+- authtype: Author
+  name: Kosilo M
+- authtype: Author
+  name: Wuerger SM
+- authtype: Author
+  name: Craddock M
+- authtype: Author
+  name: Jennings BJ
+- authtype: Author
+  name: Hunt AR
+- authtype: Author
+  name: Martinovic J
+epubdate: 2013 Dec 18
+fulljournalname: Frontiers in Psychology
+issue: ''
+pages: '948'
+pmclivedate: 2014/01/03
+printpubdate: ''
+pubdate: 2013 Dec 18
+sortdate: 2013/12/18 00:00
+source: Front Psychol
+title: Low-level and high-level modulations of fixational saccades and high frequency
+  oscillatory brain activity in a visual object classification task
+uid: '3867122'
+volume: '4'

@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '31754012'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1953-19.2019
+- idtype: pmcid
+  value: PMC6948941
+authors:
+- authtype: Author
+  name: Torrecillos F
+- authtype: Author
+  name: Falato E
+- authtype: Author
+  name: Pogosyan A
+- authtype: Author
+  name: West T
+- authtype: Author
+  name: Di Lazzaro V
+- authtype: Author
+  name: Brown P
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '2'
+pages: 369-381
+pmclivedate: 2020/01/10
+printpubdate: 2020 Jan 8
+pubdate: 2020 Jan 8
+sortdate: 2020/01/08 00:00
+source: J Neurosci
+title: Motor Cortex Inputs at the Optimum Phase of Beta Cortical Oscillations Undergo
+  More Rapid and Less Variable Corticospinal Propagation
+uid: '6948941'
+volume: '40'

@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '26538641'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.2243-15.2015
+- idtype: pmcid
+  value: PMC4635123
+authors:
+- authtype: Author
+  name: Kayser SJ
+- authtype: Author
+  name: Ince RA
+- authtype: Author
+  name: Gross J
+- authtype: Author
+  name: Kayser C
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '44'
+pages: 14691-14701
+pmclivedate: 2015/11/16
+printpubdate: 2015 Nov 4
+pubdate: 2015 Nov 4
+sortdate: 2015/11/04 00:00
+source: J Neurosci
+title: Irregular Speech Rate Dissociates Auditory Cortical Entrainment, Evoked Responses,
+  and Frontal Alpha
+uid: '4635123'
+volume: '35'

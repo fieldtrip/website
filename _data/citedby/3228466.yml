@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '22084106'
+- idtype: doi
+  value: 10.1073/pnas.1117190108
+- idtype: pmcid
+  value: PMC3228466
+authors:
+- authtype: Author
+  name: Haegens S
+- authtype: Author
+  name: Nácher V
+- authtype: Author
+  name: Luna R
+- authtype: Author
+  name: Romo R
+- authtype: Author
+  name: Jensen O
+epubdate: 2011 Nov 14
+fulljournalname: Proceedings of the National Academy of Sciences of the United States
+  of America
+issue: '48'
+pages: 19377-19382
+pmclivedate: 2012/05/29
+printpubdate: 2011 Nov 29
+pubdate: 2011 Nov 14
+sortdate: 2011/11/14 00:00
+source: Proc Natl Acad Sci U S A
+title: α-Oscillations in the monkey sensorimotor network influence discrimination
+  performance by rhythmical inhibition of neuronal spiking
+uid: '3228466'
+volume: '108'

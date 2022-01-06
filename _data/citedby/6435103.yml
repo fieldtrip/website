@@ -1,0 +1,42 @@
+articleids:
+- idtype: pmid
+  value: '30639839'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2019.01.017
+- idtype: pmcid
+  value: PMC6435103
+authors:
+- authtype: Author
+  name: O'Neill GC
+- authtype: Author
+  name: Watkins RH
+- authtype: Author
+  name: Ackerley R
+- authtype: Author
+  name: Barratt EL
+- authtype: Author
+  name: Sengupta A
+- authtype: Author
+  name: Asghar M
+- authtype: Author
+  name: Sanchez Panchuelo RM
+- authtype: Author
+  name: Brookes MJ
+- authtype: Author
+  name: Glover PM
+- authtype: Author
+  name: Wessberg J
+- authtype: Author
+  name: Francis ST
+epubdate: ''
+fulljournalname: Neuroimage
+issue: ''
+pages: 329-340
+pmclivedate: 2019/04/08
+printpubdate: 2019 Apr 1
+pubdate: 2019 Apr 1
+sortdate: 2019/04/01 00:00
+source: Neuroimage
+title: Imaging human cortical responses to intraneural microstimulation using magnetoencephalography
+uid: '6435103'
+volume: '189'

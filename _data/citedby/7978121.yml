@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '33368838'
+- idtype: doi
+  value: 10.1002/hbm.25328
+- idtype: pmcid
+  value: PMC7978121
+authors:
+- authtype: Author
+  name: Amoruso L
+- authtype: Author
+  name: Geng S
+- authtype: Author
+  name: Molinaro N
+- authtype: Author
+  name: Timofeeva P
+- authtype: Author
+  name: Gisbert‐Muñoz S
+- authtype: Author
+  name: Gil‐Robles S
+- authtype: Author
+  name: Pomposo I
+- authtype: Author
+  name: Quiñones I
+- authtype: Author
+  name: Carreiras M
+epubdate: 2020 Dec 24
+fulljournalname: Human Brain Mapping
+issue: '6'
+pages: 1777-1793
+pmclivedate: 2021/03/23
+printpubdate: ''
+pubdate: 2020 Dec 24
+sortdate: 2020/12/24 00:00
+source: Hum Brain Mapp
+title: 'Oscillatory and structural signatures of language plasticity in brain tumor
+  patients: A longitudinal study'
+uid: '7978121'
+volume: '42'

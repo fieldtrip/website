@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '29920373'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2018.06.050
+- idtype: pmcid
+  value: PMC6433235
+- idtype: MID
+  value: EMS81824
+authors:
+- authtype: Author
+  name: Branco MP
+- authtype: Author
+  name: Leibbrand M
+- authtype: Author
+  name: Vansteensel MJ
+- authtype: Author
+  name: Freudenburg ZV
+- authtype: Author
+  name: Ramsey NF
+epubdate: 2018 Jun 18
+fulljournalname: NeuroImage
+issue: ''
+pages: 225-234
+pmclivedate: 2019/10/01
+printpubdate: 2018 Oct 1
+pubdate: 2018 Jun 18
+sortdate: 2018/06/18 00:00
+source: Neuroimage
+title: 'GridLoc: An automatic and unsupervised localization method for high-density
+  ECoG grids'
+uid: '6433235'
+volume: '179'

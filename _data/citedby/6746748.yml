@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '31527782'
+- idtype: doi
+  value: 10.1038/s41598-019-50106-2
+- idtype: pmcid
+  value: PMC6746748
+authors:
+- authtype: Author
+  name: Perinelli A
+- authtype: Author
+  name: Tabarelli D
+- authtype: Author
+  name: Miniussi C
+- authtype: Author
+  name: Ricci L
+epubdate: 2019 Sep 16
+fulljournalname: Scientific Reports
+issue: ''
+pages: '13412'
+pmclivedate: 2019/09/27
+printpubdate: ''
+pubdate: 2019 Sep 16
+sortdate: 2019/09/16 00:00
+source: Sci Rep
+title: Dependence of connectivity on geometric distance in brain networks
+uid: '6746748'
+volume: '9'

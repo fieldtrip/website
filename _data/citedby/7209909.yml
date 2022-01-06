@@ -1,0 +1,24 @@
+articleids:
+- idtype: pmid
+  value: '32248787'
+- idtype: doi
+  value: 10.1098/rstb.2019.0231
+- idtype: pmcid
+  value: PMC7209909
+authors:
+- authtype: Author
+  name: Tingley D
+- authtype: Author
+  name: Peyrache A
+epubdate: 2020 Apr 6
+fulljournalname: 'Philosophical Transactions of the Royal Society B: Biological Sciences'
+issue: '1799'
+pages: '20190231'
+pmclivedate: 2021/05/25
+printpubdate: 2020 May 25
+pubdate: 2020 Apr 6
+sortdate: 2020/04/06 00:00
+source: Philos Trans R Soc Lond B Biol Sci
+title: On the methods for reactivation and replay analysis
+uid: '7209909'
+volume: '375'

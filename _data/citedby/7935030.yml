@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '33688615'
+- idtype: doi
+  value: 10.1162/netn_a_00177
+- idtype: pmcid
+  value: PMC7935030
+authors:
+- authtype: Author
+  name: Anagnostopoulou A
+- authtype: Author
+  name: Styliadis C
+- authtype: Author
+  name: Kartsidis P
+- authtype: Author
+  name: Romanopoulou E
+- authtype: Author
+  name: Zilidou V
+- authtype: Author
+  name: Karali C
+- authtype: Author
+  name: Karagianni M
+- authtype: Author
+  name: Klados M
+- authtype: Author
+  name: Paraskevopoulos E
+- authtype: Author
+  name: Bamidis PD
+epubdate: 2021 Mar 1
+fulljournalname: Network Neuroscience
+issue: '1'
+pages: 274-294
+pmclivedate: 2021/03/08
+printpubdate: ''
+pubdate: 2021 Mar 1
+sortdate: 2021/03/01 00:00
+source: Netw Neurosci
+title: 'Computerized physical and cognitive training improves the functional architecture
+  of the brain in adults with Down syndrome: A network science EEG study'
+uid: '7935030'
+volume: '5'

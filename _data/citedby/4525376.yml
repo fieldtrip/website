@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '26242909'
+- idtype: doi
+  value: 10.1038/srep12881
+- idtype: pmcid
+  value: PMC4525376
+authors:
+- authtype: Author
+  name: Bögels S
+- authtype: Author
+  name: Magyari L
+- authtype: Author
+  name: Levinson SC
+epubdate: 2015 Aug 5
+fulljournalname: Scientific Reports
+issue: ''
+pages: '12881'
+pmclivedate: 2015/08/06
+printpubdate: ''
+pubdate: 2015 Aug 5
+sortdate: 2015/08/05 00:00
+source: Sci Rep
+title: Neural signatures of response planning occur midway through an incoming question
+  in conversation
+uid: '4525376'
+volume: '5'

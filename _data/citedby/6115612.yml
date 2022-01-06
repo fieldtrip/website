@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '30190674'
+- idtype: doi
+  value: 10.3389/fncom.2018.00060
+- idtype: pmcid
+  value: PMC6115612
+authors:
+- authtype: Author
+  name: Mandal PK
+- authtype: Author
+  name: Banerjee A
+- authtype: Author
+  name: Tripathi M
+- authtype: Author
+  name: Sharma A
+epubdate: 2018 Aug 23
+fulljournalname: Frontiers in Computational Neuroscience
+issue: ''
+pages: '60'
+pmclivedate: 2018/09/06
+printpubdate: ''
+pubdate: 2018 Aug 23
+sortdate: 2018/08/23 00:00
+source: Front Comput Neurosci
+title: A Comprehensive Review of Magnetoencephalography (MEG) Studies for Brain Functionality
+  in Healthy Aging and Alzheimer's Disease (AD)
+uid: '6115612'
+volume: '12'

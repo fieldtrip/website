@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '29395915'
+- idtype: doi
+  value: 10.1016/j.neuron.2018.01.009
+- idtype: pmcid
+  value: PMC6091891
+- idtype: MID
+  value: NIHMS932928
+authors:
+- authtype: Author
+  name: Wutz A
+- authtype: Author
+  name: Loonis R
+- authtype: Author
+  name: Roy JE
+- authtype: Author
+  name: Donoghue JA
+- authtype: Author
+  name: Miller EK
+epubdate: 2018 Jan 27
+fulljournalname: Neuron
+issue: '3'
+pages: 716-726.e8
+pmclivedate: 2019/02/07
+printpubdate: 2018 Feb 7
+pubdate: 2018 Jan 27
+sortdate: 2018/01/27 00:00
+source: Neuron
+title: Different levels of category abstraction by different dynamics in different
+  prefrontal areas
+uid: '6091891'
+volume: '97'

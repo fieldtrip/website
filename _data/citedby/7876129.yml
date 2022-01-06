@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '33568692'
+- idtype: doi
+  value: 10.1038/s41598-021-82688-1
+- idtype: pmcid
+  value: PMC7876129
+authors:
+- authtype: Author
+  name: Maksimenko V
+- authtype: Author
+  name: Kuc A
+- authtype: Author
+  name: Frolov N
+- authtype: Author
+  name: Kurkin S
+- authtype: Author
+  name: Hramov A
+epubdate: 2021 Feb 10
+fulljournalname: Scientific Reports
+issue: ''
+pages: '3454'
+pmclivedate: 2021/02/11
+printpubdate: ''
+pubdate: 2021 Feb 10
+sortdate: 2021/02/10 00:00
+source: Sci Rep
+title: Effect of repetition on the behavioral and neuronal responses to ambiguous
+  Necker cube images
+uid: '7876129'
+volume: '11'

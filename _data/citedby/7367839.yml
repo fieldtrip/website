@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '32681138'
+- idtype: doi
+  value: 10.1038/s41598-020-68414-3
+- idtype: pmcid
+  value: PMC7367839
+authors:
+- authtype: Author
+  name: Wooldridge J
+- authtype: Author
+  name: Kaiser M
+- authtype: Author
+  name: Roa Romero Y
+- authtype: Author
+  name: Riecke L
+- authtype: Author
+  name: Keil J
+- authtype: Author
+  name: Senkowski D
+epubdate: 2020 Jul 17
+fulljournalname: Scientific Reports
+issue: ''
+pages: '11872'
+pmclivedate: 2020/07/20
+printpubdate: ''
+pubdate: 2020 Jul 17
+sortdate: 2020/07/17 00:00
+source: Sci Rep
+title: Low-frequency oscillations reflect aberrant tone restoration during the auditory
+  continuity illusion in schizophrenia
+uid: '7367839'
+volume: '10'

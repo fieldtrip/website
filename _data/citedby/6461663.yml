@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '30979927'
+- idtype: doi
+  value: 10.1038/s41598-019-42380-x
+- idtype: pmcid
+  value: PMC6461663
+authors:
+- authtype: Author
+  name: Kaiser M
+- authtype: Author
+  name: Senkowski D
+- authtype: Author
+  name: Busch NA
+- authtype: Author
+  name: Balz J
+- authtype: Author
+  name: Keil J
+epubdate: 2019 Apr 12
+fulljournalname: Scientific Reports
+issue: ''
+pages: '5983'
+pmclivedate: 2019/04/17
+printpubdate: ''
+pubdate: 2019 Apr 12
+sortdate: 2019/04/12 00:00
+source: Sci Rep
+title: Single trial prestimulus oscillations predict perception of the sound-induced
+  flash illusion
+uid: '6461663'
+volume: '9'

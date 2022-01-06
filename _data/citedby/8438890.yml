@@ -1,0 +1,47 @@
+articleids:
+- idtype: pmid
+  value: '34521381'
+- idtype: doi
+  value: 10.1186/s12883-021-02376-5
+- idtype: pmcid
+  value: PMC8438890
+authors:
+- authtype: Author
+  name: Stoyell SM
+- authtype: Author
+  name: Baxter BS
+- authtype: Author
+  name: McLaren J
+- authtype: Author
+  name: Kwon H
+- authtype: Author
+  name: Chinappen DM
+- authtype: Author
+  name: Ostrowski L
+- authtype: Author
+  name: Zhu L
+- authtype: Author
+  name: Grieco JA
+- authtype: Author
+  name: Kramer MA
+- authtype: Author
+  name: Morgan AK
+- authtype: Author
+  name: Emerton BC
+- authtype: Author
+  name: Manoach DS
+- authtype: Author
+  name: Chu CJ
+epubdate: 2021 Sep 14
+fulljournalname: BMC Neurology
+issue: ''
+pages: '355'
+pmclivedate: 2021/09/14
+printpubdate: ''
+pubdate: 2021 Sep 14
+sortdate: 2021/09/14 00:00
+source: BMC Neurol
+title: Diazepam induced sleep spindle increase correlates with cognitive recovery
+  in a child with epileptic encephalopathy
+uid: '8438890'
+volume: '21'

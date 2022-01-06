@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '30127712'
+- idtype: doi
+  value: 10.3389/fnins.2018.00530
+- idtype: pmcid
+  value: PMC6088222
+authors:
+- authtype: Author
+  name: Jas M
+- authtype: Author
+  name: Larson E
+- authtype: Author
+  name: Engemann DA
+- authtype: Author
+  name: Leppäkangas J
+- authtype: Author
+  name: Taulu S
+- authtype: Author
+  name: Hämäläinen M
+- authtype: Author
+  name: Gramfort A
+epubdate: 2018 Aug 6
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '530'
+pmclivedate: 2018/08/20
+printpubdate: ''
+pubdate: 2018 Aug 6
+sortdate: 2018/08/06 00:00
+source: Front Neurosci
+title: 'A Reproducible MEG/EEG Group Study With the MNE Software: Recommendations,
+  Quality Assessments, and Good Practices'
+uid: '6088222'
+volume: '12'

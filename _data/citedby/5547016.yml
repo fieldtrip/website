@@ -1,0 +1,38 @@
+articleids:
+- idtype: pmid
+  value: '28167837'
+- idtype: doi
+  value: 10.1038/mp.2017.3
+- idtype: pmcid
+  value: PMC5547016
+- idtype: MID
+  value: NIHMS834847
+authors:
+- authtype: Author
+  name: Lee M
+- authtype: Author
+  name: Sehatpour P
+- authtype: Author
+  name: Hoptman MJ
+- authtype: Author
+  name: Lakatos P
+- authtype: Author
+  name: Dias EC
+- authtype: Author
+  name: Kantrowitz JT
+- authtype: Author
+  name: Martinez AM
+- authtype: Author
+  name: Javitt DC
+epubdate: 2017 Feb 7
+fulljournalname: Molecular psychiatry
+issue: '11'
+pages: 1585-1593
+pmclivedate: 2017/10/26
+printpubdate: 2017 Nov
+pubdate: 2017 Feb 7
+sortdate: 2017/02/07 00:00
+source: Mol Psychiatry
+title: Neural mechanisms of mismatch negativity (MMN) dysfunction in schizophrenia
+uid: '5547016'
+volume: '22'

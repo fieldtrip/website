@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '21713012'
+- idtype: doi
+  value: 10.3389/fpsyg.2011.00128
+- idtype: pmcid
+  value: PMC3114253
+authors:
+- authtype: Author
+  name: Johnson JS
+- authtype: Author
+  name: Sutterer DW
+- authtype: Author
+  name: Acheson DJ
+- authtype: Author
+  name: Lewis-Peacock JA
+- authtype: Author
+  name: Postle BR
+epubdate: 2011 Jun 10
+fulljournalname: Frontiers in Psychology
+issue: ''
+pages: '128'
+pmclivedate: 2011/06/27
+printpubdate: ''
+pubdate: 2011 Jun 10
+sortdate: 2011/06/10 00:00
+source: Front Psychol
+title: Increased Alpha-Band Power during the Retention of Shapes and Shape-Location
+  Associations in Visual Short-Term Memory
+uid: '3114253'
+volume: '2'

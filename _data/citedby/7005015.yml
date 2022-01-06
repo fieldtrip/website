@@ -1,0 +1,34 @@
+articleids:
+- idtype: pmid
+  value: '32029826'
+- idtype: doi
+  value: 10.1038/s41598-020-58802-0
+- idtype: pmcid
+  value: PMC7005015
+authors:
+- authtype: Author
+  name: Haensel JX
+- authtype: Author
+  name: Danvers M
+- authtype: Author
+  name: Ishikawa M
+- authtype: Author
+  name: Itakura S
+- authtype: Author
+  name: Tucciarelli R
+- authtype: Author
+  name: Smith TJ
+- authtype: Author
+  name: Senju A
+epubdate: 2020 Feb 6
+fulljournalname: Scientific Reports
+issue: ''
+pages: '1958'
+pmclivedate: 2020/02/14
+printpubdate: ''
+pubdate: 2020 Feb 6
+sortdate: 2020/02/06 00:00
+source: Sci Rep
+title: Culture modulates face scanning during dyadic social interactions
+uid: '7005015'
+volume: '10'

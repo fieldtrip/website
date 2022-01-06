@@ -1,0 +1,38 @@
+articleids:
+- idtype: pmid
+  value: '25540802'
+- idtype: doi
+  value: 10.1002/acn3.129
+- idtype: pmcid
+  value: PMC4265059
+authors:
+- authtype: Author
+  name: Bousleiman H
+- authtype: Author
+  name: Zimmermann R
+- authtype: Author
+  name: Ahmed S
+- authtype: Author
+  name: Hardmeier M
+- authtype: Author
+  name: Hatz F
+- authtype: Author
+  name: Schindler C
+- authtype: Author
+  name: Roth V
+- authtype: Author
+  name: Gschwandtner U
+- authtype: Author
+  name: Fuhr P
+epubdate: 2014 Oct 2
+fulljournalname: Annals of Clinical and Translational Neurology
+issue: '11'
+pages: 884-890
+pmclivedate: 2014/12/24
+printpubdate: 2014 Nov
+pubdate: 2014 Oct 2
+sortdate: 2014/10/02 00:00
+source: Ann Clin Transl Neurol
+title: Power spectra for screening parkinsonian patients for mild cognitive impairment
+uid: '4265059'
+volume: '1'

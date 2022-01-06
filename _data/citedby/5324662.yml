@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '28071873'
+- idtype: doi
+  value: 10.1111/cns.12670
+- idtype: pmcid
+  value: PMC5324662
+authors:
+- authtype: Author
+  name: Zach H
+- authtype: Author
+  name: Dirkx MF
+- authtype: Author
+  name: Pasman JW
+- authtype: Author
+  name: Bloem BR
+- authtype: Author
+  name: Helmich RC
+epubdate: 2017 Jan 10
+fulljournalname: CNS Neuroscience & Therapeutics
+issue: '3'
+pages: 209-215
+pmclivedate: 2017/03/14
+printpubdate: ''
+pubdate: 2017 Jan 10
+sortdate: 2017/01/10 00:00
+source: CNS Neurosci Ther
+title: Cognitive Stress Reduces the Effect of Levodopa on Parkinson's Resting Tremor
+uid: '5324662'
+volume: '23'

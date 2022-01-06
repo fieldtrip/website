@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '29733953'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2018.05.002
+- idtype: pmcid
+  value: PMC6057272
+authors:
+- authtype: Author
+  name: Heideman SG
+- authtype: Author
+  name: Rohenkohl G
+- authtype: Author
+  name: Chauvin JJ
+- authtype: Author
+  name: Palmer CE
+- authtype: Author
+  name: van Ede F
+- authtype: Author
+  name: Nobre AC
+epubdate: ''
+fulljournalname: Neuroimage
+issue: ''
+pages: 46-56
+pmclivedate: 2018/09/01
+printpubdate: 2018 Sep
+pubdate: 2018 Sep
+sortdate: 2018/09/01 00:00
+source: Neuroimage
+title: Anticipatory neural dynamics of spatial-temporal orienting of attention in
+  younger and older adults
+uid: '6057272'
+volume: '178'

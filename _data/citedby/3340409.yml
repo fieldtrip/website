@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '22558332'
+- idtype: doi
+  value: 10.1371/journal.pone.0036070
+- idtype: pmcid
+  value: PMC3340409
+authors:
+- authtype: Author
+  name: Jessen S
+- authtype: Author
+  name: Obleser J
+- authtype: Author
+  name: Kotz SA
+epubdate: 2012 Apr 30
+fulljournalname: PLoS ONE
+issue: '4'
+pages: e36070
+pmclivedate: 2012/05/03
+printpubdate: ''
+pubdate: 2012 Apr 30
+sortdate: 2012/04/30 00:00
+source: PLoS One
+title: How Bodies and Voices Interact in Early Emotion Perception
+uid: '3340409'
+volume: '7'

@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '32659312'
+- idtype: doi
+  value: 10.1016/j.neulet.2020.135241
+- idtype: pmcid
+  value: PMC8075105
+- idtype: MID
+  value: NIHMS1688686
+authors:
+- authtype: Author
+  name: Ruglass LM
+- authtype: Author
+  name: Root JC
+- authtype: Author
+  name: Dambreville N
+- authtype: Author
+  name: Shevorykin A
+- authtype: Author
+  name: Sheffer CE
+- authtype: Author
+  name: Melara RD
+epubdate: 2020 Jul 10
+fulljournalname: Neuroscience letters
+issue: ''
+pages: '135241'
+pmclivedate: 2021/09/14
+printpubdate: 2020 Sep 14
+pubdate: 2020 Jul 10
+sortdate: 2020/07/10 00:00
+source: Neurosci Lett
+title: 'Examining differences in attentional bias to smoking-related cues among black
+  and white cigarette smokers: An event-related potential pilot study'
+uid: '8075105'
+volume: '735'

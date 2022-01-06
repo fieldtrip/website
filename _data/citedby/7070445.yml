@@ -1,0 +1,24 @@
+articleids:
+- idtype: pmid
+  value: '32075868'
+- idtype: doi
+  value: 10.1523/ENEURO.0435-19.2019
+- idtype: pmcid
+  value: PMC7070445
+authors:
+- authtype: Author
+  name: Kayser SJ
+- authtype: Author
+  name: Kayser C
+epubdate: 2020 Mar 2
+fulljournalname: eNeuro
+issue: '2'
+pages: ENEURO.0435-19.2019
+pmclivedate: 2020/03/16
+printpubdate: ''
+pubdate: 2020 Mar 2
+sortdate: 2020/03/02 00:00
+source: eNeuro
+title: Shared Physiological Correlates of Multisensory and Expectation-Based Facilitation
+uid: '7070445'
+volume: '7'

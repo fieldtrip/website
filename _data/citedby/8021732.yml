@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '33833671'
+- idtype: doi
+  value: 10.3389/fnhum.2021.630813
+- idtype: pmcid
+  value: PMC8021732
+authors:
+- authtype: Author
+  name: Palacios-García I
+- authtype: Author
+  name: Silva J
+- authtype: Author
+  name: Villena-González M
+- authtype: Author
+  name: Campos-Arteaga G
+- authtype: Author
+  name: Artigas-Vergara C
+- authtype: Author
+  name: Luarte N
+- authtype: Author
+  name: Rodríguez E
+- authtype: Author
+  name: Bosman CA
+epubdate: 2021 Mar 23
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '630813'
+pmclivedate: 2021/04/07
+printpubdate: ''
+pubdate: 2021 Mar 23
+sortdate: 2021/03/23 00:00
+source: Front Hum Neurosci
+title: Increase in Beta Power Reflects Attentional Top-Down Modulation After Psychosocial
+  Stress Induction
+uid: '8021732'
+volume: '15'

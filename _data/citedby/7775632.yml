@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '33384021'
+- idtype: doi
+  value: 10.1186/s13229-020-00408-4
+- idtype: pmcid
+  value: PMC7775632
+authors:
+- authtype: Author
+  name: Stroganova TA
+- authtype: Author
+  name: Komarov KS
+- authtype: Author
+  name: Sysoeva OV
+- authtype: Author
+  name: Goiaeva DE
+- authtype: Author
+  name: Obukhova TS
+- authtype: Author
+  name: Ovsiannikova TM
+- authtype: Author
+  name: Prokofyev AO
+- authtype: Author
+  name: Orekhova EV
+epubdate: 2020 Dec 31
+fulljournalname: Molecular Autism
+issue: ''
+pages: '100'
+pmclivedate: 2021/01/04
+printpubdate: ''
+pubdate: 2020 Dec 31
+sortdate: 2020/12/31 00:00
+source: Mol Autism
+title: Left hemispheric deficit in the sustained neuromagnetic response to periodic
+  click trains in children with ASD
+uid: '7775632'
+volume: '11'

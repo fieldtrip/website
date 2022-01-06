@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '34663727'
+- idtype: doi
+  value: 10.1073/pnas.2105276118
+- idtype: pmcid
+  value: PMC8639370
+authors:
+- authtype: Author
+  name: Lazar A
+- authtype: Author
+  name: Lewis C
+- authtype: Author
+  name: Fries P
+- authtype: Author
+  name: Singer W
+- authtype: Author
+  name: Nikolic D
+epubdate: 2021 Oct 18
+fulljournalname: Proceedings of the National Academy of Sciences of the United States
+  of America
+issue: '43'
+pages: e2105276118
+pmclivedate: 2021/12/12
+printpubdate: 2021 Oct 26
+pubdate: 2021 Oct 18
+sortdate: 2021/10/18 00:00
+source: Proc Natl Acad Sci U S A
+title: Visual exposure enhances stimulus encoding and persistence in primary cortex
+uid: '8639370'
+volume: '118'

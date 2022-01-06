@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '26175673'
+- idtype: doi
+  value: 10.3389/fnbeh.2015.00165
+- idtype: pmcid
+  value: PMC4484227
+authors:
+- authtype: Author
+  name: Eidelman-Rothman M
+- authtype: Author
+  name: Goldstein A
+- authtype: Author
+  name: Levy J
+- authtype: Author
+  name: Weisman O
+- authtype: Author
+  name: Schneiderman I
+- authtype: Author
+  name: Mankuta D
+- authtype: Author
+  name: Zagoory-Sharon O
+- authtype: Author
+  name: Feldman R
+epubdate: 2015 Jun 29
+fulljournalname: Frontiers in Behavioral Neuroscience
+issue: ''
+pages: '165'
+pmclivedate: 2015/07/14
+printpubdate: ''
+pubdate: 2015 Jun 29
+sortdate: 2015/06/29 00:00
+source: Front Behav Neurosci
+title: Oxytocin affects spontaneous neural oscillations in trauma-exposed war veterans
+uid: '4484227'
+volume: '9'

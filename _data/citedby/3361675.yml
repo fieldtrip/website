@@ -1,0 +1,24 @@
+articleids:
+- idtype: pmid
+  value: '22654959'
+- idtype: doi
+  value: 10.1155/2012/451938
+- idtype: pmcid
+  value: PMC3361675
+authors:
+- authtype: Author
+  name: Micheli C
+- authtype: Author
+  name: Braun C
+epubdate: 2012 May 10
+fulljournalname: Computational and Mathematical Methods in Medicine
+issue: ''
+pages: '451938'
+pmclivedate: 2012/05/31
+printpubdate: '2012'
+pubdate: 2012 May 10
+sortdate: 2012/05/10 00:00
+source: Comput Math Methods Med
+title: Enhancing the Signal of Corticomuscular Coherence
+uid: '3361675'
+volume: '2012'

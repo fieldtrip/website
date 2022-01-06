@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '27647158'
+- idtype: doi
+  value: 10.1038/srep33693
+- idtype: pmcid
+  value: PMC5028762
+authors:
+- authtype: Author
+  name: Plöchl M
+- authtype: Author
+  name: Gaston J
+- authtype: Author
+  name: Mermagen T
+- authtype: Author
+  name: König P
+- authtype: Author
+  name: Hairston WD
+epubdate: 2016 Sep 20
+fulljournalname: Scientific Reports
+issue: ''
+pages: '33693'
+pmclivedate: 2016/09/26
+printpubdate: ''
+pubdate: 2016 Sep 20
+sortdate: 2016/09/20 00:00
+source: Sci Rep
+title: Oscillatory activity in auditory cortex reflects the perceptual level of audio-tactile
+  integration
+uid: '5028762'
+volume: '6'

@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '29973896'
+- idtype: doi
+  value: 10.3389/fpsyg.2018.00984
+- idtype: pmcid
+  value: PMC6019480
+authors:
+- authtype: Author
+  name: Stecher HI
+- authtype: Author
+  name: Herrmann CS
+epubdate: 2018 Jun 20
+fulljournalname: Frontiers in Psychology
+issue: ''
+pages: '984'
+pmclivedate: 2018/07/04
+printpubdate: ''
+pubdate: 2018 Jun 20
+sortdate: 2018/06/20 00:00
+source: Front Psychol
+title: Absence of Alpha-tACS Aftereffects in Darkness Reveals Importance of Taking
+  Derivations of Stimulation Frequency and Individual Alpha Variability Into Account
+uid: '6019480'
+volume: '9'

@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '31182638'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0535-19.2019
+- idtype: pmcid
+  value: PMC6668210
+authors:
+- authtype: Author
+  name: Huang Y
+- authtype: Author
+  name: Hajnal B
+- authtype: Author
+  name: Entz L
+- authtype: Author
+  name: Fabó D
+- authtype: Author
+  name: Herrero JL
+- authtype: Author
+  name: Mehta AD
+- authtype: Author
+  name: Keller CJ
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '31'
+pages: 6122-6135
+pmclivedate: 2020/01/31
+printpubdate: 2019 Jul 31
+pubdate: 2019 Jul 31
+sortdate: 2019/07/31 00:00
+source: J Neurosci
+title: Intracortical Dynamics Underlying Repetitive Stimulation Predicts Changes in
+  Network Connectivity
+uid: '6668210'
+volume: '39'

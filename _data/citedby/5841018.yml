@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '29551983'
+- idtype: doi
+  value: 10.3389/fpsyg.2018.00235
+- idtype: pmcid
+  value: PMC5841018
+authors:
+- authtype: Author
+  name: Lau P
+- authtype: Author
+  name: Wollbrink A
+- authtype: Author
+  name: Wunderlich R
+- authtype: Author
+  name: Engell A
+- authtype: Author
+  name: Löhe A
+- authtype: Author
+  name: Junghöfer M
+- authtype: Author
+  name: Pantev C
+epubdate: 2018 Mar 2
+fulljournalname: Frontiers in Psychology
+issue: ''
+pages: '235'
+pmclivedate: 2018/03/16
+printpubdate: ''
+pubdate: 2018 Mar 2
+sortdate: 2018/03/02 00:00
+source: Front Psychol
+title: 'Targeting Heterogeneous Findings in Neuronal Oscillations in Tinnitus: Analyzing
+  MEG Novices and Mental Health Comorbidities'
+uid: '5841018'
+volume: '9'

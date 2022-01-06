@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '32891872'
+- idtype: doi
+  value: 10.1016/j.brs.2020.08.014
+- idtype: pmcid
+  value: PMC7710976
+authors:
+- authtype: Author
+  name: Braun V
+- authtype: Author
+  name: Blackmore J
+- authtype: Author
+  name: Cleveland RO
+- authtype: Author
+  name: Butler CR
+epubdate: ''
+fulljournalname: Brain Stimulation
+issue: '6'
+pages: 1527-1534
+pmclivedate: 2020/12/09
+printpubdate: 2020 Nov-Dec
+pubdate: 2020 Nov-Dec
+sortdate: 2020/11/01 00:00
+source: Brain Stimul
+title: Transcranial ultrasound stimulation in humans is associated with an auditory
+  confound that can be effectively masked
+uid: '7710976'
+volume: '13'

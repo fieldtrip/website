@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '30912271'
+- idtype: doi
+  value: 10.1002/brb3.1269
+- idtype: pmcid
+  value: PMC6520303
+authors:
+- authtype: Author
+  name: van der Velde B
+- authtype: Author
+  name: Haartsen R
+- authtype: Author
+  name: Kemner C
+epubdate: 2019 Mar 25
+fulljournalname: Brain and Behavior
+issue: '5'
+pages: e01269
+pmclivedate: 2019/05/23
+printpubdate: ''
+pubdate: 2019 Mar 25
+sortdate: 2019/03/25 00:00
+source: Brain Behav
+title: Test‐retest reliability of EEG network characteristics in infants
+uid: '6520303'
+volume: '9'

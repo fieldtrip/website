@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '27158589'
+- idtype: doi
+  value: 10.1016/j.nicl.2016.03.021
+- idtype: pmcid
+  value: PMC4844592
+authors:
+- authtype: Author
+  name: Port RG
+- authtype: Author
+  name: Edgar JC
+- authtype: Author
+  name: Ku M
+- authtype: Author
+  name: Bloy L
+- authtype: Author
+  name: Murray R
+- authtype: Author
+  name: Blaskey L
+- authtype: Author
+  name: Levy SE
+- authtype: Author
+  name: Roberts TP
+epubdate: 2016 Apr 6
+fulljournalname: 'NeuroImage : Clinical'
+issue: ''
+pages: 566-577
+pmclivedate: 2016/05/06
+printpubdate: ''
+pubdate: 2016 Apr 6
+sortdate: 2016/04/06 00:00
+source: Neuroimage Clin
+title: Maturation of auditory neural processes in autism spectrum disorder — A longitudinal
+  MEG study
+uid: '4844592'
+volume: '11'

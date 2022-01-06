@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '27548068'
+- idtype: doi
+  value: 10.1002/mds.26759
+- idtype: pmcid
+  value: PMC5120686
+- idtype: MID
+  value: EMS70482
+authors:
+- authtype: Author
+  name: Neumann WJ
+- authtype: Author
+  name: Degen K
+- authtype: Author
+  name: Schneider GH
+- authtype: Author
+  name: Brücke C
+- authtype: Author
+  name: Huebl J
+- authtype: Author
+  name: Brown P
+- authtype: Author
+  name: Kühn AA
+epubdate: 2016 Aug 22
+fulljournalname: 'Movement disorders : official journal of the Movement Disorder Society'
+issue: '11'
+pages: 1748-1751
+pmclivedate: 2016/11/23
+printpubdate: 2016 Nov
+pubdate: 2016 Aug 22
+sortdate: 2016/08/22 00:00
+source: Mov Disord
+title: Subthalamic Synchronized Oscillatory Activity Correlates With Motor Impairment
+  in Patients With Parkinson’s Disease
+uid: '5120686'
+volume: '31'

@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '32097593'
+- idtype: doi
+  value: 10.1098/rspb.2020.0115
+- idtype: pmcid
+  value: PMC7062029
+authors:
+- authtype: Author
+  name: Popov T
+- authtype: Author
+  name: Szyszka P
+epubdate: 2020 Feb 26
+fulljournalname: 'Proceedings of the Royal Society B: Biological Sciences'
+issue: '1921'
+pages: '20200115'
+pmclivedate: 2021/02/26
+printpubdate: 2020 Feb 26
+pubdate: 2020 Feb 26
+sortdate: 2020/02/26 00:00
+source: Proc Biol Sci
+title: Alpha oscillations govern interhemispheric spike timing coordination in the
+  honey bee brain
+uid: '7062029'
+volume: '287'

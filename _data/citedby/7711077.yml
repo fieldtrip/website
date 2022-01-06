@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '33328839'
+- idtype: doi
+  value: 10.3389/fnins.2020.00714
+- idtype: pmcid
+  value: PMC7711077
+authors:
+- authtype: Author
+  name: Velasquez-Martinez LF
+- authtype: Author
+  name: Zapata-Castano F
+- authtype: Author
+  name: Castellanos-Dominguez G
+epubdate: 2020 Nov 19
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '714'
+pmclivedate: 2020/12/15
+printpubdate: ''
+pubdate: 2020 Nov 19
+sortdate: 2020/11/19 00:00
+source: Front Neurosci
+title: Dynamic Modeling of Common Brain Neural Activity in Motor Imagery Tasks
+uid: '7711077'
+volume: '14'

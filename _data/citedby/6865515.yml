@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '31219652'
+- idtype: doi
+  value: 10.1002/hbm.24699
+- idtype: pmcid
+  value: PMC6865515
+authors:
+- authtype: Author
+  name: Pscherer C
+- authtype: Author
+  name: Mückschel M
+- authtype: Author
+  name: Summerer L
+- authtype: Author
+  name: Bluschke A
+- authtype: Author
+  name: Beste C
+epubdate: 2019 Jun 20
+fulljournalname: Human Brain Mapping
+issue: '14'
+pages: 4253-4265
+pmclivedate: 2020/06/12
+printpubdate: ''
+pubdate: 2019 Jun 20
+sortdate: 2019/06/20 00:00
+source: Hum Brain Mapp
+title: On the relevance of EEG resting theta activity for the neurophysiological dynamics
+  underlying motor inhibitory control
+uid: '6865515'
+volume: '40'

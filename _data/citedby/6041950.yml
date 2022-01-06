@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '29788295'
+- idtype: doi
+  value: 10.1093/cercor/bhy114
+- idtype: pmcid
+  value: PMC6041950
+authors:
+- authtype: Author
+  name: Fischer F
+- authtype: Author
+  name: Pieper F
+- authtype: Author
+  name: Galindo-Leon E
+- authtype: Author
+  name: Engler G
+- authtype: Author
+  name: Hilgetag CC
+- authtype: Author
+  name: Engel AK
+epubdate: 2018 May 18
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '8'
+pages: 2991-3003
+pmclivedate: 2018/07/17
+printpubdate: 2018 Aug
+pubdate: 2018 May 18
+sortdate: 2018/05/18 00:00
+source: Cereb Cortex
+title: Intrinsic Functional Connectivity Resembles Cortical Architecture at Various
+  Levels of Isoflurane Anesthesia
+uid: '6041950'
+volume: '28'

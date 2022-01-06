@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '34208923'
+- idtype: doi
+  value: 10.3390/e23070839
+- idtype: pmcid
+  value: PMC8306862
+authors:
+- authtype: Author
+  name: Greco A
+- authtype: Author
+  name: Gallitto G
+- authtype: Author
+  name: D’Alessandro M
+- authtype: Author
+  name: Rastelli C
+epubdate: 2021 Jun 30
+fulljournalname: Entropy
+issue: '7'
+pages: '839'
+pmclivedate: 2021/07/25
+printpubdate: ''
+pubdate: 2021 Jun 30
+sortdate: 2021/06/30 00:00
+source: Entropy (Basel)
+title: Increased Entropic Brain Dynamics during DeepDream-Induced Altered Perceptual
+  Phenomenology
+uid: '8306862'
+volume: '23'

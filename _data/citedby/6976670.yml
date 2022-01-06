@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '31969657'
+- idtype: doi
+  value: 10.1038/s42003-020-0764-0
+- idtype: pmcid
+  value: PMC6976670
+authors:
+- authtype: Author
+  name: Peters JC
+- authtype: Author
+  name: Reithler J
+- authtype: Author
+  name: Graaf TA
+- authtype: Author
+  name: Schuhmann T
+- authtype: Author
+  name: Goebel R
+- authtype: Author
+  name: Sack AT
+epubdate: 2020 Jan 22
+fulljournalname: Communications Biology
+issue: ''
+pages: '40'
+pmclivedate: 2020/01/28
+printpubdate: ''
+pubdate: 2020 Jan 22
+sortdate: 2020/01/22 00:00
+source: Commun Biol
+title: Concurrent human TMS-EEG-fMRI enables monitoring of oscillatory brain state-dependent
+  gating of cortico-subcortical network activity
+uid: '6976670'
+volume: '3'

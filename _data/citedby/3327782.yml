@@ -1,0 +1,45 @@
+articleids:
+- idtype: pmid
+  value: '22414786'
+- idtype: doi
+  value: 10.1016/j.jneumeth.2012.02.022
+- idtype: pmcid
+  value: PMC3327782
+- idtype: MID
+  value: NIHMS358723
+authors:
+- authtype: Author
+  name: Becker JT
+- authtype: Author
+  name: Fabrizio M
+- authtype: Author
+  name: Sudre G
+- authtype: Author
+  name: Haridis A
+- authtype: Author
+  name: Ambrose T
+- authtype: Author
+  name: Aizenstein HJ
+- authtype: Author
+  name: Eddy W
+- authtype: Author
+  name: Lopez OL
+- authtype: Author
+  name: Wolk D
+- authtype: Author
+  name: Parkkonen L
+- authtype: Author
+  name: Bagic A
+epubdate: 2012 Mar 5
+fulljournalname: Journal of Neuroscience Methods
+issue: '2'
+pages: 176-182
+pmclivedate: 2013/05/15
+printpubdate: 2012 May 15
+pubdate: 2012 Mar 5
+sortdate: 2012/03/05 00:00
+source: J Neurosci Methods
+title: Potential Utility of Resting-State Magnetoencephalography as a Biomarker of
+  CNS Abnormality in HIV Disease
+uid: '3327782'
+volume: '206'

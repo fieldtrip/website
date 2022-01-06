@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '32720212'
+- idtype: doi
+  value: 10.1007/s12021-020-09479-3
+- idtype: pmcid
+  value: PMC8004510
+authors:
+- authtype: Author
+  name: Guarnieri R
+- authtype: Author
+  name: Zhao M
+- authtype: Author
+  name: Taberna GA
+- authtype: Author
+  name: Ganzetti M
+- authtype: Author
+  name: Swinnen SP
+- authtype: Author
+  name: Mantini D
+epubdate: 2020 Jul 28
+fulljournalname: Neuroinformatics
+issue: '2'
+pages: 251-266
+pmclivedate: 2021/04/16
+printpubdate: '2021'
+pubdate: 2020 Jul 28
+sortdate: 2020/07/28 00:00
+source: Neuroinformatics
+title: 'RT-NET: real-time reconstruction of neural activity using high-density electroencephalography'
+uid: '8004510'
+volume: '19'

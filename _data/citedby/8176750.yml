@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '33741722'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0818-20.2021
+- idtype: pmcid
+  value: PMC8176750
+authors:
+- authtype: Author
+  name: Denis D
+- authtype: Author
+  name: Mylonas D
+- authtype: Author
+  name: Poskanzer C
+- authtype: Author
+  name: Bursal V
+- authtype: Author
+  name: Payne JD
+- authtype: Author
+  name: Stickgold R
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '18'
+pages: 4088-4099
+pmclivedate: 2021/11/05
+printpubdate: 2021 May 5
+pubdate: 2021 May 5
+sortdate: 2021/05/05 00:00
+source: J Neurosci
+title: Sleep Spindles Preferentially Consolidate Weakly Encoded Memories
+uid: '8176750'
+volume: '41'

@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '26961106'
+- idtype: doi
+  value: 10.1152/jn.00914.2015
+- idtype: pmcid
+  value: PMC4961757
+authors:
+- authtype: Author
+  name: Catanese J
+- authtype: Author
+  name: Carmichael JE
+- authtype: Author
+  name: van der Meer MA
+epubdate: 2016 Mar 9
+fulljournalname: Journal of Neurophysiology
+issue: '1'
+pages: 5-17
+pmclivedate: 2017/07/01
+printpubdate: 2016 Jul 1
+pubdate: 2016 Mar 9
+sortdate: 2016/03/09 00:00
+source: J Neurophysiol
+title: Low- and high-gamma oscillations deviate in opposite directions from zero-phase
+  synchrony in the limbic corticostriatal loop
+uid: '4961757'
+volume: '116'

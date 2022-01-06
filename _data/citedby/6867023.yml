@@ -1,0 +1,63 @@
+articleids:
+- idtype: pmid
+  value: '28474365'
+- idtype: doi
+  value: 10.1002/hbm.23627
+- idtype: pmcid
+  value: PMC6867023
+authors:
+- authtype: Author
+  name: Sedeño L
+- authtype: Author
+  name: Piguet O
+- authtype: Author
+  name: Abrevaya S
+- authtype: Author
+  name: Desmaras H
+- authtype: Author
+  name: García‐Cordero I
+- authtype: Author
+  name: Baez S
+- authtype: Author
+  name: Alethia de la Fuente L
+- authtype: Author
+  name: Reyes P
+- authtype: Author
+  name: Tu S
+- authtype: Author
+  name: Moguilner S
+- authtype: Author
+  name: Lori N
+- authtype: Author
+  name: Landin‐Romero R
+- authtype: Author
+  name: Matallana D
+- authtype: Author
+  name: Slachevsky A
+- authtype: Author
+  name: Torralva T
+- authtype: Author
+  name: Chialvo D
+- authtype: Author
+  name: Kumfor F
+- authtype: Author
+  name: García AM
+- authtype: Author
+  name: Manes F
+- authtype: Author
+  name: Hodges JR
+- authtype: Author
+  name: Ibanez A
+epubdate: 2017 May 5
+fulljournalname: Human Brain Mapping
+issue: '8'
+pages: 3804-3822
+pmclivedate: 2020/06/12
+printpubdate: ''
+pubdate: 2017 May 5
+sortdate: 2017/05/05 00:00
+source: Hum Brain Mapp
+title: 'Tackling variability: A multicenter study to provide a gold‐standard network
+  approach for frontotemporal dementia'
+uid: '6867023'
+volume: '38'

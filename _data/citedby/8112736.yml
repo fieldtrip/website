@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '33981775'
+- idtype: doi
+  value: 10.1080/23273798.2017.1335421
+- idtype: pmcid
+  value: PMC8112736
+- idtype: MID
+  value: NIHMS1067559
+authors:
+- authtype: Author
+  name: Dufour S
+- authtype: Author
+  name: Bolger D
+- authtype: Author
+  name: Massol S
+- authtype: Author
+  name: Holcomb PJ
+- authtype: Author
+  name: Grainger J
+epubdate: 2017 Jun 8
+fulljournalname: Language, cognition and neuroscience
+issue: '10'
+pages: 1273-1289
+pmclivedate: 2021/05/11
+printpubdate: '2017'
+pubdate: 2017 Jun 8
+sortdate: 2017/06/08 00:00
+source: Lang Cogn Neurosci
+title: 'On the locus of talker-specificity effects in spoken word recognition: an
+  ERP study with dichotic priming'
+uid: '8112736'
+volume: '32'

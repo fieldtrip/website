@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '31598847'
+- idtype: doi
+  value: 10.1007/s12021-019-09436-9
+- idtype: pmcid
+  value: PMC7083809
+authors:
+- authtype: Author
+  name: He Q
+- authtype: Author
+  name: Rezaei A
+- authtype: Author
+  name: Pursiainen S
+epubdate: 2019 Oct 9
+fulljournalname: Neuroinformatics
+issue: '2'
+pages: 237-250
+pmclivedate: 2020/03/23
+printpubdate: '2020'
+pubdate: 2019 Oct 9
+sortdate: 2019/10/09 00:00
+source: Neuroinformatics
+title: 'Zeffiro User Interface for Electromagnetic Brain Imaging: a GPU Accelerated
+  FEM Tool for Forward and Inverse Computations in Matlab'
+uid: '7083809'
+volume: '18'

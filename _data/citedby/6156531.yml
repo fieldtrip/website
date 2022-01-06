@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '30283398'
+- idtype: doi
+  value: 10.3389/fneur.2018.00783
+- idtype: pmcid
+  value: PMC6156531
+authors:
+- authtype: Author
+  name: Zinchenko A
+- authtype: Author
+  name: Kanske P
+- authtype: Author
+  name: Obermeier C
+- authtype: Author
+  name: Schröger E
+- authtype: Author
+  name: Villringer A
+- authtype: Author
+  name: Kotz SA
+epubdate: 2018 Sep 19
+fulljournalname: Frontiers in Neurology
+issue: ''
+pages: '783'
+pmclivedate: 2018/10/03
+printpubdate: ''
+pubdate: 2018 Sep 19
+sortdate: 2018/09/19 00:00
+source: Front Neurol
+title: Modulation of Cognitive and Emotional Control in Age-Related Mild-to-Moderate
+  Hearing Loss
+uid: '6156531'
+volume: '9'

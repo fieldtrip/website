@@ -1,0 +1,46 @@
+articleids:
+- idtype: pmid
+  value: '32803162'
+- idtype: doi
+  value: 10.1093/schizbullopen/sgaa031
+- idtype: pmcid
+  value: PMC7418866
+authors:
+- authtype: Author
+  name: Rathnaiah M
+- authtype: Author
+  name: Liddle EB
+- authtype: Author
+  name: Gascoyne L
+- authtype: Author
+  name: Kumar J
+- authtype: Author
+  name: Zia Ul Haq Katshu M
+- authtype: Author
+  name: Faruqi C
+- authtype: Author
+  name: Kelly C
+- authtype: Author
+  name: Gill M
+- authtype: Author
+  name: Robson S
+- authtype: Author
+  name: Brookes M
+- authtype: Author
+  name: Palaniyappan L
+- authtype: Author
+  name: Morris P
+- authtype: Author
+  name: Liddle PF
+epubdate: 2020 Jun 25
+fulljournalname: Schizophrenia Bulletin Open
+issue: '1'
+pages: sgaa031
+pmclivedate: 2020/08/13
+printpubdate: 2020 Jan
+pubdate: 2020 Jun 25
+sortdate: 2020/06/25 00:00
+source: Schizophr Bull Open
+title: Quantifying the Core Deficit in Classical Schizophrenia
+uid: '7418866'
+volume: '1'

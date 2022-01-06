@@ -1,0 +1,24 @@
+articleids:
+- idtype: pmid
+  value: '31630115'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0742-19.2019
+- idtype: pmcid
+  value: PMC6939481
+authors:
+- authtype: Author
+  name: Nobre AC
+- authtype: Author
+  name: van Ede F
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '1'
+pages: 89-100
+pmclivedate: 2020/01/02
+printpubdate: 2020 Jan 2
+pubdate: 2020 Jan 2
+sortdate: 2020/01/02 00:00
+source: J Neurosci
+title: 'Under the Mind''s Hood: What We Have Learned by Watching the Brain at Work'
+uid: '6939481'
+volume: '40'

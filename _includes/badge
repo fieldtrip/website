@@ -1,0 +1,15 @@
+{%- if include.doi != nil -%}
+<a href="https://doi.org/{{ include.doi }}"> <img src="https://shields.io/static/v1?label=DOI&message={{ include.doi }}&color=1b76b4"> </a>
+{%- endif -%}
+{%- if include.pmid != nil -%}
+<a href="https://pubmed.ncbi.nlm.nih.gov/{{ include.pmid }}"> <img src="https://shields.io/static/v1?label=PMID&message={{ include.pmid }}&color=669900"> </a>
+{%- endif -%}
+{%- if include.pmcid != nil -%}
+{%- assign startsWith = include.pmcid | slice: 0 %}
+{%- if startsWith == 'P' -%}
+{%- assign pmcid = include.pmcid -%}
+{%- else -%}
+{%- assign pmcid = "PMC" | append: include.pmcid %}
+{%- endif -%}
+<a href="https://www.ncbi.nlm.nih.gov/labs/pmc/articles/{{ pmcid }}"> <img src="https://shields.io/static/v1?label=PMCID&message={{ pmcid }}&color=cc3300"> </a>
+{%- endif -%}

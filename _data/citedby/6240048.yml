@@ -1,0 +1,45 @@
+articleids:
+- idtype: pmid
+  value: '30446699'
+- idtype: doi
+  value: 10.1038/s41598-018-35400-9
+- idtype: pmcid
+  value: PMC6240048
+authors:
+- authtype: Author
+  name: Vandewalle G
+- authtype: Author
+  name: van Ackeren MJ
+- authtype: Author
+  name: Daneault V
+- authtype: Author
+  name: Hull JT
+- authtype: Author
+  name: Albouy G
+- authtype: Author
+  name: Lepore F
+- authtype: Author
+  name: Doyon J
+- authtype: Author
+  name: Czeisler CA
+- authtype: Author
+  name: Dumont M
+- authtype: Author
+  name: Carrier J
+- authtype: Author
+  name: Lockley SW
+- authtype: Author
+  name: Collignon O
+epubdate: 2018 Nov 16
+fulljournalname: Scientific Reports
+issue: ''
+pages: '16968'
+pmclivedate: 2018/11/23
+printpubdate: ''
+pubdate: 2018 Nov 16
+sortdate: 2018/11/16 00:00
+source: Sci Rep
+title: Light modulates oscillatory alpha activity in the occipital cortex of totally
+  visually blind individuals with intact non-image-forming photoreception
+uid: '6240048'
+volume: '8'

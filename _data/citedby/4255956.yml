@@ -1,0 +1,61 @@
+articleids:
+- idtype: pmid
+  value: '25485284'
+- idtype: doi
+  value: 10.1080/2326263X.2013.876724
+- idtype: pmcid
+  value: PMC4255956
+- idtype: MID
+  value: NIHMS597633
+authors:
+- authtype: Author
+  name: Huggins JE
+- authtype: Author
+  name: Guger C
+- authtype: Author
+  name: Allison B
+- authtype: Author
+  name: Anderson CW
+- authtype: Author
+  name: Batista A
+- authtype: Author
+  name: Brouwer AM
+- authtype: Author
+  name: Brunner C
+- authtype: Author
+  name: Chavarriaga R
+- authtype: Author
+  name: Fried-Oken M
+- authtype: Author
+  name: Gunduz A
+- authtype: Author
+  name: Gupta D
+- authtype: Author
+  name: Kübler A
+- authtype: Author
+  name: Leeb R
+- authtype: Author
+  name: Lotte F
+- authtype: Author
+  name: Miller LE
+- authtype: Author
+  name: Müller-Putz G
+- authtype: Author
+  name: Rutkowski T
+- authtype: Author
+  name: Tangermann M
+- authtype: Author
+  name: Thompson DE
+epubdate: ''
+fulljournalname: Brain computer interfaces (Abingdon, England)
+issue: '1'
+pages: 27-49
+pmclivedate: 2015/01/01
+printpubdate: 2014 Jan
+pubdate: 2014 Jan
+sortdate: 2014/01/01 00:00
+source: Brain Comput Interfaces (Abingdon)
+title: 'Workshops of the Fifth International Brain-Computer Interface Meeting: Defining
+  the Future'
+uid: '4255956'
+volume: '1'

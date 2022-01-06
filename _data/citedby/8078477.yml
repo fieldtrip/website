@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '32319865'
+- idtype: doi
+  value: 10.1162/jocn_a_01567
+- idtype: pmcid
+  value: PMC8078477
+- idtype: MID
+  value: NIHMS1693572
+authors:
+- authtype: Author
+  name: Wilsch A
+- authtype: Author
+  name: Mercier MR
+- authtype: Author
+  name: Obleser J
+- authtype: Author
+  name: Schroeder CE
+- authtype: Author
+  name: Haegens S
+epubdate: 2020 Apr 22
+fulljournalname: Journal of cognitive neuroscience
+issue: '8'
+pages: 1562-1576
+pmclivedate: 2021/04/27
+printpubdate: 2020 Aug
+pubdate: 2020 Apr 22
+sortdate: 2020/04/22 00:00
+source: J Cogn Neurosci
+title: Spatial Attention and Temporal Expectation Exert Differential Effects on Visual
+  and Auditory Discrimination
+uid: '8078477'
+volume: '32'

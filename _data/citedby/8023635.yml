@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '33855295'
+- idtype: doi
+  value: 10.1093/braincomms/fcab017
+- idtype: pmcid
+  value: PMC8023635
+authors:
+- authtype: Author
+  name: O’Donnell A
+- authtype: Author
+  name: Pauli R
+- authtype: Author
+  name: Banellis L
+- authtype: Author
+  name: Sokoliuk R
+- authtype: Author
+  name: Hayton T
+- authtype: Author
+  name: Sturman S
+- authtype: Author
+  name: Veenith T
+- authtype: Author
+  name: Yakoub KM
+- authtype: Author
+  name: Belli A
+- authtype: Author
+  name: Chennu S
+- authtype: Author
+  name: Cruse D
+epubdate: 2021 Mar 17
+fulljournalname: Brain Communications
+issue: '2'
+pages: fcab017
+pmclivedate: 2021/04/13
+printpubdate: ''
+pubdate: 2021 Mar 17
+sortdate: 2021/03/17 00:00
+source: Brain Commun
+title: The prognostic value of resting-state EEG in acute post-traumatic unresponsive
+  states
+uid: '8023635'
+volume: '3'

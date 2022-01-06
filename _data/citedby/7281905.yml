@@ -1,0 +1,22 @@
+articleids:
+- idtype: pmid
+  value: '32354231'
+- idtype: doi
+  value: 10.1177/1535759720921377
+- idtype: pmcid
+  value: PMC7281905
+authors:
+- authtype: Author
+  name: Maheshwari A
+epubdate: 2020 Apr 30
+fulljournalname: Epilepsy Currents
+issue: '3'
+pages: 149-153
+pmclivedate: 2020/06/17
+printpubdate: ''
+pubdate: 2020 Apr 30
+sortdate: 2020/04/30 00:00
+source: Epilepsy Curr
+title: 'Rodent EEG: Expanding the Spectrum of Analysis'
+uid: '7281905'
+volume: '20'

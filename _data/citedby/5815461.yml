@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '29263241'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1566-17.2017
+- idtype: pmcid
+  value: PMC5815461
+authors:
+- authtype: Author
+  name: Shahin AJ
+- authtype: Author
+  name: Backer KC
+- authtype: Author
+  name: Rosenblum LD
+- authtype: Author
+  name: Kerlin JR
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '7'
+pages: 1835-1849
+pmclivedate: 2018/08/14
+printpubdate: 2018 Feb 14
+pubdate: 2018 Feb 14
+sortdate: 2018/02/14 00:00
+source: J Neurosci
+title: Neural Mechanisms Underlying Cross-Modal Phonetic Encoding
+uid: '5815461'
+volume: '38'

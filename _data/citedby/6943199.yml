@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '31451387'
+- idtype: doi
+  value: 10.1016/j.bpsc.2019.06.010
+- idtype: pmcid
+  value: PMC6943199
+- idtype: MID
+  value: NIHMS1538213
+authors:
+- authtype: Author
+  name: Phalen H
+- authtype: Author
+  name: Coffman BA
+- authtype: Author
+  name: Ghuman A
+- authtype: Author
+  name: Sejdić E
+- authtype: Author
+  name: Salisbury DF
+epubdate: 2019 Jul 6
+fulljournalname: Biological psychiatry. Cognitive neuroscience and neuroimaging
+issue: '10'
+pages: 961-970
+pmclivedate: 2021/10/01
+printpubdate: 2020 Oct
+pubdate: 2019 Jul 6
+sortdate: 2019/07/06 00:00
+source: Biol Psychiatry Cogn Neurosci Neuroimaging
+title: Non-Negative Matrix Factorization Reveals Resting-State Cortical Alpha Network
+  Abnormalities in the First Episode Schizophrenia-Spectrum
+uid: '6943199'
+volume: '5'

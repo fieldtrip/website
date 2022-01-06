@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '28919850'
+- idtype: doi
+  value: 10.3389/fnins.2017.00487
+- idtype: pmcid
+  value: PMC5585190
+authors:
+- authtype: Author
+  name: Seymour RA
+- authtype: Author
+  name: Rippon G
+- authtype: Author
+  name: Kessler K
+epubdate: 2017 Sep 1
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '487'
+pmclivedate: 2017/09/15
+printpubdate: ''
+pubdate: 2017 Sep 1
+sortdate: 2017/09/01 00:00
+source: Front Neurosci
+title: The Detection of Phase Amplitude Coupling during Sensory Processing
+uid: '5585190'
+volume: '11'

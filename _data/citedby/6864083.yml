@@ -1,0 +1,52 @@
+articleids:
+- idtype: pmid
+  value: '31745107'
+- idtype: doi
+  value: 10.1038/s41598-019-51974-4
+- idtype: pmcid
+  value: PMC6864083
+authors:
+- authtype: Author
+  name: Timmermann C
+- authtype: Author
+  name: Roseman L
+- authtype: Author
+  name: Schartner M
+- authtype: Author
+  name: Milliere R
+- authtype: Author
+  name: Williams LT
+- authtype: Author
+  name: Erritzoe D
+- authtype: Author
+  name: Muthukumaraswamy S
+- authtype: Author
+  name: Ashton M
+- authtype: Author
+  name: Bendrioua A
+- authtype: Author
+  name: Kaur O
+- authtype: Author
+  name: Turton S
+- authtype: Author
+  name: Nour MM
+- authtype: Author
+  name: Day CM
+- authtype: Author
+  name: Leech R
+- authtype: Author
+  name: Nutt DJ
+- authtype: Author
+  name: Carhart-Harris RL
+epubdate: 2019 Nov 19
+fulljournalname: Scientific Reports
+issue: ''
+pages: '16324'
+pmclivedate: 2019/12/03
+printpubdate: ''
+pubdate: 2019 Nov 19
+sortdate: 2019/11/19 00:00
+source: Sci Rep
+title: Neural correlates of the DMT experience assessed with multivariate EEG
+uid: '6864083'
+volume: '9'

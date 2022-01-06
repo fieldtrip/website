@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '28321705'
+- idtype: doi
+  value: 10.3758/s13415-017-0504-1
+- idtype: pmcid
+  value: PMC5403863
+authors:
+- authtype: Author
+  name: Zinchenko A
+- authtype: Author
+  name: Obermeier C
+- authtype: Author
+  name: Kanske P
+- authtype: Author
+  name: Schröger E
+- authtype: Author
+  name: Kotz SA
+epubdate: 2017 Mar 20
+fulljournalname: Cognitive, Affective & Behavioral Neuroscience
+issue: '3'
+pages: 665-677
+pmclivedate: 2017/05/09
+printpubdate: '2017'
+pubdate: 2017 Mar 20
+sortdate: 2017/03/20 00:00
+source: Cogn Affect Behav Neurosci
+title: Positive emotion impedes emotional but not cognitive conflict processing
+uid: '5403863'
+volume: '17'

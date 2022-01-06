@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '31154906'
+- idtype: doi
+  value: 10.1080/17588928.2019.1627303
+- idtype: pmcid
+  value: PMC6868501
+- idtype: MID
+  value: NIHMS1530745
+authors:
+- authtype: Author
+  name: Wilson TJ
+- authtype: Author
+  name: Foxe JJ
+epubdate: 2019 Jul 1
+fulljournalname: Cognitive neuroscience
+issue: 1-2
+pages: 71-91
+pmclivedate: 2021/01/01
+printpubdate: 2020 Jan
+pubdate: 2019 Jul 1
+sortdate: 2019/07/01 00:00
+source: Cogn Neurosci
+title: Cross-Frequency Coupling of Alpha Oscillatory Power to the Entrainment Rhythm
+  of a Spatially Attended Input Stream
+uid: '6868501'
+volume: '11'

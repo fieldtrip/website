@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '22323626'
+- idtype: doi
+  value: 10.1152/jn.00707.2011
+- idtype: pmcid
+  value: PMC3362246
+authors:
+- authtype: Author
+  name: Johnson JS
+- authtype: Author
+  name: Kundu B
+- authtype: Author
+  name: Casali AG
+- authtype: Author
+  name: Postle BR
+epubdate: 2012 Feb 8
+fulljournalname: Journal of Neurophysiology
+issue: '9'
+pages: 2383-2392
+pmclivedate: 2013/05/01
+printpubdate: 2012 May 1
+pubdate: 2012 Feb 8
+sortdate: 2012/02/08 00:00
+source: J Neurophysiol
+title: 'Task-dependent changes in cortical excitability and effective connectivity:
+  a combined TMS-EEG study'
+uid: '3362246'
+volume: '107'

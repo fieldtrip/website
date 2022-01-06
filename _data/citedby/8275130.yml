@@ -1,0 +1,47 @@
+articleids:
+- idtype: pmid
+  value: '34251338'
+- idtype: doi
+  value: 10.7554/eLife.65444
+- idtype: pmcid
+  value: PMC8275130
+authors:
+- authtype: Author
+  name: Huang Y
+- authtype: Author
+  name: Sun B
+- authtype: Author
+  name: Debarros J
+- authtype: Author
+  name: Zhang C
+- authtype: Author
+  name: Zhan S
+- authtype: Author
+  name: Li D
+- authtype: Author
+  name: Zhang C
+- authtype: Author
+  name: Wang T
+- authtype: Author
+  name: Huang P
+- authtype: Author
+  name: Lai Y
+- authtype: Author
+  name: Brown P
+- authtype: Author
+  name: Cao C
+- authtype: Author
+  name: Tan H
+epubdate: 2021 Jul 12
+fulljournalname: eLife
+issue: ''
+pages: e65444
+pmclivedate: 2021/07/14
+printpubdate: ''
+pubdate: 2021 Jul 12
+sortdate: 2021/07/12 00:00
+source: eLife
+title: Increased theta/alpha synchrony in the habenula-prefrontal network with negative
+  emotional stimuli in human patients
+uid: '8275130'
+volume: '10'

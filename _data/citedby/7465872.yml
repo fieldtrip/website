@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '32784990'
+- idtype: doi
+  value: 10.3390/brainsci10080537
+- idtype: pmcid
+  value: PMC7465872
+authors:
+- authtype: Author
+  name: Schubring D
+- authtype: Author
+  name: Kraus M
+- authtype: Author
+  name: Stolz C
+- authtype: Author
+  name: Weiler N
+- authtype: Author
+  name: Keim DA
+- authtype: Author
+  name: Schupp H
+epubdate: 2020 Aug 10
+fulljournalname: Brain Sciences
+issue: '8'
+pages: '537'
+pmclivedate: 2020/09/04
+printpubdate: ''
+pubdate: 2020 Aug 10
+sortdate: 2020/08/10 00:00
+source: Brain Sci
+title: Virtual Reality Potentiates Emotion and Task Effects of Alpha/Beta Brain Oscillations
+uid: '7465872'
+volume: '10'

@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '25651979'
+- idtype: doi
+  value: 10.1007/s00221-015-4206-z
+- idtype: pmcid
+  value: PMC4355447
+authors:
+- authtype: Author
+  name: Campfens SF
+- authtype: Author
+  name: Zandvliet SB
+- authtype: Author
+  name: Meskers CG
+- authtype: Author
+  name: Schouten AC
+- authtype: Author
+  name: van Putten MJ
+- authtype: Author
+  name: van der Kooij H
+epubdate: 2015 Feb 5
+fulljournalname: Experimental Brain Research
+issue: '4'
+pages: 1339-1349
+pmclivedate: 2015/03/13
+printpubdate: '2015'
+pubdate: 2015 Feb 5
+sortdate: 2015/02/05 00:00
+source: Exp Brain Res
+title: Poor motor function is associated with reduced sensory processing after stroke
+uid: '4355447'
+volume: '233'

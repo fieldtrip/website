@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '33631210'
+- idtype: doi
+  value: 10.1016/j.brainres.2021.147385
+- idtype: pmcid
+  value: PMC8049334
+- idtype: MID
+  value: NIHMS1676574
+authors:
+- authtype: Author
+  name: Carter JA
+- authtype: Author
+  name: Bidelman GM
+epubdate: 2021 Feb 23
+fulljournalname: Brain research
+issue: ''
+pages: '147385'
+pmclivedate: ''
+printpubdate: 2021 May 15
+pubdate: 2021 Feb 23
+sortdate: 2021/02/23 00:00
+source: Brain Res
+title: Auditory cortex is susceptible to lexical influence as revealed by informational
+  vs. energetic masking of speech categorization
+uid: '8049334'
+volume: '1759'

@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '33800469'
+- idtype: doi
+  value: 10.3390/e23030321
+- idtype: pmcid
+  value: PMC7998823
+authors:
+- authtype: Author
+  name: Mayor D
+- authtype: Author
+  name: Panday D
+- authtype: Author
+  name: Kandel HK
+- authtype: Author
+  name: Steffert T
+- authtype: Author
+  name: Banks D
+epubdate: 2021 Mar 8
+fulljournalname: Entropy
+issue: '3'
+pages: '321'
+pmclivedate: 2021/03/28
+printpubdate: ''
+pubdate: 2021 Mar 8
+sortdate: 2021/03/08 00:00
+source: Entropy (Basel)
+title: 'CEPS: An Open Access MATLAB Graphical User Interface (GUI) for the Analysis
+  of Complexity and Entropy in Physiological Signals'
+uid: '7998823'
+volume: '23'

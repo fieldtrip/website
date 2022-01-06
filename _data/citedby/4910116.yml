@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '27306959'
+- idtype: doi
+  value: 10.1038/srep28092
+- idtype: pmcid
+  value: PMC4910116
+authors:
+- authtype: Author
+  name: Park H
+- authtype: Author
+  name: Lee DS
+- authtype: Author
+  name: Kang E
+- authtype: Author
+  name: Kang H
+- authtype: Author
+  name: Hahm J
+- authtype: Author
+  name: Kim JS
+- authtype: Author
+  name: Chung CK
+- authtype: Author
+  name: Jiang H
+- authtype: Author
+  name: Gross J
+- authtype: Author
+  name: Jensen O
+epubdate: 2016 Jun 16
+fulljournalname: Scientific Reports
+issue: ''
+pages: '28092'
+pmclivedate: 2016/06/16
+printpubdate: ''
+pubdate: 2016 Jun 16
+sortdate: 2016/06/16 00:00
+source: Sci Rep
+title: Formation of visual memories controlled by gamma power phase-locked to alpha
+  oscillations
+uid: '4910116'
+volume: '6'

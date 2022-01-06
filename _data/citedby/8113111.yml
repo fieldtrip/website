@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '33705806'
+- idtype: doi
+  value: 10.1016/j.biopsycho.2021.108061
+- idtype: pmcid
+  value: PMC8113111
+- idtype: MID
+  value: NIHMS1685174
+authors:
+- authtype: Author
+  name: Riddle J
+- authtype: Author
+  name: Rubinow DR
+- authtype: Author
+  name: Girdler S
+- authtype: Author
+  name: Frohlich F
+epubdate: 2021 Mar 8
+fulljournalname: Biological psychology
+issue: ''
+pages: '108061'
+pmclivedate: ''
+printpubdate: 2021 Apr
+pubdate: 2021 Mar 8
+sortdate: 2021/03/08 00:00
+source: Biol Psychol
+title: Disinhibition of right inferior frontal gyrus underlies alpha asymmetry in
+  women with low testosterone
+uid: '8113111'
+volume: '161'

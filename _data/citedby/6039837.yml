@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '30003036'
+- idtype: doi
+  value: 10.1016/j.nicl.2018.06.017
+- idtype: pmcid
+  value: PMC6039837
+authors:
+- authtype: Author
+  name: Babajani-Feremi A
+- authtype: Author
+  name: Noorizadeh N
+- authtype: Author
+  name: Mudigoudar B
+- authtype: Author
+  name: Wheless JW
+epubdate: 2018 Jun 18
+fulljournalname: 'NeuroImage : Clinical'
+issue: ''
+pages: 990-999
+pmclivedate: 2018/07/12
+printpubdate: ''
+pubdate: 2018 Jun 18
+sortdate: 2018/06/18 00:00
+source: Neuroimage Clin
+title: Predicting seizure outcome of vagus nerve stimulation using MEG-based network
+  topology
+uid: '6039837'
+volume: '19'

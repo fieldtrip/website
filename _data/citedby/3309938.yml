@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '22470495'
+- idtype: doi
+  value: 10.1371/journal.pone.0033928
+- idtype: pmcid
+  value: PMC3309938
+authors:
+- authtype: Author
+  name: Muthuraman M
+- authtype: Author
+  name: Tamás G
+- authtype: Author
+  name: Hellriegel H
+- authtype: Author
+  name: Deuschl G
+- authtype: Author
+  name: Raethjen J
+epubdate: 2012 Mar 21
+fulljournalname: PLoS ONE
+issue: '3'
+pages: e33928
+pmclivedate: 2012/04/02
+printpubdate: ''
+pubdate: 2012 Mar 21
+sortdate: 2012/03/21 00:00
+source: PLoS One
+title: Source Analysis of Beta-Synchronisation and Cortico-Muscular Coherence after
+  Movement Termination Based on High Resolution Electroencephalography
+uid: '3309938'
+volume: '7'

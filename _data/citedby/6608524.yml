@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '24553934'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.2523-13.2014
+- idtype: pmcid
+  value: PMC6608524
+authors:
+- authtype: Author
+  name: Kononowicz TW
+- authtype: Author
+  name: van Rijn H
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '8'
+pages: 2931-2939
+pmclivedate: 2019/07/10
+printpubdate: 2014 Feb 19
+pubdate: 2014 Feb 19
+sortdate: 2014/02/19 00:00
+source: J Neurosci
+title: 'Decoupling Interval Timing and Climbing Neural Activity: A Dissociation between
+  CNV and N1P2 Amplitudes'
+uid: '6608524'
+volume: '34'

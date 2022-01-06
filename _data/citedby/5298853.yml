@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '28246641'
+- idtype: doi
+  value: 10.1126/sciadv.1602026
+- idtype: pmcid
+  value: PMC5298853
+authors:
+- authtype: Author
+  name: Lecci S
+- authtype: Author
+  name: Fernandez LM
+- authtype: Author
+  name: Weber FD
+- authtype: Author
+  name: Cardis R
+- authtype: Author
+  name: Chatton JY
+- authtype: Author
+  name: Born J
+- authtype: Author
+  name: Lüthi A
+epubdate: 2017 Feb 8
+fulljournalname: Science Advances
+issue: '2'
+pages: e1602026
+pmclivedate: 2017/02/28
+printpubdate: ''
+pubdate: 2017 Feb 8
+sortdate: 2017/02/08 00:00
+source: Sci Adv
+title: Coordinated infraslow neural and cardiac oscillations mark fragility and offline
+  periods in mammalian sleep
+uid: '5298853'
+volume: '3'

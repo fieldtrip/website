@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '25744881'
+- idtype: doi
+  value: 10.1152/jn.00624.2014
+- idtype: pmcid
+  value: PMC4440241
+authors:
+- authtype: Author
+  name: Ninomiya T
+- authtype: Author
+  name: Dougherty K
+- authtype: Author
+  name: Godlove DC
+- authtype: Author
+  name: Schall JD
+- authtype: Author
+  name: Maier A
+epubdate: 2015 Mar 5
+fulljournalname: Journal of Neurophysiology
+issue: '9'
+pages: 3242-3255
+pmclivedate: 2016/05/01
+printpubdate: 2015 May
+pubdate: 2015 Mar 5
+sortdate: 2015/03/05 00:00
+source: J Neurophysiol
+title: 'Microcircuitry of agranular frontal cortex: contrasting laminar connectivity
+  between occipital and frontal areas'
+uid: '4440241'
+volume: '113'

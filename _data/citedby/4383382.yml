@@ -1,0 +1,24 @@
+articleids:
+- idtype: pmid
+  value: '25836951'
+- idtype: doi
+  value: 10.1371/journal.pone.0121048
+- idtype: pmcid
+  value: PMC4383382
+authors:
+- authtype: Author
+  name: Hipp JF
+- authtype: Author
+  name: Siegel M
+epubdate: 2015 Apr 2
+fulljournalname: PLoS ONE
+issue: '4'
+pages: e0121048
+pmclivedate: 2015/04/09
+printpubdate: ''
+pubdate: 2015 Apr 2
+sortdate: 2015/04/02 00:00
+source: PLoS One
+title: Accounting for Linear Transformations of EEG and MEG Data in Source Analysis
+uid: '4383382'
+volume: '10'

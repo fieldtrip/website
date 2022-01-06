@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '34439579'
+- idtype: doi
+  value: 10.3390/brainsci11080960
+- idtype: pmcid
+  value: PMC8412101
+authors:
+- authtype: Author
+  name: Kheirkhah M
+- authtype: Author
+  name: Baumbach P
+- authtype: Author
+  name: Leistritz L
+- authtype: Author
+  name: Witte OW
+- authtype: Author
+  name: Walter M
+- authtype: Author
+  name: Gilbert JR
+- authtype: Author
+  name: Zarate Jr. CA
+- authtype: Author
+  name: Klingner CM
+epubdate: 2021 Jul 21
+fulljournalname: Brain Sciences
+issue: '8'
+pages: '960'
+pmclivedate: 2021/09/03
+printpubdate: ''
+pubdate: 2021 Jul 21
+sortdate: 2021/07/21 00:00
+source: Brain Sci
+title: 'The Right Hemisphere Is Responsible for the Greatest Differences in Human
+  Brain Response to High-Arousing Emotional versus Neutral Stimuli: A MEG Study'
+uid: '8412101'
+volume: '11'

@@ -1,0 +1,56 @@
+articleids:
+- idtype: pmid
+  value: '30735860'
+- idtype: doi
+  value: 10.1016/j.nicl.2019.101707
+- idtype: pmcid
+  value: PMC6365983
+authors:
+- authtype: Author
+  name: McMackin R
+- authtype: Author
+  name: Dukic S
+- authtype: Author
+  name: Broderick M
+- authtype: Author
+  name: Iyer PM
+- authtype: Author
+  name: Pinto-Grau M
+- authtype: Author
+  name: Mohr K
+- authtype: Author
+  name: Chipika R
+- authtype: Author
+  name: Coffey A
+- authtype: Author
+  name: Buxo T
+- authtype: Author
+  name: Schuster C
+- authtype: Author
+  name: Gavin B
+- authtype: Author
+  name: Heverin M
+- authtype: Author
+  name: Bede P
+- authtype: Author
+  name: Pender N
+- authtype: Author
+  name: Lalor EC
+- authtype: Author
+  name: Muthuraman M
+- authtype: Author
+  name: Hardiman O
+- authtype: Author
+  name: Nasseroleslami B
+epubdate: 2019 Feb 2
+fulljournalname: 'NeuroImage : Clinical'
+issue: ''
+pages: '101707'
+pmclivedate: 2019/02/15
+printpubdate: ''
+pubdate: 2019 Feb 2
+sortdate: 2019/02/02 00:00
+source: Neuroimage Clin
+title: Dysfunction of attention switching networks in amyotrophic lateral sclerosis
+uid: '6365983'
+volume: '22'

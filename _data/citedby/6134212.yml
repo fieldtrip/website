@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '30233299'
+- idtype: doi
+  value: 10.3389/fnins.2018.00616
+- idtype: pmcid
+  value: PMC6134212
+authors:
+- authtype: Author
+  name: Hu Y
+- authtype: Author
+  name: Yin C
+- authtype: Author
+  name: Zhang J
+- authtype: Author
+  name: Wang Y
+epubdate: 2018 Sep 5
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '616'
+pmclivedate: 2018/09/19
+printpubdate: ''
+pubdate: 2018 Sep 5
+sortdate: 2018/09/05 00:00
+source: Front Neurosci
+title: Partial Least Square Aided Beamforming Algorithm in Magnetoencephalography
+  Source Imaging
+uid: '6134212'
+volume: '12'

@@ -1,0 +1,49 @@
+articleids:
+- idtype: pmid
+  value: '33770549'
+- idtype: doi
+  value: 10.1016/j.nicl.2021.102632
+- idtype: pmcid
+  value: PMC8022249
+authors:
+- authtype: Author
+  name: Van Schependom J
+- authtype: Author
+  name: Vidaurre D
+- authtype: Author
+  name: Costers L
+- authtype: Author
+  name: Sjøgård M
+- authtype: Author
+  name: Sima DM
+- authtype: Author
+  name: Smeets D
+- authtype: Author
+  name: D'hooghe MB
+- authtype: Author
+  name: D'haeseleer M
+- authtype: Author
+  name: Deco G
+- authtype: Author
+  name: Wens V
+- authtype: Author
+  name: De Tiège X
+- authtype: Author
+  name: Goldman S
+- authtype: Author
+  name: Woolrich M
+- authtype: Author
+  name: Nagels G
+epubdate: 2021 Mar 17
+fulljournalname: 'NeuroImage : Clinical'
+issue: ''
+pages: '102632'
+pmclivedate: 2021/04/12
+printpubdate: ''
+pubdate: 2021 Mar 17
+sortdate: 2021/03/17 00:00
+source: Neuroimage Clin
+title: Increased brain atrophy and lesion load is associated with stronger lower alpha
+  MEG power in multiple sclerosis patients
+uid: '8022249'
+volume: '30'

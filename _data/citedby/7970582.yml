@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '29641377'
+- idtype: doi
+  value: 10.1109/TNSRE.2018.2797547
+- idtype: pmcid
+  value: PMC7970582
+- idtype: MID
+  value: NIHMS959179
+authors:
+- authtype: Author
+  name: Dvorak D
+- authtype: Author
+  name: Shang A
+- authtype: Author
+  name: Abdel-Baki S
+- authtype: Author
+  name: Suzuki W
+- authtype: Author
+  name: Fenton AA
+epubdate: ''
+fulljournalname: 'IEEE transactions on neural systems and rehabilitation engineering
+  : a publication of the IEEE Engineering in Medicine and Biology Society'
+issue: '4'
+pages: 729-739
+pmclivedate: 2021/03/18
+printpubdate: 2018 Apr
+pubdate: 2018 Apr
+sortdate: 2018/04/01 00:00
+source: IEEE Trans Neural Syst Rehabil Eng
+title: Cognitive behavior classification from scalp EEG signals
+uid: '7970582'
+volume: '26'

@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '23672768'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2013.04.120
+- idtype: pmcid
+  value: PMC3778976
+authors:
+- authtype: Author
+  name: Tan HR
+- authtype: Author
+  name: Leuthold H
+- authtype: Author
+  name: Gross J
+epubdate: ''
+fulljournalname: Neuroimage
+issue: ''
+pages: 634-644
+pmclivedate: 2013/11/15
+printpubdate: 2013 Nov 15
+pubdate: 2013 Nov 15
+sortdate: 2013/11/15 00:00
+source: Neuroimage
+title: 'Gearing up for action: Attentive tracking dynamically tunes sensory and motor
+  oscillations in the alpha and beta band'
+uid: '3778976'
+volume: '82'

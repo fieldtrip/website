@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '34583117'
+- idtype: doi
+  value: 10.1016/j.clinph.2021.07.027
+- idtype: pmcid
+  value: PMC8559782
+authors:
+- authtype: Author
+  name: Ibitoye RT
+- authtype: Author
+  name: Castro P
+- authtype: Author
+  name: Desowska A
+- authtype: Author
+  name: Cooke J
+- authtype: Author
+  name: Edwards AE
+- authtype: Author
+  name: Guven O
+- authtype: Author
+  name: Arshad Q
+- authtype: Author
+  name: Murdin L
+- authtype: Author
+  name: Kaski D
+- authtype: Author
+  name: Bronstein AM
+epubdate: ''
+fulljournalname: Clinical Neurophysiology
+issue: '11'
+pages: 2751-2762
+pmclivedate: 2021/11/08
+printpubdate: 2021 Nov
+pubdate: 2021 Nov
+sortdate: 2021/11/01 00:00
+source: Clin Neurophysiol
+title: Small vessel disease disrupts EEG postural brain networks in ‘unexplained dizziness
+  in the elderly’
+uid: '8559782'
+volume: '132'

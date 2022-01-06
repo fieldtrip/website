@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '30038563'
+- idtype: doi
+  value: 10.3389/fnhum.2018.00270
+- idtype: pmcid
+  value: PMC6046436
+authors:
+- authtype: Author
+  name: AuYong N
+- authtype: Author
+  name: Malekmohammadi M
+- authtype: Author
+  name: Ricks-Oddie J
+- authtype: Author
+  name: Pouratian N
+epubdate: 2018 Jul 9
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '270'
+pmclivedate: 2018/07/23
+printpubdate: ''
+pubdate: 2018 Jul 9
+sortdate: 2018/07/09 00:00
+source: Front Hum Neurosci
+title: Movement-Modulation of Local Power and Phase Amplitude Coupling in Bilateral
+  Globus Pallidus Interna in Parkinson Disease
+uid: '6046436'
+volume: '12'

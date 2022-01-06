@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '30225363'
+- idtype: doi
+  value: 10.1523/ENEURO.0251-18.2018
+- idtype: pmcid
+  value: PMC6140125
+authors:
+- authtype: Author
+  name: Bramão I
+- authtype: Author
+  name: Johansson M
+epubdate: 2018 Aug 23
+fulljournalname: eNeuro
+issue: '4'
+pages: ENEURO.0251-18.2018
+pmclivedate: 2018/09/17
+printpubdate: ''
+pubdate: 2018 Aug 23
+sortdate: 2018/08/23 00:00
+source: eNeuro
+title: Neural Pattern Classification Tracks Transfer-Appropriate Processing in Episodic
+  Memory
+uid: '6140125'
+volume: '5'

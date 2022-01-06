@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '29410123'
+- idtype: doi
+  value: 10.1016/j.neuropsychologia.2018.01.031
+- idtype: pmcid
+  value: PMC5866775
+- idtype: MID
+  value: NIHMS944367
+authors:
+- authtype: Author
+  name: Chinn LK
+- authtype: Author
+  name: Pauker CS
+- authtype: Author
+  name: Golob EJ
+epubdate: 2018 Feb 2
+fulljournalname: Neuropsychologia
+issue: ''
+pages: 216-228
+pmclivedate: 2019/03/01
+printpubdate: 2018 Mar
+pubdate: 2018 Feb 2
+sortdate: 2018/02/02 00:00
+source: Neuropsychologia
+title: Cognitive control and midline theta adjust across multiple timescales
+uid: '5866775'
+volume: '111'

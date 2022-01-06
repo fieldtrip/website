@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '30817220'
+- idtype: doi
+  value: 10.1177/0956797619830384
+- idtype: pmcid
+  value: PMC6472178
+authors:
+- authtype: Author
+  name: Hakim N
+- authtype: Author
+  name: Adam KC
+- authtype: Author
+  name: Gunseli E
+- authtype: Author
+  name: Awh E
+- authtype: Author
+  name: Vogel EK
+epubdate: 2019 Feb 28
+fulljournalname: Psychological Science
+issue: '4'
+pages: 526-540
+pmclivedate: 2020/02/28
+printpubdate: 2019 Apr
+pubdate: 2019 Feb 28
+sortdate: 2019/02/28 00:00
+source: Psychol Sci
+title: Dissecting the Neural Focus of Attention Reveals Distinct Processes for Spatial
+  Attention and Object-Based Storage in Visual Working Memory
+uid: '6472178'
+volume: '30'

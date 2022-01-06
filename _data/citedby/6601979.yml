@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '27903734'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0809-16.2016
+- idtype: pmcid
+  value: PMC6601979
+authors:
+- authtype: Author
+  name: Arviv O
+- authtype: Author
+  name: Medvedovsky M
+- authtype: Author
+  name: Sheintuch L
+- authtype: Author
+  name: Goldstein A
+- authtype: Author
+  name: Shriki O
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '48'
+pages: 12276-12292
+pmclivedate: 2019/07/11
+printpubdate: 2016 Nov 30
+pubdate: 2016 Nov 30
+sortdate: 2016/11/30 00:00
+source: J Neurosci
+title: Deviations from Critical Dynamics in Interictal Epileptiform Activity
+uid: '6601979'
+volume: '36'

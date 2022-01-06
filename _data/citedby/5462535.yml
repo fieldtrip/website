@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '28590903'
+- idtype: doi
+  value: 10.7554/eLife.24763
+- idtype: pmcid
+  value: PMC5462535
+authors:
+- authtype: Author
+  name: Giordano BL
+- authtype: Author
+  name: Ince RA
+- authtype: Author
+  name: Gross J
+- authtype: Author
+  name: Schyns PG
+- authtype: Author
+  name: Panzeri S
+- authtype: Author
+  name: Kayser C
+epubdate: 2017 Jun 7
+fulljournalname: eLife
+issue: ''
+pages: e24763
+pmclivedate: 2017/06/09
+printpubdate: ''
+pubdate: 2017 Jun 7
+sortdate: 2017/06/07 00:00
+source: eLife
+title: Contributions of local speech encoding and functional connectivity to audio-visual
+  speech perception
+uid: '5462535'
+volume: '6'

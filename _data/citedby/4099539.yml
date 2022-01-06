@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '25031398'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.4889-13.2014
+- idtype: pmcid
+  value: PMC4099539
+authors:
+- authtype: Author
+  name: Hwang K
+- authtype: Author
+  name: Ghuman AS
+- authtype: Author
+  name: Manoach DS
+- authtype: Author
+  name: Jones SR
+- authtype: Author
+  name: Luna B
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '29'
+pages: 9551-9561
+pmclivedate: 2015/01/16
+printpubdate: 2014 Jul 16
+pubdate: 2014 Jul 16
+sortdate: 2014/07/16 00:00
+source: J Neurosci
+title: Cortical Neurodynamics of Inhibitory Control
+uid: '4099539'
+volume: '34'

@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '33285891'
+- idtype: doi
+  value: 10.3390/e22010116
+- idtype: pmcid
+  value: PMC7516422
+authors:
+- authtype: Author
+  name: Echegoyen I
+- authtype: Author
+  name: López-Sanz D
+- authtype: Author
+  name: Martínez JH
+- authtype: Author
+  name: Maestú F
+- authtype: Author
+  name: Buldú JM
+epubdate: 2020 Jan 18
+fulljournalname: Entropy
+issue: '1'
+pages: '116'
+pmclivedate: 2020/11/09
+printpubdate: ''
+pubdate: 2020 Jan 18
+sortdate: 2020/01/18 00:00
+source: Entropy (Basel)
+title: 'Permutation Entropy and Statistical Complexity in Mild Cognitive Impairment
+  and Alzheimer’s Disease: An Analysis Based on Frequency Bands'
+uid: '7516422'
+volume: '22'

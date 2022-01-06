@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '26180205'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0691-15.2015
+- idtype: pmcid
+  value: PMC6605338
+authors:
+- authtype: Author
+  name: Paulk AC
+- authtype: Author
+  name: Kirszenblat L
+- authtype: Author
+  name: Zhou Y
+- authtype: Author
+  name: van Swinderen B
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '28'
+pages: 10304-10315
+pmclivedate: 2019/07/08
+printpubdate: 2015 Jul 15
+pubdate: 2015 Jul 15
+sortdate: 2015/07/15 00:00
+source: J Neurosci
+title: Closed-Loop Behavioral Control Increases Coherence in the Fly Brain
+uid: '6605338'
+volume: '35'

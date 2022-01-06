@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '33327626'
+- idtype: doi
+  value: 10.3390/diagnostics10121087
+- idtype: pmcid
+  value: PMC7765133
+authors:
+- authtype: Author
+  name: Piorecky M
+- authtype: Author
+  name: Koudelka V
+- authtype: Author
+  name: Miletinova E
+- authtype: Author
+  name: Buskova J
+- authtype: Author
+  name: Strobl J
+- authtype: Author
+  name: Horacek J
+- authtype: Author
+  name: Brunovsky M
+- authtype: Author
+  name: Jiricek S
+- authtype: Author
+  name: Hlinka J
+- authtype: Author
+  name: Tomecek D
+- authtype: Author
+  name: Piorecka V
+epubdate: 2020 Dec 14
+fulljournalname: Diagnostics
+issue: '12'
+pages: '1087'
+pmclivedate: 2020/12/27
+printpubdate: ''
+pubdate: 2020 Dec 14
+sortdate: 2020/12/14 00:00
+source: Diagnostics (Basel)
+title: 'Simultaneous fMRI-EEG-Based Characterisation of NREM Parasomnia Disease: Methods
+  and Limitations'
+uid: '7765133'
+volume: '10'

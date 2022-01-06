@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '29526744'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2018.03.016
+- idtype: pmcid
+  value: PMC6650744
+- idtype: MID
+  value: NIHMS1534577
+authors:
+- authtype: Author
+  name: Artoni F
+- authtype: Author
+  name: Delorme A
+- authtype: Author
+  name: Makeig S
+epubdate: 2018 Mar 9
+fulljournalname: NeuroImage
+issue: ''
+pages: 176-187
+pmclivedate: 2019/07/24
+printpubdate: 2018 Jul 15
+pubdate: 2018 Mar 9
+sortdate: 2018/03/09 00:00
+source: Neuroimage
+title: Applying dimension reduction to EEG data by Principal Component Analysis reduces
+  the quality of its subsequent Independent Component decomposition
+uid: '6650744'
+volume: '175'

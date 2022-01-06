@@ -1,0 +1,24 @@
+articleids:
+- idtype: pmid
+  value: '27147655'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.3325-15.2016
+- idtype: pmcid
+  value: PMC6601851
+authors:
+- authtype: Author
+  name: Taesler P
+- authtype: Author
+  name: Rose M
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '18'
+pages: 5026-5033
+pmclivedate: 2019/07/12
+printpubdate: 2016 May 4
+pubdate: 2016 May 4
+sortdate: 2016/05/04 00:00
+source: J Neurosci
+title: Prestimulus Theta Oscillations and Connectivity Modulate Pain Perception
+uid: '6601851'
+volume: '36'

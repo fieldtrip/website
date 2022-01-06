@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '27347668'
+- idtype: doi
+  value: 10.1002/hbm.23298
+- idtype: pmcid
+  value: PMC6867507
+authors:
+- authtype: Author
+  name: Helfrich RF
+- authtype: Author
+  name: Knepper H
+- authtype: Author
+  name: Nolte G
+- authtype: Author
+  name: Sengelmann M
+- authtype: Author
+  name: König P
+- authtype: Author
+  name: Schneider TR
+- authtype: Author
+  name: Engel AK
+epubdate: 2016 Oct 6
+fulljournalname: Human Brain Mapping
+issue: '11'
+pages: 4099-4111
+pmclivedate: 2020/06/12
+printpubdate: ''
+pubdate: 2016 Oct 6
+sortdate: 2016/10/06 00:00
+source: Hum Brain Mapp
+title: Spectral fingerprints of large‐scale cortical dynamics during ambiguous motion
+  perception
+uid: '6867507'
+volume: '37'

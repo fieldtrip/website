@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '30939128'
+- idtype: doi
+  value: 10.1371/journal.pbio.3000210
+- idtype: pmcid
+  value: PMC6461295
+authors:
+- authtype: Author
+  name: Aller M
+- authtype: Author
+  name: Noppeney U
+epubdate: 2019 Apr 2
+fulljournalname: PLoS Biology
+issue: '4'
+pages: e3000210
+pmclivedate: 2019/05/03
+printpubdate: ''
+pubdate: 2019 Apr 2
+sortdate: 2019/04/02 00:00
+source: PLoS Biol
+title: 'To integrate or not to integrate: Temporal dynamics of hierarchical Bayesian
+  causal inference'
+uid: '6461295'
+volume: '17'

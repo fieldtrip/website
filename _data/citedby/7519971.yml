@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '32995486'
+- idtype: doi
+  value: 10.3934/Neuroscience.2020015
+- idtype: pmcid
+  value: PMC7519971
+authors:
+- authtype: Author
+  name: Kaya Z
+- authtype: Author
+  name: Soltanipour M
+- authtype: Author
+  name: Treves A
+epubdate: 2020 Aug 4
+fulljournalname: AIMS Neuroscience
+issue: '3'
+pages: 275-298
+pmclivedate: 2020/09/28
+printpubdate: ''
+pubdate: 2020 Aug 4
+sortdate: 2020/08/04 00:00
+source: AIMS Neurosci
+title: Non-hexagonal neural dynamics in vowel space
+uid: '7519971'
+volume: '7'

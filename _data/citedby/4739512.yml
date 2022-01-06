@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '26584867'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2015.11.020
+- idtype: pmcid
+  value: PMC4739512
+authors:
+- authtype: Author
+  name: Romei V
+- authtype: Author
+  name: Bauer M
+- authtype: Author
+  name: Brooks JL
+- authtype: Author
+  name: Economides M
+- authtype: Author
+  name: Penny W
+- authtype: Author
+  name: Thut G
+- authtype: Author
+  name: Driver J
+- authtype: Author
+  name: Bestmann S
+epubdate: ''
+fulljournalname: Neuroimage
+issue: ''
+pages: 120-130
+pmclivedate: 2016/02/29
+printpubdate: 2016 Feb 1
+pubdate: 2016 Feb 1
+sortdate: 2016/02/01 00:00
+source: Neuroimage
+title: Causal evidence that intrinsic beta-frequency is relevant for enhanced signal
+  propagation in the motor system as shown through rhythmic TMS
+uid: '4739512'
+volume: '126'

@@ -1,0 +1,34 @@
+articleids:
+- idtype: pmid
+  value: '31591217'
+- idtype: doi
+  value: 10.1073/pnas.1905544116
+- idtype: pmcid
+  value: PMC6815174
+authors:
+- authtype: Author
+  name: Kietzmann TC
+- authtype: Author
+  name: Spoerer CJ
+- authtype: Author
+  name: Sörensen LK
+- authtype: Author
+  name: Cichy RM
+- authtype: Author
+  name: Hauk O
+- authtype: Author
+  name: Kriegeskorte N
+epubdate: 2019 Oct 7
+fulljournalname: Proceedings of the National Academy of Sciences of the United States
+  of America
+issue: '43'
+pages: 21854-21863
+pmclivedate: 2019/10/30
+printpubdate: 2019 Oct 22
+pubdate: 2019 Oct 7
+sortdate: 2019/10/07 00:00
+source: Proc Natl Acad Sci U S A
+title: Recurrence is required to capture the representational dynamics of the human
+  visual system
+uid: '6815174'
+volume: '116'

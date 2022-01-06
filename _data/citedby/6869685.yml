@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '24996147'
+- idtype: doi
+  value: 10.1002/hbm.22582
+- idtype: pmcid
+  value: PMC6869685
+authors:
+- authtype: Author
+  name: Recasens M
+- authtype: Author
+  name: Grimm S
+- authtype: Author
+  name: Wollbrink A
+- authtype: Author
+  name: Pantev C
+- authtype: Author
+  name: Escera C
+epubdate: 2014 Jul 4
+fulljournalname: Human Brain Mapping
+issue: '11'
+pages: 5701-5716
+pmclivedate: 2020/06/12
+printpubdate: ''
+pubdate: 2014 Jul 4
+sortdate: 2014/07/04 00:00
+source: Hum Brain Mapp
+title: Encoding of nested levels of acoustic regularity in hierarchically organized
+  areas of the human auditory cortex
+uid: '6869685'
+volume: '35'

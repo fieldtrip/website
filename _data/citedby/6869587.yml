@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '25872756'
+- idtype: doi
+  value: 10.1002/hbm.22806
+- idtype: pmcid
+  value: PMC6869587
+authors:
+- authtype: Author
+  name: Piai V
+- authtype: Author
+  name: Roelofs A
+- authtype: Author
+  name: Rommers J
+- authtype: Author
+  name: Maris E
+epubdate: 2015 Apr 14
+fulljournalname: Human Brain Mapping
+issue: '7'
+pages: 2767-2780
+pmclivedate: 2020/06/12
+printpubdate: ''
+pubdate: 2015 Apr 14
+sortdate: 2015/04/14 00:00
+source: Hum Brain Mapp
+title: Beta oscillations reflect memory and motor aspects of spoken word production
+uid: '6869587'
+volume: '36'

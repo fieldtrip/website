@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '22073038'
+- idtype: doi
+  value: 10.3389/fpsyg.2011.00322
+- idtype: pmcid
+  value: PMC3210509
+authors:
+- authtype: Author
+  name: Pernet CR
+- authtype: Author
+  name: Sajda P
+- authtype: Author
+  name: Rousselet GA
+epubdate: 2011 Nov 8
+fulljournalname: Frontiers in Psychology
+issue: ''
+pages: '322'
+pmclivedate: 2011/11/09
+printpubdate: ''
+pubdate: 2011 Nov 8
+sortdate: 2011/11/08 00:00
+source: Front Psychol
+title: 'Single-Trial Analyses: Why Bother?'
+uid: '3210509'
+volume: '2'

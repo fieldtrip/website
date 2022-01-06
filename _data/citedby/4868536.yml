@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '26712157'
+- idtype: doi
+  value: 10.7554/eLife.10274
+- idtype: pmcid
+  value: PMC4868536
+authors:
+- authtype: Author
+  name: El Zein M
+- authtype: Author
+  name: Wyart V
+- authtype: Author
+  name: Grèzes J
+epubdate: 2015 Dec 29
+fulljournalname: eLife
+issue: ''
+pages: e10274
+pmclivedate: 2016/05/18
+printpubdate: ''
+pubdate: 2015 Dec 29
+sortdate: 2015/12/29 00:00
+source: eLife
+title: Anxiety dissociates the adaptive functions of sensory and motor response enhancements
+  to social threats
+uid: '4868536'
+volume: '4'

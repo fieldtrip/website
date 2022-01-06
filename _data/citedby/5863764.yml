@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '29526594'
+- idtype: doi
+  value: 10.1016/j.cub.2018.01.087
+- idtype: pmcid
+  value: PMC5863764
+authors:
+- authtype: Author
+  name: Cairney SA
+- authtype: Author
+  name: Guttesen AÁ
+- authtype: Author
+  name: El Marj N
+- authtype: Author
+  name: Staresina BP
+epubdate: ''
+fulljournalname: Current Biology
+issue: '6'
+pages: 948-954.e4
+pmclivedate: 2018/03/23
+printpubdate: 2018 Mar 19
+pubdate: 2018 Mar 19
+sortdate: 2018/03/19 00:00
+source: Curr Biol
+title: Memory Consolidation Is Linked to Spindle-Mediated Information Processing during
+  Sleep
+uid: '5863764'
+volume: '28'

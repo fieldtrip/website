@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '27009160'
+- idtype: doi
+  value: 10.1152/jn.00507.2015
+- idtype: pmcid
+  value: PMC4922619
+authors:
+- authtype: Author
+  name: Fransen AM
+- authtype: Author
+  name: Dimitriadis G
+- authtype: Author
+  name: van Ede F
+- authtype: Author
+  name: Maris E
+epubdate: 2016 Mar 23
+fulljournalname: Journal of Neurophysiology
+issue: '6'
+pages: 3030-3044
+pmclivedate: 2017/06/01
+printpubdate: 2016 Jun 1
+pubdate: 2016 Mar 23
+sortdate: 2016/03/23 00:00
+source: J Neurophysiol
+title: Distinct α- and β-band rhythms over rat somatosensory cortex with similar properties
+  as in humans
+uid: '4922619'
+volume: '115'

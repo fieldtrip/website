@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '28686161'
+- idtype: doi
+  value: 10.7554/eLife.25618
+- idtype: pmcid
+  value: PMC5553936
+authors:
+- authtype: Author
+  name: Tomassini A
+- authtype: Author
+  name: Ambrogioni L
+- authtype: Author
+  name: Medendorp WP
+- authtype: Author
+  name: Maris E
+epubdate: 2017 Jul 7
+fulljournalname: eLife
+issue: ''
+pages: e25618
+pmclivedate: 2017/08/21
+printpubdate: ''
+pubdate: 2017 Jul 7
+sortdate: 2017/07/07 00:00
+source: eLife
+title: Theta oscillations locked to intended actions rhythmically modulate perception
+uid: '5553936'
+volume: '6'

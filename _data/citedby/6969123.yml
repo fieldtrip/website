@@ -1,0 +1,24 @@
+articleids:
+- idtype: pmid
+  value: '29197727'
+- idtype: doi
+  value: 10.1016/j.dcn.2017.11.010
+- idtype: pmcid
+  value: PMC6969123
+authors:
+- authtype: Author
+  name: He W
+- authtype: Author
+  name: Johnson BW
+epubdate: 2017 Nov 23
+fulljournalname: Developmental Cognitive Neuroscience
+issue: ''
+pages: 13-22
+pmclivedate: 2020/01/21
+printpubdate: ''
+pubdate: 2017 Nov 23
+sortdate: 2017/11/23 00:00
+source: Dev Cogn Neurosci
+title: 'Development of face recognition: Dynamic causal modelling of MEG data'
+uid: '6969123'
+volume: '30'

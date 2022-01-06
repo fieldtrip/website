@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '30012685'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.2928-17.2018
+- idtype: pmcid
+  value: PMC6596135
+authors:
+- authtype: Author
+  name: Wilsch A
+- authtype: Author
+  name: Henry MJ
+- authtype: Author
+  name: Herrmann B
+- authtype: Author
+  name: Herrmann CS
+- authtype: Author
+  name: Obleser J
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '34'
+pages: 7428-7439
+pmclivedate: 2019/06/27
+printpubdate: 2018 Aug 22
+pubdate: 2018 Aug 22
+sortdate: 2018/08/22 00:00
+source: J Neurosci
+title: Temporal Expectation Modulates the Cortical Dynamics of Short-Term Memory
+uid: '6596135'
+volume: '38'

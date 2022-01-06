@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '33979407'
+- idtype: doi
+  value: 10.1371/journal.pone.0251490
+- idtype: pmcid
+  value: PMC8115801
+authors:
+- authtype: Author
+  name: Dong HW
+- authtype: Author
+  name: Mills C
+- authtype: Author
+  name: Knight RT
+- authtype: Author
+  name: Kam JW
+epubdate: 2021 May 12
+fulljournalname: PLoS ONE
+issue: '5'
+pages: e0251490
+pmclivedate: 2021/05/24
+printpubdate: ''
+pubdate: 2021 May 12
+sortdate: 2021/05/12 00:00
+source: PLoS One
+title: 'Detection of mind wandering using EEG: Within and across individuals'
+uid: '8115801'
+volume: '16'

@@ -1,0 +1,57 @@
+articleids:
+- idtype: pmid
+  value: '29522156'
+- idtype: doi
+  value: 10.1093/brain/awy044
+- idtype: pmcid
+  value: PMC5920328
+authors:
+- authtype: Author
+  name: Nakamura A
+- authtype: Author
+  name: Cuesta P
+- authtype: Author
+  name: Fernández A
+- authtype: Author
+  name: Arahata Y
+- authtype: Author
+  name: Iwata K
+- authtype: Author
+  name: Kuratsubo I
+- authtype: Author
+  name: Bundo M
+- authtype: Author
+  name: Hattori H
+- authtype: Author
+  name: Sakurai T
+- authtype: Author
+  name: Fukuda K
+- authtype: Author
+  name: Washimi Y
+- authtype: Author
+  name: Endo H
+- authtype: Author
+  name: Takeda A
+- authtype: Author
+  name: Diers K
+- authtype: Author
+  name: Bajo R
+- authtype: Author
+  name: Maestú F
+- authtype: Author
+  name: Ito K
+- authtype: Author
+  name: Kato T
+epubdate: 2018 Mar 7
+fulljournalname: Brain
+issue: '5'
+pages: 1470-1485
+pmclivedate: 2018/05/04
+printpubdate: 2018 May
+pubdate: 2018 Mar 7
+sortdate: 2018/03/07 00:00
+source: Brain
+title: Electromagnetic signatures of the preclinical and prodromal stages of Alzheimer’s
+  disease
+uid: '5920328'
+volume: '141'

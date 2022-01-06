@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '34242290'
+- idtype: doi
+  value: 10.1371/journal.pone.0254162
+- idtype: pmcid
+  value: PMC8270138
+authors:
+- authtype: Author
+  name: Paul BT
+- authtype: Author
+  name: Chen J
+- authtype: Author
+  name: Le T
+- authtype: Author
+  name: Lin V
+- authtype: Author
+  name: Dimitrijevic A
+epubdate: 2021 Jul 9
+fulljournalname: PLoS ONE
+issue: '7'
+pages: e0254162
+pmclivedate: 2021/07/21
+printpubdate: ''
+pubdate: 2021 Jul 9
+sortdate: 2021/07/09 00:00
+source: PLoS One
+title: Cortical alpha oscillations in cochlear implant users reflect subjective listening
+  effort during speech-in-noise perception
+uid: '8270138'
+volume: '16'

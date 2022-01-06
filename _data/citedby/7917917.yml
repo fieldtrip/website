@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '33673024'
+- idtype: doi
+  value: 10.3390/ijms22041898
+- idtype: pmcid
+  value: PMC7917917
+authors:
+- authtype: Author
+  name: Neklyudova AK
+- authtype: Author
+  name: Portnova GV
+- authtype: Author
+  name: Rebreikina AB
+- authtype: Author
+  name: Voinova VY
+- authtype: Author
+  name: Vorsanova SG
+- authtype: Author
+  name: Iourov IY
+- authtype: Author
+  name: Sysoeva OV
+epubdate: 2021 Feb 14
+fulljournalname: International Journal of Molecular Sciences
+issue: '4'
+pages: '1898'
+pmclivedate: 2021/03/02
+printpubdate: ''
+pubdate: 2021 Feb 14
+sortdate: 2021/02/14 00:00
+source: Int J Mol Sci
+title: '40-Hz Auditory Steady-State Response (ASSR) as a Biomarker of Genetic Defects
+  in the SHANK3 Gene: A Case Report of 15-Year-Old Girl with a Rare Partial SHANK3
+  Duplication'
+uid: '7917917'
+volume: '22'

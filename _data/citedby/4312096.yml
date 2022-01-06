@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '25635777'
+- idtype: doi
+  value: 10.1371/journal.pone.0114817
+- idtype: pmcid
+  value: PMC4312096
+authors:
+- authtype: Author
+  name: Meziane HB
+- authtype: Author
+  name: Moisello C
+- authtype: Author
+  name: Perfetti B
+- authtype: Author
+  name: Kvint S
+- authtype: Author
+  name: Isaias IU
+- authtype: Author
+  name: Quartarone A
+- authtype: Author
+  name: Di Rocco A
+- authtype: Author
+  name: Ghilardi MF
+epubdate: 2015 Jan 30
+fulljournalname: PLoS ONE
+issue: '1'
+pages: e0114817
+pmclivedate: 2015/02/13
+printpubdate: ''
+pubdate: 2015 Jan 30
+sortdate: 2015/01/30 00:00
+source: PLoS One
+title: Movement Preparation and Bilateral Modulation of Beta Activity in Aging and
+  Parkinson’s Disease
+uid: '4312096'
+volume: '10'

@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '33504860'
+- idtype: doi
+  value: 10.1038/s41598-021-82008-7
+- idtype: pmcid
+  value: PMC7840678
+authors:
+- authtype: Author
+  name: Kubetschek C
+- authtype: Author
+  name: Kayser C
+epubdate: 2021 Jan 27
+fulljournalname: Scientific Reports
+issue: ''
+pages: '2370'
+pmclivedate: 2021/01/28
+printpubdate: ''
+pubdate: 2021 Jan 27
+sortdate: 2021/01/27 00:00
+source: Sci Rep
+title: Delta/Theta band EEG activity shapes the rhythmic perceptual sampling of auditory
+  scenes
+uid: '7840678'
+volume: '11'

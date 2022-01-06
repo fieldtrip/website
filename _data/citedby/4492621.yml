@@ -1,0 +1,40 @@
+articleids:
+- idtype: pmid
+  value: '26147342'
+- idtype: doi
+  value: 10.1371/journal.pone.0132531
+- idtype: pmcid
+  value: PMC4492621
+authors:
+- authtype: Author
+  name: Peiker I
+- authtype: Author
+  name: Schneider TR
+- authtype: Author
+  name: Milne E
+- authtype: Author
+  name: Schöttle D
+- authtype: Author
+  name: Vogeley K
+- authtype: Author
+  name: Münchau A
+- authtype: Author
+  name: Schunke O
+- authtype: Author
+  name: Siegel M
+- authtype: Author
+  name: Engel AK
+- authtype: Author
+  name: David N
+epubdate: 2015 Jul 6
+fulljournalname: PLoS ONE
+issue: '7'
+pages: e0132531
+pmclivedate: 2015/07/15
+printpubdate: ''
+pubdate: 2015 Jul 6
+sortdate: 2015/07/06 00:00
+source: PLoS One
+title: Stronger Neural Modulation by Visual Motion Intensity in Autism Spectrum Disorders
+uid: '4492621'
+volume: '10'

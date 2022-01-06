@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '34083380'
+- idtype: doi
+  value: 10.1523/ENEURO.0562-20.2021
+- idtype: pmcid
+  value: PMC8272402
+authors:
+- authtype: Author
+  name: Rimmele JM
+- authtype: Author
+  name: Poeppel D
+- authtype: Author
+  name: Ghitza O
+epubdate: 2021 Jul 9
+fulljournalname: eNeuro
+issue: '4'
+pages: ENEURO.0562-20.2021
+pmclivedate: 2021/07/12
+printpubdate: ''
+pubdate: 2021 Jul 9
+sortdate: 2021/07/09 00:00
+source: eNeuro
+title: Acoustically Driven Cortical δ Oscillations Underpin Prosodic Chunking
+uid: '8272402'
+volume: '8'

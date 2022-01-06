@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '33189931'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2020.117562
+- idtype: pmcid
+  value: PMC8084109
+- idtype: MID
+  value: NIHMS1691113
+authors:
+- authtype: Author
+  name: Munneke J
+- authtype: Author
+  name: Fahrenfort JJ
+- authtype: Author
+  name: Sutterer D
+- authtype: Author
+  name: Theeuwes J
+- authtype: Author
+  name: Awh E
+epubdate: 2020 Nov 12
+fulljournalname: NeuroImage
+issue: ''
+pages: '117562'
+pmclivedate: 2021/04/29
+printpubdate: 2021 Feb 1
+pubdate: 2020 Nov 12
+sortdate: 2020/11/12 00:00
+source: Neuroimage
+title: Multivariate analysis of EEG activity indexes contingent attentional capture
+uid: '8084109'
+volume: '226'

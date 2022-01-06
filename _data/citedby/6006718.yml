@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '29946234'
+- idtype: doi
+  value: 10.3389/fnins.2018.00400
+- idtype: pmcid
+  value: PMC6006718
+authors:
+- authtype: Author
+  name: Rocchi L
+- authtype: Author
+  name: Ibáñez J
+- authtype: Author
+  name: Benussi A
+- authtype: Author
+  name: Hannah R
+- authtype: Author
+  name: Rawji V
+- authtype: Author
+  name: Casula E
+- authtype: Author
+  name: Rothwell J
+epubdate: 2018 Jun 12
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '400'
+pmclivedate: 2018/06/26
+printpubdate: ''
+pubdate: 2018 Jun 12
+sortdate: 2018/06/12 00:00
+source: Front Neurosci
+title: 'Variability and Predictors of Response to Continuous Theta Burst Stimulation:
+  A TMS-EEG Study'
+uid: '6006718'
+volume: '12'

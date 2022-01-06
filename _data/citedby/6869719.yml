@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '24522937'
+- idtype: doi
+  value: 10.1002/hbm.22452
+- idtype: pmcid
+  value: PMC6869719
+authors:
+- authtype: Author
+  name: Park H
+- authtype: Author
+  name: Lee DS
+- authtype: Author
+  name: Kang E
+- authtype: Author
+  name: Kang H
+- authtype: Author
+  name: Hahm J
+- authtype: Author
+  name: Kim JS
+- authtype: Author
+  name: Chung CK
+- authtype: Author
+  name: Jensen O
+epubdate: 2014 Feb 12
+fulljournalname: Human Brain Mapping
+issue: '8'
+pages: 3972-3987
+pmclivedate: 2020/06/12
+printpubdate: ''
+pubdate: 2014 Feb 12
+sortdate: 2014/02/12 00:00
+source: Hum Brain Mapp
+title: Blocking of irrelevant memories by posterior alpha activity boosts memory encoding
+uid: '6869719'
+volume: '35'

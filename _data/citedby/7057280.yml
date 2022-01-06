@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '31850496'
+- idtype: doi
+  value: 10.1093/scan/nsz096
+- idtype: pmcid
+  value: PMC7057280
+authors:
+- authtype: Author
+  name: Jiang H
+- authtype: Author
+  name: Hua L
+- authtype: Author
+  name: Dai Z
+- authtype: Author
+  name: Tian S
+- authtype: Author
+  name: Yao Z
+- authtype: Author
+  name: Lu Q
+- authtype: Author
+  name: Popov T
+epubdate: 2019 Dec 18
+fulljournalname: Social Cognitive and Affective Neuroscience
+issue: '11'
+pages: 1233-1242
+pmclivedate: 2020/03/10
+printpubdate: ''
+pubdate: 2019 Dec 18
+sortdate: 2019/12/18 00:00
+source: Soc Cogn Affect Neurosci
+title: Spectral fingerprints of facial affect processing bias in major depression
+  disorder
+uid: '7057280'
+volume: '14'

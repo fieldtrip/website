@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '34529682'
+- idtype: doi
+  value: 10.1371/journal.pone.0255815
+- idtype: pmcid
+  value: PMC8445484
+authors:
+- authtype: Author
+  name: Schilberg L
+- authtype: Author
+  name: Ten Oever S
+- authtype: Author
+  name: Schuhmann T
+- authtype: Author
+  name: Sack AT
+epubdate: 2021 Sep 16
+fulljournalname: PLoS ONE
+issue: '9'
+pages: e0255815
+pmclivedate: 2021/09/17
+printpubdate: ''
+pubdate: 2021 Sep 16
+sortdate: 2021/09/16 00:00
+source: PLoS One
+title: Phase and power modulations on the amplitude of TMS-induced motor evoked potentials
+uid: '8445484'
+volume: '16'

@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '28886147'
+- idtype: doi
+  value: 10.1371/journal.pone.0184422
+- idtype: pmcid
+  value: PMC5590936
+authors:
+- authtype: Author
+  name: Duan F
+- authtype: Author
+  name: Watanabe K
+- authtype: Author
+  name: Yoshimura Y
+- authtype: Author
+  name: Kikuchi M
+- authtype: Author
+  name: Minabe Y
+- authtype: Author
+  name: Aihara K
+epubdate: 2017 Sep 8
+fulljournalname: PLoS ONE
+issue: '9'
+pages: e0184422
+pmclivedate: 2017/09/15
+printpubdate: ''
+pubdate: 2017 Sep 8
+sortdate: 2017/09/08 00:00
+source: PLoS One
+title: Detection of atypical network development patterns in children with autism
+  spectrum disorder using magnetoencephalography
+uid: '5590936'
+volume: '12'

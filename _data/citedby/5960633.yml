@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '29604457'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2018.03.063
+- idtype: pmcid
+  value: PMC5960633
+- idtype: MID
+  value: NIHMS965885
+authors:
+- authtype: Author
+  name: Kam JW
+- authtype: Author
+  name: Solbakk AK
+- authtype: Author
+  name: Endestad T
+- authtype: Author
+  name: Meling TR
+- authtype: Author
+  name: Knight RT
+epubdate: 2018 Mar 28
+fulljournalname: NeuroImage
+issue: ''
+pages: 91-99
+pmclivedate: 2018/07/15
+printpubdate: 2018 Jul 15
+pubdate: 2018 Mar 28
+sortdate: 2018/03/28 00:00
+source: Neuroimage
+title: Lateral prefrontal cortex lesion impairs regulation of internally and externally
+  directed attention
+uid: '5960633'
+volume: '175'

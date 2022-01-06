@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '28420951'
+- idtype: doi
+  value: 10.3389/fnins.2017.00165
+- idtype: pmcid
+  value: PMC5378800
+authors:
+- authtype: Author
+  name: Lappe C
+- authtype: Author
+  name: Bodeck S
+- authtype: Author
+  name: Lappe M
+- authtype: Author
+  name: Pantev C
+epubdate: 2017 Apr 4
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '165'
+pmclivedate: 2017/04/18
+printpubdate: ''
+pubdate: 2017 Apr 4
+sortdate: 2017/04/04 00:00
+source: Front Neurosci
+title: Shared Neural Mechanisms for the Prediction of Own and Partner Musical Sequences
+  after Short-term Piano Duet Training
+uid: '5378800'
+volume: '11'

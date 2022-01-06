@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '31061089'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.3010-18.2019
+- idtype: pmcid
+  value: PMC6607748
+authors:
+- authtype: Author
+  name: Alamia A
+- authtype: Author
+  name: VanRullen R
+- authtype: Author
+  name: Pasqualotto E
+- authtype: Author
+  name: Mouraux A
+- authtype: Author
+  name: Zenon A
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '27'
+pages: 5369-5376
+pmclivedate: 2020/01/03
+printpubdate: 2019 Jul 3
+pubdate: 2019 Jul 3
+sortdate: 2019/07/03 00:00
+source: J Neurosci
+title: Pupil-Linked Arousal Responds to Unconscious Surprisal
+uid: '6607748'
+volume: '39'

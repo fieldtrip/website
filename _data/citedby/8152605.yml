@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '33833083'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0628-20.2021
+- idtype: pmcid
+  value: PMC8152605
+authors:
+- authtype: Author
+  name: Damsma A
+- authtype: Author
+  name: Schlichting N
+- authtype: Author
+  name: van Rijn H
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '20'
+pages: 4514-4523
+pmclivedate: 2021/11/19
+printpubdate: 2021 May 19
+pubdate: 2021 May 19
+sortdate: 2021/05/19 00:00
+source: J Neurosci
+title: Temporal Context Actively Shapes EEG Signatures of Time Perception
+uid: '8152605'
+volume: '41'

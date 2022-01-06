@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '33192799'
+- idtype: doi
+  value: 10.3389/fpsyg.2020.550749
+- idtype: pmcid
+  value: PMC7656905
+authors:
+- authtype: Author
+  name: Rucco R
+- authtype: Author
+  name: Bernardo P
+- authtype: Author
+  name: Lardone A
+- authtype: Author
+  name: Baselice F
+- authtype: Author
+  name: Pesoli M
+- authtype: Author
+  name: Polverino A
+- authtype: Author
+  name: Bravaccio C
+- authtype: Author
+  name: Granata C
+- authtype: Author
+  name: Mandolesi L
+- authtype: Author
+  name: Sorrentino G
+- authtype: Author
+  name: Sorrentino P
+epubdate: 2020 Oct 27
+fulljournalname: Frontiers in Psychology
+issue: ''
+pages: '550749'
+pmclivedate: 2020/11/13
+printpubdate: ''
+pubdate: 2020 Oct 27
+sortdate: 2020/10/27 00:00
+source: Front Psychol
+title: 'Neuronal Avalanches to Study the Coordination of Large-Scale Brain Activity:
+  Application to Rett Syndrome'
+uid: '7656905'
+volume: '11'

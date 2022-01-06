@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '32414060'
+- idtype: doi
+  value: 10.3390/s20102770
+- idtype: pmcid
+  value: PMC7285770
+authors:
+- authtype: Author
+  name: Choi J
+- authtype: Author
+  name: Kwon M
+- authtype: Author
+  name: Jun SC
+epubdate: 2020 May 13
+fulljournalname: Sensors (Basel, Switzerland)
+issue: '10'
+pages: '2770'
+pmclivedate: 2020/06/15
+printpubdate: ''
+pubdate: 2020 May 13
+sortdate: 2020/05/13 00:00
+source: Sensors (Basel)
+title: A Systematic Review of Closed-Loop Feedback Techniques in Sleep Studies—Related
+  Issues and Future Directions
+uid: '7285770'
+volume: '20'

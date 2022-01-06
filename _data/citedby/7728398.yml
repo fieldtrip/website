@@ -1,0 +1,47 @@
+articleids:
+- idtype: pmid
+  value: '33253185'
+- idtype: doi
+  value: 10.1371/journal.pbio.3000979
+- idtype: pmcid
+  value: PMC7728398
+authors:
+- authtype: Author
+  name: Paquola C
+- authtype: Author
+  name: Seidlitz J
+- authtype: Author
+  name: Benkarim O
+- authtype: Author
+  name: Royer J
+- authtype: Author
+  name: Klimes P
+- authtype: Author
+  name: Bethlehem RA
+- authtype: Author
+  name: Larivière S
+- authtype: Author
+  name: Vos de Wael R
+- authtype: Author
+  name: Rodríguez-Cruces R
+- authtype: Author
+  name: Hall JA
+- authtype: Author
+  name: Frauscher B
+- authtype: Author
+  name: Smallwood J
+- authtype: Author
+  name: Bernhardt BC
+epubdate: 2020 Nov 30
+fulljournalname: PLoS Biology
+issue: '11'
+pages: e3000979
+pmclivedate: 2020/12/17
+printpubdate: ''
+pubdate: 2020 Nov 30
+sortdate: 2020/11/30 00:00
+source: PLoS Biol
+title: A multi-scale cortical wiring space links cellular architecture and functional
+  dynamics in the human brain
+uid: '7728398'
+volume: '18'

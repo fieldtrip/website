@@ -1,0 +1,38 @@
+articleids:
+- idtype: pmid
+  value: '32375031'
+- idtype: doi
+  value: 10.1016/j.celrep.2020.107581
+- idtype: pmcid
+  value: PMC7337233
+- idtype: MID
+  value: NIHMS1591481
+authors:
+- authtype: Author
+  name: Eichenlaub JB
+- authtype: Author
+  name: Jarosiewicz B
+- authtype: Author
+  name: Saab J
+- authtype: Author
+  name: Franco B
+- authtype: Author
+  name: Kelemen J
+- authtype: Author
+  name: Halgren E
+- authtype: Author
+  name: Hochberg LR
+- authtype: Author
+  name: Cash SS
+epubdate: ''
+fulljournalname: Cell reports
+issue: '5'
+pages: '107581'
+pmclivedate: 2020/07/06
+printpubdate: 2020 May 5
+pubdate: 2020 May 5
+sortdate: 2020/05/05 00:00
+source: Cell Rep
+title: Replay of Learned Neural Firing Sequences during Rest in Human Motor Cortex
+uid: '7337233'
+volume: '31'

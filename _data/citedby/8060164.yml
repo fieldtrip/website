@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '33398141'
+- idtype: doi
+  value: 10.1038/s41562-020-01003-6
+- idtype: pmcid
+  value: PMC8060164
+authors:
+- authtype: Author
+  name: Deco G
+- authtype: Author
+  name: Vidaurre D
+- authtype: Author
+  name: Kringelbach ML
+epubdate: 2021 Jan 4
+fulljournalname: Nature Human Behaviour
+issue: '4'
+pages: 497-511
+pmclivedate: 2021/05/07
+printpubdate: '2021'
+pubdate: 2021 Jan 4
+sortdate: 2021/01/04 00:00
+source: Nat Hum Behav
+title: Revisiting the global workspace orchestrating the hierarchical organization
+  of the human brain
+uid: '8060164'
+volume: '5'

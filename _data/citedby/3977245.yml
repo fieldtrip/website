@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '24639490'
+- idtype: doi
+  value: 10.1073/pnas.1323297111
+- idtype: pmcid
+  value: PMC3977245
+authors:
+- authtype: Author
+  name: Paulk AC
+- authtype: Author
+  name: Stacey JA
+- authtype: Author
+  name: Pearson TW
+- authtype: Author
+  name: Taylor GJ
+- authtype: Author
+  name: Moore RJ
+- authtype: Author
+  name: Srinivasan MV
+- authtype: Author
+  name: van Swinderen B
+epubdate: 2014 Mar 17
+fulljournalname: Proceedings of the National Academy of Sciences of the United States
+  of America
+issue: '13'
+pages: 5006-5011
+pmclivedate: 2014/10/01
+printpubdate: 2014 Apr 1
+pubdate: 2014 Mar 17
+sortdate: 2014/03/17 00:00
+source: Proc Natl Acad Sci U S A
+title: Selective attention in the honeybee optic lobes precedes behavioral choices
+uid: '3977245'
+volume: '111'

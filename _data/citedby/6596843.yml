@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '28143960'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1912-16.2017
+- idtype: pmcid
+  value: PMC6596843
+authors:
+- authtype: Author
+  name: Groch S
+- authtype: Author
+  name: Preiss A
+- authtype: Author
+  name: McMakin DL
+- authtype: Author
+  name: Rasch B
+- authtype: Author
+  name: Walitza S
+- authtype: Author
+  name: Huber R
+- authtype: Author
+  name: Wilhelm I
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '9'
+pages: 2425-2434
+pmclivedate: 2019/07/01
+printpubdate: 2017 Mar 1
+pubdate: 2017 Mar 1
+sortdate: 2017/03/01 00:00
+source: J Neurosci
+title: Targeted Reactivation during Sleep Differentially Affects Negative Memories
+  in Socially Anxious and Healthy Children and Adolescents
+uid: '6596843'
+volume: '37'

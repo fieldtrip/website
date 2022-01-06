@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '28821651'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1303-17.2017
+- idtype: pmcid
+  value: PMC5607463
+authors:
+- authtype: Author
+  name: Funk CM
+- authtype: Author
+  name: Peelman K
+- authtype: Author
+  name: Bellesi M
+- authtype: Author
+  name: Marshall W
+- authtype: Author
+  name: Cirelli C
+- authtype: Author
+  name: Tononi G
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '38'
+pages: 9132-9148
+pmclivedate: 2018/03/20
+printpubdate: 2017 Sep 20
+pubdate: 2017 Sep 20
+sortdate: 2017/09/20 00:00
+source: J Neurosci
+title: Role of Somatostatin-Positive Cortical Interneurons in the Generation of Sleep
+  Slow Waves
+uid: '5607463'
+volume: '37'

@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '28077721'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.2272-16.2016
+- idtype: pmcid
+  value: PMC5242399
+authors:
+- authtype: Author
+  name: van Ede F
+- authtype: Author
+  name: Niklaus M
+- authtype: Author
+  name: Nobre AC
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '2'
+pages: 437-445
+pmclivedate: 2017/01/31
+printpubdate: 2017 Jan 11
+pubdate: 2017 Jan 11
+sortdate: 2017/01/11 00:00
+source: J Neurosci
+title: Temporal Expectations Guide Dynamic Prioritization in Visual Working Memory
+  through Attenuated α Oscillations
+uid: '5242399'
+volume: '37'

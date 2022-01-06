@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '25652920'
+- idtype: doi
+  value: 10.1152/jn.00634.2014
+- idtype: pmcid
+  value: PMC4416562
+authors:
+- authtype: Author
+  name: Herrmann B
+- authtype: Author
+  name: Henry MJ
+- authtype: Author
+  name: Fromboluti EK
+- authtype: Author
+  name: McAuley JD
+- authtype: Author
+  name: Obleser J
+epubdate: 2015 Feb 4
+fulljournalname: Journal of Neurophysiology
+issue: '7'
+pages: 2582-2591
+pmclivedate: 2016/04/01
+printpubdate: 2015 Apr
+pubdate: 2015 Feb 4
+sortdate: 2015/02/04 00:00
+source: J Neurophysiol
+title: Statistical context shapes stimulus-specific adaptation in human auditory cortex
+uid: '4416562'
+volume: '113'

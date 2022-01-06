@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '30804092'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1450-18.2019
+- idtype: pmcid
+  value: PMC6495130
+authors:
+- authtype: Author
+  name: Dannenberg H
+- authtype: Author
+  name: Kelley C
+- authtype: Author
+  name: Hoyland A
+- authtype: Author
+  name: Monaghan CK
+- authtype: Author
+  name: Hasselmo ME
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '18'
+pages: 3434-3453
+pmclivedate: 2019/11/01
+printpubdate: 2019 May 1
+pubdate: 2019 May 1
+sortdate: 2019/05/01 00:00
+source: J Neurosci
+title: The Firing Rate Speed Code of Entorhinal Speed Cells Differs across Behaviorally
+  Relevant Time Scales and Does Not Depend on Medial Septum Inputs
+uid: '6495130'
+volume: '39'

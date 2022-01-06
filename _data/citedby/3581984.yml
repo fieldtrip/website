@@ -1,0 +1,48 @@
+articleids:
+- idtype: pmid
+  value: '23319621'
+- idtype: doi
+  value: 10.1073/pnas.1214533110
+- idtype: pmcid
+  value: PMC3581984
+authors:
+- authtype: Author
+  name: Khan S
+- authtype: Author
+  name: Gramfort A
+- authtype: Author
+  name: Shetty NR
+- authtype: Author
+  name: Kitzbichler MG
+- authtype: Author
+  name: Ganesan S
+- authtype: Author
+  name: Moran JM
+- authtype: Author
+  name: Lee SM
+- authtype: Author
+  name: Gabrieli JD
+- authtype: Author
+  name: Tager-Flusberg HB
+- authtype: Author
+  name: Joseph RM
+- authtype: Author
+  name: Herbert MR
+- authtype: Author
+  name: Hämäläinen MS
+- authtype: Author
+  name: Kenet T
+epubdate: 2013 Jan 14
+fulljournalname: Proceedings of the National Academy of Sciences of the United States
+  of America
+issue: '8'
+pages: 3107-3112
+pmclivedate: 2013/08/19
+printpubdate: 2013 Feb 19
+pubdate: 2013 Jan 14
+sortdate: 2013/01/14 00:00
+source: Proc Natl Acad Sci U S A
+title: Local and long-range functional connectivity is reduced in concert in autism
+  spectrum disorders
+uid: '3581984'
+volume: '110'

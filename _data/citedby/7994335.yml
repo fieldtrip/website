@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '33776632'
+- idtype: doi
+  value: 10.3389/fnins.2021.613101
+- idtype: pmcid
+  value: PMC7994335
+authors:
+- authtype: Author
+  name: Schäfer E
+- authtype: Author
+  name: Vedoveli AE
+- authtype: Author
+  name: Righetti G
+- authtype: Author
+  name: Gamerdinger P
+- authtype: Author
+  name: Knipper M
+- authtype: Author
+  name: Tropitzsch A
+- authtype: Author
+  name: Karnath HO
+- authtype: Author
+  name: Braun C
+- authtype: Author
+  name: Li Hegner Y
+epubdate: 2021 Mar 12
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '613101'
+pmclivedate: 2021/03/27
+printpubdate: ''
+pubdate: 2021 Mar 12
+sortdate: 2021/03/12 00:00
+source: Front Neurosci
+title: Activities of the Right Temporo-Parieto-Occipital Junction Reflect Spatial
+  Hearing Ability in Cochlear Implant Users
+uid: '7994335'
+volume: '15'

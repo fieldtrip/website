@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '30894558'
+- idtype: doi
+  value: 10.1038/s41598-019-41024-4
+- idtype: pmcid
+  value: PMC6426990
+authors:
+- authtype: Author
+  name: Tagliabue CF
+- authtype: Author
+  name: Veniero D
+- authtype: Author
+  name: Benwell CS
+- authtype: Author
+  name: Cecere R
+- authtype: Author
+  name: Savazzi S
+- authtype: Author
+  name: Thut G
+epubdate: 2019 Mar 20
+fulljournalname: Scientific Reports
+issue: ''
+pages: '4949'
+pmclivedate: 2019/03/28
+printpubdate: ''
+pubdate: 2019 Mar 20
+sortdate: 2019/03/20 00:00
+source: Sci Rep
+title: The EEG signature of sensory evidence accumulation during decision formation
+  closely tracks subjective perceptual experience
+uid: '6426990'
+volume: '9'

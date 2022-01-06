@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '31780668'
+- idtype: doi
+  value: 10.1038/s41467-019-13417-6
+- idtype: pmcid
+  value: PMC6882891
+authors:
+- authtype: Author
+  name: Kasten FH
+- authtype: Author
+  name: Duecker K
+- authtype: Author
+  name: Maack MC
+- authtype: Author
+  name: Meiser A
+- authtype: Author
+  name: Herrmann CS
+epubdate: 2019 Nov 28
+fulljournalname: Nature Communications
+issue: ''
+pages: '5427'
+pmclivedate: 2019/12/03
+printpubdate: ''
+pubdate: 2019 Nov 28
+sortdate: 2019/11/28 00:00
+source: Nat Commun
+title: Integrating electric field modeling and neuroimaging to explain inter-individual
+  variability of tACS effects
+uid: '6882891'
+volume: '10'

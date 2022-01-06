@@ -1,0 +1,24 @@
+articleids:
+- idtype: pmid
+  value: '28680049'
+- idtype: doi
+  value: 10.1038/s41598-017-04475-1
+- idtype: pmcid
+  value: PMC5498632
+authors:
+- authtype: Author
+  name: Pomper U
+- authtype: Author
+  name: Chait M
+epubdate: 2017 Jul 5
+fulljournalname: Scientific Reports
+issue: ''
+pages: '4640'
+pmclivedate: 2017/07/10
+printpubdate: ''
+pubdate: 2017 Jul 5
+sortdate: 2017/07/05 00:00
+source: Sci Rep
+title: The impact of visual gaze direction on auditory object tracking
+uid: '5498632'
+volume: '7'

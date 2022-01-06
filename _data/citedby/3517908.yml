@@ -1,0 +1,42 @@
+articleids:
+- idtype: pmid
+  value: '23083743'
+- idtype: doi
+  value: 10.1016/j.neuron.2012.08.011
+- idtype: pmcid
+  value: PMC3517908
+- idtype: MID
+  value: NIHMS401737
+authors:
+- authtype: Author
+  name: Honey CJ
+- authtype: Author
+  name: Thesen T
+- authtype: Author
+  name: Donner TH
+- authtype: Author
+  name: Silbert LJ
+- authtype: Author
+  name: Carlson CE
+- authtype: Author
+  name: Devinsky O
+- authtype: Author
+  name: Doyle WK
+- authtype: Author
+  name: Rubin N
+- authtype: Author
+  name: Heeger DJ
+- authtype: Author
+  name: Hasson U
+epubdate: 2012 Oct 17
+fulljournalname: Neuron
+issue: '2'
+pages: 423-434
+pmclivedate: 2013/10/18
+printpubdate: 2012 Oct 18
+pubdate: 2012 Oct 17
+sortdate: 2012/10/17 00:00
+source: Neuron
+title: Slow Cortical Dynamics and the Accumulation of Information over Long Timescales
+uid: '3517908'
+volume: '76'

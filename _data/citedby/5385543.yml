@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '28393850'
+- idtype: doi
+  value: 10.1038/srep46053
+- idtype: pmcid
+  value: PMC5385543
+authors:
+- authtype: Author
+  name: Bueno FD
+- authtype: Author
+  name: Morita VC
+- authtype: Author
+  name: de Camargo RY
+- authtype: Author
+  name: Reyes MB
+- authtype: Author
+  name: Caetano MS
+- authtype: Author
+  name: Cravo AM
+epubdate: 2017 Apr 10
+fulljournalname: Scientific Reports
+issue: ''
+pages: '46053'
+pmclivedate: 2017/04/12
+printpubdate: ''
+pubdate: 2017 Apr 10
+sortdate: 2017/04/10 00:00
+source: Sci Rep
+title: Dynamic representation of time in brain states
+uid: '5385543'
+volume: '7'

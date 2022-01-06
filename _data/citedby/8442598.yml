@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '34423595'
+- idtype: doi
+  value: 10.1002/brb3.2327
+- idtype: pmcid
+  value: PMC8442598
+authors:
+- authtype: Author
+  name: Huang K
+- authtype: Author
+  name: Chen D
+- authtype: Author
+  name: Wang F
+- authtype: Author
+  name: Yang L
+epubdate: 2021 Aug 22
+fulljournalname: Brain and Behavior
+issue: '9'
+pages: e2327
+pmclivedate: 2021/09/15
+printpubdate: ''
+pubdate: 2021 Aug 22
+sortdate: 2021/08/22 00:00
+source: Brain Behav
+title: Prediction of dispositional dialectical thinking from resting‐state electroencephalography
+uid: '8442598'
+volume: '11'

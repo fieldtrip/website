@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '30899240'
+- idtype: doi
+  value: 10.3389/fneur.2019.00145
+- idtype: pmcid
+  value: PMC6416159
+authors:
+- authtype: Author
+  name: Hirschmann J
+- authtype: Author
+  name: Abbasi O
+- authtype: Author
+  name: Storzer L
+- authtype: Author
+  name: Butz M
+- authtype: Author
+  name: Hartmann CJ
+- authtype: Author
+  name: Wojtecki L
+- authtype: Author
+  name: Schnitzler A
+epubdate: 2019 Mar 7
+fulljournalname: Frontiers in Neurology
+issue: ''
+pages: '145'
+pmclivedate: 2019/03/21
+printpubdate: ''
+pubdate: 2019 Mar 7
+sortdate: 2019/03/07 00:00
+source: Front Neurol
+title: Longitudinal Recordings Reveal Transient Increase of Alpha/Low-Beta Power in
+  the Subthalamic Nucleus Associated With the Onset of Parkinsonian Rest Tremor
+uid: '6416159'
+volume: '10'

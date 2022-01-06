@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '31533976'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0696-19.2019
+- idtype: pmcid
+  value: PMC6820204
+authors:
+- authtype: Author
+  name: Billig AJ
+- authtype: Author
+  name: Herrmann B
+- authtype: Author
+  name: Rhone AE
+- authtype: Author
+  name: Gander PE
+- authtype: Author
+  name: Nourski KV
+- authtype: Author
+  name: Snoad BF
+- authtype: Author
+  name: Kovach CK
+- authtype: Author
+  name: Kawasaki H
+- authtype: Author
+  name: Howard MA III
+- authtype: Author
+  name: Johnsrude IS
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '44'
+pages: 8679-8689
+pmclivedate: 2019/10/31
+printpubdate: 2019 Oct 30
+pubdate: 2019 Oct 30
+sortdate: 2019/10/30 00:00
+source: J Neurosci
+title: A Sound-Sensitive Source of Alpha Oscillations in Human Non-Primary Auditory
+  Cortex
+uid: '6820204'
+volume: '39'

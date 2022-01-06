@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '22815960'
+- idtype: doi
+  value: 10.1371/journal.pone.0041180
+- idtype: pmcid
+  value: PMC3399828
+authors:
+- authtype: Author
+  name: van Hoogmoed AH
+- authtype: Author
+  name: van den Brink D
+- authtype: Author
+  name: Janzen G
+epubdate: 2012 Jul 18
+fulljournalname: PLoS ONE
+issue: '7'
+pages: e41180
+pmclivedate: 2012/07/19
+printpubdate: ''
+pubdate: 2012 Jul 18
+sortdate: 2012/07/18 00:00
+source: PLoS One
+title: Electrophysiological Correlates of Object Location and Object Identity Processing
+  in Spatial Scenes
+uid: '3399828'
+volume: '7'

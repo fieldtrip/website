@@ -1,0 +1,24 @@
+articleids:
+- idtype: pmid
+  value: '29464192'
+- idtype: doi
+  value: 10.1523/ENEURO.0302-17.2018
+- idtype: pmcid
+  value: PMC5815661
+authors:
+- authtype: Author
+  name: Schurger A
+epubdate: 2018 Feb 12
+fulljournalname: eNeuro
+issue: '1'
+pages: ENEURO.0302-17.2018
+pmclivedate: 2018/02/20
+printpubdate: ''
+pubdate: 2018 Feb 12
+sortdate: 2018/02/12 00:00
+source: eNeuro
+title: Specific Relationship between the Shape of the Readiness Potential, Subjective
+  Decision Time, and Waiting Time Predicted by an Accumulator Model with Temporally
+  Autocorrelated Input Noise
+uid: '5815661'
+volume: '5'

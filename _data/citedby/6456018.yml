@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '30639330'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2019.01.026
+- idtype: pmcid
+  value: PMC6456018
+- idtype: MID
+  value: EMS81353
+authors:
+- authtype: Author
+  name: Leske S
+- authtype: Author
+  name: Dalal SS
+epubdate: 2019 Jan 11
+fulljournalname: NeuroImage
+issue: ''
+pages: 763-776
+pmclivedate: 2019/10/01
+printpubdate: 2019 Apr 1
+pubdate: 2019 Jan 11
+sortdate: 2019/01/11 00:00
+source: Neuroimage
+title: Reducing power line noise in EEG and MEG data via spectrum interpolation
+uid: '6456018'
+volume: '189'

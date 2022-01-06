@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '27696740'
+- idtype: doi
+  value: 10.1002/aur.1686
+- idtype: pmcid
+  value: PMC5376374
+- idtype: MID
+  value: NIHMS806610
+authors:
+- authtype: Author
+  name: Port RG
+- authtype: Author
+  name: Gaetz W
+- authtype: Author
+  name: Bloy L
+- authtype: Author
+  name: Wang DJ
+- authtype: Author
+  name: Blaskey L
+- authtype: Author
+  name: Kuschner ES
+- authtype: Author
+  name: Levy SE
+- authtype: Author
+  name: Brodkin ES
+- authtype: Author
+  name: Roberts TP
+epubdate: 2016 Oct 1
+fulljournalname: 'Autism research : official journal of the International Society
+  for Autism Research'
+issue: '4'
+pages: 593-607
+pmclivedate: 2018/04/01
+printpubdate: 2017 Apr
+pubdate: 2016 Oct 1
+sortdate: 2016/10/01 00:00
+source: Autism Res
+title: 'Exploring the relationship between cortical GABA concentrations, auditory
+  gamma-band responses and development in ASD: Evidence for an altered maturational
+  trajectory in ASD'
+uid: '5376374'
+volume: '10'

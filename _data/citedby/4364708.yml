@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '25785939'
+- idtype: doi
+  value: 10.1371/journal.pone.0119849
+- idtype: pmcid
+  value: PMC4364708
+authors:
+- authtype: Author
+  name: Wynn JK
+- authtype: Author
+  name: Roach BJ
+- authtype: Author
+  name: Lee J
+- authtype: Author
+  name: Horan WP
+- authtype: Author
+  name: Ford JM
+- authtype: Author
+  name: Jimenez AM
+- authtype: Author
+  name: Green MF
+epubdate: 2015 Mar 18
+fulljournalname: PLoS ONE
+issue: '3'
+pages: e0119849
+pmclivedate: 2015/03/23
+printpubdate: ''
+pubdate: 2015 Mar 18
+sortdate: 2015/03/18 00:00
+source: PLoS One
+title: EEG Findings of Reduced Neural Synchronization during Visual Integration in
+  Schizophrenia
+uid: '4364708'
+volume: '10'

@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '32009921'
+- idtype: doi
+  value: 10.3389/fncom.2019.00090
+- idtype: pmcid
+  value: PMC6974679
+authors:
+- authtype: Author
+  name: Antonakakis M
+- authtype: Author
+  name: Dimitriadis SI
+- authtype: Author
+  name: Zervakis M
+- authtype: Author
+  name: Papanicolaou AC
+- authtype: Author
+  name: Zouridakis G
+epubdate: 2020 Jan 15
+fulljournalname: Frontiers in Computational Neuroscience
+issue: ''
+pages: '90'
+pmclivedate: 2020/01/31
+printpubdate: ''
+pubdate: 2020 Jan 15
+sortdate: 2020/01/15 00:00
+source: Front Comput Neurosci
+title: Aberrant Whole-Brain Transitions and Dynamics of Spontaneous Network Microstates
+  in Mild Traumatic Brain Injury
+uid: '6974679'
+volume: '13'

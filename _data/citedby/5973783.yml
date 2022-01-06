@@ -1,0 +1,34 @@
+articleids:
+- idtype: pmid
+  value: '26737199'
+- idtype: doi
+  value: 10.1109/EMBC.2015.7319299
+- idtype: pmcid
+  value: PMC5973783
+- idtype: MID
+  value: NIHMS969934
+authors:
+- authtype: Author
+  name: Pion-Tonachini L
+- authtype: Author
+  name: Hsu SH
+- authtype: Author
+  name: Makeig S
+- authtype: Author
+  name: Jung TP
+- authtype: Author
+  name: Cauwenberghs G
+epubdate: ''
+fulljournalname: 'Conference proceedings : ... Annual International Conference of
+  the IEEE Engineering in Medicine and Biology Society. IEEE Engineering in Medicine
+  and Biology Society. Annual Conference'
+issue: ''
+pages: 4114-4117
+pmclivedate: 2018/05/29
+printpubdate: '2015'
+pubdate: '2015'
+sortdate: 2015/01/01 00:00
+source: Conf Proc IEEE Eng Med Biol Soc
+title: 'Real-time EEG Source-mapping Toolbox (REST): Online ICA and Source Localization'
+uid: '5973783'
+volume: '2015'

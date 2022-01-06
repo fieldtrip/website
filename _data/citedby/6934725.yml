@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '31882830'
+- idtype: doi
+  value: 10.1038/s41598-019-56600-x
+- idtype: pmcid
+  value: PMC6934725
+authors:
+- authtype: Author
+  name: Terporten R
+- authtype: Author
+  name: Schoffelen JM
+- authtype: Author
+  name: Dai B
+- authtype: Author
+  name: Hagoort P
+- authtype: Author
+  name: Kösem A
+epubdate: 2019 Dec 27
+fulljournalname: Scientific Reports
+issue: ''
+pages: '20255'
+pmclivedate: 2019/12/30
+printpubdate: ''
+pubdate: 2019 Dec 27
+sortdate: 2019/12/27 00:00
+source: Sci Rep
+title: The Relation between Alpha/Beta Oscillations and the Encoding of Sentence induced
+  Contextual Information
+uid: '6934725'
+volume: '9'

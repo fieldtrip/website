@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '28129060'
+- idtype: doi
+  value: 10.1162/jocn_a_01052
+- idtype: pmcid
+  value: PMC5300749
+- idtype: MID
+  value: NIHMS826880
+authors:
+- authtype: Author
+  name: Mossbridge J
+- authtype: Author
+  name: Zweig J
+- authtype: Author
+  name: Grabowecky M
+- authtype: Author
+  name: Suzuki S
+epubdate: 2016 Oct 19
+fulljournalname: Journal of cognitive neuroscience
+issue: '3'
+pages: 435-447
+pmclivedate: 2017/06/01
+printpubdate: 2017 Mar
+pubdate: 2016 Oct 19
+sortdate: 2016/10/19 00:00
+source: J Cogn Neurosci
+title: 'An association between auditory-visual synchrony processing and reading comprehension:
+  Behavioral and electrophysiological evidence'
+uid: '5300749'
+volume: '29'

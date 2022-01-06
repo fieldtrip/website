@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '27252671'
+- idtype: doi
+  value: 10.3389/fpsyg.2016.00745
+- idtype: pmcid
+  value: PMC4877370
+authors:
+- authtype: Author
+  name: McMahon CM
+- authtype: Author
+  name: Boisvert I
+- authtype: Author
+  name: de Lissa P
+- authtype: Author
+  name: Granger L
+- authtype: Author
+  name: Ibrahim R
+- authtype: Author
+  name: Lo CY
+- authtype: Author
+  name: Miles K
+- authtype: Author
+  name: Graham PL
+epubdate: 2016 May 24
+fulljournalname: Frontiers in Psychology
+issue: ''
+pages: '745'
+pmclivedate: 2016/06/01
+printpubdate: ''
+pubdate: 2016 May 24
+sortdate: 2016/05/24 00:00
+source: Front Psychol
+title: Monitoring Alpha Oscillations and Pupil Dilation across a Performance-Intensity
+  Function
+uid: '4877370'
+volume: '7'

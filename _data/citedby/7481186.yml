@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '32908146'
+- idtype: doi
+  value: 10.1038/s41467-020-18325-8
+- idtype: pmcid
+  value: PMC7481186
+authors:
+- authtype: Author
+  name: Wardle SG
+- authtype: Author
+  name: Taubert J
+- authtype: Author
+  name: Teichmann L
+- authtype: Author
+  name: Baker CI
+epubdate: 2020 Sep 9
+fulljournalname: Nature Communications
+issue: ''
+pages: '4518'
+pmclivedate: 2020/09/21
+printpubdate: ''
+pubdate: 2020 Sep 9
+sortdate: 2020/09/09 00:00
+source: Nat Commun
+title: Rapid and dynamic processing of face pareidolia in the human brain
+uid: '7481186'
+volume: '11'

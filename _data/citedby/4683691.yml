@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '26490871'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0600-15.2015
+- idtype: pmcid
+  value: PMC4683691
+authors:
+- authtype: Author
+  name: Haegens S
+- authtype: Author
+  name: Barczak A
+- authtype: Author
+  name: Musacchia G
+- authtype: Author
+  name: Lipton ML
+- authtype: Author
+  name: Mehta AD
+- authtype: Author
+  name: Lakatos P
+- authtype: Author
+  name: Schroeder CE
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '42'
+pages: 14341-14352
+pmclivedate: 2016/04/21
+printpubdate: 2015 Oct 21
+pubdate: 2015 Oct 21
+sortdate: 2015/10/21 00:00
+source: J Neurosci
+title: Laminar Profile and Physiology of the α Rhythm in Primary Visual, Auditory,
+  and Somatosensory Regions of Neocortex
+uid: '4683691'
+volume: '35'

@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '30899199'
+- idtype: doi
+  value: 10.1177/1471082X14524673
+- idtype: pmcid
+  value: PMC4813733
+authors:
+- authtype: Author
+  name: Ventrucci M
+- authtype: Author
+  name: Bowman AW
+- authtype: Author
+  name: Miller C
+- authtype: Author
+  name: Gross J
+epubdate: ''
+fulljournalname: Statistical Modelling
+issue: '5'
+pages: 417-437
+pmclivedate: 2019/03/19
+printpubdate: 2014 Oct
+pubdate: 2014 Oct
+sortdate: 2014/10/01 00:00
+source: Stat Modelling
+title: Quasi-periodic spatiotemporal models of brain activation in single-trial MEG
+  experiments
+uid: '4813733'
+volume: '14'

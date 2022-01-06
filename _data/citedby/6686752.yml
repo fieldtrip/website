@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '30496352'
+- idtype: doi
+  value: 10.1093/cercor/bhy255
+- idtype: pmcid
+  value: PMC6686752
+authors:
+- authtype: Author
+  name: Hussain SJ
+- authtype: Author
+  name: Claudino L
+- authtype: Author
+  name: Bönstrup M
+- authtype: Author
+  name: Norato G
+- authtype: Author
+  name: Cruciani G
+- authtype: Author
+  name: Thompson R
+- authtype: Author
+  name: Zrenner C
+- authtype: Author
+  name: Ziemann U
+- authtype: Author
+  name: Buch E
+- authtype: Author
+  name: Cohen LG
+epubdate: 2018 Oct 11
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '9'
+pages: 3766-3777
+pmclivedate: 2020/08/14
+printpubdate: 2019 Aug
+pubdate: 2018 Oct 11
+sortdate: 2018/10/11 00:00
+source: Cereb Cortex
+title: Sensorimotor Oscillatory Phase–Power Interaction Gates Resting Human Corticospinal
+  Output
+uid: '6686752'
+volume: '29'

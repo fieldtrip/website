@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '34343264'
+- idtype: doi
+  value: 10.1093/brain/awab288
+- idtype: pmcid
+  value: PMC8634126
+authors:
+- authtype: Author
+  name: Guth TA
+- authtype: Author
+  name: Kunz L
+- authtype: Author
+  name: Brandt A
+- authtype: Author
+  name: Dümpelmann M
+- authtype: Author
+  name: Klotz KA
+- authtype: Author
+  name: Reinacher PC
+- authtype: Author
+  name: Schulze-Bonhage A
+- authtype: Author
+  name: Jacobs J
+- authtype: Author
+  name: Schönberger J
+epubdate: 2021 Aug 3
+fulljournalname: Brain
+issue: '10'
+pages: 3078-3088
+pmclivedate: ''
+printpubdate: ''
+pubdate: 2021 Aug 3
+sortdate: 2021/08/03 00:00
+source: Brain
+title: Interictal spikes with and without high-frequency oscillation have different
+  single-neuron correlates
+uid: '8634126'
+volume: '144'

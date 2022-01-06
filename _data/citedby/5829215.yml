@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '29487374'
+- idtype: doi
+  value: 10.1038/s41598-018-22137-8
+- idtype: pmcid
+  value: PMC5829215
+authors:
+- authtype: Author
+  name: Kayser SJ
+- authtype: Author
+  name: Kayser C
+epubdate: 2018 Feb 27
+fulljournalname: Scientific Reports
+issue: ''
+pages: '3742'
+pmclivedate: 2018/03/01
+printpubdate: ''
+pubdate: 2018 Feb 27
+sortdate: 2018/02/27 00:00
+source: Sci Rep
+title: Trial by trial dependencies in multisensory perception and their correlates
+  in dynamic brain activity
+uid: '5829215'
+volume: '8'

@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '25987642'
+- idtype: doi
+  value: 10.1093/schbul/sbv051
+- idtype: pmcid
+  value: PMC4535642
+authors:
+- authtype: Author
+  name: Rivolta D
+- authtype: Author
+  name: Heidegger T
+- authtype: Author
+  name: Scheller B
+- authtype: Author
+  name: Sauer A
+- authtype: Author
+  name: Schaum M
+- authtype: Author
+  name: Birkner K
+- authtype: Author
+  name: Singer W
+- authtype: Author
+  name: Wibral M
+- authtype: Author
+  name: Uhlhaas PJ
+epubdate: 2015 May 18
+fulljournalname: Schizophrenia Bulletin
+issue: '5'
+pages: 1105-1114
+pmclivedate: 2016/09/01
+printpubdate: 2015 Sep
+pubdate: 2015 May 18
+sortdate: 2015/05/18 00:00
+source: Schizophr Bull
+title: 'Ketamine Dysregulates the Amplitude and Connectivity of High-Frequency Oscillations
+  in Cortical–Subcortical Networks in Humans: Evidence From Resting-State Magnetoencephalography-Recordings'
+uid: '4535642'
+volume: '41'

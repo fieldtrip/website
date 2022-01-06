@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '34671076'
+- idtype: doi
+  value: 10.1038/s41598-021-99195-y
+- idtype: pmcid
+  value: PMC8528833
+authors:
+- authtype: Author
+  name: Sakellariou DF
+- authtype: Author
+  name: Vakrinou A
+- authtype: Author
+  name: Koutroumanidis M
+- authtype: Author
+  name: Richardson MP
+epubdate: 2021 Oct 20
+fulljournalname: Scientific Reports
+issue: ''
+pages: '20716'
+pmclivedate: 2021/10/22
+printpubdate: ''
+pubdate: 2021 Oct 20
+sortdate: 2021/10/20 00:00
+source: Sci Rep
+title: 'Neurocraft: software for microscale brain network dynamics'
+uid: '8528833'
+volume: '11'

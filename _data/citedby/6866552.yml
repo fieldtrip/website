@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '29655257'
+- idtype: doi
+  value: 10.1002/hbm.24079
+- idtype: pmcid
+  value: PMC6866552
+authors:
+- authtype: Author
+  name: Hordacre B
+- authtype: Author
+  name: Moezzi B
+- authtype: Author
+  name: Ridding MC
+epubdate: 2018 Apr 14
+fulljournalname: Human Brain Mapping
+issue: '8'
+pages: 3326-3339
+pmclivedate: 2020/06/12
+printpubdate: ''
+pubdate: 2018 Apr 14
+sortdate: 2018/04/14 00:00
+source: Hum Brain Mapp
+title: 'Neuroplasticity and network connectivity of the motor cortex following stroke:
+  A transcranial direct current stimulation study'
+uid: '6866552'
+volume: '39'

@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '26742643'
+- idtype: doi
+  value: 10.1016/j.neulet.2015.12.054
+- idtype: pmcid
+  value: PMC4756274
+authors:
+- authtype: Author
+  name: Mandel A
+- authtype: Author
+  name: Bourguignon M
+- authtype: Author
+  name: Parkkonen L
+- authtype: Author
+  name: Hari R
+epubdate: ''
+fulljournalname: Neuroscience Letters
+issue: ''
+pages: 99-104
+pmclivedate: 2016/03/02
+printpubdate: 2016 Feb 12
+pubdate: 2016 Feb 12
+sortdate: 2016/02/12 00:00
+source: Neurosci Lett
+title: Sensorimotor activation related to speaker vs. listener role during natural
+  conversation
+uid: '4756274'
+volume: '614'

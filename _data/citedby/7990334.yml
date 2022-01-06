@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '33762341'
+- idtype: doi
+  value: 10.1126/sciadv.abe8212
+- idtype: pmcid
+  value: PMC7990334
+authors:
+- authtype: Author
+  name: Boettcher SE
+- authtype: Author
+  name: Gresch D
+- authtype: Author
+  name: Nobre AC
+- authtype: Author
+  name: van Ede F
+epubdate: 2021 Mar 24
+fulljournalname: Science Advances
+issue: '13'
+pages: eabe8212
+pmclivedate: 2021/04/02
+printpubdate: ''
+pubdate: 2021 Mar 24
+sortdate: 2021/03/24 00:00
+source: Sci Adv
+title: Output planning at the input stage in visual working memory
+uid: '7990334'
+volume: '7'

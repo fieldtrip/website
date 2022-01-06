@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '22751037'
+- idtype: doi
+  value: 10.1038/nn.3154
+- idtype: pmcid
+  value: PMC3428860
+- idtype: MID
+  value: UKMS48754
+authors:
+- authtype: Author
+  name: Staresina BP
+- authtype: Author
+  name: Fell J
+- authtype: Author
+  name: Do Lam AT
+- authtype: Author
+  name: Axmacher N
+- authtype: Author
+  name: Henson RN
+epubdate: 2012 Jul 1
+fulljournalname: Nature neuroscience
+issue: '8'
+pages: 1167-1173
+pmclivedate: 2013/02/01
+printpubdate: ''
+pubdate: 2012 Jul 1
+sortdate: 2012/07/01 00:00
+source: Nat Neurosci
+title: Memory signals are temporally dissociated within and across human hippocampus
+  and perirhinal cortex
+uid: '3428860'
+volume: '15'

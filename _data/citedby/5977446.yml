@@ -1,0 +1,58 @@
+articleids:
+- idtype: pmid
+  value: '29760182'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.3596-17.2018
+- idtype: pmcid
+  value: PMC5977446
+authors:
+- authtype: Author
+  name: Fischer P
+- authtype: Author
+  name: Chen CC
+- authtype: Author
+  name: Chang YJ
+- authtype: Author
+  name: Yeh CH
+- authtype: Author
+  name: Pogosyan A
+- authtype: Author
+  name: Herz DM
+- authtype: Author
+  name: Cheeran B
+- authtype: Author
+  name: Green AL
+- authtype: Author
+  name: Aziz TZ
+- authtype: Author
+  name: Hyam J
+- authtype: Author
+  name: Little S
+- authtype: Author
+  name: Foltynie T
+- authtype: Author
+  name: Limousin P
+- authtype: Author
+  name: Zrinzo L
+- authtype: Author
+  name: Hasegawa H
+- authtype: Author
+  name: Samuel M
+- authtype: Author
+  name: Ashkan K
+- authtype: Author
+  name: Brown P
+- authtype: Author
+  name: Tan H
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '22'
+pages: 5111-5121
+pmclivedate: 2018/06/13
+printpubdate: 2018 May 30
+pubdate: 2018 May 30
+sortdate: 2018/05/30 00:00
+source: J Neurosci
+title: Alternating Modulation of Subthalamic Nucleus Beta Oscillations during Stepping
+uid: '5977446'
+volume: '38'

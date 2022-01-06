@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '30927325'
+- idtype: doi
+  value: 10.1002/hbm.24582
+- idtype: pmcid
+  value: PMC6865486
+authors:
+- authtype: Author
+  name: Quandt F
+- authtype: Author
+  name: Bönstrup M
+- authtype: Author
+  name: Schulz R
+- authtype: Author
+  name: Timmermann JE
+- authtype: Author
+  name: Mund M
+- authtype: Author
+  name: Wessel MJ
+- authtype: Author
+  name: Hummel FC
+epubdate: 2019 Mar 29
+fulljournalname: Human Brain Mapping
+issue: '10'
+pages: 3091-3101
+pmclivedate: 2020/06/12
+printpubdate: ''
+pubdate: 2019 Mar 29
+sortdate: 2019/03/29 00:00
+source: Hum Brain Mapp
+title: 'The functional role of beta‐oscillations in the supplementary motor area during
+  reaching and grasping after stroke: A question of structural damage to the corticospinal
+  tract'
+uid: '6865486'
+volume: '40'

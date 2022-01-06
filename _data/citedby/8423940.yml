@@ -1,0 +1,47 @@
+articleids:
+- idtype: pmid
+  value: '33449304'
+- idtype: doi
+  value: 10.1007/s13311-020-00996-2
+- idtype: pmcid
+  value: PMC8423940
+authors:
+- authtype: Author
+  name: Suntrup-Krueger S
+- authtype: Author
+  name: Muhle P
+- authtype: Author
+  name: Kampe I
+- authtype: Author
+  name: Egidi P
+- authtype: Author
+  name: Ruck T
+- authtype: Author
+  name: Lenze F
+- authtype: Author
+  name: Jungheim M
+- authtype: Author
+  name: Gminski R
+- authtype: Author
+  name: Labeit B
+- authtype: Author
+  name: Claus I
+- authtype: Author
+  name: Warnecke T
+- authtype: Author
+  name: Gross J
+- authtype: Author
+  name: Dziewas R
+epubdate: 2021 Jan 15
+fulljournalname: Neurotherapeutics
+issue: '2'
+pages: 1360-1370
+pmclivedate: 2021/09/29
+printpubdate: 2021 Apr
+pubdate: 2021 Jan 15
+sortdate: 2021/01/15 00:00
+source: Neurotherapeutics
+title: Effect of Capsaicinoids on Neurophysiological, Biochemical, and Mechanical
+  Parameters of Swallowing Function
+uid: '8423940'
+volume: '18'

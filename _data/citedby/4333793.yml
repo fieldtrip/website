@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '25745410'
+- idtype: doi
+  value: 10.3389/fpsyg.2015.00177
+- idtype: pmcid
+  value: PMC4333793
+authors:
+- authtype: Author
+  name: Petersen EB
+- authtype: Author
+  name: Wöstmann M
+- authtype: Author
+  name: Obleser J
+- authtype: Author
+  name: Stenfelt S
+- authtype: Author
+  name: Lunner T
+epubdate: 2015 Feb 19
+fulljournalname: Frontiers in Psychology
+issue: ''
+pages: '177'
+pmclivedate: 2015/03/05
+printpubdate: ''
+pubdate: 2015 Feb 19
+sortdate: 2015/02/19 00:00
+source: Front Psychol
+title: Hearing loss impacts neural alpha oscillations under adverse listening conditions
+uid: '4333793'
+volume: '6'

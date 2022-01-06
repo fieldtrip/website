@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '31223306'
+- idtype: doi
+  value: 10.1155/2019/1619290
+- idtype: pmcid
+  value: PMC6541950
+authors:
+- authtype: Author
+  name: Ricci S
+- authtype: Author
+  name: Mehraram R
+- authtype: Author
+  name: Tatti E
+- authtype: Author
+  name: Nelson AB
+- authtype: Author
+  name: Bossini-Baroggi M
+- authtype: Author
+  name: Panday P
+- authtype: Author
+  name: Lin N
+- authtype: Author
+  name: Ghilardi MF
+epubdate: 2019 May 15
+fulljournalname: Neural Plasticity
+issue: ''
+pages: '1619290'
+pmclivedate: 2019/06/20
+printpubdate: ''
+pubdate: 2019 May 15
+sortdate: 2019/05/15 00:00
+source: Neural Plast
+title: Aging Does Not Affect Beta Modulation during Reaching Movements
+uid: '6541950'
+volume: '2019'

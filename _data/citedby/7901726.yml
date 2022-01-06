@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '33359339'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2020.117682
+- idtype: pmcid
+  value: PMC7901726
+- idtype: MID
+  value: NIHMS1671567
+authors:
+- authtype: Author
+  name: O’Reilly C
+- authtype: Author
+  name: Larson E
+- authtype: Author
+  name: Richards JE
+- authtype: Author
+  name: Elsabbagh M
+epubdate: 2020 Dec 29
+fulljournalname: NeuroImage
+issue: ''
+pages: '117682'
+pmclivedate: 2021/02/23
+printpubdate: 2021 Feb 15
+pubdate: 2020 Dec 29
+sortdate: 2020/12/29 00:00
+source: Neuroimage
+title: Structural templates for imaging EEG cortical sources in infants
+uid: '7901726'
+volume: '227'

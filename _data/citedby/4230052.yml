@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '25431557'
+- idtype: doi
+  value: 10.3389/fncom.2014.00146
+- idtype: pmcid
+  value: PMC4230052
+authors:
+- authtype: Author
+  name: Protopapa F
+- authtype: Author
+  name: Siettos CI
+- authtype: Author
+  name: Evdokimidis I
+- authtype: Author
+  name: Smyrnis N
+epubdate: 2014 Nov 13
+fulljournalname: Frontiers in Computational Neuroscience
+issue: ''
+pages: '146'
+pmclivedate: 2014/11/27
+printpubdate: ''
+pubdate: 2014 Nov 13
+sortdate: 2014/11/13 00:00
+source: Front Comput Neurosci
+title: Granger causality analysis reveals distinct spatio-temporal connectivity patterns
+  in motor and perceptual visuo-spatial working memory
+uid: '4230052'
+volume: '8'

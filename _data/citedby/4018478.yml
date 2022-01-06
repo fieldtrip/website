@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '24285897'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.5816-12.2013
+- idtype: pmcid
+  value: PMC4018478
+authors:
+- authtype: Author
+  name: Harris A
+- authtype: Author
+  name: Hare T
+- authtype: Author
+  name: Rangel A
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '48'
+pages: 18917-18931
+pmclivedate: 2014/05/27
+printpubdate: 2013 Nov 27
+pubdate: 2013 Nov 27
+sortdate: 2013/11/27 00:00
+source: J Neurosci
+title: 'Temporally Dissociable Mechanisms of Self-Control: Early Attentional Filtering
+  Versus Late Value Modulation'
+uid: '4018478'
+volume: '33'

@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '27508355'
+- idtype: doi
+  value: 10.7554/eLife.17397
+- idtype: pmcid
+  value: PMC4980114
+authors:
+- authtype: Author
+  name: Staresina BP
+- authtype: Author
+  name: Michelmann S
+- authtype: Author
+  name: Bonnefond M
+- authtype: Author
+  name: Jensen O
+- authtype: Author
+  name: Axmacher N
+- authtype: Author
+  name: Fell J
+epubdate: 2016 Aug 10
+fulljournalname: eLife
+issue: ''
+pages: e17397
+pmclivedate: 2016/08/12
+printpubdate: ''
+pubdate: 2016 Aug 10
+sortdate: 2016/08/10 00:00
+source: eLife
+title: Hippocampal pattern completion is linked to gamma power increases and alpha
+  power decreases during recollection
+uid: '4980114'
+volume: '5'

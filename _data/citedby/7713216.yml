@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '33267883'
+- idtype: doi
+  value: 10.1186/s12993-020-00173-7
+- idtype: pmcid
+  value: PMC7713216
+authors:
+- authtype: Author
+  name: Bermúdez-Margaretto B
+- authtype: Author
+  name: Shtyrov Y
+- authtype: Author
+  name: Beltrán D
+- authtype: Author
+  name: Cuetos F
+- authtype: Author
+  name: Domínguez A
+epubdate: 2020 Dec 2
+fulljournalname: 'Behavioral and Brain Functions : BBF'
+issue: ''
+pages: '11'
+pmclivedate: 2020/12/03
+printpubdate: ''
+pubdate: 2020 Dec 2
+sortdate: 2020/12/02 00:00
+source: Behav Brain Funct
+title: 'Rapid acquisition of novel written word-forms: ERP evidence'
+uid: '7713216'
+volume: '16'

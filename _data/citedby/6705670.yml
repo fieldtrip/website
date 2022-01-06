@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '28053026'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0563-16.2016
+- idtype: pmcid
+  value: PMC6705670
+authors:
+- authtype: Author
+  name: Faivre N
+- authtype: Author
+  name: Dönz J
+- authtype: Author
+  name: Scandola M
+- authtype: Author
+  name: Dhanis H
+- authtype: Author
+  name: Bello Ruiz J
+- authtype: Author
+  name: Bernasconi F
+- authtype: Author
+  name: Salomon R
+- authtype: Author
+  name: Blanke O
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '1'
+pages: 11-22
+pmclivedate: 2019/08/23
+printpubdate: 2017 Jan 4
+pubdate: 2017 Jan 4
+sortdate: 2017/01/04 00:00
+source: J Neurosci
+title: 'Self-Grounded Vision: Hand Ownership Modulates Visual Location through Cortical
+  β and γ Oscillations'
+uid: '6705670'
+volume: '37'

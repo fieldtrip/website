@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '23087632'
+- idtype: doi
+  value: 10.3389/fnhum.2012.00278
+- idtype: pmcid
+  value: PMC3466435
+authors:
+- authtype: Author
+  name: Plöchl M
+- authtype: Author
+  name: Ossandón JP
+- authtype: Author
+  name: König P
+epubdate: 2012 Oct 9
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '278'
+pmclivedate: 2012/10/19
+printpubdate: ''
+pubdate: 2012 Oct 9
+sortdate: 2012/10/09 00:00
+source: Front Hum Neurosci
+title: 'Combining EEG and eye tracking: identification, characterization, and correction
+  of eye movement artifacts in electroencephalographic data'
+uid: '3466435'
+volume: '6'

@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '34335178'
+- idtype: doi
+  value: 10.3389/fnins.2021.707828
+- idtype: pmcid
+  value: PMC8322764
+authors:
+- authtype: Author
+  name: Ricci S
+- authtype: Author
+  name: Tatti E
+- authtype: Author
+  name: Nelson AB
+- authtype: Author
+  name: Panday P
+- authtype: Author
+  name: Chen H
+- authtype: Author
+  name: Tononi G
+- authtype: Author
+  name: Cirelli C
+- authtype: Author
+  name: Ghilardi MF
+epubdate: 2021 Jul 16
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '707828'
+pmclivedate: 2021/07/31
+printpubdate: ''
+pubdate: 2021 Jul 16
+sortdate: 2021/07/16 00:00
+source: Front Neurosci
+title: Extended Visual Sequence Learning Leaves a Local Trace in the Spontaneous EEG
+uid: '8322764'
+volume: '15'

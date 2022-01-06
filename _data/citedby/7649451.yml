@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '33157502'
+- idtype: doi
+  value: 10.1016/j.dcn.2020.100863
+- idtype: pmcid
+  value: PMC7649451
+authors:
+- authtype: Author
+  name: Heffer T
+- authtype: Author
+  name: Willoughby T
+epubdate: 2020 Sep 30
+fulljournalname: Developmental Cognitive Neuroscience
+issue: ''
+pages: '100863'
+pmclivedate: 2020/11/16
+printpubdate: ''
+pubdate: 2020 Sep 30
+sortdate: 2020/09/30 00:00
+source: Dev Cogn Neurosci
+title: A longitudinal study investigating trajectories of sensitivity to threat over
+  time and their association with alpha asymmetry among children and adolescents
+uid: '7649451'
+volume: '46'

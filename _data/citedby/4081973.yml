@@ -1,0 +1,34 @@
+articleids:
+- idtype: pmid
+  value: '25003030'
+- idtype: doi
+  value: 10.1016/j.nicl.2014.06.005
+- idtype: pmcid
+  value: PMC4081973
+authors:
+- authtype: Author
+  name: Birot G
+- authtype: Author
+  name: Spinelli L
+- authtype: Author
+  name: Vulliémoz S
+- authtype: Author
+  name: Mégevand P
+- authtype: Author
+  name: Brunet D
+- authtype: Author
+  name: Seeck M
+- authtype: Author
+  name: Michel CM
+epubdate: 2014 Jun 16
+fulljournalname: 'NeuroImage : Clinical'
+issue: ''
+pages: 77-83
+pmclivedate: 2014/07/07
+printpubdate: ''
+pubdate: 2014 Jun 16
+sortdate: 2014/06/16 00:00
+source: Neuroimage Clin
+title: 'Head model and electrical source imaging: A study of 38 epileptic patients'
+uid: '4081973'
+volume: '5'

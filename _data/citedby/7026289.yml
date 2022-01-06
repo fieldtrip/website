@@ -1,0 +1,50 @@
+articleids:
+- idtype: pmid
+  value: '32070812'
+- idtype: doi
+  value: 10.1016/j.nicl.2020.102205
+- idtype: pmcid
+  value: PMC7026289
+authors:
+- authtype: Author
+  name: Mithani K
+- authtype: Author
+  name: Wong SM
+- authtype: Author
+  name: Mikhail M
+- authtype: Author
+  name: Pourmotabbed H
+- authtype: Author
+  name: Pang E
+- authtype: Author
+  name: Sharma R
+- authtype: Author
+  name: Yau I
+- authtype: Author
+  name: Ochi A
+- authtype: Author
+  name: Otsubo H
+- authtype: Author
+  name: Snead OC
+- authtype: Author
+  name: Donner E
+- authtype: Author
+  name: Go C
+- authtype: Author
+  name: Widjaja E
+- authtype: Author
+  name: Babajani-Feremi A
+- authtype: Author
+  name: Ibrahim GM
+epubdate: 2020 Feb 4
+fulljournalname: 'NeuroImage : Clinical'
+issue: ''
+pages: '102205'
+pmclivedate: 2020/02/21
+printpubdate: ''
+pubdate: 2020 Feb 4
+sortdate: 2020/02/04 00:00
+source: Neuroimage Clin
+title: Somatosensory evoked fields predict response to vagus nerve stimulation
+uid: '7026289'
+volume: '26'

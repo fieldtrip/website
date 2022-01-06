@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '31839901'
+- idtype: doi
+  value: 10.1080/20008198.2019.1697582
+- idtype: pmcid
+  value: PMC6896450
+authors:
+- authtype: Author
+  name: Saraiya T
+- authtype: Author
+  name: Fareri D
+- authtype: Author
+  name: López-Castro T
+- authtype: Author
+  name: Hien D
+- authtype: Author
+  name: Fertuck E
+- authtype: Author
+  name: Melara R
+epubdate: 2019 Nov 29
+fulljournalname: European Journal of Psychotraumatology
+issue: '1'
+pages: '1697582'
+pmclivedate: 2019/12/13
+printpubdate: ''
+pubdate: 2019 Nov 29
+sortdate: 2019/11/29 00:00
+source: Eur J Psychotraumatol
+title: 'The social cognitive appraisal of trustworthiness in individuals with dimensional
+  levels of post-traumatic stress symptoms: a translational study'
+uid: '6896450'
+volume: '10'

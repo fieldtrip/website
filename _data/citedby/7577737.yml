@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '33043883'
+- idtype: doi
+  value: 10.7554/eLife.59784
+- idtype: pmcid
+  value: PMC7577737
+authors:
+- authtype: Author
+  name: Alamia A
+- authtype: Author
+  name: Timmermann C
+- authtype: Author
+  name: Nutt DJ
+- authtype: Author
+  name: VanRullen R
+- authtype: Author
+  name: Carhart-Harris RL
+epubdate: 2020 Oct 12
+fulljournalname: eLife
+issue: ''
+pages: e59784
+pmclivedate: 2020/10/23
+printpubdate: ''
+pubdate: 2020 Oct 12
+sortdate: 2020/10/12 00:00
+source: eLife
+title: DMT alters cortical travelling waves
+uid: '7577737'
+volume: '9'

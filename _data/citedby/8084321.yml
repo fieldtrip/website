@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '33727335'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.2785-20.2021
+- idtype: pmcid
+  value: PMC8084321
+authors:
+- authtype: Author
+  name: Akkol S
+- authtype: Author
+  name: Kucyi A
+- authtype: Author
+  name: Hu W
+- authtype: Author
+  name: Zhao B
+- authtype: Author
+  name: Zhang C
+- authtype: Author
+  name: Sava-Segal C
+- authtype: Author
+  name: Liu S
+- authtype: Author
+  name: Razavi B
+- authtype: Author
+  name: Zhang J
+- authtype: Author
+  name: Zhang K
+- authtype: Author
+  name: Parvizi J
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '17'
+pages: 3870-3878
+pmclivedate: 2021/10/28
+printpubdate: 2021 Apr 28
+pubdate: 2021 Apr 28
+sortdate: 2021/04/28 00:00
+source: J Neurosci
+title: Intracranial Electroencephalography Reveals Selective Responses to Cognitive
+  Stimuli in the Periventricular Heterotopias
+uid: '8084321'
+volume: '41'

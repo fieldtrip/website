@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '31500201'
+- idtype: doi
+  value: 10.3390/brainsci9090226
+- idtype: pmcid
+  value: PMC6770246
+authors:
+- authtype: Author
+  name: Lin Y
+- authtype: Author
+  name: Eckerle WD
+- authtype: Author
+  name: Peng LW
+- authtype: Author
+  name: Moser JS
+epubdate: 2019 Sep 6
+fulljournalname: Brain Sciences
+issue: '9'
+pages: '226'
+pmclivedate: 2019/10/30
+printpubdate: ''
+pubdate: 2019 Sep 6
+sortdate: 2019/09/06 00:00
+source: Brain Sci
+title: 'On Variation in Mindfulness Training: A Multimodal Study of Brief Open Monitoring
+  Meditation on Error Monitoring'
+uid: '6770246'
+volume: '9'

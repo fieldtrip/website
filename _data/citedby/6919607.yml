@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '31851679'
+- idtype: doi
+  value: 10.1371/journal.pone.0225819
+- idtype: pmcid
+  value: PMC6919607
+authors:
+- authtype: Author
+  name: Degno F
+- authtype: Author
+  name: Loberg O
+- authtype: Author
+  name: Zang C
+- authtype: Author
+  name: Zhang M
+- authtype: Author
+  name: Donnelly N
+- authtype: Author
+  name: Liversedge SP
+epubdate: 2019 Dec 18
+fulljournalname: PLoS ONE
+issue: '12'
+pages: e0225819
+pmclivedate: 2020/01/07
+printpubdate: ''
+pubdate: 2019 Dec 18
+sortdate: 2019/12/18 00:00
+source: PLoS One
+title: 'A co-registration investigation of inter-word spacing and parafoveal preview:
+  Eye movements and fixation-related potentials'
+uid: '6919607'
+volume: '14'

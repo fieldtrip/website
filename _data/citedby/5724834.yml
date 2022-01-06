@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '29228054'
+- idtype: doi
+  value: 10.1371/journal.pone.0189508
+- idtype: pmcid
+  value: PMC5724834
+authors:
+- authtype: Author
+  name: Smirnov D
+- authtype: Author
+  name: Lachat F
+- authtype: Author
+  name: Peltola T
+- authtype: Author
+  name: Lahnakoski JM
+- authtype: Author
+  name: Koistinen OP
+- authtype: Author
+  name: Glerean E
+- authtype: Author
+  name: Vehtari A
+- authtype: Author
+  name: Hari R
+- authtype: Author
+  name: Sams M
+- authtype: Author
+  name: Nummenmaa L
+epubdate: 2017 Dec 11
+fulljournalname: PLoS ONE
+issue: '12'
+pages: e0189508
+pmclivedate: 2017/12/15
+printpubdate: ''
+pubdate: 2017 Dec 11
+sortdate: 2017/12/11 00:00
+source: PLoS One
+title: Brain-to-brain hyperclassification reveals action-specific motor mapping of
+  observed actions in humans
+uid: '5724834'
+volume: '12'

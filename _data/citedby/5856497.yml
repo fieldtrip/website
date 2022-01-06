@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '29483250'
+- idtype: doi
+  value: 10.1073/pnas.1703643115
+- idtype: pmcid
+  value: PMC5856497
+authors:
+- authtype: Author
+  name: Goldstein P
+- authtype: Author
+  name: Weissman-Fogel I
+- authtype: Author
+  name: Dumas G
+- authtype: Author
+  name: Shamay-Tsoory SG
+epubdate: 2018 Feb 26
+fulljournalname: Proceedings of the National Academy of Sciences of the United States
+  of America
+issue: '11'
+pages: E2528-E2537
+pmclivedate: 2018/09/13
+printpubdate: 2018 Mar 13
+pubdate: 2018 Feb 26
+sortdate: 2018/02/26 00:00
+source: Proc Natl Acad Sci U S A
+title: Brain-to-brain coupling during handholding is associated with pain reduction
+uid: '5856497'
+volume: '115'

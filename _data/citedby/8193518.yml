@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '33783913'
+- idtype: doi
+  value: 10.1002/hbm.25415
+- idtype: pmcid
+  value: PMC8193518
+authors:
+- authtype: Author
+  name: Kurthen I
+- authtype: Author
+  name: Galbier J
+- authtype: Author
+  name: Jagoda L
+- authtype: Author
+  name: Neuschwander P
+- authtype: Author
+  name: Giroud N
+- authtype: Author
+  name: Meyer M
+epubdate: 2021 Mar 30
+fulljournalname: Human Brain Mapping
+issue: '10'
+pages: 3042-3057
+pmclivedate: 2021/06/15
+printpubdate: ''
+pubdate: 2021 Mar 30
+sortdate: 2021/03/30 00:00
+source: Hum Brain Mapp
+title: Selective attention modulates neural envelope tracking of informationally masked
+  speech in healthy older adults
+uid: '8193518'
+volume: '42'

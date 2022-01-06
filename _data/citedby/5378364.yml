@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '28369132'
+- idtype: doi
+  value: 10.1371/journal.pone.0175199
+- idtype: pmcid
+  value: PMC5378364
+authors:
+- authtype: Author
+  name: Politzer-Ahles S
+- authtype: Author
+  name: Xiang M
+- authtype: Author
+  name: Almeida D
+epubdate: 2017 Apr 3
+fulljournalname: PLoS ONE
+issue: '4'
+pages: e0175199
+pmclivedate: 2017/04/07
+printpubdate: ''
+pubdate: 2017 Apr 3
+sortdate: 2017/04/03 00:00
+source: PLoS One
+title: '"Before" and "after": Investigating the relationship between temporal connectives
+  and chronological ordering using event-related potentials'
+uid: '5378364'
+volume: '12'

@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '26865653'
+- idtype: doi
+  value: 10.1093/cercor/bhw011
+- idtype: pmcid
+  value: PMC4785959
+authors:
+- authtype: Author
+  name: Mok RM
+- authtype: Author
+  name: Myers NE
+- authtype: Author
+  name: Wallis G
+- authtype: Author
+  name: Nobre AC
+epubdate: 2016 Feb 9
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '4'
+pages: 1831-1842
+pmclivedate: 2016/03/11
+printpubdate: 2016 Apr
+pubdate: 2016 Feb 9
+sortdate: 2016/02/09 00:00
+source: Cereb Cortex
+title: Behavioral and Neural Markers of Flexible Attention over Working Memory in
+  Aging
+uid: '4785959'
+volume: '26'

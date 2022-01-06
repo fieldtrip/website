@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '32005822'
+- idtype: doi
+  value: 10.1038/s41467-020-14520-9
+- idtype: pmcid
+  value: PMC6994520
+authors:
+- authtype: Author
+  name: Iravani B
+- authtype: Author
+  name: Arshamian A
+- authtype: Author
+  name: Ohla K
+- authtype: Author
+  name: Wilson DA
+- authtype: Author
+  name: Lundström JN
+epubdate: 2020 Jan 31
+fulljournalname: Nature Communications
+issue: ''
+pages: '648'
+pmclivedate: 2020/02/03
+printpubdate: ''
+pubdate: 2020 Jan 31
+sortdate: 2020/01/31 00:00
+source: Nat Commun
+title: Non-invasive recording from the human olfactory bulb
+uid: '6994520'
+volume: '11'

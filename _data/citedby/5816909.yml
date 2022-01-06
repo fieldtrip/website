@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '29487500'
+- idtype: doi
+  value: 10.3389/fnins.2018.00067
+- idtype: pmcid
+  value: PMC5816909
+authors:
+- authtype: Author
+  name: Clayton MS
+- authtype: Author
+  name: Yeung N
+- authtype: Author
+  name: Cohen Kadosh R
+epubdate: 2018 Feb 13
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '67'
+pmclivedate: 2018/02/27
+printpubdate: ''
+pubdate: 2018 Feb 13
+sortdate: 2018/02/13 00:00
+source: Front Neurosci
+title: The Effects of 10 Hz Transcranial Alternating Current Stimulation on Audiovisual
+  Task Switching
+uid: '5816909'
+volume: '12'

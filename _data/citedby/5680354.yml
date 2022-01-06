@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '28794193'
+- idtype: doi
+  value: 10.1152/jn.00253.2017
+- idtype: pmcid
+  value: PMC5680354
+authors:
+- authtype: Author
+  name: Bellet J
+- authtype: Author
+  name: Chen CY
+- authtype: Author
+  name: Hafed ZM
+epubdate: 2017 Aug 9
+fulljournalname: Journal of Neurophysiology
+issue: '5'
+pages: 2789-2805
+pmclivedate: 2018/11/01
+printpubdate: 2017 Nov 1
+pubdate: 2017 Aug 9
+sortdate: 2017/08/09 00:00
+source: J Neurophysiol
+title: Sequential hemifield gating of α- and β-behavioral performance oscillations
+  after microsaccades
+uid: '5680354'
+volume: '118'

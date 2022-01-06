@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '33101183'
+- idtype: doi
+  value: 10.3389/fneur.2020.573975
+- idtype: pmcid
+  value: PMC7556206
+authors:
+- authtype: Author
+  name: Schönberger J
+- authtype: Author
+  name: Huber C
+- authtype: Author
+  name: Lachner-Piza D
+- authtype: Author
+  name: Klotz KA
+- authtype: Author
+  name: Dümpelmann M
+- authtype: Author
+  name: Schulze-Bonhage A
+- authtype: Author
+  name: Jacobs J
+epubdate: 2020 Sep 30
+fulljournalname: Frontiers in Neurology
+issue: ''
+pages: '573975'
+pmclivedate: 2020/10/22
+printpubdate: ''
+pubdate: 2020 Sep 30
+sortdate: 2020/09/30 00:00
+source: Front Neurol
+title: Interictal Fast Ripples Are Associated With the Seizure-Generating Lesion in
+  Patients With Dual Pathology
+uid: '7556206'
+volume: '11'

@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '32449806'
+- idtype: doi
+  value: 10.1111/psyp.13599
+- idtype: pmcid
+  value: PMC7507207
+authors:
+- authtype: Author
+  name: Wolpert N
+- authtype: Author
+  name: Rebollo I
+- authtype: Author
+  name: Tallon‐Baudry C
+epubdate: 2020 May 25
+fulljournalname: Psychophysiology
+issue: '9'
+pages: e13599
+pmclivedate: 2020/09/28
+printpubdate: 2020 Sep
+pubdate: 2020 May 25
+sortdate: 2020/05/25 00:00
+source: Psychophysiology
+title: 'Electrogastrography for psychophysiological research: Practical considerations,
+  analysis pipeline, and normative data in a large sample'
+uid: '7507207'
+volume: '57'

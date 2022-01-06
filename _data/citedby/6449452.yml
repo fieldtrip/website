@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '30983984'
+- idtype: doi
+  value: 10.3389/fncom.2019.00015
+- idtype: pmcid
+  value: PMC6449452
+authors:
+- authtype: Author
+  name: Tanaka H
+- authtype: Author
+  name: Watanabe H
+- authtype: Author
+  name: Maki H
+- authtype: Author
+  name: Sakriani S
+- authtype: Author
+  name: Nakamura S
+epubdate: 2019 Mar 29
+fulljournalname: Frontiers in Computational Neuroscience
+issue: ''
+pages: '15'
+pmclivedate: 2019/04/12
+printpubdate: ''
+pubdate: 2019 Mar 29
+sortdate: 2019/03/29 00:00
+source: Front Comput Neurosci
+title: Electroencephalogram-Based Single-Trial Detection of Language Expectation Violations
+  in Listening to Speech
+uid: '6449452'
+volume: '13'

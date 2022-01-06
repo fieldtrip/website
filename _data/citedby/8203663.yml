@@ -1,0 +1,47 @@
+articleids:
+- idtype: pmid
+  value: '34127675'
+- idtype: doi
+  value: 10.1038/s41467-021-23885-4
+- idtype: pmcid
+  value: PMC8203663
+authors:
+- authtype: Author
+  name: Huang Y
+- authtype: Author
+  name: Kakusa BW
+- authtype: Author
+  name: Feng A
+- authtype: Author
+  name: Gattas S
+- authtype: Author
+  name: Shivacharan RS
+- authtype: Author
+  name: Lee EB
+- authtype: Author
+  name: Parker JJ
+- authtype: Author
+  name: Kuijper FM
+- authtype: Author
+  name: Barbosa DA
+- authtype: Author
+  name: Keller CJ
+- authtype: Author
+  name: Bohon C
+- authtype: Author
+  name: Mikhail A
+- authtype: Author
+  name: Halpern CH
+epubdate: 2021 Jun 14
+fulljournalname: Nature Communications
+issue: ''
+pages: '3609'
+pmclivedate: 2021/07/01
+printpubdate: ''
+pubdate: 2021 Jun 14
+sortdate: 2021/06/14 00:00
+source: Nat Commun
+title: The insulo-opercular cortex encodes food-specific content under controlled
+  and naturalistic conditions
+uid: '8203663'
+volume: '12'

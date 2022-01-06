@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '26546864'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2015.11.002
+- idtype: pmcid
+  value: PMC4692514
+authors:
+- authtype: Author
+  name: Zhou G
+- authtype: Author
+  name: Bourguignon M
+- authtype: Author
+  name: Parkkonen L
+- authtype: Author
+  name: Hari R
+epubdate: ''
+fulljournalname: Neuroimage
+issue: ''
+pages: 731-738
+pmclivedate: 2016/01/15
+printpubdate: 2016 Jan 15
+pubdate: 2016 Jan 15
+sortdate: 2016/01/15 00:00
+source: Neuroimage
+title: 'Neural signatures of hand kinematics in leaders vs. followers: A dual-MEG
+  study'
+uid: '4692514'
+volume: '125'

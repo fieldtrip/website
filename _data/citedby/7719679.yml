@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '33329101'
+- idtype: doi
+  value: 10.3389/fpsyt.2020.561973
+- idtype: pmcid
+  value: PMC7719679
+authors:
+- authtype: Author
+  name: Sauer A
+- authtype: Author
+  name: Grent-'t-Jong T
+- authtype: Author
+  name: Wibral M
+- authtype: Author
+  name: Grube M
+- authtype: Author
+  name: Singer W
+- authtype: Author
+  name: Uhlhaas PJ
+epubdate: 2020 Nov 23
+fulljournalname: Frontiers in Psychiatry
+issue: ''
+pages: '561973'
+pmclivedate: 2020/12/15
+printpubdate: ''
+pubdate: 2020 Nov 23
+sortdate: 2020/11/23 00:00
+source: Front Psychiatry
+title: 'A MEG Study of Visual Repetition Priming in Schizophrenia: Evidence for Impaired
+  High-Frequency Oscillations and Event-Related Fields in Thalamo-Occipital Cortices'
+uid: '7719679'
+volume: '11'

@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '32703903'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0158-20.2020
+- idtype: pmcid
+  value: PMC7455208
+authors:
+- authtype: Author
+  name: Teichmann L
+- authtype: Author
+  name: Quek GL
+- authtype: Author
+  name: Robinson AK
+- authtype: Author
+  name: Grootswagers T
+- authtype: Author
+  name: Carlson TA
+- authtype: Author
+  name: Rich AN
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '35'
+pages: 6779-6789
+pmclivedate: 2021/02/26
+printpubdate: 2020 Aug 26
+pubdate: 2020 Aug 26
+sortdate: 2020/08/26 00:00
+source: J Neurosci
+title: The Influence of Object-Color Knowledge on Emerging Object Representations
+  in the Brain
+uid: '7455208'
+volume: '40'

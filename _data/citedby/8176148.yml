@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '34095832'
+- idtype: doi
+  value: 10.1093/braincomms/fcab044
+- idtype: pmcid
+  value: PMC8176148
+authors:
+- authtype: Author
+  name: Safar K
+- authtype: Author
+  name: Zhang J
+- authtype: Author
+  name: Emami Z
+- authtype: Author
+  name: Gharehgazlou A
+- authtype: Author
+  name: Ibrahim G
+- authtype: Author
+  name: Dunkley BT
+epubdate: 2021 Mar 17
+fulljournalname: Brain Communications
+issue: '2'
+pages: fcab044
+pmclivedate: 2021/06/04
+printpubdate: ''
+pubdate: 2021 Mar 17
+sortdate: 2021/03/17 00:00
+source: Brain Commun
+title: Mild traumatic brain injury is associated with dysregulated neural network
+  functioning in children and adolescents
+uid: '8176148'
+volume: '3'

@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '29249950'
+- idtype: doi
+  value: 10.3389/fnhum.2017.00582
+- idtype: pmcid
+  value: PMC5714933
+authors:
+- authtype: Author
+  name: Gompf F
+- authtype: Author
+  name: Pflug A
+- authtype: Author
+  name: Laufs H
+- authtype: Author
+  name: Kell CA
+epubdate: 2017 Nov 30
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '582'
+pmclivedate: 2017/12/15
+printpubdate: ''
+pubdate: 2017 Nov 30
+sortdate: 2017/11/30 00:00
+source: Front Hum Neurosci
+title: Non-linear Relationship between BOLD Activation and Amplitude of Beta Oscillations
+  in the Supplementary Motor Area during Rhythmic Finger Tapping and Internal Timing
+uid: '5714933'
+volume: '11'

@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '28259771'
+- idtype: doi
+  value: 10.1016/j.neuropsychologia.2017.02.021
+- idtype: pmcid
+  value: PMC5410970
+- idtype: MID
+  value: NIHMS858038
+authors:
+- authtype: Author
+  name: Keller AS
+- authtype: Author
+  name: Payne L
+- authtype: Author
+  name: Sekuler R
+epubdate: 2017 Mar 1
+fulljournalname: Neuropsychologia
+issue: ''
+pages: 48-63
+pmclivedate: 2018/05/01
+printpubdate: 2017 May
+pubdate: 2017 Mar 1
+sortdate: 2017/03/01 00:00
+source: Neuropsychologia
+title: Characterizing the roles of alpha and theta oscillations in multisensory attention
+uid: '5410970'
+volume: '99'

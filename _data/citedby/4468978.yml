@@ -1,0 +1,24 @@
+articleids:
+- idtype: pmid
+  value: '25810484'
+- idtype: doi
+  value: 10.1152/jn.00467.2013
+- idtype: pmcid
+  value: PMC4468978
+authors:
+- authtype: Author
+  name: Ramos-Murguialday A
+- authtype: Author
+  name: Birbaumer N
+epubdate: 2015 Mar 25
+fulljournalname: Journal of Neurophysiology
+issue: '10'
+pages: 3663-3682
+pmclivedate: 2016/06/01
+printpubdate: 2015 Jun
+pubdate: 2015 Mar 25
+sortdate: 2015/03/25 00:00
+source: J Neurophysiol
+title: Brain oscillatory signatures of motor tasks
+uid: '4468978'
+volume: '113'

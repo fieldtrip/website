@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '34544762'
+- idtype: doi
+  value: 10.1523/ENEURO.0224-21.2021
+- idtype: pmcid
+  value: PMC8547598
+authors:
+- authtype: Author
+  name: Thuwal K
+- authtype: Author
+  name: Banerjee A
+- authtype: Author
+  name: Roy D
+epubdate: 2021 Oct 15
+fulljournalname: eNeuro
+issue: '5'
+pages: ENEURO.0224-21.2021
+pmclivedate: 2021/10/27
+printpubdate: ''
+pubdate: 2021 Oct 15
+sortdate: 2021/10/15 00:00
+source: eNeuro
+title: Aperiodic and Periodic Components of Ongoing Oscillatory Brain Dynamics Link
+  Distinct Functional Aspects of Cognition across Adult Lifespan
+uid: '8547598'
+volume: '8'

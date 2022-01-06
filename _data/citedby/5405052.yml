@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '27153980'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2016.05.006
+- idtype: pmcid
+  value: PMC5405052
+authors:
+- authtype: Author
+  name: Tan HR
+- authtype: Author
+  name: Gross J
+- authtype: Author
+  name: Uhlhaas PJ
+epubdate: ''
+fulljournalname: Neuroimage
+issue: ''
+pages: 34-44
+pmclivedate: 2017/05/05
+printpubdate: 2016 Aug 15
+pubdate: 2016 Aug 15
+sortdate: 2016/08/15 00:00
+source: Neuroimage
+title: MEG sensor and source measures of visually induced gamma-band oscillations
+  are highly reliable
+uid: '5405052'
+volume: '137'

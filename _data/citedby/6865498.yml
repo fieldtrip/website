@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '30588749'
+- idtype: doi
+  value: 10.1002/hbm.24491
+- idtype: pmcid
+  value: PMC6865498
+authors:
+- authtype: Author
+  name: Babaeeghazvini P
+- authtype: Author
+  name: Rueda‐Delgado LM
+- authtype: Author
+  name: Zivari Adab H
+- authtype: Author
+  name: Gooijers J
+- authtype: Author
+  name: Swinnen S
+- authtype: Author
+  name: Daffertshofer A
+epubdate: 2018 Dec 26
+fulljournalname: Human Brain Mapping
+issue: '6'
+pages: 1799-1813
+pmclivedate: 2020/06/12
+printpubdate: ''
+pubdate: 2018 Dec 26
+sortdate: 2018/12/26 00:00
+source: Hum Brain Mapp
+title: A combined diffusion‐weighted and electroencephalography study on age‐related
+  differences in connectivity in the motor network during bimanual performance
+uid: '6865498'
+volume: '40'

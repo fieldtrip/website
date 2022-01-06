@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '24573295'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.3630-13.2014
+- idtype: pmcid
+  value: PMC6795312
+authors:
+- authtype: Author
+  name: Painter DR
+- authtype: Author
+  name: Dux PE
+- authtype: Author
+  name: Travis SL
+- authtype: Author
+  name: Mattingley JB
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '9'
+pages: 3390-3401
+pmclivedate: 2019/10/17
+printpubdate: 2014 Feb 26
+pubdate: 2014 Feb 26
+sortdate: 2014/02/26 00:00
+source: J Neurosci
+title: Neural Responses to Target Features outside a Search Array Are Enhanced during
+  Conjunction but Not Unique-Feature Search
+uid: '6795312'
+volume: '34'

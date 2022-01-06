@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '33608533'
+- idtype: doi
+  value: 10.1038/s41467-021-21393-z
+- idtype: pmcid
+  value: PMC7895979
+authors:
+- authtype: Author
+  name: Sergent C
+- authtype: Author
+  name: Corazzol M
+- authtype: Author
+  name: Labouret G
+- authtype: Author
+  name: Stockart F
+- authtype: Author
+  name: Wexler M
+- authtype: Author
+  name: King JR
+- authtype: Author
+  name: Meyniel F
+- authtype: Author
+  name: Pressnitzer D
+epubdate: 2021 Feb 19
+fulljournalname: Nature Communications
+issue: ''
+pages: '1149'
+pmclivedate: 2021/03/03
+printpubdate: ''
+pubdate: 2021 Feb 19
+sortdate: 2021/02/19 00:00
+source: Nat Commun
+title: Bifurcation in brain dynamics reveals a signature of conscious processing independent
+  of report
+uid: '7895979'
+volume: '12'

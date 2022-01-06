@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '30382234'
+- idtype: doi
+  value: 10.1038/s41598-018-34414-7
+- idtype: pmcid
+  value: PMC6208344
+authors:
+- authtype: Author
+  name: Radecki DZ
+- authtype: Author
+  name: Johnson EL
+- authtype: Author
+  name: Brown AK
+- authtype: Author
+  name: Meshkin NT
+- authtype: Author
+  name: Perrine SA
+- authtype: Author
+  name: Gow A
+epubdate: 2018 Oct 31
+fulljournalname: Scientific Reports
+issue: ''
+pages: '16116'
+pmclivedate: 2018/11/01
+printpubdate: ''
+pubdate: 2018 Oct 31
+sortdate: 2018/10/31 00:00
+source: Sci Rep
+title: Corticohippocampal Dysfunction In The OBiden Mouse Model Of Primary Oligodendrogliopathy
+uid: '6208344'
+volume: '8'

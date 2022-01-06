@@ -1,0 +1,42 @@
+articleids:
+- idtype: pmid
+  value: '31196933'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0018-19.2019
+- idtype: pmcid
+  value: PMC6697399
+authors:
+- authtype: Author
+  name: Gehrig J
+- authtype: Author
+  name: Michalareas G
+- authtype: Author
+  name: Forster MT
+- authtype: Author
+  name: Lei J
+- authtype: Author
+  name: Hok P
+- authtype: Author
+  name: Laufs H
+- authtype: Author
+  name: Senft C
+- authtype: Author
+  name: Seifert V
+- authtype: Author
+  name: Schoffelen JM
+- authtype: Author
+  name: Hanslmayr S
+- authtype: Author
+  name: Kell CA
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '33'
+pages: 6498-6512
+pmclivedate: 2020/02/14
+printpubdate: 2019 Aug 14
+pubdate: 2019 Aug 14
+sortdate: 2019/08/14 00:00
+source: J Neurosci
+title: Low-Frequency Oscillations Code Speech during Verbal Working Memory
+uid: '6697399'
+volume: '39'

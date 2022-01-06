@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '31507504'
+- idtype: doi
+  value: 10.3389/fpsyg.2019.01970
+- idtype: pmcid
+  value: PMC6719510
+authors:
+- authtype: Author
+  name: Wiens S
+- authtype: Author
+  name: van Berlekom E
+- authtype: Author
+  name: Szychowska M
+- authtype: Author
+  name: Eklund R
+epubdate: 2019 Aug 27
+fulljournalname: Frontiers in Psychology
+issue: ''
+pages: '1970'
+pmclivedate: 2019/09/10
+printpubdate: ''
+pubdate: 2019 Aug 27
+sortdate: 2019/08/27 00:00
+source: Front Psychol
+title: Visual Perceptual Load Does Not Affect the Frequency Mismatch Negativity
+uid: '6719510'
+volume: '10'

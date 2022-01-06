@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '28684759'
+- idtype: doi
+  value: 10.1038/s41598-017-04129-2
+- idtype: pmcid
+  value: PMC5500576
+authors:
+- authtype: Author
+  name: Yin J
+- authtype: Author
+  name: Ding X
+- authtype: Author
+  name: Xu H
+- authtype: Author
+  name: Zhang F
+- authtype: Author
+  name: Shen M
+epubdate: 2017 Jul 6
+fulljournalname: Scientific Reports
+issue: ''
+pages: '4782'
+pmclivedate: 2017/07/10
+printpubdate: ''
+pubdate: 2017 Jul 6
+sortdate: 2017/07/06 00:00
+source: Sci Rep
+title: Social Coordination Information in Dynamic Chase Modulates EEG Mu Rhythm
+uid: '5500576'
+volume: '7'

@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '29299388'
+- idtype: doi
+  value: 10.1002/brb3.870
+- idtype: pmcid
+  value: PMC5745248
+authors:
+- authtype: Author
+  name: Medrano P
+- authtype: Author
+  name: Nyhus E
+- authtype: Author
+  name: Smolen A
+- authtype: Author
+  name: Curran T
+- authtype: Author
+  name: Ross RS
+epubdate: 2017 Nov 10
+fulljournalname: Brain and Behavior
+issue: '12'
+pages: e00870
+pmclivedate: 2018/01/03
+printpubdate: ''
+pubdate: 2017 Nov 10
+sortdate: 2017/11/10 00:00
+source: Brain Behav
+title: Individual differences in EEG correlates of recognition memory due to DAT polymorphisms
+uid: '5745248'
+volume: '7'

@@ -1,0 +1,34 @@
+articleids:
+- idtype: pmid
+  value: '29599715'
+- idtype: doi
+  value: 10.3389/fninf.2018.00010
+- idtype: pmcid
+  value: PMC5862864
+authors:
+- authtype: Author
+  name: Sherfey JS
+- authtype: Author
+  name: Soplata AE
+- authtype: Author
+  name: Ardid S
+- authtype: Author
+  name: Roberts EA
+- authtype: Author
+  name: Stanley DA
+- authtype: Author
+  name: Pittman-Polletta BR
+- authtype: Author
+  name: Kopell NJ
+epubdate: 2018 Mar 15
+fulljournalname: Frontiers in Neuroinformatics
+issue: ''
+pages: '10'
+pmclivedate: 2018/03/29
+printpubdate: ''
+pubdate: 2018 Mar 15
+sortdate: 2018/03/15 00:00
+source: Front Neuroinform
+title: 'DynaSim: A MATLAB Toolbox for Neural Modeling and Simulation'
+uid: '5862864'
+volume: '12'

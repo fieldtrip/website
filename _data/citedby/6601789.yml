@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '26740665'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.2101-15.2016
+- idtype: pmcid
+  value: PMC6601789
+authors:
+- authtype: Author
+  name: Waldhauser GT
+- authtype: Author
+  name: Braun V
+- authtype: Author
+  name: Hanslmayr S
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '1'
+pages: 251-260
+pmclivedate: 2019/07/12
+printpubdate: 2016 Jan 6
+pubdate: 2016 Jan 6
+sortdate: 2016/01/06 00:00
+source: J Neurosci
+title: Episodic Memory Retrieval Functionally Relies on Very Rapid Reactivation of
+  Sensory Information
+uid: '6601789'
+volume: '36'

@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '34570330'
+- idtype: doi
+  value: 10.1007/s10548-021-00871-z
+- idtype: pmcid
+  value: PMC8647205
+- idtype: MID
+  value: NIHMS1755846
+authors:
+- authtype: Author
+  name: Conte S
+- authtype: Author
+  name: Richards JE
+epubdate: 2021 Sep 27
+fulljournalname: Brain topography
+issue: '6'
+pages: 793-812
+pmclivedate: ''
+printpubdate: 2021 Nov
+pubdate: 2021 Sep 27
+sortdate: 2021/09/27 00:00
+source: Brain Topogr
+title: The Influence of the Head Model Conductor on the Source Localization of Auditory
+  Evoked Potentials
+uid: '8647205'
+volume: '34'

@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '26217203'
+- idtype: doi
+  value: 10.3389/fnbeh.2015.00176
+- idtype: pmcid
+  value: PMC4499755
+authors:
+- authtype: Author
+  name: Gergelyfi M
+- authtype: Author
+  name: Jacob B
+- authtype: Author
+  name: Olivier E
+- authtype: Author
+  name: Zénon A
+epubdate: 2015 Jul 13
+fulljournalname: Frontiers in Behavioral Neuroscience
+issue: ''
+pages: '176'
+pmclivedate: 2015/07/27
+printpubdate: ''
+pubdate: 2015 Jul 13
+sortdate: 2015/07/13 00:00
+source: Front Behav Neurosci
+title: Dissociation between mental fatigue and motivational state during prolonged
+  mental activity
+uid: '4499755'
+volume: '9'

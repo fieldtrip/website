@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '33041750'
+- idtype: doi
+  value: 10.3389/fnins.2020.00900
+- idtype: pmcid
+  value: PMC7522368
+authors:
+- authtype: Author
+  name: MacInnes JJ
+- authtype: Author
+  name: Adcock RA
+- authtype: Author
+  name: Stocco A
+- authtype: Author
+  name: Prat CS
+- authtype: Author
+  name: Rao RP
+- authtype: Author
+  name: Dickerson KC
+epubdate: 2020 Sep 15
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '900'
+pmclivedate: 2020/10/09
+printpubdate: ''
+pubdate: 2020 Sep 15
+sortdate: 2020/09/15 00:00
+source: Front Neurosci
+title: 'Pyneal: Open Source Real-Time fMRI Software'
+uid: '7522368'
+volume: '14'

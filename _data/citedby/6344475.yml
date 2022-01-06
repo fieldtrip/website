@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '30674995'
+- idtype: doi
+  value: 10.1038/s41598-018-36498-7
+- idtype: pmcid
+  value: PMC6344475
+authors:
+- authtype: Author
+  name: Kim J
+- authtype: Author
+  name: Park HD
+- authtype: Author
+  name: Kim KW
+- authtype: Author
+  name: Shin DW
+- authtype: Author
+  name: Lim S
+- authtype: Author
+  name: Kwon H
+- authtype: Author
+  name: Kim MY
+- authtype: Author
+  name: Kim K
+- authtype: Author
+  name: Jeong B
+epubdate: 2019 Jan 23
+fulljournalname: Scientific Reports
+issue: ''
+pages: '430'
+pmclivedate: 2019/01/26
+printpubdate: ''
+pubdate: 2019 Jan 23
+sortdate: 2019/01/23 00:00
+source: Sci Rep
+title: 'Sad faces increase the heartbeat-associated interoceptive information flow
+  within the salience network: a MEG study'
+uid: '6344475'
+volume: '9'

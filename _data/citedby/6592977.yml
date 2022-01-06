@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '31209695'
+- idtype: doi
+  value: 10.1007/s10548-019-00708-w
+- idtype: pmcid
+  value: PMC6592977
+authors:
+- authtype: Author
+  name: Wang Q
+- authtype: Author
+  name: Valdés-Hernández PA
+- authtype: Author
+  name: Paz-Linares D
+- authtype: Author
+  name: Bosch-Bayard J
+- authtype: Author
+  name: Oosugi N
+- authtype: Author
+  name: Komatsu M
+- authtype: Author
+  name: Fujii N
+- authtype: Author
+  name: Valdés-Sosa PA
+epubdate: 2019 Jun 17
+fulljournalname: Brain Topography
+issue: '4'
+pages: 550-568
+pmclivedate: 2019/07/11
+printpubdate: '2019'
+pubdate: 2019 Jun 17
+sortdate: 2019/06/17 00:00
+source: Brain Topogr
+title: 'EECoG-Comp: An Open Source Platform for Concurrent EEG/ECoG Comparisons—Applications
+  to Connectivity Studies'
+uid: '6592977'
+volume: '32'

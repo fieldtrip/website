@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '32720644'
+- idtype: doi
+  value: 10.7554/eLife.55092
+- idtype: pmcid
+  value: PMC7394547
+authors:
+- authtype: Author
+  name: Lendner JD
+- authtype: Author
+  name: Helfrich RF
+- authtype: Author
+  name: Mander BA
+- authtype: Author
+  name: Romundstad L
+- authtype: Author
+  name: Lin JJ
+- authtype: Author
+  name: Walker MP
+- authtype: Author
+  name: Larsson PG
+- authtype: Author
+  name: Knight RT
+epubdate: 2020 Jul 28
+fulljournalname: eLife
+issue: ''
+pages: e55092
+pmclivedate: 2020/08/03
+printpubdate: ''
+pubdate: 2020 Jul 28
+sortdate: 2020/07/28 00:00
+source: eLife
+title: An electrophysiological marker of arousal level in humans
+uid: '7394547'
+volume: '9'

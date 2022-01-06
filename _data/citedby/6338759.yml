@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '30659237'
+- idtype: doi
+  value: 10.1038/s41598-018-37429-2
+- idtype: pmcid
+  value: PMC6338759
+authors:
+- authtype: Author
+  name: Leonardelli E
+- authtype: Author
+  name: Fait E
+- authtype: Author
+  name: Fairhall SL
+epubdate: 2019 Jan 18
+fulljournalname: Scientific Reports
+issue: ''
+pages: '239'
+pmclivedate: 2019/01/23
+printpubdate: ''
+pubdate: 2019 Jan 18
+sortdate: 2019/01/18 00:00
+source: Sci Rep
+title: Temporal dynamics of access to amodal representations of category-level conceptual
+  information
+uid: '6338759'
+volume: '9'

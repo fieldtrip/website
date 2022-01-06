@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '27001861'
+- idtype: doi
+  value: 10.1073/pnas.1523357113
+- idtype: pmcid
+  value: PMC4833226
+authors:
+- authtype: Author
+  name: Wöstmann M
+- authtype: Author
+  name: Herrmann B
+- authtype: Author
+  name: Maess B
+- authtype: Author
+  name: Obleser J
+epubdate: 2016 Mar 21
+fulljournalname: Proceedings of the National Academy of Sciences of the United States
+  of America
+issue: '14'
+pages: 3873-3878
+pmclivedate: 2016/10/05
+printpubdate: 2016 Apr 5
+pubdate: 2016 Mar 21
+sortdate: 2016/03/21 00:00
+source: Proc Natl Acad Sci U S A
+title: Spatiotemporal dynamics of auditory attention synchronize with speech
+uid: '4833226'
+volume: '113'

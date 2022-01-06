@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '26468194'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0477-15.2015
+- idtype: pmcid
+  value: PMC6608180
+authors:
+- authtype: Author
+  name: Arviv O
+- authtype: Author
+  name: Goldstein A
+- authtype: Author
+  name: Shriki O
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '41'
+pages: 13927-13942
+pmclivedate: 2019/07/10
+printpubdate: 2015 Oct 14
+pubdate: 2015 Oct 14
+sortdate: 2015/10/14 00:00
+source: J Neurosci
+title: Near-Critical Dynamics in Stimulus-Evoked Activity of the Human Brain and Its
+  Relation to Spontaneous Resting-State Activity
+uid: '6608180'
+volume: '35'

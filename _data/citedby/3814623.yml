@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '24204242'
+- idtype: doi
+  value: 10.1371/journal.pcbi.1003309
+- idtype: pmcid
+  value: PMC3814623
+authors:
+- authtype: Author
+  name: Gluth S
+- authtype: Author
+  name: Rieskamp J
+- authtype: Author
+  name: Büchel C
+epubdate: 2013 Oct 31
+fulljournalname: PLoS Computational Biology
+issue: '10'
+pages: e1003309
+pmclivedate: 2013/11/07
+printpubdate: ''
+pubdate: 2013 Oct 31
+sortdate: 2013/10/31 00:00
+source: PLoS Comput Biol
+title: 'Deciding Not to Decide: Computational and Neural Evidence for Hidden Behavior
+  in Sequential Choice'
+uid: '3814623'
+volume: '9'

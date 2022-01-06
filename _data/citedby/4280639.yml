@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '25489093'
+- idtype: doi
+  value: 10.1073/pnas.1414886111
+- idtype: pmcid
+  value: PMC4280639
+authors:
+- authtype: Author
+  name: Stolk A
+- authtype: Author
+  name: Noordzij ML
+- authtype: Author
+  name: Verhagen L
+- authtype: Author
+  name: Volman I
+- authtype: Author
+  name: Schoffelen JM
+- authtype: Author
+  name: Oostenveld R
+- authtype: Author
+  name: Hagoort P
+- authtype: Author
+  name: Toni I
+epubdate: 2014 Dec 8
+fulljournalname: Proceedings of the National Academy of Sciences of the United States
+  of America
+issue: '51'
+pages: 18183-18188
+pmclivedate: 2014/12/31
+printpubdate: 2014 Dec 23
+pubdate: 2014 Dec 8
+sortdate: 2014/12/08 00:00
+source: Proc Natl Acad Sci U S A
+title: Cerebral coherence between communicators marks the emergence of meaning
+uid: '4280639'
+volume: '111'

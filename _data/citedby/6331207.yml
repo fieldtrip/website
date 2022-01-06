@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '30656195'
+- idtype: doi
+  value: 10.1002/acn3.695
+- idtype: pmcid
+  value: PMC6331207
+authors:
+- authtype: Author
+  name: Wennberg R
+- authtype: Author
+  name: Maurice C
+- authtype: Author
+  name: Carlen PL
+- authtype: Author
+  name: Garcia Dominguez L
+epubdate: 2018 Nov 12
+fulljournalname: Annals of Clinical and Translational Neurology
+issue: '1'
+pages: 167-173
+pmclivedate: 2019/01/17
+printpubdate: ''
+pubdate: 2018 Nov 12
+sortdate: 2018/11/12 00:00
+source: Ann Clin Transl Neurol
+title: Pilomotor seizures marked by infraslow activity and acetazolamide responsiveness
+uid: '6331207'
+volume: '6'

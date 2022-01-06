@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '34310657'
+- idtype: doi
+  value: 10.1371/journal.pone.0255116
+- idtype: pmcid
+  value: PMC8312971
+authors:
+- authtype: Author
+  name: Roehe MA
+- authtype: Author
+  name: Kluger DS
+- authtype: Author
+  name: Schroeder SC
+- authtype: Author
+  name: Schliephake LM
+- authtype: Author
+  name: Boelte J
+- authtype: Author
+  name: Jacobsen T
+- authtype: Author
+  name: Schubotz RI
+epubdate: 2021 Jul 26
+fulljournalname: PLoS ONE
+issue: '7'
+pages: e0255116
+pmclivedate: 2021/07/31
+printpubdate: ''
+pubdate: 2021 Jul 26
+sortdate: 2021/07/26 00:00
+source: PLoS One
+title: Early alpha/beta oscillations reflect the formation of face-related expectations
+  in the brain
+uid: '8312971'
+volume: '16'

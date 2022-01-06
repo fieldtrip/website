@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '26290246'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0903-15.2015
+- idtype: pmcid
+  value: PMC4540803
+authors:
+- authtype: Author
+  name: Muthukumaraswamy SD
+- authtype: Author
+  name: Shaw AD
+- authtype: Author
+  name: Jackson LE
+- authtype: Author
+  name: Hall J
+- authtype: Author
+  name: Moran R
+- authtype: Author
+  name: Saxena N
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '33'
+pages: 11694-11706
+pmclivedate: 2016/02/19
+printpubdate: 2015 Aug 19
+pubdate: 2015 Aug 19
+sortdate: 2015/08/19 00:00
+source: J Neurosci
+title: Evidence that Subanesthetic Doses of Ketamine Cause Sustained Disruptions of
+  NMDA and AMPA-Mediated Frontoparietal Connectivity in Humans
+uid: '4540803'
+volume: '35'

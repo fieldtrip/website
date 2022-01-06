@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '30237542'
+- idtype: doi
+  value: 10.1038/s41598-018-32483-2
+- idtype: pmcid
+  value: PMC6148044
+authors:
+- authtype: Author
+  name: Noorman S
+- authtype: Author
+  name: Neville DA
+- authtype: Author
+  name: Simanova I
+epubdate: 2018 Sep 20
+fulljournalname: Scientific Reports
+issue: ''
+pages: '14156'
+pmclivedate: 2019/02/12
+printpubdate: ''
+pubdate: 2018 Sep 20
+sortdate: 2018/09/20 00:00
+source: Sci Rep
+title: Words affect visual perception by activating object shape representations
+uid: '6148044'
+volume: '8'

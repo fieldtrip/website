@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '32241836'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0255-20.2020
+- idtype: pmcid
+  value: PMC7178916
+authors:
+- authtype: Author
+  name: Yue L
+- authtype: Author
+  name: Iannetti GD
+- authtype: Author
+  name: Hu L
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '17'
+pages: 3478-3490
+pmclivedate: 2020/05/29
+printpubdate: 2020 Apr 22
+pubdate: 2020 Apr 22
+sortdate: 2020/04/22 00:00
+source: J Neurosci
+title: The Neural Origin of Nociceptive-Induced Gamma-Band Oscillations
+uid: '7178916'
+volume: '40'

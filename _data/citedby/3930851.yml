@@ -1,0 +1,38 @@
+articleids:
+- idtype: pmid
+  value: '24161808'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2013.10.027
+- idtype: pmcid
+  value: PMC3930851
+- idtype: MID
+  value: NIHMS534616
+authors:
+- authtype: Author
+  name: Gramfort A
+- authtype: Author
+  name: Luessi M
+- authtype: Author
+  name: Larson E
+- authtype: Author
+  name: Engemann D
+- authtype: Author
+  name: Strohmeier D
+- authtype: Author
+  name: Brodbeck C
+- authtype: Author
+  name: Parkkonen L
+- authtype: Author
+  name: Hämäläinen M
+epubdate: 2013 Oct 24
+fulljournalname: NeuroImage
+issue: ''
+pages: 446-460
+pmclivedate: 2015/02/01
+printpubdate: 2014 Feb 1
+pubdate: 2013 Oct 24
+sortdate: 2013/10/24 00:00
+source: Neuroimage
+title: MNE software for processing MEG and EEG data
+uid: '3930851'
+volume: '86'

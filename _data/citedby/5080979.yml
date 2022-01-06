@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '25988225'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2015.05.028
+- idtype: pmcid
+  value: PMC5080979
+- idtype: MID
+  value: NIHMS698171
+authors:
+- authtype: Author
+  name: Malcolm BR
+- authtype: Author
+  name: Foxe JJ
+- authtype: Author
+  name: Butler JS
+- authtype: Author
+  name: De Sanctis P
+epubdate: 2015 May 16
+fulljournalname: NeuroImage
+issue: ''
+pages: 230-242
+pmclivedate: 2016/10/26
+printpubdate: 2015 Aug 15
+pubdate: 2015 May 16
+sortdate: 2015/05/16 00:00
+source: Neuroimage
+title: 'The aging brain shows less flexible reallocation of cognitive resources during
+  dual-task walking: a mobile brain/body imaging (MoBI) study'
+uid: '5080979'
+volume: '117'

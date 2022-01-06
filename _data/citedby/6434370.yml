@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '30941002'
+- idtype: doi
+  value: 10.3389/fnins.2019.00153
+- idtype: pmcid
+  value: PMC6434370
+authors:
+- authtype: Author
+  name: Alickovic E
+- authtype: Author
+  name: Lunner T
+- authtype: Author
+  name: Gustafsson F
+- authtype: Author
+  name: Ljung L
+epubdate: 2019 Mar 19
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '153'
+pmclivedate: 2019/04/02
+printpubdate: ''
+pubdate: 2019 Mar 19
+sortdate: 2019/03/19 00:00
+source: Front Neurosci
+title: A Tutorial on Auditory Attention Identification Methods
+uid: '6434370'
+volume: '13'

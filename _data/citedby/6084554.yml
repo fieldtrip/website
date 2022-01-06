@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '30109125'
+- idtype: doi
+  value: 10.1093/nc/niw004
+- idtype: pmcid
+  value: PMC6084554
+authors:
+- authtype: Author
+  name: Aru J
+- authtype: Author
+  name: Rutiku R
+- authtype: Author
+  name: Wibral M
+- authtype: Author
+  name: Singer W
+- authtype: Author
+  name: Melloni L
+epubdate: 2016 May 9
+fulljournalname: Neuroscience of Consciousness
+issue: '1'
+pages: niw004
+pmclivedate: 2018/08/14
+printpubdate: ''
+pubdate: 2016 May 9
+sortdate: 2016/05/09 00:00
+source: Neurosci Conscious
+title: Early effects of previous experience on conscious perception
+uid: '6084554'
+volume: '2016'

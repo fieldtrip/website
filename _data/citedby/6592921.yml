@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '31239467'
+- idtype: doi
+  value: 10.1038/s41598-019-45634-w
+- idtype: pmcid
+  value: PMC6592921
+authors:
+- authtype: Author
+  name: Schubert JT
+- authtype: Author
+  name: Buchholz VN
+- authtype: Author
+  name: Föcker J
+- authtype: Author
+  name: Engel AK
+- authtype: Author
+  name: Röder B
+- authtype: Author
+  name: Heed T
+epubdate: 2019 Jun 25
+fulljournalname: Scientific Reports
+issue: ''
+pages: '9215'
+pmclivedate: 2019/07/03
+printpubdate: ''
+pubdate: 2019 Jun 25
+sortdate: 2019/06/25 00:00
+source: Sci Rep
+title: Alpha-band oscillations reflect external spatial coding for tactile stimuli
+  in sighted, but not in congenitally blind humans
+uid: '6592921'
+volume: '9'

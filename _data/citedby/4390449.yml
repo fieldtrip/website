@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '25688539'
+- idtype: doi
+  value: 10.1111/ejn.12849
+- idtype: pmcid
+  value: PMC4390449
+- idtype: MID
+  value: NIHMS654849
+authors:
+- authtype: Author
+  name: Andrade GN
+- authtype: Author
+  name: Butler JS
+- authtype: Author
+  name: Mercier MR
+- authtype: Author
+  name: Molholm S
+- authtype: Author
+  name: Foxe JJ
+epubdate: 2015 Feb 16
+fulljournalname: The European journal of neuroscience
+issue: '7'
+pages: 923-937
+pmclivedate: 2016/04/01
+printpubdate: 2015 Apr
+pubdate: 2015 Feb 16
+sortdate: 2015/02/16 00:00
+source: Eur J Neurosci
+title: 'Spatio-temporal dynamics of adaptation in the human visual system: A high-density
+  electrical mapping study'
+uid: '4390449'
+volume: '41'

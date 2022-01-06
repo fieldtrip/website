@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '32464291'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2020.116973
+- idtype: pmcid
+  value: PMC7422841
+authors:
+- authtype: Author
+  name: Poncet M
+- authtype: Author
+  name: Ales JM
+epubdate: ''
+fulljournalname: Neuroimage
+issue: ''
+pages: '116973'
+pmclivedate: 2020/09/01
+printpubdate: 2020 Sep
+pubdate: 2020 Sep
+sortdate: 2020/09/01 00:00
+source: Neuroimage
+title: Neural responses to apparent motion can be predicted by responses to non-moving
+  stimuli
+uid: '7422841'
+volume: '218'

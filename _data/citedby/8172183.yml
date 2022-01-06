@@ -1,0 +1,45 @@
+articleids:
+- idtype: pmid
+  value: '34094720'
+- idtype: doi
+  value: 10.1109/JTEHM.2021.3077760
+- idtype: pmcid
+  value: PMC8172183
+authors:
+- authtype: Unknown
+  name: ''
+- authtype: Unknown
+  name: ''
+- authtype: Unknown
+  name: ''
+- authtype: Unknown
+  name: ''
+- authtype: Unknown
+  name: ''
+- authtype: Unknown
+  name: ''
+- authtype: Unknown
+  name: ''
+- authtype: Unknown
+  name: ''
+- authtype: Unknown
+  name: ''
+- authtype: Unknown
+  name: ''
+- authtype: Unknown
+  name: ''
+- authtype: Unknown
+  name: ''
+epubdate: 2021 May 5
+fulljournalname: IEEE Journal of Translational Engineering in Health and Medicine
+issue: ''
+pages: '2200109'
+pmclivedate: 2021/06/04
+printpubdate: ''
+pubdate: 2021 May 5
+sortdate: 2021/05/05 00:00
+source: IEEE J Transl Eng Health Med
+title: Classifying Multi-Level Stress Responses From Brain Cortical EEG in Nurses
+  and Non-Health Professionals Using Machine Learning Auto Encoder
+uid: '8172183'
+volume: '9'

@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '31705052'
+- idtype: doi
+  value: 10.1038/s41598-019-52158-w
+- idtype: pmcid
+  value: PMC6841672
+authors:
+- authtype: Author
+  name: Tomasello R
+- authtype: Author
+  name: Kim C
+- authtype: Author
+  name: Dreyer FR
+- authtype: Author
+  name: Grisoni L
+- authtype: Author
+  name: Pulvermüller F
+epubdate: 2019 Nov 8
+fulljournalname: Scientific Reports
+issue: ''
+pages: '16285'
+pmclivedate: 2019/11/14
+printpubdate: ''
+pubdate: 2019 Nov 8
+sortdate: 2019/11/08 00:00
+source: Sci Rep
+title: Neurophysiological evidence for rapid processing of verbal and gestural information
+  in understanding communicative actions
+uid: '6841672'
+volume: '9'

@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '30214000'
+- idtype: doi
+  value: 10.1038/s41598-018-32150-6
+- idtype: pmcid
+  value: PMC6137049
+authors:
+- authtype: Author
+  name: Kalashnikova M
+- authtype: Author
+  name: Peter V
+- authtype: Author
+  name: Di Liberto GM
+- authtype: Author
+  name: Lalor EC
+- authtype: Author
+  name: Burnham D
+epubdate: 2018 Sep 13
+fulljournalname: Scientific Reports
+issue: ''
+pages: '13745'
+pmclivedate: 2018/09/15
+printpubdate: ''
+pubdate: 2018 Sep 13
+sortdate: 2018/09/13 00:00
+source: Sci Rep
+title: Infant-directed speech facilitates seven-month-old infants’ cortical tracking
+  of speech
+uid: '6137049'
+volume: '8'

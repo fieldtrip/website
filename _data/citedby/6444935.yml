@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '30984904'
+- idtype: doi
+  value: 10.1162/netn_a_00077
+- idtype: pmcid
+  value: PMC6444935
+authors:
+- authtype: Author
+  name: Hunt BA
+- authtype: Author
+  name: Wong SM
+- authtype: Author
+  name: Vandewouw MM
+- authtype: Author
+  name: Brookes MJ
+- authtype: Author
+  name: Dunkley BT
+- authtype: Author
+  name: Taylor MJ
+epubdate: 2019 Mar 1
+fulljournalname: Network Neuroscience
+issue: '2'
+pages: 497-520
+pmclivedate: 2019/04/12
+printpubdate: ''
+pubdate: 2019 Mar 1
+sortdate: 2019/03/01 00:00
+source: Netw Neurosci
+title: Spatial and spectral trajectories in typical neurodevelopment from childhood
+  to middle age
+uid: '6444935'
+volume: '3'

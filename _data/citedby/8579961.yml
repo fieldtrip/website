@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '34776913'
+- idtype: doi
+  value: 10.3389/fncom.2021.698386
+- idtype: pmcid
+  value: PMC8579961
+authors:
+- authtype: Author
+  name: Youssef N
+- authtype: Author
+  name: Xiao S
+- authtype: Author
+  name: Liu M
+- authtype: Author
+  name: Lian H
+- authtype: Author
+  name: Li R
+- authtype: Author
+  name: Chen X
+- authtype: Author
+  name: Zhang W
+- authtype: Author
+  name: Zheng X
+- authtype: Author
+  name: Li Y
+- authtype: Author
+  name: Li Y
+epubdate: 2021 Oct 20
+fulljournalname: Frontiers in Computational Neuroscience
+issue: ''
+pages: '698386'
+pmclivedate: 2021/11/11
+printpubdate: ''
+pubdate: 2021 Oct 20
+sortdate: 2021/10/20 00:00
+source: Front Comput Neurosci
+title: Functional Brain Networks in Mild Cognitive Impairment Based on Resting Electroencephalography
+  Signals
+uid: '8579961'
+volume: '15'

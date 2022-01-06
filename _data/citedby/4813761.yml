@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '25754518'
+- idtype: doi
+  value: 10.1093/cercor/bhv027
+- idtype: pmcid
+  value: PMC4813761
+authors:
+- authtype: Author
+  name: Jha A
+- authtype: Author
+  name: Nachev P
+- authtype: Author
+  name: Barnes G
+- authtype: Author
+  name: Husain M
+- authtype: Author
+  name: Brown P
+- authtype: Author
+  name: Litvak V
+epubdate: 2015 Mar 9
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '11'
+pages: 4392-4406
+pmclivedate: 2016/03/30
+printpubdate: 2015 Nov
+pubdate: 2015 Mar 9
+sortdate: 2015/03/09 00:00
+source: Cereb Cortex
+title: The Frontal Control of Stopping
+uid: '4813761'
+volume: '25'

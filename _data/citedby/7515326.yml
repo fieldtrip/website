@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '33267511'
+- idtype: doi
+  value: 10.3390/e21080798
+- idtype: pmcid
+  value: PMC7515326
+authors:
+- authtype: Author
+  name: Shumbayawonda E
+- authtype: Author
+  name: Abásolo D
+- authtype: Author
+  name: López-Sanz D
+- authtype: Author
+  name: Bruña R
+- authtype: Author
+  name: Maestu F
+- authtype: Author
+  name: Fernández A
+epubdate: 2019 Aug 15
+fulljournalname: Entropy
+issue: '8'
+pages: '798'
+pmclivedate: 2020/11/09
+printpubdate: ''
+pubdate: 2019 Aug 15
+sortdate: 2019/08/15 00:00
+source: Entropy (Basel)
+title: Sex Differences in the Complexity of Healthy Older Adults’ Magnetoencephalograms
+uid: '7515326'
+volume: '21'

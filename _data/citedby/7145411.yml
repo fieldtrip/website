@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '32300327'
+- idtype: doi
+  value: 10.3389/fneur.2020.00161
+- idtype: pmcid
+  value: PMC7145411
+authors:
+- authtype: Author
+  name: Balkenhol T
+- authtype: Author
+  name: Wallhäusser-Franke E
+- authtype: Author
+  name: Rotter N
+- authtype: Author
+  name: Servais JJ
+epubdate: 2020 Mar 31
+fulljournalname: Frontiers in Neurology
+issue: ''
+pages: '161'
+pmclivedate: 2020/04/16
+printpubdate: ''
+pubdate: 2020 Mar 31
+sortdate: 2020/03/31 00:00
+source: Front Neurol
+title: Changes in Speech-Related Brain Activity During Adaptation to Electro-Acoustic
+  Hearing
+uid: '7145411'
+volume: '11'

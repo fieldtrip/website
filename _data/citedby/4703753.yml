@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '26779106'
+- idtype: doi
+  value: 10.3389/fpsyg.2015.02008
+- idtype: pmcid
+  value: PMC4703753
+authors:
+- authtype: Author
+  name: Petras K
+- authtype: Author
+  name: ten Oever S
+- authtype: Author
+  name: Jansma BM
+epubdate: 2016 Jan 7
+fulljournalname: Frontiers in Psychology
+issue: ''
+pages: '2008'
+pmclivedate: 2016/01/15
+printpubdate: ''
+pubdate: 2016 Jan 7
+sortdate: 2016/01/07 00:00
+source: Front Psychol
+title: 'The Effect of Distance on Moral Engagement: Event Related Potentials and Alpha
+  Power are Sensitive to Perspective in a Virtual Shooting Task'
+uid: '4703753'
+volume: '6'

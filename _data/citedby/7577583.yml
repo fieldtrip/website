@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '32165265'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2020.116717
+- idtype: pmcid
+  value: PMC7577583
+- idtype: MID
+  value: NIHMS1631008
+authors:
+- authtype: Author
+  name: Laffere A
+- authtype: Author
+  name: Dick F
+- authtype: Author
+  name: Tierney A
+epubdate: 2020 Mar 10
+fulljournalname: NeuroImage
+issue: ''
+pages: '116717'
+pmclivedate: 2020/10/21
+printpubdate: 2020 Jun
+pubdate: 2020 Mar 10
+sortdate: 2020/03/10 00:00
+source: Neuroimage
+title: 'Effects of auditory selective attention on neural phase: individual differences
+  and short-term training'
+uid: '7577583'
+volume: '213'

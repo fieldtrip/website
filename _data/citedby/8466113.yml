@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '34575717'
+- idtype: doi
+  value: 10.3390/jpm11090940
+- idtype: pmcid
+  value: PMC8466113
+authors:
+- authtype: Author
+  name: Kashyap R
+- authtype: Author
+  name: Bhattacharjee S
+- authtype: Author
+  name: Arumugam R
+- authtype: Author
+  name: Bharath RD
+- authtype: Author
+  name: Udupa K
+- authtype: Author
+  name: Oishi K
+- authtype: Author
+  name: Desmond JE
+- authtype: Author
+  name: Chen SH
+- authtype: Author
+  name: Guan C
+epubdate: 2021 Sep 21
+fulljournalname: Journal of Personalized Medicine
+issue: '9'
+pages: '940'
+pmclivedate: 2021/09/27
+printpubdate: ''
+pubdate: 2021 Sep 21
+sortdate: 2021/09/21 00:00
+source: J Pers Med
+title: Focality-Oriented Selection of Current Dose for Transcranial Direct Current
+  Stimulation
+uid: '8466113'
+volume: '11'

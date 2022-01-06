@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '27647880'
+- idtype: doi
+  value: 10.1073/pnas.1603312113
+- idtype: pmcid
+  value: PMC5056038
+authors:
+- authtype: Author
+  name: Piai V
+- authtype: Author
+  name: Anderson KL
+- authtype: Author
+  name: Lin JJ
+- authtype: Author
+  name: Dewar C
+- authtype: Author
+  name: Parvizi J
+- authtype: Author
+  name: Dronkers NF
+- authtype: Author
+  name: Knight RT
+epubdate: 2016 Sep 19
+fulljournalname: Proceedings of the National Academy of Sciences of the United States
+  of America
+issue: '40'
+pages: 11366-11371
+pmclivedate: 2017/04/04
+printpubdate: 2016 Oct 4
+pubdate: 2016 Sep 19
+sortdate: 2016/09/19 00:00
+source: Proc Natl Acad Sci U S A
+title: Direct brain recordings reveal hippocampal rhythm underpinnings of language
+  processing
+uid: '5056038'
+volume: '113'

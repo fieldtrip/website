@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '32991728'
+- idtype: doi
+  value: 10.1093/scan/nsaa135
+- idtype: pmcid
+  value: PMC7812618
+authors:
+- authtype: Author
+  name: Reinero DA
+- authtype: Author
+  name: Dikker S
+- authtype: Author
+  name: Van Bavel JJ
+epubdate: 2020 Sep 30
+fulljournalname: Social Cognitive and Affective Neuroscience
+issue: 1-2
+pages: 43-57
+pmclivedate: 2021/01/25
+printpubdate: ''
+pubdate: 2020 Sep 30
+sortdate: 2020/09/30 00:00
+source: Soc Cogn Affect Neurosci
+title: Inter-brain synchrony in teams predicts collective performance
+uid: '7812618'
+volume: '16'

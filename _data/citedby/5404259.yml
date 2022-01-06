@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '28440338'
+- idtype: doi
+  value: 10.1038/srep46761
+- idtype: pmcid
+  value: PMC5404259
+authors:
+- authtype: Author
+  name: Gerson SA
+- authtype: Author
+  name: Meyer M
+- authtype: Author
+  name: Hunnius S
+- authtype: Author
+  name: Bekkering H
+epubdate: 2017 Apr 25
+fulljournalname: Scientific Reports
+issue: ''
+pages: '46761'
+pmclivedate: 2017/04/27
+printpubdate: ''
+pubdate: 2017 Apr 25
+sortdate: 2017/04/25 00:00
+source: Sci Rep
+title: 'Unravelling the contributions of motor experience and conceptual knowledge
+  in action perception: A training study'
+uid: '5404259'
+volume: '7'

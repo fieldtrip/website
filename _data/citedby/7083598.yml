@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '32196457'
+- idtype: doi
+  value: 10.7554/eLife.52984
+- idtype: pmcid
+  value: PMC7083598
+authors:
+- authtype: Author
+  name: Huang N
+- authtype: Author
+  name: Elhilali M
+epubdate: 2020 Mar 20
+fulljournalname: eLife
+issue: ''
+pages: e52984
+pmclivedate: 2020/03/23
+printpubdate: ''
+pubdate: 2020 Mar 20
+sortdate: 2020/03/20 00:00
+source: eLife
+title: Push-pull competition between bottom-up and top-down auditory attention to
+  natural soundscapes
+uid: '7083598'
+volume: '9'

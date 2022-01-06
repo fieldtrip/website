@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '33166050'
+- idtype: doi
+  value: 10.1002/hbm.25262
+- idtype: pmcid
+  value: PMC7814770
+authors:
+- authtype: Author
+  name: Farahani ED
+- authtype: Author
+  name: Wouters J
+- authtype: Author
+  name: van Wieringen A
+epubdate: 2020 Nov 9
+fulljournalname: Human Brain Mapping
+issue: '3'
+pages: 780-796
+pmclivedate: 2021/01/26
+printpubdate: ''
+pubdate: 2020 Nov 9
+sortdate: 2020/11/09 00:00
+source: Hum Brain Mapp
+title: 'Brain mapping of auditory steady‐state responses: A broad view of cortical
+  and subcortical sources'
+uid: '7814770'
+volume: '42'

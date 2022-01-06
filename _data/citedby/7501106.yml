@@ -1,0 +1,38 @@
+articleids:
+- idtype: pmid
+  value: '32621073'
+- idtype: doi
+  value: 10.1007/s00213-020-05579-9
+- idtype: pmcid
+  value: PMC7501106
+authors:
+- authtype: Author
+  name: Boonstra EA
+- authtype: Author
+  name: van Schouwenburg MR
+- authtype: Author
+  name: Seth AK
+- authtype: Author
+  name: Bauer M
+- authtype: Author
+  name: Zantvoord JB
+- authtype: Author
+  name: Kemper EM
+- authtype: Author
+  name: Lansink CS
+- authtype: Author
+  name: Slagter HA
+epubdate: 2020 Jul 3
+fulljournalname: Psychopharmacology
+issue: '9'
+pages: 2855-2872
+pmclivedate: 2020/10/01
+printpubdate: '2020'
+pubdate: 2020 Jul 3
+sortdate: 2020/07/03 00:00
+source: Psychopharmacology (Berl)
+title: 'Conscious perception and the modulatory role of dopamine: no effect of the
+  dopamine D2 agonist cabergoline on visual masking, the attentional blink, and probabilistic
+  discrimination'
+uid: '7501106'
+volume: '237'

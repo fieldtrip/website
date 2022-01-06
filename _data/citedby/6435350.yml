@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '28891322'
+- idtype: doi
+  value: 10.1089/brain.2017.0512
+- idtype: pmcid
+  value: PMC6435350
+authors:
+- authtype: Author
+  name: Dimitriadis SI
+- authtype: Author
+  name: Antonakakis M
+- authtype: Author
+  name: Simos P
+- authtype: Author
+  name: Fletcher JM
+- authtype: Author
+  name: Papanicolaou AC
+epubdate: 2017 Dec 1
+fulljournalname: Brain Connectivity
+issue: '10'
+pages: 661-670
+pmclivedate: 2019/03/27
+printpubdate: 2017 Dec 1
+pubdate: 2017 Dec 1
+sortdate: 2017/12/01 00:00
+source: Brain Connect
+title: 'Data-Driven Topological Filtering Based on Orthogonal Minimal Spanning Trees:
+  Application to Multigroup Magnetoencephalography Resting-State Connectivity'
+uid: '6435350'
+volume: '7'

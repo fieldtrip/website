@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '33147691'
+- idtype: doi
+  value: 10.3390/brainsci10110810
+- idtype: pmcid
+  value: PMC7692090
+authors:
+- authtype: Author
+  name: Shen S
+- authtype: Author
+  name: Kerlin JR
+- authtype: Author
+  name: Bortfeld H
+- authtype: Author
+  name: Shahin AJ
+epubdate: 2020 Nov 2
+fulljournalname: Brain Sciences
+issue: '11'
+pages: '810'
+pmclivedate: 2020/11/28
+printpubdate: ''
+pubdate: 2020 Nov 2
+sortdate: 2020/11/02 00:00
+source: Brain Sci
+title: 'The Cross-Modal Suppressive Role of Visual Context on Speech Intelligibility:
+  An ERP Study'
+uid: '7692090'
+volume: '10'

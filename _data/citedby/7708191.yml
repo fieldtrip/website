@@ -1,0 +1,49 @@
+articleids:
+- idtype: pmid
+  value: '33261623'
+- idtype: doi
+  value: 10.1186/s12984-020-00772-5
+- idtype: pmcid
+  value: PMC7708191
+authors:
+- authtype: Author
+  name: D’Arcy RC
+- authtype: Author
+  name: Greene T
+- authtype: Author
+  name: Greene D
+- authtype: Author
+  name: Frehlick Z
+- authtype: Author
+  name: Fickling SD
+- authtype: Author
+  name: Campbell N
+- authtype: Author
+  name: Etheridge T
+- authtype: Author
+  name: Smith C
+- authtype: Author
+  name: Bollinger F
+- authtype: Author
+  name: Danilov Y
+- authtype: Author
+  name: Livingstone A
+- authtype: Author
+  name: Tannouri P
+- authtype: Author
+  name: Martin P
+- authtype: Author
+  name: Lakhani B
+epubdate: 2020 Dec 1
+fulljournalname: Journal of NeuroEngineering and Rehabilitation
+issue: ''
+pages: '158'
+pmclivedate: 2020/12/02
+printpubdate: ''
+pubdate: 2020 Dec 1
+sortdate: 2020/12/01 00:00
+source: J Neuroeng Rehabil
+title: 'Portable neuromodulation induces neuroplasticity to re-activate motor function
+  recovery from brain injury: a high-density MEG case study'
+uid: '7708191'
+volume: '17'

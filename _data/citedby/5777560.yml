@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '29375753'
+- idtype: doi
+  value: 10.1177/2041669517752715
+- idtype: pmcid
+  value: PMC5777560
+authors:
+- authtype: Author
+  name: Nunez V
+- authtype: Author
+  name: Shapley RM
+- authtype: Author
+  name: Gordon J
+epubdate: 2018 Jan 18
+fulljournalname: i-Perception
+issue: '1'
+pages: '2041669517752715'
+pmclivedate: 2018/01/26
+printpubdate: ''
+pubdate: 2018 Jan 18
+sortdate: 2018/01/18 00:00
+source: Iperception
+title: 'Cortical Double-Opponent Cells in Color Perception: Perceptual Scaling and
+  Chromatic Visual Evoked Potentials'
+uid: '5777560'
+volume: '9'

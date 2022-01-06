@@ -1,0 +1,34 @@
+articleids:
+- idtype: pmid
+  value: '30631448'
+- idtype: doi
+  value: 10.1186/s40814-018-0388-z
+- idtype: pmcid
+  value: PMC6322230
+authors:
+- authtype: Author
+  name: Fleischmann R
+- authtype: Author
+  name: Traenkner S
+- authtype: Author
+  name: Kraft A
+- authtype: Author
+  name: Schmidt S
+- authtype: Author
+  name: Schreiber SJ
+- authtype: Author
+  name: Brandt SA
+epubdate: 2019 Jan 7
+fulljournalname: Pilot and Feasibility Studies
+issue: ''
+pages: '2'
+pmclivedate: 2019/01/10
+printpubdate: ''
+pubdate: 2019 Jan 7
+sortdate: 2019/01/07 00:00
+source: Pilot Feasibility Stud
+title: 'Delirium is associated with frequency band specific dysconnectivity in intrinsic
+  connectivity networks: preliminary evidence from a large retrospective pilot case-control
+  study'
+uid: '6322230'
+volume: '5'

@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '30169552'
+- idtype: doi
+  value: 10.1093/cercor/bhy176
+- idtype: pmcid
+  value: PMC6611454
+authors:
+- authtype: Author
+  name: Doré BP
+- authtype: Author
+  name: Scholz C
+- authtype: Author
+  name: Baek EC
+- authtype: Author
+  name: Garcia JO
+- authtype: Author
+  name: O’Donnell MB
+- authtype: Author
+  name: Bassett DS
+- authtype: Author
+  name: Vettel JM
+- authtype: Author
+  name: Falk EB
+epubdate: 2018 Aug 28
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '7'
+pages: 3102-3110
+pmclivedate: 2020/07/05
+printpubdate: 2019 Jul
+pubdate: 2018 Aug 28
+sortdate: 2018/08/28 00:00
+source: Cereb Cortex
+title: Brain Activity Tracks Population Information Sharing by Capturing Consensus
+  Judgments of Value
+uid: '6611454'
+volume: '29'

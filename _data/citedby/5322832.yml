@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '27926827'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2016.12.004
+- idtype: pmcid
+  value: PMC5322832
+- idtype: MID
+  value: EMS71494
+authors:
+- authtype: Author
+  name: Branco MP
+- authtype: Author
+  name: Freudenburg ZV
+- authtype: Author
+  name: Aarnoutse EJ
+- authtype: Author
+  name: Bleichner MG
+- authtype: Author
+  name: Vansteensel MJ
+- authtype: Author
+  name: Ramsey NF
+epubdate: 2016 Dec 5
+fulljournalname: NeuroImage
+issue: ''
+pages: 130-142
+pmclivedate: 2018/02/15
+printpubdate: 2017 Feb 15
+pubdate: 2016 Dec 5
+sortdate: 2016/12/05 00:00
+source: Neuroimage
+title: Decoding hand gestures from primary somatosensory cortex using high-density
+  ECoG
+uid: '5322832'
+volume: '147'

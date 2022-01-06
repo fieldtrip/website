@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '27721468'
+- idtype: doi
+  value: 10.1038/srep34886
+- idtype: pmcid
+  value: PMC5056506
+authors:
+- authtype: Author
+  name: Shapcott KA
+- authtype: Author
+  name: Schmiedt JT
+- authtype: Author
+  name: Saunders RC
+- authtype: Author
+  name: Maier A
+- authtype: Author
+  name: Leopold DA
+- authtype: Author
+  name: Schmid MC
+epubdate: 2016 Oct 10
+fulljournalname: Scientific Reports
+issue: ''
+pages: '34886'
+pmclivedate: 2016/10/19
+printpubdate: ''
+pubdate: 2016 Oct 10
+sortdate: 2016/10/10 00:00
+source: Sci Rep
+title: Correlated activity of cortical neurons survives extensive removal of feedforward
+  sensory input
+uid: '5056506'
+volume: '6'

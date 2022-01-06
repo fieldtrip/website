@@ -1,0 +1,49 @@
+articleids:
+- idtype: pmid
+  value: '32944945'
+- idtype: doi
+  value: 10.1111/epi.16686
+- idtype: pmcid
+  value: PMC7899016
+- idtype: MID
+  value: NIHMS1670018
+authors:
+- authtype: Author
+  name: Narasimhan S
+- authtype: Author
+  name: Kundassery KB
+- authtype: Author
+  name: Gupta K
+- authtype: Author
+  name: Johnson GW
+- authtype: Author
+  name: Wills KE
+- authtype: Author
+  name: Goodale SE
+- authtype: Author
+  name: Haas K
+- authtype: Author
+  name: Rolston JD
+- authtype: Author
+  name: Naftel RP
+- authtype: Author
+  name: Morgan VL
+- authtype: Author
+  name: Dawant BM
+- authtype: Author
+  name: González HF
+- authtype: Author
+  name: Englot DJ
+epubdate: 2020 Sep 18
+fulljournalname: Epilepsia
+issue: '11'
+pages: 2534-2544
+pmclivedate: 2021/11/01
+printpubdate: 2020 Nov
+pubdate: 2020 Sep 18
+sortdate: 2020/09/18 00:00
+source: Epilepsia
+title: 'Seizure-onset regions demonstrate high inward directed connectivity during
+  resting-state: An SEEG study in focal epilepsy'
+uid: '7899016'
+volume: '61'

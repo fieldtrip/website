@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '26944858'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2016.02.060
+- idtype: pmcid
+  value: PMC5978406
+- idtype: MID
+  value: NIHMS968175
+authors:
+- authtype: Author
+  name: Piazza C
+- authtype: Author
+  name: Cantiani C
+- authtype: Author
+  name: Akalin-Acar Z
+- authtype: Author
+  name: Miyakoshi M
+- authtype: Author
+  name: Benasich AA
+- authtype: Author
+  name: Reni G
+- authtype: Author
+  name: Bianchi AM
+- authtype: Author
+  name: Makeig S
+epubdate: 2016 Mar 2
+fulljournalname: NeuroImage
+issue: ''
+pages: 75-87
+pmclivedate: 2018/05/31
+printpubdate: 2016 Jun
+pubdate: 2016 Mar 2
+sortdate: 2016/03/02 00:00
+source: Neuroimage
+title: ICA-derived cortical responses indexing rapid multi-feature auditory processing
+  in six-month-old infants
+uid: '5978406'
+volume: '133'

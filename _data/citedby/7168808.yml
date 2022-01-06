@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '32129142'
+- idtype: doi
+  value: 10.1177/1545968319893289
+- idtype: pmcid
+  value: PMC7168808
+authors:
+- authtype: Author
+  name: Zandvliet SB
+- authtype: Author
+  name: van Wegen EE
+- authtype: Author
+  name: Campfens SF
+- authtype: Author
+  name: van der Kooij H
+- authtype: Author
+  name: Kwakkel G
+- authtype: Author
+  name: Meskers CG
+epubdate: 2020 Mar 4
+fulljournalname: Neurorehabilitation and Neural Repair
+issue: '4'
+pages: 344-359
+pmclivedate: 2020/04/28
+printpubdate: 2020 Apr
+pubdate: 2020 Mar 4
+sortdate: 2020/03/04 00:00
+source: Neurorehabil Neural Repair
+title: 'Position-Cortical Coherence as a Marker of Afferent Pathway Integrity Early
+  Poststroke: A Prospective Cohort Study'
+uid: '7168808'
+volume: '34'

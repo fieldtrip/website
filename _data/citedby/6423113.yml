@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '30886202'
+- idtype: doi
+  value: 10.1038/s41598-019-41131-2
+- idtype: pmcid
+  value: PMC6423113
+authors:
+- authtype: Author
+  name: Nordin AD
+- authtype: Author
+  name: Hairston WD
+- authtype: Author
+  name: Ferris DP
+epubdate: 2019 Mar 18
+fulljournalname: Scientific Reports
+issue: ''
+pages: '4693'
+pmclivedate: 2019/03/26
+printpubdate: ''
+pubdate: 2019 Mar 18
+sortdate: 2019/03/18 00:00
+source: Sci Rep
+title: Human electrocortical dynamics while stepping over obstacles
+uid: '6423113'
+volume: '9'

@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '31748562'
+- idtype: doi
+  value: 10.1038/s41467-019-13282-3
+- idtype: pmcid
+  value: PMC6868242
+authors:
+- authtype: Author
+  name: Mo C
+- authtype: Author
+  name: Lu J
+- authtype: Author
+  name: Wu B
+- authtype: Author
+  name: Jia J
+- authtype: Author
+  name: Luo H
+- authtype: Author
+  name: Fang F
+epubdate: 2019 Nov 20
+fulljournalname: Nature Communications
+issue: ''
+pages: '5264'
+pmclivedate: 2019/11/22
+printpubdate: ''
+pubdate: 2019 Nov 20
+sortdate: 2019/11/20 00:00
+source: Nat Commun
+title: Competing rhythmic neural representations of orientations during concurrent
+  attention to multiple orientation features
+uid: '6868242'
+volume: '10'

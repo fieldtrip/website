@@ -1,0 +1,59 @@
+articleids:
+- idtype: pmid
+  value: '34728684'
+- idtype: doi
+  value: 10.1038/s41598-021-00933-z
+- idtype: pmcid
+  value: PMC8563927
+authors:
+- authtype: Author
+  name: Splittgerber M
+- authtype: Author
+  name: Borzikowsky C
+- authtype: Author
+  name: Salvador R
+- authtype: Author
+  name: Puonti O
+- authtype: Author
+  name: Papadimitriou K
+- authtype: Author
+  name: Merschformann C
+- authtype: Author
+  name: Biagi MC
+- authtype: Author
+  name: Stenner T
+- authtype: Author
+  name: Brauer H
+- authtype: Author
+  name: Breitling-Ziegler C
+- authtype: Author
+  name: Prehn-Kristensen A
+- authtype: Author
+  name: Krauel K
+- authtype: Author
+  name: Ruffini G
+- authtype: Author
+  name: Pedersen A
+- authtype: Author
+  name: Nees F
+- authtype: Author
+  name: Thielscher A
+- authtype: Author
+  name: Dempfle A
+- authtype: Author
+  name: Siniatchkin M
+- authtype: Author
+  name: Moliadze V
+epubdate: 2021 Nov 2
+fulljournalname: Scientific Reports
+issue: ''
+pages: '21512'
+pmclivedate: 2021/11/04
+printpubdate: ''
+pubdate: 2021 Nov 2
+sortdate: 2021/11/02 00:00
+source: Sci Rep
+title: Multichannel anodal tDCS over the left dorsolateral prefrontal cortex in a
+  paediatric population
+uid: '8563927'
+volume: '11'

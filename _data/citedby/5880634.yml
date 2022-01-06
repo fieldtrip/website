@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '29476038'
+- idtype: doi
+  value: 10.1212/WNL.0000000000005215
+- idtype: pmcid
+  value: PMC5880634
+authors:
+- authtype: Author
+  name: Dirkx MF
+- authtype: Author
+  name: Zach H
+- authtype: Author
+  name: Bloem BR
+- authtype: Author
+  name: Hallett M
+- authtype: Author
+  name: Helmich RC
+epubdate: ''
+fulljournalname: Neurology
+issue: '13'
+pages: e1095-e1103
+pmclivedate: 2019/03/27
+printpubdate: 2018 Mar 27
+pubdate: 2018 Mar 27
+sortdate: 2018/03/27 00:00
+source: Neurology
+title: The nature of postural tremor in Parkinson disease
+uid: '5880634'
+volume: '90'

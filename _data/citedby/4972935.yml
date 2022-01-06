@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '27524998'
+- idtype: doi
+  value: 10.1155/2016/7489108
+- idtype: pmcid
+  value: PMC4972935
+authors:
+- authtype: Author
+  name: Haumann NT
+- authtype: Author
+  name: Parkkonen L
+- authtype: Author
+  name: Kliuchko M
+- authtype: Author
+  name: Vuust P
+- authtype: Author
+  name: Brattico E
+epubdate: 2016 Jul 21
+fulljournalname: Computational Intelligence and Neuroscience
+issue: ''
+pages: '7489108'
+pmclivedate: 2016/08/14
+printpubdate: '2016'
+pubdate: 2016 Jul 21
+sortdate: 2016/07/21 00:00
+source: Comput Intell Neurosci
+title: Comparing the Performance of Popular MEG/EEG Artifact Correction Methods in
+  an Evoked-Response Study
+uid: '4972935'
+volume: '2016'

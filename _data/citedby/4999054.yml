@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '26989844'
+- idtype: doi
+  value: 10.1111/psyp.12642
+- idtype: pmcid
+  value: PMC4999054
+authors:
+- authtype: Author
+  name: Thompson D
+- authtype: Author
+  name: Mackenzie IG
+- authtype: Author
+  name: Leuthold H
+- authtype: Author
+  name: Filik R
+epubdate: 2016 Mar 17
+fulljournalname: Psychophysiology
+issue: '7'
+pages: 1054-1062
+pmclivedate: 2016/09/13
+printpubdate: 2016 Jul
+pubdate: 2016 Mar 17
+sortdate: 2016/03/17 00:00
+source: Psychophysiology
+title: 'Emotional responses to irony and emoticons in written language: Evidence from
+  EDA and facial EMG'
+uid: '4999054'
+volume: '53'

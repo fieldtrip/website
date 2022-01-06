@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '29778070'
+- idtype: doi
+  value: 10.1016/j.alcohol.2018.01.002
+- idtype: pmcid
+  value: PMC5995627
+- idtype: MID
+  value: NIHMS932353
+authors:
+- authtype: Author
+  name: Affan RO
+- authtype: Author
+  name: Huang S
+- authtype: Author
+  name: Cruz SM
+- authtype: Author
+  name: Holcomb LA
+- authtype: Author
+  name: Nguyen E
+- authtype: Author
+  name: Marinkovic K
+epubdate: 2018 Jan 8
+fulljournalname: Alcohol (Fayetteville, N.Y.)
+issue: ''
+pages: 51-60
+pmclivedate: 2019/08/01
+printpubdate: 2018 Aug
+pubdate: 2018 Jan 8
+sortdate: 2018/01/08 00:00
+source: Alcohol
+title: High-Intensity Binge Drinking is Associated with Alterations in Spontaneous
+  Neural Oscillations in Young Adults
+uid: '5995627'
+volume: '70'

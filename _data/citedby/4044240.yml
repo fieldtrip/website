@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '24899697'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.4741-13.2014
+- idtype: pmcid
+  value: PMC4044240
+authors:
+- authtype: Author
+  name: Myers NE
+- authtype: Author
+  name: Stokes MG
+- authtype: Author
+  name: Walther L
+- authtype: Author
+  name: Nobre AC
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '23'
+pages: 7735-7743
+pmclivedate: 2014/12/04
+printpubdate: 2014 Jun 4
+pubdate: 2014 Jun 4
+sortdate: 2014/06/04 00:00
+source: J Neurosci
+title: Oscillatory Brain State Predicts Variability in Working Memory
+uid: '4044240'
+volume: '34'

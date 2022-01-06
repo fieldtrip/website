@@ -1,0 +1,53 @@
+articleids:
+- idtype: pmid
+  value: '22973218'
+- idtype: doi
+  value: 10.3389/fnhum.2012.00256
+- idtype: pmcid
+  value: PMC3437523
+authors:
+- authtype: Author
+  name: Saggar M
+- authtype: Author
+  name: King BG
+- authtype: Author
+  name: Zanesco AP
+- authtype: Author
+  name: MacLean KA
+- authtype: Author
+  name: Aichele SR
+- authtype: Author
+  name: Jacobs TL
+- authtype: Author
+  name: Bridwell DA
+- authtype: Author
+  name: Shaver PR
+- authtype: Author
+  name: Rosenberg EL
+- authtype: Author
+  name: Sahdra BK
+- authtype: Author
+  name: Ferrer E
+- authtype: Author
+  name: Tang AC
+- authtype: Author
+  name: Mangun GR
+- authtype: Author
+  name: Wallace BA
+- authtype: Author
+  name: Miikkulainen R
+- authtype: Author
+  name: Saron CD
+epubdate: 2012 Sep 10
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '256'
+pmclivedate: 2012/09/12
+printpubdate: ''
+pubdate: 2012 Sep 10
+sortdate: 2012/09/10 00:00
+source: Front Hum Neurosci
+title: Intensive training induces longitudinal changes in meditation state-related
+  EEG oscillatory activity
+uid: '3437523'
+volume: '6'

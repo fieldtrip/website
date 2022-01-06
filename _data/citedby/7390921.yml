@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '32792918'
+- idtype: doi
+  value: 10.3389/fnsys.2020.00054
+- idtype: pmcid
+  value: PMC7390921
+authors:
+- authtype: Author
+  name: Choi JW
+- authtype: Author
+  name: Malekmohammadi M
+- authtype: Author
+  name: Sparks H
+- authtype: Author
+  name: Kashanian A
+- authtype: Author
+  name: Cross KA
+- authtype: Author
+  name: Bordelon Y
+- authtype: Author
+  name: Pouratian N
+epubdate: 2020 Jul 23
+fulljournalname: Frontiers in Systems Neuroscience
+issue: ''
+pages: '54'
+pmclivedate: 2020/08/12
+printpubdate: ''
+pubdate: 2020 Jul 23
+sortdate: 2020/07/23 00:00
+source: Front Syst Neurosci
+title: Altered Pallidocortical Low-Beta Oscillations During Self-Initiated Movements
+  in Parkinson Disease
+uid: '7390921'
+volume: '14'

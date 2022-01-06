@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '31379527'
+- idtype: doi
+  value: 10.3389/fnint.2019.00028
+- idtype: pmcid
+  value: PMC6650591
+authors:
+- authtype: Author
+  name: Assaneo MF
+- authtype: Author
+  name: Rimmele JM
+- authtype: Author
+  name: Orpella J
+- authtype: Author
+  name: Ripollés P
+- authtype: Author
+  name: de Diego-Balaguer R
+- authtype: Author
+  name: Poeppel D
+epubdate: 2019 Jul 17
+fulljournalname: Frontiers in Integrative Neuroscience
+issue: ''
+pages: '28'
+pmclivedate: 2019/08/02
+printpubdate: ''
+pubdate: 2019 Jul 17
+sortdate: 2019/07/17 00:00
+source: Front Integr Neurosci
+title: The Lateralization of Speech-Brain Coupling Is Differentially Modulated by
+  Intrinsic Auditory and Top-Down Mechanisms
+uid: '6650591'
+volume: '13'

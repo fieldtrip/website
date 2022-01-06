@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '24904076'
+- idtype: doi
+  value: 10.1093/cercor/bhu116
+- idtype: pmcid
+  value: PMC4537451
+authors:
+- authtype: Author
+  name: Bögels S
+- authtype: Author
+  name: Barr DJ
+- authtype: Author
+  name: Garrod S
+- authtype: Author
+  name: Kessler K
+epubdate: 2014 Jun 5
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '9'
+pages: 3219-3234
+pmclivedate: 2015/08/17
+printpubdate: 2015 Sep
+pubdate: 2014 Jun 5
+sortdate: 2014/06/05 00:00
+source: Cereb Cortex
+title: 'Conversational Interaction in the Scanner: Mentalizing during Language Processing
+  as Revealed by MEG'
+uid: '4537451'
+volume: '25'

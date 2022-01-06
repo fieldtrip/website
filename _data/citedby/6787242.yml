@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '31601822'
+- idtype: doi
+  value: 10.1038/s41598-019-49673-1
+- idtype: pmcid
+  value: PMC6787242
+authors:
+- authtype: Author
+  name: Vernet M
+- authtype: Author
+  name: Stengel C
+- authtype: Author
+  name: Quentin R
+- authtype: Author
+  name: Amengual JL
+- authtype: Author
+  name: Valero-Cabré A
+epubdate: 2019 Oct 10
+fulljournalname: Scientific Reports
+issue: ''
+pages: '14510'
+pmclivedate: 2019/10/17
+printpubdate: ''
+pubdate: 2019 Oct 10
+sortdate: 2019/10/10 00:00
+source: Sci Rep
+title: Entrainment of local synchrony reveals a causal role for high-beta right frontal
+  oscillations in human visual consciousness
+uid: '6787242'
+volume: '9'

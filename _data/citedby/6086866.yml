@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '30097597'
+- idtype: doi
+  value: 10.1038/s41598-018-30445-2
+- idtype: pmcid
+  value: PMC6086866
+authors:
+- authtype: Author
+  name: Carter Leno V
+- authtype: Author
+  name: Tomlinson SB
+- authtype: Author
+  name: Chang SA
+- authtype: Author
+  name: Naples AJ
+- authtype: Author
+  name: McPartland JC
+epubdate: 2018 Aug 10
+fulljournalname: Scientific Reports
+issue: ''
+pages: '11982'
+pmclivedate: 2018/08/16
+printpubdate: ''
+pubdate: 2018 Aug 10
+sortdate: 2018/08/10 00:00
+source: Sci Rep
+title: Resting-state alpha power is selectively associated with autistic traits reflecting
+  behavioral rigidity
+uid: '6086866'
+volume: '8'

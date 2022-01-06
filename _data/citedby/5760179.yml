@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '28237686'
+- idtype: doi
+  value: 10.1016/j.cortex.2017.01.020
+- idtype: pmcid
+  value: PMC5760179
+- idtype: MID
+  value: NIHMS931464
+authors:
+- authtype: Author
+  name: Strunk J
+- authtype: Author
+  name: James T
+- authtype: Author
+  name: Arndt J
+- authtype: Author
+  name: Duarte A
+epubdate: 2017 Feb 3
+fulljournalname: Cortex; a journal devoted to the study of the nervous system and
+  behavior
+issue: ''
+pages: 40-55
+pmclivedate: 2018/01/09
+printpubdate: 2017 Jun
+pubdate: 2017 Feb 3
+sortdate: 2017/02/03 00:00
+source: Cortex
+title: Age-related changes in neural oscillations supporting context memory retrieval
+uid: '5760179'
+volume: '91'

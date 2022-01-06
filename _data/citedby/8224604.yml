@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '34071027'
+- idtype: doi
+  value: 10.3390/jpm11060453
+- idtype: pmcid
+  value: PMC8224604
+authors:
+- authtype: Author
+  name: Parciauskaite V
+- authtype: Author
+  name: Pipinis E
+- authtype: Author
+  name: Voicikas A
+- authtype: Author
+  name: Bjekic J
+- authtype: Author
+  name: Potapovas M
+- authtype: Author
+  name: Jurkuvenas V
+- authtype: Author
+  name: Griskova-Bulanova I
+epubdate: 2021 May 23
+fulljournalname: Journal of Personalized Medicine
+issue: '6'
+pages: '453'
+pmclivedate: 2021/06/25
+printpubdate: ''
+pubdate: 2021 May 23
+sortdate: 2021/05/23 00:00
+source: J Pers Med
+title: Individual Resonant Frequencies at Low-Gamma Range and Cognitive Processing
+  Speed
+uid: '8224604'
+volume: '11'

@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '32886293'
+- idtype: doi
+  value: 10.1007/s11357-020-00260-7
+- idtype: pmcid
+  value: PMC7732920
+authors:
+- authtype: Author
+  name: López ME
+- authtype: Author
+  name: Turrero A
+- authtype: Author
+  name: Cuesta P
+- authtype: Author
+  name: Rodríguez-Rojo IC
+- authtype: Author
+  name: Barabash A
+- authtype: Author
+  name: Marcos A
+- authtype: Author
+  name: Maestú F
+- authtype: Author
+  name: Fernández A
+epubdate: 2020 Sep 4
+fulljournalname: GeroScience
+issue: '6'
+pages: 1715-1732
+pmclivedate: 2020/12/21
+printpubdate: ''
+pubdate: 2020 Sep 4
+sortdate: 2020/09/04 00:00
+source: GeroScience
+title: A multivariate model of time to conversion from mild cognitive impairment to
+  Alzheimer’s disease
+uid: '7732920'
+volume: '42'
