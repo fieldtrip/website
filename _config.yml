@@ -72,18 +72,18 @@ exclude:
   - COPYING.md
   - Gemfile*
 # the following section can be commented out to speed up the build process for testing
-#  - assets/img/
-#  - dataformat/
-#  - development/
-#  - example/
-#  - faq/
-#  - getting_started/
-#  - reference/
-#  - template/
-#  - tags/
-#  - tutorial/
-#  - video/
-#  - workshop/
+#  - assets/img/*
+#  - dataformat/*
+#  - development/*
+#  - example/*
+#  - faq/*
+#  - getting_started/*
+#  - reference/*
+#  - template/*
+#  - tag/*
+#  - tutorial/*
+#  - video/*
+#  - workshop/*
 
 keep_files:
   - biositemap.rdf
