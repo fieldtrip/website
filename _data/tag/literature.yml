@@ -1,6 +1,9 @@
 - name:  About the FieldTrip project
   link:  /about
 
+- name:  Citations to the FieldTrip reference paper
+  link:  /citations
+
 - name:  References to implemented methods
   link:  /references_to_implemented_methods
 
