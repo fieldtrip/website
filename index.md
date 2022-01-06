@@ -16,7 +16,7 @@ Robert Oostenveld, Pascal Fries, Eric Maris, and Jan-Mathijs Schoffelen. **[Fiel
 
 To get started, head over to the [getting started](/getting_started) documentation and the [tutorials](/tutorial).
 
-<section id="sec-release" markdown="1">
+<section id="sec-news" markdown="1">
 
 ## Latest release
 
@@ -38,7 +38,7 @@ _The latest code developments can be tracked in detail on [GitHub](/development/
 
 </section>
 
-<section id="sec-citations" markdown="1">
+<section id="sec-news" markdown="1">
 
 ## Recent citations
 
