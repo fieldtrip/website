@@ -1,0 +1,45 @@
+articleids:
+- idtype: pmid
+  value: '34391093'
+- idtype: doi
+  value: 10.1016/j.ebiom.2021.103537
+- idtype: pmcid
+  value: PMC8365373
+authors:
+- authtype: Author
+  name: Shen KF
+- authtype: Author
+  name: Yang XL
+- authtype: Author
+  name: Liu GL
+- authtype: Author
+  name: Zhu G
+- authtype: Author
+  name: Wang ZK
+- authtype: Author
+  name: Shi XJ
+- authtype: Author
+  name: Wang TT
+- authtype: Author
+  name: Wu ZF
+- authtype: Author
+  name: Lv SQ
+- authtype: Author
+  name: Liu SY
+- authtype: Author
+  name: Yang H
+- authtype: Author
+  name: Zhang CQ
+epubdate: 2021 Aug 11
+fulljournalname: EBioMedicine
+issue: ''
+pages: '103537'
+pmclivedate: 2021/08/23
+printpubdate: ''
+pubdate: 2021 Aug 11
+sortdate: 2021/08/11 00:00
+source: EBioMedicine
+title: The role of voltage-gated chloride channels in the epileptogenesis of temporal
+  lobe epilepsy
+uid: '8365373'
+volume: '70'

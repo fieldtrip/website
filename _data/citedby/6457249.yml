@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '30107258'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2018.08.023
+- idtype: pmcid
+  value: PMC6457249
+- idtype: MID
+  value: NIHMS1021511
+authors:
+- authtype: Author
+  name: Rommers J
+- authtype: Author
+  name: Federmeier KD
+epubdate: 2018 Aug 11
+fulljournalname: NeuroImage
+issue: ''
+pages: 263-272
+pmclivedate: 2019/04/10
+printpubdate: 2018 Dec
+pubdate: 2018 Aug 11
+sortdate: 2018/08/11 00:00
+source: Neuroimage
+title: 'Lingering expectations: A pseudo-repetition effect for words previously expected
+  but not presented'
+uid: '6457249'
+volume: '183'

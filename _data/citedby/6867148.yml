@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '28390148'
+- idtype: doi
+  value: 10.1002/hbm.23594
+- idtype: pmcid
+  value: PMC6867148
+authors:
+- authtype: Author
+  name: Horn A
+- authtype: Author
+  name: Neumann W
+- authtype: Author
+  name: Degen K
+- authtype: Author
+  name: Schneider G
+- authtype: Author
+  name: Kühn AA
+epubdate: 2017 Apr 8
+fulljournalname: Human Brain Mapping
+issue: '7'
+pages: 3377-3390
+pmclivedate: 2020/06/12
+printpubdate: ''
+pubdate: 2017 Apr 8
+sortdate: 2017/04/08 00:00
+source: Hum Brain Mapp
+title: Toward an electrophysiological “sweet spot” for deep brain stimulation in the
+  subthalamic nucleus
+uid: '6867148'
+volume: '38'

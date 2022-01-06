@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '32536857'
+- idtype: doi
+  value: 10.3389/fnhum.2020.00160
+- idtype: pmcid
+  value: PMC7227392
+authors:
+- authtype: Author
+  name: Santhana Gopalan PR
+- authtype: Author
+  name: Loberg O
+- authtype: Author
+  name: Lohvansuu K
+- authtype: Author
+  name: McCandliss B
+- authtype: Author
+  name: Hämäläinen J
+- authtype: Author
+  name: Leppänen P
+epubdate: 2020 May 8
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '160'
+pmclivedate: 2020/06/12
+printpubdate: ''
+pubdate: 2020 May 8
+sortdate: 2020/05/08 00:00
+source: Front Hum Neurosci
+title: Attentional Processes in Children With Attentional Problems or Reading Difficulties
+  as Revealed Using Brain Event-Related Potentials and Their Source Localization
+uid: '7227392'
+volume: '14'

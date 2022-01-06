@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '28051138'
+- idtype: doi
+  value: 10.1038/srep39763
+- idtype: pmcid
+  value: PMC5209656
+authors:
+- authtype: Author
+  name: Groch S
+- authtype: Author
+  name: Schreiner T
+- authtype: Author
+  name: Rasch B
+- authtype: Author
+  name: Huber R
+- authtype: Author
+  name: Wilhelm I
+epubdate: 2017 Jan 4
+fulljournalname: Scientific Reports
+issue: ''
+pages: '39763'
+pmclivedate: 2017/01/04
+printpubdate: ''
+pubdate: 2017 Jan 4
+sortdate: 2017/01/04 00:00
+source: Sci Rep
+title: Prior knowledge is essential for the beneficial effect of targeted memory reactivation
+  during sleep
+uid: '5209656'
+volume: '7'

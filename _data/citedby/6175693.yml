@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '30320295'
+- idtype: doi
+  value: 10.1162/netn_a_00046
+- idtype: pmcid
+  value: PMC6175693
+authors:
+- authtype: Author
+  name: Cox R
+- authtype: Author
+  name: Schapiro AC
+- authtype: Author
+  name: Stickgold R
+epubdate: 2018 Oct 1
+fulljournalname: Network Neuroscience
+issue: '4'
+pages: 481-512
+pmclivedate: 2018/10/12
+printpubdate: ''
+pubdate: 2018 Oct 1
+sortdate: 2018/10/01 00:00
+source: Netw Neurosci
+title: Variability and stability of large-scale cortical oscillation patterns
+uid: '6175693'
+volume: '2'

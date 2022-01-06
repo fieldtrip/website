@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '30355025'
+- idtype: doi
+  value: 10.1177/0269881118805498
+- idtype: pmcid
+  value: PMC6401286
+- idtype: MID
+  value: NIHMS1001918
+authors:
+- authtype: Author
+  name: Correas A
+- authtype: Author
+  name: López-Caneda E
+- authtype: Author
+  name: Beaton L
+- authtype: Author
+  name: Holguín SR
+- authtype: Author
+  name: García-Moreno LM
+- authtype: Author
+  name: Antón-Toro LF
+- authtype: Author
+  name: Cadaveira F
+- authtype: Author
+  name: Maestú F
+- authtype: Author
+  name: Marinkovic K
+epubdate: 2018 Oct 24
+fulljournalname: Journal of psychopharmacology (Oxford, England)
+issue: '3'
+pages: 335-346
+pmclivedate: 2020/03/01
+printpubdate: 2019 Mar
+pubdate: 2018 Oct 24
+sortdate: 2018/10/24 00:00
+source: J Psychopharmacol
+title: 'Decreased event-related theta power and phase-synchrony in young binge drinkers
+  during target detection: An anatomically-constrained MEG approach'
+uid: '6401286'
+volume: '33'

@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '30670953'
+- idtype: doi
+  value: 10.3389/fnsys.2018.00065
+- idtype: pmcid
+  value: PMC6333050
+authors:
+- authtype: Author
+  name: Johnson EL
+- authtype: Author
+  name: King-Stephens D
+- authtype: Author
+  name: Weber PB
+- authtype: Author
+  name: Laxer KD
+- authtype: Author
+  name: Lin JJ
+- authtype: Author
+  name: Knight RT
+epubdate: 2019 Jan 8
+fulljournalname: Frontiers in Systems Neuroscience
+issue: ''
+pages: '65'
+pmclivedate: 2019/01/22
+printpubdate: ''
+pubdate: 2019 Jan 8
+sortdate: 2019/01/08 00:00
+source: Front Syst Neurosci
+title: Spectral Imprints of Working Memory for Everyday Associations in the Frontoparietal
+  Network
+uid: '6333050'
+volume: '12'

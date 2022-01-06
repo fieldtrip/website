@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '34193513'
+- idtype: doi
+  value: 10.1523/ENEURO.0099-21.2021
+- idtype: pmcid
+  value: PMC8272404
+authors:
+- authtype: Author
+  name: Monk AM
+- authtype: Author
+  name: Barry DN
+- authtype: Author
+  name: Litvak V
+- authtype: Author
+  name: Barnes GR
+- authtype: Author
+  name: Maguire EA
+epubdate: 2021 Jul 9
+fulljournalname: eNeuro
+issue: '4'
+pages: ENEURO.0099-21.2021
+pmclivedate: 2021/07/12
+printpubdate: ''
+pubdate: 2021 Jul 9
+sortdate: 2021/07/09 00:00
+source: eNeuro
+title: Watching Movies Unfold, a Frame-by-Frame Analysis of the Associated Neural
+  Dynamics
+uid: '8272404'
+volume: '8'

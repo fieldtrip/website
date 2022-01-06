@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '28768743'
+- idtype: doi
+  value: 10.1152/jn.00489.2017
+- idtype: pmcid
+  value: PMC5626884
+authors:
+- authtype: Author
+  name: Postorino M
+- authtype: Author
+  name: May ES
+- authtype: Author
+  name: Nickel MM
+- authtype: Author
+  name: Tiemann L
+- authtype: Author
+  name: Ploner M
+epubdate: 2017 Aug 2
+fulljournalname: Journal of Neurophysiology
+issue: '4'
+pages: 2267-2274
+pmclivedate: 2018/10/01
+printpubdate: 2017 Oct 1
+pubdate: 2017 Aug 2
+sortdate: 2017/08/02 00:00
+source: J Neurophysiol
+title: Influence of pain on motor preparation in the human brain
+uid: '5626884'
+volume: '118'

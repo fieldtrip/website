@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '25565951'
+- idtype: doi
+  value: 10.3389/fnins.2014.00422
+- idtype: pmcid
+  value: PMC4273656
+authors:
+- authtype: Author
+  name: Salvia E
+- authtype: Author
+  name: Bestelmeyer PE
+- authtype: Author
+  name: Kotz SA
+- authtype: Author
+  name: Rousselet GA
+- authtype: Author
+  name: Pernet CR
+- authtype: Author
+  name: Gross J
+- authtype: Author
+  name: Belin P
+epubdate: 2014 Dec 22
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '422'
+pmclivedate: 2015/01/06
+printpubdate: ''
+pubdate: 2014 Dec 22
+sortdate: 2014/12/22 00:00
+source: Front Neurosci
+title: Single-subject analyses of magnetoencephalographic evoked responses to the
+  acoustic properties of affective non-verbal vocalizations
+uid: '4273656'
+volume: '8'

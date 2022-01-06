@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '30936825'
+- idtype: doi
+  value: 10.3389/fnhum.2019.00073
+- idtype: pmcid
+  value: PMC6431660
+authors:
+- authtype: Author
+  name: Akiba HT
+- authtype: Author
+  name: Costa MF
+- authtype: Author
+  name: Gomes JS
+- authtype: Author
+  name: Oda E
+- authtype: Author
+  name: Simurro PB
+- authtype: Author
+  name: Dias AM
+epubdate: 2019 Mar 18
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '73'
+pmclivedate: 2019/04/01
+printpubdate: ''
+pubdate: 2019 Mar 18
+sortdate: 2019/03/18 00:00
+source: Front Hum Neurosci
+title: 'Neural Correlates of Preference: A Transmodal Validation Study'
+uid: '6431660'
+volume: '13'

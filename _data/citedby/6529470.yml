@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '31113952'
+- idtype: doi
+  value: 10.1038/s41467-019-09569-0
+- idtype: pmcid
+  value: PMC6529470
+authors:
+- authtype: Author
+  name: Pacheco Estefan D
+- authtype: Author
+  name: Sánchez-Fibla M
+- authtype: Author
+  name: Duff A
+- authtype: Author
+  name: Principe A
+- authtype: Author
+  name: Rocamora R
+- authtype: Author
+  name: Zhang H
+- authtype: Author
+  name: Axmacher N
+- authtype: Author
+  name: Verschure PF
+epubdate: 2019 May 21
+fulljournalname: Nature Communications
+issue: ''
+pages: '2255'
+pmclivedate: 2019/05/23
+printpubdate: ''
+pubdate: 2019 May 21
+sortdate: 2019/05/21 00:00
+source: Nat Commun
+title: Coordinated representational reinstatement in the human hippocampus and lateral
+  temporal cortex during episodic memory retrieval
+uid: '6529470'
+volume: '10'

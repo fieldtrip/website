@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '34204868'
+- idtype: doi
+  value: 10.3390/brainsci11060741
+- idtype: pmcid
+  value: PMC8226780
+authors:
+- authtype: Author
+  name: Taberna GA
+- authtype: Author
+  name: Samogin J
+- authtype: Author
+  name: Marino M
+- authtype: Author
+  name: Mantini D
+epubdate: 2021 Jun 3
+fulljournalname: Brain Sciences
+issue: '6'
+pages: '741'
+pmclivedate: 2021/06/26
+printpubdate: ''
+pubdate: 2021 Jun 3
+sortdate: 2021/06/03 00:00
+source: Brain Sci
+title: 'Detection of Resting-State Functional Connectivity from High-Density Electroencephalography
+  Data: Impact of Head Modeling Strategies'
+uid: '8226780'
+volume: '11'

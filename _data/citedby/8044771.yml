@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '33867919'
+- idtype: doi
+  value: 10.3389/fnins.2021.632234
+- idtype: pmcid
+  value: PMC8044771
+authors:
+- authtype: Author
+  name: Arendsen LJ
+- authtype: Author
+  name: Guggenberger R
+- authtype: Author
+  name: Zimmer M
+- authtype: Author
+  name: Weigl T
+- authtype: Author
+  name: Gharabaghi A
+epubdate: 2021 Mar 25
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '632234'
+pmclivedate: 2021/04/15
+printpubdate: ''
+pubdate: 2021 Mar 25
+sortdate: 2021/03/25 00:00
+source: Front Neurosci
+title: Peripheral Electrical Stimulation Modulates Cortical Beta-Band Activity
+uid: '8044771'
+volume: '15'

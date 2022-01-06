@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '33577939'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2021.117837
+- idtype: pmcid
+  value: PMC8154719
+- idtype: MID
+  value: NIHMS1676885
+authors:
+- authtype: Author
+  name: Happer JP
+- authtype: Author
+  name: Wagner LC
+- authtype: Author
+  name: Beaton LE
+- authtype: Author
+  name: Rosen BQ
+- authtype: Author
+  name: Marinkovic K
+epubdate: 2021 Feb 9
+fulljournalname: NeuroImage
+issue: ''
+pages: '117837'
+pmclivedate: 2021/05/27
+printpubdate: 2021 May 1
+pubdate: 2021 Feb 9
+sortdate: 2021/02/09 00:00
+source: Neuroimage
+title: The “when” and “where” of the interplay between attentional capture and response
+  inhibition during a Go/NoGo variant
+uid: '8154719'
+volume: '231'

@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '32081901'
+- idtype: doi
+  value: 10.1038/s41598-020-59911-6
+- idtype: pmcid
+  value: PMC7035341
+authors:
+- authtype: Author
+  name: Rogasch NC
+- authtype: Author
+  name: Zipser C
+- authtype: Author
+  name: Darmani G
+- authtype: Author
+  name: Mutanen TP
+- authtype: Author
+  name: Biabani M
+- authtype: Author
+  name: Zrenner C
+- authtype: Author
+  name: Desideri D
+- authtype: Author
+  name: Belardinelli P
+- authtype: Author
+  name: Müller-Dahlhaus F
+- authtype: Author
+  name: Ziemann U
+epubdate: 2020 Feb 21
+fulljournalname: Scientific Reports
+issue: ''
+pages: '3168'
+pmclivedate: 2020/02/28
+printpubdate: ''
+pubdate: 2020 Feb 21
+sortdate: 2020/02/21 00:00
+source: Sci Rep
+title: The effects of NMDA receptor blockade on TMS-evoked EEG potentials from prefrontal
+  and parietal cortex
+uid: '7035341'
+volume: '10'

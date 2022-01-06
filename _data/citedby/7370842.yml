@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '32754018'
+- idtype: doi
+  value: 10.3389/fnbeh.2020.00095
+- idtype: pmcid
+  value: PMC7370842
+authors:
+- authtype: Author
+  name: Maksimenko VA
+- authtype: Author
+  name: Kuc A
+- authtype: Author
+  name: Frolov NS
+- authtype: Author
+  name: Khramova MV
+- authtype: Author
+  name: Pisarchik AN
+- authtype: Author
+  name: Hramov AE
+epubdate: 2020 Jul 13
+fulljournalname: Frontiers in Behavioral Neuroscience
+issue: ''
+pages: '95'
+pmclivedate: 2020/08/03
+printpubdate: ''
+pubdate: 2020 Jul 13
+sortdate: 2020/07/13 00:00
+source: Front Behav Neurosci
+title: Dissociating Cognitive Processes During Ambiguous Information Processing in
+  Perceptual Decision-Making
+uid: '7370842'
+volume: '14'

@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '31578234'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0610-19.2019
+- idtype: pmcid
+  value: PMC6855688
+authors:
+- authtype: Author
+  name: Mazzetti C
+- authtype: Author
+  name: Staudigl T
+- authtype: Author
+  name: Marshall TR
+- authtype: Author
+  name: Zumer JM
+- authtype: Author
+  name: Fallon SJ
+- authtype: Author
+  name: Jensen O
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '46'
+pages: 9221-9236
+pmclivedate: 2020/05/13
+printpubdate: 2019 Nov 13
+pubdate: 2019 Nov 13
+sortdate: 2019/11/13 00:00
+source: J Neurosci
+title: Hemispheric Asymmetry of Globus Pallidus Relates to Alpha Modulation in Reward-Related
+  Attentional Tasks
+uid: '6855688'
+volume: '39'

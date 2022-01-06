@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '31405924'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0401-19.2019
+- idtype: pmcid
+  value: PMC6764200
+authors:
+- authtype: Author
+  name: Hauser TU
+- authtype: Author
+  name: Eldar E
+- authtype: Author
+  name: Purg N
+- authtype: Author
+  name: Moutoussis M
+- authtype: Author
+  name: Dolan RJ
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '39'
+pages: 7715-7721
+pmclivedate: 2019/09/30
+printpubdate: 2019 Sep 25
+pubdate: 2019 Sep 25
+sortdate: 2019/09/25 00:00
+source: J Neurosci
+title: Distinct Roles of Dopamine and Noradrenaline in Incidental Memory
+uid: '6764200'
+volume: '39'

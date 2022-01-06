@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '31812920'
+- idtype: doi
+  value: 10.1016/j.clinph.2019.10.027
+- idtype: pmcid
+  value: PMC6941468
+authors:
+- authtype: Author
+  name: Lopes MA
+- authtype: Author
+  name: Junges L
+- authtype: Author
+  name: Tait L
+- authtype: Author
+  name: Terry JR
+- authtype: Author
+  name: Abela E
+- authtype: Author
+  name: Richardson MP
+- authtype: Author
+  name: Goodfellow M
+epubdate: ''
+fulljournalname: Clinical Neurophysiology
+issue: '1'
+pages: 225-234
+pmclivedate: 2020/01/07
+printpubdate: 2020 Jan
+pubdate: 2020 Jan
+sortdate: 2020/01/01 00:00
+source: Clin Neurophysiol
+title: Computational modelling in source space from scalp EEG to inform presurgical
+  evaluation of epilepsy
+uid: '6941468'
+volume: '131'

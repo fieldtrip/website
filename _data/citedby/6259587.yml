@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '30312781'
+- idtype: doi
+  value: 10.1016/j.cortex.2018.08.032
+- idtype: pmcid
+  value: PMC6259587
+authors:
+- authtype: Author
+  name: Southwell R
+- authtype: Author
+  name: Chait M
+epubdate: ''
+fulljournalname: Cortex; a Journal Devoted to the Study of the Nervous System and
+  Behavior
+issue: ''
+pages: 92-103
+pmclivedate: 2018/12/06
+printpubdate: 2018 Dec
+pubdate: 2018 Dec
+sortdate: 2018/12/01 00:00
+source: Cortex
+title: Enhanced deviant responses in patterned relative to random sound sequences
+uid: '6259587'
+volume: '109'

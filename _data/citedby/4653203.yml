@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '26504238'
+- idtype: doi
+  value: 10.1073/pnas.1508431112
+- idtype: pmcid
+  value: PMC4653203
+authors:
+- authtype: Author
+  name: Doelling KB
+- authtype: Author
+  name: Poeppel D
+epubdate: 2015 Oct 26
+fulljournalname: Proceedings of the National Academy of Sciences of the United States
+  of America
+issue: '45'
+pages: E6233-E6242
+pmclivedate: 2016/05/10
+printpubdate: 2015 Nov 10
+pubdate: 2015 Oct 26
+sortdate: 2015/10/26 00:00
+source: Proc Natl Acad Sci U S A
+title: Cortical entrainment to music and its modulation by expertise
+uid: '4653203'
+volume: '112'

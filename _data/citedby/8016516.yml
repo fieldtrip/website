@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '32574616'
+- idtype: doi
+  value: 10.1016/j.neuropsychologia.2020.107530
+- idtype: pmcid
+  value: PMC8016516
+- idtype: MID
+  value: NIHMS1683262
+authors:
+- authtype: Author
+  name: Fleming JT
+- authtype: Author
+  name: Noyce AL
+- authtype: Author
+  name: Shinn-Cunningham BG
+epubdate: 2020 Jun 20
+fulljournalname: Neuropsychologia
+issue: ''
+pages: '107530'
+pmclivedate: 2021/04/01
+printpubdate: 2020 Sep
+pubdate: 2020 Jun 20
+sortdate: 2020/06/20 00:00
+source: Neuropsychologia
+title: Audio-visual spatial alignment improves integration in the presence of a competing
+  audio-visual stimulus
+uid: '8016516'
+volume: '146'

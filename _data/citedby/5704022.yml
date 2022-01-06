@@ -1,0 +1,38 @@
+articleids:
+- idtype: pmid
+  value: '29180766'
+- idtype: doi
+  value: 10.1038/s41467-017-02024-y
+- idtype: pmcid
+  value: PMC5704022
+authors:
+- authtype: Author
+  name: Yap MH
+- authtype: Author
+  name: Grabowska MJ
+- authtype: Author
+  name: Rohrscheib C
+- authtype: Author
+  name: Jeans R
+- authtype: Author
+  name: Troup M
+- authtype: Author
+  name: Paulk AC
+- authtype: Author
+  name: van Alphen B
+- authtype: Author
+  name: Shaw PJ
+- authtype: Author
+  name: van Swinderen B
+epubdate: 2017 Nov 28
+fulljournalname: Nature Communications
+issue: ''
+pages: '1815'
+pmclivedate: 2017/11/30
+printpubdate: ''
+pubdate: 2017 Nov 28
+sortdate: 2017/11/28 00:00
+source: Nat Commun
+title: Oscillatory brain activity in spontaneous and induced sleep stages in flies
+uid: '5704022'
+volume: '8'

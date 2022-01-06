@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '33558577'
+- idtype: doi
+  value: 10.1038/s41598-021-82670-x
+- idtype: pmcid
+  value: PMC7870674
+authors:
+- authtype: Author
+  name: Gorin A
+- authtype: Author
+  name: Klucharev V
+- authtype: Author
+  name: Ossadtchi A
+- authtype: Author
+  name: Zubarev I
+- authtype: Author
+  name: Moiseeva V
+- authtype: Author
+  name: Shestakova A
+epubdate: 2021 Feb 8
+fulljournalname: Scientific Reports
+issue: ''
+pages: '3297'
+pmclivedate: 2021/02/10
+printpubdate: ''
+pubdate: 2021 Feb 8
+sortdate: 2021/02/08 00:00
+source: Sci Rep
+title: MEG signatures of long-term effects of agreement and disagreement with the
+  majority
+uid: '7870674'
+volume: '11'

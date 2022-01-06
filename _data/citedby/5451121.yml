@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '28562642'
+- idtype: doi
+  value: 10.1371/journal.pone.0178579
+- idtype: pmcid
+  value: PMC5451121
+authors:
+- authtype: Author
+  name: Hsu WY
+- authtype: Author
+  name: Zanto TP
+- authtype: Author
+  name: van Schouwenburg MR
+- authtype: Author
+  name: Gazzaley A
+epubdate: 2017 May 31
+fulljournalname: PLoS ONE
+issue: '5'
+pages: e0178579
+pmclivedate: 2017/06/12
+printpubdate: ''
+pubdate: 2017 May 31
+sortdate: 2017/05/31 00:00
+source: PLoS One
+title: Enhancement of multitasking performance and neural oscillations by transcranial
+  alternating current stimulation
+uid: '5451121'
+volume: '12'

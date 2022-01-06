@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '28348535'
+- idtype: doi
+  value: 10.3389/fpsyg.2017.00333
+- idtype: pmcid
+  value: PMC5346548
+authors:
+- authtype: Author
+  name: Negrini M
+- authtype: Author
+  name: Brkić D
+- authtype: Author
+  name: Pizzamiglio S
+- authtype: Author
+  name: Premoli I
+- authtype: Author
+  name: Rivolta D
+epubdate: 2017 Mar 13
+fulljournalname: Frontiers in Psychology
+issue: ''
+pages: '333'
+pmclivedate: 2017/03/27
+printpubdate: ''
+pubdate: 2017 Mar 13
+sortdate: 2017/03/13 00:00
+source: Front Psychol
+title: Neurophysiological Correlates of Featural and Spacing Processing for Face and
+  Non-face Stimuli
+uid: '5346548'
+volume: '8'

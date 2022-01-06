@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '29437929'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.2659-17.2018
+- idtype: pmcid
+  value: PMC6705900
+authors:
+- authtype: Author
+  name: Ma L
+- authtype: Author
+  name: Skoblenick K
+- authtype: Author
+  name: Johnston K
+- authtype: Author
+  name: Everling S
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '10'
+pages: 2482-2494
+pmclivedate: 2019/08/23
+printpubdate: 2018 Mar 7
+pubdate: 2018 Mar 7
+sortdate: 2018/03/07 00:00
+source: J Neurosci
+title: Ketamine Alters Lateral Prefrontal Oscillations in a Rule-Based Working Memory
+  Task
+uid: '6705900'
+volume: '38'

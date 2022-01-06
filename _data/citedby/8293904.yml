@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '32554882'
+- idtype: doi
+  value: 10.1088/1741-2552/ab9dba
+- idtype: pmcid
+  value: PMC8293904
+- idtype: MID
+  value: NIHMS1724534
+authors:
+- authtype: Author
+  name: Shirinpour S
+- authtype: Author
+  name: Alekseichuk I
+- authtype: Author
+  name: Mantell K
+- authtype: Author
+  name: Opitz A
+epubdate: 2020 Jul 13
+fulljournalname: Journal of neural engineering
+issue: '4'
+pages: '046002'
+pmclivedate: 2021/07/21
+printpubdate: ''
+pubdate: 2020 Jul 13
+sortdate: 2020/07/13 00:00
+source: J Neural Eng
+title: Experimental Evaluation of Methods for Real-Time EEG Phase-Specific Transcranial
+  Magnetic Stimulation
+uid: '8293904'
+volume: '17'

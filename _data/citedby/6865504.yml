@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '30549127'
+- idtype: doi
+  value: 10.1002/hbm.24448
+- idtype: pmcid
+  value: PMC6865504
+authors:
+- authtype: Author
+  name: Darmani G
+- authtype: Author
+  name: Bergmann TO
+- authtype: Author
+  name: Zipser C
+- authtype: Author
+  name: Baur D
+- authtype: Author
+  name: Müller‐Dahlhaus F
+- authtype: Author
+  name: Ziemann U
+epubdate: 2018 Dec 13
+fulljournalname: Human Brain Mapping
+issue: '4'
+pages: 1276-1289
+pmclivedate: 2020/06/12
+printpubdate: ''
+pubdate: 2018 Dec 13
+sortdate: 2018/12/13 00:00
+source: Hum Brain Mapp
+title: 'Effects of antiepileptic drugs on cortical excitability in humans: A TMS‐EMG
+  and TMS‐EEG study'
+uid: '6865504'
+volume: '40'

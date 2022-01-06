@@ -1,0 +1,47 @@
+articleids:
+- idtype: pmid
+  value: '31553044'
+- idtype: doi
+  value: 10.1093/brain/awz284
+- idtype: pmcid
+  value: PMC6892422
+authors:
+- authtype: Author
+  name: Velmurugan J
+- authtype: Author
+  name: Nagarajan SS
+- authtype: Author
+  name: Mariyappa N
+- authtype: Author
+  name: Mundlamuri RC
+- authtype: Author
+  name: Raghavendra K
+- authtype: Author
+  name: Bharath RD
+- authtype: Author
+  name: Saini J
+- authtype: Author
+  name: Arivazhagan A
+- authtype: Author
+  name: Rajeswaran J
+- authtype: Author
+  name: Mahadevan A
+- authtype: Author
+  name: Malla BR
+- authtype: Author
+  name: Satishchandra P
+- authtype: Author
+  name: Sinha S
+epubdate: 2019 Sep 23
+fulljournalname: Brain
+issue: '11'
+pages: 3514-3529
+pmclivedate: 2020/11/01
+printpubdate: 2019 Nov
+pubdate: 2019 Sep 23
+sortdate: 2019/09/23 00:00
+source: Brain
+title: Magnetoencephalography imaging of high frequency oscillations strengthens presurgical
+  localization and outcome prediction
+uid: '6892422'
+volume: '142'

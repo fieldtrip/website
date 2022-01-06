@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '24634649'
+- idtype: doi
+  value: 10.3389/fnhum.2014.00121
+- idtype: pmcid
+  value: PMC3942646
+authors:
+- authtype: Author
+  name: Ojeda A
+- authtype: Author
+  name: Bigdely-Shamlo N
+- authtype: Author
+  name: Makeig S
+epubdate: 2014 Mar 5
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '121'
+pmclivedate: 2014/03/14
+printpubdate: ''
+pubdate: 2014 Mar 5
+sortdate: 2014/03/05 00:00
+source: Front Hum Neurosci
+title: 'MoBILAB: an open source toolbox for analysis and visualization of mobile brain/body
+  imaging data'
+uid: '3942646'
+volume: '8'

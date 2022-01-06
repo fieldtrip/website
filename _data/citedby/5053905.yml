@@ -1,0 +1,34 @@
+articleids:
+- idtype: pmid
+  value: '27667008'
+- idtype: doi
+  value: 10.1016/j.neuron.2016.09.003
+- idtype: pmcid
+  value: PMC5053905
+- idtype: MID
+  value: NIHMS815095
+authors:
+- authtype: Author
+  name: Ni J
+- authtype: Author
+  name: Wunderle T
+- authtype: Author
+  name: Lewis CM
+- authtype: Author
+  name: Desimone R
+- authtype: Author
+  name: Diester I
+- authtype: Author
+  name: Fries P
+epubdate: 2016 Sep 22
+fulljournalname: Neuron
+issue: '1'
+pages: 240-251
+pmclivedate: 2017/10/05
+printpubdate: 2016 Oct 5
+pubdate: 2016 Sep 22
+sortdate: 2016/09/22 00:00
+source: Neuron
+title: Gamma-rhythmic Gain Modulation
+uid: '5053905'
+volume: '92'

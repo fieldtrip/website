@@ -1,0 +1,34 @@
+articleids:
+- idtype: pmid
+  value: '31874985'
+- idtype: doi
+  value: 10.1038/s41598-019-56188-2
+- idtype: pmcid
+  value: PMC6930247
+authors:
+- authtype: Author
+  name: Raghuraman N
+- authtype: Author
+  name: Wang Y
+- authtype: Author
+  name: Schenk LA
+- authtype: Author
+  name: Furman AJ
+- authtype: Author
+  name: Tricou C
+- authtype: Author
+  name: Seminowicz DA
+- authtype: Author
+  name: Colloca L
+epubdate: 2019 Dec 24
+fulljournalname: Scientific Reports
+issue: ''
+pages: '19760'
+pmclivedate: 2019/12/27
+printpubdate: ''
+pubdate: 2019 Dec 24
+sortdate: 2019/12/24 00:00
+source: Sci Rep
+title: Neural and behavioral changes driven by observationally-induced hypoalgesia
+uid: '6930247'
+volume: '9'

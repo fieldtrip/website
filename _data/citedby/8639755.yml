@@ -1,0 +1,49 @@
+articleids:
+- idtype: pmid
+  value: '34857748'
+- idtype: doi
+  value: 10.1038/s41467-021-27323-3
+- idtype: pmcid
+  value: PMC8639755
+authors:
+- authtype: Author
+  name: ter Wal M
+- authtype: Author
+  name: Linde-Domingo J
+- authtype: Author
+  name: Lifanov J
+- authtype: Author
+  name: Roux F
+- authtype: Author
+  name: Kolibius LD
+- authtype: Author
+  name: Gollwitzer S
+- authtype: Author
+  name: Lang J
+- authtype: Author
+  name: Hamer H
+- authtype: Author
+  name: Rollings D
+- authtype: Author
+  name: Sawlani V
+- authtype: Author
+  name: Chelvarajah R
+- authtype: Author
+  name: Staresina B
+- authtype: Author
+  name: Hanslmayr S
+- authtype: Author
+  name: Wimber M
+epubdate: 2021 Dec 2
+fulljournalname: Nature Communications
+issue: ''
+pages: '7048'
+pmclivedate: 2021/12/15
+printpubdate: ''
+pubdate: 2021 Dec 2
+sortdate: 2021/12/02 00:00
+source: Nat Commun
+title: Theta rhythmicity governs human behavior and hippocampal signals during memory-dependent
+  tasks
+uid: '8639755'
+volume: '12'

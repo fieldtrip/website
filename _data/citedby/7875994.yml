@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '33568654'
+- idtype: doi
+  value: 10.1038/s41467-020-20875-w
+- idtype: pmcid
+  value: PMC7875994
+authors:
+- authtype: Author
+  name: Kaiser LF
+- authtype: Author
+  name: Gruendler TO
+- authtype: Author
+  name: Speck O
+- authtype: Author
+  name: Luettgau L
+- authtype: Author
+  name: Jocham G
+epubdate: 2021 Feb 10
+fulljournalname: Nature Communications
+issue: ''
+pages: '904'
+pmclivedate: 2021/02/24
+printpubdate: ''
+pubdate: 2021 Feb 10
+sortdate: 2021/02/10 00:00
+source: Nat Commun
+title: Dissociable roles of cortical excitation-inhibition balance during patch-leaving
+  versus value-guided decisions
+uid: '7875994'
+volume: '12'

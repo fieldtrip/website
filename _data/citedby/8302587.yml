@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '34302057'
+- idtype: doi
+  value: 10.1038/s42003-021-02426-1
+- idtype: pmcid
+  value: PMC8302587
+authors:
+- authtype: Author
+  name: Hoy CW
+- authtype: Author
+  name: Steiner SC
+- authtype: Author
+  name: Knight RT
+epubdate: 2021 Jul 23
+fulljournalname: Communications Biology
+issue: ''
+pages: '910'
+pmclivedate: 2021/08/12
+printpubdate: ''
+pubdate: 2021 Jul 23
+sortdate: 2021/07/23 00:00
+source: Commun Biol
+title: Single-trial modeling separates multiple overlapping prediction errors during
+  reward processing in human EEG
+uid: '8302587'
+volume: '4'

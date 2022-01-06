@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '30971792'
+- idtype: doi
+  value: 10.1038/s41562-019-0548-z
+- idtype: pmcid
+  value: PMC6650286
+- idtype: MID
+  value: NIHMS1519835
+authors:
+- authtype: Author
+  name: Flinker A
+- authtype: Author
+  name: Doyle WK
+- authtype: Author
+  name: Mehta AD
+- authtype: Author
+  name: Devinsky O
+- authtype: Author
+  name: Poeppel D
+epubdate: 2019 Mar 4
+fulljournalname: Nature human behaviour
+issue: '4'
+pages: 393-405
+pmclivedate: 2019/09/04
+printpubdate: 2019 Apr
+pubdate: 2019 Mar 4
+sortdate: 2019/03/04 00:00
+source: Nat Hum Behav
+title: Spectrotemporal modulation provides a unifying framework for auditory cortical
+  asymmetries
+uid: '6650286'
+volume: '3'

@@ -1,0 +1,24 @@
+articleids:
+- idtype: pmid
+  value: '30375129'
+- idtype: doi
+  value: 10.1002/hbm.24414
+- idtype: pmcid
+  value: PMC6865399
+authors:
+- authtype: Author
+  name: Chu RK
+- authtype: Author
+  name: Meltzer JA
+epubdate: 2018 Oct 29
+fulljournalname: Human Brain Mapping
+issue: '3'
+pages: 818-832
+pmclivedate: 2020/06/12
+printpubdate: ''
+pubdate: 2018 Oct 29
+sortdate: 2018/10/29 00:00
+source: Hum Brain Mapp
+title: Interhemispheric connectivity during lateralized lexical decision
+uid: '6865399'
+volume: '40'

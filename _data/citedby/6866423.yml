@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '29700906'
+- idtype: doi
+  value: 10.1002/hbm.24189
+- idtype: pmcid
+  value: PMC6866423
+authors:
+- authtype: Author
+  name: Merkel N
+- authtype: Author
+  name: Wibral M
+- authtype: Author
+  name: Bland G
+- authtype: Author
+  name: Singer W
+epubdate: 2018 Apr 26
+fulljournalname: Human Brain Mapping
+issue: '9'
+pages: 3487-3502
+pmclivedate: 2020/06/12
+printpubdate: ''
+pubdate: 2018 Apr 26
+sortdate: 2018/04/26 00:00
+source: Hum Brain Mapp
+title: 'Endogenously generated gamma‐band oscillations in early visual cortex: A neurofeedback
+  study'
+uid: '6866423'
+volume: '39'

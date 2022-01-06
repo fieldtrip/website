@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '30131578'
+- idtype: doi
+  value: 10.1038/s41598-018-30414-9
+- idtype: pmcid
+  value: PMC6104055
+authors:
+- authtype: Author
+  name: Simon DM
+- authtype: Author
+  name: Nidiffer AR
+- authtype: Author
+  name: Wallace MT
+epubdate: 2018 Aug 21
+fulljournalname: Scientific Reports
+issue: ''
+pages: '12499'
+pmclivedate: 2018/08/27
+printpubdate: ''
+pubdate: 2018 Aug 21
+sortdate: 2018/08/21 00:00
+source: Sci Rep
+title: Single Trial Plasticity in Evidence Accumulation Underlies Rapid Recalibration
+  to Asynchronous Audiovisual Speech
+uid: '6104055'
+volume: '8'

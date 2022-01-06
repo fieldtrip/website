@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '27595064'
+- idtype: doi
+  value: 10.1016/j.nicl.2016.08.003
+- idtype: pmcid
+  value: PMC4995605
+authors:
+- authtype: Author
+  name: Beukema S
+- authtype: Author
+  name: Gonzalez-Lara LE
+- authtype: Author
+  name: Finoia P
+- authtype: Author
+  name: Kamau E
+- authtype: Author
+  name: Allanson J
+- authtype: Author
+  name: Chennu S
+- authtype: Author
+  name: Gibson RM
+- authtype: Author
+  name: Pickard JD
+- authtype: Author
+  name: Owen AM
+- authtype: Author
+  name: Cruse D
+epubdate: 2016 Aug 4
+fulljournalname: 'NeuroImage : Clinical'
+issue: ''
+pages: 359-371
+pmclivedate: 2016/09/02
+printpubdate: ''
+pubdate: 2016 Aug 4
+sortdate: 2016/08/04 00:00
+source: Neuroimage Clin
+title: A hierarchy of event-related potential markers of auditory processing in disorders
+  of consciousness
+uid: '4995605'
+volume: '12'

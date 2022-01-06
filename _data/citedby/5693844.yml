@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '29180950'
+- idtype: doi
+  value: 10.3389/fnins.2017.00633
+- idtype: pmcid
+  value: PMC5693844
+authors:
+- authtype: Author
+  name: Chen Y
+- authtype: Author
+  name: Wang X
+- authtype: Author
+  name: Yu Y
+- authtype: Author
+  name: Liu Y
+epubdate: 2017 Nov 13
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '633'
+pmclivedate: 2017/11/27
+printpubdate: ''
+pubdate: 2017 Nov 13
+sortdate: 2017/11/13 00:00
+source: Front Neurosci
+title: Dissociable Electroencephalograph Correlates of Visual Awareness and Feature-Based
+  Attention
+uid: '5693844'
+volume: '11'

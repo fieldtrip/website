@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '26511236'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1833-15.2015
+- idtype: pmcid
+  value: PMC4623224
+authors:
+- authtype: Author
+  name: Herring JD
+- authtype: Author
+  name: Thut G
+- authtype: Author
+  name: Jensen O
+- authtype: Author
+  name: Bergmann TO
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '43'
+pages: 14435-14447
+pmclivedate: 2015/11/05
+printpubdate: 2015 Oct 28
+pubdate: 2015 Oct 28
+sortdate: 2015/10/28 00:00
+source: J Neurosci
+title: Attention Modulates TMS-Locked Alpha Oscillations in the Visual Cortex
+uid: '4623224'
+volume: '35'

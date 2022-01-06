@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '26903841'
+- idtype: doi
+  value: 10.3389/fnhum.2016.00034
+- idtype: pmcid
+  value: PMC4746294
+authors:
+- authtype: Author
+  name: Choe J
+- authtype: Author
+  name: Coffman BA
+- authtype: Author
+  name: Bergstedt DT
+- authtype: Author
+  name: Ziegler MD
+- authtype: Author
+  name: Phillips ME
+epubdate: 2016 Feb 9
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '34'
+pmclivedate: 2016/02/22
+printpubdate: ''
+pubdate: 2016 Feb 9
+sortdate: 2016/02/09 00:00
+source: Front Hum Neurosci
+title: Transcranial Direct Current Stimulation Modulates Neuronal Activity and Learning
+  in Pilot Training
+uid: '4746294'
+volume: '10'

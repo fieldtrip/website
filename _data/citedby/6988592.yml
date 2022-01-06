@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '27017263'
+- idtype: doi
+  value: 10.1016/j.dcn.2016.03.006
+- idtype: pmcid
+  value: PMC6988592
+authors:
+- authtype: Author
+  name: Peter V
+- authtype: Author
+  name: Kalashnikova M
+- authtype: Author
+  name: Burnham D
+epubdate: 2016 Mar 24
+fulljournalname: Developmental Cognitive Neuroscience
+issue: ''
+pages: 152-163
+pmclivedate: 2020/02/03
+printpubdate: ''
+pubdate: 2016 Mar 24
+sortdate: 2016/03/24 00:00
+source: Dev Cogn Neurosci
+title: Neural processing of amplitude and formant rise time in dyslexia
+uid: '6988592'
+volume: '19'

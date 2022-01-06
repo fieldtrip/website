@@ -1,0 +1,34 @@
+articleids:
+- idtype: pmid
+  value: '30930043'
+- idtype: doi
+  value: 10.1016/j.cub.2019.02.049
+- idtype: pmcid
+  value: PMC6482074
+- idtype: MID
+  value: NIHMS1524423
+authors:
+- authtype: Author
+  name: Bönstrup M
+- authtype: Author
+  name: Iturrate I
+- authtype: Author
+  name: Thompson R
+- authtype: Author
+  name: Cruciani G
+- authtype: Author
+  name: Censor N
+- authtype: Author
+  name: Cohen LG
+epubdate: 2019 Mar 28
+fulljournalname: 'Current biology : CB'
+issue: '8'
+pages: 1346-1351.e4
+pmclivedate: 2020/04/22
+printpubdate: 2019 Apr 22
+pubdate: 2019 Mar 28
+sortdate: 2019/03/28 00:00
+source: Curr Biol
+title: A rapid form of offline consolidation in skill learning
+uid: '6482074'
+volume: '29'

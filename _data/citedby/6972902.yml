@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '31964868'
+- idtype: doi
+  value: 10.1038/s41597-020-0364-3
+- idtype: pmcid
+  value: PMC6972902
+authors:
+- authtype: Author
+  name: Boran E
+- authtype: Author
+  name: Fedele T
+- authtype: Author
+  name: Steiner A
+- authtype: Author
+  name: Hilfiker P
+- authtype: Author
+  name: Stieglitz L
+- authtype: Author
+  name: Grunwald T
+- authtype: Author
+  name: Sarnthein J
+epubdate: 2020 Jan 21
+fulljournalname: Scientific Data
+issue: ''
+pages: '30'
+pmclivedate: 2020/01/28
+printpubdate: ''
+pubdate: 2020 Jan 21
+sortdate: 2020/01/21 00:00
+source: Sci Data
+title: Dataset of human medial temporal lobe neurons, scalp and intracranial EEG during
+  a verbal working memory task
+uid: '6972902'
+volume: '7'

@@ -1,0 +1,60 @@
+articleids:
+- idtype: pmid
+  value: '30179717'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2018.08.068
+- idtype: pmcid
+  value: PMC6286150
+- idtype: MID
+  value: NIHMS1507782
+authors:
+- authtype: Author
+  name: Horn A
+- authtype: Author
+  name: Li N
+- authtype: Author
+  name: Dembek TA
+- authtype: Author
+  name: Kappel A
+- authtype: Author
+  name: Boulay C
+- authtype: Author
+  name: Ewert S
+- authtype: Author
+  name: Tietze A
+- authtype: Author
+  name: Husch A
+- authtype: Author
+  name: Perera T
+- authtype: Author
+  name: Neumann WJ
+- authtype: Author
+  name: Reisert M
+- authtype: Author
+  name: Si H
+- authtype: Author
+  name: Oostenveld R
+- authtype: Author
+  name: Rorden C
+- authtype: Author
+  name: Yeh FC
+- authtype: Author
+  name: Fang Q
+- authtype: Author
+  name: Herrington TM
+- authtype: Author
+  name: Vorwerk J
+- authtype: Author
+  name: Kühn AA
+epubdate: 2018 Sep 1
+fulljournalname: NeuroImage
+issue: ''
+pages: 293-316
+pmclivedate: 2020/01/01
+printpubdate: 2019 Jan 1
+pubdate: 2018 Sep 1
+sortdate: 2018/09/01 00:00
+source: Neuroimage
+title: 'Lead-DBS v2: Towards a comprehensive pipeline for deep brain stimulation imaging'
+uid: '6286150'
+volume: '184'

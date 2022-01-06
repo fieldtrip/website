@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '26210576'
+- idtype: doi
+  value: 10.1016/j.neuroscience.2015.07.049
+- idtype: pmcid
+  value: PMC4547876
+- idtype: MID
+  value: NIHMS710442
+authors:
+- authtype: Author
+  name: Gopalakrishnan R
+- authtype: Author
+  name: Burgess RC
+- authtype: Author
+  name: Plow EB
+- authtype: Author
+  name: Floden D
+- authtype: Author
+  name: Machado AG
+epubdate: 2015 Jul 23
+fulljournalname: Neuroscience
+issue: ''
+pages: 176-189
+pmclivedate: 2016/09/24
+printpubdate: 2015 Sep 24
+pubdate: 2015 Jul 23
+sortdate: 2015/07/23 00:00
+source: Neuroscience
+title: A Magnetoencephalography study of multi-modal processing of pain anticipation
+  in primary sensory cortices
+uid: '4547876'
+volume: '304'

@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '34474066'
+- idtype: doi
+  value: 10.1016/j.neuropsychologia.2021.108011
+- idtype: pmcid
+  value: PMC8488018
+- idtype: MID
+  value: NIHMS1736792
+authors:
+- authtype: Author
+  name: Bennett CR
+- authtype: Author
+  name: Bauer CM
+- authtype: Author
+  name: Bex PJ
+- authtype: Author
+  name: Bottari D
+- authtype: Author
+  name: Merabet LB
+epubdate: 2021 Aug 30
+fulljournalname: Neuropsychologia
+issue: ''
+pages: '108011'
+pmclivedate: ''
+printpubdate: 2021 Oct 15
+pubdate: 2021 Aug 30
+sortdate: 2021/08/30 00:00
+source: Neuropsychologia
+title: Visual Search Performance in Cerebral Visual Impairment is Associated with
+  Altered Alpha Band Oscillations
+uid: '8488018'
+volume: '161'

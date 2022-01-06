@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '34061835'
+- idtype: doi
+  value: 10.1371/journal.pcbi.1009046
+- idtype: pmcid
+  value: PMC8195374
+authors:
+- authtype: Author
+  name: Zhigalov A
+- authtype: Author
+  name: Duecker K
+- authtype: Author
+  name: Jensen O
+epubdate: 2021 Jun 1
+fulljournalname: PLoS Computational Biology
+issue: '6'
+pages: e1009046
+pmclivedate: 2021/06/21
+printpubdate: ''
+pubdate: 2021 Jun 1
+sortdate: 2021/06/01 00:00
+source: PLoS Comput Biol
+title: The visual cortex produces gamma band echo in response to broadband visual
+  flicker
+uid: '8195374'
+volume: '17'

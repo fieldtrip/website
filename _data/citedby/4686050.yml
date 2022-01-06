@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '26675472'
+- idtype: doi
+  value: 10.1371/journal.pone.0137910
+- idtype: pmcid
+  value: PMC4686050
+authors:
+- authtype: Author
+  name: García-Cossio E
+- authtype: Author
+  name: Severens M
+- authtype: Author
+  name: Nienhuis B
+- authtype: Author
+  name: Duysens J
+- authtype: Author
+  name: Desain P
+- authtype: Author
+  name: Keijsers N
+- authtype: Author
+  name: Farquhar J
+epubdate: 2015 Dec 16
+fulljournalname: PLoS ONE
+issue: '12'
+pages: e0137910
+pmclivedate: 2016/01/07
+printpubdate: ''
+pubdate: 2015 Dec 16
+sortdate: 2015/12/16 00:00
+source: PLoS One
+title: Decoding Sensorimotor Rhythms during Robotic-Assisted Treadmill Walking for
+  Brain Computer Interface (BCI) Applications
+uid: '4686050'
+volume: '10'

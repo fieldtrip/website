@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '26085625'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1529-14.2015
+- idtype: pmcid
+  value: PMC6605164
+authors:
+- authtype: Author
+  name: Brodski A
+- authtype: Author
+  name: Paasch GF
+- authtype: Author
+  name: Helbling S
+- authtype: Author
+  name: Wibral M
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '24'
+pages: 8997-9006
+pmclivedate: 2019/07/11
+printpubdate: 2015 Jun 17
+pubdate: 2015 Jun 17
+sortdate: 2015/06/17 00:00
+source: J Neurosci
+title: The Faces of Predictive Coding
+uid: '6605164'
+volume: '35'

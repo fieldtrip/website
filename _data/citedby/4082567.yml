@@ -1,0 +1,45 @@
+articleids:
+- idtype: pmid
+  value: '24658709'
+- idtype: doi
+  value: 10.1007/s11357-014-9643-2
+- idtype: pmcid
+  value: PMC4082567
+authors:
+- authtype: Author
+  name: López ME
+- authtype: Author
+  name: Garcés P
+- authtype: Author
+  name: Cuesta P
+- authtype: Author
+  name: Castellanos NP
+- authtype: Author
+  name: Aurtenetxe S
+- authtype: Author
+  name: Bajo R
+- authtype: Author
+  name: Marcos A
+- authtype: Author
+  name: Montenegro M
+- authtype: Author
+  name: Yubero R
+- authtype: Author
+  name: del Pozo F
+- authtype: Author
+  name: Sancho M
+- authtype: Author
+  name: Maestú F
+epubdate: 2014 Mar 23
+fulljournalname: Age
+issue: '3'
+pages: '9643'
+pmclivedate: 2015/06/01
+printpubdate: 2014 Jun
+pubdate: 2014 Mar 23
+sortdate: 2014/03/23 00:00
+source: Age (Dordr)
+title: 'Synchronization during an internally directed cognitive state in healthy aging
+  and mild cognitive impairment: a MEG study'
+uid: '4082567'
+volume: '36'

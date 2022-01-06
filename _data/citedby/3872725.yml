@@ -1,0 +1,42 @@
+articleids:
+- idtype: pmid
+  value: '24431986'
+- idtype: doi
+  value: 10.3389/fnins.2013.00267
+- idtype: pmcid
+  value: PMC3872725
+authors:
+- authtype: Author
+  name: Gramfort A
+- authtype: Author
+  name: Luessi M
+- authtype: Author
+  name: Larson E
+- authtype: Author
+  name: Engemann DA
+- authtype: Author
+  name: Strohmeier D
+- authtype: Author
+  name: Brodbeck C
+- authtype: Author
+  name: Goj R
+- authtype: Author
+  name: Jas M
+- authtype: Author
+  name: Brooks T
+- authtype: Author
+  name: Parkkonen L
+- authtype: Author
+  name: Hämäläinen M
+epubdate: 2013 Dec 26
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '267'
+pmclivedate: 2014/01/15
+printpubdate: ''
+pubdate: 2013 Dec 26
+sortdate: 2013/12/26 00:00
+source: Front Neurosci
+title: MEG and EEG data analysis with MNE-Python
+uid: '3872725'
+volume: '7'

@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '28887893'
+- idtype: doi
+  value: 10.1111/ejn.13688
+- idtype: pmcid
+  value: PMC6221168
+authors:
+- authtype: Author
+  name: Benwell CS
+- authtype: Author
+  name: Keitel C
+- authtype: Author
+  name: Harvey M
+- authtype: Author
+  name: Gross J
+- authtype: Author
+  name: Thut G
+epubdate: 2017 Sep 28
+fulljournalname: The European Journal of Neuroscience
+issue: '7'
+pages: 2566-2584
+pmclivedate: 2018/11/15
+printpubdate: 2018 Oct
+pubdate: 2017 Sep 28
+sortdate: 2017/09/28 00:00
+source: Eur J Neurosci
+title: Trial‐by‐trial co‐variation of pre‐stimulus EEG alpha power and visuospatial
+  bias reflects a mixture of stochastic and deterministic effects
+uid: '6221168'
+volume: '48'

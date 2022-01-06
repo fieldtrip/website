@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '23914168'
+- idtype: doi
+  value: 10.3389/fnhum.2013.00426
+- idtype: pmcid
+  value: PMC3729976
+authors:
+- authtype: Author
+  name: Stothart G
+- authtype: Author
+  name: Kazanina N
+epubdate: 2013 Aug 1
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '426'
+pmclivedate: 2013/08/02
+printpubdate: ''
+pubdate: 2013 Aug 1
+sortdate: 2013/08/01 00:00
+source: Front Hum Neurosci
+title: 'Oscillatory characteristics of the visual mismatch negativity: what evoked
+  potentials aren''t telling us'
+uid: '3729976'
+volume: '7'

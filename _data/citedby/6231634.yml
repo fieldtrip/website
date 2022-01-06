@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '30418990'
+- idtype: doi
+  value: 10.1371/journal.pone.0206985
+- idtype: pmcid
+  value: PMC6231634
+authors:
+- authtype: Author
+  name: Albrecht MA
+- authtype: Author
+  name: Vaughn CN
+- authtype: Author
+  name: Erickson MA
+- authtype: Author
+  name: Clark SM
+- authtype: Author
+  name: Tonelli LH
+epubdate: 2018 Nov 12
+fulljournalname: PLoS ONE
+issue: '11'
+pages: e0206985
+pmclivedate: 2018/11/19
+printpubdate: ''
+pubdate: 2018 Nov 12
+sortdate: 2018/11/12 00:00
+source: PLoS One
+title: Time and frequency dependent changes in resting state EEG functional connectivity
+  following lipopolysaccharide challenge in rats
+uid: '6231634'
+volume: '13'

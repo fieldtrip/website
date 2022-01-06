@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '28149276'
+- idtype: doi
+  value: 10.3389/fncom.2016.00145
+- idtype: pmcid
+  value: PMC5241316
+authors:
+- authtype: Author
+  name: Garagnani M
+- authtype: Author
+  name: Lucchese G
+- authtype: Author
+  name: Tomasello R
+- authtype: Author
+  name: Wennekers T
+- authtype: Author
+  name: Pulvermüller F
+epubdate: 2017 Jan 18
+fulljournalname: Frontiers in Computational Neuroscience
+issue: ''
+pages: '145'
+pmclivedate: 2017/02/01
+printpubdate: ''
+pubdate: 2017 Jan 18
+sortdate: 2017/01/18 00:00
+source: Front Comput Neurosci
+title: A Spiking Neurocomputational Model of High-Frequency Oscillatory Brain Responses
+  to Words and Pseudowords
+uid: '5241316'
+volume: '10'

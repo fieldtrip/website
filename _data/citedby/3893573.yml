@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '24474912'
+- idtype: doi
+  value: 10.3389/fnhum.2013.00928
+- idtype: pmcid
+  value: PMC3893573
+authors:
+- authtype: Author
+  name: Krause V
+- authtype: Author
+  name: Wach C
+- authtype: Author
+  name: Südmeyer M
+- authtype: Author
+  name: Ferrea S
+- authtype: Author
+  name: Schnitzler A
+- authtype: Author
+  name: Pollok B
+epubdate: 2014 Jan 16
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '928'
+pmclivedate: 2014/01/28
+printpubdate: ''
+pubdate: 2014 Jan 16
+sortdate: 2014/01/16 00:00
+source: Front Hum Neurosci
+title: Cortico-muscular coupling and motor performance are modulated by 20 Hz transcranial
+  alternating current stimulation (tACS) in Parkinson’s disease
+uid: '3893573'
+volume: '7'

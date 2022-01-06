@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '28761896'
+- idtype: doi
+  value: 10.1080/23273798.2016.1183799
+- idtype: pmcid
+  value: PMC5533299
+- idtype: MID
+  value: NIHMS871826
+authors:
+- authtype: Author
+  name: Rommers J
+- authtype: Author
+  name: Dickson DS
+- authtype: Author
+  name: Norton JJ
+- authtype: Author
+  name: Wlotko EW
+- authtype: Author
+  name: Federmeier KD
+epubdate: 2016 May 19
+fulljournalname: Language, cognition and neuroscience
+issue: '5'
+pages: 576-589
+pmclivedate: 2018/01/01
+printpubdate: '2017'
+pubdate: 2016 May 19
+sortdate: 2016/05/19 00:00
+source: Lang Cogn Neurosci
+title: Alpha and theta band dynamics related to sentential constraint and word expectancy
+uid: '5533299'
+volume: '32'

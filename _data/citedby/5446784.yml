@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '28414333'
+- idtype: doi
+  value: 10.1038/nn.4546
+- idtype: pmcid
+  value: PMC5446784
+- idtype: MID
+  value: EMS72045
+authors:
+- authtype: Author
+  name: Wolff MJ
+- authtype: Author
+  name: Jochim J
+- authtype: Author
+  name: Akyürek EG
+- authtype: Author
+  name: Stokes MG
+epubdate: 2017 Apr 17
+fulljournalname: Nature neuroscience
+issue: '6'
+pages: 864-871
+pmclivedate: 2017/10/17
+printpubdate: 2017 Jun
+pubdate: 2017 Apr 17
+sortdate: 2017/04/17 00:00
+source: Nat Neurosci
+title: Dynamic hidden states underlying working memory guided behaviour
+uid: '5446784'
+volume: '20'

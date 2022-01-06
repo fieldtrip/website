@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '32386115'
+- idtype: doi
+  value: 10.1002/hbm.24994
+- idtype: pmcid
+  value: PMC7336148
+authors:
+- authtype: Author
+  name: Pellegrino G
+- authtype: Author
+  name: Hedrich T
+- authtype: Author
+  name: Porras‐Bettancourt M
+- authtype: Author
+  name: Lina J
+- authtype: Author
+  name: Aydin Ü
+- authtype: Author
+  name: Hall J
+- authtype: Author
+  name: Grova C
+- authtype: Author
+  name: Kobayashi E
+epubdate: 2020 May 9
+fulljournalname: Human Brain Mapping
+issue: '11'
+pages: 3019-3033
+pmclivedate: 2020/07/08
+printpubdate: ''
+pubdate: 2020 May 9
+sortdate: 2020/05/09 00:00
+source: Hum Brain Mapp
+title: Accuracy and spatial properties of distributed magnetic source imaging techniques
+  in the investigation of focal epilepsy patients
+uid: '7336148'
+volume: '41'

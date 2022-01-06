@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '34475391'
+- idtype: doi
+  value: 10.1038/s41467-021-25571-x
+- idtype: pmcid
+  value: PMC8413448
+authors:
+- authtype: Author
+  name: Pan Y
+- authtype: Author
+  name: Frisson S
+- authtype: Author
+  name: Jensen O
+epubdate: 2021 Sep 2
+fulljournalname: Nature Communications
+issue: ''
+pages: '5234'
+pmclivedate: 2021/09/22
+printpubdate: ''
+pubdate: 2021 Sep 2
+sortdate: 2021/09/02 00:00
+source: Nat Commun
+title: Neural evidence for lexical parafoveal processing
+uid: '8413448'
+volume: '12'

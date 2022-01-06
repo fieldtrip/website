@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '23100413'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.2051-12.2012
+- idtype: pmcid
+  value: PMC6704831
+authors:
+- authtype: Author
+  name: Aru J
+- authtype: Author
+  name: Axmacher N
+- authtype: Author
+  name: Do Lam AT
+- authtype: Author
+  name: Fell J
+- authtype: Author
+  name: Elger CE
+- authtype: Author
+  name: Singer W
+- authtype: Author
+  name: Melloni L
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '43'
+pages: 14909-14914
+pmclivedate: 2019/08/28
+printpubdate: 2012 Oct 24
+pubdate: 2012 Oct 24
+sortdate: 2012/10/24 00:00
+source: J Neurosci
+title: Local Category-Specific Gamma Band Responses in the Visual Cortex Do Not Reflect
+  Conscious Perception
+uid: '6704831'
+volume: '32'

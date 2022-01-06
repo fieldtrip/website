@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '28472146'
+- idtype: doi
+  value: 10.1371/journal.pone.0176981
+- idtype: pmcid
+  value: PMC5417614
+authors:
+- authtype: Author
+  name: Bader M
+- authtype: Author
+  name: Schröger E
+- authtype: Author
+  name: Grimm S
+epubdate: 2017 May 4
+fulljournalname: PLoS ONE
+issue: '5'
+pages: e0176981
+pmclivedate: 2017/05/14
+printpubdate: ''
+pubdate: 2017 May 4
+sortdate: 2017/05/04 00:00
+source: PLoS One
+title: 'How regularity representations of short sound patterns that are based on relative
+  or absolute pitch information establish over time: An EEG study'
+uid: '5417614'
+volume: '12'

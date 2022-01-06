@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '27038839'
+- idtype: doi
+  value: 10.1016/j.dcn.2016.02.009
+- idtype: pmcid
+  value: PMC6990081
+authors:
+- authtype: Author
+  name: Brusini P
+- authtype: Author
+  name: Dehaene-Lambertz G
+- authtype: Author
+  name: Dutat M
+- authtype: Author
+  name: Goffinet F
+- authtype: Author
+  name: Christophe A
+epubdate: 2016 Mar 12
+fulljournalname: Developmental Cognitive Neuroscience
+issue: ''
+pages: 164-173
+pmclivedate: 2020/02/03
+printpubdate: ''
+pubdate: 2016 Mar 12
+sortdate: 2016/03/12 00:00
+source: Dev Cogn Neurosci
+title: ERP evidence for on-line syntactic computations in 2-year-olds
+uid: '6990081'
+volume: '19'

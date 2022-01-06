@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '27416932'
+- idtype: doi
+  value: 10.1007/s10548-016-0505-3
+- idtype: pmcid
+  value: PMC5237418
+- idtype: MID
+  value: NIHMS803500
+authors:
+- authtype: Author
+  name: Xie W
+- authtype: Author
+  name: Richards JE
+epubdate: 2016 Jul 14
+fulljournalname: Brain topography
+issue: '2'
+pages: 198-219
+pmclivedate: 2018/03/01
+printpubdate: 2017 Mar
+pubdate: 2016 Jul 14
+sortdate: 2016/07/14 00:00
+source: Brain Topogr
+title: The Relation between Infant Covert Orienting, Sustained Attention and Brain
+  Activity
+uid: '5237418'
+volume: '30'

@@ -1,0 +1,34 @@
+articleids:
+- idtype: pmid
+  value: '34507986'
+- idtype: doi
+  value: 10.1073/pnas.2100652118
+- idtype: pmcid
+  value: PMC8449322
+authors:
+- authtype: Author
+  name: Sel A
+- authtype: Author
+  name: Verhagen L
+- authtype: Author
+  name: Angerer K
+- authtype: Author
+  name: David R
+- authtype: Author
+  name: Klein-Flügge MC
+- authtype: Author
+  name: Rushworth MF
+epubdate: 2021 Sep 10
+fulljournalname: Proceedings of the National Academy of Sciences of the United States
+  of America
+issue: '37'
+pages: e2100652118
+pmclivedate: 2021/10/04
+printpubdate: 2021 Sep 14
+pubdate: 2021 Sep 10
+sortdate: 2021/09/10 00:00
+source: Proc Natl Acad Sci U S A
+title: Increasing and decreasing interregional brain coupling increases and decreases
+  oscillatory activity in the human brain
+uid: '8449322'
+volume: '118'

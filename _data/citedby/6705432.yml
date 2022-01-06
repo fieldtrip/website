@@ -1,0 +1,34 @@
+articleids:
+- idtype: pmid
+  value: '25972166'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.4793-14.2015
+- idtype: pmcid
+  value: PMC6705432
+authors:
+- authtype: Author
+  name: Meyer B
+- authtype: Author
+  name: Yuen KS
+- authtype: Author
+  name: Ertl M
+- authtype: Author
+  name: Polomac N
+- authtype: Author
+  name: Mulert C
+- authtype: Author
+  name: Büchel C
+- authtype: Author
+  name: Kalisch R
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '19'
+pages: 7365-7373
+pmclivedate: 2019/08/26
+printpubdate: 2015 May 13
+pubdate: 2015 May 13
+sortdate: 2015/05/13 00:00
+source: J Neurosci
+title: Neural Mechanisms of Placebo Anxiolysis
+uid: '6705432'
+volume: '35'

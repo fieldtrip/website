@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '31680915'
+- idtype: doi
+  value: 10.3389/fnhum.2019.00363
+- idtype: pmcid
+  value: PMC6803451
+authors:
+- authtype: Author
+  name: Machida K
+- authtype: Author
+  name: Murias M
+- authtype: Author
+  name: Johnson KA
+epubdate: 2019 Oct 15
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '363'
+pmclivedate: 2019/11/03
+printpubdate: ''
+pubdate: 2019 Oct 15
+sortdate: 2019/10/15 00:00
+source: Front Hum Neurosci
+title: Electrophysiological Correlates of Response Time Variability During a Sustained
+  Attention Task
+uid: '6803451'
+volume: '13'

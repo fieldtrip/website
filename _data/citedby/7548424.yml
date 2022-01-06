@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '33073221'
+- idtype: doi
+  value: 10.1016/j.eclinm.2020.100559
+- idtype: pmcid
+  value: PMC7548424
+authors:
+- authtype: Author
+  name: Sourav S
+- authtype: Author
+  name: Bottari D
+- authtype: Author
+  name: Shareef I
+- authtype: Author
+  name: Kekunnaya R
+- authtype: Author
+  name: Röder B
+epubdate: 2020 Oct 6
+fulljournalname: EClinicalMedicine
+issue: ''
+pages: '100559'
+pmclivedate: 2020/10/16
+printpubdate: ''
+pubdate: 2020 Oct 6
+sortdate: 2020/10/06 00:00
+source: EClinicalMedicine
+title: 'An electrophysiological biomarker for the classification of cataract-reversal
+  patients: A case-control study'
+uid: '7548424'
+volume: '27'

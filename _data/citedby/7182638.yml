@@ -1,0 +1,49 @@
+articleids:
+- idtype: pmid
+  value: '32303950'
+- idtype: doi
+  value: 10.1007/s10548-020-00765-6
+- idtype: pmcid
+  value: PMC7182638
+authors:
+- authtype: Author
+  name: Moliadze V
+- authtype: Author
+  name: Brodski-Guerniero A
+- authtype: Author
+  name: Schuetz M
+- authtype: Author
+  name: Siemann J
+- authtype: Author
+  name: Lyzhko E
+- authtype: Author
+  name: Schlitt S
+- authtype: Author
+  name: Kitzerow J
+- authtype: Author
+  name: Langer A
+- authtype: Author
+  name: Kaiser J
+- authtype: Author
+  name: Naumer MJ
+- authtype: Author
+  name: Wibral M
+- authtype: Author
+  name: Chan J
+- authtype: Author
+  name: Freitag CM
+- authtype: Author
+  name: Siniatchkin M
+epubdate: 2020 Apr 17
+fulljournalname: Brain Topography
+issue: '3'
+pages: 355-374
+pmclivedate: 2020/04/29
+printpubdate: '2020'
+pubdate: 2020 Apr 17
+sortdate: 2020/04/17 00:00
+source: Brain Topogr
+title: 'Significance of Beta-Band Oscillations in Autism Spectrum Disorders During
+  Motor Response Inhibition Tasks: A MEG Study'
+uid: '7182638'
+volume: '33'

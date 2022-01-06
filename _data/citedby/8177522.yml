@@ -1,0 +1,38 @@
+articleids:
+- idtype: pmid
+  value: '34086715'
+- idtype: doi
+  value: 10.1371/journal.pone.0252431
+- idtype: pmcid
+  value: PMC8177522
+authors:
+- authtype: Author
+  name: Schrader S
+- authtype: Author
+  name: Westhoff A
+- authtype: Author
+  name: Piastra MC
+- authtype: Author
+  name: Miinalainen T
+- authtype: Author
+  name: Pursiainen S
+- authtype: Author
+  name: Vorwerk J
+- authtype: Author
+  name: Brinck H
+- authtype: Author
+  name: Wolters CH
+- authtype: Author
+  name: Engwer C
+epubdate: 2021 Jun 4
+fulljournalname: PLoS ONE
+issue: '6'
+pages: e0252431
+pmclivedate: 2021/06/07
+printpubdate: ''
+pubdate: 2021 Jun 4
+sortdate: 2021/06/04 00:00
+source: PLoS One
+title: DUNEuro—A software toolbox for forward modeling in bioelectromagnetism
+uid: '8177522'
+volume: '16'

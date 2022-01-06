@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '33867920'
+- idtype: doi
+  value: 10.3389/fnins.2021.635126
+- idtype: pmcid
+  value: PMC8047075
+authors:
+- authtype: Author
+  name: Mesik J
+- authtype: Author
+  name: Ray L
+- authtype: Author
+  name: Wojtczak M
+epubdate: 2021 Apr 1
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '635126'
+pmclivedate: 2021/04/16
+printpubdate: ''
+pubdate: 2021 Apr 1
+sortdate: 2021/04/01 00:00
+source: Front Neurosci
+title: Effects of Age on Cortical Tracking of Word-Level Features of Continuous Competing
+  Speech
+uid: '8047075'
+volume: '15'

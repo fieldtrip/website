@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '25447061'
+- idtype: doi
+  value: 10.1016/j.neuropsychologia.2014.10.002
+- idtype: pmcid
+  value: PMC4695971
+- idtype: MID
+  value: NIHMS746480
+authors:
+- authtype: Author
+  name: Noyce A
+- authtype: Author
+  name: Sekuler R
+epubdate: 2014 Oct 14
+fulljournalname: Neuropsychologia
+issue: ''
+pages: 18-24
+pmclivedate: 2015/12/30
+printpubdate: 2014 Dec
+pubdate: 2014 Oct 14
+sortdate: 2014/10/14 00:00
+source: Neuropsychologia
+title: 'Oddball distractors demand attention: neural and behavioral responses to predictability
+  in the flanker task'
+uid: '4695971'
+volume: '65'

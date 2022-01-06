@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '25538590'
+- idtype: doi
+  value: 10.3389/fnbeh.2014.00425
+- idtype: pmcid
+  value: PMC4260506
+authors:
+- authtype: Author
+  name: Moran JK
+- authtype: Author
+  name: Weierstall R
+- authtype: Author
+  name: Elbert T
+epubdate: 2014 Dec 9
+fulljournalname: Frontiers in Behavioral Neuroscience
+issue: ''
+pages: '425'
+pmclivedate: 2014/12/23
+printpubdate: ''
+pubdate: 2014 Dec 9
+sortdate: 2014/12/09 00:00
+source: Front Behav Neurosci
+title: Differences in brain circuitry for appetitive and reactive aggression as revealed
+  by realistic auditory scripts
+uid: '4260506'
+volume: '8'

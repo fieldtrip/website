@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '33904411'
+- idtype: doi
+  value: 10.7554/eLife.60824
+- idtype: pmcid
+  value: PMC8079153
+authors:
+- authtype: Author
+  name: Bastos AM
+- authtype: Author
+  name: Donoghue JA
+- authtype: Author
+  name: Brincat SL
+- authtype: Author
+  name: Mahnke M
+- authtype: Author
+  name: Yanar J
+- authtype: Author
+  name: Correa J
+- authtype: Author
+  name: Waite AS
+- authtype: Author
+  name: Lundqvist M
+- authtype: Author
+  name: Roy J
+- authtype: Author
+  name: Brown EN
+- authtype: Author
+  name: Miller EK
+epubdate: 2021 Apr 27
+fulljournalname: eLife
+issue: ''
+pages: e60824
+pmclivedate: 2021/04/30
+printpubdate: ''
+pubdate: 2021 Apr 27
+sortdate: 2021/04/27 00:00
+source: eLife
+title: Neural effects of propofol-induced unconsciousness and its reversal using thalamic
+  stimulation
+uid: '8079153'
+volume: '10'

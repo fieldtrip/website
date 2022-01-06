@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '24265611'
+- idtype: doi
+  value: 10.3389/fnhum.2013.00742
+- idtype: pmcid
+  value: PMC3821038
+authors:
+- authtype: Author
+  name: Buard I
+- authtype: Author
+  name: Rogers SJ
+- authtype: Author
+  name: Hepburn S
+- authtype: Author
+  name: Kronberg E
+- authtype: Author
+  name: Rojas DC
+epubdate: 2013 Nov 8
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '742'
+pmclivedate: 2013/11/21
+printpubdate: ''
+pubdate: 2013 Nov 8
+sortdate: 2013/11/08 00:00
+source: Front Hum Neurosci
+title: Altered oscillation patterns and connectivity during picture naming in autism
+uid: '3821038'
+volume: '7'

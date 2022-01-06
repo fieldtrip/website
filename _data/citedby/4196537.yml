@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '25352774'
+- idtype: doi
+  value: 10.3389/fnins.2014.00322
+- idtype: pmcid
+  value: PMC4196537
+authors:
+- authtype: Author
+  name: Hogervorst MA
+- authtype: Author
+  name: Brouwer AM
+- authtype: Author
+  name: van Erp JB
+epubdate: 2014 Oct 14
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '322'
+pmclivedate: 2014/10/28
+printpubdate: ''
+pubdate: 2014 Oct 14
+sortdate: 2014/10/14 00:00
+source: Front Neurosci
+title: Combining and comparing EEG, peripheral physiology and eye-related measures
+  for the assessment of mental workload
+uid: '4196537'
+volume: '8'

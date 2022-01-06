@@ -1,0 +1,46 @@
+articleids:
+- idtype: pmid
+  value: '32318719'
+- idtype: doi
+  value: 10.1093/cercor/bhaa076
+- idtype: pmcid
+  value: PMC7391267
+authors:
+- authtype: Author
+  name: McMackin R
+- authtype: Author
+  name: Dukic S
+- authtype: Author
+  name: Costello E
+- authtype: Author
+  name: Pinto-Grau M
+- authtype: Author
+  name: Fasano A
+- authtype: Author
+  name: Buxo T
+- authtype: Author
+  name: Heverin M
+- authtype: Author
+  name: Reilly R
+- authtype: Author
+  name: Muthuraman M
+- authtype: Author
+  name: Pender N
+- authtype: Author
+  name: Hardiman O
+- authtype: Author
+  name: Nasseroleslami B
+epubdate: 2020 Apr 21
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '9'
+pages: 4834-4846
+pmclivedate: 2020/08/04
+printpubdate: 2020 Jul
+pubdate: 2020 Apr 21
+sortdate: 2020/04/21 00:00
+source: Cereb Cortex
+title: Localization of Brain Networks Engaged by the Sustained Attention to Response
+  Task Provides Quantitative Markers of Executive Impairment in Amyotrophic Lateral
+  Sclerosis
+uid: '7391267'
+volume: '30'

@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '33323838'
+- idtype: doi
+  value: 10.1097/WNR.0000000000001570
+- idtype: pmcid
+  value: PMC7790888
+- idtype: MID
+  value: NIHMS1648091
+authors:
+- authtype: Author
+  name: Bidelman GM
+- authtype: Author
+  name: Brown JA
+- authtype: Author
+  name: Bashivan P
+epubdate: ''
+fulljournalname: Neuroreport
+issue: '2'
+pages: 163-168
+pmclivedate: ''
+printpubdate: 2021 Jan 13
+pubdate: 2021 Jan 13
+sortdate: 2021/01/13 00:00
+source: Neuroreport
+title: Auditory cortex supports verbal working memory capacity
+uid: '7790888'
+volume: '32'

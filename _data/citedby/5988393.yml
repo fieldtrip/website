@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '29911674'
+- idtype: doi
+  value: 10.1162/NETN_a_00008
+- idtype: pmcid
+  value: PMC5988393
+authors:
+- authtype: Author
+  name: Zhigalov A
+- authtype: Author
+  name: Arnulfo G
+- authtype: Author
+  name: Nobili L
+- authtype: Author
+  name: Palva S
+- authtype: Author
+  name: Palva JM
+epubdate: 2017 Jun 1
+fulljournalname: Network Neuroscience
+issue: '2'
+pages: 143-165
+pmclivedate: 2018/06/15
+printpubdate: ''
+pubdate: 2017 Jun 1
+sortdate: 2017/06/01 00:00
+source: Netw Neurosci
+title: Modular co-organization of functional connectivity and scale-free dynamics
+  in the human brain
+uid: '5988393'
+volume: '1'

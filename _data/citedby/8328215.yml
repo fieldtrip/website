@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '33949654'
+- idtype: doi
+  value: 10.1093/cercor/bhab086
+- idtype: pmcid
+  value: PMC8328215
+authors:
+- authtype: Author
+  name: Henke L
+- authtype: Author
+  name: Meyer L
+epubdate: 2021 May 5
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '9'
+pages: 4289-4299
+pmclivedate: 2021/08/03
+printpubdate: ''
+pubdate: 2021 May 5
+sortdate: 2021/05/05 00:00
+source: Cereb Cortex
+title: 'Endogenous Oscillations Time-Constrain Linguistic Segmentation: Cycling the
+  Garden Path'
+uid: '8328215'
+volume: '31'

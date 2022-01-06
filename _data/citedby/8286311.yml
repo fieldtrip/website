@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '33980469'
+- idtype: doi
+  value: 10.1016/j.clinph.2021.03.037
+- idtype: pmcid
+  value: PMC8286311
+- idtype: MID
+  value: NIHMS1696686
+authors:
+- authtype: Author
+  name: Cross KA
+- authtype: Author
+  name: Malekmohammadi M
+- authtype: Author
+  name: Choi JW
+- authtype: Author
+  name: Pouratian N
+epubdate: 2021 Apr 21
+fulljournalname: 'Clinical neurophysiology : official journal of the International
+  Federation of Clinical Neurophysiology'
+issue: '8'
+pages: 1990-2001
+pmclivedate: ''
+printpubdate: 2021 Aug
+pubdate: 2021 Apr 21
+sortdate: 2021/04/21 00:00
+source: Clin Neurophysiol
+title: Movement-related changes in pallidocortical synchrony differentiate action
+  execution and observation in humans
+uid: '8286311'
+volume: '132'

@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '32389730'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2020.116913
+- idtype: pmcid
+  value: PMC7343530
+- idtype: MID
+  value: EMS86531
+authors:
+- authtype: Author
+  name: Giari G
+- authtype: Author
+  name: Leonardelli E
+- authtype: Author
+  name: Tao Y
+- authtype: Author
+  name: Machado M
+- authtype: Author
+  name: Fairhall S
+epubdate: 2020 May 7
+fulljournalname: NeuroImage
+issue: ''
+pages: '116913'
+pmclivedate: 2020/07/08
+printpubdate: 2020 May 7
+pubdate: 2020 May 7
+sortdate: 2020/05/07 00:00
+source: Neuroimage
+title: Spatiotemporal properties of the neural representation of conceptual content
+  for words and pictures – an MEG study
+uid: '7343530'
+volume: '219'

@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '34429378'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0583-21.2021
+- idtype: pmcid
+  value: PMC8513695
+authors:
+- authtype: Author
+  name: de Vries IE
+- authtype: Author
+  name: Marinato G
+- authtype: Author
+  name: Baldauf D
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '41'
+pages: 8603-8617
+pmclivedate: ''
+printpubdate: 2021 Oct 13
+pubdate: 2021 Oct 13
+sortdate: 2021/10/13 00:00
+source: J Neurosci
+title: Decoding Object-Based Auditory Attention from Source-Reconstructed MEG Alpha
+  Oscillations
+uid: '8513695'
+volume: '41'

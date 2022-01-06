@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '25532558'
+- idtype: doi
+  value: 10.1111/psyp.12399
+- idtype: pmcid
+  value: PMC4681321
+authors:
+- authtype: Author
+  name: Wright D
+- authtype: Author
+  name: Makin AD
+- authtype: Author
+  name: Bertamini M
+epubdate: 2014 Dec 23
+fulljournalname: Psychophysiology
+issue: '5'
+pages: 638-647
+pmclivedate: 2015/12/23
+printpubdate: 2015 May
+pubdate: 2014 Dec 23
+sortdate: 2014/12/23 00:00
+source: Psychophysiology
+title: 'Right-lateralized alpha desynchronization during regularity discrimination:
+  Hemispheric specialization or directed spatial attention?'
+uid: '4681321'
+volume: '52'

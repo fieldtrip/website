@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '27867090'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2016.11.043
+- idtype: pmcid
+  value: PMC5312821
+authors:
+- authtype: Author
+  name: Keitel C
+- authtype: Author
+  name: Thut G
+- authtype: Author
+  name: Gross J
+epubdate: ''
+fulljournalname: Neuroimage
+issue: ''
+pages: 58-70
+pmclivedate: 2017/02/22
+printpubdate: 2017 Feb 1
+pubdate: 2017 Feb 1
+sortdate: 2017/02/01 00:00
+source: Neuroimage
+title: Visual cortex responses reflect temporal structure of continuous quasi-rhythmic
+  sensory stimulation
+uid: '5312821'
+volume: '146'

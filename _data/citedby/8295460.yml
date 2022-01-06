@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '34305555'
+- idtype: doi
+  value: 10.3389/fnhum.2021.690856
+- idtype: pmcid
+  value: PMC8295460
+authors:
+- authtype: Author
+  name: Khachatryan E
+- authtype: Author
+  name: Wittevrongel B
+- authtype: Author
+  name: Perovnik M
+- authtype: Author
+  name: Tournoy J
+- authtype: Author
+  name: Schoenmakers B
+- authtype: Author
+  name: Van Hulle MM
+epubdate: 2021 Jul 8
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '690856'
+pmclivedate: 2021/07/23
+printpubdate: ''
+pubdate: 2021 Jul 8
+sortdate: 2021/07/08 00:00
+source: Front Hum Neurosci
+title: Electrophysiological Proxy of Cognitive Reserve Index
+uid: '8295460'
+volume: '15'

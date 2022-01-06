@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '26952847'
+- idtype: doi
+  value: 10.1016/j.jneumeth.2016.03.003
+- idtype: pmcid
+  value: PMC4840017
+authors:
+- authtype: Author
+  name: Tak S
+- authtype: Author
+  name: Uga M
+- authtype: Author
+  name: Flandin G
+- authtype: Author
+  name: Dan I
+- authtype: Author
+  name: Penny WD
+epubdate: ''
+fulljournalname: Journal of Neuroscience Methods
+issue: ''
+pages: 103-112
+pmclivedate: 2016/05/02
+printpubdate: 2016 May 1
+pubdate: 2016 May 1
+sortdate: 2016/05/01 00:00
+source: J Neurosci Methods
+title: Sensor space group analysis for fNIRS data
+uid: '4840017'
+volume: '264'

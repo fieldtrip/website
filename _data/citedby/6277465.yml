@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '30538648'
+- idtype: doi
+  value: 10.3389/fpsyg.2018.02149
+- idtype: pmcid
+  value: PMC6277465
+authors:
+- authtype: Author
+  name: Wang G
+- authtype: Author
+  name: Wang P
+- authtype: Author
+  name: Luo J
+- authtype: Author
+  name: Nan W
+epubdate: 2018 Nov 27
+fulljournalname: Frontiers in Psychology
+issue: ''
+pages: '2149'
+pmclivedate: 2018/12/11
+printpubdate: ''
+pubdate: 2018 Nov 27
+sortdate: 2018/11/27 00:00
+source: Front Psychol
+title: 'Perception of Threatening Intention Modulates Brain Processes to Body Actions:
+  Evidence From Event-Related Potentials'
+uid: '6277465'
+volume: '9'

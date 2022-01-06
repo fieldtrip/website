@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '28381993'
+- idtype: doi
+  value: 10.3389/fnint.2017.00008
+- idtype: pmcid
+  value: PMC5360737
+authors:
+- authtype: Author
+  name: Simon DM
+- authtype: Author
+  name: Noel JP
+- authtype: Author
+  name: Wallace MT
+epubdate: 2017 Mar 22
+fulljournalname: Frontiers in Integrative Neuroscience
+issue: ''
+pages: '8'
+pmclivedate: 2017/04/05
+printpubdate: ''
+pubdate: 2017 Mar 22
+sortdate: 2017/03/22 00:00
+source: Front Integr Neurosci
+title: Event Related Potentials Index Rapid Recalibration to Audiovisual Temporal
+  Asynchrony
+uid: '5360737'
+volume: '11'

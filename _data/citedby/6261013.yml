@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '30475803'
+- idtype: doi
+  value: 10.1371/journal.pone.0200397
+- idtype: pmcid
+  value: PMC6261013
+authors:
+- authtype: Author
+  name: Zheng X
+- authtype: Author
+  name: Roelofs A
+- authtype: Author
+  name: Farquhar J
+- authtype: Author
+  name: Lemhöfer K
+epubdate: 2018 Nov 26
+fulljournalname: PLoS ONE
+issue: '11'
+pages: e0200397
+pmclivedate: 2018/12/06
+printpubdate: ''
+pubdate: 2018 Nov 26
+sortdate: 2018/11/26 00:00
+source: PLoS One
+title: 'Monitoring of language selection errors in switching: Not all about conflict'
+uid: '6261013'
+volume: '13'

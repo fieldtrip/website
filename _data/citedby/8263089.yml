@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '34296112'
+- idtype: doi
+  value: 10.1093/texcom/tgaa043
+- idtype: pmcid
+  value: PMC8263089
+authors:
+- authtype: Author
+  name: Varlet M
+- authtype: Author
+  name: Nozaradan S
+- authtype: Author
+  name: Trainor L
+- authtype: Author
+  name: Keller PE
+epubdate: 2020 Aug 5
+fulljournalname: Cerebral Cortex Communications
+issue: '1'
+pages: tgaa043
+pmclivedate: 2021/07/21
+printpubdate: ''
+pubdate: 2020 Aug 5
+sortdate: 2020/08/05 00:00
+source: Cereb Cortex Commun
+title: Dynamic Modulation of Beta Band Cortico-Muscular Coupling Induced by Audio–Visual
+  Rhythms
+uid: '8263089'
+volume: '1'

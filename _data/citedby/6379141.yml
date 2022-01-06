@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '30639306'
+- idtype: doi
+  value: 10.1016/j.neuroscience.2019.01.003
+- idtype: pmcid
+  value: PMC6379141
+- idtype: MID
+  value: NIHMS1519996
+authors:
+- authtype: Author
+  name: Bidelman GM
+- authtype: Author
+  name: Heath ST
+epubdate: 2019 Jan 9
+fulljournalname: Neuroscience
+issue: ''
+pages: 11-20
+pmclivedate: 2020/03/01
+printpubdate: 2019 Mar 1
+pubdate: 2019 Jan 9
+sortdate: 2019/01/09 00:00
+source: Neuroscience
+title: Neural correlates of enhanced audiovisual processing in the bilingual brain
+uid: '6379141'
+volume: '401'

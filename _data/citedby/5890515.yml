@@ -1,0 +1,42 @@
+articleids:
+- idtype: pmid
+  value: '29035875'
+- idtype: doi
+  value: 10.1088/1361-6560/aa93d1
+- idtype: pmcid
+  value: PMC5890515
+- idtype: MID
+  value: NIHMS924943
+authors:
+- authtype: Author
+  name: Borna A
+- authtype: Author
+  name: Carter TR
+- authtype: Author
+  name: Goldberg JD
+- authtype: Author
+  name: Colombo AP
+- authtype: Author
+  name: Jau YY
+- authtype: Author
+  name: Berry C
+- authtype: Author
+  name: McKay J
+- authtype: Author
+  name: Stephen J
+- authtype: Author
+  name: Weisend M
+- authtype: Author
+  name: Schwindt PD
+epubdate: 2017 Nov 10
+fulljournalname: Physics in medicine and biology
+issue: '23'
+pages: 8909-8923
+pmclivedate: 2018/11/10
+printpubdate: ''
+pubdate: 2017 Nov 10
+sortdate: 2017/11/10 00:00
+source: Phys Med Biol
+title: A 20-Channel Magnetoencephalography System Based on Optically Pumped Magnetometers
+uid: '5890515'
+volume: '62'

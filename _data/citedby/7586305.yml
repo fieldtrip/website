@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '33192401'
+- idtype: doi
+  value: 10.3389/fnhum.2020.570419
+- idtype: pmcid
+  value: PMC7586305
+authors:
+- authtype: Author
+  name: Desantis A
+- authtype: Author
+  name: Chan-Hon-Tong A
+- authtype: Author
+  name: Collins T
+- authtype: Author
+  name: Hogendoorn H
+- authtype: Author
+  name: Cavanagh P
+epubdate: 2020 Oct 9
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '570419'
+pmclivedate: 2020/11/13
+printpubdate: ''
+pubdate: 2020 Oct 9
+sortdate: 2020/10/09 00:00
+source: Front Hum Neurosci
+title: 'Decoding the Temporal Dynamics of Covert Spatial Attention Using Multivariate
+  EEG Analysis: Contributions of Raw Amplitude and Alpha Power'
+uid: '7586305'
+volume: '14'

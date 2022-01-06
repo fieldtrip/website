@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '28751458'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0614-17.2017
+- idtype: pmcid
+  value: PMC6596791
+authors:
+- authtype: Author
+  name: Brodski-Guerniero A
+- authtype: Author
+  name: Paasch GF
+- authtype: Author
+  name: Wollstadt P
+- authtype: Author
+  name: Özdemir I
+- authtype: Author
+  name: Lizier JT
+- authtype: Author
+  name: Wibral M
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '34'
+pages: 8273-8283
+pmclivedate: 2019/07/01
+printpubdate: 2017 Aug 23
+pubdate: 2017 Aug 23
+sortdate: 2017/08/23 00:00
+source: J Neurosci
+title: Information-Theoretic Evidence for Predictive Coding in the Face-Processing
+  System
+uid: '6596791'
+volume: '37'

@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '32614395'
+- idtype: doi
+  value: 10.1093/schbul/sbaa083
+- idtype: pmcid
+  value: PMC7825007
+authors:
+- authtype: Author
+  name: Northoff G
+- authtype: Author
+  name: Sandsten KE
+- authtype: Author
+  name: Nordgaard J
+- authtype: Author
+  name: Kjaer TW
+- authtype: Author
+  name: Parnas J
+epubdate: 2020 Jul 2
+fulljournalname: Schizophrenia Bulletin
+issue: '1'
+pages: 170-179
+pmclivedate: 2021/07/02
+printpubdate: ''
+pubdate: 2020 Jul 2
+sortdate: 2020/07/02 00:00
+source: Schizophr Bull
+title: The Self and Its Prolonged Intrinsic Neural Timescale in Schizophrenia
+uid: '7825007'
+volume: '47'

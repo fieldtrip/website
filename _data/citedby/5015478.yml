@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '27642285'
+- idtype: doi
+  value: 10.3389/fpsyg.2016.01299
+- idtype: pmcid
+  value: PMC5015478
+authors:
+- authtype: Author
+  name: Wang L
+- authtype: Author
+  name: Lin X
+- authtype: Author
+  name: Zhou B
+- authtype: Author
+  name: Pöppel E
+- authtype: Author
+  name: Bao Y
+epubdate: 2016 Aug 31
+fulljournalname: Frontiers in Psychology
+issue: ''
+pages: '1299'
+pmclivedate: 2016/09/16
+printpubdate: ''
+pubdate: 2016 Aug 31
+sortdate: 2016/08/31 00:00
+source: Front Psychol
+title: Rubberband Effect in Temporal Control of Mismatch Negativity
+uid: '5015478'
+volume: '7'

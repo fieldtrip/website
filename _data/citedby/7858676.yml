@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '33551733'
+- idtype: doi
+  value: 10.3389/fnins.2020.625721
+- idtype: pmcid
+  value: PMC7858676
+authors:
+- authtype: Author
+  name: Yusuf PA
+- authtype: Author
+  name: Hubka P
+- authtype: Author
+  name: Tillein J
+- authtype: Author
+  name: Vinck M
+- authtype: Author
+  name: Kral A
+epubdate: 2021 Jan 21
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '625721'
+pmclivedate: 2021/02/05
+printpubdate: ''
+pubdate: 2021 Jan 21
+sortdate: 2021/01/21 00:00
+source: Front Neurosci
+title: Deafness Weakens Interareal Couplings in the Auditory Cortex
+uid: '7858676'
+volume: '14'

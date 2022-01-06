@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '33204197'
+- idtype: doi
+  value: 10.2147/NSS.S277655
+- idtype: pmcid
+  value: PMC7667510
+authors:
+- authtype: Author
+  name: Wang YJ
+- authtype: Author
+  name: Duan W
+- authtype: Author
+  name: Lei X
+epubdate: 2020 Nov 10
+fulljournalname: Nature and Science of Sleep
+issue: ''
+pages: 937-947
+pmclivedate: 2020/11/16
+printpubdate: ''
+pubdate: 2020 Nov 10
+sortdate: 2020/11/10 00:00
+source: Nat Sci Sleep
+title: 'Impaired Coupling of the Brain’s Default Network During Sleep Deprivation:
+  A Resting-State EEG Study'
+uid: '7667510'
+volume: '12'

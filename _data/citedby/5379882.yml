@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '28409112'
+- idtype: doi
+  value: 10.1016/j.nicl.2017.03.005
+- idtype: pmcid
+  value: PMC5379882
+authors:
+- authtype: Author
+  name: Belardinelli P
+- authtype: Author
+  name: Laer L
+- authtype: Author
+  name: Ortiz E
+- authtype: Author
+  name: Braun C
+- authtype: Author
+  name: Gharabaghi A
+epubdate: 2017 Mar 16
+fulljournalname: 'NeuroImage : Clinical'
+issue: ''
+pages: 726-733
+pmclivedate: 2017/04/13
+printpubdate: ''
+pubdate: 2017 Mar 16
+sortdate: 2017/03/16 00:00
+source: Neuroimage Clin
+title: Plasticity of premotor cortico-muscular coherence in severely impaired stroke
+  patients with hand paralysis
+uid: '5379882'
+volume: '14'

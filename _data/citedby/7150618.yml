@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '30753343'
+- idtype: doi
+  value: 10.1093/cercor/bhz009
+- idtype: pmcid
+  value: PMC7150618
+authors:
+- authtype: Author
+  name: Zlebnik NE
+- authtype: Author
+  name: Gildish I
+- authtype: Author
+  name: Sesia T
+- authtype: Author
+  name: Fitoussi A
+- authtype: Author
+  name: Cole EA
+- authtype: Author
+  name: Carson BP
+- authtype: Author
+  name: Cachope R
+- authtype: Author
+  name: Cheer JF
+epubdate: 2019 Feb 7
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '11'
+pages: 4763-4774
+pmclivedate: 2020/12/17
+printpubdate: 2019 Dec
+pubdate: 2019 Feb 7
+sortdate: 2019/02/07 00:00
+source: Cereb Cortex
+title: Motivational Impairment is Accompanied by Corticoaccumbal Dysfunction in the
+  BACHD-Tg5 Rat Model of Huntington’s Disease
+uid: '7150618'
+volume: '29'

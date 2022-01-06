@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '34194294'
+- idtype: doi
+  value: 10.3389/fnins.2021.652841
+- idtype: pmcid
+  value: PMC8236813
+authors:
+- authtype: Author
+  name: Sun K
+- authtype: Author
+  name: Wang H
+- authtype: Author
+  name: Bai Y
+- authtype: Author
+  name: Zhou W
+- authtype: Author
+  name: Wang L
+epubdate: 2021 Jun 14
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '652841'
+pmclivedate: 2021/06/29
+printpubdate: ''
+pubdate: 2021 Jun 14
+sortdate: 2021/06/14 00:00
+source: Front Neurosci
+title: 'MRIES: A Matlab Toolbox for Mapping the Responses to Intracranial Electrical
+  Stimulation'
+uid: '8236813'
+volume: '15'

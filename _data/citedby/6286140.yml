@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '30532205'
+- idtype: doi
+  value: 10.1371/journal.pone.0208747
+- idtype: pmcid
+  value: PMC6286140
+authors:
+- authtype: Author
+  name: Desideri D
+- authtype: Author
+  name: Zrenner C
+- authtype: Author
+  name: Gordon PC
+- authtype: Author
+  name: Ziemann U
+- authtype: Author
+  name: Belardinelli P
+epubdate: 2018 Dec 7
+fulljournalname: PLoS ONE
+issue: '12'
+pages: e0208747
+pmclivedate: 2018/12/28
+printpubdate: ''
+pubdate: 2018 Dec 7
+sortdate: 2018/12/07 00:00
+source: PLoS One
+title: 'Nil effects of μ-rhythm phase-dependent burst-rTMS on cortical excitability
+  in humans: A resting-state EEG and TMS-EEG study'
+uid: '6286140'
+volume: '13'

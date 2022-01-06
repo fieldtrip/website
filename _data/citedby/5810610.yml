@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '29441362'
+- idtype: doi
+  value: 10.1126/sciadv.aao3842
+- idtype: pmcid
+  value: PMC5810610
+authors:
+- authtype: Author
+  name: Assaneo MF
+- authtype: Author
+  name: Poeppel D
+epubdate: 2018 Feb 7
+fulljournalname: Science Advances
+issue: '2'
+pages: eaao3842
+pmclivedate: 2018/02/13
+printpubdate: ''
+pubdate: 2018 Feb 7
+sortdate: 2018/02/07 00:00
+source: Sci Adv
+title: 'The coupling between auditory and motor cortices is rate-restricted: Evidence
+  for an intrinsic speech-motor rhythm'
+uid: '5810610'
+volume: '4'

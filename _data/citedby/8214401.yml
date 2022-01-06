@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '32193164'
+- idtype: doi
+  value: 10.1016/j.clinph.2020.01.011
+- idtype: pmcid
+  value: PMC8214401
+- idtype: MID
+  value: NIHMS1708892
+authors:
+- authtype: Author
+  name: Thirugnanasambandam N
+- authtype: Author
+  name: Zimmerman T
+- authtype: Author
+  name: Pillai AS
+- authtype: Author
+  name: Shields J
+- authtype: Author
+  name: Horovitz SG
+- authtype: Author
+  name: Hallett M
+epubdate: 2020 Feb 4
+fulljournalname: 'Clinical neurophysiology : official journal of the International
+  Federation of Clinical Neurophysiology'
+issue: '5'
+pages: 985-993
+pmclivedate: 2021/06/19
+printpubdate: 2020 May
+pubdate: 2020 Feb 4
+sortdate: 2020/02/04 00:00
+source: Clin Neurophysiol
+title: Task-specific interhemispheric hypoconnectivity in writer’s cramp – An EEG
+  study
+uid: '8214401'
+volume: '131'

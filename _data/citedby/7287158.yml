@@ -1,0 +1,23 @@
+articleids:
+- idtype: pmid
+  value: '32581662'
+- idtype: doi
+  value: 10.3389/fnins.2020.00289
+- idtype: pmcid
+  value: PMC7287158
+authors:
+- authtype: Author
+  name: Treder MS
+epubdate: 2020 Jun 4
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '289'
+pmclivedate: 2020/06/23
+printpubdate: ''
+pubdate: 2020 Jun 4
+sortdate: 2020/06/04 00:00
+source: Front Neurosci
+title: 'MVPA-Light: A Classification and Regression Toolbox for Multi-Dimensional
+  Data'
+uid: '7287158'
+volume: '14'

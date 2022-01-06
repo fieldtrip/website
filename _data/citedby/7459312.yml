@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '32868768'
+- idtype: doi
+  value: 10.1038/s41467-020-18199-w
+- idtype: pmcid
+  value: PMC7459312
+authors:
+- authtype: Author
+  name: Ozawa M
+- authtype: Author
+  name: Davis P
+- authtype: Author
+  name: Ni J
+- authtype: Author
+  name: Maguire J
+- authtype: Author
+  name: Papouin T
+- authtype: Author
+  name: Reijmers L
+epubdate: 2020 Aug 31
+fulljournalname: Nature Communications
+issue: ''
+pages: '4358'
+pmclivedate: 2020/09/16
+printpubdate: ''
+pubdate: 2020 Aug 31
+sortdate: 2020/08/31 00:00
+source: Nat Commun
+title: Experience-dependent resonance in amygdalo-cortical circuits supports fear
+  memory retrieval following extinction
+uid: '7459312'
+volume: '11'

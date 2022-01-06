@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '31729426'
+- idtype: doi
+  value: 10.1038/s41598-019-53270-7
+- idtype: pmcid
+  value: PMC6858466
+authors:
+- authtype: Author
+  name: Daniel E
+- authtype: Author
+  name: Meindertsma T
+- authtype: Author
+  name: Arazi A
+- authtype: Author
+  name: Donner TH
+- authtype: Author
+  name: Dinstein I
+epubdate: 2019 Nov 15
+fulljournalname: Scientific Reports
+issue: ''
+pages: '16901'
+pmclivedate: 2019/11/27
+printpubdate: ''
+pubdate: 2019 Nov 15
+sortdate: 2019/11/15 00:00
+source: Sci Rep
+title: The Relationship between Trial-by-Trial Variability and Oscillations of Cortical
+  Population Activity
+uid: '6858466'
+volume: '9'

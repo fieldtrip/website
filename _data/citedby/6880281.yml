@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '31401488'
+- idtype: doi
+  value: 10.1016/j.clinph.2019.07.020
+- idtype: pmcid
+  value: PMC6880281
+authors:
+- authtype: Author
+  name: Pels EG
+- authtype: Author
+  name: Aarnoutse EJ
+- authtype: Author
+  name: Leinders S
+- authtype: Author
+  name: Freudenburg ZV
+- authtype: Author
+  name: Branco MP
+- authtype: Author
+  name: van der Vijgh BH
+- authtype: Author
+  name: Snijders TJ
+- authtype: Author
+  name: Denison T
+- authtype: Author
+  name: Vansteensel MJ
+- authtype: Author
+  name: Ramsey NF
+epubdate: ''
+fulljournalname: Clinical Neurophysiology
+issue: '10'
+pages: 1798-1803
+pmclivedate: 2019/11/29
+printpubdate: 2019 Oct
+pubdate: 2019 Oct
+sortdate: 2019/10/01 00:00
+source: Clin Neurophysiol
+title: Stability of a chronic implanted brain-computer interface in late-stage amyotrophic
+  lateral sclerosis
+uid: '6880281'
+volume: '130'

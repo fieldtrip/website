@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '30549144'
+- idtype: doi
+  value: 10.1002/hbm.24469
+- idtype: pmcid
+  value: PMC6865508
+authors:
+- authtype: Author
+  name: Orekhova EV
+- authtype: Author
+  name: Stroganova TA
+- authtype: Author
+  name: Schneiderman JF
+- authtype: Author
+  name: Lundström S
+- authtype: Author
+  name: Riaz B
+- authtype: Author
+  name: Sarovic D
+- authtype: Author
+  name: Sysoeva OV
+- authtype: Author
+  name: Brant G
+- authtype: Author
+  name: Gillberg C
+- authtype: Author
+  name: Hadjikhani N
+epubdate: 2018 Dec 13
+fulljournalname: Human Brain Mapping
+issue: '5'
+pages: 1583-1593
+pmclivedate: 2020/06/12
+printpubdate: ''
+pubdate: 2018 Dec 13
+sortdate: 2018/12/13 00:00
+source: Hum Brain Mapp
+title: Neural gain control measured through cortical gamma oscillations is associated
+  with sensory sensitivity
+uid: '6865508'
+volume: '40'

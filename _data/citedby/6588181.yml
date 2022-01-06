@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '30738105'
+- idtype: doi
+  value: 10.1016/j.jneumeth.2019.02.002
+- idtype: pmcid
+  value: PMC6588181
+- idtype: MID
+  value: NIHMS1521343
+authors:
+- authtype: Author
+  name: Sun L
+- authtype: Author
+  name: Okada Y
+epubdate: 2019 Feb 7
+fulljournalname: Journal of neuroscience methods
+issue: ''
+pages: 29-36
+pmclivedate: 2020/04/01
+printpubdate: 2019 Apr 1
+pubdate: 2019 Feb 7
+sortdate: 2019/02/07 00:00
+source: J Neurosci Methods
+title: Vibrotactile piezoelectric stimulation system with precise and versatile timing
+  control for somatosensory research
+uid: '6588181'
+volume: '317'

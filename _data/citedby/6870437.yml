@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '22431268'
+- idtype: doi
+  value: 10.1002/hbm.22026
+- idtype: pmcid
+  value: PMC6870437
+authors:
+- authtype: Author
+  name: Moeller F
+- authtype: Author
+  name: Muthuraman M
+- authtype: Author
+  name: Stephani U
+- authtype: Author
+  name: Deuschl G
+- authtype: Author
+  name: Raethjen J
+- authtype: Author
+  name: Siniatchkin M
+epubdate: 2012 Mar 19
+fulljournalname: Human Brain Mapping
+issue: '8'
+pages: 1896-1909
+pmclivedate: 2020/06/12
+printpubdate: ''
+pubdate: 2012 Mar 19
+sortdate: 2012/03/19 00:00
+source: Hum Brain Mapp
+title: Representation and propagation of epileptic activity in absences and generalized
+  photoparoxysmal responses
+uid: '6870437'
+volume: '34'

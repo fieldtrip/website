@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '31397966'
+- idtype: doi
+  value: 10.1002/hbm.24754
+- idtype: pmcid
+  value: PMC6865415
+authors:
+- authtype: Author
+  name: Antonakakis M
+- authtype: Author
+  name: Schrader S
+- authtype: Author
+  name: Wollbrink A
+- authtype: Author
+  name: Oostenveld R
+- authtype: Author
+  name: Rampp S
+- authtype: Author
+  name: Haueisen J
+- authtype: Author
+  name: Wolters CH
+epubdate: 2019 Aug 9
+fulljournalname: Human Brain Mapping
+issue: '17'
+pages: 5011-5028
+pmclivedate: 2020/06/12
+printpubdate: ''
+pubdate: 2019 Aug 9
+sortdate: 2019/08/09 00:00
+source: Hum Brain Mapp
+title: The effect of stimulation type, head modeling, and combined EEG and MEG on
+  the source reconstruction of the somatosensory P20/N20 component
+uid: '6865415'
+volume: '40'

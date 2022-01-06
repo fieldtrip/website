@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '28424797'
+- idtype: doi
+  value: 10.1016/j.bpsc.2017.01.005
+- idtype: pmcid
+  value: PMC5387180
+authors:
+- authtype: Author
+  name: Uhlhaas PJ
+- authtype: Author
+  name: Liddle P
+- authtype: Author
+  name: Linden DE
+- authtype: Author
+  name: Nobre AC
+- authtype: Author
+  name: Singh KD
+- authtype: Author
+  name: Gross J
+epubdate: 2017 Apr
+fulljournalname: Biological Psychiatry
+issue: '3'
+pages: 235-244
+pmclivedate: 2017/04/17
+printpubdate: ''
+pubdate: 2017 Apr
+sortdate: 2017/04/01 00:00
+source: Biol Psychiatry Cogn Neurosci Neuroimaging
+title: 'Magnetoencephalography as a Tool in Psychiatric Research: Current Status and
+  Perspective'
+uid: '5387180'
+volume: '2'

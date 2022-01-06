@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '30811381'
+- idtype: doi
+  value: 10.1371/journal.pbio.2006812
+- idtype: pmcid
+  value: PMC6411367
+authors:
+- authtype: Author
+  name: Smout CA
+- authtype: Author
+  name: Tang MF
+- authtype: Author
+  name: Garrido MI
+- authtype: Author
+  name: Mattingley JB
+epubdate: 2019 Feb 27
+fulljournalname: PLoS Biology
+issue: '2'
+pages: e2006812
+pmclivedate: 2019/04/02
+printpubdate: ''
+pubdate: 2019 Feb 27
+sortdate: 2019/02/27 00:00
+source: PLoS Biol
+title: Attention promotes the neural encoding of prediction errors
+uid: '6411367'
+volume: '17'

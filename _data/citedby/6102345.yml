@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '30154688'
+- idtype: doi
+  value: 10.3389/fnins.2018.00532
+- idtype: pmcid
+  value: PMC6102345
+authors:
+- authtype: Author
+  name: Huang N
+- authtype: Author
+  name: Slaney M
+- authtype: Author
+  name: Elhilali M
+epubdate: 2018 Aug 14
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '532'
+pmclivedate: 2018/08/28
+printpubdate: ''
+pubdate: 2018 Aug 14
+sortdate: 2018/08/14 00:00
+source: Front Neurosci
+title: Connecting Deep Neural Networks to Physical, Perceptual, and Electrophysiological
+  Auditory Signals
+uid: '6102345'
+volume: '12'

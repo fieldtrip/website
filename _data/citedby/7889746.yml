@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '32809852'
+- idtype: doi
+  value: 10.1080/15374416.2020.1796680
+- idtype: pmcid
+  value: PMC7889746
+- idtype: MID
+  value: NIHMS1617728
+authors:
+- authtype: Author
+  name: Furlong S
+- authtype: Author
+  name: Cohen JR
+- authtype: Author
+  name: Hopfinger J
+- authtype: Author
+  name: Snyder J
+- authtype: Author
+  name: Robertson MM
+- authtype: Author
+  name: Sheridan MA
+epubdate: 2020 Aug 18
+fulljournalname: 'Journal of clinical child and adolescent psychology : the official
+  journal for the Society of Clinical Child and Adolescent Psychology, American Psychological
+  Association, Division 53'
+issue: '6'
+pages: 746-762
+pmclivedate: ''
+printpubdate: 2021 Nov-Dec
+pubdate: 2020 Aug 18
+sortdate: 2020/08/18 00:00
+source: J Clin Child Adolesc Psychol
+title: Resting-state EEG connectivity in young children with ADHD
+uid: '7889746'
+volume: '50'

@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '33229572'
+- idtype: doi
+  value: 10.1073/pnas.2014868117
+- idtype: pmcid
+  value: PMC7733827
+authors:
+- authtype: Author
+  name: Bastos AM
+- authtype: Author
+  name: Lundqvist M
+- authtype: Author
+  name: Waite AS
+- authtype: Author
+  name: Kopell N
+- authtype: Author
+  name: Miller EK
+epubdate: 2020 Nov 23
+fulljournalname: Proceedings of the National Academy of Sciences of the United States
+  of America
+issue: '49'
+pages: 31459-31469
+pmclivedate: 2020/12/21
+printpubdate: 2020 Dec 8
+pubdate: 2020 Nov 23
+sortdate: 2020/11/23 00:00
+source: Proc Natl Acad Sci U S A
+title: Layer and rhythm specificity for predictive routing
+uid: '7733827'
+volume: '117'

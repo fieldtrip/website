@@ -1,0 +1,34 @@
+articleids:
+- idtype: pmid
+  value: '24967106'
+- idtype: doi
+  value: 10.1155/2014/436146
+- idtype: pmcid
+  value: PMC4055153
+authors:
+- authtype: Author
+  name: Schlee W
+- authtype: Author
+  name: Schecklmann M
+- authtype: Author
+  name: Lehner A
+- authtype: Author
+  name: Kreuzer PM
+- authtype: Author
+  name: Vielsmeier V
+- authtype: Author
+  name: Poeppl TB
+- authtype: Author
+  name: Langguth B
+epubdate: 2014 May 19
+fulljournalname: Neural Plasticity
+issue: ''
+pages: '436146'
+pmclivedate: 2014/06/25
+printpubdate: '2014'
+pubdate: 2014 May 19
+sortdate: 2014/05/19 00:00
+source: Neural Plast
+title: Reduced Variability of Auditory Alpha Activity in Chronic Tinnitus
+uid: '4055153'
+volume: '2014'

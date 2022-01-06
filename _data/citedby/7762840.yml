@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '32861789'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2020.117305
+- idtype: pmcid
+  value: PMC7762840
+authors:
+- authtype: Author
+  name: Noreika V
+- authtype: Author
+  name: Kamke MR
+- authtype: Author
+  name: Canales-Johnson A
+- authtype: Author
+  name: Chennu S
+- authtype: Author
+  name: Bekinschtein TA
+- authtype: Author
+  name: Mattingley JB
+epubdate: ''
+fulljournalname: Neuroimage
+issue: ''
+pages: '117305'
+pmclivedate: 2020/12/28
+printpubdate: 2020 Dec
+pubdate: 2020 Dec
+sortdate: 2020/12/01 00:00
+source: Neuroimage
+title: Alertness fluctuations when performing a task modulate cortical evoked responses
+  to transcranial magnetic stimulation
+uid: '7762840'
+volume: '223'

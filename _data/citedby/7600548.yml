@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '32992779'
+- idtype: doi
+  value: 10.3390/brainsci10100669
+- idtype: pmcid
+  value: PMC7600548
+authors:
+- authtype: Author
+  name: Maruyama Y
+- authtype: Author
+  name: Ogata Y
+- authtype: Author
+  name: Martínez-Tejada LA
+- authtype: Author
+  name: Koike Y
+- authtype: Author
+  name: Yoshimura N
+epubdate: 2020 Sep 25
+fulljournalname: Brain Sciences
+issue: '10'
+pages: '669'
+pmclivedate: 2020/11/01
+printpubdate: ''
+pubdate: 2020 Sep 25
+sortdate: 2020/09/25 00:00
+source: Brain Sci
+title: Independent Components of EEG Activity Correlating with Emotional State
+uid: '7600548'
+volume: '10'

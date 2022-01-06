@@ -1,0 +1,45 @@
+articleids:
+- idtype: pmid
+  value: '31494286'
+- idtype: doi
+  value: 10.1016/j.nbd.2019.104605
+- idtype: pmcid
+  value: PMC6764839
+- idtype: MID
+  value: EMS84379
+authors:
+- authtype: Author
+  name: Chen CC
+- authtype: Author
+  name: Yeh CH
+- authtype: Author
+  name: Chan HL
+- authtype: Author
+  name: Chang YJ
+- authtype: Author
+  name: Tu PH
+- authtype: Author
+  name: Yeh CH
+- authtype: Author
+  name: Lu CS
+- authtype: Author
+  name: Fischer P
+- authtype: Author
+  name: Tinkhauser G
+- authtype: Author
+  name: Tan H
+- authtype: Author
+  name: Brown P
+epubdate: 2019 Sep 5
+fulljournalname: Neurobiology of disease
+issue: ''
+pages: '104605'
+pmclivedate: 2019/09/27
+printpubdate: 2019 Sep 5
+pubdate: 2019 Sep 5
+sortdate: 2019/09/05 00:00
+source: Neurobiol Dis
+title: Subthalamic nucleus oscillations correlate with vulnerability to freezing of
+  gait in patients with Parkinson's disease
+uid: '6764839'
+volume: '132'

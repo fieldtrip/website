@@ -1,0 +1,34 @@
+articleids:
+- idtype: pmid
+  value: '24497013'
+- idtype: doi
+  value: 10.1002/hipo.22255
+- idtype: pmcid
+  value: PMC4028411
+authors:
+- authtype: Author
+  name: Kaplan R
+- authtype: Author
+  name: Bush D
+- authtype: Author
+  name: Bonnefond M
+- authtype: Author
+  name: Bandettini PA
+- authtype: Author
+  name: Barnes GR
+- authtype: Author
+  name: Doeller CF
+- authtype: Author
+  name: Burgess N
+epubdate: 2014 Feb 18
+fulljournalname: Hippocampus
+issue: '6'
+pages: 656-665
+pmclivedate: 2014/12/03
+printpubdate: 2014 Jun
+pubdate: 2014 Feb 18
+sortdate: 2014/02/18 00:00
+source: Hippocampus
+title: Medial prefrontal theta phase coupling during spatial memory retrieval
+uid: '4028411'
+volume: '24'

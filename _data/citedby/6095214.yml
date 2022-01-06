@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '30010843'
+- idtype: doi
+  value: 10.1093/cercor/bhy156
+- idtype: pmcid
+  value: PMC6095214
+authors:
+- authtype: Author
+  name: Bernasconi F
+- authtype: Author
+  name: Noel JP
+- authtype: Author
+  name: Park HD
+- authtype: Author
+  name: Faivre N
+- authtype: Author
+  name: Seeck M
+- authtype: Author
+  name: Spinelli L
+- authtype: Author
+  name: Schaller K
+- authtype: Author
+  name: Blanke O
+- authtype: Author
+  name: Serino A
+epubdate: 2018 Jul 12
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '9'
+pages: 3385-3397
+pmclivedate: 2018/08/22
+printpubdate: 2018 Sep
+pubdate: 2018 Jul 12
+sortdate: 2018/07/12 00:00
+source: Cereb Cortex
+title: 'Audio-Tactile and Peripersonal Space Processing Around the Trunk in Human
+  Parietal and Temporal Cortex: An Intracranial EEG Study'
+uid: '6095214'
+volume: '28'

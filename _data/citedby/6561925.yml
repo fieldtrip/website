@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '31189931'
+- idtype: doi
+  value: 10.1038/s41467-019-10581-7
+- idtype: pmcid
+  value: PMC6561925
+authors:
+- authtype: Author
+  name: Alekseichuk I
+- authtype: Author
+  name: Falchier AY
+- authtype: Author
+  name: Linn G
+- authtype: Author
+  name: Xu T
+- authtype: Author
+  name: Milham MP
+- authtype: Author
+  name: Schroeder CE
+- authtype: Author
+  name: Opitz A
+epubdate: 2019 Jun 12
+fulljournalname: Nature Communications
+issue: ''
+pages: '2573'
+pmclivedate: 2019/06/21
+printpubdate: ''
+pubdate: 2019 Jun 12
+sortdate: 2019/06/12 00:00
+source: Nat Commun
+title: Electric field dynamics in the brain during multi-electrode transcranial electric
+  stimulation
+uid: '6561925'
+volume: '10'

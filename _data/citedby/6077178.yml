@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '30094163'
+- idtype: doi
+  value: 10.1016/j.nicl.2018.05.028
+- idtype: pmcid
+  value: PMC6077178
+authors:
+- authtype: Author
+  name: Sitnikova TA
+- authtype: Author
+  name: Hughes JW
+- authtype: Author
+  name: Ahlfors SP
+- authtype: Author
+  name: Woolrich MW
+- authtype: Author
+  name: Salat DH
+epubdate: 2018 May 22
+fulljournalname: 'NeuroImage : Clinical'
+issue: ''
+pages: 128-152
+pmclivedate: 2018/08/09
+printpubdate: ''
+pubdate: 2018 May 22
+sortdate: 2018/05/22 00:00
+source: Neuroimage Clin
+title: Short timescale abnormalities in the states of spontaneous synchrony in the
+  functional neural networks in Alzheimer's disease
+uid: '6077178'
+volume: '20'

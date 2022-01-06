@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '29448077'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2018.01.035
+- idtype: pmcid
+  value: PMC5915520
+authors:
+- authtype: Author
+  name: de Cheveigné A
+- authtype: Author
+  name: Arzounian D
+epubdate: ''
+fulljournalname: Neuroimage
+issue: ''
+pages: 903-912
+pmclivedate: 2018/05/15
+printpubdate: 2018 May 15
+pubdate: 2018 May 15
+sortdate: 2018/05/15 00:00
+source: Neuroimage
+title: Robust detrending, rereferencing, outlier detection, and inpainting for multichannel
+  data
+uid: '5915520'
+volume: '172'

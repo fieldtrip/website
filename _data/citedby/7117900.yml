@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '32111697'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.2271-19.2020
+- idtype: pmcid
+  value: PMC7117900
+authors:
+- authtype: Author
+  name: Arana S
+- authtype: Author
+  name: Marquand A
+- authtype: Author
+  name: Hultén A
+- authtype: Author
+  name: Hagoort P
+- authtype: Author
+  name: Schoffelen JM
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '14'
+pages: 2914-2924
+pmclivedate: 2020/10/01
+printpubdate: 2020 Apr 1
+pubdate: 2020 Apr 1
+sortdate: 2020/04/01 00:00
+source: J Neurosci
+title: Sensory Modality-Independent Activation of the Brain Network for Language
+uid: '7117900'
+volume: '40'

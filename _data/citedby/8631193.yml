@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '34858150'
+- idtype: doi
+  value: 10.3389/fnhum.2021.695366
+- idtype: pmcid
+  value: PMC8631193
+authors:
+- authtype: Author
+  name: van Kordelaar J
+- authtype: Author
+  name: van de Ruit M
+- authtype: Author
+  name: Solis-Escalante T
+- authtype: Author
+  name: Aerden LA
+- authtype: Author
+  name: Meskers CG
+- authtype: Author
+  name: van Wegen EE
+- authtype: Author
+  name: Schouten AC
+- authtype: Author
+  name: Kwakkel G
+- authtype: Author
+  name: van der Helm FC
+epubdate: 2021 Nov 9
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '695366'
+pmclivedate: 2021/12/01
+printpubdate: ''
+pubdate: 2021 Nov 9
+sortdate: 2021/11/09 00:00
+source: Front Hum Neurosci
+title: The Cortical Response Evoked by Robotic Wrist Perturbations Reflects Level
+  of Proprioceptive Impairment After Stroke
+uid: '8631193'
+volume: '15'

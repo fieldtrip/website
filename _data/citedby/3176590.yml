@@ -1,0 +1,24 @@
+articleids:
+- idtype: pmid
+  value: '21960979'
+- idtype: doi
+  value: 10.3389/fpsyg.2011.00219
+- idtype: pmcid
+  value: PMC3176590
+authors:
+- authtype: Author
+  name: Davidson DJ
+- authtype: Author
+  name: Indefrey P
+epubdate: 2011 Sep 20
+fulljournalname: Frontiers in Psychology
+issue: ''
+pages: '219'
+pmclivedate: 2011/09/29
+printpubdate: ''
+pubdate: 2011 Sep 20
+sortdate: 2011/09/20 00:00
+source: Front Psychol
+title: Error-Related Activity and Correlates of Grammatical                     Plasticity
+uid: '3176590'
+volume: '2'

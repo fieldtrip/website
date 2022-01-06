@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '28597185'
+- idtype: doi
+  value: 10.1007/s10803-017-3191-4
+- idtype: pmcid
+  value: PMC5880549
+- idtype: MID
+  value: NIHMS951980
+authors:
+- authtype: Author
+  name: Simon DM
+- authtype: Author
+  name: Damiano CR
+- authtype: Author
+  name: Woynaroski TG
+- authtype: Author
+  name: Ibañez LV
+- authtype: Author
+  name: Murias M
+- authtype: Author
+  name: Stone WL
+- authtype: Author
+  name: Wallace MT
+- authtype: Author
+  name: Cascio CJ
+epubdate: ''
+fulljournalname: Journal of autism and developmental disorders
+issue: '9'
+pages: 2710-2722
+pmclivedate: 2018/04/02
+printpubdate: 2017 Sep
+pubdate: 2017 Sep
+sortdate: 2017/09/01 00:00
+source: J Autism Dev Disord
+title: Neural Correlates of Sensory Hyporesponsiveness in Toddlers at High Risk for
+  Autism Spectrum Disorder
+uid: '5880549'
+volume: '47'

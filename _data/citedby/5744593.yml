@@ -1,0 +1,50 @@
+articleids:
+- idtype: pmid
+  value: '28844526'
+- idtype: doi
+  value: 10.1016/j.neuron.2017.08.012
+- idtype: pmcid
+  value: PMC5744593
+- idtype: MID
+  value: NIHMS902038
+authors:
+- authtype: Author
+  name: Caruso L
+- authtype: Author
+  name: Wunderle T
+- authtype: Author
+  name: Lewis CM
+- authtype: Author
+  name: Valadeiro J
+- authtype: Author
+  name: Trauchessec V
+- authtype: Author
+  name: Rosillo JT
+- authtype: Author
+  name: Amaral JP
+- authtype: Author
+  name: Ni J
+- authtype: Author
+  name: Jendritza P
+- authtype: Author
+  name: Fermon C
+- authtype: Author
+  name: Cardoso S
+- authtype: Author
+  name: Freitas PP
+- authtype: Author
+  name: Fries P
+- authtype: Author
+  name: Pannetier-Lecoeur M
+epubdate: 2017 Aug 30
+fulljournalname: Neuron
+issue: '6'
+pages: 1283-1291.e4
+pmclivedate: 2018/09/13
+printpubdate: 2017 Sep 13
+pubdate: 2017 Aug 30
+sortdate: 2017/08/30 00:00
+source: Neuron
+title: In vivo magnetic recording of neuronal activity
+uid: '5744593'
+volume: '95'

@@ -1,0 +1,24 @@
+articleids:
+- idtype: pmid
+  value: '26108954'
+- idtype: doi
+  value: 10.1152/jn.00427.2015
+- idtype: pmcid
+  value: PMC4556847
+authors:
+- authtype: Author
+  name: Snyder AC
+- authtype: Author
+  name: Smith MA
+epubdate: 2015 Jun 24
+fulljournalname: Journal of Neurophysiology
+issue: '3'
+pages: 1468-1482
+pmclivedate: 2016/09/01
+printpubdate: 2015 Sep
+pubdate: 2015 Jun 24
+sortdate: 2015/06/24 00:00
+source: J Neurophysiol
+title: Stimulus-dependent spiking relationships with the EEG
+uid: '4556847'
+volume: '114'

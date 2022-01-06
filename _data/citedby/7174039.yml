@@ -1,0 +1,38 @@
+articleids:
+- idtype: pmid
+  value: '32236540'
+- idtype: doi
+  value: 10.1093/brain/awaa035
+- idtype: pmcid
+  value: PMC7174039
+authors:
+- authtype: Author
+  name: Adams RA
+- authtype: Author
+  name: Bush D
+- authtype: Author
+  name: Zheng F
+- authtype: Author
+  name: Meyer SS
+- authtype: Author
+  name: Kaplan R
+- authtype: Author
+  name: Orfanos S
+- authtype: Author
+  name: Marques TR
+- authtype: Author
+  name: Howes OD
+- authtype: Author
+  name: Burgess N
+epubdate: 2020 Apr 1
+fulljournalname: Brain
+issue: '4'
+pages: 1261-1277
+pmclivedate: 2020/04/27
+printpubdate: 2020 Apr
+pubdate: 2020 Apr 1
+sortdate: 2020/04/01 00:00
+source: Brain
+title: Impaired theta phase coupling underlies frontotemporal dysconnectivity in schizophrenia
+uid: '7174039'
+volume: '143'

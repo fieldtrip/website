@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '34354144'
+- idtype: doi
+  value: 10.1038/s41598-021-95292-0
+- idtype: pmcid
+  value: PMC8342500
+authors:
+- authtype: Author
+  name: Beyersmann E
+- authtype: Author
+  name: Montani V
+- authtype: Author
+  name: Ziegler JC
+- authtype: Author
+  name: Grainger J
+- authtype: Author
+  name: Stoianov IP
+epubdate: 2021 Aug 5
+fulljournalname: Scientific Reports
+issue: ''
+pages: '15919'
+pmclivedate: 2021/08/06
+printpubdate: ''
+pubdate: 2021 Aug 5
+sortdate: 2021/08/05 00:00
+source: Sci Rep
+title: 'The dynamics of reading complex words: evidence from steady-state visual evoked
+  potentials'
+uid: '8342500'
+volume: '11'

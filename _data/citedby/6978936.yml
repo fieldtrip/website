@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '31699888'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1308-19.2019
+- idtype: pmcid
+  value: PMC6978936
+authors:
+- authtype: Author
+  name: Sedley W
+- authtype: Author
+  name: Alter K
+- authtype: Author
+  name: Gander PE
+- authtype: Author
+  name: Berger J
+- authtype: Author
+  name: Griffiths TD
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '50'
+pages: 10096-10103
+pmclivedate: 2020/01/24
+printpubdate: 2019 Dec 11
+pubdate: 2019 Dec 11
+sortdate: 2019/12/11 00:00
+source: J Neurosci
+title: Exposing Pathological Sensory Predictions in Tinnitus Using Auditory Intensity
+  Deviant Evoked Responses
+uid: '6978936'
+volume: '39'

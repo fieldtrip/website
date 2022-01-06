@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '26528179'
+- idtype: doi
+  value: 10.3389/fnagi.2015.00193
+- idtype: pmcid
+  value: PMC4602091
+authors:
+- authtype: Author
+  name: Bönstrup M
+- authtype: Author
+  name: Hagemann J
+- authtype: Author
+  name: Gerloff C
+- authtype: Author
+  name: Sauseng P
+- authtype: Author
+  name: Hummel FC
+epubdate: 2015 Oct 13
+fulljournalname: Frontiers in Aging Neuroscience
+issue: ''
+pages: '193'
+pmclivedate: 2015/11/02
+printpubdate: ''
+pubdate: 2015 Oct 13
+sortdate: 2015/10/13 00:00
+source: Front Aging Neurosci
+title: Alpha oscillatory correlates of motor inhibition in the aged brain
+uid: '4602091'
+volume: '7'

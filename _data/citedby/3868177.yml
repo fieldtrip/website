@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '24363975'
+- idtype: doi
+  value: 10.1002/brb3.184
+- idtype: pmcid
+  value: PMC3868177
+authors:
+- authtype: Author
+  name: van Hoogmoed AH
+- authtype: Author
+  name: van den Brink D
+- authtype: Author
+  name: Janzen G
+epubdate: 2013 Oct 11
+fulljournalname: Brain and Behavior
+issue: '6'
+pages: 729-737
+pmclivedate: 2013/12/20
+printpubdate: 2013 Nov
+pubdate: 2013 Oct 11
+sortdate: 2013/10/11 00:00
+source: Brain Behav
+title: 'Infants'' object location and identity processing in spatial scenes: an ERP
+  study'
+uid: '3868177'
+volume: '3'

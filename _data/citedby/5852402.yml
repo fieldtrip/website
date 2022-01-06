@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '29568260'
+- idtype: doi
+  value: 10.3389/fnins.2018.00143
+- idtype: pmcid
+  value: PMC5852402
+authors:
+- authtype: Author
+  name: Wong AS
+- authtype: Author
+  name: Cooper PS
+- authtype: Author
+  name: Conley AC
+- authtype: Author
+  name: McKewen M
+- authtype: Author
+  name: Fulham WR
+- authtype: Author
+  name: Michie PT
+- authtype: Author
+  name: Karayanidis F
+epubdate: 2018 Mar 8
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '143'
+pmclivedate: 2018/03/22
+printpubdate: ''
+pubdate: 2018 Mar 8
+sortdate: 2018/03/08 00:00
+source: Front Neurosci
+title: Event-Related Potential Responses to Task Switching Are Sensitive to Choice
+  of Spatial Filter
+uid: '5852402'
+volume: '12'

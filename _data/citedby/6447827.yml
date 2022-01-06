@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '30984081'
+- idtype: doi
+  value: 10.3389/fpsyg.2019.00681
+- idtype: pmcid
+  value: PMC6447827
+authors:
+- authtype: Author
+  name: Silva S
+- authtype: Author
+  name: Vigário M
+- authtype: Author
+  name: Fernandez BL
+- authtype: Author
+  name: Jerónimo R
+- authtype: Author
+  name: Alter K
+- authtype: Author
+  name: Frota S
+epubdate: 2019 Mar 28
+fulljournalname: Frontiers in Psychology
+issue: ''
+pages: '681'
+pmclivedate: 2019/04/12
+printpubdate: ''
+pubdate: 2019 Mar 28
+sortdate: 2019/03/28 00:00
+source: Front Psychol
+title: 'The Sense of Sounds: Brain Responses to Phonotactic Frequency, Phonological
+  Grammar and Lexical Meaning'
+uid: '6447827'
+volume: '10'

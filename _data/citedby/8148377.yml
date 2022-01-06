@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '33737245'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2021.117894
+- idtype: pmcid
+  value: PMC8148377
+- idtype: MID
+  value: NIHMS1693002
+authors:
+- authtype: Author
+  name: Chaumon M
+- authtype: Author
+  name: Puce A
+- authtype: Author
+  name: George N
+epubdate: 2021 Mar 16
+fulljournalname: NeuroImage
+issue: ''
+pages: '117894'
+pmclivedate: 2021/06/01
+printpubdate: 2021 Jun
+pubdate: 2021 Mar 16
+sortdate: 2021/03/16 00:00
+source: Neuroimage
+title: 'Statistical power: implications for planning MEG studies'
+uid: '8148377'
+volume: '233'

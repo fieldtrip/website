@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '32808721'
+- idtype: doi
+  value: 10.1002/hbm.25166
+- idtype: pmcid
+  value: PMC7643362
+authors:
+- authtype: Author
+  name: He Y
+- authtype: Author
+  name: Luell S
+- authtype: Author
+  name: Muralikrishnan R
+- authtype: Author
+  name: Straube B
+- authtype: Author
+  name: Nagels A
+epubdate: 2020 Aug 18
+fulljournalname: Human Brain Mapping
+issue: '17'
+pages: 4901-4911
+pmclivedate: 2020/11/13
+printpubdate: ''
+pubdate: 2020 Aug 18
+sortdate: 2020/08/18 00:00
+source: Hum Brain Mapp
+title: Gesture's body orientation modulates the N400 for visual sentences primed by
+  gestures
+uid: '7643362'
+volume: '41'

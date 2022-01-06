@@ -1,0 +1,40 @@
+articleids:
+- idtype: pmid
+  value: '31110195'
+- idtype: doi
+  value: 10.1038/s41598-019-43956-3
+- idtype: pmcid
+  value: PMC6527710
+authors:
+- authtype: Author
+  name: Papale P
+- authtype: Author
+  name: Betta M
+- authtype: Author
+  name: Handjaras G
+- authtype: Author
+  name: Malfatti G
+- authtype: Author
+  name: Cecchetti L
+- authtype: Author
+  name: Rampinini A
+- authtype: Author
+  name: Pietrini P
+- authtype: Author
+  name: Ricciardi E
+- authtype: Author
+  name: Turella L
+- authtype: Author
+  name: Leo A
+epubdate: 2019 May 20
+fulljournalname: Scientific Reports
+issue: ''
+pages: '7601'
+pmclivedate: 2019/05/30
+printpubdate: ''
+pubdate: 2019 May 20
+sortdate: 2019/05/20 00:00
+source: Sci Rep
+title: Common spatiotemporal processing of visual features shapes object representation
+uid: '6527710'
+volume: '9'

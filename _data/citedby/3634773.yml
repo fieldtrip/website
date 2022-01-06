@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '23638169'
+- idtype: doi
+  value: 10.1371/journal.pone.0062944
+- idtype: pmcid
+  value: PMC3634773
+authors:
+- authtype: Author
+  name: Lawhern V
+- authtype: Author
+  name: Hairston WD
+- authtype: Author
+  name: Robbins K
+epubdate: 2013 Apr 24
+fulljournalname: PLoS ONE
+issue: '4'
+pages: e62944
+pmclivedate: 2013/05/01
+printpubdate: ''
+pubdate: 2013 Apr 24
+sortdate: 2013/04/24 00:00
+source: PLoS One
+title: 'DETECT: A MATLAB Toolbox for Event Detection and Identification in Time Series,
+  with Applications to Artifact Detection in EEG Signals'
+uid: '3634773'
+volume: '8'

@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '29997567'
+- idtype: doi
+  value: 10.3389/fneur.2018.00494
+- idtype: pmcid
+  value: PMC6028596
+authors:
+- authtype: Author
+  name: da Costa L
+- authtype: Author
+  name: Shah-Basak PP
+- authtype: Author
+  name: Dunkley BT
+- authtype: Author
+  name: Robertson AD
+- authtype: Author
+  name: Pang EW
+epubdate: 2018 Jun 26
+fulljournalname: Frontiers in Neurology
+issue: ''
+pages: '494'
+pmclivedate: 2018/07/11
+printpubdate: ''
+pubdate: 2018 Jun 26
+sortdate: 2018/06/26 00:00
+source: Front Neurol
+title: Visual Working Memory Encoding and Recognition in Good Outcome Aneurysmal Subarachnoid
+  Patients
+uid: '6028596'
+volume: '9'

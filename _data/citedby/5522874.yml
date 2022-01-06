@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '28790903'
+- idtype: doi
+  value: 10.3389/fnhum.2017.00371
+- idtype: pmcid
+  value: PMC5522874
+authors:
+- authtype: Author
+  name: Sörös P
+- authtype: Author
+  name: Doñamayor N
+- authtype: Author
+  name: Wittke C
+- authtype: Author
+  name: Al-Khaled M
+- authtype: Author
+  name: Brüggemann N
+- authtype: Author
+  name: Münte TF
+epubdate: 2017 Jul 24
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '371'
+pmclivedate: 2017/08/08
+printpubdate: ''
+pubdate: 2017 Jul 24
+sortdate: 2017/07/24 00:00
+source: Front Hum Neurosci
+title: Increase in Beta-Band Activity during Preparation for Overt Speech in Patients
+  with Parkinson’s Disease
+uid: '5522874'
+volume: '11'

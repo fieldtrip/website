@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '32131459'
+- idtype: doi
+  value: 10.3390/bioengineering7010023
+- idtype: pmcid
+  value: PMC7175366
+authors:
+- authtype: Author
+  name: Bianco MG
+- authtype: Author
+  name: Pullano SA
+- authtype: Author
+  name: Citraro R
+- authtype: Author
+  name: Russo E
+- authtype: Author
+  name: De Sarro G
+- authtype: Author
+  name: de Villers Sidani E
+- authtype: Author
+  name: Fiorillo AS
+epubdate: 2020 Mar 2
+fulljournalname: Bioengineering
+issue: '1'
+pages: '23'
+pmclivedate: 2020/04/28
+printpubdate: ''
+pubdate: 2020 Mar 2
+sortdate: 2020/03/02 00:00
+source: Bioengineering (Basel)
+title: Neural Modulation of the Primary Auditory Cortex by Intracortical Microstimulation
+  with a Bio-Inspired Electronic System
+uid: '7175366'
+volume: '7'

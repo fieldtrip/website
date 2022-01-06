@@ -1,0 +1,34 @@
+articleids:
+- idtype: pmid
+  value: '34496023'
+- idtype: doi
+  value: 10.1162/jocn_a_01744
+- idtype: pmcid
+  value: PMC8428964
+authors:
+- authtype: Author
+  name: Vo KD
+- authtype: Author
+  name: Siqi-Liu A
+- authtype: Author
+  name: Chaire A
+- authtype: Author
+  name: Li S
+- authtype: Author
+  name: Demeter E
+- authtype: Author
+  name: Egner T
+- authtype: Author
+  name: Woldorff MG
+epubdate: 2021 Sep 1
+fulljournalname: Journal of Cognitive Neuroscience
+issue: '10'
+pages: 2079-2092
+pmclivedate: 2021/12/01
+printpubdate: ''
+pubdate: 2021 Sep 1
+sortdate: 2021/09/01 00:00
+source: J Cogn Neurosci
+title: Neural Dynamics of Conflict Control in Working Memory
+uid: '8428964'
+volume: '33'

@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '25057201'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.4861-13.2014
+- idtype: pmcid
+  value: PMC6608308
+authors:
+- authtype: Author
+  name: Wittekindt A
+- authtype: Author
+  name: Kaiser J
+- authtype: Author
+  name: Abel C
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '30'
+pages: 9995-10002
+pmclivedate: 2019/07/10
+printpubdate: 2014 Jul 23
+pubdate: 2014 Jul 23
+sortdate: 2014/07/23 00:00
+source: J Neurosci
+title: 'Attentional Modulation of the Inner Ear: A Combined Otoacoustic Emission and
+  EEG Study'
+uid: '6608308'
+volume: '34'

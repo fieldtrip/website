@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '27804033'
+- idtype: doi
+  value: 10.3758/s13414-016-1224-2
+- idtype: pmcid
+  value: PMC5539401
+- idtype: MID
+  value: NIHMS886287
+authors:
+- authtype: Author
+  name: Reinhart RM
+- authtype: Author
+  name: Cosman JD
+- authtype: Author
+  name: Fukuda K
+- authtype: Author
+  name: Woodman GF
+epubdate: ''
+fulljournalname: Attention, perception & psychophysics
+issue: '1'
+pages: 3-23
+pmclivedate: 2017/08/02
+printpubdate: 2017 Jan
+pubdate: 2017 Jan
+sortdate: 2017/01/01 00:00
+source: Atten Percept Psychophys
+title: Using transcranial direct-current stimulation (tDCS) to understand cognitive
+  processing
+uid: '5539401'
+volume: '79'

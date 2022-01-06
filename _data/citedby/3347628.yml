@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '22586390'
+- idtype: doi
+  value: 10.3389/fnhum.2012.00127
+- idtype: pmcid
+  value: PMC3347628
+authors:
+- authtype: Author
+  name: Nenert R
+- authtype: Author
+  name: Viswanathan S
+- authtype: Author
+  name: Dubuc DM
+- authtype: Author
+  name: Visscher KM
+epubdate: 2012 May 8
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '127'
+pmclivedate: 2012/05/14
+printpubdate: ''
+pubdate: 2012 May 8
+sortdate: 2012/05/08 00:00
+source: Front Hum Neurosci
+title: Modulations of ongoing alpha oscillations predict successful short-term visual
+  memory encoding
+uid: '3347628'
+volume: '6'

@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '30854728'
+- idtype: doi
+  value: 10.1002/hbm.24556
+- idtype: pmcid
+  value: PMC6865460
+authors:
+- authtype: Author
+  name: Pellegrino G
+- authtype: Author
+  name: Arcara G
+- authtype: Author
+  name: Di Pino G
+- authtype: Author
+  name: Turco C
+- authtype: Author
+  name: Maran M
+- authtype: Author
+  name: Weis L
+- authtype: Author
+  name: Piccione F
+- authtype: Author
+  name: Siebner HR
+epubdate: 2019 Mar 10
+fulljournalname: Human Brain Mapping
+issue: '9'
+pages: 2736-2746
+pmclivedate: 2020/06/12
+printpubdate: ''
+pubdate: 2019 Mar 10
+sortdate: 2019/03/10 00:00
+source: Hum Brain Mapp
+title: Transcranial direct current stimulation over the sensory‐motor regions inhibits
+  gamma synchrony
+uid: '6865460'
+volume: '40'

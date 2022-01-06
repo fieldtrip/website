@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '29737585'
+- idtype: doi
+  value: 10.1111/ejn.13935
+- idtype: pmcid
+  value: PMC6220955
+authors:
+- authtype: Author
+  name: Keitel C
+- authtype: Author
+  name: Benwell CS
+- authtype: Author
+  name: Thut G
+- authtype: Author
+  name: Gross J
+epubdate: 2018 Aug 3
+fulljournalname: The European Journal of Neuroscience
+issue: '7'
+pages: 2551-2565
+pmclivedate: 2018/11/15
+printpubdate: 2018 Oct
+pubdate: 2018 Aug 3
+sortdate: 2018/08/03 00:00
+source: Eur J Neurosci
+title: No changes in parieto‐occipital alpha during neural phase locking to visual
+  quasi‐periodic theta‐, alpha‐, and beta‐band stimulation
+uid: '6220955'
+volume: '48'

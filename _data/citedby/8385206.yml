@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '34456697'
+- idtype: doi
+  value: 10.3389/fnhum.2021.702768
+- idtype: pmcid
+  value: PMC8385206
+authors:
+- authtype: Author
+  name: Sokoliuk R
+- authtype: Author
+  name: Degano G
+- authtype: Author
+  name: Melloni L
+- authtype: Author
+  name: Noppeney U
+- authtype: Author
+  name: Cruse D
+epubdate: 2021 Aug 11
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '702768'
+pmclivedate: 2021/08/26
+printpubdate: ''
+pubdate: 2021 Aug 11
+sortdate: 2021/08/11 00:00
+source: Front Hum Neurosci
+title: 'The Influence of Auditory Attention on Rhythmic Speech Tracking: Implications
+  for Studies of Unresponsive Patients'
+uid: '8385206'
+volume: '15'

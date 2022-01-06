@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '33166291'
+- idtype: doi
+  value: 10.1371/journal.pone.0232562
+- idtype: pmcid
+  value: PMC7652350
+authors:
+- authtype: Author
+  name: Opitz B
+- authtype: Author
+  name: Brady D
+- authtype: Author
+  name: Leonard HC
+epubdate: 2020 Nov 9
+fulljournalname: PLoS ONE
+issue: '11'
+pages: e0232562
+pmclivedate: 2020/11/18
+printpubdate: ''
+pubdate: 2020 Nov 9
+sortdate: 2020/11/09 00:00
+source: PLoS One
+title: Motor and non-motor sequence prediction is equally affected in children with
+  developmental coordination disorder
+uid: '7652350'
+volume: '15'

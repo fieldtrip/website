@@ -1,0 +1,42 @@
+articleids:
+- idtype: pmid
+  value: '29081745'
+- idtype: doi
+  value: 10.3389/fnagi.2017.00304
+- idtype: pmcid
+  value: PMC5646353
+authors:
+- authtype: Author
+  name: Michels L
+- authtype: Author
+  name: Muthuraman M
+- authtype: Author
+  name: Anwar AR
+- authtype: Author
+  name: Kollias S
+- authtype: Author
+  name: Leh SE
+- authtype: Author
+  name: Riese F
+- authtype: Author
+  name: Unschuld PG
+- authtype: Author
+  name: Siniatchkin M
+- authtype: Author
+  name: Gietl AF
+- authtype: Author
+  name: Hock C
+epubdate: 2017 Sep 20
+fulljournalname: Frontiers in Aging Neuroscience
+issue: ''
+pages: '304'
+pmclivedate: 2017/10/27
+printpubdate: ''
+pubdate: 2017 Sep 20
+sortdate: 2017/09/20 00:00
+source: Front Aging Neurosci
+title: Changes of Functional and Directed Resting-State Connectivity Are Associated
+  with Neuronal Oscillations, ApoE Genotype and Amyloid Deposition in Mild Cognitive
+  Impairment
+uid: '5646353'
+volume: '9'

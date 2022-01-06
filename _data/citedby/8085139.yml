@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '33927204'
+- idtype: doi
+  value: 10.1038/s41597-021-00899-7
+- idtype: pmcid
+  value: PMC8085139
+authors:
+- authtype: Author
+  name: Rathee D
+- authtype: Author
+  name: Raza H
+- authtype: Author
+  name: Roy S
+- authtype: Author
+  name: Prasad G
+epubdate: 2021 Apr 29
+fulljournalname: Scientific Data
+issue: ''
+pages: '120'
+pmclivedate: 2021/05/05
+printpubdate: ''
+pubdate: 2021 Apr 29
+sortdate: 2021/04/29 00:00
+source: Sci Data
+title: A magnetoencephalography dataset for motor and cognitive imagery-based brain-computer
+  interface
+uid: '8085139'
+volume: '8'

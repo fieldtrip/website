@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '26074838'
+- idtype: doi
+  value: 10.3389/fpsyg.2015.00667
+- idtype: pmcid
+  value: PMC4443255
+authors:
+- authtype: Author
+  name: Van Den Boomen C
+- authtype: Author
+  name: Fahrenfort JJ
+- authtype: Author
+  name: Snijders TM
+- authtype: Author
+  name: Kemner C
+epubdate: 2015 May 26
+fulljournalname: Frontiers in Psychology
+issue: ''
+pages: '667'
+pmclivedate: 2015/06/12
+printpubdate: ''
+pubdate: 2015 May 26
+sortdate: 2015/05/26 00:00
+source: Front Psychol
+title: Segmentation precedes face categorization under suboptimal conditions
+uid: '4443255'
+volume: '6'

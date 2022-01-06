@@ -1,0 +1,24 @@
+articleids:
+- idtype: pmid
+  value: '31761952'
+- idtype: doi
+  value: 10.1093/cercor/bhz263
+- idtype: pmcid
+  value: PMC7174990
+authors:
+- authtype: Author
+  name: Teng X
+- authtype: Author
+  name: Poeppel D
+epubdate: 2019 Nov 25
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '4'
+pages: 2600-2614
+pmclivedate: 2021/04/14
+printpubdate: 2020 Apr
+pubdate: 2019 Nov 25
+sortdate: 2019/11/25 00:00
+source: Cereb Cortex
+title: Theta and Gamma Bands Encode Acoustic Dynamics over Wide-Ranging Timescales
+uid: '7174990'
+volume: '30'

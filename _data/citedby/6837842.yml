@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '31697640'
+- idtype: doi
+  value: 10.7554/eLife.48404
+- idtype: pmcid
+  value: PMC6837842
+authors:
+- authtype: Author
+  name: Pflug A
+- authtype: Author
+  name: Gompf F
+- authtype: Author
+  name: Muthuraman M
+- authtype: Author
+  name: Groppa S
+- authtype: Author
+  name: Kell CA
+epubdate: 2019 Nov 7
+fulljournalname: eLife
+issue: ''
+pages: e48404
+pmclivedate: 2019/11/12
+printpubdate: ''
+pubdate: 2019 Nov 7
+sortdate: 2019/11/07 00:00
+source: eLife
+title: Differential contributions of the two human cerebral hemispheres to action
+  timing
+uid: '6837842'
+volume: '8'

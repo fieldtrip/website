@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '33556880'
+- idtype: doi
+  value: 10.1016/j.dcn.2021.100926
+- idtype: pmcid
+  value: PMC7868631
+authors:
+- authtype: Author
+  name: Sommer VR
+- authtype: Author
+  name: Mount L
+- authtype: Author
+  name: Weigelt S
+- authtype: Author
+  name: Werkle-Bergner M
+- authtype: Author
+  name: Sander MC
+epubdate: 2021 Jan 27
+fulljournalname: Developmental Cognitive Neuroscience
+issue: ''
+pages: '100926'
+pmclivedate: 2021/02/16
+printpubdate: ''
+pubdate: 2021 Jan 27
+sortdate: 2021/01/27 00:00
+source: Dev Cogn Neurosci
+title: Memory specificity is linked to repetition effects in event-related potentials
+  across the lifespan
+uid: '7868631'
+volume: '48'

@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '33967720'
+- idtype: doi
+  value: 10.3389/fnhum.2021.626406
+- idtype: pmcid
+  value: PMC8102793
+authors:
+- authtype: Author
+  name: Ghazi TR
+- authtype: Author
+  name: Blacker KJ
+- authtype: Author
+  name: Hinault TT
+- authtype: Author
+  name: Courtney SM
+epubdate: 2021 Apr 23
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '626406'
+pmclivedate: 2021/05/08
+printpubdate: ''
+pubdate: 2021 Apr 23
+sortdate: 2021/04/23 00:00
+source: Front Hum Neurosci
+title: Modulation of Peak Alpha Frequency Oscillations During Working Memory Is Greater
+  in Females Than Males
+uid: '8102793'
+volume: '15'

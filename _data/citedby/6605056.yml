@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '30979537'
+- idtype: doi
+  value: 10.1016/j.neuron.2019.03.025
+- idtype: pmcid
+  value: PMC6605056
+- idtype: MID
+  value: NIHMS1027369
+authors:
+- authtype: Author
+  name: Zheng J
+- authtype: Author
+  name: Stevenson RF
+- authtype: Author
+  name: Mander BA
+- authtype: Author
+  name: Mnatsakanyan L
+- authtype: Author
+  name: Hsu FP
+- authtype: Author
+  name: Vadera S
+- authtype: Author
+  name: Knight RT
+- authtype: Author
+  name: Yassa MA
+- authtype: Author
+  name: Lin JJ
+epubdate: 2019 Apr 9
+fulljournalname: Neuron
+issue: '4'
+pages: 887-898.e5
+pmclivedate: 2019/07/02
+printpubdate: 2019 May 22
+pubdate: 2019 Apr 9
+sortdate: 2019/04/09 00:00
+source: Neuron
+title: Multiplexing of Theta and Alpha Rhythms in the Amygdala-Hippocampal Circuit
+  Supports Pattern Separation of Emotional Information
+uid: '6605056'
+volume: '102'

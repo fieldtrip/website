@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '23825422'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0114-13.2013
+- idtype: pmcid
+  value: PMC3718380
+authors:
+- authtype: Author
+  name: Chennu S
+- authtype: Author
+  name: Noreika V
+- authtype: Author
+  name: Gueorguiev D
+- authtype: Author
+  name: Blenkmann A
+- authtype: Author
+  name: Kochen S
+- authtype: Author
+  name: Ibáñez A
+- authtype: Author
+  name: Owen AM
+- authtype: Author
+  name: Bekinschtein TA
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '27'
+pages: 11194-11205
+pmclivedate: 2014/01/03
+printpubdate: 2013 Jul 3
+pubdate: 2013 Jul 3
+sortdate: 2013/07/03 00:00
+source: J Neurosci
+title: Expectation and Attention in Hierarchical Auditory Prediction
+uid: '3718380'
+volume: '33'

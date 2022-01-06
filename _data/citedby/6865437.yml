@@ -1,0 +1,42 @@
+articleids:
+- idtype: pmid
+  value: '31361073'
+- idtype: doi
+  value: 10.1002/hbm.24737
+- idtype: pmcid
+  value: PMC6865437
+authors:
+- authtype: Author
+  name: Van Schependom J
+- authtype: Author
+  name: Vidaurre D
+- authtype: Author
+  name: Costers L
+- authtype: Author
+  name: Sjøgård M
+- authtype: Author
+  name: D'hooghe MB
+- authtype: Author
+  name: D'haeseleer M
+- authtype: Author
+  name: Wens V
+- authtype: Author
+  name: De Tiège X
+- authtype: Author
+  name: Goldman S
+- authtype: Author
+  name: Woolrich M
+- authtype: Author
+  name: Nagels G
+epubdate: 2019 Jul 30
+fulljournalname: Human Brain Mapping
+issue: '16'
+pages: 4789-4800
+pmclivedate: 2020/06/12
+printpubdate: ''
+pubdate: 2019 Jul 30
+sortdate: 2019/07/30 00:00
+source: Hum Brain Mapp
+title: 'Altered transient brain dynamics in multiple sclerosis: Treatment or pathology?'
+uid: '6865437'
+volume: '40'

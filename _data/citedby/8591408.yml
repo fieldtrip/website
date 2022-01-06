@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '34537384'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2021.118573
+- idtype: pmcid
+  value: PMC8591408
+authors:
+- authtype: Author
+  name: Rakowska M
+- authtype: Author
+  name: Abdellahi ME
+- authtype: Author
+  name: Bagrowska P
+- authtype: Author
+  name: Navarrete M
+- authtype: Author
+  name: Lewis PA
+epubdate: ''
+fulljournalname: Neuroimage
+issue: ''
+pages: '118573'
+pmclivedate: 2021/12/01
+printpubdate: 2021 Dec 1
+pubdate: 2021 Dec 1
+sortdate: 2021/12/01 00:00
+source: Neuroimage
+title: Long term effects of cueing procedural memory reactivation during NREM sleep
+uid: '8591408'
+volume: '244'

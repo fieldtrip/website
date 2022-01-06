@@ -1,0 +1,47 @@
+articleids:
+- idtype: pmid
+  value: '33936964'
+- idtype: doi
+  value: 10.21037/qims-20-624
+- idtype: pmcid
+  value: PMC8047359
+authors:
+- authtype: Author
+  name: Mo J
+- authtype: Author
+  name: Zhao B
+- authtype: Author
+  name: Adler S
+- authtype: Author
+  name: Zhang J
+- authtype: Author
+  name: Shao X
+- authtype: Author
+  name: Ma Y
+- authtype: Author
+  name: Sang L
+- authtype: Author
+  name: Hu W
+- authtype: Author
+  name: Zhang C
+- authtype: Author
+  name: Wang Y
+- authtype: Author
+  name: Wang X
+- authtype: Author
+  name: Liu C
+- authtype: Author
+  name: Zhang K
+epubdate: ''
+fulljournalname: Quantitative Imaging in Medicine and Surgery
+issue: '5'
+pages: 1782-1795
+pmclivedate: 2021/05/01
+printpubdate: 2021 May
+pubdate: 2021 May
+sortdate: 2021/05/01 00:00
+source: Quant Imaging Med Surg
+title: Quantitative assessment of structural and functional changes in temporal lobe
+  epilepsy with hippocampal sclerosis
+uid: '8047359'
+volume: '11'

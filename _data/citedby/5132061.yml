@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '26503502'
+- idtype: doi
+  value: 10.1002/hbm.22995
+- idtype: pmcid
+  value: PMC5132061
+authors:
+- authtype: Author
+  name: Garcés P
+- authtype: Author
+  name: Pereda E
+- authtype: Author
+  name: Hernández‐Tamames JA
+- authtype: Author
+  name: Del‐Pozo F
+- authtype: Author
+  name: Maestú F
+- authtype: Author
+  name: Ángel Pineda‐Pardo J
+epubdate: 2015 Oct 27
+fulljournalname: Human Brain Mapping
+issue: '1'
+pages: 20-34
+pmclivedate: 2016/12/02
+printpubdate: ''
+pubdate: 2015 Oct 27
+sortdate: 2015/10/27 00:00
+source: Hum Brain Mapp
+title: 'Multimodal description of whole brain connectivity: A comparison of resting
+  state MEG, fMRI, and DWI '
+uid: '5132061'
+volume: '37'

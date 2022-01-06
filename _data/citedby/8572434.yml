@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '34727165'
+- idtype: doi
+  value: 10.1167/jov.21.12.2
+- idtype: pmcid
+  value: PMC8572434
+authors:
+- authtype: Author
+  name: Lobo T
+- authtype: Author
+  name: Brookes MJ
+- authtype: Author
+  name: Bauer M
+epubdate: 2021 Nov 2
+fulljournalname: Journal of Vision
+issue: '12'
+pages: '2'
+pmclivedate: 2021/11/16
+printpubdate: ''
+pubdate: 2021 Nov 2
+sortdate: 2021/11/02 00:00
+source: J Vis
+title: Can the causal role of brain oscillations be studied through rhythmic brain
+  stimulation?
+uid: '8572434'
+volume: '21'

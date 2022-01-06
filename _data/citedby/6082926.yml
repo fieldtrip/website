@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '30116183'
+- idtype: doi
+  value: 10.3389/fnbeh.2018.00166
+- idtype: pmcid
+  value: PMC6082926
+authors:
+- authtype: Author
+  name: Fischer NL
+- authtype: Author
+  name: Peres R
+- authtype: Author
+  name: Fiorani M
+epubdate: 2018 Aug 2
+fulljournalname: Frontiers in Behavioral Neuroscience
+issue: ''
+pages: '166'
+pmclivedate: 2018/08/16
+printpubdate: ''
+pubdate: 2018 Aug 2
+sortdate: 2018/08/02 00:00
+source: Front Behav Neurosci
+title: Frontal Alpha Asymmetry and Theta Oscillations Associated With Information
+  Sharing Intention
+uid: '6082926'
+volume: '12'

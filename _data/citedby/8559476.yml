@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '34459062'
+- idtype: doi
+  value: 10.1002/hbm.25638
+- idtype: pmcid
+  value: PMC8559476
+authors:
+- authtype: Author
+  name: Quiroga‐Martinez DR
+- authtype: Author
+  name: Hansen NC
+- authtype: Author
+  name: Højlund A
+- authtype: Author
+  name: Pearce M
+- authtype: Author
+  name: Brattico E
+- authtype: Author
+  name: Holmes E
+- authtype: Author
+  name: Friston K
+- authtype: Author
+  name: Vuust P
+epubdate: 2021 Aug 30
+fulljournalname: Human Brain Mapping
+issue: '17'
+pages: 5595-5608
+pmclivedate: 2021/11/08
+printpubdate: ''
+pubdate: 2021 Aug 30
+sortdate: 2021/08/30 00:00
+source: Hum Brain Mapp
+title: Musicianship and melodic predictability enhance neural gain in auditory cortex
+  during pitch deviance detection
+uid: '8559476'
+volume: '42'

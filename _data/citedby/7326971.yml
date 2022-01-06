@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '32606321'
+- idtype: doi
+  value: 10.1038/s41598-020-67392-w
+- idtype: pmcid
+  value: PMC7326971
+authors:
+- authtype: Author
+  name: Krugliakova E
+- authtype: Author
+  name: Volk C
+- authtype: Author
+  name: Jaramillo V
+- authtype: Author
+  name: Sousouri G
+- authtype: Author
+  name: Huber R
+epubdate: 2020 Jun 30
+fulljournalname: Scientific Reports
+issue: ''
+pages: '10628'
+pmclivedate: 2020/07/01
+printpubdate: ''
+pubdate: 2020 Jun 30
+sortdate: 2020/06/30 00:00
+source: Sci Rep
+title: Changes in cross-frequency coupling following closed-loop auditory stimulation
+  in non-rapid eye movement sleep
+uid: '7326971'
+volume: '10'

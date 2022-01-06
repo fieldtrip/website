@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '22885248'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2012.07.050
+- idtype: pmcid
+  value: PMC3478146
+- idtype: MID
+  value: NIHMS407895
+authors:
+- authtype: Author
+  name: Vaden RJ
+- authtype: Author
+  name: Hutcheson NL
+- authtype: Author
+  name: McCollum LA
+- authtype: Author
+  name: Kentros JG
+- authtype: Author
+  name: Visscher KM
+epubdate: 2012 Aug 2
+fulljournalname: NeuroImage
+issue: '3'
+pages: 1127-1133
+pmclivedate: 2013/11/15
+printpubdate: 2012 Nov 15
+pubdate: 2012 Aug 2
+sortdate: 2012/08/02 00:00
+source: Neuroimage
+title: Older adults, unlike younger adults, do not modulate alpha power to suppress
+  irrelevant information
+uid: '3478146'
+volume: '63'

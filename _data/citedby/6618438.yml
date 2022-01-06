@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '24155311'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1625-13.2013
+- idtype: pmcid
+  value: PMC6618438
+authors:
+- authtype: Author
+  name: Hawellek DJ
+- authtype: Author
+  name: Schepers IM
+- authtype: Author
+  name: Roeder B
+- authtype: Author
+  name: Engel AK
+- authtype: Author
+  name: Siegel M
+- authtype: Author
+  name: Hipp JF
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '43'
+pages: 17072-17080
+pmclivedate: 2019/07/16
+printpubdate: 2013 Oct 23
+pubdate: 2013 Oct 23
+sortdate: 2013/10/23 00:00
+source: J Neurosci
+title: Altered Intrinsic Neuronal Interactions in the Visual Cortex of the Blind
+uid: '6618438'
+volume: '33'

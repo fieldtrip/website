@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '26706450'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2015.12.019
+- idtype: pmcid
+  value: PMC5778879
+- idtype: MID
+  value: NIHMS934276
+authors:
+- authtype: Author
+  name: Huang Y
+- authtype: Author
+  name: Parra LC
+- authtype: Author
+  name: Haufe S
+epubdate: 2015 Dec 17
+fulljournalname: NeuroImage
+issue: ''
+pages: 150-162
+pmclivedate: 2018/01/23
+printpubdate: 2016 Oct 15
+pubdate: 2015 Dec 17
+sortdate: 2015/12/17 00:00
+source: Neuroimage
+title: The New York Head—A precise standardized volume conductor model for EEG source
+  localization and tES targeting
+uid: '5778879'
+volume: '140'

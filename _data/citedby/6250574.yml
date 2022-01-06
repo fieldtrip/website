@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '30318415'
+- idtype: doi
+  value: 10.1016/j.neuron.2018.09.019
+- idtype: pmcid
+  value: PMC6250574
+- idtype: MID
+  value: NIHMS1508921
+authors:
+- authtype: Author
+  name: Rohenkohl G
+- authtype: Author
+  name: Bosman CA
+- authtype: Author
+  name: Fries P
+epubdate: 2018 Oct 11
+fulljournalname: Neuron
+issue: '4'
+pages: 953-963.e3
+pmclivedate: 2019/11/21
+printpubdate: 2018 Nov 21
+pubdate: 2018 Oct 11
+sortdate: 2018/10/11 00:00
+source: Neuron
+title: Gamma synchronization between V1 and V4 improves behavioral performance
+uid: '6250574'
+volume: '100'

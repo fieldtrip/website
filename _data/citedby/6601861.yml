@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '27511016'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0311-16.2016
+- idtype: pmcid
+  value: PMC6601861
+authors:
+- authtype: Author
+  name: Park HD
+- authtype: Author
+  name: Bernasconi F
+- authtype: Author
+  name: Bello-Ruiz J
+- authtype: Author
+  name: Pfeiffer C
+- authtype: Author
+  name: Salomon R
+- authtype: Author
+  name: Blanke O
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '32'
+pages: 8453-8460
+pmclivedate: 2019/07/12
+printpubdate: 2016 Aug 10
+pubdate: 2016 Aug 10
+sortdate: 2016/08/10 00:00
+source: J Neurosci
+title: Transient Modulations of Neural Responses to Heartbeats Covary with Bodily
+  Self-Consciousness
+uid: '6601861'
+volume: '36'

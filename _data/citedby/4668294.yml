@@ -1,0 +1,24 @@
+articleids:
+- idtype: pmid
+  value: '26665004'
+- idtype: doi
+  value: 10.1155/2015/489619
+- idtype: pmcid
+  value: PMC4668294
+authors:
+- authtype: Author
+  name: Zobay O
+- authtype: Author
+  name: Adjamian P
+epubdate: 2015 Nov 19
+fulljournalname: BioMed Research International
+issue: ''
+pages: '489619'
+pmclivedate: 2015/12/10
+printpubdate: '2015'
+pubdate: 2015 Nov 19
+sortdate: 2015/11/19 00:00
+source: Biomed Res Int
+title: Source-Space Cross-Frequency Amplitude-Amplitude Coupling in Tinnitus
+uid: '4668294'
+volume: '2015'

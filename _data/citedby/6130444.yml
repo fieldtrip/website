@@ -1,0 +1,24 @@
+articleids:
+- idtype: pmid
+  value: '30215031'
+- idtype: doi
+  value: 10.1162/netn_a_00041
+- idtype: pmcid
+  value: PMC6130444
+authors:
+- authtype: Author
+  name: Heitmann S
+- authtype: Author
+  name: Breakspear M
+epubdate: 2018 Jun 1
+fulljournalname: Network Neuroscience
+issue: '2'
+pages: 150-174
+pmclivedate: 2018/09/11
+printpubdate: ''
+pubdate: 2018 Jun 1
+sortdate: 2018/06/01 00:00
+source: Netw Neurosci
+title: Putting the “dynamic” back into dynamic functional connectivity
+uid: '6130444'
+volume: '2'

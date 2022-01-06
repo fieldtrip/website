@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '27441898'
+- idtype: doi
+  value: 10.1097/CCM.0000000000001950
+- idtype: pmcid
+  value: PMC5068187
+authors:
+- authtype: Author
+  name: Garry PS
+- authtype: Author
+  name: Rowland MJ
+- authtype: Author
+  name: Ezra M
+- authtype: Author
+  name: Herigstad M
+- authtype: Author
+  name: Hayen A
+- authtype: Author
+  name: Sleigh JW
+- authtype: Author
+  name: Westbrook J
+- authtype: Author
+  name: Warnaby CE
+- authtype: Author
+  name: Pattinson KT
+epubdate: 2016 Oct 14
+fulljournalname: Critical Care Medicine
+issue: '11'
+pages: e1067-e1073
+pmclivedate: 2016/10/28
+printpubdate: 2016 Nov
+pubdate: 2016 Oct 14
+sortdate: 2016/10/14 00:00
+source: Crit Care Med
+title: Electroencephalographic Response to Sodium Nitrite May Predict Delayed Cerebral
+  Ischemia After Severe Subarachnoid Hemorrhage
+uid: '5068187'
+volume: '44'

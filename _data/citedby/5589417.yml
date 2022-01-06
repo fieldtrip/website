@@ -1,0 +1,34 @@
+articleids:
+- idtype: pmid
+  value: '28718763'
+- idtype: doi
+  value: 10.7554/eLife.23871
+- idtype: pmcid
+  value: PMC5589417
+authors:
+- authtype: Author
+  name: Trübutschek D
+- authtype: Author
+  name: Marti S
+- authtype: Author
+  name: Ojeda A
+- authtype: Author
+  name: King JR
+- authtype: Author
+  name: Mi Y
+- authtype: Author
+  name: Tsodyks M
+- authtype: Author
+  name: Dehaene S
+epubdate: 2017 Jul 18
+fulljournalname: eLife
+issue: ''
+pages: e23871
+pmclivedate: 2017/09/11
+printpubdate: ''
+pubdate: 2017 Jul 18
+sortdate: 2017/07/18 00:00
+source: eLife
+title: A theory of working memory without consciousness or sustained activity
+uid: '5589417'
+volume: '6'

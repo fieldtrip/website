@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '30109194'
+- idtype: doi
+  value: 10.1016/j.nicl.2018.08.013
+- idtype: pmcid
+  value: PMC6090010
+authors:
+- authtype: Author
+  name: Baumgarten TJ
+- authtype: Author
+  name: Neugebauer J
+- authtype: Author
+  name: Oeltzschner G
+- authtype: Author
+  name: Füllenbach ND
+- authtype: Author
+  name: Kircheis G
+- authtype: Author
+  name: Häussinger D
+- authtype: Author
+  name: Lange J
+- authtype: Author
+  name: Wittsack HJ
+- authtype: Author
+  name: Butz M
+- authtype: Author
+  name: Schnitzler A
+epubdate: 2018 Aug 9
+fulljournalname: 'NeuroImage : Clinical'
+issue: ''
+pages: 347-356
+pmclivedate: 2018/08/14
+printpubdate: ''
+pubdate: 2018 Aug 9
+sortdate: 2018/08/09 00:00
+source: Neuroimage Clin
+title: Connecting occipital alpha band peak frequency, visual temporal resolution,
+  and occipital GABA levels in healthy participants and hepatic encephalopathy patients
+uid: '6090010'
+volume: '20'

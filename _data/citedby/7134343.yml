@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '31199248'
+- idtype: doi
+  value: 10.1109/TBME.2019.2921766
+- idtype: pmcid
+  value: PMC7134343
+- idtype: MID
+  value: NIHMS1565487
+authors:
+- authtype: Author
+  name: Nordin AD
+- authtype: Author
+  name: Hairston WD
+- authtype: Author
+  name: Ferris DP
+epubdate: 2019 Jun 13
+fulljournalname: IEEE transactions on bio-medical engineering
+issue: '3'
+pages: 842-853
+pmclivedate: 2021/03/01
+printpubdate: 2020 Mar
+pubdate: 2019 Jun 13
+sortdate: 2019/06/13 00:00
+source: IEEE Trans Biomed Eng
+title: Faster gait speeds reduce alpha and beta EEG spectral power from human sensorimotor
+  cortex
+uid: '7134343'
+volume: '67'

@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '33602980'
+- idtype: doi
+  value: 10.1038/s41598-021-83425-4
+- idtype: pmcid
+  value: PMC7892831
+authors:
+- authtype: Author
+  name: Sorrentino P
+- authtype: Author
+  name: Rucco R
+- authtype: Author
+  name: Baselice F
+- authtype: Author
+  name: De Micco R
+- authtype: Author
+  name: Tessitore A
+- authtype: Author
+  name: Hillebrand A
+- authtype: Author
+  name: Mandolesi L
+- authtype: Author
+  name: Breakspear M
+- authtype: Author
+  name: Gollo LL
+- authtype: Author
+  name: Sorrentino G
+epubdate: 2021 Feb 18
+fulljournalname: Scientific Reports
+issue: ''
+pages: '4051'
+pmclivedate: 2021/02/23
+printpubdate: ''
+pubdate: 2021 Feb 18
+sortdate: 2021/02/18 00:00
+source: Sci Rep
+title: Flexible brain dynamics underpins complex behaviours as observed in Parkinson’s
+  disease
+uid: '7892831'
+volume: '11'

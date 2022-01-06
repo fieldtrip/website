@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '33982854'
+- idtype: doi
+  value: 10.1002/hbm.25469
+- idtype: pmcid
+  value: PMC8288092
+authors:
+- authtype: Author
+  name: Pscherer C
+- authtype: Author
+  name: Bluschke A
+- authtype: Author
+  name: Mückschel M
+- authtype: Author
+  name: Beste C
+epubdate: 2021 May 13
+fulljournalname: Human Brain Mapping
+issue: '12'
+pages: 3845-3857
+pmclivedate: 2021/07/21
+printpubdate: ''
+pubdate: 2021 May 13
+sortdate: 2021/05/13 00:00
+source: Hum Brain Mapp
+title: The interplay of resting and inhibitory control‐related theta‐band activity
+  depends on age
+uid: '8288092'
+volume: '42'

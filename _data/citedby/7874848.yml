@@ -1,0 +1,40 @@
+articleids:
+- idtype: pmid
+  value: '32513554'
+- idtype: doi
+  value: 10.1016/j.bpsc.2020.02.013
+- idtype: pmcid
+  value: PMC7874848
+- idtype: MID
+  value: NIHMS1601565
+authors:
+- authtype: Author
+  name: Kummerfeld E
+- authtype: Author
+  name: Ma S
+- authtype: Author
+  name: Blackman RK
+- authtype: Author
+  name: DeNicola AL
+- authtype: Author
+  name: Redish AD
+- authtype: Author
+  name: Vinogradov S
+- authtype: Author
+  name: Crowe DA
+- authtype: Author
+  name: Chafee MV
+epubdate: 2020 Apr 8
+fulljournalname: Biological psychiatry. Cognitive neuroscience and neuroimaging
+issue: '7'
+pages: 705-714
+pmclivedate: 2021/07/01
+printpubdate: 2020 Jul
+pubdate: 2020 Apr 8
+sortdate: 2020/04/08 00:00
+source: Biol Psychiatry Cogn Neurosci Neuroimaging
+title: Cognitive control errors in nonhuman primates resembling those in schizophrenia
+  reflect opposing effects of NMDAR blockade on causal interactions between cells
+  and circuits in prefrontal and parietal cortex
+uid: '7874848'
+volume: '5'

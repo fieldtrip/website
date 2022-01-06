@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '26640764'
+- idtype: doi
+  value: 10.1016/j.nicl.2015.09.011
+- idtype: pmcid
+  value: PMC4632071
+authors:
+- authtype: Author
+  name: Dimitriadis SI
+- authtype: Author
+  name: Zouridakis G
+- authtype: Author
+  name: Rezaie R
+- authtype: Author
+  name: Babajani-Feremi A
+- authtype: Author
+  name: Papanicolaou AC
+epubdate: 2015 Sep 21
+fulljournalname: 'NeuroImage : Clinical'
+issue: ''
+pages: 519-531
+pmclivedate: 2015/12/04
+printpubdate: ''
+pubdate: 2015 Sep 21
+sortdate: 2015/09/21 00:00
+source: Neuroimage Clin
+title: Functional connectivity changes detected with magnetoencephalography after
+  mild traumatic brain injury
+uid: '4632071'
+volume: '9'

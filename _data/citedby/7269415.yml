@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '31456213'
+- idtype: doi
+  value: 10.1111/psyp.13468
+- idtype: pmcid
+  value: PMC7269415
+- idtype: MID
+  value: NIHMS1593818
+authors:
+- authtype: Author
+  name: Fields EC
+- authtype: Author
+  name: Kuperberg GR
+epubdate: 2019 Aug 27
+fulljournalname: Psychophysiology
+issue: '2'
+pages: e13468
+pmclivedate: 2021/02/01
+printpubdate: 2020 Feb
+pubdate: 2019 Aug 27
+sortdate: 2019/08/27 00:00
+source: Psychophysiology
+title: 'Having your cake and eating it too: Flexibility and power with mass univariate
+  statistics for ERP data'
+uid: '7269415'
+volume: '57'

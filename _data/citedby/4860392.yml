@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '27242453'
+- idtype: doi
+  value: 10.3389/fnsys.2016.00042
+- idtype: pmcid
+  value: PMC4860392
+authors:
+- authtype: Author
+  name: van de Nieuwenhuijzen ME
+- authtype: Author
+  name: van den Borne EW
+- authtype: Author
+  name: Jensen O
+- authtype: Author
+  name: van Gerven MA
+epubdate: 2016 May 9
+fulljournalname: Frontiers in Systems Neuroscience
+issue: ''
+pages: '42'
+pmclivedate: 2016/05/30
+printpubdate: ''
+pubdate: 2016 May 9
+sortdate: 2016/05/09 00:00
+source: Front Syst Neurosci
+title: Spatiotemporal Dynamics of Cortical Representations during and after Stimulus
+  Presentation
+uid: '4860392'
+volume: '10'

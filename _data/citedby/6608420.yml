@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '25355209'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0964-14.2014
+- idtype: pmcid
+  value: PMC6608420
+authors:
+- authtype: Author
+  name: López ME
+- authtype: Author
+  name: Bruña R
+- authtype: Author
+  name: Aurtenetxe S
+- authtype: Author
+  name: Pineda-Pardo JÁ
+- authtype: Author
+  name: Marcos A
+- authtype: Author
+  name: Arrazola J
+- authtype: Author
+  name: Reinoso AI
+- authtype: Author
+  name: Montejo P
+- authtype: Author
+  name: Bajo R
+- authtype: Author
+  name: Maestú F
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '44'
+pages: 14551-14559
+pmclivedate: 2019/07/10
+printpubdate: 2014 Oct 29
+pubdate: 2014 Oct 29
+sortdate: 2014/10/29 00:00
+source: J Neurosci
+title: 'Alpha-Band Hypersynchronization in Progressive Mild Cognitive Impairment:
+  A Magnetoencephalography Study'
+uid: '6608420'
+volume: '34'

@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '34246769'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2021.118378
+- idtype: pmcid
+  value: PMC8456692
+authors:
+- authtype: Author
+  name: Moser J
+- authtype: Author
+  name: Batterink L
+- authtype: Author
+  name: Li Hegner Y
+- authtype: Author
+  name: Schleger F
+- authtype: Author
+  name: Braun C
+- authtype: Author
+  name: Paller KA
+- authtype: Author
+  name: Preissl H
+epubdate: ''
+fulljournalname: Neuroimage
+issue: ''
+pages: '118378'
+pmclivedate: 2021/10/15
+printpubdate: 2021 Oct 15
+pubdate: 2021 Oct 15
+sortdate: 2021/10/15 00:00
+source: Neuroimage
+title: 'Dynamics of nonlinguistic statistical learning: From neural entrainment to
+  the emergence of explicit knowledge'
+uid: '8456692'
+volume: '240'

@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '32218441'
+- idtype: doi
+  value: 10.1038/s41467-020-15352-3
+- idtype: pmcid
+  value: PMC7099038
+authors:
+- authtype: Author
+  name: Crompe BD
+- authtype: Author
+  name: Aristieta A
+- authtype: Author
+  name: Leblois A
+- authtype: Author
+  name: Elsherbiny S
+- authtype: Author
+  name: Boraud T
+- authtype: Author
+  name: Mallet NP
+epubdate: 2020 Mar 26
+fulljournalname: Nature Communications
+issue: ''
+pages: '1570'
+pmclivedate: 2020/03/30
+printpubdate: ''
+pubdate: 2020 Mar 26
+sortdate: 2020/03/26 00:00
+source: Nat Commun
+title: The globus pallidus orchestrates abnormal network dynamics in a model of Parkinsonism
+uid: '7099038'
+volume: '11'

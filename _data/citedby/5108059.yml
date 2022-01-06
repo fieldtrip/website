@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '26455796'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2015.09.068
+- idtype: pmcid
+  value: PMC5108059
+- idtype: MID
+  value: NIHMS824054
+authors:
+- authtype: Author
+  name: Garcia-Cossio E
+- authtype: Author
+  name: Witkowski M
+- authtype: Author
+  name: Robinson SE
+- authtype: Author
+  name: Cohen LG
+- authtype: Author
+  name: Birbaumer N
+- authtype: Author
+  name: Soekadar SR
+epubdate: 2015 Oct 9
+fulljournalname: NeuroImage
+issue: ''
+pages: 33-40
+pmclivedate: 2016/11/14
+printpubdate: 2016 Oct 15
+pubdate: 2015 Oct 9
+sortdate: 2015/10/09 00:00
+source: Neuroimage
+title: 'Simultaneous transcranial direct current stimulation (tDCS) and whole-head
+  magnetoencephalography (MEG): assessing the impact of tDCS on slow cortical magnetic
+  fields'
+uid: '5108059'
+volume: '140'

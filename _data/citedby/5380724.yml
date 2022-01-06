@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '28424604'
+- idtype: doi
+  value: 10.3389/fnhum.2017.00173
+- idtype: pmcid
+  value: PMC5380724
+authors:
+- authtype: Author
+  name: Youssofzadeh V
+- authtype: Author
+  name: Williamson BJ
+- authtype: Author
+  name: Kadis DS
+epubdate: 2017 Apr 5
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '173'
+pmclivedate: 2017/04/19
+printpubdate: ''
+pubdate: 2017 Apr 5
+sortdate: 2017/04/05 00:00
+source: Front Hum Neurosci
+title: 'Mapping Critical Language Sites in Children Performing Verb Generation: Whole-Brain
+  Connectivity and Graph Theoretical Analysis in MEG'
+uid: '5380724'
+volume: '11'

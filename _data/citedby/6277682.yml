@@ -1,0 +1,49 @@
+articleids:
+- idtype: pmid
+  value: '30538617'
+- idtype: doi
+  value: 10.3389/fnins.2018.00867
+- idtype: pmcid
+  value: PMC6277682
+authors:
+- authtype: Author
+  name: Jones AP
+- authtype: Author
+  name: Choe J
+- authtype: Author
+  name: Bryant NB
+- authtype: Author
+  name: Robinson CS
+- authtype: Author
+  name: Ketz NA
+- authtype: Author
+  name: Skorheim SW
+- authtype: Author
+  name: Combs A
+- authtype: Author
+  name: Lamphere ML
+- authtype: Author
+  name: Robert B
+- authtype: Author
+  name: Gill HA
+- authtype: Author
+  name: Heinrich MD
+- authtype: Author
+  name: Howard MD
+- authtype: Author
+  name: Clark VP
+- authtype: Author
+  name: Pilly PK
+epubdate: 2018 Nov 27
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '867'
+pmclivedate: 2018/12/11
+printpubdate: ''
+pubdate: 2018 Nov 27
+sortdate: 2018/11/27 00:00
+source: Front Neurosci
+title: Dose-Dependent Effects of Closed-Loop tACS Delivered During Slow-Wave Oscillations
+  on Memory Consolidation
+uid: '6277682'
+volume: '12'

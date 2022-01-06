@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '28974716'
+- idtype: doi
+  value: 10.1038/s41598-017-12511-3
+- idtype: pmcid
+  value: PMC5626716
+authors:
+- authtype: Author
+  name: Daume J
+- authtype: Author
+  name: Graetz S
+- authtype: Author
+  name: Gruber T
+- authtype: Author
+  name: Engel AK
+- authtype: Author
+  name: Friese U
+epubdate: 2017 Oct 3
+fulljournalname: Scientific Reports
+issue: ''
+pages: '12585'
+pmclivedate: 2017/10/12
+printpubdate: ''
+pubdate: 2017 Oct 3
+sortdate: 2017/10/03 00:00
+source: Sci Rep
+title: Cognitive control during audiovisual working memory engages frontotemporal
+  theta-band interactions
+uid: '5626716'
+volume: '7'

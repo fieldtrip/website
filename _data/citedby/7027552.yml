@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '31763700'
+- idtype: doi
+  value: 10.1111/psyp.13507
+- idtype: pmcid
+  value: PMC7027552
+authors:
+- authtype: Author
+  name: Barchiesi G
+- authtype: Author
+  name: Demarchi G
+- authtype: Author
+  name: Wilhelm FH
+- authtype: Author
+  name: Hauswald A
+- authtype: Author
+  name: Sanchez G
+- authtype: Author
+  name: Weisz N
+epubdate: 2019 Nov 25
+fulljournalname: Psychophysiology
+issue: '3'
+pages: e13507
+pmclivedate: 2020/02/24
+printpubdate: 2020 Mar
+pubdate: 2019 Nov 25
+sortdate: 2019/11/25 00:00
+source: Psychophysiology
+title: 'Head magnetomyography (hMMG): A novel approach to monitor face and whole head
+  muscular activity'
+uid: '7027552'
+volume: '57'

@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '29875644'
+- idtype: doi
+  value: 10.3389/fnhum.2018.00191
+- idtype: pmcid
+  value: PMC5974255
+authors:
+- authtype: Author
+  name: Melara RD
+- authtype: Author
+  name: Singh S
+- authtype: Author
+  name: Hien DA
+epubdate: 2018 May 23
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '191'
+pmclivedate: 2018/06/06
+printpubdate: ''
+pubdate: 2018 May 23
+sortdate: 2018/05/23 00:00
+source: Front Hum Neurosci
+title: Neural and Behavioral Correlates of Attentional Inhibition Training and Perceptual
+  Discrimination Training in a Visual Flanker Task
+uid: '5974255'
+volume: '12'

@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '34841286'
+- idtype: doi
+  value: 10.1016/j.xcrm.2021.100432
+- idtype: pmcid
+  value: PMC8606903
+authors:
+- authtype: Author
+  name: Klinzing JG
+- authtype: Author
+  name: Tashiro L
+- authtype: Author
+  name: Ruf S
+- authtype: Author
+  name: Wolff M
+- authtype: Author
+  name: Born J
+- authtype: Author
+  name: Ngo HV
+epubdate: 2021 Oct 26
+fulljournalname: Cell Reports Medicine
+issue: '11'
+pages: '100432'
+pmclivedate: 2021/11/26
+printpubdate: ''
+pubdate: 2021 Oct 26
+sortdate: 2021/10/26 00:00
+source: Cell Rep Med
+title: Auditory stimulation during sleep suppresses spike activity in benign epilepsy
+  with centrotemporal spikes
+uid: '8606903'
+volume: '2'

@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '23684880'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2013.05.041
+- idtype: pmcid
+  value: PMC3724347
+- idtype: MID
+  value: NIHMS482605
+authors:
+- authtype: Author
+  name: Van Essen DC
+- authtype: Author
+  name: Smith SM
+- authtype: Author
+  name: Barch DM
+- authtype: Author
+  name: Behrens TE
+- authtype: Author
+  name: Yacoub E
+- authtype: Author
+  name: Ugurbil K
+- authtype: CollectiveName
+  name: for the WU-Minn HCP Consortium
+epubdate: 2013 May 16
+fulljournalname: NeuroImage
+issue: ''
+pages: 62-79
+pmclivedate: 2014/10/15
+printpubdate: 2013 Oct 15
+pubdate: 2013 May 16
+sortdate: 2013/05/16 00:00
+source: Neuroimage
+title: 'The WU-Minn Human Connectome Project: An Overview'
+uid: '3724347'
+volume: '80'

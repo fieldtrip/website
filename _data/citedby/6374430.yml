@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '30760741'
+- idtype: doi
+  value: 10.1038/s41598-018-36557-z
+- idtype: pmcid
+  value: PMC6374430
+authors:
+- authtype: Author
+  name: Muehlroth BE
+- authtype: Author
+  name: Sander MC
+- authtype: Author
+  name: Fandakova Y
+- authtype: Author
+  name: Grandy TH
+- authtype: Author
+  name: Rasch B
+- authtype: Author
+  name: Shing YL
+- authtype: Author
+  name: Werkle-Bergner M
+epubdate: 2019 Feb 13
+fulljournalname: Scientific Reports
+issue: ''
+pages: '1940'
+pmclivedate: 2019/02/19
+printpubdate: ''
+pubdate: 2019 Feb 13
+sortdate: 2019/02/13 00:00
+source: Sci Rep
+title: Precise Slow Oscillation–Spindle Coupling Promotes Memory Consolidation in
+  Younger and Older Adults
+uid: '6374430'
+volume: '9'

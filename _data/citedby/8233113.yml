@@ -1,0 +1,34 @@
+articleids:
+- idtype: pmid
+  value: '34189374'
+- idtype: doi
+  value: 10.1162/netn_a_00187
+- idtype: pmcid
+  value: PMC8233113
+authors:
+- authtype: Author
+  name: Messaritaki E
+- authtype: Author
+  name: Foley S
+- authtype: Author
+  name: Schiavi S
+- authtype: Author
+  name: Magazzini L
+- authtype: Author
+  name: Routley B
+- authtype: Author
+  name: Jones DK
+- authtype: Author
+  name: Singh KD
+epubdate: 2021 Jun 3
+fulljournalname: Network Neuroscience
+issue: '2'
+pages: 477-504
+pmclivedate: 2021/06/28
+printpubdate: ''
+pubdate: 2021 Jun 3
+sortdate: 2021/06/03 00:00
+source: Netw Neurosci
+title: Predicting MEG resting-state functional connectivity from microstructural information
+uid: '8233113'
+volume: '5'

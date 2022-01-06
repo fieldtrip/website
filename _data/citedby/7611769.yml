@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '34424990'
+- idtype: doi
+  value: 10.1162/jocn_a_01749
+- idtype: pmcid
+  value: PMC7611769
+- idtype: MID
+  value: EMS135380
+authors:
+- authtype: Author
+  name: Spaccasassi C
+- authtype: Author
+  name: Dijkerman HC
+- authtype: Author
+  name: Maravita A
+- authtype: Author
+  name: Ferrante O
+- authtype: Author
+  name: de Jong MC
+epubdate: ''
+fulljournalname: Journal of cognitive neuroscience
+issue: '10'
+pages: 2149-2166
+pmclivedate: 2021/10/15
+printpubdate: 2021 Sep 1
+pubdate: 2021 Sep 1
+sortdate: 2021/09/01 00:00
+source: J Cogn Neurosci
+title: 'Body-Space Interactions: Same Spatial Encoding but Different Influence of
+  Valence for Reaching and Defensive Purposes'
+uid: '7611769'
+volume: '33'

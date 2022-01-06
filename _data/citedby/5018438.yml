@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '27299431'
+- idtype: doi
+  value: 10.3758/s13415-016-0439-y
+- idtype: pmcid
+  value: PMC5018438
+- idtype: MID
+  value: NIHMS795837
+authors:
+- authtype: Author
+  name: Blacker KJ
+- authtype: Author
+  name: Ikkai A
+- authtype: Author
+  name: Lakshmanan BM
+- authtype: Author
+  name: Ewen JB
+- authtype: Author
+  name: Courtney SM
+epubdate: ''
+fulljournalname: Cognitive, affective & behavioral neuroscience
+issue: '5'
+pages: 888-901
+pmclivedate: 2017/10/01
+printpubdate: 2016 Oct
+pubdate: 2016 Oct
+sortdate: 2016/10/01 00:00
+source: Cogn Affect Behav Neurosci
+title: The Role of Alpha Oscillations in Deriving and Maintaining Spatial Relations
+  in Working Memory
+uid: '5018438'
+volume: '16'

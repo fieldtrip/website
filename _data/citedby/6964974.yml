@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '31905373'
+- idtype: doi
+  value: 10.1371/journal.pcbi.1007148
+- idtype: pmcid
+  value: PMC6964974
+authors:
+- authtype: Author
+  name: Valentin S
+- authtype: Author
+  name: Harkotte M
+- authtype: Author
+  name: Popov T
+epubdate: 2020 Jan 6
+fulljournalname: PLoS Computational Biology
+issue: '1'
+pages: e1007148
+pmclivedate: 2020/01/26
+printpubdate: ''
+pubdate: 2020 Jan 6
+sortdate: 2020/01/06 00:00
+source: PLoS Comput Biol
+title: Interpreting neural decoding models using grouped model reliance
+uid: '6964974'
+volume: '16'

@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '32522978'
+- idtype: doi
+  value: 10.1038/s41398-020-00877-4
+- idtype: pmcid
+  value: PMC7287060
+authors:
+- authtype: Author
+  name: Sysoeva OV
+- authtype: Author
+  name: Molholm S
+- authtype: Author
+  name: Djukic A
+- authtype: Author
+  name: Frey HP
+- authtype: Author
+  name: Foxe JJ
+epubdate: 2020 Jun 10
+fulljournalname: Translational Psychiatry
+issue: ''
+pages: '188'
+pmclivedate: 2020/06/19
+printpubdate: ''
+pubdate: 2020 Jun 10
+sortdate: 2020/06/10 00:00
+source: Transl Psychiatry
+title: Atypical processing of tones and phonemes in Rett Syndrome as biomarkers of
+  disease progression
+uid: '7287060'
+volume: '10'

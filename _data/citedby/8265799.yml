@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '34088796'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.3021-20.2021
+- idtype: pmcid
+  value: PMC8265799
+authors:
+- authtype: Author
+  name: Caffarra S
+- authtype: Author
+  name: Lizarazu M
+- authtype: Author
+  name: Molinaro N
+- authtype: Author
+  name: Carreiras M
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '27'
+pages: 5867-5875
+pmclivedate: ''
+printpubdate: 2021 Jul 7
+pubdate: 2021 Jul 7
+sortdate: 2021/07/07 00:00
+source: J Neurosci
+title: 'Reading-Related Brain Changes in Audiovisual Processing: Cross-Sectional and
+  Longitudinal MEG Evidence'
+uid: '8265799'
+volume: '41'

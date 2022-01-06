@@ -1,0 +1,47 @@
+articleids:
+- idtype: pmid
+  value: '28326029'
+- idtype: doi
+  value: 10.3389/fnhum.2017.00104
+- idtype: pmcid
+  value: PMC5339296
+authors:
+- authtype: Author
+  name: Nelson AB
+- authtype: Author
+  name: Moisello C
+- authtype: Author
+  name: Lin J
+- authtype: Author
+  name: Panday P
+- authtype: Author
+  name: Ricci S
+- authtype: Author
+  name: Canessa A
+- authtype: Author
+  name: Di Rocco A
+- authtype: Author
+  name: Quartarone A
+- authtype: Author
+  name: Frazzitta G
+- authtype: Author
+  name: Isaias IU
+- authtype: Author
+  name: Tononi G
+- authtype: Author
+  name: Cirelli C
+- authtype: Author
+  name: Ghilardi MF
+epubdate: 2017 Mar 7
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '104'
+pmclivedate: 2017/03/21
+printpubdate: ''
+pubdate: 2017 Mar 7
+sortdate: 2017/03/07 00:00
+source: Front Hum Neurosci
+title: Beta Oscillatory Changes and Retention of Motor Skills during Practice in Healthy
+  Subjects and in Patients with Parkinson's Disease
+uid: '5339296'
+volume: '11'

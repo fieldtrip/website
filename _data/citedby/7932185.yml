@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '33661954'
+- idtype: doi
+  value: 10.1371/journal.pone.0242754
+- idtype: pmcid
+  value: PMC7932185
+authors:
+- authtype: Author
+  name: Honari-Jahromi M
+- authtype: Author
+  name: Chouinard B
+- authtype: Author
+  name: Blanco-Elorrieta E
+- authtype: Author
+  name: Pylkkänen L
+- authtype: Author
+  name: Fyshe A
+epubdate: 2021 Mar 4
+fulljournalname: PLoS ONE
+issue: '3'
+pages: e0242754
+pmclivedate: 2021/03/15
+printpubdate: ''
+pubdate: 2021 Mar 4
+sortdate: 2021/03/04 00:00
+source: PLoS One
+title: 'Neural representation of words within phrases: Temporal evolution of color-adjectives
+  and object-nouns during simple composition'
+uid: '7932185'
+volume: '16'

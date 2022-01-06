@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '28645840'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2017.06.030
+- idtype: pmcid
+  value: PMC7243972
+- idtype: MID
+  value: NIHMS1578244
+authors:
+- authtype: Author
+  name: Jas M
+- authtype: Author
+  name: Engemann DA
+- authtype: Author
+  name: Bekhti Y
+- authtype: Author
+  name: Raimondo F
+- authtype: Author
+  name: Gramfort A
+epubdate: 2017 Jun 20
+fulljournalname: NeuroImage
+issue: ''
+pages: 417-429
+pmclivedate: 2020/05/22
+printpubdate: 2017 Oct 1
+pubdate: 2017 Jun 20
+sortdate: 2017/06/20 00:00
+source: Neuroimage
+title: 'Autoreject: Automated artifact rejection for MEG and EEG data'
+uid: '7243972'
+volume: '159'

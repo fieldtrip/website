@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '25997100'
+- idtype: doi
+  value: 10.7554/eLife.05652
+- idtype: pmcid
+  value: PMC4467230
+authors:
+- authtype: Author
+  name: Salti M
+- authtype: Author
+  name: Monto S
+- authtype: Author
+  name: Charles L
+- authtype: Author
+  name: King JR
+- authtype: Author
+  name: Parkkonen L
+- authtype: Author
+  name: Dehaene S
+epubdate: 2015 May 21
+fulljournalname: eLife
+issue: ''
+pages: e05652
+pmclivedate: 2015/06/17
+printpubdate: ''
+pubdate: 2015 May 21
+sortdate: 2015/05/21 00:00
+source: eLife
+title: Distinct cortical codes and temporal dynamics for conscious and unconscious
+  percepts
+uid: '4467230'
+volume: '4'

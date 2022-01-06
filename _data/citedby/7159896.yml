@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '32161141'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1733-19.2020
+- idtype: pmcid
+  value: PMC7159896
+authors:
+- authtype: Author
+  name: Wang L
+- authtype: Author
+  name: Wlotko E
+- authtype: Author
+  name: Alexander E
+- authtype: Author
+  name: Schoot L
+- authtype: Author
+  name: Kim M
+- authtype: Author
+  name: Warnke L
+- authtype: Author
+  name: Kuperberg GR
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '16'
+pages: 3278-3291
+pmclivedate: 2020/10/15
+printpubdate: 2020 Apr 15
+pubdate: 2020 Apr 15
+sortdate: 2020/04/15 00:00
+source: J Neurosci
+title: 'Neural Evidence for the Prediction of Animacy Features during Language Comprehension:
+  Evidence from MEG and EEG Representational Similarity Analysis'
+uid: '7159896'
+volume: '40'

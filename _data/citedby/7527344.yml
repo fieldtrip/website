@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '32999329'
+- idtype: doi
+  value: 10.1038/s41598-020-72940-5
+- idtype: pmcid
+  value: PMC7527344
+authors:
+- authtype: Author
+  name: Pavlov YG
+- authtype: Author
+  name: Kotchoubey B
+epubdate: 2020 Sep 30
+fulljournalname: Scientific Reports
+issue: ''
+pages: '16090'
+pmclivedate: 2020/10/01
+printpubdate: ''
+pubdate: 2020 Sep 30
+sortdate: 2020/09/30 00:00
+source: Sci Rep
+title: The electrophysiological underpinnings of variation in verbal working memory
+  capacity
+uid: '7527344'
+volume: '10'

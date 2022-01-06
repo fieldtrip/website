@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '25044125'
+- idtype: doi
+  value: 10.1002/hbm.22589
+- idtype: pmcid
+  value: PMC6869777
+authors:
+- authtype: Author
+  name: Levy J
+- authtype: Author
+  name: Hagoort P
+- authtype: Author
+  name: Démonet J
+epubdate: 2014 Jul 15
+fulljournalname: Human Brain Mapping
+issue: '12'
+pages: 5847-5860
+pmclivedate: 2020/06/12
+printpubdate: ''
+pubdate: 2014 Jul 15
+sortdate: 2014/07/15 00:00
+source: Hum Brain Mapp
+title: A neuronal gamma oscillatory signature during morphological unification in
+  the left occipitotemporal junction
+uid: '6869777'
+volume: '35'

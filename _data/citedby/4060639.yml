@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '24987348'
+- idtype: doi
+  value: 10.3389/fnhum.2014.00446
+- idtype: pmcid
+  value: PMC4060639
+authors:
+- authtype: Author
+  name: Buchholz VN
+- authtype: Author
+  name: Jensen O
+- authtype: Author
+  name: Medendorp WP
+epubdate: 2014 Jun 17
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '446'
+pmclivedate: 2014/07/01
+printpubdate: ''
+pubdate: 2014 Jun 17
+sortdate: 2014/06/17 00:00
+source: Front Hum Neurosci
+title: Different roles of alpha and beta band oscillations in anticipatory sensorimotor
+  gating
+uid: '4060639'
+volume: '8'

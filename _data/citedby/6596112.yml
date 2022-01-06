@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '28916521'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0322-17.2017
+- idtype: pmcid
+  value: PMC6596112
+authors:
+- authtype: Author
+  name: Faivre N
+- authtype: Author
+  name: Filevich E
+- authtype: Author
+  name: Solovey G
+- authtype: Author
+  name: Kühn S
+- authtype: Author
+  name: Blanke O
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '2'
+pages: 263-277
+pmclivedate: 2019/06/27
+printpubdate: 2018 Jan 10
+pubdate: 2018 Jan 10
+sortdate: 2018/01/10 00:00
+source: J Neurosci
+title: Behavioral, Modeling, and Electrophysiological Evidence for Supramodality in
+  Human Metacognition
+uid: '6596112'
+volume: '38'

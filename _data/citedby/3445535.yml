@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '23028571'
+- idtype: doi
+  value: 10.1371/journal.pone.0044633
+- idtype: pmcid
+  value: PMC3445535
+authors:
+- authtype: Author
+  name: Wilmer A
+- authtype: Author
+  name: de Lussanet M
+- authtype: Author
+  name: Lappe M
+epubdate: 2012 Sep 18
+fulljournalname: PLoS ONE
+issue: '9'
+pages: e44633
+pmclivedate: 2012/10/01
+printpubdate: ''
+pubdate: 2012 Sep 18
+sortdate: 2012/09/18 00:00
+source: PLoS One
+title: Time-Delayed Mutual Information of the Phase as a Measure of Functional Connectivity
+uid: '3445535'
+volume: '7'

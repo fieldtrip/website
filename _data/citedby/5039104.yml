@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '27571010'
+- idtype: doi
+  value: 10.1038/nn.4374
+- idtype: pmcid
+  value: PMC5039104
+- idtype: MID
+  value: NIHMS808250
+authors:
+- authtype: Author
+  name: Heusser AC
+- authtype: Author
+  name: Poeppel D
+- authtype: Author
+  name: Ezzyat Y
+- authtype: Author
+  name: Davachi L
+epubdate: 2016 Aug 29
+fulljournalname: Nature neuroscience
+issue: '10'
+pages: 1374-1380
+pmclivedate: 2017/02/28
+printpubdate: 2016 Oct
+pubdate: 2016 Aug 29
+sortdate: 2016/08/29 00:00
+source: Nat Neurosci
+title: Episodic sequence memory is supported by a theta-gamma phase code
+uid: '5039104'
+volume: '19'

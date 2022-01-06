@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '25285560'
+- idtype: doi
+  value: 10.1371/journal.pone.0107715
+- idtype: pmcid
+  value: PMC4186757
+authors:
+- authtype: Author
+  name: Rana KD
+- authtype: Author
+  name: Vaina LM
+epubdate: 2014 Oct 6
+fulljournalname: PLoS ONE
+issue: '10'
+pages: e107715
+pmclivedate: 2014/10/16
+printpubdate: ''
+pubdate: 2014 Oct 6
+sortdate: 2014/10/06 00:00
+source: PLoS One
+title: Functional Roles of 10 Hz Alpha-Band Power Modulating Engagement and Disengagement
+  of Cortical Networks in a Complex Visual Motion Task
+uid: '4186757'
+volume: '9'

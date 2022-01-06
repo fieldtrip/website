@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '31214000'
+- idtype: doi
+  value: 10.3389/fnhum.2019.00176
+- idtype: pmcid
+  value: PMC6558060
+authors:
+- authtype: Author
+  name: Hokett E
+- authtype: Author
+  name: Duarte A
+epubdate: 2019 Jun 4
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '176'
+pmclivedate: 2019/06/18
+printpubdate: ''
+pubdate: 2019 Jun 4
+sortdate: 2019/06/04 00:00
+source: Front Hum Neurosci
+title: Age and Race-Related Differences in Sleep Discontinuity Linked to Associative
+  Memory Performance and Its Neural Underpinnings
+uid: '6558060'
+volume: '13'

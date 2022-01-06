@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '25925271'
+- idtype: doi
+  value: 10.1093/scan/nsv050
+- idtype: pmcid
+  value: PMC4631156
+authors:
+- authtype: Author
+  name: Zinchenko A
+- authtype: Author
+  name: Kanske P
+- authtype: Author
+  name: Obermeier C
+- authtype: Author
+  name: Schröger E
+- authtype: Author
+  name: Kotz SA
+epubdate: 2015 Apr 28
+fulljournalname: Social Cognitive and Affective Neuroscience
+issue: '11'
+pages: 1577-1587
+pmclivedate: 2016/11/01
+printpubdate: 2015 Nov
+pubdate: 2015 Apr 28
+sortdate: 2015/04/28 00:00
+source: Soc Cogn Affect Neurosci
+title: 'Emotion and goal-directed behavior: ERP evidence on cognitive and emotional
+  conflict'
+uid: '4631156'
+volume: '10'

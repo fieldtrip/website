@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '32144326'
+- idtype: doi
+  value: 10.1038/s41598-020-61183-z
+- idtype: pmcid
+  value: PMC7060261
+authors:
+- authtype: Author
+  name: Wilhelm I
+- authtype: Author
+  name: Schreiner T
+- authtype: Author
+  name: Beck J
+- authtype: Author
+  name: Rasch B
+epubdate: 2020 Mar 6
+fulljournalname: Scientific Reports
+issue: ''
+pages: '4255'
+pmclivedate: 2020/03/18
+printpubdate: ''
+pubdate: 2020 Mar 6
+sortdate: 2020/03/06 00:00
+source: Sci Rep
+title: No effect of targeted memory reactivation during sleep on retention of vocabulary
+  in adolescents
+uid: '7060261'
+volume: '10'

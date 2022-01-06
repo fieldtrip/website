@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '28716962'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.2944-15.2017
+- idtype: pmcid
+  value: PMC6596914
+authors:
+- authtype: Author
+  name: Carmichael JE
+- authtype: Author
+  name: Gmaz JM
+- authtype: Author
+  name: van der Meer MA
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '33'
+pages: 7962-7974
+pmclivedate: 2019/07/01
+printpubdate: 2017 Aug 16
+pubdate: 2017 Aug 16
+sortdate: 2017/08/16 00:00
+source: J Neurosci
+title: Gamma Oscillations in the Rat Ventral Striatum Originate in the Piriform Cortex
+uid: '6596914'
+volume: '37'

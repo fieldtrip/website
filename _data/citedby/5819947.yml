@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '29388913'
+- idtype: doi
+  value: 10.7554/eLife.31895
+- idtype: pmcid
+  value: PMC5819947
+authors:
+- authtype: Author
+  name: Lofredi R
+- authtype: Author
+  name: Neumann WJ
+- authtype: Author
+  name: Bock A
+- authtype: Author
+  name: Horn A
+- authtype: Author
+  name: Huebl J
+- authtype: Author
+  name: Siegert S
+- authtype: Author
+  name: Schneider GH
+- authtype: Author
+  name: Krauss JK
+- authtype: Author
+  name: Kühn AA
+epubdate: 2018 Feb 1
+fulljournalname: eLife
+issue: ''
+pages: e31895
+pmclivedate: 2018/02/22
+printpubdate: ''
+pubdate: 2018 Feb 1
+sortdate: 2018/02/01 00:00
+source: eLife
+title: Dopamine-dependent scaling of subthalamic gamma bursts with movement velocity
+  in patients with Parkinson’s disease
+uid: '5819947'
+volume: '7'

@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '33347695'
+- idtype: doi
+  value: 10.1002/hbm.25322
+- idtype: pmcid
+  value: PMC7978122
+authors:
+- authtype: Author
+  name: Solís‐Vivanco R
+- authtype: Author
+  name: Jensen O
+- authtype: Author
+  name: Bonnefond M
+epubdate: 2020 Dec 21
+fulljournalname: Human Brain Mapping
+issue: '6'
+pages: 1699-1713
+pmclivedate: 2021/03/23
+printpubdate: ''
+pubdate: 2020 Dec 21
+sortdate: 2020/12/21 00:00
+source: Hum Brain Mapp
+title: 'New insights on the ventral attention network: Active suppression and involuntary
+  recruitment during a bimodal task'
+uid: '7978122'
+volume: '42'

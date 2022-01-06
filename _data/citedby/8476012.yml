@@ -1,0 +1,24 @@
+articleids:
+- idtype: pmid
+  value: '34570779'
+- idtype: doi
+  value: 10.1371/journal.pone.0257378
+- idtype: pmcid
+  value: PMC8476012
+authors:
+- authtype: Author
+  name: Bueno FD
+- authtype: Author
+  name: Cravo AM
+epubdate: 2021 Sep 27
+fulljournalname: PLoS ONE
+issue: '9'
+pages: e0257378
+pmclivedate: 2021/09/28
+printpubdate: ''
+pubdate: 2021 Sep 27
+sortdate: 2021/09/27 00:00
+source: PLoS One
+title: Post-interval EEG activity is related to task-goals in temporal discrimination
+uid: '8476012'
+volume: '16'

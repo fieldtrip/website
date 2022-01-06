@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '26180200'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0828-15.2015
+- idtype: pmcid
+  value: PMC4502264
+authors:
+- authtype: Author
+  name: Salkoff DB
+- authtype: Author
+  name: Zagha E
+- authtype: Author
+  name: Yüzgeç Ö
+- authtype: Author
+  name: McCormick DA
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '28'
+pages: 10236-10251
+pmclivedate: 2016/01/15
+printpubdate: 2015 Jul 15
+pubdate: 2015 Jul 15
+sortdate: 2015/07/15 00:00
+source: J Neurosci
+title: Synaptic Mechanisms of Tight Spike Synchrony at Gamma Frequency in Cerebral
+  Cortex
+uid: '4502264'
+volume: '35'

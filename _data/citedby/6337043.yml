@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '30303762'
+- idtype: doi
+  value: 10.1152/jn.00262.2018
+- idtype: pmcid
+  value: PMC6337043
+authors:
+- authtype: Author
+  name: Abbott NT
+- authtype: Author
+  name: Shahin AJ
+epubdate: 2018 Oct 10
+fulljournalname: Journal of Neurophysiology
+issue: '6'
+pages: 2988-3000
+pmclivedate: 2019/12/01
+printpubdate: 2018 Dec 1
+pubdate: 2018 Oct 10
+sortdate: 2018/10/10 00:00
+source: J Neurophysiol
+title: Cross-modal phonetic encoding facilitates the McGurk illusion and phonemic
+  restoration
+uid: '6337043'
+volume: '120'

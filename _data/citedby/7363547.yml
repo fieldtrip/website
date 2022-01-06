@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '32445938'
+- idtype: doi
+  value: 10.1016/j.neuroscience.2020.05.018
+- idtype: pmcid
+  value: PMC7363547
+- idtype: MID
+  value: NIHMS1596652
+authors:
+- authtype: Author
+  name: Kaya EM
+- authtype: Author
+  name: Huang N
+- authtype: Author
+  name: Elhilali M
+epubdate: 2020 May 21
+fulljournalname: Neuroscience
+issue: ''
+pages: 1-14
+pmclivedate: 2021/08/01
+printpubdate: 2020 Aug 1
+pubdate: 2020 May 21
+sortdate: 2020/05/21 00:00
+source: Neuroscience
+title: Pitch, timbre and intensity interdependently modulate neural responses to salient
+  sounds
+uid: '7363547'
+volume: '440'

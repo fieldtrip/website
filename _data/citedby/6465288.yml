@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '30988372'
+- idtype: doi
+  value: 10.1038/s41598-019-42615-x
+- idtype: pmcid
+  value: PMC6465288
+authors:
+- authtype: Author
+  name: Meyer M
+- authtype: Author
+  name: Endedijk HM
+- authtype: Author
+  name: van Ede F
+- authtype: Author
+  name: Hunnius S
+epubdate: 2019 Apr 15
+fulljournalname: Scientific Reports
+issue: ''
+pages: '6049'
+pmclivedate: 2019/04/18
+printpubdate: ''
+pubdate: 2019 Apr 15
+sortdate: 2019/04/15 00:00
+source: Sci Rep
+title: Theta oscillations in 4-year-olds are sensitive to task engagement and task
+  demands
+uid: '6465288'
+volume: '9'

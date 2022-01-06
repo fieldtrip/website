@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '29163118'
+- idtype: doi
+  value: 10.3389/fninf.2017.00062
+- idtype: pmcid
+  value: PMC5671481
+authors:
+- authtype: Author
+  name: Hamilton LS
+- authtype: Author
+  name: Chang DL
+- authtype: Author
+  name: Lee MB
+- authtype: Author
+  name: Chang EF
+epubdate: 2017 Oct 31
+fulljournalname: Frontiers in Neuroinformatics
+issue: ''
+pages: '62'
+pmclivedate: 2017/11/21
+printpubdate: ''
+pubdate: 2017 Oct 31
+sortdate: 2017/10/31 00:00
+source: Front Neuroinform
+title: Semi-automated Anatomical Labeling and Inter-subject Warping of High-Density
+  Intracranial Recording Electrodes in Electrocorticography
+uid: '5671481'
+volume: '11'

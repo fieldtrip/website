@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '32080939'
+- idtype: doi
+  value: 10.1111/ejn.14707
+- idtype: pmcid
+  value: PMC7368805
+- idtype: MID
+  value: NIHMS1573407
+authors:
+- authtype: Author
+  name: Kim SG
+- authtype: Author
+  name: Poeppel D
+- authtype: Author
+  name: Overath T
+epubdate: 2020 Mar 9
+fulljournalname: The European journal of neuroscience
+issue: '2'
+pages: 2889-2904
+pmclivedate: 2021/07/01
+printpubdate: 2020 Jul
+pubdate: 2020 Mar 9
+sortdate: 2020/03/09 00:00
+source: Eur J Neurosci
+title: 'Modulation change detection in human auditory cortex: evidence for asymmetric,
+  nonlinear edge detection'
+uid: '7368805'
+volume: '52'

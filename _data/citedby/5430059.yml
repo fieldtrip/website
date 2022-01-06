@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '28555101'
+- idtype: doi
+  value: 10.3389/fnhum.2017.00252
+- idtype: pmcid
+  value: PMC5430059
+authors:
+- authtype: Author
+  name: Baum F
+- authtype: Author
+  name: Wolfensteller U
+- authtype: Author
+  name: Ruge H
+epubdate: 2017 May 15
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '252'
+pmclivedate: 2017/05/29
+printpubdate: ''
+pubdate: 2017 May 15
+sortdate: 2017/05/15 00:00
+source: Front Hum Neurosci
+title: Learning-Related Brain-Electrical Activity Dynamics Associated with the Subsequent
+  Impact of Learnt Action-Outcome Associations
+uid: '5430059'
+volume: '11'

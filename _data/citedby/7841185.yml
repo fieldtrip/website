@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '33504903'
+- idtype: doi
+  value: 10.1038/s41598-021-81912-2
+- idtype: pmcid
+  value: PMC7841185
+authors:
+- authtype: Author
+  name: Yoo HJ
+- authtype: Author
+  name: Ham J
+- authtype: Author
+  name: Duc NT
+- authtype: Author
+  name: Lee B
+epubdate: 2021 Jan 27
+fulljournalname: Scientific Reports
+issue: ''
+pages: '2308'
+pmclivedate: 2021/01/29
+printpubdate: ''
+pubdate: 2021 Jan 27
+sortdate: 2021/01/27 00:00
+source: Sci Rep
+title: Quantification of stroke lesion volume using epidural EEG in a cerebral ischaemic
+  rat model
+uid: '7841185'
+volume: '11'

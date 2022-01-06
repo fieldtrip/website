@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '32392250'
+- idtype: doi
+  value: 10.1371/journal.pcbi.1007885
+- idtype: pmcid
+  value: PMC7241858
+authors:
+- authtype: Author
+  name: Kosciessa JQ
+- authtype: Author
+  name: Kloosterman NA
+- authtype: Author
+  name: Garrett DD
+epubdate: 2020 May 11
+fulljournalname: PLoS Computational Biology
+issue: '5'
+pages: e1007885
+pmclivedate: 2020/06/03
+printpubdate: ''
+pubdate: 2020 May 11
+sortdate: 2020/05/11 00:00
+source: PLoS Comput Biol
+title: 'Standard multiscale entropy reflects neural dynamics at mismatched temporal
+  scales: What’s signal irregularity got to do with it?'
+uid: '7241858'
+volume: '16'

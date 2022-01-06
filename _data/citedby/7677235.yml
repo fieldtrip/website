@@ -1,0 +1,38 @@
+articleids:
+- idtype: pmid
+  value: '33240132'
+- idtype: doi
+  value: 10.3389/fpsyt.2020.580503
+- idtype: pmcid
+  value: PMC7677235
+authors:
+- authtype: Author
+  name: Kocsis A
+- authtype: Author
+  name: Gajwani R
+- authtype: Author
+  name: Gross J
+- authtype: Author
+  name: Gumley AI
+- authtype: Author
+  name: Lawrie SM
+- authtype: Author
+  name: Schwannauer M
+- authtype: Author
+  name: Schultze-Lutter F
+- authtype: Author
+  name: Grent-‘t-Jong T
+- authtype: Author
+  name: Uhlhaas PJ
+epubdate: 2020 Nov 6
+fulljournalname: Frontiers in Psychiatry
+issue: ''
+pages: '580503'
+pmclivedate: 2020/11/24
+printpubdate: ''
+pubdate: 2020 Nov 6
+sortdate: 2020/11/06 00:00
+source: Front Psychiatry
+title: Altered Autonomic Function in Individuals at Clinical High Risk for Psychosis
+uid: '7677235'
+volume: '11'

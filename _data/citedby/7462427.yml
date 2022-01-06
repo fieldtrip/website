@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '32885118'
+- idtype: doi
+  value: 10.1162/netn_a_00139
+- idtype: pmcid
+  value: PMC7462427
+authors:
+- authtype: Author
+  name: Garcia JO
+- authtype: Author
+  name: Ashourvan A
+- authtype: Author
+  name: Thurman SM
+- authtype: Author
+  name: Srinivasan R
+- authtype: Author
+  name: Bassett DS
+- authtype: Author
+  name: Vettel JM
+epubdate: 2020 Jul 1
+fulljournalname: Network Neuroscience
+issue: '3'
+pages: 611-636
+pmclivedate: 2020/09/02
+printpubdate: ''
+pubdate: 2020 Jul 1
+sortdate: 2020/07/01 00:00
+source: Netw Neurosci
+title: Reconfigurations within resonating communities of brain regions following TMS
+  reveal different scales of processing
+uid: '7462427'
+volume: '4'

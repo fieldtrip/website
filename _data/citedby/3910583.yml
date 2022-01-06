@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '24474792'
+- idtype: doi
+  value: 10.1073/pnas.1317267111
+- idtype: pmcid
+  value: PMC3910583
+authors:
+- authtype: Author
+  name: Weisz N
+- authtype: Author
+  name: Wühle A
+- authtype: Author
+  name: Monittola G
+- authtype: Author
+  name: Demarchi G
+- authtype: Author
+  name: Frey J
+- authtype: Author
+  name: Popov T
+- authtype: Author
+  name: Braun C
+epubdate: 2014 Jan 13
+fulljournalname: Proceedings of the National Academy of Sciences of the United States
+  of America
+issue: '4'
+pages: E417-E425
+pmclivedate: 2014/07/28
+printpubdate: 2014 Jan 28
+pubdate: 2014 Jan 13
+sortdate: 2014/01/13 00:00
+source: Proc Natl Acad Sci U S A
+title: Prestimulus oscillatory power and connectivity patterns predispose conscious
+  somatosensory perception
+uid: '3910583'
+volume: '111'

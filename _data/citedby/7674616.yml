@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '33395977'
+- idtype: doi
+  value: 10.1016/j.nicl.2020.102486
+- idtype: pmcid
+  value: PMC7674616
+authors:
+- authtype: Author
+  name: Lévy JP
+- authtype: Author
+  name: Nguyen TA
+- authtype: Author
+  name: Lachenmayer L
+- authtype: Author
+  name: Debove I
+- authtype: Author
+  name: Tinkhauser G
+- authtype: Author
+  name: Petermann K
+- authtype: Author
+  name: Amil AS
+- authtype: Author
+  name: Michelis J
+- authtype: Author
+  name: Schüpbach M
+- authtype: Author
+  name: Nowacki A
+- authtype: Author
+  name: Pollo C
+epubdate: 2020 Nov 2
+fulljournalname: 'NeuroImage : Clinical'
+issue: ''
+pages: '102486'
+pmclivedate: 2020/11/24
+printpubdate: ''
+pubdate: 2020 Nov 2
+sortdate: 2020/11/02 00:00
+source: Neuroimage Clin
+title: Structure-function relationship of the posterior subthalamic area with directional
+  deep brain stimulation for essential tremor
+uid: '7674616'
+volume: '28'

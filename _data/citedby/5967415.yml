@@ -1,0 +1,34 @@
+articleids:
+- idtype: pmid
+  value: '29752228'
+- idtype: doi
+  value: 10.1109/TNSRE.2018.2817924
+- idtype: pmcid
+  value: PMC5967415
+- idtype: MID
+  value: NIHMS967067
+authors:
+- authtype: Author
+  name: Edelman BJ
+- authtype: Author
+  name: Meng J
+- authtype: Author
+  name: Gulachek N
+- authtype: Author
+  name: Cline CC
+- authtype: Author
+  name: He B
+epubdate: ''
+fulljournalname: 'IEEE transactions on neural systems and rehabilitation engineering
+  : a publication of the IEEE Engineering in Medicine and Biology Society'
+issue: '5'
+pages: 936-947
+pmclivedate: 2019/05/01
+printpubdate: 2018 May
+pubdate: 2018 May
+sortdate: 2018/05/01 00:00
+source: IEEE Trans Neural Syst Rehabil Eng
+title: Exploring cognitive flexibility with a noninvasive BCI using simultaneous steady-state
+  visual evoked potentials and sensorimotor rhythms
+uid: '5967415'
+volume: '26'

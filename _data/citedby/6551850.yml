@@ -1,0 +1,42 @@
+articleids:
+- idtype: pmid
+  value: '31167023'
+- idtype: doi
+  value: 10.1001/jamanetworkopen.2019.5578
+- idtype: pmcid
+  value: PMC6551850
+authors:
+- authtype: Author
+  name: Hadas I
+- authtype: Author
+  name: Sun Y
+- authtype: Author
+  name: Lioumis P
+- authtype: Author
+  name: Zomorrodi R
+- authtype: Author
+  name: Jones B
+- authtype: Author
+  name: Voineskos D
+- authtype: Author
+  name: Downar J
+- authtype: Author
+  name: Fitzgerald PB
+- authtype: Author
+  name: Blumberger DM
+- authtype: Author
+  name: Daskalakis ZJ
+epubdate: 2019 Jun 5
+fulljournalname: JAMA Network Open
+issue: '6'
+pages: e195578
+pmclivedate: 2019/06/21
+printpubdate: ''
+pubdate: 2019 Jun 5
+sortdate: 2019/06/05 00:00
+source: JAMA Netw Open
+title: 'Association of Repetitive Transcranial Magnetic Stimulation Treatment With
+  Subgenual Cingulate Hyperactivity in Patients With Major Depressive Disorder: A
+  Secondary Analysis of a Randomized Clinical Trial'
+uid: '6551850'
+volume: '2'

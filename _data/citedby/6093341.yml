@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '29415124'
+- idtype: doi
+  value: 10.1093/cercor/bhy016
+- idtype: pmcid
+  value: PMC6093341
+authors:
+- authtype: Author
+  name: Khademi F
+- authtype: Author
+  name: Royter V
+- authtype: Author
+  name: Gharabaghi A
+epubdate: 2018 Feb 3
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '4'
+pages: 1502-1515
+pmclivedate: 2018/08/22
+printpubdate: 2018 Apr
+pubdate: 2018 Feb 3
+sortdate: 2018/02/03 00:00
+source: Cereb Cortex
+title: Distinct Beta-band Oscillatory Circuits Underlie Corticospinal Gain Modulation
+uid: '6093341'
+volume: '28'

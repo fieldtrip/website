@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '31175211'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.2919-18.2019
+- idtype: pmcid
+  value: PMC6687903
+authors:
+- authtype: Author
+  name: Rodriguez-Larios J
+- authtype: Author
+  name: Alaerts K
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '32'
+pages: 6291-6298
+pmclivedate: 2020/02/07
+printpubdate: 2019 Aug 7
+pubdate: 2019 Aug 7
+sortdate: 2019/08/07 00:00
+source: J Neurosci
+title: 'Tracking Transient Changes in the Neural Frequency Architecture: Harmonic
+  Relationships between Theta and Alpha Peaks Facilitate Cognitive Performance'
+uid: '6687903'
+volume: '39'

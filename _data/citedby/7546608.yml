@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '33033356'
+- idtype: doi
+  value: 10.1038/s41598-020-74009-9
+- idtype: pmcid
+  value: PMC7546608
+authors:
+- authtype: Author
+  name: Kaiser D
+- authtype: Author
+  name: Nyga K
+epubdate: 2020 Oct 8
+fulljournalname: Scientific Reports
+issue: ''
+pages: '16852'
+pmclivedate: 2020/10/14
+printpubdate: ''
+pubdate: 2020 Oct 8
+sortdate: 2020/10/08 00:00
+source: Sci Rep
+title: Tracking cortical representations of facial attractiveness using time-resolved
+  representational similarity analysis
+uid: '7546608'
+volume: '10'

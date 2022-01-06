@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '27932971'
+- idtype: doi
+  value: 10.3389/fncom.2016.00120
+- idtype: pmcid
+  value: PMC5122594
+authors:
+- authtype: Author
+  name: Gohel B
+- authtype: Author
+  name: Lim S
+- authtype: Author
+  name: Kim MY
+- authtype: Author
+  name: An KM
+- authtype: Author
+  name: Kim JE
+- authtype: Author
+  name: Kwon H
+- authtype: Author
+  name: Kim K
+epubdate: 2016 Nov 25
+fulljournalname: Frontiers in Computational Neuroscience
+issue: ''
+pages: '120'
+pmclivedate: 2016/12/08
+printpubdate: ''
+pubdate: 2016 Nov 25
+sortdate: 2016/11/25 00:00
+source: Front Comput Neurosci
+title: 'Evaluation of Phase-Amplitude Coupling in Resting State Magnetoencephalographic
+  Signals: Effect of Surrogates and Evaluation Approach'
+uid: '5122594'
+volume: '10'

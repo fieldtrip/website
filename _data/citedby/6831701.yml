@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '31690784'
+- idtype: doi
+  value: 10.1038/s41598-019-52426-9
+- idtype: pmcid
+  value: PMC6831701
+authors:
+- authtype: Author
+  name: Klepp A
+- authtype: Author
+  name: van Dijk H
+- authtype: Author
+  name: Niccolai V
+- authtype: Author
+  name: Schnitzler A
+- authtype: Author
+  name: Biermann-Ruben K
+epubdate: 2019 Nov 5
+fulljournalname: Scientific Reports
+issue: ''
+pages: '15985'
+pmclivedate: 2019/11/13
+printpubdate: ''
+pubdate: 2019 Nov 5
+sortdate: 2019/11/05 00:00
+source: Sci Rep
+title: Action verb processing specifically modulates motor behaviour and sensorimotor
+  neuronal oscillations
+uid: '6831701'
+volume: '9'

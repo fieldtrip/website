@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '26561596'
+- idtype: doi
+  value: 10.1152/jn.00216.2015
+- idtype: pmcid
+  value: PMC4760498
+authors:
+- authtype: Author
+  name: Saifee TA
+- authtype: Author
+  name: Edwards MJ
+- authtype: Author
+  name: Kassavetis P
+- authtype: Author
+  name: Gilbertson T
+epubdate: 2015 Nov 11
+fulljournalname: Journal of Neurophysiology
+issue: '1'
+pages: 310-323
+pmclivedate: 2017/01/01
+printpubdate: 2016 Jan 1
+pubdate: 2015 Nov 11
+sortdate: 2015/11/11 00:00
+source: J Neurophysiol
+title: Estimation of the phase response curve from Parkinsonian tremor
+uid: '4760498'
+volume: '115'

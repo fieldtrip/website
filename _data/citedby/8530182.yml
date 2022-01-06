@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '34690734'
+- idtype: doi
+  value: 10.3389/fnagi.2021.669490
+- idtype: pmcid
+  value: PMC8530182
+authors:
+- authtype: Author
+  name: Cohen AD
+- authtype: Author
+  name: Bruña R
+- authtype: Author
+  name: Chang YF
+- authtype: Author
+  name: Cheng Y
+- authtype: Author
+  name: Doman J
+- authtype: Author
+  name: Huppert T
+- authtype: Author
+  name: Kim T
+- authtype: Author
+  name: Maestu F
+- authtype: Author
+  name: Roush RE
+- authtype: Author
+  name: Snitz BE
+- authtype: Author
+  name: Becker JT
+epubdate: 2021 Oct 7
+fulljournalname: Frontiers in Aging Neuroscience
+issue: ''
+pages: '669490'
+pmclivedate: 2021/10/22
+printpubdate: ''
+pubdate: 2021 Oct 7
+sortdate: 2021/10/07 00:00
+source: Front Aging Neurosci
+title: Connectomics in Brain Aging and Dementia – The Background and Design of a Study
+  of a Connectome Related to Human Disease
+uid: '8530182'
+volume: '13'

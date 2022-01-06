@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '27241517'
+- idtype: doi
+  value: 10.1016/j.biopsycho.2016.05.011
+- idtype: pmcid
+  value: PMC5567786
+- idtype: MID
+  value: NIHMS795867
+authors:
+- authtype: Author
+  name: Taylor J
+- authtype: Author
+  name: Shehzad Z
+- authtype: Author
+  name: McCarthy G
+epubdate: 2016 May 27
+fulljournalname: Biological psychology
+issue: ''
+pages: 136-146
+pmclivedate: 2017/08/23
+printpubdate: 2016 Jul
+pubdate: 2016 May 27
+sortdate: 2016/05/27 00:00
+source: Biol Psychol
+title: Electrophysiological correlates of face-evoked person knowledge
+uid: '5567786'
+volume: '118'

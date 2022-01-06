@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '31417389'
+- idtype: doi
+  value: 10.3389/fninf.2019.00057
+- idtype: pmcid
+  value: PMC6682703
+authors:
+- authtype: Author
+  name: Unakafova VA
+- authtype: Author
+  name: Gail A
+epubdate: 2019 Jul 30
+fulljournalname: Frontiers in Neuroinformatics
+issue: ''
+pages: '57'
+pmclivedate: 2019/08/15
+printpubdate: ''
+pubdate: 2019 Jul 30
+sortdate: 2019/07/30 00:00
+source: Front Neuroinform
+title: Comparing Open-Source Toolboxes for Processing and Analysis of Spike and Local
+  Field Potentials Data
+uid: '6682703'
+volume: '13'

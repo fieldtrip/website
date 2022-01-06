@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '28288178'
+- idtype: doi
+  value: 10.1371/journal.pone.0173679
+- idtype: pmcid
+  value: PMC5348023
+authors:
+- authtype: Author
+  name: El Karoui I
+- authtype: Author
+  name: Christoforidis K
+- authtype: Author
+  name: Naccache L
+epubdate: 2017 Mar 13
+fulljournalname: PLoS ONE
+issue: '3'
+pages: e0173679
+pmclivedate: 2017/03/30
+printpubdate: ''
+pubdate: 2017 Mar 13
+sortdate: 2017/03/13 00:00
+source: PLoS One
+title: Can application and transfer of strategy be observed in low visibility condition?
+uid: '5348023'
+volume: '12'

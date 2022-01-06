@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '30070044'
+- idtype: doi
+  value: 10.1002/sctm.18-0090
+- idtype: pmcid
+  value: PMC6216432
+authors:
+- authtype: Author
+  name: Murias M
+- authtype: Author
+  name: Major S
+- authtype: Author
+  name: Compton S
+- authtype: Author
+  name: Buttinger J
+- authtype: Author
+  name: Sun JM
+- authtype: Author
+  name: Kurtzberg J
+- authtype: Author
+  name: Dawson G
+epubdate: 2018 Aug 1
+fulljournalname: Stem Cells Translational Medicine
+issue: '11'
+pages: 783-791
+pmclivedate: 2018/11/08
+printpubdate: ''
+pubdate: 2018 Aug 1
+sortdate: 2018/08/01 00:00
+source: Stem Cells Transl Med
+title: Electrophysiological Biomarkers Predict Clinical Improvement in an Open‐Label
+  Trial Assessing Efficacy of Autologous Umbilical Cord Blood for Treatment of Autism
+uid: '6216432'
+volume: '7'

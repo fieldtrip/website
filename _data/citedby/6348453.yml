@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '30693310'
+- idtype: doi
+  value: 10.1523/ENEURO.0407-18.2018
+- idtype: pmcid
+  value: PMC6348453
+authors:
+- authtype: Author
+  name: Jarovi J
+- authtype: Author
+  name: Volle J
+- authtype: Author
+  name: Yu X
+- authtype: Author
+  name: Guan L
+- authtype: Author
+  name: Takehara-Nishiuchi K
+epubdate: 2018 Jan 10
+fulljournalname: eNeuro
+issue: '6'
+pages: ENEURO.0407-18.2018
+pmclivedate: 2019/01/28
+printpubdate: ''
+pubdate: 2018 Jan 10
+sortdate: 2018/01/10 00:00
+source: eNeuro
+title: Prefrontal Theta Oscillations Promote Selective Encoding of Behaviorally Relevant
+  Events
+uid: '6348453'
+volume: '5'

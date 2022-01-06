@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '34662779'
+- idtype: doi
+  value: 10.1016/j.nicl.2021.102857
+- idtype: pmcid
+  value: PMC8526781
+authors:
+- authtype: Author
+  name: Muthuraman M
+- authtype: Author
+  name: Palotai M
+- authtype: Author
+  name: Jávor-Duray B
+- authtype: Author
+  name: Kelemen A
+- authtype: Author
+  name: Koirala N
+- authtype: Author
+  name: Halász L
+- authtype: Author
+  name: Erőss L
+- authtype: Author
+  name: Fekete G
+- authtype: Author
+  name: Bognár L
+- authtype: Author
+  name: Deuschl G
+- authtype: Author
+  name: Tamás G
+epubdate: 2021 Oct 13
+fulljournalname: 'NeuroImage : Clinical'
+issue: ''
+pages: '102857'
+pmclivedate: 2021/10/25
+printpubdate: ''
+pubdate: 2021 Oct 13
+sortdate: 2021/10/13 00:00
+source: Neuroimage Clin
+title: Frequency-specific network activity predicts bradykinesia severity in Parkinson’s
+  disease
+uid: '8526781'
+volume: '32'

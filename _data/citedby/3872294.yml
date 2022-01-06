@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '24399957'
+- idtype: doi
+  value: 10.3389/fnhum.2013.00900
+- idtype: pmcid
+  value: PMC3872294
+authors:
+- authtype: Author
+  name: Stephen JM
+- authtype: Author
+  name: Coffman BA
+- authtype: Author
+  name: Stone DB
+- authtype: Author
+  name: Kodituwakku P
+epubdate: 2013 Dec 25
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '900'
+pmclivedate: 2014/01/07
+printpubdate: ''
+pubdate: 2013 Dec 25
+sortdate: 2013/12/25 00:00
+source: Front Hum Neurosci
+title: Differences in MEG gamma oscillatory power during performance of a prosaccade
+  task in adolescents with FASD
+uid: '3872294'
+volume: '7'

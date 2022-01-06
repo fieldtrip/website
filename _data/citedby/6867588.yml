@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '26467848'
+- idtype: doi
+  value: 10.1002/hbm.23027
+- idtype: pmcid
+  value: PMC6867588
+authors:
+- authtype: Author
+  name: Martín‐Buro MC
+- authtype: Author
+  name: Garcés P
+- authtype: Author
+  name: Maestú F
+epubdate: 2015 Oct 14
+fulljournalname: Human Brain Mapping
+issue: '1'
+pages: 179-190
+pmclivedate: 2020/06/12
+printpubdate: ''
+pubdate: 2015 Oct 14
+sortdate: 2015/10/14 00:00
+source: Hum Brain Mapp
+title: Test‐retest reliability of resting‐state magnetoencephalography power in sensor
+  and source space
+uid: '6867588'
+volume: '37'

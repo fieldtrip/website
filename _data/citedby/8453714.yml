@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '34110041'
+- idtype: doi
+  value: 10.1002/jnr.24898
+- idtype: pmcid
+  value: PMC8453714
+authors:
+- authtype: Author
+  name: Liparoti M
+- authtype: Author
+  name: Troisi Lopez E
+- authtype: Author
+  name: Sarno L
+- authtype: Author
+  name: Rucco R
+- authtype: Author
+  name: Minino R
+- authtype: Author
+  name: Pesoli M
+- authtype: Author
+  name: Perruolo G
+- authtype: Author
+  name: Formisano P
+- authtype: Author
+  name: Lucidi F
+- authtype: Author
+  name: Sorrentino G
+- authtype: Author
+  name: Sorrentino P
+epubdate: 2021 Jun 10
+fulljournalname: Journal of Neuroscience Research
+issue: '9'
+pages: 2271-2286
+pmclivedate: 2021/09/27
+printpubdate: 2021 Sep
+pubdate: 2021 Jun 10
+sortdate: 2021/06/10 00:00
+source: J Neurosci Res
+title: Functional brain network topology across the menstrual cycle is estradiol dependent
+  and correlates with individual well‐being
+uid: '8453714'
+volume: '99'

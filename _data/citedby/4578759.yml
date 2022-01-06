@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '26392353'
+- idtype: doi
+  value: 10.1186/s12984-015-0076-7
+- idtype: pmcid
+  value: PMC4578759
+authors:
+- authtype: Author
+  name: Foldes ST
+- authtype: Author
+  name: Weber DJ
+- authtype: Author
+  name: Collinger JL
+epubdate: 2015 Sep 22
+fulljournalname: Journal of NeuroEngineering and Rehabilitation
+issue: ''
+pages: '85'
+pmclivedate: 2015/09/23
+printpubdate: ''
+pubdate: 2015 Sep 22
+sortdate: 2015/09/22 00:00
+source: J Neuroeng Rehabil
+title: MEG-based neurofeedback for hand rehabilitation
+uid: '4578759'
+volume: '12'

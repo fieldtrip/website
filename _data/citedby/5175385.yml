@@ -1,0 +1,34 @@
+articleids:
+- idtype: pmid
+  value: '28066231'
+- idtype: doi
+  value: 10.3389/fnagi.2016.00305
+- idtype: pmcid
+  value: PMC5175385
+authors:
+- authtype: Author
+  name: Quandt F
+- authtype: Author
+  name: Bönstrup M
+- authtype: Author
+  name: Schulz R
+- authtype: Author
+  name: Timmermann JE
+- authtype: Author
+  name: Zimerman M
+- authtype: Author
+  name: Nolte G
+- authtype: Author
+  name: Hummel FC
+epubdate: 2016 Dec 21
+fulljournalname: Frontiers in Aging Neuroscience
+issue: ''
+pages: '305'
+pmclivedate: 2017/01/06
+printpubdate: ''
+pubdate: 2016 Dec 21
+sortdate: 2016/12/21 00:00
+source: Front Aging Neurosci
+title: Spectral Variability in the Aged Brain during Fine Motor Control
+uid: '5175385'
+volume: '8'

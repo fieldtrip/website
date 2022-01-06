@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '29185490'
+- idtype: doi
+  value: 10.1038/s41598-017-16669-8
+- idtype: pmcid
+  value: PMC5707412
+authors:
+- authtype: Author
+  name: Bangel KA
+- authtype: Author
+  name: van Buschbach S
+- authtype: Author
+  name: Smit DJ
+- authtype: Author
+  name: Mazaheri A
+- authtype: Author
+  name: Olff M
+epubdate: 2017 Nov 29
+fulljournalname: Scientific Reports
+issue: ''
+pages: '16596'
+pmclivedate: 2017/12/06
+printpubdate: ''
+pubdate: 2017 Nov 29
+sortdate: 2017/11/29 00:00
+source: Sci Rep
+title: 'Aberrant brain response after auditory deviance in PTSD compared to trauma
+  controls: An EEG study'
+uid: '5707412'
+volume: '7'

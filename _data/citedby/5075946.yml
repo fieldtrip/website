@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '27822495'
+- idtype: doi
+  value: 10.1523/ENEURO.0191-16.2016
+- idtype: pmcid
+  value: PMC5075946
+authors:
+- authtype: Author
+  name: Lin A
+- authtype: Author
+  name: Maniscalco B
+- authtype: Author
+  name: He BJ
+epubdate: 2016 Oct 24
+fulljournalname: eNeuro
+issue: '5'
+pages: ENEURO.0191-16.2016
+pmclivedate: 2016/11/07
+printpubdate: ''
+pubdate: 2016 Oct 24
+sortdate: 2016/10/24 00:00
+source: eNeuro
+title: Scale-Free Neural and Physiological Dynamics in Naturalistic Stimuli Processing
+uid: '5075946'
+volume: '3'

@@ -1,0 +1,44 @@
+articleids:
+- idtype: pmid
+  value: '32344572'
+- idtype: doi
+  value: 10.3390/jcm9041229
+- idtype: pmcid
+  value: PMC7230272
+authors:
+- authtype: Author
+  name: Bos MJ
+- authtype: Author
+  name: Alzate Sanchez AM
+- authtype: Author
+  name: Bancone R
+- authtype: Author
+  name: Temel Y
+- authtype: Author
+  name: de Greef BT
+- authtype: Author
+  name: Absalom AR
+- authtype: Author
+  name: Gommer ED
+- authtype: Author
+  name: van Kranen-Mastenbroek VH
+- authtype: Author
+  name: Buhre WF
+- authtype: Author
+  name: Roberts MJ
+- authtype: Author
+  name: Janssen ML
+epubdate: 2020 Apr 24
+fulljournalname: Journal of Clinical Medicine
+issue: '4'
+pages: '1229'
+pmclivedate: 2020/05/28
+printpubdate: ''
+pubdate: 2020 Apr 24
+sortdate: 2020/04/24 00:00
+source: J Clin Med
+title: Influence of Anesthesia and Clinical Variables on the Firing Rate, Coefficient
+  of Variation and Multi-Unit Activity of the Subthalamic Nucleus in Patients with
+  Parkinson’s Disease
+uid: '7230272'
+volume: '9'

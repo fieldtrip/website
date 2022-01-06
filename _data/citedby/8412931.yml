@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '34473058'
+- idtype: doi
+  value: 10.7554/eLife.68240
+- idtype: pmcid
+  value: PMC8412931
+authors:
+- authtype: Author
+  name: Stauch BJ
+- authtype: Author
+  name: Peter A
+- authtype: Author
+  name: Schuler H
+- authtype: Author
+  name: Fries P
+epubdate: 2021 Aug 24
+fulljournalname: eLife
+issue: ''
+pages: e68240
+pmclivedate: 2021/09/03
+printpubdate: ''
+pubdate: 2021 Aug 24
+sortdate: 2021/08/24 00:00
+source: eLife
+title: Stimulus-specific plasticity in human visual gamma-band activity and functional
+  connectivity
+uid: '8412931'
+volume: '10'

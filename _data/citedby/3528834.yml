@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '23159599'
+- idtype: doi
+  value: 10.1016/j.cub.2012.10.020
+- idtype: pmcid
+  value: PMC3528834
+- idtype: MID
+  value: NIHMS422732
+authors:
+- authtype: Author
+  name: Spaak E
+- authtype: Author
+  name: Bonnefond M
+- authtype: Author
+  name: Maier A
+- authtype: Author
+  name: Leopold DA
+- authtype: Author
+  name: Jensen O
+epubdate: 2012 Nov 15
+fulljournalname: 'Current biology : CB'
+issue: '24'
+pages: 2313-2318
+pmclivedate: 2013/12/18
+printpubdate: 2012 Dec 18
+pubdate: 2012 Nov 15
+sortdate: 2012/11/15 00:00
+source: Curr Biol
+title: Layer-specific entrainment of gamma-band neural activity by the alpha rhythm
+  in monkey visual cortex
+uid: '3528834'
+volume: '22'

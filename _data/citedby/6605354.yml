@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '26558784'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1329-15.2015
+- idtype: pmcid
+  value: PMC6605354
+authors:
+- authtype: Author
+  name: Grent-'t-Jong T
+- authtype: Author
+  name: Oostenveld R
+- authtype: Author
+  name: Medendorp WP
+- authtype: Author
+  name: Praamstra P
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '45'
+pages: 15135-15144
+pmclivedate: 2019/07/08
+printpubdate: 2015 Nov 11
+pubdate: 2015 Nov 11
+sortdate: 2015/11/11 00:00
+source: J Neurosci
+title: 'Separating Visual and Motor Components of Motor Cortex Activation for Multiple
+  Reach Targets: A Visuomotor Adaptation Study'
+uid: '6605354'
+volume: '35'

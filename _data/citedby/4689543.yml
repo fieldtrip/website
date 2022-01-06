@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '26699335'
+- idtype: doi
+  value: 10.1371/journal.pone.0145474
+- idtype: pmcid
+  value: PMC4689543
+authors:
+- authtype: Author
+  name: Bögels S
+- authtype: Author
+  name: Kendrick KH
+- authtype: Author
+  name: Levinson SC
+epubdate: 2015 Dec 23
+fulljournalname: PLoS ONE
+issue: '12'
+pages: e0145474
+pmclivedate: 2015/12/31
+printpubdate: ''
+pubdate: 2015 Dec 23
+sortdate: 2015/12/23 00:00
+source: PLoS One
+title: Never Say No … How the Brain Interprets the Pregnant Pause in Conversation
+uid: '4689543'
+volume: '10'

@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '26370167'
+- idtype: doi
+  value: 10.1167/15.10.7
+- idtype: pmcid
+  value: PMC4570730
+authors:
+- authtype: Author
+  name: Bays BC
+- authtype: Author
+  name: Visscher KM
+- authtype: Author
+  name: Le Dantec CC
+- authtype: Author
+  name: Seitz AR
+epubdate: 2015 Sep 14
+fulljournalname: Journal of Vision
+issue: '10'
+pages: '7'
+pmclivedate: 2015/09/17
+printpubdate: ''
+pubdate: 2015 Sep 14
+sortdate: 2015/09/14 00:00
+source: J Vis
+title: Alpha-band EEG activity in perceptual learning
+uid: '4570730'
+volume: '15'

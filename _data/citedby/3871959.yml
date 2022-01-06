@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '24399965'
+- idtype: doi
+  value: 10.3389/fninf.2013.00040
+- idtype: pmcid
+  value: PMC3871959
+authors:
+- authtype: Author
+  name: Krell MM
+- authtype: Author
+  name: Straube S
+- authtype: Author
+  name: Seeland A
+- authtype: Author
+  name: Wöhrle H
+- authtype: Author
+  name: Teiwes J
+- authtype: Author
+  name: Metzen JH
+- authtype: Author
+  name: Kirchner EA
+- authtype: Author
+  name: Kirchner F
+epubdate: 2013 Dec 24
+fulljournalname: Frontiers in Neuroinformatics
+issue: ''
+pages: '40'
+pmclivedate: 2014/01/07
+printpubdate: ''
+pubdate: 2013 Dec 24
+sortdate: 2013/12/24 00:00
+source: Front Neuroinform
+title: pySPACE—a signal processing and classification environment in Python
+uid: '3871959'
+volume: '7'

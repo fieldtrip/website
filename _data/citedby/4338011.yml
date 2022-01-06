@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '25706867'
+- idtype: doi
+  value: 10.1371/journal.pone.0118277
+- idtype: pmcid
+  value: PMC4338011
+authors:
+- authtype: Author
+  name: Goltstein PM
+- authtype: Author
+  name: Montijn JS
+- authtype: Author
+  name: Pennartz CM
+epubdate: 2015 Feb 23
+fulljournalname: PLoS ONE
+issue: '2'
+pages: e0118277
+pmclivedate: 2015/03/04
+printpubdate: ''
+pubdate: 2015 Feb 23
+sortdate: 2015/02/23 00:00
+source: PLoS One
+title: 'Effects of Isoflurane Anesthesia on Ensemble Patterns of Ca2+ Activity in
+  Mouse V1: Reduced Direction Selectivity Independent of Increased Correlations in
+  Cellular Activity'
+uid: '4338011'
+volume: '10'

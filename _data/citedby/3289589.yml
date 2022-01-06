@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '22389627'
+- idtype: doi
+  value: 10.1371/journal.pbio.1001267
+- idtype: pmcid
+  value: PMC3289589
+authors:
+- authtype: Author
+  name: Kaplan R
+- authtype: Author
+  name: Doeller CF
+- authtype: Author
+  name: Barnes GR
+- authtype: Author
+  name: Litvak V
+- authtype: Author
+  name: Düzel E
+- authtype: Author
+  name: Bandettini PA
+- authtype: Author
+  name: Burgess N
+epubdate: 2012 Feb 28
+fulljournalname: PLoS Biology
+issue: '2'
+pages: e1001267
+pmclivedate: 2012/03/02
+printpubdate: ''
+pubdate: 2012 Feb 28
+sortdate: 2012/02/28 00:00
+source: PLoS Biol
+title: 'Movement-Related Theta Rhythm in Humans: Coordinating Self-Directed Hippocampal
+  Learning'
+uid: '3289589'
+volume: '10'

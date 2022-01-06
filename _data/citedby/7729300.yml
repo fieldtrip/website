@@ -1,0 +1,34 @@
+articleids:
+- idtype: pmid
+  value: '33199412'
+- idtype: doi
+  value: 10.1523/ENEURO.0069-19.2020
+- idtype: pmcid
+  value: PMC7729300
+authors:
+- authtype: Author
+  name: Wagley N
+- authtype: Author
+  name: Lajiness-O’Neill R
+- authtype: Author
+  name: Hay JS
+- authtype: Author
+  name: Ugolini M
+- authtype: Author
+  name: Bowyer SM
+- authtype: Author
+  name: Kovelman I
+- authtype: Author
+  name: Brennan JR
+epubdate: 2020 Dec 10
+fulljournalname: eNeuro
+issue: '6'
+pages: ENEURO.0069-19.2020
+pmclivedate: 2020/12/14
+printpubdate: ''
+pubdate: 2020 Dec 10
+sortdate: 2020/12/10 00:00
+source: eNeuro
+title: Predictive Processing during a Naturalistic Statistical Learning Task in ASD
+uid: '7729300'
+volume: '7'

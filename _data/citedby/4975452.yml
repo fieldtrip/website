@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '27494601'
+- idtype: doi
+  value: 10.1371/journal.pbio.1002528
+- idtype: pmcid
+  value: PMC4975452
+authors:
+- authtype: Author
+  name: Michelmann S
+- authtype: Author
+  name: Bowman H
+- authtype: Author
+  name: Hanslmayr S
+epubdate: 2016 Aug 5
+fulljournalname: PLoS Biology
+issue: '8'
+pages: e1002528
+pmclivedate: 2016/08/25
+printpubdate: ''
+pubdate: 2016 Aug 5
+sortdate: 2016/08/05 00:00
+source: PLoS Biol
+title: 'The Temporal Signature of Memories: Identification of a General Mechanism
+  for Dynamic Memory Replay in Humans'
+uid: '4975452'
+volume: '14'

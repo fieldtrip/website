@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '30787872'
+- idtype: doi
+  value: 10.3389/fnhum.2019.00018
+- idtype: pmcid
+  value: PMC6372538
+authors:
+- authtype: Author
+  name: Xu W
+- authtype: Author
+  name: Kolozsvári OB
+- authtype: Author
+  name: Oostenveld R
+- authtype: Author
+  name: Leppänen PH
+- authtype: Author
+  name: Hämäläinen JA
+epubdate: 2019 Feb 6
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '18'
+pmclivedate: 2019/02/20
+printpubdate: ''
+pubdate: 2019 Feb 6
+sortdate: 2019/02/06 00:00
+source: Front Hum Neurosci
+title: Audiovisual Processing of Chinese Characters Elicits Suppression and Congruency
+  Effects in MEG
+uid: '6372538'
+volume: '13'

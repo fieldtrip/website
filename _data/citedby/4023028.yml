@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '24847224'
+- idtype: doi
+  value: 10.3389/fnsys.2014.00081
+- idtype: pmcid
+  value: PMC4023028
+authors:
+- authtype: Author
+  name: Ben-Soussan TD
+- authtype: Author
+  name: Avirame K
+- authtype: Author
+  name: Glicksohn J
+- authtype: Author
+  name: Goldstein A
+- authtype: Author
+  name: Harpaz Y
+- authtype: Author
+  name: Ben-Shachar M
+epubdate: 2014 May 9
+fulljournalname: Frontiers in Systems Neuroscience
+issue: ''
+pages: '81'
+pmclivedate: 2014/05/20
+printpubdate: ''
+pubdate: 2014 May 9
+sortdate: 2014/05/09 00:00
+source: Front Syst Neurosci
+title: Changes in cerebellar activity and inter-hemispheric coherence accompany improved
+  reading performance following Quadrato Motor Training
+uid: '4023028'
+volume: '8'

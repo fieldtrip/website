@@ -1,0 +1,45 @@
+articleids:
+- idtype: pmid
+  value: '33999194'
+- idtype: doi
+  value: 10.1093/sleep/zsab125
+- idtype: pmcid
+  value: PMC8503831
+authors:
+- authtype: Author
+  name: McConnell BV
+- authtype: Author
+  name: Kronberg E
+- authtype: Author
+  name: Teale PD
+- authtype: Author
+  name: Sillau SH
+- authtype: Author
+  name: Fishback GM
+- authtype: Author
+  name: Kaplan RI
+- authtype: Author
+  name: Fought AJ
+- authtype: Author
+  name: Dhanasekaran AR
+- authtype: Author
+  name: Berman BD
+- authtype: Author
+  name: Ramos AR
+- authtype: Author
+  name: McClure RL
+- authtype: Author
+  name: Bettcher BM
+epubdate: 2021 May 17
+fulljournalname: Sleep
+issue: '10'
+pages: zsab125
+pmclivedate: ''
+printpubdate: ''
+pubdate: 2021 May 17
+sortdate: 2021/05/17 00:00
+source: Sleep
+title: 'The aging slow wave: a shifting amalgam of distinct slow wave and spindle
+  coupling subtypes define slow wave sleep across the human lifespan'
+uid: '8503831'
+volume: '44'

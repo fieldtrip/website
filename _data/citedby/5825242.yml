@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '29127656'
+- idtype: doi
+  value: 10.3758/s13415-017-0551-7
+- idtype: pmcid
+  value: PMC5825242
+- idtype: MID
+  value: NIHMS919572
+authors:
+- authtype: Author
+  name: Huang S
+- authtype: Author
+  name: Holcomb LA
+- authtype: Author
+  name: Cruz SM
+- authtype: Author
+  name: Marinkovic K
+epubdate: ''
+fulljournalname: Cognitive, affective & behavioral neuroscience
+issue: '1'
+pages: 43-57
+pmclivedate: 2019/02/01
+printpubdate: 2018 Feb
+pubdate: 2018 Feb
+sortdate: 2018/02/01 00:00
+source: Cogn Affect Behav Neurosci
+title: Altered Oscillatory Brain Dynamics of Emotional Processing in Young Binge Drinkers
+uid: '5825242'
+volume: '18'

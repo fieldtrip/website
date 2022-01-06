@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '25992793'
+- idtype: doi
+  value: 10.1371/journal.pone.0125477
+- idtype: pmcid
+  value: PMC4436344
+authors:
+- authtype: Author
+  name: Huang Y
+- authtype: Author
+  name: Parra LC
+epubdate: 2015 May 18
+fulljournalname: PLoS ONE
+issue: '5'
+pages: e0125477
+pmclivedate: 2015/05/27
+printpubdate: ''
+pubdate: 2015 May 18
+sortdate: 2015/05/18 00:00
+source: PLoS One
+title: Fully Automated Whole-Head Segmentation with Improved Smoothness and Continuity,
+  with Theory Reviewed
+uid: '4436344'
+volume: '10'

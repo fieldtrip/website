@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '24135132'
+- idtype: doi
+  value: 10.1016/j.bandl.2013.09.003
+- idtype: pmcid
+  value: PMC3864756
+- idtype: MID
+  value: NIHMS532551
+authors:
+- authtype: Author
+  name: Mellem MS
+- authtype: Author
+  name: Friedman RB
+- authtype: Author
+  name: Medvedev AV
+epubdate: 2013 Oct 14
+fulljournalname: Brain and language
+issue: '3'
+pages: 10.1016/j.bandl.2013.09.003
+pmclivedate: 2014/12/01
+printpubdate: 2013 Dec
+pubdate: 2013 Oct 14
+sortdate: 2013/10/14 00:00
+source: Brain Lang
+title: Gamma- and theta-band synchronization during semantic priming reflect local
+  and long-range lexical-semantic networks
+uid: '3864756'
+volume: '127'

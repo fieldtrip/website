@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '28701732'
+- idtype: doi
+  value: 10.1038/s41598-017-05610-8
+- idtype: pmcid
+  value: PMC5507912
+authors:
+- authtype: Author
+  name: Piantoni G
+- authtype: Author
+  name: Romeijn N
+- authtype: Author
+  name: Gomez-Herrero G
+- authtype: Author
+  name: Van Der Werf YD
+- authtype: Author
+  name: Van Someren EJ
+epubdate: 2017 Jul 12
+fulljournalname: Scientific Reports
+issue: ''
+pages: '5208'
+pmclivedate: 2017/07/14
+printpubdate: ''
+pubdate: 2017 Jul 12
+sortdate: 2017/07/12 00:00
+source: Sci Rep
+title: Alpha Power Predicts Persistence of Bistable Perception
+uid: '5507912'
+volume: '7'

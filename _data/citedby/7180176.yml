@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '32362842'
+- idtype: doi
+  value: 10.3389/fpsyt.2020.00246
+- idtype: pmcid
+  value: PMC7180176
+authors:
+- authtype: Author
+  name: Rolison MJ
+- authtype: Author
+  name: Naples AJ
+- authtype: Author
+  name: Rutherford HJ
+- authtype: Author
+  name: McPartland JC
+epubdate: 2020 Apr 17
+fulljournalname: Frontiers in Psychiatry
+issue: ''
+pages: '246'
+pmclivedate: 2020/05/01
+printpubdate: ''
+pubdate: 2020 Apr 17
+sortdate: 2020/04/17 00:00
+source: Front Psychiatry
+title: The Presence of Another Person Influences Oscillatory Cortical Dynamics During
+  Dual Brain EEG Recording
+uid: '7180176'
+volume: '11'

@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '34155142'
+- idtype: doi
+  value: 10.1073/pnas.2023286118
+- idtype: pmcid
+  value: PMC8237647
+authors:
+- authtype: Author
+  name: Karvat G
+- authtype: Author
+  name: Alyahyay M
+- authtype: Author
+  name: Diester I
+epubdate: 2021 Jun 21
+fulljournalname: Proceedings of the National Academy of Sciences of the United States
+  of America
+issue: '25'
+pages: e2023286118
+pmclivedate: 2021/07/03
+printpubdate: 2021 Jun 22
+pubdate: 2021 Jun 21
+sortdate: 2021/06/21 00:00
+source: Proc Natl Acad Sci U S A
+title: Spontaneous activity competes with externally evoked responses in sensory cortex
+uid: '8237647'
+volume: '118'

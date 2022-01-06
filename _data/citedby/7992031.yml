@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '33636607'
+- idtype: doi
+  value: 10.1016/j.clinph.2020.12.021
+- idtype: pmcid
+  value: PMC7992031
+authors:
+- authtype: Author
+  name: Lopes MA
+- authtype: Author
+  name: Krzemiński D
+- authtype: Author
+  name: Hamandi K
+- authtype: Author
+  name: Singh KD
+- authtype: Author
+  name: Masuda N
+- authtype: Author
+  name: Terry JR
+- authtype: Author
+  name: Zhang J
+epubdate: ''
+fulljournalname: Clinical Neurophysiology
+issue: '4'
+pages: 922-927
+pmclivedate: 2021/04/01
+printpubdate: 2021 Apr
+pubdate: 2021 Apr
+sortdate: 2021/04/01 00:00
+source: Clin Neurophysiol
+title: A computational biomarker of juvenile myoclonic epilepsy from resting-state
+  MEG
+uid: '7992031'
+volume: '132'

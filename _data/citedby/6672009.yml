@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '31371713'
+- idtype: doi
+  value: 10.1038/s41467-019-11440-1
+- idtype: pmcid
+  value: PMC6672009
+authors:
+- authtype: Author
+  name: Demarchi G
+- authtype: Author
+  name: Sanchez G
+- authtype: Author
+  name: Weisz N
+epubdate: 2019 Aug 1
+fulljournalname: Nature Communications
+issue: ''
+pages: '3440'
+pmclivedate: 2019/08/02
+printpubdate: ''
+pubdate: 2019 Aug 1
+sortdate: 2019/08/01 00:00
+source: Nat Commun
+title: Automatic and feature-specific prediction-related neural activity in the human
+  auditory system
+uid: '6672009'
+volume: '10'

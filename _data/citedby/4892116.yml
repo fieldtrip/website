@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '23787780'
+- idtype: doi
+  value: 10.1038/ncomms3032
+- idtype: pmcid
+  value: PMC4892116
+- idtype: MID
+  value: NIHMS787280
+authors:
+- authtype: Author
+  name: Soekadar SR
+- authtype: Author
+  name: Witkowski M
+- authtype: Author
+  name: Cossio EG
+- authtype: Author
+  name: Birbaumer N
+- authtype: Author
+  name: Robinson SE
+- authtype: Author
+  name: Cohen LG
+epubdate: ''
+fulljournalname: Nature communications
+issue: ''
+pages: '2032'
+pmclivedate: 2016/06/03
+printpubdate: '2013'
+pubdate: '2013'
+sortdate: 2013/01/01 00:00
+source: Nat Commun
+title: In vivo assessment of human brain oscillations during application of transcranial
+  electric currents
+uid: '4892116'
+volume: '4'

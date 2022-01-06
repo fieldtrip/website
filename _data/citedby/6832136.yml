@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '31614504'
+- idtype: doi
+  value: 10.3390/s19204397
+- idtype: pmcid
+  value: PMC6832136
+authors:
+- authtype: Author
+  name: Kaneko D
+- authtype: Author
+  name: Hogervorst M
+- authtype: Author
+  name: Toet A
+- authtype: Author
+  name: van Erp JB
+- authtype: Author
+  name: Kallen V
+- authtype: Author
+  name: Brouwer AM
+epubdate: 2019 Oct 11
+fulljournalname: Sensors (Basel, Switzerland)
+issue: '20'
+pages: '4397'
+pmclivedate: 2019/11/20
+printpubdate: ''
+pubdate: 2019 Oct 11
+sortdate: 2019/10/11 00:00
+source: Sensors (Basel)
+title: Explicit and Implicit Responses to Tasting Drinks Associated with Different
+  Tasting Experiences
+uid: '6832136'
+volume: '19'

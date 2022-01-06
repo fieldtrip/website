@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '31356598'
+- idtype: doi
+  value: 10.1371/journal.pbio.3000403
+- idtype: pmcid
+  value: PMC6687190
+authors:
+- authtype: Author
+  name: Fellner MC
+- authtype: Author
+  name: Gollwitzer S
+- authtype: Author
+  name: Rampp S
+- authtype: Author
+  name: Kreiselmeyr G
+- authtype: Author
+  name: Bush D
+- authtype: Author
+  name: Diehl B
+- authtype: Author
+  name: Axmacher N
+- authtype: Author
+  name: Hamer H
+- authtype: Author
+  name: Hanslmayr S
+epubdate: 2019 Jul 29
+fulljournalname: PLoS Biology
+issue: '7'
+pages: e3000403
+pmclivedate: 2019/08/15
+printpubdate: ''
+pubdate: 2019 Jul 29
+sortdate: 2019/07/29 00:00
+source: PLoS Biol
+title: Spectral fingerprints or spectral tilt? Evidence for distinct oscillatory signatures
+  of memory formation
+uid: '6687190'
+volume: '17'

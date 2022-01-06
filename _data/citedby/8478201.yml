@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '34582432'
+- idtype: doi
+  value: 10.1371/journal.pbio.3001363
+- idtype: pmcid
+  value: PMC8478201
+authors:
+- authtype: Author
+  name: van der Plas M
+- authtype: Author
+  name: Braun V
+- authtype: Author
+  name: Stauch BJ
+- authtype: Author
+  name: Hanslmayr S
+epubdate: 2021 Sep 28
+fulljournalname: PLoS Biology
+issue: '9'
+pages: e3001363
+pmclivedate: 2021/09/29
+printpubdate: ''
+pubdate: 2021 Sep 28
+sortdate: 2021/09/28 00:00
+source: PLoS Biol
+title: Stimulation of the left dorsolateral prefrontal cortex with slow rTMS enhances
+  verbal memory formation
+uid: '8478201'
+volume: '19'

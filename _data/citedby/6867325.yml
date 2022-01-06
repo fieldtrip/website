@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '27168123'
+- idtype: doi
+  value: 10.1002/hbm.23239
+- idtype: pmcid
+  value: PMC6867325
+authors:
+- authtype: Author
+  name: Kulashekhar S
+- authtype: Author
+  name: Pekkola J
+- authtype: Author
+  name: Palva JM
+- authtype: Author
+  name: Palva S
+epubdate: 2016 May 11
+fulljournalname: Human Brain Mapping
+issue: '9'
+pages: 3262-3281
+pmclivedate: 2020/06/12
+printpubdate: ''
+pubdate: 2016 May 11
+sortdate: 2016/05/11 00:00
+source: Hum Brain Mapp
+title: The role of cortical beta oscillations in time estimation
+uid: '6867325'
+volume: '37'

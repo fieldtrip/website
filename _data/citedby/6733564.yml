@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '31270162'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0593-19.2019
+- idtype: pmcid
+  value: PMC6733564
+authors:
+- authtype: Author
+  name: van Moorselaar D
+- authtype: Author
+  name: Slagter HA
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '35'
+pages: 6953-6967
+pmclivedate: 2020/02/28
+printpubdate: 2019 Aug 28
+pubdate: 2019 Aug 28
+sortdate: 2019/08/28 00:00
+source: J Neurosci
+title: 'Learning What Is Irrelevant or Relevant: Expectations Facilitate Distractor
+  Inhibition and Target Facilitation through Distinct Neural Mechanisms'
+uid: '6733564'
+volume: '39'

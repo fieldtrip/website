@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '32232368'
+- idtype: doi
+  value: 10.1093/cercor/bhaa050
+- idtype: pmcid
+  value: PMC7264693
+authors:
+- authtype: Author
+  name: Hörberg T
+- authtype: Author
+  name: Larsson M
+- authtype: Author
+  name: Ekström I
+- authtype: Author
+  name: Sandöy C
+- authtype: Author
+  name: Lundén P
+- authtype: Author
+  name: Olofsson JK
+epubdate: 2020 Mar 30
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '7'
+pages: 4220-4237
+pmclivedate: 2020/06/09
+printpubdate: 2020 Jun
+pubdate: 2020 Mar 30
+sortdate: 2020/03/30 00:00
+source: Cereb Cortex
+title: 'Olfactory Influences on Visual Categorization: Behavioral and ERP Evidence'
+uid: '7264693'
+volume: '30'

@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '28101523'
+- idtype: doi
+  value: 10.1523/ENEURO.0184-16.2016
+- idtype: pmcid
+  value: PMC5223054
+authors:
+- authtype: Author
+  name: Fellner MC
+- authtype: Author
+  name: Volberg G
+- authtype: Author
+  name: Wimber M
+- authtype: Author
+  name: Goldhacker M
+- authtype: Author
+  name: Greenlee MW
+- authtype: Author
+  name: Hanslmayr S
+epubdate: 2017 Jan 10
+fulljournalname: eNeuro
+issue: '6'
+pages: ENEURO.0184-16.2016
+pmclivedate: 2017/01/18
+printpubdate: ''
+pubdate: 2017 Jan 10
+sortdate: 2017/01/10 00:00
+source: eNeuro
+title: 'Spatial Mnemonic Encoding: Theta Power Decreases and Medial Temporal Lobe
+  BOLD Increases Co-Occur during the Usage of the Method of Loci'
+uid: '5223054'
+volume: '3'

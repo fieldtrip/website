@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '33367905'
+- idtype: doi
+  value: 10.1093/sleep/zsaa290
+- idtype: pmcid
+  value: PMC8193554
+authors:
+- authtype: Author
+  name: Kurz EM
+- authtype: Author
+  name: Conzelmann A
+- authtype: Author
+  name: Barth GM
+- authtype: Author
+  name: Renner TJ
+- authtype: Author
+  name: Zinke K
+- authtype: Author
+  name: Born J
+epubdate: 2020 Dec 26
+fulljournalname: Sleep
+issue: '6'
+pages: zsaa290
+pmclivedate: 2021/06/14
+printpubdate: ''
+pubdate: 2020 Dec 26
+sortdate: 2020/12/26 00:00
+source: Sleep
+title: How do children with autism spectrum disorder form gist memory during sleep?
+  A study of slow oscillation–spindle coupling
+uid: '8193554'
+volume: '44'

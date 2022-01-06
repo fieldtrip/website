@@ -1,0 +1,24 @@
+articleids:
+- idtype: pmid
+  value: '29773757'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0346-18.2018
+- idtype: pmcid
+  value: PMC8174133
+authors:
+- authtype: Author
+  name: Herrmann B
+- authtype: Author
+  name: Johnsrude IS
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '24'
+pages: 5466-5477
+pmclivedate: 2021/06/04
+printpubdate: 2018 Jun 13
+pubdate: 2018 Jun 13
+sortdate: 2018/06/13 00:00
+source: J Neurosci
+title: Neural Signatures of the Processing of Temporal Patterns in Sound
+uid: '8174133'
+volume: '38'

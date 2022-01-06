@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '33776666'
+- idtype: doi
+  value: 10.3389/fnhum.2021.608947
+- idtype: pmcid
+  value: PMC7994763
+authors:
+- authtype: Author
+  name: Okazaki YO
+- authtype: Author
+  name: Nakagawa Y
+- authtype: Author
+  name: Mizuno Y
+- authtype: Author
+  name: Hanakawa T
+- authtype: Author
+  name: Kitajo K
+epubdate: 2021 Mar 12
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '608947'
+pmclivedate: 2021/03/27
+printpubdate: ''
+pubdate: 2021 Mar 12
+sortdate: 2021/03/12 00:00
+source: Front Hum Neurosci
+title: Frequency- and Area-Specific Phase Entrainment of Intrinsic Cortical Oscillations
+  by Repetitive Transcranial Magnetic Stimulation
+uid: '7994763'
+volume: '15'

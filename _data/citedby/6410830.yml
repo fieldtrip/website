@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '30755519'
+- idtype: doi
+  value: 10.1073/pnas.1812419116
+- idtype: pmcid
+  value: PMC6410830
+authors:
+- authtype: Author
+  name: Buiatti M
+- authtype: Author
+  name: Di Giorgio E
+- authtype: Author
+  name: Piazza M
+- authtype: Author
+  name: Polloni C
+- authtype: Author
+  name: Menna G
+- authtype: Author
+  name: Taddei F
+- authtype: Author
+  name: Baldo E
+- authtype: Author
+  name: Vallortigara G
+epubdate: 2019 Feb 12
+fulljournalname: Proceedings of the National Academy of Sciences of the United States
+  of America
+issue: '10'
+pages: 4625-4630
+pmclivedate: 2019/09/05
+printpubdate: 2019 Mar 5
+pubdate: 2019 Feb 12
+sortdate: 2019/02/12 00:00
+source: Proc Natl Acad Sci U S A
+title: Cortical route for facelike pattern processing in human newborns
+uid: '6410830'
+volume: '116'

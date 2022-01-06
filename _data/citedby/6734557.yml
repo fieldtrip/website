@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '30460482'
+- idtype: doi
+  value: 10.3758/s13415-018-00663-2
+- idtype: pmcid
+  value: PMC6734557
+- idtype: MID
+  value: NIHMS1048876
+authors:
+- authtype: Author
+  name: Hinault T
+- authtype: Author
+  name: Blacker KJ
+- authtype: Author
+  name: Gormley M
+- authtype: Author
+  name: Anderson BA
+- authtype: Author
+  name: Courtney SM
+epubdate: ''
+fulljournalname: Cognitive, affective & behavioral neuroscience
+issue: '2'
+pages: 253-267
+pmclivedate: 2020/04/01
+printpubdate: 2019 Apr
+pubdate: 2019 Apr
+sortdate: 2019/04/01 00:00
+source: Cogn Affect Behav Neurosci
+title: 'Value-driven attentional capture is modulated by the contents of working memory:
+  An EEG study.'
+uid: '6734557'
+volume: '19'

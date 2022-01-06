@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '26465003'
+- idtype: doi
+  value: 10.1523/ENEURO.0028-15.2015
+- idtype: pmcid
+  value: PMC4596022
+authors:
+- authtype: Author
+  name: Mak-McCully RA
+- authtype: Author
+  name: Rosen BQ
+- authtype: Author
+  name: Rolland M
+- authtype: Author
+  name: Régis J
+- authtype: Author
+  name: Bartolomei F
+- authtype: Author
+  name: Rey M
+- authtype: Author
+  name: Chauvel P
+- authtype: Author
+  name: Cash SS
+- authtype: Author
+  name: Halgren E
+epubdate: 2015 Sep 17
+fulljournalname: eNeuro
+issue: '4'
+pages: ENEURO.0028-15.2015
+pmclivedate: 2015/10/13
+printpubdate: ''
+pubdate: 2015 Sep 17
+sortdate: 2015/09/17 00:00
+source: eNeuro
+title: Distribution, Amplitude, Incidence, Co-Occurrence, and Propagation of Human
+  K-Complexes in Focal Transcortical Recordings,,
+uid: '4596022'
+volume: '2'

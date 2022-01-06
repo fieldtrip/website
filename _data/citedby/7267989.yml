@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '31860166'
+- idtype: doi
+  value: 10.1002/hbm.24904
+- idtype: pmcid
+  value: PMC7267989
+authors:
+- authtype: Author
+  name: Carretié L
+- authtype: Author
+  name: Méndez‐Bértolo C
+- authtype: Author
+  name: Bódalo C
+- authtype: Author
+  name: Hernández‐Lorca M
+- authtype: Author
+  name: Fernández‐Folgueiras U
+- authtype: Author
+  name: Fondevila S
+- authtype: Author
+  name: Giménez‐Fernández T
+epubdate: 2019 Dec 20
+fulljournalname: Human Brain Mapping
+issue: '7'
+pages: 1711-1724
+pmclivedate: 2020/06/12
+printpubdate: ''
+pubdate: 2019 Dec 20
+sortdate: 2019/12/20 00:00
+source: Hum Brain Mapp
+title: 'Retinotopy of emotion: Perception of negatively valenced stimuli presented
+  at different spatial locations as revealed by event‐related potentials'
+uid: '7267989'
+volume: '41'

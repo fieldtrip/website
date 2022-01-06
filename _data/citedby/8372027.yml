@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '34244360'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0553-21.2021
+- idtype: pmcid
+  value: PMC8372027
+authors:
+- authtype: Author
+  name: van Zoest W
+- authtype: Author
+  name: Huber-Huber C
+- authtype: Author
+  name: Weaver MD
+- authtype: Author
+  name: Hickey C
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '33'
+pages: 7120-7135
+pmclivedate: ''
+printpubdate: 2021 Aug 18
+pubdate: 2021 Aug 18
+sortdate: 2021/08/18 00:00
+source: J Neurosci
+title: Strategic Distractor Suppression Improves Selective Control in Human Vision
+uid: '8372027'
+volume: '41'

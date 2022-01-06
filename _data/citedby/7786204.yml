@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '33203739'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.2155-20.2020
+- idtype: pmcid
+  value: PMC7786204
+authors:
+- authtype: Author
+  name: Mostame P
+- authtype: Author
+  name: Sadaghiani S
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '1'
+pages: 179-192
+pmclivedate: 2021/07/06
+printpubdate: 2021 Jan 6
+pubdate: 2021 Jan 6
+sortdate: 2021/01/06 00:00
+source: J Neurosci
+title: Oscillation-Based Connectivity Architecture Is Dominated by an Intrinsic Spatial
+  Organization, Not Cognitive State or Frequency
+uid: '7786204'
+volume: '41'

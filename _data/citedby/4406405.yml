@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '24776956'
+- idtype: doi
+  value: 10.1177/0883073814530503
+- idtype: pmcid
+  value: PMC4406405
+- idtype: MID
+  value: NIHMS576029
+authors:
+- authtype: Author
+  name: Peters SU
+- authtype: Author
+  name: Gordon RL
+- authtype: Author
+  name: Key AP
+epubdate: 2014 Apr 27
+fulljournalname: Journal of child neurology
+issue: '2'
+pages: 145-152
+pmclivedate: 2016/01/31
+printpubdate: 2015 Feb
+pubdate: 2014 Apr 27
+sortdate: 2014/04/27 00:00
+source: J Child Neurol
+title: Induced gamma oscillations differentiate familiar and novel voices in children
+  with MECP2 Duplication and Rett syndromes
+uid: '4406405'
+volume: '30'

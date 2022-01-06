@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '33199715'
+- idtype: doi
+  value: 10.1038/s41598-020-76806-8
+- idtype: pmcid
+  value: PMC7669855
+authors:
+- authtype: Author
+  name: Kujala MV
+- authtype: Author
+  name: Kauppi JP
+- authtype: Author
+  name: Törnqvist H
+- authtype: Author
+  name: Helle L
+- authtype: Author
+  name: Vainio O
+- authtype: Author
+  name: Kujala J
+- authtype: Author
+  name: Parkkonen L
+epubdate: 2020 Nov 16
+fulljournalname: Scientific Reports
+issue: ''
+pages: '19846'
+pmclivedate: 2020/11/18
+printpubdate: ''
+pubdate: 2020 Nov 16
+sortdate: 2020/11/16 00:00
+source: Sci Rep
+title: Time-resolved classification of dog brain signals reveals early processing
+  of faces, species and emotion
+uid: '7669855'
+volume: '10'

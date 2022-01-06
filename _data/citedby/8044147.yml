@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '33850124'
+- idtype: doi
+  value: 10.1038/s41467-021-22396-6
+- idtype: pmcid
+  value: PMC8044147
+authors:
+- authtype: Author
+  name: Weiss A
+- authtype: Author
+  name: Chambon V
+- authtype: Author
+  name: Lee JK
+- authtype: Author
+  name: Drugowitsch J
+- authtype: Author
+  name: Wyart V
+epubdate: 2021 Apr 13
+fulljournalname: Nature Communications
+issue: ''
+pages: '2228'
+pmclivedate: 2021/04/30
+printpubdate: ''
+pubdate: 2021 Apr 13
+sortdate: 2021/04/13 00:00
+source: Nat Commun
+title: Interacting with volatile environments stabilizes hidden-state inference and
+  its brain signatures
+uid: '8044147'
+volume: '12'

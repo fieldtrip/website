@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '21991257'
+- idtype: doi
+  value: 10.3389/fpsyt.2011.00051
+- idtype: pmcid
+  value: PMC3159310
+authors:
+- authtype: Author
+  name: Donkers FC
+- authtype: Author
+  name: Schwikert SR
+- authtype: Author
+  name: Evans AM
+- authtype: Author
+  name: Cleary KM
+- authtype: Author
+  name: Perkins DO
+- authtype: Author
+  name: Belger A
+epubdate: 2011 Aug 22
+fulljournalname: Frontiers in Psychiatry
+issue: ''
+pages: '51'
+pmclivedate: 2011/10/11
+printpubdate: ''
+pubdate: 2011 Aug 22
+sortdate: 2011/08/22 00:00
+source: Front Psychiatry
+title: Impaired Neural Synchrony in the Theta Frequency Range in Adolescents at Familial
+  Risk for Schizophrenia
+uid: '3159310'
+volume: '2'

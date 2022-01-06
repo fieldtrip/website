@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '22114082'
+- idtype: doi
+  value: 10.1093/cercor/bhr329
+- idtype: pmcid
+  value: PMC4705338
+authors:
+- authtype: Author
+  name: Lange J
+- authtype: Author
+  name: Halacz J
+- authtype: Author
+  name: van Dijk H
+- authtype: Author
+  name: Kahlbrock N
+- authtype: Author
+  name: Schnitzler A
+epubdate: 2011 Nov 23
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '11'
+pages: 2564-2574
+pmclivedate: 2016/01/11
+printpubdate: 2012 Nov
+pubdate: 2011 Nov 23
+sortdate: 2011/11/23 00:00
+source: Cereb Cortex
+title: Fluctuations of Prestimulus Oscillatory Power Predict Subjective Perception
+  of Tactile Simultaneity
+uid: '4705338'
+volume: '22'

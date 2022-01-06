@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '32281215'
+- idtype: doi
+  value: 10.1111/ner.13155
+- idtype: pmcid
+  value: PMC7299664
+- idtype: MID
+  value: EMS86353
+authors:
+- authtype: Author
+  name: Hasegawa H
+- authtype: Author
+  name: Fischer P
+- authtype: Author
+  name: Tan H
+- authtype: Author
+  name: Pogosyan A
+- authtype: Author
+  name: Samuel M
+- authtype: Author
+  name: Brown P
+- authtype: Author
+  name: Ashkan K
+epubdate: 2020 Apr 12
+fulljournalname: 'Neuromodulation : journal of the International Neuromodulation Society'
+issue: '4'
+pages: 509-514
+pmclivedate: 2020/06/17
+printpubdate: 2020 Apr 12
+pubdate: 2020 Apr 12
+sortdate: 2020/04/12 00:00
+source: Neuromodulation
+title: The Effect of Unilateral Subthalamic Nucleus Deep Brain Stimulation on Contralateral
+  Subthalamic Nucleus Local Field Potentials
+uid: '7299664'
+volume: '23'

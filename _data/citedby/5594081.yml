@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '28936168'
+- idtype: doi
+  value: 10.3389/fnhum.2017.00423
+- idtype: pmcid
+  value: PMC5594081
+authors:
+- authtype: Author
+  name: Dimitriadis SI
+- authtype: Author
+  name: Salis CI
+epubdate: 2017 Sep 7
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '423'
+pmclivedate: 2017/09/21
+printpubdate: ''
+pubdate: 2017 Sep 7
+sortdate: 2017/09/07 00:00
+source: Front Hum Neurosci
+title: Mining Time-Resolved Functional Brain Graphs to an EEG-Based Chronnectomic
+  Brain Aged Index (CBAI)
+uid: '5594081'
+volume: '11'

@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '31884804'
+- idtype: doi
+  value: 10.1089/brain.2019.0693
+- idtype: pmcid
+  value: PMC7044766
+authors:
+- authtype: Author
+  name: Mash LE
+- authtype: Author
+  name: Keehn B
+- authtype: Author
+  name: Linke AC
+- authtype: Author
+  name: Liu TT
+- authtype: Author
+  name: Helm JL
+- authtype: Author
+  name: Haist F
+- authtype: Author
+  name: Townsend J
+- authtype: Author
+  name: Müller RA
+epubdate: 2020 Feb 14
+fulljournalname: Brain Connectivity
+issue: '1'
+pages: 18-28
+pmclivedate: 2021/02/01
+printpubdate: 2020 Feb 1
+pubdate: 2020 Feb 14
+sortdate: 2020/02/14 00:00
+source: Brain Connect
+title: Atypical Relationships Between Spontaneous EEG and fMRI Activity in Autism
+uid: '7044766'
+volume: '10'

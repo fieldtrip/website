@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '32155951'
+- idtype: doi
+  value: 10.3390/jcm9030720
+- idtype: pmcid
+  value: PMC7141202
+authors:
+- authtype: Author
+  name: Gennaro F
+- authtype: Author
+  name: Maino P
+- authtype: Author
+  name: Kaelin-Lang A
+- authtype: Author
+  name: De Bock K
+- authtype: Author
+  name: de Bruin ED
+epubdate: 2020 Mar 6
+fulljournalname: Journal of Clinical Medicine
+issue: '3'
+pages: '720'
+pmclivedate: 2020/04/10
+printpubdate: ''
+pubdate: 2020 Mar 6
+sortdate: 2020/03/06 00:00
+source: J Clin Med
+title: 'Corticospinal Control of Human Locomotion as a New Determinant of Age-Related
+  Sarcopenia: An Exploratory Study'
+uid: '7141202'
+volume: '9'

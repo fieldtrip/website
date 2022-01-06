@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '29844415'
+- idtype: doi
+  value: 10.1038/s41467-018-04497-x
+- idtype: pmcid
+  value: PMC5974306
+authors:
+- authtype: Author
+  name: Honjoh S
+- authtype: Author
+  name: Sasai S
+- authtype: Author
+  name: Schiereck SS
+- authtype: Author
+  name: Nagai H
+- authtype: Author
+  name: Tononi G
+- authtype: Author
+  name: Cirelli C
+epubdate: 2018 May 29
+fulljournalname: Nature Communications
+issue: ''
+pages: '2100'
+pmclivedate: 2018/05/31
+printpubdate: ''
+pubdate: 2018 May 29
+sortdate: 2018/05/29 00:00
+source: Nat Commun
+title: Regulation of cortical activity and arousal by the matrix cells of the ventromedial
+  thalamic nucleus
+uid: '5974306'
+volume: '9'

@@ -1,0 +1,34 @@
+articleids:
+- idtype: pmid
+  value: '32159515'
+- idtype: doi
+  value: 10.7554/eLife.51956
+- idtype: pmcid
+  value: PMC7096181
+authors:
+- authtype: Author
+  name: Fischer P
+- authtype: Author
+  name: Lipski WJ
+- authtype: Author
+  name: Neumann WJ
+- authtype: Author
+  name: Turner RS
+- authtype: Author
+  name: Fries P
+- authtype: Author
+  name: Brown P
+- authtype: Author
+  name: Richardson RM
+epubdate: 2020 Mar 11
+fulljournalname: eLife
+issue: ''
+pages: e51956
+pmclivedate: 2020/03/30
+printpubdate: ''
+pubdate: 2020 Mar 11
+sortdate: 2020/03/11 00:00
+source: eLife
+title: Movement-related coupling of human subthalamic nucleus spikes to cortical gamma
+uid: '7096181'
+volume: '9'

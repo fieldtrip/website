@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '30931993'
+- idtype: doi
+  value: 10.1038/s41598-019-41962-z
+- idtype: pmcid
+  value: PMC6443694
+authors:
+- authtype: Author
+  name: Zhu C
+- authtype: Author
+  name: Pan J
+- authtype: Author
+  name: Li S
+- authtype: Author
+  name: Liu X
+- authtype: Author
+  name: Wang P
+- authtype: Author
+  name: Li J
+epubdate: 2019 Apr 1
+fulljournalname: Scientific Reports
+issue: ''
+pages: '5402'
+pmclivedate: 2019/04/05
+printpubdate: ''
+pubdate: 2019 Apr 1
+sortdate: 2019/04/01 00:00
+source: Sci Rep
+title: Internal cost of spontaneous deception revealed by ERPs and EEG spectral perturbations
+uid: '6443694'
+volume: '9'

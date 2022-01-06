@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '26082889'
+- idtype: doi
+  value: 10.1016/j.nicl.2015.03.010
+- idtype: pmcid
+  value: PMC4459048
+authors:
+- authtype: Author
+  name: Popov TG
+- authtype: Author
+  name: Carolus A
+- authtype: Author
+  name: Schubring D
+- authtype: Author
+  name: Popova P
+- authtype: Author
+  name: Miller GA
+- authtype: Author
+  name: Rockstroh BS
+epubdate: 2015 Mar 20
+fulljournalname: 'NeuroImage : Clinical'
+issue: ''
+pages: 807-814
+pmclivedate: 2015/06/16
+printpubdate: ''
+pubdate: 2015 Mar 20
+sortdate: 2015/03/20 00:00
+source: Neuroimage Clin
+title: Targeted training modifies oscillatory brain activity in schizophrenia patients
+uid: '4459048'
+volume: '7'

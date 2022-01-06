@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '33980713'
+- idtype: doi
+  value: 10.1073/pnas.2025043118
+- idtype: pmcid
+  value: PMC8157983
+authors:
+- authtype: Author
+  name: Choi D
+- authtype: Author
+  name: Dehaene-Lambertz G
+- authtype: Author
+  name: Peña M
+- authtype: Author
+  name: Werker JF
+epubdate: 2021 May 12
+fulljournalname: Proceedings of the National Academy of Sciences of the United States
+  of America
+issue: '20'
+pages: e2025043118
+pmclivedate: 2021/05/28
+printpubdate: 2021 May 18
+pubdate: 2021 May 12
+sortdate: 2021/05/12 00:00
+source: Proc Natl Acad Sci U S A
+title: Neural indicators of articulator-specific sensorimotor influences on infant
+  speech perception
+uid: '8157983'
+volume: '118'

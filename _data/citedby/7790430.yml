@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '33411838'
+- idtype: doi
+  value: 10.1371/journal.pone.0245191
+- idtype: pmcid
+  value: PMC7790430
+authors:
+- authtype: Author
+  name: Caspar EA
+- authtype: Author
+  name: De Beir A
+- authtype: Author
+  name: Lauwers G
+- authtype: Author
+  name: Cleeremans A
+- authtype: Author
+  name: Vanderborght B
+epubdate: 2021 Jan 7
+fulljournalname: PLoS ONE
+issue: '1'
+pages: e0245191
+pmclivedate: 2021/01/27
+printpubdate: ''
+pubdate: 2021 Jan 7
+sortdate: 2021/01/07 00:00
+source: PLoS One
+title: How using brain-machine interfaces influences the human sense of agency
+uid: '7790430'
+volume: '16'

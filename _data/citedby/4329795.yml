@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '25762908'
+- idtype: doi
+  value: 10.3389/fnbeh.2015.00021
+- idtype: pmcid
+  value: PMC4329795
+authors:
+- authtype: Author
+  name: Bauer R
+- authtype: Author
+  name: Gharabaghi A
+epubdate: 2015 Feb 16
+fulljournalname: Frontiers in Behavioral Neuroscience
+issue: ''
+pages: '21'
+pmclivedate: 2015/03/11
+printpubdate: ''
+pubdate: 2015 Feb 16
+sortdate: 2015/02/16 00:00
+source: Front Behav Neurosci
+title: Estimating cognitive load during self-regulation of brain activity and neurofeedback
+  with therapeutic brain-computer interfaces
+uid: '4329795'
+volume: '9'

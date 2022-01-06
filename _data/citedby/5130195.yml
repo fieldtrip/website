@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '27902711'
+- idtype: doi
+  value: 10.1371/journal.pone.0165646
+- idtype: pmcid
+  value: PMC5130195
+authors:
+- authtype: Author
+  name: Prause N
+- authtype: Author
+  name: Siegle GJ
+- authtype: Author
+  name: Deblieck C
+- authtype: Author
+  name: Wu A
+- authtype: Author
+  name: Iacoboni M
+epubdate: 2016 Nov 30
+fulljournalname: PLoS ONE
+issue: '11'
+pages: e0165646
+pmclivedate: 2016/12/15
+printpubdate: ''
+pubdate: 2016 Nov 30
+sortdate: 2016/11/30 00:00
+source: PLoS One
+title: 'EEG to Primary Rewards: Predictive Utility and Malleability by Brain Stimulation'
+uid: '5130195'
+volume: '11'

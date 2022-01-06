@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '33033481'
+- idtype: doi
+  value: 10.3389/fpsyt.2020.551808
+- idtype: pmcid
+  value: PMC7509600
+authors:
+- authtype: Author
+  name: Yuk V
+- authtype: Author
+  name: Urbain C
+- authtype: Author
+  name: Anagnostou E
+- authtype: Author
+  name: Taylor MJ
+epubdate: 2020 Sep 9
+fulljournalname: Frontiers in Psychiatry
+issue: ''
+pages: '551808'
+pmclivedate: 2020/10/07
+printpubdate: ''
+pubdate: 2020 Sep 9
+sortdate: 2020/09/09 00:00
+source: Front Psychiatry
+title: Frontoparietal Network Connectivity During an N-Back Task in Adults With Autism
+  Spectrum Disorder
+uid: '7509600'
+volume: '11'

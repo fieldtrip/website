@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '33051523'
+- idtype: doi
+  value: 10.1038/s41598-020-74072-2
+- idtype: pmcid
+  value: PMC7553944
+authors:
+- authtype: Author
+  name: Manzo N
+- authtype: Author
+  name: Guerra A
+- authtype: Author
+  name: Giangrosso M
+- authtype: Author
+  name: Belvisi D
+- authtype: Author
+  name: Leodori G
+- authtype: Author
+  name: Berardelli A
+- authtype: Author
+  name: Conte A
+epubdate: 2020 Oct 13
+fulljournalname: Scientific Reports
+issue: ''
+pages: '17129'
+pmclivedate: 2020/10/14
+printpubdate: ''
+pubdate: 2020 Oct 13
+sortdate: 2020/10/13 00:00
+source: Sci Rep
+title: Investigating the effects of transcranial alternating current stimulation on
+  primary somatosensory cortex
+uid: '7553944'
+volume: '10'

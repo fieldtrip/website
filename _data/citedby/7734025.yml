@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '33329197'
+- idtype: doi
+  value: 10.3389/fpsyg.2020.565651
+- idtype: pmcid
+  value: PMC7734025
+authors:
+- authtype: Author
+  name: Richter M
+- authtype: Author
+  name: Paul M
+- authtype: Author
+  name: Höhle B
+- authtype: Author
+  name: Wartenburger I
+epubdate: 2020 Nov 30
+fulljournalname: Frontiers in Psychology
+issue: ''
+pages: '565651'
+pmclivedate: 2020/12/15
+printpubdate: ''
+pubdate: 2020 Nov 30
+sortdate: 2020/11/30 00:00
+source: Front Psychol
+title: 'Common Ground Information Affects Reference Resolution: Evidence From Behavioral
+  Data, ERPs, and Eye-Tracking'
+uid: '7734025'
+volume: '11'

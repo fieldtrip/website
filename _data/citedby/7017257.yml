@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '31936586'
+- idtype: doi
+  value: 10.3390/brainsci10010039
+- idtype: pmcid
+  value: PMC7017257
+authors:
+- authtype: Author
+  name: Snijders TM
+- authtype: Author
+  name: Benders T
+- authtype: Author
+  name: Fikkert P
+epubdate: 2020 Jan 9
+fulljournalname: Brain Sciences
+issue: '1'
+pages: '39'
+pmclivedate: 2020/02/28
+printpubdate: ''
+pubdate: 2020 Jan 9
+sortdate: 2020/01/09 00:00
+source: Brain Sci
+title: Infants Segment Words from Songs—An EEG Study
+uid: '7017257'
+volume: '10'

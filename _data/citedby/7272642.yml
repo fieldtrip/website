@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '32499487'
+- idtype: doi
+  value: 10.1038/s41598-020-66034-5
+- idtype: pmcid
+  value: PMC7272642
+authors:
+- authtype: Author
+  name: Ikeda Y
+- authtype: Author
+  name: Kikuchi M
+- authtype: Author
+  name: Noguchi-Shinohara M
+- authtype: Author
+  name: Iwasa K
+- authtype: Author
+  name: Kameya M
+- authtype: Author
+  name: Hirosawa T
+- authtype: Author
+  name: Yoshita M
+- authtype: Author
+  name: Ono K
+- authtype: Author
+  name: Samuraki-Yokohama M
+- authtype: Author
+  name: Yamada M
+epubdate: 2020 Jun 4
+fulljournalname: Scientific Reports
+issue: ''
+pages: '9132'
+pmclivedate: 2020/06/05
+printpubdate: ''
+pubdate: 2020 Jun 4
+sortdate: 2020/06/04 00:00
+source: Sci Rep
+title: Spontaneous MEG activity of the cerebral cortex during eyes closed and open
+  discriminates Alzheimer’s disease from cognitively normal older adults
+uid: '7272642'
+volume: '10'

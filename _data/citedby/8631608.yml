@@ -1,0 +1,40 @@
+articleids:
+- idtype: pmid
+  value: '33340619'
+- idtype: doi
+  value: 10.1016/j.pnpbp.2020.110224
+- idtype: pmcid
+  value: PMC8631608
+- idtype: MID
+  value: NIHMS1713513
+authors:
+- authtype: Author
+  name: Koshiyama D
+- authtype: Author
+  name: Miyakoshi M
+- authtype: Author
+  name: Joshi YB
+- authtype: Author
+  name: Molina JL
+- authtype: Author
+  name: Tanaka-Koshiyama K
+- authtype: Author
+  name: Sprock J
+- authtype: Author
+  name: Braff DL
+- authtype: Author
+  name: Swerdlow NR
+- authtype: Author
+  name: Light GA
+epubdate: 2020 Dec 17
+fulljournalname: Progress in neuro-psychopharmacology & biological psychiatry
+issue: ''
+pages: '110224'
+pmclivedate: ''
+printpubdate: 2021 Apr 20
+pubdate: 2020 Dec 17
+sortdate: 2020/12/17 00:00
+source: Prog Neuropsychopharmacol Biol Psychiatry
+title: Neural network dynamics underlying gamma synchronization deficits in schizophrenia
+uid: '8631608'
+volume: '107'

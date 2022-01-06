@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '33068056'
+- idtype: doi
+  value: 10.1002/hbm.25233
+- idtype: pmcid
+  value: PMC7776007
+authors:
+- authtype: Author
+  name: Muhle P
+- authtype: Author
+  name: Labeit B
+- authtype: Author
+  name: Wollbrink A
+- authtype: Author
+  name: Claus I
+- authtype: Author
+  name: Warnecke T
+- authtype: Author
+  name: Wolters CH
+- authtype: Author
+  name: Gross J
+- authtype: Author
+  name: Dziewas R
+- authtype: Author
+  name: Suntrup‐Krueger S
+epubdate: 2020 Oct 17
+fulljournalname: Human Brain Mapping
+issue: '2'
+pages: 427-438
+pmclivedate: 2021/01/07
+printpubdate: ''
+pubdate: 2020 Oct 17
+sortdate: 2020/10/17 00:00
+source: Hum Brain Mapp
+title: Targeting the sensory feedback within the swallowing network—Reversing artificially
+  induced pharyngolaryngeal hypesthesia by central and peripheral stimulation strategies
+uid: '7776007'
+volume: '42'

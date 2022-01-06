@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '27381479'
+- idtype: doi
+  value: 10.1038/srep29220
+- idtype: pmcid
+  value: PMC4933895
+authors:
+- authtype: Author
+  name: Lithari C
+- authtype: Author
+  name: Moratti S
+- authtype: Author
+  name: Weisz N
+epubdate: 2016 Jul 6
+fulljournalname: Scientific Reports
+issue: ''
+pages: '29220'
+pmclivedate: 2016/07/08
+printpubdate: ''
+pubdate: 2016 Jul 6
+sortdate: 2016/07/06 00:00
+source: Sci Rep
+title: Limbic areas are functionally decoupled and visual cortex takes a more central
+  role during fear conditioning in humans
+uid: '4933895'
+volume: '6'

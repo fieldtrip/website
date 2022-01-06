@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '24927588'
+- idtype: doi
+  value: 10.1073/pnas.1321072111
+- idtype: pmcid
+  value: PMC4078853
+authors:
+- authtype: Author
+  name: Cousijn H
+- authtype: Author
+  name: Haegens S
+- authtype: Author
+  name: Wallis G
+- authtype: Author
+  name: Near J
+- authtype: Author
+  name: Stokes MG
+- authtype: Author
+  name: Harrison PJ
+- authtype: Author
+  name: Nobre AC
+epubdate: 2014 Jun 9
+fulljournalname: Proceedings of the National Academy of Sciences of the United States
+  of America
+issue: '25'
+pages: 9301-9306
+pmclivedate: 2014/07/03
+printpubdate: 2014 Jun 24
+pubdate: 2014 Jun 9
+sortdate: 2014/06/09 00:00
+source: Proc Natl Acad Sci U S A
+title: Resting GABA and glutamate concentrations do not predict visual gamma frequency
+  or amplitude
+uid: '4078853'
+volume: '111'

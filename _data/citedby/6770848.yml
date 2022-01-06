@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '31470590'
+- idtype: doi
+  value: 10.3390/brainsci9090219
+- idtype: pmcid
+  value: PMC6770848
+authors:
+- authtype: Author
+  name: Shevorykin A
+- authtype: Author
+  name: Ruglass LM
+- authtype: Author
+  name: Melara RD
+epubdate: 2019 Aug 29
+fulljournalname: Brain Sciences
+issue: '9'
+pages: '219'
+pmclivedate: 2019/10/30
+printpubdate: ''
+pubdate: 2019 Aug 29
+sortdate: 2019/08/29 00:00
+source: Brain Sci
+title: Frontal Alpha Asymmetry and Inhibitory Control among Individuals with Cannabis
+  Use Disorders
+uid: '6770848'
+volume: '9'

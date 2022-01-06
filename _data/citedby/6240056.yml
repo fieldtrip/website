@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '30446714'
+- idtype: doi
+  value: 10.1038/s41598-018-34947-x
+- idtype: pmcid
+  value: PMC6240056
+authors:
+- authtype: Author
+  name: Lee D
+- authtype: Author
+  name: Kang DH
+- authtype: Author
+  name: Ha NH
+- authtype: Author
+  name: Oh CY
+- authtype: Author
+  name: Lee U
+- authtype: Author
+  name: Kang SW
+epubdate: 2018 Nov 16
+fulljournalname: Scientific Reports
+issue: ''
+pages: '16935'
+pmclivedate: 2018/11/23
+printpubdate: ''
+pubdate: 2018 Nov 16
+sortdate: 2018/11/16 00:00
+source: Sci Rep
+title: 'Effects of an Online Mind–Body Training Program on the Default Mode Network:
+  An EEG Functional Connectivity Study'
+uid: '6240056'
+volume: '8'

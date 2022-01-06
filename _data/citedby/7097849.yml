@@ -1,0 +1,40 @@
+articleids:
+- idtype: pmid
+  value: '32211834'
+- idtype: doi
+  value: 10.1001/jamapsychiatry.2020.0284
+- idtype: pmcid
+  value: PMC7097849
+authors:
+- authtype: Author
+  name: Grent-‘t-Jong T
+- authtype: Author
+  name: Gajwani R
+- authtype: Author
+  name: Gross J
+- authtype: Author
+  name: Gumley AI
+- authtype: Author
+  name: Krishnadas R
+- authtype: Author
+  name: Lawrie SM
+- authtype: Author
+  name: Schwannauer M
+- authtype: Author
+  name: Schultze-Lutter F
+- authtype: Author
+  name: Uhlhaas PJ
+epubdate: 2020 Mar 25
+fulljournalname: JAMA Psychiatry
+issue: '8'
+pages: 1-12
+pmclivedate: 2020/08/06
+printpubdate: 2020 Aug
+pubdate: 2020 Mar 25
+sortdate: 2020/03/25 00:00
+source: JAMA Psychiatry
+title: Association of Magnetoencephalographically Measured High-Frequency Oscillations
+  in Visual Cortex With Circuit Dysfunctions in Local and Large-scale Networks During
+  Emerging Psychosis
+uid: '7097849'
+volume: '77'

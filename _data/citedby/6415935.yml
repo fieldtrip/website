@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '30843519'
+- idtype: doi
+  value: 10.7554/eLife.41861
+- idtype: pmcid
+  value: PMC6415935
+authors:
+- authtype: Author
+  name: Flounders MW
+- authtype: Author
+  name: González-García C
+- authtype: Author
+  name: Hardstone R
+- authtype: Author
+  name: He BJ
+epubdate: 2019 Mar 7
+fulljournalname: eLife
+issue: ''
+pages: e41861
+pmclivedate: 2019/03/14
+printpubdate: ''
+pubdate: 2019 Mar 7
+sortdate: 2019/03/07 00:00
+source: eLife
+title: Neural dynamics of visual ambiguity resolution by perceptual prior
+uid: '6415935'
+volume: '8'

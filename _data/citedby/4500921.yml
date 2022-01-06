@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '26236207'
+- idtype: doi
+  value: 10.3389/fnbeh.2015.00181
+- idtype: pmcid
+  value: PMC4500921
+authors:
+- authtype: Author
+  name: Vukelić M
+- authtype: Author
+  name: Gharabaghi A
+epubdate: 2015 Jul 14
+fulljournalname: Frontiers in Behavioral Neuroscience
+issue: ''
+pages: '181'
+pmclivedate: 2015/07/31
+printpubdate: ''
+pubdate: 2015 Jul 14
+sortdate: 2015/07/14 00:00
+source: Front Behav Neurosci
+title: Self-regulation of circumscribed brain activity modulates spatially selective
+  and frequency specific connectivity of distributed resting state networks
+uid: '4500921'
+volume: '9'

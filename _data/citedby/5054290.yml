@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '27774054'
+- idtype: doi
+  value: 10.3389/fncir.2016.00078
+- idtype: pmcid
+  value: PMC5054290
+authors:
+- authtype: Author
+  name: Atluri S
+- authtype: Author
+  name: Frehlich M
+- authtype: Author
+  name: Mei Y
+- authtype: Author
+  name: Garcia Dominguez L
+- authtype: Author
+  name: Rogasch NC
+- authtype: Author
+  name: Wong W
+- authtype: Author
+  name: Daskalakis ZJ
+- authtype: Author
+  name: Farzan F
+epubdate: 2016 Oct 7
+fulljournalname: Frontiers in Neural Circuits
+issue: ''
+pages: '78'
+pmclivedate: 2016/10/21
+printpubdate: ''
+pubdate: 2016 Oct 7
+sortdate: 2016/10/07 00:00
+source: Front Neural Circuits
+title: 'TMSEEG: A MATLAB-Based Graphical User Interface for Processing Electrophysiological
+  Signals during Transcranial Magnetic Stimulation'
+uid: '5054290'
+volume: '10'

@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '23448876'
+- idtype: doi
+  value: 10.1093/cercor/bht057
+- idtype: pmcid
+  value: PMC4089381
+authors:
+- authtype: Author
+  name: Reinhart RM
+- authtype: Author
+  name: Woodman GF
+epubdate: 2013 Feb 28
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '8'
+pages: 2022-2035
+pmclivedate: 2015/08/01
+printpubdate: 2014 Aug
+pubdate: 2013 Feb 28
+sortdate: 2013/02/28 00:00
+source: Cereb Cortex
+title: High Stakes Trigger the Use of Multiple Memories to Enhance the Control of
+  Attention
+uid: '4089381'
+volume: '24'

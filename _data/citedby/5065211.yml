@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '27741253'
+- idtype: doi
+  value: 10.1371/journal.pone.0163892
+- idtype: pmcid
+  value: PMC5065211
+authors:
+- authtype: Author
+  name: Caspar EA
+- authtype: Author
+  name: Desantis A
+- authtype: Author
+  name: Dienes Z
+- authtype: Author
+  name: Cleeremans A
+- authtype: Author
+  name: Haggard P
+epubdate: 2016 Oct 14
+fulljournalname: PLoS ONE
+issue: '10'
+pages: e0163892
+pmclivedate: 2016/10/27
+printpubdate: ''
+pubdate: 2016 Oct 14
+sortdate: 2016/10/14 00:00
+source: PLoS One
+title: The Sense of Agency as Tracking Control
+uid: '5065211'
+volume: '11'

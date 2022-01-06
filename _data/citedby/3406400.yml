@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '22547636'
+- idtype: doi
+  value: 10.1113/jphysiol.2012.231316
+- idtype: pmcid
+  value: PMC3406400
+authors:
+- authtype: Author
+  name: Pollok B
+- authtype: Author
+  name: Krause V
+- authtype: Author
+  name: Martsch W
+- authtype: Author
+  name: Wach C
+- authtype: Author
+  name: Schnitzler A
+- authtype: Author
+  name: Südmeyer M
+epubdate: 2012 Apr 30
+fulljournalname: The Journal of Physiology
+issue: Pt 13
+pages: 3203-3212
+pmclivedate: 2013/07/01
+printpubdate: 2012 Jul 1
+pubdate: 2012 Apr 30
+sortdate: 2012/04/30 00:00
+source: J Physiol
+title: Motor-cortical oscillations in early stages of Parkinson's disease
+uid: '3406400'
+volume: '590'

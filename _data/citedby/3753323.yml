@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '23991097'
+- idtype: doi
+  value: 10.1371/journal.pone.0072351
+- idtype: pmcid
+  value: PMC3753323
+authors:
+- authtype: Author
+  name: Siebenhühner F
+- authtype: Author
+  name: Weiss SA
+- authtype: Author
+  name: Coppola R
+- authtype: Author
+  name: Weinberger DR
+- authtype: Author
+  name: Bassett DS
+epubdate: 2013 Aug 26
+fulljournalname: PLoS ONE
+issue: '8'
+pages: e72351
+pmclivedate: 2013/08/29
+printpubdate: ''
+pubdate: 2013 Aug 26
+sortdate: 2013/08/26 00:00
+source: PLoS One
+title: Intra- and Inter-Frequency Brain Network Structure in Health and Schizophrenia
+uid: '3753323'
+volume: '8'

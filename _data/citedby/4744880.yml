@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '26456242'
+- idtype: doi
+  value: 10.1089/brain.2015.0374
+- idtype: pmcid
+  value: PMC4744880
+authors:
+- authtype: Author
+  name: Kadis DS
+- authtype: Author
+  name: Dimitrijevic A
+- authtype: Author
+  name: Toro-Serey CA
+- authtype: Author
+  name: Smith ML
+- authtype: Author
+  name: Holland SK
+epubdate: ''
+fulljournalname: Brain Connectivity
+issue: '1'
+pages: 76-83
+pmclivedate: 2016/02/09
+printpubdate: 2016 Feb 1
+pubdate: 2016 Feb 1
+sortdate: 2016/02/01 00:00
+source: Brain Connect
+title: 'Characterizing Information Flux Within the Distributed Pediatric Expressive
+  Language Network: A Core Region Mapped Through fMRI-Constrained MEG Effective Connectivity
+  Analyses'
+uid: '4744880'
+volume: '6'

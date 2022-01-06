@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '32090200'
+- idtype: doi
+  value: 10.1093/braincomms/fcz040
+- idtype: pmcid
+  value: PMC7025167
+authors:
+- authtype: Author
+  name: MacDonald HJ
+- authtype: Author
+  name: Brittain JS
+- authtype: Author
+  name: Spitzer B
+- authtype: Author
+  name: Hanslmayr S
+- authtype: Author
+  name: Jenkinson N
+epubdate: 2019 Dec 4
+fulljournalname: Brain Communications
+issue: '1'
+pages: fcz040
+pmclivedate: 2020/02/20
+printpubdate: ''
+pubdate: 2019 Dec 4
+sortdate: 2019/12/04 00:00
+source: Brain Commun
+title: Memory deficits in Parkinson’s disease are associated with reduced beta power
+  modulation
+uid: '7025167'
+volume: '1'

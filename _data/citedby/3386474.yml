@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '22660480'
+- idtype: doi
+  value: 10.1038/nn.3131
+- idtype: pmcid
+  value: PMC3386474
+- idtype: MID
+  value: NIHMS376107
+authors:
+- authtype: Author
+  name: Beauchamp MS
+- authtype: Author
+  name: Sun P
+- authtype: Author
+  name: Baum SH
+- authtype: Author
+  name: Tolias AS
+- authtype: Author
+  name: Yoshor D
+epubdate: 2012 Jun 3
+fulljournalname: Nature neuroscience
+issue: '7'
+pages: 957-959
+pmclivedate: 2013/01/01
+printpubdate: ''
+pubdate: 2012 Jun 3
+sortdate: 2012/06/03 00:00
+source: Nat Neurosci
+title: Electrocorticography Links Human Temporoparietal Junction to Visual Perception
+uid: '3386474'
+volume: '15'

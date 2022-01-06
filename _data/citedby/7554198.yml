@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '33038668'
+- idtype: doi
+  value: 10.1016/j.nicl.2020.102455
+- idtype: pmcid
+  value: PMC7554198
+authors:
+- authtype: Author
+  name: Cao C
+- authtype: Author
+  name: Wen W
+- authtype: Author
+  name: Liu B
+- authtype: Author
+  name: Ma P
+- authtype: Author
+  name: Li S
+- authtype: Author
+  name: Xu G
+- authtype: Author
+  name: Song J
+epubdate: 2020 Sep 30
+fulljournalname: 'NeuroImage : Clinical'
+issue: ''
+pages: '102455'
+pmclivedate: 2020/10/19
+printpubdate: ''
+pubdate: 2020 Sep 30
+sortdate: 2020/09/30 00:00
+source: Neuroimage Clin
+title: 'Theta oscillations in prolactinomas: Neurocognitive deficits in executive
+  controls'
+uid: '7554198'
+volume: '28'

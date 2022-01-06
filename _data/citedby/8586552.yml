@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '34776909'
+- idtype: doi
+  value: 10.3389/fnhum.2021.757735
+- idtype: pmcid
+  value: PMC8586552
+authors:
+- authtype: Author
+  name: Nürnberger M
+- authtype: Author
+  name: Klingner C
+- authtype: Author
+  name: Witte OW
+- authtype: Author
+  name: Brodoehl S
+epubdate: 2021 Oct 29
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '757735'
+pmclivedate: 2021/11/13
+printpubdate: ''
+pubdate: 2021 Oct 29
+sortdate: 2021/10/29 00:00
+source: Front Hum Neurosci
+title: 'Mismatch of Visual-Vestibular Information in Virtual Reality: Is Motion Sickness
+  Part of the Brains Attempt to Reduce the Prediction Error?'
+uid: '8586552'
+volume: '15'

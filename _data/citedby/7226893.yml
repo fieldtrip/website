@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '32413809'
+- idtype: doi
+  value: 10.1016/j.nicl.2020.102265
+- idtype: pmcid
+  value: PMC7226893
+authors:
+- authtype: Author
+  name: Foley E
+- authtype: Author
+  name: Wood AG
+- authtype: Author
+  name: Furlong PL
+- authtype: Author
+  name: Walsh AR
+- authtype: Author
+  name: Kearney S
+- authtype: Author
+  name: Bill P
+- authtype: Author
+  name: Hillebrand A
+- authtype: Author
+  name: Seri S
+epubdate: 2020 Apr 29
+fulljournalname: 'NeuroImage : Clinical'
+issue: ''
+pages: '102265'
+pmclivedate: 2020/05/18
+printpubdate: ''
+pubdate: 2020 Apr 29
+sortdate: 2020/04/29 00:00
+source: Neuroimage Clin
+title: Mapping language networks and their association with verbal abilities in paediatric
+  epilepsy using MEG and graph analysis
+uid: '7226893'
+volume: '27'

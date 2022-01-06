@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '30931146'
+- idtype: doi
+  value: 10.1088/2057-1976/aac3ac
+- idtype: pmcid
+  value: PMC6435154
+- idtype: MID
+  value: EMS81823
+authors:
+- authtype: Author
+  name: Branco MP
+- authtype: Author
+  name: Freudenburg ZV
+- authtype: Author
+  name: Aarnoutse EJ
+- authtype: Author
+  name: Vansteensel MJ
+- authtype: Author
+  name: Ramsey NF
+epubdate: 2018 May 17
+fulljournalname: Biomedical physics & engineering express
+issue: ''
+pages: '045012'
+pmclivedate: 2019/05/17
+printpubdate: ''
+pubdate: 2018 May 17
+sortdate: 2018/05/17 00:00
+source: Biomed Phys Eng Express
+title: Optimization of sampling rate and smoothing improves classification of high
+  frequency power in electrocorticographic brain signals
+uid: '6435154'
+volume: '4'

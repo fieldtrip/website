@@ -1,0 +1,50 @@
+articleids:
+- idtype: pmid
+  value: '31998067'
+- idtype: doi
+  value: 10.3389/fnins.2019.01416
+- idtype: pmcid
+  value: PMC6967741
+authors:
+- authtype: Author
+  name: Pilly PK
+- authtype: Author
+  name: Skorheim SW
+- authtype: Author
+  name: Hubbard RJ
+- authtype: Author
+  name: Ketz NA
+- authtype: Author
+  name: Roach SM
+- authtype: Author
+  name: Lerner I
+- authtype: Author
+  name: Jones AP
+- authtype: Author
+  name: Robert B
+- authtype: Author
+  name: Bryant NB
+- authtype: Author
+  name: Hartholt A
+- authtype: Author
+  name: Mullins TS
+- authtype: Author
+  name: Choe J
+- authtype: Author
+  name: Clark VP
+- authtype: Author
+  name: Howard MD
+epubdate: 2020 Jan 10
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '1416'
+pmclivedate: 2020/01/29
+printpubdate: ''
+pubdate: 2020 Jan 10
+sortdate: 2020/01/10 00:00
+source: Front Neurosci
+title: One-Shot Tagging During Wake and Cueing During Sleep With Spatiotemporal Patterns
+  of Transcranial Electrical Stimulation Can Boost Long-Term Metamemory of Individual
+  Episodes in Humans
+uid: '6967741'
+volume: '13'

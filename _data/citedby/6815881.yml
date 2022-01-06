@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '31381946'
+- idtype: doi
+  value: 10.1016/j.jneumeth.2019.108377
+- idtype: pmcid
+  value: PMC6815881
+- idtype: MID
+  value: NIHMS1539684
+authors:
+- authtype: Author
+  name: Barzegaran E
+- authtype: Author
+  name: Bosse S
+- authtype: Author
+  name: Kohler PJ
+- authtype: Author
+  name: Norcia AM
+epubdate: 2019 Aug 2
+fulljournalname: Journal of neuroscience methods
+issue: ''
+pages: '108377'
+pmclivedate: 2020/12/01
+printpubdate: 2019 Dec 1
+pubdate: 2019 Aug 2
+sortdate: 2019/08/02 00:00
+source: J Neurosci Methods
+title: 'EEGSourceSim: A framework for realistic simulation of EEG scalp data using
+  MRI-based forward models and biologically plausible signals and noise'
+uid: '6815881'
+volume: '328'

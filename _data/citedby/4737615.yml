@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '26656998'
+- idtype: doi
+  value: 10.1093/cercor/bhv306
+- idtype: pmcid
+  value: PMC4737615
+authors:
+- authtype: Author
+  name: Young KS
+- authtype: Author
+  name: Parsons CE
+- authtype: Author
+  name: Jegindoe Elmholdt EM
+- authtype: Author
+  name: Woolrich MW
+- authtype: Author
+  name: van Hartevelt TJ
+- authtype: Author
+  name: Stevner AB
+- authtype: Author
+  name: Stein A
+- authtype: Author
+  name: Kringelbach ML
+epubdate: 2015 Dec 11
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '3'
+pages: 1309-1321
+pmclivedate: 2016/02/03
+printpubdate: 2016 Mar
+pubdate: 2015 Dec 11
+sortdate: 2015/12/11 00:00
+source: Cereb Cortex
+title: 'Evidence for a Caregiving Instinct: Rapid Differentiation of Infant from Adult
+  Vocalizations Using Magnetoencephalography'
+uid: '4737615'
+volume: '26'

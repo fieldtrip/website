@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '28712991'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2017.07.024
+- idtype: pmcid
+  value: PMC5678295
+authors:
+- authtype: Author
+  name: van Wijk BC
+- authtype: Author
+  name: Neumann WJ
+- authtype: Author
+  name: Schneider GH
+- authtype: Author
+  name: Sander TH
+- authtype: Author
+  name: Litvak V
+- authtype: Author
+  name: Kühn AA
+epubdate: ''
+fulljournalname: Neuroimage
+issue: ''
+pages: 1-8
+pmclivedate: 2017/11/20
+printpubdate: 2017 Oct 1
+pubdate: 2017 Oct 1
+sortdate: 2017/10/01 00:00
+source: Neuroimage
+title: Low-beta cortico-pallidal coherence decreases during movement and correlates
+  with overall reaction time
+uid: '5678295'
+volume: '159'

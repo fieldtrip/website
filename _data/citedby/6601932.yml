@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '27733605'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1385-16.2016
+- idtype: pmcid
+  value: PMC6601932
+authors:
+- authtype: Author
+  name: Kaiser D
+- authtype: Author
+  name: Oosterhof NN
+- authtype: Author
+  name: Peelen MV
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '41'
+pages: 10522-10528
+pmclivedate: 2019/07/12
+printpubdate: 2016 Oct 12
+pubdate: 2016 Oct 12
+sortdate: 2016/10/12 00:00
+source: J Neurosci
+title: The Neural Dynamics of Attentional Selection in Natural Scenes
+uid: '6601932'
+volume: '36'

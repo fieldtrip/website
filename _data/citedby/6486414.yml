@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '30962628'
+- idtype: doi
+  value: 10.1038/s41593-019-0371-x
+- idtype: pmcid
+  value: PMC6486414
+- idtype: MID
+  value: NIHMS1522405
+authors:
+- authtype: Author
+  name: Reinhart RM
+- authtype: Author
+  name: Nguyen JA
+epubdate: 2019 Apr 8
+fulljournalname: Nature neuroscience
+issue: '5'
+pages: 820-827
+pmclivedate: 2019/10/08
+printpubdate: 2019 May
+pubdate: 2019 Apr 8
+sortdate: 2019/04/08 00:00
+source: Nat Neurosci
+title: Working memory revived in older adults by synchronizing rhythmic brain circuits
+uid: '6486414'
+volume: '22'

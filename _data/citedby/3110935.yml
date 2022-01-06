@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '21716603'
+- idtype: doi
+  value: 10.3389/fpsyg.2011.00036
+- idtype: pmcid
+  value: PMC3110935
+authors:
+- authtype: Author
+  name: Hartmann T
+- authtype: Author
+  name: Schulz H
+- authtype: Author
+  name: Weisz N
+epubdate: 2011 Mar 9
+fulljournalname: Frontiers in Psychology
+issue: ''
+pages: '36'
+pmclivedate: 2011/06/28
+printpubdate: ''
+pubdate: 2011 Mar 9
+sortdate: 2011/03/09 00:00
+source: Front Psychol
+title: 'Probing of Brain States in Real-Time: Introducing the ConSole Environment'
+uid: '3110935'
+volume: '2'

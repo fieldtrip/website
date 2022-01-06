@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '28835521'
+- idtype: doi
+  value: 10.1152/jn.00061.2017
+- idtype: pmcid
+  value: PMC5680357
+authors:
+- authtype: Author
+  name: Mellem MS
+- authtype: Author
+  name: Wohltjen S
+- authtype: Author
+  name: Gotts SJ
+- authtype: Author
+  name: Ghuman AS
+- authtype: Author
+  name: Martin A
+epubdate: 2017 Aug 23
+fulljournalname: Journal of Neurophysiology
+issue: '5'
+pages: 2853-2864
+pmclivedate: 2018/11/01
+printpubdate: 2017 Nov 1
+pubdate: 2017 Aug 23
+sortdate: 2017/08/23 00:00
+source: J Neurophysiol
+title: Intrinsic frequency biases and profiles across human cortex
+uid: '5680357'
+volume: '118'

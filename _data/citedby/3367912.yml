@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '22693642'
+- idtype: doi
+  value: 10.1371/journal.pone.0038511
+- idtype: pmcid
+  value: PMC3367912
+authors:
+- authtype: Author
+  name: Ahveninen J
+- authtype: Author
+  name: Jääskeläinen IP
+- authtype: Author
+  name: Belliveau JW
+- authtype: Author
+  name: Hämäläinen M
+- authtype: Author
+  name: Lin FH
+- authtype: Author
+  name: Raij T
+epubdate: 2012 Jun 5
+fulljournalname: PLoS ONE
+issue: '6'
+pages: e38511
+pmclivedate: 2012/06/12
+printpubdate: ''
+pubdate: 2012 Jun 5
+sortdate: 2012/06/05 00:00
+source: PLoS One
+title: Dissociable Influences of Auditory Object vs. Spatial Attention on Visual System
+  Oscillatory Activity
+uid: '3367912'
+volume: '7'

@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '33250728'
+- idtype: doi
+  value: 10.3389/fnhum.2020.576082
+- idtype: pmcid
+  value: PMC7674801
+authors:
+- authtype: Author
+  name: Kim MY
+- authtype: Author
+  name: Kwon H
+- authtype: Author
+  name: Yang TH
+- authtype: Author
+  name: Kim K
+epubdate: 2020 Nov 5
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '576082'
+pmclivedate: 2020/11/27
+printpubdate: ''
+pubdate: 2020 Nov 5
+sortdate: 2020/11/05 00:00
+source: Front Hum Neurosci
+title: 'Vibration Alert to the Brain: Evoked and Induced MEG Responses to High-Frequency
+  Vibrotactile Stimuli on the Index Finger of Dominant and Non-dominant Hand'
+uid: '7674801'
+volume: '14'

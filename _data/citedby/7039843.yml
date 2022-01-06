@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '29926169'
+- idtype: doi
+  value: 10.1007/s00426-018-1039-y
+- idtype: pmcid
+  value: PMC7039843
+authors:
+- authtype: Author
+  name: Schlichting N
+- authtype: Author
+  name: de Jong R
+- authtype: Author
+  name: van Rijn H
+epubdate: 2018 Jun 20
+fulljournalname: Psychological Research
+issue: '2'
+pages: 352-369
+pmclivedate: 2020/03/09
+printpubdate: '2020'
+pubdate: 2018 Jun 20
+sortdate: 2018/06/20 00:00
+source: Psychol Res
+title: Performance-informed EEG analysis reveals mixed evidence for EEG signatures
+  unique to the processing of time
+uid: '7039843'
+volume: '84'

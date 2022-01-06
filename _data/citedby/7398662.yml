@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '32744502'
+- idtype: doi
+  value: 10.7554/eLife.54201
+- idtype: pmcid
+  value: PMC7398662
+authors:
+- authtype: Author
+  name: Kloosterman NA
+- authtype: Author
+  name: Kosciessa JQ
+- authtype: Author
+  name: Lindenberger U
+- authtype: Author
+  name: Fahrenfort JJ
+- authtype: Author
+  name: Garrett DD
+epubdate: 2020 Aug 3
+fulljournalname: eLife
+issue: ''
+pages: e54201
+pmclivedate: 2020/08/05
+printpubdate: ''
+pubdate: 2020 Aug 3
+sortdate: 2020/08/03 00:00
+source: eLife
+title: Boosts in brain signal variability track liberal shifts in decision bias
+uid: '7398662'
+volume: '9'

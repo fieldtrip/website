@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '31778771'
+- idtype: doi
+  value: 10.1016/j.pneurobio.2019.101731
+- idtype: pmcid
+  value: PMC6977086
+authors:
+- authtype: Author
+  name: Heideman SG
+- authtype: Author
+  name: Quinn AJ
+- authtype: Author
+  name: Woolrich MW
+- authtype: Author
+  name: van Ede F
+- authtype: Author
+  name: Nobre AC
+epubdate: ''
+fulljournalname: Progress in Neurobiology
+issue: ''
+pages: '101731'
+pmclivedate: 2020/01/28
+printpubdate: 2020 Jan
+pubdate: 2020 Jan
+sortdate: 2020/01/01 00:00
+source: Prog Neurobiol
+title: Dissecting beta-state changes during timed movement preparation in Parkinson’s
+  disease
+uid: '6977086'
+volume: '184'

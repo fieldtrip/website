@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '29472836'
+- idtype: doi
+  value: 10.3389/fnins.2018.00048
+- idtype: pmcid
+  value: PMC5810264
+authors:
+- authtype: Author
+  name: Frömer R
+- authtype: Author
+  name: Maier M
+- authtype: Author
+  name: Abdel Rahman R
+epubdate: 2018 Feb 6
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '48'
+pmclivedate: 2018/02/22
+printpubdate: ''
+pubdate: 2018 Feb 6
+sortdate: 2018/02/06 00:00
+source: Front Neurosci
+title: Group-Level EEG-Processing Pipeline for Flexible Single Trial-Based Analyses
+  Including Linear Mixed Models
+uid: '5810264'
+volume: '12'

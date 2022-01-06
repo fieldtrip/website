@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '26740535'
+- idtype: doi
+  value: 10.1152/jn.01074.2015
+- idtype: pmcid
+  value: PMC4869498
+authors:
+- authtype: Author
+  name: Kaiser D
+- authtype: Author
+  name: Azzalini DC
+- authtype: Author
+  name: Peelen MV
+epubdate: 2016 Jan 6
+fulljournalname: Journal of Neurophysiology
+issue: '4'
+pages: 2246-2250
+pmclivedate: 2017/04/01
+printpubdate: 2016 Apr 1
+pubdate: 2016 Jan 6
+sortdate: 2016/01/06 00:00
+source: J Neurophysiol
+title: Shape-independent object category responses revealed by MEG and fMRI decoding
+uid: '4869498'
+volume: '115'

@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '28571910'
+- idtype: doi
+  value: 10.1016/j.clinph.2017.04.018
+- idtype: pmcid
+  value: PMC5674981
+authors:
+- authtype: Author
+  name: Koelewijn L
+- authtype: Author
+  name: Bompas A
+- authtype: Author
+  name: Tales A
+- authtype: Author
+  name: Brookes MJ
+- authtype: Author
+  name: Muthukumaraswamy SD
+- authtype: Author
+  name: Bayer A
+- authtype: Author
+  name: Singh KD
+epubdate: ''
+fulljournalname: Clinical Neurophysiology
+issue: '11'
+pages: 2347-2357
+pmclivedate: 2017/11/20
+printpubdate: 2017 Nov
+pubdate: 2017 Nov
+sortdate: 2017/11/01 00:00
+source: Clin Neurophysiol
+title: Alzheimer's disease disrupts alpha and beta-band resting-state oscillatory
+  network connectivity
+uid: '5674981'
+volume: '128'

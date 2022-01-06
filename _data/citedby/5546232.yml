@@ -1,0 +1,34 @@
+articleids:
+- idtype: pmid
+  value: '28602658'
+- idtype: doi
+  value: 10.1016/j.cub.2017.05.046
+- idtype: pmcid
+  value: PMC5546232
+- idtype: MID
+  value: NIHMS882050
+authors:
+- authtype: Author
+  name: Johnson EL
+- authtype: Author
+  name: Dewar CD
+- authtype: Author
+  name: Solbakk AK
+- authtype: Author
+  name: Endestad T
+- authtype: Author
+  name: Meling TR
+- authtype: Author
+  name: Knight RT
+epubdate: 2017 Jun 9
+fulljournalname: 'Current biology : CB'
+issue: '12'
+pages: 1829-1835.e4
+pmclivedate: 2018/06/19
+printpubdate: 2017 Jun 19
+pubdate: 2017 Jun 9
+sortdate: 2017/06/09 00:00
+source: Curr Biol
+title: Bidirectional frontoparietal oscillatory systems support working memory
+uid: '5546232'
+volume: '27'

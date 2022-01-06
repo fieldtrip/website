@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '33605509'
+- idtype: doi
+  value: 10.1002/hbm.25376
+- idtype: pmcid
+  value: PMC8090766
+authors:
+- authtype: Author
+  name: Barth B
+- authtype: Author
+  name: Rohe T
+- authtype: Author
+  name: Deppermann S
+- authtype: Author
+  name: Fallgatter AJ
+- authtype: Author
+  name: Ehlis A
+epubdate: 2021 Feb 19
+fulljournalname: Human Brain Mapping
+issue: '8'
+pages: 2416-2433
+pmclivedate: 2021/05/10
+printpubdate: ''
+pubdate: 2021 Feb 19
+sortdate: 2021/02/19 00:00
+source: Hum Brain Mapp
+title: 'Neural oscillatory responses to performance monitoring differ between high‐
+  and low‐impulsive individuals, but are unaffected by TMS '
+uid: '8090766'
+volume: '42'

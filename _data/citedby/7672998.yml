@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '33087476'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0581-19.2020
+- idtype: pmcid
+  value: PMC7672998
+authors:
+- authtype: Author
+  name: Ossandón JP
+- authtype: Author
+  name: König P
+- authtype: Author
+  name: Heed T
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '47'
+pages: 9088-9102
+pmclivedate: 2021/05/18
+printpubdate: 2020 Nov 18
+pubdate: 2020 Nov 18
+sortdate: 2020/11/18 00:00
+source: J Neurosci
+title: No Evidence for a Role of Spatially Modulated α-Band Activity in Tactile Remapping
+  and Short-Latency, Overt Orienting Behavior
+uid: '7672998'
+volume: '40'

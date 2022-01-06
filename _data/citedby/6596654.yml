@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '28626013'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0168-17.2017
+- idtype: pmcid
+  value: PMC6596654
+authors:
+- authtype: Author
+  name: Makov S
+- authtype: Author
+  name: Sharon O
+- authtype: Author
+  name: Ding N
+- authtype: Author
+  name: Ben-Shachar M
+- authtype: Author
+  name: Nir Y
+- authtype: Author
+  name: Zion Golumbic E
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '32'
+pages: 7772-7781
+pmclivedate: 2019/07/01
+printpubdate: 2017 Aug 9
+pubdate: 2017 Aug 9
+sortdate: 2017/08/09 00:00
+source: J Neurosci
+title: Sleep Disrupts High-Level Speech Parsing Despite Significant Basic Auditory
+  Processing
+uid: '6596654'
+volume: '37'

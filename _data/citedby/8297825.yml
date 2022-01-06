@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '34305556'
+- idtype: doi
+  value: 10.3389/fnhum.2021.698367
+- idtype: pmcid
+  value: PMC8297825
+authors:
+- authtype: Author
+  name: Zhang DW
+- authtype: Author
+  name: Zaphf A
+- authtype: Author
+  name: Klingberg T
+epubdate: 2021 Jul 8
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '698367'
+pmclivedate: 2021/07/23
+printpubdate: ''
+pubdate: 2021 Jul 8
+sortdate: 2021/07/08 00:00
+source: Front Hum Neurosci
+title: Resting State EEG Related to Mathematical Improvement After Spatial Training
+  in Children
+uid: '8297825'
+volume: '15'

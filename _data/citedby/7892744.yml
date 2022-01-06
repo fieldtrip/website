@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '33459925'
+- idtype: doi
+  value: 10.1007/s10548-020-00816-y
+- idtype: pmcid
+  value: PMC7892744
+authors:
+- authtype: Author
+  name: van den Berg B
+- authtype: Author
+  name: Buitenweg JR
+epubdate: 2021 Jan 18
+fulljournalname: Brain Topography
+issue: '2'
+pages: 139-153
+pmclivedate: 2021/03/03
+printpubdate: '2021'
+pubdate: 2021 Jan 18
+sortdate: 2021/01/18 00:00
+source: Brain Topogr
+title: 'Observation of Nociceptive Processing: Effect of Intra-Epidermal Electric
+  Stimulus Properties on Detection Probability and Evoked Potentials'
+uid: '7892744'
+volume: '34'

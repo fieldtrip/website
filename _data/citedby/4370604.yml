@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '25799572'
+- idtype: doi
+  value: 10.1371/journal.pone.0120288
+- idtype: pmcid
+  value: PMC4370604
+authors:
+- authtype: Author
+  name: Todorovic A
+- authtype: Author
+  name: Schoffelen JM
+- authtype: Author
+  name: van Ede F
+- authtype: Author
+  name: Maris E
+- authtype: Author
+  name: de Lange FP
+epubdate: 2015 Mar 23
+fulljournalname: PLoS ONE
+issue: '3'
+pages: e0120288
+pmclivedate: 2015/04/04
+printpubdate: ''
+pubdate: 2015 Mar 23
+sortdate: 2015/03/23 00:00
+source: PLoS One
+title: Temporal Expectation and Attention Jointly Modulate Auditory Oscillatory Activity
+  in the Beta Band
+uid: '4370604'
+volume: '10'

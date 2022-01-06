@@ -1,0 +1,22 @@
+articleids:
+- idtype: pmid
+  value: '32484806'
+- idtype: doi
+  value: 10.1371/journal.pcbi.1007935
+- idtype: pmcid
+  value: PMC7292419
+authors:
+- authtype: Author
+  name: Meyniel F
+epubdate: 2020 Jun 2
+fulljournalname: PLoS Computational Biology
+issue: '6'
+pages: e1007935
+pmclivedate: 2020/06/18
+printpubdate: ''
+pubdate: 2020 Jun 2
+sortdate: 2020/06/02 00:00
+source: PLoS Comput Biol
+title: Brain dynamics for confidence-weighted learning
+uid: '7292419'
+volume: '16'

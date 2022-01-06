@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '27699208'
+- idtype: doi
+  value: 10.1523/ENEURO.0139-16.2016
+- idtype: pmcid
+  value: PMC5037322
+authors:
+- authtype: Author
+  name: Harel A
+- authtype: Author
+  name: Groen II
+- authtype: Author
+  name: Kravitz DJ
+- authtype: Author
+  name: Deouell LY
+- authtype: Author
+  name: Baker CI
+epubdate: 2016 Sep 27
+fulljournalname: eNeuro
+issue: '5'
+pages: ENEURO.0139-16.2016
+pmclivedate: 2016/10/03
+printpubdate: ''
+pubdate: 2016 Sep 27
+sortdate: 2016/09/27 00:00
+source: eNeuro
+title: 'The Temporal Dynamics of Scene Processing: A Multifaceted EEG Investigation'
+uid: '5037322'
+volume: '3'

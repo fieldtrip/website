@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '29713271'
+- idtype: doi
+  value: 10.3389/fncom.2018.00026
+- idtype: pmcid
+  value: PMC5911466
+authors:
+- authtype: Author
+  name: Florin E
+- authtype: Author
+  name: Baillet S
+epubdate: 2018 Apr 16
+fulljournalname: Frontiers in Computational Neuroscience
+issue: ''
+pages: '26'
+pmclivedate: 2018/04/30
+printpubdate: ''
+pubdate: 2018 Apr 16
+sortdate: 2018/04/16 00:00
+source: Front Comput Neurosci
+title: 'Commentary: Evaluation of Phase-Amplitude Coupling in Resting State Magnetoencephalographic
+  Signals: Effect of Surrogates and Evaluation Approach'
+uid: '5911466'
+volume: '12'

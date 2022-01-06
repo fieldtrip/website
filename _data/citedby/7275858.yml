@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '32371603'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0216-20.2020
+- idtype: pmcid
+  value: PMC7275858
+authors:
+- authtype: Author
+  name: Schwiedrzik CM
+- authtype: Author
+  name: Sudmann SS
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '23'
+pages: 4565-4575
+pmclivedate: 2020/12/03
+printpubdate: 2020 Jun 3
+pubdate: 2020 Jun 3
+sortdate: 2020/06/03 00:00
+source: J Neurosci
+title: Pupil Diameter Tracks Statistical Structure in the Environment to Increase
+  Visual Sensitivity
+uid: '7275858'
+volume: '40'

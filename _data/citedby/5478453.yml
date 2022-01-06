@@ -1,0 +1,47 @@
+articleids:
+- idtype: pmid
+  value: '28486269'
+- idtype: doi
+  value: 10.1097/ALN.0000000000001671
+- idtype: pmcid
+  value: PMC5478453
+- idtype: MID
+  value: NIHMS866516
+authors:
+- authtype: Author
+  name: Vlisides PE
+- authtype: Author
+  name: Bel-Bahar T
+- authtype: Author
+  name: Lee U
+- authtype: Author
+  name: Li D
+- authtype: Author
+  name: Kim H
+- authtype: Author
+  name: Janke E
+- authtype: Author
+  name: Tarnal V
+- authtype: Author
+  name: Pichurko AB
+- authtype: Author
+  name: McKinney AM
+- authtype: Author
+  name: Kunkler BS
+- authtype: Author
+  name: Picton P
+- authtype: Author
+  name: Mashour GA
+epubdate: ''
+fulljournalname: Anesthesiology
+issue: '1'
+pages: 58-69
+pmclivedate: 2018/07/01
+printpubdate: 2017 Jul
+pubdate: 2017 Jul
+sortdate: 2017/07/01 00:00
+source: Anesthesiology
+title: 'Neurophysiologic Correlates of Ketamine Sedation and Anesthesia: a High-Density
+  Electroencephalography Study in Healthy Volunteers'
+uid: '5478453'
+volume: '127'

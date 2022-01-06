@@ -1,0 +1,45 @@
+articleids:
+- idtype: pmid
+  value: '32745192'
+- idtype: doi
+  value: 10.1093/sleep/zsaa143
+- idtype: pmcid
+  value: PMC7819839
+authors:
+- authtype: Author
+  name: Nelson AB
+- authtype: Author
+  name: Ricci S
+- authtype: Author
+  name: Tatti E
+- authtype: Author
+  name: Panday P
+- authtype: Author
+  name: Girau E
+- authtype: Author
+  name: Lin J
+- authtype: Author
+  name: Thomson BO
+- authtype: Author
+  name: Chen H
+- authtype: Author
+  name: Marshall W
+- authtype: Author
+  name: Tononi G
+- authtype: Author
+  name: Cirelli C
+- authtype: Author
+  name: Ghilardi MF
+epubdate: 2020 Aug 3
+fulljournalname: Sleep
+issue: '1'
+pages: zsaa143
+pmclivedate: 2021/08/03
+printpubdate: ''
+pubdate: 2020 Aug 3
+sortdate: 2020/08/03 00:00
+source: Sleep
+title: Neural fatigue due to intensive learning is reversed by a nap but not by quiet
+  waking
+uid: '7819839'
+volume: '44'

@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '33093553'
+- idtype: doi
+  value: 10.1038/s41598-020-75127-0
+- idtype: pmcid
+  value: PMC7581825
+authors:
+- authtype: Author
+  name: Weber J
+- authtype: Author
+  name: Klein T
+- authtype: Author
+  name: Abeln V
+epubdate: 2020 Oct 22
+fulljournalname: Scientific Reports
+issue: ''
+pages: '17987'
+pmclivedate: 2020/10/23
+printpubdate: ''
+pubdate: 2020 Oct 22
+sortdate: 2020/10/22 00:00
+source: Sci Rep
+title: Shifts in broadband power and alpha peak frequency observed during long-term
+  isolation
+uid: '7581825'
+volume: '10'

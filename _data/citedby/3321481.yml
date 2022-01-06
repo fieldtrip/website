@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '22509171'
+- idtype: doi
+  value: 10.3389/fpsyg.2012.00097
+- idtype: pmcid
+  value: PMC3321481
+authors:
+- authtype: Author
+  name: Mellem MS
+- authtype: Author
+  name: Bastiaansen MC
+- authtype: Author
+  name: Pilgrim LK
+- authtype: Author
+  name: Medvedev AV
+- authtype: Author
+  name: Friedman RB
+epubdate: 2012 Apr 9
+fulljournalname: Frontiers in Psychology
+issue: ''
+pages: '97'
+pmclivedate: 2012/04/16
+printpubdate: ''
+pubdate: 2012 Apr 9
+sortdate: 2012/04/09 00:00
+source: Front Psychol
+title: Word Class and Context Affect Alpha-Band Oscillatory Dynamics in an Older Population
+uid: '3321481'
+volume: '3'

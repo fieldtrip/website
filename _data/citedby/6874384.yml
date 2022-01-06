@@ -1,0 +1,34 @@
+articleids:
+- idtype: pmid
+  value: '31756207'
+- idtype: doi
+  value: 10.1371/journal.pone.0225445
+- idtype: pmcid
+  value: PMC6874384
+authors:
+- authtype: Author
+  name: Farah R
+- authtype: Author
+  name: Meri R
+- authtype: Author
+  name: Kadis DS
+- authtype: Author
+  name: Hutton J
+- authtype: Author
+  name: DeWitt T
+- authtype: Author
+  name: Horowitz-Kraus T
+epubdate: 2019 Nov 22
+fulljournalname: PLoS ONE
+issue: '11'
+pages: e0225445
+pmclivedate: 2019/12/06
+printpubdate: ''
+pubdate: 2019 Nov 22
+sortdate: 2019/11/22 00:00
+source: PLoS One
+title: 'Hyperconnectivity during screen-based stories listening is associated with
+  lower narrative comprehension in preschool children exposed to screens vs dialogic
+  reading: An EEG study'
+uid: '6874384'
+volume: '14'

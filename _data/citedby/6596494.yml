@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '28385876'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1756-16.2017
+- idtype: pmcid
+  value: PMC6596494
+authors:
+- authtype: Author
+  name: Bächinger M
+- authtype: Author
+  name: Zerbi V
+- authtype: Author
+  name: Moisa M
+- authtype: Author
+  name: Polania R
+- authtype: Author
+  name: Liu Q
+- authtype: Author
+  name: Mantini D
+- authtype: Author
+  name: Ruff C
+- authtype: Author
+  name: Wenderoth N
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '18'
+pages: 4766-4777
+pmclivedate: 2019/07/02
+printpubdate: 2017 May 3
+pubdate: 2017 May 3
+sortdate: 2017/05/03 00:00
+source: J Neurosci
+title: Concurrent tACS-fMRI Reveals Causal Influence of Power Synchronized Neural
+  Activity on Resting State fMRI Connectivity
+uid: '6596494'
+volume: '37'

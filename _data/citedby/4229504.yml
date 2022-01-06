@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '25134978'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2014.08.019
+- idtype: pmcid
+  value: PMC4229504
+authors:
+- authtype: Author
+  name: Oswal A
+- authtype: Author
+  name: Litvak V
+- authtype: Author
+  name: Brown P
+- authtype: Author
+  name: Woolrich M
+- authtype: Author
+  name: Barnes G
+epubdate: ''
+fulljournalname: Neuroimage
+issue: ''
+pages: 945-954
+pmclivedate: 2014/11/15
+printpubdate: 2014 Nov 15
+pubdate: 2014 Nov 15
+sortdate: 2014/11/15 00:00
+source: Neuroimage
+title: Optimising beamformer regions of interest analysis
+uid: '4229504'
+volume: '102'

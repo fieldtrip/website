@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '29976936'
+- idtype: doi
+  value: 10.1038/s41598-018-28334-9
+- idtype: pmcid
+  value: PMC6033862
+authors:
+- authtype: Author
+  name: Rochais C
+- authtype: Author
+  name: Sébilleau M
+- authtype: Author
+  name: Menoret M
+- authtype: Author
+  name: Oger M
+- authtype: Author
+  name: Henry S
+- authtype: Author
+  name: Hausberger M
+- authtype: Author
+  name: Cousillas H
+epubdate: 2018 Jul 5
+fulljournalname: Scientific Reports
+issue: ''
+pages: '10153'
+pmclivedate: 2018/07/12
+printpubdate: ''
+pubdate: 2018 Jul 5
+sortdate: 2018/07/05 00:00
+source: Sci Rep
+title: 'Attentional state and brain processes: state-dependent lateralization of EEG
+  profiles in horses'
+uid: '6033862'
+volume: '8'

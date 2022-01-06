@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '33597850'
+- idtype: doi
+  value: 10.3389/fnsys.2021.606823
+- idtype: pmcid
+  value: PMC7882625
+authors:
+- authtype: Author
+  name: Stevens RH
+- authtype: Author
+  name: Galloway TL
+epubdate: 2021 Feb 1
+fulljournalname: Frontiers in Systems Neuroscience
+issue: ''
+pages: '606823'
+pmclivedate: 2021/02/16
+printpubdate: ''
+pubdate: 2021 Feb 1
+sortdate: 2021/02/01 00:00
+source: Front Syst Neurosci
+title: Parsing Neurodynamic Information Streams to Estimate the Frequency, Magnitude
+  and Duration of Team Uncertainty
+uid: '7882625'
+volume: '15'

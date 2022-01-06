@@ -1,0 +1,24 @@
+articleids:
+- idtype: pmid
+  value: '30258376'
+- idtype: doi
+  value: 10.3389/fpsyg.2018.01650
+- idtype: pmcid
+  value: PMC6143766
+authors:
+- authtype: Author
+  name: van Hoogmoed AH
+- authtype: Author
+  name: Kroesbergen EH
+epubdate: 2018 Sep 12
+fulljournalname: Frontiers in Psychology
+issue: ''
+pages: '1650'
+pmclivedate: 2018/09/26
+printpubdate: ''
+pubdate: 2018 Sep 12
+sortdate: 2018/09/12 00:00
+source: Front Psychol
+title: On the Difference Between Numerosity Processing and Number Processing
+uid: '6143766'
+volume: '9'

@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '28325878'
+- idtype: doi
+  value: 10.1073/pnas.1617268114
+- idtype: pmcid
+  value: PMC5389292
+authors:
+- authtype: Author
+  name: Fahrenfort JJ
+- authtype: Author
+  name: van Leeuwen J
+- authtype: Author
+  name: Olivers CN
+- authtype: Author
+  name: Hogendoorn H
+epubdate: 2017 Mar 21
+fulljournalname: Proceedings of the National Academy of Sciences of the United States
+  of America
+issue: '14'
+pages: 3744-3749
+pmclivedate: 2017/10/04
+printpubdate: 2017 Apr 4
+pubdate: 2017 Mar 21
+sortdate: 2017/03/21 00:00
+source: Proc Natl Acad Sci U S A
+title: Perceptual integration without conscious access
+uid: '5389292'
+volume: '114'

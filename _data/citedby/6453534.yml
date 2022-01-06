@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '30391565'
+- idtype: doi
+  value: 10.1016/j.neuropsychologia.2018.10.024
+- idtype: pmcid
+  value: PMC6453534
+- idtype: MID
+  value: NIHMS1516255
+authors:
+- authtype: Author
+  name: Kuperberg GR
+- authtype: Author
+  name: Weber K
+- authtype: Author
+  name: Delaney-Busch N
+- authtype: Author
+  name: Ustine C
+- authtype: Author
+  name: Stillerman B
+- authtype: Author
+  name: Hämäläinen M
+- authtype: Author
+  name: Lau E
+epubdate: 2018 Oct 31
+fulljournalname: Neuropsychologia
+issue: ''
+pages: 337-349
+pmclivedate: 2020/02/18
+printpubdate: 2019 Feb 18
+pubdate: 2018 Oct 31
+sortdate: 2018/10/31 00:00
+source: Neuropsychologia
+title: Multimodal neuroimaging evidence for looser lexico-semantic networks in schizophrenia:Evidence
+  from masked indirect semantic priming
+uid: '6453534'
+volume: '124'

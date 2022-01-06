@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '23874567'
+- idtype: doi
+  value: 10.1371/journal.pone.0068261
+- idtype: pmcid
+  value: PMC3708957
+authors:
+- authtype: Author
+  name: Brandmeyer A
+- authtype: Author
+  name: Farquhar JD
+- authtype: Author
+  name: McQueen JM
+- authtype: Author
+  name: Desain PW
+epubdate: 2013 Jul 11
+fulljournalname: PLoS ONE
+issue: '7'
+pages: e68261
+pmclivedate: 2013/07/19
+printpubdate: ''
+pubdate: 2013 Jul 11
+sortdate: 2013/07/11 00:00
+source: PLoS One
+title: Decoding Speech Perception by Native and Non-Native Speakers Using Single-Trial
+  Electrophysiological Data
+uid: '3708957'
+volume: '8'

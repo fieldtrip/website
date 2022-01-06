@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '31109062'
+- idtype: doi
+  value: 10.3390/s19102302
+- idtype: pmcid
+  value: PMC6567218
+authors:
+- authtype: Author
+  name: Mur A
+- authtype: Author
+  name: Dormido R
+- authtype: Author
+  name: Duro N
+epubdate: 2019 May 18
+fulljournalname: Sensors (Basel, Switzerland)
+issue: '10'
+pages: '2302'
+pmclivedate: 2019/06/17
+printpubdate: ''
+pubdate: 2019 May 18
+sortdate: 2019/05/18 00:00
+source: Sensors (Basel)
+title: An Unsupervised Method for Artefact Removal in EEG Signals
+uid: '6567218'
+volume: '19'

@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '31228795'
+- idtype: doi
+  value: 10.1016/j.nicl.2019.101878
+- idtype: pmcid
+  value: PMC6587022
+authors:
+- authtype: Author
+  name: Roach BJ
+- authtype: Author
+  name: D'Souza DC
+- authtype: Author
+  name: Ford JM
+- authtype: Author
+  name: Mathalon DH
+epubdate: 2019 Jun 5
+fulljournalname: 'NeuroImage : Clinical'
+issue: ''
+pages: '101878'
+pmclivedate: 2019/06/27
+printpubdate: ''
+pubdate: 2019 Jun 5
+sortdate: 2019/06/05 00:00
+source: Neuroimage Clin
+title: Test-retest reliability of time-frequency measures of auditory steady-state
+  responses in patients with schizophrenia and healthy controls
+uid: '6587022'
+volume: '23'

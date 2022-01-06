@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '29541686'
+- idtype: doi
+  value: 10.1523/ENEURO.0329-17.2018
+- idtype: pmcid
+  value: PMC5846228
+authors:
+- authtype: Author
+  name: Cohen D
+- authtype: Author
+  name: van Swinderen B
+- authtype: Author
+  name: Tsuchiya N
+epubdate: 2018 Mar 12
+fulljournalname: eNeuro
+issue: '1'
+pages: ENEURO.0329-17.2018
+pmclivedate: 2018/03/14
+printpubdate: ''
+pubdate: 2018 Mar 12
+sortdate: 2018/03/12 00:00
+source: eNeuro
+title: Isoflurane Impairs Low-Frequency Feedback but Leaves High-Frequency Feedforward
+  Connectivity Intact in the Fly Brain
+uid: '5846228'
+volume: '5'

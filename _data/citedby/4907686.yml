@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '27001501'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2016.03.025
+- idtype: pmcid
+  value: PMC4907686
+authors:
+- authtype: Author
+  name: Magazzini L
+- authtype: Author
+  name: Ruhnau P
+- authtype: Author
+  name: Weisz N
+epubdate: ''
+fulljournalname: Neuroimage
+issue: ''
+pages: 279-287
+pmclivedate: 2016/06/22
+printpubdate: 2016 Jun
+pubdate: 2016 Jun
+sortdate: 2016/06/01 00:00
+source: Neuroimage
+title: Alpha suppression and connectivity modulations in left temporal and parietal
+  cortices index partial awareness of words
+uid: '4907686'
+volume: '133'

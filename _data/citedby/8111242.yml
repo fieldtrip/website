@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '31759115'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2019.116374
+- idtype: pmcid
+  value: PMC8111242
+authors:
+- authtype: Author
+  name: Hirschmann J
+- authtype: Author
+  name: Baillet S
+- authtype: Author
+  name: Woolrich M
+- authtype: Author
+  name: Schnitzler A
+- authtype: Author
+  name: Vidaurre D
+- authtype: Author
+  name: Florin E
+epubdate: ''
+fulljournalname: Neuroimage
+issue: ''
+pages: '116374'
+pmclivedate: 2021/05/14
+printpubdate: 2020 Feb 15
+pubdate: 2020 Feb 15
+sortdate: 2020/02/15 00:00
+source: Neuroimage
+title: Spontaneous network activity <35 ​Hz accounts for variability in stimulus-induced
+  gamma responses
+uid: '8111242'
+volume: '207'

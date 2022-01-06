@@ -1,0 +1,38 @@
+articleids:
+- idtype: pmid
+  value: '32682236'
+- idtype: doi
+  value: 10.1016/j.clinph.2020.05.035
+- idtype: pmcid
+  value: PMC7115847
+- idtype: MID
+  value: EMS87284
+authors:
+- authtype: Author
+  name: Yeh CH
+- authtype: Author
+  name: Al-Fatly B
+- authtype: Author
+  name: Kühn AA
+- authtype: Author
+  name: Meidahl AC
+- authtype: Author
+  name: Tinkhauser G
+- authtype: Author
+  name: Tan H
+- authtype: Author
+  name: Brown P
+epubdate: 2020 Jun 29
+fulljournalname: 'Clinical neurophysiology : official journal of the International
+  Federation of Clinical Neurophysiology'
+issue: '9'
+pages: 2086-2099
+pmclivedate: 2020/07/28
+printpubdate: 2020 Jun 29
+pubdate: 2020 Jun 29
+sortdate: 2020/06/29 00:00
+source: Clin Neurophysiol
+title: Waveform changes with the evolution of beta bursts in the human subthalamic
+  nucleus
+uid: '7115847'
+volume: '131'

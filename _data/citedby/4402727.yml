@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '25716848'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.3276-14.2015
+- idtype: pmcid
+  value: PMC4402727
+authors:
+- authtype: Author
+  name: Wyart V
+- authtype: Author
+  name: Myers NE
+- authtype: Author
+  name: Summerfield C
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '8'
+pages: 3485-3498
+pmclivedate: 2015/08/25
+printpubdate: 2015 Feb 25
+pubdate: 2015 Feb 25
+sortdate: 2015/02/25 00:00
+source: J Neurosci
+title: Neural Mechanisms of Human Perceptual Choice Under Focused and Divided Attention
+uid: '4402727'
+volume: '35'

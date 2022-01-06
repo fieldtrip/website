@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '22675503'
+- idtype: doi
+  value: 10.1371/journal.pone.0037993
+- idtype: pmcid
+  value: PMC3366994
+authors:
+- authtype: Author
+  name: Mohseni HR
+- authtype: Author
+  name: Smith PP
+- authtype: Author
+  name: Parsons CE
+- authtype: Author
+  name: Young KS
+- authtype: Author
+  name: Hyam JA
+- authtype: Author
+  name: Stein A
+- authtype: Author
+  name: Stein JF
+- authtype: Author
+  name: Green AL
+- authtype: Author
+  name: Aziz TZ
+- authtype: Author
+  name: Kringelbach ML
+epubdate: 2012 Jun 4
+fulljournalname: PLoS ONE
+issue: '6'
+pages: e37993
+pmclivedate: 2012/06/06
+printpubdate: ''
+pubdate: 2012 Jun 4
+sortdate: 2012/06/04 00:00
+source: PLoS One
+title: MEG Can Map Short and Long-Term Changes in Brain Activity following Deep Brain
+  Stimulation for Chronic Pain
+uid: '3366994'
+volume: '7'

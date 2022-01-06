@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '31181744'
+- idtype: doi
+  value: 10.3390/s19112610
+- idtype: pmcid
+  value: PMC6603557
+authors:
+- authtype: Author
+  name: Navid MS
+- authtype: Author
+  name: Niazi IK
+- authtype: Author
+  name: Lelic D
+- authtype: Author
+  name: Drewes AM
+- authtype: Author
+  name: Haavik H
+epubdate: 2019 Jun 8
+fulljournalname: Sensors (Basel, Switzerland)
+issue: '11'
+pages: '2610'
+pmclivedate: 2019/07/17
+printpubdate: ''
+pubdate: 2019 Jun 8
+sortdate: 2019/06/08 00:00
+source: Sensors (Basel)
+title: The Effects of Filter’s Class, Cutoff Frequencies, and Independent Component
+  Analysis on the Amplitude of Somatosensory Evoked Potentials Recorded from Healthy
+  Volunteers
+uid: '6603557'
+volume: '19'

@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '26091258'
+- idtype: doi
+  value: 10.1371/journal.pone.0128682
+- idtype: pmcid
+  value: PMC4474889
+authors:
+- authtype: Author
+  name: Iyer PM
+- authtype: Author
+  name: Egan C
+- authtype: Author
+  name: Pinto-Grau M
+- authtype: Author
+  name: Burke T
+- authtype: Author
+  name: Elamin M
+- authtype: Author
+  name: Nasseroleslami B
+- authtype: Author
+  name: Pender N
+- authtype: Author
+  name: Lalor EC
+- authtype: Author
+  name: Hardiman O
+epubdate: 2015 Jun 19
+fulljournalname: PLoS ONE
+issue: '6'
+pages: e0128682
+pmclivedate: 2015/06/30
+printpubdate: ''
+pubdate: 2015 Jun 19
+sortdate: 2015/06/19 00:00
+source: PLoS One
+title: Functional Connectivity Changes in Resting-State EEG as Potential Biomarker
+  for Amyotrophic Lateral Sclerosis
+uid: '4474889'
+volume: '10'

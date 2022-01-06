@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '28555565'
+- idtype: doi
+  value: 10.7554/eLife.23608
+- idtype: pmcid
+  value: PMC5478270
+authors:
+- authtype: Author
+  name: Balderston NL
+- authtype: Author
+  name: Hale E
+- authtype: Author
+  name: Hsiung A
+- authtype: Author
+  name: Torrisi S
+- authtype: Author
+  name: Holroyd T
+- authtype: Author
+  name: Carver FW
+- authtype: Author
+  name: Coppola R
+- authtype: Author
+  name: Ernst M
+- authtype: Author
+  name: Grillon C
+epubdate: 2017 May 30
+fulljournalname: eLife
+issue: ''
+pages: e23608
+pmclivedate: 2017/06/21
+printpubdate: ''
+pubdate: 2017 May 30
+sortdate: 2017/05/30 00:00
+source: eLife
+title: Threat of shock increases excitability and connectivity of the intraparietal
+  sulcus
+uid: '5478270'
+volume: '6'

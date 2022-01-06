@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '22139815'
+- idtype: doi
+  value: 10.1093/cercor/bhr338
+- idtype: pmcid
+  value: PMC3464414
+authors:
+- authtype: Author
+  name: Nieuwenhuis IL
+- authtype: Author
+  name: Takashima A
+- authtype: Author
+  name: Oostenveld R
+- authtype: Author
+  name: McNaughton BL
+- authtype: Author
+  name: Fernández G
+- authtype: Author
+  name: Jensen O
+epubdate: 2011 Dec 2
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '11'
+pages: 2622-2633
+pmclivedate: 2013/11/01
+printpubdate: 2012 Nov
+pubdate: 2011 Dec 2
+sortdate: 2011/12/02 00:00
+source: Cereb Cortex
+title: The Neocortical Network Representing Associative Memory Reorganizes with Time
+  in a Process Engaging the Anterior Temporal Lobe
+uid: '3464414'
+volume: '22'

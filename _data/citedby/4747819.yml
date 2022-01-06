@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '26804554'
+- idtype: doi
+  value: 10.1016/j.cub.2015.11.062
+- idtype: pmcid
+  value: PMC4747819
+- idtype: MID
+  value: NIHMS753262
+authors:
+- authtype: Author
+  name: Funk CM
+- authtype: Author
+  name: Honjoh S
+- authtype: Author
+  name: Rodriguez AV
+- authtype: Author
+  name: Cirelli C
+- authtype: Author
+  name: Tononi G
+epubdate: 2016 Jan 21
+fulljournalname: 'Current biology : CB'
+issue: '3'
+pages: 396-403
+pmclivedate: 2017/02/08
+printpubdate: 2016 Feb 8
+pubdate: 2016 Jan 21
+sortdate: 2016/01/21 00:00
+source: Curr Biol
+title: Local slow waves in superficial layers of primary cortical areas during REM
+  sleep
+uid: '4747819'
+volume: '26'

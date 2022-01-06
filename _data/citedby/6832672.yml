@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '31530646'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.2858-18.2019
+- idtype: pmcid
+  value: PMC6832672
+authors:
+- authtype: Author
+  name: Jiang X
+- authtype: Author
+  name: Gonzalez-Martinez J
+- authtype: Author
+  name: Halgren E
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '45'
+pages: 8949-8968
+pmclivedate: 2020/05/06
+printpubdate: 2019 Nov 6
+pubdate: 2019 Nov 6
+sortdate: 2019/11/06 00:00
+source: J Neurosci
+title: Posterior Hippocampal Spindle Ripples Co-occur with Neocortical Theta Bursts
+  and Downstates-Upstates, and Phase-Lock with Parietal Spindles during NREM Sleep
+  in Humans
+uid: '6832672'
+volume: '39'

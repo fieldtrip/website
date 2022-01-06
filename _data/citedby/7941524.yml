@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '29494213'
+- idtype: doi
+  value: 10.1146/annurev-bioeng-062117-120853
+- idtype: pmcid
+  value: PMC7941524
+- idtype: MID
+  value: NIHMS1676107
+authors:
+- authtype: Author
+  name: He B
+- authtype: Author
+  name: Sohrabpour A
+- authtype: Author
+  name: Brown E
+- authtype: Author
+  name: Liu Z
+epubdate: 2018 Mar 1
+fulljournalname: Annual review of biomedical engineering
+issue: ''
+pages: 171-196
+pmclivedate: 2021/03/09
+printpubdate: 2018 Jun 4
+pubdate: 2018 Mar 1
+sortdate: 2018/03/01 00:00
+source: Annu Rev Biomed Eng
+title: 'Electrophysiological Source Imaging: a Noninvasive Window to Brain Dynamics'
+uid: '7941524'
+volume: '20'

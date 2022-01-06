@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '31961469'
+- idtype: doi
+  value: 10.1002/hbm.24937
+- idtype: pmcid
+  value: PMC7267903
+authors:
+- authtype: Author
+  name: Shu S
+- authtype: Author
+  name: Qin L
+- authtype: Author
+  name: Yin Y
+- authtype: Author
+  name: Han M
+- authtype: Author
+  name: Cui W
+- authtype: Author
+  name: Gao J
+epubdate: 2020 Jan 21
+fulljournalname: Human Brain Mapping
+issue: '8'
+pages: 2160-2172
+pmclivedate: 2020/06/12
+printpubdate: ''
+pubdate: 2020 Jan 21
+sortdate: 2020/01/21 00:00
+source: Hum Brain Mapp
+title: Cortical electrophysiological evidence for individual‐specific temporal organization
+  of brain functional networks
+uid: '7267903'
+volume: '41'

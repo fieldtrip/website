@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '30762601'
+- idtype: doi
+  value: 10.1097/AUD.0000000000000698
+- idtype: pmcid
+  value: PMC6689468
+- idtype: MID
+  value: NIHMS1517172
+authors:
+- authtype: Author
+  name: McClannahan KS
+- authtype: Author
+  name: Backer KC
+- authtype: Author
+  name: Tremblay KL
+epubdate: ''
+fulljournalname: Ear and hearing
+issue: '5'
+pages: 1106-1116
+pmclivedate: 2020/09/01
+printpubdate: 2019 Sep-Oct
+pubdate: 2019 Sep-Oct
+sortdate: 2019/09/01 00:00
+source: Ear Hear
+title: Auditory Evoked Responses in Older Adults with Normal Hearing, Untreated, and
+  Treated Age-Related Hearing Loss
+uid: '6689468'
+volume: '40'

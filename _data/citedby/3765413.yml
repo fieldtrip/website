@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '24039712'
+- idtype: doi
+  value: 10.1371/journal.pone.0071408
+- idtype: pmcid
+  value: PMC3765413
+authors:
+- authtype: Author
+  name: Meeren HK
+- authtype: Author
+  name: de Gelder B
+- authtype: Author
+  name: Ahlfors SP
+- authtype: Author
+  name: Hämäläinen MS
+- authtype: Author
+  name: Hadjikhani N
+epubdate: 2013 Sep 6
+fulljournalname: PLoS ONE
+issue: '9'
+pages: e71408
+pmclivedate: 2013/09/13
+printpubdate: ''
+pubdate: 2013 Sep 6
+sortdate: 2013/09/06 00:00
+source: PLoS One
+title: 'Different Cortical Dynamics in Face and Body Perception: An MEG study'
+uid: '3765413'
+volume: '8'

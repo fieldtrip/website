@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '34115139'
+- idtype: doi
+  value: 10.1093/sleep/zsab148
+- idtype: pmcid
+  value: PMC8598180
+authors:
+- authtype: Author
+  name: Beck J
+- authtype: Author
+  name: Loretz E
+- authtype: Author
+  name: Rasch B
+epubdate: 2021 Jun 11
+fulljournalname: Sleep
+issue: '11'
+pages: zsab148
+pmclivedate: 2021/11/18
+printpubdate: ''
+pubdate: 2021 Jun 11
+sortdate: 2021/06/11 00:00
+source: Sleep
+title: Exposure to relaxing words during sleep promotes slow-wave sleep and subjective
+  sleep quality
+uid: '8598180'
+volume: '44'

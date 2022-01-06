@@ -1,0 +1,66 @@
+articleids:
+- idtype: pmid
+  value: '24624069'
+- idtype: doi
+  value: 10.3389/fnhum.2014.00099
+- idtype: pmcid
+  value: PMC3939774
+authors:
+- authtype: Author
+  name: Roberts TP
+- authtype: Author
+  name: Paulson DN
+- authtype: Author
+  name: Hirschkoff E
+- authtype: Author
+  name: Pratt K
+- authtype: Author
+  name: Mascarenas A
+- authtype: Author
+  name: Miller P
+- authtype: Author
+  name: Han M
+- authtype: Author
+  name: Caffrey J
+- authtype: Author
+  name: Kincade C
+- authtype: Author
+  name: Power B
+- authtype: Author
+  name: Murray R
+- authtype: Author
+  name: Chow V
+- authtype: Author
+  name: Fisk C
+- authtype: Author
+  name: Ku M
+- authtype: Author
+  name: Chudnovskaya D
+- authtype: Author
+  name: Dell J
+- authtype: Author
+  name: Golembski R
+- authtype: Author
+  name: Lam P
+- authtype: Author
+  name: Blaskey L
+- authtype: Author
+  name: Kuschner E
+- authtype: Author
+  name: Bloy L
+- authtype: Author
+  name: Gaetz W
+- authtype: Author
+  name: Edgar JC
+epubdate: 2014 Mar 3
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '99'
+pmclivedate: 2014/03/12
+printpubdate: ''
+pubdate: 2014 Mar 3
+sortdate: 2014/03/03 00:00
+source: Front Hum Neurosci
+title: 'Artemis 123: development of a whole-head infant and young child MEG system'
+uid: '3939774'
+volume: '8'

@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '31222021'
+- idtype: doi
+  value: 10.1038/s41598-019-45289-7
+- idtype: pmcid
+  value: PMC6586889
+authors:
+- authtype: Author
+  name: Imperatori LS
+- authtype: Author
+  name: Betta M
+- authtype: Author
+  name: Cecchetti L
+- authtype: Author
+  name: Canales-Johnson A
+- authtype: Author
+  name: Ricciardi E
+- authtype: Author
+  name: Siclari F
+- authtype: Author
+  name: Pietrini P
+- authtype: Author
+  name: Chennu S
+- authtype: Author
+  name: Bernardi G
+epubdate: 2019 Jun 20
+fulljournalname: Scientific Reports
+issue: ''
+pages: '8894'
+pmclivedate: 2019/06/27
+printpubdate: ''
+pubdate: 2019 Jun 20
+sortdate: 2019/06/20 00:00
+source: Sci Rep
+title: EEG functional connectivity metrics wPLI and wSMI account for distinct types
+  of brain functional interactions
+uid: '6586889'
+volume: '9'

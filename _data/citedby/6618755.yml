@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '23345216'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1094-12.2013
+- idtype: pmcid
+  value: PMC6618755
+authors:
+- authtype: Author
+  name: de Lange FP
+- authtype: Author
+  name: Rahnev DA
+- authtype: Author
+  name: Donner TH
+- authtype: Author
+  name: Lau H
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '4'
+pages: 1400-1410
+pmclivedate: 2019/07/11
+printpubdate: 2013 Jan 23
+pubdate: 2013 Jan 23
+sortdate: 2013/01/23 00:00
+source: J Neurosci
+title: Prestimulus Oscillatory Activity over Motor Cortex Reflects Perceptual Expectations
+uid: '6618755'
+volume: '33'

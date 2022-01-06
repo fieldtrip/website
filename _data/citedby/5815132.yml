@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '28521049'
+- idtype: doi
+  value: 10.1093/schbul/sbx058
+- idtype: pmcid
+  value: PMC5815132
+authors:
+- authtype: Author
+  name: Larsen KM
+- authtype: Author
+  name: Pellegrino G
+- authtype: Author
+  name: Birknow MR
+- authtype: Author
+  name: Kjær TN
+- authtype: Author
+  name: Baaré WF
+- authtype: Author
+  name: Didriksen M
+- authtype: Author
+  name: Olsen L
+- authtype: Author
+  name: Werge T
+- authtype: Author
+  name: Mørup M
+- authtype: Author
+  name: Siebner HR
+epubdate: 2017 May 17
+fulljournalname: Schizophrenia Bulletin
+issue: '2'
+pages: 388-397
+pmclivedate: 2018/02/23
+printpubdate: 2018 Feb
+pubdate: 2017 May 17
+sortdate: 2017/05/17 00:00
+source: Schizophr Bull
+title: 22q11.2 Deletion Syndrome Is Associated With Impaired Auditory Steady-State
+  Gamma Response
+uid: '5815132'
+volume: '44'

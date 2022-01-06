@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '30807662'
+- idtype: doi
+  value: 10.1111/psyp.13353
+- idtype: pmcid
+  value: PMC6991163
+authors:
+- authtype: Author
+  name: Sill J
+- authtype: Author
+  name: Popov T
+- authtype: Author
+  name: Schauer M
+- authtype: Author
+  name: Elbert T
+epubdate: 2019 Feb 26
+fulljournalname: Psychophysiology
+issue: '1'
+pages: e13353
+pmclivedate: 2020/02/04
+printpubdate: 2020 Jan
+pubdate: 2019 Feb 26
+sortdate: 2019/02/26 00:00
+source: Psychophysiology
+title: Rapid brain responses to affective pictures indicate dimensions of trauma‐related
+  psychopathology in adolescents
+uid: '6991163'
+volume: '57'

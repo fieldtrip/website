@@ -1,0 +1,34 @@
+articleids:
+- idtype: pmid
+  value: '28687605'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.3257-16.2017
+- idtype: pmcid
+  value: PMC6596647
+authors:
+- authtype: Author
+  name: Jávor-Duray BN
+- authtype: Author
+  name: Vinck M
+- authtype: Author
+  name: van der Roest M
+- authtype: Author
+  name: Bezard E
+- authtype: Author
+  name: Berendse HW
+- authtype: Author
+  name: Boraud T
+- authtype: Author
+  name: Voorn P
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '32'
+pages: 7669-7681
+pmclivedate: 2019/07/01
+printpubdate: 2017 Aug 9
+pubdate: 2017 Aug 9
+sortdate: 2017/08/09 00:00
+source: J Neurosci
+title: Alterations in Functional Cortical Hierarchy in Hemiparkinsonian Rats
+uid: '6596647'
+volume: '37'

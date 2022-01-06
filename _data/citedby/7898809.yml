@@ -1,0 +1,42 @@
+articleids:
+- idtype: pmid
+  value: '33263940'
+- idtype: doi
+  value: 10.1002/hipo.23284
+- idtype: pmcid
+  value: PMC7898809
+authors:
+- authtype: Author
+  name: Vivekananda U
+- authtype: Author
+  name: Bush D
+- authtype: Author
+  name: Bisby JA
+- authtype: Author
+  name: Baxendale S
+- authtype: Author
+  name: Rodionov R
+- authtype: Author
+  name: Diehl B
+- authtype: Author
+  name: Chowdhury FA
+- authtype: Author
+  name: McEvoy AW
+- authtype: Author
+  name: Miserocchi A
+- authtype: Author
+  name: Walker MC
+- authtype: Author
+  name: Burgess N
+epubdate: 2020 Dec 2
+fulljournalname: Hippocampus
+issue: '2'
+pages: 213-220
+pmclivedate: 2021/03/03
+printpubdate: 2021 Feb
+pubdate: 2020 Dec 2
+sortdate: 2020/12/02 00:00
+source: Hippocampus
+title: Theta power and theta‐gamma coupling support long‐term spatial memory retrieval
+uid: '7898809'
+volume: '31'

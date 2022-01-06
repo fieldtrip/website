@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '34060695'
+- idtype: doi
+  value: 10.1002/hbm.25550
+- idtype: pmcid
+  value: PMC8357008
+authors:
+- authtype: Author
+  name: Son S
+- authtype: Author
+  name: Moon J
+- authtype: Author
+  name: Kang H
+- authtype: Author
+  name: Kim Y
+- authtype: Author
+  name: Lee J
+epubdate: 2021 Jun 1
+fulljournalname: Human Brain Mapping
+issue: '13'
+pages: 4336-4347
+pmclivedate: 2021/08/15
+printpubdate: ''
+pubdate: 2021 Jun 1
+sortdate: 2021/06/01 00:00
+source: Hum Brain Mapp
+title: Induced astigmatism biases the orientation information represented in multivariate
+  electroencephalogram activities
+uid: '8357008'
+volume: '42'

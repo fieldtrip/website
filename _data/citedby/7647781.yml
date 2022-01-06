@@ -1,0 +1,24 @@
+articleids:
+- idtype: pmid
+  value: '33178259'
+- idtype: doi
+  value: 10.1155/2020/8837954
+- idtype: pmcid
+  value: PMC7647781
+authors:
+- authtype: Author
+  name: Oikonomou VP
+- authtype: Author
+  name: Kompatsiaris I
+epubdate: 2020 Oct 30
+fulljournalname: Computational Intelligence and Neuroscience
+issue: ''
+pages: '8837954'
+pmclivedate: 2020/11/10
+printpubdate: ''
+pubdate: 2020 Oct 30
+sortdate: 2020/10/30 00:00
+source: Comput Intell Neurosci
+title: A Novel Bayesian Approach for EEG Source Localization
+uid: '7647781'
+volume: '2020'

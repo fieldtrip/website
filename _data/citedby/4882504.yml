@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '27231193'
+- idtype: doi
+  value: 10.1038/srep26902
+- idtype: pmcid
+  value: PMC4882504
+authors:
+- authtype: Author
+  name: Weiss B
+- authtype: Author
+  name: Knakker B
+- authtype: Author
+  name: Vidnyánszky Z
+epubdate: 2016 May 27
+fulljournalname: Scientific Reports
+issue: ''
+pages: '26902'
+pmclivedate: 2016/06/08
+printpubdate: ''
+pubdate: 2016 May 27
+sortdate: 2016/05/27 00:00
+source: Sci Rep
+title: Visual processing during natural reading
+uid: '4882504'
+volume: '6'

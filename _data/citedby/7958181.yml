@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '33674388'
+- idtype: doi
+  value: 10.1073/pnas.2021238118
+- idtype: pmcid
+  value: PMC7958181
+authors:
+- authtype: Author
+  name: Pacheco Estefan D
+- authtype: Author
+  name: Zucca R
+- authtype: Author
+  name: Arsiwalla X
+- authtype: Author
+  name: Principe A
+- authtype: Author
+  name: Zhang H
+- authtype: Author
+  name: Rocamora R
+- authtype: Author
+  name: Axmacher N
+- authtype: Author
+  name: Verschure PF
+epubdate: 2021 Mar 5
+fulljournalname: Proceedings of the National Academy of Sciences of the United States
+  of America
+issue: '10'
+pages: e2021238118
+pmclivedate: 2021/03/19
+printpubdate: 2021 Mar 9
+pubdate: 2021 Mar 5
+sortdate: 2021/03/05 00:00
+source: Proc Natl Acad Sci U S A
+title: Volitional learning promotes theta phase coding in the human hippocampus
+uid: '7958181'
+volume: '118'

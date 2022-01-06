@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '29085041'
+- idtype: doi
+  value: 10.1038/s41598-017-14742-w
+- idtype: pmcid
+  value: PMC5662762
+authors:
+- authtype: Author
+  name: Heuer A
+- authtype: Author
+  name: Wolf C
+- authtype: Author
+  name: Schütz AC
+- authtype: Author
+  name: Schubö A
+epubdate: 2017 Oct 30
+fulljournalname: Scientific Reports
+issue: ''
+pages: '14318'
+pmclivedate: 2017/11/08
+printpubdate: ''
+pubdate: 2017 Oct 30
+sortdate: 2017/10/30 00:00
+source: Sci Rep
+title: 'The necessity to choose causes reward-related anticipatory biasing: Parieto-occipital
+  alpha-band oscillations reveal suppression of low-value targets'
+uid: '5662762'
+volume: '7'

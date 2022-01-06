@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '25549264'
+- idtype: doi
+  value: 10.1371/journal.pbio.1002031
+- idtype: pmcid
+  value: PMC4280108
+authors:
+- authtype: Author
+  name: Helfrich RF
+- authtype: Author
+  name: Knepper H
+- authtype: Author
+  name: Nolte G
+- authtype: Author
+  name: Strüber D
+- authtype: Author
+  name: Rach S
+- authtype: Author
+  name: Herrmann CS
+- authtype: Author
+  name: Schneider TR
+- authtype: Author
+  name: Engel AK
+epubdate: 2014 Dec 30
+fulljournalname: PLoS Biology
+issue: '12'
+pages: e1002031
+pmclivedate: 2015/01/07
+printpubdate: ''
+pubdate: 2014 Dec 30
+sortdate: 2014/12/30 00:00
+source: PLoS Biol
+title: Selective Modulation of Interhemispheric Functional Connectivity by HD-tACS
+  Shapes Perception
+uid: '4280108'
+volume: '12'

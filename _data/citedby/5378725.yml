@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '28420975'
+- idtype: doi
+  value: 10.3389/fncom.2017.00017
+- idtype: pmcid
+  value: PMC5378725
+authors:
+- authtype: Author
+  name: Reyes A
+- authtype: Author
+  name: Laine CM
+- authtype: Author
+  name: Kutch JJ
+- authtype: Author
+  name: Valero-Cuevas FJ
+epubdate: 2017 Apr 4
+fulljournalname: Frontiers in Computational Neuroscience
+issue: ''
+pages: '17'
+pmclivedate: 2017/04/18
+printpubdate: ''
+pubdate: 2017 Apr 4
+sortdate: 2017/04/04 00:00
+source: Front Comput Neurosci
+title: Beta Band Corticomuscular Drive Reflects Muscle Coordination Strategies
+uid: '5378725'
+volume: '11'

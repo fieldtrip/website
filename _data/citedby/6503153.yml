@@ -1,0 +1,34 @@
+articleids:
+- idtype: pmid
+  value: '30844505'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2019.02.067
+- idtype: pmcid
+  value: PMC6503153
+authors:
+- authtype: Author
+  name: Benwell CS
+- authtype: Author
+  name: London RE
+- authtype: Author
+  name: Tagliabue CF
+- authtype: Author
+  name: Veniero D
+- authtype: Author
+  name: Gross J
+- authtype: Author
+  name: Keitel C
+- authtype: Author
+  name: Thut G
+epubdate: ''
+fulljournalname: Neuroimage
+issue: ''
+pages: 101-114
+pmclivedate: 2019/05/15
+printpubdate: 2019 May 15
+pubdate: 2019 May 15
+sortdate: 2019/05/15 00:00
+source: Neuroimage
+title: Frequency and power of human alpha oscillations drift systematically with time-on-task
+uid: '6503153'
+volume: '192'

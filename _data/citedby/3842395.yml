@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '23845425'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2013.06.077
+- idtype: pmcid
+  value: PMC3842395
+- idtype: MID
+  value: NIHMS504088
+authors:
+- authtype: Author
+  name: Ketz N
+- authtype: Author
+  name: O'Reilly RC
+- authtype: Author
+  name: Curran T
+epubdate: 2013 Jul 9
+fulljournalname: NeuroImage
+issue: 0 2
+pages: 10.1016/j.neuroimage.2013.06.077
+pmclivedate: 2015/01/15
+printpubdate: 2014 Jan 15
+pubdate: 2013 Jul 9
+sortdate: 2013/07/09 00:00
+source: Neuroimage
+title: Classification Aided Analysis of Oscillatory Signatures in Controlled Retrieval
+uid: '3842395'
+volume: '85'

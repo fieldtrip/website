@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '22836273'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1337-12.2012
+- idtype: pmcid
+  value: PMC6703747
+authors:
+- authtype: Author
+  name: van Ede F
+- authtype: Author
+  name: de Lange FP
+- authtype: Author
+  name: Maris E
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '30'
+pages: 10408-10412
+pmclivedate: 2019/08/28
+printpubdate: 2012 Jul 25
+pubdate: 2012 Jul 25
+sortdate: 2012/07/25 00:00
+source: J Neurosci
+title: Attentional Cues Affect Accuracy and Reaction Time via Different Cognitive
+  and Neural Processes
+uid: '6703747'
+volume: '32'

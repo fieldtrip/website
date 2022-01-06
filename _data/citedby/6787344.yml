@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '31551251'
+- idtype: doi
+  value: 10.1523/ENEURO.0128-19.2019
+- idtype: pmcid
+  value: PMC6787344
+authors:
+- authtype: Author
+  name: Vidal Y
+- authtype: Author
+  name: Brusini P
+- authtype: Author
+  name: Bonfieni M
+- authtype: Author
+  name: Mehler J
+- authtype: Author
+  name: Bekinschtein TA
+epubdate: 2019 Oct 9
+fulljournalname: eNeuro
+issue: '5'
+pages: ENEURO.0128-19.2019
+pmclivedate: 2019/10/11
+printpubdate: ''
+pubdate: 2019 Oct 9
+sortdate: 2019/10/09 00:00
+source: eNeuro
+title: Neural Signal to Violations of Abstract Rules Using Speech-Like Stimuli
+uid: '6787344'
+volume: '6'

@@ -1,0 +1,45 @@
+articleids:
+- idtype: pmid
+  value: '26747748'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2015.12.041
+- idtype: pmcid
+  value: PMC5225375
+- idtype: MID
+  value: NIHMS783992
+authors:
+- authtype: Author
+  name: Fiederer LD
+- authtype: Author
+  name: Vorwerk J
+- authtype: Author
+  name: Lucka F
+- authtype: Author
+  name: Dannhauer M
+- authtype: Author
+  name: Yang S
+- authtype: Author
+  name: Dümpelmann M
+- authtype: Author
+  name: Schulze-Bonhage A
+- authtype: Author
+  name: Aertsen A
+- authtype: Author
+  name: Speck O
+- authtype: Author
+  name: Wolters CH
+- authtype: Author
+  name: Ball T
+epubdate: 2015 Dec 31
+fulljournalname: NeuroImage
+issue: ''
+pages: 193-208
+pmclivedate: 2017/03/01
+printpubdate: 2016 Mar
+pubdate: 2015 Dec 31
+sortdate: 2015/12/31 00:00
+source: Neuroimage
+title: The role of blood vessels in high-resolution volume conductor head modeling
+  of EEG
+uid: '5225375'
+volume: '128'

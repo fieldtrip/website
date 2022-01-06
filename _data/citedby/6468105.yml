@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '30770401'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1633-18.2019
+- idtype: pmcid
+  value: PMC6468105
+authors:
+- authtype: Author
+  name: Keitel C
+- authtype: Author
+  name: Keitel A
+- authtype: Author
+  name: Benwell CS
+- authtype: Author
+  name: Daube C
+- authtype: Author
+  name: Thut G
+- authtype: Author
+  name: Gross J
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '16'
+pages: 3119-3129
+pmclivedate: 2019/04/17
+printpubdate: 2019 Apr 17
+pubdate: 2019 Apr 17
+sortdate: 2019/04/17 00:00
+source: J Neurosci
+title: 'Stimulus-Driven Brain Rhythms within the Alpha Band: The Attentional-Modulation
+  Conundrum'
+uid: '6468105'
+volume: '39'

@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '30024961'
+- idtype: doi
+  value: 10.1371/journal.pone.0201194
+- idtype: pmcid
+  value: PMC6053228
+authors:
+- authtype: Author
+  name: Prieto A
+- authtype: Author
+  name: Mayas J
+- authtype: Author
+  name: Ballesteros S
+epubdate: 2018 Jul 19
+fulljournalname: PLoS ONE
+issue: '7'
+pages: e0201194
+pmclivedate: 2018/07/27
+printpubdate: ''
+pubdate: 2018 Jul 19
+sortdate: 2018/07/19 00:00
+source: PLoS One
+title: 'Alpha and beta band correlates of haptic perceptual grouping: Results from
+  an orientation detection task'
+uid: '6053228'
+volume: '13'

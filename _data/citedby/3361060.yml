@@ -1,0 +1,22 @@
+articleids:
+- idtype: pmid
+  value: '22654753'
+- idtype: doi
+  value: 10.3389/fninf.2012.00017
+- idtype: pmcid
+  value: PMC3361060
+authors:
+- authtype: Author
+  name: Robbins KA
+epubdate: 2012 May 28
+fulljournalname: Frontiers in Neuroinformatics
+issue: ''
+pages: '17'
+pmclivedate: 2012/05/31
+printpubdate: ''
+pubdate: 2012 May 28
+sortdate: 2012/05/28 00:00
+source: Front Neuroinform
+title: 'EEGVIS: A MATLAB Toolbox for Browsing, Exploring, and Viewing Large Datasets'
+uid: '3361060'
+volume: '6'

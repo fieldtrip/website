@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '28900010'
+- idtype: doi
+  value: 10.1073/pnas.1705652114
+- idtype: pmcid
+  value: PMC5625909
+authors:
+- authtype: Author
+  name: Kok P
+- authtype: Author
+  name: Mostert P
+- authtype: Author
+  name: de Lange FP
+epubdate: 2017 Sep 12
+fulljournalname: Proceedings of the National Academy of Sciences of the United States
+  of America
+issue: '39'
+pages: 10473-10478
+pmclivedate: 2018/03/26
+printpubdate: 2017 Sep 26
+pubdate: 2017 Sep 12
+sortdate: 2017/09/12 00:00
+source: Proc Natl Acad Sci U S A
+title: Prior expectations induce prestimulus sensory templates
+uid: '5625909'
+volume: '114'

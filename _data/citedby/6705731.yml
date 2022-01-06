@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '28637840'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0260-17.2017
+- idtype: pmcid
+  value: PMC6705731
+authors:
+- authtype: Author
+  name: Ladenbauer J
+- authtype: Author
+  name: Ladenbauer J
+- authtype: Author
+  name: Külzow N
+- authtype: Author
+  name: de Boor R
+- authtype: Author
+  name: Avramova E
+- authtype: Author
+  name: Grittner U
+- authtype: Author
+  name: Flöel A
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '30'
+pages: 7111-7124
+pmclivedate: 2019/08/23
+printpubdate: 2017 Jul 26
+pubdate: 2017 Jul 26
+sortdate: 2017/07/26 00:00
+source: J Neurosci
+title: Promoting Sleep Oscillations and Their Functional Coupling by Transcranial
+  Stimulation Enhances Memory Consolidation in Mild Cognitive Impairment
+uid: '6705731'
+volume: '37'

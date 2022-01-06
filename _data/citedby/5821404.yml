@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '29420565'
+- idtype: doi
+  value: 10.1371/journal.pbio.2003453
+- idtype: pmcid
+  value: PMC5821404
+authors:
+- authtype: Author
+  name: Pfeffer T
+- authtype: Author
+  name: Avramiea AE
+- authtype: Author
+  name: Nolte G
+- authtype: Author
+  name: Engel AK
+- authtype: Author
+  name: Linkenkaer-Hansen K
+- authtype: Author
+  name: Donner TH
+epubdate: 2018 Feb 8
+fulljournalname: PLoS Biology
+issue: '2'
+pages: e2003453
+pmclivedate: 2018/03/02
+printpubdate: ''
+pubdate: 2018 Feb 8
+sortdate: 2018/02/08 00:00
+source: PLoS Biol
+title: Catecholamines alter the intrinsic variability of cortical population activity
+  and perception
+uid: '5821404'
+volume: '16'

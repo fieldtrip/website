@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '25068489'
+- idtype: doi
+  value: 10.1371/journal.pone.0102833
+- idtype: pmcid
+  value: PMC4113280
+authors:
+- authtype: Author
+  name: Wollstadt P
+- authtype: Author
+  name: Martínez-Zarzuela M
+- authtype: Author
+  name: Vicente R
+- authtype: Author
+  name: Díaz-Pernas FJ
+- authtype: Author
+  name: Wibral M
+epubdate: 2014 Jul 28
+fulljournalname: PLoS ONE
+issue: '7'
+pages: e102833
+pmclivedate: 2014/08/04
+printpubdate: ''
+pubdate: 2014 Jul 28
+sortdate: 2014/07/28 00:00
+source: PLoS One
+title: Efficient Transfer Entropy Analysis of Non-Stationary Neural Time Series
+uid: '4113280'
+volume: '9'

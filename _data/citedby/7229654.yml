@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '32341167'
+- idtype: doi
+  value: 10.1073/pnas.1915629117
+- idtype: pmcid
+  value: PMC7229654
+authors:
+- authtype: Author
+  name: Al E
+- authtype: Author
+  name: Iliopoulos F
+- authtype: Author
+  name: Forschack N
+- authtype: Author
+  name: Nierhaus T
+- authtype: Author
+  name: Grund M
+- authtype: Author
+  name: Motyka P
+- authtype: Author
+  name: Gaebler M
+- authtype: Author
+  name: Nikulin VV
+- authtype: Author
+  name: Villringer A
+epubdate: 2020 Apr 27
+fulljournalname: Proceedings of the National Academy of Sciences of the United States
+  of America
+issue: '19'
+pages: 10575-10584
+pmclivedate: 2020/05/26
+printpubdate: 2020 May 12
+pubdate: 2020 Apr 27
+sortdate: 2020/04/27 00:00
+source: Proc Natl Acad Sci U S A
+title: Heart–brain interactions shape somatosensory perception and evoked potentials
+uid: '7229654'
+volume: '117'

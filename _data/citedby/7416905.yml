@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '32503040'
+- idtype: doi
+  value: 10.1167/jov.20.6.3
+- idtype: pmcid
+  value: PMC7416905
+authors:
+- authtype: Author
+  name: Herde L
+- authtype: Author
+  name: Uhl J
+- authtype: Author
+  name: Rauss K
+epubdate: 2020 Jun 5
+fulljournalname: Journal of Vision
+issue: '6'
+pages: '3'
+pmclivedate: 2020/08/24
+printpubdate: ''
+pubdate: 2020 Jun 5
+sortdate: 2020/06/05 00:00
+source: J Vis
+title: Anatomic and functional asymmetries interactively shape human early visual
+  cortex responses
+uid: '7416905'
+volume: '20'

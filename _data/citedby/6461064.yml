@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '31024228'
+- idtype: doi
+  value: 10.3389/fnins.2019.00284
+- idtype: pmcid
+  value: PMC6461064
+authors:
+- authtype: Author
+  name: Niso G
+- authtype: Author
+  name: Tadel F
+- authtype: Author
+  name: Bock E
+- authtype: Author
+  name: Cousineau M
+- authtype: Author
+  name: Santos A
+- authtype: Author
+  name: Baillet S
+epubdate: 2019 Apr 5
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '284'
+pmclivedate: 2019/04/25
+printpubdate: ''
+pubdate: 2019 Apr 5
+sortdate: 2019/04/05 00:00
+source: Front Neurosci
+title: Brainstorm Pipeline Analysis of Resting-State Data From the Open MEG Archive
+uid: '6461064'
+volume: '13'

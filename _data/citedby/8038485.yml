@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '33916581'
+- idtype: doi
+  value: 10.3390/s21072527
+- idtype: pmcid
+  value: PMC8038485
+authors:
+- authtype: Author
+  name: Yalaz M
+- authtype: Author
+  name: Deuschl G
+- authtype: Author
+  name: Butz M
+- authtype: Author
+  name: Schnitzler A
+- authtype: Author
+  name: Helmers AK
+- authtype: Author
+  name: Höft M
+epubdate: 2021 Apr 4
+fulljournalname: Sensors (Basel, Switzerland)
+issue: '7'
+pages: '2527'
+pmclivedate: 2021/04/12
+printpubdate: ''
+pubdate: 2021 Apr 4
+sortdate: 2021/04/04 00:00
+source: Sensors (Basel)
+title: Investigation of Magnetoelectric Sensor Requirements for Deep Brain Stimulation
+  Electrode Localization and Rotational Orientation Detection
+uid: '8038485'
+volume: '21'

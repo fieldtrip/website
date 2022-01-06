@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '28781049'
+- idtype: doi
+  value: 10.1016/j.cub.2017.06.074
+- idtype: pmcid
+  value: PMC5571438
+authors:
+- authtype: Author
+  name: Cao L
+- authtype: Author
+  name: Veniero D
+- authtype: Author
+  name: Thut G
+- authtype: Author
+  name: Gross J
+epubdate: ''
+fulljournalname: Current Biology
+issue: '16'
+pages: 2442-2451.e3
+pmclivedate: 2017/08/30
+printpubdate: 2017 Aug 21
+pubdate: 2017 Aug 21
+sortdate: 2017/08/21 00:00
+source: Curr Biol
+title: Role of the Cerebellum in Adaptation to Delayed Action Effects
+uid: '5571438'
+volume: '27'

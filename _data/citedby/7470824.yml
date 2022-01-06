@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '32831168'
+- idtype: doi
+  value: 10.7554/eLife.56972
+- idtype: pmcid
+  value: PMC7470824
+authors:
+- authtype: Author
+  name: Keitel A
+- authtype: Author
+  name: Gross J
+- authtype: Author
+  name: Kayser C
+epubdate: 2020 Aug 24
+fulljournalname: eLife
+issue: ''
+pages: e56972
+pmclivedate: 2020/09/04
+printpubdate: ''
+pubdate: 2020 Aug 24
+sortdate: 2020/08/24 00:00
+source: eLife
+title: Shared and modality-specific brain regions that mediate auditory and visual
+  word comprehension
+uid: '7470824'
+volume: '9'

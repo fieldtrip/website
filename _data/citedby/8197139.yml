@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '34071124'
+- idtype: doi
+  value: 10.3390/s21113632
+- idtype: pmcid
+  value: PMC8197139
+authors:
+- authtype: Author
+  name: Anzolin A
+- authtype: Author
+  name: Toppi J
+- authtype: Author
+  name: Petti M
+- authtype: Author
+  name: Cincotti F
+- authtype: Author
+  name: Astolfi L
+epubdate: 2021 May 23
+fulljournalname: Sensors (Basel, Switzerland)
+issue: '11'
+pages: '3632'
+pmclivedate: 2021/06/13
+printpubdate: ''
+pubdate: 2021 May 23
+sortdate: 2021/05/23 00:00
+source: Sensors (Basel)
+title: 'SEED-G: Simulated EEG Data Generator for Testing Connectivity Algorithms'
+uid: '8197139'
+volume: '21'

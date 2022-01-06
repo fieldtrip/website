@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '29357448'
+- idtype: doi
+  value: 10.1152/jn.00629.2017
+- idtype: pmcid
+  value: PMC6008089
+authors:
+- authtype: Author
+  name: West TO
+- authtype: Author
+  name: Berthouze L
+- authtype: Author
+  name: Halliday DM
+- authtype: Author
+  name: Litvak V
+- authtype: Author
+  name: Sharott A
+- authtype: Author
+  name: Magill PJ
+- authtype: Author
+  name: Farmer SF
+epubdate: 2018 Jan 10
+fulljournalname: Journal of Neurophysiology
+issue: '5'
+pages: 1608-1628
+pmclivedate: 2018/06/21
+printpubdate: 2018 May 1
+pubdate: 2018 Jan 10
+sortdate: 2018/01/10 00:00
+source: J Neurophysiol
+title: Propagation of beta/gamma rhythms in the cortico-basal ganglia circuits of
+  the parkinsonian rat
+uid: '6008089'
+volume: '119'

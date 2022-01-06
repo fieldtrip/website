@@ -1,0 +1,55 @@
+articleids:
+- idtype: pmid
+  value: '26952132'
+- idtype: doi
+  value: 10.7554/eLife.09148
+- idtype: pmcid
+  value: PMC4798967
+authors:
+- authtype: Author
+  name: Oddo CM
+- authtype: Author
+  name: Raspopovic S
+- authtype: Author
+  name: Artoni F
+- authtype: Author
+  name: Mazzoni A
+- authtype: Author
+  name: Spigler G
+- authtype: Author
+  name: Petrini F
+- authtype: Author
+  name: Giambattistelli F
+- authtype: Author
+  name: Vecchio F
+- authtype: Author
+  name: Miraglia F
+- authtype: Author
+  name: Zollo L
+- authtype: Author
+  name: Di Pino G
+- authtype: Author
+  name: Camboni D
+- authtype: Author
+  name: Carrozza MC
+- authtype: Author
+  name: Guglielmelli E
+- authtype: Author
+  name: Rossini PM
+- authtype: Author
+  name: Faraguna U
+- authtype: Author
+  name: Micera S
+epubdate: 2016 Mar 8
+fulljournalname: eLife
+issue: ''
+pages: e09148
+pmclivedate: 2016/03/21
+printpubdate: ''
+pubdate: 2016 Mar 8
+sortdate: 2016/03/08 00:00
+source: eLife
+title: Intraneural stimulation elicits discrimination of textural features by artificial
+  fingertip in intact and amputee humans
+uid: '4798967'
+volume: '5'

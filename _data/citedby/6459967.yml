@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '31024231'
+- idtype: doi
+  value: 10.3389/fnins.2019.00293
+- idtype: pmcid
+  value: PMC6459967
+authors:
+- authtype: Author
+  name: Pettibone WD
+- authtype: Author
+  name: Kam K
+- authtype: Author
+  name: Chen RK
+- authtype: Author
+  name: Varga AW
+epubdate: 2019 Apr 5
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '293'
+pmclivedate: 2019/04/25
+printpubdate: ''
+pubdate: 2019 Apr 5
+sortdate: 2019/04/05 00:00
+source: Front Neurosci
+title: Necessity of Sleep for Motor Gist Learning in Mice
+uid: '6459967'
+volume: '13'

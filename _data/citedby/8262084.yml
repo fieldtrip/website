@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '34296185'
+- idtype: doi
+  value: 10.1093/texcom/tgab040
+- idtype: pmcid
+  value: PMC8262084
+authors:
+- authtype: Author
+  name: Fairs A
+- authtype: Author
+  name: Michelas A
+- authtype: Author
+  name: Dufour S
+- authtype: Author
+  name: Strijkers K
+epubdate: 2021 Jun 10
+fulljournalname: Cerebral Cortex Communications
+issue: '3'
+pages: tgab040
+pmclivedate: 2021/07/21
+printpubdate: ''
+pubdate: 2021 Jun 10
+sortdate: 2021/06/10 00:00
+source: Cereb Cortex Commun
+title: The Same Ultra-Rapid Parallel Brain Dynamics Underpin the Production and Perception
+  of Speech
+uid: '8262084'
+volume: '2'

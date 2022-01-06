@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '29720932'
+- idtype: doi
+  value: 10.3389/fnins.2018.00218
+- idtype: pmcid
+  value: PMC5915898
+authors:
+- authtype: Author
+  name: Haumann NT
+- authtype: Author
+  name: Vuust P
+- authtype: Author
+  name: Bertelsen F
+- authtype: Author
+  name: Garza-Villarreal EA
+epubdate: 2018 Apr 18
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '218'
+pmclivedate: 2018/05/02
+printpubdate: ''
+pubdate: 2018 Apr 18
+sortdate: 2018/04/18 00:00
+source: Front Neurosci
+title: Influence of Musical Enculturation on Brain Responses to Metric Deviants
+uid: '5915898'
+volume: '12'

@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '23984947'
+- idtype: doi
+  value: 10.1162/jocn_a_00470
+- idtype: pmcid
+  value: PMC3990735
+- idtype: MID
+  value: NIHMS570061
+authors:
+- authtype: Author
+  name: Reinhart RM
+- authtype: Author
+  name: Woodman GF
+epubdate: 2013 Aug 28
+fulljournalname: Journal of cognitive neuroscience
+issue: '1'
+pages: 175-188
+pmclivedate: 2014/04/17
+printpubdate: 2014 Jan
+pubdate: 2013 Aug 28
+sortdate: 2013/08/28 00:00
+source: J Cogn Neurosci
+title: Oscillatory coupling reveals the dynamic reorganization of large-scale neural
+  networks as cognitive demands change
+uid: '3990735'
+volume: '26'

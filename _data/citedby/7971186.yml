@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '33746723'
+- idtype: doi
+  value: 10.3389/fnhum.2021.613125
+- idtype: pmcid
+  value: PMC7971186
+authors:
+- authtype: Author
+  name: Boran E
+- authtype: Author
+  name: Stieglitz L
+- authtype: Author
+  name: Sarnthein J
+epubdate: 2021 Feb 24
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '613125'
+pmclivedate: 2021/03/19
+printpubdate: ''
+pubdate: 2021 Feb 24
+sortdate: 2021/02/24 00:00
+source: Front Hum Neurosci
+title: Epileptic High-Frequency Oscillations in Intracranial EEG Are Not Confounded
+  by Cognitive Tasks
+uid: '7971186'
+volume: '15'

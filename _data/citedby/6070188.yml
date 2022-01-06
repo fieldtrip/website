@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '30073188'
+- idtype: doi
+  value: 10.1523/ENEURO.0069-18.2018
+- idtype: pmcid
+  value: PMC6070188
+authors:
+- authtype: Author
+  name: Kasten FH
+- authtype: Author
+  name: Maess B
+- authtype: Author
+  name: Herrmann CS
+epubdate: 2018 Jul 25
+fulljournalname: eNeuro
+issue: '3'
+pages: ENEURO.0069-18.2018
+pmclivedate: 2018/08/02
+printpubdate: ''
+pubdate: 2018 Jul 25
+sortdate: 2018/07/25 00:00
+source: eNeuro
+title: Facilitated Event-Related Power Modulations during Transcranial Alternating
+  Current Stimulation (tACS) Revealed by Concurrent tACS-MEG
+uid: '6070188'
+volume: '5'

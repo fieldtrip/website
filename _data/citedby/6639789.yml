@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '31354459'
+- idtype: doi
+  value: 10.3389/fnhum.2019.00243
+- idtype: pmcid
+  value: PMC6639789
+authors:
+- authtype: Author
+  name: Kolozsvári OB
+- authtype: Author
+  name: Xu W
+- authtype: Author
+  name: Leppänen PH
+- authtype: Author
+  name: Hämäläinen JA
+epubdate: 2019 Jul 12
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '243'
+pmclivedate: 2019/07/26
+printpubdate: ''
+pubdate: 2019 Jul 12
+sortdate: 2019/07/12 00:00
+source: Front Hum Neurosci
+title: Top-Down Predictions of Familiarity and Congruency in Audio-Visual Speech Perception
+  at Neural Level
+uid: '6639789'
+volume: '13'

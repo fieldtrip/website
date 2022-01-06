@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '25333286'
+- idtype: doi
+  value: 10.1371/journal.pbio.1001965
+- idtype: pmcid
+  value: PMC4205112
+authors:
+- authtype: Author
+  name: Zumer JM
+- authtype: Author
+  name: Scheeringa R
+- authtype: Author
+  name: Schoffelen JM
+- authtype: Author
+  name: Norris DG
+- authtype: Author
+  name: Jensen O
+epubdate: 2014 Oct 21
+fulljournalname: PLoS Biology
+issue: '10'
+pages: e1001965
+pmclivedate: 2014/10/27
+printpubdate: ''
+pubdate: 2014 Oct 21
+sortdate: 2014/10/21 00:00
+source: PLoS Biol
+title: Occipital Alpha Activity during Stimulus Processing Gates the Information Flow
+  to Object-Selective Cortex
+uid: '4205112'
+volume: '12'

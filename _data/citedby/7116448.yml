@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '33150359'
+- idtype: doi
+  value: 10.1093/brain/awaa297
+- idtype: pmcid
+  value: PMC7116448
+authors:
+- authtype: Author
+  name: Muthuraman M
+- authtype: Author
+  name: Bange M
+- authtype: Author
+  name: Koirala N
+- authtype: Author
+  name: Ciolac D
+- authtype: Author
+  name: Pintea B
+- authtype: Author
+  name: Glaser M
+- authtype: Author
+  name: Tinkhauser G
+- authtype: Author
+  name: Brown P
+- authtype: Author
+  name: Deuschl G
+- authtype: Author
+  name: Groppa S
+epubdate: 2020 Nov 5
+fulljournalname: Brain
+issue: '11'
+pages: 3393-3407
+pmclivedate: 2020/12/09
+printpubdate: ''
+pubdate: 2020 Nov 5
+sortdate: 2020/11/05 00:00
+source: Brain
+title: Cross-frequency coupling between gamma oscillations and deep brain stimulation
+  frequency in Parkinson’s disease
+uid: '7116448'
+volume: '143'

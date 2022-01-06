@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '27085605'
+- idtype: doi
+  value: 10.1016/j.neuropharm.2016.04.016
+- idtype: pmcid
+  value: PMC4920646
+authors:
+- authtype: Author
+  name: Venzi M
+- authtype: Author
+  name: David F
+- authtype: Author
+  name: Bellet J
+- authtype: Author
+  name: Cavaccini A
+- authtype: Author
+  name: Bombardi C
+- authtype: Author
+  name: Crunelli V
+- authtype: Author
+  name: Di Giovanni G
+epubdate: ''
+fulljournalname: Neuropharmacology
+issue: ''
+pages: 292-304
+pmclivedate: 2016/09/01
+printpubdate: 2016 Sep
+pubdate: 2016 Sep
+sortdate: 2016/09/01 00:00
+source: Neuropharmacology
+title: Role for serotonin2A (5-HT2A) and 2C (5-HT2C) receptors in experimental absence
+  seizures
+uid: '4920646'
+volume: '108'

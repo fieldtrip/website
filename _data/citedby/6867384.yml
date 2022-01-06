@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '26813563'
+- idtype: doi
+  value: 10.1002/hbm.23121
+- idtype: pmcid
+  value: PMC6867384
+authors:
+- authtype: Author
+  name: Auzias G
+- authtype: Author
+  name: Coulon O
+- authtype: Author
+  name: Brovelli A
+epubdate: 2016 Jan 27
+fulljournalname: Human Brain Mapping
+issue: '4'
+pages: 1573-1592
+pmclivedate: 2020/06/12
+printpubdate: ''
+pubdate: 2016 Jan 27
+sortdate: 2016/01/27 00:00
+source: Hum Brain Mapp
+title: ' MarsAtlas: A cortical parcellation atlas for functional mapping'
+uid: '6867384'
+volume: '37'

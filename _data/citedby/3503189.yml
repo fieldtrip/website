@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '23112199'
+- idtype: doi
+  value: 10.1073/pnas.1216402109
+- idtype: pmcid
+  value: PMC3503189
+authors:
+- authtype: Author
+  name: Doron KW
+- authtype: Author
+  name: Bassett DS
+- authtype: Author
+  name: Gazzaniga MS
+epubdate: 2012 Oct 29
+fulljournalname: Proceedings of the National Academy of Sciences of the United States
+  of America
+issue: '46'
+pages: 18661-18668
+pmclivedate: 2012/11/26
+printpubdate: 2012 Nov 13
+pubdate: 2012 Oct 29
+sortdate: 2012/10/29 00:00
+source: Proc Natl Acad Sci U S A
+title: Dynamic network structure of interhemispheric coordination
+uid: '3503189'
+volume: '109'

@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '30304670'
+- idtype: doi
+  value: 10.1016/j.celrep.2018.09.037
+- idtype: pmcid
+  value: PMC6198287
+authors:
+- authtype: Author
+  name: Schreiner T
+- authtype: Author
+  name: Doeller CF
+- authtype: Author
+  name: Jensen O
+- authtype: Author
+  name: Rasch B
+- authtype: Author
+  name: Staudigl T
+epubdate: 2018 Oct 9
+fulljournalname: Cell Reports
+issue: '2'
+pages: 296-301
+pmclivedate: 2018/10/25
+printpubdate: ''
+pubdate: 2018 Oct 9
+sortdate: 2018/10/09 00:00
+source: Cell Rep
+title: Theta Phase-Coordinated Memory Reactivation Reoccurs in a Slow-Oscillatory
+  Rhythm during NREM Sleep
+uid: '6198287'
+volume: '25'

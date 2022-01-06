@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '34381123'
+- idtype: doi
+  value: 10.1038/s41598-021-95818-6
+- idtype: pmcid
+  value: PMC8357781
+authors:
+- authtype: Author
+  name: Rivera-Lillo G
+- authtype: Author
+  name: Stamatakis EA
+- authtype: Author
+  name: Bekinschtein TA
+- authtype: Author
+  name: Menon DK
+- authtype: Author
+  name: Chennu S
+epubdate: 2021 Aug 11
+fulljournalname: Scientific Reports
+issue: ''
+pages: '16267'
+pmclivedate: 2021/08/13
+printpubdate: ''
+pubdate: 2021 Aug 11
+sortdate: 2021/08/11 00:00
+source: Sci Rep
+title: Delta band activity contributes to the identification of command following
+  in disorder of consciousness
+uid: '8357781'
+volume: '11'

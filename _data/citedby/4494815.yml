@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '26151634'
+- idtype: doi
+  value: 10.1371/journal.pone.0131655
+- idtype: pmcid
+  value: PMC4494815
+authors:
+- authtype: Author
+  name: Ménoret M
+- authtype: Author
+  name: Bourguignon M
+- authtype: Author
+  name: Hari R
+epubdate: 2015 Jul 7
+fulljournalname: PLoS ONE
+issue: '7'
+pages: e0131655
+pmclivedate: 2015/07/15
+printpubdate: ''
+pubdate: 2015 Jul 7
+sortdate: 2015/07/07 00:00
+source: PLoS One
+title: Modulation of Rolandic Beta-Band Oscillations during Motor Simulation of Joint
+  Actions
+uid: '4494815'
+volume: '10'

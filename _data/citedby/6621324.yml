@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '22219274'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.4816-11.2012
+- idtype: pmcid
+  value: PMC6621324
+authors:
+- authtype: Author
+  name: van der Meij R
+- authtype: Author
+  name: Kahana M
+- authtype: Author
+  name: Maris E
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '1'
+pages: 111-123
+pmclivedate: 2019/07/18
+printpubdate: 2012 Jan 4
+pubdate: 2012 Jan 4
+sortdate: 2012/01/04 00:00
+source: J Neurosci
+title: Phase–Amplitude Coupling in Human Electrocorticography Is Spatially Distributed
+  and Phase Diverse
+uid: '6621324'
+volume: '32'

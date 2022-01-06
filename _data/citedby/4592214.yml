@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '26431333'
+- idtype: doi
+  value: 10.1371/journal.pone.0139228
+- idtype: pmcid
+  value: PMC4592214
+authors:
+- authtype: Author
+  name: Adebimpe A
+- authtype: Author
+  name: Aarabi A
+- authtype: Author
+  name: Bourel-Ponchel E
+- authtype: Author
+  name: Mahmoudzadeh M
+- authtype: Author
+  name: Wallois F
+epubdate: 2015 Oct 2
+fulljournalname: PLoS ONE
+issue: '10'
+pages: e0139228
+pmclivedate: 2015/10/09
+printpubdate: ''
+pubdate: 2015 Oct 2
+sortdate: 2015/10/02 00:00
+source: PLoS One
+title: Functional Brain Dysfunction in Patients with Benign Childhood Epilepsy as
+  Revealed by Graph Theory
+uid: '4592214'
+volume: '10'

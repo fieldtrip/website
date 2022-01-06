@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '30718904'
+- idtype: doi
+  value: 10.1038/s41593-018-0335-6
+- idtype: pmcid
+  value: PMC6420070
+- idtype: MID
+  value: EMS80965
+authors:
+- authtype: Author
+  name: van Ede F
+- authtype: Author
+  name: Chekroud SR
+- authtype: Author
+  name: Stokes MG
+- authtype: Author
+  name: Nobre AC
+epubdate: 2019 Feb 4
+fulljournalname: Nature neuroscience
+issue: '3'
+pages: 477-483
+pmclivedate: 2019/08/04
+printpubdate: 2019 Mar
+pubdate: 2019 Feb 4
+sortdate: 2019/02/04 00:00
+source: Nat Neurosci
+title: Concurrent visual and motor selection during visual working memory guided action
+uid: '6420070'
+volume: '22'

@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '33726746'
+- idtype: doi
+  value: 10.1186/s12915-021-00992-8
+- idtype: pmcid
+  value: PMC7968255
+authors:
+- authtype: Author
+  name: Köhler MH
+- authtype: Author
+  name: Demarchi G
+- authtype: Author
+  name: Weisz N
+epubdate: 2021 Mar 16
+fulljournalname: BMC Biology
+issue: ''
+pages: '48'
+pmclivedate: 2021/03/22
+printpubdate: ''
+pubdate: 2021 Mar 16
+sortdate: 2021/03/16 00:00
+source: BMC Biol
+title: Cochlear activity in silent cue-target intervals shows a theta-rhythmic pattern
+  and is correlated to attentional alpha and theta modulations
+uid: '7968255'
+volume: '19'

@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '30197593'
+- idtype: doi
+  value: 10.3389/fninf.2018.00056
+- idtype: pmcid
+  value: PMC6117508
+authors:
+- authtype: Author
+  name: Dong L
+- authtype: Author
+  name: Luo C
+- authtype: Author
+  name: Liu X
+- authtype: Author
+  name: Jiang S
+- authtype: Author
+  name: Li F
+- authtype: Author
+  name: Feng H
+- authtype: Author
+  name: Li J
+- authtype: Author
+  name: Gong D
+- authtype: Author
+  name: Yao D
+epubdate: 2018 Aug 24
+fulljournalname: Frontiers in Neuroinformatics
+issue: ''
+pages: '56'
+pmclivedate: 2018/09/07
+printpubdate: ''
+pubdate: 2018 Aug 24
+sortdate: 2018/08/24 00:00
+source: Front Neuroinform
+title: 'Neuroscience Information Toolbox: An Open Source Toolbox for EEG–fMRI Multimodal
+  Fusion Analysis'
+uid: '6117508'
+volume: '12'

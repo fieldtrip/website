@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '30405337'
+- idtype: doi
+  value: 10.3389/fnins.2018.00750
+- idtype: pmcid
+  value: PMC6205978
+authors:
+- authtype: Author
+  name: Zhou R
+- authtype: Author
+  name: Wang J
+- authtype: Author
+  name: Qi W
+- authtype: Author
+  name: Liu FY
+- authtype: Author
+  name: Yi M
+- authtype: Author
+  name: Guo H
+- authtype: Author
+  name: Wan Y
+epubdate: 2018 Oct 23
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '750'
+pmclivedate: 2018/11/07
+printpubdate: ''
+pubdate: 2018 Oct 23
+sortdate: 2018/10/23 00:00
+source: Front Neurosci
+title: Elevated Resting State Gamma Oscillatory Activities in Electroencephalogram
+  of Patients With Post-herpetic Neuralgia
+uid: '6205978'
+volume: '12'

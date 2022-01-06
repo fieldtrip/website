@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '22114294'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.2917-11.2011
+- idtype: pmcid
+  value: PMC6623838
+authors:
+- authtype: Author
+  name: Moratti S
+- authtype: Author
+  name: Saugar C
+- authtype: Author
+  name: Strange BA
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '47'
+pages: 17278-17286
+pmclivedate: 2019/07/23
+printpubdate: 2011 Nov 23
+pubdate: 2011 Nov 23
+sortdate: 2011/11/23 00:00
+source: J Neurosci
+title: Prefrontal-Occipitoparietal Coupling Underlies Late Latency Human Neuronal
+  Responses to Emotion
+uid: '6623838'
+volume: '31'

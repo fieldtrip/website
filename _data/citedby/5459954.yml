@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '28615963'
+- idtype: doi
+  value: 10.2147/JPR.S129791
+- idtype: pmcid
+  value: PMC5459954
+authors:
+- authtype: Author
+  name: Motoyama Y
+- authtype: Author
+  name: Ogata K
+- authtype: Author
+  name: Hoka S
+- authtype: Author
+  name: Tobimatsu S
+epubdate: 2017 May 29
+fulljournalname: Journal of Pain Research
+issue: ''
+pages: 1317-1326
+pmclivedate: 2017/06/14
+printpubdate: ''
+pubdate: 2017 May 29
+sortdate: 2017/05/29 00:00
+source: J Pain Res
+title: Frequency-dependent changes in sensorimotor and pain affective systems induced
+  by empathy for pain
+uid: '5459954'
+volume: '10'

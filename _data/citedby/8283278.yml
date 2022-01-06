@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '34276321'
+- idtype: doi
+  value: 10.3389/fnhum.2021.649074
+- idtype: pmcid
+  value: PMC8283278
+authors:
+- authtype: Author
+  name: Xu N
+- authtype: Author
+  name: Shan W
+- authtype: Author
+  name: Qi J
+- authtype: Author
+  name: Wu J
+- authtype: Author
+  name: Wang Q
+epubdate: 2021 Jul 2
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '649074'
+pmclivedate: 2021/07/17
+printpubdate: ''
+pubdate: 2021 Jul 2
+sortdate: 2021/07/02 00:00
+source: Front Hum Neurosci
+title: Presurgical Evaluation of Epilepsy Using Resting-State MEG Functional Connectivity
+uid: '8283278'
+volume: '15'

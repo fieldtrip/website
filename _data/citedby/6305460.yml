@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '30618697'
+- idtype: doi
+  value: 10.3389/fninf.2018.00092
+- idtype: pmcid
+  value: PMC6305460
+authors:
+- authtype: Author
+  name: Hagen E
+- authtype: Author
+  name: Næss S
+- authtype: Author
+  name: Ness TV
+- authtype: Author
+  name: Einevoll GT
+epubdate: 2018 Dec 18
+fulljournalname: Frontiers in Neuroinformatics
+issue: ''
+pages: '92'
+pmclivedate: 2019/01/07
+printpubdate: ''
+pubdate: 2018 Dec 18
+sortdate: 2018/12/18 00:00
+source: Front Neuroinform
+title: 'Multimodal Modeling of Neural Network Activity: Computing LFP, ECoG, EEG,
+  and MEG Signals With LFPy 2.0'
+uid: '6305460'
+volume: '12'

@@ -1,0 +1,34 @@
+articleids:
+- idtype: pmid
+  value: '27776633'
+- idtype: doi
+  value: 10.7554/eLife.18103
+- idtype: pmcid
+  value: PMC5079750
+authors:
+- authtype: Author
+  name: Allen M
+- authtype: Author
+  name: Frank D
+- authtype: Author
+  name: Schwarzkopf DS
+- authtype: Author
+  name: Fardo F
+- authtype: Author
+  name: Winston JS
+- authtype: Author
+  name: Hauser TU
+- authtype: Author
+  name: Rees G
+epubdate: 2016 Oct 25
+fulljournalname: eLife
+issue: ''
+pages: e18103
+pmclivedate: 2016/10/26
+printpubdate: ''
+pubdate: 2016 Oct 25
+sortdate: 2016/10/25 00:00
+source: eLife
+title: Unexpected arousal modulates the influence of sensory noise on confidence
+uid: '5079750'
+volume: '5'

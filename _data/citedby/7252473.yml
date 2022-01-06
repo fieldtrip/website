@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '32317388'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0398-19.2020
+- idtype: pmcid
+  value: PMC7252473
+authors:
+- authtype: Author
+  name: Dahl MJ
+- authtype: Author
+  name: Mather M
+- authtype: Author
+  name: Sander MC
+- authtype: Author
+  name: Werkle-Bergner M
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '22'
+pages: 4372-4390
+pmclivedate: 2020/11/27
+printpubdate: 2020 May 27
+pubdate: 2020 May 27
+sortdate: 2020/05/27 00:00
+source: J Neurosci
+title: Noradrenergic Responsiveness Supports Selective Attention across the Adult
+  Lifespan
+uid: '7252473'
+volume: '40'

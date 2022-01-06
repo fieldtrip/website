@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '32226369'
+- idtype: doi
+  value: 10.3389/fnhum.2020.00074
+- idtype: pmcid
+  value: PMC7080986
+authors:
+- authtype: Author
+  name: Bossi F
+- authtype: Author
+  name: Premoli I
+- authtype: Author
+  name: Pizzamiglio S
+- authtype: Author
+  name: Balaban S
+- authtype: Author
+  name: Ricciardelli P
+- authtype: Author
+  name: Rivolta D
+epubdate: 2020 Mar 12
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '74'
+pmclivedate: 2020/03/27
+printpubdate: ''
+pubdate: 2020 Mar 12
+sortdate: 2020/03/12 00:00
+source: Front Hum Neurosci
+title: Theta- and Gamma-Band Activity Discriminates Face, Body and Object Perception
+uid: '7080986'
+volume: '14'

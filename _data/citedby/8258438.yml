@@ -1,0 +1,106 @@
+articleids:
+- idtype: pmid
+  value: '33749727'
+- idtype: doi
+  value: 10.1093/cercor/bhab040
+- idtype: pmcid
+  value: PMC8258438
+authors:
+- authtype: Author
+  name: Paulk AC
+- authtype: Author
+  name: Yang JC
+- authtype: Author
+  name: Cleary DR
+- authtype: Author
+  name: Soper DJ
+- authtype: Author
+  name: Halgren M
+- authtype: Author
+  name: O’Donnell AR
+- authtype: Author
+  name: Lee SH
+- authtype: Author
+  name: Ganji M
+- authtype: Author
+  name: Ro YG
+- authtype: Author
+  name: Oh H
+- authtype: Author
+  name: Hossain L
+- authtype: Author
+  name: Lee J
+- authtype: Author
+  name: Tchoe Y
+- authtype: Author
+  name: Rogers N
+- authtype: Author
+  name: Kiliç K
+- authtype: Author
+  name: Ryu SB
+- authtype: Author
+  name: Lee SW
+- authtype: Author
+  name: Hermiz J
+- authtype: Author
+  name: Gilja V
+- authtype: Author
+  name: Ulbert I
+- authtype: Author
+  name: Fabó D
+- authtype: Author
+  name: Thesen T
+- authtype: Author
+  name: Doyle WK
+- authtype: Author
+  name: Devinsky O
+- authtype: Author
+  name: Madsen JR
+- authtype: Author
+  name: Schomer DL
+- authtype: Author
+  name: Eskandar EN
+- authtype: Author
+  name: Lee JW
+- authtype: Author
+  name: Maus D
+- authtype: Author
+  name: Devor A
+- authtype: Author
+  name: Fried SI
+- authtype: Author
+  name: Jones PS
+- authtype: Author
+  name: Nahed BV
+- authtype: Author
+  name: Ben-Haim S
+- authtype: Author
+  name: Bick SK
+- authtype: Author
+  name: Richardson RM
+- authtype: Author
+  name: Raslan AM
+- authtype: Author
+  name: Siler DA
+- authtype: Author
+  name: Cahill DP
+- authtype: Author
+  name: Williams ZM
+- authtype: Author
+  name: Cosgrove GR
+- authtype: Author
+  name: Dayeh SA
+- authtype: Author
+  name: Cash SS
+epubdate: 2021 Mar 22
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '8'
+pages: 3678-3700
+pmclivedate: ''
+printpubdate: ''
+pubdate: 2021 Mar 22
+sortdate: 2021/03/22 00:00
+source: Cereb Cortex
+title: Microscale Physiological Events on the Human Cortical Surface
+uid: '8258438'
+volume: '31'

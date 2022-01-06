@@ -1,0 +1,59 @@
+articleids:
+- idtype: pmid
+  value: '33462192'
+- idtype: doi
+  value: 10.1038/s41398-020-01160-2
+- idtype: pmcid
+  value: PMC7813876
+authors:
+- authtype: Author
+  name: Rajkumar R
+- authtype: Author
+  name: Régio Brambilla C
+- authtype: Author
+  name: Veselinović T
+- authtype: Author
+  name: Bierbrier J
+- authtype: Author
+  name: Wyss C
+- authtype: Author
+  name: Ramkiran S
+- authtype: Author
+  name: Orth L
+- authtype: Author
+  name: Lang M
+- authtype: Author
+  name: Rota Kops E
+- authtype: Author
+  name: Mauler J
+- authtype: Author
+  name: Scheins J
+- authtype: Author
+  name: Neumaier B
+- authtype: Author
+  name: Ermert J
+- authtype: Author
+  name: Herzog H
+- authtype: Author
+  name: Langen KJ
+- authtype: Author
+  name: Binkofski FC
+- authtype: Author
+  name: Lerche C
+- authtype: Author
+  name: Shah NJ
+- authtype: Author
+  name: Neuner I
+epubdate: 2021 Jan 18
+fulljournalname: Translational Psychiatry
+issue: ''
+pages: '60'
+pmclivedate: 2021/01/25
+printpubdate: ''
+pubdate: 2021 Jan 18
+sortdate: 2021/01/18 00:00
+source: Transl Psychiatry
+title: 'Excitatory–inhibitory balance within EEG microstates and resting-state fMRI
+  networks: assessed via simultaneous trimodal PET–MR–EEG imaging'
+uid: '7813876'
+volume: '11'

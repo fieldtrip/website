@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '25745392'
+- idtype: doi
+  value: 10.3389/fnhum.2015.00070
+- idtype: pmcid
+  value: PMC4333813
+authors:
+- authtype: Author
+  name: O'Reilly C
+- authtype: Author
+  name: Godbout J
+- authtype: Author
+  name: Carrier J
+- authtype: Author
+  name: Lina JM
+epubdate: 2015 Feb 19
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '70'
+pmclivedate: 2015/03/05
+printpubdate: ''
+pubdate: 2015 Feb 19
+sortdate: 2015/02/19 00:00
+source: Front Hum Neurosci
+title: Combining time-frequency and spatial information for the detection of sleep
+  spindles
+uid: '4333813'
+volume: '9'

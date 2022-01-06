@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '26368933'
+- idtype: doi
+  value: 10.1371/journal.pone.0138119
+- idtype: pmcid
+  value: PMC4569354
+authors:
+- authtype: Author
+  name: Elshahabi A
+- authtype: Author
+  name: Klamer S
+- authtype: Author
+  name: Sahib AK
+- authtype: Author
+  name: Lerche H
+- authtype: Author
+  name: Braun C
+- authtype: Author
+  name: Focke NK
+epubdate: 2015 Sep 14
+fulljournalname: PLoS ONE
+issue: '9'
+pages: e0138119
+pmclivedate: 2015/09/18
+printpubdate: ''
+pubdate: 2015 Sep 14
+sortdate: 2015/09/14 00:00
+source: PLoS One
+title: Magnetoencephalography Reveals a Widespread Increase in Network Connectivity
+  in Idiopathic/Genetic Generalized Epilepsy
+uid: '4569354'
+volume: '10'

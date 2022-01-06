@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '33637559'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.2038-20.2021
+- idtype: pmcid
+  value: PMC8051684
+authors:
+- authtype: Author
+  name: Kobelt M
+- authtype: Author
+  name: Sommer VR
+- authtype: Author
+  name: Keresztes A
+- authtype: Author
+  name: Werkle-Bergner M
+- authtype: Author
+  name: Sander MC
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '15'
+pages: 3499-3511
+pmclivedate: 2021/10/14
+printpubdate: 2021 Apr 14
+pubdate: 2021 Apr 14
+sortdate: 2021/04/14 00:00
+source: J Neurosci
+title: Tracking Age Differences in Neural Distinctiveness across Representational
+  Levels
+uid: '8051684'
+volume: '41'

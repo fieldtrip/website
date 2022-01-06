@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '28110406'
+- idtype: doi
+  value: 10.1007/s00422-016-0707-5
+- idtype: pmcid
+  value: PMC5326632
+authors:
+- authtype: Author
+  name: Kordowski P
+- authtype: Author
+  name: Matysiak A
+- authtype: Author
+  name: König R
+- authtype: Author
+  name: Sielużycki C
+epubdate: 2017 Jan 21
+fulljournalname: Biological Cybernetics
+issue: '1'
+pages: 69-89
+pmclivedate: 2017/03/10
+printpubdate: '2017'
+pubdate: 2017 Jan 21
+sortdate: 2017/01/21 00:00
+source: Biol Cybern
+title: Simultaneous spatio-temporal matching pursuit decomposition of evoked brain
+  responses in MEG
+uid: '5326632'
+volume: '111'

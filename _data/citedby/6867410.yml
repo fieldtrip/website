@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '26577247'
+- idtype: doi
+  value: 10.1002/hbm.23052
+- idtype: pmcid
+  value: PMC6867410
+authors:
+- authtype: Author
+  name: Albrecht MA
+- authtype: Author
+  name: Roberts G
+- authtype: Author
+  name: Price G
+- authtype: Author
+  name: Lee J
+- authtype: Author
+  name: Iyyalol R
+- authtype: Author
+  name: Martin‐Iverson MT
+epubdate: 2015 Nov 18
+fulljournalname: Human Brain Mapping
+issue: '2'
+pages: 570-588
+pmclivedate: 2020/06/12
+printpubdate: ''
+pubdate: 2015 Nov 18
+sortdate: 2015/11/18 00:00
+source: Hum Brain Mapp
+title: The effects of dexamphetamine on the resting‐state electroencephalogram and
+  functional connectivity
+uid: '6867410'
+volume: '37'

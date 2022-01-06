@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '30710345'
+- idtype: doi
+  value: 10.1111/psyp.13336
+- idtype: pmcid
+  value: PMC6508977
+- idtype: MID
+  value: NIHMS1012590
+authors:
+- authtype: Author
+  name: Gao C
+- authtype: Author
+  name: Conte S
+- authtype: Author
+  name: Richards JE
+- authtype: Author
+  name: Xie W
+- authtype: Author
+  name: Hanayik T
+epubdate: 2019 Feb 2
+fulljournalname: Psychophysiology
+issue: '6'
+pages: e13336
+pmclivedate: 2019/06/01
+printpubdate: 2019 Jun
+pubdate: 2019 Feb 2
+sortdate: 2019/02/02 00:00
+source: Psychophysiology
+title: 'The neural sources of N170: Understanding timing of activation in face-selective
+  areas'
+uid: '6508977'
+volume: '56'

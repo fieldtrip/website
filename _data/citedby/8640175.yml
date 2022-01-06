@@ -1,0 +1,47 @@
+articleids:
+- idtype: pmid
+  value: '34867552'
+- idtype: doi
+  value: 10.3389/fpsyt.2021.766647
+- idtype: pmcid
+  value: PMC8640175
+authors:
+- authtype: Author
+  name: Denis D
+- authtype: Author
+  name: Bottary R
+- authtype: Author
+  name: Cunningham TJ
+- authtype: Author
+  name: Zeng S
+- authtype: Author
+  name: Daffre C
+- authtype: Author
+  name: Oliver KL
+- authtype: Author
+  name: Moore K
+- authtype: Author
+  name: Gazecki S
+- authtype: Author
+  name: Kram Mendelsohn A
+- authtype: Author
+  name: Martinez U
+- authtype: Author
+  name: Gannon K
+- authtype: Author
+  name: Lasko NB
+- authtype: Author
+  name: Pace-Schott EF
+epubdate: 2021 Nov 19
+fulljournalname: Frontiers in Psychiatry
+issue: ''
+pages: '766647'
+pmclivedate: 2021/12/04
+printpubdate: ''
+pubdate: 2021 Nov 19
+sortdate: 2021/11/19 00:00
+source: Front Psychiatry
+title: Sleep Power Spectral Density and Spindles in PTSD and Their Relationship to
+  Symptom Severity
+uid: '8640175'
+volume: '12'

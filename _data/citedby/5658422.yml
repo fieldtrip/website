@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '29074868'
+- idtype: doi
+  value: 10.1038/s41598-017-14474-x
+- idtype: pmcid
+  value: PMC5658422
+authors:
+- authtype: Author
+  name: Espírito Santo MG
+- authtype: Author
+  name: Chen HY
+- authtype: Author
+  name: Schürmann M
+epubdate: 2017 Oct 26
+fulljournalname: Scientific Reports
+issue: ''
+pages: '14129'
+pmclivedate: 2017/10/31
+printpubdate: ''
+pubdate: 2017 Oct 26
+sortdate: 2017/10/26 00:00
+source: Sci Rep
+title: Lateralized occipito-temporal N1 responses to images of salient distorted finger
+  postures
+uid: '5658422'
+volume: '7'

@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '26818394'
+- idtype: doi
+  value: 10.1038/srep20119
+- idtype: pmcid
+  value: PMC4730189
+authors:
+- authtype: Author
+  name: Kam K
+- authtype: Author
+  name: Duffy ÁM
+- authtype: Author
+  name: Moretto J
+- authtype: Author
+  name: LaFrancois JJ
+- authtype: Author
+  name: Scharfman HE
+epubdate: 2016 Jan 28
+fulljournalname: Scientific Reports
+issue: ''
+pages: '20119'
+pmclivedate: 2016/02/03
+printpubdate: ''
+pubdate: 2016 Jan 28
+sortdate: 2016/01/28 00:00
+source: Sci Rep
+title: Interictal spikes during sleep are an early defect in the Tg2576 mouse model
+  of β-amyloid neuropathology
+uid: '4730189'
+volume: '6'

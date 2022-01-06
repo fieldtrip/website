@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '30397512'
+- idtype: doi
+  value: 10.1093/nc/niw019
+- idtype: pmcid
+  value: PMC6210398
+authors:
+- authtype: Author
+  name: Dor-Ziderman Y
+- authtype: Author
+  name: Ataria Y
+- authtype: Author
+  name: Fulder S
+- authtype: Author
+  name: Goldstein A
+- authtype: Author
+  name: Berkovich-Ohana A
+epubdate: 2016 Oct 10
+fulljournalname: Neuroscience of Consciousness
+issue: '1'
+pages: niw019
+pmclivedate: 2018/11/05
+printpubdate: 2016 Jan
+pubdate: 2016 Oct 10
+sortdate: 2016/10/10 00:00
+source: Neurosci Conscious
+title: 'Self-specific processing in the meditating brain: a MEG neurophenomenology
+  study'
+uid: '6210398'
+volume: '2016'

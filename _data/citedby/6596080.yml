@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '30054394'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0928-18.2018
+- idtype: pmcid
+  value: PMC6596080
+authors:
+- authtype: Author
+  name: Voigt MB
+- authtype: Author
+  name: Yusuf PA
+- authtype: Author
+  name: Kral A
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '36'
+pages: 7774-7786
+pmclivedate: 2019/06/27
+printpubdate: 2018 Sep 5
+pubdate: 2018 Sep 5
+sortdate: 2018/09/05 00:00
+source: J Neurosci
+title: Intracortical Microstimulation Modulates Cortical Induced Responses
+uid: '6596080'
+volume: '38'

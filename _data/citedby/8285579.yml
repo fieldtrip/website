@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '33836272'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2021.118030
+- idtype: pmcid
+  value: PMC8285579
+authors:
+- authtype: Author
+  name: Hajonides JE
+- authtype: Author
+  name: Nobre AC
+- authtype: Author
+  name: van Ede F
+- authtype: Author
+  name: Stokes MG
+epubdate: ''
+fulljournalname: Neuroimage
+issue: ''
+pages: '118030'
+pmclivedate: 2021/08/15
+printpubdate: 2021 Aug 15
+pubdate: 2021 Aug 15
+sortdate: 2021/08/15 00:00
+source: Neuroimage
+title: Decoding visual colour from scalp electroencephalography measurements
+uid: '8285579'
+volume: '237'

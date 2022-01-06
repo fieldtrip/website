@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '33848619'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2021.118050
+- idtype: pmcid
+  value: PMC8270889
+authors:
+- authtype: Author
+  name: Wolpert N
+- authtype: Author
+  name: Tallon-Baudry C
+epubdate: ''
+fulljournalname: Neuroimage
+issue: ''
+pages: '118050'
+pmclivedate: 2021/08/01
+printpubdate: 2021 Aug 1
+pubdate: 2021 Aug 1
+sortdate: 2021/08/01 00:00
+source: Neuroimage
+title: 'Coupling between the phase of a neural oscillation or bodily rhythm with behavior:
+  Evaluation of different statistical procedures'
+uid: '8270889'
+volume: '236'

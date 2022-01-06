@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '34679377'
+- idtype: doi
+  value: 10.3390/brainsci11101312
+- idtype: pmcid
+  value: PMC8533814
+authors:
+- authtype: Author
+  name: Scalabrini A
+- authtype: Author
+  name: Wolman A
+- authtype: Author
+  name: Northoff G
+epubdate: 2021 Oct 2
+fulljournalname: Brain Sciences
+issue: '10'
+pages: '1312'
+pmclivedate: 2021/10/23
+printpubdate: ''
+pubdate: 2021 Oct 2
+sortdate: 2021/10/02 00:00
+source: Brain Sci
+title: The Self and Its Right Insula—Differential Topography and Dynamic of Right
+  vs. Left Insula
+uid: '8533814'
+volume: '11'

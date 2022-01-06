@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '28198413'
+- idtype: doi
+  value: 10.1038/srep42599
+- idtype: pmcid
+  value: PMC5309745
+authors:
+- authtype: Author
+  name: Kaiser J
+- authtype: Author
+  name: Rieder M
+- authtype: Author
+  name: Abel C
+- authtype: Author
+  name: Peters B
+- authtype: Author
+  name: Bledowski C
+epubdate: 2017 Feb 15
+fulljournalname: Scientific Reports
+issue: ''
+pages: '42599'
+pmclivedate: 2017/02/22
+printpubdate: ''
+pubdate: 2017 Feb 15
+sortdate: 2017/02/15 00:00
+source: Sci Rep
+title: Pre-encoding gamma-band activity during auditory working memory
+uid: '5309745'
+volume: '7'

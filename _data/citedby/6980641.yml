@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '31978102'
+- idtype: doi
+  value: 10.1371/journal.pone.0227684
+- idtype: pmcid
+  value: PMC6980641
+authors:
+- authtype: Author
+  name: Borna A
+- authtype: Author
+  name: Carter TR
+- authtype: Author
+  name: Colombo AP
+- authtype: Author
+  name: Jau YY
+- authtype: Author
+  name: McKay J
+- authtype: Author
+  name: Weisend M
+- authtype: Author
+  name: Taulu S
+- authtype: Author
+  name: Stephen JM
+- authtype: Author
+  name: Schwindt PD
+epubdate: 2020 Jan 24
+fulljournalname: PLoS ONE
+issue: '1'
+pages: e0227684
+pmclivedate: 2020/02/07
+printpubdate: ''
+pubdate: 2020 Jan 24
+sortdate: 2020/01/24 00:00
+source: PLoS One
+title: Non-Invasive Functional-Brain-Imaging with an OPM-based Magnetoencephalography
+  System
+uid: '6980641'
+volume: '15'

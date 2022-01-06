@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '28942154'
+- idtype: doi
+  value: 10.1016/j.clinph.2017.08.001
+- idtype: pmcid
+  value: PMC5675765
+- idtype: MID
+  value: NIHMS908025
+authors:
+- authtype: Author
+  name: Tsiokos C
+- authtype: Author
+  name: Malekmohammadi M
+- authtype: Author
+  name: Yong NA
+- authtype: Author
+  name: Pouratian N
+epubdate: 2017 Sep 5
+fulljournalname: 'Clinical neurophysiology : official journal of the International
+  Federation of Clinical Neurophysiology'
+issue: '11'
+pages: 2165-2178
+pmclivedate: 2018/11/01
+printpubdate: 2017 Nov
+pubdate: 2017 Sep 5
+sortdate: 2017/09/05 00:00
+source: Clin Neurophysiol
+title: Pallidal low β-low γ phase-amplitude coupling inversely correlates with Parkinson
+  disease symptoms
+uid: '5675765'
+volume: '128'

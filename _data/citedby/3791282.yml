@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '24179850'
+- idtype: doi
+  value: 10.1016/j.nicl.2013.06.015
+- idtype: pmcid
+  value: PMC3791282
+authors:
+- authtype: Author
+  name: Snijders TM
+- authtype: Author
+  name: Milivojevic B
+- authtype: Author
+  name: Kemner C
+epubdate: 2013 Jul 2
+fulljournalname: 'NeuroImage : Clinical'
+issue: ''
+pages: 65-72
+pmclivedate: 2013/10/31
+printpubdate: ''
+pubdate: 2013 Jul 2
+sortdate: 2013/07/02 00:00
+source: Neuroimage Clin
+title: Atypical excitation–inhibition balance in autism captured by the gamma response
+  to contextual modulation
+uid: '3791282'
+volume: '3'

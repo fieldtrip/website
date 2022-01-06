@@ -1,0 +1,23 @@
+articleids:
+- idtype: pmid
+  value: '34618866'
+- idtype: doi
+  value: 10.1371/journal.pone.0258335
+- idtype: pmcid
+  value: PMC8496780
+authors:
+- authtype: Author
+  name: Jenson D
+epubdate: 2021 Oct 7
+fulljournalname: PLoS ONE
+issue: '10'
+pages: e0258335
+pmclivedate: 2021/10/08
+printpubdate: ''
+pubdate: 2021 Oct 7
+sortdate: 2021/10/07 00:00
+source: PLoS One
+title: 'Audiovisual incongruence differentially impacts left and right hemisphere
+  sensorimotor oscillations: Potential applications to production'
+uid: '8496780'
+volume: '16'

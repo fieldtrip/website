@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '32335503'
+- idtype: doi
+  value: 10.1016/j.eplepsyres.2020.106324
+- idtype: pmcid
+  value: PMC7684644
+authors:
+- authtype: Author
+  name: Routley B
+- authtype: Author
+  name: Shaw A
+- authtype: Author
+  name: Muthukumaraswamy SD
+- authtype: Author
+  name: Singh KD
+- authtype: Author
+  name: Hamandi K
+epubdate: ''
+fulljournalname: Epilepsy Research
+issue: ''
+pages: '106324'
+pmclivedate: 2020/12/07
+printpubdate: 2020 Jul
+pubdate: 2020 Jul
+sortdate: 2020/07/01 00:00
+source: Epilepsy Res
+title: Juvenile myoclonic epilepsy shows increased posterior theta, and reduced sensorimotor
+  beta resting connectivity
+uid: '7684644'
+volume: '163'

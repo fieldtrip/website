@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '34594212'
+- idtype: doi
+  value: 10.3389/fnagi.2021.683908
+- idtype: pmcid
+  value: PMC8477023
+authors:
+- authtype: Author
+  name: Alejandro RJ
+- authtype: Author
+  name: Packard PA
+- authtype: Author
+  name: Steiger TK
+- authtype: Author
+  name: Fuentemilla L
+- authtype: Author
+  name: Bunzeck N
+epubdate: 2021 Sep 14
+fulljournalname: Frontiers in Aging Neuroscience
+issue: ''
+pages: '683908'
+pmclivedate: 2021/09/29
+printpubdate: ''
+pubdate: 2021 Sep 14
+sortdate: 2021/09/14 00:00
+source: Front Aging Neurosci
+title: Semantic Congruence Drives Long-Term Memory and Similarly Affects Neural Retrieval
+  Dynamics in Young and Older Adults
+uid: '8477023'
+volume: '13'

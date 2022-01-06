@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '30017481'
+- idtype: doi
+  value: 10.1016/j.cub.2018.05.086
+- idtype: pmcid
+  value: PMC6089835
+authors:
+- authtype: Author
+  name: Kienitz R
+- authtype: Author
+  name: Schmiedt JT
+- authtype: Author
+  name: Shapcott KA
+- authtype: Author
+  name: Kouroupaki K
+- authtype: Author
+  name: Saunders RC
+- authtype: Author
+  name: Schmid MC
+epubdate: ''
+fulljournalname: Current Biology
+issue: '15'
+pages: 2377-2387.e5
+pmclivedate: 2018/08/14
+printpubdate: 2018 Aug 6
+pubdate: 2018 Aug 6
+sortdate: 2018/08/06 00:00
+source: Curr Biol
+title: Theta Rhythmic Neuronal Activity and Reaction Times Arising from Cortical Receptive
+  Field Interactions during Distributed Attention
+uid: '6089835'
+volume: '28'

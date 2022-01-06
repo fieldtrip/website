@@ -1,0 +1,38 @@
+articleids:
+- idtype: pmid
+  value: '25426047'
+- idtype: doi
+  value: 10.3389/fnhum.2014.00893
+- idtype: pmcid
+  value: PMC4226147
+authors:
+- authtype: Author
+  name: Singh H
+- authtype: Author
+  name: Bauer M
+- authtype: Author
+  name: Chowanski W
+- authtype: Author
+  name: Sui Y
+- authtype: Author
+  name: Atkinson D
+- authtype: Author
+  name: Baurley S
+- authtype: Author
+  name: Fry M
+- authtype: Author
+  name: Evans J
+- authtype: Author
+  name: Bianchi-Berthouze N
+epubdate: 2014 Nov 10
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '893'
+pmclivedate: 2014/11/25
+printpubdate: ''
+pubdate: 2014 Nov 10
+sortdate: 2014/11/10 00:00
+source: Front Hum Neurosci
+title: 'The brain’s response to pleasant touch: an EEG investigation of tactile caressing'
+uid: '4226147'
+volume: '8'

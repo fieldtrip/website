@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '26479713'
+- idtype: doi
+  value: 10.1371/journal.pone.0140530
+- idtype: pmcid
+  value: PMC4610700
+authors:
+- authtype: Author
+  name: Wollstadt P
+- authtype: Author
+  name: Meyer U
+- authtype: Author
+  name: Wibral M
+epubdate: 2015 Oct 19
+fulljournalname: PLoS ONE
+issue: '10'
+pages: e0140530
+pmclivedate: 2015/10/29
+printpubdate: ''
+pubdate: 2015 Oct 19
+sortdate: 2015/10/19 00:00
+source: PLoS One
+title: A Graph Algorithmic Approach to Separate Direct from Indirect Neural Interactions
+uid: '4610700'
+volume: '10'

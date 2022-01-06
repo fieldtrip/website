@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '31243145'
+- idtype: doi
+  value: 10.1073/pnas.1820730116
+- idtype: pmcid
+  value: PMC6628638
+authors:
+- authtype: Author
+  name: Trübutschek D
+- authtype: Author
+  name: Marti S
+- authtype: Author
+  name: Ueberschär H
+- authtype: Author
+  name: Dehaene S
+epubdate: 2019 Jun 26
+fulljournalname: Proceedings of the National Academy of Sciences of the United States
+  of America
+issue: '28'
+pages: 14358-14367
+pmclivedate: 2019/12/26
+printpubdate: 2019 Jul 9
+pubdate: 2019 Jun 26
+sortdate: 2019/06/26 00:00
+source: Proc Natl Acad Sci U S A
+title: Probing the limits of activity-silent non-conscious working memory
+uid: '6628638'
+volume: '116'

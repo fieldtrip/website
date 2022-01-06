@@ -1,0 +1,24 @@
+articleids:
+- idtype: pmid
+  value: '24073278'
+- idtype: doi
+  value: 10.1371/journal.pone.0075776
+- idtype: pmcid
+  value: PMC3779161
+authors:
+- authtype: Author
+  name: Clayson PE
+- authtype: Author
+  name: Larson MJ
+epubdate: 2013 Sep 20
+fulljournalname: PLoS ONE
+issue: '9'
+pages: e75776
+pmclivedate: 2013/09/26
+printpubdate: ''
+pubdate: 2013 Sep 20
+sortdate: 2013/09/20 00:00
+source: PLoS One
+title: 'Adaptation to Emotional Conflict: Evidence from a Novel Face Emotion Paradigm'
+uid: '3779161'
+volume: '8'

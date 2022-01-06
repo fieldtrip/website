@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '33483554'
+- idtype: doi
+  value: 10.1038/s41598-021-81535-7
+- idtype: pmcid
+  value: PMC7822958
+authors:
+- authtype: Author
+  name: Schumacher FK
+- authtype: Author
+  name: Schumacher LV
+- authtype: Author
+  name: Amtage F
+- authtype: Author
+  name: Horn A
+- authtype: Author
+  name: Egger K
+- authtype: Author
+  name: Piroth T
+- authtype: Author
+  name: Weiller C
+- authtype: Author
+  name: Schelter BO
+- authtype: Author
+  name: Coenen VA
+- authtype: Author
+  name: Kaller CP
+epubdate: 2021 Jan 22
+fulljournalname: Scientific Reports
+issue: ''
+pages: '2138'
+pmclivedate: 2021/01/27
+printpubdate: ''
+pubdate: 2021 Jan 22
+sortdate: 2021/01/22 00:00
+source: Sci Rep
+title: The rostro-caudal gradient in the prefrontal cortex and its modulation by subthalamic
+  deep brain stimulation in Parkinson’s disease
+uid: '7822958'
+volume: '11'

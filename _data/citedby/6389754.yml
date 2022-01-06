@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '30847365'
+- idtype: doi
+  value: 10.1002/acn3.710
+- idtype: pmcid
+  value: PMC6389754
+authors:
+- authtype: Author
+  name: Abela E
+- authtype: Author
+  name: Pawley AD
+- authtype: Author
+  name: Tangwiriyasakul C
+- authtype: Author
+  name: Yaakub SN
+- authtype: Author
+  name: Chowdhury FA
+- authtype: Author
+  name: Elwes RD
+- authtype: Author
+  name: Brunnhuber F
+- authtype: Author
+  name: Richardson MP
+epubdate: 2018 Dec 18
+fulljournalname: Annals of Clinical and Translational Neurology
+issue: '2'
+pages: 333-343
+pmclivedate: 2019/03/07
+printpubdate: ''
+pubdate: 2018 Dec 18
+sortdate: 2018/12/18 00:00
+source: Ann Clin Transl Neurol
+title: Slower alpha rhythm associates with poorer seizure control in epilepsy
+uid: '6389754'
+volume: '6'

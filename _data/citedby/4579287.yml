@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '26509117'
+- idtype: doi
+  value: 10.1016/j.nicl.2015.08.018
+- idtype: pmcid
+  value: PMC4579287
+authors:
+- authtype: Author
+  name: te Woerd ES
+- authtype: Author
+  name: Oostenveld R
+- authtype: Author
+  name: Bloem BR
+- authtype: Author
+  name: de Lange FP
+- authtype: Author
+  name: Praamstra P
+epubdate: 2015 Sep 2
+fulljournalname: 'NeuroImage : Clinical'
+issue: ''
+pages: 300-309
+pmclivedate: 2015/10/27
+printpubdate: ''
+pubdate: 2015 Sep 2
+sortdate: 2015/09/02 00:00
+source: Neuroimage Clin
+title: 'Effects of rhythmic stimulus presentation on oscillatory brain activity: the
+  physiology of cueing in Parkinson’s disease'
+uid: '4579287'
+volume: '9'

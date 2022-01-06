@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '29529062'
+- idtype: doi
+  value: 10.1371/journal.pcbi.1005938
+- idtype: pmcid
+  value: PMC5864083
+authors:
+- authtype: Author
+  name: Westner BU
+- authtype: Author
+  name: Dalal SS
+- authtype: Author
+  name: Hanslmayr S
+- authtype: Author
+  name: Staudigl T
+epubdate: 2018 Mar 12
+fulljournalname: PLoS Computational Biology
+issue: '3'
+pages: e1005938
+pmclivedate: 2018/03/28
+printpubdate: ''
+pubdate: 2018 Mar 12
+sortdate: 2018/03/12 00:00
+source: PLoS Comput Biol
+title: Across-subjects classification of stimulus modality from human MEG high frequency
+  activity
+uid: '5864083'
+volume: '14'

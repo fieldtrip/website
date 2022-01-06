@@ -1,0 +1,52 @@
+articleids:
+- idtype: pmid
+  value: '34975515'
+- idtype: doi
+  value: 10.3389/fphys.2021.724755
+- idtype: pmcid
+  value: PMC8718712
+authors:
+- authtype: Author
+  name: Sometti D
+- authtype: Author
+  name: Semeia L
+- authtype: Author
+  name: Baek S
+- authtype: Author
+  name: Chen H
+- authtype: Author
+  name: Righetti G
+- authtype: Author
+  name: Dax J
+- authtype: Author
+  name: Kronlage C
+- authtype: Author
+  name: Kirchgässner M
+- authtype: Author
+  name: Romano A
+- authtype: Author
+  name: Heilos J
+- authtype: Author
+  name: Staber D
+- authtype: Author
+  name: Oppold J
+- authtype: Author
+  name: Middelmann T
+- authtype: Author
+  name: Braun C
+- authtype: Author
+  name: Broser P
+- authtype: Author
+  name: Marquetand J
+epubdate: 2021 Dec 17
+fulljournalname: Frontiers in Physiology
+issue: ''
+pages: '724755'
+pmclivedate: 2022/01/01
+printpubdate: ''
+pubdate: 2021 Dec 17
+sortdate: 2021/12/17 00:00
+source: Front Physiol
+title: Muscle Fatigue Revisited – Insights From Optically Pumped Magnetometers
+uid: '8718712'
+volume: '12'

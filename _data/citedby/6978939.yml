@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '31685655'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1730-19.2019
+- idtype: pmcid
+  value: PMC6978939
+authors:
+- authtype: Author
+  name: Bergmann TO
+- authtype: Author
+  name: Lieb A
+- authtype: Author
+  name: Zrenner C
+- authtype: Author
+  name: Ziemann U
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '50'
+pages: 10034-10043
+pmclivedate: 2020/01/24
+printpubdate: 2019 Dec 11
+pubdate: 2019 Dec 11
+sortdate: 2019/12/11 00:00
+source: J Neurosci
+title: Pulsed Facilitation of Corticospinal Excitability by the Sensorimotor μ-Alpha
+  Rhythm
+uid: '6978939'
+volume: '39'

@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '31247299'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2019.06.051
+- idtype: pmcid
+  value: PMC6703910
+- idtype: MID
+  value: NIHMS1534907
+authors:
+- authtype: Author
+  name: Brunet NM
+- authtype: Author
+  name: Fries P
+epubdate: 2019 Jun 24
+fulljournalname: NeuroImage
+issue: ''
+pages: 635-643
+pmclivedate: 2020/10/15
+printpubdate: 2019 Oct 15
+pubdate: 2019 Jun 24
+sortdate: 2019/06/24 00:00
+source: Neuroimage
+title: Human visual cortical gamma reflects natural image structure
+uid: '6703910'
+volume: '200'

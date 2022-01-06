@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '27632171'
+- idtype: doi
+  value: 10.1371/journal.pone.0161052
+- idtype: pmcid
+  value: PMC5025026
+authors:
+- authtype: Author
+  name: Shitova N
+- authtype: Author
+  name: Roelofs A
+- authtype: Author
+  name: Schriefers H
+- authtype: Author
+  name: Bastiaansen M
+- authtype: Author
+  name: Schoffelen JM
+epubdate: 2016 Sep 15
+fulljournalname: PLoS ONE
+issue: '9'
+pages: e0161052
+pmclivedate: 2016/09/27
+printpubdate: ''
+pubdate: 2016 Sep 15
+sortdate: 2016/09/15 00:00
+source: PLoS One
+title: 'Using Brain Potentials to Functionally Localise Stroop-Like Effects in Colour
+  and Picture Naming: Perceptual Encoding versus Word Planning'
+uid: '5025026'
+volume: '11'

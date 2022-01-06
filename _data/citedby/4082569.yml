@@ -1,0 +1,44 @@
+articleids:
+- idtype: pmid
+  value: '24532390'
+- idtype: doi
+  value: 10.1007/s11357-014-9624-5
+- idtype: pmcid
+  value: PMC4082569
+authors:
+- authtype: Author
+  name: López ME
+- authtype: Author
+  name: Cuesta P
+- authtype: Author
+  name: Garcés P
+- authtype: Author
+  name: Castellanos PN
+- authtype: Author
+  name: Aurtenetxe S
+- authtype: Author
+  name: Bajo R
+- authtype: Author
+  name: Marcos A
+- authtype: Author
+  name: Delgado ML
+- authtype: Author
+  name: Montejo P
+- authtype: Author
+  name: López-Pantoja JL
+- authtype: Author
+  name: Maestú F
+- authtype: Author
+  name: Fernandez A
+epubdate: 2014 Feb 16
+fulljournalname: Age
+issue: '3'
+pages: '9624'
+pmclivedate: 2015/06/01
+printpubdate: 2014 Jun
+pubdate: 2014 Feb 16
+sortdate: 2014/02/16 00:00
+source: Age (Dordr)
+title: MEG spectral analysis in subtypes of mild cognitive impairment
+uid: '4082569'
+volume: '36'

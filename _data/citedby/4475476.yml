@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '25650107'
+- idtype: doi
+  value: 10.1016/j.cortex.2014.12.014
+- idtype: pmcid
+  value: PMC4475476
+- idtype: MID
+  value: NIHMS653686
+authors:
+- authtype: Author
+  name: Rimmele JM
+- authtype: Author
+  name: Golumbic EZ
+- authtype: Author
+  name: Schröger E
+- authtype: Author
+  name: Poeppel D
+epubdate: 2015 Jan 7
+fulljournalname: Cortex; a journal devoted to the study of the nervous system and
+  behavior
+issue: ''
+pages: 144-154
+pmclivedate: 2016/07/01
+printpubdate: 2015 Jul
+pubdate: 2015 Jan 7
+sortdate: 2015/01/07 00:00
+source: Cortex
+title: The effects of selective attention and speech acoustics on neural speech-tracking
+  in a multi-talker scene
+uid: '4475476'
+volume: '68'

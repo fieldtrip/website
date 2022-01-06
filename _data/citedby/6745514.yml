@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '31522127'
+- idtype: doi
+  value: 10.1016/j.nicl.2019.101972
+- idtype: pmcid
+  value: PMC6745514
+authors:
+- authtype: Author
+  name: Pusil S
+- authtype: Author
+  name: Dimitriadis SI
+- authtype: Author
+  name: López ME
+- authtype: Author
+  name: Pereda E
+- authtype: Author
+  name: Maestú F
+epubdate: 2019 Aug 8
+fulljournalname: 'NeuroImage : Clinical'
+issue: ''
+pages: '101972'
+pmclivedate: 2019/09/19
+printpubdate: ''
+pubdate: 2019 Aug 8
+sortdate: 2019/08/08 00:00
+source: Neuroimage Clin
+title: Aberrant MEG multi-frequency phase temporal synchronization predicts conversion
+  from mild cognitive impairment-to-Alzheimer's disease
+uid: '6745514'
+volume: '24'

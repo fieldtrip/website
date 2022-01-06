@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '30238919'
+- idtype: doi
+  value: 10.1016/j.nicl.2018.09.007
+- idtype: pmcid
+  value: PMC6154766
+authors:
+- authtype: Author
+  name: Zeev-Wolf M
+- authtype: Author
+  name: Levy J
+- authtype: Author
+  name: Jahshan C
+- authtype: Author
+  name: Peled A
+- authtype: Author
+  name: Levkovitz Y
+- authtype: Author
+  name: Grinshpoon A
+- authtype: Author
+  name: Goldstein A
+epubdate: 2018 Sep 17
+fulljournalname: 'NeuroImage : Clinical'
+issue: ''
+pages: 753-761
+pmclivedate: 2018/09/26
+printpubdate: ''
+pubdate: 2018 Sep 17
+sortdate: 2018/09/17 00:00
+source: Neuroimage Clin
+title: MEG resting-state oscillations and their relationship to clinical symptoms
+  in schizophrenia
+uid: '6154766'
+volume: '20'

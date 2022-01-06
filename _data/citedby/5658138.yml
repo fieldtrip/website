@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '29081593'
+- idtype: doi
+  value: 10.1016/j.cogdev.2017.03.002
+- idtype: pmcid
+  value: PMC5658138
+- idtype: MID
+  value: NIHMS911791
+authors:
+- authtype: Author
+  name: Knežević M
+- authtype: Author
+  name: Marinković K
+epubdate: 2017 Mar 21
+fulljournalname: Cognitive development
+issue: ''
+pages: 106-118
+pmclivedate: 2018/07/01
+printpubdate: 2017 Jul
+pubdate: 2017 Mar 21
+sortdate: 2017/03/21 00:00
+source: Cogn Dev
+title: Neurodynamic correlates of response inhibition from emerging to mid adulthood
+uid: '5658138'
+volume: '43'

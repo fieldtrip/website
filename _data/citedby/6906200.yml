@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '31866842'
+- idtype: doi
+  value: 10.3389/fnhum.2019.00412
+- idtype: pmcid
+  value: PMC6906200
+authors:
+- authtype: Author
+  name: Mascelloni M
+- authtype: Author
+  name: Zamparelli R
+- authtype: Author
+  name: Vespignani F
+- authtype: Author
+  name: Gruber T
+- authtype: Author
+  name: Mueller JL
+epubdate: 2019 Dec 5
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '412'
+pmclivedate: 2019/12/20
+printpubdate: ''
+pubdate: 2019 Dec 5
+sortdate: 2019/12/05 00:00
+source: Front Hum Neurosci
+title: Distinct Neural Processes for Memorizing Form and Meaning Within Sentences
+uid: '6906200'
+volume: '13'

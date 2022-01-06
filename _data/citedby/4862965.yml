@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '26921713'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2016.02.055
+- idtype: pmcid
+  value: PMC4862965
+authors:
+- authtype: Author
+  name: Adams RA
+- authtype: Author
+  name: Bauer M
+- authtype: Author
+  name: Pinotsis D
+- authtype: Author
+  name: Friston KJ
+epubdate: ''
+fulljournalname: Neuroimage
+issue: ''
+pages: 175-189
+pmclivedate: 2016/05/19
+printpubdate: 2016 May 15
+pubdate: 2016 May 15
+sortdate: 2016/05/15 00:00
+source: Neuroimage
+title: 'Dynamic causal modelling of eye movements during pursuit: Confirming precision-encoding
+  in V1 using MEG'
+uid: '4862965'
+volume: '132'

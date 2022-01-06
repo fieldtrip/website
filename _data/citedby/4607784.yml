@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '26528168'
+- idtype: doi
+  value: 10.3389/fnhum.2015.00564
+- idtype: pmcid
+  value: PMC4607784
+authors:
+- authtype: Author
+  name: Brauchle D
+- authtype: Author
+  name: Vukelić M
+- authtype: Author
+  name: Bauer R
+- authtype: Author
+  name: Gharabaghi A
+epubdate: 2015 Oct 16
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '564'
+pmclivedate: 2015/11/02
+printpubdate: ''
+pubdate: 2015 Oct 16
+sortdate: 2015/10/16 00:00
+source: Front Hum Neurosci
+title: 'Brain state-dependent robotic reaching movement with a multi-joint arm exoskeleton:
+  combining brain-machine interfacing and robotic rehabilitation'
+uid: '4607784'
+volume: '9'

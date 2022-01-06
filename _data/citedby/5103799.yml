@@ -1,0 +1,38 @@
+articleids:
+- idtype: pmid
+  value: '27634787'
+- idtype: doi
+  value: 10.5665/sleep.6308
+- idtype: pmcid
+  value: PMC5103799
+authors:
+- authtype: Author
+  name: Wei Y
+- authtype: Author
+  name: Ramautar JR
+- authtype: Author
+  name: Colombo MA
+- authtype: Author
+  name: Stoffers D
+- authtype: Author
+  name: Gómez-Herrero G
+- authtype: Author
+  name: van der Meijden WP
+- authtype: Author
+  name: te Lindert BH
+- authtype: Author
+  name: van der Werf YD
+- authtype: Author
+  name: Van Someren EJ
+epubdate: 2016 Dec 1
+fulljournalname: Sleep
+issue: '12'
+pages: 2113-2124
+pmclivedate: 2017/06/01
+printpubdate: ''
+pubdate: 2016 Dec 1
+sortdate: 2016/12/01 00:00
+source: Sleep
+title: 'I Keep a Close Watch on This Heart of Mine: Increased Interoception in Insomnia'
+uid: '5103799'
+volume: '39'

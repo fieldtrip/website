@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '32050509'
+- idtype: doi
+  value: 10.3390/jcm9020481
+- idtype: pmcid
+  value: PMC7073826
+authors:
+- authtype: Author
+  name: Bensmann W
+- authtype: Author
+  name: Zink N
+- authtype: Author
+  name: Werner A
+- authtype: Author
+  name: Beste C
+- authtype: Author
+  name: Stock AK
+epubdate: 2020 Feb 10
+fulljournalname: Journal of Clinical Medicine
+issue: '2'
+pages: '481'
+pmclivedate: 2020/03/19
+printpubdate: ''
+pubdate: 2020 Feb 10
+sortdate: 2020/02/10 00:00
+source: J Clin Med
+title: Acute Alcohol Effects on Response Inhibition Depend on Response Automatization,
+  but not on GABA or Glutamate Levels in the ACC and Striatum
+uid: '7073826'
+volume: '9'

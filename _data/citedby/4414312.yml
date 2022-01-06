@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '23708059'
+- idtype: doi
+  value: 10.1007/s00429-013-0574-y
+- idtype: pmcid
+  value: PMC4414312
+- idtype: MID
+  value: NIHMS673315
+authors:
+- authtype: Author
+  name: Molholm S
+- authtype: Author
+  name: Mercier MR
+- authtype: Author
+  name: Liebenthal E
+- authtype: Author
+  name: Schwartz TH
+- authtype: Author
+  name: Ritter W
+- authtype: Author
+  name: Foxe JJ
+- authtype: Author
+  name: De Sanctis P
+epubdate: 2013 May 26
+fulljournalname: Brain structure & function
+issue: '4'
+pages: 1369-1383
+pmclivedate: 2015/07/01
+printpubdate: 2014 Jul
+pubdate: 2013 May 26
+sortdate: 2013/05/26 00:00
+source: Brain Struct Funct
+title: 'Mapping phonemic processing zones along human perisylvian cortex: an electro-corticographic
+  investigation'
+uid: '4414312'
+volume: '219'

@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '33589639'
+- idtype: doi
+  value: 10.1038/s41467-021-21298-x
+- idtype: pmcid
+  value: PMC7884835
+authors:
+- authtype: Author
+  name: Dickey CW
+- authtype: Author
+  name: Sargsyan A
+- authtype: Author
+  name: Madsen JR
+- authtype: Author
+  name: Eskandar EN
+- authtype: Author
+  name: Cash SS
+- authtype: Author
+  name: Halgren E
+epubdate: 2021 Feb 15
+fulljournalname: Nature Communications
+issue: ''
+pages: '1027'
+pmclivedate: 2021/03/03
+printpubdate: ''
+pubdate: 2021 Feb 15
+sortdate: 2021/02/15 00:00
+source: Nat Commun
+title: Travelling spindles create necessary conditions for spike-timing-dependent
+  plasticity in humans
+uid: '7884835'
+volume: '12'

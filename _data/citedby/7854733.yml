@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '33531546'
+- idtype: doi
+  value: 10.1038/s41598-021-80995-1
+- idtype: pmcid
+  value: PMC7854733
+authors:
+- authtype: Author
+  name: Arciniega H
+- authtype: Author
+  name: Shires J
+- authtype: Author
+  name: Furlong S
+- authtype: Author
+  name: Kilgore-Gomez A
+- authtype: Author
+  name: Cerreta A
+- authtype: Author
+  name: Murray NG
+- authtype: Author
+  name: Berryhill ME
+epubdate: 2021 Feb 2
+fulljournalname: Scientific Reports
+issue: ''
+pages: '2789'
+pmclivedate: 2021/02/04
+printpubdate: ''
+pubdate: 2021 Feb 2
+sortdate: 2021/02/02 00:00
+source: Sci Rep
+title: Impaired visual working memory and reduced connectivity in undergraduates with
+  a history of mild traumatic brain injury
+uid: '7854733'
+volume: '11'

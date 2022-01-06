@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '33640412'
+- idtype: doi
+  value: 10.1016/j.pneurobio.2021.102027
+- idtype: pmcid
+  value: PMC8096712
+- idtype: MID
+  value: NIHMS1681625
+authors:
+- authtype: Author
+  name: Zhou G
+- authtype: Author
+  name: Olofsson J
+- authtype: Author
+  name: Koubeissi MZ
+- authtype: Author
+  name: Menelaou G
+- authtype: Author
+  name: Rosenow J
+- authtype: Author
+  name: Schuele SU
+- authtype: Author
+  name: Xu P
+- authtype: Author
+  name: Voss J
+- authtype: Author
+  name: Lane G
+- authtype: Author
+  name: Zelano C
+epubdate: 2021 Feb 25
+fulljournalname: Progress in neurobiology
+issue: ''
+pages: '102027'
+pmclivedate: ''
+printpubdate: 2021 Jun
+pubdate: 2021 Feb 25
+sortdate: 2021/02/25 00:00
+source: Prog Neurobiol
+title: Human hippocampal connectivity is stronger in olfaction than other sensory
+  systems
+uid: '8096712'
+volume: '201'

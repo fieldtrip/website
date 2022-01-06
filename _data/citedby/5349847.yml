@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '28082107'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2017.01.010
+- idtype: pmcid
+  value: PMC5349847
+authors:
+- authtype: Author
+  name: Kayser SJ
+- authtype: Author
+  name: Philiastides MG
+- authtype: Author
+  name: Kayser C
+epubdate: ''
+fulljournalname: Neuroimage
+issue: ''
+pages: 31-41
+pmclivedate: 2017/03/23
+printpubdate: 2017 Mar 1
+pubdate: 2017 Mar 1
+sortdate: 2017/03/01 00:00
+source: Neuroimage
+title: Sounds facilitate visual motion discrimination via the enhancement of late
+  occipital visual representations
+uid: '5349847'
+volume: '148'

@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '31849579'
+- idtype: doi
+  value: 10.3389/fnins.2019.01251
+- idtype: pmcid
+  value: PMC6892825
+authors:
+- authtype: Author
+  name: Musaeus CS
+- authtype: Author
+  name: Salem LC
+- authtype: Author
+  name: Kjaer TW
+- authtype: Author
+  name: Waldemar G
+epubdate: 2019 Nov 28
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '1251'
+pmclivedate: 2019/12/17
+printpubdate: ''
+pubdate: 2019 Nov 28
+sortdate: 2019/11/28 00:00
+source: Front Neurosci
+title: Microstate Changes Associated With Alzheimer’s Disease in Persons With Down
+  Syndrome
+uid: '6892825'
+volume: '13'

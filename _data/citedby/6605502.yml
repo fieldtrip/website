@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '26658862'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.2674-15.2015
+- idtype: pmcid
+  value: PMC6605502
+authors:
+- authtype: Author
+  name: Lim SJ
+- authtype: Author
+  name: Wöstmann M
+- authtype: Author
+  name: Obleser J
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '49'
+pages: 16094-16104
+pmclivedate: 2019/07/09
+printpubdate: 2015 Dec 9
+pubdate: 2015 Dec 9
+sortdate: 2015/12/09 00:00
+source: J Neurosci
+title: Selective Attention to Auditory Memory Neurally Enhances Perceptual Precision
+uid: '6605502'
+volume: '35'

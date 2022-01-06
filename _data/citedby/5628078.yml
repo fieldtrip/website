@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '28382759'
+- idtype: doi
+  value: 10.1111/desc.12562
+- idtype: pmcid
+  value: PMC5628078
+- idtype: MID
+  value: NIHMS851788
+authors:
+- authtype: Author
+  name: Xie W
+- authtype: Author
+  name: Mallin BM
+- authtype: Author
+  name: Richards JE
+epubdate: 2017 Apr 5
+fulljournalname: Developmental science
+issue: '3'
+pages: e12562
+pmclivedate: 2019/05/01
+printpubdate: 2018 May
+pubdate: 2017 Apr 5
+sortdate: 2017/04/05 00:00
+source: Dev Sci
+title: 'Development of Infant Sustained Attention and Its Relation to EEG Oscillations:
+  An EEG and Cortical Source Analysis Study'
+uid: '5628078'
+volume: '21'

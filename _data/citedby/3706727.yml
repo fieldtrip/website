@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '23847508'
+- idtype: doi
+  value: 10.3389/fnhum.2013.00338
+- idtype: pmcid
+  value: PMC3706727
+authors:
+- authtype: Author
+  name: Hipp JF
+- authtype: Author
+  name: Siegel M
+epubdate: 2013 Jul 10
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '338'
+pmclivedate: 2013/07/11
+printpubdate: ''
+pubdate: 2013 Jul 10
+sortdate: 2013/07/10 00:00
+source: Front Hum Neurosci
+title: Dissociating neuronal gamma-band activity from cranial and ocular muscle activity
+  in EEG
+uid: '3706727'
+volume: '7'

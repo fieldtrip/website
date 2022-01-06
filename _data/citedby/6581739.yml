@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '31189103'
+- idtype: doi
+  value: 10.1016/j.celrep.2019.05.034
+- idtype: pmcid
+  value: PMC6581739
+authors:
+- authtype: Author
+  name: Esmaeili V
+- authtype: Author
+  name: Diamond ME
+epubdate: 2019 Jun 11
+fulljournalname: Cell Reports
+issue: '11'
+pages: 3167-3181.e5
+pmclivedate: 2019/06/24
+printpubdate: ''
+pubdate: 2019 Jun 11
+sortdate: 2019/06/11 00:00
+source: Cell Rep
+title: Neuronal Correlates of Tactile Working Memory in Prefrontal and Vibrissal Somatosensory
+  Cortex
+uid: '6581739'
+volume: '27'

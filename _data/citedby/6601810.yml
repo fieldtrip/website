@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '27251621'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.3736-15.2016
+- idtype: pmcid
+  value: PMC6601810
+authors:
+- authtype: Author
+  name: de Vega M
+- authtype: Author
+  name: Morera Y
+- authtype: Author
+  name: León I
+- authtype: Author
+  name: Beltrán D
+- authtype: Author
+  name: Casado P
+- authtype: Author
+  name: Martín-Loeches M
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '22'
+pages: 6002-6010
+pmclivedate: 2019/07/12
+printpubdate: 2016 Jun 1
+pubdate: 2016 Jun 1
+sortdate: 2016/06/01 00:00
+source: J Neurosci
+title: Sentential Negation Might Share Neurophysiological Mechanisms with Action Inhibition.
+  Evidence from Frontal Theta Rhythm
+uid: '6601810'
+volume: '36'

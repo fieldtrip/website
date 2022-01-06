@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '28769776'
+- idtype: doi
+  value: 10.3389/fnhum.2017.00370
+- idtype: pmcid
+  value: PMC5515824
+authors:
+- authtype: Author
+  name: Grissmann S
+- authtype: Author
+  name: Zander TO
+- authtype: Author
+  name: Faller J
+- authtype: Author
+  name: Brönstrup J
+- authtype: Author
+  name: Kelava A
+- authtype: Author
+  name: Gramann K
+- authtype: Author
+  name: Gerjets P
+epubdate: 2017 Jul 19
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '370'
+pmclivedate: 2017/08/02
+printpubdate: ''
+pubdate: 2017 Jul 19
+sortdate: 2017/07/19 00:00
+source: Front Hum Neurosci
+title: Affective Aspects of Perceived Loss of Control and Potential Implications for
+  Brain-Computer Interfaces
+uid: '5515824'
+volume: '11'

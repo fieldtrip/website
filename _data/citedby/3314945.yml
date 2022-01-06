@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '22305751'
+- idtype: doi
+  value: 10.1016/j.cub.2012.01.022
+- idtype: pmcid
+  value: PMC3314945
+authors:
+- authtype: Author
+  name: Bauer M
+- authtype: Author
+  name: Kluge C
+- authtype: Author
+  name: Bach D
+- authtype: Author
+  name: Bradbury D
+- authtype: Author
+  name: Heinze HJ
+- authtype: Author
+  name: Dolan RJ
+- authtype: Author
+  name: Driver J
+epubdate: ''
+fulljournalname: Current Biology
+issue: '5'
+pages: 397-402
+pmclivedate: 2012/04/11
+printpubdate: 2012 Mar 6
+pubdate: 2012 Mar 6
+sortdate: 2012/03/06 00:00
+source: Curr Biol
+title: Cholinergic Enhancement of Visual Attention and Neural Oscillations in the
+  Human Brain
+uid: '3314945'
+volume: '22'

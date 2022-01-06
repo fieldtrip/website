@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '31505469'
+- idtype: doi
+  value: 10.1088/1741-2552/ab4341
+- idtype: pmcid
+  value: PMC7305850
+- idtype: MID
+  value: NIHMS1595459
+authors:
+- authtype: Author
+  name: Xiao R
+- authtype: Author
+  name: Malekmohammadi M
+- authtype: Author
+  name: Pouratian N
+- authtype: Author
+  name: Hu X
+epubdate: 2019 Nov 6
+fulljournalname: Journal of neural engineering
+issue: '6'
+pages: '066034'
+pmclivedate: 2020/11/06
+printpubdate: ''
+pubdate: 2019 Nov 6
+sortdate: 2019/11/06 00:00
+source: J Neural Eng
+title: Characterization of Pallidocortical Motor Network in Parkinson Disease through
+  Complex Network Analysis
+uid: '7305850'
+volume: '16'

@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '30639108'
+- idtype: doi
+  value: 10.1016/j.cub.2018.11.049
+- idtype: pmcid
+  value: PMC6345582
+authors:
+- authtype: Author
+  name: Zhan J
+- authtype: Author
+  name: Ince RA
+- authtype: Author
+  name: van Rijsbergen N
+- authtype: Author
+  name: Schyns PG
+epubdate: ''
+fulljournalname: Current Biology
+issue: '2'
+pages: 319-326.e4
+pmclivedate: 2019/01/28
+printpubdate: 2019 Jan 21
+pubdate: 2019 Jan 21
+sortdate: 2019/01/21 00:00
+source: Curr Biol
+title: Dynamic Construction of Reduced Representations in the Brain for Perceptual
+  Decision Behavior
+uid: '6345582'
+volume: '29'

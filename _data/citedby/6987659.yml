@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '27919003'
+- idtype: doi
+  value: 10.1016/j.dcn.2016.11.003
+- idtype: pmcid
+  value: PMC6987659
+authors:
+- authtype: Author
+  name: Žarić G
+- authtype: Author
+  name: Correia JM
+- authtype: Author
+  name: Fraga González G
+- authtype: Author
+  name: Tijms J
+- authtype: Author
+  name: van der Molen MW
+- authtype: Author
+  name: Blomert L
+- authtype: Author
+  name: Bonte M
+epubdate: 2016 Nov 19
+fulljournalname: Developmental Cognitive Neuroscience
+issue: ''
+pages: 1-13
+pmclivedate: 2020/01/30
+printpubdate: ''
+pubdate: 2016 Nov 19
+sortdate: 2016/11/19 00:00
+source: Dev Cogn Neurosci
+title: Altered patterns of directed connectivity within the reading network of dyslexic
+  children and their relation to reading dysfluency
+uid: '6987659'
+volume: '23'

@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '25044370'
+- idtype: doi
+  value: 10.1002/hbm.22593
+- idtype: pmcid
+  value: PMC6426240
+authors:
+- authtype: Author
+  name: Vansteensel MJ
+- authtype: Author
+  name: Bleichner MG
+- authtype: Author
+  name: Freudenburg ZV
+- authtype: Author
+  name: Hermes D
+- authtype: Author
+  name: Aarnoutse EJ
+- authtype: Author
+  name: Leijten FS
+- authtype: Author
+  name: Ferrier CH
+- authtype: Author
+  name: Jansma JM
+- authtype: Author
+  name: Ramsey NF
+epubdate: 2014 Jul 18
+fulljournalname: Human Brain Mapping
+issue: '12'
+pages: 5903-5920
+pmclivedate: 2019/03/20
+printpubdate: ''
+pubdate: 2014 Jul 18
+sortdate: 2014/07/18 00:00
+source: Hum Brain Mapp
+title: Spatiotemporal characteristics of electrocortical brain activity during mental
+  calculation
+uid: '6426240'
+volume: '35'

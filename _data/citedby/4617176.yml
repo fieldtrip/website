@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '26557055'
+- idtype: doi
+  value: 10.3389/fncel.2015.00421
+- idtype: pmcid
+  value: PMC4617176
+authors:
+- authtype: Author
+  name: Schecklmann M
+- authtype: Author
+  name: Lehner A
+- authtype: Author
+  name: Gollmitzer J
+- authtype: Author
+  name: Schmidt E
+- authtype: Author
+  name: Schlee W
+- authtype: Author
+  name: Langguth B
+epubdate: 2015 Oct 21
+fulljournalname: Frontiers in Cellular Neuroscience
+issue: ''
+pages: '421'
+pmclivedate: 2015/11/09
+printpubdate: ''
+pubdate: 2015 Oct 21
+sortdate: 2015/10/21 00:00
+source: Front Cell Neurosci
+title: Repetitive transcranial magnetic stimulation induces oscillatory power changes
+  in chronic tinnitus
+uid: '4617176'
+volume: '9'

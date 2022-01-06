@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '29720729'
+- idtype: doi
+  value: 10.1038/s41598-018-25072-w
+- idtype: pmcid
+  value: PMC5931991
+authors:
+- authtype: Author
+  name: Wen Y
+- authtype: Author
+  name: Filik R
+- authtype: Author
+  name: van Heuven WJ
+epubdate: 2018 May 2
+fulljournalname: Scientific Reports
+issue: ''
+pages: '6869'
+pmclivedate: 2018/08/29
+printpubdate: ''
+pubdate: 2018 May 2
+sortdate: 2018/05/02 00:00
+source: Sci Rep
+title: Electrophysiological dynamics of Chinese phonology during visual word recognition
+  in Chinese-English bilinguals
+uid: '5931991'
+volume: '8'

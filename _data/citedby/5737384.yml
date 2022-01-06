@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '28966084'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2017.09.057
+- idtype: pmcid
+  value: PMC5737384
+authors:
+- authtype: Author
+  name: Khalighinejad N
+- authtype: Author
+  name: Schurger A
+- authtype: Author
+  name: Desantis A
+- authtype: Author
+  name: Zmigrod L
+- authtype: Author
+  name: Haggard P
+epubdate: ''
+fulljournalname: Neuroimage
+issue: ''
+pages: 35-47
+pmclivedate: 2018/01/15
+printpubdate: 2018 Jan 15
+pubdate: 2018 Jan 15
+sortdate: 2018/01/15 00:00
+source: Neuroimage
+title: Precursor processes of human self-initiated action
+uid: '5737384'
+volume: '165'

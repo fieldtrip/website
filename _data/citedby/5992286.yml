@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '29910704'
+- idtype: doi
+  value: 10.3389/fnins.2018.00306
+- idtype: pmcid
+  value: PMC5992286
+authors:
+- authtype: Author
+  name: Dimitriadis SI
+- authtype: Author
+  name: López ME
+- authtype: Author
+  name: Bruña R
+- authtype: Author
+  name: Cuesta P
+- authtype: Author
+  name: Marcos A
+- authtype: Author
+  name: Maestú F
+- authtype: Author
+  name: Pereda E
+epubdate: 2018 Jun 1
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '306'
+pmclivedate: 2018/06/15
+printpubdate: ''
+pubdate: 2018 Jun 1
+sortdate: 2018/06/01 00:00
+source: Front Neurosci
+title: 'How to Build a Functional Connectomic Biomarker for Mild Cognitive Impairment
+  From Source Reconstructed MEG Resting-State Activity: The Combination of ROI Representation
+  and Connectivity Estimator Matters'
+uid: '5992286'
+volume: '12'

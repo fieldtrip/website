@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '29255794'
+- idtype: doi
+  value: 10.1523/ENEURO.0182-17.2017
+- idtype: pmcid
+  value: PMC5732016
+authors:
+- authtype: Author
+  name: Benwell CS
+- authtype: Author
+  name: Tagliabue CF
+- authtype: Author
+  name: Veniero D
+- authtype: Author
+  name: Cecere R
+- authtype: Author
+  name: Savazzi S
+- authtype: Author
+  name: Thut G
+epubdate: 2017 Dec 12
+fulljournalname: eNeuro
+issue: '6'
+pages: ENEURO.0182-17.2017
+pmclivedate: 2017/12/18
+printpubdate: ''
+pubdate: 2017 Dec 12
+sortdate: 2017/12/12 00:00
+source: eNeuro
+title: Prestimulus EEG Power Predicts Conscious Awareness But Not Objective Visual
+  Performance
+uid: '5732016'
+volume: '4'

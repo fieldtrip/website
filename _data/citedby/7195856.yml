@@ -1,0 +1,44 @@
+articleids:
+- idtype: pmid
+  value: '31356455'
+- idtype: doi
+  value: 10.1097/j.pain.0000000000001666
+- idtype: pmcid
+  value: PMC7195856
+authors:
+- authtype: Author
+  name: Ta Dinh S
+- authtype: Author
+  name: Nickel MM
+- authtype: Author
+  name: Tiemann L
+- authtype: Author
+  name: May ES
+- authtype: Author
+  name: Heitmann H
+- authtype: Author
+  name: Hohn VD
+- authtype: Author
+  name: Edenharter G
+- authtype: Author
+  name: Utpadel-Fischler D
+- authtype: Author
+  name: Tölle TR
+- authtype: Author
+  name: Sauseng P
+- authtype: Author
+  name: Gross J
+- authtype: Author
+  name: Ploner M
+epubdate: 2019 Jul 22
+fulljournalname: Pain
+issue: '12'
+pages: 2751-2765
+pmclivedate: 2020/05/21
+printpubdate: 2019 Dec
+pubdate: 2019 Jul 22
+sortdate: 2019/07/22 00:00
+source: Pain
+title: Brain dysfunction in chronic pain patients assessed by resting-state electroencephalography
+uid: '7195856'
+volume: '160'

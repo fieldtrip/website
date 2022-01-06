@@ -1,0 +1,24 @@
+articleids:
+- idtype: pmid
+  value: '31639252'
+- idtype: doi
+  value: 10.1002/hbm.24830
+- idtype: pmcid
+  value: PMC7268072
+authors:
+- authtype: Author
+  name: Abbasi O
+- authtype: Author
+  name: Gross J
+epubdate: 2019 Oct 22
+fulljournalname: Human Brain Mapping
+issue: '3'
+pages: 656-665
+pmclivedate: 2020/06/12
+printpubdate: ''
+pubdate: 2019 Oct 22
+sortdate: 2019/10/22 00:00
+source: Hum Brain Mapp
+title: Beta‐band oscillations play an essential role in motor–auditory interactions
+uid: '7268072'
+volume: '41'

@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '23151506'
+- idtype: doi
+  value: 10.1073/pnas.1213390109
+- idtype: pmcid
+  value: PMC3523826
+authors:
+- authtype: Author
+  name: Henry MJ
+- authtype: Author
+  name: Obleser J
+epubdate: 2012 Nov 14
+fulljournalname: Proceedings of the National Academy of Sciences of the United States
+  of America
+issue: '49'
+pages: 20095-20100
+pmclivedate: 2013/06/04
+printpubdate: 2012 Dec 4
+pubdate: 2012 Nov 14
+sortdate: 2012/11/14 00:00
+source: Proc Natl Acad Sci U S A
+title: Frequency modulation entrains slow neural oscillations and optimizes human
+  listening behavior
+uid: '3523826'
+volume: '109'

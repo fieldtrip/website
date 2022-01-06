@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '34184964'
+- idtype: doi
+  value: 10.1177/23312165211013242
+- idtype: pmcid
+  value: PMC8246482
+authors:
+- authtype: Author
+  name: Kraus F
+- authtype: Author
+  name: Tune S
+- authtype: Author
+  name: Ruhe A
+- authtype: Author
+  name: Obleser J
+- authtype: Author
+  name: Wöstmann M
+epubdate: 2021 Jun 29
+fulljournalname: Trends in Hearing
+issue: ''
+pages: '23312165211013242'
+pmclivedate: 2021/07/13
+printpubdate: ''
+pubdate: 2021 Jun 29
+sortdate: 2021/06/29 00:00
+source: Trends Hear
+title: Unilateral Acoustic Degradation Delays Attentional Separation of Competing
+  Speech
+uid: '8246482'
+volume: '25'

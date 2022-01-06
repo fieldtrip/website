@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '29636394'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.2639-17.2018
+- idtype: pmcid
+  value: PMC5932643
+authors:
+- authtype: Author
+  name: Popov T
+- authtype: Author
+  name: Westner BU
+- authtype: Author
+  name: Silton RL
+- authtype: Author
+  name: Sass SM
+- authtype: Author
+  name: Spielberg JM
+- authtype: Author
+  name: Rockstroh B
+- authtype: Author
+  name: Heller W
+- authtype: Author
+  name: Miller GA
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '18'
+pages: 4348-4356
+pmclivedate: 2018/11/02
+printpubdate: 2018 May 2
+pubdate: 2018 May 2
+sortdate: 2018/05/02 00:00
+source: J Neurosci
+title: Time Course of Brain Network Reconfiguration Supporting Inhibitory Control
+uid: '5932643'
+volume: '38'

@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '34801856'
+- idtype: doi
+  value: 10.1016/j.dcn.2021.101036
+- idtype: pmcid
+  value: PMC8607163
+authors:
+- authtype: Author
+  name: Meyer M
+- authtype: Author
+  name: Lamers D
+- authtype: Author
+  name: Kayhan E
+- authtype: Author
+  name: Hunnius S
+- authtype: Author
+  name: Oostenveld R
+epubdate: 2021 Nov 12
+fulljournalname: Developmental Cognitive Neuroscience
+issue: ''
+pages: '101036'
+pmclivedate: 2021/11/26
+printpubdate: ''
+pubdate: 2021 Nov 12
+sortdate: 2021/11/12 00:00
+source: Dev Cogn Neurosci
+title: 'Enhancing reproducibility in developmental EEG research: BIDS, cluster-based
+  permutation tests, and effect sizes'
+uid: '8607163'
+volume: '52'

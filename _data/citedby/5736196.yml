@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '29261734'
+- idtype: doi
+  value: 10.1371/journal.pone.0189771
+- idtype: pmcid
+  value: PMC5736196
+authors:
+- authtype: Author
+  name: Fan H
+- authtype: Author
+  name: Pan X
+- authtype: Author
+  name: Wang R
+- authtype: Author
+  name: Sakagami M
+epubdate: 2017 Dec 19
+fulljournalname: PLoS ONE
+issue: '12'
+pages: e0189771
+pmclivedate: 2017/12/22
+printpubdate: ''
+pubdate: 2017 Dec 19
+sortdate: 2017/12/19 00:00
+source: PLoS One
+title: Differences in reward processing between putative cell types in primate prefrontal
+  cortex
+uid: '5736196'
+volume: '12'

@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '29329355'
+- idtype: doi
+  value: 10.1371/journal.pone.0191200
+- idtype: pmcid
+  value: PMC5766228
+authors:
+- authtype: Author
+  name: Beaton LE
+- authtype: Author
+  name: Azma S
+- authtype: Author
+  name: Marinkovic K
+epubdate: 2018 Jan 12
+fulljournalname: PLoS ONE
+issue: '1'
+pages: e0191200
+pmclivedate: 2018/01/23
+printpubdate: ''
+pubdate: 2018 Jan 12
+sortdate: 2018/01/12 00:00
+source: PLoS One
+title: 'When the brain changes its mind: Oscillatory dynamics of conflict processing
+  and response switching in a flanker task during alcohol challenge'
+uid: '5766228'
+volume: '13'

@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '31244592'
+- idtype: doi
+  value: 10.3389/fnins.2019.00542
+- idtype: pmcid
+  value: PMC6579926
+authors:
+- authtype: Author
+  name: Dimitriadis SI
+- authtype: Author
+  name: López ME
+- authtype: Author
+  name: Maestu F
+- authtype: Author
+  name: Pereda E
+epubdate: 2019 Jun 11
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '542'
+pmclivedate: 2019/06/26
+printpubdate: ''
+pubdate: 2019 Jun 11
+sortdate: 2019/06/11 00:00
+source: Front Neurosci
+title: Modeling the Switching Behavior of Functional Connectivity Microstates (FCμstates)
+  as a Novel Biomarker for Mild Cognitive Impairment
+uid: '6579926'
+volume: '13'

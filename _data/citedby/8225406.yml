@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '34016602'
+- idtype: doi
+  value: 10.1523/ENEURO.0471-20.2021
+- idtype: pmcid
+  value: PMC8225406
+authors:
+- authtype: Author
+  name: Barbero FM
+- authtype: Author
+  name: Calce RP
+- authtype: Author
+  name: Talwar S
+- authtype: Author
+  name: Rossion B
+- authtype: Author
+  name: Collignon O
+epubdate: 2021 Jun 17
+fulljournalname: eNeuro
+issue: '3'
+pages: ENEURO.0471-20.2021
+pmclivedate: 2021/06/25
+printpubdate: ''
+pubdate: 2021 Jun 17
+sortdate: 2021/06/17 00:00
+source: eNeuro
+title: Fast Periodic Auditory Stimulation Reveals a Robust Categorical Response to
+  Voices in the Human Brain
+uid: '8225406'
+volume: '8'

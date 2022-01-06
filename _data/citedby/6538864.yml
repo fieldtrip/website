@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '30902871'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.2791-18.2019
+- idtype: pmcid
+  value: PMC6538864
+authors:
+- authtype: Author
+  name: Guran CN
+- authtype: Author
+  name: Herweg NA
+- authtype: Author
+  name: Bunzeck N
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '22'
+pages: 4344-4352
+pmclivedate: 2019/11/29
+printpubdate: 2019 May 29
+pubdate: 2019 May 29
+sortdate: 2019/05/29 00:00
+source: J Neurosci
+title: Age-Related Decreases in the Retrieval Practice Effect Directly Relate to Changes
+  in Alpha-Beta Oscillations
+uid: '6538864'
+volume: '39'

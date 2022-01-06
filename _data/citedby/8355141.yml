@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '34376673'
+- idtype: doi
+  value: 10.1038/s41467-021-25150-0
+- idtype: pmcid
+  value: PMC8355141
+authors:
+- authtype: Author
+  name: Reddy L
+- authtype: Author
+  name: Self MW
+- authtype: Author
+  name: Zoefel B
+- authtype: Author
+  name: Poncet M
+- authtype: Author
+  name: Possel JK
+- authtype: Author
+  name: Peters JC
+- authtype: Author
+  name: Baayen JC
+- authtype: Author
+  name: Idema S
+- authtype: Author
+  name: VanRullen R
+- authtype: Author
+  name: Roelfsema PR
+epubdate: 2021 Aug 10
+fulljournalname: Nature Communications
+issue: ''
+pages: '4839'
+pmclivedate: 2021/08/30
+printpubdate: ''
+pubdate: 2021 Aug 10
+sortdate: 2021/08/10 00:00
+source: Nat Commun
+title: Theta-phase dependent neuronal coding during sequence learning in human single
+  neurons
+uid: '8355141'
+volume: '12'

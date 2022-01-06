@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '30337865'
+- idtype: doi
+  value: 10.3389/fnhum.2018.00389
+- idtype: pmcid
+  value: PMC6178143
+authors:
+- authtype: Author
+  name: Villena-González M
+- authtype: Author
+  name: Palacios-García I
+- authtype: Author
+  name: Rodríguez E
+- authtype: Author
+  name: López V
+epubdate: 2018 Sep 25
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '389'
+pmclivedate: 2018/10/18
+printpubdate: ''
+pubdate: 2018 Sep 25
+sortdate: 2018/09/25 00:00
+source: Front Hum Neurosci
+title: Beta Oscillations Distinguish Between Two Forms of Mental Imagery While Gamma
+  and Theta Activity Reflects Auditory Attention
+uid: '6178143'
+volume: '12'

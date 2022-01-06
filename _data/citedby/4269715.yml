@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '25231610'
+- idtype: doi
+  value: 10.1152/jn.00062.2014
+- idtype: pmcid
+  value: PMC4269715
+authors:
+- authtype: Author
+  name: Hughes LE
+- authtype: Author
+  name: Rowe JB
+- authtype: Author
+  name: Ghosh BC
+- authtype: Author
+  name: Carlyon RP
+- authtype: Author
+  name: Plack CJ
+- authtype: Author
+  name: Gockel HE
+epubdate: 2014 Sep 17
+fulljournalname: Journal of Neurophysiology
+issue: '12'
+pages: 3086-3094
+pmclivedate: 2014/12/24
+printpubdate: 2014 Dec 15
+pubdate: 2014 Sep 17
+sortdate: 2014/09/17 00:00
+source: J Neurophysiol
+title: 'The binaural masking level difference: cortical correlates persist despite
+  severe brain stem atrophy in progressive supranuclear palsy'
+uid: '4269715'
+volume: '112'

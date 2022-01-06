@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '27325682'
+- idtype: doi
+  value: 10.1093/cercor/bhw173
+- idtype: pmcid
+  value: PMC5004755
+authors:
+- authtype: Author
+  name: Teki S
+- authtype: Author
+  name: Barascud N
+- authtype: Author
+  name: Picard S
+- authtype: Author
+  name: Payne C
+- authtype: Author
+  name: Griffiths TD
+- authtype: Author
+  name: Chait M
+epubdate: 2016 Aug 30
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '9'
+pages: 3669-3680
+pmclivedate: 2016/08/31
+printpubdate: 2016 Sep
+pubdate: 2016 Aug 30
+sortdate: 2016/08/30 00:00
+source: Cereb Cortex
+title: Neural Correlates of Auditory Figure-Ground Segregation Based on Temporal Coherence
+uid: '5004755'
+volume: '26'

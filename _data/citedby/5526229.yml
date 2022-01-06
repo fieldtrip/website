@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '28502585'
+- idtype: doi
+  value: 10.1016/j.brainres.2017.05.005
+- idtype: pmcid
+  value: PMC5526229
+- idtype: MID
+  value: NIHMS878310
+authors:
+- authtype: Author
+  name: Jones KT
+- authtype: Author
+  name: Peterson DJ
+- authtype: Author
+  name: Blacker KJ
+- authtype: Author
+  name: Berryhill ME
+epubdate: 2017 May 11
+fulljournalname: Brain research
+issue: ''
+pages: 28-40
+pmclivedate: 2018/07/15
+printpubdate: 2017 Jul 15
+pubdate: 2017 May 11
+sortdate: 2017/05/11 00:00
+source: Brain Res
+title: Frontoparietal neurostimulation modulates working memory training benefits
+  and oscillatory synchronization
+uid: '5526229'
+volume: '1667'

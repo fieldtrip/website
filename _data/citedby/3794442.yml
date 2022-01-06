@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '24124417'
+- idtype: doi
+  value: 10.3389/fninf.2013.00020
+- idtype: pmcid
+  value: PMC3794442
+authors:
+- authtype: Author
+  name: Cockfield J
+- authtype: Author
+  name: Su K
+- authtype: Author
+  name: Robbins KA
+epubdate: 2013 Oct 10
+fulljournalname: Frontiers in Neuroinformatics
+issue: ''
+pages: '20'
+pmclivedate: 2013/10/11
+printpubdate: ''
+pubdate: 2013 Oct 10
+sortdate: 2013/10/10 00:00
+source: Front Neuroinform
+title: 'MOBBED: a computational data infrastructure for handling large collections
+  of event-rich time series datasets in MATLAB'
+uid: '3794442'
+volume: '7'

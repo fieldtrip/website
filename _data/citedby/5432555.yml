@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '28559790'
+- idtype: doi
+  value: 10.3389/fnins.2017.00262
+- idtype: pmcid
+  value: PMC5432555
+authors:
+- authtype: Author
+  name: Chella F
+- authtype: Author
+  name: D'Andrea A
+- authtype: Author
+  name: Basti A
+- authtype: Author
+  name: Pizzella V
+- authtype: Author
+  name: Marzetti L
+epubdate: 2017 May 16
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '262'
+pmclivedate: 2017/05/30
+printpubdate: ''
+pubdate: 2017 May 16
+sortdate: 2017/05/16 00:00
+source: Front Neurosci
+title: 'Non-linear Analysis of Scalp EEG by Using Bispectra: The Effect of the Reference
+  Choice'
+uid: '5432555'
+volume: '11'

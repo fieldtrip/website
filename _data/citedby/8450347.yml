@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '34552527'
+- idtype: doi
+  value: 10.3389/fpsyg.2021.680882
+- idtype: pmcid
+  value: PMC8450347
+authors:
+- authtype: Author
+  name: Hahn LE
+- authtype: Author
+  name: Benders T
+- authtype: Author
+  name: Fikkert P
+- authtype: Author
+  name: Snijders TM
+epubdate: 2021 Sep 6
+fulljournalname: Frontiers in Psychology
+issue: ''
+pages: '680882'
+pmclivedate: 2021/09/21
+printpubdate: ''
+pubdate: 2021 Sep 6
+sortdate: 2021/09/06 00:00
+source: Front Psychol
+title: Infants’ Implicit Rhyme Perception in Child Songs and Its Relationship With
+  Vocabulary
+uid: '8450347'
+volume: '12'

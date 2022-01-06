@@ -1,0 +1,34 @@
+articleids:
+- idtype: pmid
+  value: '30268803'
+- idtype: doi
+  value: 10.1016/j.jpain.2018.09.004
+- idtype: pmcid
+  value: PMC6382517
+- idtype: MID
+  value: NIHMS1512231
+authors:
+- authtype: Author
+  name: Ahn S
+- authtype: Author
+  name: Prim JH
+- authtype: Author
+  name: Alexander ML
+- authtype: Author
+  name: McCulloch KL
+- authtype: Author
+  name: Fröhlich F
+epubdate: 2018 Sep 27
+fulljournalname: 'The journal of pain : official journal of the American Pain Society'
+issue: '3'
+pages: 277.e1-277.e11
+pmclivedate: 2020/03/01
+printpubdate: 2019 Mar
+pubdate: 2018 Sep 27
+sortdate: 2018/09/27 00:00
+source: J Pain
+title: 'Identifying and Engaging Neuronal Oscillations by Transcranial Alternating
+  Current Stimulation in Patients with Chronic Low Back Pain: A Randomized, Crossover,
+  Double-Blind, Sham-Controlled Pilot Study'
+uid: '6382517'
+volume: '20'

@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '32015769'
+- idtype: doi
+  value: 10.1007/s11571-019-09548-7
+- idtype: pmcid
+  value: PMC6973829
+authors:
+- authtype: Author
+  name: Sen S
+- authtype: Author
+  name: Daimi SN
+- authtype: Author
+  name: Watanabe K
+- authtype: Author
+  name: Takahashi K
+- authtype: Author
+  name: Bhattacharya J
+- authtype: Author
+  name: Saha G
+epubdate: 2019 Jul 19
+fulljournalname: Cognitive Neurodynamics
+issue: '1'
+pages: 95-113
+pmclivedate: 2020/02/03
+printpubdate: 2020 Feb
+pubdate: 2019 Jul 19
+sortdate: 2019/07/19 00:00
+source: Cogn Neurodyn
+title: Switch or stay? Automatic classification of internal mental states in bistable
+  perception
+uid: '6973829'
+volume: '14'

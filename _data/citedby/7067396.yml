@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '32163441'
+- idtype: doi
+  value: 10.1371/journal.pone.0229334
+- idtype: pmcid
+  value: PMC7067396
+authors:
+- authtype: Author
+  name: ElShafei HA
+- authtype: Author
+  name: Fornoni L
+- authtype: Author
+  name: Masson R
+- authtype: Author
+  name: Bertrand O
+- authtype: Author
+  name: Bidet-Caulet A
+epubdate: 2020 Mar 12
+fulljournalname: PLoS ONE
+issue: '3'
+pages: e0229334
+pmclivedate: 2020/03/23
+printpubdate: ''
+pubdate: 2020 Mar 12
+sortdate: 2020/03/12 00:00
+source: PLoS One
+title: Age-related modulations of alpha and gamma brain activities underlying anticipation
+  and distraction
+uid: '7067396'
+volume: '15'

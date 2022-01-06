@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '26668393'
+- idtype: doi
+  value: 10.1073/pnas.1517519112
+- idtype: pmcid
+  value: PMC4702974
+authors:
+- authtype: Author
+  name: ten Oever S
+- authtype: Author
+  name: Sack AT
+epubdate: 2015 Dec 14
+fulljournalname: Proceedings of the National Academy of Sciences of the United States
+  of America
+issue: '52'
+pages: 15833-15837
+pmclivedate: 2016/06/29
+printpubdate: 2015 Dec 29
+pubdate: 2015 Dec 14
+sortdate: 2015/12/14 00:00
+source: Proc Natl Acad Sci U S A
+title: Oscillatory phase shapes syllable perception
+uid: '4702974'
+volume: '112'

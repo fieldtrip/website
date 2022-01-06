@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '34301829'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.2799-20.2021
+- idtype: pmcid
+  value: PMC8445054
+authors:
+- authtype: Author
+  name: Dellert T
+- authtype: Author
+  name: Müller-Bardorff M
+- authtype: Author
+  name: Schlossmacher I
+- authtype: Author
+  name: Pitts M
+- authtype: Author
+  name: Hofmann D
+- authtype: Author
+  name: Bruchmann M
+- authtype: Author
+  name: Straube T
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '37'
+pages: 7864-7875
+pmclivedate: ''
+printpubdate: 2021 Sep 15
+pubdate: 2021 Sep 15
+sortdate: 2021/09/15 00:00
+source: J Neurosci
+title: Dissociating the Neural Correlates of Consciousness and Task Relevance in Face
+  Perception Using Simultaneous EEG-fMRI
+uid: '8445054'
+volume: '41'

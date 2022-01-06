@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '28766907'
+- idtype: doi
+  value: 10.1002/hbm.23750
+- idtype: pmcid
+  value: PMC6866839
+authors:
+- authtype: Author
+  name: Mossad SI
+- authtype: Author
+  name: Smith ML
+- authtype: Author
+  name: Pang EW
+- authtype: Author
+  name: Taylor MJ
+epubdate: 2017 Aug 2
+fulljournalname: Human Brain Mapping
+issue: '11'
+pages: 5577-5589
+pmclivedate: 2020/06/12
+printpubdate: ''
+pubdate: 2017 Aug 2
+sortdate: 2017/08/02 00:00
+source: Hum Brain Mapp
+title: Neural correlates of “Theory of Mind” in very preterm born children
+uid: '6866839'
+volume: '38'

@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '32432366'
+- idtype: doi
+  value: 10.1111/ejn.14785
+- idtype: pmcid
+  value: PMC7586931
+authors:
+- authtype: Author
+  name: Roos NM
+- authtype: Author
+  name: Piai V
+epubdate: 2020 Jun 12
+fulljournalname: The European Journal of Neuroscience
+issue: '5'
+pages: 3457-3469
+pmclivedate: 2020/10/30
+printpubdate: 2020 Sep
+pubdate: 2020 Jun 12
+sortdate: 2020/06/12 00:00
+source: Eur J Neurosci
+title: 'Across‐session consistency of context‐driven language processing: A magnetoencephalography
+  study'
+uid: '7586931'
+volume: '52'

@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '30152889'
+- idtype: doi
+  value: 10.1002/ana.25312
+- idtype: pmcid
+  value: PMC6431255
+- idtype: MID
+  value: NIHMS1017798
+authors:
+- authtype: Author
+  name: Ghahremani A
+- authtype: Author
+  name: Aron AR
+- authtype: Author
+  name: Udupa K
+- authtype: Author
+  name: Saha U
+- authtype: Author
+  name: Reddy D
+- authtype: Author
+  name: Hutchison WD
+- authtype: Author
+  name: Kalia SK
+- authtype: Author
+  name: Hodaie M
+- authtype: Author
+  name: Lozano AM
+- authtype: Author
+  name: Chen R
+epubdate: 2018 Sep 26
+fulljournalname: Annals of neurology
+issue: '4'
+pages: 515-526
+pmclivedate: 2019/03/23
+printpubdate: 2018 Oct
+pubdate: 2018 Sep 26
+sortdate: 2018/09/26 00:00
+source: Ann Neurol
+title: Event-related deep brain stimulation of the subthalamic nucleus affects conflict
+  processing
+uid: '6431255'
+volume: '84'

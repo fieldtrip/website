@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '24846147'
+- idtype: doi
+  value: 10.1093/cercor/bhu103
+- idtype: pmcid
+  value: PMC4537446
+authors:
+- authtype: Author
+  name: Arnal LH
+- authtype: Author
+  name: Doelling KB
+- authtype: Author
+  name: Poeppel D
+epubdate: 2014 May 20
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '9'
+pages: 3077-3085
+pmclivedate: 2016/09/01
+printpubdate: 2015 Sep
+pubdate: 2014 May 20
+sortdate: 2014/05/20 00:00
+source: Cereb Cortex
+title: Delta–Beta Coupled Oscillations Underlie Temporal Prediction Accuracy
+uid: '4537446'
+volume: '25'

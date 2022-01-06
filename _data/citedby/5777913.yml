@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '28826603'
+- idtype: doi
+  value: 10.1016/j.cortex.2017.07.010
+- idtype: pmcid
+  value: PMC5777913
+- idtype: MID
+  value: NIHMS900949
+authors:
+- authtype: Author
+  name: Giattino CM
+- authtype: Author
+  name: Alam ZM
+- authtype: Author
+  name: Woldorff MG
+epubdate: 2017 Jul 22
+fulljournalname: Cortex; a journal devoted to the study of the nervous system and
+  behavior
+issue: ''
+pages: 14-25
+pmclivedate: 2019/05/01
+printpubdate: 2018 May
+pubdate: 2017 Jul 22
+sortdate: 2017/07/22 00:00
+source: Cortex
+title: Neural Processes Underlying the Orienting of Attention without Awareness
+uid: '5777913'
+volume: '102'

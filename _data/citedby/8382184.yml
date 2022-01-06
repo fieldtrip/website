@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '34379638'
+- idtype: doi
+  value: 10.1371/journal.pcbi.1009252
+- idtype: pmcid
+  value: PMC8382184
+authors:
+- authtype: Author
+  name: Tait L
+- authtype: Author
+  name: Lopes MA
+- authtype: Author
+  name: Stothart G
+- authtype: Author
+  name: Baker J
+- authtype: Author
+  name: Kazanina N
+- authtype: Author
+  name: Zhang J
+- authtype: Author
+  name: Goodfellow M
+epubdate: 2021 Aug 11
+fulljournalname: PLoS Computational Biology
+issue: '8'
+pages: e1009252
+pmclivedate: 2021/08/24
+printpubdate: ''
+pubdate: 2021 Aug 11
+sortdate: 2021/08/11 00:00
+source: PLoS Comput Biol
+title: A large-scale brain network mechanism for increased seizure propensity in Alzheimer’s
+  disease
+uid: '8382184'
+volume: '17'

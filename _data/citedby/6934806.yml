@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '31882672'
+- idtype: doi
+  value: 10.1038/s41598-019-56398-8
+- idtype: pmcid
+  value: PMC6934806
+authors:
+- authtype: Author
+  name: Muthuraman M
+- authtype: Author
+  name: Moliadze V
+- authtype: Author
+  name: Boecher L
+- authtype: Author
+  name: Siemann J
+- authtype: Author
+  name: Freitag CM
+- authtype: Author
+  name: Groppa S
+- authtype: Author
+  name: Siniatchkin M
+epubdate: 2019 Dec 27
+fulljournalname: Scientific Reports
+issue: ''
+pages: '20028'
+pmclivedate: 2019/12/31
+printpubdate: ''
+pubdate: 2019 Dec 27
+sortdate: 2019/12/27 00:00
+source: Sci Rep
+title: Multimodal alterations of directed connectivity profiles in patients with attention-deficit/hyperactivity
+  disorders
+uid: '6934806'
+volume: '9'

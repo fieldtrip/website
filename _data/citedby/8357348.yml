@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '32897120'
+- idtype: doi
+  value: 10.1162/jocn_a_01626
+- idtype: pmcid
+  value: PMC8357348
+authors:
+- authtype: Author
+  name: Jin W
+- authtype: Author
+  name: Nobre AC
+- authtype: Author
+  name: van Ede F
+epubdate: 2020 Dec 1
+fulljournalname: Journal of Cognitive Neuroscience
+issue: '12'
+pages: 2320-2332
+pmclivedate: 2021/08/12
+printpubdate: ''
+pubdate: 2020 Dec 1
+sortdate: 2020/12/01 00:00
+source: J Cogn Neurosci
+title: Temporal Expectations Prepare Visual Working Memory for Behavior
+uid: '8357348'
+volume: '32'

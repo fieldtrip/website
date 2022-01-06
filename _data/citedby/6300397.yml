@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '30585286'
+- idtype: doi
+  value: 10.1126/sciadv.aat3702
+- idtype: pmcid
+  value: PMC6300397
+authors:
+- authtype: Author
+  name: Johnson EL
+- authtype: Author
+  name: Tang L
+- authtype: Author
+  name: Yin Q
+- authtype: Author
+  name: Asano E
+- authtype: Author
+  name: Ofen N
+epubdate: 2018 Dec 19
+fulljournalname: Science Advances
+issue: '12'
+pages: eaat3702
+pmclivedate: 2018/12/25
+printpubdate: ''
+pubdate: 2018 Dec 19
+sortdate: 2018/12/19 00:00
+source: Sci Adv
+title: Direct brain recordings reveal prefrontal cortex dynamics of memory development
+uid: '6300397'
+volume: '4'

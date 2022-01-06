@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '26441286'
+- idtype: doi
+  value: 10.1371/journal.pbio.1002272
+- idtype: pmcid
+  value: PMC4595220
+authors:
+- authtype: Author
+  name: Marshall TR
+- authtype: Author
+  name: Bergmann TO
+- authtype: Author
+  name: Jensen O
+epubdate: 2015 Oct 6
+fulljournalname: PLoS Biology
+issue: '10'
+pages: e1002272
+pmclivedate: 2015/10/09
+printpubdate: ''
+pubdate: 2015 Oct 6
+sortdate: 2015/10/06 00:00
+source: PLoS Biol
+title: Frontoparietal Structural Connectivity Mediates the Top-Down Control of Neuronal
+  Synchronization Associated with Selective Attention
+uid: '4595220'
+volume: '13'

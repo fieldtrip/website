@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '28197084'
+- idtype: doi
+  value: 10.3389/fnhum.2017.00002
+- idtype: pmcid
+  value: PMC5281636
+authors:
+- authtype: Author
+  name: Kasten FH
+- authtype: Author
+  name: Herrmann CS
+epubdate: 2017 Jan 31
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '2'
+pmclivedate: 2017/02/14
+printpubdate: ''
+pubdate: 2017 Jan 31
+sortdate: 2017/01/31 00:00
+source: Front Hum Neurosci
+title: Transcranial Alternating Current Stimulation (tACS) Enhances Mental Rotation
+  Performance during and after Stimulation
+uid: '5281636'
+volume: '11'

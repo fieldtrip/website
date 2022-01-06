@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '24565928'
+- idtype: doi
+  value: 10.1016/j.brainres.2014.02.030
+- idtype: pmcid
+  value: PMC4031238
+- idtype: MID
+  value: NIHMS576079
+authors:
+- authtype: Author
+  name: Marinkovic K
+- authtype: Author
+  name: Rosen BQ
+- authtype: Author
+  name: Cox B
+- authtype: Author
+  name: Hagler DJ Jr
+epubdate: 2014 Feb 22
+fulljournalname: Brain research
+issue: ''
+pages: 18-32
+pmclivedate: 2015/04/16
+printpubdate: 2014 Apr 16
+pubdate: 2014 Feb 22
+sortdate: 2014/02/22 00:00
+source: Brain Res
+title: 'Spatio-temporal processing of words and nonwords: hemispheric laterality and
+  acute alcohol intoxication'
+uid: '4031238'
+volume: '1558'

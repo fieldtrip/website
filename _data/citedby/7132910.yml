@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '31690927'
+- idtype: doi
+  value: 10.1093/cercor/bhz197
+- idtype: pmcid
+  value: PMC7132910
+authors:
+- authtype: Author
+  name: Canales-Johnson A
+- authtype: Author
+  name: Merlo E
+- authtype: Author
+  name: Bekinschtein TA
+- authtype: Author
+  name: Arzi A
+epubdate: 2019 Nov 5
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '3'
+pages: 1708-1715
+pmclivedate: 2020/04/09
+printpubdate: 2020 Mar
+pubdate: 2019 Nov 5
+sortdate: 2019/11/05 00:00
+source: Cereb Cortex
+title: Neural Dynamics of Associative Learning during Human Sleep
+uid: '7132910'
+volume: '30'

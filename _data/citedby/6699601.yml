@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '31456706'
+- idtype: doi
+  value: 10.3389/fpsyg.2019.01660
+- idtype: pmcid
+  value: PMC6699601
+authors:
+- authtype: Author
+  name: Stevens R
+- authtype: Author
+  name: Galloway T
+- authtype: Author
+  name: Willemsen-Dunlap A
+epubdate: 2019 Aug 12
+fulljournalname: Frontiers in Psychology
+issue: ''
+pages: '1660'
+pmclivedate: 2019/08/27
+printpubdate: ''
+pubdate: 2019 Aug 12
+sortdate: 2019/08/12 00:00
+source: Front Psychol
+title: 'Advancing Our Understandings of Healthcare Team Dynamics From the Simulation
+  Room to the Operating Room: A Neurodynamic Perspective'
+uid: '6699601'
+volume: '10'

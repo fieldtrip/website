@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '30351422'
+- idtype: doi
+  value: 10.1093/scan/nsy094
+- idtype: pmcid
+  value: PMC6277737
+authors:
+- authtype: Author
+  name: Siqi-Liu A
+- authtype: Author
+  name: Harris AM
+- authtype: Author
+  name: Atkinson AP
+- authtype: Author
+  name: Reed CL
+epubdate: 2018 Oct 23
+fulljournalname: Social Cognitive and Affective Neuroscience
+issue: '12'
+pages: 1269-1279
+pmclivedate: 2018/12/06
+printpubdate: ''
+pubdate: 2018 Oct 23
+sortdate: 2018/10/23 00:00
+source: Soc Cogn Affect Neurosci
+title: Dissociable processing of emotional and neutral body movements revealed by
+  μ-alpha and beta rhythms
+uid: '6277737'
+volume: '13'

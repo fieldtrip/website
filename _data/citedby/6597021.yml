@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '28123015'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1612-16.2016
+- idtype: pmcid
+  value: PMC6597021
+authors:
+- authtype: Author
+  name: Wokke ME
+- authtype: Author
+  name: Cleeremans A
+- authtype: Author
+  name: Ridderinkhof KR
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '4'
+pages: 781-789
+pmclivedate: 2019/07/01
+printpubdate: 2017 Jan 25
+pubdate: 2017 Jan 25
+sortdate: 2017/01/25 00:00
+source: J Neurosci
+title: 'Sure I''m Sure: Prefrontal Oscillations Support Metacognitive Monitoring of
+  Decision Making'
+uid: '6597021'
+volume: '37'

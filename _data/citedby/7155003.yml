@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '29392835'
+- idtype: doi
+  value: 10.1111/ejn.13855
+- idtype: pmcid
+  value: PMC7155003
+authors:
+- authtype: Author
+  name: Hjortkjær J
+- authtype: Author
+  name: Märcher‐Rørsted J
+- authtype: Author
+  name: Fuglsang SA
+- authtype: Author
+  name: Dau T
+epubdate: 2018 Feb 16
+fulljournalname: The European Journal of Neuroscience
+issue: '5'
+pages: 1279-1289
+pmclivedate: 2020/04/15
+printpubdate: 2020 Mar
+pubdate: 2018 Feb 16
+sortdate: 2018/02/16 00:00
+source: Eur J Neurosci
+title: Cortical oscillations and entrainment in speech processing during working memory
+  load
+uid: '7155003'
+volume: '51'

@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '25945260'
+- idtype: doi
+  value: 10.1155/2015/172192
+- idtype: pmcid
+  value: PMC4405298
+authors:
+- authtype: Author
+  name: Styliadis C
+- authtype: Author
+  name: Kartsidis P
+- authtype: Author
+  name: Paraskevopoulos E
+- authtype: Author
+  name: Ioannides AA
+- authtype: Author
+  name: Bamidis PD
+epubdate: 2015 Apr 7
+fulljournalname: Neural Plasticity
+issue: ''
+pages: '172192'
+pmclivedate: 2015/05/05
+printpubdate: '2015'
+pubdate: 2015 Apr 7
+sortdate: 2015/04/07 00:00
+source: Neural Plast
+title: 'Neuroplastic Effects of Combined Computerized Physical and Cognitive Training
+  in Elderly Individuals at Risk for Dementia: An eLORETA Controlled Study on Resting
+  States'
+uid: '4405298'
+volume: '2015'

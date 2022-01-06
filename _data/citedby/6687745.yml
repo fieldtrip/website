@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '31395890'
+- idtype: doi
+  value: 10.1038/s41467-019-11444-x
+- idtype: pmcid
+  value: PMC6687745
+authors:
+- authtype: Author
+  name: Helfrich RF
+- authtype: Author
+  name: Lendner JD
+- authtype: Author
+  name: Mander BA
+- authtype: Author
+  name: Guillen H
+- authtype: Author
+  name: Paff M
+- authtype: Author
+  name: Mnatsakanyan L
+- authtype: Author
+  name: Vadera S
+- authtype: Author
+  name: Walker MP
+- authtype: Author
+  name: Lin JJ
+- authtype: Author
+  name: Knight RT
+epubdate: 2019 Aug 8
+fulljournalname: Nature Communications
+issue: ''
+pages: '3572'
+pmclivedate: 2019/08/12
+printpubdate: ''
+pubdate: 2019 Aug 8
+sortdate: 2019/08/08 00:00
+source: Nat Commun
+title: Bidirectional prefrontal-hippocampal dynamics organize information transfer
+  during sleep in humans
+uid: '6687745'
+volume: '10'

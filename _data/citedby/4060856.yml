@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '24939398'
+- idtype: doi
+  value: 10.1186/1475-925X-13-75
+- idtype: pmcid
+  value: PMC4060856
+authors:
+- authtype: Author
+  name: SieluŻycki C
+- authtype: Author
+  name: Kordowski P
+epubdate: 2014 Jun 16
+fulljournalname: BioMedical Engineering OnLine
+issue: ''
+pages: '75'
+pmclivedate: 2014/06/30
+printpubdate: ''
+pubdate: 2014 Jun 16
+sortdate: 2014/06/16 00:00
+source: Biomed Eng Online
+title: Maximum-likelihood estimation of channel-dependent trial-to-trial variability
+  of auditory evoked brain responses in MEG
+uid: '4060856'
+volume: '13'

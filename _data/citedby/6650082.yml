@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '31295254'
+- idtype: doi
+  value: 10.1371/journal.pbio.3000045
+- idtype: pmcid
+  value: PMC6650082
+authors:
+- authtype: Author
+  name: Ma L
+- authtype: Author
+  name: Chan JL
+- authtype: Author
+  name: Johnston K
+- authtype: Author
+  name: Lomber SG
+- authtype: Author
+  name: Everling S
+epubdate: 2019 Jul 11
+fulljournalname: PLoS Biology
+issue: '7'
+pages: e3000045
+pmclivedate: 2019/07/25
+printpubdate: ''
+pubdate: 2019 Jul 11
+sortdate: 2019/07/11 00:00
+source: PLoS Biol
+title: Macaque anterior cingulate cortex deactivation impairs performance and alters
+  lateral prefrontal oscillatory activities in a rule-switching task
+uid: '6650082'
+volume: '17'

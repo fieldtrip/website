@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '25704356'
+- idtype: doi
+  value: 10.1002/hbm.22762
+- idtype: pmcid
+  value: PMC6869188
+authors:
+- authtype: Author
+  name: He W
+- authtype: Author
+  name: Garrido MI
+- authtype: Author
+  name: Sowman PF
+- authtype: Author
+  name: Brock J
+- authtype: Author
+  name: Johnson BW
+epubdate: 2015 Feb 19
+fulljournalname: Human Brain Mapping
+issue: '6'
+pages: 2161-2173
+pmclivedate: 2020/06/12
+printpubdate: ''
+pubdate: 2015 Feb 19
+sortdate: 2015/02/19 00:00
+source: Hum Brain Mapp
+title: Development of effective connectivity in the core network for face perception
+uid: '6869188'
+volume: '36'

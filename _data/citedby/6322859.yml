@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '30575521'
+- idtype: doi
+  value: 10.7554/eLife.39061
+- idtype: pmcid
+  value: PMC6322859
+authors:
+- authtype: Author
+  name: Wang L
+- authtype: Author
+  name: Kuperberg G
+- authtype: Author
+  name: Jensen O
+epubdate: 2018 Dec 21
+fulljournalname: eLife
+issue: ''
+pages: e39061
+pmclivedate: 2019/01/10
+printpubdate: ''
+pubdate: 2018 Dec 21
+sortdate: 2018/12/21 00:00
+source: eLife
+title: Specific lexico-semantic predictions are associated with unique spatial and
+  temporal patterns of neural activity
+uid: '6322859'
+volume: '7'

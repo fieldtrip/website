@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '29348191'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.2021-17.2017
+- idtype: pmcid
+  value: PMC5824738
+authors:
+- authtype: Author
+  name: Martinez-Rubio C
+- authtype: Author
+  name: Paulk AC
+- authtype: Author
+  name: McDonald EJ
+- authtype: Author
+  name: Widge AS
+- authtype: Author
+  name: Eskandar EN
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '8'
+pages: 1942-1958
+pmclivedate: 2018/08/21
+printpubdate: 2018 Feb 21
+pubdate: 2018 Feb 21
+sortdate: 2018/02/21 00:00
+source: J Neurosci
+title: Multimodal Encoding of Novelty, Reward, and Learning in the Primate Nucleus
+  Basalis of Meynert
+uid: '5824738'
+volume: '38'

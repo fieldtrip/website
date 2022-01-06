@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '32711059'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2020.117184
+- idtype: pmcid
+  value: PMC7762815
+authors:
+- authtype: Author
+  name: Gratwicke J
+- authtype: Author
+  name: Oswal A
+- authtype: Author
+  name: Akram H
+- authtype: Author
+  name: Jahanshahi M
+- authtype: Author
+  name: Hariz M
+- authtype: Author
+  name: Zrinzo L
+- authtype: Author
+  name: Foltynie T
+- authtype: Author
+  name: Litvak V
+epubdate: ''
+fulljournalname: Neuroimage
+issue: ''
+pages: '117184'
+pmclivedate: 2020/12/28
+printpubdate: 2020 Nov 1
+pubdate: 2020 Nov 1
+sortdate: 2020/11/01 00:00
+source: Neuroimage
+title: Resting state activity and connectivity of the nucleus basalis of Meynert and
+  globus pallidus in Lewy body dementia and Parkinson's disease dementia
+uid: '7762815'
+volume: '221'

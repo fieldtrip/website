@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '32588901'
+- idtype: doi
+  value: 10.1093/scan/nsaa087
+- idtype: pmcid
+  value: PMC7393312
+authors:
+- authtype: Author
+  name: Giménez-Fernández T
+- authtype: Author
+  name: Kessel D
+- authtype: Author
+  name: Fernández-Folgueiras U
+- authtype: Author
+  name: Fondevila S
+- authtype: Author
+  name: Méndez-Bértolo C
+- authtype: Author
+  name: Aceves N
+- authtype: Author
+  name: García-Rubio MJ
+- authtype: Author
+  name: Carretié L
+epubdate: 2020 Jun 26
+fulljournalname: Social Cognitive and Affective Neuroscience
+issue: '6'
+pages: 615-624
+pmclivedate: 2020/08/04
+printpubdate: ''
+pubdate: 2020 Jun 26
+sortdate: 2020/06/26 00:00
+source: Soc Cogn Affect Neurosci
+title: Prejudice drives exogenous attention to outgroups
+uid: '7393312'
+volume: '15'

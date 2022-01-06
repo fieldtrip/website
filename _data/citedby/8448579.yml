@@ -1,0 +1,40 @@
+articleids:
+- idtype: pmid
+  value: '32175656'
+- idtype: doi
+  value: 10.1002/mds.28022
+- idtype: pmcid
+  value: PMC8448579
+- idtype: MID
+  value: NIHMS1738813
+authors:
+- authtype: Author
+  name: Leodori G
+- authtype: Author
+  name: Belvisi D
+- authtype: Author
+  name: De Bartolo MI
+- authtype: Author
+  name: Fabbrini A
+- authtype: Author
+  name: Costanzo M
+- authtype: Author
+  name: Vial F
+- authtype: Author
+  name: Conte A
+- authtype: Author
+  name: Hallett M
+- authtype: Author
+  name: Berardelli A
+epubdate: 2020 Mar 16
+fulljournalname: 'Movement disorders : official journal of the Movement Disorder Society'
+issue: '6'
+pages: 1002-1011
+pmclivedate: 2021/09/17
+printpubdate: 2020 Jun
+pubdate: 2020 Mar 16
+sortdate: 2020/03/16 00:00
+source: Mov Disord
+title: 'Re-emergent Tremor in Parkinson’s Disease: The Role of the Motor Cortex'
+uid: '8448579'
+volume: '35'

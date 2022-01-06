@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '22649249'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0215-12.2012
+- idtype: pmcid
+  value: PMC3373257
+authors:
+- authtype: Author
+  name: Reinhart RM
+- authtype: Author
+  name: Heitz RP
+- authtype: Author
+  name: Purcell BA
+- authtype: Author
+  name: Weigand PK
+- authtype: Author
+  name: Schall JD
+- authtype: Author
+  name: Woodman GF
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '22'
+pages: 7711-7722
+pmclivedate: 2012/11/30
+printpubdate: 2012 May 30
+pubdate: 2012 May 30
+sortdate: 2012/05/30 00:00
+source: J Neurosci
+title: 'Homologous Mechanisms of Visuospatial Working Memory Maintenance in Macaque
+  and Human: Properties and Sources'
+uid: '3373257'
+volume: '32'

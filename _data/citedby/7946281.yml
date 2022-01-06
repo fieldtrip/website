@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '33635855'
+- idtype: doi
+  value: 10.1371/journal.pbio.3001142
+- idtype: pmcid
+  value: PMC7946281
+authors:
+- authtype: Author
+  name: van Bree S
+- authtype: Author
+  name: Sohoglu E
+- authtype: Author
+  name: Davis MH
+- authtype: Author
+  name: Zoefel B
+epubdate: 2021 Feb 26
+fulljournalname: PLoS Biology
+issue: '2'
+pages: e3001142
+pmclivedate: 2021/03/19
+printpubdate: ''
+pubdate: 2021 Feb 26
+sortdate: 2021/02/26 00:00
+source: PLoS Biol
+title: Sustained neural rhythms reveal endogenous oscillations supporting speech perception
+uid: '7946281'
+volume: '19'

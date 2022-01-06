@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '29487543'
+- idtype: doi
+  value: 10.3389/fpsyt.2018.00035
+- idtype: pmcid
+  value: PMC5816796
+authors:
+- authtype: Author
+  name: Kienle J
+- authtype: Author
+  name: Rockstroh B
+- authtype: Author
+  name: Fiess J
+- authtype: Author
+  name: Schmidt R
+- authtype: Author
+  name: Popov T
+- authtype: Author
+  name: Steffen-Klatt A
+epubdate: 2018 Feb 13
+fulljournalname: Frontiers in Psychiatry
+issue: ''
+pages: '35'
+pmclivedate: 2018/02/27
+printpubdate: ''
+pubdate: 2018 Feb 13
+sortdate: 2018/02/13 00:00
+source: Front Psychiatry
+title: Variation of Functional Neurological Symptoms and Emotion Regulation with Time
+uid: '5816796'
+volume: '9'

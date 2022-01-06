@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '34131279'
+- idtype: doi
+  value: 10.1038/s42003-021-02240-9
+- idtype: pmcid
+  value: PMC8206204
+authors:
+- authtype: Author
+  name: Wainio-Theberge S
+- authtype: Author
+  name: Wolff A
+- authtype: Author
+  name: Northoff G
+epubdate: 2021 Jun 15
+fulljournalname: Communications Biology
+issue: ''
+pages: '741'
+pmclivedate: 2021/07/01
+printpubdate: ''
+pubdate: 2021 Jun 15
+sortdate: 2021/06/15 00:00
+source: Commun Biol
+title: Dynamic relationships between spontaneous and evoked electrophysiological activity
+uid: '8206204'
+volume: '4'

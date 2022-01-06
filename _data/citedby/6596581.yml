@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '28077711'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.2130-16.2016
+- idtype: pmcid
+  value: PMC6596581
+authors:
+- authtype: Author
+  name: Daume J
+- authtype: Author
+  name: Gruber T
+- authtype: Author
+  name: Engel AK
+- authtype: Author
+  name: Friese U
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '2'
+pages: 313-322
+pmclivedate: 2019/07/02
+printpubdate: 2017 Jan 11
+pubdate: 2017 Jan 11
+sortdate: 2017/01/11 00:00
+source: J Neurosci
+title: Phase-Amplitude Coupling and Long-Range Phase Synchronization Reveal Frontotemporal
+  Interactions during Visual Working Memory
+uid: '6596581'
+volume: '37'

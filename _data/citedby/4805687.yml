@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '27066148'
+- idtype: doi
+  value: 10.1007/s11571-015-9373-x
+- idtype: pmcid
+  value: PMC4805687
+authors:
+- authtype: Author
+  name: Protopapa F
+- authtype: Author
+  name: Siettos CI
+- authtype: Author
+  name: Myatchin I
+- authtype: Author
+  name: Lagae L
+epubdate: 2016 Jan 6
+fulljournalname: Cognitive Neurodynamics
+issue: '2'
+pages: 99-111
+pmclivedate: 2017/04/01
+printpubdate: 2016 Apr
+pubdate: 2016 Jan 6
+sortdate: 2016/01/06 00:00
+source: Cogn Neurodyn
+title: Children with well controlled epilepsy possess different spatio-temporal patterns
+  of causal network connectivity during a visual working memory task
+uid: '4805687'
+volume: '10'

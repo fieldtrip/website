@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '33316928'
+- idtype: doi
+  value: 10.3390/s20247040
+- idtype: pmcid
+  value: PMC7763560
+authors:
+- authtype: Author
+  name: Thammasan N
+- authtype: Author
+  name: Miyakoshi M
+epubdate: 2020 Dec 9
+fulljournalname: Sensors (Basel, Switzerland)
+issue: '24'
+pages: '7040'
+pmclivedate: 2020/12/27
+printpubdate: ''
+pubdate: 2020 Dec 9
+sortdate: 2020/12/09 00:00
+source: Sensors (Basel)
+title: 'Cross-Frequency Power-Power Coupling Analysis: A Useful Cross-Frequency Measure
+  to Classify ICA-Decomposed EEG'
+uid: '7763560'
+volume: '20'

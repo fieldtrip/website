@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '27818209'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2016.11.001
+- idtype: pmcid
+  value: PMC5315057
+authors:
+- authtype: Author
+  name: Cao L
+- authtype: Author
+  name: Thut G
+- authtype: Author
+  name: Gross J
+epubdate: ''
+fulljournalname: Neuroimage
+issue: ''
+pages: 895-903
+pmclivedate: 2017/02/26
+printpubdate: 2017 Feb 15
+pubdate: 2017 Feb 15
+sortdate: 2017/02/15 00:00
+source: Neuroimage
+title: The role of brain oscillations in predicting self-generated sounds
+uid: '5315057'
+volume: '147'

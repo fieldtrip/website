@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '24023873'
+- idtype: doi
+  value: 10.1371/journal.pone.0073416
+- idtype: pmcid
+  value: PMC3762777
+authors:
+- authtype: Author
+  name: Sasaki T
+- authtype: Author
+  name: Abe M
+- authtype: Author
+  name: Okumura E
+- authtype: Author
+  name: Okada T
+- authtype: Author
+  name: Kondo K
+- authtype: Author
+  name: Sekihara K
+- authtype: Author
+  name: Ide W
+- authtype: Author
+  name: Kamada H
+epubdate: 2013 Sep 4
+fulljournalname: PLoS ONE
+issue: '9'
+pages: e73416
+pmclivedate: 2013/09/10
+printpubdate: ''
+pubdate: 2013 Sep 4
+sortdate: 2013/09/04 00:00
+source: PLoS One
+title: Disturbed Resting Functional Inter-Hemispherical Connectivity of the Ventral
+  Attentional Network in Alpha Band Is Associated with Unilateral Spatial Neglect
+uid: '3762777'
+volume: '8'

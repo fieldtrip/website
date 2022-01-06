@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '24926232'
+- idtype: doi
+  value: 10.3389/fnins.2014.00137
+- idtype: pmcid
+  value: PMC4044900
+authors:
+- authtype: Author
+  name: Scharinger M
+- authtype: Author
+  name: Herrmann B
+- authtype: Author
+  name: Nierhaus T
+- authtype: Author
+  name: Obleser J
+epubdate: 2014 Jun 4
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '137'
+pmclivedate: 2014/06/12
+printpubdate: ''
+pubdate: 2014 Jun 4
+sortdate: 2014/06/04 00:00
+source: Front Neurosci
+title: Simultaneous EEG-fMRI brain signatures of auditory cue utilization
+uid: '4044900'
+volume: '8'

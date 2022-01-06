@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '27626224'
+- idtype: doi
+  value: 10.1162/jocn_a_01043
+- idtype: pmcid
+  value: PMC5199610
+- idtype: MID
+  value: NIHMS822482
+authors:
+- authtype: Author
+  name: Emrich SM
+- authtype: Author
+  name: Johnson JS
+- authtype: Author
+  name: Sutterer DW
+- authtype: Author
+  name: Postle BR
+epubdate: 2016 Sep 14
+fulljournalname: Journal of cognitive neuroscience
+issue: '2'
+pages: 286-297
+pmclivedate: 2017/02/01
+printpubdate: 2017 Feb
+pubdate: 2016 Sep 14
+sortdate: 2016/09/14 00:00
+source: J Cogn Neurosci
+title: Comparing the Effects of 10-Hz Repetitive TMS on Tasks of Visual STM and Attention
+uid: '5199610'
+volume: '29'

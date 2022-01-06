@@ -1,0 +1,42 @@
+articleids:
+- idtype: pmid
+  value: '24592235'
+- idtype: doi
+  value: 10.3389/fninf.2014.00009
+- idtype: pmcid
+  value: PMC3924322
+authors:
+- authtype: Author
+  name: Gómez C
+- authtype: Author
+  name: Lizier JT
+- authtype: Author
+  name: Schaum M
+- authtype: Author
+  name: Wollstadt P
+- authtype: Author
+  name: Grützner C
+- authtype: Author
+  name: Uhlhaas P
+- authtype: Author
+  name: Freitag CM
+- authtype: Author
+  name: Schlitt S
+- authtype: Author
+  name: Bölte S
+- authtype: Author
+  name: Hornero R
+- authtype: Author
+  name: Wibral M
+epubdate: 2014 Feb 14
+fulljournalname: Frontiers in Neuroinformatics
+issue: ''
+pages: '9'
+pmclivedate: 2014/03/03
+printpubdate: ''
+pubdate: 2014 Feb 14
+sortdate: 2014/02/14 00:00
+source: Front Neuroinform
+title: Reduced predictable information in brain signals in autism spectrum disorder
+uid: '3924322'
+volume: '8'

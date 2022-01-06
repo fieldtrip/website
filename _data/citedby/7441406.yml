@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '32820188'
+- idtype: doi
+  value: 10.1038/s41598-020-70447-7
+- idtype: pmcid
+  value: PMC7441406
+authors:
+- authtype: Author
+  name: Bourdillon P
+- authtype: Author
+  name: Hermann B
+- authtype: Author
+  name: Guénot M
+- authtype: Author
+  name: Bastuji H
+- authtype: Author
+  name: Isnard J
+- authtype: Author
+  name: King JR
+- authtype: Author
+  name: Sitt J
+- authtype: Author
+  name: Naccache L
+epubdate: 2020 Aug 20
+fulljournalname: Scientific Reports
+issue: ''
+pages: '14037'
+pmclivedate: 2020/08/26
+printpubdate: ''
+pubdate: 2020 Aug 20
+sortdate: 2020/08/20 00:00
+source: Sci Rep
+title: 'Brain-scale cortico-cortical functional connectivity in the delta-theta band
+  is a robust signature of conscious states: an intracranial and scalp EEG study'
+uid: '7441406'
+volume: '10'

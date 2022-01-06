@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '33937127'
+- idtype: doi
+  value: 10.31661/jbpe.v0i0.801
+- idtype: pmcid
+  value: PMC8064133
+authors:
+- authtype: Author
+  name: Samadzadehaghdam N
+- authtype: Author
+  name: MakkiAbadi B
+- authtype: Author
+  name: Eqlimi E
+- authtype: Author
+  name: Mohagheghian F
+- authtype: Author
+  name: Khajehpoor H
+- authtype: Author
+  name: Harirchian MH
+epubdate: 2021 Apr 1
+fulljournalname: Journal of Biomedical Physics & Engineering
+issue: '2'
+pages: 205-214
+pmclivedate: 2021/04/30
+printpubdate: ''
+pubdate: 2021 Apr 1
+sortdate: 2021/04/01 00:00
+source: J Biomed Phys Eng
+title: Developing a Multi-channel Beamformer by Enhancing Spatially Constrained ICA
+  for Recovery of Correlated EEG Sources
+uid: '8064133'
+volume: '11'

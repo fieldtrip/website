@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '26269631'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0560-15.2015
+- idtype: pmcid
+  value: PMC4532755
+authors:
+- authtype: Author
+  name: Hauser TU
+- authtype: Author
+  name: Hunt LT
+- authtype: Author
+  name: Iannaccone R
+- authtype: Author
+  name: Walitza S
+- authtype: Author
+  name: Brandeis D
+- authtype: Author
+  name: Brem S
+- authtype: Author
+  name: Dolan RJ
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '32'
+pages: 11209-11220
+pmclivedate: 2015/09/03
+printpubdate: 2015 Aug 12
+pubdate: 2015 Aug 12
+sortdate: 2015/08/12 00:00
+source: J Neurosci
+title: Temporally Dissociable Contributions of Human Medial Prefrontal Subregions
+  to Reward-Guided Learning
+uid: '4532755'
+volume: '35'

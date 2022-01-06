@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '29155975'
+- idtype: doi
+  value: 10.1093/brain/awx286
+- idtype: pmcid
+  value: PMC5841147
+authors:
+- authtype: Author
+  name: Yusuf PA
+- authtype: Author
+  name: Hubka P
+- authtype: Author
+  name: Tillein J
+- authtype: Author
+  name: Kral A
+epubdate: 2017 Nov 16
+fulljournalname: Brain
+issue: '12'
+pages: 3153-3165
+pmclivedate: 2018/03/28
+printpubdate: 2017 Dec
+pubdate: 2017 Nov 16
+sortdate: 2017/11/16 00:00
+source: Brain
+title: Induced cortical responses require developmental sensory experience
+uid: '5841147'
+volume: '140'

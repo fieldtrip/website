@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '29386259'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1952-17.2017
+- idtype: pmcid
+  value: PMC6596276
+authors:
+- authtype: Author
+  name: Meijs EL
+- authtype: Author
+  name: Slagter HA
+- authtype: Author
+  name: de Lange FP
+- authtype: Author
+  name: van Gaal S
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '9'
+pages: 2318-2327
+pmclivedate: 2019/06/27
+printpubdate: 2018 Feb 28
+pubdate: 2018 Feb 28
+sortdate: 2018/02/28 00:00
+source: J Neurosci
+title: Dynamic Interactions between Top–Down Expectations and Conscious Awareness
+uid: '6596276'
+volume: '38'

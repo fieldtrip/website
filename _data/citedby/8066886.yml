@@ -1,0 +1,42 @@
+articleids:
+- idtype: pmid
+  value: '33928247'
+- idtype: doi
+  value: 10.1093/braincomms/fcab039
+- idtype: pmcid
+  value: PMC8066886
+authors:
+- authtype: Author
+  name: Weber I
+- authtype: Author
+  name: Niehaus H
+- authtype: Author
+  name: Krause K
+- authtype: Author
+  name: Molitor L
+- authtype: Author
+  name: Peper M
+- authtype: Author
+  name: Schmidt L
+- authtype: Author
+  name: Hakel L
+- authtype: Author
+  name: Timmermann L
+- authtype: Author
+  name: Menzler K
+- authtype: Author
+  name: Knake S
+- authtype: Author
+  name: Oehrn CR
+epubdate: 2021 Mar 14
+fulljournalname: Brain Communications
+issue: '2'
+pages: fcab039
+pmclivedate: 2021/04/28
+printpubdate: ''
+pubdate: 2021 Mar 14
+sortdate: 2021/03/14 00:00
+source: Brain Commun
+title: 'Trust your gut: vagal nerve stimulation in humans improves reinforcement learning'
+uid: '8066886'
+volume: '3'

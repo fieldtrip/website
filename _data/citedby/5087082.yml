@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '27796356'
+- idtype: doi
+  value: 10.1038/srep36229
+- idtype: pmcid
+  value: PMC5087082
+authors:
+- authtype: Author
+  name: Wang L
+- authtype: Author
+  name: Zhou B
+- authtype: Author
+  name: Zhou W
+- authtype: Author
+  name: Yang Y
+epubdate: 2016 Oct 31
+fulljournalname: Scientific Reports
+issue: ''
+pages: '36229'
+pmclivedate: 2016/11/04
+printpubdate: ''
+pubdate: 2016 Oct 31
+sortdate: 2016/10/31 00:00
+source: Sci Rep
+title: Odor-induced mood state modulates language comprehension by affecting processing
+  strategies
+uid: '5087082'
+volume: '6'

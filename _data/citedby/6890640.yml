@@ -1,0 +1,34 @@
+articleids:
+- idtype: pmid
+  value: '31796879'
+- idtype: doi
+  value: 10.1038/s41598-019-54763-1
+- idtype: pmcid
+  value: PMC6890640
+authors:
+- authtype: Author
+  name: Simonet M
+- authtype: Author
+  name: Meziane HB
+- authtype: Author
+  name: Runswick OR
+- authtype: Author
+  name: North JS
+- authtype: Author
+  name: Williams AM
+- authtype: Author
+  name: Barral J
+- authtype: Author
+  name: Roca A
+epubdate: 2019 Dec 3
+fulljournalname: Scientific Reports
+issue: ''
+pages: '18226'
+pmclivedate: 2019/12/10
+printpubdate: ''
+pubdate: 2019 Dec 3
+sortdate: 2019/12/03 00:00
+source: Sci Rep
+title: The modulation of event-related alpha rhythm during the time course of anticipation
+uid: '6890640'
+volume: '9'

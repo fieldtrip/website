@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '29713909'
+- idtype: doi
+  value: 10.1007/s13311-018-0627-2
+- idtype: pmcid
+  value: PMC6095772
+authors:
+- authtype: Author
+  name: Wang H
+- authtype: Author
+  name: Braun C
+- authtype: Author
+  name: Enck P
+epubdate: 2018 Apr 30
+fulljournalname: Neurotherapeutics
+issue: '3'
+pages: 807-818
+pmclivedate: 2019/07/01
+printpubdate: 2018 Jul
+pubdate: 2018 Apr 30
+sortdate: 2018/04/30 00:00
+source: Neurotherapeutics
+title: Effects of Rifaximin on Central Responses to Social Stress—a Pilot Experiment
+uid: '6095772'
+volume: '15'

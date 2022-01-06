@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '29848632'
+- idtype: doi
+  value: 10.1073/pnas.1719433115
+- idtype: pmcid
+  value: PMC6004461
+authors:
+- authtype: Author
+  name: Spyropoulos G
+- authtype: Author
+  name: Bosman CA
+- authtype: Author
+  name: Fries P
+epubdate: 2018 May 30
+fulljournalname: Proceedings of the National Academy of Sciences of the United States
+  of America
+issue: '24'
+pages: E5614-E5623
+pmclivedate: 2018/06/18
+printpubdate: 2018 Jun 12
+pubdate: 2018 May 30
+sortdate: 2018/05/30 00:00
+source: Proc Natl Acad Sci U S A
+title: A theta rhythm in macaque visual cortex and its attentional modulation
+uid: '6004461'
+volume: '115'

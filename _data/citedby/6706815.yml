@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '31474883'
+- idtype: doi
+  value: 10.3389/fpsyt.2019.00562
+- idtype: pmcid
+  value: PMC6706815
+authors:
+- authtype: Author
+  name: Levy J
+- authtype: Author
+  name: Yirmiya K
+- authtype: Author
+  name: Goldstein A
+- authtype: Author
+  name: Feldman R
+epubdate: 2019 Aug 16
+fulljournalname: Frontiers in Psychiatry
+issue: ''
+pages: '562'
+pmclivedate: 2019/08/30
+printpubdate: ''
+pubdate: 2019 Aug 16
+sortdate: 2019/08/16 00:00
+source: Front Psychiatry
+title: The Neural Basis of Empathy and Empathic Behavior in the Context of Chronic
+  Trauma
+uid: '6706815'
+volume: '10'

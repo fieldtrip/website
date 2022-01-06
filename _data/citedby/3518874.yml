@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '23248607'
+- idtype: doi
+  value: 10.3389/fpsyg.2012.00523
+- idtype: pmcid
+  value: PMC3518874
+authors:
+- authtype: Author
+  name: Meyer L
+- authtype: Author
+  name: Obleser J
+- authtype: Author
+  name: Kiebel SJ
+- authtype: Author
+  name: Friederici AD
+epubdate: 2012 Dec 11
+fulljournalname: Frontiers in Psychology
+issue: ''
+pages: '523'
+pmclivedate: 2012/12/17
+printpubdate: ''
+pubdate: 2012 Dec 11
+sortdate: 2012/12/11 00:00
+source: Front Psychol
+title: 'Spatiotemporal Dynamics of Argument Retrieval and Reordering: An fMRI and
+  EEG Study on Sentence Processing'
+uid: '3518874'
+volume: '3'

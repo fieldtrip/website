@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '31428143'
+- idtype: doi
+  value: 10.1155/2019/2689790
+- idtype: pmcid
+  value: PMC6681583
+authors:
+- authtype: Author
+  name: Rumpf JJ
+- authtype: Author
+  name: Barbu A
+- authtype: Author
+  name: Fricke C
+- authtype: Author
+  name: Wegscheider M
+- authtype: Author
+  name: Classen J
+epubdate: 2019 Jul 24
+fulljournalname: Neural Plasticity
+issue: ''
+pages: '2689790'
+pmclivedate: 2019/08/19
+printpubdate: ''
+pubdate: 2019 Jul 24
+sortdate: 2019/07/24 00:00
+source: Neural Plast
+title: Posttraining Alpha Transcranial Alternating Current Stimulation Impairs Motor
+  Consolidation in Elderly People
+uid: '6681583'
+volume: '2019'

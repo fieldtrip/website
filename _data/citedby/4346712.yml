@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '25505108'
+- idtype: doi
+  value: 10.1152/jn.00477.2014
+- idtype: pmcid
+  value: PMC4346712
+authors:
+- authtype: Author
+  name: Gutteling TP
+- authtype: Author
+  name: Selen LP
+- authtype: Author
+  name: Medendorp WP
+epubdate: 2014 Dec 10
+fulljournalname: Journal of Neurophysiology
+issue: '5'
+pages: 1574-1584
+pmclivedate: 2016/03/01
+printpubdate: 2015 Mar 1
+pubdate: 2014 Dec 10
+sortdate: 2014/12/10 00:00
+source: J Neurophysiol
+title: Parallax-sensitive remapping of visual space in occipito-parietal alpha-band
+  activity during whole-body motion
+uid: '4346712'
+volume: '113'

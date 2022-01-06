@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '22975389'
+- idtype: doi
+  value: 10.1093/brain/aws220
+- idtype: pmcid
+  value: PMC3470708
+authors:
+- authtype: Author
+  name: Sedley W
+- authtype: Author
+  name: Teki S
+- authtype: Author
+  name: Kumar S
+- authtype: Author
+  name: Barnes GR
+- authtype: Author
+  name: Bamiou DE
+- authtype: Author
+  name: Griffiths TD
+epubdate: 2012 Sep 13
+fulljournalname: Brain
+issue: '10'
+pages: 3089-3100
+pmclivedate: 2012/10/15
+printpubdate: 2012 Oct
+pubdate: 2012 Sep 13
+sortdate: 2012/09/13 00:00
+source: Brain
+title: Single-subject oscillatory gamma responses in tinnitus
+uid: '3470708'
+volume: '135'

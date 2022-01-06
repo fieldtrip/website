@@ -1,0 +1,48 @@
+articleids:
+- idtype: pmid
+  value: '30700532'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.2842-18.2019
+- idtype: pmcid
+  value: PMC6445998
+authors:
+- authtype: Author
+  name: Chrabaszcz A
+- authtype: Author
+  name: Neumann WJ
+- authtype: Author
+  name: Stretcu O
+- authtype: Author
+  name: Lipski WJ
+- authtype: Author
+  name: Bush A
+- authtype: Author
+  name: Dastolfo-Hromack CA
+- authtype: Author
+  name: Wang D
+- authtype: Author
+  name: Crammond DJ
+- authtype: Author
+  name: Shaiman S
+- authtype: Author
+  name: Dickey MW
+- authtype: Author
+  name: Holt LL
+- authtype: Author
+  name: Turner RS
+- authtype: Author
+  name: Fiez JA
+- authtype: Author
+  name: Richardson RM
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '14'
+pages: 2698-2708
+pmclivedate: 2019/10/03
+printpubdate: 2019 Apr 3
+pubdate: 2019 Apr 3
+sortdate: 2019/04/03 00:00
+source: J Neurosci
+title: Subthalamic Nucleus and Sensorimotor Cortex Activity During Speech Production
+uid: '6445998'
+volume: '39'

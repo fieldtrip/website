@@ -1,0 +1,24 @@
+articleids:
+- idtype: pmid
+  value: '31362956'
+- idtype: doi
+  value: 10.1523/ENEURO.0200-19.2019
+- idtype: pmcid
+  value: PMC6709221
+authors:
+- authtype: Author
+  name: Kim J
+- authtype: Author
+  name: Jeong B
+epubdate: 2019 Aug 8
+fulljournalname: eNeuro
+issue: '4'
+pages: ENEURO.0200-19.2019
+pmclivedate: 2019/08/26
+printpubdate: ''
+pubdate: 2019 Aug 8
+sortdate: 2019/08/08 00:00
+source: eNeuro
+title: Heartbeat Induces a Cortical Theta-Synchronized Network in the Resting State
+uid: '6709221'
+volume: '6'

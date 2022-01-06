@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '31036763'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.2741-18.2019
+- idtype: pmcid
+  value: PMC6607761
+authors:
+- authtype: Author
+  name: Feng K
+- authtype: Author
+  name: Zhao X
+- authtype: Author
+  name: Liu J
+- authtype: Author
+  name: Cai Y
+- authtype: Author
+  name: Ye Z
+- authtype: Author
+  name: Chen C
+- authtype: Author
+  name: Xue G
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '27'
+pages: 5351-5360
+pmclivedate: 2020/01/03
+printpubdate: 2019 Jul 3
+pubdate: 2019 Jul 3
+sortdate: 2019/07/03 00:00
+source: J Neurosci
+title: Spaced Learning Enhances Episodic Memory by Increasing Neural Pattern Similarity
+  Across Repetitions
+uid: '6607761'
+volume: '39'

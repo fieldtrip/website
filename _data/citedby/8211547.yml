@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '33758019'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1740-20.2021
+- idtype: pmcid
+  value: PMC8211547
+authors:
+- authtype: Author
+  name: Candia-Rivera D
+- authtype: Author
+  name: Annen J
+- authtype: Author
+  name: Gosseries O
+- authtype: Author
+  name: Martial C
+- authtype: Author
+  name: Thibaut A
+- authtype: Author
+  name: Laureys S
+- authtype: Author
+  name: Tallon-Baudry C
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '24'
+pages: 5251-5262
+pmclivedate: 2021/12/16
+printpubdate: 2021 Jun 16
+pubdate: 2021 Jun 16
+sortdate: 2021/06/16 00:00
+source: J Neurosci
+title: Neural Responses to Heartbeats Detect Residual Signs of Consciousness during
+  Resting State in Postcomatose Patients
+uid: '8211547'
+volume: '41'

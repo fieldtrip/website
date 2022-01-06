@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '27625617'
+- idtype: doi
+  value: 10.3389/fpsyg.2016.01276
+- idtype: pmcid
+  value: PMC5003887
+authors:
+- authtype: Author
+  name: Dube S
+- authtype: Author
+  name: Kung C
+- authtype: Author
+  name: Peter V
+- authtype: Author
+  name: Brock J
+- authtype: Author
+  name: Demuth K
+epubdate: 2016 Aug 30
+fulljournalname: Frontiers in Psychology
+issue: ''
+pages: '1276'
+pmclivedate: 2016/09/13
+printpubdate: ''
+pubdate: 2016 Aug 30
+sortdate: 2016/08/30 00:00
+source: Front Psychol
+title: 'Effects of Type of Agreement Violation and Utterance Position on the Auditory
+  Processing of Subject-Verb Agreement: An ERP Study'
+uid: '5003887'
+volume: '7'

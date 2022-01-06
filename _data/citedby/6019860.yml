@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '30013931'
+- idtype: doi
+  value: 10.1016/j.ebcr.2018.04.003
+- idtype: pmcid
+  value: PMC6019860
+authors:
+- authtype: Author
+  name: Young JJ
+- authtype: Author
+  name: Friedman JS
+- authtype: Author
+  name: Oxley TJ
+- authtype: Author
+  name: Palmese C
+- authtype: Author
+  name: Panov F
+- authtype: Author
+  name: Ghatan S
+- authtype: Author
+  name: Fifi JT
+- authtype: Author
+  name: Marcuse LV
+epubdate: 2018 Apr 25
+fulljournalname: Epilepsy & Behavior Case Reports
+issue: ''
+pages: 25-28
+pmclivedate: 2018/07/16
+printpubdate: ''
+pubdate: 2018 Apr 25
+sortdate: 2018/04/25 00:00
+source: Epilepsy Behav Case Rep
+title: Intracarotid amobarbital disrupts synchronous and nested oscillatory activity
+  ipsilateral to injection
+uid: '6019860'
+volume: '10'

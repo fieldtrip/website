@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '31510853'
+- idtype: doi
+  value: 10.1177/0271678X19874338
+- idtype: pmcid
+  value: PMC7446560
+authors:
+- authtype: Author
+  name: Quandt F
+- authtype: Author
+  name: Fischer F
+- authtype: Author
+  name: Schröder J
+- authtype: Author
+  name: Heinze M
+- authtype: Author
+  name: Kessner SS
+- authtype: Author
+  name: Malherbe C
+- authtype: Author
+  name: Schulz R
+- authtype: Author
+  name: Cheng B
+- authtype: Author
+  name: Fiehler J
+- authtype: Author
+  name: Gerloff C
+- authtype: Author
+  name: Thomalla G
+epubdate: 2019 Sep 11
+fulljournalname: Journal of Cerebral Blood Flow & Metabolism
+issue: '9'
+pages: 1838-1848
+pmclivedate: 2021/08/18
+printpubdate: 2020 Sep
+pubdate: 2019 Sep 11
+sortdate: 2019/09/11 00:00
+source: J Cereb Blood Flow Metab
+title: Normalization of reduced functional connectivity after revascularization of
+  asymptomatic carotid stenosis
+uid: '7446560'
+volume: '40'

@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '31249507'
+- idtype: doi
+  value: 10.3389/fnins.2019.00612
+- idtype: pmcid
+  value: PMC6582275
+authors:
+- authtype: Author
+  name: Leodori G
+- authtype: Author
+  name: Thirugnanasambandam N
+- authtype: Author
+  name: Conn H
+- authtype: Author
+  name: Popa T
+- authtype: Author
+  name: Berardelli A
+- authtype: Author
+  name: Hallett M
+epubdate: 2019 Jun 12
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '612'
+pmclivedate: 2019/06/27
+printpubdate: ''
+pubdate: 2019 Jun 12
+sortdate: 2019/06/12 00:00
+source: Front Neurosci
+title: 'Intracortical Inhibition and Surround Inhibition in the Motor Cortex: A TMS-EEG
+  Study'
+uid: '6582275'
+volume: '13'

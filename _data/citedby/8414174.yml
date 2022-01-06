@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '34504907'
+- idtype: doi
+  value: 10.1016/j.ynstr.2021.100383
+- idtype: pmcid
+  value: PMC8414174
+authors:
+- authtype: Author
+  name: Heinbockel H
+- authtype: Author
+  name: Quaedflieg CW
+- authtype: Author
+  name: Schneider TR
+- authtype: Author
+  name: Engel AK
+- authtype: Author
+  name: Schwabe L
+epubdate: 2021 Aug 21
+fulljournalname: Neurobiology of Stress
+issue: ''
+pages: '100383'
+pmclivedate: 2021/09/08
+printpubdate: ''
+pubdate: 2021 Aug 21
+sortdate: 2021/08/21 00:00
+source: Neurobiol Stress
+title: Stress enhances emotional memory-related theta oscillations in the medial temporal
+  lobe
+uid: '8414174'
+volume: '15'

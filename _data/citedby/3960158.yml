@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '24646909'
+- idtype: doi
+  value: 10.1371/journal.pone.0091720
+- idtype: pmcid
+  value: PMC3960158
+authors:
+- authtype: Author
+  name: Abeles IY
+- authtype: Author
+  name: Gomez-Ramirez M
+epubdate: 2014 Mar 19
+fulljournalname: PLoS ONE
+issue: '3'
+pages: e91720
+pmclivedate: 2014/03/27
+printpubdate: ''
+pubdate: 2014 Mar 19
+sortdate: 2014/03/19 00:00
+source: PLoS One
+title: Impairments in Background and Event-Related Alpha-Band Oscillatory Activity
+  in Patients with Schizophrenia
+uid: '3960158'
+volume: '9'

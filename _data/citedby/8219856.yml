@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '34177492'
+- idtype: doi
+  value: 10.3389/fnhum.2021.668918
+- idtype: pmcid
+  value: PMC8219856
+authors:
+- authtype: Author
+  name: Rosso M
+- authtype: Author
+  name: Leman M
+- authtype: Author
+  name: Moumdjian L
+epubdate: 2021 Jun 9
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '668918'
+pmclivedate: 2021/06/24
+printpubdate: ''
+pubdate: 2021 Jun 9
+sortdate: 2021/06/09 00:00
+source: Front Hum Neurosci
+title: 'Neural Entrainment Meets Behavior: The Stability Index as a Neural Outcome
+  Measure of Auditory-Motor Coupling'
+uid: '8219856'
+volume: '15'

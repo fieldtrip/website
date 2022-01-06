@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '32366722'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1172-19.2020
+- idtype: pmcid
+  value: PMC7314418
+authors:
+- authtype: Author
+  name: Tankelevitch L
+- authtype: Author
+  name: Spaak E
+- authtype: Author
+  name: Rushworth MF
+- authtype: Author
+  name: Stokes MG
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '26'
+pages: 5033-5050
+pmclivedate: 2020/06/25
+printpubdate: 2020 Jun 24
+pubdate: 2020 Jun 24
+sortdate: 2020/06/24 00:00
+source: J Neurosci
+title: Previously Reward-Associated Stimuli Capture Spatial Attention in the Absence
+  of Changes in the Corresponding Sensory Representations as Measured with MEG
+uid: '7314418'
+volume: '40'

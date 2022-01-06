@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '28044016'
+- idtype: doi
+  value: 10.1098/rstb.2016.0105
+- idtype: pmcid
+  value: PMC5206273
+authors:
+- authtype: Author
+  name: Southwell R
+- authtype: Author
+  name: Baumann A
+- authtype: Author
+  name: Gal C
+- authtype: Author
+  name: Barascud N
+- authtype: Author
+  name: Friston K
+- authtype: Author
+  name: Chait M
+epubdate: ''
+fulljournalname: 'Philosophical Transactions of the Royal Society B: Biological Sciences'
+issue: '1714'
+pages: '20160105'
+pmclivedate: 2017/02/19
+printpubdate: 2017 Feb 19
+pubdate: 2017 Feb 19
+sortdate: 2017/02/19 00:00
+source: Philos Trans R Soc Lond B Biol Sci
+title: Is predictability salient? A study of attentional capture by auditory patterns
+uid: '5206273'
+volume: '372'

@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '30356912'
+- idtype: doi
+  value: 10.1093/nc/niw003
+- idtype: pmcid
+  value: PMC6192383
+authors:
+- authtype: Author
+  name: Dijkstra N
+- authtype: Author
+  name: van de Nieuwenhuijzen ME
+- authtype: Author
+  name: van Gerven MA
+epubdate: 2016 Mar 9
+fulljournalname: Neuroscience of Consciousness
+issue: '1'
+pages: niw003
+pmclivedate: 2018/10/23
+printpubdate: 2016 Jan
+pubdate: 2016 Mar 9
+sortdate: 2016/03/09 00:00
+source: Neurosci Conscious
+title: 'The spatiotemporal dynamics of binocular rivalry: evidence for increased top-down
+  flow prior to a perceptual switch'
+uid: '6192383'
+volume: '2016'

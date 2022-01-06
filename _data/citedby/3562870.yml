@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '23303925'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.2573-12.2013
+- idtype: pmcid
+  value: PMC3562870
+authors:
+- authtype: Author
+  name: Guitart-Masip M
+- authtype: Author
+  name: Barnes GR
+- authtype: Author
+  name: Horner A
+- authtype: Author
+  name: Bauer M
+- authtype: Author
+  name: Dolan RJ
+- authtype: Author
+  name: Duzel E
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '2'
+pages: 442-451
+pmclivedate: 2013/07/09
+printpubdate: 2013 Jan 9
+pubdate: 2013 Jan 9
+sortdate: 2013/01/09 00:00
+source: J Neurosci
+title: Synchronization of Medial Temporal Lobe and Prefrontal Rhythms in Human Decision
+  Making
+uid: '3562870'
+volume: '33'

@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '28912698'
+- idtype: doi
+  value: 10.3389/fnhum.2017.00416
+- idtype: pmcid
+  value: PMC5582079
+authors:
+- authtype: Author
+  name: Antonakakis M
+- authtype: Author
+  name: Dimitriadis SI
+- authtype: Author
+  name: Zervakis M
+- authtype: Author
+  name: Papanicolaou AC
+- authtype: Author
+  name: Zouridakis G
+epubdate: 2017 Aug 30
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '416'
+pmclivedate: 2017/09/14
+printpubdate: ''
+pubdate: 2017 Aug 30
+sortdate: 2017/08/30 00:00
+source: Front Hum Neurosci
+title: 'Altered Rich-Club and Frequency-Dependent Subnetwork Organization in Mild
+  Traumatic Brain Injury: A MEG Resting-State Study'
+uid: '5582079'
+volume: '11'

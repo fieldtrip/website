@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '25122885'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0581-14.2014
+- idtype: pmcid
+  value: PMC6705257
+authors:
+- authtype: Author
+  name: Zäske R
+- authtype: Author
+  name: Volberg G
+- authtype: Author
+  name: Kovács G
+- authtype: Author
+  name: Schweinberger SR
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '33'
+pages: 10821-10831
+pmclivedate: 2019/08/22
+printpubdate: 2014 Aug 13
+pubdate: 2014 Aug 13
+sortdate: 2014/08/13 00:00
+source: J Neurosci
+title: Electrophysiological Correlates of Voice Learning and Recognition
+uid: '6705257'
+volume: '34'

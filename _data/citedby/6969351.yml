@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '30415185'
+- idtype: doi
+  value: 10.1016/j.dcn.2018.08.001
+- idtype: pmcid
+  value: PMC6969351
+authors:
+- authtype: Author
+  name: Yuk V
+- authtype: Author
+  name: Urbain C
+- authtype: Author
+  name: Pang EW
+- authtype: Author
+  name: Anagnostou E
+- authtype: Author
+  name: Buchsbaum D
+- authtype: Author
+  name: Taylor MJ
+epubdate: 2018 Sep 29
+fulljournalname: Developmental Cognitive Neuroscience
+issue: ''
+pages: 139-147
+pmclivedate: 2020/01/21
+printpubdate: ''
+pubdate: 2018 Sep 29
+sortdate: 2018/09/29 00:00
+source: Dev Cogn Neurosci
+title: Do you know what I’m thinking? Temporal and spatial brain activity during a
+  theory-of-mind task in children with autism
+uid: '6969351'
+volume: '34'

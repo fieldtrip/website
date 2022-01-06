@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '30763880'
+- idtype: doi
+  value: 10.1016/j.neurobiolaging.2019.01.005
+- idtype: pmcid
+  value: PMC6692140
+- idtype: MID
+  value: NIHMS1043620
+authors:
+- authtype: Author
+  name: Strunk J
+- authtype: Author
+  name: Duarte A
+epubdate: 2019 Jan 21
+fulljournalname: Neurobiology of aging
+issue: ''
+pages: 1-12
+pmclivedate: 2019/08/13
+printpubdate: 2019 May
+pubdate: 2019 Jan 21
+sortdate: 2019/01/21 00:00
+source: Neurobiol Aging
+title: Prestimulus and poststimulus oscillatory activity predicts successful episodic
+  encoding for both young and older adults
+uid: '6692140'
+volume: '77'

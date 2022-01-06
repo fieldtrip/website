@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '29868897'
+- idtype: doi
+  value: 10.1093/scan/nsy041
+- idtype: pmcid
+  value: PMC6022568
+authors:
+- authtype: Author
+  name: Eichenlaub JB
+- authtype: Author
+  name: van Rijn E
+- authtype: Author
+  name: Gaskell MG
+- authtype: Author
+  name: Lewis PA
+- authtype: Author
+  name: Maby E
+- authtype: Author
+  name: Malinowski JE
+- authtype: Author
+  name: Walker MP
+- authtype: Author
+  name: Boy F
+- authtype: Author
+  name: Blagrove M
+epubdate: 2018 Jun 4
+fulljournalname: Social Cognitive and Affective Neuroscience
+issue: '6'
+pages: 637-647
+pmclivedate: 2018/07/10
+printpubdate: ''
+pubdate: 2018 Jun 4
+sortdate: 2018/06/04 00:00
+source: Soc Cogn Affect Neurosci
+title: Incorporation of recent waking-life experiences in dreams correlates with frontal
+  theta activity in REM sleep
+uid: '6022568'
+volume: '13'

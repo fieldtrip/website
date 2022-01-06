@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '24089489'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1790-13.2013
+- idtype: pmcid
+  value: PMC3787500
+authors:
+- authtype: Author
+  name: Oswal A
+- authtype: Author
+  name: Litvak V
+- authtype: Author
+  name: Brücke C
+- authtype: Author
+  name: Huebl J
+- authtype: Author
+  name: Schneider GH
+- authtype: Author
+  name: Kühn AA
+- authtype: Author
+  name: Brown P
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '40'
+pages: 15815-15826
+pmclivedate: 2013/10/30
+printpubdate: 2013 Oct 2
+pubdate: 2013 Oct 2
+sortdate: 2013/10/02 00:00
+source: J Neurosci
+title: Cognitive Factors Modulate Activity within the Human Subthalamic Nucleus during
+  Voluntary Movement in Parkinson's Disease
+uid: '3787500'
+volume: '33'

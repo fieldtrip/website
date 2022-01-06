@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '33931831'
+- idtype: doi
+  value: 10.3758/s13415-021-00904-x
+- idtype: pmcid
+  value: PMC8455391
+authors:
+- authtype: Author
+  name: Huvermann DM
+- authtype: Author
+  name: Bellebaum C
+- authtype: Author
+  name: Peterburs J
+epubdate: 2021 Apr 30
+fulljournalname: Cognitive, Affective & Behavioral Neuroscience
+issue: '5'
+pages: 1010-1025
+pmclivedate: 2021/10/05
+printpubdate: '2021'
+pubdate: 2021 Apr 30
+sortdate: 2021/04/30 00:00
+source: Cogn Affect Behav Neurosci
+title: Selective Devaluation Affects the Processing of Preferred Rewards
+uid: '8455391'
+volume: '21'

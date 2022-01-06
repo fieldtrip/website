@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '21925281'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2011.08.098
+- idtype: pmcid
+  value: PMC3236996
+authors:
+- authtype: Author
+  name: Sedley W
+- authtype: Author
+  name: Teki S
+- authtype: Author
+  name: Kumar S
+- authtype: Author
+  name: Overath T
+- authtype: Author
+  name: Barnes GR
+- authtype: Author
+  name: Griffiths TD
+epubdate: ''
+fulljournalname: Neuroimage
+issue: 2-5
+pages: 1904-1911
+pmclivedate: 2012/01/16
+printpubdate: 2012 Jan 16
+pubdate: 2012 Jan 16
+sortdate: 2012/01/16 00:00
+source: Neuroimage
+title: Gamma band pitch responses in human auditory cortex measured with magnetoencephalography
+uid: '3236996'
+volume: '59'

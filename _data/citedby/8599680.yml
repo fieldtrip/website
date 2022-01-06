@@ -1,0 +1,45 @@
+articleids:
+- idtype: pmid
+  value: '34789806'
+- idtype: doi
+  value: 10.1038/s41598-021-01854-7
+- idtype: pmcid
+  value: PMC8599680
+authors:
+- authtype: Author
+  name: Gialopsou A
+- authtype: Author
+  name: Abel C
+- authtype: Author
+  name: James TM
+- authtype: Author
+  name: Coussens T
+- authtype: Author
+  name: Bason MG
+- authtype: Author
+  name: Puddy R
+- authtype: Author
+  name: Di Lorenzo F
+- authtype: Author
+  name: Rolfs K
+- authtype: Author
+  name: Voigt J
+- authtype: Author
+  name: Sander T
+- authtype: Author
+  name: Cercignani M
+- authtype: Author
+  name: Krüger P
+epubdate: 2021 Nov 17
+fulljournalname: Scientific Reports
+issue: ''
+pages: '22412'
+pmclivedate: 2021/11/19
+printpubdate: ''
+pubdate: 2021 Nov 17
+sortdate: 2021/11/17 00:00
+source: Sci Rep
+title: Improved spatio-temporal measurements of visually evoked fields using optically-pumped
+  magnetometers
+uid: '8599680'
+volume: '11'

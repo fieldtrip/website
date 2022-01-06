@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '28553210'
+- idtype: doi
+  value: 10.3389/fnbeh.2017.00087
+- idtype: pmcid
+  value: PMC5427543
+authors:
+- authtype: Author
+  name: van Heck CH
+- authtype: Author
+  name: Oosterman JM
+- authtype: Author
+  name: de Kleijn KM
+- authtype: Author
+  name: Jongsma ML
+- authtype: Author
+  name: van Rijn CM
+epubdate: 2017 May 12
+fulljournalname: Frontiers in Behavioral Neuroscience
+issue: ''
+pages: '87'
+pmclivedate: 2017/05/26
+printpubdate: ''
+pubdate: 2017 May 12
+sortdate: 2017/05/12 00:00
+source: Front Behav Neurosci
+title: Evidence for a Priori Existence of Attentional Bias Subgroups in Emotional
+  Processing of Aversive Stimuli
+uid: '5427543'
+volume: '11'

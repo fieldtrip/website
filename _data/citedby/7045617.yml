@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '30176578'
+- idtype: doi
+  value: 10.1109/TBME.2018.2867112
+- idtype: pmcid
+  value: PMC7045617
+- idtype: MID
+  value: NIHMS1525356
+authors:
+- authtype: Author
+  name: Chamanzar A
+- authtype: Author
+  name: George S
+- authtype: Author
+  name: Venkatesh P
+- authtype: Author
+  name: Chamanzar M
+- authtype: Author
+  name: Shutter L
+- authtype: Author
+  name: Elmer J
+- authtype: Author
+  name: Grover P
+epubdate: 2018 Aug 24
+fulljournalname: IEEE transactions on bio-medical engineering
+issue: '4'
+pages: 1115-1126
+pmclivedate: 2020/04/01
+printpubdate: 2019 Apr
+pubdate: 2018 Aug 24
+sortdate: 2018/08/24 00:00
+source: IEEE Trans Biomed Eng
+title: An algorithm for automated, noninvasive detection of cortical spreading depolarizations
+  based on EEG simulations
+uid: '7045617'
+volume: '66'

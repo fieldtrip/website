@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '29485404'
+- idtype: doi
+  value: 10.7554/eLife.30387
+- idtype: pmcid
+  value: PMC5828660
+authors:
+- authtype: Author
+  name: Ozker M
+- authtype: Author
+  name: Yoshor D
+- authtype: Author
+  name: Beauchamp MS
+epubdate: 2018 Feb 27
+fulljournalname: eLife
+issue: ''
+pages: e30387
+pmclivedate: 2018/02/28
+printpubdate: ''
+pubdate: 2018 Feb 27
+sortdate: 2018/02/27 00:00
+source: eLife
+title: Frontal cortex selects representations of the talker’s mouth to aid in speech
+  perception
+uid: '5828660'
+volume: '7'

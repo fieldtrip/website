@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '29902586'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2018.06.033
+- idtype: pmcid
+  value: PMC6057270
+authors:
+- authtype: Author
+  name: Dima DC
+- authtype: Author
+  name: Perry G
+- authtype: Author
+  name: Singh KD
+epubdate: ''
+fulljournalname: Neuroimage
+issue: ''
+pages: 102-116
+pmclivedate: 2018/10/01
+printpubdate: 2018 Oct 1
+pubdate: 2018 Oct 1
+sortdate: 2018/10/01 00:00
+source: Neuroimage
+title: Spatial frequency supports the emergence of categorical representations in
+  visual cortex during natural scene perception
+uid: '6057270'
+volume: '179'

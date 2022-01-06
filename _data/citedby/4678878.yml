@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '26666393'
+- idtype: doi
+  value: 10.1038/srep18253
+- idtype: pmcid
+  value: PMC4678878
+authors:
+- authtype: Author
+  name: Mostert P
+- authtype: Author
+  name: Kok P
+- authtype: Author
+  name: de Lange FP
+epubdate: 2015 Dec 15
+fulljournalname: Scientific Reports
+issue: ''
+pages: '18253'
+pmclivedate: 2015/12/18
+printpubdate: ''
+pubdate: 2015 Dec 15
+sortdate: 2015/12/15 00:00
+source: Sci Rep
+title: Dissociating sensory from decision processes in human perceptual decision making
+uid: '4678878'
+volume: '5'

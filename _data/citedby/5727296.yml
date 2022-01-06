@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '29234128'
+- idtype: doi
+  value: 10.1038/s41598-017-17766-4
+- idtype: pmcid
+  value: PMC5727296
+authors:
+- authtype: Author
+  name: Waschke L
+- authtype: Author
+  name: Wöstmann M
+- authtype: Author
+  name: Obleser J
+epubdate: 2017 Dec 12
+fulljournalname: Scientific Reports
+issue: ''
+pages: '17381'
+pmclivedate: 2017/12/13
+printpubdate: ''
+pubdate: 2017 Dec 12
+sortdate: 2017/12/12 00:00
+source: Sci Rep
+title: States and traits of neural irregularity in the age-varying human brain
+uid: '5727296'
+volume: '7'

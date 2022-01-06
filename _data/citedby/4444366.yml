@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '25706471'
+- idtype: doi
+  value: 10.1038/nn.3954
+- idtype: pmcid
+  value: PMC4444366
+- idtype: MID
+  value: NIHMS684703
+authors:
+- authtype: Author
+  name: Brincat SL
+- authtype: Author
+  name: Miller EK
+epubdate: 2015 Feb 23
+fulljournalname: Nature neuroscience
+issue: '4'
+pages: 576-581
+pmclivedate: 2015/10/01
+printpubdate: 2015 Apr
+pubdate: 2015 Feb 23
+sortdate: 2015/02/23 00:00
+source: Nat Neurosci
+title: Frequency-specific hippocampal-prefrontal interactions during associative learning
+uid: '4444366'
+volume: '18'

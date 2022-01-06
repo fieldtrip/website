@@ -1,0 +1,53 @@
+articleids:
+- idtype: pmid
+  value: '33408621'
+- idtype: doi
+  value: 10.3389/fnhum.2020.555054
+- idtype: pmcid
+  value: PMC7779799
+authors:
+- authtype: Author
+  name: Archila-Meléndez ME
+- authtype: Author
+  name: Valente G
+- authtype: Author
+  name: Gommer ED
+- authtype: Author
+  name: Correia JM
+- authtype: Author
+  name: ten Oever S
+- authtype: Author
+  name: Peters JC
+- authtype: Author
+  name: Reithler J
+- authtype: Author
+  name: Hendriks MP
+- authtype: Author
+  name: Cornejo Ochoa W
+- authtype: Author
+  name: Schijns OE
+- authtype: Author
+  name: Dings JT
+- authtype: Author
+  name: Hilkman DM
+- authtype: Author
+  name: Rouhl RP
+- authtype: Author
+  name: Jansma BM
+- authtype: Author
+  name: van Kranen-Mastenbroek VH
+- authtype: Author
+  name: Roberts MJ
+epubdate: 2020 Dec 21
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '555054'
+pmclivedate: 2021/01/05
+printpubdate: ''
+pubdate: 2020 Dec 21
+sortdate: 2020/12/21 00:00
+source: Front Hum Neurosci
+title: Combining Gamma With Alpha and Beta Power Modulation for Enhanced Cortical
+  Mapping in Patients With Focal Epilepsy
+uid: '7779799'
+volume: '14'

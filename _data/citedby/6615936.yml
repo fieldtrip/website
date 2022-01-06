@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '30998517'
+- idtype: doi
+  value: 10.14309/ajg.0000000000000203
+- idtype: pmcid
+  value: PMC6615936
+authors:
+- authtype: Author
+  name: Wang H
+- authtype: Author
+  name: Braun C
+- authtype: Author
+  name: Murphy EF
+- authtype: Author
+  name: Enck P
+epubdate: 2019 Apr 17
+fulljournalname: The American Journal of Gastroenterology
+issue: '7'
+pages: 1152-1162
+pmclivedate: 2019/07/22
+printpubdate: 2019 Jul
+pubdate: 2019 Apr 17
+sortdate: 2019/04/17 00:00
+source: Am J Gastroenterol
+title: Bifidobacterium longum 1714™ Strain Modulates Brain Activity of Healthy Volunteers
+  During Social Stress
+uid: '6615936'
+volume: '114'

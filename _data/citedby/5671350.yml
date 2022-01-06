@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '28757195'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2017.07.056
+- idtype: pmcid
+  value: PMC5671350
+- idtype: MID
+  value: NIHMS896926
+authors:
+- authtype: Author
+  name: Costa-Faidella J
+- authtype: Author
+  name: Sussman ES
+- authtype: Author
+  name: Escera C
+epubdate: 2017 Jul 27
+fulljournalname: NeuroImage
+issue: ''
+pages: 195-206
+pmclivedate: 2018/10/01
+printpubdate: 2017 Oct 1
+pubdate: 2017 Jul 27
+sortdate: 2017/07/27 00:00
+source: Neuroimage
+title: Selective entrainment of brain oscillations drives auditory perceptual organization
+uid: '5671350'
+volume: '159'

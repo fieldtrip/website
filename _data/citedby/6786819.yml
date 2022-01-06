@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '31399532'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0197-19.2019
+- idtype: pmcid
+  value: PMC6786819
+authors:
+- authtype: Author
+  name: Sommer VR
+- authtype: Author
+  name: Fandakova Y
+- authtype: Author
+  name: Grandy TH
+- authtype: Author
+  name: Shing YL
+- authtype: Author
+  name: Werkle-Bergner M
+- authtype: Author
+  name: Sander MC
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '41'
+pages: 8089-8099
+pmclivedate: 2020/04/09
+printpubdate: 2019 Oct 9
+pubdate: 2019 Oct 9
+sortdate: 2019/10/09 00:00
+source: J Neurosci
+title: Neural Pattern Similarity Differentially Relates to Memory Performance in Younger
+  and Older Adults
+uid: '6786819'
+volume: '39'

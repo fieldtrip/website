@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '32477223'
+- idtype: doi
+  value: 10.3389/fpsyg.2020.00931
+- idtype: pmcid
+  value: PMC7236766
+authors:
+- authtype: Author
+  name: Kang H
+- authtype: Author
+  name: An SC
+- authtype: Author
+  name: Kim NO
+- authtype: Author
+  name: Sung M
+- authtype: Author
+  name: Kang Y
+- authtype: Author
+  name: Lee US
+- authtype: Author
+  name: Yang HJ
+epubdate: 2020 May 12
+fulljournalname: Frontiers in Psychology
+issue: ''
+pages: '931'
+pmclivedate: 2020/05/29
+printpubdate: ''
+pubdate: 2020 May 12
+sortdate: 2020/05/12 00:00
+source: Front Psychol
+title: 'Meditative Movement Affects Working Memory Related to Neural Activity in Adolescents:
+  A Randomized Controlled Trial'
+uid: '7236766'
+volume: '11'

@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '26864304'
+- idtype: doi
+  value: 10.1038/srep20805
+- idtype: pmcid
+  value: PMC4749972
+authors:
+- authtype: Author
+  name: Frey JN
+- authtype: Author
+  name: Ruhnau P
+- authtype: Author
+  name: Leske S
+- authtype: Author
+  name: Siegel M
+- authtype: Author
+  name: Braun C
+- authtype: Author
+  name: Weisz N
+epubdate: 2016 Feb 11
+fulljournalname: Scientific Reports
+issue: ''
+pages: '20805'
+pmclivedate: 2016/02/17
+printpubdate: ''
+pubdate: 2016 Feb 11
+sortdate: 2016/02/11 00:00
+source: Sci Rep
+title: The Tactile Window to Consciousness is Characterized by Frequency-Specific
+  Integration and Segregation of the Primary Somatosensory Cortex
+uid: '4749972'
+volume: '6'

@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '24205309'
+- idtype: doi
+  value: 10.1371/journal.pone.0078758
+- idtype: pmcid
+  value: PMC3812144
+authors:
+- authtype: Author
+  name: Henry MJ
+- authtype: Author
+  name: Obleser J
+epubdate: 2013 Oct 29
+fulljournalname: PLoS ONE
+issue: '10'
+pages: e78758
+pmclivedate: 2013/11/07
+printpubdate: ''
+pubdate: 2013 Oct 29
+sortdate: 2013/10/29 00:00
+source: PLoS One
+title: Dissociable Neural Response Signatures for Slow Amplitude and Frequency Modulation
+  in Human Auditory Cortex
+uid: '3812144'
+volume: '8'

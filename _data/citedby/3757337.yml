@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '24009562'
+- idtype: doi
+  value: 10.3389/fnsys.2013.00043
+- idtype: pmcid
+  value: PMC3757337
+authors:
+- authtype: Author
+  name: Hoffman KL
+- authtype: Author
+  name: Dragan MC
+- authtype: Author
+  name: Leonard TK
+- authtype: Author
+  name: Micheli C
+- authtype: Author
+  name: Montefusco-Siegmund R
+- authtype: Author
+  name: Valiante TA
+epubdate: 2013 Aug 30
+fulljournalname: Frontiers in Systems Neuroscience
+issue: ''
+pages: '43'
+pmclivedate: 2013/09/05
+printpubdate: ''
+pubdate: 2013 Aug 30
+sortdate: 2013/08/30 00:00
+source: Front Syst Neurosci
+title: Saccades during visual exploration align hippocampal 3–8 Hz rhythms in human
+  and non-human primates
+uid: '3757337'
+volume: '7'

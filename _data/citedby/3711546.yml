@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '23345218'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.3675-12.2013
+- idtype: pmcid
+  value: PMC3711546
+authors:
+- authtype: Author
+  name: Zion Golumbic E
+- authtype: Author
+  name: Cogan GB
+- authtype: Author
+  name: Schroeder CE
+- authtype: Author
+  name: Poeppel D
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '4'
+pages: 1417-1426
+pmclivedate: 2013/07/23
+printpubdate: 2013 Jan 23
+pubdate: 2013 Jan 23
+sortdate: 2013/01/23 00:00
+source: J Neurosci
+title: Visual Input Enhances Selective Speech Envelope Tracking in Auditory Cortex
+  at a “Cocktail Party”
+uid: '3711546'
+volume: '33'

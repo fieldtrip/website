@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '27307244'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0902-16.2016
+- idtype: pmcid
+  value: PMC6601917
+authors:
+- authtype: Author
+  name: Andrillon T
+- authtype: Author
+  name: Poulsen AT
+- authtype: Author
+  name: Hansen LK
+- authtype: Author
+  name: Léger D
+- authtype: Author
+  name: Kouider S
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '24'
+pages: 6583-6596
+pmclivedate: 2019/07/12
+printpubdate: 2016 Jun 15
+pubdate: 2016 Jun 15
+sortdate: 2016/06/15 00:00
+source: J Neurosci
+title: Neural Markers of Responsiveness to the Environment in Human Sleep
+uid: '6601917'
+volume: '36'

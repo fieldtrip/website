@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '33893294'
+- idtype: doi
+  value: 10.1038/s41467-021-22511-7
+- idtype: pmcid
+  value: PMC8065126
+authors:
+- authtype: Author
+  name: Kosciessa JQ
+- authtype: Author
+  name: Lindenberger U
+- authtype: Author
+  name: Garrett DD
+epubdate: 2021 Apr 23
+fulljournalname: Nature Communications
+issue: ''
+pages: '2430'
+pmclivedate: 2021/05/11
+printpubdate: ''
+pubdate: 2021 Apr 23
+sortdate: 2021/04/23 00:00
+source: Nat Commun
+title: Thalamocortical excitability modulation guides human perception under uncertainty
+uid: '8065126'
+volume: '12'

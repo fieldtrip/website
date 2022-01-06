@@ -1,0 +1,34 @@
+articleids:
+- idtype: pmid
+  value: '29068830'
+- idtype: doi
+  value: 10.1097/ALN.0000000000001940
+- idtype: pmcid
+  value: PMC5771969
+- idtype: MID
+  value: NIHMS908836
+authors:
+- authtype: Author
+  name: Malekmohammadi M
+- authtype: Author
+  name: AuYong N
+- authtype: Author
+  name: Price CM
+- authtype: Author
+  name: Tsolaki E
+- authtype: Author
+  name: Hudson AE
+- authtype: Author
+  name: Pouratian N
+epubdate: ''
+fulljournalname: Anesthesiology
+issue: '2'
+pages: 305-316
+pmclivedate: 2019/02/01
+printpubdate: 2018 Feb
+pubdate: 2018 Feb
+sortdate: 2018/02/01 00:00
+source: Anesthesiology
+title: Propofol-induced changes in α-β sensorimotor cortical connectivity
+uid: '5771969'
+volume: '128'

@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '34667640'
+- idtype: doi
+  value: 10.1093/nc/niab033
+- idtype: pmcid
+  value: PMC8520048
+authors:
+- authtype: Author
+  name: Schwartz R
+- authtype: Author
+  name: Rozier C
+- authtype: Author
+  name: Seidel Malkinson T
+- authtype: Author
+  name: Lehongre K
+- authtype: Author
+  name: Adam C
+- authtype: Author
+  name: Lambrecq V
+- authtype: Author
+  name: Navarro V
+- authtype: Author
+  name: Naccache L
+- authtype: Author
+  name: Axelrod V
+epubdate: 2021 Oct 16
+fulljournalname: Neuroscience of Consciousness
+issue: '2'
+pages: niab033
+pmclivedate: 2021/10/18
+printpubdate: ''
+pubdate: 2021 Oct 16
+sortdate: 2021/10/16 00:00
+source: Neurosci Conscious
+title: Comparing stimulus-evoked and spontaneous response of the face-selective multi-units
+  in the human posterior fusiform gyrus
+uid: '8520048'
+volume: '2021'

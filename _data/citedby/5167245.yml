@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '28018852'
+- idtype: doi
+  value: 10.1016/j.nicl.2016.12.001
+- idtype: pmcid
+  value: PMC5167245
+authors:
+- authtype: Author
+  name: Schönherr M
+- authtype: Author
+  name: Stefan H
+- authtype: Author
+  name: Hamer HM
+- authtype: Author
+  name: Rössler K
+- authtype: Author
+  name: Buchfelder M
+- authtype: Author
+  name: Rampp S
+epubdate: 2016 Dec 5
+fulljournalname: 'NeuroImage : Clinical'
+issue: ''
+pages: 256-263
+pmclivedate: 2016/12/23
+printpubdate: ''
+pubdate: 2016 Dec 5
+sortdate: 2016/12/05 00:00
+source: Neuroimage Clin
+title: 'The delta between postoperative seizure freedom and persistence: Automatically
+  detected focal slow waves after epilepsy surgery'
+uid: '5167245'
+volume: '13'

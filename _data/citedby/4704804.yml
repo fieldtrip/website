@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '26741815'
+- idtype: doi
+  value: 10.1371/journal.pone.0146567
+- idtype: pmcid
+  value: PMC4704804
+authors:
+- authtype: Author
+  name: Wiens S
+- authtype: Author
+  name: Szychowska M
+- authtype: Author
+  name: Nilsson ME
+epubdate: 2016 Jan 7
+fulljournalname: PLoS ONE
+issue: '1'
+pages: e0146567
+pmclivedate: 2016/01/15
+printpubdate: ''
+pubdate: 2016 Jan 7
+sortdate: 2016/01/07 00:00
+source: PLoS One
+title: 'Visual Task Demands and the Auditory Mismatch Negativity: An Empirical Study
+  and a Meta-Analysis'
+uid: '4704804'
+volume: '11'

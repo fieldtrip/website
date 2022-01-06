@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '23426676'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.3208-12.2013
+- idtype: pmcid
+  value: PMC6619549
+authors:
+- authtype: Author
+  name: Buchholz VN
+- authtype: Author
+  name: Jensen O
+- authtype: Author
+  name: Medendorp WP
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '8'
+pages: 3492-3499
+pmclivedate: 2019/07/11
+printpubdate: 2013 Feb 20
+pubdate: 2013 Feb 20
+sortdate: 2013/02/20 00:00
+source: J Neurosci
+title: Parietal Oscillations Code Nonvisual Reach Targets Relative to Gaze and Body
+uid: '6619549'
+volume: '33'

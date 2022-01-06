@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '28800118'
+- idtype: doi
+  value: 10.3390/s17081860
+- idtype: pmcid
+  value: PMC5579488
+authors:
+- authtype: Author
+  name: Hu Y
+- authtype: Author
+  name: Lin Y
+- authtype: Author
+  name: Yang B
+- authtype: Author
+  name: Tang G
+- authtype: Author
+  name: Liu T
+- authtype: Author
+  name: Wang Y
+- authtype: Author
+  name: Zhang J
+epubdate: 2017 Aug 11
+fulljournalname: Sensors (Basel, Switzerland)
+issue: '8'
+pages: '1860'
+pmclivedate: 2017/09/06
+printpubdate: ''
+pubdate: 2017 Aug 11
+sortdate: 2017/08/11 00:00
+source: Sensors (Basel)
+title: Deep Source Localization with Magnetoencephalography Based on Sensor Array
+  Decomposition and Beamforming
+uid: '5579488'
+volume: '17'

@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '31572116'
+- idtype: doi
+  value: 10.3389/fnins.2019.00964
+- idtype: pmcid
+  value: PMC6751382
+authors:
+- authtype: Author
+  name: Marzetti L
+- authtype: Author
+  name: Basti A
+- authtype: Author
+  name: Chella F
+- authtype: Author
+  name: D'Andrea A
+- authtype: Author
+  name: Syrjälä J
+- authtype: Author
+  name: Pizzella V
+epubdate: 2019 Sep 12
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '964'
+pmclivedate: 2019/09/30
+printpubdate: ''
+pubdate: 2019 Sep 12
+sortdate: 2019/09/12 00:00
+source: Front Neurosci
+title: 'Brain Functional Connectivity Through Phase Coupling of Neuronal Oscillations:
+  A Perspective From Magnetoencephalography'
+uid: '6751382'
+volume: '13'

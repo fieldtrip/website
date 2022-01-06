@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '34615914'
+- idtype: doi
+  value: 10.1038/s41598-021-99043-z
+- idtype: pmcid
+  value: PMC8494897
+authors:
+- authtype: Author
+  name: Kang K
+- authtype: Author
+  name: Alexander N
+- authtype: Author
+  name: Wessel JR
+- authtype: Author
+  name: Wimberger P
+- authtype: Author
+  name: Nitzsche K
+- authtype: Author
+  name: Kirschbaum C
+- authtype: Author
+  name: Li SC
+epubdate: 2021 Oct 6
+fulljournalname: Scientific Reports
+issue: ''
+pages: '19844'
+pmclivedate: 2021/10/08
+printpubdate: ''
+pubdate: 2021 Oct 6
+sortdate: 2021/10/06 00:00
+source: Sci Rep
+title: Neurocognitive development of novelty and error monitoring in children and
+  adolescents
+uid: '8494897'
+volume: '11'

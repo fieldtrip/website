@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '27065781'
+- idtype: doi
+  value: 10.3389/fnins.2016.00110
+- idtype: pmcid
+  value: PMC4811963
+authors:
+- authtype: Author
+  name: Kern K
+- authtype: Author
+  name: Naros G
+- authtype: Author
+  name: Braun C
+- authtype: Author
+  name: Weiss D
+- authtype: Author
+  name: Gharabaghi A
+epubdate: 2016 Mar 30
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '110'
+pmclivedate: 2016/04/08
+printpubdate: ''
+pubdate: 2016 Mar 30
+sortdate: 2016/03/30 00:00
+source: Front Neurosci
+title: Detecting a Cortical Fingerprint of Parkinson's Disease for Closed-Loop Neuromodulation
+uid: '4811963'
+volume: '10'

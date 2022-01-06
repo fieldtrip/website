@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '24606564'
+- idtype: doi
+  value: 10.1111/ejn.12523
+- idtype: pmcid
+  value: PMC4425131
+- idtype: MID
+  value: NIHMS565471
+authors:
+- authtype: Author
+  name: Frey HP
+- authtype: Author
+  name: Schmid AM
+- authtype: Author
+  name: Murphy JW
+- authtype: Author
+  name: Molholm S
+- authtype: Author
+  name: Lalor EC
+- authtype: Author
+  name: Foxe JJ
+epubdate: 2014 Mar 7
+fulljournalname: The European journal of neuroscience
+issue: '9'
+pages: 1499-1507
+pmclivedate: 2015/05/08
+printpubdate: 2014 May
+pubdate: 2014 Mar 7
+sortdate: 2014/03/07 00:00
+source: Eur J Neurosci
+title: Modulation of early cortical processing during divided attention to non-contiguous
+  locations
+uid: '4425131'
+volume: '39'

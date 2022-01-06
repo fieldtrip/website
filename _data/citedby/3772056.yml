@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '24068906'
+- idtype: doi
+  value: 10.1371/journal.pcbi.1003225
+- idtype: pmcid
+  value: PMC3772056
+authors:
+- authtype: Author
+  name: Hunt LT
+- authtype: Author
+  name: Woolrich MW
+- authtype: Author
+  name: Rushworth MF
+- authtype: Author
+  name: Behrens TE
+epubdate: 2013 Sep 12
+fulljournalname: PLoS Computational Biology
+issue: '9'
+pages: e1003225
+pmclivedate: 2013/09/25
+printpubdate: ''
+pubdate: 2013 Sep 12
+sortdate: 2013/09/12 00:00
+source: PLoS Comput Biol
+title: Trial-Type Dependent Frames of Reference for Value Comparison
+uid: '3772056'
+volume: '9'

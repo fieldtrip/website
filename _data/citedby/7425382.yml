@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '32954303'
+- idtype: doi
+  value: 10.1093/braincomms/fcaa052
+- idtype: pmcid
+  value: PMC7425382
+authors:
+- authtype: Author
+  name: Vinding MC
+- authtype: Author
+  name: Tsitsi P
+- authtype: Author
+  name: Waldthaler J
+- authtype: Author
+  name: Oostenveld R
+- authtype: Author
+  name: Ingvar M
+- authtype: Author
+  name: Svenningsson P
+- authtype: Author
+  name: Lundqvist D
+epubdate: 2020 Apr 28
+fulljournalname: Brain Communications
+issue: '1'
+pages: fcaa052
+pmclivedate: 2020/09/17
+printpubdate: ''
+pubdate: 2020 Apr 28
+sortdate: 2020/04/28 00:00
+source: Brain Commun
+title: Reduction of spontaneous cortical beta bursts in Parkinson’s disease is linked
+  to symptom severity
+uid: '7425382'
+volume: '2'

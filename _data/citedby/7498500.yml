@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '32306231'
+- idtype: doi
+  value: 10.1007/s12021-020-09458-8
+- idtype: pmcid
+  value: PMC7498500
+authors:
+- authtype: Author
+  name: Vermaas M
+- authtype: Author
+  name: Piastra MC
+- authtype: Author
+  name: Oostendorp TF
+- authtype: Author
+  name: Ramsey NF
+- authtype: Author
+  name: Tiesinga PH
+epubdate: 2020 Apr 18
+fulljournalname: Neuroinformatics
+issue: '4'
+pages: 569-580
+pmclivedate: 2020/09/28
+printpubdate: '2020'
+pubdate: 2020 Apr 18
+sortdate: 2020/04/18 00:00
+source: Neuroinformatics
+title: 'FEMfuns: A Volume Conduction Modeling Pipeline that Includes Resistive, Capacitive
+  or Dispersive Tissue and Electrodes'
+uid: '7498500'
+volume: '18'

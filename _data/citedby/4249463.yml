@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '24464848'
+- idtype: doi
+  value: 10.1093/scan/nst184
+- idtype: pmcid
+  value: PMC4249463
+authors:
+- authtype: Author
+  name: Gärtner M
+- authtype: Author
+  name: Bajbouj M
+epubdate: 2014 Feb 24
+fulljournalname: Social Cognitive and Affective Neuroscience
+issue: '12'
+pages: 1934-1941
+pmclivedate: 2015/12/01
+printpubdate: 2014 Dec
+pubdate: 2014 Feb 24
+sortdate: 2014/02/24 00:00
+source: Soc Cogn Affect Neurosci
+title: Encoding-related EEG oscillations during memory formation are modulated by
+  mood state
+uid: '4249463'
+volume: '9'

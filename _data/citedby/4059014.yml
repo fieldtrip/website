@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '21895684'
+- idtype: doi
+  value: 10.1111/j.1469-8986.2011.01272.x
+- idtype: pmcid
+  value: PMC4059014
+- idtype: MID
+  value: NIHMS449401
+authors:
+- authtype: Author
+  name: Groppe DM
+- authtype: Author
+  name: Urbach TP
+- authtype: Author
+  name: Kutas M
+epubdate: 2011 Sep 6
+fulljournalname: Psychophysiology
+issue: '12'
+pages: 1726-1737
+pmclivedate: 2014/06/16
+printpubdate: 2011 Dec
+pubdate: 2011 Sep 6
+sortdate: 2011/09/06 00:00
+source: Psychophysiology
+title: 'Mass Univariate Analysis of Event-Related Brain Potentials/Fields II: Simulation
+  Studies'
+uid: '4059014'
+volume: '48'

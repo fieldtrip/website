@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '28000253'
+- idtype: doi
+  value: 10.1111/psyp.12639
+- idtype: pmcid
+  value: PMC5178877
+- idtype: MID
+  value: NIHMS762018
+authors:
+- authtype: Author
+  name: Luck SJ
+- authtype: Author
+  name: Gaspelin N
+epubdate: ''
+fulljournalname: Psychophysiology
+issue: '1'
+pages: 146-157
+pmclivedate: 2018/01/01
+printpubdate: 2017 Jan
+pubdate: 2017 Jan
+sortdate: 2017/01/01 00:00
+source: Psychophysiology
+title: How to Get Statistically Significant Effects in Any ERP Experiment (and Why
+  You Shouldn’t)
+uid: '5178877'
+volume: '54'

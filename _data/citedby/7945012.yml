@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '33270818'
+- idtype: doi
+  value: 10.1093/cercor/bhaa295
+- idtype: pmcid
+  value: PMC7945012
+authors:
+- authtype: Author
+  name: Geib BR
+- authtype: Author
+  name: Cabeza R
+- authtype: Author
+  name: Woldorff MG
+epubdate: 2020 Dec 4
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '4'
+pages: 1861-1872
+pmclivedate: 2021/12/04
+printpubdate: ''
+pubdate: 2020 Dec 4
+sortdate: 2020/12/04 00:00
+source: Cereb Cortex
+title: Linking the Rapid Cascade of Visuo-Attentional Processes to Successful Memory
+  Encoding
+uid: '7945012'
+volume: '31'

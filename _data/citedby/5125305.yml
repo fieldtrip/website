@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '27965529'
+- idtype: doi
+  value: 10.3389/fnins.2016.00543
+- idtype: pmcid
+  value: PMC5125305
+authors:
+- authtype: Author
+  name: Li Y
+- authtype: Author
+  name: Qin J
+- authtype: Author
+  name: Hsin YL
+- authtype: Author
+  name: Osher S
+- authtype: Author
+  name: Liu W
+epubdate: 2016 Nov 28
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '543'
+pmclivedate: 2016/12/13
+printpubdate: ''
+pubdate: 2016 Nov 28
+sortdate: 2016/11/28 00:00
+source: Front Neurosci
+title: 's-SMOOTH: Sparsity and Smoothness Enhanced EEG Brain Tomography'
+uid: '5125305'
+volume: '10'

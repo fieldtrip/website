@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '32214173'
+- idtype: doi
+  value: 10.1038/s41598-020-62392-2
+- idtype: pmcid
+  value: PMC7096392
+authors:
+- authtype: Author
+  name: Rodriguez-Larios J
+- authtype: Author
+  name: Faber P
+- authtype: Author
+  name: Achermann P
+- authtype: Author
+  name: Tei S
+- authtype: Author
+  name: Alaerts K
+epubdate: 2020 Mar 25
+fulljournalname: Scientific Reports
+issue: ''
+pages: '5419'
+pmclivedate: 2020/03/30
+printpubdate: ''
+pubdate: 2020 Mar 25
+sortdate: 2020/03/25 00:00
+source: Sci Rep
+title: 'From thoughtless awareness to effortful cognition: alpha - theta cross-frequency
+  dynamics in experienced meditators during meditation, rest and arithmetic'
+uid: '7096392'
+volume: '10'

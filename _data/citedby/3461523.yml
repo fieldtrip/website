@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '23060770'
+- idtype: doi
+  value: 10.3389/fnhum.2012.00266
+- idtype: pmcid
+  value: PMC3461523
+authors:
+- authtype: Author
+  name: Kuhlen AK
+- authtype: Author
+  name: Allefeld C
+- authtype: Author
+  name: Haynes JD
+epubdate: 2012 Oct 1
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '266'
+pmclivedate: 2012/10/11
+printpubdate: ''
+pubdate: 2012 Oct 1
+sortdate: 2012/10/01 00:00
+source: Front Hum Neurosci
+title: Content-specific coordination of listeners' to speakers' EEG during communication
+uid: '3461523'
+volume: '6'

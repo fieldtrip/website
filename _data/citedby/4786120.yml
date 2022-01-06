@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '26835557'
+- idtype: doi
+  value: 10.1016/j.brainres.2016.01.043
+- idtype: pmcid
+  value: PMC4786120
+authors:
+- authtype: Author
+  name: Lithari C
+- authtype: Author
+  name: Sánchez-García C
+- authtype: Author
+  name: Ruhnau P
+- authtype: Author
+  name: Weisz N
+epubdate: ''
+fulljournalname: Brain Research
+issue: ''
+pages: 143-152
+pmclivedate: 2016/03/22
+printpubdate: 2016 Mar 15
+pubdate: 2016 Mar 15
+sortdate: 2016/03/15 00:00
+source: Brain Res
+title: Large-scale network-level processes during entrainment
+uid: '4786120'
+volume: '1635'

@@ -1,0 +1,42 @@
+articleids:
+- idtype: pmid
+  value: '32948575'
+- idtype: doi
+  value: 10.1136/bmjopen-2020-039601
+- idtype: pmcid
+  value: PMC7500302
+authors:
+- authtype: Author
+  name: Bosmans J
+- authtype: Author
+  name: Jorissen C
+- authtype: Author
+  name: Cras P
+- authtype: Author
+  name: Van Ombergen A
+- authtype: Author
+  name: Engelborghs S
+- authtype: Author
+  name: Gilles A
+- authtype: Author
+  name: Princen E
+- authtype: Author
+  name: Moyaert J
+- authtype: Author
+  name: Mertens G
+- authtype: Author
+  name: Van Rompaey V
+epubdate: 2020 Sep 17
+fulljournalname: BMJ Open
+issue: '9'
+pages: e039601
+pmclivedate: 2020/10/05
+printpubdate: ''
+pubdate: 2020 Sep 17
+sortdate: 2020/09/17 00:00
+source: BMJ Open
+title: 'Impact of hearing loss and vestibular decline on cognition in Alzheimer’s
+  disease: a prospective longitudinal study protocol (Gehoor, Evenwicht en Cognitie,
+  GECkO)'
+uid: '7500302'
+volume: '10'

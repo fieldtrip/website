@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '22952823'
+- idtype: doi
+  value: 10.1371/journal.pone.0043957
+- idtype: pmcid
+  value: PMC3428276
+authors:
+- authtype: Author
+  name: Kovacevic S
+- authtype: Author
+  name: Azma S
+- authtype: Author
+  name: Irimia A
+- authtype: Author
+  name: Sherfey J
+- authtype: Author
+  name: Halgren E
+- authtype: Author
+  name: Marinkovic K
+epubdate: 2012 Aug 27
+fulljournalname: PLoS ONE
+issue: '8'
+pages: e43957
+pmclivedate: 2012/09/05
+printpubdate: ''
+pubdate: 2012 Aug 27
+sortdate: 2012/08/27 00:00
+source: PLoS One
+title: 'Theta Oscillations Are Sensitive to Both Early and Late Conflict Processing
+  Stages: Effects of Alcohol Intoxication'
+uid: '3428276'
+volume: '7'

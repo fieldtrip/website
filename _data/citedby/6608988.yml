@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '24599454'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.4385-13.2014
+- idtype: pmcid
+  value: PMC6608988
+authors:
+- authtype: Author
+  name: Spaak E
+- authtype: Author
+  name: de Lange FP
+- authtype: Author
+  name: Jensen O
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '10'
+pages: 3536-3544
+pmclivedate: 2019/07/10
+printpubdate: 2014 Mar 5
+pubdate: 2014 Mar 5
+sortdate: 2014/03/05 00:00
+source: J Neurosci
+title: Local Entrainment of Alpha Oscillations by Visual Stimuli Causes Cyclic Modulation
+  of Perception
+uid: '6608988'
+volume: '34'

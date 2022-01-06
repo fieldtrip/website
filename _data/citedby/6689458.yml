@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '30740853'
+- idtype: doi
+  value: 10.1111/desc.12811
+- idtype: pmcid
+  value: PMC6689458
+- idtype: MID
+  value: NIHMS1012589
+authors:
+- authtype: Author
+  name: Lunghi M
+- authtype: Author
+  name: Piccardi ES
+- authtype: Author
+  name: Richards JE
+- authtype: Author
+  name: Simion F
+epubdate: 2019 Mar 6
+fulljournalname: Developmental science
+issue: '6'
+pages: e12811
+pmclivedate: 2019/11/01
+printpubdate: 2019 Nov
+pubdate: 2019 Mar 6
+sortdate: 2019/03/06 00:00
+source: Dev Sci
+title: 'The neural correlates of orienting to walking direction in 6-Month-old Infants:
+  an ERP study'
+uid: '6689458'
+volume: '22'

@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '29363226'
+- idtype: doi
+  value: 10.1002/hbm.23977
+- idtype: pmcid
+  value: PMC5947665
+authors:
+- authtype: Author
+  name: An K
+- authtype: Author
+  name: Lim S
+- authtype: Author
+  name: Lee HJ
+- authtype: Author
+  name: Kwon H
+- authtype: Author
+  name: Kim M
+- authtype: Author
+  name: Gohel B
+- authtype: Author
+  name: Kim J
+- authtype: Author
+  name: Kim K
+epubdate: 2018 Jan 23
+fulljournalname: Human Brain Mapping
+issue: '5'
+pages: 1972-1981
+pmclivedate: 2018/05/17
+printpubdate: ''
+pubdate: 2018 Jan 23
+sortdate: 2018/01/23 00:00
+source: Hum Brain Mapp
+title: Magnetoencephalographic study of event‐related fields and cortical oscillatory
+  changes during cutaneous warmth processing
+uid: '5947665'
+volume: '39'

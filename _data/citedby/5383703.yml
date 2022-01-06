@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '28439232'
+- idtype: doi
+  value: 10.3389/fnhum.2017.00161
+- idtype: pmcid
+  value: PMC5383703
+authors:
+- authtype: Author
+  name: Schuerman WL
+- authtype: Author
+  name: Meyer AS
+- authtype: Author
+  name: McQueen JM
+epubdate: 2017 Apr 7
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '161'
+pmclivedate: 2017/04/24
+printpubdate: ''
+pubdate: 2017 Apr 7
+sortdate: 2017/04/07 00:00
+source: Front Hum Neurosci
+title: 'Mapping the Speech Code: Cortical Responses Linking the Perception and Production
+  of Vowels'
+uid: '5383703'
+volume: '11'

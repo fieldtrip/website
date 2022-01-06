@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '27146891'
+- idtype: doi
+  value: 10.7554/eLife.14521
+- idtype: pmcid
+  value: PMC4900800
+authors:
+- authtype: Author
+  name: Park H
+- authtype: Author
+  name: Kayser C
+- authtype: Author
+  name: Thut G
+- authtype: Author
+  name: Gross J
+epubdate: 2016 May 5
+fulljournalname: eLife
+issue: ''
+pages: e14521
+pmclivedate: 2016/06/10
+printpubdate: ''
+pubdate: 2016 May 5
+sortdate: 2016/05/05 00:00
+source: eLife
+title: Lip movements entrain the observers’ low-frequency brain oscillations to facilitate
+  speech intelligibility
+uid: '4900800'
+volume: '5'

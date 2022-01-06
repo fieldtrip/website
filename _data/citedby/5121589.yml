@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '27883082'
+- idtype: doi
+  value: 10.1038/srep37685
+- idtype: pmcid
+  value: PMC5121589
+authors:
+- authtype: Author
+  name: López-Sanz D
+- authtype: Author
+  name: Bruña R
+- authtype: Author
+  name: Garcés P
+- authtype: Author
+  name: Camara C
+- authtype: Author
+  name: Serrano N
+- authtype: Author
+  name: Rodríguez-Rojo IC
+- authtype: Author
+  name: Delgado ML
+- authtype: Author
+  name: Montenegro M
+- authtype: Author
+  name: López-Higes R
+- authtype: Author
+  name: Yus M
+- authtype: Author
+  name: Maestú F
+epubdate: 2016 Nov 24
+fulljournalname: Scientific Reports
+issue: ''
+pages: '37685'
+pmclivedate: 2016/11/28
+printpubdate: ''
+pubdate: 2016 Nov 24
+sortdate: 2016/11/24 00:00
+source: Sci Rep
+title: 'Alpha band disruption in the AD-continuum starts in the Subjective Cognitive
+  Decline stage: a MEG study'
+uid: '5121589'
+volume: '6'

@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '27594924'
+- idtype: doi
+  value: 10.1186/s11689-016-9166-5
+- idtype: pmcid
+  value: PMC5009506
+authors:
+- authtype: Author
+  name: Foxe JJ
+- authtype: Author
+  name: Burke KM
+- authtype: Author
+  name: Andrade GN
+- authtype: Author
+  name: Djukic A
+- authtype: Author
+  name: Frey HP
+- authtype: Author
+  name: Molholm S
+epubdate: 2016 Sep 1
+fulljournalname: Journal of Neurodevelopmental Disorders
+issue: ''
+pages: '34'
+pmclivedate: 2016/09/03
+printpubdate: ''
+pubdate: 2016 Sep 1
+sortdate: 2016/09/01 00:00
+source: J Neurodev Disord
+title: Automatic cortical representation of auditory pitch changes in Rett syndrome
+uid: '5009506'
+volume: '8'

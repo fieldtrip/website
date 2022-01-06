@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '34234662'
+- idtype: doi
+  value: 10.3389/fnhum.2021.691821
+- idtype: pmcid
+  value: PMC8255809
+authors:
+- authtype: Author
+  name: Gordon PC
+- authtype: Author
+  name: Dörre S
+- authtype: Author
+  name: Belardinelli P
+- authtype: Author
+  name: Stenroos M
+- authtype: Author
+  name: Zrenner B
+- authtype: Author
+  name: Ziemann U
+- authtype: Author
+  name: Zrenner C
+epubdate: 2021 Jun 21
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '691821'
+pmclivedate: 2021/07/06
+printpubdate: ''
+pubdate: 2021 Jun 21
+sortdate: 2021/06/21 00:00
+source: Front Hum Neurosci
+title: Prefrontal Theta-Phase Synchronized Brain Stimulation With Real-Time EEG-Triggered
+  TMS
+uid: '8255809'
+volume: '15'

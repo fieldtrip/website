@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '34750407'
+- idtype: doi
+  value: 10.1038/s41467-021-26713-x
+- idtype: pmcid
+  value: PMC8575985
+authors:
+- authtype: Author
+  name: Ten Oever S
+- authtype: Author
+  name: Sack AT
+- authtype: Author
+  name: Oehrn CR
+- authtype: Author
+  name: Axmacher N
+epubdate: 2021 Nov 8
+fulljournalname: Nature Communications
+issue: ''
+pages: '6443'
+pmclivedate: 2021/11/19
+printpubdate: ''
+pubdate: 2021 Nov 8
+sortdate: 2021/11/08 00:00
+source: Nat Commun
+title: An engram of intentionally forgotten information
+uid: '8575985'
+volume: '12'

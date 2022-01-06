@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '28559807'
+- idtype: doi
+  value: 10.3389/fnhum.2017.00264
+- idtype: pmcid
+  value: PMC5432541
+authors:
+- authtype: Author
+  name: Brouwer AM
+- authtype: Author
+  name: Hogervorst MA
+- authtype: Author
+  name: Oudejans B
+- authtype: Author
+  name: Ries AJ
+- authtype: Author
+  name: Touryan J
+epubdate: 2017 May 16
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '264'
+pmclivedate: 2017/05/30
+printpubdate: ''
+pubdate: 2017 May 16
+sortdate: 2017/05/16 00:00
+source: Front Hum Neurosci
+title: EEG and Eye Tracking Signatures of Target Encoding during Structured Visual
+  Search
+uid: '5432541'
+volume: '11'

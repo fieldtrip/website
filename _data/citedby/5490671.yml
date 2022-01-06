@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '28402479'
+- idtype: doi
+  value: 10.1093/scan/nsx032
+- idtype: pmcid
+  value: PMC5490671
+authors:
+- authtype: Author
+  name: Levy J
+- authtype: Author
+  name: Goldstein A
+- authtype: Author
+  name: Feldman R
+epubdate: 2017 Apr 11
+fulljournalname: Social Cognitive and Affective Neuroscience
+issue: '7'
+pages: 1036-1046
+pmclivedate: 2017/07/05
+printpubdate: ''
+pubdate: 2017 Apr 11
+sortdate: 2017/04/11 00:00
+source: Soc Cogn Affect Neurosci
+title: Perception of social synchrony induces mother–child gamma coupling in the social
+  brain
+uid: '5490671'
+volume: '12'

@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '22488914'
+- idtype: doi
+  value: 10.1002/hbm.21410
+- idtype: pmcid
+  value: PMC6870343
+authors:
+- authtype: Author
+  name: Wang L
+- authtype: Author
+  name: Jensen O
+- authtype: Author
+  name: van den Brink D
+- authtype: Author
+  name: Weder N
+- authtype: Author
+  name: Schoffelen J
+- authtype: Author
+  name: Magyari L
+- authtype: Author
+  name: Hagoort P
+- authtype: Author
+  name: Bastiaansen M
+epubdate: 2012 Apr 5
+fulljournalname: Human Brain Mapping
+issue: '12'
+pages: 2898-2912
+pmclivedate: 2020/06/12
+printpubdate: ''
+pubdate: 2012 Apr 5
+sortdate: 2012/04/05 00:00
+source: Hum Brain Mapp
+title: Beta oscillations relate to the N400m during language comprehension
+uid: '6870343'
+volume: '33'

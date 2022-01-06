@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '27707813'
+- idtype: doi
+  value: 10.1152/jn.00527.2016
+- idtype: pmcid
+  value: PMC5209541
+authors:
+- authtype: Author
+  name: Petersen EB
+- authtype: Author
+  name: Wöstmann M
+- authtype: Author
+  name: Obleser J
+- authtype: Author
+  name: Lunner T
+epubdate: 2016 Oct 5
+fulljournalname: Journal of Neurophysiology
+issue: '1'
+pages: 18-27
+pmclivedate: 2018/01/01
+printpubdate: 2017 Jan 1
+pubdate: 2016 Oct 5
+sortdate: 2016/10/05 00:00
+source: J Neurophysiol
+title: Neural tracking of attended versus ignored speech is differentially affected
+  by hearing loss
+uid: '5209541'
+volume: '117'

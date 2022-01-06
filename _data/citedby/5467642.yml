@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '28039860'
+- idtype: doi
+  value: 10.1111/psyp.12815
+- idtype: pmcid
+  value: PMC5467642
+- idtype: MID
+  value: NIHMS840361
+authors:
+- authtype: Author
+  name: Payne L
+- authtype: Author
+  name: Rogers C
+- authtype: Author
+  name: Wingfield A
+- authtype: Author
+  name: Sekuler R
+epubdate: 2016 Dec 31
+fulljournalname: Psychophysiology
+issue: '4'
+pages: 528-535
+pmclivedate: 2018/04/01
+printpubdate: 2017 Apr
+pubdate: 2016 Dec 31
+sortdate: 2016/12/31 00:00
+source: Psychophysiology
+title: A right-ear bias of auditory selective attention is evident in alpha oscillations
+uid: '5467642'
+volume: '54'

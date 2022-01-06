@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '33400260'
+- idtype: doi
+  value: 10.1111/psyp.13632
+- idtype: pmcid
+  value: PMC7785862
+- idtype: MID
+  value: NIHMS1617950
+authors:
+- authtype: Author
+  name: Riddle J
+- authtype: Author
+  name: Ahn S
+- authtype: Author
+  name: McPherson T
+- authtype: Author
+  name: Girdler S
+- authtype: Author
+  name: Frohlich F
+epubdate: 2020 Jul 13
+fulljournalname: Psychophysiology
+issue: '10'
+pages: e13632
+pmclivedate: 2021/10/01
+printpubdate: 2020 Oct
+pubdate: 2020 Jul 13
+sortdate: 2020/07/13 00:00
+source: Psychophysiology
+title: Progesterone modulates theta oscillations in the frontal-parietal network
+uid: '7785862'
+volume: '57'

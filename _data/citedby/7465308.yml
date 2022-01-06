@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '32784739'
+- idtype: doi
+  value: 10.3390/brainsci10080530
+- idtype: pmcid
+  value: PMC7465308
+authors:
+- authtype: Author
+  name: Huizeling E
+- authtype: Author
+  name: Wang H
+- authtype: Author
+  name: Holland C
+- authtype: Author
+  name: Kessler K
+epubdate: 2020 Aug 7
+fulljournalname: Brain Sciences
+issue: '8'
+pages: '530'
+pmclivedate: 2020/09/04
+printpubdate: ''
+pubdate: 2020 Aug 7
+sortdate: 2020/08/07 00:00
+source: Brain Sci
+title: Age-Related Changes in Attentional Refocusing during Simulated Driving
+uid: '7465308'
+volume: '10'

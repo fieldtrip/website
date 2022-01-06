@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '33332389'
+- idtype: doi
+  value: 10.1371/journal.pone.0243237
+- idtype: pmcid
+  value: PMC7746285
+authors:
+- authtype: Author
+  name: Perry G
+- authtype: Author
+  name: Taylor NW
+- authtype: Author
+  name: Bothwell PC
+- authtype: Author
+  name: Milbourn CC
+- authtype: Author
+  name: Powell G
+- authtype: Author
+  name: Singh KD
+epubdate: 2020 Dec 17
+fulljournalname: PLoS ONE
+issue: '12'
+pages: e0243237
+pmclivedate: 2020/12/31
+printpubdate: ''
+pubdate: 2020 Dec 17
+sortdate: 2020/12/17 00:00
+source: PLoS One
+title: 'The gamma response to colour hue in humans: Evidence from MEG'
+uid: '7746285'
+volume: '15'

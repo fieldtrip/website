@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '28345275'
+- idtype: doi
+  value: 10.1002/hbm.23588
+- idtype: pmcid
+  value: PMC5918301
+authors:
+- authtype: Author
+  name: Díez Á
+- authtype: Author
+  name: Ranlund S
+- authtype: Author
+  name: Pinotsis D
+- authtype: Author
+  name: Calafato S
+- authtype: Author
+  name: Shaikh M
+- authtype: Author
+  name: Hall M
+- authtype: Author
+  name: Walshe M
+- authtype: Author
+  name: Nevado Á
+- authtype: Author
+  name: Friston KJ
+- authtype: Author
+  name: Adams RA
+- authtype: Author
+  name: Bramon E
+epubdate: 2017 Mar 27
+fulljournalname: Human Brain Mapping
+issue: '6'
+pages: 3262-3276
+pmclivedate: 2018/04/27
+printpubdate: ''
+pubdate: 2017 Mar 27
+sortdate: 2017/03/27 00:00
+source: Hum Brain Mapp
+title: Abnormal frontoparietal synaptic gain mediating the P300 in patients with psychotic
+  disorder and their unaffected relatives
+uid: '5918301'
+volume: '38'

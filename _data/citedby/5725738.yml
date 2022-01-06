@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '28940728'
+- idtype: doi
+  value: 10.1111/ejn.13724
+- idtype: pmcid
+  value: PMC5725738
+authors:
+- authtype: Author
+  name: Boyle SC
+- authtype: Author
+  name: Kayser SJ
+- authtype: Author
+  name: Kayser C
+epubdate: 2017 Oct 25
+fulljournalname: The European Journal of Neuroscience
+issue: '10'
+pages: 2565-2577
+pmclivedate: 2017/12/18
+printpubdate: 2017 Nov
+pubdate: 2017 Oct 25
+sortdate: 2017/10/25 00:00
+source: Eur J Neurosci
+title: Neural correlates of multisensory reliability and perceptual weights emerge
+  at early latencies during audio‐visual integration
+uid: '5725738'
+volume: '46'

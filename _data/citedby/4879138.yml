@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '27252642'
+- idtype: doi
+  value: 10.3389/fnhum.2016.00245
+- idtype: pmcid
+  value: PMC4879138
+authors:
+- authtype: Author
+  name: Kasten FH
+- authtype: Author
+  name: Dowsett J
+- authtype: Author
+  name: Herrmann CS
+epubdate: 2016 May 25
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '245'
+pmclivedate: 2016/06/01
+printpubdate: ''
+pubdate: 2016 May 25
+sortdate: 2016/05/25 00:00
+source: Front Hum Neurosci
+title: Sustained Aftereffect of α-tACS Lasts Up to 70 min after Stimulation
+uid: '4879138'
+volume: '10'

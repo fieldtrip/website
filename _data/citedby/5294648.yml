@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '28169281'
+- idtype: doi
+  value: 10.1038/srep41592
+- idtype: pmcid
+  value: PMC5294648
+authors:
+- authtype: Author
+  name: Hahm J
+- authtype: Author
+  name: Lee H
+- authtype: Author
+  name: Park H
+- authtype: Author
+  name: Kang E
+- authtype: Author
+  name: Kim YK
+- authtype: Author
+  name: Chung CK
+- authtype: Author
+  name: Kang H
+- authtype: Author
+  name: Lee DS
+epubdate: 2017 Feb 7
+fulljournalname: Scientific Reports
+issue: ''
+pages: '41592'
+pmclivedate: 2017/02/10
+printpubdate: ''
+pubdate: 2017 Feb 7
+sortdate: 2017/02/07 00:00
+source: Sci Rep
+title: Gating of memory encoding of time-delayed cross-frequency MEG networks revealed
+  by graph filtration based on persistent homology
+uid: '5294648'
+volume: '7'

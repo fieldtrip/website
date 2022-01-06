@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '34037520'
+- idtype: doi
+  value: 10.7554/eLife.60595
+- idtype: pmcid
+  value: PMC8154036
+authors:
+- authtype: Author
+  name: Kołodziej A
+- authtype: Author
+  name: Magnuski M
+- authtype: Author
+  name: Ruban A
+- authtype: Author
+  name: Brzezicka A
+epubdate: 2021 May 26
+fulljournalname: eLife
+issue: ''
+pages: e60595
+pmclivedate: 2021/05/27
+printpubdate: ''
+pubdate: 2021 May 26
+sortdate: 2021/05/26 00:00
+source: eLife
+title: No relationship between frontal alpha asymmetry and depressive disorders in
+  a multiverse analysis of five studies
+uid: '8154036'
+volume: '10'

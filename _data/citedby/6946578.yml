@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '31820732'
+- idtype: doi
+  value: 10.7554/eLife.51501
+- idtype: pmcid
+  value: PMC6946578
+authors:
+- authtype: Author
+  name: Waschke L
+- authtype: Author
+  name: Tune S
+- authtype: Author
+  name: Obleser J
+epubdate: 2019 Dec 10
+fulljournalname: eLife
+issue: ''
+pages: e51501
+pmclivedate: 2020/01/09
+printpubdate: ''
+pubdate: 2019 Dec 10
+sortdate: 2019/12/10 00:00
+source: eLife
+title: Local cortical desynchronization and pupil-linked arousal differentially shape
+  brain states for optimal sensory performance
+uid: '6946578'
+volume: '8'

@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '26778976'
+- idtype: doi
+  value: 10.3389/fnsys.2015.00175
+- idtype: pmcid
+  value: PMC4705224
+authors:
+- authtype: Author
+  name: Bastos AM
+- authtype: Author
+  name: Schoffelen JM
+epubdate: 2016 Jan 8
+fulljournalname: Frontiers in Systems Neuroscience
+issue: ''
+pages: '175'
+pmclivedate: 2016/01/15
+printpubdate: ''
+pubdate: 2016 Jan 8
+sortdate: 2016/01/08 00:00
+source: Front Syst Neurosci
+title: A Tutorial Review of Functional Connectivity Analysis Methods and Their Interpretational
+  Pitfalls
+uid: '4705224'
+volume: '9'

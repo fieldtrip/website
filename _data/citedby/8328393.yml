@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '34349701'
+- idtype: doi
+  value: 10.3389/fpsyg.2021.679491
+- idtype: pmcid
+  value: PMC8328393
+authors:
+- authtype: Author
+  name: Spychalska M
+- authtype: Author
+  name: Reimer L
+- authtype: Author
+  name: Schumacher PB
+- authtype: Author
+  name: Werning M
+epubdate: 2021 Jul 19
+fulljournalname: Frontiers in Psychology
+issue: ''
+pages: '679491'
+pmclivedate: 2021/08/03
+printpubdate: ''
+pubdate: 2021 Jul 19
+sortdate: 2021/07/19 00:00
+source: Front Psychol
+title: 'The Cost of the Epistemic Step: Investigating Scalar Implicatures in Full
+  and Partial Information Contexts'
+uid: '8328393'
+volume: '12'

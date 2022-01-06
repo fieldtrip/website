@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '28883499'
+- idtype: doi
+  value: 10.1038/s41598-017-10682-7
+- idtype: pmcid
+  value: PMC5589753
+authors:
+- authtype: Author
+  name: Kroes MC
+- authtype: Author
+  name: Dunsmoor JE
+- authtype: Author
+  name: Lin Q
+- authtype: Author
+  name: Evans M
+- authtype: Author
+  name: Phelps EA
+epubdate: 2017 Sep 7
+fulljournalname: Scientific Reports
+issue: ''
+pages: '10858'
+pmclivedate: 2017/09/13
+printpubdate: ''
+pubdate: 2017 Sep 7
+sortdate: 2017/09/07 00:00
+source: Sci Rep
+title: A reminder before extinction strengthens episodic memory via reconsolidation
+  but fails to disrupt generalized threat responses
+uid: '5589753'
+volume: '7'

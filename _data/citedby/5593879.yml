@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '28894235'
+- idtype: doi
+  value: 10.1038/s41598-017-11632-z
+- idtype: pmcid
+  value: PMC5593879
+authors:
+- authtype: Author
+  name: Beese C
+- authtype: Author
+  name: Meyer L
+- authtype: Author
+  name: Vassileiou B
+- authtype: Author
+  name: Friederici AD
+epubdate: 2017 Sep 11
+fulljournalname: Scientific Reports
+issue: ''
+pages: '11202'
+pmclivedate: 2017/09/13
+printpubdate: ''
+pubdate: 2017 Sep 11
+sortdate: 2017/09/11 00:00
+source: Sci Rep
+title: Temporally and spatially distinct theta oscillations dissociate a language-specific
+  from a domain-general processing mechanism across the age trajectory
+uid: '5593879'
+volume: '7'

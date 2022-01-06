@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '32553110'
+- idtype: doi
+  value: 10.7554/eLife.56911
+- idtype: pmcid
+  value: PMC7299337
+authors:
+- authtype: Author
+  name: Eldar E
+- authtype: Author
+  name: Lièvre G
+- authtype: Author
+  name: Dayan P
+- authtype: Author
+  name: Dolan RJ
+epubdate: 2020 Jun 17
+fulljournalname: eLife
+issue: ''
+pages: e56911
+pmclivedate: 2020/06/18
+printpubdate: ''
+pubdate: 2020 Jun 17
+sortdate: 2020/06/17 00:00
+source: eLife
+title: The roles of online and offline replay in planning
+uid: '7299337'
+volume: '9'

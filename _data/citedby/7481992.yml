@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '32952547'
+- idtype: doi
+  value: 10.1155/2020/4838291
+- idtype: pmcid
+  value: PMC7481992
+authors:
+- authtype: Author
+  name: Longarzo M
+- authtype: Author
+  name: Cavaliere C
+- authtype: Author
+  name: Alfano V
+- authtype: Author
+  name: Mele G
+- authtype: Author
+  name: Salvatore M
+- authtype: Author
+  name: Aiello M
+epubdate: 2020 Sep 1
+fulljournalname: Neural Plasticity
+issue: ''
+pages: '4838291'
+pmclivedate: 2020/09/18
+printpubdate: ''
+pubdate: 2020 Sep 1
+sortdate: 2020/09/01 00:00
+source: Neural Plast
+title: Electroencephalographic and Neuroimaging Asymmetry Correlation in Patients
+  with Attention-Deficit Hyperactivity Disorder
+uid: '7481992'
+volume: '2020'

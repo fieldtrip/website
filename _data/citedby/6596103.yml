@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '29899027'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0349-18.2018
+- idtype: pmcid
+  value: PMC6596103
+authors:
+- authtype: Author
+  name: Wang D
+- authtype: Author
+  name: Clouter A
+- authtype: Author
+  name: Chen Q
+- authtype: Author
+  name: Shapiro KL
+- authtype: Author
+  name: Hanslmayr S
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '28'
+pages: 6299-6309
+pmclivedate: 2019/06/27
+printpubdate: 2018 Jul 11
+pubdate: 2018 Jul 11
+sortdate: 2018/07/11 00:00
+source: J Neurosci
+title: Single-Trial Phase Entrainment of Theta Oscillations in Sensory Regions Predicts
+  Human Associative Memory Performance
+uid: '6596103'
+volume: '38'

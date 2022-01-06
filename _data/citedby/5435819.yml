@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '28572761'
+- idtype: doi
+  value: 10.3389/fnhum.2017.00257
+- idtype: pmcid
+  value: PMC5435819
+authors:
+- authtype: Author
+  name: Stecher HI
+- authtype: Author
+  name: Pollok TM
+- authtype: Author
+  name: Strüber D
+- authtype: Author
+  name: Sobotka F
+- authtype: Author
+  name: Herrmann CS
+epubdate: 2017 May 18
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '257'
+pmclivedate: 2017/06/01
+printpubdate: ''
+pubdate: 2017 May 18
+sortdate: 2017/05/18 00:00
+source: Front Hum Neurosci
+title: Ten Minutes of α-tACS and Ambient Illumination Independently Modulate EEG α-Power
+uid: '5435819'
+volume: '11'

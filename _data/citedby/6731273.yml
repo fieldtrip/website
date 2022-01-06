@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '31492881'
+- idtype: doi
+  value: 10.1038/s41467-019-12048-1
+- idtype: pmcid
+  value: PMC6731273
+authors:
+- authtype: Author
+  name: Zhao S
+- authtype: Author
+  name: Chait M
+- authtype: Author
+  name: Dick F
+- authtype: Author
+  name: Dayan P
+- authtype: Author
+  name: Furukawa S
+- authtype: Author
+  name: Liao HI
+epubdate: 2019 Sep 6
+fulljournalname: Nature Communications
+issue: ''
+pages: '4030'
+pmclivedate: 2019/09/09
+printpubdate: ''
+pubdate: 2019 Sep 6
+sortdate: 2019/09/06 00:00
+source: Nat Commun
+title: Pupil-linked phasic arousal evoked by violation but not emergence of regularity
+  within rapid sound sequences
+uid: '6731273'
+volume: '10'

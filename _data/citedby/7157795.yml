@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '32328152'
+- idtype: doi
+  value: 10.1155/2020/5076865
+- idtype: pmcid
+  value: PMC7157795
+authors:
+- authtype: Author
+  name: Céspedes-Villar Y
+- authtype: Author
+  name: Martinez-Vargas JD
+- authtype: Author
+  name: Castellanos-Dominguez G
+epubdate: 2020 Apr 3
+fulljournalname: Computational and Mathematical Methods in Medicine
+issue: ''
+pages: '5076865'
+pmclivedate: 2020/04/23
+printpubdate: ''
+pubdate: 2020 Apr 3
+sortdate: 2020/04/03 00:00
+source: Comput Math Methods Med
+title: Influence of Patient-Specific Head Modeling on EEG Source Imaging
+uid: '7157795'
+volume: '2020'

@@ -1,0 +1,34 @@
+articleids:
+- idtype: pmid
+  value: '31312129'
+- idtype: doi
+  value: 10.3389/fnhum.2019.00223
+- idtype: pmcid
+  value: PMC6614179
+authors:
+- authtype: Author
+  name: Ramirez Pasos UE
+- authtype: Author
+  name: Steigerwald F
+- authtype: Author
+  name: Reich MM
+- authtype: Author
+  name: Matthies C
+- authtype: Author
+  name: Volkmann J
+- authtype: Author
+  name: Reese R
+epubdate: 2019 Jul 2
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '223'
+pmclivedate: 2019/07/16
+printpubdate: ''
+pubdate: 2019 Jul 2
+sortdate: 2019/07/02 00:00
+source: Front Hum Neurosci
+title: Levodopa Modulates Functional Connectivity in the Upper Beta Band Between Subthalamic
+  Nucleus and Muscle Activity in Tonic and Phasic Motor Activity Patterns in Parkinson’s
+  Disease
+uid: '6614179'
+volume: '13'

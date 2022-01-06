@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '31587465'
+- idtype: doi
+  value: 10.1002/hbm.24809
+- idtype: pmcid
+  value: PMC7267928
+authors:
+- authtype: Author
+  name: Kozhemiako N
+- authtype: Author
+  name: Nunes AS
+- authtype: Author
+  name: Vakorin VA
+- authtype: Author
+  name: Chau CM
+- authtype: Author
+  name: Moiseev A
+- authtype: Author
+  name: Ribary U
+- authtype: Author
+  name: Grunau RE
+- authtype: Author
+  name: Doesburg SM
+epubdate: 2019 Oct 6
+fulljournalname: Human Brain Mapping
+issue: '2'
+pages: 388-400
+pmclivedate: 2020/06/12
+printpubdate: ''
+pubdate: 2019 Oct 6
+sortdate: 2019/10/06 00:00
+source: Hum Brain Mapp
+title: Sex differences in brain connectivity and male vulnerability in very preterm
+  children
+uid: '7267928'
+volume: '41'

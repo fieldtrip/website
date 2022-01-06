@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '31246172'
+- idtype: doi
+  value: 10.7554/eLife.47001
+- idtype: pmcid
+  value: PMC6660215
+authors:
+- authtype: Author
+  name: Park H
+- authtype: Author
+  name: Kayser C
+epubdate: 2019 Jun 27
+fulljournalname: eLife
+issue: ''
+pages: e47001
+pmclivedate: 2019/07/29
+printpubdate: ''
+pubdate: 2019 Jun 27
+sortdate: 2019/06/27 00:00
+source: eLife
+title: Shared neural underpinnings of multisensory integration and trial-by-trial
+  perceptual recalibration in humans
+uid: '6660215'
+volume: '8'

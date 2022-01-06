@@ -1,0 +1,34 @@
+articleids:
+- idtype: pmid
+  value: '32256326'
+- idtype: doi
+  value: 10.3389/fnhum.2020.00072
+- idtype: pmcid
+  value: PMC7092637
+authors:
+- authtype: Author
+  name: Gudi-Mindermann H
+- authtype: Author
+  name: Rimmele JM
+- authtype: Author
+  name: Bruns P
+- authtype: Author
+  name: Kloosterman NA
+- authtype: Author
+  name: Donner TH
+- authtype: Author
+  name: Engel AK
+- authtype: Author
+  name: Röder B
+epubdate: 2020 Mar 17
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '72'
+pmclivedate: 2020/03/31
+printpubdate: ''
+pubdate: 2020 Mar 17
+sortdate: 2020/03/17 00:00
+source: Front Hum Neurosci
+title: Post-training Load-Related Changes of Auditory Working Memory – An EEG Study
+uid: '7092637'
+volume: '14'

@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '23326575'
+- idtype: doi
+  value: 10.1371/journal.pone.0054085
+- idtype: pmcid
+  value: PMC3542329
+authors:
+- authtype: Author
+  name: Volberg G
+- authtype: Author
+  name: Wutz A
+- authtype: Author
+  name: Greenlee MW
+epubdate: 2013 Jan 10
+fulljournalname: PLoS ONE
+issue: '1'
+pages: e54085
+pmclivedate: 2013/01/16
+printpubdate: ''
+pubdate: 2013 Jan 10
+sortdate: 2013/01/10 00:00
+source: PLoS One
+title: Top-Down Control in Contour Grouping
+uid: '3542329'
+volume: '8'

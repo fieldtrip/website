@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '30367033'
+- idtype: doi
+  value: 10.1038/s41467-018-06875-x
+- idtype: pmcid
+  value: PMC6203833
+authors:
+- authtype: Author
+  name: Tiemann L
+- authtype: Author
+  name: Hohn VD
+- authtype: Author
+  name: Ta Dinh S
+- authtype: Author
+  name: May ES
+- authtype: Author
+  name: Nickel MM
+- authtype: Author
+  name: Gross J
+- authtype: Author
+  name: Ploner M
+epubdate: 2018 Oct 26
+fulljournalname: Nature Communications
+issue: ''
+pages: '4487'
+pmclivedate: 2018/10/29
+printpubdate: ''
+pubdate: 2018 Oct 26
+sortdate: 2018/10/26 00:00
+source: Nat Commun
+title: Distinct patterns of brain activity mediate perceptual and motor and autonomic
+  responses to noxious stimuli
+uid: '6203833'
+volume: '9'

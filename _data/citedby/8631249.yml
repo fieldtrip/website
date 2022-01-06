@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '34509622'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2021.118554
+- idtype: pmcid
+  value: PMC8631249
+- idtype: MID
+  value: NIHMS1757210
+authors:
+- authtype: Author
+  name: Kupers ER
+- authtype: Author
+  name: Edadan A
+- authtype: Author
+  name: Benson NC
+- authtype: Author
+  name: Zuiderbaan W
+- authtype: Author
+  name: de Jong MC
+- authtype: Author
+  name: Dumoulin SO
+- authtype: Author
+  name: Winawer J
+epubdate: 2021 Sep 10
+fulljournalname: NeuroImage
+issue: ''
+pages: '118554'
+pmclivedate: 2021/12/01
+printpubdate: 2021 Dec 1
+pubdate: 2021 Sep 10
+sortdate: 2021/09/10 00:00
+source: Neuroimage
+title: A population receptive field model of the magnetoencephalography response
+uid: '8631249'
+volume: '244'

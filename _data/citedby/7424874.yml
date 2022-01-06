@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '32641404'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0537-20.2020
+- idtype: pmcid
+  value: PMC7424874
+authors:
+- authtype: Author
+  name: Aitken F
+- authtype: Author
+  name: Turner G
+- authtype: Author
+  name: Kok P
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '33'
+pages: 6389-6397
+pmclivedate: 2020/08/13
+printpubdate: 2020 Aug 12
+pubdate: 2020 Aug 12
+sortdate: 2020/08/12 00:00
+source: J Neurosci
+title: Prior Expectations of Motion Direction Modulate Early Sensory Processing
+uid: '7424874'
+volume: '40'

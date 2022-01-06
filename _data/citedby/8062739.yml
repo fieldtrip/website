@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '33897405'
+- idtype: doi
+  value: 10.3389/fnagi.2021.631599
+- idtype: pmcid
+  value: PMC8062739
+authors:
+- authtype: Author
+  name: Chan JS
+- authtype: Author
+  name: Wibral M
+- authtype: Author
+  name: Stawowsky C
+- authtype: Author
+  name: Brandl M
+- authtype: Author
+  name: Helbling S
+- authtype: Author
+  name: Naumer MJ
+- authtype: Author
+  name: Kaiser J
+- authtype: Author
+  name: Wollstadt P
+epubdate: 2021 Apr 9
+fulljournalname: Frontiers in Aging Neuroscience
+issue: ''
+pages: '631599'
+pmclivedate: 2021/04/24
+printpubdate: ''
+pubdate: 2021 Apr 9
+sortdate: 2021/04/09 00:00
+source: Front Aging Neurosci
+title: 'Predictive Coding Over the Lifespan: Increased Reliance on Perceptual Priors
+  in Older Adults—A Magnetoencephalography and Dynamic Causal Modeling Study'
+uid: '8062739'
+volume: '13'

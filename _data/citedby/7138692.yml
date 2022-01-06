@@ -1,0 +1,55 @@
+articleids:
+- idtype: pmid
+  value: '31595034'
+- idtype: doi
+  value: 10.1038/s41380-019-0534-x
+- idtype: pmcid
+  value: PMC7138692
+- idtype: MID
+  value: NIHMS1067984
+authors:
+- authtype: Author
+  name: Kinreich S
+- authtype: Author
+  name: Meyers JL
+- authtype: Author
+  name: Maron-Katz A
+- authtype: Author
+  name: Kamarajan C
+- authtype: Author
+  name: Pandey AK
+- authtype: Author
+  name: Chorlian DB
+- authtype: Author
+  name: Zhang J
+- authtype: Author
+  name: Pandey G
+- authtype: Author
+  name: de Viteri SS
+- authtype: Author
+  name: Pitti D
+- authtype: Author
+  name: Anokhin AP
+- authtype: Author
+  name: Bauer L
+- authtype: Author
+  name: Hesselbrock V
+- authtype: Author
+  name: Schuckit MA
+- authtype: Author
+  name: Edenberg HJ
+- authtype: Author
+  name: Porjesz B
+epubdate: 2019 Oct 8
+fulljournalname: Molecular psychiatry
+issue: '4'
+pages: 1133-1141
+pmclivedate: ''
+printpubdate: 2021 Apr
+pubdate: 2019 Oct 8
+sortdate: 2019/10/08 00:00
+source: Mol Psychiatry
+title: 'Predicting risk for Alcohol Use Disorder using longitudinal data with multimodal
+  biomarkers and family history: A machine learning study'
+uid: '7138692'
+volume: '26'

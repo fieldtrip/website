@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '31777404'
+- idtype: doi
+  value: 10.1109/TIM.2018.2851458
+- idtype: pmcid
+  value: PMC6880808
+- idtype: MID
+  value: NIHMS1517409
+authors:
+- authtype: Author
+  name: Borna A
+- authtype: Author
+  name: Carter TR
+- authtype: Author
+  name: DeRego P
+- authtype: Author
+  name: James CD
+- authtype: Author
+  name: Schwindt PD
+epubdate: 2018 Jul 23
+fulljournalname: IEEE transactions on instrumentation and measurement
+issue: '2'
+pages: 493-501
+pmclivedate: 2020/02/01
+printpubdate: 2019 Feb
+pubdate: 2018 Jul 23
+sortdate: 2018/07/23 00:00
+source: IEEE Trans Instrum Meas
+title: Magnetic Source Imaging Using a Pulsed Optically Pumped Magnetometer Array
+uid: '6880808'
+volume: '68'

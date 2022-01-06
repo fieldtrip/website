@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '33781752'
+- idtype: doi
+  value: 10.1016/j.neuropsychologia.2021.107837
+- idtype: pmcid
+  value: PMC8102409
+- idtype: MID
+  value: NIHMS1688299
+authors:
+- authtype: Author
+  name: Dwyer P
+- authtype: Author
+  name: De Meo-Monteil R
+- authtype: Author
+  name: Saron CD
+- authtype: Author
+  name: Rivera SM
+epubdate: 2021 Mar 26
+fulljournalname: Neuropsychologia
+issue: ''
+pages: '107837'
+pmclivedate: ''
+printpubdate: 2021 Jun 18
+pubdate: 2021 Mar 26
+sortdate: 2021/03/26 00:00
+source: Neuropsychologia
+title: Effects of Age on Loudness-Dependent Auditory ERPs in Young Autistic and Typically-Developing
+  Children
+uid: '8102409'
+volume: '156'

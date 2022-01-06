@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '32107455'
+- idtype: doi
+  value: 10.1038/s41598-020-60382-y
+- idtype: pmcid
+  value: PMC7046793
+authors:
+- authtype: Author
+  name: Wokke ME
+- authtype: Author
+  name: Achoui D
+- authtype: Author
+  name: Cleeremans A
+epubdate: 2020 Feb 27
+fulljournalname: Scientific Reports
+issue: ''
+pages: '3632'
+pmclivedate: 2020/03/05
+printpubdate: ''
+pubdate: 2020 Feb 27
+sortdate: 2020/02/27 00:00
+source: Sci Rep
+title: Action information contributes to metacognitive decision-making
+uid: '7046793'
+volume: '10'

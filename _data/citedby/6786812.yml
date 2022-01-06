@@ -1,0 +1,34 @@
+articleids:
+- idtype: pmid
+  value: '31501297'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1468-18.2019
+- idtype: pmcid
+  value: PMC6786812
+authors:
+- authtype: Author
+  name: Ding Y
+- authtype: Author
+  name: Zhang Y
+- authtype: Author
+  name: Zhou W
+- authtype: Author
+  name: Ling Z
+- authtype: Author
+  name: Huang J
+- authtype: Author
+  name: Hong B
+- authtype: Author
+  name: Wang X
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '41'
+pages: 8112-8123
+pmclivedate: 2020/04/09
+printpubdate: 2019 Oct 9
+pubdate: 2019 Oct 9
+sortdate: 2019/10/09 00:00
+source: J Neurosci
+title: Neural Correlates of Music Listening and Recall in the Human Brain
+uid: '6786812'
+volume: '39'

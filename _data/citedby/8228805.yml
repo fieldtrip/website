@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '34205076'
+- idtype: doi
+  value: 10.3390/brainsci11060743
+- idtype: pmcid
+  value: PMC8228805
+authors:
+- authtype: Author
+  name: Bu-Omer HM
+- authtype: Author
+  name: Gofuku A
+- authtype: Author
+  name: Sato K
+- authtype: Author
+  name: Miyakoshi M
+epubdate: 2021 Jun 3
+fulljournalname: Brain Sciences
+issue: '6'
+pages: '743'
+pmclivedate: 2021/06/26
+printpubdate: ''
+pubdate: 2021 Jun 3
+sortdate: 2021/06/03 00:00
+source: Brain Sci
+title: Parieto-Occipital Alpha and Low-Beta EEG Power Reflect Sense of Agency
+uid: '8228805'
+volume: '11'

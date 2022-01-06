@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '28555099'
+- idtype: doi
+  value: 10.3389/fnhum.2017.00250
+- idtype: pmcid
+  value: PMC5430081
+authors:
+- authtype: Author
+  name: Heinz AJ
+- authtype: Author
+  name: Johnson JS
+epubdate: 2017 May 15
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '250'
+pmclivedate: 2017/05/29
+printpubdate: ''
+pubdate: 2017 May 15
+sortdate: 2017/05/15 00:00
+source: Front Hum Neurosci
+title: Load-Dependent Increases in Delay-Period Alpha-Band Power Track the Gating
+  of Task-Irrelevant Inputs to Working Memory
+uid: '5430081'
+volume: '11'

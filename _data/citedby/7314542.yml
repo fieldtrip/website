@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '32579108'
+- idtype: doi
+  value: 10.7554/eLife.53730
+- idtype: pmcid
+  value: PMC7314542
+authors:
+- authtype: Author
+  name: Hahn MA
+- authtype: Author
+  name: Heib D
+- authtype: Author
+  name: Schabus M
+- authtype: Author
+  name: Hoedlmoser K
+- authtype: Author
+  name: Helfrich RF
+epubdate: 2020 Jun 24
+fulljournalname: eLife
+issue: ''
+pages: e53730
+pmclivedate: 2020/06/25
+printpubdate: ''
+pubdate: 2020 Jun 24
+sortdate: 2020/06/24 00:00
+source: eLife
+title: Slow oscillation-spindle coupling predicts enhanced memory formation from childhood
+  to adolescence
+uid: '7314542'
+volume: '9'

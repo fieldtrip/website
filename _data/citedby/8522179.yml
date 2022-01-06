@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '33862254'
+- idtype: doi
+  value: 10.1016/j.bpsc.2021.04.002
+- idtype: pmcid
+  value: PMC8522179
+- idtype: MID
+  value: NIHMS1693213
+authors:
+- authtype: Author
+  name: Zheng Y
+- authtype: Author
+  name: Liu XL
+- authtype: Author
+  name: Hsieh LT
+- authtype: Author
+  name: Hurtado M
+- authtype: Author
+  name: Wang Y
+- authtype: Author
+  name: Niendam TA
+- authtype: Author
+  name: Carter CS
+- authtype: Author
+  name: Ranganath C
+- authtype: Author
+  name: Ragland JD
+epubdate: 2021 Apr 17
+fulljournalname: Biological psychiatry. Cognitive neuroscience and neuroimaging
+issue: '12'
+pages: 1157-1164
+pmclivedate: ''
+printpubdate: 2021 Dec
+pubdate: 2021 Apr 17
+sortdate: 2021/04/17 00:00
+source: Biol Psychiatry Cogn Neurosci Neuroimaging
+title: Disrupted Modulation of Alpha and Low Beta Oscillations Mediates Temporal Sequence
+  Memory Deficits in People with Schizophrenia
+uid: '8522179'
+volume: '6'

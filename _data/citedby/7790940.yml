@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '33098762'
+- idtype: doi
+  value: 10.1016/j.neuron.2020.09.039
+- idtype: pmcid
+  value: PMC7790940
+- idtype: MID
+  value: NIHMS1635329
+authors:
+- authtype: Author
+  name: Fiebelkorn IC
+- authtype: Author
+  name: Kastner S
+epubdate: 2020 Oct 23
+fulljournalname: Neuron
+issue: '1'
+pages: 177-188.e4
+pmclivedate: ''
+printpubdate: 2021 Jan 6
+pubdate: 2020 Oct 23
+sortdate: 2020/10/23 00:00
+source: Neuron
+title: Spike timing in the attention network predicts behavioral outcome prior to
+  target selection
+uid: '7790940'
+volume: '109'

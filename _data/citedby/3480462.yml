@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '23110131'
+- idtype: doi
+  value: 10.1371/journal.pone.0047917
+- idtype: pmcid
+  value: PMC3480462
+authors:
+- authtype: Author
+  name: Wang L
+- authtype: Author
+  name: Bastiaansen M
+- authtype: Author
+  name: Yang Y
+- authtype: Author
+  name: Hagoort P
+epubdate: 2012 Oct 24
+fulljournalname: PLoS ONE
+issue: '10'
+pages: e47917
+pmclivedate: 2012/10/29
+printpubdate: ''
+pubdate: 2012 Oct 24
+sortdate: 2012/10/24 00:00
+source: PLoS One
+title: 'Information Structure Influences Depth of Syntactic Processing: Event-Related
+  Potential Evidence for the Chomsky Illusion'
+uid: '3480462'
+volume: '7'

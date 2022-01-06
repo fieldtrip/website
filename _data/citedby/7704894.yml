@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '32941883'
+- idtype: doi
+  value: 10.1016/j.neuropsychologia.2020.107625
+- idtype: pmcid
+  value: PMC7704894
+- idtype: MID
+  value: NIHMS1630868
+authors:
+- authtype: Author
+  name: Yin Q
+- authtype: Author
+  name: Johnson EL
+- authtype: Author
+  name: Tang L
+- authtype: Author
+  name: Auguste KI
+- authtype: Author
+  name: Knight RT
+- authtype: Author
+  name: Asano E
+- authtype: Author
+  name: Ofen N
+epubdate: 2020 Sep 15
+fulljournalname: Neuropsychologia
+issue: ''
+pages: '107625'
+pmclivedate: 2021/11/01
+printpubdate: 2020 Nov
+pubdate: 2020 Sep 15
+sortdate: 2020/09/15 00:00
+source: Neuropsychologia
+title: Direct brain recordings reveal occipital cortex involvement in memory development
+uid: '7704894'
+volume: '148'

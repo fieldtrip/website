@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '33273646'
+- idtype: doi
+  value: 10.1038/s41598-020-78211-7
+- idtype: pmcid
+  value: PMC7713235
+authors:
+- authtype: Author
+  name: Gorin A
+- authtype: Author
+  name: Krugliakova E
+- authtype: Author
+  name: Nikulin V
+- authtype: Author
+  name: Kuznetsova A
+- authtype: Author
+  name: Moiseeva V
+- authtype: Author
+  name: Klucharev V
+- authtype: Author
+  name: Shestakova A
+epubdate: 2020 Dec 3
+fulljournalname: Scientific Reports
+issue: ''
+pages: '21161'
+pmclivedate: 2020/12/03
+printpubdate: ''
+pubdate: 2020 Dec 3
+sortdate: 2020/12/03 00:00
+source: Sci Rep
+title: 'Cortical plasticity elicited by acoustically cued monetary losses: an ERP
+  study'
+uid: '7713235'
+volume: '10'

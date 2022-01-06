@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '31357079'
+- idtype: doi
+  value: 10.1016/j.dcn.2019.100680
+- idtype: pmcid
+  value: PMC6969335
+authors:
+- authtype: Author
+  name: Kayhan E
+- authtype: Author
+  name: Meyer M
+- authtype: Author
+  name: O’Reilly JX
+- authtype: Author
+  name: Hunnius S
+- authtype: Author
+  name: Bekkering H
+epubdate: 2019 Jul 10
+fulljournalname: Developmental Cognitive Neuroscience
+issue: ''
+pages: '100680'
+pmclivedate: 2020/01/21
+printpubdate: ''
+pubdate: 2019 Jul 10
+sortdate: 2019/07/10 00:00
+source: Dev Cogn Neurosci
+title: Nine-month-old infants update their predictive models of a changing environment
+uid: '6969335'
+volume: '38'

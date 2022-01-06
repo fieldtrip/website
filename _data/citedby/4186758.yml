@@ -1,0 +1,34 @@
+articleids:
+- idtype: pmid
+  value: '25286380'
+- idtype: doi
+  value: 10.1371/journal.pone.0108648
+- idtype: pmcid
+  value: PMC4186758
+authors:
+- authtype: Author
+  name: Hardmeier M
+- authtype: Author
+  name: Hatz F
+- authtype: Author
+  name: Bousleiman H
+- authtype: Author
+  name: Schindler C
+- authtype: Author
+  name: Stam CJ
+- authtype: Author
+  name: Fuhr P
+epubdate: 2014 Oct 6
+fulljournalname: PLoS ONE
+issue: '10'
+pages: e108648
+pmclivedate: 2014/10/16
+printpubdate: ''
+pubdate: 2014 Oct 6
+sortdate: 2014/10/06 00:00
+source: PLoS One
+title: Reproducibility of Functional Connectivity and Graph Measures Based on the
+  Phase Lag Index (PLI) and Weighted Phase Lag Index (wPLI) Derived from High Resolution
+  EEG
+uid: '4186758'
+volume: '9'
