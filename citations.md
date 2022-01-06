@@ -1,6 +1,6 @@
 ---
 title: Citations to the FieldTrip reference paper
-tag: [literature]
+tags: [literature]
 ---
 
 # Citations to the FieldTrip reference paper
