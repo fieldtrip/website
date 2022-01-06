@@ -28,9 +28,9 @@ _These are citations on [Pubmed](https://pubmed.ncbi.nlm.nih.gov/21253357), you 
 
   <li>
   {% if issue.size == 0 %}
-    {{ authors }}. <a href="https://pubmed.ncbi.nlm.nih.gov/{{ pmid }}">{{ title }}</a> {{ fulljournalname }} {{ pubdate }}; {{volume}}:{{ pages }}. doi: <a href="https://doi.org/{{ doi }}">{{ doi }}</a>
+    {{ authors }}. <a href="https://doi.org/{{ doi }}">{{ title }}</a> <em>{{ fulljournalname }} {{ pubdate }}; {{volume}}:{{ pages }}.</em> {% include badge doi=doi pmid=pmid %}
   {% else %}
-    {{ authors }}. <a href="https://pubmed.ncbi.nlm.nih.gov/{{ pmid }}">{{ title }}</a> {{ fulljournalname }} {{ pubdate }}; {{volume}}({{ issue }}):{{ pages }}. doi: <a href="https://doi.org/{{ doi }}">{{ doi }}</a>
+    {{ authors }}. <a href="https://doi.org/{{ doi }}">{{ title }}</a> <em>{{ fulljournalname }} {{ pubdate }}; {{volume}}({{ issue }}):{{ pages }}.</em> {% include badge doi=doi pmid=pmid %}
   {% endif %}
   </li>
 {% endfor %}
