@@ -8,6 +8,8 @@ tags: [example, eeg, preprocessing, laplace, bipolar]
 EEG and intracranial EEG (iEEG) data, which includes sEEG and ECoG, is often recorded relative to a reference electrode that is good for the signal quality and for noise suppression (e.g., with an electrode firmly attached on the mastoid behind the ear), but that is not neccessarily the most optimal for subsequent analysis or interpretation of the data. Hence, it is common to apply some re-referencing in the preprocessing of EEG and iEEG data.
 
 FieldTrip implements multiple methods for re-referencing in the **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** function. To use these, you specify `cfg.reref='yes'` and give the specific method as `cfg.refmethod`. Alternatively, if you have a more complex referencing scheme or want more control over the re-referencing, you can specify `cfg.reref='no'` and rather use `cfg.montage` in combination with **[ft_prepare_montage](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_montage.m)**.
+
+The process and consequences of applying a certain re-referencing scheme which is also known as a "montage" to clinical 1020 EEG recordings is very nicely explained on the [Learning EEG](https://www.learningeeg.com/montages-and-technical-components) website.
  
 ## avg
 
@@ -132,6 +134,10 @@ The following example uses a spherical arrangement of the electrodes, in combina
 
 ## bipolar
 
+{% include markup/warning %}
+The implementation for `cfg.refmethod = 'bipolar'` is primarily designed for sEEG where each contact along each chaft starts with the same letter(s). If you have EEG data with a 1020 electrode placement, you probably want to use one of the explicit bipolar schemes, such as the double banana (see below).
+{% include markup/end %}
+
 Often the activity recorded by a channel is contaminated by the signal coming from nearby regions, that diffuses in its surroundings. This might cause the mis-classification of channels which are not correlated with the experimental task as if they were indeed task-correlated. To ensure a better detection of task-related channels, it is recommended to adopt a more localized re-referencing scheme, which could better take into account the activity relative to each channel's surroundings. For this purpose, **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** allows the possibility to perform bipolar or Laplacian re-referencing.
 
 The bipolar re-referencing scheme consists of the re-referencing of each channel against its closest neighboring channel. Before calling **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** it is important to make sure that the channels are ordered on the basis of their proximity to each other. Bipolar re-referencing is performed by specifying `cfg.refmethod = 'bipolar'` as in the following example.
@@ -145,7 +151,7 @@ The bipolar re-referencing scheme consists of the re-referencing of each channel
 
 Note that, since each of the N original channels is re-referenced against the next one in order, the last channel cannot be re-referenced and, at the end of the process, the dataset will contain N-1 channels. To emphasize the fact that the signal of each channel now derives from the subtraction between two neighbouring channels, all labels are modified. As an example, in place of the channels `C1`, `C2` and `C3`, the re-referenced dataset will present the channels `C1-C2` and `C2-C3`.
 
-If you are analysing an iEEG dataset, you might want to re-reference separately channels belonging to different electrode shafts. It is possible to do so by setting `cfg.groupchans = 'yes'` and by ensuring your channels are labeled correctly. Channels of each shaft should start with one or multiple letters (e.g., 'LT', 'LP', ...) and the subsequent electrodes should be numbered (e.g., 'LT1', 'LT2', ...).
+If you are analyzing an sEEG dataset, you might want to re-reference separately channels belonging to different electrode shafts. It is possible to do so by setting `cfg.groupchans = 'yes'` and by ensuring your channels are labeled correctly. Channels of each shaft should start with one or multiple letters (e.g., 'LT', 'LP', ...) and the subsequent electrodes should be numbered (e.g., 'LT1', 'LT2', ...).
 
     cfg = [];
     cfg.channel = 'all'; % this is the default
@@ -168,7 +174,7 @@ The Laplacian re-referencing scheme is relatively similar to the bipolar scheme.
 
 Note that, differently from the bipolar method, the number of channels is the same as the input data and the original labels are maintained.
 
-If you are analysing iEEG data, you are probably interested in re-referencing channels separately for each electrode shaft. This can be done exactly as it was described above for bipolar re-referencing, by configuring `cfg.groupchans = 'yes'` and by making sure that channels are correctly labeled. Channels of each shaft should start with one or multiple letters (e.g., 'LT', 'LP', ...) and the subsequent electrodes should be numbered (e.g., 'LT1', 'LT2', ...).
+If you are analyzing iEEG data, you are probably interested in re-referencing channels separately for each electrode shaft. This can be done exactly as it was described above for bipolar re-referencing, by configuring `cfg.groupchans = 'yes'` and by making sure that channels are correctly labeled. Channels of each shaft should start with one or multiple letters (e.g., 'LT', 'LP', ...) and the subsequent electrodes should be numbered (e.g., 'LT1', 'LT2', ...).
 
     cfg = [];
     cfg.channel = 'all'; % this is the default
@@ -178,11 +184,41 @@ If you are analysing iEEG data, you are probably interested in re-referencing ch
     cfg.groupchans = 'yes';
     data_laplace = ft_preprocessing(cfg, data_orig);
 
+## longitudinal or doublebanana
+
+The longitudinal montage for the 1020 EEG system, also known as the double banana montage, consists of multiple chains of bipolar channels that run from the front to the back of the head. See [Learning EEG](https://www.learningeeg.com/montages-and-technical-components) for details.
+
+    cfg = [];
+    cfg.channel = 'eeg1020'; % channels not in the 10-20 system will be ignored anyway
+    cfg.reref = 'yes';
+    cfg.refmethod = 'longitudinal'; % or 'doublebanana'
+    data_longitudinal = ft_preprocessing(cfg, data_orig);
+
+## circumferential
+
+In the circumferential montage for the 1020 EEG system the electrodes are chained in a circle around the head. See [Learning EEG](https://www.learningeeg.com/montages-and-technical-components) for details.
+
+    cfg = [];
+    cfg.channel = 'eeg1020'; % channels not in the 10-20 system will be ignored anyway
+    cfg.reref = 'yes';
+    cfg.refmethod = 'circumferential';
+    data_circumferential = ft_preprocessing(cfg, data_orig);
+
+## transverse
+
+In the transverse montage for the 1020 EEG system the electrodes are chained from the left to the right. See [Learning EEG](https://www.learningeeg.com/montages-and-technical-components) for details.
+
+    cfg = [];
+    cfg.channel = 'eeg1020'; % channels not in the 10-20 system will be ignored anyway
+    cfg.reref = 'yes';
+    cfg.refmethod = 'transverse';
+    data_transverse = ft_preprocessing(cfg, data_orig);
+
 ## montage
 
-Using the `cfg.montage` option, you can specify an arbitrarily complex "montage". All of the previous methods (except for the median) could in principle be implemented with this.
+Using the `cfg.montage` option, you can specify an arbitrarily complex "montage". All of the previous methods (except for the median) could in principle be implemented with this, and some of them actually use a montage "under the hood" that is constructed on the fly with **[ft_prepare_montage](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_montage.m)**.
 
-A montage (also known as a "linear derivation") specifies a linear mapping or combination from the (old) channels in the original data to the new channels in the re-referenced data. Basically it is implemented by a matrix multiplication, following some shuffling of the the rows of the data matrix. The montage is explained in more detail in the **[ft_prepare_montage](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_montage.m)**  function.
+A montage, also known as a "linear derivation" or as a "re-referencing scheme" specifies a linear mapping from the (old) channels in the original data to the new channels in the re-referenced data. Basically it is implemented by a matrix multiplication, following some shuffling of the the rows of the data matrix. The montage is explained in more detail in the **[ft_prepare_montage](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_montage.m)**  and **[ft_apply_montage](https://github.com/fieldtrip/fieldtrip/blob/master/forward/ft_apply_montage.m)** functions.
 
 As an example, a bipolar montage could look like this:
 
@@ -196,7 +232,7 @@ As an example, a bipolar montage could look like this:
 
 Where the input data consists of 4 channels, and the output data would have three channels with the pair-wise difference between '1-2', '2-3', and '3-4'.
 
-This can also be used to implement a single or double "banana" montage for clinical EEG, like this:
+This can also be used to implement your own single or double "banana" montage for clinical EEG, like this:
 
 {% include image src="/assets/img/example/rereference/banana_montage.png" width="400" %}
 
