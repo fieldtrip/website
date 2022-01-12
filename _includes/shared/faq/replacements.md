@@ -3,9 +3,14 @@ To avoid unnecessary dependencies on functions from non-standard MathWorks toolb
 Alternatives are provided for the following functions from the MathWorks [Statistics Toolbox](https://www.mathworks.com/products/statistics.html) (stats)
 
 - nansum, nanstd, etc.
-- biocdf
+- betacdf
+- betainv
+- betapdf
+- binocdf
 - binopdf
+- mvnrnd
 - tcdf
+- tinv
 - range
 
 Alternatives are provided for the following functions from the MathWorks [Signal Processing Toolbox](https://www.mathworks.com/products/signal.html) (signal)
