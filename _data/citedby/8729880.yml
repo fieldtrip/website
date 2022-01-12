@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '35002597'
+- idtype: doi
+  value: 10.3389/fnins.2021.738408
+- idtype: pmcid
+  value: PMC8729880
+authors:
+- authtype: Author
+  name: Bachmann FL
+- authtype: Author
+  name: MacDonald EN
+- authtype: Author
+  name: Hjortkjær J
+epubdate: 2021 Dec 21
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '738408'
+pmclivedate: 2022/01/06
+printpubdate: ''
+pubdate: 2021 Dec 21
+sortdate: 2021/12/21 00:00
+source: Front Neurosci
+title: Neural Measures of Pitch Processing in EEG Responses to Running Speech
+uid: '8729880'
+volume: '15'

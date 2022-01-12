@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '34772738'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0128-21.2021
+- idtype: pmcid
+  value: PMC8741158
+authors:
+- authtype: Author
+  name: Marques DB
+- authtype: Author
+  name: Ruggiero RN
+- authtype: Author
+  name: Bueno-Junior LS
+- authtype: Author
+  name: Rossignoli MT
+- authtype: Author
+  name: Leite JP
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '1'
+pages: 81-96
+pmclivedate: ''
+printpubdate: 2022 Jan 5
+pubdate: 2022 Jan 5
+sortdate: 2022/01/05 00:00
+source: J Neurosci
+title: Prediction of Learned Resistance or Helplessness by Hippocampal-Prefrontal
+  Cortical Network Activity during Stress
+uid: '8741158'
+volume: '42'

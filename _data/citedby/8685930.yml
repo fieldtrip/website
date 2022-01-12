@@ -1,0 +1,47 @@
+articleids:
+- idtype: pmid
+  value: '34880133'
+- idtype: doi
+  value: 10.1073/pnas.2114171118
+- idtype: pmcid
+  value: PMC8685930
+authors:
+- authtype: Author
+  name: Treder MS
+- authtype: Author
+  name: Charest I
+- authtype: Author
+  name: Michelmann S
+- authtype: Author
+  name: Martín-Buro MC
+- authtype: Author
+  name: Roux F
+- authtype: Author
+  name: Carceller-Benito F
+- authtype: Author
+  name: Ugalde-Canitrot A
+- authtype: Author
+  name: Rollings DT
+- authtype: Author
+  name: Sawlani V
+- authtype: Author
+  name: Chelvarajah R
+- authtype: Author
+  name: Wimber M
+- authtype: Author
+  name: Hanslmayr S
+- authtype: Author
+  name: Staresina BP
+epubdate: 2021 Dec 8
+fulljournalname: Proceedings of the National Academy of Sciences of the United States
+  of America
+issue: '50'
+pages: e2114171118
+pmclivedate: 2022/01/06
+printpubdate: 2021 Dec 14
+pubdate: 2021 Dec 8
+sortdate: 2021/12/08 00:00
+source: Proc Natl Acad Sci U S A
+title: The hippocampus as the switchboard between perception and memory
+uid: '8685930'
+volume: '118'

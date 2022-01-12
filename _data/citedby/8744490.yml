@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '34607318'
+- idtype: doi
+  value: 10.1088/1741-2552/ac2c9f
+- idtype: pmcid
+  value: PMC8744490
+- idtype: MID
+  value: NIHMS1752122
+authors:
+- authtype: Author
+  name: Verwoert M
+- authtype: Author
+  name: Vansteensel MJ
+- authtype: Author
+  name: Freudenburg ZV
+- authtype: Author
+  name: Aarnoutse EJ
+- authtype: Author
+  name: Leijten FS
+- authtype: Author
+  name: Ramsey NF
+- authtype: Author
+  name: Branco MP
+epubdate: 2021 Oct 22
+fulljournalname: Journal of neural engineering
+issue: '5'
+pages: 10.1088/1741-2552/ac2c9f
+pmclivedate: ''
+printpubdate: ''
+pubdate: 2021 Oct 22
+sortdate: 2021/10/22 00:00
+source: J Neural Eng
+title: Decoding four hand gestures with a single bipolar pair of electrocorticography
+  electrodes
+uid: '8744490'
+volume: '18'

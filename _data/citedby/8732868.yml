@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '35002791'
+- idtype: doi
+  value: 10.3389/fpsyt.2021.721874
+- idtype: pmcid
+  value: PMC8732868
+authors:
+- authtype: Author
+  name: Conley AC
+- authtype: Author
+  name: Key AP
+- authtype: Author
+  name: Taylor WD
+- authtype: Author
+  name: Albert KM
+- authtype: Author
+  name: Boyd BD
+- authtype: Author
+  name: Vega JN
+- authtype: Author
+  name: Newhouse PA
+epubdate: 2021 Dec 23
+fulljournalname: Frontiers in Psychiatry
+issue: ''
+pages: '721874'
+pmclivedate: 2022/01/07
+printpubdate: ''
+pubdate: 2021 Dec 23
+sortdate: 2021/12/23 00:00
+source: Front Psychiatry
+title: 'EEG as a Functional Marker of Nicotine Activity: Evidence From a Pilot Study
+  of Adults With Late-Life Depression'
+uid: '8732868'
+volume: '12'

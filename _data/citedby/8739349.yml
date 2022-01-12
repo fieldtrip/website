@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '34993590'
+- idtype: doi
+  value: 10.1007/s00221-021-06284-5
+- idtype: pmcid
+  value: PMC8739349
+authors:
+- authtype: Author
+  name: van den Berg B
+- authtype: Author
+  name: Hijma HJ
+- authtype: Author
+  name: Koopmans I
+- authtype: Author
+  name: Doll RJ
+- authtype: Author
+  name: Zuiker RG
+- authtype: Author
+  name: Groeneveld GJ
+- authtype: Author
+  name: Buitenweg JR
+epubdate: 2022 Jan 7
+fulljournalname: Experimental Brain Research
+issue: ''
+pages: 1-19
+pmclivedate: 2022/01/07
+printpubdate: ''
+pubdate: 2022 Jan 7
+sortdate: 2022/01/07 00:00
+source: Exp Brain Res
+title: Simultaneous measurement of intra-epidermal electric detection thresholds and
+  evoked potentials for observation of nociceptive processing following sleep deprivation
+uid: '8739349'
+volume: ''
