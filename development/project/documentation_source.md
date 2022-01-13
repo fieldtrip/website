@@ -81,7 +81,7 @@ none.
 
 [Compute forward simulated data and apply a dipole fit](/example/compute_forward_simulated_data_and_apply_a_dipole_fit)
 
-[Fit a dipole to the tactile ERF after mechanical stimulation](/example/fit_a_dipole_to_the_tactile_erf_after_mechanical_stimulation)
+[Fit a dipole to the tactile ERF after mechanical stimulation](/example/dipolefit_somatosensory_erf)
 
 _Why is this fixme?_
 

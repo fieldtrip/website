@@ -7,7 +7,7 @@ tags: [source, interpolate, atlas, label]
 
 After doing your source reconstruction, you may want to interpolate an atlas onto your sourcemodel, for example to be able to find peaks of activity within an anatomical ROI.
 
-The best way to go about is to do your beamformer source reconstruction on a subject-specific grid, which is inverse-warped from a regular grid defined on the MNI-template. You can read more about it in the example script [create a grid in individual head space from a template grid in MNI space](/example/create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_mni_space).
+The best way to go about is to do your beamformer source reconstruction on a subject-specific grid, which is inverse-warped from a regular grid defined on the MNI-template. You can read more about it in the example script [create a grid in individual head space from a template grid in MNI space](/example/sourcemodel_aligned2mni).
 
 Then, you can interpolate the atlas of your choice onto this sourcemodel using **[ft_sourceinterpolate](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceinterpolate.m)**.
 

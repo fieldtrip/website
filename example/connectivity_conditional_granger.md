@@ -78,7 +78,7 @@ We build the actual MVAR-representation...
 ... and have a first look at the data:
 
     figure
-    plot(data.time{1}, data.trial{1})
+    plot(data1.time{1}, data1.trial{1})
     legend(data1.label)
     xlabel('time (s)')
 

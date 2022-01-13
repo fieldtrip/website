@@ -50,7 +50,10 @@ If you download this data into a folder named 'testdata', the directory should l
     cfg.resolution       = 1;
     cfg.unit             = 'cm';
     sourcemodel_ctf_ss   = ft_prepare_leadfield(cfg);
-
+    
+    % use the same geometry for the grid in what is to follow
+    sourcemodel = removefields(sourcemodel_ctf_ss, {'leadfield', 'leadfielddimord', 'label'});
+  
 **CTF headmodel, single sphere:**
 
 {% include image src="/assets/img/example/make_leadfields_using_different_headmodels/singlesphere.png" %}
@@ -73,8 +76,7 @@ If you download this data into a folder named 'testdata', the directory should l
     cfg                 = [];
     cfg.grad            = hdr.grad;
     cfg.headmodel       = ctf_ls;
-    cfg.resolution      = 1;
-    cfg.unit            = 'cm';
+    cfg.sourcemodel     = sourcemodel;
     sourcemodel_ctf_ls  = ft_prepare_leadfield(cfg);
 
 **CTF headmodel, local spheres:**
@@ -91,7 +93,7 @@ If you download this data into a folder named 'testdata', the directory should l
     % ft_prepare_headmodel using localspheres (for information type 'help ft_prepare_headmodel')
     cfg           = [];
     cfg.method    = 'localspheres';
-    cfg.geom      = shape;
+    cfg.headshape = shape;
     cfg.grad      = grad;
     cfg.feedback  = false;
     ls_headshape  = ft_prepare_headmodel(cfg);
@@ -105,8 +107,7 @@ If you download this data into a folder named 'testdata', the directory should l
     cfg                 = [];
     cfg.grad            = hdr.grad;
     cfg.headmodel       = ls_headshape;
-    cfg.resolution      = 1;
-    cfg.unit            = 'cm';
+    cfg.sourcemodel     = sourcemodel;
     sourcemodel_ls_headshape = ft_prepare_leadfield(cfg);
 
 **FieldTrip headmodel, local spheres with CTF headshape:**
@@ -147,6 +148,7 @@ If you download this data into a folder named 'testdata', the directory should l
     cfg.method    = 'localspheres';
     cfg.tissue    = 'brain'; % will be constructed on the fly from white+grey+csf
     ls_mri        = ft_prepare_headmodel(cfg, segmentedmri);
+    ls_mri        = ft_convert_units(ls_mri, 'cm');
 
     % plotting the headmodel
     ft_plot_sens(grad);
@@ -156,8 +158,7 @@ If you download this data into a folder named 'testdata', the directory should l
     cfg                  = [];
     cfg.grad             = grad;
     cfg.headmodel        = ls_mri;
-    cfg.resolution       = 1;
-    cfg.unit             = 'cm';
+    cfg.sourcemodel      = sourcemodel;
     sourcemodel_ls_mri   = ft_prepare_leadfield(cfg);
 
 **FieldTrip headmodel, local spheres based on segmented mri:**
@@ -179,6 +180,7 @@ If you download this data into a folder named 'testdata', the directory should l
     cfg.method    = 'singleshell';
     cfg.tissue    = 'brain'; % will be constructed on the fly from white+grey+csf
     singleshell   = ft_prepare_headmodel(cfg, segmentedmri);
+    singleshell   = ft_convert_units(singleshell, 'cm');
 
     % plotting the headmodel
     ft_plot_sens(grad, 'unit', 'cm');
@@ -188,8 +190,7 @@ If you download this data into a folder named 'testdata', the directory should l
     cfg                = [];
     cfg.grad           = grad;
     cfg.headmodel      = singleshell;
-    cfg.resolution     = 1;
-    cfg.unit           = 'cm';
+    cfg.sourcemodel    = sourcemodel;
     sourcemodel_singleshell   = ft_prepare_leadfield(cfg);
 
 **Single-shell headmodel, realistic geometry:**
@@ -216,7 +217,7 @@ If you download this data into a folder named 'testdata', the directory should l
     for i=1:5
       ampl{i} = nan(grid{i}.dim);
       for k=find(grid{i}.inside(:)')
-        ampl{i}(k) = sqrt(sum(a.leadfield{k}(:).^2));
+        ampl{i}(k) = sqrt(sum(grid{i}.leadfield{k}(:).^2));
       end
     end
 
@@ -266,19 +267,20 @@ If you download this data into a folder named 'testdata', the directory should l
 
     % interpolate the data on an mri for plotting the correlations between the leadfields
     cfg                 = [];
+    cfg.parameter       = 'pow';
     source              = grid{1};
     source.dim          = grid{5}.dim;
     sourceinterp        = {};
     for i=1:5
       for j=(i+1):5
-        source.avg.pow     = comp{i, j}.corrcoef;
+        source.avg.pow     = comp{i, j};
         sourceinterp{i, j} = ft_sourceinterpolate(cfg, source, mri);
       end
     end
 
     % plotting the correlations
     cfg                 = [];
-    cfg.funparameter    = 'avg.pow';
+    cfg.funparameter    = 'pow';
     cfg.nslices         = 12;
     cfg.colmax          = 1;
     cfg.colmin          = 0.8;

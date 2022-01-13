@@ -1,6 +1,8 @@
 ---
 title: Effects of tapering for power estimates
 tags: [example, freq, simulation]
+redirect_from:
+   - /example/effects_of_tapering_for_power_estimates_in_the_frequency_domain/
 ---
 
 # Effects of tapering for power estimates
@@ -25,7 +27,7 @@ Create and plot a simulated signal. The simulated data contains only one trial, 
     figure
     plot(data.time{1}, data.trial{1}(1,:))
 
-{% include image src="/assets/img/example/effects_of_tapering_for_power_estimates_in_the_frequency_domain/taper_picture_1.png" %}
+{% include image src="/assets/img/example/effects_of_tapering/taper_picture_1.png" %}
 
 Compare the power estimate using a single Hanning taper with a single dpss taper (cfg.taper).
 
@@ -46,7 +48,7 @@ Compare the power estimate using a single Hanning taper with a single dpss taper
     semilogy(freq.freq, freq.powspctrm(1,:), 'g-');
     legend({'hanning', 'dpss'});
 
-{% include image src="/assets/img/example/effects_of_tapering_for_power_estimates_in_the_frequency_domain/taper_picture_2.png" %}
+{% include image src="/assets/img/example/effects_of_tapering/taper_picture_2.png" %}
 
 Look at the effect of multitapering with various amounts of smoothing (cfg.tapsmofrq).
 
@@ -73,7 +75,7 @@ Look at the effect of multitapering with various amounts of smoothing (cfg.tapsm
 
     legend({'1 Hz', '5 Hz', '10 Hz'});
 
-{% include image src="/assets/img/example/effects_of_tapering_for_power_estimates_in_the_frequency_domain/taper_picture_3.png" %}
+{% include image src="/assets/img/example/effects_of_tapering/taper_picture_3.png" %}
 
 Look at the effect of spectral leakage of frequencies that are in between the natural frequencies of your time segment (cfg.pad). Note that the power spectral density per sqrt(Hz) decreases due to the zero-padding (compare the green and the blue). Multiplying the time series with a scaling factor fixes this, and makes the power spectral density estimates easier to compare (red and blue).
 
@@ -100,4 +102,4 @@ Look at the effect of spectral leakage of frequencies that are in between the na
 
     legend({'1s', '5s', '10s'});
 
-{% include image src="/assets/img/example/effects_of_tapering_for_power_estimates_in_the_frequency_domain/taper_picture_4.png" %}
+{% include image src="/assets/img/example/effects_of_tapering/taper_picture_4.png" %}

@@ -1,11 +1,17 @@
 ---
-title: Plotting the result of source reconstructing on a cortical mesh
+title: Plotting the result of source reconstruction on a cortical mesh
 tags: [example, plotting, source]
+redirect_from:
+   - failed_example_plotting_source_surface
 ---
 
-# Plotting the result of source reconstructing on a cortical mesh
+# Plotting the result of source reconstruction on a cortical mesh
 
-The following function can be used to plot the results of source reconstruction on a cortical surface sheet. It assumes a cortical sheet _surf_, described by vertices (pnt) and triangles (tri). The vertices can be used as positions in **[ft_sourceanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceanalysis.m)** by specifying cfg.sourcemodel.pos = surf.pnt.
+The following function can be used to plot the results of source reconstruction on a cortical surface sheet. It assumes a cortical sheet _surf_, described by vertices (pnt) and triangles (tri). The vertices can be used as positions in **[ft_sourceanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceanalysis.m)** by specifying cfg.sourcemodel.pos = surf.pnt, and cfg.sourcemodel.tri = surf.tri. The resulting source structure (i.e. obtained
+after running **[ft_sourceanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceanalysis.m)**) can subsequently be used by **[ft_sourceanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceanalysis.m)**, using cfg.method = 'surface'. If
+the source level data also contains a time-dimension, the function **[ft_sourceanplot_interactive](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceaplot_interactive.m)** can also be used. The below code was written before the
+already mentioned functionality was implemented in FieldTrip. There is no strict need to
+use it, nor a guarantee that it will still work.
 
     function [handles] = myownsurfplot(cfg,surf,source)
 

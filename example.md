@@ -16,14 +16,14 @@ See also the [tutorials](/tutorial) and [frequently asked questions](/faq).
 - [Detect the muscle activity in an EMG channel and use that as trial definition](/example/detect_the_muscle_activity_in_an_emg_channel_and_use_that_as_trial_definition)
 - [Fixing a missing sensor](/example/fixing_a_missing_sensor)
 - [Getting started with reading raw EEG or MEG data](/example/getting_started_with_reading_raw_eeg_or_meg_data)
-- [How to incorporate head movements in MEG analysis](/example/how_to_incorporate_head_movements_in_meg_analysis)
+- [How to incorporate head movements in MEG analysis](/example/headmovement_meg)
 - [Interpolating data from the CTF151 to the CTF275 sensor array using ft_megrealign](/example/megrealign)
 - [Making your own trialfun for conditional trial definition](/example/making_your_own_trialfun_for_conditional_trial_definition)
 - [Analyzing NIRS data recorded during unilateral finger- and foot-tapping](/example/nirs_fingertapping)
 - [Analyzing NIRS data recorded during listening to and repeating speech](/example/nirs_speech)
 - [The correct pipeline order for combining planar MEG channels](/example/combineplanar_pipelineorder)
-- [Use independent component analysis (ICA) to remove ECG artifacts](/example/use_independent_component_analysis_ica_to_remove_ecg_artifacts)
-- [Use independent component analysis (ICA) to remove EOG artifacts](/example/use_independent_component_analysis_ica_to_remove_eog_artifacts)
+- [Use independent component analysis (ICA) to remove ECG artifacts](/example/ica_ecg)
+- [Use independent component analysis (ICA) to remove EOG artifacts](/example/ica_eog)
 - [Use denoising source separation (DSS) to remove ECG artifacts](/example/use_denoising_source_separation_dss_to_remove_ecg_artifacts)
 - [Re-reference EEG and iEEG data](/example/rereference)
 
@@ -33,7 +33,7 @@ See also the [tutorials](/tutorial) and [frequently asked questions](/faq).
 - [Analyze Steady-State Visual Evoked Potentials (SSVEPs)](/example/ssvep)
 - [Cross-frequency analysis](/example/crossfreq)
 - [Effect of Signal-to-Noise Ratio on Coherence](/example/coherence_snr)
-- [Effects of tapering for power estimates](/example/effects_of_tapering_for_power_estimates_in_the_frequency_domain)
+- [Effects of tapering for power estimates](/example/effects_of_tapering)
 - [Fourier analysis of oscillatory power and coherence](/tutorial/fourier)
 - [Simulate an oscillatory signal with phase resetting](/example/phase_reset)
 - [Irregular Resampling Auto-Spectral Analysis (IRASA)](/example/irasa)
@@ -42,7 +42,7 @@ See also the [tutorials](/tutorial) and [frequently asked questions](/faq).
 
 ### Source reconstruction
 
-- [Align EEG electrode positions to BEM headmodel](/example/align_eeg_electrode_positions_to_bem_headmodel)
+- [Align EEG electrode positions to BEM headmodel](/example/electrodes2bem)
 - [Check the quality of the anatomical coregistration](/example/coregistration_quality_control)
 - [Combined EEG and MEG source reconstruction](/example/combined_eeg_and_meg_source_reconstruction)
 - [Common filters in beamforming](/example/common_filters_in_beamforming)
@@ -51,13 +51,13 @@ See also the [tutorials](/tutorial) and [frequently asked questions](/faq).
 - [Compute forward simulated data and apply a dipole fit](/example/compute_forward_simulated_data_and_apply_a_dipole_fit)
 - [Compute forward simulated data using ft_dipolesimulation](/example/compute_forward_simulated_data)
 - [Compute forward simulated data with the low-level ft_compute_leadfield](/example/compute_leadfield)
-- [Create MNI-aligned grids in individual head-space](/example/create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_mni_space)
+- [Create MNI-aligned grids in individual head-space](/example/sourcemodel_aligned2mni)
 - [Determine the filter characteristics](/example/determine_the_filter_characteristics)
-- [Fit a dipole to the tactile ERF after mechanical stimulation](/example/fit_a_dipole_to_the_tactile_erf_after_mechanical_stimulation)
+- [Fit a dipole to the tactile ERF after mechanical stimulation](/example/dipolefit_somatosensory_erf)
 - [How to create a head model if you do not have an individual MRI](/example/fittemplate)
 - [Localizing the sources underlying the difference in event related fields](/example/difference_erf)
 - [Make leadfields using different headmodels](/example/make_leadfields_using_different_headmodels)
-- [Read neuromag .fif mri and create MNI-aligned single_shell grids in individual head-space](/example/read_neuromag_mri_and_create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_mni_space)
+- [Read neuromag .fif mri and create MNI-aligned single_shell grids in individual head-space](/example/read_neuromag_mri_and_sourcemodel_aligned2mni)
 - [Testing BEM created lead fields](/example/testing_bem_created_leadfields)
 - [Use your own forward leadfield model in an inverse beamformer computation](/example/use_your_own_forward_leadfield_model_in_an_inverse_beamformer_computation)
 
@@ -88,7 +88,7 @@ See also the [tutorials](/tutorial) and [frequently asked questions](/faq).
 ## Visualizing the results of an analysis
 
 - [Creating a layout for plotting NIRS optodes and channels](/example/nirs_layout)
-- [Plotting the result of source reconstructing on a cortical mesh](/example/plotting_the_result_of_source_reconstructing_on_a_cortical_mesh)
+- [Plotting the result of source reconstructing on a cortical mesh](/example/plotting_source_surface)
 - [Making a synchronous movie of EEG or NIRS combined with video recordings](/example/video_eeg)
 
 ## Miscellaneous
@@ -111,4 +111,3 @@ See also the [tutorials](/tutorial) and [frequently asked questions](/faq).
 - [How to import data from MNE-Python and FreeSurfer](/example/import_mne)
 - [How to use ft_checkconfig](/example/checkconfig)
 - [Performing modified Multiscale Entropy (mMSE) analysis](/example/entropy_analysis)
-- [Writing simulated data to a CTF dataset](/example/writing_simulated_data_to_a_ctf_dataset)

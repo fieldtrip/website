@@ -23,10 +23,10 @@
   link:  /example/use_denoising_source_separation_dss_to_remove_ecg_artifacts
 
 - name:  Use independent component analysis (ICA) to remove ECG artifacts
-  link:  /example/use_independent_component_analysis_ica_to_remove_ecg_artifacts
+  link:  /example/ica_ecg
 
 - name:  Use independent component analysis (ICA) to remove EOG artifacts
-  link:  /example/use_independent_component_analysis_ica_to_remove_eog_artifacts
+  link:  /example/ica_eog
 
 - name:  What dataformats are supported?
   link:  /faq/dataformat

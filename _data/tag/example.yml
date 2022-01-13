@@ -2,7 +2,7 @@
   link:  /example
 
 - name:  Align EEG electrode positions to BEM headmodel
-  link:  /example/align_eeg_electrode_positions_to_bem_headmodel
+  link:  /example/electrodes2bem
 
 - name:  Apply non-parametric statistics with clustering on TFRs of power that were computed with BESA
   link:  /example/apply_cluster_and_analysis_on_tfrs_of_power_that_were_computed_with_besa
@@ -80,7 +80,7 @@
   link:  /example/correlation_analysis_in_fmri_data
 
 - name:  Create MNI-aligned grids in individual head-space
-  link:  /example/create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_mni_space
+  link:  /example/sourcemodel_aligned2mni
 
 - name:  Cross-frequency analysis
   link:  /example/crossfreq
@@ -98,7 +98,7 @@
   link:  /example/ecog_ny
 
 - name:  Effects of tapering for power estimates
-  link:  /example/effects_of_tapering_for_power_estimates_in_the_frequency_domain
+  link:  /example/effects_of_tapering
 
 - name:  Computing and reporting the effect size
   link:  /example/effectsize
@@ -110,7 +110,7 @@
   link:  /example/fem
 
 - name:  Fit a dipole to the tactile ERF after mechanical stimulation
-  link:  /example/fit_a_dipole_to_the_tactile_erf_after_mechanical_stimulation
+  link:  /example/dipolefit_somatosensory_erf
 
 - name:  How to create a head model if you do not have an individual MRI
   link:  /example/fittemplate
@@ -149,7 +149,7 @@
   link:  /example/glm_trials
 
 - name:  How to incorporate head movements in MEG analysis
-  link:  /example/how_to_incorporate_head_movements_in_meg_analysis
+  link:  /example/headmovement_meg
 
 - name:  How to import data from MNE-Python and FreeSurfer
   link:  /example/import_mne
@@ -188,7 +188,7 @@
   link:  /example/phase_reset
 
 - name:  Plotting the result of source reconstructing on a cortical mesh
-  link:  /example/plotting_the_result_of_source_reconstructing_on_a_cortical_mesh
+  link:  /example/plotting_source_surface
 
 - name:  Re-reference EEG and iEEG data
   link:  /example/rereference
@@ -215,10 +215,10 @@
   link:  /example/use_denoising_source_separation_dss_to_remove_ecg_artifacts
 
 - name:  Use independent component analysis (ICA) to remove ECG artifacts
-  link:  /example/use_independent_component_analysis_ica_to_remove_ecg_artifacts
+  link:  /example/ica_ecg
 
 - name:  Use independent component analysis (ICA) to remove EOG artifacts
-  link:  /example/use_independent_component_analysis_ica_to_remove_eog_artifacts
+  link:  /example/ica_eog
 
 - name:  Use simulated ERPs to explore cluster statistics
   link:  /example/use_simulated_erps_to_explore_cluster_statistics

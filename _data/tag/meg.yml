@@ -14,13 +14,13 @@
   link:  /example/compute_forward_simulated_data_and_apply_a_beamformer_scan
 
 - name:  Create MNI-aligned grids in individual head-space
-  link:  /example/create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_mni_space
+  link:  /example/sourcemodel_aligned2mni
 
 - name:  Computing and reporting the effect size
   link:  /example/effectsize
 
 - name:  Fit a dipole to the tactile ERF after mechanical stimulation
-  link:  /example/fit_a_dipole_to_the_tactile_erf_after_mechanical_stimulation
+  link:  /example/dipolefit_somatosensory_erf
 
 - name:  Fixing a missing channel
   link:  /example/fixing_a_missing_sensor
@@ -29,7 +29,7 @@
   link:  /example/getting_started_with_reading_raw_eeg_or_meg_data
 
 - name:  How to incorporate head movements in MEG analysis
-  link:  /example/how_to_incorporate_head_movements_in_meg_analysis
+  link:  /example/headmovement_meg
 
 - name:  Make leadfields using different headmodels
   link:  /example/make_leadfields_using_different_headmodels

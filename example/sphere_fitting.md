@@ -1,24 +1,21 @@
 ---
 title: Fitting a template MRI to the MEG Polhemus head shape
+redirect_from:
+   - sphere_fitting_and_scaling_of_the_template_colin_27_mri_to_the_meg_polhemus_headshape
 ---
 
 # Fitting a template MRI to the MEG Polhemus head shape
 
-This example script demonstrates how to fit a sphere to the MEG Polhemus recorded head shape, how to fit a sphere to a template MRI, and subsequently use the two fitted spheres to scale the template MRI such that it fits the MEG Polhemus head shape.
-
-    clc; clear; close all;
-    restoredefaultpath
-    addpath('/nashome1/wexu/matlab/fieldtrip')
-    ft_defaults
+This example script demonstrates how to fit a sphere to the MEG Polhemus recorded head shape, how to fit a sphere to a template MRI, and subsequently use the two fitted spheres to scale the template MRI such that it fits the MEG Polhemus head shape. This example has been written with a Elekta-system fif-file in mind. Accordingly, the variable 'dataset', specified below should point to a fif-file that includes a Polhemus-based headshape description.
 
     load standard_mri % Colin 27 template in fieldtrip
 
     % read MEG sensor location
-    MEG_sens = ft_read_sens('/nashome1/wexu/MNE_data/CN/MEG/CN19/CN19_raw_tsss_mc.fif', 'senstype', 'meg');
+    MEG_sens = ft_read_sens(dataset, 'senstype', 'meg');
     MEG_sens = ft_convert_units(MEG_sens, 'mm');
 
     % read polhemus headshape
-    headshape = ft_read_headshape('/nashome1/wexu/MNE_data/CN/MEG/CN19/CN19_raw_tsss_mc.fif');
+    headshape = ft_read_headshape(dataset);
     headshape = ft_convert_units(headshape, 'mm');
 
     save headshape headshape

@@ -1,14 +1,14 @@
 - name:  How to incorporate head movements in MEG analysis
-  link:  /example/how_to_incorporate_head_movements_in_meg_analysis
+  link:  /example/headmovement_meg
 
 - name:  Use denoising source separation (DSS) to remove ECG artifacts
   link:  /example/use_denoising_source_separation_dss_to_remove_ecg_artifacts
 
 - name:  Use independent component analysis (ICA) to remove ECG artifacts
-  link:  /example/use_independent_component_analysis_ica_to_remove_ecg_artifacts
+  link:  /example/ica_ecg
 
 - name:  Use independent component analysis (ICA) to remove EOG artifacts
-  link:  /example/use_independent_component_analysis_ica_to_remove_eog_artifacts
+  link:  /example/ica_eog
 
 - name:  How can I consistently represent artifacts in my data?
   link:  /faq/how_can_i_consistently_represent_artifacts_in_my_data
@@ -51,4 +51,3 @@
 
 - name:  Visual artifact rejection
   link:  /tutorial/visual_artifact_rejection
-

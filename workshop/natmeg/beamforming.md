@@ -296,7 +296,7 @@ If you were to name the anatomical label of the source of this motor beta, what 
 {% include markup/end %}
 
 {% include markup/success %}
-With the use of cfg.atlas you can specify a lookup atlas, which **[ft_sourceplot](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceplot.m)** will use to return appropriate anatomical labels. One for the MNI template is distributed with FieldTrip and can be found in 'fieldtrip/template/atlas/aal/ROI_MNI_V4.nii'. Be aware that for this to work you need to realign your anatomical and functional data into MNI coordinates. An example how to achieve this is to [align the leadfield grid of the individual subject to a leadfield grid in MNI space](/example/create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_mni_space).
+With the use of cfg.atlas you can specify a lookup atlas, which **[ft_sourceplot](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceplot.m)** will use to return appropriate anatomical labels. One for the MNI template is distributed with FieldTrip and can be found in 'fieldtrip/template/atlas/aal/ROI_MNI_V4.nii'. Be aware that for this to work you need to realign your anatomical and functional data into MNI coordinates. An example how to achieve this is to [align the leadfield grid of the individual subject to a leadfield grid in MNI space](/example/sourcemodel_aligned2mni).
 {% include markup/end %}
 
 #### Exercise: regularization
@@ -451,7 +451,7 @@ If you've made it this far, perhaps you could try beamforming a different time w
 Beamforming source analysis in the frequency domain with DICS on EEG and MEG data has been demonstrated. Options at each stage and their influence on the results were discussed, such as CSD matrix regularization. Finally, the results were plotted on an orthogonal view.
 
 Computing event-related fields with [MNE](/tutorial/minimumnormestimate) or [LCMV](/tutorial/virtual_sensors) might be of interest. More information on [common filters can be found here](/example/common_filters_in_beamforming).
-If you are doing a group study where you want the grid points to be the same over all subjects, [see here](/example/create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_mni_space). See [here for source statistics](/example/source_statistics).
+If you are doing a group study where you want the grid points to be the same over all subjects, [see here](/example/sourcemodel_aligned2mni). See [here for source statistics](/example/source_statistics).
 
 Related documentation:
 {% include seealso tag1="source" tag2="faq" %}

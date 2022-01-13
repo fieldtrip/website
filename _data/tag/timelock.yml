@@ -1,5 +1,5 @@
 - name:  Fit a dipole to the tactile ERF after mechanical stimulation
-  link:  /example/fit_a_dipole_to_the_tactile_erf_after_mechanical_stimulation
+  link:  /example/dipolefit_somatosensory_erf
 
 - name:  What kind of filters can I apply to my data?
   link:  /faq/what_kind_of_filters_can_i_apply_to_my_data

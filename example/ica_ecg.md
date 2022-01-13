@@ -1,6 +1,8 @@
 ---
 title: Use independent component analysis (ICA) to remove ECG artifacts
 tags: [example, artifact, preprocessing, ica]
+redirect_from:
+   - /example/use_independent_component_analysis_ica_to_remove_ecg_artifacts/
 ---
 
 # Use independent component analysis (ICA) to remove ECG artifacts
@@ -41,29 +43,25 @@ You can now preprocess the data:
     % split the ECG and MEG datasets, since ICA will be performed on MEG data but not on ECG channel
     % 1 - ECG dataset
     cfg              = [];
-    cfg.channel      = {'EEG'};
+    cfg.channel      = {'EEG058'};
     ecg              = ft_selectdata(cfg, data);
-    ecg.label{:}     = 'ECG'; % for clarity and consistency rename the label of the ECG channel
+    ecg.label{1}     = 'ECG'; % for clarity and consistency rename the label of the ECG channel
     % 2 - MEG dataset
     cfg              = [];
     cfg.channel      = {'MEG'};
-    data              = ft_selectdata(cfg, data);
+    data_orig        = ft_selectdata(cfg, data);
 
 Finally, you should downsample your data before continuing, otherwise ICA decomposition will take too long.
 
-    data_orig = data; %save the original data for later use
     cfg            = [];
     cfg.resamplefs = 150;
     cfg.detrend    = 'no';
-    data           = ft_resampledata(cfg, data);
+    data           = ft_resampledata(cfg, data_orig);
 
 ## Code
 
 This script demonstrates how you can use ICA for cleaning the ECG artifacts from your MEG data. It starts by first doing a decomposition of the MEG data in the data segments of interest (i.e. the real trials in your experiment). Subsequently goes back to the original raw datafile and it reads the data segments around the QRS peaks that can easily be detected in the ECG channel.
 It uses the decomposition from the original data to estimate the timecourse of the components around the ECG artifacts. By looking at the component time courses (averaged), the coherence between the components and the ECG channel, and the spatial topographies, it is possible to determine which components are responsible for the ECG artifact in the MEG channels. Those components can then be removed from the original data.
-
-    % read the already preprocessed MEG data from a MATLAB file
-    load datfile.mat data
 
     cfg            = [];
     cfg.method     = 'runica';
@@ -77,7 +75,7 @@ Once your component analysis is done, you can look at the topography of the comp
     cfg.comment   = 'no';
     ft_topoplotIC(cfg, comp)
 
-{% include image src="/assets/img/example/use_independent_component_analysis_ica_to_remove_ecg_artifacts/small_20components_topo2.jpg" width="400" %}
+{% include image src="/assets/img/example/ica_ecg/small_20components_topo2.jpg" width="400" %}
 
 To be certain these are the ECG components, you can also look at their time courses. In the image below, components 4 and 17 show a regular signal, typical for the heartbeat. You can also flip through all the trials, to see if this regular signal continues throughout the recording. (Note: ft_componentbrowser is deprecated; please use ft_databrowser instead.)
 
@@ -87,14 +85,12 @@ To be certain these are the ECG components, you can also look at their time cour
     cfg.layout   = 'CTF275.lay'; % specify the layout file that should be used for plotting
     ft_databrowser(cfg, comp)
 
-{% include image src="/assets/img/example/use_independent_component_analysis_ica_to_remove_ecg_artifacts/small_ecgcomponents_compbrowser2.jpg" width="400" %}
+{% include image src="/assets/img/example/ica_ecg/small_ecgcomponents_compbrowser2.jpg" width="400" %}
 
 However, given that you measured the heartbeat on a separate channel, you can use this information to extract the two components of interest. Two possible ways of doing this is by using timelock data, and frequency data. You do not need to use both unless you are uncertain which components to remove.
 
     % go back to the raw data on disk and detect the peaks in the ECG channel, i.e. the QRS-complex
     cfg                       = [];
-    cfg.trl                   = data_orig.cfg.previous.trl;
-    cfg.dataset               = data_orig.cfg.previous.dataset;
     cfg.continuous            = 'yes';
     cfg.artfctdef.ecg.pretim  = 0.25;
     cfg.artfctdef.ecg.psttim  = 0.50-1/1200;
@@ -104,25 +100,21 @@ However, given that you measured the heartbeat on a separate channel, you can us
 
 You will be asked for feedback at two points while running this code. The visual display of your data should look similar to this. If it doesn't, you may still have some jump artifacts in the data that you haven't removed.
 
-{% include image src="/assets/img/example/use_independent_component_analysis_ica_to_remove_ecg_artifacts/ecgpeaks1.jpg" width="400" %}
+{% include image src="/assets/img/example/ica_ecg/ecgpeaks1.jpg" width="400" %}
 
-{% include image src="/assets/img/example/use_independent_component_analysis_ica_to_remove_ecg_artifacts/ecgpeaks2.jpg" width="400" %}
+{% include image src="/assets/img/example/ica_ecg/ecgpeaks2.jpg" width="400" %}
 
 You can go on with the analysis now.
 
     % preproces the data around the QRS-complex, i.e. read the segments of raw data containing the ECG artifact
     cfg            = [];
-    cfg.dataset    = data_orig.cfg.previous.dataset;
     cfg.continuous = 'yes';
     cfg.padding    = 10;
     cfg.dftfilter  = 'yes';
     cfg.demean     = 'yes';
     cfg.trl        = [artifact zeros(size(artifact,1),1)];
     cfg.channel    = {'MEG'};
-    data_ecg       = ft_preprocessing(cfg);
-    cfg.channel    = {'EEG058'};
-    ecg            = ft_preprocessing(cfg);
-    ecg.channel{:} = 'ECG'; % renaming is purely for clarity and consistency
+    data_ecg       = ft_preprocessing(cfg, data_orig);
 
     % resample to speed up the decomposition and frequency analysis, especially usefull for 1200Hz MEG data
     cfg            = [];
@@ -154,8 +146,8 @@ Below is the code for generating images which will help you detect which compone
     subplot(2,1,1); plot(timelock.time, timelock.avg(1,:))
     subplot(2,1,2); imagesc(timelock.avg(2:end,:));
 
-{% include image src="/assets/img/example/use_independent_component_analysis_ica_to_remove_ecg_artifacts/ecgtimelock_corr.jpg" width="400" %}
-{% include image src="/assets/img/example/use_independent_component_analysis_ica_to_remove_ecg_artifacts/ecgimagesc.jpg" width="400" %}
+{% include image src="/assets/img/example/ica_ecg/ecgtimelock_corr.jpg" width="400" %}
+{% include image src="/assets/img/example/ica_ecg/ecgimagesc.jpg" width="400" %}
 
 A second way of finding which components contain the ECG artifacts is through calculating coherence of your component analysis with the heartbeat. Two components should be prominent here as well.
 
@@ -182,7 +174,7 @@ A second way of finding which components contain the ECG artifacts is through ca
 
 Again, by zooming in to the lower subplot, you can see that in this case those are components 4 and 17.
 
-{% include image src="/assets/img/example/use_independent_component_analysis_ica_to_remove_ecg_artifacts/ecgcoherence.jpg" width="400" %}
+{% include image src="/assets/img/example/ica_ecg/ecgcoherence.jpg" width="400" %}
 
 Based on the figures, you now should select the components that explain the ECG artifact, and remove them from your data. The resulting dataset will contain the measured brain activity, with the variance attributable to the heartbeat partialled out.
 

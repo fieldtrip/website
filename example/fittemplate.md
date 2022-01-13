@@ -25,6 +25,7 @@ You load the head shape measured during the MEG recording with the Polhemus and 
     template = ft_read_headmodel('standard_bem.mat');
     template = ft_convert_units(template, 'mm');
 
+
 Note that the template head model contains three surfaces describing the three compartments of scalp, skull and brain. Furthermore, it descibes the conductivities and the BEM system matrix, computed with dipoli. Here is how the complete structure looks like
 
     template = 
@@ -35,6 +36,10 @@ Note that the template head model contains three surfaces describing the three c
          mat: [3000x3000 double]
         type: 'dipoli'
         unit: 'mm'
+
+    % note that the template's precomputed system matrix needs to be deleted
+    % because this gives problems with spatial transformations
+    template = rmfield(template, {'mat' 'type'});
 
 ## Coregistration
 
@@ -186,8 +191,8 @@ Another option for MEG is to create a single-shell model on the basis of the bra
 
     cfg                          = [];
     cfg.method                   = 'singlesphere';
-    headmodel_singleshell_sphere = ft_prepare_headmodel(cfg, template_t_sphere.bnd(3));
+    headmodel_singleshell_sphere = ft_prepare_headmodel(cfg, template_fit_sphere.bnd(3));
 
     cfg                          = [];
     cfg.method                   = 'singlesphere';
-    headmodel_singleshell_sphere = ft_prepare_headmodel(cfg, template_surface(3));
+    headmodel_singleshell_sphere = ft_prepare_headmodel(cfg, template_fit_surface.bnd(3));

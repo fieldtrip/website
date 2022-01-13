@@ -8,19 +8,21 @@ tags: [example, trialfun, emg, preprocessing]
 This page describes a FieldTrip trial function that detects muscle activity in an EMG channel
 and that defines variable length trials from the EMG onset up to the EMG offset.
 
-You would use this function as follows
+You would use this function as follows:
 
     cfg           = [];
-    cfg.dataset   = string, containing filename or directory
-    cfg.trialfun  = 'trialfun_emgdetect';
+    cfg.dataset   = <string, containing filename or directory>
+    cfg.trialfun  = 'ft_trialfun_emgdetect';
     cfg           = ft_definetrial(cfg);
     data          = ft_preprocessing(cfg);
+
+The above code was created using data from the [analysis of corticomuscular coherence](/tutorial/coherence) tutorial, and can be downloaded: [ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/SubjectCMC.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/SubjectCMC.zip).
 
 Note that there are some parameters, like the EMG channel name and the
 processing that is done on the EMG channel data, which are hardcoded in
 this trial function. You should change these parameters if necessary.
 
-    function [trl] = trialfun_emgdetect(cfg);
+    function [trl] = ft_trialfun_emgdetect(cfg);
 
     % read the header and determine the channel number corresponding with the EMG
     hdr         = ft_read_header(cfg.headerfile);

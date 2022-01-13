@@ -41,7 +41,7 @@ For the simplest case, the BEM and the theoretical solutions for EEG lead field 
     cfg.sourcemodel.pos = pos;
     cfg.headmodel = vol;
     cfg.elec = elec;
-    gridp = ft_prepare_sourcemodel(cfg);
+    sourcemodel = ft_prepare_sourcemodel(cfg);
 
 {% include image src="/assets/img/example/testing_bem_created_leadfields/bemtesting1.png" width="400" %}
 _Figure; BEM model consisting of single sphere, including electrodes_
