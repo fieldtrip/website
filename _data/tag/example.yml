@@ -1,9 +1,6 @@
 - name:  Example MATLAB scripts
   link:  /example
 
-- name:  Align EEG electrode positions to BEM headmodel
-  link:  /example/electrodes2bem
-
 - name:  Apply non-parametric statistics with clustering on TFRs of power that were computed with BESA
   link:  /example/apply_cluster_and_analysis_on_tfrs_of_power_that_were_computed_with_besa
 
@@ -79,9 +76,6 @@
 - name:  Correlation analysis in fMRI data
   link:  /example/correlation_analysis_in_fmri_data
 
-- name:  Create MNI-aligned grids in individual head-space
-  link:  /example/sourcemodel_aligned2mni
-
 - name:  Cross-frequency analysis
   link:  /example/crossfreq
 
@@ -94,6 +88,9 @@
 - name:  Localizing the sources underlying the difference in event related fields
   link:  /example/difference_erf
 
+- name:  Fit a dipole to the tactile ERF after mechanical stimulation
+  link:  /example/dipolefit_somatosensory_erf
+
 - name:  Analysis of high-gamma band signals in human ECoG
   link:  /example/ecog_ny
 
@@ -103,14 +100,14 @@
 - name:  Computing and reporting the effect size
   link:  /example/effectsize
 
+- name:  Align EEG electrode positions to BEM headmodel
+  link:  /example/electrodes2bem
+
 - name:  Performing modified Multiscale Entropy (mMSE) analysis on EEG/MEG/LFP data
   link:  /example/entropy_analysis
 
 - name:  Compute EEG leadfields using a FEM headmodel
   link:  /example/fem
-
-- name:  Fit a dipole to the tactile ERF after mechanical stimulation
-  link:  /example/dipolefit_somatosensory_erf
 
 - name:  How to create a head model if you do not have an individual MRI
   link:  /example/fittemplate
@@ -151,6 +148,12 @@
 - name:  How to incorporate head movements in MEG analysis
   link:  /example/headmovement_meg
 
+- name:  Use independent component analysis (ICA) to remove ECG artifacts
+  link:  /example/ica_ecg
+
+- name:  Use independent component analysis (ICA) to remove EOG artifacts
+  link:  /example/ica_eog
+
 - name:  How to import data from MNE-Python and FreeSurfer
   link:  /example/import_mne
 
@@ -187,7 +190,7 @@
 - name:  Simulate an oscillatory signal with phase resetting
   link:  /example/phase_reset
 
-- name:  Plotting the result of source reconstructing on a cortical mesh
+- name:  Plotting the result of source reconstruction on a cortical mesh
   link:  /example/plotting_source_surface
 
 - name:  Re-reference EEG and iEEG data
@@ -198,6 +201,9 @@
 
 - name:  Source statistics
   link:  /example/source_statistics
+
+- name:  Create MNI-aligned grids in individual head-space
+  link:  /example/sourcemodel_aligned2mni
 
 - name:  Analyze Steady-State Visual Evoked Potentials (SSVEPs)
   link:  /example/ssvep
@@ -213,12 +219,6 @@
 
 - name:  Use denoising source separation (DSS) to remove ECG artifacts
   link:  /example/use_denoising_source_separation_dss_to_remove_ecg_artifacts
-
-- name:  Use independent component analysis (ICA) to remove ECG artifacts
-  link:  /example/ica_ecg
-
-- name:  Use independent component analysis (ICA) to remove EOG artifacts
-  link:  /example/ica_eog
 
 - name:  Use simulated ERPs to explore cluster statistics
   link:  /example/use_simulated_erps_to_explore_cluster_statistics

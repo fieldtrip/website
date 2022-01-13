@@ -13,14 +13,11 @@
 - name:  Compute forward simulated data and apply a beamformer scan
   link:  /example/compute_forward_simulated_data_and_apply_a_beamformer_scan
 
-- name:  Create MNI-aligned grids in individual head-space
-  link:  /example/sourcemodel_aligned2mni
+- name:  Fit a dipole to the tactile ERF after mechanical stimulation
+  link:  /example/dipolefit_somatosensory_erf
 
 - name:  Computing and reporting the effect size
   link:  /example/effectsize
-
-- name:  Fit a dipole to the tactile ERF after mechanical stimulation
-  link:  /example/dipolefit_somatosensory_erf
 
 - name:  Fixing a missing channel
   link:  /example/fixing_a_missing_sensor
@@ -39,6 +36,9 @@
 
 - name:  Source statistics
   link:  /example/source_statistics
+
+- name:  Create MNI-aligned grids in individual head-space
+  link:  /example/sourcemodel_aligned2mni
 
 - name:  Can I create an artificial CTF dataset using MATLAB?
   link:  /example/writing_simulated_data_to_a_ctf_dataset

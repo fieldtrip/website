@@ -13,6 +13,12 @@
 - name:  Getting started with reading raw EEG or MEG data
   link:  /example/getting_started_with_reading_raw_eeg_or_meg_data
 
+- name:  Use independent component analysis (ICA) to remove ECG artifacts
+  link:  /example/ica_ecg
+
+- name:  Use independent component analysis (ICA) to remove EOG artifacts
+  link:  /example/ica_eog
+
 - name:  Making your own trialfun for conditional trial definition
   link:  /example/making_your_own_trialfun_for_conditional_trial_definition
 
@@ -21,12 +27,6 @@
 
 - name:  Use denoising source separation (DSS) to remove ECG artifacts
   link:  /example/use_denoising_source_separation_dss_to_remove_ecg_artifacts
-
-- name:  Use independent component analysis (ICA) to remove ECG artifacts
-  link:  /example/ica_ecg
-
-- name:  Use independent component analysis (ICA) to remove EOG artifacts
-  link:  /example/ica_eog
 
 - name:  What dataformats are supported?
   link:  /faq/dataformat

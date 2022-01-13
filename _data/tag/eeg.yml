@@ -1,9 +1,6 @@
 - name:  Modular EEG, OpenEEG
   link:  /development/realtime/modulareeg
 
-- name:  Align EEG electrode positions to BEM headmodel
-  link:  /example/electrodes2bem
-
 - name:  Example analysis pipeline for Biosemi data
   link:  /example/biosemi
 
@@ -21,6 +18,9 @@
 
 - name:  Analysis of high-gamma band signals in human ECoG
   link:  /example/ecog_ny
+
+- name:  Align EEG electrode positions to BEM headmodel
+  link:  /example/electrodes2bem
 
 - name:  Compute EEG leadfields using a FEM headmodel
   link:  /example/fem
