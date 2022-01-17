@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '34990964'
+- idtype: doi
+  value: 10.1016/j.nicl.2021.102933
+- idtype: pmcid
+  value: PMC8743245
+authors:
+- authtype: Author
+  name: Bogdány T
+- authtype: Author
+  name: Perakakis P
+- authtype: Author
+  name: Bódizs R
+- authtype: Author
+  name: Simor P
+epubdate: 2021 Dec 31
+fulljournalname: 'NeuroImage : Clinical'
+issue: ''
+pages: '102933'
+pmclivedate: 2022/01/13
+printpubdate: ''
+pubdate: 2021 Dec 31
+sortdate: 2021/12/31 00:00
+source: Neuroimage Clin
+title: 'The heartbeat evoked potential is a questionable biomarker in nightmare disorder:
+  A replication study'
+uid: '8743245'
+volume: '33'

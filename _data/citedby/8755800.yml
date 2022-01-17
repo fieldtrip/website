@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '35022456'
+- idtype: doi
+  value: 10.1038/s41598-021-04384-4
+- idtype: pmcid
+  value: PMC8755800
+authors:
+- authtype: Author
+  name: Heinen KT
+- authtype: Author
+  name: Kenemans JL
+- authtype: Author
+  name: van der Stigchel S
+epubdate: 2022 Jan 12
+fulljournalname: Scientific Reports
+issue: ''
+pages: '575'
+pmclivedate: 2022/01/14
+printpubdate: ''
+pubdate: 2022 Jan 12
+sortdate: 2022/01/12 00:00
+source: Sci Rep
+title: Recruitment of a long-term memory supporting neural network during repeated
+  maintenance of a multi-item abstract visual image in working memory
+uid: '8755800'
+volume: '12'

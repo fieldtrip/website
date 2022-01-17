@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '34339495'
+- idtype: doi
+  value: 10.1093/cercor/bhab212
+- idtype: pmcid
+  value: PMC8754371
+authors:
+- authtype: Author
+  name: Babo-Rebelo M
+- authtype: Author
+  name: Puce A
+- authtype: Author
+  name: Bullock D
+- authtype: Author
+  name: Hugueville L
+- authtype: Author
+  name: Pestilli F
+- authtype: Author
+  name: Adam C
+- authtype: Author
+  name: Lehongre K
+- authtype: Author
+  name: Lambrecq V
+- authtype: Author
+  name: Dinkelacker V
+- authtype: Author
+  name: George N
+epubdate: 2021 Jul 31
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '2'
+pages: 342-366
+pmclivedate: 2022/01/13
+printpubdate: ''
+pubdate: 2021 Jul 31
+sortdate: 2021/07/31 00:00
+source: Cereb Cortex
+title: Visual Information Routes in the Posterior Dorsal and Ventral Face Network
+  Studied with Intracranial Neurophysiology and White Matter Tract Endpoints
+uid: '8754371'
+volume: '32'

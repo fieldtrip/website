@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '35017606'
+- idtype: doi
+  value: 10.1038/s41598-021-04461-8
+- idtype: pmcid
+  value: PMC8752782
+authors:
+- authtype: Author
+  name: Niazi IK
+- authtype: Author
+  name: Navid MS
+- authtype: Author
+  name: Bartley J
+- authtype: Author
+  name: Shepherd D
+- authtype: Author
+  name: Pedersen M
+- authtype: Author
+  name: Burns G
+- authtype: Author
+  name: Taylor D
+- authtype: Author
+  name: White DE
+epubdate: 2022 Jan 11
+fulljournalname: Scientific Reports
+issue: ''
+pages: '520'
+pmclivedate: 2022/01/13
+printpubdate: ''
+pubdate: 2022 Jan 11
+sortdate: 2022/01/11 00:00
+source: Sci Rep
+title: EEG signatures change during unilateral Yogi nasal breathing
+uid: '8752782'
+volume: '12'
