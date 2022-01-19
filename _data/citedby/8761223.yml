@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '34268825'
+- idtype: doi
+  value: 10.1111/ejn.15361
+- idtype: pmcid
+  value: PMC8761223
+- idtype: MID
+  value: NIHMS1727197
+authors:
+- authtype: Author
+  name: Donoghue T
+- authtype: Author
+  name: Schaworonkow N
+- authtype: Author
+  name: Voytek B
+epubdate: 2021 Jul 16
+fulljournalname: The European journal of neuroscience
+issue: ''
+pages: 10.1111/ejn.15361
+pmclivedate: ''
+printpubdate: ''
+pubdate: 2021 Jul 16
+sortdate: 2021/07/16 00:00
+source: Eur J Neurosci
+title: Methodological Considerations for Studying Neural Oscillations
+uid: '8761223'
+volume: ''
