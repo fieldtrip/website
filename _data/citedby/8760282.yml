@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '35031665'
+- idtype: doi
+  value: 10.1038/s41598-021-04737-z
+- idtype: pmcid
+  value: PMC8760282
+authors:
+- authtype: Author
+  name: Geng S
+- authtype: Author
+  name: Molinaro N
+- authtype: Author
+  name: Timofeeva P
+- authtype: Author
+  name: Quiñones I
+- authtype: Author
+  name: Carreiras M
+- authtype: Author
+  name: Amoruso L
+epubdate: 2022 Jan 14
+fulljournalname: Scientific Reports
+issue: ''
+pages: '764'
+pmclivedate: 2022/01/18
+printpubdate: ''
+pubdate: 2022 Jan 14
+sortdate: 2022/01/14 00:00
+source: Sci Rep
+title: Oscillatory dynamics underlying noun and verb production in highly proficient
+  bilinguals
+uid: '8760282'
+volume: '12'

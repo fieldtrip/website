@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '34717832'
+- idtype: doi
+  value: 10.1016/j.cub.2021.10.017
+- idtype: pmcid
+  value: PMC7612233
+- idtype: MID
+  value: EMS140680
+authors:
+- authtype: Author
+  name: Boros M
+- authtype: Author
+  name: Magyari L
+- authtype: Author
+  name: Török D
+- authtype: Author
+  name: Bozsik A
+- authtype: Author
+  name: Deme A
+- authtype: Author
+  name: Andics A
+epubdate: 2021 Oct 29
+fulljournalname: 'Current biology : CB'
+issue: '24'
+pages: 5512-5521.e5
+pmclivedate: 2022/01/18
+printpubdate: 2021 Dec 20
+pubdate: 2021 Oct 29
+sortdate: 2021/10/29 00:00
+source: Curr Biol
+title: Neural processes underlying statistical learning for speech segmentation in
+  dogs
+uid: '7612233'
+volume: '31'
