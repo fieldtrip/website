@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '34904567'
+- idtype: doi
+  value: 10.7554/eLife.70907
+- idtype: pmcid
+  value: PMC8763394
+authors:
+- authtype: Author
+  name: Kluger DS
+- authtype: Author
+  name: Balestrieri E
+- authtype: Author
+  name: Busch NA
+- authtype: Author
+  name: Gross J
+epubdate: 2021 Dec 14
+fulljournalname: eLife
+issue: ''
+pages: e70907
+pmclivedate: 2022/01/19
+printpubdate: ''
+pubdate: 2021 Dec 14
+sortdate: 2021/12/14 00:00
+source: eLife
+title: Respiration aligns perception with neural excitability
+uid: '8763394'
+volume: '10'
