@@ -23,13 +23,13 @@ The following information will be printed on screen:
     data =
     struct with fields:
 
-             hdr: [1×1 struct]
-           label: {4×1 cell}
-            time: {[1×211355 double]}
-           trial: {[4×211355 double]}
+             hdr: [1x1 struct]
+           label: {4x1 cell}
+            time: {[1x211355 double]}
+           trial: {[4x211355 double]}
          fsample: 44100
       sampleinfo: [1 211355]
-             cfg: [1×1 struct]
+             cfg: [1x1 struct]
 
 Also usefull can be to use **[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_databrowser.m)** to have a quick look at the time series.
 

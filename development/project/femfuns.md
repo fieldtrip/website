@@ -35,7 +35,7 @@ The following section illustrates an example where the FEMfuns pipeline is embed
 The instructions to set up FEMfuns can be found on the [Github page](https://github.com/meronvermaas/FEMfuns).
 Setting up is achieved in three steps:
 
-Step 1: Download Anaconda: https://docs.continuum.io/anaconda/install/ 
+Step 1: Download Anaconda: https://docs.continuum.io/anaconda/install/
 
     wget https://repo.anaconda.com/archive/Anaconda3-2021.05-Linux-x86_64.sh
     bash ./Anaconda3-2021.05-Linux-x86_64.sh
@@ -135,11 +135,11 @@ Finally, the geometry and parameters are used by FEMfuns externally and the resu
     
     disp(lf_rec)
           dim: [3 3 3]
-          pos: [27×3 double]
+          pos: [27x3 double]
          unit: 'cm'
-       inside: [27×1 logical]
-          cfg: [1×1 struct]
-    leadfield: {1×27 cell}
+       inside: [27x1 logical]
+          cfg: [1x1 struct]
+    leadfield: {1x27 cell}
         label: {'elec1'  'elec2'  'elec3'  'elec4'  'elec5'}
 
 An example of the potential distribution on the inner sphere representing the brain (visualized using https://www.paraview.org/):

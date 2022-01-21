@@ -21,13 +21,13 @@ The low-level functions can also be handy, especially if you plan to do your own
 
                Fs: 30
            nChans: 2764800
-            label: {2764800×1 cell}
-         chantype: {2764800×1 cell}
-         chanunit: {2764800×1 cell}
+            label: {2764800x1 cell}
+         chantype: {2764800x1 cell}
+         chanunit: {2764800x1 cell}
          nSamples: 240
           nTrials: 1
       nSamplesPre: 0
-             orig: [1×1 struct]
+             orig: [1x1 struct]
 
     dat = ft_read_data('Untitled.mov', 'header', hdr); % pass the previously read header to speed it up
     
