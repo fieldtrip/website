@@ -520,6 +520,9 @@
 - name:  Why does my anatomical MRI show upside-down when plotting it with ft_sourceplot?
   link:  /faq/why_does_my_anatomical_mri_show_upside-down_when_plotting_it_with_ft_sourceplot
 
+- name:  Why does my EEG headmodel look funny?
+  link:  /faq/why_does_my_eegheadmodel_look_funny
+
 - name:  Why does my ICA output contain complex numbers?
   link:  /faq/why_does_my_ica_output_contain_complex_numbers
 
