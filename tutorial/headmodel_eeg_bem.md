@@ -97,6 +97,10 @@ In this step, the voxels of the anatomical MRI are segmented (i.e. separated) in
 Note that the segmentation is quite time consuming (~15mins) and if you want you can load the result and skip ahead to the next step. You can download the segmented MRI of this tutorial data from the [FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/headmodel_eeg/segmentedmri.mat) (segmentedmri.mat).
 {% include markup/end %}
 
+{% include markup/info %}
+Occasionally, the quality of the anatomical image is not sufficient to provide a good segmentation out-of-the-box. This could for example happen if the anatomical MRI has been acquired with the subject wearing an EEG cap. This could cause image inhomogeneities that make the automatic segmentation fail. One possible solution could be to correct for these inhomogeneitie using the **[ft_volumebiascorrect](https://github.com/fieldtrip/fieldtrip/blob/release/ft_volumebiascorrect.m)** function. 
+{% include markup/end %}
+
     cfg           = [];
     cfg.output    = {'brain','skull','scalp'};
     segmentedmri  = ft_volumesegment(cfg, mri);
@@ -121,7 +125,7 @@ The segmentedmri data structure is similar to the mri data structure, but contai
 - **scalp**: binary representation of the scalp
 - **cfg**: configuration information of the function which created segmentedmri
 
-The segmentation does not change the coordinate system, nor the size of the volume. You can see this in the first three fields (dim, transform and coordsys) which are the same as the corresponding fields of the input mri data structure. But now, the field **transform** aligns the matrix in field **brain**, **skull** and **scalp** to the coordinate system defined in the **coordsys** field.
+The segmentation does not change the coordinate system, nor the size of the volume. You can see this in the first three fields (dim, transform and coordsys) which are the same as the corresponding fields of the input mri data structure. But now, the field **transform** aligns the matrix in field **brain**, **skull** and **scalp** to the coordinate system defined in the **coordsys** field. It is good practice to check at this point in a figure, whether the segmented compartments look as expected.
 
 ## Mesh
 
