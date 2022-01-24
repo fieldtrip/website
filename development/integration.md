@@ -14,10 +14,6 @@ We use [Jekyll](https://jekyllrb.com) for our website. The markdown documents ar
 
 We use this for a number of email discussion lists. It is hosted by C&CZ at <http://mailman.science.ru.nl>. The Google search on the website also searches the email list archives.
 
-## Facebook
-
-We use <http://facebook.com/fieldtriptoolbox> to announce events and to post photos and messages that relate to the social interaction between developers and users. The Facebook page is **not** used to provide support. People who like our Facebook page are displayed on the start page. Photos from Facebook albums are sometimes used in the news messages on the home page.
-
 ## Twitter
 
 We use <http://twitter.com/fieldtriptoolbx> to notify people about updates. Commits of new code are automatically tweeted.
@@ -44,9 +40,13 @@ A copy of the git repository of the FieldTrip software is maintained on <https:/
 
 A copy of the git repository of the FieldTrip software is stored on <https://gitlab.com/fieldtrip/fieldtrip>, although the primary site is on [GitHub](#GitHub).
 
-## Google
+## Google search
 
-We use Google to provide the search functionality on the website and discussion list archives. Furthermore, we use Google Analytics to collect website usage statistics.
+We use Google to provide the search functionality on the website and discussion list archives.
+
+## Plausible
+
+We use [Plausible](http://plausible.io/) on a self-hosted server to count website visitors and to see which pages are visited most.
 
 ## Ftp
 
@@ -88,6 +88,14 @@ We initially used Concurrent Versions System (CVS) as the version control system
 
 We used to maintain a copy of the SVN repository with the software on [Google Code](http://code.google.com/p/fieldtrip) but in 2015 Google stopped support for it. Right now there is only a link to the FieldTrip website.
 
+## Google Analytics - obsolete
+
+We used Google Analytics to collect website usage statistics. In January 2022 we switched to Plausible.
+
 ## Sourceforge - obsolete
 
 We used to maintain a copy of the SVN repository with the software on [SourceForge](https://sourceforge.net/projects/fieldtrip/) but are now not actively using it any more.
+
+## Facebook - obsolete
+
+We used <http://facebook.com/fieldtriptoolbox> to announce events and to post photos and messages that relate to the social interaction between developers and users. The Facebook page is **not** used to provide support. In the past we also listed people who like our Facebook page on the start page. or linked in news items to photos from Facebook albums. Due to privacy concerns we stopped using FaceBook.
