@@ -97,6 +97,10 @@ In this step, the voxels of the anatomical MRI are segmented (i.e. separated) in
 Note that the segmentation is quite time consuming (~15mins) and if you want you can load the result and skip ahead to the next step. You can download the segmented MRI of this tutorial data from the [FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/headmodel_eeg/segmentedmri.mat) (segmentedmri.mat).
 {% include markup/end %}
 
+{% include markup/info %}
+Occasionally, the quality of the anatomical image is not sufficient to provide a good segmentation out-of-the-box. This could for example happen if the anatomical MRI has been acquired with the subject wearing an EEG cap. This could cause image inhomogeneities that make the automatic segmentation fail. One possible solution could be to correct for these inhomogeneitie using the **[ft_volumebiascorrect](https://github.com/fieldtrip/fieldtrip/blob/release/ft_volumebiascorrect.m)** function. 
+{% include markup/end %}
+
     cfg           = [];
     cfg.output    = {'brain','skull','scalp'};
     segmentedmri  = ft_volumesegment(cfg, mri);
@@ -121,7 +125,7 @@ The segmentedmri data structure is similar to the mri data structure, but contai
 - **scalp**: binary representation of the scalp
 - **cfg**: configuration information of the function which created segmentedmri
 
-The segmentation does not change the coordinate system, nor the size of the volume. You can see this in the first three fields (dim, transform and coordsys) which are the same as the corresponding fields of the input mri data structure. But now, the field **transform** aligns the matrix in field **brain**, **skull** and **scalp** to the coordinate system defined in the **coordsys** field.
+The segmentation does not change the coordinate system, nor the size of the volume. You can see this in the first three fields (dim, transform and coordsys) which are the same as the corresponding fields of the input mri data structure. But now, the field **transform** aligns the matrix in field **brain**, **skull** and **scalp** to the coordinate system defined in the **coordsys** field. It is good practice to check at this point in a figure, whether the segmented compartments look as expected.
 
 ## Mesh
 
@@ -155,11 +159,11 @@ The scalp, skull and brain mask have already been segmented and a surface descri
     % Dipoli
     cfg        = [];
     cfg.method ='dipoli'; % You can also specify 'openmeeg', 'bemcp', or another method.
-    vol        = ft_prepare_headmodel(cfg, bnd);
+    headmodel  = ft_prepare_headmodel(cfg, bnd);
 
-    save vol vol
+    save headmodel headmodel
 
-    disp(vol)
+    disp(headmodel)
          bnd: [1x3 struct]
         cond: [0.3300 0.0041 0.3300]
          mat: [6000x6000 double]
@@ -167,31 +171,31 @@ The scalp, skull and brain mask have already been segmented and a surface descri
         unit: 'mm'
          cfg: [1x1 struct]
 
-The vol data structure contains the following fields:
+The headmodel data structure contains the following fields:
 
 - **bnd**: contains the geometrical description of the head model.
 - **cond**: conductivity of each surface
 - **mat**: matrix
 - **type**: describes the method that was used to create the headmodel.
 - **unit**: the unit of measurement of the geometrical data in the bnd field
-- **cfg**: configuration of the function that was used to create vol
+- **cfg**: configuration of the function that was used to create the headmodel
 
-The **bnd** field contains the same information as the mesh we created in the earlier step. But the vol also contains a conductivity value for each surface and a matrix used for the volume conduction model. Note that the unit of measurement used in the geometrical description of vol is in 'mm'. The EEG sensors should be also defined in 'mm'. The units of all type of geometrical information should be the same when a leadfield is computed for source-reconstruction.
+The **bnd** field contains the same information as the mesh we created in the earlier step. But the headmodel also contains a conductivity value for each surface and a matrix used for the volume conduction model. Note that the unit of measurement used in the geometrical description of headmodel is in 'mm'. The EEG sensors should be also defined in 'mm'. The units of all type of geometrical information should be the same when a leadfield is computed for source-reconstruction.
 
 {% include markup/danger %}
-The order in which different tissue types are represented in the output of ft_prepare_headmodel may depend on the volume conduction model you are using. Make sure to double-check which tissue type is represented where in vol.bnd.
+The order in which different tissue types are represented in the output of ft_prepare_headmodel may depend on the volume conduction model you are using. Make sure to double-check which tissue type is represented where in headmodel.bnd.
 {% include markup/end %}
 
 ## Visualization
 
-The head model (vol) contains three structures in the **bnd** field. These are the geometrical descriptions of the scalp, skull and brain surfaces. First, we will plot each of the surfaces using the **[ft_plot_mesh](https://github.com/fieldtrip/fieldtrip/blob/release/plotting/ft_plot_mesh.m)** function. Then, all surfaces will be plot together on the same figure.
+The headmodel contains three structures in the **bnd** field. These are the geometrical descriptions of the scalp, skull and brain surfaces. First, we will plot each of the surfaces using the **[ft_plot_mesh](https://github.com/fieldtrip/fieldtrip/blob/release/plotting/ft_plot_mesh.m)** function. Then, all surfaces will be plot together on the same figure.
 
     figure;
-    ft_plot_mesh(vol.bnd(3),'facecolor','none'); %scalp
+    ft_plot_mesh(headmodel.bnd(3),'facecolor','none'); %scalp
     figure;
-    ft_plot_mesh(vol.bnd(2),'facecolor','none'); %skull
+    ft_plot_mesh(headmodel.bnd(2),'facecolor','none'); %skull
     figure;
-    ft_plot_mesh(vol.bnd(1),'facecolor','none'); %brain
+    ft_plot_mesh(headmodel.bnd(1),'facecolor','none'); %brain
 
 {% include image src="/assets/img/tutorial/headmodel_eeg_bem/skin.png" %}
 {% include image src="/assets/img/tutorial/headmodel_eeg_bem/skull.png" %}
@@ -199,11 +203,11 @@ The head model (vol) contains three structures in the **bnd** field. These are t
 
 _Figure 3. The geometry of the volume conduction model using BEM ('dipoli'): scalp (left), skull (middle) and brain (right)_
 
-    ft_plot_mesh(vol.bnd(1), 'facecolor',[0.2 0.2 0.2], 'facealpha', 0.3, 'edgecolor', [1 1 1], 'edgealpha', 0.05);
+    ft_plot_mesh(headmodel.bnd(1), 'facecolor',[0.2 0.2 0.2], 'facealpha', 0.3, 'edgecolor', [1 1 1], 'edgealpha', 0.05);
     hold on;
-    ft_plot_mesh(vol.bnd(2),'edgecolor','none','facealpha',0.4);
+    ft_plot_mesh(headmodel.bnd(2),'edgecolor','none','facealpha',0.4);
     hold on;
-    ft_plot_mesh(vol.bnd(3),'edgecolor','none','facecolor',[0.4 0.6 0.4]);
+    ft_plot_mesh(headmodel.bnd(3),'edgecolor','none','facecolor',[0.4 0.6 0.4]);
 
 {% include image src="/assets/img/tutorial/headmodel_eeg_bem/bem.png" width="350" %}
 
@@ -228,10 +232,10 @@ The head model is expressed in head coordinates of the anatomical mri (ctf [coor
 The electrode positions are described in the **elecpos** field. The **label** field contains the name of the electrodes.
 
     % load volume conduction model
-    load vol;
+    load headmodel;
     figure;
     % head surface (scalp)
-    ft_plot_mesh(vol.bnd(1), 'edgecolor','none','facealpha',0.8,'facecolor',[0.6 0.6 0.8]);
+    ft_plot_mesh(headmodel.bnd(1), 'edgecolor','none','facealpha',0.8,'facecolor',[0.6 0.6 0.8]);
     hold on;
     % electrodes
     ft_plot_sens(elec,'style', 'sk');
@@ -309,7 +313,7 @@ We can check the alignment by plotting together the scalp surface with the elect
     figure;
     ft_plot_sens(elec_aligned,'style','sk');
     hold on;
-    ft_plot_mesh(vol.bnd(1),'facealpha', 0.85, 'edgecolor', 'none', 'facecolor', [0.65 0.65 0.65]); %scalp
+    ft_plot_mesh(headmodel.bnd(1),'facealpha', 0.85, 'edgecolor', 'none', 'facecolor', [0.65 0.65 0.65]); %scalp
 
 {% include image src="/assets/img/tutorial/headmodel_eeg_bem/vol_elec.png" width="350" %}
 
@@ -332,7 +336,7 @@ In the subsequent section however, we try to improve the alignment of the electr
     cfg           = [];
     cfg.method    = 'interactive';
     cfg.elec      = elec_aligned;
-    cfg.headshape = vol.bnd(1);
+    cfg.headshape = headmodel.bnd(1);
     elec_aligned  = ft_electroderealign(cfg);
 
 Here, we only need to use translation. We can shift the x axis with a few mm (12). This will move the electrodes more towards the front of the head. (Note: the positive x is towards the nasion in the ctf ccordinate system.) The electrodes fit better to the head surface after the translation.
