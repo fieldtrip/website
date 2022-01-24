@@ -81,7 +81,7 @@ that we don't need to account for that anymore.
     mri2.anatomy = mri2.anatomy.*blob;
     ft_sourceplot([], mri2);
 
-{% include image src="/assets/img/faq/why_does_my_eegheadmodel_look_funny/bnd1.png" width="350" %}
+{% include image src="/assets/img/faq/why_does_my_eegheadmodel_look_funny/inhomogeneity.png" width="350" %}
 
 _Figure 3. Inhomogeneous anatomical image_
 
@@ -94,14 +94,20 @@ _Figure 3. Inhomogeneous anatomical image_
     cfg.tissue      = {'brain','skull','scalp'};
     cfg.numvertices = [3000 2000 1000];
     bnd2            = ft_prepare_mesh(cfg, segmentedmri2);
-the above already throws a warning that the segmentation is not
-star-shaped
+
+The above already throws a warning that the segmentation is not star-shaped, which is an indication that something fishy might be going on. This is corroborated by the figure that is generated below:
 
     figure;
     ft_plot_mesh(bnd2(3), 'facecolor',[0.4 0.4 0.4]);
     view([90 0]);
 
-estimate the inhomogeneity and remove this bias
+{% include image src="/assets/img/faq/why_does_my_eegheadmodel_look_funny/bnd2.png" width="350" %}
+
+_Figure 4. Failed headmodel_
+
+As mentioned above, the bias in the image can be corrected as follows:
+
+    % estimate the inhomogeneity and remove this bias
     mri3 = ft_volumebiascorrect([], mri2);
 
     cfg          = [];
@@ -116,3 +122,7 @@ estimate the inhomogeneity and remove this bias
     figure;
     ft_plot_mesh(bnd3(3), 'facecolor',[0.4 0.4 0.4]);
     view([90 0]);
+    
+{% include image src="/assets/img/faq/why_does_my_eegheadmodel_look_funny/bnd3.png" width="350" %}
+
+_Figure 4. Headmodel after inhomogeneity correction_
