@@ -1,6 +1,6 @@
 ---
 title: Why does my EEG headmodel look funny?
-tags: [faq, freq]
+tags: [faq, headmodel]
 ---
 
 # Why does my EEG headmodel look funny?
