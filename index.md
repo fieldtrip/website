@@ -44,6 +44,7 @@ _The latest code developments can be tracked in detail on [GitHub](/development/
 
 _These are recent citations on [Pubmed](https://pubmed.ncbi.nlm.nih.gov/21253357), you can find a more complete list on [Google Scholar](https://scholar.google.com/scholar?cites=3328911510682538425&scisbd=1)._
 
+
 {% assign sortlist = "" %}
 {% for item in site.data.citedby %}
 {% assign this = item[1].sortdate | replace: "/" | replace: ":" | replace: " " | append: "-" | append: forloop.index0 %}
@@ -57,6 +58,8 @@ _These are recent citations on [Pubmed](https://pubmed.ncbi.nlm.nih.gov/21253357
 {% assign sortindex = sortindex | append: " " | append: this[1] %}
 {% endfor %}
 {% assign sortindex = sortindex | split: " " %}
+
+<div class="post-excerpt" markdown="1">
 
 {% for index in sortindex %}
   {% for item in site.data.citedby %}
@@ -91,6 +94,8 @@ _These are recent citations on [Pubmed](https://pubmed.ncbi.nlm.nih.gov/21253357
     {% endif %}
   {% endfor %}
 {% endfor %}
+
+</div>
 
 <section id="sec-news" markdown="1">
 
