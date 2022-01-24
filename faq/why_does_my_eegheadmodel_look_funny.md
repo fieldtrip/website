@@ -1,14 +1,18 @@
+---
+title: Why does my EEG headmodel look funny?
+tags: [faq, freq]
+---
+
+# Why does my EEG headmodel look funny?
+
+If you create an EEG (or MEG) headmodel from an anatomical MRI image, it may happen that the one-shoe-fits-almost-all recipe that you are following does not work that wel. For instance, using the pipeline sketched in the [EEG BEM headmodel](/tutorial/headmodel_eeg_bem) tutorial, it could be that the meshes you end up with contain artifacts. For instance, there may be undesired 'horns' attached to the head or brain surface, or there might be holes. The below code shows two situations that might happen. Sometimes, things can be relatively easily solved, by tweaking judiciously the tweakable parameters in the pipeline used, but sometimes there's no way around going in by hand and to manually adjust/fix the faulty segmented images. This FAQ only sketches 2 situations that can be solved relatively easily. The first example, uses the single subject template MRI from FieldTrip, which has quite a prominent aliasing artifact at the top of the image. Using a segmentation approach with the default settings will result in a 'strange' head surface. This can be alleviated with tweaking some segmentation parameters. The second example introduces an manipulated MRI image, that has an inhomogeneous intensity. This might occur for instance if the participant was wearing an EEG cap with electrodes while the image was acquired. Satisfactory results can be obtained if the intensity bias in the image is corrected prior to segmenting. For this, one can used the function **[ft_volumebiascorrect](https://github.com/fieldtrip/fieldtrip/blob/release/plotting/ft_volumebiascorrect.m)**.
 
     % load an anatomical mri
     [ftver, ftpath] = ft_version;
     mri = ft_read_mri(fullfile(ftpath, 'template/anatomy', 'single_subj_T1_1mm.nii'));
     mri.coordsys = 'acpc';
 
-The image on disk has an ugly aliasing artifact at the top, causing the
-standard settings to create an ugly segmentation. increasing the
-threshold for the scalp segmentation, and switching off the smoothing is
-sufficient to fix it in this case. But let's first show that it leads to
-a segmentation problem, and a funky scalp surface.
+The image on disk has an ugly aliasing artifact at the top, causing the standard settings to create an ugly segmentation. increasing the threshold for the scalp segmentation, and switching off the smoothing is sufficient to fix it in this case. But let's first show that it leads to a segmentation problem, and a funky scalp surface.
 
     cfg          = [];
     cfg.output   = {'brain','skull','scalp'};
@@ -21,10 +25,14 @@ a segmentation problem, and a funky scalp surface.
 
     figure;
     ft_plot_mesh(bnd0(3), 'facecolor',[0.4 0.4 0.4]);
-    view([90 0]);
+    view([0 0]);
 
-adjusting the settings for the segmentation is helpful in this case, but
-will not always work.
+{% include image src="/assets/img/faq/why_does_my_eegheadmodel_look_funny/bnd0.png" width="350" %}
+
+_Figure 1. Aliasing artifact at the top leads to horns_
+
+Adjusting the settings for the segmentation is helpful in this case, but will not always work.
+    
     cfg          = [];
     cfg.output   = {'brain','skull','scalp'};
     cfg.scalpthreshold = 0.2;
@@ -38,7 +46,11 @@ will not always work.
 
     figure;
     ft_plot_mesh(bnd(3), 'facecolor',[0.4 0.4 0.4]);
-    view([90 0]);
+    view([0 0]);
+
+{% include image src="/assets/img/faq/why_does_my_eegheadmodel_look_funny/bnd1.png" width="350" %}
+
+_Figure 1. Adjustment of segmentation parameters gets rid of the aliasing artifact_
 
 the chunk of code below is intended to create a mask for the relevant
 anatomical data, so that the aliasing artifact can be zero'ed out, so
