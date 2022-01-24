@@ -50,14 +50,16 @@ Adjusting the settings for the segmentation is helpful in this case, but will no
 
 {% include image src="/assets/img/faq/why_does_my_eegheadmodel_look_funny/bnd1.png" width="350" %}
 
-_Figure 1. Adjustment of segmentation parameters gets rid of the aliasing artifact_
+_Figure 2. Adjustment of segmentation parameters gets rid of the aliasing artifact_
 
-the chunk of code below is intended to create a mask for the relevant
-anatomical data, so that the aliasing artifact can be zero'ed out, so
-that we don't need to account for that anymore
+Another, relatively easy to address, issue might result from image inhomogeneities. We have observed consequences of suboptimal segmentations in case subjects were wearing an EEG cap in the MRI scanner. Below, we first create an inhomogeneous image, and demonstrate the effect of this on the quality of the headmodel that is created from the segmented image. Then, we show that the problem is fixed if the bias in the image is corrected prior to running the segmentation.
+
+First, we create a mask for the relevant anatomical data, so that the aliasing artifact can be zero'ed out, so
+that we don't need to account for that anymore.
+
     scalpmask = double(segmentedmri.scalp);
 
-fill the bottom
+    % fill the bottom
     scalpmask(50:130,50:130,1) = 1;
     pw_dir = pwd;
     cd(fullfile(ftpath, 'private'));
@@ -67,7 +69,7 @@ fill the bottom
     mri2 = mri;
     mri2.anatomy(~scalpmask) = 0; % avoid the strange aliasing effect
 
-change the homogeneity of the image
+    % change the homogeneity of the image
     krn  = gausswin(181,2)*gausswin(201,2)';
     K    = repmat(krn, [1 1 180]);
     for k = 1:180
@@ -79,6 +81,11 @@ change the homogeneity of the image
     mri2.anatomy = mri2.anatomy.*blob;
     ft_sourceplot([], mri2);
 
+{% include image src="/assets/img/faq/why_does_my_eegheadmodel_look_funny/bnd1.png" width="350" %}
+
+_Figure 3. Inhomogeneous anatomical image_
+
+    
     cfg          = [];
     cfg.output   = {'brain','skull','scalp'};
     segmentedmri2 = ft_volumesegment(cfg, mri2);
