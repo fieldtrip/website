@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '35013248'
+- idtype: doi
+  value: 10.1038/s41467-021-27695-6
+- idtype: pmcid
+  value: PMC8748623
+authors:
+- authtype: Author
+  name: Tang H
+- authtype: Author
+  name: Riley MR
+- authtype: Author
+  name: Singh B
+- authtype: Author
+  name: Qi XL
+- authtype: Author
+  name: Blake DT
+- authtype: Author
+  name: Constantinidis C
+epubdate: 2022 Jan 10
+fulljournalname: Nature Communications
+issue: ''
+pages: '90'
+pmclivedate: 2022/01/20
+printpubdate: ''
+pubdate: 2022 Jan 10
+sortdate: 2022/01/10 00:00
+source: Nat Commun
+title: Prefrontal cortical plasticity during learning of cognitive tasks
+uid: '8748623'
+volume: '13'
