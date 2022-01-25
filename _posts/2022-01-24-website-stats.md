@@ -12,6 +12,6 @@ In the summer of 2020 we introduced a "cookie banner" with the opportunity to di
 
 {% include image src="/assets/img/posts/cookie-effect.png" width="500" %}
 
-For website usage statistics we have now implemented a self-hosted [Plausible](https://plausible.io) server. Plausible is an open source web analytics solution without tracking cookies that is fully compliant with GDPR, CCPA and PECR. It only stores _that_ you have visited , not _who you are_, and it does not share any information across websites to build user profiles. Plausible allows us to get the minimal information that we need, but none of your personal information.
+For website usage statistics we have now implemented [Plausible](https://plausible.io), an open source web analytics solution without tracking cookies that is fully compliant with GDPR, CCPA and PECR. It only stores _that_ you have visited, not _who you are_, and it does not share any information across websites to build user profiles. Plausible allows us to get the minimal information that we need, but none of your personal information.
 
 Furthermore, we have updated the search functionality. If you are fine with third-party cookies, it will continue to use Google Search. If you reject third-party cookies, it will now use DuckDuckGo, which does not track you.
