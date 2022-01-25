@@ -1,10 +1,11 @@
-<div id="searchlistarchive">
-<p><em>Site search is disabled due to your <a href="/privacy">privacy settings</a>.</em></p>
-</div>
+<!-- Mailing list search -->
+<div id="searchlistarchive"></div>
 
 <script>
-if(readCookie('allow-external-cookies')=='true') {
-  let elem = document.getElementById('searchlistarchive');
-  elem.innerHTML = '<form method="get" action="http://www.google.com/search" target="_blank">Search the mailing list <input type="hidden" name="sitesearch" value="mailman.science.ru.nl/pipermail/fieldtrip" /><input type="text" name="q" maxlength="255" placeholder="Search using Google" /></form>'
-  }
+if (readCookie('allow-external-cookies')=='true') {
+  document.getElementById("searchlistarchive").innerHTML = '<form method="get" action="http://www.google.com/search"><input type="hidden" name="q" value="site:mailman.science.ru.nl/pipermail/fieldtrip">Search the mailing list <input type="text" name="q" placeholder="using Google"/><input type="submit" value="🔍" /></form>'
+}
+else {
+  document.getElementById("searchlistarchive").innerHTML = '<form method="get" action="http://duckduckgo.com/"><input type="hidden" name="sites" value="mailman.science.ru.nl/pipermail/fieldtrip"/>Search the mailing list <input type="text" name="q" maxlength="255" placeholder="using DuckDuckGo"/><input type="submit" value="🔍" /></form>'
+}
 </script>

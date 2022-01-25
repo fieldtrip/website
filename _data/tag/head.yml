@@ -64,6 +64,9 @@
 - name:  Where can I find the dipoli command-line executable?
   link:  /faq/where_can_i_find_the_dipoli_command-line_executable
 
+- name:  Why does my EEG headmodel look funny?
+  link:  /faq/why_does_my_eegheadmodel_look_funny
+
 - name:  How can I use Seg3D to check and modify segmentation results?
   link:  /getting_started/seg3d
 

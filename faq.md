@@ -91,6 +91,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [Why is there a rim around the brain for which the source reconstruction is not computed?](/faq/why_is_there_a_rim_around_the_brain_for_which_the_source_reconstruction_is_not_computed)
 - [Why is the source model deformed or incorrectly aligned after warping template?](/faq/why_is_the_source_model_deformed_or_incorrectly_aligned_after_warping_template)
 - [Why should I use an average reference for EEG source reconstruction?](/faq/why_should_i_use_an_average_reference_for_eeg_source_reconstruction)
+- [Why does my EEG headmodel look funny?](/faq/why_does_my_eegheadmodel_look_funny)
 
 ## Statistical analysis
 

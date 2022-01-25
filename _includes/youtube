@@ -1,10 +1,11 @@
-<div id="youtube-{{ include.id }}">
-<p><em>Embedded video is disabled due to your <a href="/privacy">privacy settings</a>, you can find the video on <a href="https://youtu.be/{{ include.id }}">YouTube</a>.</em></p>
-</div>
+<!-- Embed a YouTube video, or provide a link to it -->
+<div id="youtube-{{ include.id }}"></div>
 
 <script>
 if(readCookie('allow-external-cookies')=='true') {
-  let elem = document.getElementById('youtube-{{ include.id }}');
-  elem.innerHTML = '<iframe width="500" height="281" src="https://www.youtube.com/embed/{{ include.id }}" frameborder="0" allowfullscreen></iframe>'
+  document.getElementById('youtube-{{ include.id }}').innerHTML = '<iframe width="500" height="281" src="https://www.youtube.com/embed/{{ include.id }}" frameborder="0" allowfullscreen></iframe>'
+}
+else {
+ document.getElementById('youtube-{{ include.id }}').innerHTML = 'Watch the video on <a href="https://youtu.be/{{ include.id }}">YouTube</a>.'
 }
 </script>

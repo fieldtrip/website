@@ -98,7 +98,8 @@ Note that the segmentation is quite time consuming (~15mins) and if you want you
 {% include markup/end %}
 
 {% include markup/info %}
-Occasionally, the quality of the anatomical image is not sufficient to provide a good segmentation out-of-the-box. This could for example happen if the anatomical MRI has been acquired with the subject wearing an EEG cap. This could cause image inhomogeneities that make the automatic segmentation fail. One possible solution could be to correct for these inhomogeneitie using the **[ft_volumebiascorrect](https://github.com/fieldtrip/fieldtrip/blob/release/ft_volumebiascorrect.m)** function. 
+Occasionally, the quality of the anatomical image is not sufficient to provide a good segmentation out-of-the-box. This could for example happen if the anatomical MRI has been acquired with the subject wearing an EEG cap. This could cause image inhomogeneities that make the automatic segmentation fail. One possible solution could be to correct for these inhomogeneitie using the **[ft_volumebiascorrect](https://github.com/fieldtrip/fieldtrip/blob/release/ft_volumebiascorrect.m)** function. For more information, you can consult this **[frequently asked question](/faq/why_does_my_eegheadmodel_look_funny)**.
+
 {% include markup/end %}
 
     cfg           = [];
