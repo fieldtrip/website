@@ -8,11 +8,11 @@ For the documentation, communication and development of the FieldTrip project we
 
 ## Jekyll
 
-We use [Jekyll](https://jekyllrb.com) for our website. The markdown documents are hosted on [GitHub](https://github.com/fieldtrip/website) and use a webhook to trigger the rebuild of the static html files on the web server. The web server is hosted as a virtual machine at the DCCN.
+We use <https://jekyllrb.com> for our website. The markdown documents are hosted on [GitHub](https://github.com/fieldtrip/website) and use a webhook to trigger the rebuild of the static html files on the web server. The web server is hosted as a virtual machine at the DCCN.
 
 ## Mailman
 
-We use this for a number of email discussion lists. It is hosted by C&CZ at <http://mailman.science.ru.nl>. The Google search on the website also searches the email list archives.
+We use this for a number of email discussion lists. It is hosted by C&CZ at <http://mailman.science.ru.nl>.
 
 ## Facebook
 
@@ -24,7 +24,11 @@ We use <http://twitter.com/fieldtriptoolbx> to notify people about updates. Comm
 
 ## Bitly
 
-We use [Bitly](https://bitly.com) to automatically create short URLs that are included in the tweets.
+We use <https://bitly.com> to automatically create short URLs that are included in the tweets.
+
+## Shields
+
+We use <https://shields.io> to generate badges for the DOIs, PMIDs and PMCIDs.
 
 ## YouTube
 
