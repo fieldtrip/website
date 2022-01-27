@@ -68,7 +68,7 @@ Using the EEG electrodes we compute a 2D layout in order to plot topographies. W
     lay.pos(:,1)=layout.pos(:,1)./.9;
     lay.pos(:,2)=layout.pos(:,2)+.08;
     lay.pos(:,2)=lay.pos(:,2)./.7;
-    figure;
+    figure(1);
     ft_plot_layout(lay)
 
 {% include image src="/assets/img/tutorial/networkanalysis_eeg/tutorial_nwaEEG_layout.png" width="400" %}
@@ -83,7 +83,7 @@ Next, the data is segmented into overlapping segemnts of 1 second length.
     cfg         = [];
     cfg.length  = 1;
     cfg.overlap = .5;
-    dataseg        = ft_redefinetrial(cfg,data);
+    dataseg     = ft_redefinetrial(cfg,data);
 
 ## Spectral analysis and peak picking
 
@@ -123,7 +123,7 @@ Alternatively, one could create a volumetric dipole grid based on regularly spac
     load('headmodel_eeg.mat')
     load('sourcemodel.mat')
     %% visualize the coregistration of sensors, headmodel, and sourcemodel.
-    figure(2);
+    figure(3);
     % make the headmodel surface transparent
     ft_plot_headmodel(headmodel_eeg, 'edgecolor', 'none'); alpha 0.4
     ft_plot_sens(dataseg.elec);
@@ -135,13 +135,13 @@ _Figure 3: Misalignment between headmodel and electrode array._
 
 In Figure 3 it is apparent that the electrodes do not align with the scalp surface. To achieve this we use ft_electroderealign in an interactive mode. Figure 4 provides the settings that had been used to align the electrodes. In particular, the option rotate, scale and translate in Figure 3.
     %%
-    cfg         = [];
-    cfg.method  = 'interactive';
+    cfg           = [];
+    cfg.method    = 'interactive';
     cfg.headshape = headmodel_eeg.bnd(1);
-    cfg.elec    = elec;
-    elec_aligned = ft_electroderealign(cfg);
+    cfg.elec      = elec;
+    elec_aligned  = ft_electroderealign(cfg);
     % make sure the aligned electrodes are updated
-    dataseg.elec = elec_aligned;
+    dataseg.elec  = elec_aligned;
     
 
 {% include image src="/assets/img/tutorial/networkanalysis_eeg/tutorial_nwa_EEG_headmodel_electrodes_match.png" width="400" %}
@@ -154,10 +154,10 @@ Before we proceed it is always useful to check the corregistration between the e
     figure(5);
 
     % create colormap to plot parcels in different color
-    nLabels = length(dkatlas.tissuelabel);
-    colr = hsv(nLabels); 
+    nLabels     = length(dkatlas.tissuelabel);
+    colr        = hsv(nLabels); 
     vertexcolor = ones(size(dkatlas.pos,1), 3);
-    for i= 1:length(dkatlas.tissuelabel)
+    for i = 1:length(dkatlas.tissuelabel)
         index = find(dkatlas.tissue==i);
        if ~isempty(index) 
           vertexcolor(index,:) = repmat(colr(i,:),  length(index), 1);
@@ -166,8 +166,7 @@ Before we proceed it is always useful to check the corregistration between the e
 
     % make the headmodel surface transparent
     ft_plot_headmodel(headmodel_eeg, 'edgecolor', 'none','facecolor', 'black'); alpha 0.1
-    ft_plot_mesh(dkatlas, 'facecolor', 'brain',  'vertexcolor', ...
-    vertexcolor, 'facealpha', .5);
+    ft_plot_mesh(dkatlas, 'facecolor', 'brain',  'vertexcolor', vertexcolor, 'facealpha', .5);
     ft_plot_sens(elec_aligned);
     view([0 -90 0])
     
@@ -177,13 +176,13 @@ _Figure 5: Alignment of headmodel (grey), electrodes (black) and sourcemodel(col
 
 Now we can proceed with the computation of the leadfield matrix, using **[ft_prepare_leadfield](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_leadfield.m)**.
 
-    cfg = [];
-    cfg.elec = elec_aligned;            
+    cfg         = [];
+    cfg.elec    = elec_aligned;            
     cfg.channel = dataseg.label;  
-    cfg.sourcemodel.pos = sourcemodel.pos;              % 2002v source points
+    cfg.sourcemodel.pos    = sourcemodel.pos;           % 2002v source points
     cfg.sourcemodel.inside = 1:size(sourcemodel.pos,1); % all source points are inside of the brain
-    cfg.headmodel = headmodel_eeg;                               % volume conduction model
-    leadfield = ft_prepare_leadfield(cfg);
+    cfg.headmodel = headmodel_eeg;                      % volume conduction model
+    leadfield     = ft_prepare_leadfield(cfg);
 
 
 ## Source reconstruction and comparison of trials with high and low alpha power
@@ -224,22 +223,19 @@ In order to visualize source-reconstructed data, the function [ft_sourceplot](ht
 
     %% plot the neural activity index (power/noise)
 
-    cfg = [];
-    cfg.parameter    = 'nai';
-    sourceint = ft_sourceinterpolate(cfg,source,dkatlas);
-    cfg=[];
-    sourceint = ft_sourceparcellate(cfg, sourceint, dkatlas);
+    cfg           = [];
+    cfg.parameter = 'nai';
+    sourceint     = ft_sourceinterpolate(cfg, source, dkatlas);
+    sourceint     = ft_sourceparcellate([], sourceint, dkatlas);
 
-    cfg = [];
+    cfg               = [];
     cfg.method        = 'surface';
     cfg.funparameter  = 'nai';
     cfg.maskparameter = cfg.funparameter;
-    % cfg.funcolorlim   = [0.0 8];
-    % cfg.opacitylim    = [3 8];
     cfg.opacitymap    = 'rampup';
-    % cfg.funcolormap   = 'jet';
     cfg.colorbar      = 'no';
-    figure(4);
+    
+    figure(6);
     ft_sourceplot(cfg, sourceint);
     colorbar off
     view([-90 30]);
@@ -267,9 +263,9 @@ Typically, in an experimental context, it is useful to visualize activity contra
     cfg.foilim       = [9 11];
     cfg.tapsmofrq    = 1;
     cfg.keeptrials   = 'yes';
-    datapow           = ft_freqanalysis(cfg, dataseg);
+    datapow          = ft_freqanalysis(cfg, dataseg);
     cfg.foilim       = [3 40];
-    datapowfull           = ft_freqanalysis(cfg, dataseg);
+    datapowfull      = ft_freqanalysis(cfg, dataseg);
 
     %% identify the indices of trials with high and low alpha power
     freqind = nearest(datapow.freq, 10);
@@ -331,7 +327,7 @@ Now we will compute the source reconstructed alpha power again, as illustrated a
     cfg                   = [];
     cfg.frequency         = freq.freq;
     cfg.method            = 'pcc';
-    cfg.sourcemodel              = leadfield;
+    cfg.sourcemodel       = leadfield;
     cfg.headmodel         = headmodel_eeg;
     cfg.elec              = elec_aligned;
     cfg.keeptrials        = 'yes';
@@ -345,8 +341,8 @@ Now we will compute the source reconstructed alpha power again, as illustrated a
     cfg                   = [];
     cfg.frequency         = freq.freq;
     cfg.method            = 'pcc';
-    cfg.sourcemodel              = leadfield;
-    cfg.sourcemodel.filter       = source.avg.filter;
+    cfg.sourcemodel       = leadfield;
+    cfg.sourcemodel.filter = source.avg.filter;
     cfg.headmodel         = headmodel_eeg;
     cfg.elec              = elec_aligned;
     cfg.keeptrials        = 'yes';
@@ -362,16 +358,16 @@ Now we will compute the source reconstructed alpha power again, as illustrated a
 
 We now visualize the log-difference on the cortical sheet.
 
-    cfg = [];
-    cfg.parameter    = 'pow';
-    sourceint = ft_sourceinterpolate(cfg,source_ratio,dkatlas);
-    cfg = [];
-    sourceint = ft_sourceparcellate(cfg, sourceint, dkatlas);
+    cfg           = [];
+    cfg.parameter = 'pow';
+    sourceint     = ft_sourceinterpolate(cfg, source_ratio, dkatlas);
+    sourceint     = ft_sourceparcellate([], sourceint, dkatlas);
 
-    cfg = [];
-    cfg.method        = 'surface';
-    cfg.funparameter  = 'pow';
-    cfg.colorbar      = 'no';
+    cfg              = [];
+    cfg.method       = 'surface';
+    cfg.funparameter = 'pow';
+    cfg.colorbar     = 'no';
+    cfg.funcolormap  = '*RdBu';
     figure(8);ft_sourceplot(cfg, sourceint);
     view([-90 30]);
     light('style','infinite','position',[0 -200 200]);
@@ -418,21 +414,19 @@ We can now explore the structure in the estimated connectivity matrices using gr
     cfg.method    = 'degrees';
     cfg.parameter = 'cohspctrm';
     cfg.threshold = .1;
-    network_full = ft_networkanalysis(cfg,source_conn);
+    network_full  = ft_networkanalysis(cfg,source_conn);
     %% sourceinterpolate
-    cfg = [];
-    cfg.parameter    = 'degrees';
-    network_int = ft_sourceinterpolate(cfg,network_full,dkatlas);
-    cfg=[];
-    network_int = ft_sourceparcellate(cfg, network_int, dkatlas);
-    %%
-    % create a fancy mask
-
-    cfg = [];
-    cfg.method        = 'surface';
-    cfg.funparameter  = 'degrees';
-    cfg.colorbar      = 'no';
-    figure(8);ft_sourceplot(cfg, network_int);
+    cfg           = [];
+    cfg.parameter = 'degrees';
+    network_int   = ft_sourceinterpolate(cfg, network_full, dkatlas);
+    network_int   = ft_sourceparcellate([], network_int, dkatlas);
+    
+    %% create a fancy mask
+    cfg              = [];
+    cfg.method       = 'surface';
+    cfg.funparameter = 'degrees';
+    cfg.colorbar     = 'no';
+    figure(10);ft_sourceplot(cfg, network_int);
     view([-90 30]);
     light('style','infinite','position',[0 -200 200]);
     colorbar off
