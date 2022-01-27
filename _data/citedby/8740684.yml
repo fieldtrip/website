@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '34983852'
+- idtype: doi
+  value: 10.1073/pnas.2116616119
+- idtype: pmcid
+  value: PMC8740684
+authors:
+- authtype: Author
+  name: Nickel MM
+- authtype: Author
+  name: Tiemann L
+- authtype: Author
+  name: Hohn VD
+- authtype: Author
+  name: May ES
+- authtype: Author
+  name: Gil Ávila C
+- authtype: Author
+  name: Eippert F
+- authtype: Author
+  name: Ploner M
+epubdate: 2021 Dec 30
+fulljournalname: Proceedings of the National Academy of Sciences of the United States
+  of America
+issue: '1'
+pages: e2116616119
+pmclivedate: 2022/01/25
+printpubdate: 2022 Jan 4
+pubdate: 2021 Dec 30
+sortdate: 2021/12/30 00:00
+source: Proc Natl Acad Sci U S A
+title: Temporal–spectral signaling of sensory information and expectations in the
+  cerebral processing of pain
+uid: '8740684'
+volume: '119'
