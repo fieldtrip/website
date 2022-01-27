@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3390/brainsci12010086
+- idtype: pmcid
+  value: PMC8774199
+authors:
+- authtype: Author
+  name: Yalaz M
+- authtype: Author
+  name: Maling N
+- authtype: Author
+  name: Deuschl G
+- authtype: Author
+  name: Juárez-Paz LM
+- authtype: Author
+  name: Butz M
+- authtype: Author
+  name: Schnitzler A
+- authtype: Author
+  name: Helmers AK
+- authtype: Author
+  name: Höft M
+epubdate: 2022 Jan 8
+fulljournalname: Brain Sciences
+issue: '1'
+pages: '86'
+pmclivedate: 2022/01/21
+printpubdate: ''
+pubdate: 2022 Jan 8
+sortdate: 2022/01/08 00:00
+source: Brain Sci
+title: 'MaDoPO: Magnetic Detection of Positions and Orientations of Segmented Deep
+  Brain Stimulation Electrodes: A Radiation-Free Method Based on Magnetoencephalography'
+uid: '8774199'
+volume: '12'

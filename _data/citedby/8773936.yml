@@ -1,0 +1,47 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3390/brainsci12010025
+- idtype: pmcid
+  value: PMC8773936
+authors:
+- authtype: Author
+  name: Dastin-van Rijn EM
+- authtype: Author
+  name: König SD
+- authtype: Author
+  name: Carlson D
+- authtype: Author
+  name: Goel V
+- authtype: Author
+  name: Grande A
+- authtype: Author
+  name: Nixdorf DR
+- authtype: Author
+  name: Benish S
+- authtype: Author
+  name: Widge AS
+- authtype: Author
+  name: Nahas Z
+- authtype: Author
+  name: Park MC
+- authtype: Author
+  name: Netoff TI
+- authtype: Author
+  name: Herman AB
+- authtype: Author
+  name: Darrow DP
+epubdate: 2021 Dec 26
+fulljournalname: Brain Sciences
+issue: '1'
+pages: '25'
+pmclivedate: 2022/01/21
+printpubdate: ''
+pubdate: 2021 Dec 26
+sortdate: 2021/12/26 00:00
+source: Brain Sci
+title: 'Personalizing Dual-Target Cortical Stimulation with Bayesian Parameter Optimization
+  Successfully Treats Central Post-Stroke Pain: A Case Report'
+uid: '8773936'
+volume: '12'

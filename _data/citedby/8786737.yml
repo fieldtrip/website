@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fnagi.2021.787654
+- idtype: pmcid
+  value: PMC8786737
+authors:
+- authtype: Author
+  name: Fitzroy AB
+- authtype: Author
+  name: Jones BJ
+- authtype: Author
+  name: Kainec KA
+- authtype: Author
+  name: Seo J
+- authtype: Author
+  name: Spencer RM
+epubdate: 2022 Jan 11
+fulljournalname: Frontiers in Aging Neuroscience
+issue: ''
+pages: '787654'
+pmclivedate: 2022/01/26
+printpubdate: ''
+pubdate: 2022 Jan 11
+sortdate: 2022/01/11 00:00
+source: Front Aging Neurosci
+title: Aging-Related Changes in Cortical Sources of Sleep Oscillatory Neural Activity
+  Following Motor Learning Reflect Contributions of Cortical Thickness and Pre-sleep
+  Functional Activity
+uid: '8786737'
+volume: '13'

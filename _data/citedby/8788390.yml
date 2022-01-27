@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '34687857'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2021.118655
+- idtype: pmcid
+  value: PMC8788390
+- idtype: MID
+  value: NIHMS1770947
+authors:
+- authtype: Author
+  name: Kupers ER
+- authtype: Author
+  name: Benson NC
+- authtype: Author
+  name: Winawer J
+epubdate: 2021 Oct 21
+fulljournalname: NeuroImage
+issue: ''
+pages: '118655'
+pmclivedate: 2022/01/25
+printpubdate: 2021 Dec 15
+pubdate: 2021 Oct 21
+sortdate: 2021/10/21 00:00
+source: Neuroimage
+title: A visual encoding model links magnetoencephalography signals to neural synchrony
+  in human cortex
+uid: '8788390'
+volume: '245'

@@ -1,0 +1,45 @@
+articleids:
+- idtype: pmid
+  value: '34287923'
+- idtype: doi
+  value: 10.1111/psyp.13901
+- idtype: pmcid
+  value: PMC8770721
+- idtype: MID
+  value: NIHMS1720957
+authors:
+- authtype: Author
+  name: Haegens S
+- authtype: Author
+  name: Pathak YJ
+- authtype: Author
+  name: Smith EH
+- authtype: Author
+  name: Mikell CB
+- authtype: Author
+  name: Banks GP
+- authtype: Author
+  name: Yates M
+- authtype: Author
+  name: Bijanki KR
+- authtype: Author
+  name: Schevon CA
+- authtype: Author
+  name: McKhann GM
+- authtype: Author
+  name: Schroeder CE
+- authtype: Author
+  name: Sheth SA
+epubdate: 2021 Jul 20
+fulljournalname: Psychophysiology
+issue: ''
+pages: e13901
+pmclivedate: ''
+printpubdate: ''
+pubdate: 2021 Jul 20
+sortdate: 2021/07/20 00:00
+source: Psychophysiology
+title: Alpha and broadband high-frequency activity track task dynamics and predict
+  performance in controlled decision-making
+uid: '8770721'
+volume: ''

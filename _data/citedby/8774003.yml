@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3390/brainsci12010097
+- idtype: pmcid
+  value: PMC8774003
+authors:
+- authtype: Author
+  name: Visani E
+- authtype: Author
+  name: Sebastiano DR
+- authtype: Author
+  name: Duran D
+- authtype: Author
+  name: Garofalo G
+- authtype: Author
+  name: Magliocco F
+- authtype: Author
+  name: Silipo F
+- authtype: Author
+  name: Buccino G
+epubdate: 2022 Jan 12
+fulljournalname: Brain Sciences
+issue: '1'
+pages: '97'
+pmclivedate: 2022/01/21
+printpubdate: ''
+pubdate: 2022 Jan 12
+sortdate: 2022/01/12 00:00
+source: Brain Sci
+title: 'The Semantics of Natural Objects and Tools in the Brain: A Combined Behavioral
+  and MEG Study'
+uid: '8774003'
+volume: '12'

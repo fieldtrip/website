@@ -363,6 +363,12 @@ Now we will compute the source reconstructed alpha power again, as illustrated a
 We now visualize the log-difference on the cortical sheet.
 
     cfg = [];
+    cfg.parameter    = 'pow';
+    sourceint = ft_sourceinterpolate(cfg,source_ratio,dkatlas);
+    cfg = [];
+    sourceint = ft_sourceparcellate(cfg, sourceint, dkatlas);
+
+    cfg = [];
     cfg.method        = 'surface';
     cfg.funparameter  = 'pow';
     cfg.colorbar      = 'no';

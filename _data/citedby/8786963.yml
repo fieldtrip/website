@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1038/s41598-022-05289-6
+- idtype: pmcid
+  value: PMC8786963
+authors:
+- authtype: Author
+  name: Hohaia W
+- authtype: Author
+  name: Saurels BW
+- authtype: Author
+  name: Johnston A
+- authtype: Author
+  name: Yarrow K
+- authtype: Author
+  name: Arnold DH
+epubdate: 2022 Jan 24
+fulljournalname: Scientific Reports
+issue: ''
+pages: '1194'
+pmclivedate: 2022/01/25
+printpubdate: ''
+pubdate: 2022 Jan 24
+sortdate: 2022/01/24 00:00
+source: Sci Rep
+title: Occipital alpha-band brain waves when the eyes are closed are shaped by ongoing
+  visual processes
+uid: '8786963'
+volume: '12'

@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '34291971'
+- idtype: doi
+  value: 10.1037/cdp0000469
+- idtype: pmcid
+  value: PMC8782924
+- idtype: MID
+  value: NIHMS1718175
+authors:
+- authtype: Author
+  name: Arredondo MM
+epubdate: 2021 Jul 22
+fulljournalname: Cultural diversity & ethnic minority psychology
+issue: ''
+pages: 10.1037/cdp0000469
+pmclivedate: ''
+printpubdate: ''
+pubdate: 2021 Jul 22
+sortdate: 2021/07/22 00:00
+source: Cultur Divers Ethnic Minor Psychol
+title: 'Shining a Light on Cultural Neuroscience: Recommendations on the Use of fNIRS
+  to Study How Sociocultural Contexts Shape the Brain'
+uid: '8782924'
+volume: ''
