@@ -1,5 +1,6 @@
 <!-- Load Facebook SDK for JavaScript -->
 <div id="fb-root"></div>
+
 <script>
   (function(d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
@@ -12,5 +13,4 @@
 </script>
 
 <!-- Your like button code -->
-<div class="fb-like" data-href="https://www.facebook.com/fieldtriptoolbox/" data-layout="standard" data-action="like" data-show-faces="true">
-</div>
+<div class="fb-like" data-href="https://www.facebook.com/fieldtriptoolbox/" data-layout="standard" data-action="like" data-show-faces="true"></div>

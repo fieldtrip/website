@@ -13,17 +13,17 @@ This website is hosted on a server of the [Donders Centre for Cognitive Neuroima
 
 This website by itself does not use cookies, except for a single cookie which specifies whether third party cookies and scripts can be used. We also link to documentation and articles on external websites, these are not covered here.
 
-### External functional cookies
+If you do not allow third party cookies and scripts to be used on this website, the search functionality will default to DuckDuckGo instead of Google Search. Furthermore, For YouTube and Vimeo an external link to the video will be shown instead of an inline version of the video.
 
-If you approve third party cookies and scripts, this website will use custom Google search forms to search this website and the email discussion list. Furthermore, it will embed videos from Youtube and Vimeo on the [video](/video) overview page and on some [tutorials](/tutorial). By loading and displaying content from these external services, they may place cookies on your computer and track your personal information.
+We do not use external tools to collect website statistics. We use a self-hosted instance of [plausible](https://plausible.io), an open source web analytics solution without tracking cookies that is fully compliant with GDPR, CCPA and PECR. It only stores _that_ you have visited, not _who you are_, and it does not share any information across different websites which could be used to build a user profile.
 
-### External analytical cookies
+### External third-party cookies
 
-If you approve third party cookies and scripts, this website will use Google Analytics to track website usage. Nevertheless, we have taken all actions we can to limit the power of Google: we have configured Google Analytics to anonymize IP addresses, not to track you over multiple devices, and not to use your information for targetted marketing.
+If you approve third-party cookies and scripts, this website will use custom Google search forms to search this website and the email discussion list. Furthermore, it will embed videos from Youtube and Vimeo on the [video](/video) overview page and on some [tutorials](/tutorial). By loading and displaying content from these external services, these may place cookies on your computer and track your personal information.
 
 ### Reset the permission for third party cookies and scripts
 
-If you do not allow third party cookies and scripts to be used on this website, the search functionality will also stop working. Click here to reset the permission for third party cookies and scripts:
+Click here to reset the permission for third party cookies and scripts:
 
 <p><button name="button" onclick="eraseCookie('allow-external-cookies');location.reload()" class="btn btn-primary btn-sm">Reset cookie permission</button></p>
 
