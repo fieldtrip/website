@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '34644178'
+- idtype: doi
+  value: 10.1152/jn.00329.2021
+- idtype: pmcid
+  value: PMC8794059
+authors:
+- authtype: Author
+  name: Beker S
+- authtype: Author
+  name: Foxe JJ
+- authtype: Author
+  name: Molholm S
+epubdate: 2021 Oct 13
+fulljournalname: Journal of Neurophysiology
+issue: '5'
+pages: 1783-1798
+pmclivedate: ''
+printpubdate: 2021 Nov 1
+pubdate: 2021 Oct 13
+sortdate: 2021/10/13 00:00
+source: J Neurophysiol
+title: Oscillatory entrainment mechanisms and anticipatory predictive processes in
+  children with autism spectrum disorder
+uid: '8794059'
+volume: '126'

@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1093/texcom/tgac001
+- idtype: pmcid
+  value: PMC8794645
+authors:
+- authtype: Author
+  name: Yu S
+- authtype: Author
+  name: Mückschel M
+- authtype: Author
+  name: Rempel S
+- authtype: Author
+  name: Ziemssen T
+- authtype: Author
+  name: Beste C
+epubdate: 2022 Jan 13
+fulljournalname: Cerebral Cortex Communications
+issue: '1'
+pages: tgac001
+pmclivedate: 2022/01/28
+printpubdate: ''
+pubdate: 2022 Jan 13
+sortdate: 2022/01/13 00:00
+source: Cereb Cortex Commun
+title: Time-On-Task Effects on Working Memory Gating Processes—A Role of Theta Synchronization
+  and the Norepinephrine System
+uid: '8794645'
+volume: '3'

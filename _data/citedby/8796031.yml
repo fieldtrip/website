@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '35053857'
+- idtype: doi
+  value: 10.3390/brainsci12010114
+- idtype: pmcid
+  value: PMC8796031
+authors:
+- authtype: Author
+  name: Neugebauer F
+- authtype: Author
+  name: Antonakakis M
+- authtype: Author
+  name: Unnwongse K
+- authtype: Author
+  name: Parpaley Y
+- authtype: Author
+  name: Wellmer J
+- authtype: Author
+  name: Rampp S
+- authtype: Author
+  name: Wolters CH
+epubdate: 2022 Jan 14
+fulljournalname: Brain Sciences
+issue: '1'
+pages: '114'
+pmclivedate: 2022/01/29
+printpubdate: ''
+pubdate: 2022 Jan 14
+sortdate: 2022/01/14 00:00
+source: Brain Sci
+title: Validating EEG, MEG and Combined MEG and EEG Beamforming for an Estimation
+  of the Epileptogenic Zone in Focal Cortical Dysplasia
+uid: '8796031'
+volume: '12'

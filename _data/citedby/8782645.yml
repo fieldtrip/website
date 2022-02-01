@@ -1,0 +1,38 @@
+articleids:
+- idtype: pmid
+  value: '34936515'
+- idtype: doi
+  value: 10.1152/jn.00316.2021
+- idtype: pmcid
+  value: PMC8782645
+authors:
+- authtype: Author
+  name: Simon OB
+- authtype: Author
+  name: Rojas DC
+- authtype: Author
+  name: Ghosh D
+- authtype: Author
+  name: Yang X
+- authtype: Author
+  name: Rogers SE
+- authtype: Author
+  name: Martin CS
+- authtype: Author
+  name: Holden SK
+- authtype: Author
+  name: Kluger BM
+- authtype: Author
+  name: Buard I
+epubdate: 2021 Dec 22
+fulljournalname: Journal of Neurophysiology
+issue: '1'
+pages: 279-289
+pmclivedate: ''
+printpubdate: 2022 Jan 1
+pubdate: 2021 Dec 22
+sortdate: 2021/12/22 00:00
+source: J Neurophysiol
+title: Profiling Parkinson’s disease cognitive phenotypes via resting-state magnetoencephalography
+uid: '8782645'
+volume: '127'
