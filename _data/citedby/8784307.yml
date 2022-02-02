@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '35065418'
+- idtype: doi
+  value: 10.1016/j.dcn.2022.101067
+- idtype: pmcid
+  value: PMC8784307
+authors:
+- authtype: Author
+  name: Morales S
+- authtype: Author
+  name: Bowers ME
+epubdate: 2022 Jan 14
+fulljournalname: Developmental Cognitive Neuroscience
+issue: ''
+pages: '101067'
+pmclivedate: 2022/01/31
+printpubdate: ''
+pubdate: 2022 Jan 14
+sortdate: 2022/01/14 00:00
+source: Dev Cogn Neurosci
+title: Time-frequency analysis methods and their application in developmental EEG
+  data
+uid: '8784307'
+volume: '54'

@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fnagi.2021.807907
+- idtype: pmcid
+  value: PMC8803153
+authors:
+- authtype: Author
+  name: Tagliabue CF
+- authtype: Author
+  name: Varesio G
+- authtype: Author
+  name: Mazza V
+epubdate: 2022 Jan 17
+fulljournalname: Frontiers in Aging Neuroscience
+issue: ''
+pages: '807907'
+pmclivedate: 2022/02/01
+printpubdate: ''
+pubdate: 2022 Jan 17
+sortdate: 2022/01/17 00:00
+source: Front Aging Neurosci
+title: Inter- and Intra-Hemispheric Age-Related Remodeling in Visuo-Spatial Working
+  Memory
+uid: '8803153'
+volume: '13'

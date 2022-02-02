@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '35063811'
+- idtype: doi
+  value: 10.1016/j.dcn.2022.101071
+- idtype: pmcid
+  value: PMC8784303
+authors:
+- authtype: Author
+  name: Sommer VR
+- authtype: Author
+  name: Mount L
+- authtype: Author
+  name: Weigelt S
+- authtype: Author
+  name: Werkle-Bergner M
+- authtype: Author
+  name: Sander MC
+epubdate: 2022 Jan 15
+fulljournalname: Developmental Cognitive Neuroscience
+issue: ''
+pages: '101071'
+pmclivedate: 2022/01/31
+printpubdate: ''
+pubdate: 2022 Jan 15
+sortdate: 2022/01/15 00:00
+source: Dev Cogn Neurosci
+title: 'Spectral pattern similarity analysis: Tutorial and application in developmental
+  cognitive neuroscience'
+uid: '8784303'
+volume: '54'

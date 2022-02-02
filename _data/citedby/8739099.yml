@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.21037/qims-21-430
+- idtype: pmcid
+  value: PMC8739099
+authors:
+- authtype: Author
+  name: Ding Y
+- authtype: Author
+  name: Chu Y
+- authtype: Author
+  name: Liu M
+- authtype: Author
+  name: Ling Z
+- authtype: Author
+  name: Wang S
+- authtype: Author
+  name: Li X
+- authtype: Author
+  name: Li Y
+epubdate: ''
+fulljournalname: Quantitative Imaging in Medicine and Surgery
+issue: '2'
+pages: 1063-1078
+pmclivedate: 2022/02/01
+printpubdate: 2022 Feb
+pubdate: 2022 Feb
+sortdate: 2022/02/01 00:00
+source: Quant Imaging Med Surg
+title: Fully automated discrimination of Alzheimer’s disease using resting-state electroencephalography
+  signals
+uid: '8739099'
+volume: '12'
