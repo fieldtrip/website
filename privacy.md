@@ -11,9 +11,11 @@ This website is hosted on a server of the [Donders Centre for Cognitive Neuroima
 
 ## How we process your personal data on this website
 
-This website by itself does not use cookies, except for a single cookie which specifies whether third party cookies and scripts can be used. We also link to documentation and articles on external websites, these are not covered here.
+This website by itself does not use cookies, except for a single cookie which specifies whether third party cookies and scripts can be used. We also link to content and documentation on external websites, these are not covered here.
 
-If you do not allow third party cookies and scripts to be used on this website, the search functionality will default to DuckDuckGo instead of Google Search. Furthermore, For YouTube and Vimeo an external link to the video will be shown instead of an inline version of the video.
+If you do not allow third party cookies and scripts to be used on this website, the search functionality will default to DuckDuckGo. If you do allow third party cookies, it will default to Google Search.
+
+Regardless of your permission for third party cookies, the embedded YouTube and Vimeo videos on this website are displayed in a way that does not place cookies on your computer.
 
 We do not use external tools to collect website statistics. We use a self-hosted instance of [plausible](https://plausible.io), an open source web analytics solution without tracking cookies that is fully compliant with GDPR, CCPA and PECR. It only stores _that_ you have visited, not _who you are_, and it does not share any information across different websites which could be used to build a user profile.
 
