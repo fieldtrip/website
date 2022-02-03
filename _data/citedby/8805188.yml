@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '34980661'
+- idtype: doi
+  value: 10.1523/ENEURO.0355-21.2021
+- idtype: pmcid
+  value: PMC8805188
+authors:
+- authtype: Author
+  name: Sciortino P
+- authtype: Author
+  name: Kayser C
+epubdate: 2022 Jan 7
+fulljournalname: eNeuro
+issue: '1'
+pages: ENEURO.0355-21.2021
+pmclivedate: 2022/02/01
+printpubdate: ''
+pubdate: 2022 Jan 7
+sortdate: 2022/01/07 00:00
+source: eNeuro
+title: Multivariate Analysis of Evoked Responses during the Rubber Hand Illusion Suggests
+  a Temporal Parcellation into Manipulation and Illusion-Specific Correlates
+uid: '8805188'
+volume: '9'

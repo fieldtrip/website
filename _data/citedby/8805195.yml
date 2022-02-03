@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '34965926'
+- idtype: doi
+  value: 10.1523/ENEURO.0412-21.2021
+- idtype: pmcid
+  value: PMC8805195
+authors:
+- authtype: Author
+  name: ElShafei HA
+- authtype: Author
+  name: Orlemann C
+- authtype: Author
+  name: Haegens S
+epubdate: 2022 Jan 18
+fulljournalname: eNeuro
+issue: '1'
+pages: ENEURO.0412-21.2021
+pmclivedate: 2022/02/01
+printpubdate: ''
+pubdate: 2022 Jan 18
+sortdate: 2022/01/18 00:00
+source: eNeuro
+title: The Impact of Eye Closure on Anticipatory α Activity in a Tactile Discrimination
+  Task
+uid: '8805195'
+volume: '9'
