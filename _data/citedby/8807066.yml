@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '34801517'
+- idtype: doi
+  value: 10.1016/j.neuropsychologia.2021.108091
+- idtype: pmcid
+  value: PMC8807066
+- idtype: MID
+  value: NIHMS1765830
+authors:
+- authtype: Author
+  name: Beach SD
+- authtype: Author
+  name: Lim SJ
+- authtype: Author
+  name: Cardenas-Iniguez C
+- authtype: Author
+  name: Eddy MD
+- authtype: Author
+  name: Gabrieli JD
+- authtype: Author
+  name: Perrachione TK
+epubdate: 2021 Nov 19
+fulljournalname: Neuropsychologia
+issue: ''
+pages: '108091'
+pmclivedate: ''
+printpubdate: 2022 Jan 28
+pubdate: 2021 Nov 19
+sortdate: 2021/11/19 00:00
+source: Neuropsychologia
+title: Electrophysiological correlates of perceptual prediction error are attenuated
+  in dyslexia
+uid: '8807066'
+volume: '165'

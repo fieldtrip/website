@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '34541728'
+- idtype: doi
+  value: 10.1111/ejn.15468
+- idtype: pmcid
+  value: PMC8809479
+- idtype: MID
+  value: NIHMS1774312
+authors:
+- authtype: Author
+  name: Fitzroy AB
+- authtype: Author
+  name: Kainec KA
+- authtype: Author
+  name: Spencer RM
+epubdate: 2021 Oct 5
+fulljournalname: The European journal of neuroscience
+issue: '9'
+pages: 7332-7354
+pmclivedate: ''
+printpubdate: 2021 Nov
+pubdate: 2021 Oct 5
+sortdate: 2021/10/05 00:00
+source: Eur J Neurosci
+title: Aging-related changes in nap neuroscillatory activity are mediated and moderated
+  by grey matter volume
+uid: '8809479'
+volume: '54'
