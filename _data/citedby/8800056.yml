@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1016/j.dib.2022.107827
+- idtype: pmcid
+  value: PMC8800056
+authors:
+- authtype: Author
+  name: Gregory SE
+- authtype: Author
+  name: Wang H
+- authtype: Author
+  name: Kessler K
+epubdate: 2022 Jan 15
+fulljournalname: Data in Brief
+issue: ''
+pages: '107827'
+pmclivedate: 2022/02/03
+printpubdate: ''
+pubdate: 2022 Jan 15
+sortdate: 2022/01/15 00:00
+source: Data Brief
+title: A dataset of EEG recordings from 47 participants collected during a virtual
+  reality working memory task where attention was cued by a social avatar and non-social
+  stick cue
+uid: '8800056'
+volume: '41'

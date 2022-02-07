@@ -1,0 +1,40 @@
+articleids:
+- idtype: pmid
+  value: '34819340'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1287-21.2021
+- idtype: pmcid
+  value: PMC8802917
+authors:
+- authtype: Unknown
+  name: ''
+- authtype: Unknown
+  name: ''
+- authtype: Author
+  name: Dimakopoulos V
+- authtype: Unknown
+  name: ''
+- authtype: Unknown
+  name: ''
+- authtype: Unknown
+  name: ''
+- authtype: Author
+  name: Stieglitz L
+- authtype: Author
+  name: Imbach L
+- authtype: Author
+  name: Sarnthein J
+- authtype: Unknown
+  name: ''
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '3'
+pages: 443-453
+pmclivedate: ''
+printpubdate: 2022 Jan 19
+pubdate: 2022 Jan 19
+sortdate: 2022/01/19 00:00
+source: J Neurosci
+title: Anterior–Posterior Hippocampal Dynamics Support Working Memory Processing
+uid: '8802917'
+volume: '42'

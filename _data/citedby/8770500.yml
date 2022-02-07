@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '35046430'
+- idtype: doi
+  value: 10.1038/s41597-021-01116-1
+- idtype: pmcid
+  value: PMC8770500
+authors:
+- authtype: Author
+  name: Pascucci D
+- authtype: Author
+  name: Tourbier S
+- authtype: Author
+  name: Rué-Queralt J
+- authtype: Author
+  name: Carboni M
+- authtype: Author
+  name: Hagmann P
+- authtype: Author
+  name: Plomp G
+epubdate: 2022 Jan 19
+fulljournalname: Scientific Data
+issue: ''
+pages: '9'
+pmclivedate: 2022/02/04
+printpubdate: ''
+pubdate: 2022 Jan 19
+sortdate: 2022/01/19 00:00
+source: Sci Data
+title: Source imaging of high-density visual evoked potentials with multi-scale brain
+  parcellations and connectomes
+uid: '8770500'
+volume: '9'

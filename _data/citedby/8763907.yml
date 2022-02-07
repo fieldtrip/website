@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '35039498'
+- idtype: doi
+  value: 10.1038/s41467-021-27876-3
+- idtype: pmcid
+  value: PMC8763907
+authors:
+- authtype: Author
+  name: Salvador A
+- authtype: Author
+  name: Arnal LH
+- authtype: Author
+  name: Vinckier F
+- authtype: Author
+  name: Domenech P
+- authtype: Author
+  name: Gaillard R
+- authtype: Author
+  name: Wyart V
+epubdate: 2022 Jan 17
+fulljournalname: Nature Communications
+issue: ''
+pages: '338'
+pmclivedate: 2022/02/04
+printpubdate: ''
+pubdate: 2022 Jan 17
+sortdate: 2022/01/17 00:00
+source: Nat Commun
+title: Premature commitment to uncertain decisions during human NMDA receptor hypofunction
+uid: '8763907'
+volume: '13'

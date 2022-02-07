@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '34848500'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1121-21.2021
+- idtype: pmcid
+  value: PMC8802922
+authors:
+- authtype: Unknown
+  name: ''
+- authtype: Author
+  name: Creel SC
+- authtype: Author
+  name: Iversen JR
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '3'
+pages: 500-512
+pmclivedate: ''
+printpubdate: 2022 Jan 19
+pubdate: 2022 Jan 19
+sortdate: 2022/01/19 00:00
+source: J Neurosci
+title: 'How Do You Feel the Rhythm: Dynamic Motor-Auditory Interactions Are Involved
+  in the Imagination of Hierarchical Timing'
+uid: '8802922'
+volume: '42'
