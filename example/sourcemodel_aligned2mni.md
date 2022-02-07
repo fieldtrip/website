@@ -1,11 +1,8 @@
 ---
 title: Create MNI-aligned grids in individual head-space
 tags: [example, meg, mri, headmodel, source]
-<<<<<<< HEAD
+redirect_from:
    - /example/create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_mni_space/
-=======
->>>>>>> c85f21f23873c875bf04b9613857887f5778262e
----
 
 # Create MNI-aligned grids in individual head-space
 
