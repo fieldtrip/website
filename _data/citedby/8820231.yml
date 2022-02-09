@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fpsyg.2021.802290
+- idtype: pmcid
+  value: PMC8820231
+authors:
+- authtype: Author
+  name: Santaniello G
+- authtype: Author
+  name: Ferré P
+- authtype: Author
+  name: Sanchez-Carmona A
+- authtype: Author
+  name: Huete-Pérez D
+- authtype: Author
+  name: Albert J
+- authtype: Author
+  name: Hinojosa JA
+epubdate: 2022 Jan 24
+fulljournalname: Frontiers in Psychology
+issue: ''
+pages: '802290'
+pmclivedate: 2022/02/08
+printpubdate: ''
+pubdate: 2022 Jan 24
+sortdate: 2022/01/24 00:00
+source: Front Psychol
+title: Gamma Oscillations in the Temporal Pole Reflect the Contribution of Approach
+  and Avoidance Motivational Systems to the Processing of Fear and Anger Words
+uid: '8820231'
+volume: '12'
