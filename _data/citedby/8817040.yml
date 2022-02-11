@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '35121751'
+- idtype: doi
+  value: 10.1038/s41598-022-05179-x
+- idtype: pmcid
+  value: PMC8817040
+authors:
+- authtype: Author
+  name: Biondi A
+- authtype: Author
+  name: Rocchi L
+- authtype: Author
+  name: Santoro V
+- authtype: Author
+  name: Rossini PG
+- authtype: Author
+  name: Beatch GN
+- authtype: Author
+  name: Richardson MP
+- authtype: Author
+  name: Premoli I
+epubdate: 2022 Feb 4
+fulljournalname: Scientific Reports
+issue: ''
+pages: '1919'
+pmclivedate: 2022/02/09
+printpubdate: ''
+pubdate: 2022 Feb 4
+sortdate: 2022/02/04 00:00
+source: Sci Rep
+title: Spontaneous and TMS-related EEG changes as new biomarkers to measure anti-epileptic
+  drug effects
+uid: '8817040'
+volume: '12'
