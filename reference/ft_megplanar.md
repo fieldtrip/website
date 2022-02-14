@@ -4,13 +4,13 @@ title: ft_megplanar
 ```plaintext
  FT_MEGPLANAR computes planar MEG gradients gradients for raw data or average
  event-related field data. It can also convert frequency-domain data that was computed
- using FT_FREQANALYSIS, as long as it contains the complex-valued fourierspcrm and not
+ using FT_FREQANALYSIS, as long as it contains the complex-valued fourier and not
  only the powspctrm.
 
  Use as
     [interp] = ft_megplanar(cfg, data)
  where the input data corresponds to the output from FT_PREPROCESSING,
- FT_TIMELOCKANALYSIS or FT_FREQANALYSIS (with output='fourierspcrm').
+ FT_TIMELOCKANALYSIS or FT_FREQANALYSIS (with output='fourier').
 
  The configuration should contain
    cfg.planarmethod   = string, can be 'sincos', 'orig', 'fitplane', 'sourceproject' (default = 'sincos')
