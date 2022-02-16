@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '35019189'
+- idtype: doi
+  value: 10.1002/hbm.25726
+- idtype: pmcid
+  value: PMC8837594
+authors:
+- authtype: Author
+  name: Pourmotabbed H
+- authtype: Author
+  name: de Jongh Curry AL
+- authtype: Author
+  name: Clarke DF
+- authtype: Author
+  name: Tyler‐Kabara EC
+- authtype: Author
+  name: Babajani‐Feremi A
+epubdate: 2022 Jan 12
+fulljournalname: Human Brain Mapping
+issue: '4'
+pages: 1342-1357
+pmclivedate: 2022/02/14
+printpubdate: ''
+pubdate: 2022 Jan 12
+sortdate: 2022/01/12 00:00
+source: Hum Brain Mapp
+title: Reproducibility of graph measures derived from resting‐state MEG functional
+  connectivity metrics in sensor and source spaces
+uid: '8837594'
+volume: '43'

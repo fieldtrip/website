@@ -1,0 +1,34 @@
+articleids:
+- idtype: pmid
+  value: '34933122'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2021.118834
+- idtype: pmcid
+  value: PMC8803550
+authors:
+- authtype: Author
+  name: Seymour RA
+- authtype: Author
+  name: Alexander N
+- authtype: Author
+  name: Mellor S
+- authtype: Author
+  name: O'Neill GC
+- authtype: Author
+  name: Tierney TM
+- authtype: Author
+  name: Barnes GR
+- authtype: Author
+  name: Maguire EA
+epubdate: ''
+fulljournalname: Neuroimage
+issue: ''
+pages: '118834'
+pmclivedate: 2022/02/15
+printpubdate: 2022 Feb 15
+pubdate: 2022 Feb 15
+sortdate: 2022/02/15 00:00
+source: Neuroimage
+title: 'Interference suppression techniques for OPM-based MEG: Opportunities and challenges'
+uid: '8803550'
+volume: '247'
