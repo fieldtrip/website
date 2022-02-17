@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1093/texcom/tgac003
+- idtype: pmcid
+  value: PMC8844542
+authors:
+- authtype: Author
+  name: Moyne M
+- authtype: Author
+  name: Legendre G
+- authtype: Author
+  name: Arnal L
+- authtype: Author
+  name: Kumar S
+- authtype: Author
+  name: Sterpenich V
+- authtype: Author
+  name: Seeck M
+- authtype: Author
+  name: Grandjean D
+- authtype: Author
+  name: Schwartz S
+- authtype: Author
+  name: Vuilleumier P
+- authtype: Author
+  name: Domínguez-Borràs J
+epubdate: 2022 Jan 27
+fulljournalname: Cerebral Cortex Communications
+issue: '1'
+pages: tgac003
+pmclivedate: 2022/02/15
+printpubdate: ''
+pubdate: 2022 Jan 27
+sortdate: 2022/01/27 00:00
+source: Cereb Cortex Commun
+title: Brain reactivity to emotion persists in NREM sleep and is associated with individual
+  dream recall
+uid: '8844542'
+volume: '3'

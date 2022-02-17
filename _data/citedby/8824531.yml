@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '34954026'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2021.118851
+- idtype: pmcid
+  value: PMC8824531
+- idtype: MID
+  value: NIHMS1774998
+authors:
+- authtype: Author
+  name: Mirjalili S
+- authtype: Author
+  name: Powell P
+- authtype: Author
+  name: Strunk J
+- authtype: Author
+  name: James T
+- authtype: Author
+  name: Duarte A
+epubdate: 2021 Dec 22
+fulljournalname: NeuroImage
+issue: ''
+pages: '118851'
+pmclivedate: 2022/02/15
+printpubdate: 2022 Feb 15
+pubdate: 2021 Dec 22
+sortdate: 2021/12/22 00:00
+source: Neuroimage
+title: Evaluation of classification approaches for distinguishing brain states predictive
+  of episodic memory performance from electroencephalography
+uid: '8824531'
+volume: '247'

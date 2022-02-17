@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '35123341'
+- idtype: doi
+  value: 10.1016/j.dcn.2022.101072
+- idtype: pmcid
+  value: PMC8819392
+authors:
+- authtype: Author
+  name: Scharf F
+- authtype: Author
+  name: Widmann A
+- authtype: Author
+  name: Bonmassar C
+- authtype: Author
+  name: Wetzel N
+epubdate: 2022 Jan 15
+fulljournalname: Developmental Cognitive Neuroscience
+issue: ''
+pages: '101072'
+pmclivedate: 2022/02/09
+printpubdate: ''
+pubdate: 2022 Jan 15
+sortdate: 2022/01/15 00:00
+source: Dev Cogn Neurosci
+title: A tutorial on the use of temporal principal component analysis in developmental
+  ERP research – Opportunities and challenges
+uid: '8819392'
+volume: '54'

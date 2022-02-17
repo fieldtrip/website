@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '35114447'
+- idtype: doi
+  value: 10.1016/j.dcn.2022.101069
+- idtype: pmcid
+  value: PMC8816670
+authors:
+- authtype: Author
+  name: Rayson H
+- authtype: Author
+  name: Debnath R
+- authtype: Author
+  name: Alavizadeh S
+- authtype: Author
+  name: Fox N
+- authtype: Author
+  name: Ferrari PF
+- authtype: Author
+  name: Bonaiuto JJ
+epubdate: 2022 Jan 14
+fulljournalname: Developmental Cognitive Neuroscience
+issue: ''
+pages: '101069'
+pmclivedate: 2022/02/09
+printpubdate: ''
+pubdate: 2022 Jan 14
+sortdate: 2022/01/14 00:00
+source: Dev Cogn Neurosci
+title: Detection and analysis of cortical beta bursts in developmental EEG Data
+uid: '8816670'
+volume: '54'

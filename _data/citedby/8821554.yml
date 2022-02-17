@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '35132113'
+- idtype: doi
+  value: 10.1038/s41598-022-05910-8
+- idtype: pmcid
+  value: PMC8821554
+authors:
+- authtype: Author
+  name: Riaz B
+- authtype: Author
+  name: Eskelin JJ
+- authtype: Author
+  name: Lundblad LC
+- authtype: Author
+  name: Wallin BG
+- authtype: Author
+  name: Karlsson T
+- authtype: Author
+  name: Starck G
+- authtype: Author
+  name: Lundqvist D
+- authtype: Author
+  name: Oostenveld R
+- authtype: Author
+  name: Schneiderman JF
+- authtype: Author
+  name: Elam M
+epubdate: 2022 Feb 7
+fulljournalname: Scientific Reports
+issue: ''
+pages: '1990'
+pmclivedate: 2022/02/09
+printpubdate: ''
+pubdate: 2022 Feb 7
+sortdate: 2022/02/07 00:00
+source: Sci Rep
+title: Brain structural and functional correlates to defense-related inhibition of
+  muscle sympathetic nerve activity in man
+uid: '8821554'
+volume: '12'
