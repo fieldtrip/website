@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '33048668'
+- idtype: doi
+  value: 10.1109/TNSRE.2020.3030714
+- idtype: pmcid
+  value: PMC8844837
+- idtype: MID
+  value: NIHMS1667844
+authors:
+- authtype: Author
+  name: Lo MC
+- authtype: Author
+  name: Younk R
+- authtype: Author
+  name: Widge AS
+epubdate: 2021 Jan 28
+fulljournalname: 'IEEE transactions on neural systems and rehabilitation engineering
+  : a publication of the IEEE Engineering in Medicine and Biology Society'
+issue: '12'
+pages: 2721-2730
+pmclivedate: 2022/02/15
+printpubdate: 2020 Dec
+pubdate: 2021 Jan 28
+sortdate: 2021/01/28 00:00
+source: IEEE Trans Neural Syst Rehabil Eng
+title: Paired Electrical Pulse Trains for Controlling Connectivity in Emotion-Related
+  Brain Circuitry
+uid: '8844837'
+volume: '28'

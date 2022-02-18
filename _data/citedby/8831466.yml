@@ -1,0 +1,24 @@
+articleids:
+- idtype: pmid
+  value: '35145166'
+- idtype: doi
+  value: 10.1038/s41598-022-06296-3
+- idtype: pmcid
+  value: PMC8831466
+authors:
+- authtype: Author
+  name: Krugliak A
+- authtype: Author
+  name: Clarke A
+epubdate: 2022 Feb 10
+fulljournalname: Scientific Reports
+issue: ''
+pages: '2291'
+pmclivedate: 2022/02/14
+printpubdate: ''
+pubdate: 2022 Feb 10
+sortdate: 2022/02/10 00:00
+source: Sci Rep
+title: Towards real-world neuroscience using mobile EEG and augmented reality
+uid: '8831466'
+volume: '12'
