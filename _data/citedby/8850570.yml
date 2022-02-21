@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1038/s41598-022-06596-8
+- idtype: pmcid
+  value: PMC8850570
+authors:
+- authtype: Author
+  name: Santos-Mayo A
+- authtype: Author
+  name: de Echegaray J
+- authtype: Author
+  name: Moratti S
+epubdate: 2022 Feb 16
+fulljournalname: Scientific Reports
+issue: ''
+pages: '2652'
+pmclivedate: 2022/02/17
+printpubdate: ''
+pubdate: 2022 Feb 16
+sortdate: 2022/02/16 00:00
+source: Sci Rep
+title: Conditioned up and down modulations of short latency gamma band oscillations
+  in visual cortex during fear learning in humans
+uid: '8850570'
+volume: '12'

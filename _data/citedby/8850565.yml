@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1038/s41598-022-06364-8
+- idtype: pmcid
+  value: PMC8850565
+authors:
+- authtype: Author
+  name: Johannknecht M
+- authtype: Author
+  name: Kayser C
+epubdate: 2022 Feb 16
+fulljournalname: Scientific Reports
+issue: ''
+pages: '2586'
+pmclivedate: 2022/02/17
+printpubdate: ''
+pubdate: 2022 Feb 16
+sortdate: 2022/02/16 00:00
+source: Sci Rep
+title: The influence of the respiratory cycle on reaction times in sensory-cognitive
+  paradigms
+uid: '8850565'
+volume: '12'

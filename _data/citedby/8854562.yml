@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1038/s41598-022-06570-4
+- idtype: pmcid
+  value: PMC8854562
+authors:
+- authtype: Author
+  name: Zhu M
+- authtype: Author
+  name: Hardstone R
+- authtype: Author
+  name: He BJ
+epubdate: 2022 Feb 17
+fulljournalname: Scientific Reports
+issue: ''
+pages: '2760'
+pmclivedate: 2022/02/18
+printpubdate: ''
+pubdate: 2022 Feb 17
+sortdate: 2022/02/17 00:00
+source: Sci Rep
+title: Neural oscillations promoting perceptual stability and perceptual memory during
+  bistable perception
+uid: '8854562'
+volume: '12'

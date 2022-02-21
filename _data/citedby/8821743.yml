@@ -1,0 +1,45 @@
+articleids:
+- idtype: pmid
+  value: '34435318'
+- idtype: doi
+  value: 10.1007/s12264-021-00761-1
+- idtype: pmcid
+  value: PMC8821743
+authors:
+- authtype: Author
+  name: Xue XJ
+- authtype: Author
+  name: Su R
+- authtype: Author
+  name: Li ZF
+- authtype: Author
+  name: Bu XO
+- authtype: Author
+  name: Dang P
+- authtype: Author
+  name: Yu SF
+- authtype: Author
+  name: Wang ZX
+- authtype: Author
+  name: Chen DM
+- authtype: Author
+  name: Zeng TA
+- authtype: Author
+  name: Liu M
+- authtype: Author
+  name: Ma HL
+- authtype: Author
+  name: Zhang DL
+epubdate: 2021 Aug 25
+fulljournalname: Neuroscience Bulletin
+issue: '2'
+pages: 166-180
+pmclivedate: ''
+printpubdate: ''
+pubdate: 2021 Aug 25
+sortdate: 2021/08/25 00:00
+source: Neurosci Bull
+title: Oxygen Metabolism-induced Stress Response Underlies Heart–brain Interaction
+  Governing Human Consciousness-breaking and Attention
+uid: '8821743'
+volume: '38'
