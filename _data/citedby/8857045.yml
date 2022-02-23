@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '35031350'
+- idtype: doi
+  value: 10.1016/j.ijpsycho.2022.01.006
+- idtype: pmcid
+  value: PMC8857045
+- idtype: MID
+  value: NIHMS1772479
+authors:
+- authtype: Author
+  name: Palmwood EN
+- authtype: Author
+  name: Valadez EA
+- authtype: Author
+  name: Zajac LA
+- authtype: Author
+  name: Griffith AL
+- authtype: Author
+  name: Simons RF
+- authtype: Author
+  name: Dozier M
+epubdate: 2022 Jan 11
+fulljournalname: 'International journal of psychophysiology : official journal of
+  the International Organization of Psychophysiology'
+issue: ''
+pages: 58-68
+pmclivedate: ''
+printpubdate: 2022 Mar
+pubdate: 2022 Jan 11
+sortdate: 2022/01/11 00:00
+source: Int J Psychophysiol
+title: Early Exposure to Parent-Perpetrated Intimate Partner Violence Predicts Hypervigilant
+  Error Monitoring
+uid: '8857045'
+volume: '173'

@@ -1,0 +1,46 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fnagi.2022.818340
+- idtype: pmcid
+  value: PMC8859443
+authors:
+- authtype: Author
+  name: Ding Q
+- authtype: Author
+  name: Chen S
+- authtype: Author
+  name: Chen J
+- authtype: Author
+  name: Zhang S
+- authtype: Author
+  name: Peng Y
+- authtype: Author
+  name: Chen Y
+- authtype: Author
+  name: Chen J
+- authtype: Author
+  name: Li X
+- authtype: Author
+  name: Chen K
+- authtype: Author
+  name: Cai G
+- authtype: Author
+  name: Xu G
+- authtype: Author
+  name: Lan Y
+epubdate: 2022 Feb 7
+fulljournalname: Frontiers in Aging Neuroscience
+issue: ''
+pages: '818340'
+pmclivedate: 2022/02/22
+printpubdate: ''
+pubdate: 2022 Feb 7
+sortdate: 2022/02/07 00:00
+source: Front Aging Neurosci
+title: 'Intermittent Theta Burst Stimulation Increases Natural Oscillatory Frequency
+  in Ipsilesional Motor Cortex Post-Stroke: A Transcranial Magnetic Stimulation and
+  Electroencephalography Study'
+uid: '8859443'
+volume: '14'
