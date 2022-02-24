@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '35133276'
+- idtype: doi
+  value: 10.7554/eLife.71890
+- idtype: pmcid
+  value: PMC8853659
+authors:
+- authtype: Author
+  name: Pfeffer T
+- authtype: Author
+  name: Keitel C
+- authtype: Author
+  name: Kluger DS
+- authtype: Author
+  name: Keitel A
+- authtype: Author
+  name: Russmann A
+- authtype: Author
+  name: Thut G
+- authtype: Author
+  name: Donner TH
+- authtype: Author
+  name: Gross J
+epubdate: 2022 Feb 8
+fulljournalname: eLife
+issue: ''
+pages: e71890
+pmclivedate: 2022/02/22
+printpubdate: ''
+pubdate: 2022 Feb 8
+sortdate: 2022/02/08 00:00
+source: eLife
+title: Coupling of pupil- and neuronal population dynamics reveals diverse influences
+  of arousal on cortical processing
+uid: '8853659'
+volume: '11'

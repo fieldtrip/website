@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '34953030'
+- idtype: doi
+  value: 10.1111/cns.13787
+- idtype: pmcid
+  value: PMC8841302
+authors:
+- authtype: Author
+  name: Dai Z
+- authtype: Author
+  name: Pei C
+- authtype: Author
+  name: Zhang S
+- authtype: Author
+  name: Tian S
+- authtype: Author
+  name: Chen Z
+- authtype: Author
+  name: Zhou H
+- authtype: Author
+  name: Lu Q
+- authtype: Author
+  name: Yao Z
+epubdate: 2021 Dec 24
+fulljournalname: CNS Neuroscience & Therapeutics
+issue: '3'
+pages: 401-410
+pmclivedate: 2022/02/22
+printpubdate: ''
+pubdate: 2021 Dec 24
+sortdate: 2021/12/24 00:00
+source: CNS Neurosci Ther
+title: Attenuated alpha–gamma coupling in emotional dual pathways with right‐Amygdala
+  predicting ineffective antidepressant response
+uid: '8841302'
+volume: '28'

@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '35104646'
+- idtype: doi
+  value: 10.1016/j.nbd.2022.105645
+- idtype: pmcid
+  value: PMC8860887
+- idtype: MID
+  value: NIHMS1776241
+authors:
+- authtype: Author
+  name: Salami P
+- authtype: Author
+  name: Borzello M
+- authtype: Author
+  name: Kramer MA
+- authtype: Author
+  name: Westover MB
+- authtype: Author
+  name: Cash SS
+epubdate: 2022 Jan 29
+fulljournalname: Neurobiology of disease
+issue: ''
+pages: '105645'
+pmclivedate: ''
+printpubdate: 2022 Apr
+pubdate: 2022 Jan 29
+sortdate: 2022/01/29 00:00
+source: Neurobiol Dis
+title: Quantifying seizure termination patterns reveals limited pathways to seizure
+  end
+uid: '8860887'
+volume: '165'

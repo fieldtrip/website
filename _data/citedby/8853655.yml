@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '35174783'
+- idtype: doi
+  value: 10.7554/eLife.73651
+- idtype: pmcid
+  value: PMC8853655
+authors:
+- authtype: Author
+  name: Jaworska K
+- authtype: Author
+  name: Yan Y
+- authtype: Author
+  name: van Rijsbergen NJ
+- authtype: Author
+  name: Ince RA
+- authtype: Author
+  name: Schyns PG
+epubdate: 2022 Feb 17
+fulljournalname: eLife
+issue: ''
+pages: e73651
+pmclivedate: 2022/02/22
+printpubdate: ''
+pubdate: 2022 Feb 17
+sortdate: 2022/02/17 00:00
+source: eLife
+title: Different computations over the same inputs produce selective behavior in algorithmic
+  brain networks
+uid: '8853655'
+volume: '11'

@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '35058309'
+- idtype: doi
+  value: 10.1523/ENEURO.0380-21.2022
+- idtype: pmcid
+  value: PMC8856705
+authors:
+- authtype: Author
+  name: Singh B
+- authtype: Author
+  name: Qi XL
+- authtype: Author
+  name: Blake DT
+- authtype: Author
+  name: Constantinidis C
+epubdate: 2022 Feb 3
+fulljournalname: eNeuro
+issue: '1'
+pages: ENEURO.0380-21.2022
+pmclivedate: 2022/02/22
+printpubdate: ''
+pubdate: 2022 Feb 3
+sortdate: 2022/02/03 00:00
+source: eNeuro
+title: Rhythmicity of Prefrontal Local Field Potentials after Nucleus Basalis Stimulation
+uid: '8856705'
+volume: '9'
