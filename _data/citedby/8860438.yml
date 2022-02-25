@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '35188457'
+- idtype: doi
+  value: 10.7554/eLife.66761
+- idtype: pmcid
+  value: PMC8860438
+authors:
+- authtype: Author
+  name: Hahn MA
+- authtype: Author
+  name: Bothe K
+- authtype: Author
+  name: Heib D
+- authtype: Author
+  name: Schabus M
+- authtype: Author
+  name: Helfrich RF
+- authtype: Author
+  name: Hoedlmoser K
+epubdate: 2022 Feb 21
+fulljournalname: eLife
+issue: ''
+pages: e66761
+pmclivedate: 2022/02/23
+printpubdate: ''
+pubdate: 2022 Feb 21
+sortdate: 2022/02/21 00:00
+source: eLife
+title: Slow oscillation–spindle coupling strength predicts real-life gross-motor learning
+  in adolescents and adults
+uid: '8860438'
+volume: '11'

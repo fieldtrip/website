@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '33230608'
+- idtype: doi
+  value: 10.1007/s00787-020-01684-4
+- idtype: pmcid
+  value: PMC8837509
+authors:
+- authtype: Author
+  name: Speer L
+- authtype: Author
+  name: Schuler M
+- authtype: Author
+  name: Keil J
+- authtype: Author
+  name: Moran JK
+- authtype: Author
+  name: Pantazidis P
+- authtype: Author
+  name: Amelung T
+- authtype: Author
+  name: Florack J
+- authtype: Author
+  name: Beier KM
+- authtype: Author
+  name: Senkowski D
+epubdate: 2020 Nov 24
+fulljournalname: European Child & Adolescent Psychiatry
+issue: '2'
+pages: 261-274
+pmclivedate: 2022/02/23
+printpubdate: '2022'
+pubdate: 2020 Nov 24
+sortdate: 2020/11/24 00:00
+source: Eur Child Adolesc Psychiatry
+title: Sexual preference for prepubescent children is associated with enhanced processing
+  of child faces in juveniles
+uid: '8837509'
+volume: '31'

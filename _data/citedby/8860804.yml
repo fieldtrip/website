@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '35080692'
+- idtype: doi
+  value: 10.1007/s10548-022-00890-4
+- idtype: pmcid
+  value: PMC8860804
+authors:
+- authtype: Author
+  name: Roehri N
+- authtype: Author
+  name: Bréchet L
+- authtype: Author
+  name: Seeber M
+- authtype: Author
+  name: Pascual-Leone A
+- authtype: Author
+  name: Michel CM
+epubdate: 2022 Jan 26
+fulljournalname: Brain Topography
+issue: '2'
+pages: 191-206
+pmclivedate: 2022/02/23
+printpubdate: '2022'
+pubdate: 2022 Jan 26
+sortdate: 2022/01/26 00:00
+source: Brain Topogr
+title: Phase-Amplitude Coupling and Phase Synchronization Between Medial Temporal,
+  Frontal and Posterior Brain Regions Support Episodic Autobiographical Memory Recall
+uid: '8860804'
+volume: '35'

@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '35050427'
+- idtype: doi
+  value: 10.1007/s10548-022-00888-y
+- idtype: pmcid
+  value: PMC8860817
+authors:
+- authtype: Author
+  name: van den Berg B
+- authtype: Author
+  name: Manoochehri M
+- authtype: Author
+  name: Schouten AC
+- authtype: Author
+  name: van der Helm FC
+- authtype: Author
+  name: Buitenweg JR
+epubdate: 2022 Jan 20
+fulljournalname: Brain Topography
+issue: '2'
+pages: 169-181
+pmclivedate: 2022/02/23
+printpubdate: '2022'
+pubdate: 2022 Jan 20
+sortdate: 2022/01/20 00:00
+source: Brain Topogr
+title: Nociceptive Intra-epidermal Electric Stimulation Evokes Steady-State Responses
+  in the Secondary Somatosensory Cortex
+uid: '8860817'
+volume: '35'
