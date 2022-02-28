@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1098/rsos.211352
+- idtype: pmcid
+  value: PMC8847899
+authors:
+- authtype: Author
+  name: Zimmermann M
+- authtype: Author
+  name: Lomoriello AS
+- authtype: Author
+  name: Konvalinka I
+epubdate: 2022 Feb 16
+fulljournalname: Royal Society Open Science
+issue: '2'
+pages: '211352'
+pmclivedate: 2022/02/25
+printpubdate: ''
+pubdate: 2022 Feb 16
+sortdate: 2022/02/16 00:00
+source: R Soc Open Sci
+title: Intra-individual behavioural and neural signatures of audience effects and
+  interactions in a mirror-game paradigm
+uid: '8847899'
+volume: '9'
