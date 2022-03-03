@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1016/j.crphys.2022.02.003
+- idtype: pmcid
+  value: PMC8867048
+authors:
+- authtype: Author
+  name: Ioannides AA
+- authtype: Author
+  name: Orphanides GA
+- authtype: Author
+  name: Liu L
+epubdate: 2022 Feb 15
+fulljournalname: Current Research in Physiology
+issue: ''
+pages: 118-141
+pmclivedate: 2022/03/02
+printpubdate: ''
+pubdate: 2022 Feb 15
+sortdate: 2022/02/15 00:00
+source: Curr Res Physiol
+title: Rhythmicity in heart rate and its surges usher a special period of sleep, a
+  likely home for PGO waves
+uid: '8867048'
+volume: '5'

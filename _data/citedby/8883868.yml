@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '34980637'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0665-21.2021
+- idtype: pmcid
+  value: PMC8883868
+authors:
+- authtype: Author
+  name: Gehmacher Q
+- authtype: Author
+  name: Reisinger P
+- authtype: Author
+  name: Hartmann T
+- authtype: Author
+  name: Keintzel T
+- authtype: Author
+  name: Rösch S
+- authtype: Author
+  name: Schwarz K
+- authtype: Author
+  name: Weisz N
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '7'
+pages: 1343-1351
+pmclivedate: 2022/03/01
+printpubdate: 2022 Feb 16
+pubdate: 2022 Feb 16
+sortdate: 2022/02/16 00:00
+source: J Neurosci
+title: Direct Cochlear Recordings in Humans Show a Theta Rhythmic Modulation of Auditory
+  Nerve Activity by Selective Attention
+uid: '8883868'
+volume: '42'

@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '35184025'
+- idtype: doi
+  value: 10.1016/j.dcn.2022.101066
+- idtype: pmcid
+  value: PMC8861396
+authors:
+- authtype: Author
+  name: Figueira JS
+- authtype: Author
+  name: Kutlu E
+- authtype: Author
+  name: Scott LS
+- authtype: Author
+  name: Keil A
+epubdate: 2022 Feb 11
+fulljournalname: Developmental Cognitive Neuroscience
+issue: ''
+pages: '101066'
+pmclivedate: 2022/03/02
+printpubdate: ''
+pubdate: 2022 Feb 11
+sortdate: 2022/02/11 00:00
+source: Dev Cogn Neurosci
+title: 'The FreqTag toolbox: A principled approach to analyzing electrophysiological
+  time series in frequency tagging paradigms'
+uid: '8861396'
+volume: '54'

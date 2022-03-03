@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '35143832'
+- idtype: doi
+  value: 10.1016/j.expneurol.2022.113999
+- idtype: pmcid
+  value: PMC7612436
+- idtype: MID
+  value: EMS142128
+authors:
+- authtype: Author
+  name: Wiest C
+- authtype: Author
+  name: Torrecillos F
+- authtype: Author
+  name: Tinkhauser G
+- authtype: Author
+  name: Pogosyan A
+- authtype: Author
+  name: Morgante F
+- authtype: Author
+  name: Pereira E
+- authtype: Author
+  name: Tan H
+epubdate: 2022 Feb 7
+fulljournalname: Experimental neurology
+issue: ''
+pages: '113999'
+pmclivedate: 2022/02/28
+printpubdate: 2022 Feb 7
+pubdate: 2022 Feb 7
+sortdate: 2022/02/07 00:00
+source: Exp Neurol
+title: 'Finely-tuned gamma oscillations: Spectral characteristics and links to dyskinesia'
+uid: '7612436'
+volume: '351'

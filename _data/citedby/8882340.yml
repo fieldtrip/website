@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '34390772'
+- idtype: doi
+  value: 10.1016/j.neulet.2021.136169
+- idtype: pmcid
+  value: PMC8882340
+- idtype: MID
+  value: NIHMS1734418
+authors:
+- authtype: Author
+  name: Song Y
+- authtype: Author
+  name: Renoul E
+- authtype: Author
+  name: Acord S
+- authtype: Author
+  name: Johnson YR
+- authtype: Author
+  name: Marks W
+- authtype: Author
+  name: Alexandrakis G
+- authtype: Author
+  name: Papadelis C
+epubdate: 2021 Aug 11
+fulljournalname: Neuroscience letters
+issue: ''
+pages: '136169'
+pmclivedate: ''
+printpubdate: 2021 Sep 25
+pubdate: 2021 Aug 11
+sortdate: 2021/08/11 00:00
+source: Neurosci Lett
+title: Aberrant somatosensory phase synchronization in children with hemiplegic cerebral
+  palsy
+uid: '8882340'
+volume: '762'
