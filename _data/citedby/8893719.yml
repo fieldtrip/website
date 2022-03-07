@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '35174784'
+- idtype: doi
+  value: 10.7554/eLife.74653
+- idtype: pmcid
+  value: PMC8893719
+authors:
+- authtype: Author
+  name: Jiang Y
+- authtype: Author
+  name: Komatsu M
+- authtype: Author
+  name: Chen Y
+- authtype: Author
+  name: Xie R
+- authtype: Author
+  name: Zhang K
+- authtype: Author
+  name: Xia Y
+- authtype: Author
+  name: Gui P
+- authtype: Author
+  name: Liang Z
+- authtype: Author
+  name: Wang L
+epubdate: 2022 Feb 17
+fulljournalname: eLife
+issue: ''
+pages: e74653
+pmclivedate: 2022/03/04
+printpubdate: ''
+pubdate: 2022 Feb 17
+sortdate: 2022/02/17 00:00
+source: eLife
+title: Constructing the hierarchy of predictive auditory sequences in the marmoset
+  brain
+uid: '8893719'
+volume: '11'
