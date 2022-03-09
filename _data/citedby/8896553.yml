@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '35105660'
+- idtype: doi
+  value: 10.1523/ENEURO.0334-20.2021
+- idtype: pmcid
+  value: PMC8896553
+authors:
+- authtype: Author
+  name: Spinelli G
+- authtype: Author
+  name: Pezzetta R
+- authtype: Author
+  name: Canzano L
+- authtype: Author
+  name: Tidoni E
+- authtype: Author
+  name: Aglioti SM
+epubdate: 2022 Mar 2
+fulljournalname: eNeuro
+issue: '2'
+pages: ENEURO.0334-20.2021
+pmclivedate: 2022/03/07
+printpubdate: ''
+pubdate: 2022 Mar 2
+sortdate: 2022/03/02 00:00
+source: eNeuro
+title: 'Brain Dynamics of Action Monitoring in Higher-Order Motor Control Disorders:
+  The Case of Apraxia'
+uid: '8896553'
+volume: '9'

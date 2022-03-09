@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '35039445'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.2524-20.2021
+- idtype: pmcid
+  value: PMC8896625
+authors:
+- authtype: Author
+  name: Ameen MS
+- authtype: Author
+  name: Heib DP
+- authtype: Author
+  name: Blume C
+- authtype: Author
+  name: Schabus M
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '9'
+pages: 1791-1803
+pmclivedate: 2022/03/07
+printpubdate: 2022 Mar 2
+pubdate: 2022 Mar 2
+sortdate: 2022/03/02 00:00
+source: J Neurosci
+title: The Brain Selectively Tunes to Unfamiliar Voices during Sleep
+uid: '8896625'
+volume: '42'
