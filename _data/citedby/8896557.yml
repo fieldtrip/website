@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '34996815'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1678-21.2021
+- idtype: pmcid
+  value: PMC8896557
+authors:
+- authtype: Author
+  name: Karlsson AE
+- authtype: Author
+  name: Lindenberger U
+- authtype: Author
+  name: Sander MC
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '9'
+pages: 1752-1764
+pmclivedate: ''
+printpubdate: 2022 Mar 2
+pubdate: 2022 Mar 2
+sortdate: 2022/03/02 00:00
+source: J Neurosci
+title: 'Out of Rhythm: Compromised Precision of Theta-Gamma Coupling Impairs Associative
+  Memory in Old Age'
+uid: '8896557'
+volume: '42'

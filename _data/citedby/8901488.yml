@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fncel.2022.818703
+- idtype: pmcid
+  value: PMC8901488
+authors:
+- authtype: Author
+  name: Preisig BC
+- authtype: Author
+  name: Hervais-Adelman A
+epubdate: 2022 Feb 22
+fulljournalname: Frontiers in Cellular Neuroscience
+issue: ''
+pages: '818703'
+pmclivedate: 2022/03/09
+printpubdate: ''
+pubdate: 2022 Feb 22
+sortdate: 2022/02/22 00:00
+source: Front Cell Neurosci
+title: The Predictive Value of Individual Electric Field Modeling for Transcranial
+  Alternating Current Stimulation Induced Brain Modulation
+uid: '8901488'
+volume: '16'
