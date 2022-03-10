@@ -27,7 +27,7 @@
 </footer>
 
 <!-- Add anchors to all headings, see https://www.bryanbraun.com/anchorjs -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.2/anchor.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.2/anchor.js" integrity="sha384-HElOY1oibbNAQVjxafaUDbLFY5ndMxTz9e+q4KXScE8f47emG0BJne2ZvJxS0lWD" crossorigin="anonymous"></script>
 
 <!-- Add anchors just before the closing body tag, see https://www.bryanbraun.com/anchorjs -->
 <script>
