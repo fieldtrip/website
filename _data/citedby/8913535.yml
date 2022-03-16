@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fnsys.2022.806142
+- idtype: pmcid
+  value: PMC8913535
+authors:
+- authtype: Author
+  name: Yusuf PA
+- authtype: Author
+  name: Lamuri A
+- authtype: Author
+  name: Hubka P
+- authtype: Author
+  name: Tillein J
+- authtype: Author
+  name: Vinck M
+- authtype: Author
+  name: Kral A
+epubdate: 2022 Feb 25
+fulljournalname: Frontiers in Systems Neuroscience
+issue: ''
+pages: '806142'
+pmclivedate: 2022/03/12
+printpubdate: ''
+pubdate: 2022 Feb 25
+sortdate: 2022/02/25 00:00
+source: Front Syst Neurosci
+title: Deficient Recurrent Cortical Processing in Congenital Deafness
+uid: '8913535'
+volume: '16'

@@ -1,0 +1,45 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1093/braincomms/fcac012
+- idtype: pmcid
+  value: PMC8914494
+authors:
+- authtype: Author
+  name: Cuesta P
+- authtype: Author
+  name: Ochoa-Urrea M
+- authtype: Author
+  name: Funke M
+- authtype: Author
+  name: Hasan O
+- authtype: Author
+  name: Zhu P
+- authtype: Author
+  name: Marcos A
+- authtype: Author
+  name: López ME
+- authtype: Author
+  name: Schulz PE
+- authtype: Author
+  name: Lhatoo S
+- authtype: Author
+  name: Pantazis D
+- authtype: Author
+  name: Mosher JC
+- authtype: Author
+  name: Maestu F
+epubdate: 2022 Feb 3
+fulljournalname: Brain Communications
+issue: '2'
+pages: fcac012
+pmclivedate: 2022/03/11
+printpubdate: ''
+pubdate: 2022 Feb 3
+sortdate: 2022/02/03 00:00
+source: Brain Commun
+title: Gamma band functional connectivity reduction in patients with amnestic mild
+  cognitive impairment and epileptiform activity
+uid: '8914494'
+volume: '4'

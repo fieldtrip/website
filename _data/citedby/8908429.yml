@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fnins.2022.836703
+- idtype: pmcid
+  value: PMC8908429
+authors:
+- authtype: Author
+  name: Tatti E
+- authtype: Author
+  name: Ferraioli F
+- authtype: Author
+  name: Cacciola A
+- authtype: Author
+  name: Chan C
+- authtype: Author
+  name: Quartarone A
+- authtype: Author
+  name: Ghilardi MF
+epubdate: 2022 Feb 24
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '836703'
+pmclivedate: 2022/03/11
+printpubdate: ''
+pubdate: 2022 Feb 24
+sortdate: 2022/02/24 00:00
+source: Front Neurosci
+title: Modulation of Gamma Spectral Amplitude and Connectivity During Reaching Predicts
+  Peak Velocity and Movement Duration
+uid: '8908429'
+volume: '16'
