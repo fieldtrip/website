@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '35255416'
+- idtype: doi
+  value: 10.1016/j.nicl.2022.102975
+- idtype: pmcid
+  value: PMC8904622
+authors:
+- authtype: Author
+  name: Solway A
+- authtype: Author
+  name: Schneider I
+- authtype: Author
+  name: Lei Y
+epubdate: 2022 Feb 28
+fulljournalname: 'NeuroImage : Clinical'
+issue: ''
+pages: '102975'
+pmclivedate: 2022/03/10
+printpubdate: ''
+pubdate: 2022 Feb 28
+sortdate: 2022/02/28 00:00
+source: Neuroimage Clin
+title: The relationships between subclinical OCD symptoms, beta/gamma-band power,
+  and the rate of evidence integration during perceptual decision making
+uid: '8904622'
+volume: '34'
