@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '35104647'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2022.118939
+- idtype: pmcid
+  value: PMC8923157
+- idtype: MID
+  value: NIHMS1786832
+authors:
+- authtype: Author
+  name: Johnson EL
+- authtype: Author
+  name: Arciniega H
+- authtype: Author
+  name: Jones KT
+- authtype: Author
+  name: Kilgore-Gomez A
+- authtype: Author
+  name: Berryhill ME
+epubdate: 2022 Jan 29
+fulljournalname: NeuroImage
+issue: ''
+pages: '118939'
+pmclivedate: ''
+printpubdate: 2022 Apr 15
+pubdate: 2022 Jan 29
+sortdate: 2022/01/29 00:00
+source: Neuroimage
+title: Individual predictors and electrophysiological signatures of working memory
+  enhancement in aging
+uid: '8923157'
+volume: '250'
