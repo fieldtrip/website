@@ -19,7 +19,7 @@ When comparing conditions in an analysis, you often run into the situation that 
 
 ## Simulating biased data
 
-The easiest way to see whether a difference in the number of trials can be a problem for you is to simulate such a scenario and run the same statistical tests you are planning to use in your study. In the following example we will consider a within-subjects design with 20 subjects and two conditions. We will generate the data with [ft_freqsimulation](/reference/ft_freqs/ulation), average the data with [ft_timelockaverage](/reference/ft_t/elockanalysis) and [ft_timelockgrandaverage](/reference/ft_t/elockgrandaverage) followed by running statistical tests with [ft_timelockstatistics](/reference/ft_t/elockstatistics).
+The easiest way to see whether a difference in the number of trials can be a problem for you is to simulate such a scenario and run the same statistical tests you are planning to use in your study. In the following example we will consider a within-subjects design with 20 subjects and two conditions. We will generate the data with [ft_freqsimulation](/reference/ft_freqsimulation), average the data with [ft_timelockaverage](/reference/ft_timelockanalysis) and [ft_timelockgrandaverage](/reference/ft_timelockgrandaverage) followed by running statistical tests with [ft_timelockstatistics](/reference/ft_timelockstatistics).
 
 First we will start with simulating the data for all subjects:
 

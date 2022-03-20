@@ -21,7 +21,7 @@ The function should always start with a help section, that explains the purpose 
 
 ### The best-practice example function
 
-The easiest way to get started with writing a new high-level FieldTrip function is to take a close look at [ft_examplefunction](/reference/ft_ex/plefunction), which is located in FT's core (root) directory. (Note: this is true as of Feb 11, 2011.) It shows the best practices that one should adhere to concerning input and output structure and data handling. Also, it demonstrates how one should document the function according to FT standard guidelines.
+The easiest way to get started with writing a new high-level FieldTrip function is to take a close look at [ft_examplefunction](/reference/ft_examplefunction), which is located in FT's core (root) directory. (Note: this is true as of Feb 11, 2011.) It shows the best practices that one should adhere to concerning input and output structure and data handling. Also, it demonstrates how one should document the function according to FT standard guidelines.
 
 ## Provide reference documentation in the function help
 

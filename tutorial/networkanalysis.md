@@ -243,7 +243,7 @@ Next, we call **[ft_sourceanalysis](/reference/ft_sourceanalysis)** with 'pcc' a
 
 ### Visualization of the neural-activity-index
 
-In order to visualize source-reconstructed data, the function [ft_sourceplot](/reference/sourceplot) can be used. If the input data contains the dipole positions defined on a triangulated mesh (i.e. it contains both a 'pos' and a 'tri' field), one should use the 'surface' method.
+In order to visualize source-reconstructed data, the function [ft_sourceplot](/reference/ft_sourceplot) can be used. If the input data contains the dipole positions defined on a triangulated mesh (i.e. it contains both a 'pos' and a 'tri' field), one should use the 'surface' method.
 
     %% plot the neural activity index (power/noise)
     cfg               = [];

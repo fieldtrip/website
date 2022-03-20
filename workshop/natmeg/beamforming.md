@@ -130,7 +130,7 @@ The beamformer technique is based on an adaptive spatial filter. The DICS spatia
     cfg.trials       = find(data_timewindow.trialinfo(:,1) == 4096);
     powcsd_right     = ft_freqanalysis(cfg, data_timewindow);
 
-The cross-spectral density data structure has a similar data structure as other output out of [ft_freqanalysis](/reference/freqanalysis):
+The cross-spectral density data structure has a similar data structure as other output out of [ft_freqanalysis](/reference/ft_freqanalysis):
 
     powcsd_all =
 
@@ -239,7 +239,7 @@ First we will load the MRI. It is important that you use the MRI realigned with 
 
     load mri_realigned2.mat
 
-Before aligning the source activity to the MRI we will reslice the MRI using [ft_volumereslice](/reference/ft_vol/ereslice). The consequence of this reslicing is that the size of the MRI is decreased (it is rather large now) and the axis are adjusted so that the image is plotted correctly. If your MRI image is plotted upside-down, try using [ft_volumereslice](/reference/ft_vol/ereslice).
+Before aligning the source activity to the MRI we will reslice the MRI using [ft_volumereslice](/reference/ft_volumereslice). The consequence of this reslicing is that the size of the MRI is decreased (it is rather large now) and the axis are adjusted so that the image is plotted correctly. If your MRI image is plotted upside-down, try using [ft_volumereslice](/reference/ft_volumereslice).
 
     mri_resliced = ft_volumereslice([], mri_realigned2);
 

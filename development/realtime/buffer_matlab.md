@@ -36,6 +36,6 @@ Furthermore, it is possible to instantiate the buffer as network transparent ser
 
 ### Writing a new proxy for acquring data in MATLAB
 
-You should start by studying the example scripts in the 'realtime' directory, e.g., **[ft_realtime_signalproxy](/reference//realtime/example/ft_realtime_signalproxy)** as an example of how to write random data to a buffer, or **[ft_realtime_pooraudioproxy](/reference//realtime/example/ft_realtime_pooraudioproxy)** as a simple example for reading data from some hardware device and writing into a buffer.
+You should start by studying the example scripts in the 'realtime' directory, e.g., **[ft_realtime_signalproxy](/reference/realtime/example/ft_realtime_signalproxy)** as an example of how to write random data to a buffer, or **[ft_realtime_pooraudioproxy](/reference/realtime/example/ft_realtime_pooraudioproxy)** as a simple example for reading data from some hardware device and writing into a buffer.
 
 Therefore we have decided to link the streaming of the data with a buffer, i.e. instead of having MATLAB read one sample at a time, we created another standalone application that buffers the data. In MATLAB, you can read any data from this buffer at a time that suits you. e.g., you can read the last 100 milliseconds of data (as a Nchans X Nsamples matrix) and then do your computation on that. During the computation MATLAB will be busy, but the standalone buffer still captures the new data that comes in.

@@ -21,18 +21,18 @@ To facilitate using the same processing logic (e.g., FieldTrip functions) for da
 The MATLAB implementation is mainly for educational and testing purposes. For proper real-time analyses we recommend you to use the standalone interface, which is faster and requires less system resources.
 {% include markup/end %}
 
-The remote data access (RDA) interface of the BrainVision Recorder can stream the data over a TCP/IP connection. The **[ft_realtime_brainampproxy](/reference//realtime/example/ft_realtime_brainampproxy)** function (part of the realtime module in FieldTrip) reads the EEG data stream from the TCP/IP connection and writes to a [FieldTrip buffer](/development/realtime). The FieldTrip buffer is a multi-threaded and network transparent buffer that allows data to be streamed to it, while at the same time allowing another MATLAB session on the same or another computer to read data from the buffer for analysis.
+The remote data access (RDA) interface of the BrainVision Recorder can stream the data over a TCP/IP connection. The **[ft_realtime_brainampproxy](/reference/realtime/example/ft_realtime_brainampproxy)** function (part of the realtime module in FieldTrip) reads the EEG data stream from the TCP/IP connection and writes to a [FieldTrip buffer](/development/realtime). The FieldTrip buffer is a multi-threaded and network transparent buffer that allows data to be streamed to it, while at the same time allowing another MATLAB session on the same or another computer to read data from the buffer for analysis.
 
 Subsequently in another MATLAB session you can read from the FieldTrip buffer using the **[ft_read_header](/reference/fileio/ft_read_header)**, **[ft_read_data](/reference/fileio/ft_read_data)** and **[ft_read_event](/reference/fileio/ft_read_event)** functions by specifying %%'buffer://hostname:port'%% as the filename to the reading functions, e.g.
 
     hdr = ft_read_header('buffer://hostname:port');
     dat = ft_read_data('buffer://hostname:port', 'begsample', 1, 'endsample', hdr.Fs);
 
-The TCP/IP interface in MATLAB is implemented in the freely available [TCP/UDP/IP toolbox](http://mathworks.com/matlabcentral/fileexchange/345). You should download this toolbox and add it to your MATLAB path if you want to use the **[ft_realtime_brainampproxy](/reference//realtime/example/ft_realtime_brainampproxy)** function.
+The TCP/IP interface in MATLAB is implemented in the freely available [TCP/UDP/IP toolbox](http://mathworks.com/matlabcentral/fileexchange/345). You should download this toolbox and add it to your MATLAB path if you want to use the **[ft_realtime_brainampproxy](/reference/realtime/example/ft_realtime_brainampproxy)** function.
 
 ### Standalone interface with rda2ft
 
-Instead of **[ft_realtime_brainampproxy](/reference//realtime/example/ft_realtime_brainampproxy)** and MATLAB, you can use **rda2ft**. It transports data from an RDA server to a FieldTrip buffer and is availble in source code or compiled for different operating systems. **rda2ft** is written in C and takes 4 command line arguments, where the first two are mandatory:
+Instead of **[ft_realtime_brainampproxy](/reference/realtime/example/ft_realtime_brainampproxy)** and MATLAB, you can use **rda2ft**. It transports data from an RDA server to a FieldTrip buffer and is availble in source code or compiled for different operating systems. **rda2ft** is written in C and takes 4 command line arguments, where the first two are mandatory:
 
     rda2ft rdaHostname rdaPort [ftHostname] [ftPort]
 
@@ -56,7 +56,7 @@ On the command line, change to the "realtime/datasource/BrainAmp" directory and 
 
 ### Alternative interface using BCI2000
 
-The RDA interface to BrainVision Recorder is also supported by [BCI2000](http://www.bci2000.org), which means that you can use the interface between BCI2000 and FieldTrip as an alternative to the **[ft_realtime_brainampproxy](/reference//realtime/example/ft_realtime_brainampproxy)**. That interface is documented [here](/development/realtime/bci2000) and [here](http://www.bci2000.org/wiki/index.php/Contributions:FieldTripBuffer).
+The RDA interface to BrainVision Recorder is also supported by [BCI2000](http://www.bci2000.org), which means that you can use the interface between BCI2000 and FieldTrip as an alternative to the **[ft_realtime_brainampproxy](/reference/realtime/example/ft_realtime_brainampproxy)**. That interface is documented [here](/development/realtime/bci2000) and [here](http://www.bci2000.org/wiki/index.php/Contributions:FieldTripBuffer).
 
 ## Streaming data from a FieldTrip buffer to an RDA client
 

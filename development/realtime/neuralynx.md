@@ -19,13 +19,13 @@ The acquisition setup consists of the Digital Lynx amplifier hardware and the Ch
 The MATLAB implementation is mainly for educational and testing purposes. For proper real-time analyses we recommend you to use the standalone interface, which is faster and requires less system resources.
 {% include markup/end %}
 
-The **[ft_realtime_neuralynxproxy](/reference//realtime/example/ft_realtime_neuralynxproxy)** function implements the interface between the Cheetah software and the [FieldTrip buffer](/development/realtime/buffer). Using the dll files that have been made available by Neuralynx, it reads the data and event streams over the network from the Cheetah system and copies them into the buffer. The **[ft_realtime_neuralynxproxy](/reference//realtime/example/ft_realtime_neuralynxproxy)** function should be started in a stand-alone MATLAB session because Neuralynx only provides the dlls for Windows.
+The **[ft_realtime_neuralynxproxy](/reference/realtime/example/ft_realtime_neuralynxproxy)** function implements the interface between the Cheetah software and the [FieldTrip buffer](/development/realtime/buffer). Using the dll files that have been made available by Neuralynx, it reads the data and event streams over the network from the Cheetah system and copies them into the buffer. The **[ft_realtime_neuralynxproxy](/reference/realtime/example/ft_realtime_neuralynxproxy)** function should be started in a stand-alone MATLAB session because Neuralynx only provides the dlls for Windows.
 
 There is also an older attempt implemented in the code which allows to access the data in pseudo-real time while it is written to disk (i.e. end-of-file chasing). It turned out that that resulted in highly varying delays of up to 10 seconds and therefore we did not pursue this further.
 
 ## Standalone program nlx2ft
 
-There's a new tool called **nlx2ft** which operates with the same principle as **[ft_realtime_neuralynxproxy](/reference//realtime/example/ft_realtime_neuralynxproxy)**, but achieves much lower blocksizes + latencies due to being written in C and using separate threads for grabbing the data and streaming it out again. Currently **nlx2ft** can only write the data to a FieldTrip buffer over TCP (as opposed to spawning its own buffer server). The sources and the Windows binary are available in the "realtime/datasource/neuralynx" directory, and those are the steps to use i
+There's a new tool called **nlx2ft** which operates with the same principle as **[ft_realtime_neuralynxproxy](/reference/realtime/example/ft_realtime_neuralynxproxy)**, but achieves much lower blocksizes + latencies due to being written in C and using separate threads for grabbing the data and streaming it out again. Currently **nlx2ft** can only write the data to a FieldTrip buffer over TCP (as opposed to spawning its own buffer server). The sources and the Windows binary are available in the "realtime/datasource/neuralynx" directory, and those are the steps to use i
 
 1.  Start the Neuralynx acquisition software (or the Cheetah demo for testing).
 2.  Start a FieldTrip buffer server on a machine of your choice.

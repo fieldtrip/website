@@ -163,7 +163,7 @@ Method
 
 - name in script of ft_prepare_headmodel: **slab_monopole**
 - article in References to implemented methods: **none**
-- lower-level function name: **[ft_headmodel_slab](/reference/ft_headmodel_slab)**
+- lower-level function name: **[ft_headmodel_slab](/reference/forward/ft_headmodel_slab)**
 - explanation in help of the lower-level function: yes
 - reference in help of the lower-level function: **none**
 
@@ -187,7 +187,7 @@ Method
 - name in help of ft_prepare_headmodel: **multispheres** FIXME rather not use multisphere because it is ambiguous
 - name in script of ft_prepare_headmodel: **localspheres**
 - article in References to implemented methods: yes (Huang et al., 1999) but is called: **multispheres**
-- lower-level function name: **[ft_headmodel_localspheres](/reference/ft_headmodel_localspheres)**
+- lower-level function name: **[ft_headmodel_localspheres](/reference/forward/ft_headmodel_localspheres)**
 - explanation in help of the lower-level function: yes
 - reference in help of the lower-level function: yes
 

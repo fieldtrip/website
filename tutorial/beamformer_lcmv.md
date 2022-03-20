@@ -134,7 +134,7 @@ Compute the amplitude of the planar gradient by combining the horizontal and ver
 
 The first step in the procedure is to construct a forward model. The forward model allows us to calculate an estimate of the field measured by the MEG sensors for a given current distribution. In MEG analysis a forward model is typically constructed for each subject. There are many types of forward models which to various degrees take the individual anatomy into account. We will here use a semi-realistic head model developed by Nolte (2003). It is based on a correction of the lead field for a spherical volume conductor by a superposition of basis functions, gradients of harmonic functions constructed from spherical harmonics.
 
-The first step in constructing the forward model is to find the brain surface from the subject's MRI, using [ft_volumesegment](/reference/ft_volumese/ent). The MRI scan used in this tutorial has already been realigned to the same coordinate system as the MEG data (in this case 'CTF', see [this page](/faq/how_can_i_convert_an_anatomical_mri_from_dicom_into_ctf_format) on how to realign your subject's brain volume.
+The first step in constructing the forward model is to find the brain surface from the subject's MRI, using [ft_volumesegment](/reference/ft_volumesegment). The MRI scan used in this tutorial has already been realigned to the same coordinate system as the MEG data (in this case 'CTF', see [this page](/faq/how_can_i_convert_an_anatomical_mri_from_dicom_into_ctf_format) on how to realign your subject's brain volume.
 
     % read and segment the subject's anatomical scan
     load('SubjectSEF_mri.mat'); % matfile containing the realigned anatomical scan

@@ -180,22 +180,22 @@ Note that this reference documentation is identical to the help text that is dis
 
 ### ... from the forward module
 
-- [ft_estimate_units](/reference/forward/estimate_units)
-- [ft_convert_units](/reference/forward/convert_units)
-- [ft_senstype](/reference/forward/senstype)
-- [ft_voltype](/reference/forward/voltype)
-- [ft_headmodel_asa](/reference/forward/headmodel_asa)
-- [ft_headmodel_bemcp](/reference/forward/headmodel_bemcp)
-- [ft_headmodel_concentricspheres](/reference/forward/headmodel_concentricspheres)
-- [ft_headmodel_dipoli](/reference/forward/headmodel_dipoli)
-- [ft_headmodel_halfspace](/reference/forward/headmodel_halfspace)
-- [ft_headmodel_infinite](/reference/forward/headmodel_infinite)
-- [ft_headmodel_localspheres](/reference/forward/headmodel_localspheres)
-- [ft_headmodel_openmeeg](/reference/forward/headmodel_openmeeg)
-- [ft_headmodel_singleshell](/reference/forward/headmodel_singleshell)
-- [ft_headmodel_singlesphere](/reference/forward/headmodel_singlesphere)
-- [ft_prepare_vol_sens](/reference/forward/prepare_vol_sens)
-- [ft_compute_leadfield](/reference/forward/compute_leadfield)
+- [ft_estimate_units](/reference/forward/ft_estimate_units)
+- [ft_convert_units](/reference/forward/ft_convert_units)
+- [ft_senstype](/reference/forward/ft_senstype)
+- [ft_voltype](/reference/forward/ft_voltype)
+- [ft_headmodel_asa](/reference/forward/ft_headmodel_asa)
+- [ft_headmodel_bemcp](/reference/forward/ft_headmodel_bemcp)
+- [ft_headmodel_concentricspheres](/reference/forward/ft_headmodel_concentricspheres)
+- [ft_headmodel_dipoli](/reference/forward/ft_headmodel_dipoli)
+- [ft_headmodel_halfspace](/reference/forward/ft_headmodel_halfspace)
+- [ft_headmodel_infinite](/reference/forward/ft_headmodel_infinite)
+- [ft_headmodel_localspheres](/reference/forward/ft_headmodel_localspheres)
+- [ft_headmodel_openmeeg](/reference/forward/ft_headmodel_openmeeg)
+- [ft_headmodel_singleshell](/reference/forward/ft_headmodel_singleshell)
+- [ft_headmodel_singlesphere](/reference/forward/ft_headmodel_singlesphere)
+- [ft_prepare_vol_sens](/reference/forward/ft_prepare_vol_sens)
+- [ft_compute_leadfield](/reference/forward/ft_compute_leadfield)
 
 ### ... from the specest module
 

@@ -90,8 +90,8 @@ The `tra` matrix is an important piece of information to be taken into account w
 
 As the `tra` matrix provides information how the individual electrodes/coils relate to the individual channels in the data structure, it is updated automatically upon manipulation of the data in the following functions:
 
-- [ft_combineplanar](/reference/ft_c/bineplanar)
-- [ft_componentanalysis](/reference/ft_c/ponentanalysis)
+- [ft_combineplanar](/reference/ft_combineplanar)
+- [ft_componentanalysis](/reference/ft_componentanalysis)
 - [ft_denoise_pca](/reference/denoise_pca)
 - [ft_denoise_synthetic](/reference/denoise_synthetic)
 - [ft_denoise_tsr](/reference/denoise_tsr)

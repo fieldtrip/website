@@ -27,7 +27,7 @@ The data analyses will follow the following steps:
 - Cut the data into overlapping segments with **[ft_redefinetrial](/reference/ft_redefinetrial)**.
 - Compute sensor level power spectra and determine peak frequency using **[ft_freqanalysis](/reference/ft_freqanalysis)** and **[ft_multiplotER](/reference/ft_multiplotER)**.
 - Align the EEG electrodes to the scalp surface using **[ft_electroderealign](/reference/ft_electroderealign)**.
-- Plot and evaluate the alignement using **[ft_plot_headmodel](/reference/ft_plot_headmodel)**, **[ft_plot_mesh](/reference/ft_plot_mesh)** and **[ft_plot_sens](/reference/ft_plot_sens)** in combination.
+- Plot and evaluate the alignement using **[ft_plot_headmodel](/reference/plotting/ft_plot_headmodel)**, **[ft_plot_mesh](/reference/plotting/ft_plot_mesh)** and **[ft_plot_sens](/reference/plotting/ft_plot_sens)** in combination.
 - Construct a forward model using **[ft_prepare_leadfield](/reference/ft_prepare_leadfield)**.
 - Compute spatial filters and estimate the amplitude of the sources using **[ft_sourceanalysis](/reference/ft_sourceanalysis)**.
 - Visualize the results, with **[ft_sourceplot](/reference/ft_sourceplot)**.
@@ -56,7 +56,7 @@ The aim is to identify the frequency and topography of an 10Hz oscillation. You 
     
 ### Prepare electrode layout for plotting
 
-Using the EEG electrodes we compute a 2D layout in order to plot topographies. We use **[ft_prepare_layout](/reference/ft_prepare_layout)** and visualize it using **[ft_plot_lay](/reference/ft_plot_lay)**.
+Using the EEG electrodes we compute a 2D layout in order to plot topographies. We use **[ft_prepare_layout](/reference/ft_prepare_layout)** and visualize it using **[ft_plot_lay](/reference/plotting/ft_plot_lay)**.
 
     %% prepare layout and plot
     cfg         = [];
@@ -219,7 +219,7 @@ Next, we call **[ft_sourceanalysis](/reference/ft_sourceanalysis)** with 'pcc' a
 
 ### Visualization of the neural-activity-index
 
-In order to visualize source-reconstructed data, the function [ft_sourceplot](/reference/sourceplot) can be used. If the input data contains the dipole positions defined on a triangulated mesh (i.e. it contains both a 'pos' and a 'tri' field), one should use the 'surface' method.
+In order to visualize source-reconstructed data, the function [ft_sourceplot](/reference/ft_sourceplot) can be used. If the input data contains the dipole positions defined on a triangulated mesh (i.e. it contains both a 'pos' and a 'tri' field), one should use the 'surface' method.
 
     %% plot the neural activity index (power/noise)
 

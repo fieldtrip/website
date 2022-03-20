@@ -89,16 +89,16 @@ Most of these functions take a geometrical description of the head, skull and/or
 
 Detailed information for each of the functions that creates a head model can be found in the respective reference documentation:
 
-- **[ft_headmodel_asa](/reference/ft_headmodel_asa)**
-- **[ft_headmodel_bemcp](/reference/ft_headmodel_bemcp)**
-- **[ft_headmodel_concentricspheres](/reference/ft_headmodel_concentricspheres)**
-- **[ft_headmodel_dipoli](/reference/ft_headmodel_dipoli)**
-- **[ft_headmodel_halfspace](/reference/ft_headmodel_halfspace)**
-- **[ft_headmodel_infinite](/reference/ft_headmodel_infinite)**
-- **[ft_headmodel_localspheres](/reference/ft_headmodel_localspheres)**
-- **[ft_headmodel_openmeeg](/reference/ft_headmodel_openmeeg)**
-- **[ft_headmodel_singleshell](/reference/ft_headmodel_singleshell)**
-- **[ft_headmodel_singlesphere](/reference/ft_headmodel_singlesphere)**
+- **[ft_headmodel_asa](/reference/forward/ft_headmodel_asa)**
+- **[ft_headmodel_bemcp](/reference/forward/ft_headmodel_bemcp)**
+- **[ft_headmodel_concentricspheres](/reference/forward/ft_headmodel_concentricspheres)**
+- **[ft_headmodel_dipoli](/reference/forward/ft_headmodel_dipoli)**
+- **[ft_headmodel_halfspace](/reference/forward/ft_headmodel_halfspace)**
+- **[ft_headmodel_infinite](/reference/forward/ft_headmodel_infinite)**
+- **[ft_headmodel_localspheres](/reference/forward/ft_headmodel_localspheres)**
+- **[ft_headmodel_openmeeg](/reference/forward/ft_headmodel_openmeeg)**
+- **[ft_headmodel_singleshell](/reference/forward/ft_headmodel_singleshell)**
+- **[ft_headmodel_singlesphere](/reference/forward/ft_headmodel_singlesphere)**
 
 If desired the volume conduction model and the sensor array can be spatially transformed using a 4x4 homogenous transformation matrix. e.g., the electrodes can be translated and rotated to align them with head coordinate system, or they can be translated and rotated to switch to another coordinate system.
 

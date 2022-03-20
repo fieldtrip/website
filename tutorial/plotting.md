@@ -385,7 +385,7 @@ This is possible using **[ft_connectivityplot](/reference/ft_connectivityplot)**
 
 ### Plotting Principal or Independent Components (PCA/ICA)
 
-To plot PCA, ICA or other decompositions that result from **[ft_componentanalysis](/reference/ft_componentanalysis)** you can use ft_topoplotIC for the topographies and ft_databrowser for the topographies combined with the time series. For a viewer that displays the power spectrum, topography and variance over time of each component, see [/reference/contrib/isc/ft_icabrowser.m](/reference/contrib/isc/ft_icabrowser.m).
+To plot PCA, ICA or other decompositions that result from **[ft_componentanalysis](/reference/ft_componentanalysis)** you can use ft_topoplotIC for the topographies and ft_databrowser for the topographies combined with the time series. For a viewer that displays the power spectrum, topography and variance over time of each component, see **[ft_icabrowser](/reference/contrib/misc/ft_icabrowser)**.
 
 ## Plotting data at the source level
 

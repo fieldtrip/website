@@ -11,4 +11,4 @@ tags: [example, realtime]
 
 ## MATLAB code
 
-The code for **[ft_realtime_average](/reference//realtime/example/ft_realtime_average)** is included in the FieldTrip release under `fieldtrip/realtime/example` and can also be found on GitHub.
+The code for **[ft_realtime_average](/reference/realtime/example/ft_realtime_average)** is included in the FieldTrip release under `fieldtrip/realtime/example` and can also be found on GitHub.

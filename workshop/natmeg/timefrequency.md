@@ -75,7 +75,7 @@ The MEG dataset that we use in this tutorial is available as [oddball1_mc_downsa
 
 ### Clean data
 
-At this stage in the processing pipeline you could remove bad trials using, for example, [ft_rejectvisual](/reference/rejectvisual). We are going to skip this for now as we do not have a lot of trials for this part of the analysis and the data is relatively clean. Furthermore, be aware that removing trials in this way could create a bias towards removing more trials in one condition than in the other due to differences in variance between the conditions.
+At this stage in the processing pipeline you could remove bad trials using, for example, [ft_rejectvisual](/reference/ft_rejectvisual). We are going to skip this for now as we do not have a lot of trials for this part of the analysis and the data is relatively clean. Furthermore, be aware that removing trials in this way could create a bias towards removing more trials in one condition than in the other due to differences in variance between the conditions.
 
 ## Time-frequency analysis with a Hanning taper and fixed window length
 
@@ -266,7 +266,7 @@ Keep an eye open for the differences in processing and visualizing EEG.
 
 ### Clean data
 
-As with the MEG data we are going to skip trial rejection. However, if you wish to check for bad trials you can do so using, for example, [ft_rejectvisual](/reference/rejectvisual).
+As with the MEG data we are going to skip trial rejection. However, if you wish to check for bad trials you can do so using, for example, [ft_rejectvisual](/reference/ft_rejectvisual).
 
 Especially EEG records can contain bad channels due to various reasons such as bad impedance, broken channels, etc. In the next steps we will therefor use **[ft_rejectvisual](/reference/ft_rejectvisual)** to select bad channels. We will then fix these channels by replacing the values of these channels with an average of its neighbours. Note that we have not re-referenced our data yet. We should remove bad channels prior to re-referencing or the noise from these channels will be present in all channels.
 

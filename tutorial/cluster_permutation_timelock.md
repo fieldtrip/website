@@ -143,7 +143,7 @@ We now describe these options one-by-one.
 
 - The value of **cfg.minnbchan** is a tuning parameter that determines the way the clusters are formed. More specifically, we use cfg.minnbchan to specify the minimum number of neighbourhood channels that is required for a selected sample (i.e., a sample who's T-value exceeds the threshold) to be included in the clustering algorithm. With cfg.minnbchan = 0 (the default), it sometimes happens that two clusters are spatially connected via a narrow bridge of samples. Because they are connected, these two clusters are considered as a single cluster. If clusters are interpreted as reflecting spatially distinct sources, such a combined cluster does not make much sense. To suppress this type of combined clusters, one can choose to ignore all selected samples (on the basis of their T-values) if they have less than some minimum number of neighbors that were also selected. This minimum number is assigned to cfg.minnbchan. This number must be chosen independently of the data.
 
-- **cfg.neighbours** is a structure that you need to have previously created using [ft_prepare_neighbours](/reference/prepare_neighbours).
+- **cfg.neighbours** is a structure that you need to have previously created using [ft_prepare_neighbours](/reference/ft_prepare_neighbours).
 
 - We use **cfg.tail** to choose between a one-sided and a two-sided statistical test. Choosing cfg.tail = 0 affects the calculations in three ways. First, the sample-specific T-values are thresholded from below as well as from above. This implies that both large negative and large positive T-statistics are selected for later clustering. Second, clustering is performed separately for thresholded positive and thresholded negative T-statistics. And third, the critical value for the cluster-level test statistic (determined by cfg.alpha; see further) is now two-sided: negative cluster-level statistics must be compared with the negative critical value, and positive cluster-level statistics must be compared with the positive critical value.
 
@@ -414,7 +414,7 @@ We now describe how we can statistically test the difference between the event-r
 
 ERF_orig contains allsubjFIC and allsubjFC, each storing the event-related averages for the fully incongruent, and the fully congruent sentence endings, respectively.
 
-The format for these variables, are a prime example of how you should organise your data to be suitable for ft_XXXstatistics. Specifically, each variable is a cell-array of structures, with each subject's averaged stored in one cell. To create this data structure two steps are required. First, the single-subject averages were calculated individually for each subject using the function [ft_timelockanalysis](/reference/ft_t/elockanalysis). Second, using a for-loop we have combined the data from each subject, within each condition, into one variable (allsubj_FIC/allsubj_FC). We suggest that you adopt this procedure as well.
+The format for these variables, are a prime example of how you should organise your data to be suitable for ft_XXXstatistics. Specifically, each variable is a cell-array of structures, with each subject's averaged stored in one cell. To create this data structure two steps are required. First, the single-subject averages were calculated individually for each subject using the function [ft_timelockanalysis](/reference/ft_timelockanalysis). Second, using a for-loop we have combined the data from each subject, within each condition, into one variable (allsubj_FIC/allsubj_FC). We suggest that you adopt this procedure as well.
 
 On a technical note, it is preferred to represent the multi-subject data as a cell-array of structures, rather than a so-called struct-array. The reason for this is that the cell-array representation allows for easy expansion into a MATLAB function that allows for a variable number of input arguments (which is how the ft_XXXstatistics functions have been designed).
 
@@ -475,7 +475,7 @@ From inspection of stat.posclusters and stat.negclusters, we observe that there 
 
 ### Plotting the results
 
-For plotting we first use [ft_timelockgrandaverage](/reference/timelockgrandaverage) to calculate the grand average (average across all subject's average).
+For plotting we first use [ft_timelockgrandaverage](/reference/ft_timelockgrandaverage) to calculate the grand average (average across all subject's average).
 
     % load individual subject data
     load('ERF_orig');

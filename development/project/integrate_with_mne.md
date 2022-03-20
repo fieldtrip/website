@@ -30,8 +30,8 @@ FieldTrip and MNE-Python have similar but not identical processing pipelines. A 
 
 | Conceptual                                   | FieldTrip                                               | MNE-Python                                                                  |
 | -------------------------------------------- | ------------------------------------------------------- | --------------------------------------------------------------------------- |
-| one continuous segment of data               | [ft_datatype_raw](/reference/utilities/datatype_raw)           | Raw                                                                         |
-| multiple segments of data, e.g., trials       | [ft_datatype_raw](/reference/utilities/datatype_raw)           | Epochs (This datatype is not part of the original MNE Suite written in C) |
+| one continuous segment of data               | [ft_datatype_raw](/reference/utilities/ft_datatype_raw)           | Raw                                                                         |
+| multiple segments of data, e.g., trials       | [ft_datatype_raw](/reference/utilities/ft_datatype_raw)           | Epochs (This datatype is not part of the original MNE Suite written in C) |
 | averaged ERFs for one or multiple conditions | [ft_datatype_timelock](/reference/utilities/ft_datatype_t/elock) | Evoked                                                                      |
 
 Therefore, we will need to import and export Raw, Epochs, and Evoked datatypes.

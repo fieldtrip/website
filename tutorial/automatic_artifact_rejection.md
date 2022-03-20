@@ -26,13 +26,13 @@ The functions **[ft_artifact_eog](/reference/ft_artifact_eog)**, **[ft_artifact_
 The following steps are used to detect artifacts in FieldTrip's automatic artifact rejection (see figure below
 
 1.  Defining segments of interest using [ft_definetrial](/reference/definetrial)
-2.  Detecting artifacts using [ft_artifact_zvalue](/reference/artifact_zvalue), this consists of
+2.  Detecting artifacts using [ft_artifact_zvalue](/reference/ft_artifact_zvalue), this consists of
     - Reading the data (with padding) from disk
     - Filtering the data
     - Z-transforming the filtered data and averaging it over channels
     - Threshold the accumulated z-score
 
-This procedure will result in an artifact definition, a two column array with the onset and offset sample number of every detected artifact. This 'artifact definition' (''.artfctdef'') can then, in a separate step, be used to reject (parts of) trials in your trialdefinition (so before reading the data in using ft_preprocessing for your subsequent analysis), or rejecting (parts of) data already in memory. Both methods use [ft_rejectartifact](/reference/rejectartifact). All the steps that the automatic artifact rejection routine takes will now be explained in detail.
+This procedure will result in an artifact definition, a two column array with the onset and offset sample number of every detected artifact. This 'artifact definition' (''.artfctdef'') can then, in a separate step, be used to reject (parts of) trials in your trialdefinition (so before reading the data in using ft_preprocessing for your subsequent analysis), or rejecting (parts of) data already in memory. Both methods use [ft_rejectartifact](/reference/ft_rejectartifact). All the steps that the automatic artifact rejection routine takes will now be explained in detail.
 
 {% include image src="/assets/img/tutorial/automatic_artifact_rejection/overview_artifact_detection.png" width="600" %}
 _Figure: Automatic artifact rejection processes the data in several steps to allow rejection of artifactual time intervals from the trial definition_
