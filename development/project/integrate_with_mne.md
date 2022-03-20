@@ -151,7 +151,7 @@ And then in MATLAB
 
 where ''data1'' contains the data organized in multiple trials.
 
-Better, one could also use the inbuilt-function [ft_definetrial](/reference/definetrial/
+Better, one could also use the inbuilt-function [ft_definetrial](/reference/ft_definetrial/
 
     fiff_file = 'mne_python-epo.fif';
     cfg = [];

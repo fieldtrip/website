@@ -92,9 +92,9 @@ As the `tra` matrix provides information how the individual electrodes/coils rel
 
 - [ft_combineplanar](/reference/ft_combineplanar)
 - [ft_componentanalysis](/reference/ft_componentanalysis)
-- [ft_denoise_pca](/reference/denoise_pca)
-- [ft_denoise_synthetic](/reference/denoise_synthetic)
-- [ft_denoise_tsr](/reference/denoise_tsr)
+- [ft_denoise_pca](/reference/ft_denoise_pca)
+- [ft_denoise_synthetic](/reference/ft_denoise_synthetic)
+- [ft_denoise_tsr](/reference/ft_denoise_tsr)
 - [ft_preprocessing](/reference/preprocessing)
 - [ft_rejectcomponent](/reference/ft_rejectc/ponent)
 

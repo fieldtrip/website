@@ -13,7 +13,7 @@ You can find the anatomical templates included in FieldTrip [here](https://githu
 
 ## High resolution triangulations of the neocortical sheet
 
-The FreeSurfer cortical sheets can be downloaded from the [SurfRend toolbox website](http://spmsurfrend.sourceforge.net/). The mat-files that are in FieldTrip have been obtained using [ft_read_headshape](/reference/fileio/read_headshape). The following sheets are included:
+The FreeSurfer cortical sheets can be downloaded from the [SurfRend toolbox website](http://spmsurfrend.sourceforge.net/). The mat-files that are in FieldTrip have been obtained using [ft_read_headshape](/reference/fileio/ft_read_headshape). The following sheets are included:
 
 - surface defined at the gray/white matter boundary: surface_white_both/left/right.
 - surface defined at the pial surface: surface_pial_both/left/right.

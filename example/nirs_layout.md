@@ -131,7 +131,7 @@ If this were an EEG layout, we would now be done. However, with NIRS the channel
 do not correspond directly to the individual optodes, so we need to make
 combinations of optodes. This can be done using a "montage", which specifies how
 optodes (or more commonly EEG electrodes) are combined in a channel. The concent
-of a montage is explained in more detail in **[ft_apply_montage](/reference/forward/apply_montage)**.
+of a montage is explained in more detail in **[ft_apply_montage](/reference/forward/ft_apply_montage)**.
 
     montage.labelold = {'Tx1', 'Tx2', 'Tx3', 'Tx4', 'Tx5', 'Tx6', 'Rx1', 'Rx2', 'Rx3', 'Rx4', 'Rx5', 'Rx6', 'Rx7', 'Rx8'};
 

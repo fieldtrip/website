@@ -25,7 +25,7 @@ The functions **[ft_artifact_eog](/reference/ft_artifact_eog)**, **[ft_artifact_
 
 The following steps are used to detect artifacts in FieldTrip's automatic artifact rejection (see figure below
 
-1.  Defining segments of interest using [ft_definetrial](/reference/definetrial)
+1.  Defining segments of interest using [ft_definetrial](/reference/ft_definetrial)
 2.  Detecting artifacts using [ft_artifact_zvalue](/reference/ft_artifact_zvalue), this consists of
     - Reading the data (with padding) from disk
     - Filtering the data

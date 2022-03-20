@@ -21,7 +21,7 @@ Mark van Wanrooij (DCN/biophysics) and his group might substantially contribute 
 
 ## Header
 
-The FieldTrip header contains meta information about the recording. More information be found in the respective reading file [ft_read_header](/reference/fileio/read_header). For MEG data, the header also contains a .grad field, which contains information about the gradiometers. The respective counterpart for EEG data is .elec, but is commonly not stored together with the recorded data and thus not represented in the header.
+The FieldTrip header contains meta information about the recording. More information be found in the respective reading file [ft_read_header](/reference/fileio/ft_read_header). For MEG data, the header also contains a .grad field, which contains information about the gradiometers. The respective counterpart for EEG data is .elec, but is commonly not stored together with the recorded data and thus not represented in the header.
 
 NIRS data has another kind of sensor called "optode". An optode can either emit light, laser light or LED light, called a "transmitter", or receive light, e.g., by avalanching photodiodes, called "receiver". A channel is defined by the amount of transmitted light from the "transmitter" that is received by the "receiver" (hence the nomenclature). I propose the header of NIRS data to contain a .opto field, that includes optode specific information. These types need to be incorporated in ft_senstype and ft_chantype.
 

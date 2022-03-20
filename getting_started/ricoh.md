@@ -101,7 +101,7 @@ If you use the option ''cfg.chanel = 'TRIG\*';'', you can check the waveform of 
 
     dat = ft_read_data(dataset, 'begsample', 100000, 'endsample', 120000, 'chanindx', 12);
 
-The options such as 'chanindx' should be specified in key-value pairs (see [ft_read_data](/reference/fileio/read_data)). When only the filename is specified, all time-course data of every channels with large amount of memory will be read. To avoid to load such large amount of data, you should specify channel index when you directly use the low-level read function.
+The options such as 'chanindx' should be specified in key-value pairs (see [ft_read_data](/reference/fileio/ft_read_data)). When only the filename is specified, all time-course data of every channels with large amount of memory will be read. To avoid to load such large amount of data, you should specify channel index when you directly use the low-level read function.
 
 ### Read events
 

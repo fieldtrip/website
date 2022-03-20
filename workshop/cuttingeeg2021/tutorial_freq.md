@@ -46,7 +46,7 @@ This part creates a definition of epochs, based on the events that are stored in
 
     cfg = ft_definetrial(cfg);
 
-The relevant field that is added to the cfg by **[ft_definetrial](/reference/definetrial)** is the so called `trl` field, which contains a specification of begin and end samples of the requested epochs, where the samples are expressed relative to the start of the recording. Here, the trl is actually a [table](https://nl.mathworks.com/help/matlab/tables.html), containing a lot more useful - and directly interpretable - information. Don't forget to scroll to the right, because that's where the interesting info is located, note that the below code prints a subset of 3 trials, which intends to show that the modality of stimulation occurred in blocks of 400 repetitions:
+The relevant field that is added to the cfg by **[ft_definetrial](/reference/ft_definetrial)** is the so called `trl` field, which contains a specification of begin and end samples of the requested epochs, where the samples are expressed relative to the start of the recording. Here, the trl is actually a [table](https://nl.mathworks.com/help/matlab/tables.html), containing a lot more useful - and directly interpretable - information. Don't forget to scroll to the right, because that's where the interesting info is located, note that the below code prints a subset of 3 trials, which intends to show that the modality of stimulation occurred in blocks of 400 repetitions:
 
     >> cfg.trl([1 401 801],:)
 
