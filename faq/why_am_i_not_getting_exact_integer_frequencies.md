@@ -93,7 +93,7 @@ The specification
 
     cfg.toilim    = [tmin tmax]
 
-will work in INCLUSIVE terms: both tmin and tmax will be included in the data selection. The same it's true for cfg.latency and cfg.foilim in **[ft_selectdata](/reference/ft_selectdata)**.
+will work in INCLUSIVE terms: both tmin and tmax will be included in the data selection. The same it's true for cfg.latency and cfg.foilim in **[ft_selectdata](/reference/utilities/ft_selectdata)**.
 
 If you want to follow the ft_trialfun_general convention and exclude the last sample, then you should exclude it from the input:
 

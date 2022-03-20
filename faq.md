@@ -66,7 +66,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [Can I restrict the source reconstruction to the grey matter?](/faq/can_i_restrict_the_source_reconstruction_to_the_grey_matter)
 - [How are electrodes, magnetometers or gradiometers described?](/faq/how_are_electrodes_magnetometers_or_gradiometers_described)
 - [How are the LPA and RPA points defined?](/faq/how_are_the_lpa_and_rpa_points_defined)
-- [How are the different head and MRI coordinate systems defined?](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined)
+- [How are the different head and MRI coordinate systems defined?](/faq/coordsys)
 - [How can I check whether the grid that I have is aligned to the segmented volume and to the sensor gradiometer?](/faq/how_can_i_check_whether_the_grid_that_i_have_is_aligned_to_the_segmented_volume_and_to_the_sensor_gradiometer)
 - [How can I convert an anatomical mri from DICOM into CTF format?](/faq/how_can_i_convert_an_anatomical_mri_from_dicom_into_ctf_format)
 - [How can I determine the anatomical label of a source or electrode?](/faq/how_can_i_determine_the_anatomical_label_of_a_source)

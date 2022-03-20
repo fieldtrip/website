@@ -253,7 +253,7 @@ In the Ricoh and Yokogawa system, the coordinate system is defined as:
 - Y-axis goes towards the left
 - Z-axis goes towards the top of the head
 
-This coordinate system is same as the CTF coordinate system (see the [faq](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined)). It is therefore convenient to introduce the CTF coordinate system for defining a head coordinate system. In the co-registration procedure described below, there is a step of defining a head coordinate system with the CTF convention.
+This coordinate system is same as the CTF coordinate system (see the [faq](/faq/coordsys)). It is therefore convenient to introduce the CTF coordinate system for defining a head coordinate system. In the co-registration procedure described below, there is a step of defining a head coordinate system with the CTF convention.
 
 ### Read MRI
 

@@ -34,7 +34,7 @@ The following steps are taken in this tutorial:
 
 - Define segments of data of interest (the trial definition) using **[ft_definetrial](/reference/ft_definetrial)**
 - Read the data into MATLAB using **[ft_preprocessing](/reference/ft_preprocessing)**
-- Split up the data for the different conditions **[ft_selectdata](/reference/ft_selectdata)**
+- Split up the data for the different conditions **[ft_selectdata](/reference/utilities/ft_selectdata)**
 
 ## Reading and preprocessing the interesting trials
 

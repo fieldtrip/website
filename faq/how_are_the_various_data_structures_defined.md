@@ -29,7 +29,7 @@ A FieldTrip data structure consists at least of numeric data specific to that pa
 - **[ft_datatype_sens](/reference/utilities/ft_datatype_sens)**
 - **[ft_datatype_headmodel](/reference/utilities/ft_datatype_headmodel)**
 
-You can use **[ft_datatype](/reference/ft_datatype)** to determine the type of data that is represented in a certain MATLAB structure.
+You can use **[ft_datatype](/reference/utilities/ft_datatype)** to determine the type of data that is represented in a certain MATLAB structure.
 
 ## Old and new source data representation
 

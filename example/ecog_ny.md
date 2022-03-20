@@ -68,7 +68,7 @@ First, we will load the data and segment them into trials using **[ft_preprocess
     cfg.continuous = 'yes';
     epoch_data = ft_preprocessing(cfg);
 
-The data still contain some channels that are not required for the further analysis (e.g., 'Pulse' and 'ECG' channels). We will use **[ft_selectdata](/reference/ft_selectdata)** to select only channels that have the 'EEG' prefix. Only these data will be submitted to subsequent analysis steps.
+The data still contain some channels that are not required for the further analysis (e.g., 'Pulse' and 'ECG' channels). We will use **[ft_selectdata](/reference/utilities/ft_selectdata)** to select only channels that have the 'EEG' prefix. Only these data will be submitted to subsequent analysis steps.
 
     cfg         = [];
     cfg.channel = 'EEG*'; % select 'EEG' channles

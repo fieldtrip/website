@@ -471,7 +471,7 @@ For patient confidentiality we only include here the MRI which has already been 
 
     save mri_defaced.mat mri_defaced % save the data for sharing
 
-When we reslice this MRI, it becomes aligned with the Neuromag co-ordinate system (RAS) which means that slice images are shown in a different set of orientations to the CTF data that has been aligned to its own co-ordinate system. See [this FAQ](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined) for more details on different coordinate systems.
+When we reslice this MRI, it becomes aligned with the Neuromag co-ordinate system (RAS) which means that slice images are shown in a different set of orientations to the CTF data that has been aligned to its own co-ordinate system. See [this FAQ](/faq/coordsys) for more details on different coordinate systems.
 
     cfg = [];
     mri_resliced = ft_volumereslice(cfg, mri_defaced);

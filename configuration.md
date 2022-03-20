@@ -3013,22 +3013,22 @@ A detailed description of each function is available in the [reference documenta
 **cfg.trialdef** - [ft_definetrial](/reference/ft_definetrial)  
 
 
-**cfg.trialdef.eventtype** - [ft_artifact_tms](/reference/ft_artifact_tms), [ft_definetrial](/reference/ft_definetrial), [ft_trialfun_artinis](/reference/ft_trialfun_artinis), [ft_trialfun_artinis](/reference/ft_trialfun_artinis), [ft_trialfun_artinis](/reference/ft_trialfun_artinis)  
+**cfg.trialdef.eventtype** - [ft_artifact_tms](/reference/ft_artifact_tms), [ft_definetrial](/reference/ft_definetrial), [ft_trialfun_artinis](/reference/trialfun/ft_trialfun_artinis), [ft_trialfun_artinis](/reference/trialfun/ft_trialfun_artinis), [ft_trialfun_artinis](/reference/trialfun/ft_trialfun_artinis)  
 
 
-**cfg.trialdef.eventvalue** - [ft_artifact_tms](/reference/ft_artifact_tms), [ft_definetrial](/reference/ft_definetrial), [ft_trialfun_artinis](/reference/ft_trialfun_artinis)  
+**cfg.trialdef.eventvalue** - [ft_artifact_tms](/reference/ft_artifact_tms), [ft_definetrial](/reference/ft_definetrial), [ft_trialfun_artinis](/reference/trialfun/ft_trialfun_artinis)  
 
 
-**cfg.trialdef.oxyproj** - [ft_trialfun_artinis](/reference/ft_trialfun_artinis)  
+**cfg.trialdef.oxyproj** - [ft_trialfun_artinis](/reference/trialfun/ft_trialfun_artinis)  
 
 
-**cfg.trialdef.poststim** - [ft_definetrial](/reference/ft_definetrial), [ft_trialfun_artinis](/reference/ft_trialfun_artinis)  
+**cfg.trialdef.poststim** - [ft_definetrial](/reference/ft_definetrial), [ft_trialfun_artinis](/reference/trialfun/ft_trialfun_artinis)  
 
 
-**cfg.trialdef.prestim** - [ft_definetrial](/reference/ft_definetrial), [ft_trialfun_artinis](/reference/ft_trialfun_artinis)  
+**cfg.trialdef.prestim** - [ft_definetrial](/reference/ft_definetrial), [ft_trialfun_artinis](/reference/trialfun/ft_trialfun_artinis)  
 
 
-**cfg.trialdef.triallength** - [ft_definetrial](/reference/ft_definetrial), [ft_trialfun_artinis](/reference/ft_trialfun_artinis)  
+**cfg.trialdef.triallength** - [ft_definetrial](/reference/ft_definetrial), [ft_trialfun_artinis](/reference/trialfun/ft_trialfun_artinis)  
 
 
 **cfg.trialfun** - [ft_artifact_tms](/reference/ft_artifact_tms), [ft_definetrial](/reference/ft_definetrial), [ft_realtime_average](/reference/realtime/example/ft_realtime_average), [ft_realtime_classification](/reference/realtime/example/ft_realtime_classification), [ft_realtime_classification](/reference/realtime/example/ft_realtime_classification), [ft_realtime_oddball](/reference/realtime/example/ft_realtime_oddball), [ft_realtime_selectiveaverage](/reference/realtime/example/ft_realtime_selectiveaverage)  

@@ -47,7 +47,7 @@ After using edf2fieldtrip, some extra fields need to be created with the correct
 
 ### Define trials
 
-Now the data is structured nicely, we can continue with extracting the events. As mentioned before, you **must** have read the events via *readevents(*Events.edf,_Raw.edf)_ in ABM's B-Alert Lab software. Only after this, we can extract the events from a .csv file. Now, specifiy each of the configuration variables as shown below, so that **[ft_trialfun_balert](/reference/ft_trialfun_balert)** can interpret it. There are no default values.
+Now the data is structured nicely, we can continue with extracting the events. As mentioned before, you **must** have read the events via *readevents(*Events.edf,_Raw.edf)_ in ABM's B-Alert Lab software. Only after this, we can extract the events from a .csv file. Now, specifiy each of the configuration variables as shown below, so that **[ft_trialfun_balert](/reference/trialfun/ft_trialfun_balert)** can interpret it. There are no default values.
 
     eventDir = dir('*_Events.csv');
     % load in event markers
@@ -62,7 +62,7 @@ Now the data is structured nicely, we can continue with extracting the events. A
     cfg.trialfun = 'ft_trialfun_balert';
     cfg = ft_trialfun_balert(cfg); %  segment all trials
 
-Nb. At the moment, **[ft_definetrial](/reference/ft_definetrial)** is not used for the segmentation. Instead, **[ft_trialfun_balert](/reference/ft_trialfun_balert)** is called directly. This should be better integrated into FieldTrip, please contact the B-Alert support team for this.
+Nb. At the moment, **[ft_definetrial](/reference/ft_definetrial)** is not used for the segmentation. Instead, **[ft_trialfun_balert](/reference/trialfun/ft_trialfun_balert)** is called directly. This should be better integrated into FieldTrip, please contact the B-Alert support team for this.
 
 ## Combining EEG data with events
 
@@ -70,7 +70,7 @@ The data is structured and we have a configuration containing a cfg.trl, which i
 
     dataSeg = ft_redefinetrial(cfg, data);
 
-With these two snippets of code, and **[ft_trialfun_balert](/reference/ft_trialfun_balert)** your data is ready to be preprocessed with **[ft_preprocessing](/reference/ft_preprocessing)**. Afterwards, when you are going to use **[ft_databrowser](/reference/ft_databrowser)**, you need to specify cfg.channel and cfg.headerfile, as defined in ''data.hdr'' earlier on:
+With these two snippets of code, and **[ft_trialfun_balert](/reference/trialfun/ft_trialfun_balert)** your data is ready to be preprocessed with **[ft_preprocessing](/reference/ft_preprocessing)**. Afterwards, when you are going to use **[ft_databrowser](/reference/ft_databrowser)**, you need to specify cfg.channel and cfg.headerfile, as defined in ''data.hdr'' earlier on:
 
     cfg = [];
     cfg.channel = {'Fz','POz','Cz','F3','F4','PO3','PO4','C3','C4'}; % All 9 EEG channels of the B-Alert X-10

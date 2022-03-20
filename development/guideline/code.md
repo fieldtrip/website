@@ -34,7 +34,7 @@ To explain what the input and output data structures of the function are, please
 [output] = ft_xxxxxx(cfg, input)
 [output] = ft_xxxxxx(cfg, input1, input2)
 
-where output and input, input1, input2 are the standard names of data types, such as raw, timelock, freq, source, volume, spike. Pleae look in **[ft_datatype](/reference/ft_datatype)** for a complete list and pointers to the detailed documentation on the standard datatypes.
+where output and input, input1, input2 are the standard names of data types, such as raw, timelock, freq, source, volume, spike. Pleae look in **[ft_datatype](/reference/utilities/ft_datatype)** for a complete list and pointers to the detailed documentation on the standard datatypes.
 
 ## Provide the appropriate level of feedback to the user
 

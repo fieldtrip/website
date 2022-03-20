@@ -207,7 +207,7 @@ Let us assume for now that we have no clue about the triggers in the data. We wi
     cfg.dataset = 'motor_cortex.oxy3';
     cfg.trialdef.eventtype = '?';
 
-The question mark indicates that we are not sure about the event triggers, and the function **[ft_trialfun_general](/reference/ft_trialfun_general)** will thus output all events that are found in the dataset. Now, we can call **[ft_definetrial](/reference/ft_definetrial)**
+The question mark indicates that we are not sure about the event triggers, and the function **[ft_trialfun_general](/reference/trialfun/ft_trialfun_general)** will thus output all events that are found in the dataset. Now, we can call **[ft_definetrial](/reference/ft_definetrial)**
 
     ft_definetrial(cfg);
 

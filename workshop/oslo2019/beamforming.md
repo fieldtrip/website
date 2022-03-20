@@ -246,7 +246,7 @@ To start with this, we need to compute the oscillatory power for both conditions
 
 
 {% include markup/info %}
-You could also compute powcsd_all with `cfg.keeptrials` set to `yes` and use the `cfg.trials` option later in **[ft_sourceanalysis](/reference/ft_sourceanalysis)** or using **[ft_selectdata](/reference/ft_selectdata)**. This would be computationally more efficient, but requires more memory.
+You could also compute powcsd_all with `cfg.keeptrials` set to `yes` and use the `cfg.trials` option later in **[ft_sourceanalysis](/reference/ft_sourceanalysis)** or using **[ft_selectdata](/reference/utilities/ft_selectdata)**. This would be computationally more efficient, but requires more memory.
 {% include markup/end %}
 
 ### Compute the spatial common filter and apply it to the conditions

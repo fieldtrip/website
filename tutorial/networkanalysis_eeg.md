@@ -23,7 +23,7 @@ Also, we will explore the connectomes in more detail, and investigate how the sp
 
 The data analyses will follow the following steps:
 
-- Load the data into MATLAB select the EEG electrodes using **[ft_selectdata](/reference/ft_selectdata)** and convert the units of the electrodes from cm to mm using **[ft_convert_units](/reference/forward/ft_convert_units)**.
+- Load the data into MATLAB select the EEG electrodes using **[ft_selectdata](/reference/utilities/ft_selectdata)** and convert the units of the electrodes from cm to mm using **[ft_convert_units](/reference/forward/ft_convert_units)**.
 - Cut the data into overlapping segments with **[ft_redefinetrial](/reference/ft_redefinetrial)**.
 - Compute sensor level power spectra and determine peak frequency using **[ft_freqanalysis](/reference/ft_freqanalysis)** and **[ft_multiplotER](/reference/ft_multiplotER)**.
 - Align the EEG electrodes to the scalp surface using **[ft_electroderealign](/reference/ft_electroderealign)**.

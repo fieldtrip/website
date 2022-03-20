@@ -59,7 +59,7 @@ We will first determine the position on which the cortico-muscular coherence is 
     maxpos =
         4 -3 12
 
-The cortical position is expressed in individual subject [head-coordinates](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined) and in centimeter. Relative to the center of the head (in between the ears) the position is 4 cm towards the nose, -3 towards the left side (i.e., 3 cm towards the right!) and 12 cm towards the vertex.
+The cortical position is expressed in individual subject [head-coordinates](/faq/coordsys) and in centimeter. Relative to the center of the head (in between the ears) the position is 4 cm towards the nose, -3 towards the left side (i.e., 3 cm towards the right!) and 12 cm towards the vertex.
 
 The **[ft_sourceanalysis](/reference/ft_sourceanalysis)** methods are usually applied to the whole brain using a regular 3-D grid or using a triangulated cortical sheet. You can also just specify the location of a single or multiple points of interest with _cfg.sourcemodel.pos_ and the LCMV beamformer will simply be performed at the location of interest.
 

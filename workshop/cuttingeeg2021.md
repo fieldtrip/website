@@ -20,7 +20,7 @@ If you are new to time-frequency analysis in general, we recommend you to watch 
 
 ## The data used in this tutorial
 
-We will be using the [eeg-language](/tags/eeg-language) dataset that has been converted to BIDS. The data is available from our [FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/cuttingeeg2021) and is alternatively available from <https://zenodo.org/communities/cuttingeeg>.
+We will be using the [eeg-language](/tag/eeg-language) dataset that has been converted to BIDS. The data is available from our [FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/cuttingeeg2021) and is alternatively available from <https://zenodo.org/communities/cuttingeeg>.
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5531370.svg)](https://doi.org/10.5281/zenodo.5531370)
 

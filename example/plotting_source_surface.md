@@ -7,11 +7,7 @@ redirect_from:
 
 # Plotting the result of source reconstruction on a cortical mesh
 
-The following function can be used to plot the results of source reconstruction on a cortical surface sheet. It assumes a cortical sheet _surf_, described by vertices (pnt) and triangles (tri). The vertices can be used as positions in **[ft_sourceanalysis](/reference/ft_sourceanalysis)** by specifying cfg.sourcemodel.pos = surf.pnt, and cfg.sourcemodel.tri = surf.tri. The resulting source structure (i.e. obtained
-after running **[ft_sourceanalysis](/reference/ft_sourceanalysis)**) can subsequently be used by **[ft_sourceanalysis](/reference/ft_sourceanalysis)**, using cfg.method = 'surface'. If
-the source level data also contains a time-dimension, the function **[ft_sourceanplot_interactive](/reference/ft_sourceaplot_interactive)** can also be used. The below code was written before the
-already mentioned functionality was implemented in FieldTrip. There is no strict need to
-use it, nor a guarantee that it will still work.
+The following function can be used to plot the results of source reconstruction on a cortical surface sheet. It assumes a cortical sheet _surf_, described by vertices (pnt) and triangles (tri). The vertices can be used as positions in **[ft_sourceanalysis](/reference/ft_sourceanalysis)** by specifying cfg.sourcemodel.pos = surf.pnt, and cfg.sourcemodel.tri = surf.tri. The resulting source structure (i.e. obtained after running **[ft_sourceanalysis](/reference/ft_sourceanalysis)**) can subsequently be used by **[ft_sourceanalysis](/reference/ft_sourceanalysis)**, using cfg.method = 'surface'. If the source level data also contains a time-dimension, the function **[ft_sourceplot_interactive](/reference/ft_sourceplot_interactive)** can also be used. The below code was written before the already mentioned functionality was implemented in FieldTrip. There is no strict need to use it, nor a guarantee that it will still work.
 
     function [handles] = myownsurfplot(cfg,surf,source)
 

@@ -112,7 +112,7 @@ It is also possible to localize electrodes in FieldTrip, using **[ft_electrodepl
 
 #### Load the `.mgrid` file and corresponding brain volume into BioImage Suite
 
-Once the `.mgrid` file is created, it can be loaded into the BioImage Suite Electrode Editor along with the corresponding brain volume file. If the electrodes appear severely misaligned in BioImage Suite, it is likely because the orientation of the brain volume in BioImage Suite does not match the orientation of the brain volume in FieldTrip, which may happen for a variety of reasons. To solve this problem, simply reorient the brain volume in BioImage Suite (in the brain volume window: Relabel → ReOrient Image → select from drop down) to match the orientation of the brain volume in FieldTrip, which can be determined from the [coordinate system](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined) of the brain volume.
+Once the `.mgrid` file is created, it can be loaded into the BioImage Suite Electrode Editor along with the corresponding brain volume file. If the electrodes appear severely misaligned in BioImage Suite, it is likely because the orientation of the brain volume in BioImage Suite does not match the orientation of the brain volume in FieldTrip, which may happen for a variety of reasons. To solve this problem, simply reorient the brain volume in BioImage Suite (in the brain volume window: Relabel → ReOrient Image → select from drop down) to match the orientation of the brain volume in FieldTrip, which can be determined from the [coordinate system](/faq/coordsys) of the brain volume.
 
 ## Suggested further reading
 

@@ -87,7 +87,7 @@ When you prepare a head model for EEG, the head model should be in the same coor
 
 The anatomical MRI that we use in this tutorial is already aligned to a head coordinate system (ctf). We also have information (see later) how the EEG electrodes are positioned relative to the fiducials. Therefore, we do not need to align the anatomical MRI to any other convention.
 
-It is also possible to read in anatomical MRI data in [other formats](/faq/dataformat), which are defined in [a different coordinate system](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined). When you read in your own anatomical data, it may does not give information on the coordinate system in which the anatomical data is expressed and/or maybe there is no transformation matrix specified. In this case, you can check the coordinate-system with the **[ft_determine_coordsys](/reference/utilities/ft_determine_coordsys)** function.
+It is also possible to read in anatomical MRI data in [other formats](/faq/dataformat), which are defined in [a different coordinate system](/faq/coordsys). When you read in your own anatomical data, it may does not give information on the coordinate system in which the anatomical data is expressed and/or maybe there is no transformation matrix specified. In this case, you can check the coordinate-system with the **[ft_determine_coordsys](/reference/utilities/ft_determine_coordsys)** function.
 
 ## Segmentation
 
@@ -218,7 +218,7 @@ When the figure is plotted, you can look at the figure from different views usin
 
 ## Align the electrodes
 
-The head model is expressed in head coordinates of the anatomical mri (ctf [coordinate system](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined)). We need to define the electrode positions in the same head coordinate system. First, we plot the outermost layer of the head model (scalp) together with the electrodes to check if the alignment is necessary. We use a template set of electrodes which you can find in the FieldTrip/template/electrode/standard_1020.elc file.
+The head model is expressed in head coordinates of the anatomical mri (ctf [coordinate system](/faq/coordsys)). We need to define the electrode positions in the same head coordinate system. First, we plot the outermost layer of the head model (scalp) together with the electrodes to check if the alignment is necessary. We use a template set of electrodes which you can find in the FieldTrip/template/electrode/standard_1020.elc file.
 
     % you may need to specify the full path to the file
     elec = ft_read_sens('standard_1020.elc');
