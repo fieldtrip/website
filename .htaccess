@@ -1,5 +1,7 @@
 RewriteEngine On
 
-# the reference URL should have a trailing slash, which is removed and replaced by .m
 RewriteBase /reference/
-RewriteRule ^reference/(.*)/+$ https://github.com/fieldtrip/fieldtrip/blob/release/$1.m [R=301,L]
+# reference URLs with a trailing slash are interpreted as a directory
+RewriteRule ^reference/([a-z].+)/+$ https://github.com/fieldtrip/fieldtrip/blob/release/$1   [R=301,L]
+# # reference URLs without a trailing slash are interpreted as a MATLAB file
+RewriteRule ^reference/([a-z].+)$   https://github.com/fieldtrip/fieldtrip/blob/release/$1.m [R=301,L]
