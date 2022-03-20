@@ -1,8 +1,8 @@
-ErrorDocument 401 /error/401/
-ErrorDocument 404 /error/404/
-ErrorDocument 405 /error/405/
-ErrorDocument 408 /error/408/
-ErrorDocument 410 /error/410/
+ErrorDocument 401 /401.html
+ErrorDocument 404 /404.html
+ErrorDocument 405 /405.html
+ErrorDocument 408 /408.html
+ErrorDocument 410 /410.html
 
 RewriteEngine On
 RewriteBase /reference/
