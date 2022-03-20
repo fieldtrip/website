@@ -19,9 +19,9 @@ Compiling mex files in MATLAB requires that you run the following once.
 
     mex -setup
 
-The FieldTrip main directory contains the **[ft_compile_mex](/reference/ft_compile_mex)** function, which compiles all regular mex files. For some of the mex files it is needed to have two copies, i.e. one in `fieldtrip/private` and another one in `fieldtrip/fileio/private`. The `fieldtrip.bin/synchronize-private.sh` Bash script copies them to the correct locations.
+The FieldTrip main directory contains the **[ft_compile_mex](/reference/utilities/ft_compile_mex)** function, which compiles all regular mex files. For some of the mex files it is needed to have two copies, i.e. one in `fieldtrip/private` and another one in `fieldtrip/fileio/private`. The `fieldtrip.bin/synchronize-private.sh` Bash script copies them to the correct locations.
 
-The **[ft_compile_mex](/reference/ft_compile_mex)** function will try to detect whether the c-code for the mex files has changed and only compile the updated ones. To recompile all mex files, you can do
+The **[ft_compile_mex](/reference/utilities/ft_compile_mex)** function will try to detect whether the c-code for the mex files has changed and only compile the updated ones. To recompile all mex files, you can do
 
     ft_compile_mex(true)
 

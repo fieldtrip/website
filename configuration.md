@@ -29,7 +29,7 @@ A detailed description of each function is available in the [reference documenta
 **cfg.age** - [ft_nirs_prepare_ODtransformation](/reference/external/artinis/ft_nirs_prepare_ODtransformation), [ft_nirs_transform_ODs](/reference/external/artinis/ft_nirs_transform_ODs)  
 
 
-**cfg.align** - [ft_appendlayout](/reference/ft_appendlayout), [ft_spike_waveform](/reference/ft_spike_waveform)  
+**cfg.align** - [ft_appendlayout](/reference/ft_appendlayout), [ft_spike_waveform](/reference/contrib/spike/ft_spike_waveform)  
 
 
 **cfg.allowoverlap** - [ft_databrowser](/reference/ft_databrowser)  
@@ -389,7 +389,7 @@ A detailed description of each function is available in the [reference documenta
 **cfg.audiohdr** - [ft_audiovideobrowser](/reference/ft_audiovideobrowser)  
 
 
-**cfg.avgoverchan** - [ft_freqstatistics](/reference/ft_freqstatistics), [ft_spiketriggeredspectrum_stat](/reference/ft_spiketriggeredspectrum_stat), [ft_timelockstatistics](/reference/ft_timelockstatistics)  
+**cfg.avgoverchan** - [ft_freqstatistics](/reference/ft_freqstatistics), [ft_spiketriggeredspectrum_stat](/reference/contrib/spike/ft_spiketriggeredspectrum_stat), [ft_timelockstatistics](/reference/ft_timelockstatistics)  
 
 
 **cfg.avgoverfreq** - [ft_freqstatistics](/reference/ft_freqstatistics), [ft_sourceplot](/reference/ft_sourceplot)  
@@ -481,10 +481,10 @@ A detailed description of each function is available in the [reference documenta
 **cfg.binica.weightsin** - [ft_componentanalysis](/reference/ft_componentanalysis)  
 
 
-**cfg.bins** - [ft_spike_isi](/reference/ft_spike_isi)  
+**cfg.bins** - [ft_spike_isi](/reference/contrib/spike/ft_spike_isi)  
 
 
-**cfg.binsize** - [ft_spike_psth](/reference/ft_spike_psth), [ft_spike_xcorr](/reference/ft_spike_xcorr)  
+**cfg.binsize** - [ft_spike_psth](/reference/contrib/spike/ft_spike_psth), [ft_spike_xcorr](/reference/contrib/spike/ft_spike_xcorr)  
 
 
 **cfg.blocksize** - [ft_databrowser](/reference/ft_databrowser), [ft_icabrowser](/reference/contrib/misc/ft_icabrowser), [ft_realtime_asynchronous](/reference/realtime/example/ft_realtime_asynchronous), [ft_realtime_coillocalizer](/reference/realtime/example/ft_realtime_coillocalizer), [ft_realtime_headlocalizer](/reference/realtime/example/ft_realtime_headlocalizer), [ft_realtime_heartbeatdetect](/reference/realtime/example/ft_realtime_heartbeatdetect), [ft_realtime_jaga16proxy](/reference/realtime/example/ft_realtime_jaga16proxy), [ft_realtime_modeegproxy](/reference/realtime/example/ft_realtime_modeegproxy), [ft_realtime_ouunpod](/reference/realtime/example/ft_realtime_ouunpod), [ft_realtime_pooraudioproxy](/reference/realtime/example/ft_realtime_pooraudioproxy), [ft_realtime_powerestimate](/reference/realtime/example/ft_realtime_powerestimate), [ft_realtime_signalproxy](/reference/realtime/example/ft_realtime_signalproxy), [ft_realtime_signalrecorder](/reference/realtime/example/ft_realtime_signalrecorder), [ft_realtime_signalviewer](/reference/realtime/example/ft_realtime_signalviewer), [ft_realtime_synchronous](/reference/realtime/example/ft_realtime_synchronous), [ft_realtime_topography](/reference/realtime/example/ft_realtime_topography), [ft_realtime_topography](/reference/realtime/example/ft_realtime_topography)  
@@ -493,7 +493,7 @@ A detailed description of each function is available in the [reference documenta
 **cfg.bootstrap** - [ft_sourceanalysis](/reference/ft_sourceanalysis)  
 
 
-**cfg.borderspikes** - [ft_spiketriggeredspectrum_convol](/reference/ft_spiketriggeredspectrum_convol)  
+**cfg.borderspikes** - [ft_spiketriggeredspectrum_convol](/reference/contrib/spike/ft_spiketriggeredspectrum_convol)  
 
 
 **cfg.box** - [ft_layoutplot](/reference/ft_layoutplot), [ft_multiplotER](/reference/ft_multiplotER), [ft_multiplotTFR](/reference/ft_multiplotTFR), [ft_rejectvisual](/reference/ft_rejectvisual), [ft_volumelookup](/reference/ft_volumelookup)  
@@ -570,7 +570,7 @@ A detailed description of each function is available in the [reference documenta
 
 ## C
 
-**cfg.calibration** - [ft_realtime_jaga16proxy](/reference/realtime/example/ft_realtime_jaga16proxy), [ft_spikedownsample](/reference/ft_spikedownsample)  
+**cfg.calibration** - [ft_realtime_jaga16proxy](/reference/realtime/example/ft_realtime_jaga16proxy), [ft_spikedownsample](/reference/contrib/spike/ft_spikedownsample)  
 
 
 **cfg.camlight** - [ft_sourceplot](/reference/ft_sourceplot)  
@@ -588,19 +588,19 @@ A detailed description of each function is available in the [reference documenta
 **cfg.chanlow** - [ft_crossfrequencyanalysis](/reference/ft_crossfrequencyanalysis)  
 
 
-**cfg.channel** - [ft_badchannel](/reference/ft_badchannel), [ft_badsegment](/reference/ft_badsegment), [ft_channelnormalise](/reference/ft_channelnormalise), [ft_componentanalysis](/reference/ft_componentanalysis), [ft_connectivityanalysis](/reference/ft_connectivityanalysis), [ft_connectivityplot](/reference/ft_connectivityplot), [ft_crossfrequencyanalysis](/reference/ft_crossfrequencyanalysis), [ft_databrowser](/reference/ft_databrowser), [ft_denoise_dssp](/reference/ft_denoise_dssp), [ft_denoise_pca](/reference/ft_denoise_pca), [ft_denoise_prewhiten](/reference/ft_denoise_prewhiten), [ft_denoise_tsr](/reference/ft_denoise_tsr), [ft_detect_movement](/reference/ft_detect_movement), [ft_dipolefitting](/reference/ft_dipolefitting), [ft_dipolesimulation](/reference/ft_dipolesimulation), [ft_electrodeplacement](/reference/ft_electrodeplacement), [ft_electroderealign](/reference/ft_electroderealign), [ft_electrodermalactivity](/reference/ft_electrodermalactivity), [ft_eventtiminganalysis](/reference/ft_eventtiminganalysis), [ft_freqanalysis](/reference/ft_freqanalysis), [ft_freqdescriptives](/reference/ft_freqdescriptives), [ft_freqgrandaverage](/reference/ft_freqgrandaverage), [ft_freqstatistics](/reference/ft_freqstatistics), [ft_globalmeanfield](/reference/ft_globalmeanfield), [ft_heartrate](/reference/ft_heartrate), [ft_megplanar](/reference/ft_megplanar), [ft_megrealign](/reference/ft_megrealign), [ft_multiplotER](/reference/ft_multiplotER), [ft_multiplotTFR](/reference/ft_multiplotTFR), [ft_mvaranalysis](/reference/ft_mvaranalysis), [ft_nirs_prepare_ODtransformation](/reference/external/artinis/ft_nirs_prepare_ODtransformation), [ft_nirs_transform_ODs](/reference/external/artinis/ft_nirs_transform_ODs), [ft_nonlinearassociation](/reference/contrib/misc/ft_nonlinearassociation), [ft_prepare_layout](/reference/ft_prepare_layout), [ft_prepare_leadfield](/reference/ft_prepare_leadfield), [ft_prepare_neighbours](/reference/ft_prepare_neighbours), [ft_preprocessing](/reference/ft_preprocessing), [ft_realtime_asaproxy](/reference/realtime/example/ft_realtime_asaproxy), [ft_realtime_asynchronous](/reference/realtime/example/ft_realtime_asynchronous), [ft_realtime_average](/reference/realtime/example/ft_realtime_average), [ft_realtime_brainampproxy](/reference/realtime/example/ft_realtime_brainampproxy), [ft_realtime_classification](/reference/realtime/example/ft_realtime_classification), [ft_realtime_coillocalizer](/reference/realtime/example/ft_realtime_coillocalizer), [ft_realtime_downsample](/reference/realtime/example/ft_realtime_downsample), [ft_realtime_fileproxy](/reference/realtime/example/ft_realtime_fileproxy), [ft_realtime_heartbeatdetect](/reference/realtime/example/ft_realtime_heartbeatdetect), [ft_realtime_jaga16proxy](/reference/realtime/example/ft_realtime_jaga16proxy), [ft_realtime_neuralynxproxy](/reference/realtime/example/ft_realtime_neuralynxproxy), [ft_realtime_oddball](/reference/realtime/example/ft_realtime_oddball), [ft_realtime_ouunpod](/reference/realtime/example/ft_realtime_ouunpod), [ft_realtime_pooraudioproxy](/reference/realtime/example/ft_realtime_pooraudioproxy), [ft_realtime_powerestimate](/reference/realtime/example/ft_realtime_powerestimate), [ft_realtime_selectiveaverage](/reference/realtime/example/ft_realtime_selectiveaverage), [ft_realtime_signalproxy](/reference/realtime/example/ft_realtime_signalproxy), [ft_realtime_signalrecorder](/reference/realtime/example/ft_realtime_signalrecorder), [ft_realtime_signalviewer](/reference/realtime/example/ft_realtime_signalviewer), [ft_realtime_synchronous](/reference/realtime/example/ft_realtime_synchronous), [ft_realtime_topography](/reference/realtime/example/ft_realtime_topography), [ft_rejectvisual](/reference/ft_rejectvisual), [ft_removetemplateartifact](/reference/ft_removetemplateartifact), [ft_respiration](/reference/ft_respiration), [ft_singleplotER](/reference/ft_singleplotER), [ft_singleplotTFR](/reference/ft_singleplotTFR), [ft_sourceanalysis](/reference/ft_sourceanalysis), [ft_spikedownsample](/reference/ft_spikedownsample), [ft_spikesplitting](/reference/ft_spikesplitting), [ft_spiketriggeredaverage](/reference/ft_spiketriggeredaverage), [ft_spiketriggeredinterpolation](/reference/ft_spiketriggeredinterpolation), [ft_spiketriggeredspectrum_stat](/reference/ft_spiketriggeredspectrum_stat), [ft_stratify](/reference/ft_stratify), [ft_timelockanalysis](/reference/ft_timelockanalysis), [ft_timelockbaseline](/reference/ft_timelockbaseline), [ft_timelockgrandaverage](/reference/ft_timelockgrandaverage), [ft_timelockstatistics](/reference/ft_timelockstatistics), [ft_topoplotER](/reference/ft_topoplotER), [ft_topoplotTFR](/reference/ft_topoplotTFR)  
+**cfg.channel** - [ft_badchannel](/reference/ft_badchannel), [ft_badsegment](/reference/ft_badsegment), [ft_channelnormalise](/reference/ft_channelnormalise), [ft_componentanalysis](/reference/ft_componentanalysis), [ft_connectivityanalysis](/reference/ft_connectivityanalysis), [ft_connectivityplot](/reference/ft_connectivityplot), [ft_crossfrequencyanalysis](/reference/ft_crossfrequencyanalysis), [ft_databrowser](/reference/ft_databrowser), [ft_denoise_dssp](/reference/ft_denoise_dssp), [ft_denoise_pca](/reference/ft_denoise_pca), [ft_denoise_prewhiten](/reference/ft_denoise_prewhiten), [ft_denoise_tsr](/reference/ft_denoise_tsr), [ft_detect_movement](/reference/ft_detect_movement), [ft_dipolefitting](/reference/ft_dipolefitting), [ft_dipolesimulation](/reference/ft_dipolesimulation), [ft_electrodeplacement](/reference/ft_electrodeplacement), [ft_electroderealign](/reference/ft_electroderealign), [ft_electrodermalactivity](/reference/ft_electrodermalactivity), [ft_eventtiminganalysis](/reference/ft_eventtiminganalysis), [ft_freqanalysis](/reference/ft_freqanalysis), [ft_freqdescriptives](/reference/ft_freqdescriptives), [ft_freqgrandaverage](/reference/ft_freqgrandaverage), [ft_freqstatistics](/reference/ft_freqstatistics), [ft_globalmeanfield](/reference/ft_globalmeanfield), [ft_heartrate](/reference/ft_heartrate), [ft_megplanar](/reference/ft_megplanar), [ft_megrealign](/reference/ft_megrealign), [ft_multiplotER](/reference/ft_multiplotER), [ft_multiplotTFR](/reference/ft_multiplotTFR), [ft_mvaranalysis](/reference/ft_mvaranalysis), [ft_nirs_prepare_ODtransformation](/reference/external/artinis/ft_nirs_prepare_ODtransformation), [ft_nirs_transform_ODs](/reference/external/artinis/ft_nirs_transform_ODs), [ft_nonlinearassociation](/reference/contrib/misc/ft_nonlinearassociation), [ft_prepare_layout](/reference/ft_prepare_layout), [ft_prepare_leadfield](/reference/ft_prepare_leadfield), [ft_prepare_neighbours](/reference/ft_prepare_neighbours), [ft_preprocessing](/reference/ft_preprocessing), [ft_realtime_asaproxy](/reference/realtime/example/ft_realtime_asaproxy), [ft_realtime_asynchronous](/reference/realtime/example/ft_realtime_asynchronous), [ft_realtime_average](/reference/realtime/example/ft_realtime_average), [ft_realtime_brainampproxy](/reference/realtime/example/ft_realtime_brainampproxy), [ft_realtime_classification](/reference/realtime/example/ft_realtime_classification), [ft_realtime_coillocalizer](/reference/realtime/example/ft_realtime_coillocalizer), [ft_realtime_downsample](/reference/realtime/example/ft_realtime_downsample), [ft_realtime_fileproxy](/reference/realtime/example/ft_realtime_fileproxy), [ft_realtime_heartbeatdetect](/reference/realtime/example/ft_realtime_heartbeatdetect), [ft_realtime_jaga16proxy](/reference/realtime/example/ft_realtime_jaga16proxy), [ft_realtime_neuralynxproxy](/reference/realtime/example/ft_realtime_neuralynxproxy), [ft_realtime_oddball](/reference/realtime/example/ft_realtime_oddball), [ft_realtime_ouunpod](/reference/realtime/example/ft_realtime_ouunpod), [ft_realtime_pooraudioproxy](/reference/realtime/example/ft_realtime_pooraudioproxy), [ft_realtime_powerestimate](/reference/realtime/example/ft_realtime_powerestimate), [ft_realtime_selectiveaverage](/reference/realtime/example/ft_realtime_selectiveaverage), [ft_realtime_signalproxy](/reference/realtime/example/ft_realtime_signalproxy), [ft_realtime_signalrecorder](/reference/realtime/example/ft_realtime_signalrecorder), [ft_realtime_signalviewer](/reference/realtime/example/ft_realtime_signalviewer), [ft_realtime_synchronous](/reference/realtime/example/ft_realtime_synchronous), [ft_realtime_topography](/reference/realtime/example/ft_realtime_topography), [ft_rejectvisual](/reference/ft_rejectvisual), [ft_removetemplateartifact](/reference/ft_removetemplateartifact), [ft_respiration](/reference/ft_respiration), [ft_singleplotER](/reference/ft_singleplotER), [ft_singleplotTFR](/reference/ft_singleplotTFR), [ft_sourceanalysis](/reference/ft_sourceanalysis), [ft_spikedownsample](/reference/contrib/spike/ft_spikedownsample), [ft_spikesplitting](/reference/contrib/spike/ft_spikesplitting), [ft_spiketriggeredaverage](/reference/contrib/spike/ft_spiketriggeredaverage), [ft_spiketriggeredinterpolation](/reference/contrib/spike/ft_spiketriggeredinterpolation), [ft_spiketriggeredspectrum_stat](/reference/contrib/spike/ft_spiketriggeredspectrum_stat), [ft_stratify](/reference/ft_stratify), [ft_timelockanalysis](/reference/ft_timelockanalysis), [ft_timelockbaseline](/reference/ft_timelockbaseline), [ft_timelockgrandaverage](/reference/ft_timelockgrandaverage), [ft_timelockstatistics](/reference/ft_timelockstatistics), [ft_topoplotER](/reference/ft_topoplotER), [ft_topoplotTFR](/reference/ft_topoplotTFR)  
 
 
-**cfg.channelcell** - [ft_spikesorting](/reference/ft_spikesorting)  
+**cfg.channelcell** - [ft_spikesorting](/reference/contrib/spike/ft_spikesorting)  
 
 
 **cfg.channelclamped** - [ft_databrowser](/reference/ft_databrowser)  
 
 
-**cfg.channelcmb** - [ft_freqanalysis](/reference/ft_freqanalysis), [ft_lateralizedpotential](/reference/ft_lateralizedpotential), [ft_lateralizedpotential](/reference/ft_lateralizedpotential), [ft_mvaranalysis](/reference/ft_mvaranalysis), [ft_spike_jpsth](/reference/ft_spike_jpsth), [ft_spike_plot_jpsth](/reference/ft_spike_plot_jpsth), [ft_spike_xcorr](/reference/ft_spike_xcorr)  
+**cfg.channelcmb** - [ft_freqanalysis](/reference/ft_freqanalysis), [ft_lateralizedpotential](/reference/ft_lateralizedpotential), [ft_lateralizedpotential](/reference/ft_lateralizedpotential), [ft_mvaranalysis](/reference/ft_mvaranalysis), [ft_spike_jpsth](/reference/contrib/spike/ft_spike_jpsth), [ft_spike_plot_jpsth](/reference/contrib/spike/ft_spike_plot_jpsth), [ft_spike_xcorr](/reference/contrib/spike/ft_spike_xcorr)  
 
 
-**cfg.channelprefix** - [ft_spikedownsample](/reference/ft_spikedownsample)  
+**cfg.channelprefix** - [ft_spikedownsample](/reference/contrib/spike/ft_spikedownsample)  
 
 
 **cfg.chanscale** - [ft_databrowser](/reference/ft_databrowser), [ft_multiplotTFR](/reference/ft_multiplotTFR), [ft_rejectvisual](/reference/ft_rejectvisual), [ft_singleplotER](/reference/ft_singleplotER), [ft_singleplotTFR](/reference/ft_singleplotTFR)  
@@ -648,7 +648,7 @@ A detailed description of each function is available in the [reference documenta
 **cfg.clusterthreshold** - [ft_statistics_montecarlo](/reference/ft_statistics_montecarlo)  
 
 
-**cfg.cmapneurons** - [ft_spike_plot_raster](/reference/ft_spike_plot_raster)  
+**cfg.cmapneurons** - [ft_spike_plot_raster](/reference/contrib/spike/ft_spike_plot_raster)  
 
 
 **cfg.cohmethod** - [ft_sourcedescriptives](/reference/ft_sourcedescriptives)  
@@ -666,7 +666,7 @@ A detailed description of each function is available in the [reference documenta
 **cfg.colminsourcevaluemappedtothelowestcolor** - [ft_sliceinterp](/reference/ft_sliceinterp)  
 
 
-**cfg.colorbar** - [ft_movieplotER](/reference/ft_movieplotER), [ft_movieplotTFR](/reference/ft_movieplotTFR), [ft_multiplotTFR](/reference/ft_multiplotTFR), [ft_singleplotTFR](/reference/ft_singleplotTFR), [ft_sourceplot](/reference/ft_sourceplot), [ft_spike_plot_jpsth](/reference/ft_spike_plot_jpsth), [ft_topoplotER](/reference/ft_topoplotER), [ft_topoplotIC](/reference/ft_topoplotIC), [ft_topoplotTFR](/reference/ft_topoplotTFR)  
+**cfg.colorbar** - [ft_movieplotER](/reference/ft_movieplotER), [ft_movieplotTFR](/reference/ft_movieplotTFR), [ft_multiplotTFR](/reference/ft_multiplotTFR), [ft_singleplotTFR](/reference/ft_singleplotTFR), [ft_sourceplot](/reference/ft_sourceplot), [ft_spike_plot_jpsth](/reference/contrib/spike/ft_spike_plot_jpsth), [ft_topoplotER](/reference/ft_topoplotER), [ft_topoplotIC](/reference/ft_topoplotIC), [ft_topoplotTFR](/reference/ft_topoplotTFR)  
 
 
 **cfg.colorbartext** - [ft_movieplotER](/reference/ft_movieplotER), [ft_movieplotTFR](/reference/ft_movieplotTFR), [ft_multiplotTFR](/reference/ft_multiplotTFR), [ft_singleplotTFR](/reference/ft_singleplotTFR), [ft_sourceplot](/reference/ft_sourceplot), [ft_topoplotER](/reference/ft_topoplotER), [ft_topoplotIC](/reference/ft_topoplotIC), [ft_topoplotTFR](/reference/ft_topoplotTFR)  
@@ -678,7 +678,7 @@ A detailed description of each function is available in the [reference documenta
 **cfg.colorgroups** - [ft_databrowser](/reference/ft_databrowser), [ft_multiplotER](/reference/ft_multiplotER)  
 
 
-**cfg.colormap** - [ft_icabrowser](/reference/contrib/misc/ft_icabrowser), [ft_multiplotTFR](/reference/ft_multiplotTFR), [ft_singleplotTFR](/reference/ft_singleplotTFR), [ft_spike_plot_isireturn](/reference/ft_spike_plot_isireturn), [ft_spike_plot_jpsth](/reference/ft_spike_plot_jpsth), [ft_topoplotER](/reference/ft_topoplotER), [ft_topoplotIC](/reference/ft_topoplotIC), [ft_topoplotTFR](/reference/ft_topoplotTFR)  
+**cfg.colormap** - [ft_icabrowser](/reference/contrib/misc/ft_icabrowser), [ft_multiplotTFR](/reference/ft_multiplotTFR), [ft_singleplotTFR](/reference/ft_singleplotTFR), [ft_spike_plot_isireturn](/reference/contrib/spike/ft_spike_plot_isireturn), [ft_spike_plot_jpsth](/reference/contrib/spike/ft_spike_plot_jpsth), [ft_topoplotER](/reference/ft_topoplotER), [ft_topoplotIC](/reference/ft_topoplotIC), [ft_topoplotTFR](/reference/ft_topoplotTFR)  
 
 
 **cfg.colormapcolormapforsourceoverlay** - [ft_sliceinterp](/reference/ft_sliceinterp)  
@@ -773,19 +773,19 @@ A detailed description of each function is available in the [reference documenta
 **cfg.datafile** - [ft_artifact_clip](/reference/ft_artifact_clip), [ft_artifact_ecg](/reference/ft_artifact_ecg), [ft_artifact_eog](/reference/ft_artifact_eog), [ft_artifact_jump](/reference/ft_artifact_jump), [ft_artifact_muscle](/reference/ft_artifact_muscle), [ft_artifact_threshold](/reference/ft_artifact_threshold), [ft_artifact_tms](/reference/ft_artifact_tms), [ft_artifact_zvalue](/reference/ft_artifact_zvalue), [ft_databrowser](/reference/ft_databrowser), [ft_definetrial](/reference/ft_definetrial), [ft_preprocessing](/reference/ft_preprocessing), [ft_realtime_asynchronous](/reference/realtime/example/ft_realtime_asynchronous), [ft_realtime_average](/reference/realtime/example/ft_realtime_average), [ft_realtime_classification](/reference/realtime/example/ft_realtime_classification), [ft_realtime_coillocalizer](/reference/realtime/example/ft_realtime_coillocalizer), [ft_realtime_fmriviewer](/reference/realtime/example/ft_realtime_fmriviewer), [ft_realtime_heartbeatdetect](/reference/realtime/example/ft_realtime_heartbeatdetect), [ft_realtime_oddball](/reference/realtime/example/ft_realtime_oddball), [ft_realtime_ouunpod](/reference/realtime/example/ft_realtime_ouunpod), [ft_realtime_powerestimate](/reference/realtime/example/ft_realtime_powerestimate), [ft_realtime_selectiveaverage](/reference/realtime/example/ft_realtime_selectiveaverage), [ft_realtime_signalrecorder](/reference/realtime/example/ft_realtime_signalrecorder), [ft_realtime_signalviewer](/reference/realtime/example/ft_realtime_signalviewer), [ft_realtime_synchronous](/reference/realtime/example/ft_realtime_synchronous), [ft_realtime_topography](/reference/realtime/example/ft_realtime_topography)  
 
 
-**cfg.dataformat** - [ft_artifact_clip](/reference/ft_artifact_clip), [ft_artifact_ecg](/reference/ft_artifact_ecg), [ft_artifact_eog](/reference/ft_artifact_eog), [ft_artifact_jump](/reference/ft_artifact_jump), [ft_artifact_muscle](/reference/ft_artifact_muscle), [ft_artifact_threshold](/reference/ft_artifact_threshold), [ft_artifact_tms](/reference/ft_artifact_tms), [ft_artifact_zvalue](/reference/ft_artifact_zvalue), [ft_definetrial](/reference/ft_definetrial), [ft_realtime_asynchronous](/reference/realtime/example/ft_realtime_asynchronous), [ft_realtime_average](/reference/realtime/example/ft_realtime_average), [ft_realtime_classification](/reference/realtime/example/ft_realtime_classification), [ft_realtime_coillocalizer](/reference/realtime/example/ft_realtime_coillocalizer), [ft_realtime_fmriviewer](/reference/realtime/example/ft_realtime_fmriviewer), [ft_realtime_heartbeatdetect](/reference/realtime/example/ft_realtime_heartbeatdetect), [ft_realtime_oddball](/reference/realtime/example/ft_realtime_oddball), [ft_realtime_ouunpod](/reference/realtime/example/ft_realtime_ouunpod), [ft_realtime_powerestimate](/reference/realtime/example/ft_realtime_powerestimate), [ft_realtime_selectiveaverage](/reference/realtime/example/ft_realtime_selectiveaverage), [ft_realtime_signalrecorder](/reference/realtime/example/ft_realtime_signalrecorder), [ft_realtime_signalviewer](/reference/realtime/example/ft_realtime_signalviewer), [ft_realtime_synchronous](/reference/realtime/example/ft_realtime_synchronous), [ft_realtime_topography](/reference/realtime/example/ft_realtime_topography), [ft_spikedetection](/reference/ft_spikedetection), [ft_spikedownsample](/reference/ft_spikedownsample)  
+**cfg.dataformat** - [ft_artifact_clip](/reference/ft_artifact_clip), [ft_artifact_ecg](/reference/ft_artifact_ecg), [ft_artifact_eog](/reference/ft_artifact_eog), [ft_artifact_jump](/reference/ft_artifact_jump), [ft_artifact_muscle](/reference/ft_artifact_muscle), [ft_artifact_threshold](/reference/ft_artifact_threshold), [ft_artifact_tms](/reference/ft_artifact_tms), [ft_artifact_zvalue](/reference/ft_artifact_zvalue), [ft_definetrial](/reference/ft_definetrial), [ft_realtime_asynchronous](/reference/realtime/example/ft_realtime_asynchronous), [ft_realtime_average](/reference/realtime/example/ft_realtime_average), [ft_realtime_classification](/reference/realtime/example/ft_realtime_classification), [ft_realtime_coillocalizer](/reference/realtime/example/ft_realtime_coillocalizer), [ft_realtime_fmriviewer](/reference/realtime/example/ft_realtime_fmriviewer), [ft_realtime_heartbeatdetect](/reference/realtime/example/ft_realtime_heartbeatdetect), [ft_realtime_oddball](/reference/realtime/example/ft_realtime_oddball), [ft_realtime_ouunpod](/reference/realtime/example/ft_realtime_ouunpod), [ft_realtime_powerestimate](/reference/realtime/example/ft_realtime_powerestimate), [ft_realtime_selectiveaverage](/reference/realtime/example/ft_realtime_selectiveaverage), [ft_realtime_signalrecorder](/reference/realtime/example/ft_realtime_signalrecorder), [ft_realtime_signalviewer](/reference/realtime/example/ft_realtime_signalviewer), [ft_realtime_synchronous](/reference/realtime/example/ft_realtime_synchronous), [ft_realtime_topography](/reference/realtime/example/ft_realtime_topography), [ft_spikedetection](/reference/contrib/spike/ft_spikedetection), [ft_spikedownsample](/reference/contrib/spike/ft_spikedownsample)  
 
 
 **cfg.datahdr** - [ft_audiovideobrowser](/reference/ft_audiovideobrowser)  
 
 
-**cfg.dataset** - [ft_artifact_clip](/reference/ft_artifact_clip), [ft_artifact_ecg](/reference/ft_artifact_ecg), [ft_artifact_eog](/reference/ft_artifact_eog), [ft_artifact_jump](/reference/ft_artifact_jump), [ft_artifact_muscle](/reference/ft_artifact_muscle), [ft_artifact_threshold](/reference/ft_artifact_threshold), [ft_artifact_tms](/reference/ft_artifact_tms), [ft_artifact_zvalue](/reference/ft_artifact_zvalue), [ft_databrowser](/reference/ft_databrowser), [ft_definetrial](/reference/ft_definetrial), [ft_headmovement](/reference/ft_headmovement), [ft_preprocessing](/reference/ft_preprocessing), [ft_qualitycheck](/reference/ft_qualitycheck), [ft_realtime_asynchronous](/reference/realtime/example/ft_realtime_asynchronous), [ft_realtime_average](/reference/realtime/example/ft_realtime_average), [ft_realtime_classification](/reference/realtime/example/ft_realtime_classification), [ft_realtime_classification](/reference/realtime/example/ft_realtime_classification), [ft_realtime_coillocalizer](/reference/realtime/example/ft_realtime_coillocalizer), [ft_realtime_fmriviewer](/reference/realtime/example/ft_realtime_fmriviewer), [ft_realtime_headlocalizer](/reference/realtime/example/ft_realtime_headlocalizer), [ft_realtime_heartbeatdetect](/reference/realtime/example/ft_realtime_heartbeatdetect), [ft_realtime_oddball](/reference/realtime/example/ft_realtime_oddball), [ft_realtime_ouunpod](/reference/realtime/example/ft_realtime_ouunpod), [ft_realtime_powerestimate](/reference/realtime/example/ft_realtime_powerestimate), [ft_realtime_selectiveaverage](/reference/realtime/example/ft_realtime_selectiveaverage), [ft_realtime_signalrecorder](/reference/realtime/example/ft_realtime_signalrecorder), [ft_realtime_signalviewer](/reference/realtime/example/ft_realtime_signalviewer), [ft_realtime_synchronous](/reference/realtime/example/ft_realtime_synchronous), [ft_realtime_topography](/reference/realtime/example/ft_realtime_topography), [ft_realtime_topography](/reference/realtime/example/ft_realtime_topography), [ft_spikedetection](/reference/ft_spikedetection), [ft_spikedownsample](/reference/ft_spikedownsample), [ft_spikefixdmafile](/reference/ft_spikefixdmafile), [ft_spikesplitting](/reference/ft_spikesplitting)  
+**cfg.dataset** - [ft_artifact_clip](/reference/ft_artifact_clip), [ft_artifact_ecg](/reference/ft_artifact_ecg), [ft_artifact_eog](/reference/ft_artifact_eog), [ft_artifact_jump](/reference/ft_artifact_jump), [ft_artifact_muscle](/reference/ft_artifact_muscle), [ft_artifact_threshold](/reference/ft_artifact_threshold), [ft_artifact_tms](/reference/ft_artifact_tms), [ft_artifact_zvalue](/reference/ft_artifact_zvalue), [ft_databrowser](/reference/ft_databrowser), [ft_definetrial](/reference/ft_definetrial), [ft_headmovement](/reference/ft_headmovement), [ft_preprocessing](/reference/ft_preprocessing), [ft_qualitycheck](/reference/ft_qualitycheck), [ft_realtime_asynchronous](/reference/realtime/example/ft_realtime_asynchronous), [ft_realtime_average](/reference/realtime/example/ft_realtime_average), [ft_realtime_classification](/reference/realtime/example/ft_realtime_classification), [ft_realtime_classification](/reference/realtime/example/ft_realtime_classification), [ft_realtime_coillocalizer](/reference/realtime/example/ft_realtime_coillocalizer), [ft_realtime_fmriviewer](/reference/realtime/example/ft_realtime_fmriviewer), [ft_realtime_headlocalizer](/reference/realtime/example/ft_realtime_headlocalizer), [ft_realtime_heartbeatdetect](/reference/realtime/example/ft_realtime_heartbeatdetect), [ft_realtime_oddball](/reference/realtime/example/ft_realtime_oddball), [ft_realtime_ouunpod](/reference/realtime/example/ft_realtime_ouunpod), [ft_realtime_powerestimate](/reference/realtime/example/ft_realtime_powerestimate), [ft_realtime_selectiveaverage](/reference/realtime/example/ft_realtime_selectiveaverage), [ft_realtime_signalrecorder](/reference/realtime/example/ft_realtime_signalrecorder), [ft_realtime_signalviewer](/reference/realtime/example/ft_realtime_signalviewer), [ft_realtime_synchronous](/reference/realtime/example/ft_realtime_synchronous), [ft_realtime_topography](/reference/realtime/example/ft_realtime_topography), [ft_realtime_topography](/reference/realtime/example/ft_realtime_topography), [ft_spikedetection](/reference/contrib/spike/ft_spikedetection), [ft_spikedownsample](/reference/contrib/spike/ft_spikedownsample), [ft_spikefixdmafile](/reference/contrib/spike/ft_spikefixdmafile), [ft_spikesplitting](/reference/contrib/spike/ft_spikesplitting)  
 
 
 **cfg.datatype** - [ft_volumewrite](/reference/ft_volumewrite)  
 
 
-**cfg.debias** - [ft_spike_xcorr](/reference/ft_spike_xcorr)  
+**cfg.debias** - [ft_spike_xcorr](/reference/contrib/spike/ft_spike_xcorr)  
 
 
 **cfg.debug** - [ft_realtime_pooraudioproxy](/reference/realtime/example/ft_realtime_pooraudioproxy)  
@@ -818,7 +818,7 @@ A detailed description of each function is available in the [reference documenta
 **cfg.demeanrefdata** - [ft_denoise_tsr](/reference/ft_denoise_tsr)  
 
 
-**cfg.density** - [ft_spike_plot_isireturn](/reference/ft_spike_plot_isireturn)  
+**cfg.density** - [ft_spike_plot_isireturn](/reference/contrib/spike/ft_spike_plot_isireturn)  
 
 
 **cfg.derivative** - [ft_preprocessing](/reference/ft_preprocessing)  
@@ -902,7 +902,7 @@ A detailed description of each function is available in the [reference documenta
 **cfg.downsample** - [ft_prepare_mesh](/reference/ft_prepare_mesh), [ft_sourceinterpolate](/reference/ft_sourceinterpolate), [ft_sourceplot](/reference/ft_sourceplot), [ft_volumedownsample](/reference/ft_volumedownsample), [ft_volumenormalise](/reference/ft_volumenormalise), [ft_volumereslice](/reference/ft_volumereslice), [ft_volumesegment](/reference/ft_volumesegment), [ft_volumewrite](/reference/ft_volumewrite)  
 
 
-**cfg.downscale** - [ft_spikesplitting](/reference/ft_spikesplitting)  
+**cfg.downscale** - [ft_spikesplitting](/reference/contrib/spike/ft_spikesplitting)  
 
 
 **cfg.dpf** - [ft_nirs_prepare_ODtransformation](/reference/external/artinis/ft_nirs_prepare_ODtransformation), [ft_nirs_transform_ODs](/reference/external/artinis/ft_nirs_transform_ODs)  
@@ -932,7 +932,7 @@ A detailed description of each function is available in the [reference documenta
 **cfg.dssp.n_space** - [ft_denoise_dssp](/reference/ft_denoise_dssp)  
 
 
-**cfg.dt** - [ft_spike_plot_isireturn](/reference/ft_spike_plot_isireturn)  
+**cfg.dt** - [ft_spike_plot_isireturn](/reference/contrib/spike/ft_spike_plot_isireturn)  
 
 
 **cfg.duneuro_settings** - [ft_prepare_headmodel](/reference/ft_prepare_headmodel)  
@@ -982,7 +982,7 @@ A detailed description of each function is available in the [reference documenta
 **cfg.equalbinavg** - [ft_stratify](/reference/ft_stratify)  
 
 
-**cfg.errorbars** - [ft_spike_plot_psth](/reference/ft_spike_plot_psth), [ft_spike_plot_raster](/reference/ft_spike_plot_raster)  
+**cfg.errorbars** - [ft_spike_plot_psth](/reference/contrib/spike/ft_spike_plot_psth), [ft_spike_plot_raster](/reference/contrib/spike/ft_spike_plot_raster)  
 
 
 **cfg.eta** - [ft_sourcedescriptives](/reference/ft_sourcedescriptives)  
@@ -1092,7 +1092,7 @@ A detailed description of each function is available in the [reference documenta
 **cfg.features** - [ft_statistics_mvpa](/reference/ft_statistics_mvpa)  
 
 
-**cfg.feedback** - [ft_analysispipeline](/reference/ft_analysispipeline), [ft_badchannel](/reference/ft_badchannel), [ft_badsegment](/reference/ft_badsegment), [ft_componentanalysis](/reference/ft_componentanalysis), [ft_defacevolume](/reference/ft_defacevolume), [ft_electrodeplacement](/reference/ft_electrodeplacement), [ft_electroderealign](/reference/ft_electroderealign), [ft_electroderealign](/reference/ft_electroderealign), [ft_electrodermalactivity](/reference/ft_electrodermalactivity), [ft_freqanalysis_mvar](/reference/ft_freqanalysis_mvar), [ft_heartrate](/reference/ft_heartrate), [ft_interpolatenan](/reference/ft_interpolatenan), [ft_megplanar](/reference/ft_megplanar), [ft_megrealign](/reference/ft_megrealign), [ft_prepare_headmodel](/reference/ft_prepare_headmodel), [ft_prepare_layout](/reference/ft_prepare_layout), [ft_prepare_neighbours](/reference/ft_prepare_neighbours), [ft_realtime_brainampproxy](/reference/realtime/example/ft_realtime_brainampproxy), [ft_realtime_jaga16proxy](/reference/realtime/example/ft_realtime_jaga16proxy), [ft_realtime_micromedproxy](/reference/realtime/example/ft_realtime_micromedproxy), [ft_realtime_modeegproxy](/reference/realtime/example/ft_realtime_modeegproxy), [ft_resampledata](/reference/ft_resampledata), [ft_respiration](/reference/ft_respiration), [ft_scalpcurrentdensity](/reference/ft_scalpcurrentdensity), [ft_sourceanalysis](/reference/ft_sourceanalysis), [ft_sourcedescriptives](/reference/ft_sourcedescriptives), [ft_spikesorting](/reference/ft_spikesorting), [ft_spikesplitting](/reference/ft_spikesplitting), [ft_spiketriggeredaverage](/reference/ft_spiketriggeredaverage), [ft_spiketriggeredinterpolation](/reference/ft_spiketriggeredinterpolation), [ft_spiketriggeredspectrum_fft](/reference/ft_spiketriggeredspectrum_fft), [ft_statistics_montecarlo](/reference/ft_statistics_montecarlo), [ft_statistics_stats](/reference/ft_statistics_stats), [ft_topoplotCC](/reference/ft_topoplotCC)  
+**cfg.feedback** - [ft_analysispipeline](/reference/ft_analysispipeline), [ft_badchannel](/reference/ft_badchannel), [ft_badsegment](/reference/ft_badsegment), [ft_componentanalysis](/reference/ft_componentanalysis), [ft_defacevolume](/reference/ft_defacevolume), [ft_electrodeplacement](/reference/ft_electrodeplacement), [ft_electroderealign](/reference/ft_electroderealign), [ft_electroderealign](/reference/ft_electroderealign), [ft_electrodermalactivity](/reference/ft_electrodermalactivity), [ft_freqanalysis_mvar](/reference/ft_freqanalysis_mvar), [ft_heartrate](/reference/ft_heartrate), [ft_interpolatenan](/reference/ft_interpolatenan), [ft_megplanar](/reference/ft_megplanar), [ft_megrealign](/reference/ft_megrealign), [ft_prepare_headmodel](/reference/ft_prepare_headmodel), [ft_prepare_layout](/reference/ft_prepare_layout), [ft_prepare_neighbours](/reference/ft_prepare_neighbours), [ft_realtime_brainampproxy](/reference/realtime/example/ft_realtime_brainampproxy), [ft_realtime_jaga16proxy](/reference/realtime/example/ft_realtime_jaga16proxy), [ft_realtime_micromedproxy](/reference/realtime/example/ft_realtime_micromedproxy), [ft_realtime_modeegproxy](/reference/realtime/example/ft_realtime_modeegproxy), [ft_resampledata](/reference/ft_resampledata), [ft_respiration](/reference/ft_respiration), [ft_scalpcurrentdensity](/reference/ft_scalpcurrentdensity), [ft_sourceanalysis](/reference/ft_sourceanalysis), [ft_sourcedescriptives](/reference/ft_sourcedescriptives), [ft_spikesorting](/reference/contrib/spike/ft_spikesorting), [ft_spikesplitting](/reference/contrib/spike/ft_spikesplitting), [ft_spiketriggeredaverage](/reference/contrib/spike/ft_spiketriggeredaverage), [ft_spiketriggeredinterpolation](/reference/contrib/spike/ft_spiketriggeredinterpolation), [ft_spiketriggeredspectrum_fft](/reference/contrib/spike/ft_spiketriggeredspectrum_fft), [ft_statistics_montecarlo](/reference/ft_statistics_montecarlo), [ft_statistics_stats](/reference/ft_statistics_stats), [ft_topoplotCC](/reference/ft_topoplotCC)  
 
 
 **cfg.fiducial** - [ft_electroderealign](/reference/ft_electroderealign)  
@@ -1137,16 +1137,16 @@ A detailed description of each function is available in the [reference documenta
 **cfg.fixedori** - [ft_sourcedescriptives](/reference/ft_sourcedescriptives)  
 
 
-**cfg.flank.mindist** - [ft_spikedetection](/reference/ft_spikedetection)  
+**cfg.flank.mindist** - [ft_spikedetection](/reference/contrib/spike/ft_spikedetection)  
 
 
-**cfg.flank.offset** - [ft_spikedetection](/reference/ft_spikedetection)  
+**cfg.flank.offset** - [ft_spikedetection](/reference/contrib/spike/ft_spikedetection)  
 
 
-**cfg.flank.value** - [ft_spikedetection](/reference/ft_spikedetection)  
+**cfg.flank.value** - [ft_spikedetection](/reference/contrib/spike/ft_spikedetection)  
 
 
-**cfg.flank.ztransform** - [ft_spikedetection](/reference/ft_spikedetection)  
+**cfg.flank.ztransform** - [ft_spikedetection](/reference/contrib/spike/ft_spikedetection)  
 
 
 **cfg.flipdimflipdataalongthesliceddimension** - [ft_sliceinterp](/reference/ft_sliceinterp)  
@@ -1158,10 +1158,10 @@ A detailed description of each function is available in the [reference documenta
 **cfg.flipsignal** - [ft_heartrate](/reference/ft_heartrate)  
 
 
-**cfg.foi** - [ft_freqanalysis](/reference/ft_freqanalysis), [ft_freqanalysis](/reference/ft_freqanalysis), [ft_freqanalysis](/reference/ft_freqanalysis), [ft_freqanalysis](/reference/ft_freqanalysis), [ft_freqanalysis_mvar](/reference/ft_freqanalysis_mvar), [ft_laggedcoherence](/reference/ft_laggedcoherence), [ft_spiketriggeredspectrum_stat](/reference/ft_spiketriggeredspectrum_stat), [ft_topoplotCC](/reference/ft_topoplotCC)  
+**cfg.foi** - [ft_freqanalysis](/reference/ft_freqanalysis), [ft_freqanalysis](/reference/ft_freqanalysis), [ft_freqanalysis](/reference/ft_freqanalysis), [ft_freqanalysis](/reference/ft_freqanalysis), [ft_freqanalysis_mvar](/reference/ft_freqanalysis_mvar), [ft_laggedcoherence](/reference/ft_laggedcoherence), [ft_spiketriggeredspectrum_stat](/reference/contrib/spike/ft_spiketriggeredspectrum_stat), [ft_topoplotCC](/reference/ft_topoplotCC)  
 
 
-**cfg.foilim** - [ft_freqanalysis](/reference/ft_freqanalysis), [ft_freqanalysis](/reference/ft_freqanalysis), [ft_freqanalysis](/reference/ft_freqanalysis), [ft_freqanalysis](/reference/ft_freqanalysis), [ft_freqgrandaverage](/reference/ft_freqgrandaverage), [ft_freqinterpolate](/reference/ft_freqinterpolate), [ft_realtime_ouunpod](/reference/realtime/example/ft_realtime_ouunpod), [ft_realtime_powerestimate](/reference/realtime/example/ft_realtime_powerestimate), [ft_spiketriggeredspectrum_fft](/reference/ft_spiketriggeredspectrum_fft)  
+**cfg.foilim** - [ft_freqanalysis](/reference/ft_freqanalysis), [ft_freqanalysis](/reference/ft_freqanalysis), [ft_freqanalysis](/reference/ft_freqanalysis), [ft_freqanalysis](/reference/ft_freqanalysis), [ft_freqgrandaverage](/reference/ft_freqgrandaverage), [ft_freqinterpolate](/reference/ft_freqinterpolate), [ft_realtime_ouunpod](/reference/realtime/example/ft_realtime_ouunpod), [ft_realtime_powerestimate](/reference/realtime/example/ft_realtime_powerestimate), [ft_spiketriggeredspectrum_fft](/reference/contrib/spike/ft_spiketriggeredspectrum_fft)  
 
 
 **cfg.fontsize** - [ft_databrowser](/reference/ft_databrowser), [ft_multiplotER](/reference/ft_multiplotER), [ft_multiplotTFR](/reference/ft_multiplotTFR), [ft_singleplotER](/reference/ft_singleplotER), [ft_singleplotTFR](/reference/ft_singleplotTFR)  
@@ -1173,7 +1173,7 @@ A detailed description of each function is available in the [reference documenta
 **cfg.fontweight** - [ft_multiplotTFR](/reference/ft_multiplotTFR)  
 
 
-**cfg.format** - [ft_spikesplitting](/reference/ft_spikesplitting)  
+**cfg.format** - [ft_spikesplitting](/reference/contrib/spike/ft_spikesplitting)  
 
 
 **cfg.framesfile** - [ft_movieplotER](/reference/ft_movieplotER), [ft_movieplotTFR](/reference/ft_movieplotTFR)  
@@ -1194,7 +1194,7 @@ A detailed description of each function is available in the [reference documenta
 **cfg.freqwin** - [ft_statistics_mvpa](/reference/ft_statistics_mvpa)  
 
 
-**cfg.fsample** - [ft_connectivitysimulation](/reference/ft_connectivitysimulation), [ft_dipolesimulation](/reference/ft_dipolesimulation), [ft_freqsimulation](/reference/ft_freqsimulation), [ft_nonlinearassociation](/reference/contrib/misc/ft_nonlinearassociation), [ft_realtime_pooraudioproxy](/reference/realtime/example/ft_realtime_pooraudioproxy), [ft_realtime_signalproxy](/reference/realtime/example/ft_realtime_signalproxy), [ft_spike_waveform](/reference/ft_spike_waveform), [ft_spikedensity](/reference/ft_spikedensity), [ft_spikedownsample](/reference/ft_spikedownsample), [ft_steadystatesimulation](/reference/ft_steadystatesimulation), [ft_timelocksimulation](/reference/ft_timelocksimulation)  
+**cfg.fsample** - [ft_connectivitysimulation](/reference/ft_connectivitysimulation), [ft_dipolesimulation](/reference/ft_dipolesimulation), [ft_freqsimulation](/reference/ft_freqsimulation), [ft_nonlinearassociation](/reference/contrib/misc/ft_nonlinearassociation), [ft_realtime_pooraudioproxy](/reference/realtime/example/ft_realtime_pooraudioproxy), [ft_realtime_signalproxy](/reference/realtime/example/ft_realtime_signalproxy), [ft_spike_waveform](/reference/contrib/spike/ft_spike_waveform), [ft_spikedensity](/reference/contrib/spike/ft_spikedensity), [ft_spikedownsample](/reference/contrib/spike/ft_spikedownsample), [ft_steadystatesimulation](/reference/ft_steadystatesimulation), [ft_timelocksimulation](/reference/ft_timelocksimulation)  
 
 
 **cfg.fshome** - [ft_electroderealign](/reference/ft_electroderealign), [ft_prepare_mesh](/reference/ft_prepare_mesh)  
@@ -1229,7 +1229,7 @@ A detailed description of each function is available in the [reference documenta
 
 ## G
 
-**cfg.gaussvar** - [ft_spike_plot_isireturn](/reference/ft_spike_plot_isireturn), [ft_spike_plot_jpsth](/reference/ft_spike_plot_jpsth)  
+**cfg.gaussvar** - [ft_spike_plot_isireturn](/reference/contrib/spike/ft_spike_plot_isireturn), [ft_spike_plot_jpsth](/reference/contrib/spike/ft_spike_plot_jpsth)  
 
 
 **cfg.gbve.alpha** - [ft_eventtiminganalysis](/reference/ft_eventtiminganalysis)  
@@ -1306,7 +1306,7 @@ A detailed description of each function is available in the [reference documenta
 **cfg.has_diff** - [ft_sourceplot_interactive](/reference/ft_sourceplot_interactive)  
 
 
-**cfg.hdr** - [ft_spike_maketrials](/reference/ft_spike_maketrials)  
+**cfg.hdr** - [ft_spike_maketrials](/reference/contrib/spike/ft_spike_maketrials)  
 
 
 **cfg.headerfile** - [ft_artifact_clip](/reference/ft_artifact_clip), [ft_artifact_ecg](/reference/ft_artifact_ecg), [ft_artifact_eog](/reference/ft_artifact_eog), [ft_artifact_jump](/reference/ft_artifact_jump), [ft_artifact_muscle](/reference/ft_artifact_muscle), [ft_artifact_threshold](/reference/ft_artifact_threshold), [ft_artifact_tms](/reference/ft_artifact_tms), [ft_artifact_zvalue](/reference/ft_artifact_zvalue), [ft_databrowser](/reference/ft_databrowser), [ft_definetrial](/reference/ft_definetrial), [ft_preprocessing](/reference/ft_preprocessing), [ft_realtime_asynchronous](/reference/realtime/example/ft_realtime_asynchronous), [ft_realtime_average](/reference/realtime/example/ft_realtime_average), [ft_realtime_classification](/reference/realtime/example/ft_realtime_classification), [ft_realtime_coillocalizer](/reference/realtime/example/ft_realtime_coillocalizer), [ft_realtime_fmriviewer](/reference/realtime/example/ft_realtime_fmriviewer), [ft_realtime_heartbeatdetect](/reference/realtime/example/ft_realtime_heartbeatdetect), [ft_realtime_oddball](/reference/realtime/example/ft_realtime_oddball), [ft_realtime_ouunpod](/reference/realtime/example/ft_realtime_ouunpod), [ft_realtime_powerestimate](/reference/realtime/example/ft_realtime_powerestimate), [ft_realtime_selectiveaverage](/reference/realtime/example/ft_realtime_selectiveaverage), [ft_realtime_signalrecorder](/reference/realtime/example/ft_realtime_signalrecorder), [ft_realtime_signalviewer](/reference/realtime/example/ft_realtime_signalviewer), [ft_realtime_synchronous](/reference/realtime/example/ft_realtime_synchronous), [ft_realtime_topography](/reference/realtime/example/ft_realtime_topography)  
@@ -1455,7 +1455,7 @@ A detailed description of each function is available in the [reference documenta
 **cfg.inputfile** - [ft_analysispipeline](/reference/ft_analysispipeline), [ft_annotate](/reference/ft_annotate), [ft_anonymizedata](/reference/ft_anonymizedata), [ft_appenddata](/reference/ft_appenddata), [ft_appendfreq](/reference/ft_appendfreq), [ft_artifact_clip](/reference/ft_artifact_clip), [ft_artifact_ecg](/reference/ft_artifact_ecg), [ft_artifact_eog](/reference/ft_artifact_eog), [ft_artifact_jump](/reference/ft_artifact_jump), [ft_artifact_muscle](/reference/ft_artifact_muscle), [ft_artifact_nan](/reference/ft_artifact_nan), [ft_artifact_threshold](/reference/ft_artifact_threshold), [ft_artifact_tms](/reference/ft_artifact_tms), [ft_artifact_zvalue](/reference/ft_artifact_zvalue), [ft_channelnormalise](/reference/ft_channelnormalise), [ft_channelrepair](/reference/ft_channelrepair), [ft_clusterplot](/reference/ft_clusterplot), [ft_combineplanar](/reference/ft_combineplanar), [ft_componentanalysis](/reference/ft_componentanalysis), [ft_denoise_synthetic](/reference/ft_denoise_synthetic), [ft_detect_movement](/reference/ft_detect_movement), [ft_dipolefitting](/reference/ft_dipolefitting), [ft_eventtiminganalysis](/reference/ft_eventtiminganalysis), [ft_examplefunction](/reference/ft_examplefunction), [ft_freqanalysis](/reference/ft_freqanalysis), [ft_freqanalysis_mvar](/reference/ft_freqanalysis_mvar), [ft_freqdescriptives](/reference/ft_freqdescriptives), [ft_freqgrandaverage](/reference/ft_freqgrandaverage), [ft_freqinterpolate](/reference/ft_freqinterpolate), [ft_freqstatistics](/reference/ft_freqstatistics), [ft_globalmeanfield](/reference/ft_globalmeanfield), [ft_interpolatenan](/reference/ft_interpolatenan), [ft_lateralizedpotential](/reference/ft_lateralizedpotential), [ft_layoutplot](/reference/ft_layoutplot), [ft_math](/reference/ft_math), [ft_megplanar](/reference/ft_megplanar), [ft_megrealign](/reference/ft_megrealign), [ft_meshrealign](/reference/ft_meshrealign), [ft_movieplotER](/reference/ft_movieplotER), [ft_movieplotTFR](/reference/ft_movieplotTFR), [ft_multiplotTFR](/reference/ft_multiplotTFR), [ft_mvaranalysis](/reference/ft_mvaranalysis), [ft_networkanalysis](/reference/ft_networkanalysis), [ft_nirs_prepare_ODtransformation](/reference/external/artinis/ft_nirs_prepare_ODtransformation), [ft_nirs_referencechannelsubtraction](/reference/external/artinis/ft_nirs_referencechannelsubtraction), [ft_nirs_scalpcouplingindex](/reference/external/artinis/ft_nirs_scalpcouplingindex), [ft_nirs_signalqualityindex](/reference/external/artinis/ft_nirs_signalqualityindex), [ft_nirs_transform_ODs](/reference/external/artinis/ft_nirs_transform_ODs), [ft_prepare_leadfield](/reference/ft_prepare_leadfield), [ft_prepare_mesh](/reference/ft_prepare_mesh), [ft_preprocessing](/reference/ft_preprocessing), [ft_redefinetrial](/reference/ft_redefinetrial), [ft_regressconfound](/reference/ft_regressconfound), [ft_rejectartifact](/reference/ft_rejectartifact), [ft_rejectcomponent](/reference/ft_rejectcomponent), [ft_rejectvisual](/reference/ft_rejectvisual), [ft_removetemplateartifact](/reference/ft_removetemplateartifact), [ft_resampledata](/reference/ft_resampledata), [ft_scalpcurrentdensity](/reference/ft_scalpcurrentdensity), [ft_singleplotER](/reference/ft_singleplotER), [ft_sourceanalysis](/reference/ft_sourceanalysis), [ft_sourcedescriptives](/reference/ft_sourcedescriptives), [ft_sourcegrandaverage](/reference/ft_sourcegrandaverage), [ft_sourceinterpolate](/reference/ft_sourceinterpolate), [ft_sourcemovie](/reference/ft_sourcemovie), [ft_sourceplot](/reference/ft_sourceplot), [ft_sourcewrite](/reference/ft_sourcewrite), [ft_timelockanalysis](/reference/ft_timelockanalysis), [ft_timelockbaseline](/reference/ft_timelockbaseline), [ft_timelockgrandaverage](/reference/ft_timelockgrandaverage), [ft_timelockstatistics](/reference/ft_timelockstatistics), [ft_topoplotCC](/reference/ft_topoplotCC), [ft_topoplotTFR](/reference/ft_topoplotTFR), [ft_topoplotTFR](/reference/ft_topoplotTFR), [ft_volumedownsample](/reference/ft_volumedownsample), [ft_volumenormalise](/reference/ft_volumenormalise), [ft_volumerealign](/reference/ft_volumerealign), [ft_volumereslice](/reference/ft_volumereslice), [ft_volumesegment](/reference/ft_volumesegment), [ft_volumewrite](/reference/ft_volumewrite)  
 
 
-**cfg.interactive** - [ft_audiovideobrowser](/reference/ft_audiovideobrowser), [ft_movieplotTFR](/reference/ft_movieplotTFR), [ft_multiplotER](/reference/ft_multiplotER), [ft_multiplotTFR](/reference/ft_multiplotTFR), [ft_singleplotER](/reference/ft_singleplotER), [ft_singleplotTFR](/reference/ft_singleplotTFR), [ft_sliceinterp](/reference/ft_sliceinterp), [ft_spike_plot_raster](/reference/ft_spike_plot_raster), [ft_spikedetection](/reference/ft_spikedetection), [ft_topoplotER](/reference/ft_topoplotER), [ft_topoplotTFR](/reference/ft_topoplotTFR)  
+**cfg.interactive** - [ft_audiovideobrowser](/reference/ft_audiovideobrowser), [ft_movieplotTFR](/reference/ft_movieplotTFR), [ft_multiplotER](/reference/ft_multiplotER), [ft_multiplotTFR](/reference/ft_multiplotTFR), [ft_singleplotER](/reference/ft_singleplotER), [ft_singleplotTFR](/reference/ft_singleplotTFR), [ft_sliceinterp](/reference/ft_sliceinterp), [ft_spike_plot_raster](/reference/contrib/spike/ft_spike_plot_raster), [ft_spikedetection](/reference/contrib/spike/ft_spikedetection), [ft_topoplotER](/reference/ft_topoplotER), [ft_topoplotTFR](/reference/ft_topoplotTFR)  
 
 
 **cfg.intermediatename** - [ft_volumenormalise](/reference/ft_volumenormalise)  
@@ -1467,7 +1467,7 @@ A detailed description of each function is available in the [reference documenta
 **cfg.interpmethod** - [ft_sourceinterpolate](/reference/ft_sourceinterpolate)  
 
 
-**cfg.interpolate** - [ft_spike_plot_isireturn](/reference/ft_spike_plot_isireturn), [ft_spike_plot_jpsth](/reference/ft_spike_plot_jpsth), [ft_spike_waveform](/reference/ft_spike_waveform)  
+**cfg.interpolate** - [ft_spike_plot_isireturn](/reference/contrib/spike/ft_spike_plot_isireturn), [ft_spike_plot_jpsth](/reference/contrib/spike/ft_spike_plot_jpsth), [ft_spike_waveform](/reference/contrib/spike/ft_spike_waveform)  
 
 
 **cfg.interpolatenan** - [ft_topoplotER](/reference/ft_topoplotER), [ft_topoplotTFR](/reference/ft_topoplotTFR)  
@@ -1476,7 +1476,7 @@ A detailed description of each function is available in the [reference documenta
 **cfg.interpolation** - [ft_databrowser](/reference/ft_databrowser), [ft_topoplotER](/reference/ft_topoplotER), [ft_topoplotIC](/reference/ft_topoplotIC), [ft_topoplotTFR](/reference/ft_topoplotTFR)  
 
 
-**cfg.interptoi** - [ft_spiketriggeredinterpolation](/reference/ft_spiketriggeredinterpolation)  
+**cfg.interptoi** - [ft_spiketriggeredinterpolation](/reference/contrib/spike/ft_spiketriggeredinterpolation)  
 
 
 **cfg.inwardshift** - [ft_megplanar](/reference/ft_megplanar), [ft_megrealign](/reference/ft_megrealign), [ft_megrealign](/reference/ft_megrealign), [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)  
@@ -1558,13 +1558,13 @@ A detailed description of each function is available in the [reference documenta
 **cfg.keeptrial** - [ft_rejectvisual](/reference/ft_rejectvisual)  
 
 
-**cfg.keeptrials** - [ft_crossfrequencyanalysis](/reference/ft_crossfrequencyanalysis), [ft_freqanalysis](/reference/ft_freqanalysis), [ft_freqdescriptives](/reference/ft_freqdescriptives), [ft_mvaranalysis](/reference/ft_mvaranalysis), [ft_nonlinearassociation](/reference/contrib/misc/ft_nonlinearassociation), [ft_sourceanalysis](/reference/ft_sourceanalysis), [ft_sourcedescriptives](/reference/ft_sourcedescriptives), [ft_spike_jpsth](/reference/ft_spike_jpsth), [ft_spike_psth](/reference/ft_spike_psth), [ft_spike_rate](/reference/ft_spike_rate), [ft_spike_xcorr](/reference/ft_spike_xcorr), [ft_spikedensity](/reference/ft_spikedensity), [ft_spiketriggeredaverage](/reference/ft_spiketriggeredaverage), [ft_timelockanalysis](/reference/ft_timelockanalysis)  
+**cfg.keeptrials** - [ft_crossfrequencyanalysis](/reference/ft_crossfrequencyanalysis), [ft_freqanalysis](/reference/ft_freqanalysis), [ft_freqdescriptives](/reference/ft_freqdescriptives), [ft_mvaranalysis](/reference/ft_mvaranalysis), [ft_nonlinearassociation](/reference/contrib/misc/ft_nonlinearassociation), [ft_sourceanalysis](/reference/ft_sourceanalysis), [ft_sourcedescriptives](/reference/ft_sourcedescriptives), [ft_spike_jpsth](/reference/contrib/spike/ft_spike_jpsth), [ft_spike_psth](/reference/contrib/spike/ft_spike_psth), [ft_spike_rate](/reference/contrib/spike/ft_spike_rate), [ft_spike_xcorr](/reference/contrib/spike/ft_spike_xcorr), [ft_spikedensity](/reference/contrib/spike/ft_spikedensity), [ft_spiketriggeredaverage](/reference/contrib/spike/ft_spiketriggeredaverage), [ft_timelockanalysis](/reference/ft_timelockanalysis)  
 
 
 **cfg.keepvalue** - [ft_anonymizedata](/reference/ft_anonymizedata)  
 
 
-**cfg.kmeanssubstructurewithadditionallow** - [ft_spikesorting](/reference/ft_spikesorting)  
+**cfg.kmeanssubstructurewithadditionallow** - [ft_spikesorting](/reference/contrib/spike/ft_spikesorting)  
 
 
 **cfg.kurtosis** - [ft_sourcedescriptives](/reference/ft_sourcedescriptives)  
@@ -1575,7 +1575,7 @@ A detailed description of each function is available in the [reference documenta
 **cfg.lambda** - [ft_channelrepair](/reference/ft_channelrepair), [ft_denoise_prewhiten](/reference/ft_denoise_prewhiten), [ft_omri_quality](/reference/ft_omri_quality), [ft_scalpcurrentdensity](/reference/ft_scalpcurrentdensity), [ft_sourceanalysis](/reference/ft_sourceanalysis)  
 
 
-**cfg.latency** - [ft_dipolefitting](/reference/ft_dipolefitting), [ft_freqdescriptives](/reference/ft_freqdescriptives), [ft_freqstatistics](/reference/ft_freqstatistics), [ft_rejectvisual](/reference/ft_rejectvisual), [ft_sourceanalysis](/reference/ft_sourceanalysis), [ft_sourceplot](/reference/ft_sourceplot), [ft_spike_isi](/reference/ft_spike_isi), [ft_spike_jpsth](/reference/ft_spike_jpsth), [ft_spike_plot_jpsth](/reference/ft_spike_plot_jpsth), [ft_spike_plot_psth](/reference/ft_spike_plot_psth), [ft_spike_plot_raster](/reference/ft_spike_plot_raster), [ft_spike_psth](/reference/ft_spike_psth), [ft_spike_rate](/reference/ft_spike_rate), [ft_spike_select](/reference/ft_spike_select), [ft_spike_xcorr](/reference/ft_spike_xcorr), [ft_spikedensity](/reference/ft_spikedensity), [ft_spikedetection](/reference/ft_spikedetection), [ft_spikedetection](/reference/ft_spikedetection), [ft_spikedownsample](/reference/ft_spikedownsample), [ft_spikedownsample](/reference/ft_spikedownsample), [ft_spikesplitting](/reference/ft_spikesplitting), [ft_spiketriggeredaverage](/reference/ft_spiketriggeredaverage), [ft_spiketriggeredspectrum_stat](/reference/ft_spiketriggeredspectrum_stat), [ft_timelockanalysis](/reference/ft_timelockanalysis), [ft_timelockgrandaverage](/reference/ft_timelockgrandaverage), [ft_timelockstatistics](/reference/ft_timelockstatistics)  
+**cfg.latency** - [ft_dipolefitting](/reference/ft_dipolefitting), [ft_freqdescriptives](/reference/ft_freqdescriptives), [ft_freqstatistics](/reference/ft_freqstatistics), [ft_rejectvisual](/reference/ft_rejectvisual), [ft_sourceanalysis](/reference/ft_sourceanalysis), [ft_sourceplot](/reference/ft_sourceplot), [ft_spike_isi](/reference/contrib/spike/ft_spike_isi), [ft_spike_jpsth](/reference/contrib/spike/ft_spike_jpsth), [ft_spike_plot_jpsth](/reference/contrib/spike/ft_spike_plot_jpsth), [ft_spike_plot_psth](/reference/contrib/spike/ft_spike_plot_psth), [ft_spike_plot_raster](/reference/contrib/spike/ft_spike_plot_raster), [ft_spike_psth](/reference/contrib/spike/ft_spike_psth), [ft_spike_rate](/reference/contrib/spike/ft_spike_rate), [ft_spike_select](/reference/contrib/spike/ft_spike_select), [ft_spike_xcorr](/reference/contrib/spike/ft_spike_xcorr), [ft_spikedensity](/reference/contrib/spike/ft_spikedensity), [ft_spikedetection](/reference/contrib/spike/ft_spikedetection), [ft_spikedetection](/reference/contrib/spike/ft_spikedetection), [ft_spikedownsample](/reference/contrib/spike/ft_spikedownsample), [ft_spikedownsample](/reference/contrib/spike/ft_spikedownsample), [ft_spikesplitting](/reference/contrib/spike/ft_spikesplitting), [ft_spiketriggeredaverage](/reference/contrib/spike/ft_spiketriggeredaverage), [ft_spiketriggeredspectrum_stat](/reference/contrib/spike/ft_spiketriggeredspectrum_stat), [ft_timelockanalysis](/reference/ft_timelockanalysis), [ft_timelockgrandaverage](/reference/ft_timelockgrandaverage), [ft_timelockstatistics](/reference/ft_timelockstatistics)  
 
 
 **cfg.layout** - [ft_databrowser](/reference/ft_databrowser), [ft_icabrowser](/reference/contrib/misc/ft_icabrowser), [ft_layoutplot](/reference/ft_layoutplot), [ft_layoutplot](/reference/ft_layoutplot), [ft_movieplotER](/reference/ft_movieplotER), [ft_movieplotTFR](/reference/ft_movieplotTFR), [ft_multiplotER](/reference/ft_multiplotER), [ft_multiplotTFR](/reference/ft_multiplotTFR), [ft_neighbourplot](/reference/ft_neighbourplot), [ft_prepare_layout](/reference/ft_prepare_layout), [ft_prepare_layout](/reference/ft_prepare_layout), [ft_prepare_layout](/reference/ft_prepare_layout), [ft_prepare_layout](/reference/ft_prepare_layout), [ft_prepare_layout](/reference/ft_prepare_layout), [ft_prepare_layout](/reference/ft_prepare_layout), [ft_prepare_neighbours](/reference/ft_prepare_neighbours), [ft_realtime_topography](/reference/realtime/example/ft_realtime_topography), [ft_realtime_topography](/reference/realtime/example/ft_realtime_topography), [ft_topoplotCC](/reference/ft_topoplotCC), [ft_topoplotER](/reference/ft_topoplotER), [ft_topoplotIC](/reference/ft_topoplotIC), [ft_topoplotTFR](/reference/ft_topoplotTFR)  
@@ -1617,7 +1617,7 @@ A detailed description of each function is available in the [reference documenta
 **cfg.linestyle** - [ft_databrowser](/reference/ft_databrowser), [ft_multiplotER](/reference/ft_multiplotER), [ft_singleplotER](/reference/ft_singleplotER)  
 
 
-**cfg.linewidth** - [ft_databrowser](/reference/ft_databrowser), [ft_multiplotER](/reference/ft_multiplotER), [ft_singleplotER](/reference/ft_singleplotER), [ft_spike_plot_raster](/reference/ft_spike_plot_raster)  
+**cfg.linewidth** - [ft_databrowser](/reference/ft_databrowser), [ft_multiplotER](/reference/ft_multiplotER), [ft_singleplotER](/reference/ft_singleplotER), [ft_spike_plot_raster](/reference/contrib/spike/ft_spike_plot_raster)  
 
 
 **cfg.location** - [ft_sourceplot](/reference/ft_sourceplot)  
@@ -1757,7 +1757,7 @@ A detailed description of each function is available in the [reference documenta
 **cfg.maxiter** - [ft_electroderealign](/reference/ft_electroderealign)  
 
 
-**cfg.maxlag** - [ft_spike_xcorr](/reference/ft_spike_xcorr)  
+**cfg.maxlag** - [ft_spike_xcorr](/reference/contrib/spike/ft_spike_xcorr)  
 
 
 **cfg.maxqueryrange** - [ft_volumelookup](/reference/ft_volumelookup), [ft_volumelookup](/reference/ft_volumelookup)  
@@ -1781,7 +1781,7 @@ A detailed description of each function is available in the [reference documenta
 **cfg.memory** - [ft_artifact_zvalue](/reference/ft_artifact_zvalue)  
 
 
-**cfg.method** - [ft_artifact_tms](/reference/ft_artifact_tms), [ft_channelnormalise](/reference/ft_channelnormalise), [ft_channelrepair](/reference/ft_channelrepair), [ft_combineplanar](/reference/ft_combineplanar), [ft_componentanalysis](/reference/ft_componentanalysis), [ft_connectivityanalysis](/reference/ft_connectivityanalysis), [ft_connectivitysimulation](/reference/ft_connectivitysimulation), [ft_crossfrequencyanalysis](/reference/ft_crossfrequencyanalysis), [ft_defacevolume](/reference/ft_defacevolume), [ft_denoise_tsr](/reference/ft_denoise_tsr), [ft_detect_movement](/reference/ft_detect_movement), [ft_electrodeplacement](/reference/ft_electrodeplacement), [ft_electroderealign](/reference/ft_electroderealign), [ft_electroderealign](/reference/ft_electroderealign), [ft_electroderealign](/reference/ft_electroderealign), [ft_eventtiminganalysis](/reference/ft_eventtiminganalysis), [ft_freqanalysis](/reference/ft_freqanalysis), [ft_freqinterpolate](/reference/ft_freqinterpolate), [ft_freqsimulation](/reference/ft_freqsimulation), [ft_freqstatistics](/reference/ft_freqstatistics), [ft_globalmeanfield](/reference/ft_globalmeanfield), [ft_headmovement](/reference/ft_headmovement), [ft_heartrate](/reference/ft_heartrate), [ft_interpolatenan](/reference/ft_interpolatenan), [ft_meshrealign](/reference/ft_meshrealign), [ft_mvaranalysis](/reference/ft_mvaranalysis), [ft_networkanalysis](/reference/ft_networkanalysis), [ft_nirs_referencechannelsubtraction](/reference/external/artinis/ft_nirs_referencechannelsubtraction), [ft_prepare_mesh](/reference/ft_prepare_mesh), [ft_prepare_mesh](/reference/ft_prepare_mesh), [ft_prepare_neighbours](/reference/ft_prepare_neighbours), [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel), [ft_preprocessing](/reference/ft_preprocessing), [ft_rejectvisual](/reference/ft_rejectvisual), [ft_resampledata](/reference/ft_resampledata), [ft_scalpcurrentdensity](/reference/ft_scalpcurrentdensity), [ft_sourceanalysis](/reference/ft_sourceanalysis), [ft_sourceparcellate](/reference/ft_sourceparcellate), [ft_sourceplot](/reference/ft_sourceplot), [ft_sourcestatistics](/reference/ft_sourcestatistics), [ft_spike_jpsth](/reference/ft_spike_jpsth), [ft_spike_rate_orituning](/reference/ft_spike_rate_orituning), [ft_spike_xcorr](/reference/ft_spike_xcorr), [ft_spikedetection](/reference/ft_spikedetection), [ft_spikedownsample](/reference/ft_spikedownsample), [ft_spikesorting](/reference/ft_spikesorting), [ft_spiketriggeredinterpolation](/reference/ft_spiketriggeredinterpolation), [ft_spiketriggeredspectrum](/reference/ft_spiketriggeredspectrum), [ft_spiketriggeredspectrum_stat](/reference/ft_spiketriggeredspectrum_stat), [ft_statistics_stats](/reference/ft_statistics_stats), [ft_stratify](/reference/ft_stratify), [ft_timelockgrandaverage](/reference/ft_timelockgrandaverage), [ft_timelockstatistics](/reference/ft_timelockstatistics), [ft_virtualchannel](/reference/ft_virtualchannel), [ft_volumerealign](/reference/ft_volumerealign), [ft_volumereslice](/reference/ft_volumereslice)  
+**cfg.method** - [ft_artifact_tms](/reference/ft_artifact_tms), [ft_channelnormalise](/reference/ft_channelnormalise), [ft_channelrepair](/reference/ft_channelrepair), [ft_combineplanar](/reference/ft_combineplanar), [ft_componentanalysis](/reference/ft_componentanalysis), [ft_connectivityanalysis](/reference/ft_connectivityanalysis), [ft_connectivitysimulation](/reference/ft_connectivitysimulation), [ft_crossfrequencyanalysis](/reference/ft_crossfrequencyanalysis), [ft_defacevolume](/reference/ft_defacevolume), [ft_denoise_tsr](/reference/ft_denoise_tsr), [ft_detect_movement](/reference/ft_detect_movement), [ft_electrodeplacement](/reference/ft_electrodeplacement), [ft_electroderealign](/reference/ft_electroderealign), [ft_electroderealign](/reference/ft_electroderealign), [ft_electroderealign](/reference/ft_electroderealign), [ft_eventtiminganalysis](/reference/ft_eventtiminganalysis), [ft_freqanalysis](/reference/ft_freqanalysis), [ft_freqinterpolate](/reference/ft_freqinterpolate), [ft_freqsimulation](/reference/ft_freqsimulation), [ft_freqstatistics](/reference/ft_freqstatistics), [ft_globalmeanfield](/reference/ft_globalmeanfield), [ft_headmovement](/reference/ft_headmovement), [ft_heartrate](/reference/ft_heartrate), [ft_interpolatenan](/reference/ft_interpolatenan), [ft_meshrealign](/reference/ft_meshrealign), [ft_mvaranalysis](/reference/ft_mvaranalysis), [ft_networkanalysis](/reference/ft_networkanalysis), [ft_nirs_referencechannelsubtraction](/reference/external/artinis/ft_nirs_referencechannelsubtraction), [ft_prepare_mesh](/reference/ft_prepare_mesh), [ft_prepare_mesh](/reference/ft_prepare_mesh), [ft_prepare_neighbours](/reference/ft_prepare_neighbours), [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel), [ft_preprocessing](/reference/ft_preprocessing), [ft_rejectvisual](/reference/ft_rejectvisual), [ft_resampledata](/reference/ft_resampledata), [ft_scalpcurrentdensity](/reference/ft_scalpcurrentdensity), [ft_sourceanalysis](/reference/ft_sourceanalysis), [ft_sourceparcellate](/reference/ft_sourceparcellate), [ft_sourceplot](/reference/ft_sourceplot), [ft_sourcestatistics](/reference/ft_sourcestatistics), [ft_spike_jpsth](/reference/contrib/spike/ft_spike_jpsth), [ft_spike_rate_orituning](/reference/contrib/spike/ft_spike_rate_orituning), [ft_spike_xcorr](/reference/contrib/spike/ft_spike_xcorr), [ft_spikedetection](/reference/contrib/spike/ft_spikedetection), [ft_spikedownsample](/reference/contrib/spike/ft_spikedownsample), [ft_spikesorting](/reference/contrib/spike/ft_spikesorting), [ft_spiketriggeredinterpolation](/reference/contrib/spike/ft_spiketriggeredinterpolation), [ft_spiketriggeredspectrum](/reference/contrib/spike/ft_spiketriggeredspectrum), [ft_spiketriggeredspectrum_stat](/reference/contrib/spike/ft_spiketriggeredspectrum_stat), [ft_statistics_stats](/reference/ft_statistics_stats), [ft_stratify](/reference/ft_stratify), [ft_timelockgrandaverage](/reference/ft_timelockgrandaverage), [ft_timelockstatistics](/reference/ft_timelockstatistics), [ft_virtualchannel](/reference/ft_virtualchannel), [ft_volumerealign](/reference/ft_volumerealign), [ft_volumereslice](/reference/ft_volumereslice)  
 
 
 **cfg.methodstringthatspecifiestheforwardsolution** - [ft_prepare_headmodel](/reference/ft_prepare_headmodel)  
@@ -1924,10 +1924,10 @@ A detailed description of each function is available in the [reference documenta
 **cfg.nonlinear** - [ft_dipolefitting](/reference/ft_dipolefitting), [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel), [ft_volumenormalise](/reference/ft_volumenormalise)  
 
 
-**cfg.normalization** - [ft_spike_jpsth](/reference/ft_spike_jpsth)  
+**cfg.normalization** - [ft_spike_jpsth](/reference/contrib/spike/ft_spike_jpsth)  
 
 
-**cfg.normalize** - [ft_prepare_leadfield](/reference/ft_prepare_leadfield), [ft_regressconfound](/reference/ft_regressconfound), [ft_sourceanalysis](/reference/ft_sourceanalysis), [ft_spike_waveform](/reference/ft_spike_waveform)  
+**cfg.normalize** - [ft_prepare_leadfield](/reference/ft_prepare_leadfield), [ft_regressconfound](/reference/ft_regressconfound), [ft_sourceanalysis](/reference/ft_sourceanalysis), [ft_spike_waveform](/reference/contrib/spike/ft_spike_waveform)  
 
 
 **cfg.normalizeparam** - [ft_prepare_leadfield](/reference/ft_prepare_leadfield), [ft_sourceanalysis](/reference/ft_sourceanalysis)  
@@ -1969,7 +1969,7 @@ A detailed description of each function is available in the [reference documenta
 **cfg.numchan** - [ft_timelocksimulation](/reference/ft_timelocksimulation)  
 
 
-**cfg.numchans** - [ft_spikefixdmafile](/reference/ft_spikefixdmafile)  
+**cfg.numchans** - [ft_spikefixdmafile](/reference/contrib/spike/ft_spikefixdmafile)  
 
 
 **cfg.numclusters** - [ft_headmovement](/reference/ft_headmovement)  
@@ -2052,13 +2052,13 @@ A detailed description of each function is available in the [reference documenta
 **cfg.outline** - [ft_prepare_layout](/reference/ft_prepare_layout)  
 
 
-**cfg.output** - [ft_denoise_tsr](/reference/ft_denoise_tsr), [ft_eventtiminganalysis](/reference/ft_eventtiminganalysis), [ft_freqanalysis](/reference/ft_freqanalysis), [ft_freqsimulation](/reference/ft_freqsimulation), [ft_layoutplot](/reference/ft_layoutplot), [ft_omri_pipeline](/reference/ft_omri_pipeline), [ft_omri_pipeline_nuisance](/reference/ft_omri_pipeline_nuisance), [ft_prepare_layout](/reference/ft_prepare_layout), [ft_prepare_mesh](/reference/ft_prepare_mesh), [ft_recodeevent](/reference/ft_recodeevent), [ft_regressconfound](/reference/ft_regressconfound), [ft_spikedetection](/reference/ft_spikedetection), [ft_spikedownsample](/reference/ft_spikedownsample), [ft_spikefixdmafile](/reference/ft_spikefixdmafile), [ft_spikesplitting](/reference/ft_spikesplitting), [ft_volumelookup](/reference/ft_volumelookup), [ft_volumesegment](/reference/ft_volumesegment), [ft_volumesegment](/reference/ft_volumesegment), [ft_volumesegment](/reference/ft_volumesegment), [ft_volumesegment](/reference/ft_volumesegment), [ft_volumesegment](/reference/ft_volumesegment), [ft_volumesegment](/reference/ft_volumesegment)  
+**cfg.output** - [ft_denoise_tsr](/reference/ft_denoise_tsr), [ft_eventtiminganalysis](/reference/ft_eventtiminganalysis), [ft_freqanalysis](/reference/ft_freqanalysis), [ft_freqsimulation](/reference/ft_freqsimulation), [ft_layoutplot](/reference/ft_layoutplot), [ft_omri_pipeline](/reference/ft_omri_pipeline), [ft_omri_pipeline_nuisance](/reference/ft_omri_pipeline_nuisance), [ft_prepare_layout](/reference/ft_prepare_layout), [ft_prepare_mesh](/reference/ft_prepare_mesh), [ft_recodeevent](/reference/ft_recodeevent), [ft_regressconfound](/reference/ft_regressconfound), [ft_spikedetection](/reference/contrib/spike/ft_spikedetection), [ft_spikedownsample](/reference/contrib/spike/ft_spikedownsample), [ft_spikefixdmafile](/reference/contrib/spike/ft_spikefixdmafile), [ft_spikesplitting](/reference/contrib/spike/ft_spikesplitting), [ft_volumelookup](/reference/ft_volumelookup), [ft_volumesegment](/reference/ft_volumesegment), [ft_volumesegment](/reference/ft_volumesegment), [ft_volumesegment](/reference/ft_volumesegment), [ft_volumesegment](/reference/ft_volumesegment), [ft_volumesegment](/reference/ft_volumesegment), [ft_volumesegment](/reference/ft_volumesegment)  
 
 
 **cfg.outputfile** - [ft_annotate](/reference/ft_annotate), [ft_anonymizedata](/reference/ft_anonymizedata), [ft_appenddata](/reference/ft_appenddata), [ft_appendfreq](/reference/ft_appendfreq), [ft_channelnormalise](/reference/ft_channelnormalise), [ft_channelrepair](/reference/ft_channelrepair), [ft_combineplanar](/reference/ft_combineplanar), [ft_componentanalysis](/reference/ft_componentanalysis), [ft_denoise_synthetic](/reference/ft_denoise_synthetic), [ft_detect_movement](/reference/ft_detect_movement), [ft_dipolefitting](/reference/ft_dipolefitting), [ft_eventtiminganalysis](/reference/ft_eventtiminganalysis), [ft_examplefunction](/reference/ft_examplefunction), [ft_freqanalysis](/reference/ft_freqanalysis), [ft_freqanalysis_mvar](/reference/ft_freqanalysis_mvar), [ft_freqdescriptives](/reference/ft_freqdescriptives), [ft_freqgrandaverage](/reference/ft_freqgrandaverage), [ft_freqinterpolate](/reference/ft_freqinterpolate), [ft_freqstatistics](/reference/ft_freqstatistics), [ft_globalmeanfield](/reference/ft_globalmeanfield), [ft_icabrowser](/reference/contrib/misc/ft_icabrowser), [ft_interpolatenan](/reference/ft_interpolatenan), [ft_lateralizedpotential](/reference/ft_lateralizedpotential), [ft_math](/reference/ft_math), [ft_megplanar](/reference/ft_megplanar), [ft_megrealign](/reference/ft_megrealign), [ft_meshrealign](/reference/ft_meshrealign), [ft_mvaranalysis](/reference/ft_mvaranalysis), [ft_nirs_referencechannelsubtraction](/reference/external/artinis/ft_nirs_referencechannelsubtraction), [ft_nirs_scalpcouplingindex](/reference/external/artinis/ft_nirs_scalpcouplingindex), [ft_nirs_signalqualityindex](/reference/external/artinis/ft_nirs_signalqualityindex), [ft_prepare_mesh](/reference/ft_prepare_mesh), [ft_preprocessing](/reference/ft_preprocessing), [ft_redefinetrial](/reference/ft_redefinetrial), [ft_regressconfound](/reference/ft_regressconfound), [ft_rejectcomponent](/reference/ft_rejectcomponent), [ft_rejectvisual](/reference/ft_rejectvisual), [ft_removetemplateartifact](/reference/ft_removetemplateartifact), [ft_resampledata](/reference/ft_resampledata), [ft_scalpcurrentdensity](/reference/ft_scalpcurrentdensity), [ft_sourceanalysis](/reference/ft_sourceanalysis), [ft_sourcedescriptives](/reference/ft_sourcedescriptives), [ft_sourcegrandaverage](/reference/ft_sourcegrandaverage), [ft_sourceinterpolate](/reference/ft_sourceinterpolate), [ft_timelockanalysis](/reference/ft_timelockanalysis), [ft_timelockbaseline](/reference/ft_timelockbaseline), [ft_timelockgrandaverage](/reference/ft_timelockgrandaverage), [ft_timelockstatistics](/reference/ft_timelockstatistics), [ft_volumedownsample](/reference/ft_volumedownsample), [ft_volumenormalise](/reference/ft_volumenormalise), [ft_volumerealign](/reference/ft_volumerealign), [ft_volumereslice](/reference/ft_volumereslice), [ft_volumesegment](/reference/ft_volumesegment)  
 
 
-**cfg.outputunit** - [ft_spike_isi](/reference/ft_spike_isi), [ft_spike_psth](/reference/ft_spike_psth), [ft_spike_rate](/reference/ft_spike_rate), [ft_spike_xcorr](/reference/ft_spike_xcorr), [ft_spikedensity](/reference/ft_spikedensity)  
+**cfg.outputunit** - [ft_spike_isi](/reference/contrib/spike/ft_spike_isi), [ft_spike_psth](/reference/contrib/spike/ft_spike_psth), [ft_spike_rate](/reference/contrib/spike/ft_spike_rate), [ft_spike_xcorr](/reference/contrib/spike/ft_spike_xcorr), [ft_spikedensity](/reference/contrib/spike/ft_spikedensity)  
 
 
 **cfg.overlap** - [ft_prepare_layout](/reference/ft_prepare_layout), [ft_realtime_asynchronous](/reference/realtime/example/ft_realtime_asynchronous), [ft_realtime_topography](/reference/realtime/example/ft_realtime_topography), [ft_realtime_topography](/reference/realtime/example/ft_realtime_topography), [ft_redefinetrial](/reference/ft_redefinetrial)  
@@ -2081,7 +2081,7 @@ A detailed description of each function is available in the [reference documenta
 **cfg.pairtrials** - [ft_stratify](/reference/ft_stratify)  
 
 
-**cfg.param** - [ft_spike_isi](/reference/ft_spike_isi)  
+**cfg.param** - [ft_spike_isi](/reference/contrib/spike/ft_spike_isi)  
 
 
 **cfg.parameter** - [ft_appendfreq](/reference/ft_appendfreq), [ft_connectivityplot](/reference/ft_connectivityplot), [ft_electrodeplacement](/reference/ft_electrodeplacement), [ft_freqbaseline](/reference/ft_freqbaseline), [ft_freqgrandaverage](/reference/ft_freqgrandaverage), [ft_freqstatistics](/reference/ft_freqstatistics), [ft_math](/reference/ft_math), [ft_movieplotER](/reference/ft_movieplotER), [ft_movieplotTFR](/reference/ft_movieplotTFR), [ft_multiplotER](/reference/ft_multiplotER), [ft_multiplotTFR](/reference/ft_multiplotTFR), [ft_networkanalysis](/reference/ft_networkanalysis), [ft_singleplotER](/reference/ft_singleplotER), [ft_singleplotTFR](/reference/ft_singleplotTFR), [ft_sourcegrandaverage](/reference/ft_sourcegrandaverage), [ft_sourceinterpolate](/reference/ft_sourceinterpolate), [ft_sourceparcellate](/reference/ft_sourceparcellate), [ft_sourceplot_interactive](/reference/ft_sourceplot_interactive), [ft_sourcestatistics](/reference/ft_sourcestatistics), [ft_sourcewrite](/reference/ft_sourcewrite), [ft_timelockbaseline](/reference/ft_timelockbaseline), [ft_timelockgrandaverage](/reference/ft_timelockgrandaverage), [ft_timelockstatistics](/reference/ft_timelockstatistics), [ft_topoplotER](/reference/ft_topoplotER), [ft_topoplotTFR](/reference/ft_topoplotTFR), [ft_volumedownsample](/reference/ft_volumedownsample), [ft_volumenormalise](/reference/ft_volumenormalise), [ft_volumerealign](/reference/ft_volumerealign), [ft_volumewrite](/reference/ft_volumewrite)  
@@ -2126,13 +2126,13 @@ A detailed description of each function is available in the [reference documenta
 **cfg.plotfiltresp** - [ft_preprocessing](/reference/ft_preprocessing)  
 
 
-**cfg.plotfit** - [ft_spike_plot_isi](/reference/ft_spike_plot_isi)  
+**cfg.plotfit** - [ft_spike_plot_isi](/reference/contrib/spike/ft_spike_plot_isi)  
 
 
 **cfg.plotlabels** - [ft_databrowser](/reference/ft_databrowser)  
 
 
-**cfg.plotselection** - [ft_spike_plot_raster](/reference/ft_spike_plot_raster)  
+**cfg.plotselection** - [ft_spike_plot_raster](/reference/contrib/spike/ft_spike_plot_raster)  
 
 
 **cfg.plotunit** - [ft_qualitycheck](/reference/ft_qualitycheck)  
@@ -2177,85 +2177,85 @@ A detailed description of each function is available in the [reference documenta
 **cfg.prefix** - [ft_icabrowser](/reference/contrib/misc/ft_icabrowser)  
 
 
-**cfg.preproc.baselinewindow** - [ft_databrowser](/reference/ft_databrowser), [ft_spikedetection](/reference/ft_spikedetection), [ft_spikedownsample](/reference/ft_spikedownsample)  
+**cfg.preproc.baselinewindow** - [ft_databrowser](/reference/ft_databrowser), [ft_spikedetection](/reference/contrib/spike/ft_spikedetection), [ft_spikedownsample](/reference/contrib/spike/ft_spikedownsample)  
 
 
 **cfg.preproc.boxcar** - [ft_rejectvisual](/reference/ft_rejectvisual)  
 
 
-**cfg.preproc.bpfiltdir** - [ft_spikedetection](/reference/ft_spikedetection), [ft_spikedownsample](/reference/ft_spikedownsample)  
+**cfg.preproc.bpfiltdir** - [ft_spikedetection](/reference/contrib/spike/ft_spikedetection), [ft_spikedownsample](/reference/contrib/spike/ft_spikedownsample)  
 
 
-**cfg.preproc.bpfilter** - [ft_heartrate](/reference/ft_heartrate), [ft_rejectvisual](/reference/ft_rejectvisual), [ft_rejectvisual](/reference/ft_rejectvisual), [ft_respiration](/reference/ft_respiration), [ft_spikedetection](/reference/ft_spikedetection), [ft_spikedownsample](/reference/ft_spikedownsample)  
+**cfg.preproc.bpfilter** - [ft_heartrate](/reference/ft_heartrate), [ft_rejectvisual](/reference/ft_rejectvisual), [ft_rejectvisual](/reference/ft_rejectvisual), [ft_respiration](/reference/ft_respiration), [ft_spikedetection](/reference/contrib/spike/ft_spikedetection), [ft_spikedownsample](/reference/contrib/spike/ft_spikedownsample)  
 
 
-**cfg.preproc.bpfiltord** - [ft_rejectvisual](/reference/ft_rejectvisual), [ft_rejectvisual](/reference/ft_rejectvisual), [ft_spikedetection](/reference/ft_spikedetection), [ft_spikedownsample](/reference/ft_spikedownsample)  
+**cfg.preproc.bpfiltord** - [ft_rejectvisual](/reference/ft_rejectvisual), [ft_rejectvisual](/reference/ft_rejectvisual), [ft_spikedetection](/reference/contrib/spike/ft_spikedetection), [ft_spikedownsample](/reference/contrib/spike/ft_spikedownsample)  
 
 
-**cfg.preproc.bpfilttype** - [ft_rejectvisual](/reference/ft_rejectvisual), [ft_rejectvisual](/reference/ft_rejectvisual), [ft_spikedetection](/reference/ft_spikedetection), [ft_spikedownsample](/reference/ft_spikedownsample)  
+**cfg.preproc.bpfilttype** - [ft_rejectvisual](/reference/ft_rejectvisual), [ft_rejectvisual](/reference/ft_rejectvisual), [ft_spikedetection](/reference/contrib/spike/ft_spikedetection), [ft_spikedownsample](/reference/contrib/spike/ft_spikedownsample)  
 
 
-**cfg.preproc.bpfreq** - [ft_heartrate](/reference/ft_heartrate), [ft_rejectvisual](/reference/ft_rejectvisual), [ft_rejectvisual](/reference/ft_rejectvisual), [ft_respiration](/reference/ft_respiration), [ft_spikedetection](/reference/ft_spikedetection), [ft_spikedownsample](/reference/ft_spikedownsample)  
+**cfg.preproc.bpfreq** - [ft_heartrate](/reference/ft_heartrate), [ft_rejectvisual](/reference/ft_rejectvisual), [ft_rejectvisual](/reference/ft_rejectvisual), [ft_respiration](/reference/ft_respiration), [ft_spikedetection](/reference/contrib/spike/ft_spikedetection), [ft_spikedownsample](/reference/contrib/spike/ft_spikedownsample)  
 
 
-**cfg.preproc.demean** - [ft_databrowser](/reference/ft_databrowser), [ft_spikedetection](/reference/ft_spikedetection), [ft_spikedownsample](/reference/ft_spikedownsample)  
+**cfg.preproc.demean** - [ft_databrowser](/reference/ft_databrowser), [ft_spikedetection](/reference/contrib/spike/ft_spikedetection), [ft_spikedownsample](/reference/contrib/spike/ft_spikedownsample)  
 
 
-**cfg.preproc.detrend** - [ft_databrowser](/reference/ft_databrowser), [ft_spikedetection](/reference/ft_spikedetection), [ft_spikedownsample](/reference/ft_spikedownsample)  
+**cfg.preproc.detrend** - [ft_databrowser](/reference/ft_databrowser), [ft_spikedetection](/reference/contrib/spike/ft_spikedetection), [ft_spikedownsample](/reference/contrib/spike/ft_spikedownsample)  
 
 
-**cfg.preproc.dftfilter** - [ft_spikedetection](/reference/ft_spikedetection), [ft_spikedownsample](/reference/ft_spikedownsample)  
+**cfg.preproc.dftfilter** - [ft_spikedetection](/reference/contrib/spike/ft_spikedetection), [ft_spikedownsample](/reference/contrib/spike/ft_spikedownsample)  
 
 
-**cfg.preproc.hilbert** - [ft_spikedetection](/reference/ft_spikedetection), [ft_spikedownsample](/reference/ft_spikedownsample)  
+**cfg.preproc.hilbert** - [ft_spikedetection](/reference/contrib/spike/ft_spikedetection), [ft_spikedownsample](/reference/contrib/spike/ft_spikedownsample)  
 
 
-**cfg.preproc.hpfiltdir** - [ft_spikedetection](/reference/ft_spikedetection), [ft_spikedownsample](/reference/ft_spikedownsample)  
+**cfg.preproc.hpfiltdir** - [ft_spikedetection](/reference/contrib/spike/ft_spikedetection), [ft_spikedownsample](/reference/contrib/spike/ft_spikedownsample)  
 
 
-**cfg.preproc.hpfilter** - [ft_spikedetection](/reference/ft_spikedetection), [ft_spikedownsample](/reference/ft_spikedownsample)  
+**cfg.preproc.hpfilter** - [ft_spikedetection](/reference/contrib/spike/ft_spikedetection), [ft_spikedownsample](/reference/contrib/spike/ft_spikedownsample)  
 
 
-**cfg.preproc.hpfiltord** - [ft_spikedetection](/reference/ft_spikedetection), [ft_spikedownsample](/reference/ft_spikedownsample)  
+**cfg.preproc.hpfiltord** - [ft_spikedetection](/reference/contrib/spike/ft_spikedetection), [ft_spikedownsample](/reference/contrib/spike/ft_spikedownsample)  
 
 
-**cfg.preproc.hpfilttype** - [ft_spikedetection](/reference/ft_spikedetection), [ft_spikedownsample](/reference/ft_spikedownsample)  
+**cfg.preproc.hpfilttype** - [ft_spikedetection](/reference/contrib/spike/ft_spikedetection), [ft_spikedownsample](/reference/contrib/spike/ft_spikedownsample)  
 
 
-**cfg.preproc.hpfreq** - [ft_spikedetection](/reference/ft_spikedetection), [ft_spikedownsample](/reference/ft_spikedownsample)  
+**cfg.preproc.hpfreq** - [ft_spikedetection](/reference/contrib/spike/ft_spikedetection), [ft_spikedownsample](/reference/contrib/spike/ft_spikedownsample)  
 
 
-**cfg.preproc.lnfilter** - [ft_spikedetection](/reference/ft_spikedetection), [ft_spikedownsample](/reference/ft_spikedownsample)  
+**cfg.preproc.lnfilter** - [ft_spikedetection](/reference/contrib/spike/ft_spikedetection), [ft_spikedownsample](/reference/contrib/spike/ft_spikedownsample)  
 
 
-**cfg.preproc.lnfiltord** - [ft_spikedetection](/reference/ft_spikedetection), [ft_spikedownsample](/reference/ft_spikedownsample)  
+**cfg.preproc.lnfiltord** - [ft_spikedetection](/reference/contrib/spike/ft_spikedetection), [ft_spikedownsample](/reference/contrib/spike/ft_spikedownsample)  
 
 
-**cfg.preproc.lnfreq** - [ft_spikedetection](/reference/ft_spikedetection), [ft_spikedownsample](/reference/ft_spikedownsample)  
+**cfg.preproc.lnfreq** - [ft_spikedetection](/reference/contrib/spike/ft_spikedetection), [ft_spikedownsample](/reference/contrib/spike/ft_spikedownsample)  
 
 
-**cfg.preproc.lpfiltdir** - [ft_spikedetection](/reference/ft_spikedetection), [ft_spikedownsample](/reference/ft_spikedownsample)  
+**cfg.preproc.lpfiltdir** - [ft_spikedetection](/reference/contrib/spike/ft_spikedetection), [ft_spikedownsample](/reference/contrib/spike/ft_spikedownsample)  
 
 
-**cfg.preproc.lpfilter** - [ft_databrowser](/reference/ft_databrowser), [ft_spikedetection](/reference/ft_spikedetection), [ft_spikedownsample](/reference/ft_spikedownsample)  
+**cfg.preproc.lpfilter** - [ft_databrowser](/reference/ft_databrowser), [ft_spikedetection](/reference/contrib/spike/ft_spikedetection), [ft_spikedownsample](/reference/contrib/spike/ft_spikedownsample)  
 
 
-**cfg.preproc.lpfiltord** - [ft_spikedetection](/reference/ft_spikedetection), [ft_spikedownsample](/reference/ft_spikedownsample)  
+**cfg.preproc.lpfiltord** - [ft_spikedetection](/reference/contrib/spike/ft_spikedetection), [ft_spikedownsample](/reference/contrib/spike/ft_spikedownsample)  
 
 
-**cfg.preproc.lpfilttype** - [ft_spikedetection](/reference/ft_spikedetection), [ft_spikedownsample](/reference/ft_spikedownsample)  
+**cfg.preproc.lpfilttype** - [ft_spikedetection](/reference/contrib/spike/ft_spikedetection), [ft_spikedownsample](/reference/contrib/spike/ft_spikedownsample)  
 
 
-**cfg.preproc.lpfreq** - [ft_databrowser](/reference/ft_databrowser), [ft_spikedetection](/reference/ft_spikedetection), [ft_spikedownsample](/reference/ft_spikedownsample)  
+**cfg.preproc.lpfreq** - [ft_databrowser](/reference/ft_databrowser), [ft_spikedetection](/reference/contrib/spike/ft_spikedetection), [ft_spikedownsample](/reference/contrib/spike/ft_spikedownsample)  
 
 
-**cfg.preproc.medianfilter** - [ft_spikedetection](/reference/ft_spikedetection), [ft_spikedownsample](/reference/ft_spikedownsample)  
+**cfg.preproc.medianfilter** - [ft_spikedetection](/reference/contrib/spike/ft_spikedetection), [ft_spikedownsample](/reference/contrib/spike/ft_spikedownsample)  
 
 
-**cfg.preproc.medianfiltord** - [ft_spikedetection](/reference/ft_spikedetection), [ft_spikedownsample](/reference/ft_spikedownsample)  
+**cfg.preproc.medianfiltord** - [ft_spikedetection](/reference/contrib/spike/ft_spikedetection), [ft_spikedownsample](/reference/contrib/spike/ft_spikedownsample)  
 
 
-**cfg.preproc.rectify** - [ft_rejectvisual](/reference/ft_rejectvisual), [ft_rejectvisual](/reference/ft_rejectvisual), [ft_spikedetection](/reference/ft_spikedetection), [ft_spikedownsample](/reference/ft_spikedownsample)  
+**cfg.preproc.rectify** - [ft_rejectvisual](/reference/ft_rejectvisual), [ft_rejectvisual](/reference/ft_rejectvisual), [ft_spikedetection](/reference/contrib/spike/ft_spikedetection), [ft_spikedownsample](/reference/contrib/spike/ft_spikedownsample)  
 
 
 **cfg.prestim** - [ft_artifact_tms](/reference/ft_artifact_tms)  
@@ -2291,7 +2291,7 @@ A detailed description of each function is available in the [reference documenta
 **cfg.pseudovalue** - [ft_sourceanalysis](/reference/ft_sourceanalysis)  
 
 
-**cfg.psth** - [ft_spike_plot_jpsth](/reference/ft_spike_plot_jpsth)  
+**cfg.psth** - [ft_spike_plot_jpsth](/reference/contrib/spike/ft_spike_plot_jpsth)  
 
 
 ## Q
@@ -2346,10 +2346,10 @@ A detailed description of each function is available in the [reference documenta
 **cfg.reject** - [ft_regressconfound](/reference/ft_regressconfound)  
 
 
-**cfg.rejectclippedspikes** - [ft_spike_waveform](/reference/ft_spike_waveform)  
+**cfg.rejectclippedspikes** - [ft_spike_waveform](/reference/contrib/spike/ft_spike_waveform)  
 
 
-**cfg.rejectonpeak** - [ft_spike_waveform](/reference/ft_spike_waveform)  
+**cfg.rejectonpeak** - [ft_spike_waveform](/reference/contrib/spike/ft_spike_waveform)  
 
 
 **cfg.rellim** - [ft_realtime_packettimer](/reference/realtime/example/ft_realtime_packettimer)  
@@ -2537,7 +2537,7 @@ A detailed description of each function is available in the [reference documenta
 **cfg.scalpthreshold** - [ft_volumesegment](/reference/ft_volumesegment)  
 
 
-**cfg.scatter** - [ft_spike_plot_isireturn](/reference/ft_spike_plot_isireturn)  
+**cfg.scatter** - [ft_spike_plot_isireturn](/reference/contrib/spike/ft_spike_plot_isireturn)  
 
 
 **cfg.searchrange** - [ft_recodeevent](/reference/ft_recodeevent)  
@@ -2723,13 +2723,13 @@ A detailed description of each function is available in the [reference documenta
 **cfg.spherify** - [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)  
 
 
-**cfg.spikechannel** - [ft_spike_isi](/reference/ft_spike_isi), [ft_spike_plot_isi](/reference/ft_spike_plot_isi), [ft_spike_plot_isireturn](/reference/ft_spike_plot_isireturn), [ft_spike_plot_psth](/reference/ft_spike_plot_psth), [ft_spike_plot_raster](/reference/ft_spike_plot_raster), [ft_spike_psth](/reference/ft_spike_psth), [ft_spike_rate](/reference/ft_spike_rate), [ft_spike_select](/reference/ft_spike_select), [ft_spike_waveform](/reference/ft_spike_waveform), [ft_spikedensity](/reference/ft_spikedensity), [ft_spiketriggeredaverage](/reference/ft_spiketriggeredaverage), [ft_spiketriggeredinterpolation](/reference/ft_spiketriggeredinterpolation), [ft_spiketriggeredspectrum_fft](/reference/ft_spiketriggeredspectrum_fft), [ft_spiketriggeredspectrum_stat](/reference/ft_spiketriggeredspectrum_stat)  
+**cfg.spikechannel** - [ft_spike_isi](/reference/contrib/spike/ft_spike_isi), [ft_spike_plot_isi](/reference/contrib/spike/ft_spike_plot_isi), [ft_spike_plot_isireturn](/reference/contrib/spike/ft_spike_plot_isireturn), [ft_spike_plot_psth](/reference/contrib/spike/ft_spike_plot_psth), [ft_spike_plot_raster](/reference/contrib/spike/ft_spike_plot_raster), [ft_spike_psth](/reference/contrib/spike/ft_spike_psth), [ft_spike_rate](/reference/contrib/spike/ft_spike_rate), [ft_spike_select](/reference/contrib/spike/ft_spike_select), [ft_spike_waveform](/reference/contrib/spike/ft_spike_waveform), [ft_spikedensity](/reference/contrib/spike/ft_spikedensity), [ft_spiketriggeredaverage](/reference/contrib/spike/ft_spiketriggeredaverage), [ft_spiketriggeredinterpolation](/reference/contrib/spike/ft_spiketriggeredinterpolation), [ft_spiketriggeredspectrum_fft](/reference/contrib/spike/ft_spiketriggeredspectrum_fft), [ft_spiketriggeredspectrum_stat](/reference/contrib/spike/ft_spiketriggeredspectrum_stat)  
 
 
-**cfg.spikelength** - [ft_spike_plot_raster](/reference/ft_spike_plot_raster)  
+**cfg.spikelength** - [ft_spike_plot_raster](/reference/contrib/spike/ft_spike_plot_raster)  
 
 
-**cfg.spikesel** - [ft_spiketriggeredspectrum_stat](/reference/ft_spiketriggeredspectrum_stat)  
+**cfg.spikesel** - [ft_spiketriggeredspectrum_stat](/reference/contrib/spike/ft_spiketriggeredspectrum_stat)  
 
 
 **cfg.split** - [ft_componentanalysis](/reference/ft_componentanalysis), [ft_denoise_prewhiten](/reference/ft_denoise_prewhiten)  
@@ -2777,7 +2777,7 @@ A detailed description of each function is available in the [reference documenta
 **cfg.statistic** - [ft_statistics_analytic](/reference/ft_statistics_analytic), [ft_statistics_analytic](/reference/ft_statistics_analytic), [ft_statistics_crossvalidate](/reference/ft_statistics_crossvalidate), [ft_statistics_montecarlo](/reference/ft_statistics_montecarlo), [ft_statistics_stats](/reference/ft_statistics_stats)  
 
 
-**cfg.stimuli** - [ft_spike_rate_orituning](/reference/ft_spike_rate_orituning)  
+**cfg.stimuli** - [ft_spike_rate_orituning](/reference/contrib/spike/ft_spike_rate_orituning)  
 
 
 **cfg.stimulus1.isi** - [ft_steadystatesimulation](/reference/ft_steadystatesimulation)  
@@ -2881,10 +2881,10 @@ A detailed description of each function is available in the [reference documenta
 **cfg.tail** - [ft_statistics_analytic](/reference/ft_statistics_analytic), [ft_statistics_montecarlo](/reference/ft_statistics_montecarlo), [ft_statistics_stats](/reference/ft_statistics_stats)  
 
 
-**cfg.taper** - [ft_freqanalysis](/reference/ft_freqanalysis), [ft_spiketriggeredspectrum_fft](/reference/ft_spiketriggeredspectrum_fft)  
+**cfg.taper** - [ft_freqanalysis](/reference/ft_freqanalysis), [ft_spiketriggeredspectrum_fft](/reference/contrib/spike/ft_spiketriggeredspectrum_fft)  
 
 
-**cfg.tapsmofrq** - [ft_freqanalysis](/reference/ft_freqanalysis), [ft_freqanalysis](/reference/ft_freqanalysis), [ft_spiketriggeredspectrum_convol](/reference/ft_spiketriggeredspectrum_convol), [ft_spiketriggeredspectrum_fft](/reference/ft_spiketriggeredspectrum_fft)  
+**cfg.tapsmofrq** - [ft_freqanalysis](/reference/ft_freqanalysis), [ft_freqanalysis](/reference/ft_freqanalysis), [ft_spiketriggeredspectrum_convol](/reference/contrib/spike/ft_spiketriggeredspectrum_convol), [ft_spiketriggeredspectrum_fft](/reference/contrib/spike/ft_spiketriggeredspectrum_fft)  
 
 
 **cfg.target** - [ft_electroderealign](/reference/ft_electroderealign), [ft_electroderealign](/reference/ft_electroderealign), [ft_nirs_transform_ODs](/reference/external/artinis/ft_nirs_transform_ODs)  
@@ -2956,13 +2956,13 @@ A detailed description of each function is available in the [reference documenta
 **cfg.time_label** - [ft_sourceplot_interactive](/reference/ft_sourceplot_interactive)  
 
 
-**cfg.timestampdefinition** - [ft_spikedetection](/reference/ft_spikedetection), [ft_spikedownsample](/reference/ft_spikedownsample)  
+**cfg.timestampdefinition** - [ft_spikedetection](/reference/contrib/spike/ft_spikedetection), [ft_spikedownsample](/reference/contrib/spike/ft_spikedownsample)  
 
 
-**cfg.timestampspersecond** - [ft_spike_maketrials](/reference/ft_spike_maketrials)  
+**cfg.timestampspersecond** - [ft_spike_maketrials](/reference/contrib/spike/ft_spike_maketrials)  
 
 
-**cfg.timwin** - [ft_nonlinearassociation](/reference/contrib/misc/ft_nonlinearassociation), [ft_spikedensity](/reference/ft_spikedensity), [ft_spiketriggeredaverage](/reference/ft_spiketriggeredaverage), [ft_spiketriggeredinterpolation](/reference/ft_spiketriggeredinterpolation), [ft_spiketriggeredspectrum_fft](/reference/ft_spiketriggeredspectrum_fft), [ft_spiketriggeredspectrum_stat](/reference/ft_spiketriggeredspectrum_stat), [ft_statistics_mvpa](/reference/ft_statistics_mvpa)  
+**cfg.timwin** - [ft_nonlinearassociation](/reference/contrib/misc/ft_nonlinearassociation), [ft_spikedensity](/reference/contrib/spike/ft_spikedensity), [ft_spiketriggeredaverage](/reference/contrib/spike/ft_spiketriggeredaverage), [ft_spiketriggeredinterpolation](/reference/contrib/spike/ft_spiketriggeredinterpolation), [ft_spiketriggeredspectrum_fft](/reference/contrib/spike/ft_spiketriggeredspectrum_fft), [ft_spiketriggeredspectrum_stat](/reference/contrib/spike/ft_spiketriggeredspectrum_stat), [ft_statistics_mvpa](/reference/ft_statistics_mvpa)  
 
 
 **cfg.tissue** - [ft_prepare_mesh](/reference/ft_prepare_mesh), [ft_prepare_mesh](/reference/ft_prepare_mesh)  
@@ -2995,10 +2995,10 @@ A detailed description of each function is available in the [reference documenta
 **cfg.topolabel** - [ft_componentanalysis](/reference/ft_componentanalysis)  
 
 
-**cfg.topplotfunc** - [ft_spike_plot_raster](/reference/ft_spike_plot_raster)  
+**cfg.topplotfunc** - [ft_spike_plot_raster](/reference/contrib/spike/ft_spike_plot_raster)  
 
 
-**cfg.topplotsize** - [ft_spike_plot_raster](/reference/ft_spike_plot_raster)  
+**cfg.topplotsize** - [ft_spike_plot_raster](/reference/contrib/spike/ft_spike_plot_raster)  
 
 
 **cfg.tpm** - [ft_volumenormalise](/reference/ft_volumenormalise), [ft_volumesegment](/reference/ft_volumesegment)  
@@ -3007,7 +3007,7 @@ A detailed description of each function is available in the [reference documenta
 **cfg.translate** - [ft_defacemesh](/reference/ft_defacemesh), [ft_defacevolume](/reference/ft_defacevolume)  
 
 
-**cfg.trialborders** - [ft_spike_plot_raster](/reference/ft_spike_plot_raster)  
+**cfg.trialborders** - [ft_spike_plot_raster](/reference/contrib/spike/ft_spike_plot_raster)  
 
 
 **cfg.trialdef** - [ft_definetrial](/reference/ft_definetrial)  
@@ -3037,19 +3037,19 @@ A detailed description of each function is available in the [reference documenta
 **cfg.triallength** - [ft_connectivitysimulation](/reference/ft_connectivitysimulation)  
 
 
-**cfg.trials** - [ft_badchannel](/reference/ft_badchannel), [ft_badsegment](/reference/ft_badsegment), [ft_channelnormalise](/reference/ft_channelnormalise), [ft_channelrepair](/reference/ft_channelrepair), [ft_componentanalysis](/reference/ft_componentanalysis), [ft_denoise_dssp](/reference/ft_denoise_dssp), [ft_denoise_pca](/reference/ft_denoise_pca), [ft_denoise_synthetic](/reference/ft_denoise_synthetic), [ft_denoise_tsr](/reference/ft_denoise_tsr), [ft_detect_movement](/reference/ft_detect_movement), [ft_eventtiminganalysis](/reference/ft_eventtiminganalysis), [ft_freqanalysis](/reference/ft_freqanalysis), [ft_freqdescriptives](/reference/ft_freqdescriptives), [ft_megplanar](/reference/ft_megplanar), [ft_megrealign](/reference/ft_megrealign), [ft_multiplotER](/reference/ft_multiplotER), [ft_multiplotTFR](/reference/ft_multiplotTFR), [ft_nonlinearassociation](/reference/contrib/misc/ft_nonlinearassociation), [ft_preprocessing](/reference/ft_preprocessing), [ft_redefinetrial](/reference/ft_redefinetrial), [ft_rejectvisual](/reference/ft_rejectvisual), [ft_resampledata](/reference/ft_resampledata), [ft_scalpcurrentdensity](/reference/ft_scalpcurrentdensity), [ft_singleplotER](/reference/ft_singleplotER), [ft_singleplotTFR](/reference/ft_singleplotTFR), [ft_spike_isi](/reference/ft_spike_isi), [ft_spike_jpsth](/reference/ft_spike_jpsth), [ft_spike_plot_raster](/reference/ft_spike_plot_raster), [ft_spike_psth](/reference/ft_spike_psth), [ft_spike_rate](/reference/ft_spike_rate), [ft_spike_select](/reference/ft_spike_select), [ft_spike_xcorr](/reference/ft_spike_xcorr), [ft_spikedensity](/reference/ft_spikedensity), [ft_spiketriggeredspectrum_stat](/reference/ft_spiketriggeredspectrum_stat), [ft_timelockanalysis](/reference/ft_timelockanalysis), [ft_topoplotER](/reference/ft_topoplotER), [ft_topoplotTFR](/reference/ft_topoplotTFR)  
+**cfg.trials** - [ft_badchannel](/reference/ft_badchannel), [ft_badsegment](/reference/ft_badsegment), [ft_channelnormalise](/reference/ft_channelnormalise), [ft_channelrepair](/reference/ft_channelrepair), [ft_componentanalysis](/reference/ft_componentanalysis), [ft_denoise_dssp](/reference/ft_denoise_dssp), [ft_denoise_pca](/reference/ft_denoise_pca), [ft_denoise_synthetic](/reference/ft_denoise_synthetic), [ft_denoise_tsr](/reference/ft_denoise_tsr), [ft_detect_movement](/reference/ft_detect_movement), [ft_eventtiminganalysis](/reference/ft_eventtiminganalysis), [ft_freqanalysis](/reference/ft_freqanalysis), [ft_freqdescriptives](/reference/ft_freqdescriptives), [ft_megplanar](/reference/ft_megplanar), [ft_megrealign](/reference/ft_megrealign), [ft_multiplotER](/reference/ft_multiplotER), [ft_multiplotTFR](/reference/ft_multiplotTFR), [ft_nonlinearassociation](/reference/contrib/misc/ft_nonlinearassociation), [ft_preprocessing](/reference/ft_preprocessing), [ft_redefinetrial](/reference/ft_redefinetrial), [ft_rejectvisual](/reference/ft_rejectvisual), [ft_resampledata](/reference/ft_resampledata), [ft_scalpcurrentdensity](/reference/ft_scalpcurrentdensity), [ft_singleplotER](/reference/ft_singleplotER), [ft_singleplotTFR](/reference/ft_singleplotTFR), [ft_spike_isi](/reference/contrib/spike/ft_spike_isi), [ft_spike_jpsth](/reference/contrib/spike/ft_spike_jpsth), [ft_spike_plot_raster](/reference/contrib/spike/ft_spike_plot_raster), [ft_spike_psth](/reference/contrib/spike/ft_spike_psth), [ft_spike_rate](/reference/contrib/spike/ft_spike_rate), [ft_spike_select](/reference/contrib/spike/ft_spike_select), [ft_spike_xcorr](/reference/contrib/spike/ft_spike_xcorr), [ft_spikedensity](/reference/contrib/spike/ft_spikedensity), [ft_spiketriggeredspectrum_stat](/reference/contrib/spike/ft_spiketriggeredspectrum_stat), [ft_timelockanalysis](/reference/ft_timelockanalysis), [ft_topoplotER](/reference/ft_topoplotER), [ft_topoplotTFR](/reference/ft_topoplotTFR)  
 
 
 **cfg.trigger** - [ft_realtime_synchronous](/reference/realtime/example/ft_realtime_synchronous)  
 
 
-**cfg.trl** - [ft_artifact_clip](/reference/ft_artifact_clip), [ft_artifact_ecg](/reference/ft_artifact_ecg), [ft_artifact_eog](/reference/ft_artifact_eog), [ft_artifact_jump](/reference/ft_artifact_jump), [ft_artifact_muscle](/reference/ft_artifact_muscle), [ft_artifact_threshold](/reference/ft_artifact_threshold), [ft_artifact_tms](/reference/ft_artifact_tms), [ft_artifact_zvalue](/reference/ft_artifact_zvalue), [ft_artifact_zvalue](/reference/ft_artifact_zvalue), [ft_audiovideobrowser](/reference/ft_audiovideobrowser), [ft_databrowser](/reference/ft_databrowser), [ft_headmovement](/reference/ft_headmovement), [ft_preprocessing](/reference/ft_preprocessing), [ft_redefinetrial](/reference/ft_redefinetrial), [ft_spike_maketrials](/reference/ft_spike_maketrials)  
+**cfg.trl** - [ft_artifact_clip](/reference/ft_artifact_clip), [ft_artifact_ecg](/reference/ft_artifact_ecg), [ft_artifact_eog](/reference/ft_artifact_eog), [ft_artifact_jump](/reference/ft_artifact_jump), [ft_artifact_muscle](/reference/ft_artifact_muscle), [ft_artifact_threshold](/reference/ft_artifact_threshold), [ft_artifact_tms](/reference/ft_artifact_tms), [ft_artifact_zvalue](/reference/ft_artifact_zvalue), [ft_artifact_zvalue](/reference/ft_artifact_zvalue), [ft_audiovideobrowser](/reference/ft_audiovideobrowser), [ft_databrowser](/reference/ft_databrowser), [ft_headmovement](/reference/ft_headmovement), [ft_preprocessing](/reference/ft_preprocessing), [ft_redefinetrial](/reference/ft_redefinetrial), [ft_spike_maketrials](/reference/contrib/spike/ft_spike_maketrials)  
 
 
 **cfg.trllen** - [ft_dipolesimulation](/reference/ft_dipolesimulation), [ft_freqsimulation](/reference/ft_freqsimulation), [ft_timelocksimulation](/reference/ft_timelocksimulation)  
 
 
-**cfg.trlunit** - [ft_spike_maketrials](/reference/ft_spike_maketrials)  
+**cfg.trlunit** - [ft_spike_maketrials](/reference/contrib/spike/ft_spike_maketrials)  
 
 
 **cfg.truncate** - [ft_denoise_pca](/reference/ft_denoise_pca)  
@@ -3077,7 +3077,7 @@ A detailed description of each function is available in the [reference documenta
 **cfg.variance** - [ft_freqdescriptives](/reference/ft_freqdescriptives)  
 
 
-**cfg.vartriallen** - [ft_spike_psth](/reference/ft_spike_psth), [ft_spike_rate](/reference/ft_spike_rate), [ft_spike_xcorr](/reference/ft_spike_xcorr), [ft_spikedensity](/reference/ft_spikedensity)  
+**cfg.vartriallen** - [ft_spike_psth](/reference/contrib/spike/ft_spike_psth), [ft_spike_rate](/reference/contrib/spike/ft_spike_rate), [ft_spike_xcorr](/reference/contrib/spike/ft_spike_xcorr), [ft_spikedensity](/reference/contrib/spike/ft_spikedensity)  
 
 
 **cfg.velocity2D.kernel** - [ft_detect_movement](/reference/ft_detect_movement)  
@@ -3124,10 +3124,10 @@ A detailed description of each function is available in the [reference documenta
 
 ## W
 
-**cfg.ward.distance** - [ft_spikesorting](/reference/ft_spikesorting)  
+**cfg.ward.distance** - [ft_spikesorting](/reference/contrib/spike/ft_spikesorting)  
 
 
-**cfg.wardsubstructurewithadditionallow** - [ft_spikesorting](/reference/ft_spikesorting)  
+**cfg.wardsubstructurewithadditionallow** - [ft_spikesorting](/reference/contrib/spike/ft_spikesorting)  
 
 
 **cfg.warp** - [ft_electroderealign](/reference/ft_electroderealign), [ft_electroderealign](/reference/ft_electroderealign), [ft_electroderealign](/reference/ft_electroderealign)  
@@ -3148,22 +3148,22 @@ A detailed description of each function is available in the [reference documenta
 **cfg.widthparam** - [ft_topoplotCC](/reference/ft_topoplotCC)  
 
 
-**cfg.window** - [ft_spike_plot_isireturn](/reference/ft_spike_plot_isireturn), [ft_spike_plot_jpsth](/reference/ft_spike_plot_jpsth)  
+**cfg.window** - [ft_spike_plot_isireturn](/reference/contrib/spike/ft_spike_plot_isireturn), [ft_spike_plot_jpsth](/reference/contrib/spike/ft_spike_plot_jpsth)  
 
 
 **cfg.windowlength** - [ft_nirs_signalqualityindex](/reference/external/artinis/ft_nirs_signalqualityindex)  
 
 
-**cfg.winfunc** - [ft_spikedensity](/reference/ft_spikedensity)  
+**cfg.winfunc** - [ft_spikedensity](/reference/contrib/spike/ft_spikedensity)  
 
 
-**cfg.winfuncopt** - [ft_spikedensity](/reference/ft_spikedensity)  
+**cfg.winfuncopt** - [ft_spikedensity](/reference/contrib/spike/ft_spikedensity)  
 
 
-**cfg.winlen** - [ft_spike_plot_isireturn](/reference/ft_spike_plot_isireturn), [ft_spike_plot_jpsth](/reference/ft_spike_plot_jpsth)  
+**cfg.winlen** - [ft_spike_plot_isireturn](/reference/contrib/spike/ft_spike_plot_isireturn), [ft_spike_plot_jpsth](/reference/contrib/spike/ft_spike_plot_jpsth)  
 
 
-**cfg.winstepsize** - [ft_spiketriggeredspectrum_stat](/reference/ft_spiketriggeredspectrum_stat)  
+**cfg.winstepsize** - [ft_spiketriggeredspectrum_stat](/reference/contrib/spike/ft_spiketriggeredspectrum_stat)  
 
 
 **cfg.write** - [ft_volumenormalise](/reference/ft_volumenormalise), [ft_volumesegment](/reference/ft_volumesegment)  
@@ -3191,7 +3191,7 @@ A detailed description of each function is available in the [reference documenta
 **cfg.ygrid** - [ft_dipolefitting](/reference/ft_dipolefitting), [ft_prepare_leadfield](/reference/ft_prepare_leadfield), [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel), [ft_sourceanalysis](/reference/ft_sourceanalysis)  
 
 
-**cfg.ylim** - [ft_connectivityplot](/reference/ft_connectivityplot), [ft_databrowser](/reference/ft_databrowser), [ft_movieplotTFR](/reference/ft_movieplotTFR), [ft_multiplotER](/reference/ft_multiplotER), [ft_multiplotTFR](/reference/ft_multiplotTFR), [ft_realtime_headlocalizer](/reference/realtime/example/ft_realtime_headlocalizer), [ft_rejectvisual](/reference/ft_rejectvisual), [ft_singleplotER](/reference/ft_singleplotER), [ft_singleplotTFR](/reference/ft_singleplotTFR), [ft_spike_plot_isi](/reference/ft_spike_plot_isi), [ft_spike_plot_psth](/reference/ft_spike_plot_psth), [ft_topoplotTFR](/reference/ft_topoplotTFR)  
+**cfg.ylim** - [ft_connectivityplot](/reference/ft_connectivityplot), [ft_databrowser](/reference/ft_databrowser), [ft_movieplotTFR](/reference/ft_movieplotTFR), [ft_multiplotER](/reference/ft_multiplotER), [ft_multiplotTFR](/reference/ft_multiplotTFR), [ft_realtime_headlocalizer](/reference/realtime/example/ft_realtime_headlocalizer), [ft_rejectvisual](/reference/ft_rejectvisual), [ft_singleplotER](/reference/ft_singleplotER), [ft_singleplotTFR](/reference/ft_singleplotTFR), [ft_spike_plot_isi](/reference/contrib/spike/ft_spike_plot_isi), [ft_spike_plot_psth](/reference/contrib/spike/ft_spike_plot_psth), [ft_topoplotTFR](/reference/ft_topoplotTFR)  
 
 
 **cfg.yrange** - [ft_volumereslice](/reference/ft_volumereslice)  
@@ -3214,16 +3214,16 @@ A detailed description of each function is available in the [reference documenta
 **cfg.zscore** - [ft_denoise_pca](/reference/ft_denoise_pca), [ft_mvaranalysis](/reference/ft_mvaranalysis)  
 
 
-**cfg.zthresh.mindist** - [ft_spikedetection](/reference/ft_spikedetection)  
+**cfg.zthresh.mindist** - [ft_spikedetection](/reference/contrib/spike/ft_spikedetection)  
 
 
-**cfg.zthresh.neg** - [ft_spikedetection](/reference/ft_spikedetection)  
+**cfg.zthresh.neg** - [ft_spikedetection](/reference/contrib/spike/ft_spikedetection)  
 
 
-**cfg.zthresh.offset** - [ft_spikedetection](/reference/ft_spikedetection)  
+**cfg.zthresh.offset** - [ft_spikedetection](/reference/contrib/spike/ft_spikedetection)  
 
 
-**cfg.zthresh.pos** - [ft_spikedetection](/reference/ft_spikedetection)  
+**cfg.zthresh.pos** - [ft_spikedetection](/reference/contrib/spike/ft_spikedetection)  
 
 
 **cfg=ft_badchannel** - [ft_badchannel](/reference/ft_badchannel)  
@@ -3235,4 +3235,4 @@ A detailed description of each function is available in the [reference documenta
 **cfg=ft_rejectartifact** - [ft_rejectartifact](/reference/ft_rejectartifact)  
 
 
-**cfg=ft_spikedetection** - [ft_spikedetection](/reference/ft_spikedetection)  
+**cfg=ft_spikedetection** - [ft_spikedetection](/reference/contrib/spike/ft_spikedetection)  

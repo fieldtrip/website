@@ -35,7 +35,7 @@ In this section we describe the procedure to acquire electrode positions with a 
 
 - First we have to record the data using the 3D-scanner
 - then we will read the surface me with **[ft_read_headshape](/reference/fileio/ft_read_headshape)**
-- we convert the units of the mesh **[ft_convert_units](/reference/ft_convert_units)**
+- we convert the units of the mesh **[ft_convert_units](/reference/forward/ft_convert_units)**
 - we localise the fiducials on the head surface **[ft_electrodeplacement](/reference/ft_electrodeplacement)**
 - we realign the mesh on the bases of the fiducials to ctf-coordiantes **[ft_meshrealign](/reference/ft_meshrealign)**
 - now we are able to localise the electrode locations **[ft_electrodeplacement](/reference/ft_electrodeplacement)**
