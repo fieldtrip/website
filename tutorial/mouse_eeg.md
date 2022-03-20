@@ -567,7 +567,7 @@ It is useful to also explicitly specify the coordinate system in the anatomical 
 
 #### Correcting the units of the anatomical MRI
 
-Finally, we notice is that the units are off by a factor 10x. In the figure of **[ft_determine_coordsys](/reference/ft_determine_coordsys)**, the sphere at the origin, each thick line segment is by default 1 cm, and the axes are 15 cm long, as that is appropriate for judging the human anatomy. We can also plot it with
+Finally, we notice is that the units are off by a factor 10x. In the figure of **[ft_determine_coordsys](/reference/utilities/ft_determine_coordsys)**, the sphere at the origin, each thick line segment is by default 1 cm, and the axes are 15 cm long, as that is appropriate for judging the human anatomy. We can also plot it with
 
 The units can be fixed by
 

@@ -40,7 +40,7 @@ If you also have the [MATLAB Parallel Server](https://nl.mathworks.com/products/
 
 At the Donders we have a Linux compute cluster that is managed with a batch queueing system that allows users to submit large batches of jobs to run in parallel. The Donders cluster runs Torque/Maui, but other PBS systems, SLURM, LSF, Sun Grid Engine and Oracle Grid Engine are also supported. More documentation on the qsub toolbox is found [here](/development/module/qsub).
 
-To facilitate distributed computing, we have implemented the **[qsubcellfun](/reference/qsubcellfun)** wrapper function within MATLAB, which for the end-user works similar to [cellfun](https://nl.mathworks.com/help/matlab/ref/cellfun.html) and [batch](https://nl.mathworks.com/help/parallel-computing/batch.html).
+To facilitate distributed computing, we have implemented the **[qsubcellfun](/reference/qsub/qsubcellfun)** wrapper function within MATLAB, which for the end-user works similar to [cellfun](https://nl.mathworks.com/help/matlab/ref/cellfun.html) and [batch](https://nl.mathworks.com/help/parallel-computing/batch.html).
 
     for i=1:Nsubj
       cfg{i}         = ...
@@ -48,7 +48,7 @@ To facilitate distributed computing, we have implemented the **[qsubcellfun](/re
     end
     rawdata = qsubcellfun(@ft_preprocessing, cfg);
 
-See **[qsubcellfun](/reference/qsubcellfun)**, **[qsubfeval](/reference/qsubfeval)** and **[qsubget](/reference/qsubget)** for details.
+See **[qsubcellfun](/reference/qsub/qsubcellfun)**, **[qsubfeval](/reference/qsub/qsubfeval)** and **[qsubget](/reference/qsub/qsubget)** for details.
 
 ### FieldTrip peer computing toolbox
 

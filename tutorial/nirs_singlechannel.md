@@ -171,7 +171,7 @@ What is the optimal threshold to get rid off short-lived transient peaks?
 
 ### Transform to changes in oxyHB/deoxyHB
 
-You might have noticed that you were looking at optical density (OD) values rather than at oxygenated and deoxygenated hemoglobin concentrations, because the channel labels mention the wavelengths. The optical density values directly relates to the light intensity that picked up by the the optodes. We can transform our data to concentrations using **[ft_nirs_transform_ODs](/reference/ft_nirs_transform_ODs)**. One of the choices to make when using **[ft_nirs_transform_ODs](/reference/ft_nirs_transform_ODs)** is the differential path-length factor or DPF, which differs depending on the age of the participant and the tissue type under investigation (e.g., when analyzing changes in blood oxygenation in muscle rather than brain).
+You might have noticed that you were looking at optical density (OD) values rather than at oxygenated and deoxygenated hemoglobin concentrations, because the channel labels mention the wavelengths. The optical density values directly relates to the light intensity that picked up by the the optodes. We can transform our data to concentrations using **[ft_nirs_transform_ODs](/reference/external/artinis/ft_nirs_transform_ODs)**. One of the choices to make when using **[ft_nirs_transform_ODs](/reference/external/artinis/ft_nirs_transform_ODs)** is the differential path-length factor or DPF, which differs depending on the age of the participant and the tissue type under investigation (e.g., when analyzing changes in blood oxygenation in muscle rather than brain).
 
     cfg = [];
     cfg.dpf = 5.9;

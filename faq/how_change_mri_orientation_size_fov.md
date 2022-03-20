@@ -12,7 +12,7 @@ The function **[ft_volumereslice](/reference/ft_volumereslice)** allows you to
 3.  zoom in or on a part of the volume, i.e. changing the number of voxels and FOV
 4.  change the resolution, e.g., changing the voxel size from 1 mm to 2 mm
 
-Anatomical data, for example an anatomical MRI or other volumentric representations (such as a [segmentation](/faq/how_is_the_segmentation_defined)) are represented as a [volume](/reference/utilities/ft_datatype_vol/e) MATLAB structure in FieldTrip.
+Anatomical data, for example an anatomical MRI or other volumentric representations (such as a [segmentation](/faq/how_is_the_segmentation_defined)) are represented as a [volume](/reference/utilities/ft_datatype_volume) MATLAB structure in FieldTrip.
 
 An example volume structure is
 

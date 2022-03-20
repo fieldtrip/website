@@ -39,7 +39,7 @@ After adding the FieldTrip main path, you should execute the **[ft_defaults](/re
 
     ft_defaults
 
-If a subsequent FieldTrip function need an external toolbox that is present in fieldtrip/external, the **[ft_hastoolbox](/reference/ft_hastoolbox)** function will be called by the respective function and the path will be updated on the fly.
+If a subsequent FieldTrip function need an external toolbox that is present in fieldtrip/external, the **[ft_hastoolbox](//reference/utilities/ft_hastoolbox)** function will be called by the respective function and the path will be updated on the fly.
 
 ## Making it persistent
 
@@ -57,8 +57,8 @@ All other dependencies will subsequently be added automatically when needed.
 
 ## How to deal with toolboxes that FieldTrip uses?
 
-In case FieldTrip function needs additional functions (e.g., for reading a specific data format such as CTF, or for performing a specific computation such as runica), it uses the **[ft_hastoolbox](/reference/ft_hastoolbox)** helper function to determine whether a toolbox is present. If the toolbox is present on your path, it will not add it once more. If the toolbox "xxx" is not yet present, but the directory seems to be present in fieldtrip/external/xxx, then it will add that directory to your path.
+In case FieldTrip function needs additional functions (e.g., for reading a specific data format such as CTF, or for performing a specific computation such as runica), it uses the **[ft_hastoolbox](//reference/utilities/ft_hastoolbox)** helper function to determine whether a toolbox is present. If the toolbox is present on your path, it will not add it once more. If the toolbox "xxx" is not yet present, but the directory seems to be present in fieldtrip/external/xxx, then it will add that directory to your path.
 
 The main FieldTrip functions such as **[ft_preprocessing](/reference/ft_preprocessing)** and **[ft_freqanalysis](/reference/ft_freqanalysis)** all call the **[ft_defaults](/reference/ft_defaults)** function at the beginning. The **[ft_defaults](/reference/ft_defaults)** function ensures that the required subdirectories such as fieldtrip/preproc and fieldtrip/fileio are added. All other toolboxes in fieldtrip/external will only be added upon request, i.e. only when a function from one of those toolboxes is really needed.
 
-You might be worried that this automatic path-checking and path-adding on every function call makes it slow. The **[ft_hastoolbox](/reference/ft_hastoolbox)** function remembers (with a persistent variable) whether a certain toolbox has already been checked, and therefore does not check the same toolbox twice. In case FieldTrip folders are removed, for instance by using rmpath or restoredefaultpath, make sure to reset the persistent variable in the ft_hastoolbox function again by executing "clear ft_hastoolbox".
+You might be worried that this automatic path-checking and path-adding on every function call makes it slow. The **[ft_hastoolbox](//reference/utilities/ft_hastoolbox)** function remembers (with a persistent variable) whether a certain toolbox has already been checked, and therefore does not check the same toolbox twice. In case FieldTrip folders are removed, for instance by using rmpath or restoredefaultpath, make sure to reset the persistent variable in the ft_hastoolbox function again by executing "clear ft_hastoolbox".

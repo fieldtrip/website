@@ -300,7 +300,7 @@ Inspect the signal carefully! When does it increase/decrease, when does it peak?
 
 ### Remove bad channels
 
-First, we will remove the optode channels that make poor contact with the skin of the scalp yielding bad signal because of that. From the optical density traces we can estimate whether there is a good coupling between optode and scalp, because the two signals from each optode (corresponding to the two wavelengths) should have a heartbeat that is positively correlated. If the correlation is small or negative, we exclude that optode from further processing. This is implemented in **[ft_nirs_scalpcouplingindex](/reference/ft_nirs_scalpcouplingindex)**. For more details see [Polloniniet al. (2014), Auditory cortex activation to natural speech and simulated cochlear implant speech measured with functional near-infrared spectroscopy](https://doi.org/10.1016/j.heares.2013.11.007).
+First, we will remove the optode channels that make poor contact with the skin of the scalp yielding bad signal because of that. From the optical density traces we can estimate whether there is a good coupling between optode and scalp, because the two signals from each optode (corresponding to the two wavelengths) should have a heartbeat that is positively correlated. If the correlation is small or negative, we exclude that optode from further processing. This is implemented in **[ft_nirs_scalpcouplingindex](/reference/external/artinis/ft_nirs_scalpcouplingindex)**. For more details see [Polloniniet al. (2014), Auditory cortex activation to natural speech and simulated cochlear implant speech measured with functional near-infrared spectroscopy](https://doi.org/10.1016/j.heares.2013.11.007).
 
     cfg      = [];
     data_sci = ft_nirs_scalpcouplingindex(cfg, data_epoch);
@@ -331,7 +331,7 @@ We already removed major motion artifacts by epoching, thus removing the periods
 
 ### Transform optical densities to oxy- and deoxy-hemoglobin concentration changes
 
-Like in the [single channel tutorial](/tutorial/nirs_singlechannel), we will now convert the optical densities into oxygenated and deoxygenated hemoglobin concentrations by using **[ft_nirs_transform_ODs](/reference/ft_nirs_transform_ODs)**.
+Like in the [single channel tutorial](/tutorial/nirs_singlechannel), we will now convert the optical densities into oxygenated and deoxygenated hemoglobin concentrations by using **[ft_nirs_transform_ODs](/reference/external/artinis/ft_nirs_transform_ODs)**.
 
     cfg                 = [];
     cfg.target          = {'O2Hb', 'HHb'};

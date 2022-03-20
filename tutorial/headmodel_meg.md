@@ -77,7 +77,7 @@ You can see that the **coordsys** field of anatomical data that we read in is al
 It is also possible to read in anatomical MRI data in [other formats](/faq/dataformat), which are defined in [a different coordinate system](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined). If your anatomical MRI is not aligned to the ctf coordinate system, it can be [aligned](/faq/how_to_coregister_an_anatomical_mri_with_the_gradiometer_or_electrode_positions) using **[ft_volumerealign](/reference/ft_volumerealign)** function. For this, you will need to align your MRI to the [fiducial
 points](/faq/how_are_the_lpa_and_rpa_points_defined).
 
-When you read in your own anatomical data, it may not give information on the coordinate system in which the anatomical data is expressed and/or maybe there is no [transformation matrix](/faq/how_to_coregister_an_anatomical_mri_with_the_gradiometer_or_electrode_positions) specified. In this case, you can check the coordinate-system with the **[ft_determine_coordsys](/reference/ft_determine_coordsys)** function.
+When you read in your own anatomical data, it may not give information on the coordinate system in which the anatomical data is expressed and/or maybe there is no [transformation matrix](/faq/how_to_coregister_an_anatomical_mri_with_the_gradiometer_or_electrode_positions) specified. In this case, you can check the coordinate-system with the **[ft_determine_coordsys](/reference/utilities/ft_determine_coordsys)** function.
 {% include markup/end %}
 
 ### Segmentation

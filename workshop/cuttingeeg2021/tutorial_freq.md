@@ -150,7 +150,7 @@ Repeat the filtering and averaging, but now for a different partitioning of the 
     animals_minus_tools  = ft_math(cfg, timelock_animals, timelock_tools);
     spoken_minus_written = ft_math(cfg, timelock_spoken, timelock_written);
 
-The **[ft_math](/reference/math)** function allows to perform mathematical operations on the numeric data, while keeping track of the processing steps. This is beneficial in relation to reproducibility of results. Specifically, the below could also easily be obtained by the creation of a new variable `animals_minus_tools`, and storing the difference in its 'avg' field: `animals_minus_tools.avg = timelock_animals.avg - timelock_tools.avg`. This is not ideal, since we could easily lose track of how the numeric data were actually generated. As an bonus exercise, you could explore the history of a FieldTrip variable by looking in its cfg field:
+The **[ft_math](/reference/ft_math)** function allows to perform mathematical operations on the numeric data, while keeping track of the processing steps. This is beneficial in relation to reproducibility of results. Specifically, the below could also easily be obtained by the creation of a new variable `animals_minus_tools`, and storing the difference in its 'avg' field: `animals_minus_tools.avg = timelock_animals.avg - timelock_tools.avg`. This is not ideal, since we could easily lose track of how the numeric data were actually generated. As an bonus exercise, you could explore the history of a FieldTrip variable by looking in its cfg field:
 
     ft_analysispipeline([], spoken_minus_written);
 

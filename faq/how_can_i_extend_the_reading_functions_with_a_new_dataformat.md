@@ -27,7 +27,7 @@ Here it is shown for `ft_read_header`, the others have a similar section with `d
     dat = manufacturer_extension(filename, hdr, begsample, endsample, chanindx)
     evt = manufacturer_extension(filename, hdr)
 
-You provide the `fieldtrip/fileio/private/manufacturer_extension.m` function and implement it such that - depending on the number of input arguments - it returns the header, the data or the events. Please check one of the already available implementations as example. If your reading function depends on an external library, please add that library to `fieldtrip/external` and use **[ft_hastoolbox](/reference/ft_hastoolbox)** to detect its presence and/or add it to the path.
+You provide the `fieldtrip/fileio/private/manufacturer_extension.m` function and implement it such that - depending on the number of input arguments - it returns the header, the data or the events. Please check one of the already available implementations as example. If your reading function depends on an external library, please add that library to `fieldtrip/external` and use **[ft_hastoolbox](//reference/utilities/ft_hastoolbox)** to detect its presence and/or add it to the path.
 
 If the new file format contains MEG data, the magnetometer/gradiometer sensor description is also important. For that we usually implement a conversion in a xxx2grad function. Have a look in `fieldtrip/fileio/private/` for some examples.
 

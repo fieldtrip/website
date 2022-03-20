@@ -13,7 +13,7 @@ You can find the templates for defining neighbouring channels included in FieldT
 
 ## Electrode neighbour templates
 
-EEG neighbour templates are based on [automatic, symmetric triangulation](http://fieldtrip.fcdonders.nl/faq/how_does_ft_prepare_neighbours_work) of the [2D layout templates](http://fieldtrip.fcdonders.nl/template/layout). After the automatic definition, we used [3D electrode positions](http://fieldtrip.fcdonders.nl/template/electrode) and [ft_neighbourplot](/reference/neighbourplot) with cfg.enableedit='yes' to manually add and/or remove edges between sensors.
+EEG neighbour templates are based on [automatic, symmetric triangulation](http://fieldtrip.fcdonders.nl/faq/how_does_ft_prepare_neighbours_work) of the [2D layout templates](http://fieldtrip.fcdonders.nl/template/layout). After the automatic definition, we used [3D electrode positions](http://fieldtrip.fcdonders.nl/template/electrode) and [ft_neighbourplot](/reference/ft_neighbourplot) with cfg.enableedit='yes' to manually add and/or remove edges between sensors.
 
 Currently, the following neighbour templates are shipping with FieldTrip (note that neighbour templates are always suffixed with \_neighb
 
@@ -52,7 +52,7 @@ Other 'Easycaps' constitute a subset of one of these systems or feature freely p
 
 ## MEG neighbour templates
 
-MEG neighbour templates are based on [automatic, symmetric triangulation](http://fieldtrip.fcdonders.nl/faq/how_does_ft_prepare_neighbours_work) of the [2D layout templates](http://fieldtrip.fcdonders.nl/template/layout). After the automatic definition, we used gradiometer information from one test measurement per system and [ft_neighbourplot](/reference/neighbourplot) with cfg.enableedit='yes' to manually add and/or remove edges between sensors.
+MEG neighbour templates are based on [automatic, symmetric triangulation](http://fieldtrip.fcdonders.nl/faq/how_does_ft_prepare_neighbours_work) of the [2D layout templates](http://fieldtrip.fcdonders.nl/template/layout). After the automatic definition, we used gradiometer information from one test measurement per system and [ft_neighbourplot](/reference/ft_neighbourplot) with cfg.enableedit='yes' to manually add and/or remove edges between sensors.
 
 ### BTI systems
 
