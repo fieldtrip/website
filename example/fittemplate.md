@@ -108,7 +108,7 @@ This requires an external toolbox, which can be downloaded [here](https://sites.
 
 We determine an affine transformation that fits the template scalp surface to the Polhemus surface. This not only applies a translation and rotation, but also a scaling in the different directions and some skewing.
 
-It is important that the template scalp surface only contains features that are also in the Polhemus surface, and vice versa. We can use **[ft_defacemesh](https://github.com/fieldtrip/fieldtrip/blob/release/ft_defacemesh.m)** to remove some features.
+It is important that the template scalp surface only contains features that are also in the Polhemus surface, and vice versa. We can use **[ft_defacemesh](/reference/ft_defacemesh)** to remove some features.
 
 We visualize both meshes:
 

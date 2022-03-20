@@ -16,7 +16,7 @@ Standard MATLAB already includes functionality to read from and write to serial 
 The [Psychtoolbox IOPort](http://docs.psychtoolbox.org/IOPort) is a MEX file for precise control of input/output hardware, e.g., Serial ports (or emulated serial ports like Serial-over-USB etc.),
 parallel ports, network ports, and special digital I/O boxes.
 
-The **[ft_write_event](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_write_event.m)** function includes `serial://<port>?key1=value1&key2=value2&...` as a target stream.
+The **[ft_write_event](/reference/fileio/ft_write_event)** function includes `serial://<port>?key1=value1&key2=value2&...` as a target stream.
 
 ## Communicating to a serial port using a TCP network connection
 
@@ -33,7 +33,7 @@ parallel ports, network ports, and special digital I/O boxes.
 
 VNC and derivatives use the Remote Frame Buffer (RFB) protocol for communication. More details and the full specification can be found at http://en.wikipedia.org/wiki/RFB.
 
-The **[ft_write_event](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_write_event.m)** function includes `rfb://<password>@<host>:<port>` as a target communication stream.
+The **[ft_write_event](/reference/fileio/ft_write_event)** function includes `rfb://<password>@<host>:<port>` as a target communication stream.
 
 ## Communicating over a TCP network connection
 

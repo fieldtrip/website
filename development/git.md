@@ -104,7 +104,7 @@ All the **highlighted** words are the new concepts explained above. **Forking** 
 
 ## Tutorial
 
-Now that the main concepts are explained, we will try to add a new feature to FieldTrip using a minimal example. In our case, what we think that FieldTrip really needs is that when you run **[ft_defaults](https://github.com/fieldtrip/fieldtrip/blob/release/ft_defaults.m)**, you get a text saying _Welcome to FieldTrip_. So we need to create a new function that prints _Welcome to FieldTrip_ and modify the existing function **[ft_defaults](https://github.com/fieldtrip/fieldtrip/blob/release/ft_defaults.m)** to run our new function. We expect that you already have git running on your system (see [installation instructions](http://git-scm.com/book/en/Getting-Started-Installing-Git)) and that you have an account on [github.com](https://github.com) (see [set up git](https://help.github.com/articles/set-up-git)). Let's say that your username on GitHub is _USERNAME_.
+Now that the main concepts are explained, we will try to add a new feature to FieldTrip using a minimal example. In our case, what we think that FieldTrip really needs is that when you run **[ft_defaults](/reference/ft_defaults)**, you get a text saying _Welcome to FieldTrip_. So we need to create a new function that prints _Welcome to FieldTrip_ and modify the existing function **[ft_defaults](/reference/ft_defaults)** to run our new function. We expect that you already have git running on your system (see [installation instructions](http://git-scm.com/book/en/Getting-Started-Installing-Git)) and that you have an account on [github.com](https://github.com) (see [set up git](https://help.github.com/articles/set-up-git)). Let's say that your username on GitHub is _USERNAME_.
 
 ### 1. Fork the main FieldTrip
 
@@ -159,7 +159,7 @@ Now we will create a function that displays _Welcome to FieldTrip_ on screen. Le
 When you create a new function or edit an existing one, follow the [code guidelines](/development/guideline/code) for consistent and readable code.
 {% include markup/end %}
 
-In addition to this function, we will also modify the function **[ft_defaults](https://github.com/fieldtrip/fieldtrip/blob/release/ft_defaults.m)**.
+In addition to this function, we will also modify the function **[ft_defaults](/reference/ft_defaults)**.
 
 ### 5. Commit your changes
 

@@ -6,7 +6,7 @@ tags: [example, bids, sharing, audio]
 # Converting an example audio dataset for sharing in BIDS
 
 {% include markup/danger %}
-The [BIDS standard](https://bids.neuroimaging.io)  does currently not specify how to represent audio recordings. This example - and the support that is implemented in the **[data2bids](https://github.com/fieldtrip/fieldtrip/blob/release/data2bids.m)** function - should be considered as a preliminary proposal to help researchers with their existing data. This example may also serve to start a discussion on whether and how this data type should be added to the [BIDS specification](http://bids-specification.readthedocs.io/).  
+The [BIDS standard](https://bids.neuroimaging.io)  does currently not specify how to represent audio recordings. This example - and the support that is implemented in the **[data2bids](/reference/data2bids)** function - should be considered as a preliminary proposal to help researchers with their existing data. This example may also serve to start a discussion on whether and how this data type should be added to the [BIDS specification](http://bids-specification.readthedocs.io/).  
 {% include markup/end %}
 
 In language studies, and especially speech production experiments, audio might be recorded on itself or along with other measurements, e.g., physiological signals from the brain. The audio can be used to monitor the subjects responses to a task, or can be off-line annotated/segmented in sentences, words or phonemes. Neither the audio recording (which can be considered as raw data), nor the annotations (which can be considered as derived data) are currently formally part of BIDS, although it is not so difficult to come up with a way that these can be represented in a BIDS-like fashion.

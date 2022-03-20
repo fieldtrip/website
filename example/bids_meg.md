@@ -27,7 +27,7 @@ Control subjects are coded from S101 to S115, patients are coded from S201 to S2
 
 The data is anonimized using the `go_anonymiseDs.m` function from [this example page](/faq/how_can_i_anonymize_a_ctf_dataset/#using-matlab). This reads in the data with a low-level CTF function, scrubs potentially identifying  information, and writes it with a low-level CTF function. Some of the auxiliary files that can optionally be present (for example when the data was opened with the CTF DataEditor application) and the headlocalizer data will be ignored upon reading, and hence also not appear in the copy that is written.
 
-The anonimized version of the CTF data has a short descriptive name. Using the **[data2bids](https://github.com/fieldtrip/fieldtrip/blob/release/data2bids.m)** we copy and rename the CTF data so that it has the right directory structure and file names, and we add the metadata.
+The anonimized version of the CTF data has a short descriptive name. Using the **[data2bids](/reference/data2bids)** we copy and rename the CTF data so that it has the right directory structure and file names, and we add the metadata.
 
 
 ```

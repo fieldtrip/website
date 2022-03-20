@@ -30,13 +30,13 @@ which should return
 
     [1, 4, 9]
 
-What happened is that **[enginecellfun](https://github.com/fieldtrip/fieldtrip/blob/release/enginecellfun.m)** distributed the execution of these three jobs over all separate threads
+What happened is that **[enginecellfun](/reference/enginecellfun)** distributed the execution of these three jobs over all separate threads
 
     power(1, 2)
     power(2, 2)
     power(3, 2)
 
-Most applications of **[enginecellfun](https://github.com/fieldtrip/fieldtrip/blob/release/enginecellfun.m)** will return non-scalar values, which cannot be appended into a single vector. In that case, consistent with cellfun, it will return an error unless you specify that the output will be non-uniform. E.g.
+Most applications of **[enginecellfun](/reference/enginecellfun)** will return non-scalar values, which cannot be appended into a single vector. In that case, consistent with cellfun, it will return an error unless you specify that the output will be non-uniform. E.g.
 
     enginecellfun(@rand, {1, 2, 3}, 'UniformOutput', false)
 

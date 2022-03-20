@@ -96,7 +96,7 @@ After further processing and artifact removal you could also take them from the 
 
 {% include image src="/assets/img/example/nirs_glm/figure2.png" width="400" %}
 
-Remove the baseline, see also **[ft_preproc_baselinecorrect](https://github.com/fieldtrip/fieldtrip/blob/release/preproc/ft_preproc_baselinecorrect.m)** and **[ft_preproc_detrend](https://github.com/fieldtrip/fieldtrip/blob/release/preproc/ft_preproc_detrend.m)**. This is beneficial here, since the experimental regressors are not orthogonal to the confound regressors.
+Remove the baseline, see also **[ft_preproc_baselinecorrect](/reference/preproc/ft_preproc_baselinecorrect)** and **[ft_preproc_detrend](/reference/preproc/ft_preproc_detrend)**. This is beneficial here, since the experimental regressors are not orthogonal to the confound regressors.
 
     y = ft_preproc_polyremoval(y', 2)';
 

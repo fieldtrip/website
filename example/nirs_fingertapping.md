@@ -161,7 +161,7 @@ Contrary to the description in the accompanying publication (see table 1 in the 
 
 Since the data is not stored on disk in a [dataformat](/faq/dataformat/) that FieldTrip can directly read, we will circumvent the FieldTrip reading functions as outlined in [this frequenly asked question](/faq/how_can_i_import_my_own_dataformat/#circumvent-the-fieldtrip-reading-functions).
 
-We start with constructing a MATLAB data structure according to **[ft_datatype_raw](https://github.com/fieldtrip/fieldtrip/blob/release/utilities/ft_datatype_raw.m)**, as if it were produced by **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)**.
+We start with constructing a MATLAB data structure according to **[ft_datatype_raw](/reference/utilities/ft_datatype_raw)**, as if it were produced by **[ft_preprocessing](/reference/ft_preprocessing)**.
 
     data_raw = [];
     data_raw.label = nirs.nfo.clab(:);
@@ -221,9 +221,9 @@ This is how far we can get
     opto.label = nirs.mnt.clab(:);
     opto.chanpos = nirs.mnt.pos_3d'; % these are all nan
 
-But this is not a complete description of the channel and sensor information according to **[ft_dataype_sens](https://github.com/fieldtrip/fieldtrip/blob/release/utilities/ft_datatype_sens.m)**. However, a full sensor definitioon is also not required: the opical densities have already been converted in HbO and HbR prior to sharing, so we only care about channel positions for plotting.
+But this is not a complete description of the channel and sensor information according to **[ft_dataype_sens](/reference/utilities/ft_datatype_sens)**. However, a full sensor definitioon is also not required: the opical densities have already been converted in HbO and HbR prior to sharing, so we only care about channel positions for plotting.
 
-For the plotting of channel level data (see also [this tutorial](/tutorial/plotting/)) we need a 2D layout. That is explained in detail in [this tutorial](/tutorial/layout/). If the `opto` definition had included 2D or 3D channel positions, then we could have used **[ft_prepare_layout](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_layout.m)** but now we will manually construct the layout structure.
+For the plotting of channel level data (see also [this tutorial](/tutorial/plotting/)) we need a 2D layout. That is explained in detail in [this tutorial](/tutorial/layout/). If the `opto` definition had included 2D or 3D channel positions, then we could have used **[ft_prepare_layout](/reference/ft_prepare_layout)** but now we will manually construct the layout structure.
 
     layout = [];
     layout.label = nirs.mnt.clab(:);
@@ -240,7 +240,7 @@ I don't think that the 41st position refers to an actual channel, so let's remov
     layout.width(41)  = [];
     layout.height(41) = [];
 
-We can plot the layout using **[ft_plot_layout](https://github.com/fieldtrip/fieldtrip/blob/release/plotting/ft_plot_layout.m)** and inspect it in detail. That is something I have done multiple times, going back and forth in the script to ensure that my interpretation of the `mnt` field matches the data.
+We can plot the layout using **[ft_plot_layout](/reference/plotting/ft_plot_layout)** and inspect it in detail. That is something I have done multiple times, going back and forth in the script to ensure that my interpretation of the `mnt` field matches the data.
 
     figure
     ft_plot_layout(layout, 'label', true)
@@ -342,7 +342,7 @@ Note that `1/data.fsample = 0.075`, i.e., with the 13.333 Hz sampling rate each 
 
 ## Segment the continuous data into trials
 
-To segment the data we have to create a so-called "trial definition". This would normally be done using **[ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_definetrials.m)** and using the events that were read from the data on disk (had it been a supported file format). The trial definition specifies the begin and end sample of each trial, and the offset, i.e., how many samples the time defined as t=0 is shifted relative to the data segment. Furthermore, it can contain additional columns with trial specific information, such as condition codes.
+To segment the data we have to create a so-called "trial definition". This would normally be done using **[ft_definetrial](/reference/ft_definetrials)** and using the events that were read from the data on disk (had it been a supported file format). The trial definition specifies the begin and end sample of each trial, and the offset, i.e., how many samples the time defined as t=0 is shifted relative to the data segment. Furthermore, it can contain additional columns with trial specific information, such as condition codes.
 
 The temporal structure of each trial is
 
@@ -353,7 +353,7 @@ The temporal structure of each trial is
 
 The total duration of a trial, including the instruction, ranges from 2+10+2+15=29 to 2+10+2+17=31 seconds.
 
-We will use the standard FieldTrip `event` structure to make the trials, this is also what **[ft_read_event](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_event.m)** returns for supported data formats.
+We will use the standard FieldTrip `event` structure to make the trials, this is also what **[ft_read_event](/reference/fileio/ft_read_event)** returns for supported data formats.
 
     taskonset = [event.sample];  % let's assume that the marker is at task onset
     begsample = taskonset - 2*data_raw.fsample;

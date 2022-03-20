@@ -59,6 +59,6 @@ See [this presentation](http://slideshare.net/RobertOostenveld/cuttingeeg-open-s
 
 There is not per se a perfect format for sharing the dataset, so you have to **be pragmatic** and where needed consider the peculiarities of your dataset. However, we strongly recommend that you follow the [Brain Imaging Data Structure](http://bids.neuroimaging.io/) (BIDS), for which an MRI oriented introduction has been published [here](http://www.nature.com/articles/sdata201644), the MEG version has been published [here](https://www.nature.com/articles/sdata2018110).
 
-BIDS is an active project; the [specification](https://bids-specification.readthedocs.io/en/stable/) is still expanding through so-called BIDS extension proposals (BEPs). Also tools to create and work with BIDS datasets are under active development. FieldTrip includes the **[data2bids](https://github.com/fieldtrip/fieldtrip/blob/release/data2bids.m)** function to help you organize your data in BIDS. Under the examples section you can find multiple example scripts:
+BIDS is an active project; the [specification](https://bids-specification.readthedocs.io/en/stable/) is still expanding through so-called BIDS extension proposals (BEPs). Also tools to create and work with BIDS datasets are under active development. FieldTrip includes the **[data2bids](/reference/data2bids)** function to help you organize your data in BIDS. Under the examples section you can find multiple example scripts:
 
 {% include seealso tag1="example" tag2="bids" %}

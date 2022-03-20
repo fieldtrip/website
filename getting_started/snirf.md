@@ -11,13 +11,13 @@ The SNIRF format itself is base on the Hierarchical Data format [HDF5](https://w
 
 ## Reading SNIRF data
 
-In FieldTrip you can read SNIRF files using the low-level reading functions **[ft_read_header](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_header.m)**, **[ft_read_data](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_data.m)** and **[ft_read_event](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_event.m)**, which also means that you can browse, import and preprocess the data in the standard way as explained in the tutorials using **[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_databrowser.m)** and **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)**.
+In FieldTrip you can read SNIRF files using the low-level reading functions **[ft_read_header](/reference/fileio/ft_read_header)**, **[ft_read_data](/reference/fileio/ft_read_header)** and **[ft_read_event](/reference/fileio/ft_read_header)**, which also means that you can browse, import and preprocess the data in the standard way as explained in the tutorials using **[ft_databrowser](/reference/ft_databrowser)** and **[ft_preprocessing](/reference/ft_preprocessing)**.
 
 ## Writing SNIRF data
 
 You can write data that is represented as a continuous FieldTrip raw data structure (see this [FAQ](/faq/how_are_the_various_data_structures_defined)) to a SNIRF file. That means that any data format supported by FieldTrip can be converted to SNIRF; this includes NIRS formats such as Artinis and Homer, but also non-NIRS data such as EEG. Channels in the raw data structure that are recognized as NIRS will be written in the [data](https://github.com/fNIRS/snirf/blob/master/snirf_specification.md#nirsidataj) field, all other channels will be written in the [aux](https://github.com/fNIRS/snirf/blob/master/snirf_specification.md#nirsiauxj) field.
 
-Events or triggers are represented very differently in the different file formats; in FieldTrip we always use the format as returned by **[ft_read_event](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_event.m)**. To write events to a SNIRF file you have to pass them as additional argument to **[ft_write_data](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_write_data.m)** like this
+Events or triggers are represented very differently in the different file formats; in FieldTrip we always use the format as returned by **[ft_read_event](/reference/fileio/ft_read_header)**. To write events to a SNIRF file you have to pass them as additional argument to **[ft_write_data](/reference/fileio/ft_read_header)** like this
 
     ft_write_data(filename, dat, 'header', hdr, 'event', event)
 

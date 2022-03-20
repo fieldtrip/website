@@ -60,8 +60,8 @@ To compute time-resolved power spectra for the task data and the
 perform the following steps:
 
 - Load the data into MATLAB
-- Compute the power spectra using **[ft_freqanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqanalysis.m)**
-- Visualize the results for all channels and for selected channels. You can make time-frequency plots using **[ft_singleplotTFR](https://github.com/fieldtrip/fieldtrip/blob/release/ft_singleplotTFR.m)**, **[ft_multiplotTFR](https://github.com/fieldtrip/fieldtrip/blob/release/ft_multiplotTFR.m)** and **[ft_topoplotTFR](https://github.com/fieldtrip/fieldtrip/blob/release/ft_topoplotTFR.m)**. For power spectra without time dimension, you can use **[ft_singleplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_singleplotER.m)**, **[ft_multiplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_multiplotER.m)** and **[ft_topoplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_topoplotER.m)**.
+- Compute the power spectra using **[ft_freqanalysis](/reference/ft_freqanalysis)**
+- Visualize the results for all channels and for selected channels. You can make time-frequency plots using **[ft_singleplotTFR](/reference/ft_singleplotTFR)**, **[ft_multiplotTFR](/reference/ft_multiplotTFR)** and **[ft_topoplotTFR](/reference/ft_topoplotTFR)**. For power spectra without time dimension, you can use **[ft_singleplotER](/reference/ft_singleplotER)**, **[ft_multiplotER](/reference/ft_multiplotER)** and **[ft_topoplotER](/reference/ft_topoplotER)**.
 
 {% include image src="/assets/img/tutorial/timefrequencyanalysis/tfr_pipelinenew.png" width="200" %}
 
@@ -123,7 +123,7 @@ of time-frequency analysis.
 To make the changes in the event-related power better visible, we will
 normalization the power with respect to a baseline interval. There are multiple
 ways that you can normalize (see
-**[ft_freqbaseline](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqbaseline.m)**), the most common two are (a)
+**[ft_freqbaseline](/reference/ft_freqbaseline)**), the most common two are (a)
 subtracting, for each frequency, the average power in the baseline interval from
 the power at all time points. This gives the **absolute change** in power with
 respect to the baseline interval. Another method is (b) dividing, for each
@@ -140,7 +140,7 @@ channels), 3) topographical 2-D map of the power changes in a specified
 time-frequency interval.
 
 To plot the TFRs from all the sensors use the function
-**[ft_multiplotTFR](https://github.com/fieldtrip/fieldtrip/blob/release/ft_multiplotTFR.m)**. Settings can be
+**[ft_multiplotTFR](/reference/ft_multiplotTFR)**. Settings can be
 adjusted in the cfg structure. For example:
 
         cfg = [];
@@ -158,7 +158,7 @@ Plotting was done with ft_multiplotTFR)_
 By using the options `cfg.baseline` and `cfg.baselinetype` in the call to the
 plotting functions, the baseline correction is applied on the fly. Baseline
 correction can also be applied by calling
-**[ft_freqbaseline](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqbaseline.m)**.
+**[ft_freqbaseline](/reference/ft_freqbaseline)**.
 
 You can combine the various visualization options/functions interactively to
 explore your data by clicking and dragging with your mouse in the window. See
@@ -166,7 +166,7 @@ also the [plotting tutorial](/tutorial/plotting) for more details.
 
 An interesting effect seems to be present in the TFR of channel 1. To
 make a plot of a single channel use the function
-**[ft_singleplotTFR](https://github.com/fieldtrip/fieldtrip/blob/release/ft_singleplotTFR.m)**
+**[ft_singleplotTFR](/reference/ft_singleplotTFR)**
 
         cfg = [];
         cfg.baseline     = [-0.5 -0.3];
@@ -182,7 +182,7 @@ make a plot of a single channel use the function
 
 {% include image src="/assets/img/workshop/madrid2019/tutorial_freq/fig2_singleTFR_absolute.png" width="600" %}
 
-_Figure: The time-frequency representation with respect to single sensor obtained using **[ft_singleplotTFR](https://github.com/fieldtrip/fieldtrip/blob/release/ft_singleplotTFR.m)**._
+_Figure: The time-frequency representation with respect to single sensor obtained using **[ft_singleplotTFR](/reference/ft_singleplotTFR)**._
 
 If you see plotting artifacts in your figure, see [this
 question](/faq/i_am_getting_strange_artifacts_in_figures_that_use_opacity).
@@ -190,7 +190,7 @@ question](/faq/i_am_getting_strange_artifacts_in_figures_that_use_opacity).
 From the figure, you can see that there is an increase in power around 3-8
 Hz in the time interval 0.1 to 0.3 s after stimulus onset. To show the
 topography of this power increase use the function
-**[ft_topoplotTFR](https://github.com/fieldtrip/fieldtrip/blob/release/ft_topoplotTFR.m)**
+**[ft_topoplotTFR](/reference/ft_topoplotTFR)**
 
         cfg = [];
         cfg.baseline     = [-0.5 -0.3];
@@ -298,13 +298,13 @@ data. You can download [data_rest.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldt
 ### Effect of the window length
 
 We read the data of participant 22 (baseline sedation session) and we will use
-**[ft_redefinetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_redefinetrial.m)** to cut shorter trials out of
+**[ft_redefinetrial](/reference/ft_redefinetrial)** to cut shorter trials out of
 the continuous data. Specifically, we will cut the data into non-overlapping
 segments of various lengths (1 sec, 2 secs and 4 secs) and we will compute the
 **_power spectrum_** of all data segments and average them.
 
 {% include markup/warning %}
-You can also use **[ft_redefinetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_redefinetrial.m)** to cut the
+You can also use **[ft_redefinetrial](/reference/ft_redefinetrial)** to cut the
 data into time-windows with some overlap (e.g.. 50%). This basically implements
 [Welsh's method](https://en.wikipedia.org/wiki/Welch%27s_method) for spectral
 estimation.
@@ -321,7 +321,7 @@ estimation.
     cfg1.length  = 4;
     base_rpt4    = ft_redefinetrial(cfg1, base);
 
-Now we use **[ft_freqanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqanalysis.m)** to compute the power spectra
+Now we use **[ft_freqanalysis](/reference/ft_freqanalysis)** to compute the power spectra
 using a boxcar window
 
     cfg2 = [];
@@ -361,7 +361,7 @@ window length? Hint: think of the stationarity assumption in FFT
 
 Finally, we will look at the effect of different tapers on the power estimates.
 To enhance the effects of the tapers, we will use the data chopped in windows of
-4 seconds. So let us run again **[ft_freqanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqanalysis.m)**
+4 seconds. So let us run again **[ft_freqanalysis](/reference/ft_freqanalysis)**
 but this time using different tapers: boxcar, Hanning and discrete prolate
 spheroidal sequences (DPSS, i.e. multitapers).
 
@@ -377,7 +377,7 @@ multitapers are used to analyze low frequencies, because there are no gamma band
 effects in this particular dataset.
 
 Spectral analysis with on multitapers is done with the function
-**[ft_freqanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqanalysis.m)**. The function uses the time in
+**[ft_freqanalysis](/reference/ft_freqanalysis)**. The function uses the time in
 which the data has been segmented during preprocessing. Prior to the Fourier
 transformations, the data are "tapered". A single taper can be applied (e.g.
 Hannning) or several orthogonal tapers might be used for each time window (e.g.

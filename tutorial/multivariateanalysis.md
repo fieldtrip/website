@@ -19,7 +19,7 @@ Multivariate methods present an alternative approach to electrophysiological dat
 
 In this tutorial we will use classifiers to analyze a brain-computer interfacing dataset which has been used in this [paper](http://www.sciencedirect.com/science/article/pii/S0893608009001075). In short: 275-channel MEG data was acquired while the subject was instructed with a centrally presented cue to covertly attend to the left or to the right visual hemifield (one faulty sensor was removed in the subsequent analyses). The experimental question is whether we can predict on a single-trial level to which condition (attention to the left or to the right) the single trials belong.
 
-The data has already been segmented into the trials of interest using **[ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_definetrial.m)** and has been preprocessed with **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)**. The data has been detrended and downsampled to 300 Hz. The trials start at cue offset and end 2.5 seconds later. The subject has been attending to either the left or right direction during this period. No artifact rejection has been performed.
+The data has already been segmented into the trials of interest using **[ft_definetrial](/reference/ft_definetrial)** and has been preprocessed with **[ft_preprocessing](/reference/ft_preprocessing)**. The data has been detrended and downsampled to 300 Hz. The trials start at cue offset and end 2.5 seconds later. The subject has been attending to either the left or right direction during this period. No artifact rejection has been performed.
 
 You can find the data [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/classification/covatt.mat).
 
@@ -37,7 +37,7 @@ We will start by analyzing the data in the time domain for our subject.
 
     load covatt;
 
-We now perform a timelock analysis in order to make the data suitable as input to **[ft_timelockstatistics](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockstatistics.m)**. That is, we are going to predict attention direction from temporal data. For the purpose of demonstration we will focus on occipital channels only.
+We now perform a timelock analysis in order to make the data suitable as input to **[ft_timelockstatistics](/reference/ft_timelockstatistics)**. That is, we are going to predict attention direction from temporal data. For the purpose of demonstration we will focus on occipital channels only.
 
     cfg             = [];
     cfg.parameter   = 'trial';
@@ -60,7 +60,7 @@ Let's focus on the last segment of the data
 
     cfg.latency = [2.0 2.5]; % final bit of the attention period
 
-Finally, we call **[ft_timelockstatistics](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockstatistics.m)** which uses the default classification procedure; namely a standardization of the data (subtraction of the mean and division by the standard deviation), followed by applying a linear support vector machin
+Finally, we call **[ft_timelockstatistics](/reference/ft_timelockstatistics)** which uses the default classification procedure; namely a standardization of the data (subtraction of the mean and division by the standard deviation), followed by applying a linear support vector machin
 
     stat = ft_timelockstatistics(cfg, tleft, tright);
 
@@ -72,7 +72,7 @@ Here, it indicates that classification performance is above chance level (0.5) a
 
     cfg.statistic = {'accuracy' 'binomial' 'contingency'};
 
-when running **[ft_timelockstatistics](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockstatistics.m)**. We can now, in addition, look at the contingency matri
+when running **[ft_timelockstatistics](/reference/ft_timelockstatistics)**. We can now, in addition, look at the contingency matri
 
     stat = ft_timelockstatistics(cfg,tleft,tright);
     stat.statistic.contingency

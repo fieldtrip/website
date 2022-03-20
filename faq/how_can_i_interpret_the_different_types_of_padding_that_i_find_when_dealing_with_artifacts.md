@@ -13,8 +13,8 @@ Besides the type of padding, there is also a difference in the specification of 
 
 The typical routines in which padding is used are:
 
-- **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** uses data padding **to** a certain length, see the cfg.padding option. See also the frequently asked question about [how the filter padding in ft_preprocessing works](/faq/how_does_the_filter_padding_in_preprocessing_work).
-- **[ft_freqanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqanalysis.m)** uses zero padding **to** a certain length, see the cfg.pad option
+- **[ft_preprocessing](/reference/ft_preprocessing)** uses data padding **to** a certain length, see the cfg.padding option. See also the frequently asked question about [how the filter padding in ft_preprocessing works](/faq/how_does_the_filter_padding_in_preprocessing_work).
+- **[ft_freqanalysis](/reference/ft_freqanalysis)** uses zero padding **to** a certain length, see the cfg.pad option
 - the artifact detection routines use both zero and data padding **with** a certain amount.
 
 The automatic artifacts detection functions (ft_artifact_xxx) make use of an articulated scheme of padding with different purposes:
@@ -29,4 +29,4 @@ The automatic artifacts detection functions (ft_artifact_xxx) make use of an art
 
 See also the [automatic artifact rejection tutorial](http://fieldtrip.fcdonders.nl/tutorial/automatic_artifact_rejection) for more details on the different types of padding that can be used during data preprocessing (artifact padding, trial padding, filter padding).
 
-And see this [FAQ](/faq/how_does_the_filter_padding_in_preprocessing_work) on filter padding in **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** when reading data from disk.
+And see this [FAQ](/faq/how_does_the_filter_padding_in_preprocessing_work) on filter padding in **[ft_preprocessing](/reference/ft_preprocessing)** when reading data from disk.

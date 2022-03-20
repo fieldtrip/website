@@ -11,7 +11,7 @@ Many times you are faced with the analysis of multiple subjects and experimental
 
 Note that this is usually referred to as **distributed computing** if you are submitting multiple independent computations to multiple computers. The term **parallel computing** is usually reserved for multiple CPUs or computers working simultaneously at the same problem that requires constant sharing of small snippets of data between the CPUs. Since the analyses of multiple subjects are done independently of each other, we call it distributed computing.
 
-This tutorial describes two approaches for distributing the analysis of multiple subjects and conditions. The data used in this example is the same as in the tutorial scripts: 151-channel MEG was recorded in 4 subjects, and in each dataset there are three experimental conditions (FC, FIC, IC). Both approaches rely on the [qsubcellfun](https://github.com/fieldtrip/fieldtrip/blob/release/qsubcellfun) function which applies a given function to each element of a cell-array. The function execution is done in parallel on the Torque batch queue system.
+This tutorial describes two approaches for distributing the analysis of multiple subjects and conditions. The data used in this example is the same as in the tutorial scripts: 151-channel MEG was recorded in 4 subjects, and in each dataset there are three experimental conditions (FC, FIC, IC). Both approaches rely on the [qsubcellfun](/reference/qsubcellfun) function which applies a given function to each element of a cell-array. The function execution is done in parallel on the Torque batch queue system.
 
 After this tutorial you should be able to execute your multi-subject analysis in parallel and design analysis scripts that allow for easy parallelization, either over subjects or over parameters used in the analysis.
 
@@ -138,7 +138,7 @@ In the code above all data is processed by the distributed computers and subsequ
       timelock           4x3               65515200  cell
       ...
 
-Instead of returning the 12 variables for the different subjects and conditions all to your workspace, you can also use the cfg.inputfile and cfg.outputfile options to have the distributed computers read/write the data to/from disk. For example the section on **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** and **[ft_timelockanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockanalysis.m)** could be changed into
+Instead of returning the 12 variables for the different subjects and conditions all to your workspace, you can also use the cfg.inputfile and cfg.outputfile options to have the distributed computers read/write the data to/from disk. For example the section on **[ft_preprocessing](/reference/ft_preprocessing)** and **[ft_timelockanalysis](/reference/ft_timelockanalysis)** could be changed into
 
     % ...
 

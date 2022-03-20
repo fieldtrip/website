@@ -77,9 +77,9 @@ In FieldTrip it is possible to use the fileio module to read from shared memory.
 
 ### Using MATLAB to copy data from shared memory to FieldTrip buffer
 
-The **[ft_realtime_ctfproxy](https://github.com/fieldtrip/fieldtrip/blob/release/realtime/example/ft_realtime_ctfproxy.m)** function (part of the realtime module in FieldTrip) reads the MEG data from shared memory and writes to a [FieldTrip buffer](/development/realtime/buffer). The FieldTrip buffer is a multi-threaded and network transparent buffer that allows data to be streamed to it, while at the same time allowing another MATLAB session on the same or another computer to read data from the buffer for analysis.
+The **[ft_realtime_ctfproxy](/reference//realtime/example/ft_realtime_ctfproxy)** function (part of the realtime module in FieldTrip) reads the MEG data from shared memory and writes to a [FieldTrip buffer](/development/realtime/buffer). The FieldTrip buffer is a multi-threaded and network transparent buffer that allows data to be streamed to it, while at the same time allowing another MATLAB session on the same or another computer to read data from the buffer for analysis.
 
-Subsequently in another MATLAB session you can read from the FieldTrip buffer using the **[ft_read_header](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_header.m)**, **[ft_read_data](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_data.m)** and **[ft_read_event](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_event.m)** functions by specifying %%'buffer://hostname:port'%% as the filename to the reading functions.
+Subsequently in another MATLAB session you can read from the FieldTrip buffer using the **[ft_read_header](/reference/fileio/ft_read_header)**, **[ft_read_data](/reference/fileio/ft_read_data)** and **[ft_read_event](/reference/fileio/ft_read_event)** functions by specifying %%'buffer://hostname:port'%% as the filename to the reading functions.
 
 {% include image src="/assets/img/development/realtime/ctf/acq_nt_scheme.png" %}
 
@@ -118,7 +118,7 @@ The new electronics comes with a new (beta) version of the acquisition software.
 Regardless whether you have the 3000-series electronics or not, the new version of the software (probably version 6.x and up) has the same shared-memory interface.
 
 {% include markup/info %}
-Whereas in the software version _6.1.5-el6_7.x86_64-20160720-3344_ the ACQ_BUFFER_SIZE was changed from 28160 into 40000, and the scaling of the HLC channels seems to be off in this version, the more recent software version _6.1.14-beta-el6_8.x86_64-20180116-3847_ writes the data to shared memory in the original format with 28160 samples per packet. Please look in the code **[ctf.h](https://github.com/fieldtrip/fieldtrip/blob/master/realtime/src/acquisition/ctf/ctf.h.m)** and adjust the ACQ_BUFFER_SIZE for your software version.
+Whereas in the software version _6.1.5-el6_7.x86_64-20160720-3344_ the ACQ_BUFFER_SIZE was changed from 28160 into 40000, and the scaling of the HLC channels seems to be off in this version, the more recent software version _6.1.14-beta-el6_8.x86_64-20180116-3847_ writes the data to shared memory in the original format with 28160 samples per packet. Please look in the code **[ctf.h](https://github.com/fieldtrip/fieldtrip/blob/master/realtime/src/acquisition/ctf/ctf.h)** and adjust the ACQ_BUFFER_SIZE for your software version.
 {% include markup/end %}
 
 ### shmget: Invalid argument

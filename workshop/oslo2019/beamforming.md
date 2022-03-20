@@ -31,10 +31,10 @@ This tutorial does not cover forward model computation. We will load the needed 
 ## Procedure
 
 - Load the forward model including the headmodel, sourcemodel, and leadfield matrix (for computation of the forward model see [here](/workshop/oslo2019/forward_modeling))
-- Load the data from disk and define the period of interest using **[ft_redefinetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_redefinetrial.m)**
-- Compute the cross-spectral density matrix for all MEG channels using the function **[ft_freqanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqanalysis.m)**
-- Compute a spatial filter and estimate the power of the sources using **[ft_sourceanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceanalysis.m)**
-- Visualize the result with **[ft_sourceplot](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceplot.m)**
+- Load the data from disk and define the period of interest using **[ft_redefinetrial](/reference/ft_redefinetrial)**
+- Compute the cross-spectral density matrix for all MEG channels using the function **[ft_freqanalysis](/reference/ft_freqanalysis)**
+- Compute a spatial filter and estimate the power of the sources using **[ft_sourceanalysis](/reference/ft_sourceanalysis)**
+- Visualize the result with **[ft_sourceplot](/reference/ft_sourceplot)**
 - Compute a common spatial filter to difference two conditions
 
 {% include image src="/assets/img/workshop/natmeg/beamforming/bf_pipeline.jpg" width="650" %}
@@ -91,13 +91,13 @@ _Figure: The different parts for the forward model all line up._
 
 ## Identifying a time window of interest
 
-We want to identify the sources of the oscillatory activity in the beta band. We have identified 18 Hz as the center frequency of the beta activity. We first use **[ft_redefinetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_redefinetrial.m)** to extract the relevant time window from the complete trials. Remember, that it is important that the length of the time window matches with an integer number of oscillatory cycles. Here 9 cycles are used, resulting in a 9/18 Hz = 0.5 s time window. Thus, the time window we will use ranges from 0.35 to 0.85 second after response onset (see Figure 2).
+We want to identify the sources of the oscillatory activity in the beta band. We have identified 18 Hz as the center frequency of the beta activity. We first use **[ft_redefinetrial](/reference/ft_redefinetrial)** to extract the relevant time window from the complete trials. Remember, that it is important that the length of the time window matches with an integer number of oscillatory cycles. Here 9 cycles are used, resulting in a 9/18 Hz = 0.5 s time window. Thus, the time window we will use ranges from 0.35 to 0.85 second after response onset (see Figure 2).
 
 {% include image src="/assets/img/workshop/natmeg/beamforming/natmeg_beam5.png" width="500" %}
 
 _Figure: The time-frequency presentation used to determine the time- and frequency-windows prior to beamforming._
 
-Now we select the time window of interest using **[ft_redefinetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_redefinetrial.m)**.
+Now we select the time window of interest using **[ft_redefinetrial](/reference/ft_redefinetrial)**.
 
     % Select time window of interest
     cfg = [];
@@ -129,7 +129,7 @@ We choose to only use the trials with the left hand response for now, which is w
 
     powcsd_left      = ft_freqanalysis(cfg, data_timewindow);
 
-The cross-spectral density data structure has a similar data structure as other output of **[ft_freqanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqanalysis.m)**:
+The cross-spectral density data structure has a similar data structure as other output of **[ft_freqanalysis](/reference/ft_freqanalysis)**:
 
     powcsd_left =
 
@@ -177,13 +177,13 @@ The source data structure has the following fields:
 
 ### Interpolate the results on the MRI for plotting
 
-The grid of estimated power values can be plotted superimposed on the anatomical MRI. This requires the output of **[ft_sourceanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceanalysis.m)** to match the position of the MRI. The function **[ft_sourceinterpolate](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceinterpolate.m)** interpolates the relatively low-resolution source level estimates on the high-resolution structural MRI. We only need to specify what parameter we want to interpolate and to input the MRI we want to use for interpolation.
+The grid of estimated power values can be plotted superimposed on the anatomical MRI. This requires the output of **[ft_sourceanalysis](/reference/ft_sourceanalysis)** to match the position of the MRI. The function **[ft_sourceinterpolate](/reference/ft_sourceinterpolate)** interpolates the relatively low-resolution source level estimates on the high-resolution structural MRI. We only need to specify what parameter we want to interpolate and to input the MRI we want to use for interpolation.
 
 First, we will load the MRI. It is important that you use the MRI that was realigned with the sensors, or your source activity data will not match the anatomical data.
 
     load mri_realigned2.mat
 
-Before interpolating the source activity we will reslice the MRI using **[ft_volumereslice](https://github.com/fieldtrip/fieldtrip/blob/release/ft_volumereslice.m)**. The consequence of reslicing is that the size of the MRI is decreased (it is rather large now) and the output voxels are nicely aligned with the x, y, and z-axes, so that the image is plotted correctly. See also this [frequently asked question](/faq/how_change_mri_orientation_size_fov/).
+Before interpolating the source activity we will reslice the MRI using **[ft_volumereslice](/reference/ft_volumereslice)**. The consequence of reslicing is that the size of the MRI is decreased (it is rather large now) and the output voxels are nicely aligned with the x, y, and z-axes, so that the image is plotted correctly. See also this [frequently asked question](/faq/how_change_mri_orientation_size_fov/).
 
     mri_resliced = ft_volumereslice([], mri_realigned2);
 
@@ -246,7 +246,7 @@ To start with this, we need to compute the oscillatory power for both conditions
 
 
 {% include markup/info %}
-You could also compute powcsd_all with `cfg.keeptrials` set to `yes` and use the `cfg.trials` option later in **[ft_sourceanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceanalysis.m)** or using **[ft_selectdata](https://github.com/fieldtrip/fieldtrip/blob/release/ft_selectdata.m)**. This would be computationally more efficient, but requires more memory.
+You could also compute powcsd_all with `cfg.keeptrials` set to `yes` and use the `cfg.trials` option later in **[ft_sourceanalysis](/reference/ft_sourceanalysis)** or using **[ft_selectdata](/reference/ft_selectdata)**. This would be computationally more efficient, but requires more memory.
 {% include markup/end %}
 
 ### Compute the spatial common filter and apply it to the conditions
@@ -266,7 +266,7 @@ We now use all the data as input for computing the _common spatial filter_. We s
 
     source_all = ft_sourceanalysis(cfg, powcsd_all);
 
-To apply this common spatial filter to the trials of our two conditions separately, we run **[ft_sourceanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceanalysis.m)** again - for both conditions - but specify that we want to use the filter we just computed.
+To apply this common spatial filter to the trials of our two conditions separately, we run **[ft_sourceanalysis](/reference/ft_sourceanalysis)** again - for both conditions - but specify that we want to use the filter we just computed.
 
     cfg              = [];
     cfg.method       = 'dics';
@@ -287,7 +287,7 @@ After successfully applying the above steps, we obtained an estimate of the beta
                           (source_left.avg.pow + source_right.avg.pow);
 
 {% include markup/warning %}
-It would be better here to use **[ft_math](https://github.com/fieldtrip/fieldtrip/blob/release/ft_math.m)** to compute the contrast between the condition. It will ensure that the data is consistent (i.e. prevent accidentally combining different source locations in the two estimates for the two conditions) and it keeps the [provenance](https://en.wikipedia.org/wiki/Provenance#Data_provenance) consistent.
+It would be better here to use **[ft_math](/reference/ft_math)** to compute the contrast between the condition. It will ensure that the data is consistent (i.e. prevent accidentally combining different source locations in the two estimates for the two conditions) and it keeps the [provenance](https://en.wikipedia.org/wiki/Provenance#Data_provenance) consistent.
 {% include markup/end %}
 
 ### Interpolate and plot the difference between conditions
@@ -319,7 +319,7 @@ Try to explain the location of the red and blue blobs.
 {% include markup/end %}
 
 {% include markup/exercise %}
-The 'ortho' method is not the only plotting method implemented. Use the 'help' of **[ft_sourceplot](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceplot.m)** to find what other methods there are and plot the source level results. What are the benefits and drawbacks of these plotting routines?
+The 'ortho' method is not the only plotting method implemented. Use the 'help' of **[ft_sourceplot](/reference/ft_sourceplot)** to find what other methods there are and plot the source level results. What are the benefits and drawbacks of these plotting routines?
 {% include markup/end %}
 
 ### Exercise 3: regularization

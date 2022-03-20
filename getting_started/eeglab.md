@@ -11,7 +11,7 @@ EEGLAB is an interactive MATLAB toolbox for processing continuous and event-rela
 
 ## How does FieldTrip use EEGLAB?
 
-FieldTrip integrates EEGLAB functionalities to deal with component analysis. The function **[ft_componentanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_componentanalysis.m)** directly calls EEGLAB functions to perform the desired analysis as represented in the following figure:
+FieldTrip integrates EEGLAB functionalities to deal with component analysis. The function **[ft_componentanalysis](/reference/ft_componentanalysis)** directly calls EEGLAB functions to perform the desired analysis as represented in the following figure:
 
 {% include image src="/assets/img/getting_started/eeglab/FieldTrip_uses_EEGLAB.png" width="500" %}
 
@@ -21,7 +21,7 @@ EEGLAB integrates FieldTrip functions through the FILE-IO and the DIPFIT plug-in
 
 The FILE-IO plug-in allows reading raw data from disk into EEGLAB, from any of the file formats that is supported by FieldTrip. Most EEG file formats are directly supported in EEGLAB, but for some MEG and iEEG file formats this plugin is needed.
 
-The DIPFIT plugin allows the localization of the sources that have been separated using ICA. The main function that is used by DIPFIT is **[ft_dipolefitting](https://github.com/fieldtrip/fieldtrip/blob/release/ft_dipolefitting.m)**. It performs a grid search and non-linear fit with one or multiple dipoles and tries to find the location where the dipole model is best able to explain the ICA component topography, using spherical models or realistic BEM or FEM volume conduction models.
+The DIPFIT plugin allows the localization of the sources that have been separated using ICA. The main function that is used by DIPFIT is **[ft_dipolefitting](/reference/ft_dipolefitting)**. It performs a grid search and non-linear fit with one or multiple dipoles and tries to find the location where the dipole model is best able to explain the ICA component topography, using spherical models or realistic BEM or FEM volume conduction models.
 
 The following figure illustrates some FieldTrip functions used in DIPFIT:
 
@@ -31,16 +31,16 @@ Note that FieldTrip should be added to the MATLAB path in order to use the DIPFI
 
 ## Complementary use of both toolboxes
 
-Processing data from EEGLAB through FieldTrip functions and vice-versa is made easy by the functions **[eeglab2fieldtrip](https://github.com/fieldtrip/fieldtrip/blob/master/external/eeglab/eeglab2fieldtrip.m)** and **[fieldtrip2eeglab](https://github.com/fieldtrip/fieldtrip/blob/master/external/eeglab/eeglab2fieldtrip.m)**.
+Processing data from EEGLAB through FieldTrip functions and vice-versa is made easy by the functions **[eeglab2fieldtrip](/reference/external/eeglab/eeglab2fieldtrip)** and **[fieldtrip2eeglab](/reference/external/eeglab/eeglab2fieldtrip)**.
 Here is an example code showing how to use those functions:
 
 - For users working on EEGLAB, first save data on disk: File → Save current dataset (must be a `.set` file)
 
-- (EEGLAB -> FieldTrip) Two methods can be used to import the `.set` file as a FieldTrip structure: 1. (recommended) Using **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)**:
-  `cfg = []; cfg.dataset = 'filename.set'; ft_data1 = ft_preprocessing(cfg);` 2. Load the dataset through **[pop_loadset](https://sccn.ucsd.edu/~arno/eeglab/auto/pop_loadset.html)** and transform it to FieldTrip structure using **[eeglab2fieldtrip](https://github.com/fieldtrip/fieldtrip/blob/release/external/eeglab/eeglab2fieldtrip.m)** function:
+- (EEGLAB -> FieldTrip) Two methods can be used to import the `.set` file as a FieldTrip structure: 1. (recommended) Using **[ft_preprocessing](/reference/ft_preprocessing)**:
+  `cfg = []; cfg.dataset = 'filename.set'; ft_data1 = ft_preprocessing(cfg);` 2. Load the dataset through **[pop_loadset](https://sccn.ucsd.edu/~arno/eeglab/auto/pop_loadset.html)** and transform it to FieldTrip structure using **[eeglab2fieldtrip](/reference/external/eeglab/eeglab2fieldtrip)** function:
   `EEG = pop_loadset(filename); ft_data2 = eeglab2fieldtrip(EEG, 'raw');`
 
-- (FieldTrip -> EEGLAB) For data that has been processed in FieldTrip, it can be converted to EEGLAB format using **[fieldtrip2eeglab](https://github.com/fieldtrip/fieldtrip/blob/release/external/eeglab/eeglab2fieldtrip.m)** function. Note that the data (second argument) have to be passed as an array (not a cell):
+- (FieldTrip -> EEGLAB) For data that has been processed in FieldTrip, it can be converted to EEGLAB format using **[fieldtrip2eeglab](/reference/external/eeglab/eeglab2fieldtrip)** function. Note that the data (second argument) have to be passed as an array (not a cell):
 
 ```
 eeglab_data = fieldtrip2eeglab(ft_data.hdr,cat(3,ft_data.trial{:}));
@@ -49,9 +49,9 @@ pop_saveset(eeglab_data, 'filename', 'myfilename.set')
 
 Notes:
 
-- To import frequency or timelock data to FieldTrip, **[ft_freqanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqanalysis.m)** or **[ft_timelockanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockanalysis.m)** can be used instead of ft_preprocessing, respectively.
+- To import frequency or timelock data to FieldTrip, **[ft_freqanalysis](/reference/ft_freqanalysis)** or **[ft_timelockanalysis](/reference/ft_timelockanalysis)** can be used instead of ft_preprocessing, respectively.
 
-- The EEGLAB `.set` and `.fdt` formats are directly supported by the low-level **[ft_read_header](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_header.m)**, **[ft_read_data](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_data.m)** and **[ft_read_event](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_event.m)** functions as well as the high-level function **[ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_definetrial.m)**.
+- The EEGLAB `.set` and `.fdt` formats are directly supported by the low-level **[ft_read_header](/reference/fileio/ft_read_header)**, **[ft_read_data](/reference/fileio/ft_read_data)** and **[ft_read_event](/reference/fileio/ft_read_event)** functions as well as the high-level function **[ft_definetrial](/reference/ft_definetrial)**.
 
 ## Design philosophies
 
@@ -59,4 +59,4 @@ Both EEGLAB and FieldTrip work with data structures in MATLAB memory. The design
 
 {% include image src="/assets/img/getting_started/eeglab/eeglab_FieldTrip_philosophy.png" width="500" %}
 
-Together with the EEGLAB developers we maintain two functions for converting the data back and forth: **[fieldtrip2eeglab](https://github.com/fieldtrip/fieldtrip/blob/release/external/eeglab/eeglab2fieldtrip.m)** and **[eeglab2fieldtrip](https://github.com/fieldtrip/fieldtrip/blob/release/external/eeglab/eeglab2fieldtrip.m)**.
+Together with the EEGLAB developers we maintain two functions for converting the data back and forth: **[fieldtrip2eeglab](/reference/external/eeglab/eeglab2fieldtrip)** and **[eeglab2fieldtrip](/reference/external/eeglab/eeglab2fieldtrip)**.

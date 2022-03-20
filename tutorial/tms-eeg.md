@@ -108,22 +108,22 @@ Herring, J. D., Thut, G., Jensen, O., & Bergmann, T. O. (2015). [Attention Modul
 
 We will use the following procedure to deal with TMS-EEG data:
 
-1.  Create a trial-structure using **[ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_definetrial.m)**
-2.  Indicate the onset of TMS-pulses with **[ft_artifact_tms](https://github.com/fieldtrip/fieldtrip/blob/release/ft_artifact_tms.m)**
-3.  Visually determine which artifacts are present using **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)**, **[ft_timelockanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockanalysis.m)**, and **[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_databrowser.m)**.
-4.  Exclude ringing/step response and recharge artifacts from the trial-structure using **[ft_rejectartifact](https://github.com/fieldtrip/fieldtrip/blob/release/ft_rejectartifact.m)** and **[ft_artifact_tms](https://github.com/fieldtrip/fieldtrip/blob/release/ft_artifact_tms.m)**
-5.  Read-in segments excluding previously rejected artifacts using **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)**.
-6.  Perform Independent Component Analysis to attempt to remove exponential decay and cranial muscle artifacts using **[ft_componentanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_componentanalysis.m)** and **[ft_rejectcomponent](https://github.com/fieldtrip/fieldtrip/blob/release/ft_rejectcomponent.m)**. At this stage independent components related to other artifacts (e.g., line noise, eye blinks/saccades) can be removed as well.
-7.  Recreate the intended trial structure using **[ft_redefinetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_redefinetrial.m)**
-8.  Interpolate gaps previously occupied by ringing/step response and recharge artifacts using **[ft_interpolatenan](https://github.com/fieldtrip/fieldtrip/blob/release/ft_interpolatenan.m)**
-9.  Apply further processing such as baseline correction, detrending, and filtering using **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)**.
+1.  Create a trial-structure using **[ft_definetrial](/reference/ft_definetrial)**
+2.  Indicate the onset of TMS-pulses with **[ft_artifact_tms](/reference/ft_artifact_tms)**
+3.  Visually determine which artifacts are present using **[ft_preprocessing](/reference/ft_preprocessing)**, **[ft_timelockanalysis](/reference/ft_timelockanalysis)**, and **[ft_databrowser](/reference/ft_databrowser)**.
+4.  Exclude ringing/step response and recharge artifacts from the trial-structure using **[ft_rejectartifact](/reference/ft_rejectartifact)** and **[ft_artifact_tms](/reference/ft_artifact_tms)**
+5.  Read-in segments excluding previously rejected artifacts using **[ft_preprocessing](/reference/ft_preprocessing)**.
+6.  Perform Independent Component Analysis to attempt to remove exponential decay and cranial muscle artifacts using **[ft_componentanalysis](/reference/ft_componentanalysis)** and **[ft_rejectcomponent](/reference/ft_rejectcomponent)**. At this stage independent components related to other artifacts (e.g., line noise, eye blinks/saccades) can be removed as well.
+7.  Recreate the intended trial structure using **[ft_redefinetrial](/reference/ft_redefinetrial)**
+8.  Interpolate gaps previously occupied by ringing/step response and recharge artifacts using **[ft_interpolatenan](/reference/ft_interpolatenan)**
+9.  Apply further processing such as baseline correction, detrending, and filtering using **[ft_preprocessing](/reference/ft_preprocessing)**.
 
 **Analysis**
 
 After having cleaned the data, we will perform the following analyses:
 
-- Calculate time-locked averages using **[ft_timelockanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockanalysis.m)**
-- Time-frequency analysis using **[ft_freqanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqanalysis.m)**
+- Calculate time-locked averages using **[ft_timelockanalysis](/reference/ft_timelockanalysis)**
+- Time-frequency analysis using **[ft_freqanalysis](/reference/ft_freqanalysis)**
 - Calculate the global mean field power
 
 ## Preprocessing
@@ -132,9 +132,9 @@ After having cleaned the data, we will perform the following analyses:
 
 We start with the original dataset which is available from [ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/tms/sp/sp_motor.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/tms/sp/sp_motor.zip). Please be aware that the file is rather large (472 MB) due to the EEG being sampled at 5kHz.
 
-We are interested in what happens in response to the TMS pulse. The TMS pulses are therefore our events of interest and our trials are defined by the pulses. As stated in the background information, event markers are present at the onset of each pulse. We will first have a look at our trials using **[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_databrowser.m)**, a convenient tool to browse data directly from disk or in memory (also see this [frequently asked question](/faq/how_can_i_use_the_databrowser)).
+We are interested in what happens in response to the TMS pulse. The TMS pulses are therefore our events of interest and our trials are defined by the pulses. As stated in the background information, event markers are present at the onset of each pulse. We will first have a look at our trials using **[ft_databrowser](/reference/ft_databrowser)**, a convenient tool to browse data directly from disk or in memory (also see this [frequently asked question](/faq/how_can_i_use_the_databrowser)).
 
-The complete dataset is rather memory demanding, hence we will only read the segments of interest (i.e. the trials) from disk using **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)**. For this purpose we first need to create a trial matrix, which specifies which parts of the data on disk are to be represented as trials. This matrix has three (or more) columns and as many rows as there are trials. The first two columns indicate the sample number in the data file on disk corresponding to the first and last sample of each trial. The third column reflects the so-called offset, i.e. which sample corresponds to time point zero in each trial. The matrix can have additional columns containing information, such as the experimental condition for each trial, the reaction time, etc. The trial matrix is created using **[ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_definetrial.m)** (also see [Trigger-based trial selection](/tutorial/preprocessing)).
+The complete dataset is rather memory demanding, hence we will only read the segments of interest (i.e. the trials) from disk using **[ft_preprocessing](/reference/ft_preprocessing)**. For this purpose we first need to create a trial matrix, which specifies which parts of the data on disk are to be represented as trials. This matrix has three (or more) columns and as many rows as there are trials. The first two columns indicate the sample number in the data file on disk corresponding to the first and last sample of each trial. The third column reflects the so-called offset, i.e. which sample corresponds to time point zero in each trial. The matrix can have additional columns containing information, such as the experimental condition for each trial, the reaction time, etc. The trial matrix is created using **[ft_definetrial](/reference/ft_definetrial)** (also see [Trigger-based trial selection](/tutorial/preprocessing)).
 
     triggers = {'S  1', 'S  3'}; % These values correspond to the markers placed in this dataset
 
@@ -151,7 +151,7 @@ The output cfg variable contains the trial structure in cfg.trl. As we will also
 
     trl = cfg.trl;
 
-The cfg structure we obtained from **[ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_definetrial.m)** contains enough information for ft_preprocessing to read our data from disk into trials. We will, however, also specify that the data should be re-referenced. As it can take quite a while (5-10 minutes) to read-in the data, the processed data can be found [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/tms/sp/data_tms_raw.mat). If you have downloaded this file, you can load the data with:
+The cfg structure we obtained from **[ft_definetrial](/reference/ft_definetrial)** contains enough information for ft_preprocessing to read our data from disk into trials. We will, however, also specify that the data should be re-referenced. As it can take quite a while (5-10 minutes) to read-in the data, the processed data can be found [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/tms/sp/data_tms_raw.mat). If you have downloaded this file, you can load the data with:
 
     load data_tms_raw;
 
@@ -172,7 +172,7 @@ If you have decided to read the trials from the data file on disk, use the follo
 
     save('data_tms_raw','data_tms_raw','-v7.3');
 
-We will now visually inspect the data using **[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_databrowser.m)**. For plotting purposes we will apply a baseline correction using the pre-stimulation period.
+We will now visually inspect the data using **[ft_databrowser](/reference/ft_databrowser)**. For plotting purposes we will apply a baseline correction using the pre-stimulation period.
 
     cfg = [];
     cfg.preproc.demean = 'yes';
@@ -300,7 +300,7 @@ Try to see if the artifacts are present in all channels and if there are differe
 
 In this part of the tutorial we are going to exclude artifactual data segments that cannot be attenuated by other methods. We will exclude the segments that contain the ringing/step response artifact and the recharging artifact. We will adjust the trial structure of our data, containing the information which samples correspond to which trials, so that it does not include these artifacts and we will then read-in the data without these artifactual parts. Later on we will interpolate gaps which are produced by excluding these segments. The interpolation of the missing data segments is postponed until after applying independent component analysis in the next part of the tutorial.
 
-The function **[ft_rejectartifact](https://github.com/fieldtrip/fieldtrip/blob/release/ft_rejectartifact.m)** can adjust the trial structure to exclude segments containing artifacts. We first have to tell it which segments to exclude. For this purpose we will use **[ft_artifact_tms](https://github.com/fieldtrip/fieldtrip/blob/release/ft_artifact_tms.m)**. This function can be used to either detect TMS pulses in your data or to specify the onset of TMS pulses by use of marker information.
+The function **[ft_rejectartifact](/reference/ft_rejectartifact)** can adjust the trial structure to exclude segments containing artifacts. We first have to tell it which segments to exclude. For this purpose we will use **[ft_artifact_tms](/reference/ft_artifact_tms)**. This function can be used to either detect TMS pulses in your data or to specify the onset of TMS pulses by use of marker information.
 
     % Ringing/Step Response artifact
     trigger = {'S  1','S  3'};              % Markers in data that reflect TMS-pulse onset
@@ -314,7 +314,7 @@ The function **[ft_rejectartifact](https://github.com/fieldtrip/fieldtrip/blob/r
     cfg_ringing = ft_artifact_tms(cfg);     % Detect TMS artifacts
 
 {% include markup/warning %}
-In **[ft_artifact_tms](https://github.com/fieldtrip/fieldtrip/blob/release/ft_artifact_tms.m)** we use cfg.prestim and cfg.poststim to indicate the time range around the TMS pulse that should be removed. There is no restriction, however, that prevents both time points from being located after the pulse (in case of a recharging artefact, for example). It is therefore also possible to mark artifacts that have on- and offsets both after onset of the TMS pulse.
+In **[ft_artifact_tms](/reference/ft_artifact_tms)** we use cfg.prestim and cfg.poststim to indicate the time range around the TMS pulse that should be removed. There is no restriction, however, that prevents both time points from being located after the pulse (in case of a recharging artefact, for example). It is therefore also possible to mark artifacts that have on- and offsets both after onset of the TMS pulse.
 
 In case you wish to specify an artifact onset that occurs after the TMS pulse (e.g., in case of a recharging artifact), cfg.prestim must be negative (e.g., -0.500 for 500 ms after pulse onset) as cfg.prestim refers to time **before** stimulus onset.
 {% include markup/end %}
@@ -324,7 +324,7 @@ In case you wish to specify an artifact onset that occurs after the TMS pulse (e
     cfg.poststim  = .511;
     cfg_recharge  = ft_artifact_tms(cfg); % Detect TMS artifacts
 
-We now have a configuration structure for both the ringing/step response artifact as well as the recharging artifact. The **[ft_artifact_tms](https://github.com/fieldtrip/fieldtrip/blob/release/ft_artifact_tms.m)** function creates an Nx2 matrix (representing N artifacts) in cfg_ringing.artfctdef.tms.artifact or cfg_recharge.artfctdef.tms.artifact that contains the on- and offset of each marked/detected segment. Since we created two structures, we will combine both artifacts into one structure to do the rejection in one step. To achieve this we will create a new structure, cfg_artifact, that will contain artifact definitions for both the ringing/step response and the ringing artifact, each in separate subfields.
+We now have a configuration structure for both the ringing/step response artifact as well as the recharging artifact. The **[ft_artifact_tms](/reference/ft_artifact_tms)** function creates an Nx2 matrix (representing N artifacts) in cfg_ringing.artfctdef.tms.artifact or cfg_recharge.artfctdef.tms.artifact that contains the on- and offset of each marked/detected segment. Since we created two structures, we will combine both artifacts into one structure to do the rejection in one step. To achieve this we will create a new structure, cfg_artifact, that will contain artifact definitions for both the ringing/step response and the ringing artifact, each in separate subfields.
 
     % Combine into one structure
     cfg_artifact = [];
@@ -332,7 +332,7 @@ We now have a configuration structure for both the ringing/step response artifac
     cfg_artifact.artfctdef.ringing.artifact = cfg_ringing.artfctdef.tms.artifact; % Add ringing/step response artifact definition
     cfg_artifact.artfctdef.recharge.artifact   = cfg_recharge.artfctdef.tms.artifact; % Add recharge artifact definition
 
-The function **[ft_rejectartifact](https://github.com/fieldtrip/fieldtrip/blob/release/ft_rejectartifact.m)** allows us to manipulate trials containing artifacts in several ways: First we can choose to reject the whole trial, but that is not appropriate here, since every trial contains TMS artifacts. Second, we can choose to replace the artifactual data with nans, something that may lead to problems using other functions that expect real numbers. Third - the approach we will take in this tutorial -, we can remove the artifacts by segmenting the trials into smaller pieces. We will exclude the parts of the data that contain the artifact and keep the other parts. We can later reconstruct the trial using the trial matrix (trl) we defined and saved earlier.
+The function **[ft_rejectartifact](/reference/ft_rejectartifact)** allows us to manipulate trials containing artifacts in several ways: First we can choose to reject the whole trial, but that is not appropriate here, since every trial contains TMS artifacts. Second, we can choose to replace the artifactual data with nans, something that may lead to problems using other functions that expect real numbers. Third - the approach we will take in this tutorial -, we can remove the artifacts by segmenting the trials into smaller pieces. We will exclude the parts of the data that contain the artifact and keep the other parts. We can later reconstruct the trial using the trial matrix (trl) we defined and saved earlier.
 
     cfg_artifact.artfctdef.reject = 'partial'; % Can also be 'complete', or 'nan';
     cfg_artifact.trl = trl; % We supply ft_rejectartifact with the original trial structure so it knows where to look for artifacts.
@@ -359,7 +359,7 @@ We've now split-up our trials into segments free of ringing/step response, and r
 
          1   900
 
-Using **[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_databrowser.m)** we can browse through both the segmented as well as the raw data. If we use the artifact definition we previously created we can easily browse to the segments we've marked as artifacts.
+Using **[ft_databrowser](/reference/ft_databrowser)** we can browse through both the segmented as well as the raw data. If we use the artifact definition we previously created we can easily browse to the segments we've marked as artifacts.
 
     % Browse through the segmented data
     cfg = [];
@@ -470,7 +470,7 @@ We are now going to have a look at the timecourse of the components to identify 
     cfg = [];
     comp_tms_avg = ft_timelockanalysis(cfg, comp_tms);
 
-We can now browse the averaged data in the same way we browsed our channel data. The segments that we have excluded will be plotted as gaps. As with our channel data, you can either browse through the channels with **[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_databrowser.m)** but also with MATLAB's built-in plotting functions. Please be aware that if we are using **[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_databrowser.m)** do browse averaged data (i.e. output from **[ft_timelockanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockanalysis.m)**) we can only browse through channels as there are no trials.
+We can now browse the averaged data in the same way we browsed our channel data. The segments that we have excluded will be plotted as gaps. As with our channel data, you can either browse through the channels with **[ft_databrowser](/reference/ft_databrowser)** but also with MATLAB's built-in plotting functions. Please be aware that if we are using **[ft_databrowser](/reference/ft_databrowser)** do browse averaged data (i.e. output from **[ft_timelockanalysis](/reference/ft_timelockanalysis)**) we can only browse through channels as there are no trials.
 
     figure;
     cfg = [];
@@ -485,7 +485,7 @@ We can now browse the averaged data in the same way we browsed our channel data.
 Try to plot the components using MATLAB's built-in plot function. Which do you prefer to browse the components?
 {% include markup/end %}
 
-As ICA is in principle a spatial filter, we can inspect how each component loads spatially onto our original channel data. For this purpose we will use **[ft_topoplotIC](https://github.com/fieldtrip/fieldtrip/blob/release/ft_topoplotIC.m)**.
+As ICA is in principle a spatial filter, we can inspect how each component loads spatially onto our original channel data. For this purpose we will use **[ft_topoplotIC](/reference/ft_topoplotIC)**.
 
     figure;
     cfg           = [];
@@ -496,7 +496,7 @@ As ICA is in principle a spatial filter, we can inspect how each component loads
 
 {% include image src="/assets/img/tutorial/tms-eeg/topoplotic-comps.png" %}
 
-Using **[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_databrowser.m)**, or MATLAB's plotting function, together with the output from **[ft_topoplotIC](https://github.com/fieldtrip/fieldtrip/blob/release/ft_topoplotIC.m)** should be able to find one or two components that capture the decay artifact and/or the cranial muscle if the ICA was successful.
+Using **[ft_databrowser](/reference/ft_databrowser)**, or MATLAB's plotting function, together with the output from **[ft_topoplotIC](/reference/ft_topoplotIC)** should be able to find one or two components that capture the decay artifact and/or the cranial muscle if the ICA was successful.
 
 #### Exercise: find the components
 
@@ -515,7 +515,7 @@ Due to various factors it is likely that you will not be able to fully capture b
 {% include markup/exercise %}
 At this stage you can also use your ICA data to remove other types of artifacts/noise. ICA is particularly well-suited to deal with eye-blinks and saccades, and can potentially remove other types of noise as well (also see the examples on [EOG artifacts](/example/ica_eog) and [ECG artifacts](/example/ica_ecg)).
 
-As these types of noise are not time-locked to onset of the TMS-pulse you can use **[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_databrowser.m)** to browse through the trials in a component view. Be aware that in this case you are browsing the segments of the original trials.
+As these types of noise are not time-locked to onset of the TMS-pulse you can use **[ft_databrowser](/reference/ft_databrowser)** to browse through the trials in a component view. Be aware that in this case you are browsing the segments of the original trials.
 
     cfg          = [];
     cfg.layout   = 'easycapM10';
@@ -533,7 +533,7 @@ We now have a list of component we would wish to remove:
 - **Line noise**: 31
 - **Maintenance recharging/Muscle**: 1, 25, 52, 37, 49, 50
 
-We can now remove these components from the data. Using **[ft_rejectcomponent](https://github.com/fieldtrip/fieldtrip/blob/release/ft_rejectcomponent.m)** you can remove components and transform the data back to a channel representation. First, however, we will need to revert a step we took before performing the ICA.
+We can now remove these components from the data. Using **[ft_rejectcomponent](/reference/ft_rejectcomponent)** you can remove components and transform the data back to a channel representation. First, however, we will need to revert a step we took before performing the ICA.
 
 Keep in mind that our data is divided into segments of our original trials. Before performing ICA, the mean of each trial is subtracted from our data. This so-called demeaning is done to simplify the ICA algorithm. If we were to immediately back-transform our component data to a channel-representation and then restructure the segments into our original trials, we may have offsets in our trials because a different mean was subtracted for each segment. Especially the segment containing the decay artifact may be shifted a lot due to the large values in the period containing the decay.
 
@@ -615,7 +615,7 @@ We've now recreated the original trial structure and put all pieces of data back
 As you can see from the .trial field from both data structures we again have 300 trials. The cleaned dataset still contains the muscle artifact, we will therefore fill that segments with nans. The data (channel x time) for each trial is located in cells within the trial field in our data structure. We are now going to loop through each trial and replace the segment that contain the muscle artifact with nans. Browsing through the data it seems sufficient to replace up to 15ms after stimulation onset with nans.
 
 {% include markup/warning %}
-When we want to know which data point corresponds to any given time point we often use the function **[nearest](https://github.com/fieldtrip/fieldtrip/blob/release/nearest.m)**. This function finds the index number of a data point in a range of values that is closest to the point you request. For example, consider the vector [0 0.3 0.6 0.9 1.2]. If you would want to know the value closest to 0.5 the output **[nearest](https://github.com/fieldtrip/fieldtrip/blob/release/nearest.m)** gives is 3, which stands for the third value in the vector: 0.6. This has advantages over MATLAB's standard way of finding values within vectors (e.g., a==0.5) because we often do not exactly know the exact value we are interested in.
+When we want to know which data point corresponds to any given time point we often use the function **[nearest](/reference/nearest)**. This function finds the index number of a data point in a range of values that is closest to the point you request. For example, consider the vector [0 0.3 0.6 0.9 1.2]. If you would want to know the value closest to 0.5 the output **[nearest](/reference/nearest)** gives is 3, which stands for the third value in the vector: 0.6. This has advantages over MATLAB's standard way of finding values within vectors (e.g., a==0.5) because we often do not exactly know the exact value we are interested in.
 {% include markup/end %}
 
     % Replacing muscle artifact with nans
@@ -625,7 +625,7 @@ When we want to know which data point corresponds to any given time point we oft
       data_tms_clean.trial{i}(:,muscle_window_idx(1):muscle_window_idx(2))=nan; % Replace the segment of data corresponding to our window of interest with nans
     end
 
-Now that everything we would like to interpolate has been replaced by nans we can start the interpolation. The function **[ft_interpolatenan](https://github.com/fieldtrip/fieldtrip/blob/release/ft_interpolatenan.m)** loops through trials and channels and interpolates segments containing nans using MATLAB's built-in [interp1](http://www.mathworks.nl/help/matlab/ref/interp1.html) function. You can therefore use all the methods supported by this function in your interpolation. We will use cubic interpolation as it avoids sharp transitions from your data to the edges of the interpolated segments you might create by using linear interpolation but does not appear to introduce strong artificial sinusoids as spline interpolation sometimes does. Feel free to try-out the different types of interpolation.
+Now that everything we would like to interpolate has been replaced by nans we can start the interpolation. The function **[ft_interpolatenan](/reference/ft_interpolatenan)** loops through trials and channels and interpolates segments containing nans using MATLAB's built-in [interp1](http://www.mathworks.nl/help/matlab/ref/interp1.html) function. You can therefore use all the methods supported by this function in your interpolation. We will use cubic interpolation as it avoids sharp transitions from your data to the edges of the interpolated segments you might create by using linear interpolation but does not appear to introduce strong artificial sinusoids as spline interpolation sometimes does. Feel free to try-out the different types of interpolation.
 
     % Interpolate nans using cubic interpolation
     cfg = [];
@@ -670,9 +670,9 @@ At this point we've sufficiently cleaned our data of TMS artifacts so we can con
 
 ### Post-processing
 
-Now that we have cleaned the data we could apply some (post-)processing steps such as filtering, detrending, demeaning, and downsampling. At this point we are only going to downsample our data. Depending on your further analysis you may wish to apply other processing steps as well. It might be worth to note that some analysis steps may require different processing. For example, when looking at TMS evoked potentials (TEPs), you may want to filter your data to remove high-frequency noise. For performing time-frequency analysis this is not necessary but you would perhaps want to detrend your data, which is again not advised for analyzing TEPs. In short, different analysis methods may require different processing steps. Luckily the functions used to produce these analysis (e.g., **[ft_timelockanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockanalysis.m)** and **[ft_freqanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqanalysis.m)**) allow you to apply the same preprocessing steps to your input data as you can apply with **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)**. This allows you to apply separate processing steps suited for each analysis without having to create additional data structures.
+Now that we have cleaned the data we could apply some (post-)processing steps such as filtering, detrending, demeaning, and downsampling. At this point we are only going to downsample our data. Depending on your further analysis you may wish to apply other processing steps as well. It might be worth to note that some analysis steps may require different processing. For example, when looking at TMS evoked potentials (TEPs), you may want to filter your data to remove high-frequency noise. For performing time-frequency analysis this is not necessary but you would perhaps want to detrend your data, which is again not advised for analyzing TEPs. In short, different analysis methods may require different processing steps. Luckily the functions used to produce these analysis (e.g., **[ft_timelockanalysis](/reference/ft_timelockanalysis)** and **[ft_freqanalysis](/reference/ft_freqanalysis)**) allow you to apply the same preprocessing steps to your input data as you can apply with **[ft_preprocessing](/reference/ft_preprocessing)**. This allows you to apply separate processing steps suited for each analysis without having to create additional data structures.
 
-For this reason we are only going to downsample our data and apply slightly different (post-) processing steps later on. Coincidentally, downsampling cannot be done with **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** but with **[ft_resampledata](https://github.com/fieldtrip/fieldtrip/blob/release/ft_resampledata.m)**.
+For this reason we are only going to downsample our data and apply slightly different (post-) processing steps later on. Coincidentally, downsampling cannot be done with **[ft_preprocessing](/reference/ft_preprocessing)** but with **[ft_resampledata](/reference/ft_resampledata)**.
 
     cfg = [];
     cfg.resamplefs = 1000;
@@ -734,7 +734,7 @@ In calculating the timelocked averages we will also apply a baseline correction 
     cfg.trials = find(data_tms_clean.trialinfo==3);
     contract_avg = ft_timelockanalysis(cfg, data_tms_clean);
 
-We are also going to calculate the difference between the two averages. To this end we will use the function **[ft_math](https://github.com/fieldtrip/fieldtrip/blob/release/ft_math.m)**, which allows you to perform a certain number of mathematical operations on one or multiple data structures.
+We are also going to calculate the difference between the two averages. To this end we will use the function **[ft_math](/reference/ft_math)**, which allows you to perform a certain number of mathematical operations on one or multiple data structures.
 
     % calculate difference
     cfg = [];
@@ -742,7 +742,7 @@ We are also going to calculate the difference between the two averages. To this 
     cfg.parameter = 'avg'; % The field in the data structure to which to apply the operation
     difference_avg = ft_math(cfg, contract_avg, relax_avg);
 
-We will now plot both conditions and their difference using **[ft_singleplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_singleplotER.m)**, a function ideally suited for plotting and comparing conditions.
+We will now plot both conditions and their difference using **[ft_singleplotER](/reference/ft_singleplotER)**, a function ideally suited for plotting and comparing conditions.
 
     % Plot TEPs of both conditions
     cfg = [];
@@ -757,7 +757,7 @@ We will now plot both conditions and their difference using **[ft_singleplotER](
 
 {% include image src="/assets/img/tutorial/tms-eeg/tep_compare.png" %}
 
-A nice feature of **[ft_singleplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_singleplotER.m)** is that you can select a time range in your plotting window and click on it to produce a topographical representation of your amplitudes at that time point if you've specified a layout. You can also use the function **[ft_topoplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_topoplotER.m)** for this.
+A nice feature of **[ft_singleplotER](/reference/ft_singleplotER)** is that you can select a time range in your plotting window and click on it to produce a topographical representation of your amplitudes at that time point if you've specified a layout. You can also use the function **[ft_topoplotER](/reference/ft_topoplotER)** for this.
 
     %% Plotting topographies
     figure;
@@ -796,7 +796,7 @@ GMFP can be calculated using the following formula (from [Esser et al. (2006)](h
 
 , where t is time, V is the voltage at channel i and K is the number of channels. In [Esser et al. (2006)](http://dx.doi.org/10.1016/j.brainresbull.2005.11.003) the GMFP is calculated on the average over all subjects. As we only have one subject, we will only calculate the GMFP within this subject. If you, however, have multiple subjects you can apply the same method but on the grand average (see for examples on handling multiple subjects: [Parametric and non-parametric statistics on event-related fields](/tutorial/eventrelatedstatistics)). Basically, the GMFP is the standard deviation over channels.
 
-FieldTrip has a built-in function to calculate the GMFP; [ft_globalmeanfield](https://github.com/fieldtrip/fieldtrip/blob/release/ft_globalmeanfield). This function requires timelocked data as input. We will use similar preprocessing as applied in [Esser et al. (2006)](http://dx.doi.org/10.1016/j.brainresbull.2005.11.003).
+FieldTrip has a built-in function to calculate the GMFP; [ft_globalmeanfield](/reference/ft_globa/eanfield). This function requires timelocked data as input. We will use similar preprocessing as applied in [Esser et al. (2006)](http://dx.doi.org/10.1016/j.brainresbull.2005.11.003).
 
     % Create time-locked average
     cfg = [];
@@ -842,7 +842,7 @@ Are there differences between the outcome of this analysis and the comparison be
 
 We have so far analyzed responses to the TMS pulse which always occur at the same time. Anything that is not phase-locked to the onset of the TMS pulse is cancelled out due to averaging. It is, however, possible that the TMS pulse induces responses that are not necessarily phase-locked to the onset of the pulse, for example changes in spontaneous oscillatory activity. To look at these induced responses we are going to look at time-frequency representations of our data. We will decompose our signals into frequencies and look at the averages of the power of these frequencies. Contrasting to time-lock analyses we are then sensitive to oscillatory activity not phase-locked to onset of the pulse (also see: [Time-frequency analysis using Hanning window, multitapers and wavelets](/tutorial/timefrequencyanalysis)).
 
-We will first decompose our signal into different frequencies using **[ft_freqanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqanalysis.m)**. When doing spectral analyses it is important to detrend and demean your data prior to decomposing into frequencies to avoid strange looking powerspectra (see: [Why does my TFR look strange (part I, demeaning)?](/faq/why_does_my_tfr_look_strange) and [Why does my TFR look strange (part II, detrending)?](/faq/why_does_my_tfr_look_strange_part_ii)). We will therefore detrend and demean our data using the .preproc option.
+We will first decompose our signal into different frequencies using **[ft_freqanalysis](/reference/ft_freqanalysis)**. When doing spectral analyses it is important to detrend and demean your data prior to decomposing into frequencies to avoid strange looking powerspectra (see: [Why does my TFR look strange (part I, demeaning)?](/faq/why_does_my_tfr_look_strange) and [Why does my TFR look strange (part II, detrending)?](/faq/why_does_my_tfr_look_strange_part_ii)). We will therefore detrend and demean our data using the .preproc option.
 
     % Calculate Induced TFRs fpor both conditions
     cfg = [];
@@ -877,7 +877,7 @@ We will also calculate the difference between conditions. Usually when plotting 
     cfg.parameter = 'powspctrm';
     difference_freq = ft_math(cfg, contract_freq_bc, relax_freq_bc);
 
-Now that we've calculated the TFRs for both conditions and their differences we can plot the results in various ways. We can start with plotting all TFRs on a 2D representation of the head using **[ft_multiplotTFR](https://github.com/fieldtrip/fieldtrip/blob/release/ft_multiplotTFR.m)**.
+Now that we've calculated the TFRs for both conditions and their differences we can plot the results in various ways. We can start with plotting all TFRs on a 2D representation of the head using **[ft_multiplotTFR](/reference/ft_multiplotTFR)**.
 
     cfg = [];
     cfg.xlim = [-0.1 1.0];
@@ -889,7 +889,7 @@ Now that we've calculated the TFRs for both conditions and their differences we 
 
 {% include image src="/assets/img/tutorial/tms-eeg/multi-tfr-relchange.png" %}
 
-This plot is fully interactive, click and drag to select one or more channels, click on them to view an averaged representation of the selected channels. You can also plot single (or multiple) channels in a single view using **[ft_singleplotTFR](https://github.com/fieldtrip/fieldtrip/blob/release/ft_singleplotTFR.m)**.
+This plot is fully interactive, click and drag to select one or more channels, click on them to view an averaged representation of the selected channels. You can also plot single (or multiple) channels in a single view using **[ft_singleplotTFR](/reference/ft_singleplotTFR)**.
 
     cfg = [];
     cfg.channel = '17'; % Specify the channel to plot

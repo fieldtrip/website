@@ -103,7 +103,7 @@ This example script relies on the example script [Create MNI-aligned grids in in
 
 ## Doing source-analysis with the created headmodel
 
-When you have then estimated the sources which happens in NM or CTF space, you have to replace the .pos field of the source or the result of **[ft_sourcedescriptives](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourcedescriptives.m)** with the template_grid.pos to get it back into MNI space because the origins of the two spaces are different. When you then sourceinterpolate to the normalised mri, this should work!
+When you have then estimated the sources which happens in NM or CTF space, you have to replace the .pos field of the source or the result of **[ft_sourcedescriptives](/reference/ft_sourcedescriptives)** with the template_grid.pos to get it back into MNI space because the origins of the two spaces are different. When you then sourceinterpolate to the normalised mri, this should work!
 
     load f
     cfg                = [];

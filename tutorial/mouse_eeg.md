@@ -82,8 +82,8 @@ For optogenetic stimulation, we used a semiconductor laser (USA & BCL-040-445; 4
 
 ### define trials
 
-Using the FieldTrip function **[ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_definetrial.m)** you can define the pieces of data that will be read in for preprocessing. Trials are defined by their begin and end sample in the data file and each trial has an offset that defines where the relative t=0 point (usually the point of the optogenetic stimulus-trigger) is for that trial.
-The **[ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_definetrial.m)** and **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** functions require the original EEG dataset acquiring from Synamp system.
+Using the FieldTrip function **[ft_definetrial](/reference/ft_definetrial)** you can define the pieces of data that will be read in for preprocessing. Trials are defined by their begin and end sample in the data file and each trial has an offset that defines where the relative t=0 point (usually the point of the optogenetic stimulus-trigger) is for that trial.
+The **[ft_definetrial](/reference/ft_definetrial)** and **[ft_preprocessing](/reference/ft_preprocessing)** functions require the original EEG dataset acquiring from Synamp system.
 
 Actually, example dataset has not digital trigger information. To mark stimulation timing in the file, they use analog input (41th channel) as trigger information. Since FieldTrip can offer to support customized function by using cfg.trialfun, this tutorial shows how to make trial-based dataset.
 This results in a cfg.trl = 'mousetrialfun' in which the beginning, the trigger offset and the end of each trial relative to the beginning of the raw data is defined.
@@ -184,7 +184,7 @@ This results in a cfg.trl = 'mousetrialfun' in which the beginning, the trigger 
       end
     end
 
-Using this trial function, we can call **[ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_definetrial.m)** to find the trials, or segments of interest.
+Using this trial function, we can call **[ft_definetrial](/reference/ft_definetrial)** to find the trials, or segments of interest.
 
     cfg = [];
     cfg.dataset  = 'S1s_10Hz.cnt';
@@ -251,7 +251,7 @@ FIXME insert figure (2 single trial plot )
 
 ### checking for artifacts
 
-Using **[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_databrowser.m)** we can do a quick visual inspection of the data and check whether there are artefacts.
+Using **[ft_databrowser](/reference/ft_databrowser)** we can do a quick visual inspection of the data and check whether there are artefacts.
 
     cfg = [];
     cfg = ft_databrowser(cfg, data);
@@ -417,7 +417,7 @@ In this section, we will describe how to calculate time-frequency representation
     cfg.toi               = -1:0.01:3.0;                     % -1:0.01:3.0;
     freq                  = ft_freqanalysis(cfg, data);
 
-The output of **[ft_freqanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqanalysis.m)** is a structure which has the following field
+The output of **[ft_freqanalysis](/reference/ft_freqanalysis)** is a structure which has the following field
 
     freq =
 
@@ -432,7 +432,7 @@ The element freq.powspctrm contains the temporal response (-1 ~ 3 sec, 0.01 sec 
 
 ### visualizing TFRs
 
-This part shows how to visualize the results of time-frequency analysis with respect to **[ft_multiplotTFR](https://github.com/fieldtrip/fieldtrip/blob/release/ft_multiplotTFR.m)** and **[ft_singleplotTFR](https://github.com/fieldtrip/fieldtrip/blob/release/ft_singleplotTFR.m)**.
+This part shows how to visualize the results of time-frequency analysis with respect to **[ft_multiplotTFR](/reference/ft_multiplotTFR)** and **[ft_singleplotTFR](/reference/ft_singleplotTFR)**.
 
 To visualize the power changes, a normalization with respect to a baseline interval will be performed.
 This method, "relchange", means (active period-baseline)/baseline. Note that the "relchange" is expressed as a ratio of subtracting, for each frequency.
@@ -501,7 +501,7 @@ This gives a figure that shows the origin (white sphere), the x-, y-, and z-axes
 
 #### Coregistration using high-level graphical function
 
-We can use the **[ft_volumerealign](https://github.com/fieldtrip/fieldtrip/blob/release/ft_volumerealign.m)** function to coregister the anatomical MRI to the desired coordinate system. There are multiple coordinate systems in which the anatomy of the brain and head can be described, but here we want to use the Paxinos-Franklin cordite system which uses Bregma and Lambda as anatomical landmarks (or fiducials).
+We can use the **[ft_volumerealign](/reference/ft_volumerealign)** function to coregister the anatomical MRI to the desired coordinate system. There are multiple coordinate systems in which the anatomy of the brain and head can be described, but here we want to use the Paxinos-Franklin cordite system which uses Bregma and Lambda as anatomical landmarks (or fiducials).
 
     cfg = [];
     cfg.coordsys  = 'paxinos';
@@ -542,7 +542,7 @@ and by clicking in the figure, we can determine the location of three landmarks,
     lambda      = [0 -5.0 2.0];
     midsagittal = [0.2 -0.7 -2.0];
 
-The **[ft_headcoordinates](https://github.com/fieldtrip/fieldtrip/blob/release/ft_headcoordinates.m)** function provides the homogenous transformation matrix to rotate and translate the MRI into the Paxinos coordinate syste
+The **[ft_headcoordinates](/reference/ft_headcoordinates)** function provides the homogenous transformation matrix to rotate and translate the MRI into the Paxinos coordinate syste
 
     head2paxinos = ft_headcoordinates(bregma, lambda, midsagittal, 'paxinos')
 
@@ -561,13 +561,13 @@ We can apply this transformation to the MRI with
     mri_realigned2           = mri;         % copy the original MRI
     mri_realigned2.transform = vox2paxinos; % update the homogenous transformation matrix
 
-It is useful to also explicitly specify the coordinate system in the anatomical MRI. It is used in **[ft_sourceplot](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceplot.m)** and various other functions to check whether various geometrical objects are expressed in the same coordinate system.
+It is useful to also explicitly specify the coordinate system in the anatomical MRI. It is used in **[ft_sourceplot](/reference/ft_sourceplot)** and various other functions to check whether various geometrical objects are expressed in the same coordinate system.
 
     mri_realigned2.coordsys = 'paxinos';
 
 #### Correcting the units of the anatomical MRI
 
-Finally, we notice is that the units are off by a factor 10x. In the figure of **[ft_determine_coordsys](https://github.com/fieldtrip/fieldtrip/blob/release/ft_determine_coordsys.m)**, the sphere at the origin, each thick line segment is by default 1 cm, and the axes are 15 cm long, as that is appropriate for judging the human anatomy. We can also plot it with
+Finally, we notice is that the units are off by a factor 10x. In the figure of **[ft_determine_coordsys](/reference/ft_determine_coordsys)**, the sphere at the origin, each thick line segment is by default 1 cm, and the axes are 15 cm long, as that is appropriate for judging the human anatomy. We can also plot it with
 
 The units can be fixed by
 
@@ -628,7 +628,7 @@ You see that the anatomical labels are not what you would expect. This is due to
         'Olfactoryt_bulb', 'Brain_stem', 'Rest_of_Midbrain',...
         'BasalForebrain_septum', 'Fimbria' };
 
-With the correct labels, we can use **[ft_sourceplot](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceplot.m)** to plot the anatomy and to show the corresponding atlas label by clicking on a location in the brain.
+With the correct labels, we can use **[ft_sourceplot](/reference/ft_sourceplot)** to plot the anatomy and to show the corresponding atlas label by clicking on a location in the brain.
 
     cfg = [];
     cfg.atlas = atlas;
@@ -671,7 +671,7 @@ FIXME insert figure (20 image segmentation)
 
 This part describes how to make the volume conduction model for the source localization.
 In Previous section we did volume segmentation to extract brain and skull. Since we use In vitro MRI without skull, virtual skull was made by image dilation method from brain surface.
-To set up mesh objects, we use the **[ft_prepare_mesh](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_mesh.m)** to get the triangulated meshes for skull and brain.
+To set up mesh objects, we use the **[ft_prepare_mesh](/reference/ft_prepare_mesh)** to get the triangulated meshes for skull and brain.
 
     cfg             = [];
     cfg.tissue      = {'skull', 'brain'};
@@ -680,12 +680,12 @@ To set up mesh objects, we use the **[ft_prepare_mesh](https://github.com/fieldt
 
 FIXME insert figure (21 ft_prepare_mesh plot)
 
-We've been set limited number of vertices in **[ft_prepare_mesh](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_mesh.m)**.
+We've been set limited number of vertices in **[ft_prepare_mesh](/reference/ft_prepare_mesh)**.
 Because [OpenMEEG](http://www-sop.inria.fr/athena/software/OpenMEEG/) could not support to bigger volume above around 1500 vertices.
 
 ### make BEM volume conduction model
 
-After making up volume objects, we perform the **[ft_prepare_headmodel](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_headmodel.m)** for assigning the electrical property of volumes. From the literature in human study, the brain conductivity ranges from 0.12-0.48/Ω.m [1-3], and the human skull from 0.006-0.015/Ω.m [4,5] or even higher as 0.032-0.080/Ω.m [5]. According to another studies for the conductivity ratio between skull and brain, they reported numerical value with large variation the ranges from 25 to 80 times [6]. It is hard to specify the brain-to-skull conductivity ratio from these values with such large variations. In this step, we just assign conductivities applying to 80 times ratio between skull and brain.
+After making up volume objects, we perform the **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)** for assigning the electrical property of volumes. From the literature in human study, the brain conductivity ranges from 0.12-0.48/Ω.m [1-3], and the human skull from 0.006-0.015/Ω.m [4,5] or even higher as 0.032-0.080/Ω.m [5]. According to another studies for the conductivity ratio between skull and brain, they reported numerical value with large variation the ranges from 25 to 80 times [6]. It is hard to specify the brain-to-skull conductivity ratio from these values with such large variations. In this step, we just assign conductivities applying to 80 times ratio between skull and brain.
 
 [OpenMEEG](http://www-sop.inria.fr/athena/software/OpenMEEG/) is an external package that solves the forward problems. It implements a Boundary Element Method (BEM) and provides accurate solutions when dealing with realistic head models. As we mentioned above segmentation section, we are computing the two volume layers (skull and brain).
 
@@ -821,7 +821,7 @@ Even after processing the co-registration, there could be have some gaps between
 ### make leadfield matrix
 
 The final procedure of the forward problem is to generate a leadfield that representing the linear relation between sourcemodel and measurements (Gain matrix).
-By using **[ft_prepare_leadfield](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_leadfield.m)** we can get the matrices with respect to aligned electrode position and BEM meshes.
+By using **[ft_prepare_leadfield](/reference/ft_prepare_leadfield)** we can get the matrices with respect to aligned electrode position and BEM meshes.
 
     cfg                 = [];
     cfg.elec            = ft_convert_units(sens, 'mm');
@@ -913,7 +913,7 @@ Using the covariance matrices and the leadfield matrices a spatial filtering is 
     sourcePre           = ft_sourceanalysis(cfg, freqPre );
     sourcePost          = ft_sourceanalysis(cfg, freqPost);
 
-To calculate neural activity index is the same like below equation. The function **[ft_sourceinterpolate](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceinterpolate.m)** interpolates the source reconstructed activity or a statistical distribution onto the voxels or vertices of an anatomical description of the brain (MRI with atlas).
+To calculate neural activity index is the same like below equation. The function **[ft_sourceinterpolate](/reference/ft_sourceinterpolate)** interpolates the source reconstructed activity or a statistical distribution onto the voxels or vertices of an anatomical description of the brain (MRI with atlas).
 
     sourceDiff          = sourcePost;
     sourceDiff.avg.pow  = (sourcePost.avg.pow - sourcePre.avg.pow) ./ sourcePre.avg.pow;

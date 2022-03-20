@@ -24,20 +24,20 @@ Towards this end we have to identify/define the nodal structure of the network w
 
 The data analyses in the context of networks follows the following steps:
 
-- Read the data into MATLAB using **[ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_definetrial.m)** and **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)**.
-- Compute sensor level power spectra and determine peak frequency using **[ft_freqanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqanalysis.m)** and **[ft_multiplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_multiplotER.m)**.
-- Construct a forward model and lead field matrix using **[ft_volumesegment](https://github.com/fieldtrip/fieldtrip/blob/release/ft_volumesegment.m)**, **[ft_prepare_headmodel](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_headmodel.m)** and **[ft_prepare_sourcemodel](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_sourcemodel.m)**.
-- Compute a spatial filter and estimate the amplitude of the sources using **[ft_sourceanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceanalysis.m)**.
-- Visualize the results, by first interpolating the sources to the anatomical MRI using **[ft_sourceinterpolate](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceinterpolate.m)** and plotting this with **[ft_sourceplot](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceplot.m)**.
-- Compute "all-to-all" phase relationship between voxels using **[ft_connectivityanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_connectivityanalysis.m)**.
-- Compute "node degree" using **[ft_networkanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_networkanalysis.m)**.
-- Visualize the results, again by first interpolating the sources to the anatomical MRI using **[ft_sourceinterpolate](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceinterpolate.m)** and plotting this with **[ft_sourceplot](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceplot.m)**.
+- Read the data into MATLAB using **[ft_definetrial](/reference/ft_definetrial)** and **[ft_preprocessing](/reference/ft_preprocessing)**.
+- Compute sensor level power spectra and determine peak frequency using **[ft_freqanalysis](/reference/ft_freqanalysis)** and **[ft_multiplotER](/reference/ft_multiplotER)**.
+- Construct a forward model and lead field matrix using **[ft_volumesegment](/reference/ft_volumesegment)**, **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)** and **[ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)**.
+- Compute a spatial filter and estimate the amplitude of the sources using **[ft_sourceanalysis](/reference/ft_sourceanalysis)**.
+- Visualize the results, by first interpolating the sources to the anatomical MRI using **[ft_sourceinterpolate](/reference/ft_sourceinterpolate)** and plotting this with **[ft_sourceplot](/reference/ft_sourceplot)**.
+- Compute "all-to-all" phase relationship between voxels using **[ft_connectivityanalysis](/reference/ft_connectivityanalysis)**.
+- Compute "node degree" using **[ft_networkanalysis](/reference/ft_networkanalysis)**.
+- Visualize the results, again by first interpolating the sources to the anatomical MRI using **[ft_sourceinterpolate](/reference/ft_sourceinterpolate)** and plotting this with **[ft_sourceplot](/reference/ft_sourceplot)**.
 
 ## Preprocessing
 
 ### Reading the data
 
-The aim is to identify the frequency and topography of an 10Hz oscillation. We first use **[ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_definetrial.m)** and **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** to read the continuous data and segment it into epochs of 2 seconds length.
+The aim is to identify the frequency and topography of an 10Hz oscillation. We first use **[ft_definetrial](/reference/ft_definetrial)** and **[ft_preprocessing](/reference/ft_preprocessing)** to read the continuous data and segment it into epochs of 2 seconds length.
 
 The ft_definetrial and ft_preprocessing functions require the original MEG dataset, which is available from <ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/SubjectRest.zip>.
 
@@ -54,7 +54,7 @@ The ft_definetrial and ft_preprocessing functions require the original MEG datas
 
 ### Artefact rejection
 
-We will first clean the data from potential bad segments such as SQUID jumps and/or bad channels using **[ft_rejectvisual](https://github.com/fieldtrip/fieldtrip/blob/release/ft_rejectvisual.m)**. Subsequently, we will identify occular and cardiac artifacts by means of ICA using **[ft_componentanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_componentanalysis.m)**. Since, these type of artifacts are predominately low frequent and we are interested in a 10Hz signal, we will downsample the data using **[ft_resampledata](https://github.com/fieldtrip/fieldtrip/blob/release/ft_resampledata.m)** in order to speed up calculations during ft_componentanalysis and reduce potential working memory issues. Alternatively, you can skip these steps and download the data [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/networkanalysis/).
+We will first clean the data from potential bad segments such as SQUID jumps and/or bad channels using **[ft_rejectvisual](/reference/ft_rejectvisual)**. Subsequently, we will identify occular and cardiac artifacts by means of ICA using **[ft_componentanalysis](/reference/ft_componentanalysis)**. Since, these type of artifacts are predominately low frequent and we are interested in a 10Hz signal, we will downsample the data using **[ft_resampledata](/reference/ft_resampledata)** in order to speed up calculations during ft_componentanalysis and reduce potential working memory issues. Alternatively, you can skip these steps and download the data [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/networkanalysis/).
 
     %% make a visual inspection and reject bad trials/sensors
     cfg = [];
@@ -109,7 +109,7 @@ We project the component data back to the channel representation, leaving out th
 
 ### Spectral analysis
 
-We will analyze the spectral content of the data using **[ft_freqanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqanalysis.m)** and subsequently interactively explore the data with **[ft_topoplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_topoplotER.m)** and **[ft_singleplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_singleplotER.m)**. For those interested in more detailed overview of the configuration options and strategies please refer to our video lectures [here](http://fieldtrip.fcdonders.nl/video) and also [here](https://www.youtube.com/watch?v=QLvsa1r1Voc).
+We will analyze the spectral content of the data using **[ft_freqanalysis](/reference/ft_freqanalysis)** and subsequently interactively explore the data with **[ft_topoplotER](/reference/ft_topoplotER)** and **[ft_singleplotER](/reference/ft_singleplotER)**. For those interested in more detailed overview of the configuration options and strategies please refer to our video lectures [here](http://fieldtrip.fcdonders.nl/video) and also [here](https://www.youtube.com/watch?v=QLvsa1r1Voc).
 
     %% compute the power spectrum
     cfg              = [];
@@ -158,7 +158,7 @@ _Figure 2: Top- scalp topography of oscillatory power centered at 10 Hz. Bottom-
 
 ### Source analysis
 
-In the following section we will compute the ingredients for accurate reconstruction of the underlying sources. First computing the source model with **[ft_prepare_sourcemodel](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_sourcemodel.m)**. We will use the individual MRI and a mni template source model, which can be downloaded [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/networkanalysis/). If you are not familiar with this strategy, please have a look [here](/example/sourcemodel_aligned2mni).
+In the following section we will compute the ingredients for accurate reconstruction of the underlying sources. First computing the source model with **[ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)**. We will use the individual MRI and a mni template source model, which can be downloaded [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/networkanalysis/). If you are not familiar with this strategy, please have a look [here](/example/sourcemodel_aligned2mni).
 
     %% load the required geometrical information
 
@@ -364,7 +364,7 @@ Next, we will compute the power spectra as above but this time computing them on
     cfg.trials       = indhigh;
     fft_data_high = ft_freqanalysis(cfg,dataica);
 
-Subsequently, we will compute the difference between high and low alpha conditions using **[ft_math](https://github.com/fieldtrip/fieldtrip/blob/release/ft_math.m)** for both axial and planar representation and plot the corresponding scalp topographies along with the power spectra.
+Subsequently, we will compute the difference between high and low alpha conditions using **[ft_math](/reference/ft_math)** for both axial and planar representation and plot the corresponding scalp topographies along with the power spectra.
 
     %% compute the difference between high and low
     cfg = [];
@@ -508,11 +508,11 @@ Now comparing the results from Figure 4 and Figure 7 yields two important observ
 
 Finally we will represent the communication between voxels in terms of a "network". That is, each dipole location will reflect a network "node" and all pairwise connections or "edges" will be quantified with the coherence coefficient. This results in a 720x720 matrix (in this case). However we are interested in the communication between all voxel that are defined as 'inside' or within the skull and we don't care about the 'outside' ones. Often the brain volume is discretized in much more smaller voxel size resulting in much more bigger matrices that need to be dealth with in memory.
 
-We will first reduce the size of the matix by calling **[ft_source2sparse](https://github.com/fieldtrip/fieldtrip/blob/release/ft_source2sparse.m)**. Subsequently, we will call **[ft_connectivityanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_connectivityanalysis.m)** with the configuration options **cfg.method** = 'coh'; and **cfg.complex** = 'absimag';. This syntax will return only the imaginary part of the coherence spectrum and effectivly suppress spurious coherence driven by volumeconduction (Nolte et al. Identifying true brain interaction from EEG data using the imaginary part of coherence. Clinical Neurophysiology, 2004; 115; 2292-2307).
+We will first reduce the size of the matix by calling **[ft_source2sparse](/reference/ft_source2sparse)**. Subsequently, we will call **[ft_connectivityanalysis](/reference/ft_connectivityanalysis)** with the configuration options **cfg.method** = 'coh'; and **cfg.complex** = 'absimag';. This syntax will return only the imaginary part of the coherence spectrum and effectivly suppress spurious coherence driven by volumeconduction (Nolte et al. Identifying true brain interaction from EEG data using the imaginary part of coherence. Clinical Neurophysiology, 2004; 115; 2292-2307).
 
-After computing this memory demanding step we will return to the full representation of the data by calling **[ft_source2full](https://github.com/fieldtrip/fieldtrip/blob/release/ft_source2full.m)**.
+After computing this memory demanding step we will return to the full representation of the data by calling **[ft_source2full](/reference/ft_source2full)**.
 
-Next, we will use **[ft_networkanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_networkanalysis.m)** with the configuration options **cfg.method** = 'degrees'; and **cfg.threshold** = .1;. The former one refers to one of the most fundamental metrics in graph theory- node degree (Ed Bullmore and Olaf Sporns: Complex brain networks: graph theorethical analysis of structural and functional systems. 2009 Nat Rev Neurosci, vol 10(3) pp. 186-198). Node degree refers to the number of links connected to the node and can be directed or undirected (as in this tutorial). Prerequisite for calculating node degree is the computation of the so called adjecency matrix (AM). This is a binary matrix of the same size as our coherence spectrum matrix (720 x 720) with 1 and 0 for link or no link between pairs respectively. Hence the coherence spectrum has to be thresholded at some value where everything below will be 0 and everything above will be replaced by 1. This is provided by the configuration option cfg.threshold and it is one of the most critical step in graph-theoretical networkanalysis of M/EEG data. There are several ways to determine the threshold, for instance based on some statistical parameterization or previous observation in the literature, yet all of them are and remain arbitrary. Here we used an arbitrary value of 0.1.
+Next, we will use **[ft_networkanalysis](/reference/ft_networkanalysis)** with the configuration options **cfg.method** = 'degrees'; and **cfg.threshold** = .1;. The former one refers to one of the most fundamental metrics in graph theory- node degree (Ed Bullmore and Olaf Sporns: Complex brain networks: graph theorethical analysis of structural and functional systems. 2009 Nat Rev Neurosci, vol 10(3) pp. 186-198). Node degree refers to the number of links connected to the node and can be directed or undirected (as in this tutorial). Prerequisite for calculating node degree is the computation of the so called adjecency matrix (AM). This is a binary matrix of the same size as our coherence spectrum matrix (720 x 720) with 1 and 0 for link or no link between pairs respectively. Hence the coherence spectrum has to be thresholded at some value where everything below will be 0 and everything above will be replaced by 1. This is provided by the configuration option cfg.threshold and it is one of the most critical step in graph-theoretical networkanalysis of M/EEG data. There are several ways to determine the threshold, for instance based on some statistical parameterization or previous observation in the literature, yet all of them are and remain arbitrary. Here we used an arbitrary value of 0.1.
 
     %% reduce memory demands and compute connectivity
 

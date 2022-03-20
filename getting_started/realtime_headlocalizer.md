@@ -19,7 +19,7 @@ There are multiple reasons for running the visualization separate from the acqui
 
 The CTF / Neuromag acquisition computer only runs a small program in the background (acq2ftx / neuromag2ft). Note that MATLAB does not need to be installed on the acquisition computer as this program is written in C-code and provided in compiled form. This program reads the data from the real-time inferface (using shared memory) and makes the data available on a TCP/IP socket in a [buffer](/development/realtime/buffer_overview).
 
-The second (visualization / real-time analysis) computer runs MATLAB, reads the data over the network from the buffer and does the plotting using **[ft_realtime_headlocalizer](https://github.com/fieldtrip/fieldtrip/blob/release/realtime/example/ft_realtime_headlocalizer.m)**.
+The second (visualization / real-time analysis) computer runs MATLAB, reads the data over the network from the buffer and does the plotting using **[ft_realtime_headlocalizer](/reference//realtime/example/ft_realtime_headlocalizer)**.
 
 {% include image src="/assets/img/getting_started/realtime_headlocalizer/headloc_flowchart.png" width="600" %}
 
@@ -69,7 +69,7 @@ or by rebooting the system. To make this change permanent, you can update the fi
    cfg.dataset = 'buffer://hostname:1972';
    ft_realtime_headlocalizer(cfg)
 
-The hostname address should points to the location where the buffer is run - i.e. the CTF / Neuromag acquisition computer. You should now see the real-time head location being visualized. You can also explore **[ft_realtime_signalviewer](https://github.com/fieldtrip/fieldtrip/blob/release/realtime/example/ft_realtime_signalviewer.m)** or the other [realtime examples](/getting_started/realtime).
+The hostname address should points to the location where the buffer is run - i.e. the CTF / Neuromag acquisition computer. You should now see the real-time head location being visualized. You can also explore **[ft_realtime_signalviewer](/reference//realtime/example/ft_realtime_signalviewer)** or the other [realtime examples](/getting_started/realtime).
 
 ## Practical issues and suggestions
 

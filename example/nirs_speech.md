@@ -97,7 +97,7 @@ We will first use the low-level reading functions to check on some basic charact
 
 ## Look at the optode positions
 
-FieldTrip uses the `opto` structure (see **[ft_datatype_sens](https://github.com/fieldtrip/fieldtrip/blob/release/utilities/ft_datatype_sens.m)**) to describe the physical characteristics of the sensor array, and the `layout` structure (see **[ft_prepare_layout](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_layout.m)** and the [plotting](/tutorial/plotting) and [layout](/tutorial/layout) tutorials) to describe how the channel-level results are to be plotted schematically in 2D on the screen.
+FieldTrip uses the `opto` structure (see **[ft_datatype_sens](/reference/utilities/ft_datatype_sens)**) to describe the physical characteristics of the sensor array, and the `layout` structure (see **[ft_prepare_layout](/reference/ft_prepare_layout)** and the [plotting](/tutorial/plotting) and [layout](/tutorial/layout) tutorials) to describe how the channel-level results are to be plotted schematically in 2D on the screen.
 
     optoR = opto;
     optoR.optopos(strcmp(opto.optotype, 'transmitter'),:) = nan;
@@ -419,7 +419,7 @@ specific averages.
 
 {% include image src="/assets/img/example/nirs_speech/figure10.png" %}
 
-After baseline correcting (which is done while making the figure, it could also have been done using **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)**) we can see condition differences in the event-related responses in the 5 conditions. However, due to the alternating stimulus-response sequence and the response possibly being confounded with an artifact, it is hard to tell whether the difference is due to the stimulus or to the response that could affect the baseline of each subsequent trial.
+After baseline correcting (which is done while making the figure, it could also have been done using **[ft_preprocessing](/reference/ft_preprocessing)**) we can see condition differences in the event-related responses in the 5 conditions. However, due to the alternating stimulus-response sequence and the response possibly being confounded with an artifact, it is hard to tell whether the difference is due to the stimulus or to the response that could affect the baseline of each subsequent trial.
 
 ## Closing remarks
 

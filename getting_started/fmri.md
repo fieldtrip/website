@@ -9,7 +9,7 @@ Although FieldTrip is not designed for processing functional MRI data, you can n
 
 ## As channel-level raw data
 
-The FieldTrip [raw data structure](https://github.com/fieldtrip/fieldtrip/blob/release/utilities/ft_datatype_raw.m) requires that each voxel timeseries is represented as a channel with a label.
+The FieldTrip [raw data structure](/reference/utilities/ft_datatype_raw) requires that each voxel timeseries is represented as a channel with a label.
 
 ```
 fmridata = ft_read_mri('sub-01_ses-mri_task-facerecognition_run-01_bold.nii', 'outputfield', 'functional');
@@ -129,13 +129,13 @@ rawdata4d = ft_sourceparcellate(cfg, source4d, parcellation4d);
 
 ```
 
-The data is now represented again as a raw data structure as returned by **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)**, but only with a few channels.
+The data is now represented again as a raw data structure as returned by **[ft_preprocessing](/reference/ft_preprocessing)**, but only with a few channels.
 
 You could also do the interpolation the other way around, but interpolating the relatively low-resolution 4D data on the high-resolution 3D requires a lot of memory.
 
 ## Parcellate using an atlas
 
-It is also possible to use an atlas for the parcellation, see [here](/template/atlas/) for a description of the template atlasses that are included. Note that you can also construct and use your own atlas, the only requirement is that it represented as a [parcellated](https://github.com/fieldtrip/fieldtrip/blob/release/utilities/ft_datatype_parcellation.m) or [segmented](https://github.com/fieldtrip/fieldtrip/blob/release/utilities/ft_datatype_segmentation.m) data structure with an indexed representation, i.e. each voxel or vertex belongs to a single tissue type.
+It is also possible to use an atlas for the parcellation, see [here](/template/atlas/) for a description of the template atlasses that are included. Note that you can also construct and use your own atlas, the only requirement is that it represented as a [parcellated](/reference/utilities/ft_datatype_parcellation) or [segmented](/reference/utilities/ft_datatype_segmentation) data structure with an indexed representation, i.e. each voxel or vertex belongs to a single tissue type.
 
 ```
 

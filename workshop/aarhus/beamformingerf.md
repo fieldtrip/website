@@ -25,18 +25,18 @@ The brain is divided in a regular three dimensional grid and the source strength
 
 To localize the oscillatory sources for the example dataset we will perform the following step
 
-- Reading in the subject specific anatomical MRI using **[ft_read_mri](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_mri.m)**
-- Construct a forward model using **[ft_volumesegment](https://github.com/fieldtrip/fieldtrip/blob/release/ft_volumesegment.m)** and **[ft_prepare_headmodel](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_headmodel.m)**
-- Prepare the source model using **[ft_prepare_sourcemodel](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_sourcemodel.m)**
+- Reading in the subject specific anatomical MRI using **[ft_read_mri](/reference/fileio/ft_read_mri)**
+- Construct a forward model using **[ft_volumesegment](/reference/ft_volumesegment)** and **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)**
+- Prepare the source model using **[ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)**
 
 Next, we head out to investigate the response to the finger movement. We will localize the sources of the motor beta-band activity following the following step
 
-- Load the data from disk and define baseline and poststimulus period using **[ft_redefinetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_redefinetrial.m)**
-- Compute the cross-spectral density matrix for all MEG channels using the function **[ft_freqanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqanalysis.m)**
-- Compute the lead field matrices using **[ft_prepare_leadfield](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_leadfield.m)**
-- Compute a common spatial filter and estimate the power of the sources using **[ft_sourceanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceanalysis.m)**
+- Load the data from disk and define baseline and poststimulus period using **[ft_redefinetrial](/reference/ft_redefinetrial)**
+- Compute the cross-spectral density matrix for all MEG channels using the function **[ft_freqanalysis](/reference/ft_freqanalysis)**
+- Compute the lead field matrices using **[ft_prepare_leadfield](/reference/ft_prepare_leadfield)**
+- Compute a common spatial filter and estimate the power of the sources using **[ft_sourceanalysis](/reference/ft_sourceanalysis)**
 - Compute the condition difference
-- Visualize the result with **[ft_sourceplot](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceplot.m)**
+- Visualize the result with **[ft_sourceplot](/reference/ft_sourceplot)**
 
 Note that some of the steps will be skipped in this tutorial as we have already done them in the previous days of the workshop.
 
@@ -52,8 +52,8 @@ We will briefly explain the steps that allowed the generation of the epoched fil
 
 The following steps had been performed:
 
-- Defining triggers around which the data will be segmented using **[ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_definetrial.m)**. The data is segmented to include 1.5 seconds prior to trigger onset (i.e. baseline) and 2 second post trigger onset (i.e. response interval).
-- Apply some preprocessing such as power line noise removal, demean and detrend using **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)**
+- Defining triggers around which the data will be segmented using **[ft_definetrial](/reference/ft_definetrial)**. The data is segmented to include 1.5 seconds prior to trigger onset (i.e. baseline) and 2 second post trigger onset (i.e. response interval).
+- Apply some preprocessing such as power line noise removal, demean and detrend using **[ft_preprocessing](/reference/ft_preprocessing)**
 
 To run the following section of code you need the original dataset and trial function: [download dataset](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/natmeg/oddball1_mc_downsampled.fif), [download trial function](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/natmeg/trialfun_oddball_responselocked.m)
 
@@ -88,8 +88,8 @@ Load the data using the following command:
 
 Next, we perform the independent component analysis according to the following steps:
 
-- Resampling the data to a lower sample rate in order to speed up ICA computation **[ft_resampledata](https://github.com/fieldtrip/fieldtrip/blob/release/ft_resampledata.m)**. Note, that we will compute the ICA twice in order to retain the original sampling rate. The option **cfg.resamplefs** depends on your knowledge about the spectral characteristics of the artifacts you would like to discover. Vertical and horizontal eye movements are typically dominated by high energy in the low frequency <10 Hz. Therefore everything above the Nyquist frequency of the targeted signal, in this case 20 Hz, is an appropriate sampling rate. Cardiac artifacts vary over the entire frequency spectrum, although there is some dominance in the slower frequencies too. The decision about the new sampling frequency thus strongly depends on your needs. If you are interested in the detection of caridac and oculo-motor activity a sampling rate of >100 Hz will be appropriate for most of the cases.
-- Perform the independent components analysis on the resampled data **[ft_componentanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_componentanalysis.m)**
+- Resampling the data to a lower sample rate in order to speed up ICA computation **[ft_resampledata](/reference/ft_resampledata)**. Note, that we will compute the ICA twice in order to retain the original sampling rate. The option **cfg.resamplefs** depends on your knowledge about the spectral characteristics of the artifacts you would like to discover. Vertical and horizontal eye movements are typically dominated by high energy in the low frequency <10 Hz. Therefore everything above the Nyquist frequency of the targeted signal, in this case 20 Hz, is an appropriate sampling rate. Cardiac artifacts vary over the entire frequency spectrum, although there is some dominance in the slower frequencies too. The decision about the new sampling frequency thus strongly depends on your needs. If you are interested in the detection of caridac and oculo-motor activity a sampling rate of >100 Hz will be appropriate for most of the cases.
+- Perform the independent components analysis on the resampled data **[ft_componentanalysis](/reference/ft_componentanalysis)**
 - Repeat the independent components analysis on the original data by applying the linear demixing and topography lebels form the previous step
 
   % project the cont data thru the components
@@ -109,7 +109,7 @@ Next, we perform the independent component analysis according to the following s
   cfg.topolabel = comp.topolabel;
   comp_meg=ft_componentanalysis(cfg, data_meg_clean);
 
-Now we could explore the decomposed data by using **[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_databrowser.m)**
+Now we could explore the decomposed data by using **[ft_databrowser](/reference/ft_databrowser)**
 
     cfg = [];
     cfg.channel = {comp_meg.label{1:5}}; % components to be plotted
@@ -118,7 +118,7 @@ Now we could explore the decomposed data by using **[ft_databrowser](https://git
 
     ft_databrowser(cfg, comp_meg);
 
-Take your time to browse and evaluate the topographies and the corresponding time courses. We will reject several of these with **[ft_rejectcomponent](https://github.com/fieldtrip/fieldtrip/blob/release/ft_rejectcomponent.m)**
+Take your time to browse and evaluate the topographies and the corresponding time courses. We will reject several of these with **[ft_rejectcomponent](/reference/ft_rejectcomponent)**
 
     cfg = [];
     cfg.component = [1:6 10 11 15];
@@ -126,7 +126,7 @@ Take your time to browse and evaluate the topographies and the corresponding tim
 
 ### Averaging and plotting the response related field
 
-In the first step we re-segment the data into left and right hand responses using the information orgnized in the trialinfo substructure. We use **[ft_redefinetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_redefinetrial.m)**. After this we'll focus on right hand responses for simplicity and average over repetitions using **[ft_timelockanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockanalysis.m)**. Finally, we use **[ft_topoplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_topoplotER.m)** and **[ft_singleplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_singleplotER.m)** with a predefined latency window to plot the topography and time course of the early motor evoked field.
+In the first step we re-segment the data into left and right hand responses using the information orgnized in the trialinfo substructure. We use **[ft_redefinetrial](/reference/ft_redefinetrial)**. After this we'll focus on right hand responses for simplicity and average over repetitions using **[ft_timelockanalysis](/reference/ft_timelockanalysis)**. Finally, we use **[ft_topoplotER](/reference/ft_topoplotER)** and **[ft_singleplotER](/reference/ft_singleplotER)** with a predefined latency window to plot the topography and time course of the early motor evoked field.
 
     cfg = [];
     cfg.trials    = find(data_meg_clean_ica.trialinfo(:,1) == 256);
@@ -226,7 +226,7 @@ We will focus on right hand responses. First, we select the latencies of the ear
     cfg.toilim = [.05 .15];
     datapost = ft_redefinetrial(cfg, data_right);
 
-We compute the covariance matrix during the call to **[ft_timelockanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockanalysis.m)**. Note that the data covariance matrix is computed on the entire interval including the pre and post-response latencies. This approach is similar to the common filter minimizing the influence of different spatial leakage profiles of the pre and post-response spatial filters.
+We compute the covariance matrix during the call to **[ft_timelockanalysis](/reference/ft_timelockanalysis)**. Note that the data covariance matrix is computed on the entire interval including the pre and post-response latencies. This approach is similar to the common filter minimizing the influence of different spatial leakage profiles of the pre and post-response spatial filters.
 
     cfg = [];
     cfg.covariance='yes';
@@ -237,7 +237,7 @@ We compute the covariance matrix during the call to **[ft_timelockanalysis](http
     avgpre = ft_timelockanalysis(cfg,datapre);
     avgpst = ft_timelockanalysis(cfg,datapost);
 
-Now using the headmodel and the precomputed leadfield we make three subsequent calls to **[ft_sourceanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceanalysis.m)**. First we compute one spatial filter per location (e.g., voxel) on the basis of the entire latency interval of pre and post-response data. Specifying the **cfg.keepfilter = 'yes';** allows for a subsequent application of the spatial filters on the pre and post-response data separately. The purpose of lambda is discussed in Exercise 6. By using cfg.keepfilter = 'yes', we let **[ft_sourceanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceanalysis.m)** return the filter matrix in the source structure.
+Now using the headmodel and the precomputed leadfield we make three subsequent calls to **[ft_sourceanalysis](/reference/ft_sourceanalysis)**. First we compute one spatial filter per location (e.g., voxel) on the basis of the entire latency interval of pre and post-response data. Specifying the **cfg.keepfilter = 'yes';** allows for a subsequent application of the spatial filters on the pre and post-response data separately. The purpose of lambda is discussed in Exercise 6. By using cfg.keepfilter = 'yes', we let **[ft_sourceanalysis](/reference/ft_sourceanalysis)** return the filter matrix in the source structure.
 
     %% first call to ft_sourceanalysis keeping the spatial filters
     cfg=[];
@@ -277,7 +277,7 @@ The strategy around circumventing the noise bias towards the center of the head 
     M1=sourcepstM1;
     M1.avg.pow=(sourcepstM1.avg.pow-sourcepreM1.avg.pow)./sourcepreM1.avg.pow;
 
-The grid of estimated power values can be plotted superimposed on the anatomical MRI. This requires the output of **[ft_sourceanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceanalysis.m)** to match position of the MRI. The function **[ft_sourceinterpolate](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceinterpolate.m)** aligns the source level activity with the structural MRI. We only need to specify what parameter we want to interpolate and to specify the MRI we want to use for interpolation.
+The grid of estimated power values can be plotted superimposed on the anatomical MRI. This requires the output of **[ft_sourceanalysis](/reference/ft_sourceanalysis)** to match position of the MRI. The function **[ft_sourceinterpolate](/reference/ft_sourceinterpolate)** aligns the source level activity with the structural MRI. We only need to specify what parameter we want to interpolate and to specify the MRI we want to use for interpolation.
 
 First we will load the MRI. It is important that you use the MRI realigned with the sensor or your source activity data will not match the anatomical data. We will load the realigned MRI from the [dipole fitting tutorial](/workshop/natmeg/dipolefitting) which can be downloaded to the working directory [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/aarhus/mri_segmented.mat).
 
@@ -307,7 +307,7 @@ After which, we can plot the interpolated data. In order to emphasize "the hill"
 _Figure 2: A source plot of the motor evoked field- ratio between the pre- and post-response conditions._
 
 {% include markup/info %}
-The 'ortho' method is not the only plotting method implemented. Use the 'help' of **[ft_sourceplot](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceplot.m)** to find what other methods there are and plot the source level results. What are the benefits and drawbacks of these plotting routines?
+The 'ortho' method is not the only plotting method implemented. Use the 'help' of **[ft_sourceplot](/reference/ft_sourceplot)** to find what other methods there are and plot the source level results. What are the benefits and drawbacks of these plotting routines?
 {% include markup/end %}
 
 #### Exercise: determining anatomical labels
@@ -315,7 +315,7 @@ The 'ortho' method is not the only plotting method implemented. Use the 'help' o
 {% include markup/info %}
 If you were to name the anatomical label of the source of this motor beta, what you say? What plotting method is most appropriate for this?
 
-With the use of cfg.atlas you can specify a lookup atlas, which **[ft_sourceplot](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceplot.m)** will use to return appropriate anatomical labels. One for the MNI template is distributed with FieldTrip and can be found in 'fieldtrip/template/atlas/aal/ROI_MNI_V4.nii'. Be aware that for this to work you need to realign your anatomical and functional data into MNI coordinates. An example how to achieve this is to [align the leadfield grid of the individual subject to a leadfield grid in MNI space](/example/sourcemodel_aligned2mni).
+With the use of cfg.atlas you can specify a lookup atlas, which **[ft_sourceplot](/reference/ft_sourceplot)** will use to return appropriate anatomical labels. One for the MNI template is distributed with FieldTrip and can be found in 'fieldtrip/template/atlas/aal/ROI_MNI_V4.nii'. Be aware that for this to work you need to realign your anatomical and functional data into MNI coordinates. An example how to achieve this is to [align the leadfield grid of the individual subject to a leadfield grid in MNI space](/example/sourcemodel_aligned2mni).
 {% include markup/end %}
 
 #### Exercise: regularization
@@ -362,7 +362,7 @@ If this is where you started in the tutorial, make sure you have downloaded and 
     avgpre = ft_timelockanalysis(cfg,datapre);
     avgpst = ft_timelockanalysis(cfg,datapost);
 
-Next, we repeat the three subsequent calls to **[ft_sourceanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceanalysis.m)**. The first computes the spatial filters much in the same way demonstrated above. Because of low signal-to-noise ratio on single trial level it is not recommended to compute them on individual trials. Subsequently, single trial source power estimates are kept in the output structure by specifying **cfg.rawtrial = 'yes';**.
+Next, we repeat the three subsequent calls to **[ft_sourceanalysis](/reference/ft_sourceanalysis)**. The first computes the spatial filters much in the same way demonstrated above. Because of low signal-to-noise ratio on single trial level it is not recommended to compute them on individual trials. Subsequently, single trial source power estimates are kept in the output structure by specifying **cfg.rawtrial = 'yes';**.
 
     cfg=[];
     cfg.method='lcmv';
@@ -395,7 +395,7 @@ The source structure now contains the single trial estimates in the field **sour
           df: 50
          cfg: [1x1 struct]
 
-Now we can statistically compare the difference between the pre and post response source power using **[ft_sourcestatistics](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourcestatistics.m)** and plot the output after interpolating onto the anatomical image with **[ft_sourceinterpolate](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceinterpolate.m)**.
+Now we can statistically compare the difference between the pre and post response source power using **[ft_sourcestatistics](/reference/ft_sourcestatistics)** and plot the output after interpolating onto the anatomical image with **[ft_sourceinterpolate](/reference/ft_sourceinterpolate)**.
 
     cfg = [];
     cfg.parameter        = 'pow';
@@ -422,7 +422,7 @@ Now we can statistically compare the difference between the pre and post respons
     cfg.uvar     = 2;
     stat = ft_sourcestatistics(cfg,sourcepstM1,sourcepreM1);
 
-Note, we make two subsequent calls to **[ft_sourceinterpolate](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceinterpolate.m)**. One for the functional data (e.g., t-value distribution) and the other for a binary mask of 0 and 1 indexing voxels of significant condition differences.
+Note, we make two subsequent calls to **[ft_sourceinterpolate](/reference/ft_sourceinterpolate)**. One for the functional data (e.g., t-value distribution) and the other for a binary mask of 0 and 1 indexing voxels of significant condition differences.
 
     cfg              = [];
     cfg.voxelcoord   = 'no';
@@ -455,7 +455,7 @@ Uncomment the option **cfg.maskparameter = 'mask';** and try to interpret what y
 
 ## (MEG) Reconstructing the time course of activity in the primary motor cortex
 
-The ultimate motivation of source analysis of M/EEG data is the reconstruction of the time course of the neural activity at a particular location. The following section will demonstrate how to achieve this. First we have to compute a leadfield at the desired location (e.g., M1 identified in the previous steps) using **[ft_prepare_leadfield](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_leadfield.m)**. The only difference to the previous leadfield computation is that instead of discretizing the brain into multiple grid locations we now focus only on the location within the primary motor cortex. Next, we repeat the above steps, i.e. covariance matrix computation using **[ft_timelockanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockanalysis.m)** and **[ft_sourceanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceanalysis.m)**. Finally, we will multiply the data consisting the single trial observations with the spatial filters at the desired location. This is commonly known as virtual sensor computation and has been also covered in [the virtual sensors tutorial](/tutorial/virtual_sensors) in the context of different task demands.
+The ultimate motivation of source analysis of M/EEG data is the reconstruction of the time course of the neural activity at a particular location. The following section will demonstrate how to achieve this. First we have to compute a leadfield at the desired location (e.g., M1 identified in the previous steps) using **[ft_prepare_leadfield](/reference/ft_prepare_leadfield)**. The only difference to the previous leadfield computation is that instead of discretizing the brain into multiple grid locations we now focus only on the location within the primary motor cortex. Next, we repeat the above steps, i.e. covariance matrix computation using **[ft_timelockanalysis](/reference/ft_timelockanalysis)** and **[ft_sourceanalysis](/reference/ft_sourceanalysis)**. Finally, we will multiply the data consisting the single trial observations with the spatial filters at the desired location. This is commonly known as virtual sensor computation and has been also covered in [the virtual sensors tutorial](/tutorial/virtual_sensors) in the context of different task demands.
 
 ##### Compute leadfield at desired location
 
@@ -497,7 +497,7 @@ The ultimate motivation of source analysis of M/EEG data is the reconstruction o
     virtsens.fsample=data_right.fsample;
     virtsens.label={'M1'}';
 
-Now we will use **[ft_timelockanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockanalysis.m)** and **[ft_freqanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqanalysis.m)** in order to evaluate the result by plotting it with **[ft_singleplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_singleplotER.m)** and **[ft_singleplotTFR](https://github.com/fieldtrip/fieldtrip/blob/release/ft_singleplotTFR.m)** respectively. Note, all the details around event-related averaging and time-frequency analysis are covered by the [the event-related fields tutorial](/tutorial/eventrelatedaveraging) and [the time-frequency tutorial](/tutorial/timefrequencyanalysis). It is recommended that you are familiar with these before you continue.
+Now we will use **[ft_timelockanalysis](/reference/ft_timelockanalysis)** and **[ft_freqanalysis](/reference/ft_freqanalysis)** in order to evaluate the result by plotting it with **[ft_singleplotER](/reference/ft_singleplotER)** and **[ft_singleplotTFR](/reference/ft_singleplotTFR)** respectively. Note, all the details around event-related averaging and time-frequency analysis are covered by the [the event-related fields tutorial](/tutorial/eventrelatedaveraging) and [the time-frequency tutorial](/tutorial/timefrequencyanalysis). It is recommended that you are familiar with these before you continue.
 
     %% compute the event related average at location M1
     cfg=[];
@@ -594,7 +594,7 @@ Load the EEG head model using the following cod
 
 ## (EEG) Lead field calculation
 
-The leadfield is calculated using **[ft_prepare_leadfield](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_leadfield.m)**.
+The leadfield is calculated using **[ft_prepare_leadfield](/reference/ft_prepare_leadfield)**.
 
     cfg                 = [];
     cfg.elec         = elec;

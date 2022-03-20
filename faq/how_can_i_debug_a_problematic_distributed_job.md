@@ -5,7 +5,7 @@ tags: [faq, peer, debug]
 
 # How can I debug a problematic distributed job?
 
-A distributed job may fail for various reasons. If the error is properly caught by the worker that executed the job, **[peercellfun](https://github.com/fieldtrip/fieldtrip/blob/release/peer/peercellfun.m)** will display the error on the controller. If **[peercellfun](https://github.com/fieldtrip/fieldtrip/blob/release/peer/peercellfun.m)** fails to return the output arguments of the jobs that it sent out, you'll have to dig deeper...
+A distributed job may fail for various reasons. If the error is properly caught by the worker that executed the job, **[peercellfun](/reference/peer/peercellfun)** will display the error on the controller. If **[peercellfun](/reference/peer/peercellfun)** fails to return the output arguments of the jobs that it sent out, you'll have to dig deeper...
 
 This page describes a number of strategies that you can use.
 
@@ -25,7 +25,7 @@ The problem may be related to file and/or directory permissions because the peer
 
 ## Start an interactive peerworker
 
-You can start another interactive MATLAB session, preferably on another computer, and within that MATLAB session start a **[peerworker](https://github.com/fieldtrip/fieldtrip/blob/release/peer/peerworker.m)**. To ensure that the controller will pick this worker, and not one of the other idle workers on the network, you have to specify both to your controller and your worker that they should restict them selves based on username using the allowuser option.
+You can start another interactive MATLAB session, preferably on another computer, and within that MATLAB session start a **[peerworker](/reference/peer/peerworker)**. To ensure that the controller will pick this worker, and not one of the other idle workers on the network, you have to specify both to your controller and your worker that they should restict them selves based on username using the allowuser option.
 
 In the controller MATLAB session you do
 peercontroller('allowuser, 'roboos');
@@ -34,7 +34,7 @@ peerworker('allowuser', 'roboos');
 
 Since both MATLAB sessions will run under your own account (here with the account name "roboos"), the controller and worker will exclusively communicate.
 
-Subsequently, you can restart the **[peercellfun](https://github.com/fieldtrip/fieldtrip/blob/release/peer/peercellfun.m)** command in the controller and look at what happens inside the worker MATLAB session.
+Subsequently, you can restart the **[peercellfun](/reference/peer/peercellfun)** command in the controller and look at what happens inside the worker MATLAB session.
 
 ## Start a worker as another user
 
@@ -46,13 +46,13 @@ To test this, you can log in using the public account, which has the password "p
 
 The public user does not have any privileges or disk quota, so logging in under this account is normally not of interest to you or anyone else.
 
-Once logged in as other user, you start an interactive MATLAB session and a **[peerworker](https://github.com/fieldtrip/fieldtrip/blob/release/peer/peerworker.m)** inside it. To ensure that your controller will send the job to this worker, and not to another one in the network, you can use the allowgroup option.
+Once logged in as other user, you start an interactive MATLAB session and a **[peerworker](/reference/peer/peerworker)** inside it. To ensure that your controller will send the job to this worker, and not to another one in the network, you can use the allowgroup option.
 
-You start the **[peercontroller](https://github.com/fieldtrip/fieldtrip/blob/release/peer/peercontroller.m)** using
+You start the **[peercontroller](/reference/peer/peercontroller)** using
 
     peercontroller('allowgroup', 'xyz');
 
-and the **[peerworker](https://github.com/fieldtrip/fieldtrip/blob/release/peer/peerworker.m)** as
+and the **[peerworker](/reference/peer/peerworker)** as
 
     peerworker('group', 'xyz');
 
@@ -64,16 +64,16 @@ and
 
     peerworker('group', 'xyz', 'allowgroup', 'xyz');
 
-Subsequently you retry the **[peercellfun](https://github.com/fieldtrip/fieldtrip/blob/release/peer/peercellfun.m)** and look at the screen of the interactive worker MATLAB session.
+Subsequently you retry the **[peercellfun](/reference/peer/peercellfun)** and look at the screen of the interactive worker MATLAB session.
 
 ## Start a worker in non-graphical mode
 
 It might be that the problem is related to the graphical output of the function that you are trying to evaluate. The workers that are running by default on the DCCN Linux cluster do not have a graphical output. Some graphical functions (like plotting) has been reported to work, but others (like drawing a GUI) have been reported to fail.
 
-To ensure that a non-graphical worker can execute your jobs, you can use putty to connect to a Linux cluster node. Subsequently you start MATLAB in the putty window and start **[peerworker](https://github.com/fieldtrip/fieldtrip/blob/release/peer/peerworker.m)** with
+To ensure that a non-graphical worker can execute your jobs, you can use putty to connect to a Linux cluster node. Subsequently you start MATLAB in the putty window and start **[peerworker](/reference/peer/peerworker)** with
 peerworker('allowuser', 'yourid');
 
-Subsequently you can restrict your **[peercontroller](https://github.com/fieldtrip/fieldtrip/blob/release/peer/peercontroller.m)** to the same userid (you can also use groups for this, see above) and retry the execution of the jobs with **[peercellfun](https://github.com/fieldtrip/fieldtrip/blob/release/peer/peercellfun.m)**.
+Subsequently you can restrict your **[peercontroller](/reference/peer/peercontroller)** to the same userid (you can also use groups for this, see above) and retry the execution of the jobs with **[peercellfun](/reference/peer/peercellfun)**.
 
 ## Use the MATLAB debugger in the worker
 
@@ -81,4 +81,4 @@ If all of the methods described above fail, you'll have to resort to using the M
 
 In the function that is executed you insert a "keyboard" statement. Since the worker runs like a normal MATLAB, it will jump to debug mode on that line and you can continue step-by-step.
 
-You can also try to resolve the problem by typing "dbstop if caught error" in MATLAB prior to starting the **[peerworker](https://github.com/fieldtrip/fieldtrip/blob/release/peer/peerworker.m)**. The worker will evaluate the function using peerexec, which does feval in a large try-catch loop. Note that a normal "dbstop if error" will not be sufficient, because the error is caught with the purpose of sending it back to the controller.
+You can also try to resolve the problem by typing "dbstop if caught error" in MATLAB prior to starting the **[peerworker](/reference/peer/peerworker)**. The worker will evaluate the function using peerexec, which does feval in a large try-catch loop. Note that a normal "dbstop if error" will not be sufficient, because the error is caught with the purpose of sending it back to the controller.

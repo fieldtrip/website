@@ -11,7 +11,7 @@ The datafiles for the 64-, 160- and 440-channel Yokogawa MEG systems are support
 
 The low-level MATLAB reading functions are included in the FieldTrip release. Note that these files are not open source and **not covered by the GPL license**, but they are copyrighted by Yokogawa.
 
-FieldTrip includes reading functions for the Yokogawa MEG system in the fieldtrip/external/yokogawa directory. Using those reading functions, FieldTrip can process Yokogawa data just like any other data type. That means that the default reading functions **[ft_read_header](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_header.m)**, **[ft_read_data](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_data.m)** and **[ft_read_event](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_event.m)** work just like expected. The gradiometer information is also correctly represented, which means that you can use FieldTrip or SPM (which uses FieldTrip for the forward computations) for forward and inverse source estimation.
+FieldTrip includes reading functions for the Yokogawa MEG system in the fieldtrip/external/yokogawa directory. Using those reading functions, FieldTrip can process Yokogawa data just like any other data type. That means that the default reading functions **[ft_read_header](/reference/fileio/ft_read_header)**, **[ft_read_data](/reference/fileio/ft_read_data)** and **[ft_read_event](/reference/fileio/ft_read_event)** work just like expected. The gradiometer information is also correctly represented, which means that you can use FieldTrip or SPM (which uses FieldTrip for the forward computations) for forward and inverse source estimation.
 
 The following Yokogawa file formats are recognized by FieldTrip
 
@@ -31,7 +31,7 @@ Usually you will be starting your FieldTrip analysis with raw continuous data wh
 
 ## Set the path
 
-To get started, you should add the FieldTrip main directory to your path, and execute the **[ft_defaults](https://github.com/fieldtrip/fieldtrip/blob/release/ft_defaults.m)** function, which sets the defaults and configures up the minimal required path settings. See also this [frequently asked question](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path).
+To get started, you should add the FieldTrip main directory to your path, and execute the **[ft_defaults](/reference/ft_defaults)** function, which sets the defaults and configures up the minimal required path settings. See also this [frequently asked question](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path).
 
     addpath <path_to_fieldtrip>
     ft_defaults
@@ -59,7 +59,7 @@ Subsequently you can read the data from one of the channels (here the first) and
     >> dat = ft_read_data('Continuous1.con', 'chanindx', 1);
     >> plot(dat)
 
-Instead of using the low-level reading functions for reading and handling the data manually, normally you would use the **[ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_definetrial.m)** and **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)**. Please read through the tutorials to learn how to do a complete analysis.
+Instead of using the low-level reading functions for reading and handling the data manually, normally you would use the **[ft_definetrial](/reference/ft_definetrial)** and **[ft_preprocessing](/reference/ft_preprocessing)**. Please read through the tutorials to learn how to do a complete analysis.
 
 ## Reading functions
 
@@ -160,7 +160,7 @@ We can then proceed in the standard way of defining trials and reading data as f
 
 Many FieldTrip plotting functions, such as `ft_topoplotER`, make use of a channel layout that specifies the position of the MEG channels. For some systems, FieldTrip includes [template layout](/template/layout) files and these are loaded when data are plotted. For Yokogawa systems, however, there exist many different layouts across labs, making it impractical to have a layout file available for every system in FieldTrip. Moreover, for some systems with the same number of channels (e.g., Yokogawa systems with 160 channels), the layouts are slightly different across systems/labs.
 
-Rather than using a template layout, it is also possible to create a layout specifically for your system using your own data. In the example below, `ft_read_sens` is used to read in the position of the sensors from .con or .sqd data files. The **[ft_prepare_layout](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_layout.m)** function is then used to define a layout based on these positions.
+Rather than using a template layout, it is also possible to create a layout specifically for your system using your own data. In the example below, `ft_read_sens` is used to read in the position of the sensors from .con or .sqd data files. The **[ft_prepare_layout](/reference/ft_prepare_layout)** function is then used to define a layout based on these positions.
 
 In this example, the CTF151 helmet "outline" and "mask" are added to the KIT/Yokogawa layout to replace the standard sphere-with-triangle-for nose. For visualization, the position of the sensors are stretched and scaled to match the helmet and extend a bit beyond the ears. You can change these parameters if your own layout do not look correct yet. The last two channels in the layout (`COMNT` and `SCALE`) are excluded from the scaling and shifting, so that they stay in the same position.
 
@@ -192,7 +192,7 @@ figure;
 ft_plot_layout(layout, 'box', 1);
 ```
 
-The `layout` structure may then be passed in `cfg.layout` to plotting functions such as **[ft_topoplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_topoplotER.m)** and **[ft_multiplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_multiplotER.m)**.
+The `layout` structure may then be passed in `cfg.layout` to plotting functions such as **[ft_topoplotER](/reference/ft_topoplotER)** and **[ft_multiplotER](/reference/ft_multiplotER)**.
 
 ## Coordinate system coregistration
 
@@ -229,7 +229,7 @@ Read subject MRI
     ft_hastoolbox('spm8',1);
     mri = ft_read_mri('Structural.hdr');
 
-First we use **[ft_volumerealign](https://github.com/fieldtrip/fieldtrip/blob/release/ft_volumerealign.m)** to locate the nasion and the auricular points (using the n/l/r keyboard input). This will return the anatomical MRI in head coordinates.
+First we use **[ft_volumerealign](/reference/ft_volumerealign)** to locate the nasion and the auricular points (using the n/l/r keyboard input). This will return the anatomical MRI in head coordinates.
 
     cfg             = [];
     cfg.method      = 'interactive';
@@ -238,7 +238,7 @@ First we use **[ft_volumerealign](https://github.com/fieldtrip/fieldtrip/blob/re
 
 ### Aligning the MEG with the head coordinate system
 
-With the MEG we have determined the position of the forehead marker coils relative to the MEG dewar. Using **[ft_sourceplot](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceplot.m)** we can determine the coordinates of the forehead markers in the anatomical MRI.
+With the MEG we have determined the position of the forehead marker coils relative to the MEG dewar. Using **[ft_sourceplot](/reference/ft_sourceplot)** we can determine the coordinates of the forehead markers in the anatomical MRI.
 
     cfg             = [];
     cfg.method      = 'ortho';
@@ -252,7 +252,7 @@ By clicking in one of the panels of the figure, the position of the crosshair wi
     press q on keyboard to quit interactive mode
     voxel 2152181, indices [91 173 55], ctf coordinates [0.0 47.0 -18.0] mm
 
-The location of the crosshair is expressed in voxel indices and in mm units relative to the head coordinate system that you determined previously with **[ft_volumerealign](https://github.com/fieldtrip/fieldtrip/blob/release/ft_volumerealign.m)**
+The location of the crosshair is expressed in voxel indices and in mm units relative to the head coordinate system that you determined previously with **[ft_volumerealign](/reference/ft_volumerealign)**
 
 You now have to find the three forehead markers in the MRI and write down the coordinates of these three fiducials in the head coordinate system.
 
@@ -269,7 +269,7 @@ Using the MRI fiducial positions expressed in [head coordinates](/faq/how_are_th
     % read the gradiometer definition from file, this is in dewar coordinates
     grad = ft_read_sens('Continuous.con', 'senstype', 'meg');
 
-Alternative to reading the gradiometer definition from the raw data file, you can also obtain the gradiometer definition after **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)**, **[ft_timelockanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockanalysis.m)** or **[ft_freqanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqanalysis.m)**: the data structures resulting from those functions contain the "grad" field which corresponds to the gradiometer definition from the original raw file.
+Alternative to reading the gradiometer definition from the raw data file, you can also obtain the gradiometer definition after **[ft_preprocessing](/reference/ft_preprocessing)**, **[ft_timelockanalysis](/reference/ft_timelockanalysis)** or **[ft_freqanalysis](/reference/ft_freqanalysis)**: the data structures resulting from those functions contain the "grad" field which corresponds to the gradiometer definition from the original raw file.
 
     % add the fiducials (expressed in dewar coordinates) to the gradiometer definition
     grad.fid.pnt(1,:) = fid1_dewarcoordinates;

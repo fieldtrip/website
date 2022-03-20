@@ -77,4 +77,4 @@ To summarize, using the “difference dipole fit “ approach reveals two source
 
 ## Doing this in FieldTrip
 
-To compute the difference ERF or ERP in FieldTrip, you would use **[ft_timelockanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockanalysis.m)** on each of the conditions, followed by **[ft_math](https://github.com/fieldtrip/fieldtrip/blob/release/ft_math.m)** to compute the difference. The difference is used in **[ft_dipolefitting](https://github.com/fieldtrip/fieldtrip/blob/release/ft_dipolefitting.m)** or **[ft_sourceanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceanalysis.m)**.
+To compute the difference ERF or ERP in FieldTrip, you would use **[ft_timelockanalysis](/reference/ft_timelockanalysis)** on each of the conditions, followed by **[ft_math](/reference/ft_math)** to compute the difference. The difference is used in **[ft_dipolefitting](/reference/ft_dipolefitting)** or **[ft_sourceanalysis](/reference/ft_sourceanalysis)**.

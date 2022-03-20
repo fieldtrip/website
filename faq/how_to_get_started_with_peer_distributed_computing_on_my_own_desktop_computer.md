@@ -17,7 +17,7 @@ On all N-1 subsequent computers (or the same computer if has multiple CPUs or co
 
     peerworker
 
-You will see the **[peerworker](https://github.com/fieldtrip/fieldtrip/blob/release/peer/peerworker.m)** printing the date and time every second. Each of the workers is now waiting for a job to be executed.
+You will see the **[peerworker](/reference/peer/peerworker)** printing the date and time every second. Each of the workers is now waiting for a job to be executed.
 
 Then you go back to the first "controller" MATLAB session and type
 
@@ -27,13 +27,13 @@ which should return
 
     [1, 4, 9]
 
-What happened is that **[peercellfun](https://github.com/fieldtrip/fieldtrip/blob/release/peer/peercellfun.m)** distributed the execution of these three jobs over all workers
+What happened is that **[peercellfun](/reference/peer/peercellfun)** distributed the execution of these three jobs over all workers
 
     power(1, 2)
     power(2, 2)
     power(3, 2)
 
-Most applications of **[peercellfun](https://github.com/fieldtrip/fieldtrip/blob/release/peer/peercellfun.m)** will return non-scalar values, which cannot be appended into a single vector. In that case, consistent with cellfun, it will return an error unless you specify that the output will be non-uniform. E.g.
+Most applications of **[peercellfun](/reference/peer/peercellfun)** will return non-scalar values, which cannot be appended into a single vector. In that case, consistent with cellfun, it will return an error unless you specify that the output will be non-uniform. E.g.
 
     peercellfun(@rand, {1, 2, 3}, 'UniformOutput', false)
 

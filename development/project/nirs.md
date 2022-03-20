@@ -21,7 +21,7 @@ Mark van Wanrooij (DCN/biophysics) and his group might substantially contribute 
 
 ## Header
 
-The FieldTrip header contains meta information about the recording. More information be found in the respective reading file [ft_read_header](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_header). For MEG data, the header also contains a .grad field, which contains information about the gradiometers. The respective counterpart for EEG data is .elec, but is commonly not stored together with the recorded data and thus not represented in the header.
+The FieldTrip header contains meta information about the recording. More information be found in the respective reading file [ft_read_header](/reference/fileio/read_header). For MEG data, the header also contains a .grad field, which contains information about the gradiometers. The respective counterpart for EEG data is .elec, but is commonly not stored together with the recorded data and thus not represented in the header.
 
 NIRS data has another kind of sensor called "optode". An optode can either emit light, laser light or LED light, called a "transmitter", or receive light, e.g., by avalanching photodiodes, called "receiver". A channel is defined by the amount of transmitted light from the "transmitter" that is received by the "receiver" (hence the nomenclature). I propose the header of NIRS data to contain a .opto field, that includes optode specific information. These types need to be incorporated in ft_senstype and ft_chantype.
 
@@ -41,15 +41,15 @@ Optode specifications, where M is the number of channels, N is the number of opt
 
 ## Datatype
 
-There are different datatypes in FieldTrip. The basic starting point is a raw data, see **[ft_datatype_raw](https://github.com/fieldtrip/fieldtrip/blob/release/utilities/ft_datatype_raw.m)** for more information. There will be no changes requires for NIRS data structures. Labels will be represented as 'RxY - TxZ [type]', where Y and Z are integer numbers indexing the receiver number and type can be the type of chromophore or the wavelength at which the measurement was taken.
+There are different datatypes in FieldTrip. The basic starting point is a raw data, see **[ft_datatype_raw](/reference/utilities/ft_datatype_raw)** for more information. There will be no changes requires for NIRS data structures. Labels will be represented as 'RxY - TxZ [type]', where Y and Z are integer numbers indexing the receiver number and type can be the type of chromophore or the wavelength at which the measurement was taken.
 
 ## Chantype
 
-New channels for **[ft_chantype](https://github.com/fieldtrip/fieldtrip/blob/release/ft_chantype.m)** should be 'nirs', 'receiver' and 'transmitter'.
+New channels for **[ft_chantype](/reference/ft_chantype)** should be 'nirs', 'receiver' and 'transmitter'.
 
 ## Filetype
 
-**[ft_filetype](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_filetype.m)** need to be able to identify NIRS data files correctly. Die to copyright issues, these files should be best put into fieldtrip\external\manufacturer. The following table shows manufacturers and systems and the respective extension of the data files. Note that I do not know all these different types, and below is just an example table:
+**[ft_filetype](/reference/fileio/ft_filetype)** need to be able to identify NIRS data files correctly. Die to copyright issues, these files should be best put into fieldtrip\external\manufacturer. The following table shows manufacturers and systems and the respective extension of the data files. Note that I do not know all these different types, and below is just an example table:
 
 | Manufacturer                                                                                               | System(s)                            | File format | Proprietary file format |
 | ---------------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------- | ----------------------- |

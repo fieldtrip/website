@@ -5,7 +5,7 @@ tags: [faq, datatype, segmentation, eeg, meg, headmodel]
 
 # How is the segmentation defined?
 
-The MATLAB structure that FieldTrip uses to describe a **[segmentation](https://github.com/fieldtrip/fieldtrip/blob/release/utilities/ft_datatype_segmentation.m)** represents different tissue-types in the anatomical MRI typically after obtained calling **[ft_volumesegment](https://github.com/fieldtrip/fieldtrip/blob/release/ft_volumesegment.m)** or **[ft_read_atlas](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_atlas.m)**. The segmentation is a special kind of a **[volumetric](https://github.com/fieldtrip/fieldtrip/blob/release/utilities/ft_datatype_volume.m)** structure that contains additional fields describing for each voxel to which tissue type or brain area it belongs.
+The MATLAB structure that FieldTrip uses to describe a **[segmentation](/reference/utilities/ft_datatype_segmentation)** represents different tissue-types in the anatomical MRI typically after obtained calling **[ft_volumesegment](/reference/ft_volumesegment)** or **[ft_read_atlas](/reference/fileio/ft_read_atlas)**. The segmentation is a special kind of a **[volumetric](/reference/utilities/ft_datatype_volume)** structure that contains additional fields describing for each voxel to which tissue type or brain area it belongs.
 
 An example segmentation obtained after ft_volumesegment with the default segmentation options is shown here. The style of this representation is "probabilistic" (see below
 
@@ -53,7 +53,7 @@ Here is to code that creates this data-structure. It makes use of one of the MRI
 The output of this code can be seen in the introduction of this faq.
 
 {% include markup/info %}
-Here, we used the **[ft_volumereslice](https://github.com/fieldtrip/fieldtrip/blob/release/ft_volumereslice.m)** function prior to segmentation. It is not required to use this function , but we used it here to obtain a nicer orientation of the MRI images for visualization with **[ft_sourceplot](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceplot.m)**.
+Here, we used the **[ft_volumereslice](/reference/ft_volumereslice)** function prior to segmentation. It is not required to use this function , but we used it here to obtain a nicer orientation of the MRI images for visualization with **[ft_sourceplot](/reference/ft_sourceplot)**.
 
 The reason for this is explained in more detail [here](/faq/how_change_mri_orientation_size_fov).
 {% include markup/end %}

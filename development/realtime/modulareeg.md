@@ -64,7 +64,7 @@ The MATLAB implementation is mainly for educational and testing purposes. For pr
 
 On Linux and macOS it is also possible to read from a serial port or bluetooth interface from within MATLAB. To help in decoding the communication protocol, i.e. the byte stream that is sent over the serial interface, we also made a MATLAB implementation.
 
-The MATLAB implementation can be found in **[ft_realtime_modeegproxy](https://github.com/fieldtrip/fieldtrip/blob/release/realtime/example/ft_realtime_modeegproxy)**. It reads the data from the serial interface and copies the first two channels to a FieldTrip [buffer](/development/realtime/buffer_overview).
+The MATLAB implementation can be found in **[ft_realtime_modeegproxy](/reference//realtime/example/ft_realtime_modeegproxy)**. It reads the data from the serial interface and copies the first two channels to a FieldTrip [buffer](/development/realtime/buffer_overview).
 
 ## Serial port communication protocol
 

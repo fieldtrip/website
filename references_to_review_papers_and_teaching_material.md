@@ -65,7 +65,7 @@ Richard Johnson has written a [MATLAB style guide](https://nl.mathworks.com/matl
 
 ## Data Sharing
 
-For data sharing we recommend that you consider organizing your data along the lines of the [BIDS standard](http://bids.neuroimaging.io). See [The brain imaging data structure, a format for organizing and describing outputs of neuroimaging experiments](http://www.nature.com/articles/sdata201644) for an introduction and [MEG-BIDS, the brain imaging data structure extended to magnetoencephalography](https://www.nature.com/articles/sdata2018110). The **[data2bids](https://github.com/fieldtrip/fieldtrip/blob/release/data2bids.m)** function helps to organize your data in the BIDS structure.
+For data sharing we recommend that you consider organizing your data along the lines of the [BIDS standard](http://bids.neuroimaging.io). See [The brain imaging data structure, a format for organizing and describing outputs of neuroimaging experiments](http://www.nature.com/articles/sdata201644) for an introduction and [MEG-BIDS, the brain imaging data structure extended to magnetoencephalography](https://www.nature.com/articles/sdata2018110). The **[data2bids](/reference/data2bids)** function helps to organize your data in the BIDS structure.
 
 A good example for a data publication is given in [A multi-subject, multi-modal human neuroimaging dataset](http://dx.doi.org/10.1038/sdata.2015.1), which includes MEG, EEG and fMRI. The dataset itself is available from [OpenfMRI](https://openfmri.org/dataset/ds000117).
 

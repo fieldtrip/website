@@ -37,7 +37,7 @@ Alternatively, you can download and contribute to FieldTrip from GitHub, which i
 
 ## How we process your personal data when you use the FieldTrip toolbox
 
-The FieldTrip toolbox itself includes the **[ft_trackusage](https://github.com/fieldtrip/fieldtrip/blob/release/utilities/ft_trackusage.m)** function. This function is called once in every new MATLAB session from within **[ft_defaults](https://github.com/fieldtrip/fieldtrip/blob/release/ft_defaults.m)** at the moment that you start using the first high-level FieldTrip function. The first time ever that you start FieldTrip, you will see a warning message in your MATLAB command window about this.
+The FieldTrip toolbox itself includes the **[ft_trackusage](/reference/utilities/ft_trackusage)** function. This function is called once in every new MATLAB session from within **[ft_defaults](/reference/ft_defaults)** at the moment that you start using the first high-level FieldTrip function. The first time ever that you start FieldTrip, you will see a warning message in your MATLAB command window about this.
 
 The reason for tracking is to gather information about the number of users, how often FieldTrip is used, which versions of FieldTrip are used, and which versions of MATLAB are used. This information helps us in deciding where to focus our attention in continued development. Furthermore, this information is used to inform our funding sources about the success. We do not store any directly identifyable information about your login name or computer name, but encrypt it with a [random salt](https://en.wikipedia.org/wiki/Salt_(cryptography)) that is unique to your computer and not shared with us.
 
@@ -46,7 +46,7 @@ You can disable usage tracking at startup by specifying
     global ft_default
     ft_default.trackusage = 'no';
 
-prior to calling **[ft_defaults](https://github.com/fieldtrip/fieldtrip/blob/release/ft_defaults.m)** for the first time in your MATLAB session. We recommend that you do this in your `startup.m` file. Alternatively you can do
+prior to calling **[ft_defaults](/reference/ft_defaults)** for the first time in your MATLAB session. We recommend that you do this in your `startup.m` file. Alternatively you can do
 
     prefs = load(fullfile(prefdir, 'fieldtripprefs.mat'))
     prefs.trackusage = 'no';

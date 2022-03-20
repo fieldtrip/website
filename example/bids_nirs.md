@@ -6,7 +6,7 @@ tags: [example, bids, sharing, nirs, artinis, homer, snirf]
 # Converting an example NIRS dataset for sharing in BIDS
 
 {% include markup/danger %}
-The [BIDS standard](https://bids.neuroimaging.io) does currently not specify how to represent NIRS data. This example - and the support that is implemented in the **[data2bids](https://github.com/fieldtrip/fieldtrip/blob/release/data2bids.m)** function - should be considered as a preliminary proposal to help researchers with their existing data.
+The [BIDS standard](https://bids.neuroimaging.io) does currently not specify how to represent NIRS data. This example - and the support that is implemented in the **[data2bids](/reference/data2bids)** function - should be considered as a preliminary proposal to help researchers with their existing data.
 
 See this [Google doc](https://bids.neuroimaging.io/bep030) with the draft specification that is being discussed.
 {% include markup/end %}
@@ -15,7 +15,7 @@ See this [Google doc](https://bids.neuroimaging.io/bep030) with the draft specif
 
 Artinis is a company specialized in NIRS that is located close to Nijmegen, and hence at the Donders we regularly have shared projects with them. Artinis makes large laser-based, but also diode-based wearable NIRS systems.
 
-The windows software that comes with the Arinis system is called "Oxysoft", it writes data in the proprietary `.oxy3` or `.oxy4` formats. Although the file format is not open, FieldTrip has reading functions for it (as pre-compiled MATLAB code) in the `external/artinis` folder, which are automatically called by the normal reading functions and **[ft_preprocessing](http://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)**. A peculiarity of the Artinis data format is that you always have to provide an extra file called `optodetemplates.xml` with the data. In that XML file additional header information about the measurement setup (used in Oxysoft) is stored, including the optode and channel configuration and template optode locations for display on screen.
+The windows software that comes with the Arinis system is called "Oxysoft", it writes data in the proprietary `.oxy3` or `.oxy4` formats. Although the file format is not open, FieldTrip has reading functions for it (as pre-compiled MATLAB code) in the `external/artinis` folder, which are automatically called by the normal reading functions and **[ft_preprocessing](/reference/ft_preprocessing)**. A peculiarity of the Artinis data format is that you always have to provide an extra file called `optodetemplates.xml` with the data. In that XML file additional header information about the measurement setup (used in Oxysoft) is stored, including the optode and channel configuration and template optode locations for display on screen.
 
 ### Example
 
@@ -88,7 +88,7 @@ which will return the channel names as `'Rx-Tx'` according to the Artinis standa
 
 ## Homer
 
-Homer is MATLAB-based software for the analysis of NIRS and is developed by researchers in the [lab](http://cbs.unix.fas.harvard.edu/science/core-facilities/neuroimaging/facilities/nirs-lab) of David Boas. If you have used Homer to import your data, you can use **[data2bids](http://github.com/fieldtrip/fieldtrip/blob/release/data2bids.m)** to convert the `.nirs` files to SNIRF and to organize them according to BIDS.
+Homer is MATLAB-based software for the analysis of NIRS and is developed by researchers in the [lab](http://cbs.unix.fas.harvard.edu/science/core-facilities/neuroimaging/facilities/nirs-lab) of David Boas. If you have used Homer to import your data, you can use **[data2bids](/reference/data2bids)** to convert the `.nirs` files to SNIRF and to organize them according to BIDS.
 
 ### Example
 
@@ -144,7 +144,7 @@ It can also be that you already have your data converted to the SNIRF format, bu
 
 ### Example
 
-In this example we will reuse the files that we have converted from Artinis format to SNIRF format in an earlier step. You can use **[data2bids](http://github.com/fieldtrip/fieldtrip/blob/release/data2bids.m)** for that conversion, or **[ft_write_data](http://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_write_data.m)**, but also Artinis' `oxysoft2matlab` toolbox.
+In this example we will reuse the files that we have converted from Artinis format to SNIRF format in an earlier step. You can use **[data2bids](/reference/data2bids)** for that conversion, or **[ft_write_data](/reference/fileio/ft_write_data)**, but also Artinis' `oxysoft2matlab` toolbox.
 
 The raw data is available on our FTP server, together with the script to convert the data to BIDS and the resulting BIDS dataset. You can find all three [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/example/bids_nirs/snirf/).
 

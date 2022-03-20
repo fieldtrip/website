@@ -19,7 +19,7 @@ To check that the serial connection between a Linux computer and a windows compu
 
 Here we need a computer with two serial ports(or two computers). We can send commands on one serial port and receive them on the other and then estimate the delay.
 
-This is what I did on my office PC using FieldTrip commands **[ft_read_event](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_event.m)** and **[ft_write_event](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_write_event.m)**.
+This is what I did on my office PC using FieldTrip commands **[ft_read_event](/reference/fileio/ft_read_event)** and **[ft_write_event](/reference/fileio/ft_write_event)**.
 
     delete(instrfind);
     fclose('all');

@@ -9,9 +9,9 @@ There are in principle two options for setting up the peer-to-peer computing sys
 
 ## Using an interactive MATLAB session for each peer
 
-Per core you should start one MATLAB session to run as worker, i.e. 4 sessions for a quad-core CPU. In each of the worker MATLAB sessions, you start the peer as worker by typing **[peerworker](https://github.com/fieldtrip/fieldtrip/blob/release/peer/peerworker.m)**. This will (among others) start the announce and tcpserver thread and subsequently it will wait for an incoming job. Every second while waiting it will print a line with the current time on screen, which allow you to check that it is still running.
+Per core you should start one MATLAB session to run as worker, i.e. 4 sessions for a quad-core CPU. In each of the worker MATLAB sessions, you start the peer as worker by typing **[peerworker](/reference/peer/peerworker)**. This will (among others) start the announce and tcpserver thread and subsequently it will wait for an incoming job. Every second while waiting it will print a line with the current time on screen, which allow you to check that it is still running.
 
-Subsequently you start one more MATLAB session which will be the controller session from which you distribute the jobs. In that MATLAB session you type **[peercontroller](https://github.com/fieldtrip/fieldtrip/blob/release/peer/peercontroller.m)**, which will (among others) start the discover thread. In the controller you can then use **[peercellfun](https://github.com/fieldtrip/fieldtrip/blob/release/peer/peercellfun.m)** to send a batch of jobs for execution on the workers.
+Subsequently you start one more MATLAB session which will be the controller session from which you distribute the jobs. In that MATLAB session you type **[peercontroller](/reference/peer/peercontroller)**, which will (among others) start the discover thread. In the controller you can then use **[peercellfun](/reference/peer/peercellfun)** to send a batch of jobs for execution on the workers.
 
 In the end you should have N+1 peers, with N workers and one controller.
 
@@ -45,4 +45,4 @@ There is also a Linux shell script with the name peerworker, which is designed t
 
 Please type on the unix command line
 peerworker.arch --help
-(where arch is glnx86, glnxa64 or maci) to get an overview of all the options. In principle most of the options have the same behavior as the MATLAB **[peerworker](https://github.com/fieldtrip/fieldtrip/blob/release/peer/peerworker.m)** function.
+(where arch is glnx86, glnxa64 or maci) to get an overview of all the options. In principle most of the options have the same behavior as the MATLAB **[peerworker](/reference/peer/peerworker)** function.

@@ -7,23 +7,23 @@ tags: [development]
 
 High-level FieldTrip functions expect input data as a MATLAB structure in a specific format, and produce output data as a structure in a specific format. These structures are documented in the following functions:
 
-- **[ft_datatype_comp](https://github.com/fieldtrip/fieldtrip/blob/release/utilities/ft_datatype_comp.m)**
-- **[ft_datatype_dip](https://github.com/fieldtrip/fieldtrip/blob/release/utilities/ft_datatype_dip.m)**
-- **[ft_datatype_freq](https://github.com/fieldtrip/fieldtrip/blob/release/utilities/ft_datatype_freq.m)**
-- **[ft_datatype_headmodel](https://github.com/fieldtrip/fieldtrip/blob/release/utilities/ft_datatype_headmodel.m)**
-- **[ft_datatype_mvar](https://github.com/fieldtrip/fieldtrip/blob/release/utilities/ft_datatype_mvar.m)**
-- **[ft_datatype_parcellation](https://github.com/fieldtrip/fieldtrip/blob/release/utilities/ft_datatype_parcellation.m)**
-- **[ft_datatype_raw](https://github.com/fieldtrip/fieldtrip/blob/release/utilities/ft_datatype_raw.m)**
-- **[ft_datatype_segmentation](https://github.com/fieldtrip/fieldtrip/blob/release/utilities/ft_datatype_segmentation.m)**
-- **[ft_datatype_sens](https://github.com/fieldtrip/fieldtrip/blob/release/utilities/ft_datatype_sens.m)**
-- **[ft_datatype_source](https://github.com/fieldtrip/fieldtrip/blob/release/utilities/ft_datatype_source.m)**
-- **[ft_datatype_spike](https://github.com/fieldtrip/fieldtrip/blob/release/utilities/ft_datatype_spike.m)**
-- **[ft_datatype_timelock](https://github.com/fieldtrip/fieldtrip/blob/release/utilities/ft_datatype_timelock.m)**
-- **[ft_datatype_volume](https://github.com/fieldtrip/fieldtrip/blob/release/utilities/ft_datatype_volume.m)**
+- **[ft_datatype_comp](/reference/utilities/ft_datatype_comp)**
+- **[ft_datatype_dip](/reference/utilities/ft_datatype_dip)**
+- **[ft_datatype_freq](/reference/utilities/ft_datatype_freq)**
+- **[ft_datatype_headmodel](/reference/utilities/ft_datatype_headmodel)**
+- **[ft_datatype_mvar](/reference/utilities/ft_datatype_mvar)**
+- **[ft_datatype_parcellation](/reference/utilities/ft_datatype_parcellation)**
+- **[ft_datatype_raw](/reference/utilities/ft_datatype_raw)**
+- **[ft_datatype_segmentation](/reference/utilities/ft_datatype_segmentation)**
+- **[ft_datatype_sens](/reference/utilities/ft_datatype_sens)**
+- **[ft_datatype_source](/reference/utilities/ft_datatype_source)**
+- **[ft_datatype_spike](/reference/utilities/ft_datatype_spike)**
+- **[ft_datatype_timelock](/reference/utilities/ft_datatype_timelock)**
+- **[ft_datatype_volume](/reference/utilities/ft_datatype_volume)**
 
 ## Checking and converting
 
-Besides documenting the data structures, these ft_datatype_xxx functions also check the internal consistency of the structures and - where needed - update the data structures to the latest standard. This means that if a user loads a data structure from an old .mat file on disk and feeds it into a newer version of a FieldTrip function, the data structure is updated to the expected format prior to the function doing its work. This works by each FieldTrip function calling **[ft_checkdata](https://github.com/fieldtrip/fieldtrip/blob/release/ft_checkdata.m)** at the start of the function, and ft_checkdata calling the corresponding ft_datatype_xxx function.
+Besides documenting the data structures, these ft_datatype_xxx functions also check the internal consistency of the structures and - where needed - update the data structures to the latest standard. This means that if a user loads a data structure from an old .mat file on disk and feeds it into a newer version of a FieldTrip function, the data structure is updated to the expected format prior to the function doing its work. This works by each FieldTrip function calling **[ft_checkdata](/reference/ft_checkdata)** at the start of the function, and ft_checkdata calling the corresponding ft_datatype_xxx function.
 
 ## Dimord
 
@@ -52,7 +52,7 @@ To document the data fields unambiguously, the data structure can include  a "di
 2. A data structure can have a one or multiple `xxxdimord` fields, where xxx refers to the data parameter. For example `powspctrmdimord` to document `powspctrm`, and `cohspctrmdimord` to document `cohspctrm`.
 3. It is also allowed that a data structure does _not_ have an explicit dimord. In that case FieldTrip will - where needed - use heuristics to determine how the data field is to be interpreted.
 
-To determine what the dimensions of a data field represent, FIeldTrip functions use the private **[getdimord](https://github.com/fieldtrip/fieldtrip/blob/master/private/getdimord.m.m)** function. To determine their size, they use the private **[getdimsiz](https://github.com/fieldtrip/fieldtrip/blob/master/private/getdimsiz.m.m)** function. Another private function that plays a role for managing the dimord field is **[fixdimord](https://github.com/fieldtrip/fieldtrip/blob/master/private/fixdimord.m.m)**.
+To determine what the dimensions of a data field represent, FIeldTrip functions use the private **[getdimord](/reference/getdimord)** function. To determine their size, they use the private **[getdimsiz](/reference//private/getdimsiz)** function. Another private function that plays a role for managing the dimord field is **[fixdimord](/reference/private/fixdimord)**.
 
 Most of the pieces of the dimord matches a corresponding metadata field.
 

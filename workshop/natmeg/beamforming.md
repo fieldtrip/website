@@ -31,18 +31,18 @@ The brain is divided in a regular three dimensional grid and the source strength
 
 To localize the oscillatory sources for the example dataset we will perform the following steps:
 
-- Reading in the subject specific anatomical MRI using **[ft_read_mri](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_mri.m)**
-- Construct a forward model using **[ft_volumesegment](https://github.com/fieldtrip/fieldtrip/blob/release/ft_volumesegment.m)** and **[ft_prepare_headmodel](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_headmodel.m)**
-- Prepare the source model using **[ft_prepare_sourcemodel](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_sourcemodel.m)**
+- Reading in the subject specific anatomical MRI using **[ft_read_mri](/reference/fileio/ft_read_mri)**
+- Construct a forward model using **[ft_volumesegment](/reference/ft_volumesegment)** and **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)**
+- Prepare the source model using **[ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)**
 
 Next, we head out to investigate the response to the finger movement. We will localize the sources of the motor beta-band activity following the following step
 
-- Load the data from disk and define baseline and poststimulus period using **[ft_redefinetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_redefinetrial.m)**
-- Compute the cross-spectral density matrix for all MEG channels using the function **[ft_freqanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqanalysis.m)**
-- Compute the lead field matrices using **[ft_prepare_leadfield](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_leadfield.m)**
-- Compute a common spatial filter and estimate the power of the sources using **[ft_sourceanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceanalysis.m)**
+- Load the data from disk and define baseline and poststimulus period using **[ft_redefinetrial](/reference/ft_redefinetrial)**
+- Compute the cross-spectral density matrix for all MEG channels using the function **[ft_freqanalysis](/reference/ft_freqanalysis)**
+- Compute the lead field matrices using **[ft_prepare_leadfield](/reference/ft_prepare_leadfield)**
+- Compute a common spatial filter and estimate the power of the sources using **[ft_sourceanalysis](/reference/ft_sourceanalysis)**
 - Compute the condition difference
-- Visualize the result with **[ft_sourceplot](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceplot.m)**
+- Visualize the result with **[ft_sourceplot](/reference/ft_sourceplot)**
 
 Note that some of the steps will be skipped in this tutorial as we have already done them in the previous days of the workshop.
 
@@ -71,13 +71,13 @@ Load the forward model using the following code:
 
 ## Identifying a time window of interest
 
-The aim is to identify the sources of oscillatory activity in the beta band. From the section time-frequency analysis we have identified 18 Hz as the center frequency for which the power estimates should be calculated. We seek to compare the activation between the response with the left finger to the activation in response to the right finger. We first use **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** and **[ft_redefinetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_redefinetrial.m)** to extract relevant data. It is important that the length of each data piece is the length of a fixed number of oscillatory cycles. Here 9 cycles are used resulting in a 9/18 Hz = 0.5 s time window. Thus, the time window we will use ranges from 0.35 to 0.85 second after response onset (see Figure 2).
+The aim is to identify the sources of oscillatory activity in the beta band. From the section time-frequency analysis we have identified 18 Hz as the center frequency for which the power estimates should be calculated. We seek to compare the activation between the response with the left finger to the activation in response to the right finger. We first use **[ft_preprocessing](/reference/ft_preprocessing)** and **[ft_redefinetrial](/reference/ft_redefinetrial)** to extract relevant data. It is important that the length of each data piece is the length of a fixed number of oscillatory cycles. Here 9 cycles are used resulting in a 9/18 Hz = 0.5 s time window. Thus, the time window we will use ranges from 0.35 to 0.85 second after response onset (see Figure 2).
 
 {% include image src="/assets/img/workshop/natmeg/beamforming/natmeg_beam5.png" width="500" %}
 
 _Figure: The time-frequency presentation used to determine the time- and frequency-windows prior to beamforming._
 
-Now we select the time windows of interest, the post-response window using **[ft_redefinetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_redefinetrial.m)**.
+Now we select the time windows of interest, the post-response window using **[ft_redefinetrial](/reference/ft_redefinetrial)**.
 
     % Select time window of interest
     cfg = [];
@@ -130,7 +130,7 @@ The beamformer technique is based on an adaptive spatial filter. The DICS spatia
     cfg.trials       = find(data_timewindow.trialinfo(:,1) == 4096);
     powcsd_right     = ft_freqanalysis(cfg, data_timewindow);
 
-The cross-spectral density data structure has a similar data structure as other output out of [ft_freqanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqanalysis):
+The cross-spectral density data structure has a similar data structure as other output out of [ft_freqanalysis](/reference/freqanalysis):
 
     powcsd_all =
 
@@ -213,7 +213,7 @@ The source data structure has the following fields:
           avg: [1x1 struct]     % Average power for each point in the source estimate
           cfg: [1x1 struct]     % Configuration
 
-The purpose of lambda is discussed in Exercise 6. By using cfg.keepfilter = 'yes', we let **[ft_sourceanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceanalysis.m)** return the filter matrix in the source structure.
+The purpose of lambda is discussed in Exercise 6. By using cfg.keepfilter = 'yes', we let **[ft_sourceanalysis](/reference/ft_sourceanalysis)** return the filter matrix in the source structure.
 
 ### Plotting sources of oscillatory beta-band activity
 
@@ -233,13 +233,13 @@ Remember that we intended to contrast the left hand to the right hand responses.
     source_left  = ft_sourceanalysis(cfg, powcsd_left);
     source_right = ft_sourceanalysis(cfg, powcsd_right);
 
-After successfully applying the above steps, we obtained an estimate of the beta-band suppression in both experimental conditions at each grid point in the brain volume. The grid of estimated power values can be plotted superimposed on the anatomical MRI. This requires the output of **[ft_sourceanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceanalysis.m)** to match position of the MRI. The function **[ft_sourceinterpolate](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceinterpolate.m)** aligns the source level activity with the structural MRI. We only need to specify what parameter we want to interpolate and to specify the MRI we want to use for interpolation.
+After successfully applying the above steps, we obtained an estimate of the beta-band suppression in both experimental conditions at each grid point in the brain volume. The grid of estimated power values can be plotted superimposed on the anatomical MRI. This requires the output of **[ft_sourceanalysis](/reference/ft_sourceanalysis)** to match position of the MRI. The function **[ft_sourceinterpolate](/reference/ft_sourceinterpolate)** aligns the source level activity with the structural MRI. We only need to specify what parameter we want to interpolate and to specify the MRI we want to use for interpolation.
 
 First we will load the MRI. It is important that you use the MRI realigned with the sensor or your source activity data will not match the anatomical data. We will load the realigned MRI from the [dipole fitting tutorial](/workshop/natmeg/dipolefitting).
 
     load mri_realigned2.mat
 
-Before aligning the source activity to the MRI we will reslice the MRI using [ft_volumereslice](https://github.com/fieldtrip/fieldtrip/blob/release/ft_volumereslice). The consequence of this reslicing is that the size of the MRI is decreased (it is rather large now) and the axis are adjusted so that the image is plotted correctly. If your MRI image is plotted upside-down, try using [ft_volumereslice](https://github.com/fieldtrip/fieldtrip/blob/release/ft_volumereslice).
+Before aligning the source activity to the MRI we will reslice the MRI using [ft_volumereslice](/reference/ft_vol/ereslice). The consequence of this reslicing is that the size of the MRI is decreased (it is rather large now) and the axis are adjusted so that the image is plotted correctly. If your MRI image is plotted upside-down, try using [ft_volumereslice](/reference/ft_vol/ereslice).
 
     mri_resliced = ft_volumereslice([], mri_realigned2);
 
@@ -286,7 +286,7 @@ Try to explain the location of the red and blue blobs.
 {% include markup/end %}
 
 {% include markup/info %}
-The 'ortho' method is not the only plotting method implemented. Use the 'help' of **[ft_sourceplot](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceplot.m)** to find what other methods there are and plot the source level results. What are the benefits and drawbacks of these plotting routines?
+The 'ortho' method is not the only plotting method implemented. Use the 'help' of **[ft_sourceplot](/reference/ft_sourceplot)** to find what other methods there are and plot the source level results. What are the benefits and drawbacks of these plotting routines?
 {% include markup/end %}
 
 #### Exercise: determining anatomical labels
@@ -296,7 +296,7 @@ If you were to name the anatomical label of the source of this motor beta, what 
 {% include markup/end %}
 
 {% include markup/success %}
-With the use of cfg.atlas you can specify a lookup atlas, which **[ft_sourceplot](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceplot.m)** will use to return appropriate anatomical labels. One for the MNI template is distributed with FieldTrip and can be found in 'fieldtrip/template/atlas/aal/ROI_MNI_V4.nii'. Be aware that for this to work you need to realign your anatomical and functional data into MNI coordinates. An example how to achieve this is to [align the leadfield grid of the individual subject to a leadfield grid in MNI space](/example/sourcemodel_aligned2mni).
+With the use of cfg.atlas you can specify a lookup atlas, which **[ft_sourceplot](/reference/ft_sourceplot)** will use to return appropriate anatomical labels. One for the MNI template is distributed with FieldTrip and can be found in 'fieldtrip/template/atlas/aal/ROI_MNI_V4.nii'. Be aware that for this to work you need to realign your anatomical and functional data into MNI coordinates. An example how to achieve this is to [align the leadfield grid of the individual subject to a leadfield grid in MNI space](/example/sourcemodel_aligned2mni).
 {% include markup/end %}
 
 #### Exercise: regularization
@@ -320,7 +320,7 @@ Load the EEG head model and preprocessed data using the following code:
 
 ## (EEG) Calculating the cross spectral density matrix
 
-As before, we are first going to extract a time window that we are interested in using **[ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_definetrial.m)**. Remember that we should extract a window that is a full-length of cycles of our frequency of interest.
+As before, we are first going to extract a time window that we are interested in using **[ft_definetrial](/reference/ft_definetrial)**. Remember that we should extract a window that is a full-length of cycles of our frequency of interest.
 
     % select time window
     cfg = [];
@@ -349,7 +349,7 @@ Now that we have extracted the time window of interest we can continue with calc
 
 ## (EEG) Lead field calculation
 
-The leadfield is calculated using **[ft_prepare_leadfield](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_leadfield.m)**.
+The leadfield is calculated using **[ft_prepare_leadfield](/reference/ft_prepare_leadfield)**.
 
     % common grid/filter
     cfg            = [];

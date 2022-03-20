@@ -17,7 +17,7 @@ This tutorial contains the hands-on material of the [BACI workshop](/workshop/ba
 
 ## Background
 
-In FieldTrip the preprocessing of data refers to the reading of the data, segmenting the data around interesting events such as triggers, temporal filtering and (optionally) rereferencing. The **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** function takes care of all these steps, i.e., it reads the data and applies the preprocessing options.
+In FieldTrip the preprocessing of data refers to the reading of the data, segmenting the data around interesting events such as triggers, temporal filtering and (optionally) rereferencing. The **[ft_preprocessing](/reference/ft_preprocessing)** function takes care of all these steps, i.e., it reads the data and applies the preprocessing options.
 
 There are largely two alternative approaches for preprocessing, which especially differ in the amount of memory required.
 
@@ -30,7 +30,7 @@ Preprocessing involves several steps including identifying individual trials fro
 - according to a specific trigger channel
 - according to your own criteria when you write your own trial function, e.g., for conditional trigger sequences, or by detecting EMG onset
 
-Both depend on **[ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)**. The output of **[ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** is a configuration structure containing the field _cfg.trl_. This is a matrix representing the relevant parts of the raw datafile which are to be selected for further processing. Each row in the `trl` matrix represents a single epoch-of-interest, and the `trl` matrix has 3 or more columns. The first column defines (in samples) the beginpoint of each epoch with respect to how the data are stored in the raw datafile. The second column defines (in samples) the endpoint of each epoch, and the third column specifies the offset (in samples) of the first sample within each epoch with respect to timepoint 0 within that epoch. The subsequent columns can be used to keep information about each trial.
+Both depend on **[ft_definetrial](/reference/ft_preprocessing)**. The output of **[ft_definetrial](/reference/ft_preprocessing)** is a configuration structure containing the field _cfg.trl_. This is a matrix representing the relevant parts of the raw datafile which are to be selected for further processing. Each row in the `trl` matrix represents a single epoch-of-interest, and the `trl` matrix has 3 or more columns. The first column defines (in samples) the beginpoint of each epoch with respect to how the data are stored in the raw datafile. The second column defines (in samples) the endpoint of each epoch, and the third column specifies the offset (in samples) of the first sample within each epoch with respect to timepoint 0 within that epoch. The subsequent columns can be used to keep information about each trial.
 
 If you do not specify your own triallfunction, the 4th column will by default contain the trigger value. When you use your own triallfunction, you can add any number of extra columns to the _trl_ matrix. These will be added to the data in the _.trialinfo_ field. This is very handy if you want to add information of e.g., response-buttons, response-times, etc., to each trial. As you will see, we will use this functionality to preprocess both the standard and deviant tones together, and then separating them later for averaging.
 
@@ -70,12 +70,12 @@ The EEG system records event-triggers in separate channels. These channels are r
 
 The following steps are taken in the EEG section of the tutorial:
 
-- Define segments of data of interest (the trial definition) using **[ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_definetrial.m)**
-- Read the data into Matlab using **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)**
-- Clean the data in a semi-automatic way using **[ft_rejectvisual](https://github.com/fieldtrip/fieldtrip/blob/release/ft_rejectvisual.m)**
-- Compute event-related fields using **[ft_timelockanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockanalysis.m)**
-- Compute global mean field power using **[ft_globalmeanfield](https://github.com/fieldtrip/fieldtrip/blob/release/ft_globalmeanfield.m)**
-- Visualize the results using **[ft_topoplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_topoplotER.m)**, and **[ft_multiplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_multiplotER.m)**
+- Define segments of data of interest (the trial definition) using **[ft_definetrial](/reference/ft_definetrial)**
+- Read the data into Matlab using **[ft_preprocessing](/reference/ft_preprocessing)**
+- Clean the data in a semi-automatic way using **[ft_rejectvisual](/reference/ft_rejectvisual)**
+- Compute event-related fields using **[ft_timelockanalysis](/reference/ft_timelockanalysis)**
+- Compute global mean field power using **[ft_globalmeanfield](/reference/ft_globalmeanfield)**
+- Visualize the results using **[ft_topoplotER](/reference/ft_topoplotER)**, and **[ft_multiplotER](/reference/ft_multiplotER)**
 
 ## Reading and preprocessing the interesting trials
 
@@ -96,7 +96,7 @@ To get going, you need to start MATLAB. Then, you need to issue the following co
 
     cd(maindir)           % return to main
 
-We start with the trial definition using **[ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_definetrial.m)** and **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)**.
+We start with the trial definition using **[ft_definetrial](/reference/ft_definetrial)** and **[ft_preprocessing](/reference/ft_preprocessing)**.
 
     data_name              = 'subject01.ds';        % define the data path and its name
 
@@ -116,7 +116,7 @@ We start with the trial definition using **[ft_definetrial](https://github.com/f
     % segment data according to the trial definition
     data                   = ft_redefinetrial(cfg_tr_def, data);
 
-We will filter the data using **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** around the frequency spectrum of interest and eliminate the power line noise before calculating the SEPs with **[ft_timelockanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockanalysis.m)**.
+We will filter the data using **[ft_preprocessing](/reference/ft_preprocessing)** around the frequency spectrum of interest and eliminate the power line noise before calculating the SEPs with **[ft_timelockanalysis](/reference/ft_timelockanalysis)**.
 
     cfg                = [];
     cfg.hpfilter       = 'yes';        % enable high-pass filtering
@@ -143,7 +143,7 @@ The output of data is the structure data which has the following field
            label: {74x1 cell}
              cfg: [1x1 struct]
 
-We will use **[ft_rejectartifact](https://github.com/fieldtrip/fieldtrip/blob/release/ft_rejectartifact.m)** to clean the data of bad trials (and perhaps channels). We use only the 'zvalue' criterion to eliminate bad trials (or channels). You can play around with other criterion where you can reject trial.
+We will use **[ft_rejectartifact](/reference/ft_rejectartifact)** to clean the data of bad trials (and perhaps channels). We use only the 'zvalue' criterion to eliminate bad trials (or channels). You can play around with other criterion where you can reject trial.
 
     cfg        = [];
     cfg.metric = 'zvalue';  % use by default zvalue method
@@ -158,9 +158,9 @@ _Figure 1: Example of visual rejection._
 
 ### Timelockanalysis
 
-The function **[ft_timelockanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockanalysis.m)** averages all the trials into a single trial. It requires preprocessed data, i.e. what we just did.
+The function **[ft_timelockanalysis](/reference/ft_timelockanalysis)** averages all the trials into a single trial. It requires preprocessed data, i.e. what we just did.
 
-The trials belonging to one condition will now be averaged with the onset of the stimulus time aligned to the zero-time point. This is done with the function **[ft_timelockanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockanalysis.m)**. The input to this procedure is the data structure generated by **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)**.
+The trials belonging to one condition will now be averaged with the onset of the stimulus time aligned to the zero-time point. This is done with the function **[ft_timelockanalysis](/reference/ft_timelockanalysis)**. The input to this procedure is the data structure generated by **[ft_preprocessing](/reference/ft_preprocessing)**.
 
     cfg                   = [];
     cfg.preproc.demean    = 'yes';    % enable demean to remove mean value from each single trial
@@ -187,7 +187,7 @@ GMFP can be calculated using the following formula (from [Esser et al. (2006)](h
 
 where t is time, V is the voltage at channel i and K is the number of channels.
 
-FieldTrip has a built-in function to calculate the GMFP; [ft_globalmeanfield](https://github.com/fieldtrip/fieldtrip/blob/release/ft_globalmeanfield). This function requires timelocked data as input. We will use similar preprocessing as applied in [Esser et al. (2006)](http://dx.doi.org/10.1016/j.brainresbull.2005.11.003).
+FieldTrip has a built-in function to calculate the GMFP; [ft_globalmeanfield](/reference/ft_globa/eanfield). This function requires timelocked data as input. We will use similar preprocessing as applied in [Esser et al. (2006)](http://dx.doi.org/10.1016/j.brainresbull.2005.11.003).
 
     %global mean field power calculation for visualization purposes
     cfg = [];
@@ -196,7 +196,7 @@ FieldTrip has a built-in function to calculate the GMFP; [ft_globalmeanfield](ht
 
 ### Plotting the results of EEG
 
-Using the plot functions **[ft_topoplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_topoplotER.m)** and **[ft_multiplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_multiplotER.m)** you can plot the average of the trials. You can find information about plotting also in the [Plotting data at the channel and source level](/tutorial/plotting) tutorial. Furthermore, we use the below script to visualize single trial with global mean field power and we find the time of interest and we save it together with the EEG_avg.
+Using the plot functions **[ft_topoplotER](/reference/ft_topoplotER)** and **[ft_multiplotER](/reference/ft_multiplotER)** you can plot the average of the trials. You can find information about plotting also in the [Plotting data at the channel and source level](/tutorial/plotting) tutorial. Furthermore, we use the below script to visualize single trial with global mean field power and we find the time of interest and we save it together with the EEG_avg.
 
     figure;
 
@@ -241,7 +241,7 @@ We save the data and the picture.
     set(gcf, 'Position',[1 1 1200 800])
     print -dpng baci_sep_singleplotER.png
 
-Use **[ft_multiplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_multiplotER.m)** to plot all sensors in one figure:
+Use **[ft_multiplotER](/reference/ft_multiplotER)** to plot all sensors in one figure:
 
     cfg          = [];
     cfg.fontsize = 6;
@@ -260,7 +260,7 @@ Use **[ft_multiplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_mu
 
 _Figure 3: Use of ft_multiplotER for representation of the single trial according to the EEG cap._
 
-Use **[ft_topoplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_topoplotER.m)** to plot the topographic distribution over the head:
+Use **[ft_topoplotER](/reference/ft_topoplotER)** to plot the topographic distribution over the head:
 
     cfg            = [];
     cfg.zlim       = 'maxmin';

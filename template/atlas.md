@@ -7,7 +7,7 @@ tags: [template, atlas]
 
 An atlas is a volumetric or surface based description of the geometry of the brain, where each anatomical coordinate is labeled according to some scheme, e.g., as [Brodmann area](http://en.wikipedia.org/wiki/Brodmann_area). A recent review of brain templates and atlases is presented in [Brain templates and atlases (2012)](http://www.ncbi.nlm.nih.gov/pubmed/22248580) in NeuroImage.
 
-In general an atlas can be read with **[ft_read_atlas](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_atlas.m)**. It is represented as a volumetric segmentation as in **[ft_datatype_segmentation](https://github.com/fieldtrip/fieldtrip/blob/release/utilities/ft_datatype_segmentation.m)**, or as a surface-based parcellation as in **[ft_datatype_parcellation](https://github.com/fieldtrip/fieldtrip/blob/release/utilities/ft_datatype_parcellation.m)**. The volume based representation can be used with **[ft_volumelookup](https://github.com/fieldtrip/fieldtrip/blob/release/ft_volumelookup.m)** or with the cfg.atlas option in **[ft_sourceplot](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceplot.m)**.
+In general an atlas can be read with **[ft_read_atlas](/reference/fileio/ft_read_atlas)**. It is represented as a volumetric segmentation as in **[ft_datatype_segmentation](/reference/utilities/ft_datatype_segmentation)**, or as a surface-based parcellation as in **[ft_datatype_parcellation](/reference/utilities/ft_datatype_parcellation)**. The volume based representation can be used with **[ft_volumelookup](/reference/ft_volumelookup)** or with the cfg.atlas option in **[ft_sourceplot](/reference/ft_sourceplot)**.
 
 In the FieldTrip release, you can find the volumetric or surface based atlases in the fieldtrip/template/xxx directory, with XXX being the specific template (e.g., "aal" or "afni").
 
@@ -99,7 +99,7 @@ The fuzzy model is represented in a MATLAB .mat file as
            connective: [181x217x181 double]
            background: [181x217x181 double]
 
-Both discrete and fuzzy model are consistent with the data representation descibed in **[ft_datatype_segmentation](https://github.com/fieldtrip/fieldtrip/blob/release/utilities/ft_datatype_segmentation.m)**.
+Both discrete and fuzzy model are consistent with the data representation descibed in **[ft_datatype_segmentation](/reference/utilities/ft_datatype_segmentation)**.
 
 ## The Eickhoff/Zilles/Amunts cytoarchitectonic atlas
 

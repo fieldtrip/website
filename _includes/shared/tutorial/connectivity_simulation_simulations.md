@@ -1,4 +1,4 @@
-We will first simulate some data with a known connectivity structure built in. This way we know what to expect in terms of connectivity. To simulate data we use **[ft_connectivitysimulation](https://github.com/fieldtrip/fieldtrip/blob/release/ft_connectivitysimulation.m)**. We will use an order 2 multivariate autoregressive model. The necessary ingredients are a set of NxN coefficient matrices, one matrix for each time lag. These coefficients need to be stored in the cfg.param field. Next to the coefficients we have to specify the NxN covariance matrix of the innovation noise. This matrix needs to be stored in the cfg.noisecov field.
+We will first simulate some data with a known connectivity structure built in. This way we know what to expect in terms of connectivity. To simulate data we use **[ft_connectivitysimulation](/reference/ft_connectivitysimulation)**. We will use an order 2 multivariate autoregressive model. The necessary ingredients are a set of NxN coefficient matrices, one matrix for each time lag. These coefficients need to be stored in the cfg.param field. Next to the coefficients we have to specify the NxN covariance matrix of the innovation noise. This matrix needs to be stored in the cfg.noisecov field.
 
 The model we are going to use to simulate the data is as follow
 
@@ -54,9 +54,9 @@ or browse through the complete data using
 
 ### Computation of the multivariate autoregressive model
 
-To be able to compute spectrally resolved [Granger causality](http://en.wikipedia.org/wiki/Granger_causality), or other frequency-domain directional measures of connectivity, we need to estimate two quantities: the spectral transfer matrix and the covariance of an autoregressive model's residuals. We fit an autoregressive model to the data using the **[ft_mvaranalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_mvaranalysis.m)** function.
+To be able to compute spectrally resolved [Granger causality](http://en.wikipedia.org/wiki/Granger_causality), or other frequency-domain directional measures of connectivity, we need to estimate two quantities: the spectral transfer matrix and the covariance of an autoregressive model's residuals. We fit an autoregressive model to the data using the **[ft_mvaranalysis](/reference/ft_mvaranalysis)** function.
 
-For the actual computation of the autoregressive coefficients FieldTrip makes use of an implementation from third party toolboxes. At present **[ft_mvaranalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_mvaranalysis.m)** supports the [biosig](http://biosig.sourceforge.net/) and [bsmart](http://www.brain-smart.org) toolboxes for these computations.
+For the actual computation of the autoregressive coefficients FieldTrip makes use of an implementation from third party toolboxes. At present **[ft_mvaranalysis](/reference/ft_mvaranalysis)** supports the [biosig](http://biosig.sourceforge.net/) and [bsmart](http://www.brain-smart.org) toolboxes for these computations.
 
 In this tutorial we will use the bsmart toolbox. The relevant functions have been included in the FieldTrip release in the fieldtrip/external/bsmart directory. Although the exact implementations within the toolboxes differ, their outputs are comparable.
 
@@ -88,7 +88,7 @@ Compare the parameters specified for the simulation with the estimated coefficie
 
 ### Computation of the spectral transfer function
 
-From the autoregressive coefficients it is now possible to compute the spectral transfer matrix, for which we use **[ft_freqanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqanalysis.m)**. There are several ways of computing the spectral transfer function, the parametric and the non-parametric way. We will first illustrate the parametric route:
+From the autoregressive coefficients it is now possible to compute the spectral transfer matrix, for which we use **[ft_freqanalysis](/reference/ft_freqanalysis)**. There are several ways of computing the spectral transfer function, the parametric and the non-parametric way. We will first illustrate the parametric route:
 
     cfg        = [];
     cfg.method = 'mvar';
@@ -111,7 +111,7 @@ It is also possible to compute the spectral transfer function using non-parametr
 
 ### Non-parametric computation of the cross-spectral density matrix
 
-Some connectivity metrics can be computed from a non-parametric spectral estimate (i.e. after the application of the FFT-algorithm and conjugate multiplication to get cross-spectral densities), such as coherence, phase-locking value and phase slope index. The following part computes the Fourier-representation of the data using **[ft_freqanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqanalysis.m)**.
+Some connectivity metrics can be computed from a non-parametric spectral estimate (i.e. after the application of the FFT-algorithm and conjugate multiplication to get cross-spectral densities), such as coherence, phase-locking value and phase slope index. The following part computes the Fourier-representation of the data using **[ft_freqanalysis](/reference/ft_freqanalysis)**.
 
     cfg           = [];
     cfg.method    = 'mtmfft';
@@ -129,7 +129,7 @@ Some connectivity metrics can be computed from a non-parametric spectral estimat
             cumtapcnt: [500x1 double]
                   cfg: [1x1 struct]
 
-The resulting **freq** structure contains the spectral estimate for 3 tapers in each of the 500 trials (hence 1500 estimates), for each of the 3 channels and for 101 frequencies. It is not necessary to compute the cross-spectral density at this stage, because the function used in the next step, **[ft_connectivityanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_connectivityanalysis.m)**, contains functionality to compute the cross-spectral density from the Fourier coefficients.
+The resulting **freq** structure contains the spectral estimate for 3 tapers in each of the 500 trials (hence 1500 estimates), for each of the 3 channels and for 101 frequencies. It is not necessary to compute the cross-spectral density at this stage, because the function used in the next step, **[ft_connectivityanalysis](/reference/ft_connectivityanalysis)**, contains functionality to compute the cross-spectral density from the Fourier coefficients.
 
 {% include markup/warning %}
 We apply frequency smoothing of 2Hz. The tapsmofrq parameter should already be familiar to you from the [multitapers section of the frequency analysis tutorial](/tutorial/timefrequencyanalysis/#multitapers). How much smoothing is desired will depend on your research question (i.e. frequency band of interest) but also on wether you decide to use the parametric or non-parametric estimation methods for connectivity analysis:
@@ -140,14 +140,14 @@ Parametric and non-parametric estimation of Granger causality yield very compara
 
 ### Computation and inspection of the connectivity measures
 
-The actual computation of the connectivity metric is done by **[ft_connectivityanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_connectivityanalysis.m)**. This function is transparent to the type of input data, i.e. provided the input data allows the requested metric to be computed, the metric will be calculated. Here, we provide an example for the computation and visualization of the coherence coefficient.
+The actual computation of the connectivity metric is done by **[ft_connectivityanalysis](/reference/ft_connectivityanalysis)**. This function is transparent to the type of input data, i.e. provided the input data allows the requested metric to be computed, the metric will be calculated. Here, we provide an example for the computation and visualization of the coherence coefficient.
 
     cfg           = [];
     cfg.method    = 'coh';
     coh           = ft_connectivityanalysis(cfg, freq);
     cohm          = ft_connectivityanalysis(cfg, mfreq);
 
-Subsequently, the data can be visualized using **[ft_connectivityplot](https://github.com/fieldtrip/fieldtrip/blob/release/ft_connectivityplot.m)**.
+Subsequently, the data can be visualized using **[ft_connectivityplot](/reference/ft_connectivityplot)**.
 
     cfg           = [];
     cfg.parameter = 'cohspctrm';
@@ -175,7 +175,7 @@ The coherence measure is a symmetric measure, which means that it does not provi
 Compute the granger output using instead the 'freq' data structure. Plot them side-by-side using ft_connectivityplot.
 {% include markup/end %}
 
-Instead of plotting it with **[ft_connectivityplot](https://github.com/fieldtrip/fieldtrip/blob/release/ft_connectivityplot.m)**, you can use the following low-level MATLAB plotting code which gives a better understanding of the numerical representation of the results.
+Instead of plotting it with **[ft_connectivityplot](/reference/ft_connectivityplot)**, you can use the following low-level MATLAB plotting code which gives a better understanding of the numerical representation of the results.
 
     figure
     for row=1:3

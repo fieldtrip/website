@@ -13,7 +13,7 @@ If you manually identify time segments with an artifact, you can represent them 
     muscle.artifact = M x 2
     jump.artifact   = K x 2
 
-and pass them onto the **[ft_rejectartifact](https://github.com/fieldtrip/fieldtrip/blob/release/ft_rejectartifact.m)** function in the cfg.artfctdef field like
+and pass them onto the **[ft_rejectartifact](/reference/ft_rejectartifact)** function in the cfg.artfctdef field like
 
     cfg.artfctdef.eog.artifact    = N x 2
     cfg.artfctdef.muscle.artifact = M x 2
@@ -47,4 +47,4 @@ and use the following code to merge the bad channels into a single list
     badchannel  = hdr.label(sel);
     goodchannel = setdiff(hdr.label, badchannel);
 
-This list with good channels can be passed to **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** in the cfg.channel option.
+This list with good channels can be passed to **[ft_preprocessing](/reference/ft_preprocessing)** in the cfg.channel option.

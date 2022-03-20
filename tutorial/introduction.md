@@ -39,13 +39,13 @@ We will use the FieldTrip toolbox for EEG/MEG analysis that is developed within 
 
 The FieldTrip toolbox is not a program with a user interface where you can click around in, but rather a collection of functions. The functions can be grouped into a few major categories:
 
-- Functions for preprocessing, reading and converting data (e.g., **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)**)
-- Functions for analyzing event-related fields or potentials (ERF/ERP) (e.g., **[ft_timelockanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockanalysis.m)**)
-- Functions for frequency and time-frequency analysis (e.g., **[ft_freqanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqanalysis.m)**)
-- Functions for source analysis (e.g., **[ft_sourceanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceanalysis.m)**)
-- Functions for statistical analysis (e.g., **[ft_timelockstatistics](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockstatistics.m)**)
-- Functions for plotting and displaying the data (e.g., **[ft_multiplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_multiplotER.m)**)
-- Function for real-time acquisition and analysis (e.g., **[ft_realtime_average](https://github.com/fieldtrip/fieldtrip/blob/release/realtime/example/ft_realtime_average.m)**)
+- Functions for preprocessing, reading and converting data (e.g., **[ft_preprocessing](/reference/ft_preprocessing)**)
+- Functions for analyzing event-related fields or potentials (ERF/ERP) (e.g., **[ft_timelockanalysis](/reference/ft_timelockanalysis)**)
+- Functions for frequency and time-frequency analysis (e.g., **[ft_freqanalysis](/reference/ft_freqanalysis)**)
+- Functions for source analysis (e.g., **[ft_sourceanalysis](/reference/ft_sourceanalysis)**)
+- Functions for statistical analysis (e.g., **[ft_timelockstatistics](/reference/ft_timelockstatistics)**)
+- Functions for plotting and displaying the data (e.g., **[ft_multiplotER](/reference/ft_multiplotER)**)
+- Function for real-time acquisition and analysis (e.g., **[ft_realtime_average](/reference//realtime/example/ft_realtime_average)**)
 
 The full list of functions can be found [here](/reference). Each of the functions of the toolbox takes as input the (intermediate) data that was produced by the previous function.
 There is a difference between high- and low-level functions. The high-level functions are the ones that are used by the user, while the low-level functions are automatically called by the higher level functions. The user does not have to be aware of the low-level functions.
@@ -55,7 +55,7 @@ In some cases, FieldTrip is working together with external toolboxes or programs
 
 ### Using the toolbox and MATLAB
 
-Each FieldTrip function implements a specific algorithm, for which specific parameters can be specified. These parameters on how the function behaves is passed as a configuration structure. Where applicable, the configuration parameters will have sensible defaults. The most convenient way of specifying the configuration is by typing it into a script in the MATLAB editor and copy-and-pasting that into the MATLAB command-line window. The configuration for **[ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_definetrial.m)** (for ctf data that is recorded in epochs) might look like this:
+Each FieldTrip function implements a specific algorithm, for which specific parameters can be specified. These parameters on how the function behaves is passed as a configuration structure. Where applicable, the configuration parameters will have sensible defaults. The most convenient way of specifying the configuration is by typing it into a script in the MATLAB editor and copy-and-pasting that into the MATLAB command-line window. The configuration for **[ft_definetrial](/reference/ft_definetrial)** (for ctf data that is recorded in epochs) might look like this:
 
     cfg1                         = [];
     cfg1.dataset                 = 'Subject01.ds';
@@ -74,7 +74,7 @@ Example
     cfg2         = [];
     dataTimelock = ft_timelockanalysis(cfg2,dataPrepro);
 
-Please note that each FieldTrip function has its own configuration structure and you should not mix them, except for a few functions that add something to the configuration structure (**[ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_definetrial.m)** and the artifact detection functions).
+Please note that each FieldTrip function has its own configuration structure and you should not mix them, except for a few functions that add something to the configuration structure (**[ft_definetrial](/reference/ft_definetrial)** and the artifact detection functions).
 
 The help included in each function will explain the configurable settings and how they should be specified. In MATLAB, you can get help for a specific function by typing
 
@@ -132,9 +132,9 @@ _Figure: An example analysis protocol of the source analysis using beamforming i
 
 If you do a source reconstruction of the data for multiple subjects, and if you use individual volume conduction models for your subjects (common for MEG), then the individual source reconstructions cannot immediately be averaged or used for statistical comparison. The anatomy of each subject is different (i.e. the shape and size of the brain), and the locations of the voxels (i.e. the dipoles) will also be different for each subject. Using the individual subject's anatomical MRI, you can align all subjects to a template brain using a non-linear deformation. The same deformation can be applied to the functional data. Subsequently the subjects functional data can be compared.
 
-The spatial normalisation towards a template brain is done in FieldTrip with the **[ft_volumenormalise](https://github.com/fieldtrip/fieldtrip/blob/release/ft_volumenormalise.m)** function, which internally calls some low-level functions from the SPM2 toolbox. In general, it is also advisable to normalise your individual subject's data to the SPM/MNI template brain.
+The spatial normalisation towards a template brain is done in FieldTrip with the **[ft_volumenormalise](/reference/ft_volumenormalise)** function, which internally calls some low-level functions from the SPM2 toolbox. In general, it is also advisable to normalise your individual subject's data to the SPM/MNI template brain.
 
-Below you can see the protocol that you would use for averaging the source reconstruction over subjects and for group statistics on the source level. If the statistical test involves two conditions, then you should do the source normalisation in both conditions for all subjects and feed the two grandaveraged source reconstructions into **[ft_sourcestatistics](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourcestatistics.m)**.
+Below you can see the protocol that you would use for averaging the source reconstruction over subjects and for group statistics on the source level. If the statistical test involves two conditions, then you should do the source normalisation in both conditions for all subjects and feed the two grandaveraged source reconstructions into **[ft_sourcestatistics](/reference/ft_sourcestatistics)**.
 
 {% include image src="/assets/img/tutorial/introduction/introduction_source_multiple2.png" %}
 

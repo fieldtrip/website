@@ -34,7 +34,7 @@ The EEG data was acquired with a 64-channel BrainProducts BrainAmp EEG amplifier
 
 ### Define the epochs
 
-This part creates a definition of epochs, based on the events that are stored in the BIDS format, i.e. in an events.tsv file. This is a file in tabular format, which allows for the representation of events in a format that is more human-readable, and more directly interpretable, than the more abstracted trigger codes as returned by **[ft_read_event](https://github.com/fieldtrip/fieldtrip/blob/master/fileio/ft_read_event.m)**.
+This part creates a definition of epochs, based on the events that are stored in the BIDS format, i.e. in an events.tsv file. This is a file in tabular format, which allows for the representation of events in a format that is more human-readable, and more directly interpretable, than the more abstracted trigger codes as returned by **[ft_read_event](/reference/fileio/ft_read_event)**.
 
     cfg                   = [];
     cfg.dataset           = 'sub-02/eeg/sub-02_task-language_eeg.vhdr';
@@ -46,7 +46,7 @@ This part creates a definition of epochs, based on the events that are stored in
 
     cfg = ft_definetrial(cfg);
 
-The relevant field that is added to the cfg by **[ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/master/ft_definetrial.m)** is the so called `trl` field, which contains a specification of begin and end samples of the requested epochs, where the samples are expressed relative to the start of the recording. Here, the trl is actually a [table](https://nl.mathworks.com/help/matlab/tables.html), containing a lot more useful - and directly interpretable - information. Don't forget to scroll to the right, because that's where the interesting info is located, note that the below code prints a subset of 3 trials, which intends to show that the modality of stimulation occurred in blocks of 400 repetitions:
+The relevant field that is added to the cfg by **[ft_definetrial](/reference/definetrial)** is the so called `trl` field, which contains a specification of begin and end samples of the requested epochs, where the samples are expressed relative to the start of the recording. Here, the trl is actually a [table](https://nl.mathworks.com/help/matlab/tables.html), containing a lot more useful - and directly interpretable - information. Don't forget to scroll to the right, because that's where the interesting info is located, note that the below code prints a subset of 3 trials, which intends to show that the modality of stimulation occurred in blocks of 400 repetitions:
 
     >> cfg.trl([1 401 801],:)
 
@@ -150,7 +150,7 @@ Repeat the filtering and averaging, but now for a different partitioning of the 
     animals_minus_tools  = ft_math(cfg, timelock_animals, timelock_tools);
     spoken_minus_written = ft_math(cfg, timelock_spoken, timelock_written);
 
-The **[ft_math](https://github.com/fieldtrip/fieldtrip/blob/master/ft_math.m)** function allows to perform mathematical operations on the numeric data, while keeping track of the processing steps. This is beneficial in relation to reproducibility of results. Specifically, the below could also easily be obtained by the creation of a new variable `animals_minus_tools`, and storing the difference in its 'avg' field: `animals_minus_tools.avg = timelock_animals.avg - timelock_tools.avg`. This is not ideal, since we could easily lose track of how the numeric data were actually generated. As an bonus exercise, you could explore the history of a FieldTrip variable by looking in its cfg field:
+The **[ft_math](/reference/math)** function allows to perform mathematical operations on the numeric data, while keeping track of the processing steps. This is beneficial in relation to reproducibility of results. Specifically, the below could also easily be obtained by the creation of a new variable `animals_minus_tools`, and storing the difference in its 'avg' field: `animals_minus_tools.avg = timelock_animals.avg - timelock_tools.avg`. This is not ideal, since we could easily lose track of how the numeric data were actually generated. As an bonus exercise, you could explore the history of a FieldTrip variable by looking in its cfg field:
 
     ft_analysispipeline([], spoken_minus_written);
 

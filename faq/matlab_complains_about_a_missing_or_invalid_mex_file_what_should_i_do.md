@@ -17,7 +17,7 @@ If you run into problems with mex files from SPM, i.e. the ones included in `fie
 
 ## Recommended way of recompiling
 
-To recompile all mex files at once, you can use the **[ft_compile_mex](https://github.com/fieldtrip/fieldtrip/blob/release/utilities/ft_compile_mex.m)** function.
+To recompile all mex files at once, you can use the **[ft_compile_mex](/reference/utilities/ft_compile_mex)** function.
 
 ## Alternative way of recompiling
 

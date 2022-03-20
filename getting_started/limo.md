@@ -18,7 +18,7 @@ The following figure illustrates the hierarchical analysis consisting of a 1st-l
 
 {% include image src="/assets/img/getting_started/limo/herarchical_analysis.png" width="500" %}
 
-LIMO was initially designed as a plug-in of EEGLAB, but more recent versions are also compatible with FieldTrip **[raw](http://github.com/fieldtrip/fieldtrip/blob/release/ft_datatype_raw.m)** and **[source](http://github.com/fieldtrip/fieldtrip/blob/release/ft_datatype_source/)** data. Statistical analyses can be performed on other data representations, but that requires some manual reformatting of the data structures.
+LIMO was initially designed as a plug-in of EEGLAB, but more recent versions are also compatible with FieldTrip **[raw](/reference/utilities/ft_datatype_raw.m)** and **[source](/reference/utilities/ft_datatype_source/)** data. Statistical analyses can be performed on other data representations, but that requires some manual reformatting of the data structures.
 
 Although LIMO is primarily designed for EEG data, it can also process MEG and iEEG data.
 
@@ -78,7 +78,7 @@ The following outline shows the BIDS raw data and derivatives structure that re
 
 ## How does LIMO use FieldTrip?
 
-LIMO integrates with some FieldTrip functions to deal with FieldTrip data structures. The **[ft_datatype](https://www.fieldtriptoolbox.org/reference/ft_datatype/)** function is used to determine the type of data structure in the `.mat` file, ensures that the data structure is valid and that it has the required fields. Subsequently, LIMO convert the data to its appropriate low-level format. The following figure illustrates this process:
+LIMO integrates with some FieldTrip functions to deal with FieldTrip data structures. The **[ft_datatype](https://www.fieldtriptoolbox.org/reference/ft_datatype)** function is used to determine the type of data structure in the `.mat` file, ensures that the data structure is valid and that it has the required fields. Subsequently, LIMO convert the data to its appropriate low-level format. The following figure illustrates this process:
 
 {% include image src="/assets/img/getting_started/limo/LIMO_uses_FieldTrip.png" width="500" %}
 

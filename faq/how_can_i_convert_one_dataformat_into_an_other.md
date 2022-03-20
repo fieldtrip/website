@@ -5,9 +5,9 @@ tags: [faq, dataformat, preprocessing]
 
 # How can I convert one dataformat into an other?
 
-You can read in the data from the original data format using **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** and subsequently use the **[ft_write_data](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_write_data.m)** function to write the data to another format that you can specify.
+You can read in the data from the original data format using **[ft_preprocessing](/reference/ft_preprocessing)** and subsequently use the **[ft_write_data](/reference/fileio/ft_write_data)** function to write the data to another format that you can specify.
 
-The **[ft_write_data](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_write_data.m)** function requires that you construct a header structure that describes the data (i.e. channel names, sampling frequency) similar to what is returned by **[ft_read_header](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_header.m)**. If your data is represented as a FieldTrip raw data structure, i.e. consistent with the documentation in **[ft_datatype_raw](https://github.com/fieldtrip/fieldtrip/blob/release/utilities/ft_datatype_raw.m)**, you can use **[ft_fetch_header](https://github.com/fieldtrip/fieldtrip/blob/release/ft_fetch_header.m)** to construct a header on the fly, e.g.
+The **[ft_write_data](/reference/fileio/ft_write_data)** function requires that you construct a header structure that describes the data (i.e. channel names, sampling frequency) similar to what is returned by **[ft_read_header](/reference/fileio/ft_read_header)**. If your data is represented as a FieldTrip raw data structure, i.e. consistent with the documentation in **[ft_datatype_raw](/reference/utilities/ft_datatype_raw)**, you can use **[ft_fetch_header](/reference/ft_fetch_header)** to construct a header on the fly, e.g.
 
     hdr = ft_fetch_header(data);
 
@@ -21,7 +21,7 @@ If you want to write multiple trials, you have to concatenate them like this:
     dat = cat(2,data.trial{:})
     ft_write_data('yourfile.ext', dat, 'header', hdr, ...)
 
-Note that in the additional options to ft_write_data you should specify the file format. The **[ft_write_data](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_write_data.m)** function can export data to the following file formats
+Note that in the additional options to ft_write_data you should specify the file format. The **[ft_write_data](/reference/fileio/ft_write_data)** function can export data to the following file formats
 
 - edf
 - gdf

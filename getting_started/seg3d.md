@@ -7,7 +7,7 @@ tags: [segmentation, volume, headmodel, eeg, seg3d]
 
 [Seg3D](https://www.sci.utah.edu/cibc-software/seg3d.html) is a free volume segmentation and processing tool developed by the NIH Center for Integrative Biomedical Computing at the University of Utah Scientific Computing and Imaging (SCI) Institute. It combines a flexible manual segmentation interface with powerful higher-dimensional image processing and segmentation algorithms from the [Insight Toolkit](https://itk.org). You can explore and interact with volumetric imaging data using volume rendering and orthogonal slice view windows and label voxels as a certain tissue class. Seg3D is implemented in C++ and hence very fast, and is available for Windows, macOS, and Linux. 
 
-In Seg3D is easy to manually modify a segmentation that was for example created with **[ft_volumesegment](https://www.fieldtriptoolbox.org/reference/ft_volumesegment/)** and the underlying SPM algorithms. 
+In Seg3D is easy to manually modify a segmentation that was for example created with **[ft_volumesegment](https://www.fieldtriptoolbox.org/reference/ft_volumesegment)** and the underlying SPM algorithms. 
 
 {% include markup/success %}
 Seg3D calls a binary 3D array that represents a single type of tissue a "mask". Seg3D can import and export these masks as .mat files; these should each contain a single binary 3D array. The 4x4 `transform` matrix that is used in FieldTrip to determine the size of the voxels and the origin of the coordinate system is not exported to Seg3D.
@@ -76,7 +76,7 @@ You can subsequently export the modified masks as a .mat file and load them agai
     ft_sourceplot(cfg, seg_i);
     
 {% include markup/danger %}
-Some operations in Seg3D work the best if the volume consists of isotropic voxels, i.e., the space between the center of any two adjacent voxels is the same along each axis x, y, z. You can make a volume isotropic with **[ft_volumereslice](https://www.fieldtriptoolbox.org/reference/ft_volumereslice/)**
+Some operations in Seg3D work the best if the volume consists of isotropic voxels, i.e., the space between the center of any two adjacent voxels is the same along each axis x, y, z. You can make a volume isotropic with **[ft_volumereslice](https://www.fieldtriptoolbox.org/reference/ft_volumereslice)**
 {% include markup/end %}
 
 ## Acknowledgements

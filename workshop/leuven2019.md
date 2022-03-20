@@ -67,15 +67,15 @@ The aim of this tutorial is to create a head model of an adolescent with the num
 As already mentioned, the goal of this session is to solve the EEG forward problem, more precisely we want to compute EEG leadfields so that the inverse problem can be solved.
 In order to compute leadfields, there are 9 main steps that have to be followed.
 
-1.  Load and read the anatomical data (**[ft_read_mri](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_mri.m)**);
-2.  Align the MRI to the CTF coordinates. (**[ft_volumerealign](https://github.com/fieldtrip/fieldtrip/blob/release/ft_volumerealign.m)**);
-3.  Reslice the MRI image so that the voxels of the anatomical data are homogeneous (i.e. the size of the voxel is the same into each direction). This step will facilitate the segmentation step. (**[ft_volumereslice](https://github.com/fieldtrip/fieldtrip/blob/release/ft_volumereslice.m)**)
-4.  Segment the MRI: 3 compartments (scalp, skull, brain) (**[ft_volumesegment](https://github.com/fieldtrip/fieldtrip/blob/release/ft_volumesegment.m)**);
-5.  then we create the mesh: triangulated surface mesh for BEM and hexahedral volume mesh for FEM (**[ft_prepare_mesh](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_mesh.m)**).
-6.  Create the head models (headmodel_bem) where geometrical and electrical information are merged together (**[ft_prepare_headmodel](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_headmodel.m)**);
-7.  Align the electrodes to the head surface (**[ft_electroderealign](https://github.com/fieldtrip/fieldtrip/blob/release/ft_electroderealign.m)**);
-8.  The source model is created, where the location of the sources is restrained to the brain compartment (from the BEM mesh) (**[ft_prepare_sourcemodel](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_sourcemodel.m)**);
-9.  Leadfields can be computed (**[ft_prepare_leadfield](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_leadfield.m)**).
+1.  Load and read the anatomical data (**[ft_read_mri](/reference/fileio/ft_read_mri)**);
+2.  Align the MRI to the CTF coordinates. (**[ft_volumerealign](/reference/ft_volumerealign)**);
+3.  Reslice the MRI image so that the voxels of the anatomical data are homogeneous (i.e. the size of the voxel is the same into each direction). This step will facilitate the segmentation step. (**[ft_volumereslice](/reference/ft_volumereslice)**)
+4.  Segment the MRI: 3 compartments (scalp, skull, brain) (**[ft_volumesegment](/reference/ft_volumesegment)**);
+5.  then we create the mesh: triangulated surface mesh for BEM and hexahedral volume mesh for FEM (**[ft_prepare_mesh](/reference/ft_prepare_mesh)**).
+6.  Create the head models (headmodel_bem) where geometrical and electrical information are merged together (**[ft_prepare_headmodel](/reference/ft_prepare_headmodel)**);
+7.  Align the electrodes to the head surface (**[ft_electroderealign](/reference/ft_electroderealign)**);
+8.  The source model is created, where the location of the sources is restrained to the brain compartment (from the BEM mesh) (**[ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)**);
+9.  Leadfields can be computed (**[ft_prepare_leadfield](/reference/ft_prepare_leadfield)**).
 
 {% include image src="/assets/img/workshop/leuven2019/scheme.png" width="365" %}
 _Figure 1: Pipeline for forward computation, in the blue box there are the steps which differ between BEM and FEM_

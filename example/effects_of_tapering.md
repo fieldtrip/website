@@ -7,7 +7,7 @@ redirect_from:
 
 # Effects of tapering for power estimates
 
-A simple way of looking at how (multi-)tapering affects the estimate of power in your signal is by using a very simple simulated signal. The **[ft_freqsimulation](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqsimulation.m)** function allows you to quickly create a simulated signal with a well-defined frequency component in it. Subsequently you can use **[ft_freqanalysis ](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqanalysis.m)** with different taper settings to see the effect of tapering on your power estimate.
+A simple way of looking at how (multi-)tapering affects the estimate of power in your signal is by using a very simple simulated signal. The **[ft_freqsimulation](/reference/ft_freqsimulation)** function allows you to quickly create a simulated signal with a well-defined frequency component in it. Subsequently you can use **[ft_freqanalysis ](/reference/ft_freqanalysis)** with different taper settings to see the effect of tapering on your power estimate.
 
 Create and plot a simulated signal. The simulated data contains only one trial, with a length of one second and a 50Hz sine wave.
 

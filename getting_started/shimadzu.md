@@ -21,4 +21,4 @@ and you can save it back to disk with
     
     save(filename, 'nirs', -struct');    
 
-However, for reading and preprocessing the data in FieldTrip you would normally not use this low-level approach to access the data, but rather **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** and **[ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_definetrial.m)** as explained in the [general tutorials](/tutorial).
+However, for reading and preprocessing the data in FieldTrip you would normally not use this low-level approach to access the data, but rather **[ft_preprocessing](/reference/ft_preprocessing)** and **[ft_definetrial](/reference/ft_definetrial)** as explained in the [general tutorials](/tutorial).

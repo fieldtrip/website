@@ -41,9 +41,9 @@ followed by a visual inspection with
     cfg.viewmode   = 'vertical';
     ft_databrowser(cfg, data);
 
-In **[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_databrowser.m)** you can mark segments as artifacts, which can subsequently be removed with **[ft_rejectartifact](https://github.com/fieldtrip/fieldtrip/blob/release/ft_rejectartifact.m)**. You can also use **[ft_componentanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_componentanalysis.m)** and **[ft_rejectcomponent](https://github.com/fieldtrip/fieldtrip/blob/release/ft_rejectcomponent.m)** to subtract the artifactual EOG and ECG contributions from the data.
+In **[ft_databrowser](/reference/ft_databrowser)** you can mark segments as artifacts, which can subsequently be removed with **[ft_rejectartifact](/reference/ft_rejectartifact)**. You can also use **[ft_componentanalysis](/reference/ft_componentanalysis)** and **[ft_rejectcomponent](/reference/ft_rejectcomponent)** to subtract the artifactual EOG and ECG contributions from the data.
 
-The code above reads the data as one long continuous segment (or trial). A common analysis strategy for continuous data is to use **[ft_redefinetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_redefinetrial.m)** to cut it into shorter segments (e.g., one second) and **[ft_freqanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqanalysis.m)** with cfg.method='mtmfft' to compute the averaged power spectrum.
+The code above reads the data as one long continuous segment (or trial). A common analysis strategy for continuous data is to use **[ft_redefinetrial](/reference/ft_redefinetrial)** to cut it into shorter segments (e.g., one second) and **[ft_freqanalysis](/reference/ft_freqanalysis)** with cfg.method='mtmfft' to compute the averaged power spectrum.
 
 ### Preprocessing of data with trials or events
 
@@ -51,7 +51,7 @@ The original EDF format did not allow for storing triggers or events. The EDF+ f
 
 #### EDF files that have a proper annotation channel
 
-The annotation channel contains an ASCII encoded representation of the time in seconds that certain events happened. You can read the events using **[ft_read_event](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_event.m)** like this
+The annotation channel contains an ASCII encoded representation of the time in seconds that certain events happened. You can read the events using **[ft_read_event](/reference/fileio/ft_read_event)** like this
 
     event = ft_read_event('testfile.edf', 'detect flank', [])
 
@@ -89,7 +89,7 @@ The detect flank option is explicitly disabled here, this indicates to the code 
 
 #### EDF files that are exported from EGI NetStation
 
-Following the use of **[ft_read_header](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_header.m)**, the index of the annotation channel can be found in hdr.orig.annotation. However, when using the EGI 'Net Station', the events are written in a way that is not compatible with the edf+ reading implementation in FieldTrip. So, events do not come out properly. Also discontinuous epochs are "glued" together as one "continuous" data stream (please add, anyone, whether this also holds for other acquisition systems).
+Following the use of **[ft_read_header](/reference/fileio/ft_read_header)**, the index of the annotation channel can be found in hdr.orig.annotation. However, when using the EGI 'Net Station', the events are written in a way that is not compatible with the edf+ reading implementation in FieldTrip. So, events do not come out properly. Also discontinuous epochs are "glued" together as one "continuous" data stream (please add, anyone, whether this also holds for other acquisition systems).
 
 Events can also be stored in an extra channel that is appended to the brain data channels. For instance, a photodiode transducer attached to a stimulus presentation screen may convert screen light into current. This way, changes in light are captured as an analog signal in that data channel and can be used to synchronize timing of the experiment with the brain recording. When the name or the channel index of the event channel is known, it becomes feasible to use that channel for reading data segments or trials of interest into the MATLAB work environment using FieldTrip. The most straightforward approach is to create a trial function (as invoked with cfg.trialfun) that reads in the event channel and performs some form of thresholding on the signal in that channel to determine the events of interest. We provide an example pipeline below.
 

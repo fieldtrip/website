@@ -13,12 +13,12 @@ The Polybench acquisition software writes the data to the `.Poly5` file format. 
     cfg.dataset = 'Filename.Poly5';
     data = ft_preprocessing(cfg);
   
-Prior to calling **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** you can use **[ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_definetrial.m)** to define segments of interest based on triggers in the data. That is explained in more detail in the preprocessing [tutorials](/tutorial).
+Prior to calling **[ft_preprocessing](/reference/ft_preprocessing)** you can use **[ft_definetrial](/reference/ft_preprocessing)** to define segments of interest based on triggers in the data. That is explained in more detail in the preprocessing [tutorials](/tutorial).
 
 The way that stimulus presentation systems (such as NBS Presentation, E-Prime, PsychoPy, or Psychophysics Toolbox) are hooked up to the EEG acquisition setup appears to vary between labs and between different TMSi systems. Sometimes triggers are represented as 8-bit integer numbers, ranging from 1-255. In other cases, each of the trigger bits is controlled with a separate TTL signal, leading to 8 different event codes that can be used. If the default settings of ft_definetrial does not return the trigger codes that you were expecting, you can use the low-level reading functions to figure out the specific options that apply to your recordings.
  
-You can read the header with **[ft_read_header](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_header.m)**, the data with
-**[ft_read_data](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_data.m)** and the events with **[ft_read_event](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_event.m)**. These functions **do not** return valid FieldTrip data structures to be used with other FieldTrip functions, but help in debugging.  
+You can read the header with **[ft_read_header](/reference/fileio/ft_read_header)**, the data with
+**[ft_read_data](/reference/fileio/ft_read_data)** and the events with **[ft_read_event](/reference/fileio/ft_read_event)**. These functions **do not** return valid FieldTrip data structures to be used with other FieldTrip functions, but help in debugging.  
 
     hdr = ft_read_header('Filename.Poly5')  % do _not_ use a semicolon at the end of the line, so you can see the header details
     dat = ft_read_data('Filename.Poly5');   % use a semicolon, since you do not want the complete data printed on screen

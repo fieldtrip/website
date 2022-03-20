@@ -46,18 +46,18 @@ In manual or visual artifact detection, the user visually inspects the data and 
 
 These functions are available for manual artifact detection:
 
-- **[ft_rejectvisual](https://github.com/fieldtrip/fieldtrip/blob/release/ft_rejectvisual.m)**
-- **[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_databrowser.m)**
+- **[ft_rejectvisual](/reference/ft_rejectvisual)**
+- **[ft_databrowser](/reference/ft_databrowser)**
 
-The **[ft_rejectvisual](https://github.com/fieldtrip/fieldtrip/blob/release/ft_rejectvisual.m)** function works only for segmented data (i.e. trials) that have already been read into memory. It allows you to browse through the large amounts of data in a MATLAB figure by showing all channels at once (per trial), or by showing all trials at once (per channel), or by showing a summary of all channels and trials in a single figure. Using the mouse, you can select trials and/or channels that are to be removed. This function directly returns the data with the noisy parts removed and you don't have to call **[ft_rejectartifact](https://github.com/fieldtrip/fieldtrip/blob/release/ft_rejectartifact.m)** or **[ft_rejectcomponent](https://github.com/fieldtrip/fieldtrip/blob/release/ft_rejectcomponent.m)**.
+The **[ft_rejectvisual](/reference/ft_rejectvisual)** function works only for segmented data (i.e. trials) that have already been read into memory. It allows you to browse through the large amounts of data in a MATLAB figure by showing all channels at once (per trial), or by showing all trials at once (per channel), or by showing a summary of all channels and trials in a single figure. Using the mouse, you can select trials and/or channels that are to be removed. This function directly returns the data with the noisy parts removed and you don't have to call **[ft_rejectartifact](/reference/ft_rejectartifact)** or **[ft_rejectcomponent](/reference/ft_rejectcomponent)**.
 
 {% include markup/info %}
-If you want to use **[ft_rejectvisual](https://github.com/fieldtrip/fieldtrip/blob/release/ft_rejectvisual.m)** on continuous data, you can first segment it in one-second pieces using **[ft_redefinetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_redefinetrial.m)** and then call ft_rejectvisual. Segmenting continuous data is explained in [this FAQ](/faq/how_can_i_process_continuous_data_without_triggers).
+If you want to use **[ft_rejectvisual](/reference/ft_rejectvisual)** on continuous data, you can first segment it in one-second pieces using **[ft_redefinetrial](/reference/ft_redefinetrial)** and then call ft_rejectvisual. Segmenting continuous data is explained in [this FAQ](/faq/how_can_i_process_continuous_data_without_triggers).
 {% include markup/end %}
 
-The **[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_databrowser.m)** function works both for continuous and segmented data, and works with the data either still on disk or already read into memory. It allows you to browse through the data and to mark with the mouse segments with an artifact.  Contrary to ft_rejectvisual, ft_databrowser does not return the cleaned data and also does not allow you to delete bad channels (though you can switch them off from visualization). Instead it returns in the output `cfg` a list of segments, expressed as begin and end sample relative to the recording. After detecting the segments with the artifacts, you call **[ft_rejectartifact](https://github.com/fieldtrip/fieldtrip/blob/release/ft_rejectartifact.m)** to remove them from your data (when the data is already in memory) or from your trial definition (when the data is still on disk).
+The **[ft_databrowser](/reference/ft_databrowser)** function works both for continuous and segmented data, and works with the data either still on disk or already read into memory. It allows you to browse through the data and to mark with the mouse segments with an artifact.  Contrary to ft_rejectvisual, ft_databrowser does not return the cleaned data and also does not allow you to delete bad channels (though you can switch them off from visualization). Instead it returns in the output `cfg` a list of segments, expressed as begin and end sample relative to the recording. After detecting the segments with the artifacts, you call **[ft_rejectartifact](/reference/ft_rejectartifact)** to remove them from your data (when the data is already in memory) or from your trial definition (when the data is still on disk).
 
-Noteworthy is that the **[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_databrowser.m)** function can also be used to visualise the timecourse of the ICA components and thus easily allows you to identify the components corresponding to eye blinks, heart beat and line noise. A good ICA unmixing of your data requires that the atypical artifacts (e.g., electrode movement, squid jumps) are removed **prior** to calling **[ft_componentanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_componentanalysis.m)**. After you have determined what the bad components are, you can call **[ft_rejectcomponent](https://github.com/fieldtrip/fieldtrip/blob/release/ft_rejectcomponent.m)** to project the data back to the sensor level, excluding the bad components.
+Noteworthy is that the **[ft_databrowser](/reference/ft_databrowser)** function can also be used to visualise the timecourse of the ICA components and thus easily allows you to identify the components corresponding to eye blinks, heart beat and line noise. A good ICA unmixing of your data requires that the atypical artifacts (e.g., electrode movement, squid jumps) are removed **prior** to calling **[ft_componentanalysis](/reference/ft_componentanalysis)**. After you have determined what the bad components are, you can call **[ft_rejectcomponent](/reference/ft_rejectcomponent)** to project the data back to the sensor level, excluding the bad components.
 
 More information about manually dealing with artifacts is found in the [visual artifact rejection](/tutorial/visual_artifact_rejection) tutorial.
 
@@ -69,21 +69,21 @@ The automatic artifact detection functions allow to apply some filtering and pre
 
 These functions are available for automatic artifact detection:
 
-- **[ft_artifact_clip](https://github.com/fieldtrip/fieldtrip/blob/release/ft_artifact_clip.m)**
-- **[ft_artifact_ecg](https://github.com/fieldtrip/fieldtrip/blob/release/ft_artifact_ecg.m)**
-- **[ft_artifact_threshold](https://github.com/fieldtrip/fieldtrip/blob/release/ft_artifact_threshold.m)**
-- **[ft_artifact_eog](https://github.com/fieldtrip/fieldtrip/blob/release/ft_artifact_eog.m)**
-- **[ft_artifact_jump](https://github.com/fieldtrip/fieldtrip/blob/release/ft_artifact_jump.m)**
-- **[ft_artifact_muscle](https://github.com/fieldtrip/fieldtrip/blob/release/ft_artifact_muscle.m)**
-- **[ft_artifact_zvalue](https://github.com/fieldtrip/fieldtrip/blob/release/ft_artifact_zvalue.m)**
+- **[ft_artifact_clip](/reference/ft_artifact_clip)**
+- **[ft_artifact_ecg](/reference/ft_artifact_ecg)**
+- **[ft_artifact_threshold](/reference/ft_artifact_threshold)**
+- **[ft_artifact_eog](/reference/ft_artifact_eog)**
+- **[ft_artifact_jump](/reference/ft_artifact_jump)**
+- **[ft_artifact_muscle](/reference/ft_artifact_muscle)**
+- **[ft_artifact_zvalue](/reference/ft_artifact_zvalue)**
 
-Note that the eog, jump and muscle detection functions are all just wrappers around **[ft_artifact_zvalue](https://github.com/fieldtrip/fieldtrip/blob/release/ft_artifact_zvalue.m)** where the filter and padding options are set to reasonable defaults. The ft_artifact_zvalue computes a preprocessed representation of each channel, converts it into z-values by subtracting the channel mean and dividing by its standard deviation, and then sums the z-values over channels. This works well for artifacts that are expected to be present in multiple channels, such as eye blinks and muscle activity.
+Note that the eog, jump and muscle detection functions are all just wrappers around **[ft_artifact_zvalue](/reference/ft_artifact_zvalue)** where the filter and padding options are set to reasonable defaults. The ft_artifact_zvalue computes a preprocessed representation of each channel, converts it into z-values by subtracting the channel mean and dividing by its standard deviation, and then sums the z-values over channels. This works well for artifacts that are expected to be present in multiple channels, such as eye blinks and muscle activity.
 
 More information can be found in the [automatic artifact rejection](/tutorial/automatic_artifact_rejection) tutorial.
 
 ### Rejecting segments with artifacts from the data
 
-If you use manual or automatic detection of segments that contain an artifact, you usually would proceed to reject those segments from subsequent analysis with **[ft_rejectartifact](https://github.com/fieldtrip/fieldtrip/blob/release/ft_rejectartifact.m)**. FieldTrip supports variable trial length data, which allows you to reject only those pieces of data containing the artifact, keeping the rest of the trial. This is especially useful if your experiment consists of very long trials.
+If you use manual or automatic detection of segments that contain an artifact, you usually would proceed to reject those segments from subsequent analysis with **[ft_rejectartifact](/reference/ft_rejectartifact)**. FieldTrip supports variable trial length data, which allows you to reject only those pieces of data containing the artifact, keeping the rest of the trial. This is especially useful if your experiment consists of very long trials.
 
 ### Rejecting channels with artifacts from the data
 
@@ -97,11 +97,11 @@ Rather than excluding segments with artifatcs, in some cases you can assume that
 
 ### Using filters to remove artifacts
 
-Some artifacts are represented in specific frequency bands. For example, artifacts can show up in low frequencies due to electrode drift, or at high frequencies where you do not expect EEG activity of interest, or at very specific frequencies, like 50 Hz line noise. You can use a filter in **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** to remove these artifactual contributions to the data.
+Some artifacts are represented in specific frequency bands. For example, artifacts can show up in low frequencies due to electrode drift, or at high frequencies where you do not expect EEG activity of interest, or at very specific frequencies, like 50 Hz line noise. You can use a filter in **[ft_preprocessing](/reference/ft_preprocessing)** to remove these artifactual contributions to the data.
 
 ### Using ICA to identify and remove artifacts
 
-You can make a linear decomposition of the data using independent component analysis (ICA) or principal component analysis (PCA). With these methods you apply  a set of spatial filters to the data, after which the data is no longer represented at the level of recorded (scalp) channels, but as a set of virtual channels or components. In the case of ICA decomposition, the filters are chosen to produce maximally independent time courses of the components. In the case of PCA, the filters produce orthogonal time courses. Certain artifacts, such as those caused by eye blinks, are often reflected by a few components which are fairly easy to identify. These visually identified components can then be removed from the data and the remaining components can be projected back to the channel level with **[ft_rejectcomponent](https://github.com/fieldtrip/fieldtrip/blob/release/ft_rejectcomponent.m)**.
+You can make a linear decomposition of the data using independent component analysis (ICA) or principal component analysis (PCA). With these methods you apply  a set of spatial filters to the data, after which the data is no longer represented at the level of recorded (scalp) channels, but as a set of virtual channels or components. In the case of ICA decomposition, the filters are chosen to produce maximally independent time courses of the components. In the case of PCA, the filters produce orthogonal time courses. Certain artifacts, such as those caused by eye blinks, are often reflected by a few components which are fairly easy to identify. These visually identified components can then be removed from the data and the remaining components can be projected back to the channel level with **[ft_rejectcomponent](/reference/ft_rejectcomponent)**.
 
 The following example scripts explain how to use ICA to detect and remove [EOG](/example/ica_eog) and [ECG](/example/ica_ecg) artifacts.
 

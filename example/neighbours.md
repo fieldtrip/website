@@ -27,7 +27,7 @@ It first starts off with the 2D layout of these channels. This 2D layout is basi
 
 {% include image src="/assets/img/example/neighbours/figure1.png" width="400" %}
 
-With **[ft_prepare_neighbours](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_neighbours.m)** is possible to use a triangulation to find the neighbours. The initial triangulation is rather sparse, therefore the default is to also compress it along the horizontal and vertical and combine the three triangulations for determining the neighbours. This results in edges that cross each other.
+With **[ft_prepare_neighbours](/reference/ft_prepare_neighbours)** is possible to use a triangulation to find the neighbours. The initial triangulation is rather sparse, therefore the default is to also compress it along the horizontal and vertical and combine the three triangulations for determining the neighbours. This results in edges that cross each other.
 
     cfg = [];
     cfg.layout = layout;
@@ -140,7 +140,7 @@ If you rotate the 3D figure, you can see that O1 and O2 are considered neighbour
 
 Note that if you remove a neighbour from one channel, you probably also want to remove it the opposite way around. In general we would consider neighbours symmetric, i.e., if channel "A" is a neighbour of channel "B", channel "B" will also be the neighbour of "A".
 
-You can use the **[printstruct](https://github.com/fieldtrip/fieldtrip/blob/release/utilities/printstruct.m)** function to display the structure on screen and copy-and-paste it into your script, where you can make additional refinements.
+You can use the **[printstruct](/reference/utilities/printstruct)** function to display the structure on screen and copy-and-paste it into your script, where you can make additional refinements.
 
     printstruct('neighbours', neighbours8)
 
@@ -187,7 +187,7 @@ You can use the **[printstruct](https://github.com/fieldtrip/fieldtrip/blob/rele
     neighbours(21).label = 'O2';
     neighbours(21).neighblabel = { 'P4', 'P8', 'O1', 'Oz' };
 
-You can also use **[ft_neighbourplot](https://github.com/fieldtrip/fieldtrip/blob/release/ft_neighbourplot.m)**, clicking on one electrode and then another allows to graphically add or remove a connection.
+You can also use **[ft_neighbourplot](/reference/ft_neighbourplot)**, clicking on one electrode and then another allows to graphically add or remove a connection.
 
     cfg = [];
     cfg.elec = elec;

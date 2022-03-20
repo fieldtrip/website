@@ -28,9 +28,9 @@ We will now determine the positions on which the cortico-muscular coherence is t
 
 The cortical position is expressed [in MNI space](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined) according to the template brain we used for warping and in centimeter. Relative to the anterior commissure (AC) the coherence peak position is 3.2 cm towards the right side of the brain, -0.6 towards the front of the AC (i.e., 0.6 cm towards the back!) and 7.4 cm towards the vertex. The visual gamma peak is 0.4 cm towards the right of the brain , -8.8 cm to the front of the AC (i.e. 8.6 cm to the back) and 2.6 cm to the top.
 
-The **[ft_sourceanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceanalysis.m)** methods are usually applied to the whole brain using a regular 3-D grid or using a triangulated cortical sheet. You can also just specify the location of a single or multiple points of interest with _cfg.sourcemodel.pos_ and the LCMV beamformer will simply be performed at the location of interest. Note that we have to use subject-specific coordinates here and not the MNI template.
+The **[ft_sourceanalysis](/reference/ft_sourceanalysis)** methods are usually applied to the whole brain using a regular 3-D grid or using a triangulated cortical sheet. You can also just specify the location of a single or multiple points of interest with _cfg.sourcemodel.pos_ and the LCMV beamformer will simply be performed at the location of interest. Note that we have to use subject-specific coordinates here and not the MNI template.
 
-The LCMV beamformer spatial filter for the location of interest will pass the activity at that location with unit-gain, while optimally suppressing all other noise and other source contributions to the MEG data. The LCMV implementation in FieldTrip requires the data covariance matrix to be computed with **[ft_timelockanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockanalysis.m)**.
+The LCMV beamformer spatial filter for the location of interest will pass the activity at that location with unit-gain, while optimally suppressing all other noise and other source contributions to the MEG data. The LCMV implementation in FieldTrip requires the data covariance matrix to be computed with **[ft_timelockanalysis](/reference/ft_timelockanalysis)**.
 
     cfg                   = [];
     cfg.covariance        = 'yes';
@@ -74,10 +74,10 @@ The source reconstruction contains the estimated power and the source-level time
 {% include markup/warning %}
 The LCMV spatial filter is computed here without applying any time-domain filters. Consequently, it will have to suppress all noise in the data in all frequency bands. The spatial filter derived from the broadband data allows us to compute a broadband source level time series.
 
-If you would know that the subsequent analysis would be limited to a specific frequency range in the data (e.g., everything above 30 Hz), you could first apply a filter using **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** (e.g., _cfg.hpfilter=yes_ and _cfg.hpfreq=30_) prior to computing the covariance and the spatial filter.  
+If you would know that the subsequent analysis would be limited to a specific frequency range in the data (e.g., everything above 30 Hz), you could first apply a filter using **[ft_preprocessing](/reference/ft_preprocessing)** (e.g., _cfg.hpfilter=yes_ and _cfg.hpfreq=30_) prior to computing the covariance and the spatial filter.  
 {% include markup/end %}
 
-The structures _coh_lft_data_ and _gam_pow_data_ resemble the raw-data output of **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** and consequently can be used in any follow-up function. You can for example visualize the single-trial virtual channel time series using **[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_databrowser.m)**.
+The structures _coh_lft_data_ and _gam_pow_data_ resemble the raw-data output of **[ft_preprocessing](/reference/ft_preprocessing)** and consequently can be used in any follow-up function. You can for example visualize the single-trial virtual channel time series using **[ft_databrowser](/reference/ft_databrowser)**.
 
     cfg = [];
     cfg.viewmode = 'vertical';  % you can also specify 'butterfly'

@@ -52,7 +52,7 @@ It is quite easy to make a drawing of the optode positions. You could for exampl
 
 {% include image src="/assets/img/example/nirs_layout/optodedrawing.jpg" width="400" %}
 
-To localize the optodes in a drawing, we can use the functionality of **[ft_prepare_layout](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_layout.m)** which was mostly designed for localizing EEG electrodes on a drawing:
+To localize the optodes in a drawing, we can use the functionality of **[ft_prepare_layout](/reference/ft_prepare_layout)** which was mostly designed for localizing EEG electrodes on a drawing:
 
     cfg = [];
     cfg.image = 'optodedrawing.jpg';
@@ -81,7 +81,7 @@ The result looks like this
         outline: {[16x2 double]  [3x2 double]  [6x2 double]  [7x2 double]}
             cfg: [1x1 struct]
 
-We can use **[ft_plot_layout](https://github.com/fieldtrip/fieldtrip/blob/release/plotting/ft_plot_layout.m)** to make a figure. You can see that it also added a box for the comment and a box for the scale. These are optional, see **[ft_prepare_layout](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_layout.m)**.
+We can use **[ft_plot_layout](/reference/plotting/ft_plot_layout)** to make a figure. You can see that it also added a box for the comment and a box for the scale. These are optional, see **[ft_prepare_layout](/reference/ft_prepare_layout)**.
 
     figure
     ft_plot_layout(layout_optode)
@@ -131,7 +131,7 @@ If this were an EEG layout, we would now be done. However, with NIRS the channel
 do not correspond directly to the individual optodes, so we need to make
 combinations of optodes. This can be done using a "montage", which specifies how
 optodes (or more commonly EEG electrodes) are combined in a channel. The concent
-of a montage is explained in more detail in **[ft_apply_montage](https://github.com/fieldtrip/fieldtrip/blob/release/forward/ft_apply_montage.m)**.
+of a montage is explained in more detail in **[ft_apply_montage](/reference/forward/apply_montage)**.
 
     montage.labelold = {'Tx1', 'Tx2', 'Tx3', 'Tx4', 'Tx5', 'Tx6', 'Rx1', 'Rx2', 'Rx3', 'Rx4', 'Rx5', 'Rx6', 'Rx7', 'Rx8'};
 
@@ -188,7 +188,7 @@ Again you can plot the layout, probably you will have to do this repeatedly whil
 
 ### Make separate channels for the oxy- and deoxyhemoglobin (or wavelengths)
 
-We are still not ready, since we need to add separate channels for the optical densities (OD) for the two wavelengths, or after **[ft_nirs_transform_ODs](https://github.com/fieldtrip/fieldtrip/blob/release/external/artinis/ft_nirs_transform_ODs.m)** for the oxyhemoglobin (O2Hb) and deoxyhemoglobin (HHb).
+We are still not ready, since we need to add separate channels for the optical densities (OD) for the two wavelengths, or after **[ft_nirs_transform_ODs](/reference/external/artinis/ft_nirs_transform_ODs)** for the oxyhemoglobin (O2Hb) and deoxyhemoglobin (HHb).
 
     figure
 
@@ -214,7 +214,7 @@ We are still not ready, since we need to add separate channels for the optical d
 
 ### Combine the oxy- and deoxyhemoglobin layouts
 
-We can combine the two layouts in a single layout with **[ft_appendlayout](https://github.com/fieldtrip/fieldtrip/blob/release/ft_appendlayout.m)**.
+We can combine the two layouts in a single layout with **[ft_appendlayout](/reference/ft_appendlayout)**.
 
     cfg = [];
     cfg.direction = 'horizontal'; % or vertical

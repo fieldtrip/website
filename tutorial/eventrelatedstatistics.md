@@ -7,15 +7,15 @@ tags: [tutorial, statistics, meg, eeg, timelock, freq, meg-language, neighbours]
 
 ## Introduction
 
-The goal of this tutorial is to provide a gentle introduction into the different options that are implemented for statistical analysis. Here we will use event-related fields (ERFs), because they are more familiar to most of the audience and easier to visualize. We will show how to do basic statistical testing using the MATLAB statistics toolbox and compare the results with that from using the **[ft_timelockstatistics](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockstatistics.m)** function. Topics that will be covered are parametric statistics on a single channel and time-window, the multiple comparison problem (MCP), non-parametric randomization testing and cluster-based testing.
+The goal of this tutorial is to provide a gentle introduction into the different options that are implemented for statistical analysis. Here we will use event-related fields (ERFs), because they are more familiar to most of the audience and easier to visualize. We will show how to do basic statistical testing using the MATLAB statistics toolbox and compare the results with that from using the **[ft_timelockstatistics](/reference/ft_timelockstatistics)** function. Topics that will be covered are parametric statistics on a single channel and time-window, the multiple comparison problem (MCP), non-parametric randomization testing and cluster-based testing.
 
-This tutorial uses the same [MEG language dataset](/tutorial/meg_language) as some of the other tutorials where analyses were done on the single subject level. However, here we will deal with (statistical) analyses on the group level. We will look at how to test statistical differences among conditions in a within-subjects design. The ERF dataset in this tutorial contains data from all 10 subjects that participated in the experiment. The ERF data was obtained using **[ft_timelockanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockanalysis.m)**. For the purpose of inspecting your data visually, we also use **[ft_timelockgrandaverage](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockgrandaverage.m)** to calculate the grand average across participants, which can be used for subsequent visualization.
+This tutorial uses the same [MEG language dataset](/tutorial/meg_language) as some of the other tutorials where analyses were done on the single subject level. However, here we will deal with (statistical) analyses on the group level. We will look at how to test statistical differences among conditions in a within-subjects design. The ERF dataset in this tutorial contains data from all 10 subjects that participated in the experiment. The ERF data was obtained using **[ft_timelockanalysis](/reference/ft_timelockanalysis)**. For the purpose of inspecting your data visually, we also use **[ft_timelockgrandaverage](/reference/ft_timelockgrandaverage)** to calculate the grand average across participants, which can be used for subsequent visualization.
 
 You can download the [averaged dataset for each subject](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/eventrelatedstatistics/ERF_orig.mat) from the FieldTrip FTP server.
 
 The tutorial assumes that the preprocessing and averaging steps are already clear for the reader. If this is not the case, you can read about those steps in other tutorials.
 
-Note that in this tutorial we will not provide detailed information about statistics on channel-level power spectra, time-frequency representations of power (as obtained from **[ft_freqanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqanalysis.m)**), nor on source-level statistics. However, FieldTrip does have similar statistical options for frequency data: at the channel-level we have the **[ft_freqstatistics](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqstatistics.m)** function, and on the source-level (statistics on source reconstructed activity), we have the **[ft_sourcestatistics](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourcestatistics.m)** function, the latter works on data obtained from **[ft_sourceanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceanalysis.m)**).
+Note that in this tutorial we will not provide detailed information about statistics on channel-level power spectra, time-frequency representations of power (as obtained from **[ft_freqanalysis](/reference/ft_freqanalysis)**), nor on source-level statistics. However, FieldTrip does have similar statistical options for frequency data: at the channel-level we have the **[ft_freqstatistics](/reference/ft_freqstatistics)** function, and on the source-level (statistics on source reconstructed activity), we have the **[ft_sourcestatistics](/reference/ft_sourcestatistics)** function, the latter works on data obtained from **[ft_sourceanalysis](/reference/ft_sourceanalysis)**).
 
 A more thorough explanation of randomization tests and cluster-based statistics can be found in the [Cluster-based permutation tests on event related fields](/tutorial/cluster_permutation_timelock) and the [Cluster-based permutation tests on time-frequency data](/tutorial/cluster_permutation_freq) tutorials.
 
@@ -32,13 +32,13 @@ and the [Cluster-based permutation tests on time-frequency data](/tutorial/clust
 
 ## Procedure
 
-To do parametric or non-parametric statistics on event-related fields in a within-subject design we will use a dataset of 10 subjects that has been preprocessed, the planar gradient and the subject-averages of two conditions have been computed. The gray boxes of Figure 1 show those steps that have been done already. The orange boxes within the gray boxes represent processing steps that are done on all trials that belong to one subject in one condition. These steps are described in the [Trigger-based trial selection](/tutorial/preprocessing) and in the [Event related averaging and planar gradient](/tutorial/eventrelatedaveraging) tutorial. How to use the  **[ft_timelockstatistics](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockstatistics.m)** function will be described in this tutorial.
+To do parametric or non-parametric statistics on event-related fields in a within-subject design we will use a dataset of 10 subjects that has been preprocessed, the planar gradient and the subject-averages of two conditions have been computed. The gray boxes of Figure 1 show those steps that have been done already. The orange boxes within the gray boxes represent processing steps that are done on all trials that belong to one subject in one condition. These steps are described in the [Trigger-based trial selection](/tutorial/preprocessing) and in the [Event related averaging and planar gradient](/tutorial/eventrelatedaveraging) tutorial. How to use the  **[ft_timelockstatistics](/reference/ft_timelockstatistics)** function will be described in this tutorial.
 
 We will perform the following steps to do a statistical test in FieldTrip:
 
-- We can visually inspect the data and look where are differences between the conditions by plotting the grand-averages and subject-averages using the **[ft_multiplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_multiplotER.m)**, the **[ft_singleplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_singleplotER.m)** and the MATLAB plot functions. Note that in practice you should _not_ guide your statistical analysis by a visual inspection of the data; you should state your hypothesis up-front and avoid [data dredging or p-hacking](https://en.wikipedia.org/wiki/Data_dredging).
-- To do any kind of statistical testing (parametric or non-parametric, with or without multiple comparison correction) we will use the **[ft_timelockstatistics](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockstatistics.m)** function.
-- We can plot a schematic head with the channels that contribute to the significant difference between conditions with the **[ft_topoplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_topoplotER.m)** function or optionally with the **[ft_clusterplot](https://github.com/fieldtrip/fieldtrip/blob/release/ft_clusterplot.m)** function (in case cluster-based non-parametric statistics was used).
+- We can visually inspect the data and look where are differences between the conditions by plotting the grand-averages and subject-averages using the **[ft_multiplotER](/reference/ft_multiplotER)**, the **[ft_singleplotER](/reference/ft_singleplotER)** and the MATLAB plot functions. Note that in practice you should _not_ guide your statistical analysis by a visual inspection of the data; you should state your hypothesis up-front and avoid [data dredging or p-hacking](https://en.wikipedia.org/wiki/Data_dredging).
+- To do any kind of statistical testing (parametric or non-parametric, with or without multiple comparison correction) we will use the **[ft_timelockstatistics](/reference/ft_timelockstatistics)** function.
+- We can plot a schematic head with the channels that contribute to the significant difference between conditions with the **[ft_topoplotER](/reference/ft_topoplotER)** function or optionally with the **[ft_clusterplot](/reference/ft_clusterplot)** function (in case cluster-based non-parametric statistics was used).
 
 {% include image src="/assets/img/tutorial/eventrelatedstatistics/figure0.png" width="400" %}
 
@@ -47,13 +47,13 @@ _Figure 1: Pipeline of statistical testing. All analysis steps in the gray boxes
 ## Reading-in preprocessed and time-locked data in planar gradient format, and grand averaged data
 
 We now describe how we can statistically test the difference between the event-related averages for fully incongruent (FIC) and the fully congruent (FC) sentence endings. For this analysis we use planar gradient data. For convenience we will not do the reading-in and preprocessing steps on all subjects. Instead we begin by loading the timelock structures containing the event-related averages (of the planar gradient data) of all ten subjects. You can download the [subject averages](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/eventrelatedstatistics/ERF_orig.mat).
-We will also make use of the function **[ft_timelockgrandaverage](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockgrandaverage.m)** to calculate the grand average (average across subjects) and plot it to visually inspect the data
+We will also make use of the function **[ft_timelockgrandaverage](/reference/ft_timelockgrandaverage)** to calculate the grand average (average across subjects) and plot it to visually inspect the data
 
       load ERF_orig;    % averages for each individual subject, for each condition
 
 ERF_orig contains allsubjFIC and allsubjFC, each storing the event-related averages for the fully incongruent, and the fully congruent sentence endings, respectively.
 
-The format for these variables, are a prime example of how you should organise your data to be suitable for timelock, freq and source statistics. Specifically, each variable is a cell-array of structures, with each subject's averaged stored in one cell. To create this data structure two steps are required. First, the single-subject averages were calculated individually for each subject using the function **[ft_timelockanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockanalysis.m)**. Second, using a for-loop we have combined the data from each subject, within each condition, into one variable (allsubj_FIC/allsubj_FC). We suggest that you adopt this procedure as well.
+The format for these variables, are a prime example of how you should organise your data to be suitable for timelock, freq and source statistics. Specifically, each variable is a cell-array of structures, with each subject's averaged stored in one cell. To create this data structure two steps are required. First, the single-subject averages were calculated individually for each subject using the function **[ft_timelockanalysis](/reference/ft_timelockanalysis)**. Second, using a for-loop we have combined the data from each subject, within each condition, into one variable (allsubj_FIC/allsubj_FC). We suggest that you adopt this procedure as well.
 
 On a technical note, it is preferred to represent the multi-subject data as a cell-array of structures, rather than a so-called struct-array. The reason for this is that the cell-array representation allows for easy expansion into a MATLAB function that allows for a variable number of input arguments (which is how the timelock, freq and source statistics functions have been designed).
 
@@ -65,7 +65,7 @@ On a technical note, it is preferred to represent the multi-subject data as a ce
 
 It is good practice to visually inspect your data at the different stages of your analysis. Below we show a couple ways of plotting data: the grand average (averaged across all subjects) for all channels and one specific channel, as well as plotting the individual average for multiple subjects next to each other.
 
-To begin with we will compute the grand average data using **[ft_timelockgrandaverage](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockgrandaverage.m)**
+To begin with we will compute the grand average data using **[ft_timelockgrandaverage](/reference/ft_timelockgrandaverage)**
 
     % load individual subject data
     load('ERF_orig');
@@ -79,7 +79,7 @@ To begin with we will compute the grand average data using **[ft_timelockgrandav
     grandavgFC   = ft_timelockgrandaverage(cfg, allsubjFC{:});
     % "{:}" means to use data from all elements of the variable
 
-Now plot all channels with **[ft_multiplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_multiplotER.m)**, and channel MLT12 with **[ft_singleplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_singleplotER.m)** using the grand average data.
+Now plot all channels with **[ft_multiplotER](/reference/ft_multiplotER)**, and channel MLT12 with **[ft_singleplotER](/reference/ft_singleplotER)** using the grand average data.
 
     cfg = [];
     cfg.showlabels  = 'yes';
@@ -159,7 +159,7 @@ You can do a dependent samples t-test with the MATLAB [ttest](https://www.mathwo
 
 #### T-test with FieldTrip function
 
-You can do the same thing in FieldTrip (which does not require the statistics toolbox) using the **[ft_timelockstatistics](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockstatistics.m)** function. This gives you the same p-value of 0.00073905.
+You can do the same thing in FieldTrip (which does not require the statistics toolbox) using the **[ft_timelockstatistics](/reference/ft_timelockstatistics)** function. This gives you the same p-value of 0.00073905.
 
     % define the parameters for the statistical comparison
     cfg = [];
@@ -185,7 +185,7 @@ From the code above you can see that the statistical comparison is between condi
 #### Exercise 1
 
 {% include markup/info %}
-Look at the temporal evolution of the effect by changing cfg.latency and cfg.avgovertime in **[ft_timelockstatistics](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockstatistics.m)**. You can plot the t-value versus time, the probability versus time and the statistical mask versus time. Note that the output of the **[ft_timelockstatistics](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockstatistics.m)** function closely resembles the output of the **[ft_timelockanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockanalysis.m)** function.
+Look at the temporal evolution of the effect by changing cfg.latency and cfg.avgovertime in **[ft_timelockstatistics](/reference/ft_timelockstatistics)**. You can plot the t-value versus time, the probability versus time and the statistical mask versus time. Note that the output of the **[ft_timelockstatistics](/reference/ft_timelockstatistics)** function closely resembles the output of the **[ft_timelockanalysis](/reference/ft_timelockanalysis)** function.
 {% include markup/end %}
 
 ### Multiple comparisons
@@ -271,7 +271,7 @@ FieldTrip also has other methods implemented for performing a multiple compariso
 
 Instead of using the analytic t-distribution to calculate the appropriate p-value for your effect, you can use a nonparametric randomization test to obtain the p-value.
 
-This is implemented in FieldTrip in the function **[ft_statistics_montecarlo](https://github.com/fieldtrip/fieldtrip/blob/release/ft_statistics_montecarlo.m)** which is called by **[ft_timelockstatistics](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockstatistics.m)** when you set cfg.method = 'montecarlo'. A Monte-Carlo estimate of the significance probabilities and/or critical values is calculated based on randomising or permuting your data many times between the conditions.
+This is implemented in FieldTrip in the function **[ft_statistics_montecarlo](/reference/ft_statistics_montecarlo)** which is called by **[ft_timelockstatistics](/reference/ft_timelockstatistics)** when you set cfg.method = 'montecarlo'. A Monte-Carlo estimate of the significance probabilities and/or critical values is calculated based on randomising or permuting your data many times between the conditions.
 
     cfg = [];
     cfg.channel     = 'MEG';
@@ -315,7 +315,7 @@ Also in the non-parametric approach for testing of statistical significance diff
 
 FieldTrip also implements a special way to correct for multiple comparisons, which makes use of the feature in the data that the effects at neighbouring timepoints and channels are highly correlated. For more details see the cluster permutation tutorials for [ERFs](/tutorial/cluster_permutation_timelock) and [time frequency data](/tutorial/cluster_permutation_freq) and the publication by [Maris and Oostenveld (2007)](/references_to_implemented_methods#statistical_inference_by_means_of_permutation).
 
-This method requires you to define neighbouring channels. FieldTrip has a function that can do that for you called **[ft_prepare_neighbours](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_neighbours.m)**. The following example will construct a neighbourhood structure and show which channels are defined as neighbours:
+This method requires you to define neighbouring channels. FieldTrip has a function that can do that for you called **[ft_prepare_neighbours](/reference/ft_prepare_neighbours)**. The following example will construct a neighbourhood structure and show which channels are defined as neighbours:
 
     cfg = [];
     cfg.method      = 'template';                         % try 'distance' as well
@@ -387,7 +387,7 @@ So far we predefined a time window over which the effect was averaged, and teste
 
     stat = ft_timelockstatistics(cfg, allsubjFIC{:}, allsubjFC{:});
 
-**[ft_clusterplot](https://github.com/fieldtrip/fieldtrip/blob/release/ft_clusterplot.m)** can be used to plot the effect.
+**[ft_clusterplot](/reference/ft_clusterplot)** can be used to plot the effect.
 
     % make a plot
     cfg = [];

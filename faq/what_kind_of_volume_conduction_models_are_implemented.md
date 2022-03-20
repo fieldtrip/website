@@ -22,6 +22,6 @@ and the following common volume conduction models for ME
 
 Besides these volume conduction models which are for general use on EEG and MEG data, there are a number of models implemented that are more experimental, still not 100% complete, or that are very specific for uncommon applications, e.g., for a laminar probe in the cortex, or magnetic dipoles (MEG localizer coils).
 
-For more information on the methods, you can also check the reference documentation of **[ft_prepare_headmodel](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_headmodel.m)** and the [References to implemented methods](/references_to_implemented_methods#eeg_and_meg_forward_modeling) related to forward modeling.
+For more information on the methods, you can also check the reference documentation of **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)** and the [References to implemented methods](/references_to_implemented_methods#eeg_and_meg_forward_modeling) related to forward modeling.
 
 If you wish, you can also use a forward model for which you have computed the leadfield matrices outside of FieldTrip in combination with the inverse source reconstruction algorithms that are implemented within FieldTrip. Some MATLAB code that demonstrates how to do it can be found [in this example](/example/use_your_own_forward_leadfield_model_in_an_inverse_beamformer_computation).

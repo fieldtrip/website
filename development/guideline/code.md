@@ -21,7 +21,7 @@ The function should always start with a help section, that explains the purpose 
 
 ### The best-practice example function
 
-The easiest way to get started with writing a new high-level FieldTrip function is to take a close look at [ft_examplefunction](https://github.com/fieldtrip/fieldtrip/blob/release/ft_examplefunction), which is located in FT's core (root) directory. (Note: this is true as of Feb 11, 2011.) It shows the best practices that one should adhere to concerning input and output structure and data handling. Also, it demonstrates how one should document the function according to FT standard guidelines.
+The easiest way to get started with writing a new high-level FieldTrip function is to take a close look at [ft_examplefunction](/reference/ft_ex/plefunction), which is located in FT's core (root) directory. (Note: this is true as of Feb 11, 2011.) It shows the best practices that one should adhere to concerning input and output structure and data handling. Also, it demonstrates how one should document the function according to FT standard guidelines.
 
 ## Provide reference documentation in the function help
 
@@ -34,7 +34,7 @@ To explain what the input and output data structures of the function are, please
 [output] = ft_xxxxxx(cfg, input)
 [output] = ft_xxxxxx(cfg, input1, input2)
 
-where output and input, input1, input2 are the standard names of data types, such as raw, timelock, freq, source, volume, spike. Pleae look in **[ft_datatype](https://github.com/fieldtrip/fieldtrip/blob/release/ft_datatype.m)** for a complete list and pointers to the detailed documentation on the standard datatypes.
+where output and input, input1, input2 are the standard names of data types, such as raw, timelock, freq, source, volume, spike. Pleae look in **[ft_datatype](/reference/ft_datatype)** for a complete list and pointers to the detailed documentation on the standard datatypes.
 
 ## Provide the appropriate level of feedback to the user
 
@@ -116,7 +116,7 @@ To determine the dimord, you should use the **fieldtrip/private/getdimord** func
 
 Any new configuration option should have a default set at the beginning of the function. If you don't know a good default value, you should specify the default value as empty, i.e. `cfg.newoption = ft_getopt(cfg, 'newoption');`.
 
-If you add a configuration option, you should check in the [configuration index](https://github.com/fieldtrip/fieldtrip/blob/release/configuration) whether a cfg option with similar functionality already exists in another function. Use identical names for identical functionality and try to keep the help similar if possible.
+If you add a configuration option, you should check in the [configuration index](/reference/configuration) whether a cfg option with similar functionality already exists in another function. Use identical names for identical functionality and try to keep the help similar if possible.
 
 In general, for the default handling of cfg options, one should not use `if isfield(cfg, 'newoption')`, but always use `if isempty(cfg.newoption)`, given that the default option should always be defined at the top of the function.
 

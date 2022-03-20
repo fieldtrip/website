@@ -9,7 +9,7 @@ This example explains how the threshold-free cluster enhancement (TFCE) )method 
 
 ## Why is it useful?
 
-When using clusting to correct for multiple comparisons, we need to define the cluster-forming threshold using the `cfg.clusterthreshold` and the `cfg.clusteralpha` options in **[ft_statistics_montecarlo](https://github.com/fieldtrip/fieldtrip/blob/release/ft_statistics_montecarlo.m)**. Different clusteralpha thresholds lead to clusters with a different spatial ot temporal extent, and thereby potentially to a different sensitivity of the subsequent permutation test. The threshold-free cluster enhancement method (TFCE) was introduced by [Smith and Nichols (2009)](https://doi.org/10.1016/j.neuroimage.2008.03.061) to overcome this arbitrary threshold.
+When using clusting to correct for multiple comparisons, we need to define the cluster-forming threshold using the `cfg.clusterthreshold` and the `cfg.clusteralpha` options in **[ft_statistics_montecarlo](/reference/ft_statistics_montecarlo)**. Different clusteralpha thresholds lead to clusters with a different spatial ot temporal extent, and thereby potentially to a different sensitivity of the subsequent permutation test. The threshold-free cluster enhancement method (TFCE) was introduced by [Smith and Nichols (2009)](https://doi.org/10.1016/j.neuroimage.2008.03.061) to overcome this arbitrary threshold.
 
 ## How does it work?
 

@@ -10,7 +10,7 @@ tags: [madrid2019, eeg-language]
 In FieldTrip the preprocessing of data refers to the reading of the data,
 segmenting the data around interesting events such as triggers, temporal
 filtering, artifact rejection and optionally rereferencing. The
-**[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** function takes care of all
+**[ft_preprocessing](/reference/ft_preprocessing)** function takes care of all
 these steps, i.e., it reads the data and applies the preprocessing options.
 
 There are largely two alternative approaches for preprocessing, which especially
@@ -39,11 +39,11 @@ or according to your own criteria when you write your own trial function.
 
 In this tutorial the following steps will be taken:
 
-- Read the data into MATLAB using **[ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_definetrial.m)** and **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)**
-- Extract bipolar EOG channels with **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** and get rid of reference channels with **[ft_selectdata](https://github.com/fieldtrip/fieldtrip/blob/release/ft_selectdata.m)**. Combine EOG and data channels with **[ft_appenddata](https://github.com/fieldtrip/fieldtrip/blob/release/ft_appenddata.m)**.
-- Visual artifact rejection with **[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_databrowser.m)** and **[ft_rejectvisual](https://github.com/fieldtrip/fieldtrip/blob/release/ft_rejectvisual.m)**.
-- Computing trial averages with **[ft_timelockanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockanalysis.m)**.
-- Plotting ERPs with **[ft_topoplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_topoplotER.m)**
+- Read the data into MATLAB using **[ft_definetrial](/reference/ft_definetrial)** and **[ft_preprocessing](/reference/ft_preprocessing)**
+- Extract bipolar EOG channels with **[ft_preprocessing](/reference/ft_preprocessing)** and get rid of reference channels with **[ft_selectdata](/reference/ft_selectdata)**. Combine EOG and data channels with **[ft_appenddata](/reference/ft_appenddata)**.
+- Visual artifact rejection with **[ft_databrowser](/reference/ft_databrowser)** and **[ft_rejectvisual](/reference/ft_rejectvisual)**.
+- Computing trial averages with **[ft_timelockanalysis](/reference/ft_timelockanalysis)**.
+- Plotting ERPs with **[ft_topoplotER](/reference/ft_topoplotER)**
 
 ## Preprocessing
 
@@ -75,7 +75,7 @@ These are the triggers we will select for now.
     cfg.trialdef.poststim   = 0.8;
     cfg                     = ft_definetrial(cfg);
 
-After the call to **[ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_definetrial.m)**, the configuration structure cfg now not
+After the call to **[ft_definetrial](/reference/ft_definetrial)**, the configuration structure cfg now not
 only stores the dataset name, but also contains a field `cfg.trl` with the
 definition of the segments of data that will be used for further
 processing and analysis. Each row in the `trl` matrix represents a single
@@ -190,7 +190,7 @@ at the data as you read it into memory
            cfg: [1x1 struct]
 
 The fields in the raw data structure are explained in more detail in
-**[ft_dataype_raw](https://github.com/fieldtrip/fieldtrip/blob/release/utilities/ft_datatype_raw.m)**. You can use the default MATLAB
+**[ft_dataype_raw](/reference/utilities/ft_datatype_raw)**. You can use the default MATLAB
 plot functions to show the EEG data for all channels in for example the first
 trial:
 
@@ -199,7 +199,7 @@ trial:
 {% include image src="/assets/img/workshop/madrid2019/tutorial_erp/tsk_plottrl.png" width="800" %}
 
 However, a more efficient way to quickly visualize and scroll through your data
-is to use **[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_databrowser.m)**. That function also
+is to use **[ft_databrowser](/reference/ft_databrowser)**. That function also
 allows you to mark the time windows in which artifacts are present.
 
 ## Visual artifacts detection
@@ -219,10 +219,10 @@ So you should apply the same criteria for artifact rejection to all your experim
 {% include markup/end %}
 
 To get a first impression of our data quality we will use
-**[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_databrowser.m)** to look at our individual
+**[ft_databrowser](/reference/ft_databrowser)** to look at our individual
 trials. This is a good option if you want to quickly browse your data, as it
 takes both continuous and segmented data as inputs. With
-**[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_databrowser.m)** you can display all channels at
+**[ft_databrowser](/reference/ft_databrowser)** you can display all channels at
 the same time to inspect non-systematic artifacts such as blinks or electrode
 movement.
 
@@ -241,22 +241,22 @@ this dataset?
 {% include markup/end %}
 
 As you might have noticed it is easy to mark segments with
-**[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_databrowser.m)**, but it is not possible to mark
+**[ft_databrowser](/reference/ft_databrowser)**, but it is not possible to mark
 channels as bad; also looking at each trial individually and then clicking with
 the mouse to go to the next is not always very efficient.
 
 ### Display one trial at a time
 
 Another option for visual artifact detection is
-**[ft_rejectvisual](https://github.com/fieldtrip/fieldtrip/blob/release/ft_rejectvisual.m)**. This function allows you to
+**[ft_rejectvisual](/reference/ft_rejectvisual)**. This function allows you to
 inspect data that has been segmented into trials and identify either bad trials
 or bad channels. It allows you to browse through large amounts of data in a
 single figure by either showing all channels at once (per trial), or showing all trials
 at once (per channel), or by showing a summary of all channels and trials.
 
-We will first call **[ft_rejectvisual](https://github.com/fieldtrip/fieldtrip/blob/release/ft_rejectvisual.m)** with all
+We will first call **[ft_rejectvisual](/reference/ft_rejectvisual)** with all
 channels at once. This corresponds more or less to the way that
-**[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_databrowser.m)** displays the data (one trial at
+**[ft_databrowser](/reference/ft_databrowser)** displays the data (one trial at
 the time), but now we can see individual channels better and can mark channels that are bad.
 
     cfg          = [];
@@ -277,10 +277,10 @@ Can you spot which channels are noisier than others? Using
 the mouse, you can select channels that you want to remove from the data.
 {% include markup/end %}
 
-The **[ft_rejectvisual](https://github.com/fieldtrip/fieldtrip/blob/release/ft_rejectvisual.m)** function directly returns
+The **[ft_rejectvisual](/reference/ft_rejectvisual)** function directly returns
 the clean data with the bad channels and trials removed and you do not have to call
-**[ft_rejectartifact](https://github.com/fieldtrip/fieldtrip/blob/release/ft_rejectartifact.m)** or
-**[ft_rejectcomponent](https://github.com/fieldtrip/fieldtrip/blob/release/ft_rejectcomponent.m)**. We could continue
+**[ft_rejectartifact](/reference/ft_rejectartifact)** or
+**[ft_rejectcomponent](/reference/ft_rejectcomponent)**. We could continue
 working with the cleaned data, but for now we will only save the list of channel
 names of the the bad channels and continue with our data inspection.
 
@@ -288,7 +288,7 @@ names of the the bad channels and continue with our data inspection.
 
 ### Display one channel at a time
 
-Next we will use **[ft_rejectvisual](https://github.com/fieldtrip/fieldtrip/blob/release/ft_rejectvisual.m)** to display
+Next we will use **[ft_rejectvisual](/reference/ft_rejectvisual)** to display
 all trials for a single channel; this is helpful to identify whether the channel
 is noisy in general, or becomes bad at a certain time during the experiment, or
 only has some glitches. It is also helpful to inspect the EOG channels to
@@ -308,7 +308,7 @@ sample relative to the original data file.
 
 ### Display a summary
 
-Finally we will call **[ft_rejectvisual](https://github.com/fieldtrip/fieldtrip/blob/release/ft_rejectvisual.m)** one more
+Finally we will call **[ft_rejectvisual](/reference/ft_rejectvisual)** one more
 time in 'summary' mode. This option is the fastest to identify either trials or
 channels that are noisy.
 
@@ -329,7 +329,7 @@ Which channels show the most variance? Why is that?
 {% include markup/danger %}
 If you would like to keep track of which trials you reject, keep in mind that
 the trial numbers change when you call
-**[ft_rejectvisual](https://github.com/fieldtrip/fieldtrip/blob/release/ft_rejectvisual.m)** more than once, or if you use
+**[ft_rejectvisual](/reference/ft_rejectvisual)** more than once, or if you use
 the `cfg.trials` option for selection. If you want to keep track which data you
 rejected, it is best look at the sample numbers in the `trialinfo` field. These
 sample numbers always refer to the original EEG data file.
@@ -338,7 +338,7 @@ sample numbers always refer to the original EEG data file.
 ### Inspect cleaned data
 
 Now that we have identified artifacts using different visual inspection
-approaches, we will use **[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_databrowser.m)** again to
+approaches, we will use **[ft_databrowser](/reference/ft_databrowser)** again to
 inspect the data with bad trials marked as such. For this we first compare the
 `sampleinfo` between the original and the clean data structure.
 
@@ -349,12 +349,12 @@ inspect the data with bad trials marked as such. For this we first compare the
     cfg.artfctdef.visual.artifact = bad_samples;
     cfg_artif = ft_databrowser(cfg, data);
 
-If the cleaning with **[ft_rejectvisual](https://github.com/fieldtrip/fieldtrip/blob/release/ft_rejectvisual.m)** was not
+If the cleaning with **[ft_rejectvisual](/reference/ft_rejectvisual)** was not
 sufficient yet, you can continue to mark trials or data segments as artifacts
-within **[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_databrowser.m)**. The updated artifact
+within **[ft_databrowser](/reference/ft_databrowser)**. The updated artifact
 definition will be saved in the `cfg_artif` output and you can subsequently
 reject those artifacts using
-**[ft_rejectartifact](https://github.com/fieldtrip/fieldtrip/blob/release/ft_rejectartifact.m)**. You can see an example of
+**[ft_rejectartifact](/reference/ft_rejectartifact)**. You can see an example of
 this in the [resting-state cleaning EEG
 tutorial](/workshop/madrid2019/tutorial_cleaning)
 
@@ -377,7 +377,7 @@ the EEG dataset. For plotting you have to use a layout file; this is a .mat file
 that contains the 2-D positions of the channels. FieldTrip provides a number of
 template layouts for different EEG caps in the `fieldtrip/template/layout`
 directory. It is also possible to create custom layouts for your own EEG cap,
-see **[ft_prepare_layout](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_layout.m)** and the [layout
+see **[ft_prepare_layout](/reference/ft_prepare_layout)** and the [layout
 tutorial](/tutorial/layout).
 
     cfg        = [];
@@ -388,7 +388,7 @@ tutorial](/tutorial/layout).
 
 We will now compute the ERPs for two conditions: visual and auditory stimulus presentation.
 
-For each trial, the condition information is kept with the data structure in `data.trialinfo`. We use **[ft_timelockanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockanalysis.m)** to compute the ERPs and average only those trials in which the trigger code corresponds to the condition of interest (i.e. visual or auditory).
+For each trial, the condition information is kept with the data structure in `data.trialinfo`. We use **[ft_timelockanalysis](/reference/ft_timelockanalysis)** to compute the ERPs and average only those trials in which the trigger code corresponds to the condition of interest (i.e. visual or auditory).
 
     cfg = [];
     cfg.trials = ismember(data_clean.trialinfo, [112, 122, 132, 142]);
@@ -402,12 +402,12 @@ For each trial, the condition information is kept with the data structure in `da
 
 {% include markup/exercise %}
 Inspect the resulting data structure after
-**[ft_timelockanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockanalysis.m)**.
+**[ft_timelockanalysis](/reference/ft_timelockanalysis)**.
 
-Which fields have been added and what information do they contain? The fields in the data structure are explained in more detail in **[ft_datatype_timelock](https://github.com/fieldtrip/fieldtrip/blob/release/utilities/ft_datatype_timelock.m)**.
+Which fields have been added and what information do they contain? The fields in the data structure are explained in more detail in **[ft_datatype_timelock](/reference/utilities/ft_datatype_timelock)**.
 {% include markup/end %}
 
-We will now use **[ft_topoplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_topoplotER.m)** to plot both
+We will now use **[ft_topoplotER](/reference/ft_topoplotER)** to plot both
 conditions. By setting the option `cfg.interactive='yes'` you can
 interact with the figure by selecting certain channels or time windows and going
 back and forth between the topographic and time representation of the data.
@@ -434,13 +434,13 @@ look as you would expect?
 ## Next steps
 
 Following the computation of ERPs, FieldTrip offers many more functions to
-continue analyzing your data. You can use **[ft_math](https://github.com/fieldtrip/fieldtrip/blob/release/ft_math.m)** to
+continue analyzing your data. You can use **[ft_math](/reference/ft_math)** to
 compute difference waves,
-**[ft_timelockstatistics](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockstatistics.m)** to run statistics
+**[ft_timelockstatistics](/reference/ft_timelockstatistics)** to run statistics
 on your ERP effect, compute group level averages with
-**[ft_timelockgrandaverage](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockgrandaverage.m)** or explore
+**[ft_timelockgrandaverage](/reference/ft_timelockgrandaverage)** or explore
 different ways of visualizing, i.e.
-**[ft_multiplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_multiplotER.m)** etc.
+**[ft_multiplotER](/reference/ft_multiplotER)** etc.
 
 ##### Exercise 6
 
@@ -457,7 +457,7 @@ This in principle does the same as
     difference     = timelockAUD;                        % copy one of the structures
     difference.avg = timelockAUD.avg - timelockVIS.avg;  % compute the difference ERP
 
-but **[ft_math](https://github.com/fieldtrip/fieldtrip/blob/release/ft_math.m)** will keep provenance (i.e. historical
+but **[ft_math](/reference/ft_math)** will keep provenance (i.e. historical
 information) in the `cfg` structure, whereas if you do it by hand you will loose
 the information, which might make it more difficult later in your analysis to
 figure out what you exactly did to your data.

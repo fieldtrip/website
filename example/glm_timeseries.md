@@ -14,7 +14,7 @@ However, for the high temporal resolution EEG and MEG data it is also possible t
 -   [Regularization and a General Linear Model for Event-Related Potential Estimation](https://doi.org/10.3758/s13428-017-0856-z) by Kristensen et al.
 -   [LIMO EEG: A Toolbox for Hierarchical LInear MOdeling of ElectroEncephaloGraphic Data](https://doi.org/10.1155/2011/831409) by Pernet et al.
 
-Since GLM is a very general and broadly applicable technique, it is not trivial to implement it in a single FIeldTrip function. There are a number of functions that under the hood make use of GLMs, such as **[ft_regressconfound](https://github.com/fieldtrip/fieldtrip/blob/release/ft_regressconfound.m)**, **[ft_denoise_tsr](https://github.com/fieldtrip/fieldtrip/blob/release/ft_denoise_tsr.m)**, and various "statfuns" that have been used by researchers in combination with timelock-, freq- and sourcestatistics.
+Since GLM is a very general and broadly applicable technique, it is not trivial to implement it in a single FIeldTrip function. There are a number of functions that under the hood make use of GLMs, such as **[ft_regressconfound](/reference/ft_regressconfound)**, **[ft_denoise_tsr](/reference/ft_denoise_tsr)**, and various "statfuns" that have been used by researchers in combination with timelock-, freq- and sourcestatistics.
 
 The following example demonstrates how you can use GLM in the analysis of time series data. It uses EEG data from a a study by [Simanova et al.](https://doi.org/10.1371/journal.pone.0014465) that investigated semantic processing of stimuli presented as pictures (black line drawings on white background), visually displayed text or as auditory presented words. The stimuli consisted of concepts from three semantic categories: two relevant categories (animals, tools) and a task category that varied across subjects, either clothing or vegetables. The same EEG dataset is also used [elsewhere](/tag/eeg-language) in the FieldTrip documentation and described in detail [here](/tutorial/eeg_language). You can download the dataset [SubjectEEG.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/SubjectEEG.zip) from our FTP server
 
@@ -169,7 +169,7 @@ Let us first only consider a single channel. We will pick channel '1', which cor
 
     Y = data.trial{1}(1,:)';
 
-The matrix X contains the model for the data. In ERP analysis we are averaging/modeling the EEG at each timepoint (relative to the onset of the trial) independently of all other timepoints. That means we need as many regressors as timepoints that we would consider in the trial. The trials that were selected for **[ft_timelockanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockanalysis.m)** are one second and precisely 500 samples long. The model for a single trial therefore has 500 regressors and is simply constructed as
+The matrix X contains the model for the data. In ERP analysis we are averaging/modeling the EEG at each timepoint (relative to the onset of the trial) independently of all other timepoints. That means we need as many regressors as timepoints that we would consider in the trial. The trials that were selected for **[ft_timelockanalysis](/reference/ft_timelockanalysis)** are one second and precisely 500 samples long. The model for a single trial therefore has 500 regressors and is simply constructed as
 
     % Xtrial = eye(500);
     Xtrial = speye(500);

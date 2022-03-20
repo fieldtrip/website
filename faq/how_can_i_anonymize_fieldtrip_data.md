@@ -7,9 +7,9 @@ tags: [faq, sharing, anonymize]
 
 If you share your MATLAB files with others, you should be aware that the [provenance](https://en.wikipedia.org/wiki/Provenance) information might contain identifying information about your subjects.
 
-FieldTrip keeps track of the analyses in the `data.cfg.previous` field. This is something you can exploit using **[ft_analysispipeline](https://github.com/fieldtrip/fieldtrip/blob/release/ft_analysispipeline.m)** to look up details of the processing that you might not be able to find in your analysis scripts any more.
+FieldTrip keeps track of the analyses in the `data.cfg.previous` field. This is something you can exploit using **[ft_analysispipeline](/reference/ft_analysispipeline)** to look up details of the processing that you might not be able to find in your analysis scripts any more.
 
-However, the consequence might also be that original file name are present which might identify the subject. For example, after calling **[ft_prepare_headmodel](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_headmodel.m)** the provenance of the input data is saved in the output `headmodel.cfg.previous`). You can use the **[ft_anonymizedata](https://github.com/fieldtrip/fieldtrip/blob/release/ft_anonymizedata.m)** function to scrub unwanted information from the provenance.
+However, the consequence might also be that original file name are present which might identify the subject. For example, after calling **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)** the provenance of the input data is saved in the output `headmodel.cfg.previous`). You can use the **[ft_anonymizedata](/reference/ft_anonymizedata)** function to scrub unwanted information from the provenance.
 
 Better is not to use the subject's name, date of birth or other identifying information as the filename if you acquire the data. If you - or the person from whom you received the data - nevertheless did use identifying information in the file name: the earlier you rename it, the better. Have a look here to learn [how to rename and anonymize a CTF dataset](/faq/how_can_i_anonymize_a_ctf_dataset), i.e. the `.ds` directory with all files in it.
 

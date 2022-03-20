@@ -11,7 +11,7 @@ To read Blackrock data, you will need the NPMK toolbox. The latest version is av
 
 ## Set the path
 
-To get started, you should add the FieldTrip main directory to your path, and execute the **[ft_defaults](https://github.com/fieldtrip/fieldtrip/blob/release/ft_defaults.m)** function, which sets the defaults and configures up the minimal required path settings. See also this [frequently asked question](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path).
+To get started, you should add the FieldTrip main directory to your path, and execute the **[ft_defaults](/reference/ft_defaults)** function, which sets the defaults and configures up the minimal required path settings. See also this [frequently asked question](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path).
 
     addpath <path_to_fieldtrip>
     ft_defaults
@@ -22,7 +22,7 @@ To read spike data from `.nev` files, you would do the following
 
     spike = ft_read_spike('yourfile.nev')
 
-This returns the spike timestamps and waveforms in a format according to **[ft_datatype_spike](https://github.com/fieldtrip/fieldtrip/blob/release/utilities/ft_datatype_spike.m)**.
+This returns the spike timestamps and waveforms in a format according to **[ft_datatype_spike](/reference/utilities/ft_datatype_spike)**.
 
 ## Reading continuous LFP data
 
@@ -33,7 +33,7 @@ To read continuous LFP data from `.nsX` files, you can use the following high-le
     % you can specify additional preprocessing options, such as filters
     data = ft_preprocessing(cfg)
 
-This returns the LFP data in a format according to **[ft_datatype_raw](https://github.com/fieldtrip/fieldtrip/blob/release/utilities/ft_datatype_raw.m)**.
+This returns the LFP data in a format according to **[ft_datatype_raw](/reference/utilities/ft_datatype_raw)**.
 
 You can also use the low-level reading functions like this
 

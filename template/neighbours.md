@@ -5,7 +5,7 @@ tags: [template, neighbours]
 
 # Templates for defining neighbouring channels
 
-A definition of neighbouring channels is needed when computing cluster in channel-space (see [ft_timelockstatistics](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockstatistics) and [ft_freqstatistics](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqstatistics)) or when repairing missing channels (because a missing channel will be reconstructed by some weighted average of its neighbours, see [ft_channelrepair](https://github.com/fieldtrip/fieldtrip/blob/release/ft_channelrepair)). FieldTrip comes with a variety of templates for defining neighbouring channels. The rationale for these templates was that sensor positions across measurements do not vary drastically, so that it is safe to assume that neighbouring sensors are always equal. The templates are manually modified versions of automatically generated templates, with the idea to make them symmetric if the sensor positions are symmetric as well. The following provides an explanation how we derived the templates for different systems.
+A definition of neighbouring channels is needed when computing cluster in channel-space (see [ft_timelockstatistics](/reference/ft_t/elockstatistics) and [ft_freqstatistics](/reference/freqstatistics)) or when repairing missing channels (because a missing channel will be reconstructed by some weighted average of its neighbours, see [ft_channelrepair](/reference/channelrepair)). FieldTrip comes with a variety of templates for defining neighbouring channels. The rationale for these templates was that sensor positions across measurements do not vary drastically, so that it is safe to assume that neighbouring sensors are always equal. The templates are manually modified versions of automatically generated templates, with the idea to make them symmetric if the sensor positions are symmetric as well. The following provides an explanation how we derived the templates for different systems.
 
 {% include markup/warning %}
 You can find the templates for defining neighbouring channels included in FieldTrip [here](https://github.com/fieldtrip/fieldtrip/tree/master/template/neighbours).
@@ -13,7 +13,7 @@ You can find the templates for defining neighbouring channels included in FieldT
 
 ## Electrode neighbour templates
 
-EEG neighbour templates are based on [automatic, symmetric triangulation](http://fieldtrip.fcdonders.nl/faq/how_does_ft_prepare_neighbours_work) of the [2D layout templates](http://fieldtrip.fcdonders.nl/template/layout). After the automatic definition, we used [3D electrode positions](http://fieldtrip.fcdonders.nl/template/electrode) and [ft_neighbourplot](https://github.com/fieldtrip/fieldtrip/blob/release/ft_neighbourplot) with cfg.enableedit='yes' to manually add and/or remove edges between sensors.
+EEG neighbour templates are based on [automatic, symmetric triangulation](http://fieldtrip.fcdonders.nl/faq/how_does_ft_prepare_neighbours_work) of the [2D layout templates](http://fieldtrip.fcdonders.nl/template/layout). After the automatic definition, we used [3D electrode positions](http://fieldtrip.fcdonders.nl/template/electrode) and [ft_neighbourplot](/reference/neighbourplot) with cfg.enableedit='yes' to manually add and/or remove edges between sensors.
 
 Currently, the following neighbour templates are shipping with FieldTrip (note that neighbour templates are always suffixed with \_neighb
 
@@ -52,7 +52,7 @@ Other 'Easycaps' constitute a subset of one of these systems or feature freely p
 
 ## MEG neighbour templates
 
-MEG neighbour templates are based on [automatic, symmetric triangulation](http://fieldtrip.fcdonders.nl/faq/how_does_ft_prepare_neighbours_work) of the [2D layout templates](http://fieldtrip.fcdonders.nl/template/layout). After the automatic definition, we used gradiometer information from one test measurement per system and [ft_neighbourplot](https://github.com/fieldtrip/fieldtrip/blob/release/ft_neighbourplot) with cfg.enableedit='yes' to manually add and/or remove edges between sensors.
+MEG neighbour templates are based on [automatic, symmetric triangulation](http://fieldtrip.fcdonders.nl/faq/how_does_ft_prepare_neighbours_work) of the [2D layout templates](http://fieldtrip.fcdonders.nl/template/layout). After the automatic definition, we used gradiometer information from one test measurement per system and [ft_neighbourplot](/reference/neighbourplot) with cfg.enableedit='yes' to manually add and/or remove edges between sensors.
 
 ### BTI systems
 

@@ -19,9 +19,9 @@ Compiling mex files in MATLAB requires that you run the following once.
 
     mex -setup
 
-The FieldTrip main directory contains the **[ft_compile_mex](https://github.com/fieldtrip/fieldtrip/blob/release/ft_compile_mex.m)** function, which compiles all regular mex files. For some of the mex files it is needed to have two copies, i.e. one in `fieldtrip/private` and another one in `fieldtrip/fileio/private`. The `fieldtrip.bin/synchronize-private.sh` Bash script copies them to the correct locations.
+The FieldTrip main directory contains the **[ft_compile_mex](/reference/ft_compile_mex)** function, which compiles all regular mex files. For some of the mex files it is needed to have two copies, i.e. one in `fieldtrip/private` and another one in `fieldtrip/fileio/private`. The `fieldtrip.bin/synchronize-private.sh` Bash script copies them to the correct locations.
 
-The **[ft_compile_mex](https://github.com/fieldtrip/fieldtrip/blob/release/ft_compile_mex.m)** function will try to detect whether the c-code for the mex files has changed and only compile the updated ones. To recompile all mex files, you can do
+The **[ft_compile_mex](/reference/ft_compile_mex)** function will try to detect whether the c-code for the mex files has changed and only compile the updated ones. To recompile all mex files, you can do
 
     ft_compile_mex(true)
 
@@ -35,7 +35,7 @@ Some of the simple mex files come with a corresponding m-file that automatically
 
 ## Config object
 
-The config object is used by **[ft_checkconfig](https://github.com/fieldtrip/fieldtrip/blob/release/ft_checkconfig.m)** to keep track of cfg options that are used and changed. By default this is _not_ enabled. The cfg-tracking is implemented with a number of mex files. To compile these, do this on the MATLAB command line
+The config object is used by **[ft_checkconfig](/reference/ft_checkconfig)** to keep track of cfg options that are used and changed. By default this is _not_ enabled. The cfg-tracking is implemented with a number of mex files. To compile these, do this on the MATLAB command line
 
 ```matlab
 cd @config/private

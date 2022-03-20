@@ -23,23 +23,23 @@ We will refrain from using "head model" in the subsequent explanation, since eac
 
 ## Converting anatomy to anatomy
 
-- **[ft_volumerealign](https://github.com/fieldtrip/fieldtrip/blob/release/ft_volumerealign.m)**
-- **[ft_volumereslice](https://github.com/fieldtrip/fieldtrip/blob/release/ft_volumereslice.m)**
+- **[ft_volumerealign](/reference/ft_volumerealign)**
+- **[ft_volumereslice](/reference/ft_volumereslice)**
 
 ## Converting anatomy to segmentation
 
-- **[ft_volumesegment](https://github.com/fieldtrip/fieldtrip/blob/release/ft_volumesegment.m)**
+- **[ft_volumesegment](/reference/ft_volumesegment)**
 
 ## Converting segmentation to segmentation
 
-Here it helps to distinguish the different representations. Examples of these are given in **[ft_datatype_segmentation](https://github.com/fieldtrip/fieldtrip/blob/release/utilities/ft_datatype_segmentation.m)**.
+Here it helps to distinguish the different representations. Examples of these are given in **[ft_datatype_segmentation](/reference/utilities/ft_datatype_segmentation)**.
 
 - probabilistic, also known as tissue probability map (tpm): there is a value between 0 and 1 for each tissue at each of the voxels. This requires each tissue to be described in a separate 3-D array.
 - indexed: the segmentation serves as a look-up table, each voxel is assigned to one class of tissue. This requires a set of labels for each tissue type.
 
 The probabilistic representation can also be used to make a binary or boolean representation, i.e. one in which the probability is either 0% (false) or 100% (true).
 
-Inside **[ft_prepare_mesh](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_mesh.m)** there are some helper functions that do some sanity checks on the segmentation and that can convert one representation to another.
+Inside **[ft_prepare_mesh](/reference/ft_prepare_mesh)** there are some helper functions that do some sanity checks on the segmentation and that can convert one representation to another.
 
 The MATLAB image processing toolbox includes a number of morphological operations that are very useful for manipulating binary segmentations. Some of the most common operators are imfill, imdilate, bwlabeln, etc.
 
@@ -67,11 +67,11 @@ The same effect can be reached with the use of another morphology function: bwla
 
 ## Converting anatomy to mesh
 
-The **[ft_prepare_mesh](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_mesh.m)** function allows you to interactively make a mesh, i.e. by manually clicking in an anatomical MRI, by specifying cfg.method='interactive'. It will give you a simple user interface that allows you to add and remove points in each of the slices. The vertices in each of the slices are connected together to form a closed triangulated mesh.
+The **[ft_prepare_mesh](/reference/ft_prepare_mesh)** function allows you to interactively make a mesh, i.e. by manually clicking in an anatomical MRI, by specifying cfg.method='interactive'. It will give you a simple user interface that allows you to add and remove points in each of the slices. The vertices in each of the slices are connected together to form a closed triangulated mesh.
 
 ## Converting segmentation to mesh
 
-The **[ft_prepare_mesh](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_mesh.m)** function has the 'projectmesh', 'iso2mesh' and 'isosurface' methods for constructing a mesh from a segmentation.
+The **[ft_prepare_mesh](/reference/ft_prepare_mesh)** function has the 'projectmesh', 'iso2mesh' and 'isosurface' methods for constructing a mesh from a segmentation.
 
 The projectmesh method works by projecting lines from the center of an icosaedron or other nice sphretical mesh through the vertices, to obtain the points of the volume that correspond to the transition between inside (true) and outside (false of the binary volume. The resulting surface is closed and topologically equivalent to a sphere. However, the triangles are not uniformly sized over the whole surface.
 
@@ -98,6 +98,6 @@ Also SPM includes functions for triangular mesh manipulation:
 
 ## Converting mesh to volume conduction model
 
-The **[ft_prepare_headmodel](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_headmodel.m)** function can take a single or the combination of multiple meshes as input and make a volume conduction model out of it. This construction of the volume conduction model can for example consist of fitting spheres to the mesh for a concentric sphere model, or the computation of a BEM system matrix.
+The **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)** function can take a single or the combination of multiple meshes as input and make a volume conduction model out of it. This construction of the volume conduction model can for example consist of fitting spheres to the mesh for a concentric sphere model, or the computation of a BEM system matrix.
 
 After constructing the volume conduction model of the head, FieldTrip can compute leadfields and estimate sources by solving the inverse problem. Please see the [tutorial documentation](/tutorial/) for complete examples.

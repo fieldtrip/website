@@ -29,7 +29,7 @@ FieldTrip directly supports the following BESA file format
 - `.tfc` contains a time-frequency representation of power or coherence
 - `.dat` contains multiple source beamformer output on a regular 3D grid
 
-It is possible to use the low-level functions in FieldTrip to read in the BESA data into MATLAB, but it is preferred to use the high-level **[besa2fieldtrip](https://github.com/fieldtrip/fieldtrip/blob/release/besa2fieldtrip.m)** function. That function will read the data and format it into a structure that is compatible with FieldTrip. Depending of the content of the file, the data will be formatted to appear similar to the output of one of the FieldTrip function
+It is possible to use the low-level functions in FieldTrip to read in the BESA data into MATLAB, but it is preferred to use the high-level **[besa2fieldtrip](/reference/besa2fieldtrip)** function. That function will read the data and format it into a structure that is compatible with FieldTrip. Depending of the content of the file, the data will be formatted to appear similar to the output of one of the FieldTrip function
 
 - `.avr` converted to ft_timelockanalysis
 - `.mul` converted to ft_timelockanalysis
@@ -45,13 +45,13 @@ or a time-frequency estimate of power using
 
 ## BESA MATLAB toolbox
 
-For some of the file formats, there happen to be two low-level conversion functions importers. FieldTrip comes with the low-level functions of itself, but there is also a BESA toolbox written by Karsten Hochstatter. The preferred method for using **[besa2fieldtrip](https://github.com/fieldtrip/fieldtrip/blob/release/besa2fieldtrip.m)** is to download the BESA toolbox and to add it to your MATLAB path. The conversion function will automatically detect and use it when available on your path.
+For some of the file formats, there happen to be two low-level conversion functions importers. FieldTrip comes with the low-level functions of itself, but there is also a BESA toolbox written by Karsten Hochstatter. The preferred method for using **[besa2fieldtrip](/reference/besa2fieldtrip)** is to download the BESA toolbox and to add it to your MATLAB path. The conversion function will automatically detect and use it when available on your path.
 
 The BESA toolbox is maintained by [BESA](http://www.besa.de) and included in the FieldTrip release in `fieldtrip/external/besa`.
 
 ## Electrode information
 
-BESA electrode files can also be read into MATLAB, using the **[ft_read_sens](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_sens.m)** function. They do not directly correspond to a core FieldTrip data structure, but you can add the electrode information to any FieldTrip data structure according to this:
+BESA electrode files can also be read into MATLAB, using the **[ft_read_sens](/reference/fileio/ft_read_sens)** function. They do not directly correspond to a core FieldTrip data structure, but you can add the electrode information to any FieldTrip data structure according to this:
 
     data = besa2fieldtrip('yourbesafile.avr');
     data.elec = ft_read_sens('yourelectrodes.sfp');

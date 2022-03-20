@@ -27,11 +27,11 @@ respectively. All these files also contain information of channel types and grad
 
 In general, the first step of analyzing MEG data is composed of **MEG data read-in**, **trial selection**, and **MEG-MRI co-registration**. This page therefore describes how to get started reading and using these file types in FieldTrip, mainly focusing on how to use the exported .con file in such pre-processing and co-registration. It is worth noting that almost all the contents in this page can be utilized for Yokogawa data (Yokogawa's .con, .ave, and .mrk files) because the extensions of '.con', '.ave', and '.mrk' are common between Ricoh and Yokogawa systems and the corresponding files have the same data structure.
 
-The functions in FieldTrip that allows you to execute the pre-processing and co-registration are: **[ft_read_header](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_header.m)**, **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)**, **[ft_read_event](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_event.m)**, **[ft_read_headshape](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_headshape.m)**, and **[ft_read_sens](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_sens.m)**. This page will describe how these FieldTrip functions perform for Ricoh and Yokogawa data by showing several examples on pre-processing and co-registration. As for the co-registration, you need to prepare MRI file with formats supported in FieldTrip. An MRI file with NIfTI (.nii) or DICOM format is assumed to be used in this page.
+The functions in FieldTrip that allows you to execute the pre-processing and co-registration are: **[ft_read_header](/reference/fileio/ft_read_header)**, **[ft_preprocessing](/reference/ft_preprocessing)**, **[ft_read_event](/reference/fileio/ft_read_event)**, **[ft_read_headshape](/reference/fileio/ft_read_headshape)**, and **[ft_read_sens](/reference/fileio/ft_read_sens)**. This page will describe how these FieldTrip functions perform for Ricoh and Yokogawa data by showing several examples on pre-processing and co-registration. As for the co-registration, you need to prepare MRI file with formats supported in FieldTrip. An MRI file with NIfTI (.nii) or DICOM format is assumed to be used in this page.
 
 ## Set the path
 
-To get started, you should add the FieldTrip main directory to your path, and execute the **[ft_defaults](https://github.com/fieldtrip/fieldtrip/blob/release/ft_defaults.m)** function, which sets the defaults and configures up the minimal required path settings. See also this [frequently asked question](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path). You also need to set the path to your data files.
+To get started, you should add the FieldTrip main directory to your path, and execute the **[ft_defaults](/reference/ft_defaults)** function, which sets the defaults and configures up the minimal required path settings. See also this [frequently asked question](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path). You also need to set the path to your data files.
 
     addpath <path_to_fieldtrip>
     ft_defaults
@@ -50,11 +50,11 @@ To get started, you should add the FieldTrip main directory to your path, and ex
 
 ## Read MEG data
 
-To check if you can read in the data, you try the FieldTrip functions, **[ft_read_header](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_header.m)**, **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)**, **[ft_read_event](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_event.m)**, in the command window.
+To check if you can read in the data, you try the FieldTrip functions, **[ft_read_header](/reference/fileio/ft_read_header)**, **[ft_preprocessing](/reference/ft_preprocessing)**, **[ft_read_event](/reference/fileio/ft_read_event)**, in the command window.
 
 ### Read header
 
-**[ft_read_header](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_header.m)** provides the header information embedded in an exported .con file:
+**[ft_read_header](/reference/fileio/ft_read_header)** provides the header information embedded in an exported .con file:
 
     >> hdr = ft_read_header(dataset)
 
@@ -82,7 +82,7 @@ The channel labels can be found in 'hdr.label'. In this example, the labels are 
 
 ### Read data
 
-The signal time course of the axial gradiometers can be checked by using **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)**:
+The signal time course of the axial gradiometers can be checked by using **[ft_preprocessing](/reference/ft_preprocessing)**:
 
     cfg =[];
     cfg.dataset = dataset;
@@ -97,15 +97,15 @@ The signal time course of the axial gradiometers can be checked by using **[ft_p
     cfg.blocksize = 10;
     cfg = ft_databrowser(cfg, data);
 
-If you use the option ''cfg.chanel = 'TRIG\*';'', you can check the waveform of the trigger signals. You can also check the data by calling a low-level function, **[ft_read_data](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_data.m)**. For example,
+If you use the option ''cfg.chanel = 'TRIG\*';'', you can check the waveform of the trigger signals. You can also check the data by calling a low-level function, **[ft_read_data](/reference/fileio/ft_read_data)**. For example,
 
     dat = ft_read_data(dataset, 'begsample', 100000, 'endsample', 120000, 'chanindx', 12);
 
-The options such as 'chanindx' should be specified in key-value pairs (see [ft_read_data](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_data)). When only the filename is specified, all time-course data of every channels with large amount of memory will be read. To avoid to load such large amount of data, you should specify channel index when you directly use the low-level read function.
+The options such as 'chanindx' should be specified in key-value pairs (see [ft_read_data](/reference/fileio/read_data)). When only the filename is specified, all time-course data of every channels with large amount of memory will be read. To avoid to load such large amount of data, you should specify channel index when you directly use the low-level read function.
 
 ### Read events
 
-In order to select pieces of data around the events in which you are interest, you can call the FieldTrip function, **[ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_definetrial.m)**, either using a generic definition or using your own ''trialfun''. The trialfunction calls the low-level reading function, **[ft_read_event](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_event.m)**. The function reads event information and represents it in a common data-independent format. This event-reading function works for an exported .con file as follows:
+In order to select pieces of data around the events in which you are interest, you can call the FieldTrip function, **[ft_definetrial](/reference/ft_definetrial)**, either using a generic definition or using your own ''trialfun''. The trialfunction calls the low-level reading function, **[ft_read_event](/reference/fileio/ft_read_event)**. The function reads event information and represents it in a common data-independent format. This event-reading function works for an exported .con file as follows:
 
     >> event = ft_read_event(dataset,'threshold', 1.6)
 
@@ -119,7 +119,7 @@ In order to select pieces of data around the events in which you are interest, y
       offset
       duration
 
-**[ft_read_event](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_event.m)** detects all the events embedded in the exported .con file. You can deal with three types of event
+**[ft_read_event](/reference/fileio/ft_read_event)** detects all the events embedded in the exported .con file. You can deal with three types of event
 
 - User-defined event [''triginfo'']
 
@@ -161,7 +161,7 @@ The first 14 components of the event structure in the above example ar
 
 ## Trial Selection
 
-As the same way as that in the tutorial, [Trigger-based trial selection](/tutorial/preprocessing), you can define segments of epochs-of-interest (trials) in your recorded MEG data using the FieldTrip function, **[ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_definetrial.m)**. For example,
+As the same way as that in the tutorial, [Trigger-based trial selection](/tutorial/preprocessing), you can define segments of epochs-of-interest (trials) in your recorded MEG data using the FieldTrip function, **[ft_definetrial](/reference/ft_definetrial)**. For example,
 
     %% Define trials
     cfg = [];
@@ -423,7 +423,7 @@ Now the MEG, MRI, and digitizer are all living in the common head coordinate sys
 
 ### Realign the scalp surface with the digitized cloud [2nd Step]
 
-To refine the above fiducial-points based registration, it is recommended to utilize the full of digitized head points by matching them with the scalp surface that is extracted from MRI. This procedure is applicable only to an exported .con file. This refinement procedure can be done by employing the FieldTrip function, **[ft_volumerealign](https://github.com/fieldtrip/fieldtrip/blob/release/ft_volumerealign.m)**, with the ICP option (''cfg.headshape.icp = 'yes';''
+To refine the above fiducial-points based registration, it is recommended to utilize the full of digitized head points by matching them with the scalp surface that is extracted from MRI. This procedure is applicable only to an exported .con file. This refinement procedure can be done by employing the FieldTrip function, **[ft_volumerealign](/reference/ft_volumerealign)**, with the ICP option (''cfg.headshape.icp = 'yes';''
 
     %% volumerealign with IC
     cfg = [];

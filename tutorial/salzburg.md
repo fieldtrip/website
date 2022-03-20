@@ -22,8 +22,8 @@ In the following section we will read and epoch the data. Subsequently we will a
 
 The following steps had been performed:
 
-- Defining triggers around which the data will be segmented using **[ft_definetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_definetrial.m)**. The data is segmented to include 2 seconds prior to S1 onset (i.e. baseline) and 1.57 second post S1 onset (i.e. event related interval including S1 and S2).
-- Calling **[ft_preprocessing](https://github.com/fieldtrip/fieldtrip/blob/release/ft_preprocessing.m)** without applying any preprocessing steps yet.
+- Defining triggers around which the data will be segmented using **[ft_definetrial](/reference/ft_definetrial)**. The data is segmented to include 2 seconds prior to S1 onset (i.e. baseline) and 1.57 second post S1 onset (i.e. event related interval including S1 and S2).
+- Calling **[ft_preprocessing](/reference/ft_preprocessing)** without applying any preprocessing steps yet.
 
 To run the following section of code you need the original dataset and trial function: [download c,rfhp0.1Hz dataset](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/salzburg/c,rfhp0.1Hz),[download config file](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/salzburg/config) [download ft_trialfun_sensorygating.m trial function](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/salzburg/ft_trialfun_sensorygating.m)
 
@@ -45,7 +45,7 @@ Load the data using the following command:
 
     load dataclean
 
-First we will visual inspection of the data in order to reject trials contaminated by movements and/or other artifacts such as SQUID jumps. We will use **[ft_rejectvisual](https://github.com/fieldtrip/fieldtrip/blob/release/ft_rejectvisual.m)** where we want a summary of the activity over trials and sensors, i.e. _cfg.method_ = 'summary';. It is recommended to explore the topography and time course of data that will be classified as artificial. The configuration option _cfg.layout_ = '4D148.lay'; allows us to do so.
+First we will visual inspection of the data in order to reject trials contaminated by movements and/or other artifacts such as SQUID jumps. We will use **[ft_rejectvisual](/reference/ft_rejectvisual)** where we want a summary of the activity over trials and sensors, i.e. _cfg.method_ = 'summary';. It is recommended to explore the topography and time course of data that will be classified as artificial. The configuration option _cfg.layout_ = '4D148.lay'; allows us to do so.
 
     cfg = [];
     cfg.fontsize = 12;
@@ -56,8 +56,8 @@ First we will visual inspection of the data in order to reject trials contaminat
 
 Next, we perform the independent component analysis according to the following step
 
-- Resampling the data to a lower sample rate in order to speed up ICA computation **[ft_resampledata](https://github.com/fieldtrip/fieldtrip/blob/release/ft_resampledata.m)**.
-- Perform the independent components analysis on the resampled data **[ft_componentanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_componentanalysis.m)**
+- Resampling the data to a lower sample rate in order to speed up ICA computation **[ft_resampledata](/reference/ft_resampledata)**.
+- Perform the independent components analysis on the resampled data **[ft_componentanalysis](/reference/ft_componentanalysis)**
 - Repeat the independent components analysis on the original data by applying the linear demixing and topography lebels form the previous step
 
 Note, that we will compute the ICA twice in order to retain the original sampling rate. The option **cfg.resamplefs** depends on your knowledge about the spectral characteristics of the artifacts you would like to discover. Vertical and horizontal eye movements are typically dominated by high energy in the low frequency < 10 Hz. Therefore everything above the Nyquist frequency of the targeted signal, in this case 20 Hz, is an appropriate sampling rate. Cardiac artifacts vary over the entire frequency spectrum, although there is some dominance in the slower frequencies too. The decision about the new sampling frequency thus strongly depends on your needs. If you are interested in the detection of caridac and oculo-motor activity, a sampling rate of >100 Hz will be appropriate for most of the cases.
@@ -76,7 +76,7 @@ Note, that we will compute the ICA twice in order to retain the original samplin
     cfg.topolabel = comp.topolabel;
     comp = ft_componentanalysis(cfg, data);
 
-Now we could explore the decomposed data by using **[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_databrowser.m)**
+Now we could explore the decomposed data by using **[ft_databrowser](/reference/ft_databrowser)**
 
     cfg = [];
     cfg.channel = {comp.label{1:5}}; % components to be plotted
@@ -84,7 +84,7 @@ Now we could explore the decomposed data by using **[ft_databrowser](https://git
     cfg.compscale = 'local';
     ft_databrowser(cfg, comp);
 
-Take your time to browse and evaluate the topographies and the corresponding time courses. We will reject several of these with **[ft_rejectcomponent](https://github.com/fieldtrip/fieldtrip/blob/release/ft_rejectcomponent.m)**
+Take your time to browse and evaluate the topographies and the corresponding time courses. We will reject several of these with **[ft_rejectcomponent](/reference/ft_rejectcomponent)**
 
     cfg = [];
     cfg.component = [3 6 7 16];
@@ -94,7 +94,7 @@ The ica corrected data can be downloaded [here](ftp://ftp.fieldtriptoolbox.org/p
 
 ### Computing and plotting of the auditory evoked fields
 
-Now we can average over trials using **[ft_timelockanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_timelockanalysis.m)** and plot the evoked activity using the plotting functions **[ft_multiplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_multiplotER.m)**,**[ft_singleplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_singleplotER.m)** and **[ft_topoplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_topoplotER.m)**.
+Now we can average over trials using **[ft_timelockanalysis](/reference/ft_timelockanalysis)** and plot the evoked activity using the plotting functions **[ft_multiplotER](/reference/ft_multiplotER)**,**[ft_singleplotER](/reference/ft_singleplotER)** and **[ft_topoplotER](/reference/ft_topoplotER)**.
 
     cfg=[]
     tlk=ft_timelockanalysis(cfg,dataica);
@@ -164,7 +164,7 @@ Sometimes one might be interested in power modulations significantly different f
 
 ### Within subject statistics on time-frequency representations
 
-We will apply the following steps. First the data is segmented into pre and post stimulus intervals of equal length using **[ft_redefinetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_redefinetrial.m)**. Thereafter time-frequency representation of power is computed on these intervals separately by keeping the individual trials in the output structure.
+We will apply the following steps. First the data is segmented into pre and post stimulus intervals of equal length using **[ft_redefinetrial](/reference/ft_redefinetrial)**. Thereafter time-frequency representation of power is computed on these intervals separately by keeping the individual trials in the output structure.
 
 test
 
@@ -267,7 +267,7 @@ Before you continue it is recommended to make your self familiar with the releva
 
 Furthermore the details around how to compute the ingredients needed herein (e.g., headmodel, leadfield) are not further explained here. All of the necessary steps in head modeling are explained here, and source modeling [here](/example/sourcemodel_aligned2mni_atlas).
 
-We will start with loading a precomputed headmodel [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/salzburg/hdm.mat). We will first construct a regular dipole grid using **[ft_prepare_sourcemodel](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_sourcemodel.m)**. Subsequently we want to determine the grid locations corresponding to particular brain areas (parcels). For this step we will read an anatomical atlas using **[ft_read_atlas](https://github.com/fieldtrip/fieldtrip/blob/release/fileio/ft_read_atlas.m)** and generate a binary mask with entries of ones indicating grid points corresponding to brain parcels using **[ft_volumelookup](https://github.com/fieldtrip/fieldtrip/blob/release/ft_volumelookup.m)**. Finally, on the basis of the individual anatomy we will construct a source model that is inverse-warped to this atlas-based source model in mni space.
+We will start with loading a precomputed headmodel [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/salzburg/hdm.mat). We will first construct a regular dipole grid using **[ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)**. Subsequently we want to determine the grid locations corresponding to particular brain areas (parcels). For this step we will read an anatomical atlas using **[ft_read_atlas](/reference/fileio/ft_read_atlas)** and generate a binary mask with entries of ones indicating grid points corresponding to brain parcels using **[ft_volumelookup](/reference/ft_volumelookup)**. Finally, on the basis of the individual anatomy we will construct a source model that is inverse-warped to this atlas-based source model in mni space.
 
 ##### Create template grid based on the standard head model
 
@@ -629,7 +629,7 @@ So far we have identified three potential "nodes" involved in the processing of 
 
 ### Reconstruct the time course of activity at a particular brain location
 
-Based on visual inspection of the data provided by the interactive navigation after the call to **[ft_sourceplot](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceplot.m)** we can determine the coordinates of the locations subject to further examination.
+Based on visual inspection of the data provided by the interactive navigation after the call to **[ft_sourceplot](/reference/ft_sourceplot)** we can determine the coordinates of the locations subject to further examination.
 
 Alternative approach is enabled due to the utilized parcellation strategy. We can derive the coordinates of all locations corresponding to a particular parcel, e.g., left heschl gyrus. In the following we will reduce the data to three loacations: left and right heschl gyri and left Cingulum_Mid in the frontal cortex.
 
@@ -660,7 +660,7 @@ These steps can be repeated for all desired parcels. In the present case the ram
     x=find(ismember(atlas.tissuelabel,'Cingulum_Mid_L'));
     indxCML = find(stat_atlas.tissue==x);
 
-Next, we normalise the individual MRI to derive parameters allowing to convert the mni- coordinates of the desired parcels into individual coordinates. For this we use **[ft_warp_apply](https://github.com/fieldtrip/fieldtrip/blob/release/ft_warp_apply.m)**.
+Next, we normalise the individual MRI to derive parameters allowing to convert the mni- coordinates of the desired parcels into individual coordinates. For this we use **[ft_warp_apply](/reference/ft_warp_apply)**.
 
     template_grid=ft_convert_units(template_grid,'mm'); % ensure no unit mismatch
     norm=ft_volumenormalise([],mri);
@@ -760,7 +760,7 @@ Now we compute the source wave forms, plot and evaluate the result.
 
 One of various and equally valid methods of assessing connectivity is the concept of coherence. By using this metric we want to evaluate the presence of a temporal relationship between the nodes as a function of frequency. This can be done for the entire time interval of interest or by applying sliding window approach and represent the result as function of time and frequency. The latter is applied below.
 
-First, we use **[ft_freqanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqanalysis.m)** much in the same way as demonstrated above. The only difference is that the phase information is kept in the output by the configuration option **cfg.output = 'powandcsd'**.
+First, we use **[ft_freqanalysis](/reference/ft_freqanalysis)** much in the same way as demonstrated above. The only difference is that the phase information is kept in the output by the configuration option **cfg.output = 'powandcsd'**.
 
     cfg         = [];
     cfg.method       = 'mtmconvol';
@@ -788,7 +788,7 @@ Now we can plot and evaluate the result of the power estimates essentially confi
 {% include image src="/assets/img/tutorial/salzburg/tfrvirtsensorsensorygating.png" width="600" %}
 
 The slow frequency increases in energy are likely related to the evoked components in the data. In addition an increase in amplitude around 10-14Hz is also observed. In the next step we would like to evaluate to what extend this patterns represent a temporal relationship between the nodes.
-First we compute coherence using **[ft_connectivityanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_connectivityanalysis.m)**.
+First we compute coherence using **[ft_connectivityanalysis](/reference/ft_connectivityanalysis)**.
 
     cfg = [];
     cfg.method = 'coh';

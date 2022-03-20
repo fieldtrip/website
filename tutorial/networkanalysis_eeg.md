@@ -23,18 +23,18 @@ Also, we will explore the connectomes in more detail, and investigate how the sp
 
 The data analyses will follow the following steps:
 
-- Load the data into MATLAB select the EEG electrodes using **[ft_selectdata](https://github.com/fieldtrip/fieldtrip/blob/release/ft_selectdata.m)** and convert the units of the electrodes from cm to mm using **[ft_convert_units](https://github.com/fieldtrip/fieldtrip/blob/release/ft_convert_units.m)**.
-- Cut the data into overlapping segments with **[ft_redefinetrial](https://github.com/fieldtrip/fieldtrip/blob/release/ft_redefinetrial.m)**.
-- Compute sensor level power spectra and determine peak frequency using **[ft_freqanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqanalysis.m)** and **[ft_multiplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_multiplotER.m)**.
-- Align the EEG electrodes to the scalp surface using **[ft_electroderealign](https://github.com/fieldtrip/fieldtrip/blob/release/ft_electroderealign.m)**.
-- Plot and evaluate the alignement using **[ft_plot_headmodel](https://github.com/fieldtrip/fieldtrip/blob/release/ft_plot_headmodel.m)**, **[ft_plot_mesh](https://github.com/fieldtrip/fieldtrip/blob/release/ft_plot_mesh.m)** and **[ft_plot_sens](https://github.com/fieldtrip/fieldtrip/blob/release/ft_plot_sens.m)** in combination.
-- Construct a forward model using **[ft_prepare_leadfield](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_leadfield.m)**.
-- Compute spatial filters and estimate the amplitude of the sources using **[ft_sourceanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceanalysis.m)**.
-- Visualize the results, with **[ft_sourceplot](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceplot.m)**.
-- Compute "all-to-all" connectivity between dipole locations using **[ft_connectivityanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_connectivityanalysis.m)**.
-- Reduce the size of the connectivity matrix using a parcellation-approach, with **[ft_sourceparcellate](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceparcellate.m)**.
-- Compute "node degree" using **[ft_networkanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_networkanalysis.m)**.
-- Visualize the results, with **[ft_sourceplot](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceplot.m)**.
+- Load the data into MATLAB select the EEG electrodes using **[ft_selectdata](/reference/ft_selectdata)** and convert the units of the electrodes from cm to mm using **[ft_convert_units](/reference/ft_convert_units)**.
+- Cut the data into overlapping segments with **[ft_redefinetrial](/reference/ft_redefinetrial)**.
+- Compute sensor level power spectra and determine peak frequency using **[ft_freqanalysis](/reference/ft_freqanalysis)** and **[ft_multiplotER](/reference/ft_multiplotER)**.
+- Align the EEG electrodes to the scalp surface using **[ft_electroderealign](/reference/ft_electroderealign)**.
+- Plot and evaluate the alignement using **[ft_plot_headmodel](/reference/ft_plot_headmodel)**, **[ft_plot_mesh](/reference/ft_plot_mesh)** and **[ft_plot_sens](/reference/ft_plot_sens)** in combination.
+- Construct a forward model using **[ft_prepare_leadfield](/reference/ft_prepare_leadfield)**.
+- Compute spatial filters and estimate the amplitude of the sources using **[ft_sourceanalysis](/reference/ft_sourceanalysis)**.
+- Visualize the results, with **[ft_sourceplot](/reference/ft_sourceplot)**.
+- Compute "all-to-all" connectivity between dipole locations using **[ft_connectivityanalysis](/reference/ft_connectivityanalysis)**.
+- Reduce the size of the connectivity matrix using a parcellation-approach, with **[ft_sourceparcellate](/reference/ft_sourceparcellate)**.
+- Compute "node degree" using **[ft_networkanalysis](/reference/ft_networkanalysis)**.
+- Visualize the results, with **[ft_sourceplot](/reference/ft_sourceplot)**.
 
 ## Preprocessing
 
@@ -56,7 +56,7 @@ The aim is to identify the frequency and topography of an 10Hz oscillation. You 
     
 ### Prepare electrode layout for plotting
 
-Using the EEG electrodes we compute a 2D layout in order to plot topographies. We use **[ft_prepare_layout](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_layout.m)** and visualize it using **[ft_plot_lay](https://github.com/fieldtrip/fieldtrip/blob/release/ft_plot_lay.m)**.
+Using the EEG electrodes we compute a 2D layout in order to plot topographies. We use **[ft_prepare_layout](/reference/ft_prepare_layout)** and visualize it using **[ft_plot_lay](/reference/ft_plot_lay)**.
 
     %% prepare layout and plot
     cfg         = [];
@@ -87,7 +87,7 @@ Next, the data is segmented into overlapping segemnts of 1 second length.
 
 ## Spectral analysis and peak picking
 
-We will analyze the spectral content of the data using **[ft_freqanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqanalysis.m)** and subsequently interactively explore the data with **[ft_topoplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_topoplotER.m)** and **[ft_singleplotER](https://github.com/fieldtrip/fieldtrip/blob/release/ft_singleplotER.m)**. For those interested in more detailed overview of the configuration options and strategies please refer to our video lectures [here](http://fieldtrip.fcdonders.nl/video) and also [here](https://www.youtube.com/watch?v=QLvsa1r1Voc).
+We will analyze the spectral content of the data using **[ft_freqanalysis](/reference/ft_freqanalysis)** and subsequently interactively explore the data with **[ft_topoplotER](/reference/ft_topoplotER)** and **[ft_singleplotER](/reference/ft_singleplotER)**. For those interested in more detailed overview of the configuration options and strategies please refer to our video lectures [here](http://fieldtrip.fcdonders.nl/video) and also [here](https://www.youtube.com/watch?v=QLvsa1r1Voc).
 
     %% compute the power spectrum
     cfg              = [];
@@ -174,7 +174,7 @@ Before we proceed it is always useful to check the corregistration between the e
 
 _Figure 5: Alignment of headmodel (grey), electrodes (black) and sourcemodel(color). Individual parcels are assigned different color value._
 
-Now we can proceed with the computation of the leadfield matrix, using **[ft_prepare_leadfield](https://github.com/fieldtrip/fieldtrip/blob/release/ft_prepare_leadfield.m)**.
+Now we can proceed with the computation of the leadfield matrix, using **[ft_prepare_leadfield](/reference/ft_prepare_leadfield)**.
 
     cfg         = [];
     cfg.elec    = elec_aligned;            
@@ -189,7 +189,7 @@ Now we can proceed with the computation of the leadfield matrix, using **[ft_pre
 
 In addition to a forward model, the beamformer needs a sensor-level covariance matrix, or a cross-spectral density matrix. The preliminaries for the cross-spectral density matrix can be obtained with
 
-**[ft_freqanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqanalysis.m)**. In this tutorial, you will compute a memory-wise more compact representation of the single epoch spectral representation, from which the cross-spectral density can be computed in a straightforward way. This will be done 'under the hood' in ft_sourceanalysis, so you don't need to worry about this particular conversion step.
+**[ft_freqanalysis](/reference/ft_freqanalysis)**. In this tutorial, you will compute a memory-wise more compact representation of the single epoch spectral representation, from which the cross-spectral density can be computed in a straightforward way. This will be done 'under the hood' in ft_sourceanalysis, so you don't need to worry about this particular conversion step.
 
     %% compute sensor level Fourier spectra, to be used for cross-spectral density computation.
     cfg            = [];
@@ -200,7 +200,7 @@ In addition to a forward model, the beamformer needs a sensor-level covariance m
     cfg.foi        = 10;
     freq           = ft_freqanalysis(cfg, dataseg);
 
-Next, we call **[ft_sourceanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceanalysis.m)** with 'pcc' as method. Essentially, this methods implements DICS (the underlying algorithm for computing the spatial filters is according to DICS), but provides more flexibility with respect to data handling. In this context, the advantage is that the 'pcc'-implementation directly outputs, for each dipole location in the sourcemodel, the fourier coefficients (i.e. phase and amplitude estimates) for each of the trials. This can subsequently be used in a straightforward way for connectivity analysis. In contrast, using 'dics' as a method, to obtain the single trial representation of phase and amplitude is quite a bit more tedious.
+Next, we call **[ft_sourceanalysis](/reference/ft_sourceanalysis)** with 'pcc' as method. Essentially, this methods implements DICS (the underlying algorithm for computing the spatial filters is according to DICS), but provides more flexibility with respect to data handling. In this context, the advantage is that the 'pcc'-implementation directly outputs, for each dipole location in the sourcemodel, the fourier coefficients (i.e. phase and amplitude estimates) for each of the trials. This can subsequently be used in a straightforward way for connectivity analysis. In contrast, using 'dics' as a method, to obtain the single trial representation of phase and amplitude is quite a bit more tedious.
 
     %% do the source reconstruction
     cfg                   = [];
@@ -219,7 +219,7 @@ Next, we call **[ft_sourceanalysis](https://github.com/fieldtrip/fieldtrip/blob/
 
 ### Visualization of the neural-activity-index
 
-In order to visualize source-reconstructed data, the function [ft_sourceplot](https://github.com/fieldtrip/fieldtrip/blob/release/ft_sourceplot) can be used. If the input data contains the dipole positions defined on a triangulated mesh (i.e. it contains both a 'pos' and a 'tri' field), one should use the 'surface' method.
+In order to visualize source-reconstructed data, the function [ft_sourceplot](/reference/sourceplot) can be used. If the input data contains the dipole positions defined on a triangulated mesh (i.e. it contains both a 'pos' and a 'tri' field), one should use the 'surface' method.
 
     %% plot the neural activity index (power/noise)
 
@@ -274,7 +274,7 @@ Typically, in an experimental context, it is useful to visualize activity contra
     indlow  = find(tmp(:,chanind)<=median(tmp(:,chanind)));
     indhigh = find(tmp(:,chanind)>=median(tmp(:,chanind)));
 
-Now, we can compute the spectra for the two sets of epochs using **[ft_freqdescriptives](https://github.com/fieldtrip/fieldtrip/blob/release/ft_freqdescriptives.m)** and compute the difference with **[ft_math](https://github.com/fieldtrip/fieldtrip/blob/release/ft_math.m)**
+Now, we can compute the spectra for the two sets of epochs using **[ft_freqdescriptives](/reference/ft_freqdescriptives)** and compute the difference with **[ft_math](/reference/ft_math)**
 
     %% compute the power spectrum for the median splitted data
     cfg              = [];
@@ -387,7 +387,7 @@ Compare this source reconstruction with the scalp topography generated above. Ho
 
 ### Computation of connectivity
 
-Next, we will call **[ft_connectivityanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_connectivityanalysis.m)** to compute a connectivity matrix between all pairs of dipoles, which is sometimes referred to as a 'connectome'. There are several connectivity measures to choose from. Here, we first will compute the imaginary part of the coherencey, using **cfg.method** = 'coh'; and **cfg.complex** = 'absimag';. This syntax will return only the imaginary part of the coherence spectrum and effectivly suppress spurious coherence driven by electromagnetic field spread (Nolte et al. Identifying true brain interaction from EEG data using the imaginary part of coherence. Clinical Neurophysiology, 2004; 115; 2292-2307). For the computation, we take advantage of the fact that the 'source' variable constructed earlier, contains the single trial estimates of amplitude and phase at the source-level. This is the consequence of the fact that we used cfg.method='pcc' for ft_sourceanalysis, and requested cfg.output = 'fourier' for ft_freqanalysis.
+Next, we will call **[ft_connectivityanalysis](/reference/ft_connectivityanalysis)** to compute a connectivity matrix between all pairs of dipoles, which is sometimes referred to as a 'connectome'. There are several connectivity measures to choose from. Here, we first will compute the imaginary part of the coherencey, using **cfg.method** = 'coh'; and **cfg.complex** = 'absimag';. This syntax will return only the imaginary part of the coherence spectrum and effectivly suppress spurious coherence driven by electromagnetic field spread (Nolte et al. Identifying true brain interaction from EEG data using the imaginary part of coherence. Clinical Neurophysiology, 2004; 115; 2292-2307). For the computation, we take advantage of the fact that the 'source' variable constructed earlier, contains the single trial estimates of amplitude and phase at the source-level. This is the consequence of the fact that we used cfg.method='pcc' for ft_sourceanalysis, and requested cfg.output = 'fourier' for ft_freqanalysis.
 
     %% compute connectivity
     cfg         = [];
@@ -408,7 +408,7 @@ _Figure 9: connectivity matrix between all pairs of dipole locations_
 
 ### Parcellation and network analysis
 
-We can now explore the structure in the estimated connectivity matrices using graph theoretic tools. It is not really clear what the effect of the residual spatial leakage of activity is on the estimates of some of these measures, so we would caution for careful interpretations of graph metrics derived from such connectivity matrices, particularly when comparing groups of experimental participants or experimental conditions. Yet, the intention of this tutorial is still to illustrate how such graph theoretic measures can in principle be computed and visualized using fieldtrip. To this end, we are going to use **[ft_networkanalysis](https://github.com/fieldtrip/fieldtrip/blob/release/ft_networkanalysis.m)**, using **cfg.method** = 'degrees'. Specifying a prior threshold (e.g., **cfg.threshold** = .1) results in an estimate of the 'node degree', i.e. the amount of nodes with which a particular node has an estimated connectivity of (in this case) 0.1 or higher. There are several ways to determine the threshold, for instance based on some statistical parameterization or previous observation in the literature, yet all of them are and remain arbitrary.
+We can now explore the structure in the estimated connectivity matrices using graph theoretic tools. It is not really clear what the effect of the residual spatial leakage of activity is on the estimates of some of these measures, so we would caution for careful interpretations of graph metrics derived from such connectivity matrices, particularly when comparing groups of experimental participants or experimental conditions. Yet, the intention of this tutorial is still to illustrate how such graph theoretic measures can in principle be computed and visualized using fieldtrip. To this end, we are going to use **[ft_networkanalysis](/reference/ft_networkanalysis)**, using **cfg.method** = 'degrees'. Specifying a prior threshold (e.g., **cfg.threshold** = .1) results in an estimate of the 'node degree', i.e. the amount of nodes with which a particular node has an estimated connectivity of (in this case) 0.1 or higher. There are several ways to determine the threshold, for instance based on some statistical parameterization or previous observation in the literature, yet all of them are and remain arbitrary.
 
     cfg           = [];
     cfg.method    = 'degrees';

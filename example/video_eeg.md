@@ -7,7 +7,7 @@ tags: [example, video, eeg, nirs, plotting]
 
 Inspecting your data is important to get a better understanding of it. You might have video recordings of your participant or the experimental setting. Playing the video recordings synchronously with the EEG or NIRS data can provide a lot of insight, for example to detect possible motion artifacts or to detect clear effects of the experimental stimuli.
  
-This example script shows how to make a movie of your data with the help of **[ft_databrowser](http://github.com/fieldtrip/fieldtrip/blob/release/ft_databrowser.m)** and MATLAB's Videowriter function. Subsequently, you synchronize this movie with your actual video data with video editing software like Adobe Premiere Pro or using  annotation software like [ELAN](https://archive.mpi.nl/tla/elan).
+This example script shows how to make a movie of your data with the help of **[ft_databrowser](/reference/ft_databrowser)** and MATLAB's Videowriter function. Subsequently, you synchronize this movie with your actual video data with video editing software like Adobe Premiere Pro or using  annotation software like [ELAN](https://archive.mpi.nl/tla/elan).
 
 EEG and fNIRS are often used in freely moving subjects and in motion research. The following is a movie of fNIRS signals and artifacts during walking, turning, frowning, head movements and jumping. The example video shown here below was edited with Premiere Pro.
 

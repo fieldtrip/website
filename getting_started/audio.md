@@ -31,7 +31,7 @@ The following information will be printed on screen:
       sampleinfo: [1 211355]
              cfg: [1x1 struct]
 
-Also usefull can be to use **[ft_databrowser](https://github.com/fieldtrip/fieldtrip/blob/release/ft_databrowser.m)** to have a quick look at the time series.
+Also usefull can be to use **[ft_databrowser](/reference/ft_databrowser)** to have a quick look at the time series.
 
     cfg = [];
     cfg.dataset = '4ch.wav';
