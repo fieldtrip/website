@@ -116,7 +116,7 @@ To determine the dimord, you should use the **fieldtrip/private/getdimord** func
 
 Any new configuration option should have a default set at the beginning of the function. If you don't know a good default value, you should specify the default value as empty, i.e. `cfg.newoption = ft_getopt(cfg, 'newoption');`.
 
-If you add a configuration option, you should check in the [configuration index](/reference/configuration) whether a cfg option with similar functionality already exists in another function. Use identical names for identical functionality and try to keep the help similar if possible.
+If you add a configuration option, you should check in the [configuration index](/configuration) whether a cfg option with similar functionality already exists in another function. Use identical names for identical functionality and try to keep the help similar if possible.
 
 In general, for the default handling of cfg options, one should not use `if isfield(cfg, 'newoption')`, but always use `if isempty(cfg.newoption)`, given that the default option should always be defined at the top of the function.
 

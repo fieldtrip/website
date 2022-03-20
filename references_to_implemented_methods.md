@@ -5,9 +5,11 @@ tags: [literature, eeg, meg, source, headmodel, freq, statistics, coherence]
 
 # References to implemented methods
 
-This list is far from complete, many more algorithms that have been published in papers are implemented in FieldTrip. If you want to know which paper describes a method in detail and the information is not given here, you can ask on the email [discussion list](/discussion_list).
+This page links to the original publications that describe the methods implemented in the FieldTrip toolbox. If you are looking for specific implementation details, please look at the [references documentation](/reference).
 
-If possible, please provide a link to the online version of the manuscript. A link to [pubmed](http://www.ncbi.nlm.nih.gov/pubmed) or [sciencedirect](http://www.sciencedirect.com) is in general nice, as it allows quick cross-referencing. If allowed, you can also upload a pdf version to the website and provide a link here.
+This list is far from complete, FieldTrip implements many more algorithms that have been published in papers. If you want to know which paper describes a method in detail and the information is not given here, you can ask on the email [discussion list](/discussion_list).
+
+If you know of references to original work that is not listed here, please send a [pull request](/development/github) to add them to this page. When possible, please provide a link to the online version of the manuscript. A link to [pubmed](http://www.ncbi.nlm.nih.gov/pubmed) or [sciencedirect](http://www.sciencedirect.com) is in general nice, as it allows quick cross-referencing. You can also link to an online pdf version of the manuscript.
 
 Please check [Sherpa Romeo](http://www.sherpa.ac.uk/romeo/) for the copyright conditions and whether you are allowed to
 

@@ -8,7 +8,7 @@ The [tutorials](/tutorial) will help you to get started by providing examples th
 
 The [frequently asked questions](/faq) section provides a lot of practical information. Furthermore, the [example MATLAB scripts](/example) contain pieces of documentation that are often not so elaborate as the tutorials, but that go in more detail into specific aspects of the data, code or analysis.
 
-In the [reference documentation](/reference/) you find an overview of all main functions in FieldTrip and the [configuration index](/reference/configuration) has a list of their configuration options.
+In the [reference documentation](/reference/) you find an overview of all main functions in FieldTrip and the [configuration index](/configuration) has a list of their configuration options.
 
 Sometimes we prepare dedicated course material for [workshops](/workshop), which is also shared on this website, together with [video](/video) recordings of lectures.
 
@@ -18,7 +18,7 @@ If you are very eager to get started with your specific data, please proceed to 
 - [Tutorial documentation](/tutorial)
 - [Frequently asked questions](/faq)
 - [Example MATLAB scripts](/example)
-- [Reference documentation](/reference) and [configuration index](/reference/configuration)
+- [Reference documentation](/reference) and [configuration index](/configuration)
 - [Video lectures](/video)
 - [References to implemented methods](/references_to_implemented_methods)
 - [Review and teaching material](/references_to_review_papers_and_teaching_material)

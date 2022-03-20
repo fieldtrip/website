@@ -5,11 +5,9 @@ tags: [cfg, timelock, freq, source, headmodel, statistics, plotting]
 
 # Reference documentation
 
-The reference documentation is provided here for your convenience. This page lists the most important FieldTrip functions by category.
+This page links to the reference documentation for the most important FieldTrip functions, organized by category. If you are looking for the papers that describe the algorithms implemented in FieldTrip, please look at the [references to implemented methods](/references_to_implemented_methods).
 
-A complete overview with all configuration options is available in the [configuration index](/reference/configuration).
-
-If you are looking for the papers that describe the algorithms implemented in FieldTrip, please look at the [references to implemented methods](/references_to_implemented_methods).
+A complete overview with all configuration options is available in the [configuration index](/configuration).
 
 Note that this reference documentation is identical to the help text that is displayed in MATLAB when you type "help functionname".
 
