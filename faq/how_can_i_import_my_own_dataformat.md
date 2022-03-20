@@ -63,4 +63,4 @@ If your data represents a continuous recording, you can also consider taking a s
 
 ## Converting already processed data
 
-It might also be that you do not want to read raw data from file, i.e. you do not want to do everything (starting with preprocessing) using FieldTrip, but you only want the later stages of an analysis that you already performed with other software. This is the approach for example taken in the **[eeglab2fieldtrip](/reference/external/eeglab/eeglab2fieldtrip)**, **[besa2fieldtrip](/reference/besa2fieldtrip)**, and **[spm2fieldtrip](/reference/spm2fieldtrip.m)** functions.
+It might also be that you do not want to read raw data from file, i.e. you do not want to do everything (starting with preprocessing) using FieldTrip, but you only want the later stages of an analysis that you already performed with other software. This is the approach for example taken in the **[eeglab2fieldtrip](/reference/external/eeglab/eeglab2fieldtrip)**, **[besa2fieldtrip](/reference/besa2fieldtrip)**, and **[spm2fieldtrip](/reference/spm2fieldtrip)** functions.

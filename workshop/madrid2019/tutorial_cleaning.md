@@ -162,7 +162,7 @@ recording, can you find it? Use the identify button to see the channel name.
 
 We manually add the names of channels that are bad throughout the entire
 recording to the artifact structure. Many FieldTrip functions, ie
-**[ft_channelselection](/reference/ft_channelselection)** or
+**[ft_channelselection](/reference/utilities/ft_channelselection)** or
 **[ft_channelrepair](/reference/ft_channelrepair)**, which we will use further
 *down, require the specification of channel names in their configuration. For
 *this specify channel names as strings in a cell-array such as {'E7';'Oz'}

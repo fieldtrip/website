@@ -40,7 +40,7 @@ To sanity check that this is the case, you can view the electrode positions in t
 
 If the electrode coordinates in elec correspond to a CT and the user intends to represent the electrode positions or electrophysiological data overlayed on a higher definition T1 MRI (recommended), the user will first have to [pre-process and co-register the corresponding CT to a T1 MRI](/tutorial/human_ecog) from the same subject.
 
-Once the CT and MRI are coregistered, warp the electrode coordinates in elec (corresponding to the raw CT coordinate system) to the fused CT-MRI head space using **[ft_warp_apply](/reference/ft_warp_apply)**.
+Once the CT and MRI are coregistered, warp the electrode coordinates in elec (corresponding to the raw CT coordinate system) to the fused CT-MRI head space using **[ft_warp_apply](/reference/utilities/ft_warp_apply)**.
 
     % First, warp the coordinates in elec from native head space to voxel space
     elec_vox = elec;

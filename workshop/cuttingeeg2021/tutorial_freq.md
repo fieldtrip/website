@@ -598,6 +598,6 @@ In this tutorial we demonstrated EEG preprocessing, event-related potentials (ER
 The next steps in the analysis that are not covered here would consist of processing the data from more participants and doing statistics. You could continue with one of the following:
 
 - Creating a clean and efficient [analysis script](/tutorial/scripting)
-- You can follow one of the [tutorials on statistics](tutorial/#statistics)
+- You can follow one of the [tutorials on statistics](/tutorial#statistics)
 - You can look at the example scripts for [GLM on time series data](/example/glm_timeseries) or [GLM over trials](/example/glm_trials)
 - You can have a look at the [sleep tutorial](/tutorial/sleep) to learn more about the analysis of long continuous recordings

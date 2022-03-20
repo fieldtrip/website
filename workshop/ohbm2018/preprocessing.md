@@ -210,7 +210,7 @@ GMFP can be calculated using the following formula (from [Esser et al. (2006)](h
 
 where t is time, V is the voltage at channel i and K is the number of channels.
 
-FieldTrip has a built-in function to calculate the GMFP; [ft_globalmeanfield](/reference/ft_globameanfield). This function requires timelocked data as input. We will use similar preprocessing as applied in [Esser et al. (2006)](http://dx.doi.org/10.1016/j.brainresbull.2005.11.003).
+FieldTrip has a built-in function to calculate the GMFP; [ft_globalmeanfield](/reference/ft_globalmeanfield). This function requires timelocked data as input. We will use similar preprocessing as applied in [Esser et al. (2006)](http://dx.doi.org/10.1016/j.brainresbull.2005.11.003).
 
     %global mean field power calculation for visualization purposes
     cfg = [];

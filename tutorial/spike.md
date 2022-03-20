@@ -38,7 +38,7 @@ Neurons often fire in synchrony, meaning that action potentials from different n
 
 - Read the spike data into MATLAB using **[ft_read_spike](/reference/fileio/ft_read_spike)**
 - Create a trial structure for the spike trains using using **[ft_read_event](/reference/fileio/ft_read_event)** and **[ft_spike_maketrials](/reference/contrib/spike/ft_spike_maketrials)**.
-- Converting spike structure into continuous raw structure, and back, using **[ft_checkdata](/reference/ft_checkdata)**
+- Converting spike structure into continuous raw structure, and back, using **[ft_checkdata](/reference/utilities/ft_checkdata)**
 - Computation of inter spike interval distribution, and its visualization, using **[ft_spike_isi](/reference/contrib/spike/ft_spike_isi)** and **[ft_spike_plot_isireturn](/reference/contrib/spike/ft_spike_plot_isireturn)**.
 - Computation of the mean and variance of the action potential waveform, using **[ft_spike_waveform](/reference/contrib/spike/ft_spike_waveform)**.
 - Computation of peri stimulus time histogram, using **[ft_spike_psth](/reference/contrib/spike/ft_spike_psth)**.

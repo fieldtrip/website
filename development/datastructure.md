@@ -23,7 +23,7 @@ High-level FieldTrip functions expect input data as a MATLAB structure in a spec
 
 ## Checking and converting
 
-Besides documenting the data structures, these ft_datatype_xxx functions also check the internal consistency of the structures and - where needed - update the data structures to the latest standard. This means that if a user loads a data structure from an old .mat file on disk and feeds it into a newer version of a FieldTrip function, the data structure is updated to the expected format prior to the function doing its work. This works by each FieldTrip function calling **[ft_checkdata](/reference/ft_checkdata)** at the start of the function, and ft_checkdata calling the corresponding ft_datatype_xxx function.
+Besides documenting the data structures, these ft_datatype_xxx functions also check the internal consistency of the structures and - where needed - update the data structures to the latest standard. This means that if a user loads a data structure from an old .mat file on disk and feeds it into a newer version of a FieldTrip function, the data structure is updated to the expected format prior to the function doing its work. This works by each FieldTrip function calling **[ft_checkdata](/reference/utilities/ft_checkdata)** at the start of the function, and ft_checkdata calling the corresponding ft_datatype_xxx function.
 
 ## Dimord
 

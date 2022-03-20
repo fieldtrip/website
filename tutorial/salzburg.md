@@ -660,7 +660,7 @@ These steps can be repeated for all desired parcels. In the present case the ram
     x=find(ismember(atlas.tissuelabel,'Cingulum_Mid_L'));
     indxCML = find(stat_atlas.tissue==x);
 
-Next, we normalise the individual MRI to derive parameters allowing to convert the mni- coordinates of the desired parcels into individual coordinates. For this we use **[ft_warp_apply](/reference/ft_warp_apply)**.
+Next, we normalise the individual MRI to derive parameters allowing to convert the mni- coordinates of the desired parcels into individual coordinates. For this we use **[ft_warp_apply](/reference/utilities/ft_warp_apply)**.
 
     template_grid=ft_convert_units(template_grid,'mm'); % ensure no unit mismatch
     norm=ft_volumenormalise([],mri);

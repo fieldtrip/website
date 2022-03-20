@@ -105,17 +105,17 @@ If desired the volume conduction model and the sensor array can be spatially tra
     [headmodel] = ft_transform_geometry(transform, headmodel)
     [sens]      = ft_transform_geometry(transform, sens)
 
-The reason for using the **[ft_transform_geometry](/reference/ft_transform_geometry)** function is that they allow you to transform any sensor type (EEG and/or MEG) and any volume conduction model without you having to manipulate the elements within the `sens` or `headmodel` structure.
+The reason for using the **[ft_transform_geometry](/reference/utilities/ft_transform_geometry)** function is that they allow you to transform any sensor type (EEG and/or MEG) and any volume conduction model without you having to manipulate the elements within the `sens` or `headmodel` structure.
 
 Up to here the head model only depends on the geometrical description of the volume conductor and is independent of the data, with exception of the MEG localspheres model. The consequence is that the head model can be used for multiple experimental sessions, multiple electrode or gradiometer placements, or different selections of channels for a single session. The head model, i.e. the `headmodel` structure, can be saved to disk and re-used in an analysis on the next day.
 
-Following the initial set-up of the head model, but prior to the actual forward computations, the **[ft_prepare_vol_sens](/reference/ft_prepare_vol_sens)** function should be called to link the head model and the sensors and make a data dependent forward model (consisting of the `headmodel` and `sens`).
+Following the initial set-up of the head model, but prior to the actual forward computations, the **[ft_prepare_vol_sens](/reference/forward/ft_prepare_vol_sens)** function should be called to link the head model and the sensors and make a data dependent forward model (consisting of the `headmodel` and `sens`).
 
     [headmodel, sens] = ft_prepare_vol_sens(headmodel, sens, ...)
 
-The **[ft_prepare_vol_sens](/reference/ft_prepare_vol_sens)** function does a variety of things, depending on the peculiarities of the sensors and head model. It can be used for channel selection, which sometimes involves both the sensors and volume conduction model (e.g., in case of a localspheres MEG model). It will project EEG electrodes (which are described as a Nx3 set of points) onto the scalp surface. It will provide an interpolation of the BEM potential (which is usually computed at the vertices) onto the electrodes. In general the **[ft_prepare_vol_sens](/reference/ft_prepare_vol_sens)** function tries to carry out as many preparations as possible, so that subsequently the leadfields can be computed as efficiently as possible.
+The **[ft_prepare_vol_sens](/reference/forward/ft_prepare_vol_sens)** function does a variety of things, depending on the peculiarities of the sensors and head model. It can be used for channel selection, which sometimes involves both the sensors and volume conduction model (e.g., in case of a localspheres MEG model). It will project EEG electrodes (which are described as a Nx3 set of points) onto the scalp surface. It will provide an interpolation of the BEM potential (which is usually computed at the vertices) onto the electrodes. In general the **[ft_prepare_vol_sens](/reference/forward/ft_prepare_vol_sens)** function tries to carry out as many preparations as possible, so that subsequently the leadfields can be computed as efficiently as possible.
 
-Finally the subsequent computation of the EEG potential or MEG field distribution is done with the **[ft_compute_leadfield](/reference/ft_compute_leadfield)** function, which returns a nchan\*3 matrix or a nchan\*(3*ndipoles) matrix if you specify more than one dipole position.
+Finally the subsequent computation of the EEG potential or MEG field distribution is done with the **[ft_compute_leadfield](/reference/forward/ft_compute_leadfield)** function, which returns a nchan\*3 matrix or a nchan\*(3*ndipoles) matrix if you specify more than one dipole position.
 
     [lf] = ft_compute_leadfield(pos, sens, headmodel, ...)
 

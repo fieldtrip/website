@@ -19,7 +19,7 @@ There are multiple reasons for running the visualization separate from the acqui
 
 The CTF / Neuromag acquisition computer only runs a small program in the background (acq2ftx / neuromag2ft). Note that MATLAB does not need to be installed on the acquisition computer as this program is written in C-code and provided in compiled form. This program reads the data from the real-time inferface (using shared memory) and makes the data available on a TCP/IP socket in a [buffer](/development/realtime/buffer_overview).
 
-The second (visualization / real-time analysis) computer runs MATLAB, reads the data over the network from the buffer and does the plotting using **[ft_realtime_headlocalizer](/reference/realtime/example/ft_realtime_headlocalizer)**.
+The second (visualization / real-time analysis) computer runs MATLAB, reads the data over the network from the buffer and does the plotting using **[ft_realtime_headlocalizer](/reference/realtime/online_meg/ft_realtime_headlocalizer)**.
 
 {% include image src="/assets/img/getting_started/realtime_headlocalizer/headloc_flowchart.png" width="600" %}
 

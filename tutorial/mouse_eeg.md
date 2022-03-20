@@ -542,7 +542,7 @@ and by clicking in the figure, we can determine the location of three landmarks,
     lambda      = [0 -5.0 2.0];
     midsagittal = [0.2 -0.7 -2.0];
 
-The **[ft_headcoordinates](/reference/ft_headcoordinates)** function provides the homogenous transformation matrix to rotate and translate the MRI into the Paxinos coordinate syste
+The **[ft_headcoordinates](/reference/utilities/ft_headcoordinates)** function provides the homogenous transformation matrix to rotate and translate the MRI into the Paxinos coordinate syste
 
     head2paxinos = ft_headcoordinates(bregma, lambda, midsagittal, 'paxinos')
 

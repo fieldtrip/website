@@ -17,7 +17,7 @@ Neurophysiological data can become quite large with the result that disk space, 
 
 - Work on your programming _style_. Take a look [here](http://www.datatool.com/downloads/matlab_style_guidelines.pdf) for a concise summary of the recommended style of programming.
 - Downsample your data (but backup your original data), e.g., using **[ft_resampledata](/reference/ft_resampledata)**
-- Change data to single-precision (after preprocessing by using **[ft_struct2single](/reference/ft_struct2single)** or by using `cfg.precision = 'single'` in certain functions)
+- Change data to single-precision (after preprocessing by using **[ft_struct2single](/reference/utilities/ft_struct2single)** or by using `cfg.precision = 'single'` in certain functions)
 - Check if you really have to “cfg.keeptrials = 'yes'” in **[ft_freqanalysis](/reference/ft_freqanalysis)**.
 - If you are working on a single subject, make sure other subjects are no longer in memory. This might seem trivial, but many people assign unique variables to subjects and forget to clear them.
 - Perhaps most importantly – once in a while let someone else go through your scripts to see if they can be optimized.

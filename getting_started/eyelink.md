@@ -56,7 +56,7 @@ The output data contains this
 
 Channel 1 represents time, channel 2 is the horizontal x-coordinate, channel 3 is the vertical y-coordinate and channel 4 is the pupil dilation.
 
-If you want your channel names to be more consistent, you can use the following montage (see **[ft_apply_montage](/reference/ft_apply_montage)**) to rename the channels while preprocessing:
+If you want your channel names to be more consistent, you can use the following montage (see **[ft_apply_montage](/reference/forward/ft_apply_montage)**) to rename the channels while preprocessing:
 
     cfg = [];
     cfg.dataset          = filename_eye;

@@ -56,7 +56,7 @@ The aim is to identify the frequency and topography of an 10Hz oscillation. You 
     
 ### Prepare electrode layout for plotting
 
-Using the EEG electrodes we compute a 2D layout in order to plot topographies. We use **[ft_prepare_layout](/reference/ft_prepare_layout)** and visualize it using **[ft_plot_lay](/reference/plotting/ft_plot_lay)**.
+Using the EEG electrodes we compute a 2D layout in order to plot topographies. We use **[ft_prepare_layout](/reference/ft_prepare_layout)** and visualize it using **[ft_plot_layout](/reference/plotting/ft_plot_layout)**.
 
     %% prepare layout and plot
     cfg         = [];
@@ -148,18 +148,18 @@ In Figure 3 it is apparent that the electrodes do not align with the scalp surfa
 
 _Figure 4: Headmodel and electrode array aligned correctly._
 
-Before we proceed it is always useful to check the corregistration between the electrodes, headmodel and sourcemodel. 
+Before we proceed it is always useful to check the corregistration between the electrodes, headmodel and sourcemodel.
 
     %% visualize the coregistration of electrodes, headmodel, and sourcemodel.
     figure(5);
 
     % create colormap to plot parcels in different color
     nLabels     = length(dkatlas.tissuelabel);
-    colr        = hsv(nLabels); 
+    colr        = hsv(nLabels);
     vertexcolor = ones(size(dkatlas.pos,1), 3);
     for i = 1:length(dkatlas.tissuelabel)
         index = find(dkatlas.tissue==i);
-       if ~isempty(index) 
+       if ~isempty(index)
           vertexcolor(index,:) = repmat(colr(i,:),  length(index), 1);
        end   
     end

@@ -307,7 +307,7 @@ In the template set of electrodes, the first three labels are: 'Nz', 'LPA' and '
 If you do not have the position of the anatomical landmarks in your volume, you can use the **[ft_volumerealign](/reference/ft_volumerealign)** function to get those positions.
 {% include markup/end %}
 
-First, we convert the fiducial positions from voxel into CTF headcoordinate system using the [transformation matrix](/faq/what_is_the_plotting_convention_for_anatomical_mris) and the **[ft_warp_apply](/reference/ft_warp_apply)** function.
+First, we convert the fiducial positions from voxel into CTF headcoordinate system using the [transformation matrix](/faq/what_is_the_plotting_convention_for_anatomical_mris) and the **[ft_warp_apply](/reference/utilities/ft_warp_apply)** function.
 
     nas = mri_orig.hdr.fiducial.mri.nas;
     lpa = mri_orig.hdr.fiducial.mri.lpa;

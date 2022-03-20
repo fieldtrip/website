@@ -35,7 +35,7 @@ Some of the simple mex files come with a corresponding m-file that automatically
 
 ## Config object
 
-The config object is used by **[ft_checkconfig](/reference/ft_checkconfig)** to keep track of cfg options that are used and changed. By default this is _not_ enabled. The cfg-tracking is implemented with a number of mex files. To compile these, do this on the MATLAB command line
+The config object is used by **[ft_checkconfig](/reference/utilities/ft_checkconfig)** to keep track of cfg options that are used and changed. By default this is _not_ enabled. The cfg-tracking is implemented with a number of mex files. To compile these, do this on the MATLAB command line
 
 ```matlab
 cd @config/private

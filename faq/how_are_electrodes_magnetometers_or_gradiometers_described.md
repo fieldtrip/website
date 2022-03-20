@@ -96,7 +96,7 @@ As the `tra` matrix provides information how the individual electrodes/coils rel
 - [ft_denoise_synthetic](/reference/ft_denoise_synthetic)
 - [ft_denoise_tsr](/reference/ft_denoise_tsr)
 - [ft_preprocessing](/reference/ft_preprocessing)
-- [ft_rejectcomponent](/reference/ft_rejectc/ponent)
+- [ft_rejectcomponent](/reference/ft_rejectcomponent)
 
 Algorithmically, the `tra` matrix is used as a left multiplier of the unbalanced lead field (i.e. for MEG the leadfield that represents the magnetic field distribution at the location of the individual magnetometer coils) in the following way: `lf_balanced = grad.tra * lf_unbalanced`. For example, to obtain a first-order axial gradiometer, each row in the `tra` matrix contains two '1's (assuming the orientation of the top and bottom coils to be opposite), indicating that the modeled field estimated at the top and bottom coil of a gradiometer should be summed to obtain a model of the axial gradients. To obtain synthetic higher order gradients, the columns in the `tra` matrix that correspond to the reference coils will have non-zero values, reflecting the 'balancing' coefficients.
 

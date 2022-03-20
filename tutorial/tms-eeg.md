@@ -800,7 +800,7 @@ GMFP can be calculated using the following formula (from [Esser et al. (2006)](h
 
 , where t is time, V is the voltage at channel i and K is the number of channels. In [Esser et al. (2006)](http://dx.doi.org/10.1016/j.brainresbull.2005.11.003) the GMFP is calculated on the average over all subjects. As we only have one subject, we will only calculate the GMFP within this subject. If you, however, have multiple subjects you can apply the same method but on the grand average (see for examples on handling multiple subjects: [Parametric and non-parametric statistics on event-related fields](/tutorial/eventrelatedstatistics)). Basically, the GMFP is the standard deviation over channels.
 
-FieldTrip has a built-in function to calculate the GMFP; [ft_globalmeanfield](/reference/ft_globameanfield). This function requires timelocked data as input. We will use similar preprocessing as applied in [Esser et al. (2006)](http://dx.doi.org/10.1016/j.brainresbull.2005.11.003).
+FieldTrip has a built-in function to calculate the GMFP; [ft_globalmeanfield](/reference/ft_globalmeanfield). This function requires timelocked data as input. We will use similar preprocessing as applied in [Esser et al. (2006)](http://dx.doi.org/10.1016/j.brainresbull.2005.11.003).
 
     % Create time-locked average
     cfg = [];

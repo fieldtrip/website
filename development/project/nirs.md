@@ -45,7 +45,7 @@ There are different datatypes in FieldTrip. The basic starting point is a raw da
 
 ## Chantype
 
-New channels for **[ft_chantype](/reference/ft_chantype)** should be 'nirs', 'receiver' and 'transmitter'.
+New channels for **[ft_chantype](/reference/fileio/ft_chantype)** should be 'nirs', 'receiver' and 'transmitter'.
 
 ## Filetype
 
