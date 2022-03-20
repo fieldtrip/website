@@ -145,10 +145,10 @@ The MEG dataset [SubjectBraille.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtri
 
 ## Figures
 
-{% include image src="/assets/img/example/fit_a_dipole_to_the_tactile_erf_after_mechanical_stimulation/time.jpg" %}
+{% include image src="/assets/img/example/dipolefit_somatosensory_erf/time.jpg" %}
 
-{% include image src="/assets/img/example/fit_a_dipole_to_the_tactile_erf_after_mechanical_stimulation/topos.jpg" width="600" %}
+{% include image src="/assets/img/example/dipolefit_somatosensory_erf/topos.jpg" width="600" %}
 
-{% include image src="/assets/img/example/fit_a_dipole_to_the_tactile_erf_after_mechanical_stimulation/fig1.jpg" %}
+{% include image src="/assets/img/example/dipolefit_somatosensory_erf/fig1.jpg" %}
 
-{% include image src="/assets/img/example/fit_a_dipole_to_the_tactile_erf_after_mechanical_stimulation/fig2.jpg" %}
+{% include image src="/assets/img/example/dipolefit_somatosensory_erf/fig2.jpg" %}
