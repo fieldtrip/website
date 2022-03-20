@@ -1,5 +1,10 @@
-RewriteEngine On
+ErrorDocument 401 /error/401/
+ErrorDocument 404 /error/404/
+ErrorDocument 405 /error/405/
+ErrorDocument 408 /error/408/
+ErrorDocument 410 /error/410/
 
+RewriteEngine On
 RewriteBase /reference/
 # reference URLs with a trailing slash are interpreted as a directory
 RewriteRule ^reference/([a-z].+)/+$ https://github.com/fieldtrip/fieldtrip/blob/release/$1   [R=301,L]
