@@ -109,7 +109,7 @@ We project the component data back to the channel representation, leaving out th
 
 ### Spectral analysis
 
-We will analyze the spectral content of the data using **[ft_freqanalysis](/reference/ft_freqanalysis)** and subsequently interactively explore the data with **[ft_topoplotER](/reference/ft_topoplotER)** and **[ft_singleplotER](/reference/ft_singleplotER)**. For those interested in more detailed overview of the configuration options and strategies please refer to our video lectures [here](http://fieldtrip.fcdonders.nl/video) and also [here](https://www.youtube.com/watch?v=QLvsa1r1Voc).
+We will analyze the spectral content of the data using **[ft_freqanalysis](/reference/ft_freqanalysis)** and subsequently interactively explore the data with **[ft_topoplotER](/reference/ft_topoplotER)** and **[ft_singleplotER](/reference/ft_singleplotER)**. For those interested in more detailed overview of the configuration options and strategies please refer to our video lectures [here](https://www.fieldtriptoolbox.org/video) and also [here](https://www.youtube.com/watch?v=QLvsa1r1Voc).
 
     %% compute the power spectrum
     cfg              = [];
@@ -318,7 +318,7 @@ Comparing source reconstruction results to scalp topography is more or less mand
     indlow  = find(tmp(:,ind)<=median(tmp(:,ind)));
     indhigh = find(tmp(:,ind)>=median(tmp(:,ind)));
 
-Next, we will compute the power spectra as above but this time computing them on the planar rather then on the axial gradiometers. Detailed information can be found [here](/tutorial/eventrelatedaveraging) and also [here](http://fieldtrip.fcdonders.nl/example/combineplanar_pipelineorder).
+Next, we will compute the power spectra as above but this time computing them on the planar rather then on the axial gradiometers. Detailed information can be found [here](/tutorial/eventrelatedaveraging) and also [here](https://www.fieldtriptoolbox.org/example/combineplanar_pipelineorder).
 
     %% compute the planar gradient
     load ctf275_neighb; % this loads a variable 'neighbours', to be used below
@@ -398,7 +398,7 @@ Subsequently, we will compute the difference between high and low alpha conditio
 
 _Figure 6: Planar (left) and axial (middle) topography of the 10 Hz difference between the high and the low alpha conditions. Right- power spectra split by condition high (blue) and low alpha (red)._
 
-Now we will compute the source analysis steps again as illustrated above, however we will use a common filter approach in order to avoid a filter estimated bias beeing responsible for potential condition differences, see also [here](http://fieldtrip.fcdonders.nl/example/common_filters_in_beamforming) and [here](/tutorial/beamformingextended) for further information on common filters.
+Now we will compute the source analysis steps again as illustrated above, however we will use a common filter approach in order to avoid a filter estimated bias beeing responsible for potential condition differences, see also [here](https://www.fieldtriptoolbox.org/example/common_filters_in_beamforming) and [here](/tutorial/beamformingextended) for further information on common filters.
 
     %% compute fourier spectra for frequency of interest
     cfg            = [];

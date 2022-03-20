@@ -9,7 +9,7 @@ This page links to the original publications that describe the methods implement
 
 This list is far from complete, FieldTrip implements many more algorithms that have been published in papers. If you want to know which paper describes a method in detail and the information is not given here, you can ask on the email [discussion list](/discussion_list).
 
-If you know of references to original work that is not listed here, please send a [pull request](/development/github) to add them to this page. When possible, please provide a link to the online version of the manuscript. A link to [pubmed](http://www.ncbi.nlm.nih.gov/pubmed) or [sciencedirect](http://www.sciencedirect.com) is in general nice, as it allows quick cross-referencing. You can also link to an online pdf version of the manuscript.
+If you know of references to original work that is not listed here, please send a [pull request](/development/git) to add them to this page. When possible, please provide a link to the online version of the manuscript. A link to [pubmed](http://www.ncbi.nlm.nih.gov/pubmed) or [sciencedirect](http://www.sciencedirect.com) is in general nice, as it allows quick cross-referencing. You can also link to an online pdf version of the manuscript.
 
 Please check [Sherpa Romeo](http://www.sherpa.ac.uk/romeo/) for the copyright conditions and whether you are allowed to
 

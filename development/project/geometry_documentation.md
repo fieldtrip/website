@@ -8,21 +8,21 @@ title: Clean up the documentation on head modeling, anatomical processing, etc.
 
 there are now sections at
 
-- http://fieldtrip.fcdonders.nl/example/create_bem_headmodel_for_eeg -> has been deleted
-- http://fieldtrip.fcdonders.nl/example/headmodel -> has been deleted
-- http://fieldtrip.fcdonders.nl/example/make_leadfields_using_different_headmodels
-- http://fieldtrip.fcdonders.nl/tutorial/headmodel -> has been deleted
-- http://fieldtrip.fcdonders.nl/example/compute_leadfield
-- http://fieldtrip.fcdonders.nl/tutorial/forward -> has been deleted
-- http://fieldtrip.fcdonders.nl/development/bemmodel
+- https://www.fieldtriptoolbox.org/example/create_bem_headmodel_for_eeg -> has been deleted
+- https://www.fieldtriptoolbox.org/example/headmodel -> has been deleted
+- https://www.fieldtriptoolbox.org/example/make_leadfields_using_different_headmodels
+- https://www.fieldtriptoolbox.org/tutorial/headmodel -> has been deleted
+- https://www.fieldtriptoolbox.org/example/compute_leadfield
+- https://www.fieldtriptoolbox.org/tutorial/forward -> has been deleted
+- https://www.fieldtriptoolbox.org/development/bemmodel
 
 These have to be merged if applicable, deleted if outdated/deprecated and improved if desired.
 
 Please look at these links and replace any references to the old implementations with ft_prepare_headmodel
 
-- http://fieldtrip.fcdonders.nl/reference/ft_prepare_singleshell?do=backlink
-- http://fieldtrip.fcdonders.nl/reference/ft_prepare_concentricspheres?do=backlink
-- http://fieldtrip.fcdonders.nl/reference/ft_prepare_bemmodel?do=backlink
-- http://fieldtrip.fcdonders.nl/reference/ft_prepare_localspheres?do=backlink
+- https://www.fieldtriptoolbox.org/reference/ft_prepare_singleshell?do=backlink
+- https://www.fieldtriptoolbox.org/reference/ft_prepare_concentricspheres?do=backlink
+- https://www.fieldtriptoolbox.org/reference/ft_prepare_bemmodel?do=backlink
+- https://www.fieldtriptoolbox.org/reference/ft_prepare_localspheres?do=backlink
 
 It is done.

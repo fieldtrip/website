@@ -12,28 +12,28 @@ M is variable length. Along with cfg.design, the other options cfg.ivar, cfg.uva
 
 Not all are needed: see statistics\_\*.m for what vectors it may include.
 
-See http://fieldtrip.fcdonders.nl/walkthrough#non-paired_comparison and http://fieldtrip.fcdonders.nl/walkthrough#paired_comparison for examples on ivar and uvar.
-and http://fieldtrip.fcdonders.nl/development/statistics for uvar.
+See https://www.fieldtriptoolbox.org/walkthrough#non-paired_comparison and https://www.fieldtriptoolbox.org/walkthrough#paired_comparison for examples on ivar and uvar.
+and https://www.fieldtriptoolbox.org/development/statistics for uvar.
 
 Is there any explanation on the website for more on uvar and wvar? (Seems it is all on the email discussion list specific to people's questions).
 
 ##### links to already existing pages with some mention of design matrix
 
-- http://fieldtrip.fcdonders.nl/walkthrough
-- http://fieldtrip.fcdonders.nl/getting_started/biosemi
-- http://fieldtrip.fcdonders.nl/tutorial/eventrelatedstatistics
-- http://fieldtrip.fcdonders.nl/tutorial/shared/cluster_permutation_background
-- http://fieldtrip.fcdonders.nl/tutorial/multivariateanalysis
-- http://fieldtrip.fcdonders.nl/tutorial/cluster_permutation_freq
-- http://fieldtrip.fcdonders.nl/tutorial/cluster_permutation_timelock
-- http://fieldtrip.fcdonders.nl/example/source_statistics
-- http://fieldtrip.fcdonders.nl/example/apply_clusterrandanalysis_on_tfrs_of_power_that_were_computed_with_besa
-- http://fieldtrip.fcdonders.nl/development/statistics
-- http://fieldtrip.fcdonders.nl/development/multivariate
+- https://www.fieldtriptoolbox.org/walkthrough
+- https://www.fieldtriptoolbox.org/getting_started/biosemi
+- https://www.fieldtriptoolbox.org/tutorial/eventrelatedstatistics
+- https://www.fieldtriptoolbox.org/tutorial/shared/cluster_permutation_background
+- https://www.fieldtriptoolbox.org/tutorial/multivariateanalysis
+- https://www.fieldtriptoolbox.org/tutorial/cluster_permutation_freq
+- https://www.fieldtriptoolbox.org/tutorial/cluster_permutation_timelock
+- https://www.fieldtriptoolbox.org/example/source_statistics
+- https://www.fieldtriptoolbox.org/example/apply_clusterrandanalysis_on_tfrs_of_power_that_were_computed_with_besa
+- https://www.fieldtriptoolbox.org/development/statistics
+- https://www.fieldtriptoolbox.org/development/multivariate
 
 ##### Hierarchy of functions
 
-(figure/diagram helpful http://fieldtrip.fcdonders.nl/development/statistics)
+(figure/diagram helpful https://www.fieldtriptoolbox.org/development/statistics)
 
 User calls ft\_\*statistics (freq, timelock, or source)
 
@@ -44,4 +44,4 @@ however, in ft_sourcestatistics, instead statistics(cfg.method) is called, or st
 
 statistics_montecarlo.m (only) calls resampledesign.m
 
-statistics_stat.m (deprecated: see http://fieldtrip.fcdonders.nl/example/statistics_toolbox )
+statistics_stat.m (deprecated: see https://www.fieldtriptoolbox.org/example/statistics_toolbox )

@@ -87,7 +87,7 @@ Next, the data is segmented into overlapping segemnts of 1 second length.
 
 ## Spectral analysis and peak picking
 
-We will analyze the spectral content of the data using **[ft_freqanalysis](/reference/ft_freqanalysis)** and subsequently interactively explore the data with **[ft_topoplotER](/reference/ft_topoplotER)** and **[ft_singleplotER](/reference/ft_singleplotER)**. For those interested in more detailed overview of the configuration options and strategies please refer to our video lectures [here](http://fieldtrip.fcdonders.nl/video) and also [here](https://www.youtube.com/watch?v=QLvsa1r1Voc).
+We will analyze the spectral content of the data using **[ft_freqanalysis](/reference/ft_freqanalysis)** and subsequently interactively explore the data with **[ft_topoplotER](/reference/ft_topoplotER)** and **[ft_singleplotER](/reference/ft_singleplotER)**. For those interested in more detailed overview of the configuration options and strategies please refer to our video lectures [here](https://www.fieldtriptoolbox.org/video) and also [here](https://www.youtube.com/watch?v=QLvsa1r1Voc).
 
     %% compute the power spectrum
     cfg              = [];
@@ -307,7 +307,7 @@ _Figure 7: Difference topography (left) and power spectra of the median splitted
 
 ### Source reconstruction of 'low' and 'high' alpha activity epochs
 
-Now we will compute the source reconstructed alpha power again, as illustrated above, based on the median split. We will use a common filter approach, where we compute the spatial filters based on the cross-spectral density averaged across all epochs. See also [here](http://fieldtrip.fcdonders.nl/example/common_filters_in_beamforming) and [here](/tutorial/beamformingextended) for further information on common filters.
+Now we will compute the source reconstructed alpha power again, as illustrated above, based on the median split. We will use a common filter approach, where we compute the spatial filters based on the cross-spectral density averaged across all epochs. See also [here](https://www.fieldtriptoolbox.org/example/common_filters_in_beamforming) and [here](/tutorial/beamformingextended) for further information on common filters.
 
     %% compute fourier spectra for frequency of interest according to the trial split
     cfg            = [];

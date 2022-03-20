@@ -54,7 +54,7 @@ Please use the [general instructions](/workshop/meg-uk-2015/general) to get star
 {% include image src="/assets/img/workshop/meg-uk-2015/fieldtrip-connectivity-demo/screen_shot_2015-01-05_at_12.02.26.png" width="300" %}
 
     %%
-    % timelock2 was computed in http://fieldtrip.fcdonders.nl/workshop/meg-uk-2015/fieldtrip-beamformer-demo#part_3_-_reconstruct_single-trial_cortical_responses
+    % timelock2 was computed in https://www.fieldtriptoolbox.org/workshop/meg-uk-2015/fieldtrip-beamformer-demo#part_3_-_reconstruct_single-trial_cortical_responses
 
     cfg             = [];
     cfg.headmodel   = vol;

@@ -58,7 +58,7 @@ FieldTrip needs the user to define what file to read in. The BrainVision Recorde
 
 The .eeg files are the raw data files, i.e. they contain the data as it has been stored upon acquisition.
 
-You can subsequently epoch your data using [ft_definetrial](/reference/ft_definetrial), and you can read in the data and preprocess it using [ft_preprocessing](/reference/preprocessing). Note that in FieldTrip, no unit conversion takes place.
+You can subsequently epoch your data using [ft_definetrial](/reference/ft_definetrial), and you can read in the data and preprocess it using [ft_preprocessing](/reference/ft_preprocessing). Note that in FieldTrip, no unit conversion takes place.
 
 Even for raw data, the data are considered segmented by FieldTrip. The data file is considered as a very long segment starting with the event "New Segment" and ending at the end of the recording. As a way to investigate the specificities of the BrainVision file, I would recommend always checking the .vmrk file by either opening it in a text editor, or using the function ft_definetrial with configuration cfg.trialdef.eventtype = '?'.
 
