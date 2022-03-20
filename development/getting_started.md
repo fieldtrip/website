@@ -12,6 +12,6 @@ To get a general overview of how FieldTrip is designed, please have a look at th
 
 By far the best way to get started using FieldTrip is by reading through the [tutorial](/tutorial) documentation, the [walkthrough](/walkthrough) and through the other [documentation](/documentation). If you have questions that are not answered by the documentation or in the [frequently asked questions](/faq), you can register on the [email list](/discussion_list) and ask the other users and the developers for help. Also, FieldTripping is not something you do alone – inform yourself about colleagues that use (or want to use) FieldTrip.
 
-We organize [FieldTrip workshops](/workshop) and a yearly “Advanced EEG/MEG analysis” [toolkit course](https://www.ru.nl/donders/agenda/donders-tool-kits/) at the Donders Centre in which we lecture and give hands-on training sessions. Attending one of these will probably benefit your understanding and analysis skills.
+We organize [FieldTrip workshops](/workshop) and a yearly “Advanced EEG/MEG analysis” [toolkit course](https://www.ru.nl/donders/agenda/donders-tool-kits) at the Donders Centre in which we lecture and give hands-on training sessions. Attending one of these will probably benefit your understanding and analysis skills.
 
 If you are very eager to get started with your own data, please proceed to the user documentation section on [importing your own data](/reading_data).

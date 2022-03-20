@@ -33,7 +33,7 @@ Every evening one of the FieldTrip [automation scripts](https://github.com/field
 
 ## Adding test scripts
 
-When you [contribute code](/development/contribute/), it is good practice to also include a short test script. This helps the maintainers to evaluate your contribution, and in the future to ensure that future changes to code elsewhere do not break your contribution.
+When you [contribute code](/development/contribute), it is good practice to also include a short test script. This helps the maintainers to evaluate your contribution, and in the future to ensure that future changes to code elsewhere do not break your contribution.
 
 When adding a test script, please call them `text_xxx.m` when it can run without user interaction, or `inspect_xxx.m` when user interaction is needed, e.g., judging whether the figure is correct, clicking on a button, or closing a figure to continue the analysis.
 

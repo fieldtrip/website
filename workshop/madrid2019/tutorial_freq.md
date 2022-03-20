@@ -47,7 +47,7 @@ decrease with frequency, the temporal smoothing decreases and the
 frequency smoothing increases._
 
 If you want to know more about _tapers_ or _window functions_ you can have a
-look at the [time-frequency tutorial](/tutorial/timefrequencyanalysis/). This
+look at the [time-frequency tutorial](/tutorial/timefrequencyanalysis). This
 [Wikipedia page](http://en.wikipedia.org/wiki/Window_function) explains the
 effect of the taper or windowing function. Note that Hann window is another name
 for Hanning window used in this tutorial. There is also a Wikipedia page about

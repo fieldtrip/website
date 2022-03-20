@@ -17,7 +17,7 @@ The workshop highlights complementary analysis methods offered by FieldTrip and 
 
 ## How should participants prepare for the workshop?
 
-This workshop is an **advanced** workshop in which we will move beyond the material covered in the previous [FieldTrip course](/workshop/birmingham) or the [SPM EEG/MEG](http://www.fil.ion.ucl.ac.uk/spm/course/slides14-meeg/) course.
+This workshop is an **advanced** workshop in which we will move beyond the material covered in the previous [FieldTrip course](/workshop/birmingham) or the [SPM EEG/MEG](http://www.fil.ion.ucl.ac.uk/spm/course/slides14-meeg) course.
 
 Some familiarity with FieldTrip and SPM is required. Please read the [SPM EEG/MEG](http://www.hindawi.com/journals/cin/2011/852961) and [FieldTrip](http://www.hindawi.com/journals/cin/2011/156869/) reference papers to understand the toolbox design.
 

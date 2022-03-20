@@ -18,7 +18,7 @@ The following figure illustrates the hierarchical analysis consisting of a 1st-l
 
 {% include image src="/assets/img/getting_started/limo/herarchical_analysis.png" width="500" %}
 
-LIMO was initially designed as a plug-in of EEGLAB, but more recent versions are also compatible with FieldTrip **[raw](/reference/utilities/ft_datatype_raw.m)** and **[source](/reference/utilities/ft_datatype_source/)** data. Statistical analyses can be performed on other data representations, but that requires some manual reformatting of the data structures.
+LIMO was initially designed as a plug-in of EEGLAB, but more recent versions are also compatible with FieldTrip **[raw](/reference/utilities/ft_datatype_raw.m)** and **[source](/reference/utilities/ft_datatype_source)** data. Statistical analyses can be performed on other data representations, but that requires some manual reformatting of the data structures.
 
 Although LIMO is primarily designed for EEG data, it can also process MEG and iEEG data.
 

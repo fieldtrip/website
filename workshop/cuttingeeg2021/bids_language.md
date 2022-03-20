@@ -5,11 +5,11 @@ tags: [bids, eeg-language, cuttingeeg2021]
 
 # Convert the EEG sedation dataset for sharing in BIDS
 
-The following MATLAB script shows how the EEG data supporting [Identifying Object Categories from Event-Related EEG: Toward Decoding of Conceptual Representations](https://doi.org/10.1371/journal.pone.0014465) by Simanova et al. (2010) was converted to the Brain Imaging Data Structure (BIDS). The original data is available from the [archive of the MPI for Psycholinguistics](https://hdl.handle.net/1839/00-0000-0000-001B-860D-8). More details on the experiment and data can be found [here](/tutorial/eeg_language/).
+The following MATLAB script shows how the EEG data supporting [Identifying Object Categories from Event-Related EEG: Toward Decoding of Conceptual Representations](https://doi.org/10.1371/journal.pone.0014465) by Simanova et al. (2010) was converted to the Brain Imaging Data Structure (BIDS). The original data is available from the [archive of the MPI for Psycholinguistics](https://hdl.handle.net/1839/00-0000-0000-001B-860D-8). More details on the experiment and data can be found [here](/tutorial/eeg_language).
 
 The BIDS background is explained on <http://bids.neuroimaging.io>, details on the specification can be found on <https://bids-specification.readthedocs.io/>.
 
-This conversion makes use of the **[data2bids](/reference/data2bids)** function to convert the data and to write the associated metadata to the accompanying TSV and JSON files. The converted data in the BIDS organization is available from our [FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/cuttingeeg2021/).
+This conversion makes use of the **[data2bids](/reference/data2bids)** function to convert the data and to write the associated metadata to the accompanying TSV and JSON files. The converted data in the BIDS organization is available from our [FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/cuttingeeg2021).
 
 {% include markup/info %}
 The conversion here only includes the "pilot" subjects numbered 0, 1, 2, 3, 4, which were used for the (non-blind) optimization of the analysis pipeline in the original paper. The optimized pipeline was subsequently used (blind) on all other subjects. This ensures that the optimization of the processing does not bias the results of the analysis.

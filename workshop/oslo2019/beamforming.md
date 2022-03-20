@@ -183,7 +183,7 @@ First, we will load the MRI. It is important that you use the MRI that was reali
 
     load mri_realigned2.mat
 
-Before interpolating the source activity we will reslice the MRI using **[ft_volumereslice](/reference/ft_volumereslice)**. The consequence of reslicing is that the size of the MRI is decreased (it is rather large now) and the output voxels are nicely aligned with the x, y, and z-axes, so that the image is plotted correctly. See also this [frequently asked question](/faq/how_change_mri_orientation_size_fov/).
+Before interpolating the source activity we will reslice the MRI using **[ft_volumereslice](/reference/ft_volumereslice)**. The consequence of reslicing is that the size of the MRI is decreased (it is rather large now) and the output voxels are nicely aligned with the x, y, and z-axes, so that the image is plotted correctly. See also this [frequently asked question](/faq/how_change_mri_orientation_size_fov).
 
     mri_resliced = ft_volumereslice([], mri_realigned2);
 

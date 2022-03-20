@@ -20,11 +20,11 @@ If you are new to time-frequency analysis in general, we recommend you to watch 
 
 ## The data used in this tutorial
 
-We will be using the [eeg-language](/tags/eeg-language) dataset that has been converted to BIDS. The data is available from our [FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/cuttingeeg2021/) and is alternatively available from <https://zenodo.org/communities/cuttingeeg>.
+We will be using the [eeg-language](/tags/eeg-language) dataset that has been converted to BIDS. The data is available from our [FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/cuttingeeg2021) and is alternatively available from <https://zenodo.org/communities/cuttingeeg>.
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5531370.svg)](https://doi.org/10.5281/zenodo.5531370)
 
-The conversion of the 5 pilot subjects' EEG data to BIDS is fully documented on [this page](/workshop/cuttingeeg2021/bids_language/). You don't have to run that code, but you can use it as inspiration for organizing your own data in the [BIDS format](/example/bids/), or use it to convert the full dataset that is available from the [archive of the MPI for Psycholinguistics](https://hdl.handle.net/1839/00-0000-0000-001B-860D-8).
+The conversion of the 5 pilot subjects' EEG data to BIDS is fully documented on [this page](/workshop/cuttingeeg2021/bids_language). You don't have to run that code, but you can use it as inspiration for organizing your own data in the [BIDS format](/example/bids), or use it to convert the full dataset that is available from the [archive of the MPI for Psycholinguistics](https://hdl.handle.net/1839/00-0000-0000-001B-860D-8).
 
 The "minimal" dataset (~260MB) contains one subject and is enough to run the tutorial. The "pilot" dataset (~1.7GB) contains all 5 subjects used for the pilot analysis in the original paper; you can use that if you want to explore other subjects with this tutorial.
 

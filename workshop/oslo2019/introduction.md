@@ -387,5 +387,5 @@ _Figure 9: A topographical plot showing the MMN (average over 100 to 170 ms)_
 Play around with the _zlim_ to get a feeling for how the _difference_wave_ changes topography. Try also plotting the the ERPs themselves.
 
 {% include markup/exercise %}
-**Exercise:** The topographies that we have seen in the figures and movie have a rather loose fit of the circle (representing the head) around the electrodes. Explore the **[ft_prepare_layout](/reference/ft_prepare_layout)** function and [documentation](/tutorial/layout/) to improve the topographic representation.
+**Exercise:** The topographies that we have seen in the figures and movie have a rather loose fit of the circle (representing the head) around the electrodes. Explore the **[ft_prepare_layout](/reference/ft_prepare_layout)** function and [documentation](/tutorial/layout) to improve the topographic representation.
 {% include markup/end %}

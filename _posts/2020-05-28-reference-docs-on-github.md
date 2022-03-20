@@ -9,4 +9,4 @@ We have changed the links to the reference documentation (i.e. the help that is 
 
 {% include image src="/assets/img/posts/github_edit.png" width="291" %}
 
-If you want to know more about contributing, please see [here](/development/contribute/). We also have a detailed [git and GitHub](/development/git/) tutorial that explains it in much more detail.
+If you want to know more about contributing, please see [here](/development/contribute). We also have a detailed [git and GitHub](/development/git) tutorial that explains it in much more detail.

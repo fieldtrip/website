@@ -64,7 +64,7 @@ The ft_redefinetrial and ft_preprocessing functions require the original MEG dat
 
 ### Artefact rejection
 
-We will first clean the data from potential bad segments such as SQUID jumps and/or bad channels using **[ft_rejectvisual](/reference/ft_rejectvisual)**. Subsequently, we will identify occular and cardiac artifacts by means of ICA using **[ft_componentanalysis](/reference/ft_componentanalysis)**. Since, these type of artifacts are predominately low frequent and we are interested in a 10Hz signal, we will downsample the data using **[ft_resampledata](/reference/ft_resampledata)** in order to speed up calculations during ft_componentanalysis and reduce potential working memory issues. Alternatively, you can skip these steps and download the data [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/networkanalysis/).
+We will first clean the data from potential bad segments such as SQUID jumps and/or bad channels using **[ft_rejectvisual](/reference/ft_rejectvisual)**. Subsequently, we will identify occular and cardiac artifacts by means of ICA using **[ft_componentanalysis](/reference/ft_componentanalysis)**. Since, these type of artifacts are predominately low frequent and we are interested in a 10Hz signal, we will downsample the data using **[ft_resampledata](/reference/ft_resampledata)** in order to speed up calculations during ft_componentanalysis and reduce potential working memory issues. Alternatively, you can skip these steps and download the data [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/networkanalysis).
 
     %% make a visual inspection and reject bad trials/sensors
     cfg         = [];

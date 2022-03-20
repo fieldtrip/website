@@ -54,7 +54,7 @@ The ft_definetrial and ft_preprocessing functions require the original MEG datas
 
 ### Artefact rejection
 
-We will first clean the data from potential bad segments such as SQUID jumps and/or bad channels using **[ft_rejectvisual](/reference/ft_rejectvisual)**. Subsequently, we will identify occular and cardiac artifacts by means of ICA using **[ft_componentanalysis](/reference/ft_componentanalysis)**. Since, these type of artifacts are predominately low frequent and we are interested in a 10Hz signal, we will downsample the data using **[ft_resampledata](/reference/ft_resampledata)** in order to speed up calculations during ft_componentanalysis and reduce potential working memory issues. Alternatively, you can skip these steps and download the data [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/networkanalysis/).
+We will first clean the data from potential bad segments such as SQUID jumps and/or bad channels using **[ft_rejectvisual](/reference/ft_rejectvisual)**. Subsequently, we will identify occular and cardiac artifacts by means of ICA using **[ft_componentanalysis](/reference/ft_componentanalysis)**. Since, these type of artifacts are predominately low frequent and we are interested in a 10Hz signal, we will downsample the data using **[ft_resampledata](/reference/ft_resampledata)** in order to speed up calculations during ft_componentanalysis and reduce potential working memory issues. Alternatively, you can skip these steps and download the data [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/networkanalysis).
 
     %% make a visual inspection and reject bad trials/sensors
     cfg = [];
@@ -158,7 +158,7 @@ _Figure 2: Top- scalp topography of oscillatory power centered at 10 Hz. Bottom-
 
 ### Source analysis
 
-In the following section we will compute the ingredients for accurate reconstruction of the underlying sources. First computing the source model with **[ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)**. We will use the individual MRI and a mni template source model, which can be downloaded [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/networkanalysis/). If you are not familiar with this strategy, please have a look [here](/example/sourcemodel_aligned2mni).
+In the following section we will compute the ingredients for accurate reconstruction of the underlying sources. First computing the source model with **[ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)**. We will use the individual MRI and a mni template source model, which can be downloaded [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/networkanalysis). If you are not familiar with this strategy, please have a look [here](/example/sourcemodel_aligned2mni).
 
     %% load the required geometrical information
 

@@ -244,7 +244,7 @@ The hexahedral mesh is a geometrical description of the head. It is built up fro
 
 _Figure 6._ Plot of the FEM mesh
 
-Alternatively, you can write the mesh into another format with **[ft_write_headshape](/reference/fileio/ft_write_headshape)** and use an external (free) software [ParaView](http://www.paraview.org/) or [MeshLab](http://www.meshlab.org) for visualization.
+Alternatively, you can write the mesh into another format with **[ft_write_headshape](/reference/fileio/ft_write_headshape)** and use an external (free) software [ParaView](http://www.paraview.org) or [MeshLab](http://www.meshlab.org) for visualization.
 
 ## Align the electrodes
 

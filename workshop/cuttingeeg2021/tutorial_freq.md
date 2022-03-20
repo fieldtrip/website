@@ -7,7 +7,7 @@ tags: [cuttingeeg2021, eeg-language]
 
 ## Introduction
 
-In this tutorial we will be looking at frequency analysis, and specifically on time-frequency analysis on short time scales (around the stimulus) and long time scales (over the course of hours). This tutorial is an adaptation from [this](/tutorial/timefrequencyanalysis/) and [this](/tutorial/sleep/) tutorial, using an EEG dataset that was recorded in a language experiment.
+In this tutorial we will be looking at frequency analysis, and specifically on time-frequency analysis on short time scales (around the stimulus) and long time scales (over the course of hours). This tutorial is an adaptation from [this](/tutorial/timefrequencyanalysis) and [this](/tutorial/sleep) tutorial, using an EEG dataset that was recorded in a language experiment.
 
 Using this tutorial you will learn how to do EEG preprocessing, time-frequency analysis and continuous analysis (as if it were sleep or resting-state data). After this tutorial, you could continue with the [tutorials on statistics](/tutorial/#statistics), or with one of the example scripts on using general linear modeling (GLM) on [time series data](/example/glm_timeseries) or over [trials](/example/glm_trials).
 
@@ -28,7 +28,7 @@ This tutorial comprises four sections that can in principle be executed (mostly)
 
 The EEG dataset used in this tutorial was acquired by Irina Siminova in a study investigating semantic processing of stimuli presented as pictures, visually displayed text or as auditory presented words. The data is also used elsewhere on this website for other [tutorials and examples](/tag/eeg-language), but in this tutorial we will specifically be using the [curated version](/workshop/cuttingeeg2021/bids_language) in which the data has been organized according to the [BIDS standard](/example/bids). This is especially relevant here, as it allows us to use explicitly coded stimulus descriptions instead of numerical trigger codes.
 
-The EEG data was acquired with a 64-channel BrainProducts BrainAmp EEG amplifier from 60 scalp electrodes placed in an electrode cap, one electrode placed under the right eye; the "EOGv" and "EOGh" channels are computed after acquisition using re-referencing. During acquisition all channels were referenced to the left mastoid and an electrode placed at the earlobe was used as the ground. Channels 1-60 correspond to electrodes that are located on the head, except for channel 53 which is located at the right mastoid. Channels 61, 62, 63 are not connected to an electrode at all. Channel 64 is connected to an electrode placed below the left eye. Hence we have 62 channels of interest: 60 from the head + eogh + eogv. More details on the experiment and data can be found [here](/tutorial/eeg_language/).
+The EEG data was acquired with a 64-channel BrainProducts BrainAmp EEG amplifier from 60 scalp electrodes placed in an electrode cap, one electrode placed under the right eye; the "EOGv" and "EOGh" channels are computed after acquisition using re-referencing. During acquisition all channels were referenced to the left mastoid and an electrode placed at the earlobe was used as the ground. Channels 1-60 correspond to electrodes that are located on the head, except for channel 53 which is located at the right mastoid. Channels 61, 62, 63 are not connected to an electrode at all. Channel 64 is connected to an electrode placed below the left eye. Hence we have 62 channels of interest: 60 from the head + eogh + eogv. More details on the experiment and data can be found [here](/tutorial/eeg_language).
 
 ## Epoching, ERPs, difference, visualization
 
@@ -77,7 +77,7 @@ Rereferencing here is done to the linked mastoids. The recording reference (plac
 
 ### Reject artifacts
 
-This step allows to do a relatively quick and dirty visual rejection of data segments, based on the variance of the in the epochs. Other heuristics can be used as well. The argument keeptrial determines here that the bad segments do not disappear from the data structure, but will be represented by NaNs. More information about this processing step can be found in the [visual artifact rejection](/tutorial/visual_artifact_rejection/) tutorial.
+This step allows to do a relatively quick and dirty visual rejection of data segments, based on the variance of the in the epochs. Other heuristics can be used as well. The argument keeptrial determines here that the bad segments do not disappear from the data structure, but will be represented by NaNs. More information about this processing step can be found in the [visual artifact rejection](/tutorial/visual_artifact_rejection) tutorial.
 
     cfg             = [];
     cfg.method      = 'summary';
@@ -209,7 +209,7 @@ As before, we will take this cfg with the added `trl` field to the next step of 
 
 ### Time-frequency analysis
 
-The code below implements a wavelet-like analysis, i.e., it convolves the data with a sequence of Hanning-tapered basis functions (complex-valued sinusoids), the length of which scales with the frequency of interest. More information about the different methods to do time-frequency decomposition in FieldTrip can be found in [another tutorial](/tutorial/timefrequencyanalysis/).
+The code below implements a wavelet-like analysis, i.e., it convolves the data with a sequence of Hanning-tapered basis functions (complex-valued sinusoids), the length of which scales with the frequency of interest. More information about the different methods to do time-frequency decomposition in FieldTrip can be found in [another tutorial](/tutorial/timefrequencyanalysis).
 
     cfg = [];
     cfg.method    = 'mtmconvol';
@@ -305,7 +305,7 @@ We want to use as much data as possible to identify the eye movement related act
 
 ### Extract the vEOG as separate data struture, to use for blink detection
 
-Identify and remove eye blinks using the DSS algorithm. See [this example](/example/use_denoising_source_separation_dss_to_remove_ecg_artifacts/) for details.
+Identify and remove eye blinks using the DSS algorithm. See [this example](/example/use_denoising_source_separation_dss_to_remove_ecg_artifacts) for details.
 
     cfg              = [];
     cfg.dataset      = 'sub-02/eeg/sub-02_task-language_eeg.vhdr';
@@ -597,7 +597,7 @@ In this tutorial we demonstrated EEG preprocessing, event-related potentials (ER
 
 The next steps in the analysis that are not covered here would consist of processing the data from more participants and doing statistics. You could continue with one of the following:
 
-- Creating a clean and efficient [analysis script](/tutorial/scripting/)
+- Creating a clean and efficient [analysis script](/tutorial/scripting)
 - You can follow one of the [tutorials on statistics](tutorial/#statistics)
-- You can look at the example scripts for [GLM on time series data](/example/glm_timeseries/) or [GLM over trials](/example/glm_trials/)
-- You can have a look at the [sleep tutorial](/tutorial/sleep/) to learn more about the analysis of long continuous recordings
+- You can look at the example scripts for [GLM on time series data](/example/glm_timeseries) or [GLM over trials](/example/glm_trials)
+- You can have a look at the [sleep tutorial](/tutorial/sleep) to learn more about the analysis of long continuous recordings

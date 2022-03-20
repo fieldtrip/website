@@ -100,4 +100,4 @@ Also SPM includes functions for triangular mesh manipulation:
 
 The **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)** function can take a single or the combination of multiple meshes as input and make a volume conduction model out of it. This construction of the volume conduction model can for example consist of fitting spheres to the mesh for a concentric sphere model, or the computation of a BEM system matrix.
 
-After constructing the volume conduction model of the head, FieldTrip can compute leadfields and estimate sources by solving the inverse problem. Please see the [tutorial documentation](/tutorial/) for complete examples.
+After constructing the volume conduction model of the head, FieldTrip can compute leadfields and estimate sources by solving the inverse problem. Please see the [tutorial documentation](/tutorial) for complete examples.

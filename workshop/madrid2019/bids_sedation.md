@@ -10,7 +10,7 @@ by Chennu et al. (2015) was converted to the Brain Imaging Data Structure (BIDS)
 
 The BIDS background is explained on <http://bids.neuroimaging.io>, details on the specification can be found on <https://bids-specification.readthedocs.io/>.
 
-This conversion makes use of the **[data2bids](/reference/data2bids)** function to convert the data and to write the associated metadata to the accompanying TSV and JSON files. The converted data in the BIDS organization is available from our [FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/madrid2019/extra/complete_resting_data/).
+This conversion makes use of the **[data2bids](/reference/data2bids)** function to convert the data and to write the associated metadata to the accompanying TSV and JSON files. The converted data in the BIDS organization is available from our [FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/madrid2019/extra/complete_resting_data).
 
 ```` matlab
 sourcedata = '/Volumes/Samsung T3/data/eeg-sedation/sourcedata';

@@ -48,7 +48,7 @@ To explore the sleep data, we will perform the following step
 
 ## Preprocessing
 
-The **[ft_preprocessing](/reference/ft_preprocessing)** function requires the modified sleep datasets and Subject loading code (e.g., Subject05.m), which is available from [our FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/sleep/)
+The **[ft_preprocessing](/reference/ft_preprocessing)** function requires the modified sleep datasets and Subject loading code (e.g., Subject05.m), which is available from [our FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/sleep)
 
 Load the subject specific information. Then read and preprocess the continuous sleep data
 

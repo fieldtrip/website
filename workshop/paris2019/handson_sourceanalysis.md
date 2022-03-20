@@ -127,7 +127,7 @@ _Figure: Visual artifact rejection window_
 #### Exercise 2:
 
 {% include markup/info %}
-Consult the [visual artifact rejection tutorial](/tutorial/visual_artifact_rejection/) and remove the obvious outlier trials from the data structure. The specification of a layout in the cfg allows for a more detailed inspection of the outlier trials. Note these trial numbers, inspect the spatial topography and time courses, and remove them from the data. Also inspect trials 72 and 832, and discuss their spatiotemporal properties.
+Consult the [visual artifact rejection tutorial](/tutorial/visual_artifact_rejection) and remove the obvious outlier trials from the data structure. The specification of a layout in the cfg allows for a more detailed inspection of the outlier trials. Note these trial numbers, inspect the spatial topography and time courses, and remove them from the data. Also inspect trials 72 and 832, and discuss their spatiotemporal properties.
 {% include markup/end %}
 
 ## Computation of the covariance matrix of the prewhitened data

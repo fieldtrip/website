@@ -21,7 +21,7 @@ The number of participants is limited to ensure good interaction and sufficient 
 
 All interactive sessions will take place between 10:00 and 17:00 CET, i.e. centered on the Central European time zone. To benefit from the format and interaction, we require participants to attend in that time. For some participants that might mean that they have to get up very early, while others might have to stay up very late. Please check <http://time.is/CET> to see how our time zone compares to yours.
 
-We will also record the lectures and provide them for offline viewing at another moment, but especially the participation in Q&A and hands-on sessions requires you being online at the same time as us. If you cannot attend online, but want to watch the lectures anyway, have a look at the [online videos](/video/) from previous years.
+We will also record the lectures and provide them for offline viewing at another moment, but especially the participation in Q&A and hands-on sessions requires you being online at the same time as us. If you cannot attend online, but want to watch the lectures anyway, have a look at the [online videos](/video) from previous years.
 
 To try and accomodate time-zone differences a little bit, we will also provide opportunities for more informal interactions among each other and with the tutors early in the morning and in the evening. Note that these do not replace interaction during the core of the day.
 

@@ -65,7 +65,7 @@ for each subject. The actual data files (CTF, DICOM, Presentation log files, Pol
 {% include markup/warning %}
 Since preparing the data for publication and creating this page, the **[data2bids](/reference/data2bids)** function has been greatly improved. Nowadays Bash and Python are not needed any more, but (almost) the whole dataset conversion and reorganization can be done with a MATLAB script. The only part where the Linux command line is still needed is for renaming and anonimizing the CTF datasets, which requires the `newDs` command line application.
 
-We keep the documentation here for reference, but suggest that you look at more recent examples to learn how to [convert your data to BIDS](/tag/bids/).
+We keep the documentation here for reference, but suggest that you look at more recent examples to learn how to [convert your data to BIDS](/tag/bids).
 {% include markup/end %}
 
 The procedure for converting the original data consists of a number of steps

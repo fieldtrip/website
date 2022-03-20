@@ -24,7 +24,7 @@ You can use the standard MATLAB figure rotate button to look at the MRI from dif
 
 Once you are happy with the size and position of the box, you close the figure and the function returns the defaced anatomical MRI.
 
-You can call **[ft_defacevolume](/reference/ft_defacevolume)** multiple times to sequentially mask out the identifying features. You might also want to remove the ears in two separate calls - one for each ear - as the ears are sometimes considered to be [potentially identifying](http://www.wired.com/2010/11/ears-biometric-identification/).
+You can call **[ft_defacevolume](/reference/ft_defacevolume)** multiple times to sequentially mask out the identifying features. You might also want to remove the ears in two separate calls - one for each ear - as the ears are sometimes considered to be [potentially identifying](http://www.wired.com/2010/11/ears-biometric-identification).
 
 It is good practice to review the result of the defacing procedure using
 

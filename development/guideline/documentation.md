@@ -68,7 +68,7 @@ tags: [tag1, tag2]
 ---
 ```
 
-You can add tags to that list; these will be automatically shown at the top of each page on the actual website. The corresponding page with the overview of all pages that share the same tag (like [this](/tag/guidelines/)) will be automatically constructed upon the next build of the website. To increase the value of the tags, you should choose tags that are also used on other pages, and you should not add too many tags to a single page. Please use only lower-case letters in the tags, and use a minus sign to separate multiple words that are combined in a single tag (like [meg-language](/tag/meg-language/)).
+You can add tags to that list; these will be automatically shown at the top of each page on the actual website. The corresponding page with the overview of all pages that share the same tag (like [this](/tag/guidelines)) will be automatically constructed upon the next build of the website. To increase the value of the tags, you should choose tags that are also used on other pages, and you should not add too many tags to a single page. Please use only lower-case letters in the tags, and use a minus sign to separate multiple words that are combined in a single tag (like [meg-language](/tag/meg-language)).
 
 ## How to add figures?
 

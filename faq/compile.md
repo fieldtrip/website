@@ -27,7 +27,7 @@ The **[ft_compile_mex](/reference/ft_compile_mex)** function will try to detect 
 
 where the "true" argument tells the function to force a fresh compile for all mex files.
 
-Note that there are some mex files that are not compiled with this function. Also the [command-line executable](/faq/compiled/) version of FieldTrip is not compiled with this function.
+Note that there are some mex files that are not compiled with this function. Also the [command-line executable](/faq/compiled) version of FieldTrip is not compiled with this function.
 
 ## Autocompile
 

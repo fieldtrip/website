@@ -56,7 +56,7 @@ or browse through the complete data using
 
 To be able to compute spectrally resolved [Granger causality](http://en.wikipedia.org/wiki/Granger_causality), or other frequency-domain directional measures of connectivity, we need to estimate two quantities: the spectral transfer matrix and the covariance of an autoregressive model's residuals. We fit an autoregressive model to the data using the **[ft_mvaranalysis](/reference/ft_mvaranalysis)** function.
 
-For the actual computation of the autoregressive coefficients FieldTrip makes use of an implementation from third party toolboxes. At present **[ft_mvaranalysis](/reference/ft_mvaranalysis)** supports the [biosig](http://biosig.sourceforge.net/) and [bsmart](http://www.brain-smart.org) toolboxes for these computations.
+For the actual computation of the autoregressive coefficients FieldTrip makes use of an implementation from third party toolboxes. At present **[ft_mvaranalysis](/reference/ft_mvaranalysis)** supports the [biosig](http://biosig.sourceforge.net) and [bsmart](http://www.brain-smart.org) toolboxes for these computations.
 
 In this tutorial we will use the bsmart toolbox. The relevant functions have been included in the FieldTrip release in the fieldtrip/external/bsmart directory. Although the exact implementations within the toolboxes differ, their outputs are comparable.
 

@@ -9,7 +9,7 @@ tags: [oslo2019, eeg-audodd, headmodel]
 
 This tutorial goes through the necessary steps for creating a robust forward model for EEG source reconstruction.  
 
-It is part of the [Oslo 2019 workshop tutorials](/workshop/oslo2019/), where tutorials can be found on [preprocessing and ERPs](/workshop/oslo2019/introduction), [time-frequency representations](/workshop/oslo2019/timefrequency), [statistics](/workshop/oslo2019/statistics) and [source reconstruction](/workshop/oslo2019/beamforming/).
+It is part of the [Oslo 2019 workshop tutorials](/workshop/oslo2019), where tutorials can be found on [preprocessing and ERPs](/workshop/oslo2019/introduction), [time-frequency representations](/workshop/oslo2019/timefrequency), [statistics](/workshop/oslo2019/statistics) and [source reconstruction](/workshop/oslo2019/beamforming).
 
 The data for the tutorial is available [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/oslo2019/)
 
@@ -132,7 +132,7 @@ Make sure that the coordinate system is correct, i.e. _up_ is _z-positive_, _ant
 
 ### Segment the brain
 
-The next step is to segment our coregistered and resliced MR image into the three kinds of tissues that we need to care about in our forward model for EEG data, namely the _brain_ tissue, the _skull_ tissue and the _scalp_ tissue. We use **[ft_volumesegment](/reference/ft_volumesegment)** for this. (This function relies on implementations from [SPM](https://www.fil.ion.ucl.ac.uk/spm/))
+The next step is to segment our coregistered and resliced MR image into the three kinds of tissues that we need to care about in our forward model for EEG data, namely the _brain_ tissue, the _skull_ tissue and the _scalp_ tissue. We use **[ft_volumesegment](/reference/ft_volumesegment)** for this. (This function relies on implementations from [SPM](https://www.fil.ion.ucl.ac.uk/spm))
 
     cfg        = [];
     cfg.output = {'brain' 'skull' 'scalp'};
