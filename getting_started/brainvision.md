@@ -84,7 +84,7 @@ When comparing your preprocessed data from FieldTrip to preprocessed data from B
 
 Using FieldTrip, data recorded with Brain Vision hard- and software is readily plotted. It is important that the channel labels match that of the manufacturer specifications. 
 
-FieldTrip provides template electrode layouts for plotting data recorded with Easycap EEG caps. These layouts are stored in .mat files and are based on the manufacturer's original drawings, which can also be found bitmaps on the [template layout](https://www.fieldtriptoolbox.org/template/layout/#easycap) page.
+FieldTrip provides template electrode layouts for plotting data recorded with Easycap EEG caps. These layouts are stored in .mat files and are based on the manufacturer's original drawings, which can also be found bitmaps on the [template layout](/template/layout/#easycap) page.
 
 Specify the layout that matches your set-up/easycap when plotting, e.g.
 

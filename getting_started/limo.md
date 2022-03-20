@@ -78,7 +78,7 @@ The following outline shows the BIDS raw data and derivatives structure that re
 
 ## How does LIMO use FieldTrip?
 
-LIMO integrates with some FieldTrip functions to deal with FieldTrip data structures. The **[ft_datatype](https://www.fieldtriptoolbox.org/reference/ft_datatype)** function is used to determine the type of data structure in the `.mat` file, ensures that the data structure is valid and that it has the required fields. Subsequently, LIMO convert the data to its appropriate low-level format. The following figure illustrates this process:
+LIMO integrates with some FieldTrip functions to deal with FieldTrip data structures. The **[ft_datatype](/reference/ft_datatype)** function is used to determine the type of data structure in the `.mat` file, ensures that the data structure is valid and that it has the required fields. Subsequently, LIMO convert the data to its appropriate low-level format. The following figure illustrates this process:
 
 {% include image src="/assets/img/getting_started/limo/LIMO_uses_FieldTrip.png" width="500" %}
 
