@@ -155,7 +155,11 @@ The cfg structure we obtained from **[ft_definetrial](/reference/ft_definetrial)
 
     load data_tms_raw;
 
-Here you have to make sure that the .mat file is located in the present working directory of MATLAB. **You can skip the following block of code if you have downloaded data_tms_raw in the previous step.**
+Here you have to make sure that the .mat file is located in the present working directory of MATLAB.
+
+{% include markup/info %}
+You can skip the following block of code if you have downloaded data_tms_raw in the previous step.**
+{% include markup/end %}
 
 To read the trials from the original data file on disk, use the following:
 
