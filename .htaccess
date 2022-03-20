@@ -1,0 +1,5 @@
+RewriteEngine On
+
+# the reference URL should have a trailing slash, which is removed and replaced by .m
+RewriteBase /reference/
+RewriteRule ^reference/(.*)/+$ https://github.com/fieldtrip/fieldtrip/blob/release/$1.m [R=301,L]
