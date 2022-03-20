@@ -1,12 +1,9 @@
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>{{page.title}} - FieldTrip toolbox</title>
-  <link rel="stylesheet" href="/assets/css/main.css">
-  <link rel="shortcut icon" href="/assets/icon/favicon.ico">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>{{page.title}} - FieldTrip toolbox</title>
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="shortcut icon" href="/assets/icon/favicon.ico">
 
-  <!-- Deal with permission for external cookies -->
-  <script src="/assets/js/cookies.js"></script>
-
-</head>
+<!-- Deal with permission for external cookies -->
+<script src="/assets/js/cookies.js"></script>
