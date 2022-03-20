@@ -59,7 +59,7 @@ When this works you are sure that FieldTrip can handle your dataset and you can 
 ## Special issues
 
 - If you have STI001 up to STI008, the TTL values (single bits) in those channels will be combined into an event of type 'Trigger' with an integer value between 0 and 255.
-- Reading .fif mri-data with FieldTrip and making a single shell headmodel (example script can be found [here](/example/read_neuromag_mri_and_sourcemodel_aligned2mni)).
+- Reading .fif mri-data with FieldTrip and making a single shell headmodel (example script can be found [here](/example/neuromag_aligned2mni)).
 - The default behavior of ft_read_event is that it assumes that event values below 5 are noise. However, in the new systems (Elekta Neuromag VectorView or Triux (306 channels both) this is seldom the case.
 
 ## Frequently Asked Questions
