@@ -1,0 +1,38 @@
+articleids:
+- idtype: pmid
+  value: '34895133'
+- idtype: doi
+  value: 10.1186/s10194-021-01364-x
+- idtype: pmcid
+  value: PMC8903683
+authors:
+- authtype: Author
+  name: Thiele A
+- authtype: Author
+  name: Klehr L
+- authtype: Author
+  name: Strauß S
+- authtype: Author
+  name: Angermaier A
+- authtype: Author
+  name: Schminke U
+- authtype: Author
+  name: Kronenbuerger M
+- authtype: Author
+  name: Naegel S
+- authtype: Author
+  name: Fleischmann R
+epubdate: 2021 Dec 11
+fulljournalname: The Journal of Headache and Pain
+issue: '1'
+pages: '149'
+pmclivedate: 2022/03/18
+printpubdate: ''
+pubdate: 2021 Dec 11
+sortdate: 2021/12/11 00:00
+source: J Headache Pain
+title: 'Preventive treatment with CGRP monoclonal antibodies restores brain stem habituation
+  deficits and excitability to painful stimuli in migraine: results from a prospective
+  case-control study'
+uid: '8903683'
+volume: '22'

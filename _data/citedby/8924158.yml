@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '35292694'
+- idtype: doi
+  value: 10.1038/s41598-022-08411-w
+- idtype: pmcid
+  value: PMC8924158
+authors:
+- authtype: Author
+  name: Fló A
+- authtype: Author
+  name: Benjamin L
+- authtype: Author
+  name: Palu M
+- authtype: Author
+  name: Dehaene-Lambertz G
+epubdate: 2022 Mar 15
+fulljournalname: Scientific Reports
+issue: ''
+pages: '4391'
+pmclivedate: 2022/03/16
+printpubdate: ''
+pubdate: 2022 Mar 15
+sortdate: 2022/03/15 00:00
+source: Sci Rep
+title: Sleeping neonates track transitional probabilities in speech but only retain
+  the first syllable of words
+uid: '8924158'
+volume: '12'

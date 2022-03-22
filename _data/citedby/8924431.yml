@@ -1,0 +1,53 @@
+articleids:
+- idtype: pmid
+  value: '34416758'
+- idtype: doi
+  value: 10.1093/cercor/bhab286
+- idtype: pmcid
+  value: PMC8924431
+authors:
+- authtype: Author
+  name: van der Wijk G
+- authtype: Author
+  name: Harris JK
+- authtype: Author
+  name: Hassel S
+- authtype: Author
+  name: Davis AD
+- authtype: Author
+  name: Zamyadi M
+- authtype: Author
+  name: Arnott SR
+- authtype: Author
+  name: Milev R
+- authtype: Author
+  name: Lam RW
+- authtype: Author
+  name: Frey BN
+- authtype: Author
+  name: Hall GB
+- authtype: Author
+  name: Müller DJ
+- authtype: Author
+  name: Rotzinger S
+- authtype: Author
+  name: Kennedy SH
+- authtype: Author
+  name: Strother SC
+- authtype: Author
+  name: MacQueen GM
+- authtype: Author
+  name: Protzner AB
+epubdate: 2021 Aug 20
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '6'
+pages: 1223-1243
+pmclivedate: ''
+printpubdate: ''
+pubdate: 2021 Aug 20
+sortdate: 2021/08/20 00:00
+source: Cereb Cortex
+title: 'Baseline Functional Connectivity in Resting State Networks Associated with
+  Depression and Remission Status after 16 Weeks of Pharmacotherapy: A CAN-BIND Report'
+uid: '8924431'
+volume: '32'

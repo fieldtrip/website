@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fnins.2022.831055
+- idtype: pmcid
+  value: PMC8930827
+authors:
+- authtype: Author
+  name: Bore JC
+- authtype: Author
+  name: Toth C
+- authtype: Author
+  name: Campbell BA
+- authtype: Author
+  name: Cho H
+- authtype: Author
+  name: Pucci F
+- authtype: Author
+  name: Hogue O
+- authtype: Author
+  name: Machado AG
+- authtype: Author
+  name: Baker KB
+epubdate: 2022 Mar 4
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '831055'
+pmclivedate: 2022/03/19
+printpubdate: ''
+pubdate: 2022 Mar 4
+sortdate: 2022/03/04 00:00
+source: Front Neurosci
+title: Consistent Changes in Cortico-Subthalamic Directed Connectivity Are Associated
+  With the Induction of Parkinsonism in a Chronically Recorded Non-human Primate Model
+uid: '8930827'
+volume: '16'

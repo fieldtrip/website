@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1016/j.heliyon.2022.e09017
+- idtype: pmcid
+  value: PMC8928117
+authors:
+- authtype: Author
+  name: Giannopulu I
+- authtype: Author
+  name: Brotto G
+- authtype: Author
+  name: Lee TJ
+- authtype: Author
+  name: Frangos A
+- authtype: Author
+  name: To D
+epubdate: 2022 Feb 26
+fulljournalname: Heliyon
+issue: '3'
+pages: e09017
+pmclivedate: 2022/03/18
+printpubdate: ''
+pubdate: 2022 Feb 26
+sortdate: 2022/02/26 00:00
+source: Heliyon
+title: Synchronised neural signature of creative mental imagery in reality and augmented
+  reality
+uid: '8928117'
+volume: '8'
