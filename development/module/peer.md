@@ -1,6 +1,8 @@
 ---
 title: Distributed computing using a peer-to-peer cluster
 tags: [development, distributed, peer]
+redirect_from:
+- /development/peer/
 ---
 
 # Distributed computing using a peer-to-peer cluster

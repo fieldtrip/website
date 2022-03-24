@@ -1,5 +1,7 @@
 ---
 title: Integration with NUTMEG
+redirect_from:
+- /development/nutmeg/
 ---
 
 {% include /shared/development/warning.md %}

@@ -1,5 +1,7 @@
 ---
 title: Welcome to the FieldTrip website
+redirect_from:
+- /start/
 ---
 
 # Welcome to the FieldTrip website

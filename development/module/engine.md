@@ -1,6 +1,8 @@
 ---
 title: Distributed computing using the MATLAB engine system
 tags: [development, distributed, engine]
+redirect_from:
+- /development/engine/
 ---
 
 # Distributed computing using the MATLAB engine system

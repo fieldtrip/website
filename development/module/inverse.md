@@ -1,6 +1,8 @@
 ---
 title: Inverse source parameter estimates from EEG/MEG data
 tags: [development, inverse]
+redirect_from:
+- /development/inverse/
 ---
 
 # Inverse source parameter estimates from EEG/MEG data

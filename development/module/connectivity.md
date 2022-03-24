@@ -1,6 +1,8 @@
 ---
 title: Connectivity estimates for EEG/MEG time series data
 tags: [development, connectivity]
+redirect_from:
+- /development/connectivity/
 ---
 
 # Connectivity estimates for EEG/MEG time series data

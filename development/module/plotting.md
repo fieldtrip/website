@@ -1,6 +1,8 @@
 ---
 title: Plotting of channel-level, source-level and other geometrical data related to EEG/MEG
 tags: [development, plotting]
+redirect_from:
+- /development/plotting/
 ---
 
 # Plotting of channel-level, source-level and other geometrical data related to EEG/MEG
