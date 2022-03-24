@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '35296740'
+- idtype: doi
+  value: 10.1038/s41598-022-08510-8
+- idtype: pmcid
+  value: PMC8927579
+authors:
+- authtype: Author
+  name: Pscherer C
+- authtype: Author
+  name: Mückschel M
+- authtype: Author
+  name: Bluschke A
+- authtype: Author
+  name: Beste C
+epubdate: 2022 Mar 16
+fulljournalname: Scientific Reports
+issue: ''
+pages: '4530'
+pmclivedate: 2022/03/21
+printpubdate: ''
+pubdate: 2022 Mar 16
+sortdate: 2022/03/16 00:00
+source: Sci Rep
+title: Resting-state theta activity is linked to information content-specific coding
+  levels during response inhibition
+uid: '8927579'
+volume: '12'

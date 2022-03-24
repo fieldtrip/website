@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '34915157'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2021.118818
+- idtype: pmcid
+  value: PMC8929686
+- idtype: MID
+  value: NIHMS1777193
+authors:
+- authtype: Author
+  name: Borna A
+- authtype: Author
+  name: Iivanainen J
+- authtype: Author
+  name: Carter TR
+- authtype: Author
+  name: McKay J
+- authtype: Author
+  name: Taulu S
+- authtype: Author
+  name: Stephen J
+- authtype: Author
+  name: Schwindt PD
+epubdate: 2021 Dec 14
+fulljournalname: NeuroImage
+issue: ''
+pages: '118818'
+pmclivedate: 2022/03/17
+printpubdate: 2022 Feb 15
+pubdate: 2021 Dec 14
+sortdate: 2021/12/14 00:00
+source: Neuroimage
+title: Cross-Axis projection error in optically pumped magnetometers and its implication
+  for magnetoencephalography systems
+uid: '8929686'
+volume: '247'

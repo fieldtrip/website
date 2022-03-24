@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '35263318'
+- idtype: doi
+  value: 10.1371/journal.pcbi.1009407
+- idtype: pmcid
+  value: PMC8936493
+authors:
+- authtype: Author
+  name: Portoles O
+- authtype: Author
+  name: Blesa M
+- authtype: Author
+  name: van Vugt M
+- authtype: Author
+  name: Cao M
+- authtype: Author
+  name: Borst JP
+epubdate: 2022 Mar 9
+fulljournalname: PLoS Computational Biology
+issue: '3'
+pages: e1009407
+pmclivedate: 2022/03/22
+printpubdate: ''
+pubdate: 2022 Mar 9
+sortdate: 2022/03/09 00:00
+source: PLoS Comput Biol
+title: Thalamic bursts modulate cortical synchrony locally to switch between states
+  of global functional connectivity in a cognitive task
+uid: '8936493'
+volume: '18'

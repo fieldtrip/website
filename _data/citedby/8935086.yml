@@ -1,0 +1,45 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.2147/NSS.S342922
+- idtype: pmcid
+  value: PMC8935086
+authors:
+- authtype: Author
+  name: Quiquempoix M
+- authtype: Author
+  name: Sauvet F
+- authtype: Author
+  name: Erblang M
+- authtype: Author
+  name: Van Beers P
+- authtype: Author
+  name: Guillard M
+- authtype: Author
+  name: Drogou C
+- authtype: Author
+  name: Trignol A
+- authtype: Author
+  name: Vergez A
+- authtype: Author
+  name: Léger D
+- authtype: Author
+  name: Chennaoui M
+- authtype: Author
+  name: Gomez-Merino D
+- authtype: Author
+  name: Rabat A
+epubdate: 2022 Mar 16
+fulljournalname: Nature and Science of Sleep
+issue: ''
+pages: 457-473
+pmclivedate: 2022/03/22
+printpubdate: ''
+pubdate: 2022 Mar 16
+sortdate: 2022/03/16 00:00
+source: Nat Sci Sleep
+title: 'Effects of Caffeine Intake on Cognitive Performance Related to Total Sleep
+  Deprivation and Time on Task: A Randomized Cross-Over Double-Blind Study'
+uid: '8935086'
+volume: '14'
