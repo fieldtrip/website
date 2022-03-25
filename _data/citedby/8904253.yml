@@ -1,0 +1,85 @@
+articleids:
+- idtype: pmid
+  value: '35260860'
+- idtype: doi
+  value: 10.1038/s41593-022-01026-4
+- idtype: pmcid
+  value: PMC8904253
+authors:
+- authtype: Author
+  name: Goldstein A
+- authtype: Author
+  name: Zada Z
+- authtype: Author
+  name: Buchnik E
+- authtype: Author
+  name: Schain M
+- authtype: Author
+  name: Price A
+- authtype: Author
+  name: Aubrey B
+- authtype: Author
+  name: Nastase SA
+- authtype: Author
+  name: Feder A
+- authtype: Author
+  name: Emanuel D
+- authtype: Author
+  name: Cohen A
+- authtype: Author
+  name: Jansen A
+- authtype: Author
+  name: Gazula H
+- authtype: Author
+  name: Choe G
+- authtype: Author
+  name: Rao A
+- authtype: Author
+  name: Kim C
+- authtype: Author
+  name: Casto C
+- authtype: Author
+  name: Fanda L
+- authtype: Author
+  name: Doyle W
+- authtype: Author
+  name: Friedman D
+- authtype: Author
+  name: Dugan P
+- authtype: Author
+  name: Melloni L
+- authtype: Author
+  name: Reichart R
+- authtype: Author
+  name: Devore S
+- authtype: Author
+  name: Flinker A
+- authtype: Author
+  name: Hasenfratz L
+- authtype: Author
+  name: Levy O
+- authtype: Author
+  name: Hassidim A
+- authtype: Author
+  name: Brenner M
+- authtype: Author
+  name: Matias Y
+- authtype: Author
+  name: Norman KA
+- authtype: Author
+  name: Devinsky O
+- authtype: Author
+  name: Hasson U
+epubdate: 2022 Mar 7
+fulljournalname: Nature Neuroscience
+issue: '3'
+pages: 369-380
+pmclivedate: 2022/03/23
+printpubdate: '2022'
+pubdate: 2022 Mar 7
+sortdate: 2022/03/07 00:00
+source: Nat Neurosci
+title: Shared computational principles for language processing in humans and deep
+  language models
+uid: '8904253'
+volume: '25'

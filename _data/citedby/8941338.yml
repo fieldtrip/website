@@ -1,0 +1,38 @@
+articleids:
+- idtype: pmid
+  value: '35012844'
+- idtype: doi
+  value: 10.1016/j.clinph.2021.11.077
+- idtype: pmcid
+  value: PMC8941338
+- idtype: MID
+  value: NIHMS1768883
+authors:
+- authtype: Author
+  name: Sparks H
+- authtype: Author
+  name: Cross KA
+- authtype: Author
+  name: Choi JW
+- authtype: Author
+  name: Courellis H
+- authtype: Author
+  name: Thum J
+- authtype: Author
+  name: Koenig E
+- authtype: Author
+  name: Pouratian N
+epubdate: 2021 Dec 24
+fulljournalname: 'Clinical neurophysiology : official journal of the International
+  Federation of Clinical Neurophysiology'
+issue: ''
+pages: 237-246
+pmclivedate: ''
+printpubdate: 2022 Apr
+pubdate: 2021 Dec 24
+sortdate: 2021/12/24 00:00
+source: Clin Neurophysiol
+title: Dorsal visual stream is preferentially engaged during externally guided action
+  selection in Parkinson Disease
+uid: '8941338'
+volume: '136'
