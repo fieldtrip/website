@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '35324989'
+- idtype: doi
+  value: 10.1371/journal.pone.0266107
+- idtype: pmcid
+  value: PMC8947130
+authors:
+- authtype: Author
+  name: Mohd Zulkifly MF
+- authtype: Author
+  name: Lehr A
+- authtype: Author
+  name: van de Velden D
+- authtype: Author
+  name: Khan A
+- authtype: Author
+  name: Focke NK
+- authtype: Author
+  name: Wolters CH
+- authtype: Author
+  name: Paulus W
+epubdate: 2022 Mar 24
+fulljournalname: PLoS ONE
+issue: '3'
+pages: e0266107
+pmclivedate: 2022/03/25
+printpubdate: ''
+pubdate: 2022 Mar 24
+sortdate: 2022/03/24 00:00
+source: PLoS One
+title: Directionality of the injected current targeting the P20/N20 source determines
+  the efficacy of 140 Hz transcranial alternating current stimulation (tACS)-induced
+  aftereffects in the somatosensory cortex
+uid: '8947130'
+volume: '17'

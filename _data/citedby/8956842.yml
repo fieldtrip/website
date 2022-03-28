@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1016/j.cnp.2022.03.002
+- idtype: pmcid
+  value: PMC8956842
+authors:
+- authtype: Author
+  name: Buijink AW
+- authtype: Author
+  name: Piña-Fuentes DA
+- authtype: Author
+  name: Stam MJ
+- authtype: Author
+  name: Bot M
+- authtype: Author
+  name: Schuurman PR
+- authtype: Author
+  name: van den Munckhof P
+- authtype: Author
+  name: van Rootselaar AF
+- authtype: Author
+  name: de Bie RM
+- authtype: Author
+  name: Beudel M
+epubdate: 2022 Mar 10
+fulljournalname: Clinical Neurophysiology Practice
+issue: ''
+pages: 103-106
+pmclivedate: 2022/03/27
+printpubdate: ''
+pubdate: 2022 Mar 10
+sortdate: 2022/03/10 00:00
+source: Clin Neurophysiol Pract
+title: Thalamic local field potentials recorded using the deep brain stimulation pulse
+  generator
+uid: '8956842'
+volume: '7'

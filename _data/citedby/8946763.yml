@@ -1,0 +1,23 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3390/brainsci12030412
+- idtype: pmcid
+  value: PMC8946763
+authors:
+- authtype: Author
+  name: Chen A
+epubdate: 2022 Mar 21
+fulljournalname: Brain Sciences
+issue: '3'
+pages: '412'
+pmclivedate: 2022/03/25
+printpubdate: ''
+pubdate: 2022 Mar 21
+sortdate: 2022/03/21 00:00
+source: Brain Sci
+title: 'Later but Not Weaker: Neural Categorization of Native Vowels of Children at
+  Familial Risk of Dyslexia'
+uid: '8946763'
+volume: '12'

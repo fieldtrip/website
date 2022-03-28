@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3390/brainsci12030348
+- idtype: pmcid
+  value: PMC8946162
+authors:
+- authtype: Author
+  name: Tabarelli D
+- authtype: Author
+  name: Brancaccio A
+- authtype: Author
+  name: Zrenner C
+- authtype: Author
+  name: Belardinelli P
+epubdate: 2022 Mar 3
+fulljournalname: Brain Sciences
+issue: '3'
+pages: '348'
+pmclivedate: 2022/03/25
+printpubdate: ''
+pubdate: 2022 Mar 3
+sortdate: 2022/03/03 00:00
+source: Brain Sci
+title: 'Functional Connectivity States of Alpha Rhythm Sources in the Human Cortex
+  at Rest: Implications for Real-Time Brain State Dependent EEG-TMS'
+uid: '8946162'
+volume: '12'
