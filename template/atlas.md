@@ -17,7 +17,7 @@ You can find the template anatomical atlases and parcellation schemes included i
 
 ## The AFNI TTatlas+tlrc Dataset
 
-This is a binary representation of the Talairach Tournoux atlas [ref 1]. It was digitized for the Talairach Daemon [ref 2] and converted into AFNI format. It is described in some detail on the [AFNI website](http://afni.nimh.nih.gov/afni/doc/misc/afni_ttatlas/). Note that the website seems to be unstable and relatively often unresponsive.
+This is a binary representation of the Talairach Tournoux atlas [ref 1]. It was digitized for the Talairach Daemon [ref 2] and converted into AFNI format. It is described in some detail on the [AFNI website](https://sscc.nimh.nih.gov/afni/doc/misc/afni_ttatlas/index_html). Note that the website seems to be unstable and relatively often unresponsive. Next to the template that is shipped with FieldTrip, it is also possible to load in other atlases that are defined in AFNI format. For instance, the atlases that can be obtained from [here](https://afni.nimh.nih.gov/pub/dist/atlases/).
 
 1.  Talairach J, Tournoux P (1988). Co-planar stereotaxic atlas of the human brain. Thieme, New York. [Amazon](http://www.amazon.com/Co-Planar-Stereotaxic-Atlas-Human-Brain/dp/0865772932)
 2.  Lancaster JL, Rainey LH, Summerlin JL, Freitas CS, Fox PT, Evans AC, Toga AW, Mazziotta JC. _Automated labeling of the human brain: a preliminary report on the development and evaluation of a forward-transform method._ Hum Brain Mapp. 1997;5(4):238-42. [Pubmed](http://www.ncbi.nlm.nih.gov/pubmed/20408222)
