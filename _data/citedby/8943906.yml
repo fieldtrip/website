@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '34906715'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2021.118788
+- idtype: pmcid
+  value: PMC8943906
+- idtype: MID
+  value: NIHMS1788983
+authors:
+- authtype: Author
+  name: Sadaghiani S
+- authtype: Author
+  name: Brookes MJ
+- authtype: Author
+  name: Baillet S
+epubdate: 2021 Dec 12
+fulljournalname: NeuroImage
+issue: ''
+pages: '118788'
+pmclivedate: 2022/03/24
+printpubdate: 2022 Feb 15
+pubdate: 2021 Dec 12
+sortdate: 2021/12/12 00:00
+source: Neuroimage
+title: Connectomics of Human Electrophysiology
+uid: '8943906'
+volume: '247'

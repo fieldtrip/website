@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '35318392'
+- idtype: doi
+  value: 10.1038/s41598-022-08869-8
+- idtype: pmcid
+  value: PMC8940999
+authors:
+- authtype: Author
+  name: Vrijdag XC
+- authtype: Author
+  name: van Waart H
+- authtype: Author
+  name: Pullon RM
+- authtype: Author
+  name: Sames C
+- authtype: Author
+  name: Mitchell SJ
+- authtype: Author
+  name: Sleigh JW
+epubdate: 2022 Mar 22
+fulljournalname: Scientific Reports
+issue: ''
+pages: '4880'
+pmclivedate: 2022/03/28
+printpubdate: ''
+pubdate: 2022 Mar 22
+sortdate: 2022/03/22 00:00
+source: Sci Rep
+title: EEG functional connectivity is sensitive for nitrogen narcosis at 608 kPa
+uid: '8940999'
+volume: '12'

@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '35074866'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1285-21.2021
+- idtype: pmcid
+  value: PMC8936619
+authors:
+- authtype: Author
+  name: Rebollo I
+- authtype: Author
+  name: Tallon-Baudry C
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '11'
+pages: 2205-2220
+pmclivedate: ''
+printpubdate: 2022 Mar 16
+pubdate: 2022 Mar 16
+sortdate: 2022/03/16 00:00
+source: J Neurosci
+title: The Sensory and Motor Components of the Cortical Hierarchy Are Coupled to the
+  Rhythm of the Stomach during Rest
+uid: '8936619'
+volume: '42'

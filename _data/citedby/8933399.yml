@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '35304521'
+- idtype: doi
+  value: 10.1038/s41598-022-08521-5
+- idtype: pmcid
+  value: PMC8933399
+authors:
+- authtype: Author
+  name: Bruzzone SE
+- authtype: Author
+  name: Lumaca M
+- authtype: Author
+  name: Brattico E
+- authtype: Author
+  name: Vuust P
+- authtype: Author
+  name: Kringelbach ML
+- authtype: Author
+  name: Bonetti L
+epubdate: 2022 Mar 18
+fulljournalname: Scientific Reports
+issue: ''
+pages: '4746'
+pmclivedate: 2022/03/28
+printpubdate: ''
+pubdate: 2022 Mar 18
+sortdate: 2022/03/18 00:00
+source: Sci Rep
+title: 'Dissociated brain functional connectivity of fast versus slow frequencies
+  underlying individual differences in fluid intelligence: a DTI and MEG study'
+uid: '8933399'
+volume: '12'

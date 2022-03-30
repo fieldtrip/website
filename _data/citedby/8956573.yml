@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '35338171'
+- idtype: doi
+  value: 10.1038/s41598-022-08742-8
+- idtype: pmcid
+  value: PMC8956573
+authors:
+- authtype: Author
+  name: Millard SK
+- authtype: Author
+  name: Bokelmann K
+- authtype: Author
+  name: Schalbroeck R
+- authtype: Author
+  name: van der Wee NJ
+- authtype: Author
+  name: van Loey NE
+- authtype: Author
+  name: van Laarhoven AI
+epubdate: 2022 Mar 25
+fulljournalname: Scientific Reports
+issue: ''
+pages: '5184'
+pmclivedate: 2022/03/28
+printpubdate: ''
+pubdate: 2022 Mar 25
+sortdate: 2022/03/25 00:00
+source: Sci Rep
+title: No indications for altered EEG oscillatory activity in patients with chronic
+  post-burn itch compared to healthy controls
+uid: '8956573'
+volume: '12'
