@@ -1,0 +1,49 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fpsyg.2022.826527
+- idtype: pmcid
+  value: PMC8959934
+authors:
+- authtype: Author
+  name: Safar K
+- authtype: Author
+  name: Vandewouw MM
+- authtype: Author
+  name: Pang EW
+- authtype: Author
+  name: de Villa K
+- authtype: Author
+  name: Crosbie J
+- authtype: Author
+  name: Schachar R
+- authtype: Author
+  name: Iaboni A
+- authtype: Author
+  name: Georgiades S
+- authtype: Author
+  name: Nicolson R
+- authtype: Author
+  name: Kelley E
+- authtype: Author
+  name: Ayub M
+- authtype: Author
+  name: Lerch JP
+- authtype: Author
+  name: Anagnostou E
+- authtype: Author
+  name: Taylor MJ
+epubdate: 2022 Mar 9
+fulljournalname: Frontiers in Psychology
+issue: ''
+pages: '826527'
+pmclivedate: 2022/03/29
+printpubdate: ''
+pubdate: 2022 Mar 9
+sortdate: 2022/03/09 00:00
+source: Front Psychol
+title: Shared and Distinct Patterns of Functional Connectivity to Emotional Faces
+  in Autism Spectrum Disorder and Attention-Deficit/Hyperactivity Disorder Children
+uid: '8959934'
+volume: '13'

@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '35086905'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.2965-20.2022
+- idtype: pmcid
+  value: PMC8936602
+authors:
+- authtype: Author
+  name: Biau E
+- authtype: Author
+  name: Schultz BG
+- authtype: Author
+  name: Gunter TC
+- authtype: Author
+  name: Kotz SA
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '11'
+pages: 2313-2326
+pmclivedate: ''
+printpubdate: 2022 Mar 16
+pubdate: 2022 Mar 16
+sortdate: 2022/03/16 00:00
+source: J Neurosci
+title: Left Motor δ Oscillations Reflect Asynchrony Detection in Multisensory Speech
+  Perception
+uid: '8936602'
+volume: '42'
