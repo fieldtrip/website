@@ -1,0 +1,38 @@
+articleids:
+- idtype: pmid
+  value: '35289758'
+- idtype: doi
+  value: 10.2196/29171
+- idtype: pmcid
+  value: PMC8965676
+authors:
+- authtype: Author
+  name: Sitges C
+- authtype: Author
+  name: Terrasa JL
+- authtype: Author
+  name: García-Dopico N
+- authtype: Author
+  name: Segur-Ferrer J
+- authtype: Author
+  name: Velasco-Roldán O
+- authtype: Author
+  name: Crespí-Palmer J
+- authtype: Author
+  name: González-Roldán AM
+- authtype: Author
+  name: Montoya P
+epubdate: 2022 Mar 15
+fulljournalname: JMIR mHealth and uHealth
+issue: '3'
+pages: e29171
+pmclivedate: 2022/03/31
+printpubdate: ''
+pubdate: 2022 Mar 15
+sortdate: 2022/03/15 00:00
+source: JMIR Mhealth Uhealth
+title: 'An Educational and Exercise Mobile Phone–Based Intervention to Elicit Electrophysiological
+  Changes and to Improve Psychological Functioning in Adults With Nonspecific Chronic
+  Low Back Pain (BackFit App): Nonrandomized Clinical Trial'
+uid: '8965676'
+volume: '10'

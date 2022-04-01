@@ -1,0 +1,42 @@
+articleids:
+- idtype: pmid
+  value: '35260859'
+- idtype: doi
+  value: 10.1038/s41593-022-01020-w
+- idtype: pmcid
+  value: PMC8966433
+- idtype: MID
+  value: NIHMS1773205
+authors:
+- authtype: Author
+  name: Zheng J
+- authtype: Author
+  name: Schjetnan AG
+- authtype: Author
+  name: Yebra M
+- authtype: Author
+  name: Gomes BA
+- authtype: Author
+  name: Mosher CP
+- authtype: Author
+  name: Kalia SK
+- authtype: Author
+  name: Valiante TA
+- authtype: Author
+  name: Mamelak AN
+- authtype: Author
+  name: Kreiman G
+- authtype: Author
+  name: Rutishauser U
+epubdate: 2022 Mar 7
+fulljournalname: Nature neuroscience
+issue: '3'
+pages: 358-368
+pmclivedate: ''
+printpubdate: 2022 Mar
+pubdate: 2022 Mar 7
+sortdate: 2022/03/07 00:00
+source: Nat Neurosci
+title: Neurons detect cognitive boundaries to structure episodic memories in humans
+uid: '8966433'
+volume: '25'

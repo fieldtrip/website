@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fneur.2022.844745
+- idtype: pmcid
+  value: PMC8964594
+authors:
+- authtype: Author
+  name: Conti M
+- authtype: Author
+  name: Bovenzi R
+- authtype: Author
+  name: Garasto E
+- authtype: Author
+  name: Schirinzi T
+- authtype: Author
+  name: Placidi F
+- authtype: Author
+  name: Mercuri NB
+- authtype: Author
+  name: Cerroni R
+- authtype: Author
+  name: Pierantozzi M
+- authtype: Author
+  name: Stefani A
+epubdate: 2022 Mar 15
+fulljournalname: Frontiers in Neurology
+issue: ''
+pages: '844745'
+pmclivedate: 2022/03/31
+printpubdate: ''
+pubdate: 2022 Mar 15
+sortdate: 2022/03/15 00:00
+source: Front Neurol
+title: Brain Functional Connectivity in de novo Parkinson's Disease Patients Based
+  on Clinical EEG
+uid: '8964594'
+volume: '13'
