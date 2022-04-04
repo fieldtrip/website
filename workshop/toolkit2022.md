@@ -81,11 +81,11 @@ We will inform you as to whether you obtained a place in this course not later t
 
 ## Practicalities
 
-To be announced. We hope to do it in person, but perhaps a hybrid or online form will be needed. In that case we will setup an online interactive environment similar to previous years.
+This will be an in person event. A large part of the toolkit will consist of you working on your own data. Please think a bit about what you want to achieve, and ensure that you have your data easily accessible (preferably, if possible on a laptop that you bring yourself, or on an external USB-drive). If you don't have data to work with, please let us know in time so that we can think about an alternative. We have plenty of tutorial data available, so this can be used to practice your data analysis skills.
 
 ### Test your MATLAB and FieldTrip installation in advance
 
-Since you will be working during the hands-on sessions on your own computer, we recommend that you [test your MATLAB and FieldTrip installation in advance](/workshop/toolkit2022/test_installation).
+For the hands-on sessions you will work on a PC that is provided by us. If you want, you can work on your own computer during the FieldTrip playground. If that's the case, we recommend that you [test your MATLAB and FieldTrip installation in advance](/workshop/toolkit2022/test_installation).
 
 ## Code of conduct
 
