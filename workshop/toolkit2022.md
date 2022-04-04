@@ -28,7 +28,7 @@ We will inform you as to whether you obtained a place in this course not later t
 | 13:30-15:45 | Pre-processing - [hands-on](/tutorial/eventrelatedaveraging)|
 | 15:45-16:00 | Tea Break|
 | 16:00-17:30 | FieldTrip playground, apply your newly acquired knowledge and skills|
-
+  
 ### Tuesday May 10, 2022
 
 | 09:00-09:30 | Morning chill or workout|
@@ -40,7 +40,7 @@ We will inform you as to whether you obtained a place in this course not later t
 | 15:45-16:00 | Tea Break|
 | 16:00-17:30 | FieldTrip playground, apply your newly acquired knowledge and skills|
 | 18:30-22:00 | Drinks & dinner at Mi Barrio|
-
+  
 ### Wednesday May 11, 2022
 
 | 09:00-09:30 | Morning chill or workout|
@@ -52,7 +52,7 @@ We will inform you as to whether you obtained a place in this course not later t
 | 15:45-16:00 | Tea Break|
 | 16:00-17:30 | FieldTrip playground, apply your newly acquired knowledge and skills|
 | 18:00-22:00 | Pizza, drinks, joint projects and hacking (optional)|
-
+  
 ### Thursday May 12, 2022
 
 | 09:00-09:30 | Morning chill or workout|
@@ -63,7 +63,7 @@ We will inform you as to whether you obtained a place in this course not later t
 | 13:30-15:45 | Statistics - [hands-on](/tutorial/cluster_permutation_timelock)|
 | 15:45-16:00 | Tea Break|
 | 16:00-17:30 | FieldTrip playground, apply your newly acquired knowledge and skills|
-
+  
 ### Friday May 13, 2022
 
 | 09:00-09:30 | Morning chill or workout|
