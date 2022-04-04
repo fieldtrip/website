@@ -68,7 +68,7 @@ We will inform you as to whether you obtained a place in this course not later t
 | 12:30-13:30 | Lunch|
 | 13:30-15:45 | Statistics - [hands-on](/tutorial/cluster_permutation_timelock)|
 | 15:45-16:00 | Tea Break|
-| 16:00-17:30 | FieldTrip playground, apply your newly acquired knowledge|
+| 16:00-17:30 | FieldTrip playground, apply your newly acquired knowledge and skills|
 
 
 
