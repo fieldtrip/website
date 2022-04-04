@@ -49,7 +49,7 @@ On [Physionet](https://physionet.org/about/database/#neuro) you can find a list 
 
 On the [BNCI Horizon 2020](http://bnci-horizon-2020.eu) project page you can find more than 25 well-documented [datasets for BCI research](http://bnci-horizon-2020.eu/database/data-sets).
 
-The Nencki-Symfonia EEG/ERP dataset ([Dataset](http://doi.org/10.5524/100990) / [Open-access article that describes the dataset]( https://doi.org/10.1093/gigascience/giac015)): high-density electroencephalography (EEG) dataset obtained at the Nencki Institute of Experimental Biology from a sample of 42 healthy young adults with three cognitive tasks: (1) an extended Multi-Source Interference Task (MSIT+) with control, Simon, Flanker, and multi-source interference trials; (2) a 3-stimuli oddball task with frequent standard, rare target, and rare distractor stimuli; (3) a control, simple reaction task (SRT); and additionally (4) a resting-state protocol (REST).
+The Nencki-Symfonia EEG/ERP [dataset](http://doi.org/10.5524/100990) that is described in detail in this [article](https://doi.org/10.1093/gigascience/giac015) consists of high-density EEG obtained at the Nencki Institute of Experimental Biology from a sample of 42 healthy young adults during three cognitive tasks: (1) an extended Multi-Source Interference Task with control, Simon, Flanker, and multi-source interference trials; (2) a oddball task with a frequent standard, rare target, and a rare distractor stimuli; (3) a control, simple reaction task; and additionally (4) a resting-state protocol.
 
 The [Brain Signals](http://www.brainsignals.de) website has a list of references to shared EEG data sets.
 
