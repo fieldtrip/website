@@ -29,6 +29,7 @@ We will inform you as to whether you obtained a place in this course not later t
 | 15:45-16:00 | Tea Break |
 | 16:00-17:30 | FieldTrip playground, apply your newly acquired knowledge and skills on your own data
 
+
 ### Tuesday May 10, 2022
 
 | 09:00-09:30 | Morning chill or workout |
@@ -39,8 +40,8 @@ We will inform you as to whether you obtained a place in this course not later t
 | 13:30-15:45 | Time-frequency analysis of power - [hands-on](/tutorial/timefrequencyanalysis) |
 | 15:45-16:00 | Tea Break |
 | 16:00-17:30 | FieldTrip playground, apply your newly acquired knowledge and skills on your own data |
-
 | 18:30-22:00 | Drinks & dinner at Mi Barrio |
+
 
 ### Wednesday May 11, 2022
 
@@ -52,8 +53,8 @@ We will inform you as to whether you obtained a place in this course not later t
 | 13:30-15:45 Beamforming - [hands-on](/tutorial/beamformer) |
 | 15:45-16:00 | Tea Break |
 | 16:00-17:30 | FieldTrip playground, apply your newly acquired knowledge and skills on your own data |
-
 | 18:00-22:00 | Pizza, drinks, joint projects and hacking (optional) |
+
 
 ### Thursday May 12, 2022
 
@@ -62,9 +63,10 @@ We will inform you as to whether you obtained a place in this course not later t
 | 11:00-11:15 | Coffee Break |
 | 11:15-12:30 | Statistics using non-parametric randomization techniques - [lecture](/assets/pdf/workshop/toolkit2022/statistics.pdf) |
 | 12:30-13:30 | Lunch |
-| 13:30-15:45 | Time-frequency analysis of power - [hands-on](/tutorial/timefrequencyanalysis) |
+| 13:30-15:45 | Statistics - [hands-on](/tutorial/cluster_permutation_timelock) |
 | 15:45-16:00 | Tea Break |
 | 16:00-17:30 | FieldTrip playground, apply your newly acquired knowledge on your own data |
+
 
 ### Friday MAy 13, 2022
 
