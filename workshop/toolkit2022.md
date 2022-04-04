@@ -29,6 +29,7 @@ We will inform you as to whether you obtained a place in this course not later t
 | 15:45-16:00 | Tea Break|
 | 16:00-17:30 | FieldTrip playground, apply your newly acquired knowledge and skills|
   
+  
 ### Tuesday May 10, 2022
 
 | 09:00-09:30 | Morning chill or workout|
@@ -40,6 +41,7 @@ We will inform you as to whether you obtained a place in this course not later t
 | 15:45-16:00 | Tea Break|
 | 16:00-17:30 | FieldTrip playground, apply your newly acquired knowledge and skills|
 | 18:30-22:00 | Drinks & dinner at Mi Barrio|
+  
   
 ### Wednesday May 11, 2022
 
@@ -53,6 +55,7 @@ We will inform you as to whether you obtained a place in this course not later t
 | 16:00-17:30 | FieldTrip playground, apply your newly acquired knowledge and skills|
 | 18:00-22:00 | Pizza, drinks, joint projects and hacking (optional)|
   
+  
 ### Thursday May 12, 2022
 
 | 09:00-09:30 | Morning chill or workout|
@@ -63,6 +66,7 @@ We will inform you as to whether you obtained a place in this course not later t
 | 13:30-15:45 | Statistics - [hands-on](/tutorial/cluster_permutation_timelock)|
 | 15:45-16:00 | Tea Break|
 | 16:00-17:30 | FieldTrip playground, apply your newly acquired knowledge and skills|
+  
   
 ### Friday May 13, 2022
 
@@ -77,7 +81,11 @@ We will inform you as to whether you obtained a place in this course not later t
 
 ## Practicalities
 
-This will be an in person event. A large part of the toolkit will consist of you working on your own data. Please think a bit about what you want to achieve, and ensure that you have your data easily accessible (preferably, if possible on a laptop that you bring yourself, or on an external USB-drive). If you don't have data to work with, please let us know in time so that we can think about an alternative. We have plenty of tutorial data available, so this can be used to practice your data analysis skills.
+This will be an in person event.  
+
+### FieldTrip playground sessions: BYOD (bring-your-own-data)
+  
+A large part of the toolkit will consist of playground sessions, in which ideally you will be working on your own data. Please think a bit about what you want to achieve, and ensure that you have your data easily accessible (preferably, if possible on a laptop that you bring yourself, or on an external USB-drive). If you don't have data to work with, please let us know in time so that we can think about an alternative. We have plenty of tutorial data available, so this can be used to practice your data analysis skills.  
 
 ### Test your MATLAB and FieldTrip installation in advance
 
