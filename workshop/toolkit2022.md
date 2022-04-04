@@ -19,65 +19,69 @@ We will inform you as to whether you obtained a place in this course not later t
 
 ### Monday May 9, 2022
 
-| 09:00-09:30 | Registration and coffee |
-| 09:30-10:00 | Welcome |
-| 10:00-11:00 | Data acquisition demonstration in the EEG and MEG labs |
-| 11:00-11:15 | Coffee Break |
+| 09:00-09:30 | Registration and coffee|
+| 09:30-10:00 | Welcome|
+| 10:00-11:00 | Data acquisition demonstration in the EEG and MEG labs|
+| 11:00-11:15 | Coffee Break|
 | 11:15-12:30 | Introduction to EEG/MEG and introduction to the FieldTrip toolbox - [lecture](/assets/pdf/workshop/toolkit2022/introduction.pdf)|
-| 12:30-13:30 | Lunch |
+| 12:30-13:30 | Lunch|
 | 13:30-15:45 | Pre-processing - [hands-on](/tutorial/eventrelatedaveraging)|
-| 15:45-16:00 | Tea Break |
-| 16:00-17:30 | FieldTrip playground, apply your newly acquired knowledge and skills on your own data |
+| 15:45-16:00 | Tea Break|
+| 16:00-17:30 | FieldTrip playground, apply your newly acquired knowledge and skills on your own data|
+
 
 
 ### Tuesday May 10, 2022
 
-| 09:00-09:30 | Morning chill or workout |
-| 09:45-11:00 | Lecture (t.b.a) |
-| 11:00-11:15 | Coffee Break |
-| 11:15-12:30 | Time frequency analysis of power - [lecture](/assets/pdf/workshop/toolkit2022/frequency.pdf) |
-| 12:30-13:30 | Lunch |
-| 13:30-15:45 | Time-frequency analysis of power - [hands-on](/tutorial/timefrequencyanalysis) |
-| 15:45-16:00 | Tea Break |
-| 16:00-17:30 | FieldTrip playground, apply your newly acquired knowledge and skills on your own data |
-| 18:30-22:00 | Drinks & dinner at Mi Barrio |
+| 09:00-09:30 | Morning chill or workout|
+| 09:45-11:00 | Lecture (t.b.a)|
+| 11:00-11:15 | Coffee Break|
+| 11:15-12:30 | Time frequency analysis of power - [lecture](/assets/pdf/workshop/toolkit2022/frequency.pdf)|
+| 12:30-13:30 | Lunch|
+| 13:30-15:45 | Time-frequency analysis of power - [hands-on](/tutorial/timefrequencyanalysis)|
+| 15:45-16:00 | Tea Break|
+| 16:00-17:30 | FieldTrip playground, apply your newly acquired knowledge and skills on your own data|
+| 18:30-22:00 | Drinks & dinner at Mi Barrio|
+
 
 
 ### Wednesday May 11, 2022
 
-| 09:00-09:30 | Morning chill or workout |
-| 09:45-11:00 | Forward and inverse - [lecture](/assets/pdf/workshop/toolkit2022/forward_inverse.pdf) |
-| 11:00-11:15 | Coffee Break |
-| 11:15-12:30 | Source reconstruction using beamformers - [lecture](/assets/pdf/workshop/toolkit2022/beamforming.pdf) |
-| 12:30-13:30 | Lunch |
-| 13:30-15:45 | Beamforming - [hands-on](/tutorial/beamformer) |
-| 15:45-16:00 | Tea Break |
-| 16:00-17:30 | FieldTrip playground, apply your newly acquired knowledge and skills on your own data |
-| 18:00-22:00 | Pizza, drinks, joint projects and hacking (optional) |
+| 09:00-09:30 | Morning chill or workout|
+| 09:45-11:00 | Forward and inverse - [lecture](/assets/pdf/workshop/toolkit2022/forward_inverse.pdf)|
+| 11:00-11:15 | Coffee Break|
+| 11:15-12:30 | Source reconstruction using beamformers - [lecture](/assets/pdf/workshop/toolkit2022/beamforming.pdf)|
+| 12:30-13:30 | Lunch|
+| 13:30-15:45 | Beamforming - [hands-on](/tutorial/beamformer)|
+| 15:45-16:00 | Tea Break|
+| 16:00-17:30 | FieldTrip playground, apply your newly acquired knowledge and skills on your own data|
+| 18:00-22:00 | Pizza, drinks, joint projects and hacking (optional)|
+
 
 
 ### Thursday May 12, 2022
 
-| 09:00-09:30 | Morning chill or workout |
-| 09:45-11:00 | Connectivity analysis in MEG and EEG data - [lecture](/assets/pdf/workshop/toolkit2022/connectivity.pdf) |
-| 11:00-11:15 | Coffee Break |
-| 11:15-12:30 | Statistics using non-parametric randomization techniques - [lecture](/assets/pdf/workshop/toolkit2022/statistics.pdf) |
-| 12:30-13:30 | Lunch |
-| 13:30-15:45 | Statistics - [hands-on](/tutorial/cluster_permutation_timelock) |
-| 15:45-16:00 | Tea Break |
-| 16:00-17:30 | FieldTrip playground, apply your newly acquired knowledge on your own data |
+| 09:00-09:30 | Morning chill or workout|
+| 09:45-11:00 | Connectivity analysis in MEG and EEG data - [lecture](/assets/pdf/workshop/toolkit2022/connectivity.pdf)|
+| 11:00-11:15 | Coffee Break|
+| 11:15-12:30 | Statistics using non-parametric randomization techniques - [lecture](/assets/pdf/workshop/toolkit2022/statistics.pdf)|
+| 12:30-13:30 | Lunch|
+| 13:30-15:45 | Statistics - [hands-on](/tutorial/cluster_permutation_timelock)|
+| 15:45-16:00 | Tea Break|
+| 16:00-17:30 | FieldTrip playground, apply your newly acquired knowledge on your own data|
 
 
-### Friday MAy 13, 2022
 
-| 09:00-09:30 | Morning chill or workout |
+### Friday May 13, 2022
+
+| 09:00-09:30 | Morning chill or workout|
 | 09:45-11:00 | Lecture good scientific practices - [lecture](/assets/pdf/workshop/toolkit2022/openscience.pdf)|
-| 11:00-11:15 | Coffee Break |
-| 11:15-12:30 | FieldTrip playground, apply your newly acquired knowledge and skills on your own data |
-| 12:30-13:30 | Lunch |
-| 13:30-15:45 | FieldTrip playground, apply your newly acquired knowledge and skills on your own data |
-| 15:45-16:00 | Tea Break |
-| 16:00-16:30 | Evaluation and testimonials |
+| 11:00-11:15 | Coffee Break|
+| 11:15-12:30 | FieldTrip playground, apply your newly acquired knowledge and skills on your own data|
+| 12:30-13:30 | Lunch|
+| 13:30-15:45 | FieldTrip playground, apply your newly acquired knowledge and skills on your own data|
+| 15:45-16:00 | Tea Break|
+| 16:00-16:30 | Evaluation and testimonials|
 
 ## Practicalities
 
