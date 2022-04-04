@@ -23,11 +23,11 @@ We will inform you as to whether you obtained a place in this course not later t
 | 09:30-10:00 | Welcome |
 | 10:00-11:00 | Data acquisition demonstration in the EEG and MEG labs |
 | 11:00-11:15 | Coffee Break |
-| 11:15-12:30 | Introduction to EEG/MEG and introduction to the FieldTrip toolbox - [lecture](/assets/pdf/workshop/toolkit2022/introduction.pdf) |
+| 11:15-12:30 | Introduction to EEG/MEG and introduction to the FieldTrip toolbox - [lecture](/assets/pdf/workshop/toolkit2022/introduction.pdf)|
 | 12:30-13:30 | Lunch |
-| 13:30-15:45 | Pre-processing - [hands-on](/tutorial/eventrelatedaveraging) |
+| 13:30-15:45 | Pre-processing - [hands-on](/tutorial/eventrelatedaveraging)|
 | 15:45-16:00 | Tea Break |
-| 16:00-17:30 | FieldTrip playground, apply your newly acquired knowledge and skills on your own data
+| 16:00-17:30 | FieldTrip playground, apply your newly acquired knowledge and skills on your own data |
 
 
 ### Tuesday May 10, 2022
@@ -50,7 +50,7 @@ We will inform you as to whether you obtained a place in this course not later t
 | 11:00-11:15 | Coffee Break |
 | 11:15-12:30 | Source reconstruction using beamformers - [lecture](/assets/pdf/workshop/toolkit2022/beamforming.pdf) |
 | 12:30-13:30 | Lunch |
-| 13:30-15:45 Beamforming - [hands-on](/tutorial/beamformer) |
+| 13:30-15:45 | Beamforming - [hands-on](/tutorial/beamformer) |
 | 15:45-16:00 | Tea Break |
 | 16:00-17:30 | FieldTrip playground, apply your newly acquired knowledge and skills on your own data |
 | 18:00-22:00 | Pizza, drinks, joint projects and hacking (optional) |
