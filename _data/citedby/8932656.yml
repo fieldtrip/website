@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '35302856'
+- idtype: doi
+  value: 10.1126/sciadv.abl6037
+- idtype: pmcid
+  value: PMC8932656
+authors:
+- authtype: Author
+  name: Staudigl T
+- authtype: Author
+  name: Minxha J
+- authtype: Author
+  name: Mamelak AN
+- authtype: Author
+  name: Gothard KM
+- authtype: Author
+  name: Rutishauser U
+epubdate: 2022 Mar 18
+fulljournalname: Science Advances
+issue: '11'
+pages: eabl6037
+pmclivedate: 2022/03/31
+printpubdate: ''
+pubdate: 2022 Mar 18
+sortdate: 2022/03/18 00:00
+source: Sci Adv
+title: Saccade-related neural communication in the human medial temporal lobe is modulated
+  by the social relevance of stimuli
+uid: '8932656'
+volume: '8'

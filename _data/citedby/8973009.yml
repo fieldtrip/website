@@ -1,0 +1,47 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fnhum.2022.780047
+- idtype: pmcid
+  value: PMC8973009
+authors:
+- authtype: Author
+  name: Keogh C
+- authtype: Author
+  name: Deli A
+- authtype: Author
+  name: Zand AP
+- authtype: Author
+  name: Zorman MJ
+- authtype: Author
+  name: Boccard-Binet SG
+- authtype: Author
+  name: Parrott M
+- authtype: Author
+  name: Sigalas C
+- authtype: Author
+  name: Weiss AR
+- authtype: Author
+  name: Stein JF
+- authtype: Author
+  name: FitzGerald JJ
+- authtype: Author
+  name: Aziz TZ
+- authtype: Author
+  name: Green AL
+- authtype: Author
+  name: Gillies MJ
+epubdate: 2022 Mar 18
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '780047'
+pmclivedate: 2022/04/02
+printpubdate: ''
+pubdate: 2022 Mar 18
+sortdate: 2022/03/18 00:00
+source: Front Hum Neurosci
+title: Spatial and Temporal Distribution of Information Processing in the Human Dorsal
+  Anterior Cingulate Cortex
+uid: '8973009'
+volume: '16'

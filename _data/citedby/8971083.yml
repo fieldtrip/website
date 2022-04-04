@@ -1,0 +1,47 @@
+articleids:
+- idtype: pmid
+  value: '34470045'
+- idtype: doi
+  value: 10.1093/cercor/bhab251
+- idtype: pmcid
+  value: PMC8971083
+authors:
+- authtype: Author
+  name: Dastolfo-Hromack C
+- authtype: Author
+  name: Bush A
+- authtype: Author
+  name: Chrabaszcz A
+- authtype: Author
+  name: Alhourani A
+- authtype: Author
+  name: Lipski W
+- authtype: Author
+  name: Wang D
+- authtype: Author
+  name: Crammond DJ
+- authtype: Author
+  name: Shaiman S
+- authtype: Author
+  name: Dickey MW
+- authtype: Author
+  name: Holt LL
+- authtype: Author
+  name: Turner RS
+- authtype: Author
+  name: Fiez JA
+- authtype: Author
+  name: Richardson RM
+epubdate: 2021 Sep 1
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '7'
+pages: 1337-1349
+pmclivedate: ''
+printpubdate: ''
+pubdate: 2021 Sep 1
+sortdate: 2021/09/01 00:00
+source: Cereb Cortex
+title: Articulatory Gain Predicts Motor Cortex and Subthalamic Nucleus Activity During
+  Speech
+uid: '8971083'
+volume: '32'

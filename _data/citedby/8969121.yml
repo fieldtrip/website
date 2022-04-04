@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '35104323'
+- idtype: doi
+  value: 10.1162/jocn_a_01824
+- idtype: pmcid
+  value: PMC8969121
+- idtype: MID
+  value: NIHMS1785057
+authors:
+- authtype: Author
+  name: Mushtaq F
+- authtype: Author
+  name: McDougle SD
+- authtype: Author
+  name: Craddock MP
+- authtype: Author
+  name: Parvin DE
+- authtype: Author
+  name: Brookes J
+- authtype: Author
+  name: Schaefer A
+- authtype: Author
+  name: Mon-Williams M
+- authtype: Author
+  name: Taylor JA
+- authtype: Author
+  name: Ivry RB
+epubdate: ''
+fulljournalname: Journal of cognitive neuroscience
+issue: '5'
+pages: 748-765
+pmclivedate: 2022/03/31
+printpubdate: 2022 Mar 31
+pubdate: 2022 Mar 31
+sortdate: 2022/03/31 00:00
+source: J Cogn Neurosci
+title: Distinct Neural Signatures of Outcome Monitoring After Selection and Execution
+  Errors
+uid: '8969121'
+volume: '34'

@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '35119502'
+- idtype: doi
+  value: 10.1007/s00429-022-02453-6
+- idtype: pmcid
+  value: PMC8930884
+authors:
+- authtype: Author
+  name: Esposito R
+- authtype: Author
+  name: Bortoletto M
+- authtype: Author
+  name: Zacà D
+- authtype: Author
+  name: Avesani P
+- authtype: Author
+  name: Miniussi C
+epubdate: 2022 Feb 4
+fulljournalname: Brain Structure & Function
+issue: '3'
+pages: 1133-1144
+pmclivedate: 2022/04/01
+printpubdate: '2022'
+pubdate: 2022 Feb 4
+sortdate: 2022/02/04 00:00
+source: Brain Struct Funct
+title: An integrated TMS-EEG and MRI approach to explore the interregional connectivity
+  of the default mode network
+uid: '8930884'
+volume: '227'

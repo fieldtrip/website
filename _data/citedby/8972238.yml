@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '34519338'
+- idtype: doi
+  value: 10.1093/scan/nsab106
+- idtype: pmcid
+  value: PMC8972238
+authors:
+- authtype: Author
+  name: Levy J
+- authtype: Author
+  name: Goldstein A
+- authtype: Author
+  name: Influs M
+- authtype: Author
+  name: Masalha S
+- authtype: Author
+  name: Feldman R
+epubdate: 2021 Sep 14
+fulljournalname: Social Cognitive and Affective Neuroscience
+issue: '4'
+pages: 408-420
+pmclivedate: 2022/04/01
+printpubdate: ''
+pubdate: 2021 Sep 14
+sortdate: 2021/09/14 00:00
+source: Soc Cogn Affect Neurosci
+title: 'Neural rhythmic underpinnings of intergroup bias: implications for peace-building
+  attitudes and dialogue'
+uid: '8972238'
+volume: '17'

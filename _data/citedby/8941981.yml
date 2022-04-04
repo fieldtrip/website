@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '34796568'
+- idtype: doi
+  value: 10.1111/ejn.15535
+- idtype: pmcid
+  value: PMC8941981
+authors:
+- authtype: Author
+  name: Wu Z
+- authtype: Author
+  name: Kavanova M
+- authtype: Author
+  name: Hickman L
+- authtype: Author
+  name: Boschin EA
+- authtype: Author
+  name: Galeazzi JM
+- authtype: Author
+  name: Verhagen L
+- authtype: Author
+  name: Ainsworth M
+- authtype: Author
+  name: Pedreira C
+- authtype: Author
+  name: Buckley MJ
+epubdate: 2021 Dec 2
+fulljournalname: The European Journal of Neuroscience
+issue: '11'
+pages: 7918-7945
+pmclivedate: 2022/03/31
+printpubdate: 2021 Dec
+pubdate: 2021 Dec 2
+sortdate: 2021/12/02 00:00
+source: Eur J Neurosci
+title: Low‐beta repetitive transcranial magnetic stimulation to human dorsolateral
+  prefrontal cortex during object recognition memory sample presentation, at a task‐related
+  frequency observed in local field potentials in homologous macaque cortex, impairs
+  subsequent recollection but not familiarity
+uid: '8941981'
+volume: '54'
