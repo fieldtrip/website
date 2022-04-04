@@ -27,7 +27,7 @@ We will inform you as to whether you obtained a place in this course not later t
 | 12:30-13:30 | Lunch|
 | 13:30-15:45 | Pre-processing - [hands-on](/tutorial/eventrelatedaveraging)|
 | 15:45-16:00 | Tea Break|
-| 16:00-17:30 | FieldTrip playground, apply your newly acquired knowledge and skills on your own data|
+| 16:00-17:30 | FieldTrip playground, apply your newly acquired knowledge and skills|
 
 
 
@@ -40,7 +40,7 @@ We will inform you as to whether you obtained a place in this course not later t
 | 12:30-13:30 | Lunch|
 | 13:30-15:45 | Time-frequency analysis of power - [hands-on](/tutorial/timefrequencyanalysis)|
 | 15:45-16:00 | Tea Break|
-| 16:00-17:30 | FieldTrip playground, apply your newly acquired knowledge and skills on your own data|
+| 16:00-17:30 | FieldTrip playground, apply your newly acquired knowledge and skills|
 | 18:30-22:00 | Drinks & dinner at Mi Barrio|
 
 
@@ -54,7 +54,7 @@ We will inform you as to whether you obtained a place in this course not later t
 | 12:30-13:30 | Lunch|
 | 13:30-15:45 | Beamforming - [hands-on](/tutorial/beamformer)|
 | 15:45-16:00 | Tea Break|
-| 16:00-17:30 | FieldTrip playground, apply your newly acquired knowledge and skills on your own data|
+| 16:00-17:30 | FieldTrip playground, apply your newly acquired knowledge and skills|
 | 18:00-22:00 | Pizza, drinks, joint projects and hacking (optional)|
 
 
@@ -68,7 +68,7 @@ We will inform you as to whether you obtained a place in this course not later t
 | 12:30-13:30 | Lunch|
 | 13:30-15:45 | Statistics - [hands-on](/tutorial/cluster_permutation_timelock)|
 | 15:45-16:00 | Tea Break|
-| 16:00-17:30 | FieldTrip playground, apply your newly acquired knowledge on your own data|
+| 16:00-17:30 | FieldTrip playground, apply your newly acquired knowledge|
 
 
 
@@ -77,9 +77,9 @@ We will inform you as to whether you obtained a place in this course not later t
 | 09:00-09:30 | Morning chill or workout|
 | 09:45-11:00 | Lecture good scientific practices - [lecture](/assets/pdf/workshop/toolkit2022/openscience.pdf)|
 | 11:00-11:15 | Coffee Break|
-| 11:15-12:30 | FieldTrip playground, apply your newly acquired knowledge and skills on your own data|
+| 11:15-12:30 | FieldTrip playground, apply your newly acquired knowledge and skills|
 | 12:30-13:30 | Lunch|
-| 13:30-15:45 | FieldTrip playground, apply your newly acquired knowledge and skills on your own data|
+| 13:30-15:45 | FieldTrip playground, apply your newly acquired knowledge and skills|
 | 15:45-16:00 | Tea Break|
 | 16:00-16:30 | Evaluation and testimonials|
 
