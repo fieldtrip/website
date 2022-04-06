@@ -91,6 +91,32 @@ A large part of the toolkit will consist of playground sessions, in which ideall
 
 For the hands-on sessions you will work on a PC that is provided by us. If you want, you can work on your own computer during the FieldTrip playground. If that's the case, we recommend that you [test your MATLAB and FieldTrip installation in advance](/workshop/toolkit2022/test_installation).
 
+
+## Getting started with the hands-on sessions
+
+For the hands-on sessions we will use MATLAB R2021b, which you can start from the Desktop shortcut. To ensure that everything runs smooth, we will work with a clean and well-tested version of FieldTrip that we have installed on all computers and that we will bring on on a USB stick. Importantly, the tutorial data does not have to be downloaded but will also be distributed on the computers and available on the USB stick.
+
+{% include markup/danger %}
+Please do not use another MATLAB version than 2021b. It should be available on all hands-on computers.
+{% include markup/end %}
+
+A recent copy of FieldTrip and the data have been preinstalled on the computer and you do not have to download anything. Also, it should NOT be necessary to execute the following lines of code. These are only needed if you DO NOT start the MATLAB from the Desktop shortcut. In other words, you will probably always want to start MATLAB from the Desktop shortcut.
+
+    restoredefaultpath
+    addpath("H:\common\matlab\fieldtrip")
+    ft_defaults
+
+    cd D:\toolkit2018
+
+The `restoredefaultpath` command clears your path, keeping only the official MATLAB toolboxes. The addpath statement adds the present working directory, i.e. the directory containing the FieldTrip main functions. The `ft_defaults` command ensures that all required subdirectories are added to the path.
+
+{% include markup/danger %}
+In general, please do NOT use the graphical path management tool from MATLAB. In this hands-on session we'll manage the path from the command line, but in general you are much better off using the startup.m file than the path GUI.
+
+Furthermore, please do NOT add FieldTrip with all subdirectories, subdirectories will be added automatically when needed, and only when needed (see this [FAQ](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path).
+{% include markup/end %}
+
+
 ## Code of conduct
 
 Please spend a couple of minutes to have a look at our [Code of Conduct](/workshop/toolkit2022/code_of_conduct) to make sure we all are taking responsibility to look after each other and make sure we are contributing towards an inclusive and supportive community. Please let us know if you have any questions regarding it. All toolkit participants are responsible to follow the rules listed here, as well as making sure that everyone in the toolkit follows it.
