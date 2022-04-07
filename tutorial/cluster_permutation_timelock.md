@@ -293,6 +293,7 @@ To plot the data use the following for-loop:
        cfg.commentpos  = 'title';
        cfg.layout      = 'CTF151_helmet.mat';
        cfg.interactive = 'no';
+       cfg.figure      = 'gca'; % plots in the current axes, here in a subplot
        ft_topoplotER(cfg, raweffectFICvsFC);
     end
 
@@ -385,16 +386,17 @@ Using the following configuration for **[ft_topoplotER](/reference/ft_topoplotER
 
     for k = 1:20;
        subplot(4,5,k);
-       cfg = [];
-       cfg.xlim =[j(k) j(k+1)];
-       cfg.zlim = [-1.0e-13 1.0e-13];
-       pos_int = zeros(numel(raweffectFICvsFC.label),1);
-       pos_int(i1) = all(pos(i2, m(k):m(k+1)), 2);
-       cfg.highlight = 'on';
+       cfg                  = [];
+       cfg.xlim             = [j(k) j(k+1)];
+       cfg.zlim             = [-1.0e-13 1.0e-13];
+       pos_int              = zeros(numel(raweffectFICvsFC.label),1);
+       pos_int(i1)          = all(pos(i2, m(k):m(k+1)), 2);
+       cfg.highlight        = 'on';
        cfg.highlightchannel = find(pos_int);
-       cfg.comment = 'xlim';
-       cfg.commentpos = 'title';
-       cfg.layout = 'CTF151_helmet.mat';
+       cfg.comment          = 'xlim';
+       cfg.commentpos       = 'title';
+       cfg.layout           = 'CTF151_helmet.mat';
+       cfg.figure           = 'gca';
        ft_topoplotER(cfg, raweffectFICvsFC);
     end
 
@@ -524,6 +526,7 @@ With the output, we can now create the plots
        cfg.comment    = 'xlim';
        cfg.commentpos = 'title';
        cfg.layout     = 'CTF151_helmet.mat';
+       cfg.figure     = 'gca';
        ft_topoplotER(cfg, GA_FICvsFC);
     end
 
