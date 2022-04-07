@@ -25,7 +25,7 @@ The CTF MEG system has (151 in this dataset, or 275 in newer systems) first-orde
 
 ## Procedure
 
-To calculate the event related field / potential for the example dataset we will perform the following step
+To calculate the event related field / potential for the example dataset we will perform the following steps:
 
 - Read the data into MATLAB using **[ft_definetrial](/reference/ft_definetrial)** and **[ft_preprocessing](/reference/ft_preprocessing)**
 - Seperate the trials from each condition using **[ft_selectdata](/reference/utilities/ft_selectdata)**
@@ -76,7 +76,7 @@ Subsequently you can save the data to disk.
       save dataFC_LP dataFC_LP
       save dataIC_LP dataIC_LP
 
-If preprocessing was done as described, the data will have the following field
+If preprocessing was done as described, the data structure will have the following fields:
 
     dataFIC_LP =
            hdr: [1x1 struct]
@@ -91,7 +91,7 @@ If preprocessing was done as described, the data will have the following field
 
 Note that 'dataFIC_LP.label' has 149 in stead of 151 labels since channels MLP31 and MLO12 were excluded. 'dataFIC-LP.trial' has 76 in stead of 87 trials because 10 trials were rejected because of artifacts.
 
-The most important fields are 'dataFIC_LP.trial' containing the individual trials and 'data.time' containing the time vector for each trial. To visualize the single trial data (trial 1) on one channel (channel 130) do the following
+The most important fields are 'dataFIC_LP.trial' containing the individual trials and 'data.time' containing the time vector for each trial. To visualize the single trial data (trial 1) of a single channel (channel 130) you can do the following:
 
     plot(dataFIC_LP.time{1}, dataFIC_LP.trial{1}(130,:))
 
@@ -115,7 +115,7 @@ The trials belonging to one condition will now be averaged with the onset of the
     avgFC = ft_timelockanalysis(cfg, dataFC_LP);
     avgIC = ft_timelockanalysis(cfg, dataIC_LP);
 
-The output is the data structure avgFIC with the following field
+The output is the data structure avgFIC with the following fields:
 
     avgFIC =
        time: [1x900 double]
@@ -147,7 +147,7 @@ Use **[ft_multiplotER](/reference/ft_multiplotER)** to plot all sensors in one f
 
 _Figure: The event related fields plotted using ft_multiplotER. The event related fields were calculated using ft_preprocessing followed by ft_timelockanalysis._
 
-This plots the event related fields for all sensors arranged topographically according to their position in the helmet. You can use the zoom button (magnifying glass) to enlarge parts of the figure. To plot all conditions list them as multiple variable
+This plots the event related fields for all sensors arranged topographically according to their position in the helmet. You can use the zoom button (magnifying glass) to enlarge parts of the figure. You can use multiple data arguments in the input, and these will be displayed together:
 
     cfg = [];
     cfg.showlabels = 'no';
@@ -162,7 +162,7 @@ This plots the event related fields for all sensors arranged topographically acc
 
 _Figure: The event related fields for three conditions plotted simultaneously using ft_multiplotER._
 
-To plot one sensor data use **[ft_singleplotER](/reference/ft_singleplotER)** and specify the name of the channel you are interested in, for instance MLC2
+To plot the data of a single sensor you can use **[ft_singleplotER](/reference/ft_singleplotER)** while specifying the name of the channel you are interested in, for instance MLC24:
 
     cfg = [];
     cfg.xlim = [-0.2 1.0];
@@ -175,7 +175,7 @@ To plot one sensor data use **[ft_singleplotER](/reference/ft_singleplotER)** an
 
 _Figure: The event related fields plotted for three conditions for sensor MLC24 using ft_singleplotER._
 
-To plot the topographic distribution of the data averaged over the time interval from 0.3 to 0.5 seconds use to following command
+To plot the topographic distribution of the data averaged over the time interval from 0.3 to 0.5 seconds you can use the following command:
 
     cfg = [];
     cfg.xlim = [0.3 0.5];
@@ -187,13 +187,13 @@ To plot the topographic distribution of the data averaged over the time interval
 
 _Figure: A topographic plot of the event related fields obtained using ft_topoplotER._
 
-To plot a sequence of topographic plots define the time intervals in cfg.xlim
+To plot a sequence of topographic plots you can define cfg.xlim to be a vector:
 
-    cfg = [];
-    cfg.xlim = [-0.2 : 0.1 : 1.0];  % Define 12 time intervals
-    cfg.zlim = [-2e-13 2e-13];      % Set the 'color' limits.
+    cfg        = [];
+    cfg.xlim   = [-0.2 : 0.1 : 1.0];  % Define 12 time intervals
+    cfg.zlim   = [-2e-13 2e-13];      % Set the 'color' limits.
     cfg.layout = 'CTF151_helmet.mat';
-    clf;
+    cfg.figure = 'new';
     ft_topoplotER(cfg, avgFIC);
 
 {% include image src="/assets/img/tutorial/eventrelatedaveraging/topoplot_timeserie_4mar20_erf.png" width="700" %}
@@ -216,11 +216,11 @@ Which type of source configuration can explain the topography?
 
 ## Calculate the planar gradient
 
-With **[ft_megplanar](/reference/ft_megplanar)** we calculate the planar gradient of the averaged data. **[Ft_megplanar](/reference/ft_megplanar)** is used to compute the amplitude of the planar gradient by combining the horizontal and vertical components of the planar gradient;
+With **[ft_megplanar](/reference/ft_megplanar)** we calculate the planar gradient of the averaged data. **[Ft_megplanar](/reference/ft_megplanar)** is used to compute the gradient of the magnetic field that is tangential to the head surface. This leads to a 2-dimensional signal at each of the sensor locations, which are denoted as 'horizontal' and 'vertical' components of the planar gradient. This terminology is based on the analogy with a 2-dimensional Cartesian coordinate system, with a horizontal and vertical axis: the gradient axes are not 'horizontal' and 'vertical' w.r.t. the surroundings.
 
-The planar gradient at a given sensor location can be approximated by comparing the field at that sensor with its neighbors (i.e. finite difference estimate of the derivative). The planar gradient at one location is computed in both the horizontal and the vertical direction with the FieldTrip function **[ft_megplanar](/reference/ft_megplanar)**. These two orthogonal gradients on a single sensor location can be combined using Pythagoras rule with the FieldTrip function **[ft_combineplanar](/reference/ft_combineplanar)**.
+The planar gradient at a given sensor location can be approximated by comparing the field at that sensor with its neighbors (i.e. by means of a finite difference estimate of the derivative). To compute the magnitude of the gradient, the two orthogonal gradients on a single sensor location can be combined using Pythagoras rule with the FieldTrip function **[ft_combineplanar](/reference/ft_combineplanar)**.
 
-Calculate the planar gradient of the averaged data
+Calculate the planar gradient of the averaged data:
 
     cfg                 = [];
     cfg.feedback        = 'yes';
@@ -230,16 +230,16 @@ Calculate the planar gradient of the averaged data
     cfg.planarmethod    = 'sincos';
     avgFICplanar        = ft_megplanar(cfg, avgFIC);
 
-Compute the amplitude of the planar gradient by combining the horizontal and vertical components of the planar gradient according to Pythagoras rul
+Compute the magnitude of the planar gradient by combining the horizontal and vertical components of the planar gradient according to Pythagoras rule:
 
     cfg = [];
     avgFICplanarComb = ft_combineplanar(cfg, avgFICplanar);
 
 ## Plot the results (planar gradients)
 
-To compare the axial gradient data to the planar gradient data we plot them both in one figure here
+To compare the axial gradient data to the planar gradient data we plot them both in one figure here.
 
-Plot the results of the field of the axial gradiometers and the planar gradient to compare the
+Plot the results of the field of the axial gradiometers and the planar gradient to compare the topographies:
 
     clf
 
