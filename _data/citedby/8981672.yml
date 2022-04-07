@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1186/s10194-022-01410-2
+- idtype: pmcid
+  value: PMC8981672
+authors:
+- authtype: Author
+  name: Fong CY
+- authtype: Author
+  name: Law WH
+- authtype: Author
+  name: Fahrenfort JJ
+- authtype: Author
+  name: Braithwaite JJ
+- authtype: Author
+  name: Mazaheri A
+epubdate: 2022 Apr 5
+fulljournalname: The Journal of Headache and Pain
+issue: '1'
+pages: '44'
+pmclivedate: 2022/04/06
+printpubdate: ''
+pubdate: 2022 Apr 5
+sortdate: 2022/04/05 00:00
+source: J Headache Pain
+title: Attenuated alpha oscillation and hyperresponsiveness reveals impaired perceptual
+  learning in migraineurs
+uid: '8981672'
+volume: '23'

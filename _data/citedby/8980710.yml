@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fpsyg.2022.765602
+- idtype: pmcid
+  value: PMC8980710
+authors:
+- authtype: Author
+  name: Creaser JL
+- authtype: Author
+  name: Storr J
+- authtype: Author
+  name: Karl A
+epubdate: 2022 Mar 22
+fulljournalname: Frontiers in Psychology
+issue: ''
+pages: '765602'
+pmclivedate: 2022/04/06
+printpubdate: ''
+pubdate: 2022 Mar 22
+sortdate: 2022/03/22 00:00
+source: Front Psychol
+title: Brain Responses to a Self-Compassion Induction in Trauma Survivors With and
+  Without Post-traumatic Stress Disorder
+uid: '8980710'
+volume: '13'
