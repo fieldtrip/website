@@ -1,0 +1,45 @@
+articleids:
+- idtype: pmid
+  value: '35247646'
+- idtype: doi
+  value: 10.1016/j.brs.2022.02.017
+- idtype: pmcid
+  value: PMC8985164
+- idtype: MID
+  value: NIHMS1789176
+authors:
+- authtype: Author
+  name: Paulk AC
+- authtype: Author
+  name: Zelmann R
+- authtype: Author
+  name: Crocker B
+- authtype: Author
+  name: Widge AS
+- authtype: Author
+  name: Dougherty DD
+- authtype: Author
+  name: Eskandar EN
+- authtype: Author
+  name: Weisholtz DS
+- authtype: Author
+  name: Richardson RM
+- authtype: Author
+  name: Cosgrove GR
+- authtype: Author
+  name: Williams ZM
+- authtype: Author
+  name: Cash SS
+epubdate: 2022 Mar 2
+fulljournalname: Brain stimulation
+issue: '2'
+pages: 491-508
+pmclivedate: ''
+printpubdate: 2022 Mar-Apr
+pubdate: 2022 Mar 2
+sortdate: 2022/03/02 00:00
+source: Brain Stimul
+title: Local and distant cortical responses to single pulse intracranial stimulation
+  in the human brain are differentially modulated by specific stimulation parameters
+uid: '8985164'
+volume: '15'
