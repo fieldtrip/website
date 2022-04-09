@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fneur.2022.799696
+- idtype: pmcid
+  value: PMC8985754
+authors:
+- authtype: Author
+  name: Sanmartino F
+- authtype: Author
+  name: Cruz-Gómez ÁJ
+- authtype: Author
+  name: Rashid-López R
+- authtype: Author
+  name: Lozano-Soto E
+- authtype: Author
+  name: López-Sosa F
+- authtype: Author
+  name: Zuazo A
+- authtype: Author
+  name: Riqué-Dormido J
+- authtype: Author
+  name: Espinosa-Rosso R
+- authtype: Author
+  name: González-Rosa JJ
+epubdate: 2022 Mar 23
+fulljournalname: Frontiers in Neurology
+issue: ''
+pages: '799696'
+pmclivedate: 2022/04/07
+printpubdate: ''
+pubdate: 2022 Mar 23
+sortdate: 2022/03/23 00:00
+source: Front Neurol
+title: 'Subthalamic Beta Activity in Parkinson''s Disease May Be Linked to Dorsal
+  Striatum Gray Matter Volume and Prefrontal Cortical Thickness: A Pilot Study'
+uid: '8985754'
+volume: '13'
