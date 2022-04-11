@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1098/rsos.211769
+- idtype: pmcid
+  value: PMC8984299
+authors:
+- authtype: Author
+  name: Bálint A
+- authtype: Author
+  name: Eleőd H
+- authtype: Author
+  name: Magyari L
+- authtype: Author
+  name: Kis A
+- authtype: Author
+  name: Gácsi M
+epubdate: 2022 Apr 6
+fulljournalname: Royal Society Open Science
+issue: '4'
+pages: '211769'
+pmclivedate: 2022/04/08
+printpubdate: ''
+pubdate: 2022 Apr 6
+sortdate: 2022/04/06 00:00
+source: R Soc Open Sci
+title: Differences in dogs’ event-related potentials in response to human and dog
+  vocal stimuli; a non-invasive study
+uid: '8984299'
+volume: '9'

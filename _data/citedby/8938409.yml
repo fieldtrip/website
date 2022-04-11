@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '35314718'
+- idtype: doi
+  value: 10.1038/s41597-022-01173-0
+- idtype: pmcid
+  value: PMC8938409
+authors:
+- authtype: Author
+  name: Berezutskaya J
+- authtype: Author
+  name: Vansteensel MJ
+- authtype: Author
+  name: Aarnoutse EJ
+- authtype: Author
+  name: Freudenburg ZV
+- authtype: Author
+  name: Piantoni G
+- authtype: Author
+  name: Branco MP
+- authtype: Author
+  name: Ramsey NF
+epubdate: 2022 Mar 21
+fulljournalname: Scientific Data
+issue: ''
+pages: '91'
+pmclivedate: 2022/04/08
+printpubdate: ''
+pubdate: 2022 Mar 21
+sortdate: 2022/03/21 00:00
+source: Sci Data
+title: Open multimodal iEEG-fMRI dataset from naturalistic stimulation with a short
+  audiovisual film
+uid: '8938409'
+volume: '9'

@@ -1,0 +1,53 @@
+articleids:
+- idtype: pmid
+  value: '33963966'
+- idtype: doi
+  value: 10.1007/s10803-021-05043-3
+- idtype: pmcid
+  value: PMC8938373
+authors:
+- authtype: Author
+  name: Pobric G
+- authtype: Author
+  name: Taylor JR
+- authtype: Author
+  name: Ramalingam HM
+- authtype: Author
+  name: Pye E
+- authtype: Author
+  name: Robinson L
+- authtype: Author
+  name: Vassallo G
+- authtype: Author
+  name: Jung J
+- authtype: Author
+  name: Bhandary M
+- authtype: Author
+  name: Szumanska-Ryt K
+- authtype: Author
+  name: Theodosiou L
+- authtype: Author
+  name: Evans DG
+- authtype: Author
+  name: Eelloo J
+- authtype: Author
+  name: Burkitt-Wright E
+- authtype: Author
+  name: Hulleman J
+- authtype: Author
+  name: Green J
+- authtype: Author
+  name: Garg S
+epubdate: 2021 May 8
+fulljournalname: Journal of Autism and Developmental Disorders
+issue: '4'
+pages: 1478-1494
+pmclivedate: 2022/04/07
+printpubdate: '2022'
+pubdate: 2021 May 8
+sortdate: 2021/05/08 00:00
+source: J Autism Dev Disord
+title: Cognitive and Electrophysiological Correlates of Working Memory Impairments
+  in Neurofibromatosis Type 1
+uid: '8938373'
+volume: '52'

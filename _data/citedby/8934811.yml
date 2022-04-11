@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1007/s11571-021-09711-z
+- idtype: pmcid
+  value: PMC8934811
+authors:
+- authtype: Author
+  name: Li J
+- authtype: Author
+  name: Hong B
+- authtype: Author
+  name: Nolte G
+- authtype: Author
+  name: Engel AK
+- authtype: Author
+  name: Zhang D
+epubdate: 2021 Aug 31
+fulljournalname: Cognitive Neurodynamics
+issue: '2'
+pages: 337-352
+pmclivedate: ''
+printpubdate: 2022 Apr
+pubdate: 2021 Aug 31
+sortdate: 2021/08/31 00:00
+source: Cogn Neurodyn
+title: Preparatory delta phase response is correlated with naturalistic speech comprehension
+  performance
+uid: '8934811'
+volume: '16'
