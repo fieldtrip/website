@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '35396521'
+- idtype: doi
+  value: 10.1038/s41598-022-09922-2
+- idtype: pmcid
+  value: PMC8993822
+authors:
+- authtype: Author
+  name: Nuttall R
+- authtype: Author
+  name: Jäger C
+- authtype: Author
+  name: Zimmermann J
+- authtype: Author
+  name: Archila-Melendez ME
+- authtype: Author
+  name: Preibisch C
+- authtype: Author
+  name: Taylor P
+- authtype: Author
+  name: Sauseng P
+- authtype: Author
+  name: Wohlschläger A
+- authtype: Author
+  name: Sorg C
+- authtype: Author
+  name: Dowsett J
+epubdate: 2022 Apr 8
+fulljournalname: Scientific Reports
+issue: ''
+pages: '5986'
+pmclivedate: 2022/04/11
+printpubdate: ''
+pubdate: 2022 Apr 8
+sortdate: 2022/04/08 00:00
+source: Sci Rep
+title: Evoked responses to rhythmic visual stimulation vary across sources of intrinsic
+  alpha activity in humans
+uid: '8993822'
+volume: '12'

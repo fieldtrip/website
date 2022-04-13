@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '33427693'
+- idtype: doi
+  value: 10.1556/2006.2020.00100
+- idtype: pmcid
+  value: PMC8969859
+authors:
+- authtype: Author
+  name: Heuer A
+- authtype: Author
+  name: Mennig M
+- authtype: Author
+  name: Schubö A
+- authtype: Author
+  name: Barke A
+epubdate: 2021 Jan 8
+fulljournalname: Journal of Behavioral Addictions
+issue: '1'
+pages: 77-87
+pmclivedate: 2022/04/11
+printpubdate: 2021 Apr
+pubdate: 2021 Jan 8
+sortdate: 2021/01/08 00:00
+source: J Behav Addict
+title: 'Impaired disengagement of attention from computer-related stimuli in Internet
+  Gaming Disorder: Behavioral and electrophysiological evidence'
+uid: '8969859'
+volume: '10'

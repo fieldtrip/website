@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1007/s42452-022-05027-7
+- idtype: pmcid
+  value: PMC8996204
+authors:
+- authtype: Author
+  name: Oyewola DO
+- authtype: Author
+  name: Dada EG
+epubdate: 2022 Apr 11
+fulljournalname: Sn Applied Sciences
+issue: '5'
+pages: '143'
+pmclivedate: 2022/04/11
+printpubdate: '2022'
+pubdate: 2022 Apr 11
+sortdate: 2022/04/11 00:00
+source: SN Appl Sci
+title: 'Exploring machine learning: a scientometrics approach using bibliometrix and
+  VOSviewer'
+uid: '8996204'
+volume: '4'
