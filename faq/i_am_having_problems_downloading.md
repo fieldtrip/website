@@ -1,6 +1,6 @@
 ---
 title: I am having problems downloading
-tags: [faq, download, ftp]
+tags: [faq, download]
 redirect_from:
   - /faq/i_am_having_problems_downloading_from_the_ftp_server/
 ---
