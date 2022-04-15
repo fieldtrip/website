@@ -80,20 +80,20 @@ FieldTrip is installed on the cluster, on /home/common/matlab/fieldtrip. (on Win
 
 For people that **do not** use a computer at the DCCN:
 
-Download the tutorial data required for the hands-on from the ftp server by going to <https://download.fieldtriptoolbox.org/tutorial/> and download   the file `Subject01.zip`. 
+Download the [Subject01.zip](https://download.fieldtriptoolbox.org/tutorial/Subject01.zip) tutorial data required for the hands-on.
 
-You should also download some pre-computed intermediate results for each tutorial: 	
+You should also download some pre-computed intermediate results for each tutorial. Please download all tutorial files in each directory, and keep them organized per directory.
 
 -  [eventrelatedaveraging](https://download.fieldtriptoolbox.org/tutorial/eventrelatedaveraging/)
 -  [timefrequencyanalysis](https://download.fieldtriptoolbox.org/tutorial/timefrequencyanalysis/)
 -  [beamformer](https://download.fieldtriptoolbox.org/tutorial/beamformer/)
--  [statistics](https://download.fieldtriptoolbox.org/tutorial/cluster_permutation_timelock/) (cluster_permutation_timelock)
+-  [statistics](https://download.fieldtriptoolbox.org/tutorial/cluster_permutation_timelock/)
 
-Downloading will take some time, especially if everyone tries to do it at the same moment. So please download in advance! If downloading from the FTP server in  the web browser gives problems, please try with another web browser, [CyberDuck](https://cyberduck.io), or [FileZilla](https://filezilla-project.org). You need to log in as guest (using anonymous log in) on ftp://ftp.fieldtriptoolbox.org, and you don't need a password for this.
+Downloading will take some time, especially if everyone tries to do it at the same moment. So please download in advance! If downloading from the FTP server in the web browser gives problems, please try with another web browser, [CyberDuck](https://cyberduck.io), or [FileZilla](https://filezilla-project.org). You need to log in as guest (using anonymous log in) on ftp://ftp.fieldtriptoolbox.org, and you don't need a password for this.
 
 For people that **do** use a computer at the DCCN (either a desktop PC via remote desktop or the DCCN compute cluster):
 
-The data needed for the tutorials are available on `/home/common`, so if you are working on the compute cluster at the DCCN, you don’t need to download this in  advance. If you insist on downloading the data in advance, you can follow the instructions below.
+The data needed for the tutorials are available on `/home/common`, so if you are working on the compute cluster at the DCCN, you don’t need to download this in advance. If you insist on downloading the data in advance, you can follow the instructions below.
 
 The raw MEG data set of ‘Subject01’, and associated data are located in `/home/common/matlab/fieldtrip/data`. Additional hands-on session specific data are located in  `/home/common/matlab/fieldtrip/data/ftp/tutorial`. These data are needed once we get to the respective hands-on session:
   

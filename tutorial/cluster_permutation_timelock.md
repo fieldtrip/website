@@ -60,7 +60,7 @@ In a between-trials experiment, we analyze the data of a single subject. By mean
 
 ### Reading in the data
 
-We will now read and preprocess the data. If you would like to continue directly with the already preprocessed data, you can download it from the FieldTrip FTP server ([dataFIC_LP.mat ](https://download.fieldtriptoolbox.org/tutorial/beamformer/dataFIC.mat) [& dataFC)LP.mat ](https://download.fieldtriptoolbox.org/tutorial/beamformer/dataFC.mat). Load the data into MATLAB with the  command 'load' and skip to Permutation test.
+We will now read and preprocess the data. If you would like to continue directly with the already preprocessed data, you can download it from [dataFIC_LP.mat](https://download.fieldtriptoolbox.org/tutorial/beamformer/dataFIC.mat) and [dataFC)LP.mat](https://download.fieldtriptoolbox.org/tutorial/beamformer/dataFC.mat). Load the data into MATLAB with the command 'load' and skip to Permutation test.
 
 Otherwise run the following code:
 
@@ -410,9 +410,9 @@ We now consider experiments involving multiple subjects that are each observed i
 
 ### Reading-in, preprocessing, timelockanalysis, planar gradient, and grandaveraging
 
-We now describe how we can statistically test the difference between the event-related averages for fully incongruent (FIC) and the fully congruent (FC) sentence endings. For this analysis we use planar gradient data. For convenience we will not do the reading-in and preprocessing steps on all subjects. Instead we begin by loading the timelock structures containing the event-related averages (of the planar gradient data) of all ten subjects. The data is available from the FieldTrip FTP server ([ERF_orig.mat](https://download.fieldtriptoolbox.org/tutorial/cluster_permutation_timelock/ERF_orig.mat)).
+We now describe how we can statistically test the difference between the event-related averages for fully incongruent (FIC) and the fully congruent (FC) sentence endings. For this analysis we use planar gradient data. For convenience we will not do the reading-in and preprocessing steps on all subjects. Instead we begin by loading the timelock structures containing the event-related averages (of the planar gradient data) of all ten subjects. The data is available from [ERF_orig.mat](https://download.fieldtriptoolbox.org/tutorial/cluster_permutation_timelock/ERF_orig.mat).
 
-    load ERF_orig;
+    load ERF_orig
 
 ERF_orig contains allsubjFIC and allsubjFC, each storing the event-related averages for the fully incongruent, and the fully congruent sentence endings, respectively.
 

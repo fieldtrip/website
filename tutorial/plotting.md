@@ -23,8 +23,7 @@ To determine which high-level functions are suitable for you depends on the type
 
 Let us start by loading some data.
 
-    % cd dccnpath('/home/common/matlab/fieldtrip/dataftp/tutorial/plotting')
-    cd '/Volumes/128GB/Google Drive/data_visualization_DS/Electrophys - data for hands-on/'
+    cd /home/common/matlab/fieldtrip/data/ftp/tutorial/plotting/
     load avgFC.mat
     load GA_FC.mat
     load TFRhann.mat

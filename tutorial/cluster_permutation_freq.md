@@ -279,12 +279,12 @@ To save:
 
 ### Permutation test
 
-You can download the planar gradient TFRs from the FieldTrip FTP server: [freqFIC_activation_planar_cmb.mat](https://download.fieldtriptoolbox.org/tutorial/cluster_permutation_freq/freqFIC_activation_planar_cmb.mat)) and [freqFIC_baseline_planar_cmb.mat](https://download.fieldtriptoolbox.org/tutorial/cluster_permutation_freq/freqFIC_baseline_planar_cmb.mat). To load them, use:
+You can download the planar gradient TFRs from [freqFIC_activation_planar_cmb.mat](https://download.fieldtriptoolbox.org/tutorial/cluster_permutation_freq/freqFIC_activation_planar_cmb.mat)) and [freqFIC_baseline_planar_cmb.mat](https://download.fieldtriptoolbox.org/tutorial/cluster_permutation_freq/freqFIC_baseline_planar_cmb.mat). To load them, use:
 
     load freqFIC_activation_planar_cmb
     load freqFIC_baseline_planar_cmb
 
-To compare freqFIC_activation_planar_cmb and freqFIC_baseline_planar_cmb by means of **[ft_freqstatistics](/reference/ft_freqstatistics)**, we use the following configuration:
+To compare `freqFIC_activation_planar_cmb` and `freqFIC_baseline_planar_cmb` by means of **[ft_freqstatistics](/reference/ft_freqstatistics)**, we use the following configuration:
 
     cfg = [];
     cfg.channel          = {'MEG', '-MLP31', '-MLO12'};
@@ -325,9 +325,9 @@ We can now run **[ft_freqstatistics](/reference/ft_freqstatistics)**
 
 Save the output:
 
-    save stat_freqFIC_ACTvsBL stat;
+    save stat_freqFIC_ACTvsBL stat
 
-The output can also be obtained from the FieldTrip FTP server ( [stat_freqFIC_ACTvsBL.mat](https://download.fieldtriptoolbox.org/tutorial/cluster_permutation_freq/stat_freqFIC_ACTvsBL.mat)). If you need to reload the statistics output, us
+The output can also be obtained from [stat_freqFIC_ACTvsBL.mat](https://download.fieldtriptoolbox.org/tutorial/cluster_permutation_freq/stat_freqFIC_ACTvsBL.mat). If you need to reload the statistics output, use:
 
     load stat_freqFIC_ACTvsBL
 

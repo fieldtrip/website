@@ -26,9 +26,10 @@ The [SubjectBraille.zip](https://download.fieldtriptoolbox.org/tutorial/SubjectB
     % data. Because stimuli were too difficult there was absolutely no task.
     %
     % The MEG dataset is available from
-    %   ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/SubjectBraille.zip
-
+    %   https://download.fieldtriptoolbox.org/tutorial/SubjectBraille.zip
+    %
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    
     % determine interesting segments in the data
 
     cfg                     = [];

@@ -40,18 +40,19 @@ We have the preprocessed data for both conditions (_dataA_ and _dataB_) and we p
 
 ### PCC
     
-    % the below lines work when you have access to the file system of the DCCN
-    load(dccnpath('/home/common/matlab/fieldtrip/data/ftp/tutorial/beamformer/dataPre.mat')); dataA = dataPre; clear dataPre;
-    load(dccnpath('/home/common/matlab/fieldtrip/data/ftp/tutorial/beamformer/dataPost.mat')); dataB = dataPost; clear dataPost;
-    load(dccnpath('/home/common/matlab/fieldtrip/data/ftp/tutorial/beamformer/headmodel.mat'));
-    load(dccnpath('/home/common/matlab/fieldtrip/data/ftp/tutorial/beamformer/sourcemodel.mat'));
+    % the below lines require  access to the file system of the DCCN
+    cd /home/common/matlab/fieldtrip/data/ftp/tutorial/beamformer/
+    load dataPre.mat; dataA = dataPre; clear dataPre;
+    load dataPost.mat; dataB = dataPost; clear dataPost;
+    load headmodel.mat
+    load sourcemodel.mat
     
     % append the two conditions and remember the design %
     data = ft_appenddata([], dataA, dataB);
     design = [ones(1,length(dataA.trial)) ones(1,length(dataB.trial))*2]; % only necessary if you are interested in reconstructing single trial data
 
     % ft_freqanalysis %
-    cfg=[];
+    cfg = [];
     cfg.method      = 'mtmfft';
     cfg.output      = 'fourier';  % gives the complex Fourier spectra
     cfg.foilim      = [60 60];    %analyze40-80 Hz (60 Hz +/- 20 Hz smoothing)
