@@ -44,7 +44,7 @@ To localize the evoked sources for the example dataset we will perform the follo
 
 The aim is to identify the sources underlying somatosensory evoked fields. We seek to compare the activation in the post-stimulus to the activation in the pre-stimulus interval. We first use **[ft_preprocessing](/reference/ft_preprocessing)** and **[ft_redefinetrial](/reference/ft_redefinetrial)** to extract relevant data. We know that the subject's median nerve was stimulated almost at 3Hz (every 0.36 sec), which influences our selection of the pre- and post-stimulus interval (i.e. as short as possible).
 
-The ft_definetrial and ft_preprocessing functions require the original MEG dataset, which is available from <ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/SubjectSEF.zip>.
+The ft_definetrial and ft_preprocessing functions require the original MEG dataset, which is available from <https://download.fieldtriptoolbox.org/tutorial/SubjectSEF.zip>.
 
     % find the interesting segments of data
     cfg                         = [];

@@ -7,7 +7,7 @@ tags: [tutorial, source, meg, headmodel, mri, plotting, meg-language]
 
 ## Introduction
 
-This tutorial describes how to construct a volume conduction model of the head (head model) based on an indivdual subject's MRI. We will use the anatomical images that belong to the same subject whose data were analyzed in the preprocessing and averaging tutorials ([Trigger-based trial selection](/tutorial/preprocessing), [Event related averaging and planar gradient](/tutorial/eventrelatedaveraging)). The corresponding anatomical MRI data is available from the [FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip).
+This tutorial describes how to construct a volume conduction model of the head (head model) based on an indivdual subject's MRI. We will use the anatomical images that belong to the same subject whose data were analyzed in the preprocessing and averaging tutorials ([Trigger-based trial selection](/tutorial/preprocessing), [Event related averaging and planar gradient](/tutorial/eventrelatedaveraging)). The corresponding anatomical MRI data is available from the [download server](https://download.fieldtriptoolbox.org/tutorial/Subject01.zip).
 
 The volume conduction model of the head that will be constructed here is specific to the computation and source reconstruction of MEG data. Different strategies can be used for the construction of head models. The processing pipeline of the tutorial is an example which we think is the most appropriate for the tutorial-dataset.
 
@@ -33,7 +33,7 @@ If an anatomical MRI is not available for your MEG subject, you can consider to 
 
 ## Procedure
 
-We will create a head model based on the anatomical mri of the [tutorial data set](/tutorial/meg_language) which is available [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip). The pipeline is depicted in Figure 2.
+We will create a head model based on the anatomical mri of the [tutorial data set](/tutorial/meg_language) which is available [here](https://download.fieldtriptoolbox.org/tutorial/Subject01.zip). The pipeline is depicted in Figure 2.
 
 - First, we will read the anatomical data with **[ft_read_mri](/reference/fileio/ft_read_mri)**;
 - then we segment the anatomical information into different tissue types with **[ft_volumesegment](/reference/ft_volumesegment)**;
@@ -85,7 +85,7 @@ When you read in your own anatomical data, it may not give information on the co
 In this step, the voxels of the anatomical MRI are segmented (i.e. separated) into [different tissue types](/faq/how_is_the_segmentation_defined) . By default, the gray matter, white matter and the cerebro-spinal fluid (csf) compartments are differentiated. Based on these compartments a so called brainmask is created, which is a binary mask of the content inside the skull. All voxels that are inside the skull (i.e. the complete brain) are represented by 1, all other voxels by 0. The function **[ft_volumesegment](/reference/ft_volumesegment)** will produce the required output.
 
 {% include markup/warning %}
-Note that the segmentation is quite time consuming and if you want you can load the result and skip ahead to the next step. You can download the segmented MRI of this tutorial data from the [FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/headmodel_meg/segmentedmri.mat) (segmentedmri.mat).
+Note that the segmentation is quite time consuming and if you want you can load the result and skip ahead to the next step. You can download the segmented MRI of this tutorial data from the [download server](https://download.fieldtriptoolbox.org/tutorial/headmodel_meg/segmentedmri.mat) (segmentedmri.mat).
 {% include markup/end %}
 
     cfg           = [];
@@ -160,7 +160,7 @@ Alternatively, you can also create and use a multiple-layered head model with Op
 
 ### Visualization
 
-The head model (vol) contains the brain-skull boundary as the geometrical description of the head. You can visualize this using the following code. First, we will plot the sensors (MEG channels) with the **[ft_plot_sens](/reference/plotting/ft_plot_sens)** function. Second, we will plot the head model with **[ft_plot_headmodel](/reference/plotting/ft_plot_headmodel)** in the same figure with the sensors. In order to plot also the location of the MEG channels, we read in the location of the channels using the .ds file from the tutorial data and the **[ft_read_sens](/reference/fileio/ft_read_sens)** function. (The .zip file that can be downloaded from the [FieldTrip FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip) also contains the .ds file.) The units of the headmodel are defined in 'mm', while the units of the sensors are in 'cm'. When we plot the headmodel together with the sensors, they need to have the same units. Therefore, the units of the headmodel will be converted to 'cm' with the **[ft_convert_units](/reference/forward/ft_convert_units)** function.
+The head model contains the brain-skull boundary as the geometrical description of the head. You can visualize this using the following code. First, we will plot the sensors (MEG channels) with the **[ft_plot_sens](/reference/plotting/ft_plot_sens)** function. Second, we will plot the head model with **[ft_plot_headmodel](/reference/plotting/ft_plot_headmodel)** in the same figure with the sensors. In order to plot also the location of the MEG channels, we read in the location of the channels using the .ds file from the tutorial data and the **[ft_read_sens](/reference/fileio/ft_read_sens)** function. The [Subject01.zip](https://download.fieldtriptoolbox.org/tutorial/Subject01.zip) MEG dataset includes the MEG data and the anatomical MRI. The units of the headmodel are defined in 'mm', while the units of the sensors are in 'cm'. When we plot the headmodel together with the sensors, they need to have the same units. Therefore, the units of the headmodel will be converted to 'cm' with the **[ft_convert_units](/reference/forward/ft_convert_units)** function.
 
     vol = ft_convert_units(vol, 'cm');
     sens = ft_read_sens('Subject01.ds', 'senstype', 'meg');

@@ -118,4 +118,4 @@ Note: **do not** add the folder recursively, i.e., do not use `addpath(genpath('
 
 ### Get the example data that is used throughout this set of tutorials
 
-The full dataset can be obtained at [https://openneuro.org/datasets/ds000117/versions/1.0.3], and has a size of about 460 GB. The pruned subset of the data that is needed for this collection of tutorials - and the results of running these tutorials - can be downloaded from <ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/paris2019/> and specifically in the `ds000117-pruned` folder. The results of the pipelines used in these tutorials are located in the `derivatives` folder.
+The full dataset can be obtained at [https://openneuro.org/datasets/ds000117/versions/1.0.3], and has a size of about 460 GB. The pruned subset of the data that is needed for this collection of tutorials - and the results of running these tutorials - can be downloaded from <https://download.fieldtriptoolbox.org/workshop/paris2019/> and specifically in the `ds000117-pruned` folder. The results of the pipelines used in these tutorials are located in the `derivatives` folder.

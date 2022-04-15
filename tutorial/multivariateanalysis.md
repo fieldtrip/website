@@ -21,7 +21,7 @@ In this tutorial we will use classifiers to analyze a brain-computer interfacing
 
 The data has already been segmented into the trials of interest using **[ft_definetrial](/reference/ft_definetrial)** and has been preprocessed with **[ft_preprocessing](/reference/ft_preprocessing)**. The data has been detrended and downsampled to 300 Hz. The trials start at cue offset and end 2.5 seconds later. The subject has been attending to either the left or right direction during this period. No artifact rejection has been performed.
 
-You can find the data [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/classification/covatt.mat).
+You can find the data [here](https://download.fieldtriptoolbox.org/tutorial/classification/covatt.mat).
 
 In the following, we will work our way through the time- and frequency-domain analysis pipelines as shown in the figure.
 

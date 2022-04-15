@@ -45,7 +45,7 @@ To fit the dipole models to the data, we will perform the following steps:
 
 ### Read and visualise the anatomical data
 
-We start with the anatomical MRI data, which comes directly from the scanner in DICOM format. You can download the [dicom.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/natmeg/dicom.zip) from our FTP server. We suggest that you unzip the dicom files in a separate directory.
+We start with the anatomical MRI data, which comes directly from the scanner in DICOM format. You can download the [dicom.zip](https://download.fieldtriptoolbox.org/workshop/natmeg/dicom.zip) from our download server. We suggest that you unzip the dicom files in a separate directory.
 
 DICOM datasets consist of a large number of files, one per slice. As filename you have to specify a single file, the reading function will automatically determine which other slices are part of the same anatomical volume and put them in the correct order.
 
@@ -54,7 +54,7 @@ DICOM datasets consist of a large number of files, one per slice. As filename yo
 
 We also read the geometrical data from the fif file. It contains information about the MEG magnetometer and gradiometer positions (the “grad” structure), about the EEG electrodes (the “elec” structure) and about the head shape.
 
-The MEG dataset is available as [oddball1_mc_downsampled.fif](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/natmeg/oddball1_mc_downsampled.fif) from our FTP server.
+The MEG dataset is available as [oddball1_mc_downsampled.fif](https://download.fieldtriptoolbox.org/workshop/natmeg/oddball1_mc_downsampled.fif) from our download server.
 
     dataset = 'oddball1_mc_downsampled.fif';
 
@@ -261,7 +261,7 @@ Now that we have the meshes, we use them to compute the volume conduction model.
 
 ### Process the MEG data
 
-The processing of the MEG dataset is done similar to the [Preprocessing and event-related activity in MEG and EEG data](/workshop/natmeg/preprocessing) tutorial. It requires the custom trial function [trialfun_oddball_stimlocked.m](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/natmeg/trialfun_oddball_stimlocked.m) to be on your MATLAB path.
+The processing of the MEG dataset is done similar to the [Preprocessing and event-related activity in MEG and EEG data](/workshop/natmeg/preprocessing) tutorial. It requires the custom trial function [trialfun_oddball_stimlocked.m](https://download.fieldtriptoolbox.org/workshop/natmeg/trialfun_oddball_stimlocked.m) to be on your MATLAB path.
 
 #### Segment and read the MEG data
 
@@ -759,7 +759,7 @@ Here we've set the ratio of conductivity between the different tissue types to [
 
 ### Process the EEG data
 
-We are going to process the EEG data in much the same way as the MEG data. As you are already familiar with how to do this you can speed through this section. Again, this requires the custom trial function [trialfun_oddball_stimlocked.m](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/natmeg/trialfun_oddball_stimlocked.m) to be on your MATLAB path.
+We are going to process the EEG data in much the same way as the MEG data. As you are already familiar with how to do this you can speed through this section. Again, this requires the custom trial function [trialfun_oddball_stimlocked.m](https://download.fieldtriptoolbox.org/workshop/natmeg/trialfun_oddball_stimlocked.m) to be on your MATLAB path.
 
 #### Segment and read the EEG data
 

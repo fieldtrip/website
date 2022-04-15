@@ -11,7 +11,7 @@ This tutorial goes through the necessary steps for creating a robust forward mod
 
 It is part of the [Oslo 2019 workshop tutorials](/workshop/oslo2019), where tutorials can be found on [preprocessing and ERPs](/workshop/oslo2019/introduction), [time-frequency representations](/workshop/oslo2019/timefrequency), [statistics](/workshop/oslo2019/statistics) and [source reconstruction](/workshop/oslo2019/beamforming).
 
-The data for the tutorial is available [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/oslo2019/)
+The data for the tutorial is available [here](https://download.fieldtriptoolbox.org/workshop/oslo2019/)
 
 ## Background
 
@@ -50,7 +50,7 @@ We will clear all variables that we have in the workspace, restore the default p
 
 ### Read in and visualize the MRI data
 
-The anatomical MRI data available here comes directly from the scanner in the DICOM format (read more about the DICOM format [here](https://en.wikipedia.org/wiki/DICOM). You can download [dicom.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/oslo2019/dicom.zip). Please unzip the files in a folder called _dicom_, which should be put in the folder where you have the other scripts used for the Oslo 2019 tutorials.
+The anatomical MRI data available here comes directly from the scanner in the DICOM format (read more about the DICOM format [here](https://en.wikipedia.org/wiki/DICOM). You can download [dicom.zip](https://download.fieldtriptoolbox.org/workshop/oslo2019/dicom.zip). Please unzip the files in a folder called _dicom_, which should be put in the folder where you have the other scripts used for the Oslo 2019 tutorials.
 
 DICOM datasets consist of a large number of files, one per slice. As filename you have to specify a single file, the reading function will automatically determine which other slices are part of the same anatomical volume and put them in the correct order.
 
@@ -186,7 +186,7 @@ _Figure 4: Plot of the three meshes (\_brain, skull \_and_ scalp*)*
 
 ## Head models (component 1)
 
-We will now use these non-intersecting meshes to specify the head models, which will later be used to indicate how currents spread throughout the volume conductor. We create two models, one with the _bemcp_ method and one with the _dipoli_ method. For the article on the _dipoli_ method, see [Oostendorp & van Oosterom, 1989](https://doi.org/10.1109/10.19859) and for an article on the _bemcp_ method, see for example [Mosher et al., 1999](https://doi.org/10.1109/10.748978). Do note that the _dipoli_ method will not work on a Windows computer. The _headmodel_dipoli_ can be downloaded at the [ftp](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/oslo2019/) instead. The best choice is to use [OpenMEEG](https://openmeeg.github.io/), (_cfg.method = 'openmeeg'_). This requires some manual installation and setting up, so it is not covered here.
+We will now use these non-intersecting meshes to specify the head models, which will later be used to indicate how currents spread throughout the volume conductor. We create two models, one with the _bemcp_ method and one with the _dipoli_ method. For the article on the _dipoli_ method, see [Oostendorp & van Oosterom, 1989](https://doi.org/10.1109/10.19859) and for an article on the _bemcp_ method, see for example [Mosher et al., 1999](https://doi.org/10.1109/10.748978). Do note that the _dipoli_ method will not work on a Windows computer. The _headmodel_dipoli_ can be downloaded at the [ftp](https://download.fieldtriptoolbox.org/workshop/oslo2019/) instead. The best choice is to use [OpenMEEG](https://openmeeg.github.io/), (_cfg.method = 'openmeeg'_). This requires some manual installation and setting up, so it is not covered here.
 
     cfg              = [];
     cfg.method       = 'bemcp';

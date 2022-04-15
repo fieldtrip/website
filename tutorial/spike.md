@@ -52,13 +52,9 @@ Neurons often fire in synchrony, meaning that action potentials from different n
 
 ### Reading in spike data
 
-Make sure you run **[ft_defaults](/reference/ft_defaults)**
-after having added the main FieldTrip path (e.g., addpath('path_to_fieldtrip')), ensuring that the required functions are in your MATLAB path.
-For spike analysis there is spike toolbox that is located in fieldtrip/contrib/spike.
+Make sure you run **[ft_defaults](/reference/ft_defaults)** after having added the main FieldTrip path (e.g., addpath('path_to_fieldtrip')), ensuring that the required functions are in your MATLAB path. For spike analysis there is spike toolbox that is located in fieldtrip/contrib/spike.
 
-Spike data can be read out using the function **[ft_read_spike](/reference/fileio/ft_read_spike)**. At the time of writing this tutorial the supported formats are neurosim, mclust t files, neuralynx (nse, nst, ntt, nts) and plexon (nex and plx) files..
-The original data can be obtained from [ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/spike/p029_sort_final_01.nex](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/spike/p029_sort_final_01.nex).
-After reading out the spike data, we select the spike channels of interest.
+Spike data can be read out using the function **[ft_read_spike](/reference/fileio/ft_read_spike)**. At the time of writing this tutorial the supported formats are neurosim, mclust t files, neuralynx (nse, nst, ntt, nts) and plexon (nex and plx) files. The original data can be downloaded [here](https://download.fieldtriptoolbox.org/tutorial/spike/p029_sort_final_01.nex). After reading out the spike data, we select the spike channels of interest.
 
     spike = ft_read_spike('p029_sort_final_01.nex');
 
@@ -89,8 +85,7 @@ The waveforms can be processed further using **[ft_spike_waveform](/reference/co
 
 ### Computing average waveforms
 
-An important tool to characterize the particular cell class a recorded neuron belongs to, is the analysis of its action potential waveform. For example, pyramidal cells have broad waveforms, while fast spiking inhibitory interneurons have narrow waveforms (i.e., short peak-to-through duration of action potential). For characterizing waveforms we use the function **[ft_spike_waveform](/reference/contrib/spike/ft_spike_waveform)**.
-The function ft_spike_waveform preforms alignment of waveforms based on the peak, such that they can also be aligned across different units, normalizes them to unit amplitude (if requested), interpolates the waveforms and performs outlier rejection. It also returns a spike structure (if two outputs are requested) in which the rejected outlier waveforms have been removed. Hence, it can be used as an additional preprocessing step.
+An important tool to characterize the particular cell class a recorded neuron belongs to, is the analysis of its action potential waveform. For example, pyramidal cells have broad waveforms, while fast spiking inhibitory interneurons have narrow waveforms (i.e., short peak-to-through duration of action potential). For characterizing waveforms we use the function **[ft_spike_waveform](/reference/contrib/spike/ft_spike_waveform)**. The function ft_spike_waveform preforms alignment of waveforms based on the peak, such that they can also be aligned across different units, normalizes them to unit amplitude (if requested), interpolates the waveforms and performs outlier rejection. It also returns a spike structure (if two outputs are requested) in which the rejected outlier waveforms have been removed. Hence, it can be used as an additional preprocessing step.
 We ru
 
     cfg             = [];
@@ -149,11 +144,9 @@ shows that one unit has the structure of a fast spiking cell (as its waveform is
 
 ### Adding trigger event information to spike structure
 
-After the raw spike data has been read in, we restructure it relative to event triggers, that is we add a trial dimension to it. This serves two functions. Firstly, it converts the spike times in timestamp units to spike times in units of seconds. Secondly, by making trials, we can proceed with further analyses that relate the spiking to the experimental manipulation in each trial, such as peri stimulus time histograms (PSTHs), raster plots etc.. To this end, we use the function **[ft_spike_maketrials](/reference/contrib/spike/ft_spike_maketrials)**.
-This function requires two (cfg) configurations. Firstly, the number of timestamps per second, which must be explicitly specified by the user. This information is usually available in spike.hdr. In this case, cfg.timestampspersecond = spike.hdr.FileHeader.Frequency = 40000.
-Secondly, an nTrials x 3 cfg.trl matrix containing start (:,1) (first column) and end (:,2) (second column) of the trials in timestamp units and the offset relative to the trigger (:,3) in timestamps units.
-This requires the event file to be read out.
-The event file is read out using
+After the raw spike data has been read in, we restructure it relative to event triggers, that is we add a trial dimension to it. This serves two functions. Firstly, it converts the spike times in timestamp units to spike times in units of seconds. Secondly, by making trials, we can proceed with further analyses that relate the spiking to the experimental manipulation in each trial, such as peri stimulus time histograms (PSTHs), raster plots etc.. To this end, we use the function **[ft_spike_maketrials](/reference/contrib/spike/ft_spike_maketrials)**. This function requires two (cfg) configurations. Firstly, the number of timestamps per second, which must be explicitly specified by the user. This information is usually available in spike.hdr. In this case, `cfg.timestampspersecond = spike.hdr.FileHeader.Frequency = 40000`.
+
+Secondly, an nTrials x 3 cfg.trl matrix containing start (:,1) (first column) and end (:,2) (second column) of the trials in timestamp units and the offset relative to the trigger (:,3) in timestamps units. This requires the event file to be read out. The event file is read out using
 
     event = ft_read_event('p029_sort_final_01.nex')
 
@@ -202,7 +195,7 @@ Using the value and timestamp fields, we built a user-specified function that co
       end
     end
 
-For the purpose of walking through the tutorial, you should copy and paste the code above in the MATLAB editor and save the m-file as trialfun_stimon.m. Alternatively you can download the trial function from [the FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/spike/trialfun_stimon.m).
+For the purpose of walking through the tutorial, you should copy and paste the code above in the MATLAB editor and save the m-file as trialfun_stimon.m. Alternatively you can download the trial function [here](https://download.fieldtriptoolbox.org/tutorial/spike/trialfun_stimon.m).
 
 We then call **[ft_definetrial](/reference/ft_definetrial)**
 
@@ -237,7 +230,7 @@ Together, these three fields fully identify the structure of the spiketrain rela
 
 {% include image src="/assets/img/tutorial/spike/timestampsvstime.png" %}
 
-In this example, unit 'sig002a_wf' fired in total 83613 spikes in the selected trial periods. For every spike, we indicate in trial the spike was fired (spikeTrials.trial) and at which time (in seconds) the spike was fired (spikeTrials.time). Thus, spikeTrials.time{i}(j), spikeTrials.trial{i}(j), spikeTrials.timestamp{i}(j), and spikeTrials.waveform{i}(:,:,j) all contain information about the j-th spike from the i-th neuron.
+In this example, unit `sig002a_wf` fired in total 83613 spikes in the selected trial periods. For every spike, we indicate in trial the spike was fired (spikeTrials.trial) and at which time (in seconds) the spike was fired (spikeTrials.time). Thus, spikeTrials.time{i}(j), spikeTrials.trial{i}(j), spikeTrials.timestamp{i}(j), and spikeTrials.waveform{i}(:,:,j) all contain information about the j-th spike from the i-th neuron.
 The spikeTrials.trialtime field fully specifies the structure of the spike trains, as it conveys in which trials no spike was fired, and what the borders of the trials were. The first and second column of spikeTrials.trialtime tell us what the start and end of the trial was relative to the event trigger.
 For example,
 
@@ -362,8 +355,7 @@ This gives two figures, one with a longer refractory period (the narrow spiking 
 
 {% include image src="/assets/img/tutorial/spike/isi_sig003a_wf.png" width="500" %}
 
-We also read in an additional dataset consisting of an M-clust .t file, that can be found at
-[ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/spike/tt6_7.t](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/spike/tt6_7.t)
+We also read in an additional dataset consisting of an M-clust .t file, that can be found [here](https://download.fieldtriptoolbox.org/tutorial/spike/tt6_7.t)
 
     % read in the .t file
     filename    = 'tt6_7.t'

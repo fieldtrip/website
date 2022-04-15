@@ -11,8 +11,7 @@ redirect_from:
 
 Changes in head position during MEG sessions may cause a significant error in the source localization. Besides, the mixture of different head positions over time adds variance to the data that is not accounted for by the experimental manipulation. Thus head movements may deteriorate statistical sensitivity when analyzing MEG on both sensor and source levels. It is therefore recommended to incorporate head movements in the offline MEG analysis, see [Stolk et al., NeuroImage 2013](https://doi.org/10.1016/j.neuroimage.2012.11.047).
 
-Continuous head localization information is stored in HLC channels (Head Localization Channels) in CTF MEG system. An example script here shows how to read these channels in FieldTrip and estimate the amount of movement offline. Information from these channels can also be used to [track the head position in real time.](/faq/how_can_i_monitor_a_subject_s_head_position_during_a_meg_session)
-The data used in this example script [can be obtained here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/example/regressconfound/TacStimRegressConfound.zip)
+Continuous head localization information is stored in HLC channels (Head Localization Channels) in CTF MEG system. An example script here shows how to read these channels in FieldTrip and estimate the amount of movement offline. Information from these channels can also be used to [track the head position in real time](/faq/how_can_i_monitor_a_subject_s_head_position_during_a_meg_session). You can download the [TacStimRegressConfound.zip](https://download.fieldtriptoolbox.org/example/regressconfound/TacStimRegressConfound.zip) data used in this example script from our download server.
 
 In general there are various ways that you can use the continuous head localization information.
 

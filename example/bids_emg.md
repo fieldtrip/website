@@ -16,7 +16,7 @@ EMG is not part as an individual data type in the BIDS specification. In the **[
 ## Example
 
 {% include markup/success %}
-The example data is available from our [FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/example/bids_emg/)
+The example data is available from our [download server](https://download.fieldtriptoolbox.org/example/bids_emg/)
 {% include markup/end %}
 
 The example includes the original log files under the “original” directory. It also has a copy of the script to do the conversion under “code”. The reorganized data is under the “bids” directory. According to [the documentation](https://bids-specification.readthedocs.io/en/stable/02-common-principles.html#source-vs-raw-vs-derived-data) the original data can be added to the BIDS dataset under the “sourcedata” directory and code can be added to the “code” directory. This way no information is lost and the conversion/reorganization is fully reproducible.

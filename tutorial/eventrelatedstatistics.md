@@ -11,7 +11,7 @@ The goal of this tutorial is to provide a gentle introduction into the different
 
 This tutorial uses the same [MEG language dataset](/tutorial/meg_language) as some of the other tutorials where analyses were done on the single subject level. However, here we will deal with (statistical) analyses on the group level. We will look at how to test statistical differences among conditions in a within-subjects design. The ERF dataset in this tutorial contains data from all 10 subjects that participated in the experiment. The ERF data was obtained using **[ft_timelockanalysis](/reference/ft_timelockanalysis)**. For the purpose of inspecting your data visually, we also use **[ft_timelockgrandaverage](/reference/ft_timelockgrandaverage)** to calculate the grand average across participants, which can be used for subsequent visualization.
 
-You can download the [averaged dataset for each subject](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/eventrelatedstatistics/ERF_orig.mat) from the FieldTrip FTP server.
+You can download the [ERF_orig.mat](https://download.fieldtriptoolbox.org/tutorial/eventrelatedstatistics/ERF_orig.mat) data structure with the average for each subject.
 
 The tutorial assumes that the preprocessing and averaging steps are already clear for the reader. If this is not the case, you can read about those steps in other tutorials.
 
@@ -46,7 +46,7 @@ _Figure 1: Pipeline of statistical testing. All analysis steps in the gray boxes
 
 ## Reading-in preprocessed and time-locked data in planar gradient format, and grand averaged data
 
-We now describe how we can statistically test the difference between the event-related averages for fully incongruent (FIC) and the fully congruent (FC) sentence endings. For this analysis we use planar gradient data. For convenience we will not do the reading-in and preprocessing steps on all subjects. Instead we begin by loading the timelock structures containing the event-related averages (of the planar gradient data) of all ten subjects. You can download the [subject averages](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/eventrelatedstatistics/ERF_orig.mat).
+We now describe how we can statistically test the difference between the event-related averages for fully incongruent (FIC) and the fully congruent (FC) sentence endings. For this analysis we use planar gradient data. For convenience we will not do the reading-in and preprocessing steps on all subjects. Instead we begin by loading the timelock structures containing the event-related averages (of the planar gradient data) of all ten subjects. You can download the [subject averages](https://download.fieldtriptoolbox.org/tutorial/eventrelatedstatistics/ERF_orig.mat).
 We will also make use of the function **[ft_timelockgrandaverage](/reference/ft_timelockgrandaverage)** to calculate the grand average (average across subjects) and plot it to visually inspect the data
 
       load ERF_orig;    % averages for each individual subject, for each condition

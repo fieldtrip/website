@@ -35,14 +35,10 @@ Using the basic FieldTrip functions in a memory efficient manner requires that y
 
 The distributed operations of FieldTrip functions in this example require the original MEG datasets for the four subjects, which are available from
 
-- [ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip)
-- [ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject02.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject02.zip)
-- [ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject03.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject03.zip)
-- [ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject04.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject04.zip)
-
-Or, when at the Donders Centre for Cognitive Neuroimaging, use
-
-    cd /home/common/matlab/fieldtrip/data
+- [Subject01.zip](https://download.fieldtriptoolbox.org/tutorial/Subject01.zip)
+- [Subject02.zip](https://download.fieldtriptoolbox.org/tutorial/Subject02.zip)
+- [Subject03.zip](https://download.fieldtriptoolbox.org/tutorial/Subject03.zip)
+- [Subject04.zip](https://download.fieldtriptoolbox.org/tutorial/Subject04.zip)
 
 ## Example 1: using only FieldTrip functions in distributed computing
 

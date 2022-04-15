@@ -11,7 +11,7 @@ redirect_from:
 
 The MATLAB script is given first; the figures that this script produces are at the bottom of this page.
 
-The MEG dataset [SubjectBraille.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/SubjectBraille.zip) is available from our FTP server.
+The [SubjectBraille.zip](https://download.fieldtriptoolbox.org/tutorial/SubjectBraille.zip) MEG dataset is available from our download server.
 
 ## MATLAB script
 

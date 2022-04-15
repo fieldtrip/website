@@ -19,11 +19,11 @@ This tutorial does not cover the steps required to import data into FieldTrip an
 
 ## Reading in the data
 
-For your convenience, the data has already been preprocessed and read into FieldTrip. You can load the data with:
+For your convenience, the data has already been preprocessed. You can download [subjectK.mat](https://download.fieldtriptoolbox.org/tutorial/sensor_analysis/subjectK.mat) and load it in memory data with:
 
     load subjectK
 
-The data file is available from the [FieldTrip FTP server (subjectK.mat)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/sensor_analysis/subjectK.mat). Loading this will give you two data structures in your workspace: data_left, containing the trials where the subjects had to respond with the left wrist; and data_right, where the right wrist was cued.
+This will give you two data structures in your workspace: `data_left`, containing the trials where the subjects had to respond with the left wrist, and `data_right`, where the right wrist was cued.
 
 Take a look at one of the data structure
 

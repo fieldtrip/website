@@ -40,7 +40,7 @@ The data analyses will follow the following steps:
 
 ### Reading the data
 
-The aim is to identify the frequency and topography of an 10Hz oscillation. You can download the required data from <ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/networkanalysis_eeg/>. This latter folder contains a few files that we will need later in this tutorial as well, so it is recommended to download its contents.
+The aim is to identify the frequency and topography of an 10Hz oscillation. You can download the required data from <https://download.fieldtriptoolbox.org/tutorial/networkanalysis_eeg/>. This latter folder contains a few files that we will need later in this tutorial as well, so it is recommended to download its contents.
 
     %% load EEG data
     load('data_eeg_reref_ica.mat')

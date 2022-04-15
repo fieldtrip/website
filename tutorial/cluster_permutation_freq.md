@@ -69,7 +69,7 @@ In a between-trials experiment, we analyze the data of a single subject. By mean
 
 ### Reading in the data
 
-We will now read and preprocess the data. If you would like to continue directly with the already preprocessed data, you can download it from the FieldTrip FTP server ([dataFIC.mat ](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/beamformer/dataFIC.mat) [& dataFC.mat ](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/beamformer/dataFC.mat). Load the data into MATLAB with the  command 'load' and skip to Calculation of the planar gradient and time-frequency analysis.
+We will now read and preprocess the data. If you would like to continue directly with the already preprocessed data, you can download [dataFIC.mat](https://download.fieldtriptoolbox.org/tutorial/beamformer/dataFIC.mat) and [dataFC.mat](https://download.fieldtriptoolbox.org/tutorial/beamformer/dataFC.mat). Load the data into MATLAB with the command `load` and skip to Calculation of the planar gradient and time-frequency analysis.
 
 Otherwise run the following code:
 
@@ -97,7 +97,7 @@ Subsequently you can save the data to disk.
 ### Calculation of the planar gradient and time-frequency analysis
 
 Before calculating the TFRs we calculate the planar gradient with **[ft_megplanar](/reference/ft_megplanar)**.
-This requires preprocessed data (see above), which is also available from the FieldTrip FTP server ([dataFIC.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_freq/dataFIC.mat) and [dataFC.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_freq/dataFC.mat)).
+This requires preprocessed data (see above or download [dataFIC.mat](https://download.fieldtriptoolbox.org/tutorial/cluster_permutation_freq/dataFIC.mat) and [dataFC.mat](https://download.fieldtriptoolbox.org/tutorial/cluster_permutation_freq/dataFC.mat)).
 
     load dataFIC
     load dataFC
@@ -105,8 +105,8 @@ This requires preprocessed data (see above), which is also available from the Fi
     cfg = [];
     cfg.planarmethod = 'sincos';
     % prepare_neighbours determines with what sensors the planar gradient is computed
-    cfg_neighb.method    = 'distance';
-    cfg.neighbours       = ft_prepare_neighbours(cfg_neighb, dataFC);
+    cfg_neighb.method = 'distance';
+    cfg.neighbours    = ft_prepare_neighbours(cfg_neighb, dataFC);
 
     dataFIC_planar = ft_megplanar(cfg, dataFIC);
     dataFC_planar  = ft_megplanar(cfg, dataFC);
@@ -134,19 +134,19 @@ Finally, we calculate the combined planar gradient and copy the gradiometer stru
     freqFIC_planar_cmb = ft_combineplanar(cfg, freqFIC_planar);
     freqFC_planar_cmb = ft_combineplanar(cfg, freqFC_planar);
 
-    freqFIC_planar_cmb.grad = dataFIC.grad;
-    freqFC_planar_cmb.grad = dataFC.grad;
+    freqFIC_planar_cmb.grad = dataFIC.grad
+    freqFC_planar_cmb.grad = dataFC.grad
 
 To save:
 
-    save freqFIC_planar_cmb freqFIC_planar_cmb;
-    save freqFC_planar_cmb  freqFC_planar_cmb;
+    save freqFIC_planar_cmb freqFIC_planar_cmb
+    save freqFC_planar_cmb  freqFC_planar_cmb
 
 ### Permutation test
 
 Now, run **[ft_freqstatistics](/reference/ft_freqstatistics)** to compare freqFIC_planar_cmb and freqFC_planar_cmb. Except for the field cfg.latency, the following configuration is identical to the configuration that was used for comparing event-related averages in the [cluster-based permutation tests on event related fields tutorial](/tutorial/cluster_permutation_timelock). Also see [this tutorial](/tutorial/cluster_permutation_timelock) for a detailed explanation of all the configuration settings. You can read more about the **[ft_prepare_neighbours](/reference/ft_prepare_neighbours)** function in the [FAQs](/faq/how_does_ft_prepare_neighbours_work).
 
-To load the planar gradient TFRs (also available on the FieldTrip FTP servers, [freqFIC_planar_cmb.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_freq/freqFIC_planar_cmb.mat) and [freqFC_planar_cmb.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_freq/freqFC_planar_cmb.mat)), us
+To load the planar gradient TFRs (also available from [freqFIC_planar_cmb.mat](https://download.fieldtriptoolbox.org/tutorial/cluster_permutation_freq/freqFIC_planar_cmb.mat) and [freqFC_planar_cmb.mat](https://download.fieldtriptoolbox.org/tutorial/cluster_permutation_freq/freqFC_planar_cmb.mat) on our download server), us
 
     load freqFIC_planar_cmb
     load freqFC_planar_cmb
@@ -181,11 +181,11 @@ To load the planar gradient TFRs (also available on the FieldTrip FTP servers, [
 
 Save the output:
 
-    save stat_freq_planar_FICvsFC stat;
+    save stat_freq_planar_FICvsFC stat
 
 ### Plotting the results
 
-The output can also be obtained from [stat_freq_planar_FICvsFC.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_freq/stat_freq_planar_FICvsFC.mat). If you need to reload the statistics output, us
+The output can also be obtained from [stat_freq_planar_FICvsFC.mat](https://download.fieldtriptoolbox.org/tutorial/cluster_permutation_freq/stat_freq_planar_FICvsFC.mat). If you need to reload the statistics output, us
 
     load stat_freq_planar_FICvsFC
 
@@ -222,7 +222,7 @@ It must be stressed that the time windows we choose to compare are **nonoverlapp
 
 We first select equal-length non-overlapping time intervals in the activation and the baseline period. For the activation period we choose [0.6 1.6], the time interval from 0.6 to 1.6 seconds after stimulus onset. We will again focus on the power in the beta band (around 20 Hz). And for the baseline period we choose [-1 0], the time interval from 1 to 0 seconds before stimulus onset.
 
-We now calculate the TFRs for the activation and the baseline period. We use again the preprocessed dataFIC (see above or download from [ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_freq/dataFIC.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_freq/dataFIC.mat)).
+We now calculate the TFRs for the activation and the baseline period. We use again the preprocessed dataFIC (see above or download [dataFIC.mat](https://download.fieldtriptoolbox.org/tutorial/cluster_permutation_freq/dataFIC.mat)).
 
     load dataFIC
 
@@ -279,7 +279,7 @@ To save:
 
 ### Permutation test
 
-You can download the planar gradient TFRs from the FieldTrip FTP server: [freqFIC_activation_planar_cmb.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_freq/freqFIC_activation_planar_cmb.mat)) and [freqFIC_baseline_planar_cmb.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_freq/freqFIC_baseline_planar_cmb.mat). To load them, use:
+You can download the planar gradient TFRs from the FieldTrip FTP server: [freqFIC_activation_planar_cmb.mat](https://download.fieldtriptoolbox.org/tutorial/cluster_permutation_freq/freqFIC_activation_planar_cmb.mat)) and [freqFIC_baseline_planar_cmb.mat](https://download.fieldtriptoolbox.org/tutorial/cluster_permutation_freq/freqFIC_baseline_planar_cmb.mat). To load them, use:
 
     load freqFIC_activation_planar_cmb
     load freqFIC_baseline_planar_cmb
@@ -327,7 +327,7 @@ Save the output:
 
     save stat_freqFIC_ACTvsBL stat;
 
-The output can also be obtained from the FieldTrip FTP server ( [stat_freqFIC_ACTvsBL.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_freq/stat_freqFIC_ACTvsBL.mat)). If you need to reload the statistics output, us
+The output can also be obtained from the FieldTrip FTP server ( [stat_freqFIC_ACTvsBL.mat](https://download.fieldtriptoolbox.org/tutorial/cluster_permutation_freq/stat_freqFIC_ACTvsBL.mat)). If you need to reload the statistics output, us
 
     load stat_freqFIC_ACTvsBL
 
@@ -354,7 +354,7 @@ In this paragraph we describe permutation testing for TFRs obtained in experimen
 
 ### Preprocessing, planar gradient and grand average
 
-To test the difference between the average TFRs for fully incongruent (FIC) and fully congruent (FC) sentence endings we use planar gradient data. To load the data structures containing time frequency grand averages of all ten subjects (available from [ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_freq/GA_TFR_orig.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_freq/GA_TFR_orig.mat)), use:
+To test the difference between the average TFRs for fully incongruent (FIC) and fully congruent (FC) sentence endings we use planar gradient data. To load the data structures containing time frequency grand averages of all ten subjects (available [here](https://download.fieldtriptoolbox.org/tutorial/cluster_permutation_freq/GA_TFR_orig.mat)), use:
 
     load GA_TFR_orig;
 
@@ -403,7 +403,7 @@ Save the output:
 
     save stat_freq_planar_FICvsFC_GA stat
 
-The output can also be obtained from [stat_freq_planar_FICvsFC_GA.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_freq/stat_freq_planar_FICvsFC_GA.mat). If you need to reload the statistics output, us
+The output can also be obtained from [stat_freq_planar_FICvsFC_GA.mat](https://download.fieldtriptoolbox.org/tutorial/cluster_permutation_freq/stat_freq_planar_FICvsFC_GA.mat). If you need to reload the statistics output, us
 
     load stat_freq_planar_FICvsFC_GA
 

@@ -11,7 +11,7 @@ This script demonstrates the pipeline sequence you should follow when you use **
 
 ## Example dataset
 
-It requires CTF275 gradiometer description data, which is available [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/example/megrealign/ctf275.mat)
+It requires CTF275 gradiometer description data, which is available [here](https://download.fieldtriptoolbox.org/example/megrealign/ctf275.mat)
 
 The following code creates a single dipole that projects brain activity on posterior sensors. We simulate an alpha component (10Hz) whose power decreases after a hypothetical visual stimulus delivery. The signal itself is not very important (you can design your own).
 

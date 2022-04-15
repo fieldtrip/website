@@ -14,7 +14,7 @@ We will sketch the background of permutation tests and apply it to different
 experimental questions. In this tutorial we will continue with the Chennu et al.
 dataset. We will use data that has already been preprocessed and spectrally
 analyzed, but if you are interested in the raw data from all subjects, you can
-download it from our [FTP Server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/madrid2019/extra/).
+download it from our [download server](https://download.fieldtriptoolbox.org/workshop/madrid2019/extra/).
 Please note that you **do not** have to download all subjects for this tutorial.
 
 In a step-by-step fashion, this tutorial will show how to
@@ -51,8 +51,8 @@ states.
 To test the difference between the baseline and moderate sedative states, we use
 data for all subjects that has been preprocessed and for which the power spectra
 have been computed. You can download
-[freq_resting.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/madrid2019/tutorial_stats/freq_resting.mat)
-from our FTP server. The MATLAB file contains four data structures, one for each
+[freq_resting.mat](https://download.fieldtriptoolbox.org/workshop/madrid2019/tutorial_stats/freq_resting.mat)
+from our download server. The MATLAB file contains four data structures, one for each
 sedation level.
 
     % load averages for each individual subject, for each condition

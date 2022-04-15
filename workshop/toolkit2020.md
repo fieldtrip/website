@@ -219,15 +219,15 @@ For people that do not use a computer at the DCCN:
         addpath <path_to_fieldtrip>
         ft_defaults
 
-4.  Download the tutorial data required for the hands-on from the ftp server by going to <ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/> and download Subject01.zip
+4.  Download the tutorial data required for the hands-on from the ftp server by going to <https://download.fieldtriptoolbox.org/tutorial/> and download Subject01.zip
 
     You should also download some pre-computed intermediate results for each tutorial: 	
 
-    -   <ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/eventrelatedaveraging/>
-    -   <ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/timefrequencyanalysis/>
-    -   <ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/beamformer/>
-    -   <ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_timelock/>
-    -   <ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/connectivity/>
+    -   <https://download.fieldtriptoolbox.org/tutorial/eventrelatedaveraging/>
+    -   <https://download.fieldtriptoolbox.org/tutorial/timefrequencyanalysis/>
+    -   <https://download.fieldtriptoolbox.org/tutorial/beamformer/>
+    -   <https://download.fieldtriptoolbox.org/tutorial/cluster_permutation_timelock/>
+    -   <https://download.fieldtriptoolbox.org/tutorial/connectivity/>
 
 Downloading will take some time, especially if everyone tries to do it at the same moment. So please download in advance! If downloading from the FTP server in the web browser gives problems, please try with [CyberDuck](https://cyberduck.io) or [FileZilla](https://filezilla-project.org).
 

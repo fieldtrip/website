@@ -5,7 +5,7 @@ tags: [faq, download, ftp]
 
 # I am having problems downloading from the FTP server
 
-The FieldTrip source code and the example and tutorial datasets are released to the general public on our [FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/). This server requires an anonymous login; if needed you should use the username "anonymous" and you can your email address (or anything that is formatted as an email address) as the password.
+The FieldTrip source code and the example and tutorial datasets are released to the general public on our [download server](https://download.fieldtriptoolbox.org/). This server requires an anonymous login; if needed you should use the username "anonymous" and you can your email address (or anything that is formatted as an email address) as the password.
 
 The FTP service runs on a shared server which occasionally has a performance bottleneck. If you cannot connect, please try again at a later time (i.e. one hour later, or the next day).
 

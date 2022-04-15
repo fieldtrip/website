@@ -9,21 +9,21 @@ The short answer is: It does not really matter. There are however a few things t
 
 Let's assume your data was recorded with a system comprising N channels with the Nth channel being the reference. From this, one can derive N-1 unique time series:
 
-X_i(t) = channel_i(t) - channel_N(t) and i = 1, … , N-1. 
+X_i(t) = channel_i(t) - channel_N(t) and i = 1, … , N-1.
 
 Performing an ICA on this data will maximally yield N-1 unique independent components. In fact, it is algorithmically not possible to derive more independent components than there are linearly independent signals. In other words, the number of independent components one can compute is bounded by the rank of the data. This has implications for when we rereference the data to the average reference before computing the ICA:
 
 Xre_i(t) = X_i(t) - 1/(N-1) sum_j^(N-1) X_j
 
-The vectors Xre_i are linearly dependent since sum_i^(N-1) Xre_i = 0. By rereferencing to the average reference, the rank of the data is reduced by one and therefore, only N-2 independent components could be derived. There is a trick, however, that allows one to obtain N-1 components even for the rereferenced data: Adding a row of zeros to the original (i.e. non-rereferenced) data does neither change its rank nor does this effectively add artifactual information. What does change, however, is the fact that rereferencing to the new average (i.e., including the line of zeros) will not reduce the rank of the data by one. 
+The vectors Xre_i are linearly dependent since sum_i^(N-1) Xre_i = 0. By rereferencing to the average reference, the rank of the data is reduced by one and therefore, only N-2 independent components could be derived. There is a trick, however, that allows one to obtain N-1 components even for the rereferenced data: Adding a row of zeros to the original (i.e. non-rereferenced) data does neither change its rank nor does this effectively add artifactual information. What does change, however, is the fact that rereferencing to the new average (i.e., including the line of zeros) will not reduce the rank of the data by one.
 
-ICA is often used as a means for artifact removal. In this case, certain independent components are removed and the remaining ones are projected back to the original electrode space. One could now pose the question, whether the independent components one obtains from the ICA differ depending on whether the input data was rereferenced or not. It turns out that due to the nature of ICA-algorithms, the ICs obtained in the two cases will in general be very similar but not identical. It is safe to assume that obvious artifactual (and other meaningful) components will be detected and can thus be removed (or kept) in both cases. Therefore, rereferencing to the average reference after ICA for artefact removal will lead to very similar result as compared to not rereferencing before the ICA. 
+ICA is often used as a means for artifact removal. In this case, certain independent components are removed and the remaining ones are projected back to the original electrode space. One could now pose the question, whether the independent components one obtains from the ICA differ depending on whether the input data was rereferenced or not. It turns out that due to the nature of ICA-algorithms, the ICs obtained in the two cases will in general be very similar but not identical. It is safe to assume that obvious artifactual (and other meaningful) components will be detected and can thus be removed (or kept) in both cases. Therefore, rereferencing to the average reference after ICA for artefact removal will lead to very similar result as compared to not rereferencing before the ICA.
 
-In the following, an illustration of the above, theoretical explanation is provided. First, we have computed the correlation between independent components obtained from rereferenced and non-rereferenced data (Fig 1). 
+In the following, an illustration of the above, theoretical explanation is provided. First, we have computed the correlation between independent components obtained from rereferenced and non-rereferenced data (Fig 1).
 
 {% include image src="/assets/img/faq/should_I_rereference_prior_to_or_after_ica_for_artifact_removal/correlation.png" width="400" %}
 
-It can be seen that in each line of the correlation matrix there is one correlation value that is significantly larger than the rest. This means that each element in one set of ICs has a matching counterpart in the other set. This can be made clearer by rearranging the lines and columns of the correlation matrix such that 1.) the index of a certain component in one set matches the index of its counterpart in the other set and 2.) the indices are ordered according to the descending order of correlation values (Fig. 2). 
+It can be seen that in each line of the correlation matrix there is one correlation value that is significantly larger than the rest. This means that each element in one set of ICs has a matching counterpart in the other set. This can be made clearer by rearranging the lines and columns of the correlation matrix such that 1.) the index of a certain component in one set matches the index of its counterpart in the other set and 2.) the indices are ordered according to the descending order of correlation values (Fig. 2).
 
 {% include image src="/assets/img/faq/should_I_rereference_prior_to_or_after_ica_for_artifact_removal/correlation_sorted.png" width="400" %}
 
@@ -38,7 +38,7 @@ In a next step, we randomly selected roughly half of the matching pairs from bot
 
 ## Code
 
-In the following, the code used to generate above figures is provided. The example dataset used in this example can be downloaded [here.](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/example/rereference/)
+In the following, the code used to generate above figures is provided. The example data used in this example can be downloaded [here](https://download.fieldtriptoolbox.org/example/rereference/).
 
 ```
 load data_selectedTrial % load data
@@ -53,7 +53,7 @@ nChannel = length(data_selectedTrial.label);
 
 % add row of zeros to the data
 cfg = [];
-cfg.implicitref = 'my_implicitref'; 
+cfg.implicitref = 'my_implicitref';
 data_selectedTrial = ft_preprocessing(cfg, data_selectedTrial);
 
 % rereference individual trials to average reference
@@ -66,7 +66,7 @@ data_selectedTrial_avgreref = ft_preprocessing(cfg, data_selectedTrial);
 
 % compute ICAs ============================================================
 cfg        = [];
-cfg.method = 'runica'; 
+cfg.method = 'runica';
 cfg.numcomponent = nChannel;
 comp_selectedTrial = ft_componentanalysis(cfg, data_selectedTrial);
 comp_selectedTrial_avgreref = ft_componentanalysis(cfg, data_selectedTrial_avgreref);
@@ -101,7 +101,7 @@ title(['correlation between sorted ICs obtained from the two strategies (mean di
 
 % reject ICs ==============================================================
 nRemove = 30;
-remove_inds = randperm(length(comp_selectedTrial.label), nRemove); 
+remove_inds = randperm(length(comp_selectedTrial.label), nRemove);
 
 % reject components in comp_selectedTrial
 cfg = [];
@@ -127,12 +127,3 @@ cfg.layout = lay;
 cfg.xlim = [-0.2, 0.5];
 ft_multiplotER(cfg, data_clean_reref_pre, data_clean_reref_post)
 ```
-
-
-
-
-
-
-
-
-

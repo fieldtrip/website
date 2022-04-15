@@ -15,7 +15,7 @@ This dataset was recorded at the Comprehensive Epilepsy Center of the New York U
 
 The patient suffered from intractable epilepsy and underwent invasive monitoring to localize the epileptogenic zone for subsequent surgical removal. Electrode placement was solely guided by clinical considerations. During the recording the patient performed a visual localizer task that was used to identify electrodes responsive to certain types of visual input. Stimuli from the following 7 categories were presented in random order (event codes in parentheses): false font (3), house (4), object (5), texture (6), body (7), text (8), face (9).
 
-The data can be downloaded from [SubjectNY394.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/SubjectNY394.zip)
+The data [SubjectNY394.zip](https://download.fieldtriptoolbox.org/tutorial/SubjectNY394.zip) can be downloaded from our download server.
 
 ## Data analysis
 

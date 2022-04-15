@@ -11,7 +11,7 @@ These scripts demonstrate how to compute and compare some different MEG headmode
 
 For all functions used, you can type 'help _function_' in MATLAB for more information.
 
-The MEG dataset that is used in this demo is available from <ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/> and is named Subject01.zip.
+The MEG dataset that is used in this demo is available from <https://download.fieldtriptoolbox.org/tutorial/> and is named Subject01.zip.
 
 If you download this data into a folder named 'testdata', the directory should look like this:
 

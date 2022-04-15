@@ -17,7 +17,7 @@ This script demonstrates how you can use ICA for cleaning the EOG artifacts from
 
 ## Example dataset
 
-You can run the code below on your own data. Alternatively, try with the example MEG dataset _ArtifactMEG.ds_ (available from [ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/ArtifactMEG.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/ArtifactMEG.zip)). This dataset was acquired continuously with trials of 10 seconds. All figures in this example script are based on these data.
+You can run the code below on your own data. Alternatively, try with the [ArtifactMEG.zip](https://download.fieldtriptoolbox.org/tutorial/ArtifactMEG.zip) example MEG dataset. This dataset was acquired continuously with trials of 10 seconds. All figures in this example script are based on these data.
 
 To load this dataset into MATLAB and preprocess with FieldTrip, use:
 

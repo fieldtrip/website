@@ -55,7 +55,7 @@ Now we determine all indices of the binary mask to be considered as inside the h
 
 {% include image src="/assets/img/example/sourcemodel_aligned2mni_atlas/atlasbasedmnigrid.png" width="600" %}
 
-Load the subject-specific MRI from [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/salzburg/mri.mat) and inverse-warp the subject specific grid to the template grid.
+Load the subject-specific MRI from [here](https://download.fieldtriptoolbox.org/tutorial/salzburg/mri.mat) and inverse-warp the subject specific grid to the template grid.
 
     mri = ft_read_mri(dccnpath('/home/common/matlab/fieldtrip/dataftp/tutorial/salzburg/mri.mat'));
 
@@ -66,7 +66,7 @@ Load the subject-specific MRI from [here](ftp://ftp.fieldtriptoolbox.org/pub/fie
     cfg.mri            = mri;
     sourcemodel        = ft_prepare_sourcemodel(cfg);
 
-Finally, you can load the subject-specific headmodel from [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/salzburg/hdm.mat) and check the result with the following code.
+Finally, you can load the subject-specific headmodel from [here](https://download.fieldtriptoolbox.org/tutorial/salzburg/hdm.mat) and check the result with the following code.
 
     close all
 

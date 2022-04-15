@@ -55,7 +55,7 @@ The following steps had been performed:
 - Defining triggers around which the data will be segmented using **[ft_definetrial](/reference/ft_definetrial)**. The data is segmented to include 1.5 seconds prior to trigger onset (i.e. baseline) and 2 second post trigger onset (i.e. response interval).
 - Apply some preprocessing such as power line noise removal, demean and detrend using **[ft_preprocessing](/reference/ft_preprocessing)**
 
-To run the following section of code you need the original dataset and trial function: [download dataset](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/natmeg/oddball1_mc_downsampled.fif), [download trial function](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/natmeg/trialfun_oddball_responselocked.m)
+To run the following section of code you need the original dataset [oddball1_mc_downsampled.fif](https://download.fieldtriptoolbox.org/workshop/natmeg/oddball1_mc_downsampled.fif) and trial function [trialfun_oddball_responselocked.m](https://download.fieldtriptoolbox.org/workshop/natmeg/trialfun_oddball_responselocked.m).
 
     clear all
     close all
@@ -80,9 +80,7 @@ To run the following section of code you need the original dataset and trial fun
 
     data_meg_clean    = ft_preprocessing(cfg);
 
-The epoched data can be downloaded [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/aarhus/data_meg_clean.mat).
-
-Load the data using the following command:
+The resulting epoched data can be downloaded [here](https://download.fieldtriptoolbox.org/workshop/aarhus/data_meg_clean.mat) and you can load it using the following command:
 
     load data_meg_clean
 
@@ -162,7 +160,7 @@ Use your knowledge about the distribution of the ingoing and outgoing field.
 ### Loading the headmodel
 
 The first requirement for the source reconstruction procedure is that we need a forward model. The forward model allows us to calculate the distribution of the magnetic field on the MEG sensors given a hypothetical current distribution.
-We are going to use the forward model that was calculated in the [dipole fitting tutorial](/workshop/natmeg/dipolefitting) which you can download to your working directory [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/aarhus/headmodel_meg.mat).
+We are going to use the forward model that was calculated in the [dipole fitting tutorial](/workshop/natmeg/dipolefitting) which you can download to your working directory [here](https://download.fieldtriptoolbox.org/workshop/aarhus/headmodel_meg.mat).
 
 Load the forward model using the following cod
 
@@ -176,7 +174,7 @@ The next step is to discretize the brain volume into a grid. For each grid point
 Sensors that were previously removed from the data set should also be removed when calculating the leadfield.
 {% include markup/end %}
 
-We first prepare the magnetometer and electrode position information from the dataset that can be downloaded [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/aarhus/).
+We first prepare the magnetometer and electrode position information from the dataset that can be downloaded [here](https://download.fieldtriptoolbox.org/workshop/aarhus/).
 
     dataset = 'oddball1_mc_downsampled.fif';
     grad    = ft_read_sens(dataset, 'senstype', 'meg');
@@ -185,24 +183,23 @@ We first prepare the magnetometer and electrode position information from the da
 If you are not contrasting the activity of interest against another condition or baseline time-window, then you may choose to normalize the lead field (cfg.normalize='yes'), which will help control against the power bias towards the center of the head.
 
     % Create leadfield grid
-    cfg                 = [];
-    cfg.channel         = data_right.label; % ensure that rejected sensors are not present
-    cfg.grad            = grad;
-    cfg.headmodel       = headmodel_meg;
-    cfg.lcmv.reducerank = 2; % default for MEG is 2, for EEG is 3
+    cfg = [];
+    cfg.channel    = data_right.label; % ensure that rejected sensors are not present
+    cfg.grad       = grad;
+    cfg.headmodel  = headmodel_meg;
+    cfg.reducerank = 2; % default for MEG is 2, for EEG is 3
     cfg.resolution = 1;   % use a 3-D grid with a 1 cm resolution
     cfg.unit       = 'cm';
     cfg.tight      = 'yes';
     [grid] = ft_prepare_leadfield(cfg);
 
-Save the gri
+Save the source model with the leadfields:
 
     save grid grid
 
 The grid data structure has the following field
 
     grid =
-
                 xgrid: [-6 -5 -4 -3 -2 -1 0 1 2 3 4 5 6 7]% X-axsis grid
                 ygrid: [-8 -7 -6 -5 -4 -3 -2 -1 0 1 2 3 4 5 6 7 8 9]% Y-axis grid
                 zgrid: [-4 -3 -2 -1 0 1 2 3 4 5 6 7 8 9]% Z-axis grid
@@ -229,39 +226,40 @@ We will focus on right hand responses. First, we select the latencies of the ear
 We compute the covariance matrix during the call to **[ft_timelockanalysis](/reference/ft_timelockanalysis)**. Note that the data covariance matrix is computed on the entire interval including the pre and post-response latencies. This approach is similar to the common filter minimizing the influence of different spatial leakage profiles of the pre and post-response spatial filters.
 
     cfg = [];
-    cfg.covariance='yes';
+    cfg.covariance = 'yes';
     cfg.covariancewindow = [-.15 .15];
-    avg = ft_timelockanalysis(cfg,data_right);
-    cfg = [];
-    cfg.covariance='yes';
-    avgpre = ft_timelockanalysis(cfg,datapre);
-    avgpst = ft_timelockanalysis(cfg,datapost);
+    avg = ft_timelockanalysis(cfg, data_right);
 
-Now using the headmodel and the precomputed leadfield we make three subsequent calls to **[ft_sourceanalysis](/reference/ft_sourceanalysis)**. First we compute one spatial filter per location (e.g., voxel) on the basis of the entire latency interval of pre and post-response data. Specifying the **cfg.keepfilter = 'yes';** allows for a subsequent application of the spatial filters on the pre and post-response data separately. The purpose of lambda is discussed in Exercise 6. By using cfg.keepfilter = 'yes', we let **[ft_sourceanalysis](/reference/ft_sourceanalysis)** return the filter matrix in the source structure.
+    cfg = [];
+    cfg.covariance = 'yes';
+    avgpre = ft_timelockanalysis(cfg, datapre);
+    avgpst = ft_timelockanalysis(cfg, datapost);
+
+Now using the headmodel and the precomputed leadfield we make three subsequent calls to **[ft_sourceanalysis](/reference/ft_sourceanalysis)**. First we compute one spatial filter per location (e.g., voxel) on the basis of the entire latency interval of pre and post-response data. Specifying the `cfg.keepfilter = 'yes'` allows for a subsequent application of the spatial filters to the pre- and post-response data separately. The purpose of lambda is discussed in Exercise 6. By using `cfg.keepfilter = 'yes'` we let **[ft_sourceanalysis](/reference/ft_sourceanalysis)** return the filter matrix in the source structure.
 
     %% first call to ft_sourceanalysis keeping the spatial filters
-    cfg=[];
-    cfg.method='lcmv';
-    cfg.grid=grid;
-    cfg.headmodel=headmodel_meg;
-    cfg.lcmv.keepfilter='yes';
+    cfg = [];
+    cfg.method = 'lcmv';
+    cfg.grid = grid;
+    cfg.headmodel = headmodel_meg;
+    cfg.lcmv.keepfilter = 'yes';
     cfg.lcmv.lambda = '5%';
-    cfg.channel         = {'MEG'};
-    cfg.senstype    = 'MEG';
-    sourceavg=ft_sourceanalysis(cfg, avg);
-    %% second and third call to ft_sourceanalysis now applying the precomputed filters to pre and %post intervals
-    cfg=[];
-    cfg.method='lcmv';
-    cfg.grid=grid;
-    cfg.sourcemodel.filter=sourceavg.avg.filter;
-    cfg.headmodel=headmodel_meg;
-    sourcepreM1=ft_sourceanalysis(cfg, avgpre);
-    sourcepstM1=ft_sourceanalysis(cfg, avgpst);
+    cfg.channel = {'MEG'};
+    cfg.senstype = 'MEG';
+    sourceavg = ft_sourceanalysis(cfg, avg);
 
-The source data structure has the following field
+    %% second and third call to ft_sourceanalysis now applying the precomputed filters to pre and %post intervals
+    cfg = [];
+    cfg.method = 'lcmv';
+    cfg.grid = grid;
+    cfg.sourcemodel.filter = sourceavg.avg.filter;
+    cfg.headmodel = headmodel_meg;
+    sourcepreM1 = ft_sourceanalysis(cfg, avgpre);
+    sourcepstM1 = ft_sourceanalysis(cfg, avgpst);
+
+The source data structure has the following fields:
 
     sourceavg =
-
         time: [1x876 double]   % time dimension of the input data
          dim: [14 18 14]       % 3D dimensions of the scanned space
       inside: [3528x1 logical] % locations inside the brain
@@ -279,7 +277,7 @@ The strategy around circumventing the noise bias towards the center of the head 
 
 The grid of estimated power values can be plotted superimposed on the anatomical MRI. This requires the output of **[ft_sourceanalysis](/reference/ft_sourceanalysis)** to match position of the MRI. The function **[ft_sourceinterpolate](/reference/ft_sourceinterpolate)** aligns the source level activity with the structural MRI. We only need to specify what parameter we want to interpolate and to specify the MRI we want to use for interpolation.
 
-First we will load the MRI. It is important that you use the MRI realigned with the sensor or your source activity data will not match the anatomical data. We will load the realigned MRI from the [dipole fitting tutorial](/workshop/natmeg/dipolefitting) which can be downloaded to the working directory [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/aarhus/mri_segmented.mat).
+First we will load the MRI. It is important that you use the MRI realigned with the sensor or your source activity data will not match the anatomical data. We will load the realigned MRI from the [dipole fitting tutorial](/workshop/natmeg/dipolefitting) which can be downloaded to the working directory [here](https://download.fieldtriptoolbox.org/workshop/aarhus/mri_segmented.mat).
 
     load mri_segmented.mat
 
@@ -300,7 +298,7 @@ After which, we can plot the interpolated data. In order to emphasize "the hill"
     cfg.maskparameter = 'mask';
     cfg.location = [-42 -18 67];
     cfg.funcolormap = 'jet';
-    ft_sourceplot(cfg,source_int);
+    ft_sourceplot(cfg, source_int);
 
 {% include image src="/assets/img/workshop/aarhus/beamformingerf/sourceplotm1_meg.png" width="600" %}
 
@@ -342,14 +340,14 @@ This tutorial contains the hands-on material of the [NatMEG workshop](/workshop/
 
 First we will repeat some of the previous steps. We will compute the covariance matrix on the basis of the data including the pre and post-response latencies. This is followed by averaging of the pre and post data segments separately, yet keeping the individual observations using the option **cfg.keeptrials = 'yes'**. Here it is important that we also calculate the single-trial covariance using the option **cfg.covariance = 'yes'** as this will later be used to calculate the source activity.
 
-If this is where you started in the tutorial, make sure you have downloaded and loaded the necessary data: [headmodel_meg](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/aarhus/headmodel_meg.mat),[datapre](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/aarhus/datapre.mat),[datapost](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/aarhus/datapost.mat),[grid](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/aarhus/grid.mat),[data_right](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/aarhus/data_right.mat)
+If this is where you started in the tutorial, make sure you have downloaded and loaded the necessary data: [headmodel_meg.mat](https://download.fieldtriptoolbox.org/workshop/aarhus/headmodel_meg.mat), [datapre.mat](https://download.fieldtriptoolbox.org/workshop/aarhus/datapre.mat), [datapost.mat](https://download.fieldtriptoolbox.org/workshop/aarhus/datapost.mat), [grid.mat](https://download.fieldtriptoolbox.org/workshop/aarhus/grid.mat), [data_right.mat](https://download.fieldtriptoolbox.org/workshop/aarhus/data_right.mat)
 
     % load the data
     load headmodel_meg
     load datapre
     load datapost
-    load data_right
     load grid
+    load data_right
 
     cfg = [];
     cfg.covariance='yes';
@@ -362,29 +360,29 @@ If this is where you started in the tutorial, make sure you have downloaded and 
     avgpre = ft_timelockanalysis(cfg,datapre);
     avgpst = ft_timelockanalysis(cfg,datapost);
 
-Next, we repeat the three subsequent calls to **[ft_sourceanalysis](/reference/ft_sourceanalysis)**. The first computes the spatial filters much in the same way demonstrated above. Because of low signal-to-noise ratio on single trial level it is not recommended to compute them on individual trials. Subsequently, single trial source power estimates are kept in the output structure by specifying **cfg.rawtrial = 'yes';**.
+Next, we repeat the three subsequent calls to **[ft_sourceanalysis](/reference/ft_sourceanalysis)**. The first computes the spatial filters much in the same way demonstrated above. Because of low signal-to-noise ratio on single trial level it is not recommended to compute them on individual trials. Subsequently, single trial source power estimates are kept in the output structure by specifying `cfg.rawtrial = 'yes'`.
 
     cfg=[];
-    cfg.method='lcmv';
-    cfg.grid=grid;
-    cfg.headmodel=headmodel_meg;
-    cfg.lcmv.keepfilter='yes';
+    cfg.method = 'lcmv';
+    cfg.grid = grid;
+    cfg.headmodel = headmodel_meg;
+    cfg.lcmv.keepfilter = 'yes';
     cfg.lcmv.lambda = '5%';
-    cfg.channel         = {'MEG'};
-    sourceavg=ft_sourceanalysis(cfg, avg);
-    cfg=[];
-    cfg.method='lcmv';
-    cfg.grid=grid;
-    cfg.sourcemodel.filter=sourceavg.avg.filter;
+    cfg.channel = {'MEG'};
+    sourceavg = ft_sourceanalysis(cfg, avg);
+    
+    cfg = [];
+    cfg.method = 'lcmv';
+    cfg.grid = grid;
+    cfg.sourcemodel.filter = sourceavg.avg.filter;
     cfg.rawtrial = 'yes';
-    cfg.headmodel=headmodel_meg;
-    sourcepreM1=ft_sourceanalysis(cfg, avgpre);
-    sourcepstM1=ft_sourceanalysis(cfg, avgpst);
+    cfg.headmodel = headmodel_meg;
+    sourcepreM1 = ft_sourceanalysis(cfg, avgpre);
+    sourcepstM1 = ft_sourceanalysis(cfg, avgpst);
 
 The source structure now contains the single trial estimates in the field **sourcepstM1.trial**
 
     sourcepstM1 =
-
         time: [1x26 double]
          dim: [14 18 14]
       filter: {3528x1 cell}
@@ -426,11 +424,11 @@ Note, we make two subsequent calls to **[ft_sourceinterpolate](/reference/ft_sou
 
     cfg              = [];
     cfg.voxelcoord   = 'no';
-    cfg.parameter    = 'stat';
     cfg.interpmethod = 'nearest';
-    statint  = ft_sourceinterpolate(cfg, stat, mri_segmented);
+    cfg.parameter    = 'stat';
+    statint = ft_sourceinterpolate(cfg, stat, mri_segmented);
     cfg.parameter    = 'mask';
-    maskint  = ft_sourceinterpolate(cfg, stat, mri_segmented);
+    maskint = ft_sourceinterpolate(cfg, stat, mri_segmented);
     statint.mask = maskint.mask;
 
 Finally, we plot the result. Instead of ratio the functional data is now represented in t-values.
@@ -459,89 +457,89 @@ The ultimate motivation of source analysis of M/EEG data is the reconstruction o
 
 ##### Compute leadfield at desired location
 
-    cfg=[];
-    cfg.headmodel=headmodel_meg;
-    cfg.channel=data_right.label;
-    cfg.sourcemodel.pos=[-42 -18 67]./10; % units of cm
-    cfg.grad=grad;
+    cfg = [];
+    cfg.headmodel = headmodel_meg;
+    cfg.channel = data_right.label;
+    cfg.sourcemodel.pos = [-42 -18 67]./10; % units of cm
+    cfg.grad = grad;
     cfg.unit = 'cm';
-    sourcemodel_virt=ft_prepare_leadfield(cfg);
+    sourcemodel_virt = ft_prepare_leadfield(cfg);
 
 ##### Compute the covariance matrix
 
     cfg = [];
-    cfg.channel=data_right.label;
-    cfg.covariance='yes';
-    cfg.covariancewindow=[.05 .18];
+    cfg.channel = data_right.label;
+    cfg.covariance = 'yes';
+    cfg.covariancewindow = [.05 .18];
     avg = ft_timelockanalysis(cfg,data_right);
 
 ##### Perform source analysis
 
-    cfg=[];
-    cfg.method='lcmv';
+    cfg = [];
+    cfg.method = 'lcmv';
     cfg.grid = sourcemodel_virt;
-    cfg.headmodel=headmodel_meg;
-    cfg.lcmv.keepfilter='yes'; % keep filters in the output, which are later multiplied with the data
-    cfg.lcmv.fixedori='yes'; % consider only the dominant orientation
-    cfg.lcmv.lamda='5%';
-    source=ft_sourceanalysis(cfg, avg);
+    cfg.headmodel = headmodel_meg;
+    cfg.lcmv.keepfilter = 'yes'; % keep filters in the output, which are later multiplied with the data
+    cfg.lcmv.fixedori ='yes'; % consider only the dominant orientation
+    cfg.lcmv.lamda = '5%';
+    source = ft_sourceanalysis(cfg, avg);
 
 ##### Multiply filters with the data and organize into FieldTrip sensable data structure
 
-    spatialfilter=cat(1,source.avg.filter{:});
-    virtsens=[];
+    spatialfilter = cat(1,source.avg.filter{:});
+    virtsens = [];
     for i=1:length(data_right.trial)
-      virtsens.trial{i}=spatialfilter*data_right.trial{i};
+      virtsens.trial{i} = spatialfilter*data_right.trial{i};
     end
-    virtsens.time=data_right.time;
-    virtsens.fsample=data_right.fsample;
-    virtsens.label={'M1'}';
+    virtsens.time = data_right.time;
+    virtsens.fsample = data_right.fsample;
+    virtsens.label = {'M1'}';
 
 Now we will use **[ft_timelockanalysis](/reference/ft_timelockanalysis)** and **[ft_freqanalysis](/reference/ft_freqanalysis)** in order to evaluate the result by plotting it with **[ft_singleplotER](/reference/ft_singleplotER)** and **[ft_singleplotTFR](/reference/ft_singleplotTFR)** respectively. Note, all the details around event-related averaging and time-frequency analysis are covered by the [the event-related fields tutorial](/tutorial/eventrelatedaveraging) and [the time-frequency tutorial](/tutorial/timefrequencyanalysis). It is recommended that you are familiar with these before you continue.
 
     %% compute the event related average at location M1
-    cfg=[];
-    cfg.preproc.hpfilter='yes';
-    cfg.preproc.hpfreq=1;
-    cfg.preproc.lpfilter='yes';
-    cfg.preproc.lpfreq=40;
-    tlkvc=ft_timelockanalysis(cfg, virtsens);
+    cfg = [];
+    cfg.preproc.hpfilter = 'yes';
+    cfg.preproc.hpfreq = 1;
+    cfg.preproc.lpfilter = 'yes';
+    cfg.preproc.lpfreq = 40;
+    tlkvc = ft_timelockanalysis(cfg, virtsens);
 
     %% compute the time-frequency representation of power (TFR)at location M1
-    cfg              = [];
-    cfg.output       = 'pow';
-    cfg.method       = 'mtmconvol';
-    cfg.taper        = 'hanning';
-    cfg.foi          = 1:1:40;
-    cfg.t_ftimwin    = ones(length(cfg.foi),1).*0.5;
-    cfg.toi          = -.5:0.05:1.75;
-    cfg.keeptrials ='no';
+    cfg            = [];
+    cfg.output     = 'pow';
+    cfg.method     = 'mtmconvol';
+    cfg.taper      = 'hanning';
+    cfg.foi        = 1:1:40;
+    cfg.t_ftimwin  = ones(length(cfg.foi),1).*0.5;
+    cfg.toi        = -.5:0.05:1.75;
+    cfg.keeptrials = 'no';
     tfrvc= ft_freqanalysis(cfg,virtsens);
 
     % baseline correction
-    cfg=[];
-    cfg.baseline=[-.5 0];
-    cfg.baselinetype='db';
+    cfg = [];
+    cfg.baseline = [-.5 0];
+    cfg.baselinetype = 'db';
     tfrvcbl = ft_freqbaseline(cfg, tfrvc);
 
 Now we can plot the result.
 
     figure;
     for i=1:length(tlkvc.label)
-      cfg=[];
-      cfg.channel = tlkvc.label{i};
+      cfg = [];
+      cfg.channel   = tlkvc.label{i};
       cfg.parameter = 'avg';
-      cfg.xlim    = [-.3 1.75];
+      cfg.xlim      = [-.3 1.75];
 
-      subplot(2,2,i);ft_singleplotER(cfg,tlkvc);
+      subplot(2,2,i); ft_singleplotER(cfg, tlkvc);
     end
     for i=1:length(tfrvc.label)
-      cfg=[];
+      cfg = [];
       cfg.channel = tfrvc.label{i};
       cfg.zlim    = [-3 3];
       cfg.xlim    = [-.5 2];
       cfg.ylim    = [1 40];
-      subplot(2,2,i+1);ft_singleplotTFR(cfg,tfrvcbl);
+      subplot(2,2,i+1); ft_singleplotTFR(cfg, tfrvcbl);
     end
 
 {% include image src="/assets/img/workshop/aarhus/beamformingerf/timecourseatm1_meg.png" width="600" %}
@@ -556,16 +554,16 @@ Take your time to verbalize what you see. Try to decompose the averaged response
 
 ## (EEG) The forward model and lead field matrix
 
-We will continue to analyze the EEG data according to a series of steps similar to the MEG. Try to note the differences between analyzing the EEG and MEG data. The data used in this tutorial can be downloaded [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/aarhus/mri_segmented.mat).
+We will continue to analyze the EEG data according to a series of steps similar to the MEG. Try to note the differences between analyzing the EEG and MEG data. The data used in this tutorial can be downloaded [here](https://download.fieldtriptoolbox.org/workshop/aarhus/mri_segmented.mat).
 
     load data_eeg_reref_ica
     %% sort into left and right hand response
     cfg = [];
-    cfg.trials       = find(data_eeg_reref_ica.trialinfo(:,1) == 256);
-    data_eeg_left     = ft_redefinetrial(cfg, data_eeg_reref_ica);
+    cfg.trials = find(data_eeg_reref_ica.trialinfo(:,1) == 256);
+    data_eeg_left = ft_redefinetrial(cfg, data_eeg_reref_ica);
 
-    cfg.trials       = find(data_eeg_reref_ica.trialinfo(:,1) == 4096);
-    data_eeg_right    = ft_redefinetrial(cfg, data_eeg_reref_ica);
+    cfg.trials = find(data_eeg_reref_ica.trialinfo(:,1) == 4096);
+    data_eeg_right = ft_redefinetrial(cfg, data_eeg_reref_ica);
 
 ##### Prepare data for source analysis
 
@@ -574,6 +572,7 @@ We will continue to analyze the EEG data according to a series of steps similar 
     datapre = ft_redefinetrial(cfg, data_eeg_right);
     cfg.toilim = [.05 .15];
     datapost = ft_redefinetrial(cfg, data_eeg_right);
+    
     %% output cov matrix of the entire interval
     cfg = [];
     cfg.covariance='yes';
@@ -581,14 +580,14 @@ We will continue to analyze the EEG data according to a series of steps similar 
     avg = ft_timelockanalysis(cfg,data_eeg_right);
     cfg = [];
     cfg.covariance='yes';
-    avgpre = ft_timelockanalysis(cfg,datapre);
-    avgpst = ft_timelockanalysis(cfg,datapost);
+    avgpre = ft_timelockanalysis(cfg, datapre);
+    avgpst = ft_timelockanalysis(cfg, datapost);
 
-### EEG Head model & data
+### EEG head model & data
 
 As before, we will use the head model calculated in the [dipole fitting tutorial](/workshop/natmeg/dipolefitting) and the preprocessed data in order to compute the leadfield.
 
-Load the EEG head model using the following cod
+Load the EEG head model using the following code:
 
     load headmodel_eeg.mat
 
@@ -596,11 +595,11 @@ Load the EEG head model using the following cod
 
 The leadfield is calculated using **[ft_prepare_leadfield](/reference/ft_prepare_leadfield)**.
 
-    cfg                 = [];
-    cfg.elec         = elec;
-    cfg.channel           = data_eeg_reref_ica.label;
-    cfg.headmodel       = headmodel_eeg;
-    cfg.dics.reducerank = 3; % default for MEG is 2, for EEG is 3
+    cfg = [];
+    cfg.elec       = elec;
+    cfg.channel    = data_eeg_reref_ica.label;
+    cfg.headmodel  = headmodel_eeg;
+    cfg.reducerank = 3; % default for MEG is 2, for EEG is 3
     cfg.resolution = 1;   % use a 3-D grid with a 1 cm resolution
     cfg.unit       = 'cm';
     cfg.tight      = 'yes';
@@ -766,11 +765,10 @@ _Figure 6: Comparison of time course reconstruction of activity in the primary m
 
 Beamforming source analysis in the time domain with DICS on EEG and MEG data has been demonstrated. Options at each stage and their influence on the results were discussed, such as computing the covariance matrix on the basis of single trials vs. ERF/ERP. The results were plotted on an orthogonal view. Thresholding of the source maps was demonstrated on the basis of an arbitrary and statistical threshold. Finally, virtual sensor time-courses were extracted and compared between the imaging modalities.
 
-Computing event-related fields with [MNE](/tutorial/minimumnormestimate) or frequency domain beamformer [DICS](/workshop/natmeg/beamforming) might be of interest. More information on [common filters can be found here](/example/common_filters_in_beamforming).
-If you are doing a group study where you want the grid points to be the same over all subjects, [see here](/example/sourcemodel_aligned2mni). See [here for source statistics](/example/source_statistics).
+Computing event-related fields with [MNE](/tutorial/minimumnormestimate) or frequency domain beamformer [DICS](/workshop/natmeg/beamforming) might be of interest. More information on [common filters can be found here](/example/common_filters_in_beamforming). If you are doing a group study where you want the grid points to be the same over all subjects, [see here](/example/sourcemodel_aligned2mni). See [here for source statistics](/example/source_statistics).
 
-FAQ
+See also the following FAQs:
 {% include seealso tag1="source" tag2="faq" %}
 
-Example script
+See also the following example scripts:
 {% include seealso tag1="source" tag2="example" %}

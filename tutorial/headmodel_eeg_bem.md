@@ -7,7 +7,7 @@ tags: [tutorial, eeg, source, headmodel, mri, plotting, meg-language]
 
 ## Introduction
 
-In this tutorial you can find information about how to construct a Boundary Element Method (BEM) volume conduction model of the head (head model) based on a single subject's MRI. We will use the anatomical images that belong to the same subject whose data was analyzed in other tutorials. The anatomical MRI data is available from the [FieldTrip FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip).
+In this tutorial you can find information about how to construct a Boundary Element Method (BEM) volume conduction model of the head (head model) based on a single subject's MRI. We will use the anatomical images that belong to the same subject whose data was analyzed in other tutorials. The anatomical MRI data is included in the [Subject01.zip](https://download.fieldtriptoolbox.org/tutorial/Subject01.zip) MEG dataset.
 
 The volume conduction model shown here is EEG specific. In reality, we do not have corresponding EEG data to the anatomical MRI we use in this tutorial, but we will use a template EEG set to demonstrate how to build a head model for EEG and how to align the electrodes to anatomical data. Different strategies can be used for the construction of head models. The processing pipeline of the tutorial is an example which we think is the most appropriate for the tutorial-dataset.
 
@@ -33,7 +33,7 @@ If you do not have an MRI, but do have a measurement of the scalp surface or ele
 
 Here, we will work towards a volume conduction model of the head based on the boundary element method (BEM). The BEM model assumes realistic information (of a certain degree) about the interface between the skin, skull and brain surfaces. First, we will use an anatomical MRI to extract these surfaces. This procedure is termed **segmentation**. Following the segmentation, a description of each surface using vertices and triangles is constructed. Finally, the BEM model will be computed.
 
-The anatomical mri of the [tutorial data set](/tutorial/meg_language) is available [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip). Although we did not record EEG in this particular language study, we will nevertheless use it as example MRI to make an EEG volume conduction model.
+The anatomical mri of the [tutorial data set](/tutorial/meg_language) is available [here](https://download.fieldtriptoolbox.org/tutorial/Subject01.zip). Although we did not record EEG in this particular language study, we will nevertheless use it as example MRI to make an EEG volume conduction model.
 
 - First, we will read the anatomical data with **[ft_read_mri](/reference/fileio/ft_read_mri)**;
 - then we segment the anatomical information into different tissue types with **[ft_volumesegment](/reference/ft_volumesegment)**;
@@ -94,7 +94,7 @@ It is also possible to read in anatomical MRI data in [other formats](/faq/dataf
 In this step, the voxels of the anatomical MRI are segmented (i.e. separated) into the three different tissue types: scalp, skull and brain. The function **[ft_volumesegment](/reference/ft_volumesegment)** will produce the required output. You can read more about how the tissue-types are represented in the output of this function in this [FAQ](/faq/how_is_the_segmentation_defined).
 
 {% include markup/warning %}
-Note that the segmentation is quite time consuming (~15mins) and if you want you can load the result and skip ahead to the next step. You can download the segmented MRI of this tutorial data from the [FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/headmodel_eeg/segmentedmri.mat) (segmentedmri.mat).
+Note that the segmentation is quite time consuming (~15mins) and if you want you can load the result and skip ahead to the next step. You can download [segmentedmri.mat](https://download.fieldtriptoolbox.org/tutorial/headmodel_eeg/segmentedmri.mat) which contains the segmented MRI used in this tutorial.
 {% include markup/end %}
 
 {% include markup/info %}
@@ -154,7 +154,7 @@ It is a structure array which describes the geometry of three surfaces in these 
 
 ## Head model
 
-The scalp, skull and brain mask have already been segmented and a surface description of the brain has been constructed. Now, we will create the volume conduction model. We will specify method 'dipoli', and 'openmeeg' to build the head model in the cfg.method field, but there also [other methods](/faq/what_kind_of_volume_conduction_models_are_implemented) to build a BEM model. For example, method 'dipoli' will not work on a Windows platform. In this case, you can either use 'openmeeg', 'bemcp', or another method or you can download the [headmodel](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/headmodel_eeg/vol.mat).
+The scalp, skull and brain mask have already been segmented and a surface description of the brain has been constructed. Now, we will create the volume conduction model. We will specify method 'dipoli', and 'openmeeg' to build the head model in the cfg.method field, but there also [other methods](/faq/what_kind_of_volume_conduction_models_are_implemented) to build a BEM model. For example, method 'dipoli' will not work on a Windows platform. In this case, you can either use 'openmeeg', 'bemcp', or another method or you can download the [headmodel](https://download.fieldtriptoolbox.org/tutorial/headmodel_eeg/vol.mat).
 
     % Create a volume conduction model using 'dipoli', 'openmeeg', or 'bemcp'.
     % Dipoli

@@ -15,7 +15,7 @@ FieldTrip is released under the [GNU General Public License](http://www.gnu.org/
 
 This tutorial describes how to perform a source localization on epilepsy data using a kurtosis beamformer method implemented in FieldTrip. The tutorial assumes that the reader is already experienced with epilepsy data, and understands the basics of MEG, but is perhaps not familiar with FieldTrip or its capabilities. The tutorial does not attempt to fully explain the intrepretation of the results, which requires clinical expertise and further knowledge of the case histories.
 
-The tutorial covers data for 3 patients, all shared via our [FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/epilepsy). The provided datasets have varying degrees of clinical complexity. The more complex cases are, of course, the ones most likely to be referred for MEG recordings prior to consideration for surgery.
+The tutorial covers data for 3 patients, all shared via our [download server](https://download.fieldtriptoolbox.org/tutorial/epilepsy/). The provided datasets have varying degrees of clinical complexity. The more complex cases are, of course, the ones most likely to be referred for MEG recordings prior to consideration for surgery.
 
 For one of the patients, case 3, we provide a detailed line-by-line breakdown of the MATLAB code required to analyze the data. We outline the steps in obtaining the beamformer outputs, from anatomical coregistration right through to plotting source images. We note an important extra step that is required in computing the beamformer for data collected on an Neuromag/Elekta/MEGIN system compared to a CTF system. We also describe how to output the source images into NiFTI format for viewing in other software such as [MRIcro](https://www.mccauslandcenter.sc.edu/crnl/tools), and how to output source timeseries as a file which can be examined clinically alongside the original data in [AnyWave](http://meg.univ-amu.fr/wiki/AnyWave) data viewing software.
 
@@ -54,7 +54,7 @@ Following the MEG, was operated in the right parietal area and is
 now partially seizure free.
 {% include markup/end %}
 
-The data analysis for this subject shows multiple maxima in the kurtosis, and a complex pattern of epileptiform spikes. Due to the complexity of the clinical case, we will not present results here, but we will report on some details. The data is available from [our FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/epilepsy).
+The data analysis for this subject shows multiple maxima in the kurtosis, and a complex pattern of epileptiform spikes. Due to the complexity of the clinical case, we will not present results here, but we will report on some details. The data is available from our [download server](https://download.fieldtriptoolbox.org/tutorial/epilepsy/).
 
 #### Analysis of the CTF dataset
 
@@ -86,7 +86,7 @@ We don't have surgical follow-up information about this patient,
 because she was not from our local hospital.
 {% include markup/end %}
 
-Analysis using a pipeline similar to that for case 3 gives meaningful focal results (not presented here). The data is available from [our FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/epilepsy).
+Analysis using a pipeline similar to that for case 3 gives meaningful focal results (not presented here). The data is available from our [download server](https://download.fieldtriptoolbox.org/tutorial/epilepsy/).
 
 #### Analysis of the CTF dataset
 
@@ -117,7 +117,7 @@ surgery, though the extent of the polymicrogyria rendered this a difficult
 option.
 {% include markup/end %}
 
-The shared data is available from [our FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/epilepsy). After downloading the data, we set up the path and ensure that FieldTrip is the only toolbox on the path. See also [this FAQ](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path).
+The shared data is available from our [download server](https://download.fieldtriptoolbox.org/tutorial/epilepsy/). After downloading the data, we set up the path and ensure that FieldTrip is the only toolbox on the path. See also [this FAQ](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path).
 
     restoredefaultpath
     addpath ~/matlab/fieldtrip/

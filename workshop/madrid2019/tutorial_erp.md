@@ -47,7 +47,7 @@ In this tutorial the following steps will be taken:
 
 ## Preprocessing
 
-You can download the single-subject task dataset [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/madrid2019/tutorial_erp/) from our FTP server.
+You can download the single-subject task dataset [here](https://download.fieldtriptoolbox.org/workshop/madrid2019/tutorial_erp/) from our download server.
 
 ### Reading trials
 

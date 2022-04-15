@@ -13,7 +13,7 @@ Institute), Arjen Stolk (UC Berkeley, Donders), Bob Knight (UC Berkeley),
 and Fady Girgis (UC Davis). For more information, including how to register, please
 visit the [bootcamp website](https://saez.faculty.ucdavis.edu/fieldtrip-bootcamp/).
 
-EEG/MEG data for the hands-on sessions are available [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/davis2019/).
+EEG/MEG data for the hands-on sessions are available [here](https://download.fieldtriptoolbox.org/workshop/davis2019/).
 
 iEEG data for the hands-on sessions are available [here](https://doi.org/10.5281/zenodo.1201559).
 

@@ -130,7 +130,7 @@ After having cleaned the data, we will perform the following analyses:
 
 ### Visual data inspection
 
-We start with the original dataset which is available from [ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/tms/sp/sp_motor.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/tms/sp/sp_motor.zip). Please be aware that the file is rather large (472 MB) due to the EEG being sampled at 5kHz.
+We start with the original dataset which is available [here](https://download.fieldtriptoolbox.org/tutorial/tms/sp/sp_motor.zip). Please be aware that the file is rather large (472 MB) due to the EEG being sampled at 5kHz.
 
 We are interested in what happens in response to the TMS pulse. The TMS pulses are therefore our events of interest and our trials are defined by the pulses. As stated in the background information, event markers are present at the onset of each pulse. We will first have a look at our trials using **[ft_databrowser](/reference/ft_databrowser)**, a convenient tool to browse data directly from disk or in memory (also see this [frequently asked question](/faq/how_can_i_use_the_databrowser)).
 
@@ -151,7 +151,7 @@ The output cfg variable contains the trial structure in cfg.trl. As we will also
 
     trl = cfg.trl;
 
-The cfg structure we obtained from **[ft_definetrial](/reference/ft_definetrial)** contains enough information for ft_preprocessing to read our data from disk into trials. We will, however, also specify that the data should be re-referenced. As it can take quite a while (5-10 minutes) to read-in the data, the processed data can be found [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/tms/sp/data_tms_raw.mat). If you have downloaded this file, you can load the data with:
+The cfg structure we obtained from **[ft_definetrial](/reference/ft_definetrial)** contains enough information for ft_preprocessing to read our data from disk into trials. We will, however, also specify that the data should be re-referenced. As it can take quite a while (5-10 minutes) to read-in the data, the processed data can be found [here](https://download.fieldtriptoolbox.org/tutorial/tms/sp/data_tms_raw.mat). If you have downloaded this file, you can load the data with:
 
     load data_tms_raw;
 
@@ -343,7 +343,7 @@ The function **[ft_rejectartifact](/reference/ft_rejectartifact)** allows us to 
     cfg_artifact.artfctdef.minaccepttim = 0.01; % This specifies the minimumm size of resulting trials. You have to set this, the default is too large for thre present data, resulting in small artifact-free segments being rejected as well.
     cfg = ft_rejectartifact(cfg_artifact); % Reject trials partially
 
-We have already read-in the data segments without the artifacts for you. You can download the data [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/tms/sp/data_tms_segmented.mat). If you have downloaded the dataset, you can load it with:
+We have already read-in the data segments without the artifacts for you. You can download the data [here](https://download.fieldtriptoolbox.org/tutorial/tms/sp/data_tms_segmented.mat). If you have downloaded the dataset, you can load it with:
 
     load data_tms_segmented.mat
 
@@ -387,7 +387,7 @@ Using the arrow-buttons beneath the 'ringing' and 'recharge' buttons we can brow
 
 We now have our data segmented, removed ringing/step response and recharge artifacts. Our data still contains the exponential decay and the cranial muscle artifacts. We will attempt to attenuate these artifacts following an approach based on work by Korhonen et al. [Removal of large muscle artifacts from transcranial magnetic stimulation-evoked EEG by independent component analysis](http://dx.doi.org/10.1007/s11517-011-0748-9). We will use a slightly adapted version of their manual artifact rejection approach. To this end we will decompose our data into independent components and reject components that capture artifacts we wish to attenuate, while taking care we do not remove non-artifactual data.
 
-Running an ICA can take quite some time depending on the size of the data. Depending on your system processing this dataset will take about 15-30 minutes. Furthermore, running an ICA requires quite a lot of memory. In this case it requires an estimated 4GB of additional system memory. We therefore advise you to download the output here: [comp_tms.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/tms/sp/comp_tms.mat). You can then skip the following segment of code.
+Running an ICA can take quite some time depending on the size of the data. Depending on your system processing this dataset will take about 15-30 minutes. Furthermore, running an ICA requires quite a lot of memory. In this case it requires an estimated 4GB of additional system memory. We therefore advise you to download the result [comp_tms.mat](https://download.fieldtriptoolbox.org/tutorial/tms/sp/comp_tms.mat). You can then skip the following segment of code.
 
 {% include markup/warning %}
 As ICA is in fact a spatial filter, it relies on the artifacts having a stable topography in the data. If the topography changes during the experiment, your artifact may be captured in more than one, or two components and potentially cannot be captured in sufficient components at all. If you therefore know beforehand that the topography of your artifacts are different for parts of your data, you may have to apply the ICA separately for these parts. For example, if you are running an experiment where different locations are stimulated in different conditions, you could run the ICA separately for each location.
@@ -645,7 +645,7 @@ Now that everything we would like to interpolate has been replaced by nans we ca
 
     data_tms_clean_avg = ft_timelockanalysis(cfg, data_tms_clean);
 
-We can now compare the raw data with the cleaned data. If you do not have the time-locked average of the raw data anymore, you can download it [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/tms/sp/data_tms_avg.mat) and load it with:
+We can now compare the raw data with the cleaned data. If you do not have the time-locked average of the raw data anymore, you can download it [here](https://download.fieldtriptoolbox.org/tutorial/tms/sp/data_tms_avg.mat) and load it with:
 
     load data_tms_avg;
 
@@ -696,7 +696,7 @@ When saving data we always use the switch '-v7.3' as this allows files to be lar
 
 Now that we have cleaned our data we can continue with our analyses. Initially we started out with the question whether pre-contraction affects the TMS-evoked potential. To address this question we are going to compare the amplitudes of the TEPs, inspect the frequency content of the response to TMS, and look at Global Mean Field Power.
 
-If you do not have the output from the previous cleaning steps you can download the cleaned dataset [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/tms/sp/data_tms_clean.mat).
+If you do not have the output from the previous cleaning steps you can download the cleaned dataset [here](https://download.fieldtriptoolbox.org/tutorial/tms/sp/data_tms_clean.mat).
 
 ### Time-locked averaging
 

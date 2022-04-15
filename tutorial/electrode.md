@@ -43,7 +43,7 @@ In this section we describe the procedure to acquire electrode positions with a 
 
 ### Recording data
 
-The structure sensor is attached to an iPad mini. We use the [Scanner - Structure Sensor Sample](https://itunes.apple.com/us/app/scanner-structure-sensor-sample/id891169722?mt=8) application on the iPad which is available from the Apple Store. This application allows us to capture our subjects head surface by just walking around the subject. [Here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/electrode/3D-Scan.zip) you can download the result of the 3D-scan that we will use in this tutorial.
+The structure sensor is attached to an iPad mini. We use the [Scanner - Structure Sensor Sample](https://itunes.apple.com/us/app/scanner-structure-sensor-sample/id891169722?mt=8) application on the iPad which is available from the Apple Store. This application allows us to capture our subjects head surface by just walking around the subject. [Here](https://download.fieldtriptoolbox.org/tutorial/electrode/3D-Scan.zip) you can download the result of the 3D-scan that we will use in this tutorial.
 
 ### Loading and coregistering data
 

@@ -66,7 +66,7 @@ We will clear all variables that we have in the workspace, restore the default p
 
 ### Visualization of raw EEG data
 
-The EEG dataset used in this tutorial is available [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/oslo2019/)
+The EEG dataset used in this tutorial is available [here](https://download.fieldtriptoolbox.org/workshop/oslo2019/)
 
     cfg            = [];
     cfg.dataset    = 'oddball1_mc_downsampled_eeg.eeg';

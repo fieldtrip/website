@@ -31,9 +31,7 @@ In this tutorial we will use the approach to compute a single phase per individu
 
 ### Preprocessing
 
-The data for this tutorial can be downloaded on [ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/spikefield/p029_sort_final_01.nex](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/spikefield/p029_sort_final_01.nex).
-Make sure you add the main FieldTrip directory to your path and run **[ft_defaults](/reference/ft_defaults)**.
-We first read in the spike data by **[ft_read_spike](/reference/fileio/ft_read_spike)** and select the following channels for analysis from the spike structure using **[ft_spike_select](/reference/contrib/spike/ft_spike_select)** by
+The data for this tutorial can be downloaded [here](https://download.fieldtriptoolbox.org/tutorial/spikefield/p029_sort_final_01.nex). Make sure you add the main FieldTrip directory to your path and run **[ft_defaults](/reference/ft_defaults)**. We first read in the spike data by **[ft_read_spike](/reference/fileio/ft_read_spike)** and select the following channels for analysis from the spike structure using **[ft_spike_select](/reference/contrib/spike/ft_spike_select)** by
 
     filename         = 'p029_sort_final_01.nex';
     spike            = ft_read_spike(filename);
@@ -167,7 +165,7 @@ giving a struct
 
 where spike.trial{i} and spike.time{i} specify, for every i-th unit, the trial in which the spike was fired and the time at which it was fired relative to the trigger, respectively.
 
-An equivalent method (but potentially more error-prone!) would have been to directly use the timestamp representation per event to create the trials, i.e. use the 'trialfun_stimon' that we defined in the [spike](/tutorial/spike) tutorial. For the purpose of walking through this tutorial, you should copy and paste the code of trialfun_stimon.m (from the [spike](/tutorial/spike) tutorial) in the MATLAB editor and save the m-file as trialfun_stimon.m. Alternatively you can download the trial function from [the FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/spike/trialfun_stimon.m).
+An equivalent method (but potentially more error-prone!) would have been to directly use the timestamp representation per event to create the trials, i.e. use the 'trialfun_stimon' that we defined in the [spike](/tutorial/spike) tutorial. For the purpose of walking through this tutorial, you should copy and paste the code of trialfun_stimon.m (from the [spike](/tutorial/spike) tutorial) in the MATLAB editor and save the m-file as `trialfun_stimon.m`. Alternatively you can download the trial function [trialfun_stimon.m](https://download.fieldtriptoolbox.org/tutorial/spike/trialfun_stimon.m).
 
     cfg          = [];
     cfg.dataset  = filename;

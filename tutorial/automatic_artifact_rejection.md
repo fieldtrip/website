@@ -149,7 +149,7 @@ If you call ft_artifact_zvalue with cfg as output argument (e.g., ''cfg = ft_art
 
 ## Examples for getting started
 
-What follows are some case examples of artifacts that you might encounter and some basic settings to start with. You will need to adjust these for your own datasets. The data used in this example is the MEG dataset _ArtifactMEG.ds_ (available from [ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/ArtifactMEG.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/ArtifactMEG.zip)). This dataset was acquired continuously (in contrast with other tutorial data) with trials of 10 seconds.
+What follows are some case examples of artifacts that you might encounter and some basic settings to start with. You will need to adjust these for your own datasets. The data used in this example is the [ArtifactMEG.ds](https://download.fieldtriptoolbox.org/tutorial/ArtifactMEG.zip) dataset, which  was acquired continuously (in contrast with other tutorial data) with trials of 10 seconds.
 
 First we need to define our trial
 

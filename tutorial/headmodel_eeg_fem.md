@@ -7,7 +7,9 @@ tags: [tutorial, eeg, source, headmodel, mri, plotting, meg-language]
 
 ## Introduction
 
-This tutorial demonstrates how to construct a volume conduction model of the head based on a single subject's MRI. We will use the anatomical images that belong to the same subject whose data was analyzed in other tutorials. The anatomical MRI data is available from the [FieldTrip FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip). Here, an EEG specific FEM model will be shown. In reality, we do not have corresponding EEG data for the subject we will use in this tutorial, rather we will use a template EEG electrode set to demonstrate how to build a FEM model for EEG and how to align the electrodes to anatomical data.
+This tutorial demonstrates how to construct a volume conduction model of the head based on a single subject's MRI. We will use the anatomical images that belong to the same subject whose data was analyzed in other tutorials. The anatomical MRI data is available [here](https://download.fieldtriptoolbox.org/tutorial/Subject01.zip).
+
+This tutorial will demonstrate a FEM model for EEG data. In reality, we do not have corresponding EEG data for the subject we will use in this tutorial, rather we will use a template EEG electrode set to demonstrate how to build a FEM model for EEG and how to align the electrodes to anatomical data.
 
 This tutorial will **not** show how to perform the source reconstruction itself. If you are interested in source reconstruction methods, you can go to the [Localizing oscillatory sources using beamformer techniques](/tutorial/beamformer) and to the [Source reconstruction of event-related fields using minimum-norm estimate](/tutorial/minimumnormestimate) tutorials.
 
@@ -37,7 +39,7 @@ If an anatomical MRI is not available for your EEG subject, you can consider to 
 
 Here, we will work towards a volume conduction model of the head based on the finite element method (FEM). The FEM model assumes realistic information where the skin, skull, csf, gray and white matter is in the head. First, we will use an anatomical MRI to extract these tissue. This procedure is termed **segmentation**. Following the segmentation, a geometrical description of the head will be created using hexahedrons. Finally, the FEM model will be computed.
 
-The anatomical mri of the [tutorial data set](/tutorial/meg_language) is available [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip).
+The anatomical mri of the [tutorial data set](/tutorial/meg_language) is available [here](https://download.fieldtriptoolbox.org/tutorial/Subject01.zip).
 
 {% include image src="/assets/img/tutorial/headmodel_eeg_fem/hedmodel_fem2.png" width="200" %}
 
@@ -117,7 +119,7 @@ _Figure 3. Mri plotted before reslicement (left) and after reslicement (right)_
 In this step, the voxels of the anatomical MRI are segmented (i.e. separated) into the five different tissue types: scalp, skull, csf (cerebro-spinal fluid), gray and white matter. These latest three tissues belong to the brain. The function **[ft_volumesegment](/reference/ft_volumesegment)** will produce the required output. You can read more about how the tissue-types are represented in the output of this function in this [FAQ](/faq/how_is_the_segmentation_defined). The segmentation should contain a binary representation of 5 tissue types which do not overlap.
 
 {% include markup/warning %}
-Note that the segmentation is quite time consuming (~15mins) and if you want you can load the result and skip ahead to the next step. You can download the segmented MRI of this tutorial data from the from the [FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/headmodel_fem/segmentedmri.mat) (segmentedmri.mat).
+Note that the segmentation is quite time consuming (~15mins) and if you want you can load the result and skip ahead to the next step. You can download the segmented MRI of this tutorial data from the from the [download server](https://download.fieldtriptoolbox.org/tutorial/headmodel_fem/segmentedmri.mat) (segmentedmri.mat).
 {% include markup/end %}
 
     cfg           = [];
@@ -204,7 +206,7 @@ At the moment FieldTrip only supports hexahedrons for FEM modeling.
 ## Head model
 
 Gray and white matter, csf, skull and skin has been differentiated in the geometrical description of the head. Now, we will create the volume conduction model. We will specify method 'simbio' in the cfg.method field of **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)**. This methods also requires to specify the conductivities for each tissue-types.
-The headmodel can also be downloaded here [FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/headmodel_fem/headmodel.mat).
+The headmodel can also be downloaded here [download server](https://download.fieldtriptoolbox.org/tutorial/headmodel_fem/headmodel.mat).
 
     cfg        = [];
     cfg.method ='simbio';

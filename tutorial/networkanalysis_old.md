@@ -39,7 +39,7 @@ The data analyses in the context of networks follows the following steps:
 
 The aim is to identify the frequency and topography of an 10Hz oscillation. We first use **[ft_definetrial](/reference/ft_definetrial)** and **[ft_preprocessing](/reference/ft_preprocessing)** to read the continuous data and segment it into epochs of 2 seconds length.
 
-The ft_definetrial and ft_preprocessing functions require the original MEG dataset, which is available from <ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/SubjectRest.zip>.
+The ft_definetrial and ft_preprocessing functions require the original MEG dataset, which is available from <https://download.fieldtriptoolbox.org/tutorial/SubjectRest.zip>.
 
     %% read the continuous data and segment into 2 seconds epochs
     cfg = [];
@@ -54,7 +54,7 @@ The ft_definetrial and ft_preprocessing functions require the original MEG datas
 
 ### Artefact rejection
 
-We will first clean the data from potential bad segments such as SQUID jumps and/or bad channels using **[ft_rejectvisual](/reference/ft_rejectvisual)**. Subsequently, we will identify occular and cardiac artifacts by means of ICA using **[ft_componentanalysis](/reference/ft_componentanalysis)**. Since, these type of artifacts are predominately low frequent and we are interested in a 10Hz signal, we will downsample the data using **[ft_resampledata](/reference/ft_resampledata)** in order to speed up calculations during ft_componentanalysis and reduce potential working memory issues. Alternatively, you can skip these steps and download the data [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/networkanalysis).
+We will first clean the data from potential bad segments such as SQUID jumps and/or bad channels using **[ft_rejectvisual](/reference/ft_rejectvisual)**. Subsequently, we will identify occular and cardiac artifacts by means of ICA using **[ft_componentanalysis](/reference/ft_componentanalysis)**. Since, these type of artifacts are predominately low frequent and we are interested in a 10Hz signal, we will downsample the data using **[ft_resampledata](/reference/ft_resampledata)** in order to speed up calculations during ft_componentanalysis and reduce potential working memory issues. Alternatively, you can skip these steps and download the data [here](https://download.fieldtriptoolbox.org/tutorial/networkanalysis).
 
     %% make a visual inspection and reject bad trials/sensors
     cfg = [];
@@ -158,7 +158,7 @@ _Figure 2: Top- scalp topography of oscillatory power centered at 10 Hz. Bottom-
 
 ### Source analysis
 
-In the following section we will compute the ingredients for accurate reconstruction of the underlying sources. First computing the source model with **[ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)**. We will use the individual MRI and a mni template source model, which can be downloaded [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/networkanalysis). If you are not familiar with this strategy, please have a look [here](/example/sourcemodel_aligned2mni).
+In the following section we will compute the ingredients for accurate reconstruction of the underlying sources. First computing the source model with **[ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)**. We will use the individual MRI and a mni template source model, which can be downloaded [here](https://download.fieldtriptoolbox.org/tutorial/networkanalysis). If you are not familiar with this strategy, please have a look [here](/example/sourcemodel_aligned2mni).
 
     %% load the required geometrical information
 
@@ -591,7 +591,7 @@ It is also possible to plot the nodal size along with the respective edge patter
     node(:,1:3) = node(:,1:3)*10
     dlmwrite('node.node',node,' ');
 
-You can download the volume model **_mesh.nv_** of the standard mni brain [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/networkanalysis/). Alternatively you can use the templates provided with the BrainNet Viewer toolbox. Please refer to the corresponding manual [here](http://www.nitrc.org/docman/view.php/504/1280/BrainNet).Now you are ready to to plot the graph by typing
+You can download the volume model **_mesh.nv_** of the standard mni brain [here](https://download.fieldtriptoolbox.org/tutorial/networkanalysis/). Alternatively you can use the templates provided with the BrainNet Viewer toolbox. Please refer to the corresponding manual [here](http://www.nitrc.org/docman/view.php/504/1280/BrainNet).Now you are ready to to plot the graph by typing
 
     BrainNet_MapCfg('/yourpath/mesh.nv','/yourpath/node.node','/yourpath/edge.edge');
     view([0 -90 0])

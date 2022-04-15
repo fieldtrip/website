@@ -7,30 +7,15 @@ tags: [madrid2019, eeg-sedation]
 
 ## Introduction
 
-This tutorial shows how to preprocess and analyze resting state EEG data using
-an open access resting state EEG dataset that is shared by the University of
-Cambridge. You can click [here](/workshop/madrid2019/eeg_sedation) for details on
-the dataset. In this tutorial you will learn how to load and inspect this
-dataset using FieldTrip. You will perform some basic preprocessing such as
-repairing broken channels, visual artifact rejection and artifact correction
-using ICA.
+This tutorial shows how to preprocess and analyze resting state EEG data using an open access resting state EEG dataset that is shared by the University of Cambridge. You can click [here](/workshop/madrid2019/eeg_sedation) for details on the dataset. In this tutorial you will learn how to load and inspect this dataset using FieldTrip. You will perform some basic preprocessing such as repairing broken channels, visual artifact rejection and artifact correction using ICA.
 
 ## Background
 
-We will adapt the pipeline described in de Cheveigne & Arzounian (2018) [Robust
-detrending, rereferencing, outlier detection, and inpainting for multichannel
-data](https://doi.org/10.1016/j.neuroimage.2018.01.035). They discuss
-different algorithms to preprocess MEG or EEG data and - importantly - they
-propose rules of thumb regarding the order on which these preprocessing steps
-should be applied. Please, bear in mind that the present pipeline is quite
-general and, as such, may not apply to specific cases. Please read de Cheveigne
-& Arzounian (2018) thoroughly and follow this tutorial with a critical mind.
+We will adapt the pipeline described in de Cheveigne & Arzounian (2018) [Robust detrending, rereferencing, outlier detection, and inpainting for multichannel data](https://doi.org/10.1016/j.neuroimage.2018.01.035). They discuss different algorithms to preprocess MEG or EEG data and - importantly - they propose rules of thumb regarding the order on which these preprocessing steps should be applied. Please, bear in mind that the present pipeline is quite general and, as such, may not apply to specific cases. Please read de Cheveigne & Arzounian (2018) thoroughly and follow this tutorial with a critical mind.
 
 Let us begin with the rules of thumb proposed by de Cheveigne and Arzounian:
 
-_As a rule of thumb, if algorithm B is sensitive to an artifact that
-algorithm A can remove, then A should be applied before B. A difficulty
-arises of course if A is also sensitive to artifacts that B can remove._
+_As a rule of thumb, if algorithm B is sensitive to an artifact that algorithm A can remove, then A should be applied before B. A difficulty arises of course if A is also sensitive to artifacts that B can remove._
 
 _A likely sequence might be:_
 
@@ -56,29 +41,22 @@ With these guidelines in mind, let us load [Chennu et al., data](/workshop/madri
 
 In this tutorial the following steps will be taken:
 
-- Read the data into MATLAB using **[ft_preprocessing](/reference/ft_preprocessing)** and visualize the data in between processsing steps with **[ft_databrowser](/reference/ft_databrowser)**
-- Interpolate broken channels or noisy data segments with **[ft_channelrepair](/reference/ft_channelrepair)**, removing artifacts with **[ft_rejectartifact](/reference/ft_rejectartifact)**
-- Select relevant segments of data using **[ft_redefinetrial](/reference/ft_redefinetrial)** as well as concatenating data using **[ft_appenddata](/reference/ft_appenddata)**
-- Once all data is cleaned, correct for eye movement artifacts by running independent component analysis using **[ft_componentanalysis](/reference/ft_componentanalysis)**
+-   Read the data into MATLAB using **[ft_preprocessing](/reference/ft_preprocessing)** and visualize the data in between processsing steps with **[ft_databrowser](/reference/ft_databrowser)**
+-   Interpolate broken channels or noisy data segments with **[ft_channelrepair](/reference/ft_channelrepair)**, removing artifacts with **[ft_rejectartifact](/reference/ft_rejectartifact)**
+-   Select relevant segments of data using **[ft_redefinetrial](/reference/ft_redefinetrial)** as well as concatenating data using **[ft_appenddata](/reference/ft_appenddata)**
+-   Once all data is cleaned, correct for eye movement artifacts by running independent component analysis using **[ft_componentanalysis](/reference/ft_componentanalysis)**
 
 ## Reading in data
 
-The dataset that has been shared does not consist of the original recordings;
-the data has been imported and some preprocessing steps have been performed
-already (EEG channels were demeaned and band-pass filtered between 0.5 Hz - 45
-Hz, some channels were interpolated using spherical spline algorithms and the
-data were re-referenced to the average taken over all channels; see [Materials
-and
-Methods'](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1004669#sec008)
-section).
+The dataset that has been shared does not consist of the original recordings; the data has been imported and some preprocessing steps have been performed already (EEG channels were demeaned and band-pass filtered between 0.5 Hz - 45 Hz, some channels were interpolated using spherical spline algorithms and the data were re-referenced to the average taken over all channels; see [Materials and Methods'](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1004669#sec008) section).
 
 For this tutorial we will use the EEG data from one example subject (subj22),
 which has been selected because the data still shows some artifacts. You can
 download both raw and processed data of the example subject
-[here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/madrid2019/tutorial_cleaning/).
+[here](https://download.fieldtriptoolbox.org/workshop/madrid2019/tutorial_cleaning/).
 If you are interested in the raw data from all subjects transformed into [BIDS
 format](/example/bids), you can download it from our [FTP
-Server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/madrid2019/extra/).
+Server](https://download.fieldtriptoolbox.org/workshop/madrid2019/extra/).
 Please note that you **do not** have to download all subjects for this tutorial.
 
 Our goal now is to identify these noisy periods, eye movements, blinks, muscular
@@ -164,8 +142,8 @@ We manually add the names of channels that are bad throughout the entire
 recording to the artifact structure. Many FieldTrip functions, ie
 **[ft_channelselection](/reference/utilities/ft_channelselection)** or
 **[ft_channelrepair](/reference/ft_channelrepair)**, which we will use further
-*down, require the specification of channel names in their configuration. For
-*this specify channel names as strings in a cell-array such as {'E7';'Oz'}
+_down, require the specification of channel names in their configuration. For
+_this specify channel names as strings in a cell-array such as {'E7';'Oz'}
 
     artif.badchannel  = input('write badchannels: ');
     artif.misschannel = input('write missed channels: ');

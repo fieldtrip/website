@@ -42,7 +42,7 @@ _Figure: A schematic overview of the steps in averaging of event related fields.
 
 ### Reading in the data
 
-We will now read and preprocess the data. If you would like to continue directly with the already preprocessed data, you can download it from the FieldTrip FTP server ([dataFIC_LP.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/eventrelatedaveraging/dataFIC_LP.mat), [dataFC_LP.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/eventrelatedaveraging/dataFC_LP.mat) and [dataIC_LP.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/eventrelatedaveraging/dataIC_LP.mat)). Load the data into MATLAB with the  command 'load' and skip to [Timelockanalysis](#Timelockanalysis).
+We will now read and preprocess the data. If you would like to continue directly with the already preprocessed data, you can download [dataFIC_LP.mat](https://download.fieldtriptoolbox.org/tutorial/eventrelatedaveraging/dataFIC_LP.mat), [dataFC_LP.mat](https://download.fieldtriptoolbox.org/tutorial/eventrelatedaveraging/dataFC_LP.mat) and [dataIC_LP.mat](https://download.fieldtriptoolbox.org/tutorial/eventrelatedaveraging/dataIC_LP.mat). Load the data into MATLAB with the command 'load' and skip to [Timelockanalysis](#Timelockanalysis).
 
 Otherwise run the following code:
 
@@ -102,7 +102,7 @@ _Figure: The MEG data from a single trial in a single sensor obtained after ft_p
 
 ## Timelockanalysis
 
-The function **[ft_timelockanalysis](/reference/ft_timelockanalysis)** makes averages of all the trials in a data structure. It requires preprocessed data (see above), which is available from [dataFIC_LP.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/eventrelatedaveraging/dataFIC_LP.mat), [dataFC_LP.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/eventrelatedaveraging/dataFC_LP.mat) and [dataIC_LP.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/eventrelatedaveraging/dataIC_LP.mat).
+The function **[ft_timelockanalysis](/reference/ft_timelockanalysis)** makes averages of all the trials in a data structure. It requires preprocessed data (see above), which is available from [dataFIC_LP.mat](https://download.fieldtriptoolbox.org/tutorial/eventrelatedaveraging/dataFIC_LP.mat), [dataFC_LP.mat](https://download.fieldtriptoolbox.org/tutorial/eventrelatedaveraging/dataFC_LP.mat) and [dataIC_LP.mat](https://download.fieldtriptoolbox.org/tutorial/eventrelatedaveraging/dataIC_LP.mat).
 
     load dataFIC_LP
     load dataFC_LP
@@ -274,7 +274,7 @@ Explain the topography of the planar gradient from the fields of the axial gradi
 
 ## Grand average over subjects
 
-Finally you can make a grand-average over all our four subjects with **[ft_timelockgrandaverage](/reference/ft_timelockgrandaverage)**. Before calculating the grand average, the data of each subject can be realigned to standard sensor positions with **[ft_megrealign](/reference/ft_megrealign)**. For this step, there are the additional datasets [Subject02.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject02.zip), [Subject03.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject03.zip), and [Subject04.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject04.zip).
+Finally you can make a grand-average over all our four subjects with **[ft_timelockgrandaverage](/reference/ft_timelockgrandaverage)**. Before calculating the grand average, the data of each subject can be realigned to standard sensor positions with **[ft_megrealign](/reference/ft_megrealign)**. For this step, there are the additional datasets [Subject02.zip](https://download.fieldtriptoolbox.org/tutorial/Subject02.zip), [Subject03.zip](https://download.fieldtriptoolbox.org/tutorial/Subject03.zip), and [Subject04.zip](https://download.fieldtriptoolbox.org/tutorial/Subject04.zip).
 
 For more information about this, type the following commands in the MATLAB command window.
 

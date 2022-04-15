@@ -15,7 +15,7 @@ Nice visualization of MEG multisphere volume conductor models is not supported b
 In general, we advise to use the singleshell as a volume conductor model for MEG, rather than the multisphere model.
 {% include markup/end %}
 
-The following code shows how to visualize the gradiometer positions in combination with the subject's headshape and the single sphere volume conductor model. We use the example data which can be obtained from [ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip).
+The following code shows how to visualize the gradiometer positions in combination with the subject's headshape and the single sphere volume conductor model. We use the example data [Subject01.zip](https://download.fieldtriptoolbox.org/tutorial/Subject01.zip).
 
     % read in single sphere volume conductor model
     vol  = ft_read_headmodel('Subject01.hdm');

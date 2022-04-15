@@ -52,10 +52,6 @@ We use Google to provide the search functionality on the website and discussion 
 
 We use [Plausible](http://plausible.io/) on a self-hosted server to count website visitors and to see which pages are visited most.
 
-## Ftp
-
-We use the DCCN [FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/) to distribute the software releases and tutorial data.
-
 ## Central storage
 
 At the DCCN we have a central storage system (i.e. a large shared network drive) on which an up-to-date copy of the software is maintained. Also the test data used for development and regression testing with the [dashboard](#dashboard) is on central storage.
@@ -71,6 +67,14 @@ We are experimenting with MixPanel for software usage tracking. More details are
 ## Slack
 
 We are experimenting with [Slack](https://fieldtriptoolbox.slack.com) as a messaging tool for the development team.
+
+## Webdav
+
+We use a [webdav server](https://download.fieldtriptoolbox.org) to distribute the software releases and tutorial data.
+
+## Ftp - obsolete
+
+We used the DCCN [download server](https://download.fieldtriptoolbox.org/) to distribute the software releases and tutorial data.
 
 ## Bugzilla - obsolete
 

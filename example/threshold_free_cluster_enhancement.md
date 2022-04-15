@@ -21,7 +21,7 @@ Each voxel’s TFCE score is given by the sum of the scores of all “supporting
 
 The following MATLAB code gives an example of the TFCE method. Moreover, we will compare the statistical output of the TFCE method with the conventional threshold based on `cfg.clusteralpha`.
 
-The data used in this example is available from our [FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/example/threshold_free_cluster_enhancement/).
+The data used in this example is available from our [download server](https://download.fieldtriptoolbox.org/example/threshold_free_cluster_enhancement/).
 
 ```
 load ERF_orig

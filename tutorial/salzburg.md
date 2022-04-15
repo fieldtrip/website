@@ -25,7 +25,7 @@ The following steps had been performed:
 - Defining triggers around which the data will be segmented using **[ft_definetrial](/reference/ft_definetrial)**. The data is segmented to include 2 seconds prior to S1 onset (i.e. baseline) and 1.57 second post S1 onset (i.e. event related interval including S1 and S2).
 - Calling **[ft_preprocessing](/reference/ft_preprocessing)** without applying any preprocessing steps yet.
 
-To run the following section of code you need the original dataset and trial function: [download c,rfhp0.1Hz dataset](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/salzburg/c,rfhp0.1Hz),[download config file](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/salzburg/config) [download ft_trialfun_sensorygating.m trial function](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/salzburg/ft_trialfun_sensorygating.m)
+To run the following section of code you need the original dataset and trial function: [c,rfhp0.1Hz](https://download.fieldtriptoolbox.org/tutorial/salzburg/c,rfhp0.1Hz), [config](https://download.fieldtriptoolbox.org/tutorial/salzburg/config), and [ft_trialfun_sensorygating.m](https://download.fieldtriptoolbox.org/tutorial/salzburg/ft_trialfun_sensorygating.m)
 
     clear all
     close all
@@ -39,7 +39,7 @@ To run the following section of code you need the original dataset and trial fun
     cfg = ft_definetrial(cfg);
     data = ft_preprocessing(cfg);
 
-The epoched data can be downloaded [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/salzburg/dataclean.mat).
+The epoched data can be downloaded [here](https://download.fieldtriptoolbox.org/tutorial/salzburg/dataclean.mat).
 
 Load the data using the following command:
 
@@ -90,7 +90,7 @@ Take your time to browse and evaluate the topographies and the corresponding tim
     cfg.component = [3 6 7 16];
     dataica = ft_rejectcomponent(cfg, comp);
 
-The ica corrected data can be downloaded [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/salzburg/dataica.mat).
+The ica corrected data can be downloaded [here](https://download.fieldtriptoolbox.org/tutorial/salzburg/dataica.mat).
 
 ### Computing and plotting of the auditory evoked fields
 
@@ -267,7 +267,7 @@ Before you continue it is recommended to make your self familiar with the releva
 
 Furthermore the details around how to compute the ingredients needed herein (e.g., headmodel, leadfield) are not further explained here. All of the necessary steps in head modeling are explained here, and source modeling [here](/example/sourcemodel_aligned2mni_atlas).
 
-We will start with loading a precomputed headmodel [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/salzburg/hdm.mat). We will first construct a regular dipole grid using **[ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)**. Subsequently we want to determine the grid locations corresponding to particular brain areas (parcels). For this step we will read an anatomical atlas using **[ft_read_atlas](/reference/fileio/ft_read_atlas)** and generate a binary mask with entries of ones indicating grid points corresponding to brain parcels using **[ft_volumelookup](/reference/ft_volumelookup)**. Finally, on the basis of the individual anatomy we will construct a source model that is inverse-warped to this atlas-based source model in mni space.
+We will start with loading a precomputed headmodel [here](https://download.fieldtriptoolbox.org/tutorial/salzburg/hdm.mat). We will first construct a regular dipole grid using **[ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)**. Subsequently we want to determine the grid locations corresponding to particular brain areas (parcels). For this step we will read an anatomical atlas using **[ft_read_atlas](/reference/fileio/ft_read_atlas)** and generate a binary mask with entries of ones indicating grid points corresponding to brain parcels using **[ft_volumelookup](/reference/ft_volumelookup)**. Finally, on the basis of the individual anatomy we will construct a source model that is inverse-warped to this atlas-based source model in mni space.
 
 ##### Create template grid based on the standard head model
 
@@ -317,7 +317,7 @@ We will start with loading a precomputed headmodel [here](ftp://ftp.fieldtriptoo
 
 ##### Inverse-warp the subject specific grid to the atlas based template grid
 
-For this step the individual volume is required, which can be downloaded [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/salzburg/mri.mat).
+For this step the individual volume is required, which can be downloaded [here](https://download.fieldtriptoolbox.org/tutorial/salzburg/mri.mat).
 
     cfg                = [];
     cfg.warpmni   = 'yes';

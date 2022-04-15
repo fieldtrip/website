@@ -13,7 +13,7 @@ In order to calculate the forward solution, the same procedure must be performed
 
 The data set on disk contains in the header the parameters that are used to convert the data between the original (raw) representation and the higher-order gradiometer representation ("balancing"). This conversion can be done in real-time during acquisition, but can also be done (and undone) afterwards using CTF DataEditor, or using **[ft_denoise_synthetic](/reference/ft_denoise_synthetic)**.
 
-To get an intuition about what "balancing" means in terms of computation, let's run the following code. First, download a CTF data set which is available from [ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip) and use **[ft_read_sens](/reference/fileio/ft_read_sens)** to access the sensor position information of the MEG data, in this case CTF15
+To get an intuition about what "balancing" means in terms of computation, let's run the following code. First, download the example CTF data set [Subject01.zip](https://download.fieldtriptoolbox.org/tutorial/Subject01.zip) and use **[ft_read_sens](/reference/fileio/ft_read_sens)** to access the sensor position information of the MEG data, in this case CTF151:
 
     grad = ft_read_sens('Subject01.ds', 'senstype', 'meg')
 

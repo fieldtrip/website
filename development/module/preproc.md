@@ -10,7 +10,7 @@ redirect_from:
 FieldTrip has a consistent set of low-level functions for reprocessing of EEG and MEG data, such as filtering, baseline
 correction and re-referencing. This allows other projects to re-use the implemented methods separate from FieldTrip (e.g., for realtime analysis of EEG and MEG data) and perhaps also to contribute to FieldTrip.
 
-The low-level functions are combined in the **preproc** toolbox, which is available for download [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/modules/).
+The low-level functions are combined in the **preproc** toolbox, which is available for download [here](https://download.fieldtriptoolbox.org/modules/).
 
 ## Interface to the preprocessing functions
 

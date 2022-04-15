@@ -80,14 +80,14 @@ FieldTrip is installed on the cluster, on /home/common/matlab/fieldtrip. (on Win
 
 For people that **do not** use a computer at the DCCN:
 
-Download the tutorial data required for the hands-on from the ftp server by going to <ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/> and download   the file `Subject01.zip`. 
+Download the tutorial data required for the hands-on from the ftp server by going to <https://download.fieldtriptoolbox.org/tutorial/> and download   the file `Subject01.zip`. 
 
 You should also download some pre-computed intermediate results for each tutorial: 	
 
--  [eventrelatedaveraging](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/eventrelatedaveraging/)
--  [timefrequencyanalysis](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/timefrequencyanalysis/)
--  [beamformer](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/beamformer/)
--  [statistics](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_timelock/) (cluster_permutation_timelock)
+-  [eventrelatedaveraging](https://download.fieldtriptoolbox.org/tutorial/eventrelatedaveraging/)
+-  [timefrequencyanalysis](https://download.fieldtriptoolbox.org/tutorial/timefrequencyanalysis/)
+-  [beamformer](https://download.fieldtriptoolbox.org/tutorial/beamformer/)
+-  [statistics](https://download.fieldtriptoolbox.org/tutorial/cluster_permutation_timelock/) (cluster_permutation_timelock)
 
 Downloading will take some time, especially if everyone tries to do it at the same moment. So please download in advance! If downloading from the FTP server in  the web browser gives problems, please try with another web browser, [CyberDuck](https://cyberduck.io), or [FileZilla](https://filezilla-project.org). You need to log in as guest (using anonymous log in) on ftp://ftp.fieldtriptoolbox.org, and you don't need a password for this.
 

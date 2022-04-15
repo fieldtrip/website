@@ -9,7 +9,7 @@ redirect_from:
 
 The spectral estimation toolbox for FieldTrip, the specest module, contains a consistent set of functions for spectral estimation and decomposition of electrophysiological data. These specest functions allow other projects (such as SPM) to re-use the implemented methods separate from FieldTrip and facilitates external contributions to FieldTrip by separating the user interface from the functionality.
 
-The low-level functions are combined in the **specest** toolbox which is self-contained and does not depend on other FieldTrip functions. It is available for download [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/modules/).
+The low-level functions are combined in the **specest** toolbox which is self-contained and does not depend on other FieldTrip functions. It is available for download [here](https://download.fieldtriptoolbox.org/modules/).
 
 ## Specest Functions
 

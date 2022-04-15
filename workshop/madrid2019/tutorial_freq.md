@@ -81,7 +81,7 @@ that power can be calculated for 2 Hz, 4 Hz, 6 Hz etc. An integer number
 of cycles must fit in the time window.
 
 We will skip the preprocessing and start directly with the preprocessed
-data. You can download [data_task.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/madrid2019/tutorial_freq/data_task.mat) from our FTP server.
+data. You can download [data_task.mat](https://download.fieldtriptoolbox.org/workshop/madrid2019/tutorial_freq/data_task.mat) from our download server.
 
     load('/madrid2019/tutorial_freq/data_task.mat')
 
@@ -290,7 +290,7 @@ at the spectrum in the frequency domain averaged for the whole duration of the
 recording, not how it changes over times.
 
 We will skip the preprocessing and start directly with the preprocessed
-data. You can download [data_rest.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/madrid2019/tutorial_freq/data_rest.mat) from our FTP server.
+data. You can download [data_rest.mat](https://download.fieldtriptoolbox.org/workshop/madrid2019/tutorial_freq/data_rest.mat) from our download server.
 
     clear all, close all, clc
     load data_rest.mat

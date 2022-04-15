@@ -56,7 +56,7 @@ In the third part we shift our attention to the motor task in this dataset. We w
 
 ### Loading of the data
 
-First, we will load the already preprocessed data (see above), which is available from the [FieldTrip FTP server (subjectK.mat)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/sensor_analysis/subjectK.mat). Load the data with the following command:
+First, we will download [subjectK.mat](https://download.fieldtriptoolbox.org/tutorial/sensor_analysis/subjectK.mat) and load the already preprocessed data with the following command:
 
     load subjectK
 
@@ -72,9 +72,9 @@ The first requirement for the source reconstruction procedure is that we need a 
 
 There are many types of forward models that, to various degrees, take the individual anatomy into account. We will here use a semi-realistic head model developed by Nolte (2003). It is based on a correction of the lead field for a spherical volume conductor by a superposition of basis functions, gradients of harmonic functions constructed from spherical harmonics.
 
-The first step in constructing the forward model is to find the brain surface from the subjects MRI. The MRI is available from [the FieldTrip FTP server (subjectK.mri)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/beamformer_extended/subjectK.mri). Each of the voxels of the anatomical MRI is assigned to a tissue class, this procedure is termed segmentation. Note that making the segmentation is quite time consuming.
+The first step in constructing the forward model is to find the brain surface from the subjects MRI. You can download the MRI [subjectK.mri](https://download.fieldtriptoolbox.org/tutorial/beamformer_extended/subjectK.mri) from our download server. Each of the voxels of the anatomical MRI is assigned to a tissue class, this procedure is termed segmentation. Note that making the segmentation is quite time consuming.
 
-For the sake of time efficiency, you can load the already segmented MRI that is available from the [FieldTrip FTP server (segmentedmri.mat)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/beamformer_extended/segmentedmri.mat)
+For the sake of time efficiency, you can download and use the already segmented MRI [segmentedmri.mat](https://download.fieldtriptoolbox.org/tutorial/beamformer_extended/segmentedmri.mat) from our download server.
 
     load segmentedmri
 
@@ -389,7 +389,7 @@ The regularization parameter was lambda = '5%'. Change it to 0 or to '50%' and p
 
 ## Localization of cortical sources that are coherent with the EMG
 
-As explained for this data in [the sensor analysis tutorial](/tutorial/sensor_analysis), the subjects had to extend both their wrists after cue onset, producing a strong beta-band coherence between some MEG and EMG sensors. In the sensor analysis tutorial, we already localized the sensor location of this coherence in the above linked tutorial. In order to localise the neuronal sources which are coherent with the EMG, we can apply beamformers to the data. In fact, the DICS ("Dynamic Imaging of Coherent Sources") algorithm was specifically formulated in order to localize sources coherent with some (external) signal. In this example, we are going to use the DICS algorithm to estimate the activity of the neuronal sources and to simultaneously estimate the coherence with the EMG. In order to achieve this, we now need an estimate of the cross-spectral density between all MEG-channel combinations, and between the MEG-channels and the EMG, at a frequency of interest. This requires the preprocessed data, see above, or download from [the FieldTrip FTP server (subjectK.mat)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/beamformer_extended/subjectK.mat).
+As explained for this data in [the sensor analysis tutorial](/tutorial/sensor_analysis), the subjects had to extend both their wrists after cue onset, producing a strong beta-band coherence between some MEG and EMG sensors. In the sensor analysis tutorial, we already localized the sensor location of this coherence in the above linked tutorial. In order to localise the neuronal sources which are coherent with the EMG, we can apply beamformers to the data. In fact, the DICS ("Dynamic Imaging of Coherent Sources") algorithm was specifically formulated in order to localize sources coherent with some (external) signal. In this example, we are going to use the DICS algorithm to estimate the activity of the neuronal sources and to simultaneously estimate the coherence with the EMG. In order to achieve this, we now need an estimate of the cross-spectral density between all MEG-channel combinations, and between the MEG-channels and the EMG, at a frequency of interest. This requires the preprocessed data, see above, or download the file [subjectK.mat](https://download.fieldtriptoolbox.org/tutorial/beamformer_extended/subjectK.mat) from our download server.
 
 ### Time window of interest
 

@@ -7,7 +7,7 @@ tags: [tutorial, artifact, meg, raw, preprocessing, meg-language]
 
 ## Introduction
 
-This tutorial makes use of the preprocessed data from [Preprocessing - Trigger based trial selection](/tutorial/preprocessing). Run the script from that section in order to produce the single trial data structure, or download it from [ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/rejectvisual/PreprocData.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/rejectvisual/PreprocData.mat). Load the data into MATLAB memory with the following command:
+This tutorial makes use of the preprocessed data from [Preprocessing - Trigger based trial selection](/tutorial/preprocessing). Run the script from that section in order to produce the single trial data structure, or download [PreprocData.mat](https://download.fieldtriptoolbox.org/tutorial/rejectvisual/PreprocData.mat). Load the data into MATLAB memory with the following command:
 
     load PreprocData data_all
 

@@ -200,12 +200,7 @@ The direction of the electrode contacts along the shaft can be specified as 'LR'
 (left-to-right) or RL for horizontal, and 'TB' (top-to-bottom) and 'BT' for
 vertical.
 
-You can also use the raw or processed iEEG data to specify channel names. For
-example the dataset used in the [ECoG and sEEG tutorial](/tutorial/human_ecog) has
-sEEG electrode shafts that start with the letters LAM, LHH, LTH, RAM, RHH, RTH and
-ROC. You can download the spectrally analyzed data from the [FieldTrip FTP server
-(SubjectUCI29_freq.mat)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/human_ecog/SubjectUCI29/SubjectUCI29_freq.mat)
-and use the following
+You can also use the raw or processed iEEG data to specify channel names. For example, the dataset used in the [ECoG and sEEG tutorial](/tutorial/human_ecog) has sEEG electrode shafts that start with the letters LAM, LHH, LTH, RAM, RHH, RTH and ROC. You can download the spectrally analyzed data [SubjectUCI29_freq.mat](https://download.fieldtriptoolbox.org/tutorial/human_ecog/SubjectUCI29/SubjectUCI29_freq.mat) and use the following
 
     load SubjectUCI29_freq.mat
 
@@ -267,15 +262,11 @@ And subsequently combine the left- and right-hemisphere layouts for the sEEG sha
 
 #### Creating a schematic layout for the ECoG grids
 
-The example dataset includes an 8x8 ECoG grid over the left parietal cortex, and a
-4x8 grid over the left temporal cortex, as displayed in this schematic drawing provided by
-the neurosurgeon.
+The example dataset includes an 8x8 ECoG grid over the left parietal cortex, and a 4x8 grid over the left temporal cortex, as displayed in this schematic drawing provided by the neurosurgeon.
 
 {% include image src="/assets/img/tutorial/layout/SubjectUCI29_grids.png" width="400" %}
 
-You can construct a layout for these ECoG grids by specifying 'ordered' and the
-number of rows and columns. The channel numbering starts in the upper right corner,
-hence we specify the direction 'RLTB' for right-left-top-bottom.
+You can construct a layout for these ECoG grids by specifying 'ordered' and the number of rows and columns. The channel numbering starts in the upper right corner, hence we specify the direction 'RLTB' for right-left-top-bottom.
 
     cfg = [];
     cfg.layout = 'ordered';
@@ -333,17 +324,9 @@ Subsequently you can use the combined layout of the shafts and grids to visualiz
 
 {% include image src="/assets/img/tutorial/layout/freq_layoutAll.png" width="400" %}
 
-The figure created like this is interactive, like all multiplot figures, and you
-can make a selection of channels using your mouse and subsequently select a
-time-frequency range for which a topopgraphy is shown. Please be aware that the
-topoplot function will interpolate all channels as if they form a continuum. The
-interpolated values will only be shown withing the masked regions (the dashed lines
-in the layout plots) around each grid or shaft, but the interpolation will actually
-cause the values of one shaft to spill over to the next.
+The figure created like this is interactive, like all multiplot figures, and you can make a selection of channels using your mouse and subsequently select a time-frequency range for which a topopgraphy is shown. Please be aware that the topoplot function will interpolate all channels as if they form a continuum. The interpolated values will only be shown withing the masked regions (the dashed lines in the layout plots) around each grid or shaft, but the interpolation will actually cause the values of one shaft to spill over to the next.
 
-The topographic interpretation of the color-coded interpolated values on the ECoG grids is quite OK (although
-be aware of the interpolation artefacts where the two grids are close to each other),
-but the color-coded interpolated values on the shafts should be interpreted with caution.
+The topographic interpretation of the color-coded interpolated values on the ECoG grids is quite OK (although be aware of the interpolation artefacts where the two grids are close to each other), but the color-coded interpolated values on the shafts should be interpreted with caution.
 
 ## Functions that make use of a 2D layout for visualization
 

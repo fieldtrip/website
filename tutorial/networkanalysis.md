@@ -41,7 +41,7 @@ The aim is to identify the frequency and topography of an 10Hz oscillation. We f
 
 **[ft_redefinetrial](/reference/ft_redefinetrial)** to segment it into epochs of 2 seconds length.
 
-The ft_redefinetrial and ft_preprocessing functions require the original MEG dataset, which is available from <ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/SubjectRest.zip>. Alternatively, you can skip this step and directly load the preprocessed data from <ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/networkanalysis/>. This latter folder contains a few files that we will need later in this tutorial as well, so it is recommended to download its contents.
+The ft_redefinetrial and ft_preprocessing functions require the original MEG dataset, which is available from <https://download.fieldtriptoolbox.org/tutorial/SubjectRest.zip>. Alternatively, you can skip this step and directly load the preprocessed data from <https://download.fieldtriptoolbox.org/tutorial/networkanalysis/>. This latter folder contains a few files that we will need later in this tutorial as well, so it is recommended to download its contents.
 
     %% read the continuous data and segment into 2 seconds epochs
     cfg            = [];
@@ -64,7 +64,7 @@ The ft_redefinetrial and ft_preprocessing functions require the original MEG dat
 
 ### Artefact rejection
 
-We will first clean the data from potential bad segments such as SQUID jumps and/or bad channels using **[ft_rejectvisual](/reference/ft_rejectvisual)**. Subsequently, we will identify occular and cardiac artifacts by means of ICA using **[ft_componentanalysis](/reference/ft_componentanalysis)**. Since, these type of artifacts are predominately low frequent and we are interested in a 10Hz signal, we will downsample the data using **[ft_resampledata](/reference/ft_resampledata)** in order to speed up calculations during ft_componentanalysis and reduce potential working memory issues. Alternatively, you can skip these steps and download the data [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/networkanalysis).
+We will first clean the data from potential bad segments such as SQUID jumps and/or bad channels using **[ft_rejectvisual](/reference/ft_rejectvisual)**. Subsequently, we will identify occular and cardiac artifacts by means of ICA using **[ft_componentanalysis](/reference/ft_componentanalysis)**. Since, these type of artifacts are predominately low frequent and we are interested in a 10Hz signal, we will downsample the data using **[ft_resampledata](/reference/ft_resampledata)** in order to speed up calculations during ft_componentanalysis and reduce potential working memory issues. Alternatively, you can skip these steps and download the data [here](https://download.fieldtriptoolbox.org/tutorial/networkanalysis).
 
     %% make a visual inspection and reject bad trials/sensors
     cfg         = [];

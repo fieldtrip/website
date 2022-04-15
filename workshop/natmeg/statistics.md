@@ -34,7 +34,7 @@ In contrast to the familiar parametric statistical framework, it is straightforw
 
 The preprocessing and time-frequency computation is similar to how it is done in the previous tutorials, and hence not explained in further detail.
 
-The MEG dataset that we use in this tutorial is available as [oddball1_mc_downsampled.fif](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/natmeg/oddball1_mc_downsampled.fif) from our FTP server. Furthermore, you should download and save the custom trial function [trialfun_oddball_responselocked.m](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/natmeg/trialfun_oddball_responselocked.m) to a directory that is on your MATLAB path.
+The MEG dataset that we use in this tutorial is available as [oddball1_mc_downsampled.fif](https://download.fieldtriptoolbox.org/workshop/natmeg/oddball1_mc_downsampled.fif) from our download server. Furthermore, you should download and save the custom trial function [trialfun_oddball_responselocked.m](https://download.fieldtriptoolbox.org/workshop/natmeg/trialfun_oddball_responselocked.m) to a directory that is on your MATLAB path.
 
 ### Preprocessing the response-locked data
 
@@ -248,7 +248,7 @@ We can visualize the results just like any other TFR structure. The _TFR_stat_ s
 
 Let us now move on with the stimulus-locked activity, i.e. the auditory event-related fields. The preprocessing is again similar to the previous tutorials.
 
-The following requires that the custom trial function [trialfun_oddball_stimlocked.m](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/natmeg/trialfun_oddball_stimlocked.m) is present in a directory that is on your MATLAB path.
+The following requires that the custom trial function [trialfun_oddball_stimlocked.m](https://download.fieldtriptoolbox.org/workshop/natmeg/trialfun_oddball_stimlocked.m) is present in a directory that is on your MATLAB path.
 
     cfg = [];
     cfg.dataset = 'oddball1_mc_downsampled.fif';

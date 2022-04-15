@@ -46,7 +46,7 @@ The "Sociedad Espanola de Psicofisiologia y Neurociencia Cognitiva y Afectiva" (
 
 During the hands-on sessions we will use task EEG data recorded in a [language experiment](/tutorial/eeg_language), and resting-state EEG data recorded during [sedation with Propofol](/workshop/madrid2019/eeg_sedation). The resting-state EEG data has been reorganized/reformatted from its original format into BIDS as described in [this script](/workshop/madrid2019/bids_sedation).
 
-The data will be provided on a USB stick during the hands-on sessions. You can also download the data from our [FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/madrid2019/).
+The data will be provided on a USB stick during the hands-on sessions. You can also download the data from our [download server](https://download.fieldtriptoolbox.org/workshop/madrid2019/).
 
 ## Installing FieldTrip and setting up MATLAB
 

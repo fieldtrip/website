@@ -17,7 +17,7 @@ If you are doing hypothesis-driven research, you should _not_ guide your statist
 On the other hand: if you are doing exploratory research, you should not compute p-values. Effect sizes are interesting and relevant to report for both exploratory and hypothesis-driven research.   
 {% include markup/end %}
 
-The [ERF_orig.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/example/effectsize/ERF_orig.mat) data that is used in this example script is available from our FTP server. The same data is used in the other statistics tutorials; the example here specifically follows the [Parametric and non-parametric statistics on event-related fields](/tutorial/eventrelatedstatistics) tutorial.
+The [ERF_orig.mat](https://download.fieldtriptoolbox.org/example/effectsize/ERF_orig.mat) data that is used in this example script is available from our download server. The same data is used in the other statistics tutorials; the example here specifically follows the [Parametric and non-parametric statistics on event-related fields](/tutorial/eventrelatedstatistics) tutorial.
 
 The already preprocessed data is based on 151-channel MEG recordings from 10 subjects and consists of single-subject event-related averages for an auditory language task with two conditions: fully incongruent (FIC) and fully congruent (FC) sentence endings. See the other tutorials on the [meg-language dataset](/tag/meg-language) for more details.
 

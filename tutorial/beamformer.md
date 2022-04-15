@@ -116,7 +116,7 @@ The forward model is a prerequisite for source reconstruction. The forward model
 
 For more details on the following steps, you can consult the [tutorial on volume conduction models for source-reconstruction of MEG data](/tutorial/headmodel_meg).
 The first step in constructing the forward model is to find the brain surface from the subjects MRI. This procedure is termed segmentation.
-Note that segmentation is quite time consuming. For the purpose of this tutorial, we have precomputed the segmentation for you. If you want to skip ahead, you can directly load the segmented MRI available from the [FieldTrip FTP server (segmentedmri.mat)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/beamformer/segmentedmri.mat) using the command 'load segmentedmri'.
+Note that segmentation is quite time consuming. For the purpose of this tutorial, we have precomputed the segmentation for you. If you want to skip ahead, you can download (segmentedmri.mat)(https://download.fieldtriptoolbox.org/tutorial/beamformer/segmentedmri.mat) and directly load the segmented MRI using the command `load segmentedmri`.
 
 Otherwise, segmentation involves the following steps:
 
@@ -217,26 +217,28 @@ Save the output:
 
     save sourcePost_nocon sourcePost_nocon
 
-The beamformer procedure estimates the power in the beta frequency band at each grid point in the brain volume. The grid of estimated power values can be plotted superimposed on the anatomical MRI. This requires the output of **[ft_sourceanalysis](/reference/ft_sourceanalysis)** (see above or download from the [FieldTrip FTP server (sourcePost_nocon.mat)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/beamformer/sourcePost_nocon.mat)) and the subject's MRI (also available from the [ftp server (Subject01.zip)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip)).
+The beamformer procedure estimates the power in the beta frequency band at each grid point in the brain volume. The grid of estimated power values can be plotted superimposed on the anatomical MRI. This requires the output of **[ft_sourceanalysis](/reference/ft_sourceanalysis)** (see above or download [sourcePost_nocon.mat](https://download.fieldtriptoolbox.org/tutorial/beamformer/sourcePost_nocon.mat)) and the subject's MRI (included in the [Subject01.zip](https://download.fieldtriptoolbox.org/tutorial/Subject01.zip) dataset).
 
     load sourcePost_nocon
 
 The function **[ft_sourceinterpolate](/reference/ft_sourceinterpolate)** aligns the measure of power increase with the structural MRI of the subject. The alignment is done according to the anatomical landmarks (nasion, left and right ear canal) that were both determined in the MEG measurement and in the MRI scan. Using the ft_volumereslice function before doing the interpolation ensures that the MRI is well behaved, because the reslicing causes the voxel axes to be aligned with the head coordinate axes:
 
     mri = ft_read_mri('Subject01.mri');
-    mri = ft_volumereslice([], mri);
+    
+    cfg = [];
+    mri = ft_volumereslice(cfg, mri);
 
     cfg            = [];
     cfg.downsample = 2;
     cfg.parameter  = 'pow';
-    sourcePostInt_nocon  = ft_sourceinterpolate(cfg, sourcePost_nocon , mri);
+    sourcePostInt_nocon  = ft_sourceinterpolate(cfg, sourcePost_nocon, mri);
 
 Plot the interpolated data:
 
     cfg              = [];
     cfg.method       = 'slice';
     cfg.funparameter = 'pow';
-    ft_sourceplot(cfg,sourcePostInt_nocon);
+    ft_sourceplot(cfg, sourcePostInt_nocon);
 
 {% include image src="/assets/img/tutorial/beamformer/figure1bf.png" width="500" %}
 

@@ -60,7 +60,7 @@ In a between-trials experiment, we analyze the data of a single subject. By mean
 
 ### Reading in the data
 
-We will now read and preprocess the data. If you would like to continue directly with the already preprocessed data, you can download it from the FieldTrip FTP server ([dataFIC_LP.mat ](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/beamformer/dataFIC.mat) [& dataFC)LP.mat ](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/beamformer/dataFC.mat). Load the data into MATLAB with the  command 'load' and skip to Permutation test.
+We will now read and preprocess the data. If you would like to continue directly with the already preprocessed data, you can download it from the FieldTrip FTP server ([dataFIC_LP.mat ](https://download.fieldtriptoolbox.org/tutorial/beamformer/dataFIC.mat) [& dataFC)LP.mat ](https://download.fieldtriptoolbox.org/tutorial/beamformer/dataFC.mat). Load the data into MATLAB with the  command 'load' and skip to Permutation test.
 
 Otherwise run the following code:
 
@@ -87,7 +87,7 @@ Subsequently you can save the data to disk.
 
 Using the preprocessed data, we now create a data structure that is the average across trials, time-locked to a particular event, using **[ft_timelockanalysis](/reference/ft_timelockanalysis)**. The output of **[ft_timelockanalysis](/reference/ft_timelockanalysis)** contains an .avg field with the average event-related field, and a .trial field with the individual trial data. The output is stored in timelockFIC and timelockFC for the fully incongruent and the fully congruent condition. This output is then suitable, as well, for statististical analyses.
 
-To obtain the preprocessed data required by **[ft_timelockanalysis](/reference/ft_timelockanalysis)** you can get it here from our FTP server: [dataFIC_LP](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_timelock/dataFIC_LP.mat) and [dataFC_LP.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_timelock/dataFC_LP.mat).
+To obtain the preprocessed data required by **[ft_timelockanalysis](/reference/ft_timelockanalysis)** you can get it here from our download server: [dataFIC_LP](https://download.fieldtriptoolbox.org/tutorial/cluster_permutation_timelock/dataFIC_LP.mat) and [dataFC_LP.mat](https://download.fieldtriptoolbox.org/tutorial/cluster_permutation_timelock/dataFC_LP.mat).
 
     load dataFIC_LP
     load dataFC_LP
@@ -182,7 +182,7 @@ Save the output to disk:
 
 #### The format of the output
 
-The output can also be obtained from [stat_ERF_axial_FICvsFC.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_timelock/stat_ERF_axial_FICvsFC.mat). If you need to reload the statistics output, use:
+The output can also be obtained from [stat_ERF_axial_FICvsFC.mat](https://download.fieldtriptoolbox.org/tutorial/cluster_permutation_timelock/stat_ERF_axial_FICvsFC.mat). If you need to reload the statistics output, use:
 
     load stat_ERF_axial_FICvsFC
 
@@ -345,7 +345,7 @@ Having calculated synthetic planar gradient data, one can use the same configura
 
     save stat_ERF_planar_FICvsFC stat
 
-The output can also be obtained from [ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_timelock/stat_ERF_planar_FICvsFC.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_timelock/stat_ERF_planar_FICvsFC.mat). If you need to reload the statistics output, use:
+The output can also be obtained from [here](https://download.fieldtriptoolbox.org/tutorial/cluster_permutation_timelock/stat_ERF_planar_FICvsFC.mat). If you need to reload the statistics output, use:
 
     load stat_ERF_planar_FICvsFC
 
@@ -410,7 +410,7 @@ We now consider experiments involving multiple subjects that are each observed i
 
 ### Reading-in, preprocessing, timelockanalysis, planar gradient, and grandaveraging
 
-We now describe how we can statistically test the difference between the event-related averages for fully incongruent (FIC) and the fully congruent (FC) sentence endings. For this analysis we use planar gradient data. For convenience we will not do the reading-in and preprocessing steps on all subjects. Instead we begin by loading the timelock structures containing the event-related averages (of the planar gradient data) of all ten subjects. The data is available from the FieldTrip FTP server ([ERF_orig.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_timelock/ERF_orig.mat)).
+We now describe how we can statistically test the difference between the event-related averages for fully incongruent (FIC) and the fully congruent (FC) sentence endings. For this analysis we use planar gradient data. For convenience we will not do the reading-in and preprocessing steps on all subjects. Instead we begin by loading the timelock structures containing the event-related averages (of the planar gradient data) of all ten subjects. The data is available from the FieldTrip FTP server ([ERF_orig.mat](https://download.fieldtriptoolbox.org/tutorial/cluster_permutation_timelock/ERF_orig.mat)).
 
     load ERF_orig;
 
@@ -469,7 +469,7 @@ Now, use the configuration above to perform the following statistical analysis:
 
     save stat_ERF_planar_FICvsFC_GA stat
 
-The output can also be obtained from [stat_ERF_planar_FICvsFC_GA.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_timelock/stat_ERF_planar_FICvsFC_GA.mat). If you need to reload the statistics output, use:
+The output can also be obtained from [stat_ERF_planar_FICvsFC_GA.mat](https://download.fieldtriptoolbox.org/tutorial/cluster_permutation_timelock/stat_ERF_planar_FICvsFC_GA.mat). If you need to reload the statistics output, use:
 
     load stat_ERF_planar_FICvsFC_GA
 

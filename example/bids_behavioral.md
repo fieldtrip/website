@@ -22,7 +22,7 @@ When using NBS Presentation, you can write the timing of stimuli and responses i
 The example consists of data from 2 subjects, each participating in 3 experiments that were part of a single session. In one experiment the Presentation log file was stored, in the other two events were stored in a custom log file.
 
 {% include markup/success %}
-All data for the following examples is available from our [FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/example/bids_presentation/).
+All data for the following examples is available from our [download server](https://download.fieldtriptoolbox.org/example/bids_presentation/).
 {% include markup/end %}
 
 The examples includes the original log files under the “original” directory. It also has a copy of the script to do the conversion under “code”. The reorganized data is under the “bids” directory. According to [the documentation](https://bids-specification.readthedocs.io/en/stable/02-common-principles.html#source-vs-raw-vs-derived-data) the original data can be added to the BIDS dataset under the “sourcedata” directory and code can be added to the “code” directory. This way no information is lost and the conversion/reorganization is fully reproducible.

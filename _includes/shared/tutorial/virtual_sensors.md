@@ -4,13 +4,13 @@ In the [extended beamformer tutorial](/tutorial/beamformingextended) we identifi
 
 ### Compute the spatial filter for the region of interest
 
-After having done all steps in [the extended beamformer tutorial](/tutorial/beamformingextended), you have the preprocessed data, two source structures and a headmodel (you can also download these from [FieldTrip FTP server (source_coh_lft.mat, source_diff.mat, hdm.mat, sourcemodel.mat, data_cmb.mat)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/beamformer_extended/)
+After having done all steps in [the extended beamformer tutorial](/tutorial/beamformingextended), you have the preprocessed data, two source structures, and a headmodel. You can also get these from the [download server](https://download.fieldtriptoolbox.org/tutorial/beamformer_extended/):
 
-- `data_cmb`
-- `source_coh_lft`
-- `source_diff`
-- `hdm`
-- `sourcemodel`
+- [data_cmb.mat](https://download.fieldtriptoolbox.org/tutorial/beamformer_extended/data_cmb.mat)
+- [source_coh_lft.mat](https://download.fieldtriptoolbox.org/tutorial/beamformer_extended/source_coh_lft.mat)
+- [source_diff.mat](https://download.fieldtriptoolbox.org/tutorial/beamformer_extended/source_diff.mat)
+- [hdm.mat](https://download.fieldtriptoolbox.org/tutorial/beamformer_extended/hdm.mat)
+- [sourcemodel.mat](https://download.fieldtriptoolbox.org/tutorial/beamformer_extended/sourcemodel.mat)
 
 We will now determine the positions on which the cortico-muscular coherence is the largest and the position where the induced visual gamma activity is largest:
 

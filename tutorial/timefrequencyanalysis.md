@@ -53,7 +53,7 @@ The first step is to read the data using the function **[ft_preprocessing](/refe
 
 ### Reading in the data
 
-We will now read and preprocess the data. If you would like to continue directly with the already preprocessed data, you can download it from the [FieldTrip FTP server (dataFIC.mat)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/beamformer/dataFIC.mat). Load the data into MATLAB with the  command 'load dataFIC' and skip to [Time-frequency analysis I](#time-frequency analysis-i).
+We will now read and preprocess the data. If you would like to continue directly with the already preprocessed data, you can download [dataFIC.mat](https://download.fieldtriptoolbox.org/tutorial/beamformer/dataFIC.mat). Load the data into MATLAB with the command `load dataFIC` and skip to [Time-frequency analysis I](#time-frequency analysis-i).
 
 Otherwise run the following code:
 
@@ -79,7 +79,7 @@ Subsequently you can save the data to disk.
 
 Here, we will describe how to calculate time frequency representations using Hanning tapers. When choosing for a fixed window length procedure the frequency resolution is defined according to the length of the time window (delta T). The frequency resolution (delta f in figure 1) = 1/length of time window in sec (delta T in figure 1). Thus a 500 ms time window results in a 2 Hz frequency resolution (1/0.5 sec= 2 Hz) meaning that power can be calculated for 2 Hz, 4 Hz, 6 Hz etc. An integer number of cycles must fit in the time window.
 
-**[Ft_freqanalysis](/reference/ft_freqanalysis)** requires preprocessed data (see above), which is available from <ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/timefrequencyanalysis/dataFIC.mat>.
+**[Ft_freqanalysis](/reference/ft_freqanalysis)** requires preprocessed data (see above), which can also be downloaded [here](https://download.fieldtriptoolbox.org/tutorial/timefrequencyanalysis/dataFIC.mat).
 
     load dataFIC
 

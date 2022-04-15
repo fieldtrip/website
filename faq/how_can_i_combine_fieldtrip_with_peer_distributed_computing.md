@@ -48,7 +48,7 @@ Note that when specifying the cfg.inputfile and/or cfg.outputfile options, that 
 
 ## Example: processing the MEG data for all tutorial subjects
 
-The MEG data used in the FieldTrip tutorials is available from <ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/>. There is data for four subjects, which can be processed in parallel as follows.
+The MEG data used in the FieldTrip tutorials is available from <https://download.fieldtriptoolbox.org/tutorial/>. There is data for four subjects, which can be processed in parallel as follows.
 
     subj  = [1 2 3 4];
 

@@ -23,7 +23,7 @@ page.
 We will use classifiers to analyze the [MEG-language dataset](/faq/what_types_of_datasets_and_their_respective_analyses_are_used_on_fieldtrip) which
 features one subject with three types of trials: fully incongruent (FIC), fully congruent (FC), and
 initially congruent (IC). These three classes are stored in different files available here:
- [dataFIC_LP.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/eventrelatedaveraging/dataFIC_LP.mat), [dataFC_LP.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/eventrelatedaveraging/dataFC_LP.mat) and [dataIC_LP.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/eventrelatedaveraging/dataIC_LP.mat).
+ [dataFIC_LP.mat](https://download.fieldtriptoolbox.org/tutorial/eventrelatedaveraging/dataFIC_LP.mat), [dataFC_LP.mat](https://download.fieldtriptoolbox.org/tutorial/eventrelatedaveraging/dataFC_LP.mat) and [dataIC_LP.mat](https://download.fieldtriptoolbox.org/tutorial/eventrelatedaveraging/dataIC_LP.mat).
 
 The data can be loaded into MATLAB using
 

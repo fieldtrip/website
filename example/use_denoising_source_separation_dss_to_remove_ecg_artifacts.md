@@ -18,7 +18,7 @@ DSS is a blind source separation technique that is akin to ICA, with the added f
 
 ### Example dataset
 
-You can run the code below on your own data. Alternatively, try with the example MEG dataset [ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/ArtifactRemoval.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/ArtifactRemoval.zip). All figures in this example script are based on these data.
+You can run the code below on your own data. Alternatively, try with the [ArtifactRemoval.zip](https://download.fieldtriptoolbox.org/tutorial/ArtifactRemoval.zip) example MEG dataset. All figures in this example script are based on these data.
 
 To load this dataset into MATLAB and preprocess with FieldTrip, use:
 
