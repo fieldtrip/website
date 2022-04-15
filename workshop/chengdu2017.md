@@ -38,7 +38,7 @@ Please read the [FieldTrip reference paper](http://www.hindawi.com/journals/cin/
 If you are not familiar with MATLAB or are not certain about your MATLAB skills, please go through the [MATLAB for psychologists](http://www.antoniahamilton.com/matlab.html) tutorial (which is also useful for non-psychologists).
 {% include markup/end %}
 
-For the hands-on sessions you have to start MATLAB. We will provide a recent FieldTrip copy and the hands-on data on a USB stick. Alternatively, you can get them from the FTP server (which will be slower).
+For the hands-on sessions you have to start MATLAB. We will provide a recent FieldTrip copy and the hands-on data on a USB stick. Alternatively, you can get them from the download server (which will be slower).
 
 To get going, you need to start MATLAB. Then, you need to issue the following command
 

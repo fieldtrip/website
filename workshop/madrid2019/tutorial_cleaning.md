@@ -50,19 +50,11 @@ In this tutorial the following steps will be taken:
 
 The dataset that has been shared does not consist of the original recordings; the data has been imported and some preprocessing steps have been performed already (EEG channels were demeaned and band-pass filtered between 0.5 Hz - 45 Hz, some channels were interpolated using spherical spline algorithms and the data were re-referenced to the average taken over all channels; see [Materials and Methods'](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1004669#sec008) section).
 
-For this tutorial we will use the EEG data from one example subject (subj22),
-which has been selected because the data still shows some artifacts. You can
-download both raw and processed data of the example subject
-[here](https://download.fieldtriptoolbox.org/workshop/madrid2019/tutorial_cleaning/).
-If you are interested in the raw data from all subjects transformed into [BIDS
-format](/example/bids), you can download it from our [FTP
-Server](https://download.fieldtriptoolbox.org/workshop/madrid2019/extra/).
-Please note that you **do not** have to download all subjects for this tutorial.
+For this tutorial we will use the EEG data from one example subject (subj22), which has been selected because the data still shows some artifacts. You can download both raw and processed data of the example subject [here](https://download.fieldtriptoolbox.org/workshop/madrid2019/tutorial_cleaning/).
 
-Our goal now is to identify these noisy periods, eye movements, blinks, muscular
-artifacts and any other channel-specific abnormal behavior. We will guide you
-through the preprocessing pipeline with the data of the example subject and for one
-experimental block (i.e. level of sedation):
+If you are interested in the raw data from all subjects transformed into [BIDS format](/example/bids), you can download it from our [download server](https://download.fieldtriptoolbox.org/workshop/madrid2019/extra/). Please note that you **do not** have to download all subjects for this tutorial.
+
+Our goal now is to identify these noisy periods, eye movements, blinks, muscular artifacts and any other channel-specific abnormal behavior. We will guide you through the preprocessing pipeline with the data of the example subject and for one experimental block, i.e., level of sedation:
 
     subj = 'sub-22';
 
@@ -95,14 +87,7 @@ Following preprocessing, the data will have the following fields
     sampleinfo: [1 90000]
            cfg: [1x1 struct]
 
-Subsequently we will add the electrode description. For this we will use a
-custom script which is included with the data on the FTP server. The main reason
-for a custom script is that the EEG cap used in this stidy is the Electrical
-Geodesics Inc. (EGI) geodesic net, which has its own specific nomenclature for
-electrode positions, but some of the electrode positions correspond to the 10-10
-standard system. If you are curious about the equivalence between the two
-systems, take a look at the custom function and
-[here](https://www.researchgate.net/publication/266609828_Determination_of_the_Geodesic_Sensor_Nets'_Average_Electrode_Positions_and_Their_10_-_10_International_Equivalents).
+Subsequently we will add the electrode description. For this we will use a custom script which is included with the data on the download server. The main reason for a custom script is that the EEG cap used in this stidy is the Electrical Geodesics Inc. (EGI) geodesic net, which has its own specific nomenclature for electrode positions, but some of the electrode positions correspond to the 10-10 standard system. If you are curious about the equivalence between the two systems, take a look at the custom function and [here](https://www.researchgate.net/publication/266609828_Determination_of_the_Geodesic_Sensor_Nets'_Average_Electrode_Positions_and_Their_10_-_10_International_Equivalents).
 
     data.elec = prepare_elec_chennu2016(data.label);
 

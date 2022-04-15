@@ -113,7 +113,7 @@ ranges defined in the [original paper](https://doi.org/10.1371/journal.pcbi.1004
     mode_sedation_oROI = ft_selectdata(cfg, mode_sedation);
     reco_sedation_oROI = ft_selectdata(cfg, reco_sedation);
 
-Collect the data to plot it using the `plotSpread` function, which is specific for this tutorial and available from the FTP server.
+Collect the data to plot it using the `plotSpread` function, which is specific for this tutorial and available from the download server.
 
     data_raw_fROI    = {base_sedation_fROI.powspctrm...
       mild_sedation_fROI.powspctrm...

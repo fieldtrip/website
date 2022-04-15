@@ -31,7 +31,7 @@ Click here to reset the permission for third party cookies and scripts:
 
 ## How we process your personal data when you download the FieldTrip toolbox
 
-You can download FieldTrip from an FTP server that is hosted on a server of the Donders Centre for Cognitive Neuroimaging, Radboud University Nijmegen. The FTP server allows anonymous logins, it tracks the downloads and IP addresses for technical and security reasons, but does not retain information about individual users. We do store the information that you provide in the download form. Note that you are not required to use the download form, you can also go to the FTP server directly.
+You can download FieldTrip from a download server that is hosted on a server of the Donders Centre for Cognitive Neuroimaging, Radboud University Nijmegen. The download server tracks the downloads and IP addresses for technical and security reasons, but does not retain information about individual users. We do store the information that you provide in the download form. Note that you are not required to use the download form, you can also go to the download server directly.
 
 Alternatively, you can download and contribute to FieldTrip from GitHub, which is an external service. The processing of your data by GitHub is explained in its [privacy policy](https://github.com/site/privacy).
 

@@ -43,7 +43,7 @@ To check that the tutorial meets the expected didactical qualities, the introduc
 
 For an example of a well-structured tutorial see the [tutorial on event related fields](/tutorial/eventrelatedaveraging).
 
-## How to update the tutorial data on the FTP?
+## How to update the tutorial data on the download server?
 
 Some computations in the tutorials may take a long time (or too long), or take more memory than available in the computers of the people that want to walk through the tutorial. To allow people in these cases to follow through the whole tutorial, we provide the intermediate data and final results at important stages in the tutorial. This data is stored in .mat files. See below for the recommended file and variable naming scheme.
 

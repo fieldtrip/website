@@ -89,7 +89,7 @@ You should also download some pre-computed intermediate results for each tutoria
 -  [beamformer](https://download.fieldtriptoolbox.org/tutorial/beamformer/)
 -  [statistics](https://download.fieldtriptoolbox.org/tutorial/cluster_permutation_timelock/)
 
-Downloading will take some time, especially if everyone tries to do it at the same moment. So please download in advance! If downloading from the FTP server in the web browser gives problems, please try with another web browser, [CyberDuck](https://cyberduck.io), or [FileZilla](https://filezilla-project.org). You need to log in as guest (using anonymous log in) on ftp://ftp.fieldtriptoolbox.org, and you don't need a password for this.
+Downloading will take some time, especially if everyone tries to do it at the same moment. So please download in advance!
 
 For people that **do** use a computer at the DCCN (either a desktop PC via remote desktop or the DCCN compute cluster):
 

@@ -7,7 +7,7 @@ redirect_from:
 
 # Code testing and release versions
 
-Daily releases of FieldTrip are made available on the FTP server. The corresponding commits (i.e. point in time in the git repository) are tagged, such that the releases are also [available from GitHub](https://github.com/fieldtrip/fieldtrip/releases). FieldTrip is only released if all tests pass, so on some days there will not be a release.
+Daily releases of FieldTrip are made available on the download server. The corresponding commits (i.e. point in time in the git repository) are tagged, such that the releases are also [available from GitHub](https://github.com/fieldtrip/fieldtrip/releases). FieldTrip is only released if all tests pass, so on some days there will not be a release.
 
 ## Testing the code
 

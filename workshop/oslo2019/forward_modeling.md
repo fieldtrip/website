@@ -100,8 +100,7 @@ We follow this up by a check running **[ft_volumerealign](/reference/ft_volumere
 _Figure 2: Plot of the co-registration after applying Iterative Closest Points on the Polhemus head shape points_
 
 {% include markup/info %}
-A version of _mri_aligned_headshape_ is already included in the FTP. Using this, you will achieve the same solutions as us, but do try to do the co-registration yourself as well.  
-Note also that _neuromag_ coordinates are seen under the voxel indices when you run **[ft_sourceplot](/reference/ft_sourceplot)** on _mri_aligned_headshape_.
+A version of _mri_aligned_headshape_ is already included in downloaded data. Using this, you will achieve the same solutions as us, but do try to do the co-registration yourself as well. Note also that _neuromag_ coordinates are seen under the voxel indices when you run **[ft_sourceplot](/reference/ft_sourceplot)** on _mri_aligned_headshape_.
 {% include markup/end %}
 
     load mri_aligned_headshape
@@ -186,7 +185,7 @@ _Figure 4: Plot of the three meshes (\_brain, skull \_and_ scalp*)*
 
 ## Head models (component 1)
 
-We will now use these non-intersecting meshes to specify the head models, which will later be used to indicate how currents spread throughout the volume conductor. We create two models, one with the _bemcp_ method and one with the _dipoli_ method. For the article on the _dipoli_ method, see [Oostendorp & van Oosterom, 1989](https://doi.org/10.1109/10.19859) and for an article on the _bemcp_ method, see for example [Mosher et al., 1999](https://doi.org/10.1109/10.748978). Do note that the _dipoli_ method will not work on a Windows computer. The _headmodel_dipoli_ can be downloaded at the [ftp](https://download.fieldtriptoolbox.org/workshop/oslo2019/) instead. The best choice is to use [OpenMEEG](https://openmeeg.github.io/), (_cfg.method = 'openmeeg'_). This requires some manual installation and setting up, so it is not covered here.
+We will now use these non-intersecting meshes to specify the head models, which will later be used to indicate how currents spread throughout the volume conductor. We create two models, one with the _bemcp_ method and one with the _dipoli_ method. For the article on the _dipoli_ method, see [Oostendorp & van Oosterom, 1989](https://doi.org/10.1109/10.19859) and for an article on the _bemcp_ method, see for example [Mosher et al., 1999](https://doi.org/10.1109/10.748978). Do note that the _dipoli_ method will not work on a Windows computer. The _headmodel_dipoli_ can be downloaded [here](https://download.fieldtriptoolbox.org/workshop/oslo2019/) instead. The best choice is to use [OpenMEEG](https://openmeeg.github.io/), (_cfg.method = 'openmeeg'_). This requires some manual installation and setting up, so it is not covered here.
 
     cfg              = [];
     cfg.method       = 'bemcp';
