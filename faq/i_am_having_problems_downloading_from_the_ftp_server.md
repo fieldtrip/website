@@ -3,9 +3,13 @@ title: I am having problems downloading from the FTP server
 tags: [faq, download, ftp]
 ---
 
+{% include markup/warning %}
+In the past we used an FTP server to distribute files, but as of April 2022 we switched to a webdav server which can be found on <https://download.fieldtriptoolbox.org/>. The download server supports [WebDAV](https://en.wikipedia.org/wiki/WebDAV), which means that you can download individual files using your web browser. You can also download a complete directory (with subdirectories) at once using a specialized WebDAV client such as [CyberDuck](http://cyberduck.io/) or [FileZilla](http://filezilla-project.org/). On Windows and macOS ou can even mount the WebDAV server as a "network file system" and treat it as a network drive.   
+{% include markup/end %}
+
 # I am having problems downloading from the FTP server
 
-The FieldTrip source code and the example and tutorial datasets are released to the general public on our [download server](https://download.fieldtriptoolbox.org/). This server requires an anonymous login; if needed you should use the username "anonymous" and you can your email address (or anything that is formatted as an email address) as the password.
+The FieldTrip source code and the example and tutorial datasets are released to the general public on our [FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/). This server requires an anonymous login; if needed you should use the username "anonymous" and you can your email address (or anything that is formatted as an email address) as the password.
 
 The FTP service runs on a shared server which occasionally has a performance bottleneck. If you cannot connect, please try again at a later time (i.e. one hour later, or the next day).
 
