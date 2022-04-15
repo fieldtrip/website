@@ -263,7 +263,7 @@ The interpretation becomes more clear with a different colormap
 
 {% include image src="/assets/img/tutorial/plotting/fig19.png" %}
 
-See http://colorbrewer2.org for more details.
+See <http://colorbrewer2.org> for more details, or read [Crameri et al 2020, The misuse of colour in science communication](https://doi.org/10.1038/s41467-020-19160-7).
 
 In the help of **[ft_topoplotER](/reference/ft_topoplotER)** and **[ft_topoplotTFR](/reference/ft_topoplotTFR)** you can find many cfg options. For instance by specifying the cfg.xlim as a vector the functions makes selections of multiple time-windows and plots them as a series of subplots.
 
