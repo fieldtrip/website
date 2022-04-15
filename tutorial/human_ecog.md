@@ -561,7 +561,7 @@ We recommend that the user construct a single script for a single subject by cop
 
 ## Suggested further reading
 
-You can read more about intracranial EEG and other types of intracranial recordings such as [spike train recordings](/tutorial/spike) and [spikes and local field potentials](/tutorial/spikefield) in the following documentation.
+You can read more about the challenges and concepts of preprocessing intracranial EEG data in the [Intracranial EEG for Cognitive Neuroscience handbook](https://psyarxiv.com/9jd32). You can read more about other types of intracranial recordings such as [spike train recordings](/tutorial/spike) and [spikes and local field potentials](/tutorial/spikefield) in the following documentation.
 
 {% include seealso tag1="getting_started" tag2="bioimage" %}
 {% include seealso tag1="example" tag2="ecog" %}
