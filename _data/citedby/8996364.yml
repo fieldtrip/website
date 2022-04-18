@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '35133058'
+- idtype: doi
+  value: 10.1002/hbm.25791
+- idtype: pmcid
+  value: PMC8996364
+authors:
+- authtype: Author
+  name: Chettouf S
+- authtype: Author
+  name: Triebkorn P
+- authtype: Author
+  name: Daffertshofer A
+- authtype: Author
+  name: Ritter P
+epubdate: 2022 Feb 8
+fulljournalname: Human Brain Mapping
+issue: '7'
+pages: 2348-2364
+pmclivedate: 2022/04/15
+printpubdate: ''
+pubdate: 2022 Feb 8
+sortdate: 2022/02/08 00:00
+source: Hum Brain Mapp
+title: Unimanual sensorimotor learning—A simultaneous EEG‐fMRI aging study
+uid: '8996364'
+volume: '43'
