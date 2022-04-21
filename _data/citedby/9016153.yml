@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fpsyt.2022.810362
+- idtype: pmcid
+  value: PMC9016153
+authors:
+- authtype: Author
+  name: Tian Q
+- authtype: Author
+  name: Yang NB
+- authtype: Author
+  name: Fan Y
+- authtype: Author
+  name: Dong F
+- authtype: Author
+  name: Bo QJ
+- authtype: Author
+  name: Zhou FC
+- authtype: Author
+  name: Zhang JC
+- authtype: Author
+  name: Li L
+- authtype: Author
+  name: Yin GZ
+- authtype: Author
+  name: Wang CY
+- authtype: Author
+  name: Fan M
+epubdate: 2022 Apr 5
+fulljournalname: Frontiers in Psychiatry
+issue: ''
+pages: '810362'
+pmclivedate: 2022/04/20
+printpubdate: ''
+pubdate: 2022 Apr 5
+sortdate: 2022/04/05 00:00
+source: Front Psychiatry
+title: Detection of Schizophrenia Cases From Healthy Controls With Combination of
+  Neurocognitive and Electrophysiological Features
+uid: '9016153'
+volume: '13'
