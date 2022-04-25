@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '35448012'
+- idtype: doi
+  value: 10.3390/brainsci12040481
+- idtype: pmcid
+  value: PMC9029984
+authors:
+- authtype: Author
+  name: Röders D
+- authtype: Author
+  name: Klepp A
+- authtype: Author
+  name: Schnitzler A
+- authtype: Author
+  name: Biermann-Ruben K
+- authtype: Author
+  name: Niccolai V
+epubdate: 2022 Apr 6
+fulljournalname: Brain Sciences
+issue: '4'
+pages: '481'
+pmclivedate: 2022/04/23
+printpubdate: ''
+pubdate: 2022 Apr 6
+sortdate: 2022/04/06 00:00
+source: Brain Sci
+title: Induced and Evoked Brain Activation Related to the Processing of Onomatopoetic
+  Verbs
+uid: '9029984'
+volume: '12'

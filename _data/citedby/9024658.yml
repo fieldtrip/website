@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3390/s22083059
+- idtype: pmcid
+  value: PMC9024658
+authors:
+- authtype: Author
+  name: Iivanainen J
+- authtype: Author
+  name: Borna A
+- authtype: Author
+  name: Zetter R
+- authtype: Author
+  name: Carter TR
+- authtype: Author
+  name: Stephen JM
+- authtype: Author
+  name: McKay J
+- authtype: Author
+  name: Parkkonen L
+- authtype: Author
+  name: Taulu S
+- authtype: Author
+  name: Schwindt PD
+epubdate: 2022 Apr 15
+fulljournalname: Sensors (Basel, Switzerland)
+issue: '8'
+pages: '3059'
+pmclivedate: 2022/04/23
+printpubdate: ''
+pubdate: 2022 Apr 15
+sortdate: 2022/04/15 00:00
+source: Sensors (Basel)
+title: Calibration and Localization of Optically Pumped Magnetometers Using Electromagnetic
+  Coils
+uid: '9024658'
+volume: '22'

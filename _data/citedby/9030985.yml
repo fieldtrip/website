@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '35447989'
+- idtype: doi
+  value: 10.3390/brainsci12040458
+- idtype: pmcid
+  value: PMC9030985
+authors:
+- authtype: Author
+  name: Muñetón-Ayala M
+- authtype: Author
+  name: De Vega M
+- authtype: Author
+  name: Ochoa-Gómez JF
+- authtype: Author
+  name: Beltrán D
+epubdate: 2022 Mar 29
+fulljournalname: Brain Sciences
+issue: '4'
+pages: '458'
+pmclivedate: 2022/04/23
+printpubdate: ''
+pubdate: 2022 Mar 29
+sortdate: 2022/03/29 00:00
+source: Brain Sci
+title: The Brain Dynamics of Syllable Duration and Semantic Predictability in Spanish
+uid: '9030985'
+volume: '12'

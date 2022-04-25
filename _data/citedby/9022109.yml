@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '34657474'
+- idtype: doi
+  value: 10.1177/15500594211046703
+- idtype: pmcid
+  value: PMC9022109
+- idtype: MID
+  value: NIHMS1789773
+authors:
+- authtype: Author
+  name: López-Castro T
+- authtype: Author
+  name: Martin L
+- authtype: Author
+  name: Nickley S
+- authtype: Author
+  name: Saraiya TC
+- authtype: Author
+  name: Melara RD
+epubdate: 2021 Oct 16
+fulljournalname: Clinical EEG and neuroscience
+issue: ''
+pages: '15500594211046703'
+pmclivedate: ''
+printpubdate: ''
+pubdate: 2021 Oct 16
+sortdate: 2021/10/16 00:00
+source: Clin EEG Neurosci
+title: 'Frontal alpha asymmetry in posttraumatic stress disorder: Group differences
+  amongst individuals with and without PTSD during an inhibitory control task'
+uid: '9022109'
+volume: ''
