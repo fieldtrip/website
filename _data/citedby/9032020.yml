@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3390/diagnostics12041017
+- idtype: pmcid
+  value: PMC9032020
+authors:
+- authtype: Author
+  name: Billardello R
+- authtype: Author
+  name: Ntolkeras G
+- authtype: Author
+  name: Chericoni A
+- authtype: Author
+  name: Madsen JR
+- authtype: Author
+  name: Papadelis C
+- authtype: Author
+  name: Pearl PL
+- authtype: Author
+  name: Grant PE
+- authtype: Author
+  name: Taffoni F
+- authtype: Author
+  name: Tamilia E
+epubdate: 2022 Apr 18
+fulljournalname: Diagnostics
+issue: '4'
+pages: '1017'
+pmclivedate: 2022/04/23
+printpubdate: ''
+pubdate: 2022 Apr 18
+sortdate: 2022/04/18 00:00
+source: Diagnostics (Basel)
+title: Novel User-Friendly Application for MRI Segmentation of Brain Resection following
+  Epilepsy Surgery
+uid: '9032020'
+volume: '12'

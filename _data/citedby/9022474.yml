@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fnsys.2022.812111
+- idtype: pmcid
+  value: PMC9022474
+authors:
+- authtype: Author
+  name: Sato J
+- authtype: Author
+  name: Vandewouw MM
+- authtype: Author
+  name: Safar K
+- authtype: Author
+  name: Ng DV
+- authtype: Author
+  name: Bando N
+- authtype: Author
+  name: O’Connor DL
+- authtype: Author
+  name: Unger SL
+- authtype: Author
+  name: Pang E
+- authtype: Author
+  name: Taylor MJ
+epubdate: 2022 Apr 7
+fulljournalname: Frontiers in Systems Neuroscience
+issue: ''
+pages: '812111'
+pmclivedate: 2022/04/22
+printpubdate: ''
+pubdate: 2022 Apr 7
+sortdate: 2022/04/07 00:00
+source: Front Syst Neurosci
+title: Social-Cognitive Network Connectivity in Preterm Children and Relations With
+  Early Nutrition and Developmental Outcomes
+uid: '9022474'
+volume: '16'
