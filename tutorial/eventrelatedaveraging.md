@@ -79,15 +79,16 @@ Subsequently you can save the data to disk.
 If preprocessing was done as described, the data structure will have the following fields:
 
     dataFIC_LP =
-           hdr: [1x1 struct]
-         label: {149x1 cell}
-          time: {1x76 cell}
-         trial: {1x76 cell}
-       fsample: 300
-    sampleinfo: [76x2 double]
-     trialinfo: [76x1 double]
-          grad: [1x1 struct]
-           cfg: [1x1 struct]
+             hdr: [1x1 struct]
+           label: {149x1 cell}
+            time: {1x77 cell}
+           trial: {1x77 cell}
+         fsample: 300
+      sampleinfo: [77x2 double]
+       trialinfo: [77x1 double]
+            grad: [1x1 struct]
+            elec: [1x1 struct]
+             cfg: [1x1 struct]
 
 Note that 'dataFIC_LP.label' has 149 in stead of 151 labels since channels MLP31 and MLO12 were excluded. 'dataFIC-LP.trial' has 76 in stead of 87 trials because 10 trials were rejected because of artifacts.
 
@@ -98,7 +99,6 @@ The most important fields are 'dataFIC_LP.trial' containing the individual trial
 {% include image src="/assets/img/tutorial/eventrelatedaveraging/trial1_3feb09_ERF.png" width="400" %}
 
 _Figure: The MEG data from a single trial in a single sensor obtained after ft_preprocessing._
-
 
 ## Timelockanalysis
 
@@ -118,15 +118,15 @@ The trials belonging to one condition will now be averaged with the onset of the
 The output is the data structure avgFIC with the following fields:
 
     avgFIC =
-       time: [1x900 double]
-      label: {149x1 cell
-       elec: [1x1 struct]
-       grad: [1x1 struct]
-        avg: [149x900 double]
-        var: [149x900 double]
-        dof: [149x900 double]
-     dimord: 'chan_time'
-        cfg: [1x1 struct]
+          time: [-1 -0.9967 -0.9933 -0.9900 -0.9867 … ]
+         label: {149x1 cell}
+          elec: [1x1 struct]
+          grad: [1x1 struct]
+           avg: [149x900 double]
+           var: [149x900 double]
+           dof: [149x900 double]
+        dimord: 'chan_time'
+           cfg: [1x1 struct]
 
 The most important field is avgFIC.avg, containing the average over all trials for each sensor.
 
@@ -168,7 +168,6 @@ To plot the data of a single sensor you can use **[ft_singleplotER](/reference/f
     cfg.xlim = [-0.2 1.0];
     cfg.ylim = [-1e-13 3e-13];
     cfg.channel = 'MLC24';
-    clf;
     ft_singleplotER(cfg, avgFC, avgIC, avgFIC);
 
 {% include image src="/assets/img/tutorial/eventrelatedaveraging/singleplot_mlc24_4mar20_erf.png" width="400" %}
@@ -193,7 +192,6 @@ To plot a sequence of topographic plots you can define cfg.xlim to be a vector:
     cfg.xlim   = [-0.2 : 0.1 : 1.0];  % Define 12 time intervals
     cfg.zlim   = [-2e-13 2e-13];      % Set the 'color' limits.
     cfg.layout = 'CTF151_helmet.mat';
-    cfg.figure = 'new';
     ft_topoplotER(cfg, avgFIC);
 
 {% include image src="/assets/img/tutorial/eventrelatedaveraging/topoplot_timeserie_4mar20_erf.png" width="700" %}
@@ -240,8 +238,6 @@ Compute the magnitude of the planar gradient by combining the horizontal and ver
 To compare the axial gradient data to the planar gradient data we plot them both in one figure here.
 
 Plot the results of the field of the axial gradiometers and the planar gradient to compare the topographies:
-
-    clf
 
     cfg = [];
     cfg.xlim = [0.3 0.5];
