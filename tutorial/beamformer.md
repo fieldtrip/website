@@ -115,14 +115,18 @@ The output of ft_freqanalysis should be familiar to you from the [tutorial for t
 The forward model is a prerequisite for source reconstruction. The forward model allows us to calculate an estimate of the field measured by the MEG sensors for a given current distribution. In MEG analysis a forward model is typically constructed for each subject. There are many types of forward models which to various degrees take the individual anatomy into account. Some examples of different MEG-based headmodels are given [here](/example/make_leadfields_using_different_headmodels). We will here use a semi-realistic head model developed by Nolte (2003). It is based on a correction of the lead field for a spherical volume conductor by a superposition of basis functions, gradients of harmonic functions constructed from spherical harmonics.
 
 For more details on the following steps, you can consult the [tutorial on volume conduction models for source-reconstruction of MEG data](/tutorial/headmodel_meg).
+
 The first step in constructing the forward model is to find the brain surface from the subjects MRI. This procedure is termed segmentation.
-Note that segmentation is quite time consuming. For the purpose of this tutorial, we have precomputed the segmentation for you. If you want to skip ahead, you can download (segmentedmri.mat)(https://download.fieldtriptoolbox.org/tutorial/beamformer/segmentedmri.mat) and directly load the segmented MRI using the command `load segmentedmri`.
+Note that segmentation is quite time consuming and takes about 10 minutes. For the purpose of this tutorial, we have precomputed the segmentation for you. If you want to skip ahead, you can download (segmentedmri.mat)(https://download.fieldtriptoolbox.org/tutorial/beamformer/segmentedmri.mat) and directly load the segmented MRI using the command
+
+    load segmentedmri
 
 Otherwise, segmentation involves the following steps:
 
 First the segmentation (**[ft_volumesegment](/reference/ft_volumesegment)** makes use of SPM, and in its default behavior returns a probabilistic segmentation of the grey, white and csd compartments. The necessary SPM-files are located in fieldtripXXX/external/spm8)
 
     mri = ft_read_mri('Subject01.mri');
+    
     cfg = [];
     cfg.write      = 'no';
     [segmentedmri] = ft_volumesegment(cfg, mri);
@@ -151,7 +155,6 @@ You can now visualise the headmodel together with the sensor positions:
     ft_plot_sens(freqPost.grad);
     hold on
     ft_plot_headmodel(ft_convert_units(headmodel,'cm'));
-
 
 ### Exercise 2: head model
 
