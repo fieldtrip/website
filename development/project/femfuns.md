@@ -237,15 +237,13 @@ Finally, we can create our volumetric tetrahedral mesh with 7 regions, 4 electro
     %label the electrode surface where they make contact with the brain
     el_faces = label_surf(tet_elem, length(bnd)+1:length(elec.elecpos)+length(bnd), 1);
 
-<img src="/external/assets/img/3surf_elecs.png"
-     style="float: left; width: 250px;" />
+{% include image src="/assets/img/development/project/femfuns/3surf_elecs.png" width="500" %}
 
 The steps where the sourcemodel and leadfield is created is omitted here, since it consists of exactly the same steps as the 2-sphere example. The test script with the complete code can be found here: [test_headmodel_realistic_electrodes.m](test_headmodel_realistic_electrodes.m)
 
 After running the code, an example of the potential distribution on the brain looks like (visualized using https://www.paraview.org/):
 
-<img src="/external/assets/img/3surf_elecs_bipole.png"
-     style="float: left; width: 400px;" />
+{% include image src="/assets/img/development/project/femfuns/3surf_elecs_bipole.png" width="500" %}
 
 Disclaimer: as the number of cells increases, the RAM usage will quickly increase when converting the mesh to FEMfuns format and computing the FEM. In this realistic head model (with 7198480 tetrahedra) make sure to have at least 5GB available.
 
