@@ -81,7 +81,7 @@ We will inform you as to whether you obtained a place in this course not later t
 
 ## Practicalities
 
-This will be an in person event.  
+This will be an in-person event.  
 
 ### FieldTrip playground sessions: BYOD (bring-your-own-data)
   
@@ -106,7 +106,7 @@ A recent copy of FieldTrip and the data have been preinstalled on the computer a
     addpath("H:\common\matlab\fieldtrip")
     ft_defaults
 
-    cd D:\toolkit2018
+    cd D:\toolkit2022
 
 The `restoredefaultpath` command clears your path, keeping only the official MATLAB toolboxes. The addpath statement adds the present working directory, i.e. the directory containing the FieldTrip main functions. The `ft_defaults` command ensures that all required subdirectories are added to the path.
 
