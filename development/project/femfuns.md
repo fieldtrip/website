@@ -20,19 +20,29 @@ FEMfuns is a python based open-source pipeline and will be called externally fro
 - test on sphere: compute the forward solutions in FieldTrip using a compiled binary of FEMfuns
 - test on real dataset: compute forward solution in a realistically shaped head model (test the interaction of forward solutions computed with FEMfuns and pre-processing/source analysis routines implemented in FieldTrip)
 
-{% include image src="/assets/img/development/project/femfuns/workflow.jpg" width="500" %}
+The general workflow consists of calling many toolboxes and subroutines from MATLAB (see Figure 1). 
 
-The workflow consists of calling many subroutines (comparable to a Russian doll), starting within the toolbox FieldTrip. First, a FieldTrip script in MATLAB loads data and calls the routine to compute the forward solution. Via this routine, a shell script is written and executed under the hood. This shell script passes the volume conduction parameters (e.g., mesh, tissue and electrode type, source model), and launches FEMfuns. Then, FEMfuns runs the forward simulation. Finally, the lead field matrices are imported back into FieldTrip for further analysis, e.g., source reconstruction analysis. This means that the interaction between FEMfuns and Fieldtrip is fully dependent on reading and writing data. Each is essentially used independently, as visualized in this schematic:
+{% include image src="/assets/img/development/project/femfuns/workflow_fieldtrip.png" width="500" %}
+_Figure1: Schematic representation of the general workflow._
+
+The user is suggested to work from a MATLAB script, where they will call both FieldTrip and FEMfuns (see Figure 1). Before starting with such a script, it is necessary to set up both Fieldtrip and FEMfuns (Figure 1, gray box). 
+
+While Fieldtrip is MATLAB-based, FEMfuns is Python-based and, in particular, it externally calls Fenics to solve partial differential equations. For this, the whole procedure resembles a Russian doll (see Figure 2). 
 
 {% include image src="/assets/img/development/project/femfuns/workflow_doll_embedded.png" width="500" %}
+_Figure 2: General workflow of the interface between FEMfuns and FieldTrip. From left to right: FieldTrip is called directly by MATLAB. To call FEMfuns from MATLAB, a shell script is launched in MATLAB. This shell script runs under the hood and calls FEMfuns routines implemented in Python._
 
-Currently (December 2021), the MATLAB fuctions to add electrodes to an existing finite element head model and use leadfields computed in FEMfuns in FieldTrip analysis are available [here](https://github.com/meronvermaas/FEMfuns/tree/master/external/fieldtrip)
+Currently (April 2022), the MATLAB fuctions to add electrodes to an existing finite element head model and use leadfields computed in FEMfuns in FieldTrip analysis are available [here](https://github.com/Donders-Institute/FEMfuns/tree/master/external/fieldtrip)
+
+Besides Fieldtrip, other external software is used in the workflow, e.g., FEniCS, Trident and ISO2MESH. A summary can be found in the schema below, which shows the order in which the softwares are used and for which steps in the pipeline:
+
+{% include image src="/assets/img/development/project/femfuns/schema_doll_embedded.png" width="500" %}
 
 ## Running a simulation with FieldTrip and FEMfuns combined
-The following section illustrates an example where the FEMfuns pipeline is embedded in FieldTrip. The geometry, electrodes and source-model are created in FieldTrip. These are used in FEMfuns to calculate lead fields by means of FEM with optional properties such as an electrode surface conductance and stimulating electrodes. For the simplest case, a 2-sphere geometry is used representing brain and skull compartment and several realistic electrodes on the upper half of the sphere representing the brain.
+The following section illustrates an example where the FEMfuns pipeline is embedded in FieldTrip. The geometry, electrodes and source-model are created in FieldTrip. These are used in FEMfuns to calculate leadfields by means of FEM with optional properties such as an electrode surface conductance and stimulating electrodes. Here, we present examples both in a simple sphere model and an MRI-based realistic head model. 
 
 ### Setting-up
-The instructions to set up FEMfuns can be found on the [Github page](https://github.com/meronvermaas/FEMfuns).
+The instructions to set up FEMfuns can be found on the [Github page](https://github.com/Donders-Institute/FEMfuns).
 Setting up is achieved in three steps:
 
 Step 1: Download Anaconda: https://docs.continuum.io/anaconda/install/
@@ -42,10 +52,10 @@ Step 1: Download Anaconda: https://docs.continuum.io/anaconda/install/
 
 Step 2: Clone FEMfuns
 
-    git clone https://github.com/meronvermaas/FEMfuns.git
+    git clone https://github.com/Donders-Institute/FEMfuns.git
 OR
 
-    wget https://github.com/meronvermaas/FEMfuns/archive/refs/heads/master.zip
+    wget https://github.com/Donders-Institute/FEMfuns/archive/refs/heads/master.zip
 
 Step 3: Set-up the environment
 
@@ -56,7 +66,9 @@ Move to the  cloned FEMfuns directory and create the conda environment.
     conda activate femfuns
     conda develop pipeline_code/
     
-Creating the environment is only needed once, but every new session where FEMfuns is needed the environment needs to be activated using "conda activate femfuns".
+Creating the environment is only needed once, but every new session where FEMfuns is needed the environment needs to be activated using
+
+    conda activate femfuns
 
 Before starting with FieldTrip, it is important that you set up your [MATLAB path](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path) properly.
 
@@ -64,6 +76,7 @@ Before starting with FieldTrip, it is important that you set up your [MATLAB pat
     ft_defaults
 
 ### Simulation
+#### Two-sphere model
 Then surfaces of two spheres can be created using FieldTrip:
 
     % Create a spherical volume conductor with two spheres of radius 7 and 10 cm at the origin
@@ -167,5 +180,74 @@ Alternatively, stimulating electrodes can be used:
 An example of the potential distribution on the inner sphere with the stimulating and ground electrode (visualized using https://www.paraview.org/):
 
 {% include image src="/assets/img/development/project/femfuns/innersphere_stim.png" width="500" %}
+
+The test script with all the above snippets put together is [test_realistic_electrodes.m](test_realistic_electrodes.m)
+
+#### Realistic model of the head
+The workflow for a realistic headmodel based on an anatomical MRI is comparable to the 2-sphere example. Here, we will go over the first steps where the mesh is created.
+
+First, read in the mri data from FieldTrip ([download the dataset here: Subject01.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip)) and reslice it:
+
+    mri = ft_read_mri('Subject01.mri');
+    cfg     = [];
+    cfg.dim = mri.dim;
+    mri     = ft_volumereslice(cfg,mri);
+
+Then, the anatomical mri is segmented in 3 non overlapping tissue types:
+
+    cfg           = [];
+    cfg.output    = {'brain','skull','scalp'};
+    segmentedmri  = ft_volumesegment(cfg, mri);
+
+Next, triangulated surfaces can be created at the border of the tissues:
+
+    cfg        = [];
+    cfg.tissue={'brain','skull','scalp'};
+    cfg.numvertices = 3000;
+    cfg.method = 'iso2mesh';
+    bnd = ft_prepare_mesh(cfg,segmentedmri);
+
+Now we are getting to the part of adding realistic electrodes. To do this, a FieldTrip electrode structure with 4 electrode positions on top of the brain is made:
+
+    el1 = [51.298 -26.242 106.026]; el2 = [38.926 -37.6445 105.965]; el3 = [31.47 -28.13 113.007]; el4 = [45.06 -13.467 112.423];
+    [~,I1] = min(abs(sum(bnd(1).pos-el1,2))); [~,I2] = min(abs(sum(bnd(1).pos-el2,2))); [~,I3] = min(abs(sum(bnd(1).pos-el3,2))); [~,I4] = min(abs(sum(bnd(1).pos-el4,2)));
+    sel = [I1 I2 I3 I4];
+    elec = [];
+    elec.elecpos = bnd(1).pos(sel,:);
+    for i=1:length(sel)
+      elec.label{i} = sprintf('elec%d', i);
+    end
+    elec.unit = 'mm';
+    % update the electrode sets to the latest standards
+    elec = ft_datatype_sens(elec);
+
+Then, we can combine the brain surface with electrode surfaces:
+
+    dp_elec = 0.5; %height  of the electrode cylinder
+    rad_elec = 2; %radius of the electrode cylinder
+    [dented_elsurf,elecmarkers] = add_electrodes(bnd(1), elec.elecpos, rad_elec, dp_elec);
+
+    % Add the skull and scalp to the brain again
+    merged_surfs = dented_elsurf;
+    for ii = 2:length(bnd)
+        merged_surfs = add_surf(merged_surfs,bnd(ii));
+    end
+
+Finally, we can create our volumetric tetrahedral mesh with 7 regions, 4 electrodes, brain, skull and scalp
+
+    [tet_node,tet_elem] = s2m(merged_surfs.pos,merged_surfs.tri, 1, 1, 'tetgen', [insidepoints; elecmarkers]);
+    %label the electrode surface where they make contact with the brain
+    el_faces = label_surf(tet_elem, length(bnd)+1:length(elec.elecpos)+length(bnd), 1);
+
+{% include image src="/assets/img/development/project/femfuns/3surf_elecs.png" width="500" %}
+
+The steps where the sourcemodel and leadfield is created is omitted here, since it consists of exactly the same steps as the 2-sphere example. The test script with the complete code can be found here: [test_headmodel_realistic_electrodes.m](test_headmodel_realistic_electrodes.m)
+
+After running the code, an example of the potential distribution on the brain looks like (visualized using https://www.paraview.org/):
+
+{% include image src="/assets/img/development/project/femfuns/3surf_elecs_bipole.png" width="500" %}
+
+Disclaimer: as the number of cells increases, the RAM usage will quickly increase when converting the mesh to FEMfuns format and computing the FEM. In this realistic head model (with 7198480 tetrahedra) make sure to have at least 5GB available.
+
 
 This work is supported by a grant from stichting IT projecten ([StITPro](https://stitpro.nl/)).
