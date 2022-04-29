@@ -1,0 +1,47 @@
+articleids:
+- idtype: pmid
+  value: '35440540'
+- idtype: doi
+  value: 10.1038/s41467-022-29674-x
+- idtype: pmcid
+  value: PMC9018758
+authors:
+- authtype: Author
+  name: Spyropoulos G
+- authtype: Author
+  name: Saponati M
+- authtype: Author
+  name: Dowdall JR
+- authtype: Author
+  name: Schölvinck ML
+- authtype: Author
+  name: Bosman CA
+- authtype: Author
+  name: Lima B
+- authtype: Author
+  name: Peter A
+- authtype: Author
+  name: Onorato I
+- authtype: Author
+  name: Klon-Lipok J
+- authtype: Author
+  name: Roese R
+- authtype: Author
+  name: Neuenschwander S
+- authtype: Author
+  name: Fries P
+- authtype: Author
+  name: Vinck M
+epubdate: 2022 Apr 19
+fulljournalname: Nature Communications
+issue: ''
+pages: '2019'
+pmclivedate: 2022/04/28
+printpubdate: ''
+pubdate: 2022 Apr 19
+sortdate: 2022/04/19 00:00
+source: Nat Commun
+title: Spontaneous variability in gamma dynamics described by a damped harmonic oscillator
+  driven by noise
+uid: '9018758'
+volume: '13'
