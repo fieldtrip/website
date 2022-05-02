@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '35181551'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2022.119006
+- idtype: pmcid
+  value: PMC8961001
+authors:
+- authtype: Author
+  name: Tait L
+- authtype: Author
+  name: Zhang J
+epubdate: ''
+fulljournalname: Neuroimage
+issue: ''
+pages: '119006'
+pmclivedate: 2022/05/01
+printpubdate: 2022 May 1
+pubdate: 2022 May 1
+sortdate: 2022/05/01 00:00
+source: Neuroimage
+title: 'MEG cortical microstates: Spatiotemporal characteristics, dynamic functional
+  connectivity and stimulus-evoked responses'
+uid: '8961001'
+volume: '251'

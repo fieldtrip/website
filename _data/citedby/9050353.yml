@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fninf.2022.871904
+- idtype: pmcid
+  value: PMC9050353
+authors:
+- authtype: Author
+  name: Bârzan H
+- authtype: Author
+  name: Ichim AM
+- authtype: Author
+  name: Moca VV
+- authtype: Author
+  name: Mureşan RC
+epubdate: 2022 Apr 14
+fulljournalname: Frontiers in Neuroinformatics
+issue: ''
+pages: '871904'
+pmclivedate: 2022/04/29
+printpubdate: ''
+pubdate: 2022 Apr 14
+sortdate: 2022/04/14 00:00
+source: Front Neuroinform
+title: 'Time-Frequency Representations of Brain Oscillations: Which One Is Better?'
+uid: '9050353'
+volume: '16'

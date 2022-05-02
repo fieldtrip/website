@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '34496399'
+- idtype: doi
+  value: 10.1162/jocn_a_01719
+- idtype: pmcid
+  value: PMC9052368
+- idtype: MID
+  value: NIHMS1795808
+authors:
+- authtype: Author
+  name: Diaz GK
+- authtype: Author
+  name: Vogel EK
+- authtype: Author
+  name: Awh E
+epubdate: ''
+fulljournalname: Journal of cognitive neuroscience
+issue: '7'
+pages: 1354-1364
+pmclivedate: 2022/04/29
+printpubdate: 2021 Jun 1
+pubdate: 2021 Jun 1
+sortdate: 2021/06/01 00:00
+source: J Cogn Neurosci
+title: Perceptual Grouping Reveals Distinct Roles for Sustained Slow Wave Activity
+  and Alpha Oscillations in Working Memory
+uid: '9052368'
+volume: '33'
