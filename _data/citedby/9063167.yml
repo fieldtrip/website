@@ -1,0 +1,51 @@
+articleids:
+- idtype: pmid
+  value: '35516796'
+- idtype: doi
+  value: 10.3389/fnins.2022.829415
+- idtype: pmcid
+  value: PMC9063167
+authors:
+- authtype: Author
+  name: Freitas C
+- authtype: Author
+  name: Hunt BA
+- authtype: Author
+  name: Wong SM
+- authtype: Author
+  name: Ristic L
+- authtype: Author
+  name: Fragiadakis S
+- authtype: Author
+  name: Chow S
+- authtype: Author
+  name: Iaboni A
+- authtype: Author
+  name: Brian J
+- authtype: Author
+  name: Soorya L
+- authtype: Author
+  name: Chen JL
+- authtype: Author
+  name: Schachar R
+- authtype: Author
+  name: Dunkley BT
+- authtype: Author
+  name: Taylor MJ
+- authtype: Author
+  name: Lerch JP
+- authtype: Author
+  name: Anagnostou E
+epubdate: 2022 Apr 19
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '829415'
+pmclivedate: 2022/05/04
+printpubdate: ''
+pubdate: 2022 Apr 19
+sortdate: 2022/04/19 00:00
+source: Front Neurosci
+title: Atypical Functional Connectivity During Unfamiliar Music Listening in Children
+  With Autism
+uid: '9063167'
+volume: '16'
