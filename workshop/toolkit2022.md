@@ -53,7 +53,6 @@ We will inform you as to whether you obtained a place in this course not later t
 | 13:30-15:45 | Beamforming - [hands-on](/tutorial/beamformer)|
 | 15:45-16:00 | Tea Break|
 | 16:00-17:30 | FieldTrip playground, apply your newly acquired knowledge and skills|
-| 18:00-22:00 | Pizza, drinks, joint projects and hacking (optional)|
   
   
 ### Thursday May 12, 2022
