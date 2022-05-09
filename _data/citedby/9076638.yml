@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1038/s42003-022-03378-w
+- idtype: pmcid
+  value: PMC9076638
+authors:
+- authtype: Author
+  name: Heise KF
+- authtype: Author
+  name: Rueda-Delgado L
+- authtype: Author
+  name: Chalavi S
+- authtype: Author
+  name: King BR
+- authtype: Author
+  name: Monteiro TS
+- authtype: Author
+  name: Edden RA
+- authtype: Author
+  name: Mantini D
+- authtype: Author
+  name: Swinnen SP
+epubdate: 2022 May 6
+fulljournalname: Communications Biology
+issue: ''
+pages: '426'
+pmclivedate: 2022/05/08
+printpubdate: ''
+pubdate: 2022 May 6
+sortdate: 2022/05/06 00:00
+source: Commun Biol
+title: The interaction between endogenous GABA, functional connectivity, and behavioral
+  flexibility is critically altered with advanced age
+uid: '9076638'
+volume: '5'

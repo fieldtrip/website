@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fnins.2022.874023
+- idtype: pmcid
+  value: PMC9070985
+authors:
+- authtype: Author
+  name: Oliveira R
+- authtype: Author
+  name: Pelentritou A
+- authtype: Author
+  name: Di Domenicantonio G
+- authtype: Author
+  name: De Lucia M
+- authtype: Author
+  name: Lutti A
+epubdate: 2022 Apr 21
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '874023'
+pmclivedate: 2022/05/06
+printpubdate: ''
+pubdate: 2022 Apr 21
+sortdate: 2022/04/21 00:00
+source: Front Neurosci
+title: In vivo Estimation of Axonal Morphology From Magnetic Resonance Imaging and
+  Electroencephalography Data
+uid: '9070985'
+volume: '16'

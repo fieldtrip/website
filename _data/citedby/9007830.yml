@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '35172128'
+- idtype: doi
+  value: 10.1016/j.cub.2022.01.053
+- idtype: pmcid
+  value: PMC9007830
+- idtype: MID
+  value: NIHMS1775875
+authors:
+- authtype: Author
+  name: Johnson EL
+- authtype: Author
+  name: Yin Q
+- authtype: Author
+  name: O’Hara NB
+- authtype: Author
+  name: Tang L
+- authtype: Author
+  name: Jeong JW
+- authtype: Author
+  name: Asano E
+- authtype: Author
+  name: Ofen N
+epubdate: 2022 Feb 15
+fulljournalname: 'Current biology : CB'
+issue: '7'
+pages: 1457-1469.e4
+pmclivedate: ''
+printpubdate: 2022 Apr 11
+pubdate: 2022 Feb 15
+sortdate: 2022/02/15 00:00
+source: Curr Biol
+title: Dissociable oscillatory theta signatures of memory formation in the developing
+  brain
+uid: '9007830'
+volume: '32'

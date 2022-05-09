@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '35199903'
+- idtype: doi
+  value: 10.1002/hbm.25812
+- idtype: pmcid
+  value: PMC9057086
+authors:
+- authtype: Author
+  name: Naros G
+- authtype: Author
+  name: Machetanz K
+- authtype: Author
+  name: Leao MT
+- authtype: Author
+  name: Wang S
+- authtype: Author
+  name: Tatagiba M
+- authtype: Author
+  name: Gharabaghi A
+epubdate: 2022 Feb 24
+fulljournalname: Human Brain Mapping
+issue: '8'
+pages: 2668-2682
+pmclivedate: 2022/05/03
+printpubdate: ''
+pubdate: 2022 Feb 24
+sortdate: 2022/02/24 00:00
+source: Hum Brain Mapp
+title: Impaired phase synchronization of motor‐evoked potentials reflects the degree
+  of motor dysfunction in the lesioned human brain
+uid: '9057086'
+volume: '43'
