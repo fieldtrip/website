@@ -12,7 +12,7 @@ We invite you to [add your own](/contribute) example scripts or frequently asked
 See also the [tutorials](/tutorial) and [example scripts](/example).
 
 ## Reading and preprocessing data
-
+- [How can I append the files of two separate recordings?](/faq/append_files)
 - [How can I check or decipher the sequence of triggers in my data?](/faq/triggers)
 - [How can I consistently represent artifacts in my data?](/faq/how_can_i_consistently_represent_artifacts_in_my_data)
 - [How can I convert one dataformat into an other?](/faq/how_can_i_convert_one_dataformat_into_an_other)
