@@ -112,7 +112,7 @@ According to the example here we can now determine
 
 1.  trigger 161 is indeed a trigger channel
 2.  the up-state around 2.5^10 units is the trigger-on state
-3.  halfway between 0 and 2.5^10 would therefor be a good threshold for flank detection.
+3.  halfway between 0 and 2.5^10 would therefore be a good threshold for flank detection.
 
 Together with our knowledge of the experimental design and stimulus equipment we also know that the stimulus is presented at the moment of up-flank of the trigger channel. Lets say the same turned out to be the case in trigger channels 162 to 166, we can make a trialfunction to read in the events.
 
@@ -122,7 +122,7 @@ For example
 
     % read the header information (including the sampling rate) and the events from the data
     hdr   = ft_read_header(cfg.dataset);
-    event = ft_read_event(cfg.dataset, chanindx', 161:166, 'threshold', 1e4, 'detectflank', 'up');
+    event = ft_read_event(cfg.dataset, 'chanindx', 161:166, 'threshold', 1e4, 'detectflank', 'up');
 
     % search for "trigger" events according to 'trigchannel' defined outside the function
     value  = [event(find(strcmp(cfg.trialdef.trigchannel, {event.type}))).value]';
