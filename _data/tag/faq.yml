@@ -7,6 +7,9 @@
 - name:  Where is the anterior commissure?
   link:  /faq/anterior_commissure
 
+- name:  How can I append the files of two separate recordings?
+  link:  /faq/append_files
+
 - name:  How can I play back EEG/MEG and synchronous audio or video?
   link:  /faq/audiovideo
 

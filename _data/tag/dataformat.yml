@@ -10,6 +10,9 @@
 - name:  Can I create an artificial CTF dataset using MATLAB?
   link:  /example/writing_simulated_data_to_a_ctf_dataset
 
+- name:  How can I append the files of two separate recordings?
+  link:  /faq/append_files
+
 - name:  What dataformats are supported?
   link:  /faq/dataformat
 

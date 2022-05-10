@@ -28,6 +28,9 @@
 - name:  Use denoising source separation (DSS) to remove ECG artifacts
   link:  /example/use_denoising_source_separation_dss_to_remove_ecg_artifacts
 
+- name:  How can I append the files of two separate recordings?
+  link:  /faq/append_files
+
 - name:  What dataformats are supported?
   link:  /faq/dataformat
 
