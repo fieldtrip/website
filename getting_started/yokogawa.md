@@ -122,7 +122,7 @@ For example
 
     % read the header information (including the sampling rate) and the events from the data
     hdr   = ft_read_header(cfg.dataset);
-    event = ft_read_event(cfg.dataset, chanindx', 161:166, 'threshold', 1e4, 'detectflank', 'up');
+    event = ft_read_event(cfg.dataset, 'chanindx', 161:166, 'threshold', 1e4, 'detectflank', 'up');
 
     % search for "trigger" events according to 'trigchannel' defined outside the function
     value  = [event(find(strcmp(cfg.trialdef.trigchannel, {event.type}))).value]';
