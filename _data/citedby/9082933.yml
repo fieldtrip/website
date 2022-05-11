@@ -1,0 +1,24 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fnins.2022.846001
+- idtype: pmcid
+  value: PMC9082933
+authors:
+- authtype: Author
+  name: Blacker KJ
+- authtype: Author
+  name: McHail DG
+epubdate: 2022 Apr 25
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '846001'
+pmclivedate: 2022/05/10
+printpubdate: ''
+pubdate: 2022 Apr 25
+sortdate: 2022/04/25 00:00
+source: Front Neurosci
+title: Effects of Acute Hypoxia on Early Visual and Auditory Evoked Potentials
+uid: '9082933'
+volume: '16'

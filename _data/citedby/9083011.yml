@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fnins.2022.846623
+- idtype: pmcid
+  value: PMC9083011
+authors:
+- authtype: Author
+  name: Sorrentino P
+- authtype: Author
+  name: Ambrosanio M
+- authtype: Author
+  name: Rucco R
+- authtype: Author
+  name: Cabral J
+- authtype: Author
+  name: Gollo LL
+- authtype: Author
+  name: Breakspear M
+- authtype: Author
+  name: Baselice F
+epubdate: 2022 Apr 25
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '846623'
+pmclivedate: 2022/05/10
+printpubdate: ''
+pubdate: 2022 Apr 25
+sortdate: 2022/04/25 00:00
+source: Front Neurosci
+title: 'Detection of Cross-Frequency Coupling Between Brain Areas: An Extension of
+  Phase Linearity Measurement'
+uid: '9083011'
+volume: '16'

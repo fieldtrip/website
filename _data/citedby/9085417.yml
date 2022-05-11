@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fnbot.2022.837119
+- idtype: pmcid
+  value: PMC9085417
+authors:
+- authtype: Author
+  name: Kumar A
+- authtype: Author
+  name: Gao L
+- authtype: Author
+  name: Li J
+- authtype: Author
+  name: Ma J
+- authtype: Author
+  name: Fu J
+- authtype: Author
+  name: Gu X
+- authtype: Author
+  name: Mahmoud SS
+- authtype: Author
+  name: Fang Q
+epubdate: 2022 Apr 25
+fulljournalname: Frontiers in Neurorobotics
+issue: ''
+pages: '837119'
+pmclivedate: 2022/05/10
+printpubdate: ''
+pubdate: 2022 Apr 25
+sortdate: 2022/04/25 00:00
+source: Front Neurorobot
+title: 'Error-Related Negativity-Based Robot-Assisted Stroke Rehabilitation System:
+  Design and Proof-of-Concept'
+uid: '9085417'
+volume: '16'
