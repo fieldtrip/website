@@ -1,0 +1,24 @@
+articleids:
+- idtype: pmid
+  value: '35361704'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1801-21.2022
+- idtype: pmcid
+  value: PMC9087718
+authors:
+- authtype: Author
+  name: Radetz A
+- authtype: Author
+  name: Siegel M
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '18'
+pages: 3836-3846
+pmclivedate: 2022/05/10
+printpubdate: 2022 May 4
+pubdate: 2022 May 4
+sortdate: 2022/05/04 00:00
+source: J Neurosci
+title: Spectral Fingerprints of Cortical Neuromodulation
+uid: '9087718'
+volume: '42'
