@@ -138,7 +138,7 @@ For example
       trl      = [ trl ; newtrl];
     end
 
-We can then proceed in the standard way of defining trials and reading data as follows. Note that except for the MEG channels which are prefixed by 'AG', the labels of the channels are just a string representation of the index number of the channel (starting with 1). The labels of our trigger channels are therefor '161', '162' and '163', etc. Also realize that how the Yokogawa system is recording events through individual (analogue) channels, one is in most cases limited to one event 'type' per channel. In FieldTrip the channel label (which is a string of the index number) is given in the .type field of every event. In this example this is used by feeding `cfg.trialdef.trigchannel = '162'`{matlab} into the trialfunction
+We can then proceed in the standard way of defining trials and reading data as follows. Note that except for the MEG channels which are prefixed by 'AG', the labels of the channels are just a string representation of the index number of the channel (starting with 1). The labels of our trigger channels are therefor '161', '162' and '163', etc. Also realize that how the Yokogawa system is recording events through individual (analogue) channels, one is in most cases limited to one event 'type' per channel. In FieldTrip the channel label (which is a string of the index number) is given in the .type field of every event. In this example this is used by feeding `cfg.trialdef.trigchannel = '161'`{matlab} into the trialfunction
 
     cfg = [];
     cfg.dataset                 = data.sqd;
@@ -155,6 +155,22 @@ We can then proceed in the standard way of defining trials and reading data as f
 
     % read data
     preproc                     = ft_preprocessing(cfg);
+
+As an alternative to the above procedure, it might be possible in some situations to use the generic 'ft_trialfun_general' to define the epochs-of-interest. This is the case if numeric triggers are sent from the presentation equipment to the MEG acquisition machine, and if the binary representation of these numeric triggers are represented as synchronous pulses on several TTL trigger channels. For instance, a trigger with a the value '5' is then represented as a synchronous pulse on te first and the third trigger channel. The crux is then to instruct the ft_redefinetrial function to combine the binary representation of the triggers back into a compound trigger, using using the option `cfg.trialdef.combinebinary=true`{matlab}. Also, you may want to consider to specify a 'trigshift' in order to make the trigger detection a bit more robust for small asynchronies between the individual binary trigger pulses. An example cfg for this scenario could look a bit like the following:
+
+    cfg = [];
+    cfg.dataset  = '03AS_01.con';
+    cfg.trialdef.eventvalue = 4;
+    cfg.trialdef.prestim    = 1;
+    cfg.trialdef.poststim   = 1;
+    cfg.trialfun = 'ft_trialfun_general';
+    cfg.trialdef.chanindx = 225:232;
+    cfg.trialdef.threshold = 2.5; % this is a meaningful value if the pulses have an amplitude of ~5 V
+    cfg.trialdef.eventtype = 'combined_binary_trigger'; % this will be the type of the event if combinebinary = true
+    cfg.trialdef.combinebinary = 1; 
+    cfg.trialdef.trigshift = 2; % return the value of the combined pulse 2 samples after the on-ramp (in case of small staircases)
+    cfg = ft_definetrial(cfg);
+
 
 ## Creating a custom channel layout
 
