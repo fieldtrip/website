@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fninf.2022.811756
+- idtype: pmcid
+  value: PMC9094422
+authors:
+- authtype: Author
+  name: Shim M
+- authtype: Author
+  name: Im CH
+- authtype: Author
+  name: Lee SH
+- authtype: Author
+  name: Hwang HJ
+epubdate: 2022 Apr 26
+fulljournalname: Frontiers in Neuroinformatics
+issue: ''
+pages: '811756'
+pmclivedate: 2022/05/12
+printpubdate: ''
+pubdate: 2022 Apr 26
+sortdate: 2022/04/26 00:00
+source: Front Neuroinform
+title: Enhanced Performance by Interpretable Low-Frequency Electroencephalogram Oscillations
+  in the Machine Learning-Based Diagnosis of Post-traumatic Stress Disorder
+uid: '9094422'
+volume: '16'
