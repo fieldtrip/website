@@ -33,7 +33,7 @@ We will inform you as to whether you obtained a place in this course not later t
 ### Tuesday May 10, 2022
 
 | 09:00-09:30 | Morning chill or workout|
-| 09:45-11:00 | Speaking: evidence from electrophysiology and brain lesions - lecture by Vitória Piai|
+| 09:45-11:00 | Speaking: evidence from electrophysiology and brain lesions - [lecture by Vitória Piai](/assets/pdf/workshop/toolkit2022/speaking.pdf)|
 | 11:00-11:15 | Coffee Break|
 | 11:15-12:30 | Time frequency analysis of power - [lecture by Jan-Mathijs Schoffelen](/assets/pdf/workshop/toolkit2022/frequency.pdf)|
 | 12:30-13:30 | Lunch|
@@ -58,9 +58,9 @@ We will inform you as to whether you obtained a place in this course not later t
 ### Thursday May 12, 2022
 
 | 09:00-09:30 | Morning chill or workout|
-| 09:45-11:00 | Connectivity analysis in MEG and EEG data - [lecture by Jan-Mathijs Schoffelen](/assets/pdf/workshop/toolkit2022/connectivity.pdf)|
+| 09:45-11:00 | Connectivity analysis in MEG and EEG data - [lecture by Jan-Mathijs](/assets/pdf/workshop/toolkit2022/connectivity.pdf)|
 | 11:00-11:15 | Coffee Break|
-| 11:15-12:30 | Statistics using non-parametric randomization techniques - [lecture by Robert Oostenveld](/assets/pdf/workshop/toolkit2022/statistics.pdf)|
+| 11:15-12:30 | Statistics using non-parametric randomization techniques - [lecture by Robert](/assets/pdf/workshop/toolkit2022/statistics.pdf)|
 | 12:30-13:30 | Lunch|
 | 13:30-15:45 | Statistics - [hands-on](/tutorial/cluster_permutation_timelock)|
 | 15:45-16:00 | Tea Break|
