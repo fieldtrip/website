@@ -41,6 +41,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [Why are the fileio functions stateless, does the fseek not make them very slow?](/faq/why_are_the_fileio_functions_stateless_does_the_fseek_not_make_them_very_slow)
 - [Why is there a residual 50Hz line-noise component after applying a DFT filter?](/faq/why_is_there_a_residual_50hz_line-noise_component_after_applying_a_dft_filter)
 - [Should I rereference my EEG data prior to, or after ICA?](/faq/should_I_rereference_prior_to_or_after_ica_for_artifact_removal)
+- [Do I need to resample my data, and if so, how is this to be done?](/faq/resampling_lowpassfilter.md)
 
 ## Spectral analysis
 
