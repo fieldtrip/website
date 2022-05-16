@@ -93,7 +93,10 @@ plot(freq.freq,  (log10(freq.powspctrm)), 'color', cmap(1,:), 'linewidth', 2);
 legend({'rs_native', 'rs_firws100', 'rs_firws090', 'interp1', 'interp1_firws100', 'downsample', 'downsample_firws100', 'original'}, 'interpreter', 'none');
 xlabel('frequency (Hz)');
 ylabel('power');
+```
+{% include image src="/assets/img/faq/resampling/resampling1.png" width="400" %}
 
+```
 % add a very high amplitude broad-band component
 data_hf_broad = data;
 for k = 1:nchan
@@ -161,7 +164,11 @@ plot(freq.freq,  (log10(freq.powspctrm)), 'color', cmap(1,:), 'linewidth', 2);
 legend({'rs_native', 'rs_firws100', 'rs_firws090', 'interp1', 'interp1_firws100', 'downsample', 'downsample_firws100', 'original'}, 'interpreter', 'none');
 xlabel('frequency (Hz)');
 ylabel('power');
+```
 
+{% include image src="/assets/img/faq/resampling/resampling2.png" width="400" %}
+
+```
 % add a very high amplitude narrowband component
 data_hf_narrow = data;
 for k = 1:nchan
@@ -229,74 +236,6 @@ plot(freq.freq,  (log10(freq.powspctrm)), 'color', cmap(1,:), 'linewidth', 2);
 legend({'rs_native', 'rs_firws100', 'rs_firws090', 'interp1', 'interp1_firws100', 'downsample', 'downsample_firws100', 'original'}, 'interpreter', 'none');
 xlabel('frequency (Hz)');
 ylabel('power');
-
-
-% make 1/f
-data_1f = data;
-for k = 1:nchan
-  data_1f.trial{k}(1,:) = data_1f.trial{1}(k,:) + cumsum(randn(1,nsamples))./10;
-  data_1f.trial{k} = data_1f.trial{k} - mean(data_1f.trial{k},2);
-  data_1f.time{k} = data_1f.time{1};    
-end
-data_1f.trial{1} = data_1f.trial{1}(1,:);
-data_1f.label    = data_1f.label(1);
-
-% the default functionality in ft_resampledata applies a firls
-% anti-aliasing filter that has its cutoff at the new Nyquist frequency
-cfg = [];
-cfg.resamplefs = 200;
-dataout1 = ft_resampledata(cfg, data_1f);
-
-cfg.lpfilter = 'yes';
-cfg.lpfilttype = 'firws';
-cfg.lpfreq   = 100;
-dataout2 = ft_resampledata(cfg, data_1f);
-
-cfg.lpfreq = 90;
-dataout3 = ft_resampledata(cfg, data_1f);
-
-cfg = [];
-cfg.time = dataout1.time;
-dataout4 = ft_resampledata(cfg, data_1f);
-
-cfg.lpfilter = 'yes';
-cfg.lpfilttype = 'firws';
-cfg.lpfreq = 100;
-dataout5 = ft_resampledata(cfg, data_1f);
-
-cfg = [];
-cfg.resamplefs = 250;
-cfg.method = 'downsample';
-dataout6 = ft_resampledata(cfg, data_1f);
-
-cfg.lpfilter = 'yes';
-cfg.lpfilttype = 'firws';
-cfg.lpfreq = 100;
-dataout7 = ft_resampledata(cfg, data_1f);
-
-cfg = [];
-cfg.method = 'mtmfft';
-cfg.tapsmofrq = 1;
-cfg.pad = 4;
-freq = ft_freqanalysis(cfg, data_1f);
-freq1 = ft_freqanalysis(cfg, dataout1);
-freq2 = ft_freqanalysis(cfg, dataout2);
-freq3 = ft_freqanalysis(cfg, dataout3);
-freq4 = ft_freqanalysis(cfg, dataout4);
-freq5 = ft_freqanalysis(cfg, dataout5);
-freq6 = ft_freqanalysis(cfg, dataout6);
-freq7 = ft_freqanalysis(cfg, dataout7);
-
-figure;hold on;
-plot(freq1.freq, (log10(freq1.powspctrm)), 'color', cmap(2,:), 'linewidth', 2);
-plot(freq2.freq, (log10(freq2.powspctrm)), 'color', cmap(3,:), 'linewidth', 2);
-plot(freq3.freq, (log10(freq3.powspctrm)), 'color', cmap(4,:), 'linewidth', 2);
-plot(freq4.freq, (log10(freq4.powspctrm)), 'color', cmap(5,:), 'linewidth', 2);
-plot(freq5.freq, (log10(freq5.powspctrm)), 'color', cmap(7,:), 'linewidth', 2);
-plot(freq6.freq, (log10(freq6.powspctrm)), 'color', cmap(8,:), 'linewidth', 2);
-plot(freq7.freq, (log10(freq7.powspctrm)), 'color', cmap(9,:), 'linewidth', 2);
-plot(freq.freq,  (log10(freq.powspctrm)), 'color', cmap(1,:), 'linewidth', 2);
-legend({'rs_native', 'rs_firws100', 'rs_firws090', 'interp1', 'interp1_firws100', 'downsample', 'downsample_firws100', 'original'}, 'interpreter', 'none');
-xlabel('frequency (Hz)');
-ylabel('power');
 ```
+
+{% include image src="/assets/img/faq/resampling/resampling3.png" width="400" %}
