@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '35387871'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.2318-21.2022
+- idtype: pmcid
+  value: PMC9097778
+authors:
+- authtype: Author
+  name: Pietrelli M
+- authtype: Author
+  name: Samaha J
+- authtype: Author
+  name: Postle BR
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '19'
+pages: 4026-4041
+pmclivedate: ''
+printpubdate: 2022 May 11
+pubdate: 2022 May 11
+sortdate: 2022/05/11 00:00
+source: J Neurosci
+title: Spectral Distribution Dynamics across Different Attentional Priority States
+uid: '9097778'
+volume: '42'

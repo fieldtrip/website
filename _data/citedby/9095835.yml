@@ -1,0 +1,53 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1038/s42003-022-03395-9
+- idtype: pmcid
+  value: PMC9095835
+authors:
+- authtype: Author
+  name: Pedapati EV
+- authtype: Author
+  name: Schmitt LM
+- authtype: Author
+  name: Ethridge LE
+- authtype: Author
+  name: Miyakoshi M
+- authtype: Author
+  name: Sweeney JA
+- authtype: Author
+  name: Liu R
+- authtype: Author
+  name: Smith E
+- authtype: Author
+  name: Shaffer RC
+- authtype: Author
+  name: Dominick KC
+- authtype: Author
+  name: Gilbert DL
+- authtype: Author
+  name: Wu SW
+- authtype: Author
+  name: Horn PS
+- authtype: Author
+  name: Binder DK
+- authtype: Author
+  name: Lamy M
+- authtype: Author
+  name: Axford M
+- authtype: Author
+  name: Erickson CA
+epubdate: 2022 May 11
+fulljournalname: Communications Biology
+issue: ''
+pages: '442'
+pmclivedate: 2022/05/13
+printpubdate: ''
+pubdate: 2022 May 11
+sortdate: 2022/05/11 00:00
+source: Commun Biol
+title: Neocortical localization and thalamocortical modulation of neuronal hyperexcitability
+  contribute to Fragile X Syndrome
+uid: '9095835'
+volume: '5'

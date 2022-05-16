@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fnagi.2022.846017
+- idtype: pmcid
+  value: PMC9106139
+authors:
+- authtype: Author
+  name: Zhang J
+- authtype: Author
+  name: Villringer A
+- authtype: Author
+  name: Nikulin VV
+epubdate: 2022 Apr 29
+fulljournalname: Frontiers in Aging Neuroscience
+issue: ''
+pages: '846017'
+pmclivedate: 2022/05/14
+printpubdate: ''
+pubdate: 2022 Apr 29
+sortdate: 2022/04/29 00:00
+source: Front Aging Neurosci
+title: 'Dopaminergic Modulation of Local Non-oscillatory Activity and Global-Network
+  Properties in Parkinson’s Disease: An EEG Study'
+uid: '9106139'
+volume: '14'
