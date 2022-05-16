@@ -94,7 +94,9 @@ legend({'rs_native', 'rs_firws100', 'rs_firws090', 'interp1', 'interp1_firws100'
 xlabel('frequency (Hz)');
 ylabel('power');
 ```
-{% include image src="/assets/img/faq/resampling/resampling1.png" width="400" %}
+{% include image src="/assets/img/faq/resampling/resampling1.png" width="600" %}
+
+If the signal has a flat spectrum in the original bandwidth (red line, 'original'), the original `resample` method works well enough (blue line, 'rs_native'). The `interp1` and `downsample` resampled spectra (orange and pink lines) show an increase in power, which is due to the aliasing.
 
 ```
 % add a very high amplitude broad-band component
@@ -166,7 +168,7 @@ xlabel('frequency (Hz)');
 ylabel('power');
 ```
 
-{% include image src="/assets/img/faq/resampling/resampling2.png" width="400" %}
+{% include image src="/assets/img/faq/resampling/resampling2.png" width="600" %}
 
 ```
 % add a very high amplitude narrowband component
@@ -238,4 +240,4 @@ xlabel('frequency (Hz)');
 ylabel('power');
 ```
 
-{% include image src="/assets/img/faq/resampling/resampling3.png" width="400" %}
+{% include image src="/assets/img/faq/resampling/resampling3.png" width="600" %}
