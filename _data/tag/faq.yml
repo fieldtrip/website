@@ -409,6 +409,9 @@
 - name:  What are the MATLAB and external requirements?
   link:  /faq/requirements
 
+- name:  Do I need to resample my data, and if so, how is this to be done?
+  link:  /faq/resampling_lowpassfilter
+
 - name:  Should I rereference prior to or after ICA for artifact removal?
   link:  /faq/should_I_rereference_prior_to_or_after_ica_for_artifact_removal
 
