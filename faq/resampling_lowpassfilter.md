@@ -102,7 +102,7 @@ If the signal has a flat spectrum in the original bandwidth (red line, 'original
 % add a very high amplitude broad-band component
 data_hf_broad = data;
 for k = 1:nchan
-  data_hf_broad.trial{k}(1,:) = data_hf_broad.trial{1}(k,:) + ft_preproc_highpassfilter(randn(1,nsamples), fs, 110, [], 'firws').*50;
+  data_hf_broad.trial{k}(1,:) = data_hf_broad.trial{k}(1,:) + ft_preproc_highpassfilter(randn(1,nsamples), fs, 110, [], 'firws').*50;
   data_hf_broad.time{k} = data_hf_broad.time{1};    
 end
 data_hf_broad.trial{1} = data_hf_broad.trial{1}(1,:);
@@ -174,7 +174,7 @@ ylabel('power');
 % add a very high amplitude narrowband component
 data_hf_narrow = data;
 for k = 1:nchan
-  data_hf_narrow.trial{k}(1,:) = data_hf_narrow.trial{1}(k,:) + ft_preproc_bandpassfilter(randn(1,nsamples), fs, [110 120], [], 'firws').*50;
+  data_hf_narrow.trial{k}(1,:) = data_hf_narrow.trial{k}(1,:) + ft_preproc_bandpassfilter(randn(1,nsamples), fs, [110 120], [], 'firws').*50;
   data_hf_narrow.time{k} = data_hf_narrow.time{1};    
 end
 data_hf_narrow.trial{1} = data_hf_narrow.trial{1}(1,:);
