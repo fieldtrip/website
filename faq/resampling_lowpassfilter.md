@@ -96,7 +96,7 @@ ylabel('power');
 ```
 {% include image src="/assets/img/faq/resampling/resampling1.png" width="600" %}
 
-If the signal has a flat spectrum in the original bandwidth (red line, 'original'), the original `resample` method works well enough (blue line, 'rs_native'). The `interp1` and `downsample` resampled spectra (orange and pink lines) show an increase in power, which is due to the aliasing.
+If the signal has a flat spectrum in the original bandwidth (red line, 'original'), the original `resample` method works well enough (blue line, 'rs_native'). The `interp1` and `downsample` resampled spectra (orange and pink lines) show an increase in power, which is due to the aliasing. This aliasing can be undone by applying an explicit lowpass filtering step prior to the resampling.
 
 ```
 % add a very high amplitude broad-band component
@@ -170,6 +170,8 @@ ylabel('power');
 
 {% include image src="/assets/img/faq/resampling/resampling2.png" width="600" %}
 
+The above example is quite an extreme case that illustrates the need of applying a bit more 'aggressive' lowpass filtering for the `rs_native` (blue) line. Although the applied lowpass filter is sufficient for the `resample` method, this filter is still not good enough to get rid of all aliasing for the `interp1` method. 
+
 ```
 % add a very high amplitude narrowband component
 data_hf_narrow = data;
@@ -241,3 +243,6 @@ ylabel('power');
 ```
 
 {% include image src="/assets/img/faq/resampling/resampling3.png" width="600" %}
+
+In the above example, the strong band limited component shows a method specific aliasing, with the contamination of the unfiltered `interp1` method being the most prominent. Note that the aliasing in the `rs_native`  spectrum is also non-negligible.
+
