@@ -7,16 +7,20 @@ tags: [faq, preprocessing]
 
 ## When is resampling required?
 In principle, if your computing hardware is sufficient, there is hardly ever a need to resample the data in order to represent the time series at a sampling rate that is different from the sampling rate that was used upon data acquisition. Specifically, if you have enough compute power (and patience), storage space, and RAM, then **not** resampling the data may even be recommended, because it avoids potential unforeseen side effects (to be discussed below).
-Of course, there might be specific use cases which require resampling. For instance, when to simultaneously recorded signals were digitized at different sampling rates. Also, if storage space, RAM or compute power are limiting factors, one may decide to resample the data to a lower sampling rate. In FieldTrip the resampling is performed by **[ft_resampledata](/reference/ft_resampledata)**.
+
+There can be specific cases that do require resampling. For instance, when to simultaneously recorded signals were digitized at different sampling rates. Also, if storage space, RAM or compute power are limiting factors, you may decide to resample the data to a lower sampling rate. In FieldTrip the resampling is performed by **[ft_resampledata](/reference/ft_resampledata)**.
 
 ## How is the resampling done?
-The help documentation of **[ft_resampledata](/reference/ft_resampledata)** provides some more details, but in short there are several resampling methods, each of which behaves slightly differently under the hood. The most important thing to be aware of, when resampling to a lower sampling rate, is the phenomenon of 'aliasing'. This means that signal components that cannot be anymore represented by the new discrete sampling rate (i.e. signal components that are present in the original signal's bandwidth that is beyond the new signal's Nyquist frequency) wrap around to the lower frequencies, and thus may artificially inflate the signal at lower frequencies. This may be undesired.
+
+The help documentation of **[ft_resampledata](/reference/ft_resampledata)** provides some more details. It implements several resampling methods. The most important thing to be aware of, when resampling to a lower sampling rate, is the phenomenon of [aliasing](https://en.wikipedia.org/wiki/Aliasing). Signal components present in teh original signal that cannot be anymore represented by the new discrete sampling rate (i.e., signal components that are present in the original signal's bandwidth that is beyond the new signal's Nyquist frequency) wrap around to the lower frequencies, and thus may artificially inflate the noise at lower frequencies, which is undesired.
 
 ## Do I need to worry about this aliasing, and can it be avoided?
-When you use **[ft_resampledata](/reference/ft_resampledata)** in a typical context, i.e. using sufficiently clean data with a typical 1/f spectral characteristic + some band-limited neuronal signal components, then the default method `resample` is probably good enough. This is because this method always applies a low-pass filter under the hood. However, it may be relevant to know that the cutoff frequency is right on top of the new signal's Nyquist frequency, and the filter does not have a particularly steep roll off. This means that substantially large power outside the new signal's bandwidth may be problematic in theory. The other methods, as implemented in **[ft_resampledata](/reference/ft_resampledata)** don't apply an explicit low-pass filter, so in that case it may be wise to pre-filter the data before resampling, or to use the function's `cfg.lpfilter` option, which has been implemented as of May 2022.
+
+When you use **[ft_resampledata](/reference/ft_resampledata)** on typical data, i.e. using sufficiently clean data with a typical 1/f spectral characteristic + some band-limited neuronal signal components, the default method `resample` implements a sufficiently good anti-aliassing filter by default. However, the cutoff frequency is right on top of the new signal's Nyquist frequency and the filter does not have a very steep roll-off. This is problematic if there is substantially signal (or noise) just above the new signal's Nyquist frequency. The other methods implemented in **[ft_resampledata](/reference/ft_resampledata)** do not by default apply an low-pass filter, so in that case it is recommended to pre-filter the data before resampling using **[ft_preprocessing](/reference/ft_preprocessing)**, or to use the `cfg.lpfilter` option in **[ft_resampledata](/reference/ft_resampledata)**, which has been implemented as of May 2022.
 
 ## Example code to illustrate some of the methods and the aliasing
-The below code can be used to explore the different methods implemented in **[ft_resampledata](/reference/ft_resampledata)** and to illustrate the aliasing. As can be seen, the simulated signals that prove problematic for some suboptimal `cfgs` have high frequency energy that is substantially larger (few orders of magnitude) than the low frequency components.
+
+The below code can be used to explore the different methods and to illustrate the effect of aliasing using simulated signals that prove problematic for the default filtering.
 
 ```
 fs = 500;
@@ -81,7 +85,7 @@ freq7 = ft_freqanalysis(cfg, dataout7);
 
 cmap = ft_colormap('Set1');
 
-figure;hold on;
+figure; hold on;
 plot(freq1.freq, (log10(freq1.powspctrm)), 'color', cmap(2,:), 'linewidth', 2);
 plot(freq2.freq, (log10(freq2.powspctrm)), 'color', cmap(3,:), 'linewidth', 2);
 plot(freq3.freq, (log10(freq3.powspctrm)), 'color', cmap(4,:), 'linewidth', 2);
@@ -96,7 +100,7 @@ ylabel('power');
 ```
 {% include image src="/assets/img/faq/resampling/resampling1.png" width="600" %}
 
-If the signal has a flat spectrum in the original bandwidth (red line, 'original'), the original `resample` method works well enough (blue line, 'rs_native'). The `interp1` and `downsample` resampled spectra (orange and pink lines) show an increase in power, which is due to the aliasing. This aliasing can be undone by applying an explicit lowpass filtering step prior to the resampling.
+If the signal has a flat spectrum in the original bandwidth (red line, 'original'), the default `resample` method works well enough (blue line, 'rs_native'). The `interp1` and `downsample` resampled spectra (orange and pink lines) show an increase in power that is due to the aliasing. This aliasing can be avoided by an explicit lowpass filtering step prior to the resampling.
 
 ```
 % add a very high amplitude broad-band component
@@ -116,7 +120,7 @@ dataout1 = ft_resampledata(cfg, data_hf_broad);
 
 cfg.lpfilter = 'yes';
 cfg.lpfilttype = 'firws';
-cfg.lpfreq   = 100;
+cfg.lpfreq = 100;
 dataout2 = ft_resampledata(cfg, data_hf_broad);
 
 cfg.lpfreq = 90;
@@ -154,7 +158,7 @@ freq5 = ft_freqanalysis(cfg, dataout5);
 freq6 = ft_freqanalysis(cfg, dataout6);
 freq7 = ft_freqanalysis(cfg, dataout7);
 
-figure;hold on;
+figure; hold on;
 plot(freq1.freq, (log10(freq1.powspctrm)), 'color', cmap(2,:), 'linewidth', 2);
 plot(freq2.freq, (log10(freq2.powspctrm)), 'color', cmap(3,:), 'linewidth', 2);
 plot(freq3.freq, (log10(freq3.powspctrm)), 'color', cmap(4,:), 'linewidth', 2);
@@ -170,7 +174,7 @@ ylabel('power');
 
 {% include image src="/assets/img/faq/resampling/resampling2.png" width="600" %}
 
-The above example is quite an extreme case that illustrates the need of applying a bit more 'aggressive' lowpass filtering for the `rs_native` (blue) line. Although the applied lowpass filter is sufficient for the `resample` method, this filter is still not good enough to get rid of all aliasing for the `interp1` method. 
+The above example is an extreme case that illustrates the need of applying a bit more 'aggressive' lowpass filtering for the `rs_native` (blue) line. Although the applied lowpass filter is sufficient for the `resample` method, this filter is still not good enough to get rid of all aliasing for the `interp1` method. 
 
 ```
 % add a very high amplitude narrowband component
@@ -228,7 +232,7 @@ freq5 = ft_freqanalysis(cfg, dataout5);
 freq6 = ft_freqanalysis(cfg, dataout6);
 freq7 = ft_freqanalysis(cfg, dataout7);
 
-figure;hold on;
+figure; hold on;
 plot(freq1.freq, (log10(freq1.powspctrm)), 'color', cmap(2,:), 'linewidth', 2);
 plot(freq2.freq, (log10(freq2.powspctrm)), 'color', cmap(3,:), 'linewidth', 2);
 plot(freq3.freq, (log10(freq3.powspctrm)), 'color', cmap(4,:), 'linewidth', 2);
@@ -244,5 +248,4 @@ ylabel('power');
 
 {% include image src="/assets/img/faq/resampling/resampling3.png" width="600" %}
 
-In the above example, the strong band limited component shows a method specific aliasing, with the contamination of the unfiltered `interp1` method being the most prominent. Note that the aliasing in the `rs_native`  spectrum is also non-negligible.
-
+In the above example, the strong band limited component shows a method specific aliasing, with the contamination of the unfiltered `interp1` method being the most prominent. Note that the aliasing in the `rs_native` spectrum is also non-negligible.
