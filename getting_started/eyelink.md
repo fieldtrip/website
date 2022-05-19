@@ -307,7 +307,7 @@ The UADC channel values are expressed in Volt. The GAZE positions as recorded in
     Xgaze = S*(screenright  - screenleft + 1) + screenleft
     Ygaze = S*(screenbottom - screentop  + 1) + screentop
 
-The minimum/maximum voltage range and the maximum/minimum range of the data are defined in EyeLink configuration file FINAL.INI. The physical dimensions of your screen (screenright, screenleft, screenbottom, screentop) are defined in PHYSICAL.INI, or your presentation settings.
+The minimum/maximum voltage range and the minimum/maximum range of the data are defined in EyeLink configuration file FINAL.INI. Here, the minimum/maximum voltage range (```minvoltage``` and ```maxvoltage``` in the code below) correspond to the values of ```analog_dac_range``` in FINAL.INI. The minimum/maximum range of the data (```minrange``` and ```maxrange``` in the code below) correspond to the ```analog_x_range```/```analog_y_range``` of interest (GAZE) in FINAL.INI. The physical dimensions of your screen (screenright, screenleft, screenbottom, screentop) are defined in PHYSICAL.INI, or your presentation settings.
 
 Make sure that you use calibration and validation procedures before the recording for meaningful GAZE output!
 
