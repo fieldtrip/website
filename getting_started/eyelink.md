@@ -85,7 +85,7 @@ You can see that all events are coded as type "INPUT". You can plot the event va
 
 {% include image src="/assets/img/getting_started/eyelink/screen_shot_2015-10-14_at_10.30.26.png" width="500" %}
 
-You can also visualise the eye-tracker data in combination with the INPUT triggers using **[ft_databrowser](/reference/ft_databrowser)**:
+You can also visualize the eye-tracker data in combination with the INPUT triggers using **[ft_databrowser](/reference/ft_databrowser)**:
 
     cfg = [];
     cfg.viewmode       = 'vertical';
