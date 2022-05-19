@@ -93,7 +93,7 @@ You can also visualize the eye-tracker data in combination with the INPUT trigge
     cfg.event          = event_eye;
     ft_databrowser(cfg, data_eye);
 
-or by reading the data straight from disc:
+or by reading the data straight from disk:
 
     cfg = [];
     cfg.dataset = filename_eye;
