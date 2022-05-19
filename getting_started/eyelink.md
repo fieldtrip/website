@@ -5,12 +5,12 @@ tags: [dataformat, eyelink]
 
 # Getting started with SR-Research EyeLink eye-tracker data
 
-At the Donders we have an [Eyelink 1000 eyetracker](http://www.sr-research.com/eyelink1000plus.html) that supports sampling rates up to 2000Hz for monocular and 1000Hz for binocular tracking. For a technical overview about Eyelink 1000 characteristics look [here](http://www.sr-research.com/el1000plus_baseunit.html)
+At the Donders we have an [Eyelink 1000 eyetracker](http://www.sr-research.com/eyelink1000plus.html) that supports sampling rates up to 2000 Hz for monocular and 1000 Hz for binocular tracking. For a technical overview about Eyelink 1000 characteristics look [here](http://www.sr-research.com/el1000plus_baseunit.html)
 
-The eye-tracker can be used on itself, or in combination with other data acquisition techniques (e.g., EEG, MEG, TMS or fMRI). FieldTrip allows you to analyze the eye-tracker data in all of these situations. In the following I will provide the background of the data acquisition and present some examples on how to analyze eye-tracker data.
+The eye-tracker can be used on itself, or in combination with other data acquisition techniques (e.g., EEG, MEG, TMS or fMRI). FieldTrip allows you to analyze the eye-tracker data in all of these situations. In the following, we will provide the background of the data acquisition and present some examples on how to analyze eye-tracker data.
 
 {% include markup/info %}
-With your presentation script on the stimulus presentation computer you can also write "data" to disk in the form of behavioral log files. In the subsequent examples we will not consider integrating the physiological measurements with the "data" in these behavioral log files. We will only consider physiological data from the eye-tracker, from the EEG system and from the MEG system.
+With your presentation script on the stimulus presentation computer you can also write data to disk in the form of behavioral log files. In the subsequent examples we will not consider integrating the physiological measurements with the data in these behavioral log files. We will only consider physiological data from the eye-tracker, from the EEG system, and from the MEG system.
 {% include markup/end %}
 
 ## Eye tracker recordings by themselves
@@ -19,7 +19,7 @@ It is possible to use the eye-tracker in combination with a behavioral task that
 
 ### Converting the EDF file to an ASC file
 
-The Eyelink 1000 output is an _.EDF file (eyelink data file). There are several ways to read (directly or indirectly) this data into MATLAB. To use FieldTrip for data analysis, you have to convert the EDF file to an ASCII text format using the Eyelink executable EDF2ASC.EXE. You need to run the EDF2ASC.EXE that can be downloaded [here](https://www.sr-support.com/showthread.php?17-EDF2ASC-Conversion-Utility) under MSDOS on the Eyelink computer and find your _.EDF recording as follow
+The Eyelink 1000 output is an _.EDF file (eyelink data file). There are several ways to read (directly or indirectly) this data into MATLAB. To use FieldTrip for data analysis, you have to convert the EDF file to an ASCII text format using the Eyelink executable EDF2ASC.EXE. You need to run the EDF2ASC.EXE that can be downloaded [here](https://www.sr-support.com/showthread.php?17-EDF2ASC-Conversion-Utility) under MSDOS on the Eyelink computer and find your _.EDF recording as follows:
 
     EDF2ASC filename.edf
 
@@ -27,7 +27,7 @@ You can type DIR to see if your \*.EDF file is located in the current working di
 
 After converting the EDF file to ASC format and transferring it from the Eyelink computer, we can read it in MATLAB.
 
-To read in the continuous data, you would simply do this:
+To read in the continuous data, you can do this:
 
     filename_eye = 'tobsta35.asc';
 
@@ -35,7 +35,7 @@ To read in the continuous data, you would simply do this:
     cfg.dataset = filename_eye;
     data_eye = ft_preprocessing(cfg);
 
-The output data contains this
+The output data contains:
 
     disp(data_eye)
 
@@ -56,7 +56,7 @@ The output data contains this
 
 Channel 1 represents time, channel 2 is the horizontal x-coordinate, channel 3 is the vertical y-coordinate and channel 4 is the pupil dilation.
 
-If you want your channel names to be more consistent, you can use the following montage (see **[ft_apply_montage](/reference/forward/ft_apply_montage)**) to rename the channels while preprocessing:
+If you want your channel names to be more informative, you can use the following montage (see **[ft_apply_montage](/reference/forward/ft_apply_montage)**) to rename the channels while preprocessing:
 
     cfg = [];
     cfg.dataset          = filename_eye;
@@ -65,7 +65,7 @@ If you want your channel names to be more consistent, you can use the following 
     cfg.montage.labelnew = {'EYE_TIMESTAMP', 'EYE_HORIZONTAL', 'EYE_VERTICAL', 'EYE_DIAMETER'};
     data_eye = ft_preprocessing(cfg);
 
-Typically you would want to analyze the eye movements relative to certain events (e.g., stimuli). For that you would use a trial-based representation, where each trial is time-locked to the event of interest.
+Typically, you would want to analyze the eye movements relative to certain events (e.g., stimuli). For that you would use a trial-based representation, where each trial is time-locked to the event of interest.
 
 The events represented in the eye-tracker datafile can be explored using **[ft_read_event](/reference/fileio/ft_read_event)** like this:
 
@@ -75,7 +75,7 @@ The events represented in the eye-tracker datafile can be explored using **[ft_r
 
       'INPUT'
 
-You can see that all events are coded as type "INPUT". The following plots the event values against the time. Although the dots are very small, there is an individual point for each INPUT event.
+You can see that all events are coded as type "INPUT". You can plot the event values against the time, with each individual point representing one INPUT event:
 
     figure
     plot([event_eye.sample]./data_eye.hdr.Fs, [event_eye.value], '.')
@@ -85,7 +85,7 @@ You can see that all events are coded as type "INPUT". The following plots the e
 
 {% include image src="/assets/img/getting_started/eyelink/screen_shot_2015-10-14_at_10.30.26.png" width="500" %}
 
-You can also visualise the eye-tracker data in combination with the INPUT triggers using **[ft_databrowser](/reference/ft_databrowser)**
+You can also visualize the eye-tracker data in combination with the INPUT triggers using **[ft_databrowser](/reference/ft_databrowser)**:
 
     cfg = [];
     cfg.viewmode       = 'vertical';
@@ -93,26 +93,21 @@ You can also visualise the eye-tracker data in combination with the INPUT trigge
     cfg.event          = event_eye;
     ft_databrowser(cfg, data_eye);
 
-or by reading the data straight from dis
+or by reading the data straight from disk:
 
     cfg = [];
     cfg.dataset = filename_eye;
     ft_databrowser(cfg);
 
-The following shows the data and the events in the first 20 seconds.
+The following shows the data and the events in the first 20 seconds of the recording:
 
 {% include image src="/assets/img/getting_started/eyelink/screen_shot_2015-10-14_at_10.31.13.png" width="500" %}
 
-### Alternative ways of importing the data
-
-You would also try an alternative to the EDF2ASC.EXE conversion that I found
-[here](http://www.univie.ac.at/experimentalwiki/wiki/index.php?title=CC_EyeLink#Using_the_EDF2ASC_utility_to_export_the_data_as_an_AScii_file_which_can_be_read_by_Matlab). There is also direct method, using a mex file that reads \*.EDF files directly into MATLAB structures (samples **and** events), [compiled versions for macOS and Win64 are available here](https://github.com/iandol/opticka/tree/master/communication). You will have to combine this with your own code to [convert the data to FieldTrip format](/faq/how_can_i_import_my_own_dataformat).
-
 ## Simultaneous EEG and eye-tracker recordings
 
-If you record EEG together with eye-tracker data, you will have two separate recordings in separate files. The recordings will have been started at slightly different moments and may be a few seconds to a few minutes shifted relative to each other, depending on your experimental procedure. Furthermore, the sampling rate will be different. Hence you cannot directly append or concatenate the two datasets. The trick to link these recordings to each other is that you have to ensure that your stimulus triggers are send (and acquired by) both the EEG system and by the Eyelink system.
+If you record EEG together with eye-tracker data, you will have two separate recordings in separate files. The recordings will have been started at slightly different moments and may be a few seconds to a few minutes shifted relative to each other, depending on your experimental procedure. Furthermore, the sampling rate will be different. Hence you cannot directly append or concatenate the two datasets. The trick to link these recordings to each other is that you have to ensure that your stimulus triggers are sent (and acquired by) both the EEG system and by the Eyelink system.
 
-In the following example we are going to emulate such a situation, by reading the EEG channels from a MEG dataset, but ignoring the MEG specifics.
+In the following example, we are going to emulate such a situation, by reading the EEG channels from an MEG dataset, but ignoring the MEG specifics.
 
     % read the EEG data, this could also come from an EEG dataset
     cfg = [];
@@ -179,7 +174,7 @@ Important to notice here is that the stimulus events in the EEG dataset largely 
 {% include markup/info %}
 There are 1400 triggers in one, and 2822 triggers in the other. This is mostly explained by each trigger onset **and** offset being represented in the Eyelink events, but only the onsets being represented in the CTF events.
 
-There are 2 triggers in the CTF file, that are not specified anywhere and should not be there (with a value of 64). These are not present in other subjects' data sets from the same experiment. I have no clue where they would come from but suspect it to be a hardware glitch of the Bitsi box (which links the serial port of the presentation computer with the input of the CTF and Eyelink acquisition systems). The Eyelink and CTF system, might have different detection thresholds and different minimum durations of the TTL pulse, therefore it might show up in one dataaset and not the other.
+There are 2 triggers in the CTF file, that are not specified anywhere and should not be there (with a value of 64). These are not present in other subjects' data sets from the same experiment. I have no clue where they would come from but suspect it to be a hardware glitch of the Bitsi box (which links the serial port of the presentation computer with the input of the CTF and Eyelink acquisition systems). The Eyelink and CTF system might have different detection thresholds and different minimum durations of the TTL pulse, therefore it might show up in one dataaset and not the other.
 
 There are 9 triggers (without doubling) in the EDF explained by the fact that the recording of the EDF file, but not the MEG file, includes practice trials (because I usually start the recording of the EDF during practice to check whether the eye tracking looks okay).
 
@@ -198,7 +193,7 @@ Again using the **[ft_databrowser](/reference/ft_databrowser)** you can check th
 
 {% include image src="/assets/img/getting_started/eyelink/screen_shot_2015-10-14_at_16.11.50.png" width="500" %}
 
-To do a combined analysis of the eye-tracker and the EEG data, you would use the stimulus triggers that are present in both. Using a trial function and **[ft_definetrial](/reference/ft_definetrial)** you would do **[ft_preprocessing](/reference/ft_preprocessing)** on both eye-tracker and EEG data, cutting out exactly the same segment of data around each event of interest.
+To do a combined analysis of the eye-tracker and the EEG data, you would use the stimulus triggers that are present in both. Using a trial function and **[ft_definetrial](/reference/ft_definetrial)**, you would use **[ft_preprocessing](/reference/ft_preprocessing)** on both eye-tracker and EEG data, cutting out exactly the same segment of data around each event of interest.
 
     cfg = [];
     cfg.trialfun = 'your_custom_trialfun';
@@ -214,7 +209,7 @@ To do a combined analysis of the eye-tracker and the EEG data, you would use the
 
     data_eeg = ft_preprocessing(cfg);
 
-Subsequently you resample or interpolate the data of one recording on the time axis of the other, and you append the tw
+Subsequently, you resample or interpolate the data of one recording on the time axis of the other, and you append the data sets
 
     cfg = [];
     cfg.time = data_eeg.time;
@@ -225,17 +220,15 @@ Subsequently you resample or interpolate the data of one recording on the time a
 
 ## Simultaneous MEG and eye-tracker recordings
 
-The Eyelink system has an optional Digital-to-Analog converter (DAC) card, which makes the eye position and pupil diameter available as analog signals. These analog signals can subsequently be sampled and recorded with another data acquisition system. At the DCCN we have the Eyelink DAC output connected to the CTF275 general-purpose ADC channels.
+The Eyelink system has an optional Digital-to-Analog converter (DAC) card, which makes the eye position and pupil diameter available as analog signals. These analog signals can subsequently be sampled and recorded with another data acquisition system. At the DCCN, we have the Eyelink DAC output connected to the CTF275 general-purpose ADC channels.
 The synchronization between the eye-tracker and the MEG data is trivial in this case, given that both data types are sampled by the MEG electronics. In this case you do not need the ASC or EDF file, although we nevertheless recommend that you copy them from the Eyelink computer and archive them along with your MEG data.
 
-The Eyelink channels are connected to the MEG dataset channels UADC005, UADC006, UADC008 and UADC009.
+The Eyelink channels are connected to the MEG dataset channels UADC005, UADC006, UADC007, UADC008, UADC009, and UADC010.
 
     cfg = [];
     cfg.dataset = filename_meg;
     cfg.channel = {'UADC*', 'MEG', 'EEG'}; % read all relevant channels
     data_meg = ft_preprocessing(cfg);
-
-Again, using the procedure as described for the EEG, you can combine the recordings of the Eyelink system and the MEG.
 
 {% include markup/danger %}
 The DAC conversion in the Eyelink system takes some time, and therefore the UADC channels in the MEG recording have a small (but fixed) delay relative to the actual eye movements.
@@ -283,7 +276,7 @@ If you look carefully, you can see the delay in the MEG ADC channels
 
 {% include image src="/assets/img/getting_started/eyelink/screen_shot_2015-11-11_at_16.38.02.png" width="500" %}
 
-Subsequently you can resample the 1000Hz Eyelink data to the 1200Hz MEG data and append them in the same data structure for more convenient joint processing.
+Subsequently, you can resample the 1000 Hz Eyelink data to the 1200 Hz MEG data and append them in the same data structure for more convenient joint processing.
 
     cfg = [];
     cfg.time = data_meg.time;
@@ -296,7 +289,7 @@ Subsequently you can resample the 1000Hz Eyelink data to the 1200Hz MEG data and
 
 The units of the eye-tracker data depend on the specifications in the 'Set Options' screen of the Eyelink acquisition software. Here, the units of GAZE output for horizontal (x-coordinate) and vertical (y-coordinate) data are described.
 
-Eye position data can in principle be described as
+Eye position data can in principle be described as:
 
 - viewing direction, expressed in degrees visual angle
 
@@ -305,20 +298,20 @@ Eye position data can in principle be described as
 
 ### MEG data - UADC channels
 
-In the Eyelink 'Set Options' screen, set 'Analog Output' to 'GAZE'.
+In the Eyelink 'Set Options' screen, set 'Analog Output' to 'GAZE' before recording your data.
 
-The UADC channel values are expressed in Volt. The GAZE positions as recorded in the EDF file are converted into voltages according to these formula
+The UADC channel values are expressed in Volt. The GAZE positions as recorded in the EDF file are converted into voltages according to these formulas:
 
     R     = (voltage - minvoltage)/(maxvoltage - minvoltage)
     S     = R*(maxrange - minrange) + minrange
     Xgaze = S*(screenright  - screenleft + 1) + screenleft
     Ygaze = S*(screenbottom - screentop  + 1) + screentop
 
-The minimum/maximum voltage range and the maximum/minimum range of the data are defined in EyeLink configuration file FINAL.INI. The physical dimensions of your screen (screenright, screenleft, screenbottom, screentop) are defined in PHYSICAL.INI, or your presentation settings.
+The minimum/maximum voltage range and the minimum/maximum range of the data are defined in EyeLink configuration file FINAL.INI. Here, the minimum/maximum voltage range (`minvoltage` and `maxvoltage` in the code below) correspond to the values of `analog_dac_range` in FINAL.INI. The minimum/maximum range of the data (`minrange` and `maxrange` in the code below) correspond to the `analog_x_range`/`analog_y_range` of interest (GAZE) in FINAL.INI. The physical dimensions of your screen (screenright, screenleft, screenbottom, screentop) are defined in PHYSICAL.INI, or your presentation settings.
 
-Make sure that you used calibration and validation for meaningful GAZE output!
+Make sure that you use calibration and validation procedures before the recording for meaningful GAZE output!
 
-This is an example how to convert the horizontal and vertical traces from the UADC channels in Volt to screen coordinates in pixel
+This is an example how to convert the horizontal and vertical traces from the UADC channels in Volt to screen coordinates in pixels:
 
     Xgaze=[];
     Ygaze=[];
