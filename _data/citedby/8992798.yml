@@ -1,0 +1,40 @@
+articleids:
+- idtype: pmid
+  value: '35120628'
+- idtype: doi
+  value: 10.1016/j.neuron.2022.01.002
+- idtype: pmcid
+  value: PMC8992798
+authors:
+- authtype: Author
+  name: Uran C
+- authtype: Author
+  name: Peter A
+- authtype: Author
+  name: Lazar A
+- authtype: Author
+  name: Barnes W
+- authtype: Author
+  name: Klon-Lipok J
+- authtype: Author
+  name: Shapcott KA
+- authtype: Author
+  name: Roese R
+- authtype: Author
+  name: Fries P
+- authtype: Author
+  name: Singer W
+- authtype: Author
+  name: Vinck M
+epubdate: ''
+fulljournalname: Neuron
+issue: '7'
+pages: 1240-1257.e8
+pmclivedate: 2022/05/17
+printpubdate: 2022 Apr 6
+pubdate: 2022 Apr 6
+sortdate: 2022/04/06 00:00
+source: Neuron
+title: Predictive coding of natural images by V1 firing rates and rhythmic synchronization
+uid: '8992798'
+volume: '110'

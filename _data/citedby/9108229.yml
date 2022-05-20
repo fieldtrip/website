@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fnhum.2022.831781
+- idtype: pmcid
+  value: PMC9108229
+authors:
+- authtype: Author
+  name: Dehaghani NS
+- authtype: Author
+  name: Maess B
+- authtype: Author
+  name: Khosrowabadi R
+- authtype: Author
+  name: Lashgari R
+- authtype: Author
+  name: Braeutigam S
+- authtype: Author
+  name: Zarei M
+epubdate: 2022 May 2
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '831781'
+pmclivedate: 2022/05/17
+printpubdate: ''
+pubdate: 2022 May 2
+sortdate: 2022/05/02 00:00
+source: Front Hum Neurosci
+title: Pre-stimulus Alpha Activity Modulates Face and Object Processing in the Intra-Parietal
+  Sulcus, a MEG Study
+uid: '9108229'
+volume: '16'
