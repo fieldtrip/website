@@ -21,7 +21,11 @@ Alternatives are provided for the following functions from the MathWorks [Signal
 - bohmanwin
 - boxcar
 - butter
+- downsample
 - filtfilt
+- fir1
+- fir2
+- firls
 - flattopwin
 - gausswin
 - hann
@@ -31,8 +35,11 @@ Alternatives are provided for the following functions from the MathWorks [Signal
 - nuttallwin
 - parzenwin
 - rectwin
+- resample
 - triang
 - tukeywin
+- upfirdn
+- upsample
 - window
 
 Alternatives are provided for the following functions from the MathWorks [Image Processing Toolbox](https://www.mathworks.com/products/image.html) (images)
