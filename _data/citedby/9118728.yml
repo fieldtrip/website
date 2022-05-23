@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1016/j.isci.2022.104302
+- idtype: pmcid
+  value: PMC9118728
+authors:
+- authtype: Author
+  name: Pütz C
+- authtype: Author
+  name: van den Berg B
+- authtype: Author
+  name: Lorist MM
+epubdate: 2022 Apr 25
+fulljournalname: iScience
+issue: '5'
+pages: '104302'
+pmclivedate: 2022/05/20
+printpubdate: ''
+pubdate: 2022 Apr 25
+sortdate: 2022/04/25 00:00
+source: iScience
+title: Dynamic modulation of neural feedback processing and attention during spatial
+  probabilistic learning
+uid: '9118728'
+volume: '25'

@@ -1,0 +1,24 @@
+articleids:
+- idtype: pmid
+  value: '35428785'
+- idtype: doi
+  value: 10.1038/s41598-022-10239-3
+- idtype: pmcid
+  value: PMC9012777
+authors:
+- authtype: Author
+  name: Hussain SJ
+- authtype: Author
+  name: Quentin R
+epubdate: 2022 Apr 15
+fulljournalname: Scientific Reports
+issue: ''
+pages: '6323'
+pmclivedate: 2022/04/18
+printpubdate: ''
+pubdate: 2022 Apr 15
+sortdate: 2022/04/15 00:00
+source: Sci Rep
+title: Decoding personalized motor cortical excitability states from human electroencephalography
+uid: '9012777'
+volume: '12'

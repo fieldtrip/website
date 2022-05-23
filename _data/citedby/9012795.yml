@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '35428836'
+- idtype: doi
+  value: 10.1038/s41598-022-10342-5
+- idtype: pmcid
+  value: PMC9012795
+authors:
+- authtype: Author
+  name: Lapenta OM
+- authtype: Author
+  name: Keller PE
+- authtype: Author
+  name: Nozaradan S
+- authtype: Author
+  name: Varlet M
+epubdate: 2022 Apr 15
+fulljournalname: Scientific Reports
+issue: ''
+pages: '6271'
+pmclivedate: 2022/04/18
+printpubdate: ''
+pubdate: 2022 Apr 15
+sortdate: 2022/04/15 00:00
+source: Sci Rep
+title: Lateralised dynamic modulations of corticomuscular coherence associated with
+  bimanual learning of rhythmic patterns
+uid: '9012795'
+volume: '12'

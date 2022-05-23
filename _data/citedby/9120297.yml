@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1007/s11571-021-09742-6
+- idtype: pmcid
+  value: PMC9120297
+authors:
+- authtype: Author
+  name: Gómez CM
+- authtype: Author
+  name: Angulo-Ruíz BY
+- authtype: Author
+  name: Muñoz V
+- authtype: Author
+  name: Rodriguez-Martínez EI
+epubdate: 2021 Nov 7
+fulljournalname: Cognitive Neurodynamics
+issue: '3'
+pages: 591-608
+pmclivedate: 2022/05/21
+printpubdate: 2022 Jun
+pubdate: 2021 Nov 7
+sortdate: 2021/11/07 00:00
+source: Cogn Neurodyn
+title: Activation-Inhibition dynamics of the oscillatory bursts of the human EEG during
+  resting state. The macroscopic temporal range of few seconds
+uid: '9120297'
+volume: '16'

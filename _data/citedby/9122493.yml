@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '35532123'
+- idtype: doi
+  value: 10.7554/eLife.75897
+- idtype: pmcid
+  value: PMC9122493
+authors:
+- authtype: Author
+  name: Stauch BJ
+- authtype: Author
+  name: Peter A
+- authtype: Author
+  name: Ehrlich I
+- authtype: Author
+  name: Nolte Z
+- authtype: Author
+  name: Fries P
+epubdate: 2022 May 9
+fulljournalname: eLife
+issue: ''
+pages: e75897
+pmclivedate: 2022/05/21
+printpubdate: ''
+pubdate: 2022 May 9
+sortdate: 2022/05/09 00:00
+source: eLife
+title: Human visual gamma for color stimuli
+uid: '9122493'
+volume: '11'

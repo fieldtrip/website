@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1007/s11571-021-09741-7
+- idtype: pmcid
+  value: PMC9120323
+authors:
+- authtype: Author
+  name: Zhang L
+- authtype: Author
+  name: Zhang R
+- authtype: Author
+  name: Guo Y
+- authtype: Author
+  name: Zhao D
+- authtype: Author
+  name: Li S
+- authtype: Author
+  name: Chen M
+- authtype: Author
+  name: Shi L
+- authtype: Author
+  name: Yao D
+- authtype: Author
+  name: Gao J
+- authtype: Author
+  name: Wang X
+- authtype: Author
+  name: Hu Y
+epubdate: 2021 Nov 5
+fulljournalname: Cognitive Neurodynamics
+issue: '3'
+pages: 609-620
+pmclivedate: ''
+printpubdate: 2022 Jun
+pubdate: 2021 Nov 5
+sortdate: 2021/11/05 00:00
+source: Cogn Neurodyn
+title: Assessing residual motor function in patients with disorders of consciousness
+  by brain network properties of task-state EEG
+uid: '9120323'
+volume: '16'
