@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fnins.2022.829755
+- idtype: pmcid
+  value: PMC9125314
+authors:
+- authtype: Author
+  name: Wang J
+- authtype: Author
+  name: Liu Q
+- authtype: Author
+  name: Tian F
+- authtype: Author
+  name: Zhou S
+- authtype: Author
+  name: Parra MA
+- authtype: Author
+  name: Wang H
+- authtype: Author
+  name: Yu X
+epubdate: 2022 May 9
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '829755'
+pmclivedate: 2022/05/24
+printpubdate: ''
+pubdate: 2022 May 9
+sortdate: 2022/05/09 00:00
+source: Front Neurosci
+title: Disrupted Spatiotemporal Complexity of Resting-State Electroencephalogram Dynamics
+  Is Associated With Adaptive and Maladaptive Rumination in Major Depressive Disorder
+uid: '9125314'
+volume: '16'

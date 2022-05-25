@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1093/braincomms/fcac104
+- idtype: pmcid
+  value: PMC9123848
+authors:
+- authtype: Author
+  name: Fan JM
+- authtype: Author
+  name: Lee AT
+- authtype: Author
+  name: Kudo K
+- authtype: Author
+  name: Ranasinghe KG
+- authtype: Author
+  name: Morise H
+- authtype: Author
+  name: Findlay AM
+- authtype: Author
+  name: Kirsch HE
+- authtype: Author
+  name: Chang EF
+- authtype: Author
+  name: Nagarajan SS
+- authtype: Author
+  name: Rao VR
+epubdate: 2022 Apr 26
+fulljournalname: Brain Communications
+issue: '3'
+pages: fcac104
+pmclivedate: 2022/05/23
+printpubdate: ''
+pubdate: 2022 Apr 26
+sortdate: 2022/04/26 00:00
+source: Brain Commun
+title: Network connectivity predicts effectiveness of responsive neurostimulation
+  in focal epilepsy
+uid: '9123848'
+volume: '4'
