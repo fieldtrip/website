@@ -1,0 +1,38 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1186/s12974-022-02476-0
+- idtype: pmcid
+  value: PMC9131528
+authors:
+- authtype: Author
+  name: Ellwardt E
+- authtype: Author
+  name: Muthuraman M
+- authtype: Author
+  name: Gonzalez-Escamilla G
+- authtype: Author
+  name: Chirumamilla VC
+- authtype: Author
+  name: Luessi F
+- authtype: Author
+  name: Bittner S
+- authtype: Author
+  name: Zipp F
+- authtype: Author
+  name: Groppa S
+- authtype: Author
+  name: Fleischer V
+epubdate: 2022 May 24
+fulljournalname: Journal of Neuroinflammation
+issue: ''
+pages: '119'
+pmclivedate: 2022/05/26
+printpubdate: ''
+pubdate: 2022 May 24
+sortdate: 2022/05/24 00:00
+source: J Neuroinflammation
+title: Network alterations underlying anxiety symptoms in early multiple sclerosis
+uid: '9131528'
+volume: '19'
