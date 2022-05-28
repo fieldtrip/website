@@ -512,7 +512,7 @@ There are some things which are not implemented as a script, for example filling
 
 I also manually renamed the subdirectories with the presentation log files in the _sourcedata_ directory, and added the presentation source code and stimulus material in the _stimuli_ directory.
 
-Throughout the development of the scripts and and after having completed the conversion I used the [bids-validator](http://github.com/INCF/bids-validator/) to check compliance with BIDS. During script development it revealed errors and inconsistencies, which I fixed in the scripts (which I then reran). After the final conversion there were still some warnings printed, but the dataset passed the validator.
+Throughout the development of the scripts and and after having completed the conversion I used the [bids-validator](https://github.com/INCF/bids-validator/) to check compliance with BIDS. During script development it revealed errors and inconsistencies, which I fixed in the scripts (which I then reran). After the final conversion there were still some warnings printed, but the dataset passed the validator.
 
 ## Issues
 

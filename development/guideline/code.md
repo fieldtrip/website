@@ -459,7 +459,7 @@ You should add something like this to code that you have written yourself, or to
     %    GNU General Public License for more details.
     %
     %    You should have received a copy of the GNU General Public License
-    %    along with FieldTrip. If not, see <http://www.gnu.org/licenses/>.
+    %    along with FieldTrip. If not, see <https://www.gnu.org/licenses/>.
 
 
 ## Ask for help

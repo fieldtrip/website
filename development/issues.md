@@ -54,4 +54,4 @@ Example data (e.g., your MATLAB workspace) that helps to pinpoint a specific iss
 
 ## Issues on bugzilla
 
-In the past we used our own [Bugzilla](http://bugzilla.fieldtriptoolbox.org) server for tracking the development and issues, but we have moved over to [GitHub issues](http://github.com/fieldtrip/fieldtrip/issues). The bugzilla server is still available at <http://bugzilla.fieldtriptoolbox.org> for reference to documentation of previous issues.
+In the past we used our own [Bugzilla](http://bugzilla.fieldtriptoolbox.org) server for tracking the development and issues, but we have moved over to [GitHub issues](https://github.com/fieldtrip/fieldtrip/issues). The bugzilla server is still available at <http://bugzilla.fieldtriptoolbox.org> for reference to documentation of previous issues.

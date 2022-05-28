@@ -5,7 +5,7 @@ tags: [development, git]
 
 # Accessing the FieldTrip source code through Git
 
-The FieldTrip code and website are both maintained on [https://github.com/fieldtrip](http://github.com/fieldtrip).
+The FieldTrip code and website are both maintained on [https://github.com/fieldtrip](https://github.com/fieldtrip).
 
 {% include markup/info %}
 To quickly get access to the code, you would do the following from the command line or the equivalent in a graphical git interface, such as the [GitHub desktop](https://desktop.github.com).
@@ -36,9 +36,9 @@ We welcome the contributions of all external users, even if the changes are smal
 
 ### What is git?
 
-[Git](http://git-scm.com/) is version control system to keep track of the changes to files and maintain a consistent repository, like [SVN](http://subversion.tigris.org/). While SVN follows a linear approach to versioning, where each user makes some changes to the main code and then a second user can make the next change, Git allows for multiple users to work in parallel and then merge their code in the main repository. This approach scales very well, considering that, for example, the [Linux kernel](http://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git) and [Android](https://android.googlesource.com/) use git.
+[Git](https://git-scm.com/) is version control system to keep track of the changes to files and maintain a consistent repository, like [SVN](http://subversion.tigris.org/). While SVN follows a linear approach to versioning, where each user makes some changes to the main code and then a second user can make the next change, Git allows for multiple users to work in parallel and then merge their code in the main repository. This approach scales very well, considering that, for example, the [Linux kernel](http://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git) and [Android](https://android.googlesource.com/) use git.
 
-There are lots of resources available on the internet to learn more about Git. The starting point is [the official Git documentation](http://git-scm.com/documentation). If you have a question, it's most likely already being answered on [Stack Overflow](http://stackoverflow.com/questions/tagged/git). Git is extremely powerful and flexible, so the following tutorial will give only the most basic ideas and tools to modify the FieldTrip code.
+There are lots of resources available on the internet to learn more about Git. The starting point is [the official Git documentation](https://git-scm.com/documentation). If you have a question, it's most likely already being answered on [Stack Overflow](http://stackoverflow.com/questions/tagged/git). Git is extremely powerful and flexible, so the following tutorial will give only the most basic ideas and tools to modify the FieldTrip code.
 
 #### Basic concepts
 
@@ -49,15 +49,15 @@ Git usually lives on two levels:
 
 #### push, pull, clone
 
-Both your local computer and the remote server contain a full copy of the whole repository. The basic idea is that you make some changes on your local copy and then send them to the remote server. Sending changes to a remote repository is called [pushing](http://git-scm.com/docs/git-push) and receiving changes from a remote repository to your local machine is called [pulling](http://git-scm.com/docs/git-pull). The first time that you want to copy a complete repository from a remote server to your local machine, you need to [clone](http://git-scm.com/docs/git-clone) the repository.
+Both your local computer and the remote server contain a full copy of the whole repository. The basic idea is that you make some changes on your local copy and then send them to the remote server. Sending changes to a remote repository is called [pushing](https://git-scm.com/docs/git-push) and receiving changes from a remote repository to your local machine is called [pulling](https://git-scm.com/docs/git-pull). The first time that you want to copy a complete repository from a remote server to your local machine, you need to [clone](https://git-scm.com/docs/git-clone) the repository.
 
 #### commit
 
-Your local repository is a complete repository of the whole source code. As such, you can modify some files (or add some files) and then include these changes in the local repository. This procedure is called a [commit](http://git-scm.com/docs/git-commit). The changes that are committed to your local repository are called **commits**.
+Your local repository is a complete repository of the whole source code. As such, you can modify some files (or add some files) and then include these changes in the local repository. This procedure is called a [commit](https://git-scm.com/docs/git-commit). The changes that are committed to your local repository are called **commits**.
 
 #### branch, merge
 
-One of the most powerful features of Git is the idea of [branching](http://git-scm.com/book/en/Git-Branching): _Branching means you diverge from the main line of development and continue to do work without messing with that main line_. So, from your local repository, you can create a new branch, make some changes, and commit them. If you are happy with the changes, you can [merge](http://git-scm.com/docs/git-merge) your new branch with the main development line. Branches are very flexible because they allow you to develop new features without compromising the main repository. You can easily switch between the main branch (often called **master**) and experimental branches.
+One of the most powerful features of Git is the idea of [branching](https://git-scm.com/book/en/Git-Branching): _Branching means you diverge from the main line of development and continue to do work without messing with that main line_. So, from your local repository, you can create a new branch, make some changes, and commit them. If you are happy with the changes, you can [merge](https://git-scm.com/docs/git-merge) your new branch with the main development line. Branches are very flexible because they allow you to develop new features without compromising the main repository. You can easily switch between the main branch (often called **master**) and experimental branches.
 
 #### Summary of the main commands
 
@@ -100,11 +100,11 @@ You only have read permission for the [FieldTrip repository](https://github.com/
 4.  Then you can **push** this developmental **branch** to your **remote repository**.
 5.  You will then tell to the developers of FieldTrip to check these changes in your **remote repository**, using a **pull request**.
 
-All the **highlighted** words are the new concepts explained above. **Forking** and **pull request** are two main concepts when working with multiple remote repositories. I will use them throughout the tutorial and are the words that you will need to successfully google possible problems. If they are not clear, refer to the main [documentation](http://git-scm.com/documentation).
+All the **highlighted** words are the new concepts explained above. **Forking** and **pull request** are two main concepts when working with multiple remote repositories. I will use them throughout the tutorial and are the words that you will need to successfully google possible problems. If they are not clear, refer to the main [documentation](https://git-scm.com/documentation).
 
 ## Tutorial
 
-Now that the main concepts are explained, we will try to add a new feature to FieldTrip using a minimal example. In our case, what we think that FieldTrip really needs is that when you run **[ft_defaults](/reference/ft_defaults)**, you get a text saying _Welcome to FieldTrip_. So we need to create a new function that prints _Welcome to FieldTrip_ and modify the existing function **[ft_defaults](/reference/ft_defaults)** to run our new function. We expect that you already have git running on your system (see [installation instructions](http://git-scm.com/book/en/Getting-Started-Installing-Git)) and that you have an account on [github.com](https://github.com) (see [set up git](https://help.github.com/articles/set-up-git)). Let's say that your username on GitHub is _USERNAME_.
+Now that the main concepts are explained, we will try to add a new feature to FieldTrip using a minimal example. In our case, what we think that FieldTrip really needs is that when you run **[ft_defaults](/reference/ft_defaults)**, you get a text saying _Welcome to FieldTrip_. So we need to create a new function that prints _Welcome to FieldTrip_ and modify the existing function **[ft_defaults](/reference/ft_defaults)** to run our new function. We expect that you already have git running on your system (see [installation instructions](https://git-scm.com/book/en/Getting-Started-Installing-Git)) and that you have an account on [github.com](https://github.com) (see [set up git](https://help.github.com/articles/set-up-git)). Let's say that your username on GitHub is _USERNAME_.
 
 ### 1. Fork the main FieldTrip
 
@@ -348,7 +348,7 @@ After this, both the local copy on your hard drive and your copy on [github.com]
 
 Troubleshooting: pushing your master branch to your _origin_ personal GitHub repository may throw the error "This repository is configured for Git LFS but 'git-lfs' was not found on your path. If you no longer wish to use Git LFS, remove this hook by deleting .git/hooks/pre-push." This .git directory can be found in the local directory of your repository (../fieldtrip/.git).
 
-Working with remotes is explained in more detail in the [Git book](http://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes).
+Working with remotes is explained in more detail in the [Git book](https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes).
 
 ## Graphical summary
 
@@ -364,7 +364,7 @@ Simple edits to the website can be made through the online github interface. At 
 
 ### Creation of new content.
 
-If you want to create new content, e.g., a frequently asked question, or want to add (or replace) figures, you need to create a fork of the website repository, and make a clone locally. For instance, if you then want to create a new faq, you should create a new markdown file in the faq-directory of the repository (to keep things somewhat organised). In order for this page to be found, a link to it should be created in the faq.md file, which is in the website's repo top folder. Links to other files in the repo, both to webpages and figures, are to be formatted as follows: _[<some text>](/<some path>/<file>)_. If linking to a markdown file, the extension .md is to be omitted from the link. Thus, if you want to link to a markdown file in the folder 'faq' called thebestfaqever.md, you can link to it as: _[The best faq ever](/faq/thebestfaqever)_. 
+If you want to create new content, e.g., a frequently asked question, or want to add (or replace) figures, you need to create a fork of the website repository, and make a clone locally. For instance, if you then want to create a new faq, you should create a new markdown file in the faq-directory of the repository (to keep things somewhat organised). In order for this page to be found, a link to it should be created in the faq.md file, which is in the website's repo top folder. Links to other files in the repo, both to webpages and figures, are to be formatted as follows: _[<some text>](/<some path>/<file>)_. If linking to a markdown file, the extension .md is to be omitted from the link. Thus, if you want to link to a markdown file in the folder 'faq' called thebestfaqever.md, you can link to it as: _[The best faq ever](/faq/thebestfaqever)_.
 If you want to update an existing figure, you can locate the original figure by looking at the link in the markdown file. You'll notice that the figure are all stored somewhere in the assets/img folder. If you are to update an existing figure, please put the new figure in the same sub-directory. If you are creating new figures, consider the file structure. For instance, tutorials have a dedicated sub-directory in which the figures pertaining to the specific tutorial page are stored. Figure files should be in a sufficiently high resolution bitmap image format (png or jpeg).
 
 ## Want more?

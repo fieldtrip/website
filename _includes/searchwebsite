@@ -3,9 +3,9 @@
 
 <script>
 if (readCookie('allow-external-cookies')=='true') {
-  document.getElementById("searchwebsite").innerHTML = '<form method="get" action="http://www.google.com/search"><input type="text" name="q" placeholder="Search using Google"/><input type="hidden" name="q" value="site:www.fieldtriptoolbox.org OR site:mailman.science.ru.nl/pipermail/fieldtrip"><input type="submit" value="🔍" /></form>'
+  document.getElementById("searchwebsite").innerHTML = '<form method="get" action="https://www.google.com/search"><input type="text" name="q" placeholder="Search using Google"/><input type="hidden" name="q" value="site:www.fieldtriptoolbox.org OR site:mailman.science.ru.nl/pipermail/fieldtrip"><input type="submit" value="🔍" /></form>'
 }
 else {
-  document.getElementById("searchwebsite").innerHTML = '<form method="get" id="search" action="http://duckduckgo.com/"><input type="text" name="q" maxlength="255" placeholder="Search using DuckDuckGo"/><input type="hidden" name="sites" value="www.fieldtriptoolbox.org OR site:mailman.science.ru.nl/pipermail/fieldtrip"/><input type="submit" value="🔍" /></form>'
+  document.getElementById("searchwebsite").innerHTML = '<form method="get" id="search" action="https://duckduckgo.com/"><input type="text" name="q" maxlength="255" placeholder="Search using DuckDuckGo"/><input type="hidden" name="sites" value="www.fieldtriptoolbox.org OR site:mailman.science.ru.nl/pipermail/fieldtrip"/><input type="submit" value="🔍" /></form>'
 }
 </script>

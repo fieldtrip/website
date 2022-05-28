@@ -139,7 +139,7 @@ We reslice the MRI on to a 1x1x1 mm cubic grid which is aligned with the coordin
 
 ### Construct the MEG volume conduction model
 
-Now that we have the anatomical MRI coregistered and resliced in to [isotropic](http://en.wikipedia.org/wiki/Isotropy) voxels, we proceed and segment the brain, skull and scalp tissue.
+Now that we have the anatomical MRI coregistered and resliced in to [isotropic](https://en.wikipedia.org/wiki/Isotropy) voxels, we proceed and segment the brain, skull and scalp tissue.
 
     cfg           = [];
     cfg.output    = {'brain', 'skull', 'scalp'};
@@ -199,7 +199,7 @@ After having confirmed that the segmentations are consistent with the anatomical
 Why do we use fewer vertices for the outer mesh than for the inner mesh?
 {% include markup/end %}
 
-These meshes are all relatively coarse and don't look so nice in a visualization. Using the _isosurface_ method (also known as [Marching Cubes](http://en.wikipedia.org/wiki/Marching_cubes)) we can extract a much nicer looking skin conpartment.
+These meshes are all relatively coarse and don't look so nice in a visualization. Using the _isosurface_ method (also known as [Marching Cubes](https://en.wikipedia.org/wiki/Marching_cubes)) we can extract a much nicer looking skin conpartment.
 
     cfg = [];
     cfg.method = 'isosurface';
@@ -331,7 +331,7 @@ Using the _trialinfo_ field, which contains the trigger code, the response code 
 
 {% include image src="/assets/img/workshop/natmeg/dipolefitting/natmeg_dip_meg_multiplot.png" width="600" %}
 
-As before, we also compute the difference waveform, i.e. the [mismatch negativity](http://en.wikipedia.org/wiki/Mismatch_negativity).
+As before, we also compute the difference waveform, i.e. the [mismatch negativity](https://en.wikipedia.org/wiki/Mismatch_negativity).
 
     cfg = [];
     cfg.parameter = 'avg';

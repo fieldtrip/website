@@ -33,7 +33,7 @@ The following macro names are defined at compile time and may be handy for debug
 compliant with the C++ standard its value is equal or greater than 199711L depending on the version
 of the standard they comply.
 
-The threaded functions should be checked with http://en.wikipedia.org/wiki/Reentrant in mind
+The threaded functions should be checked with https://en.wikipedia.org/wiki/Reentrant in mind
 
 ## Suggestions for improvement
 

@@ -304,7 +304,7 @@ The **[ft_selectdata](/reference/utilities/ft_selectdata)** function is a very h
 
 {% include image src="/assets/img/workshop/natmeg/statistics/natmeg_stat_erf.png" width="500" %}
 
-To assess whether there is a significant difference between the two conditions, we also need to know what the variance in the data is. In principle we could use the variance that is estimated by **[ft_timelockanalysis](/reference/ft_timelockanalysis)** and manualy compute the [t-test](http://en.wikipedia.org/wiki/Student%27s_t-test).
+To assess whether there is a significant difference between the two conditions, we also need to know what the variance in the data is. In principle we could use the variance that is estimated by **[ft_timelockanalysis](/reference/ft_timelockanalysis)** and manualy compute the [t-test](https://en.wikipedia.org/wiki/Student%27s_t-test).
 
     disp(ERF_std)
 

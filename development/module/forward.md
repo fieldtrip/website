@@ -160,7 +160,7 @@ MATLAB allows the representation of any data in arrays, but does not have an exp
 - the units of the channel level values (e.g., T, uV or fT/cm)
 - the units of of dipole strength
 
-The forward module functions are written such that they operate correctly if all input data to the functions is specified according to the [International System of Units](http://en.wikipedia.org/wiki/International_System_of_Units), i.e. in meter, Volt, Tesla, Ohm, Ampere, etc. The high-level FieldTrip code or any other code that calls the forward module functions (e.g., EEGLAB) is responsible for data handling and bookkeeping and for converting MATLAB arrays and structures that represent units into SI units prior to passing the arrays and structures to the forward code.
+The forward module functions are written such that they operate correctly if all input data to the functions is specified according to the [International System of Units](https://en.wikipedia.org/wiki/International_System_of_Units), i.e. in meter, Volt, Tesla, Ohm, Ampere, etc. The high-level FieldTrip code or any other code that calls the forward module functions (e.g., EEGLAB) is responsible for data handling and bookkeeping and for converting MATLAB arrays and structures that represent units into SI units prior to passing the arrays and structures to the forward code.
 
 ## Related documentation
 

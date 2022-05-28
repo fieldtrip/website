@@ -77,7 +77,7 @@ when running **[ft_timelockstatistics](/reference/ft_timelockstatistics)**. We c
     stat = ft_timelockstatistics(cfg,tleft,tright);
     stat.statistic.contingency
 
-We may also plot the parameters of the used classifier as if it were electrophysiological data. This is represented in the stat.model field. For each fold we have a model and each such model may contain different parameters. For example, for the default support vector machine ([SVM](http://en.wikipedia.org/wiki/Support_vector_machine)), we have a stat.model{i}.primal field for each fold i. The easiest way to plot one of the parameters is to assign it to a different field in the stat object:
+We may also plot the parameters of the used classifier as if it were electrophysiological data. This is represented in the stat.model field. For each fold we have a model and each such model may contain different parameters. For example, for the default support vector machine ([SVM](https://en.wikipedia.org/wiki/Support_vector_machine)), we have a stat.model{i}.primal field for each fold i. The easiest way to plot one of the parameters is to assign it to a different field in the stat object:
 
     stat.mymodel = stat.model{1}.primal;
 

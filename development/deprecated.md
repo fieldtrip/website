@@ -7,7 +7,7 @@ title: Deprecated functions and options
 # Deprecated functions and options
 
 {% include markup/info %}
-Definition of **[deprecation](http://en.wikipedia.org/wiki/Deprecated)**
+Definition of **[deprecation](https://en.wikipedia.org/wiki/Deprecated)**
 (_From Wikipedia, the free encyclopedia_)
 
 In computer software standards and documentation, deprecation is the gradual phasing-out of a software or programming language feature.

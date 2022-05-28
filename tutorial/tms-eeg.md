@@ -601,7 +601,7 @@ We will first recreate our original trial structure. For this purpose we require
     cfg.trl = trl;
     data_tms_clean = ft_redefinetrial(cfg, data_tms_clean_segmented); % Restructure cleaned data
 
-We've now recreated the original trial structure and put all pieces of data back into their original position. The gaps in the data due to the ringing and recharge artefacts have been willed with NaN, i.e. [not-a-number values](http://en.wikipedia.org/wiki/NaN).
+We've now recreated the original trial structure and put all pieces of data back into their original position. The gaps in the data due to the ringing and recharge artefacts have been willed with NaN, i.e. [not-a-number values](https://en.wikipedia.org/wiki/NaN).
 
     >> data_tms_clean
 

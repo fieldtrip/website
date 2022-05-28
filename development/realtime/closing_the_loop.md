@@ -20,7 +20,7 @@ The **[ft_write_event](/reference/fileio/ft_write_event)** function includes `se
 
 ## Communicating to a serial port using a TCP network connection
 
-[HW VSP](http://www.hw-group.com/products/hw_vsp/index_en.html) is a software driver that adds a virtual serial port (e.g., COM5) to the operating system and redirects the data from this port via a TCP/IP network to another hardware interface, which is specified by its IP address and port number. Alternative products are listed here <http://en.wikipedia.org/wiki/COM_port_redirector>.
+[HW VSP](http://www.hw-group.com/products/hw_vsp/index_en.html) is a software driver that adds a virtual serial port (e.g., COM5) to the operating system and redirects the data from this port via a TCP/IP network to another hardware interface, which is specified by its IP address and port number. Alternative products are listed here <https://en.wikipedia.org/wiki/COM_port_redirector>.
 
 ## Communicating over a parallel port connection
 
@@ -31,7 +31,7 @@ parallel ports, network ports, and special digital I/O boxes.
 
 ## Communicating with a VNC server
 
-VNC and derivatives use the Remote Frame Buffer (RFB) protocol for communication. More details and the full specification can be found at http://en.wikipedia.org/wiki/RFB.
+VNC and derivatives use the Remote Frame Buffer (RFB) protocol for communication. More details and the full specification can be found at https://en.wikipedia.org/wiki/RFB.
 
 The **[ft_write_event](/reference/fileio/ft_write_event)** function includes `rfb://<password>@<host>:<port>` as a target communication stream.
 

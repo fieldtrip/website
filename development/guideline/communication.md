@@ -9,7 +9,7 @@ To communicate with and reach a wide audience, we use the following channels
 
 - this website, for documentation
 - the email [discussion list](/discussion_list), for interactions among users to help each other out
-- [GitHub](http://github.com/fieldtrip), for interaction between developpers
+- [GitHub](https://github.com/fieldtrip), for interaction between developpers
 - [Twitter](http://twitter.com/fieldtriptoolbx), for announcements and news
 
 With each of these we reach out to a specific group FieldTrip stakeholders but - alhough they are partially overlapping - there is none through which we reach everyone.

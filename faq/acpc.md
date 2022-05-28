@@ -12,7 +12,7 @@ There are a number of coordinate systems that have the origin, i.e., the [0,0,0]
 - MNI, MNI152 or SPM is used if the geometry is spatially warped to the MNI152 template brain.
 - MNI305 or FSAVERAGE is used if the geometry is spatially warped to the MNI305 template brain.
 
-In all cases the origin is at the [Anterior Commissure](http://en.wikipedia.org/wiki/Anterior_commissure) and the negative y-axis is passing through the [Posterior Commissure](http://en.wikipedia.org/wiki/Posterior_commissure).
+In all cases the origin is at the [Anterior Commissure](https://en.wikipedia.org/wiki/Anterior_commissure) and the negative y-axis is passing through the [Posterior Commissure](https://en.wikipedia.org/wiki/Posterior_commissure).
 
 Coordinates expressed in the TAL, MNI/MNI152/SPM, and MNI305/FSAVERAGE coordinate system all imply that some spatial deformation was done; they can be looked up in the corresponding template or atlas. For ACPC coordinates no deformation was done; they can be used to express location in an individual subject, or measure distance, volume or surface area.
 

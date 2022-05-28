@@ -7,7 +7,7 @@ redirect_from:
 
 # Contribute
 
-FieldTrip is an [Open Source](http://www.opensource.org) project with contributions from many individual users and research groups. There are various ways in which **_you can also contribute_** to FieldTrip.
+FieldTrip is an [Open Source](https://www.opensource.org) project with contributions from many individual users and research groups. There are various ways in which **_you can also contribute_** to FieldTrip.
 
 ## Share your expertise
 

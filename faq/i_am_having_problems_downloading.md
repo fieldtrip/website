@@ -22,7 +22,7 @@ The FTP service runs on a shared server which occasionally has a performance bot
 If downloading from the FTP server in the web browser continues to give problems, please try the following:
 
 1. try it with another web browser, such as [Chrome](https://www.google.com/chrome/), [Firefox](http://getfirefox.org), Safari or Edge
-2. try it with a specific [ftp client](http://www.google.com/search?q=ftp+client), such as [CyberDuck](https://cyberduck.io) or [FileZilla](https://filezilla-project.org)
+2. try it with a specific [ftp client](https://www.google.com/search?q=ftp+client), such as [CyberDuck](https://cyberduck.io) or [FileZilla](https://filezilla-project.org)
 
 If none of these resolves it, you can continue with the following suggestions.
 
@@ -32,7 +32,7 @@ Chrome has an option `#enable-ftp` that you can find by typing `chrome://flags/`
 
 ### Set the default application handler for FTP URLs in Windows
 
-In Windows you navigate to "Windows System settings", then "Standard applications", and then "Standard applications per protocol". There you can select which application is to be used to handle FTP. If the list is empty, you should install an [ftp client](http://www.google.com/search?q=ftp+client) such as [CyberDuck](https://cyberduck.io) or [FileZilla](https://filezilla-project.org), or you should allow Chrome to deal with FTP URLs (see below).
+In Windows you navigate to "Windows System settings", then "Standard applications", and then "Standard applications per protocol". There you can select which application is to be used to handle FTP. If the list is empty, you should install an [ftp client](https://www.google.com/search?q=ftp+client) such as [CyberDuck](https://cyberduck.io) or [FileZilla](https://filezilla-project.org), or you should allow Chrome to deal with FTP URLs (see below).
 
 ### Set the default application handler for FTP URLs in macOS
 

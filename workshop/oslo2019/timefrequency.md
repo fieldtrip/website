@@ -26,7 +26,7 @@ Calculating time-frequency representations of power using Fourier analysis is do
 _Figure: Time and frequency smoothing. (a) For a fixed length time window the time and frequency smoothing remains fixed. (b) For time windows that decrease with frequency, the temporal smoothing decreases and the frequency smoothing increases._
 
 If you want to know more about tapers/window functions you can have a look at this
-[Wikipedia site](http://en.wikipedia.org/wiki/Window_function). Note that Hann window is another name for the Hanning window used in this tutorial.
+[Wikipedia site](https://en.wikipedia.org/wiki/Window_function). Note that Hann window is another name for the Hanning window used in this tutorial.
 
 ## Procedure
 

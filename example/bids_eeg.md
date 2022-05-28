@@ -127,7 +127,7 @@ Information that is subject specific and identical for all recordings goes via `
 
 ## Finalize the BIDS dataset
 
-There are some things which are not so conveniently implemented as a MATLAB script, for example filling out all details in the top-level `dataset_description.json` file, adding a `README` file and updating the `CHANGES` file. These are things you would usually do using a regular text editor after converting all data. You should also use the [bids-validator](http://github.com/bids-standard/bids-validator/) to check compliance. Note that the online validator does not require you to upload any data; it runs as JavaScript in your local browser, so the files stay on your computer.
+There are some things which are not so conveniently implemented as a MATLAB script, for example filling out all details in the top-level `dataset_description.json` file, adding a `README` file and updating the `CHANGES` file. These are things you would usually do using a regular text editor after converting all data. You should also use the [bids-validator](https://github.com/bids-standard/bids-validator/) to check compliance. Note that the online validator does not require you to upload any data; it runs as JavaScript in your local browser, so the files stay on your computer.
 
 In converting data from one to another format there is always a chance of loosing information. Therefore you should store the data files in their original format in the `bids/sourcedata` directory. This also applies to auxiliary files, lab notes, presentation log files and other information that you do not want to loose.
 

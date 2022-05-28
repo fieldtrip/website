@@ -24,9 +24,9 @@ The real-world interpretation of the coordinate system can typically not be dete
 
 The remainder of this page describes the native conventions for the coordinate systems for a number of standard atlasses, MEG systems, EEG systems, MRI systems, and for various software packages involved in processing geometrical data. Of course it might always possible that the specific user of one of these systems uses a different coordinate system.
 
-The coordinate systems used in EEG and MEG measurements are usually defined in terms of anatomical landmarks on the outside of the head, such as the [nasion](http://en.wikipedia.org/wiki/Nasion), [inion](http://en.wikipedia.org/wiki/Inion) and the left and right pre-auricular points. Please see [this FAQ](/faq/how_are_the_lpa_and_rpa_points_defined) for a discussion of the LPA and RPA.
+The coordinate systems used in EEG and MEG measurements are usually defined in terms of anatomical landmarks on the outside of the head, such as the [nasion](https://en.wikipedia.org/wiki/Nasion), [inion](https://en.wikipedia.org/wiki/Inion) and the left and right pre-auricular points. Please see [this FAQ](/faq/how_are_the_lpa_and_rpa_points_defined) for a discussion of the LPA and RPA.
 
-The coordinate systems used for imaging methods such as MRI, PET and CT are usually defined in terms of internal brain structures, such as the [anterior](http://en.wikipedia.org/wiki/Anterior_commissure) and [posterior](http://en.wikipedia.org/wiki/Posterior_commissure) commissure. Furthermore, imaging data is sometimes scaled to a specific standard size, e.g., based on the [Talairach-Tournoux atlas](http://en.wikipedia.org/wiki/Jean_Talairach) or one of the templates from the [Montreal Neurological Institute (MNI)](http://en.wikipedia.org/wiki/Montreal_Neurological_Institute). An elaborate discussion on the relation between the Talairach-Tournoux atlas and the MNI templates can be found [here](http://imaging.mrc-cbu.cam.ac.uk/imaging/MniTalairach).
+The coordinate systems used for imaging methods such as MRI, PET and CT are usually defined in terms of internal brain structures, such as the [anterior](https://en.wikipedia.org/wiki/Anterior_commissure) and [posterior](https://en.wikipedia.org/wiki/Posterior_commissure) commissure. Furthermore, imaging data is sometimes scaled to a specific standard size, e.g., based on the [Talairach-Tournoux atlas](https://en.wikipedia.org/wiki/Jean_Talairach) or one of the templates from the [Montreal Neurological Institute (MNI)](https://en.wikipedia.org/wiki/Montreal_Neurological_Institute). An elaborate discussion on the relation between the Talairach-Tournoux atlas and the MNI templates can be found [here](http://imaging.mrc-cbu.cam.ac.uk/imaging/MniTalairach).
 
 Imaging methods such as MRI and CT result in 3-D volumetric representations of the data, e.g., with 256x256x256 voxels. You can think of this representation as having a "voxel" coordinate system, where voxel (1, 1, 1) is the first and (256, 256, 256) is the last in the volume. The voxel coordinate system however does not specify the geometrical dimensions (e.g., mm or cm) and does not specify how the head (which is somewhere within the volume) relates to the voxel indices. Therefore a volumetric description of imaging data as a 3-D array has to be complemented with a description of the head coordinate system. This description is commonly implemented using a [4x4 homogenous coordinate transformation matrix](/faq/homogenous).
 
@@ -74,7 +74,7 @@ See also this [frequently asked question](/faq/acpc).
 
 The Allen Institute has created a [scalable mouse brain atlas (ABA12)](http://scalablebrainatlas.incf.org/ABA12). In this atlas, the coordinate system is defined as
 
-- The origin of the coordinate system is at the [Bregma point](http://en.wikipedia.org/wiki/Bregma).
+- The origin of the coordinate system is at the [Bregma point](https://en.wikipedia.org/wiki/Bregma).
 - The X-axis points from left (-) to right (+).
 - The Y-axis points from posterior (-) to anterior (+).
 - The Z-axis points from inferior (-) to superior (+).
@@ -217,14 +217,14 @@ Warning: various software implementations that write NIfTI files are inconsisten
 
 The Paxinos-Franklin atlas [The Mouse Brain in Stereotaxic Coordinate (2001)](http://www.amazon.com/Mouse-Stereotaxic-Coordinates-Second-Edition/dp/0125476361) defines a commonly used coordinate system for the mouse brain anatomy. Note however, that other coordinate system definitions are also being used.
 
-For the mouse coordinate system it is relevant to understand the similarities and differences in nomenclature between the human anatomy and that of most other animals. A nice explanation is provided on [Wikipedia](http://en.wikipedia.org/wiki/Anatomical_terms_of_location) and [here](http://johnhawks.net/explainer/laboratory/anatomical-directions/).
+For the mouse coordinate system it is relevant to understand the similarities and differences in nomenclature between the human anatomy and that of most other animals. A nice explanation is provided on [Wikipedia](https://en.wikipedia.org/wiki/Anatomical_terms_of_location) and [here](http://johnhawks.net/explainer/laboratory/anatomical-directions/).
 
-The Paxinos-Franklin atlas specifies two points of reference: the [Bregma point](http://en.wikipedia.org/wiki/Bregma) and the midpoint of the intra-aural line. Both are indicated as [0, 0, 0] in the atlas, here we will use the Bregma point as origin.
+The Paxinos-Franklin atlas specifies two points of reference: the [Bregma point](https://en.wikipedia.org/wiki/Bregma) and the midpoint of the intra-aural line. Both are indicated as [0, 0, 0] in the atlas, here we will use the Bregma point as origin.
 
-- The origin of the coordinate system is at the [Bregma point](http://en.wikipedia.org/wiki/Bregma).
+- The origin of the coordinate system is at the [Bregma point](https://en.wikipedia.org/wiki/Bregma).
 - The X-axis extends along the Medial-Lateral direction, with positive towards the right (see below).
 - The Y-axis points from Dorsal to Ventral, i.e. towards the top of the head.
-- The Z-axis points from Cranial to Caudal, or Anterior to Posterior, i.e. towards the tail of the animal. The Z-axis extends from the [Bregma point](http://en.wikipedia.org/wiki/Bregma) to the [Lambda point](<http://en.wikipedia.org/wiki/Lambda_(anatomy)>)
+- The Z-axis points from Cranial to Caudal, or Anterior to Posterior, i.e. towards the tail of the animal. The Z-axis extends from the [Bregma point](https://en.wikipedia.org/wiki/Bregma) to the [Lambda point](<https://en.wikipedia.org/wiki/Lambda_(anatomy)>)
 
 The Paxinos-Franklin atlas is not explicit about the positive and negative x-direction. We observe that the y-axis is from Inferior to Superior and the z-axis from Anterior to Posterior, which means that we obtain a right-handed coordinate system by defining the x-axis from Medial to the _Right_ Lateral side.
 

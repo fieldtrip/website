@@ -75,7 +75,7 @@ The **[ft_prepare_mesh](/reference/ft_prepare_mesh)** function has the 'projectm
 
 The projectmesh method works by projecting lines from the center of an icosaedron or other nice sphretical mesh through the vertices, to obtain the points of the volume that correspond to the transition between inside (true) and outside (false of the binary volume. The resulting surface is closed and topologically equivalent to a sphere. However, the triangles are not uniformly sized over the whole surface.
 
-The isosurface method corresponds to the [marching cubes algorithm](http://en.wikipedia.org/wiki/Marching_cubes) implemented by the MATLAB isosurface.m function. This results in a very detailed description of the surface. The level of detail is typically too large for BEM, making it computationally too slow. Furthermore, the resulting mesh is not guaranteed to be closed (i.e. topologically equivalent to a sphere).
+The isosurface method corresponds to the [marching cubes algorithm](https://en.wikipedia.org/wiki/Marching_cubes) implemented by the MATLAB isosurface.m function. This results in a very detailed description of the surface. The level of detail is typically too large for BEM, making it computationally too slow. Furthermore, the resulting mesh is not guaranteed to be closed (i.e. topologically equivalent to a sphere).
 
 The iso2mesh method uses the vol2surf function from the [iso2mesh](http://iso2mesh.sourceforge.net) toolbox.
 

@@ -12,7 +12,7 @@ Navigate to the directory ''fieldtrip/realtime/bin/ARCH'' where ARCH is the arch
 | Architecture | Description                                                             |
 | ------------ | ----------------------------------------------------------------------- |
 | win32        | 32-bit Microsoft Windows                                                |
-| mac          | 32-bit macOS on [PPC](http://en.wikipedia.org/wiki/PowerPC) hardware    |
+| mac          | 32-bit macOS on [PPC](https://en.wikipedia.org/wiki/PowerPC) hardware    |
 | maci         | 32-bit macOS                                                            |
 | maci64       | 64-bit macOS                                                            |
 | glnx86       | 32-bit Linux                                                            |
@@ -73,7 +73,7 @@ to see the amount of data in the buffer steadily increasing over time. Note that
 
 {% include image src="/assets/img/faq/how_should_i_get_started_with_the_fieldtrip_realtime_buffer/screen_shot_2013-11-12_at_17.05.01.png" width="400" %}
 
-After a certain amount of time, the [ring buffer](http://en.wikipedia.org/wiki/Circular_buffer) will fill up and start wrapping around. From that point onward you will not be able to read the data all the way back from sample 1.
+After a certain amount of time, the [ring buffer](https://en.wikipedia.org/wiki/Circular_buffer) will fill up and start wrapping around. From that point onward you will not be able to read the data all the way back from sample 1.
 
 You can combine the **[ft_read_header](/reference/fileio/ft_read_header)** and **[ft_read_data](/reference/fileio/ft_read_data)** calls to plot only the data of interest. You can also use **[ft_read_event](/reference/fileio/ft_read_event)** to determine triggers, and based on those process certain pieces of data.
 

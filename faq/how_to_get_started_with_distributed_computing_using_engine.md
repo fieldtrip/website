@@ -5,7 +5,7 @@ tags: [faq, engine]
 
 # How to get started with distributed computing using engine?
 
-The [FieldTrip engine toolbox](http://github.com/fieldtrip/fieldtrip/tree/master/engine) is a small stand-alone toolbox to facilitate distributed computing. You can use the engine toolbox on a single computer with multiple CPUs or multiple cores. In principle it is also possible to start the engines on other (UNIX) computers using ssh, although that has not been tested.
+The [FieldTrip engine toolbox](https://github.com/fieldtrip/fieldtrip/tree/master/engine) is a small stand-alone toolbox to facilitate distributed computing. You can use the engine toolbox on a single computer with multiple CPUs or multiple cores. In principle it is also possible to start the engines on other (UNIX) computers using ssh, although that has not been tested.
 
 Let's assume that you have a quad-core CPU and that you want to run some jobs in parallel. You start MATLAB and type
 

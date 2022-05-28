@@ -5,11 +5,11 @@ tags: [faq, fiducial, mri, ctf, source, coordinate]
 
 # How are the Left and Right Pre-Auricular (LPA and RPA) points defined?
 
-The definition of the pre-auriciular point taken from <http://www.medilexicon.com> is _"a point of the posterior root of the zygomatic arch lying immediately in front of the upper end of the tragus"_. The [zygomatic arch](http://en.wikipedia.org/wiki/Zygomatic_arch) or cheek bone is the skull bone in front of the ear as depicted in this figure
+The definition of the pre-auriciular point taken from <http://www.medilexicon.com> is _"a point of the posterior root of the zygomatic arch lying immediately in front of the upper end of the tragus"_. The [zygomatic arch](https://en.wikipedia.org/wiki/Zygomatic_arch) or cheek bone is the skull bone in front of the ear as depicted in this figure
 
 {% include image src="/assets/img/faq/how_are_the_lpa_and_rpa_points_defined/zygomatic_arch.png" width="200" %}
 
-and the [tragus](<http://en.wikipedia.org/wiki/Tragus_(ear)>) is a small backward-pointing eminence situated in front of the ear canal.
+and the [tragus](<https://en.wikipedia.org/wiki/Tragus_(ear)>) is a small backward-pointing eminence situated in front of the ear canal.
 
 {% include image src="/assets/img/faq/how_are_the_lpa_and_rpa_points_defined/tragus.png" width="200" %}
 
@@ -33,7 +33,7 @@ When using different fiducial locations in the MEG and the MRI, the difference i
 
 The consequence of different fiducial locations in different labs is that the terms "LPA" and "RPA", although used in software such as FieldTrip and other EEG/MEG tools, do not always refer to the same anatomical landmarks. In your analysis you have to take care that the positions consistently refer to the same landmarks, whether they are in front of the ear, on the tragus or in line with the ear canal. So whenever the software uses LPA and RPA, you have to be aware of your lab convention.
 
-Note that for the [nasion](http://en.wikipedia.org/wiki/Nasion), where at the Donders Centre we also place one of the MEG localizer coils, we do not use a MRI marker. The nasion is easy to identify in the anatomical MRI images.
+Note that for the [nasion](https://en.wikipedia.org/wiki/Nasion), where at the Donders Centre we also place one of the MEG localizer coils, we do not use a MRI marker. The nasion is easy to identify in the anatomical MRI images.
 
 ## See also
 
