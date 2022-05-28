@@ -7,7 +7,7 @@
     }
 </style>
 
-<div id="cookie-notice"><span>We would like to use third party cookies and scripts to improve the functionality of this website.</span>
+<div id="cookie-notice"><span>We use third party cookies and scripts to improve the functionality of this website.</span>
 <span id="CookieModal" class="in">
 <a id="cookie-notice-accept" class="btn btn-primary btn-sm" data-dismiss="true">Approve</a>
 </span>
@@ -27,16 +27,16 @@
     elem.parentNode.removeChild(elem);
   }
   else {
-    // show the cookie banner and ask for permission for the next 31 days
+    // show the cookie banner and ask for permission for the next 100 days
     document.getElementById('cookie-notice').style.display = 'block';
 
     document.getElementById('cookie-notice-accept').addEventListener("click",function() {
-      createCookie('allow-external-cookies','true',31);
+      createCookie('allow-external-cookies','true',100);
       document.getElementById('cookie-notice').style.display = 'none';
       location.reload();
     });
     document.getElementById('cookie-notice-reject').addEventListener("click",function() {
-      createCookie('allow-external-cookies','false',31);
+      createCookie('allow-external-cookies','false',100);
       document.getElementById('cookie-notice').style.display = 'none';
       location.reload();
     });

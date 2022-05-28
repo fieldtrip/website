@@ -4,6 +4,3 @@
 <title>{{page.title}} - FieldTrip toolbox</title>
 <link rel="stylesheet" href="/assets/css/main.css">
 <link rel="shortcut icon" href="/assets/icon/favicon.ico">
-
-<!-- Deal with permission for external cookies -->
-<script src="/assets/js/cookies.js"></script>

@@ -1,11 +1,2 @@
 <!-- Mailing list search -->
-<div id="searchlistarchive"></div>
-
-<script>
-if (readCookie('allow-external-cookies')=='true') {
-  document.getElementById("searchlistarchive").innerHTML = '<form method="get" action="https://www.google.com/search"><input type="hidden" name="q" value="site:mailman.science.ru.nl/pipermail/fieldtrip">Search the mailing list <input type="text" name="q" placeholder="using Google"/><input type="submit" value="🔍" /></form>'
-}
-else {
-  document.getElementById("searchlistarchive").innerHTML = '<form method="get" action="https://duckduckgo.com/"><input type="hidden" name="sites" value="mailman.science.ru.nl/pipermail/fieldtrip"/>Search the mailing list <input type="text" name="q" maxlength="255" placeholder="using DuckDuckGo"/><input type="submit" value="🔍" /></form>'
-}
-</script>
+<form method="get" action="https://www.google.com/search"><input type="hidden" name="q" value="site:mailman.science.ru.nl/pipermail/fieldtrip">Search the mailing list<input type="text" name="q" placeholder="using Google"><input type="submit" value="🔍" /></form>
