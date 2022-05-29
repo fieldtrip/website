@@ -5,7 +5,7 @@ tags: [example, freq]
 
 # Cross-frequency analysis
 
-There are several ways in which cross-frequency interactions might occur. In [Jensen and Colgin TICS 2007](http://www.sciencedirect.com/science?_ob=ArticleURL&_udi=B6VH9-4NWNF64-3&_user=668715&_coverDate=07%2F31%2F2007&_rdoc=1&_fmt=&_orig=search&_sort=d&view=c&_acct=C000036278&_version=1&_urlVersion=0&_userid=668715&md5=2946af6effbd30ccf5d896ddfa6fa75c) different principles of cross-frequency interactions are shown in Figure 1.
+There are several ways in which cross-frequency interactions might occur. In [Jensen and Colgin TICS 2007](https://doi.org/10.1016/j.tics.2007.05.003) different principles of cross-frequency interactions are shown in Figure 1.
 
 {% include image src="/assets/img/example/crossfreq/jensencolgin.png" width="700" %}
 
