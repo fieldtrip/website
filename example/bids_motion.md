@@ -170,6 +170,328 @@ cfg.task = 'HandChoiceSwitch';
 data2bids(cfg, data_combined);
 ```
 
+## XDF
+
+The XDF format is not a motion capture data acquisition system, but the file format of the [LabRecorder](https://code.google.com/archive/p/labstreaminglayer/wikis/LabRecorder.wiki) that is used in conjunction with [LabStreamingLayer](https://labstreaminglayer.readthedocs.io). LabStreamingLayer, also known as LSL, is often used in Mobile Brain Imaging (MoBI) to record and synchronize data from multiple acquisition devices, such as motion capture systems, EEG systems, eye trackers, etc.
+
+To read and organize data in `.xdf` files you can use **[xdf2fieldtrip](/reference/xdf2fieldtrip)**. When multiple streams are present in a single xdf file, this function resamples to the highest sampling rate and concatenates the streams. This may be problematic for certain data types; for example, orientation data is often recorded as quaternions and requires conversion into euler angles. It might also be that missing data (e.g., eye gaze when the eyes are closed) are represented as zeros, where data at the boundaries between missing and non-missing data should not be interpolated. The **[xdf2fieldtrip](/reference/xdf2fieldtrip)** function also allows reading one stream at a time, which is recommended for converting data streams with different sampling rates to BIDS.
+
+### Example
+
+In the following example we read and do some minimal preprocessing on three data streams: HTCVive for the head, PhaseSpace for the hands and feet, and EEG. These are subsequently exported to a BIDS representation.
+
+{% include markup/success %}
+The original data for the following example and the converted BIDS representation are available from our [download server](https://download.fieldtriptoolbox.org/example/bids_motion/).
+{% include markup/end %}
+
+```
+% xdf to ft motion example
+ft_defaults
+[filepath,~,~] = fileparts(which('ft_defaults'));
+addpath(fullfile(filepath, 'external', 'xdf'))
+
+% List all stream names, we need to know their respective indices
+streams     = load_xdf('./original/spot_rotation_sub1_body.xdf');
+disp(cellfun(@(x) x.info.name,streams,'UniformOutput', false)');
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% READING - read the original data
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+motionStreamHTCVive    = xdf2fieldtrip('./original/spot_rotation_sub1_body.xdf', 'streamindx', 5);
+motionStreamPhaseSpace = xdf2fieldtrip('./original/spot_rotation_sub1_body.xdf', 'streamindx', 6);
+eegStream              = xdf2fieldtrip('./original/spot_rotation_sub1_body.xdf', 'streamindx', 2);
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% PREPROCESSING - convert quaternions to Euler angles
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+data = motionStreamHTCVive;
+
+oldprefix = 'headRigid_Rigid_headRigid_quat_';
+newprefix = 'headRigid_Rigid_headRigid_ori';
+extension = {'X', 'Y', 'Z', 'W'};
+
+sel = nan(size(extension));
+for i=1:numel(extension)
+  sel(i) = find(strcmp(data.label, [oldprefix extension{i}]));
+end
+
+quat2eul = @(x) randn(size(x,1), 3);
+
+% add the Euler angles as channels
+for i=1:numel(data.trial)
+  data.trial{i} = [data.trial{i}; quat2eul(data.trial{i}(sel,:)')'];
+end
+data.label = [data.label; [newprefix 'X']; [newprefix 'Y']; [newprefix 'Z']];
+
+% remove the quaternions
+cfg = [];
+cfg.channel = data.label(~contains(data.label, oldprefix));
+data = ft_selectdata(cfg, data);
+
+motionDataHTCVive = data;
+clear data
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% PREPROCESSING - convert quaternions to Euler angles
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+data = motionStreamPhaseSpace;
+
+for j=1:4
+  oldprefix = sprintf('vizardAllPhasespaceLog_Rigid%d_', j);
+  newprefix = sprintf('vizardAllPhasespaceLog_Rigid%d_ori', j);
+  extension = {'A', 'B', 'C', 'D'};
+
+  sel = nan(size(extension));
+  for i=1:numel(extension)
+    sel(i) = find(strcmp(data.label, [oldprefix extension{i}]));
+  end
+
+  % add the Euler angles as channels
+  for i=1:numel(data.trial)
+    data.trial{i} = [data.trial{i}; quat2eul(data.trial{i}(sel,:)')'];
+  end
+  data.label = [data.label; [newprefix 'X']; [newprefix 'Y']; [newprefix 'Z']];
+
+  % remove the quaternions
+  cfg = [];
+  cfg.channel = setdiff(data.label, data.label(sel));
+  data = ft_selectdata(cfg, data);
+end
+
+motionDataPhaseSpace = data;
+clear data
+
+% most channels are of no interest, only keep some
+cfg = [];
+cfg.channel = {'*Rigid*X', '*Rigid*Y', '*Rigid*Z', '*ori*'};
+motionDataPhaseSpace = ft_selectdata(cfg, motionDataPhaseSpace);
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% BIDS CONVERSION - fill out generic configuration fields and metadata
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+cfg                           = [];
+cfg.bidsroot                  = './bids';
+cfg.sub                       = '001';
+cfg.task                      = 'SpotRotation';
+cfg.dataset_description.Name  = 'Example spot rotation data';
+cfg.motion.TaskName           = 'Rotation';
+
+cfg.scans.acq_time = datetime('now');
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% call data2bids for tracking system "HTCVive"
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+cfg.datatype = 'motion';
+
+% this is used in the filename
+cfg.tracksys = 'HTCVive';
+
+cfg.motion.TrackingSystemName          = 'HTCVive';
+cfg.motion.DeviceSerialNumber          = 'n/a';
+cfg.motion.SoftwareVersions            = 'n/a';
+cfg.motion.ExternalSoftwareVersions    = 'n/a';
+cfg.motion.Manufacturer                = 'HTC';
+cfg.motion.ManufacturersModelName      = 'Vive Pro';
+cfg.motion.SpatialAxes                 = 'FRU';
+cfg.motion.RotationRule                = 'left-hand';
+cfg.motion.RotationOrder               = 'ZXY';
+
+% specify channel details, this overrides the details in the original data structure
+cfg.channels = [];
+cfg.channels.name = {
+  'HTCVive_posX'
+  'HTCVive_posY'
+  'HTCVive_posZ'
+  'HTCVive_yaw' % latency ???
+  'HTCVive_oriX'
+  'HTCVive_oriY'
+  'HTCVive_oriZ'
+  };
+cfg.channels.type = {
+  'POS'
+  'POS'
+  'POS'
+  'unknown'
+  'ORI'
+  'ORI'
+  'ORI'
+  };
+cfg.channels.unit = {
+  'm'
+  'm'
+  'm'
+  'unknown'
+  'rad'
+  'rad'
+  'rad'
+  };
+
+cfg.channels.tracked_point = {
+  'head'
+  'head'
+  'head'
+  'head'
+  'head'
+  'head'
+  'head'
+  };
+
+% rename the channels in the data to match with channels.tsv
+motionDataHTCVive.label = cfg.channels.name;
+
+data2bids(cfg, motionDataHTCVive);
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% call data2bids for tracking system "PhaseSpace"
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+cfg.datatype = 'motion';
+
+cfg.tracksys = 'PhaseSpace';
+
+cfg.motion.TrackingSystemName          = 'PhaseSpace';
+cfg.motion.DeviceSerialNumber          = 'n/a';
+cfg.motion.SoftwareVersions            = 'n/a';
+cfg.motion.ExternalSoftwareVersions    = 'n/a';
+cfg.motion.Manufacturer                = 'PhaseSpace';
+cfg.motion.ManufacturersModelName      = 'ImpulseX';
+cfg.motion.SpatialAxes                 = 'FRU';
+cfg.motion.RotationRule                = 'right-hand';
+cfg.motion.RotationOrder               = 'ZXY';
+
+% specify channel details, this overrides the details in the original data structure
+cfg.channels = [];
+cfg.channels.name = {
+  'PhaseSpace_RB1_posX'
+  'PhaseSpace_RB1_posY'
+  'PhaseSpace_RB1_posZ'
+  'PhaseSpace_RB2_posX'
+  'PhaseSpace_RB2_posY'
+  'PhaseSpace_RB2_posZ'
+  'PhaseSpace_RB3_posX'
+  'PhaseSpace_RB3_posY'
+  'PhaseSpace_RB3_posZ'
+  'PhaseSpace_RB4_posX'
+  'PhaseSpace_RB4_posY'
+
+  'PhaseSpace_RB4_posZ'
+  'PhaseSpace_RB1_oriX'
+  'PhaseSpace_RB1_oriY'
+  'PhaseSpace_RB1_oriZ'
+  'PhaseSpace_RB2_oriX'
+  'PhaseSpace_RB2_oriY'
+  'PhaseSpace_RB2_oriZ'
+  'PhaseSpace_RB3_oriX'
+  'PhaseSpace_RB3_oriY'
+  'PhaseSpace_RB3_oriZ'
+  'PhaseSpace_RB4_oriX'
+  'PhaseSpace_RB4_oriY'
+  'PhaseSpace_RB4_oriZ'
+  };
+cfg.channels.type = {
+  'POS'
+  'POS'
+  'POS'
+  'POS'
+  'POS'
+  'POS'
+  'POS'
+  'POS'
+  'POS'
+  'POS'
+  'POS'
+  'POS'
+  'ORI'
+  'ORI'
+  'ORI'
+  'ORI'
+  'ORI'
+  'ORI'
+  'ORI'
+  'ORI'
+  'ORI'
+  'ORI'
+  'ORI'
+  'ORI'
+  };
+cfg.channels.unit = {
+  'm'
+  'm'
+  'm'
+  'm'
+  'm'
+  'm'
+  'm'
+  'm'
+  'm'
+  'm'
+  'm'
+  'm'
+  'rad'
+  'rad'
+  'rad'
+  'rad'
+  'rad'
+  'rad'
+  'rad'
+  'rad'
+  'rad'
+  'rad'
+  'rad'
+  'rad'
+  };
+cfg.channels.tracked_point = {
+  'leftHand'
+  'leftHand'
+  'leftHand'
+  'rightHand'
+  'rightHand'
+  'rightHand'
+  'leftFoot'
+  'leftFoot'
+  'leftFoot'
+  'rightFoot'
+  'rightFoot'
+  'rightFoot'
+  'leftHand'
+  'leftHand'
+  'leftHand'
+  'rightHand'
+  'rightHand'
+  'rightHand'
+  'leftFoot'
+  'leftFoot'
+  'leftFoot'
+  'rightFoot'
+  'rightFoot'
+  'rightFoot'
+  };
+
+% rename the channels in the data to match with channels.tsv
+motionDataPhaseSpace.label = cfg.channels.name;
+
+data2bids(cfg, motionDataPhaseSpace);
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% call data2bids for the EEG data
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+cfg.datatype = 'eeg';
+
+% update these fields
+cfg.tracksys = [];
+cfg.motion   = [];
+
+cfg.eeg.Manufacturer                = 'BrainProducts';
+cfg.eeg.ManufacturersModelName      = 'n/a';
+
+% specify channel details, this overrides the details in the original data structure
+cfg.channels = []; % I do not know any details
+
+data2bids(cfg, eegStream);
+```
+
+
 ## XSens
 
 [XSens](http://www.xsens.com/) makes IMU-based motion capture systems that are used in the animation industry and in research. Their MVN Analyze system comprises full-body sensor systems and aquisition and analysis software. By default the software stores the data in the proprietary MVN file format, but it allows the data to be exported to C3D and MVNX formats, which are supported by FieldTrip. See also the [getting started](/getting_started/xsens) documentation on this system.
