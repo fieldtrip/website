@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3390/brainsci12050610
+- idtype: pmcid
+  value: PMC9139054
+authors:
+- authtype: Author
+  name: Beumer S
+- authtype: Author
+  name: Boon P
+- authtype: Author
+  name: Klooster DC
+- authtype: Author
+  name: van Ee R
+- authtype: Author
+  name: Carrette E
+- authtype: Author
+  name: Paulides MM
+- authtype: Author
+  name: Mestrom RM
+epubdate: 2022 May 7
+fulljournalname: Brain Sciences
+issue: '5'
+pages: '610'
+pmclivedate: 2022/05/28
+printpubdate: ''
+pubdate: 2022 May 7
+sortdate: 2022/05/07 00:00
+source: Brain Sci
+title: 'Personalized tDCS for Focal Epilepsy—A Narrative Review: A Data-Driven Workflow
+  Based on Imaging and EEG Data'
+uid: '9139054'
+volume: '12'

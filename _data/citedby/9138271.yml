@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3390/biology11050700
+- idtype: pmcid
+  value: PMC9138271
+authors:
+- authtype: Author
+  name: Gouveris H
+- authtype: Author
+  name: Koirala N
+- authtype: Author
+  name: Anwar AR
+- authtype: Author
+  name: Ding H
+- authtype: Author
+  name: Ludwig K
+- authtype: Author
+  name: Huppertz T
+- authtype: Author
+  name: Matthias C
+- authtype: Author
+  name: Groppa S
+- authtype: Author
+  name: Muthuraman M
+epubdate: 2022 May 2
+fulljournalname: Biology
+issue: '5'
+pages: '700'
+pmclivedate: 2022/05/28
+printpubdate: ''
+pubdate: 2022 May 2
+sortdate: 2022/05/02 00:00
+source: Biology (Basel)
+title: Reduced Cross-Frequency Coupling and Daytime Sleepiness in Obstructive Sleep
+  Apnea Patients
+uid: '9138271'
+volume: '11'

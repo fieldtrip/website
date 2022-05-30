@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3390/brainsci12050533
+- idtype: pmcid
+  value: PMC9138550
+authors:
+- authtype: Author
+  name: Cejudo AB
+- authtype: Author
+  name: López-Rojas C
+- authtype: Author
+  name: Gómez-Ariza CJ
+- authtype: Author
+  name: Bajo MT
+epubdate: 2022 Apr 21
+fulljournalname: Brain Sciences
+issue: '5'
+pages: '533'
+pmclivedate: 2022/05/28
+printpubdate: ''
+pubdate: 2022 Apr 21
+sortdate: 2022/04/21 00:00
+source: Brain Sci
+title: ERP Correlates of Prospective Memory and Cue Focality in Children
+uid: '9138550'
+volume: '12'
