@@ -37,6 +37,9 @@
 - name:  Can I compare EEG channels between different electrode caps?
   link:  /faq/capmapping
 
+- name:  Which colormaps are supported?
+  link:  /faq/colormap
+
 - name:  How can I compile the mex files and command-line executable?
   link:  /faq/compile
 
