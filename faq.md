@@ -120,6 +120,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [What is the format of the layout file, which is used for plotting?](/faq/what_is_the_format_of_the_layout_file_which_is_used_for_plotting)
 - [What is the plotting convention for anatomical MRIs?](/faq/what_is_the_plotting_convention_for_anatomical_mris)
 - [Why does my anatomical MRI show upside-down when plotting it with ft_sourceplot?](/faq/why_does_my_anatomical_mri_show_upside-down_when_plotting_it_with_ft_sourceplot)
+- [Which colormaps are supported?](/faq/colormap)
 
 ## Experimental questions
 
