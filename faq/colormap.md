@@ -88,7 +88,7 @@ The following sections of code loop through a large number of the available colo
 
 ## Cyclic copormaps for phase plots
 
-To plot phase color-coded, you need a colormap that starts and ends at the same color. Some of the colormaps that can be used are 'hsv', 'phase', phase2', and 'phase4'. You can check these yourself using the following code.
+To plot phase color-coded, you need a colormap that starts and ends at the same color. Some of the colormaps that can be used are `hsv`, `phase`, `phase2`, `phase4`, and `cyclicgrey`. You can check these yourself using the following code.
 
     % construct linearly increasing angles that wrap twice
     a = [linspace(-pi, pi) linspace(-pi, pi) linspace(-pi, pi)]
