@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fnins.2022.802239
+- idtype: pmcid
+  value: PMC9149083
+authors:
+- authtype: Author
+  name: Basedau H
+- authtype: Author
+  name: Peng KP
+- authtype: Author
+  name: May A
+- authtype: Author
+  name: Mehnert J
+epubdate: 2022 May 16
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '802239'
+pmclivedate: 2022/05/31
+printpubdate: ''
+pubdate: 2022 May 16
+sortdate: 2022/05/16 00:00
+source: Front Neurosci
+title: High-Density Electroencephalography-Informed Multiband Functional Magnetic
+  Resonance Imaging Reveals Rhythm-Specific Activations Within the Trigeminal Nociceptive
+  Network
+uid: '9149083'
+volume: '16'

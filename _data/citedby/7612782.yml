@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '35210592'
+- idtype: doi
+  value: 10.1038/s41562-022-01294-x
+- idtype: pmcid
+  value: PMC7612782
+- idtype: MID
+  value: EMS140747
+authors:
+- authtype: Author
+  name: Buergers S
+- authtype: Author
+  name: Noppeney U
+epubdate: 2022 Feb 24
+fulljournalname: Nature human behaviour
+issue: '5'
+pages: 732-742
+pmclivedate: ''
+printpubdate: 2022 May 1
+pubdate: 2022 Feb 24
+sortdate: 2022/02/24 00:00
+source: Nat Hum Behav
+title: The role of alpha oscillations in temporal binding within and across the senses
+uid: '7612782'
+volume: '6'
