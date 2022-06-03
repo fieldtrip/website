@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '35608254'
+- idtype: doi
+  value: 10.7554/eLife.75027
+- idtype: pmcid
+  value: PMC9159752
+authors:
+- authtype: Author
+  name: Dima DC
+- authtype: Author
+  name: Tomita TM
+- authtype: Author
+  name: Honey CJ
+- authtype: Author
+  name: Isik L
+epubdate: 2022 May 24
+fulljournalname: eLife
+issue: ''
+pages: e75027
+pmclivedate: 2022/06/02
+printpubdate: ''
+pubdate: 2022 May 24
+sortdate: 2022/05/24 00:00
+source: eLife
+title: Social-affective features drive human representations of observed actions
+uid: '9159752'
+volume: '11'
