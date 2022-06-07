@@ -9,13 +9,11 @@ tags: [faq, dataset, sharing]
 Feel free to hit the **edit** button at the bottom of this page to add more links to other open access datasets.
 {% include markup/end %}
 
-The FieldTrip tutorials include a lot of smaller datasets that are available for download. These datasets are listed in [this frequently asked question](/faq/what_types_of_datasets_and_their_respective_analyses_are_used_on_fieldtrip).
+The FieldTrip tutorials include a lot of smaller tutorial datasets that are available for [download](https://download.fieldtriptoolbox.org/). These datasets are detailed in [this frequently asked question](/faq/what_types_of_datasets_and_their_respective_analyses_are_used_on_fieldtrip). Other MEG/EEG data analysis toolboxes like SPM, MNE, EEGLAB and BrainStorm also share tutorial datasets.
 
 On the [Donders Repository](https://data.donders.ru.nl/collections/published), [OpenNeuro](https://openneuro.org), [DataDryad](https://datadryad.org/stash/) and on [Zenodo](https://zenodo.org) you can find many publicly accessible EEG, MEG and fMRI datasets.
 
-On [DataCite](https://search.datacite.org) and on [Google Dataset Search](https://datasetsearch.research.google.com) you san search for datasets that are hosted in publicly accessible repositories.
-
-Other MEG/EEG data analysis toolboxes like SPM, MNE, EEGLAB and BrainStorm also share tutorial datasets.
+On [DataCite](https://search.datacite.org), [Google Dataset Search](https://datasetsearch.research.google.com), and [Mendeley Dataset Search](https://data.mendeley.com/) you can search for data hosted in publicly accessible repositories.
 
 ## Other MEG datasets
 
