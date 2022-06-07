@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1038/s41598-022-13318-7
+- idtype: pmcid
+  value: PMC9160249
+authors:
+- authtype: Author
+  name: Pierrieau E
+- authtype: Author
+  name: Kessouri S
+- authtype: Author
+  name: Lepage JF
+- authtype: Author
+  name: Bernier PM
+epubdate: 2022 Jun 1
+fulljournalname: Scientific Reports
+issue: ''
+pages: '9115'
+pmclivedate: 2022/06/03
+printpubdate: ''
+pubdate: 2022 Jun 1
+sortdate: 2022/06/01 00:00
+source: Sci Rep
+title: Theta but not beta activity is modulated by freedom of choice during action
+  selection
+uid: '9160249'
+volume: '12'

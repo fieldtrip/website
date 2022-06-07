@@ -1,0 +1,50 @@
+articleids:
+- idtype: pmid
+  value: '35410904'
+- idtype: doi
+  value: 10.1212/WNL.0000000000200273
+- idtype: pmcid
+  value: PMC9162161
+authors:
+- authtype: Author
+  name: Arski ON
+- authtype: Author
+  name: Martire DJ
+- authtype: Author
+  name: Young JM
+- authtype: Author
+  name: Wong SM
+- authtype: Author
+  name: Suresh H
+- authtype: Author
+  name: Kerr EN
+- authtype: Author
+  name: Ochi A
+- authtype: Author
+  name: Otsubo H
+- authtype: Author
+  name: Sharma R
+- authtype: Author
+  name: Widjaja E
+- authtype: Author
+  name: Snead OC
+- authtype: Author
+  name: Jain P
+- authtype: Author
+  name: Donner EJ
+- authtype: Author
+  name: Smith ML
+- authtype: Author
+  name: Ibrahim GM
+epubdate: ''
+fulljournalname: Neurology
+issue: '22'
+pages: e2233-e2244
+pmclivedate: ''
+printpubdate: 2022 May 31
+pubdate: 2022 May 31
+sortdate: 2022/05/31 00:00
+source: Neurology
+title: Connectomic Profiles and Cognitive Trajectories After Epilepsy Surgery in Children
+uid: '9162161'
+volume: '98'
