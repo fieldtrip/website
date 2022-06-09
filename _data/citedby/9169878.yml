@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '35258573'
+- idtype: doi
+  value: 10.1162/jocn_a_01843
+- idtype: pmcid
+  value: PMC9169878
+authors:
+- authtype: Author
+  name: Rassi E
+- authtype: Author
+  name: Wutz A
+- authtype: Author
+  name: Peatfield N
+- authtype: Author
+  name: Weisz N
+epubdate: 2022 May 2
+fulljournalname: Journal of Cognitive Neuroscience
+issue: '6'
+pages: 1001-1014
+pmclivedate: ''
+printpubdate: ''
+pubdate: 2022 May 2
+sortdate: 2022/05/02 00:00
+source: J Cogn Neurosci
+title: Efficient Prestimulus Network Integration of Fusiform Face Area Biases Face
+  Perception during Binocular Rivalry
+uid: '9169878'
+volume: '34'

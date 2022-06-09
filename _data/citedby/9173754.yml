@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '35588453'
+- idtype: doi
+  value: 10.1073/pnas.2119599119
+- idtype: pmcid
+  value: PMC9173754
+authors:
+- authtype: Author
+  name: Candia-Rivera D
+- authtype: Author
+  name: Catrambone V
+- authtype: Author
+  name: Thayer JF
+- authtype: Author
+  name: Gentili C
+- authtype: Author
+  name: Valenza G
+epubdate: 2022 May 19
+fulljournalname: Proceedings of the National Academy of Sciences of the United States
+  of America
+issue: '21'
+pages: e2119599119
+pmclivedate: 2022/06/08
+printpubdate: 2022 May 24
+pubdate: 2022 May 19
+sortdate: 2022/05/19 00:00
+source: Proc Natl Acad Sci U S A
+title: Cardiac sympathetic-vagal activity initiates a functional brain–body response
+  to emotional arousal
+uid: '9173754'
+volume: '119'

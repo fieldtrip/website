@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '35286384'
+- idtype: doi
+  value: 10.1162/jocn_a_01845
+- idtype: pmcid
+  value: PMC9169880
+authors:
+- authtype: Author
+  name: Gurariy G
+- authtype: Author
+  name: Mruczek RE
+- authtype: Author
+  name: Snow JC
+- authtype: Author
+  name: Caplovitz GP
+epubdate: 2022 May 2
+fulljournalname: Journal of Cognitive Neuroscience
+issue: '6'
+pages: 967-987
+pmclivedate: ''
+printpubdate: ''
+pubdate: 2022 May 2
+sortdate: 2022/05/02 00:00
+source: J Cogn Neurosci
+title: Using High-Density Electroencephalography to Explore Spatiotemporal Representations
+  of Object Categories in Visual Cortex
+uid: '9169880'
+volume: '34'
