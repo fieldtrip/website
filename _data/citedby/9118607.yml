@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '35590399'
+- idtype: doi
+  value: 10.1186/s13063-022-06253-5
+- idtype: pmcid
+  value: PMC9118607
+authors:
+- authtype: Author
+  name: Martins ML
+- authtype: Author
+  name: Kleinjung T
+- authtype: Author
+  name: Meyer M
+- authtype: Author
+  name: Raveenthiran V
+- authtype: Author
+  name: Wellauer Z
+- authtype: Author
+  name: Peter N
+- authtype: Author
+  name: Neff P
+epubdate: 2022 May 19
+fulljournalname: Trials
+issue: ''
+pages: '418'
+pmclivedate: 2022/05/20
+printpubdate: ''
+pubdate: 2022 May 19
+sortdate: 2022/05/19 00:00
+source: Trials
+title: 'Transcranial electric and acoustic stimulation for tinnitus: study protocol
+  for a randomized double-blind controlled trial assessing the influence of combined
+  transcranial random noise and acoustic stimulation on tinnitus loudness and distress'
+uid: '9118607'
+volume: '23'

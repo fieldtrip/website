@@ -1,0 +1,52 @@
+articleids:
+- idtype: pmid
+  value: '34725508'
+- idtype: doi
+  value: 10.1038/s41551-021-00804-y
+- idtype: pmcid
+  value: PMC9056584
+- idtype: MID
+  value: NIHMS1737950
+authors:
+- authtype: Author
+  name: Basu I
+- authtype: Author
+  name: Yousefi A
+- authtype: Author
+  name: Crocker B
+- authtype: Author
+  name: Zelmann R
+- authtype: Author
+  name: Paulk AC
+- authtype: Author
+  name: Peled N
+- authtype: Author
+  name: Ellard KK
+- authtype: Author
+  name: Weisholtz DS
+- authtype: Author
+  name: Cosgrove GR
+- authtype: Author
+  name: Deckersbach T
+- authtype: Author
+  name: Eden UT
+- authtype: Author
+  name: Eskandar EN
+- authtype: Author
+  name: Dougherty DD
+- authtype: Author
+  name: Cash SS
+- authtype: Author
+  name: Widge AS
+epubdate: 2021 Nov 1
+fulljournalname: Nature biomedical engineering
+issue: ''
+pages: 10.1038/s41551-021-00804-y
+pmclivedate: ''
+printpubdate: ''
+pubdate: 2021 Nov 1
+sortdate: 2021/11/01 00:00
+source: Nat Biomed Eng
+title: Closed-loop enhancement and neural decoding of cognitive control in humans
+uid: '9056584'
+volume: ''

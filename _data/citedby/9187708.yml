@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1038/s42003-022-03505-7
+- idtype: pmcid
+  value: PMC9187708
+authors:
+- authtype: Author
+  name: Deco G
+- authtype: Author
+  name: Sanz Perl Y
+- authtype: Author
+  name: Bocaccio H
+- authtype: Author
+  name: Tagliazucchi E
+- authtype: Author
+  name: Kringelbach ML
+epubdate: 2022 Jun 10
+fulljournalname: Communications Biology
+issue: ''
+pages: '572'
+pmclivedate: 2022/06/12
+printpubdate: ''
+pubdate: 2022 Jun 10
+sortdate: 2022/06/10 00:00
+source: Commun Biol
+title: The INSIDEOUT framework provides precise signatures of the balance of intrinsic
+  and extrinsic dynamics in brain states
+uid: '9187708'
+volume: '5'

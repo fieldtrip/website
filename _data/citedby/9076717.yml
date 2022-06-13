@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '35381960'
+- idtype: doi
+  value: 10.3758/s13414-022-02484-5
+- idtype: pmcid
+  value: PMC9076717
+authors:
+- authtype: Author
+  name: van den Berg B
+- authtype: Author
+  name: Vanwinsen L
+- authtype: Author
+  name: Pezzali G
+- authtype: Author
+  name: Buitenweg JR
+epubdate: 2022 Apr 5
+fulljournalname: Attention, Perception & Psychophysics
+issue: '4'
+pages: 1359-1369
+pmclivedate: 2022/05/08
+printpubdate: '2022'
+pubdate: 2022 Apr 5
+sortdate: 2022/04/05 00:00
+source: Atten Percept Psychophys
+title: 'Observation of nociceptive detection thresholds and cortical evoked potentials:
+  Go/no-go versus two-interval forced choice'
+uid: '9076717'
+volume: '84'

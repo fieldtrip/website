@@ -1,0 +1,24 @@
+articleids:
+- idtype: pmid
+  value: '34966982'
+- idtype: doi
+  value: 10.3758/s13415-021-00971-0
+- idtype: pmcid
+  value: PMC9090896
+authors:
+- authtype: Author
+  name: Moccia A
+- authtype: Author
+  name: Morcom AM
+epubdate: 2021 Dec 29
+fulljournalname: Cognitive, Affective & Behavioral Neuroscience
+issue: '3'
+pages: 492-508
+pmclivedate: 2022/05/12
+printpubdate: '2022'
+pubdate: 2021 Dec 29
+sortdate: 2021/12/29 00:00
+source: Cogn Affect Behav Neurosci
+title: 'Cue overlap supports preretrieval selection in episodic memory: ERP evidence'
+uid: '9090896'
+volume: '22'

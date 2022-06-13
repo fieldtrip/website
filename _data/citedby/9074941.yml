@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '35528322'
+- idtype: doi
+  value: 10.1080/23273798.2018.1500262
+- idtype: pmcid
+  value: PMC9074941
+- idtype: MID
+  value: NIHMS1514836
+authors:
+- authtype: Author
+  name: Kaestner E
+- authtype: Author
+  name: Morgan AM
+- authtype: Author
+  name: Snider J
+- authtype: Author
+  name: Zhan M
+- authtype: Author
+  name: Jiang X
+- authtype: Author
+  name: Levy R
+- authtype: Author
+  name: Ferreira VS
+- authtype: Author
+  name: Thesen T
+- authtype: Author
+  name: Halgren E
+epubdate: 2018 Jul 22
+fulljournalname: Language, cognition and neuroscience
+issue: '6'
+pages: 729-738
+pmclivedate: 2022/05/06
+printpubdate: '2020'
+pubdate: 2018 Jul 22
+sortdate: 2018/07/22 00:00
+source: Lang Cogn Neurosci
+title: Toward a Database of Intracranial Electrophysiology during Natural Language
+  Presentation
+uid: '9074941'
+volume: '35'

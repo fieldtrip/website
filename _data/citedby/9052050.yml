@@ -1,0 +1,47 @@
+articleids:
+- idtype: pmid
+  value: '35572772'
+- idtype: doi
+  value: 10.1136/gpsych-2021-100712
+- idtype: pmcid
+  value: PMC9052050
+authors:
+- authtype: Author
+  name: Hu Y
+- authtype: Author
+  name: Wu J
+- authtype: Author
+  name: Cao Y
+- authtype: Author
+  name: Tang X
+- authtype: Author
+  name: Wu G
+- authtype: Author
+  name: Guo Q
+- authtype: Author
+  name: Xu L
+- authtype: Author
+  name: Qian Z
+- authtype: Author
+  name: Wei Y
+- authtype: Author
+  name: Tang Y
+- authtype: Author
+  name: Li C
+- authtype: Author
+  name: Zhang T
+- authtype: Author
+  name: Wang J
+epubdate: 2022 Apr 28
+fulljournalname: General Psychiatry
+issue: '2'
+pages: e100712
+pmclivedate: 2022/05/13
+printpubdate: ''
+pubdate: 2022 Apr 28
+sortdate: 2022/04/28 00:00
+source: Gen Psychiatr
+title: 'Abnormal neural oscillations in clinical high risk for psychosis: a magnetoencephalography
+  method study'
+uid: '9052050'
+volume: '35'

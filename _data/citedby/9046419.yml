@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '35477733'
+- idtype: doi
+  value: 10.1038/s41598-022-10802-y
+- idtype: pmcid
+  value: PMC9046419
+authors:
+- authtype: Author
+  name: Caverzasio S
+- authtype: Author
+  name: Amato N
+- authtype: Author
+  name: Chiaro G
+- authtype: Author
+  name: Staedler C
+- authtype: Author
+  name: Kaelin-Lang A
+- authtype: Author
+  name: Galati S
+epubdate: 2022 Apr 27
+fulljournalname: Scientific Reports
+issue: ''
+pages: '6866'
+pmclivedate: 2022/04/29
+printpubdate: ''
+pubdate: 2022 Apr 27
+sortdate: 2022/04/27 00:00
+source: Sci Rep
+title: Impairment of sleep homeostasis in cervical dystonia patients
+uid: '9046419'
+volume: '12'
