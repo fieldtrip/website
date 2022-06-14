@@ -1,0 +1,56 @@
+articleids:
+- idtype: pmid
+  value: '35587822'
+- idtype: doi
+  value: 10.1084/jem.20211887
+- idtype: pmcid
+  value: PMC9123307
+authors:
+- authtype: Author
+  name: Hanuscheck N
+- authtype: Author
+  name: Thalman C
+- authtype: Author
+  name: Domingues M
+- authtype: Author
+  name: Schmaul S
+- authtype: Author
+  name: Muthuraman M
+- authtype: Author
+  name: Hetsch F
+- authtype: Author
+  name: Ecker M
+- authtype: Author
+  name: Endle H
+- authtype: Author
+  name: Oshaghi M
+- authtype: Author
+  name: Martino G
+- authtype: Author
+  name: Kuhlmann T
+- authtype: Author
+  name: Bozek K
+- authtype: Author
+  name: van Beers T
+- authtype: Author
+  name: Bittner S
+- authtype: Author
+  name: von Engelhardt J
+- authtype: Author
+  name: Vogt J
+- authtype: Author
+  name: Vogelaar CF
+- authtype: Author
+  name: Zipp F
+epubdate: 2022 May 19
+fulljournalname: The Journal of Experimental Medicine
+issue: '6'
+pages: e20211887
+pmclivedate: 2022/05/27
+printpubdate: ''
+pubdate: 2022 May 19
+sortdate: 2022/05/19 00:00
+source: J Exp Med
+title: Interleukin-4 receptor signaling modulates neuronal network activity
+uid: '9123307'
+volume: '219'

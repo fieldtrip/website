@@ -1,0 +1,50 @@
+articleids:
+- idtype: pmid
+  value: '35278706'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2022.119084
+- idtype: pmcid
+  value: PMC9135301
+- idtype: MID
+  value: NIHMS1805130
+authors:
+- authtype: Author
+  name: Hill RM
+- authtype: Author
+  name: Devasagayam J
+- authtype: Author
+  name: Holmes N
+- authtype: Author
+  name: Boto E
+- authtype: Author
+  name: Shah V
+- authtype: Author
+  name: Osborne J
+- authtype: Author
+  name: Safar K
+- authtype: Author
+  name: Worcester F
+- authtype: Author
+  name: Mariani C
+- authtype: Author
+  name: Dawson E
+- authtype: Author
+  name: Woolger D
+- authtype: Author
+  name: Bowtell R
+- authtype: Author
+  name: Taylor MJ
+- authtype: Author
+  name: Brookes MJ
+epubdate: 2022 Mar 9
+fulljournalname: NeuroImage
+issue: ''
+pages: '119084'
+pmclivedate: 2022/06/01
+printpubdate: 2022 Jun
+pubdate: 2022 Mar 9
+sortdate: 2022/03/09 00:00
+source: Neuroimage
+title: Using OPM-MEG in contrasting magnetic environments
+uid: '9135301'
+volume: '253'

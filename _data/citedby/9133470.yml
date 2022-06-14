@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '35231629'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2022.119024
+- idtype: pmcid
+  value: PMC9133470
+- idtype: MID
+  value: NIHMS1794854
+authors:
+- authtype: Author
+  name: Kachlicka M
+- authtype: Author
+  name: Laffere A
+- authtype: Author
+  name: Dick F
+- authtype: Author
+  name: Tierney A
+epubdate: 2022 Feb 26
+fulljournalname: NeuroImage
+issue: ''
+pages: '119024'
+pmclivedate: 2022/05/26
+printpubdate: 2022 May 15
+pubdate: 2022 Feb 26
+sortdate: 2022/02/26 00:00
+source: Neuroimage
+title: Slow phase-locked modulations support selective attention to sound
+uid: '9133470'
+volume: '252'
