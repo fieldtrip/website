@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '35501153'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0572-21.2022
+- idtype: pmcid
+  value: PMC9186803
+authors:
+- authtype: Author
+  name: Patai EZ
+- authtype: Author
+  name: Foltynie T
+- authtype: Author
+  name: Limousin P
+- authtype: Author
+  name: Akram H
+- authtype: Author
+  name: Zrinzo L
+- authtype: Author
+  name: Bogacz R
+- authtype: Author
+  name: Litvak V
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '23'
+pages: 4681-4692
+pmclivedate: 2022/06/13
+printpubdate: 2022 Jun 8
+pubdate: 2022 Jun 8
+sortdate: 2022/06/08 00:00
+source: J Neurosci
+title: Conflict Detection in a Sequential Decision Task Is Associated with Increased
+  Cortico-Subthalamic Coherence and Prolonged Subthalamic Oscillatory Response in
+  the β Band
+uid: '9186803'
+volume: '42'

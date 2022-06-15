@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '35653919'
+- idtype: doi
+  value: 10.1016/j.dcn.2022.101118
+- idtype: pmcid
+  value: PMC9163699
+authors:
+- authtype: Author
+  name: Liu T
+- authtype: Author
+  name: Wang D
+- authtype: Author
+  name: Wang C
+- authtype: Author
+  name: Xiao T
+- authtype: Author
+  name: Shi J
+epubdate: 2022 May 24
+fulljournalname: Developmental Cognitive Neuroscience
+issue: ''
+pages: '101118'
+pmclivedate: 2022/06/05
+printpubdate: ''
+pubdate: 2022 May 24
+sortdate: 2022/05/24 00:00
+source: Dev Cogn Neurosci
+title: 'The influence of reward anticipation on conflict control in children and adolescents:
+  Evidences from hierarchical drift-diffusion model and event-related potentials'
+uid: '9163699'
+volume: '55'

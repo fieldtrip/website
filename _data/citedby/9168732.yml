@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '35677605'
+- idtype: doi
+  value: 10.1016/j.xpro.2022.101399
+- idtype: pmcid
+  value: PMC9168732
+authors:
+- authtype: Author
+  name: Takács Á
+- authtype: Author
+  name: Yu S
+- authtype: Author
+  name: Mückschel M
+- authtype: Author
+  name: Beste C
+epubdate: 2022 Jun 2
+fulljournalname: STAR Protocols
+issue: '2'
+pages: '101399'
+pmclivedate: 2022/06/07
+printpubdate: ''
+pubdate: 2022 Jun 2
+sortdate: 2022/06/02 00:00
+source: STAR Protoc
+title: Protocol to decode representations from EEG data with intermixed signals using
+  temporal signal decomposition and multivariate pattern-analysis
+uid: '9168732'
+volume: '3'

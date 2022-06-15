@@ -1,0 +1,34 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fnagi.2022.863580
+- idtype: pmcid
+  value: PMC9190761
+authors:
+- authtype: Author
+  name: Opitz L
+- authtype: Author
+  name: Wagner F
+- authtype: Author
+  name: Rogenz J
+- authtype: Author
+  name: Maas J
+- authtype: Author
+  name: Schmidt A
+- authtype: Author
+  name: Brodoehl S
+- authtype: Author
+  name: Klingner CM
+epubdate: 2022 May 30
+fulljournalname: Frontiers in Aging Neuroscience
+issue: ''
+pages: '863580'
+pmclivedate: 2022/06/14
+printpubdate: ''
+pubdate: 2022 May 30
+sortdate: 2022/05/30 00:00
+source: Front Aging Neurosci
+title: 'Still Wanting to Win: Reward System Stability in Healthy Aging'
+uid: '9190761'
+volume: '14'

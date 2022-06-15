@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '35508383'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1889-21.2022
+- idtype: pmcid
+  value: PMC9186801
+authors:
+- authtype: Author
+  name: Wislowska M
+- authtype: Author
+  name: Klimesch W
+- authtype: Author
+  name: Jensen O
+- authtype: Author
+  name: Blume C
+- authtype: Author
+  name: Schabus M
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '23'
+pages: 4711-4724
+pmclivedate: 2022/06/13
+printpubdate: 2022 Jun 8
+pubdate: 2022 Jun 8
+sortdate: 2022/06/08 00:00
+source: J Neurosci
+title: Sleep-Specific Processing of Auditory Stimuli Is Reflected by Alpha and Sigma
+  Oscillations
+uid: '9186801'
+volume: '42'

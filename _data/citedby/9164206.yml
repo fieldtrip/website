@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '34894148'
+- idtype: doi
+  value: 10.1093/scan/nsab123
+- idtype: pmcid
+  value: PMC9164206
+authors:
+- authtype: Author
+  name: Gregory SE
+- authtype: Author
+  name: Wang H
+- authtype: Author
+  name: Kessler K
+epubdate: 2021 Nov 24
+fulljournalname: Social Cognitive and Affective Neuroscience
+issue: '6'
+pages: 531-540
+pmclivedate: 2022/06/05
+printpubdate: ''
+pubdate: 2021 Nov 24
+sortdate: 2021/11/24 00:00
+source: Soc Cogn Affect Neurosci
+title: EEG alpha and theta signatures of socially and non-socially cued working memory
+  in virtual reality
+uid: '9164206'
+volume: '17'
