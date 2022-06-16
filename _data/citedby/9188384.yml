@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '35545435'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1705-21.2022
+- idtype: pmcid
+  value: PMC9188384
+authors:
+- authtype: Author
+  name: Wen (文雯) W
+- authtype: Author
+  name: Huang (黄志邦) Z
+- authtype: Author
+  name: Hou (侯寅) Y
+- authtype: Author
+  name: Li (李晟) S
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '24'
+pages: 4927-4936
+pmclivedate: ''
+printpubdate: 2022 Jun 15
+pubdate: 2022 Jun 15
+sortdate: 2022/06/15 00:00
+source: J Neurosci
+title: Tracking Neural Markers of Template Formation and Implementation in Attentional
+  Inhibition under Different Distractor Consistency
+uid: '9188384'
+volume: '42'

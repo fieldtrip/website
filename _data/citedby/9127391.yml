@@ -1,0 +1,34 @@
+articleids:
+- idtype: pmid
+  value: '35276363'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2022.119047
+- idtype: pmcid
+  value: PMC9127391
+authors:
+- authtype: Author
+  name: Ferrante O
+- authtype: Author
+  name: Liu L
+- authtype: Author
+  name: Minarik T
+- authtype: Author
+  name: Gorska U
+- authtype: Author
+  name: Ghafari T
+- authtype: Author
+  name: Luo H
+- authtype: Author
+  name: Jensen O
+epubdate: ''
+fulljournalname: Neuroimage
+issue: ''
+pages: '119047'
+pmclivedate: 2022/06/14
+printpubdate: 2022 Jun
+pubdate: 2022 Jun
+sortdate: 2022/06/01 00:00
+source: Neuroimage
+title: 'FLUX: A pipeline for MEG analysis'
+uid: '9127391'
+volume: '253'

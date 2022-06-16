@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '34952232'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2021.118841
+- idtype: pmcid
+  value: PMC9127393
+authors:
+- authtype: Author
+  name: Bolam J
+- authtype: Author
+  name: Boyle SC
+- authtype: Author
+  name: Ince RA
+- authtype: Author
+  name: Delis I
+epubdate: ''
+fulljournalname: Neuroimage
+issue: ''
+pages: '118841'
+pmclivedate: 2022/06/14
+printpubdate: 2022 Feb 15
+pubdate: 2022 Feb 15
+sortdate: 2022/02/15 00:00
+source: Neuroimage
+title: Neurocomputational mechanisms underlying cross-modal associations and their
+  influence on perceptual decisions
+uid: '9127393'
+volume: '247'

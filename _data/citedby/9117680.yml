@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '35585222'
+- idtype: doi
+  value: 10.1038/s41598-022-12156-x
+- idtype: pmcid
+  value: PMC9117680
+authors:
+- authtype: Author
+  name: Metzlaff J
+- authtype: Author
+  name: Finis J
+- authtype: Author
+  name: Münchau A
+- authtype: Author
+  name: Müller-Vahl K
+- authtype: Author
+  name: Schnitzler A
+- authtype: Author
+  name: Bellebaum C
+- authtype: Author
+  name: Biermann-Ruben K
+- authtype: Author
+  name: Niccolai V
+epubdate: 2022 May 18
+fulljournalname: Scientific Reports
+issue: ''
+pages: '8300'
+pmclivedate: 2022/05/20
+printpubdate: ''
+pubdate: 2022 May 18
+sortdate: 2022/05/18 00:00
+source: Sci Rep
+title: 'Altered performance monitoring in Tourette Syndrome: an MEG investigation'
+uid: '9117680'
+volume: '12'
