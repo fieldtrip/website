@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fneur.2022.912828
+- idtype: pmcid
+  value: PMC9198441
+authors:
+- authtype: Author
+  name: Vestergaard MB
+- authtype: Author
+  name: Frederiksen JL
+- authtype: Author
+  name: Larsson HB
+- authtype: Author
+  name: Cramer SP
+epubdate: 2022 Jun 1
+fulljournalname: Frontiers in Neurology
+issue: ''
+pages: '912828'
+pmclivedate: 2022/06/16
+printpubdate: ''
+pubdate: 2022 Jun 1
+sortdate: 2022/06/01 00:00
+source: Front Neurol
+title: Cerebrovascular Reactivity and Neurovascular Coupling in Multiple Sclerosis—A
+  Systematic Review
+uid: '9198441'
+volume: '13'

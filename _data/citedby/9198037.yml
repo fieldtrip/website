@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1038/s41598-022-13654-8
+- idtype: pmcid
+  value: PMC9198037
+authors:
+- authtype: Author
+  name: Shetty A
+- authtype: Author
+  name: Hebbar SP
+- authtype: Author
+  name: Shenoy R
+- authtype: Author
+  name: Peter V
+- authtype: Author
+  name: Krishnan G
+epubdate: 2022 Jun 14
+fulljournalname: Scientific Reports
+issue: ''
+pages: '9870'
+pmclivedate: 2022/06/16
+printpubdate: ''
+pubdate: 2022 Jun 14
+sortdate: 2022/06/14 00:00
+source: Sci Rep
+title: A prime-masked ERP investigation on phonology in visual word processing among
+  bilingual speakers of alphasyllabic and alphabetic orthographies
+uid: '9198037'
+volume: '12'

@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1038/s41597-022-01409-z
+- idtype: pmcid
+  value: PMC9198070
+authors:
+- authtype: Author
+  name: van Dijk H
+- authtype: Author
+  name: van Wingen G
+- authtype: Author
+  name: Denys D
+- authtype: Author
+  name: Olbrich S
+- authtype: Author
+  name: van Ruth R
+- authtype: Author
+  name: Arns M
+epubdate: 2022 Jun 14
+fulljournalname: Scientific Data
+issue: ''
+pages: '333'
+pmclivedate: 2022/06/16
+printpubdate: ''
+pubdate: 2022 Jun 14
+sortdate: 2022/06/14 00:00
+source: Sci Data
+title: The two decades brainclinics research archive for insights in neurophysiology
+  (TDBRAIN) database
+uid: '9198070'
+volume: '9'
