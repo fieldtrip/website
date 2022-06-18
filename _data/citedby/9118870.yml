@@ -1,0 +1,87 @@
+articleids:
+- idtype: pmid
+  value: '35585637'
+- idtype: doi
+  value: 10.1186/s13229-022-00500-x
+- idtype: pmcid
+  value: PMC9118870
+authors:
+- authtype: Author
+  name: Garcés P
+- authtype: Author
+  name: Baumeister S
+- authtype: Author
+  name: Mason L
+- authtype: Author
+  name: Chatham CH
+- authtype: Author
+  name: Holiga S
+- authtype: Author
+  name: Dukart J
+- authtype: Author
+  name: Jones EJ
+- authtype: Author
+  name: Banaschewski T
+- authtype: Author
+  name: Baron-Cohen S
+- authtype: Author
+  name: Bölte S
+- authtype: Author
+  name: Buitelaar JK
+- authtype: Author
+  name: Durston S
+- authtype: Author
+  name: Oranje B
+- authtype: Author
+  name: Persico AM
+- authtype: Author
+  name: Beckmann CF
+- authtype: Author
+  name: Bougeron T
+- authtype: Author
+  name: Dell’Acqua F
+- authtype: Author
+  name: Ecker C
+- authtype: Author
+  name: Moessnang C
+- authtype: Author
+  name: Charman T
+- authtype: Author
+  name: Tillmann J
+- authtype: Author
+  name: Murphy DG
+- authtype: Author
+  name: Johnson M
+- authtype: Author
+  name: Loth E
+- authtype: Author
+  name: Brandeis D
+- authtype: Author
+  name: Hipp JF
+- authtype: CollectiveName
+  name: The EU-AIMS LEAP group authorshipAhmadJumanaJAmbrosinoSaraSAuyeungBonnie BBanaschewskiTobias
+    TBaron-CohenSimon SBaumeisterSarah SBeckmannChristian F. CFBölteSven SBourgeronThomas
+    TBoursCarsten CBrammerMichael MBrandeisDaniel DBrognaClaudiaC de Bruijn YvetteYBuitelaarJan
+    K.JKChakrabartiBhismadevBCharmanTonyTCornelissenInekeICrawleyDaisyDDell’AcquaFlavioFDumas
+    GuillaumeGDurstonSarahSEcker ChristineCFaulknerJessicaJFrouinVincentVGarcés PilarPGoyardDavidDHamLindsayLHayward
+    HannahHHippJoergJHolt RosemaryRJohnsonMark H.MHJonesEmily J. H.EJKundu PrantikPLai
+    Meng-ChuanMCardhuyXavier Liogier D’XLLombardoMichael V.MVLoth EvaELythgoe David
+    J.DJMandl René RMarquand AndreAMason LukeLMennesMaarten MMeyer-Lindenberg AndreasAMoessnang
+    CarolinCMueller Nico NMurphy Declan G. M.DGOakley BethanyBO’Dwyer LaurenceLOldehinkel
+    Marianne MOranje BobBPandina Gahan GPersico Antonio M. AMRuggeri BarbaraBRuigrok
+    AmberASabet JessicaJSacco RobertoRCáceres Antonia San JoséASSimonoff EmilyESpooren
+    WillWTillmann JulianJToro RobertoRTost HeikeHWaldmanJackJWilliams Steve C. R.SCWooldridge
+    CarolineCZwiers Marcel P.MP
+epubdate: 2022 May 18
+fulljournalname: Molecular Autism
+issue: ''
+pages: '22'
+pmclivedate: 2022/05/20
+printpubdate: ''
+pubdate: 2022 May 18
+sortdate: 2022/05/18 00:00
+source: Mol Autism
+title: 'Resting state EEG power spectrum and functional connectivity in autism: a
+  cross-sectional analysis'
+uid: '9118870'
+volume: '13'
