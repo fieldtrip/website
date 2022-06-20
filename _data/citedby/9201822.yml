@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fnhum.2022.809293
+- idtype: pmcid
+  value: PMC9201822
+authors:
+- authtype: Author
+  name: Al Boustani G
+- authtype: Author
+  name: Weiß LJ
+- authtype: Author
+  name: Li H
+- authtype: Author
+  name: Meyer SM
+- authtype: Author
+  name: Hiendlmeier L
+- authtype: Author
+  name: Rinklin P
+- authtype: Author
+  name: Menze B
+- authtype: Author
+  name: Hemmert W
+- authtype: Author
+  name: Wolfrum B
+epubdate: 2022 Jun 2
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '809293'
+pmclivedate: 2022/06/17
+printpubdate: ''
+pubdate: 2022 Jun 2
+sortdate: 2022/06/02 00:00
+source: Front Hum Neurosci
+title: Influence of Auditory Cues on the Neuronal Response to Naturalistic Visual
+  Stimuli in a Virtual Reality Setting
+uid: '9201822'
+volume: '16'

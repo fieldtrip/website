@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '34689188'
+- idtype: doi
+  value: 10.1093/cercor/bhab369
+- idtype: pmcid
+  value: PMC9201593
+authors:
+- authtype: Author
+  name: Kreis SL
+- authtype: Author
+  name: Luhmann HJ
+- authtype: Author
+  name: Ciolac D
+- authtype: Author
+  name: Groppa S
+- authtype: Author
+  name: Muthuraman M
+epubdate: 2021 Oct 23
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '12'
+pages: 2621-2634
+pmclivedate: 2022/06/16
+printpubdate: ''
+pubdate: 2021 Oct 23
+sortdate: 2021/10/23 00:00
+source: Cereb Cortex
+title: Translational Model of Cortical Premotor-Motor Networks
+uid: '9201593'
+volume: '32'

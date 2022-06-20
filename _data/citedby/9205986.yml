@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1038/s41467-022-31217-3
+- idtype: pmcid
+  value: PMC9205986
+authors:
+- authtype: Author
+  name: Liu B
+- authtype: Author
+  name: Nobre AC
+- authtype: Author
+  name: van Ede F
+epubdate: 2022 Jun 17
+fulljournalname: Nature Communications
+issue: ''
+pages: '3503'
+pmclivedate: 2022/06/19
+printpubdate: ''
+pubdate: 2022 Jun 17
+sortdate: 2022/06/17 00:00
+source: Nat Commun
+title: Functional but not obligatory link between microsaccades and neural modulation
+  by covert spatial attention
+uid: '9205986'
+volume: '13'

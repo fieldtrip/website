@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1016/j.dcn.2022.101119
+- idtype: pmcid
+  value: PMC9204388
+authors:
+- authtype: Author
+  name: Xie W
+- authtype: Author
+  name: Toll RT
+- authtype: Author
+  name: Nelson CA
+epubdate: 2022 Jun 9
+fulljournalname: Developmental Cognitive Neuroscience
+issue: ''
+pages: '101119'
+pmclivedate: 2022/06/18
+printpubdate: ''
+pubdate: 2022 Jun 9
+sortdate: 2022/06/09 00:00
+source: Dev Cogn Neurosci
+title: EEG functional connectivity analysis in the source space
+uid: '9204388'
+volume: '56'

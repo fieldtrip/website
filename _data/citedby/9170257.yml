@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1590/1980-5764-DN-2021-0054
+- idtype: pmcid
+  value: PMC9170257
+authors:
+- authtype: Author
+  name: Abiyev A
+- authtype: Author
+  name: Yakaryılmaz FD
+- authtype: Author
+  name: Öztürk ZA
+epubdate: ''
+fulljournalname: Dementia & Neuropsychologia
+issue: '1'
+pages: 89-96
+pmclivedate: 2022/06/17
+printpubdate: 2022 Jan-Mar
+pubdate: 2022 Jan-Mar
+sortdate: 2022/01/01 00:00
+source: Dement Neuropsychol
+title: 'A new diagnostic approach in Alzheimer''s disease: The critical flicker fusion
+  threshold'
+uid: '9170257'
+volume: '16'

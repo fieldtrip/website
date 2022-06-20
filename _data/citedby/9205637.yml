@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fnhum.2022.895034
+- idtype: pmcid
+  value: PMC9205637
+authors:
+- authtype: Author
+  name: Fusina F
+- authtype: Author
+  name: Marino M
+- authtype: Author
+  name: Spironelli C
+- authtype: Author
+  name: Angrilli A
+epubdate: 2022 May 26
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '895034'
+pmclivedate: 2022/06/18
+printpubdate: ''
+pubdate: 2022 May 26
+sortdate: 2022/05/26 00:00
+source: Front Hum Neurosci
+title: Ventral Attention Network Correlates With High Traits of Emotion Dysregulation
+  in Community Women — A Resting-State EEG Study
+uid: '9205637'
+volume: '16'
