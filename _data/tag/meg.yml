@@ -46,6 +46,9 @@
 - name:  Can I do combined EEG and MEG source reconstruction?
   link:  /faq/can_i_do_combined_eeg_and_meg_source_reconstruction
 
+- name:  What does the coilaccuracy parameter do?
+  link:  /faq/coilaccuracy
+
 - name:  How are electrodes, magnetometers or gradiometers described?
   link:  /faq/how_are_electrodes_magnetometers_or_gradiometers_described
 
