@@ -1,0 +1,51 @@
+articleids:
+- idtype: pmid
+  value: '33781923'
+- idtype: doi
+  value: 10.1016/j.nbd.2021.105348
+- idtype: pmcid
+  value: PMC9208339
+- idtype: MID
+  value: NIHMS1787992
+authors:
+- authtype: Author
+  name: Kakusa B
+- authtype: Author
+  name: Huang Y
+- authtype: Author
+  name: Barbosa DA
+- authtype: Author
+  name: Feng A
+- authtype: Author
+  name: Gattas S
+- authtype: Author
+  name: Shivacharan R
+- authtype: Author
+  name: Lee EB
+- authtype: Author
+  name: Kuijper FM
+- authtype: Author
+  name: Saluja S
+- authtype: Author
+  name: Parker JJ
+- authtype: Author
+  name: Miller KJ
+- authtype: Author
+  name: Keller C
+- authtype: Author
+  name: Bohon C
+- authtype: Author
+  name: Halpern CH
+epubdate: 2021 Mar 26
+fulljournalname: Neurobiology of disease
+issue: ''
+pages: '105348'
+pmclivedate: 2022/06/20
+printpubdate: 2021 Jul
+pubdate: 2021 Mar 26
+sortdate: 2021/03/26 00:00
+source: Neurobiol Dis
+title: Anticipatory human subthalamic area beta-band power responses to dissociable
+  tastes correlate with weight gain
+uid: '9208339'
+volume: '154'
