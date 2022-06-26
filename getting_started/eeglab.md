@@ -31,7 +31,7 @@ Note that FieldTrip should be added to the MATLAB path in order to use the DIPFI
 
 ## Complementary use of both toolboxes
 
-Processing data from EEGLAB through FieldTrip functions and vice-versa is made easy by the functions **[eeglab2fieldtrip](/reference/external/eeglab/eeglab2fieldtrip)** and **[fieldtrip2eeglab](/reference/external/eeglab/eeglab2fieldtrip)**.
+Processing data from EEGLAB through FieldTrip functions and vice-versa is made easy by the functions **[eeglab2fieldtrip](/reference/external/eeglab/eeglab2fieldtrip)** and **[fieldtrip2eeglab](/reference/external/eeglab/fieldtrip2eeglab)**.
 Here is an example code showing how to use those functions:
 
 - For users working on EEGLAB, first save data on disk: File → Save current dataset (must be a `.set` file)
@@ -40,7 +40,7 @@ Here is an example code showing how to use those functions:
   `cfg = []; cfg.dataset = 'filename.set'; ft_data1 = ft_preprocessing(cfg);` 2. Load the dataset through **[pop_loadset](https://sccn.ucsd.edu/~arno/eeglab/auto/pop_loadset.html)** and transform it to FieldTrip structure using **[eeglab2fieldtrip](/reference/external/eeglab/eeglab2fieldtrip)** function:
   `EEG = pop_loadset(filename); ft_data2 = eeglab2fieldtrip(EEG, 'raw');`
 
-- (FieldTrip -> EEGLAB) For data that has been processed in FieldTrip, it can be converted to EEGLAB format using **[fieldtrip2eeglab](/reference/external/eeglab/eeglab2fieldtrip)** function. Note that the data (second argument) have to be passed as an array (not a cell):
+- (FieldTrip -> EEGLAB) For data that has been processed in FieldTrip, it can be converted to EEGLAB format using **[fieldtrip2eeglab](/reference/external/eeglab/fieldtrip2eeglab)** function. Note that the data (second argument) have to be passed as an array (not a cell):
 
 ```
 eeglab_data = fieldtrip2eeglab(ft_data.hdr,cat(3,ft_data.trial{:}));
@@ -59,4 +59,4 @@ Both EEGLAB and FieldTrip work with data structures in MATLAB memory. The design
 
 {% include image src="/assets/img/getting_started/eeglab/eeglab_FieldTrip_philosophy.png" width="500" %}
 
-Together with the EEGLAB developers we maintain two functions for converting the data back and forth: **[fieldtrip2eeglab](/reference/external/eeglab/eeglab2fieldtrip)** and **[eeglab2fieldtrip](/reference/external/eeglab/eeglab2fieldtrip)**.
+Together with the EEGLAB developers we maintain two functions for converting the data back and forth: **[fieldtrip2eeglab](/reference/external/eeglab/fieldtrip2eeglab)** and **[eeglab2fieldtrip](/reference/external/eeglab/eeglab2fieldtrip)**.
