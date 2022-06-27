@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '35737731'
+- idtype: doi
+  value: 10.1371/journal.pone.0270405
+- idtype: pmcid
+  value: PMC9223328
+authors:
+- authtype: Author
+  name: Ham J
+- authtype: Author
+  name: Yoo HJ
+- authtype: Author
+  name: Kim J
+- authtype: Author
+  name: Lee B
+epubdate: 2022 Jun 23
+fulljournalname: PLoS ONE
+issue: '6'
+pages: e0270405
+pmclivedate: 2022/06/24
+printpubdate: ''
+pubdate: 2022 Jun 23
+sortdate: 2022/06/23 00:00
+source: PLoS One
+title: Vowel speech recognition from rat electroencephalography using long short-term
+  memory neural network
+uid: '9223328'
+volume: '17'

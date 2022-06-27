@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fnins.2022.896502
+- idtype: pmcid
+  value: PMC9226485
+authors:
+- authtype: Author
+  name: Truong NC
+- authtype: Author
+  name: Wang X
+- authtype: Author
+  name: Wanniarachchi H
+- authtype: Author
+  name: Liu H
+epubdate: 2022 Jun 10
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '896502'
+pmclivedate: 2022/06/25
+printpubdate: ''
+pubdate: 2022 Jun 10
+sortdate: 2022/06/10 00:00
+source: Front Neurosci
+title: Enhancement of Frequency-Specific Hemodynamic Power and Functional Connectivity
+  by Transcranial Photobiomodulation in Healthy Humans
+uid: '9226485'
+volume: '16'

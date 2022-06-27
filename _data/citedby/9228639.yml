@@ -1,0 +1,23 @@
+articleids:
+- idtype: pmid
+  value: '35730193'
+- idtype: doi
+  value: 10.1177/23312165221099894
+- idtype: pmcid
+  value: PMC9228639
+authors:
+- authtype: Author
+  name: Petersen EB
+epubdate: 2022 Jun 22
+fulljournalname: Trends in Hearing
+issue: ''
+pages: '23312165221099894'
+pmclivedate: 2022/06/25
+printpubdate: ''
+pubdate: 2022 Jun 22
+sortdate: 2022/06/22 00:00
+source: Trends Hear
+title: Hearing-Aid Directionality Improves Neural Speech Tracking in Older Hearing-Impaired
+  Listeners
+uid: '9228639'
+volume: '26'

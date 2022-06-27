@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1093/braincomms/fcac096
+- idtype: pmcid
+  value: PMC9214782
+authors:
+- authtype: Author
+  name: Ye Z
+- authtype: Author
+  name: Heldmann M
+- authtype: Author
+  name: Herrmann L
+- authtype: Author
+  name: Brüggemann N
+- authtype: Author
+  name: Münte TF
+epubdate: 2022 Apr 13
+fulljournalname: Brain Communications
+issue: '3'
+pages: fcac096
+pmclivedate: 2022/06/23
+printpubdate: ''
+pubdate: 2022 Apr 13
+sortdate: 2022/04/13 00:00
+source: Brain Commun
+title: Altered alpha and theta oscillations correlate with sequential working memory
+  in Parkinson’s disease
+uid: '9214782'
+volume: '4'
