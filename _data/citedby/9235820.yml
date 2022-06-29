@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fnsys.2022.865453
+- idtype: pmcid
+  value: PMC9235820
+authors:
+- authtype: Author
+  name: Mousavi Z
+- authtype: Author
+  name: Kiani MM
+- authtype: Author
+  name: Aghajan H
+epubdate: 2022 Jun 13
+fulljournalname: Frontiers in Systems Neuroscience
+issue: ''
+pages: '865453'
+pmclivedate: 2022/06/28
+printpubdate: ''
+pubdate: 2022 Jun 13
+sortdate: 2022/06/13 00:00
+source: Front Syst Neurosci
+title: Spatiotemporal Signatures of Surprise Captured by Magnetoencephalography
+uid: '9235820'
+volume: '16'
