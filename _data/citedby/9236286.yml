@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '35610051'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.2443-21.2022
+- idtype: pmcid
+  value: PMC9236286
+authors:
+- authtype: Author
+  name: Gopalakrishnan R
+- authtype: Author
+  name: Cunningham DA
+- authtype: Author
+  name: Hogue O
+- authtype: Author
+  name: Schroedel M
+- authtype: Author
+  name: Campbell BA
+- authtype: Author
+  name: Plow EB
+- authtype: Author
+  name: Baker KB
+- authtype: Author
+  name: Machado AG
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '26'
+pages: 5186-5197
+pmclivedate: ''
+printpubdate: 2022 Jun 29
+pubdate: 2022 Jun 29
+sortdate: 2022/06/29 00:00
+source: J Neurosci
+title: Cortico-Cerebellar Connectivity Underlying Motor Control in Chronic Poststroke
+  Individuals
+uid: '9236286'
+volume: '42'
