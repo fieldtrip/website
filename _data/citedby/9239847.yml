@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '35728955'
+- idtype: doi
+  value: 10.1523/ENEURO.0209-22.2022
+- idtype: pmcid
+  value: PMC9239847
+authors:
+- authtype: Author
+  name: Bröhl F
+- authtype: Author
+  name: Keitel A
+- authtype: Author
+  name: Kayser C
+epubdate: 2022 Jun 27
+fulljournalname: eNeuro
+issue: '3'
+pages: ENEURO.0209-22.2022
+pmclivedate: 2022/06/29
+printpubdate: ''
+pubdate: 2022 Jun 27
+sortdate: 2022/06/27 00:00
+source: eNeuro
+title: MEG Activity in Visual and Auditory Cortices Represents Acoustic Speech-Related
+  Information during Silent Lip Reading
+uid: '9239847'
+volume: '9'

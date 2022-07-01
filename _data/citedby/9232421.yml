@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '35672533'
+- idtype: doi
+  value: 10.1007/s00429-022-02515-9
+- idtype: pmcid
+  value: PMC9232421
+authors:
+- authtype: Author
+  name: Muñoz F
+- authtype: Author
+  name: Rubianes M
+- authtype: Author
+  name: Jiménez-Ortega L
+- authtype: Author
+  name: Fondevila S
+- authtype: Author
+  name: Hernández-Gutiérrez D
+- authtype: Author
+  name: Sánchez-García J
+- authtype: Author
+  name: Martínez-de-Quel Ó
+- authtype: Author
+  name: Casado P
+- authtype: Author
+  name: Martín-Loeches M
+epubdate: 2022 Jun 7
+fulljournalname: Brain Structure & Function
+issue: '6'
+pages: 2167-2179
+pmclivedate: 2022/06/26
+printpubdate: '2022'
+pubdate: 2022 Jun 7
+sortdate: 2022/06/07 00:00
+source: Brain Struct Funct
+title: 'Spatio-temporal brain dynamics of self-identity: an EEG source analysis of
+  the current and past self'
+uid: '9232421'
+volume: '227'
