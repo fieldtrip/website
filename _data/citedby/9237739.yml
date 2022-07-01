@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1093/braincomms/fcac149
+- idtype: pmcid
+  value: PMC9237739
+authors:
+- authtype: Author
+  name: Hawellek DJ
+- authtype: Author
+  name: Garces P
+- authtype: Author
+  name: Meghdadi AH
+- authtype: Author
+  name: Waninger S
+- authtype: Author
+  name: Smith A
+- authtype: Author
+  name: Manchester M
+- authtype: Author
+  name: Schobel SA
+- authtype: Author
+  name: Hipp JF
+epubdate: 2022 Jun 9
+fulljournalname: Brain Communications
+issue: '3'
+pages: fcac149
+pmclivedate: 2022/06/29
+printpubdate: ''
+pubdate: 2022 Jun 9
+sortdate: 2022/06/09 00:00
+source: Brain Commun
+title: Changes in brain activity with tominersen in early-manifest Huntington’s disease
+uid: '9237739'
+volume: '4'

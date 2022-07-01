@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '35545899'
+- idtype: doi
+  value: 10.1002/advs.202200887
+- idtype: pmcid
+  value: PMC9218648
+authors:
+- authtype: Author
+  name: Jiang H
+- authtype: Author
+  name: Kokkinos V
+- authtype: Author
+  name: Ye S
+- authtype: Author
+  name: Urban A
+- authtype: Author
+  name: Bagić A
+- authtype: Author
+  name: Richardson M
+- authtype: Author
+  name: He B
+epubdate: 2022 May 12
+fulljournalname: Advanced Science
+issue: '18'
+pages: '2200887'
+pmclivedate: 2022/06/29
+printpubdate: ''
+pubdate: 2022 May 12
+sortdate: 2022/05/12 00:00
+source: Adv Sci (Weinh)
+title: Interictal SEEG Resting‐State Connectivity Localizes the Seizure Onset Zone
+  and Predicts Seizure Outcome
+uid: '9218648'
+volume: '9'
