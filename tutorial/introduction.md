@@ -7,7 +7,7 @@ tags: [tutorial, meg, eeg, raw, timelock, freq, source, statistics, lfp, spike, 
 
 ## Introduction
 
-This tutorial will give you an introduction into how to use FieldTrip with MATLAB and how to make an analysis protocol. You will read a few examples of analysis protocols of EEG/MEG data analysis. This introduction, however, does not give detailed information about each analysis step. You will find those in other tutorials. You will find also useful information about how to use FieldTrip in the [FieldTrip Walkthrough](/walkthrough).
+This tutorial will give you an introduction into how to use FieldTrip with MATLAB and how to make an analysis protocol. You will read a few examples of analysis protocols of EEG/MEG data analysis. This introduction, however, does not give detailed information about each analysis step. You will find those in other tutorials. You will find also useful information about how to use FieldTrip in the [walkthrough](/walkthrough).
 
 {% include markup/info %}
 This short tutorial introduces the design of the FieldTrip toolbox. If you have some more time, you can watch a more elaborate introduction in this lecture.
@@ -29,7 +29,7 @@ The analysis protocol includes tools and/or algorithms used, and how they are us
 
 These tools can be combined in an analysis protocol that for example looks like Figure 1.
 
-{% include image src="/assets/img/tutorial/introduction/figure1.png" %}
+{% include image src="/assets/img/tutorial/introduction/figure1.png" width="500" %}
 
 _Figure: Analysis protocol for Event-Related Potentials (ERPs)._
 
@@ -45,13 +45,13 @@ The FieldTrip toolbox is not a program with a user interface where you can click
 - Functions for source analysis (e.g., **[ft_sourceanalysis](/reference/ft_sourceanalysis)**)
 - Functions for statistical analysis (e.g., **[ft_timelockstatistics](/reference/ft_timelockstatistics)**)
 - Functions for plotting and displaying the data (e.g., **[ft_multiplotER](/reference/ft_multiplotER)**)
-- Function for real-time acquisition and analysis (e.g., **[ft_realtime_average](/reference/realtime/example/ft_realtime_average)**)
 
 The full list of functions can be found [here](/reference). Each of the functions of the toolbox takes as input the (intermediate) data that was produced by the previous function.
+
 There is a difference between high- and low-level functions. The high-level functions are the ones that are used by the user, while the low-level functions are automatically called by the higher level functions. The user does not have to be aware of the low-level functions.
 The toolbox is continuously being developed and extended. Therefore, it is important that you start your analysis in the newest version of FieldTrip.
 
-In some cases, FieldTrip is working together with external toolboxes or programs, like SPM, Openmeeg and FreeSurfer. Some of the toolboxes are included in the default FieldTrip release, some of them have to be downloaded from the internet. You can read more about the external toolboxes [here](/faq/external).
+In some cases, FieldTrip is working together with external toolboxes or programs, like SPM, OpenMEEG and FreeSurfer. Some of the toolboxes are included in the default FieldTrip release, some of them have to be downloaded from the internet. You can read more about the external toolboxes [here](/faq/external).
 
 ### Using the toolbox and MATLAB
 
@@ -90,9 +90,9 @@ How to make analysis protocols for different types of analysis using the FieldTr
 
 FieldTrip is composed of a collection of scripts running in MATLAB. The toolbox is platform independent (i.e. can run under Linux, macOS and Windows). To start MATLAB on Linux at the DCC
 
-    matlab2014b (or use another version number, e.g., 2016a)
+    matlab2022a # or use another version number, e.g., matlab2018b
 
-It is now possible to execute the MATLAB scripts by copying/pasting the relevant text from the tutorials (To copy from a Window browser to MATLAB running under Linux from X-Win32, use the mouse to highlight the text in the browser and press Crtl-c. Then use Ctrl-v or the middle mouse button to paste in MATLAB).
+It is now possible to execute the MATLAB scripts by copying/pasting the relevant text from the tutorials (To copy from a Window browser to MATLAB running under Linux from X-Win32, use the mouse to highlight the text in the browser and press crtl-c. Then use ctrl-v or the middle mouse button to paste in MATLAB).
 
 Make sure that the path is set correctly to the directory of the FieldTrip toolbox and the data. For the tutorials it is recommend to 'cd' to the directory where the data are. Look at [this FAQ](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path) for more information on how to correctly set your path for FieldTrip.
 
@@ -107,7 +107,7 @@ Some other standard analysis protocols are given also below. The figures indicat
 
 ERP/ERF analysis consists of preprocessing, averaging the data timelocked to the stimulus or response, optionally averaging over subjects and/or testing for significant effects and finally plotting the result.
 
-{% include image src="/assets/img/tutorial/introduction/figure2.png" %}
+{% include image src="/assets/img/tutorial/introduction/figure2.png" width="500" %}
 
 _Figure: An example analysis protocol for Event-Related Potentials (ERPs) using the FieldTrip functions._
 
@@ -115,7 +115,7 @@ _Figure: An example analysis protocol for Event-Related Potentials (ERPs) using 
 
 Frequency analysis consists of preprocessing, performing a Fourier or wavelet decomposition of the data, optionally averaging over subjects and/or testing for significant effects and finally plotting the result.
 
-{% include image src="/assets/img/tutorial/introduction/figure3.png" %}
+{% include image src="/assets/img/tutorial/introduction/figure3.png" width="500" %}
 
 _Figure: An example analysis protocol of (time-)frequency analysis in FieldTrip._
 
@@ -124,7 +124,7 @@ _Figure: An example analysis protocol of (time-)frequency analysis in FieldTrip.
 A schematic display of the analysis steps for source reconstruction using a beamformer approach is given below.
 Prior to any source reconstruction, you should have performed a complete timelock or frequency analysis of the data at the channel level.
 
-{% include image src="/assets/img/tutorial/introduction/figure4.png" %}
+{% include image src="/assets/img/tutorial/introduction/figure4.png" width="500" %}
 
 _Figure: An example analysis protocol of the source analysis using beamforming in FieldTrip._
 
@@ -136,7 +136,7 @@ The spatial normalisation towards a template brain is done in FieldTrip with the
 
 Below you can see the protocol that you would use for averaging the source reconstruction over subjects and for group statistics on the source level. If the statistical test involves two conditions, then you should do the source normalisation in both conditions for all subjects and feed the two grandaveraged source reconstructions into **[ft_sourcestatistics](/reference/ft_sourcestatistics)**.
 
-{% include image src="/assets/img/tutorial/introduction/figure5.png" %}
+{% include image src="/assets/img/tutorial/introduction/figure5.png" width="500" %}
 
 _Figure: An example analysis protocol of source reconstruction for multiple subjects in FieldTrip._
 
