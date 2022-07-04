@@ -1,0 +1,47 @@
+articleids:
+- idtype: pmid
+  value: '35262667'
+- idtype: doi
+  value: 10.1093/brain/awac094
+- idtype: pmcid
+  value: PMC9246710
+authors:
+- authtype: Author
+  name: Mehraram R
+- authtype: Author
+  name: Peraza LR
+- authtype: Author
+  name: Murphy NR
+- authtype: Author
+  name: Cromarty RA
+- authtype: Author
+  name: Graziadio S
+- authtype: Author
+  name: O’Brien JT
+- authtype: Author
+  name: Killen A
+- authtype: Author
+  name: Colloby SJ
+- authtype: Author
+  name: Firbank M
+- authtype: Author
+  name: Su L
+- authtype: Author
+  name: Collerton D
+- authtype: Author
+  name: Taylor JP
+- authtype: Author
+  name: Kaiser M
+epubdate: 2022 Mar 9
+fulljournalname: Brain
+issue: '6'
+pages: 2190-2205
+pmclivedate: 2022/07/01
+printpubdate: ''
+pubdate: 2022 Mar 9
+sortdate: 2022/03/09 00:00
+source: Brain
+title: Functional and structural brain network correlates of visual hallucinations
+  in Lewy body dementia
+uid: '9246710'
+volume: '145'

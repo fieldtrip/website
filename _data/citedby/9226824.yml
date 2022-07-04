@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '35560984'
+- idtype: doi
+  value: 10.1002/brb3.2597
+- idtype: pmcid
+  value: PMC9226824
+authors:
+- authtype: Author
+  name: Lapomarda G
+- authtype: Author
+  name: Valer S
+- authtype: Author
+  name: Job R
+- authtype: Author
+  name: Grecucci A
+epubdate: 2022 May 13
+fulljournalname: Brain and Behavior
+issue: '6'
+pages: e2597
+pmclivedate: 2022/06/30
+printpubdate: ''
+pubdate: 2022 May 13
+sortdate: 2022/05/13 00:00
+source: Brain Behav
+title: 'Built to last: Theta and delta changes in resting‐state EEG activity after
+  regulating emotions'
+uid: '9226824'
+volume: '12'

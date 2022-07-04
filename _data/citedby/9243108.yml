@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '35768419'
+- idtype: doi
+  value: 10.1038/s41467-022-31407-z
+- idtype: pmcid
+  value: PMC9243108
+authors:
+- authtype: Author
+  name: Griffiths BJ
+- authtype: Author
+  name: Zaehle T
+- authtype: Author
+  name: Repplinger S
+- authtype: Author
+  name: Schmitt FC
+- authtype: Author
+  name: Voges J
+- authtype: Author
+  name: Hanslmayr S
+- authtype: Author
+  name: Staudigl T
+epubdate: 2022 Jun 29
+fulljournalname: Nature Communications
+issue: ''
+pages: '3736'
+pmclivedate: 2022/07/01
+printpubdate: ''
+pubdate: 2022 Jun 29
+sortdate: 2022/06/29 00:00
+source: Nat Commun
+title: Rhythmic interactions between the mediodorsal thalamus and prefrontal cortex
+  precede human visual perception
+uid: '9243108'
+volume: '13'

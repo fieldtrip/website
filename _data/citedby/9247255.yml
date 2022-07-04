@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fnins.2022.909434
+- idtype: pmcid
+  value: PMC9247255
+authors:
+- authtype: Author
+  name: Chen L
+- authtype: Author
+  name: Zhang L
+- authtype: Author
+  name: Wang Z
+- authtype: Author
+  name: Gu B
+- authtype: Author
+  name: Zhang X
+- authtype: Author
+  name: Ming D
+epubdate: 2022 Jun 17
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '909434'
+pmclivedate: 2022/07/02
+printpubdate: ''
+pubdate: 2022 Jun 17
+sortdate: 2022/06/17 00:00
+source: Front Neurosci
+title: The Effects of Sensory Threshold Somatosensory Electrical Stimulation on Users
+  With Different MI-BCI Performance
+uid: '9247255'
+volume: '16'

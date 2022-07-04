@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fneur.2022.871166
+- idtype: pmcid
+  value: PMC9243385
+authors:
+- authtype: Author
+  name: Mylonas D
+- authtype: Author
+  name: Sjøgård M
+- authtype: Author
+  name: Shi Z
+- authtype: Author
+  name: Baxter B
+- authtype: Author
+  name: Hämäläinen M
+- authtype: Author
+  name: Manoach DS
+- authtype: Author
+  name: Khan S
+epubdate: 2022 Jun 16
+fulljournalname: Frontiers in Neurology
+issue: ''
+pages: '871166'
+pmclivedate: 2022/07/01
+printpubdate: ''
+pubdate: 2022 Jun 16
+sortdate: 2022/06/16 00:00
+source: Front Neurol
+title: A Novel Approach to Estimating the Cortical Sources of Sleep Spindles Using
+  Simultaneous EEG/MEG
+uid: '9243385'
+volume: '13'
