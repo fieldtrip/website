@@ -118,10 +118,7 @@ When you are working with a very large data set repeatedly or interactively, cle
 
 ## Summary and suggested further readings
 
-This tutorial gave advice for doing data-analysis in a memory-efficient way.
-If you are interested in further issues on efficiency, check [this](/tutorial/distributedcomputing) and [this](/tutorial/memory) tutorials.
-
-It is much advised to also read this [technical note](http://www.mathworks.com/support/tech-notes/1100/1106.html) from MathWorks.
+This tutorial gave some advice for scripting your analysis in a memory-efficient way. We also advise to read this [technical note](http://www.mathworks.com/support/tech-notes/1100/1106.html) from MathWorks. Further suggestions for computational efficiency are given in the [distributed computing](/tutorial/distributedcomputing) tutorial. 
 
 These are FAQs that are related to memory issues:
 
