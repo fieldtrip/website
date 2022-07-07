@@ -1,0 +1,34 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1016/j.cnp.2022.05.004
+- idtype: pmcid
+  value: PMC9253402
+authors:
+- authtype: Author
+  name: Vial F
+- authtype: Author
+  name: McGurrin P
+- authtype: Author
+  name: Attaripour S
+- authtype: Author
+  name: d'Azzo A
+- authtype: Author
+  name: Tifft CJ
+- authtype: Author
+  name: Toro C
+- authtype: Author
+  name: Hallett M
+epubdate: 2022 Jun 10
+fulljournalname: Clinical Neurophysiology Practice
+issue: ''
+pages: 169-173
+pmclivedate: 2022/07/06
+printpubdate: ''
+pubdate: 2022 Jun 10
+sortdate: 2022/06/10 00:00
+source: Clin Neurophysiol Pract
+title: Myoclonus generators in sialidosis
+uid: '9253402'
+volume: '7'
