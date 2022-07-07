@@ -34,7 +34,7 @@ As stated before, by making our own function around FieldTrip functions we can i
     % more information can be added to this script when needed
     ...
 
-Save this as _Subject01.m_ in a personal folder that you will need to add to the MATLAB path. Using the command line you can now simply retrieve this personal data by calling `Subject01` or from any script by using `eval('Subject01')`. This will return the structure `subjectdata` containing all the fields we have specified. We can now use this structure as input for our own functions, giving us a flexible way of combining generic functions and subject-specific settings. In addition, you could use this file to add further comments such as `% subject made a mistake on the first trial`.
+Save this as `Subject01.m` in a personal folder that you will need to add to the MATLAB path. Using the command line you can now simply retrieve this personal data by calling `Subject01` or from any script by using `eval('Subject01')`. This will return the structure `subjectdata` containing all the fields we have specified. We can now use this structure as input for our own functions, giving us a flexible way of combining generic functions and subject-specific settings. In addition, you could use this file to add further comments such as `% subject made a mistake on the first trial`.
 
 ## Making your own analysis functions
 
@@ -62,7 +62,7 @@ It is often convenient to save intermediate results to disk. For instance you ca
 
     save('firstoutput','output');
 
-to save the output to _firstoutput.mat_ in the directory you are in. Let's say you defined an output folder as in the first paragraph:
+to save the output to `firstoutput.mat` in the directory you are in. Let's say you defined an output folder as in the first paragraph:
 
     subjectdata.subjectdir = 'Subject01';
 
@@ -94,40 +94,41 @@ We suggest that you store a single variable per file. This will in general make 
 Along the way, you will most likely expand on the subject-specific information. For instance, in the first step you used ft_databrowser to select some unusual artifacts in one subject, which you could write (automatically) in your subject .m file:
 
     subjectdata.visualartifacts = [
-    160611,162906
-    473717,492076
-    604850,606076
-    702196,703615
-    736261,738205
-    850361,852159
-    887956,895200
-    959974,972785
-    1096344,1099772 ];
+      160611,162906
+      473717,492076
+      604850,606076
+      702196,703615
+      736261,738205
+      850361,852159
+      887956,895200
+      959974,972785
+      1096344,1099772
+     ];
 
 ## Batching
 
-In the end we'll end up with a collection of several functions, either depending on the output of previous functions (e.g., preprocessing or artifact rejection) while others could in principle be called in parallel (e.g., averaging per condition or per subject). This could result in an analysis pipeline such as this (simplified) on
+In the end we'll end up with a collection of several functions, either depending on the output of previous functions (e.g., preprocessing or artifact rejection) while others could in principle be called in parallel (e.g., averaging per condition or per subject). This could result in an analysis pipeline such as this (simplified) one:
 
-{% include image src="/assets/img/tutorial/scripting/pipeline.jpg" width="600" %}
+{% include image src="/assets/img/tutorial/scripting/figure1.png" width="600" %}
 
 This will allow us to automate most of the steps that do not require manual labor (in this example that would be the visual inspection of the data to reject artifacts). This is called _batching_. Large datasets will often require quite some processing time and it will therefore often be the case that a batch will be run overnight.
 
-The worst that can happen is that the next morning you'll see some red lines in your MATLAB command window just because of a small mistake in one of the first subjects. Therefore, you might want to try using the `try-catch` option in MATLAB. Whenever something goes wrong between the `try` and `catch` it will jump to the catch after which it will just continue. E.g
+The worst that can happen is that the next morning you'll see some red lines in your MATLAB command window just because of a small mistake in one of the first subjects. Therefore, you might want to try using the `try-catch` option in MATLAB. Whenever something goes wrong between the `try` and `catch` it will jump to the catch after which it will just continue. For example:
 
     for i = 1:number_of_subjects
-    try
-            my_preprocessing_function(i)
-            % my_old_freqanalysis_function(i)
-            my_freqanalysis_function(i)
-            my_sourceanalysis_function(i)
+      try
+        my_preprocessing_function(i)
+        % my_old_freqanalysis_function(i)
+        my_freqanalysis_function(i)
+        my_sourceanalysis_function(i)
       catch
-      disp(['Something was wrong with Subject' int2str(i) '! Continuing with next in line']);
+        disp(['Something was wrong with Subject' int2str(i) '! Continuing with next in line']);
       end
     end
 
 ## Example batches
 
-The following function will load the data as specified in Subject01.m, uses the databrowser for visual inspection of artifacts, rejects those trials containing artifacts and then saves the data in a separate folder as “01_preproc_dataM.mat”. You can simply call it by “do_preprocess_MM('Subject01');”
+The following function will load the data as specified in Subject01.m, uses the databrowser for visual inspection of artifacts, rejects those trials containing artifacts and then saves the data in a separate folder as “01_preproc_dataM.mat”. You can simply call it as `do_preprocess_MM('Subject01')`.
 
     function do_preproces_MM(Subjectm)
 
@@ -140,17 +141,17 @@ The following function will load the data as specified in Subject01.m, uses the 
     outputdir = 'AnalysisM';
 
     %%% define trials
-    cfg.dataset             = [subjectdata.subjectdir filesep subjectdata.datadir];
-    cfg.trialdef.eventtype  = 'frontpanel trigger';
-    cfg.trialdef.prestim  = 1.5;
+    cfg.dataset            = [subjectdata.subjectdir filesep subjectdata.datadir];
+    cfg.trialdef.eventtype = 'frontpanel trigger';
+    cfg.trialdef.prestim   = 1.5;
     cfg.trialdef.poststim  = 1.5;
-    %cfg.continuous    = 'no';
-    cfg.lpfilter    = 'no';
-    cfg.continuous    = 'yes';
-    cfg.trialfun    = 'motormirror_trialfun';   % located in \Scripts
+    %cfg.continuous = 'no';
+    cfg.lpfilter   = 'no';
+    cfg.continuous = 'yes';
+    cfg.trialfun   = 'motormirror_trialfun';   % located in scripts
     cfg.channel    = 'MEG';
-    cfg.layout    = 'EEG1020.lay';
-    cfg       = ft_definetrial(cfg);
+    cfg.layout     = 'EEG1020.lay';
+    cfg = ft_definetrial(cfg);
 
     %%% if there are visual artifacts already in subject m-file use those. They will show up in databrowser
     try
@@ -159,11 +160,11 @@ The following function will load the data as specified in Subject01.m, uses the 
     end
 
     %%% visual detection of jumps etc
-    cfg.continuous   = 'yes';
-    cfg.blocksize   = 20;
-    cfg.eventfile   = [];
+    cfg.continuous = 'yes';
+    cfg.blocksize  = 20;
+    cfg.eventfile  = [];
     cfg.viewmode   = 'butterfly';
-    cfg     = ft_databrowser(cfg);
+    cfg = ft_databrowser(cfg);
 
     %%% enter visually detected artifacts in subject m-file;
     fid = fopen([subjectdata.mfiledir filesep Subjectm '.m'],'At');
@@ -194,7 +195,7 @@ The following function will load the data as specified in Subject01.m, uses the 
 
 ## Summary and suggested further readings
 
-This tutorial explained how to write your own functions and how to do batching in order to increase the efficiency of your analysis. If you are interested in further issues on memory usage and speed of the analysis, you can check [this](/tutorial/memory) and [this](/tutorial/distributedcomputing) tutorials.
+This tutorial explained how to write your own functions and how to do batching in order to increase the efficiency of your analysis. If you are interested in improving memory usage and the speed of your analysis, you can check [this](/tutorial/memory) and [this](/tutorial/distributedcomputing) tutorials.
 
 When you have more questions about the topic of any tutorial, don't forget to check the [frequently asked questions](/faq) and the [example scripts](/example).
 
