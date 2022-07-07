@@ -25,13 +25,9 @@ At the moment the only way of distributing the workload over multiple nodes requ
 
 ## Procedure
 
-To distribute your processes and to speed up your analyses, we provide two examples. The first example script will show you how to use basic FieldTrip functions for the distribution.
+To distribute your processes and to speed up your analyses, we provide two examples. The first example script will show you how to use basic FieldTrip functions for the distribution. Using the basic FieldTrip functions in a memory efficient manner requires that you save the intermediate data of each step to disk, and that you load it upon the next (parallel) step in the analysis.
 
-{% include image src="/assets/img/tutorial/distributedcomputing/figure1.png" width="500" %}
-
-Using the basic FieldTrip functions in a memory efficient manner requires that you save the intermediate data of each step to disk, and that you load it upon the next (parallel) step in the analysis. If you prefer not to store all intermediate results, or if you want to have more control over other aspects of the parallel execution, you can provide your own functions that are executed in parallel. This is demonstrated in the second example script.
-
-{% include image src="/assets/img/tutorial/distributedcomputing/figure2.png" width="500" %}
+If you prefer not to store all intermediate results, or if you want to have more control over other aspects of the parallel execution, you can provide your own functions that are executed in parallel. This is demonstrated in the second example script.
 
 The distributed operations of FieldTrip functions in this example require the original MEG datasets for the four subjects, which are available from
 
@@ -43,6 +39,8 @@ The distributed operations of FieldTrip functions in this example require the or
 ## Example 1: using only FieldTrip functions in distributed computing
 
 This example script demonstrates how to run basic FieldTrip functions in parallel. The idea is schematically depicted in the following figure.
+
+{% include image src="/assets/img/tutorial/distributedcomputing/figure1.png" width="500" %}
 
     subjectlist = {
       'Subject01.ds'
@@ -170,6 +168,8 @@ Instead of returning the 12 variables for the different subjects and conditions 
 
 This example script demonstrates how you can efficiently design your custom code for distributed computing.
 
+{% include image src="/assets/img/tutorial/distributedcomputing/figure2.png" width="500" %}
+
     subjectlist = {
       'Subject01.ds'
       'Subject02.ds'
@@ -228,15 +228,14 @@ This example script demonstrates how you can efficiently design your custom code
     % note that the "preproc_timelock_planar" function is defined further down in this tutorial
     qsubcellfun(@preproc_timelock_planar, cfg1, cfg2, cfg3, cfg4, outputfile);
 
-    % let's now load the individual subject data from the 12 .mat files and
-    % average it for subsequent plotting
+    % let's now load the individual subject data from the 12 .mat files and average each of them for subsequent plotting
     timelock = {};
     for subj=1:4
-    for cond=1:3
-      tmp = load(sprintf('subj%02d_cond%02d_combined.mat', subj, cond));
-      timelock{subj,cond} = tmp.combined;
-      clear tmp
-    end
+      for cond=1:3
+        tmp = load(sprintf('subj%02d_cond%02d_combined.mat', subj, cond));
+        timelock{subj,cond} = tmp.combined;
+        clear tmp
+      end
     end
 
     cfg = [];
@@ -269,7 +268,7 @@ This way you can distribute your custom function (e.g., see below) along with th
 
 ## Summary and suggested further reading
 
-This tutorial covered how to distribute your computations/workload over multiple computers in a cluster that uses the Torque or SGE batch queue system. In our example, we have performed a relatively simple timelock analysis (ERF) on MEG data, but one can imagine that it does not need many adjustments to distribute any other type of analysis. Using the configuration demonstrated in Example 2, one can distribute any form of analysis.
+This tutorial covered how to distribute your computations/workload over multiple computers in a cluster that uses the Torque or SGE batch queue system. In our example, we have performed a relatively simple timelock analysis to compute event-related fields, but one can imagine that it does not need many adjustments to distribute any other type of analysis. Using the configuration demonstrated in Example 2, you can distribute any form of analysis.
 
 FAQs related to issues in this tutorial:
 {% include seealso tag1="faq" tag2="qsub"       %}
