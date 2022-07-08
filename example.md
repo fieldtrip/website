@@ -85,7 +85,7 @@ See also the [tutorials](/tutorial) and [frequently asked questions](/faq).
 - [Measuring the timing delay and jitter for a real-time application](/example/measuring_the_timing_delay_and_jitter_for_a_real-time_application)
 - [Realtime neurofeedback application based on Hilbert phase estimation](/example/ft_realtime_hilbert)
 
-## Visualizing the results of an analysis
+## Plotting and visualization
 
 - [Creating a layout for plotting NIRS optodes and channels](/example/nirs_layout)
 - [Plotting the result of source reconstructing on a cortical mesh](/example/plotting_source_surface)
