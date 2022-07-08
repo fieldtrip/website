@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '35726850'
+- idtype: doi
+  value: 10.7554/eLife.73930
+- idtype: pmcid
+  value: PMC9259015
+authors:
+- authtype: Author
+  name: Nicolas J
+- authtype: Author
+  name: King BR
+- authtype: Author
+  name: Levesque D
+- authtype: Author
+  name: Lazzouni L
+- authtype: Author
+  name: Coffey E
+- authtype: Author
+  name: Swinnen S
+- authtype: Author
+  name: Doyon J
+- authtype: Author
+  name: Carrier J
+- authtype: Author
+  name: Albouy G
+epubdate: 2022 Jun 21
+fulljournalname: eLife
+issue: ''
+pages: e73930
+pmclivedate: 2022/07/07
+printpubdate: ''
+pubdate: 2022 Jun 21
+sortdate: 2022/06/21 00:00
+source: eLife
+title: Sigma oscillations protect or reinstate motor memory depending on their temporal
+  coordination with slow waves
+uid: '9259015'
+volume: '11'

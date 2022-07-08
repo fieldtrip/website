@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '35583972'
+- idtype: doi
+  value: 10.1152/jn.00515.2021
+- idtype: pmcid
+  value: PMC9190735
+authors:
+- authtype: Author
+  name: Iamshchinina P
+- authtype: Author
+  name: Karapetian A
+- authtype: Author
+  name: Kaiser D
+- authtype: Author
+  name: Cichy RM
+epubdate: 2022 May 18
+fulljournalname: Journal of Neurophysiology
+issue: '6'
+pages: 1622-1628
+pmclivedate: 2022/07/06
+printpubdate: 2022 Jun 1
+pubdate: 2022 May 18
+sortdate: 2022/05/18 00:00
+source: J Neurophysiol
+title: Resolving the time course of visual and auditory object categorization
+uid: '9190735'
+volume: '127'
