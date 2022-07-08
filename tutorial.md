@@ -20,7 +20,7 @@ When adding or contributing to the tutorials please consider the [documentation 
 - [Making a memory efficient analysis script](/tutorial/memory)
 - [Speeding up your analysis with distributed computing](/tutorial/distributedcomputing)
 
-## Preprocessing of MEG and EEG data
+## Reading and preprocessing data
 
 - [Preprocessing - Reading continuous EEG and MEG data](/tutorial/continuous)
 - [Preprocessing - Trigger based trial selection](/tutorial/preprocessing)
@@ -28,7 +28,7 @@ When adding or contributing to the tutorials please consider the [documentation 
 - [Visual artifact rejection](/tutorial/visual_artifact_rejection)
 - [Automatic artifact rejection](/tutorial/automatic_artifact_rejection)
 
-## Sensor-level analyses of MEG and EEG data
+## Sensor-level analyses
 
 - [Event related fields and MEG planar gradient](/tutorial/eventrelatedaveraging)
 - [Preprocessing of EEG data and computing ERPs](/tutorial/preprocessing_erp)
@@ -38,7 +38,7 @@ When adding or contributing to the tutorials please consider the [documentation 
 - [Sensor-level ERF, TFR and connectivity analyses](/tutorial/sensor_analysis)
 - [Extracting the brain state and events from continuous sleep EEG](/tutorial/sleep)
 
-## Source reconstruction of MEG and EEG data
+## Source reconstruction
 
 - [Construct a headmodel for MEG source analysis](/tutorial/headmodel_meg)
 - [Construct a BEM headmodel for EEG source analysis](/tutorial/headmodel_eeg_bem)
@@ -78,7 +78,7 @@ When adding or contributing to the tutorials please consider the [documentation 
 - [Whole brain connectivity and network analysis](/tutorial/networkanalysis)
 - [Whole brain connectivity and network analysis (2) - EEG](/tutorial/networkanalysis_eeg)
 
-## Statistics
+## Statistical analysis
 
 - [Parametric and non-parametric statistics on event related fields](/tutorial/eventrelatedstatistics)
 - [Cluster-based permutation tests on event related fields](/tutorial/cluster_permutation_timelock)
@@ -87,7 +87,7 @@ When adding or contributing to the tutorials please consider the [documentation 
 - [Multivariate analysis of MEG/EEG data](/tutorial/multivariateanalysis) (based on the Donders Machine Learning Toolbox)
 - [Multivariate analysis of MEG/EEG data](/tutorial/mvpa_light) (based on the MVPA light toolbox)
 
-## Visualizing the results of an analysis
+## Plotting and visualization
 
 - [Specifying the channel layout for plotting](/tutorial/layout)
 - [Plotting data at the channel and source level](/tutorial/plotting)
