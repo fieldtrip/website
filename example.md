@@ -13,19 +13,22 @@ See also the [tutorials](/tutorial) and [frequently asked questions](/faq).
 
 ### Reading and preprocessing data
 
-- [Detect the muscle activity in an EMG channel and use that as trial definition](/example/detect_the_muscle_activity_in_an_emg_channel_and_use_that_as_trial_definition)
-- [Fixing a missing sensor](/example/fixing_a_missing_sensor)
 - [Getting started with reading raw EEG or MEG data](/example/getting_started_with_reading_raw_eeg_or_meg_data)
-- [How to incorporate head movements in MEG analysis](/example/headmovement_meg)
-- [Interpolating data from the CTF151 to the CTF275 sensor array using ft_megrealign](/example/megrealign)
 - [Making your own trialfun for conditional trial definition](/example/making_your_own_trialfun_for_conditional_trial_definition)
-- [Analyzing NIRS data recorded during unilateral finger- and foot-tapping](/example/nirs_fingertapping)
-- [Analyzing NIRS data recorded during listening to and repeating speech](/example/nirs_speech)
-- [The correct pipeline order for combining planar MEG channels](/example/combineplanar_pipelineorder)
+- [Detect the muscle activity in an EMG channel and use that as trial definition](/example/detect_the_muscle_activity_in_an_emg_channel_and_use_that_as_trial_definition)
 - [Use independent component analysis (ICA) to remove ECG artifacts](/example/ica_ecg)
 - [Use independent component analysis (ICA) to remove EOG artifacts](/example/ica_eog)
 - [Use denoising source separation (DSS) to remove ECG artifacts](/example/use_denoising_source_separation_dss_to_remove_ecg_artifacts)
+- [Fixing a missing sensor](/example/fixing_a_missing_sensor)
 - [Re-reference EEG and iEEG data](/example/rereference)
+
+### Sensor-level analysis
+
+- [Analyzing NIRS data recorded during unilateral finger- and foot-tapping](/example/nirs_fingertapping)
+- [Analyzing NIRS data recorded during listening to and repeating speech](/example/nirs_speech)
+- [The correct pipeline order for combining planar MEG channels](/example/combineplanar_pipelineorder)
+- [How to incorporate head movements in MEG analysis](/example/headmovement_meg)
+- [Interpolating data from the CTF151 to the CTF275 sensor array using ft_megrealign](/example/megrealign)
 
 ### Spectral analysis
 
@@ -91,7 +94,7 @@ See also the [tutorials](/tutorial) and [frequently asked questions](/faq).
 - [Plotting the result of source reconstructing on a cortical mesh](/example/plotting_source_surface)
 - [Making a synchronous movie of EEG or NIRS combined with video recordings](/example/video_eeg)
 
-## Miscellaneous
+## Various other examples
 
 - [BIDS - the brain imaging data structure](/example/bids)
 - [Combining simultaneous recordings in BIDS](/example/bids_pom)

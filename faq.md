@@ -12,36 +12,53 @@ We invite you to [add your own](/contribute) example scripts or frequently asked
 See also the [tutorials](/tutorial) and [example scripts](/example).
 
 ## Reading and preprocessing data
-- [How can I append the files of two separate recordings?](/faq/append_files)
-- [How can I check or decipher the sequence of triggers in my data?](/faq/triggers)
-- [How can I consistently represent artifacts in my data?](/faq/how_can_i_consistently_represent_artifacts_in_my_data)
-- [How can I convert one dataformat into an other?](/faq/how_can_i_convert_one_dataformat_into_an_other)
-- [How can I find out what eventvalues and eventtypes there are in my data?](/faq/how_can_i_find_out_what_eventvalues_and_eventtypes_there_are_in_my_data)
-- [How can I import my own dataformat?](/faq/how_can_i_import_my_own_dataformat)
+
+- [How can I use the databrowser?](/faq/how_can_i_use_the_databrowser)
 - [How can I inspect the electrode impedances of my data?](/faq/how_can_i_inspect_the_electrode_impedances_of_my_data)
-- [How can I interpret the different types of padding that I find when dealing with artifacts?](/faq/how_can_i_interpret_the_different_types_of_padding_that_i_find_when_dealing_with_artifacts)
-- [How can I merge two datasets that were acquired simultaneously with different amplifiers?](/faq/how_can_i_merge_two_datasets_that_were_acquired_simultaneously_with_different_amplifiers)
-- [How can I preprocess a dataset that is too large to fit into memory?](/faq/how_can_i_preprocess_a_dataset_that_is_too_large_to_fit_into_memory)
-- [How can I process continuous data without triggers?](/faq/how_can_i_process_continuous_data_without_triggers)
+- [Should I rereference my EEG data prior to, or after ICA?](/faq/should_I_rereference_prior_to_or_after_ica_for_artifact_removal)
+- [I used to work with trl-matrices that have more than 3 columns. Why is this not supported anymore?](/faq/i_used_to_work_with_trl-matrices_that_have_more_than_3_columns._why_is_this_not_supported_anymore)
+
+## Specific data formats
 - [How can I read EGI mff data without the JVM?](/faq/how_can_i_read_egi_mff_data_without_the_jvm)
 - [How can I read all channels from an EDF file that contains multiple sampling rates?](/faq/how_can_i_read_all_channels_from_an_edf_file_that_contains_multiple_sampling_rates)
-- [How can I transform trigger values from bits to decimal representation with a trialfun?](/faq/how_can_i_transform_trigger_values_from_bits_to_decimal_representation_with_a_trialfun)
-- [How can I use the databrowser?](/faq/how_can_i_use_the_databrowser)
-- [How can I extend the reading functions with a new dataformat?](/faq/how_can_i_extend_the_reading_functions_with_a_new_dataformat)
 - [How does the CTF higher-order gradiometer work?](/faq/how_does_the_ctf_higher-order_gradiometer_work)
-- [How does the filter padding in preprocessing work?](/faq/how_does_the_filter_padding_in_preprocessing_work)
+- [How can I extend the reading functions with a new dataformat?](/faq/how_can_i_extend_the_reading_functions_with_a_new_dataformat)
 - [I have problems reading in neuroscan .cnt files. How can I fix this?](/faq/i_have_problems_reading_in_neuroscan_.cnt_files._how_can_i_fix_this)
-- [I used ICA on my MEG data from before 2012 and now FieldTrip crashes, why is that?](/faq/i_used_ica_on_my_meg_data_from_before_2012_and_now_fieldtrip_crashes_why_is_that)
-- [I used to work with trl-matrices that have more than 3 columns. Why is this not supported anymore?](/faq/i_used_to_work_with_trl-matrices_that_have_more_than_3_columns._why_is_this_not_supported_anymore)
-- [Is it possible to keep track of trial-specific information in my FieldTrip analysis pipeline?](/faq/is_it_possible_to_keep_track_of_trial-specific_information_in_my_fieldtrip_analysis_pipeline)
-- [Reading is slow, can I write my raw data to a more efficient file format?](/faq/reading_is_slow_can_i_write_my_raw_data_to_a_more_efficient_file_format)
-- [The databrowser crashes and destroys the whole MATLAB session, how can I resolve this?](/faq/the_databrowser_crashes_and_destroys_the_whole_matlab_session_how_can_i_resolve_this)
-- [What dataformats are supported?](/faq/dataformat)
-- [What kind of filters can I apply to my data?](/faq/what_kind_of_filters_can_i_apply_to_my_data)
 - [Why are the fileio functions stateless, does the fseek not make them very slow?](/faq/why_are_the_fileio_functions_stateless_does_the_fseek_not_make_them_very_slow)
-- [Why is there a residual 50Hz line-noise component after applying a DFT filter?](/faq/why_is_there_a_residual_50hz_line-noise_component_after_applying_a_dft_filter)
-- [Should I rereference my EEG data prior to, or after ICA?](/faq/should_I_rereference_prior_to_or_after_ica_for_artifact_removal)
+- [How can I import my own dataformat?](/faq/how_can_i_import_my_own_dataformat)
+- [How can I deal with a discontinuous Neuralynx recording?](/faq/discontinuous_neuralynx)
+- [How can I fix a corrupt CTF meg4 data file?](/faq/how_can_i_fix_a_corrupt_ctf_meg4_data_file)
+- [How can I fix a corrupt CTF res4 header file?](/faq/how_can_i_fix_a_corrupt_ctf_res4_header_file)
+- [How can I read corrupted (unsaved)\_CTF_data?](/faq/how_can_i_read_corrupted_unsaved_ctf_data)
+- [I am having problems reading the CTF .hc headcoordinates file](/faq/i_am_having_problems_reading_the_ctf_.hc_headcoordinates_file)
+
+### Data handling
+
+- [Reading is slow, can I write my raw data to a more efficient file format?](/faq/reading_is_slow_can_i_write_my_raw_data_to_a_more_efficient_file_format)
+- [What dataformats are supported?](/faq/dataformat)
+- [How can I append the files of two separate recordings?](/faq/append_files)
+- [How can I convert one dataformat into an other?](/faq/how_can_i_convert_one_dataformat_into_an_other)
+- [How can I merge two datasets that were acquired simultaneously with different amplifiers?](/faq/how_can_i_merge_two_datasets_that_were_acquired_simultaneously_with_different_amplifiers)
+- [How can I preprocess a dataset that is too large to fit into memory?](/faq/how_can_i_preprocess_a_dataset_that_is_too_large_to_fit_into_memory)
+
+### Trials, triggers and events
+
+- [How can I check or decipher the sequence of triggers in my data?](/faq/triggers)
+- [How can I find out what eventvalues and eventtypes there are in my data?](/faq/how_can_i_find_out_what_eventvalues_and_eventtypes_there_are_in_my_data)
+- [How can I process continuous data without triggers?](/faq/how_can_i_process_continuous_data_without_triggers)
+- [How can I transform trigger values from bits to decimal representation with a trialfun?](/faq/how_can_i_transform_trigger_values_from_bits_to_decimal_representation_with_a_trialfun)
+- [Is it possible to keep track of trial-specific information in my FieldTrip analysis pipeline?](/faq/is_it_possible_to_keep_track_of_trial-specific_information_in_my_fieldtrip_analysis_pipeline)
+
+### Artifacts
+
+- [What kind of filters can I apply to my data?](/faq/what_kind_of_filters_can_i_apply_to_my_data)
 - [Do I need to resample my data, and if so, how is this to be done?](/faq/resampling_lowpassfilter)
+- [I used ICA on my MEG data from before 2012 and now FieldTrip crashes, why is that?](/faq/i_used_ica_on_my_meg_data_from_before_2012_and_now_fieldtrip_crashes_why_is_that)
+- [Why does my ICA output contain complex numbers?](/faq/why_does_my_ica_output_contain_complex_numbers)
+- [How can I consistently represent artifacts in my data?](/faq/how_can_i_consistently_represent_artifacts_in_my_data)
+- [How can I interpret the different types of padding that I find when dealing with artifacts?](/faq/how_can_i_interpret_the_different_types_of_padding_that_i_find_when_dealing_with_artifacts)
+- [How does the filter padding in preprocessing work?](/faq/how_does_the_filter_padding_in_preprocessing_work)
+- [Why is there a residual 50Hz line-noise component after applying a DFT filter?](/faq/why_is_there_a_residual_50hz_line-noise_component_after_applying_a_dft_filter)
 
 ## Spectral analysis
 
@@ -136,14 +153,6 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [How fast is the FieldTrip buffer for realtime data streaming?](/faq/how_fast_is_the_fieldtrip_buffer_for_realtime_data_streaming)
 - [How should I get started with the FieldTrip realtime buffer?](/faq/how_should_i_get_started_with_the_fieldtrip_realtime_buffer)
 
-## Questions that pertain to corrupt datafiles
-
-- [How can I deal with a discontinuous Neuralynx recording?](/faq/discontinuous_neuralynx)
-- [How can I fix a corrupt CTF meg4 data file?](/faq/how_can_i_fix_a_corrupt_ctf_meg4_data_file)
-- [How can I fix a corrupt CTF res4 header file?](/faq/how_can_i_fix_a_corrupt_ctf_res4_header_file)
-- [How can I read corrupted (unsaved)\_CTF_data?](/faq/how_can_i_read_corrupted_unsaved_ctf_data)
-- [I am having problems reading the CTF .hc headcoordinates file](/faq/i_am_having_problems_reading_the_ctf_.hc_headcoordinates_file)
-
 ## Distributed computing
 
 - [What are the different approaches I can take for distributed computing?](/faq/what_are_the_different_approaches_i_can_take_for_distributed_computing)
@@ -199,6 +208,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [MATLAB does not see the functions in the "private" directory](/faq/matlab_does_not_see_the_functions_in_the_private_directory)
 - [MATLAB version 7.3 (2006b)_crashes_when_I_try_to_do_...](/faq/matlab_version_7.3_2006b_crashes_when_i_try_to_do)
 - [Should I add FieldTrip with all subdirectories to my MATLAB path?](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path)
+- [The databrowser crashes and destroys the whole MATLAB session, how can I resolve this?](/faq/the_databrowser_crashes_and_destroys_the_whole_matlab_session_how_can_i_resolve_this)
 - [What are the MATLAB requirements for using FieldTrip?](/faq/requirements)
 - [What is the relation between "events" (such as_triggers) and "trials"?](/faq/what_is_the_relation_between_events_such_as_triggers_and_trials)
 - [Which external toolboxes are used by FieldTrip?](/faq/external)
@@ -232,7 +242,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 ## Various other questions
 
 - [Are the FieldTrip lectures available on video?](/faq/video)
-- [Can I map different Electrode position layouts?](/faq/capmapping)
+- [Can I map different electrode position layouts?](/faq/capmapping)
 - [Can I organize my own FieldTrip workshop?](/faq/can_i_organize_my_own_workshop)
 - [How can I anonymize DICOM files?](/faq/how_can_i_anonymize_dicom_files)
 - [How can I anonymize a CTF dataset?](/faq/how_can_i_anonymize_a_ctf_dataset)
@@ -243,9 +253,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [How do I prevent FieldTrip from printing the time and memory after each function call?](/faq/how_do_i_prevent_fieldtrip_from_printing_the_time_and_memory_after_each_function_call)
 - [How should I prepare for the upcoming FieldTrip workshop?](/faq/how_should_i_prepare_for_the_upcoming_fieldtrip_workshop)
 - [How should I specify the coordinate systems in a BIDS dataset?](/faq/bids_coordsystem)
-- [I used ICA on my MEG data from before 2012 and now FieldTrip crashes, why is that?](/faq/i_used_ica_on_my_meg_data_from_before_2012_and_now_fieldtrip_crashes_why_is_that)
 - [What are the units of the data and of the derived results?](/faq/units)
 - [What types of datasets (and their respective analyses) are used on FieldTrip?](/faq/what_types_of_datasets_and_their_respective_analyses_are_used_on_fieldtrip)
 - [What usage information is FieldTrip tracking?](/faq/tracking)
 - [Where can I find open access MEG/EEG data?](/faq/open_data)
-- [Why does my ICA output contain complex numbers?](/faq/why_does_my_ica_output_contain_complex_numbers)
