@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1038/s41598-022-15780-9
+- idtype: pmcid
+  value: PMC9270479
+authors:
+- authtype: Author
+  name: Mitsudo H
+- authtype: Author
+  name: Hironaga N
+- authtype: Author
+  name: Ogata K
+- authtype: Author
+  name: Tobimatsu S
+epubdate: 2022 Jul 8
+fulljournalname: Scientific Reports
+issue: ''
+pages: '11672'
+pmclivedate: 2022/07/10
+printpubdate: ''
+pubdate: 2022 Jul 8
+sortdate: 2022/07/08 00:00
+source: Sci Rep
+title: Large-scale cortico-cerebellar computations for horizontal and vertical vergence
+  in humans
+uid: '9270479'
+volume: '12'

@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1038/s41467-022-31549-0
+- idtype: pmcid
+  value: PMC9262908
+authors:
+- authtype: Author
+  name: Aller M
+- authtype: Author
+  name: Mihalik A
+- authtype: Author
+  name: Noppeney U
+epubdate: 2022 Jul 7
+fulljournalname: Nature Communications
+issue: ''
+pages: '3924'
+pmclivedate: 2022/07/09
+printpubdate: ''
+pubdate: 2022 Jul 7
+sortdate: 2022/07/07 00:00
+source: Nat Commun
+title: Audiovisual adaptation is expressed in spatial and decisional codes
+uid: '9262908'
+volume: '13'

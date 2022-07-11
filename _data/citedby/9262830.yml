@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '35233716'
+- idtype: doi
+  value: 10.1007/s12028-021-01430-x
+- idtype: pmcid
+  value: PMC9262830
+- idtype: MID
+  value: NIHMS1791699
+authors:
+- authtype: Author
+  name: Hund SJ
+- authtype: Author
+  name: Brown BR
+- authtype: Author
+  name: Lemale CL
+- authtype: Author
+  name: Menon PG
+- authtype: Author
+  name: Easley KA
+- authtype: Author
+  name: Dreier JP
+- authtype: Author
+  name: Jones SC
+epubdate: 2022 Mar 1
+fulljournalname: Neurocritical care
+issue: Suppl 1
+pages: 67-82
+pmclivedate: ''
+printpubdate: 2022 Jun
+pubdate: 2022 Mar 1
+sortdate: 2022/03/01 00:00
+source: Neurocrit Care
+title: Numerical Simulation of Concussive-generated Cortical Spreading Depolarization
+  to Optimize DC-EEG Electrode Spacing for Non-invasive Visual Detection
+uid: '9262830'
+volume: '37'
