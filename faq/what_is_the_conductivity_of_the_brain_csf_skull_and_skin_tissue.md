@@ -11,7 +11,7 @@ There are multiple literature references from which you can get estimates for th
 - Gabriel S, Lau RW, Gabriel C. _The dielectric properties of biological tissues: II. Measurements in the frequency range 10 Hz to 20 GHz._ Phys Med Biol, vol. 41, pp. 2251-69, Nov 1996.
 - Manola L, Roelofsen BH, Holsheimer J, Marani E, Geelen J. _Modelling motor cortex stimulation for chronic pain control: electrical potential field, activating functions and responses of simple nerve fibre models._ Med Biol Eng Comput, vol. 43, pp. 335-43, May 2005.
 
-In a spherical or realistic  three-shell EEG volume conduction model, conductivity ratio's of 1, 1/80, 1 are commonly specified for scalp, skull and brain. The proper conductivities are then 0.3300, 0.0042 and 0.3300 S/m respectively. For a four-shell EEG volume conduction model the conductivities of scalp, skull, CSF and brain are commonly specified as 0.3300, 0.0042, 1.0000 and 0.3300 S/m.
+In a spherical or realistic  three-shell EEG volume conduction model, conductivity ratio's of 1, 1/80, 1 are commonly specified for scalp, skull and brain. The proper conductivities are then 0.3300, 0.0042 and 0.3300 S/m respectively. For a four-shell EEG volume conduction model the conductivities of scalp, skull, CSF and brain are commonly specified as 0.3300, 0.0042, 1.7900 and 0.3300 S/m.
 
 Note however that there is no agreement on the correct conductivity values of the skull. For example in
 
@@ -24,3 +24,7 @@ The scalp topography obtained from EEG forward models shows an inverse relation 
 ## Is the tissue conductivity frequency dependent?
 
 It is commonly assumed that - at the frequencies that we consider in EEG/MEG - the impedances of the tissues relevant for EEG/MEG source modeling are purely resistive, i.e. there are no capacitive or inductive effects. This means that the conductivity is frequency independent and the attenuation of the source activity by the skull therefore does not depend on the temporal or frequency characteristics of the sources.
+
+## See also
+
+  * Documentation on [Source Analysis Head Models](http://wiki.besa.de/index.php?title=Source_Analysis_Head_Models) on the BESA wiki
