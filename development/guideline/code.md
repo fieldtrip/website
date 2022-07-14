@@ -431,7 +431,7 @@ With Ctrl-A, Ctrl-I you can auto-indent the whole m-file and ensure that the hor
 
 ## Avoid changing the order of the channels in the data, if possible
 
-FieldTrip functions should not rely on the channels being represented in a particular order, but should always explicitly look into the list with the channel labels in order to determine on which elements in the numeric data a particular computation is required. Functions may operate on several data-arguments that have data that belong to channels, e.g., channel position, coil-to-channel mappings for MEG gradiometer arrays, time series of electrophysiological data, parameters of a sphere fitted to the headsurface directly underlying a particular channel, a set of neighbours relative to a particular channel etc.
+FieldTrip functions should not rely on the channels being represented in a particular order, but should always explicitly look into the list with the channel labels in order to determine on which elements in the numeric data a particular computation is required. Functions may operate on several data-arguments that have information that pertains to channels, e.g., electrode positions, coil-to-channel mappings for MEG gradiometer arrays, time series of electrophysiological data, parameters of a sphere fitted to the headsurface directly underlying a particular channel, a set of neighbours relative to a particular channel, etc.
 
 In this case we aim at imposing the following behavior of the function:
 
