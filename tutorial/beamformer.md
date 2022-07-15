@@ -38,13 +38,13 @@ To localize the oscillatory sources for the example dataset we will perform the 
 - Compute a spatial filter and estimate the power of the sources using **[ft_sourceanalysis](/reference/ft_sourceanalysis)**
   - Visualize the results, by first interpolating the sources to the anatomical MRI using **[ft_sourceinterpolate](/reference/ft_sourceinterpolate)** and plotting this with **[ft_sourceplot](/reference/ft_sourceplot)**.
 
-{% include image src="/assets/img/tutorial/beamformer/bf_pipeline.jpg" width="650" %}
+{% include image src="/assets/img/tutorial/beamformer/figure1.jpg" width="650" %}
 
 ## Preprocessing
 
 The aim is to identify the sources of oscillatory activity in the beta band. From the section time-frequency analysis we have identified 18 Hz as the center frequency for which the power estimates should be calculated. We seek to compare the activation in the post-stimulus to the activation in the pre-stimulus interval. We first use **[ft_preprocessing](/reference/ft_preprocessing)** and **[ft_selectdata](/reference/ft_selectdata)** to extract relevant data. It is important that the length of each data piece matches an integer number of oscillatory cycles. Here 9 cycles are used resulting in a 9/18 Hz = 0.5 s time window. Thus, the post-stimulus time-window range between 0.8 to 1.3 s and the pre-stimulus interval between -0.5 to 0.0 s (see Figure 1).
 
-{% include image src="/assets/img/tutorial/beamformer/tfrbmf.png" width="700" %}
+{% include image src="/assets/img/tutorial/beamformer/figure2.png" width="700" %}
 
 _Figure 1: The time-frequency presentation used to determine the time- and frequency-windows prior to beamforming. The squares indicate the selected time-frequency tiles for the pre- and post-response.._
 
@@ -243,7 +243,7 @@ Plot the interpolated data:
     cfg.funparameter = 'pow';
     ft_sourceplot(cfg, sourcePostInt_nocon);
 
-{% include image src="/assets/img/tutorial/beamformer/figure1bf.png" width="500" %}
+{% include image src="/assets/img/tutorial/beamformer/figure3.png" width="500" %}
 
 _Figure 2: The power estimates of the post-stimulus activity only at ~18 Hz. Note the strong noise bias toward the center of the head. The image was done using **[ft_sourceinterpolate](/reference/ft_sourceinterpolate)** and **[ft_sourceplot](/reference/ft_sourceplot)**.._
 
@@ -284,7 +284,7 @@ Plot it:
 We limit the colormap for the functional data together with the opacity parameter to better see where source power is maximal. The lower limit of 4 is an arbitrary choice here. Instead, if you have a statistical map you could mask the data based on where power is significantly stronger (i.e. as compared to baseline).
 {% include markup/end %}
 
-{% include image src="/assets/img/tutorial/beamformer/figure2bf.png" width="500" %}
+{% include image src="/assets/img/tutorial/beamformer/figure4.png" width="500" %}
 
 _Figure 3: The neural activity index (NAI) plotted for the post-stimulus time window normalized with respect to the noise estimate._
 
@@ -363,7 +363,7 @@ Now plot the power ratios:
     cfg.opacitymap    = 'rampup';
     ft_sourceplot(cfg, sourceDiffInt);
 
-{% include image src="/assets/img/tutorial/beamformer/figure4bf.png" width="500" %}
+{% include image src="/assets/img/tutorial/beamformer/figure5.png" width="500" %}
 
 _Figure 4: sourceplot with method "slice" ._
 
@@ -398,7 +398,7 @@ To plot an 'orthogonal' cut
     cfg.opacitymap    = 'rampup';
     ft_sourceplot(cfg, sourceDiffInt);
 
-{% include image src="/assets/img/tutorial/beamformer/figure7bf.png" width="500" %}
+{% include image src="/assets/img/tutorial/beamformer/figure6.png" width="500" %}
 
 _Figure 5: sourceplot with method "ortho"._
 
@@ -420,7 +420,7 @@ When plotting the orthogonal view it is possible to enter interactive mode by sp
     cfg.opacitymap    = 'rampup';
     ft_sourceplot(cfg, sourceDiffIntNorm);
 
-{% include image src="/assets/img/tutorial/beamformer/figure8bf.png" width="500" %}
+{% include image src="/assets/img/tutorial/beamformer/figure7.png" width="500" %}
 
 _Figure 6: sourceplot with method "ortho" after volume normalisation._
 
@@ -442,7 +442,7 @@ Now the data can be plotted
     ft_sourceplot(cfg, sourceDiffIntNorm);
     view ([90 0])
 
-{% include image src="/assets/img/tutorial/beamformer/bf_tut_surfacepowrelnorm_comfilt.png" width="500" %}
+{% include image src="/assets/img/tutorial/beamformer/figure8.png" width="500" %}
 
 _Figure 7: sourceplot with method "surface"._
 
