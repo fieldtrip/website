@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fnins.2022.914213
+- idtype: pmcid
+  value: PMC9278062
+authors:
+- authtype: Author
+  name: Almeida-Antunes N
+- authtype: Author
+  name: Vasconcelos M
+- authtype: Author
+  name: Crego A
+- authtype: Author
+  name: Rodrigues R
+- authtype: Author
+  name: Sampaio A
+- authtype: Author
+  name: López-Caneda E
+epubdate: 2022 Jun 29
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '914213'
+pmclivedate: 2022/07/14
+printpubdate: ''
+pubdate: 2022 Jun 29
+sortdate: 2022/06/29 00:00
+source: Front Neurosci
+title: 'Forgetting Alcohol: A Double-Blind, Randomized Controlled Trial Investigating
+  Memory Inhibition Training in Young Binge Drinkers'
+uid: '9278062'
+volume: '16'

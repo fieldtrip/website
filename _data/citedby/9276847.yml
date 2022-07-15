@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '35041633'
+- idtype: doi
+  value: 10.1213/ANE.0000000000005864
+- idtype: pmcid
+  value: PMC9276847
+- idtype: MID
+  value: NIHMS1758501
+authors:
+- authtype: Author
+  name: Chao JY
+- authtype: Author
+  name: Gutiérrez R
+- authtype: Author
+  name: Legatt AD
+- authtype: Author
+  name: Yozawitz EG
+- authtype: Author
+  name: Lo Y
+- authtype: Author
+  name: Adams DC
+- authtype: Author
+  name: Delphin ES
+- authtype: Author
+  name: Shinnar S
+- authtype: Author
+  name: Purdon PL
+epubdate: 2022 Jan 13
+fulljournalname: Anesthesia and analgesia
+issue: ''
+pages: 10.1213/ANE.0000000000005864
+pmclivedate: ''
+printpubdate: ''
+pubdate: 2022 Jan 13
+sortdate: 2022/01/13 00:00
+source: Anesth Analg
+title: Decreased electroencephalographic (EEG) alpha power during anesthesia induction
+  is associated with EEG discontinuity in human infants
+uid: '9276847'
+volume: ''
