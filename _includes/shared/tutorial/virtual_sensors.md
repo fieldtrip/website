@@ -83,6 +83,6 @@ The structures _coh_lft_data_ and _gam_pow_data_ resemble the raw-data output of
     cfg.viewmode = 'vertical';  % you can also specify 'butterfly'
     ft_databrowser(cfg, gam_pow_data);
 
-{% include image src="/assets/img/shared/tutorial/virtual_sensors/virtualchannels_conn_extended.png" width="400" %}
+{% include image src="/assets/img/shared/tutorial/virtual_sensors/figure1.png" width="400" %}
 
 Notice that the reconstruction contains three channels, for the x-, the y- and the z-component of the equivalent current dipole source at the location of interest.

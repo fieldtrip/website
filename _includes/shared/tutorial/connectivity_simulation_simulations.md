@@ -42,7 +42,7 @@ The simulated data consists of 3 channels (cfg.nsignal) in 500 trials (cfg.ntria
     legend(data.label)
     xlabel('time (s)')
 
-{% include image src="/assets/img/shared/tutorial/connectivity_simulation_simulations/data.png" width="400" %}
+{% include image src="/assets/img/shared/tutorial/connectivity_simulation_simulations/figure1.png" width="400" %}
 
 or browse through the complete data using
 
@@ -50,7 +50,7 @@ or browse through the complete data using
     cfg.viewmode = 'vertical';  % you can also specify 'butterfly'
     ft_databrowser(cfg, data);
 
-{% include image src="/assets/img/shared/tutorial/connectivity_simulation_simulations/databrowser.png" width="400" %}
+{% include image src="/assets/img/shared/tutorial/connectivity_simulation_simulations/figure2.png" width="400" %}
 
 ### Computation of the multivariate autoregressive model
 
@@ -154,7 +154,7 @@ Subsequently, the data can be visualized using **[ft_connectivityplot](/referenc
     cfg.zlim      = [0 1];
     ft_connectivityplot(cfg, coh, cohm);
 
-{% include image src="/assets/img/shared/tutorial/connectivity_simulation_simulations/connectivityplot.png" width="400" %}
+{% include image src="/assets/img/shared/tutorial/connectivity_simulation_simulations/figure3.png" width="400" %}
 
 The coherence measure is a symmetric measure, which means that it does not provide information regarding the direction of information flow between any pair of signals. In order to analyze directionality in interactions, measures based on the concept of granger causality can be computed. These measures are based on an estimate of the spectral transfer matrix, which can be computed in a straightforward way from the multivariate autoregressive model fitted to the data.
 
@@ -167,7 +167,7 @@ The coherence measure is a symmetric measure, which means that it does not provi
     cfg.zlim      = [0 1];
     ft_connectivityplot(cfg, granger);
 
-{% include image src="/assets/img/shared/tutorial/connectivity_simulation_simulations/grangerplot1.png" width="400" %}
+{% include image src="/assets/img/shared/tutorial/connectivity_simulation_simulations/figure4.png" width="400" %}
 
 #### Exercise 2
 
@@ -186,7 +186,7 @@ Instead of plotting it with **[ft_connectivityplot](/reference/ft_connectivitypl
     end
     end
 
-{% include image src="/assets/img/shared/tutorial/connectivity_simulation_simulations/grangerplot2.png" width="400" %}
+{% include image src="/assets/img/shared/tutorial/connectivity_simulation_simulations/figure5.png" width="400" %}
 
 #### Exercise 3
 

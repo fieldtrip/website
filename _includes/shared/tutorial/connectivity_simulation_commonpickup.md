@@ -31,9 +31,9 @@ When working with electrophysiological data (EEG/MEG/LFP) the signals that are p
     set(findobj(gcf,'color',[0 0.5 0]), 'color', [1 0 0]);
     title('mixed ''sources''');
 
-{% include image src="/assets/img/shared/tutorial/connectivity_simulation_commonpickup/mixingmixed.png" width="300" %}
+{% include image src="/assets/img/shared/tutorial/connectivity_simulation_commonpickup/figure1.png" width="300" %}
 
-{% include image src="/assets/img/shared/tutorial/connectivity_simulation_commonpickup/mixingunmixed.png" width="300" %}
+{% include image src="/assets/img/shared/tutorial/connectivity_simulation_commonpickup/figure2.png" width="300" %}
 
     % do spectral analysis
     cfg = [];
@@ -48,7 +48,7 @@ When working with electrophysiological data (EEG/MEG/LFP) the signals that are p
     set(findobj(gcf,'color',[0 0.5 0]), 'color', [1 0 0]);
     title('power spectrum');
 
-{% include image src="/assets/img/shared/tutorial/connectivity_simulation_commonpickup/mixingpowerspectrum.png" width="300" %}
+{% include image src="/assets/img/shared/tutorial/connectivity_simulation_commonpickup/figure3.png" width="300" %}
 
     % compute connectivity
     cfg = [];
@@ -65,7 +65,7 @@ When working with electrophysiological data (EEG/MEG/LFP) the signals that are p
     cfg.parameter = 'cohspctrm';
     figure; ft_connectivityplot(cfg, c);
 
-{% include image src="/assets/img/shared/tutorial/connectivity_simulation_commonpickup/mixinggranger.png" width="400" %} {% include image src="/assets/img/shared/tutorial/connectivity_simulation_commonpickup/mixingcoherence.png" width="400" %}
+{% include image src="/assets/img/shared/tutorial/connectivity_simulation_commonpickup/figure4.png" width="400" %} {% include image src="/assets/img/shared/tutorial/connectivity_simulation_commonpickup/mixingcoherence.png" width="400" %}
 
 #### Exercise 5
 
