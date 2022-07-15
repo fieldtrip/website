@@ -72,7 +72,7 @@ data_all contains a field data_all.trialinfo, which contains the 4th column of t
 
     plot(data_all.time{1}, data_all.trial{1}(130,:))
 
-{% include image src="/assets/img/tutorial/preprocessing/preprocess1.png" %}
+{% include image src="/assets/img/tutorial/preprocessing/figure1.png" %}
 
 Split up the conditions by selecting trials according to their trigger value (in data_all.trialinfo).
 

@@ -21,7 +21,7 @@ To calculate distributed neuronal activation we will use the minimum-norm estima
 
 Figure 1 shows a schematic of the steps needed for the calculation of the minimum-norm estimate. It shows that the computation of the inverse solution is based on the outputs of two independent processing steps: the processing of the anatomical images that leads to a forward model and the processing of the MEG data. To create a useable source model, additional software is needed, for example FreeSurfer (for the creation of a model of the cortical sheet), and MNE Suite or HCP workbench (to get a minimally distorted low-resultion version of the cortical sheet).
 
-{% include image src="/assets/img/tutorial/minimumnormestimate/pipeline_mne.png" width="550" %}
+{% include image src="/assets/img/tutorial/minimumnormestimate/figure1.png" width="550" %}
 
 _Figure 1. A schematic overview of the steps needed for the calculation of the minimum-norm estimate_
 
@@ -144,7 +144,7 @@ You can plot the inverse solution onto the source-space at a specific time-point
     ft_plot_mesh(sourceFIC, 'vertexcolor', m);
     view([180 0]); h = light; set(h, 'position', [0 1 0.2]); lighting gouraud; material dull
 
-{% include image src="/assets/img/tutorial/minimumnormestimate/plotmeshsourceic01newest.png" width="450" %}
+{% include image src="/assets/img/tutorial/minimumnormestimate/figure2.png" width="450" %}
 
 _Figure 6. The result of the source-reconstruction of the FIC condition plotted onto the source-space at 500 ms after the 0 time-point_
 
@@ -164,7 +164,7 @@ But we would like to know where the difference between the conditions can be loc
     cfg.funparameter = 'pow';
     ft_sourcemovie(cfg,sdDIFF);
 
-{% include image src="/assets/img/tutorial/minimumnormestimate/sourcemovie01newest.png" width="500" %}
+{% include image src="/assets/img/tutorial/minimumnormestimate/figure3.png" width="500" %}
 
 _Figure 7. One frame from the movie that shows the differences of the two source-reconstructions_
 

@@ -70,7 +70,7 @@ We visualize the mesh surface
 
     ft_plot_mesh(head_surface)
 
-{% include image src="/assets/img/tutorial/electrode/structure_headsurface.jpg" width="400" %}
+{% include image src="/assets/img/tutorial/electrode/figure1.jpg" width="400" %}
 
 _Figure 1: Mesh recorded with 3D-scanner_
 
@@ -82,9 +82,9 @@ In the next step we will transform our mesh into [CTF coordinates](/faq/coordsys
 
 Now that we have the position of the fiducials relative to the original coordinate system of the head surface, we are able to coregister our head surface such that the fiducial positions are along the axes (according to the CTF coordinates). To facilitate the identification of the fiducials in the 3D-scan, you can also mark the locations on your subject with a coloured pen.
 
-{% include image src="/assets/img/tutorial/electrode/structure_nas.png" %}
-{% include image src="/assets/img/tutorial/electrode/structure_left.png" %}
-{% include image src="/assets/img/tutorial/electrode/structure_right.png" %}
+{% include image src="/assets/img/tutorial/electrode/figure2.png" %}
+{% include image src="/assets/img/tutorial/electrode/figure3.png" %}
+{% include image src="/assets/img/tutorial/electrode/figure4.png" %}
 
 _Figures: Location of the fiducials_
 
@@ -101,7 +101,7 @@ Again we visualize the head surface, and now we also plot the axes of the coordi
     ft_plot_axes(head_surface)
     ft_plot_mesh(head_surface)
 
-{% include image src="/assets/img/tutorial/electrode/structure_realigned.jpg" width="300" %}
+{% include image src="/assets/img/tutorial/electrode/figure5.jpg" width="300" %}
 
 _Figure: Realigned head surface_
 
@@ -113,7 +113,7 @@ The previous step ensured that our head surface is in the coordinate system in w
     cfg.method = 'headshape';
     elec = ft_electrodeplacement(cfg, head_surface);
 
-{% include image src="/assets/img/tutorial/electrode/structure_electrodeplacement.png" width="500" %}
+{% include image src="/assets/img/tutorial/electrode/figure6.png" width="500" %}
 
 _Figure: Identifying electrode locations_
 
@@ -138,7 +138,7 @@ A final visualization shows the electrodes on the colored surface mesh of the su
     ft_plot_mesh(head_surface)
     ft_plot_sens(elec)
 
-{% include image src="/assets/img/tutorial/electrode/structure_electrode_head_surface.png" width="300" %}
+{% include image src="/assets/img/tutorial/electrode/figure7.png" width="300" %}
 
 _Figure: Head surface with localized electrodes_
 

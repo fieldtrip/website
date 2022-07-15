@@ -45,7 +45,7 @@ The participant was engaged in a basic event-related auditory oddball paradigm i
 
 The fNIRS data was recorded using four Oxymon systems from Artinis that were linked to enable a 48 channel recording.
 
-{% include image src="/assets/img/tutorial/nirs_multichannel/nirs_cap.png" width="400" %}
+{% include image src="/assets/img/tutorial/nirs_multichannel/figure1.png" width="400" %}
 
 _Figure 1: Photo of the recording setup._
 
@@ -73,7 +73,7 @@ The order of steps for this specific tutorial is as follows (see the figure belo
 - average the data over trials in each condition
 - visualize the results
 
-{% include image src="/assets/img/tutorial/nirs_multichannel/nirs_tut2_multichannel_analysis_steps.png" width="400" %}
+{% include image src="/assets/img/tutorial/nirs_multichannel/figure2.png" width="400" %}
 
 _Figure 2: Overview of the fNIRS analysis procedure for this tutorial._
 
@@ -108,7 +108,7 @@ To retrieve the layout from the data file as shown above, you can use:
     cfg.opto      = 'LR-01-2015-06-01-0002.oxy3';
     ft_layoutplot(cfg);
 
-{% include image src="/assets/img/tutorial/nirs_multichannel/nirs_tut2_optodepositions.png" width="600" %}
+{% include image src="/assets/img/tutorial/nirs_multichannel/figure3.png" width="600" %}
 
 _Figure 3: Layout of the channels, in between the corresponding optodes._
 
@@ -129,7 +129,7 @@ Plotting the data from ADC001 and ADC002 will yield the figure below, showing th
     plot(data_raw.time{1}, data_raw.trial{1}(97,:)*1.0, 'b-')
     plot(data_raw.time{1}, data_raw.trial{1}(98,:)*1.1, 'r:')
 
-{% include image src="/assets/img/tutorial/nirs_multichannel/nirs_tut2_datatrigger.png" width="600" %}
+{% include image src="/assets/img/tutorial/nirs_multichannel/figure4.png" width="600" %}
 
 _Figure 4: Oddball paradigm trigger. All stimuli onsets are indicated by the blue lines. Red dotted lines indicate onsets of the deviants. You can recognize four blocks of events._
 
@@ -179,7 +179,7 @@ We can now plot the data and see what it looks like. In cfg.preproc we can speci
     cfg.channel        = 'Rx*'; % only show channels starting with Rx
     ft_databrowser(cfg, data_down);
 
-{% include image src="/assets/img/tutorial/nirs_multichannel/nirs_tut2_databrowser.png" width="600" %}
+{% include image src="/assets/img/tutorial/nirs_multichannel/figure5.png" width="600" %}
 
 _Figure 5: Optical density traces for down-sampled data before high-pass filtering._
 
@@ -202,7 +202,7 @@ This step has removed some of the variability in the hemodynamic response betwee
     cfg.channel        = 'Rx*'; % only show channels starting with Rx
     ft_databrowser(cfg, data_flt);
 
-{% include image src="/assets/img/tutorial/nirs_multichannel/nirs_tut2_opticaldensitytracesafterhighpass.png" width="600" %}
+{% include image src="/assets/img/tutorial/nirs_multichannel/figure6.png" width="600" %}
 
 _Figure 6: Optical density traces for down-sampled data after high-pass filtering. Note that the DC (offset) has been largely removed by this step (cf. Fig. 5)._
 
@@ -287,7 +287,7 @@ Let's take a look at what happens around the first deviant, by plotting the aver
     cfg.baseline = 'yes';
     ft_singleplotER(cfg, data_epoch)
 
-{% include image src="/assets/img/tutorial/nirs_multichannel/nirs_tut2_epocheddata.png" width="600" %}
+{% include image src="/assets/img/tutorial/nirs_multichannel/figure7.png" width="600" %}
 
 _Figure 7: Epoched optical density data around the first deviant stimulus._
 
@@ -340,7 +340,7 @@ Like in the [single channel tutorial](/tutorial/nirs_singlechannel), we will now
 
 Check the data again using **[ft_singleplotER](/reference/ft_singleplotER)**. You should see a clear heartbeat in the signal.
 
-{% include image src="/assets/img/tutorial/nirs_multichannel/nirs_tut2_hemoglobinovertime.png" width="600" %}
+{% include image src="/assets/img/tutorial/nirs_multichannel/figure8.png" width="600" %}
 
 _Figure 8: Hemoglobin concentration as a function of time, averaged over all channels for the epoch around the first deviant._
 
@@ -357,7 +357,7 @@ The heartbeat is not a signal that we are currently interested in, although you 
 
 The changes in average concentration now reveals a perfect example of the hemodynamic response. No heartbeat, the signal starts to rise at stimulus onset, peaks at around 4 s, and then drops again. Note that the absolute values also make sense (0.37 for the peak).
 
-{% include image src="/assets/img/tutorial/nirs_multichannel/nirs_tut2_hemoglobinovertimeafterlowpass.png" width="600" %}
+{% include image src="/assets/img/tutorial/nirs_multichannel/figure9.png" width="600" %}
 
 _Figure 9: Low-pass filtered hemoglobin concentrations (cf. two previous figs.)._
 
@@ -393,7 +393,7 @@ The channel layout can be read the `nirs_48ch_layout.mat` file using the standar
     load('nirs_48ch_layout.mat')
     figure; ft_plot_layout(lay) % note that O2Hb and HHb channels fall on top of each other
 
-{% include image src="/assets/img/tutorial/nirs_multichannel/nirs_tut2_layout.png" width="800" %}
+{% include image src="/assets/img/tutorial/nirs_multichannel/figure10.png" width="800" %}
 
 _Figure 10: Channel layout for multiplot and topoplot._
 
@@ -410,7 +410,7 @@ Important to remember is that for **[ft_multiplotER](/reference/ft_multiplotER)*
     cfg.colorgroups(contains(timelockDEV.label, 'HHb'))  = 2; % these will be blue
     ft_multiplotER(cfg, timelockDEV);
 
-{% include image src="/assets/img/tutorial/nirs_multichannel/nirs_tut2_multiploter.png" width="800" %}
+{% include image src="/assets/img/tutorial/nirs_multichannel/figure11.png" width="800" %}
 
 _Figure 11: A so-called multiplot of the data: the average time course displayed per channel._
 
@@ -436,7 +436,7 @@ Per default FieldTrip uses the minimum and the maximum in the selected part of t
     ft_topoplotER(cfg, timelockDEV);
     title('[HHb]');
 
-{% include image src="/assets/img/tutorial/nirs_multichannel/nirs_tut2_topoplot.png" width="600" %}
+{% include image src="/assets/img/tutorial/nirs_multichannel/figure12.png" width="600" %}
 
 _Figure 12: Topographical representation of the oxi- and deoxy-hemoglobin signal changes following the deviant tone._
 

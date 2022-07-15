@@ -46,7 +46,7 @@ The following steps provide a good standard approach for analyzing fNIRS data, s
 - define epochs corresponding to the trials in the experimental task
 - average the data over trials and visualize
 
-{% include image src="/assets/img/tutorial/nirs_singlechannel/nirs_tut1_fig1.png" width="400" %}
+{% include image src="/assets/img/tutorial/nirs_singlechannel/figure1.png" width="400" %}
 
 _Figure 1: Overview of a standard fNIRS analysis procedure._
 
@@ -116,7 +116,7 @@ Let us dive deeper into our data for now. For having a quick look at our data, w
     cfg.ylim = 'maxabs';
     ft_databrowser(cfg, data);
 
-{% include image src="/assets/img/tutorial/nirs_singlechannel/nirs_tut1_fig1_ft_databrowser_readin.png" width="400" %}
+{% include image src="/assets/img/tutorial/nirs_singlechannel/figure2.png" width="400" %}
 
 _Figure 2: Display of raw data in the databrowser._
 
@@ -129,7 +129,7 @@ Additionally, we'll from here select just one pair of channels, to reduce the co
     cfg.channel = {'Rx4b-Tx5 [860nm]', 'Rx4b-Tx5 [764nm]'};  % you can also use wildcards like 'Rx4b-Tx5*'
     ft_databrowser(cfg, data);
 
-{% include image src="/assets/img/tutorial/nirs_singlechannel/nirs_tut1_fig3_databrowser_one_chan.png" width="400" %}
+{% include image src="/assets/img/tutorial/nirs_singlechannel/figure3.png" width="400" %}
 
 _Figure 3: Display of one pair of channels (two wavelengths) in the databrowser._
 
@@ -232,7 +232,7 @@ We have now selected one pair of channels and cut the data in 12 trials. Check t
     cfg.artfctdef.zvalue.artifact = artifact;
     ft_databrowser(cfg, data_epoch);
 
-{% include image src="/assets/img/tutorial/nirs_singlechannel/nirs_tut1_fig3_ft_define_trial_v2.png" width="400" %}
+{% include image src="/assets/img/tutorial/nirs_singlechannel/figure4.png" width="400" %}
 
 _Figure 4: Databrowser showing the filtered data for one of the 12 trials._
 
@@ -290,7 +290,7 @@ Below we plot the averaged O2Hb and HHb traces from A-10 seconds to A+35 seconds
     plot(time,HHb,'b');
     legend('O2Hb','HHb'); ylabel('\DeltaHb (\muM)'); xlabel('time (s)');
 
-{% include image src="/assets/img/tutorial/nirs_singlechannel/nirs_tut1_fig4_ft_average_hem_respons.png" width="400" %}
+{% include image src="/assets/img/tutorial/nirs_singlechannel/figure5.png" width="400" %}
 
 _Figure 5: Averaged O2Hb and HHb traces. This figure closely resembles the text-book fNIRS model of cortical activation, which results from an increase in oxygen demand from the tissue instigating an increase in O2Hb due to neuro-vascular coupling as depicted by Scholkmann et al. in figure 5 of their [2014 review article](http://www.sciencedirect.com/science/article/pii/S1053811913004941)._
 

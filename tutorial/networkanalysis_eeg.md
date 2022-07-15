@@ -71,7 +71,7 @@ Using the EEG electrodes we compute a 2D layout in order to plot topographies. W
     figure(1);
     ft_plot_layout(lay)
 
-{% include image src="/assets/img/tutorial/networkanalysis_eeg/tutorial_nwaEEG_layout.png" width="400" %}
+{% include image src="/assets/img/tutorial/networkanalysis_eeg/figure1.png" width="400" %}
 
 _Figure 1: 2D electorde layout._
 
@@ -109,7 +109,7 @@ We will analyze the spectral content of the data using **[ft_freqanalysis](/refe
     cfg.xlim        = [3 30];
     subplot(1,2,2); ft_singleplotER(cfg, datapow);
 
-{% include image src="/assets/img/tutorial/networkanalysis_eeg/tutorial_nwa_EEG_topo_alpha.png" width="400" %}
+{% include image src="/assets/img/tutorial/networkanalysis_eeg/figure2.png" width="400" %}
 
 _Figure 2: Left- scalp topography of oscillatory power centered at 10 Hz. Right- power spectrum averaged over two occipital sensors illustrating a clear ~10 Hz peak._
 
@@ -129,7 +129,7 @@ Alternatively, one could create a volumetric dipole grid based on regularly spac
     ft_plot_sens(dataseg.elec);
     view([45 -15 0])
 
-{% include image src="/assets/img/tutorial/networkanalysis_eeg/tutorial_nwa_EEG_headmodel_electrodes_mismatch.png" width="400" %}
+{% include image src="/assets/img/tutorial/networkanalysis_eeg/figure3.png" width="400" %}
 
 _Figure 3: Misalignment between headmodel and electrode array._
 
@@ -144,7 +144,7 @@ In Figure 3 it is apparent that the electrodes do not align with the scalp surfa
     dataseg.elec  = elec_aligned;
     
 
-{% include image src="/assets/img/tutorial/networkanalysis_eeg/tutorial_nwa_EEG_headmodel_electrodes_match.png" width="400" %}
+{% include image src="/assets/img/tutorial/networkanalysis_eeg/figure4.png" width="400" %}
 
 _Figure 4: Headmodel and electrode array aligned correctly._
 
@@ -170,7 +170,7 @@ Before we proceed it is always useful to check the corregistration between the e
     ft_plot_sens(elec_aligned);
     view([0 -90 0])
     
-{% include image src="/assets/img/tutorial/networkanalysis_eeg/tutorial_nwa_EEG_geometry_all.png" width="400" %}
+{% include image src="/assets/img/tutorial/networkanalysis_eeg/figure5.png" width="400" %}
 
 _Figure 5: Alignment of headmodel (grey), electrodes (black) and sourcemodel(color). Individual parcels are assigned different color value._
 
@@ -243,7 +243,7 @@ In order to visualize source-reconstructed data, the function [ft_sourceplot](/r
     material dull
     set(gcf,'color','w');
 
-{% include image src="/assets/img/tutorial/networkanalysis_eeg/tutorial_nwa_EEG_nai.png" width="400" %}
+{% include image src="/assets/img/tutorial/networkanalysis_eeg/figure6.png" width="400" %}
 
 _Figure 6: Reconstructed activity (neural activity index) of resting state alpha power is not as instructive as one would hope._
 
@@ -301,7 +301,7 @@ Now, we can compute the spectra for the two sets of epochs using **[ft_freqdescr
     cfg.channel = {'EEG087', 'EEG088'};
     subplot(1,2,2);ft_singleplotER(cfg, datapow_high, datapow_low);
 
-{% include image src="/assets/img/tutorial/networkanalysis_eeg/tutorial_nwa_EEG_highlow_alpha.png" width="300" %}
+{% include image src="/assets/img/tutorial/networkanalysis_eeg/figure7.png" width="300" %}
 
 _Figure 7: Difference topography (left) and power spectra of the median splitted data, according to 10 Hz power at sensor 'EEG087'._
 
@@ -375,7 +375,7 @@ We now visualize the log-difference on the cortical sheet.
     material dull
     set(gcf,'color','w');
 
-{% include image src="/assets/img/tutorial/networkanalysis_eeg/tutorial_nwa_EEG_alpha_ratio.png" width="400" %}
+{% include image src="/assets/img/tutorial/networkanalysis_eeg/figure8.png" width="400" %}
 
 _Figure 8: Source reconstructed activity illustrating the relative difference in alpha power between the high and low alpha conditions._
 
@@ -401,7 +401,7 @@ We can now make a, rather uninformative, visualization of the connectome, plotti
 
     figure(9);imagesc(source_conn.cohspctrm);
 
-{% include image src="/assets/img/tutorial/networkanalysis_eeg/tutorial_nwa_EEG_connmat.png" width="300" %}
+{% include image src="/assets/img/tutorial/networkanalysis_eeg/figure9.png" width="300" %}
 
 _Figure 9: connectivity matrix between all pairs of dipole locations_
 
@@ -433,7 +433,7 @@ We can now explore the structure in the estimated connectivity matrices using gr
     material dull
     set(gcf,'color','w');
 
-{% include image src="/assets/img/tutorial/networkanalysis_eeg/tutorial_nwa_EEG_nodedegree.png" width="300" %}
+{% include image src="/assets/img/tutorial/networkanalysis_eeg/figure10.png" width="300" %}
 
 _Figure 10: Node degree based on imaginary part of coherency, thresholded at a value of 0.1. Dark colors indicated few suptrathreshold connections, hot colors indicate many suprathreshold connections._
 

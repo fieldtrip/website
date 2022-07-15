@@ -81,7 +81,7 @@ We can plot the results with the MATLAB plot command to get a first impression
 
     figure; plot(timelock.time, timelock.avg)
 
-{% include image src="/assets/img/tutorial/beamformer_lcmv/subjectseftimelock.png" width="400" %}
+{% include image src="/assets/img/tutorial/beamformer_lcmv/figure1.png" width="400" %}
 
 We can additionally explore the spatiotemporal dynamics using FieldTrip interactive plotting function
 
@@ -92,7 +92,7 @@ We can additionally explore the spatiotemporal dynamics using FieldTrip interact
     cfg.xlim   = [0.045 0.050];
     ft_topoplotER(cfg, timelock);
 
-{% include image src="/assets/img/tutorial/beamformer_lcmv/subjectseftopo.png" width="400" %}
+{% include image src="/assets/img/tutorial/beamformer_lcmv/figure2.png" width="400" %}
 
 
 ### Visualize the sensor level results (planar gradients)

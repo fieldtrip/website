@@ -13,7 +13,7 @@ In the following tutorial we will analyze a whole hemisphere EcoG grid implanted
 
 This particular experiment deals with a visual grating task. This particular task is known to reliably elicit a sustained signal in the gamma frequency range ~60-80 Hz in both humans and nonhuman primates. More elaborate discussion on the sustained gamma band signal can be found [here](http://www.sciencedirect.com/science/article/pii/S0896627308003747). The animal is seated with fixated head and restrained arm motion in front of a black screen. A grating pattern in eight different orientation has been presented for 2 seconds following a 2 seconds baseline period (black screen) while the brain activity was monitored with 128 channel ECoG grid covering the entire right hemisphere (Figure1). Some more information can be found [here](http://neurotycho.org/visual-grating-task), where you can also download the data.
 
-{% include image src="/assets/img/tutorial/monkey_ecog/k2_1.png" width="400" %}
+{% include image src="/assets/img/tutorial/monkey_ecog/figure1.png" width="400" %}
 _Figure 1: X-ray with electrode coverage illustrating the position of the electrodes in the right hemisphere_
 
 ## Procedure
@@ -96,7 +96,7 @@ Now we illustrate the time course of the channel defining the event in order to 
     cfg.blocksize = 4;
     ft_databrowser(cfg, data_1);
 
-{% include image src="/assets/img/tutorial/monkey_ecog/databrowser_event.png" width="400" %}
+{% include image src="/assets/img/tutorial/monkey_ecog/figure2.png" width="400" %}
 
 _Figure 2: Event onset at time stamp 0 and duration 2 seconds._
 
@@ -122,13 +122,13 @@ Next, we will use independent component analysis to identify the presence of art
 
 We will use **[ft_databrowser](/reference/ft_databrowser)** again in order to plot the topography of the components and corresponding time courses. In the present case only particular components bearing artifacts (component 22) and clear oscillatory signatures (11,43,44) are plotted.
 
-{% include image src="/assets/img/tutorial/monkey_ecog/components_plot.png" width="400" %}
+{% include image src="/assets/img/tutorial/monkey_ecog/figure3.png" width="400" %}
 
 _Figure 3: Independent components illustrating some clear visual (1 and 11) and sensorimotor (43,44) topography and oscillatory time course._
 
 The build-in functionality of **[ft_databrowser](/reference/ft_databrowser)** allows for interactively mark a time window and perform a spectral analysis via left mouse click. This launches an additional figure that allows for adding and removing of component's power spectra and (log/linear) scale adjustments. Doing so we can confirm the presence of 10.89 Hz alpha peak (compontent 11) over occipito-posterior electrodes (component 11 topography in Figure 3).
 
-{% include image src="/assets/img/tutorial/monkey_ecog/powspctrm_components.png" width="400" %}
+{% include image src="/assets/img/tutorial/monkey_ecog/figure4.png" width="400" %}
 
 _Figure 4: Power spectrum of components #11 and #43 illustrating a clear 10.89 Hz alpha peak (green traces) in the visual and 17.05 beta peak (cyan traces) in the sensorimotor regions._
 
@@ -164,11 +164,11 @@ After rejecting bad components with **[ft_rejectcomponent](/reference/ft_rejectc
     figure;
     ft_multiplotTFR(cfg, tfrbl);
 
-{% include image src="/assets/img/tutorial/monkey_ecog/multiplottfr.png" width="400" %}
+{% include image src="/assets/img/tutorial/monkey_ecog/figure5.png" width="400" %}
 
 _Figure 5: Time-frequency representation of power using ft_multiplotTFR and the layout designed in the steps above. Highlighted area of electrodes is used for the illustration in figure 6._
 
-{% include image src="/assets/img/tutorial/monkey_ecog/sensorimotortfr.png" width="400" %}
+{% include image src="/assets/img/tutorial/monkey_ecog/figure6.png" width="400" %}
 
 _Figure 6: Time-frequency representation of power averaged across the electrodes highlighted in the previous figure. Note the initial evoked power in the low frequency range followed by induced depression of oscillatory power in the alpha frequency range._
 
@@ -206,7 +206,7 @@ Typically, visual grating tasks reliably elicit sustained gamma band response ~6
     cfg.ylim    = [40 120];
     subplot(2,2,2); ft_singleplotTFR(cfg,tfrhfbl);
 
-{% include image src="/assets/img/tutorial/monkey_ecog/gammatopotfr.png" width="400" %}
+{% include image src="/assets/img/tutorial/monkey_ecog/figure7.png" width="400" %}
 
 _Figure 7: Left- topography of the induced gamma band response centered around ~60 Hz. Right-Time-frequency representation of power for a single electrode located over the occipital cortex._
 
@@ -255,7 +255,7 @@ Now we plot the coherence of a reference electrode with maximal gamma power rela
     ft_topoplotER(cfg,coh);
     title('ICOH')
 
-{% include image src="/assets/img/tutorial/monkey_ecog/icoh.png" width="400" %}
+{% include image src="/assets/img/tutorial/monkey_ecog/figure8.png" width="400" %}
 
 _Figure 8: Coherence between a reference occipital electrode (magenta) and all of the remaining electrodes._
 
@@ -283,7 +283,7 @@ Finally, we use **[ft_networkanalysis](/reference/ft_networkanalysis)** to illus
     ft_topoplotTFR(cfg, deg);
     title('NODE DEGREE')
 
-{% include image src="/assets/img/tutorial/monkey_ecog/nodedegree.png" width="400" %}
+{% include image src="/assets/img/tutorial/monkey_ecog/figure9.png" width="400" %}
 
 _Figure 8: Node degree topography illustrating the amount of connections of a given electrode(node) to all other possible electrodes(nodes)._
 

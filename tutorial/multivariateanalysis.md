@@ -25,7 +25,7 @@ You can find the data [here](https://download.fieldtriptoolbox.org/tutorial/clas
 
 In the following, we will work our way through the time- and frequency-domain analysis pipelines as shown in the figure.
 
-{% include image src="/assets/img/tutorial/multivariateanalysis/pipeline_tutorial.png" width="400" %}
+{% include image src="/assets/img/tutorial/multivariateanalysis/figure1.png" width="400" %}
 
 ### Sensor level classification in the time domain
 
@@ -92,7 +92,7 @@ and subsequently to treat the stat object as if it were data. The _parameter_ fi
     cfg.interplimits = 'electrodes';
     ft_topoplotER(cfg, stat);
 
-{% include image src="/assets/img/tutorial/multivariateanalysis/clf_1.png" width="200" %}
+{% include image src="/assets/img/tutorial/multivariateanalysis/figure2.png" width="200" %}
 
 In practice, we may want to average the parameters over folds to get an average estimate of the parameters. Note further that the plot is hard to interpret. The fact that contributions extend beyond the selected channels is due to interpolation artifacts. If we look at individual features using _imagesc(stat.mymodel)_ then it will be found that all features are used due to the way classifier operates. One way to solve this is to use _dimensionality reduction_ or _feature selection_. We will see examples later in this tutorial.
 
@@ -150,7 +150,7 @@ and we see a major improvement since we are focusing on the physiologically rele
     cfg.interplimits = 'electrodes';
     ft_topoplotTFR(cfg, stat);
 
-{% include image src="/assets/img/tutorial/multivariateanalysis/clf_2.png" width="200" %}
+{% include image src="/assets/img/tutorial/multivariateanalysis/figure3.png" width="200" %}
 
 #### Exercise 2
 
@@ -187,7 +187,7 @@ If we look at the weights then we find that just a very small number of features
     cfg.interplimits = 'electrodes';
     ft_topoplotTFR(cfg, stat);
 
-{% include image src="/assets/img/tutorial/multivariateanalysis/clf_3.png" width="200" %}
+{% include image src="/assets/img/tutorial/multivariateanalysis/figure4.png" width="200" %}
 
 #### Exercise 3
 

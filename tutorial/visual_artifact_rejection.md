@@ -69,11 +69,11 @@ If your dataset contains MEG and EEG channels (like this dataset), the MEG and E
 
 In trial 46 notice the slower drift observed over a larger group of sensors. This is most likely due to a head movement.
 
-{% include image src="/assets/img/tutorial/visual_artifact_rejection/untitled.jpg" %}
+{% include image src="/assets/img/tutorial/visual_artifact_rejection/figure1.jpg" %}
 
 Trial 250 shows an artifact which is caused by the electronics. Notice the jump in sensor MLT41.
 
-{% include image src="/assets/img/tutorial/visual_artifact_rejection/untitled-1.jpg" width="530" %}
+{% include image src="/assets/img/tutorial/visual_artifact_rejection/figure2.jpg" width="530" %}
 
 By browsing through the trials, related artifacts become evident (trial 2, 5, 6, 8, 9, 10, 12, 39, 43, 46, 49, 52, 58, 84, 102, 107, 114, 115, 116, 119, 121, 123, 126, 127, 128, 132, 133, 137, 143, 144, 147, 149, 158, 181, 229, 230, 233, 241, 243, 245, 250, 254, 260). They should be marked as 'bad'. After pressing the 'quit' button the trials marked 'bad' are now removed from the data structure.
 
@@ -93,7 +93,7 @@ It can also be convenient to view data from one channel at a time. This can be p
 Click through the data using the > button.
 While clicking through all the trials you see that channels MLO12 and MLP31 contain a lot of artifacts (see the figure below ). They should be marked as 'bad'. After pressing the 'quit' button the channels marked 'bad' are now removed from the data structure.
 
-{% include image src="/assets/img/tutorial/visual_artifact_rejection/untitled-2.jpg" %}
+{% include image src="/assets/img/tutorial/visual_artifact_rejection/figure3.jpg" %}
 
 ### Manual artifact rejection - display a summary
 
@@ -106,7 +106,7 @@ To produce an overview of the data choose the cfg.method 'summary
 
 This gives you a plot with the variance for each channel and trial.
 
-{% include image src="/assets/img/tutorial/visual_artifact_rejection/channel_trialvariance.png" width="650" %}
+{% include image src="/assets/img/tutorial/visual_artifact_rejection/figure4.png" width="650" %}
 
 You should note that there is one channel which has a very high variance. That is the EOG channel, which contains numbers in uV which are of a very different order of magnitude than all MEG channels in T. Toggling the EOG channel will also change the figure with the maximal variance per trial (second row, left) a lot. Then you only see the variance in each trial in the MEG channels.
 
@@ -116,7 +116,7 @@ Alternatively use the mouse directly to toggle (e.g.) channels off as following:
 
 Before pressing the 'Quit' button, you can always toggle the channels/trials back on, by using the edit boxes 'Toggle trial' or 'Toggle channel'.
 
-{% include image src="/assets/img/tutorial/visual_artifact_rejection/channel_trialvariance2.png" width="650" %}
+{% include image src="/assets/img/tutorial/visual_artifact_rejection/figure5.png" width="650" %}
 
 After quitting, the trials/channels will be rejected from the data set and the command line output appears as follow
 
@@ -202,7 +202,7 @@ Call the function like
 
 In the image below are two figures for the same trial (trial 228). As in the left figure first drag the mouse on the artifact to create dotted lines on either side of the artifact (left image). Then, as in the right figure click within the dotted lines
 
-{% include image src="/assets/img/tutorial/visual_artifact_rejection/fig4.png" width="600" %}
+{% include image src="/assets/img/tutorial/visual_artifact_rejection/figure6.png" width="600" %}
 
 The resulting variable contains the field
 

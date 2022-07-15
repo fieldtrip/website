@@ -114,7 +114,7 @@ classification results in a format required by the function.
 
     mv_plot_result(stat.mvpa)
 
-    {% include image src="/assets/img/tutorial/mvpa_light/confusion_matrix.png" width="300" %}
+    {% include image src="/assets/img/tutorial/mvpa_light/figure1.png" width="300" %}
 
 
 ## Cross-validation
@@ -171,7 +171,7 @@ is the standard deviation of the AUC metric across the different test sets in th
 cross-validation.
 
 
-    {% include image src="/assets/img/tutorial/mvpa_light/classify_across_time1.png" width="300" %}
+    {% include image src="/assets/img/tutorial/mvpa_light/figure2.png" width="300" %}
 
 
 
@@ -211,7 +211,7 @@ We call `ft_topoplotER` to do the plotting.
     ft_topoplotER(cfg, stat);
 
 
-{% include image src="/assets/img/tutorial/mvpa_light/searchlight_topo1.png" width="200" %}
+{% include image src="/assets/img/tutorial/mvpa_light/figure3.png" width="200" %}
 
 
 ### Exercise 3
@@ -261,7 +261,7 @@ Call `ft_topoplotER` to plot the result as a topography.
 
 As expected, the resultant topography is slightly more smeared out. Peak classification accuracy is higher which is due to the classifier now combining information across neighbouring channels.
 
-      {% include image src="/assets/img/tutorial/mvpa_light/searchlight_topo2.png" width="200" %}
+      {% include image src="/assets/img/tutorial/mvpa_light/figure4.png" width="200" %}
 
 
 ## Search across both time and channels
@@ -282,7 +282,7 @@ In this case, both channels and time points act as search dimensions and the res
     set(gca, 'YTick', 1:2:length(stat.label), 'YTickLabel', stat.label(1:2:end))
 
 
-    {% include image src="/assets/img/tutorial/mvpa_light/searchlight_time_chan.png" width="300" %}
+    {% include image src="/assets/img/tutorial/mvpa_light/figure5.png" width="300" %}
 
 ## Time generalization (time x time classification)
 
@@ -309,7 +309,7 @@ time point at which the classifier was trained. Each point on the x-axis corresp
 to a time point at which the respective classifier was tested. The classifier attains peak performance roughly in the 0.45-0.65s period.
 
 
-{% include image src="/assets/img/tutorial/mvpa_light/timextime.png" width="300" %}
+{% include image src="/assets/img/tutorial/mvpa_light/figure6.png" width="300" %}
 
 ## Classification of time-frequency data
 
@@ -346,7 +346,7 @@ we only need to set `cfg.features = 'chan'`.
     mv_plot_result(stat.mvpa, stat.time, stat.freq)
 
 
-{% include image src="/assets/img/tutorial/mvpa_light/tfr_classification1.png" width="300" %}
+{% include image src="/assets/img/tutorial/mvpa_light/figure7.png" width="300" %}
 
 
 This yields a _[freq x time]_ matrix of classification accuracies. However, we are not limited
@@ -392,7 +392,7 @@ computationally demanding and potentially holds the danger of overfitting.
     mv_plot_result(stat.mvpa, stat.time, stat.freq)
 
 
-{% include image src="/assets/img/tutorial/mvpa_light/tfr_classification2.png" width="300" %}
+{% include image src="/assets/img/tutorial/mvpa_light/figure8.png" width="300" %}
 
 Note that setting `cfg.timwin` is only useful if time is not used as features, and the same
 logic applies to `cfg.freqwin` (for frequencies) and `cfg.neighbours` (for channels).

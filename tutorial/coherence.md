@@ -109,7 +109,7 @@ To get a feel for the data, plot a trial from a sensor overlying the left motor-
     axis tight;
     legend(data.label(152:153));
 
-{% include image src="/assets/img/tutorial/coherence/figure1c.png" width="400" %}
+{% include image src="/assets/img/tutorial/coherence/figure1.png" width="400" %}
 
 _Figure: An example of the raw MEG data from sensor MLC21 (upper frame) and the EMG data (lower frame). The signals are from the output of **[ft_preprocessing](/reference/ft_preprocessing)** and plotted using the MATLAB plot function. Note that the signal strength of the left EMG is bigger than that of the right EMG._
 
@@ -187,7 +187,7 @@ Plot the coherence for sensor MRC21 (using the same settings as in **[ft_multipl
     cfg.channel = 'MRC21';
     figure; ft_singleplotER(cfg, fd);
 
-{% include image src="/assets/img/tutorial/coherence/figure3b.png" width="400" %}
+{% include image src="/assets/img/tutorial/coherence/figure3.png" width="400" %}
 
 _Figure: The coherence spectrum between the EMG and sensor MRC21._
 
@@ -206,7 +206,7 @@ b) Plot a topographical distribution of the coherence in the beta band. The vari
     cfg.layout           = 'CTF151_helmet.mat';
     figure; ft_topoplotER(cfg, fd)
 
-{% include image src="/assets/img/tutorial/coherence/tutorial4b.png" width="400" %}
+{% include image src="/assets/img/tutorial/coherence/figure4.png" width="400" %}
 
 _Figure: A topographic representation of the coherence between the left EMG and the sensors. The plot was created with ft_topoplotER._
 {% include markup/end %}

@@ -48,7 +48,7 @@ Neurons often fire in synchrony, meaning that action potentials from different n
 - Compute cross-correlation function between neurons using **[ft_spike_xcorr](/reference/contrib/spike/ft_spike_xcorr)**
 - Compute joint peri-stimulus time histograms, and their visualization, using **[ft_spike_jpsth](/reference/contrib/spike/ft_spike_jpsth)** and **[ft_spike_plot_jpsth](/reference/contrib/spike/ft_spike_plot_jpsth)**.
 
-{% include image src="/assets/img/tutorial/spike/flowchart.png" %}
+{% include image src="/assets/img/tutorial/spike/figure1.png" %}
 
 ### Reading in spike data
 
@@ -138,9 +138,9 @@ Plotting the mean waveform and variance for two units:
 
 shows that one unit has the structure of a fast spiking cell (as its waveform is narrow), and one unit of a broad spiking cell (as its waveform is broad):
 
-{% include image src="/assets/img/tutorial/spike/waveform_sig002a_wf.png" %}
+{% include image src="/assets/img/tutorial/spike/figure2.png" %}
 
-{% include image src="/assets/img/tutorial/spike/waveform_sig003a_wf.png" %}
+{% include image src="/assets/img/tutorial/spike/figure3.png" %}
 
 ### Adding trigger event information to spike structure
 
@@ -238,7 +238,7 @@ Together, these three fields fully identify the structure of the spiketrain rela
     plot(spikeTrials.timestamp{1}, spikeTrials.time{1}, '.')
     axis([1e6 5.5e6 -3 5])
 
-{% include image src="/assets/img/tutorial/spike/timestampsvstime.png" %}
+{% include image src="/assets/img/tutorial/spike/figure4.png" %}
 
 In this example, unit 'sig002a_wf' fired in total 83613 spikes in the selected trial periods. For every spike, we indicate in trial the spike was fired (spikeTrials.trial) and at which time (in seconds) the spike was fired (spikeTrials.time). Thus, `spikeTrials.time{i}(j)`, `spikeTrials.trial{i}(j)`, `spikeTrials.timestamp{i}(j)`, and `spikeTrials.waveform{i}(:,:,j)` all contain information about the j-th spike from the i-th neuron.
 
@@ -362,9 +362,9 @@ The field isih.isi contains the isi per spike (w.r.t the previous spike) and con
 
 This gives two figures, one with a longer refractory period (the narrow spiking cell; top), and one with a bursting pattern (the broad spiking cell; bottom)
 
-{% include image src="/assets/img/tutorial/spike/isi_sig002a_wf.png" width="500" %}
+{% include image src="/assets/img/tutorial/spike/figure5.png" width="500" %}
 
-{% include image src="/assets/img/tutorial/spike/isi_sig003a_wf.png" width="500" %}
+{% include image src="/assets/img/tutorial/spike/figure6.png" width="500" %}
 
 We also read in an additional dataset consisting of an M-clust .t file, that can be found [here](https://download.fieldtriptoolbox.org/tutorial/spike/tt6_7.t)
 
@@ -394,7 +394,7 @@ We also read in an additional dataset consisting of an M-clust .t file, that can
     cfg.colormap    = jet(300);
     figure, ft_spike_plot_isireturn(cfg,isih)
 
-{% include image src="/assets/img/tutorial/spike/isica1_example.png" width="600" %}
+{% include image src="/assets/img/tutorial/spike/figure7.png" width="600" %}
 
 This plot shows that after a burst, either a new burst follows, or a long waiting period on the order of a theta cycle (100 ms).
 
@@ -444,7 +444,7 @@ A raster plot with psth is obtained by running
     cfg.interactive  = 'no'; % toggle off interactive mode
     figure, ft_spike_plot_raster(cfg,spikeTrials, psth)
 
-{% include image src="/assets/img/tutorial/spike/psth_example3.png" width="600" %}
+{% include image src="/assets/img/tutorial/spike/figure8.png" width="600" %}
 
 The yellow lines in the raster plot indicate the trial borders. Configuration options are available to control spike length and width, and size of the raster relative to the summarizing PSTH / spike density data. Also, multiple neurons are plotted with different colors. This can also be used to plot multiple conditions at the same time.
 
@@ -464,7 +464,7 @@ We then run spike-density functions on the spike trains, to obtain spike density
     cfg.interactive  = 'no'; % toggle off interactive mode
     figure, ft_spike_plot_raster(cfg,spikeTrials, sdf)
 
-{% include image src="/assets/img/tutorial/spike/sdf_example.png" width="600" %}
+{% include image src="/assets/img/tutorial/spike/figure9.png" width="600" %}
 
 The output from **[ft_spikedensity](/reference/contrib/spike/ft_spikedensity)** is again a timelock structure. A second output can be obtained from **[ft_spikedensity](/reference/contrib/spike/ft_spikedensity)**, containing the estimated spike densities per trial in a continuous raw data structure. To this end, do:
 
@@ -589,7 +589,7 @@ For example, the computed cross-correlogram reveals strong zero-lag and alpha-ba
     title([Xc.label{iCmb} Xc.label{jCmb}])
     axis tight
 
-{% include image src="/assets/img/tutorial/spike/xcorr34.png" %}
+{% include image src="/assets/img/tutorial/spike/figure10.png" %}
 
 ### The joint peri stimulus time histogram
 
@@ -626,11 +626,11 @@ We then plot the JPSTH using **[ft_spike_plot_jpsth](/reference/contrib/spike/ft
 
 giving the normalized jpsth, the shuffle corrected normalized jpsth, and the difference between the two, revealing an increase in synchronization between spike trains that is not due to evoked, joint fluctuations in the firing rate.
 
-{% include image src="/assets/img/tutorial/spike/jpsthraw44.png" width="500" %}
+{% include image src="/assets/img/tutorial/spike/figure11.png" width="500" %}
 
-{% include image src="/assets/img/tutorial/spike/jpsthshuff44.png" width="500" %}
+{% include image src="/assets/img/tutorial/spike/figure12.png" width="500" %}
 
-{% include image src="/assets/img/tutorial/spike/jpsthsubtr44.png" width="500" %}
+{% include image src="/assets/img/tutorial/spike/figure13.png" width="500" %}
 
 ## Summary
 

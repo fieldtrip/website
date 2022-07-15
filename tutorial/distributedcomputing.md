@@ -168,7 +168,7 @@ Instead of returning the 12 variables for the different subjects and conditions 
 
 This example script demonstrates how you can efficiently design your custom code for distributed computing.
 
-{% include image src="/assets/img/tutorial/distributedcomputing/figure2.png" width="500" %}
+{% include image src="/assets/img/tutorial/distributedcomputing/figure3.png" width="500" %}
 
     subjectlist = {
       'Subject01.ds'
