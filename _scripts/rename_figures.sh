@@ -10,8 +10,6 @@
 
 figures=$(grep "include image" $1  | cut -d \" -f 2)
 
-echo $figures
-
 n=1
 for figure in $figures ; do
   oldname=$(basename $figure)

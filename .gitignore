@@ -8,3 +8,4 @@ _site/*
 assets/pdf
 assets/root
 *.pptx
+*.bak
