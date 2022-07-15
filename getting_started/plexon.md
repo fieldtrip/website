@@ -94,6 +94,10 @@ The FieldTrip **[ft_read_spike](/reference/fileio/ft_read_spike)** function work
 
 Triggers are in FieldTrip represented as events. These events are read using the **[ft_read_event](/reference/fileio/ft_read_event)** function. The **[ft_definetrial](/reference/ft_definetrial)** function is used to define data segments of interest, i.e. trials, based on the trigger events. After defining the trials, you should use the **[ft_preprocessing](/reference/ft_preprocessing)** function to read the continuous LFP data.
 
+## Using timestamps to synchronize between spikes and LFP
+
+For data that is read from Plexon data files, the timestamps are defined in samples at 40kHz. This is the highest sampling rate of the system annd used for the spikes, whereas the LFP is sampled at 1000 Hz. For the LFP this results in 40 timestamps per sample.
+
 ## Using Newer Reading Functions
 
 If you use the [plexon V2 patch (filetype = plexon_plx_v2)](http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=1795), then the various fileio reading functions will use the newer official SDK and enable loading of the new .pl2 files. To do so you must specify plexon_plx_v2 when using the fileio functions.

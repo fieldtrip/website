@@ -92,6 +92,10 @@ The events.nev file (which you probably use) only contains timestamps and not sa
       event(i).sample = (event(i).timestamp-double(hdr.FirstTimeStamp))./hdr.TimeStampPerSample + 1;
     end
 
+## Using timestamps to synchronize between spikes and LFP
+
+For data that is read from Neuralynx data files, the timestamps are defined in microseconds, expressed as long integers and hence rounded off to the nearest integer. This corresponds to `1000000/32556=30.7163`, so approximately 31 timestamps per sample.
+  
 ## See also
 
 {% include seealso tag="neuralynx" %}
