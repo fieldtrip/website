@@ -17,10 +17,12 @@ If there is no information listed for a potential workshop below, then we don't 
 
 We are considering and/or concretely planning to have FieldTrip workshops in
 
--   2022, [MEG/EEG toolkit](/workshop/toolkit2022) - Nijmegen, NL
+-   2023, MEG/EEG toolkit - Nijmegen, NL
+-   2022, PracticalMEEG - Aix-en-Provence, France
 
 Previous FieldTrip workshops took place at
 
+-   2022, [MEG/EEG toolkit](/workshop/toolkit2022) - Nijmegen, NL
 -   2021, [CuttingEEG 2021](/workshop/cuttingeeg2021) - Aix-en-Provence, France
 -   2021, [MEG/EEG toolkit](/workshop/toolkit2021) - (online) Nijmegen, NL
 -   2020, [MEG/EEG toolkit](/workshop/toolkit2020) - (online) Nijmegen, NL
