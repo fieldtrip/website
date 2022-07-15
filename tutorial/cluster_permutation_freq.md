@@ -420,7 +420,7 @@ Plot again with **[ft_clusterplot](/reference/ft_clusterplot)**:
     cfg.layout = 'CTF151_helmet.mat';
     ft_clusterplot(cfg, stat);
 
-{% include image src="/assets/img/tutorial/cluster_permutation_freq/figure6.png" width="700" %}
+{% include image src="/assets/img/tutorial/cluster_permutation_freq/figure6.png" width="600" %}
 
 _Figure 3: T-statistic of the difference (FIC-FC) (of the combined planar gradient TFRs) and largest channel-time clusters._
 

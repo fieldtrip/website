@@ -32,11 +32,11 @@ In this tutorial we will consider a **between-trials** experiment, in which we a
 - Permutation test with the **[ft_timelockstatistics](/reference/ft_timelockstatistics)** function
 - Plotting the result with the **[ft_topoplotER](/reference/ft_topoplotER)** function
 
-{% include image src="/assets/img/tutorial/cluster_permutation_timelock/figure1.png" %}
+{% include image src="/assets/img/tutorial/cluster_permutation_timelock/figure1.png" width="300" %}
 
 _Figure 1. Analysis protocol of a between-trials experiment with axial data_
 
-{% include image src="/assets/img/tutorial/cluster_permutation_timelock/figure2.png" width="220" %}
+{% include image src="/assets/img/tutorial/cluster_permutation_timelock/figure2.png" width="300" %}
 
 _Figure 2. Analysis protocol of a between-trials experiment with planar data_
 
@@ -48,7 +48,7 @@ Subsequently, we consider a **within-subjects** experiment, in which we compare 
 - Permutation test with the **[ft_timelockstatistics](/reference/ft_timelockstatistics)** function
 - Plotting the result with the **[ft_topoplotER](/reference/ft_topoplotER)** function
 
-{% include image src="/assets/img/tutorial/cluster_permutation_timelock/figure3.png" width="550" %}
+{% include image src="/assets/img/tutorial/cluster_permutation_timelock/figure3.png" width="600" %}
 
 _Figure 3. Analysis protocol of a within-subjects experiment with planar data_
 
@@ -299,7 +299,7 @@ To plot the data use the following for-loop:
 
 In this for-loop, cfg.xlim defines the time interval of each subplot. The variables pos_int and neg_int boolean vectors indicating which channels of pos and neg are significant in the time interval of interest. This is defined in cfg.highlightchannel. The for-loop plots 20 subplots covering a time interval of 50 ms each. Running this for-loop creates the following figure:
 
-{% include image src="/assets/img/tutorial/cluster_permutation_timelock/figure4.png" width="700" %}
+{% include image src="/assets/img/tutorial/cluster_permutation_timelock/figure4.png" width="600" %}
 
 _Figure 4: Raw effect (FIC-FC) on the ERFs of subject 1, significant clusters are highlighted.._
 
@@ -400,7 +400,7 @@ Using the following configuration for **[ft_topoplotER](/reference/ft_topoplotER
        ft_topoplotER(cfg, raweffectFICvsFC);
     end
 
-{% include image src="/assets/img/tutorial/cluster_permutation_timelock/figure5.png" width="700" %}
+{% include image src="/assets/img/tutorial/cluster_permutation_timelock/figure5.png" width="600" %}
 
 _Figure 5: Raw effect (FIC-FC) on the planar gradient ERFs of subject 1, the most prominent clusters are highlighted.._
 
