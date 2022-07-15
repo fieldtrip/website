@@ -1,7 +1,7 @@
 - name:  Neuralynx
   link:  /development/realtime/neuralynx
 
-- name:  How can I deal with a discontinuous Neuralynx recording?
+- name:  How can I deal with a discontinuous Neuralynx LFP recording?
   link:  /faq/discontinuous_neuralynx
 
 - name:  Getting started with Neuralynx data
