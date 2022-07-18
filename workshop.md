@@ -19,6 +19,7 @@ We are considering and/or concretely planning to have FieldTrip workshops in
 
 -   2023, MEG/EEG toolkit - Nijmegen, NL
 -   2022, PracticalMEEG - Aix-en-Provence, France
+-   2022, [Donders Cognition Brain and Technology school](https://bcbt.specs-lab.com/bcbt22/about/) - Nijmegen, NL
 
 Previous FieldTrip workshops took place at
 
