@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '35660461'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2022.119344
+- idtype: pmcid
+  value: PMC7613066
+- idtype: MID
+  value: EMS146255
+authors:
+- authtype: Author
+  name: Vaghari D
+- authtype: Author
+  name: Bruna R
+- authtype: Author
+  name: Hughes LE
+- authtype: Author
+  name: Nesbitt D
+- authtype: Author
+  name: Tibon R
+- authtype: Author
+  name: Rowe JB
+- authtype: Author
+  name: Maestu F
+- authtype: Author
+  name: Henson RN
+epubdate: 2022 May 31
+fulljournalname: NeuroImage
+issue: ''
+pages: '119344'
+pmclivedate: ''
+printpubdate: 2022 May 31
+pubdate: 2022 May 31
+sortdate: 2022/05/31 00:00
+source: Neuroimage
+title: 'A multi-site, multi-participant magnetoencephalography resting-state dataset
+  to study dementia: The BioFIND dataset'
+uid: '7613066'
+volume: '258'

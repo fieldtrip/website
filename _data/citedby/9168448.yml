@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '35390460'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2022.119175
+- idtype: pmcid
+  value: PMC9168448
+authors:
+- authtype: Author
+  name: Schuler AL
+- authtype: Author
+  name: Ferrazzi G
+- authtype: Author
+  name: Colenbier N
+- authtype: Author
+  name: Arcara G
+- authtype: Author
+  name: Piccione F
+- authtype: Author
+  name: Ferreri F
+- authtype: Author
+  name: Marinazzo D
+- authtype: Author
+  name: Pellegrino G
+epubdate: ''
+fulljournalname: Neuroimage
+issue: ''
+pages: '119175'
+pmclivedate: 2022/07/15
+printpubdate: 2022 Jul 15
+pubdate: 2022 Jul 15
+sortdate: 2022/07/15 00:00
+source: Neuroimage
+title: Auditory driven gamma synchrony is associated with cortical thickness in widespread
+  cortical areas
+uid: '9168448'
+volume: '255'

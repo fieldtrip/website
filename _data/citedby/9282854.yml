@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '35833919'
+- idtype: doi
+  value: 10.7554/eLife.77468
+- idtype: pmcid
+  value: PMC9282854
+authors:
+- authtype: Author
+  name: ten Oever S
+- authtype: Author
+  name: Carta S
+- authtype: Author
+  name: Kaufeld G
+- authtype: Author
+  name: Martin AE
+epubdate: 2022 Jul 14
+fulljournalname: eLife
+issue: ''
+pages: e77468
+pmclivedate: 2022/07/15
+printpubdate: ''
+pubdate: 2022 Jul 14
+sortdate: 2022/07/14 00:00
+source: eLife
+title: Neural tracking of phrases in spoken language comprehension is automatic and
+  task-dependent
+uid: '9282854'
+volume: '11'

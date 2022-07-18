@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '35834569'
+- idtype: doi
+  value: 10.1371/journal.pbio.3001713
+- idtype: pmcid
+  value: PMC9282610
+authors:
+- authtype: Author
+  name: Bai F
+- authtype: Author
+  name: Meyer AS
+- authtype: Author
+  name: Martin AE
+epubdate: 2022 Jul 14
+fulljournalname: PLoS Biology
+issue: '7'
+pages: e3001713
+pmclivedate: 2022/07/15
+printpubdate: ''
+pubdate: 2022 Jul 14
+sortdate: 2022/07/14 00:00
+source: PLoS Biol
+title: Neural dynamics differentially encode phrases and sentences during spoken language
+  comprehension
+uid: '9282610'
+volume: '20'
