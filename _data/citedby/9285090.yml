@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '34310719'
+- idtype: doi
+  value: 10.1111/psyp.13909
+- idtype: pmcid
+  value: PMC9285090
+authors:
+- authtype: Author
+  name: Edalati M
+- authtype: Author
+  name: Mahmoudzadeh M
+- authtype: Author
+  name: Safaie J
+- authtype: Author
+  name: Wallois F
+- authtype: Author
+  name: Moghimi S
+epubdate: 2021 Jul 26
+fulljournalname: Psychophysiology
+issue: '11'
+pages: e13909
+pmclivedate: 2022/07/15
+printpubdate: 2021 Nov
+pubdate: 2021 Jul 26
+sortdate: 2021/07/26 00:00
+source: Psychophysiology
+title: Violation of rhythmic expectancies can elicit late frontal gamma activity nested
+  in theta oscillations
+uid: '9285090'
+volume: '58'
