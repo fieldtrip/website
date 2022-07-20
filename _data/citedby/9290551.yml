@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '34849626'
+- idtype: doi
+  value: 10.1093/cercor/bhab391
+- idtype: pmcid
+  value: PMC9290551
+authors:
+- authtype: Author
+  name: Algermissen J
+- authtype: Author
+  name: Swart JC
+- authtype: Author
+  name: Scheeringa R
+- authtype: Author
+  name: Cools R
+- authtype: Author
+  name: den Ouden HE
+epubdate: 2021 Nov 24
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '14'
+pages: 2924-2942
+pmclivedate: 2022/07/18
+printpubdate: ''
+pubdate: 2021 Nov 24
+sortdate: 2021/11/24 00:00
+source: Cereb Cortex
+title: Striatal BOLD and Midfrontal Theta Power Express Motivation for Action
+uid: '9290551'
+volume: '32'

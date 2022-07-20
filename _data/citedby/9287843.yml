@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '34788695'
+- idtype: doi
+  value: 10.1016/j.jneumeth.2021.109409
+- idtype: pmcid
+  value: PMC9287843
+- idtype: MID
+  value: NIHMS1762048
+authors:
+- authtype: Author
+  name: Schatza MJ
+- authtype: Author
+  name: Blackwood EB
+- authtype: Author
+  name: Nagrale SS
+- authtype: Author
+  name: Widge AS
+epubdate: 2021 Nov 14
+fulljournalname: Journal of neuroscience methods
+issue: ''
+pages: '109409'
+pmclivedate: ''
+printpubdate: 2022 Jan 15
+pubdate: 2021 Nov 14
+sortdate: 2021/11/14 00:00
+source: J Neurosci Methods
+title: Toolkit for Oscillatory Real-time Tracking and Estimation (TORTE)
+uid: '9287843'
+volume: '366'
