@@ -42,9 +42,9 @@ With this strategy, pieces of data contaminated by artifacts are identified and 
 
 ### Manual/visual detection
 
-In manual or visual artifact detection, the user visually inspects the data and identifies the trials or data segments and/or channels that are affected. The visual inspection results in a list of noisy data segments and/or channels.
+In manual/visual artifact detection, the user visually inspects the data and identifies the trials or data segments and/or channels that are affected. The visual inspection results in a list of noisy data segments and/or channels.
 
-These functions are available for manual artifact detection:
+These functions are available for manual/visual artifact detection:
 
 - **[ft_rejectvisual](/reference/ft_rejectvisual)**
 - **[ft_databrowser](/reference/ft_databrowser)**
@@ -76,14 +76,18 @@ These functions are available for automatic artifact detection:
 - **[ft_artifact_jump](/reference/ft_artifact_jump)**
 - **[ft_artifact_muscle](/reference/ft_artifact_muscle)**
 - **[ft_artifact_zvalue](/reference/ft_artifact_zvalue)**
+- **[ft_badchannel](/reference/ft_badchannel)**
+- **[ft_badsegment](/reference/ft_badsegment)**
 
-Note that the eog, jump and muscle detection functions are all just wrappers around **[ft_artifact_zvalue](/reference/ft_artifact_zvalue)** where the filter and padding options are set to reasonable defaults. The ft_artifact_zvalue computes a preprocessed representation of each channel, converts it into z-values by subtracting the channel mean and dividing by its standard deviation, and then sums the z-values over channels. This works well for artifacts that are expected to be present in multiple channels, such as eye blinks and muscle activity.
+The functions to detect eog, jump and muscle artifacts are all just wrappers around **[ft_artifact_zvalue](/reference/ft_artifact_zvalue)** where the filter and padding options are set to reasonable defaults. The **[ft_artifact_zvalue](/reference/ft_artifact_zvalue)** computes a preprocessed representation of each channel, converts it into z-values by subtracting the channel mean and dividing by its standard deviation, and then sums the z-values over channels. This works well for artifacts that are expected to be present in multiple channels, such as eye blinks and muscle activity.
+
+The **[ft_badchannel](/reference/ft_badchannel)** and **[ft_badsegment](/reference/ft_badsegment)** functions implement the same metrics as the **[ft_rejectvisual](/reference/ft_rejectvisual)** function with `cfg.method='summary'` and allow setting fixed a-priori thresholds to exclude channels or segments.
 
 More information can be found in the [automatic artifact rejection](/tutorial/automatic_artifact_rejection) tutorial.
 
 ### Rejecting segments with artifacts from the data
 
-If you use manual or automatic detection of segments that contain an artifact, you usually would proceed to reject those segments from subsequent analysis with **[ft_rejectartifact](/reference/ft_rejectartifact)**. FieldTrip supports variable trial length data, which allows you to reject only those pieces of data containing the artifact, keeping the rest of the trial. This is especially useful if your experiment consists of very long trials.
+If you use eiter manual/visual or automatic detection of artifactual segments, you usually would proceed to reject those segments from subsequent analysis with **[ft_rejectartifact](/reference/ft_rejectartifact)**. FieldTrip supports variable trial length data, which allows you to reject only those pieces of data containing the artifact, keeping the rest of the trial. This is especially useful if your experiment consists of very long trials.
 
 ### Rejecting channels with artifacts from the data
 
@@ -93,7 +97,7 @@ If you have identified channels that are bad, you can exclude them from subseque
 
 ## Subtracting the artifacts from the data
 
-Rather than excluding segments with artifatcs, in some cases you can assume that the artifact is a linear addition to the signal of interest. If you arte able to identify the artifact, you can subtract it, leaving you with the EEG or MEG signal of interest. This works well for certain types of artifacts, such as high frequency noise in EEG, or line noise at 50 or 60 Hz. This also can be used to remove the contribution of eye movements to EEG data, assuming that the eye blinks and movements are not a problem for the correct execution of the task.
+Rather than excluding segments with artifacts, in some cases you can assume that the artifact is a linear addition to the signal of interest. If you arte able to identify the artifact, you can subtract it, leaving you with the EEG or MEG signal of interest. This works well for certain types of artifacts, such as high frequency noise in EEG, or line noise at 50 or 60 Hz. This also can be used to remove the contribution of eye movements to EEG data, assuming that the eye blinks and movements are not a problem for the correct execution of the task.
 
 ### Using filters to remove artifacts
 
