@@ -133,7 +133,7 @@ The following steps are taken in the MEG section of the tutorial:
 
 {% include image src="/assets/img/workshop/natmeg/preprocessing/natmeg_flowchart1.png" width="400" %}
 
-_Figure: A schematic overview of the steps in averaging of event related fields_
+_Figure: A schematic overview of the steps in averaging of event-related fields_
 
 ### Reading and preprocessing the interesting trials
 
@@ -228,7 +228,7 @@ After we have rejected trials with artifacts we will save our dat
 
 ### Event-related fields (ERFs)
 
-We analyze EEG or MEG signals to investigate the modulation of the measured brain signals with respect to a certain event/stimulus. However, due to intrinsic and extrinsic noise in the signals - which in single trials is often higher than the signal evoked by the brain - it is typically required to average data from several trials to increase the signal-to-noise ratio (SNR). One approach is to repeat a given event/stimulus in your experiment and average the corresponding EEG or MEG signals. The assumption that we rely on here is that the noise is independent of the events and thus reduced when averaging, while the effect of interest is present in each trial and time-locked to the event. The approach results in Event Related Potentials (ERPs) or Event Related Fields (ERFs) for EEG and MEG, respectively.
+We analyze EEG or MEG signals to investigate the modulation of the measured brain signals with respect to a certain event/stimulus. However, due to intrinsic and extrinsic noise in the signals - which in single trials is often higher than the signal evoked by the brain - it is typically required to average data from several trials to increase the signal-to-noise ratio (SNR). One approach is to repeat a given event/stimulus in your experiment and average the corresponding EEG or MEG signals. The assumption that we rely on here is that the noise is independent of the events and thus reduced when averaging, while the effect of interest is present in each trial and time-locked to the event. The approach results in event-related Potentials (ERPs) or event-related Fields (ERFs) for EEG and MEG, respectively.
 
 #### Timelockanalysis
 
@@ -303,7 +303,7 @@ Use **[ft_multiplotER](/reference/ft_multiplotER)** to plot all sensors in one f
 
 _Figure: A plot of the average of all conditions for all channels plotted using ft_multiplotER_
 
-This plots the event related fields for all sensors arranged topographically according to their position in the helmet. You can use the zoom button (magnifying glass) to enlarge parts of the figure.
+This plots the event-related fields for all sensors arranged topographically according to their position in the helmet. You can use the zoom button (magnifying glass) to enlarge parts of the figure.
 
 To plot one sensor data use **[ft_singleplotER](/reference/ft_singleplotER)** and specify the name of the channel you are interested in, for instance 'MEG0211
 
@@ -392,7 +392,7 @@ Use **[ft_multiplotER](/reference/ft_multiplotER)** to plot all sensors in one f
 
 {% include image src="/assets/img/workshop/natmeg/preprocessing/natmeg_erf4.png" width="650" %}
 
-_Figure: The event related fields plotted using ft_multiplotER. The event related fields were calculated using ft_preprocessing followed by ft_timelockanalysis_
+_Figure: The event-related fields plotted using ft_multiplotER. The event-related fields were calculated using ft_preprocessing followed by ft_timelockanalysis_
 
 {% include markup/info %}
 How does this figure compare to the plot with the magnetometer data? Do you understand why these are different?
@@ -416,7 +416,7 @@ We will now zoom in on one combined channel, for instance in the combined channe
 
 {% include image src="/assets/img/workshop/natmeg/preprocessing/natmeg_erf5.png" width="650" %}
 
-_Figure: The event related field plotted using ft_singleplotER. The event related fields were calculated using ft_preprocessing followed by ft_timelockanalysis_
+_Figure: The event-related field plotted using ft_singleplotER. The event-related fields were calculated using ft_preprocessing followed by ft_timelockanalysis_
 
 Now we are going to look at the topographical spread of the field by usin
 
@@ -449,7 +449,7 @@ Now we are going to look at the topographical spread of the field by usin
 
 {% include image src="/assets/img/workshop/natmeg/preprocessing/natmeg_erf6.png" width="650" %}
 
-_Figure: Topographic plot of the event related fields obtained using ft_topoplotER_
+_Figure: Topographic plot of the event-related fields obtained using ft_topoplotER_
 
 {% include markup/info %}
 Compare this distribution with those resulting from the magnetometers. Do you understand the differences?
@@ -474,7 +474,7 @@ The EEG section of this tutorial resembles the MEG section. We will take the fol
 
 {% include image src="/assets/img/workshop/natmeg/preprocessing/natmeg_flowchart2.png" width="400" %}
 
-_A schematic overview of the steps in averaging of event related potentials_
+_A schematic overview of the steps in averaging of event-related potentials_
 
 ### Reading and preprocessing the interesting trials
 
@@ -602,9 +602,9 @@ Use **[ft_multiplotER](/reference/ft_multiplotER)** to plot all sensors in one f
 
 {% include image src="/assets/img/workshop/natmeg/preprocessing/natmeg_erp1.png" width="650" %}
 
-_Figure: The event related potentials plotted using ft_multiplotER. The event related potentials were calculated using ft_preprocessing followed by ft_timelockanalysis_
+_Figure: The event-related potentials plotted using ft_multiplotER. The event-related potentials were calculated using ft_preprocessing followed by ft_timelockanalysis_
 
-This plots the event related fields for all sensors arranged topographically according to their position in the helmet. You can use the zoom button (magnifying glass) to enlarge parts of the figure.
+This plots the event-related fields for all sensors arranged topographically according to their position in the helmet. You can use the zoom button (magnifying glass) to enlarge parts of the figure.
 
 Using **[ft_singleplotER](/reference/ft_singleplotER)** we are going to plot a single EEG channel, for instance 'EEG020
 
@@ -624,11 +624,11 @@ Using **[ft_singleplotER](/reference/ft_singleplotER)** we are going to plot a s
 
 {% include image src="/assets/img/workshop/natmeg/preprocessing/natmeg_erp2.png" width="650" %}
 
-_Figure: The event related potentials plotted for three conditions for channel EEG020 using ft_singleplotER_
+_Figure: The event-related potentials plotted for three conditions for channel EEG020 using ft_singleplotER_
 
 {% include image src="/assets/img/workshop/natmeg/preprocessing/natmeg_erf2.png" width="650" %}
 
-_Figure: The event related fields plotted for three conditions for channel MEG0211 using ft_singleplotER_
+_Figure: The event-related fields plotted for three conditions for channel MEG0211 using ft_singleplotER_
 
 {% include markup/info %}
 Compare this plot to the single-channel ERFs obtained from the magnetometer data (see Figure 9). Can you identify similar components?
@@ -666,7 +666,7 @@ To plot the topographic distribution of the data averaged over the time interval
 
 {% include image src="/assets/img/workshop/natmeg/preprocessing/natmeg_erp3.png" width="650" %}
 
-_Figure: Topographic plot of the event related potentials obtained using ft_topoplotER_
+_Figure: Topographic plot of the event-related potentials obtained using ft_topoplotER_
 
 {% include markup/info %}
 To which MEG channels can we best compare the topographical plots from the EEG data, the magnetometers or the gradiometers?
@@ -674,7 +674,7 @@ To which MEG channels can we best compare the topographical plots from the EEG d
 
 {% include image src="/assets/img/workshop/natmeg/preprocessing/natmeg_erf6.png" width="650" %}
 
-_Figure: Topographic plot of the event related fields (gradiometer) obtained using ft_topoplotER_
+_Figure: Topographic plot of the event-related fields (gradiometer) obtained using ft_topoplotER_
 
 #### Scalp current density (SCD)
 
@@ -788,4 +788,4 @@ We now have the same amount of trials for each type of sensor.
 
 In this tutorial we learned how to look at raw MEG and EEG data, define trials based on trigger codes, preprocess the data - including filtering and re-referencing, and average the data to ERPs and ERFs. We then learned how to display the results in terms of their time courses as well as their corresponding topographies. We also got a good sense of the differences in topographies of fields and potentials when we compared MEG magnetometers with gradiometers and EEG. Finally, we also showed you how you are able to combine EEG and MEG if you would like to do analysis on them simultaneously.
 
-If you are interested in a different analysis of your data that shows event related changes in the oscillatory components of the signal, you can continue with the [combined EEG-MEG timefrequency tutorial](/workshop/natmeg/timefrequency) or the standard [time-frequency analysis](/tutorial/timefrequencyanalysis) tutorial.
+If you are interested in a different analysis of your data that shows event-related changes in the oscillatory components of the signal, you can continue with the [combined EEG-MEG timefrequency tutorial](/workshop/natmeg/timefrequency) or the standard [time-frequency analysis](/tutorial/timefrequencyanalysis) tutorial.

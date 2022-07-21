@@ -1,13 +1,13 @@
 ---
-title: Localizing the sources underlying the difference in event related fields
+title: Localizing the sources underlying the difference in event-related fields
 tags: [example, source, erf]
 ---
 
-# Localizing the sources underlying the difference in event related fields
+# Localizing the sources underlying the difference in event-related fields
 
 ## Background
 
-Activity of neuronal sources can be measured with EEG or MEG as event related potentials or fields. A general principle for EEG and MEG source analysis is that of superposition. The channel-level spatial distribution of the activity of one source and that of another source will be different. That difference is easy to recognize if one source is active in one experimental condition and the other source in another condition. The superposition principle states that if two sources are simultaneously active, the resulting channel-level spatial distribution is equal to the sum of the channel-level spatial distribution of the two sources separately.
+Activity of neuronal sources can be measured with EEG or MEG as event-related potentials or fields. A general principle for EEG and MEG source analysis is that of superposition. The channel-level spatial distribution of the activity of one source and that of another source will be different. That difference is easy to recognize if one source is active in one experimental condition and the other source in another condition. The superposition principle states that if two sources are simultaneously active, the resulting channel-level spatial distribution is equal to the sum of the channel-level spatial distribution of the two sources separately.
 
 Reconstructing the source location in case of simultaneous activity of multiple sources is more difficult than localizing a single source. However, the superposition principle can effectively be used in source lozalization if two experimental conditions differentiate the strenth of the two sources.
 

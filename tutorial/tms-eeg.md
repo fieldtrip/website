@@ -939,6 +939,6 @@ Now that we have described three ways of looking at our data, can we conclude th
 
 This tutorial covered how to deal with TMS artifacts in EEG in a single-pulse study. Furthermore, the tutorial showed three examples of how to further analyze this data with a certain research question in mind. In all examples two conditions were compared with each other. A next step would be to test whether differences between these conditions are statistically significant. To see how you can do this please have a look at the following tutorial
 
-- [Parametric and non-parametric statistics on event related fields](/tutorial/eventrelatedstatistics)
+- [Parametric and non-parametric statistics on event-related fields](/tutorial/eventrelatedstatistics)
 - [Cluster-based permutation tests on event-related fields](/tutorial/cluster_permutation_timelock)
 - [Cluster-based permutation tests on time-frequency data](/tutorial/cluster_permutation_freq)

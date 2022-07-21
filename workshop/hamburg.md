@@ -40,7 +40,7 @@ title: FieldTrip workshop in Hamburg in 2012
 
 - 13:30 – 14:30 Lecture: Non-parametric randomization techniques
 - 14:30 – 14:45 Coffee break
-- 14:45 – 16:30 Hands-on: Parametric and non-parametric statistics on event related fields
+- 14:45 – 16:30 Hands-on: Parametric and non-parametric statistics on event-related fields
 - 16:30 – 17:15 Wrap-up-the-day: “Ask the experts” session
 
 ### Sunday June 17

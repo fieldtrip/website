@@ -499,7 +499,7 @@ The ultimate motivation of source analysis of M/EEG data is the reconstruction o
 
 Now we will use **[ft_timelockanalysis](/reference/ft_timelockanalysis)** and **[ft_freqanalysis](/reference/ft_freqanalysis)** in order to evaluate the result by plotting it with **[ft_singleplotER](/reference/ft_singleplotER)** and **[ft_singleplotTFR](/reference/ft_singleplotTFR)** respectively. Note, all the details around event-related averaging and time-frequency analysis are covered by the [the event-related fields tutorial](/tutorial/eventrelatedaveraging) and [the time-frequency tutorial](/tutorial/timefrequencyanalysis). It is recommended that you are familiar with these before you continue.
 
-    %% compute the event related average at location M1
+    %% compute the event-related average at location M1
     cfg = [];
     cfg.preproc.hpfilter = 'yes';
     cfg.preproc.hpfreq = 1;
@@ -712,7 +712,7 @@ We would like to compare the time course of activity reconstructed with MEG and 
     virtsens.fsample=data_eeg_right.fsample;
     virtsens.label={'M1'}';
 
-##### Perform event related averaging and time-frequency analysis
+##### Perform event-related averaging and time-frequency analysis
 
     cfg=[];
     cfg.preproc.hpfilter='yes';

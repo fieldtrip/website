@@ -52,7 +52,7 @@ Sebo Uithol is the host and local organizer
 
   - 14:00 - 15:15 Lecture: Non-parametric randomization techniques
   - 15:15 - 15:30 Coffee break
-  - 15:30 - 17:15 Hands-on: Parametric and non-parametric statistics on event related fields
+  - 15:30 - 17:15 Hands-on: Parametric and non-parametric statistics on event-related fields
     - <https://www.fieldtriptoolbox.org/tutorial/eventrelatedstatistics>
     - <https://www.fieldtriptoolbox.org/tutorial/cluster_permutation_freq>
   - 17:15 - 18:00 Wrap-up-the-day: Ask the experts session

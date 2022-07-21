@@ -9,7 +9,7 @@ tags: [tutorial, eeg, meg, multivariate, timelock, freq, attention, meg-attentio
 
 The objective of this tutorial is to give an introduction to multivariate analysis of electrophysiological data. Multivariate methods aim to find task-related features in the data which allows prediction of to which task single trials belong. Note that this is very different from classical statistical testing, where such features are identified by pooling over multiple trials and/or subjects and where features are typically assumed to be independent. In this tutorial, you will learn to apply standard classification algorithms such as the support vector machine to electrophysiological data. Furthermore, you will learn about the importance of regularization. Note that FieldTrip uses the external Donders Machine Learning Toolbox ([DMLT](https://github.com/distrep/DMLT)) for its multivariate analyses. This toolbox requires at least MATLAB distribution 7.6.0.324 (R2008a).
 
-This tutorial builds on skills acquired in the [preprocessing](/tutorial/preprocessing), [event related averaging](/tutorial/eventrelatedaveraging) and [time-frequency analysis](/tutorial/timefrequencyanalysis) tutorials.
+This tutorial builds on skills acquired in the [preprocessing](/tutorial/preprocessing), [event-related averaging](/tutorial/eventrelatedaveraging) and [time-frequency analysis](/tutorial/timefrequencyanalysis) tutorials.
 
 ## Background
 

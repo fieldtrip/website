@@ -1,4 +1,4 @@
-For the EEG-MEG workshop at NatMEG we recorded a dataset of a single subject to allow you to work through all the different steps involved in EEG-MEG analysis: from event related averaging to frequency analysis, source modeling and statistics.
+For the EEG-MEG workshop at NatMEG we recorded a dataset of a single subject to allow you to work through all the different steps involved in EEG-MEG analysis: from event-related averaging to frequency analysis, source modeling and statistics.
 
 ### The oddball paradigm
 

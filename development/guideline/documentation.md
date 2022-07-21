@@ -41,7 +41,7 @@ For consistency the tutorials should preferably be structured in the following w
 
 To check that the tutorial meets the expected didactical qualities, the introduction should spell out what the reader will learn, what is expected from him/her (e.g., that he/she already has done another tutorial) and what will not be covered. The summary should link to follow up documentation and to the more advanced topics that relate to the tutorial.
 
-For an example of a well-structured tutorial see the [tutorial on event related fields](/tutorial/eventrelatedaveraging).
+For an example of a well-structured tutorial see the [tutorial on event-related fields](/tutorial/eventrelatedaveraging).
 
 ## How to update the tutorial data on the download server?
 

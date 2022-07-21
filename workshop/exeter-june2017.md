@@ -19,7 +19,7 @@ We will keep this page up to date and post new information here when available.
 - 9:15 - 10:15 Lecture 1: Overview of the FieldTrip toolbox and event-related averaging [slides](https://www.dropbox.com/s/m0zgsq05a0orwzr/1_intro_and_preprocessing_Linda.pptx?dl=0)
 - 10:15 - 10:30 Coffee break
 - 10:30 - 12:30 Hands-on 1: [Preprocessing EEG data and event-related potentials](/tutorial/preprocessing_erp)
-  - If time permits, have a look at [Event related Averaging and MEG Planar Gradient](/tutorial/eventrelatedaveraging) but only the first half (stop when you get to the planar gradient).
+  - If time permits, have a look at [event-related Averaging and MEG Planar Gradient](/tutorial/eventrelatedaveraging) but only the first half (stop when you get to the planar gradient).
 - 12:30 - 13:30 Lunch
 - 13:30 - 14:30 Lecture 2: Fundamentals of neuronal oscillations and synchrony [slides](https://www.dropbox.com/s/iou7x06h0xff5jh/2_frequency_oscillations_Eelke.pptx?dl=0)
 - 14:30 - 14:45 Tea break

@@ -30,7 +30,7 @@ When adding or contributing to the tutorials please consider the [documentation 
 
 ## Sensor-level analyses
 
-- [Event related fields and MEG planar gradient](/tutorial/eventrelatedaveraging)
+- [event-related fields and MEG planar gradient](/tutorial/eventrelatedaveraging)
 - [Preprocessing of EEG data and computing ERPs](/tutorial/preprocessing_erp)
 - [Preprocessing and event-related activity in combined MEG/EEG data](/workshop/natmeg/preprocessing)
 - [Time-frequency analysis using Hanning window, multitapers and wavelets](/tutorial/timefrequencyanalysis)
@@ -80,7 +80,7 @@ When adding or contributing to the tutorials please consider the [documentation 
 
 ## Statistical analysis
 
-- [Parametric and non-parametric statistics on event related fields](/tutorial/eventrelatedstatistics)
+- [Parametric and non-parametric statistics on event-related fields](/tutorial/eventrelatedstatistics)
 - [Cluster-based permutation tests on event-related fields](/tutorial/cluster_permutation_timelock)
 - [Cluster-based permutation tests on time-frequency data](/tutorial/cluster_permutation_freq)
 - [Statistical analysis and multiple comparison correction for combined MEG/EEG data](/workshop/natmeg/statistics)

@@ -345,7 +345,7 @@ Explore the event-related potential by dragging boxes around (groups of) sensors
 
 ## Suggested further reading
 
-After having finished this tutorial on EEG data, you can look at the [event related averaging](/tutorial/eventrelatedaveraging) tutorial for MEG data or continue with the [time-frequency analysis](/tutorial/timefrequencyanalysis) tutorial.
+After having finished this tutorial on EEG data, you can look at the [event-related averaging](/tutorial/eventrelatedaveraging) tutorial for MEG data or continue with the [time-frequency analysis](/tutorial/timefrequencyanalysis) tutorial.
 
 If you have more questions about preprocessing or ERP analysis, you can also read the following FAQs:
 

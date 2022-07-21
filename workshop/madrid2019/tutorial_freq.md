@@ -18,11 +18,11 @@ of the two datasets.
 Oscillatory components contained in the ongoing EEG or MEG signal often change
 relative to experimental manipulations, such as stimulus events. These
 oscillatory signals are not necessarily phase-locked to the event and will not be
-represented as event related fields (ERFs) in MEG or event related potentials
+represented as event-related fields (ERFs) in MEG or event-related potentials
 (ERPs) in EEG (see e.g., Tallon-Baudry and Bertrand (1999) [Oscillatory gamma
 activity in humans and its role in object
 representation](https://www.ncbi.nlm.nih.gov/pubmed/10322469)). The goal of the
-first section is to compute and visualize event related changes by calculating
+first section is to compute and visualize event-related changes by calculating
 time-frequency representations (TFRs) of power. This will be done using
 sliding-window Fourier analysis and by using wavelets.
 

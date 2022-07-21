@@ -19,9 +19,9 @@ There is also another fixme that has to be fixed. (9 dec 2008)
 
 ### Preprocessing - automatic artifact identification
 
-### Event related fields and the planar gradient
+### event-related fields and the planar gradient
 
-### Parametric and non-parametric statistics on event related fields
+### Parametric and non-parametric statistics on event-related fields
 
 ### Fourier analysis of oscillatory power and coherence
 

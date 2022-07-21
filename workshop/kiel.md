@@ -25,7 +25,7 @@ We will keep this page up to date and post new information here when available.
 
   - 14:00 – 15:15 Lecture: Non-parametric randomization techniques
   - 15:15 – 15:30 Coffee break
-  - 15:30 – 17:15 Hands-on: Parametric and non-parametric statistics on event related fields
+  - 15:30 – 17:15 Hands-on: Parametric and non-parametric statistics on event-related fields
     _ <https://www.fieldtriptoolbox.org/tutorial/eventrelatedstatistics>
     _ <https://www.fieldtriptoolbox.org/tutorial/cluster_permutation_freq>
   - 17:15 – 18:00 Wrap-up-the-day: “Ask the expert” session

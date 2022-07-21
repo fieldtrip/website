@@ -1,14 +1,14 @@
 ---
-title: Classification of event related MEG data using MVPA-Light
+title: Classification of event-related MEG data using MVPA-Light
 tags: [tutorial, eeg, meg, multivariate, timelock, freq]
 ---
 
-# Classification of event related MEG data using MVPA-Light
+# Classification of event-related MEG data using MVPA-Light
 
 ## Introduction
 
-The objective of this tutorial is to give an introduction to the classification of event related
-data using the [MVPA-Light](https://github.com/treder/MVPA-Light) toolbox. For a general introduction to the toolbox refer to the [MVPA-Light paper](https://www.frontiersin.org/articles/10.3389/fnins.2020.00289/full). The [MVPA-Light readme file](https://github.com/treder/MVPA-Light/blob/master/README.md) is the most up to date reference. This tutorial builds on skills acquired in the [preprocessing](/tutorial/preprocessing), [event related averaging](/tutorial/eventrelatedaveraging) and [time-frequency analysis](/tutorial/timefrequencyanalysis) tutorials.
+The objective of this tutorial is to give an introduction to the classification of event-related
+data using the [MVPA-Light](https://github.com/treder/MVPA-Light) toolbox. For a general introduction to the toolbox refer to the [MVPA-Light paper](https://www.frontiersin.org/articles/10.3389/fnins.2020.00289/full). The [MVPA-Light readme file](https://github.com/treder/MVPA-Light/blob/master/README.md) is the most up to date reference. This tutorial builds on skills acquired in the [preprocessing](/tutorial/preprocessing), [event-related averaging](/tutorial/eventrelatedaveraging) and [time-frequency analysis](/tutorial/timefrequencyanalysis) tutorials.
 
 
 ## Installation

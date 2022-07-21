@@ -22,7 +22,7 @@ In the following section we will read and epoch the data. Subsequently we will a
 
 The following steps had been performed:
 
-- Defining triggers around which the data will be segmented using **[ft_definetrial](/reference/ft_definetrial)**. The data is segmented to include 2 seconds prior to S1 onset (i.e. baseline) and 1.57 second post S1 onset (i.e. event related interval including S1 and S2).
+- Defining triggers around which the data will be segmented using **[ft_definetrial](/reference/ft_definetrial)**. The data is segmented to include 2 seconds prior to S1 onset (i.e. baseline) and 1.57 second post S1 onset (i.e. event-related interval including S1 and S2).
 - Calling **[ft_preprocessing](/reference/ft_preprocessing)** without applying any preprocessing steps yet.
 
 To run the following section of code you need the original dataset and trial function: [c,rfhp0.1Hz](https://download.fieldtriptoolbox.org/tutorial/salzburg/c,rfhp0.1Hz), [config](https://download.fieldtriptoolbox.org/tutorial/salzburg/config), and [ft_trialfun_sensorygating.m](https://download.fieldtriptoolbox.org/tutorial/salzburg/ft_trialfun_sensorygating.m)

@@ -19,7 +19,7 @@ The goal of the plotting functions in FieldTrip is to ease the visualization of 
 
 The high-level functions take care of the data bookkeeping and call the low-level function. If you want to make more complex figures or tweak all options, you can bypass the high-level functions and call the low-level functions instead. This is especially useful if there is no data selection and bookkeeping involved, e.g., when you want to plot multiple geometrical objects (like sensors, source model, head surface, etc).
 
-To determine which high-level functions are suitable for you depends on the type of data you have: sensor or source space data. In this tutorial we assume that you already have the data from the event related averaging tutorial, the time-frequency representations of power tutorial and the applying beamforming techniques in the frequency domain tutorial, and we will demonstrate plotting at both the sensor and source level.
+To determine which high-level functions are suitable for you depends on the type of data you have: sensor or source space data. In this tutorial we assume that you already have the data from the event-related averaging tutorial, the time-frequency representations of power tutorial and the applying beamforming techniques in the frequency domain tutorial, and we will demonstrate plotting at both the sensor and source level.
 
 Let us start by loading some data.
 

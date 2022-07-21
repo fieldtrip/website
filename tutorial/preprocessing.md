@@ -170,7 +170,7 @@ More on the trialinfo field can be found in the [faq](/faq/is_it_possible_to_kee
 
 ## Suggested further reading
 
-After having finished this tutorial on preprocessing, you can continue with the [event related averaging](/tutorial/eventrelatedaveraging) or with the [time-frequency analysis](/tutorial/timefrequencyanalysis) tutorial.
+After having finished this tutorial on preprocessing, you can continue with the [event-related averaging](/tutorial/eventrelatedaveraging) or with the [time-frequency analysis](/tutorial/timefrequencyanalysis) tutorial.
 
 If you have more questions about preprocessing, you can also read the following FAQs:
 

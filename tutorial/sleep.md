@@ -783,7 +783,7 @@ The polarity of the signal matters. Does the activity that we time-lock give us 
 {% include image src="/assets/img/tutorial/sleep/figure17.png" width="400" %}
 {% include image src="/assets/img/tutorial/sleep/figure18.png" width="400" %}
 
-Calculate the Event related Time-Frequency (ERF) around the event time-locked to the trough.
+Calculate the event-related Time-Frequency (ERF) around the event time-locked to the trough.
 
     cfg               = [];
     cfg.channel       = 'EEG';
@@ -793,7 +793,7 @@ Calculate the Event related Time-Frequency (ERF) around the event time-locked to
     cfg.toi           = [(-padding_buffer-1.5):0.1:(1.5+padding_buffer)]; % 0.1 s steps
     event_freq = ft_freqanalysis(cfg, data_continuous_nonREM_EEG_events);
 
-Visualize the event related time-frequency around the event time-locked to the trough. What activity other than the frequency band that is _not_ in the frequency band used for detection, when does it typically occur, before, after, or during the event.
+Visualize the event-related time-frequency around the event time-locked to the trough. What activity other than the frequency band that is _not_ in the frequency band used for detection, when does it typically occur, before, after, or during the event.
 
     % view the time-frequency of a slow wave or spindle event
     figure

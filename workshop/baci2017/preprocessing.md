@@ -36,7 +36,7 @@ If you do not specify your own triallfunction, the 4th column will by default co
 
 ## Description of the experimental data
 
-For the EEG source reconstruction workshop we recorded a single subject to allow you to work through all basic steps involved in EEG analysis: _from event related averaging to forward and inverse problem_.
+For the EEG source reconstruction workshop we recorded a single subject to allow you to work through all basic steps involved in EEG analysis: _from event-related averaging to forward and inverse problem_.
 
 ### Somatosensory Evoked Potentials (SEPs)
 
