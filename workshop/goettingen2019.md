@@ -42,7 +42,7 @@ Local organizer: Daniel van de Velden.
 - **10:30 - 12:00** Hands On III: [Identifying oscillatory sources using Beamformers](/tutorial/beamformer) – “Source Analysis”
 - **12:00 - 13:00** Lunch
 
-- **13:00 - 14:00** Lecture IV: Connectivity analysis in MEG and EEG data - “Connectivity” _Tzvetan Popov_ - [lecture](/assets/pdf/workshop/goettingen2019/4_connectivity_analysis.pdf)
+- **13:00 - 14:00** Lecture IV: Connectivity analysis of MEG and EEG data - “Connectivity” _Tzvetan Popov_ - [lecture](/assets/pdf/workshop/goettingen2019/4_connectivity_analysis.pdf)
 - **14:00 - 14:15** Coffee break
 - **14:15 - 15:15** Hands On IV: [Analysis of sensor- and source-level connectivity](/tutorial/connectivity) – “Connectivity”
 - **15:15 - 16:15** Lecture V: Statistics using non-parametric randomization techniques - “Statistical Testing/Methods” _Tzvetan Popov_ - [lecture](/assets/pdf/workshop/goettingen2019/5_cluster_statistics.pdf)

@@ -42,7 +42,7 @@ Please note that the recording of the lecture on Sleep and continuous EEG by Mar
 - [Forward and inverse modelling](https://www.youtube.com/watch?v=86f5_x9SVQQ) by Robert Oostenveld
 - [Source reconstruction using beamformers](https://www.youtube.com/watch?v=Ez72OFjSABs) by Tzvetan Popov
 - [Statistics using non-parametric randomization techniques](https://www.youtube.com/watch?v=x0hR-VsHZj8) by Eric Maris
-- [Connectivity analysis in MEG and EEG data](https://www.youtube.com/watch?v=ZBwh0Vm4fh4) by Jan-Mathijs Schoffelen
+- [Connectivity analysis of MEG and EEG data](https://www.youtube.com/watch?v=ZBwh0Vm4fh4) by Jan-Mathijs Schoffelen
 
 ## FieldTrip MEG/EEG workshop at NatMEG, Stockholm (October 2014)
 

@@ -7,7 +7,7 @@ tags: [tutorial, example, memory, matlab, script]
 
 ## Introduction
 
-This tutorial gives advice about how to do data-analysis in a memory-efficient way when large amount of data is analyzed. It does not provide information about any FieldTrip functions or any analysis steps.
+This tutorial gives advice about how to do data analysis in a memory-efficient way when large amount of data is analyzed. It does not provide information about any FieldTrip functions or any analysis steps.
 
 ## Background
 
@@ -22,7 +22,7 @@ Neurophysiological data can become quite large with the result that disk space, 
 - If you are working on a single subject, make sure other subjects are no longer in memory. This might seem trivial, but many people assign unique variables to subjects and forget to clear them.
 - Perhaps most importantly – once in a while let someone else go through your scripts to see if they can be optimized.
 - Within a script or function make sure you clear large variables that you don't need anymore using the clear statement. Note that MATLAB's memory use might not be intuitive. For instance, reloading a large dataset into the same variable may result in MATLAB allocating twice the memory you actually need.
-- The `cfg` field in your FieldTrip data structures stores the history of the processing steps performed on the data. This field can get quite large after many such steps and specifically after appending several data structures, because each `cfg` is stored in a cell array within the `cfg.previous` field. You can look at the cfg using **[ft_analysispipeline](/reference/ft_analysispipeline)**. Simply emptying this field (e.g., by doing `freq.cfg = []`) will free up space. Remember to keep a copy of the cfg field on disk if you want to keep track of your analysis pipeline. 
+- The `cfg` field in your FieldTrip data structures stores the history of the processing steps performed on the data. This field can get quite large after many such steps and specifically after appending several data structures, because each `cfg` is stored in a cell array within the `cfg.previous` field. You can look at the cfg using **[ft_analysispipeline](/reference/ft_analysispipeline)**. Simply emptying this field (e.g., by doing `freq.cfg = []`) will free up space. Remember to keep a copy of the cfg field on disk if you want to keep track of your analysis pipeline.
 
 {% include markup/warning %}
 If you have any more suggestions please add them here.
@@ -118,7 +118,7 @@ When you are working with a very large data set repeatedly or interactively, cle
 
 ## Summary and suggested further readings
 
-This tutorial gave some advice for scripting your analysis in a memory-efficient way. We also advise to read this [technical note](http://www.mathworks.com/support/tech-notes/1100/1106.html) from MathWorks. Further suggestions for computational efficiency are given in the [distributed computing](/tutorial/distributedcomputing) tutorial. 
+This tutorial gave some advice for scripting your analysis in a memory-efficient way. We also advise to read this [technical note](http://www.mathworks.com/support/tech-notes/1100/1106.html) from MathWorks. Further suggestions for computational efficiency are given in the [distributed computing](/tutorial/distributedcomputing) tutorial.
 
 These are FAQs that are related to memory issues:
 

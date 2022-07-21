@@ -58,7 +58,7 @@ We will inform you as to whether you obtained a place in this course not later t
 ### Thursday May 12, 2022
 
 | 09:00-09:30 | Morning chill or workout|
-| 09:45-11:00 | Connectivity analysis in MEG and EEG data - [lecture by Jan-Mathijs](/assets/pdf/workshop/toolkit2022/connectivity.pdf)|
+| 09:45-11:00 | Connectivity analysis of MEG and EEG data - [lecture by Jan-Mathijs](/assets/pdf/workshop/toolkit2022/connectivity.pdf)|
 | 11:00-11:15 | Coffee Break|
 | 11:15-12:30 | Statistics using non-parametric randomization techniques - [lecture by Robert](/assets/pdf/workshop/toolkit2022/statistics.pdf)|
 | 12:30-13:30 | Lunch|

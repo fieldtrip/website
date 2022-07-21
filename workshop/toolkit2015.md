@@ -15,7 +15,7 @@ title: Advanced analysis and source modeling of EEG and MEG data
 | Tue 11:00-12:15 | [Forward and inverse modelling](https://www.youtube.com/watch?v=86f5_x9SVQQ) |
 | Tue 13:00-14:00 | [Source reconstruction using beamformers](https://www.youtube.com/watch?v=Ez72OFjSABs) |
 | Wed 09:00-10:00 | [Statistics using non-parametric randomization techniques](https://www.youtube.com/watch?v=x0hR-VsHZj8) |
-| Wed 13:00-14:00 | [Connectivity analysis in MEG and EEG data](https://www.youtube.com/watch?v=ZBwh0Vm4fh4) |
+| Wed 13:00-14:00 | [Connectivity analysis of MEG and EEG data](https://www.youtube.com/watch?v=ZBwh0Vm4fh4) |
 
 ## Detailed Program
 
@@ -56,7 +56,7 @@ http://www.humphreys.nl/onze-restaurants/humphreys-nijmegen
 | 10:00-10:15 | Coffee Break | |  
  | 10:15-12:15 | Statistics using non-parametric randomization techniques | [Hands-on](/tutorial/cluster_permutation_timelock) |  
  | 12:15-13:00 | Lunch | |  
- | 13:00-14:00 | Connectivity analysis in MEG and EEG data | [Lecture](https://www.youtube.com/watch?v=ZBwh0Vm4fh4) [Slides](/assets/pdf/workshop/toolkit2015/jan-mathijs_connectivity.pdf) |
+ | 13:00-14:00 | Connectivity analysis of MEG and EEG data | [Lecture](https://www.youtube.com/watch?v=ZBwh0Vm4fh4) [Slides](/assets/pdf/workshop/toolkit2015/jan-mathijs_connectivity.pdf) |
 | 14:00-15:00 | Analysis of sensor- and source-level connectivity | [Hands-on](/tutorial/connectivityextended) |  
  | 15:00-15:30 | Tea Break | |  
  | 15:30-16:30 | Analysis of sensor- and source-level connectivity | [Hands-on](/tutorial/connectivityextended) |  

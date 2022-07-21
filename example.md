@@ -108,7 +108,7 @@ See also the [tutorials](/tutorial) and [frequently asked questions](/faq).
 - [Converting an example NIRS dataset for sharing in BIDS](/example/bids_nirs)
 - [Converting an example video dataset for sharing in BIDS](/example/bids_video)
 - [Converting the combined MEG/fMRI MOUS dataset for sharing in BIDS](/example/bids_mous)
-- [Correlation analysis in fMRI data](/example/correlation_analysis_in_fmri_data)
+- [Correlation analysis of fMRI data](/example/correlation_analysis_in_fmri_data)
 - [Example analysis pipeline for Biosemi bdf data](/example/biosemi)
 - [Find the orientation of planar gradiometer channels](/example/planar_orientation)
 - [How to import data from MNE-Python and FreeSurfer](/example/import_mne)

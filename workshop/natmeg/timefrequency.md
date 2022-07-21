@@ -233,7 +233,7 @@ _Figure: Topographic representation of the time-frequency representations of the
 
 ## Preprocessing EEG
 
-We will now proceed with doing the time-frequency analysis in EEG. Note we are using mainly similar parameters as in the MEG analysis.
+We will now proceed with doing the time-frequency analysis of the EEG data. Note we are using mainly similar parameters as in the MEG analysis.
 
 {% include markup/info %}
 Keep an eye open for the differences in processing and visualizing EEG.

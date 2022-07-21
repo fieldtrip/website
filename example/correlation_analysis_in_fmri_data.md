@@ -1,9 +1,9 @@
 ---
-title: Correlation analysis in fMRI data
+title: Correlation analysis of fMRI data
 tags: [example, fmri, raw, freq, coherence]
 ---
 
-# Correlation analysis in fMRI data
+# Correlation analysis of fMRI data
 
 This script demonstrates how FieldTrip can be used for time-series analysis of fMRI data.
 

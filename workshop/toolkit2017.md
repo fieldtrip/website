@@ -49,7 +49,7 @@ Fransestraat 58, Nijmegen
 | 10:00-10:15 | Coffee Break |  
 | 10:15-12:15 | Identifying oscillatory sources using beamformers - [hands-on](/tutorial/beamformer) |  
 | 12:15-13:00 | Lunch |  
-| 13:00-14:00 | Connectivity analysis in MEG and EEG data - [lecture](/assets/pdf/workshop/toolkit2017/connectivity_analysis.pdf) |
+| 13:00-14:00 | Connectivity analysis of MEG and EEG data - [lecture](/assets/pdf/workshop/toolkit2017/connectivity_analysis.pdf) |
 | 14:00-15:00 | Analysis of sensor- and source-level connectivity - [hands-on](/tutorial/connectivity) |  
 | 15:00-15:30 | Tea Break |  
 | 15:30-16:30 | Analysis of sensor- and source-level connectivity (continued) |  

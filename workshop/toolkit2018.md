@@ -39,7 +39,7 @@ Organizer: Robert Oostenveld, with the help of many colleagues.
 
 ### Wednesday April 11, 2018
 
-| 09:00-10:00 | Connectivity analysis in MEG and EEG data - [lecture](/assets/pdf/workshop/toolkit2018/connectivity.pdf) |
+| 09:00-10:00 | Connectivity analysis of MEG and EEG data - [lecture](/assets/pdf/workshop/toolkit2018/connectivity.pdf) |
 | 10:00-10:45 | Analysis of sensor- and source-level connectivity - [hands-on](/tutorial/connectivity) |
 | 10:45-11:00 | Coffee Break |
 | 11:00-12:15 | Analysis of sensor- and source-level connectivity - [hands-on](/tutorial/connectivity) |

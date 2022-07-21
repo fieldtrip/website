@@ -64,7 +64,7 @@ Because I didn't do source analysis myself until now I don't now the best way to
 
 ### Compute forward simulated data and apply a beamformer scan
 
-### Correlation analysis in fMRI data
+### Correlation analysis of fMRI data
 
 ### Create BEM headmodel for EEG
 

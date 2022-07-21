@@ -44,7 +44,7 @@ We will keep this page up to date and post new information here when available.
 
 - 11:00 - 11:30 Coffee break
 
-- 11:30 - 12:30 Lecture 4: Connectivity analysis in electrophysiological data ([slides](https://dl.dropboxusercontent.com/u/4023322/kcl-london-slides/4.%20connectivity%20analysis%20%28Eelke%29.pptx))
+- 11:30 - 12:30 Lecture 4: Connectivity analysis of electrophysiological data ([slides](https://dl.dropboxusercontent.com/u/4023322/kcl-london-slides/4.%20connectivity%20analysis%20%28Eelke%29.pptx))
 
 - 12:30 - 13:15 Lunch
 - 13:15 - 15:15 Hands-on 4: [Analysis of sensor- and source-level connectivity](/tutorial/connectivity)
