@@ -34,7 +34,7 @@ When adding or contributing to the tutorials please consider the [documentation 
 - [Preprocessing of EEG data and computing ERPs](/tutorial/preprocessing_erp)
 - [Preprocessing and event-related activity in combined MEG/EEG data](/workshop/natmeg/preprocessing)
 - [Time-frequency analysis using Hanning window, multitapers and wavelets](/tutorial/timefrequencyanalysis)
-- [Time-frequency analysis of combined MEG/EEG](/workshop/natmeg/timefrequency)
+- [Time-frequency analysis of combined MEG/EEG data](/workshop/natmeg/timefrequency)
 - [Sensor-level ERF, TFR and connectivity analyses](/tutorial/sensor_analysis)
 - [Extracting the brain state and events from continuous sleep EEG](/tutorial/sleep)
 
