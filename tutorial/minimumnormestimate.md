@@ -50,7 +50,7 @@ The following will use the MEG data belonging to Subject01 which can be obtained
 
 ### Preprocessing of MEG data
 
-We will now read and preprocess the data. If you would like to continue directly with the already preprocessed data, you can download [dataFIC.mat](https://download.fieldtriptoolbox.org/tutorial/beamformer/dataFIC.mat) and [dataFC.mat](https://download.fieldtriptoolbox.org/tutorial/beamformer/dataFC.mat). Load the data into MATLAB with the command `load` and skip to the section "Averaging and noise-covariance estimation".
+We will now read and preprocess the data. If you would like to continue directly with the already preprocessed data, you can download [dataFIC.mat](https://download.fieldtriptoolbox.org/tutorial/beamformer/dataFIC.mat) and [dataFC.mat](https://download.fieldtriptoolbox.org/tutorial/beamformer/dataFC.mat). Load the data into MATLAB with the command `load` and skip to [Averaging and noise-covariance estimation](#averaging-and-noise-covariance-estimation).
 
 Otherwise run the following code:
 
