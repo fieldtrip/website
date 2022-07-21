@@ -58,7 +58,7 @@
 - name:  Introduction to the FieldTrip toolbox
   link:  /tutorial/introduction
 
-- name:  Trigger-based trial selection
+- name:  Preprocessing - Segmenting and reading trial-based EEG and MEG data
   link:  /tutorial/preprocessing
 
 - name:  Visual artifact rejection

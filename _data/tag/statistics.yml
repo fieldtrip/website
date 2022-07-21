@@ -76,7 +76,7 @@
 - name:  Cluster-based permutation tests on time-frequency data
   link:  /tutorial/cluster_permutation_freq
 
-- name:  Cluster-based permutation tests on event related fields
+- name:  Cluster-based permutation tests on event-related fields
   link:  /tutorial/cluster_permutation_timelock
 
 - name:  Parametric and non-parametric statistics on event-related fields

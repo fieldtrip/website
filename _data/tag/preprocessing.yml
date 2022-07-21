@@ -109,7 +109,7 @@
 - name:  Preprocessing - Reading continuous EEG and MEG data
   link:  /tutorial/continuous
 
-- name:  Event related averaging and MEG planar gradient
+- name:  Event-related averaging and MEG planar gradient
   link:  /tutorial/eventrelatedaveraging
 
 - name:  Preprocessing and averaging of multi-channel NIRS data
@@ -118,7 +118,7 @@
 - name:  Preprocessing and averaging of single-channel NIRS data
   link:  /tutorial/nirs_singlechannel
 
-- name:  Trigger-based trial selection
+- name:  Preprocessing - Segmenting and reading trial-based EEG and MEG data
   link:  /tutorial/preprocessing
 
 - name:  Preprocessing of EEG data and computing ERPs
