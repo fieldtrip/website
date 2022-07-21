@@ -19,7 +19,7 @@
 - name:  Check the quality of the anatomical coregistration
   link:  /example/coregistration_quality_control
 
-- name:  Localizing the sources underlying the difference in event related fields
+- name:  Localizing the sources underlying the difference in event-related fields
   link:  /example/difference_erf
 
 - name:  Fit a dipole to the tactile ERF after mechanical stimulation

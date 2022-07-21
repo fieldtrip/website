@@ -85,7 +85,7 @@
 - name:  Determine the filter characteristics
   link:  /example/determine_the_filter_characteristics
 
-- name:  Localizing the sources underlying the difference in event related fields
+- name:  Localizing the sources underlying the difference in event-related fields
   link:  /example/difference_erf
 
 - name:  Fit a dipole to the tactile ERF after mechanical stimulation
