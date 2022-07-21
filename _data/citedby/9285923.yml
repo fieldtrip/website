@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '35066874'
+- idtype: doi
+  value: 10.1111/psyp.13999
+- idtype: pmcid
+  value: PMC9285923
+authors:
+- authtype: Author
+  name: Cao Y
+- authtype: Author
+  name: Oostenveld R
+- authtype: Author
+  name: Alday PM
+- authtype: Author
+  name: Piai V
+epubdate: 2022 Jan 23
+fulljournalname: Psychophysiology
+issue: '6'
+pages: e13999
+pmclivedate: 2022/07/19
+printpubdate: 2022 Jun
+pubdate: 2022 Jan 23
+sortdate: 2022/01/23 00:00
+source: Psychophysiology
+title: Are alpha and beta oscillations spatially dissociated over the cortex in context‐driven
+  spoken‐word production?
+uid: '9285923'
+volume: '59'
