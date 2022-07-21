@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '35150452'
+- idtype: doi
+  value: 10.1111/psyp.14016
+- idtype: pmcid
+  value: PMC9286416
+authors:
+- authtype: Author
+  name: Orepic P
+- authtype: Author
+  name: Park H
+- authtype: Author
+  name: Rognini G
+- authtype: Author
+  name: Faivre N
+- authtype: Author
+  name: Blanke O
+epubdate: 2022 Feb 12
+fulljournalname: Psychophysiology
+issue: '7'
+pages: e14016
+pmclivedate: 2022/07/19
+printpubdate: 2022 Jul
+pubdate: 2022 Feb 12
+sortdate: 2022/02/12 00:00
+source: Psychophysiology
+title: Breathing affects self‐other voice discrimination in a bodily state associated
+  with somatic passivity
+uid: '9286416'
+volume: '59'

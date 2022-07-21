@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '35754100'
+- idtype: doi
+  value: 10.1111/adb.13199
+- idtype: pmcid
+  value: PMC9286401
+authors:
+- authtype: Author
+  name: Antón‐Toro LF
+- authtype: Author
+  name: Bruña R
+- authtype: Author
+  name: Del Cerro‐León A
+- authtype: Author
+  name: Shpakivska D
+- authtype: Author
+  name: Mateos‐Gordo P
+- authtype: Author
+  name: Porras‐Truque C
+- authtype: Author
+  name: García‐Gómez R
+- authtype: Author
+  name: Maestú F
+- authtype: Author
+  name: García‐Moreno LM
+epubdate: 2022 Jun 21
+fulljournalname: Addiction Biology
+issue: '4'
+pages: e13199
+pmclivedate: 2022/07/19
+printpubdate: 2022 Jul
+pubdate: 2022 Jun 21
+sortdate: 2022/06/21 00:00
+source: Addict Biol
+title: Electrophysiological resting‐state hyperconnectivity and poorer behavioural
+  regulation as predisposing profiles of adolescent binge drinking
+uid: '9286401'
+volume: '27'
