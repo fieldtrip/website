@@ -1,7 +1,7 @@
 - name:  Effect of SNR on Coherence
   link:  /example/coherence_snr
 
-- name:  Correlation analysis in fMRI data
+- name:  Correlation analysis of fMRI data
   link:  /example/correlation_analysis_in_fmri_data
 
 - name:  How to interpret the sign of the phase slope index?

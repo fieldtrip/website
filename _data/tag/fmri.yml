@@ -1,7 +1,7 @@
 - name:  Realtime fMRI from Siemens scanners
   link:  /development/realtime/fmri
 
-- name:  Correlation analysis in fMRI data
+- name:  Correlation analysis of fMRI data
   link:  /example/correlation_analysis_in_fmri_data
 
 - name:  Getting started with fMRI timeseries data
