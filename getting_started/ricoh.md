@@ -161,7 +161,7 @@ The first 14 components of the event structure in the above example ar
 
 ## Trial Selection
 
-As the same way as that in the tutorial, [Trigger-based trial selection](/tutorial/preprocessing), you can define segments of epochs-of-interest (trials) in your recorded MEG data using the FieldTrip function, **[ft_definetrial](/reference/ft_definetrial)**. For example,
+In the same way as in the [Preprocessing - Segmenting and reading trial-based EEG and MEG data](/tutorial/preprocessing) tutorial, you can define segments of epochs-of-interest (trials) in your recorded MEG data using the FieldTrip function, **[ft_definetrial](/reference/ft_definetrial)**. For example,
 
     %% Define trials
     cfg = [];

@@ -9,7 +9,7 @@ tags: [tutorial, freq, meg, eeg, plotting, meg-language]
 
 In this tutorial you can find information about the time-frequency analysis of a single subject's MEG data using a Hanning window, multitapers and wavelets. This tutorial also shows how to visualize the results.
 
-Here, we will work on the MEG-language dataset, you can click [here](/tutorial/meg_language) for details on the dataset. This tutorial is a continuation from the preprocessing tutorials. We will begin by repeating the code used to select the trials and preprocess the data as described in the first tutorials ([trigger based trial selection](/tutorial/preprocessing), [artifact rejection](/tutorial/artifacts)). We assume that the reader already knows how to do the preprocessing in FieldTrip.
+Here, we will work on the MEG-language dataset, you can click [here](/tutorial/meg_language) for details on the dataset. This tutorial is a continuation from the preprocessing tutorials. We will begin by repeating the code used to select the trials and preprocess the data as described in the earlier tutorials ([trigger-based trial selection](/tutorial/preprocessing), [artifact rejection](/tutorial/artifacts)). We assume that the reader already knows how to do the preprocessing in FieldTrip.
 
 There is no information in this tutorial about how to compare conditions, how to grandaverage the results across subjects or how to do statistical analysis on the time-frequency data. Some of these issues are covered in other tutorials (see the [summary and suggested further reading](#Summary and suggested further reading) section).
 
@@ -360,7 +360,7 @@ If you would like to learn more about plotting of time-frequency representations
 
 This tutorial showed how to do time-frequency analysis on a single's subject MEG data and how to plot the time-frequency representations. There were 4 methods shown for calculating time-frequency representations and 3 functions for plotting the results.
 
-After having finished this tutorial on time-frequency analysis, you can continue with the [beamformer source reconstruction](/tutorial/beamformer) tutorial if you are interested in the source-localization of the power changes or the [cluster-based permutation tests on time-frequency data](/tutorial/cluster_permutation_freq) tutorial if you are interested how to do statistics on the time-frequency representations.
+After having finished this tutorial on time-frequency analysis, you can continue with the [Localizing oscillatory sources using beamformer techniques](/tutorial/beamformer) tutorial if you are interested in the source-localization of the power changes or the [Cluster-based permutation tests on time-frequency data](/tutorial/cluster_permutation_freq) tutorial if you are interested how to do statistics on the time-frequency representations.
 
 Frequently asked question
 {% include seealso tag1="faq" tag2="freq" %}

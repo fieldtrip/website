@@ -19,7 +19,7 @@ This tutorial uses the same [multimodal faces](/workshop/paris2019/dataset) as t
 
 Note that in this tutorial we will not provide detailed information about statistics on channel-level power spectra, time-frequency representations of power (as obtained from **[ft_freqanalysis](/reference/ft_freqanalysis)**), nor on high-density volumetric or cortical sheet source reconstruction results. However, FieldTrip does have similar statistical options for this as well: at the sensor-level we have the **[ft_freqstatistics](/reference/ft_freqstatistics)** function, and on the source-level (statistics on source reconstructed activity), we have the **[ft_sourcestatistics](/reference/ft_sourcestatistics)** function.
 
-A more thorough discussion of randomization tests and cluster-based statistics is presented in the [Cluster-based permutation tests on event related fields](/tutorial/cluster_permutation_timelock) and the [Cluster-based permutation tests on time-frequency data](/tutorial/cluster_permutation_freq) tutorials.
+A more thorough discussion of randomization tests and cluster-based statistics is presented in the [Cluster-based permutation tests on event-related fields](/tutorial/cluster_permutation_timelock) and the [Cluster-based permutation tests on time-frequency data](/tutorial/cluster_permutation_freq) tutorials.
 
 ## Background
 
@@ -29,7 +29,7 @@ An important feature of the MEG and EEG data is that it has a spatial temporal s
 
 When parametric statistics are used, one method that addresses this problem is the so-called Bonferroni correction. The idea is if the experimenter is conducting _n_ number of statistical tests then each of the individual tests should be tested under a significance level that is divided by _n_. The Bonferroni correction was derived from the observation that if _n_ tests are performed with an _alpha_ significance level, then the probability that one comes out significantly is smaller than or equal to _n_ times _alpha_ (Boole's inequality). In order to keep this probability lower, we can use an _alpha_ that is divided by _n_ for each test. However, the correction comes at the cost of increasing the probability of false negatives, i.e. the test does not have enough power to reveal differences among conditions.
 
-In contrast to the familiar parametric statistical framework, it is straightforward to solve the MCP in the nonparametric framework. Nonparametric tests offer more freedom to the experimenter regarding which test statistics are used for comparing conditions, and help to maximize the sensitivity to the expected effect. For more details see the publication by [Maris and Oostenveld (2007)](/references_to_implemented_methods#statistical_inference_by_means_of_permutation) and the [Cluster-based permutation tests on event related fields](/tutorial/cluster_permutation_timelock)
+In contrast to the familiar parametric statistical framework, it is straightforward to solve the MCP in the nonparametric framework. Nonparametric tests offer more freedom to the experimenter regarding which test statistics are used for comparing conditions, and help to maximize the sensitivity to the expected effect. For more details see the publication by [Maris and Oostenveld (2007)](/references_to_implemented_methods#statistical_inference_by_means_of_permutation) and the [Cluster-based permutation tests on event-related fields](/tutorial/cluster_permutation_timelock)
 and the [Cluster-based permutation tests on time-frequency data](/tutorial/cluster_permutation_freq) tutorials.
 
 ## Procedure

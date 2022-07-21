@@ -5,7 +5,7 @@ tags: [tutorial, artifact, preprocessing, eeg, meg]
 
 # Introduction on dealing with artifacts
 
-This tutorial explains the general approach on how to deal with artifacts in FieldTrip.
+This tutorial explains the general approach on how to deal with artifacts.
 
 {% include markup/danger %}
 Since FieldTrip supports the data of many different acquisition systems, the particular artifacts in your data might behave very different from the examples demonstrated and discussed here. Therefore you should be aware of the different approaches and of the variability of artifact rejection (automatic/manual) procedures described onwards.
@@ -15,7 +15,7 @@ At the end of an automated procedure, consider always to visual inspect your dat
 
 ## Background
 
-Generally speaking, an artifact (or artefact) is some unexpected or unwanted feature in the data that we acquired with our EEG or MEG system. Artifacts can be physiological or non-physiological in origin.
+Generally speaking, an artifact (American English spelling) or artefact (British English spelling) is some unexpected or unwanted feature in the data that we acquired with our EEG or MEG system. Artifacts can be physiological or non-physiological in origin.
 
 An eyeblink is an example of a physiological artifact that shows up in the EEG. The retina is electrically charged and the movement of the eye causesa a deflection of the scalp potential. The contribution of this so-called electrooculogram is mainly visible on frontal  electrodes, but when looking carefully enough, you can see it on all electrodes. An example of a non-physiological artifact is an EEG electrode that has poor contact with the scalp. The corresponding EEG channel will show a flat line, or potentially a lot of noise.
 

@@ -33,7 +33,7 @@ We will keep this page up to date and post new information here when available.
 - 10:00 - 10:15 Coffee break
 - 10:15 - 12:15 Hands-on 3: Parametric and non-parametric statistics in FieldTrip
   - There are several options here. You can choose a somewhat ['gentle' introduction tutorial](/tutorial/eventrelatedstatistics), and follow that by, or start immediately with, either or both of the more in-depth tutorials:
-    - [Cluster-based permutation tests on event related fields](/tutorial/cluster_permutation_timelock) and/or
+    - [Cluster-based permutation tests on event-related fields](/tutorial/cluster_permutation_timelock) and/or
     - [Cluster-based permutation tests on time-frequency data](/tutorial/cluster_permutation_freq)
 - 12:15 - 13:00 Lunch
 - 13:00 - 14:00 Lecture 4: Connectivity analysis in electrophysiological data [slides](https://www.dropbox.com/s/0ckwxqk856ra6q3/4.%20connectivity%20analysis%20%28Eelke%29.pptx?dl=0)

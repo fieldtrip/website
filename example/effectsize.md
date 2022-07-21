@@ -219,7 +219,7 @@ The effect size is 1.47 when averaging over 7 left-temporal channels, and from 3
 
 ## Statistical inference using a cluster-based permutation test
 
-Although we might have had a clear a priori hypothesis for the timing of the N400 effect on the basis of previous ERP research, we actually do not have such a clear expectations for the MEG channels on which the effect will show. Hence - rather than picking channels following visual inspection - the correct procedure is to test for the hypothesized effect on all channels, dealing with multiple comparison correction. Please see the [cluster-based permutation tests on event related fields](/tutorial/cluster_permutation_timelock) tutorial for more details.
+Although we might have had a clear a priori hypothesis for the timing of the N400 effect on the basis of previous ERP research, we actually do not have such a clear expectations for the MEG channels on which the effect will show. Hence - rather than picking channels following visual inspection - the correct procedure is to test for the hypothesized effect on all channels, dealing with multiple comparison correction. Please see the [Cluster-based permutation tests on event-related fields](/tutorial/cluster_permutation_timelock) tutorial for more details.
 
     % define neighbouring channels
     load ctf151_neighb.mat

@@ -25,7 +25,7 @@ tags: [oxford2019]
 
 - 13:30 – 14:30 Lecture 2: Statistical inference using non-parametric permutation techniques
 - 14:30 – 14:45 Tea break
-- 14:45 – 16:45 Hands-on 2: [Cluster-based permutation tests on event related fields](/tutorial/cluster_permutation_timelock)
+- 14:45 – 16:45 Hands-on 2: [Cluster-based permutation tests on event-related fields](/tutorial/cluster_permutation_timelock)
 - 16:45 – 17:15 Wrap-up / Q&A session
 
 

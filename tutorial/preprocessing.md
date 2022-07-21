@@ -1,15 +1,15 @@
 ---
-title: Trigger-based trial selection
+title: Preprocessing - Segmenting and reading trial-based EEG and MEG data
 tags: [tutorial, meg, raw, preprocessing, meg-language]
 ---
 
-# Trigger-based trial selection
+# Preprocessing - Segmenting and reading trial-based EEG and MEG data
 
 ## Introduction
 
-This tutorial describes how to define epochs-of-interest (trials) from your recorded MEG-data, and how to apply the different preprocessing steps. This tutorial does not show yet how to analyze (e.g., average) your data.
+This tutorial describes how to define epochs-of-interest (trials) from MEG data, and how to apply the different preprocessing steps. This tutorial does not show yet how to analyze (e.g., average) your data.
 
-If you are interested in how to do preprocessing on your data prior to segmenting it into trials, you can check the [Preprocessing - Reading continuous data](/tutorial/continuous) tutorial. There, you can also find information about how to preprocess EEG data. If you want to learn how to segment EEG data into trials, check the tutorial on [Preprocessing of EEG data and computing ERPs](/tutorial/preprocessing_erp).
+If you are interested in how to do preprocessing on your data prior to segmenting it into trials, you can check the [Preprocessing - Reading continuous data](/tutorial/continuous) tutorial, which also introduces some preprocessing options that are specific for EEG. If you want to learn how to segment continuous data into trials, check the [Preprocessing of EEG data and computing ERPs](/tutorial/preprocessing_erp) tutorial.
 
 ## Background
 
@@ -68,24 +68,23 @@ The output of **[ft_preprocessing](/reference/ft_preprocessing)** is the structu
               grad: [1x1 struct]
                cfg: [1x1 struct]
 
-data_all contains a field data_all.trialinfo, which contains the 4th column of the trl (trial definition) which contains the trigger values. The most important fields are data_all.trial containing the individual trials and data_all.time containing the time vector for each trial. To visualize the single trial data (trial 1) on one channel (channel 130) do the following:
+The `data_all` structure contains a field `data_all.trialinfo`, which contains the 4th column of the `trl` (trial definition) that contains the trigger values. The most important fields are `data_all.trial` containing the individual trials and `data_all.time` containing the time vector for each trial. To visualize the single-trial data (trial 1) on one channel (channel 130) do the following:
 
     plot(data_all.time{1}, data_all.trial{1}(130,:))
 
 {% include image src="/assets/img/tutorial/preprocessing/figure1.png" %}
 
-Split up the conditions by selecting trials according to their trigger value (in data_all.trialinfo).
+You can split up the conditions by selecting trials according to their trigger value in `data_all.trialinfo`.
 
     cfg=[];
-    cfg.trials = data_all.trialinfo==3;
+    cfg.trials = (data_all.trialinfo==3);
     dataFIC = ft_selectdata(cfg, data_all);
 
-    cfg.trials = data_all.trialinfo==5;
+    cfg.trials = (data_all.trialinfo==5);
     dataIC = ft_selectdata(cfg, data_all);
 
-    cfg.trials = data_all.trialinfo==9;
+    cfg.trials = (data_all.trialinfo==9);
     dataFC = ft_selectdata(cfg, data_all);
-
 
 Save the preprocessed data to disk
 
@@ -136,7 +135,7 @@ There are often cases in which it is not sufficient to define a trial only accor
     trl(samecondition,:) = []; % delete those trials
 
 
-Save the trial function together with your other scripts as mytrialfun.m. To ensure that **[ft_preprocessing](/reference/ft_preprocessing)** is making use of the new trial function use the commands
+Save the trial function together with your other scripts as `mytrialfun.m`. To ensure that **[ft_preprocessing](/reference/ft_preprocessing)** is making use of the new trial function use the commands
 
     cfg = [];
     cfg.dataset              = 'Subject01.ds';
@@ -151,9 +150,9 @@ Save the trial function together with your other scripts as mytrialfun.m. To ens
     cfg.channel = {'MEG' 'STIM'};
     dataMytrialfun = ft_preprocessing(cfg);
 
-When you do not specify cfg.trialfun, **[ft_definetrial](/reference/ft_definetrial)** will call a function named trialfun_general as default. Then trials will be defined as we have seen it in the earlier section (Reading and preprocessing the interesting trials).
+When you do not specify `cfg.trialfun`, **[ft_definetrial](/reference/ft_definetrial)** will call a function named trialfun_general as default. Then trials will be defined as we have seen it in the earlier section (Reading and preprocessing the interesting trials).
 
-The output dataMytrialfun now contains fewer trials than before: 192 instead of 261. Thus, we discarded 69 trials that had the same condition in the previous trial. The field dataMytrialfun.trialinfo contains the 4th column of the trl (trial definition) (trigger values of the current trial), and the 5th column of the trl (trigger values of the previous trial).
+The output structure `dataMytrialfun` now contains fewer trials than before: only 192 instead of 261. Thus, we discarded 69 trials that had the same condition in the previous trial. The field `dataMytrialfun.trialinfo` contains the 4th column of the trl (trial definition) (trigger values of the current trial), and the 5th column of the trl (trigger values of the previous trial).
 
     dataMytrialfun =
 

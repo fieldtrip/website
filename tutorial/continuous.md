@@ -7,11 +7,13 @@ tags: [tutorial, preprocessing, continuous, eeg, raw, brainvision, memory, meg-l
 
 ## Introduction
 
-A convenient use of the **[ft_preprocessing](/reference/ft_preprocessing)** is to read the continuous data fully in memory. This is feasible if your data set is relatively small and if your computer has enough memory to hold all data in memory at once.
+A convenient use of the **[ft_preprocessing](/reference/ft_preprocessing)** is to read the continuous data fully in memory. This is feasible if your data set is relatively small and if your computer has enough memory to hold all data in memory at once. The advantage of preprocessing data in a continuous format is that it can help to prevent filter artifacts, it can improve the quality of ICA decompositions, and  gives a better overview of all data features, including artifacts that may be more difficult to recognize in segmented data.
+
+If your experiment consists of a sequence of trials, you may also want to start by segmenting the data and only read the trials of interest. This is described in the [Preprocessing - Segmenting and reading trial-based EEG and MEG data](/tutorial/preprocessing) tutorial.
 
 ## Background
 
-Using this approach, you can read all data from the file into memory, apply filters, and subsequently cut the data into interesting segments.
+Using this approach, you can read all data from the file into memory, apply filters, re-reference (in case of EEG), identify and subtract artifacts using ICA, and subsequently cut the data into segments or trials of interest.
 
 ## Procedure
 
@@ -30,7 +32,7 @@ In this tutorial we will be using two datasets, one with EEG data and one with M
 
 The [SubjectEEG.zip](https://download.fieldtriptoolbox.org/tutorial/SubjectEEG.zip) EEG dataset was acquired by Irina Siminova in a study investigating semantic processing of stimuli presented as pictures, visually displayed text or as auditory presented words. Data was acquired with a 64-channel BrainProducts BrainAmp EEG amplifier from 60 scalp electrodes placed in an electrode cap, one electrode placed under the right eye; signals "EOGv" and "EOGh" are computed after acquisition using re-referencing. During acquisition all channels were referenced to the left mastoid and an electrode placed at the earlobe was used as the ground. Channels 1-60 correspond to electrodes that are located on the head, except for channel 53 which is located at the right mastoid. Channels 61, 62, 63 are not connected to an electrode at all. Channel 64 is connected to an electrode placed below the left eye. Hence we have 62 channels of interest: 60 from the head + eogh + eogv. More details on the experiment and data can be found [here](/tutorial/eeg_language).
 
-The [Subject01.zip](https://download.fieldtriptoolbox.org/tutorial/Subject01.zip) MEG dataset was acquired by Lin Wang in language study on semantically congruent and incongruent sentences. Three types of sentences were used in the experiment: fully congruent (FC), fully incongruent (FIC), and initially congruent (IC). There were 87 trials per condition for each of the three conditions, and a set of 87 filler sentences were added.
+The [Subject01.zip](https://download.fieldtriptoolbox.org/tutorial/Subject01.zip) MEG dataset was acquired by Lin Wang in a language study on semantically congruent and incongruent sentences. Three types of sentences were used in the experiment: fully congruent (FC), fully incongruent (FIC), and initially congruent (IC). There were 87 trials per condition for each of the three conditions, and a set of 87 filler sentences (not used here).
 
 ## Reading continuous EEG data into memory
 

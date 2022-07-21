@@ -1,15 +1,15 @@
 ---
-title: Cluster-based permutation tests on event related fields
+title: Cluster-based permutation tests on event-related fields
 tags: [tutorial, statistics, eeg, meg, timelock, plotting, meg-language, neighbours]
 ---
 
-# Cluster-based permutation tests on event related fields
+# Cluster-based permutation tests on event-related fields
 
 ## Introduction
 
 The objective of this tutorial is to give an introduction to the statistical analysis of event-related EEG and MEG data (denoted as M/EEG data in the following) by means of cluster-based permutation tests. The tutorial starts with a long background section that sketches the background of permutation tests. Subsequently it is shown how to use FieldTrip to perform cluster-based permutation tests on actual axial and planar event-related fields in a between-trials (using single-subject data) and in a within-subjects design (using data from multiple subjects).
 
-In this tutorial we will continue working on the [dataset](/tutorial/meg_language) of a single subject described in the [trigger-based trial selection preprocessing tutorial](/tutorial/preprocessing). Below we will repeat code to select the trials and preprocess the data as described in the first tutorials ([trigger based trial selection](/tutorial/preprocessing), [artifact rejection](/tutorial/artifacts), [event related averaging and planar gradient](/tutorial/eventrelatedaveraging)). We assume that the preprocessing and averaging steps of the analysis are already clear for the reader.
+In this tutorial we will continue working on the [dataset](/tutorial/meg_language) of a single subject described in previous tutorials. Below we will repeat some code to select the trials and preprocess the data as described in the earlier tutorials on [Preprocessing - Segmenting and reading trial-based EEG and MEG data](/tutorial/preprocessing), [artifact rejection](/tutorial/artifacts), and [Event-related averaging and MEG planar gradient](/tutorial/eventrelatedaveraging). We assume that the preprocessing and averaging steps of the analysis are already clear for the reader.
 
 This tutorial is not covering statistical test on time-frequency representations. If you are interested in that, you can read the [Cluster-based permutation tests on time-frequency data](/tutorial/cluster_permutation_freq) tutorial. If you are interested how parametric statistical tests can be used with FieldTrip, you can read the [Parametric and non-parametric statistics on event-related fields](/tutorial/eventrelatedstatistics) tutorial.
 
@@ -540,14 +540,14 @@ In this tutorial, it was shown how to do non-parametric statistics on axial and 
 
 If you are interested in parametric tests in FieldTrip, you can read the [Parametric and non-parametric statistics on event-related fields](/tutorial/eventrelatedstatistics) tutorial. If you are interested in how to do the same statistics on time-frequency representations, you can read the [Cluster-based permutation tests on time-frequency data](/tutorial/cluster_permutation_freq) tutorial.
 
-If you would like to read more about issues related to statistical analysis, you can read the following as well:
+If you would like to read more about statistical analysis, you can look at the following FAQs:
 
-FAQ
 {% include seealso tag1="faq" tag2="statistics" %}
 {% include seealso tag1="faq" tag2="cluster"    %}
 {% include seealso tag1="faq" tag2="neighbour"  %}
 
-Example script
+and example scripts:
+
 {% include seealso tag1="example" tag2="statistics" %}
 {% include seealso tag1="example" tag2="cluster"    %}
 {% include seealso tag1="example" tag2="neighbour"  %}

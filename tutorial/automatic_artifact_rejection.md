@@ -39,7 +39,7 @@ _Figure: Automatic artifact rejection processes the data in several steps to all
 
 ### I. Reading the data (with padding) from disk
 
-Physiological data is often very large and takes system memory. For this reason it is most efficient to read only the data you need from disk instead of reading in all the data first and selecting interesting segments later. This is the reason that in FieldTrip we commonly read the (marker/trigger) events first to determine data segments (trials) of interest, which are then read into memory in a separate step. For how to define trials see [Getting started with reading raw EEG or MEG data](/example/getting_started_with_reading_raw_eeg_or_meg_data) and [Trigger-based trial selection](/tutorial/preprocessing).
+Physiological data is often very large and takes system memory. For this reason it is most efficient to read only the data you need from disk instead of reading in all the data first and selecting interesting segments later. This is the reason that in FieldTrip we commonly read the (marker/trigger) events first to determine data segments (trials) of interest, which are then read into memory in a separate step. For how to define trials see [Getting started with reading raw EEG or MEG data](/example/getting_started_with_reading_raw_eeg_or_meg_data) and the [Preprocessing - Segmenting and reading trial-based EEG and MEG data](/tutorial/preprocessing) tutorial.
 
 (Automatic) artifact rejected is consistent in this regard: we use our artifact rejection routines to exclude intervals/trials from our trial definition (trl) so that in a later step we do not have to read in artifactual data.
 

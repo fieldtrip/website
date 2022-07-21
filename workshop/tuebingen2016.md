@@ -23,7 +23,7 @@ We will keep this page up to date and post new information here when available.
 - 15:00 - 15:15 Coffee Break
 - 15:15 - 16:15 Hands-on 2:
 
-  - [Cluster-based permutation tests on event related fields](/tutorial/cluster_permutation_timelock) and/or
+  - [Cluster-based permutation tests on event-related fields](/tutorial/cluster_permutation_timelock) and/or
   - [Cluster-based permutation tests on time-frequency data](/tutorial/cluster_permutation_freq)
 
 - 16:30 - 17:00 Wrap-up-the-day: special topics, general questions and answers
