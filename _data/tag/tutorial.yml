@@ -19,7 +19,7 @@
 - name:  Cluster-based permutation tests on time-frequency data
   link:  /tutorial/cluster_permutation_freq
 
-- name:  Cluster-based permutation tests on event related fields
+- name:  Cluster-based permutation tests on event-related fields
   link:  /tutorial/cluster_permutation_timelock
 
 - name:  Analysis of corticomuscular coherence
@@ -43,7 +43,7 @@
 - name:  Virtual channel analysis of epilepsy MEG data
   link:  /tutorial/epilepsy
 
-- name:  Event related averaging and MEG planar gradient
+- name:  Event-related averaging and MEG planar gradient
   link:  /tutorial/eventrelatedaveraging
 
 - name:  Parametric and non-parametric statistics on event-related fields
@@ -100,7 +100,7 @@
 - name:  Plotting data at the channel and source level
   link:  /tutorial/plotting
 
-- name:  Trigger-based trial selection
+- name:  Preprocessing - Segmenting and reading trial-based EEG and MEG data
   link:  /tutorial/preprocessing
 
 - name:  Preprocessing of EEG data and computing ERPs

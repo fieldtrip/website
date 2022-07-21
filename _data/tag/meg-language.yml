@@ -10,7 +10,7 @@
 - name:  Cluster-based permutation tests on time-frequency data
   link:  /tutorial/cluster_permutation_freq
 
-- name:  Cluster-based permutation tests on event related fields
+- name:  Cluster-based permutation tests on event-related fields
   link:  /tutorial/cluster_permutation_timelock
 
 - name:  Preprocessing - Reading continuous EEG and MEG data
@@ -19,7 +19,7 @@
 - name:  Speeding up your analysis with distributed computing
   link:  /tutorial/distributedcomputing
 
-- name:  Event related averaging and MEG planar gradient
+- name:  Event-related averaging and MEG planar gradient
   link:  /tutorial/eventrelatedaveraging
 
 - name:  Parametric and non-parametric statistics on event-related fields
@@ -40,7 +40,7 @@
 - name:  Source reconstruction of event-related fields using minimum-norm estimation
   link:  /tutorial/minimumnormestimate
 
-- name:  Trigger-based trial selection
+- name:  Preprocessing - Segmenting and reading trial-based EEG and MEG data
   link:  /tutorial/preprocessing
 
 - name:  Creating a sourcemodel for source-reconstruction of MEG or EEG data

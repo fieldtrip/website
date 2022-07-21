@@ -7,10 +7,10 @@
 - name:  Reference documentation
   link:  /reference
 
-- name:  Cluster-based permutation tests on event related fields
+- name:  Cluster-based permutation tests on event-related fields
   link:  /tutorial/cluster_permutation_timelock
 
-- name:  Event related averaging and MEG planar gradient
+- name:  Event-related averaging and MEG planar gradient
   link:  /tutorial/eventrelatedaveraging
 
 - name:  Parametric and non-parametric statistics on event-related fields
