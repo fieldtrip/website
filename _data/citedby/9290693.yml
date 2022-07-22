@@ -1,0 +1,38 @@
+articleids:
+- idtype: pmid
+  value: '34338315'
+- idtype: doi
+  value: 10.1111/epi.17020
+- idtype: pmcid
+  value: PMC9290693
+authors:
+- authtype: Author
+  name: Sheybani L
+- authtype: Author
+  name: Mégevand P
+- authtype: Author
+  name: Spinelli L
+- authtype: Author
+  name: Bénar CG
+- authtype: Author
+  name: Momjian S
+- authtype: Author
+  name: Seeck M
+- authtype: Author
+  name: Quairiaux C
+- authtype: Author
+  name: Kleinschmidt A
+- authtype: Author
+  name: Vulliémoz S
+epubdate: 2021 Aug 2
+fulljournalname: Epilepsia
+issue: '10'
+pages: 2357-2371
+pmclivedate: 2022/07/20
+printpubdate: 2021 Oct
+pubdate: 2021 Aug 2
+sortdate: 2021/08/02 00:00
+source: Epilepsia
+title: Slow oscillations open susceptible time windows for epileptic discharges
+uid: '9290693'
+volume: '62'

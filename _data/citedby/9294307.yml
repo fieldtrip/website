@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '35429083'
+- idtype: doi
+  value: 10.1002/hbm.25875
+- idtype: pmcid
+  value: PMC9294307
+authors:
+- authtype: Author
+  name: Anderson CA
+- authtype: Author
+  name: Cushing SL
+- authtype: Author
+  name: Papsin BC
+- authtype: Author
+  name: Gordon KA
+epubdate: 2022 Apr 15
+fulljournalname: Human Brain Mapping
+issue: '12'
+pages: 3662-3679
+pmclivedate: 2022/07/20
+printpubdate: ''
+pubdate: 2022 Apr 15
+sortdate: 2022/04/15 00:00
+source: Hum Brain Mapp
+title: Cortical imbalance following delayed restoration of bilateral hearing in deaf
+  adolescents
+uid: '9294307'
+volume: '43'
