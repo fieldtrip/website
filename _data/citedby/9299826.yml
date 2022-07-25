@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '34736295'
+- idtype: doi
+  value: 10.1111/ejn.15513
+- idtype: pmcid
+  value: PMC9299826
+authors:
+- authtype: Author
+  name: Kleeva DF
+- authtype: Author
+  name: Rebreikina AB
+- authtype: Author
+  name: Soghoyan GA
+- authtype: Author
+  name: Kostanian DG
+- authtype: Author
+  name: Neklyudova AN
+- authtype: Author
+  name: Sysoeva OV
+epubdate: 2021 Dec 16
+fulljournalname: The European Journal of Neuroscience
+issue: '1'
+pages: 175-188
+pmclivedate: 2022/07/21
+printpubdate: 2022 Jan
+pubdate: 2021 Dec 16
+sortdate: 2021/12/16 00:00
+source: Eur J Neurosci
+title: Generalization of sustained neurophysiological effects of short‐term auditory
+  13‐Hz stimulation to neighbouring frequency representation in humans
+uid: '9299826'
+volume: '55'

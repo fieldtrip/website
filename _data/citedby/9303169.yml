@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '35112420'
+- idtype: doi
+  value: 10.1111/ejn.15617
+- idtype: pmcid
+  value: PMC9303169
+authors:
+- authtype: Author
+  name: ElShafei HA
+- authtype: Author
+  name: Masson R
+- authtype: Author
+  name: Fakche C
+- authtype: Author
+  name: Fornoni L
+- authtype: Author
+  name: Moulin A
+- authtype: Author
+  name: Caclin A
+- authtype: Author
+  name: Bidet‐Caulet A
+epubdate: 2022 Feb 22
+fulljournalname: The European Journal of Neuroscience
+issue: '5'
+pages: 1215-1231
+pmclivedate: 2022/07/22
+printpubdate: 2022 Mar
+pubdate: 2022 Feb 22
+sortdate: 2022/02/22 00:00
+source: Eur J Neurosci
+title: 'Age‐related differences in bottom‐up and top‐down attention: Insights from
+  EEG and MEG'
+uid: '9303169'
+volume: '55'

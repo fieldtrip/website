@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '35859332'
+- idtype: doi
+  value: 10.14814/phy2.15386
+- idtype: pmcid
+  value: PMC9300958
+authors:
+- authtype: Author
+  name: Vrijdag XC
+- authtype: Author
+  name: van Waart H
+- authtype: Author
+  name: Sames C
+- authtype: Author
+  name: Mitchell SJ
+- authtype: Author
+  name: Sleigh JW
+epubdate: 2022 Jul 20
+fulljournalname: Physiological Reports
+issue: '14'
+pages: e15386
+pmclivedate: 2022/07/22
+printpubdate: ''
+pubdate: 2022 Jul 20
+sortdate: 2022/07/20 00:00
+source: Physiol Rep
+title: Does hyperbaric oxygen cause narcosis or hyperexcitability? A quantitative
+  EEG analysis
+uid: '9300958'
+volume: '10'
