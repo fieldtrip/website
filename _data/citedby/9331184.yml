@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '33462447'
+- idtype: doi
+  value: 10.1038/s41591-020-01173-w
+- idtype: pmcid
+  value: PMC9331184
+- idtype: MID
+  value: NIHMS1681569
+authors:
+- authtype: Author
+  name: Grover S
+- authtype: Author
+  name: Nguyen JA
+- authtype: Author
+  name: Viswanathan V
+- authtype: Author
+  name: Reinhart RM
+epubdate: 2021 Jan 18
+fulljournalname: Nature medicine
+issue: '2'
+pages: 232-238
+pmclivedate: 2022/07/28
+printpubdate: 2021 Feb
+pubdate: 2021 Jan 18
+sortdate: 2021/01/18 00:00
+source: Nat Med
+title: High-frequency neuromodulation improves obsessive-compulsive behavior
+uid: '9331184'
+volume: '27'

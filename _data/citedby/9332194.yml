@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fnhum.2022.917909
+- idtype: pmcid
+  value: PMC9332194
+authors:
+- authtype: Author
+  name: Le Franc S
+- authtype: Author
+  name: Herrera Altamira G
+- authtype: Author
+  name: Guillen M
+- authtype: Author
+  name: Butet S
+- authtype: Author
+  name: Fleck S
+- authtype: Author
+  name: Lécuyer A
+- authtype: Author
+  name: Bougrain L
+- authtype: Author
+  name: Bonan I
+epubdate: 2022 Jul 14
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '917909'
+pmclivedate: 2022/07/29
+printpubdate: ''
+pubdate: 2022 Jul 14
+sortdate: 2022/07/14 00:00
+source: Front Hum Neurosci
+title: 'Toward an Adapted Neurofeedback for Post-stroke Motor Rehabilitation: State
+  of the Art and Perspectives'
+uid: '9332194'
+volume: '16'

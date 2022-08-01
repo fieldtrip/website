@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '34964895'
+- idtype: doi
+  value: 10.1093/scan/nsab124
+- idtype: pmcid
+  value: PMC9327410
+authors:
+- authtype: Author
+  name: Li J
+- authtype: Author
+  name: Pan J
+- authtype: Author
+  name: Zhu C
+- authtype: Author
+  name: Wang Y
+epubdate: 2021 Nov 20
+fulljournalname: Social Cognitive and Affective Neuroscience
+issue: '7'
+pages: 625-633
+pmclivedate: 2022/07/28
+printpubdate: ''
+pubdate: 2021 Nov 20
+sortdate: 2021/11/20 00:00
+source: Soc Cogn Affect Neurosci
+title: Inter-brain synchronization is weakened by the introduction of external punishment
+uid: '9327410'
+volume: '17'
