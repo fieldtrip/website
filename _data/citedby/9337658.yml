@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '35905100'
+- idtype: doi
+  value: 10.1371/journal.pone.0271659
+- idtype: pmcid
+  value: PMC9337658
+authors:
+- authtype: Author
+  name: Sciortino P
+- authtype: Author
+  name: Kayser C
+epubdate: 2022 Jul 29
+fulljournalname: PLoS ONE
+issue: '7'
+pages: e0271659
+pmclivedate: 2022/07/30
+printpubdate: ''
+pubdate: 2022 Jul 29
+sortdate: 2022/07/29 00:00
+source: PLoS One
+title: The rubber hand illusion is accompanied by a distributed reduction of alpha
+  and beta power in the EEG
+uid: '9337658'
+volume: '17'
