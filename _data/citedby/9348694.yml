@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1371/journal.pone.0272087
+- idtype: pmcid
+  value: PMC9348694
+authors:
+- authtype: Author
+  name: van Dijk JA
+- authtype: Author
+  name: de Jong MC
+- authtype: Author
+  name: Piantoni G
+- authtype: Author
+  name: Fracasso A
+- authtype: Author
+  name: Vansteensel MJ
+- authtype: Author
+  name: Groen II
+- authtype: Author
+  name: Petridou N
+- authtype: Author
+  name: Dumoulin SO
+epubdate: 2022 Aug 3
+fulljournalname: PLoS ONE
+issue: '8'
+pages: e0272087
+pmclivedate: 2022/08/04
+printpubdate: ''
+pubdate: 2022 Aug 3
+sortdate: 2022/08/03 00:00
+source: PLoS One
+title: Intracranial recordings show evidence of numerosity tuning in human parietal
+  cortex
+uid: '9348694'
+volume: '17'
