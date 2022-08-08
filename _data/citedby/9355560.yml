@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '35848803'
+- idtype: doi
+  value: 10.7554/eLife.67517
+- idtype: pmcid
+  value: PMC9355560
+authors:
+- authtype: Author
+  name: Meier JK
+- authtype: Author
+  name: Staresina BP
+- authtype: Author
+  name: Schwabe L
+epubdate: 2022 Jul 18
+fulljournalname: eLife
+issue: ''
+pages: e67517
+pmclivedate: 2022/08/06
+printpubdate: ''
+pubdate: 2022 Jul 18
+sortdate: 2022/07/18 00:00
+source: eLife
+title: Stress diminishes outcome but enhances response representations during instrumental
+  learning
+uid: '9355560'
+volume: '11'

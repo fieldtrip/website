@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fnut.2022.935001
+- idtype: pmcid
+  value: PMC9355406
+authors:
+- authtype: Author
+  name: Boyle NB
+- authtype: Author
+  name: Dye L
+- authtype: Author
+  name: Lawton CL
+- authtype: Author
+  name: Billington J
+epubdate: 2022 Jul 22
+fulljournalname: Frontiers in Nutrition
+issue: ''
+pages: '935001'
+pmclivedate: 2022/08/06
+printpubdate: ''
+pubdate: 2022 Jul 22
+sortdate: 2022/07/22 00:00
+source: Front Nutr
+title: A Combination of Green Tea, Rhodiola, Magnesium, and B Vitamins Increases Electroencephalogram
+  Theta Activity During Attentional Task Performance Under Conditions of Induced Social
+  Stress
+uid: '9355406'
+volume: '9'

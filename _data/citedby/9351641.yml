@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '35760528'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.2476-21.2022
+- idtype: pmcid
+  value: PMC9351641
+authors:
+- authtype: Author
+  name: Aller M
+- authtype: Author
+  name: Økland HS
+- authtype: Author
+  name: MacGregor LJ
+- authtype: Author
+  name: Blank H
+- authtype: Author
+  name: Davis MH
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '31'
+pages: 6108-6120
+pmclivedate: 2022/08/05
+printpubdate: 2022 Aug 3
+pubdate: 2022 Aug 3
+sortdate: 2022/08/03 00:00
+source: J Neurosci
+title: Differential Auditory and Visual Phase-Locking Are Observed during Audio-Visual
+  Benefit and Silent Lip-Reading for Speech Perception
+uid: '9351641'
+volume: '42'
