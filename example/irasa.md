@@ -11,63 +11,78 @@ Below we provide two examples, a simulated dataset and a real human ECoG dataset
 ## Extracting spectral features of simulated data
 
 ```
-    % simulate data
-    F = 1; % weight of (F)ractal components of the simulated data
-    O = 1; % weight of (O)scillatory components of the simulated data
-    t = (1:60000)/1000; % time axis
-    for rpt = 1:1
-        % use a simple method to make pink noise
-        % that does not rely on the digital signal processing toolbox
-        fn = cumsum(randn(1,length(t))); 
-        fn = fn./max(abs(fn));        
+% set simulation parameters
+A = 1; % scale of 1/f amplitude
+C = 1; % 1/f slope
+O = 1; % weight of oscillatory components of the simulated data
 
-        % add a 10 Hz and 60 Hz oscillation
-        data.trial{1,rpt} = F * fn + O * cos(2*pi*10*t) + O * cos(2*pi*60*t);
-        data.time{1,rpt}  = t;
-        data.label{1}     = 'chan';
-        data.trialinfo(rpt,1) = rpt;
+lf = 1; % lower bound of freq
+hf = 300; % higher bound of freq
+sl = 600; % spectral lines
+
+fs = 1000; % sampling rate
+n = 60000; % time pnts
+t = (1:n)/fs; % time axis
+
+% simulate data
+for rpt = 1:1
+    % simulate fractal component
+    freq = linspace(lf, hf, sl); % sampling frequesies
+    fn = zeros(size(t));
+    for i=1:length(freq) % cummulative sum over freq
+        fn = fn + (A * 1/freq(i)^C) * cos(2*pi*freq(i)*t + rand*2*pi); % 1/f amplitude = a*(1/f^c)
     end
 
-    % chunk into 2-second segments
-    cfg               = [];
-    cfg.length        = 2;
-    cfg.overlap       = 0.5;
-    data              = ft_redefinetrial(cfg, data);
+    % simulate a 10Hz and 60 Hz oscillatory component
+    data.trial{1,rpt} = fn + O * cos(2*pi*10*t) + O * cos(2*pi*60*t);
+    data.time{1,rpt}  = t;
+    data.label{1}     = 'chan';
+    data.trialinfo(rpt,1) = rpt;
+end
 
-    % compute the fractal and original spectra
-    cfg               = [];
-    cfg.foilim        = [1 200];
-    cfg.pad           = 'nextpow2';
-    cfg.method        = 'irasa';
-    cfg.output        = 'fractal';
-    fractal = ft_freqanalysis(cfg, data);
-    cfg.output        = 'original';
-    original = ft_freqanalysis(cfg, data);
+% chunk 2-second segments (gives 1Hz frequency resolution) for long/continous trials
+cfg           = [];
+cfg.length    = 2; % freqency resolution = 1/2^floor(log2(cfg.length*0.9))
+cfg.overlap   = 0.5;
+data          = ft_redefinetrial(cfg, data);
 
-    % subtract the fractal component from the power spectrum
-    cfg               = [];
-    cfg.parameter     = 'powspctrm';
-    cfg.operation     = 'x2-x1';
-    oscillatory = ft_math(cfg, fractal, original);
+% compute the fractal and original spectra
+tic
+cfg               = [];
+cfg.foilim        = [1 200];
+cfg.pad           = 'nextpow2';
+cfg.method        = 'irasa';
+cfg.output        = 'fractal';
+fractal = ft_freqanalysis(cfg, data);
+cfg.output        = 'original';
+original = ft_freqanalysis(cfg, data);
+toc % ~28s
 
-    % display the spectra in log-log scale
-    figure();
-    hold on;
-    plot(log(original.freq), log(original.powspctrm),'k');
-    plot(log(fractal.freq), log(fractal.powspctrm));
-    plot(log(fractal.freq), log(oscillatory.powspctrm));
-    xlabel('log-freq'); ylabel('log-power');
-    legend({'original','fractal','oscillatory'},'location','southwest');
-    if F~=0 && O==0
-      title('pure fractal signal');
-    elseif F==0 && O~=0
-      title('pure oscillatory signal');
-    elseif F~=0 && O~=0
-      title('mixed signal');
-    end
+% subtract the fractal component from the power spectrum
+cfg               = [];
+cfg.parameter     = 'powspctrm';
+cfg.operation     = 'x2-x1';
+oscillatory = ft_math(cfg, fractal, original);
+
+% display the spectra in log-log scale
+figure();
+hold on;
+plot(log(original.freq), log(original.powspctrm),'k');
+plot(log(fractal.freq), log(fractal.powspctrm));
+plot(log(fractal.freq), log(oscillatory.powspctrm));
+xlabel('log-freq'); ylabel('log-power');
+legend({'original','fractal','oscillatory'},'location','southwest');
+
+if A~=0 && O==0
+    title('pure fractal signal');
+elseif A==0 && O~=0
+    title('pure oscillatory signal');
+elseif A~=0 && O~=0
+    title('mixed signal');
+end
 ```
 
-{% include image src="/assets/img/example/irasa/example.png" %}
+![Screenshot 2022-08-09 at 18 38 27](https://user-images.githubusercontent.com/71086397/183750712-afa7ff3a-a324-4c1e-8706-4cb25db6a9bd.png)
 
 
 ## Extracting spectral features from human ECoG data
