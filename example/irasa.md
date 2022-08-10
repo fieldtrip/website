@@ -82,7 +82,7 @@ elseif A~=0 && O~=0
 end
 ```
 
-![Screenshot 2022-08-09 at 18 38 27](https://user-images.githubusercontent.com/71086397/183750712-afa7ff3a-a324-4c1e-8706-4cb25db6a9bd.png)
+{% include image src="/assets/img/example/irasa/mixed_new.png" %}
 
 
 ## Extracting spectral features from human ECoG data
