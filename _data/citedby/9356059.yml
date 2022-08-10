@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '35931787'
+- idtype: doi
+  value: 10.1038/s41598-022-17401-x
+- idtype: pmcid
+  value: PMC9356059
+authors:
+- authtype: Author
+  name: Peter V
+- authtype: Author
+  name: van Ommen S
+- authtype: Author
+  name: Kalashnikova M
+- authtype: Author
+  name: Mazuka R
+- authtype: Author
+  name: Nazzi T
+- authtype: Author
+  name: Burnham D
+epubdate: 2022 Aug 5
+fulljournalname: Scientific Reports
+issue: ''
+pages: '13477'
+pmclivedate: 2022/08/07
+printpubdate: ''
+pubdate: 2022 Aug 5
+sortdate: 2022/08/05 00:00
+source: Sci Rep
+title: Language specificity in cortical tracking of speech rhythm at the mora, syllable,
+  and foot levels
+uid: '9356059'
+volume: '12'

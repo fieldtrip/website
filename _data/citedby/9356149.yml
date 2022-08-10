@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '35926469'
+- idtype: doi
+  value: 10.1016/j.dcn.2022.101140
+- idtype: pmcid
+  value: PMC9356149
+authors:
+- authtype: Author
+  name: Monachino AD
+- authtype: Author
+  name: Lopez KL
+- authtype: Author
+  name: Pierce LJ
+- authtype: Author
+  name: Gabard-Durnam LJ
+epubdate: 2022 Jul 19
+fulljournalname: Developmental Cognitive Neuroscience
+issue: ''
+pages: '101140'
+pmclivedate: 2022/08/07
+printpubdate: ''
+pubdate: 2022 Jul 19
+sortdate: 2022/07/19 00:00
+source: Dev Cogn Neurosci
+title: 'The HAPPE plus Event-Related (HAPPE+ER) software: A standardized preprocessing
+  pipeline for event-related potential analyses'
+uid: '9356149'
+volume: '57'
