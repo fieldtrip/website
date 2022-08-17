@@ -37,8 +37,15 @@ Here is an example code showing how to use those functions:
 - For users working on EEGLAB, first save data on disk: File → Save current dataset (must be a `.set` file)
 
 - (EEGLAB -> FieldTrip) Two methods can be used to import the `.set` file as a FieldTrip structure: 1. (recommended) Using **[ft_preprocessing](/reference/ft_preprocessing)**:
-  `cfg = []; cfg.dataset = 'filename.set'; ft_data1 = ft_preprocessing(cfg);` 2. Load the dataset through **[pop_loadset](https://sccn.ucsd.edu/~arno/eeglab/auto/pop_loadset.html)** and transform it to FieldTrip structure using **[eeglab2fieldtrip](/reference/external/eeglab/eeglab2fieldtrip)** function:
-  `EEG = pop_loadset(filename); ft_data2 = eeglab2fieldtrip(EEG, 'raw');`
+  ```
+  cfg = []; cfg.dataset = 'filename.set'; 
+  ft_data1 = ft_preprocessing(cfg);
+  ```
+  
+2. Load the dataset through **[pop_loadset](https://sccn.ucsd.edu/~arno/eeglab/auto/pop_loadset.html)** and transform it to FieldTrip structure using **[eeglab2fieldtrip](/reference/external/eeglab/eeglab2fieldtrip)** function:
+  ```
+  EEG = pop_loadset(filename); ft_data2 = eeglab2fieldtrip(EEG, 'raw');
+  ```
 
 - (FieldTrip -> EEGLAB) For data that has been processed in FieldTrip, it can be converted to EEGLAB format using **[fieldtrip2eeglab](/reference/external/eeglab/fieldtrip2eeglab)** function. Note that the data (second argument) have to be passed as an array (not a cell):
 
