@@ -192,7 +192,7 @@ We then get
 
 A disadvantage of the second method relative to the first methods is that the spike times are converted to samples, such that we introduce a (minor) distortion of the estimated spike-LFP phases. In practice, this has only minor consequences if data_all.fsample is high and the frequency of interest at which we want to measure the spike-LFP phase is low. However, for quantifying locking at frequencies of >100 Hz, this error may substantially reduce locking values. Two further disadvantages are that it unnecessarily decreases the memory-load, and makes it more difficult to link the spike-LFP phase information to information that was stored per individual spike, e.g., the AP waveforms.
 
-The spike trains have now been binarized (as mentioned earlier, values higher than 1 can occasionally occur if the sample frequency is not high enough), and a piece of data.trial{i} has the following conten
+The spike trains have now been binarized (as mentioned earlier, values higher than 1 can occasionally occur if the sample frequency is not high enough), and a piece of data.trial{i} has the following content:
 
     disp(data_all.trial{1}(:,4002:4005))
       -12.3496  -12.9317  -16.8991  -14.4778 % the LFP chans
@@ -231,7 +231,7 @@ We illustrate this method by plotting the data:
 
 ### Computing the spike triggered average LFP
 
-The first step in the analysis of spike-LFP phase-coupling should be the computation of the spike-triggered average (STA) of the LFP. This is the time-domain counterpart of the spike-triggered spectrum of the LFP (**[ft_spiketriggeredaverage](/reference/contrib/spike/ft_spiketriggeredaverage)**). The time-domain representation of the spike-triggered LFP may reveal features that are not easily understood from the frequency-domain representation, e.g., whether there are oscillatory cycles at some frequency, a characteristic main lobe, and leakage of the spike waveform into the LFP. To compute the STA we perform
+The first step in the analysis of spike-LFP phase-coupling should be the computation of the spike-triggered average (STA) of the LFP. This is the time-domain counterpart of the spike-triggered spectrum of the LFP (**[ft_spiketriggeredaverage](/reference/contrib/spike/ft_spiketriggeredaverage)**). The time-domain representation of the spike-triggered LFP may reveal features that are not easily understood from the frequency-domain representation, e.g., whether there are oscillatory cycles at some frequency, a characteristic main lobe, and leakage of the spike waveform into the LFP. To compute the STA we perform:
 
     cfg              = [];
     cfg.timwin       = [-0.25 0.25]; % take 400 ms
@@ -251,7 +251,7 @@ The first step in the analysis of spike-LFP phase-coupling should be the computa
 
 The STA reveals several oscillatory cycles at gamma frequency around the spike. For channel 'AD02', we see a characteristic sharp peak around t = 0, caused by the occurrence of the spike itself.
 
-We also show the STA for the pre-stimulus perio
+We also show the STA for the pre-stimulus period:
 
     cfg              = [];
     cfg.timwin       = [-0.25 0.25]; % take 400 ms
@@ -321,13 +321,13 @@ The convolution algorithm (cfg.method = 'mtmconvol') accepts spikes both in bina
     cfg.taper     = 'hanning';
     stsConvol     = ft_spiketriggeredspectrum(cfg, data_all);
 
-Note that we could have also used a third spike input instead of the data_all inpu
+Note that we could have also used a third spike input instead of the data_all input.
 
     stsConvol2    = ft_spiketriggeredspectrum(cfg, data_lfp, spikeTrials);
 
 The latter way of calling ft_spiketriggeredspectrum is advantageous because 1) it is more memory efficient, and 2) within **[ft_spiketriggeredspectrum_convol](/reference/contrib/spike/ft_spiketriggeredspectrum_convol)**, the spike samples do not have to be converted back to spike times. Instead, the spike times are exact and readily available, such that the phase estimation is more accurate as the raw spike time is used to determine the spike-LFP phase, instead of the rounded spike sample that is obtained using **[ft_appendspike](/reference/ft_appendspike)**. This is relevant when studying fast LFP oscillations.
 
-The output from the mtmconvol method is
+The output from the mtmconvol method is:
 
     stsConvol =
              lfplabel: {4x1 cell}
