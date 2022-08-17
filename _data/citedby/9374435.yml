@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '35960169'
+- idtype: doi
+  value: 10.7554/eLife.78677
+- idtype: pmcid
+  value: PMC9374435
+authors:
+- authtype: Author
+  name: Dimakopoulos V
+- authtype: Author
+  name: Mégevand P
+- authtype: Author
+  name: Stieglitz LH
+- authtype: Author
+  name: Imbach L
+- authtype: Author
+  name: Sarnthein J
+epubdate: 2022 Aug 12
+fulljournalname: eLife
+issue: ''
+pages: e78677
+pmclivedate: 2022/08/13
+printpubdate: ''
+pubdate: 2022 Aug 12
+sortdate: 2022/08/12 00:00
+source: eLife
+title: Information flows from hippocampus to auditory cortex during replay of verbal
+  working memory items
+uid: '9374435'
+volume: '11'

@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '35966987'
+- idtype: doi
+  value: 10.3389/fnhum.2022.910910
+- idtype: pmcid
+  value: PMC9369864
+authors:
+- authtype: Author
+  name: Pereira Soares SM
+- authtype: Author
+  name: Prystauka Y
+- authtype: Author
+  name: DeLuca V
+- authtype: Author
+  name: Rothman J
+epubdate: 2022 Jul 28
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '910910'
+pmclivedate: 2022/08/12
+printpubdate: ''
+pubdate: 2022 Jul 28
+sortdate: 2022/07/28 00:00
+source: Front Hum Neurosci
+title: Type of bilingualism conditions individual differences in the oscillatory dynamics
+  of inhibitory control
+uid: '9369864'
+volume: '16'

@@ -1,0 +1,53 @@
+articleids:
+- idtype: pmid
+  value: '35966778'
+- idtype: doi
+  value: 10.3389/fnagi.2022.912691
+- idtype: pmcid
+  value: PMC9366332
+authors:
+- authtype: Author
+  name: Labeit B
+- authtype: Author
+  name: Muhle P
+- authtype: Author
+  name: von Itter J
+- authtype: Author
+  name: Slavik J
+- authtype: Author
+  name: Wollbrink A
+- authtype: Author
+  name: Sporns P
+- authtype: Author
+  name: Rusche T
+- authtype: Author
+  name: Ruck T
+- authtype: Author
+  name: Hüsing-Kabar A
+- authtype: Author
+  name: Gellner R
+- authtype: Author
+  name: Gross J
+- authtype: Author
+  name: Wirth R
+- authtype: Author
+  name: Claus I
+- authtype: Author
+  name: Warnecke T
+- authtype: Author
+  name: Dziewas R
+- authtype: Author
+  name: Suntrup-Krueger S
+epubdate: 2022 Jul 28
+fulljournalname: Frontiers in Aging Neuroscience
+issue: ''
+pages: '912691'
+pmclivedate: 2022/08/12
+printpubdate: ''
+pubdate: 2022 Jul 28
+sortdate: 2022/07/28 00:00
+source: Front Aging Neurosci
+title: Clinical determinants and neural correlates of presbyphagia in community-dwelling
+  older adults
+uid: '9366332'
+volume: '14'

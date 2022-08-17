@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '35944041'
+- idtype: doi
+  value: 10.1371/journal.pone.0272207
+- idtype: pmcid
+  value: PMC9362935
+authors:
+- authtype: Author
+  name: Jap BA
+- authtype: Author
+  name: Hsu YY
+- authtype: Author
+  name: Politzer-Ahles S
+epubdate: 2022 Aug 9
+fulljournalname: PLoS ONE
+issue: '8'
+pages: e0272207
+pmclivedate: 2022/08/10
+printpubdate: ''
+pubdate: 2022 Aug 9
+sortdate: 2022/08/09 00:00
+source: PLoS One
+title: Neural correlates of thematic role assignment for passives in Standard Indonesian
+uid: '9362935'
+volume: '17'

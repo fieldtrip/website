@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '35968377'
+- idtype: doi
+  value: 10.3389/fnins.2022.911034
+- idtype: pmcid
+  value: PMC9374169
+authors:
+- authtype: Author
+  name: Olsen AS
+- authtype: Author
+  name: Høegh RM
+- authtype: Author
+  name: Hinrich JL
+- authtype: Author
+  name: Madsen KH
+- authtype: Author
+  name: Mørup M
+epubdate: 2022 Jul 29
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '911034'
+pmclivedate: 2022/08/13
+printpubdate: ''
+pubdate: 2022 Jul 29
+sortdate: 2022/07/29 00:00
+source: Front Neurosci
+title: Combining electro- and magnetoencephalography data using directional archetypal
+  analysis
+uid: '9374169'
+volume: '16'

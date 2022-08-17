@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '35921434'
+- idtype: doi
+  value: 10.1073/pnas.2201968119
+- idtype: pmcid
+  value: PMC9371745
+authors:
+- authtype: Author
+  name: Heilbron M
+- authtype: Author
+  name: Armeni K
+- authtype: Author
+  name: Schoffelen JM
+- authtype: Author
+  name: Hagoort P
+- authtype: Author
+  name: de Lange FP
+epubdate: 2022 Aug 3
+fulljournalname: Proceedings of the National Academy of Sciences of the United States
+  of America
+issue: '32'
+pages: e2201968119
+pmclivedate: ''
+printpubdate: 2022 Aug 9
+pubdate: 2022 Aug 3
+sortdate: 2022/08/03 00:00
+source: Proc Natl Acad Sci U S A
+title: A hierarchy of linguistic predictions during natural language comprehension
+uid: '9371745'
+volume: '119'
