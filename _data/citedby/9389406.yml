@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fnins.2022.950539
+- idtype: pmcid
+  value: PMC9389406
+authors:
+- authtype: Author
+  name: Strang CC
+- authtype: Author
+  name: Harris A
+- authtype: Author
+  name: Moody EJ
+- authtype: Author
+  name: Reed CL
+epubdate: 2022 Aug 5
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '950539'
+pmclivedate: 2022/08/20
+printpubdate: ''
+pubdate: 2022 Aug 5
+sortdate: 2022/08/05 00:00
+source: Front Neurosci
+title: Peak frequency of the sensorimotor mu rhythm varies with autism-spectrum traits
+uid: '9389406'
+volume: '16'

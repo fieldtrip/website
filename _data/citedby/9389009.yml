@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fneur.2022.905017
+- idtype: pmcid
+  value: PMC9389009
+authors:
+- authtype: Author
+  name: Farahani ED
+- authtype: Author
+  name: Wouters J
+- authtype: Author
+  name: van Wieringen A
+epubdate: 2022 Aug 5
+fulljournalname: Frontiers in Neurology
+issue: ''
+pages: '905017'
+pmclivedate: 2022/08/20
+printpubdate: ''
+pubdate: 2022 Aug 5
+sortdate: 2022/08/05 00:00
+source: Front Neurol
+title: Age-related hearing loss is associated with alterations in temporal envelope
+  processing in different neural generators along the auditory pathway
+uid: '9389009'
+volume: '13'
