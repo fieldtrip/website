@@ -67,7 +67,7 @@
 - name:  Specifying the channel layout for plotting
   link:  /tutorial/layout
 
-- name:  Making a memory efficient analysis script
+- name:  Making a memory efficient analysis pipeline
   link:  /tutorial/memory
 
 - name:  Source reconstruction of event-related fields using minimum-norm estimation
@@ -106,7 +106,7 @@
 - name:  Preprocessing of EEG data and computing ERPs
   link:  /tutorial/preprocessing_erp
 
-- name:  Creating a clean analysis script
+- name:  Creating a clean analysis pipeline
   link:  /tutorial/scripting
 
 - name:  Sensor-level ERF, TFR and connectivity analyses

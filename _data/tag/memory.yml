@@ -13,6 +13,6 @@
 - name:  Preprocessing - Reading continuous EEG and MEG data
   link:  /tutorial/continuous
 
-- name:  Making a memory efficient analysis script
+- name:  Making a memory efficient analysis pipeline
   link:  /tutorial/memory
 

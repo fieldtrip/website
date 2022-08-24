@@ -61,9 +61,9 @@
 - name:  Introduction to the FieldTrip toolbox
   link:  /tutorial/introduction
 
-- name:  Making a memory efficient analysis script
+- name:  Making a memory efficient analysis pipeline
   link:  /tutorial/memory
 
-- name:  Creating a clean analysis script
+- name:  Creating a clean analysis pipeline
   link:  /tutorial/scripting
 
