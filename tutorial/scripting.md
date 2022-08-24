@@ -1,15 +1,21 @@
 ---
-title: Creating a clean analysis script
+title: Creating a clean analysis pipeline
 tags: [tutorial, example, script, matlab, beginner, batching]
 ---
 
-# Creating a clean analysis script
+# Creating a clean analysis pipeline
 
 ## Introduction
 
 This tutorial is intended to provide some guidelines and suggestions how to set up a chain of analysis steps that makes most efficient use of your (and your computer's) time and is in accordance to the FieldTrip philosophy. Some MATLAB basics regarding the making of your own function will also be introduced. The idea of batching is introduced. Finally some practical tips regarding computer memory usage are given as well as an example.
 
 The examples are about preprocessing of the data, but it does not provide detailed information about it. If you are interested in how to preprocess your data, you can check for example, [this](/tutorial/preprocessing) tutorial.
+
+{% include markup/info %}
+The paper [Seven quick tips for analysis scripts in neuroimaging](https://doi.org/10.1371/journal.pcbi.1007358) by Marijn van Vliet (2020, Plos Comp Biol) also provides very useful guidelines for writing and organizing your analysis code. Althoug the examples it provides use Python, the ideas it presents apply equally well to MATLAB.
+
+{% include badge doi="10.1371/journal.pcbi.1007358" pmid="32214316" pmcid="PMC7098566" %}
+{% include markup/end %}
 
 ## Background
 

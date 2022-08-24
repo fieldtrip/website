@@ -16,8 +16,8 @@ When adding or contributing to the tutorials please consider the [documentation 
 ## Introduction to FieldTrip and MATLAB
 
 - [Introduction to the FieldTrip toolbox](/tutorial/introduction)
-- [Creating a clean analysis script](/tutorial/scripting)
-- [Making a memory efficient analysis script](/tutorial/memory)
+- [Creating a clean analysis pipeline](/tutorial/scripting)
+- [Making a memory efficient analysis pipeline](/tutorial/memory)
 - [Speeding up your analysis with distributed computing](/tutorial/distributedcomputing)
 
 ## Reading and preprocessing data

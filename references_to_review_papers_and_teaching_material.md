@@ -63,6 +63,8 @@ In MATLAB you have the command window, on Linux, macOS and Windows you have the 
 
 Richard Johnson has written a [MATLAB style guide](https://nl.mathworks.com/matlabcentral/fileexchange/46056-matlab-style-guidelines-2-0) that explains how to write code that is more likely to be correct, understandable, sharable and maintainable.
 
+ Marijn van Vliet gives [Seven quick tips for analysis scripts in neuroimaging](https://doi.org/10.1371/journal.pcbi.1007358) that describe how to organize your code, your data, and how to use visualizations to check intermediary results.
+
 ## Data Sharing
 
 For data sharing we recommend that you consider organizing your data along the lines of the [BIDS standard](http://bids.neuroimaging.io). See [The brain imaging data structure, a format for organizing and describing outputs of neuroimaging experiments](http://www.nature.com/articles/sdata201644) for an introduction and [MEG-BIDS, the brain imaging data structure extended to magnetoencephalography](https://www.nature.com/articles/sdata2018110). The **[data2bids](/reference/data2bids)** function helps to organize your data in the BIDS structure.

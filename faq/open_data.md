@@ -39,7 +39,7 @@ The [BNCI Horizon 2020 consortium](http://bnci-horizon-2020.eu/database/data-set
 
 The [National Sleep Research Resource](https://sleepdata.org) website links to a large collection of sleep EEG datasets.
 
-The Child Mind Institute provides both raw and preprocessed EEG data in the [Multimodal Resource for Studying Information Processing in the Developing Brain (MIPDB) dataset](http://fcon_1000.projects.nitrc.org/indi/cmi_eeg/eeg.html). This includes data from subject in different age ranges from 9 years up to 44 years. The Child Mind Institute also shares EEG data from more than 600 subjects in the [Healthy Brain Network dataset](http://fcon_1000.projects.nitrc.org/indi/cmi_healthy_brain_network/index.html).
+The Child Mind Institute provides both raw and preprocessed EEG data in the [Multimodal Resource for Studying Information Processing in the Developing Brain (MIPDB) dataset](http://fcon_1000.projects.nitrc.org/indi/cmi_eeg/eeg.html). This includes data from subject in different age ranges from 9 years up to 44 years. The Child Mind Institute also shares EEG data from more than 600 subjects in the [Healthy Brain Network (HBN) databank](http://fcon_1000.projects.nitrc.org/indi/cmi_healthy_brain_network/index.html).
 
 The Max Planck Institut in Leipzig shares the [LEMON Mind-Brain-Body Dataset](http://fcon_1000.projects.nitrc.org/indi/retro/MPI_LEMON.html) which includes data from 228 healthy participants comprising a young (N=154, range 20–35 years) and an elderly group (N=74, range 59–77 years). During a two-day assessment, participants completed 3T MRI and a 62-channel EEG experiment at rest.
 
