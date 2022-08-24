@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1038/s41598-022-18665-z
+- idtype: pmcid
+  value: PMC9392784
+authors:
+- authtype: Author
+  name: Aktürk T
+- authtype: Author
+  name: de Graaf TA
+- authtype: Author
+  name: Güntekin B
+- authtype: Author
+  name: Hanoğlu L
+- authtype: Author
+  name: Sack AT
+epubdate: 2022 Aug 20
+fulljournalname: Scientific Reports
+issue: ''
+pages: '14199'
+pmclivedate: 2022/08/22
+printpubdate: ''
+pubdate: 2022 Aug 20
+sortdate: 2022/08/20 00:00
+source: Sci Rep
+title: Enhancing memory capacity by experimentally slowing theta frequency oscillations
+  using combined EEG-tACS
+uid: '9392784'
+volume: '12'

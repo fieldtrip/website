@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '35192240'
+- idtype: doi
+  value: 10.1111/desc.13245
+- idtype: pmcid
+  value: PMC9393202
+- idtype: MID
+  value: NIHMS1788264
+authors:
+- authtype: Author
+  name: Sullivan EF
+- authtype: Author
+  name: Xie W
+- authtype: Author
+  name: Conte S
+- authtype: Author
+  name: Richards JE
+- authtype: Author
+  name: Shama T
+- authtype: Author
+  name: Haque R
+- authtype: Author
+  name: Petri WA
+- authtype: Author
+  name: Nelson CA
+epubdate: 2022 Feb 22
+fulljournalname: Developmental science
+issue: ''
+pages: e13245
+pmclivedate: ''
+printpubdate: ''
+pubdate: 2022 Feb 22
+sortdate: 2022/02/22 00:00
+source: Dev Sci
+title: Neural correlates of inhibitory control and associations with cognitive outcomes
+  in Bangladeshi children exposed to early adversities
+uid: '9393202'
+volume: ''

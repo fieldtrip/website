@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '35188831'
+- idtype: doi
+  value: 10.1177/15500594221072708
+- idtype: pmcid
+  value: PMC9392809
+- idtype: MID
+  value: NIHMS1810801
+authors:
+- authtype: Author
+  name: Bruña R
+- authtype: Author
+  name: López-Sanz D
+- authtype: Author
+  name: Maestú F
+- authtype: Author
+  name: Cohen AD
+- authtype: Author
+  name: Bagic A
+- authtype: Author
+  name: Huppert T
+- authtype: Author
+  name: Kim T
+- authtype: Author
+  name: Roush RE
+- authtype: Author
+  name: Snitz B
+- authtype: Author
+  name: Becker JT
+epubdate: 2022 Feb 21
+fulljournalname: Clinical EEG and neuroscience
+issue: ''
+pages: '15500594221072708'
+pmclivedate: ''
+printpubdate: ''
+pubdate: 2022 Feb 21
+sortdate: 2022/02/21 00:00
+source: Clin EEG Neurosci
+title: MEG Oscillatory Slowing in Cognitive Impairment is Associated with the Presence
+  of Subjective Cognitive Decline
+uid: '9392809'
+volume: ''
