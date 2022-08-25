@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fnins.2022.932959
+- idtype: pmcid
+  value: PMC9396236
+authors:
+- authtype: Author
+  name: Shahsavari Baboukani P
+- authtype: Author
+  name: Graversen C
+- authtype: Author
+  name: Alickovic E
+- authtype: Author
+  name: Østergaard J
+epubdate: 2022 Aug 9
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '932959'
+pmclivedate: 2022/08/24
+printpubdate: ''
+pubdate: 2022 Aug 9
+sortdate: 2022/08/09 00:00
+source: Front Neurosci
+title: Speech to noise ratio improvement induces nonlinear parietal phase synchrony
+  in hearing aid users
+uid: '9396236'
+volume: '16'
