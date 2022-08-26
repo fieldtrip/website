@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1038/s41598-022-18323-4
+- idtype: pmcid
+  value: PMC9399091
+authors:
+- authtype: Author
+  name: Patel K
+- authtype: Author
+  name: Beaver D
+- authtype: Author
+  name: Gruber N
+- authtype: Author
+  name: Printezis G
+- authtype: Author
+  name: Giannopulu I
+epubdate: 2022 Aug 23
+fulljournalname: Scientific Reports
+issue: ''
+pages: '14345'
+pmclivedate: 2022/08/25
+printpubdate: ''
+pubdate: 2022 Aug 23
+sortdate: 2022/08/23 00:00
+source: Sci Rep
+title: Mental imagery of whole-body motion along the sagittal-anteroposterior axis
+uid: '9399091'
+volume: '12'
