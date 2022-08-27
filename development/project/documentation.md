@@ -19,7 +19,7 @@ There is also another fixme that has to be fixed. (9 dec 2008)
 
 ### Preprocessing - automatic artifact identification
 
-### event-related fields and the planar gradient
+### Event-related fields and the planar gradient
 
 ### Parametric and non-parametric statistics on event-related fields
 

@@ -30,7 +30,7 @@ When adding or contributing to the tutorials please consider the [documentation 
 
 ## Sensor-level analyses
 
-- [event-related fields and MEG planar gradient](/tutorial/eventrelatedaveraging)
+- [Event-related fields and MEG planar gradient](/tutorial/eventrelatedaveraging)
 - [Preprocessing of EEG data and computing ERPs](/tutorial/preprocessing_erp)
 - [Preprocessing and event-related activity in combined MEG/EEG data](/workshop/natmeg/preprocessing)
 - [Time-frequency analysis using Hanning window, multitapers and wavelets](/tutorial/timefrequencyanalysis)

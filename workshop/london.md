@@ -23,7 +23,7 @@ We will keep this page up to date and post new information here when available.
 #### Day 2 (Friday 4 March, 2016)
 
 - 9:00 - 11:00 Hands-on 1: [Preprocessing EEG data and event-related potentials](/tutorial/preprocessing_erp)
-  - If you finish early, feel free to look at [event-related Averaging and MEG Planar Gradient](/tutorial/eventrelatedaveraging) but only the first half (stop when you get to the planar gradient)
+  - If you finish early, feel free to look at [Event-related averaging and MEG planar gradient](/tutorial/eventrelatedaveraging) but only the first half (stop when you get to the planar gradient)
 - 11:00 - 11:30 Coffee break
 - 11:30 - 12:30 Lecture 2: Fundamentals of neuronal oscillations and synchrony ([slides](https://dl.dropboxusercontent.com/u/4023322/kcl-london-slides/2_frequency_oscillations_johanna_KCLondon.pptx))
 - 12:30 - 13:30 Lunch
