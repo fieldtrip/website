@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1371/journal.pone.0270949
+- idtype: pmcid
+  value: PMC9417031
+authors:
+- authtype: Author
+  name: Das A
+- authtype: Author
+  name: Mandel A
+- authtype: Author
+  name: Shitara H
+- authtype: Author
+  name: Popa T
+- authtype: Author
+  name: Horovitz SG
+- authtype: Author
+  name: Hallett M
+- authtype: Author
+  name: Thirugnanasambandam N
+epubdate: 2022 Aug 26
+fulljournalname: PLoS ONE
+issue: '8'
+pages: e0270949
+pmclivedate: 2022/08/27
+printpubdate: ''
+pubdate: 2022 Aug 26
+sortdate: 2022/08/26 00:00
+source: PLoS One
+title: Evaluating interhemispheric connectivity during midline object recognition
+  using EEG
+uid: '9417031'
+volume: '17'

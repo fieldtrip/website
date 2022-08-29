@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '35050961'
+- idtype: doi
+  value: 10.1097/j.pain.0000000000002565
+- idtype: pmcid
+  value: PMC9393803
+authors:
+- authtype: Author
+  name: Heitmann H
+- authtype: Author
+  name: Gil Ávila C
+- authtype: Author
+  name: Nickel MM
+- authtype: Author
+  name: Ta Dinh S
+- authtype: Author
+  name: May ES
+- authtype: Author
+  name: Tiemann L
+- authtype: Author
+  name: Hohn VD
+- authtype: Author
+  name: Tölle TR
+- authtype: Author
+  name: Ploner M
+epubdate: 2021 Dec 15
+fulljournalname: Pain
+issue: '9'
+pages: e997-e1005
+pmclivedate: 2022/08/26
+printpubdate: 2022 Sep
+pubdate: 2021 Dec 15
+sortdate: 2021/12/15 00:00
+source: Pain
+title: Longitudinal resting-state electroencephalography in patients with chronic
+  pain undergoing interdisciplinary multimodal pain therapy
+uid: '9393803'
+volume: '163'
