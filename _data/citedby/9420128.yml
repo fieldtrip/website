@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '36030249'
+- idtype: doi
+  value: 10.1038/s41398-022-02114-6
+- idtype: pmcid
+  value: PMC9420128
+authors:
+- authtype: Author
+  name: Perry A
+- authtype: Author
+  name: Hughes LE
+- authtype: Author
+  name: Adams N
+- authtype: Author
+  name: Naessens M
+- authtype: Author
+  name: Murley AG
+- authtype: Author
+  name: Rouse MA
+- authtype: Author
+  name: Street D
+- authtype: Author
+  name: Jones PS
+- authtype: Author
+  name: Cope TE
+- authtype: Author
+  name: Kocagoncu E
+- authtype: Author
+  name: Rowe JB
+epubdate: 2022 Aug 27
+fulljournalname: Translational Psychiatry
+issue: ''
+pages: '348'
+pmclivedate: 2022/08/29
+printpubdate: ''
+pubdate: 2022 Aug 27
+sortdate: 2022/08/27 00:00
+source: Transl Psychiatry
+title: The neurophysiological effect of NMDA-R antagonism of frontotemporal lobar
+  degeneration is conditional on individual GABA concentration
+uid: '9420128'
+volume: '12'
