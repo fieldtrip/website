@@ -1,0 +1,47 @@
+articleids:
+- idtype: pmid
+  value: '34726478'
+- idtype: doi
+  value: 10.1089/brain.2021.0059
+- idtype: pmcid
+  value: PMC9419974
+authors:
+- authtype: Author
+  name: Bruña R
+- authtype: Author
+  name: Maestú F
+- authtype: Author
+  name: López-Sanz D
+- authtype: Author
+  name: Bagic A
+- authtype: Author
+  name: Cohen AD
+- authtype: Author
+  name: Chang YF
+- authtype: Author
+  name: Cheng Y
+- authtype: Author
+  name: Doman J
+- authtype: Author
+  name: Huppert T
+- authtype: Author
+  name: Kim T
+- authtype: Author
+  name: Roush RE
+- authtype: Author
+  name: Snitz BE
+- authtype: Author
+  name: Becker JT
+epubdate: 2022 Aug 4
+fulljournalname: Brain Connectivity
+issue: '6'
+pages: 561-570
+pmclivedate: ''
+printpubdate: 2022 Aug 1
+pubdate: 2022 Aug 4
+sortdate: 2022/08/04 00:00
+source: Brain Connect
+title: Sex Differences in Magnetoencephalography-Identified Functional Connectivity
+  in the Human Connectome Project Connectomics of Brain Aging and Dementia Cohort
+uid: '9419974'
+volume: '12'
