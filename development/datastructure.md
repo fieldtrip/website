@@ -23,7 +23,7 @@ High-level FieldTrip functions expect input data as a MATLAB structure in a spec
 
 ## Checking and converting
 
-Besides documenting the data structures, these ft_datatype_xxx functions also check the internal consistency of the structures and - where needed - update the data structures to the latest standard. This means that if a user loads a data structure from an old .mat file on disk and feeds it into a newer version of a FieldTrip function, the data structure is updated to the expected format prior to the function doing its work. This works by each FieldTrip function calling **[ft_checkdata](/reference/utilities/ft_checkdata)** at the start of the function, and ft_checkdata calling the corresponding ft_datatype_xxx function.
+Besides documenting the data structures, these `ft_datatype_xxx` functions also check the internal consistency of the structures and - where needed - update the data structures to the latest standard. This means that if a user loads a data structure from an old `.mat` file on disk and feeds it into a newer version of a FieldTrip function, the data structure is updated to the expected format prior to the function starting to work on it. This works by each FieldTrip function calling **[ft_checkdata](/reference/utilities/ft_checkdata)** at the start of the function, and `ft_checkdata` calling the corresponding `ft_datatype_xxx` function.
 
 ## Dimord
 
@@ -46,7 +46,7 @@ Some of the metadata fields that describe the data are:
 - freq
 - pos
 
-To document the data fields unambiguously, the data structure can include  a "dimord" field that specifies the order of the dimensions, and that links each of the dimensions to the corresponding metadata field.
+To document the data fields unambiguously, the data structure can include a `dimord` field that specifies the order of the dimensions, and that links each of the dimensions to the corresponding metadata field.
 
 1. A data structure can have a single `dimord` field; in that case the dimord refers to the most important data field in the structure.
 2. A data structure can have a one or multiple `xxxdimord` fields, where xxx refers to the data parameter. For example `powspctrmdimord` to document `powspctrm`, and `cohspctrmdimord` to document `cohspctrm`.
