@@ -11,9 +11,11 @@ This website is hosted on a server of the [Donders Centre for Cognitive Neuroima
 
 ## How we process your personal data on this website
 
-This website does not use cookies. We do not use external tools to collect website statistics. We use a self-hosted instance of [plausible](https://plausible.io), an open-source web analytics solution without tracking cookies that is fully compliant with GDPR, CCPA and PECR. It only stores _that_ you have visited, not _who you are_, and it does not share any information across different websites which could be used to build a user profile.
+This website does not use cookies and does not include content from external commercial services like Google and Twitter that would track users and collect statistics. We do use a self-hosted instance of [plausible](https://plausible.io), an open-source web analytics solution without tracking cookies that is fully compliant with GDPR, CCPA and PECR. It only stores _that_ you have visited, not _who you are_, and it does not share any information across different websites which could be used to build a user profile.
 
-The embedded YouTube and Vimeo videos on this website are displayed in a way that does not place cookies on your computer. We use the [crossorigin=anonymous](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/crossorigin) attribute for resources that are loaded from external services, such as javascript libraries.
+The embedded YouTube and Vimeo videos on this website are displayed in a way that does not place cookies on your computer. We use the [anonymous crossorigin](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/crossorigin) attribute for resources that are loaded from external services, such as javascript libraries.
+
+When you use the search functionality, you will be redirected to Google which may track your internet usage.
 
 ## How we process your personal data when you download the FieldTrip toolbox
 

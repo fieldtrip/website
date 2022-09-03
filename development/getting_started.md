@@ -8,7 +8,7 @@ FieldTrip is a toolbox that contains a set of separate (high-level) functions; i
 
 For this reason, if you are new to MATLAB or EEG/MEG analysis, FieldTrip might not be the way to go for you yet. If you are persistent and eager to learn, [references to review papers and teaching material](/references_to_review_papers_and_teaching_material) might help you on your way.
 
-To get a general overview of how FieldTrip is designed, please have a look at the [reference paper](https://www.hindawi.com/journals/cin/2011/156869) and at the [modular development](/development/architecture) page.
+To get a general overview of how FieldTrip is designed and implemented, please have a look at the [reference paper](https://www.hindawi.com/journals/cin/2011/156869) and at the [architecture](/development/architecture) page.
 
 By far the best way to get started using FieldTrip is by reading through the [tutorial](/tutorial) documentation, the [walkthrough](/walkthrough) and through the other [documentation](/documentation). If you have questions that are not answered by the documentation or in the [frequently asked questions](/faq), you can register on the [email list](/discussion_list) and ask the other users and the developers for help. Also, FieldTripping is not something you do alone – inform yourself about colleagues that use (or want to use) FieldTrip.
 

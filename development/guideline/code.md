@@ -243,7 +243,7 @@ Low-level functions that are only supposed to be called by other FieldTrip funct
 
 Functions in a module, i.e. sub-directory, should **not** be calling any FieldTrip functions at a higher level. e.g., a function like fileio/xxx.m should only call other functions in fileio, in fileio/private or in an external toolbox.
 
-This requirement on the dependencies ensures the [modular design](/development/architecture).
+This requirement on the dependencies ensures the [modular design](/development/architecture#modular-organization).
 
 ## Varargin arguments
 
