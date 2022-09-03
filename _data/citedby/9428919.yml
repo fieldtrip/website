@@ -1,0 +1,45 @@
+articleids:
+- idtype: pmid
+  value: '35148892'
+- idtype: doi
+  value: 10.1016/j.bja.2022.01.010
+- idtype: pmcid
+  value: PMC9428919
+authors:
+- authtype: Author
+  name: Casey CP
+- authtype: Author
+  name: Tanabe S
+- authtype: Author
+  name: Farahbakhsh Z
+- authtype: Author
+  name: Parker M
+- authtype: Author
+  name: Bo A
+- authtype: Author
+  name: White M
+- authtype: Author
+  name: Ballweg T
+- authtype: Author
+  name: Mcintosh A
+- authtype: Author
+  name: Filbey W
+- authtype: Author
+  name: Saalmann Y
+- authtype: Author
+  name: Pearce RA
+- authtype: Author
+  name: Sanders RD
+epubdate: 2022 Feb 9
+fulljournalname: 'BJA: British Journal of Anaesthesia'
+issue: '6'
+pages: 1006-1018
+pmclivedate: ''
+printpubdate: 2022 Jun
+pubdate: 2022 Feb 9
+sortdate: 2022/02/09 00:00
+source: Br J Anaesth
+title: Distinct EEG signatures differentiate unconsciousness and disconnection during
+  anaesthesia and sleep
+uid: '9428919'
+volume: '128'

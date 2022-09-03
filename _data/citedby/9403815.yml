@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '35015871'
+- idtype: doi
+  value: 10.1162/jocn_a_01813
+- idtype: pmcid
+  value: PMC9403815
+- idtype: MID
+  value: NIHMS1830585
+authors:
+- authtype: Author
+  name: Siqi-Liu A
+- authtype: Author
+  name: Egner T
+- authtype: Author
+  name: Woldorff MG
+epubdate: ''
+fulljournalname: Journal of cognitive neuroscience
+issue: '3'
+pages: 480-494
+pmclivedate: ''
+printpubdate: 2022 Feb 1
+pubdate: 2022 Feb 1
+sortdate: 2022/02/01 00:00
+source: J Cogn Neurosci
+title: Neural dynamics of context-sensitive adjustments in cognitive flexibility
+uid: '9403815'
+volume: '34'

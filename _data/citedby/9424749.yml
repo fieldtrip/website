@@ -1,0 +1,141 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1117/1.NPh.9.S2.S24001
+- idtype: pmcid
+  value: PMC9424749
+authors:
+- authtype: Author
+  name: Ayaz H
+- authtype: Author
+  name: Baker WB
+- authtype: Author
+  name: Blaney G
+- authtype: Author
+  name: Boas DA
+- authtype: Author
+  name: Bortfeld H
+- authtype: Author
+  name: Brady K
+- authtype: Author
+  name: Brake J
+- authtype: Author
+  name: Brigadoi S
+- authtype: Author
+  name: Buckley EM
+- authtype: Author
+  name: Carp SA
+- authtype: Author
+  name: Cooper RJ
+- authtype: Author
+  name: Cowdrick KR
+- authtype: Author
+  name: Culver JP
+- authtype: Author
+  name: Dan I
+- authtype: Author
+  name: Dehghani H
+- authtype: Author
+  name: Devor A
+- authtype: Author
+  name: Durduran T
+- authtype: Author
+  name: Eggebrecht AT
+- authtype: Author
+  name: Emberson LL
+- authtype: Author
+  name: Fang Q
+- authtype: Author
+  name: Fantini S
+- authtype: Author
+  name: Franceschini MA
+- authtype: Author
+  name: Fischer JB
+- authtype: Author
+  name: Gervain J
+- authtype: Author
+  name: Hirsch J
+- authtype: Author
+  name: Hong KS
+- authtype: Author
+  name: Horstmeyer R
+- authtype: Author
+  name: Kainerstorfer JM
+- authtype: Author
+  name: Ko TS
+- authtype: Author
+  name: Licht DJ
+- authtype: Author
+  name: Liebert A
+- authtype: Author
+  name: Luke R
+- authtype: Author
+  name: Lynch JM
+- authtype: Author
+  name: Mesquida J
+- authtype: Author
+  name: Mesquita RC
+- authtype: Author
+  name: Naseer N
+- authtype: Author
+  name: Novi SL
+- authtype: Author
+  name: Orihuela-Espina F
+- authtype: Author
+  name: O’Sullivan TD
+- authtype: Author
+  name: Peterka DS
+- authtype: Author
+  name: Pifferi A
+- authtype: Author
+  name: Pollonini L
+- authtype: Author
+  name: Sassaroli A
+- authtype: Author
+  name: Sato JR
+- authtype: Author
+  name: Scholkmann F
+- authtype: Author
+  name: Spinelli L
+- authtype: Author
+  name: Srinivasan VJ
+- authtype: Author
+  name: St. Lawrence K
+- authtype: Author
+  name: Tachtsidis I
+- authtype: Author
+  name: Tong Y
+- authtype: Author
+  name: Torricelli A
+- authtype: Author
+  name: Urner T
+- authtype: Author
+  name: Wabnitz H
+- authtype: Author
+  name: Wolf M
+- authtype: Author
+  name: Wolf U
+- authtype: Author
+  name: Xu S
+- authtype: Author
+  name: Yang C
+- authtype: Author
+  name: Yodh AG
+- authtype: Author
+  name: Yücel MA
+- authtype: Author
+  name: Zhou W
+epubdate: 2022 Aug 30
+fulljournalname: Neurophotonics
+issue: Suppl 2
+pages: S24001
+pmclivedate: 2022/08/31
+printpubdate: 2022 Aug
+pubdate: 2022 Aug 30
+sortdate: 2022/08/30 00:00
+source: Neurophotonics
+title: 'Optical imaging and spectroscopy for the study of the human brain: status
+  report'
+uid: '9424749'
+volume: '9'
