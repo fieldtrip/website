@@ -1,3 +1,6 @@
+- name:  Distributed computing
+  link:  /development/distributed
+
 - name:  Distributed computing using the MATLAB engine system
   link:  /development/module/engine
 

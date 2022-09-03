@@ -1,3 +1,6 @@
+- name:  Distributed computing
+  link:  /development/distributed
+
 - name:  Distributed computing using a peer-to-peer cluster
   link:  /development/module/peer
 

@@ -1,6 +1,9 @@
 - name:  Development
   link:  /development
 
+- name:  Toolbox architecture and organization of the source code
+  link:  /development/architecture
+
 - name:  Contribute
   link:  /development/contribute
 
@@ -36,9 +39,6 @@
 
 - name:  Meetings
   link:  /development/meeting
-
-- name:  Modular organization of the source code
-  link:  /development/module
 
 - name:  Connectivity estimates for EEG/MEG time series data
   link:  /development/module/connectivity
