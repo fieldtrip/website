@@ -11,11 +11,11 @@ redirect_from:
 The **[ft_examplefunction](/reference/ft_examplefunction)** provides a documented walkthrough of a typical high-level FieldTrip function that demonstrates a lot of the features presented below.
 {% include markup/end %}
 
-## Consistent configuration specification and backward compatibility
+## Consistent configuration and backward compatibility
 
 High-level FieldTrip functions take the `cfg` structure as first input argument which specifies how the function and/or algorithms will behave. Over the course of time time and when new methods and options are introduced, the available configuration options change. We use the **[ft_checkconfig](/reference/utilities/ft_checkconfig)** function at the start of all high-level FieldTrip functions to detect whether the user-specified cfg options are correct, give warnings if deprecated options are being used, and try to update old cfg options when these are for example used in an older analysis script.
 
-## Consistent data representation and backward compatibility
+## Consistent data and backward compatibility
 
 High-level FieldTrip functions take [data structures](/development/datastructure) as input and/or return similar data structures. Due to new scientific and programming insights, these data structures change over time. In the **[ft_datatype](/reference/utilities/ft_datatype)** function we list all data types and link to the respective `ft_datatype_xxx` functions that define the specification of each structure, including the historical changes.
 
