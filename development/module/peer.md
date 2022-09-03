@@ -11,7 +11,7 @@ The FieldTrip-peer toolbox facilitates you to do distributed computing on an ad-
 
 The peer toolbox is inspired by the situation that many neuroscience research environments have plenty of computational power in the form of workstations that are idling most of the time, but that only few research institutes have the resources to set up a full-fledged Torque, SGE or Condir Linux cluster. With the peer toolbox you can easily take a few of the computers of your room mates if they are not around, and combine those with your own workstation to speed up your computations.
 
-This toolbox has been developed as part of the FieldTrip toolbox, but can be used separately. See https://www.fieldtriptoolbox.org for general details on the FieldTrip project, https://www.fieldtriptoolbox.org/development/module/peer for specific details on the peer toolbox or see https://www.fieldtriptoolbox.org/faq for questions.
+This toolbox has been developed as part of the FieldTrip toolbox, but can be used separately. See <https://www.fieldtriptoolbox.org> for general details on the FieldTrip project, <https://www.fieldtriptoolbox.org/development/module/peer> for specific details on the peer toolbox or see <https://www.fieldtriptoolbox.org/faq> for questions.
 
 ## Requirements
 
@@ -19,7 +19,7 @@ The requirements of the peer toolbox are having normal MATLAB licenses, a networ
 
 ## How does it work
 
-The peer toolbox is a spin-off project from our real-time Brain-Computer interfacing project. After implementing the FieldTrip buffer for transmitting and buffering EEG and MEG data over the network, we realised that we could also use a slightly modified buffer for other stuff, such as distributed computing.
+The peer toolbox is a spin-off project from the real-time BrainBain BCI project. After implementing the [FieldTrip buffer](/development/realtime/buffer_overview) for transmitting and buffering EEG and MEG data over the network, we realised that we could also use a slightly modified buffer for other stuff, such as distributed computing.
 
 Each of the peers in the network consists of a MATLAB session. Withing that MATLAB session a mex file is running that runs several theads in the background. The most important thread is the buffer, which is a small TCP server that can receive and hold MATLAB variables that were sent from another peer. The buffer is used to receive the input variables of a computation that has to be performed on this peer, or the output variables of a computation that weer performed on another peer. Another thread that is running sends and receives UDP multicast packets. These are very small messages that are sent over the network to announce the presence of the peer and to inform the other peers of its status. These multicasts packets are sent to all computers on the local network, which allows all peers on that network to discover each other. That means that you don't have to list all peers in a configuration file: in fact, there are no configuration files at all.
 
@@ -138,12 +138,11 @@ Its interface is identical to the standard MATLAB cellfun() command except that 
 
 #### Peerfeval(...)
 
-The MATLAB session that executes the peereval command searches for a peer that acts as worker, and sends the job (the function name and the input arguments) to the available worker peer. The worker peer evaluates the function on the input arguments and subsequently writes the output arguments back to the peer server of the host MATLAB session, i.e. the session that initiated the job.
+The MATLAB session that executes the peereval command searches for a peer that acts as worker, and sends the job (the function name and the input arguments) to the available worker peer. The worker peer evaluates the function on the input arguments and subsequently writes the output arguments back to the peer server of the host MATLAB session, i.e., the session that initiated the job.
 
 Multiple peerevals can be executed without explicitely waiting for the results to return, hence the peer server (running on the controller) should be able to receive and hold multiple "argouts".
 
-The jobid should include information about the peer to which the job was assigned. Furthermore, information about the begin and end time would be useful to estimate the time it takes to execute similar jobs.
-Its interface is identical to the standard MATLAB feval() command.
+The jobid should include information about the peer to which the job was assigned. Furthermore, information about the begin and end time would be useful to estimate the time it takes to execute similar jobs. Its interface is identical to the standard MATLAB [feval](https://www.mathworks.com/help/matlab/ref/feval.html) command.
 
 #### Peerget(...)
 
@@ -172,13 +171,13 @@ In worker mode a peer accepts the input arguments of a single job. It constantly
 The code inside peerworker looks like this
 
     while (true)
-    job = peerget('job');
-    if ~isempty(job)
-      argout = feval(job.functionname, job.argin{:});
-      peerput(job.hostid, argout);
-    else
-      sleep(0.1);
-    end
+      job = peerget('job');
+      if ~isempty(job)
+        argout = feval(job.functionname, job.argin{:});
+        peerput(job.hostid, argout);
+      else
+        sleep(0.1);
+      end
     end
 
 #### Peerreset(...)
@@ -254,7 +253,7 @@ The following is a list with unassorted ideas and considerations for improving a
 
 The whole mechanism does not have inherent security mechanisms implemented. An malevolent user could do
 
-peerfeval('system', 'rm -rf \*')
+    peerfeval('system', 'rm -rf \*')
 
 erasing all users files on the computer hosting the worker. To solve this problem, the MATLAB session with the peerworker server should be running under an unpriviledged account, i.e. as a user without write access to the important parts of the file system.
 
