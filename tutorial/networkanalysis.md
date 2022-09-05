@@ -37,9 +37,7 @@ The data analyses will follow the following steps:
 
 ### Reading the data
 
-The aim is to identify the frequency and topography of an 10Hz oscillation. We first use **[ft_preprocessing](/reference/ft_preprocessing)** to read the continuous data and
-
-**[ft_redefinetrial](/reference/ft_redefinetrial)** to segment it into epochs of 2 seconds length.
+The aim is to identify the frequency and topography of an 10Hz oscillation. We first use **[ft_preprocessing](/reference/ft_preprocessing)** to read the continuous data and **[ft_redefinetrial](/reference/ft_redefinetrial)** to segment it into epochs of 2 seconds length.
 
 The ft_redefinetrial and ft_preprocessing functions require the original MEG dataset, which is available from <https://download.fieldtriptoolbox.org/tutorial/SubjectRest.zip>. Alternatively, you can skip this step and directly load the preprocessed data from <https://download.fieldtriptoolbox.org/tutorial/networkanalysis/>. This latter folder contains a few files that we will need later in this tutorial as well, so it is recommended to download its contents.
 
@@ -129,7 +127,7 @@ We project the component data back to the channel representation, leaving out th
     cfg.component  = badcomp;
     dataica        = ft_rejectcomponent(cfg, comp);
 
-### Spectral analysis
+## Spectral analysis
 
 We will analyze the spectral content of the data using **[ft_freqanalysis](/reference/ft_freqanalysis)** and subsequently interactively explore the data with **[ft_topoplotER](/reference/ft_topoplotER)** and **[ft_singleplotER](/reference/ft_singleplotER)**. For those interested in more detailed overview of the configuration options and strategies please refer to our video lectures [here](https://www.fieldtriptoolbox.org/video) and also [here](https://www.youtube.com/watch?v=QLvsa1r1Voc).
 
@@ -180,6 +178,8 @@ We will analyze the spectral content of the data using **[ft_freqanalysis](/refe
 
 _Figure 2: Top- scalp topography of oscillatory power centered at 10 Hz (left: axial gradient representation, right: planar gradient representation). Bottom- power spectrum averaged over three occipital sensors illustrating a clear ~10 Hz peak._
 
+## Source reconstruction
+
 ### Computation of the forward model
 
 In the following section we will compute the forward model, i.e. the leadfield matrix that defines for a set of predefined dipole locations the expected magnetic field distribution as it is picked up by the MEG sensors. In this tutorial we will use a cortical sheet based source model, in which the individual dipole locations are constrained to the cortical sheet. This anatomical model has been obtained with freesurfer and it takes quite some time to generate. This falls outside the scope of this tutorial. If you would like to get an idea how this can be done, please have a look at our [sourcemodel tutorial](/tutorial/sourcemodel).
@@ -211,7 +211,7 @@ Now we can proceed with the computation of the leadfield matrix, using **[ft_pre
     cfg.channel     = {'MEG'};
     lf              = ft_prepare_leadfield(cfg, dataica);
 
-### Source reconstruction
+### Estimating teh sources
 
 In addition to a forward model, the beamformer needs a sensor-level covariance matrix, or a cross-spectral density matrix. The preliminaries for the cross-spectral density matrix can be obtained with
 
@@ -267,7 +267,7 @@ _Figure 4: Reconstructed activity (neural activity index) of resting state alpha
 Compare the distribution of the neural activity index with the sensor topographies plotted earlier. How do they compare? Could you give an explanation of why the correspondence could be poor?
 {% include markup/end %}
 
-### Creation of a 'pseudo-contrast' based on a median split of the epochs
+## Creation of a 'pseudo-contrast' based on a median split of the epochs
 
 Typically, in an experimental context, it is useful to visualize activity contrasts, e.g., baseline vs. activation intervals, in order to get spatially interpretable beamformer results. Although the neural-activity-index intends to improve interpretability by normalization with a poor man's approximation of the projected noise, and although it takes care of the depth bias of the beamformer to some extent, it doesn't usually work well. In order to convince ourselves that the beamformer is adequately reconstructing the activity of the neural sources, we will resort here to faking an 'experimental' contrast, using a median split of the data, where the data are split according to occipital alpha power. This requires an estimate of the single epoch alpha power. Next, identify the epoch indices for which the alpha power is less/more than the median across epochs.
 
@@ -319,7 +319,7 @@ Now, we can compute the spectra for the two sets of epochs using **[ft_freqdescr
 
 _Figure 5: Difference topography (left) and power spectra of the median splitted data, according to 10 Hz power at sensor 'MRO33'._
 
-### Source reconstruction of 'low' and 'high' alpha activity epochs
+## Source reconstruction of 'low' and 'high' alpha activity epochs
 
 Now we will compute the source reconstructed alpha power again, as illustrated above, based on the median split. We will use a common filter approach, where we compute the spatial filters based on the cross-spectral density averaged across all epochs. See also [here](https://www.fieldtriptoolbox.org/example/common_filters_in_beamforming) and [here](/tutorial/beamformingextended) for further information on common filters.
 
@@ -392,7 +392,7 @@ _Figure 6: Source reconstructed activity illustrating the relative difference in
 Compare this source reconstruction with the sensor topographies generated above. How do the two representations compare?
 {% include markup/end %}
 
-### Connectivity analysis and parcellation
+## Connectivity analysis and parcellation
 
 Next, we will call **[ft_connectivityanalysis](/reference/ft_connectivityanalysis)** to compute a connectivity matrix between all pairs of dipoles, which is sometimes referred to as a 'connectome'. There are several connectivity measures to choose from. Here, we first will compute the imaginary part of the coherencey, using **cfg.method** = 'coh'; and **cfg.complex** = 'absimag';. This syntax will return only the imaginary part of the coherence spectrum and effectivly suppress spurious coherence driven by electromagnetic field spread (Nolte et al. Identifying true brain interaction from EEG data using the imaginary part of coherence. Clinical Neurophysiology, 2004; 115; 2292-2307). For the computation, we take advantage of the fact that the 'source' variable constructed earlier, contains the single trial estimates of amplitude and phase at the source-level. This is the consequence of the fact that we used cfg.method='pcc' for ft_sourceanalysis, and requested cfg.output = 'fourier' for ft_freqanalysis.
 
@@ -430,7 +430,7 @@ In fieldtrip, we use **[ft_sourceparcellate](/reference/ft_sourceparcellate)**
 
 _Figure 7: connectivity matrix between all pairs of parcels_
 
-### Network analysis
+## Network analysis
 
 We can now explore the structure in the estimated connectivity matrices using graph theoretic tools. It is not really clear what the effect of the residual spatial leakage of activity is on the estimates of some of these measures, so we would caution for careful interpretations of graph metrics derived from such connectivity matrices, particularly when comparing groups of experimental participants or experimental conditions. Yet, the intention of this tutorial is still to illustrate how such graph theoretic measures can in principle be computed and visualized using fieldtrip. To this end, we are going to use **[ft_networkanalysis](/reference/ft_networkanalysis)**, using **cfg.method** = 'degrees'. Specifying a prior threshold (e.g., **cfg.threshold** = .1) results in an estimate of the 'node degree', i.e. the amount of nodes with which a particular node has an estimated connectivity of (in this case) 0.1 or higher. There are several ways to determine the threshold, for instance based on some statistical parameterization or previous observation in the literature, yet all of them are and remain arbitrary.
 
