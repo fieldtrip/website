@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1016/j.isci.2022.104929
+- idtype: pmcid
+  value: PMC9440296
+authors:
+- authtype: Author
+  name: Singh B
+- authtype: Author
+  name: Wang Z
+- authtype: Author
+  name: Qi XL
+- authtype: Author
+  name: Constantinidis C
+epubdate: 2022 Aug 12
+fulljournalname: iScience
+issue: '9'
+pages: '104929'
+pmclivedate: 2022/09/04
+printpubdate: ''
+pubdate: 2022 Aug 12
+sortdate: 2022/08/12 00:00
+source: iScience
+title: Plasticity after cognitive training reflected in prefrontal local field potentials
+uid: '9440296'
+volume: '25'
