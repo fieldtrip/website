@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '35697952'
+- idtype: doi
+  value: 10.1007/s10162-022-00851-5
+- idtype: pmcid
+  value: PMC9437197
+authors:
+- authtype: Author
+  name: Guérit F
+- authtype: Author
+  name: Middlebrooks JC
+- authtype: Author
+  name: Richardson ML
+- authtype: Author
+  name: Arneja A
+- authtype: Author
+  name: Harland AJ
+- authtype: Author
+  name: Gransier R
+- authtype: Author
+  name: Wouters J
+- authtype: Author
+  name: Carlyon RP
+epubdate: 2022 Jun 13
+fulljournalname: 'JARO: Journal of the Association for Research in Otolaryngology'
+issue: '4'
+pages: 513-534
+pmclivedate: 2022/09/03
+printpubdate: 2022 Aug
+pubdate: 2022 Jun 13
+sortdate: 2022/06/13 00:00
+source: J Assoc Res Otolaryngol
+title: 'Tonotopic Selectivity in Cats and Humans: Electrophysiology and Psychophysics'
+uid: '9437197'
+volume: '23'
