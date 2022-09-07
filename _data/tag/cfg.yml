@@ -1,3 +1,6 @@
+- name:  Index of all configuration options
+  link:  /configuration
+
 - name:  How to use ft_checkconfig
   link:  /example/checkconfig
 
