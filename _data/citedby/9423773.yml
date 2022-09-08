@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '35858122'
+- idtype: doi
+  value: 10.1152/jn.00485.2021
+- idtype: pmcid
+  value: PMC9423773
+authors:
+- authtype: Author
+  name: Hakonen M
+- authtype: Author
+  name: Nurmi T
+- authtype: Author
+  name: Vallinoja J
+- authtype: Author
+  name: Jaatela J
+- authtype: Author
+  name: Piitulainen H
+epubdate: 2022 Jul 20
+fulljournalname: Journal of Neurophysiology
+issue: '3'
+pages: 568-581
+pmclivedate: 2022/09/06
+printpubdate: 2022 Sep 1
+pubdate: 2022 Jul 20
+sortdate: 2022/07/20 00:00
+source: J Neurophysiol
+title: More comprehensive proprioceptive stimulation of the hand amplifies its cortical
+  processing
+uid: '9423773'
+volume: '128'

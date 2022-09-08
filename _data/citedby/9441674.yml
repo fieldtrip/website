@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1093/texcom/tgac033
+- idtype: pmcid
+  value: PMC9441674
+authors:
+- authtype: Author
+  name: Shahdadian S
+- authtype: Author
+  name: Wang X
+- authtype: Author
+  name: Kang S
+- authtype: Author
+  name: Carter C
+- authtype: Author
+  name: Chaudhari A
+- authtype: Author
+  name: Liu H
+epubdate: 2022 Aug 4
+fulljournalname: Cerebral Cortex Communications
+issue: '3'
+pages: tgac033
+pmclivedate: 2022/09/06
+printpubdate: ''
+pubdate: 2022 Aug 4
+sortdate: 2022/08/04 00:00
+source: Cereb Cortex Commun
+title: 'Prefrontal cortical connectivity and coupling of infraslow oscillation in
+  the resting human brain: a 2-channel broadband NIRS study'
+uid: '9441674'
+volume: '3'

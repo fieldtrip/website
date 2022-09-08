@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1186/s13229-022-00513-6
+- idtype: pmcid
+  value: PMC9446859
+authors:
+- authtype: Author
+  name: Korisky A
+- authtype: Author
+  name: Gordon I
+- authtype: Author
+  name: Goldstein A
+epubdate: 2022 Sep 5
+fulljournalname: Molecular Autism
+issue: ''
+pages: '36'
+pmclivedate: 2022/09/07
+printpubdate: ''
+pubdate: 2022 Sep 5
+sortdate: 2022/09/05 00:00
+source: Mol Autism
+title: 'Oxytocin impacts top-down and bottom-up social perception in adolescents with
+  ASD: a MEG study of neural connectivity'
+uid: '9446859'
+volume: '13'

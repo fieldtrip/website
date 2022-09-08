@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1038/s41467-022-32840-w
+- idtype: pmcid
+  value: PMC9445182
+authors:
+- authtype: Author
+  name: Schreiner T
+- authtype: Author
+  name: Kaufmann E
+- authtype: Author
+  name: Noachtar S
+- authtype: Author
+  name: Mehrkens JH
+- authtype: Author
+  name: Staudigl T
+epubdate: 2022 Sep 5
+fulljournalname: Nature Communications
+issue: ''
+pages: '5231'
+pmclivedate: 2022/09/07
+printpubdate: ''
+pubdate: 2022 Sep 5
+sortdate: 2022/09/05 00:00
+source: Nat Commun
+title: The human thalamus orchestrates neocortical oscillations during NREM sleep
+uid: '9445182'
+volume: '13'
