@@ -287,7 +287,7 @@ To make the EPS-files optimally suitable for Adobe Illustrator, use the command 
 
 Since MATLAB uses the 'painter' renderer to export in Illustrator format, this method allows one to export quite complex figures that otherwise would be exported as bitmaps. Note, however, that the 'painter' renderer also has certain limitations compared to the z-buffer and openGL renderers. (See also MATLAB help on selecting a renderer).
 
-Some examples of what you can d
+Some examples of what you can do
 
     % options for data selection (used with any plotting function
     cfg = [];
@@ -482,7 +482,7 @@ You can control the opacity of the functional data by the mask parameter. Which 
 
 #### Example 1: Plotting only positive values
 
-Imagine that your functional data has values ranging from -3 to 3. Here we plot only the positive values ('zeromax'), using the scale whereby the strongest values are opaque, and the values close to zero are transparen
+Imagine that your functional data has values ranging from -3 to 3. Here we plot only the positive values ('zeromax'), using the scale whereby the strongest values are opaque, and the values close to zero are transparent
 
     cfg.maskparameter = cfg.funparameter
     cfg.colorlim      = [0 3] % or 'zeromax'
@@ -491,7 +491,7 @@ Imagine that your functional data has values ranging from -3 to 3. Here we plot 
 
 #### Example 2: Plotting high absolute values
 
-Suppose the functional data is the same as in example 1, but now we only wants to plot the high negative values and high positive values (using 'maxabs'). We set these high absolute values to opaque, and the values around zero to transparen
+Suppose the functional data is the same as in example 1, but now we only wants to plot the high negative values and high positive values (using 'maxabs'). We set these high absolute values to opaque, and the values around zero to transparent
 
     cfg.maskparameter = cfg.funparameter
     cfg.colorlim      = [-3 3] % or 'maxabs'
@@ -500,7 +500,7 @@ Suppose the functional data is the same as in example 1, but now we only wants t
 
 #### Example 3: Masking voxels outside values of interest
 
-Here, we make a field in the data with an opacity value for each voxel, and apply that as your mask. For instance if you only want to plot the values between 2 and 2.5 you can specif
+Here, we make a field in the data with an opacity value for each voxel, and apply that as your mask. For instance if you only want to plot the values between 2 and 2.5 you can specify
 
     data.mask         = (data.fun>2 & data.fun<2.5)
     cfg.maskparameter = 'mask'
