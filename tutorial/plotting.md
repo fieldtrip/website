@@ -37,7 +37,7 @@ Data at the channel level has a value for each sensor (MEG) or electrode (EEG). 
 
 ### Singleplot functions
 
-With **[ft_singleplotER](/reference/ft_singleplotER)** you can make a plot using the avgFC data from the ERF tutorial by the following cod
+With **[ft_singleplotER](/reference/ft_singleplotER)** you can make a plot using the avgFC data from the ERF tutorial by the following code.
 
 The **[ft_singleplotER](/reference/ft_singleplotER)** function first selects the data to be plotted, in this case channel MLC24, from -0.2 to 1.0 seconds. Subsequently this selected data is plotted with the MATLAB plot function.
 
@@ -49,7 +49,7 @@ The **[ft_singleplotER](/reference/ft_singleplotER)** function first selects the
 
 {% include image src="/assets/img/tutorial/plotting/figure1.png" %}
 
-You could make the same plot by the following cod
+You could make the same plot by the following code, using the MATLAB plot command. 
 
     selected_data = avgFC.avg(9,241:601); % MLC24 is the 9th channel, -0.2 to 1.0 is sample 241 to 601
     selected_time = avgFC.time(241:601);
