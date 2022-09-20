@@ -5,7 +5,8 @@ tags: [tutorial, eeg, meg, multivariate, timelock, freq, attention, meg-attentio
 
 # Multivariate analysis of electrophysiological data
 
-{% include markup/danger %} This tutorial's functionality relies on the DMLT-toolbox. This toolbox has not been actively maintained since about 2010, so there is no guarantee that the FieldTrip code that relies on this functionality will work on current systems.
+{% include markup/danger %} 
+This tutorial's functionality relies on the DMLT-toolbox. This toolbox has not been actively maintained since about 2010, so there is no guarantee that the FieldTrip code that relies on this functionality will work on current systems.
 {% include markup/end %}
 
 ## Introduction
