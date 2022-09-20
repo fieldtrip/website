@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '36040962'
+- idtype: doi
+  value: 10.1371/journal.pcbi.1010470
+- idtype: pmcid
+  value: PMC9467354
+authors:
+- authtype: Author
+  name: Moullet E
+- authtype: Author
+  name: Roby-Brami A
+- authtype: Author
+  name: Guigon E
+epubdate: 2022 Aug 30
+fulljournalname: PLoS Computational Biology
+issue: '8'
+pages: e1010470
+pmclivedate: 2022/09/13
+printpubdate: ''
+pubdate: 2022 Aug 30
+sortdate: 2022/08/30 00:00
+source: PLoS Comput Biol
+title: What is the nature of motor adaptation to dynamic perturbations?
+uid: '9467354'
+volume: '18'

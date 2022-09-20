@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '35940874'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1530-20.2022
+- idtype: pmcid
+  value: PMC9463986
+authors:
+- authtype: Author
+  name: Khademi F
+- authtype: Author
+  name: Naros G
+- authtype: Author
+  name: Nicksirat A
+- authtype: Author
+  name: Kraus D
+- authtype: Author
+  name: Gharabaghi A
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '36'
+pages: 6861-6877
+pmclivedate: ''
+printpubdate: 2022 Sep 7
+pubdate: 2022 Sep 7
+sortdate: 2022/09/07 00:00
+source: J Neurosci
+title: Rewiring Cortico-Muscular Control in the Healthy and Poststroke Human Brain
+  with Proprioceptive β-Band Neurofeedback
+uid: '9463986'
+volume: '42'

@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '36097814'
+- idtype: doi
+  value: 10.7554/eLife.75038
+- idtype: pmcid
+  value: PMC9470160
+authors:
+- authtype: Author
+  name: Rouault M
+- authtype: Author
+  name: Weiss A
+- authtype: Author
+  name: Lee JK
+- authtype: Author
+  name: Drugowitsch J
+- authtype: Author
+  name: Chambon V
+- authtype: Author
+  name: Wyart V
+epubdate: 2022 Sep 13
+fulljournalname: eLife
+issue: ''
+pages: e75038
+pmclivedate: 2022/09/14
+printpubdate: ''
+pubdate: 2022 Sep 13
+sortdate: 2022/09/13 00:00
+source: eLife
+title: Controllability boosts neural and cognitive signatures of changes-of-mind in
+  uncertain environments
+uid: '9470160'
+volume: '11'

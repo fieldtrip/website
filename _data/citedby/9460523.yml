@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '36093050'
+- idtype: doi
+  value: 10.1016/j.isci.2022.104985
+- idtype: pmcid
+  value: PMC9460523
+authors:
+- authtype: Author
+  name: Simola J
+- authtype: Author
+  name: Siebenhühner F
+- authtype: Author
+  name: Myrov V
+- authtype: Author
+  name: Kantojärvi K
+- authtype: Author
+  name: Paunio T
+- authtype: Author
+  name: Palva JM
+- authtype: Author
+  name: Brattico E
+- authtype: Author
+  name: Palva S
+epubdate: 2022 Aug 18
+fulljournalname: iScience
+issue: '9'
+pages: '104985'
+pmclivedate: 2022/09/10
+printpubdate: ''
+pubdate: 2022 Aug 18
+sortdate: 2022/08/18 00:00
+source: iScience
+title: Genetic polymorphisms in COMT and BDNF influence synchronization dynamics of
+  human neuronal oscillations
+uid: '9460523'
+volume: '25'

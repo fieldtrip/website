@@ -1,0 +1,24 @@
+articleids:
+- idtype: pmid
+  value: '36083219'
+- idtype: doi
+  value: 10.1167/jov.22.10.10
+- idtype: pmcid
+  value: PMC9469035
+authors:
+- authtype: Author
+  name: Zimmermann E
+- authtype: Author
+  name: Lange J
+epubdate: 2022 Sep 9
+fulljournalname: Journal of Vision
+issue: '10'
+pages: '10'
+pmclivedate: 2022/09/14
+printpubdate: ''
+pubdate: 2022 Sep 9
+sortdate: 2022/09/09 00:00
+source: J Vis
+title: Saccade suppression of displacements, but not of contrast, depends on context
+uid: '9469035'
+volume: '22'

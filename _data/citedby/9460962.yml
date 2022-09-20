@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '35604351'
+- idtype: doi
+  value: 10.1162/jocn_a_01871
+- idtype: pmcid
+  value: PMC9460962
+- idtype: MID
+  value: NIHMS1833027
+authors:
+- authtype: Author
+  name: Lee K
+- authtype: Author
+  name: Mirjalili S
+- authtype: Author
+  name: Quadri A
+- authtype: Author
+  name: Corbett B
+- authtype: Author
+  name: Duarte A
+epubdate: ''
+fulljournalname: Journal of cognitive neuroscience
+issue: '8'
+pages: 1376-1396
+pmclivedate: 2022/09/09
+printpubdate: 2022 Jul 1
+pubdate: 2022 Jul 1
+sortdate: 2022/07/01 00:00
+source: J Cogn Neurosci
+title: Neural Reinstatement of Overlapping Memories in Young and Older Adults
+uid: '9460962'
+volume: '34'

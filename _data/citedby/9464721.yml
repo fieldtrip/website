@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '35940423'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2022.119547
+- idtype: pmcid
+  value: PMC9464721
+- idtype: MID
+  value: NIHMS1829670
+authors:
+- authtype: Author
+  name: Jones KT
+- authtype: Author
+  name: Johnson EL
+- authtype: Author
+  name: Gazzaley A
+- authtype: Author
+  name: Zanto TP
+epubdate: 2022 Aug 5
+fulljournalname: NeuroImage
+issue: ''
+pages: '119547'
+pmclivedate: ''
+printpubdate: ''
+pubdate: 2022 Aug 5
+sortdate: 2022/08/05 00:00
+source: Neuroimage
+title: Structural and functional network mechanisms of rescuing cognitive control
+  in aging
+uid: '9464721'
+volume: '262'

@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '36084447'
+- idtype: doi
+  value: 10.1016/j.dcn.2022.101149
+- idtype: pmcid
+  value: PMC9465114
+authors:
+- authtype: Author
+  name: Weyers I
+- authtype: Author
+  name: Männel C
+- authtype: Author
+  name: Mueller JL
+epubdate: 2022 Aug 31
+fulljournalname: Developmental Cognitive Neuroscience
+issue: ''
+pages: '101149'
+pmclivedate: 2022/09/13
+printpubdate: ''
+pubdate: 2022 Aug 31
+sortdate: 2022/08/31 00:00
+source: Dev Cogn Neurosci
+title: Constraints on infants’ ability to extract non-adjacent dependencies from vowels
+  and consonants
+uid: '9465114'
+volume: '57'

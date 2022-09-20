@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '36084558'
+- idtype: doi
+  value: 10.1016/j.nicl.2022.103178
+- idtype: pmcid
+  value: PMC9465435
+authors:
+- authtype: Author
+  name: van der Cruijsen J
+- authtype: Author
+  name: Dooren RF
+- authtype: Author
+  name: Schouten AC
+- authtype: Author
+  name: Oostendorp TF
+- authtype: Author
+  name: Frens MA
+- authtype: Author
+  name: Ribbers GM
+- authtype: Author
+  name: van der Helm FC
+- authtype: Author
+  name: Kwakkel G
+- authtype: Author
+  name: Selles RW
+- authtype: CollectiveName
+  name: on behalf of the 4D EEG consortium
+epubdate: 2022 Aug 29
+fulljournalname: 'NeuroImage : Clinical'
+issue: ''
+pages: '103178'
+pmclivedate: 2022/09/13
+printpubdate: ''
+pubdate: 2022 Aug 29
+sortdate: 2022/08/29 00:00
+source: Neuroimage Clin
+title: 'Addressing the inconsistent electric fields of tDCS by using patient-tailored
+  configurations in chronic stroke: Implications for treatment'
+uid: '9465435'
+volume: '36'

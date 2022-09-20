@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '36094165'
+- idtype: doi
+  value: 10.7554/eLife.75515
+- idtype: pmcid
+  value: PMC9467512
+authors:
+- authtype: Author
+  name: Weineck K
+- authtype: Author
+  name: Wen OX
+- authtype: Author
+  name: Henry MJ
+epubdate: 2022 Sep 12
+fulljournalname: eLife
+issue: ''
+pages: e75515
+pmclivedate: 2022/09/13
+printpubdate: ''
+pubdate: 2022 Sep 12
+sortdate: 2022/09/12 00:00
+source: eLife
+title: Neural synchronization is strongest to the spectral flux of slow music and
+  depends on familiarity and beat salience
+uid: '9467512'
+volume: '11'

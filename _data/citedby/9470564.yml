@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1038/s41597-022-01607-9
+- idtype: pmcid
+  value: PMC9470564
+authors:
+- authtype: Author
+  name: Wang Y
+- authtype: Author
+  name: Duan W
+- authtype: Author
+  name: Dong D
+- authtype: Author
+  name: Ding L
+- authtype: Author
+  name: Lei X
+epubdate: 2022 Sep 13
+fulljournalname: Scientific Data
+issue: ''
+pages: '566'
+pmclivedate: 2022/09/15
+printpubdate: ''
+pubdate: 2022 Sep 13
+sortdate: 2022/09/13 00:00
+source: Sci Data
+title: A test-retest resting, and cognitive state EEG dataset during multiple subject-driven
+  states
+uid: '9470564'
+volume: '9'
