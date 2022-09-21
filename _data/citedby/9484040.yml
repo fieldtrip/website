@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '35665685'
+- idtype: doi
+  value: 10.1016/j.neurobiolaging.2022.04.015
+- idtype: pmcid
+  value: PMC9484040
+- idtype: MID
+  value: NIHMS1833026
+authors:
+- authtype: Author
+  name: Hokett E
+- authtype: Author
+  name: Mirjalili S
+- authtype: Author
+  name: Duarte A
+epubdate: 2022 May 18
+fulljournalname: Neurobiology of aging
+issue: ''
+pages: 33-43
+pmclivedate: 2022/09/19
+printpubdate: 2022 Sep
+pubdate: 2022 May 18
+sortdate: 2022/05/18 00:00
+source: Neurobiol Aging
+title: 'Greater sleep variance related to decrements in memory performance and event-specific
+  neural similarity: a racially/ethnically diverse lifespan sample'
+uid: '9484040'
+volume: '117'

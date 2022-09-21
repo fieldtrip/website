@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '36080805'
+- idtype: doi
+  value: 10.3390/s22176337
+- idtype: pmcid
+  value: PMC9460641
+authors:
+- authtype: Author
+  name: Kumari R
+- authtype: Author
+  name: Jarjees M
+- authtype: Author
+  name: Susnoschi-Luca I
+- authtype: Author
+  name: Purcell M
+- authtype: Author
+  name: Vučković A
+epubdate: 2022 Aug 23
+fulljournalname: Sensors (Basel, Switzerland)
+issue: '17'
+pages: '6337'
+pmclivedate: 2022/09/10
+printpubdate: ''
+pubdate: 2022 Aug 23
+sortdate: 2022/08/23 00:00
+source: Sensors (Basel)
+title: Effective Connectivity in Spinal Cord Injury-Induced Neuropathic Pain
+uid: '9460641'
+volume: '22'

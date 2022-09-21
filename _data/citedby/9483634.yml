@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '36113196'
+- idtype: doi
+  value: 10.1016/j.nicl.2022.103188
+- idtype: pmcid
+  value: PMC9483634
+authors:
+- authtype: Author
+  name: Steinmetzger K
+- authtype: Author
+  name: Meinhardt B
+- authtype: Author
+  name: Praetorius M
+- authtype: Author
+  name: Andermann M
+- authtype: Author
+  name: Rupp A
+epubdate: 2022 Sep 10
+fulljournalname: 'NeuroImage : Clinical'
+issue: ''
+pages: '103188'
+pmclivedate: 2022/09/20
+printpubdate: ''
+pubdate: 2022 Sep 10
+sortdate: 2022/09/10 00:00
+source: Neuroimage Clin
+title: A direct comparison of voice pitch processing in acoustic and electric hearing
+uid: '9483634'
+volume: '36'

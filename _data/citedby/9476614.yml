@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '35029645'
+- idtype: doi
+  value: 10.1093/cercor/bhab469
+- idtype: pmcid
+  value: PMC9476614
+authors:
+- authtype: Author
+  name: Gugnowska K
+- authtype: Author
+  name: Novembre G
+- authtype: Author
+  name: Kohler N
+- authtype: Author
+  name: Villringer A
+- authtype: Author
+  name: Keller PE
+- authtype: Author
+  name: Sammler D
+epubdate: 2022 Jan 14
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '18'
+pages: 4110-4127
+pmclivedate: 2022/09/19
+printpubdate: ''
+pubdate: 2022 Jan 14
+sortdate: 2022/01/14 00:00
+source: Cereb Cortex
+title: Endogenous sources of interbrain synchrony in duetting pianists
+uid: '9476614'
+volume: '32'
