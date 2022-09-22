@@ -75,7 +75,7 @@ This example script demonstrates how to run basic FieldTrip functions in paralle
       end
     end
 
-    cfg = qsubcellfun(@ft_definetrial, cfg);
+    cfg = qsubcellfun(@ft_definetrial, cfg, 'memreq', 4*1024^3, 'timreq', 10*60);
 
     % this extends the previous configuration
     for subj=1:4
@@ -88,7 +88,7 @@ This example script demonstrates how to run basic FieldTrip functions in paralle
       end
     end
 
-    data = qsubcellfun(@ft_preprocessing, cfg);
+    data = qsubcellfun(@ft_preprocessing, cfg, 'memreq', 4*1024^3, 'timreq', 10*60);
 
     % start with a new and empty configuration
     cfg = {};
@@ -100,7 +100,7 @@ This example script demonstrates how to run basic FieldTrip functions in paralle
       end
     end
 
-    timelock = qsubcellfun(@ft_timelockanalysis, cfg, data);
+    timelock = qsubcellfun(@ft_timelockanalysis, cfg, data, 'memreq', 4*1024^3, 'timreq', 10*60);
 
     % from here on we won't process the data in parallel any more
     % average each condition over all subjects
