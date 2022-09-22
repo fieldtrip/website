@@ -49,8 +49,8 @@ A third approach that is available in the distributed computing toolbox is to us
     matlabpool local 3
     spmd 3
       cfg = [];
-      cfg.dataset = dataset{labindex};
-      data{labindex} = ft_preprocessing(cfg);
+      cfg.dataset = dataset{spmdIndex};
+      data{spmdIndex} = ft_preprocessing(cfg);
     end
 
 The labindex variable is automatically replaced by the number of the worker. Note that this only works if your matlabpool is greater than or equal to the number of jobs.
@@ -59,4 +59,4 @@ The labindex variable is automatically replaced by the number of the worker. Not
 
 Many of the FieldTrip functions allow to specify the cfg.inputfile and cfg.outputfile option, which allow you to run large analyses in parallel without all the analysis results being returned to your primary MATLAB session. This is especially relevant if your primary computer is not able to hold the results of all computations in memory at the same time.
 
-Elsewhere on this FieldTrip website you can find more documentation, such as the [distributed computing tutorial](/tutorial/distributedcomputing). Some of the FAQs on distributed computing with the FieldTrip [tag/qsub?do=showtag&tag=qsub](/tag/qsub?do=showtag&tag=qsub) toolbox and the [tag/peer?do=showtag&tag=peer](/tag/peer?do=showtag&tag=peer) toolbox will also be informative in general.
+Elsewhere on this FieldTrip website you can find more documentation, such as the [distributed computing tutorial](/tutorial/distributedcomputing). Some of the FAQs on distributed computing with the FieldTrip [qsub](/tag/qsub/) toolbox will also be informative in general.
