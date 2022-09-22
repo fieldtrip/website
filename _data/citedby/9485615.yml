@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fnins.2022.947228
+- idtype: pmcid
+  value: PMC9485615
+authors:
+- authtype: Author
+  name: Arviv O
+- authtype: Author
+  name: Harpaz Y
+- authtype: Author
+  name: Tsizin E
+- authtype: Author
+  name: Benoliel T
+- authtype: Author
+  name: Ekstein D
+- authtype: Author
+  name: Medvedovsky M
+epubdate: 2022 Sep 6
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '947228'
+pmclivedate: 2022/09/21
+printpubdate: ''
+pubdate: 2022 Sep 6
+sortdate: 2022/09/06 00:00
+source: Front Neurosci
+title: 'Source localization using virtual magnetoencephalography helmets: A simulation
+  study toward a prior-based tailored scheme'
+uid: '9485615'
+volume: '16'
