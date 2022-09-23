@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fpsyg.2022.932952
+- idtype: pmcid
+  value: PMC9491359
+authors:
+- authtype: Author
+  name: Pescuma VN
+- authtype: Author
+  name: Ktori M
+- authtype: Author
+  name: Beyersmann E
+- authtype: Author
+  name: Sowman PF
+- authtype: Author
+  name: Castles A
+- authtype: Author
+  name: Crepaldi D
+epubdate: 2022 Sep 7
+fulljournalname: Frontiers in Psychology
+issue: ''
+pages: '932952'
+pmclivedate: 2022/09/22
+printpubdate: ''
+pubdate: 2022 Sep 7
+sortdate: 2022/09/07 00:00
+source: Front Psychol
+title: 'Automatic morpheme identification across development: Magnetoencephalography
+  (MEG) evidence from fast periodic visual stimulation'
+uid: '9491359'
+volume: '13'
