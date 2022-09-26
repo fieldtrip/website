@@ -1,0 +1,55 @@
+articleids:
+- idtype: pmid
+  value: '36038628'
+- idtype: doi
+  value: 10.1038/s41591-022-01941-w
+- idtype: pmcid
+  value: PMC9499853
+authors:
+- authtype: Author
+  name: Shivacharan RS
+- authtype: Author
+  name: Rolle CE
+- authtype: Author
+  name: Barbosa DA
+- authtype: Author
+  name: Cunningham TN
+- authtype: Author
+  name: Feng A
+- authtype: Author
+  name: Johnson ND
+- authtype: Author
+  name: Safer DL
+- authtype: Author
+  name: Bohon C
+- authtype: Author
+  name: Keller C
+- authtype: Author
+  name: Buch VP
+- authtype: Author
+  name: Parker JJ
+- authtype: Author
+  name: Azagury DE
+- authtype: Author
+  name: Tass PA
+- authtype: Author
+  name: Bhati MT
+- authtype: Author
+  name: Malenka RC
+- authtype: Author
+  name: Lock JD
+- authtype: Author
+  name: Halpern CH
+epubdate: 2022 Aug 29
+fulljournalname: Nature Medicine
+issue: '9'
+pages: 1791-1796
+pmclivedate: 2022/09/24
+printpubdate: '2022'
+pubdate: 2022 Aug 29
+sortdate: 2022/08/29 00:00
+source: Nat Med
+title: Pilot study of responsive nucleus accumbens deep brain stimulation for loss-of-control
+  eating
+uid: '9499853'
+volume: '28'

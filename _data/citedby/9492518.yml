@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '34481095'
+- idtype: doi
+  value: 10.1016/j.brs.2021.08.017
+- idtype: pmcid
+  value: PMC9492518
+- idtype: MID
+  value: NIHMS1835627
+authors:
+- authtype: Author
+  name: Zanto TP
+- authtype: Author
+  name: Jones KT
+- authtype: Author
+  name: Ostrand AE
+- authtype: Author
+  name: Hsu WY
+- authtype: Author
+  name: Campusano R
+- authtype: Author
+  name: Gazzaley A
+epubdate: 2021 Sep 1
+fulljournalname: Brain stimulation
+issue: '5'
+pages: 1317-1329
+pmclivedate: 2022/09/22
+printpubdate: 2021 Sep-Oct
+pubdate: 2021 Sep 1
+sortdate: 2021/09/01 00:00
+source: Brain Stimul
+title: Individual differences in neuroanatomy and neurophysiology predict effects
+  of transcranial alternating current stimulation
+uid: '9492518'
+volume: '14'

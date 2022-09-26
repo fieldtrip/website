@@ -1,0 +1,34 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3390/brainsci12091131
+- idtype: pmcid
+  value: PMC9496728
+authors:
+- authtype: Author
+  name: Papaioannou O
+- authtype: Author
+  name: Crespo LP
+- authtype: Author
+  name: Clark K
+- authtype: Author
+  name: Ogbuagu NN
+- authtype: Author
+  name: Alliende LM
+- authtype: Author
+  name: Silverstein SM
+- authtype: Author
+  name: Erickson MA
+epubdate: 2022 Aug 25
+fulljournalname: Brain Sciences
+issue: '9'
+pages: '1131'
+pmclivedate: 2022/09/23
+printpubdate: ''
+pubdate: 2022 Aug 25
+sortdate: 2022/08/25 00:00
+source: Brain Sci
+title: Is Cortical Theta-Gamma Phase-Amplitude Coupling Memory-Specific?
+uid: '9496728'
+volume: '12'
