@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '36151363'
+- idtype: doi
+  value: 10.1038/s42003-022-03974-w
+- idtype: pmcid
+  value: PMC9508245
+authors:
+- authtype: Author
+  name: Karahan E
+- authtype: Author
+  name: Tait L
+- authtype: Author
+  name: Si R
+- authtype: Author
+  name: Özkan A
+- authtype: Author
+  name: Szul MJ
+- authtype: Author
+  name: Graham KS
+- authtype: Author
+  name: Lawrence AD
+- authtype: Author
+  name: Zhang J
+epubdate: 2022 Sep 23
+fulljournalname: Communications Biology
+issue: ''
+pages: '1007'
+pmclivedate: 2022/09/25
+printpubdate: ''
+pubdate: 2022 Sep 23
+sortdate: 2022/09/23 00:00
+source: Commun Biol
+title: The interindividual variability of multimodal brain connectivity maintains
+  spatial heterogeneity and relates to tissue microstructure
+uid: '9508245'
+volume: '5'

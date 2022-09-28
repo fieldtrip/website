@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fnins.2022.903448
+- idtype: pmcid
+  value: PMC9511965
+authors:
+- authtype: Author
+  name: Zhao X
+- authtype: Author
+  name: Liu Y
+- authtype: Author
+  name: Chen T
+- authtype: Author
+  name: Wang S
+- authtype: Author
+  name: Chen J
+- authtype: Author
+  name: Wang L
+- authtype: Author
+  name: Liu G
+epubdate: 2022 Sep 12
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '903448'
+pmclivedate: 2022/09/27
+printpubdate: ''
+pubdate: 2022 Sep 12
+sortdate: 2022/09/12 00:00
+source: Front Neurosci
+title: Differences in brain activations between micro- and macro-expressions based
+  on electroencephalography
+uid: '9511965'
+volume: '16'
