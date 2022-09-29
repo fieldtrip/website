@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '35970563'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.2515-21.2022
+- idtype: pmcid
+  value: PMC9512580
+authors:
+- authtype: Author
+  name: Alizadeh Z
+- authtype: Author
+  name: Azimi A
+- authtype: Author
+  name: Ghorbani M
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '38'
+pages: 7222-7243
+pmclivedate: ''
+printpubdate: 2022 Sep 21
+pubdate: 2022 Sep 21
+sortdate: 2022/09/21 00:00
+source: J Neurosci
+title: Enhancement of Hippocampal-Thalamocortical Temporal Coordination during Slow-Frequency
+  Long-Duration Anterior Thalamic Spindles
+uid: '9512580'
+volume: '42'

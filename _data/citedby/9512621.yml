@@ -1,0 +1,34 @@
+articleids:
+- idtype: pmid
+  value: '36028331'
+- idtype: doi
+  value: 10.1523/ENEURO.0104-22.2022
+- idtype: pmcid
+  value: PMC9512621
+authors:
+- authtype: Author
+  name: Bower IS
+- authtype: Author
+  name: Clark GM
+- authtype: Author
+  name: Tucker R
+- authtype: Author
+  name: Hill AT
+- authtype: Author
+  name: Lum JA
+- authtype: Author
+  name: Mortimer MA
+- authtype: Author
+  name: Enticott PG
+epubdate: 2022 Sep 21
+fulljournalname: eNeuro
+issue: '5'
+pages: ENEURO.0104-22.2022
+pmclivedate: 2022/09/27
+printpubdate: ''
+pubdate: 2022 Sep 21
+sortdate: 2022/09/21 00:00
+source: eNeuro
+title: Enlarged Interior Built Environment Scale Modulates High-Frequency EEG Oscillations
+uid: '9512621'
+volume: '9'
