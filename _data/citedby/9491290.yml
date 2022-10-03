@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '35766240'
+- idtype: doi
+  value: 10.1002/hbm.25987
+- idtype: pmcid
+  value: PMC9491290
+authors:
+- authtype: Author
+  name: López‐Madrona VJ
+- authtype: Author
+  name: Medina Villalon S
+- authtype: Author
+  name: Badier J
+- authtype: Author
+  name: Trébuchon A
+- authtype: Author
+  name: Jayabal V
+- authtype: Author
+  name: Bartolomei F
+- authtype: Author
+  name: Carron R
+- authtype: Author
+  name: Barborica A
+- authtype: Author
+  name: Vulliémoz S
+- authtype: Author
+  name: Alario F‐
+- authtype: Author
+  name: Bénar CG
+epubdate: 2022 Jun 29
+fulljournalname: Human Brain Mapping
+issue: '15'
+pages: 4733-4749
+pmclivedate: 2022/09/30
+printpubdate: ''
+pubdate: 2022 Jun 29
+sortdate: 2022/06/29 00:00
+source: Hum Brain Mapp
+title: Magnetoencephalography can reveal deep brain network activities linked to memory
+  processes
+uid: '9491290'
+volume: '43'

@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1016/j.isci.2022.105061
+- idtype: pmcid
+  value: PMC9519469
+authors:
+- authtype: Author
+  name: Monti A
+- authtype: Author
+  name: Porciello G
+- authtype: Author
+  name: Panasiti MS
+- authtype: Author
+  name: Aglioti SM
+epubdate: 2022 Sep 5
+fulljournalname: iScience
+issue: '10'
+pages: '105061'
+pmclivedate: 2022/09/30
+printpubdate: ''
+pubdate: 2022 Sep 5
+sortdate: 2022/09/05 00:00
+source: iScience
+title: Gut markers of bodily self-consciousness in men
+uid: '9519469'
+volume: '25'

@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fnhum.2022.937515
+- idtype: pmcid
+  value: PMC9523880
+authors:
+- authtype: Author
+  name: Zazio A
+- authtype: Author
+  name: Barchiesi G
+- authtype: Author
+  name: Ferrari C
+- authtype: Author
+  name: Marcantoni E
+- authtype: Author
+  name: Bortoletto M
+epubdate: 2022 Sep 16
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '937515'
+pmclivedate: 2022/10/01
+printpubdate: ''
+pubdate: 2022 Sep 16
+sortdate: 2022/09/16 00:00
+source: Front Hum Neurosci
+title: 'M1-P15 as a cortical marker for transcallosal inhibition: A preregistered
+  TMS-EEG study'
+uid: '9523880'
+volume: '16'
