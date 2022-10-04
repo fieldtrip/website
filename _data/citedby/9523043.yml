@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '36175473'
+- idtype: doi
+  value: 10.1038/s41598-022-19524-7
+- idtype: pmcid
+  value: PMC9523043
+authors:
+- authtype: Author
+  name: Korisky A
+- authtype: Author
+  name: Goldstein A
+- authtype: Author
+  name: Gordon I
+epubdate: 2022 Sep 29
+fulljournalname: Scientific Reports
+issue: ''
+pages: '16304'
+pmclivedate: 2022/10/01
+printpubdate: ''
+pubdate: 2022 Sep 29
+sortdate: 2022/09/29 00:00
+source: Sci Rep
+title: 'The dual neural effects of oxytocin in autistic youth: results from a randomized
+  trial'
+uid: '9523043'
+volume: '12'
