@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '35995563'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1512-21.2022
+- idtype: pmcid
+  value: PMC9525164
+authors:
+- authtype: Author
+  name: Onuki Y
+- authtype: Author
+  name: Lakbila-Kamal O
+- authtype: Author
+  name: Scheffer B
+- authtype: Author
+  name: Van Someren EJ
+- authtype: Author
+  name: Van der Werf YD
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '39'
+pages: 7400-7411
+pmclivedate: ''
+printpubdate: 2022 Sep 28
+pubdate: 2022 Sep 28
+sortdate: 2022/09/28 00:00
+source: J Neurosci
+title: Selective Enhancement of Post-Sleep Visual Motion Perception by Repetitive
+  Tactile Stimulation during Sleep
+uid: '9525164'
+volume: '42'

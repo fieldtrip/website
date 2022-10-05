@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '36126673'
+- idtype: doi
+  value: 10.1098/rstb.2021.0190
+- idtype: pmcid
+  value: PMC9489284
+authors:
+- authtype: Author
+  name: Sessa P
+- authtype: Author
+  name: Schiano Lomoriello A
+- authtype: Author
+  name: Duma GM
+- authtype: Author
+  name: Mento G
+- authtype: Author
+  name: De Stefani E
+- authtype: Author
+  name: Ferrari PF
+epubdate: 2022 Sep 21
+fulljournalname: 'Philosophical Transactions of the Royal Society B: Biological Sciences'
+issue: '1863'
+pages: '20210190'
+pmclivedate: 2022/10/03
+printpubdate: 2022 Nov 7
+pubdate: 2022 Sep 21
+sortdate: 2022/09/21 00:00
+source: Philos Trans R Soc Lond B Biol Sci
+title: 'Degenerate pathway for processing smile and other emotional expressions in
+  congenital facial palsy: an hdEEG investigation'
+uid: '9489284'
+volume: '377'
