@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fnhum.2022.921347
+- idtype: pmcid
+  value: PMC9530400
+authors:
+- authtype: Author
+  name: Mossad SI
+- authtype: Author
+  name: Vandewouw MM
+- authtype: Author
+  name: de Villa K
+- authtype: Author
+  name: Pang EW
+- authtype: Author
+  name: Taylor MJ
+epubdate: 2022 Sep 20
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '921347'
+pmclivedate: 2022/10/05
+printpubdate: ''
+pubdate: 2022 Sep 20
+sortdate: 2022/09/20 00:00
+source: Front Hum Neurosci
+title: Characterising the spatial and oscillatory unfolding of Theory of Mind in adults
+  using fMRI and MEG
+uid: '9530400'
+volume: '16'
