@@ -1,19 +1,19 @@
 ---
 title: Localizing sources of neural sources using beamformer techniques
-tags: [paris2019, meg, sourceanalysis, beamformer, mmfaces]
+tags: [practicalmeeg2022, meg, sourceanalysis, beamformer, mmfaces]
 ---
 
 # Localizing sources of neural activity using beamformer techniques
 
 {% include markup/info %}
-This tutorial was written specifically for the [PracticalMEEG workshop in Paris](/workshop/paris2019) in December 2019.
+This tutorial was written specifically for the [PracticalMEEG workshop in Paris](/workshop/practicalmeeg2022) in December 2019.
 {% include markup/end %}
 
 ## Introduction
 
 In this tutorial you will learn about applying beamformer techniques in the time domain, using MEG data from an Neuromag/Elekta/MEGIN system. Using beamformers on Neuromag/Elekta/MEGIN data is somewhat more challenging than using beamformers on (for instance) CTF data. This is for two reasons: 1) Elekta MEG data consists of signals of different sensor types (magnetometers and planar gradiometers), and 2) the data are often heavily rank-deficient due to the application of the Maxfilter to clean the data of (movement) artifacts.
 
-It is expected that you understand the previous steps of preprocessing and filtering the sensor data, as covered in the [raw2erp tutorial](/workshop/paris2019/handson_raw2erp). Also, you need to understand how to create a subject specific headmodel and sourcemodel, as explained in the [head- and sourcemodel tutorial](/workshop/paris2019/handson_anatomy).
+It is expected that you understand the previous steps of preprocessing and filtering the sensor data, as covered in the [raw2erp tutorial](/workshop/practicalmeeg2022/handson_raw2erp). Also, you need to understand how to create a subject specific headmodel and sourcemodel, as explained in the [head- and sourcemodel tutorial](/workshop/practicalmeeg2022/handson_anatomy).
 
 This tutorial will not cover the frequency-domain option for DICS/PCC beamformers (which is explained [here](/tutorial/beamformer)), nor how to compute minimum-norm-estimated sources of evoked/averaged data (which is explained [here](/tutorial/minimumnormestimate)).
 
@@ -21,7 +21,7 @@ This tutorial will not cover the frequency-domain option for DICS/PCC beamformer
 
 To localise the evoked sources for this example dataset we will perform the following steps:
 
-- Read the data into MATLAB using the same strategy as in the [raw2erp tutorial](/workshop/paris2019/handson_raw2erp).
+- Read the data into MATLAB using the same strategy as in the [raw2erp tutorial](/workshop/practicalmeeg2022/handson_raw2erp).
 - Spatially whiten the data to account for differences in sensor type (magnetometers versus gradiometers) with **[ft_denoise_prewhiten](/reference/ft_denoise_prewhiten)**
 - Compute the covariance matrix using the function **[ft_timelockanalysis](/reference/ft_timelockanalysis)**.
 - Construct the leadfield matrix using **[ft_prepare_leadfield](/reference/ft_prepare_leadfield)**, in combination with the previously computed head- and sourcemodels + the whitened gradiometer array.
@@ -32,7 +32,7 @@ To localise the evoked sources for this example dataset we will perform the foll
 
 ### Reading the data, and some issues with covariance matrices
 
-The aim is to reconstruct the sources underlying the event-related field, when the subject is presented with pictures of faces. in the [raw2erp tutorial](/workshop/paris2019/handson_raw2erp) we have computed sensor-level event-related fields, but we also stored the single-epoch data. We start off by loading the precomputed single-epoch data, and the headmodel and sourcemodel that were created during the [anatomy tutorial](/workshop/paris2019/handson_sourceanalysis).
+The aim is to reconstruct the sources underlying the event-related field, when the subject is presented with pictures of faces. in the [raw2erp tutorial](/workshop/practicalmeeg2022/handson_raw2erp) we have computed sensor-level event-related fields, but we also stored the single-epoch data. We start off by loading the precomputed single-epoch data, and the headmodel and sourcemodel that were created during the [anatomy tutorial](/workshop/practicalmeeg2022/handson_sourceanalysis).
 
     subj = datainfo_subject(15);
     filename = fullfile(subj.outputpath, 'raw2erp', subj.name, sprintf('%s_data', subj.name));
@@ -64,7 +64,7 @@ Now, if we reorder the channels a bit, we can visualise this covariance matrix a
     C = baseline_avg.cov([find(selmag);find(selgrad)],[find(selmag);find(selgrad)]);
     figure;imagesc(C);hold on;plot(102.5.*[1 1],[0 306],'w','linewidth',2);plot([0 306],102.5.*[1 1],'w','linewidth',2);
 
-{% include image src="/assets/img/workshop/paris2019/cov_meg.png" width="400" %}
+{% include image src="/assets/img/workshop/practicalmeeg2022/cov_meg.png" width="400" %}
 
 _Figure: MEG sensor covariance matrix_
 
@@ -76,7 +76,7 @@ To make this a bit more concrete, we first will have a look at the singular valu
     [u,s,v] = svd(baseline_avg.cov);
     figure;plot(log10(diag(s)),'o');
 
-{% include image src="/assets/img/workshop/paris2019/cov_svd.png" width="400" %}
+{% include image src="/assets/img/workshop/practicalmeeg2022/cov_svd.png" width="400" %}
 
 _Figure: Singular values of a MEG sensor covariance matrix_
 
@@ -120,7 +120,7 @@ A byproduct of the magnetometers and gradiometers being represented at a similar
     cfg.layout = layout;
     dataw_meg  = ft_rejectvisual(cfg, dataw_meg);
 
-{% include image src="/assets/img/workshop/paris2019/rejectvisual.png" width="600" height="600"%}
+{% include image src="/assets/img/workshop/practicalmeeg2022/rejectvisual.png" width="600" height="600"%}
 
 _Figure: Visual artifact rejection window_
 
@@ -142,7 +142,7 @@ For a beamformer analysis, we need to compute the covariance between all pairs o
 
 ## Computation of the forward model
 
-For a beamformer analysis, we need to predefine a set of dipole locations to be scanned. Typically, this set of dipole locations is defined on a 3D grid, to allow for volumetric postprocessing possibilities (for instance volumetric spatial normalisation for group statistics). Alternatively, we can use a set of dipole locations defined on the cortical sheet, e.g., as per the sourcemodel created in the [head- and sourcemodel tutorial](/workshop/paris2019/handson_anatomy). With the surface-based models being registered to a template, postprocessing is relatively straightforward. Moreover, parcellation of the source reconstructed results using surface-based atlases can be easily achieved.
+For a beamformer analysis, we need to predefine a set of dipole locations to be scanned. Typically, this set of dipole locations is defined on a 3D grid, to allow for volumetric postprocessing possibilities (for instance volumetric spatial normalisation for group statistics). Alternatively, we can use a set of dipole locations defined on the cortical sheet, e.g., as per the sourcemodel created in the [head- and sourcemodel tutorial](/workshop/practicalmeeg2022/handson_anatomy). With the surface-based models being registered to a template, postprocessing is relatively straightforward. Moreover, parcellation of the source reconstructed results using surface-based atlases can be easily achieved.
 
 Finally, with the beamformer solution on the cortical surface, it can be easily compared to a MNE solution, should one be inclined to do so. It is important to note that 1) the metric units of the geometric objects are identical to one another, and 2) to use here the gradiometer array from the whitened data, because we will also use the whitened data for the source reconstruction. With respect to point 1, FieldTrip will check for this, but to be sure, we ensure the equality of metric units explicitly.
 
@@ -230,7 +230,7 @@ The content of source.avg is the interesting stuff. Particularly, the 'mom' fiel
     source.pos = inflated.pos;
     figure; ft_sourceplot_interactive(cfg, source);
 
-{% include image src="/assets/img/workshop/paris2019/lcmv_avgovercortex.png" width="400" %}{% include image src="/assets/img/workshop/paris2019/lcmv_inflated_visualvc.png" width="400" %}{% include image src="/assets/img/workshop/paris2019/lcmv_vc_timecourse.png" width="400"%}
+{% include image src="/assets/img/workshop/practicalmeeg2022/lcmv_avgovercortex.png" width="400" %}{% include image src="/assets/img/workshop/practicalmeeg2022/lcmv_inflated_visualvc.png" width="400" %}{% include image src="/assets/img/workshop/practicalmeeg2022/lcmv_vc_timecourse.png" width="400"%}
 
 _Figure: Interactive figure windows to inspect virtual channels_
 

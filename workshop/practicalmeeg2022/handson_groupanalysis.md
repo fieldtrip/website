@@ -1,12 +1,12 @@
 ---
 title: Group analysis
-tags: [paris2019, meg, timelock, statistics, plotting, mmfaces]
+tags: [practicalmeeg2022, meg, timelock, statistics, plotting, mmfaces]
 ---
 
 # Group-level statistics with parametric and non-parametric methods
 
 {% include markup/info %}
-This tutorial was written specifically for the [PracticalMEEG workshop in Paris](/workshop/paris2019) in December 2019, and is an adjusted version of the [event-related statistics tutorial](/tutorial/eventrelatedstatistics).
+This tutorial was written specifically for the [PracticalMEEG workshop in Paris](/workshop/practicalmeeg2022) in December 2019, and is an adjusted version of the [event-related statistics tutorial](/tutorial/eventrelatedstatistics).
 {% include markup/end %}
 
 ## Introduction
@@ -15,7 +15,7 @@ This tutorial provides an introduction into different options for statistical an
 
 To introduce the issue of multiple comparisons, we will start with an analysis for a single hand-picked channel/parcel analysis. After that we will consider analyses that take all virtual channels and all timepoints into account. We will start with some basic statistical testing using the MATLAB statistics toolbox and compare the results with that from using the FieldTrip **[ft_timelockstatistics](/reference/ft_timelockstatistics)** function. Topics that will be covered are parametric statistics on a single channel and time-window, the multiple comparison problem (MCP), non-parametric randomization testing and cluster-based testing.
 
-This tutorial uses the same [multimodal faces](/workshop/paris2019/dataset) as the other tutorials in this series. However, here we will deal with (statistical) analyses on the group level. We will look at differences between the familiar, unfamiliar and scrambled face conditions in a within-subjects design. The processed dataset in this tutorial contains source reconstructed data from all 20 subjects. The virtual-channel ERFs were obtained using **[ft_sourceanalysis](/reference/ft_sourceanalysis)** and **[ft_sourceparcellate](/reference/ft_sourceparcellate)**. For the purpose of inspecting your data visually, we also use the channel-level plotting functions and **[ft_timelockgrandaverage](/reference/ft_timelockgrandaverage)** to calculate the grand average across participants.
+This tutorial uses the same [multimodal faces](/workshop/practicalmeeg2022/dataset) as the other tutorials in this series. However, here we will deal with (statistical) analyses on the group level. We will look at differences between the familiar, unfamiliar and scrambled face conditions in a within-subjects design. The processed dataset in this tutorial contains source reconstructed data from all 20 subjects. The virtual-channel ERFs were obtained using **[ft_sourceanalysis](/reference/ft_sourceanalysis)** and **[ft_sourceparcellate](/reference/ft_sourceparcellate)**. For the purpose of inspecting your data visually, we also use the channel-level plotting functions and **[ft_timelockgrandaverage](/reference/ft_timelockgrandaverage)** to calculate the grand average across participants.
 
 Note that in this tutorial we will not provide detailed information about statistics on channel-level power spectra, time-frequency representations of power (as obtained from **[ft_freqanalysis](/reference/ft_freqanalysis)**), nor on high-density volumetric or cortical sheet source reconstruction results. However, FieldTrip does have similar statistical options for this as well: at the sensor-level we have the **[ft_freqstatistics](/reference/ft_freqstatistics)** function, and on the source-level (statistics on source reconstructed activity), we have the **[ft_sourcestatistics](/reference/ft_sourcestatistics)** function.
 
@@ -46,7 +46,7 @@ We will perform the following steps in this tutorial:
 
 ## Reading-in preprocessed and time-locked data in planar gradient format, and grand averaged data
 
-To begin with we will load the source reconstructed and parcellated results from all individual subjects. These result from the [source analysis pipeline](/workshop/paris2019/handson_sourceanalysis). The result of the source analysis pipeline is represented in the valable `mom`, which stands for "dipole moment". However, the FieldTrip code that we will use in this hands-on session expects channel-level data; hence we will rename the `mon` variable into `avg` to make the data appear as if it is the result of a straightforward channel-level analysis.
+To begin with we will load the source reconstructed and parcellated results from all individual subjects. These result from the [source analysis pipeline](/workshop/practicalmeeg2022/handson_sourceanalysis). The result of the source analysis pipeline is represented in the valable `mom`, which stands for "dipole moment". However, the FieldTrip code that we will use in this hands-on session expects channel-level data; hence we will rename the `mon` variable into `avg` to make the data appear as if it is the result of a straightforward channel-level analysis.
 
     % load individual subject data
     clear subj
@@ -117,7 +117,7 @@ Using this layout, we can plot all channels:
     cfg.layout = layout;
     ft_multiplotER(cfg, grandavg_famous, grandavg_unfamiliar, grandavg_scrambled);
 
-{% include image src="/assets/img/workshop/paris2019/groupanalysis/figure1.png" width="400" %}
+{% include image src="/assets/img/workshop/practicalmeeg2022/groupanalysis/figure1.png" width="400" %}
 
 _Figure; ERPs for each virtual channel (parcel)_
 
@@ -129,7 +129,7 @@ Channel/parcel number 291 has a clear ERP, which is different between the face c
 
 Note that you can also very easily make this figure using the standard MATLAB [plot](https://nl.mathworks.com/help/matlab/ref/plot.html) function.
 
-{% include image src="/assets/img/workshop/paris2019/groupanalysis/figure2.png" width="400" %}
+{% include image src="/assets/img/workshop/practicalmeeg2022/groupanalysis/figure2.png" width="400" %}
 
 _Figure; Comparing the ERPs on the virtual channel (parcel) of interest_
 
@@ -148,7 +148,7 @@ We can use the `brainordinate` field of one of the subjects to determine where t
     view(0, -45)
     camlight
 
-{% include image src="/assets/img/workshop/paris2019/groupanalysis/figure3.png" width="400" %}
+{% include image src="/assets/img/workshop/practicalmeeg2022/groupanalysis/figure3.png" width="400" %}
 
 _Figure; Location of the parcel corresponding to the virtual channel of interest_
 
@@ -179,7 +179,7 @@ From the grand average plot we can zoom in on our comparison of interest and onl
     end
     legend({'famous', 'scrambled'})
 
-{% include image src="/assets/img/workshop/paris2019/groupanalysis/figure4.png" width="400" %}
+{% include image src="/assets/img/workshop/practicalmeeg2022/groupanalysis/figure4.png" width="400" %}
 
 _Figure; Single subject results, the time window of interest is highlighted_
 
@@ -203,7 +203,7 @@ We can also plot the differences between conditions, for each subject, in a diff
     figure; plot(M', 'o-'); xlim([0.5 2.5])
     legend({subj.name}, 'location', 'EastOutside');
 
-{% include image src="/assets/img/workshop/paris2019/groupanalysis/figure5.png" width="400" %}
+{% include image src="/assets/img/workshop/practicalmeeg2022/groupanalysis/figure5.png" width="400" %}
 
 _Figure; Single subject results, averaged for the channel of interest and the time window of interest_
 
@@ -292,7 +292,7 @@ In the previous paragraph we picked a channel/parcel and time window by hand aft
     figure; ft_multiplotER(cfg, grandavg_effect)
     title('Parametric: significant without multiple comparison correction')
 
-{% include image src="/assets/img/workshop/paris2019/groupanalysis/figure6.png" width="400" %}
+{% include image src="/assets/img/workshop/practicalmeeg2022/groupanalysis/figure6.png" width="400" %}
 
 _Figure; Parametric test, plot of the effect size with significant channels in red_
 
@@ -380,7 +380,7 @@ This is implemented in FieldTrip in the function **[ft_statistics_montecarlo](/r
     figure; ft_multiplotER(cfg, grandavg_effect)
     title('Nonparametric: significant without multiple comparison correction')
 
-{% include image src="/assets/img/workshop/paris2019/groupanalysis/figure7.png" width="400" %}
+{% include image src="/assets/img/workshop/practicalmeeg2022/groupanalysis/figure7.png" width="400" %}
 
 _Figure; Nonparametric test, plot of the effect size with significant channels in red_
 
@@ -442,7 +442,7 @@ If your channels in the data are close to each other, you can also use the featu
     figure; ft_multiplotER(cfg, grandavg_effect)
     title('Nonparametric: significant after cluster-based correction')
 
-{% include image src="/assets/img/workshop/paris2019/groupanalysis/figure8.png" width="400" %}
+{% include image src="/assets/img/workshop/practicalmeeg2022/groupanalysis/figure8.png" width="400" %}
 
 _Figure; Nonparametric test, cluster-based correction for multiple comparisons_
 
@@ -465,7 +465,7 @@ Although a single test is performed to test exchangeability of the whole data ov
     colorbar
     camlight
 
-{% include image src="/assets/img/workshop/paris2019/groupanalysis/figure9.png" width="400" %}
+{% include image src="/assets/img/workshop/practicalmeeg2022/groupanalysis/figure9.png" width="400" %}
 
 _Figure; Spatial distribution of p-values over the parcels_
 

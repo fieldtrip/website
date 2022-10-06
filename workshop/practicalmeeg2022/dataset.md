@@ -1,6 +1,6 @@
 ---
 title: Multimodal faces dataset
-tags: [paris2019, mmfaces]
+tags: [practicalmeeg2022, mmfaces]
 ---
 
 ## Multimodal faces dataset
