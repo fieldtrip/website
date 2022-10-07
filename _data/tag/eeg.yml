@@ -262,3 +262,21 @@
 - name:  PracticalMEEG workshop in Aix-en-Provence
   link:  /workshop/practicalmeeg2022
 
+- name:  Multimodal faces dataset
+  link:  /workshop/practicalmeeg2022/dataset
+
+- name:  Creation of headmodels and sourcemodels for source reconstruction
+  link:  /workshop/practicalmeeg2022/handson_anatomy
+
+- name:  Group analysis
+  link:  /workshop/practicalmeeg2022/handson_groupanalysis
+
+- name:  From raw data to ERP
+  link:  /workshop/practicalmeeg2022/handson_raw2erp
+
+- name:  Time-frequency analysis using Hanning window, multitapers and wavelets
+  link:  /workshop/practicalmeeg2022/handson_sensoranalysis
+
+- name:  Localizing sources of neural sources using beamformer techniques
+  link:  /workshop/practicalmeeg2022/handson_sourceanalysis
+

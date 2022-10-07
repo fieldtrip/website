@@ -136,3 +136,6 @@
 - name:  Time-frequency analysis using Hanning window, multitapers and wavelets
   link:  /workshop/paris2019/handson_sensoranalysis
 
+- name:  Time-frequency analysis using Hanning window, multitapers and wavelets
+  link:  /workshop/practicalmeeg2022/handson_sensoranalysis
+
