@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '36166234'
+- idtype: doi
+  value: 10.1167/jov.22.10.20
+- idtype: pmcid
+  value: PMC9531462
+authors:
+- authtype: Author
+  name: Davidson MJ
+- authtype: Author
+  name: Macdonald JS
+- authtype: Author
+  name: Yeung N
+epubdate: 2022 Sep 27
+fulljournalname: Journal of Vision
+issue: '10'
+pages: '20'
+pmclivedate: 2022/10/05
+printpubdate: ''
+pubdate: 2022 Sep 27
+sortdate: 2022/09/27 00:00
+source: J Vis
+title: Alpha oscillations and stimulus-evoked activity dissociate metacognitive reports
+  of attention, visibility, and confidence in a rapid visual detection task
+uid: '9531462'
+volume: '22'

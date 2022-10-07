@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fnhum.2022.1009223
+- idtype: pmcid
+  value: PMC9532054
+authors:
+- authtype: Author
+  name: Campbell BA
+- authtype: Author
+  name: Favi Bocca L
+- authtype: Author
+  name: Escobar Sanabria D
+- authtype: Author
+  name: Almeida J
+- authtype: Author
+  name: Rammo R
+- authtype: Author
+  name: Nagel SJ
+- authtype: Author
+  name: Machado AG
+- authtype: Author
+  name: Baker KB
+epubdate: 2022 Sep 20
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '1009223'
+pmclivedate: 2022/10/05
+printpubdate: ''
+pubdate: 2022 Sep 20
+sortdate: 2022/09/20 00:00
+source: Front Hum Neurosci
+title: The impact of pulse timing on cortical and subthalamic nucleus deep brain stimulation
+  evoked potentials
+uid: '9532054'
+volume: '16'
