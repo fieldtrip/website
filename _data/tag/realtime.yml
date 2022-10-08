@@ -109,6 +109,9 @@
 - name:  TOBI - Tools for Brain-Computer Interaction
   link:  /development/realtime/tobi
 
+- name:  Unicorn Hybrid Black
+  link:  /development/realtime/unicorn
+
 - name:  Example real-time average
   link:  /example/ft_realtime_average
 
