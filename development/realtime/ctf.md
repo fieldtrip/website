@@ -17,9 +17,13 @@ A specific application for the CTF real-time interface is to monitor and minimiz
 
 ## Interface with MATLAB and FieldTrip
 
-Multiple real-time interfaces have been developed over the years. The first version (ctf2ft_v1, originally known as AcqBuffer) only maintains the shared memory to allow it to be used as an ever-lasting ring buffer, but does not copy the data to the FieldTrip buffer. This version can be used in combination with the **ft_realtime_ctfproxy.m** function in MATLAB running on the acquisition computer. The header details must be read from the res4 file on the local filesystem. Although now **deprecated**, this is explained in more detail further down on this page.
+Multiple real-time interfaces have been developed over the years.
 
-### Network-transparent interface
+### Version 1 using shared memory
+
+The first version (ctf2ft_v1, originally known as AcqBuffer) only maintains the shared memory to allow it to be used as an ever-lasting ring buffer, but does not copy the data to the FieldTrip buffer. This version can be used in combination with the **ft_realtime_ctfproxy.m** function in MATLAB running on the acquisition computer. The header details must be read from the res4 file on the local filesystem. Although now **deprecated**, this is explained in more detail further down on this page.
+
+### Version 2 using network-transparent interface
 
 The second version (ctf2ft_v2, originally known as acq2ft) combines the access to shared memory with copying to the FieldTrip buffer to make the data available elsewhere on the network. It operates by grabbing one packet (setup or data) at a time out of the shared memory, and more or less directly transferring it into a FieldTrip buffer that is started by the **ctf2ft_v2** application itself, or a buffer that is running separately on the same computer or elsewhere on the network.
 
@@ -43,12 +47,11 @@ to spawn at server at the given "port". You can also tell **ctf2ft_v2** to strea
 Please note that for this to work, you will need to start up the remote buffer _before_ **ctf2ft_v2**.
 Once **ctf2ft_v2** is happily up and running, you can start **Acq** from a different command line or using existing GUI tools.
 
-Since streaming the data to a remote [FieldTrip buffer](/development/realtime/buffer) might incur a delay due to network traffic, **ctf2ft_v2** employs an internal ring buffer
-for up to 10 data packets and a simple (socket pair) mechanism to synchronize between copying data packets from the shared memory to the internal ring buffer, and streaming the data from the ring buffer to the [FieldTrip buffer](/development/realtime/buffer). This means that small delays should not interfere with the time-critical operation of clearing up slots in the shared memory segment, as long as the average throughput is high enough.
+Since streaming the data to a remote [FieldTrip buffer](/development/realtime/buffer) might incur a delay due to network traffic, **ctf2ft_v2** employs an internal ring buffer for up to 10 data packets and a simple (socket pair) mechanism to synchronize between copying data packets from the shared memory to the internal ring buffer, and streaming the data from the ring buffer to the [FieldTrip buffer](/development/realtime/buffer). This means that small delays should not interfere with the time-critical operation of clearing up slots in the shared memory segment, as long as the average throughput is high enough.
 
-### Downsampling, channel selection, applying gains
+### Version 3 with downsampling, channel selection, applying gains
 
-The most recent interface, called **ctf2ft_v3**, does everything that version 2 does but has the additional ability to downsample the incoming CTF data, apply the correct sensor gains, and write out only selected channels. This application is started like this:
+The most recent interface, called **ctf2ft_v3**, does everything that version 2 does, but has the additional ability to downsample the incoming CTF data, apply the correct sensor gains, and write out only selected channels. This application is started like this:
 
     ctf2ft_v3 hostname:port:flags:decimation:channels
 
@@ -67,10 +70,10 @@ Note that the previous command should all be on a single line.
 
 On the command line, change to the "realtime/acquisition/ctf" directory and type "make". This will produce all versions of the interface, as well as some tools for testing and managing the shared memory. Note that you might need to compile the buffer library first.
 
-## Original interface between MATLAB and shared memory
+## Original v1 interface using shared memory
 
 {% include markup/danger %}
-This documentation is for historical purposes only, its use is not recommended. The **ctf2ft_v3** implementation has been extensively tested at the DCCN and is preferred.
+This documentation is for historical purposes only, its use is not recommended. The **ctf2ft_v3** implementation has been extensively tested at the DCCN and should be used instead.
 {% include markup/end %}
 
 In FieldTrip it is possible to use the fileio module to read from shared memory. Because the shared memory also has to be freed to ensure that the Acq software continues writing to it, the **ctf2ft_v1** application has to be running in the background. It constantly loops over the 600 packets in shared memory, and if there are less than 20 packets free, it memcpy's the "setup" packet (containing the name of the res4 file that has the full header details in it) to the next packet, thereby freeing the packet previously containing the setup. This procedure ensures that the content of the setup packet can always be read, even while it is being copied.
@@ -79,7 +82,7 @@ In FieldTrip it is possible to use the fileio module to read from shared memory.
 
 The **[ft_realtime_ctfproxy](/reference/realtime/example/ft_realtime_ctfproxy)** function (part of the realtime module in FieldTrip) reads the MEG data from shared memory and writes to a [FieldTrip buffer](/development/realtime/buffer). The FieldTrip buffer is a multi-threaded and network transparent buffer that allows data to be streamed to it, while at the same time allowing another MATLAB session on the same or another computer to read data from the buffer for analysis.
 
-Subsequently in another MATLAB session you can read from the FieldTrip buffer using the **[ft_read_header](/reference/fileio/ft_read_header)**, **[ft_read_data](/reference/fileio/ft_read_data)** and **[ft_read_event](/reference/fileio/ft_read_event)** functions by specifying %%'buffer://hostname:port'%% as the filename to the reading functions.
+Subsequently in another MATLAB session you can read from the FieldTrip buffer using the **[ft_read_header](/reference/fileio/ft_read_header)**, **[ft_read_data](/reference/fileio/ft_read_data)** and **[ft_read_event](/reference/fileio/ft_read_event)** functions by specifying `'buffer://hostname:port'` as the filename to the reading functions.
 
 {% include image src="/assets/img/development/realtime/ctf/acq_nt_scheme.png" %}
 
@@ -150,18 +153,22 @@ There is a problem in the CTF acquisition software that sometimes causes the sha
        int data[28160];
     } ACQ_MessagePacketType;
 
-So in total each packet is 5*4+28160*4 bytes long, and there are 600 of those in shared memory. If the numChannels\*numSamples of the previous block is slightly larger than 28160, it means that Acq is trying to write more data points into the "data" section of that packet than fits in, causing the data to flow over into the next packet. The first couple of integers in the next packet (indicating the Type and other details) are therefore messed up, and Aqc thinks that that packet is already filled. Then it stops writing to shared memory altogether.
+So in total each packet is `5*4+28160*4` bytes long, and there are 600 of those in shared memory. If the `numChannels*numSamples` of the previous block is slightly larger than 28160, it means that Acq is trying to write more data points into the "data" section of that packet than fits in, causing the data to flow over into the next packet. The first couple of integers in the next packet (indicating the Type and other details) are therefore messed up, and Aqc thinks that that packet is already filled. Then it stops writing to shared memory altogether.
 
-I have tested this idea with a specially tweaked version of my AcqBuffer shared memory "maintenance" program and indeed see this happen for a data block that has 91\*310=28210 samples in it, which is 50 more than the 28160 that would fit in. The next block is therefore corrupt.
+I have tested this idea with a specially tweaked version of my AcqBuffer shared memory "maintenance" program and indeed see this happen for a data block that has `91*310=28210` samples in it, which is 50 more than the 28160 that would fit in. The next block is therefore corrupt.
 
 Now understanding the problem, we can start thinking about a solution. Somehow in the CTF code there is an incorrect estimate of the number of samples that fits into a block. Probably we can play with the channel number to circumvent the problem. Given a certain channel number, Acq will have to determine how many samples fit into a single block. I suspect the bug in the Acq code to be something like
-sampleNumber = round(28160/numChannels)
+
+    sampleNumber = round(28160/numChannels)
+
 where it should be
-sampleNumber = floor(28160/numChannels)
-i.e. rounding off to the bottom. To solve this, we can look at
+
+    sampleNumber = floor(28160/numChannels)
+
+i.e., rounding off to the bottom. To solve this, we can look at
 
     for chancount=1:500
-    success(chancount) = ((round(28160/chancount).*chancount)<=28160);
+      success(chancount) = ((round(28160/chancount).*chancount)<=28160);
     end
 
     >> find(success)
