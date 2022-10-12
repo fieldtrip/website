@@ -1,100 +1,112 @@
 ---
-title: Combine MEG with Eyelink eyetracker data to mark EOG artifacts
+title: Combine MEG with Eyelink eyetracker data
 tags: [example, artifact, preprocessing, eyelink, eog]
 ---
 
-# Combine MEG with Eyelink eyetracker data to mark EOG artifacts
+# Combine MEG with Eyelink eyetracker data
 
 ## Description
 
-This script demonstrates how you can use ICA for cleaning the EOG artifacts from your MEG data. It consists of three steps:
+This example demonstrates how you can combine detailed information from Eyelink eyetracker data with the MEG data to mark eye movement events. The Eyelink eyetracker data contains timing information about blinks and saccades, which can inform the MEG data analysis, for artifact identification/rejection purposes, or for experimental reasons. Upon data acquisition, the Eyelink can be set up (or is set up by default), to mark saccades and blinks in the output file. This identification scheme is based on certain heuristics (e.g. velocity thresholding of the eye position traces to identify saccades), and may be configured by the researcher. Under the assumption that the parameters have been judiciously specified, it may be useful to use this timing information in the downstream analysis. This could replace an ad-hoc analysis of the eyetracker data that has been recorded along with the MEG data.
 
-1.  decomposition of the MEG data
-2.  identifying the components that reflect eye artifacts
-3.  removing those components and backprojecting the data
+### Why use information from the Eyelink and not use the eyetracker traces from the MEG data?
+
+The advantage of an ad-hoc analysis of the eyetracker traces that have been collected along with the MEG data, is that the extracted events will be easily synchronized with the timing in the MEG data. This is simply because all data traces have the same shared time axis. The event timings that are stored in the Eyelink file are relative to the Eyelink recording, and need to be mapped onto the timings in the MEG recording. The latter recording might have been started either before or after the Eyelink recording, and moreover will very likely have a different sampling frequency. The example below explains how this mapping can be performed.
+The advantage of using the marked events from the Eyelink data, is that you don't need to rely on your own implementation of the artifact marking, which forn instance can be achieved using **[ft_artifact_zvalue](/reference/ft_artifact_zvalue)** on one of the eyetracker signals, in combination with well chosen set of processing parameters. Instead, you will rely on the heuristics that Eyelink has used to mark events.  
+
+## Procedure
+
+In order to express the timing of the events from the Eyelink file relative to the MEG recording, the following steps are needed:
+
+1. Identification of corresponding events in both datasets.
+2. Computation of the mapping between the two sets of events.
+3. Adjustment of the Eyelink event times
 
 ## Example dataset
 
-You can run the code below on your own data. Alternatively, try with the [ArtifactMEG.zip](https://download.fieldtriptoolbox.org/tutorial/ArtifactMEG.zip) example MEG dataset. This dataset was acquired continuously with trials of 10 seconds. All figures in this example script are based on these data.
+The dataset used for this example is the first session of the first subject of the Sherlock dataset, which can be downloaded from [the Donders Data Repository](https://doi.org/10.34973/5rpw-rn92). The example can be adjusted to use your own data, under the assumption that the converted Eyelink ASC-file (obtained by running EDF2ASC, see the [Eyelink](/getting_started/eyelink) getting started page) contains the trigger information sent by the presentation computer during the experiment. 
 
-To load this dataset into MATLAB and preprocess with FieldTrip, use:
+### What to do if my experimental data does not contain any triggers, or when the Eyelink data does not contain them?
 
-    % preprocessing of example dataset
-    cfg = [];
-    cfg.dataset            = 'ArtifactMEG.ds';
-    cfg.trialdef.eventtype = 'trial';
-    cfg = ft_definetrial(cfg);
+In this case, you would need to align the signals in a different way. This is not covered by the current example. You could consider to cross-correlate the Eyelink traces with the corresponding traces in the MEG data. This is not trivial at all, due to the difference in sampling frequency.
 
-    cfg.channel            = 'MEG';
-    cfg.continuous         = 'yes';
-    data = ft_preprocessing(cfg);
+## Identification of corresponding events in both datasets
 
-    % downsample the data to speed up the next step
-    cfg = [];
-    cfg.resamplefs = 300;
-    cfg.detrend    = 'no';
-    data = ft_resampledata(cfg, data);
+We start by reading the events from both files.
 
-## ICA decomposition
+    fname_meg = '/Users/jansch/Desktop/sub-001/ses-001/meg/sub-001_ses-001_task-compr_meg.ds';
+	fname_asc = '/Users/jansch/Desktop/sub-001/ses-001/eyelink/sub-001_ses-001_eye.asc';
 
-After reading in the preprocessed data into memory in FieldTrip format, you can continue with decomposing it in independent components.
+	event_meg = ft_read_event(fname_meg);
+	event_asc = ft_read_event(fname_asc);
 
-    % perform the independent component analysis (i.e., decompose the data)
-    cfg        = [];
-    cfg.method = 'runica'; % this is the default and uses the implementation from EEGLAB
+The experimental setup at the DCCN is such that triggers, sent by the stimulus presentation computer, end up as events in both datasets. In the MEG data, these are represented as events of the type 'UPPT001', and in the Eyelink data these events are known as 'INPUT'-type events. The Eyelink also explicitly codes the pulse triggers going back to zero as a separate event, so these need to be removed.
 
-    comp = ft_componentanalysis(cfg, data);
+	selmeg = strcmp({event_meg.type}', 'UPPT001');
+	event_meg = event_meg(selmeg);
+	
+	event_asc_all = event_asc;
+	selasc = strcmp({event_asc.type}', 'INPUT');
+	event_asc = event_asc(selasc);
+	
+	val = [event_asc.value];
+	event_asc = event_asc(val~=0);
 
-Note that this is a time-consuming step. The output "comp" structure resembles the input raw data structure, i.e. it contains a time course for each component and each trial. Furthermore, it contains the spatial mixing matrix. In principle you can continue analyzing the data on the component level by doing
+## Computation of the mapping between the two sets of events
 
-      cfg = [];
-      cfg = ...
-      freq = ft_freqanalysis(cfg, comp);
+The number of events are not necessarily matched. Under the assumption that a particular subset of the sequence of trigger events is reliably represented in both files, we can investigate whether the event sequences are 'left' or 'right' aligned. This works only of either one of the recordings has been started early (and may have captured some early triggers not present in the other recording), or one of the recordings has been stopped early (and may **not** have captured some late triggers, which are present in the other recording). More complicated mapping is not covered here.
 
-or
+	val_meg = [event_meg.value];
+	val_asc = [event_asc.value];
+	nmin = min(numel(val_meg), numel(val_asc));
+	if all(val_meg(1:nmin)==val_asc(1:nmin))
+  		% left-aligned
+  		event_meg = event_meg(1:nmin);
+  		event_asc = event_asc(1:nmin);
+	elseif all(val_meg(end:-1:(end-nmin+1))==val_asc(end:-1:(end-nmin+1)))
+  		% right-aligned
+  		if nmin==numel(event_meg)
+    		event_asc = event_asc((end-nmin+1):end);
+    		event_meg = event_meg(1:nmin);
+  		else
+    		event_meg = event_meg((end-nmin+1):end);
+    		event_asc = event_asc(1:nmin);
+  		end
+	end
 
-      cfg = [];
-      cfg = ...
-      timelock = ft_timelockanalysis(cfg, comp);
+## Adjustment of the Eyelink event times
 
-but for this example we want to analyze the data eventually on the original channel level and only remove the components that represent the artifacts.
+With the trigger events aligned, based on the trigger values, we can estimate the linear mapping between the event times. Assuming that the MEG recording represents a continuous recording, the information in `event_meg.sample` can be used to unambiguously link the MEG trigger to the MEG data. For the Eyelink data, there is no guarantee that this file is based on a continuous recording (at the time of writing this example, the author has come across some Eyelink with discontinuous time axes, which suggests that the researcher has paused the Eyelink recording during the MEG experiment). For this reason, to play safe, we will use the `event_asc.timestamp`, rather than `event_asc.sample`.
 
-## Identify the artifacts
+	smp_asc = [event_asc.timestamp];
+	smp_meg = [event_meg.sample]; % assuming MEG to be derived from a continuous recording
+	
+	offset_meg = mean(smp_meg);
+	offset_asc = mean(smp_asc);
+	
+	x = smp_asc - offset_asc;
+	y = smp_meg - offset_meg;
+	slope = y/x; % this should be about 1.2 (1kHz vs. 1.2kHz)
 
-    % plot the components for visual inspection
-    figure
-    cfg = [];
-    cfg.component = 1:20;       % specify the component(s) that should be plotted
-    cfg.layout    = 'CTF151.lay'; % specify the layout file that should be used for plotting
-    cfg.comment   = 'no';
-    ft_topoplotIC(cfg, comp)
+	% plot the residuals between the MEG samples and the 'modelled' MEG samples
+	res = smp_meg - offset_meg - slope.*(smp_asc - offset_asc); % conclusion: it is anywhere between -1.5 of 1.5 samples
+	figure;histogram(res);
 
-Make sure to plot and inspect all components. Write down the components that contain the eye artifacts. Very important is to know that on subsequent evaluations of the component decomposition result in components that **can have a different order**. That means that component numbers that you write down do not apply to another run of the ICA decomposition on the same data.
+As can be seen from the histogram, the difference in timing is on the order of less then 1.5 sample (@1.2 kHz), so that looks reasonable.
 
-{% include image src="/assets/img/example/ica_eog/ica_eog.png" width="600" %}
+{% include image src="/assets/img/example/meg_eyelink/histogram_trigger.png" width="600" %}
 
-The spatial topography of the components aids in interpreting whether a component represents activity from the cortex, or non-cortical physiological activity (muscle, eyes, heart) or even non-physiological activity (line noise and other environmental noise). If you are trained in this type of analysis, you can relatively easily spot the components that represent the eye movements: 9, 14 and 10.
+Then, to adjust the timing of **all** Eyelink events:
 
-Besides the spatial topography you should inspect the time course of the components, which gives additional information on separating the cortical from the non-cortical contributions to the data.
+	S    = [event_asc_all.timestamp];
+	Snew = slope.*(S-offset_asc) + offset_meg;
+	
+	% remap the event_asc_all's samples to samples of the MEG recording
+	% adjust the duration from milliseconds to samples, NOTE: this assumes 1kHz
+	% sampling, i.e. 1 timestamp step is 1 ms.
+	for k = 1:numel(event_asc_all)
+  		event_asc_all(k).sample = Snew(k);
+  		event_asc_all(k).duration = round(event_asc_all(k).duration.*slope); 
+	end
 
-For further inspection of the time course of the components, use:
-
-    cfg = [];
-    cfg.layout = 'CTF151.lay'; % specify the layout file that should be used for plotting
-    cfg.viewmode = 'component';
-    ft_databrowser(cfg, comp)
-
-You can browse through the components and the trials. The EOG artifacts can be easily identified in the time course plots, see the figure below for an example.
-
-{% include image src="/assets/img/example/ica_eog/compbrowser.png" width="600" %}
-
-## Remove the artifacts
-
-    % remove the bad components and backproject the data
-    cfg = [];
-    cfg.component = [9 10 14 24]; % to be removed component(s)
-    data = ft_rejectcomponent(cfg, comp, data)
-
-Compare the data before (red trace) and after (blue trace) the EOG removal - for example trial 4, channel MLF1
-
-{% include image src="/assets/img/example/ica_eog/ica_eog_after.png" width="400" %}
+## What next?
