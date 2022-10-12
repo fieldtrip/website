@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '34970709'
+- idtype: doi
+  value: 10.1007/s12021-021-09537-4
+- idtype: pmcid
+  value: PMC9546996
+authors:
+- authtype: Author
+  name: Robbins K
+- authtype: Author
+  name: Truong D
+- authtype: Author
+  name: Jones A
+- authtype: Author
+  name: Callanan I
+- authtype: Author
+  name: Makeig S
+epubdate: 2021 Dec 30
+fulljournalname: Neuroinformatics
+issue: '2'
+pages: 463-481
+pmclivedate: 2022/10/09
+printpubdate: '2022'
+pubdate: 2021 Dec 30
+sortdate: 2021/12/30 00:00
+source: Neuroinformatics
+title: 'Building FAIR Functionality: Annotating Events in Time Series Data Using Hierarchical
+  Event Descriptors (HED)'
+uid: '9546996'
+volume: '20'
