@@ -60,18 +60,18 @@ The number of events are not necessarily matched. Under the assumption that a pa
 	val_asc = [event_asc.value];
 	nmin = min(numel(val_meg), numel(val_asc));
 	if all(val_meg(1:nmin)==val_asc(1:nmin))
-  		% left-aligned
-  		event_meg = event_meg(1:nmin);
-  		event_asc = event_asc(1:nmin);
+  	  % left-aligned
+  	  event_meg = event_meg(1:nmin);
+  	  event_asc = event_asc(1:nmin);
 	elseif all(val_meg(end:-1:(end-nmin+1))==val_asc(end:-1:(end-nmin+1)))
-  		% right-aligned
-  		if nmin==numel(event_meg)
-    		event_asc = event_asc((end-nmin+1):end);
-    		event_meg = event_meg(1:nmin);
-  		else
-    		event_meg = event_meg((end-nmin+1):end);
-    		event_asc = event_asc(1:nmin);
-  		end
+  	  % right-aligned
+  	  if nmin==numel(event_meg)
+    	    event_asc = event_asc((end-nmin+1):end);
+    	    event_meg = event_meg(1:nmin);
+  	  else
+    	    event_meg = event_meg((end-nmin+1):end);
+    	    event_asc = event_asc(1:nmin);
+  	  end
 	end
 
 ## Adjustment of the Eyelink event times
@@ -105,8 +105,8 @@ Then, to adjust the timing of **all** Eyelink events:
 	% adjust the duration from milliseconds to samples, NOTE: this assumes 1kHz
 	% sampling, i.e. 1 timestamp step is 1 ms.
 	for k = 1:numel(event_asc_all)
-  		event_asc_all(k).sample = Snew(k);
-  		event_asc_all(k).duration = round(event_asc_all(k).duration.*slope); 
+  	  event_asc_all(k).sample = Snew(k);
+  	  event_asc_all(k).duration = round(event_asc_all(k).duration.*slope); 
 	end
 
 ## What next?
