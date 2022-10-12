@@ -28,6 +28,9 @@
 - name:  Use independent component analysis (ICA) to remove EOG artifacts
   link:  /example/ica_eog
 
+- name:  Combine MEG with Eyelink eyetracker data
+  link:  /example/meg_eyelink
+
 - name:  Interpolating data from the CTF151 to the CTF275 sensor array using megrealign
   link:  /example/megrealign
 

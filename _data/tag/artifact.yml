@@ -7,6 +7,9 @@
 - name:  Use independent component analysis (ICA) to remove EOG artifacts
   link:  /example/ica_eog
 
+- name:  Combine MEG with Eyelink eyetracker data
+  link:  /example/meg_eyelink
+
 - name:  Use denoising source separation (DSS) to remove ECG artifacts
   link:  /example/use_denoising_source_separation_dss_to_remove_ecg_artifacts
 
