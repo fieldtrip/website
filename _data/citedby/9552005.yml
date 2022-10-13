@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fpain.2022.962722
+- idtype: pmcid
+  value: PMC9552005
+authors:
+- authtype: Author
+  name: Silva-Passadouro B
+- authtype: Author
+  name: Delgado-Sanchez A
+- authtype: Author
+  name: Henshaw J
+- authtype: Author
+  name: Lopez-Diaz K
+- authtype: Author
+  name: Trujillo-Barreto NJ
+- authtype: Author
+  name: Jones AK
+- authtype: Author
+  name: Sivan M
+epubdate: 2022 Sep 27
+fulljournalname: Frontiers in Pain Research
+issue: ''
+pages: '962722'
+pmclivedate: 2022/10/12
+printpubdate: ''
+pubdate: 2022 Sep 27
+sortdate: 2022/09/27 00:00
+source: Front Pain Res (Lausanne)
+title: 'Frontal alpha asymmetry: A potential biomarker of approach-withdrawal motivation
+  towards pain'
+uid: '9552005'
+volume: '3'

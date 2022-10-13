@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '36171059'
+- idtype: doi
+  value: 10.1523/ENEURO.0159-22.2022
+- idtype: pmcid
+  value: PMC9536853
+authors:
+- authtype: Author
+  name: Rodriguez-Larios J
+- authtype: Author
+  name: ElShafei A
+- authtype: Author
+  name: Wiehe M
+- authtype: Author
+  name: Haegens S
+epubdate: 2022 Oct 4
+fulljournalname: eNeuro
+issue: '5'
+pages: ENEURO.0159-22.2022
+pmclivedate: 2022/10/11
+printpubdate: ''
+pubdate: 2022 Oct 4
+sortdate: 2022/10/04 00:00
+source: eNeuro
+title: Visual Working Memory Recruits Two Functionally Distinct Alpha Rhythms in Posterior
+  Cortex
+uid: '9536853'
+volume: '9'

@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '36130515'
+- idtype: doi
+  value: 10.1016/j.celrep.2022.111395
+- idtype: pmcid
+  value: PMC9552771
+- idtype: MID
+  value: NIHMS1837785
+authors:
+- authtype: Author
+  name: Zheng J
+- authtype: Author
+  name: Skelin I
+- authtype: Author
+  name: Lin JJ
+epubdate: ''
+fulljournalname: Cell reports
+issue: '12'
+pages: '111395'
+pmclivedate: 2022/10/11
+printpubdate: 2022 Sep 20
+pubdate: 2022 Sep 20
+sortdate: 2022/09/20 00:00
+source: Cell Rep
+title: Neural computations underlying contextual processing in humans
+uid: '9552771'
+volume: '40'

@@ -1,0 +1,44 @@
+articleids:
+- idtype: pmid
+  value: '35999054'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1812-21.2022
+- idtype: pmcid
+  value: PMC9546476
+authors:
+- authtype: Author
+  name: Groen II
+- authtype: Author
+  name: Piantoni G
+- authtype: Author
+  name: Montenegro S
+- authtype: Author
+  name: Flinker A
+- authtype: Author
+  name: Devore S
+- authtype: Author
+  name: Devinsky O
+- authtype: Author
+  name: Doyle W
+- authtype: Author
+  name: Dugan P
+- authtype: Author
+  name: Friedman D
+- authtype: Author
+  name: Ramsey NF
+- authtype: Author
+  name: Petridou N
+- authtype: Author
+  name: Winawer J
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '40'
+pages: 7562-7580
+pmclivedate: ''
+printpubdate: 2022 Oct 5
+pubdate: 2022 Oct 5
+sortdate: 2022/10/05 00:00
+source: J Neurosci
+title: Temporal Dynamics of Neural Responses in Human Visual Cortex
+uid: '9546476'
+volume: '42'
