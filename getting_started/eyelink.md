@@ -25,9 +25,9 @@ The Eyelink 1000 output is an _.EDF file (eyelink data file). There are several 
 
 You can type DIR to see if your \*.EDF file is located in the current working directory. When the conversion is finished, you need to reboot the Eyelink PC to windows to read your data, because in MSDOS you cannot use USB memory stick.
 
-After converting the EDF file to ASC format and transferring it from the Eyelink computer, we can read it in MATLAB.
+After converting the EDF file to ASC format and transferring it from the Eyelink computer, we can read it in using MATLAB. The ASC file is just a plain text-file, so it is human readable. The exact format is explained in detail [here](https://www.manualslib.com/manual/2114770/Sr-Research-Eyelink-Portable-Duo.html?page=100). 
 
-To read in the continuous data, you can do this:
+To read in the continuous data, you can do the following:
 
     filename_eye = 'tobsta35.asc';
 
@@ -54,7 +54,7 @@ The output data contains:
     '3'
     '4'
 
-Channel 1 represents time, channel 2 is the horizontal x-coordinate, channel 3 is the vertical y-coordinate and channel 4 is the pupil dilation.
+Channel 1 represents time, channel 2 is the horizontal x-coordinate, channel 3 is the vertical y-coordinate and channel 4 is the pupil dilation. FieldTrip just created 'dummy' labels for the individual channels, although usually there is a fixed order. Sometimes there is a 5'th channel present, which - for data obtained at the DCCN - contains the digital triggers sent by the stimulus presentation computer. This might be useful information for synchronization with data from another recording modality (e.g. EEG or MEG). 
 
 If you want your channel names to be more informative, you can use the following montage (see **[ft_apply_montage](/reference/forward/ft_apply_montage)**) to rename the channels while preprocessing:
 
@@ -73,9 +73,9 @@ The events represented in the eye-tracker datafile can be explored using **[ft_r
 
     disp(unique({event_eye.type}))
 
-      'INPUT'
+     {'BLINK'}    {'FIX'}    {'INPUT'}    {'SACC'}
 
-You can see that all events are coded as type "INPUT". You can plot the event values against the time, with each individual point representing one INPUT event:
+The events that are coded as type "INPUT", reflect the digital triggers sent by the stimulus PC. You can plot the event values against the time, with each individual point representing one INPUT event:
 
     figure
     plot([event_eye.sample]./data_eye.hdr.Fs, [event_eye.value], '.')
