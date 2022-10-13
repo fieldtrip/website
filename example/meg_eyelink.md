@@ -35,62 +35,62 @@ In this case, you would need to align the signals in a different way. This is no
 We start by reading the events from both files.
 
     fname_meg = '/Users/jansch/Desktop/sub-001/ses-001/meg/sub-001_ses-001_task-compr_meg.ds';
-	fname_asc = '/Users/jansch/Desktop/sub-001/ses-001/eyelink/sub-001_ses-001_eye.asc';
-
-	event_meg = ft_read_event(fname_meg);
-	event_asc = ft_read_event(fname_asc);
+    fname_asc = '/Users/jansch/Desktop/sub-001/ses-001/eyelink/sub-001_ses-001_eye.asc';
+    
+    event_meg = ft_read_event(fname_meg);
+    event_asc = ft_read_event(fname_asc);
 
 The experimental setup at the DCCN is such that triggers, sent by the stimulus presentation computer, end up as events in both datasets. In the MEG data, these are represented as events of the type 'UPPT001', and in the Eyelink data these events are known as 'INPUT'-type events. The Eyelink also explicitly codes the pulse triggers going back to zero as a separate event, so these need to be removed.
 
-	selmeg = strcmp({event_meg.type}', 'UPPT001');
-	event_meg = event_meg(selmeg);
-	
-	event_asc_all = event_asc;
-	selasc = strcmp({event_asc.type}', 'INPUT');
-	event_asc = event_asc(selasc);
-	
-	val = [event_asc.value];
-	event_asc = event_asc(val~=0);
+    selmeg = strcmp({event_meg.type}', 'UPPT001');
+    event_meg = event_meg(selmeg);
+    
+    event_asc_all = event_asc;
+    selasc = strcmp({event_asc.type}', 'INPUT');
+    event_asc = event_asc(selasc);
+    
+    val = [event_asc.value];
+    event_asc = event_asc(val~=0);
 
 ## Computation of the mapping between the two sets of events
 
 The number of events are not necessarily matched. Under the assumption that a particular subset of the sequence of trigger events is reliably represented in both files, we can investigate whether the event sequences are 'left' or 'right' aligned. This works only of either one of the recordings has been started early (and may have captured some early triggers not present in the other recording), or one of the recordings has been stopped early (and may **not** have captured some late triggers, which are present in the other recording). More complicated mapping is not covered here.
 
-	val_meg = [event_meg.value];
-	val_asc = [event_asc.value];
-	nmin = min(numel(val_meg), numel(val_asc));
-	if all(val_meg(1:nmin)==val_asc(1:nmin))
-  	  % left-aligned
-  	  event_meg = event_meg(1:nmin);
-  	  event_asc = event_asc(1:nmin);
-	elseif all(val_meg(end:-1:(end-nmin+1))==val_asc(end:-1:(end-nmin+1)))
-  	  % right-aligned
-  	  if nmin==numel(event_meg)
-    	    event_asc = event_asc((end-nmin+1):end);
-    	    event_meg = event_meg(1:nmin);
-  	  else
-    	    event_meg = event_meg((end-nmin+1):end);
-    	    event_asc = event_asc(1:nmin);
-  	  end
-	end
+    val_meg = [event_meg.value];
+    val_asc = [event_asc.value];
+    nmin = min(numel(val_meg), numel(val_asc));
+    if all(val_meg(1:nmin)==val_asc(1:nmin))
+      % left-aligned
+      event_meg = event_meg(1:nmin);
+      event_asc = event_asc(1:nmin);
+    elseif all(val_meg(end:-1:(end-nmin+1))==val_asc(end:-1:(end-nmin+1)))
+      % right-aligned
+      if nmin==numel(event_meg)
+        event_asc = event_asc((end-nmin+1):end);
+	event_meg = event_meg(1:nmin);
+      else
+        event_meg = event_meg((end-nmin+1):end);
+	event_asc = event_asc(1:nmin);
+      end
+    end
 
 ## Adjustment of the Eyelink event times
 
 With the trigger events aligned, based on the trigger values, we can estimate the linear mapping between the event times. Assuming that the MEG recording represents a continuous recording, the information in `event_meg.sample` can be used to unambiguously link the MEG trigger to the MEG data. For the Eyelink data, there is no guarantee that this file is based on a continuous recording (at the time of writing this example, the author has come across some Eyelink with discontinuous time axes, which suggests that the researcher has paused the Eyelink recording during the MEG experiment). For this reason, to play safe, we will use the `event_asc.timestamp`, rather than `event_asc.sample`.
 
-	smp_asc = [event_asc.timestamp];
-	smp_meg = [event_meg.sample]; % assuming MEG to be derived from a continuous recording
-	
-	offset_meg = mean(smp_meg);
-	offset_asc = mean(smp_asc);
-	
-	x = smp_asc - offset_asc;
-	y = smp_meg - offset_meg;
-	slope = y/x; % this should be about 1.2 (1kHz vs. 1.2kHz)
-
-	% plot the residuals between the MEG samples and the 'modelled' MEG samples
-	res = smp_meg - offset_meg - slope.*(smp_asc - offset_asc); % conclusion: it is anywhere between -1.5 of 1.5 samples
-	figure;histogram(res);
+    smp_asc = [event_asc.timestamp];
+    smp_meg = [event_meg.sample]; % assuming MEG to be derived from a continuous recording
+    
+    offset_meg = mean(smp_meg);
+    offset_asc = mean(smp_asc);
+    
+    x = smp_asc - offset_asc;
+    y = smp_meg - offset_meg;
+    slope = y/x; % this should be about 1.2 (1kHz vs. 1.2kHz)
+    
+    % plot the residuals between the MEG samples and the 'modelled' MEG samples
+    res = smp_meg - offset_meg - slope.*(smp_asc - offset_asc); % conclusion: it is anywhere between -1.5 of 1.5 sample
+    figure;histogram(res);
 
 As can be seen from the histogram, the difference in timing is on the order of less then 1.5 sample (@1.2 kHz), so that looks reasonable.
 
@@ -98,15 +98,15 @@ As can be seen from the histogram, the difference in timing is on the order of l
 
 Then, to adjust the timing of **all** Eyelink events:
 
-	S    = [event_asc_all.timestamp];
-	Snew = slope.*(S-offset_asc) + offset_meg;
-	
-	% remap the event_asc_all's samples to samples of the MEG recording
-	% adjust the duration from milliseconds to samples, NOTE: this assumes 1kHz
-	% sampling, i.e. 1 timestamp step is 1 ms.
-	for k = 1:numel(event_asc_all)
-  	  event_asc_all(k).sample = Snew(k);
-  	  event_asc_all(k).duration = round(event_asc_all(k).duration.*slope); 
-	end
+    S    = [event_asc_all.timestamp];
+    Snew = slope.*(S-offset_asc) + offset_meg;
+    
+    % remap the event_asc_all's samples to samples of the MEG recording
+    % adjust the duration from milliseconds to samples, NOTE: this assumes 1kHz
+    % sampling, i.e. 1 timestamp step is 1 ms.
+    for k = 1:numel(event_asc_all)
+      event_asc_all(k).sample = Snew(k);
+      event_asc_all(k).duration = round(event_asc_all(k).duration.*slope); 
+    end
 
 ## What next?
