@@ -71,8 +71,8 @@ Setting up the parallel pool would be done using standard MATLAB commands. It wo
 
 The results of this project are organized and discussed on the following places:
 
-- GitHub [project](https://github.com/fieldtrip/fieldtrip/projects/5)
+- GitHub project [5](https://github.com/fieldtrip/fieldtrip/projects/5)
 - GitHub issue [1851](https://github.com/fieldtrip/fieldtrip/issues/1851), [1852](https://github.com/fieldtrip/fieldtrip/issues/1852), [1853](https://github.com/fieldtrip/fieldtrip/issues/1853), [2068](https://github.com/fieldtrip/fieldtrip/pull/2068), [2069](https://github.com/fieldtrip/fieldtrip/pull/2069)
-- these repositories <https://github.com/apjanke/fieldtrip-parallel-support> and <https://github.com/AljenU/fieldtrip-parallel-support>
+- the repositories <https://github.com/apjanke/fieldtrip-parallel-support> and <https://github.com/AljenU/fieldtrip-parallel-support>
 
 Following the evaluation of the `parfor` implementation in a number of high-level FieldTrip functions, we decided at this moment not to merge this in the release branch and not continue with a more wide-spread implementation. The impact on the flow of the code is too significant, and interferes with efficient memory handling. The implementations that have been made are maintained for posterity in a separate [parallel branch](https://github.com/fieldtrip/fieldtrip/tree/parallel).
