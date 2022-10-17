@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '35695993'
+- idtype: doi
+  value: 10.1111/ejn.15736
+- idtype: pmcid
+  value: PMC9545291
+authors:
+- authtype: Author
+  name: O'Reilly JA
+- authtype: Author
+  name: Angsuwatanakul T
+- authtype: Author
+  name: Wehrman J
+epubdate: 2022 Jun 22
+fulljournalname: The European Journal of Neuroscience
+issue: '3'
+pages: 4154-4175
+pmclivedate: 2022/10/14
+printpubdate: 2022 Aug
+pubdate: 2022 Jun 22
+sortdate: 2022/06/22 00:00
+source: Eur J Neurosci
+title: 'Decoding violated sensory expectations from the auditory cortex of anaesthetised
+  mice: Hierarchical recurrent neural network depicts separate ‘danger’ and ‘safety’
+  units'
+uid: '9545291'
+volume: '56'

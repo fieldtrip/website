@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '35673798'
+- idtype: doi
+  value: 10.1111/ejn.15730
+- idtype: pmcid
+  value: PMC9545905
+authors:
+- authtype: Author
+  name: Di Dona G
+- authtype: Author
+  name: Scaltritti M
+- authtype: Author
+  name: Sulpizio S
+epubdate: 2022 Jun 23
+fulljournalname: The European Journal of Neuroscience
+issue: '3'
+pages: 4086-4106
+pmclivedate: 2022/10/14
+printpubdate: 2022 Aug
+pubdate: 2022 Jun 23
+sortdate: 2022/06/23 00:00
+source: Eur J Neurosci
+title: Formant‐invariant voice and pitch representations are pre‐attentively formed
+  from constantly varying speech and non‐speech stimuli
+uid: '9545905'
+volume: '56'

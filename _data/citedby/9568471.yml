@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1007/s12671-022-01974-9
+- idtype: pmcid
+  value: PMC9568471
+authors:
+- authtype: Author
+  name: Skwara AC
+- authtype: Author
+  name: King BG
+- authtype: Author
+  name: Zanesco AP
+- authtype: Author
+  name: Saron CD
+epubdate: 2022 Sep 20
+fulljournalname: Mindfulness
+issue: '10'
+pages: 2488-2506
+pmclivedate: 2022/10/16
+printpubdate: '2022'
+pubdate: 2022 Sep 20
+sortdate: 2022/09/20 00:00
+source: Mindfulness (N Y)
+title: 'Shifting Baselines: Longitudinal Reductions in EEG Beta Band Power Characterize
+  Resting Brain Activity with Intensive Meditation'
+uid: '9568471'
+volume: '13'

@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1016/j.crneur.2021.100014
+- idtype: pmcid
+  value: PMC9559921
+authors:
+- authtype: Author
+  name: Biau E
+- authtype: Author
+  name: Wang D
+- authtype: Author
+  name: Park H
+- authtype: Author
+  name: Jensen O
+- authtype: Author
+  name: Hanslmayr S
+epubdate: 2021 Jun 12
+fulljournalname: Current Research in Neurobiology
+issue: ''
+pages: '100014'
+pmclivedate: 2022/10/14
+printpubdate: ''
+pubdate: 2021 Jun 12
+sortdate: 2021/06/12 00:00
+source: Curr Res Neurobiol
+title: Auditory detection is modulated by theta phase of silent lip movements
+uid: '9559921'
+volume: '2'

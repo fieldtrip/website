@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '35298041'
+- idtype: doi
+  value: 10.1111/psyp.14043
+- idtype: pmcid
+  value: PMC9541384
+authors:
+- authtype: Author
+  name: Hámori G
+- authtype: Author
+  name: Rádosi A
+- authtype: Author
+  name: Pászthy B
+- authtype: Author
+  name: Réthelyi JM
+- authtype: Author
+  name: Ulbert I
+- authtype: Author
+  name: Fiáth R
+- authtype: Author
+  name: Bunford N
+epubdate: 2022 Mar 17
+fulljournalname: Psychophysiology
+issue: '8'
+pages: e14043
+pmclivedate: 2022/10/14
+printpubdate: 2022 Aug
+pubdate: 2022 Mar 17
+sortdate: 2022/03/17 00:00
+source: Psychophysiology
+title: Reliability of reward ERPs in middle‐late adolescents using a custom and a
+  standardized preprocessing pipeline
+uid: '9541384'
+volume: '59'

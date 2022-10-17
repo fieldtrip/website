@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '34278629'
+- idtype: doi
+  value: 10.1111/ejn.15395
+- idtype: pmcid
+  value: PMC9540477
+authors:
+- authtype: Author
+  name: Whitmarsh S
+- authtype: Author
+  name: Gitton C
+- authtype: Author
+  name: Jousmäki V
+- authtype: Author
+  name: Sackur J
+- authtype: Author
+  name: Tallon‐Baudry C
+epubdate: 2021 Jul 26
+fulljournalname: The European Journal of Neuroscience
+issue: 11-12
+pages: 3465-3482
+pmclivedate: 2022/10/14
+printpubdate: 2022 Jun
+pubdate: 2021 Jul 26
+sortdate: 2021/07/26 00:00
+source: Eur J Neurosci
+title: Neuronal correlates of the subjective experience of attention
+uid: '9540477'
+volume: '55'
