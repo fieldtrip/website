@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '35318692'
+- idtype: doi
+  value: 10.1111/psyp.14051
+- idtype: pmcid
+  value: PMC9540775
+authors:
+- authtype: Author
+  name: Arana L
+- authtype: Author
+  name: Melcón M
+- authtype: Author
+  name: Kessel D
+- authtype: Author
+  name: Hoyos S
+- authtype: Author
+  name: Albert J
+- authtype: Author
+  name: Carretié L
+- authtype: Author
+  name: Capilla A
+epubdate: 2022 Mar 23
+fulljournalname: Psychophysiology
+issue: '9'
+pages: e14051
+pmclivedate: 2022/10/14
+printpubdate: 2022 Sep
+pubdate: 2022 Mar 23
+sortdate: 2022/03/23 00:00
+source: Psychophysiology
+title: Suppression of alpha‐band power underlies exogenous attention to emotional
+  distractors
+uid: '9540775'
+volume: '59'

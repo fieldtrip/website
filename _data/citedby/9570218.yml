@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '36233081'
+- idtype: doi
+  value: 10.3390/ijms231911785
+- idtype: pmcid
+  value: PMC9570218
+authors:
+- authtype: Author
+  name: Liaukovich K
+- authtype: Author
+  name: Sazhin S
+- authtype: Author
+  name: Bobrov P
+- authtype: Author
+  name: Ukraintseva Y
+epubdate: 2022 Oct 4
+fulljournalname: International Journal of Molecular Sciences
+issue: '19'
+pages: '11785'
+pmclivedate: 2022/10/17
+printpubdate: ''
+pubdate: 2022 Oct 4
+sortdate: 2022/10/04 00:00
+source: Int J Mol Sci
+title: Event-Related Potential Study of Recovery of Consciousness during Forced Awakening
+  from Slow-Wave Sleep and Rapid Eye Movement Sleep
+uid: '9570218'
+volume: '23'
