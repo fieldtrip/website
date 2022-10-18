@@ -57,6 +57,15 @@ When using example data in tutorials, please use consistent naming.
 - Save the data as a .mat file with the same name, e.g., save the variable freqFIC to the file freqFIC.mat.
 - Store only one variable in every .mat file.
 
+## How to link to the function reference documentation?
+
+We link to the documentation on GitHub to allow people to look up the help of a function similar to what they would see with `help functionname` in MATLAB. This also encourages people to browse the code to look up implementation details. Rather than linking directly to GitHub, we use a http redirect from the reference section on the website. In the MarkDown code you should specify  this as follows.
+
+- `**[ft_preprocessing](/reference/ft_preprocessing)**` to link to **[ft_preprocessing](/reference/ft_preprocessing)**
+- `**[ft_selectdata](/reference/utilities/ft_selectdata)**` to link to **[ft_selectdata](/reference/utilities/ft_selectdata)**
+
+Note that by convention this includes the `**` to make the link appear in a bold font. The `.m` at the end of the filename should not be specified, and functions in subdirectories like `utilities` or `fileio` should include that subdirectory in the link.
+
 ## How to add tags?
 
 At the top of each markdown page there is a [Jekyll front-matter](https://jekyllrb.com/docs/front-matter/) section like this:
