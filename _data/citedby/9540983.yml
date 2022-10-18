@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '35964833'
+- idtype: doi
+  value: 10.1016/j.neuroscience.2022.07.030
+- idtype: pmcid
+  value: PMC9540983
+- idtype: MID
+  value: NIHMS1829581
+authors:
+- authtype: Author
+  name: Toffolo KK
+- authtype: Author
+  name: Freedman EG
+- authtype: Author
+  name: Foxe JJ
+epubdate: 2022 Aug 11
+fulljournalname: Neuroscience
+issue: ''
+pages: 143-158
+pmclivedate: 2022/10/07
+printpubdate: 2022 Oct 1
+pubdate: 2022 Aug 11
+sortdate: 2022/08/11 00:00
+source: Neuroscience
+title: Evoking the N400 Event-related Potential (ERP) Component Using a Publicly Available
+  Novel Set of Sentences with Semantically Incongruent or Congruent Eggplants (Endings)
+uid: '9540983'
+volume: '501'

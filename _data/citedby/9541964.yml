@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '34363269'
+- idtype: doi
+  value: 10.1111/ejn.15418
+- idtype: pmcid
+  value: PMC9541964
+authors:
+- authtype: Author
+  name: Janssens SE
+- authtype: Author
+  name: Sack AT
+- authtype: Author
+  name: Ten Oever S
+- authtype: Author
+  name: de Graaf TA
+epubdate: 2021 Sep 5
+fulljournalname: The European Journal of Neuroscience
+issue: 11-12
+pages: 3418-3437
+pmclivedate: 2022/10/14
+printpubdate: 2022 Jun
+pubdate: 2021 Sep 5
+sortdate: 2021/09/05 00:00
+source: Eur J Neurosci
+title: 'Calibrating rhythmic stimulation parameters to individual electroencephalography
+  markers: The consistency of individual alpha frequency in practical lab settings'
+uid: '9541964'
+volume: '55'

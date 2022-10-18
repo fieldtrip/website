@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '33319447'
+- idtype: doi
+  value: 10.1111/ejn.15084
+- idtype: pmcid
+  value: PMC9543919
+authors:
+- authtype: Author
+  name: van Es MW
+- authtype: Author
+  name: Marshall TR
+- authtype: Author
+  name: Spaak E
+- authtype: Author
+  name: Jensen O
+- authtype: Author
+  name: Schoffelen J
+epubdate: 2021 Jan 6
+fulljournalname: The European Journal of Neuroscience
+issue: 11-12
+pages: 3191-3208
+pmclivedate: 2022/10/14
+printpubdate: 2022 Jun
+pubdate: 2021 Jan 6
+sortdate: 2021/01/06 00:00
+source: Eur J Neurosci
+title: Phasic modulation of visual representations during sustained attention
+uid: '9543919'
+volume: '55'

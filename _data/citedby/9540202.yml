@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fnsys.2022.979272
+- idtype: pmcid
+  value: PMC9540202
+authors:
+- authtype: Author
+  name: Suzuki M
+- authtype: Author
+  name: Nishimura Y
+epubdate: 2022 Aug 29
+fulljournalname: Frontiers in Systems Neuroscience
+issue: ''
+pages: '979272'
+pmclivedate: 2022/10/08
+printpubdate: ''
+pubdate: 2022 Aug 29
+sortdate: 2022/08/29 00:00
+source: Front Syst Neurosci
+title: The ventral striatum contributes to the activity of the motor cortex and motor
+  outputs in monkeys
+uid: '9540202'
+volume: '16'

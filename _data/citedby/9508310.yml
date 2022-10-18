@@ -1,0 +1,38 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1007/s11571-021-09766-y
+- idtype: pmcid
+  value: PMC9508310
+authors:
+- authtype: Author
+  name: Zhang L
+- authtype: Author
+  name: Ren H
+- authtype: Author
+  name: Zhang R
+- authtype: Author
+  name: Chen M
+- authtype: Author
+  name: Li R
+- authtype: Author
+  name: Shi L
+- authtype: Author
+  name: Yao D
+- authtype: Author
+  name: Gao J
+- authtype: Author
+  name: Hu Y
+epubdate: 2022 Jan 16
+fulljournalname: Cognitive Neurodynamics
+issue: '5'
+pages: 1003-1011
+pmclivedate: ''
+printpubdate: 2022 Oct
+pubdate: 2022 Jan 16
+sortdate: 2022/01/16 00:00
+source: Cogn Neurodyn
+title: Time-estimation process could cause the disappearence of readiness potential
+uid: '9508310'
+volume: '16'

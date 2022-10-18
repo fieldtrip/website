@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1038/s41531-022-00399-4
+- idtype: pmcid
+  value: PMC9568523
+authors:
+- authtype: Author
+  name: Averna A
+- authtype: Author
+  name: Marceglia S
+- authtype: Author
+  name: Priori A
+- authtype: Author
+  name: Foffani G
+epubdate: 2022 Oct 14
+fulljournalname: NPJ Parkinson's Disease
+issue: ''
+pages: '131'
+pmclivedate: 2022/10/16
+printpubdate: ''
+pubdate: 2022 Oct 14
+sortdate: 2022/10/14 00:00
+source: NPJ Parkinsons Dis
+title: Amplitude and frequency modulation of subthalamic beta oscillations jointly
+  encode the dopaminergic state in Parkinson’s disease
+uid: '9568523'
+volume: '8'

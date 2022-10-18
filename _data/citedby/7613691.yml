@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '35900857'
+- idtype: doi
+  value: 10.1162/jocn_a_01896
+- idtype: pmcid
+  value: PMC7613691
+- idtype: MID
+  value: EMS155147
+authors:
+- authtype: Author
+  name: El Zein M
+- authtype: Author
+  name: Dolan RJ
+- authtype: Author
+  name: Bahrami B
+epubdate: 2022 Jul 22
+fulljournalname: Journal of cognitive neuroscience
+issue: '11'
+pages: 2065-2081
+pmclivedate: 2022/10/10
+printpubdate: 2022 Jul 22
+pubdate: 2022 Jul 22
+sortdate: 2022/07/22 00:00
+source: J Cogn Neurosci
+title: Shared responsibility decreases the sense of agency in the human brain
+uid: '7613691'
+volume: '34'

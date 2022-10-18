@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '32687616'
+- idtype: doi
+  value: 10.1111/ejn.14912
+- idtype: pmcid
+  value: PMC9540197
+authors:
+- authtype: Author
+  name: Hauswald A
+- authtype: Author
+  name: Keitel A
+- authtype: Author
+  name: Chen Y
+- authtype: Author
+  name: Rösch S
+- authtype: Author
+  name: Weisz N
+epubdate: 2020 Aug 7
+fulljournalname: The European Journal of Neuroscience
+issue: 11-12
+pages: 3288-3302
+pmclivedate: 2022/10/14
+printpubdate: 2022 Jun
+pubdate: 2020 Aug 7
+sortdate: 2020/08/07 00:00
+source: Eur J Neurosci
+title: Degradation levels of continuous speech affect neural speech tracking and alpha
+  power differently
+uid: '9540197'
+volume: '55'

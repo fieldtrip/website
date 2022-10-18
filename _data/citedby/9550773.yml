@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1038/s42003-022-04049-6
+- idtype: pmcid
+  value: PMC9550773
+authors:
+- authtype: Author
+  name: Chao ZC
+- authtype: Author
+  name: Huang YT
+- authtype: Author
+  name: Wu CT
+epubdate: 2022 Oct 10
+fulljournalname: Communications Biology
+issue: ''
+pages: '1076'
+pmclivedate: 2022/10/12
+printpubdate: ''
+pubdate: 2022 Oct 10
+sortdate: 2022/10/10 00:00
+source: Commun Biol
+title: A quantitative model reveals a frequency ordering of prediction and prediction-error
+  signals in the human brain
+uid: '9550773'
+volume: '5'

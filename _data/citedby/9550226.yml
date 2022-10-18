@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '36125242'
+- idtype: doi
+  value: 10.7554/eLife.78108
+- idtype: pmcid
+  value: PMC9550226
+authors:
+- authtype: Author
+  name: Hardstone R
+- authtype: Author
+  name: Flounders MW
+- authtype: Author
+  name: Zhu M
+- authtype: Author
+  name: He BJ
+epubdate: 2022 Sep 20
+fulljournalname: eLife
+issue: ''
+pages: e78108
+pmclivedate: 2022/10/11
+printpubdate: ''
+pubdate: 2022 Sep 20
+sortdate: 2022/09/20 00:00
+source: eLife
+title: Frequency-specific neural signatures of perceptual content and perceptual stability
+uid: '9550226'
+volume: '11'

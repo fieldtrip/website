@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '34322927'
+- idtype: doi
+  value: 10.1111/ejn.15405
+- idtype: pmcid
+  value: PMC9545120
+authors:
+- authtype: Author
+  name: Barne LC
+- authtype: Author
+  name: Cravo AM
+- authtype: Author
+  name: de Lange FP
+- authtype: Author
+  name: Spaak E
+epubdate: 2021 Aug 9
+fulljournalname: The European Journal of Neuroscience
+issue: 11-12
+pages: 3324-3339
+pmclivedate: 2022/10/14
+printpubdate: 2022 Jun
+pubdate: 2021 Aug 9
+sortdate: 2021/08/09 00:00
+source: Eur J Neurosci
+title: Temporal prediction elicits rhythmic preactivation of relevant sensory cortices
+uid: '9545120'
+volume: '55'
