@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fnins.2022.1013691
+- idtype: pmcid
+  value: PMC9574066
+authors:
+- authtype: Author
+  name: Kim SE
+- authtype: Author
+  name: Kim HS
+- authtype: Author
+  name: Kwak Y
+- authtype: Author
+  name: Ahn MH
+- authtype: Author
+  name: Choi KM
+- authtype: Author
+  name: Min BK
+epubdate: 2022 Oct 3
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '1013691'
+pmclivedate: 2022/10/18
+printpubdate: ''
+pubdate: 2022 Oct 3
+sortdate: 2022/10/03 00:00
+source: Front Neurosci
+title: Neurodynamic correlates for the cross-frequency coupled transcranial alternating
+  current stimulation during working memory performance
+uid: '9574066'
+volume: '16'
