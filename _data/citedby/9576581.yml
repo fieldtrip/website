@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1016/j.isci.2022.105229
+- idtype: pmcid
+  value: PMC9576581
+authors:
+- authtype: Author
+  name: Zandvoort CS
+- authtype: Author
+  name: Daffertshofer A
+- authtype: Author
+  name: Dominici N
+epubdate: 2022 Sep 28
+fulljournalname: iScience
+issue: '10'
+pages: '105229'
+pmclivedate: 2022/10/19
+printpubdate: ''
+pubdate: 2022 Sep 28
+sortdate: 2022/09/28 00:00
+source: iScience
+title: Cortical contributions to locomotor primitives in toddlers and adults
+uid: '9576581'
+volume: '25'
