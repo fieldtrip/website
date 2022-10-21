@@ -19,6 +19,7 @@ We are considering and/or concretely planning to have FieldTrip workshops in
 
 -   2023, MEG/EEG toolkit - Nijmegen, NL
 -   2022, [PracticalMEEG](/workshop/practicalmeeg2022) - Aix-en-Provence, France
+-   2022, [FEMfuns workshop](/workshop/femfuns2022) - Nijmegen, NL
 
 Previous FieldTrip workshops took place at
 
