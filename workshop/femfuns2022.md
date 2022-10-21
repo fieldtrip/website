@@ -1,6 +1,7 @@
 ---
 title: Workshop on the ECoG forward solution using FEMfuns in FieldTrip at the Donders
 tags: [femfuns2022]
+tweet: New workshop at the Donders! ECoG forward solution using FEMfuns, organized by @mcpiastra, @ThomOostendorp and @ostenvr. See http://www.fieldtriptoolbox.org/workshop/
 ---
 
 # Workshop on the ECoG forward solution using FEMfuns in FieldTrip at the Donders
