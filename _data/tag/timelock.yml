@@ -22,9 +22,6 @@
 - name:  Source reconstruction of event-related fields using minimum-norm estimation
   link:  /tutorial/minimumnormestimate
 
-- name:  Multivariate analysis of electrophysiological data
-  link:  /tutorial/multivariateanalysis
-
 - name:  Classification of event-related MEG data using MVPA-Light
   link:  /tutorial/mvpa_light
 
