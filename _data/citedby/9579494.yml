@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1016/j.isci.2022.105246
+- idtype: pmcid
+  value: PMC9579494
+authors:
+- authtype: Author
+  name: D'Andrea A
+- authtype: Author
+  name: Basti A
+- authtype: Author
+  name: Tosoni A
+- authtype: Author
+  name: Guidotti R
+- authtype: Author
+  name: Chella F
+- authtype: Author
+  name: Michelmann S
+- authtype: Author
+  name: Romani GL
+- authtype: Author
+  name: Pizzella V
+- authtype: Author
+  name: Marzetti L
+epubdate: 2022 Sep 29
+fulljournalname: iScience
+issue: '10'
+pages: '105246'
+pmclivedate: 2022/10/20
+printpubdate: ''
+pubdate: 2022 Sep 29
+sortdate: 2022/09/29 00:00
+source: iScience
+title: Magnetoencephalographic spectral fingerprints differentiate evidence accumulation
+  from saccadic motor preparation in perceptual decision-making
+uid: '9579494'
+volume: '25'
