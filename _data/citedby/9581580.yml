@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '36171058'
+- idtype: doi
+  value: 10.1523/ENEURO.0508-21.2022
+- idtype: pmcid
+  value: PMC9581580
+authors:
+- authtype: Author
+  name: Caspar EA
+- authtype: Author
+  name: Ioumpa K
+- authtype: Author
+  name: Arnaldo I
+- authtype: Author
+  name: Di Angelis L
+- authtype: Author
+  name: Gazzola V
+- authtype: Author
+  name: Keysers C
+epubdate: 2022 Oct 14
+fulljournalname: eNeuro
+issue: '5'
+pages: ENEURO.0508-21.2022
+pmclivedate: 2022/10/20
+printpubdate: ''
+pubdate: 2022 Oct 14
+sortdate: 2022/10/14 00:00
+source: eNeuro
+title: 'Commanding or Being a Simple Intermediary: How Does It Affect Moral Behavior
+  and Related Brain Mechanisms?'
+uid: '9581580'
+volume: '9'

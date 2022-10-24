@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '36041853'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.2735-20.2022
+- idtype: pmcid
+  value: PMC9581567
+authors:
+- authtype: Author
+  name: Prinsloo KD
+- authtype: Author
+  name: Lalor EC
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '41'
+pages: 7782-7798
+pmclivedate: 2022/10/20
+printpubdate: 2022 Oct 12
+pubdate: 2022 Oct 12
+sortdate: 2022/10/12 00:00
+source: J Neurosci
+title: General Auditory and Speech-Specific Contributions to Cortical Envelope Tracking
+  Revealed Using Auditory Chimeras
+uid: '9581567'
+volume: '42'

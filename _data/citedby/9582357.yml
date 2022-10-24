@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fnagi.2022.1010765
+- idtype: pmcid
+  value: PMC9582357
+authors:
+- authtype: Author
+  name: Khachatryan E
+- authtype: Author
+  name: Wittevrongel B
+- authtype: Author
+  name: Reinartz M
+- authtype: Author
+  name: Dauwe I
+- authtype: Author
+  name: Carrette E
+- authtype: Author
+  name: Meurs A
+- authtype: Author
+  name: Van Roost D
+- authtype: Author
+  name: Boon P
+- authtype: Author
+  name: Van Hulle MM
+epubdate: 2022 Oct 6
+fulljournalname: Frontiers in Aging Neuroscience
+issue: ''
+pages: '1010765'
+pmclivedate: 2022/10/21
+printpubdate: ''
+pubdate: 2022 Oct 6
+sortdate: 2022/10/06 00:00
+source: Front Aging Neurosci
+title: Cognitive tasks propagate the neural entrainment in response to a visual 40
+  Hz stimulation in humans
+uid: '9582357'
+volume: '14'

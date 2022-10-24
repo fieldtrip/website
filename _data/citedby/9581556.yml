@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '36100397'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0509-22.2022
+- idtype: pmcid
+  value: PMC9581556
+authors:
+- authtype: Author
+  name: Sharp P
+- authtype: Author
+  name: Gutteling T
+- authtype: Author
+  name: Melcher D
+- authtype: Author
+  name: Hickey C
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '41'
+pages: 7824-7832
+pmclivedate: ''
+printpubdate: 2022 Oct 12
+pubdate: 2022 Oct 12
+sortdate: 2022/10/12 00:00
+source: J Neurosci
+title: Spatial Attention Tunes Temporal Processing in Early Visual Cortex by Speeding
+  and Slowing Alpha Oscillations
+uid: '9581556'
+volume: '42'
