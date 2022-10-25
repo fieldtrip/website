@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '36173425'
+- idtype: doi
+  value: 10.1007/s00221-022-06462-z
+- idtype: pmcid
+  value: PMC9587974
+authors:
+- authtype: Author
+  name: Bradley C
+- authtype: Author
+  name: Elliott J
+- authtype: Author
+  name: Dudley S
+- authtype: Author
+  name: Kieseker GA
+- authtype: Author
+  name: Mattingley JB
+- authtype: Author
+  name: Sale MV
+epubdate: 2022 Sep 29
+fulljournalname: Experimental Brain Research
+issue: '11'
+pages: 2965-2979
+pmclivedate: 2022/10/24
+printpubdate: '2022'
+pubdate: 2022 Sep 29
+sortdate: 2022/09/29 00:00
+source: Exp Brain Res
+title: Slow-oscillatory tACS does not modulate human motor cortical response to repeated
+  plasticity paradigms
+uid: '9587974'
+volume: '240'
