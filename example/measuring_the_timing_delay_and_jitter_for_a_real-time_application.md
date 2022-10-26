@@ -80,9 +80,9 @@ On the receiving side (the machine, that reads the data online from shared memor
     nchan       = length(chanindx);
 
     if strcmp(cfg.jumptoeof, 'yes')
-        prevSample = hdr.nSamples * hdr.nTrials;
+      prevSample = hdr.nSamples * hdr.nTrials;
     else
-        prevSample  = 0;
+      prevSample  = 0;
     end
 
     count       = 0;
@@ -220,22 +220,21 @@ This is rather consistent with a uniform distribution between 100-250ms
 
 This is largely similar to the above, but using a different way of accessing the data in realtim
 
-a) Instead of using **AcqBuffer** as a daemon for managing the shared memory, we use **acq2ftx**. This tool basically grabs the data out of the CTF shared memory
-as soon as **Acq** writes it there, and forwards it to a FieldTrip buffer. It also automatically parses the generated .res4 file, analyses trigger channels, and turns flanks in those trigger channels into FieldTrip buffer events.
+a) Instead of using **AcqBuffer** as a daemon for managing the shared memory, we use **acq2ftx**. This tool basically grabs the data out of the CTF shared memory as soon as **Acq** writes it there, and forwards it to a FieldTrip buffer. It also automatically parses the generated .res4 file, analyses trigger channels, and turns flanks in those trigger channels into FieldTrip buffer events.
 
-b) The MATLAB scripts that read/process the data do **not** access the shared memory anymore, but only the FieldTrip buffer. This allows for a more robust and decoupled operation by avoiding unsynchronized and interfering access to the same resources by multiple processes at the same time. For example, for determining whether there are new samples and/or events, we do not rely on ''ft_read_header_shm'' anymore, but can use ''ft_poll_buffer'' (or but also ''ft_read_header'' for reading the complete header information including the .res4 file).
+b) The MATLAB scripts that read/process the data do **not** access the shared memory anymore, but only the FieldTrip buffer. This allows for a more robust and decoupled operation by avoiding unsynchronized and interfering access to the same resources by multiple processes at the same time. For example, for determining whether there are new samples and/or events, we do not rely on `ft_read_header_shm` anymore, but can use `ft_poll_buffer` (or but also `ft_read_header` for reading the complete header information including the `.res4` file).
 
-This is how we tested the timing of this system on the CTF275 system at the Donders:
+This is how we tested the timing of this system on the CTF275 system at the FCDC:
 
-1. In a console we start the streaming of the data with acq2ft
+1) In a console we start the streaming of the data with `acq2ft`
 
    acq2ftx -:1972:GER:1:\*
 
-This means set up a buffer on the localhost (or other machine, whose name needs to be specified instead of the - sign) on port 1972, and stream both data and events. The three flags GER stand for G) apply gains E) send events R) transmit extended header information (.res4). In this example, we do not downsample (1) and stream all channels (\*).
+This means set up a buffer on the localhost (or other machine, whose name needs to be specified instead of the - sign) on port 1972, and stream both data and events. The three flags GER stand for: G) apply gains E) send events R) transmit extended header information (.res4). In this example, we do not downsample (1) and stream all channels (\*).
 
-2. We now start the MEG data acquisition, on Acq.
+2) We now start the MEG data acquisition, on Acq.
 
-3)Again using a separate MATLAB session we repeatedly send trigger codes of value 4 to a serial port, which -after serial to parallel conversion- in this case was connected the the MEG console via Parallel Port 1. The triggers then get recorded on disk (channel UPPT01).
+3) Again using a separate MATLAB session we repeatedly send trigger codes of value 4 to a serial port, which -after serial to parallel conversion- in this case was connected the the MEG console via Parallel Port 1. The triggers then get recorded on disk (channel UPPT01).
 
     clear all;
     close all;
@@ -251,9 +250,10 @@ This means set up a buffer on the localhost (or other machine, whose name needs 
     set(serobjw, 'OutputBufferSize', 512); % Buffer for write operation, default it is 512
     get(serobjw) ;
     fopen(serobjw);
-    %
+
     % outstream = 'serial:/dev/ttyS0';
     pause(5)
+
     %% set trigger codes
     tr=4;
     duration=0.2;
@@ -261,18 +261,18 @@ This means set up a buffer on the localhost (or other machine, whose name needs 
     tic;
     t_read=zeros(200,1);
     for n=1:200
-    fwrite(serobjw,tr);
-    %out_event.value=4;
-    %write_event(outstream, out_event);
+      fwrite(serobjw,tr);
+      %out_event.value=4;
+      %write_event(outstream, out_event);
 
-    t_read(n)=toc;
+      t_read(n)=toc;
 
-    %pause(duration + rand_offset*rand);
-    pause(duration+ rand_offset);
-    n
+      %pause(duration + rand_offset*rand);
+      pause(duration+ rand_offset);
+      disp(n)
     end
 
-4. Now using a different MATLAB session we access the FT buffer on the localhost:
+4) Now using a different MATLAB session we access the FT buffer on the localhost:
 
    cfg = [];
    cfg.headerfile = 'buffer://localhost:1972';
@@ -280,33 +280,36 @@ This means set up a buffer on the localhost (or other machine, whose name needs 
 
 We now want to read the STIM REF channel at which the trigger arrives (UPPT001) and then send an echo (a trigger of different value) to the same channel, so we can subsequently calculate the delay from the recorded data.
 
-    cfg.channel = 'UPPT001'; %% this is the channel that we will be reading from
-    %% below follows the destination for writing the echo trigger, this is a serial port that ultimately also gets recorded on UPPT001
+    %% this is the channel that we will be reading from
+    cfg.channel = 'UPPT001';
+
+    %% The destination for writing the echo trigger, this is a serial port that ultimately also gets recorded on UPPT001
     outstream = 'serial:/dev/ttyS0';
 
     %% Setup and open the serial port to write the echo
-        delete(instrfind);
-        fclose('all');
-        % bits=bitsi('com3');
-        %% open serial port
-        serobjw = serial('/dev/ttyS0');              % Creating serial port object now its connected to COM7
-        serobjw.Baudrate = 115200;              % Set the baud rate at the specific value
-        set(serobjw, 'Parity', 'none');        % Set parity as none
-        set(serobjw, 'Databits', 8);           % set the number of data bits
-        set(serobjw, 'StopBits', 1);           % set number of stop bits as 1
-        set(serobjw, 'Terminator', '');        % set the terminator value to newline
-        set(serobjw, 'OutputBufferSize', 512); % Buffer for write operation, default it is 512
-        get(serobjw) ;
-        fopen(serobjw);
+    delete(instrfind);
+    fclose('all');
+    % bits=bitsi('com3');
 
-Now we start the streaming of the data using ft_poll_buffer
+    %% open serial port
+    serobjw = serial('/dev/ttyS0');              % Creating serial port object now its connected to COM7
+    serobjw.Baudrate = 115200;              % Set the baud rate at the specific value
+    set(serobjw, 'Parity', 'none');        % Set parity as none
+    set(serobjw, 'Databits', 8);           % set the number of data bits
+    set(serobjw, 'StopBits', 1);           % set number of stop bits as 1
+    set(serobjw, 'Terminator', '');        % set the terminator value to newline
+    set(serobjw, 'OutputBufferSize', 512); % Buffer for write operation, default it is 512
+    get(serobjw) ;
+    fopen(serobjw);
+
+Now we start the streaming of the data using `ft_poll_buffer`
 
     while true
       newNum = ft_poll_buffer(cfg.headerfile);
 
 Note that this is replacing the reading of the header in the previous example, i.e.
 
-    hdr = read_header(cfg.headerfile, 'headerformat', cfg.headerformat, 'cache', true);
+      hdr = read_header(cfg.headerfile, 'headerformat', cfg.headerformat, 'cache', true);
 
 remember that we were only interested in the hdr.nSamples, which allows to determine whether there any new samples (when compared to the remembred previous sample).
 The number of new samples is now already returned by the ft_poll_buffer function ==newNum.nsamples. We therefore replace hdr.nSamples in our code with this number
@@ -316,80 +319,80 @@ The number of new samples is now already returned by the ft_poll_buffer function
       % see whether new samples are available
       newsamples = (hdr.nSamples*hdr.nTrials-prevSample);
 
-5.  Now, to detect the triggers we have two options: To do flank detection on the fly (by differentiating the trigger channel), or to read the relevant event
+5) Now, to detect the triggers we have two options: To do flank detection on the fly (by differentiating the trigger channel), or to read the relevant event
 
-    ....
-    if newsamples>=blocksize
-    disp('newsamples')
-    % determine the samples to process
+        ....
+        if newsamples>=blocksize
+        disp('newsamples')
+        % determine the samples to process
 
-             begsample  = prevSample+1;
-             endsample  = prevSample+blocksize ;
+        begsample  = prevSample+1;
+        endsample  = prevSample+blocksize ;
 
-             %         this allows overlapping data segments
-             if overlap && (begsample>overlap)
-                 begsample = begsample - overlap;
-                 endsample = endsample - overlap;
-             end
+        %         this allows overlapping data segments
+        if overlap && (begsample>overlap)
+          begsample = begsample - overlap;
+          endsample = endsample - overlap;
+        end
 
-             %         remember up to where the data was read
-             prevSample  = endsample;
-             count       = count + 1;
-             fprintf('processing segment %d from sample %d to %d\n', count, begsample, endsample);
+        %         remember up to where the data was read
+        prevSample  = endsample;
+        count       = count + 1;
+        fprintf('processing segment %d from sample %d to %d\n', count, begsample, endsample);
 
-             %         read data segment from buffer
+        %         read data segment from buffer
 
-             dat = read_data(cfg.datafile, 'header', hdr, 'dataformat', cfg.dataformat, 'begsample', begsample, 'endsample', endsample, 'chanindx', chanindx, 'checkboundary', false);
-             %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-             %         from here onward it is specific to the method of detecting events
-             %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        dat = read_data(cfg.datafile, 'header', hdr, 'dataformat', cfg.dataformat, 'begsample', begsample, 'endsample', endsample, 'chanindx', chanindx, 'checkboundary', false);
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        %         from here onward it is specific to the method of detecting events
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-             if use_read_event~=1 %% just read respecified channel and do flank detection using time differentiation and value matching
-                 diff_dat = diff([pad dat]);
-                 pad = dat(end);
-                 %% detect flanks in UPPT001 that are of size 4
-                 smp=find(diff_dat==4);
-                 if~isempty(smp) %% if there is such an event
-                     smp = smp + begsample; %% get sample number with respect to the beginning of the recording\
-                     %% create event
-                     event = [];
-                     event.type   = 'trigger';
-                     event.sample = smp;
-                     event.value=diff_dat(smp-begsample);
-                     %% display
-                     disp(event);
-                     %% create event with same sample number but different value
-                     out_event=[];
-                     out_event.sample=event.sample; %% is this correct?
-                     out_event.type = 'echo';
-                     out_event.offset = [];
-                     out_event.value=16;
-                     out_event.duration=1;
-                     %% write this event (of size 16) on serial port that goes  to
-                     %% UPT001
-                     disp(out_event);
-                     %write_event(outstream, out_event);
-                     fwrite(serobjw, out_event.value);
-                 end
+        if use_read_event~=1 %% just read respecified channel and do flank detection using time differentiation and value matching
+          diff_dat = diff([pad dat]);
+          pad = dat(end);
+          %% detect flanks in UPPT001 that are of size 4
+          smp=find(diff_dat==4);
+          if~isempty(smp) %% if there is such an event
+            smp = smp + begsample; %% get sample number with respect to the beginning of the recording\
+            %% create event
+            event = [];
+            event.type   = 'trigger';
+            event.sample = smp;
+            event.value=diff_dat(smp-begsample);
+            %% display
+            disp(event);
+            %% create event with same sample number but different value
+            out_event=[];
+            out_event.sample=event.sample; %% is this correct?
+            out_event.type = 'echo';
+            out_event.offset = [];
+            out_event.value=16;
+            out_event.duration=1;
+            %% write this event (of size 16) on serial port that goes  to
+            %% UPT001
+            disp(out_event);
+            %write_event(outstream, out_event);
+            fwrite(serobjw, out_event.value);
+          end
 
 
-            else %% use read_event function that does the flank detection
+        else %% use read_event function that does the flank detection
 
-                onl_event = read_event(cfg.datafile, 'header', hdr, 'minsample',prev_ev+1);
-                evt=filter_event(onl_event(:),'type',cfg.channel,'value',4);
+          onl_event = read_event(cfg.datafile, 'header', hdr, 'minsample',prev_ev+1);
+          evt=filter_event(onl_event(:),'type',cfg.channel,'value',4);
 
-                if ~isempty(evt)
-                    disp(evt)
-                    prev_ev=max([evt.sample]);
-                    fwrite(serobjw,16);
+          if ~isempty(evt)
+            disp(evt)
+            prev_ev=max([evt.sample]);
+            fwrite(serobjw,16);
 
-                end
-            end
+          end
+        end
 
         end % if enough new samples
     end % while true
 
-6. Both trigger and flank are now recorded on the same channel (here UPTT001). Now we can offline calculate the delays in the online loo
+6) Both trigger and flank are now recorded on the same channel (here UPTT001). Now we can offline calculate the delays in the online loop:
 
    %% set path to data on disk
    filename=pwd;
@@ -403,7 +406,6 @@ The number of new samples is now already returned by the ft_poll_buffer function
    %% extract sample numbers of these events in array
    smp_out=[trig_out_buff.sample]';
    smp_in=[trig_in_buff.sample]';
-
 
     %% sort these events ( this might be unnecessary if echos always follow the triggers, i.e there were no missing events and delays in loop were not larger than inter trigger interval)
     %% sort
@@ -421,7 +423,7 @@ The number of new samples is now already returned by the ft_poll_buffer function
     smp_in=all_smp(all_val==4);
     smp_out=all_smp(all_val==16);
 
-7)We can now calculate the time difference between each trigger and the echo that followed i
+7) We can now calculate the time difference between each trigger and the echo that followed i
 
     diff_in_s=smp_out-smp_in; %% in samples
     hdr=read_header(filename); %% read header to get sample rate to get difference in time
@@ -437,7 +439,7 @@ We can now plot the distribution of all delay
 and plot the sample number of the echo against the sample number of the sent trigger. Accumulative delays will be seen as a departure from linearity with increasing sample number.
 
     figure
-    plot(smp_in,smp_out,'x')
+    plot(smp_in,smp_out, 'x')
     xlabel('sample No of trigger')
     ylabel('sample No of trigger-echo')
     title(sprintf('HL before and after: not continuous,Fs =%d Hz, Nchans = %d',hdr.Fs, hdr.nChans))
@@ -476,7 +478,7 @@ We now use the 2nd option for detecting events: using ft_read_event. Note that t
 
 ### CHL on, Fs=4KHz
 
-The events were detected with ft_read_event.
+The events were detected with `ft_read_event`.
 
 {% include image src="/assets/img/example/measuring_the_timing_delay_and_jitter_for_a_real-time_application/trigger_smp_vs_echo_smp_4khz_read_ev.jpg" %}
 
@@ -549,34 +551,34 @@ To test the timing of the detection of new data in the buffer, without actually 
 You can read the data in another MATLAB session on the same computer. In this case we'll just look at how much data is available in the buffe
 
     for i=1:inf,
-    hdr = ft_read_header('buffer://localhost:1972');
-    disp(hdr.nSamples);
+      hdr = ft_read_header('buffer://localhost:1972');
+      disp(hdr.nSamples);
     end
 
 This will show you something like
 
     ...
-         12160
-         12160
-         12160
-         12160
-         12160
-         12160
-         12160
-         12200
-         12200
-         12200
-         12200
-         12200
-         12200
-         12200
-         12240
-         12240
-         12240
-         12240
-         12240
-         12240
-     ...
+    12160
+    12160
+    12160
+    12160
+    12160
+    12160
+    12160
+    12200
+    12200
+    12200
+    12200
+    12200
+    12200
+    12200
+    12240
+    12240
+    12240
+    12240
+    12240
+    12240
+    ...
 
 You can notice the number of samples increasing now and then with 40 samples (the blocksize in **[ft_realtime_signalproxy](/reference/realtime/example/ft_realtime_signalproxy)**). In this example, it increases approximately every 7th iteration of the **[ft_read_header](/reference/fileio/ft_read_header)** function. That means that the **[ft_read_header](/reference/fileio/ft_read_header)** function is called 7 times in the time that it took to collect 40 data samples, corresponding to 7 calls per 40 ms, or 5.7 ms per single call to **[ft_read_header](/reference/fileio/ft_read_header)**.
 
@@ -590,8 +592,8 @@ The code below will give you a sense for the distribution of time delays associa
     t1 = zeros(1,n);
     t0 = toc;
     for i=1:n
-     hdr = ft_read_header('shm://');
-     t1(i) = toc;
+      hdr = ft_read_header('shm://');
+      t1(i) = toc;
     end
     t1 = t1 - t0;
     plot(t1*1000); % in miliseconds
