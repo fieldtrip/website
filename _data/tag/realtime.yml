@@ -34,9 +34,6 @@
 - name:  FieldTrip buffer MATLAB interface
   link:  /development/realtime/buffer_matlab
 
-- name:  Overview of the realtime buffer
-  link:  /development/realtime/buffer_overview
-
 - name:  Low-level FieldTrip buffer TCP network protocol
   link:  /development/realtime/buffer_protocol
 
