@@ -1,17 +1,19 @@
 ---
 title: Overview of the realtime buffer
 tags: [realtime]
+redirect_from:
+  - /development/realtime/buffer_overview
 ---
 
 # Overview of the realtime buffer
 
 This page is part of the documentation series of the FieldTrip buffer for realtime aquisition. The FieldTrip buffer is a standard that defines a central hub (the [FieldTrip buffer](/development/realtime)) that facilitates realtime exchange of neurophysiological data. The documentation is organized in five main sections, being:
 
-1.  description and general [overview of the buffer](/development/realtime/buffer_overview),
+1.  description and general [overview of the buffer](/development/realtime/buffer),
 2.  definition of the [buffer protocol](/development/realtime/buffer_protocol),
 3.  the [reference implementation](/development/realtime/reference_implementation), and
 4.  specific [implementations](/development/realtime/implementation) that interface with acquisition software, or software platforms.
-5.  the [getting started](/getting_started/realtime) takes you through the first steps of real-time data streaming and analysis.
+5.  the [getting started](/getting_started/realtime) documentation which takes you through the first steps of real-time data streaming and analysis in MATLAB
 
 This page documents the general concept behind the FieldTrip buffer.
 
