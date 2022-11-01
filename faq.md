@@ -257,3 +257,4 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [What types of datasets (and their respective analyses) are used on FieldTrip?](/faq/what_types_of_datasets_and_their_respective_analyses_are_used_on_fieldtrip)
 - [What usage information is FieldTrip tracking?](/faq/tracking)
 - [Where can I find open access MEG/EEG data?](/faq/open_data)
+- [Which methodological details should I report in an EEG/MEG manuscript?](/faq/checklist)
