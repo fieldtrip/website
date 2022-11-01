@@ -37,6 +37,9 @@
 - name:  How should I specify the coordinate systems in a BIDS dataset?
   link:  /faq/bids_coordsystem
 
+- name:  Which methodological details should I report in an EEG/MEG manuscript?
+  link:  /faq/checklist
+
 - name:  How can I share my MEG data?
   link:  /faq/data_sharing
 
