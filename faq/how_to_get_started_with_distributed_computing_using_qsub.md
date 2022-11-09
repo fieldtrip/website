@@ -17,7 +17,7 @@ To submit a job to the cluster, you will use **[qsubfeval](/reference/qsub/qsubf
 
 Try the following:
 
-    qsubfeval('rand', 100, 'timreq', 60, 'memreq', 1024)
+    jobid = qsubfeval('rand', 100, 'timreq', 60, 'memreq', 1024*1024)
 
 {% include markup/info %}
 Besides the memory requirements for your computation, MATLAB also requires memory for itself. The **[qsubfeval](/reference/qsub/qsubfeval)** and **[qsubcellfun](/reference/qsub/qsubcellfun)** functions have the option **memoverhead** for this, which is by default 1GB. The **memreq** option itself does not have a default value. The torque job is started with a memory reservation of **memreq+memoverhead**.
@@ -27,7 +27,7 @@ You will get the job ID as the output:
 
     submitting job username_dccn_c004_p23910_b1_j001... qstat job id 1066196.dccn-l014.dccn.nl
 
-    ans =
+    jobid =
       username_dccn_c004_p23910_b1_j001
 
 Note, that qsubfeval does not return the output of your function to the command window! You only get the job ID. Your function thus has to include a command for writing the output on disk.
@@ -38,7 +38,7 @@ You can check the status of your submitted job with qstat command in Linux termi
     bash-3.2$ qstat
     Job id                    Name             User            Time Use S Queue
   ------------------------- ---------------- --------------- -------- - -----
-  1066196.dccn-l014          ...23910_b1_j001 username          00:00:00 C MATLAB
+  1066196.dccn-l014         ...23910_b1_j001 username        00:00:00 C MATLAB
 ```
 
 For detailed information on the submitted job use qstat -f JobI
@@ -46,8 +46,8 @@ For detailed information on the submitted job use qstat -f JobI
 ```bash
     bash-3.2$ qstat -f 1066196
     Job Id: 1066196.dccn-l014.dccn.nl
-      Job_Name = irisim_dccn_c004_p23910_b1_j001
-      Job_Owner = irisim@dccn-c004.dccn.nl
+      Job_Name = username_dccn_c004_p23910_b1_j001
+      Job_Owner = username@dccn-c004.dccn.nl
       resources_used.cput = 00:00:00
       resources_used.mem = 91232kb
       resources_used.vmem = 4181060kb
@@ -57,33 +57,39 @@ For detailed information on the submitted job use qstat -f JobI
 
 The **[qsubfeval](/reference/qsub/qsubfeval)** command creates a bunch of tempory files in your working directory. STDIN.oXXX is the standard output, i.e. the output that MATLAB normally prints in the command window. STDIN.eXXX is an error message file. For the job to complete successfully, this file should be empty.
 
+To pick up the results of the job, you type in matlab
+    
+    result = qsubget(jobid);
+    
+The matrix with the results contains 100x100 random numbers, just as you would get when calling `rand(100)` on the MATLAB command line.
+
 ### Submitting a batch of jobs
 
 To execute few jobs in parallel as a batch you will use **[qsubcellfun](/reference/qsub/qsubcellfun)**. It is very similar to **[qsubfeval](/reference/qsub/qsubfeval)**, but instead of one input argument, you specify a cell-array of arguments. Qsubcellfun then evaluates your function with each element of the array. In fact it calls **[qsubfeval](/reference/qsub/qsubfeval)** as many times as the number of elements in the array.
 
 Qsubcellfun is similar to the standard MATLAB Cellfun. Try the following:
 
-    >> qsubcellfun(@randn, {1,1,1,1}, 'memreq', 1024, 'timreq', 60)
+    >> results = qsubcellfun('randn', {1,1,1,1}, 'timreq', 60, 'memreq', 1024*1024)
 
-    submitting job irisim_mentat284_p7284_b6_j001... qstat job id 25618.dccn-l014.dccn.nl
-    submitting job irisim_mentat284_p7284_b6_j002... qstat job id 25619.dccn-l014.dccn.nl
-    submitting job irisim_mentat284_p7284_b6_j003... qstat job id 25620.dccn-l014.dccn.nl
-    submitting job irisim_mentat284_p7284_b6_j004... qstat job id 25621.dccn-l014.dccn.nl
-    job irisim_mentat284_p7284_b6_j001 returned, it required 0 seconds and 832.0 KB
-    job irisim_mentat284_p7284_b6_j002 returned, it required 0 seconds and 828.0 KB
-    job irisim_mentat284_p7284_b6_j003 returned, it required 0 seconds and 830.0 KB
-    job irisim_mentat284_p7284_b6_j004 returned, it required 0 seconds and 829.0 KB
+    submitting job username_mentat284_p7284_b6_j001... qstat job id 25618.dccn-l014.dccn.nl
+    submitting job username_mentat284_p7284_b6_j002... qstat job id 25619.dccn-l014.dccn.nl
+    submitting job username_mentat284_p7284_b6_j003... qstat job id 25620.dccn-l014.dccn.nl
+    submitting job username_mentat284_p7284_b6_j004... qstat job id 25621.dccn-l014.dccn.nl
+    job username_mentat284_p7284_b6_j001 returned, it required 0 seconds and 832.0 KB
+    job username_mentat284_p7284_b6_j002 returned, it required 0 seconds and 828.0 KB
+    job username_mentat284_p7284_b6_j003 returned, it required 0 seconds and 830.0 KB
+    job username_mentat284_p7284_b6_j004 returned, it required 0 seconds and 829.0 KB
     computational time = 0.1 sec, elapsed = 1.0 sec, speedup 0.0 x
 
-    ans =
-    [0.1194] [0.3965] [-0.2523] [0.3803]
+    results =
+     [0.1194] [0.3965] [-0.2523] [0.3803]
 
 and compare it with
 
     >> cellfun(@randn, {1,1,1,1})
 
     ans =
-    -2.2588 0.8622 0.3188 -1.3077
+     -2.2588 0.8622 0.3188 -1.3077
 
 The difference in the output formats is due to the UniformOutput argument, which is default false in **[qsubcellfun](/reference/qsub/qsubcellfun)** and default true in CELLFUN.
 
@@ -105,17 +111,17 @@ The help of **[qsubcellfun](/reference/qsub/qsubcellfun)** lists some suggestion
 
 The execution of each job involves writing the input arguments to a file, submitting the job, to Torque, starting MATLAB, reading the file, evaluate the function, writing the output arguments to file and at the end collecting all output arguments of all jobs and rearranging them. Starting MATLAB for each job imposes quite some overhead on the jobs if they are small, that is why **[qsubcellfun](/reference/qsub/qsubcellfun)** implements "stacking" to combine multiple MATLAB jobs into one job for the Linux cluster. If the jobs that you pass to **[qsubcellfun](/reference/qsub/qsubcellfun)** are small (less than 180 seconds) they will be stacked automatically. You can control it in detail with the "stack" option in **[qsubcellfun](/reference/qsub/qsubcellfun)**. For example
 
-    >> qsubcellfun(@randn, {1,1,1,1}, 'memreq', 1024, 'timreq', 60, 'stack', 4);
+    >> results = qsubcellfun(@randn, {1,1,1,1}, 'memreq', 1024, 'timreq', 60, 'stack', 4);
     stacking 4 MATLAB jobs in each qsub job
-    submitting job irisim_mentat284_p7284_b7_j001... qstat job id 25677.dccn-l014.dccn.nl
+    submitting job username_mentat284_p7284_b7_j001... qstat job id 25677.dccn-l014.dccn.nl
 
 ...
 
-    >> qsubcellfun(@randn, {1,1,1,1}, 'memreq', 1024, 'timreq', 60, 'stack', 1);
-    submitting job irisim_mentat284_p7284_b8_j001... qstat job id 25678.dccn-l014.dccn.nl
-    submitting job irisim_mentat284_p7284_b8_j002... qstat job id 25679.dccn-l014.dccn.nl
-    submitting job irisim_mentat284_p7284_b8_j003... qstat job id 25680.dccn-l014.dccn.nl
-    submitting job irisim_mentat284_p7284_b8_j004... qstat job id 25681.dccn-l014.dccn.nl
+    >> results = qsubcellfun(@randn, {1,1,1,1}, 'memreq', 1024, 'timreq', 60, 'stack', 1);
+    submitting job username_mentat284_p7284_b8_j001... qstat job id 25678.dccn-l014.dccn.nl
+    submitting job username_mentat284_p7284_b8_j002... qstat job id 25679.dccn-l014.dccn.nl
+    submitting job username_mentat284_p7284_b8_j003... qstat job id 25680.dccn-l014.dccn.nl
+    submitting job username_mentat284_p7284_b8_j004... qstat job id 25681.dccn-l014.dccn.nl
 
 ...
 
@@ -135,7 +141,7 @@ With a single job you could simply d
 
     % start MATLAB again
     load jobid.mat
-    outputarg = qsubget(jobid);
+    result = qsubget(jobid);
 
 A complete batch of jobs can be dealt with in a similar manne
 
@@ -150,7 +156,7 @@ A complete batch of jobs can be dealt with in a similar manne
     load jobidarray.mat
     outputarg = {};
     for i=1:10
-      outputarg{i} = qsubget(jobidarray{i});
+      results{i} = qsubget(jobidarray{i});
     end
 
 Or with fewer lines of code using the standard [cellfun](http://www.mathworks.nl/help/matlab/ref/cellfun.html) function a
@@ -161,4 +167,4 @@ Or with fewer lines of code using the standard [cellfun](http://www.mathworks.nl
 
     % start MATLAB again
     load jobidarray.mat
-    outputarg = cellfun(@qsubget, jobidarray, 'UniformOutput', false);
+    results = cellfun(@qsubget, jobidarray, 'UniformOutput', false);
