@@ -272,7 +272,7 @@ and plot them side by side
 
 {% include image src="/assets/img/getting_started/eyelink/screen_shot_2015-11-11_at_16.38.59.png" width="500" %}
 
-If you look carefully, you can see the delay in the MEG ADC channels
+If you look carefully, you can see the delay in the MEG ADC channels, relative to the signals stored in the EDF file. At the DCCN, this delay amounts to about 7 to 8 ms. One may consider estimating this delay, and accounting for it, when eye movement related events are estimated from the ADC signals, and if accurate timing is of the essence.
 
 {% include image src="/assets/img/getting_started/eyelink/screen_shot_2015-11-11_at_16.38.02.png" width="500" %}
 
@@ -291,23 +291,23 @@ The units of the eye-tracker data depend on the specifications in the 'Set Optio
 
 Eye position data can in principle be described as:
 
-- viewing direction, expressed in degrees visual angle
+- viewing direction (HREF), expressed in degrees visual angle
 
-- position on screen, expressed in pixels
-  You can convert between these two representations using some [trigonometry](https://en.wikipedia.org/wiki/Trigonometric_functions). For small angles and centre positions, they are approximately linearly related, but not for more eccentric positions. You should also keep the offset in mind, i.e. the angle or position which is defined as (0,0). Visual angle is most conveniently expressed relative to the center of the screen (i.e. the fixation point), whereas position on screen is most conveniently expressed relative to the upper left corner as pixel (0,0).
+- position on screen (GAZE), expressed in pixels
+  You can convert between these two representations using some [trigonometry](https://en.wikipedia.org/wiki/Trigonometric_functions), that is, when you know the distance to the screen, and the screen's number of pixels/cm. For small angles and centre positions, they are approximately linearly related, but not for more eccentric positions. You should also keep the offset in mind, i.e. the angle or position which is defined as (0,0). Visual angle is most conveniently expressed relative to the center of the screen (i.e. the fixation point), whereas position on screen is most conveniently expressed relative to the upper left corner as pixel (0,0).
 
 ### MEG data - UADC channels
 
 In the Eyelink 'Set Options' screen, set 'Analog Output' to 'GAZE' before recording your data.
 
-The UADC channel values are expressed in Volt. The GAZE positions as recorded in the EDF file are converted into voltages according to these formulas:
+The signals in the UADC channels values are expressed in Volts. The GAZE positions (in pixels) as recorded in the EDF file are converted into voltages according to these formulas:
 
     R     = (voltage - minvoltage)/(maxvoltage - minvoltage)
     S     = R*(maxrange - minrange) + minrange
     Xgaze = S*(screenright  - screenleft + 1) + screenleft
     Ygaze = S*(screenbottom - screentop  + 1) + screentop
 
-The minimum/maximum voltage range and the minimum/maximum range of the data are defined in EyeLink configuration file FINAL.INI. Here, the minimum/maximum voltage range (`minvoltage` and `maxvoltage` in the code below) correspond to the values of `analog_dac_range` in FINAL.INI. The minimum/maximum range of the data (`minrange` and `maxrange` in the code below) correspond to the `analog_x_range`/`analog_y_range` of interest (GAZE) in FINAL.INI. The physical dimensions of your screen (screenright, screenleft, screenbottom, screentop) are defined in PHYSICAL.INI, or your presentation settings.
+The minimum/maximum voltage range and the minimum/maximum range of the data are defined in EyeLink configuration file FINAL.INI. Here, the minimum/maximum voltage range (`minvoltage` and `maxvoltage` in the code above) correspond to the values of `analog_dac_range` in FINAL.INI. The minimum/maximum range of the data (`minrange` and `maxrange` in the code above) correspond to the `analog_x_range`/`analog_y_range` of interest (GAZE) in FINAL.INI. The physical dimensions of your screen (screenright, screenleft, screenbottom, screentop) are defined in PHYSICAL.INI, or your presentation settings. Typical values at DCCN for maxvoltage and minvoltage are 5 and -5 respectively. The maxrange and minrange are typically 1 and 0. The screen parameters [screenleft screentop screenright screenbottom] are something like: [0 0 1919 1079]. Make sure that you verify these values for your setup if you want to make the conversion
 
 Make sure that you use calibration and validation procedures before the recording for meaningful GAZE output!
 
