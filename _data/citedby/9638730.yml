@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '36335806'
+- idtype: doi
+  value: 10.1016/j.dcn.2022.101168
+- idtype: pmcid
+  value: PMC9638730
+authors:
+- authtype: Author
+  name: Edalati M
+- authtype: Author
+  name: Mahmoudzadeh M
+- authtype: Author
+  name: Ghostine G
+- authtype: Author
+  name: Kongolo G
+- authtype: Author
+  name: Safaie J
+- authtype: Author
+  name: Wallois F
+- authtype: Author
+  name: Moghimi S
+epubdate: 2022 Oct 28
+fulljournalname: Developmental Cognitive Neuroscience
+issue: ''
+pages: '101168'
+pmclivedate: 2022/11/08
+printpubdate: ''
+pubdate: 2022 Oct 28
+sortdate: 2022/10/28 00:00
+source: Dev Cogn Neurosci
+title: Preterm neonates distinguish rhythm violation through a hierarchy of cortical
+  processing
+uid: '9638730'
+volume: '58'

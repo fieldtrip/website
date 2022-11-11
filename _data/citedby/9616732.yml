@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '35561681'
+- idtype: doi
+  value: 10.1016/j.cub.2022.04.045
+- idtype: pmcid
+  value: PMC9616732
+authors:
+- authtype: Author
+  name: Petzka M
+- authtype: Author
+  name: Chatburn A
+- authtype: Author
+  name: Charest I
+- authtype: Author
+  name: Balanos GM
+- authtype: Author
+  name: Staresina BP
+epubdate: ''
+fulljournalname: Current Biology
+issue: '11'
+pages: 2349-2356.e4
+pmclivedate: 2022/10/31
+printpubdate: 2022 Jun 6
+pubdate: 2022 Jun 6
+sortdate: 2022/06/06 00:00
+source: Curr Biol
+title: Sleep spindles track cortical learning patterns for memory consolidation
+uid: '9616732'
+volume: '32'

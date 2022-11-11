@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '36291292'
+- idtype: doi
+  value: 10.3390/brainsci12101358
+- idtype: pmcid
+  value: PMC9599651
+authors:
+- authtype: Author
+  name: Casula EP
+- authtype: Author
+  name: Leodori G
+- authtype: Author
+  name: Ibáñez J
+- authtype: Author
+  name: Benussi A
+- authtype: Author
+  name: Rawji V
+- authtype: Author
+  name: Tremblay S
+- authtype: Author
+  name: Latorre A
+- authtype: Author
+  name: Rothwell JC
+- authtype: Author
+  name: Rocchi L
+epubdate: 2022 Oct 6
+fulljournalname: Brain Sciences
+issue: '10'
+pages: '1358'
+pmclivedate: 2022/10/27
+printpubdate: ''
+pubdate: 2022 Oct 6
+sortdate: 2022/10/06 00:00
+source: Brain Sci
+title: 'The Effect of Coil Orientation on the Stimulation of the Pre–Supplementary
+  Motor Area: A Combined TMS and EEG Study'
+uid: '9599651'
+volume: '12'

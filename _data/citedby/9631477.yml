@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '36337705'
+- idtype: doi
+  value: 10.3389/fnagi.2022.988540
+- idtype: pmcid
+  value: PMC9631477
+authors:
+- authtype: Author
+  name: Fernández A
+- authtype: Author
+  name: Ramírez-Toraño F
+- authtype: Author
+  name: Bruña R
+- authtype: Author
+  name: Zuluaga P
+- authtype: Author
+  name: Esteba-Castillo S
+- authtype: Author
+  name: Abásolo D
+- authtype: Author
+  name: Moldenhauer F
+- authtype: Author
+  name: Shumbayawonda E
+- authtype: Author
+  name: Maestú F
+- authtype: Author
+  name: García-Alba J
+epubdate: 2022 Oct 20
+fulljournalname: Frontiers in Aging Neuroscience
+issue: ''
+pages: '988540'
+pmclivedate: 2022/11/04
+printpubdate: ''
+pubdate: 2022 Oct 20
+sortdate: 2022/10/20 00:00
+source: Front Aging Neurosci
+title: 'Brain signal complexity in adults with Down syndrome: Potential application
+  in the detection of mild cognitive impairment'
+uid: '9631477'
+volume: '14'

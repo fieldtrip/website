@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '36322525'
+- idtype: doi
+  value: 10.1371/journal.pcbi.1010662
+- idtype: pmcid
+  value: PMC9629648
+authors:
+- authtype: Author
+  name: Sanz Perl Y
+- authtype: Author
+  name: Escrichs A
+- authtype: Author
+  name: Tagliazucchi E
+- authtype: Author
+  name: Kringelbach ML
+- authtype: Author
+  name: Deco G
+epubdate: 2022 Nov 2
+fulljournalname: PLOS Computational Biology
+issue: '11'
+pages: e1010662
+pmclivedate: 2022/11/03
+printpubdate: ''
+pubdate: 2022 Nov 2
+sortdate: 2022/11/02 00:00
+source: PLoS Comput Biol
+title: Strength-dependent perturbation of whole-brain model working in different regimes
+  reveals the role of fluctuations in brain dynamics
+uid: '9629648'
+volume: '18'

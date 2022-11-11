@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '36279444'
+- idtype: doi
+  value: 10.1073/pnas.2123424119
+- idtype: pmcid
+  value: PMC9636927
+authors:
+- authtype: Author
+  name: Aleman-Zapata A
+- authtype: Author
+  name: Morris RG
+- authtype: Author
+  name: Genzel L
+epubdate: 2022 Oct 24
+fulljournalname: Proceedings of the National Academy of Sciences of the United States
+  of America
+issue: '44'
+pages: e2123424119
+pmclivedate: 2022/11/06
+printpubdate: 2022 Nov 1
+pubdate: 2022 Oct 24
+sortdate: 2022/10/24 00:00
+source: Proc Natl Acad Sci U S A
+title: Sleep deprivation and hippocampal ripple disruption after one-session learning
+  eliminate memory expression the next day
+uid: '9636927'
+volume: '119'

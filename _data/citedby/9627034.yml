@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '35062025'
+- idtype: doi
+  value: 10.1093/cercor/bhab518
+- idtype: pmcid
+  value: PMC9627034
+authors:
+- authtype: Author
+  name: Suess N
+- authtype: Author
+  name: Hauswald A
+- authtype: Author
+  name: Reisinger P
+- authtype: Author
+  name: Rösch S
+- authtype: Author
+  name: Keitel A
+- authtype: Author
+  name: Weisz N
+epubdate: 2022 Jan 22
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '21'
+pages: 4818-4833
+pmclivedate: 2022/11/04
+printpubdate: ''
+pubdate: 2022 Jan 22
+sortdate: 2022/01/22 00:00
+source: Cereb Cortex
+title: Cortical tracking of formant modulations derived from silently presented lip
+  movements and its decline with age
+uid: '9627034'
+volume: '32'

@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '36291222'
+- idtype: doi
+  value: 10.3390/brainsci12101288
+- idtype: pmcid
+  value: PMC9599317
+authors:
+- authtype: Author
+  name: Roebber JK
+- authtype: Author
+  name: Lewis PA
+- authtype: Author
+  name: Crunelli V
+- authtype: Author
+  name: Navarrete M
+- authtype: Author
+  name: Hamandi K
+epubdate: 2022 Sep 24
+fulljournalname: Brain Sciences
+issue: '10'
+pages: '1288'
+pmclivedate: 2022/10/27
+printpubdate: ''
+pubdate: 2022 Sep 24
+sortdate: 2022/09/24 00:00
+source: Brain Sci
+title: Effects of Anti-Seizure Medication on Sleep Spindles and Slow Waves in Drug-Resistant
+  Epilepsy
+uid: '9599317'
+volume: '12'

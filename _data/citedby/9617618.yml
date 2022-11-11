@@ -1,0 +1,38 @@
+articleids:
+- idtype: pmid
+  value: '36041852'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0742-22.2022
+- idtype: pmcid
+  value: PMC9617618
+authors:
+- authtype: Author
+  name: Dickey CW
+- authtype: Author
+  name: Verzhbinsky IA
+- authtype: Author
+  name: Jiang X
+- authtype: Author
+  name: Rosen BQ
+- authtype: Author
+  name: Kajfez S
+- authtype: Author
+  name: Eskandar EN
+- authtype: Author
+  name: Gonzalez-Martinez J
+- authtype: Author
+  name: Cash SS
+- authtype: Author
+  name: Halgren E
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '42'
+pages: 7931-7946
+pmclivedate: ''
+printpubdate: 2022 Oct 19
+pubdate: 2022 Oct 19
+sortdate: 2022/10/19 00:00
+source: J Neurosci
+title: Cortical Ripples during NREM Sleep and Waking in Humans
+uid: '9617618'
+volume: '42'

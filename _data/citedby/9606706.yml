@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '36313125'
+- idtype: doi
+  value: 10.3389/fninf.2022.970372
+- idtype: pmcid
+  value: PMC9606706
+authors:
+- authtype: Author
+  name: Ignatiadis K
+- authtype: Author
+  name: Barumerli R
+- authtype: Author
+  name: Tóth B
+- authtype: Author
+  name: Baumgartner R
+epubdate: 2022 Oct 13
+fulljournalname: Frontiers in Neuroinformatics
+issue: ''
+pages: '970372'
+pmclivedate: 2022/10/28
+printpubdate: ''
+pubdate: 2022 Oct 13
+sortdate: 2022/10/13 00:00
+source: Front Neuroinform
+title: Effects of individualized brain anatomies and EEG electrode positions on inferred
+  activity of the primary auditory cortex
+uid: '9606706'
+volume: '16'

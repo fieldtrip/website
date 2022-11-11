@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '35998110'
+- idtype: doi
+  value: 10.1093/sleep/zsac199
+- idtype: pmcid
+  value: PMC9644120
+authors:
+- authtype: Author
+  name: Blume C
+- authtype: Author
+  name: Niedernhuber M
+- authtype: Author
+  name: Spitschan M
+- authtype: Author
+  name: Slawik HC
+- authtype: Author
+  name: Meyer MP
+- authtype: Author
+  name: Bekinschtein TA
+- authtype: Author
+  name: Cajochen C
+epubdate: 2022 Aug 23
+fulljournalname: Sleep
+issue: '11'
+pages: zsac199
+pmclivedate: ''
+printpubdate: ''
+pubdate: 2022 Aug 23
+sortdate: 2022/08/23 00:00
+source: Sleep
+title: Melatonin suppression does not automatically alter sleepiness, vigilance, sensory
+  processing, or sleep
+uid: '9644120'
+volume: '45'

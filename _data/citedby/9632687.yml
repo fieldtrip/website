@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '36340747'
+- idtype: doi
+  value: 10.1162/nol_a_00052
+- idtype: pmcid
+  value: PMC9632687
+- idtype: MID
+  value: NIHMS1816461
+authors:
+- authtype: Author
+  name: Momsen JP
+- authtype: Author
+  name: Abel AD
+epubdate: 2022 Feb 10
+fulljournalname: Neurobiology of language (Cambridge, Mass.)
+issue: '1'
+pages: 132-148
+pmclivedate: ''
+printpubdate: '2022'
+pubdate: 2022 Feb 10
+sortdate: 2022/02/10 00:00
+source: Neurobiol Lang (Camb)
+title: Neural oscillations reflect meaning identification for novel words in context
+uid: '9632687'
+volume: '3'

@@ -1,0 +1,47 @@
+articleids:
+- idtype: pmid
+  value: '36302909'
+- idtype: doi
+  value: 10.1038/s41467-022-33828-2
+- idtype: pmcid
+  value: PMC9613775
+authors:
+- authtype: Author
+  name: Costa M
+- authtype: Author
+  name: Lozano-Soldevilla D
+- authtype: Author
+  name: Gil-Nagel A
+- authtype: Author
+  name: Toledano R
+- authtype: Author
+  name: Oehrn CR
+- authtype: Author
+  name: Kunz L
+- authtype: Author
+  name: Yebra M
+- authtype: Author
+  name: Mendez-Bertolo C
+- authtype: Author
+  name: Stieglitz L
+- authtype: Author
+  name: Sarnthein J
+- authtype: Author
+  name: Axmacher N
+- authtype: Author
+  name: Moratti S
+- authtype: Author
+  name: Strange BA
+epubdate: 2022 Oct 27
+fulljournalname: Nature Communications
+issue: ''
+pages: '6403'
+pmclivedate: 2022/10/29
+printpubdate: ''
+pubdate: 2022 Oct 27
+sortdate: 2022/10/27 00:00
+source: Nat Commun
+title: Aversive memory formation in humans involves an amygdala-hippocampus phase
+  code
+uid: '9613775'
+volume: '13'

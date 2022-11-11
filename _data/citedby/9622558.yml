@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '35986196'
+- idtype: doi
+  value: 10.3758/s13415-022-01029-5
+- idtype: pmcid
+  value: PMC9622558
+authors:
+- authtype: Author
+  name: Satish A
+- authtype: Author
+  name: Hellerstedt R
+- authtype: Author
+  name: Anderson MC
+- authtype: Author
+  name: Bergström ZM
+epubdate: 2022 Aug 19
+fulljournalname: Cognitive, Affective & Behavioral Neuroscience
+issue: '6'
+pages: 1290-1310
+pmclivedate: 2022/11/02
+printpubdate: '2022'
+pubdate: 2022 Aug 19
+sortdate: 2022/08/19 00:00
+source: Cogn Affect Behav Neurosci
+title: EEG evidence that morally relevant autobiographical memories can be suppressed
+uid: '9622558'
+volume: '22'

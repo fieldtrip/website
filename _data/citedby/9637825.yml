@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fpain.2022.969867
+- idtype: pmcid
+  value: PMC9637825
+authors:
+- authtype: Author
+  name: Bucolo M
+- authtype: Author
+  name: Rance M
+- authtype: Author
+  name: Nees F
+- authtype: Author
+  name: Ruttorf M
+- authtype: Author
+  name: Stella G
+- authtype: Author
+  name: Monarca N
+- authtype: Author
+  name: Andoh J
+- authtype: Author
+  name: Flor H
+epubdate: 2022 Oct 24
+fulljournalname: Frontiers in Pain Research
+issue: ''
+pages: '969867'
+pmclivedate: 2022/11/08
+printpubdate: ''
+pubdate: 2022 Oct 24
+sortdate: 2022/10/24 00:00
+source: Front Pain Res (Lausanne)
+title: Cortical networks underlying successful control of nociceptive processing using
+  real-time fMRI
+uid: '9637825'
+volume: '3'

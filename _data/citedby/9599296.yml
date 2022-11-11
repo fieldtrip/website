@@ -1,0 +1,23 @@
+articleids:
+- idtype: pmid
+  value: '36291337'
+- idtype: doi
+  value: 10.3390/brainsci12101404
+- idtype: pmcid
+  value: PMC9599296
+authors:
+- authtype: Author
+  name: Dimitriadis SI
+epubdate: 2022 Oct 18
+fulljournalname: Brain Sciences
+issue: '10'
+pages: '1404'
+pmclivedate: 2022/10/27
+printpubdate: ''
+pubdate: 2022 Oct 18
+sortdate: 2022/10/18 00:00
+source: Brain Sci
+title: Universal Lifespan Trajectories of Source-Space Information Flow Extracted
+  from Resting-State MEG Data
+uid: '9599296'
+volume: '12'

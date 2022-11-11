@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '36299492'
+- idtype: doi
+  value: 10.1016/j.ijchp.2022.100343
+- idtype: pmcid
+  value: PMC9577271
+authors:
+- authtype: Author
+  name: Luo X
+- authtype: Author
+  name: Che X
+- authtype: Author
+  name: Li H
+epubdate: 2022 Oct 17
+fulljournalname: 'International Journal of Clinical and Health Psychology : IJCHP'
+issue: '1'
+pages: '100343'
+pmclivedate: 2022/10/25
+printpubdate: 2023 Jan-Apr
+pubdate: 2022 Oct 17
+sortdate: 2022/10/17 00:00
+source: Int J Clin Health Psychol
+title: Concurrent TMS-EEG and EEG reveal neuroplastic and oscillatory changes associated
+  with self-compassion and negative emotions
+uid: '9577271'
+volume: '23'

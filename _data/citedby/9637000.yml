@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '36109167'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0836-22.2022
+- idtype: pmcid
+  value: PMC9637000
+authors:
+- authtype: Author
+  name: Pinggal E
+- authtype: Author
+  name: Dockree PM
+- authtype: Author
+  name: O'Connell RG
+- authtype: Author
+  name: Bellgrove MA
+- authtype: Author
+  name: Andrillon T
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '43'
+pages: 8113-8124
+pmclivedate: ''
+printpubdate: 2022 Oct 26
+pubdate: 2022 Oct 26
+sortdate: 2022/10/26 00:00
+source: J Neurosci
+title: Pharmacological Manipulations of Physiological Arousal and Sleep-Like Slow
+  Waves Modulate Sustained Attention
+uid: '9637000'
+volume: '42'

@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '36298121'
+- idtype: doi
+  value: 10.3390/s22207771
+- idtype: pmcid
+  value: PMC9611388
+authors:
+- authtype: Author
+  name: Li Z
+- authtype: Author
+  name: Iramina K
+epubdate: 2022 Oct 13
+fulljournalname: Sensors (Basel, Switzerland)
+issue: '20'
+pages: '7771'
+pmclivedate: 2022/10/28
+printpubdate: ''
+pubdate: 2022 Oct 13
+sortdate: 2022/10/13 00:00
+source: Sensors (Basel)
+title: Spatio-Temporal Neural Dynamics of Observing Non-Tool Manipulable Objects and
+  Interactions
+uid: '9611388'
+volume: '22'

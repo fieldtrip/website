@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '36310543'
+- idtype: doi
+  value: 10.21105/joss.03293
+- idtype: pmcid
+  value: PMC9615366
+- idtype: MID
+  value: NIHMS1838877
+authors:
+- authtype: Author
+  name: Urbach TP
+- authtype: Author
+  name: Portnoy AS
+epubdate: 2021 Jul 19
+fulljournalname: Journal of open source software
+issue: '63'
+pages: '3293'
+pmclivedate: 2022/10/28
+printpubdate: '2021'
+pubdate: 2021 Jul 19
+sortdate: 2021/07/19 00:00
+source: J Open Source Softw
+title: 'fitgrid: A Python package for multi-channel event-related time series regression
+  modeling'
+uid: '9615366'
+volume: '6'

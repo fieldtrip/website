@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '36256817'
+- idtype: doi
+  value: 10.1073/pnas.2214638119
+- idtype: pmcid
+  value: PMC9618087
+authors:
+- authtype: Author
+  name: Hassall CD
+- authtype: Author
+  name: Harley J
+- authtype: Author
+  name: Kolling N
+- authtype: Author
+  name: Hunt LT
+epubdate: 2022 Oct 18
+fulljournalname: Proceedings of the National Academy of Sciences of the United States
+  of America
+issue: '43'
+pages: e2214638119
+pmclivedate: 2022/10/31
+printpubdate: 2022 Oct 25
+pubdate: 2022 Oct 18
+sortdate: 2022/10/18 00:00
+source: Proc Natl Acad Sci U S A
+title: Temporal scaling of human scalp-recorded potentials
+uid: '9618087'
+volume: '119'

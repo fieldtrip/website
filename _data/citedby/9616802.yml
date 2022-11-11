@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '35385693'
+- idtype: doi
+  value: 10.1016/j.cub.2022.03.045
+- idtype: pmcid
+  value: PMC9616802
+authors:
+- authtype: Author
+  name: Ratcliffe O
+- authtype: Author
+  name: Shapiro K
+- authtype: Author
+  name: Staresina BP
+epubdate: ''
+fulljournalname: Current Biology
+issue: '10'
+pages: 2121-2129.e3
+pmclivedate: 2022/10/31
+printpubdate: 2022 May 23
+pubdate: 2022 May 23
+sortdate: 2022/05/23 00:00
+source: Curr Biol
+title: Fronto-medial theta coordinates posterior maintenance of working memory content
+uid: '9616802'
+volume: '32'

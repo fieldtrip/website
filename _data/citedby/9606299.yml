@@ -1,0 +1,45 @@
+articleids:
+- idtype: pmid
+  value: '36289267'
+- idtype: doi
+  value: 10.1038/s41598-022-21870-5
+- idtype: pmcid
+  value: PMC9606299
+authors:
+- authtype: Author
+  name: An KM
+- authtype: Author
+  name: Shim JH
+- authtype: Author
+  name: Kwon H
+- authtype: Author
+  name: Lee YH
+- authtype: Author
+  name: Yu KK
+- authtype: Author
+  name: Kwon M
+- authtype: Author
+  name: Chun WY
+- authtype: Author
+  name: Hirosawa T
+- authtype: Author
+  name: Hasegawa C
+- authtype: Author
+  name: Iwasaki S
+- authtype: Author
+  name: Kikuchi M
+- authtype: Author
+  name: Kim K
+epubdate: 2022 Oct 26
+fulljournalname: Scientific Reports
+issue: ''
+pages: '17993'
+pmclivedate: 2022/10/28
+printpubdate: ''
+pubdate: 2022 Oct 26
+sortdate: 2022/10/26 00:00
+source: Sci Rep
+title: Detection of the 40 Hz auditory steady-state response with optically pumped
+  magnetometers
+uid: '9606299'
+volume: '12'
