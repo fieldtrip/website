@@ -1,0 +1,49 @@
+articleids:
+- idtype: pmid
+  value: '36290951'
+- idtype: doi
+  value: 10.3390/bios12100814
+- idtype: pmcid
+  value: PMC9599895
+authors:
+- authtype: Author
+  name: Takano M
+- authtype: Author
+  name: Wada M
+- authtype: Author
+  name: Zomorrodi R
+- authtype: Author
+  name: Taniguchi K
+- authtype: Author
+  name: Li X
+- authtype: Author
+  name: Honda S
+- authtype: Author
+  name: Tobari Y
+- authtype: Author
+  name: Mimura Y
+- authtype: Author
+  name: Nakajima S
+- authtype: Author
+  name: Kitahata R
+- authtype: Author
+  name: Mimura M
+- authtype: Author
+  name: Daskalakis ZJ
+- authtype: Author
+  name: Blumberger DM
+- authtype: Author
+  name: Noda Y
+epubdate: 2022 Oct 1
+fulljournalname: Biosensors
+issue: '10'
+pages: '814'
+pmclivedate: 2022/10/27
+printpubdate: ''
+pubdate: 2022 Oct 1
+sortdate: 2022/10/01 00:00
+source: Biosensors (Basel)
+title: Investigation of Spatiotemporal Profiles of Single-Pulse TMS-Evoked Potentials
+  with Active Stimulation Compared with a Novel Sham Condition
+uid: '9599895'
+volume: '12'

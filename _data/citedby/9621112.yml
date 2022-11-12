@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '35973239'
+- idtype: doi
+  value: 10.1016/j.cortex.2022.07.001
+- idtype: pmcid
+  value: PMC9621112
+- idtype: MID
+  value: NIHMS1843686
+authors:
+- authtype: Author
+  name: Sarmukadam K
+- authtype: Author
+  name: Behroozmand R
+epubdate: 2022 Jul 29
+fulljournalname: Cortex; a journal devoted to the study of the nervous system and
+  behavior
+issue: ''
+pages: 75-89
+pmclivedate: 2022/10/31
+printpubdate: 2022 Oct
+pubdate: 2022 Jul 29
+sortdate: 2022/07/29 00:00
+source: Cortex
+title: Aberrant beta-band brain connectivity predicts speech motor planning deficits
+  in post-stroke aphasia
+uid: '9621112'
+volume: '155'
