@@ -5,7 +5,7 @@ tags: [example, eeg, meg, raw, preprocessing, trialdef]
 
 # Getting started with reading raw EEG or MEG data
 
-In FieldTrip you first have to define the segments of data in which you are interested, i.e. the "trials". That is done using the DEFINETRIAL function. You can use the DEFINETRIAL function also to show a summary of all events on your data fil
+In FieldTrip you first have to define the segments of data in which you are interested, i.e. the "trials". That is done using the **[ft_definetrial](/reference/ft_definetrial)** function. You can use the **[ft_definetrial](/reference/ft_definetrial)** function also to show a summary of all events on your data fil
 
     cfg = [];
     cfg.dataset = 'ArtifactMEG.ds';
@@ -17,7 +17,7 @@ The output on screen might look like this
     evaluating trialfunction 'trialfun_general'
     the following events were found in the datafile
     event type: 'trial' with event values:
-    no trials have been defined yet, see DEFINETRIAL for further help
+    no trials have been defined yet, see FT_DEFINETRIAL for further help
     found 76 events
     created 0 trials
 
@@ -27,7 +27,7 @@ The important line is
 
 which indicates that the dataset contains 'trials', and that the trials themselves do not have a value. Other events are for example triggers, which usually will have a numeric value.
 
-Since "trial" events have a clear begin, end and duration, you do not have to specify those in DEFINETRIAL. The next step is to call DEFINETRIAL once more, now telling it that it should select the data segments corresponding with the trial events.
+Since "trial" events have a clear begin, end and duration, you do not have to specify those in **[ft_definetrial](/reference/ft_definetrial)**. The next step is to call **[ft_definetrial](/reference/ft_definetrial)** once more, now telling it that it should select the data segments corresponding with the trial events.
 
     cfg.trialdef.eventtype = 'trial';
     cfg = ft_definetrial(cfg); % now you do want to use an output variable for definetrial, since you need its output
@@ -38,7 +38,7 @@ This time the following lines will appear on the MATLAB output
     found 76 events
     created 76 trials
 
-which indicate that 76 "fieldtrip-trials" have been made out of the 76 "trial-events" in the datafile. Subsequently you can call the PREPROCESSING function, which will read the desired data segments and (optionally) apply filtering and rereferencing to the data.
+which indicate that 76 "fieldtrip-trials" have been made out of the 76 "trial-events" in the datafile. Subsequently you can call the **[ft_preprocessing](/reference/ft_preprocessing)** function, which will read the desired data segments and (optionally) apply filtering and rereferencing to the data.
 
     raw_data = ft_preprocessing(cfg)
 
@@ -66,7 +66,7 @@ which will show the following information on screen
         fsample: 1200
            grad: [1x1 struct]
 
-P.S. prior to calling PREPROCESSING, you might want to do artifact detection using the ARTIFACT_xxx functions (where xxx is for example EOG) and the REJECTARTIFACT function.
+P.S. prior to calling **[ft_preprocessing](/reference/ft_preprocessing)**, you might want to do artifact detection using the FT_ARTIFACT_XXX functions (where xxx is for example EOG) and the **[ft_rejectartifact](/reference/ft_preprocessing)** function.
 
 ## Another example using "trigger" events
 
@@ -94,7 +94,7 @@ This will show the following information on scree
     event type: 'classification' with event values: 'BAD'
     event type: 'frontpanel trigger' with event values: 16384
     event type: 'trial' with event values:
-    no trials have been defined yet, see DEFINETRIAL for further help
+    no trials have been defined yet, see FT_DEFINETRIAL for further help
     found 1343 events
     created 0 trials
 

@@ -13,7 +13,7 @@ The idea is to make a graphical user interface that allows the user to step thro
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     % Step 1: do the preprocessing
     %
-    % The first step is to read the data using the function PREPROCESSING. With the aim to
+    % The first step is to read the data using the function FT_PREPROCESSING. With the aim to
     % reduce boundary effects occurring at the start and the end of the trials, it is
     % recommended to read larger time intervals than the time period of interest.
     % In this example, the time of interest is from -0.5 s to 1.5 s (t = 0 s defines the time

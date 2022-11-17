@@ -17,10 +17,10 @@ To submit a job to the cluster, you will use **[qsubfeval](/reference/qsub/qsubf
 
 Try the following:
 
-    jobid = qsubfeval('rand', 100, 'timreq', 60, 'memreq', 1024*1024)
+    jobid = qsubfeval('rand', 100, 'timreq', 60, 'memreq', 1024*1024*1024)
 
 {% include markup/info %}
-Besides the memory requirements for your computation, MATLAB also requires memory for itself. The **[qsubfeval](/reference/qsub/qsubfeval)** and **[qsubcellfun](/reference/qsub/qsubcellfun)** functions have the option **memoverhead** for this, which is by default 1GB. The **memreq** option itself does not have a default value. The torque job is started with a memory reservation of **memreq+memoverhead**.
+Besides the memory requirements for your computation, MATLAB also requires memory for itself. The **[qsubfeval](/reference/qsub/qsubfeval)** and **[qsubcellfun](/reference/qsub/qsubcellfun)** functions have the option `memoverhead` for this, which is by default 1GB (which is 1024\*1024\*1024 bytes). The `memreq` option itself does not have a default value. The torque job is started with a memory reservation of `memoverhead + memreq`, which adds up to 2GB in this example.
 {% include markup/end %}
 
 You will get the job ID as the output:
@@ -69,7 +69,7 @@ To execute few jobs in parallel as a batch you will use **[qsubcellfun](/referen
 
 Qsubcellfun is similar to the standard MATLAB Cellfun. Try the following:
 
-    >> results = qsubcellfun('randn', {1,1,1,1}, 'timreq', 60, 'memreq', 1024*1024)
+    >> results = qsubcellfun('randn', {1,1,1,1}, 'timreq', 60, 'memreq', 1024*1024*1024)
 
     submitting job username_mentat284_p7284_b6_j001... qstat job id 25618.dccn-l014.dccn.nl
     submitting job username_mentat284_p7284_b6_j002... qstat job id 25619.dccn-l014.dccn.nl

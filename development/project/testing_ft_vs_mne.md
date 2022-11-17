@@ -24,7 +24,7 @@ Here is the script that I use
     % event type: 'classification' with event values: 'Average' 'PlusMinus' 'StdDev'
     % event type: 'frontpanel trigger' with event values: 8
     % event type: 'trial' with event values:
-    % no trials have been defined yet, see DEFINETRIAL for further help
+    % no trials have been defined yet, see FT_DEFINETRIAL for further help
     % found 38 events
     % created 0 trials
 
