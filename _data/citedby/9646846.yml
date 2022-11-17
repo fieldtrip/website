@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '36351956'
+- idtype: doi
+  value: 10.1038/s41598-022-23067-2
+- idtype: pmcid
+  value: PMC9646846
+authors:
+- authtype: Author
+  name: Cavazza J
+- authtype: Author
+  name: Ahmed W
+- authtype: Author
+  name: Volpi R
+- authtype: Author
+  name: Morerio P
+- authtype: Author
+  name: Bossi F
+- authtype: Author
+  name: Willemse C
+- authtype: Author
+  name: Wykowska A
+- authtype: Author
+  name: Murino V
+epubdate: 2022 Nov 9
+fulljournalname: Scientific Reports
+issue: ''
+pages: '19073'
+pmclivedate: 2022/11/15
+printpubdate: ''
+pubdate: 2022 Nov 9
+sortdate: 2022/11/09 00:00
+source: Sci Rep
+title: Understanding action concepts from videos and brain activity through subjects’
+  consensus
+uid: '9646846'
+volume: '12'

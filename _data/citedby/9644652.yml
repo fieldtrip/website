@@ -1,0 +1,48 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fnhum.2022.996989
+- idtype: pmcid
+  value: PMC9644652
+authors:
+- authtype: Author
+  name: Herfurth K
+- authtype: Author
+  name: Harpaz Y
+- authtype: Author
+  name: Roesch J
+- authtype: Author
+  name: Mueller N
+- authtype: Author
+  name: Walther K
+- authtype: Author
+  name: Kaltenhaeuser M
+- authtype: Author
+  name: Pauli E
+- authtype: Author
+  name: Goldstein A
+- authtype: Author
+  name: Hamer H
+- authtype: Author
+  name: Buchfelder M
+- authtype: Author
+  name: Doerfler A
+- authtype: Author
+  name: Prell J
+- authtype: Author
+  name: Rampp S
+epubdate: 2022 Oct 26
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '996989'
+pmclivedate: 2022/11/15
+printpubdate: ''
+pubdate: 2022 Oct 26
+sortdate: 2022/10/26 00:00
+source: Front Hum Neurosci
+title: Localization of beta power decrease as measure for lateralization in pre-surgical
+  language mapping with magnetoencephalography, compared with functional magnetic
+  resonance imaging and validated by Wada test
+uid: '9644652'
+volume: '16'

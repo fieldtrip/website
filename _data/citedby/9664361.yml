@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1016/j.isci.2022.105413
+- idtype: pmcid
+  value: PMC9664361
+authors:
+- authtype: Author
+  name: Drijvers L
+- authtype: Author
+  name: Holler J
+epubdate: 2022 Oct 27
+fulljournalname: iScience
+issue: '11'
+pages: '105413'
+pmclivedate: 2022/11/15
+printpubdate: ''
+pubdate: 2022 Oct 27
+sortdate: 2022/10/27 00:00
+source: iScience
+title: Face-to-face spatial orientation fine-tunes the brain for neurocognitive processing
+  in conversation
+uid: '9664361'
+volume: '25'
