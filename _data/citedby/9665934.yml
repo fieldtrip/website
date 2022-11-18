@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '36202618'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1063-22.2022
+- idtype: pmcid
+  value: PMC9665934
+authors:
+- authtype: Author
+  name: Snipes S
+- authtype: Author
+  name: Krugliakova E
+- authtype: Author
+  name: Meier E
+- authtype: Author
+  name: Huber R
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '45'
+pages: 8569-8586
+pmclivedate: 2022/11/16
+printpubdate: 2022 Nov 9
+pubdate: 2022 Nov 9
+sortdate: 2022/11/09 00:00
+source: J Neurosci
+title: 'The Theta Paradox: 4-8 Hz EEG Oscillations Reflect Both Sleep Pressure and
+  Cognitive Control'
+uid: '9665934'
+volume: '42'
