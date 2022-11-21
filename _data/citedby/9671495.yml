@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '36394367'
+- idtype: doi
+  value: 10.7554/eLife.80633
+- idtype: pmcid
+  value: PMC9671495
+authors:
+- authtype: Author
+  name: Kerrén C
+- authtype: Author
+  name: van Bree S
+- authtype: Author
+  name: Griffiths BJ
+- authtype: Author
+  name: Wimber M
+epubdate: 2022 Nov 17
+fulljournalname: eLife
+issue: ''
+pages: e80633
+pmclivedate: 2022/11/18
+printpubdate: ''
+pubdate: 2022 Nov 17
+sortdate: 2022/11/17 00:00
+source: eLife
+title: Phase separation of competing memories along the human hippocampal theta rhythm
+uid: '9671495'
+volume: '11'

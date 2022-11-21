@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '36223999'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0658-22.2022
+- idtype: pmcid
+  value: PMC9671580
+authors:
+- authtype: Author
+  name: Niedernhuber M
+- authtype: Author
+  name: Raimondo F
+- authtype: Author
+  name: Sitt JD
+- authtype: Author
+  name: Bekinschtein TA
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '46'
+pages: 8729-8741
+pmclivedate: ''
+printpubdate: 2022 Nov 16
+pubdate: 2022 Nov 16
+sortdate: 2022/11/16 00:00
+source: J Neurosci
+title: Sensory Target Detection at Local and Global Timescales Reveals a Hierarchy
+  of Supramodal Dynamics in the Human Cortex
+uid: '9671580'
+volume: '42'

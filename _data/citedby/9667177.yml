@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '35106538'
+- idtype: doi
+  value: 10.1093/cercor/bhab529
+- idtype: pmcid
+  value: PMC9667177
+authors:
+- authtype: Author
+  name: Bramão I
+- authtype: Author
+  name: Jiang J
+- authtype: Author
+  name: Wagner AD
+- authtype: Author
+  name: Johansson M
+epubdate: 2022 Feb 1
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '22'
+pages: 5020-5035
+pmclivedate: 2022/11/17
+printpubdate: ''
+pubdate: 2022 Feb 1
+sortdate: 2022/02/01 00:00
+source: Cereb Cortex
+title: Encoding contexts are incidentally reinstated during competitive retrieval
+  and track the temporal dynamics of memory interference
+uid: '9667177'
+volume: '32'

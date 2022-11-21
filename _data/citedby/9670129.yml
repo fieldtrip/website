@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fnins.2022.896933
+- idtype: pmcid
+  value: PMC9670129
+authors:
+- authtype: Author
+  name: Guo J
+- authtype: Author
+  name: Liu T
+- authtype: Author
+  name: Wang J
+epubdate: 2022 Nov 3
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '896933'
+pmclivedate: 2022/11/18
+printpubdate: ''
+pubdate: 2022 Nov 3
+sortdate: 2022/11/03 00:00
+source: Front Neurosci
+title: Effects of auditory feedback on fine motor output and corticomuscular coherence
+  during a unilateral finger pinch task
+uid: '9670129'
+volume: '16'

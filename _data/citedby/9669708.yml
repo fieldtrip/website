@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fnins.2022.989589
+- idtype: pmcid
+  value: PMC9669708
+authors:
+- authtype: Author
+  name: Bode S
+- authtype: Author
+  name: Schubert E
+- authtype: Author
+  name: Hogendoorn H
+- authtype: Author
+  name: Feuerriegel D
+epubdate: 2022 Nov 3
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '989589'
+pmclivedate: 2022/11/18
+printpubdate: ''
+pubdate: 2022 Nov 3
+sortdate: 2022/11/03 00:00
+source: Front Neurosci
+title: Decoding continuous variables from event-related potential (ERP) data with
+  linear support vector regression using the Decision Decoding Toolbox (DDTBOX)
+uid: '9669708'
+volume: '16'
