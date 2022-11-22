@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1038/s42003-022-04217-8
+- idtype: pmcid
+  value: PMC9675809
+authors:
+- authtype: Author
+  name: Fernández-Rubio G
+- authtype: Author
+  name: Brattico E
+- authtype: Author
+  name: Kotz SA
+- authtype: Author
+  name: Kringelbach ML
+- authtype: Author
+  name: Vuust P
+- authtype: Author
+  name: Bonetti L
+epubdate: 2022 Nov 19
+fulljournalname: Communications Biology
+issue: ''
+pages: '1272'
+pmclivedate: 2022/11/21
+printpubdate: ''
+pubdate: 2022 Nov 19
+sortdate: 2022/11/19 00:00
+source: Commun Biol
+title: Magnetoencephalography recordings reveal the spatiotemporal dynamics of recognition
+  memory for complex versus simple auditory sequences
+uid: '9675809'
+volume: '5'
