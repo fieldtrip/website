@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fnhum.2022.1043499
+- idtype: pmcid
+  value: PMC9676967
+authors:
+- authtype: Author
+  name: Xiu B
+- authtype: Author
+  name: Paul BT
+- authtype: Author
+  name: Chen JM
+- authtype: Author
+  name: Le TN
+- authtype: Author
+  name: Lin VY
+- authtype: Author
+  name: Dimitrijevic A
+epubdate: 2022 Nov 7
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '1043499'
+pmclivedate: 2022/11/22
+printpubdate: ''
+pubdate: 2022 Nov 7
+sortdate: 2022/11/07 00:00
+source: Front Hum Neurosci
+title: Neural responses to naturalistic audiovisual speech are related to listening
+  demand in cochlear implant users
+uid: '9676967'
+volume: '16'
