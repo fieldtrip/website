@@ -19,7 +19,7 @@ Dec 14-16, 2022
 
 Anne-Sophie Dubarry and Maximilien Chaumon are the local organizers.
 
-The FieldTrip tutorials will be presented and tutored by Robert Oostenveld (from the Donders Institute for Brain, Cognition and Behaviour, Nijmegen, NL) and Christelle Zielinski (from the Institute of Language, Communication and the Brain, Aix-en-Provence, FR)
+The FieldTrip tutorials will be presented and tutored by [Robert Oostenveld](https://www.ru.nl/en/people/oostenveld-r) (from the Donders Institute for Brain, Cognition and Behaviour, Nijmegen, NL) and [Christelle Zielinski](https://www.lpl-aix.fr/contact/christelle-zielinski/) (from the Institute of Language, Communication and the Brain, Aix-en-Provence, FR)
 
 There will also be other experts from MNE-Python, BrainStorm and EEGLAB with their respective tutorials, and jointly we will organize the plenary lectures.
 
