@@ -1,0 +1,49 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1016/j.ynirp.2022.100134
+- idtype: pmcid
+  value: PMC9683354
+- idtype: MID
+  value: NIHMS1846542
+authors:
+- authtype: Author
+  name: Wilkinson M
+- authtype: Author
+  name: Keehn RJ
+- authtype: Author
+  name: Linke AC
+- authtype: Author
+  name: You Y
+- authtype: Author
+  name: Gao Y
+- authtype: Author
+  name: Alemu K
+- authtype: Author
+  name: Correas A
+- authtype: Author
+  name: Rosen BQ
+- authtype: Author
+  name: Kohli JS
+- authtype: Author
+  name: Wagner L
+- authtype: Author
+  name: Sridhar A
+- authtype: Author
+  name: Marinkovic K
+- authtype: Author
+  name: Müller RA
+epubdate: 2022 Oct 15
+fulljournalname: Neuroimage. Reports
+issue: '4'
+pages: '100134'
+pmclivedate: ''
+printpubdate: 2022 Dec
+pubdate: 2022 Oct 15
+sortdate: 2022/10/15 00:00
+source: Neuroimage Rep
+title: fMRI BOLD and MEG theta power reflect complementary aspects of activity during
+  lexicosemantic decision in adolescents with ASD
+uid: '9683354'
+volume: '2'

@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1016/j.dib.2022.108647
+- idtype: pmcid
+  value: PMC9679478
+authors:
+- authtype: Author
+  name: Hatlestad-Hall C
+- authtype: Author
+  name: Rygvold TW
+- authtype: Author
+  name: Andersson S
+epubdate: 2022 Oct 1
+fulljournalname: Data in Brief
+issue: ''
+pages: '108647'
+pmclivedate: 2022/11/23
+printpubdate: ''
+pubdate: 2022 Oct 1
+sortdate: 2022/10/01 00:00
+source: Data Brief
+title: BIDS-structured resting-state electroencephalography (EEG) data extracted from
+  an experimental paradigm
+uid: '9679478'
+volume: '45'
