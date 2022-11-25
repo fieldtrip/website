@@ -5,17 +5,15 @@ tags: [example, bids, sharing, nirs, artinis, homer, snirf]
 
 # Converting an example NIRS dataset for sharing in BIDS
 
-{% include markup/danger %}
-The [BIDS standard](https://bids.neuroimaging.io) does currently not specify how to represent NIRS data. This example - and the support that is implemented in the **[data2bids](/reference/data2bids)** function - should be considered as a preliminary proposal to help researchers with their existing data.
-
-See this [Google doc](https://bids.neuroimaging.io/bep030) with the draft specification that is being discussed.
+{% include markup/warning %}
+NIRS is part of the [BIDS standard](https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/11-near-infrared-spectroscopy.html) as of version 1.8.0 and uses the [SNIRF file format](https://github.com/fNIRS/snirf/blob/v1.1/snirf_specification.md).
 {% include markup/end %}
 
 ## Artinis
 
 Artinis is a company specialized in NIRS that is located close to Nijmegen, and hence at the Donders we regularly have shared projects with them. Artinis makes large laser-based, but also diode-based wearable NIRS systems.
 
-The windows software that comes with the Arinis system is called "Oxysoft", it writes data in the proprietary `.oxy3` or `.oxy4` formats. Although the file format is not open, FieldTrip has reading functions for it (as pre-compiled MATLAB code) in the `external/artinis` folder, which are automatically called by the normal reading functions and **[ft_preprocessing](/reference/ft_preprocessing)**. A peculiarity of the Artinis data format is that you always have to provide an extra file called `optodetemplates.xml` with the data. In that XML file additional header information about the measurement setup (used in Oxysoft) is stored, including the optode and channel configuration and template optode locations for display on screen.
+The windows software that comes with the Arinis system is called "Oxysoft" and it writes data in the proprietary `.oxy3` or `.oxy4` formats. Although the file format is not open, FieldTrip has reading functions for it (as pre-compiled MATLAB code) in the `external/artinis` folder, which are automatically called by the normal reading functions and **[ft_preprocessing](/reference/ft_preprocessing)**. A peculiarity of the Artinis data format is that you always have to provide an extra file called `optodetemplates.xml` with the data. That XML file (used in Oxysoft) contains additional header information about the measurement setup, including the optode and channel configuration and template optode locations for display on screen.
 
 ### Example
 
