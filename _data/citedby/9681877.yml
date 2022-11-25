@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '36414684'
+- idtype: doi
+  value: 10.1038/s41597-022-01820-6
+- idtype: pmcid
+  value: PMC9681877
+authors:
+- authtype: Author
+  name: Moffa AH
+- authtype: Author
+  name: Boonstra TW
+- authtype: Author
+  name: Wang A
+- authtype: Author
+  name: Martin D
+- authtype: Author
+  name: Loo C
+- authtype: Author
+  name: Nikolin S
+epubdate: 2022 Nov 21
+fulljournalname: Scientific Data
+issue: ''
+pages: '717'
+pmclivedate: 2022/11/24
+printpubdate: ''
+pubdate: 2022 Nov 21
+sortdate: 2022/11/21 00:00
+source: Sci Data
+title: Neuromodulatory effects of theta burst stimulation to the prefrontal cortex
+uid: '9681877'
+volume: '9'
