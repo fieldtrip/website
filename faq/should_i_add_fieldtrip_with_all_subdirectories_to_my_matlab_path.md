@@ -21,7 +21,7 @@ You should do
 
     addpath <path_to_fieldtrip>
 
-where full_path_to_fieldtrip is the location where the FieldTrip directory is located. Inside the Donders Centre for Cognitive Neuroimaging, this would be on Linux
+where path_to_fieldtrip is the location where the FieldTrip directory is located. Inside the Donders Centre for Cognitive Neuroimaging, this would be on Linux
 
     addpath /home/common/matlab/fieldtrip
 

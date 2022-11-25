@@ -33,24 +33,6 @@ Note that there are some mex files that are not compiled with this function. Als
 
 Some of the simple mex files come with a corresponding m-file that automatically compile the mex file if it detects that the mex file is missing for your platform.
 
-## Config object
-
-The config object is used by **[ft_checkconfig](/reference/utilities/ft_checkconfig)** to keep track of cfg options that are used and changed. By default this is _not_ enabled. The cfg-tracking is implemented with a number of mex files. To compile these, do this on the MATLAB command line
-
-```matlab
-cd @config/private
-compile
-```
-
-## Uint64 object
-
-The uint64 object is used for reading some particular file formats (a.o. Neuralynx) on older versions of MATLAB that did not have support for 64-bit unsigned integers. The mex files are compiled in MATLAB with
-
-```matlab
-cd fileio/@uint64
-compile
-```
-
 ## Realtime buffer library
 
 The realtime buffer mex file is compiled on the MATLAB command line with
