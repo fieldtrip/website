@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '36424411'
+- idtype: doi
+  value: 10.1038/s41531-022-00420-w
+- idtype: pmcid
+  value: PMC9691624
+authors:
+- authtype: Author
+  name: Topka M
+- authtype: Author
+  name: Schneider M
+- authtype: Author
+  name: Zrenner C
+- authtype: Author
+  name: Belardinelli P
+- authtype: Author
+  name: Ziemann U
+- authtype: Author
+  name: Weiss D
+epubdate: 2022 Nov 23
+fulljournalname: NPJ Parkinson's Disease
+issue: ''
+pages: '161'
+pmclivedate: 2022/11/26
+printpubdate: ''
+pubdate: 2022 Nov 23
+sortdate: 2022/11/23 00:00
+source: NPJ Parkinsons Dis
+title: Motor cortex excitability is reduced during freezing of upper limb movement
+  in Parkinson’s disease
+uid: '9691624'
+volume: '8'

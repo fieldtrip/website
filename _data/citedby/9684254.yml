@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '35933532'
+- idtype: doi
+  value: 10.1007/s10548-022-00909-w
+- idtype: pmcid
+  value: PMC9684254
+authors:
+- authtype: Author
+  name: Fernández-Folgueiras U
+- authtype: Author
+  name: Hernández-Lorca M
+- authtype: Author
+  name: Méndez-Bértolo C
+- authtype: Author
+  name: Álvarez F
+- authtype: Author
+  name: Giménez-Fernández T
+- authtype: Author
+  name: Carretié L
+epubdate: 2022 Aug 6
+fulljournalname: Brain Topography
+issue: 5-6
+pages: 599-612
+pmclivedate: 2022/11/25
+printpubdate: '2022'
+pubdate: 2022 Aug 6
+sortdate: 2022/08/06 00:00
+source: Brain Topogr
+title: Exogenous Attention to Emotional Stimuli Presenting Realistic (3D) Looming
+  Motion
+uid: '9684254'
+volume: '35'

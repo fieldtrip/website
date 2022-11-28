@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '36180240'
+- idtype: doi
+  value: 10.1212/WNL.0000000000201200
+- idtype: pmcid
+  value: PMC9687404
+authors:
+- authtype: Author
+  name: Polverino A
+- authtype: Author
+  name: Troisi Lopez E
+- authtype: Author
+  name: Minino R
+- authtype: Author
+  name: Liparoti M
+- authtype: Author
+  name: Romano A
+- authtype: Author
+  name: Trojsi F
+- authtype: Author
+  name: Lucidi F
+- authtype: Author
+  name: Gollo L
+- authtype: Author
+  name: Jirsa V
+- authtype: Author
+  name: Sorrentino G
+- authtype: Author
+  name: Sorrentino P
+epubdate: ''
+fulljournalname: Neurology
+issue: '21'
+pages: e2395-e2405
+pmclivedate: 2022/11/25
+printpubdate: 2022 Nov 22
+pubdate: 2022 Nov 22
+sortdate: 2022/11/22 00:00
+source: Neurology
+title: Flexibility of Fast Brain Dynamics and Disease Severity in Amyotrophic Lateral
+  Sclerosis
+uid: '9687404'
+volume: '99'
