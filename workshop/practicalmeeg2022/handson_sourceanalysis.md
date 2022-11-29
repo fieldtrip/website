@@ -6,7 +6,7 @@ tags: [practicalmeeg2022, meg, sourceanalysis, beamformer, mmfaces]
 # Localizing sources of neural activity using beamformer techniques
 
 {% include markup/info %}
-This tutorial was written specifically for the [PracticalMEEG workshop in Paris](/workshop/practicalmeeg2022) in December 2019.
+This tutorial was written specifically for the [PracticalMEEG 2022 workshop in Aix-en-Provence](/workshop/practicalmeeg2022) in December 2022.
 {% include markup/end %}
 
 ## Introduction
