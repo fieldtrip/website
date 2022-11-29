@@ -168,7 +168,7 @@ In contrast to the [referenced tutorial](/tutorial/sourcemodel), the input MRI i
     templ_dir  = '/home/language/jansch/projects/Pipelines/global/templates/standard_mesh_atlases';
     cmd_str    = sprintf('echo "%s %s %s %s" | qsub -l walltime=20:00:00,mem=8gb -N sub-%02d', scriptname, subj_dir, subj.name, templ_dir, subj.id);
 
-The result of the **ft_freesurferscript.sh** is a 'standard' set of freesurfer generated files, which in this case are stored in the freesurfer/sub-15 directory. Relevant for our subsequent endeavours are the files located in the freesurfer/sub-15/surf folder. Checking the content of such a surf folder, which can be done by typing:
+The result of the **ft_freesurferscript.sh** is a 'standard' set of freesurfer generated files, which in this case are stored in the freesurfer/sub-01 directory. Relevant for our subsequent endeavours are the files located in the freesurfer/sub-01/surf folder. Checking the content of such a surf folder, which can be done by typing:
 
     ls
 
@@ -223,43 +223,43 @@ For the purpose of MEG-based source reconstruction, the freesurfer based surface
 The software needed for this step is [connectome workbench](https://www.humanconnectome.org/software/connectome-workbench). The output of this step is stored here in the freesurfer/workbench directory. Checking the content of such a workbench folder, you see something like this:
 
     >> ls
-    fsaverage                                          sub-15.L.midthickness.164k_fs_LR.surf.gii    sub-15.L.white.8k_fs_LR.surf.gii                  sub-15.R.midthickness.8k_fs_LR.surf.gii
-    sub-15.164k_fs_LR.wb.spec                          sub-15.L.midthickness.32k_fs_LR.surf.gii     sub-15.L.white.native.surf.gii                    sub-15.R.midthickness.native.surf.gii
-    sub-15.32k_fs_LR.wb.spec                           sub-15.L.midthickness.4k_fs_LR.surf.gii      sub-15.R.ArealDistortion_FS.164k_fs_LR.shape.gii  sub-15.R.pial.164k_fs_LR.surf.gii
-    sub-15.4k_fs_LR.wb.spec                            sub-15.L.midthickness.8k_fs_LR.surf.gii      sub-15.R.ArealDistortion_FS.32k_fs_LR.shape.gii   sub-15.R.pial.32k_fs_LR.surf.gii
-    sub-15.8k_fs_LR.wb.spec                            sub-15.L.midthickness.native.surf.gii        sub-15.R.ArealDistortion_FS.4k_fs_LR.shape.gii    sub-15.R.pial.4k_fs_LR.surf.gii
-    sub-15.L.ArealDistortion_FS.164k_fs_LR.shape.gii   sub-15.L.pial.164k_fs_LR.surf.gii            sub-15.R.ArealDistortion_FS.8k_fs_LR.shape.gii    sub-15.R.pial.8k_fs_LR.surf.gii
-    sub-15.L.ArealDistortion_FS.32k_fs_LR.shape.gii    sub-15.L.pial.32k_fs_LR.surf.gii             sub-15.R.ArealDistortion_FS.native.shape.gii      sub-15.R.pial.native.surf.gii
-    sub-15.L.ArealDistortion_FS.4k_fs_LR.shape.gii     sub-15.L.pial.4k_fs_LR.surf.gii              sub-15.R.aparc.164k_fs_LR.label.gii               sub-15.R.refsulc.164k_fs_LR.shape.gii
-    sub-15.L.ArealDistortion_FS.8k_fs_LR.shape.gii     sub-15.L.pial.8k_fs_LR.surf.gii              sub-15.R.aparc.32k_fs_LR.label.gii                sub-15.R.roi.native.shape.gii
-    sub-15.L.ArealDistortion_FS.native.shape.gii       sub-15.L.pial.native.surf.gii                sub-15.R.aparc.4k_fs_LR.label.gii                 sub-15.R.sphere.164k_fs_LR.surf.gii
-    sub-15.L.aparc.164k_fs_LR.label.gii                sub-15.L.refsulc.164k_fs_LR.shape.gii        sub-15.R.aparc.8k_fs_LR.label.gii                 sub-15.R.sphere.32k_fs_LR.surf.gii
-    sub-15.L.aparc.32k_fs_LR.label.gii                 sub-15.L.roi.native.shape.gii                sub-15.R.aparc.a2009s.164k_fs_LR.label.gii        sub-15.R.sphere.4k_fs_LR.surf.gii
-    sub-15.L.aparc.4k_fs_LR.label.gii                  sub-15.L.sphere.164k_fs_LR.surf.gii          sub-15.R.aparc.a2009s.32k_fs_LR.label.gii         sub-15.R.sphere.8k_fs_LR.surf.gii
-    sub-15.L.aparc.8k_fs_LR.label.gii                  sub-15.L.sphere.32k_fs_LR.surf.gii           sub-15.R.aparc.a2009s.4k_fs_LR.label.gii          sub-15.R.sphere.native.surf.gii
-    sub-15.L.aparc.a2009s.164k_fs_LR.label.gii         sub-15.L.sphere.4k_fs_LR.surf.gii            sub-15.R.aparc.a2009s.8k_fs_LR.label.gii          sub-15.R.sphere.reg.native.surf.gii
-    sub-15.L.aparc.a2009s.32k_fs_LR.label.gii          sub-15.L.sphere.8k_fs_LR.surf.gii            sub-15.R.aparc.a2009s.native.label.gii            sub-15.R.sphere.reg.reg_LR.native.surf.gii
-    sub-15.L.aparc.a2009s.4k_fs_LR.label.gii           sub-15.L.sphere.native.surf.gii              sub-15.R.aparc.native.label.gii                   sub-15.R.sulc.164k_fs_LR.shape.gii
-    sub-15.L.aparc.a2009s.8k_fs_LR.label.gii           sub-15.L.sphere.reg.native.surf.gii          sub-15.R.atlasroi.164k_fs_LR.shape.gii            sub-15.R.sulc.32k_fs_LR.shape.gii
-    sub-15.L.aparc.a2009s.native.label.gii             sub-15.L.sphere.reg.reg_LR.native.surf.gii   sub-15.R.atlasroi.32k_fs_LR.shape.gii             sub-15.R.sulc.4k_fs_LR.shape.gii
-    sub-15.L.aparc.native.label.gii                    sub-15.L.sulc.164k_fs_LR.shape.gii           sub-15.R.atlasroi.4k_fs_LR.shape.gii              sub-15.R.sulc.8k_fs_LR.shape.gii
-    sub-15.L.atlasroi.164k_fs_LR.shape.gii             sub-15.L.sulc.32k_fs_LR.shape.gii            sub-15.R.atlasroi.8k_fs_LR.shape.gii              sub-15.R.sulc.native.shape.gii
-    sub-15.L.atlasroi.32k_fs_LR.shape.gii              sub-15.L.sulc.4k_fs_LR.shape.gii             sub-15.R.atlasroi.native.shape.gii                sub-15.R.thickness.164k_fs_LR.shape.gii
-    sub-15.L.atlasroi.4k_fs_LR.shape.gii               sub-15.L.sulc.8k_fs_LR.shape.gii             sub-15.R.curvature.164k_fs_LR.shape.gii           sub-15.R.thickness.32k_fs_LR.shape.gii
-    sub-15.L.atlasroi.8k_fs_LR.shape.gii               sub-15.L.sulc.native.shape.gii               sub-15.R.curvature.32k_fs_LR.shape.gii            sub-15.R.thickness.4k_fs_LR.shape.gii
-    sub-15.L.atlasroi.native.shape.gii                 sub-15.L.thickness.164k_fs_LR.shape.gii      sub-15.R.curvature.4k_fs_LR.shape.gii             sub-15.R.thickness.8k_fs_LR.shape.gii
-    sub-15.L.curvature.164k_fs_LR.shape.gii            sub-15.L.thickness.32k_fs_LR.shape.gii       sub-15.R.curvature.8k_fs_LR.shape.gii             sub-15.R.thickness.native.shape.gii
-    sub-15.L.curvature.32k_fs_LR.shape.gii             sub-15.L.thickness.4k_fs_LR.shape.gii        sub-15.R.curvature.native.shape.gii               sub-15.R.very_inflated.164k_fs_LR.surf.gii
-    sub-15.L.curvature.4k_fs_LR.shape.gii              sub-15.L.thickness.8k_fs_LR.shape.gii        sub-15.R.flat.164k_fs_LR.surf.gii                 sub-15.R.very_inflated.32k_fs_LR.surf.gii
-    sub-15.L.curvature.8k_fs_LR.shape.gii              sub-15.L.thickness.native.shape.gii          sub-15.R.flat.32k_fs_LR.surf.gii                  sub-15.R.very_inflated.4k_fs_LR.surf.gii
-    sub-15.L.curvature.native.shape.gii                sub-15.L.very_inflated.164k_fs_LR.surf.gii   sub-15.R.inflated.164k_fs_LR.surf.gii             sub-15.R.very_inflated.8k_fs_LR.surf.gii
-    sub-15.L.flat.164k_fs_LR.surf.gii                  sub-15.L.very_inflated.32k_fs_LR.surf.gii    sub-15.R.inflated.32k_fs_LR.surf.gii              sub-15.R.very_inflated.native.surf.gii
-    sub-15.L.flat.32k_fs_LR.surf.gii                   sub-15.L.very_inflated.4k_fs_LR.surf.gii     sub-15.R.inflated.4k_fs_LR.surf.gii               sub-15.R.white.164k_fs_LR.surf.gii
-    sub-15.L.inflated.164k_fs_LR.surf.gii              sub-15.L.very_inflated.8k_fs_LR.surf.gii     sub-15.R.inflated.8k_fs_LR.surf.gii               sub-15.R.white.32k_fs_LR.surf.gii
-    sub-15.L.inflated.32k_fs_LR.surf.gii               sub-15.L.very_inflated.native.surf.gii       sub-15.R.inflated.native.surf.gii                 sub-15.R.white.4k_fs_LR.surf.gii
-    sub-15.L.inflated.4k_fs_LR.surf.gii                sub-15.L.white.164k_fs_LR.surf.gii           sub-15.R.midthickness.164k_fs_LR.surf.gii         sub-15.R.white.8k_fs_LR.surf.gii
-    sub-15.L.inflated.8k_fs_LR.surf.gii                sub-15.L.white.32k_fs_LR.surf.gii            sub-15.R.midthickness.32k_fs_LR.surf.gii          sub-15.R.white.native.surf.gii
-    sub-15.L.inflated.native.surf.gii                  sub-15.L.white.4k_fs_LR.surf.gii             sub-15.R.midthickness.4k_fs_LR.surf.gii           sub-15.native.wb.spec
+    fsaverage                                          sub-01.L.midthickness.164k_fs_LR.surf.gii    sub-01.L.white.8k_fs_LR.surf.gii                  sub-01.R.midthickness.8k_fs_LR.surf.gii
+    sub-01.164k_fs_LR.wb.spec                          sub-01.L.midthickness.32k_fs_LR.surf.gii     sub-01.L.white.native.surf.gii                    sub-01.R.midthickness.native.surf.gii
+    sub-01.32k_fs_LR.wb.spec                           sub-01.L.midthickness.4k_fs_LR.surf.gii      sub-01.R.ArealDistortion_FS.164k_fs_LR.shape.gii  sub-01.R.pial.164k_fs_LR.surf.gii
+    sub-01.4k_fs_LR.wb.spec                            sub-01.L.midthickness.8k_fs_LR.surf.gii      sub-01.R.ArealDistortion_FS.32k_fs_LR.shape.gii   sub-01.R.pial.32k_fs_LR.surf.gii
+    sub-01.8k_fs_LR.wb.spec                            sub-01.L.midthickness.native.surf.gii        sub-01.R.ArealDistortion_FS.4k_fs_LR.shape.gii    sub-01.R.pial.4k_fs_LR.surf.gii
+    sub-01.L.ArealDistortion_FS.164k_fs_LR.shape.gii   sub-01.L.pial.164k_fs_LR.surf.gii            sub-01.R.ArealDistortion_FS.8k_fs_LR.shape.gii    sub-01.R.pial.8k_fs_LR.surf.gii
+    sub-01.L.ArealDistortion_FS.32k_fs_LR.shape.gii    sub-01.L.pial.32k_fs_LR.surf.gii             sub-01.R.ArealDistortion_FS.native.shape.gii      sub-01.R.pial.native.surf.gii
+    sub-01.L.ArealDistortion_FS.4k_fs_LR.shape.gii     sub-01.L.pial.4k_fs_LR.surf.gii              sub-01.R.aparc.164k_fs_LR.label.gii               sub-01.R.refsulc.164k_fs_LR.shape.gii
+    sub-01.L.ArealDistortion_FS.8k_fs_LR.shape.gii     sub-01.L.pial.8k_fs_LR.surf.gii              sub-01.R.aparc.32k_fs_LR.label.gii                sub-01.R.roi.native.shape.gii
+    sub-01.L.ArealDistortion_FS.native.shape.gii       sub-01.L.pial.native.surf.gii                sub-01.R.aparc.4k_fs_LR.label.gii                 sub-01.R.sphere.164k_fs_LR.surf.gii
+    sub-01.L.aparc.164k_fs_LR.label.gii                sub-01.L.refsulc.164k_fs_LR.shape.gii        sub-01.R.aparc.8k_fs_LR.label.gii                 sub-01.R.sphere.32k_fs_LR.surf.gii
+    sub-01.L.aparc.32k_fs_LR.label.gii                 sub-01.L.roi.native.shape.gii                sub-01.R.aparc.a2009s.164k_fs_LR.label.gii        sub-01.R.sphere.4k_fs_LR.surf.gii
+    sub-01.L.aparc.4k_fs_LR.label.gii                  sub-01.L.sphere.164k_fs_LR.surf.gii          sub-01.R.aparc.a2009s.32k_fs_LR.label.gii         sub-01.R.sphere.8k_fs_LR.surf.gii
+    sub-01.L.aparc.8k_fs_LR.label.gii                  sub-01.L.sphere.32k_fs_LR.surf.gii           sub-01.R.aparc.a2009s.4k_fs_LR.label.gii          sub-01.R.sphere.native.surf.gii
+    sub-01.L.aparc.a2009s.164k_fs_LR.label.gii         sub-01.L.sphere.4k_fs_LR.surf.gii            sub-01.R.aparc.a2009s.8k_fs_LR.label.gii          sub-01.R.sphere.reg.native.surf.gii
+    sub-01.L.aparc.a2009s.32k_fs_LR.label.gii          sub-01.L.sphere.8k_fs_LR.surf.gii            sub-01.R.aparc.a2009s.native.label.gii            sub-01.R.sphere.reg.reg_LR.native.surf.gii
+    sub-01.L.aparc.a2009s.4k_fs_LR.label.gii           sub-01.L.sphere.native.surf.gii              sub-01.R.aparc.native.label.gii                   sub-01.R.sulc.164k_fs_LR.shape.gii
+    sub-01.L.aparc.a2009s.8k_fs_LR.label.gii           sub-01.L.sphere.reg.native.surf.gii          sub-01.R.atlasroi.164k_fs_LR.shape.gii            sub-01.R.sulc.32k_fs_LR.shape.gii
+    sub-01.L.aparc.a2009s.native.label.gii             sub-01.L.sphere.reg.reg_LR.native.surf.gii   sub-01.R.atlasroi.32k_fs_LR.shape.gii             sub-01.R.sulc.4k_fs_LR.shape.gii
+    sub-01.L.aparc.native.label.gii                    sub-01.L.sulc.164k_fs_LR.shape.gii           sub-01.R.atlasroi.4k_fs_LR.shape.gii              sub-01.R.sulc.8k_fs_LR.shape.gii
+    sub-01.L.atlasroi.164k_fs_LR.shape.gii             sub-01.L.sulc.32k_fs_LR.shape.gii            sub-01.R.atlasroi.8k_fs_LR.shape.gii              sub-01.R.sulc.native.shape.gii
+    sub-01.L.atlasroi.32k_fs_LR.shape.gii              sub-01.L.sulc.4k_fs_LR.shape.gii             sub-01.R.atlasroi.native.shape.gii                sub-01.R.thickness.164k_fs_LR.shape.gii
+    sub-01.L.atlasroi.4k_fs_LR.shape.gii               sub-01.L.sulc.8k_fs_LR.shape.gii             sub-01.R.curvature.164k_fs_LR.shape.gii           sub-01.R.thickness.32k_fs_LR.shape.gii
+    sub-01.L.atlasroi.8k_fs_LR.shape.gii               sub-01.L.sulc.native.shape.gii               sub-01.R.curvature.32k_fs_LR.shape.gii            sub-01.R.thickness.4k_fs_LR.shape.gii
+    sub-01.L.atlasroi.native.shape.gii                 sub-01.L.thickness.164k_fs_LR.shape.gii      sub-01.R.curvature.4k_fs_LR.shape.gii             sub-01.R.thickness.8k_fs_LR.shape.gii
+    sub-01.L.curvature.164k_fs_LR.shape.gii            sub-01.L.thickness.32k_fs_LR.shape.gii       sub-01.R.curvature.8k_fs_LR.shape.gii             sub-01.R.thickness.native.shape.gii
+    sub-01.L.curvature.32k_fs_LR.shape.gii             sub-01.L.thickness.4k_fs_LR.shape.gii        sub-01.R.curvature.native.shape.gii               sub-01.R.very_inflated.164k_fs_LR.surf.gii
+    sub-01.L.curvature.4k_fs_LR.shape.gii              sub-01.L.thickness.8k_fs_LR.shape.gii        sub-01.R.flat.164k_fs_LR.surf.gii                 sub-01.R.very_inflated.32k_fs_LR.surf.gii
+    sub-01.L.curvature.8k_fs_LR.shape.gii              sub-01.L.thickness.native.shape.gii          sub-01.R.flat.32k_fs_LR.surf.gii                  sub-01.R.very_inflated.4k_fs_LR.surf.gii
+    sub-01.L.curvature.native.shape.gii                sub-01.L.very_inflated.164k_fs_LR.surf.gii   sub-01.R.inflated.164k_fs_LR.surf.gii             sub-01.R.very_inflated.8k_fs_LR.surf.gii
+    sub-01.L.flat.164k_fs_LR.surf.gii                  sub-01.L.very_inflated.32k_fs_LR.surf.gii    sub-01.R.inflated.32k_fs_LR.surf.gii              sub-01.R.very_inflated.native.surf.gii
+    sub-01.L.flat.32k_fs_LR.surf.gii                   sub-01.L.very_inflated.4k_fs_LR.surf.gii     sub-01.R.inflated.4k_fs_LR.surf.gii               sub-01.R.white.164k_fs_LR.surf.gii
+    sub-01.L.inflated.164k_fs_LR.surf.gii              sub-01.L.very_inflated.8k_fs_LR.surf.gii     sub-01.R.inflated.8k_fs_LR.surf.gii               sub-01.R.white.32k_fs_LR.surf.gii
+    sub-01.L.inflated.32k_fs_LR.surf.gii               sub-01.L.very_inflated.native.surf.gii       sub-01.R.inflated.native.surf.gii                 sub-01.R.white.4k_fs_LR.surf.gii
+    sub-01.L.inflated.4k_fs_LR.surf.gii                sub-01.L.white.164k_fs_LR.surf.gii           sub-01.R.midthickness.164k_fs_LR.surf.gii         sub-01.R.white.8k_fs_LR.surf.gii
+    sub-01.L.inflated.8k_fs_LR.surf.gii                sub-01.L.white.32k_fs_LR.surf.gii            sub-01.R.midthickness.32k_fs_LR.surf.gii          sub-01.R.white.native.surf.gii
+    sub-01.L.inflated.native.surf.gii                  sub-01.L.white.4k_fs_LR.surf.gii             sub-01.R.midthickness.4k_fs_LR.surf.gii           sub-01.native.wb.spec
 
 The important thing to note is that the majority of files here are gifti files (with the .gii extension), rather than the legacy fileformat used by freesurfer. Gifti files are versatile files that are used to represent geometric data that are defined as tessellated meshes. Next to a specific naming scheme of the files, connectome workbench uses a specific convention for representing the different types of data. Let's dissect the file naming in some detail:
 
@@ -271,12 +271,12 @@ Next to the surf.gii files, there are shape.gii and label.gii files, which conta
 
 We can have a look at some files in a bit more detail:
 
-    white         = ft_read_headshape('sub-15.L.white.8k_fs_LR.surf.gii');
-    midthickness  = ft_read_headshape('sub-15.L.midthickness.8k_fs_LR.surf.gii');
-    pial          = ft_read_headshape('sub-15.L.pial.8k_fs_LR.surf.gii');
-    inflated      = ft_read_headshape('sub-15.L.inflated.8k_fs_LR.surf.gii');
-    very_inflated = ft_read_headshape('sub-15.L.very_inflated.8k_fs_LR.surf.gii');
-    sphere        = ft_read_headshape('sub-15.L.sphere.8k_fs_LR.surf.gii');
+    white         = ft_read_headshape('sub-01.L.white.8k_fs_LR.surf.gii');
+    midthickness  = ft_read_headshape('sub-01.L.midthickness.8k_fs_LR.surf.gii');
+    pial          = ft_read_headshape('sub-01.L.pial.8k_fs_LR.surf.gii');
+    inflated      = ft_read_headshape('sub-01.L.inflated.8k_fs_LR.surf.gii');
+    very_inflated = ft_read_headshape('sub-01.L.very_inflated.8k_fs_LR.surf.gii');
+    sphere        = ft_read_headshape('sub-01.L.sphere.8k_fs_LR.surf.gii');
 
     figure;
     h1=subplot(2,3,1); ft_plot_mesh(white,'vertexcolor',white.thickness); lighting gouraud; material dull;light

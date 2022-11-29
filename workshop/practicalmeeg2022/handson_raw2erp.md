@@ -30,6 +30,7 @@ The output of **[ft_definetrial](/reference/ft_definetrial)** is a configuration
 In this tutorial, we will bypass **[ft_definetrial](/reference/ft_definetrial)** altogether, and create a trl matrix 'by hand', using information obtained from the 'events.tsv' files, which contain the necessary event information, specifically which type of stimulus was presented when. In order to extract the events from a given dataset, FieldTrip has the function **[ft_read_event](/reference/fileio/ft_read_event)**. Each event in the output structure is of a particular type (and may have a specific value), and has an associated sample, which reflects the time point expressed in samples relative to the onset of the data recording. According to BIDS, event timing is expressed in units of time in the events.tsv file, and in order to express the event timing in samples, information about the sampling frequency (which is present in the header information of the dataset) needs to be passed into the function as well.
 
 First, to get started, we need to know which files to use. One way to do this, is to work with a subject specific text file that contains this information. Alternatively, in MATLAB, we can represent this information in a subject-specific data structure, where the fields contain the filenames of the files (including the directory) that are relevant. Here, we use the latter strategy.
+
 We use the `datainfo_subject` function, which is provided in the `code` folder associated with this workshop. If we do the following:
 
     subj = datainfo_subject(15);
@@ -41,7 +42,7 @@ We obtain a structure that looks like this:
      struct with fields:
 
                  id: 15
-               name: 'sub-15'
+               name: 'sub-01'
             mrifile: '/project_qnap/3010000.02/practicalMEEG/ds00011?'
             fidfile: '/project_qnap/3010000.02/practicalMEEG/ds00011?'
          outputpath: '/project_qnap/3010000.02/practicalMEEG/process?'
@@ -78,7 +79,7 @@ We can now run the following chunk of code:
 
 ## Reading in raw data from disk
 
-In the section above, we have created a set of `trl` matrices, which contain, for each of the runs in the experiment, a specification of the begin, and endpoint of the relevant epochs. We can now proceed with reading in the data, applying a bandpass filter, and excluding filter edge effects in the data-of-interest, by using the cfg.padding argument. The below chunk of code takes some time (and RAM) to compute, so if your computer is not up to this, you can also skip this step, and load in the `sub-15_data.mat` from the `derivatives/raw2erp/sub-15` folder:
+In the section above, we have created a set of `trl` matrices, which contain, for each of the runs in the experiment, a specification of the begin, and endpoint of the relevant epochs. We can now proceed with reading in the data, applying a bandpass filter, and excluding filter edge effects in the data-of-interest, by using the cfg.padding argument. The below chunk of code takes some time (and RAM) to compute, so if your computer is not up to this, you can also skip this step, and load in the `sub-01_data.mat` from the `derivatives/raw2erp/sub-01` folder:
 
       rundata = cell(1,6);
       for run_nr = 1:6
