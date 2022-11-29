@@ -90,16 +90,16 @@ We can now run the following chunk of code:
     end % for each run
 
 {% include markup/danger %}
-The previous code is more difficult than needed because the pruned derivative dataset is NOT according to the BIDS standard. First of all, some files are missing. More importantly, MEG and EEG derivatives are not finalized and part of BIDS yet. They are being discussed [here](https://bids.neuroimaging.io/bep021).
+The previous code is more difficult than needed because the pruned derivative dataset is NOT according to the BIDS standard. First of all, some files are missing due to the pruning. More importantly, MEG and EEG derivatives are not finalized and not part of BIDS yet. They are being discussed [here](https://bids.neuroimaging.io/bep021).
 
-Although we have the file with the data and original trigger codes
+Although we have the MaxFiltered fif file with the data and original trigger codes
     
-    sub-01_ses-meg_task-facerecognition_run-01_meg.fif
+    sub-01_ses-meg_task-facerecognition_run-01_proc-sss_meg.fif
     
-according to BIDS we would also have expected
+according to BIDS we would also have expected its sidecars
 
-    sub-01_ses-meg_task-facerecognition_run-01_meg.json
-    sub-01_ses-meg_task-facerecognition_run-01_events.tsv
+    sub-01_ses-meg_task-facerecognition_run-01_proc-sss_meg.json
+    sub-01_ses-meg_task-facerecognition_run-01_proc-sss_events.tsv
     
 {% include markup/end %}
 
