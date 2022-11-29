@@ -6,7 +6,7 @@ tags: [practicalmeeg2022, meg, timelock, preprocessing, mmfaces]
 # From raw data to ERP
 
 {% include markup/info %}
-This tutorial was written for the [PracticalMEEG 2022 workshop in Aix-en-Provence](/workshop/practicalmeeg2022) in December 2022.
+This tutorial was written specifically for the [PracticalMEEG workshop in Aix-en-Provence](/workshop/practicalmeeg2022) in December 2022. It is an updated version of the corresponding tutorial for [Paris 2019](/workshop/paris2019).
 {% include markup/end %}
 
 ## Introduction
@@ -230,7 +230,9 @@ _Figure: Average across selected magnetometers for each of the conditions._
 
 _Figure: Topographies of average across selected latency window for each of the conditions._
 
-Alternatively, the data of different channel types can be visualised within a single figure. This leverages the interactive functionality of the figures and allows for easier comparison of latency-specific topographies. This can be achieved by first creating a combined layout with **[ft_appendlayout](/reference/ft_appendlayout)**. This requires some handcrafting to the scaling of the EEG-based layout in relation to the MEG layouts. Also, when actually plotting the data with **[ft_multiplotER](/reference/ft_multiplotER)** we need to specify a channel type specific scaling factor, to accommodate the different order of magnitude of the physical units in which the data are expressed. Alternatively, these scaling difference can be removed by application of a relative baseline (e.g., expressing the signals' magnitude in dB relative to a specified baseline window), or by appropriately whitening the signals. Note, that the scaling factors here were obtained by eyeballing the data and do not represent 'official' scaling values.
+Alternatively, the data of different channel types can be visualised within a single figure. This leverages the interactive functionality of the figures and allows for easier comparison of latency-specific topographies. This can be achieved by first creating a combined layout with **[ft_appendlayout](/reference/ft_appendlayout)**. This requires some handcrafting to the scaling of the EEG-based layout in relation to the MEG layouts.
+
+Also, when actually plotting the data with **[ft_multiplotER](/reference/ft_multiplotER)** we need to specify a channel type specific scaling factor, to accommodate the different order of magnitude of the physical units in which the data are expressed. Alternatively, these scaling difference can be removed by application of a relative baseline (e.g., expressing the signals' magnitude in dB relative to a specified baseline window), or by appropriately whitening the signals. Note, that the scaling factors here were obtained by eyeballing the data and do not represent 'official' scaling values.
 
     cfg        = [];
     cfg.layout = 'neuromag306mag_helmet.mat';
@@ -259,6 +261,10 @@ Alternatively, the data of different channel types can be visualised within a si
     cfg = [];
     cfg.distance = 180;
     layout = ft_appendlayout(cfg, ft_appendlayout([], layout_mag, layout_cmb), layout_eeg);
+
+You can use **[ft_plot_layout](/reference/plotting/ft_plot_layout)** to inspect the layout that you have just constructed. See also the [layout tutorial](/tutorial/layout).
+
+Now that we have a combined layout, we can plot all three datatypes and all three conditions at once. In the figure, you can make a selection to get a topoplot.
 
     cfg = [];
     cfg.layout    = layout;
