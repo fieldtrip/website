@@ -6,7 +6,7 @@ tags: [practicalmeeg2022, meg, timelock, preprocessing, mmfaces]
 # From raw data to ERP
 
 {% include markup/info %}
-This tutorial was written specifically for the [PracticalMEEG workshop in Paris](/workshop/practicalmeeg2022) in December 2019.
+This tutorial was written for the [PracticalMEEG 2022 workshop in Aix-en-Provence](/workshop/practicalmeeg2022) in December 2022.
 {% include markup/end %}
 
 ## Introduction
@@ -33,7 +33,7 @@ First, to get started, we need to know which files to use. One way to do this, i
 
 We use the `datainfo_subject` function, which is provided in the `code` folder associated with this workshop. If we do the following:
 
-    subj = datainfo_subject(15);
+    subj = datainfo_subject(1);
 
 We obtain a structure that looks like this:
 
@@ -41,7 +41,7 @@ We obtain a structure that looks like this:
 
      struct with fields:
 
-                 id: 15
+                 id: 1
                name: 'sub-01'
             mrifile: '/project_qnap/3010000.02/practicalMEEG/ds00011?'
             fidfile: '/project_qnap/3010000.02/practicalMEEG/ds00011?'
@@ -53,6 +53,7 @@ We can now run the following chunk of code:
 
     trl = cell(6,1);
     for run_nr = 1:6
+
       hdr   = ft_read_header(subj.megfile{run_nr});
       event = ft_read_event(subj.eventsfile{run_nr}, 'header', hdr, 'eventformat', 'bids_tsv');
 
@@ -63,19 +64,45 @@ We can now run the following chunk of code:
       prestim  = round(0.5.*hdr.Fs);
       poststim = round(1.2.*hdr.Fs-1);
 
-      trialtype = {event.type}';
-      trialcode = nan(numel(event),1);
-      trialcode(strcmp(trialtype, 'Famous'))     = 1;
-      trialcode(strcmp(trialtype, 'Unfamiliar')) = 2;
-      trialcode(strcmp(trialtype, 'Scrambled'))  = 3;
-
       begsample = max(round([event.sample]) - prestim,  1);
       endsample = min(round([event.sample]) + poststim, hdr.nSamples);
       offset    = -prestim.*ones(numel(begsample),1);
 
-      subj.trl{run_nr} = [begsample(:) endsample(:) offset(:) trialcode(:) ones(numel(begsample),1).*run_nr];
-      clear trl;
-    end
+      % make sure these are column vectors
+      begsample = begsample(:);
+      endsample = endsample(:);
+      offset    = offset(:);
+      trialtype = trialtype(:);
+      run = run_nr * ones(size(trialtype));
+
+      % combine them in a table
+      subj.trl{run_nr} = table(begsample, endsample, offset, trialtype, run);
+
+      % we could also have worked with numeric trial codes
+      %
+      % trialcode = nan(numel(event),1);
+      % trialcode(strcmp(trialtype, 'Famous'))     = 1;
+      % trialcode(strcmp(trialtype, 'Unfamiliar')) = 2;
+      % trialcode(strcmp(trialtype, 'Scrambled'))  = 3;
+      %
+      % subj.trl{run_nr} = [begsample(:) endsample(:) offset(:) trialcode(:) ones(numel(begsample),1).*run_nr];
+
+    end % for each run
+
+{% include markup/danger %}
+The previous code is more difficult than needed because the pruned derivative dataset is NOT according to the BIDS standard. First of all, some files are missing. More importantly, MEG and EEG derivatives are not finalized and part of BIDS yet. They are being discussed [here](https://bids.neuroimaging.io/bep021).
+
+Although we have the file with the data and original trigger codes
+    
+    sub-01_ses-meg_task-facerecognition_run-01_meg.fif
+    
+according to BIDS we would also have expected
+
+    sub-01_ses-meg_task-facerecognition_run-01_meg.json
+    sub-01_ses-meg_task-facerecognition_run-01_events.tsv
+    
+{% include markup/end %}
+
 
 ## Reading in raw data from disk
 
@@ -137,17 +164,19 @@ The above chunk of code uses **[ft_preprocessing](/reference/ft_preprocessing)**
 Once the data has been epoched and filtered, we can proceed with computing event-related averages. In FieldTrip, this can be achieved with **[ft_timelockanalysis](/reference/ft_timelockanalysis)**. In order to selectively average across epochs from different conditions, we make use of the data.trialinfo field, which contains a numeric indicator of the condition to which that particular epoch belongs. Thus, we can do:
 
     cfg        = [];
-    cfg.trials = find(data.trialinfo(:,1)==1);
     cfg.preproc.demean = 'yes';
     cfg.preproc.baselinewindow = [-0.1 0];
+
+    cfg.trials = strcmp(data.trialinfo.trialtype, 'Famous');
     avg_famous = ft_timelockanalysis(cfg, data);
-    cfg.trials = find(data.trialinfo(:,1)==2);
+
+    cfg.trials = strcmp(data.trialinfo.trialtype, 'Unfamiliar');
     avg_unfamiliar = ft_timelockanalysis(cfg, data);
 
-    cfg.trials = find(data.trialinfo(:,1)==3);
+    cfg.trials = strcmp(data.trialinfo.trialtype, 'Scrambled');
     avg_scrambled = ft_timelockanalysis(cfg, data);
 
-    cfg.trials = find(data.trialinfo(:,1)==1 | data.trialinfo(:,1)==2);
+    cfg.trials = strcmp(data.trialinfo.trialtype, 'Famous') | strcmp(data.trialinfo.trialtype, 'Unfamiliar');
     avg_faces  = ft_timelockanalysis(cfg, data);
 
     filename = fullfile(subj.outputpath, 'raw2erp', sprintf('%s_timelock', subj.name));
@@ -209,8 +238,7 @@ Alternatively, the data of different channel types can be visualised within a si
     cfg.layout = 'neuromag306cmb_helmet.mat';
     layout_cmb = ft_prepare_layout(cfg);
 
-    % in order for this to work, the positions should be in the same order of
-    % magnitude
+    % in order for this to work, the positions should be in the same order of magnitude
     shiftval = min(layout_eeg.pos(1:70,:),[],1);
     layout_eeg.pos = layout_eeg.pos - repmat(shiftval, numel(layout_eeg.label), 1);
     layout_eeg.mask{1} = layout_eeg.mask{1} - repmat(shiftval, size(layout_eeg.mask{1},1), 1);
