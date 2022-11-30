@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fneur.2022.1022768
+- idtype: pmcid
+  value: PMC9695411
+authors:
+- authtype: Author
+  name: Frazzini V
+- authtype: Author
+  name: Whitmarsh S
+- authtype: Author
+  name: Lehongre K
+- authtype: Author
+  name: Yger P
+- authtype: Author
+  name: Lemarechal JD
+- authtype: Author
+  name: Mathon B
+- authtype: Author
+  name: Adam C
+- authtype: Author
+  name: Hasboun D
+- authtype: Author
+  name: Lambrecq V
+- authtype: Author
+  name: Navarro V
+epubdate: 2022 Nov 11
+fulljournalname: Frontiers in Neurology
+issue: ''
+pages: '1022768'
+pmclivedate: 2022/11/26
+printpubdate: ''
+pubdate: 2022 Nov 11
+sortdate: 2022/11/11 00:00
+source: Front Neurol
+title: Human periventricular nodular heterotopia shows several interictal epileptic
+  patterns and hyperexcitability of neuronal firing
+uid: '9695411'
+volume: '13'
