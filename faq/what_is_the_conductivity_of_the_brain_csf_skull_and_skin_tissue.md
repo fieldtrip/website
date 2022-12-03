@@ -28,3 +28,4 @@ It is commonly assumed that - at the frequencies that we consider in EEG/MEG - t
 ## See also
 
   * Documentation on [Source Analysis Head Models](http://wiki.besa.de/index.php?title=Source_Analysis_Head_Models) on the BESA wiki
+  * [Online tool](http://niremf.ifac.cnr.it/tissprop/htmlclie/htmlclie.php) for the calculation of the Dielectric Properties of Body Tissues
