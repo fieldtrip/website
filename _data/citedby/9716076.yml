@@ -1,0 +1,42 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fphys.2022.1066290
+- idtype: pmcid
+  value: PMC9716076
+authors:
+- authtype: Author
+  name: Zhang X
+- authtype: Author
+  name: Ren H
+- authtype: Author
+  name: Pei Z
+- authtype: Author
+  name: Lian C
+- authtype: Author
+  name: Su X
+- authtype: Author
+  name: Lan X
+- authtype: Author
+  name: Chen C
+- authtype: Author
+  name: Lei Y
+- authtype: Author
+  name: Li B
+- authtype: Author
+  name: Guo Y
+epubdate: 2022 Nov 18
+fulljournalname: Frontiers in Physiology
+issue: ''
+pages: '1066290'
+pmclivedate: 2022/12/03
+printpubdate: ''
+pubdate: 2022 Nov 18
+sortdate: 2022/11/18 00:00
+source: Front Physiol
+title: Dual-targeted repetitive transcranial magnetic stimulation modulates brain
+  functional network connectivity to improve cognition in mild cognitive impairment
+  patients
+uid: '9716076'
+volume: '13'

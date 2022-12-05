@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '36456597'
+- idtype: doi
+  value: 10.1038/s41598-022-24870-7
+- idtype: pmcid
+  value: PMC9715667
+authors:
+- authtype: Author
+  name: Haartsen R
+- authtype: Author
+  name: Charman T
+- authtype: Author
+  name: Pasco G
+- authtype: Author
+  name: Johnson MH
+- authtype: Author
+  name: Jones EJ
+- authtype: CollectiveName
+  name: The BASIS TeamBaron-CohenSimonS4BedfordRachaelR5BlasiAnnaA6BoltonPatrickP3789ChandlerSusieS2CheungCelesteC1DaviesKimK1ElsabbaghMayadaM10FernandesJaniceJ1GammerIssyI1GarwoodHollyH1GligaTeadoraT11GuiraudJeanneJ1HudryKirstelleK12LiewMelanieM1Lloyd-FoxSarahS14MarisHelenH1O’HaraLouiseL1PicklesAndrewA213RibeiroHelenH1SalomoneEricaE14TuckerLeslieL1VoleinAgnesA1
+epubdate: 2022 Dec 1
+fulljournalname: Scientific Reports
+issue: ''
+pages: '20758'
+pmclivedate: 2022/12/03
+printpubdate: ''
+pubdate: 2022 Dec 1
+sortdate: 2022/12/01 00:00
+source: Sci Rep
+title: Modulation of EEG theta by naturalistic social content is not altered in infants
+  with family history of autism
+uid: '9715667'
+volume: '12'

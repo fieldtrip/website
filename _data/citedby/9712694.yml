@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '36450811'
+- idtype: doi
+  value: 10.1038/s41598-022-25119-z
+- idtype: pmcid
+  value: PMC9712694
+authors:
+- authtype: Author
+  name: Candia-Rivera D
+- authtype: Author
+  name: Sappia MS
+- authtype: Author
+  name: Horschig JM
+- authtype: Author
+  name: Colier WN
+- authtype: Author
+  name: Valenza G
+epubdate: 2022 Nov 30
+fulljournalname: Scientific Reports
+issue: ''
+pages: '20701'
+pmclivedate: 2022/12/02
+printpubdate: ''
+pubdate: 2022 Nov 30
+sortdate: 2022/11/30 00:00
+source: Sci Rep
+title: Confounding effects of heart rate, breathing rate, and frontal fNIRS on interoception
+uid: '9712694'
+volume: '12'

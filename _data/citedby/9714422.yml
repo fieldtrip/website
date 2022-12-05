@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '35522247'
+- idtype: doi
+  value: 10.1093/scan/nsac033
+- idtype: pmcid
+  value: PMC9714422
+authors:
+- authtype: Author
+  name: Nussbaum C
+- authtype: Author
+  name: Schirmer A
+- authtype: Author
+  name: Schweinberger SR
+epubdate: 2022 May 6
+fulljournalname: Social Cognitive and Affective Neuroscience
+issue: '12'
+pages: 1145-1154
+pmclivedate: 2022/12/02
+printpubdate: ''
+pubdate: 2022 May 6
+sortdate: 2022/05/06 00:00
+source: Soc Cogn Affect Neurosci
+title: Contributions of fundamental frequency and timbre to vocal emotion perception
+  and their electrophysiological correlates
+uid: '9714422'
+volume: '17'

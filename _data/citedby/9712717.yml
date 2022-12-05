@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '35137008'
+- idtype: doi
+  value: 10.1093/cercor/bhac026
+- idtype: pmcid
+  value: PMC9712717
+authors:
+- authtype: Author
+  name: Drewes J
+- authtype: Author
+  name: Muschter E
+- authtype: Author
+  name: Zhu W
+- authtype: Author
+  name: Melcher D
+epubdate: 2022 Feb 8
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '23'
+pages: 5455-5466
+pmclivedate: 2022/12/02
+printpubdate: ''
+pubdate: 2022 Feb 8
+sortdate: 2022/02/08 00:00
+source: Cereb Cortex
+title: Individual resting-state alpha peak frequency and within-trial changes in alpha
+  peak frequency both predict visual dual-pulse segregation performance
+uid: '9712717'
+volume: '32'
