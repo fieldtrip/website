@@ -56,7 +56,9 @@ Next, we can inspect the location of the landmarks in the anatomical image.
     cfg.location = NAS;
     ft_sourceplot(cfg, mri_orig);
 
-If the contrast of the image is a bit low, you can use the 'shift+' key to increase the contrast. The coordinates of the anatomical landmarks are expressed in voxels. To align the coordinates of the MRI with the anatomical landmarks, we use the following.  
+If the contrast of the image is a bit low, you can use the 'shift+' key to increase the contrast. The coordinates of the anatomical landmarks are expressed in voxels.
+
+To align the coordinates of the MRI with the anatomical landmarks, we use the following.  
 
     cfg              = [];
     cfg.method       = 'fiducial';
@@ -91,6 +93,10 @@ Now, we can coregister the MRI image to the coordinate system as used for the ME
 
 {% include markup/exercise %}
 Inspect the location of the NAS, LPA and RPA of the coregistered MRI. Pay special attention to the location coordinates, as compared to the location coordinates of the original MRI.
+{% include markup/end %}
+
+{% include markup/info %}
+Following the initial alignment of the MRI with the MEG coordinate system on the basis of the anatomical landmarks, we can further improve the coregistration by using an interative-closest-points (ICP) procedure. In that procedure, we fit the scalp surface than can be obtained from the MRI to a detailed measurement of the scalp surface using a Polhemus electromagnetic tracker. The measured head surface points can be read with **[ft_read_headshape](/fileio/ft_read_headshape)** and are available as `sub-01/ses-meg/meg/sub-01_ses-meg_headshape.pos` or can be read directly from the fif file.
 {% include markup/end %}
 
 ## Creation of the single shell head model
