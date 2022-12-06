@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fncom.2022.1022787
+- idtype: pmcid
+  value: PMC9716567
+authors:
+- authtype: Author
+  name: Duville MM
+- authtype: Author
+  name: Alonso-Valerdi LM
+- authtype: Author
+  name: Ibarra-Zarate DI
+epubdate: 2022 Nov 18
+fulljournalname: Frontiers in Computational Neuroscience
+issue: ''
+pages: '1022787'
+pmclivedate: 2022/12/03
+printpubdate: ''
+pubdate: 2022 Nov 18
+sortdate: 2022/11/18 00:00
+source: Front Comput Neurosci
+title: Neuronal and behavioral affective perceptions of human and naturalness-reduced
+  emotional prosodies
+uid: '9716567'
+volume: '16'
