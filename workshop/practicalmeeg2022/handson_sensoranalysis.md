@@ -34,50 +34,50 @@ To calculate the time-frequency analysis for the example dataset we will perform
 
 - Read the data into MATLAB using the same strategy as in the [raw2erp tutorial](/workshop/practicalmeeg2022/handson_raw2erp).
 - Compute the power values for each frequency bin and each time bin using the function **[ft_freqanalysis](/reference/ft_freqanalysis)**
-- Visualize the results. This can be done by creating time-frequency plots for one (**[ft_singleplotTFR](/reference/ft_singleplotTFR)**) or several channels (**[ft_multiplotTFR](/reference/ft_multiplotTFR)**), or by creating a topographic plot for a specified time- and frequency interval (**[ft_topoplotTFR](/reference/ft_topoplotTFR)**).
+- Visualize the results. This can be done by creating time-frequency plots for one with **[ft_singleplotTFR](/reference/ft_singleplotTFR)** or several channels  with **[ft_multiplotTFR](/reference/ft_multiplotTFR)**, or by creating a topographic plot for a specified time- and frequency interval with **[ft_topoplotTFR](/reference/ft_topoplotTFR)**.
 
 {% include image src="/assets/img/workshop/practicalmeeg2022/tfr_pipelinenew.png" width="200" %}
 
 _Figure: Schematic overview of the steps in time-frequency analysis_
 
-In this tutorial, procedures of 4 types of time-frequency analysis will be shown. You can see each of them under the titles: Time-frequency analysis I, II ... and so on. If you are interested in a detailed description about how to visualize the results, look at the Visualization part.
+This tutorial shows four types of time-frequency analysis. You can find each of them in the table of content under the titles: Time-frequency analysis I, II, III and IV.  If you are interested in a detailed description about how to visualize the results, look at the [Visualization](#visualization) section.
 
-The first step is to read the data using the function **[ft_preprocessing](/reference/ft_preprocessing)**. With the aim to reduce boundary effects occurring at the start and the end of the trials, it is recommended to read larger time intervals than the time period of interest. In this example, the time of interest is from -0.6 s to 1.3 s (t = 0 s defines the time of stimulus); however, for reasons that will become clear later, the script reads the data from -0.8 s to 1.5 s.
+The first step is to read the data using the function **[ft_preprocessing](/reference/ft_preprocessing)**. To reduce boundary effects at the start and the end of the trials, it is recommended to read slightly larger time intervals than the time period of interest. In this example, the time of interest is from -0.6 s to 1.3 s, where t=0 defines the time of stimulus); however, for reasons that will become clear later, the script reads the data from -0.8 s to 1.5 s.
 
 ## Time-frequency analysis I
 
 ### Hanning taper, fixed window length
 
-Here, we will describe how to calculate time frequency representations using Hanning tapers. When choosing for a fixed window length procedure the frequency resolution is defined according to the length of the time window (delta T). The frequency resolution (delta f in figure 1) = 1/length of time window in sec (delta T in figure 1). Thus, a 400 ms time window results in a 2.5 Hz frequency resolution (1/0.4 sec= 2.5 Hz) meaning that power can be calculated for freqiemcu bins centered at 2.5 Hz, 5 Hz, 7.5 Hz etc. An integer number of cycles must fit in the time window.
+Here, we will describe how to calculate time frequency representations using Hanning tapers. When choosing for a fixed window length procedure, the frequency resolution is defined according to the length of the time window (delta T). The frequency resolution (delta f in figure 1) = 1/length of time window in sec (delta T in figure 1). Thus, a 400 ms time window results in a 2.5 Hz frequency resolution (1/0.4 sec= 2.5 Hz) meaning that power can be calculated for frequency bins centered at 2.5 Hz, 5 Hz, 7.5 Hz etc. An integer number of cycles must fit in the time window.
 
-The **[ft_freqanalysis](/reference/ft_freqanalysis)** function requires a 'raw' data structure, which is the output of **[ft_preprocessing](/reference/ft_preprocessing)**. In the following code section, we duplicate the preprocessing part of the [raw2erp tutorial](/workshop/practicalmeeg2022/handson_raw2erp) tutorial, with a few important modifications. As mentioned, the epoch length is increased, in order to account for boundary effects. Moreover, we will not apply a bandpassfilter to the data (why not?) and only read in the MEG data for now. The execution of the following chunk of code takes some time. The precomputed data are in the derivatives/sensoranalysis/sub-01 folder, and can be loaded from there:
+The **[ft_freqanalysis](/reference/ft_freqanalysis)** function requires a 'raw' data structure, which is the output of **[ft_preprocessing](/reference/ft_preprocessing)**. In the following code section, we duplicate the preprocessing part of the [raw2erp tutorial](/workshop/practicalmeeg2022/handson_raw2erp) tutorial, with a few important modifications. As mentioned above, the epoch length is increased to account for boundary effects. Moreover, we will not apply a bandpass filter to the data (why not?) and will only read in the MEG data. The execution of the following chunk of code takes some time. The precomputed data are in the `derivatives/sensoranalysis/sub-01` folder, and can also be loaded from there:
 
-    subj = datainfo_subject(15);
+    subj = datainfo_subject(1);
 
-    trl = cell(6,1);
+    subj.trl = cell(6,1);
     for run_nr = 1:6
-      hdr   = ft_read_header(subj.megfile{run_nr});
-      event = ft_read_event(subj.eventsfile{run_nr}, 'header', hdr, 'eventformat', 'bids_tsv');
 
-      trialtype = {event.type}';
-      sel       = ismember(trialtype, {'Famous' 'Unfamiliar' 'Scrambled'});
-      event     = event(sel);
+      cfg = [];
+      cfg.dataset = subj.megfile{run_nr};
+      cfg.readbids = 'no'; % it looks like BIDS, but is not complete
 
-      prestim  = round(0.8.*hdr.Fs);
-      poststim = round(1.5.*hdr.Fs)-1;
+      % this is what we can see in the BIDS events.tsv file
+      Famous      = [5 6 7];
+      Unfamiliar  = [13 14 15];
+      Scrambled   = [17 18 19];
 
-      trialtype = {event.type}';
-      trialcode = nan(numel(event),1);
-      trialcode(strcmp(trialtype, 'Famous'))     = 1;
-      trialcode(strcmp(trialtype, 'Unfamiliar')) = 2;
-      trialcode(strcmp(trialtype, 'Scrambled'))  = 3;
+      cfg.trialfun = 'ft_trialfun_general';
+      cfg.trialdef.eventtype = 'STI101';
+      cfg.trialdef.eventvalue = [Famous Unfamiliar Scrambled];
+      cfg.trialdef.prestim = 0.5;
+      cfg.trialdef.poststim = 1.2;
 
-      begsample = max(round([event.sample]) - prestim,  1);
-      endsample = min(round([event.sample]) + poststim, hdr.nSamples);
-      offset    = -prestim.*ones(numel(begsample),1);
+      cfg = ft_definetrial(cfg);
 
-      subj.trl{run_nr} = [begsample(:) endsample(:) offset(:) trialcode(:) ones(numel(begsample),1).*run_nr];
-    end
+      % remember the trial definition for each run
+      subj.trl{run_nr} = cfg.trl;
+
+    end % for each run
 
     rundata = cell(1,6);
     for run_nr = 1:6
@@ -86,7 +86,7 @@ The **[ft_freqanalysis](/reference/ft_freqanalysis)** function requires a 'raw' 
       cfg.dataset = subj.megfile{run_nr};
       cfg.trl     = subj.trl{run_nr};
 
-      % MEG specific settings
+      % MEG specific settings, minimal preprocessing
       cfg.channel = 'MEG';
       cfg.demean  = 'yes';
       cfg.coilaccuracy = 0;
@@ -96,14 +96,14 @@ The **[ft_freqanalysis](/reference/ft_freqanalysis)** function requires a 'raw' 
       cfg.resamplefs = 300;
       data_meg       = ft_resampledata(cfg, data_meg);
 
+      % remember the data from this run
       rundata{run_nr} = data_meg;
-      clear data_meg
     end % for each run
 
     data = ft_appenddata([], rundata{:});
     clear rundata;
 
-Once we have the data in memory, we can compute the time-frequency representation, which we do here for each of the conditions separately:
+Now that we have the data in memory, we can compute the time-frequency representation, which we do here for each of the conditions separately:
 
     cfg        = [];
     cfg.method = 'mtmconvol';
@@ -114,15 +114,15 @@ Once we have the data in memory, we can compute the time-frequency representatio
     cfg.toi    = (-0.8:0.05:1.3);
     cfg.pad    = 4;
 
-    cfg.trials = find(data.trialinfo(:,1)==1);
+    cfg.trials = ismember(data.trialinfo(:,1), Famous);
     freqlow_famous = ft_freqanalysis(cfg, data);
 
-    cfg.trials = find(data.trialinfo(:,1)==2);
+    cfg.trials = ismember(data.trialinfo(:,1), Unfamiliar);
     freqlow_unfamiliar = ft_freqanalysis(cfg, data);
 
-    cfg.trials = find(data.trialinfo(:,1)==3);
+    cfg.trials = ismember(data.trialinfo(:,1), Scrambled);
     freqlow_scrambled = ft_freqanalysis(cfg, data);
-
+    
 Regardless of the method used for calculating the TFR, the output format is identical. It is a structure with the following fields:
 
     freqlow_famous =
@@ -149,9 +149,9 @@ To visualize the event-related power changes, a normalization with respect to a 
 - Subtracting, for each frequency, the average power in a baseline interval from all other power values. This gives, for each frequency, the absolute change in power with respect to the baseline interval.
 - Expressing, for each frequency, the raw power values as the relative increase or decrease with respect to the power in the baseline interval. This means active period/baseline. Note that the relative baseline is expressed as a ratio; i.e. no change is represented by 1.
 
-There are three ways of graphically representing the data: 1) time-frequency plots of all channels, in a quasi-topographical layout, 2) time-frequency plot of an individual channel (or average of several channels), 3) topographical 2-D map of the power changes in a specified time-frequency interval.
+There are three ways of graphically representing the data: 1) time-frequency plots of all channels, in a quasi-topographical layout, 2) time-frequency plot of an individual channel (or average of several channels), 3) topographical 2-D map of the power changes in a specified time and frequency window.
 
-To plot the TFRs from all the magnetometer sensors use the function **[ft_multiplotTFR](/reference/ft_multiplotTFR)**. Settings can be adjusted in the cfg structure. For example:
+The function **[ft_multiplotTFR](/reference/ft_multiplotTFR)** plots the TFRs from all the magnetometer sensors. Settings can be adjusted in the `cfg` structure, for example:
 
     cfg = [];
     cfg.baseline     = [-0.6 -0.2];
@@ -165,9 +165,9 @@ To plot the TFRs from all the magnetometer sensors use the function **[ft_multip
 
 _Figure: Time-frequency representations calculated using ft_freqanalysis. Plotting was done with ft_multiplotTFR)_
 
-Note that using the options cfg.baseline and cfg.baselinetype results in baseline correction of the data. Baseline correction can also be applied directly by calling **[ft_freqbaseline](/reference/ft_freqbaseline)**. Moreover, you can combine the various visualization options/functions interactively to explore your data. Currently, this is the default plotting behavior because the configuration option `cfg.interactive='yes'` is activated unless you explicitly select `cfg.interactive='no'` before calling **[ft_multiplotTFR](/reference/ft_multiplotTFR)** to deactivate it. See also the [plotting tutorial](/tutorial/plotting) for more details.
+The options `cfg.baseline` and `cfg.baselinetype` results in baseline correction of the data. Baseline correction can also be applied directly by calling **[ft_freqbaseline](/reference/ft_freqbaseline)**. Moreover, you can combine the various visualization options/functions interactively to explore your data. Currently, this is the default plotting behavior because the configuration option `cfg.interactive='yes'` is activated unless you explicitly select `cfg.interactive='no'` before calling **[ft_multiplotTFR](/reference/ft_multiplotTFR)** to deactivate it. See also the [plotting tutorial](/tutorial/plotting) for more details.
 
-An interesting effect seems to be present in the TFR of sensor MEG0731. To make a plot of a single channel use the function **[ft_singleplotTFR](/reference/ft_singleplotTFR)**.
+An interesting effect seems to be present in the TFR of sensor MEG0731. To make a plot of a single channel you can make a selection with your mouse in the multiplot and click on it, or you can use **[ft_singleplotTFR](/reference/ft_singleplotTFR)**.
 
     cfg = [];
     cfg.baseline     = [-0.6 -0.2];
@@ -181,7 +181,7 @@ An interesting effect seems to be present in the TFR of sensor MEG0731. To make 
 
 _Figure: The time-frequency representation of a single sensor obtained using ft_singleplotTFR_
 
-If you see artifacts in your figure, see [this question](/faq/i_am_getting_strange_artifacts_in_figures_that_use_opacity).
+If you see artifacts in your figure, see [this FAQ](/faq/i_am_getting_strange_artifacts_in_figures_that_use_opacity).
 
 From the previous figure you can see that there is an increase in power around 5 Hz in the time interval 0.6 to 0.8 s after stimulus onset. To show the topography of this 'theta' power increase you can use the function **[ft_topoplotTFR](/reference/ft_topoplotTFR)**.
 
@@ -204,13 +204,13 @@ _Figure: A topographic representation of the time-frequency representations (15 
 {% include markup/info %}
 Plot the power with respect to a relative baseline (hint: use `cfg.zlim=[0 2.0]` and use the cfg.baselinetype option)
 
-How are the responses different? Discuss the assumptions behind choosing a relative or absolute baseline
+How are the responses different? Discuss the assumptions behind choosing a relative or absolute baseline.
 {% include markup/end %}
 
 ##### Exercise 2
 
 {% include markup/info %}
-Plot the TFR of sensor MEG1921. How do you account for the increased power at ~100-200 ms (hint: compare it to the ERFs)?  
+Plot the TFR of sensor MEG1921. How do you account for the increased power at ~100-200 ms? Hint: compare it to the ERFs.  
 {% include markup/end %}
 
 ##### Exercise 3
@@ -274,9 +274,10 @@ Adjust the length of the time-window and thereby degree of smoothing. Use **[ft_
     cfg.method       = 'mtmconvol';
     cfg.taper        = 'hanning';
     cfg.foi          = 2:1:30;
-    cfg.t_ftimwin    = 4./cfg.foi;  % 4 cycles per time window
-    cfg.toi          = -0.8:0.05:1.5;
     cfg.trials       = find(data.trialinfo(:,1)==1);
+    cfg.toi          = -0.8:0.05:1.5;
+    
+    cfg.t_ftimwin    = 4./cfg.foi;  % 4 cycles per time window
     TFRhann4         = ft_freqanalysis(cfg, data);
 
 5 cycles per time window:
@@ -299,16 +300,16 @@ Multitapers are typically used in order to achieve better control over the frequ
 
 Time-frequency analysis based on multitapers can be performed by the function **[ft_freqanalysis](/reference/ft_freqanalysis)**. The function uses a sliding time window for which the power is calculated for a given frequency. Prior to calculating the power by discrete Fourier transforms the data are 'tapered'. Several orthogonal tapers can be used for each time window. The power is calculated for each tapered data segment and then combined.
 
-Here, we demonstrate this functionality, by focussing on frequencies > 30 Hz, using a fixed length time window. The cfg settings are largely similar to the fixed time-window Hanning-tapered analysis demonstrated above, but in addition you need to specify the multitaper smoothing parameter, with an optional specification of the type of taper used. Note that by default the 'mtmconvol' method applies multitapers, unless otherwise specified by the content of cfg.taper. A heuristic for the specification of the `tapsmofrq` parameter, which in FieldTrip is a number that expresses the half bandwidth of smoothing in Hz., would be to use an integer number of the frequency resolution, determined by the corresponding frequency's specified time window. The relationship between the smoothing parameter (`tapsmofrq`), the time window length (`t_ftimwin`) and the number of tapers used, is given by (see [Percival and Walden (1993)](http://lccn.loc.gov/92045862)):
+Here, we demonstrate this functionality, by focussing on frequencies > 30 Hz, using a fixed length time window. The `cfg` settings are largely similar to the fixed time-window Hanning-tapered analysis demonstrated above, but in addition you need to specify the multitaper smoothing parameter, with an optional specification of the type of taper used. Note that by default the 'mtmconvol' method applies multitapers, unless otherwise specified by the content of `cfg.taper`. A heuristic for the specification of the `cfg.tapsmofrq` parameter, which is a number that expresses the half bandwidth of smoothing in Hz, would be to use an integer number of the frequency resolution, determined by the corresponding frequency's specified time window. The relationship between the smoothing parameter (`tapsmofrq`), the time window length (`t_ftimwin`) and the number of tapers used, is given by (see [Percival and Walden (1993)](http://lccn.loc.gov/92045862)):
 
 `K = 2*t_ftimwin*tapsmofrq-1`, where K is required to be larger than 0.
 
 K is the number of tapers applied; the more, the greater the smoothing.
 
-    cfg        = [];
-    cfg.method = 'mtmconvol';
-    cfg.output = 'pow';
-    cfg.foi    = 30:5:80;
+    cfg           = [];
+    cfg.method    = 'mtmconvol';
+    cfg.output    = 'pow';
+    cfg.foi       = 30:5:80;
     cfg.t_ftimwin = ones(1,numel(cfg.foi)).*0.2;
     cfg.tapsmofrq = ones(1,numel(cfg.foi)).*10;
     cfg.taper     = 'dpss';
@@ -350,7 +351,7 @@ Rather than visualising the TFRs in isolated conditions (after a baseline correc
     cfg.operation = 'log10(x1)-log10(x2)';
     freqhigh_contrast = ft_math(cfg, freqhigh_famous, freqhigh_scrambled);
 
-Inspect the resulting TFR, using interactive plotting. Note: don't forget to NOT use the cfg.baseline/baselinetype options (why not?).
+Inspect the resulting TFR, using interactive plotting. Note: don't forget to NOT use the `cfg.baseline` and `cfg.baselinetype` options (why not?).
 
 {% include markup/end %}
 

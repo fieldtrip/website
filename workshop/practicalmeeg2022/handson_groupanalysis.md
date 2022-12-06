@@ -1,5 +1,5 @@
 ---
-title: Group analysis
+title: Group-level statistics with parametric and non-parametric methods
 tags: [practicalmeeg2022, meg, timelock, statistics, plotting, mmfaces]
 ---
 

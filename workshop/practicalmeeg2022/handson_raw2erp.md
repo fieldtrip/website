@@ -19,15 +19,17 @@ This tutorial only briefly covers the steps required to import data into FieldTr
 
 ## Preliminaries, definition of subject specific filenames, and definition of epochs-of-interest
 
-In FieldTrip the preprocessing of data refers to the reading of the data, segmenting the data around interesting events such as triggers, temporal filtering and optionally rereferencing. The **[ft_preprocessing](/reference/ft_preprocessing)** function takes care of all these steps, i.e., it reads the data and applies the preprocessing options.
+Preprocessing of MEG/EEG data refers to the reading of the data, segmenting the data around interesting events such as triggers, temporal filtering and (optionally for EEG) rereferencing. The **[ft_preprocessing](/reference/ft_preprocessing)** function takes care of all these steps, i.e., it reads the data and applies the preprocessing options.
 
-There are largely two alternative approaches for preprocessing, which especially differ in the amount of memory required. The first approach is to read all data from the file into memory, apply filters, and subsequently cut the data into interesting segments. The second approach is to first identify the interesting segments, read those segments from the data file and apply the filters to those segments only. The remainder of this tutorial explains the second approach, as that is the most appropriate for large data sets such as the MEG data used in this tutorial. The approach for reading and filtering continuous data and segmenting afterwards is explained in another tutorial.
+There are two alternative approaches for preprocessing, which differ in the amount of memory required. The first approach is to read all data from the file into memory, apply filters, and subsequently cut the data into interesting segments. The second approach is to first identify the interesting segments, read those segments from the data file (possibly with some data padding) and apply the filters to those segments only.
+
+The remainder of this tutorial explains the second approach, as that is the most appropriate for large data sets such as the MEG data used in this tutorial. The approach for reading and filtering continuous data and segmenting afterwards is explained [elsewhere](/tutorial/continuous).
 
 Preprocessing involves several steps including defining epochs-of-interest from the dataset, filtering and artifact rejections. This tutorial covers how to identify epochs based on the recorded events during the experiment. Typically, this requires the use of **[ft_definetrial](/reference/ft_definetrial)**. For more details, see the [preprocessing](/tutorial/preprocessing) tutorial.
 
 The output of **[ft_definetrial](/reference/ft_definetrial)** is a configuration structure containing the field cfg.trl. This is a matrix representing the relevant parts of the raw datafile which are to be selected for further processing. Each row in the `trl` matrix represents a single epoch-of-interest, and the `trl` matrix has at least 3 columns. The first column defines (in samples) the begin of each epoch with respect to how the data are stored in the raw datafile. The second column defines (in samples) the end of each epoch, and the third column specifies the offset (in samples) of the first sample within each epoch with respect to timepoint 0 within that epoch.
 
-In this tutorial, we will bypass **[ft_definetrial](/reference/ft_definetrial)** altogether, and create a trl matrix 'by hand', using information obtained from the 'events.tsv' files, which contain the necessary event information, specifically which type of stimulus was presented when. In order to extract the events from a given dataset, FieldTrip has the function **[ft_read_event](/reference/fileio/ft_read_event)**. Each event in the output structure is of a particular type (and may have a specific value), and has an associated sample, which reflects the time point expressed in samples relative to the onset of the data recording. According to BIDS, event timing is expressed in units of time in the events.tsv file, and in order to express the event timing in samples, information about the sampling frequency (which is present in the header information of the dataset) needs to be passed into the function as well.
+In this tutorial, the data is contained in 6 different fif files, one for every run. We will identify the segments for each file/run and subsequently read and preprocess each file/run.
 
 First, to get started, we need to know which files to use. One way to do this, is to work with a subject specific text file that contains this information. Alternatively, in MATLAB, we can represent this information in a subject-specific data structure, where the fields contain the filenames of the files (including the directory) that are relevant. Here, we use the latter strategy.
 
@@ -51,52 +53,39 @@ We obtain a structure that looks like this:
 
 We can now run the following chunk of code:
 
-    trl = cell(6,1);
+    subj.trl = cell(6,1);
     for run_nr = 1:6
 
-      hdr   = ft_read_header(subj.megfile{run_nr});
-      event = ft_read_event(subj.eventsfile{run_nr}, 'header', hdr, 'eventformat', 'bids_tsv');
+      cfg = [];
+      cfg.dataset = subj.megfile{run_nr};
+      cfg.readbids = 'no'; % it looks like BIDS, but is not complete
 
-      trialtype = {event.type}';
-      sel       = ismember(trialtype, {'Famous' 'Unfamiliar' 'Scrambled'});
-      event     = event(sel);
+      % this is what we can see in the BIDS events.tsv file
+      Famous      = [5 6 7];
+      Unfamiliar  = [13 14 15];
+      Scrambled   = [17 18 19];
 
-      prestim  = round(0.5.*hdr.Fs);
-      poststim = round(1.2.*hdr.Fs-1);
+      cfg.trialfun = 'ft_trialfun_general';
+      cfg.trialdef.eventtype = 'STI101';
+      cfg.trialdef.eventvalue = [Famous Unfamiliar Scrambled];
+      cfg.trialdef.prestim = 0.5;
+      cfg.trialdef.poststim = 1.2;
 
-      begsample = max(round([event.sample]) - prestim,  1);
-      endsample = min(round([event.sample]) + poststim, hdr.nSamples);
-      offset    = -prestim.*ones(numel(begsample),1);
+      cfg = ft_definetrial(cfg);
 
-      % make sure these are column vectors
-      begsample = begsample(:);
-      endsample = endsample(:);
-      offset    = offset(:);
-      trialtype = trialtype(:);
-      run = run_nr * ones(size(trialtype));
-
-      % combine them in a table
-      subj.trl{run_nr} = table(begsample, endsample, offset, trialtype, run);
-
-      % we could also have worked with numeric trial codes
-      %
-      % trialcode = nan(numel(event),1);
-      % trialcode(strcmp(trialtype, 'Famous'))     = 1;
-      % trialcode(strcmp(trialtype, 'Unfamiliar')) = 2;
-      % trialcode(strcmp(trialtype, 'Scrambled'))  = 3;
-      %
-      % subj.trl{run_nr} = [begsample(:) endsample(:) offset(:) trialcode(:) ones(numel(begsample),1).*run_nr];
+      % remember the trial definition for each run
+      subj.trl{run_nr} = cfg.trl;
 
     end % for each run
 
 {% include markup/danger %}
-The previous code is more difficult than needed because the pruned derivative dataset is NOT according to the BIDS standard. First of all, some files are missing due to the pruning. More importantly, MEG and EEG derivatives are not finalized and not part of BIDS yet. They are being discussed [here](https://bids.neuroimaging.io/bep021).
+In the previous code we are making use of numeric trigger codes instead of the events that are coded in the BIDS dataset. This is because the pruned derivative dataset is NOT according to the BIDS standard. First of all, some files are missing due to the pruning. More importantly, MEG and EEG derivatives are not finalized and not part of BIDS yet. They are being discussed [here](https://bids.neuroimaging.io/bep021).
 
 Although we have the MaxFiltered fif file with the data and original trigger codes
     
     sub-01_ses-meg_task-facerecognition_run-01_proc-sss_meg.fif
     
-according to BIDS we would also have expected its sidecars
+according to BIDS we would also have expected its sidecars, but these are missing:
 
     sub-01_ses-meg_task-facerecognition_run-01_proc-sss_meg.json
     sub-01_ses-meg_task-facerecognition_run-01_proc-sss_events.tsv
@@ -108,75 +97,105 @@ according to BIDS we would also have expected its sidecars
 
 In the section above, we have created a set of `trl` matrices, which contain, for each of the runs in the experiment, a specification of the begin, and endpoint of the relevant epochs. We can now proceed with reading in the data, applying a bandpass filter, and excluding filter edge effects in the data-of-interest, by using the cfg.padding argument. The below chunk of code takes some time (and RAM) to compute, so if your computer is not up to this, you can also skip this step, and load in the `sub-01_data.mat` from the `derivatives/raw2erp/sub-01` folder:
 
-      rundata = cell(1,6);
-      for run_nr = 1:6
+    rundata = cell(1,6);
+    for run_nr = 1:6
 
-        cfg         = [];
-        cfg.dataset = subj.megfile{run_nr};
-        cfg.trl     = subj.trl{run_nr};
+      cfg         = [];
+      cfg.dataset = subj.megfile{run_nr};
+      cfg.trl     = subj.trl{run_nr};
 
-        % MEG specific settings
-        cfg.channel = 'MEG';
-        cfg.demean  = 'yes';
-        cfg.coilaccuracy = 0;
-        cfg.bpfilter = 'yes';
-        cfg.bpfilttype = 'firws';
-        cfg.bpfreq  = [1 40];
-        cfg.padding = 3;
-        data_meg    = ft_preprocessing(cfg);
+      % MEG specific settings
+      cfg.channel = 'MEG';
+      cfg.demean  = 'yes';
+      cfg.coilaccuracy = 0;
+      cfg.bpfilter = 'yes';
+      cfg.bpfilttype = 'firws';
+      cfg.bpfreq  = [1 40];
+      cfg.padding = 3;
+      data_meg    = ft_preprocessing(cfg);
 
-        % EEG specific settings
-        cfg.channel    = {'EEG' '-EEG061' '-EEG062' '-EEG063' '-EEG064'};
-        cfg.demean     = 'yes';
-        cfg.reref      = 'yes';
-        cfg.refchannel = 'all'; % average reference
-        data_eeg       = ft_preprocessing(cfg);
+      % EEG specific settings
+      cfg.channel    = {'EEG' '-EEG061' '-EEG062' '-EEG063' '-EEG064'}; % exclude EOG/ECG/etc hard coded assumed to be this list
+      cfg.demean     = 'yes';
+      cfg.reref      = 'yes';
+      cfg.refchannel = 'all'; % average reference
+      data_eeg       = ft_preprocessing(cfg);
 
-        % settings for all other channels
-        cfg.channel = {'all', '-MEG', '-EEG'};
-        cfg.demean  = 'no';
-        cfg.reref   = 'no';
-        cfg.bpfilter = 'no';
-        data_other  = ft_preprocessing(cfg);
+      % this is what we can see in the BIDS channels.tsv file
+      % EEG061	HEOG	V	horizontaleog
+      % EEG062	VEOG	V	verticaleog
+      % EEG063	ECG  	V	cardiac
 
-        cfg            = [];
-        cfg.resamplefs = 300;
-        data_meg       = ft_resampledata(cfg, data_meg);
-        data_eeg       = ft_resampledata(cfg, data_eeg);
-        data_other     = ft_resampledata(cfg, data_other);
+      % settings for EOG and ECG channels
+      cfg.channel = {'EEG061' 'EEG062' 'EEG063'};
+      cfg.demean  = 'yes';
+      cfg.reref   = 'no';
+      cfg.bpfilter = 'no';
+      % use a one-to-one montage to rename the channels, see FT_APPLY_MONTAGE
+      cfg.montage.labelold = {'EEG061' 'EEG062' 'EEG063'};
+      cfg.montage.labelnew = {'HEOG' 'VEOG' 'ECG'};
+      cfg.montage.tra      = eye(3);
+      data_exg    = ft_preprocessing(cfg);
 
-        %% append the different channel sets into a single structure
-        rundata{run_nr} = ft_appenddata([], data_meg, data_eeg, data_other);
-        clear data_meg data_eeg data_other
-      end % for each run
+      % settings for all other channels
+      cfg.channel = {'all', '-MEG', '-EEG'};
+      cfg.montage = []; % remove the previously applied montage
+      cfg.demean  = 'no';
+      cfg.reref   = 'no';
+      cfg.bpfilter = 'no';
+      data_other  = ft_preprocessing(cfg);
 
-      data = ft_appenddata([], rundata{:});
-      clear rundata;
+      cfg            = [];
+      cfg.resamplefs = 300;
+      data_meg       = ft_resampledata(cfg, data_meg);
+      data_eeg       = ft_resampledata(cfg, data_eeg);
+      data_exg       = ft_resampledata(cfg, data_exg);
+      data_other     = ft_resampledata(cfg, data_other);
 
-      filename = fullfile(subj.outputpath, 'raw2erp', sprintf('%s_data',  subj.name));
-      % save(filename, 'data');
-      % load(filename, 'data');
+      % append the different channel sets into a single structure
+      rundata{run_nr} = ft_appenddata([], data_meg, data_eeg, data_exg, data_other);
+      clear data_meg data_eeg data_exg data_other
+    end % for each run
 
-The above chunk of code uses **[ft_preprocessing](/reference/ft_preprocessing)** three times per run, with channel type specific processing options. Of note is the rereferencing of the EEG data, and the exclusion of a subset of the EEG channels. The excluded channels correspond to non-brain recording EEG signals (EOG/ECG etc.), and are excluded from further analysis. Subsequently, the EEG data are average-referenced. After the data has been read from disk, **[ft_resampledata](/reference/ft_resampledata)** is used to downsample the data to a sampling frequency of 300 Hz. Then, the data structures are combined into a single run-specific data structure, using **[ft_appenddata](/reference/ft_appenddata)**.
+    data = ft_appenddata([], rundata{:});
+    clear rundata;
+
+    % we could save it to disk, or when skipping the code above we can read it from disk
+    filename = fullfile(subj.outputpath, 'raw2erp', subj.name, sprintf('%s_data', subj.name));
+    % save(filename, 'data');
+    % load(filename, 'data');
+
+The above chunk of code uses **[ft_preprocessing](/reference/ft_preprocessing)** four times per run, with channel type specific processing options. Note the exclusion of a subset of the EEG channels which correspond to non-brain recording EEG signals (EOG/ECG etc.). The EEG data are average-referenced, the other channels are not. After the data for each group of channels has been read from disk, **[ft_resampledata](/reference/ft_resampledata)** is used to downsample the data to a sampling frequency of 300 Hz. Then, the data structures are combined into a single run-specific data structure, using **[ft_appenddata](/reference/ft_appenddata)**.
+
+{% include markup/warning %}
+There is no advantage in resampling the data other than saving some memory. If your computer is big enough to handle your data, we recommend not to resample as there can be some annoying side effects. The anti-aliassing filter can affect your data, and post-hoc bookeeping of events (which are indicated with sample numbers) gets more complicated.
+
+In this specific case we are resampling to fit it in memory of the participants' laptops and to speed up subsequent computations.
+{% include markup/end %}
 
 ## Compute condition-specific averages (ERFs/ERPs)
 
-Once the data has been epoched and filtered, we can proceed with computing event-related averages. In FieldTrip, this can be achieved with **[ft_timelockanalysis](/reference/ft_timelockanalysis)**. In order to selectively average across epochs from different conditions, we make use of the data.trialinfo field, which contains a numeric indicator of the condition to which that particular epoch belongs. Thus, we can do:
+Once the data has been epoched and filtered, we can proceed with computing event-related averages, which are called ERFs for MEG and ERPs for EEG. This is achieved with **[ft_timelockanalysis](/reference/ft_timelockanalysis)**. In order to selectively average across epochs from different conditions, we make use of the `data.trialinfo` field, which contains a numeric indicator of the condition to which that particular epoch belongs. Thus, we can do:
 
     cfg        = [];
     cfg.preproc.demean = 'yes';
     cfg.preproc.baselinewindow = [-0.1 0];
 
-    cfg.trials = strcmp(data.trialinfo.trialtype, 'Famous');
+    % this is what we can see in the BIDS events.tsv file
+    Famous      = [5 6 7];
+    Unfamiliar  = [13 14 15];
+    Scrambled   = [17 18 19];
+
+    cfg.trials = ismember(data.trialinfo(:,1), Famous);
     avg_famous = ft_timelockanalysis(cfg, data);
 
-    cfg.trials = strcmp(data.trialinfo.trialtype, 'Unfamiliar');
+    cfg.trials = ismember(data.trialinfo(:,1), Unfamiliar);
     avg_unfamiliar = ft_timelockanalysis(cfg, data);
 
-    cfg.trials = strcmp(data.trialinfo.trialtype, 'Scrambled');
+    cfg.trials = ismember(data.trialinfo(:,1), Scrambled);
     avg_scrambled = ft_timelockanalysis(cfg, data);
 
-    cfg.trials = strcmp(data.trialinfo.trialtype, 'Famous') | strcmp(data.trialinfo.trialtype, 'Unfamiliar');
+    cfg.trials = ismember(data.trialinfo(:,1), [Famous Unfamiliar]);
     avg_faces  = ft_timelockanalysis(cfg, data);
 
     filename = fullfile(subj.outputpath, 'raw2erp', sprintf('%s_timelock', subj.name));
@@ -235,9 +254,11 @@ Alternatively, the data of different channel types can be visualised within a si
 Also, when actually plotting the data with **[ft_multiplotER](/reference/ft_multiplotER)** we need to specify a channel type specific scaling factor, to accommodate the different order of magnitude of the physical units in which the data are expressed. Alternatively, these scaling difference can be removed by application of a relative baseline (e.g., expressing the signals' magnitude in dB relative to a specified baseline window), or by appropriately whitening the signals. Note, that the scaling factors here were obtained by eyeballing the data and do not represent 'official' scaling values.
 
     cfg        = [];
-    cfg.layout = 'neuromag306mag_helmet.mat';
+    cfg.layout = 'neuromag306mag_helmet.mat'; % magnetometers
     layout_mag = ft_prepare_layout(cfg);
-    cfg.layout = 'neuromag306cmb_helmet.mat';
+    
+    cfg        = [];
+    cfg.layout = 'neuromag306cmb_helmet.mat'; % combined planar gradiometers
     layout_cmb = ft_prepare_layout(cfg);
 
     % in order for this to work, the positions should be in the same order of magnitude

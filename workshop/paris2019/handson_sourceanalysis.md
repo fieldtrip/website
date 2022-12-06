@@ -1,9 +1,9 @@
 ---
-title: Localizing sources of neural sources using beamformer techniques
+title: Reconstructing source activity using beamformers
 tags: [paris2019, meg, sourceanalysis, beamformer, mmfaces]
 ---
 
-# Localizing sources of neural activity using beamformer techniques
+# Reconstructing source activity using beamformers
 
 {% include markup/info %}
 This tutorial was written specifically for the [PracticalMEEG workshop in Paris](/workshop/paris2019) in December 2019.
@@ -156,12 +156,12 @@ Finally, with the beamformer solution on the cortical surface, it can be easily 
     % compute the forward model for the whitened data
     cfg             = [];
     cfg.channel     = tlckw.label;
-    cfg.grad        = tlckw.grad;
+    cfg.grad        = tlckw.grad; % NOTE: input of the whitened data ensures the correct sensor definition to be used
     cfg.sourcemodel = sourcemodel;
     cfg.headmodel   = headmodel;
     cfg.method      = 'singleshell';
     cfg.singleshell.batchsize = 1000;
-    leadfield_meg   = ft_prepare_leadfield(cfg); % NOTE: input of the whitened data ensures the correct sensor definition to be used.
+    leadfield_meg   = ft_prepare_leadfield(cfg);
 
 ## Source analysis and visualisation of virtual channel data
 
@@ -178,19 +178,19 @@ With the forward model and the covariance (as average across trials) computed, w
     cfg.lcmv.keepfilter = 'yes';
     cfg.lcmv.fixedori   = 'yes';
     cfg.lcmv.weightnorm = 'unitnoisegain';
-    cfg.headmodel   = headmodel;
-    cfg.sourcemodel = leadfield_meg;
-    source          = ft_sourceanalysis(cfg, tlckw);
+    cfg.headmodel       = headmodel;
+    cfg.sourcemodel     = leadfield_meg;
+    source              = ft_sourceanalysis(cfg, tlckw);
 
     filename = fullfile(subj.outputpath, 'sourceanalysis', subj.name,  sprintf('%s_source_lcmv', subj.name));
     save(filename, 'source', 'tlckw');
 
-With the source structure computed, we can inspect the fields of the variable source, and the subfields of source.avg:
+With the source structure computed, we can inspect the fields of the variable `source`, and the subfields of `source.avg`:
 
+    >> source
+    
     source =
-
       struct with fields:
-
           time: [1x510 double]
         inside: [15684x1 logical]
            pos: [15684x3 double]
@@ -202,9 +202,7 @@ With the source structure computed, we can inspect the fields of the variable so
     >> source.avg
 
     ans =
-
-      struct with fields:
-
+    struct with fields:
                  ori: {1x15684 cell}
                  pow: [15684x1 double]
                  mom: {15684x1 cell}
@@ -213,7 +211,7 @@ With the source structure computed, we can inspect the fields of the variable so
                label: {306x1 cell}
         filterdimord: '{pos}_ori_chan'
 
-The content of source.avg is the interesting stuff. Particularly, the 'mom' field contains the time courses of the event-related field at the source level. Colloquially, these time courses are known as 'virtual channels', reflecting the signal that would be picked up if it could directly be recorded by a channel at that location. The 'pow' field is a scalar per dipole position, and reflects the variance over the time window of interest, and typically does not mean much. The field 'filter' contains the beamformer spatial filter, which we will be using in a next step, in order to extract condition specific data. First, we will now inspect the virtual channels, using the relatively new (added to the FieldTrip repository only in November 2019) function **[ft_sourceplot_interactive](/reference/ft_sourceplot_interactive)**.
+The content of `source.avg` is the interesting stuff. Particularly, the `mom` field contains the time courses of the event-related field at the source level. Colloquially, these time courses are known as 'virtual channels', reflecting the signal that would be picked up if it could directly be recorded by a channel at that location. The `pow` field is a scalar per dipole position, and reflects the variance over the time window of interest, and typically does not mean much for an LCMV beamformer. The field `filter` contains the beamformer spatial filter, which we will be using in a next step, in order to extract condition specific data. First, we will now inspect the virtual channels using **[ft_sourceplot_interactive](/reference/ft_sourceplot_interactive)**.
 
     wb_dir   = fullfile(subj.outputpath, 'anatomy',subj.name, 'freesurfer', subj.name, 'workbench');
     filename = fullfile(wb_dir, sprintf('%s.L.inflated.8k_fs_LR.surf.gii', subj.name));
@@ -222,19 +220,19 @@ The content of source.avg is the interesting stuff. Particularly, the 'mom' fiel
     inflated.coordsys = 'neuromag';
 
     cfg           = [];
-    cfg.clim      = [-2.5 2.5];
-    cfg.colormap  = 'parula';
+    cfg.clim      = [-1 1];
+    cfg.colormap  = '-RdBu';
     cfg.parameter = 'mom';
 
     % replace the original dipole positions with those of the inflated surface
     source.pos = inflated.pos;
-    figure; ft_sourceplot_interactive(cfg, source);
+    ft_sourceplot_interactive(cfg, source);
 
 {% include image src="/assets/img/workshop/paris2019/lcmv_avgovercortex.png" width="400" %}{% include image src="/assets/img/workshop/paris2019/lcmv_inflated_visualvc.png" width="400" %}{% include image src="/assets/img/workshop/paris2019/lcmv_vc_timecourse.png" width="400"%}
 
 _Figure: Interactive figure windows to inspect virtual channels_
 
-The function **[ft_sourceplot_interactive](/reference/ft_sourceplot_interactive)** opens two figures, one showing a time course with the event-related field, averaged across all dipoles, and the other showing the cortical surface. Here, we replaced the original source dipole positions with their equivalent 'inflated' counterparts to better appreciate the stuff that is going on in the sulci. Pressing the shift-key while selecting a location on the cortical surface creates a new figure, with the event-related field of the selected location. Clicking in the figure with the time courses shifts the latency at which the corresponding topographical map is shown.
+The function **[ft_sourceplot_interactive](/reference/ft_sourceplot_interactive)** opens two figures, one showing a time course with the event-related field, averaged across all dipoles, and the other showing the cortical surface. Here, we replaced the original cortical sheet dipole positions with their equivalent 'inflated' counterparts to better appreciate the stuff that is going on in the sulci. Pressing the shift-key while selecting a location on the cortical surface creates a new figure, with the event-related field of the selected location. Clicking in the figure with the time courses shifts the latency at which the corresponding topographical map is shown.
 
 #### Exercise 3:
 
@@ -264,13 +262,18 @@ With the spatial filters computed from the covariance matrix estimated from all 
     cfg.preproc.demean = 'yes';
     cfg.covariance     = 'yes';
 
-    cfg.trials = find(dataw_meg.trialinfo(:,1)==1);
+    % this is what we can see in the BIDS events.tsv file
+    Famous      = [5 6 7];
+    Unfamiliar  = [13 14 15];
+    Scrambled   = [17 18 19];
+
+    cfg.trials = ismember(dataw_meg.trialinfo(:,1), Famous);
     tlckw_famous = ft_timelockanalysis(cfg, dataw_meg);
 
-    cfg.trials = find(dataw_meg.trialinfo(:,1)==2);
+    cfg.trials = ismember(dataw_meg.trialinfo(:,1), Unfamiliar);
     tlckw_unfamiliar = ft_timelockanalysis(cfg, dataw_meg);
 
-    cfg.trials = find(dataw_meg.trialinfo(:,1)==3);
+    cfg.trials = ismember(dataw_meg.trialinfo(:,1), Scrambled);
     tlckw_scrambled = ft_timelockanalysis(cfg, dataw_meg);
 
     cfg                 = [];
@@ -296,16 +299,21 @@ With the spatial filters computed from the covariance matrix estimated from all 
 
     cfg           = [];
     cfg.parameter = 'mom';
-    figure; ft_sourceplot_interactive(cfg, source_famous, source_unfamiliar, source_scrambled);
+    cfg.colormap  = '-RdBu';
+    cfg.clim      = [-1 1];
+    ft_sourceplot_interactive(cfg, source_famous, source_unfamiliar, source_scrambled);
 
 You can also investigate the difference between the 'famous' and 'scrambled' conditions:
 
     cfg = [];
     cfg.operation = 'subtract';
     cfg.parameter = 'mom';
+    cfg.colormap  = '-RdBu';
+    cfg.clim      = [-1 1];
     source_diff   = ft_math(cfg, source_famous, source_scrambled);
 
     cfg           = [];
     cfg.parameter = 'mom';
     cfg.has_diff  = true;
-    figure; ft_sourceplot_interactive(cfg, source_famous, source_scrambled, source_diff);
+    cfg.clim      = [-1 1];
+    ft_sourceplot_interactive(cfg, source_famous, source_scrambled, source_diff);

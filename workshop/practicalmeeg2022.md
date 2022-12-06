@@ -19,13 +19,17 @@ Dec 14-16, 2022
 
 Anne-Sophie Dubarry and Maximilien Chaumon are the local organizers.
 
-The FieldTrip tutorials will be presented and tutored by [Robert Oostenveld](https://www.ru.nl/en/people/oostenveld-r) (from the Donders Institute for Brain, Cognition and Behaviour, Nijmegen, NL) and [Christelle Zielinski](https://www.lpl-aix.fr/contact/christelle-zielinski/) (from the Institute of Language, Communication and the Brain, Aix-en-Provence, FR)
+The FieldTrip tutorials will be presented and tutored by [Robert Oostenveld](https://www.ru.nl/en/people/oostenveld-r) (from the Donders Institute for Brain, Cognition and Behaviour, Nijmegen, NL) and [Christelle Zielinski](https://www.lpl-aix.fr/contact/christelle-zielinski/) (from the Institute of Language, Communication and the Brain, Aix-en-Provence, FR).
 
 There will also be other experts from MNE-Python, BrainStorm and EEGLAB with their respective tutorials, and jointly we will organize the plenary lectures.
 
-# Program and training material
+# Hands-on program and training material
 
-To be announced.
+- [From raw to ERPs](/workshop/practicalmeeg2022/handson_raw2erp)
+- [Time-frequency analysis using Hanning window, multitapers and wavelets](/workshop/practicalmeeg2022/handson_sensoranalysis)
+- [Creation of headmodels and sourcemodels for source reconstruction](/workshop/practicalmeeg2022/handson_anatomy)
+- [Reconstructing source activity using beamformers](/workshop/practicalmeeg2022/handson_sourceanalysis)
+- [Group-level statistics with parametric and non-parametric methods](/workshop/practicalmeeg2022/handson_groupanalysis)
  
 # How to prepare
 

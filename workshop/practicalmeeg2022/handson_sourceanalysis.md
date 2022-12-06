@@ -1,9 +1,9 @@
 ---
-title: Localizing sources of neural sources using beamformer techniques
+title: Reconstructing source activity using beamformers
 tags: [practicalmeeg2022, meg, sourceanalysis, beamformer, mmfaces]
 ---
 
-# Localizing sources of neural activity using beamformer techniques
+# Reconstructing source activity using beamformers
 
 {% include markup/info %}
 This tutorial was written specifically for the [PracticalMEEG workshop in Aix-en-Provence](/workshop/practicalmeeg2022) in December 2022. It is an updated version of the corresponding tutorial for [Paris 2019](/workshop/paris2019).
@@ -19,11 +19,11 @@ This tutorial will not cover the frequency-domain option for DICS/PCC beamformer
 
 ## Procedure
 
-To localise the evoked sources for this example dataset we will perform the following steps:
+To localize and reconstruct the activity of the sources we will perform the following steps:
 
 - Read the data into MATLAB using the same strategy as in the [raw2erp tutorial](/workshop/practicalmeeg2022/handson_raw2erp).
-- Spatially whiten the data to account for differences in sensor type (magnetometers versus gradiometers) with **[ft_denoise_prewhiten](/reference/ft_denoise_prewhiten)**
-- Compute the covariance matrix using the function **[ft_timelockanalysis](/reference/ft_timelockanalysis)**.
+- Spatially whiten the data to account for differences in magnetometers versus gradiometers with **[ft_denoise_prewhiten](/reference/ft_denoise_prewhiten)**
+- Compute the covariance matrix using **[ft_timelockanalysis](/reference/ft_timelockanalysis)**.
 - Construct the leadfield matrix using **[ft_prepare_leadfield](/reference/ft_prepare_leadfield)**, in combination with the previously computed head- and sourcemodels + the whitened gradiometer array.
 - Compute a spatial filter and estimate the amplitude of the sources using **[ft_sourceanalysis](/reference/ft_sourceanalysis)**
 - Visualize the results, using **[ft_sourceplot_interactive](/reference/ft_sourceplot_interactive)**.
@@ -32,7 +32,7 @@ To localise the evoked sources for this example dataset we will perform the foll
 
 ### Reading the data, and some issues with covariance matrices
 
-The aim is to reconstruct the sources underlying the event-related field, when the subject is presented with pictures of faces. in the [raw2erp tutorial](/workshop/practicalmeeg2022/handson_raw2erp) we have computed sensor-level event-related fields, but we also stored the single-epoch data. We start off by loading the precomputed single-epoch data, and the headmodel and sourcemodel that were created during the [anatomy tutorial](/workshop/practicalmeeg2022/handson_sourceanalysis).
+The aim is to reconstruct the sources underlying the event-related field that results from presentation of pictures of faces. in the [raw2erp tutorial](/workshop/practicalmeeg2022/handson_raw2erp) we have computed sensor-level event-related fields, but we also stored the single-epoch data. We start off by loading the precomputed single-epoch data, and the headmodel and sourcemodel that were created during the [anatomy tutorial](/workshop/practicalmeeg2022/handson_sourceanalysis).
 
     subj = datainfo_subject(15);
     filename = fullfile(subj.outputpath, 'raw2erp', subj.name, sprintf('%s_data', subj.name));
@@ -44,7 +44,7 @@ In this tutorial, we are only going to use the MEG data for the source reconstru
     cfg.channel = {'MEG'};
     data        = ft_selectdata(cfg, data);
 
-Next, for reasons that will become clear soon, we also select from the epoched data the timewindows just preceding the onset of the stimulus, from a time window between -200 ms and 0.
+Next, for reasons that will become clear soon, we also select from the epoched data the baseline timewindow just preceding the onset of the stimulus, from a time window between -200 ms and 0.
 
     cfg         = [];
     cfg.latency = [-0.2 0];
@@ -62,27 +62,33 @@ Now, if we reorder the channels a bit, we can visualise this covariance matrix a
     selgrad = ft_chantype(baseline_avg.label, 'megplanar');
 
     C = baseline_avg.cov([find(selmag);find(selgrad)],[find(selmag);find(selgrad)]);
-    figure;imagesc(C);hold on;plot(102.5.*[1 1],[0 306],'w','linewidth',2);plot([0 306],102.5.*[1 1],'w','linewidth',2);
+    figure; imagesc(C);hold on;plot(102.5.*[1 1],[0 306],'w','linewidth',2);plot([0 306],102.5.*[1 1],'w','linewidth',2);
 
 {% include image src="/assets/img/workshop/practicalmeeg2022/cov_meg.png" width="400" %}
 
 _Figure: MEG sensor covariance matrix_
 
-The figure shows the covariance between all pairs of magnetometers in the left upper square on the diagonal, between all pairs of gradiometers the right lower square, and the covariance between magnetometers and gradiometers in the off- diagonal blocks. As can be seen, the left upper and off-diagonal blocks appear blue, suggesting that the numerical range of the magnetometer is a lot smaller than the numerical range of the gradiometers. In itself, this might not pose a problem, but it will result in a different weighing of gradiometers versus magnetometers when computing the source reconstruction. In addition to the difference in magnitude of the different channel types, the covariance matrix may be poorly estimated (for instance due to a limited amount of data available), or may be rank deficient due to previous processing steps. Examples of processing steps that cause the data to be rank deficient are artifact cleaning procedures based on independent component analysis (ICA), or signal space projections (SSPs). Another important processing step that reduces the rank of the data massively, is Elekta's maxfilter.
+The figure shows the covariance between all pairs of magnetometers in the left upper square on the diagonal, between all pairs of gradiometers the right lower square, and the covariance between magnetometers and gradiometers in the off-diagonal blocks. As can be seen, the left upper and off-diagonal blocks appear blue, revealing that the numerical range of the magnetometer signals is a lot smaller than the numerical range of the gradiometers. In itself, this might not pose a problem, but it will result in a different weighing of gradiometers versus magnetometers when computing the source reconstruction. In addition to the difference in magnitude of the different channel types, the covariance matrix may be poorly estimated (for instance due to a limited amount of data available), or may be rank deficient due to previous processing steps. Examples of processing steps that cause the data to be rank deficient are artifact cleaning procedures based on independent component analysis (ICA), or signal space projections (SSPs). Another important processing step that reduces the rank of the data massively, is MaxFilter.
 
 It is crucial to account for rank deficiency of the data, because if it's not done properly, the noise (be it numerical or real) will blow up the reconstruction. Beamformers require the mathematical inverse of the covariance matrix computed from the epochs-of-interest (typically including a basline window but **never** computed on the baseline window alone). State-of-the-art distributed source reconstuction with minimum-norm estimation (MNE) require (implicitly) the mathematical inverse of a noise covariance matrix. Either way, irrespective of your favourite source reconstruction method, mathematical inversion of rank deficient covariance matrices that moreover consist of signals with different orders of magnitude requires some tricks to make the final result numerically well-behaved.
 To make this a bit more concrete, we first will have a look at the singular value decomposition (which in this case is similar to a principal component analysis) of the baseline covariance matrix:
 
     [u,s,v] = svd(baseline_avg.cov);
-    figure;plot(log10(diag(s)),'o');
+    figure; plot(log10(diag(s)),'o');
 
 {% include image src="/assets/img/workshop/practicalmeeg2022/cov_svd.png" width="400" %}
 
 _Figure: Singular values of a MEG sensor covariance matrix_
 
-When thus plotted on a log scale, it can be seen that there is a range of 16 orders of magnitude in the signal components, and that there are actually 3 stairs in this singular value spectrum. There is a steep decline around component 70 or so, and another step at component 204. The step at component 204 reflects the magnitude difference between the 204 gradiometer signals and the 102 magnetometer signals. The discontinuity around component 70 reflects the effect of the Maxfilter, which has effectively removed about 236 spatial components out of the data.
+When thus plotted on a log scale, it can be seen that there is a range of 16 orders of magnitude in the signal components, and that there are actually 3 stairs in this singular value spectrum. There is a steep decline around component 70 or so, and another step at component 204. The step at component 204 reflects the magnitude difference between the 204 gradiometer signals and the 102 magnetometer signals. The discontinuity around component 70 reflects the effect of the Maxfilter, which has effectively removed about 306-70=236 spatial components out of the data.
 
-Just using the 'normal' way of computing the covariance matrix' inverse, by using MATLAB's inv() function is asking for numerical problems, because the spatial components with very small singular values (which don't reflect any real signal) are blown up big time in the inverse. For this reason, regularised or truncated inversion techniques are to be used. In addition to applying more thoughtful algorithms for matrix inversion, spatial prewhitening techniques can be used, which manipulate the data in a way to make them, as the name suggests, spatially (more or less) white. This means that the signals are uncorrelated to each other, and have the same variance. As a byproduct, when the whitening is done separately for the magnetometers and gradiometers, the scale difference between the different channel types disappears, and thus prewhitening results in an 'equal' treatment of both channel types, and allows for a relatively straightforward combination of the different channel types during source reconstruction.
+Just using the 'normal' way of computing the covariance matrix' inverse, by using MATLAB's [inv](https://nl.mathworks.com/help/matlab/ref/inv.html) function is asking for numerical problems, because the spatial components with very small singular values (which don't reflect any real signal) are blown up big time in the inverse. For this reason, regularised or truncated inversion techniques are to be used. In addition to applying more thoughtful algorithms for matrix inversion, spatial prewhitening techniques can be used, which manipulate the data in a way to make them, as the name suggests, spatially (more or less) white. This means that the signals are uncorrelated to each other, and have the same variance. As a byproduct, when the whitening is done separately for the magnetometers and gradiometers, the scale difference between the different channel types disappears, and thus prewhitening results in an 'equal' treatment of both channel types, and allows for a relatively straightforward combination of the different channel types during source reconstruction.
+
+{% include markup/info %}
+The effect of MaxFilter on beamformers and how to deal with it is discussed in detail in the following paper:
+
+Westner BU, Dalal SS, Gramfort A, Litvak V, Mosher JC, Oostenveld R, Schoffelen JM. A unified view on beamformers for M/EEG source reconstruction. Neuroimage. 2021. {% include badge doi="10.1016/j.neuroimage.2021.118789" }
+{% include markup/info %}
 
 ### Spatial whitening of the task data, using the activity from the baseline
 
@@ -91,9 +97,10 @@ The function **[ft_denoise_prewhiten](/reference/ft_denoise_prewhiten)** can be 
     % the following lines detect the location of the first large 'cliff' in the singular value spectrum of the grads and mags
     [u,s_mag,v]  = svd(baseline_avg.cov(selmag,  selmag));
     [u,s_grad,v] = svd(baseline_avg.cov(selgrad, selgrad));
-    d_mag = -diff(log10(diag(s_mag))); d_mag = d_mag./std(d_mag);
-    kappa_mag = find(d_mag>4,1,'first');
-    d_grad = -diff(log10(diag(s_grad))); d_grad = d_grad./std(d_grad);
+    
+    d_mag      = -diff(log10(diag(s_mag))); d_mag = d_mag./std(d_mag);
+    kappa_mag  = find(d_mag>4,1,'first');
+    d_grad     = -diff(log10(diag(s_grad))); d_grad = d_grad./std(d_grad);
     kappa_grad = find(d_grad>4,1,'first');
 
     cfg            = [];
@@ -101,15 +108,15 @@ The function **[ft_denoise_prewhiten](/reference/ft_denoise_prewhiten)** can be 
     cfg.kappa      = min(kappa_mag,kappa_grad);
     dataw_meg      = ft_denoise_prewhiten(cfg, data, baseline_avg);
 
-The prewhitening operator is defined as the inverse of the matrix square root of the covariance matrix that is to be used for the prewhitening. The cfg.kappa option in **[ft_denoise_prewhiten](/reference/ft_denoise_prewhiten)** ensures that a regularised inverse is used. Kappa refers to the number of spatial components to be retained in the inverse, and should be at most the number before which the steep cliff in singular values occurs.
+The prewhitening operator is defined as the inverse of the matrix square root of the covariance matrix that is to be used for the prewhitening. The `cfg.kappa` option in **[ft_denoise_prewhiten](/reference/ft_denoise_prewhiten)** ensures that a regularised inverse is used. Kappa refers to the number of spatial components to be retained in the inverse, and should be at most the number before which the steep cliff in singular values occurs.
 
 #### Exercise 1:
 
 {% include markup/info %}
-Select the 200 ms baseline from the dataw_meg structure, compute the covariance, and inspect the covariance matrix with imagesc() after grouping the magnetometers and the gradiometers. Also inspect the singular value spectrum of the whitened baseline covariance matrix.
+Select the 200 ms baseline from the dataw_meg structure, compute the covariance, and inspect the covariance matrix with [imagesc](https://nl.mathworks.com/help/matlab/ref/imagesc.html) after grouping the magnetometers and the gradiometers. Also inspect the singular value spectrum of the whitened baseline covariance matrix.
 {% include markup/end %}
 
-A byproduct of the magnetometers and gradiometers being represented at a similar scale, is the possibility to do a quick-and-dirty artifact identification (and rejection) using **[ft_rejectvisual](/reference/ft_rejectvisual)**.
+A byproduct of the magnetometers and gradiometers being represented at a similar scale, is the possibility to do a quick-and-dirty artifact identification (and rejection) using **[ft_rejectvisual](/reference/ft_rejectvisual)**. The prewhitened data is scaled to have (approximately) unit-amplitude, which makes the threshold for identification of artifacts easier to set, and does not require a different threshold for magnetometers and gradiometers.
 
     cfg        = [];
     cfg.layout = 'neuromag306mag_helmet.mat';
@@ -127,7 +134,7 @@ _Figure: Visual artifact rejection window_
 #### Exercise 2:
 
 {% include markup/info %}
-Consult the [visual artifact rejection tutorial](/tutorial/visual_artifact_rejection) and remove the obvious outlier trials from the data structure. The specification of a layout in the cfg allows for a more detailed inspection of the outlier trials. Note these trial numbers, inspect the spatial topography and time courses, and remove them from the data. Also inspect trials 72 and 832, and discuss their spatiotemporal properties.
+Consult the [visual artifact rejection tutorial](/tutorial/visual_artifact_rejection) and remove the obvious outlier trials from the data structure. The specification of `cfg.layout` allows for a more detailed inspection of the outlier trials. Note these trial numbers, inspect the spatial topography and time courses, and remove them from the data. Also inspect trials 72 and 832, and discuss their spatiotemporal properties.
 {% include markup/end %}
 
 ## Computation of the covariance matrix of the prewhitened data
@@ -147,8 +154,11 @@ For a beamformer analysis, we need to predefine a set of dipole locations to be 
 Finally, with the beamformer solution on the cortical surface, it can be easily compared to a MNE solution, should one be inclined to do so. It is important to note that 1) the metric units of the geometric objects are identical to one another, and 2) to use here the gradiometer array from the whitened data, because we will also use the whitened data for the source reconstruction. With respect to point 1, FieldTrip will check for this, but to be sure, we ensure the equality of metric units explicitly.
 
     % obtain the necessary ingredients for obtaining a forward model
-    load(fullfile(subj.outputpath, 'anatomy', subj.name, sprintf('%s_headmodel', subj.name)));
-    load(fullfile(subj.outputpath, 'anatomy', subj.name, sprintf('%s_sourcemodel', subj.name)));
+    filename = fullfile(subj.outputpath, 'anatomy', subj.name, sprintf('%s_headmodel', subj.name));
+    load(filename);
+    filename = fullfile(subj.outputpath, 'anatomy', subj.name, sprintf('%s_sourcemodel', subj.name));
+    load(filename);
+
     headmodel   = ft_convert_units(headmodel,   tlckw.grad.unit);
     sourcemodel = ft_convert_units(sourcemodel, tlckw.grad.unit);
     sourcemodel.inside = sourcemodel.atlasroi>0;
