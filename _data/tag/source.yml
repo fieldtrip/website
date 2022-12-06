@@ -157,12 +157,12 @@
 - name:  Creation of headmodels and sourcemodels for source reconstruction
   link:  /workshop/paris2019/handson_anatomy
 
-- name:  Localizing sources of neural sources using beamformer techniques
+- name:  Reconstructing source activity using beamformers
   link:  /workshop/paris2019/handson_sourceanalysis
 
 - name:  Creation of headmodels and sourcemodels for source reconstruction
   link:  /workshop/practicalmeeg2022/handson_anatomy
 
-- name:  Localizing sources of neural sources using beamformer techniques
+- name:  Reconstructing source activity using beamformers
   link:  /workshop/practicalmeeg2022/handson_sourceanalysis
 

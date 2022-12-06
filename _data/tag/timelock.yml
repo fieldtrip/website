@@ -40,7 +40,7 @@
 - name:  From raw data to ERP
   link:  /workshop/paris2019/handson_raw2erp
 
-- name:  Group analysis
+- name:  Group-level statistics with parametric and non-parametric methods
   link:  /workshop/practicalmeeg2022/handson_groupanalysis
 
 - name:  From raw data to ERP

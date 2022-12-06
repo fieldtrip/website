@@ -34,7 +34,7 @@
 - name:  Creation of headmodels and sourcemodels for source reconstruction
   link:  /workshop/practicalmeeg2022/handson_anatomy
 
-- name:  Group analysis
+- name:  Group-level statistics with parametric and non-parametric methods
   link:  /workshop/practicalmeeg2022/handson_groupanalysis
 
 - name:  From raw data to ERP
@@ -43,6 +43,6 @@
 - name:  Time-frequency analysis using Hanning window, multitapers and wavelets
   link:  /workshop/practicalmeeg2022/handson_sensoranalysis
 
-- name:  Localizing sources of neural sources using beamformer techniques
+- name:  Reconstructing source activity using beamformers
   link:  /workshop/practicalmeeg2022/handson_sourceanalysis
 
