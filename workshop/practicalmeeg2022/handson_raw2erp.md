@@ -173,6 +173,17 @@ There is no advantage in resampling the data other than saving some memory. If y
 In this specific case we are resampling to fit it in memory of the participants' laptops and to speed up subsequent computations.
 {% include markup/end %}
 
+{% include markup/info %}
+The recorded data apparently has a delay of 34.5 ms relative to the onset of the triggers and relative to the `events.tsv` file. This can be corrected with **[ft_redefinetrial](/reference/ft_redefinetrial)** like This
+
+    cfg            = [];
+    cfg.offset     = 0.0345 * data.fsample;
+    data_corrected = ft_redefinetrial(cfg, data);
+
+In the remainder we will continue towork with the uncorrected data, as that was used for the processing of all 16 subjects' source reconstructed results that we will use for group-level statistics. So please keep in mind that the time axis is off by 34.5 ms.
+{% include markup/end %}
+
+
 ## Compute condition-specific averages (ERFs/ERPs)
 
 Once the data has been epoched and filtered, we can proceed with computing event-related averages, which are called ERFs for MEG and ERPs for EEG. This is achieved with **[ft_timelockanalysis](/reference/ft_timelockanalysis)**. In order to selectively average across epochs from different conditions, we make use of the `data.trialinfo` field, which contains a numeric indicator of the condition to which that particular epoch belongs. Thus, we can do:
