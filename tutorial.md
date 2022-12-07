@@ -18,7 +18,7 @@ When adding or contributing to the tutorials please consider the [documentation 
 - [Introduction to the FieldTrip toolbox](/tutorial/introduction)
 - [Creating a clean analysis pipeline](/tutorial/scripting)
 - [Making a memory efficient analysis pipeline](/tutorial/memory)
-- [Speeding up your analysis with distributed computing](/tutorial/distributedcomputing)
+- [Speeding up your analysis pipeline using distributed computing](/tutorial/distributedcomputing)
 
 ## Reading and preprocessing data
 

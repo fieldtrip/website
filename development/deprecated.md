@@ -25,6 +25,10 @@ The [code development guidelines](/development/guideline/code?&#document_depreca
 
 ## Overview of deprecated functions
 
+December 2022:
+
+- the `peer` and `engine` module have been removed, see <https://github.com/fieldtrip/fieldtrip/issues/2153>
+
 November 2022:
 
 - the config object and the `cfg.trackconfig` functionality has been removed, see <https://github.com/fieldtrip/fieldtrip/issues/2127>

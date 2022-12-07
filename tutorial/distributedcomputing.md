@@ -1,9 +1,9 @@
 ---
-title: Speeding up your analysis with distributed computing
-tags: [tutorial, qsub, peer, distcomp, matlab, meg-language]
+title: Speeding up your analysis pipeline using distributed computing
+tags: [tutorial, script, matlab, qsub, meg-language]
 ---
 
-# Speeding up your analysis with distributed computing
+# Speeding up your analysis pipeline using distributed computing
 
 ## Introduction
 

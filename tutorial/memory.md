@@ -1,6 +1,6 @@
 ---
 title: Making a memory efficient analysis pipeline
-tags: [tutorial, example, memory, matlab, script]
+tags: [tutorial, matlab, script, memory]
 ---
 
 # Making a memory efficient analysis pipeline
