@@ -87,7 +87,7 @@ Just using the 'normal' way of computing the covariance matrix' inverse, by usin
 {% include markup/info %}
 The effect of MaxFilter on beamformers and how to deal with it is discussed in detail in the following paper:
 
-Westner BU, Dalal SS, Gramfort A, Litvak V, Mosher JC, Oostenveld R, Schoffelen JM. A unified view on beamformers for M/EEG source reconstruction. Neuroimage. 2021. {% include badge doi="10.1016/j.neuroimage.2021.118789" }
+Westner BU, Dalal SS, Gramfort A, Litvak V, Mosher JC, Oostenveld R, Schoffelen JM. A unified view on beamformers for M/EEG source reconstruction. Neuroimage. 2021. {% include badge doi="10.1016/j.neuroimage.2021.118789" %}
 {% include markup/info %}
 
 ### Spatial whitening of the task data, using the activity from the baseline
