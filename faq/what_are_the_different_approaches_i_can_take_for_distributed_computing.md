@@ -49,29 +49,3 @@ To facilitate distributed computing, we have implemented the **[qsubcellfun](/re
     rawdata = qsubcellfun(@ft_preprocessing, cfg);
 
 See **[qsubcellfun](/reference/qsub/qsubcellfun)**, **[qsubfeval](/reference/qsub/qsubfeval)** and **[qsubget](/reference/qsub/qsubget)** for details.
-
-### FieldTrip peer computing toolbox
-
-The FieldTrip peer computing toolbox was developed to harness the computational resources in an unorganized organization, e.g., to use the computers of your office mates during the night, or to use multiple Linux computers that are not clustered. More documentation on the peer toolbox can be found [here](/development/module/peer).
-
-{% include markup/danger %}
-Please note that this requires compilation of some mex files. At this moment it is not actively supported.
-{% include markup/end %}
-
-The syntax you would use to distribute jobs with the peer system is similar to [cellfun](https://nl.mathworks.com/help/matlab/ref/cellfun.html), i.e.
-
-    for i=1:Nsubj
-      cfg{i}         = ...
-      cfg{i}.dataset = sprintf('subject%d.eeg');
-    end
-    rawdata = peercellfun(@ft_preprocessing, cfg);
-
-See **[peercellfun](/reference/peer/peercellfun)**, **[peerfeval](/reference/peer/peerfeval)** and **[peerget](/reference/peer/peerget)** for details.
-
-### FieldTrip engine toolbox
-
-The FieldTrip-engine toolbox was designed for distributed computing on a massive multicore computer without requiring the MATLAB parallel toolbox. More documentation on the engine toolbox is found [here](/development/module/engine).
-
-{% include markup/danger %}
-Please note that this requires compilation of some mex files. At this moment it is not actively supported.
-{% include markup/end %}
