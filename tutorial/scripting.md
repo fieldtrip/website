@@ -23,12 +23,11 @@ The analysis of an experiment typically involves a lot of repetition as similar 
 
 ## Subject m-files
 
-As stated before, by making our own function around FieldTrip functions we can in a later stage easily repeat them, e.g., over multiple subjects. However, every subject or condition will commonly have different filenames, different variables, different filter-settings, different trials that have to be rejected, etc. A good idea, therefore, is to first **write all your subject-specific details in a separate m-file**. You can choose to have one m-file per subject, or one in which you combine all subjects. In the current example we will use the first option:
+As stated before, by making our own function around FieldTrip functions we can in a later stage easily repeat them, e.g., over multiple subjects. However, every subject or condition will commonly have different filenames, different variables, different filter-settings, different trials that have to be rejected, etc. A good idea, therefore, is to first **write all your subject-specific details in a separate m-file**. You can choose to have one m-file per subject, or one in which you combine all subjects. In the current example we will use the first option, and we specify these m-files to be a function:
 
+    function subjectdata = Subject01
+    
     % Subject01.m
-
-    % ensure that we don't mix up subjects
-    clear subjectdata
 
     % define the filenames, parameters and other information that is subject specific
     subjectdata.subjectdir        = 'Subject01';
@@ -143,7 +142,7 @@ The following function will load the data as specified in Subject01.m, uses the 
       disp('Not enough input arguments');
       return;
     end
-    eval(Subjectm);
+    subjectdata = feval(Subjectm);
     outputdir = 'AnalysisM';
 
     %%% define trials
