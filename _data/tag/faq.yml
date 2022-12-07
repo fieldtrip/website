@@ -64,9 +64,6 @@
 - name:  How can I deal with a discontinuous Neuralynx LFP recording?
   link:  /faq/discontinuous_neuralynx
 
-- name:  Does a firewall affect the communication between peers?
-  link:  /faq/does_a_firewall_affect_the_communication_between_peers
-
 - name:  Does the FieldTrip realtime buffer only work with MATLAB?
   link:  /faq/does_the_fieldtrip_realtime_buffer_only_work_with_matlab
 
@@ -112,9 +109,6 @@
 - name:  How can I check whether the grid that I have is aligned to the segmented volume and to the sensor gradiometer?
   link:  /faq/how_can_i_check_whether_the_grid_that_i_have_is_aligned_to_the_segmented_volume_and_to_the_sensor_gradiometer
 
-- name:  How can I combine FieldTrip with peer distributed computing?
-  link:  /faq/how_can_i_combine_fieldtrip_with_peer_distributed_computing
-
 - name:  How can I compile the mex files on 64-bit Windows?
   link:  /faq/how_can_i_compile_the_mex_files_on_64_bit_windows
 
@@ -130,9 +124,6 @@
 - name:  How can I convert one dataformat into an other?
   link:  /faq/how_can_i_convert_one_dataformat_into_an_other
 
-- name:  How can I debug a problematic distributed job?
-  link:  /faq/how_can_i_debug_a_problematic_distributed_job
-
 - name:  How can I debug my analysis script if a FieldTrip function gives an error?
   link:  /faq/how_can_i_debug_my_analysis_script_if_a_fieldtrip_function_gives_an_error
 
@@ -141,9 +132,6 @@
 
 - name:  How can I determine the anatomical label of a source or electrode?
   link:  /faq/how_can_i_determine_the_anatomical_label_of_a_source
-
-- name:  How can I determine the number of threads that MATLAB uses?
-  link:  /faq/how_can_i_determine_the_number_of_threads_that_matlab_uses
 
 - name:  How can I determine the onset of an effect?
   link:  /faq/how_can_i_determine_the_onset_of_an_effect
@@ -187,35 +175,17 @@
 - name:  How can I preprocess a dataset that is too large to fit into memory?
   link:  /faq/how_can_i_preprocess_a_dataset_that_is_too_large_to_fit_into_memory
 
-- name:  How can I prevent a job from executing twice?
-  link:  /faq/how_can_i_prevent_a_job_from_executing_twice
-
 - name:  How can I process continuous data without triggers?
   link:  /faq/how_can_i_process_continuous_data_without_triggers
 
 - name:  How can I read all channels from an EDF file that contains multiple sampling rates?
   link:  /faq/how_can_i_read_all_channels_from_an_edf_file_that_contains_multiple_sampling_rates
 
-- name:  How can I read and write files if I use other people's peers?
-  link:  /faq/how_can_i_read_and_write_files_if_i_use_other_people_s_peers
-
 - name:  How can I read corrupted (unsaved) CTF data?
   link:  /faq/how_can_i_read_corrupted_unsaved_ctf_data
 
 - name:  How can I read EGI mff data without the JVM?
   link:  /faq/how_can_i_read_egi_mff_data_without_the_jvm
-
-- name:  How can I set up the peer distributed computing on a large Linux cluster?
-  link:  /faq/how_can_i_set_up_the_peer_distributed_computing_on_a_large_linux_cluster
-
-- name:  How can I set up the peer distributed computing on a single multicore computer?
-  link:  /faq/how_can_i_set_up_the_peer_distributed_computing_on_a_single_multicore_computer
-
-- name:  How can I set up the peer distributed computing on a small number of computers?
-  link:  /faq/how_can_i_set_up_the_peer_distributed_computing_on_a_small_number_of_computers
-
-- name:  How can I stop the different threads created by peercontroller and peerworker?
-  link:  /faq/how_can_i_stop_the_different_threads_created_by_peercontroller_and_peerworker
 
 - name:  How to test an interaction effect using cluster-based permutation tests?
   link:  /faq/how_can_i_test_an_interaction_effect_using_cluster-based_permutation_tests
@@ -235,9 +205,6 @@
 - name:  How can I use my MacBook Pro for stimulus presentation in the MEG lab?
   link:  /faq/how_can_i_use_my_macbook_pro_for_stimulus_presentation_in_the_meg_lab
 
-- name:  How can I use the command-line peerworker and optimize the MATLAB licenses?
-  link:  /faq/how_can_i_use_the_command-line_peerworker_and_optimize_the_matlab_licenses
-
 - name:  How can I use the databrowser?
   link:  /faq/how_can_i_use_the_databrowser
 
@@ -255,9 +222,6 @@
 
 - name:  How to change the MRI orientation, the voxel size or the field-of-view?
   link:  /faq/how_change_mri_orientation_size_fov
-
-- name:  How do I avoid having to allocate N copies of my data if I want to execute N jobs?
-  link:  /faq/how_do_i_avoid_having_to_allocate_n_copies_of_my_data_if_i_want_to_execute_n_jobs
 
 - name:  How do I construct a layout file for the plotting functions?
   link:  /faq/how_do_i_construct_a_layout_file_for_the_plotting_functions
@@ -277,12 +241,6 @@
 - name:  How does the filter padding in preprocessing work?
   link:  /faq/how_does_the_filter_padding_in_preprocessing_work
 
-- name:  How does the smartmem algorithm work?
-  link:  /faq/how_does_the_peer_smartmem_algorithm_work
-
-- name:  How does the peer smartshare algorithm work?
-  link:  /faq/how_does_the_peer_smartshare_algorithm_work
-
 - name:  How fast is the FieldTrip buffer for realtime data streaming?
   link:  /faq/how_fast_is_the_fieldtrip_buffer_for_realtime_data_streaming
 
@@ -300,9 +258,6 @@
 
 - name:  How NOT to interpret results from a cluster-based permutation test
   link:  /faq/how_not_to_interpret_results_from_a_cluster-based_permutation_test
-
-- name:  How should I call peercellfun when a function requires many inputs (e.g., key-value pairs)?
-  link:  /faq/how_should_i_call_peercellfun_when_a_function_requires_many_inputs_e.g._key-value_pairs
 
 - name:  How should I get started with the FieldTrip realtime buffer?
   link:  /faq/how_should_i_get_started_with_the_fieldtrip_realtime_buffer
@@ -328,14 +283,8 @@
 - name:  How to coregister an anatomical MRI with the gradiometer or electrode positions?
   link:  /faq/how_to_coregister_an_anatomical_mri_with_the_gradiometer_or_electrode_positions
 
-- name:  How to get started with distributed computing using engine?
-  link:  /faq/how_to_get_started_with_distributed_computing_using_engine
-
 - name:  How to get started with distributed computing using qsub?
   link:  /faq/how_to_get_started_with_distributed_computing_using_qsub
-
-- name:  How to get started with peer distributed computing on my own desktop computer?
-  link:  /faq/how_to_get_started_with_peer_distributed_computing_on_my_own_desktop_computer
 
 - name:  How to get started with the MATLAB distributed computing toolbox?
   link:  /faq/how_to_get_started_with_the_matlab_distributed_computing_toolbox
@@ -469,12 +418,6 @@
 - name:  What does "padding not sufficient for requested frequency resolution" mean?
   link:  /faq/what_does_padding_not_sufficient_for_requested_frequency_resolution_mean
 
-- name:  What happens if a peer distributed job fails to execute properly?
-  link:  /faq/what_happens_if_a_job_fails_to_execute_properly
-
-- name:  What happens with a peer distributed job that has an error on the worker?
-  link:  /faq/what_happens_with_a_job_that_has_an_error_on_the_worker
-
 - name:  What is the conductivity of the brain, CSF, skull and skin tissue?
   link:  /faq/what_is_the_conductivity_of_the_brain_csf_skull_and_skin_tissue
 
@@ -526,9 +469,6 @@
 - name:  Why are the fileio functions stateless, does the fseek not make them very slow?
   link:  /faq/why_are_the_fileio_functions_stateless_does_the_fseek_not_make_them_very_slow
 
-- name:  Why are the peers using multicast to announce themselves?
-  link:  /faq/why_are_the_peers_using_multicast_to_announce_themselves
-
 - name:  Why are there multiple neighbour templates for the Neuromag306 system?
   link:  /faq/why_are_there_multiple_neighbour_templates_for_the_neuromag306_system
 
@@ -558,9 +498,6 @@
 
 - name:  Why does my TFR look strange (part II, detrending)?
   link:  /faq/why_does_my_tfr_look_strange_part_ii
-
-- name:  Why does peercellfun resubmit jobs that take too long to get started?
-  link:  /faq/why_does_peercellfun_resubmit_jobs_that_take_too_long_to_get_started
 
 - name:  Why is FieldTrip developed separately from EEGLAB?
   link:  /faq/why_is_fieldtrip_developed_separately_from_eeglab

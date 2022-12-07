@@ -43,9 +43,6 @@
 - name:  Connectivity estimates for EEG/MEG time series data
   link:  /development/module/connectivity
 
-- name:  Distributed computing using the MATLAB engine system
-  link:  /development/module/engine
-
 - name:  Reading and writing of EEG/MEG time series data
   link:  /development/module/fileio
 
@@ -54,9 +51,6 @@
 
 - name:  Inverse source parameter estimates from EEG/MEG data
   link:  /development/module/inverse
-
-- name:  Distributed computing using a peer-to-peer cluster
-  link:  /development/module/peer
 
 - name:  Plotting of channel-level, source-level and other geometrical data related to EEG/MEG
   link:  /development/module/plotting

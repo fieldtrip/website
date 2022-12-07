@@ -10,9 +10,6 @@
 - name:  How can I compile the mex files on 64-bit Windows?
   link:  /faq/how_can_i_compile_the_mex_files_on_64_bit_windows
 
-- name:  How can I determine the number of threads that MATLAB uses?
-  link:  /faq/how_can_i_determine_the_number_of_threads_that_matlab_uses
-
 - name:  How can I use my MacBook Pro for stimulus presentation in the MEG lab?
   link:  /faq/how_can_i_use_my_macbook_pro_for_stimulus_presentation_in_the_meg_lab
 

@@ -1,12 +1,6 @@
 - name:  Distributed computing
   link:  /development/distributed
 
-- name:  Distributed computing using the MATLAB engine system
-  link:  /development/module/engine
-
-- name:  Distributed computing using a peer-to-peer cluster
-  link:  /development/module/peer
-
 - name:  Distributed computing using a Linux compute cluster
   link:  /development/module/qsub
 
