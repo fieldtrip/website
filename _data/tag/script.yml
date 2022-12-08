@@ -1,3 +1,6 @@
+- name:  Speeding up your analysis pipeline using distributed computing
+  link:  /tutorial/distributedcomputing
+
 - name:  Making a memory efficient analysis pipeline
   link:  /tutorial/memory
 

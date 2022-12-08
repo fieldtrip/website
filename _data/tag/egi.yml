@@ -7,6 +7,3 @@
 - name:  Getting started with Neuromag/Elekta/Megin data
   link:  /getting_started/neuromag
 
-- name:  Creating a clean analysis pipeline
-  link:  /tutorial/scripting
-

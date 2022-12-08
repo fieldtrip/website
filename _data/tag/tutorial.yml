@@ -34,7 +34,7 @@
 - name:  Preprocessing - Reading continuous EEG and MEG data
   link:  /tutorial/continuous
 
-- name:  Speeding up your analysis with distributed computing
+- name:  Speeding up your analysis pipeline using distributed computing
   link:  /tutorial/distributedcomputing
 
 - name:  Localizing electrodes using a 3D-scanner

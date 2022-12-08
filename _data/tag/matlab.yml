@@ -52,7 +52,7 @@
 - name:  Why are the fileio functions stateless, does the fseek not make them very slow?
   link:  /faq/why_are_the_fileio_functions_stateless_does_the_fseek_not_make_them_very_slow
 
-- name:  Speeding up your analysis with distributed computing
+- name:  Speeding up your analysis pipeline using distributed computing
   link:  /tutorial/distributedcomputing
 
 - name:  Introduction to the FieldTrip toolbox
