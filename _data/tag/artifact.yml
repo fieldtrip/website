@@ -55,3 +55,6 @@
 - name:  Visual artifact rejection
   link:  /tutorial/visual_artifact_rejection
 
+- name:  Dealing with artifacts
+  link:  /workshop/practicalmeeg2022/handson_artifacts
+

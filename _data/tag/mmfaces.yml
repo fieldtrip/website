@@ -43,6 +43,9 @@
 - name:  Creation of headmodels and sourcemodels for source reconstruction
   link:  /workshop/practicalmeeg2022/handson_anatomy
 
+- name:  Dealing with artifacts
+  link:  /workshop/practicalmeeg2022/handson_artifacts
+
 - name:  Group-level statistics with parametric and non-parametric methods
   link:  /workshop/practicalmeeg2022/handson_groupanalysis
 
