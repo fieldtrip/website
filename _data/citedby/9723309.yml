@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1016/j.nicl.2022.103266
+- idtype: pmcid
+  value: PMC9723309
+authors:
+- authtype: Author
+  name: Shabanpour M
+- authtype: Author
+  name: Kaboodvand N
+- authtype: Author
+  name: Iravani B
+epubdate: 2022 Nov 13
+fulljournalname: 'NeuroImage : Clinical'
+issue: ''
+pages: '103266'
+pmclivedate: 2022/12/07
+printpubdate: ''
+pubdate: 2022 Nov 13
+sortdate: 2022/11/13 00:00
+source: Neuroimage Clin
+title: 'Parkinson''s disease is characterized by sub-second resting-state spatio-oscillatory
+  patterns: A contribution from deep convolutional neural network'
+uid: '9723309'
+volume: '36'
