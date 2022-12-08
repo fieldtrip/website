@@ -12,40 +12,40 @@ This phenomenon is caused by the discrete nature of the spectral transformation,
 If you don't want the DC-component to be removed prior to spectral transformation, you hould specify the option ``cfg.polyremoval = -1`` before calling ``ft_freqanalysis``. The motivation for the DC-component removal is explained in the FAQ: [Why does my TFR look strange (part I)?](/faq/why_does_my_tfr_look_strange_part_i)
 
     clear all;
-data.time{1} = (0:99999)./1000;
-data.label{1} = 'chan01';
-data.trial{1} = 1;
-for k = 2:100000
-  data.trial{1}(k)=randn(1)+1.*data.trial{1}(k-1);
-end
-
-cfg2.method = 'mtmfft';
-cfg2.taper  = 'boxcar';
-
-L = [0.5 1 2 4];
-for k = 1:numel(L)
-  cfg1.length = L(k);
-  freq{1,k} = ft_freqanalysis(cfg2,ft_redefinetrial(cfg1,data));
-end
-figure;
-subplot(1,2,1); hold on;
-for k = 1:4
-  plot(freq{k}.freq,log10(freq{k}.powspctrm));
-end
-xlim([0 10])
-ylim([-2 4]);
-
-cfg2.polyremoval=-1;
-for k = 1:4
-  cfg1.length = L(k);
-  freq{1,k}=ft_freqanalysis(cfg2,ft_redefinetrial(cfg1,data));
-end
-subplot(1,2,2);hold on;
-for k = 1:4
-  plot(freq{k}.freq,log10(freq{k}.powspctrm));
-end
-xlim([0 10])
-ylim([-2 4])    
+    data.time{1} = (0:99999)./1000;
+    data.label{1} = 'chan01';
+    data.trial{1} = 1;
+    for k = 2:100000
+        data.trial{1}(k)=randn(1)+1.*data.trial{1}(k-1);
+    end
+    
+    cfg2.method = 'mtmfft';
+    cfg2.taper  = 'boxcar';
+    
+    L = [0.5 1 2 4];
+    for k = 1:numel(L)
+        cfg1.length = L(k);
+        freq{1,k} = ft_freqanalysis(cfg2,ft_redefinetrial(cfg1,data));
+    end
+    figure;
+    subplot(1,2,1); hold on;
+    for k = 1:4
+        plot(freq{k}.freq,log10(freq{k}.powspctrm));
+    end
+    xlim([0 10])
+    ylim([-2 4]);
+    
+    cfg2.polyremoval=-1;
+    for k = 1:4
+        cfg1.length = L(k);
+        freq{1,k}=ft_freqanalysis(cfg2,ft_redefinetrial(cfg1,data));
+    end
+    subplot(1,2,2);hold on;
+    for k = 1:4
+        plot(freq{k}.freq,log10(freq{k}.powspctrm));
+    end
+    xlim([0 10])
+    ylim([-2 4])    
 
 ## Figure: spectra from signal with large DC component with (left) and without (right) demeaning prior to ft_freqanalysis
 
