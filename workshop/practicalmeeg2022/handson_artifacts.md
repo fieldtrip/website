@@ -29,13 +29,13 @@ There are different causes for artifacts in the data, for example the subject mi
 
 Sometimes artifacts are restricted to a single channel, or to a short time window. In other cases artifacts can extend over all channels, or are present during the complete recording.
 
-## Artifacts due to external influences or instrumentation
+### Artifacts due to external influences or instrumentation
 
 These for example include 50Hz or 60Hz line noise, electrodes with poor impedance, sudden jumps in the MEG signal due to SQUID instabilities (so called SQUID jumps). In general these are always unwanted and also uninteresting. However, understanding the cause of the artifact can help us to make good decisions on how to deal with it during data analysis, or how to prevent them from happening in future experiments.
 
 There can be situations where the external artifacts are influenced by behaviour, for exaple the amount of line noise that is picked up by the body (which acts as antenna) can be influenced by the position of the body and hence might change dependent on the participant's movements. Also the presence of magnetic artifacts and SQUID jumps  in the MEG can get worse if the participant has for example a magnetized magnetic wire behind the teeth.
 
-## Artifacts due to behaviour or physiology
+### Artifacts due to behaviour or physiology
 
 These are for example due to the contribution of sources that we as neuroscientists in general are not interested in, such as the regular contraction of the heart muscle, the contraction of muscles in the neck and clenching of the jaws, movements of the tongue, movements of the eyes. Each of these causes electrophysiological contributions to the EEG or MEG signal; you should however consider that your noise may be someone else's signal, e.g. a cardiologist will consider the ECG as the most interesting feature of the signal.
 
