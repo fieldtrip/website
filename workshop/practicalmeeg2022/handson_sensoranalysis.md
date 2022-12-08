@@ -6,7 +6,7 @@ tags: [practicalmeeg2022, meg, freq, mmfaces]
 # Time-frequency analysis using Hanning window, multitapers and wavelets
 
 {% include markup/info %}
-This tutorial was written specifically for the [PracticalMEEG workshop in Aix-en-Provence](/workshop/practicalmeeg2022) in December 2022. It is an adjusted version of the [time-frequency analysis tutorial](/tutorial/timefrequencyanalysis) and an updated version of the corresponding tutorial for [Paris 2019](/workshop/paris2019).
+This tutorial was written specifically for the [PracticalMEEG workshop in Aix-en-Provence](/workshop/practicalmeeg2022) in December 2022 and is part of a coherent sequence of tutorials. It is an adjusted version of the [time-frequency analysis tutorial](/tutorial/timefrequencyanalysis) and an updated version of the corresponding tutorial for [Paris 2019](/workshop/paris2019).
 {% include markup/end %}
 
 ## Introduction
@@ -21,7 +21,7 @@ Oscillatory components contained in the ongoing EEG or MEG signal often show pow
 
 Calculating time-frequency representations of power is done using a sliding time window. This can be done according to two principles: either the time window has a fixed length independent of frequency, or the time window decreases in length with increased frequency. For each time window the power is calculated. Prior to calculating the power one or more tapers are multiplied with the data. The aim of the tapers is to reduce spectral leakage and control the frequency smoothing.
 
-{% include image src="/assets/img/workshop/practicalmeeg2022/tfrtiles.png" width="600" %}
+{% include image src="/assets/img/workshop/practicalmeeg2022/handson_sensoranalysis/figure1.png" width="600" %}
 
 _Figure: Time and frequency smoothing. (a) For a fixed length time window the time and frequency smoothing remains fixed. (b) For time windows that decrease with frequency, the temporal smoothing decreases and the frequency smoothing increases._
 
@@ -36,7 +36,7 @@ To calculate the time-frequency analysis for the example dataset we will perform
 - Compute the power values for each frequency bin and each time bin using the function **[ft_freqanalysis](/reference/ft_freqanalysis)**
 - Visualize the results. This can be done by creating time-frequency plots for one with **[ft_singleplotTFR](/reference/ft_singleplotTFR)** or several channels  with **[ft_multiplotTFR](/reference/ft_multiplotTFR)**, or by creating a topographic plot for a specified time- and frequency interval with **[ft_topoplotTFR](/reference/ft_topoplotTFR)**.
 
-{% include image src="/assets/img/workshop/practicalmeeg2022/tfr_pipelinenew.png" width="200" %}
+{% include image src="/assets/img/workshop/practicalmeeg2022/handson_sensoranalysis/figure2.png" width="200" %}
 
 _Figure: Schematic overview of the steps in time-frequency analysis_
 
@@ -161,7 +161,7 @@ The function **[ft_multiplotTFR](/reference/ft_multiplotTFR)** plots the TFRs fr
     cfg.layout       = 'neuromag306mag_helmet.mat';
     figure; ft_multiplotTFR(cfg, freqlow_famous);
 
-{% include image src="/assets/img/workshop/practicalmeeg2022/freqlow_famous.png" width="650" %}
+{% include image src="/assets/img/workshop/practicalmeeg2022/handson_sensoranalysis/figure3.png" width="650" %}
 
 _Figure: Time-frequency representations calculated using ft_freqanalysis. Plotting was done with ft_multiplotTFR)_
 
@@ -177,7 +177,7 @@ An interesting effect seems to be present in the TFR of sensor MEG0731. To make 
     cfg.channel      = 'MEG0731';
     figure; ft_singleplotTFR(cfg, freqlow_famous);
 
-{% include image src="/assets/img/workshop/practicalmeeg2022/freqlow_famous_singleplotTFR.png" width="400" %}
+{% include image src="/assets/img/workshop/practicalmeeg2022/handson_sensoranalysis/figure4.png" width="400" %}
 
 _Figure: The time-frequency representation of a single sensor obtained using ft_singleplotTFR_
 
@@ -195,7 +195,7 @@ From the previous figure you can see that there is an increase in power around 5
     cfg.marker       = 'on';
     figure; ft_topoplotTFR(cfg, freqlow_famous);
 
-{% include image src="/assets/img/workshop/practicalmeeg2022/freqlow_famous_topoplotTFR.png" width="400" %}
+{% include image src="/assets/img/workshop/practicalmeeg2022/handson_sensoranalysis/figure5.png" width="400" %}
 
 _Figure: A topographic representation of the time-frequency representations (15 - 20 Hz, 0.9 - 1.3 s post stimulus) obtained using ft_topoplotTFR_
 
@@ -251,7 +251,7 @@ To plot the result use **[ft_singleplotTFR](/reference/ft_singleplotTFR)**:
     cfg.interactive  = 'no';
     figure; ft_singleplotTFR(cfg, TFRhann7);
 
-{% include image src="/assets/img/workshop/practicalmeeg2022/tfrhann7.png" width="400" %}
+{% include image src="/assets/img/workshop/practicalmeeg2022/handson_sensoranalysis/figure6.png" width="400" %}
 
 _Figure: A time-frequency representation of channel MEG0741 obtained using ft_singleplotTFR_
 
@@ -335,7 +335,7 @@ Plot the result
     cfg.marker       = 'on';
     figure; ft_multiplotTFR(cfg, freqhigh_famous);
 
-{% include image src="/assets/img/workshop/practicalmeeg2022/freqhigh_famous.png" width="650" %}
+{% include image src="/assets/img/workshop/practicalmeeg2022/handson_sensoranalysis/figure7.png" width="650" %}
 
 _Figure: Time-frequency representations of power calculated using multitapers._
 
@@ -390,7 +390,7 @@ Plot the result
     cfg.layout       = 'neuromag306mag_helmet.mat';
     figure; ft_multiplotTFR(cfg, freq_famous)
 
-{% include image src="/assets/img/workshop/practicalmeeg2022/freq_famous.png" width="650" %}
+{% include image src="/assets/img/workshop/practicalmeeg2022/handson_sensoranalysis/figure8.png" width="650" %}
 
 _Figure: Time-frequency representations of power calculated using Morlet wavelets._
 

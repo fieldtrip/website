@@ -6,7 +6,7 @@ tags: [practicalmeeg2022, meg, sourceanalysis, beamformer, mmfaces]
 # Reconstructing source activity using beamformers
 
 {% include markup/info %}
-This tutorial was written specifically for the [PracticalMEEG workshop in Aix-en-Provence](/workshop/practicalmeeg2022) in December 2022. It is an updated version of the corresponding tutorial for [Paris 2019](/workshop/paris2019).
+This tutorial was written specifically for the [PracticalMEEG workshop in Aix-en-Provence](/workshop/practicalmeeg2022) in December 2022 and is part of a coherent sequence of tutorials. It is an updated version of the corresponding tutorial for [Paris 2019](/workshop/paris2019).
 {% include markup/end %}
 
 ## Introduction
@@ -64,7 +64,7 @@ Now, if we reorder the channels a bit, we can visualise this covariance matrix a
     C = baseline_avg.cov([find(selmag);find(selgrad)],[find(selmag);find(selgrad)]);
     figure; imagesc(C);hold on;plot(102.5.*[1 1],[0 306],'w','linewidth',2);plot([0 306],102.5.*[1 1],'w','linewidth',2);
 
-{% include image src="/assets/img/workshop/practicalmeeg2022/cov_meg.png" width="400" %}
+{% include image src="/assets/img/workshop/practicalmeeg2022/handson_sourceanalysis/figure1.png" width="400" %}
 
 _Figure: MEG sensor covariance matrix_
 
@@ -76,7 +76,7 @@ To make this a bit more concrete, we first will have a look at the singular valu
     [u,s,v] = svd(baseline_avg.cov);
     figure; plot(log10(diag(s)),'o');
 
-{% include image src="/assets/img/workshop/practicalmeeg2022/cov_svd.png" width="400" %}
+{% include image src="/assets/img/workshop/practicalmeeg2022/handson_sourceanalysis/figure2.png" width="400" %}
 
 _Figure: Singular values of a MEG sensor covariance matrix_
 
@@ -127,7 +127,7 @@ A byproduct of the magnetometers and gradiometers being represented at a similar
     cfg.layout = layout;
     dataw_meg  = ft_rejectvisual(cfg, dataw_meg);
 
-{% include image src="/assets/img/workshop/practicalmeeg2022/rejectvisual.png" width="600" height="600"%}
+{% include image src="/assets/img/workshop/practicalmeeg2022/handson_sourceanalysis/figure3.png" width="600" height="600"%}
 
 _Figure: Visual artifact rejection window_
 
@@ -193,14 +193,14 @@ With the forward model and the covariance (as average across trials) computed, w
     source          = ft_sourceanalysis(cfg, tlckw);
 
     filename = fullfile(subj.outputpath, 'sourceanalysis', subj.name,  sprintf('%s_source_lcmv', subj.name));
-    save(filename, 'source', 'tlckw');
+    % save(filename, 'source', 'tlckw');
+    % load(filename, 'source', 'tlckw');
 
 With the source structure computed, we can inspect the fields of the variable source, and the subfields of source.avg:
 
     source =
 
       struct with fields:
-
           time: [1x510 double]
         inside: [15684x1 logical]
            pos: [15684x3 double]
@@ -214,7 +214,6 @@ With the source structure computed, we can inspect the fields of the variable so
     ans =
 
       struct with fields:
-
                  ori: {1x15684 cell}
                  pow: [15684x1 double]
                  mom: {15684x1 cell}
@@ -238,9 +237,9 @@ The content of source.avg is the interesting stuff. Particularly, the 'mom' fiel
 
     % replace the original dipole positions with those of the inflated surface
     source.pos = inflated.pos;
-    figure; ft_sourceplot_interactive(cfg, source);
+    ft_sourceplot_interactive(cfg, source);
 
-{% include image src="/assets/img/workshop/practicalmeeg2022/lcmv_avgovercortex.png" width="400" %}{% include image src="/assets/img/workshop/practicalmeeg2022/lcmv_inflated_visualvc.png" width="400" %}{% include image src="/assets/img/workshop/practicalmeeg2022/lcmv_vc_timecourse.png" width="400"%}
+{% include image src="/assets/img/workshop/practicalmeeg2022/handson_sourceanalysis/figure4.png" width="400" %}{% include image src="/assets/img/workshop/practicalmeeg2022/handson_sourceanalysis/figure5.png" width="400" %}{% include image src="/assets/img/workshop/practicalmeeg2022/handson_sourceanalysis/figure6.png" width="400"%}
 
 _Figure: Interactive figure windows to inspect virtual channels_
 
@@ -306,7 +305,7 @@ With the spatial filters computed from the covariance matrix estimated from all 
 
     cfg           = [];
     cfg.parameter = 'mom';
-    figure; ft_sourceplot_interactive(cfg, source_famous, source_unfamiliar, source_scrambled);
+    ft_sourceplot_interactive(cfg, source_famous, source_unfamiliar, source_scrambled);
 
 You can also investigate the difference between the 'famous' and 'scrambled' conditions:
 
@@ -318,4 +317,4 @@ You can also investigate the difference between the 'famous' and 'scrambled' con
     cfg           = [];
     cfg.parameter = 'mom';
     cfg.has_diff  = true;
-    figure; ft_sourceplot_interactive(cfg, source_famous, source_scrambled, source_diff);
+    ft_sourceplot_interactive(cfg, source_famous, source_scrambled, source_diff);

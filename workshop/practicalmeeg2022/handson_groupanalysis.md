@@ -6,7 +6,7 @@ tags: [practicalmeeg2022, meg, timelock, statistics, plotting, mmfaces]
 # Group-level statistics with parametric and non-parametric methods
 
 {% include markup/info %}
-This tutorial was written specifically for the [PracticalMEEG workshop in Aix-en-Provence](/workshop/practicalmeeg2022) in December 2022. It is an adjusted version of the [event-related statistics tutorial](/tutorial/eventrelatedstatistics) and an updated version of the corresponding tutorial for [Paris 2019](/workshop/paris2019).
+This tutorial was written specifically for the [PracticalMEEG workshop in Aix-en-Provence](/workshop/practicalmeeg2022) in December 2022 and is part of a coherent sequence of tutorials. It is an adjusted version of the [event-related statistics tutorial](/tutorial/eventrelatedstatistics) and an updated version of the corresponding tutorial for [Paris 2019](/workshop/paris2019).
 {% include markup/end %}
 
 ## Introduction
@@ -117,7 +117,7 @@ Using this layout, we can plot all channels:
     cfg.layout = layout;
     ft_multiplotER(cfg, grandavg_famous, grandavg_unfamiliar, grandavg_scrambled);
 
-{% include image src="/assets/img/workshop/practicalmeeg2022/groupanalysis/figure1.png" width="400" %}
+{% include image src="/assets/img/workshop/practicalmeeg2022/handson_groupanalysis/figure1.png" width="400" %}
 
 _Figure; ERPs for each virtual channel (parcel)_
 
@@ -129,7 +129,7 @@ Channel/parcel number 291 has a clear ERP, which is different between the face c
 
 Note that you can also very easily make this figure using the standard MATLAB [plot](https://nl.mathworks.com/help/matlab/ref/plot.html) function.
 
-{% include image src="/assets/img/workshop/practicalmeeg2022/groupanalysis/figure2.png" width="400" %}
+{% include image src="/assets/img/workshop/practicalmeeg2022/handson_groupanalysis/figure2.png" width="400" %}
 
 _Figure; Comparing the ERPs on the virtual channel (parcel) of interest_
 
@@ -148,7 +148,7 @@ We can use the `brainordinate` field of one of the subjects to determine where t
     view(0, -45)
     camlight
 
-{% include image src="/assets/img/workshop/practicalmeeg2022/groupanalysis/figure3.png" width="400" %}
+{% include image src="/assets/img/workshop/practicalmeeg2022/handson_groupanalysis/figure3.png" width="400" %}
 
 _Figure; Location of the parcel corresponding to the virtual channel of interest_
 
@@ -179,7 +179,7 @@ From the grand average plot we can zoom in on our comparison of interest and onl
     end
     legend({'famous', 'scrambled'})
 
-{% include image src="/assets/img/workshop/practicalmeeg2022/groupanalysis/figure4.png" width="400" %}
+{% include image src="/assets/img/workshop/practicalmeeg2022/handson_groupanalysis/figure4.png" width="400" %}
 
 _Figure; Single subject results, the time window of interest is highlighted_
 
@@ -203,7 +203,7 @@ We can also plot the differences between conditions, for each subject, in a diff
     figure; plot(M', 'o-'); xlim([0.5 2.5])
     legend({subj.name}, 'location', 'EastOutside');
 
-{% include image src="/assets/img/workshop/practicalmeeg2022/groupanalysis/figure5.png" width="400" %}
+{% include image src="/assets/img/workshop/practicalmeeg2022/handson_groupanalysis/figure5.png" width="400" %}
 
 _Figure; Single subject results, averaged for the channel of interest and the time window of interest_
 
@@ -292,7 +292,7 @@ In the previous paragraph we picked a channel/parcel and time window by hand aft
     figure; ft_multiplotER(cfg, grandavg_effect)
     title('Parametric: significant without multiple comparison correction')
 
-{% include image src="/assets/img/workshop/practicalmeeg2022/groupanalysis/figure6.png" width="400" %}
+{% include image src="/assets/img/workshop/practicalmeeg2022/handson_groupanalysis/figure6.png" width="400" %}
 
 _Figure; Parametric test, plot of the effect size with significant channels in red_
 
@@ -380,7 +380,7 @@ This is implemented in FieldTrip in the function **[ft_statistics_montecarlo](/r
     figure; ft_multiplotER(cfg, grandavg_effect)
     title('Nonparametric: significant without multiple comparison correction')
 
-{% include image src="/assets/img/workshop/practicalmeeg2022/groupanalysis/figure7.png" width="400" %}
+{% include image src="/assets/img/workshop/practicalmeeg2022/handson_groupanalysis/figure7.png" width="400" %}
 
 _Figure; Nonparametric test, plot of the effect size with significant channels in red_
 
@@ -442,7 +442,7 @@ If your channels in the data are close to each other, you can also use the featu
     figure; ft_multiplotER(cfg, grandavg_effect)
     title('Nonparametric: significant after cluster-based correction')
 
-{% include image src="/assets/img/workshop/practicalmeeg2022/groupanalysis/figure8.png" width="400" %}
+{% include image src="/assets/img/workshop/practicalmeeg2022/handson_groupanalysis/figure8.png" width="400" %}
 
 _Figure; Nonparametric test, cluster-based correction for multiple comparisons_
 
@@ -465,7 +465,7 @@ Although a single test is performed to test exchangeability of the whole data ov
     colorbar
     camlight
 
-{% include image src="/assets/img/workshop/practicalmeeg2022/groupanalysis/figure9.png" width="400" %}
+{% include image src="/assets/img/workshop/practicalmeeg2022/handson_groupanalysis/figure9.png" width="400" %}
 
 _Figure; Spatial distribution of p-values over the parcels_
 
