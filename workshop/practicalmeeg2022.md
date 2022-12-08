@@ -23,7 +23,7 @@ The FieldTrip tutorials will be presented and tutored by [Robert Oostenveld](htt
 
 There will also be other experts from MNE-Python, BrainStorm and EEGLAB with their respective tutorials, and jointly we will organize the plenary lectures.
 
-# Hands-on program and training material
+## Hands-on program and training material
 
 - [From raw to ERPs](/workshop/practicalmeeg2022/handson_raw2erp)
 - [Dealing with artifacts](/workshop/practicalmeeg2022/handson_artifacts)
@@ -32,19 +32,19 @@ There will also be other experts from MNE-Python, BrainStorm and EEGLAB with the
 - [Reconstructing source activity using beamformers](/workshop/practicalmeeg2022/handson_sourceanalysis)
 - [Group-level statistics with parametric and non-parametric methods](/workshop/practicalmeeg2022/handson_groupanalysis)
  
-# How to prepare
+## How to prepare
 
-## Get an overview of FieldTrip
+### Get an overview of FieldTrip
 
 Please take a quick look at the [FieldTrip reference paper](https://doi.org/10.1155/2011/156869) if you havenot done so already. If you have an hour or so, you can watch this [introductory lecture](https://www.youtube.com/watch?v=7B4rDZYwQLM). Note that more recorded lectures are available as [video](/video).
 
-## Download and install a recent version
+### Download and install a recent version
 
 Please download the most recent version of the FieldTrip toolbox from [here](https://www.fieldtriptoolbox.org/download/) or from [GitHub](https://github.com/fieldtrip/fieldtrip/tags). As we did some last miniute bugfixes tomake all tutorials run smoothly, you should have version **20221207** or later.
 
 Please read [this FAQ](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path/) on how toset your path. After adding the FieldTrip main directory to your path, you should type `ft_defaults` which will add the required subdirectories (which depend on your MATLAB version). We recommend to put `ft_defaults` in your MATLAB [startup.m](https://nl.mathworks.com/help/matlab/ref/startup.html) file.
 
-## Download the data
+### Download the data
 
 You can get the data that we will work with from [Zenodo](https://doi.org/10.5281/zenodo.7405048) or on [OpenNeuro](https://doi.org/10.18112/openneuro.ds000117.v1.0.5). The Zenodo version is pruned and only contains the raw data files needed for this workshop. The OpenNeuro version contains all data (and hence is very large).
 

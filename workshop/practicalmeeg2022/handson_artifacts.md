@@ -45,9 +45,9 @@ Sometimes it is difficult to say whether something is signal or noise, for examp
 
 We start with the raw data that we preprocessed in the [previous tutorial](/workshop/practicalmeeg2022/handson_raw2erp/)
 
-  subj = datainfo_subject(1);
-  filename = fullfile(subj.outputpath, 'raw2erp', subj.name, sprintf('%s_data', subj.name));
-  load(filename, 'data')
+    subj = datainfo_subject(1);
+    filename = fullfile(subj.outputpath, 'raw2erp', subj.name, sprintf('%s_data', subj.name));
+    load(filename, 'data')
 
 {% include markup/info %}
 This data structure is about 1.5 GB large and should fit in the RAM of your computer.
@@ -57,7 +57,7 @@ This data structure is about 1.5 GB large and should fit in the RAM of your comp
       Name      Size                 Bytes  Class     Attributes
       data      1x1             1465245106  struct              
 
-The complete data represented in double precision would amount to approximately 50*60*1100*404*8 (50 minutes times 60 seconds times 1100 samples per second times 404 channels times 8 bytes per sample) is 10 GB and would most likely cause memory problems if you would process it using a laptop with limited memory.
+The complete data represented in double precision would amount to approximately 50\*60\*1100\*404\*8 (50 minutes, times 60 seconds, times 1100 samples per second, times 404 channels, times 8 bytes per sample) is 10 GB and would most likely cause memory problems if you would process it using a laptop with limited memory.
 
 Please have a look at the tutorial on making a [memory efficient analysis pipeline](/tutorial/memory) for more information.
 {% include markup/end %}
@@ -76,6 +76,10 @@ Since the data includes EOG channels, we can use those to identify the blinks an
 
 This function allows you to click on a trial to remove it from the data. It returns an updated data structure in which the excluded trials are removed.
 
+{% include image src="/assets/img/workshop/practicalmeeg2022/handson_artifacts/figure1.png" width="400" %}
+
+_Figure; The single-trial responses for the VEOG channel_
+
 {% include markup/warning %}
 Besides there being many channels, there are also many trials. Visualizing them on a small computer screen might be hard. Remember: if you are working with large data, you better use a large computer (screen, memory, disk).
 {% include markup/end %}
@@ -93,7 +97,7 @@ We might want to decide that we want to exclude trials with blinks from further 
            86191       86700
            89251       89760
           112201      112710
- 
+
 This `artifact` matrix is very comparable to the `trl` matrix that **[ft_definetrial](/reference/ft_definetrial)** returns. In this case it contains the begin and endsample of each artifact that was detected using the "channel" method in **[ft_rejectvisual](/ft_rejectvisual)**.
 
 {% include markup/info %}
@@ -103,7 +107,6 @@ In this case you may have noticed _"Warning: reconstructing sampleinfo by assumi
 
 In this case the original `sampleinfo` is not present since the data was compiled over 6 files on disk. Furthermore, the data was resampled from 1100 to 300 Hz, so the samples that we now work with do not map back to the files on disk.
 {% include markup/end %}
-
 
 Finding the EOG channels in between the 400 other channels is annoying. We can use the following code to make a data structure that only contains the EOG channels and use that to identify artifacts.
 
@@ -132,7 +135,7 @@ Again the output data excludes those trials that were rejected, however we don't
     cfg = [];
     cfg.artfctdef = data_eog_clean.cfg.artfctdef; % use the artifacts that we just identified
     data_all_clean = ft_rejectartifact(cfg, data);
-    
+
 ### Automatic identification of eye artifacts
 
 FieldTrip also includes functions for the automatic identification of certain artifact types. The **[ft_artifact_eog](/reference/ft_artifact_eog)** function can be used to detect eye blinks and movements.
@@ -141,6 +144,10 @@ FieldTrip also includes functions for the automatic identification of certain ar
     cfg.artfctdef.eog.channel = 'EOG';
     cfg.artfctdef.eog.interactive = 'yes';
     cfg = ft_artifact_eog(cfg, data);
+
+{% include image src="/assets/img/workshop/practicalmeeg2022/handson_artifacts/figure2.png" width="400" %}
+
+_Figure; Automatic detection of artifacts using the EOG channels_
 
 Rather than returning a cleaned-up data structure, this function returns a configuration structure that details where the artifacts are located
 
@@ -154,7 +161,7 @@ Rather than returning a cleaned-up data structure, this function returns a confi
           ...
 
 You can see that it identified many blinks. As before, we can use the detected blinks to remove the affected segments from the data.
-    
+
     % remember it for later inspection
     cfg_automatic_eog.artfctdef = cfg.artfctdef;
 
@@ -210,16 +217,19 @@ The way that the output represents the segments that were marked is the same as 
     cfg.artfctdef.reject = 'complete';
     data_clean = ft_rejectartifact(cfg, data);
 
-
 ### Inspect and update the marked artifacts
 
-We can use the **[ft_darabrowser](/reference/ft_databrowser)** function to inspect the data. It can also be used to mark visually identified artifacts.
+We can use the **[ft_databrowser](/reference/ft_databrowser)** function to inspect the data. It can also be used to mark visually identified artifacts.
 
     cfg = [];
     cfg.channel = 'EOG';
     cfg = ft_databrowser(cfg, data);
 
-You should reduce the vertical shale, and go to trial 103. If you click with your left mouse button, you can drag and make a selection. If you subsequently click in that selection, you can mark the segment as an artifact.
+You should reduce the vertical shale, and go to trial 125. If you click with your left mouse button, you can drag and make a selection. If you subsequently click in that selection, you can mark the segment as an artifact.
+
+{% include image src="/assets/img/workshop/practicalmeeg2022/handson_artifacts/figure3.png" width="400" %}
+
+_Figure; ft_databrowser shows an artifact in the EOG channels_
 
 The output `cfg` structure again contains the segments that you marked as artifacts, and using **[ft_rejectartifact](/reference/ft_rejectartifact)** you could remove those segments from the data.
 
@@ -249,8 +259,7 @@ Since there are many trials (about 800 in total), going through all of them can 
 
 Along the horizontal axes you now see 30 seconds of data. Note that the data is in reality not continuous and that you might see some small jumps at the boundaries between trials. You can now horozontally zoom in or out to a convenient time scale. If you jump to about 300 seconds in the data, you can see that the blink frequency is increasing. Again, marking all of those blinks would be a lot of work.
 
-
-We can also use the automatically identified artifact segments and visualise them in **[ft_darabrowser](/reference/ft_databrowser)**.
+We can also use the automatically identified artifact segments and visualise them in **[ft_databrowser](/reference/ft_databrowser)**.
 
     cfg = [];
     cfg.channel = 'EOG';
@@ -269,7 +278,7 @@ After we are done with adding, removing and/or updating the marked artifacts, we
 
     % remove the marked segments
     data_clean = ft_rejectartifact(cfg, data);
-  
+
 ### Using the summary mode to remove artifacts
 
 The **[ft_rejectvisual](/reference/ft_rejectvisual)** function that we used before with the **channel** mode also has the **trial** and the **summary** mode. The summary mode can be very efficient in quickly processing large amounts of data. It computes a summary metric (for example the variance) for every channel and every trial and displays that. Furthermore, it displays the maximum variance over all channels, and the maxiumn variance over all trials. That allows you to quicly identify trials or channels with large variance, which is indicative of there being an artifact. The function is explained in more detail [here](/tutorial/visual_artifact_rejection/#manual-artifact-rejection---display-a-summary).
@@ -281,6 +290,10 @@ In this case we have very different channel types with very different units (V, 
     cfg.channel = 'EOG';
     cfg.keepchannel = 'yes';
     data_clean = ft_rejectvisual(cfg, data);
+
+{% include image src="/assets/img/workshop/practicalmeeg2022/handson_artifacts/figure4.png" width="400" %}
+
+_Figure; tf_rejectvusial with the summary method applied to the EOG channels_
 
 This shows the variance of the EOG channels. You can switch to the `std` or standard-deviation metric, which si slightly easier to understand. In the lower left you see the maximum over the HEOG and VEOG channel. It ranges up to `4e-4` or `4*10^-4` volt, which corresponds to 400 microvolt.
 
@@ -334,7 +347,7 @@ It is a bit annoying that there are so many channels (EEG, magnetometers, planar
 For each of the channel types, the magnitude of the metric is different and especially the magnitude for the magnetometer channels (in T) and planar gradiometer channels (in T/m) is very different. However, the pattern of artifacts is very clear. We can combine all artifacts that we identified so far and remove them from the original data.
 
     cfg = [];
-    
+
     % rename the artifacts to the corresponding channel types
     cfg.artfctdef.eog.artifact       = data_eog_clean.cfg.artfctdef.summary.artifact;
     cfg.artfctdef.eeg.artifact       = data_eeg_clean.cfg.artfctdef.summary.artifact;
@@ -348,6 +361,10 @@ For each of the channel types, the magnitude of the metric is different and espe
     % remove the marked segments
     cfg = rmfield(cfg, 'channel'); % this is not an option for ft_rejectartifact
     data_clean = ft_rejectartifact(cfg, data);
+
+{% include image src="/assets/img/workshop/practicalmeeg2022/handson_artifacts/figure5.png" width="400" %}
+
+_Figure; ft_databrowser shows the magnetometer channels and all identified artifacts_
 
 ## A closer look at when the artifacts happen
 
@@ -409,6 +426,10 @@ Now we can use the identified artifacts and replace the 0 by a 1.
     % this smoothes with 3000 samples, which is 10 seconds
     plot(time, conv(artifact, ones(1,3000), 'same'))
 
+{% include image src="/assets/img/workshop/practicalmeeg2022/handson_artifacts/figure6.png" width="400" %}
+
+_Figure; Increasing occurence of artifacts over time in the experiment_
+
 It would be possible to cut this smoothed vector of artifact occurence up into trials and to add it to the data structure. That would allow statistically testing later on in the analysis whether the difference in experimental conditions is reflected in a difference in the number of artifacts, a strong indicator of the artifacts causing a confounding effect.
 
 A similar strategy can be used to detect the heartbeats and to determine the heartrate. The **[ft_heartrate](/reference/ft_heartrate)** function can be used for this, by preference on the continuous representation of the ECG channel. The extracted heart rate (which is represented as a continuous channel) can be segmented using **[ft_redefinetrial](/reference/ft_redefinetrial)** and combined with the EEG and MEG using **[ft_appenddata](/reference/ft_appenddata)**. This allows the same type of statistical analysis to be performed on the heartrate and to determine whether an increase in heartrate might be responsible for a spurrious increase in connectivity that would be estimated between brain regions.
@@ -439,6 +460,10 @@ Using the previously determined `cfg_automatic_threshold`, which does not mark t
     plot(avg_artifact.time, avg_artifact.avg);
     xlabel('time (s)')
     ylabel('fraction between 0 and 1')
+
+{% include image src="/assets/img/workshop/practicalmeeg2022/handson_artifacts/figure7.png" width="400" %}
+
+_Figure; Occurence of artifacts over time in the trial, i.e., relative to the stimulus_
 
 It is clear that most blinks happened at the start and expecially towards the end of the trial. Looking at this, we can conclude that thet participant was trying to supress their blinks during stimulus presentation. It is not likely that the frequent eye blinks will have affected the perception of the stimulus as a (famous or unfamiliar) face, or as a scrambled object.
 
