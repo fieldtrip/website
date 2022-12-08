@@ -83,7 +83,7 @@ Getting the Nth paragraphs of a text file (the N below should be changed into a 
 cat function_name.m | awk "BEGIN {t=1}; /^$/ {t=t+1}; !/^$/ {if ((t-N)==0) print}"
 ```
 
-Get a set of files that describe all config options in the help and in the code, and determine the config options that are missing from either the help or the code:
+Get a set of files that describe all configuration options in the help and in the code, and determine the configuration options that are missing from either the help or the code:
 
 ```bash
 for file in _.m ; do grep -v '^%' \$file | grep -o 'cfg\.[a-zA-Z0-9]_' | sort | uniq > $file.cfg_code ; done

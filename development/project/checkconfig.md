@@ -71,6 +71,10 @@ Control the output cfg:
 
 **trackconfig:**
 
+{% include markup/danger %}
+In November 2022 the config object and the `cfg.trackconfig` functionality have been removed, see <https://github.com/fieldtrip/fieldtrip/issues/2127>.
+{% include markup/end %}
+
 - controlled via ft_defaults or overruled by cfg.trackconfig: 'report', 'cleanup', or 'off'
 - start of each FT function: cfg=checkconfig(cfg) >> if user requests report or cleanup, configtracking is turned on
 - end of each FT function: cfg=checkconfig(cfg, 'trackconfig', 'off')

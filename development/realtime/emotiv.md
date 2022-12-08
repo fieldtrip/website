@@ -13,12 +13,12 @@ The acquisition setup consists of the headset itself and a bluetooth dongle, whi
 
     emotiv2ft <configfile> [hostname=localhost [port=1972 [ctrlPort=8000]]]
 
-where replacing "hostname" by a minus (-) tells the software to spawn its own buffer server on the given port. When called without arguments other than the config file,
+where replacing "hostname" by a minus (-) tells the software to spawn its own buffer server on the given port. When called without arguments other than the configuration file,
 
 **emotiv2ft** will use "localhost" and "1972" as the default settings. Data will always be streamed out at the full sampling rate (128 Hz)
 from all the channels.
 
-The default config file is emotiv_config.txt which can be found in the same directory with emotiv2ft.
+The default configuration file is emotiv_config.txt which can be found in the same directory with emotiv2ft.
 
 Note: If port 1972 cannot be accessed on a Windows machine it may help to first initialize the port from MATLAB, e.g., via ft_realtime_fileproxy
 
