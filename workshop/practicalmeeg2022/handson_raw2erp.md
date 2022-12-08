@@ -82,16 +82,15 @@ We can now run the following chunk of code:
 In the previous code we are making use of numeric trigger codes instead of the events that are coded in the BIDS dataset. This is because the pruned derivative dataset is NOT according to the BIDS standard. First of all, some files are missing due to the pruning. More importantly, MEG and EEG derivatives are not finalized and not part of BIDS yet. They are being discussed [here](https://bids.neuroimaging.io/bep021).
 
 Although we have the MaxFiltered fif file with the data and original trigger codes
-    
+
     sub-01_ses-meg_task-facerecognition_run-01_proc-sss_meg.fif
-    
+
 according to BIDS we would also have expected its sidecars, but these are missing:
 
     sub-01_ses-meg_task-facerecognition_run-01_proc-sss_meg.json
     sub-01_ses-meg_task-facerecognition_run-01_proc-sss_events.tsv
-    
-{% include markup/end %}
 
+{% include markup/end %}
 
 ## Reading in raw data from disk
 
@@ -174,15 +173,14 @@ In this specific case we are resampling to fit it in memory of the participants'
 {% include markup/end %}
 
 {% include markup/info %}
-The recorded data apparently has a delay of 34.5 ms relative to the onset of the triggers and relative to the `events.tsv` file. This can be corrected with **[ft_redefinetrial](/reference/ft_redefinetrial)** like This
+The recorded data apparently has a delay of 34.5 ms relative to the onset of the triggers and relative to the `events.tsv` file. This can be corrected with **[ft_redefinetrial](/reference/ft_redefinetrial)** like this
 
     cfg            = [];
-    cfg.offset     = 0.0345 * data.fsample;
+    cfg.offset     = -0.0345 * data.fsample; % expressed in samples
     data_corrected = ft_redefinetrial(cfg, data);
 
-In the remainder we will continue towork with the uncorrected data, as that was used for the processing of all 16 subjects' source reconstructed results that we will use for group-level statistics. So please keep in mind that the time axis is off by 34.5 ms.
+In the remainder we will continue with the uncorrected data, as that was used for the processing of all 16 subjects' source reconstructed results that we will use for group-level statistics. So please keep in mind that the time axis is off by 34.5 ms.
 {% include markup/end %}
-
 
 ## Compute condition-specific averages (ERFs/ERPs)
 
@@ -267,7 +265,7 @@ Also, when actually plotting the data with **[ft_multiplotER](/reference/ft_mult
     cfg        = [];
     cfg.layout = 'neuromag306mag_helmet.mat'; % magnetometers
     layout_mag = ft_prepare_layout(cfg);
-    
+
     cfg        = [];
     cfg.layout = 'neuromag306cmb_helmet.mat'; % combined planar gradiometers
     layout_cmb = ft_prepare_layout(cfg);

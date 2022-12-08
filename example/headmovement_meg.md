@@ -44,25 +44,25 @@ Prepare configuration to define trials:
 Read the data with the following HLC channels:
 
 - HLC00n1 X coordinate relative to the dewar (in meters) of the nth head localization coil
-
 - HLC00n2 Y coordinate relative to the dewar (in meters) of the nth head localization coil
-
 - HLC00n3 Z coordinate relative to the dewar (in meters) of the nth head localization coil
 
-        cfg.channel                 = {'HLC0011','HLC0012','HLC0013', ...
-                                      'HLC0021','HLC0022','HLC0023', ...
-                                      'HLC0031','HLC0032','HLC0033'};
+    cfg.channel = {
+      'HLC0011','HLC0012','HLC0013', ...
+      'HLC0021','HLC0022','HLC0023', ...
+      'HLC0031','HLC0032','HLC0033'
+    };
 
-        headpos = ft_preprocessing(cfg);
+    headpos = ft_preprocessing(cfg);
 
 Determine the mean (per trial) circumcenter (the center of the circumscribed circle) of the three headcoils and its orientation (see subfunction at the bottom of this page)
 
     % calculate the mean coil position per trial
     ntrials = length(headpos.sampleinfo)
     for t = 1:ntrials
-    coil1(:,t) = [mean(headpos.trial{1,t}(1,:)); mean(headpos.trial{1,t}(2,:)); mean(headpos.trial{1,t}(3,:))];
-    coil2(:,t) = [mean(headpos.trial{1,t}(4,:)); mean(headpos.trial{1,t}(5,:)); mean(headpos.trial{1,t}(6,:))];
-    coil3(:,t) = [mean(headpos.trial{1,t}(7,:)); mean(headpos.trial{1,t}(8,:)); mean(headpos.trial{1,t}(9,:))];
+      coil1(:,t) = [mean(headpos.trial{1,t}(1,:)); mean(headpos.trial{1,t}(2,:)); mean(headpos.trial{1,t}(3,:))];
+      coil2(:,t) = [mean(headpos.trial{1,t}(4,:)); mean(headpos.trial{1,t}(5,:)); mean(headpos.trial{1,t}(6,:))];
+      coil3(:,t) = [mean(headpos.trial{1,t}(7,:)); mean(headpos.trial{1,t}(8,:)); mean(headpos.trial{1,t}(9,:))];
     end
 
     % calculate the headposition and orientation per trial (for function see bottom page)
@@ -92,70 +92,70 @@ MEG experiments typically involve repeated trials of an evoked or induced brain 
 
 1. Preprocess the MEG data, for instance pertaining to an ERF analysis at the sensor level. Note the keeptrials = 'yes' when calling ft_timelockanalysis.
 
-        % define trials
-        cfg = [];
-        cfg.dataset = 'TacStimRegressConfound.ds';
-        cfg.trialdef.eventtype = 'UPPT001';
-        cfg.trialdef.eventvalue = 4;
-        cfg.trialdef.prestim = 0.2;
-        cfg.trialdef.poststim = 0.3;
-        cfg.continuous = 'yes';
-        cfg = ft_definetrial(cfg);
-        
-        % preprocess the MEG data
-        cfg.channel = {'MEG'};
-        cfg.demean = 'yes';
-        cfg.baselinewindow = [-0.2 0];
-        cfg.dftfilter = 'yes'; % notch filter to filter out 50Hz
-        data = ft_preprocessing(cfg);
-        
-        % timelock analysis
-        cfg = [];
-        cfg.keeptrials = 'yes';
-        timelock = ft_timelockanalysis(cfg, data);
+    % define trials
+    cfg = [];
+    cfg.dataset = 'TacStimRegressConfound.ds';
+    cfg.trialdef.eventtype = 'UPPT001';
+    cfg.trialdef.eventvalue = 4;
+    cfg.trialdef.prestim = 0.2;
+    cfg.trialdef.poststim = 0.3;
+    cfg.continuous = 'yes';
+    cfg = ft_definetrial(cfg);
+
+    % preprocess the MEG data
+    cfg.channel = {'MEG'};
+    cfg.demean = 'yes';
+    cfg.baselinewindow = [-0.2 0];
+    cfg.dftfilter = 'yes'; % notch filter to filter out 50Hz
+    data = ft_preprocessing(cfg);
+
+    % timelock analysis
+    cfg = [];
+    cfg.keeptrials = 'yes';
+    timelock = ft_timelockanalysis(cfg, data);
 
 2. Create trial-by-trial estimates of head movement. Here one may assume that the head is a rigid body that can be described by 6 parameters (3 translations and 3 rotations). The circumcenter function (see below) gives us these parameters. By demeaning, we obtain the deviations. In other words; translations and rotations relative to the average head position and orientation.
 
-        % define trials
-        cfg = [];
-        cfg.dataset = 'TacStimRegressConfound.ds';
-        cfg.trialdef.eventtype = 'UPPT001';
-        cfg.trialdef.eventvalue = 4;
-        cfg.trialdef.prestim = 0.2;
-        cfg.trialdef.poststim = 0.3;
-        cfg.continuous = 'yes';
-        cfg = ft_definetrial(cfg);
-        
-        % preprocess the headposition data
-        cfg.channel = {'HLC0011','HLC0012','HLC0013', ...
-                       'HLC0021','HLC0022','HLC0023', ...
-                       'HLC0031','HLC0032','HLC0033'};
-        headpos = ft_preprocessing(cfg);
-        
-        % calculate the mean coil position per trial
-        ntrials = length(headpos.sampleinfo)
-        for t = 1:ntrials
-          coil1(:,t) = [mean(headpos.trial{1,t}(1,:)); mean(headpos.trial{1,t}(2,:)); mean(headpos.trial{1,t}(3,:))];
-          coil2(:,t) = [mean(headpos.trial{1,t}(4,:)); mean(headpos.trial{1,t}(5,:)); mean(headpos.trial{1,t}(6,:))];
-          coil3(:,t) = [mean(headpos.trial{1,t}(7,:)); mean(headpos.trial{1,t}(8,:)); mean(headpos.trial{1,t}(9,:))];
-         end
+    % define trials
+    cfg = [];
+    cfg.dataset = 'TacStimRegressConfound.ds';
+    cfg.trialdef.eventtype = 'UPPT001';
+    cfg.trialdef.eventvalue = 4;
+    cfg.trialdef.prestim = 0.2;
+    cfg.trialdef.poststim = 0.3;
+    cfg.continuous = 'yes';
+    cfg = ft_definetrial(cfg);
 
-        % calculate the headposition and orientation per trial
-        cc = circumcenter(coil1, coil2, coil3)
+    % preprocess the headposition data
+    cfg.channel = {'HLC0011','HLC0012','HLC0013', ...
+                   'HLC0021','HLC0022','HLC0023', ...
+                   'HLC0031','HLC0032','HLC0033'};
+    headpos = ft_preprocessing(cfg);
 
-        % demean to obtain translations and rotations from the average position and orientation
-        cc_dem = [cc - repmat(mean(cc,2),1,size(cc,2))]';
+    % calculate the mean coil position per trial
+    ntrials = length(headpos.sampleinfo)
+    for t = 1:ntrials
+      coil1(:,t) = [mean(headpos.trial{1,t}(1,:)); mean(headpos.trial{1,t}(2,:)); mean(headpos.trial{1,t}(3,:))];
+      coil2(:,t) = [mean(headpos.trial{1,t}(4,:)); mean(headpos.trial{1,t}(5,:)); mean(headpos.trial{1,t}(6,:))];
+      coil3(:,t) = [mean(headpos.trial{1,t}(7,:)); mean(headpos.trial{1,t}(8,:)); mean(headpos.trial{1,t}(9,:))];
+     end
+
+    % calculate the headposition and orientation per trial
+    cc = circumcenter(coil1, coil2, coil3)
+
+    % demean to obtain translations and rotations from the average position and orientation
+    cc_dem = [cc - repmat(mean(cc,2),1,size(cc,2))]';
 
 3. Fit the headmovement regressors to the data and remove variance that can be explained by these confounds.
 
-        % add head movements to the regressorlist. also add the constant (at the end; column 7)
-        confound = [cc_dem ones(size(cc_dem,1),1)];
+    % add head movements to the regressorlist. also add the constant (at the end; column 7)
+    confound = [cc_dem ones(size(cc_dem,1),1)];
 
-        % regress out headposition confounds
-        cfg = [];
-        cfg.confound = confound;
-        cfg.reject = [1:6]; % keeping the constant (nr 7)
-        regr = ft_regressconfound(cfg, timelock);
+    % regress out headposition confounds
+    cfg = [];
+    cfg.confound = confound;
+    cfg.reject = [1:6]; % keeping the constant (nr 7)
+    regr = ft_regressconfound(cfg, timelock);
 
 ## Figure
 
