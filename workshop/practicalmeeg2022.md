@@ -26,6 +26,7 @@ There will also be other experts from MNE-Python, BrainStorm and EEGLAB with the
 # Hands-on program and training material
 
 - [From raw to ERPs](/workshop/practicalmeeg2022/handson_raw2erp)
+- [Dealing with artifacts](/workshop/practicalmeeg2022/handson_artifacts)
 - [Time-frequency analysis using Hanning window, multitapers and wavelets](/workshop/practicalmeeg2022/handson_sensoranalysis)
 - [Creation of headmodels and sourcemodels for source reconstruction](/workshop/practicalmeeg2022/handson_anatomy)
 - [Reconstructing source activity using beamformers](/workshop/practicalmeeg2022/handson_sourceanalysis)
