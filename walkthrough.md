@@ -18,13 +18,13 @@ Stephen Whitmarsh
 
 In most cases you would like to analyze your data in respect to stimulus/condition markers recorded within the data. Alternatively, you might want to define trials based upon visual inspection of the data, or based upon recordings of external device (eye-tracker, EOG, SCR, TMS, etc) or log file. For the sake of the purpose of overview only go into the first option although all these latter options are certainly supported in FieldTrip. If possible always record stimulus/condition markers in your EEG/MEG data. It will make the analysis, if not life itself, substantially easier. You might have coded every stimulus with its own code, or rather used the marker to code the condition number. In any case, most probably the first step you want to do is to load your data and segment it into conditions according to the markers in the data. In the end you'll just need to find a nice test-statistic, e.g., average alpha-power, and do your statistical comparison:
 
-{% include image src="/assets/img/walkthrough/wt_fig1b.png" width="400" %}
+{% include image src="/assets/img/walkthrough/figure1.png" width="400" %}
 
 ### Data Structure in FieldTrip
 
 First of all it is very important to get comfortable with the way FieldTrip manages the structure of your data. Although it might take a little getting used to, in many ways it is obvious and determined by the inherent structure of the data. EEG and MEG data is composed of many channels and many time points. Therefore it contains a sample, a single number representing microvolts or femtoteslas, for every Channel x Time point:
 
-{% include image src="/assets/img/walkthrough/wt_fig2b.png" width="600" %}
+{% include image src="/assets/img/walkthrough/figure2.png" width="600" %}
 
 In Fieltrip this is contained within in a single data matrix of [channels x timepoints], for instance:
 
@@ -124,7 +124,7 @@ This is all we need to load the appropriate data using ft_preprocessing, using t
 
 What makes ft_definetrial very flexible is that it uses a separate trial function you can customize to fit your specific requirements.
 
-{% include image src="/assets/img/walkthrough/wt_fig3.png" width="400" %}
+{% include image src="/assets/img/walkthrough/figure3.png" width="400" %}
 
 Within trialfun the trl is made according to specifications given through the cfg, as well as anything else you want to add. For instance, you might want to make trials dependent not only on the stimulus marker, but also on a correct response marker. This would be the place to do that. Also, sometimes you might be left with a rather awkward way of coding your conditions. This would also be the place to recode your trials and create a less ambiguous system.
 For the purpose of trial bookkeeping we only need to append one extra column (or more) to the standard three columns of the trl. Here we write information about the stimulus code, response time, condition numbers, etc. Next in ft_preprocessing (explained next) these extra columns will be put in an extra field of the data structure (trialinfo). This will enable us at any moment during our analysis to select trials based upon any arbitrary reason.
@@ -154,7 +154,7 @@ If we don't specify the trial definition we made previously, ft_preprocessing wo
 
 What we end up with now is a datastructure called trialdata. See the previous 'trialstructure' on how the data it is organized. Please note here that all the info that was contained in the trl is now put in two different fields of the datastructure. The first two colums of the trl that described the start and end samples in the original data are now found in trialdata.sampleinfo. All the extra information for our trial bookkeeping that was put in extra columns of the trl are now found in trialdata.trialinfo.
 
-{% include image src="/assets/img/walkthrough/wt_fig4.png" width="600" %}
+{% include image src="/assets/img/walkthrough/figure4.png" width="600" %}
 
 ## Artifact rejection
 
@@ -177,11 +177,11 @@ I know this looks like a lot of work. However, it might pay off in the end when 
 
 As most FieldTrip functions ft_databrowser needs a configuration structure and a data structure as input. First of all we can specify how to visualize the data:
 
-{% include image src="/assets/img/walkthrough/wt_fig5e.png" width="600" %}
+{% include image src="/assets/img/walkthrough/figure5.png" width="600" %}
 
 We can also specify if we want to look at the data trial-by-trial, or if we want to treat it as continuous data. In the latter case we need to specify how large the time segments on display need to be in cfg.blocksize (in seconds
 
-{% include image src="/assets/img/walkthrough/wt_fig6.png" width="600" %}
+{% include image src="/assets/img/walkthrough/figure6.png" width="600" %}
 
 If we now call ''cfg = ft_databrowser(cfg,data)'', we are able to scroll through the data and select those segments containing muscle artifacts and the like. In the case you want to remove eye artifacts with ICA you can leave those in. If we now exit the databrowser by pressing 'q' our cfg is returned with an extra field containing a list of start and end samples for every data segment we selecte
 
@@ -208,7 +208,7 @@ First we need to decompose the data into independent components. The only thing 
 
 The ICA will return as many components as you put channels in. Each component consists of a component timecourse for every trial (ic_data.trial) together with a single topography (ic_data.topo
 
-{% include image src="/assets/img/walkthrough/wt_fig7.png" width="600" %}
+{% include image src="/assets/img/walkthrough/figure7.png" width="600" %}
 
 When ft_componentanalysis is done (it could take a while) we have to find those components we want to subtract from our data. We'll use ft_databrowser for this again, only looking at ten 'channels' (components) at a time:
 
@@ -221,7 +221,7 @@ When ft_componentanalysis is done (it could take a while) we have to find those 
 
 Components are automatically sorted based upon on the sum of the weighting factors, commonly resulting in the most interesting components appearing on top. In the example below the first component is clearly an eye-blink because the appearance of an eye-blink in the time-course and the frontal topography. The second component is most probably related to eye movements for similar reasons. The fourth component is picking up the heartbeat. There is no reason to assume the third component to be artifactual.
 
-{% include image src="/assets/img/walkthrough/wt_fig8.png" width="400" %}
+{% include image src="/assets/img/walkthrough/figure8.png" width="400" %}
 
 To recompose the data without components 1, 2 and 4 use ft_rejectcomponent
 
@@ -268,7 +268,7 @@ Ft_freqanalysis supports many approaches to spectral calculations. You might be 
 Let's begin with the catch: every signal in the time domain can be described in the frequency domain and vice-versa - although doing so does not always make much sense.
 The translation from one domain to the other is done using a variation of the (inverse) Fourier transform. FieldTrip combines all its calculations from the time to the frequency domain in the function ft_freqanalysis. It will result in a data structure that has to be able to contain not just channels x time for every trial, but now also has to add frequency as a dimension:
 
-{% include image src="/assets/img/walkthrough/wt_fig9.png" width="600" %}
+{% include image src="/assets/img/walkthrough/figure9.png" width="600" %}
 
 ### Power per trial
 
@@ -303,19 +303,19 @@ The most used method for frequency analysis in FieldTrip besides ''mtmfft'' is '
 
 If you are interested in the development of the power (or other frequency information beyond the scope of this document) over time, you need to cut up the time course into pieces and calculate the power for every piece separately
 
-{% include image src="/assets/img/walkthrough/wt_fig10.png" width="600" %}
+{% include image src="/assets/img/walkthrough/figure10.png" width="600" %}
 
 However, because of the straight edges of the time window spectral leakage will occur (something you do not want). It is therefore recommended make the edges of the time window taper off to zero by for instance multiplying the time course with an inverted cosine function. This is called a Hanning window:
 
-{% include image src="/assets/img/walkthrough/wt_fig11.png" width="600" %}
+{% include image src="/assets/img/walkthrough/figure11.png" width="600" %}
 
 As you can see using such a taper will make you lose data between the time windows. This is compensated by using an overlapping time window, providing the average power of the time-window centered at multiple time-points. Note that although you sample in much smaller steps, the value for every window is still calculated for the whole time window:
 
-{% include image src="/assets/img/walkthrough/wt_fig12.png" width="600" %}
+{% include image src="/assets/img/walkthrough/figure12.png" width="600" %}
 
 One consideration in choosing the width of your time-window is the wavelength of the frequency you want to calculate. As we view an oscillation as consisting of several cycles, this needs to be reflected in the time-window. Also, you need several cycles captured in your time-window to have a relative reliable estimate of its power during that time. This means that for a signal of 2 Hz the time window should be several times 0.5 seconds (T = 1/f). For higher frequencies this can be much shorter, 30Hz giving you a period of about 33 milliseconds. To not make concessions for one or the other extreme you can make your time-windows dependent on the frequency by making it a multiple of its period. It is recommended to not use less than 3 cycles. Remember, the way you define your window biases your results towards that particular view. If you are searching for long-lasting oscillations and therefore use time-windows of e.g., 10 cycles, your results will reflect that portion of your data most strongly. If, instead, you use a window of 1 cycle, do not expect to see (although you might) oscillations evolving over time, as you are biasing your results against it.
 
-{% include image src="/assets/img/walkthrough/wt_fig13.png" width="600" %}
+{% include image src="/assets/img/walkthrough/figure13.png" width="600" %}
 
 To summarize let's look at the different parameters that have to be set for doing a frequency analysis with a sliding, frequency dependant, time window, using a Hanning taper and then call ''ft_freqanalysis'' on one dataset:
 
@@ -374,7 +374,7 @@ Also when it comes to your statistical analysis FieldTrip doesn't let you down: 
 2.  Those values of the output – the descriptive statistics, the inferential statistics and the decisions (to reject your null-hypothesis), are dependent on cfg.statistic, cfg.method and cfg.alpha, respectively.
 3.  That we need to specify a design matrix – our next topic
 
-{% include image src="/assets/img/walkthrough/wt_fig14.png" width="600" %}
+{% include image src="/assets/img/walkthrough/figure14.png" width="600" %}
 
 ### Input - data and your designmatrix
 
@@ -384,25 +384,25 @@ It should be obvious that besides feeding data we need to specify how the separa
 
 This could be simply the condition number as we have in the case of a (non-paired) comparison of two series of data entries. Note that this is the same regardless if we are dealing with a within-subject (e.g., condition A versus B) or a between-subject design (e.g., group A versus B, session A versus B):
 
-{% include image src="/assets/img/walkthrough/wt_fig15.png" width="300" %}
+{% include image src="/assets/img/walkthrough/figure15.png" width="300" %}
 
 #### Paired comparison
 
 Besides a row coding for the independent variable such as your experimental condition (the first row, therefore: cfg.ivar = 1;), we can code for every dependant variable, or unit of observation in the second row (uvar = 2); The units of observation often are subjects (in a certain group) or trials (of a certain condition), for instance. This allows us to do a paired comparison. The example below is just an example, there is no necessity to have such an organized design, as long as you make sure every n-th column corresponds to the appropriate n-th data entry.
 
-{% include image src="/assets/img/walkthrough/wt_fig16.png" width="450" %}
+{% include image src="/assets/img/walkthrough/figure16.png" width="450" %}
 
 #### Correlation
 
 You might not want to test groups but rather calculate a correlation with any other series of values. These could be reaction times, a subject score on a questionnaire or even power in another frequency. Your design then will only have to specify those in a single row. For the example below we'll just make an imaginary [sic] array of values.
 
-{% include image src="/assets/img/walkthrough/wt_fig17.png" width="350" %}
+{% include image src="/assets/img/walkthrough/figure17.png" width="350" %}
 
 #### Averaging over time/frequencies/sensors
 
 As you are well aware, however, the decision we make using the statistical test (not to be confused with the test-statistic) is vulnerable to the multiple comparison problem, a problem that is greatly exacerbated with the multidimensional nature of psychophysiological data. One way of dealing with this problem is simply to average over (parts of) a dimension. Doing this now, instead of earlier during ft_preprocessing, ft_freqanalysis or ft_timelockanalysis gives us all the flexibility to explore different windows on which to calculate our test statistic (“average power of…”, or “average amplitude of…”). Remember how we showed in the previous page to specify a time-frequency window or select channels. We can simply average over one of these dimensions as follows:
 
-{% include image src="/assets/img/walkthrough/wt_fig18.png" width="600" %}
+{% include image src="/assets/img/walkthrough/figure18.png" width="600" %}
 
 ##### Statistical methods
 
@@ -415,4 +415,4 @@ Once the design matrix is specified and the test statistic is defined we only ne
 
 #### Calling ft_freqanalysis
 
-{% include image src="/assets/img/walkthrough/wt_fig19.png" width="650" %}
+{% include image src="/assets/img/walkthrough/figure19.png" width="650" %}
