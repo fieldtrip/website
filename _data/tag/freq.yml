@@ -79,6 +79,9 @@
 - name:  Why does my TFR look strange (part II, detrending)?
   link:  /faq/why_does_my_tfr_look_strange_part_ii
 
+- name:  Why is the largest peak in the spectrum at the frequency which is 1/segment length?
+  link:  /faq/why_largest_peak_spectrum
+
 - name:  Reference documentation
   link:  /reference
 
