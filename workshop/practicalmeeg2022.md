@@ -38,13 +38,44 @@ There will also be other experts from MNE-Python, BrainStorm and EEGLAB with the
 
 Please take a quick look at the [FieldTrip reference paper](https://doi.org/10.1155/2011/156869) if you havenot done so already. If you have an hour or so, you can watch this [introductory lecture](https://www.youtube.com/watch?v=7B4rDZYwQLM). Note that more recorded lectures are available as [video](/video).
 
-### Download and install a recent version
+### Download and install a recent FieldTrip version
 
 Please download the most recent version of the FieldTrip toolbox from [here](https://www.fieldtriptoolbox.org/download/) or from [GitHub](https://github.com/fieldtrip/fieldtrip/tags). As we did some last miniute bugfixes tomake all tutorials run smoothly, you should have version **20221207** or later.
 
 Please read [this FAQ](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path/) on how toset your path. After adding the FieldTrip main directory to your path, you should type `ft_defaults` which will add the required subdirectories (which depend on your MATLAB version). We recommend to put `ft_defaults` in your MATLAB [startup.m](https://nl.mathworks.com/help/matlab/ref/startup.html) file.
 
-### Download the data
+### Download and organize the scripts and data
+
+We will use a small `datainfo_subject.m` function that specifies the input and output data files for each participant. You can download that from the `code` folder on our [download server](https://download.fieldtriptoolbox.org/workshop/practicalmeeg2022/). Please organize the workshop data and code as follows:
+
+    /Volumes/SamsungT7/practicalmeeg2022/
+    ├── README
+    ├── code
+    │   ├── README.md
+    │   ├── atlas_subparc374_8k.mat
+    │   ├── datainfo_subject.m
+    │   └── ...
+    └── ds000117-pruned
+    │   ├── CHANGES
+    │   ├── README
+    │   ├── dataset_description.json
+    │   ├── derivatives
+    │   ├── participants.tsv
+    │   ├── stimuli
+    │   ├── sub-01
+    │   └── ...
+    └── derivatives
+        ├── anatomy
+        ├── groupanalysis
+        ├── raw2erp
+        ├── sensoranalysis
+        └── sourceanalysis
+
+The `/Volumes/SamsungT7/practicalmeeg2022` directory is where I have the data on my laptop (actually on an external SSD), for you that would be somewhere else. There should be a code directory with (at least) the `datainfo_subject.m` function, there should be the `ds000117-pruned` directory with the raw data in subdirectories, and there should be a `derivatives` directory with one subdirectory per analysis step.
+
+The derivatives directory contains (or will contain) the results of the analysis, you can download precomputed results as .mat files from our download server. For some steps that is not needed and you will computre them yourself, but for some lengthy analysis you will continue to work with the precomputed results of the previous step.
+
+### Download the raw data
 
 You can get the data that we will work with from [Zenodo](https://doi.org/10.5281/zenodo.7405048) or on [OpenNeuro](https://doi.org/10.18112/openneuro.ds000117.v1.0.5). The Zenodo version is pruned and only contains the raw data files needed for this workshop. The OpenNeuro version contains all data (and hence is very large).
 
