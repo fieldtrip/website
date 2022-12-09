@@ -1,6 +1,6 @@
 ---
 title: Use independent component analysis (ICA) to remove ECG artifacts
-tags: [example, artifact, preprocessing, ica]
+tags: [example, artifact, preprocessing, ica, meg-removal]
 redirect_from:
    - /example/use_independent_component_analysis_ica_to_remove_ecg_artifacts/
 ---

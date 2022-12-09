@@ -1,6 +1,6 @@
 ---
 title: Use independent component analysis (ICA) to remove EOG artifacts
-tags: [example, artifact, preprocessing, ica]
+tags: [example, artifact, preprocessing, ica, meg-artifact]
 redirect_from:
   - /example/use_independent_component_analysis_ica_to_remove_eog_artifacts/
 ---
@@ -17,16 +17,13 @@ This script demonstrates how you can use ICA for cleaning the EOG artifacts from
 
 ## Example dataset
 
-You can run the code below on your own data. Alternatively, try with the [ArtifactMEG.zip](https://download.fieldtriptoolbox.org/tutorial/ArtifactMEG.zip) example MEG dataset. This dataset was acquired continuously with trials of 10 seconds. All figures in this example script are based on these data.
+You can run the code below on your own data. Alternatively, try with the [ArtifactMEG.zip](https://download.fieldtriptoolbox.org/tutorial/ArtifactMEG.zip) example MEG dataset, which is used for all figures below. This spoecific MCTF MEG dataset was acquired continuously without any stimulation or task. The CTF dataset is organized in trials of 10 seconds, but since there are no discontinuities between trials, we can treat it as a continuous recording.
 
 To load this dataset into MATLAB and preprocess with FieldTrip, use:
 
     % preprocessing of example dataset
     cfg = [];
     cfg.dataset            = 'ArtifactMEG.ds';
-    cfg.trialdef.eventtype = 'trial';
-    cfg = ft_definetrial(cfg);
-
     cfg.channel            = 'MEG';
     cfg.continuous         = 'yes';
     data = ft_preprocessing(cfg);
