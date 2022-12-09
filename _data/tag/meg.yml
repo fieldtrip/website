@@ -28,6 +28,12 @@
 - name:  How to incorporate head movements in MEG analysis
   link:  /example/headmovement_meg
 
+- name:  Use independent component analysis (ICA) to remove ECG artifacts
+  link:  /example/ica_ecg
+
+- name:  Use independent component analysis (ICA) to remove EOG artifacts
+  link:  /example/ica_eog
+
 - name:  Make leadfields using different headmodels
   link:  /example/make_leadfields_using_different_headmodels
 
