@@ -27,14 +27,15 @@ The following steps are used to detect artifacts in FieldTrip's automatic artifa
 
 1.  Defining segments of interest using [ft_definetrial](/reference/ft_definetrial)
 2.  Detecting artifacts using [ft_artifact_zvalue](/reference/ft_artifact_zvalue), this consists of
-    - Reading the data (with padding) from disk
-    - Filtering the data
-    - Z-transforming the filtered data and averaging it over channels
-    - Threshold the accumulated z-score
+    -   Reading the data (with padding) from disk
+    -   Filtering the data
+    -   Z-transforming the filtered data and averaging it over channels
+    -   Threshold the accumulated z-score
 
-This procedure will result in an artifact definition, a two column array with the onset and offset sample number of every detected artifact. This 'artifact definition' (''.artfctdef'') can then, in a separate step, be used to reject (parts of) trials in your trialdefinition (so before reading the data in using ft_preprocessing for your subsequent analysis), or rejecting (parts of) data already in memory. Both methods use [ft_rejectartifact](/reference/ft_rejectartifact). All the steps that the automatic artifact rejection routine takes will now be explained in detail.
+This procedure will result in an artifact definition, a two column array with the onset and offset sample number of every detected artifact. This "artifact definition" (the `.artfctdef` sub-structure) can then, in a separate step, be used to reject (parts of) trials in your trialdefinition (so before reading the data in using ft_preprocessing for your subsequent analysis), or rejecting (parts of) data already in memory. Both methods use **[ft_rejectartifact](/reference/ft_rejectartifact)**. All the steps that the automatic artifact rejection routine takes will now be explained in detail.
 
 {% include image src="/assets/img/tutorial/automatic_artifact_rejection/figure1.png" width="600" %}
+
 _Figure: Automatic artifact rejection processes the data in several steps to allow rejection of artifactual time intervals from the trial definition_
 
 ### I. Reading the data (with padding) from disk
@@ -50,6 +51,7 @@ This leads us to the last important issue of reading data in artifact rejection:
 ### II. Filtering the data
 
 After we have read the data of a single trial (plus the extra padding) this data is processed in a way that you think would most exaggerate the particular artifacts you are looking for. In other words, if you know what you are looking for, you can process the data in such a way that it would stand out most. For instance, muscle EMG is mostly expressed in the higher frequencies of the EEG/MEG signal. A bandpassfilter between e.g., 110 and 140 would make use of this knowledge and will result in channels showing a large power amplitude when your subject made a muscle twitch. In a similar way one can optimize filter settings for EOG and SQUID jump artifacts. Examples are given at the end of this page.
+
 Note that this indeed means that you might be doing several runs of artifact rejection to take care of several different kinds of artifacts.
 
 ### III. Z-transforming the filtered data and averaging it over channels
@@ -82,8 +84,9 @@ with: C = the number of channels.
 
 ### IV. Thresholding the accumulated z-score
 
-Now that every timepoint is expressed as a deviation for the mean over time & channels, we can use an artifact detection threshold: all timepoints that are above or below this threshold (set ''with cfg.artfctdef.zvalue.cutoff'') will be considered belonging to artifacts. Depending on the variance of the artifacts versus the variance of your brain signal a higher or lower threshold has to be set. The lower this threshold the more conservative the artifact detection will behave, the higher the more liberal (see figure). Since these characteristics of the data might vary per experiment and even from one recording to another, care has to be taken to investigate the threshold that works for you.
-By using the option ''cfg.feedback='yes''', you enter an interactive mode where you can browse through the data and adjust the cut-off value (i.e., the z-value used for thresholding) according to your data and filter settings.
+Now that every timepoint is expressed as a deviation for the mean over time & channels, we can use an artifact detection threshold: all timepoints that are above or below this threshold (`cfg.artfctdef.zvalue.cutoff`) will be considered belonging to artifacts. Depending on the variance of the artifacts versus the variance of your brain signal a higher or lower threshold has to be set. The lower this threshold the more conservative the artifact detection will behave, the higher the more liberal (see figure). Since these characteristics of the data might vary per experiment and even from one recording to another, care has to be taken to investigate the threshold that works for you.
+
+By using the option `cfg.feedback='yes'`, you enter an interactive mode where you can browse through the data and adjust the cut-off value (i.e., the z-value used for thresholding) according to your data and filter settings.
 
 {% include image src="/assets/img/tutorial/automatic_artifact_rejection/figure6.png" %}
 
@@ -93,7 +96,7 @@ _Figure: Setting a higher or lower z-value threshold will make the detection of 
 
 ### Artifact padding
 
-When a series of continuous time points are detected they are considered part of one artifact period and enter the artifact definition as one start and end sample number. Often the artifact starts a bit earlier and ends a bit later than what the artifact detection is able to capture. Artifact padding (''cfg.artfctdef.xxx.artpadding'') can then be used to extend the timeperiod of the artifact on both sides. This can also be used to ensure that the artifact will 'reach into' the trial that has to be rejected.
+When a series of continuous time points are detected they are considered part of one artifact period and enter the artifact definition as one start and end sample number. Often the artifact starts a bit earlier and ends a bit later than what the artifact detection is able to capture. Artifact padding (`cfg.artfctdef.xxx.artpadding`) can then be used to extend the timeperiod of the artifact on both sides. This can also be used to ensure that the artifact will 'reach into' the trial that has to be rejected.
 
 {% include image src="/assets/img/tutorial/automatic_artifact_rejection/figure7.png" %}
 
@@ -101,7 +104,7 @@ _Artifact padding extends the segment of data that will be marked as artifact._
 
 ### Trial padding
 
-You might want to include segments of data preceding or following the trial, e.g., when you want to reject trials with an eye blink right before the trial onset. For this purpose trial padding (''cfg.artfctdef.xxx.trlpadding'') is used. Trial padding pads data on both sides of the trial with the specified length, such that artifact detection and rejection is also performed for those padded segments.
+You might want to include segments of data preceding or following the trial, e.g., when you want to reject trials with an eye blink right before the trial onset. For this purpose trial padding (`cfg.artfctdef.xxx.trlpadding`) is used. Trial padding pads data on both sides of the trial with the specified length, such that artifact detection and rejection is also performed for those padded segments.
 
 {% include image src="/assets/img/tutorial/automatic_artifact_rejection/figure8.png" width="600" %}
 
@@ -110,9 +113,11 @@ _Trialpadding extends the period around the trial where artifact detection is pe
 ### Filter padding
 
 Each artifact type can best be detected with filters of a certain pass band (e.g., pass band of 1–15 Hz for eye blinks, and 110–140 Hz for muscle artifacts). However, filters are known to produce edge effects which can also be detected by the artifact-detection routine and mistaken for real artifacts.
-To avoid that, filter padding (''cfg.artfctdef.xxx.fltpadding'') is used. Always in addition to trial padding (if any) existing trial padding, extra data is read on both sides prior to filtering. After the filtering has been applied, the filter padding is removed again. In other words, the filter padding is used only for filtering, not for artifact detection (see figure).
+
+To avoid that, filter padding (`cfg.artfctdef.xxx.fltpadding`) is used. Always in addition to trial padding (if any) existing trial padding, extra data is read on both sides prior to filtering. After the filtering has been applied, the filter padding is removed again. In other words, the filter padding is used only for filtering, not for artifact detection (see figure).
 
 {% include image src="/assets/img/tutorial/automatic_artifact_rejection/figure9.png" width="600" %}
+
 _Figure: Filter padding. Filter padding is only used during filtering and removed afterwards_
 
 ### Combining filter and trial padding
@@ -120,11 +125,12 @@ _Figure: Filter padding. Filter padding is only used during filtering and remove
 Filter and trial padding are often used together. Trialpadding is first added to the trial, after which filterpadding is added (and removed again after filtering has been applied).
 
 {% include image src="/assets/img/tutorial/automatic_artifact_rejection/figure10.png" %}
+
 _Figure: Filter and trial padding_
 
 ### Negative trialpadding
 
-Negative trialpadding is an option included in automatic artifact rejection because a couple of people have requested its implementation. It's a bit of a strange one and should only be applied when more appropriate steps are unavailable. This could be the case when trials have, in previous processing steps, been defined larger than necessary for artifact detection, e.g., when one has already included something similar as trial- and filter padding. Filter artifacts might then still be a problem without the possiblity of padding the data (since it is already in memory). Therefore you might want to constrain the artifact detection to a limited part of the trial, i.e. without the edges. You could then apply _negative_ trialpadding (using a negative value for ''cfg.artfctdef.xxx.trlpadding'').
+Negative trialpadding is an option included in automatic artifact rejection because a couple of people have requested its implementation. It's a bit of a strange one and should only be applied when more appropriate steps are unavailable. This could be the case when trials have, in previous processing steps, been defined larger than necessary for artifact detection, e.g., when one has already included something similar as trial- and filter padding. Filter artifacts might then still be a problem without the possiblity of padding the data (since it is already in memory). Therefore you might want to constrain the artifact detection to a limited part of the trial, i.e. without the edges. You could then apply _negative_ trialpadding (using a negative value for `cfg.artfctdef.xxx.trlpadding`).
 
 {% include image src="/assets/img/tutorial/automatic_artifact_rejection/figure11.png" %}
 
@@ -134,18 +140,18 @@ _Negative trialpadding excluded the edges of trials for artifact detection_
 
 After you are satisfied with the detection of artifacts you can either reject the complete trial containing any artifact, or reject only the part with the artifact. The latter option leads to partial trials with variable trial lengths, something that has to be considered especially in anticipation of any trial-based, or average-based statistics.
 
-To remove the detected artifacts from the trial definition (trl) you can add your artifact definition as any field (e.g., ''.eog'', ''.jump'' or ''.zvalue'') to the ''cfg.artfctdef'' field. For instance:
+To remove the detected artifacts from the trial definition (trl) you can add your artifact definition as any field (e.g., `.eog`, `.jump` or `.zvalue`) to the `cfg.artfctdef` field. For instance:
 
-    cfg=[];
-    cfg.artfctdef.reject = 'complete'; % this rejects complete trials, use 'partial' if you want to do partial artifact rejection
-    cfg.artfctdef.eog.artifact = artifact_EOG; %
-    cfg.artfctdef.jump.artifact = artifact_jump;
+    cfg                           = [];
+    cfg.artfctdef.reject          = 'complete'; % this rejects complete trials, use 'partial' if you want to do partial artifact rejection
+    cfg.artfctdef.eog.artifact    = artifact_eog;
+    cfg.artfctdef.jump.artifact   = artifact_jump;
     cfg.artfctdef.muscle.artifact = artifact_muscle;
     data_no_artifacts = ft_rejectartifact(cfg,data);
 
-The output of ft_rejectartifact will contain the cfg.trl, which is the cleaned trial definition, and cfg.trlold which contains the old trl (the output of **[ft_definetrial](/reference/ft_definetrial)**).
+The output of ft_rejectartifact will contain the cfg.trl, which is the cleaned trial definition, and cfg.trlold which corresponds to the original trials from **[ft_definetrial](/reference/ft_definetrial)**).
 
-If you call ft_artifact_zvalue with cfg as output argument (e.g., ''cfg = ft_artifact_zvalue(cfg)''), you can directly feed that output into ft_rejectartifact. Examples of this will be given below.
+If you call ft_artifact_zvalue like this `cfg = ft_artifact_zvalue(cfg)`, you can directly feed that output into **[ft_rejectartifact](/reference/ft_rejectartifact)**. Examples of this will be given below.
 
 ## Examples for getting started
 
@@ -284,7 +290,7 @@ Note that only the EOG is scanned in the eye artifacts case, which will take les
      % feedback
      cfg.artfctdef.zvalue.interactive = 'yes';
 
-     [cfg, artifact_EOG] = ft_artifact_zvalue(cfg);
+     [cfg, artifact_eog] = ft_artifact_zvalue(cfg);
 
 {% include image src="/assets/img/tutorial/automatic_artifact_rejection/figure15.png" width="600" %}
 

@@ -88,6 +88,10 @@ Now, we can coregister the MRI image to the coordinate system as used for the ME
     cfg.fiducial.rpa = RPA(:)';
     cfg.coordsys     = 'neuromag';
     mri              = ft_volumerealign(cfg, mri_orig);
+    
+    filename = fullfile(subj.outputpath, 'anatomy', subj.name, sprintf('%s_mri', subj.name));
+    % save(filename, 'mri');
+    % load(filename, 'mri');
 
 #### Exercise 2
 

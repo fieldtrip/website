@@ -18,17 +18,16 @@ This script demonstrates how you can use ICA for cleaning the ECG artifacts from
 
 ## Example dataset
 
-You can run the code below on your own data. Alternatively, try with the [ArtifactRemoval.zip](https://download.fieldtriptoolbox.org/tutorial/ArtifactRemoval.zip) example MEG dataset. This dataset was acquired continuously with trials of 10 seconds. All figures in this example script are based on these data.
+You can run the code below on your own data. Alternatively, try with the [ArtifactRemoval.zip](https://download.fieldtriptoolbox.org/tutorial/ArtifactRemoval.zip) example MEG dataset. This 275-channel CTF MEG dataset was acquired continuously with trials of 10 seconds. The subject was performing an experimental task, but that is not of relevance for this example. The CTF dataset is organized in trials of 10 seconds; as there are no discontinuities between trials, we can treat it as a continuous recording.
 
 To load this dataset into MATLAB and preprocess with FieldTrip, use:
 
-    % ft_preprocessing of example dataset
-    cfg = [];
-    cfg.dataset = 'ArtifactRemoval.ds';
+    cfg                    = [];
+    cfg.dataset            = 'ArtifactRemoval.ds';
     cfg.trialdef.eventtype = 'trial';
     cfg = ft_definetrial(cfg);
 
-It is very important to remove all jump and muscle artifacts before running your ICA, otherwise they may change the results you get. To remove artifacts on the example dataset, use:
+It is important to remove all atypical artifacts (including SQUID jumps and muscle artifacts) prior to running your ICA, otherwise they may change the results you get. To remove artifacts on the example dataset, use:
 
     cfg = ft_artifact_jump(cfg);
     cfg = ft_rejectartifact(cfg);
