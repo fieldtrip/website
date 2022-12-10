@@ -7,12 +7,3 @@
 - name:  reproducescript group analysis
   link:  /example/reproducescript_group
 
-- name:  Speeding up your analysis pipeline using distributed computing
-  link:  /tutorial/distributedcomputing
-
-- name:  Making a memory efficient analysis pipeline
-  link:  /tutorial/memory
-
-- name:  Creating a clean analysis pipeline
-  link:  /tutorial/scripting
-

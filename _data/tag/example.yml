@@ -196,6 +196,15 @@
 - name:  Plotting the result of source reconstruction on a cortical mesh
   link:  /example/plotting_source_surface
 
+- name:  Making your analysis pipeline reprodudible using *reproducescript*
+  link:  /example/reproducescript
+
+- name:  reproducescript on a full study
+  link:  /example/reproducescript_andersen
+
+- name:  reproducescript group analysis
+  link:  /example/reproducescript_group
+
 - name:  Re-reference EEG and iEEG data
   link:  /example/rereference
 
