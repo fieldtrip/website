@@ -1,19 +1,20 @@
 ---
-title: Use independent component analysis (ICA) to remove EOG artifacts
+title: Independent component analysis (ICA) to remove EOG artifacts
 tags: [example, artifact, preprocessing, ica, meg-artifact]
 redirect_from:
   - /example/use_independent_component_analysis_ica_to_remove_eog_artifacts/
 ---
 
-# Use independent component analysis (ICA) to remove EOG artifacts
+# Independent component analysis (ICA) to remove EOG artifacts
 
 ## Description
 
-This script demonstrates how you can use ICA for cleaning the EOG artifacts from your MEG data. It consists of three steps:
+This script demonstrates how you can use ICA for cleaning eye artifacts from MEG or EEG data. It consists of three steps:
 
-1.  decomposition of the MEG data
-2.  identifying the components that reflect eye artifacts
-3.  removing those components and backprojecting the data
+1.  preparing the data for running an ICA
+2.  ICA decomposition of the data
+3.  identifying the components that reflect eye artifacts
+4.  removing those components and backprojecting the data
 
 ## Example dataset
 
@@ -21,17 +22,16 @@ You can run the code below on your own data. Alternatively, try with the [Artifa
 
 To load this dataset into MATLAB and preprocess with FieldTrip, use:
 
-    % preprocessing of example dataset
-    cfg = [];
-    cfg.dataset            = 'ArtifactMEG.ds';
-    cfg.channel            = 'MEG';
-    cfg.continuous         = 'yes';
+    cfg             = [];
+    cfg.dataset     = 'ArtifactMEG.ds';
+    cfg.channel     = 'MEG';
+    cfg.continuous  = 'yes';
     data = ft_preprocessing(cfg);
 
     % downsample the data to speed up the next step
-    cfg = [];
-    cfg.resamplefs = 300;
-    cfg.detrend    = 'no';
+    cfg             = [];
+    cfg.resamplefs  = 300;
+    cfg.detrend     = 'no';
     data = ft_resampledata(cfg, data);
 
 ## ICA decomposition

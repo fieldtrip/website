@@ -1,18 +1,18 @@
 ---
-title: Use independent component analysis (ICA) to remove ECG artifacts
+title: Independent component analysis (ICA) to remove ECG artifacts
 tags: [example, artifact, preprocessing, ica, meg-removal]
 redirect_from:
    - /example/use_independent_component_analysis_ica_to_remove_ecg_artifacts/
 ---
 
-# Use independent component analysis (ICA) to remove ECG artifacts
+# Independent component analysis (ICA) to remove ECG artifacts
 
 ## Description
 
 This script demonstrates how you can use ICA for cleaning the ECG artifacts from your MEG data. It consists of four steps:
 
-1.  preparing MEG data for running an ICA
-2.  decomposition of the MEG data
+1.  preparing the data for running an ICA
+2.  ICA decomposition of the data
 3.  identifying the components that reflect heart artifacts
 4.  removing those components and backprojecting the data
 

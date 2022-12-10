@@ -300,4 +300,14 @@ See also this [FAQ](/faq/how_can_i_interpret_the_different_types_of_padding_that
 
 ## Suggested further reading
 
-For an introduction to how you can deal with artifacts in FieldTrip in general, you can go back to the [Introduction: dealing with artifacts](/tutorial/artifacts) tutorial. As an alternative to automatic artifact detection, you can manually inspect the trial- and channel-data, see the [visual artifact rejection](/tutorial/visual_artifact_rejection) tutorial. More information on dealing with artifacts can also be found in some example scripts and frequently asked questions. Furthermore, this topic is often discussed on the email discussion list which can be searched [like this](https://www.google.com/search?q=artifact&sitesearch=mailman.science.ru.nl%2Fpipermail%2Ffieldtrip%2F).
+For an introduction to how you can deal with artifacts in FieldTrip in general, you should have a look at the [Introduction: dealing with artifacts](/tutorial/artifacts) tutorial. As an alternative to automatic artifact detection, you can manually inspect the trial- and channel-data, see the [visual artifact rejection](/tutorial/visual_artifact_rejection) tutorial. Furthermore, you use ICA to remove artifacts from your data, this is explained in the [cleaning artifacts using ICA](/tutorial/ica_artifact_cleaning) tutorial.
+
+More information on dealing with artifacts can also be found in some example scripts and frequently asked questions. Furthermore, this topic is often discussed on the [email discussion list](/discussion_list) which can be searched [like this](https://www.google.com/search?q=site%3Amailman.science.ru.nl%2Fpipermail%2Ffieldtrip&q=artifacts).
+
+### Example scripts
+
+{% include seealso tag1="artifact" tag2="example" %}
+
+### Frequently asked questions
+
+{% include seealso tag1="artifact" tag2="faq" %}
