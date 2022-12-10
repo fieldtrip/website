@@ -87,11 +87,11 @@ Following the identification of atypical artifacts, you can remove them from fur
     cfg.artfctdef.reject = 'nan';
     data_clean = ft_rejectartifact(cfg, data);
 
-{% include markup/info }
+{% include markup/info %}
 Note that here we are reusing the `data` and the `data_clean` variables in different fashions, as we are demonstrating different ways of processing and cleaning the data. Don't get confused with what the clean data represents.
 
 To get back to the original data, you can always do `data = data_orig`.
-{% include markup/end }
+{% include markup/end %}
 
 #### Using ft_rejectvisual
 
