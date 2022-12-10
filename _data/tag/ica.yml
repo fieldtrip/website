@@ -1,7 +1,7 @@
-- name:  Use independent component analysis (ICA) to remove ECG artifacts
+- name:  Independent component analysis (ICA) to remove ECG artifacts
   link:  /example/ica_ecg
 
-- name:  Use independent component analysis (ICA) to remove EOG artifacts
+- name:  Independent component analysis (ICA) to remove EOG artifacts
   link:  /example/ica_eog
 
 - name:  Use denoising source separation (DSS) to remove ECG artifacts

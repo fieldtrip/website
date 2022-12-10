@@ -22,10 +22,10 @@
 - name:  How to incorporate head movements in MEG analysis
   link:  /example/headmovement_meg
 
-- name:  Use independent component analysis (ICA) to remove ECG artifacts
+- name:  Independent component analysis (ICA) to remove ECG artifacts
   link:  /example/ica_ecg
 
-- name:  Use independent component analysis (ICA) to remove EOG artifacts
+- name:  Independent component analysis (ICA) to remove EOG artifacts
   link:  /example/ica_eog
 
 - name:  Combine MEG with Eyelink eyetracker data
@@ -156,6 +156,9 @@
 
 - name:  Analysis of human ECoG and sEEG recordings
   link:  /tutorial/human_ecog
+
+- name:  Cleaning artifacts using ICA
+  link:  /tutorial/ica_artifact_cleaning
 
 - name:  Whole brain connectivity and network analysis
   link:  /tutorial/networkanalysis

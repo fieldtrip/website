@@ -148,10 +148,10 @@
 - name:  How to incorporate head movements in MEG analysis
   link:  /example/headmovement_meg
 
-- name:  Use independent component analysis (ICA) to remove ECG artifacts
+- name:  Independent component analysis (ICA) to remove ECG artifacts
   link:  /example/ica_ecg
 
-- name:  Use independent component analysis (ICA) to remove EOG artifacts
+- name:  Independent component analysis (ICA) to remove EOG artifacts
   link:  /example/ica_eog
 
 - name:  How to import data from MNE-Python and FreeSurfer

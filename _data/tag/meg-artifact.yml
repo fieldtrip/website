@@ -1,4 +1,4 @@
-- name:  Use independent component analysis (ICA) to remove EOG artifacts
+- name:  Independent component analysis (ICA) to remove EOG artifacts
   link:  /example/ica_eog
 
 - name:  Which datasets are used in the documentation and where are they used?
@@ -6,4 +6,7 @@
 
 - name:  Automatic artifact rejection
   link:  /tutorial/automatic_artifact_rejection
+
+- name:  Cleaning artifacts using ICA
+  link:  /tutorial/ica_artifact_cleaning
 

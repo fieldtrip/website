@@ -28,10 +28,10 @@
 - name:  How to incorporate head movements in MEG analysis
   link:  /example/headmovement_meg
 
-- name:  Use independent component analysis (ICA) to remove ECG artifacts
+- name:  Independent component analysis (ICA) to remove ECG artifacts
   link:  /example/ica_ecg
 
-- name:  Use independent component analysis (ICA) to remove EOG artifacts
+- name:  Independent component analysis (ICA) to remove EOG artifacts
   link:  /example/ica_eog
 
 - name:  Make leadfields using different headmodels
@@ -162,6 +162,9 @@
 
 - name:  Creating a volume conduction model of the head for source-reconstruction of MEG data
   link:  /tutorial/headmodel_meg
+
+- name:  Cleaning artifacts using ICA
+  link:  /tutorial/ica_artifact_cleaning
 
 - name:  Introduction to the FieldTrip toolbox
   link:  /tutorial/introduction

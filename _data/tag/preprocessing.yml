@@ -10,10 +10,10 @@
 - name:  Getting started with reading raw EEG or MEG data
   link:  /example/getting_started_with_reading_raw_eeg_or_meg_data
 
-- name:  Use independent component analysis (ICA) to remove ECG artifacts
+- name:  Independent component analysis (ICA) to remove ECG artifacts
   link:  /example/ica_ecg
 
-- name:  Use independent component analysis (ICA) to remove EOG artifacts
+- name:  Independent component analysis (ICA) to remove EOG artifacts
   link:  /example/ica_eog
 
 - name:  Making your own trialfun for conditional trial definition
@@ -114,6 +114,9 @@
 
 - name:  Event-related averaging and MEG planar gradient
   link:  /tutorial/eventrelatedaveraging
+
+- name:  Cleaning artifacts using ICA
+  link:  /tutorial/ica_artifact_cleaning
 
 - name:  Preprocessing and averaging of multi-channel NIRS data
   link:  /tutorial/nirs_multichannel

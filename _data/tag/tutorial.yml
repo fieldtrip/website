@@ -61,6 +61,9 @@
 - name:  Analysis of human ECoG and sEEG recordings
   link:  /tutorial/human_ecog
 
+- name:  Cleaning artifacts using ICA
+  link:  /tutorial/ica_artifact_cleaning
+
 - name:  Introduction to the FieldTrip toolbox
   link:  /tutorial/introduction
 

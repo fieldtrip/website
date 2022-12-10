@@ -55,6 +55,9 @@
 - name:  Preprocessing - Reading continuous EEG and MEG data
   link:  /tutorial/continuous
 
+- name:  Cleaning artifacts using ICA
+  link:  /tutorial/ica_artifact_cleaning
+
 - name:  Introduction to the FieldTrip toolbox
   link:  /tutorial/introduction
 

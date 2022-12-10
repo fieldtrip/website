@@ -1,4 +1,4 @@
-- name:  Use independent component analysis (ICA) to remove ECG artifacts
+- name:  Independent component analysis (ICA) to remove ECG artifacts
   link:  /example/ica_ecg
 
 - name:  Which datasets are used in the documentation and where are they used?
