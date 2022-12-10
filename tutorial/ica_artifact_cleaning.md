@@ -110,6 +110,7 @@ Note that the jumps are easier to identify if you would not have applied a high-
 
 #### Exercise
 
+{% include markup/info %}
 Preprocessing and filtering serves to reduce artifacts (such as drifts) and hence makes artifacts less visible. Unpreprocessed data gives the best representation of the artifacts.
 
 Repeat the inspection with ft_databrowser on the original data, without high-pass filter and without resampling. That requires that you have to call ft_preprocessing again. Look at the channels that start with `MTL*` around 178 seconds into the recording and compare the juimp to the one you observed in the filtered and downsampled data.
@@ -124,7 +125,7 @@ Following the identification of atypical artifacts, you can remove them from fur
     cfg.artfctdef.reject  = 'nan';
     data_clean = ft_rejectartifact(cfg, data);
 
-{% include markup/info %}
+{% include markup/warning %}
 Note that here we are reusing the `data` and the `data_clean` variables in different ways, as we are going back ant forth demonstrating different ways of processing and cleaning the data. Don't get confused with what the clean data represents.
 
 To get back to the original data, you can always do `data = data_orig`.
