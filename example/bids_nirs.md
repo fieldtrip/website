@@ -138,7 +138,7 @@ The complete original dataset is available from Mendeley, a subset of the raw da
 
 ## SNIRF
 
-It can also be that you already have your data converted to the SNIRF format, but that the directory organization and the sidecar files with the metadata are not according to BIDS. In that case you can also use the data2bids function.
+It can also be that you already have your data converted to the SNIRF format, but that the directory organization and the sidecar files with the metadata are not according to BIDS. In that case you can also use the **[data2bids](/reference/data2bids)** function.
 
 ### Example
 

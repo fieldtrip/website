@@ -127,4 +127,4 @@ for subindx=1:numel(subj)
 end % for each subject
 ```
 
-Following this conversion, the `participant.tsv` file only contains the subject identifiers. There is more information in an Excel file, such as the age, sex, clinical state, questionaire data, lab notes. In principle it would be possible to copy that into the MATLAB script and use data2bids to export that, but in this case it was easier to use "save-as" and then select "tab-delimited-text" as the output format.
+Following this conversion, the `participant.tsv` file only contains the subject identifiers. There is more information in an Excel file, such as the age, sex, clinical state, questionaire data, lab notes. In principle it would be possible to copy that into the MATLAB script and use **[data2bids](/reference/data2bids)** to export that, but in this case it was easier to use "save-as" and then select "tab-delimited-text" as the output format.
