@@ -218,7 +218,7 @@ With the trials split per condition, this corresponds to the following trials:
 - IC: 1, 2, 3, 4, 14, 15, 16, 17, 20, 35, 39, 40, 47, 78, 79, 80, 86
 - FC: 2, 3, 4, 30, 39, 40, 41, 45, 46, 47, 51, 53, 59, 77, 85
 
-### Suggested further reading
+## Suggested further reading
 
 For an introduction to how you can deal with artifacts in FieldTrip in general, you should have a look at the [Introduction: dealing with artifacts](/tutorial/artifacts) tutorial. As an alternative to visual artifact detection, you can do it automatically, see the [automatic artifact rejection](/tutorial/automatic_artifact_rejection) tutorial. Furthermore, you use ICA to remove artifacts from your data, this is explained in the [cleaning artifacts using ICA](/tutorial/ica_artifact_cleaning) tutorial.
 

@@ -403,7 +403,7 @@ This tutorial demonstrated how to do the statistical analysis on the MEG channel
 
 This tutorial showed you how to perform parametric and non-parametric statistics in FieldTrip. It addresses multiple ways of dealing with the multiple comparison problem. Furthermore, it demonstrated how to plot the part of the data that show the significant effect.
 
-### Suggested further reading
+## Suggested further reading
 
 Tutorials:
 {% include seealso tag1="statistics" tag2="tutorial" %}

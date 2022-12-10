@@ -202,7 +202,7 @@ What we _did not_ show in this tutorial is that you can also interpret the ICA c
 
 The decompositon not only gives you the component time-series but also their topography. Besides using these to identifyartifacts, you can also cleary recognize components that represent activity in the brain. You can use **[ft_dipolefitting](/reference/ft_dipolefitting)** to localize these components with simple dipole models, or **[ft_sourceanalysis](/reference/ft_sourceanalysis)** to localize them with distributed models. The only source reconstruction strategy that you cannot apply (easily) is beamforming, since at the component-level you only have a single topography, but no data covariance matrix. As a spatial filtering techinique, beamforming is too simililar to independent component analysis (although based on a biophysical model and the assumption of uncorrelated rather than independent sources).
 
-### Suggested further reading
+## Suggested further reading
 
 For an introduction to how you can deal with artifacts in FieldTrip in general, you should have a look at the [Introduction: dealing with artifacts](/tutorial/artifacts) tutorial. After this tutorial on cleaning your data using ICA, you may want to go back to the [visual artifact rejection](/tutorial/visual_artifact_rejection) and the [automatic artifact rejection](/tutorial/automatic_artifact_rejection) tutorials.
 

@@ -935,7 +935,7 @@ This tutorial demonstrates how you can use different assumptions to get stable a
 
 More details on constructing volume conduction models of the head can be found [here for MEG](/tutorial/headmodel_meg) and [here for EEG](/tutorial/headmodel_meg). Other tutorials are available that demonstrate the [MNE](/tutorial/minimumnormestimate) and [Beamformer](/tutorial/beamformer) methods. An alternative method for computing the activity time series at regions of interest using beamformers is described [here](/tutorial/virtual_sensors).
 
-### Suggested further reading
+## Suggested further reading
 
 Tutorials:
 {% include seealso tag1="source" tag2="headmodel" tag3="tutorial" %}
