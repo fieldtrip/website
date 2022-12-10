@@ -548,7 +548,7 @@ Now we can plot the result.
 
 _Figure 4: Time course of activity in the primary motor cortex averaged across trials (left) and its single trial time-frequency decomposition right._
 
-#### Exercise: Evoked vs. induced activity
+#### Exercise: evoked vs. induced activity
 
 {% include markup/info %}
 Take your time to verbalize what you see. Try to decompose the averaged response into the time-frequency domain. Plot the result with and without baseline correction. Why is there a difference?

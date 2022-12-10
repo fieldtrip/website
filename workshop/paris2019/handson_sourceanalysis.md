@@ -103,7 +103,7 @@ The function **[ft_denoise_prewhiten](/reference/ft_denoise_prewhiten)** can be 
 
 The prewhitening operator is defined as the inverse of the matrix square root of the covariance matrix that is to be used for the prewhitening. The cfg.kappa option in **[ft_denoise_prewhiten](/reference/ft_denoise_prewhiten)** ensures that a regularised inverse is used. Kappa refers to the number of spatial components to be retained in the inverse, and should be at most the number before which the steep cliff in singular values occurs.
 
-#### Exercise 1:
+#### Exercise 1
 
 {% include markup/info %}
 Select the 200 ms baseline from the dataw_meg structure, compute the covariance, and inspect the covariance matrix with imagesc() after grouping the magnetometers and the gradiometers. Also inspect the singular value spectrum of the whitened baseline covariance matrix.
@@ -124,7 +124,7 @@ A byproduct of the magnetometers and gradiometers being represented at a similar
 
 _Figure: Visual artifact rejection window_
 
-#### Exercise 2:
+#### Exercise 2
 
 {% include markup/info %}
 Consult the [visual artifact rejection tutorial](/tutorial/visual_artifact_rejection) and remove the obvious outlier trials from the data structure. The specification of a layout in the cfg allows for a more detailed inspection of the outlier trials. Note these trial numbers, inspect the spatial topography and time courses, and remove them from the data. Also inspect trials 72 and 832, and discuss their spatiotemporal properties.
@@ -234,13 +234,13 @@ _Figure: Interactive figure windows to inspect virtual channels_
 
 The function **[ft_sourceplot_interactive](/reference/ft_sourceplot_interactive)** opens two figures, one showing a time course with the event-related field, averaged across all dipoles, and the other showing the cortical surface. Here, we replaced the original cortical sheet dipole positions with their equivalent 'inflated' counterparts to better appreciate the stuff that is going on in the sulci. Pressing the shift-key while selecting a location on the cortical surface creates a new figure, with the event-related field of the selected location. Clicking in the figure with the time courses shifts the latency at which the corresponding topographical map is shown.
 
-#### Exercise 3:
+#### Exercise 3
 
 {% include markup/info %}
 Explore the spatial distribution of the prominent ERF peaks. Try and explain why the topographies occasionally look 'patchy'.
 {% include markup/end %}
 
-#### Exercise 4:
+#### Exercise 4
 
 {% include markup/info %}
 Compute the absolute of the dipole moment with ft_math:

@@ -481,7 +481,7 @@ The template MRI included with SPM (and therefore with FieldTrip) is oriented su
 Determine the anatomical location of the coherence peak. How does this result compare to coherence with the right EMG?
 {% include markup/end %}
 
-#### Exercise: Comparison with sensor level analysis
+#### Exercise: comparison with sensor level analysis
 
 {% include markup/info %}
 How do all these beamforming result relate to the [sensor level analysis](/tutorial/sensor_analysis)?

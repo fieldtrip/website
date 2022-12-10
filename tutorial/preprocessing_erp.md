@@ -83,7 +83,7 @@ You can also use **[ft_databrowser](/reference/ft_databrowser)** to visualize th
     cfg.dataset = 's04.vhdr';
     ft_databrowser(cfg);
 
-#### Exercise 1
+#### Exercise
 
 {% include markup/info %}
 Why is there a vertical line with label S141 on the first call to ft_databrowser(cfg,data)?

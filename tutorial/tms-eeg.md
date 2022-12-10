@@ -773,7 +773,7 @@ A nice feature of **[ft_singleplotER](/reference/ft_singleplotER)** is that you 
 
 {% include image src="/assets/img/tutorial/tms-eeg/figure21.png" %}
 
-#### Exercise: Where are the differences?
+#### Exercise: where are the differences?
 
 {% include markup/exercise %}
 Where can you find the largest differences? How does the topography of these differences look like? Does it make sense given that we know we stimulated left-M1?
@@ -923,13 +923,13 @@ This plot is fully interactive, click and drag to select one or more channels, c
 
 {% include image src="/assets/img/tutorial/tms-eeg/figure25.png" %}
 
-#### Exercise: Additional information
+#### Exercise: additional information
 
 {% include markup/exercise %}
 What additional information can be gained by analyzing time-frequency data?
 {% include markup/end %}
 
-#### Exercise: Conclusion
+#### Exercise: conclusion
 
 {% include markup/exercise %}
 Now that we have described three ways of looking at our data, can we conclude the conditions differ? If so, how do they differ specifically?
