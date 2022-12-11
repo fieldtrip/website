@@ -188,7 +188,7 @@ title: Phalow_amphigh
     cfg.keeptrials = 'yes';
     data_hilbert = ft_preprocessing(cfg,data);
 
-    figure;
+    figure
     plot(data.time{1}(sel),data.trial{1}(1,sel))
     hold on
     plot(data_hilbert.time{1}(sel),data_hilbert.trial{1}(sel),'r', 'linewidth', 2)

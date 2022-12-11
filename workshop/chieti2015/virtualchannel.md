@@ -62,7 +62,7 @@ Best is always to check the coordinate system of the MRI.
 {% include image src="/assets/img/workshop/chieti2015/virtualchannel/screen_shot_2015-09-17_at_09.36.22.png" width="500" %}
 
 {% include markup/info %}
-Click around in the figure and look at the "bti" head coordinates that are printed in the screen. Subsequently look up the definition of the 4D/BTi head coordinate system in this [frequently asked question](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined#details_of_the_4dbti_coordinate_system).
+Click around in the figure and look at the "bti" head coordinates that are printed in the screen. Subsequently look up the definition of the 4D/BTi head coordinate system in this [frequently asked question](/faq/coordsys#details_of_the_4dbti_coordinate_system).
 
 You can see that the orientation of the MRI is not as expected. Especially annoying is that it has a left-right flip. Note that each voxel's coordinates are technically OK, but the interpretation of the figure will be easier if the MRI is resliced on a voxel grid that is aligned along the axes of the 4D/BTi coordinate system.
 {% include markup/end %}

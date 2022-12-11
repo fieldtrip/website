@@ -497,7 +497,7 @@ The anatomical MRI is obtained from http://brainatlas.mbi.ufl.edu.
 
 FIXME insert figure (13 ft_determine_coordsys)
 
-This gives a figure that shows the origin (white sphere), the x-, y-, and z-axes. We notice that the origin is not at Bregma, nor at the interaural point. This is inconsistent with the desired [coordinate system](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined?&#details_on_the_paxinos-franklin_mouse_coordinate_system), hence we have to realign the anatomical MRI.
+This gives a figure that shows the origin (white sphere), the x-, y-, and z-axes. We notice that the origin is not at Bregma, nor at the interaural point. This is inconsistent with the desired [coordinate system](/faq/coordsys#details_on_the_paxinos-franklin_mouse_coordinate_system), hence we have to realign the anatomical MRI.
 
 #### Coregistration using high-level graphical function
 

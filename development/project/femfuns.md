@@ -20,14 +20,14 @@ FEMfuns is a python based open-source pipeline and will be called externally fro
 - test on sphere: compute the forward solutions in FieldTrip using a compiled binary of FEMfuns
 - test on real dataset: compute forward solution in a realistically shaped head model (test the interaction of forward solutions computed with FEMfuns and pre-processing/source analysis routines implemented in FieldTrip)
 
-The general workflow consists of calling many toolboxes and subroutines from MATLAB (see Figure 1). 
+The general workflow consists of calling many toolboxes and subroutines from MATLAB (see Figure 1).
 
 {% include image src="/assets/img/development/project/femfuns/workflow_fieldtrip.png" width="500" %}
 _Figure1: Schematic representation of the general workflow._
 
-The user is suggested to work from a MATLAB script, where they will call both FieldTrip and FEMfuns (see Figure 1). Before starting with such a script, it is necessary to set up both Fieldtrip and FEMfuns (Figure 1, gray box). 
+The user is suggested to work from a MATLAB script, where they will call both FieldTrip and FEMfuns (see Figure 1). Before starting with such a script, it is necessary to set up both Fieldtrip and FEMfuns (Figure 1, gray box).
 
-While Fieldtrip is MATLAB-based, FEMfuns is Python-based and, in particular, it externally calls Fenics to solve partial differential equations. For this, the whole procedure resembles a Russian doll (see Figure 2). 
+While Fieldtrip is MATLAB-based, FEMfuns is Python-based and, in particular, it externally calls Fenics to solve partial differential equations. For this, the whole procedure resembles a Russian doll (see Figure 2).
 
 {% include image src="/assets/img/development/project/femfuns/workflow_doll_embedded.png" width="500" %}
 _Figure 2: General workflow of the interface between FEMfuns and FieldTrip. From left to right: FieldTrip is called directly by MATLAB. To call FEMfuns from MATLAB, a shell script is launched in MATLAB. This shell script runs under the hood and calls FEMfuns routines implemented in Python._
@@ -39,7 +39,7 @@ Besides Fieldtrip, other external software is used in the workflow, e.g., FEniCS
 {% include image src="/assets/img/development/project/femfuns/schema_doll_embedded.png" width="500" %}
 
 ## Running a simulation with FieldTrip and FEMfuns combined
-The following section illustrates an example where the FEMfuns pipeline is embedded in FieldTrip. The geometry, electrodes and source-model are created in FieldTrip. These are used in FEMfuns to calculate leadfields by means of FEM with optional properties such as an electrode surface conductance and stimulating electrodes. Here, we present examples both in a simple sphere model and an MRI-based realistic head model. 
+The following section illustrates an example where the FEMfuns pipeline is embedded in FieldTrip. The geometry, electrodes and source-model are created in FieldTrip. These are used in FEMfuns to calculate leadfields by means of FEM with optional properties such as an electrode surface conductance and stimulating electrodes. Here, we present examples both in a simple sphere model and an MRI-based realistic head model.
 
 ### Setting-up
 The instructions to set up FEMfuns can be found on the [Github page](https://github.com/Donders-Institute/FEMfuns).
@@ -72,7 +72,7 @@ Creating the environment is only needed once, but every new session where FEMfun
 
 Before starting with FieldTrip, it is important that you set up your [MATLAB path](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path) properly.
 
-    cd PATH_TO_FIELDTRIP
+    cd <path_to_fieldtrip>
     ft_defaults
 
 ### Simulation

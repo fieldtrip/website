@@ -49,7 +49,7 @@ _Figure 2. Pipeline of creating a BEM model_
 
 Before starting with FieldTrip, it is important that you set up your [MATLAB path](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path) properly.
 
-    cd PATH_TO_FIELDTRIP
+    cd <path_to_fieldtrip>
     ft_defaults
 
 Then, you can read in the mri data.
@@ -71,7 +71,7 @@ The structure of your mri variable contains the following field
 - **transform**: A homogenous [transformation matrix](/faq/how_change_mri_orientation_size_fov) that aligns the anatomical data (in field **anatomy**) to a certain coordinate system.
 - **coordsys**: The description of the coordinate system which the anatomical data is aligned to.
 
-You can see that the **coordsys** field of anatomical data that we read in is already aligned to the [ctf coordinate system](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined#details_of_the_ctf_coordinate_system).
+You can see that the **coordsys** field of anatomical data that we read in is already aligned to the [ctf coordinate system](/faq/coordsys#details_of_the_ctf_coordinate_system).
 
 {% include markup/info %}
 Later in this tutorial, we will segment the anatomical MRI. Segmentation works properly when the voxels of the anatomical images are homogenous (i.e. the size of the voxel is the same into each direction). If you do not have homogenous voxels (or you are not sure of), you can use the **[ft_volumereslice](/reference/ft_volumereslice)** function on the anatomical data before segmentation. Read more about re-slicing [here](/faq/how_change_mri_orientation_size_fov).

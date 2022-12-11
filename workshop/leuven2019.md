@@ -34,7 +34,7 @@ _We will start at 9:00 sharp and will finish around 12:00._
 To get going, you need to start MATLAB. Then, you need to issue the following command
 
     restoredefaultpath
-    cd path_to_fieldtrip
+    cd <path_to_fieldtrip>
     addpath(pwd)
     ft_defaults
 

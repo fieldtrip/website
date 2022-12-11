@@ -12,9 +12,9 @@ This tutorial demonstrates how to construct an electrode model based on a single
 This tutorial does not cover how to create a 2-D channel layout for plotting, nor how to do the source estimation itself.
 
 {% include markup/warning %}
-Please cite this paper when using our implementation for localizing electrodes with the Structure Sensor 3D-scanner.
+Please cite the follwing paper when using this implementation for localizing electrodes with the Structure Sensor 3D-scanner.
 
-Homölle S, Oostenveld R. [Using a structured-light 3D scanner to improve EEG source modeling with more accurate electrode positions.](https://doi.org/10.1016/j.jneumeth.2019.108378) J Neurosci Methods. 2019 Oct 1;326:108378.
+Homölle S, Oostenveld R. [Using a structured-light 3D scanner to improve EEG source modeling with more accurate electrode positions.](https://doi.org/10.1016/j.jneumeth.2019.108378) J Neurosci Methods (2019).
 {% include markup/end %}
 
 ### Background
@@ -49,30 +49,30 @@ The structure sensor is attached to an iPad mini. We use the [Scanner - Structur
 
 Before starting with FieldTrip, it is important that you set up your [MATLAB path](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path) properly.
 
-    cd PATH_TO_FIELDTRIP
+    cd <path_to_fieldtrip>
     ft_defaults
 
-Then you can load the data (this might take some time)
+Then you can load the data into memory, note that this might take some time.
 
     head_surface = ft_read_headshape('Model/Model.obj')
-    disp(head_surface)
 
+    disp(head_surface)
           pos: [553494x3 double]
           tri: [800000x3 double]
          unit: 'm'
         color: [553494x3 uint8]
 
-We convert the units to mm.
+We convert the units to mm
 
     head_surface = ft_convert_units(head_surface, 'mm');
 
-We visualize the mesh surface
+and visualize the mesh surface:
 
     ft_plot_mesh(head_surface)
 
 {% include image src="/assets/img/tutorial/electrode/figure1.jpg" width="400" %}
 
-_Figure 1: Mesh recorded with 3D-scanner_
+_Figure: Mesh recorded with 3D-scanner_
 
 In the next step we will transform our mesh into [CTF coordinates](/faq/coordsys). For this we have to specify the nasion (NAS), right preauricular (RPA) and left preauricular (LPA) points. See the video at [178 seconds](https://youtu.be/d6FZlZTf-Hg?t=178) for how to select anatomical landmarks for MATLAB version 2018 and earlier. The 3-D image rotation in figures has changed with MATLAB 2019: for this and later versions you first select the anatomical landmark, then select the electrode label ("1" for the first fiducial), then enable rotate, then rotate the head, then disable rotate, and repeat.
 
@@ -86,7 +86,7 @@ Now that we have the position of the fiducials relative to the original coordina
 {% include image src="/assets/img/tutorial/electrode/figure3.png" %}
 {% include image src="/assets/img/tutorial/electrode/figure4.png" %}
 
-_Figures: Location of the fiducials_
+_Figure: Location of the fiducials_
 
     cfg = [];
     cfg.method        = 'fiducial';

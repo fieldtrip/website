@@ -84,7 +84,7 @@ It is possible to visualise the anatomical MRI using the **[ft_sourceplot](/refe
 
 {% include image src="/assets/img/workshop/natmeg/dipolefitting/natmeg_dip_mri_orig.png" width="500" %}
 
-You can see that the MRI is displayed upside down. That in itself is not a problem, as long as the coordinate system correctly describes the MRI. This [frequently asked question](/faq/my_mri_is_upside_down_is_this_a_problem) explains why it is not a problem. However, if you click around in the MRI and look how the [x y z] position in the lower right panel is updated, you should recognize that the MRI is not coregistered with the [Neuromag head coordinate system](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined#details_of_the_neuromag_coordinate_system).
+You can see that the MRI is displayed upside down. That in itself is not a problem, as long as the coordinate system correctly describes the MRI. This [frequently asked question](/faq/my_mri_is_upside_down_is_this_a_problem) explains why it is not a problem. However, if you click around in the MRI and look how the [x y z] position in the lower right panel is updated, you should recognize that the MRI is not coregistered with the [Neuromag head coordinate system](/faq/coordsys#details_of_the_neuromag_coordinate_system).
 
 ### Coregister the anatomical MRI to the MEG coordinate system
 
@@ -350,7 +350,7 @@ As before, we also compute the difference waveform, i.e. the [mismatch negativit
 
 ### Fit a dipole model to the MEG data
 
-Having constructed the volume conduction model and completed the processing of the channel level data, we can investigate how well the data can be modeled with an Equivalent current Dipole (ECD) model. Since we expect activity in both auditory cortices, we will use a two-dipole model. Scanning the whole brain with two separate dipoles is not possible, but we can also start with the assumtion that the two dipoles are symmetric. In the [Neuromag coordinate system](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined#details_of_the_neuromag_coordinate_system) the x-axis runs from the right to the left, hence we specify symmetry along the x-direction.
+Having constructed the volume conduction model and completed the processing of the channel level data, we can investigate how well the data can be modeled with an Equivalent current Dipole (ECD) model. Since we expect activity in both auditory cortices, we will use a two-dipole model. Scanning the whole brain with two separate dipoles is not possible, but we can also start with the assumtion that the two dipoles are symmetric. In the [Neuromag coordinate system](/faq/coordsys#details_of_the_neuromag_coordinate_system) the x-axis runs from the right to the left, hence we specify symmetry along the x-direction.
 
     cfg = [];
     cfg.latency = [0.080 0.110];

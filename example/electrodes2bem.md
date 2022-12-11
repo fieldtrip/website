@@ -11,7 +11,7 @@ redirect_from:
 
 To use accurate individual volume conduction models of the head (or "head models") in inverse source reconstruction of EEG data, we construct a head model from the individual MRI. Furthermore, it is necessary to express the electrode positions in the same coordinate system and units as the MRI and head model.
 
-This script demonstrates how to transform electrode positions to the individuals MRI space using the 3 fiducial points 'nasion', 'preauricular left' and 'preauricular right'. In the example below the position of these three anatomical marker locations is specified in the electrode structure as if they were normal electrodes.
+This script demonstrates how to transform electrode positions to the individuals MRI space using the 3 fiducial points that correspond to the anatomical landmarks 'nasion', 'preauricular left' and 'preauricular right'. In the example below the position of these three anatomical landmark locations is specified in the electrode structure as if they were normal electrodes.
 
 Furthermore, it is necessary to provide the voxel coordinates of the same fiducial points in the MRI. Typically the MRI is aligned to MNI space, thus the resulting electrode positions are as well aligned to MNI space.
 
