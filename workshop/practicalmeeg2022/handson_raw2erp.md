@@ -340,11 +340,12 @@ Now that we have a combined layout, we can plot all three datatypes and all thre
 
 {% include markup/info %}
 Explore the data, using the interactive property of the figure. Visualize the topographies of the ERF/ERPs in the latency window between 175 and 250 ms. Also inspect the topographies in the latency window from 300-450 ms. Explain the differences in topography (between latencies and channel types) based on putative underlying neuronal generators.
-{% include markup/end %}
 
 {% include image src="/assets/img/workshop/practicalmeeg2022/handson_raw2erp/figure6.png" width="600" %}
 
 _Figure: Topographies of the average across selected latency window for one of the conditions._
+{% include markup/end %}
+
 
 #### Exercise 2
 
@@ -363,6 +364,10 @@ Use the following code to compute and plot the ERP together with the standard de
     plot(avg_famous.time, avg_plus_sd, 'b:')
     plot(avg_famous.time, avg_minus_sd, 'b:')
 
+{% include image src="/assets/img/workshop/practicalmeeg2022/handson_raw2erp/figure7.png" width="600" %}
+
+_Figure: the averaged ERP on EEG065, plus and minus the standard deviation._
+
 The standard deviation is quite large, among others because we have not yet performed any artifact correction. However, the average is rather clean due to it being computed over many trials. Use the following code to compute and plot the ERP together with the SD
 
     % there are 295 trials in this condition
@@ -374,6 +379,11 @@ The standard deviation is quite large, among others because we have not yet perf
     hold on
     plot(avg_famous.time, avg_plus_sem, 'b:')
     plot(avg_famous.time, avg_minus_sem, 'b:')
+
+{% include image src="/assets/img/workshop/practicalmeeg2022/handson_raw2erp/figure8.png" width="600" %}
+
+_Figure: the averaged ERP on EEG065, plus and minus the SEM._
+
 {% include markup/end %}
 
 #### Exercise 3
@@ -396,6 +406,11 @@ You can thresholded the ERP using the SEM to highlight parts of the time series:
     ft_plot_vector(avg_famous.time, avg, 'highlight', significant, 'highlightstyle', 'thickness', 'color', 'b');
     axis tight
     grid on
+    
+{% include image src="/assets/img/workshop/practicalmeeg2022/handson_raw2erp/figure9.png" width="400" %}{% include image src="/assets/img/workshop/practicalmeeg2022/handson_raw2erp/figure10.png" width="400" %}
+
+_Figure: the ERP with the SEM as highlighted region, and the ERP that highlights the threshold._
+
 {% include markup/end %}
 
 #### Exercise 4
@@ -412,6 +427,10 @@ This results in the data being represented in a 3D array that is trials by chann
     figure
     subplot(2,1,1); imagesc(squeeze(avg_all.trial(:,367,:)))
     subplot(2,1,2); plot(avg_all.time, mean(squeeze(avg_all.trial(:,367,:)),1)); axis tight
+
+{}% include image src="/assets/img/workshop/practicalmeeg2022/handson_raw2erp/figure11.png" width="600" %}
+
+_Figure: the ERP image._
 
 It usually gets more interesting if we sort the trials by reaction time, prestimulus alpha power, or some other metric that influences the ERP responses. Here we can sort them on the trial type.
 
