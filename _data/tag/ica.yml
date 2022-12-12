@@ -40,7 +40,7 @@
 - name:  Group-level statistics with parametric and non-parametric methods
   link:  /workshop/practicalmeeg2022/handson_groupanalysis
 
-- name:  From raw data to ERP
+- name:  Preprocessing raw data and computing ERPs/ERFs
   link:  /workshop/practicalmeeg2022/handson_raw2erp
 
 - name:  Time-frequency analysis using Hanning window, multitapers and wavelets
