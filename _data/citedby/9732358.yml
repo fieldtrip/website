@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '36481698'
+- idtype: doi
+  value: 10.1038/s42003-022-04231-w
+- idtype: pmcid
+  value: PMC9732358
+authors:
+- authtype: Author
+  name: Chinchani AM
+- authtype: Author
+  name: Paliwal S
+- authtype: Author
+  name: Ganesh S
+- authtype: Author
+  name: Chandrasekhar V
+- authtype: Author
+  name: Yu BM
+- authtype: Author
+  name: Sridharan D
+epubdate: 2022 Dec 8
+fulljournalname: Communications Biology
+issue: ''
+pages: '1346'
+pmclivedate: 2022/12/10
+printpubdate: ''
+pubdate: 2022 Dec 8
+sortdate: 2022/12/08 00:00
+source: Commun Biol
+title: Tracking momentary fluctuations in human attention with a cognitive brain-machine
+  interface
+uid: '9732358'
+volume: '5'

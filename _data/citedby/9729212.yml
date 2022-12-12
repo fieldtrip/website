@@ -1,0 +1,42 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1038/s41467-022-35121-8
+- idtype: pmcid
+  value: PMC9729212
+authors:
+- authtype: Author
+  name: Herz DM
+- authtype: Author
+  name: Bange M
+- authtype: Author
+  name: Gonzalez-Escamilla G
+- authtype: Author
+  name: Auer M
+- authtype: Author
+  name: Ashkan K
+- authtype: Author
+  name: Fischer P
+- authtype: Author
+  name: Tan H
+- authtype: Author
+  name: Bogacz R
+- authtype: Author
+  name: Muthuraman M
+- authtype: Author
+  name: Groppa S
+- authtype: Author
+  name: Brown P
+epubdate: 2022 Dec 7
+fulljournalname: Nature Communications
+issue: ''
+pages: '7530'
+pmclivedate: 2022/12/09
+printpubdate: ''
+pubdate: 2022 Dec 7
+sortdate: 2022/12/07 00:00
+source: Nat Commun
+title: Dynamic control of decision and movement speed in the human basal ganglia
+uid: '9729212'
+volume: '13'

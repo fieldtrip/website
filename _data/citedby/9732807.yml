@@ -1,0 +1,58 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1117/1.NPh.10.1.013507
+- idtype: pmcid
+  value: PMC9732807
+authors:
+- authtype: Author
+  name: Tucker S
+- authtype: Author
+  name: Dubb J
+- authtype: Author
+  name: Kura S
+- authtype: Author
+  name: von Lühmann A
+- authtype: Author
+  name: Franke R
+- authtype: Author
+  name: Horschig JM
+- authtype: Author
+  name: Powell S
+- authtype: Author
+  name: Oostenveld R
+- authtype: Author
+  name: Lührs M
+- authtype: Author
+  name: Delaire É
+- authtype: Author
+  name: Aghajan ZM
+- authtype: Author
+  name: Yun H
+- authtype: Author
+  name: Yücel MA
+- authtype: Author
+  name: Fang Q
+- authtype: Author
+  name: Huppert TJ
+- authtype: Author
+  name: Frederick BB
+- authtype: Author
+  name: Pollonini L
+- authtype: Author
+  name: Boas D
+- authtype: Author
+  name: Luke R
+epubdate: 2022 Dec 9
+fulljournalname: Neurophotonics
+issue: '1'
+pages: '013507'
+pmclivedate: 2022/12/09
+printpubdate: 2023 Jan
+pubdate: 2022 Dec 9
+sortdate: 2022/12/09 00:00
+source: Neurophotonics
+title: Introduction to the shared near infrared spectroscopy format
+uid: '9732807'
+volume: '10'

@@ -1,0 +1,40 @@
+articleids:
+- idtype: pmid
+  value: '33450573'
+- idtype: doi
+  value: 10.1016/j.clinph.2020.11.030
+- idtype: pmcid
+  value: PMC9731517
+- idtype: MID
+  value: NIHMS1852472
+authors:
+- authtype: Author
+  name: Mitsuhashi T
+- authtype: Author
+  name: Sonoda M
+- authtype: Author
+  name: Jeong JW
+- authtype: Author
+  name: Silverstein BH
+- authtype: Author
+  name: Iwaki H
+- authtype: Author
+  name: Luat AF
+- authtype: Author
+  name: Sood S
+- authtype: Author
+  name: Asano E
+epubdate: 2020 Dec 22
+fulljournalname: 'Clinical neurophysiology : official journal of the International
+  Federation of Clinical Neurophysiology'
+issue: '2'
+pages: 520-529
+pmclivedate: 2022/12/08
+printpubdate: 2021 Feb
+pubdate: 2020 Dec 22
+sortdate: 2020/12/22 00:00
+source: Clin Neurophysiol
+title: Four-dimensional tractography animates neural propagations via distinct interhemispheric
+  pathways
+uid: '9731517'
+volume: '132'

@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '36344264'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0708-22.2022
+- idtype: pmcid
+  value: PMC9732826
+authors:
+- authtype: Author
+  name: Sherman BE
+- authtype: Author
+  name: Graves KN
+- authtype: Author
+  name: Huberdeau DM
+- authtype: Author
+  name: Quraishi IH
+- authtype: Author
+  name: Damisah EC
+- authtype: Author
+  name: Turk-Browne NB
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '48'
+pages: 9053-9068
+pmclivedate: ''
+printpubdate: 2022 Nov 30
+pubdate: 2022 Nov 30
+sortdate: 2022/11/30 00:00
+source: J Neurosci
+title: Temporal Dynamics of Competition between Statistical Learning and Episodic
+  Memory in Intracranial Recordings of Human Visual Cortex
+uid: '9732826'
+volume: '42'

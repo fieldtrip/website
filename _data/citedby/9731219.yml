@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fncom.2022.900571
+- idtype: pmcid
+  value: PMC9731219
+authors:
+- authtype: Author
+  name: La Fisca L
+- authtype: Author
+  name: Vandenbulcke V
+- authtype: Author
+  name: Wauthia E
+- authtype: Author
+  name: Miceli A
+- authtype: Author
+  name: Simoes Loureiro I
+- authtype: Author
+  name: Ris L
+- authtype: Author
+  name: Lefebvre L
+- authtype: Author
+  name: Gosselin B
+- authtype: Author
+  name: Pernet CR
+epubdate: 2022 Nov 22
+fulljournalname: Frontiers in Computational Neuroscience
+issue: ''
+pages: '900571'
+pmclivedate: 2022/12/09
+printpubdate: ''
+pubdate: 2022 Nov 22
+sortdate: 2022/11/22 00:00
+source: Front Comput Neurosci
+title: 'Biases in BCI experiments: Do we really need to balance stimulus properties
+  across categories?'
+uid: '9731219'
+volume: '16'

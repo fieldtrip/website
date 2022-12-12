@@ -1,0 +1,49 @@
+articleids:
+- idtype: pmid
+  value: '36448671'
+- idtype: doi
+  value: 10.7554/eLife.78109
+- idtype: pmcid
+  value: PMC9731574
+authors:
+- authtype: Author
+  name: Roux F
+- authtype: Author
+  name: Parish G
+- authtype: Author
+  name: Chelvarajah R
+- authtype: Author
+  name: Rollings DT
+- authtype: Author
+  name: Sawlani V
+- authtype: Author
+  name: Hamer H
+- authtype: Author
+  name: Gollwitzer S
+- authtype: Author
+  name: Kreiselmeyer G
+- authtype: Author
+  name: ter Wal MJ
+- authtype: Author
+  name: Kolibius L
+- authtype: Author
+  name: Staresina BP
+- authtype: Author
+  name: Wimber M
+- authtype: Author
+  name: Self MW
+- authtype: Author
+  name: Hanslmayr S
+epubdate: 2022 Nov 30
+fulljournalname: eLife
+issue: ''
+pages: e78109
+pmclivedate: 2022/12/09
+printpubdate: ''
+pubdate: 2022 Nov 30
+sortdate: 2022/11/30 00:00
+source: eLife
+title: Oscillations support short latency co-firing of neurons during human episodic
+  memory formation
+uid: '9731574'
+volume: '11'
