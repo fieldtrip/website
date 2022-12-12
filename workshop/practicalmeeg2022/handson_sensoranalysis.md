@@ -44,11 +44,7 @@ This tutorial shows four types of time-frequency analysis. You can find each of 
 
 The first step is to read the data using the function **[ft_preprocessing](/reference/ft_preprocessing)**. To reduce boundary effects at the start and the end of the trials, it is recommended to read slightly larger time intervals than the time period of interest. In this example, the time of interest is from -0.6 s to 1.3 s, where t=0 defines the time of stimulus); however, for reasons that will become clear later, the script reads the data from -0.8 s to 1.5 s.
 
-## Time-frequency analysis I
-
-### Hanning taper, fixed window length
-
-Here, we will describe how to calculate time frequency representations using Hanning tapers. When choosing for a fixed window length procedure, the frequency resolution is defined according to the length of the time window (delta T). The frequency resolution (delta f in figure 1) = 1/length of time window in sec (delta T in figure 1). Thus, a 400 ms time window results in a 2.5 Hz frequency resolution (1/0.4 sec= 2.5 Hz) meaning that power can be calculated for frequency bins centered at 2.5 Hz, 5 Hz, 7.5 Hz etc. An integer number of cycles must fit in the time window.
+## Preprocessing the data
 
 The **[ft_freqanalysis](/reference/ft_freqanalysis)** function requires a 'raw' data structure, which is the output of **[ft_preprocessing](/reference/ft_preprocessing)**. In the following code section, we duplicate the preprocessing part of the [raw2erp tutorial](/workshop/practicalmeeg2022/handson_raw2erp) tutorial, with a few important modifications. As mentioned above, the epoch length is increased to account for boundary effects. Moreover, we will not apply a bandpass filter to the data (why not?) and will only read in the MEG data. The execution of the following chunk of code takes some time. The precomputed data are in the `derivatives/sensoranalysis/sub-01` folder, and can also be loaded from there:
 
@@ -103,7 +99,90 @@ The **[ft_freqanalysis](/reference/ft_freqanalysis)** function requires a 'raw' 
     data = ft_appenddata([], rundata{:});
     clear rundata;
 
-Now that we have the data in memory, we can compute the time-frequency representation, which we do here for each of the conditions separately:
+Alternatively, you can also use the [sub-01_data.mat](https://download.fieldtriptoolbox.org/workshop/practicalmeeg2022/derivatives/sensoranalysis/sub-01/sub-01_data.mat) data file that is shared on our download server.
+
+    filename = fullfile(subj.outputpath, 'sensoranalysis', subj.name, sprintf('%s_data', subj.name));
+    % save(filename, 'data');
+    load(filename, 'data');
+
+## Frequency analysis (not time-resolved)
+
+Before we go to time-frequency analysis, let's first look at how the power spectrum of the signal looks like without considering the stimulus that is presented at t=0.
+
+We can compute the power using the `mtmfft` method using a single hanning window.
+
+    cfg = [];
+    cfg.method = 'mtmfft';
+    cfg.taper = 'hanning';
+    freq = ft_freqanalysis(cfg, data);
+
+To plot the data, we can use **[ft_singleplotER](/reference/ft_singleplotER)** and **[ft_multiplotER](/reference/ft_multiplotER)**. Note that the same functions are used for ERPs and non-time-resolved spectra, both types of data are represented in a 2D matrix, which is channels-by-time or channels-by-frequency. Rather than plotting time along the horizontal axis, for the power spectrum the functions will plot the frequency along the horozontal axis.
+
+However, we can also use plain MATLAB plotting functions. Let's look at a specific MEG channel
+
+    % this shows that MEG0741 corresponds to channel 84
+    find(strcmp(freq.label, 'MEG0741'))
+    
+    figure
+    plot(freq.freq, freq.powspctrm(84,:));
+    xlabel('frequency')
+    ylabel('power')
+
+Rather than plotting power along a linear axis, we can also use a logarithmic axis.
+
+    figure
+    semilogy(freq.freq, freq.powspctrm(84,:))
+    xlabel('frequency')
+    ylabel('power')
+
+Or we can log transform the data ourselves. The following converts the data into decidel (dB).
+
+    figure
+    plot(freq.freq, 10*log10(freq.powspctrm(84,:)));
+    xlabel('frequency')
+    ylabel('power (dB)')
+    grid on
+    set(gca, 'XTick', 0:10:150)
+
+{% include image src="/assets/img/workshop/practicalmeeg2022/handson_sensoranalysis/figure2a.png" width="650" %}
+
+_Figure: Power spectrum for channel MEG0741_
+
+We can see that the powerspectrum ranges from 0 to 150 Hz, which is due to the data being downsampled from 1100 to 300 Hz and the [Nyquist frequency](https://en.wikipedia.org/wiki/Nyquist_frequency) is 1/2 times the sampling rate. We can also see the effect of the [anti-aliassing filter](https://en.wikipedia.org/wiki/Aliasing) around 140 Hz, which was applied prior to downsampling.
+
+Furthermore, we see clear peaks at 50, 100 and 150 Hz, corresponding to the line-noise and its [harmonics](https://en.wikipedia.org/wiki/Harmonic). There is quite some low-frequency noise below 5 Hz (which would probably be way less if we would have worked with the artifact-cleaned data). There is an alpha peak around 10 Hz, and not really a peak but rather a "shoulder" at 25 Hz, corresponding to the beta band.  
+
+If we would want to continue all subsequent analysis with the power converted to decibel, we could use the **[ft_math](/reference/ft_math)** function to convert the `powspctrm` field to dB. That function can also be used to do mathematical operations on data structures, such as computing the difference between ERPs or computing the ratio between powerspectra. The following implements the dB transformation:
+
+    cfg = [];
+    cfg.operation = '10*log10(x1)';
+    cfg.parameter = 'powspctrm'; % this is represented by x, and x1 refers to the first (and only) input data structure
+    freq_db = ft_math(cfg, freq);
+    
+Since the power spectrum averaged over all trials shows a nice alpha peak, we could also check whether the alpha power increases over time. That is similar to how we computed the ERP image: we recompute the power spectrum, now only for one channel (to speed it up and use less memory) and we plot a color coded version of the trials-by-frequencies matrix.
+
+    cfg = [];
+    cfg.method = 'mtmfft';
+    cfg.taper = 'hanning';
+    cfg.keeptrials = 'yes';
+    cfg.channel = 'MEG0741';
+    freq_MEG0741 = ft_freqanalysis(cfg, data);
+
+    imagesc(10*log10(squeeze(freq_MEG0741.powspctrm)))
+
+{% include image src="/assets/img/workshop/practicalmeeg2022/handson_sensoranalysis/figure2b.png" width="650" %}
+
+_Figure: Power spectrum for channel MEG0741 over the whole course in the experiment_
+
+There is a FAQ that shows how to use a similar strategy to do [time-frequency analysis on continuous data](/faq/how_can_i_do_time-frequency_analysis_on_continuous_data).
+
+## Time-frequency analysis I
+
+### Hanning taper, fixed window length
+
+Here, we will describe how to calculate time frequency representations using Hanning tapers. When choosing for a fixed window length procedure, the frequency resolution is defined according to the length of the time window (delta T). The frequency resolution (delta f in figure 1) = 1/length of time window in sec (delta T in figure 1). Thus, a 400 ms time window results in a 2.5 Hz frequency resolution (1/0.4 sec= 2.5 Hz) meaning that power can be calculated for frequency bins centered at 2.5 Hz, 5 Hz, 7.5 Hz etc. An integer number of cycles must fit in the time window.
+
+After reading and preprocessing the data, we can compute the time-frequency representation, which we do here for each of the conditions separately:
 
     cfg        = [];
     cfg.method = 'mtmconvol';

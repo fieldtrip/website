@@ -216,15 +216,15 @@ At this stage, we have a set of spatiotemporal matrices, reflecting the electrop
 First of all, let's look at the plotting the data directly using standard MATLAB plotting commands. If we look at one of the averaged ERP/ERF data structures, we can recognize the field `time`, `avg` and `label`.
 
     >> disp(avg_famous)
-          grad: [1×1 struct]
-          elec: [1×1 struct]
+          grad: [1x1 struct]
+          elec: [1x1 struct]
           time: [-0.4988 -0.4955 -0.4921 -0.4888 -0.4855 -0.4821 -0.4788  … ]
-         label: {403×1 cell}
-           avg: [403×510 double]
-           var: [403×510 double]
-           dof: [403×510 double]
+         label: {403x1 cell}
+           avg: [403x510 double]
+           var: [403x510 double]
+           dof: [403x510 double]
         dimord: 'chan_time'
-           cfg: [1×1 struct]
+           cfg: [1x1 struct]
 
 To find a specific channel, we can use the following
 
