@@ -151,6 +151,6 @@
 - name:  Dealing with artifacts
   link:  /workshop/practicalmeeg2022/handson_artifacts
 
-- name:  From raw data to ERP
+- name:  Preprocessing raw data and computing ERPs/ERFs
   link:  /workshop/practicalmeeg2022/handson_raw2erp
 
