@@ -1,9 +1,9 @@
 ---
-title: From raw data to ERP
+title: Preprocessing raw data and computing ERPs/ERFs
 tags: [practicalmeeg2022, meg, timelock, preprocessing, mmfaces]
 ---
 
-# From raw data to ERP
+# Preprocessing raw data and computing ERPs/ERFs
 
 {% include markup/info %}
 This tutorial was written specifically for the [PracticalMEEG workshop in Aix-en-Provence](/workshop/practicalmeeg2022) in December 2022 and is part of a coherent sequence of tutorials. It is an updated version of the corresponding tutorial for [Paris 2019](/workshop/paris2019).
@@ -40,9 +40,7 @@ We use the `datainfo_subject` function, which is provided in the `code` folder a
 We obtain a structure that looks like this:
 
      subj =
-
      struct with fields:
-
                  id: 1
                name: 'sub-01'
             mrifile: '/project_qnap/3010000.02/practicalMEEG/ds00011?'
@@ -215,31 +213,41 @@ Once the data has been epoched and filtered, we can proceed with computing event
 
 At this stage, we have a set of spatiotemporal matrices, reflecting the electrophysiological response to different types of stimuli. In order to visualise the time courses, and interpret the spatial distribution of the responses, we can use a combination of the following FieldTrip functions: **[ft_multiplotER](/reference/ft_multiplotER)**, **[ft_topoplotER](/reference/ft_topoplotER)**, **[ft_singleplotER](/reference/ft_singleplotER)**. With the exception of **[ft_singleplotER](/reference/ft_singleplotER)** these functions require a specification of (a 2D projection) of the positions of the sensors/elctrodes. In FieldTrip, this is specified by the cfg.layout option; you can read more about this in the [layout tutorial](/tutorial/layout). More information about the visualisation of sensor (and source) level data can be found in the [plotting tutorial](/tutorial/plotting).
 
-Each type of channel can be visualised with its corresponding layout. For the visualisation of the gradiometers, we first compute the magnitude of the gradient by combining the 'horizontal' and 'vertical' gradients at each sensor location, using **[ft_combineplanar](/reference/ft_combineplanar)**.
+First of all, let's look at the plotting the data directly using standard MATLAB plotting commands. If we look at one of the averaged ERP/ERF data structures, we can recognize the field `time`, `avg` and `label`.
+
+    >> disp(avg_famous)
+          grad: [1×1 struct]
+          elec: [1×1 struct]
+          time: [-0.4988 -0.4955 -0.4921 -0.4888 -0.4855 -0.4821 -0.4788  … ]
+         label: {403×1 cell}
+           avg: [403×510 double]
+           var: [403×510 double]
+           dof: [403×510 double]
+        dimord: 'chan_time'
+           cfg: [1×1 struct]
+
+To find a specific channel, we can use the following
+
+    find(strcmp(avg_famous.label, 'EEG065'))
+    
+and to plot the 'EEG065' channel channel we can do
+
+    plot(avg_famous.time, avg_famous.avg(367,:), 'b')
+    hold on
+    plot(avg_unfamiliar.time, avg_unfamiliar.avg(367,:), 'r')
+    plot(avg_scrambled.time, avg_scrambled.avg(367,:), 'g')
+
+The same figure can be achieved using the following code
+
+    cfg = [];
+    cfg.channel = 'EEG065'
+    ft_singleplotER(cfg, avg_famous, avg_unfamiliar, avg_scrambled)
+
+There are in total 102 magnetometer channels, 204 planar gradiometer channels, and 70 EEG channels. We would not want to make a separate figure for each of them. We can plot the channels of one specific type (and with the same units) together in one figure, where each channel is plotted at the corresponding location.  
 
     % visualise the magnetometer data
     cfg        = [];
     cfg.layout = 'neuromag306mag_helmet.mat';
-    figure; ft_multiplotER(cfg, avg_famous, avg_unfamiliar, avg_scrambled);
-
-    % combine planar gradients and visualise the gradiometer data
-    cfg              = [];
-    avg_faces_c      = ft_combineplanar(cfg, avg_faces);
-    avg_famous_c     = ft_combineplanar(cfg, avg_famous);
-    avg_unfamiliar_c = ft_combineplanar(cfg, avg_unfamiliar);
-    avg_scrambled_c  = ft_combineplanar(cfg, avg_scrambled);
-
-    cfg        = [];
-    cfg.layout = 'neuromag306cmb_helmet.mat';
-    figure; ft_multiplotER(cfg, avg_famous_c, avg_unfamiliar_c, avg_scrambled_c);
-
-    % create an EEG channel layout on-the-fly and visualise the eeg data
-    cfg      = [];
-    cfg.elec = avg_faces.elec;
-    layout_eeg = ft_prepare_layout(cfg);
-
-    cfg        = [];
-    cfg.layout = layout_eeg;
     figure; ft_multiplotER(cfg, avg_famous, avg_unfamiliar, avg_scrambled);
 
 {% include image src="/assets/img/workshop/practicalmeeg2022/handson_raw2erp/figure1.png" width="400" %}
@@ -258,9 +266,33 @@ _Figure: Average across selected magnetometers for each of the conditions._
 
 _Figure: Topographies of average across selected latency window for each of the conditions._
 
-Alternatively, the data of different channel types can be visualised within a single figure. This leverages the interactive functionality of the figures and allows for easier comparison of latency-specific topographies. This can be achieved by first creating a combined layout with **[ft_appendlayout](/reference/ft_appendlayout)**. This requires some handcrafting to the scaling of the EEG-based layout in relation to the MEG layouts.
+For the visualisation of the gradiometers, we first compute the magnitude of the gradient by combining the 'horizontal' and 'vertical' gradients at each sensor location, using **[ft_combineplanar](/reference/ft_combineplanar)**.
 
-Also, when actually plotting the data with **[ft_multiplotER](/reference/ft_multiplotER)** we need to specify a channel type specific scaling factor, to accommodate the different order of magnitude of the physical units in which the data are expressed. Alternatively, these scaling difference can be removed by application of a relative baseline (e.g., expressing the signals' magnitude in dB relative to a specified baseline window), or by appropriately whitening the signals. Note, that the scaling factors here were obtained by eyeballing the data and do not represent 'official' scaling values.
+    % combine planar gradients and visualise the gradiometer data
+    cfg              = [];
+    avg_faces_c      = ft_combineplanar(cfg, avg_faces);
+    avg_famous_c     = ft_combineplanar(cfg, avg_famous);
+    avg_unfamiliar_c = ft_combineplanar(cfg, avg_unfamiliar);
+    avg_scrambled_c  = ft_combineplanar(cfg, avg_scrambled);
+
+    cfg        = [];
+    cfg.layout = 'neuromag306cmb_helmet.mat';
+    figure; ft_multiplotER(cfg, avg_famous_c, avg_unfamiliar_c, avg_scrambled_c);
+    
+Just like plotting the MEG data, we can plot the EEG data. Since EEG data is recorded with widely different EEG systems, numbers of channels, and electrode layouts, we need to specify the layout of the channels to be plotted. This is explained in detail in the [layout tutorial](/tutorial/layout). FieldTrip also comes with a wide range of [template layouts](/template/layout), but the 70-channel EEG system used here is not one of them. Luckily we have the electctrode positions, which were digitized with a Polhemus.
+
+    % create an EEG channel layout on-the-fly and visualise the eeg data
+    cfg      = [];
+    cfg.elec = avg_faces.elec;
+    layout_eeg = ft_prepare_layout(cfg);
+
+    cfg        = [];
+    cfg.layout = layout_eeg;
+    figure; ft_multiplotER(cfg, avg_famous, avg_unfamiliar, avg_scrambled);
+
+It is possible to visualize the data of the different channel types within a single figure. This leverages the interactive functionality of the figures and allows for easier comparison of latency-specific topographies. This can be achieved by first creating a combined layout with **[ft_appendlayout](/reference/ft_appendlayout)**. This requires some handcrafting to the scaling of the EEG-based layout in relation to the MEG layouts.
+
+When actually plotting the data with **[ft_multiplotER](/reference/ft_multiplotER)** we need to specify a channel type specific scaling factor, to accommodate the different order of magnitude of the physical units in which the data are expressed. Alternatively, these scaling difference can be removed by application of a relative baseline (e.g., expressing the signals' magnitude in dB relative to a specified baseline window), or by appropriately whitening the signals. Note, that the scaling factors here were obtained by eyeballing the data and do not represent 'official' scaling values.
 
     cfg        = [];
     cfg.layout = 'neuromag306mag_helmet.mat'; % magnetometers
@@ -304,7 +336,7 @@ Now that we have a combined layout, we can plot all three datatypes and all thre
     cfg.eegscale  = 1e6;
     figure; ft_multiplotER(cfg, avg_famous_c, avg_unfamiliar_c, avg_scrambled_c);
 
-#### Exercise
+#### Exercise 1
 
 {% include markup/info %}
 Explore the data, using the interactive property of the figure. Visualize the topographies of the ERF/ERPs in the latency window between 175 and 250 ms. Also inspect the topographies in the latency window from 300-450 ms. Explain the differences in topography (between latencies and channel types) based on putative underlying neuronal generators.
@@ -312,4 +344,80 @@ Explore the data, using the interactive property of the figure. Visualize the to
 
 {% include image src="/assets/img/workshop/practicalmeeg2022/handson_raw2erp/figure6.png" width="600" %}
 
-_Figure: Topographies of average across selected latency window for one of the conditions._
+_Figure: Topographies of the average across selected latency window for one of the conditions._
+
+#### Exercise 2
+
+{% include markup/info %}
+The `avg_famous` structure not only contains the average, but also the variance. That can be used to compute the standard deviation and the standard error of the mean (SEM).
+
+Use the following code to compute and plot the ERP together with the standard deviation:
+
+    avg          = avg_famous.avg(367,:);
+    avg_plus_sd  = avg + sqrt(avg_famous.var(367,:));
+    avg_minus_sd = avg - sqrt(avg_famous.var(367,:));
+
+    figure
+    plot(avg_famous.time, avg, 'b')
+    hold on
+    plot(avg_famous.time, avg_plus_sd, 'b:')
+    plot(avg_famous.time, avg_minus_sd, 'b:')
+
+The standard deviation is quite large, among others because we have not yet performed any artifact correction. However, the average is rather clean due to it being computed over many trials. Use the following code to compute and plot the ERP together with the SD
+
+    % there are 295 trials in this condition
+    avg_plus_sem  = avg + sqrt(avg_famous.var(367,:)) ./ sqrt(avg_famous.dof(367,:));
+    avg_minus_sem = avg - sqrt(avg_famous.var(367,:)) ./ sqrt(avg_famous.dof(367,:));
+
+    figure
+    plot(avg_famous.time, avg, 'b')
+    hold on
+    plot(avg_famous.time, avg_plus_sem, 'b:')
+    plot(avg_famous.time, avg_minus_sem, 'b:')
+{% include markup/end %}
+
+#### Exercise 3
+
+{% include markup/info %}
+
+Using the more low-level function **[ft_plot_vector](/reference/plotting/ft_plot_vector)** we can make a more fancy visualisation of the confidence interval around the ERP. Try the following:
+
+    figure
+    ft_plot_vector(avg_famous.time, [avg_plus_sem; avg_minus_sem], 'highlightstyle', 'difference')
+    ft_plot_vector(avg_famous.time, avg, 'color', 'k', 'linewidth', 2)
+    axis tight
+    grid on
+
+You can thresholded the ERP using the SEM to highlight parts of the time series:
+
+    significant = abs(avg) > 2*sqrt(avg_famous.var(367,:))./sqrt(avg_famous.dof(367,:));
+
+    figure
+    ft_plot_vector(avg_famous.time, avg, 'highlight', significant, 'highlightstyle', 'thickness', 'color', 'b');
+    axis tight
+    grid on
+{% include markup/end %}
+
+#### Exercise 4
+
+{% include markup/info %}
+Rather than looking at the average and go to the thresholded statistics straight away, we can also look at the individual trials. For that it helps to represent the data according to the `timelock` structure, but keeping all the trials.
+
+    cfg = [];;
+    cfg.keeptrials = 'yes';
+    avg_trials = ft_timelockanalysis(cfg, data);
+
+This results in the data being represented in a 3D array that is trials by channels by time: the dimord is `rpt_chan_time`. We can look at the time-locked response over all trials in a single channe; this is often called an ERP image.
+
+    figure
+    subplot(2,1,1); imagesc(squeeze(avg_all.trial(:,367,:)))
+    subplot(2,1,2); plot(avg_all.time, mean(squeeze(avg_all.trial(:,367,:)),1)); axis tight
+
+It usually gets more interesting if we sort the trials by reaction time, prestimulus alpha power, or some other metric that influences the ERP responses. Here we can sort them on the trial type.
+
+    [triggercode, order] = sort(avg_all.trialinfo(:,1));
+
+    figure
+    subplot(2,1,1); imagesc(squeeze(avg_all.trial(order,367,:)))
+    subplot(2,1,2); plot(avg_all.time, mean(squeeze(avg_all.trial(:,367,:)),1)); axis tight
+{% include markup/end %}
