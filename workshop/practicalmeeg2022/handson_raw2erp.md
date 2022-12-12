@@ -368,7 +368,7 @@ Use the following code to compute and plot the ERP together with the standard de
 
 _Figure: the averaged ERP on EEG065, plus and minus the standard deviation._
 
-The standard deviation is quite large, among others because we have not yet performed any artifact correction. However, the average is rather clean due to it being computed over many trials. Use the following code to compute and plot the ERP together with the SD
+The standard deviation is quite large, among others because we have not yet performed any artifact correction. However, the average is rather clean due to it being computed over many trials. Use the following code to compute and plot the ERP together with the SD:
 
     % there are 295 trials in this condition
     avg_plus_sem  = avg + sqrt(avg_famous.var(367,:)) ./ sqrt(avg_famous.dof(367,:));
@@ -428,9 +428,9 @@ This results in the data being represented in a 3D array that is trials by chann
     subplot(2,1,1); imagesc(squeeze(avg_all.trial(:,367,:)))
     subplot(2,1,2); plot(avg_all.time, mean(squeeze(avg_all.trial(:,367,:)),1)); axis tight
 
-{}% include image src="/assets/img/workshop/practicalmeeg2022/handson_raw2erp/figure11.png" width="600" %}
+{% include image src="/assets/img/workshop/practicalmeeg2022/handson_raw2erp/figure11.png" width="600" %}
 
-_Figure: the ERP image._
+_Figure: the ERP image of channel EEG065._
 
 It usually gets more interesting if we sort the trials by reaction time, prestimulus alpha power, or some other metric that influences the ERP responses. Here we can sort them on the trial type.
 
