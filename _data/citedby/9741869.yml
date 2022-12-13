@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '35118900'
+- idtype: doi
+  value: 10.1177/15500594221074860
+- idtype: pmcid
+  value: PMC9741869
+- idtype: MID
+  value: NIHMS1852460
+authors:
+- authtype: Author
+  name: Prashad N
+- authtype: Author
+  name: Melara RD
+- authtype: Author
+  name: Root JC
+- authtype: Author
+  name: Ahles TA
+epubdate: 2022 Feb 4
+fulljournalname: Clinical EEG and neuroscience
+issue: ''
+pages: '15500594221074860'
+pmclivedate: ''
+printpubdate: ''
+pubdate: 2022 Feb 4
+sortdate: 2022/02/04 00:00
+source: Clin EEG Neurosci
+title: Pre-Treatment Breast Cancer Patients Show Neural Differences in Frontal Alpha
+  Asymmetry
+uid: '9741869'
+volume: ''
