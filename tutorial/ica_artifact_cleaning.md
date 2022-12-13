@@ -23,11 +23,11 @@ For efficiency reasons we often do the preprocessing by first identifying the tr
 
 To clean the MEG data using ICA, we will follow the following procvedure
 
--   read the data with minimal preprocessing
--   remove segments with infrequent atypical artifacts
--   ICA decomposition of the data
--   identifying the components that reflect eye and heart artifacts
--   removing those components and backprojecting the data
+-   read the data with minimal preprocessing using **[ft_preprocessing](/reference/ft_preprocessing)**
+-   remove segments with infrequent atypical artifacts using either **[ft_rejectvisual](/reference/ft_rejectvisual)** or **[ft_databrowser](/reference/ft_databrowser) (or both)
+-   ICA decomposition of the data using **[ft_componentanalysis](/reference/ft_componentanalysis)**
+-   identifying the components that reflect eye and heart artifacts using **[ft_topoplotIC](/reference/ft_topoplotIC)** and **[ft_databrowser](/reference/ft_databrowser)
+-   removing those components and backprojecting the data using **[ft_rejectcomponent](/reference/ft_rejectcomponent)**
 
 {% include image src="/assets/img/tutorial/ica_artifact_cleaning/figure1.png" width="600" %}
 

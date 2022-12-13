@@ -11,7 +11,7 @@ This tutorial was written specifically for the [PracticalMEEG workshop in Aix-en
 
 ## Introduction
 
-In this tutorial, we will learn how to deal with artifacts in the data. We do have a more [general tutorial on dealing with artifacts](/tutorial/artifacts), which is followed by a tutorial on [visual artifact rejection](/tutorial/visual_artifact_rejection) and a tutorial on [automatic artifact rejection](/tutorial/automatic_artifact_rejection). In the remainder of this tutorial we will give a short background, which is folled by a specific look at the artifacts that are pressent in the specific data. The focus will not be on cleaning up the data, but rather on learning how artifacts can be detected and dealt with.
+In this tutorial, we will learn how to deal with artifacts in the data. We do have a more [general tutorial on dealing with artifacts](/tutorial/artifacts), which is followed by a tutorial on [visual artifact rejection](/tutorial/visual_artifact_rejection) and a tutorial on [automatic artifact rejection](/tutorial/automatic_artifact_rejection). In the remainder of this tutorial we will give a short background, which is followed by a specific look at the artifacts that are present in the specific data. The focus will not be on cleaning up the data, but rather on learning how artifacts can be detected and dealt with.
 
 In the remaining tutorials on this dataset for the [PracticalMEEG workshop](/workshop/practicalmeeg2022) the data for all subjects is **not** cleaned but processed as-is. As you will see, the MEG data does not have such a strong representation of the blinks and the beamformer source reconstruction which we do to end up with group statistics on the source-level will quite well supress the contribution of the eye activity.
  
@@ -21,13 +21,13 @@ Since the data is very large, with more than 400 channels at 1100Hz for a total 
 
 An alternative strategy that often is preferred for smaller datasets that completely fit in memory of your computer is to read in the continuous data using **[ft_preprocessing](/reference/ft_preprocessing)** and only later to cut out the segments of interest using **[ft_definetrial](/reference/ft_definetrial)** **[ft_redefinetrial](/reference/ft_redefinetrial)**. That approach is explained in a [separate tutorial](/tutorial/continuous).
 
-There are some differences between first segmenting and then detecting artifacts or detecting the artifacts in the continuous representation of the data. An important difference is that whgen you only look at segments of interest (aka trials), you won't see artifacts that happen in betweemn the trials. It might be that you instructed your participant to blink whenever there is no fixation cross on the screen, or that you allowed your participant some time to relax (and possibly some movement) in between blocks in your experiment. When only looking at the segments of interest, you won't see (and probably won't care) the corresponding artifacts.
+There are some differences between first segmenting and then detecting artifacts or detecting the artifacts in the continuous representation of the data. An important difference is that when you only look at segments of interest (aka trials), you won't see artifacts that happen in between the trials. It might be that you instructed your participant to blink whenever there is no fixation cross on the screen, or that you allowed your participant some time to relax (and possibly some movement) in between blocks in your experiment. When only looking at the segments of interest, you won't see (and probably won't care) the corresponding artifacts.
 
-When you process the data continuously, you may see artifacts at the start of the r3ecording but prior to the start of the actual experiment when the subject is still moving around. You may also see other movement related artifacts at time windows when the subject was not engaged in the task, for example between blocks. With a continuous representation of the data you will also see more eye blinks and movements, which can be beneficial to improve the quality of the ICA decomposition.
+When you process the data continuously, you may see artifacts at the start of the recording but prior to the start of the actual experiment when the subject is still moving around. You may also see other movement related artifacts at time windows when the subject was not engaged in the task, for example between blocks. With a continuous representation of the data you will also see more eye blinks and movements, which can be beneficial to improve the quality of the ICA decomposition.
 
 ## Background
 
-There are different causes for artifacts in the data, for example the subject might have blinked or moved, EEG channels might change their signal quality over time due to grying up of the gel, or MEG channels can have SQUID jumps.
+There are different causes for artifacts in the data, for example the subject might have blinked or moved, EEG channels might change their signal quality over time due to drying up of the gel, or MEG channels can have SQUID jumps.
 
 Sometimes artifacts are restricted to a single channel, or to a short time window. In other cases artifacts can extend over all channels, or are present during the complete recording.
 
@@ -35,7 +35,7 @@ Sometimes artifacts are restricted to a single channel, or to a short time windo
 
 These for example include 50Hz or 60Hz line noise, electrodes with poor impedance, sudden jumps in the MEG signal due to SQUID instabilities (so called SQUID jumps). In general these are always unwanted and also uninteresting. However, understanding the cause of the artifact can help us to make good decisions on how to deal with it during data analysis, or how to prevent them from happening in future experiments.
 
-There can be situations where the external artifacts are influenced by behaviour, for exaple the amount of line noise that is picked up by the body (which acts as antenna) can be influenced by the position of the body and hence might change dependent on the participant's movements. Also the presence of magnetic artifacts and SQUID jumps  in the MEG can get worse if the participant has for example a magnetized magnetic wire behind the teeth.
+There can be situations where the external artifacts are influenced by behaviour, for example the amount of line noise that is picked up by the body (which acts as antenna) can be influenced by the position of the body and hence might change dependent on the participant's movements. Also the presence of magnetic artifacts and SQUID jumps  in the MEG can get worse if the participant has for example a magnetized magnetic wire behind the teeth.
 
 ### Artifacts due to behaviour or physiology
 
@@ -70,7 +70,7 @@ The subject was performing a visual task, had to maintain fixation, and was (pro
 
 ### Visual identification of eye artifacts
 
-Since the data includes EOG channels, we can use those to identify the blinks and saccades. The **[ft_rejectvisual](/reference/ft_rejectvisual)** function has three methods: **summary**, **trial** and **channel**. When we use th emethod channel, we can visualize all trials for one channel:
+Since the data includes EOG channels, we can use those to identify the blinks and saccades. The **[ft_rejectvisual](/reference/ft_rejectvisual)** function has three methods: **summary**, **trial** and **channel**. When we use the method channel, we can visualize all trials for one channel:
 
     cfg = [];
     cfg.method = 'channel';
@@ -90,7 +90,7 @@ Please scroll to the VEOG channel by clicking about 40 times on the `>>` button 
 
 If you click two channels further to the ECG channel, you can also see that there is a heartbeat (and sometimes two) in every trial. That is a good sign: the participant is alive! This makes directly clear that rejecting trials that contain a heartbeat does not make sense. We will later look at removing the heartbeat artifacts using ICA.  
 
-We might want to decide that we want to exclude trials with blinks from further analysis. You can clinck on trials to exclude. However, you will realize that this involves a lot of clicking, as there are so many trials. In the next section we will automate the detection of blinks, but for now please select a few trials with blinks and click `quit`. This returns a data structure with slightly fewer trials. However, it also specifies where the artifacts were that you identified:
+We might want to decide that we want to exclude trials with blinks from further analysis. You can click on trials to exclude. However, you will realize that this involves a lot of clicking, as there are so many trials. In the next section we will automate the detection of blinks, but for now please select a few trials with blinks and click `quit`. This returns a data structure with slightly fewer trials. However, it also specifies where the artifacts were that you identified:
 
     >> disp(data_clean.cfg.artfctdef.channel.artifact)
            71401       71910
@@ -184,7 +184,7 @@ Using the following code, use all EEG channels instead of the dedicated EOG chan
     cfg.artfctdef.eog.cutoff = 20;
     cfg = ft_artifact_eog(cfg, data);
 
-Note that a different threshold is needed for the cutoff. Are you finding the same artifacts as before?
+The artifact score is computed by preprocessing each channel, z-transforming it,and summing over all channels. Therefore it depends on the number of channels that "see" the artifact. Consequently, a different threshold is needed for the cutoff depending on the number of channels. Are you finding the same artifacts as before?
 {% include markup/end %}
 
 ### Simple thresholding to identify artifacts
@@ -259,7 +259,7 @@ Since there are many trials (about 800 in total), going through all of them can 
 
     cfg = ft_databrowser(cfg, data);
 
-Along the horizontal axes you now see 30 seconds of data. Note that the data is in reality not continuous and that you might see some small jumps at the boundaries between trials. You can now horozontally zoom in or out to a convenient time scale. If you jump to about 300 seconds in the data, you can see that the blink frequency is increasing. Again, marking all of those blinks would be a lot of work.
+Along the horizontal axes you now see 30 seconds of data. Note that the data is in reality not continuous and that you might see some small jumps at the boundaries between trials. You can now horizontally zoom in or out to a convenient time scale. If you jump to about 300 seconds in the data, you can see that the blink frequency is increasing. Again, marking all of those blinks would be a lot of work.
 
 We can also use the automatically identified artifact segments and visualise them in **[ft_databrowser](/reference/ft_databrowser)**.
 
@@ -283,7 +283,7 @@ After we are done with adding, removing and/or updating the marked artifacts, we
 
 ### Using the summary mode to remove artifacts
 
-The **[ft_rejectvisual](/reference/ft_rejectvisual)** function that we used before with the **channel** mode also has the **trial** and the **summary** mode. The summary mode can be very efficient in quickly processing large amounts of data. It computes a summary metric (for example the variance) for every channel and every trial and displays that. Furthermore, it displays the maximum variance over all channels, and the maxiumn variance over all trials. That allows you to quicly identify trials or channels with large variance, which is indicative of there being an artifact. The function is explained in more detail [here](/tutorial/visual_artifact_rejection/#manual-artifact-rejection---display-a-summary).
+The **[ft_rejectvisual](/reference/ft_rejectvisual)** function that we used before with the **channel** mode also has the **trial** and the **summary** mode. The summary mode can be very efficient in quickly processing large amounts of data. It computes a summary metric (for example the variance) for every channel and every trial and displays that. Furthermore, it displays the maximum variance over all channels, and the maxium variance over all trials. That allows you to quickly identify trials or channels with large variance, which is indicative of there being an artifact. The function is explained in more detail [here](/tutorial/visual_artifact_rejection/#manual-artifact-rejection---display-a-summary).
 
 In this case we have very different channel types with very different units (V, T, T/m), which makes the variance not comparable over the channels. We could use the `cfg.eegscale`, `cfg.gradscale` and `cfg.magscale` options to make the channels more numerically comparable, however here we will just look at the different channel types sequentially.
 
@@ -295,7 +295,7 @@ In this case we have very different channel types with very different units (V, 
 
 {% include image src="/assets/img/workshop/practicalmeeg2022/handson_artifacts/figure4.png" width="400" %}
 
-_Figure; tf_rejectvusial with the summary method applied to the EOG channels_
+_Figure; ft_rejectvisual with the summary method applied to the EOG channels_
 
 This shows the variance of the EOG channels. You can switch to the `std` or standard-deviation metric, which is slightly easier to understand. In the lower left you see the maximum over the HEOG and VEOG channel. It ranges up to `4e-4` or `4*10^-4` volt, which corresponds to 400 microvolt.
 
@@ -304,7 +304,7 @@ A realistic range for the background activity and noise in the EOG channels _if 
 #### Exercise 2
 
 {% include markup/info %}
-Use the same approach on the EEG channels. The EEG channels have a different spacing to the reference electrode and different signal amplitudes. What threshold is realistic for the standartd deviation of the EEG channels?
+Use the same approach on the EEG channels. The EEG channels have a different spacing to the reference electrode and different signal amplitudes. What threshold is realistic for the standard deviation of the EEG channels?
 {% include markup/end %}
 
 It is a bit annoying that there are so many channels (EEG, magnetometers, planar gradiometers, EOG, misc) and that the color-coded display of the metric has very little detail if we only look at a small set of the channels. We can use the same strategy we used before to select the channels, to look at them and identify artifacts, and to combine all the artifacts afterwards.
@@ -436,7 +436,7 @@ It would be possible to cut this smoothed vector of artifact occurence up into t
 
 A similar strategy can be used to detect the heartbeats and to determine the heartrate. The **[ft_heartrate](/reference/ft_heartrate)** function can be used for this, by preference on the continuous representation of the ECG channel. The extracted heart rate (which is represented as a continuous channel) can be segmented using **[ft_redefinetrial](/reference/ft_redefinetrial)** and combined with the EEG and MEG using **[ft_appenddata](/reference/ft_appenddata)**. This allows the same type of statistical analysis to be performed on the heartrate and to determine whether an increase in heartrate might be responsible for a spurrious increase in connectivity that would be estimated between brain regions.
 
-Besides **[ft_heartrate](/reference/ft_heartrate)**, you may want to look at **[ft_headmovement](/reference/ft_headmovement)** and **[ft_regressconfound](/reference/ft_regressconfound)** and [this example script](/example/headmovement_meg).
+Besides **[ft_heartrate](/reference/ft_heartrate)**, you may want to look at **[ft_headmovement](/reference/ft_headmovement)** and **[ft_regressconfound](/reference/ft_regressconfound)** and [this example script](/example/headmovement_meg). For the purpose of the hands-on during the workshop it is fine to skip this for now.
 
 ### Where are the artifacts relative to the stimulus?
 
@@ -473,7 +473,7 @@ It is clear that most blinks happened at the start and expecially towards the en
 
 Rather than excluding the data segments affected by artifacts from further analysis, we can also subtract the contribution of the artifacts from the data. This is in principle the same as what we do when we apply a band-stop filter to remove the line noise.
 
-The strategy for this is to use **[ft_componentanalysis](/reference/ft_componentanalysis)** top make an ICA composition. By inspecting the component topographies and time courses we can identify which components reflect the artifacts. Using **[ft_rejectcomponent](/reference/ft_rejectcomponent)** we can back-project the components back to the channels, minus those components that capture the artifactual signal contributions.
+The strategy for this is to use **[ft_componentanalysis](/reference/ft_componentanalysis)** to make an ICA composition. By inspecting the component topographies and time courses we can identify which components reflect the artifacts. Using **[ft_rejectcomponent](/reference/ft_rejectcomponent)** we can back-project the components back to the channels, minus those components that capture the artifactual signal contributions.
 
 Note that ICA assumes a stationary mixing of all the (brain and artifact) sources to the channels. If the subject moves their head it will not affect the EEG, as the electrodes are attached to the scalp, but may affect the MEG topographies. The spatial sensitivity of the EEG, and the planar and gradiometer MEG channels will also be different. Nevertheless, we do expect all three channel types to pick up some signatures of the EOG and ECG artifacts.
 
