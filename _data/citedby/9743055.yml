@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1016/j.crneur.2022.100043
+- idtype: pmcid
+  value: PMC9743055
+authors:
+- authtype: Author
+  name: Dai B
+- authtype: Author
+  name: McQueen JM
+- authtype: Author
+  name: Terporten R
+- authtype: Author
+  name: Hagoort P
+- authtype: Author
+  name: Kösem A
+epubdate: 2022 May 28
+fulljournalname: Current Research in Neurobiology
+issue: ''
+pages: '100043'
+pmclivedate: 2022/12/13
+printpubdate: ''
+pubdate: 2022 May 28
+sortdate: 2022/05/28 00:00
+source: Curr Res Neurobiol
+title: Distracting linguistic information impairs neural tracking of attended speech
+uid: '9743055'
+volume: '3'

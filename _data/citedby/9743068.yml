@@ -1,0 +1,24 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1016/j.crneur.2022.100056
+- idtype: pmcid
+  value: PMC9743068
+authors:
+- authtype: Author
+  name: Lu Y
+- authtype: Author
+  name: Rodriguez-Larios J
+epubdate: 2022 Sep 17
+fulljournalname: Current Research in Neurobiology
+issue: ''
+pages: '100056'
+pmclivedate: 2022/12/13
+printpubdate: ''
+pubdate: 2022 Sep 17
+sortdate: 2022/09/17 00:00
+source: Curr Res Neurobiol
+title: Nonlinear EEG signatures of mind wandering during breath focus meditation
+uid: '9743068'
+volume: '3'
