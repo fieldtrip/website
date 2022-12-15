@@ -1,0 +1,49 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fnins.2022.1010242
+- idtype: pmcid
+  value: PMC9745080
+authors:
+- authtype: Author
+  name: Semeia L
+- authtype: Author
+  name: Middelmann T
+- authtype: Author
+  name: Baek S
+- authtype: Author
+  name: Sometti D
+- authtype: Author
+  name: Chen H
+- authtype: Author
+  name: Grimm A
+- authtype: Author
+  name: Lerche H
+- authtype: Author
+  name: Martin P
+- authtype: Author
+  name: Kronlage C
+- authtype: Author
+  name: Braun C
+- authtype: Author
+  name: Broser P
+- authtype: Author
+  name: Siegel M
+- authtype: Author
+  name: Breu MS
+- authtype: Author
+  name: Marquetand J
+epubdate: 2022 Nov 29
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '1010242'
+pmclivedate: 2022/12/14
+printpubdate: ''
+pubdate: 2022 Nov 29
+sortdate: 2022/11/29 00:00
+source: Front Neurosci
+title: Optically pumped magnetometers detect altered maximal muscle activity in neuromuscular
+  disease
+uid: '9745080'
+volume: '16'

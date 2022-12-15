@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '36509841'
+- idtype: doi
+  value: 10.1038/s42003-022-04294-9
+- idtype: pmcid
+  value: PMC9744741
+authors:
+- authtype: Author
+  name: Celli M
+- authtype: Author
+  name: Mazzonetto I
+- authtype: Author
+  name: Zangrossi A
+- authtype: Author
+  name: Bertoldo A
+- authtype: Author
+  name: Cona G
+- authtype: Author
+  name: Corbetta M
+epubdate: 2022 Dec 12
+fulljournalname: Communications Biology
+issue: ''
+pages: '1361'
+pmclivedate: 2022/12/14
+printpubdate: ''
+pubdate: 2022 Dec 12
+sortdate: 2022/12/12 00:00
+source: Commun Biol
+title: One-year-later spontaneous EEG features predict visual exploratory human phenotypes
+uid: '9744741'
+volume: '5'

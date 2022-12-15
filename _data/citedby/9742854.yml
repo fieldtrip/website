@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '35550908'
+- idtype: doi
+  value: 10.1016/j.pneurobio.2022.102281
+- idtype: pmcid
+  value: PMC9742854
+authors:
+- authtype: Author
+  name: Echeverria-Altuna I
+- authtype: Author
+  name: Quinn AJ
+- authtype: Author
+  name: Zokaei N
+- authtype: Author
+  name: Woolrich MW
+- authtype: Author
+  name: Nobre AC
+- authtype: Author
+  name: van Ede F
+epubdate: ''
+fulljournalname: Progress in Neurobiology
+issue: ''
+pages: '102281'
+pmclivedate: 2022/12/13
+printpubdate: 2022 Jul
+pubdate: 2022 Jul
+sortdate: 2022/07/01 00:00
+source: Prog Neurobiol
+title: Transient beta activity and cortico-muscular connectivity during sustained
+  motor behaviour
+uid: '9742854'
+volume: '214'
