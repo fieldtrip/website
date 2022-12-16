@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1038/s41467-022-35314-1
+- idtype: pmcid
+  value: PMC9748039
+authors:
+- authtype: Author
+  name: Lowet E
+- authtype: Author
+  name: Kondabolu K
+- authtype: Author
+  name: Zhou S
+- authtype: Author
+  name: Mount RA
+- authtype: Author
+  name: Wang Y
+- authtype: Author
+  name: Ravasio CR
+- authtype: Author
+  name: Han X
+epubdate: 2022 Dec 13
+fulljournalname: Nature Communications
+issue: ''
+pages: '7709'
+pmclivedate: 2022/12/15
+printpubdate: ''
+pubdate: 2022 Dec 13
+sortdate: 2022/12/13 00:00
+source: Nat Commun
+title: Deep brain stimulation creates informational lesion through membrane depolarization
+  in mouse hippocampus
+uid: '9748039'
+volume: '13'

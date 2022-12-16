@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1016/j.pneurobio.2022.102372
+- idtype: pmcid
+  value: PMC9749082
+authors:
+- authtype: Author
+  name: Hahn LA
+- authtype: Author
+  name: Balakhonov D
+- authtype: Author
+  name: Lundqvist M
+- authtype: Author
+  name: Nieder A
+- authtype: Author
+  name: Rose J
+epubdate: ''
+fulljournalname: Progress in Neurobiology
+issue: ''
+pages: '102372'
+pmclivedate: 2022/12/14
+printpubdate: 2022 Dec
+pubdate: 2022 Dec
+sortdate: 2022/12/01 00:00
+source: Prog Neurobiol
+title: 'Oscillations without cortex: Working memory modulates brainwaves in the endbrain
+  of crows'
+uid: '9749082'
+volume: '219'
