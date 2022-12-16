@@ -273,13 +273,18 @@ With the spatial filters computed from the covariance matrix estimated from all 
     cfg.preproc.demean = 'yes';
     cfg.covariance     = 'yes';
 
-    cfg.trials = find(dataw_meg.trialinfo(:,1)==1);
+    % this is what we can see in the BIDS events.tsv file
+    Famous      = [5 6 7];
+    Unfamiliar  = [13 14 15];
+    Scrambled   = [17 18 19];
+
+    cfg.trials = ismember(dataw_meg.trialinfo(:,1), Famous);
     tlckw_famous = ft_timelockanalysis(cfg, dataw_meg);
 
-    cfg.trials = find(dataw_meg.trialinfo(:,1)==2);
+    cfg.trials = ismember(dataw_meg.trialinfo(:,1), Unfamiliar);
     tlckw_unfamiliar = ft_timelockanalysis(cfg, dataw_meg);
 
-    cfg.trials = find(dataw_meg.trialinfo(:,1)==3);
+    cfg.trials = ismember(dataw_meg.trialinfo(:,1), Scrambled);
     tlckw_scrambled = ft_timelockanalysis(cfg, dataw_meg);
 
     cfg                 = [];
