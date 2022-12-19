@@ -1,0 +1,45 @@
+articleids:
+- idtype: pmid
+  value: '36522453'
+- idtype: doi
+  value: 10.1038/s42003-022-04331-7
+- idtype: pmcid
+  value: PMC9755290
+authors:
+- authtype: Author
+  name: Frohlich J
+- authtype: Author
+  name: Chiang JN
+- authtype: Author
+  name: Mediano PA
+- authtype: Author
+  name: Nespeca M
+- authtype: Author
+  name: Saravanapandian V
+- authtype: Author
+  name: Toker D
+- authtype: Author
+  name: Dell’Italia J
+- authtype: Author
+  name: Hipp JF
+- authtype: Author
+  name: Jeste SS
+- authtype: Author
+  name: Chu CJ
+- authtype: Author
+  name: Bird LM
+- authtype: Author
+  name: Monti MM
+epubdate: 2022 Dec 15
+fulljournalname: Communications Biology
+issue: ''
+pages: '1374'
+pmclivedate: 2022/12/17
+printpubdate: ''
+pubdate: 2022 Dec 15
+sortdate: 2022/12/15 00:00
+source: Commun Biol
+title: Neural complexity is a common denominator of human consciousness across diverse
+  regimes of cortical dynamics
+uid: '9755290'
+volume: '5'

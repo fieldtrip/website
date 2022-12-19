@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1177/03057356221091313
+- idtype: pmcid
+  value: PMC9751440
+authors:
+- authtype: Author
+  name: Christensen J
+- authtype: Author
+  name: Slavik L
+- authtype: Author
+  name: Nicol JJ
+- authtype: Author
+  name: Loehr JD
+epubdate: 2022 Apr 29
+fulljournalname: Psychology of Music
+issue: '1'
+pages: 295-315
+pmclivedate: 2022/12/16
+printpubdate: 2023 Jan
+pubdate: 2022 Apr 29
+sortdate: 2022/04/29 00:00
+source: Psychol Music
+title: 'Alpha oscillations related to self-other integration and distinction during
+  live orchestral performance: A naturalistic case study'
+uid: '9751440'
+volume: '51'
