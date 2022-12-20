@@ -4,3 +4,4 @@
 <title>{{page.title}} - FieldTrip toolbox</title>
 <link rel="stylesheet" href="/assets/css/main.css">
 <link rel="shortcut icon" href="/assets/icon/favicon.ico">
+<link rel="me" value="@fieldtriptoolbox@fosstodon.org">
