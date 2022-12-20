@@ -14,9 +14,9 @@ We use <https://jekyllrb.com> for our website. The markdown documents are hosted
 
 We use this for a number of email discussion lists. It is hosted by C&CZ at <http://mailman.science.ru.nl>.
 
-## Twitter
+## Mastodon
 
-We use <http://twitter.com/fieldtriptoolbx> to notify people about updates. Commits of new code are automatically tweeted.
+We use <https://fosstodon.org/@fieldtriptoolbox> to notify people about new releases and other updates.
 
 ## Bitly
 
@@ -107,3 +107,7 @@ We used to maintain a copy of the SVN repository with the software on [SourceFor
 ## Facebook - obsolete
 
 We used <http://facebook.com/fieldtriptoolbox> to announce events and to post photos and messages that relate to the social interaction between developers and users. The Facebook page is **not** used to provide support. In the past we also listed people who like our Facebook page on the start page. or linked in news items to photos from Facebook albums. Due to privacy concerns we stopped using FaceBook.
+
+## Twitter - obsolete
+
+We used <http://twitter.com/fieldtriptoolbx> to notify people about new releases and other updates. For some time we also tweeted an automatic update for every commit. We are now using Mastodon instead of Twitter.
