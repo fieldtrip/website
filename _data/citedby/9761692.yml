@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '36316155'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0564-22.2022
+- idtype: pmcid
+  value: PMC9761692
+authors:
+- authtype: Author
+  name: Mallas EJ
+- authtype: Author
+  name: Gorgoraptis N
+- authtype: Author
+  name: Dautricourt S
+- authtype: Author
+  name: Pertzov Y
+- authtype: Author
+  name: Scott G
+- authtype: Author
+  name: Sharp DJ
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '49'
+pages: 9193-9210
+pmclivedate: ''
+printpubdate: 2022 Dec 7
+pubdate: 2022 Dec 7
+sortdate: 2022/12/07 00:00
+source: J Neurosci
+title: Pathological Slow-Wave Activity and Impaired Working Memory Binding in Post-Traumatic
+  Amnesia
+uid: '9761692'
+volume: '42'

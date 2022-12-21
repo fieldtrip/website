@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '35196708'
+- idtype: doi
+  value: 10.1093/cercor/bhac055
+- idtype: pmcid
+  value: PMC9758584
+authors:
+- authtype: Author
+  name: Beck J
+- authtype: Author
+  name: Loretz E
+- authtype: Author
+  name: Rasch B
+epubdate: 2022 Feb 23
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '1'
+pages: 96-113
+pmclivedate: 2022/12/19
+printpubdate: ''
+pubdate: 2022 Feb 23
+sortdate: 2022/02/23 00:00
+source: Cereb Cortex
+title: 'Stress dynamically reduces sleep depth: temporal proximity to the stressor
+  is crucial'
+uid: '9758584'
+volume: '33'
