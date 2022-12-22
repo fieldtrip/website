@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '36536035'
+- idtype: doi
+  value: 10.1038/s41598-022-26460-z
+- idtype: pmcid
+  value: PMC9763397
+authors:
+- authtype: Author
+  name: Caspar EA
+- authtype: Author
+  name: Gishoma D
+- authtype: Author
+  name: Magalhaes de Saldanha da Gama PA
+epubdate: 2022 Dec 19
+fulljournalname: Scientific Reports
+issue: ''
+pages: '21875'
+pmclivedate: 2022/12/21
+printpubdate: ''
+pubdate: 2022 Dec 19
+sortdate: 2022/12/19 00:00
+source: Sci Rep
+title: On the cognitive mechanisms supporting prosocial disobedience in a post-genocidal
+  context
+uid: '9763397'
+volume: '12'
