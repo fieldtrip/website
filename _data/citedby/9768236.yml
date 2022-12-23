@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1016/j.dcn.2022.101185
+- idtype: pmcid
+  value: PMC9768236
+authors:
+- authtype: Author
+  name: Momsen J
+- authtype: Author
+  name: Schneider JM
+- authtype: Author
+  name: Abel AD
+epubdate: 2022 Dec 11
+fulljournalname: Developmental Cognitive Neuroscience
+issue: ''
+pages: '101185'
+pmclivedate: 2022/12/22
+printpubdate: ''
+pubdate: 2022 Dec 11
+sortdate: 2022/12/11 00:00
+source: Dev Cogn Neurosci
+title: Developmental differences in EEG oscillations supporting the identification
+  of novel word meaning from context
+uid: '9768236'
+volume: '58'
