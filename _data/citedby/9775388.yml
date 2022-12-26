@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '36552053'
+- idtype: doi
+  value: 10.3390/brainsci12121593
+- idtype: pmcid
+  value: PMC9775388
+authors:
+- authtype: Author
+  name: Yan Q
+- authtype: Author
+  name: Zhang Q
+epubdate: 2022 Nov 22
+fulljournalname: Brain Sciences
+issue: '12'
+pages: '1593'
+pmclivedate: 2022/12/23
+printpubdate: ''
+pubdate: 2022 Nov 22
+sortdate: 2022/11/22 00:00
+source: Brain Sci
+title: Theta Band (4–8 Hz) Oscillations Reflect Online Processing of Rhythm in Speech
+  Production
+uid: '9775388'
+volume: '12'

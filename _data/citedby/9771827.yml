@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '36414209'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2022.119757
+- idtype: pmcid
+  value: PMC9771827
+authors:
+- authtype: Author
+  name: Chen X
+- authtype: Author
+  name: Cao L
+- authtype: Author
+  name: Haendel BF
+epubdate: ''
+fulljournalname: Neuroimage
+issue: ''
+pages: '119757'
+pmclivedate: 2022/12/23
+printpubdate: 2022 Dec 1
+pubdate: 2022 Dec 1
+sortdate: 2022/12/01 00:00
+source: Neuroimage
+title: 'Human visual processing during walking: Dissociable pre- and post-stimulus
+  influences'
+uid: '9771827'
+volume: '264'

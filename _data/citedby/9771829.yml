@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '36400377'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2022.119752
+- idtype: pmcid
+  value: PMC9771829
+authors:
+- authtype: Author
+  name: Siems M
+- authtype: Author
+  name: Tünnerhoff J
+- authtype: Author
+  name: Ziemann U
+- authtype: Author
+  name: Siegel M
+epubdate: ''
+fulljournalname: Neuroimage
+issue: ''
+pages: '119752'
+pmclivedate: 2022/12/23
+printpubdate: 2022 Dec 1
+pubdate: 2022 Dec 1
+sortdate: 2022/12/01 00:00
+source: Neuroimage
+title: Multistage classification identifies altered cortical phase- and amplitude-coupling
+  in Multiple Sclerosis
+uid: '9771829'
+volume: '264'

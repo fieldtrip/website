@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1523/ENEURO.0137-21.2022
+- idtype: pmcid
+  value: PMC9770018
+authors:
+- authtype: Author
+  name: Schmitt C
+- authtype: Author
+  name: Krala M
+- authtype: Author
+  name: Bremmer F
+epubdate: 2022 Dec 19
+fulljournalname: eNeuro
+issue: '6'
+pages: ENEURO.0137-21.2022
+pmclivedate: 2022/12/22
+printpubdate: ''
+pubdate: 2022 Dec 19
+sortdate: 2022/12/19 00:00
+source: eNeuro
+title: Neural Signatures of Actively Controlled Self-Motion and the Subjective Encoding
+  of Distance
+uid: '9770018'
+volume: '9'

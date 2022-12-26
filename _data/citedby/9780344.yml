@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '36550141'
+- idtype: doi
+  value: 10.1038/s41598-022-25720-2
+- idtype: pmcid
+  value: PMC9780344
+authors:
+- authtype: Author
+  name: Krasich K
+- authtype: Author
+  name: Simmons C
+- authtype: Author
+  name: O’Neill K
+- authtype: Author
+  name: Giattino CM
+- authtype: Author
+  name: De Brigard F
+- authtype: Author
+  name: Sinnott-Armstrong W
+- authtype: Author
+  name: Mudrik L
+- authtype: Author
+  name: Woldorff MG
+epubdate: 2022 Dec 22
+fulljournalname: Scientific Reports
+issue: ''
+pages: '22126'
+pmclivedate: 2022/12/24
+printpubdate: ''
+pubdate: 2022 Dec 22
+sortdate: 2022/12/22 00:00
+source: Sci Rep
+title: Prestimulus oscillatory brain activity interacts with evoked recurrent processing
+  to facilitate conscious visual perception
+uid: '9780344'
+volume: '12'
