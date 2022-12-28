@@ -1,0 +1,34 @@
+articleids:
+- idtype: pmid
+  value: '36566277'
+- idtype: doi
+  value: 10.1038/s41537-022-00321-0
+- idtype: pmcid
+  value: PMC9789318
+authors:
+- authtype: Author
+  name: Zhang M
+- authtype: Author
+  name: Force RB
+- authtype: Author
+  name: Walker C
+- authtype: Author
+  name: Ahn S
+- authtype: Author
+  name: Jarskog LF
+- authtype: Author
+  name: Frohlich F
+epubdate: 2022 Dec 24
+fulljournalname: Schizophrenia
+issue: '1'
+pages: '114'
+pmclivedate: 2022/12/26
+printpubdate: ''
+pubdate: 2022 Dec 24
+sortdate: 2022/12/24 00:00
+source: Schizophrenia (Heidelb)
+title: 'Alpha transcranial alternating current stimulation reduces depressive symptoms
+  in people with schizophrenia and auditory hallucinations: a double-blind, randomized
+  pilot clinical trial'
+uid: '9789318'
+volume: '8'

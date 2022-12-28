@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1016/j.heliyon.2022.e12215
+- idtype: pmcid
+  value: PMC9791366
+authors:
+- authtype: Author
+  name: Loyola-Navarro R
+- authtype: Author
+  name: Moënne-Loccoz C
+- authtype: Author
+  name: Vergara RC
+- authtype: Author
+  name: Hyafil A
+- authtype: Author
+  name: Aboitiz F
+- authtype: Author
+  name: Maldonado PE
+epubdate: 2022 Dec 10
+fulljournalname: Heliyon
+issue: '12'
+pages: e12215
+pmclivedate: 2022/12/27
+printpubdate: ''
+pubdate: 2022 Dec 10
+sortdate: 2022/12/10 00:00
+source: Heliyon
+title: Voluntary self-initiation of the stimuli onset improves working memory and
+  accelerates visual and attentional processing
+uid: '9791366'
+volume: '8'
