@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '35274389'
+- idtype: doi
+  value: 10.1111/jsr.13584
+- idtype: pmcid
+  value: PMC9787564
+authors:
+- authtype: Author
+  name: Wunderlin M
+- authtype: Author
+  name: Koenig T
+- authtype: Author
+  name: Zeller C
+- authtype: Author
+  name: Nissen C
+- authtype: Author
+  name: Züst MA
+epubdate: 2022 Mar 10
+fulljournalname: Journal of Sleep Research
+issue: '6'
+pages: e13584
+pmclivedate: 2022/12/27
+printpubdate: 2022 Dec
+pubdate: 2022 Mar 10
+sortdate: 2022/03/10 00:00
+source: J Sleep Res
+title: 'Automatized online prediction of slow‐wave peaks during non‐rapid eye movement
+  sleep in young and old individuals: Why we should not always rely on amplitude thresholds'
+uid: '9787564'
+volume: '31'

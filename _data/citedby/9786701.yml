@@ -1,0 +1,34 @@
+articleids:
+- idtype: pmid
+  value: '35723272'
+- idtype: doi
+  value: 10.1111/psyp.14121
+- idtype: pmcid
+  value: PMC9786701
+authors:
+- authtype: Author
+  name: Bower IS
+- authtype: Author
+  name: Clark GM
+- authtype: Author
+  name: Tucker R
+- authtype: Author
+  name: Hill AT
+- authtype: Author
+  name: Lum JA
+- authtype: Author
+  name: Mortimer MA
+- authtype: Author
+  name: Enticott PG
+epubdate: 2022 Jun 20
+fulljournalname: Psychophysiology
+issue: '12'
+pages: e14121
+pmclivedate: 2022/12/27
+printpubdate: 2022 Dec
+pubdate: 2022 Jun 20
+sortdate: 2022/06/20 00:00
+source: Psychophysiology
+title: Built environment color modulates autonomic and EEG indices of emotional response
+uid: '9786701'
+volume: '59'

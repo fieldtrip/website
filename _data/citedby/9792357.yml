@@ -1,0 +1,44 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1016/j.dcn.2022.101181
+- idtype: pmcid
+  value: PMC9792357
+authors:
+- authtype: Author
+  name: Bertels J
+- authtype: Author
+  name: Niesen M
+- authtype: Author
+  name: Destoky F
+- authtype: Author
+  name: Coolen T
+- authtype: Author
+  name: Vander Ghinst M
+- authtype: Author
+  name: Wens V
+- authtype: Author
+  name: Rovai A
+- authtype: Author
+  name: Trotta N
+- authtype: Author
+  name: Baart M
+- authtype: Author
+  name: Molinaro N
+- authtype: Author
+  name: De Tiège X
+- authtype: Author
+  name: Bourguignon M
+epubdate: 2022 Nov 26
+fulljournalname: Developmental Cognitive Neuroscience
+issue: ''
+pages: '101181'
+pmclivedate: 2022/12/28
+printpubdate: ''
+pubdate: 2022 Nov 26
+sortdate: 2022/11/26 00:00
+source: Dev Cogn Neurosci
+title: Neurodevelopmental oscillatory basis of speech processing in noise
+uid: '9792357'
+volume: '59'

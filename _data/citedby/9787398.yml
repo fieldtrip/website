@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '35678104'
+- idtype: doi
+  value: 10.1111/psyp.14108
+- idtype: pmcid
+  value: PMC9787398
+authors:
+- authtype: Author
+  name: Vilà‐Balló A
+- authtype: Author
+  name: Marti‐Marca A
+- authtype: Author
+  name: Torralba Cuello M
+- authtype: Author
+  name: Soto‐Faraco S
+- authtype: Author
+  name: Pozo‐Rosich P
+epubdate: 2022 Jun 9
+fulljournalname: Psychophysiology
+issue: '11'
+pages: e14108
+pmclivedate: 2022/12/27
+printpubdate: 2022 Nov
+pubdate: 2022 Jun 9
+sortdate: 2022/06/09 00:00
+source: Psychophysiology
+title: The influence of temporal unpredictability on the electrophysiological mechanisms
+  of neural entrainment
+uid: '9787398'
+volume: '59'
