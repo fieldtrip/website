@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '36317341'
+- idtype: doi
+  value: 10.1088/1741-2552/ac9ede
+- idtype: pmcid
+  value: PMC9795815
+- idtype: MID
+  value: NIHMS1852485
+authors:
+- authtype: Author
+  name: Shahdadian S
+- authtype: Author
+  name: Wang X
+- authtype: Author
+  name: Wanniarachchi H
+- authtype: Author
+  name: Chaudhari A
+- authtype: Author
+  name: Truong NC
+- authtype: Author
+  name: Liu H
+epubdate: 2022 Nov 17
+fulljournalname: Journal of neural engineering
+issue: '6'
+pages: 10.1088/1741-2552/ac9ede
+pmclivedate: 2022/12/28
+printpubdate: ''
+pubdate: 2022 Nov 17
+sortdate: 2022/11/17 00:00
+source: J Neural Eng
+title: Neuromodulation of brain power topography and network topology by prefrontal
+  transcranial photobiomodulation
+uid: '9795815'
+volume: '19'
