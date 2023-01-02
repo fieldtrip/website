@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fpsyg.2022.1061016
+- idtype: pmcid
+  value: PMC9798430
+authors:
+- authtype: Author
+  name: Huang S
+- authtype: Author
+  name: White DR
+- authtype: Author
+  name: Marinkovic K
+epubdate: 2022 Dec 15
+fulljournalname: Frontiers in Psychology
+issue: ''
+pages: '1061016'
+pmclivedate: 2022/12/30
+printpubdate: ''
+pubdate: 2022 Dec 15
+sortdate: 2022/12/15 00:00
+source: Front Psychol
+title: 'Alterations of theta power and synchrony during encoding in young adult binge
+  drinkers: Subsequent memory effects associated with retrieval after 48 h and 6 months'
+uid: '9798430'
+volume: '13'

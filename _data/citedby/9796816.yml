@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '36455560'
+- idtype: doi
+  value: 10.1016/j.cub.2022.11.016
+- idtype: pmcid
+  value: PMC9796816
+authors:
+- authtype: Author
+  name: Xie S
+- authtype: Author
+  name: Hoehl S
+- authtype: Author
+  name: Moeskops M
+- authtype: Author
+  name: Kayhan E
+- authtype: Author
+  name: Kliesch C
+- authtype: Author
+  name: Turtleton B
+- authtype: Author
+  name: Köster M
+- authtype: Author
+  name: Cichy RM
+epubdate: ''
+fulljournalname: Current Biology
+issue: '24'
+pages: 5422-5432.e6
+pmclivedate: 2022/12/29
+printpubdate: 2022 Dec 19
+pubdate: 2022 Dec 19
+sortdate: 2022/12/19 00:00
+source: Curr Biol
+title: Visual category representations in the infant brain
+uid: '9796816'
+volume: '32'

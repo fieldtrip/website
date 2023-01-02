@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '35674278'
+- idtype: doi
+  value: 10.1111/sjop.12835
+- idtype: pmcid
+  value: PMC9796445
+authors:
+- authtype: Author
+  name: Troisi Lopez E
+- authtype: Author
+  name: Colonnello V
+- authtype: Author
+  name: Liparoti M
+- authtype: Author
+  name: Castaldi M
+- authtype: Author
+  name: Alivernini F
+- authtype: Author
+  name: Russo PM
+- authtype: Author
+  name: Sorrentino G
+- authtype: Author
+  name: Lucidi F
+- authtype: Author
+  name: Mandolesi L
+- authtype: Author
+  name: Sorrentino P
+epubdate: 2022 Jun 8
+fulljournalname: Scandinavian Journal of Psychology
+issue: '5'
+pages: 495-503
+pmclivedate: 2022/12/30
+printpubdate: 2022 Oct
+pubdate: 2022 Jun 8
+sortdate: 2022/06/08 00:00
+source: Scand J Psychol
+title: 'Brain network topology and personality traits: A source level magnetoencephalographic
+  study'
+uid: '9796445'
+volume: '63'
