@@ -40,7 +40,7 @@ We will perform the following steps to do a statistical test in FieldTrip:
 - To do any kind of statistical testing (parametric or non-parametric, with or without multiple comparison correction) we will use the **[ft_timelockstatistics](/reference/ft_timelockstatistics)** function.
 - We can plot a schematic head with the channels that contribute to the significant difference between conditions with the **[ft_topoplotER](/reference/ft_topoplotER)** function or optionally with the **[ft_clusterplot](/reference/ft_clusterplot)** function (in case cluster-based non-parametric statistics was used).
 
-{% include image src="/assets/img/tutorial/eventrelatedstatistics/figure8.png" width="400" %}
+{% include image src="/assets/img/tutorial/eventrelatedstatistics/figure0.png" width="400" %}
 
 _Figure 1: Pipeline of statistical testing. All analysis steps in the gray boxes have been done already._
 
@@ -90,9 +90,9 @@ Now plot all channels with **[ft_multiplotER](/reference/ft_multiplotER)**, and 
     cfg.channel = 'MLT12';
     figure; ft_singleplotER(cfg, grandavgFIC, grandavgFC)
 
-{% include image src="/assets/img/tutorial/eventrelatedstatistics/figure8.png" width="400" %}
+{% include image src="/assets/img/tutorial/eventrelatedstatistics/figure1.png" width="400" %}
 
-{% include image src="/assets/img/tutorial/eventrelatedstatistics/figure8.png" width="400" %}
+{% include image src="/assets/img/tutorial/eventrelatedstatistics/figure2.png" width="400" %}
 
 From the grand average plot we can zoom in on our comparison of interest and only plot the ERF of channel MLT12 for all subjects, using the individual subject averages data.
 
@@ -116,7 +116,7 @@ From the grand average plot we can zoom in on our comparison of interest and onl
     text(0.5,0.5,'FIC','color','b') ;text(0.5,0.3,'FC','color','r')
     axis off
 
-{% include image src="/assets/img/tutorial/eventrelatedstatistics/figure8.png" width="400" %}
+{% include image src="/assets/img/tutorial/eventrelatedstatistics/figure3.png" width="400" %}
 
 From the individual plots and grand average plots above, it seems that between 300ms and 700ms there is a difference between the two conditions in channel MLT12 (channel 52).
 
@@ -141,7 +141,7 @@ We can also plot the differences between conditions, for each subject, in a diff
     legend({'subj1', 'subj2', 'subj3', 'subj4', 'subj5', 'subj6', ...
             'subj7', 'subj8', 'subj9', 'subj10'}, 'location', 'EastOutside');
 
-{% include image src="/assets/img/tutorial/eventrelatedstatistics/figure8.png" width="400" %}
+{% include image src="/assets/img/tutorial/eventrelatedstatistics/figure4.png" width="400" %}
 
 {% include markup/danger %}
 We are starting here with a single-channel analysis here for purely didactical reasons, i.e. start with a simple test without multiple comparisons, and then build up the complexity by adding multiple time points and channels.
@@ -220,7 +220,7 @@ In the previous paragraph we picked a channel and time window by hand after eyeb
     figure; ft_topoplotER(cfg, grandavgFIC)
     title('significant without multiple comparison correction')
 
-{% include image src="/assets/img/tutorial/eventrelatedstatistics/figure8.png" width="400" %}
+{% include image src="/assets/img/tutorial/eventrelatedstatistics/figure5.png" width="400" %}
 
 However, since now you are performing 151 individual tests, you can no longer control the false alarm rate. Given the null-hypothesis and an alpha of 5%, you have a 5% chance of making a false alarm and incorrectly concluding that the null-hypothesis should be rejected. As this false alarm rate applies to each test that you perform, the chance of making a false alarm for 151 tests in parallel is much larger than the desired 5%. This is the multiple comparison problem.
 
@@ -305,7 +305,7 @@ This is implemented in FieldTrip in the function **[ft_statistics_montecarlo](/r
 
 With the method (cfg.method) of statistical test set as a permutation-based test (montecarlo) the following channels contribute to the significant difference between the conditions (p<0.05) between 0.3 and 0.7 s.
 
-{% include image src="/assets/img/tutorial/eventrelatedstatistics/figure8.png" width="400" %}
+{% include image src="/assets/img/tutorial/eventrelatedstatistics/figure6.png" width="400" %}
 
 Compare this plot with the earlier one using parametric statistics with the uncorrected p-values.
 
