@@ -111,7 +111,7 @@ Regardless of the method used for calculating the TFR, the output format is iden
 The field TFRhann.powspctrm contains the temporal evolution of the raw power values for each specified frequency.
 
 {% include markup/warning %}
-If you specify frequencies in cfg.foi of which no integer number of cycles fit into you time window (cfg.t_ftimwin), FieldTrip doesn't always give an error and the output will contain these frequencies. For example, try using cfg.foi = 1:1:30 with the 500 ms time window. Note that the uneven frequencies are can't to be interpreted. So you should always think critically about your time and frequency resolution.
+If you specify frequencies in cfg.foi of which no integer number of cycles fit into you time window (cfg.t_ftimwin), FieldTrip doesn't always give an error and the output will contain these frequencies. For example, try using cfg.foi = 1:1:30 with the 500 ms time window. Note that the uneven frequencies cannot be interpreted. So you should always think critically about your time and frequency resolution.
 {% include markup/end %}
 
 ## Visualization
