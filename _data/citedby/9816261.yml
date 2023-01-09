@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '36401646'
+- idtype: doi
+  value: 10.1007/s00213-022-06272-9
+- idtype: pmcid
+  value: PMC9816261
+authors:
+- authtype: Author
+  name: Nottage JF
+- authtype: Author
+  name: Gabay A
+- authtype: Author
+  name: De Meyer K
+- authtype: Author
+  name: Herrik KF
+- authtype: Author
+  name: Bastlund JF
+- authtype: Author
+  name: Christensen SR
+- authtype: Author
+  name: Gijsen S
+- authtype: Author
+  name: Mehta MA
+epubdate: 2022 Nov 19
+fulljournalname: Psychopharmacology
+issue: '1'
+pages: 59-75
+pmclivedate: 2023/01/07
+printpubdate: '2023'
+pubdate: 2022 Nov 19
+sortdate: 2022/11/19 00:00
+source: Psychopharmacology (Berl)
+title: The effect of ketamine and D-cycloserine on the high frequency resting EEG
+  spectrum in humans
+uid: '9816261'
+volume: '240'

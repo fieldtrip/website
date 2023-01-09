@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fnins.2022.974162
+- idtype: pmcid
+  value: PMC9815455
+authors:
+- authtype: Author
+  name: Mäkelä S
+- authtype: Author
+  name: Kujala J
+- authtype: Author
+  name: Salmelin R
+epubdate: 2022 Dec 22
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '974162'
+pmclivedate: 2023/01/06
+printpubdate: ''
+pubdate: 2022 Dec 22
+sortdate: 2022/12/22 00:00
+source: Front Neurosci
+title: Removing ocular artifacts from magnetoencephalographic data on naturalistic
+  reading of continuous texts
+uid: '9815455'
+volume: '16'
