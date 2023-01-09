@@ -11,7 +11,7 @@ If you have **questions about the use** of FieldTrip, please ask them on the [em
 
 If you get a MATLAB error when using FieldTrip and you suspect that it is not due to you specifying the incorrect options to the function, but that it is due to a **problem in the implementation** of the software, please report it as an [issue](/development/issues) on GitHub.
 
-For questions that are **not suitable** for the public email list or as GitHub issue, e.g., discussing potential contributions to the toolbox or requests for organizing a local workshop, you can send an email to Robert Oostenveld (robert.oostenveld at donders.ru.nl) or Jan-Mathijs Schoffelen (jan.schoffelen at donders.ru.nl).
+For questions that are **not suitable** for the public email list or as GitHub issue, e.g., discussing potential contributions to the toolbox or requests for organizing a local workshop, you can send an email to Robert Oostenveld (robert.oostenveld at donders.ru.nl) or Jan-Mathijs Schoffelen (janmathijs.schoffelen at donders.ru.nl).
 
 If needed, you can also contact us via regular mail:
 
