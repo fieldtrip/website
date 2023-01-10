@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '36065147'
+- idtype: doi
+  value: 10.1111/nyas.14890
+- idtype: pmcid
+  value: PMC9826099
+authors:
+- authtype: Author
+  name: Rea M
+- authtype: Author
+  name: Boto E
+- authtype: Author
+  name: Holmes N
+- authtype: Author
+  name: Hill R
+- authtype: Author
+  name: Osborne J
+- authtype: Author
+  name: Rhodes N
+- authtype: Author
+  name: Leggett J
+- authtype: Author
+  name: Rier L
+- authtype: Author
+  name: Bowtell R
+- authtype: Author
+  name: Shah V
+- authtype: Author
+  name: Brookes MJ
+epubdate: 2022 Sep 5
+fulljournalname: Annals of the New York Academy of Sciences
+issue: '1'
+pages: 107-124
+pmclivedate: 2023/01/09
+printpubdate: 2022 Nov
+pubdate: 2022 Sep 5
+sortdate: 2022/09/05 00:00
+source: Ann N Y Acad Sci
+title: A 90‐channel triaxial magnetoencephalography system using optically pumped
+  magnetometers
+uid: '9826099'
+volume: '1517'
