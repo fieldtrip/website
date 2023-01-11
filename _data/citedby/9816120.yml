@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '36604455'
+- idtype: doi
+  value: 10.1038/s42003-022-04335-3
+- idtype: pmcid
+  value: PMC9816120
+authors:
+- authtype: Author
+  name: Pérez-Bellido A
+- authtype: Author
+  name: Spaak E
+- authtype: Author
+  name: de Lange FP
+epubdate: 2023 Jan 6
+fulljournalname: Communications Biology
+issue: ''
+pages: '12'
+pmclivedate: 2023/01/07
+printpubdate: ''
+pubdate: 2023 Jan 6
+sortdate: 2023/01/06 00:00
+source: Commun Biol
+title: Magnetoencephalography recordings reveal the neural mechanisms of auditory
+  contributions to improved visual detection
+uid: '9816120'
+volume: '6'

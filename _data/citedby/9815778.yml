@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '36619118'
+- idtype: doi
+  value: 10.3389/fpsyg.2022.968836
+- idtype: pmcid
+  value: PMC9815778
+authors:
+- authtype: Author
+  name: Maran M
+- authtype: Author
+  name: Numssen O
+- authtype: Author
+  name: Hartwigsen G
+- authtype: Author
+  name: Zaccarella E
+epubdate: 2022 Oct 28
+fulljournalname: Frontiers in Psychology
+issue: ''
+pages: '968836'
+pmclivedate: 2023/01/06
+printpubdate: ''
+pubdate: 2022 Oct 28
+sortdate: 2022/10/28 00:00
+source: Front Psychol
+title: 'Online neurostimulation of Broca’s area does not interfere with syntactic
+  predictions: A combined TMS-EEG approach to basic linguistic combination'
+uid: '9815778'
+volume: '13'
