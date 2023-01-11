@@ -5,6 +5,10 @@ tags: [tutorial, matlab, script, memory]
 
 # Making a memory efficient analysis pipeline
 
+{% include markup/warning %}
+If you are new to FieldTrip, we recommend that you skip this tutorial for now. You can read the [introduction tutorial](/tutorial/introduction/) and then move on with the tutorials on [preprocessing](/tutorial/#reading-and-preprocessing-data). Once you get the hang of it, you can return to this tutorial which is more on the technical and coding aspects.
+{% include markup/end %}
+
 ## Introduction
 
 This tutorial gives advice about how to do data analysis in a memory-efficient way when large amount of data is analyzed. It does not provide information about any FieldTrip functions or any analysis steps.
@@ -23,10 +27,6 @@ Neurophysiological data can become quite large with the result that disk space, 
 - Perhaps most importantly – once in a while let someone else go through your scripts to see if they can be optimized.
 - Within a script or function make sure you clear large variables that you don't need anymore using the clear statement. Note that MATLAB's memory use might not be intuitive. For instance, reloading a large dataset into the same variable may result in MATLAB allocating twice the memory you actually need.
 - The `cfg` field in your FieldTrip data structures stores the history of the processing steps performed on the data. This field can get quite large after many such steps and specifically after appending several data structures, because each `cfg` is stored in a cell array within the `cfg.previous` field. You can look at the cfg using **[ft_analysispipeline](/reference/ft_analysispipeline)**. Simply emptying this field (e.g., by doing `freq.cfg = []`) will free up space. Remember to keep a copy of the cfg field on disk if you want to keep track of your analysis pipeline.
-
-{% include markup/warning %}
-If you have any more suggestions please add them here.
-{% include markup/end %}
 
 ## Save your data to disk
 
