@@ -4,3 +4,6 @@
 - name:  What are the different approaches I can take for distributed computing?
   link:  /faq/what_are_the_different_approaches_i_can_take_for_distributed_computing
 
+- name:  Speeding up your analysis pipeline using distributed computing
+  link:  /tutorial/distributedcomputing
+
