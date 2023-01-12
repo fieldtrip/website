@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '36161675'
+- idtype: doi
+  value: 10.1111/ejn.15829
+- idtype: pmcid
+  value: PMC9828710
+authors:
+- authtype: Author
+  name: Seymour RA
+- authtype: Author
+  name: Alexander N
+- authtype: Author
+  name: Maguire EA
+epubdate: 2022 Oct 11
+fulljournalname: The European Journal of Neuroscience
+issue: '10'
+pages: 5836-5852
+pmclivedate: 2023/01/10
+printpubdate: 2022 Nov
+pubdate: 2022 Oct 11
+sortdate: 2022/10/11 00:00
+source: Eur J Neurosci
+title: Robust estimation of 1/f activity improves oscillatory burst detection
+uid: '9828710'
+volume: '56'

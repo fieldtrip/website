@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '36028218'
+- idtype: doi
+  value: 10.1111/ejn.15813
+- idtype: pmcid
+  value: PMC9826534
+authors:
+- authtype: Author
+  name: Chupina I
+- authtype: Author
+  name: Sierpowska J
+- authtype: Author
+  name: Zheng XY
+- authtype: Author
+  name: Dewenter A
+- authtype: Author
+  name: Piastra M
+- authtype: Author
+  name: Piai V
+epubdate: 2022 Sep 11
+fulljournalname: The European Journal of Neuroscience
+issue: '8'
+pages: 5235-5259
+pmclivedate: 2023/01/09
+printpubdate: 2022 Oct
+pubdate: 2022 Sep 11
+sortdate: 2022/09/11 00:00
+source: Eur J Neurosci
+title: 'Time course of right‐hemisphere recruitment during word production following
+  left‐hemisphere damage: A single case of young stroke'
+uid: '9826534'
+volume: '56'
