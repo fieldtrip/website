@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '36627328'
+- idtype: doi
+  value: 10.1038/s41598-022-27117-7
+- idtype: pmcid
+  value: PMC9831994
+authors:
+- authtype: Author
+  name: Rigoni I
+- authtype: Author
+  name: Degano G
+- authtype: Author
+  name: Hassan M
+- authtype: Author
+  name: Fratini A
+epubdate: 2023 Jan 10
+fulljournalname: Scientific Reports
+issue: ''
+pages: '522'
+pmclivedate: 2023/01/12
+printpubdate: ''
+pubdate: 2023 Jan 10
+sortdate: 2023/01/10 00:00
+source: Sci Rep
+title: Sensorimotor recalibration of postural control strategies occurs after whole
+  body vibration
+uid: '9831994'
+volume: '13'
