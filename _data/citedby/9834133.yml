@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '36460892'
+- idtype: doi
+  value: 10.1007/s10548-022-00926-9
+- idtype: pmcid
+  value: PMC9834133
+authors:
+- authtype: Author
+  name: Calvetti D
+- authtype: Author
+  name: Pascarella A
+- authtype: Author
+  name: Pitolli F
+- authtype: Author
+  name: Somersalo E
+- authtype: Author
+  name: Vantaggi B
+epubdate: 2022 Dec 2
+fulljournalname: Brain Topography
+issue: '1'
+pages: 10-22
+pmclivedate: 2023/01/13
+printpubdate: '2023'
+pubdate: 2022 Dec 2
+sortdate: 2022/12/02 00:00
+source: Brain Topogr
+title: 'The IAS-MEEG Package: A Flexible Inverse Source Reconstruction Platform for
+  Reconstruction and Visualization of Brain Activity from M/EEG Data'
+uid: '9834133'
+volume: '36'

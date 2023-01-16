@@ -1,0 +1,61 @@
+articleids:
+- idtype: pmid
+  value: '36634073'
+- idtype: doi
+  value: 10.1371/journal.pone.0278388
+- idtype: pmcid
+  value: PMC9836271
+authors:
+- authtype: Author
+  name: Noguez Imm R
+- authtype: Author
+  name: Muñoz-Benitez J
+- authtype: Author
+  name: Medina D
+- authtype: Author
+  name: Barcenas E
+- authtype: Author
+  name: Molero-Castillo G
+- authtype: Author
+  name: Reyes-Ortega P
+- authtype: Author
+  name: Hughes-Cano JA
+- authtype: Author
+  name: Medrano-Gracia L
+- authtype: Author
+  name: Miranda-Anaya M
+- authtype: Author
+  name: Rojas-Piloni G
+- authtype: Author
+  name: Quiroz-Mercado H
+- authtype: Author
+  name: Hernández-Zimbrón LF
+- authtype: Author
+  name: Fajardo-Cruz ED
+- authtype: Author
+  name: Ferreyra-Severo E
+- authtype: Author
+  name: García-Franco R
+- authtype: Author
+  name: Rubio Mijangos JF
+- authtype: Author
+  name: López-Star E
+- authtype: Author
+  name: García-Roa M
+- authtype: Author
+  name: Lansingh VC
+- authtype: Author
+  name: Thébault SC
+epubdate: 2023 Jan 12
+fulljournalname: PLOS ONE
+issue: '1'
+pages: e0278388
+pmclivedate: 2023/01/13
+printpubdate: ''
+pubdate: 2023 Jan 12
+sortdate: 2023/01/12 00:00
+source: PLoS One
+title: Preventable risk factors for type 2 diabetes can be detected using noninvasive
+  spontaneous electroretinogram signals
+uid: '9836271'
+volume: '18'

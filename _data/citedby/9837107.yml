@@ -1,0 +1,22 @@
+articleids:
+- idtype: pmid
+  value: '36635340'
+- idtype: doi
+  value: 10.1038/s41598-022-27361-x
+- idtype: pmcid
+  value: PMC9837107
+authors:
+- authtype: Author
+  name: Daly I
+epubdate: 2023 Jan 12
+fulljournalname: Scientific Reports
+issue: ''
+pages: '624'
+pmclivedate: 2023/01/14
+printpubdate: ''
+pubdate: 2023 Jan 12
+sortdate: 2023/01/12 00:00
+source: Sci Rep
+title: Neural decoding of music from the EEG
+uid: '9837107'
+volume: '13'
