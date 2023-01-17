@@ -5,11 +5,11 @@ tags: [template, atlas]
 
 # Template anatomical atlases and parcellation schemes
 
-An atlas is a volumetric or surface based description of the geometry of the brain, where each anatomical coordinate is labeled according to some scheme, e.g., as [Brodmann area](https://en.wikipedia.org/wiki/Brodmann_area). A recent review of brain templates and atlases is presented in [Brain templates and atlases (2012)](http://www.ncbi.nlm.nih.gov/pubmed/22248580) in NeuroImage.
+An atlas is a volumetric or surface based description of the geometry of the brain, where each anatomical coordinate is labeled according to some scheme, e.g., as [Brodmann area](https://en.wikipedia.org/wiki/Brodmann_area). A review of brain templates and atlases is presented in [Brain templates and atlases (2012)](http://www.ncbi.nlm.nih.gov/pubmed/22248580) in NeuroImage.
 
 In general an atlas can be read with **[ft_read_atlas](/reference/fileio/ft_read_atlas)**. It is represented as a volumetric segmentation as in **[ft_datatype_segmentation](/reference/utilities/ft_datatype_segmentation)**, or as a surface-based parcellation as in **[ft_datatype_parcellation](/reference/utilities/ft_datatype_parcellation)**. The volume based representation can be used with **[ft_volumelookup](/reference/ft_volumelookup)** or with the cfg.atlas option in **[ft_sourceplot](/reference/ft_sourceplot)**.
 
-In the FieldTrip release, you can find the volumetric or surface based atlases in the fieldtrip/template/xxx directory, with XXX being the specific template (e.g., "aal" or "afni").
+In the FieldTrip release, you can find the volumetric or surface based atlases in the fieldtrip/template/xxx directory, with XXX referring to a specific template (e.g., "aal" or "afni").
 
 {% include markup/warning %}
 You can find the template anatomical atlases and parcellation schemes included in FieldTrip [here](https://github.com/fieldtrip/fieldtrip/tree/master/template/atlas).
@@ -241,4 +241,4 @@ The atlas can be read into Fieldtrip using the following code:
 
 ## See also
 
-You can find more atlasses on <https://www.loni.usc.edu/research/atlases> and on <http://www.bmap.ucla.edu/portfolio/atlases>. 
+You can find more atlases on <https://www.loni.usc.edu/research/atlases> and on <http://www.bmap.ucla.edu/portfolio/atlases>. 
