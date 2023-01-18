@@ -1,0 +1,34 @@
+articleids:
+- idtype: pmid
+  value: '36459788'
+- idtype: doi
+  value: 10.1016/j.cortex.2022.08.014
+- idtype: pmcid
+  value: PMC9840701
+- idtype: MID
+  value: NIHMS1854475
+authors:
+- authtype: Author
+  name: Corriveau A
+- authtype: Author
+  name: Kidder A
+- authtype: Author
+  name: Teichmann L
+- authtype: Author
+  name: Wardle SG
+- authtype: Author
+  name: Baker CI
+epubdate: 2022 Oct 21
+fulljournalname: Cortex; a journal devoted to the study of the nervous system and
+  behavior
+issue: ''
+pages: 71-82
+pmclivedate: ''
+printpubdate: 2023 Jan
+pubdate: 2022 Oct 21
+sortdate: 2022/10/21 00:00
+source: Cortex
+title: Sustained neural representations of personally familiar people and places during
+  cued recall
+uid: '9840701'
+volume: '158'
