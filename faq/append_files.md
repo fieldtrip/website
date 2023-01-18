@@ -18,7 +18,7 @@ To facilitate working with the data in the different runs or blocks, you can con
     evt2 = ft_read_event(filename2);
 
     hdr = hdr1;               % the headers are assumed to be the same wrt samping rate and channel names
-    dat = cat(2, dat1, dat2;  % concatenate the data along the 2nd dimension
+    dat = cat(2, dat1, dat2);  % concatenate the data along the 2nd dimension
 
     % shift the sample of the events or triggers in the second block
     for i=1:length(evt2)
