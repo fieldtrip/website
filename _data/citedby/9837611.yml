@@ -1,0 +1,45 @@
+articleids:
+- idtype: pmid
+  value: '35253864'
+- idtype: doi
+  value: 10.1093/cercor/bhac074
+- idtype: pmcid
+  value: PMC9837611
+authors:
+- authtype: Author
+  name: Díaz-Rivera MN
+- authtype: Author
+  name: Birba A
+- authtype: Author
+  name: Fittipaldi S
+- authtype: Author
+  name: Mola D
+- authtype: Author
+  name: Morera Y
+- authtype: Author
+  name: de Vega M
+- authtype: Author
+  name: Moguilner S
+- authtype: Author
+  name: Lillo P
+- authtype: Author
+  name: Slachevsky A
+- authtype: Author
+  name: González Campo C
+- authtype: Author
+  name: Ibáñez A
+- authtype: Author
+  name: García AM
+epubdate: 2022 Mar 6
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '2'
+pages: 403-420
+pmclivedate: ''
+printpubdate: ''
+pubdate: 2022 Mar 6
+sortdate: 2022/03/06 00:00
+source: Cereb Cortex
+title: Multidimensional inhibitory signatures of sentential negation in behavioral
+  variant frontotemporal dementia
+uid: '9837611'
+volume: '33'
