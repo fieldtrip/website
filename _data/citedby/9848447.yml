@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '36495945'
+- idtype: doi
+  value: 10.1016/j.jneumeth.2022.109766
+- idtype: pmcid
+  value: PMC9848447
+- idtype: MID
+  value: NIHMS1859642
+authors:
+- authtype: Author
+  name: Chowdhury NS
+- authtype: Author
+  name: Skippen P
+- authtype: Author
+  name: Si E
+- authtype: Author
+  name: Chiang AK
+- authtype: Author
+  name: Millard SK
+- authtype: Author
+  name: Furman AJ
+- authtype: Author
+  name: Chen S
+- authtype: Author
+  name: Schabrun SM
+- authtype: Author
+  name: Seminowicz DA
+epubdate: 2022 Dec 7
+fulljournalname: Journal of neuroscience methods
+issue: ''
+pages: '109766'
+pmclivedate: ''
+printpubdate: 2023 Feb 1
+pubdate: 2022 Dec 7
+sortdate: 2022/12/07 00:00
+source: J Neurosci Methods
+title: 'The reliability of two prospective cortical biomarkers for pain: EEG peak
+  alpha frequency and TMS corticomotor excitability'
+uid: '9848447'
+volume: '385'
