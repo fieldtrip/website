@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3390/brainsci13010082
+- idtype: pmcid
+  value: PMC9856801
+authors:
+- authtype: Author
+  name: Cao C
+- authtype: Author
+  name: Wen W
+- authtype: Author
+  name: Chen A
+- authtype: Author
+  name: Wang S
+- authtype: Author
+  name: Xu G
+- authtype: Author
+  name: Niu C
+- authtype: Author
+  name: Song J
+epubdate: 2023 Jan 1
+fulljournalname: Brain Sciences
+issue: '1'
+pages: '82'
+pmclivedate: 2023/01/21
+printpubdate: ''
+pubdate: 2023 Jan 1
+sortdate: 2023/01/01 00:00
+source: Brain Sci
+title: Neuropsychological Alterations of Prolactinomas’ Cognitive Flexibility in Task
+  Switching
+uid: '9856801'
+volume: '13'

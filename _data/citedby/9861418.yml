@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3390/jpm13010026
+- idtype: pmcid
+  value: PMC9861418
+authors:
+- authtype: Author
+  name: Griškova-Bulanova I
+- authtype: Author
+  name: Živanović M
+- authtype: Author
+  name: Voicikas A
+- authtype: Author
+  name: Pipinis E
+- authtype: Author
+  name: Jurkuvėnas V
+- authtype: Author
+  name: Bjekić J
+epubdate: 2022 Dec 23
+fulljournalname: Journal of Personalized Medicine
+issue: '1'
+pages: '26'
+pmclivedate: 2023/01/22
+printpubdate: ''
+pubdate: 2022 Dec 23
+sortdate: 2022/12/23 00:00
+source: J Pers Med
+title: Responses at Individual Gamma Frequencies Are Related to the Processing Speed
+  but Not the Inhibitory Control
+uid: '9861418'
+volume: '13'
