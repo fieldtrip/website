@@ -119,12 +119,14 @@ _Figure 3. MRI plotted before (left) and after reslicing (right)_
 In this step, the voxels of the anatomical MRI are segmented (i.e., separated) into the five different tissue types: scalp, skull, csf (cerebro-spinal fluid), gray and white matter. These latest three tissues belong to the brain. The function **[ft_volumesegment](/reference/ft_volumesegment)** will produce the required output. You can read more about how the tissue-types are represented in the output of this function in this [FAQ](/faq/how_is_the_segmentation_defined). The segmentation should contain a binary representation of 5 tissue types which do not overlap.
 
 {% include markup/warning %}
-Note that the segmentation is quite time consuming (~15mins) and if you want you can load the result and skip ahead to the next step. You can download the segmented MRI of this tutorial data from the from the [download server](https://download.fieldtriptoolbox.org/tutorial/headmodel_fem/segmentedmri.mat) (segmentedmri.mat).
+Note that the segmentation is quite time consuming (~15mins) and if you want you can load the result and skip ahead to the next step. You can download the segmented MRI of this tutorial data from the [download server](https://download.fieldtriptoolbox.org/tutorial/headmodel_eeg_fem/).
 {% include markup/end %}
 
     cfg           = [];
     cfg.output    = {'gray', 'white', 'csf', 'skull', 'scalp'};
     segmentedmri  = ft_volumesegment(cfg, mri);
+    
+    save segmentedmri segmentedmri
 
      disp(segmentedmri)
                dim: [256 256 256]
@@ -200,11 +202,11 @@ At the moment FieldTrip only supports hexahedrons for FEM modeling.
 
 ## Head model
 
-Gray and white matter, csf, skull and skin has been differentiated in the geometrical description of the head. Now, we will create the volume conduction model. We will specify `cfg.method='simbio'` in **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)**. This methods also requires to specify the conductivities for each tissue-types. The headmodel can also be downloaded here [download server](https://download.fieldtriptoolbox.org/tutorial/headmodel_fem/headmodel.mat).
+Gray and white matter, csf, skull and skin has been differentiated in the geometrical description of the head. Now, we will create the volume conduction model. We will specify `cfg.method='simbio'` in **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)**. This methods also requires to specify the conductivities for each tissue-types. The headmodel can also be downloaded from our [download server](https://download.fieldtriptoolbox.org/tutorial/headmodel_eeg_fem/).
 
     cfg        = [];
     cfg.method ='simbio';
-    cfg.conductivity = [0.33 0.14 1.79 0.01 0.43];   % order follows mesh.tissuelabel
+    cfg.conductivity = [0.33 0.14 1.79 0.01 0.43];   % the order follows mesh.tissuelabel
     headmodel  = ft_prepare_headmodel(cfg, mesh);
 
     disp(headmodel)
