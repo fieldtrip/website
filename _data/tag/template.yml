@@ -16,7 +16,7 @@
 - name:  Template 3-D electrode sets
   link:  /template/electrode
 
-- name:  Template head models for forward volume conduction modeling
+- name:  Template head models for EEG volume conduction modeling
   link:  /template/headmodel
 
 - name:  Template 2-D layouts for plotting
