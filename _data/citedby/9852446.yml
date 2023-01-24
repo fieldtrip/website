@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '36658291'
+- idtype: doi
+  value: 10.1038/s41598-023-28012-5
+- idtype: pmcid
+  value: PMC9852446
+authors:
+- authtype: Author
+  name: Stock AK
+- authtype: Author
+  name: Wendiggensen P
+- authtype: Author
+  name: Ghin F
+- authtype: Author
+  name: Beste C
+epubdate: 2023 Jan 19
+fulljournalname: Scientific Reports
+issue: ''
+pages: '1097'
+pmclivedate: 2023/01/21
+printpubdate: ''
+pubdate: 2023 Jan 19
+sortdate: 2023/01/19 00:00
+source: Sci Rep
+title: Alcohol-induced deficits in reactive control of response selection and inhibition
+  are counteracted by a seemingly paradox increase in proactive control
+uid: '9852446'
+volume: '13'
