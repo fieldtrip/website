@@ -167,32 +167,6 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [How to compile MATLAB code into stand-alone executables?](/faq/how_to_compile_matlab_code_into_stand-alone_executables)
 - [How to get started with distributed computing using qsub?](/faq/how_to_get_started_with_distributed_computing_using_qsub)
 
-### Distributed computing with fieldtrip/engine on a multicore computer
-
-- [How to get started with distributed computing using engine?](/faq/how_to_get_started_with_distributed_computing_using_engine)
-
-### Distributed computing with fieldtrip/peer on a ad-hoc cluster
-
-- [Does a firewall affect the communication between peers?](/faq/does_a_firewall_affect_the_communication_between_peers)
-- [How can I combine FieldTrip with peer distributed computing?](/faq/how_can_i_combine_fieldtrip_with_peer_distributed_computing)
-- [How can I debug a problematic distributed job?](/faq/how_can_i_debug_a_problematic_distributed_job)
-- [How can I prevent a job from executing twice?](/faq/how_can_i_prevent_a_job_from_executing_twice)
-- [How can I read and write files if I use other people's peers?](/faq/how_can_i_read_and_write_files_if_i_use_other_people_s_peers)
-- [How can I set up the peer distributed computing on a large Linux cluster?](/faq/how_can_i_set_up_the_peer_distributed_computing_on_a_large_linux_cluster)
-- [How can I set up the peer distributed computing on a single multicore computer?](/faq/how_can_i_set_up_the_peer_distributed_computing_on_a_single_multicore_computer)
-- [How can I set up the peer distributed computing on a small number of computers?](/faq/how_can_i_set_up_the_peer_distributed_computing_on_a_small_number_of_computers)
-- [How can I stop the different threads created by peercontroller and peerworker?](/faq/how_can_i_stop_the_different_threads_created_by_peercontroller_and_peerworker)
-- [How can I use the command-line peerworker and optimize the MATLAB licenses?](/faq/how_can_i_use_the_command-line_peerworker_and_optimize_the_matlab_licenses)
-- [How do I avoid having to allocate N copies of my data if I want to execute N jobs?](/faq/how_do_i_avoid_having_to_allocate_n_copies_of_my_data_if_i_want_to_execute_n_jobs)
-- [How does the peer smartmem algorithm work?](/faq/how_does_the_peer_smartmem_algorithm_work)
-- [How does the peer smartshare algorithm work?](/faq/how_does_the_peer_smartshare_algorithm_work)
-- [How should I call peercellfun when a function requires many inputs (e.g., key-value pairs)?](/faq/how_should_i_call_peercellfun_when_a_function_requires_many_inputs_e.g._key-value_pairs)
-- [How to get started with peer distributed computing on my own desktop computer?](/faq/how_to_get_started_with_peer_distributed_computing_on_my_own_desktop_computer)
-- [What happens if a job fails to execute properly?](/faq/what_happens_if_a_job_fails_to_execute_properly)
-- [What happens with a job that has an error on the worker?](/faq/what_happens_with_a_job_that_has_an_error_on_the_worker)
-- [Why are the peers using multicast to announce themselves?](/faq/why_are_the_peers_using_multicast_to_announce_themselves)
-- [Why does peercellfun resubmit jobs that take too long to get started?](/faq/why_does_peercellfun_resubmit_jobs_that_take_too_long_to_get_started)
-
 ## MATLAB questions
 
 - [Can I prevent "external" toolboxes from being added to my MATLAB path?](/faq/can_i_prevent_external_toolboxes_from_being_added_to_my_matlab_path)
