@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '36053213'
+- idtype: doi
+  value: 10.1002/hbm.26061
+- idtype: pmcid
+  value: PMC9842925
+authors:
+- authtype: Author
+  name: Bower IS
+- authtype: Author
+  name: Hill AT
+- authtype: Author
+  name: Enticott PG
+epubdate: 2022 Sep 2
+fulljournalname: Human Brain Mapping
+issue: '2'
+pages: 447-457
+pmclivedate: 2023/01/23
+printpubdate: ''
+pubdate: 2022 Sep 2
+sortdate: 2022/09/02 00:00
+source: Hum Brain Mapp
+title: Functional brain connectivity during exposure to the scale and color of interior
+  built environments
+uid: '9842925'
+volume: '44'

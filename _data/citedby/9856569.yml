@@ -1,0 +1,24 @@
+articleids:
+- idtype: pmid
+  value: '36672046'
+- idtype: doi
+  value: 10.3390/brainsci13010065
+- idtype: pmcid
+  value: PMC9856569
+authors:
+- authtype: Author
+  name: Adama S
+- authtype: Author
+  name: Bogdan M
+epubdate: 2022 Dec 29
+fulljournalname: Brain Sciences
+issue: '1'
+pages: '65'
+pmclivedate: 2023/01/21
+printpubdate: ''
+pubdate: 2022 Dec 29
+sortdate: 2022/12/29 00:00
+source: Brain Sci
+title: Application of Soft-Clustering to Assess Consciousness in a CLIS Patient
+uid: '9856569'
+volume: '13'

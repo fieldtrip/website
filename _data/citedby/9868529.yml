@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '35901461'
+- idtype: doi
+  value: 10.1093/arclin/acac051
+- idtype: pmcid
+  value: PMC9868529
+authors:
+- authtype: Author
+  name: Melara RD
+- authtype: Author
+  name: Ahles TA
+- authtype: Author
+  name: Prashad N
+- authtype: Author
+  name: Fernbach M
+- authtype: Author
+  name: Edelman JA
+- authtype: Author
+  name: Root J
+epubdate: 2022 Jul 29
+fulljournalname: Archives of Clinical Neuropsychology
+issue: '1'
+pages: 12-24
+pmclivedate: ''
+printpubdate: ''
+pubdate: 2022 Jul 29
+sortdate: 2022/07/29 00:00
+source: Arch Clin Neuropsychol
+title: Longitudinal Effects of Breast Cancer Treatment on Neural Correlates of Attention
+uid: '9868529'
+volume: '38'

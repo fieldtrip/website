@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '36535769'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1546-22.2022
+- idtype: pmcid
+  value: PMC9864561
+authors:
+- authtype: Author
+  name: Singer JJ
+- authtype: Author
+  name: Cichy RM
+- authtype: Author
+  name: Hebart MN
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '3'
+pages: 484-500
+pmclivedate: 2023/01/23
+printpubdate: 2023 Jan 18
+pubdate: 2023 Jan 18
+sortdate: 2023/01/18 00:00
+source: J Neurosci
+title: The Spatiotemporal Neural Dynamics of Object Recognition for Natural Images
+  and Line Drawings
+uid: '9864561'
+volume: '43'

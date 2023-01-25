@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fnins.2022.1065469
+- idtype: pmcid
+  value: PMC9868831
+authors:
+- authtype: Author
+  name: Chirumamilla VC
+- authtype: Author
+  name: Gonzalez-Escamilla G
+- authtype: Author
+  name: Meyer B
+- authtype: Author
+  name: Anwar AR
+- authtype: Author
+  name: Ding H
+- authtype: Author
+  name: Radetz A
+- authtype: Author
+  name: Bonertz T
+- authtype: Author
+  name: Groppa S
+- authtype: Author
+  name: Muthuraman M
+epubdate: 2023 Jan 9
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '1065469'
+pmclivedate: 2023/01/24
+printpubdate: ''
+pubdate: 2023 Jan 9
+sortdate: 2023/01/09 00:00
+source: Front Neurosci
+title: Inhibitory and excitatory responses in the dorso-medial prefrontal cortex during
+  threat processing
+uid: '9868831'
+volume: '16'
