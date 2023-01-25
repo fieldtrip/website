@@ -220,7 +220,7 @@ end % for subjid
 
 ## SMI
 
-The SMI eye tracker stores the raw data in an `.idf` file. That file cannot be read (easily) with other analysis software, hence the SMI specific *IDF converter* program from the iView tools needs to be used to convert it to ascii. Please note that this is Windows software that comes with the eye tracker. At the DCCN you can ask Paul for more details on the SMI eye trackers.
+The SMI eye tracker stores the raw data in an `.idf` file. That file cannot be read (easily) with other analysis software, hence the SMI specific *IDF converter* program from the iView tools needs to be used to convert it to ascii. Please note that this is Windows software that comes with the eye tracker. At the Donders Centre for Cognitive Neuroimaging (DCCN) in Nijmegen you can ask Paul for more details on the SMI eye trackers.
 
 ### Example
 

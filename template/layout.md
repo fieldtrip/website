@@ -139,7 +139,7 @@ The following template layouts are for electrode caps from [Brain Products actiC
 
 #### dccn_customized_acticap64.mat
 
-This is a custom 64-Channel-Arrangement for the DCCN. The 32 channels from the 1st amplifier are located central, the 32 channels from the 2nd amplifier are along the rim.
+This is a custom 64-Channel-Arrangement for the Donders Centre for Cognitive Neuroimaging (DCCN). The 32 channels from the 1st amplifier are located central, the 32 channels from the 2nd amplifier are along the rim.
 
 {% include image src="/assets/img/template/layout/dccn_customized_acticap64.png" width="200" %}
 {% include image src="/assets/img/template/layout/dccn_customized_acticap64.mat.png" width="200" %}

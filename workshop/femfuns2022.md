@@ -8,7 +8,7 @@ tweet: Upcoming workshop at the Donders! ECoG forward solution using FEMfuns, or
 
 - By whom: Maria Carla Piastra, Thom Oostendorp, Geertjan Huiskamp, and Robert Oostenveld
 - When: 24 November 2022
-- Where: Donders Centre for Cognitive Neuroimaging, Kapittelweg 29, Nijmegen, room 2.258
+- Where: Donders Centre for Cognitive Neuroimaging (DCCN), Kapittelweg 29, Nijmegen, room 2.258
 - Audience: Researchers with previous knowledge of volume conduction modeling, source reconstruction, ECoG applications, MATLAB
 
 ## What is the workshop about?
@@ -17,7 +17,7 @@ This workshop is aimed at researchers who want to learn about Electrocorticograp
 
 In this workshop, we will introduce FEMfuns, a state-of-the-art ECoG tool for computing forward solutions in the case of both recording and stimulating electrodes. This tool and pipeline are the results of the project [“Into the Brain”](https://stitpro.nl/projects/into-the-brain/) which was funded by StITPro as a continuation project of [NeuroCIMT](https://neurocontrol.nl/projects/neurocimt/neurocimt-project-8-invasive-sensing/). The goal of this project was to create an easy-to-use interface to FEMfuns, which has been achieved by [embedding it in FieldTrip](https://www.fieldtriptoolbox.org/development/project/femfuns/). Details about FEMfuns can be read [here](https://doi.org/10.1007/s12021-020-09458-8) and about its usability and its relevance [here](https://iopscience.iop.org/article/10.1088/1741-2552/abb11d/meta).
 
-The workshop will consist of a number of short theoretical introductions, followed by hands-on sessions in which you will be tutored through the complete computation of ECoG forward solutions. The focus is on the creation and visualization of meshes and on the computation of forward solutions for recording and stimulating electrodes. The attendees will be divided into two groups of equal size so that half of the attendees will deal with recording electrodes simulations and the other half with stimulating electrodes simulations. ECoG signal processing is NOT part of this workshop. 
+The workshop will consist of a number of short theoretical introductions, followed by hands-on sessions in which you will be tutored through the complete computation of ECoG forward solutions. The focus is on the creation and visualization of meshes and on the computation of forward solutions for recording and stimulating electrodes. The attendees will be divided into two groups of equal size so that half of the attendees will deal with recording electrodes simulations and the other half with stimulating electrodes simulations. ECoG signal processing is NOT part of this workshop.
 
 More information about the program can be found below.
 
@@ -36,6 +36,6 @@ _We will start after lunch, at 12:30 sharp, and will finish around 17:00. If you
 | 12:45-13:30 | Introduction:<br>Maria-Carla Piastra (15mins): what is the ECoG forward problem? what is FEMfuns?<br>Geertjan Huiskamp (15mins): applications in epilepsy
 | 13:30-14:00 | Hands-on: creating and visualizing the mesh
 | 14:00-15:15 | Group1-Hands-on: compute and visualize potential with recording electrodes<br>Group2-Hands-on: compute and visualize potential with stimulating electrodes
-| 15:15-15:30 | Break 
+| 15:15-15:30 | Break
 | 15:30-16:00 | Hands-on (exercises): what if the electrode size changes? which electrodes are injecting current?
 | 16:00-17:00 | Hands-on: try your own geometry/MRI data and ECoG electrode position
