@@ -11,7 +11,7 @@ We hope and expect that we will be able to teach this toolkit on site. Whether o
 
 There are 38 places available for this toolkit. The selection of participants will be based on the background experience, the research interest and the expectations on what you will learn (see the questions below). We prefer the group to be reasonably homogeneous in level and expertise of the participants, as this improves the overall interaction.
 
-You can [pre-register here](https://www.ru.nl/donders/agenda/donders-tool-kits/vm-tool-kits/donders-meg-eeg-toolkit/), the deadline for pre-registration is April 10, 2022.
+You can [pre-register here](https://www.ru.nl/donders/agenda/donders-tool-kits/vm-tool-kits/donders-meg-eeg-toolkit/), the deadline for pre-registration is April 10, 2023.
 
 We will inform you as to whether you obtained a place in this course not later than Thursday April 13, 2023. The fee for PhD students is € 450; and € 650 for senior researchers.
 
