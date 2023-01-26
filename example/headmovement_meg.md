@@ -101,18 +101,18 @@ MEG experiments typically involve repeated trials of an evoked or induced brain 
     cfg.trialdef.poststim = 0.3;
     cfg.continuous = 'yes';
     cfg = ft_definetrial(cfg);
-
-    % preprocess the MEG data
-    cfg.channel = {'MEG'};
-    cfg.demean = 'yes';
-    cfg.baselinewindow = [-0.2 0];
-    cfg.dftfilter = 'yes'; % notch filter to filter out 50Hz
-    data = ft_preprocessing(cfg);
-
-    % timelock analysis
-    cfg = [];
-    cfg.keeptrials = 'yes';
-    timelock = ft_timelockanalysis(cfg, data);
+   
+   % preprocess the MEG data
+   cfg.channel = {'MEG'};
+   cfg.demean = 'yes';
+   cfg.baselinewindow = [-0.2 0];
+   cfg.dftfilter = 'yes'; % notch filter to filter out 50Hz
+   data = ft_preprocessing(cfg);
+   
+   % timelock analysis
+   cfg = [];
+   cfg.keeptrials = 'yes';
+   timelock = ft_timelockanalysis(cfg, data);
 
 2. Create trial-by-trial estimates of head movement. Here one may assume that the head is a rigid body that can be described by 6 parameters (3 translations and 3 rotations). The circumcenter function (see below) gives us these parameters. By demeaning, we obtain the deviations. In other words; translations and rotations relative to the average head position and orientation.
 
@@ -182,7 +182,7 @@ Stolk A, Todorovic A, Schoffelen JM, Oostenveld R. **[Online and offline tools f
 {% include markup/end %}
 
 ## Appendix: circumcenter
-
+   
     function [cc] = circumcenter(coil1,coil2,coil3)
 
     % CIRCUMCENTER determines the position and orientation of the circumcenter
