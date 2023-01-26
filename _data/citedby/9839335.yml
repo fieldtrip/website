@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '36638163'
+- idtype: doi
+  value: 10.1126/sciadv.ade6049
+- idtype: pmcid
+  value: PMC9839335
+authors:
+- authtype: Author
+  name: Kringelbach ML
+- authtype: Author
+  name: Perl YS
+- authtype: Author
+  name: Tagliazucchi E
+- authtype: Author
+  name: Deco G
+epubdate: 2023 Jan 13
+fulljournalname: Science Advances
+issue: '2'
+pages: eade6049
+pmclivedate: 2023/01/24
+printpubdate: ''
+pubdate: 2023 Jan 13
+sortdate: 2023/01/13 00:00
+source: Sci Adv
+title: 'Toward naturalistic neuroscience: Mechanisms underlying the flattening of
+  brain hierarchy in movie-watching compared to rest and task'
+uid: '9839335'
+volume: '9'
