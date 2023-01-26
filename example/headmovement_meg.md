@@ -22,7 +22,7 @@ In general there are various ways that you can use the continuous head localizat
 
 The first way of dealing with it requires that you visualize and decide on the movements. This is demonstrated in the first half of the example script.
 
-The second way of dealing with the movements means that you perform **[ft_timelockanalysis](/reference/ft_timelockanalysis)**, **[ft_freqanalysis](/reference/ft_freqanalysis)** or **[ft_sourceanalysis](/reference/ft_sourceanalysis)** with the option keeptrials=yes. This will give trial estimates of the ERF, the power or the source strength for each trial. The effect that the variable head position has on those single-trial estimates can be estimated and removed from the data using **[ft_regressconfound](/reference/ft_regressconfound)**. This method has been found to significantly improve statistical sensivity following head movements, [up to 30%](https://doi.org/10.1016/j.neuroimage.2012.11.047), and is therefore demonstrated in the second half of the example script.
+The second way of dealing with the movements means that you perform **[ft_timelockanalysis](/reference/ft_timelockanalysis)**, **[ft_freqanalysis](/reference/ft_freqanalysis)** or **[ft_sourceanalysis](/reference/ft_sourceanalysis)** with the option ```cfg.keeptrials=yes```. This will give trial estimates of the ERF, the power or the source strength for each trial. The effect that the variable head position has on those single-trial estimates can be estimated and removed from the data using **[ft_regressconfound](/reference/ft_regressconfound)**. This method has been found to significantly improve statistical sensivity following head movements, [up to 30%](https://doi.org/10.1016/j.neuroimage.2012.11.047), and is therefore demonstrated in the second half of the example script.
 
 The third way of dealing with the movements requires that you make a spatial interpolation of the raw MEG data at each moment in time, in which you correct for the movements. In principle this could be done using the **[ft_megrealign](/reference/ft_megrealign)** function, but at this moment (May 2012) that function cannot yet deal with within-session movements.
 
@@ -47,6 +47,7 @@ Read the data with the following HLC channels:
 - HLC00n2 Y coordinate relative to the dewar (in meters) of the nth head localization coil
 - HLC00n3 Z coordinate relative to the dewar (in meters) of the nth head localization coil
 
+```
     cfg.channel = {
       'HLC0011','HLC0012','HLC0013', ...
       'HLC0021','HLC0022','HLC0023', ...
@@ -54,6 +55,7 @@ Read the data with the following HLC channels:
     };
 
     headpos = ft_preprocessing(cfg);
+```
 
 Determine the mean (per trial) circumcenter (the center of the circumscribed circle) of the three headcoils and its orientation (see subfunction at the bottom of this page)
 
@@ -169,7 +171,7 @@ Example statistical results in a single-subject (baseline vs. task activity cont
 
 {% include image src="/assets/img/example/headmovement_meg/regr_ftwiki.png" width="300" %}
 
-_Figure taken from[Stolk et al., NeuroImage 2013](https://doi.org/10.1016/j.neuroimage.2012.11.047)._
+_Figure taken from [Stolk et al., NeuroImage 2013](https://doi.org/10.1016/j.neuroimage.2012.11.047)._
 
 ## Practical issues
 
