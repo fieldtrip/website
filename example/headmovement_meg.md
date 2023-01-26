@@ -92,6 +92,7 @@ MEG experiments typically involve repeated trials of an evoked or induced brain 
 
 1. Preprocess the MEG data, for instance pertaining to an ERF analysis at the sensor level. Note the keeptrials = 'yes' when calling ft_timelockanalysis.
 
+```
     % define trials
     cfg = [];
     cfg.dataset = 'TacStimRegressConfound.ds';
@@ -113,9 +114,11 @@ MEG experiments typically involve repeated trials of an evoked or induced brain 
    cfg = [];
    cfg.keeptrials = 'yes';
    timelock = ft_timelockanalysis(cfg, data);
+```
 
 2. Create trial-by-trial estimates of head movement. Here one may assume that the head is a rigid body that can be described by 6 parameters (3 translations and 3 rotations). The circumcenter function (see below) gives us these parameters. By demeaning, we obtain the deviations. In other words; translations and rotations relative to the average head position and orientation.
 
+```
     % define trials
     cfg = [];
     cfg.dataset = 'TacStimRegressConfound.ds';
@@ -145,9 +148,11 @@ MEG experiments typically involve repeated trials of an evoked or induced brain 
 
     % demean to obtain translations and rotations from the average position and orientation
     cc_dem = [cc - repmat(mean(cc,2),1,size(cc,2))]';
+```
 
 3. Fit the headmovement regressors to the data and remove variance that can be explained by these confounds.
 
+```
     % add head movements to the regressorlist. also add the constant (at the end; column 7)
     confound = [cc_dem ones(size(cc_dem,1),1)];
 
@@ -156,6 +161,7 @@ MEG experiments typically involve repeated trials of an evoked or induced brain 
     cfg.confound = confound;
     cfg.reject = [1:6]; % keeping the constant (nr 7)
     regr = ft_regressconfound(cfg, timelock);
+```
 
 ## Figure
 
