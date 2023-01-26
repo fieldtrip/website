@@ -17,6 +17,8 @@ Each voxel’s TFCE score is given by the sum of the scores of all “supporting
 
 {% include image src="/assets/img/example/threshold_free_cluster_enhancement/schematic.png" width="500" %}
 
+_TFCE schmeatic, [adapted](https://benediktehinger.de/blog/science/threshold-free-cluster-enhancement-explained/) from [Benedikt V. Ehinger](https://www.benediktehinger.de) (used under CC-BY)_
+
 ## Example code
 
 The following MATLAB code gives an example of the TFCE method. Moreover, we will compare the statistical output of the TFCE method with the conventional threshold based on `cfg.clusteralpha`.
