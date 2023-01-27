@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '36693870'
+- idtype: doi
+  value: 10.1038/s41598-023-27480-z
+- idtype: pmcid
+  value: PMC9873641
+authors:
+- authtype: Author
+  name: Rho G
+- authtype: Author
+  name: Callara AL
+- authtype: Author
+  name: Bernardi G
+- authtype: Author
+  name: Scilingo EP
+- authtype: Author
+  name: Greco A
+epubdate: 2023 Jan 24
+fulljournalname: Scientific Reports
+issue: ''
+pages: '1338'
+pmclivedate: 2023/01/26
+printpubdate: ''
+pubdate: 2023 Jan 24
+sortdate: 2023/01/24 00:00
+source: Sci Rep
+title: EEG cortical activity and connectivity correlates of early sympathetic response
+  during cold pressor test
+uid: '9873641'
+volume: '13'
