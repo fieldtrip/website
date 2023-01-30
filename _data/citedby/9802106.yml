@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1093/pnasnexus/pgac216
+- idtype: pmcid
+  value: PMC9802106
+authors:
+- authtype: Author
+  name: Fernández-Rubio G
+- authtype: Author
+  name: Carlomagno F
+- authtype: Author
+  name: Vuust P
+- authtype: Author
+  name: Kringelbach ML
+- authtype: Author
+  name: Bonetti L
+epubdate: 2022 Sep 28
+fulljournalname: PNAS Nexus
+issue: '4'
+pages: pgac216
+pmclivedate: 2023/01/26
+printpubdate: ''
+pubdate: 2022 Sep 28
+sortdate: 2022/09/28 00:00
+source: PNAS Nexus
+title: Associations between abstract working memory abilities and brain activity underlying
+  long-term recognition of auditory sequences
+uid: '9802106'
+volume: '1'

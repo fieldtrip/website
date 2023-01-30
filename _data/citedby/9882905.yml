@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '36649331'
+- idtype: doi
+  value: 10.1371/journal.pbio.3001968
+- idtype: pmcid
+  value: PMC9882905
+authors:
+- authtype: Author
+  name: Pan Y
+- authtype: Author
+  name: Popov T
+- authtype: Author
+  name: Frisson S
+- authtype: Author
+  name: Jensen O
+epubdate: 2023 Jan 17
+fulljournalname: PLOS Biology
+issue: '1'
+pages: e3001968
+pmclivedate: 2023/01/28
+printpubdate: ''
+pubdate: 2023 Jan 17
+sortdate: 2023/01/17 00:00
+source: PLoS Biol
+title: Saccades are locked to the phase of alpha oscillations during natural reading
+uid: '9882905'
+volume: '21'

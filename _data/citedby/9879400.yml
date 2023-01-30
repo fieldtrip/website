@@ -1,0 +1,34 @@
+articleids:
+- idtype: pmid
+  value: '36701328'
+- idtype: doi
+  value: 10.1371/journal.pone.0275305
+- idtype: pmcid
+  value: PMC9879400
+authors:
+- authtype: Author
+  name: Dekydtspotter L
+- authtype: Author
+  name: Miller AK
+- authtype: Author
+  name: Iverson M
+- authtype: Author
+  name: Xiong Y
+- authtype: Author
+  name: Swanson K
+- authtype: Author
+  name: Gilbert C
+epubdate: 2023 Jan 26
+fulljournalname: PLOS ONE
+issue: '1'
+pages: e0275305
+pmclivedate: 2023/01/27
+printpubdate: ''
+pubdate: 2023 Jan 26
+sortdate: 2023/01/26 00:00
+source: PLoS One
+title: 'The timing versus resource problem in nonnative sentence processing: Evidence
+  from a time-frequency analysis of anaphora resolution in successive wh-movement
+  in native and nonnative speakers of French'
+uid: '9879400'
+volume: '18'
