@@ -375,9 +375,8 @@ The head model is expressed in the same units and coordinates as the anatomical 
 We cannot see what the origin of the coordinate system is aligned to. It is definitely _not_ interauricular, as none of the axes passes (approximately) through the ears. By answering the questions, we can establish that the electrodes are in a RAS coordinate system with the first positive x axis pointing to Right, the second positive y axis to Anterior and the third positive z axis to Superior.
 
 {% include markup/success %}
-
-
-
+The specific template electrode set that we are using here is in fact coregistered with the MNI coordinate system. It is documented in more detail [here](/template/electrode/) and the corresponding template BEM headmodel is documented [here](/template/headmodel/#standard_bemmat).
+{% include markup/end %}
     
 #### Manual alignment of the template electrodes
 
