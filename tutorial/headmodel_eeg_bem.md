@@ -61,10 +61,10 @@ Then, you can read in the anatomical MRI data.
 
     disp(mri)
               dim: [256 256 256]
-          anatomy: [256×256×256 int16]
-              hdr: [1×1 struct]
-        transform: [4×4 double]
-              fid: [1×1 struct]
+          anatomy: [256x256x256 int16]
+              hdr: [1x1 struct]
+        transform: [4x4 double]
+              fid: [1x1 struct]
               unit: 'mm'
           coordsys: 'ctf'
 
@@ -214,11 +214,11 @@ We can change the segmentation from the probabilistic (or in this case Boolean) 
 
     disp(segmentedmri_indexed)
               dim: [256 256 256]
-        transform: [4×4 double]
+        transform: [4x4 double]
          coordsys: 'ctf'
              unit: 'mm'
-              cfg: [1×1 struct]
-           tissue: [256×256×256 double]
+              cfg: [1x1 struct]
+           tissue: [256x256x256 double]
       tissuelabel: {'scalp'  'skull'  'brain'}
       
 After adding the anatomical data to the segmentation, we can plot them together.
@@ -352,11 +352,11 @@ There are many EEG manufacturers and almost as many EEG electrode placement syst
     elec = ft_read_sens('standard_1020.elc');
 
     disp(elec)
-        chanpos: [97×3 double]
-       chantype: {97×1 cell}
-       chanunit: {97×1 cell}
-        elecpos: [97×3 double]
-          label: {97×1 cell}
+        chanpos: [97x3 double]
+       chantype: {97x1 cell}
+       chanunit: {97x1 cell}
+        elecpos: [97x3 double]
+          label: {97x1 cell}
            type: 'eeg1010'
            unit: 'mm'
 
@@ -466,7 +466,7 @@ The headshape method is easiest for the pre-auricular points, as you can regogni
        20.4483   67.4268    3.3728
        16.4416  -70.3234    2.5651
     disp(fiducials.label)
-      4×1 cell array
+      4x1 cell array
         {'nas'}
         {'ini'}
         {'lpa'}

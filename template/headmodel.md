@@ -21,9 +21,9 @@ You can load and visualize it with
 
     headmodel =
     struct with fields:
-        bnd: [1×3 struct]
+        bnd: [1x3 struct]
        cond: [0.3300 0.0041 0.3300]
-        mat: [3000×3000 double]
+        mat: [3000x3000 double]
        type: 'dipoli'
        unit: 'mm'
        
@@ -50,8 +50,8 @@ You can load and visualize it with
     mri =
       struct with fields:
               dim: [181 217 181]
-          anatomy: [181×217×181 uint8]
-        transform: [4×4 double]
+          anatomy: [181x217x181 uint8]
+        transform: [4x4 double]
              unit: 'mm'
          coordsys: 'spm'
 
