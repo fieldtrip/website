@@ -5,7 +5,7 @@ tags: [faq, matlab, mex]
 
 # MATLAB complains that mexmaci64 cannot be opened because the developer cannot be verified
 
-When you try to use FieldTrip on macOS Catalina, you may get the error
+When you try to use FieldTrip on macOS Catalina or later, you may get an error like
 
 ```matlab
 "ft_getopt.mexmaci64" cannot be opened because the developer cannot be verified.
