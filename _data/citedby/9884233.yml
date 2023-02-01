@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '36709364'
+- idtype: doi
+  value: 10.1038/s41598-023-28758-y
+- idtype: pmcid
+  value: PMC9884233
+authors:
+- authtype: Author
+  name: Jia S
+- authtype: Author
+  name: Wang Q
+- authtype: Author
+  name: Li H
+- authtype: Author
+  name: Song X
+- authtype: Author
+  name: Wang S
+- authtype: Author
+  name: Zhang W
+- authtype: Author
+  name: Wang G
+epubdate: 2023 Jan 28
+fulljournalname: Scientific Reports
+issue: ''
+pages: '1586'
+pmclivedate: 2023/01/30
+printpubdate: ''
+pubdate: 2023 Jan 28
+sortdate: 2023/01/28 00:00
+source: Sci Rep
+title: Laterality of blood perfusion in the lower extremities after drinking saline
+  at different temperatures
+uid: '9884233'
+volume: '13'
