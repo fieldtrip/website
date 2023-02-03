@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fnhum.2022.868549
+- idtype: pmcid
+  value: PMC9891458
+authors:
+- authtype: Author
+  name: Luther L
+- authtype: Author
+  name: Horschig JM
+- authtype: Author
+  name: van Peer JM
+- authtype: Author
+  name: Roelofs K
+- authtype: Author
+  name: Jensen O
+- authtype: Author
+  name: Hagenaars MA
+epubdate: 2023 Jan 18
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '868549'
+pmclivedate: 2023/02/02
+printpubdate: ''
+pubdate: 2023 Jan 18
+sortdate: 2023/01/18 00:00
+source: Front Hum Neurosci
+title: Oscillatory brain responses to emotional stimuli are effects related to events
+  rather than states
+uid: '9891458'
+volume: '16'
