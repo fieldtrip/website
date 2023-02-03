@@ -27,7 +27,7 @@ The analysis of an experiment typically involves a lot of repetition as similar 
 
 Another '**no-no**' is the practice of collecting all your steps in one large m-file and copy-pasting parts in the command window. Besides becoming easily cluttered with previous tries, different filter settings, etc., it does not create a clear continuity between steps, and most importantly, does not permit batching. Batching is the ultimate aim of any analysis pipeline. It means that in the end most of your analysis steps can be repeated over all subjects and/or conditions with a single command.
 
-## Subject m-files
+## Separating subject-specific details from the analysis code
 
 As stated before, by making our own function around FieldTrip functions we can in a later stage easily repeat them, e.g., over multiple subjects. However, every subject or condition will commonly have different filenames, different variables, different filter-settings, different trials that have to be rejected, etc. A good idea, therefore, is to first **write all your subject-specific details in a separate m-file**. You can choose to have one m-file per subject, or one in which you combine all subjects. In the current example we will use the first option, and we specify these m-files to be a function:
 
