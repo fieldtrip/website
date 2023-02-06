@@ -44,9 +44,9 @@ The anatomical MRI of the [tutorial data set](/tutorial/meg_language) is availab
 
 Throughout the process we use **[ft_sourceplot](/reference/ft_sourceplot)**, **[ft_plot_mesh](/reference/plotting/ft_plot_mesh)** and **[ft_plot_headmodel](/reference/plotting/ft_plot_headmodel)** to check that each of the steps was executed correctly.
 
-{% include image src="/assets/img/tutorial/headmodel_eeg_bem/figure1.png" %}
+{% include image src="/assets/img/tutorial/headmodel_eeg_bem/figure1.png" width="400" %}
 
-_Figure 2. Pipeline for creating a BEM model_
+_Figure; Pipeline for creating a BEM model_
 
 ### Reading in the anatomical data
 
@@ -88,6 +88,10 @@ We can check the overall quality of the MRI image using **[ft_sourceplot](/refer
 
 In case your MRI appears [upside down](/faq/my_mri_is_upside_down_is_this_a_problem), don't worry. This is common and we will address it in the next section.
 
+{% include image src="/assets/img/tutorial/headmodel_eeg_bem/figure2.png" width="600" %}
+
+_Figure; Using ft_sourceplot to asses the MRI quality_
+
 Things to pay attention to when judging the quality of the MRI are
 
 - is the MRI image of good quality overall?
@@ -106,6 +110,10 @@ Using **[ft_sourceplot](/reference/ft_sourceplot)** we can check the orientation
     ft_determine_coordsys(mri)
     % rotate the anatomical MRI around and pay attention to the labels along the axes
     % press "n" and "return" in the command window
+
+{% include image src="/assets/img/tutorial/headmodel_eeg_bem/figure3.png" width="600" %}
+
+_Figure; Determine the coordinate system in which the original MRI is expressed_
 
 You might read your anatomical MRI data from DICOM files, from a NIFTI file, or [other formats](/faq/dataformat), with data that is possibly defined in [a different coordinate system](/faq/coordsys). In that case it may not give information on the coordinate system in which the anatomical data is expressed. You can check and update the coordinate-system with the **[ft_determine_coordsys](/reference/utilities/ft_determine_coordsys)** function by specifying in which direction eax axis points and where the origin is relative to the head.
 
@@ -153,6 +161,10 @@ Following the reslicing, the MRI should be shown with the correct side up, the f
     cfg = [];
     cfg.method = 'ortho';
     ft_sourceplot(cfg, mri_resliced)
+    
+{% include image src="/assets/img/tutorial/headmodel_eeg_bem/figure4.png" width="600" %}
+
+_Figure; The MRI after assigning the desired coordinate system and reslicing_
 
 ### Segmentation
 
@@ -221,7 +233,7 @@ We can change the segmentation from the probabilistic (or in this case Boolean) 
            tissue: [256x256x256 double]
       tissuelabel: {'scalp'  'skull'  'brain'}
       
-After adding the anatomical data to the segmentation, we can plot them together.
+After adding the anatomical data to the segmentation, we can plot them together. By specifying our own colormap, we can be sure that the tissue types have clearly distinguishable colors.
 
     segmentedmri_indexed.anatomy = mri_resliced.anatomy;
     
@@ -229,7 +241,17 @@ After adding the anatomical data to the segmentation, we can plot them together.
     cfg.method = 'ortho';
     cfg.anaparameter = 'anatomy';
     cfg.funparameter = 'tissue';
+    cfg.funcolormap = [
+      0 0 0
+      1 0 0
+      0 1 0
+      0 0 1
+      ];
     ft_sourceplot(cfg, segmentedmri_indexed)
+
+{% include image src="/assets/img/tutorial/headmodel_eeg_bem/figure5.png" width="600" %}
+
+_Figure; The segmented MRI plotted on top of the anatomy_
 
 When visualizing the volume, we should check that the skull and scalp compartment have a consistent thickness, and that both the skull and scalp are neither too thin, nor too thick anywhere. The meshes that we construct in the next step need to be non-intersecting; a very thin layer in the segmentation requires a very fine mesh to prevent it from touching another mesh.
 
@@ -268,11 +290,11 @@ The meshes can be plotted individually using **[ft_plot_mesh](/reference/plottin
     ft_plot_mesh(mesh(3), 'facecolor', 'none'); % scalp
     view([0 -1 0]); % from the right side
 
-{% include image src="/assets/img/tutorial/headmodel_eeg_bem/figure2.png" %}
-{% include image src="/assets/img/tutorial/headmodel_eeg_bem/figure3.png" %}
-{% include image src="/assets/img/tutorial/headmodel_eeg_bem/figure4.png" %}
+{% include image src="/assets/img/tutorial/headmodel_eeg_bem/figure6.png" width="350" %}
+{% include image src="/assets/img/tutorial/headmodel_eeg_bem/figure7.png" width="350" %}
+{% include image src="/assets/img/tutorial/headmodel_eeg_bem/figure8.png" width="350" %}
 
-_Figure 3. The geometry of the BEM surface meshes: scalp (left), skull (middle) and brain (right)_
+_Figure; The geometry of the BEM surface meshes: brain (top), skull (middle) and scalp (bottom)_
 
 Using the curved arrow in the MATLAB figure menu or the [rotate3d](https://www.mathworks.com/help/matlab/ref/matlab.graphics.interaction.internal.rotate3d.html) or [view](https://nl.mathworks.com/help/matlab/ref/view.html) commands, you can turn and look at it from different view points.
 
@@ -286,7 +308,7 @@ You can make more life-like images by changing the color, adding lights and/or c
     figure
     ft_plot_mesh(mesh(3), 'facecolor', 'skin_dark')
     lighting gouraud  % default is flat
-    material shiny    % ranges from dull, default, shiny, metal
+    material dull     % ranges from dull, default, shiny, metal
     light(gca, 'Position', [+1  0  0])
     light(gca, 'Position', [-1  0  0])
     light(gca, 'Position', [ 0 +1  0])
@@ -305,9 +327,9 @@ We can also plot the surfaces together in the same figure. This allows us to see
     hold on
     ft_plot_mesh(mesh(3), 'facecolor','b', 'facealpha', 0.4, 'edgecolor', 'k', 'edgealpha', 0.1);
 
-{% include image src="/assets/img/tutorial/headmodel_eeg_bem/figure5.png" width="350" %}
+{% include image src="/assets/img/tutorial/headmodel_eeg_bem/figure9.png" width="600" %}
 
-_Figure 4. The geometry of the BEM surface meshes. All surfaces plotted together_
+_Figure; The geometry of the BEM surface meshes: all surfaces plotted together_
 
 ### Head model
 
@@ -372,6 +394,10 @@ The head model is expressed in the same units and coordinates as the anatomical 
     What is the anatomical label for the positive Z-axis [r, l, a, p, s, i]? s
     Is the origin of the coordinate system at the a(nterior commissure), i(nterauricular), s(scanner origin), n(ot a landmark)? n
 
+{% include image src="/assets/img/tutorial/headmodel_eeg_bem/figure10.png" width="600" %}
+
+_Figure; Determine the coordinate system in which the original electrodes are expressed_
+
 We cannot see what the origin of the coordinate system is aligned to. It is definitely _not_ interauricular, as none of the axes passes (approximately) through the ears. By answering the questions, we can establish that the electrodes are in a RAS coordinate system with the first positive x axis pointing to Right, the second positive y axis to Anterior and the third positive z axis to Superior.
 
 {% include markup/success %}
@@ -403,9 +429,9 @@ We can plot the electrode positions together with the
     light(gca, 'Position', [ 0  0 +1], 'Color', [1 1 1]/2)
     light(gca, 'Position', [ 0  0 -1], 'Color', [1 1 1]/2)
 
-{% include image src="/assets/img/tutorial/headmodel_eeg_bem/figure6.png" width="300" %}
+{% include image src="/assets/img/tutorial/headmodel_eeg_bem/figure11.png" width="600" %}
 
-_Figure 5. Template electrodes are not yet aligned with the scalp surface._
+_Figure; Template electrodes are not yet aligned with the scalp surface._
 
 It is quite clear that the electrodes are not aligned with the scalp surface, they are rotated by 90 degrees, shifted (aka translated), and also appear to have the incorrect overall scale.
 
@@ -428,15 +454,20 @@ In this situation we need
 - rotate 11 degrees around y, translate -5 along x; apply
 - quit
 
-{% include image src="/assets/img/tutorial/headmodel_eeg_bem/figure8.png" width="350" %}
+{% include image src="/assets/img/tutorial/headmodel_eeg_bem/figure12.png" width="600" %}
 
-_Figure 7. Aligned electrodes plotted together with the scalp surface_
+_Figure; Use the GUI to align the electrodes_
+
 
     figure
     ft_plot_mesh(scalp, 'edgecolor','none', 'facecolor', 'skin', 'facealpha', 0.7);
     hold on
     ft_plot_sens(elec_realigned, 'elecshape', 'sphere', 'label', 'on');
     camlight
+
+{% include image src="/assets/img/tutorial/headmodel_eeg_bem/figure13.png" width="600" %}
+
+_Figure; Realigned electrodes plotted together with the scalp surface_
 
 This electrode structure can be used later when the leadfield is computed with **[ft_prepare_leadfield](/reference/ft_prepare_leadfield)** and **[ft_sourceanalysis](/reference/ft_sourceanalysis)**, or with **[ft_dipolefitting](/reference/ft_dipolefitting)**. During the computation of the leadfield, the electrodes will be projected exactly onto the scalp surface, so don't worry if the fit is not yet 100% perfect.
 
@@ -490,11 +521,19 @@ Again we can plot the electrodes together with the head surface.
     ft_plot_sens(elec_placed, 'elecshape', 'disc', 'label', 'on');
     camlight
 
+{% include image src="/assets/img/tutorial/headmodel_eeg_bem/figure14.png" width="600" %}
+
+_Figure; High-density 1020 electrodes placed according to the anatomical landmarks on the scalp_
+
 You can also plot the realigned template electrodes with the ones from the automatic 1020 placement scheme.
 
     figure
     ft_plot_sens(elec_realigned, 'elecshape', 'sphere', 'label', 'on', 'facecolor', 'r', 'fontcolor', 'r');
     ft_plot_sens(elec_placed, 'elecshape', 'sphere', 'label', 'on', 'facecolor', 'b', 'fontcolor', 'b');
+
+{% include image src="/assets/img/tutorial/headmodel_eeg_bem/figure15.png" width="600" %}
+
+_Figure; Comparing the aligned template positions (red) and the automatically placed 1020 positions ((blue)_
 
 ### Exercise 2
 
