@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '31760150'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2019.116360
+- idtype: pmcid
+  value: PMC9883080
+- idtype: MID
+  value: NIHMS1788282
+authors:
+- authtype: Author
+  name: Deng Y
+- authtype: Author
+  name: Choi I
+- authtype: Author
+  name: Shinn-Cunningham B
+epubdate: 2019 Nov 21
+fulljournalname: NeuroImage
+issue: ''
+pages: '116360'
+pmclivedate: 2023/01/27
+printpubdate: 2020 Feb 15
+pubdate: 2019 Nov 21
+sortdate: 2019/11/21 00:00
+source: Neuroimage
+title: Topographic specificity of alpha power during auditory spatial attention
+uid: '9883080'
+volume: '207'

@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '36709242'
+- idtype: doi
+  value: 10.1038/s42003-023-04481-2
+- idtype: pmcid
+  value: PMC9884247
+authors:
+- authtype: Author
+  name: Jeong W
+- authtype: Author
+  name: Kim S
+- authtype: Author
+  name: Park J
+- authtype: Author
+  name: Lee J
+epubdate: 2023 Jan 28
+fulljournalname: Communications Biology
+issue: ''
+pages: '113'
+pmclivedate: 2023/01/30
+printpubdate: ''
+pubdate: 2023 Jan 28
+sortdate: 2023/01/28 00:00
+source: Commun Biol
+title: Multivariate EEG activity reflects the Bayesian integration and the integrated
+  Galilean relative velocity of sensory motion during sensorimotor behavior
+uid: '9884247'
+volume: '6'

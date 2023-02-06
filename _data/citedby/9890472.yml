@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '35253871'
+- idtype: doi
+  value: 10.1093/cercor/bhac094
+- idtype: pmcid
+  value: PMC9890472
+authors:
+- authtype: Author
+  name: Corcoran AW
+- authtype: Author
+  name: Perera R
+- authtype: Author
+  name: Koroma M
+- authtype: Author
+  name: Kouider S
+- authtype: Author
+  name: Hohwy J
+- authtype: Author
+  name: Andrillon T
+epubdate: 2022 Mar 7
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '3'
+pages: 691-708
+pmclivedate: 2023/02/02
+printpubdate: ''
+pubdate: 2022 Mar 7
+sortdate: 2022/03/07 00:00
+source: Cereb Cortex
+title: Expectations boost the reconstruction of auditory features from electrophysiological
+  responses to noisy speech
+uid: '9890472'
+volume: '33'

@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '36732355'
+- idtype: doi
+  value: 10.1038/s41598-023-28595-z
+- idtype: pmcid
+  value: PMC9895064
+authors:
+- authtype: Author
+  name: Irak M
+- authtype: Author
+  name: Soylu C
+- authtype: Author
+  name: Yavuz M
+epubdate: 2023 Feb 2
+fulljournalname: Scientific Reports
+issue: ''
+pages: '1949'
+pmclivedate: 2023/02/04
+printpubdate: ''
+pubdate: 2023 Feb 2
+sortdate: 2023/02/02 00:00
+source: Sci Rep
+title: Comparing event-related potentials of retrospective and prospective metacognitive
+  judgments during episodic and semantic memory
+uid: '9895064'
+volume: '13'

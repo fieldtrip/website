@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '35311899'
+- idtype: doi
+  value: 10.1093/cercor/bhac080
+- idtype: pmcid
+  value: PMC9890467
+authors:
+- authtype: Author
+  name: Hardy SM
+- authtype: Author
+  name: Jensen O
+- authtype: Author
+  name: Wheeldon L
+- authtype: Author
+  name: Mazaheri A
+- authtype: Author
+  name: Segaert K
+epubdate: 2022 Mar 21
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '3'
+pages: 497-511
+pmclivedate: 2023/02/02
+printpubdate: ''
+pubdate: 2022 Mar 21
+sortdate: 2022/03/21 00:00
+source: Cereb Cortex
+title: 'Modulation in alpha band activity reflects syntax composition: an MEG study
+  of minimal syntactic binding'
+uid: '9890467'
+volume: '33'
