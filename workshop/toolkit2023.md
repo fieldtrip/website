@@ -5,9 +5,9 @@ tags: [toolkit2023]
 
 # Advanced MEG/EEG toolkit at the Donders
 
-This 5-day toolkit course (May 22-26, 2023) will teach you advanced MEG and EEG data analysis skills. Pre-processing, frequency analysis, source reconstruction and various statistical methods will be covered. The toolkit will consist of a number of lectures, followed by hands-on sessions in which you will be tutored through the analysis of MEG and EEG data using the FieldTrip toolbox.
+From May 22-26 2023 we will host our annual MEG/EEG Tool-kit course in Nijmegen. During this 5-day toolkit course we will teach you advanced MEG and EEG data analysis skills. Pre-processing, frequency analysis, source reconstruction, connectivity analysis and various statistical methods will be covered. The toolkit consists of a number of lectures, followed by hands-on sessions in which you will be tutored through the analysis of a MEG data set using the FieldTrip toolbox. Furthermore, we will schedule time for you to work on your own data under supervision of experienced tutors.
 
-There are 38 places available for this toolkit. The selection of participants will be based on the background experience, the research interest and the expectations on what you will learn (see the questions below). We prefer the group to be reasonably homogeneous in level and expertise of the participants, as this improves the overall interaction.
+There are only 38 places available for this toolkit and from experience we expect the course to be over-subscribed. Participants will be selected on the basis of background experience, the research interest and the expectations on what to learn (see the questions during pre-registration). We prefer the group to be reasonably homogeneous in level and expertise of the participants, as this improves the overall interaction.
 
 You can [pre-register here](https://www.ru.nl/donders/agenda/donders-tool-kits/vm-tool-kits/donders-meg-eeg-toolkit/), the deadline for pre-registration is April 10, 2023.
 
@@ -30,21 +30,19 @@ Note that this is still a tentative program that is subject to change.
 | 13:30-15:45 | Pre-processing - [hands-on](/tutorial/eventrelatedaveraging) |
 | 15:45-16:00 | Tea Break |
 | 16:00-17:30 | FieldTrip playground, apply your newly acquired knowledge and skills |
-  
-  
+
 ### Tuesday May 23, 2023
 
 | 09:00-09:30 | Morning chill or workout |
 | 09:45-11:00 | Speaking: evidence from electrophysiology and brain lesions - lecture by Vitória Piai |
 | 11:00-11:15 | Coffee Break |
-| 11:15-12:30 | Time frequency analysis of power - lecture by Jan-Mathijs Schoffelen|
+| 11:15-12:30 | Time frequency analysis of power - lecture by Jan-Mathijs Schoffelen |
 | 12:30-13:30 | Lunch |
 | 13:30-15:45 | Time-frequency analysis of power - [hands-on](/tutorial/timefrequencyanalysis) |
 | 15:45-16:00 | Tea Break |
 | 16:00-17:30 | FieldTrip playground, apply your newly acquired knowledge and skills |
 | 18:30-22:00 | Drinks & dinner at [De Hemel](https://restaurantdehemel.nl/en/) |
-  
-  
+
 ### Wednesday May 24, 2023
 
 | 09:00-09:30 | Morning chill or workout |
@@ -55,8 +53,7 @@ Note that this is still a tentative program that is subject to change.
 | 13:30-15:45 | Beamforming - [hands-on](/tutorial/beamformer) |
 | 15:45-16:00 | Tea Break |
 | 16:00-17:30 | FieldTrip playground, apply your newly acquired knowledge and skills |
-  
-  
+
 ### Thursday May 25, 2023
 
 | 09:00-09:30 | Morning chill or workout |
@@ -68,7 +65,6 @@ Note that this is still a tentative program that is subject to change.
 | 15:45-16:00 | Tea Break |
 | 16:00-17:30 | FieldTrip playground, apply your newly acquired knowledge and skills |
 
-  
 ### Friday May 26, 2023
 
 | 09:00-09:30 | Morning chill or workout |
@@ -85,8 +81,8 @@ Note that this is still a tentative program that is subject to change.
 This will be an in-person event with no possibilities for hybrid or online attendance.
 
 ### FieldTrip playground sessions: BYOD (bring-your-own-data)
-  
-A large part of the toolkit will consist of playground sessions, in which ideally you will be working on your own data. Please think a bit about what you want to achieve, and ensure that you have your data easily accessible (preferably, if possible on a laptop that you bring yourself, or on an external USB-drive). If you don't have data to work with, please let us know in time so that we can think about an alternative. We have plenty of tutorial data available, so this can be used to practice your data analysis skills.  
+
+A large part of the toolkit will consist of playground sessions, in which ideally you will be working on your own data. Please think a bit about what you want to achieve, and ensure that you have your data easily accessible (preferably, if possible on a laptop that you bring yourself, or on an external USB-drive). If you don't have data to work with, please let us know in time so that we can think about an alternative. We have plenty of tutorial data available, so this can be used to practice your data analysis skills.
 
 ### Test your MATLAB and FieldTrip installation in advance
 
