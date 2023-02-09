@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '35434733'
+- idtype: doi
+  value: 10.1093/scan/nsac029
+- idtype: pmcid
+  value: PMC9766959
+authors:
+- authtype: Author
+  name: Bacigalupo F
+- authtype: Author
+  name: Luck SJ
+epubdate: 2022 Apr 18
+fulljournalname: Social Cognitive and Affective Neuroscience
+issue: '12'
+pages: 1101-1117
+pmclivedate: 2023/02/07
+printpubdate: ''
+pubdate: 2022 Apr 18
+sortdate: 2022/04/18 00:00
+source: Soc Cogn Affect Neurosci
+title: Alpha-band EEG suppression as a neural marker of sustained attentional engagement
+  to conditioned threat stimuli
+uid: '9766959'
+volume: '17'

@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fpsyt.2023.1020812
+- idtype: pmcid
+  value: PMC9902659
+authors:
+- authtype: Author
+  name: Gan S
+- authtype: Author
+  name: Li W
+epubdate: 2023 Jan 24
+fulljournalname: Frontiers in Psychiatry
+issue: ''
+pages: '1020812'
+pmclivedate: 2023/02/08
+printpubdate: ''
+pubdate: 2023 Jan 24
+sortdate: 2023/01/24 00:00
+source: Front Psychiatry
+title: 'Aberrant neural correlates of multisensory processing of audiovisual social
+  cues related to social anxiety: An electrophysiological study'
+uid: '9902659'
+volume: '14'
