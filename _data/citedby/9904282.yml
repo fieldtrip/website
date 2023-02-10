@@ -1,0 +1,49 @@
+articleids:
+- idtype: pmid
+  value: '36599389'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2022.119851
+- idtype: pmcid
+  value: PMC9904282
+- idtype: MID
+  value: NIHMS1867084
+authors:
+- authtype: Author
+  name: Medani T
+- authtype: Author
+  name: Garcia-Prieto J
+- authtype: Author
+  name: Tadel F
+- authtype: Author
+  name: Antonakakis M
+- authtype: Author
+  name: Erdbrügger T
+- authtype: Author
+  name: Höltershinken M
+- authtype: Author
+  name: Mead W
+- authtype: Author
+  name: Schrader S
+- authtype: Author
+  name: Joshi A
+- authtype: Author
+  name: Engwer C
+- authtype: Author
+  name: Wolters CH
+- authtype: Author
+  name: Mosher JC
+- authtype: Author
+  name: Leahy RM
+epubdate: 2023 Jan 1
+fulljournalname: NeuroImage
+issue: ''
+pages: '119851'
+pmclivedate: ''
+printpubdate: 2023 Feb 15
+pubdate: 2023 Jan 1
+sortdate: 2023/01/01 00:00
+source: Neuroimage
+title: 'Brainstorm-DUNEuro: An integrated and user-friendly Finite Element Method
+  for modeling electromagnetic brain activity'
+uid: '9904282'
+volume: '267'

@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '36752704'
+- idtype: doi
+  value: 10.7554/eLife.80667
+- idtype: pmcid
+  value: PMC9908080
+authors:
+- authtype: Author
+  name: Hu J
+- authtype: Author
+  name: Konovalov A
+- authtype: Author
+  name: Ruff CC
+epubdate: 2023 Feb 8
+fulljournalname: eLife
+issue: ''
+pages: e80667
+pmclivedate: 2023/02/09
+printpubdate: ''
+pubdate: 2023 Feb 8
+sortdate: 2023/02/08 00:00
+source: eLife
+title: A unified neural account of contextual and individual differences in altruism
+uid: '9908080'
+volume: '12'
