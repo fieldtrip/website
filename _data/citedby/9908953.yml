@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fphys.2023.1040425
+- idtype: pmcid
+  value: PMC9908953
+authors:
+- authtype: Author
+  name: Fan Z
+- authtype: Author
+  name: Suzuki Y
+- authtype: Author
+  name: Jiang L
+- authtype: Author
+  name: Okabe S
+- authtype: Author
+  name: Honda S
+- authtype: Author
+  name: Endo J
+- authtype: Author
+  name: Watanabe T
+- authtype: Author
+  name: Abe T
+epubdate: 2023 Jan 26
+fulljournalname: Frontiers in Physiology
+issue: ''
+pages: '1040425'
+pmclivedate: 2023/02/10
+printpubdate: ''
+pubdate: 2023 Jan 26
+sortdate: 2023/01/26 00:00
+source: Front Physiol
+title: Peripheral blood flow estimated by laser doppler flowmetry provides additional
+  information about sleep state beyond that provided by pulse rate variability
+uid: '9908953'
+volume: '14'
