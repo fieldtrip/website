@@ -1,0 +1,45 @@
+articleids:
+- idtype: pmid
+  value: '36548364'
+- idtype: doi
+  value: 10.1089/cap.2022.0036
+- idtype: pmcid
+  value: PMC9917323
+authors:
+- authtype: Author
+  name: Tan V
+- authtype: Author
+  name: Dockstader C
+- authtype: Author
+  name: Moxon-Emre I
+- authtype: Author
+  name: Mendlowitz S
+- authtype: Author
+  name: Schacter R
+- authtype: Author
+  name: Colasanto M
+- authtype: Author
+  name: Voineskos AN
+- authtype: Author
+  name: Akingbade A
+- authtype: Author
+  name: Nishat E
+- authtype: Author
+  name: Mabbott DJ
+- authtype: Author
+  name: Arnold PD
+- authtype: Author
+  name: Ameis SH
+epubdate: 2022 Dec 21
+fulljournalname: Journal of Child and Adolescent Psychopharmacology
+issue: '10'
+pages: 522-532
+pmclivedate: ''
+printpubdate: 2022 Dec 1
+pubdate: 2022 Dec 21
+sortdate: 2022/12/21 00:00
+source: J Child Adolesc Psychopharmacol
+title: Preliminary Observations of Resting-State Magnetoencephalography in Nonmedicated
+  Children with Obsessive-Compulsive Disorder
+uid: '9917323'
+volume: '32'
