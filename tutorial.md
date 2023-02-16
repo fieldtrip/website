@@ -17,8 +17,6 @@ When adding or contributing to the tutorials please consider the [documentation 
 
 - [Introduction to the FieldTrip toolbox](/tutorial/introduction)
 - [Creating a clean analysis pipeline](/tutorial/scripting)
-- [Making a memory efficient analysis pipeline](/tutorial/memory)
-- [Speeding up your analysis pipeline using distributed computing](/tutorial/distributedcomputing)
 
 ## Reading and preprocessing data
 
@@ -91,5 +89,11 @@ When adding or contributing to the tutorials please consider the [documentation 
 
 - [Specifying the channel layout for plotting](/tutorial/layout)
 - [Plotting data at the channel and source level](/tutorial/plotting)
+
+## Making your analyses more efficient
+
+- [Making a memory efficient analysis pipeline](/tutorial/memory)
+- [Speeding up your analysis pipeline using distributed computing](/tutorial/distributedcomputing)
+
 
 The data that is used for the tutorials is available from <https://download.fieldtriptoolbox.org/tutorial/>.

@@ -6,14 +6,14 @@ tags: [tutorial, matlab, script]
 # Creating a clean analysis pipeline
 
 {% include markup/warning %}
-If you are new to FieldTrip, we recommend that you skip this tutorial for now. You can read the [introduction tutorial](/tutorial/introduction/) and then move on with the tutorials on [preprocessing](/tutorial/#reading-and-preprocessing-data). Once you get the hang of it, you can return to this tutorial which is more on the technical and coding aspects.
+If you are completely new to FieldTrip, we recommend that you skip this tutorial for now. You can read the [introduction tutorial](/tutorial/introduction/) and then move on with the tutorials on [preprocessing](/tutorial/#reading-and-preprocessing-data). Once you get the hang of it, you can return to this tutorial that is more on the technical and coding aspects.
 {% include markup/end %}
 
 ## Introduction
 
-This tutorial is intended to provide some guidelines and suggestions how to set up a chain of analysis steps that makes most efficient use of your (and your computer's) time and is in accordance to the FieldTrip philosophy. Some MATLAB basics regarding the making of your own function will also be introduced. The idea of batching is introduced. Finally some practical tips regarding computer memory usage are given as well as an example.
+This tutorial is intended to provide some guidelines and suggestions how to set up a chain of analysis steps that makes most efficient use of your (and your computer's) time and is in accordance to the FieldTrip philosophy. Some MATLAB basics regarding the making of your own function will also be introduced. The idea of batching is introduced.
 
-The examples are about preprocessing of the data, but it does not provide detailed information about it. If you are interested in how to preprocess your data, you can check for example, [this](/tutorial/preprocessing) tutorial.
+The examples here are about preprocessing of the data, but it does not provide detailed information about it. If you are interested in how to preprocess your data, you can check for example, [this](/tutorial/preprocessing) tutorial.
 
 {% include markup/info %}
 The paper [Seven quick tips for analysis scripts in neuroimaging](https://doi.org/10.1371/journal.pcbi.1007358) by Marijn van Vliet (2020, Plos Comp Biol) also provides very useful guidelines for writing and organizing your analysis code. Althoug the examples it provides use Python, the ideas it presents apply equally well to MATLAB.
@@ -27,9 +27,9 @@ The analysis of an experiment typically involves a lot of repetition as similar 
 
 Another '**no-no**' is the practice of collecting all your steps in one large m-file and copy-pasting parts in the command window. Besides becoming easily cluttered with previous tries, different filter settings, etc., it does not create a clear continuity between steps, and most importantly, does not permit batching. Batching is the ultimate aim of any analysis pipeline. It means that in the end most of your analysis steps can be repeated over all subjects and/or conditions with a single command.
 
-## Separating subject details from the code
+## Separating subject-specific details from the code
 
-As stated before, by making our own function around FieldTrip functions we can in a later stage easily repeat them, e.g., over multiple subjects. However, every subject or condition will commonly have different filenames, different variables, different filter-settings, different trials that have to be rejected, etc. A good idea, therefore, is to first **write all your subject-specific details in a separate m-file**. You can choose to have one m-file per subject, or one in which you combine all subjects. In the current example we will use the first option, and we specify these m-files to be a function:
+As stated before, by making our own function around FieldTrip functions, we can in a later stage easily repeat them, e.g., over multiple subjects. However, unless the data is nicely curated and represented in [BIDS](/example/bids), every subject or condition will commonly have different filenames, different variables, different filter-settings, different trials that have to be rejected, etc. A good idea, therefore, is to first **write all your subject-specific details in a separate m-file**. You can choose to have one m-file per subject, or one in which you combine all subjects. In the current example we will use the first option, and we specify these m-files to be a function:
 
     function [subjectdata] = Subject01
     
@@ -49,6 +49,12 @@ As stated before, by making our own function around FieldTrip functions we can i
 Save this as `Subject01.m` in a personal folder that you will need to add to the MATLAB path. Using the command line you can now simply retrieve this personal data by calling `Subject01` or from any script by using `eval('Subject01')`. This will return the structure `subjectdata` containing all the fields we have specified.
 
 We can now use this structure as input for our own functions, giving us a flexible way of combining generic functions and subject-specific settings. In addition, you could use this file to add further comments such as `% subject made a mistake on the first trial`.
+
+{% include markup/info %}
+An example that uses subject-specific m-files can be found [here](https://github.com/robertoostenveld/Wakeman-and-Henson-2015). The same dataset has later also been [converted to BIDS](https://doi.org/10.18112/openneuro.ds000117.v1.0.5) and a version of the analysis that starts from the BIDS dataset is documented [here](/workshop/practicalmeeg2022) and [here](https://download.fieldtriptoolbox.org/workshop/practicalmeeg2022/code).  
+
+A similar example is [this one](https://github.com/Donders-Institute/infant-cluster-effectsize), which also starts from a consistent [BIDS dataset](https://doi.org/10.34973/gvr3-6g88) (hence fewer exceptions needed) and which stores subject-specific details like the selected trials and the bad segments and channels in [mat-files](https://doi.org/10.34973/g4we-5v66) rather than m-files.
+{% include markup/end %}
 
 ## Making your own analysis functions
 
@@ -225,7 +231,7 @@ The following function will load the data as specified in Subject01.m, uses the 
 
 ## Summary and suggested further readings
 
-This tutorial explained how to write your own functions and how to do batching in order to increase the efficiency of your analysis. If you are interested in improving memory usage and the speed of your analysis, you can check [this](/tutorial/memory) and [this](/tutorial/distributedcomputing) tutorials.
+This tutorial explained how to write your own functions and how to do batching in order to increase the efficiency of your analysis. If you are interested in improving memory usage and the speed of your analysis, you can check [this](/tutorial/memory) and [this](/tutorial/distributedcomputing) tutorial.
 
 When you have more questions about the topic of any tutorial, don't forget to check the [frequently asked questions](/faq) and the [example scripts](/example).
 
