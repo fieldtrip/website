@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '36241964'
+- idtype: doi
+  value: 10.3758/s13415-022-01037-5
+- idtype: pmcid
+  value: PMC9925495
+authors:
+- authtype: Author
+  name: Pavlov YG
+- authtype: Author
+  name: Pavlova NV
+- authtype: Author
+  name: Diekelmann S
+- authtype: Author
+  name: Kotchoubey B
+epubdate: 2022 Oct 14
+fulljournalname: Cognitive, Affective & Behavioral Neuroscience
+issue: '1'
+pages: 100-113
+pmclivedate: 2023/02/15
+printpubdate: '2023'
+pubdate: 2022 Oct 14
+sortdate: 2022/10/14 00:00
+source: Cogn Affect Behav Neurosci
+title: Fear memory in humans is consolidated over time independently of sleep
+uid: '9925495'
+volume: '23'
