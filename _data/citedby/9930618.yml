@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '35332915'
+- idtype: doi
+  value: 10.1093/cercor/bhac116
+- idtype: pmcid
+  value: PMC9930618
+authors:
+- authtype: Author
+  name: Song F
+- authtype: Author
+  name: Lyu L
+- authtype: Author
+  name: Zhao J
+- authtype: Author
+  name: Bao M
+epubdate: 2022 Mar 24
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '4'
+pages: 983-996
+pmclivedate: 2023/02/16
+printpubdate: ''
+pubdate: 2022 Mar 24
+sortdate: 2022/03/24 00:00
+source: Cereb Cortex
+title: The role of eye-specific attention in ocular dominance plasticity
+uid: '9930618'
+volume: '33'
