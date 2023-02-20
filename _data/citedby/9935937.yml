@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fnins.2023.1067632
+- idtype: pmcid
+  value: PMC9935937
+authors:
+- authtype: Author
+  name: Jiang Z
+- authtype: Author
+  name: An X
+- authtype: Author
+  name: Liu S
+- authtype: Author
+  name: Wang L
+- authtype: Author
+  name: Yin E
+- authtype: Author
+  name: Yan Y
+- authtype: Author
+  name: Ming D
+epubdate: 2023 Feb 3
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '1067632'
+pmclivedate: 2023/02/18
+printpubdate: ''
+pubdate: 2023 Feb 3
+sortdate: 2023/02/03 00:00
+source: Front Neurosci
+title: The effect of prestimulus low-frequency neural oscillations on the temporal
+  perception of audiovisual speech
+uid: '9935937'
+volume: '17'
