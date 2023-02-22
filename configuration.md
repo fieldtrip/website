@@ -807,7 +807,7 @@ A detailed description of each function is available in the [reference documenta
 **cfg.delaystep** - [ft_nonlinearassociation](/reference/contrib/misc/ft_nonlinearassociation)  
 
 
-**cfg.demean** - [ft_channelnormalise](/reference/ft_channelnormalise), [ft_combineplanar](/reference/ft_combineplanar), [ft_componentanalysis](/reference/ft_componentanalysis), [ft_connectivitysimulation](/reference/ft_connectivitysimulation), [ft_connectivitysimulation](/reference/ft_connectivitysimulation), [ft_mvaranalysis](/reference/ft_mvaranalysis), [ft_preprocessing](/reference/ft_preprocessing), [ft_realtime_signalviewer](/reference/realtime/example/ft_realtime_signalviewer), [ft_realtime_topography](/reference/realtime/example/ft_realtime_topography), [ft_rejectcomponent](/reference/ft_rejectcomponent), [ft_resampledata](/reference/ft_resampledata)  
+**cfg.demean** - [ft_channelnormalise](/reference/ft_channelnormalise), [ft_combineplanar](/reference/ft_combineplanar), [ft_componentanalysis](/reference/ft_componentanalysis), [ft_connectivitysimulation](/reference/ft_connectivitysimulation), [ft_connectivitysimulation](/reference/ft_connectivitysimulation), [ft_denoise_dssp](/reference/ft_denoise_dssp), [ft_mvaranalysis](/reference/ft_mvaranalysis), [ft_preprocessing](/reference/ft_preprocessing), [ft_realtime_signalviewer](/reference/realtime/example/ft_realtime_signalviewer), [ft_realtime_topography](/reference/realtime/example/ft_realtime_topography), [ft_rejectcomponent](/reference/ft_rejectcomponent), [ft_resampledata](/reference/ft_resampledata)  
 
 
 **cfg.demeandata** - [ft_denoise_tsr](/reference/ft_denoise_tsr)  
@@ -2088,7 +2088,7 @@ A detailed description of each function is available in the [reference documenta
 **cfg.permutation** - [ft_sourceanalysis](/reference/ft_sourceanalysis)  
 
 
-**cfg.pertrial** - [ft_denoise_pca](/reference/ft_denoise_pca)  
+**cfg.pertrial** - [ft_denoise_dssp](/reference/ft_denoise_dssp), [ft_denoise_pca](/reference/ft_denoise_pca)  
 
 
 **cfg.planarmethod** - [ft_megplanar](/reference/ft_megplanar)  
