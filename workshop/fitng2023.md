@@ -31,15 +31,15 @@ On Thursday 2 March Robert Oostenveld will present a lecture on statistical anal
 
 Please download the most recent copy of the FieldTrip toolbox and the data that we will be using from our [download server](https://download.fieldtriptoolbox.org/workshop/fitng2023). The data is about 1GB, so please do plan downloading it in advance.
 
-You should make a directory `fitng_stats`or so, and unzip both the FieldTrip toolbox and the data in that directory. After unzipping, the result on your computer should look like this
+You should make a new directory `fitng_stats` or so, and unzip both the FieldTrip toolbox and the data in that directory. After unzipping, the result on your computer should look like this
 
     fitng_stats
          |-- data
          `-- fieldtrip-20230215
 
-Please ensure that the data directory contains the `results` and the `scripts` folder, and that the `fieldtrip-20230215` directory contains a bunch of m-files.
+Please ensure that the data directory contains the `results` and the `scripts` folder, and that the `fieldtrip-20230215` directory contains a bunch of m-files by simply looking into these directories.
 
-Depending on your unzip utility, you might end up with a directory inside a directory, that is not wat you want! If your directories look like this
+Depending on your unzip utility, you might end up with a directory inside a directory, that is not what you want! If your directories look like this
 
     fitng_stats
         |-- data
@@ -49,7 +49,7 @@ Depending on your unzip utility, you might end up with a directory inside a dire
 
 you should take the content of `data/data` and move it one directory up, and idem for `fieldtrip-20230215/fieldtrip-20230215`.
 
-For reference, the raw data (not needed this time) is available from <https://doi.org/10.34973/gvr3-6g88>, the code is also available from <https://github.com/Donders-Institute/infant-cluster-effectsize> and the processed data is also available from <https://doi.org/10.34973/g4we-5v66>. But right now you can get all that you need from the FieldTrip [download server](https://download.fieldtriptoolbox.org/workshop/fitng2023).
+For reference, the raw data (not needed for this workshop) is available from <https://doi.org/10.34973/gvr3-6g88>, the code is also available from <https://github.com/Donders-Institute/infant-cluster-effectsize> and the processed data is also available from <https://doi.org/10.34973/g4we-5v66>. But right now you can get all that you need for the workshop from the FieldTrip [download server](https://download.fieldtriptoolbox.org/workshop/fitng2023).
 
 ### Setting up MATLAB
 
@@ -57,10 +57,12 @@ For reference, the raw data (not needed this time) is available from <https://do
 Please download and unzip the version of FieldTrip that is listed above and don't use the FieldTrip version that you might already have on your computer, for example as part of EEGLAB or SPM.
 {% include markup/end %}
 
-To get going, you need to start MATLAB. Then, you need to issue the following commands:
+To get going, you need to start MATLAB. (If you do not have MATLAB you could consider installing a trial version from <https://nl.mathworks.com/campaigns/products/trials.html?s_iid=htb_trial_gtwy_ar>.) Then, you need to issue the following commands:
 
     restoredefaultpath
     cd <your_fieldtrip_location>
+    addpath(pwd)
+    cd fieldtrip-20230215
     addpath(pwd)
     ft_defaults
 
@@ -100,13 +102,13 @@ which should show a bunch of m-files, and
 
     ls(results)
 
-which should show a list of directories for all participants. Each of the participants directories contains a number of mat-files with the already processed data. These form the starting point for the `do_group_analysis.m` script that we will be looking at today.
+which should show a list of directories for all participants. Each of the participant directories contains a number of mat-files with the already processed data. These form the starting point for the `do_group_analysis.m` script that we will be looking at today.
 
-The `sourcedata` directory is **not** installed (and not shared) as that contained potentially privacy sensitive information, such as the date of recording; it was used for `do_convert_data_to_BIDS.m`.
+The `sourcedata` directory is **not** installed (and not shared) as that contained privacy sensitive information, such as the date of recording; it was used for `do_convert_data_to_BIDS.m`.
 
 The `bidsroot` directory with the original raw data is **not** installed, but can be obtained from <https://doi.org/10.34973/gvr3-6g88> if you would want to look at the preprocessing, or want to analyze the data in another way.
 
-### Check your macOS security settings
+### The following section is relevant to macOS users only: Check your macOS security settings
 
 If you have a MacBook with a recent version of macOS, chances are that your security settings don't trust the mex files that are included with FieldTrip.
 
