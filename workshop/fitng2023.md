@@ -108,7 +108,11 @@ The `sourcedata` directory is **not** installed (and not shared) as that contain
 
 The `bidsroot` directory with the original raw data is **not** installed, but can be obtained from <https://doi.org/10.34973/gvr3-6g88> if you would want to look at the preprocessing, or want to analyze the data in another way.
 
-### The following section is relevant to macOS users only: Check your macOS security settings
+### Check your macOS security settings
+
+{% include markup/danger %}
+This section is relevant to macOS users only.
+{% include markup/end %}
 
 If you have a MacBook with a recent version of macOS, chances are that your security settings don't trust the mex files that are included with FieldTrip.
 
