@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1016/j.isci.2023.106017
+- idtype: pmcid
+  value: PMC9947309
+authors:
+- authtype: Author
+  name: Gordillo D
+- authtype: Author
+  name: Ramos da Cruz J
+- authtype: Author
+  name: Moreno D
+- authtype: Author
+  name: Garobbio S
+- authtype: Author
+  name: Herzog MH
+epubdate: 2023 Jan 20
+fulljournalname: iScience
+issue: '2'
+pages: '106017'
+pmclivedate: 2023/02/24
+printpubdate: ''
+pubdate: 2023 Jan 20
+sortdate: 2023/01/20 00:00
+source: iScience
+title: Do we really measure what we think we are measuring?
+uid: '9947309'
+volume: '26'

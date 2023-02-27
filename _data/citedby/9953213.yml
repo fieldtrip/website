@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3390/biomedicines11020438
+- idtype: pmcid
+  value: PMC9953213
+authors:
+- authtype: Author
+  name: Rampp S
+- authtype: Author
+  name: Kaltenhäuser M
+- authtype: Author
+  name: Müller-Voggel N
+- authtype: Author
+  name: Doerfler A
+- authtype: Author
+  name: Kasper BS
+- authtype: Author
+  name: Hamer HM
+- authtype: Author
+  name: Brandner S
+- authtype: Author
+  name: Buchfelder M
+epubdate: 2023 Feb 2
+fulljournalname: Biomedicines
+issue: '2'
+pages: '438'
+pmclivedate: 2023/02/25
+printpubdate: ''
+pubdate: 2023 Feb 2
+sortdate: 2023/02/02 00:00
+source: Biomedicines
+title: 'MEG Node Degree for Focus Localization: Comparison with Invasive EEG'
+uid: '9953213'
+volume: '11'

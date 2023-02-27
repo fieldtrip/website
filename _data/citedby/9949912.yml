@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '36823247'
+- idtype: doi
+  value: 10.3758/s13415-023-01074-8
+- idtype: pmcid
+  value: PMC9949912
+authors:
+- authtype: Author
+  name: Hintz F
+- authtype: Author
+  name: Khoe YH
+- authtype: Author
+  name: Strauß A
+- authtype: Author
+  name: Psomakas AJ
+- authtype: Author
+  name: Holler J
+epubdate: 2023 Feb 23
+fulljournalname: Cognitive, Affective & Behavioral Neuroscience
+issue: ''
+pages: 1-14
+pmclivedate: 2023/02/24
+printpubdate: ''
+pubdate: 2023 Feb 23
+sortdate: 2023/02/23 00:00
+source: Cogn Affect Behav Neurosci
+title: Electrophysiological evidence for the enhancement of gesture-speech integration
+  by linguistic predictability during multimodal discourse comprehension
+uid: '9949912'
+volume: ''
