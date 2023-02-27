@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3390/brainsci13020365
+- idtype: pmcid
+  value: PMC9954734
+authors:
+- authtype: Author
+  name: López-Rojas C
+- authtype: Author
+  name: Csilinkó A
+- authtype: Author
+  name: Bajo MT
+- authtype: Author
+  name: Marful A
+epubdate: 2023 Feb 20
+fulljournalname: Brain Sciences
+issue: '2'
+pages: '365'
+pmclivedate: 2023/02/25
+printpubdate: ''
+pubdate: 2023 Feb 20
+sortdate: 2023/02/20 00:00
+source: Brain Sci
+title: ERP and Behavioural Correlates of Prospective Memory in Bilinguals during L1
+  and L2 Processing
+uid: '9954734'
+volume: '13'

@@ -1,0 +1,47 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3390/bios13020220
+- idtype: pmcid
+  value: PMC9953459
+authors:
+- authtype: Author
+  name: Poorganji M
+- authtype: Author
+  name: Zomorrodi R
+- authtype: Author
+  name: Zrenner C
+- authtype: Author
+  name: Bansal A
+- authtype: Author
+  name: Hawco C
+- authtype: Author
+  name: Hill AT
+- authtype: Author
+  name: Hadas I
+- authtype: Author
+  name: Rajji TK
+- authtype: Author
+  name: Chen R
+- authtype: Author
+  name: Zrenner B
+- authtype: Author
+  name: Voineskos D
+- authtype: Author
+  name: Blumberger DM
+- authtype: Author
+  name: Daskalakis ZJ
+epubdate: 2023 Feb 3
+fulljournalname: Biosensors
+issue: '2'
+pages: '220'
+pmclivedate: 2023/02/25
+printpubdate: ''
+pubdate: 2023 Feb 3
+sortdate: 2023/02/03 00:00
+source: Biosensors (Basel)
+title: Pre-Stimulus Power but Not Phase Predicts Prefrontal Cortical Excitability
+  in TMS-EEG
+uid: '9953459'
+volume: '13'

@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '36826208'
+- idtype: doi
+  value: 10.3390/ejihpe13020024
+- idtype: pmcid
+  value: PMC9955072
+authors:
+- authtype: Author
+  name: Rio-Alamos C
+- authtype: Author
+  name: Montefusco-Siegmund R
+- authtype: Author
+  name: Cañete T
+- authtype: Author
+  name: Sotomayor J
+- authtype: Author
+  name: Fernandez-Teruel A
+epubdate: 2023 Jan 29
+fulljournalname: European Journal of Investigation in Health, Psychology and Education
+issue: '2'
+pages: 317-330
+pmclivedate: 2023/02/25
+printpubdate: ''
+pubdate: 2023 Jan 29
+sortdate: 2023/01/29 00:00
+source: Eur J Investig Health Psychol Educ
+title: 'Acute Relaxation Response Induced by Tibetan Singing Bowl Sounds: A Randomized
+  Controlled Trial'
+uid: '9955072'
+volume: '13'

@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '36835865'
+- idtype: doi
+  value: 10.3390/jcm12041327
+- idtype: pmcid
+  value: PMC9961867
+authors:
+- authtype: Author
+  name: Boni S
+- authtype: Author
+  name: Galluccio M
+- authtype: Author
+  name: Baroni A
+- authtype: Author
+  name: Martinuzzi C
+- authtype: Author
+  name: Milani G
+- authtype: Author
+  name: Emanuele M
+- authtype: Author
+  name: Straudi S
+- authtype: Author
+  name: Fadiga L
+- authtype: Author
+  name: Pozzo T
+epubdate: 2023 Feb 7
+fulljournalname: Journal of Clinical Medicine
+issue: '4'
+pages: '1327'
+pmclivedate: 2023/02/26
+printpubdate: ''
+pubdate: 2023 Feb 7
+sortdate: 2023/02/07 00:00
+source: J Clin Med
+title: 'Action Observation Therapy for Arm Recovery after Stroke: A Preliminary Investigation
+  on a Novel Protocol with EEG Monitoring'
+uid: '9961867'
+volume: '12'

@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '36823312'
+- idtype: doi
+  value: 10.1038/s41598-023-30324-5
+- idtype: pmcid
+  value: PMC9950042
+authors:
+- authtype: Author
+  name: Choi K
+- authtype: Author
+  name: Woo S
+- authtype: Author
+  name: Lee J
+epubdate: 2023 Feb 23
+fulljournalname: Scientific Reports
+issue: ''
+pages: '3161'
+pmclivedate: 2023/02/25
+printpubdate: ''
+pubdate: 2023 Feb 23
+sortdate: 2023/02/23 00:00
+source: Sci Rep
+title: Motor-effector dependent modulation of sensory-motor processes identified by
+  the multivariate pattern analysis of EEG activity
+uid: '9950042'
+volume: '13'
