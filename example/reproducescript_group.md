@@ -767,4 +767,4 @@ Note that there are other strategies for improving shareability and reproducibil
 ## Suggested further reading
 
 - [Reducing the efforts to create reproducible analysis code with FieldTrip](https://doi.org/10.1101/2021.02.05.429886)
-- [Reproducescript on a full study](/example/reproducescript_andersen)
+- [Using reproducescript on a full study](/example/reproducescript_andersen)
