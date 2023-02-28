@@ -2,7 +2,7 @@
 title: Toolbox architecture and organization of the source code
 tags: [development]
 redirect_from:
-  - /development/module
+  - /development/module/
 ---
 
 # Toolbox architecture and organization of the source code

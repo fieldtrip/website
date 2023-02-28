@@ -2,7 +2,7 @@
 title: Distributed computing using a Linux compute cluster
 tags: [development, distributed, qsub]
 redirect_from:
-- /development/qsub/
+  - /development/qsub/
 ---
 
 # Distributed computing using a Linux compute cluster

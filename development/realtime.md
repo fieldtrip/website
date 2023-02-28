@@ -9,7 +9,7 @@ Although the FieldTrip toolbox is primarily developed for offline analysis, you 
 
 This page is part of the documentation series of the FieldTrip buffer for realtime acquisition. The FieldTrip buffer is a standard that defines a central hub (the [FieldTrip buffer](/development/realtime)) that facilitates realtime exchange of neurophysiological data. The documentation is organized in five main sections, being
 
-1.  description and general [overview of the buffer](/development/realtime/buffer_overview),
+1.  description and general [overview of the buffer](/development/realtime/buffer),
 2.  definition of the [buffer protocol](/development/realtime/buffer_protocol),
 3.  the [reference implementation](/development/realtime/reference_implementation), and
 4.  specific [implementations](/development/realtime/implementation) that interface with acquisition software, or software platforms.

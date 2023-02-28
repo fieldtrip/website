@@ -2,7 +2,7 @@
 title: Spectral estimation of of EEG/MEG time series data
 tags: [development, specest]
 redirect_from:
-- /development/specest/
+  - /development/specest/
 ---
 
 # Spectral estimation of of EEG/MEG time series data

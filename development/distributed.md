@@ -1,7 +1,6 @@
 ---
 title: Distributed computing
 tags: [distributed, qsub]
-redirect_from:
 ---
 
 # Distributed computing
