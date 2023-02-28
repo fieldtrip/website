@@ -1,10 +1,10 @@
-- name:  Making your analysis pipeline reprodudible using *reproducescript*
+- name:  Making your analysis pipeline reproducible using reproducescript
   link:  /example/reproducescript
 
-- name:  reproducescript on a full study
+- name:  Using reproducescript on a full study
   link:  /example/reproducescript_andersen
 
-- name:  reproducescript group analysis
+- name:  Using reproducescript for a group analysis
   link:  /example/reproducescript_group
 
 - name:  Speeding up your analysis pipeline using distributed computing
