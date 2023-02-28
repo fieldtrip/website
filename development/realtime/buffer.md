@@ -2,7 +2,7 @@
 title: Overview of the realtime buffer
 tags: [realtime]
 redirect_from:
-  - /development/realtime/buffer_overview
+  - /development/realtime/buffer_overview/
 ---
 
 # Overview of the realtime buffer

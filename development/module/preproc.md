@@ -2,7 +2,7 @@
 title: Preprocessing of EEG/MEG time series data
 tags: [development, preproc]
 redirect_from:
-- /development/preproc/
+  - /development/preproc/
 ---
 
 # Preprocessing of EEG/MEG time series data

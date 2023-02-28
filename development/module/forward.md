@@ -2,7 +2,7 @@
 title: Forward computation of EEG/MEG source models
 tags: [development, forward]
 redirect_from:
-- /development/forward/
+  - /development/forward/
 ---
 
 # Forward computation of EEG/MEG source models
