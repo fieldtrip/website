@@ -15,7 +15,8 @@ In recent years, unsound scientific practices have led to a replication crisis, 
 
 The analysis of M/EEG data, and neuroimaging data in general, typically requires many calculations in which the raw data is transformed step by step. In FieldTrip and most other analysis software, these steps are written down in code in an analysis script. The more complex the analysis pipeline is, the more steps are required and the longer the analysis script becomes. Because of this, a full analysis pipeline is usually not written in a single script, but in a set of scripts and functions that are interdependent and have to be called in a certain order.
 
-Many researchers are not formalled trained as software engineers or computer scientists. Thus, the quality, readability, and generalizability of analysis scripts is highly dependent on the individual researcher's coding style and expertise. Unfortunately, the variability in the quality of analysis scripts might compromise the reproducibility of results. Re-running the analysis pipeline might lead to different results, or the pipeline doesn't run on someone else's computer.
+Many researchers are not formally trained as software engineers or computer scientists. Thus, the quality, readability, and generalizability of analysis scripts is highly dependent on the individual researcher's coding style and expertise. Unfortunately, the variability in the quality of analysis scripts might compromise the reproducibility of results. Re-running the analysis pipeline might lead to different results, or the pipeline doesn't run on someone else's computer.
+
 
 ### Reproducescript
 
