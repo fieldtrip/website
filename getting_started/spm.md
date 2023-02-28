@@ -76,6 +76,6 @@ SPM12 M/EEG data, once loaded with the function _spm_eeg_load_, can can be conve
 
     raw = ftraw(D, D.indchannel('Cz'), D.indsample(-0.1):D.indsample(0.2), D.indtrial('oddball'));
 
-Since the SPM12 M/EEG format as well as its predecessors SPM8/SPM5 format are supported by the [fileio toolbox](http://fieldtriptoolbox.org/development/module/fileio/), it is possible to preprocess SPM M/EEG data in FieldTrip the usual way without the need for SPM to be installed. An SPM M/EEG dataset consists of two files with extensions `.mat` and `.dat`. The name of the `.mat` file should be specified as `cfg.dataset` in ft_preprocessing for the SPM format to be recognized.
+Since the SPM12 M/EEG format as well as its predecessors SPM8/SPM5 format are supported by the [fileio toolbox](/development/module/fileio), it is possible to preprocess SPM M/EEG data in FieldTrip the usual way without the need for SPM to be installed. An SPM M/EEG dataset consists of two files with extensions `.mat` and `.dat`. The name of the `.mat` file should be specified as `cfg.dataset` in ft_preprocessing for the SPM format to be recognized.
 
 The shared infrastructure for head modeling makes it possible to use a head model coregistered with sensors using SPM12 for FieldTrip methods such as beamforming and obtain results with SPM and FieldTrip in the same coordinate system. This facilitates comparison and validation of results obtained with SPM using FieldTrip and _vice versa_.

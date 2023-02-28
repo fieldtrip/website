@@ -22,7 +22,7 @@ Gaetan Sanchez, Nathan Weisz and Thomas Hartmann are the local organizers.
 
 #### External Applicant Call
 
-Applications for this workshop are now closed. Please check out our other upcoming workshops on [here](http://fieldtriptoolbox.org/workshop).
+Applications for this workshop are now closed. Please check out our other upcoming workshops on [here](/workshop).
 
 ## Program
 
