@@ -23,7 +23,7 @@ In all sessions we aim to:
 
 The full program can be found [here](https://fitng.org/wp-content/uploads/2023/01/WorkshopSchedule_1.pdf).
 
-On Thursday 2 March Robert Oostenveld will present a lecture on statistical analyses of EEG, focusing on parametric versus non- parametric methods, a priori analyses to estimate sample sizes and how (and why) to report effect sizes. This will be follwed in the same session by a hands-on, with Jan-Mathijs Schoffelen, Marlene Meyer and James Ernest White as additional tutors.
+On Thursday 2 March Robert Oostenveld will present a lecture on statistical analyses of EEG, focusing on parametric versus non- parametric methods, a-priori analyses to estimate sample sizes and how (and why) to report effect sizes. This will be followed in the same session by a hands-on, with Jan-Mathijs Schoffelen, Marlene Meyer and James Ernest White as additional tutors.
 
 ## Preparation
 
@@ -57,7 +57,7 @@ For reference, the raw data (not needed for this workshop) is available from <ht
 Please download and unzip the version of FieldTrip that is listed above and don't use the FieldTrip version that you might already have on your computer, for example as part of EEGLAB or SPM.
 {% include markup/end %}
 
-To get going, you need to start MATLAB. (If you do not have MATLAB you could consider installing a trial version from <https://nl.mathworks.com/campaigns/products/trials.html?s_iid=htb_trial_gtwy_ar>.) Then, you need to issue the following commands:
+To get going, you need to start MATLAB. If you do not have MATLAB you could consider installing a [trial version](https://nl.mathworks.com/campaigns/products/trials.html?s_iid=htb_trial_gtwy_ar). Then, you need to issue the following commands:
 
     restoredefaultpath
     cd <your_fieldtrip_location>
@@ -89,7 +89,6 @@ Finally, you have to tell the scripts where all the (input and output) data is w
 
     cd ..       % this brings you to the top-level data directory
     scripts     = fullfile(pwd, 'scripts');
-    sourcedata  = fullfile(pwd, 'sourcedata');
     bidsroot    = fullfile(pwd, 'bidsdata');
     results     = fullfile(pwd, 'results');
     derivatives = fullfile(pwd, 'bidsresults');
@@ -133,6 +132,6 @@ If you get the error "Error using ft_getopt, incorrect number of input arguments
 
     cd ../../data
 
-## Following the hands-on instructions
+## Hands-on instructions
 
-Details will follow here.
+During the hands-on we will look in detail at the [do_group_analysis script](/workshop/fitng2023/do_group_analysis script).
