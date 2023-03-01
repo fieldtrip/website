@@ -134,4 +134,4 @@ If you get the error "Error using ft_getopt, incorrect number of input arguments
 
 ## Hands-on instructions
 
-During the hands-on we will look in detail at the [do_group_analysis script](/workshop/fitng2023/do_group_analysis script).
+During the hands-on we will look in detail at the [do_group_analysis](/workshop/fitng2023/do_group_analysis) script.
