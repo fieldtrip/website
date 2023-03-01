@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '36791488'
+- idtype: doi
+  value: 10.1016/j.nicl.2023.103348
+- idtype: pmcid
+  value: PMC9950946
+authors:
+- authtype: Author
+  name: Manzo N
+- authtype: Author
+  name: Leodori G
+- authtype: Author
+  name: Ruocco G
+- authtype: Author
+  name: Belvisi D
+- authtype: Author
+  name: Merchant SH
+- authtype: Author
+  name: Fabbrini G
+- authtype: Author
+  name: Berardelli A
+- authtype: Author
+  name: Conte A
+epubdate: 2023 Feb 11
+fulljournalname: 'NeuroImage : Clinical'
+issue: ''
+pages: '103348'
+pmclivedate: 2023/02/25
+printpubdate: ''
+pubdate: 2023 Feb 11
+sortdate: 2023/02/11 00:00
+source: Neuroimage Clin
+title: Cortical mechanisms of sensory trick in cervical dystonia
+uid: '9950946'
+volume: '37'

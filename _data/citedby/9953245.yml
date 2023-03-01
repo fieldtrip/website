@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '36830930'
+- idtype: doi
+  value: 10.3390/biomedicines11020393
+- idtype: pmcid
+  value: PMC9953245
+authors:
+- authtype: Author
+  name: Wendiggensen P
+- authtype: Author
+  name: Paulus T
+- authtype: Author
+  name: Bluschke A
+- authtype: Author
+  name: Takacs A
+- authtype: Author
+  name: Toth-Faber E
+- authtype: Author
+  name: Weissbach A
+- authtype: Author
+  name: Bäumer T
+- authtype: Author
+  name: Frings C
+- authtype: Author
+  name: Roessner V
+- authtype: Author
+  name: Münchau A
+- authtype: Author
+  name: Beste C
+epubdate: 2023 Jan 28
+fulljournalname: Biomedicines
+issue: '2'
+pages: '393'
+pmclivedate: 2023/02/25
+printpubdate: ''
+pubdate: 2023 Jan 28
+sortdate: 2023/01/28 00:00
+source: Biomedicines
+title: Theta Activity Dynamics during Embedded Response Plan Processing in Tourette
+  Syndrome
+uid: '9953245'
+volume: '11'
