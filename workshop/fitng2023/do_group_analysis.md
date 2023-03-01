@@ -129,7 +129,32 @@ for ii = 1:length(subjectlist_new)
   load([folder filesep 'timelock_oddball.mat']);
   oddball_all(ii)      = { oddball };
 end
+```
 
+Have a look at the `standard_all` and `oddball_all` variables. They are both cell-arrays, and each cell represents the ERP in the standard/oddball condition for a single subject.
+
+We can plot the ERPs of a single subject like this:
+
+    cfg                      = [];
+    cfg.layout               = 'EEG1010.lay';
+    cfg.interactive          = 'yes';
+    cfg.showoutline          = 'yes';
+    cfg.showlabels           = 'yes';
+    ft_multiplotER(cfg, standard_all{1}, oddball_all{1});
+
+We can also compute the difference wave using **[ft_math](/reference/ft_math)** and plot those:
+
+    cfg = [];
+    cfg.parameter = 'avg';
+    cfg.operation = 'x1-x2';
+    difference_wave = ft_math(cfg, oddball_all{1}, standard_all{1}); % oddball minus standard
+
+    figure
+    plot(difference_wave.time, difference_wave.avg)
+
+This is something you could do with a for-loop over all participants.
+
+```matlab
 % Calculate grand average for both conditions (standard, oddball) separately
 cfg                      = [];
 cfg.channel              = 'all';
@@ -152,6 +177,16 @@ ft_multiplotER(cfg, grandavg_standard, grandavg_oddball);
 % savefig(gcf, fullfile(output_dir, 'topoplot_grandaverage_standard_oddball'));
 ```
 
+Again we compute the difference wave using **[ft_math](/reference/ft_math)** and plot those:
+
+    cfg = [];
+    cfg.parameter = 'avg';
+    cfg.operation = 'x1-x2';
+    difference_wave = ft_math(cfg, grandavg_oddball, grandavg_standard); % oddball minus standard
+
+    figure
+    plot(difference_wave.time, difference_wave.avg)
+
 ## 3.3 Perform cluster-based permutation statistics correcting for multiple comparisons
 
 ### 3.3.1 Perform cluster-based test
@@ -170,7 +205,7 @@ cfg.statistic             = 'ft_statfun_depsamplesT';
 cfg.alpha                 = 0.05;
 cfg.correctm              = 'cluster';
 cfg.correcttail           = 'prob';
-cfg.numrandomization      = 10000;
+cfg.numrandomization      = 2000; % SOMEWHAT SMALLER TO SPEED IT UP
 
 Nsub                      = length(subjectlist_new);
 cfg.design(1,1:2*Nsub)    = [ones(1,Nsub) 2*ones(1,Nsub)];
@@ -183,6 +218,13 @@ stat_standard_oddball_clusstats  = ft_timelockstatistics(cfg, standard_all{:}, o
 % SKIP Save the data
 % save(fullfile(output_dir, 'stat_standard_oddball_clusstats.mat'), 'stat_standard_oddball_clusstats');
 ```
+
+You can compare the design matrix to that of an GLM analysis of fMRI data, except that it does not code invividual fMRI volumes but subjects, and is transposed with the subjects along colums.
+
+  figure
+  imagesc(cfg.design)
+
+Rather than `cfg.method='montecarlo'`, we could also have used another method, such as `'analytic'`. With the analytic computation of p-values, we cannot use `cfg.correctm='cluster'`, but we still could do a correction for multiple comparisons, such as `bonferroni` or `fdr`. See **[ft_statistics_analytic](/reference/ft_statistics_analytic)** and perhaps you want to give it a try later on.
 
 ### 3.3.2 Plot the results of the cluster-based permutation test
 
