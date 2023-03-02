@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '36610678'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2023.119867
+- idtype: pmcid
+  value: PMC9926012
+authors:
+- authtype: Author
+  name: Engelen T
+- authtype: Author
+  name: Buot A
+- authtype: Author
+  name: Grèzes J
+- authtype: Author
+  name: Tallon-Baudry C
+epubdate: ''
+fulljournalname: Neuroimage
+issue: ''
+pages: '119867'
+pmclivedate: ''
+printpubdate: 2023 Mar
+pubdate: 2023 Mar
+sortdate: 2023/03/01 00:00
+source: Neuroimage
+title: Whose emotion is it? Perspective matters to understand brain-body interactions
+  in emotions
+uid: '9926012'
+volume: '268'
