@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fnhum.2023.1068216
+- idtype: pmcid
+  value: PMC9977191
+authors:
+- authtype: Author
+  name: Torres-Simon L
+- authtype: Author
+  name: Cuesta P
+- authtype: Author
+  name: del Cerro-Leon A
+- authtype: Author
+  name: Chino B
+- authtype: Author
+  name: Orozco LH
+- authtype: Author
+  name: Marsh EB
+- authtype: Author
+  name: Gil P
+- authtype: Author
+  name: Maestu F
+epubdate: 2023 Feb 15
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '1068216'
+pmclivedate: 2023/03/02
+printpubdate: ''
+pubdate: 2023 Feb 15
+sortdate: 2023/02/15 00:00
+source: Front Hum Neurosci
+title: The effects of white matter hyperintensities on MEG power spectra in population
+  with mild cognitive impairment
+uid: '9977191'
+volume: '17'

@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '35512361'
+- idtype: doi
+  value: 10.1093/cercor/bhac154
+- idtype: pmcid
+  value: PMC9977363
+authors:
+- authtype: Author
+  name: Scheeringa R
+- authtype: Author
+  name: Bonnefond M
+- authtype: Author
+  name: van Mourik T
+- authtype: Author
+  name: Jensen O
+- authtype: Author
+  name: Norris DG
+- authtype: Author
+  name: Koopmans PJ
+epubdate: 2022 May 5
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '5'
+pages: 1537-1549
+pmclivedate: 2023/03/02
+printpubdate: ''
+pubdate: 2022 May 5
+sortdate: 2022/05/05 00:00
+source: Cereb Cortex
+title: Relating neural oscillations to laminar fMRI connectivity in visual cortex
+uid: '9977363'
+volume: '33'

@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '36370186'
+- idtype: doi
+  value: 10.1007/s00415-022-11462-8
+- idtype: pmcid
+  value: PMC9971098
+authors:
+- authtype: Author
+  name: Kumar A
+- authtype: Author
+  name: Lyzhko E
+- authtype: Author
+  name: Hamid L
+- authtype: Author
+  name: Srivastav A
+- authtype: Author
+  name: Stephani U
+- authtype: Author
+  name: Japaridze N
+epubdate: 2022 Nov 12
+fulljournalname: Journal of Neurology
+issue: '3'
+pages: 1402-1415
+pmclivedate: 2023/03/01
+printpubdate: '2023'
+pubdate: 2022 Nov 12
+sortdate: 2022/11/12 00:00
+source: J Neurol
+title: Neuronal networks underlying ictal and subclinical discharges in childhood
+  absence epilepsy
+uid: '9971098'
+volume: '270'

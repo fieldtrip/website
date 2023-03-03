@@ -1,0 +1,46 @@
+articleids:
+- idtype: pmid
+  value: '36731349'
+- idtype: doi
+  value: 10.1016/j.clinph.2023.01.005
+- idtype: pmcid
+  value: PMC9975070
+- idtype: MID
+  value: NIHMS1869706
+authors:
+- authtype: Author
+  name: Chirumamilla VC
+- authtype: Author
+  name: Hitchings L
+- authtype: Author
+  name: Mulkey SB
+- authtype: Author
+  name: Anwar T
+- authtype: Author
+  name: Baker R
+- authtype: Author
+  name: Maxwell GL
+- authtype: Author
+  name: De Asis-Cruz J
+- authtype: Author
+  name: Kapse K
+- authtype: Author
+  name: Limperopoulos C
+- authtype: Author
+  name: du Plessis A
+- authtype: Author
+  name: Govindan RB
+epubdate: 2023 Jan 23
+fulljournalname: 'Clinical neurophysiology : official journal of the International
+  Federation of Clinical Neurophysiology'
+issue: ''
+pages: 72-80
+pmclivedate: ''
+printpubdate: 2023 Mar
+pubdate: 2023 Jan 23
+sortdate: 2023/01/23 00:00
+source: Clin Neurophysiol
+title: Functional brain network properties of healthy full-term newborns quantified
+  by scalp and source-reconstructed EEG
+uid: '9975070'
+volume: '147'
