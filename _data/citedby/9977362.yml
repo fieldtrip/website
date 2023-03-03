@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '35639957'
+- idtype: doi
+  value: 10.1093/cercor/bhac179
+- idtype: pmcid
+  value: PMC9977362
+authors:
+- authtype: Author
+  name: Foldal MD
+- authtype: Author
+  name: Leske S
+- authtype: Author
+  name: Blenkmann AO
+- authtype: Author
+  name: Endestad T
+- authtype: Author
+  name: Solbakk AK
+epubdate: 2022 May 27
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '5'
+pages: 1876-1894
+pmclivedate: 2023/03/02
+printpubdate: ''
+pubdate: 2022 May 27
+sortdate: 2022/05/27 00:00
+source: Cereb Cortex
+title: Attentional modulation of beta-power aligns with the timing of behaviorally
+  relevant rhythmic sounds
+uid: '9977362'
+volume: '33'

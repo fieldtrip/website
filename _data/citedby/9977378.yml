@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '35470400'
+- idtype: doi
+  value: 10.1093/cercor/bhac159
+- idtype: pmcid
+  value: PMC9977378
+authors:
+- authtype: Author
+  name: Guttesen AÁ
+- authtype: Author
+  name: Gaskell MG
+- authtype: Author
+  name: Madden EV
+- authtype: Author
+  name: Appleby G
+- authtype: Author
+  name: Cross ZR
+- authtype: Author
+  name: Cairney SA
+epubdate: 2022 Apr 25
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '5'
+pages: 1610-1625
+pmclivedate: 2023/03/02
+printpubdate: ''
+pubdate: 2022 Apr 25
+sortdate: 2022/04/25 00:00
+source: Cereb Cortex
+title: Sleep loss disrupts the neural signature of successful learning
+uid: '9977378'
+volume: '33'

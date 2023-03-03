@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '36536249'
+- idtype: doi
+  value: 10.1007/s00415-022-11508-x
+- idtype: pmcid
+  value: PMC9971146
+authors:
+- authtype: Author
+  name: Rosenfelder MJ
+- authtype: Author
+  name: Helmschrott VC
+- authtype: Author
+  name: Willacker L
+- authtype: Author
+  name: Einhäupl B
+- authtype: Author
+  name: Raiser TM
+- authtype: Author
+  name: Bender A
+epubdate: 2022 Dec 19
+fulljournalname: Journal of Neurology
+issue: '3'
+pages: 1721-1734
+pmclivedate: 2023/03/01
+printpubdate: '2023'
+pubdate: 2022 Dec 19
+sortdate: 2022/12/19 00:00
+source: J Neurol
+title: 'Effect of robotic tilt table verticalization on recovery in patients with
+  disorders of consciousness: a randomized controlled trial'
+uid: '9971146'
+volume: '270'

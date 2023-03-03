@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fpsyg.2023.1105346
+- idtype: pmcid
+  value: PMC9974639
+authors:
+- authtype: Author
+  name: Hsin CH
+- authtype: Author
+  name: Chao PC
+- authtype: Author
+  name: Lee CY
+epubdate: 2023 Feb 15
+fulljournalname: Frontiers in Psychology
+issue: ''
+pages: '1105346'
+pmclivedate: 2023/03/02
+printpubdate: ''
+pubdate: 2023 Feb 15
+sortdate: 2023/02/15 00:00
+source: Front Psychol
+title: 'Speech comprehension in noisy environments: Evidence from the predictability
+  effects on the N400 and LPC'
+uid: '9974639'
+volume: '14'
