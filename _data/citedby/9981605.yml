@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '36864037'
+- idtype: doi
+  value: 10.1038/s41467-023-36608-8
+- idtype: pmcid
+  value: PMC9981605
+authors:
+- authtype: Author
+  name: Tang MF
+- authtype: Author
+  name: Kheradpezhouh E
+- authtype: Author
+  name: Lee CC
+- authtype: Author
+  name: Dickinson JE
+- authtype: Author
+  name: Mattingley JB
+- authtype: Author
+  name: Arabzadeh E
+epubdate: 2023 Mar 2
+fulljournalname: Nature Communications
+issue: ''
+pages: '1196'
+pmclivedate: 2023/03/04
+printpubdate: ''
+pubdate: 2023 Mar 2
+sortdate: 2023/03/02 00:00
+source: Nat Commun
+title: Expectation violations enhance neuronal encoding of sensory information in
+  mouse primary visual cortex
+uid: '9981605'
+volume: '14'

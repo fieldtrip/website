@@ -1,0 +1,51 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fnagi.2023.1114466
+- idtype: pmcid
+  value: PMC9978704
+authors:
+- authtype: Author
+  name: Wu D
+- authtype: Author
+  name: Zhao B
+- authtype: Author
+  name: Xie H
+- authtype: Author
+  name: Xu Y
+- authtype: Author
+  name: Yin Z
+- authtype: Author
+  name: Bai Y
+- authtype: Author
+  name: Fan H
+- authtype: Author
+  name: Zhang Q
+- authtype: Author
+  name: Liu D
+- authtype: Author
+  name: Hu T
+- authtype: Author
+  name: Jiang Y
+- authtype: Author
+  name: An Q
+- authtype: Author
+  name: Zhang X
+- authtype: Author
+  name: Yang A
+- authtype: Author
+  name: Zhang J
+epubdate: 2023 Feb 16
+fulljournalname: Frontiers in Aging Neuroscience
+issue: ''
+pages: '1114466'
+pmclivedate: 2023/03/03
+printpubdate: ''
+pubdate: 2023 Feb 16
+sortdate: 2023/02/16 00:00
+source: Front Aging Neurosci
+title: Profiling the low-beta characteristics of the subthalamic nucleus in early-
+  and late-onset Parkinson’s disease
+uid: '9978704'
+volume: '15'
