@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '36655286'
+- idtype: doi
+  value: 10.1002/hbm.26188
+- idtype: pmcid
+  value: PMC9980892
+authors:
+- authtype: Author
+  name: Poncet M
+- authtype: Author
+  name: Ales JM
+epubdate: 2023 Jan 18
+fulljournalname: Human Brain Mapping
+issue: '5'
+pages: 1846-1861
+pmclivedate: 2023/03/03
+printpubdate: ''
+pubdate: 2023 Jan 18
+sortdate: 2023/01/18 00:00
+source: Hum Brain Mapp
+title: Estimating neural activity from visual areas using functionally defined EEG
+  templates
+uid: '9980892'
+volume: '44'
