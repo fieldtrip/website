@@ -231,7 +231,7 @@ The following function will load the data as specified in Subject01.m, uses the 
 
 ## Summary and suggested further readings
 
-This tutorial explained how to write your own functions and how to do batching in order to increase the efficiency of your analysis. If you are interested in improving memory usage and the speed of your analysis, you can check [this](/tutorial/memory) and [this](/tutorial/distributedcomputing) tutorial.
+This tutorial explained how to write your own functions and how to do batching in order to increase the efficiency of your analysis. If you are interested in improving memory usage and the speed of your analysis, you can check [this](/tutorial/memory) and the tutorials on distributed computing using [qsub](/tutorial/distributedcomputing_qsub) and [parfor](/tutorial/distributedcomputing_parfor) tutorial.
 
 When you have more questions about the topic of any tutorial, don't forget to check the [frequently asked questions](/faq) and the [example scripts](/example).
 

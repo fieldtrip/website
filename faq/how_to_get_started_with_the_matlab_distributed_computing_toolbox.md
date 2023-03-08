@@ -1,11 +1,11 @@
 ---
 title: How to get started with the MATLAB distributed computing toolbox?
-tags: [faq, distcomp]
+tags: [faq, distcomp, parfor]
 ---
 
 # How to get started with the MATLAB distributed computing toolbox?
 
-The MATLAB [parallel computing toolbox](http://www.mathworks.com/products/index.html), formerly known as the distributed computing toolbox (DCT) is a commercial toolbox provided by MathWorks. It allows you to execute distributed computations on multiple cores in a single computer, or if you have access to [distributed computing engines](http://www.mathworks.com/products/distriben/index.html) on a compute cluster. To figure out whether you have it, you can try
+The MATLAB [parallel computing toolbox](https://nl.mathworks.com/products/parallel-computing.html), formerly known as the distributed computing toolbox (DCT) is a commercial toolbox provided by MathWorks. It allows you to execute distributed computations on multiple cores in a single computer, or if you have access to [distributed computing engines](http://www.mathworks.com/products/distriben/index.html) on a compute cluster. To figure out whether you have it, you can try
 
     help distcomp
 
@@ -59,4 +59,4 @@ The labindex variable is automatically replaced by the number of the worker. Not
 
 Many of the FieldTrip functions allow to specify the cfg.inputfile and cfg.outputfile option, which allow you to run large analyses in parallel without all the analysis results being returned to your primary MATLAB session. This is especially relevant if your primary computer is not able to hold the results of all computations in memory at the same time.
 
-Elsewhere on this FieldTrip website you can find more documentation, such as the [distributed computing tutorial](/tutorial/distributedcomputing). Some of the FAQs on distributed computing with the FieldTrip [qsub](/tag/qsub/) toolbox will also be informative in general.
+Elsewhere on this FieldTrip website you can find more documentation, such as the tutorials on using [qsub](/tutorial/distributedcomputing_qsub) and [parfor](/tutorial/distributedcomputing_qsub). Some of the FAQs on distributed computing with [qsub](/tag/qsub/) and [parfor](/tag/parfor/) will also be informative.
