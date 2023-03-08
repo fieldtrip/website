@@ -94,6 +94,6 @@ When adding or contributing to the tutorials please consider the [documentation 
 
 - [Making a memory efficient analysis pipeline](/tutorial/memory)
 - [Speeding up your analysis using distributed computing with qsub](/tutorial/distributedcomputing_qsub)
-
+- [Speeding up your analysis using distributed computing with parfor](/tutorial/distributedcomputing_parfor)
 
 The data that is used for the tutorials is available from <https://download.fieldtriptoolbox.org/tutorial/>.
