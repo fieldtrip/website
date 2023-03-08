@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '36788141'
+- idtype: doi
+  value: 10.1007/s00221-023-06569-x
+- idtype: pmcid
+  value: PMC9985575
+authors:
+- authtype: Author
+  name: Lapenta OM
+- authtype: Author
+  name: Keller PE
+- authtype: Author
+  name: Nozaradan S
+- authtype: Author
+  name: Varlet M
+epubdate: 2023 Feb 14
+fulljournalname: Experimental Brain Research
+issue: '3'
+pages: 875-887
+pmclivedate: 2023/03/06
+printpubdate: '2023'
+pubdate: 2023 Feb 14
+sortdate: 2023/02/14 00:00
+source: Exp Brain Res
+title: Spatial and temporal (non)binding of audiovisual rhythms in sensorimotor synchronisation
+uid: '9985575'
+volume: '241'
