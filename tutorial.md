@@ -93,7 +93,7 @@ When adding or contributing to the tutorials please consider the [documentation 
 ## Making your analyses more efficient
 
 - [Making a memory efficient analysis pipeline](/tutorial/memory)
-- [Speeding up your analysis pipeline using distributed computing](/tutorial/distributedcomputing)
+- [Speeding up your analysis using distributed computing with qsub](/tutorial/distributedcomputing_qsub)
 
 
 The data that is used for the tutorials is available from <https://download.fieldtriptoolbox.org/tutorial/>.

@@ -1,5 +1,5 @@
 ---
-title: Speeding up your analysis pipeline using distributed computing
+title: Speeding up your analysis using distributed computing with qsub
 tags: [tutorial, matlab, script, qsub, distcomp, meg-language]
 ---
 
