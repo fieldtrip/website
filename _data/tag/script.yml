@@ -7,8 +7,11 @@
 - name:  Using reproducescript for a group analysis
   link:  /example/reproducescript_group
 
-- name:  Speeding up your analysis pipeline using distributed computing
-  link:  /tutorial/distributedcomputing
+- name:  Speeding up your analysis using distributed computing with parfor
+  link:  /tutorial/distributedcomputing_parfor
+
+- name:  Speeding up your analysis using distributed computing with qsub
+  link:  /tutorial/distributedcomputing_qsub
 
 - name:  Making a memory efficient analysis pipeline
   link:  /tutorial/memory
