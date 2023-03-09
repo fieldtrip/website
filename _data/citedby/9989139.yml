@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1093/braincomms/fcad035
+- idtype: pmcid
+  value: PMC9989139
+authors:
+- authtype: Author
+  name: Gonzalez-Escamilla G
+- authtype: Author
+  name: Chirumamilla VC
+- authtype: Author
+  name: Koirala N
+- authtype: Author
+  name: Anwar AR
+- authtype: Author
+  name: Tüscher O
+- authtype: Author
+  name: Vogt J
+- authtype: Author
+  name: Horstmann P
+- authtype: Author
+  name: Meyer B
+- authtype: Author
+  name: Bonanno GA
+- authtype: Author
+  name: Groppa S
+- authtype: Author
+  name: Muthuraman M
+epubdate: 2023 Feb 17
+fulljournalname: Brain Communications
+issue: '2'
+pages: fcad035
+pmclivedate: 2023/03/08
+printpubdate: ''
+pubdate: 2023 Feb 17
+sortdate: 2023/02/17 00:00
+source: Brain Commun
+title: Modular segregation drives causality of the dynamic oscillatory network responses
+  during threat processing
+uid: '9989139'
+volume: '5'
