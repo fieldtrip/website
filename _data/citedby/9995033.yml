@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1126/sciadv.ade7996
+- idtype: pmcid
+  value: PMC9995033
+authors:
+- authtype: Author
+  name: Bartsch MV
+- authtype: Author
+  name: Merkel C
+- authtype: Author
+  name: Strumpf H
+- authtype: Author
+  name: Schoenfeld MA
+- authtype: Author
+  name: Tsotsos JK
+- authtype: Author
+  name: Hopf JM
+epubdate: 2023 Mar 8
+fulljournalname: Science Advances
+issue: '10'
+pages: eade7996
+pmclivedate: 2023/03/09
+printpubdate: ''
+pubdate: 2023 Mar 8
+sortdate: 2023/03/08 00:00
+source: Sci Adv
+title: A cortical zoom-in operation underlies covert shifts of visual spatial attention
+uid: '9995033'
+volume: '9'
