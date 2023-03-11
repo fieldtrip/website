@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1093/nc/niad003
+- idtype: pmcid
+  value: PMC9994593
+authors:
+- authtype: Author
+  name: Parés-Pujolràs E
+- authtype: Author
+  name: Matić K
+- authtype: Author
+  name: Haggard P
+epubdate: 2023 Mar 8
+fulljournalname: Neuroscience of Consciousness
+issue: '1'
+pages: niad003
+pmclivedate: 2023/03/09
+printpubdate: ''
+pubdate: 2023 Mar 8
+sortdate: 2023/03/08 00:00
+source: Neurosci Conscious
+title: 'Feeling ready: neural bases of prospective motor readiness judgements'
+uid: '9994593'
+volume: '2023'
