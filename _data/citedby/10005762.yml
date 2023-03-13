@@ -1,0 +1,55 @@
+articleids:
+- idtype: pmid
+  value: '36810199'
+- idtype: doi
+  value: 10.7554/eLife.82467
+- idtype: pmcid
+  value: PMC10005762
+authors:
+- authtype: Author
+  name: Wiest C
+- authtype: Author
+  name: Torrecillos F
+- authtype: Author
+  name: Pogosyan A
+- authtype: Author
+  name: Bange M
+- authtype: Author
+  name: Muthuraman M
+- authtype: Author
+  name: Groppa S
+- authtype: Author
+  name: Hulse N
+- authtype: Author
+  name: Hasegawa H
+- authtype: Author
+  name: Ashkan K
+- authtype: Author
+  name: Baig F
+- authtype: Author
+  name: Morgante F
+- authtype: Author
+  name: Pereira EA
+- authtype: Author
+  name: Mallet N
+- authtype: Author
+  name: Magill PJ
+- authtype: Author
+  name: Brown P
+- authtype: Author
+  name: Sharott A
+- authtype: Author
+  name: Tan H
+epubdate: 2023 Feb 22
+fulljournalname: eLife
+issue: ''
+pages: e82467
+pmclivedate: 2023/03/11
+printpubdate: ''
+pubdate: 2023 Feb 22
+sortdate: 2023/02/22 00:00
+source: eLife
+title: The aperiodic exponent of subthalamic field potentials reflects excitation/inhibition
+  balance in Parkinsonism
+uid: '10005762'
+volume: '12'

@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1007/s10055-021-00538-x
+- idtype: pmcid
+  value: PMC9998326
+authors:
+- authtype: Author
+  name: McDermott EJ
+- authtype: Author
+  name: Metsomaa J
+- authtype: Author
+  name: Belardinelli P
+- authtype: Author
+  name: Grosse-Wentrup M
+- authtype: Author
+  name: Ziemann U
+- authtype: Author
+  name: Zrenner C
+epubdate: 2021 Sep 23
+fulljournalname: Virtual Reality
+issue: '1'
+pages: 347-369
+pmclivedate: 2023/03/11
+printpubdate: '2023'
+pubdate: 2021 Sep 23
+sortdate: 2021/09/23 00:00
+source: Virtual Real
+title: 'Predicting motor behavior: an efficient EEG signal processing pipeline to
+  detect brain states with potential therapeutic relevance for VR-based neurorehabilitation'
+uid: '9998326'
+volume: '27'

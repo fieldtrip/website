@@ -1,0 +1,42 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3390/ijerph20054663
+- idtype: pmcid
+  value: PMC10002203
+authors:
+- authtype: Author
+  name: Lian J
+- authtype: Author
+  name: Xu L
+- authtype: Author
+  name: Song T
+- authtype: Author
+  name: Peng Z
+- authtype: Author
+  name: Gong X
+- authtype: Author
+  name: Chen J
+- authtype: Author
+  name: Zhong X
+- authtype: Author
+  name: An X
+- authtype: Author
+  name: Chen S
+- authtype: Author
+  name: Shao Y
+epubdate: 2023 Mar 6
+fulljournalname: International Journal of Environmental Research and Public Health
+issue: '5'
+pages: '4663'
+pmclivedate: 2023/03/11
+printpubdate: ''
+pubdate: 2023 Mar 6
+sortdate: 2023/03/06 00:00
+source: Int J Environ Res Public Health
+title: Decreased Functional Connectivity of Brain Networks in the Alpha Band after
+  Sleep Deprivation Is Associated with Decreased Inhibitory Control in Young Male
+  Adults
+uid: '10002203'
+volume: '20'
