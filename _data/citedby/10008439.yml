@@ -1,0 +1,57 @@
+articleids:
+- idtype: pmid
+  value: '34166746'
+- idtype: doi
+  value: 10.1016/j.resuscitation.2021.06.008
+- idtype: pmcid
+  value: PMC10008439
+- idtype: MID
+  value: NIHMS1874189
+authors:
+- authtype: Author
+  name: Bauerschmidt A
+- authtype: Author
+  name: Eliseyev A
+- authtype: Author
+  name: Doyle KW
+- authtype: Author
+  name: Velasquez A
+- authtype: Author
+  name: Egbebike J
+- authtype: Author
+  name: Chiu W
+- authtype: Author
+  name: Kumar V
+- authtype: Author
+  name: Alkhachroum A
+- authtype: Author
+  name: Der Nigoghossian C
+- authtype: Author
+  name: Al-Mufti F
+- authtype: Author
+  name: Rabbani L
+- authtype: Author
+  name: Brodie D
+- authtype: Author
+  name: Rubinos C
+- authtype: Author
+  name: Park S
+- authtype: Author
+  name: Roh D
+- authtype: Author
+  name: Agarwal S
+- authtype: Author
+  name: Claassen J
+epubdate: 2021 Jun 21
+fulljournalname: Resuscitation
+issue: ''
+pages: 130-137
+pmclivedate: 2023/03/12
+printpubdate: 2021 Aug
+pubdate: 2021 Jun 21
+sortdate: 2021/06/21 00:00
+source: Resuscitation
+title: Predicting early recovery of consciousness after cardiac arrest supported by
+  quantitative electroencephalography
+uid: '10008439'
+volume: '165'

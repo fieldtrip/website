@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '36878149'
+- idtype: doi
+  value: 10.1016/j.nicl.2023.103364
+- idtype: pmcid
+  value: PMC9999263
+authors:
+- authtype: Author
+  name: Sato J
+- authtype: Author
+  name: Safar K
+- authtype: Author
+  name: Vogan VM
+- authtype: Author
+  name: Taylor MJ
+epubdate: 2023 Mar 2
+fulljournalname: 'NeuroImage : Clinical'
+issue: ''
+pages: '103364'
+pmclivedate: 2023/03/11
+printpubdate: ''
+pubdate: 2023 Mar 2
+sortdate: 2023/03/02 00:00
+source: Neuroimage Clin
+title: 'Functional connectivity changes during working memory in autism spectrum disorder:
+  A two-year longitudinal MEG study'
+uid: '9999263'
+volume: '37'

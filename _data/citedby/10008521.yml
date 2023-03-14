@@ -1,0 +1,68 @@
+articleids:
+- idtype: pmid
+  value: '36100172'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2022.119623
+- idtype: pmcid
+  value: PMC10008521
+- idtype: MID
+  value: NIHMS1851996
+authors:
+- authtype: Author
+  name: Niso G
+- authtype: Author
+  name: Botvinik-Nezer R
+- authtype: Author
+  name: Appelhoff S
+- authtype: Author
+  name: De La Vega A
+- authtype: Author
+  name: Esteban O
+- authtype: Author
+  name: Etzel JA
+- authtype: Author
+  name: Finc K
+- authtype: Author
+  name: Ganz M
+- authtype: Author
+  name: Gau R
+- authtype: Author
+  name: Halchenko YO
+- authtype: Author
+  name: Herholz P
+- authtype: Author
+  name: Karakuzu A
+- authtype: Author
+  name: Keator DB
+- authtype: Author
+  name: Markiewicz CJ
+- authtype: Author
+  name: Maumet C
+- authtype: Author
+  name: Pernet CR
+- authtype: Author
+  name: Pestilli F
+- authtype: Author
+  name: Queder N
+- authtype: Author
+  name: Schmitt T
+- authtype: Author
+  name: Sójka W
+- authtype: Author
+  name: Wagner AS
+- authtype: Author
+  name: Whitaker KJ
+- authtype: Author
+  name: Rieger JW
+epubdate: 2022 Sep 12
+fulljournalname: NeuroImage
+issue: ''
+pages: '119623'
+pmclivedate: ''
+printpubdate: ''
+pubdate: 2022 Sep 12
+sortdate: 2022/09/12 00:00
+source: Neuroimage
+title: 'Open and reproducible neuroimaging: From study inception to publication'
+uid: '10008521'
+volume: '263'
