@@ -421,9 +421,8 @@ Using the combined results goes in a different script, because that way it isn't
 ### Exercise
 
 {% include markup/info %}
-
 -   Add SubjectSEF in the middle of the list of datasets, observe what happens.
-    {% include markup/end %}
+{% include markup/end %}
 
     %% Load and check the per-subject results
     % If the parallel loop of the first script ran on a remote cluster, results
