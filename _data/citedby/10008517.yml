@@ -1,0 +1,52 @@
+articleids:
+- idtype: pmid
+  value: '34184175'
+- idtype: doi
+  value: 10.1007/s12028-021-01233-0
+- idtype: pmcid
+  value: PMC10008517
+- idtype: MID
+  value: NIHMS1874190
+authors:
+- authtype: Author
+  name: Matory AL
+- authtype: Author
+  name: Alkhachroum A
+- authtype: Author
+  name: Chiu WT
+- authtype: Author
+  name: Eliseyev A
+- authtype: Author
+  name: Doyle K
+- authtype: Author
+  name: Rohaut B
+- authtype: Author
+  name: Egbebike JA
+- authtype: Author
+  name: Velazquez AG
+- authtype: Author
+  name: Der-Nigoghossian C
+- authtype: Author
+  name: Paniker L
+- authtype: Author
+  name: Prager KM
+- authtype: Author
+  name: Agarwal S
+- authtype: Author
+  name: Roh D
+- authtype: Author
+  name: Park S
+- authtype: Author
+  name: Claassen J
+epubdate: 2021 Jun 28
+fulljournalname: Neurocritical care
+issue: '3'
+pages: 853-861
+pmclivedate: 2023/03/12
+printpubdate: 2021 Dec
+pubdate: 2021 Jun 28
+sortdate: 2021/06/28 00:00
+source: Neurocrit Care
+title: Electrocerebral Signature of Cardiac Death
+uid: '10008517'
+volume: '35'

@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '36905030'
+- idtype: doi
+  value: 10.3390/s23052826
+- idtype: pmcid
+  value: PMC10007152
+authors:
+- authtype: Author
+  name: Mockevičius A
+- authtype: Author
+  name: Yokota Y
+- authtype: Author
+  name: Tarailis P
+- authtype: Author
+  name: Hasegawa H
+- authtype: Author
+  name: Naruse Y
+- authtype: Author
+  name: Griškova-Bulanova I
+epubdate: 2023 Mar 4
+fulljournalname: Sensors (Basel, Switzerland)
+issue: '5'
+pages: '2826'
+pmclivedate: 2023/03/12
+printpubdate: ''
+pubdate: 2023 Mar 4
+sortdate: 2023/03/04 00:00
+source: Sensors (Basel)
+title: Extraction of Individual EEG Gamma Frequencies from the Responses to Click-Based
+  Chirp-Modulated Sounds
+uid: '10007152'
+volume: '23'
