@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1038/s41598-023-30172-3
+- idtype: pmcid
+  value: PMC10011566
+authors:
+- authtype: Author
+  name: Lopes MA
+- authtype: Author
+  name: Hamandi K
+- authtype: Author
+  name: Zhang J
+- authtype: Author
+  name: Creaser JL
+epubdate: 2023 Mar 13
+fulljournalname: Scientific Reports
+issue: ''
+pages: '4115'
+pmclivedate: 2023/03/15
+printpubdate: ''
+pubdate: 2023 Mar 13
+sortdate: 2023/03/13 00:00
+source: Sci Rep
+title: The role of additive and diffusive coupling on the dynamics of neural populations
+uid: '10011566'
+volume: '13'

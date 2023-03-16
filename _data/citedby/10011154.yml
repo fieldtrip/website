@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fnbot.2023.1015464
+- idtype: pmcid
+  value: PMC10011154
+authors:
+- authtype: Author
+  name: Carino-Escobar RI
+- authtype: Author
+  name: Rodríguez-García ME
+- authtype: Author
+  name: Carrillo-Mora P
+- authtype: Author
+  name: Valdés-Cristerna R
+- authtype: Author
+  name: Cantillo-Negrete J
+epubdate: 2023 Feb 28
+fulljournalname: Frontiers in Neurorobotics
+issue: ''
+pages: '1015464'
+pmclivedate: 2023/03/15
+printpubdate: ''
+pubdate: 2023 Feb 28
+sortdate: 2023/02/28 00:00
+source: Front Neurorobot
+title: Continuous versus discrete robotic feedback for brain-computer interfaces aimed
+  for neurorehabilitation
+uid: '10011154'
+volume: '17'

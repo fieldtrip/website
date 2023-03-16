@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '36849262'
+- idtype: doi
+  value: 10.1523/ENEURO.0267-22.2023
+- idtype: pmcid
+  value: PMC10012326
+authors:
+- authtype: Author
+  name: Baudin P
+- authtype: Author
+  name: Roussel D
+- authtype: Author
+  name: Mahon S
+- authtype: Author
+  name: Charpier S
+- authtype: Author
+  name: Navarro V
+epubdate: 2023 Mar 13
+fulljournalname: eNeuro
+issue: '3'
+pages: ENEURO.0267-22.2023
+pmclivedate: 2023/03/15
+printpubdate: ''
+pubdate: 2023 Mar 13
+sortdate: 2023/03/13 00:00
+source: eNeuro
+title: In Vivo Injection of Anti-LGI1 Antibodies into the Rodent M1 Cortex and Hippocampus
+  Is Ineffective in Inducing Seizures
+uid: '10012326'
+volume: '10'
