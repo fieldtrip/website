@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '36781512'
+- idtype: doi
+  value: 10.1007/s10548-023-00943-2
+- idtype: pmcid
+  value: PMC10014725
+authors:
+- authtype: Author
+  name: Helling RM
+- authtype: Author
+  name: Perenboom MJ
+- authtype: Author
+  name: Bauer PR
+- authtype: Author
+  name: Carpay JA
+- authtype: Author
+  name: Sander JW
+- authtype: Author
+  name: Ferrari MD
+- authtype: Author
+  name: Visser GH
+- authtype: Author
+  name: Tolner EA
+epubdate: 2023 Feb 13
+fulljournalname: Brain Topography
+issue: '2'
+pages: 269-281
+pmclivedate: 2023/03/16
+printpubdate: '2023'
+pubdate: 2023 Feb 13
+sortdate: 2023/02/13 00:00
+source: Brain Topogr
+title: TMS-evoked EEG potentials demonstrate altered cortical excitability in migraine
+  with aura
+uid: '10014725'
+volume: '36'

@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '35858223'
+- idtype: doi
+  value: 10.1093/cercor/bhac260
+- idtype: pmcid
+  value: PMC10016039
+authors:
+- authtype: Author
+  name: Manting CL
+- authtype: Author
+  name: Gulyas B
+- authtype: Author
+  name: Ullén F
+- authtype: Author
+  name: Lundqvist D
+epubdate: 2022 Jul 21
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '6'
+pages: 3053-3066
+pmclivedate: 2023/03/16
+printpubdate: ''
+pubdate: 2022 Jul 21
+sortdate: 2022/07/21 00:00
+source: Cereb Cortex
+title: 'Steady-state responses to concurrent melodies: source distribution, top-down,
+  and bottom-up attention'
+uid: '10016039'
+volume: '33'

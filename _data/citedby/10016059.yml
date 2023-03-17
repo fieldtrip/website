@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '35750026'
+- idtype: doi
+  value: 10.1093/cercor/bhac219
+- idtype: pmcid
+  value: PMC10016059
+authors:
+- authtype: Author
+  name: Karlsson AE
+- authtype: Author
+  name: Sander MC
+epubdate: 2022 Jun 25
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '6'
+pages: 2455-2469
+pmclivedate: 2023/03/16
+printpubdate: ''
+pubdate: 2022 Jun 25
+sortdate: 2022/06/25 00:00
+source: Cereb Cortex
+title: Altered alpha/beta desynchronization during item–context binding contributes
+  to the associative deficit in older age
+uid: '10016059'
+volume: '33'

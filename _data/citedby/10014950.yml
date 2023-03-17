@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1038/s41598-023-31308-1
+- idtype: pmcid
+  value: PMC10014950
+authors:
+- authtype: Author
+  name: Durán E
+- authtype: Author
+  name: Pandinelli M
+- authtype: Author
+  name: Logothetis NK
+- authtype: Author
+  name: Eschenko O
+epubdate: 2023 Mar 14
+fulljournalname: Scientific Reports
+issue: ''
+pages: '4231'
+pmclivedate: 2023/03/16
+printpubdate: ''
+pubdate: 2023 Mar 14
+sortdate: 2023/03/14 00:00
+source: Sci Rep
+title: Altered norepinephrine transmission after spatial learning impairs sleep-mediated
+  memory consolidation in rats
+uid: '10014950'
+volume: '13'

@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '35661873'
+- idtype: doi
+  value: 10.1093/cercor/bhac227
+- idtype: pmcid
+  value: PMC10016048
+authors:
+- authtype: Author
+  name: Patelaki E
+- authtype: Author
+  name: Foxe JJ
+- authtype: Author
+  name: Mazurek KA
+- authtype: Author
+  name: Freedman EG
+epubdate: 2022 Jun 6
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '6'
+pages: 2573-2592
+pmclivedate: 2023/03/16
+printpubdate: ''
+pubdate: 2022 Jun 6
+sortdate: 2022/06/06 00:00
+source: Cereb Cortex
+title: 'Young adults who improve performance during dual-task walking show more flexible
+  reallocation of cognitive resources: a mobile brain-body imaging (MoBI) study'
+uid: '10016048'
+volume: '33'
