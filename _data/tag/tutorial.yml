@@ -143,19 +143,19 @@
   link:  /workshop/chieti2015/simulation
 
 - name:  Beamforming oscillatory responses in combined MEG/EEG data
-  link:  /workshop/natmeg/beamforming
+  link:  /workshop/natmeg2014/beamforming
 
 - name:  Dipole fitting of combined MEG/EEG data
-  link:  /workshop/natmeg/dipolefitting
+  link:  /workshop/natmeg2014/dipolefitting
 
 - name:  Preprocessing and event-related activity in combined MEG/EEG data
-  link:  /workshop/natmeg/preprocessing
+  link:  /workshop/natmeg2014/preprocessing
 
 - name:  Statistical analysis and multiple comparison correction for combined MEG/EEG data
-  link:  /workshop/natmeg/statistics
+  link:  /workshop/natmeg2014/statistics
 
 - name:  Time-frequency analysis of combined MEG/EEG data
-  link:  /workshop/natmeg/timefrequency
+  link:  /workshop/natmeg2014/timefrequency
 
 - name:  Reading in data and performing sensor-level ERF and TFR analyses
   link:  /workshop/oxford2019/sensor_analysis_plusminus
