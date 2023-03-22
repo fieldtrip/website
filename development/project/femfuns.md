@@ -181,7 +181,7 @@ An example of the potential distribution on the inner sphere with the stimulatin
 
 {% include image src="/assets/img/development/project/femfuns/innersphere_stim.png" width="500" %}
 
-The test script with all the above snippets put together is [test_realistic_electrodes.m](test_realistic_electrodes.m)
+The test script with all the above snippets put together is `test_realistic_electrodes.m`.
 
 #### Realistic model of the head
 The workflow for a realistic headmodel based on an anatomical MRI is comparable to the 2-sphere example. Here, we will go over the first steps where the mesh is created.
@@ -241,7 +241,7 @@ Finally, we can create our volumetric tetrahedral mesh with 7 regions, 4 electro
 
 {% include image src="/assets/img/development/project/femfuns/3surf_elecs.png" width="500" %}
 
-The steps where the sourcemodel and leadfield is created is omitted here, since it consists of exactly the same steps as the 2-sphere example. The test script with the complete code can be found here: [test_headmodel_realistic_electrodes.m](test_headmodel_realistic_electrodes.m)
+The steps where the sourcemodel and leadfield is created is omitted here, since it consists of exactly the same steps as the 2-sphere example. The test script with the complete code is named `test_headmodel_realistic_electrodes.m`.
 
 After running the code, an example of the potential distribution on the brain looks like (visualized using https://www.paraview.org/):
 
