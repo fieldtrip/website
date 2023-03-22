@@ -12,7 +12,7 @@ This tutorial describes how to define epochs of interest (trials) from recorded 
 In this tutorial, preprocessing and segmenting the data into epochs/trials are done in a single step. If you are interested in how to do preprocessing on continuous data prior to segmenting it into epochs/trials, you can check the [Preprocessing - Reading continuous data](/tutorial/continuous) tutorial.
 
 {% include markup/info %}
-This data in this tutorial is originally from the [NatMEG workshop](/workshop/natmeg) and it is complemented by this lecture. This lectured featured the combination of MEG and EEG. Please go [here](/workshop/natmeg) to see in its entirety.
+This data in this tutorial is originally from the [NatMEG workshop](/workshop/natmeg2014) and it is complemented by this lecture. This lectured featured the combination of MEG and EEG. Please go [here](/workshop/natmeg2014) to see in its entirety.
 
 {% include youtube id="zOxCqcYmIfA" %}
 {% include markup/end %}
@@ -36,7 +36,7 @@ You can either use a default trial function or design your own. When using the d
 
 ## Description of the auditory oddball EEG (& MEG) Dataset
 
-{% include /shared/workshop/natmeg/meg_audodd.md %}
+{% include /shared/workshop/natmeg2014/meg_audodd.md %}
 
 ## Have a look at the data prior to preprocessing
 

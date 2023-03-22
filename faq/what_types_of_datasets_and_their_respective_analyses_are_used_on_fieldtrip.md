@@ -87,8 +87,8 @@ Documentation referring to this dataset:
 - Combined MEG/EEG dataset recorded at the NatMEG in Stockholm
 - 306-channel Neuromag/Elekta/Megin Triux MEG system
 - Auditory stimulus presentation with a standard and an oddball, motor responses on the oddball, visual cue for the response hand (left or right) at the start of each block.
-- Experimental and dataset [details](/workshop/natmeg/meg_audodd)
-- Download the dataset [here](https://download.fieldtriptoolbox.org/workshop/natmeg/) from our download server.
+- Experimental and dataset [details](/workshop/natmeg2014/meg_audodd)
+- Download the dataset [here](https://download.fieldtriptoolbox.org/workshop/natmeg2014/) from our download server.
 
 Documentation referring to this dataset:
 {% include seealso tag1="meg-audodd" %}
@@ -96,7 +96,7 @@ Documentation referring to this dataset:
 ## EEG-audodd
 
 - Combined MEG/EEG dataset recorded at the NatMEG in Stockholm
-- Experimental [details](/workshop/natmeg/meg_audodd)
+- Experimental [details](/workshop/natmeg2014/meg_audodd)
 - This is the same dataset as MEG-audodd, but only with the EEG channels and reformatted as BrainVision file
 - Download the dataset [here](https://download.fieldtriptoolbox.org/workshop/oslo2019/) from our download server.
 
