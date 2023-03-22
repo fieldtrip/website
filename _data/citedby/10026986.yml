@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '36802949'
+- idtype: doi
+  value: 10.1152/ajpregu.00251.2022
+- idtype: pmcid
+  value: PMC10026986
+authors:
+- authtype: Author
+  name: Candia-Rivera D
+- authtype: Author
+  name: Norouzi K
+- authtype: Author
+  name: Ramsøy TZ
+- authtype: Author
+  name: Valenza G
+epubdate: 2023 Feb 20
+fulljournalname: American Journal of Physiology - Regulatory, Integrative and Comparative
+  Physiology
+issue: '4'
+pages: R513-R525
+pmclivedate: 2023/03/21
+printpubdate: 2023 Apr 1
+pubdate: 2023 Feb 20
+sortdate: 2023/02/20 00:00
+source: Am J Physiol Regul Integr Comp Physiol
+title: Dynamic fluctuations in ascending heart-to-brain communication under mental
+  stress
+uid: '10026986'
+volume: '324'
