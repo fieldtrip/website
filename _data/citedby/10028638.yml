@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '36749642'
+- idtype: doi
+  value: 10.1002/hbm.26223
+- idtype: pmcid
+  value: PMC10028638
+authors:
+- authtype: Author
+  name: Xu Q
+- authtype: Author
+  name: Hu J
+- authtype: Author
+  name: Qin Y
+- authtype: Author
+  name: Li G
+- authtype: Author
+  name: Zhang X
+- authtype: Author
+  name: Li P
+epubdate: 2023 Feb 7
+fulljournalname: Human Brain Mapping
+issue: '6'
+pages: 2451-2464
+pmclivedate: 2023/03/22
+printpubdate: ''
+pubdate: 2023 Feb 7
+sortdate: 2023/02/07 00:00
+source: Hum Brain Mapp
+title: 'Intention affects fairness processing: Evidence from behavior and representational
+  similarity analysis of event‐related potential signals'
+uid: '10028638'
+volume: '44'

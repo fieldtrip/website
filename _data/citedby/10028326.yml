@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1007/s40750-023-00213-2
+- idtype: pmcid
+  value: PMC10028326
+authors:
+- authtype: Author
+  name: Perone S
+- authtype: Author
+  name: Anderson AJ
+- authtype: Author
+  name: Weybright EH
+epubdate: 2023 Mar 21
+fulljournalname: Adaptive Human Behavior and Physiology
+issue: ''
+pages: 1-17
+pmclivedate: 2023/03/21
+printpubdate: ''
+pubdate: 2023 Mar 21
+sortdate: 2023/03/21 00:00
+source: Adapt Human Behav Physiol
+title: Older and Wiser? Age-related Change in State and Trait Boredom During Adolescence
+  and Associations with Neural Correlates of Self-regulation
+uid: '10028326'
+volume: ''
