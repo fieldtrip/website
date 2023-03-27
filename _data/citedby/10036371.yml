@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fneur.2023.1111691
+- idtype: pmcid
+  value: PMC10036371
+authors:
+- authtype: Author
+  name: Herrera-Diaz A
+- authtype: Author
+  name: Boshra R
+- authtype: Author
+  name: Tavakoli P
+- authtype: Author
+  name: Lin CY
+- authtype: Author
+  name: Pajankar N
+- authtype: Author
+  name: Bagheri E
+- authtype: Author
+  name: Kolesar R
+- authtype: Author
+  name: Fox-Robichaud A
+- authtype: Author
+  name: Hamielec C
+- authtype: Author
+  name: Reilly JP
+- authtype: Author
+  name: Connolly JF
+epubdate: 2023 Mar 10
+fulljournalname: Frontiers in Neurology
+issue: ''
+pages: '1111691'
+pmclivedate: 2023/03/25
+printpubdate: ''
+pubdate: 2023 Mar 10
+sortdate: 2023/03/10 00:00
+source: Front Neurol
+title: Tracking auditory mismatch negativity responses during full conscious state
+  and coma
+uid: '10036371'
+volume: '14'
