@@ -139,12 +139,12 @@ Occasionally, the quality of the anatomical image is not sufficient to provide a
 For more information, you can consult this [frequently asked question](/faq/why_does_my_eegheadmodel_look_funny).
 {% include markup/end %}
 
-{%
-  ##############################################################
-  # I made it up to here in revising the tutorial
-  # The figures still need to be updated
-  ##############################################################
-%}
+{% comment %}
+###################################################################
+# I made it up to here in revising the tutorial
+# The figures still need to be updated
+###################################################################
+{% endcomment %}  
 
 The function **[ft_sourceplot](/reference/ft_sourceplot)** can be used to plot the segmented tissues. In order, to see all tissues in one image, **[ft_datatype_segmentation](/reference/utilities/ft_datatype_segmentation)** can convert the segmentation structure to an [indexed representation](/faq/how_is_the_segmentation_defined). Each tissue-types will be shown by a different color in the image.
 
