@@ -1,5 +1,5 @@
 ---
-title: Human ECoG
+title: Getting started with human ECoG data
 tags: [ieeg, ecog, seeg]
 ---
 

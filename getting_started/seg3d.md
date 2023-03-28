@@ -1,13 +1,13 @@
 ---
-title: How can I use Seg3D to check and modify segmentation results?
+title: Getting started with Seg3D
 tags: [segmentation, volume, headmodel, eeg, seg3d]
 ---
 
-# How can I use Seg3D to check and modify segmentation results?
+# Getting started with Seg3D
 
-[Seg3D](https://www.sci.utah.edu/cibc-software/seg3d.html) is a free volume segmentation and processing tool developed by the NIH Center for Integrative Biomedical Computing at the University of Utah Scientific Computing and Imaging (SCI) Institute. It combines a flexible manual segmentation interface with powerful higher-dimensional image processing and segmentation algorithms from the [Insight Toolkit](https://itk.org). You can explore and interact with volumetric imaging data using volume rendering and orthogonal slice view windows and label voxels as a certain tissue class. Seg3D is implemented in C++ and hence very fast, and is available for Windows, macOS, and Linux. 
+[Seg3D](https://www.sci.utah.edu/cibc-software/seg3d.html) is a free volume segmentation and processing tool that can be used to check and modify segmentation results. It is developed by the NIH Center for Integrative Biomedical Computing at the University of Utah Scientific Computing and Imaging (SCI) Institute and combines a flexible manual segmentation interface with powerful higher-dimensional image processing and segmentation algorithms from the [Insight Toolkit](https://itk.org). You can explore and interact with volumetric imaging data using volume rendering and orthogonal slice view windows and label voxels as a certain tissue class. Seg3D is implemented in C++ and hence very fast, and is available for Windows, macOS, and Linux.
 
-In Seg3D is easy to manually modify a segmentation that was for example created with **[ft_volumesegment](/reference/ft_volumesegment)** and the underlying SPM algorithms. 
+In Seg3D is easy to manually modify a segmentation that was for example created with **[ft_volumesegment](/reference/ft_volumesegment)** and the underlying SPM algorithms.
 
 {% include markup/success %}
 Seg3D calls a binary 3D array that represents a single type of tissue a "mask". Seg3D can import and export these masks as .mat files; these should each contain a single binary 3D array. The 4x4 `transform` matrix that is used in FieldTrip to determine the size of the voxels and the origin of the coordinate system is not exported to Seg3D.
@@ -30,7 +30,7 @@ You can export data that has been processing in FieldTrip to a format that Seg3D
     cfg.atlas        = seg_i;
     ft_sourceplot(cfg, seg_i);
 
-    %% save the masks separately 
+    %% save the masks separately
     white_ft = segm_5c_ft.white;
     gray_ft  = segm_5c_ft.gray;
     csf_ft   = segm_5c_ft.csf;

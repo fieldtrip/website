@@ -1,11 +1,11 @@
 ---
-title: How can I use AnyWave for reviewing continuous data?
+title: Getting started with AnyWave
 tags: [dataformat, anywave]
 ---
 
-# How can I use AnyWave for reviewing continuous data?
+# Getting started with AnyWave
 
-[AnyWave](http://meg.univ-amu.fr/wiki/AnyWave) is a free, multi-platform software that can be used to visualize electrophysiological data, as well as being used as a development framework in order to build custom plug-ins. It is implemented in C++ and available for Windows, Linux and macOS. The graphics of AnyWave is much faster than **[ft_databrowser](/reference/ft_databrowser)** or MATLAB figure sin general, which is especially valuable if you have many channels and/or a very high sampling rate.
+[AnyWave](http://meg.univ-amu.fr/wiki/AnyWave) is an external tool that can be used for visualizing and reviewing continuous EEG, iEEG, and MEG data. It is implemented in C++ and available for Windows, Linux and macOS. The graphics of AnyWave is much faster than **[ft_databrowser](/reference/ft_databrowser)** or MATLAB figure sin general, which is especially valuable if you have many channels and/or a very high sampling rate.
 
 You can export data that has been processing in FieldTrip to a format that AnyWave understands, such as the BrainVision .vhdr format, review the data in AnyWave, and import the marked time windows back into MATLAB.
 

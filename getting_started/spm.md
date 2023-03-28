@@ -1,9 +1,11 @@
 ---
-title: Integrating with SPM
+title: Getting started with SPM
 tags: [spm]
 ---
 
-# Integrating with SPM
+# Getting started with SPM
+
+Statistical Parametric Mapping (SPM) is a software package designed for the analysis of brain imaging data sequences. FieldTrip and SPM are both implemented in MATLAB and the projects work closely together and share code. If you use FieldTrip, chances are that you use SPM code (possibly without knowing it), and vice versa.
 
 ## Background
 
