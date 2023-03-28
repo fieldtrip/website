@@ -65,6 +65,8 @@ An advantage of reslicing is that it also aligns the voxels with the axes of the
     cfg = [];
     cfg.method = 'linear';
     mri_resliced = ft_volumereslice(cfg, mri_realigned);
+    
+    save mri_resliced mri_resliced
 
 Following the reslicing, the MRI should be shown with the correct side up, the field-of-view should be symmetric from left to right. If you move along the first axis, you should see that the first voxel index `i` increase _and_ that the `x` position increases (idem for `j/y` and `k/z`).
 
@@ -322,6 +324,8 @@ To align the template electrodes with the head model, we can take the scalp surf
     cfg.tissue      = 'scalp';
     cfg.numvertices = 10000;
     scalp = ft_prepare_mesh(cfg, segmentedmri);
+    
+    save scalp scalp
 
 We can plot the electrode positions together with the
 
@@ -352,6 +356,8 @@ We can use **[ft_electroderealign](/reference/ft_electroderealign)** for interac
     cfg.elec       = elec;
     cfg.headshape  = scalp;
     elec_realigned = ft_electroderealign(cfg);
+    
+    save elec_realigned elec_realigned
 
 Since rotations and translations do not "commute", i.e. the order in which you execute the rotation matters, it can be confusing to specify all rotations and translations in one go. Instead, you can use the "apply" button to do the transformations stepwise.
 
@@ -398,6 +404,8 @@ Or we can use the anatomical MRI to identify them
     cfg.method = 'volume';
     cfg.channel = {'nas', 'ini', 'lpa', 'rpa'};
     fiducials = ft_electrodeplacement(cfg, mri_resliced);
+    
+    save fiducials fiducials
 
 The headshape method is easiest for the pre-auricular points, as you can regognize the whole shape of the ears. The volume method is the easiest for the nasion, and by far the most accurate for the inion.
 
@@ -422,6 +430,8 @@ After having identified the anatomical landmarks, we can
     cfg.fiducial.lpa = fiducials.elecpos(3,:);
     cfg.fiducial.rpa = fiducials.elecpos(4,:);
     elec_placed = ft_electrodeplacement(cfg, scalp);
+    
+    save elec_placed elec_placed
    
 Again we can plot the electrodes together with the head surface.
 
