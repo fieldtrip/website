@@ -64,7 +64,7 @@
 - name:  Why does my EEG headmodel look funny?
   link:  /faq/why_does_my_eegheadmodel_look_funny
 
-- name:  How can I use Seg3D to check and modify segmentation results?
+- name:  Getting started with Seg3D
   link:  /getting_started/seg3d
 
 - name:  Reference documentation

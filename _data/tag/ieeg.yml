@@ -4,7 +4,7 @@
 - name:  Getting started with BioImage Suite
   link:  /getting_started/bioimage
 
-- name:  Human ECoG
+- name:  Getting started with human ECoG data
   link:  /getting_started/human_ecog
 
 - name:  Analysis of human ECoG and sEEG recordings

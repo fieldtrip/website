@@ -1,7 +1,7 @@
 - name:  Spike and LFP dataformats
   link:  /dataformat/spike
 
-- name:  Working with animal electrophysiology data
+- name:  Getting started with animal electrophysiology data, including spikes
   link:  /getting_started/animal
 
 - name:  Getting started with Blackrock data
@@ -10,11 +10,11 @@
 - name:  Getting started with Cyberkinetics data
   link:  /getting_started/cyberkinetics
 
-- name:  Getting started with Neuralynx data
-  link:  /getting_started/neuralynx
-
 - name:  Getting started with Neuralynx data recorded at the Donders Institute
   link:  /getting_started/neuralynx_fcdc
+
+- name:  Getting started with Neuralynx data
+  link:  /getting_started/neuralynx
 
 - name:  Getting started with Plexon data
   link:  /getting_started/plexon

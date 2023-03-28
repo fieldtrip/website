@@ -43,7 +43,7 @@
 - name:  Getting started with ASA and EEProbe
   link:  /getting_started/antneuro
 
-- name:  How can I use AnyWave for reviewing continuous data?
+- name:  Getting started with AnyWave
   link:  /getting_started/anywave
 
 - name:  Getting started with Artinis NIRS data
@@ -52,11 +52,11 @@
 - name:  Getting started with audio data
   link:  /getting_started/audio
 
-- name:  Getting started with ABM's B-Alert EEG data
-  link:  /getting_started/b_alert
-
 - name:  Getting started with BabySQUID data
   link:  /getting_started/babysquid
+
+- name:  Getting started with ABM's B-Alert EEG data
+  link:  /getting_started/b_alert
 
 - name:  Getting started with BESA data
   link:  /getting_started/besa
@@ -91,7 +91,7 @@
 - name:  Getting started with EEGLAB
   link:  /getting_started/eeglab
 
-- name:  Getting started with Philips/EGI data
+- name:  Getting started with EGI/Philips/Magstim data
   link:  /getting_started/egi
 
 - name:  Getting started with SR-Research EyeLink eye-tracker data
@@ -112,11 +112,11 @@
 - name:  Getting started with LORETA
   link:  /getting_started/loreta
 
-- name:  Getting started with Neuralynx data
-  link:  /getting_started/neuralynx
-
 - name:  Getting started with Neuralynx data recorded at the Donders Institute
   link:  /getting_started/neuralynx_fcdc
+
+- name:  Getting started with Neuralynx data
+  link:  /getting_started/neuralynx
 
 - name:  Getting started with Neuromag/Elekta/Megin data
   link:  /getting_started/neuromag
