@@ -145,11 +145,11 @@
 - name:  Analysis of corticomuscular coherence
   link:  /tutorial/coherence
 
-- name:  Analysis of sensor- and source-level connectivity
-  link:  /tutorial/connectivity
-
 - name:  Extended analysis of sensor- and source-level connectivity
   link:  /tutorial/connectivityextended
+
+- name:  Analysis of sensor- and source-level connectivity
+  link:  /tutorial/connectivity
 
 - name:  Localizing electrodes using a 3D-scanner
   link:  /tutorial/electrode
@@ -161,10 +161,10 @@
   link:  /tutorial/ica_artifact_cleaning
 
 - name:  Whole brain connectivity and network analysis
-  link:  /tutorial/networkanalysis
+  link:  /tutorial/networkanalysis_eeg
 
 - name:  Whole brain connectivity and network analysis
-  link:  /tutorial/networkanalysis_eeg
+  link:  /tutorial/networkanalysis
 
 - name:  Whole brain connectivity and network analysis
   link:  /tutorial/networkanalysis_old
@@ -183,9 +183,6 @@
 
 - name:  FieldTrip connectivity demo
   link:  /workshop/meg-uk-2015/fieldtrip-connectivity-demo
-
-- name:  PracticalMEEG workshop in Aix-en-Provence
-  link:  /workshop/practicalmeeg2022
 
 - name:  Multimodal faces dataset
   link:  /workshop/practicalmeeg2022/dataset
@@ -207,4 +204,7 @@
 
 - name:  Reconstructing source activity using beamformers
   link:  /workshop/practicalmeeg2022/handson_sourceanalysis
+
+- name:  PracticalMEEG workshop in Aix-en-Provence
+  link:  /workshop/practicalmeeg2022
 
