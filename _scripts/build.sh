@@ -43,13 +43,6 @@ cd $HOME/website
 # let's hope there are no conflicts with the reference documentation
 $GIT pull > /dev/null 2>&1
 
-# update the reference documentation, these get copied from elsewhere to the web server
-# better would be if reference documentation updates were triggered from a webhook attached to fieldtrip/fieldtrip
-$GIT add reference/*.md
-$GIT commit -m "updated reference documentation" reference > /dev/null 2>&1
-# push the updates back to the repository
-$GIT push > /dev/null 2>&1
-
 # compare the latest to the previous version
 PREVIOUS=$(cat $LOGFILE)
 LATEST=$(git log -1 --format=%H)
