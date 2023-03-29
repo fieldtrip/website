@@ -1,0 +1,45 @@
+articleids:
+- idtype: pmid
+  value: '34678162'
+- idtype: doi
+  value: 10.1016/j.cub.2021.10.009
+- idtype: pmcid
+  value: PMC10038008
+- idtype: MID
+  value: NIHMS1752143
+authors:
+- authtype: Author
+  name: Zick JL
+- authtype: Author
+  name: Crowe DA
+- authtype: Author
+  name: Blackman RK
+- authtype: Author
+  name: Schultz K
+- authtype: Author
+  name: Bergstrand DW
+- authtype: Author
+  name: DeNicola AL
+- authtype: Author
+  name: Carter RE
+- authtype: Author
+  name: Ebner TJ
+- authtype: Author
+  name: Lanier LM
+- authtype: Author
+  name: Netoff TI
+- authtype: Author
+  name: Chafee MV
+epubdate: 2021 Oct 21
+fulljournalname: 'Current biology : CB'
+issue: '1'
+pages: 14-25.e4
+pmclivedate: 2023/03/24
+printpubdate: 2022 Jan 10
+pubdate: 2021 Oct 21
+sortdate: 2021/10/21 00:00
+source: Curr Biol
+title: Disparate insults relevant to schizophrenia converge on impaired spike synchrony
+  and weaker synaptic interactions in prefrontal local circuits
+uid: '10038008'
+volume: '32'

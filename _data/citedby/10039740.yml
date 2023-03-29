@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '36801825'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1703-22.2022
+- idtype: pmcid
+  value: PMC10039740
+authors:
+- authtype: Author
+  name: Ferrante O
+- authtype: Author
+  name: Zhigalov A
+- authtype: Author
+  name: Hickey C
+- authtype: Author
+  name: Jensen O
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '12'
+pages: 2190-2198
+pmclivedate: ''
+printpubdate: 2023 Mar 22
+pubdate: 2023 Mar 22
+sortdate: 2023/03/22 00:00
+source: J Neurosci
+title: Statistical Learning of Distractor Suppression Downregulates Prestimulus Neural
+  Excitability in Early Visual Cortex
+uid: '10039740'
+volume: '43'
