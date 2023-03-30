@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3390/ijerph20064971
+- idtype: pmcid
+  value: PMC10049386
+authors:
+- authtype: Author
+  name: Quiquempoix M
+- authtype: Author
+  name: Drogou C
+- authtype: Author
+  name: Erblang M
+- authtype: Author
+  name: Van Beers P
+- authtype: Author
+  name: Guillard M
+- authtype: Author
+  name: Tardo-Dino PE
+- authtype: Author
+  name: Rabat A
+- authtype: Author
+  name: Léger D
+- authtype: Author
+  name: Chennaoui M
+- authtype: Author
+  name: Gomez-Merino D
+- authtype: Author
+  name: Sauvet F
+epubdate: 2023 Mar 11
+fulljournalname: International Journal of Environmental Research and Public Health
+issue: '6'
+pages: '4971'
+pmclivedate: 2023/03/29
+printpubdate: ''
+pubdate: 2023 Mar 11
+sortdate: 2023/03/11 00:00
+source: Int J Environ Res Public Health
+title: Relationship between Habitual Caffeine Consumption, Attentional Performance,
+  and Individual Alpha Frequency during Total Sleep Deprivation
+uid: '10049386'
+volume: '20'
