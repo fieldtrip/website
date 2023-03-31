@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3390/s23063160
+- idtype: pmcid
+  value: PMC10054378
+authors:
+- authtype: Author
+  name: Badarin A
+- authtype: Author
+  name: Antipov V
+- authtype: Author
+  name: Grubov V
+- authtype: Author
+  name: Grigorev N
+- authtype: Author
+  name: Savosenkov A
+- authtype: Author
+  name: Udoratina A
+- authtype: Author
+  name: Gordleeva S
+- authtype: Author
+  name: Kurkin S
+- authtype: Author
+  name: Kazantsev V
+- authtype: Author
+  name: Hramov A
+epubdate: 2023 Mar 16
+fulljournalname: Sensors (Basel, Switzerland)
+issue: '6'
+pages: '3160'
+pmclivedate: 2023/03/30
+printpubdate: ''
+pubdate: 2023 Mar 16
+sortdate: 2023/03/16 00:00
+source: Sensors (Basel)
+title: Psychophysiological Parameters Predict the Performance of Naive Subjects in
+  Sport Shooting Training
+uid: '10054378'
+volume: '23'
