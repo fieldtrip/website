@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '36945499'
+- idtype: doi
+  value: 10.1101/2023.03.06.531093
+- idtype: pmcid
+  value: PMC10028832
+authors:
+- authtype: Author
+  name: Parto-Dezfouli M
+- authtype: Author
+  name: Vezoli J
+- authtype: Author
+  name: Bosman CA
+- authtype: Author
+  name: Fries P
+epubdate: 2023 Mar 6
+fulljournalname: bioRxiv
+issue: ''
+pages: 2023.03.06.531093
+pmclivedate: 2023/03/22
+printpubdate: ''
+pubdate: 2023 Mar 6
+sortdate: 2023/03/06 00:00
+source: bioRxiv
+title: Enhanced Behavioral Performance through Interareal Gamma and Beta Synchronization
+uid: '10028832'
+volume: ''
