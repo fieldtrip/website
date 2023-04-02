@@ -1,6 +1,6 @@
 ---
 title: Getting started with Seg3D
-tags: [segmentation, volume, headmodel, eeg, seg3d]
+tags: [segmentation, volume, headmodel, seg3d]
 ---
 
 # Getting started with Seg3D
@@ -13,37 +13,51 @@ In Seg3D is easy to manually modify a segmentation that was for example created 
 Seg3D calls a binary 3D array that represents a single type of tissue a "mask". Seg3D can import and export these masks as .mat files; these should each contain a single binary 3D array. The 4x4 `transform` matrix that is used in FieldTrip to determine the size of the voxels and the origin of the coordinate system is not exported to Seg3D.
 {% include markup/end %}
 
+## Example use
+
 You can export data that has been processing in FieldTrip to a format that Seg3D understands, visualize and modify the masks in Seg3D, and import the modified masks back into MATLAB.
 
-    %% segment a resliced mri
+    % segment a resliced mri
     cfg           = [];
-    cfg.output    = {'scalp','skull','csf','gray','white'};
-    segm_5c_ft = ft_volumesegment(cfg, mri_resliced); %SPM12
+    cfg.output    = {'gray', 'white', 'csf', 'skull', 'scalp'};
+    segmentedmri  = ft_volumesegment(cfg, mri);
 
-    %% visualize segmentation in ft
-    seg_i = ft_datatype_segmentation(segm_5c_ft, 'segmentationstyle', 'indexed');
+    % convert from probabilistic/binary into indexed representation
+    segmentedmri_indexed = ft_datatype_segmentation(segmentedmri, 'segmentationstyle', 'indexed');
  
+    % visualize the segmentation, different color per tissue type
     cfg              = [];
-    cfg.funparameter = 'seg';
-    cfg.funcolormap  = gray(6); % distinct color per tissue + background
+    cfg.funparameter = 'tissue';
+    cfg.funcolormap  = lines(6);                % distinct color per tissue + background
+    cfg.atlas        = segmentedmri_indexed;    % this is just like an anatomical atlas, see https://www.fieldtriptoolbox.org/template/atlas/
     cfg.location     = 'center';
-    cfg.atlas        = seg_i;
-    ft_sourceplot(cfg, seg_i);
+    ft_sourceplot(cfg, segmentedmri_indexed);
 
-    %% save the masks separately
-    white_ft = segm_5c_ft.white;
-    gray_ft  = segm_5c_ft.gray;
-    csf_ft   = segm_5c_ft.csf;
-    skull_ft = segm_5c_ft.skull;
-    scalp_ft = segm_5c_ft.scalp;
+    % you could also add the anatomy to the segmentation and plot them together in FT_SOURCEPLOT
+    % segmentedmri_indexed.anatomy = mri.anatomy
 
-    save white_ft white_ft
-    save gray_ft  gray_ft
-    save csf_ft   csf_ft
-    save skull_ft skull_ft
-    save scalp_ft scalp_ft
+    % make a copy of the anatomy and save it to a file
+    anatomy = mri.anatomy
+    save anatomy anatomy -v6
 
-After writing the masks to disk, you open Seg3D, read the masks and visualize/modify them. Various operations are possible in Seg3D, such as manual modification of the mask with a paint brush tool (like in Microsoft Paint).
+    % save the binary masks separately
+    gray  = segmentedmri.gray;
+    white = segmentedmri.white;
+    csf   = segmentedmri.csf;
+    skull = segmentedmri.skull;
+    scalp = segmentedmri.scalp;
+
+    save gray  gray  -v6
+    save white white -v6
+    save csf   csf   -v6
+    save skull skull -v6
+    save scalp scalp -v6
+    
+    % or save them all together in a single file
+    tissue = int8(segmentedmri_indexed.tissue);
+    save tissue tissue -v6
+
+After writing the masks to disk, you open Seg3D, read the masks, visualize and modify/correct them where needed. Various operations are possible in Seg3D, for example, editing the segmentation using a paint brush tool like in Microsoft Paint.
 
 {% include image src="/assets/img/getting_started/seg3d/fivemasks.png" width="600" %}
 
@@ -57,23 +71,24 @@ _Figure 2: Visualization of gray matter isosurface created in Seg3D._
 
 You can subsequently export the modified masks as a .mat file and load them again into MATLAB.
 
-    %% load the updated mask into FieldTrip
+    % load the updated mask from Seg3D into FieldTrip/MATLAB
     load('scalp_s3d.mat')
-    scalp_s3d = logical(scirunnrrd.data);
+    scalp_edit = logical(scirunnrrd.data);
 
-    % make a copy of the original FT structure and replace the scalp
-    segm_5c_s3d = segm_5c_ft;
-    segm_5c_s3d.scalp = scalp_s3d;
+    % make a copy of the original FieldTrip structure and replace the scalp
+    segmentedmri_edit = segmentedmri;
+    segmentedmri_edit.scalp = scalp_edit;
 
-    %% visualize segmentation in ft
-    seg_i = ft_datatype_segmentation(segm_5c_s3d, 'segmentationstyle', 'indexed');
+    % convert from probabilistic/binary into indexed representation
+    segmentedmri_edit_indexed = ft_datatype_segmentation(segmentedmri_edit, 'segmentationstyle', 'indexed');
  
+    % visualize the segmentation, different color per tissue type
     cfg              = [];
-    cfg.funparameter = 'seg';
-    cfg.funcolormap  = gray(6); % distinct color per tissue + background
+    cfg.funparameter = 'tissue';
+    cfg.funcolormap  = lines(6); % distinct color per tissue + background
     cfg.location     = 'center';
-    cfg.atlas        = seg_i;
-    ft_sourceplot(cfg, seg_i);
+    cfg.atlas        = segmentedmri_edit_indexed;
+    ft_sourceplot(cfg, segmentedmri_edit_indexed);
     
 {% include markup/danger %}
 Some operations in Seg3D work the best if the volume consists of isotropic voxels, i.e., the space between the center of any two adjacent voxels is the same along each axis x, y, z. You can make a volume isotropic with **[ft_volumereslice](/reference/ft_volumereslice)**
