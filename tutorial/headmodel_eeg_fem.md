@@ -1,13 +1,13 @@
 ---
 title: Creating a FEM volume conduction model of the head for source-reconstruction of EEG data
-tags: [tutorial, eeg, source, headmodel, mri, plotting, meg-language]
+tags: [tutorial, eeg, source, headmodel, mri, plotting, paraview, seg3d, meg-language]
 ---
 
 # Creating a FEM volume conduction model of the head for source-reconstruction of EEG data
 
 ## Introduction
 
-This tutorial demonstrates how to construct a Finite Element Method (FEM) volume conduction model of the head, also known as head model, based on an individual subject's anatomical MRI. For didactic resons we will use the anatomical MRI corresponding to the data that was also analyzed in other tutorials. The anatomical MRI data is included in the [Subject01.zip](https://download.fieldtriptoolbox.org/tutorial/Subject01.zip) MEG dataset.
+This tutorial demonstrates how to construct a Finite Element Method (FEM) volume conduction model of the head, also known as head model, based on an individual subject's anatomical MRI. For didactic resons we will use the anatomical MRI corresponding to the data that was also analyzed in other tutorials. The original anatomical MRI data, along with the (intermediate) results of this tutorial, can be downloaded from [out download server](https://download.fieldtriptoolbox.org/tutorial/headmodel_eeg_fem/).
 
 In reality we did _not_ record EEG data for this subject, nor do we have recorded electrode positions. To demonstrate the EEG volume conduction model, we will use [template](/template/electrode) electrodes. The template electrodes are not aligned with the individual MRI and head model, hence we will conclude with the alignment of the electrodes.
 
@@ -64,7 +64,7 @@ _Figure; Pipeline for creating a FEM model_
 Check that the homogenous transformation matrix in `mri_realigned` is the same as the one in `mri`. If so, that means that each voxel is at exactly the same position. If you misspecify the voxel indices of the fiducials or anatomical landmarks, they will be different.
 {% include markup/end %}
 
-## Reslicing
+### Reslicing
 
 A common issue with anatomical MRI data is that it is plotted [upside down](/faq/my_mri_is_upside_down_is_this_a_problem). This is not neccessarily a problem for the FEM model that we will make, as we know the position of each MRI voxel relative to the coordinate system, but it is a bit inconvenient in the plottting of MRI slices and quality control later in the pipeline.
 
@@ -77,6 +77,8 @@ The following flips the volume such that the anatomical volume approximately ali
     cfg = [];
     cfg.method = 'flip';
     mri_resliced = ft_volumereslice(cfg, mri_realigned);
+    
+    save mri_resliced mri_resliced
 
 If you would want to align it exactly with the axes and/or make the voxels isotropic, you could use the 'linear' method in **[ft_volumereslice](/reference/ft_volumereslice)**.
 
@@ -86,18 +88,13 @@ Following the reslicing, the MRI should be shown with the correct side up, the f
     cfg.method = 'ortho';
     ft_sourceplot(cfg, mri_resliced)
     
-{% include image src="/assets/img/tutorial/headmodel_eeg_bem/figureX.png" width="600" %}
+{% include image src="/assets/img/tutorial/headmodel_eeg_fem/figure2.png" width="600" %}
 
 _Figure; The MRI after assigning the desired coordinate system and reslicing_
 
-YOu should check that all parts of the head are present in the resliced images, including the nose, back of the head and the top of the head. If not, you need to redo the reslicing with a slightly modified vield of view.
+You should check that all parts of the head are present in the resliced images, including the nose, back of the head and the top of the head. If not, you need to redo the reslicing with a slightly modified vield of view.
 
-{% include image src="/assets/img/tutorial/headmodel_eeg_fem/figure2.png" width="250" %}
-{% include image src="/assets/img/tutorial/headmodel_eeg_fem/figure3.png" width="250" %}
-
-_Figure 3. MRI plotted before (left) and after reslicing (right)_
-
-## Segmentation
+### Segmentation
 
 In this step, the voxels of the anatomical MRI are segmented or classified using **[ft_volumesegment](/reference/ft_volumesegment)** into the three different tissue types: scalp, skull, csf (cerebro-spinal fluid), gray and white matter. You can read more about how the tissue-types are represented in the output of this function in this [FAQ](/faq/how_is_the_segmentation_defined). The resulting segmentation should be a binary representation of the 5 tissue types without overlap, i.e., each voxel belongs to exactly one tissue type.
 
@@ -107,7 +104,7 @@ Note that the segmentation is quite time consuming (~15mins) and if you want you
 
     cfg           = [];
     cfg.output    = {'gray', 'white', 'csf', 'skull', 'scalp'};
-    segmentedmri  = ft_volumesegment(cfg, mri);
+    segmentedmri  = ft_volumesegment(cfg, mri_resliced);
     
     save segmentedmri segmentedmri
 
@@ -139,51 +136,46 @@ Occasionally, the quality of the anatomical image is not sufficient to provide a
 For more information, you can consult this [frequently asked question](/faq/why_does_my_eegheadmodel_look_funny).
 {% include markup/end %}
 
-{% comment %}
-###################################################################
-# I made it up to here in revising the tutorial
-# The figures still need to be updated
-###################################################################
-{% endcomment %}  
+The function **[ft_sourceplot](/reference/ft_sourceplot)** can be used to plot the segmented tissues. To see all tissues in one image, we use **[ft_datatype_segmentation](/reference/utilities/ft_datatype_segmentation)** to convert the segmentation structure to an [indexed representation](/faq/how_is_the_segmentation_defined). Each tissue type has a different value and will be shown by a different color.
 
-The function **[ft_sourceplot](/reference/ft_sourceplot)** can be used to plot the segmented tissues. In order, to see all tissues in one image, **[ft_datatype_segmentation](/reference/utilities/ft_datatype_segmentation)** can convert the segmentation structure to an [indexed representation](/faq/how_is_the_segmentation_defined). Each tissue-types will be shown by a different color in the image.
-
-    seg_i = ft_datatype_segmentation(segmentedmri, 'segmentationstyle', 'indexed');
+    % convert from probabilistic/binary into indexed representation
+    segmentedmri_indexed = ft_datatype_segmentation(segmentedmri, 'segmentationstyle', 'indexed');
+    
+    % also add the anatomical mri
+    segmentedmri_indexed.anatomy = mri_resliced.anatomy;
 
     cfg              = [];
-    cfg.funparameter = 'seg';
-    cfg.funcolormap  = lines(6); % distinct color per tissue
+    cfg.anaparameter = 'anatomy';
+    cfg.funparameter = 'tissue';
+    cfg.funcolormap  = lines(6);              % distinct color per tissue + background
+    cfg.atlas        = segmentedmri_indexed;  % this is just like an anatomical atlas, see https://www.fieldtriptoolbox.org/template/atlas/
     cfg.location     = 'center';
-    cfg.atlas        = seg_i;    % the segmentation can also be used as atlas
-    ft_sourceplot(cfg, seg_i);
+    ft_sourceplot(cfg, segmentedmri_indexed);
 
-{% include image src="/assets/img/tutorial/headmodel_eeg_fem/figure4.png" width="450" %}
+{% include image src="/assets/img/tutorial/headmodel_eeg_fem/figure3.png" width="600" %}
 
-_Figure 4. Binary representations of scalp, skull tissues, gray and white matter, csf_
+_Figure. Binary representations of gray matter, white matter, csf, skull, and scalp_
 
-## Mesh
+### Meshing
 
-In this step, a geometrical description of the head is created by the **[ft_prepare_mesh](/reference/ft_prepare_mesh)** function. The output of this function is a hexahedral mesh (i.e., the points of the mesh are connected in such way that they create hexahedrons). Each hexahedron is assigned to one of the five tissue-types.
+The next step is to create a geometrical description of the head by the **[ft_prepare_mesh](/reference/ft_prepare_mesh)** function. At the moment FieldTrip-SIMBIO only supports hexahedrons. The hexahedral mesh elements consist of 8 vertices at the corners that are connected like cubes. Each hexahedron is assigned to one of the five tissue-types.
 
-To improve the geometrical properties of the mesh (i.e., its approximation of the head shape), a node-shift approach can be applied which shifts boundary vertices in the direction of those hexahedrons that represent the minority around it (see figure). The magnitude of the shift is controlled by a shift parameter which can range from 0 (no shift) to 0.49 (maximum shift). However, choosing the shift parameter too large can result in degenerated hexahedrons. For starters we recommend a shift parameter of 0.3.
-
-{% include image src="/assets/img/tutorial/headmodel_eeg_fem/figure5.png" width="300" %}
-{% include image src="/assets/img/tutorial/headmodel_eeg_fem/figure6.png" width="300" %}
-
-_Figure 5. Comparison of an unshifted mesh(upper) and shifted mesh(lower). Visualization done with ParaView._
+To improve how the mesh approximates the head shape, a node-shift can be applied. This shifts vertices at the boundaries in the direction of those hexahedrons that represent the minority around it (see figure). The magnitude of the shift is controlled by a shift parameter which can range from 0 (no shift) to 0.3.
 
     cfg        = [];
     cfg.shift  = 0.3;
     cfg.method = 'hexahedral';
-    mesh = ft_prepare_mesh(cfg,segmentedmri);
+    mesh = ft_prepare_mesh(cfg, segmentedmri);
 
     disp(mesh)
-                pnt: [4354427x3 double]
-                hex: [4253761x8 double]
-             tissue: [4253761x1 double]
-        tissuelabel: {'gray'  'white'  'csf'  'skull'  'scalp'}
+                pos: [2372249x3 double]
+                hex: [2301983x8 double]
+             tissue: [2301983x1 double]
+        tissuelabel: {'csf'  'gray'  'scalp'  'skull'  'white'}
                unit: 'mm'
-
+           coordsys: 'ctf'
+                cfg: [1x1 struct]
+                
 The mesh contains the following field
 
 - **pos** : The position of the vertices.
@@ -192,187 +184,187 @@ The mesh contains the following field
 - **tissue**: Each hexahedron (in **hex**) is indexed with a value from 1...N. These values represent the tissue-types and are assigned to each type according to the order in **tissuelabel**.
 - **tissuelabel**: Names of tissue-types.
 
-At the moment FieldTrip only supports hexahedrons for FEM modeling.
+You can plot the anatomical MRI, the segmentation and the hexahedral mesh together in one figure. Note that you will have to zoom in quite a bit to see the individual hexahedral elements, as there are so many.
 
-## Head model
+    cfg = [];
+    cfg.funparameter = 'tissue';
+    cfg.anaparameter = 'anatomy';
+    cfg.atlas = segmentedmri_indexed; % this is just like an anatomical atlas, see https://www.fieldtriptoolbox.org/template/atlas/
+    cfg.funcolormap = lines(6);
+    cfg.method = 'ortho';
+    cfg.intersectmesh = mesh;
+    ft_sourceplot(cfg, segmentedmri_indexed)
 
-Gray and white matter, csf, skull and skin has been differentiated in the geometrical description of the head. Now, we will create the volume conduction model. We will specify `cfg.method='simbio'` in **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)**. This methods also requires to specify the conductivities for each tissue-types. The headmodel can also be downloaded from our [download server](https://download.fieldtriptoolbox.org/tutorial/headmodel_eeg_fem/).
+{% include image src="/assets/img/tutorial/headmodel_eeg_fem/figure4.png" width="600" %}
+{% include image src="/assets/img/tutorial/headmodel_eeg_fem/figure5.png" width="600" %}
+
+_Figure. Comparison of a shifted mesh (upper) and unshifted mesh (lower)._
+
+The visualization can also be done using [Seg3D](/getting_started/seg3d) or [ParaView](/getting_started/paraview). With Seg3D you can make modifications to the segmentation.
+
+### Compute the FEM head model
+
+Now that gray matter, white matter, csf, skull and skin has been modeled as a mesh, we will create the volume conduction model. We will specify `cfg.method='simbio'` in **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)**. This methods also requires to specify the conductivities for each tissue-types. The headmodel can also be downloaded from our [download server](https://download.fieldtriptoolbox.org/tutorial/headmodel_eeg_fem/).
 
     cfg        = [];
-    cfg.method ='simbio';
-    cfg.conductivity = [0.33 0.14 1.79 0.01 0.43];   % the order follows mesh.tissuelabel
+    cfg.method = 'simbio';
+    cfg.conductivity = [1.79 0.33 0.43 0.01 0.14];   % the order follows mesh.tissuelabel, which is 'csf', 'gray', 'scalp', 'skull', 'white'
     headmodel  = ft_prepare_headmodel(cfg, mesh);
 
     disp(headmodel)
-                pos: [4354427x3 double]
-                hex: [4253761x8 double]
-             tissue: [4253761x1 double]
-               cond: [0.33 0.14 1.79 0.01 0.43]
-        tissuelabel: {'gray'  'white'  'csf'  'skull'  'scalp'}
-              stiff: [4354427x4354427 double]
+                pos: [2372249x3 double]
+                hex: [2301983x8 double]
+             tissue: [2301983x1 double]
+               cond: [1.79 0.33 0.43 0.01 0.14]
+        tissuelabel: {'csf'  'gray'  'scalp'  'skull'  'white'}
+              stiff: [2372249x2372249 double]
                type: 'simbio'
                unit: 'mm'
                 cfg: [1x1 struct]
 
-The headmodel data structure contains the same information in the **pos** (**pnt** in mesh), **hex**, **tissue** and **tissulabel** fields than the mesh we created earlier. And it has also new fields:
+The headmodel data structure contains the same information in the **pos**, **hex**, **tissue** and **tissulabel** fields than the mesh we created earlier. And it has also new fields:
 
 - **cond**: conductivity of each tissue-type (in order of tissuelabel)
 - **stiff**: matrix
 - **type**: describes the method that was used to create the headmodel.
-- **unit**: the unit of measurement of the geometrical data in the pos field
-- **cfg**: configuration of the function that was used to create vol
 
 Note that the unit of measurement used in the geometrical description of headmodel is in 'mm'. The EEG sensors should be also defined in 'mm'. The units of all type of geometrical information should be the same when a leadfield is computed for source-reconstruction.
 
-## Visualization
+### Visualization
 
 The hexahedral mesh is a geometrical description of the head. It is built up from hexahedrons. For visualization, it is possible to use the **[ft_plot_mesh](/reference/plotting/ft_plot_mesh)** function which is generally used for plotting any type of meshes in FieldTrip. Because of the large number of points in a mesh, it is advised to use the 'surfaceonly' option. In this case, the function will plot hexagonal surfaces of those hexahedrons which create the outside surface of the head.
 
-    ft_plot_mesh(mesh, 'surfaceonly', 'yes');
+    ft_plot_mesh(mesh, 'edgecolor','none', 'facecolor', 'skin', 'facealpha', 0.7);
+    ft_plot_axes(mesh)
+    alpha 1
+    material default
+    camlight
 
-{% include image src="/assets/img/tutorial/headmodel_eeg_fem/figure7.png" width="600" %}
+{% include image src="/assets/img/tutorial/headmodel_eeg_fem/figure6.png" width="600" %}
 
-_Figure 6. Plot of the FEM mesh_
+_Figure. Plot of the FEM mesh_
 
-Alternatively, you can write the mesh into another format with **[ft_write_headshape](/reference/fileio/ft_write_headshape)** and use an external (free) software [ParaView](http://www.paraview.org) or [MeshLab](http://www.meshlab.org) for visualization.
+This only shows the outside of the scalp. To see the other tissues, you can split the mesh into the different tissue types and make one mesh for each.
 
-## Align the electrodes
+    % make a copy for each tissue type
+    % after splitting we don't need the tissue and tissuelabel any more
+    mesh_csf   = rmfield(mesh, {'tissue', 'tissuelabel'});
+    mesh_gray  = rmfield(mesh, {'tissue', 'tissuelabel'});
+    mesh_scalp = rmfield(mesh, {'tissue', 'tissuelabel'});
+    mesh_skull = rmfield(mesh, {'tissue', 'tissuelabel'});
+    mesh_white = rmfield(mesh, {'tissue', 'tissuelabel'});
 
-The head model is now expressed in the same head coordinates as the anatomical mri (i.e., in the [CTF coordinate system](/faq/coordsys#details_of_the_ctf_coordinate_system)). Consequently, we need to express the electrode positions in the same coordinate system. First, we plot the outermost layer of the head model together with the electrodes to check if the alignment is necessary.
+    % only keep the hexaheders for the corresponding tissue type
+    mesh_csf.hex   = mesh.hex(mesh.tissue==1,:);
+    mesh_gray.hex  = mesh.hex(mesh.tissue==2,:);
+    mesh_scalp.hex = mesh.hex(mesh.tissue==3,:);
+    mesh_skull.hex = mesh.hex(mesh.tissue==4,:);
+    mesh_white.hex = mesh.hex(mesh.tissue==5,:);
 
-Since for this subject we have an MRI, but no EEG electrodes, we will use a template EEG electrode set which you can find in the fieldtrip/template/electrode/standard_1020.elc file.
+Alternatively, you can write the mesh to a file on disk with **[ft_write_headshape](/reference/fileio/ft_write_headshape)** and use [ParaView](/getting_started/paraview) for visualization.
+
+### Align EEG electrodes
+
+The procedure to align the electrodes is basically the same as for a BEM head model which you can read in much more detail [here](/tutorial/headmodel_eeg_bem). Very shortly: you can do the following to align it to the FEM mesh.
 
     % you may need to specify the full path to the file
     elec = ft_read_sens('standard_1020.elc');
 
     disp(elec)
         chanpos: [97x3 double]
+       chantype: {97x1 cell}
+       chanunit: {97x1 cell}
         elecpos: [97x3 double]
           label: {97x1 cell}
            type: 'eeg1010'
            unit: 'mm'
 
-are described in the **chanpos** and **elecpos** field. The **label** field contains the name of the channels.
+    cfg = [];
+    cfg.method = 'interactive';
+    cfg.headshape = mesh; % we can specify the hexahedral FEM mesh as the headshape
+    elec_realigned = ft_electroderealign(cfg, elec)
+
+    save elec_realigned elec_realigned
+
+Since rotations and translations do not "commute", i.e. the order in which you execute the rotation matters, it can be confusing to specify all rotations and translations in one go. Instead, you can use the "apply" button to do the transformations stepwise.
+
+In this situation we need
+
+- rotate -90 around z; apply
+- translate 35 along x and 35 along z; apply
+- scale 0.98 along x, 0.90 along y, and 0.80 along z; apply
+- translate 25 along z; apply
+- rotate 11 degrees around y, translate -5 along x; apply
+- quit
+
+{% include image src="/assets/img/tutorial/headmodel_eeg_fem/figure7.png" width="600" %}
+
+_Figure; Use the GUI to align the electrodes._
+
+Using a final plot that includes the electrode labels, we can check that it all matches.
 
     figure
+    ft_plot_mesh(scalp, 'edgecolor','none', 'facecolor', 'skin', 'facealpha', 0.7);
     hold on
-    ft_plot_mesh(mesh, 'surfaceonly', 'yes', 'vertexcolor', 'none', 'edgecolor', 'none', 'facecolor', [0.5 0.5 0.5], 'face alpha', 0.7)
+    ft_plot_sens(elec_realigned, 'elecshape', 'sphere', 'label', 'on');
     camlight
 
-    ft_plot_sens(elec);
+{% include image src="/assets/img/tutorial/headmodel_eeg_fem/figure8.png" width="600" %}
 
-{% include image src="/assets/img/tutorial/headmodel_eeg_fem/figure8.png" width="500" %}
+_Figure; Realigned electrodes plotted together with the scalp surface._
 
-_Figure 7. FEM mesh surface plotted with electrode-positions (not aligned)._
+This electrode structure can be used later when the leadfield is computed with **[ft_prepare_leadfield](/reference/ft_prepare_leadfield)** and **[ft_sourceanalysis](/reference/ft_sourceanalysis)**, or with **[ft_dipolefitting](/reference/ft_dipolefitting)**. During the computation of the leadfield, the electrodes will be projected exactly onto the scalp surface, so don't worry if the fit is not yet 100% perfect.
 
-The figure shows that the channels are not aligned with the surface of the head. In FieldTrip, electrode and channel positions are [differentiated](/faq/how_are_electrodes_magnetometers_or_gradiometers_described), but
-the positions of the channels and electrodes should be the same for the alignment. Therefore, we will use electrodes and channels interchangeably.
+### Construct source model
 
-The electrodes can be aligned in two ways
+With single-shell and BEM volume conduction models you can place the dipoles of the source model anywhere in the brain compartment. With more detailed FEM models, you want the dipoles only in the grey matter. Furthermore, the FEM computations will be more accurate if the dipoles are placed at the centroids of the voume elements.
 
-- if there are anatomical landmarks which positions are known in the anatomical mri and also relative to the electrodes, we can automatically align the electrode positions with a few lines of script or
+The following starts with a 8 mm regular grid. The dipole positions are subsequently moved to the nearest centroid.
 
-- if the exact position of anatomical landmarks are not known relative to the electrodes, we visualize the surface of the head and the electrodes on the same image, and we transform, rotate and scale the electrodes until they fit to the head surface according to our visual judgement.
+    cfg = [];
+    cfg.method = 'basedonresolution';
+    cfg.resolution = 8; % in mm
+    cfg.unit = 'mm';
+    cfg.headmodel = mesh;
+    cfg.headmodel.type = 'simbio';
+    cfg.movetocentroids = 'yes';
+    sourcemodel = ft_prepare_sourcemodel(cfg)
 
-Now, we will show how to do the alignment in both ways
-
-### Automatic alignment
-
-First, we will align the electrodes automatically to the anatomical landmarks (to the fiducials: nasion, [left and right Pre-Auricular points](/faq/how_are_the_lpa_and_rpa_points_defined)) of the anatomical mri. The head model was created from the same mri, therefore the electrodes will also be aligned to the head-model.
-
-For the automatic alignment, we need to know the following:
-
-- electrode positions
-- position of fiducial landmarks relative to the electrodes
-- position of fiducial landmarks in the anatomical mri
-
-In the template set of electrodes, the first three labels are: 'Nz', 'LPA' and 'RPA'. These labels show that the first three rows of the **elec.chanpos** field defines the position of the nasion, left and right PA (the landmarks of the CTF ) in _"electrode" coordinates_. We can use this information for the automatic alignment. But we also need to know the position of the same points in the anatomical mri. We use an anatomical mri which has been already aligned to these points, therefore we can find these coordinates in the header information.
-
-    disp(mri_orig.hdr.fiducial.mri)
-        nas: [87 60 116]
-        lpa: [29 145 155]
-        rpa: [144 142 158]
-
-{% include markup/warning %}
-If you do not have the position of the anatomical landmarks in your volume, you can use the **[ft_sourceplot](/reference/ft_sourceplot)** function to get those positions.
-{% include markup/end %}
-
-First, we convert the fiducial positions from voxel into CTF headcoordinate system using the [transformation matrix](/faq/what_is_the_plotting_convention_for_anatomical_mris) and the **[ft_warp_apply](/reference/utilities/ft_warp_apply)** function.
-
-    nas = mri_orig.hdr.fiducial.mri.nas;
-    lpa = mri_orig.hdr.fiducial.mri.lpa;
-    rpa = mri_orig.hdr.fiducial.mri.rpa;
-
-    vox2head = mri_orig.transform;
-
-    nas = ft_warp_apply(vox2head, nas, 'homogenous');
-    lpa = ft_warp_apply(vox2head, lpa, 'homogenous');
-    rpa = ft_warp_apply(vox2head, rpa, 'homogenous');
-
-Then, we determine the translation and rotation that is needed to get the position of the fiducials ()'Nz', 'LPA', 'RPA') in the electrode structure to their counterparts ('nas', 'lpa', 'rpa') in the CTF head coordinate system that we obtained from the anatomical MRI.
-
-    % create a structure similar to a template set of electrodes
-    fid.pos           = [nas; lpa; rpa];       % CTF head coordinates of fiducials
-    fid.label         = {'Nz', 'LPA', 'RPA'};  % use the same labels as those in elec
-    fid.unit          = 'mm';                  % use the same units as those in mri
-
-    % alignment
-    cfg               = [];
-    cfg.method        = 'fiducial';
-    cfg.elec          = elec;                  % the electrodes we want to align
-    cfg.template      = fid;                   % the template we want to align to
-    cfg.fiducial      = {'Nz', 'LPA', 'RPA'};  % labels of fiducials in fid and in elec
-    elec_aligned      = ft_electroderealign(cfg);
-
-We can check the alignment by plotting together the scalp surface with the electrodes.
+We can plot the complete sourcemodel and compare it to only the sources inside the grey matter. This makes use of the MATLAB [linkprop](https://nl.mathworks.com/help/matlab/ref/linkprop.html) command to keep the two subplots in sync.
 
     figure
-    hold on
-    ft_plot_mesh(mesh, 'surfaceonly', 'yes', 'vertexcolor', 'none', 'edgecolor', 'none', 'facecolor', [0.5 0.5 0.5], 'facealpha', 0.5)
-    camlight
-    ft_plot_sens(elec_aligned);
+    ax1 = subplot(1,2,1); ft_plot_mesh(sourcemodel); ft_plot_axes(sourcemodel)
+    ax2 = subplot(1,2,2); ft_plot_mesh(sourcemodel.pos(sourcemodel.inside,:))
 
-{% include image src="/assets/img/tutorial/headmodel_eeg_fem/figure9.png" width="500" %}
+    hlink = linkprop([ax1, ax2], {'CameraPosition', 'CameraUpVector', 'xLim', 'YLim', 'ZLim'});
+    rotate3d on
 
-_Figure 8. Electrodes plotted together with the head surface after automatic alignement._
+{% include image src="/assets/img/tutorial/headmodel_eeg_fem/figure9.png" width="600" %}
 
-The alignment is much better, but not perfect. Some of the electrodes are below the head surface in the front, while the electrodes in the back do not fit tightly to the head. The remaining misalignment is due to the use of different conventions to [define the fiducials](/faq/how_are_the_lpa_and_rpa_points_defined). We can improve the alignment of the electrodes interactively.
+_Figure; All source positions (left) and those inside the grey matter (right)._
 
-### Interactive alignment
+There are many dipoles at positions where we will not compute the leadfields anyway, such as the skull and lower parts of the head. We can prune the sourcemodel and select only the dipoles inside grey matter.
 
-    cfg          = [];
-    cfg.method   = 'interactive';
-    cfg.elec     = elec_aligned;
-    cfg.headshape = headmodel;
-    elec_aligned = ft_electroderealign(cfg);
+    sourcemodel.pos    = sourcemodel.pos(sourcemodel.inside,:)
+    sourcemodel.tissue = sourcemodel.tissue(sourcemodel.inside,:); % also update the tissue indices
+    sourcemodel.inside = sourcemodel.inside(sourcemodel.inside,:); % and update the inside vector itself
 
-    save elec_aligned elec_aligned;
+The construction of the sourcemodel above takes quite some time as many dipoles need to be compared with many centroids. We can speed it up by starting with a smaller regular grid of dipoles by explicitly specifying the initial regular grid. This requires knowing the (approximate) boundaries of the brain.
 
-Here, we only need to use translation. We can shift about 15 mm along the x-axis and -10 mm along the y-axis. Note that in the CTF head coordinate system the x-axis is towards the nose.
-
-{% include image src="/assets/img/tutorial/headmodel_eeg_fem/figure10.png" width="500" %}
-
-_Figure 9. Aligned electrodes plotted together with the head surface_
-
-## Exercise 1
-
-{% include markup/info %}
-Create a head model with method `concentricspheres` that you fit on scalp, skull and brain surfaces, i.e., using the already constructed mesh.
-
-Plot the head model in the same figure with the brain surface and scalp. Check the help of **[ft_plot_headmodel](/reference/plotting/ft_plot_headmodel)** for visualization options (e.g., color, transparency) which help to see the spheres and the brain surface together.
-
-What is the difference between this head model and the FEM?
-{% include markup/end %}
-
-## Exercise 2
-
-{% include markup/info %}
-In exercise 1, you created a head model with method `concentricspheres`. How is its geometrical description defined? What is the difference between the geometrical description of the concentric spheres model and BEM model?
-{% include markup/end %}
-
+    cfg = [];
+    cfg.method = 'basedongrid';
+    cfg.xgrid = -80:8:120;  % specified in multiples of 8, so that [0 0 0] is part of the grid
+    cfg.ygrid = -80:8:80;
+    cfg.zgrid = -24:8:120;
+    cfg.unit = 'mm';
+    cfg.headmodel = mesh;
+    cfg.headmodel.type = 'simbio';
+    cfg.movetocentroids = 'yes';
+    sourcemodel = ft_prepare_sourcemodel(cfg)
+       
 ## Summary and suggested further reading
 
-This tutorial explained how to build a volume conduction model of the head using a single subject anatomical MRI and a finite element method (FEM).
+This tutorial explained how to build a volume conduction model of the head using a single subject anatomical MRI and a finite element method (FEM) using the FieldTrip-SIMBIO pipeline.
 
 You can read more about specific source-reconstruction methods in the [Localizing oscillatory sources using beamformer techniques](/tutorial/beamformer) and in the [Source reconstruction of event-related fields using minimum-norm estimate](/tutorial/minimumnormestimate) tutorials.
 
