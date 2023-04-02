@@ -67,6 +67,12 @@
 - name:  Why does my EEG headmodel look funny?
   link:  /faq/why_does_my_eegheadmodel_look_funny
 
+- name:  Getting started with MeshLab
+  link:  /getting_started/meshlab
+
+- name:  Getting started with ParaView
+  link:  /getting_started/paraview
+
 - name:  Getting started with Seg3D
   link:  /getting_started/seg3d
 
