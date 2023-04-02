@@ -7,7 +7,7 @@ tags: [tutorial, eeg, source, headmodel, mri, plotting, meg-language]
 
 ## Introduction
 
-This tutorial demonstrates how to construct a Boundary Element Method (BEM) volume conduction model of the head, also known as head model, based on an individual subject's anatomical MRI. For didactic resons we will use the anatomical MRI corresponding to the data that was also analyzed in other tutorials. The anatomical MRI data is included in the [Subject01.zip](https://download.fieldtriptoolbox.org/tutorial/Subject01.zip) MEG dataset.
+This tutorial demonstrates how to construct a Boundary Element Method (BEM) volume conduction model of the head, also known as head model, based on an individual subject's anatomical MRI. For didactic resons we will use the anatomical MRI corresponding to the data that was also analyzed in other tutorials. The original anatomical MRI data, along with the (intermediate) results of this tutorial, can be downloaded from [out download server](https://download.fieldtriptoolbox.org/tutorial/headmodel_eeg_bem/).
 
 In reality we did _not_ record EEG data for this subject, nor do we have recorded electrode positions. To demonstrate the EEG volume conduction model, we will use [template](/template/electrode) electrodes. The template electrodes are not aligned with the individual MRI and head model, hence we will conclude with the alignment of the electrodes.
 
@@ -374,7 +374,6 @@ In this situation we need
 
 _Figure; Use the GUI to align the electrodes_
 
-
     figure
     ft_plot_mesh(scalp, 'edgecolor','none', 'facecolor', 'skin', 'facealpha', 0.7);
     hold on
@@ -476,7 +475,7 @@ In exercise 2, you created a head model with method 'concentricspheres'. How is 
 
 ## Summary and further reading
 
-In this tutorial, it was explained how to build a volume conduction model of the head using a single subject anatomical MRI and the boundary element method (BEM) developed by Oostendorp and van Oosterom (1989). In the exercises, we compared the BEM model to a concentric spheres model that was fitted on the scalp, skull and brain surfaces.
+This tutorial explained how to build a volume conduction model of the head using a single subject anatomical MRI and the boundary element method (BEM) developed by Oostendorp and van Oosterom (1989). In the exercises, we also compared the BEM model to a concentric spheres model that was fitted on the scalp, skull and brain surfaces.
 
 You can read more about specific source-reconstruction methods in the [Localizing oscillatory sources using beamformer techniques](/tutorial/beamformer) and in the [Source reconstruction of event-related fields using minimum-norm estimate](/tutorial/minimumnormestimate) tutorials.
 
