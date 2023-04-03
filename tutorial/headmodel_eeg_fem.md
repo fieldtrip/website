@@ -166,6 +166,8 @@ To improve how the mesh approximates the head shape, a node-shift can be applied
     cfg.shift  = 0.3;
     cfg.method = 'hexahedral';
     mesh = ft_prepare_mesh(cfg, segmentedmri);
+    
+    save mesh mesh
 
     disp(mesh)
                 pos: [2372249x3 double]
@@ -210,6 +212,8 @@ Now that gray matter, white matter, csf, skull and skin has been modeled as a me
     cfg.method = 'simbio';
     cfg.conductivity = [1.79 0.33 0.43 0.01 0.14];   % the order follows mesh.tissuelabel, which is 'csf', 'gray', 'scalp', 'skull', 'white'
     headmodel  = ft_prepare_headmodel(cfg, mesh);
+    
+    save headmodel headmodel
 
     disp(headmodel)
                 pos: [2372249x3 double]
@@ -269,7 +273,7 @@ The procedure to align the electrodes is basically the same as for a BEM head mo
 
     % you may need to specify the full path to the file
     elec = ft_read_sens('standard_1020.elc');
-
+    
     disp(elec)
         chanpos: [97x3 double]
        chantype: {97x1 cell}
@@ -329,6 +333,8 @@ The following starts with a 8 mm regular grid. The dipole positions are subseque
     cfg.headmodel.type = 'simbio';
     cfg.movetocentroids = 'yes';
     sourcemodel = ft_prepare_sourcemodel(cfg)
+    
+    save sourcemodel sourcemodel
 
 We can plot the complete sourcemodel and compare it to only the sources inside the grey matter. This makes use of the MATLAB [linkprop](https://nl.mathworks.com/help/matlab/ref/linkprop.html) command to keep the two subplots in sync.
 
