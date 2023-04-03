@@ -304,7 +304,7 @@ _Figure; Use the GUI to align the electrodes._
 Using a final plot that includes the electrode labels, we can check that it all matches.
 
     figure
-    ft_plot_mesh(scalp, 'edgecolor','none', 'facecolor', 'skin', 'facealpha', 0.7);
+    ft_plot_headmodel(headmodel, 'facecolor', 'skin', 'facealpha', 0.7);
     hold on
     ft_plot_sens(elec_realigned, 'elecshape', 'sphere', 'label', 'on');
     camlight

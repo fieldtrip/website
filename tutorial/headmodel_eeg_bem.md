@@ -463,7 +463,7 @@ Plot the head model using **[ft_plot_headmodel](/reference/plotting/ft_plot_head
 
 What is the difference between the spherical and the BEM model?
 
-Note that the scalp is unrealistically thick compared to the skull; this is because we fittet it to the whole head surface, all the way up to the neck. The lower part of the head - as well as the lower part of the brain and skull - are not very spherical. Therefore it is recommended to remove them from the meshes prior to fitting the spheres. You can use **[ft_defacemesh](/reference/ft_defacemesh)** to remove part of the meshes, usually the face, but here you would use it to remove the bottom half of the scalp, skull and brain surfaces.
+Note that the scalp is unrealistically thick compared to the skull; this is because we fitted it to the whole head surface, all the way up to the neck. The lower part of the head - as well as the lower part of the brain and skull - are not very spherical. Therefore it is recommended to remove them from the meshes prior to fitting the spheres. You can use **[ft_defacemesh](/reference/ft_defacemesh)** to remove part of the meshes, usually the face, but here you would use it to remove the bottom half of the scalp, skull and brain surfaces.
 
 {% include markup/end %}
 
