@@ -54,19 +54,14 @@ The median nerve of the subject's right wrist was stimulated using square electr
 The EEG system records event-triggers in separate channels. These channels are recorded simultaneously with the data channels, and at the same sampling rate. The onset can therefore be precisely timed with respect to the data. The following trigger codes can be used for the analysis we will be doing during the worksho
 
 - Onset of standard stimulus: 2
-
 - Name of standard stimulus : rightArm
 
 #### Data
 
 - Data was sampled at 1200Hz.
-
 - 74 channel EEG. The reference was placed on the FCz channel.
-
 - Electrocardiogram (ECG) was recorded as a bipolar recording from the collarbones.
-
 - Horizontal EOG(1) electrodes were placed just next to the left and right eye. Vertical EOG(2) were placed above and below the left eye.
-
 - 10 minutes of recording (5 minutes with normal polarity of the electric pulses and 5 with inverse polarity of the electric pulses)
 
 ## Preprocessing and averaging EEG & MEG
@@ -76,15 +71,10 @@ The EEG system records event-triggers in separate channels. These channels are r
 The following steps are taken in the EEG section of the tutorial:
 
 - Define segments of data of interest (the trial definition) using **[ft_definetrial](/reference/ft_definetrial)**
-
 - Read the data into Matlab using **[ft_preprocessing](/reference/ft_preprocessing)**
-
 - Clean the data in a semi-automatic way using **[ft_rejectvisual](/reference/ft_rejectvisual)**
-
 - Compute event-related fields using **[ft_timelockanalysis](/reference/ft_timelockanalysis)**
-
 - Compute global mean field power using **[ft_globalmeanfield](/reference/ft_globalmeanfield)**
-
 - Visualize the results using **[ft_topoplotER](/reference/ft_topoplotER)**, and **[ft_multiplotER](/reference/ft_multiplotER)**
 
 ## Reading and preprocessing the interesting trials
@@ -117,20 +107,19 @@ We start with the trial definition using **[ft_definetrial](/reference/ft_define
 We will filter the data using **[ft_preprocessing](/reference/ft_preprocessing)** around the frequency spectrum of interest and eliminate the power line noise before calculating the SEP/SEFs with **[ft_timelockanalysis](/reference/ft_timelockanalysis)**.
 
     cfg                = [];
-    cfg.hpfilter       = 'yes';        % enable high-pass filtering
-    cfg.lpfilter       = 'yes';        % enable low-pass filtering
-    cfg.hpfreq         = 20;           % set up the frequency for high-pass filter
-    cfg.lpfreq         = 250;          % set up the frequency for low-pass filter
-    cfg.dftfilter      = 'yes';        % enable notch filtering to eliminate power line noise
-    cfg.dftfreq        = [50 100 150]; % set up the frequencies for notch filtering
+    cfg.hpfilter       = 'yes';           % enable high-pass filtering
+    cfg.lpfilter       = 'yes';           % enable low-pass filtering
+    cfg.hpfreq         = 20;              % set up the frequency for high-pass filter
+    cfg.lpfreq         = 250;             % set up the frequency for low-pass filter
+    cfg.dftfilter      = 'yes';           % enable notch filtering to eliminate power line noise
+    cfg.dftfreq        = [50 100 150];    % set up the frequencies for notch filtering
     cfg.baselinewindow = [-0.1 -0.02];    % define the baseline window
-    data_eeg           = ft_preprocessing(cfg,data_eeg);
-    data_meg           = ft_preprocessing(cfg,data_meg);
+    data_eeg           = ft_preprocessing(cfg, data_eeg);
+    data_meg           = ft_preprocessing(cfg, data_meg);
 
-The output of data is the structure data which has the following field
+The output of data is the structure data which has the following fields:
 
     data_eeg =
-
              hdr: [1x1 struct]
             elec: [1x1 struct]
          fsample: 1200
@@ -141,7 +130,6 @@ The output of data is the structure data which has the following field
              cfg: [1x1 struct]
 
     data_meg =
-
              hdr: [1x1 struct]
            trial: {1x1198 cell}
             time: {1x1198 cell}
@@ -164,7 +152,6 @@ We will use **[ft_rejectartifact](/reference/ft_rejectartifact)** to clean the d
     cfg.method = 'summary'; % use by default summary method
 
     data_eeg       = ft_rejectvisual(cfg,data_eeg);
-
     data_meg       = ft_rejectvisual(cfg,data_meg);
 
 {% include image src="/assets/img/workshop/ohbm2018/preprocessing/artifactrejection.png" width="600" %}
@@ -206,13 +193,14 @@ Don't forget to save the time locked data.
 Global Mean Field Power (GMFP) is a measure first introduced by [Lehmann and Skandries (1979)](<http://dx.doi.org/10.1016/0013-4694(80)90419-8>), used by, for example, [Esser et al. (2006)](http://dx.doi.org/10.1016/j.brainresbull.2005.11.003) as a measure to characterize global EEG activity.
 
 GMFP can be calculated using the following formula (from [Esser et al. (2006)](http://dx.doi.org/10.1016/j.brainresbull.2005.11.003))
+
 {% include image src="/assets/img/workshop/ohbm2018/preprocessing/gmfp.png" %}
 
-where t is time, V is the voltage at channel i and K is the number of channels.
+where `t` is time, `V` is the voltage at channel `i` and `K` is the number of channels.
 
 FieldTrip has a built-in function to calculate the GMFP; [ft_globalmeanfield](/reference/ft_globalmeanfield). This function requires timelocked data as input. We will use similar preprocessing as applied in [Esser et al. (2006)](http://dx.doi.org/10.1016/j.brainresbull.2005.11.003).
 
-    %global mean field power calculation for visualization purposes
+    % global mean field power calculation for visualization purposes
     cfg = [];
     cfg.method = 'amplitude';
     EEG_gmfp = ft_globalmeanfield(cfg, EEG_avg);
@@ -222,12 +210,12 @@ FieldTrip has a built-in function to calculate the GMFP; [ft_globalmeanfield](/r
 
 Using the plot functions **[ft_topoplotER](/reference/ft_topoplotER)** and **[ft_multiplotER](/reference/ft_multiplotER)** you can plot the average of the trials. You can find information about plotting also in the [Plotting data at the channel and source level](/tutorial/plotting) tutorial. Furthermore, we use the below script to visualize single trial with global mean field power and we find the time of interest and we save it together with the EEG_avg.
 
-    figure;
+    figure
 
     pol = -1;     % correct polarity
     scale = 10^6; % scale for eeg data micro volts
 
-    signal_EEG = scale*pol*EEG_avg.avg; % add single trials in a new value
+    signal_EEG = scale * pol * EEG_avg.avg; % add single trials in a new value
 
     % plot single trial together with global mean field power
     h1 = plot(EEG_avg.time,signal_EEG,'color',[0,0,0.5]);
@@ -238,12 +226,12 @@ Using the plot functions **[ft_topoplotER](/reference/ft_topoplotER)** and **[ft
 
 _Figure 2: Representation of single trial (blue) and the global mean field power of EEG (red)._
 
-    figure;
+    figure
 
     pol = -1;     % correct polarity
     scale = 10^6; % scale for eeg data micro volts
 
-    signal_MEG = scale*pol*MEG_avg.avg; % add single trials in a new value
+    signal_MEG = scale * pol * MEG_avg.avg; % add single trials in a new value
 
     % plot single trial together with global mean field power
     h1 = plot(MEG_avg.time,signal_MEG,'color',[0,0,0.5]);
@@ -275,7 +263,7 @@ Use **[ft_multiplotER](/reference/ft_multiplotER)** to plot all sensors in one f
     cfg.ylim     = [-5e-6 5e-6];
     cfg.xlim     = [-0.1 0.2];
 
-    figure;
+    figure
     ft_multiplotER(cfg, EEG_avg);
 
     set(gcf, 'Position',[1 1 1200 800])
@@ -306,7 +294,7 @@ Use **[ft_multiplotER](/reference/ft_multiplotER)** to plot all sensors in one f
     cfg.ylim     = [-1e-13 1e-13];
     cfg.xlim     = [-0.1 0.2];
 
-    figure;
+    figure
     ft_multiplotER(cfg, MEG_avg);
 
     set(gcf, 'Position',[1 1 1200 800])
@@ -326,7 +314,7 @@ Use **[ft_topoplotER](/reference/ft_topoplotER)** to plot the topographic distri
     cfg.layout     = 'elec1010.lay';
     cfg.fontsize   = 14;
 
-    figure;
+    figure
     ft_topoplotER(cfg, EEG_avg);
 
     set(gcf, 'Position',[1 1 1200 800])
@@ -346,7 +334,7 @@ Use **[ft_topoplotER](/reference/ft_topoplotER)** to plot the topographic distri
     cfg.layout     = 'CTF275.lay';
     cfg.fontsize   = 14;
 
-    figure;
+    figure
     ft_topoplotER(cfg, MEG_avg);
 
     set(gcf, 'Position',[1 1 1200 800])

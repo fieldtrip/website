@@ -39,7 +39,7 @@ Besides Fieldtrip, other external software is used in the workflow, e.g., FEniCS
 {% include image src="/assets/img/development/project/femfuns/schema_doll_embedded.png" width="500" %}
 
 ## Running a simulation with FieldTrip and FEMfuns combined
-The following section illustrates an example where the FEMfuns pipeline is embedded in FieldTrip. The geometry, electrodes and source-model are created in FieldTrip. These are used in FEMfuns to calculate leadfields by means of FEM with optional properties such as an electrode surface conductance and stimulating electrodes. Here, we present examples both in a simple sphere model and an MRI-based realistic head model.
+The following section illustrates an example where the FEMfuns pipeline is embedded in FieldTrip. The geometry, electrodes and sourcemodel are created in FieldTrip. These are used in FEMfuns to calculate leadfields by means of FEM with optional properties such as an electrode surface conductance and stimulating electrodes. Here, we present examples both in a simple sphere model and an MRI-based realistic head model.
 
 ### Setting-up
 The instructions to set up FEMfuns can be found on the [Github page](https://github.com/Donders-Institute/FEMfuns).

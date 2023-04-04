@@ -1,10 +1,10 @@
 ---
-title: Source-reconstruction using two dipoles
+title: source reconstruction using two dipoles
 ---
 
 {% include /shared/development/warning.md %}
 
-## Source-reconstruction using two dipoles
+## source reconstruction using two dipoles
 
 ## Description
 

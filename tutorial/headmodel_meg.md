@@ -1,9 +1,9 @@
 ---
-title: Creating a volume conduction model of the head for source-reconstruction of MEG data
+title: Creating a volume conduction model of the head for source reconstruction of MEG data
 tags: [tutorial, source, meg, headmodel, mri, plotting, meg-language]
 ---
 
-# Creating a volume conduction model of the head for source-reconstruction of MEG data
+# Creating a volume conduction model of the head for source reconstruction of MEG data
 
 ## Introduction
 
@@ -197,7 +197,7 @@ In exercise 1, you created a head model with method 'singlesphere'. How is its g
 
 In this tutorial, it was explained how to build a volume conduction model of the head using a single subject anatomical mri and the single shell method developed by Nolte (2003). In the exercises, we compared the head model to a single sphere that was fitted on the inside brain surface.
 
-You can read more about specific source-reconstruction methods in the [Localizing oscillatory sources using beamformer techniques](/tutorial/beamformer) and in the [Source reconstruction of event-related fields using minimum-norm estimate](/tutorial/minimumnormestimate) tutorials.
+You can read more about specific source reconstruction methods in the [Localizing oscillatory sources using beamformer techniques](/tutorial/beamformer) and in the [Source reconstruction of event-related fields using minimum-norm estimate](/tutorial/minimumnormestimate) tutorials.
 
 Here are the related FAQs:
 

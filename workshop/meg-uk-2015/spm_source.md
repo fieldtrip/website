@@ -101,5 +101,5 @@ SPM offers many other options for source reconstruction. Here we used two differ
 #### Literature
 
 - http://www.fil.ion.ucl.ac.uk/spm/doc/manual.pdf
-- Henson, R.N., Mattout, J., Phillips, C. and Friston, K.J. (2009). Selecting forward models for MEG source-reconstruction using model-evidence. Neuroimage, 46, 168-176.
+- Henson, R.N., Mattout, J., Phillips, C. and Friston, K.J. (2009). Selecting forward models for MEG source reconstruction using model-evidence. Neuroimage, 46, 168-176.
 - Henson, R.N., Wakeman, D.G., Litvak, V. and Friston, K.J. (2011). A Parametric Empirical Bayesian framework for the EEG/MEG inverse problem: generative models for multisubject and multimodal integration. Frontiers in Human Neuroscience, 5, 76, 1-16. <http://www.fil.ion.ucl.ac.uk/spm/doc/papers/HensonEtAl_FiHN_11_PEB_MEEG.pdf>

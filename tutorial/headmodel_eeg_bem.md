@@ -1,9 +1,9 @@
 ---
-title: Creating a BEM volume conduction model of the head for source-reconstruction of EEG data
+title: Creating a BEM volume conduction model of the head for source reconstruction of EEG data
 tags: [tutorial, eeg, source, headmodel, mri, plotting, meg-language]
 ---
 
-# Creating a BEM volume conduction model of the head for source-reconstruction of EEG data
+# Creating a BEM volume conduction model of the head for source reconstruction of EEG data
 
 ## Introduction
 
@@ -477,7 +477,7 @@ In exercise 2, you created a head model with method 'concentricspheres'. How is 
 
 This tutorial explained how to build a volume conduction model of the head using a single subject anatomical MRI and the boundary element method (BEM) developed by Oostendorp and van Oosterom (1989). In the exercises, we also compared the BEM model to a concentric spheres model that was fitted on the scalp, skull and brain surfaces.
 
-You can read more about specific source-reconstruction methods in the [Localizing oscillatory sources using beamformer techniques](/tutorial/beamformer) and in the [Source reconstruction of event-related fields using minimum-norm estimate](/tutorial/minimumnormestimate) tutorials.
+You can read more about specific source reconstruction methods in the [Localizing oscillatory sources using beamformer techniques](/tutorial/beamformer) and in the [Source reconstruction of event-related fields using minimum-norm estimate](/tutorial/minimumnormestimate) tutorials.
 
 Here are the related FAQs:
 

@@ -1,9 +1,9 @@
 ---
-title: Creating a sourcemodel for source-reconstruction of MEG or EEG data
+title: Creating a sourcemodel for source reconstruction of MEG or EEG data
 tags: [tutorial, source, meg, sourcemodel, mri, plotting, meg-language]
 ---
 
-# Creating a source model for source-reconstruction of MEG or EEG data
+# Creating a source model for source reconstruction of MEG or EEG data
 
 ## Introduction
 
@@ -251,7 +251,7 @@ That concludes this part of the tutorial.
 When you are doing a group study, where you want to combine the source-reconstructed data across multiple subjects, you can do this in two ways:
 
 1.  Interpolation of functional data followed by volumetric spatial normalization;
-2.  Anticipate the spatial normalization, and perform source-reconstruction for each subject on a subject-specific grid, that maps onto a template grid in spatially normalized space.
+2.  Anticipate the spatial normalization, and perform source reconstruction for each subject on a subject-specific grid, that maps onto a template grid in spatially normalized space.
 
 We recommend the second strategy, but for completeness we also describe the first strategy.
 
@@ -373,9 +373,9 @@ If you performed source reconstruction on the cortical surface, and you used the
 
 ## Summary and further reading
 
-This tutorial explained how to build a sourcemodel that can be used for source-reconstruction of EEG or MEG measurements.
+This tutorial explained how to build a sourcemodel that can be used for source reconstruction of EEG or MEG measurements.
 
-You can read more about specific source-reconstruction methods in the [Localizing oscillatory sources using beamformer techniques](/tutorial/beamformer) and in the [Source reconstruction of event-related fields using minimum-norm estimate](/tutorial/minimumnormestimate) tutorials.
+You can read more about specific source reconstruction methods in the [Localizing oscillatory sources using beamformer techniques](/tutorial/beamformer) and in the [Source reconstruction of event-related fields using minimum-norm estimate](/tutorial/minimumnormestimate) tutorials.
 
 ## See also
 

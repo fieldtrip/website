@@ -27,7 +27,7 @@ This section lists information aimed at developers of FieldTrip and collaboratin
 - [Improve interactive and non-interactive plotting of 4D bivariate data](/development/project/visualization)
 - [Improve the documentation of the source reconstruction methods](/development/project/documentation_source)
 - [Restructure and rework all visualization functions](/development/project/restructure_and_rework_all_visualization_functions)
-- [Source-reconstruction using two dipoles - example script under construction](/development/project/symmetric_dipoles), see [1559](http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=1559)
+- [source reconstruction using two dipoles - example script under construction](/development/project/symmetric_dipoles), see [1559](http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=1559)
 
 ## Closed Projects
 
@@ -44,9 +44,9 @@ This section lists information aimed at developers of FieldTrip and collaboratin
 - [Clean up tutorial documentation](/development/project/tutorial_documentation) (will not be done)
 - [Consistent flank detection for triggers](/development/project/trigger) (done)
 - [Create a forward solver for charges in an infinite halfspace](/development/project/halfspace) (done)
-- [Create a head-model for source-reconstruction of MEG data](/development/project/headmodel_tutorial) (done)
+- [Create a headmodel for source reconstruction of MEG data](/development/project/headmodel_tutorial) (done)
 - [Create a tutorial on the processing of animal data](/development/project/animal) (done)
-- [Create a volume conduction model of the head for source-reconstruction of EEG data](/development/project/headmodel_tutorial_eeg) (done)
+- [Create a volume conduction model of the head for source reconstruction of EEG data](/development/project/headmodel_tutorial_eeg) (done)
 - [Dealing with TMS-EEG datasets](/development/project/eeg_tms) (done)
 - [Dealing with the GEOMETRY of the forward model](/development/project/fwdarch2) (done)
 - [Ensemble methods](/development/project/ensemblemethods) (will not be done)

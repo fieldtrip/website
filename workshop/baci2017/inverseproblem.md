@@ -40,28 +40,26 @@ Then we do the dipole fit
 
     % Dipole fit
     cfg = [];
-    cfg.numdipoles    =  1;                             %number of expected
-    cfg.headmodel     = headmodel_bem;                  %the head model
-    cfg.grid          = leadfield_bem;                  %the precomputed leadfield
-    cfg.elec          = elec;                           %the electrode model
-    cfg.latency       = 0.025;                          %the latency of interest
+    cfg.numdipoles    = 1;                              % number of expected
+    cfg.headmodel     = headmodel_bem;                  % the head model
+    cfg.grid          = leadfield_bem;                  % the precomputed leadfield
+    cfg.elec          = elec;                           % the electrode model
+    cfg.latency       = 0.025;                          % the latency of interest
     dipfit_bem        = ft_dipolefitting(cfg,EEG_avg);
 
-    dipfit_bem.dip
-
+    disp(dipfit_bem.dip)
     ans =
-
-       pos: [13.958237048680118 34.388465910583285 97.809684095994314] %dipole position
-       mom: [3x1 double]                                               %dipole moment
-       pot: [74x1 double]                                              %potential at the electrodes
-        rv: 0.034549469532012                                          %residual variance
+       pos: [13.958237048680118 34.388465910583285 97.809684095994314] % dipole position
+       mom: [3x1 double]                                               % dipole moment
+       pot: [74x1 double]                                              % potential at the electrodes
+        rv: 0.034549469532012                                          % residual variance
       unit: 'mm'
 
-A quick look dipfit_bem.dip gives us information about the dipole fit. Especially a low residual variance (rv) shows us that the fitted dipole quite well explains the data.
+A quick look at `dipfit_bem.dip` gives us information about the dipole fit. Especially a low residual variance (rv) shows us that the fitted dipole quite well explains the data.
 
 And we visualize the dipole and see where it was localized in the brain.
 
-    %Visualise dipole fit
+    % Visualise dipole fit
     ft_plot_mesh(headmodel_bem.bnd(3));
     alpha 0.7;
     ft_plot_dipole(dipfit_bem.dip.pos(1,:), mean(dipfit_bem.dip.mom(1:3,:),2), 'color', 'b','unit','mm')
@@ -74,14 +72,14 @@ _Figure 1. Dipole computed with BEM model_
 ### Minimum norm estimate
 
     cfg                     = [];
-    cfg.method              = 'mne';                    %specify minimum norm estimate as method
-    cfg.latency             = [0.024 0.026];            %latency of interest
-    cfg.grid                = leadfield_bem;            %the precomputed leadfield
-    cfg.headmodel           = headmodel_bem;            %the head model
-    cfg.mne.prewhiten       = 'yes';                    %prewhiten data
-    cfg.mne.lambda          = 3;                        %regularisation parameter
-    cfg.mne.scalesourcecov  = 'yes';                    %scaling the source covariance matrix
-    minimum_norm_bem        = ft_sourceanalysis(cfg,EEG_avg);
+    cfg.method              = 'mne';                    % specify minimum norm estimate as method
+    cfg.latency             = [0.024 0.026];            % latency of interest
+    cfg.grid                = leadfield_bem;            % the precomputed leadfield
+    cfg.headmodel           = headmodel_bem;            % the head model
+    cfg.mne.prewhiten       = 'yes';                    % prewhiten data
+    cfg.mne.lambda          = 3;                        % regularisation parameter
+    cfg.mne.scalesourcecov  = 'yes';                    % scaling the source covariance matrix
+    minimum_norm_bem        = ft_sourceanalysis(cfg, EEG_avg);
 
 For the purpose of visualization we internet the MNE results onto the replaced anatomical MRI.
 
@@ -89,14 +87,13 @@ For the purpose of visualization we internet the MNE results onto the replaced a
     cfg.parameter  = 'avg.pow';
     interpolate    = ft_sourceinterpolate(cfg, minimum_norm_bem , mri_resliced);
 
-
-
     cfg = [];
     cfg.method        = 'ortho';
     cfg.funparameter  = 'pow';
-    ft_sourceplot(cfg,interpolate);
+    ft_sourceplot(cfg, interpolate);
 
 {% include image src="/assets/img/workshop/baci2017/inverseproblem/mne.png" width="900" %}
+
 _Figure 2. Minimum norm estimation with BEM model_
 
 #### Exercise 1
@@ -116,7 +113,7 @@ You can play around with cfg.mne.lambda? Do you see the influence of different l
 
     %% dipole fit
     cfg = [];
-    cfg.numdipoles    =  1;
+    cfg.numdipoles    = 1;
     cfg.grid          = sourcemodel;
     cfg.headmodel     = headmodel_fem_tr;
     cfg.grid          = leadfield_fem;
@@ -133,26 +130,27 @@ You can play around with cfg.mne.lambda? Do you see the influence of different l
 _Figure 3. Dipole computed with FEM model_
 
     % Minimum norm estimate
-    cfg         = [];
-    cfg.method  = 'mne';
-    cfg.latency = [0.024 0.026];
-    cfg.grid    = leadfield_fem;
-    cfg.headmodel    = headmodel_fem_tr;
+    cfg = [];
+    cfg.method        = 'mne';
+    cfg.latency       = [0.024 0.026];
+    cfg.grid          = leadfield_fem;
+    cfg.headmodel     = headmodel_fem_tr;
     cfg.mne.prewhiten = 'yes';
     cfg.mne.lambda    = 3;
     cfg.mne.scalesourcecov = 'yes';
-    minimum_norm  = ft_sourceanalysis(cfg,EEG_avg);
-
-    cfg            = [];
-    cfg.parameter  = 'avg.pow';
-    interpolate  = ft_sourceinterpolate(cfg, minimum_norm , mri_resliced);
+    minimum_norm  = ft_sourceanalysis(cfg, EEG_avg);
 
     cfg = [];
-    cfg.funparameter = 'pow';
+    cfg.parameter = 'avg.pow';
+    interpolate = ft_sourceinterpolate(cfg, minimum_norm , mri_resliced);
+
+    cfg = [];
+    cfg.funparameter  = 'pow';
     cfg.method        = 'ortho';
-    ft_sourceplot(cfg,interpolate);
+    ft_sourceplot(cfg, interpolate);
 
 {% include image src="/assets/img/workshop/baci2017/inverseproblem/mne.png" width="900" %}
+
 _Figure 4. Minimum norm estimation with FEM model_
 
 ## Comparison of BEM and FEM

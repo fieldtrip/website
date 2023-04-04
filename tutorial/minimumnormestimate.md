@@ -33,8 +33,8 @@ The forward model requires three geometric object
 
 The sourcemodel and headmodel are ideally generated from a subject-specific MRI image. The description of the sensor-array typically is represented in the data (MEG), or needs to be constructed, for example with a Polhemus device (EEG). The construction of the head- and sourcemodels that are needed for the remainder of this tutorial is described in the following tutorial
 
-- [Creating a volume conduction model of the head for source-reconstruction of MEG data](/tutorial/headmodel_meg)
-- [Creating a sourcemodel for source-reconstruction of MEG or EEG data](/tutorial/sourcemodel)
+- [Creating a volume conduction model of the head for source reconstruction of MEG data](/tutorial/headmodel_meg)
+- [Creating a sourcemodel for source reconstruction of MEG or EEG data](/tutorial/sourcemodel)
 
 Once we have the headmodel and sourcemodel, we perform the following step
 
@@ -146,7 +146,7 @@ You can plot the inverse solution onto the source-space at a specific time-point
 
 {% include image src="/assets/img/tutorial/minimumnormestimate/figure2.png" width="450" %}
 
-_Figure 6. The result of the source-reconstruction of the FIC condition plotted onto the source-space at 500 ms after the 0 time-point_
+_Figure 6. The result of the source reconstruction of the FIC condition plotted onto the source-space at 500 ms after the 0 time-point_
 
 But we would like to know where the difference between the conditions can be localized. Therefore, we calculate the difference of the two conditions, and we use **[ft_sourcemovie](/reference/ft_sourcemovie)** to visualize the results.
 
@@ -166,13 +166,13 @@ But we would like to know where the difference between the conditions can be loc
 
 {% include image src="/assets/img/tutorial/minimumnormestimate/figure3.png" width="500" %}
 
-_Figure 7. One frame from the movie that shows the differences of the two source-reconstructions_
+_Figure 7. One frame from the movie that shows the differences of the two source reconstructions_
 
 ## Summary and further readings
 
-In this tutorial we showed how to do MNE source reconstruction method on a single subject data. We compared the averaged ERF in two conditions and we reconstructed the sources and we calculated the difference of the two source-reconstruction. We showed also how you can visualize the results.
+In this tutorial we showed how to do MNE source reconstruction method on a single subject data. We compared the averaged ERF in two conditions and we reconstructed the sources and we calculated the difference of the two source reconstruction. We showed also how you can visualize the results.
 
-Functions and tutorial pages that show how to average, and how to analyze statistically source-reconstructions across subjects or how to compare those to a template brain are still under development.
+Functions and tutorial pages that show how to average, and how to analyze statistically source reconstructions across subjects or how to compare those to a template brain are still under development.
 
 FAQ
 {% include seealso tag1="source" tag2="faq" %}

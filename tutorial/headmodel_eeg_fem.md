@@ -1,9 +1,9 @@
 ---
-title: Creating a FEM volume conduction model of the head for source-reconstruction of EEG data
+title: Creating a FEM volume conduction model of the head for source reconstruction of EEG data
 tags: [tutorial, eeg, source, headmodel, mri, plotting, paraview, seg3d, meg-language]
 ---
 
-# Creating a FEM volume conduction model of the head for source-reconstruction of EEG data
+# Creating a FEM volume conduction model of the head for source reconstruction of EEG data
 
 ## Introduction
 
@@ -232,7 +232,7 @@ The headmodel data structure contains the same information in the **pos**, **hex
 - **stiff**: matrix
 - **type**: describes the method that was used to create the headmodel.
 
-Note that the unit of measurement used in the geometrical description of headmodel is in 'mm'. The EEG sensors should be also defined in 'mm'. The units of all type of geometrical information should be the same when a leadfield is computed for source-reconstruction.
+Note that the unit of measurement used in the geometrical description of headmodel is in 'mm'. The EEG sensors should be also defined in 'mm'. The units of all type of geometrical information should be the same when a leadfield is computed for source reconstruction.
 
 ### Visualization
 
@@ -372,7 +372,7 @@ The construction of the sourcemodel above takes quite some time as many dipoles 
 
 This tutorial explained how to build a volume conduction model of the head using a single subject anatomical MRI and a finite element method (FEM) using the FieldTrip-SIMBIO pipeline.
 
-You can read more about specific source-reconstruction methods in the [Localizing oscillatory sources using beamformer techniques](/tutorial/beamformer) and in the [Source reconstruction of event-related fields using minimum-norm estimate](/tutorial/minimumnormestimate) tutorials.
+You can read more about specific source reconstruction methods in the [Localizing oscillatory sources using beamformer techniques](/tutorial/beamformer) and in the [Source reconstruction of event-related fields using minimum-norm estimate](/tutorial/minimumnormestimate) tutorials.
 
 Here are the related FAQs:
 
