@@ -151,10 +151,10 @@
 - name:  Fourier analysis of neuronal oscillations and synchronization
   link:  /tutorial/fourier
 
-- name:  Creating a BEM volume conduction model of the head for source-reconstruction of EEG data
+- name:  Creating a BEM volume conduction model of the head for source reconstruction of EEG data
   link:  /tutorial/headmodel_eeg_bem
 
-- name:  Creating a FEM volume conduction model of the head for source-reconstruction of EEG data
+- name:  Creating a FEM volume conduction model of the head for source reconstruction of EEG data
   link:  /tutorial/headmodel_eeg_fem
 
 - name:  Analysis of human ECoG and sEEG recordings

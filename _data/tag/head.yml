@@ -88,13 +88,13 @@
 - name:  Localizing oscillatory sources using beamformer techniques
   link:  /tutorial/beamformer
 
-- name:  Creating a BEM volume conduction model of the head for source-reconstruction of EEG data
+- name:  Creating a BEM volume conduction model of the head for source reconstruction of EEG data
   link:  /tutorial/headmodel_eeg_bem
 
-- name:  Creating a FEM volume conduction model of the head for source-reconstruction of EEG data
+- name:  Creating a FEM volume conduction model of the head for source reconstruction of EEG data
   link:  /tutorial/headmodel_eeg_fem
 
-- name:  Creating a volume conduction model of the head for source-reconstruction of MEG data
+- name:  Creating a volume conduction model of the head for source reconstruction of MEG data
   link:  /tutorial/headmodel_meg
 
 - name:  Source reconstruction of event-related fields using minimum-norm estimation

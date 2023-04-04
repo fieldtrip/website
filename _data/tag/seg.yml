@@ -10,6 +10,6 @@
 - name:  Getting started with Seg3D
   link:  /getting_started/seg3d
 
-- name:  Creating a FEM volume conduction model of the head for source-reconstruction of EEG data
+- name:  Creating a FEM volume conduction model of the head for source reconstruction of EEG data
   link:  /tutorial/headmodel_eeg_fem
 
