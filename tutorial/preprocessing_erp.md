@@ -37,6 +37,8 @@ The custom trial function is available from [here](https://download.fieldtriptoo
     cfg.datafile     = 's04.eeg';
     cfg = ft_definetrial(cfg);
 
+Note that by default **[ft_definetrial](/reference/ft_definetrial)** will force subsequent preprocessing steps to be applied to data epochs. If you wish preprocesing to be applied to continuous data (this is recommended for high-pass filtering for example), you may preprocess the data, then use  **[ft_redefinetrial](/reference/ft_definetrial)** after the data has been preprocessed as explained on this [page](https://www.fieldtriptoolbox.org/tutorial/continuous/).
+
 After the call to **[ft_definetrial](/reference/ft_definetrial)**, the cfg now not only stores the dataset name, but also the definition of the segments of data that will be used for further processing and analysis. The first column is the begin sample, the second the end sample, the third the offset and the fourth contains the condition for each trial (1=affective, 2=ontological).
 
     >> disp(cfg.trl)
