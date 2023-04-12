@@ -1,9 +1,9 @@
 ---
-title: Soundcard input using PortAudio
+title: Streaming realtime data from soundcard using PortAudio
 tags: [realtime, audio]
 ---
 
-# Soundcard input using PortAudio
+# Streaming realtime data from soundcard using PortAudio
 
 We provide a standalone tool called **audio2ft** (see "realtime/datasource/audio") to grab audio data from the soundcard using PortAudio, and stream it to a FieldTrip buffer.
 You need to call this tool with a number that selects your sound card and driver architecture, and the usual command line arguments for selecting the FieldTrip

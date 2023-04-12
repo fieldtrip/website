@@ -1,9 +1,9 @@
 ---
-title: Realtime fMRI from Siemens scanners
+title: Streaming realtime fMRI from Siemens scanners
 tags: [realtime, siemens, fmri]
 ---
 
-# Realtime fMRI from Siemens scanners
+# Streaming realtime fMRI from Siemens scanners
 
 The present system for acquiring fMRI data in real time consists of three main blocks:
 

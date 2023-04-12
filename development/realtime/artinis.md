@@ -1,9 +1,9 @@
 ---
-title: Artinis Medical Systems
+title: Streaming realtime data from Artinis Medical Systems
 tags: [realtime, artinis]
 ---
 
-# Artinis Medical Systems
+# Streaming realtime data from Artinis Medical Systems
 
 ## Introduction
 

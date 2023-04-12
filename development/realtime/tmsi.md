@@ -1,12 +1,11 @@
 ---
-title: TMSI EEG amplifiers
+title: Streaming realtime data from TMSI EEG amplifiers
 tags: [realtime, tmsi]
 ---
 
-## TMSI EEG amplifiers
+# Streaming realtime data from TMSI EEG amplifiers
 
-We provide two tools for grabbing EEG data from [TMSi](http://www.tmsi.com) amplifiers. The code for both can be found
-in the directory "realtime/acquisition/tmsi". As far as I know, the FieldTrip code can be used both with the standard REFA and the mobile PORTI systems.
+We provide two tools for grabbing EEG data from [TMSi](http://www.tmsi.com) amplifiers. The code for both can be found in the directory "realtime/acquisition/tmsi". As far as I know, the FieldTrip code can be used both with the standard REFA and the mobile PORTI systems.
 
 {% include image src="/assets/img/development/realtime/tmsi/refa.jpg" width="200" %}
 {% include image src="/assets/img/development/realtime/tmsi/porti.jpg" width="200" %}

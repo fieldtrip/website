@@ -1,28 +1,23 @@
 ---
-title: TOBI - Tools for Brain-Computer Interaction
+title: Streaming realtime data from TOBI (Tools for Brain-Computer Interaction)
 tags: [realtime, tobi]
 ---
 
-# TOBI: Tools for Brain-Computer Interaction
+# Streaming realtime data from TOBI (Tools for Brain-Computer Interaction)
 
 The [TOBI](http://www.tobi-project.org) project defines a standardized interface called TiA (TOBI interface A) to transmit raw biosignals, supporting multi rate and block-oriented transmission of different kinds of signals from various acquisition devices (e.g., EEG, EOG, near-infrared spectroscopy signals, etc.) at the same time [1].
 
-Interoperability between on streams provided with the TiA and the FieldTrip buffer is provided by the tia2ft application. Tia2ft can connect to a TiA server, and serve the incoming data through its own FieldTrip buffer, or optionally, push it to an external FieldTrip buffer (potentially run on a different device).
+Interoperability between on streams provided with the TiA and the FieldTrip buffer is provided by the `tia2ft` application. It can connect to a TiA server, and serve the incoming data through its own FieldTrip buffer, or optionally, push it to an external FieldTrip buffer (potentially run on a different device).
 
 Note that only homogeneous signal streams (i.e. with a sampling rate and block size that is consistent between channels) are supported at the moment.
 
 ## License
 
-Tia2ft is available under the 3-clause BSD license (see LICENSE.txt). This
-license permits commercial use, and is compatible with the GPL license. The
-licences of the libraries used in tia2ft are available in their respective
-directories.
+Tia2ft is available under the 3-clause BSD license (see LICENSE.txt). This license permits commercial use, and is compatible with the GPL license. The licences of the libraries used in tia2ft are available in their respective directories.
 
 ## Usage
 
-Without command line arguments, tia2ft attempts to connect to a TiA server and
-a FieldTrip buffer both served on the same computer. The following options are
-supporte
+Without command line arguments, tia2ft attempts to connect to a TiA server and a FieldTrip buffer both served on the same computer. The following options are supported:
 
     -h [ --help ]                     Show help message.
     -v [ --verbose ]                  Print more info.
@@ -37,8 +32,7 @@ supporte
 
 ### Linux
 
-To recompile tia2ft, a C++ compiler with the STL and Boost libraries is
-required.
+To recompile tia2ft, a C++ compiler with the STL and Boost libraries is required.
 
 To compile tia2ft, you can do the following:
 
@@ -49,8 +43,7 @@ Then, it can simply be run with:
 
     tia2ft.sh --serve-ft-buffer
 
-The shell script adds the TiA library to the search path, and starts the
-executable `tia2ft`.
+The shell script adds the TiA library to the search path, and starts the executable `tia2ft`.
 
 ### Windows
 
@@ -62,9 +55,7 @@ Compiling on macOS is not yet supported.
 
 ## Testing tia2ft
 
-To test tia2ft, one can use the TOBI signal server to generate artificial
-signals. With the TOBI signal servers version 8ea1376, a TiA serving
-sine-waves can be started as follow
+To test tia2ft, one can use the TOBI signal server to generate artificial signals. With the TOBI signal servers version 8ea1376, a TiA serving sine-waves can be started as follows:
 
     server.sh bin/server_config.xml
 
