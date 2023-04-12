@@ -1,4 +1,4 @@
-- name:  Biosemi ActiveTwo EEG amplifier
+- name:  Streaming realtime data from Biosemi ActiveTwo EEG amplifier
   link:  /development/realtime/biosemi
 
 - name:  Example analysis pipeline for Biosemi data

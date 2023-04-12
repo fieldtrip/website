@@ -1,4 +1,4 @@
-- name:  BrainVision Recorder Remote Data Access (RDA)
+- name:  Streaming realtime data from BrainVision Recorder Remote Data Access (RDA)
   link:  /development/realtime/rda
 
 - name:  How can I anonymize or deidentify a BrainVision dataset?

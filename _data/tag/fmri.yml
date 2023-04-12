@@ -1,4 +1,4 @@
-- name:  Realtime fMRI from Siemens scanners
+- name:  Streaming realtime fMRI from Siemens scanners
   link:  /development/realtime/fmri
 
 - name:  Correlation analysis of fMRI data

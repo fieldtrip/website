@@ -1,4 +1,4 @@
-- name:  Soundcard input using PortAudio
+- name:  Streaming realtime data from soundcard using PortAudio
   link:  /development/realtime/audio2ft
 
 - name:  Converting an example audio dataset for sharing in BIDS
