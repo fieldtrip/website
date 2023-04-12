@@ -16,6 +16,9 @@
 - name:  Template 3-D electrode sets
   link:  /template/electrode
 
+- name:  Template 3-D gradiometer descriptions
+  link:  /template/gradiometer
+
 - name:  Template head models for EEG volume conduction modeling
   link:  /template/headmodel
 
