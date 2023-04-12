@@ -16,6 +16,7 @@ The following categories of templates exis
 - [atlas](/template/atlas)
 - [anatomy](/template/anatomy)
 - [electrode](/template/electrode)
+- [gradiometer](/template/gradiometer)
 - [layout](/template/layout)
 - [neighbours](/template/neighbours)
 - [sourcemodel](/template/sourcemodel)

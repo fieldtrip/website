@@ -5,7 +5,7 @@ tags: [template, layout]
 
 # Template 2-D layouts for plotting
 
-Electrode positions in the layouts are represented as points in 2-D Cartesian space, i.e. with an X and Y position for each electrode. Furthermore, each electrode has a label. In the [layout tutorial](/tutorial/layout) you can find more details on how to create and use them. The file format for layout files specified as ASCII .lay files is explained [here](/faq/what_is_the_format_of_the_layout_file_which_is_used_for_plotting).
+EEG electrode and MEG gradiometer positions in the layouts are represented as points in 2-D Cartesian space, i.e. with an X and Y position for each electrode. Furthermore, each electrode has a label. In the [layout tutorial](/tutorial/layout) you can find more details on how to create and use them. The file format for layout files specified as ASCII `.lay` files is explained [here](/faq/what_is_the_format_of_the_layout_file_which_is_used_for_plotting).
 
 You can use the following snippet of code to get a quick overview of the template layout sets.
 
@@ -28,6 +28,8 @@ You can use the following snippet of code to get a quick overview of the templat
 {% include markup/warning %}
 You can find the template 2-D layouts for plotting that are included in FieldTrip [here on GitHub](https://github.com/fieldtrip/fieldtrip/tree/master/template/layout/).
 {% include markup/end %}
+
+These layouts are meant for plotting on a 2D screen or on paper. If you are looking for 3D positions of the EEG electrodes or MEG sensors to be used for forward modeling and inverse source reconstruction, or for more fancy 3D visualisation of the measured EEG potential over the scalp or MEG field distribution around the head using **[ft_plot_topo3d](/reference/plotting/ft_plot_topo3d)**, you should look in the [electrode template](/template/electrode) and [gradiometer template](/template/gradiometer) documentation.
 
 ## EASYCAP
 
