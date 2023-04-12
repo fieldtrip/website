@@ -25,7 +25,7 @@ You may want to continue reading the section on [getting started with Neuromag](
 
 ## Support for BTi/4D MEG data
 
-The recommended way of working with BTi/4D data is to work on the raw data files directly. The code for reading header information from the raw files is based on Eugene Kronberg's msi2matlab tools, and have been further developed by Gavin Paterson and Jan-Mathijs Schoffelen, at CCNi.
+The recommended way of working with BTi/4D data is to work on the raw data files directly. The code for reading header information from the raw files is based on Eugene Kronberg's "msi2matlab" tools, and have been further developed by Gavin Paterson and Jan-Mathijs Schoffelen, at CCNi.
 
 Alternatively, you can work with BTi/4D data using intermediate ASCII files (.m4d and .xyz), created with "pdf2set", which is a c-program linked to the 4D libraries. This "pdf2set" program should be available to all BTi/4D users.
 
