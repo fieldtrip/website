@@ -46,18 +46,18 @@ For these examples, we'll use the example data of [dataset 10](/faq/what_types_o
 
 #### Export to Raw
 
-First, we read the data, as usua
+First, we read the data, as usual
 
     cfg = [];
     cfg.dataset = 'SubjectBraille.ds';
-    cfg.trialdef.triallength = Inf;
+    cfg.trialdef.length = Inf;
     cfg = ft_definetrial(cfg);
 
     cfg.continuous = 'yes';
     cfg.channel = {'MEG', '-MLP31', '-MLO12'};
     data = ft_preprocessing(cfg);
 
-Then, we export them
+Then, we export the data
 
     fiff_file  = 'ctf_raw.fif';
     fieldtrip2fiff(fiff_file, data)
