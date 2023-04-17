@@ -8,8 +8,6 @@ title: Import and export data to and from MNE-Python
 
 Not all the information contained in either MATLAB or Python can be completely copied into the other format.
 
-We cannot assure that the API in MNE-Python will remain the same in the future. Please, report any error on [bugzilla](/development/issues) and include this address ''bugzilla@gpiantoni.com'' to the CC list in the bugreport.
-
 Code under development, the MNE-Python community currently works on reader functions for FieldTrip data structure
 [https://github.com/mne-tools/mne-python/pull/5141](https://github.com/mne-tools/mne-python/pull/5141), [https://github.com/mne-tools/mne-python/issues/4833](https://github.com/mne-tools/mne-python/issues/4833)
 
@@ -57,14 +55,14 @@ First, we read the data, as usual
     cfg.channel = {'MEG', '-MLP31', '-MLO12'};
     data = ft_preprocessing(cfg);
 
-Then, we export the data
+We can export then the data to a fiff file.
 
     fiff_file  = 'ctf_raw.fif';
     fieldtrip2fiff(fiff_file, data)
 
-This function will also attempt to create an event file, called ''ctf_raw-eve.fif''. Because the fiff format is less flexible than the MATLAB files, events might be recoded using numbers.
+This function will also attempt to create an event file, called ''ctf_raw-eve.fif''. Because the fiff format is less flexible than the MATLAB files, events are represented as numbers.
 
-You can then read the file into Python (MNE-Python 0.8)
+You can then read the file using MNE-Python
 
 ```python
     from mne.io import Raw
