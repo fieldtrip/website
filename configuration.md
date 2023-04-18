@@ -396,7 +396,7 @@ A detailed description of each function is available in the [reference documenta
 **cfg.avgovertime** - [ft_freqstatistics](/reference/ft_freqstatistics), [ft_sourceplot](/reference/ft_sourceplot), [ft_timelockstatistics](/reference/ft_timelockstatistics)  
 
 
-**cfg.axes** - [ft_multiplotER](/reference/ft_multiplotER)  
+**cfg.axes** - [ft_geometryplot](/reference/ft_geometryplot), [ft_multiplotER](/reference/ft_multiplotER)  
 
 
 **cfg.axis** - [ft_sourceplot](/reference/ft_sourceplot)  
@@ -676,7 +676,7 @@ A detailed description of each function is available in the [reference documenta
 **cfg.colorgroups** - [ft_databrowser](/reference/ft_databrowser), [ft_multiplotER](/reference/ft_multiplotER)  
 
 
-**cfg.colormap** - [ft_databrowser](/reference/ft_databrowser), [ft_icabrowser](/reference/contrib/misc/ft_icabrowser), [ft_multiplotTFR](/reference/ft_multiplotTFR), [ft_singleplotTFR](/reference/ft_singleplotTFR), [ft_sliceinterp](/reference/ft_sliceinterp), [ft_spike_plot_isireturn](/reference/contrib/spike/ft_spike_plot_isireturn), [ft_spike_plot_jpsth](/reference/contrib/spike/ft_spike_plot_jpsth), [ft_topoplotER](/reference/ft_topoplotER), [ft_topoplotIC](/reference/ft_topoplotIC), [ft_topoplotTFR](/reference/ft_topoplotTFR)  
+**cfg.colormap** - [ft_databrowser](/reference/ft_databrowser), [ft_icabrowser](/reference/contrib/misc/ft_icabrowser), [ft_movieplotER](/reference/ft_movieplotER), [ft_movieplotTFR](/reference/ft_movieplotTFR), [ft_multiplotTFR](/reference/ft_multiplotTFR), [ft_singleplotTFR](/reference/ft_singleplotTFR), [ft_sliceinterp](/reference/ft_sliceinterp), [ft_spike_plot_isireturn](/reference/contrib/spike/ft_spike_plot_isireturn), [ft_spike_plot_jpsth](/reference/contrib/spike/ft_spike_plot_jpsth), [ft_topoplotER](/reference/ft_topoplotER), [ft_topoplotIC](/reference/ft_topoplotIC), [ft_topoplotTFR](/reference/ft_topoplotTFR)  
 
 
 **cfg.colorparam** - [ft_topoplotCC](/reference/ft_topoplotCC)  
@@ -718,7 +718,7 @@ A detailed description of each function is available in the [reference documenta
 **cfg.contournum** - [ft_databrowser](/reference/ft_databrowser)  
 
 
-**cfg.coordsys** - [ft_meshrealign](/reference/ft_meshrealign), [ft_preprocessing](/reference/ft_preprocessing), [ft_volumerealign](/reference/ft_volumerealign)  
+**cfg.coordsys** - [ft_geometryplot](/reference/ft_geometryplot), [ft_meshrealign](/reference/ft_meshrealign), [ft_preprocessing](/reference/ft_preprocessing), [ft_volumerealign](/reference/ft_volumerealign)  
 
 
 **cfg.correctMotion** - [ft_omri_pipeline](/reference/realtime/online_mri/ft_omri_pipeline), [ft_omri_pipeline_nuisance](/reference/realtime/online_mri/ft_omri_pipeline_nuisance)  
@@ -941,7 +941,10 @@ A detailed description of each function is available in the [reference documenta
 **cfg.eegscale** - [ft_databrowser](/reference/ft_databrowser), [ft_multiplotTFR](/reference/ft_multiplotTFR), [ft_rejectvisual](/reference/ft_rejectvisual), [ft_singleplotER](/reference/ft_singleplotER), [ft_singleplotTFR](/reference/ft_singleplotTFR)  
 
 
-**cfg.elec** - [ft_channelrepair](/reference/ft_channelrepair), [ft_databrowser](/reference/ft_databrowser), [ft_dipolefitting](/reference/ft_dipolefitting), [ft_dipolesimulation](/reference/ft_dipolesimulation), [ft_electrodeplacement](/reference/ft_electrodeplacement), [ft_electroderealign](/reference/ft_electroderealign), [ft_layoutplot](/reference/ft_layoutplot), [ft_meshrealign](/reference/ft_meshrealign), [ft_neighbourplot](/reference/ft_neighbourplot), [ft_prepare_headmodel](/reference/ft_prepare_headmodel), [ft_prepare_headmodel](/reference/ft_prepare_headmodel), [ft_prepare_layout](/reference/ft_prepare_layout), [ft_prepare_leadfield](/reference/ft_prepare_leadfield), [ft_prepare_neighbours](/reference/ft_prepare_neighbours), [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel), [ft_scalpcurrentdensity](/reference/ft_scalpcurrentdensity), [ft_sourceanalysis](/reference/ft_sourceanalysis)  
+**cfg.elec** - [ft_channelrepair](/reference/ft_channelrepair), [ft_databrowser](/reference/ft_databrowser), [ft_dipolefitting](/reference/ft_dipolefitting), [ft_dipolesimulation](/reference/ft_dipolesimulation), [ft_electrodeplacement](/reference/ft_electrodeplacement), [ft_electroderealign](/reference/ft_electroderealign), [ft_geometryplot](/reference/ft_geometryplot), [ft_layoutplot](/reference/ft_layoutplot), [ft_meshrealign](/reference/ft_meshrealign), [ft_neighbourplot](/reference/ft_neighbourplot), [ft_prepare_headmodel](/reference/ft_prepare_headmodel), [ft_prepare_headmodel](/reference/ft_prepare_headmodel), [ft_prepare_layout](/reference/ft_prepare_layout), [ft_prepare_leadfield](/reference/ft_prepare_leadfield), [ft_prepare_neighbours](/reference/ft_prepare_neighbours), [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel), [ft_scalpcurrentdensity](/reference/ft_scalpcurrentdensity), [ft_sourceanalysis](/reference/ft_sourceanalysis)  
+
+
+**cfg.elecstyle** - [ft_geometryplot](/reference/ft_geometryplot)  
 
 
 **cfg.emgscale** - [ft_databrowser](/reference/ft_databrowser), [ft_multiplotTFR](/reference/ft_multiplotTFR), [ft_rejectvisual](/reference/ft_rejectvisual), [ft_singleplotER](/reference/ft_singleplotER), [ft_singleplotTFR](/reference/ft_singleplotTFR)  
@@ -1105,10 +1108,10 @@ A detailed description of each function is available in the [reference documenta
 **cfg.fiducial.zpoint** - [ft_volumerealign](/reference/ft_volumerealign)  
 
 
-**cfg.figure** - [ft_databrowser](/reference/ft_databrowser), [ft_electrodeplacement](/reference/ft_electrodeplacement), [ft_layoutplot](/reference/ft_layoutplot), [ft_movieplotTFR](/reference/ft_movieplotTFR), [ft_multiplotER](/reference/ft_multiplotER), [ft_multiplotTFR](/reference/ft_multiplotTFR), [ft_neighbourplot](/reference/ft_neighbourplot), [ft_singleplotER](/reference/ft_singleplotER), [ft_singleplotTFR](/reference/ft_singleplotTFR), [ft_sourceplot](/reference/ft_sourceplot), [ft_topoplotCC](/reference/ft_topoplotCC), [ft_topoplotER](/reference/ft_topoplotER), [ft_topoplotIC](/reference/ft_topoplotIC)  
+**cfg.figure** - [ft_databrowser](/reference/ft_databrowser), [ft_electrodeplacement](/reference/ft_electrodeplacement), [ft_geometryplot](/reference/ft_geometryplot), [ft_layoutplot](/reference/ft_layoutplot), [ft_movieplotTFR](/reference/ft_movieplotTFR), [ft_multiplotER](/reference/ft_multiplotER), [ft_multiplotTFR](/reference/ft_multiplotTFR), [ft_neighbourplot](/reference/ft_neighbourplot), [ft_singleplotER](/reference/ft_singleplotER), [ft_singleplotTFR](/reference/ft_singleplotTFR), [ft_sourceplot](/reference/ft_sourceplot), [ft_topoplotCC](/reference/ft_topoplotCC), [ft_topoplotER](/reference/ft_topoplotER), [ft_topoplotIC](/reference/ft_topoplotIC)  
 
 
-**cfg.figurename** - [ft_sourceplot](/reference/ft_sourceplot)  
+**cfg.figurename** - [ft_geometryplot](/reference/ft_geometryplot), [ft_sourceplot](/reference/ft_sourceplot)  
 
 
 **cfg.filename** - [ft_analysispipeline](/reference/ft_analysispipeline), [ft_realtime_modeegproxy](/reference/realtime/example/ft_realtime_modeegproxy), [ft_realtime_unicornproxy](/reference/realtime/example/ft_realtime_unicornproxy), [ft_sourcewrite](/reference/ft_sourcewrite), [ft_volumewrite](/reference/ft_volumewrite)  
@@ -1251,13 +1254,16 @@ A detailed description of each function is available in the [reference documenta
 **cfg.generalize** - [ft_statistics_mvpa](/reference/ft_statistics_mvpa)  
 
 
-**cfg.grad** - [ft_channelrepair](/reference/ft_channelrepair), [ft_databrowser](/reference/ft_databrowser), [ft_dipolefitting](/reference/ft_dipolefitting), [ft_dipolesimulation](/reference/ft_dipolesimulation), [ft_layoutplot](/reference/ft_layoutplot), [ft_meshrealign](/reference/ft_meshrealign), [ft_neighbourplot](/reference/ft_neighbourplot), [ft_prepare_headmodel](/reference/ft_prepare_headmodel), [ft_prepare_headmodel](/reference/ft_prepare_headmodel), [ft_prepare_layout](/reference/ft_prepare_layout), [ft_prepare_leadfield](/reference/ft_prepare_leadfield), [ft_prepare_neighbours](/reference/ft_prepare_neighbours), [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel), [ft_sourceanalysis](/reference/ft_sourceanalysis)  
+**cfg.grad** - [ft_channelrepair](/reference/ft_channelrepair), [ft_databrowser](/reference/ft_databrowser), [ft_dipolefitting](/reference/ft_dipolefitting), [ft_dipolesimulation](/reference/ft_dipolesimulation), [ft_geometryplot](/reference/ft_geometryplot), [ft_layoutplot](/reference/ft_layoutplot), [ft_meshrealign](/reference/ft_meshrealign), [ft_neighbourplot](/reference/ft_neighbourplot), [ft_prepare_headmodel](/reference/ft_prepare_headmodel), [ft_prepare_headmodel](/reference/ft_prepare_headmodel), [ft_prepare_layout](/reference/ft_prepare_layout), [ft_prepare_leadfield](/reference/ft_prepare_leadfield), [ft_prepare_neighbours](/reference/ft_prepare_neighbours), [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel), [ft_sourceanalysis](/reference/ft_sourceanalysis)  
 
 
 **cfg.gradient** - [ft_denoise_synthetic](/reference/ft_denoise_synthetic)  
 
 
 **cfg.gradscale** - [ft_databrowser](/reference/ft_databrowser), [ft_multiplotER](/reference/ft_multiplotER), [ft_multiplotTFR](/reference/ft_multiplotTFR), [ft_multiplotTFR](/reference/ft_multiplotTFR), [ft_rejectvisual](/reference/ft_rejectvisual), [ft_singleplotER](/reference/ft_singleplotER), [ft_singleplotTFR](/reference/ft_singleplotTFR)  
+
+
+**cfg.gradstyle** - [ft_geometryplot](/reference/ft_geometryplot)  
 
 
 **cfg.grid.corner1** - [ft_electrodeplacement](/reference/ft_electrodeplacement)  
@@ -1301,16 +1307,19 @@ A detailed description of each function is available in the [reference documenta
 **cfg.headerformat** - [ft_artifact_clip](/reference/ft_artifact_clip), [ft_artifact_ecg](/reference/ft_artifact_ecg), [ft_artifact_eog](/reference/ft_artifact_eog), [ft_artifact_jump](/reference/ft_artifact_jump), [ft_artifact_muscle](/reference/ft_artifact_muscle), [ft_artifact_threshold](/reference/ft_artifact_threshold), [ft_artifact_tms](/reference/ft_artifact_tms), [ft_artifact_zvalue](/reference/ft_artifact_zvalue), [ft_definetrial](/reference/ft_definetrial), [ft_realtime_asynchronous](/reference/realtime/example/ft_realtime_asynchronous), [ft_realtime_average](/reference/realtime/example/ft_realtime_average), [ft_realtime_classification](/reference/realtime/example/ft_realtime_classification), [ft_realtime_coillocalizer](/reference/realtime/online_meg/ft_realtime_coillocalizer), [ft_realtime_fmriviewer](/reference/realtime/example/ft_realtime_fmriviewer), [ft_realtime_heartbeatdetect](/reference/realtime/example/ft_realtime_heartbeatdetect), [ft_realtime_oddball](/reference/realtime/online_eeg/ft_realtime_oddball), [ft_realtime_ouunpod](/reference/realtime/online_eeg/ft_realtime_ouunpod), [ft_realtime_powerestimate](/reference/realtime/example/ft_realtime_powerestimate), [ft_realtime_selectiveaverage](/reference/realtime/example/ft_realtime_selectiveaverage), [ft_realtime_signalrecorder](/reference/realtime/example/ft_realtime_signalrecorder), [ft_realtime_signalviewer](/reference/realtime/example/ft_realtime_signalviewer), [ft_realtime_synchronous](/reference/realtime/example/ft_realtime_synchronous), [ft_realtime_topography](/reference/realtime/example/ft_realtime_topography)  
 
 
-**cfg.headmodel** - [ft_dipolefitting](/reference/ft_dipolefitting), [ft_dipolesimulation](/reference/ft_dipolesimulation), [ft_megplanar](/reference/ft_megplanar), [ft_megrealign](/reference/ft_megrealign), [ft_meshrealign](/reference/ft_meshrealign), [ft_prepare_headmodel](/reference/ft_prepare_headmodel), [ft_prepare_leadfield](/reference/ft_prepare_leadfield), [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel), [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel), [ft_sourceanalysis](/reference/ft_sourceanalysis)  
+**cfg.headmodel** - [ft_dipolefitting](/reference/ft_dipolefitting), [ft_dipolesimulation](/reference/ft_dipolesimulation), [ft_geometryplot](/reference/ft_geometryplot), [ft_megplanar](/reference/ft_megplanar), [ft_megrealign](/reference/ft_megrealign), [ft_meshrealign](/reference/ft_meshrealign), [ft_prepare_headmodel](/reference/ft_prepare_headmodel), [ft_prepare_leadfield](/reference/ft_prepare_leadfield), [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel), [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel), [ft_sourceanalysis](/reference/ft_sourceanalysis)  
 
 
 **cfg.headmodel.type** - [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)  
 
 
+**cfg.headmodelstyle** - [ft_geometryplot](/reference/ft_geometryplot)  
+
+
 **cfg.headmovement** - [ft_realtime_headlocalizer](/reference/realtime/online_meg/ft_realtime_headlocalizer)  
 
 
-**cfg.headshape** - [ft_electroderealign](/reference/ft_electroderealign), [ft_electroderealign](/reference/ft_electroderealign), [ft_electroderealign](/reference/ft_electroderealign), [ft_megplanar](/reference/ft_megplanar), [ft_megrealign](/reference/ft_megrealign), [ft_prepare_layout](/reference/ft_prepare_layout), [ft_prepare_mesh](/reference/ft_prepare_mesh), [ft_prepare_mesh](/reference/ft_prepare_mesh), [ft_prepare_mesh](/reference/ft_prepare_mesh), [ft_prepare_mesh](/reference/ft_prepare_mesh), [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel), [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel), [ft_realtime_headlocalizer](/reference/realtime/online_meg/ft_realtime_headlocalizer)  
+**cfg.headshape** - [ft_electroderealign](/reference/ft_electroderealign), [ft_electroderealign](/reference/ft_electroderealign), [ft_electroderealign](/reference/ft_electroderealign), [ft_geometryplot](/reference/ft_geometryplot), [ft_megplanar](/reference/ft_megplanar), [ft_megrealign](/reference/ft_megrealign), [ft_prepare_layout](/reference/ft_prepare_layout), [ft_prepare_mesh](/reference/ft_prepare_mesh), [ft_prepare_mesh](/reference/ft_prepare_mesh), [ft_prepare_mesh](/reference/ft_prepare_mesh), [ft_prepare_mesh](/reference/ft_prepare_mesh), [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel), [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel), [ft_realtime_headlocalizer](/reference/realtime/online_meg/ft_realtime_headlocalizer)  
 
 
 **cfg.headshape.headshape** - [ft_volumerealign](/reference/ft_volumerealign)  
@@ -1326,6 +1335,15 @@ A detailed description of each function is available in the [reference documenta
 
 
 **cfg.headshape.scalpthreshold** - [ft_volumerealign](/reference/ft_volumerealign)  
+
+
+**cfg.headshapestyle** - [ft_geometryplot](/reference/ft_geometryplot), [ft_geometryplot](/reference/ft_geometryplot)  
+
+
+**cfg.headshapestyle.edgecolor** - [ft_geometryplot](/reference/ft_geometryplot)  
+
+
+**cfg.headshapestyle.facecolor** - [ft_geometryplot](/reference/ft_geometryplot)  
 
 
 **cfg.height** - [ft_prepare_layout](/reference/ft_prepare_layout)  
@@ -1465,7 +1483,7 @@ A detailed description of each function is available in the [reference documenta
 **cfg.interpolate** - [ft_spike_plot_isireturn](/reference/contrib/spike/ft_spike_plot_isireturn), [ft_spike_plot_jpsth](/reference/contrib/spike/ft_spike_plot_jpsth), [ft_spike_waveform](/reference/contrib/spike/ft_spike_waveform)  
 
 
-**cfg.interpolatenan** - [ft_topoplotER](/reference/ft_topoplotER), [ft_topoplotTFR](/reference/ft_topoplotTFR)  
+**cfg.interpolatenan** - [ft_movieplotER](/reference/ft_movieplotER), [ft_movieplotTFR](/reference/ft_movieplotTFR), [ft_topoplotER](/reference/ft_topoplotER), [ft_topoplotTFR](/reference/ft_topoplotTFR)  
 
 
 **cfg.interpolation** - [ft_databrowser](/reference/ft_databrowser), [ft_topoplotER](/reference/ft_topoplotER), [ft_topoplotIC](/reference/ft_topoplotIC), [ft_topoplotTFR](/reference/ft_topoplotTFR)  
@@ -1764,6 +1782,12 @@ A detailed description of each function is available in the [reference documenta
 **cfg.memory** - [ft_artifact_zvalue](/reference/ft_artifact_zvalue)  
 
 
+**cfg.mesh** - [ft_geometryplot](/reference/ft_geometryplot)  
+
+
+**cfg.meshstyle** - [ft_geometryplot](/reference/ft_geometryplot)  
+
+
 **cfg.method** - [ft_artifact_tms](/reference/ft_artifact_tms), [ft_channelnormalise](/reference/ft_channelnormalise), [ft_channelrepair](/reference/ft_channelrepair), [ft_combineplanar](/reference/ft_combineplanar), [ft_componentanalysis](/reference/ft_componentanalysis), [ft_connectivityanalysis](/reference/ft_connectivityanalysis), [ft_connectivitysimulation](/reference/ft_connectivitysimulation), [ft_crossfrequencyanalysis](/reference/ft_crossfrequencyanalysis), [ft_defacevolume](/reference/ft_defacevolume), [ft_denoise_tsr](/reference/ft_denoise_tsr), [ft_detect_movement](/reference/ft_detect_movement), [ft_electrodeplacement](/reference/ft_electrodeplacement), [ft_electroderealign](/reference/ft_electroderealign), [ft_electroderealign](/reference/ft_electroderealign), [ft_electroderealign](/reference/ft_electroderealign), [ft_eventtiminganalysis](/reference/ft_eventtiminganalysis), [ft_freqanalysis](/reference/ft_freqanalysis), [ft_freqinterpolate](/reference/ft_freqinterpolate), [ft_freqsimulation](/reference/ft_freqsimulation), [ft_freqstatistics](/reference/ft_freqstatistics), [ft_globalmeanfield](/reference/ft_globalmeanfield), [ft_headmovement](/reference/ft_headmovement), [ft_heartrate](/reference/ft_heartrate), [ft_interpolatenan](/reference/ft_interpolatenan), [ft_meshrealign](/reference/ft_meshrealign), [ft_mvaranalysis](/reference/ft_mvaranalysis), [ft_networkanalysis](/reference/ft_networkanalysis), [ft_nirs_referencechannelsubtraction](/reference/external/artinis/ft_nirs_referencechannelsubtraction), [ft_prepare_headmodel](/reference/ft_prepare_headmodel), [ft_prepare_mesh](/reference/ft_prepare_mesh), [ft_prepare_mesh](/reference/ft_prepare_mesh), [ft_prepare_neighbours](/reference/ft_prepare_neighbours), [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel), [ft_preprocessing](/reference/ft_preprocessing), [ft_rejectvisual](/reference/ft_rejectvisual), [ft_resampledata](/reference/ft_resampledata), [ft_scalpcurrentdensity](/reference/ft_scalpcurrentdensity), [ft_sourceanalysis](/reference/ft_sourceanalysis), [ft_sourceparcellate](/reference/ft_sourceparcellate), [ft_sourceplot](/reference/ft_sourceplot), [ft_sourcestatistics](/reference/ft_sourcestatistics), [ft_spike_jpsth](/reference/contrib/spike/ft_spike_jpsth), [ft_spike_rate_orituning](/reference/contrib/spike/ft_spike_rate_orituning), [ft_spike_xcorr](/reference/contrib/spike/ft_spike_xcorr), [ft_spikedetection](/reference/contrib/spike/ft_spikedetection), [ft_spikedownsample](/reference/contrib/spike/ft_spikedownsample), [ft_spikesorting](/reference/contrib/spike/ft_spikesorting), [ft_spiketriggeredinterpolation](/reference/contrib/spike/ft_spiketriggeredinterpolation), [ft_spiketriggeredspectrum](/reference/contrib/spike/ft_spiketriggeredspectrum), [ft_spiketriggeredspectrum_stat](/reference/contrib/spike/ft_spiketriggeredspectrum_stat), [ft_statistics_stats](/reference/ft_statistics_stats), [ft_stratify](/reference/ft_stratify), [ft_timelockgrandaverage](/reference/ft_timelockgrandaverage), [ft_timelockstatistics](/reference/ft_timelockstatistics), [ft_virtualchannel](/reference/ft_virtualchannel), [ft_volumerealign](/reference/ft_volumerealign), [ft_volumereslice](/reference/ft_volumereslice)  
 
 
@@ -1806,7 +1830,10 @@ A detailed description of each function is available in the [reference documenta
 **cfg.movietime** - [ft_movieplotTFR](/reference/ft_movieplotTFR)  
 
 
-**cfg.mri** - [ft_electroderealign](/reference/ft_electroderealign), [ft_meshrealign](/reference/ft_meshrealign), [ft_prepare_layout](/reference/ft_prepare_layout), [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel), [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)  
+**cfg.mri** - [ft_electroderealign](/reference/ft_electroderealign), [ft_geometryplot](/reference/ft_geometryplot), [ft_meshrealign](/reference/ft_meshrealign), [ft_prepare_layout](/reference/ft_prepare_layout), [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel), [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)  
+
+
+**cfg.mristyle** - [ft_geometryplot](/reference/ft_geometryplot)  
 
 
 **cfg.mva** - [ft_statistics_crossvalidate](/reference/ft_statistics_crossvalidate)  
@@ -2014,7 +2041,10 @@ A detailed description of each function is available in the [reference documenta
 **cfg.option3** - [ft_examplefunction](/reference/ft_examplefunction)  
 
 
-**cfg.opto** - [ft_channelrepair](/reference/ft_channelrepair), [ft_layoutplot](/reference/ft_layoutplot), [ft_meshrealign](/reference/ft_meshrealign), [ft_neighbourplot](/reference/ft_neighbourplot), [ft_prepare_layout](/reference/ft_prepare_layout)  
+**cfg.opto** - [ft_channelrepair](/reference/ft_channelrepair), [ft_geometryplot](/reference/ft_geometryplot), [ft_layoutplot](/reference/ft_layoutplot), [ft_meshrealign](/reference/ft_meshrealign), [ft_neighbourplot](/reference/ft_neighbourplot), [ft_prepare_layout](/reference/ft_prepare_layout)  
+
+
+**cfg.optostyle** - [ft_geometryplot](/reference/ft_geometryplot)  
 
 
 **cfg.opts** - [ft_volumebiascorrect](/reference/ft_volumebiascorrect), [ft_volumenormalise](/reference/ft_volumenormalise), [ft_volumesegment](/reference/ft_volumesegment)  
@@ -2133,7 +2163,7 @@ A detailed description of each function is available in the [reference documenta
 **cfg.pos** - [ft_virtualchannel](/reference/ft_virtualchannel)  
 
 
-**cfg.position** - [ft_clusterplot](/reference/ft_clusterplot), [ft_databrowser](/reference/ft_databrowser), [ft_electrodeplacement](/reference/ft_electrodeplacement), [ft_layoutplot](/reference/ft_layoutplot), [ft_movieplotTFR](/reference/ft_movieplotTFR), [ft_multiplotER](/reference/ft_multiplotER), [ft_multiplotTFR](/reference/ft_multiplotTFR), [ft_neighbourplot](/reference/ft_neighbourplot), [ft_singleplotER](/reference/ft_singleplotER), [ft_singleplotTFR](/reference/ft_singleplotTFR), [ft_sourceplot](/reference/ft_sourceplot), [ft_topoplotCC](/reference/ft_topoplotCC)  
+**cfg.position** - [ft_clusterplot](/reference/ft_clusterplot), [ft_databrowser](/reference/ft_databrowser), [ft_electrodeplacement](/reference/ft_electrodeplacement), [ft_geometryplot](/reference/ft_geometryplot), [ft_layoutplot](/reference/ft_layoutplot), [ft_movieplotTFR](/reference/ft_movieplotTFR), [ft_multiplotER](/reference/ft_multiplotER), [ft_multiplotTFR](/reference/ft_multiplotTFR), [ft_neighbourplot](/reference/ft_neighbourplot), [ft_singleplotER](/reference/ft_singleplotER), [ft_singleplotTFR](/reference/ft_singleplotTFR), [ft_sourceplot](/reference/ft_sourceplot), [ft_topoplotCC](/reference/ft_topoplotCC)  
 
 
 **cfg.poststim** - [ft_artifact_tms](/reference/ft_artifact_tms)  
@@ -2350,7 +2380,7 @@ A detailed description of each function is available in the [reference documenta
 **cfg.removevalue** - [ft_anonymizedata](/reference/ft_anonymizedata)  
 
 
-**cfg.renderer** - [ft_clusterplot](/reference/ft_clusterplot), [ft_databrowser](/reference/ft_databrowser), [ft_electrodeplacement](/reference/ft_electrodeplacement), [ft_layoutplot](/reference/ft_layoutplot), [ft_movieplotER](/reference/ft_movieplotER), [ft_movieplotTFR](/reference/ft_movieplotTFR), [ft_multiplotER](/reference/ft_multiplotER), [ft_multiplotTFR](/reference/ft_multiplotTFR), [ft_neighbourplot](/reference/ft_neighbourplot), [ft_singleplotER](/reference/ft_singleplotER), [ft_singleplotTFR](/reference/ft_singleplotTFR), [ft_sourceplot](/reference/ft_sourceplot), [ft_topoplotCC](/reference/ft_topoplotCC), [ft_topoplotIC](/reference/ft_topoplotIC)  
+**cfg.renderer** - [ft_clusterplot](/reference/ft_clusterplot), [ft_databrowser](/reference/ft_databrowser), [ft_electrodeplacement](/reference/ft_electrodeplacement), [ft_geometryplot](/reference/ft_geometryplot), [ft_layoutplot](/reference/ft_layoutplot), [ft_movieplotER](/reference/ft_movieplotER), [ft_movieplotTFR](/reference/ft_movieplotTFR), [ft_multiplotER](/reference/ft_multiplotER), [ft_multiplotTFR](/reference/ft_multiplotTFR), [ft_neighbourplot](/reference/ft_neighbourplot), [ft_singleplotER](/reference/ft_singleplotER), [ft_singleplotTFR](/reference/ft_singleplotTFR), [ft_sourceplot](/reference/ft_sourceplot), [ft_topoplotCC](/reference/ft_topoplotCC), [ft_topoplotIC](/reference/ft_topoplotIC)  
 
 
 **cfg.representation** - [ft_definetrial](/reference/ft_definetrial)  
@@ -2658,7 +2688,7 @@ A detailed description of each function is available in the [reference documenta
 **cfg.source.headerformat** - [ft_realtime_downsample](/reference/realtime/example/ft_realtime_downsample), [ft_realtime_fileproxy](/reference/realtime/example/ft_realtime_fileproxy)  
 
 
-**cfg.sourcemodel** - [ft_denoise_dssp](/reference/ft_denoise_dssp)  
+**cfg.sourcemodel** - [ft_denoise_dssp](/reference/ft_denoise_dssp), [ft_geometryplot](/reference/ft_geometryplot)  
 
 
 **cfg.sourcemodel.amplitude** - [ft_dipolesimulation](/reference/ft_dipolesimulation)  
@@ -2701,6 +2731,9 @@ A detailed description of each function is available in the [reference documenta
 
 
 **cfg.sourcemodel.unit** - [ft_dipolesimulation](/reference/ft_dipolesimulation)  
+
+
+**cfg.sourcemodelstyle** - [ft_geometryplot](/reference/ft_geometryplot)  
 
 
 **cfg.spacemax** - [ft_sliceinterp](/reference/ft_sliceinterp)  
@@ -2990,7 +3023,7 @@ A detailed description of each function is available in the [reference documenta
 **cfg.tissueval** - [ft_prepare_headmodel](/reference/ft_prepare_headmodel)  
 
 
-**cfg.title** - [ft_singleplotER](/reference/ft_singleplotER), [ft_singleplotTFR](/reference/ft_singleplotTFR), [ft_sliceinterp](/reference/ft_sliceinterp), [ft_sourceplot](/reference/ft_sourceplot), [ft_topoplotIC](/reference/ft_topoplotIC)  
+**cfg.title** - [ft_geometryplot](/reference/ft_geometryplot), [ft_singleplotER](/reference/ft_singleplotER), [ft_singleplotTFR](/reference/ft_singleplotTFR), [ft_sliceinterp](/reference/ft_sliceinterp), [ft_sourceplot](/reference/ft_sourceplot), [ft_topoplotIC](/reference/ft_topoplotIC)  
 
 
 **cfg.toi** - [ft_clusterplot](/reference/ft_clusterplot), [ft_freqanalysis](/reference/ft_freqanalysis), [ft_freqanalysis](/reference/ft_freqanalysis), [ft_freqanalysis](/reference/ft_freqanalysis), [ft_mvaranalysis](/reference/ft_mvaranalysis), [ft_nonlinearassociation](/reference/contrib/misc/ft_nonlinearassociation)  
@@ -3073,7 +3106,7 @@ A detailed description of each function is available in the [reference documenta
 
 ## U 
 
-**cfg.unit** - [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)  
+**cfg.unit** - [ft_geometryplot](/reference/ft_geometryplot), [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)  
 
 
 **cfg.unmixing** - [ft_componentanalysis](/reference/ft_componentanalysis)  
