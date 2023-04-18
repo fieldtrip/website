@@ -168,7 +168,9 @@ Alternatively, one could also use the FieldTrip function [ft_definetrial](/refer
     cfg.trialfun           = 'ft_trialfun_general';
     cfg                    = ft_definetrial(cfg);
 
-where ''data1'' contains the data organized in multiple trials including condition labelling.
+    data_mp                = ft_preprocessing(cfg);
+    
+Now ''data_mp'' contains the data organized in multiple trials including condition labels according to the original event naming scheme. Currently, this route is a bit less efficient in terms of time, because the low-level reading functions (''ft_read_header'', and ''ft_read_event''), load the full data matrix each time they are called. This can be sped up a little bit, by loading the hdr outside the calls to ''ft_definetrial'' and ''ft_preprocessing'', and passing it in the ''cfg''. 
 
 ### datatype_timelock `<->` Evoked
 
