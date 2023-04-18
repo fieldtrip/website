@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '36868858'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1200-22.2023
+- idtype: pmcid
+  value: PMC10089243
+authors:
+- authtype: Author
+  name: Hajonides JE
+- authtype: Author
+  name: van Ede F
+- authtype: Author
+  name: Stokes MG
+- authtype: Author
+  name: Nobre AC
+- authtype: Author
+  name: Myers NE
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '15'
+pages: 2730-2740
+pmclivedate: 2023/04/12
+printpubdate: 2023 Apr 12
+pubdate: 2023 Apr 12
+sortdate: 2023/04/12 00:00
+source: J Neurosci
+title: Multiple and Dissociable Effects of Sensory History on Working-Memory Performance
+uid: '10089243'
+volume: '43'

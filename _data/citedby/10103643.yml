@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '35235654'
+- idtype: doi
+  value: 10.1093/cercor/bhac067
+- idtype: pmcid
+  value: PMC10103643
+authors:
+- authtype: Author
+  name: Saadatmehr B
+- authtype: Author
+  name: Edalati M
+- authtype: Author
+  name: Routier L
+- authtype: Author
+  name: Mahmoudzadeh M
+- authtype: Author
+  name: Safaie J
+- authtype: Author
+  name: Kongolo G
+- authtype: Author
+  name: Ghostine G
+- authtype: Author
+  name: Wallois F
+- authtype: Author
+  name: Moghimi S
+epubdate: 2022 Mar 2
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '2'
+pages: 278-289
+pmclivedate: 2023/04/15
+printpubdate: ''
+pubdate: 2022 Mar 2
+sortdate: 2022/03/02 00:00
+source: Cereb Cortex
+title: Evolution of cross-frequency coupling between endogenous oscillations over
+  the temporal cortex in very premature neonates
+uid: '10103643'
+volume: '33'

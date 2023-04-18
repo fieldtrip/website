@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '36460926'
+- idtype: doi
+  value: 10.3758/s13414-022-02617-w
+- idtype: pmcid
+  value: PMC10066164
+authors:
+- authtype: Author
+  name: Noonan MP
+- authtype: Author
+  name: Von Lautz AH
+- authtype: Author
+  name: Bauer Y
+- authtype: Author
+  name: Summerfield C
+- authtype: Author
+  name: Stokes MS
+epubdate: 2022 Dec 2
+fulljournalname: Attention, Perception & Psychophysics
+issue: '3'
+pages: 845-862
+pmclivedate: 2023/04/02
+printpubdate: '2023'
+pubdate: 2022 Dec 2
+sortdate: 2022/12/02 00:00
+source: Atten Percept Psychophys
+title: Differential modulation of visual responses by distractor or target expectations
+uid: '10066164'
+volume: '85'

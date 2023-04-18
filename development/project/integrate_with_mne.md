@@ -8,8 +8,6 @@ title: Import and export data to and from MNE-Python
 
 Not all the information contained in either MATLAB or Python can be completely copied into the other format.
 
-We cannot assure that the API in MNE-Python will remain the same in the future. Please, report any error on [bugzilla](/development/issues) and include this address ''bugzilla@gpiantoni.com'' to the CC list in the bugreport.
-
 Code under development, the MNE-Python community currently works on reader functions for FieldTrip data structure
 [https://github.com/mne-tools/mne-python/pull/5141](https://github.com/mne-tools/mne-python/pull/5141), [https://github.com/mne-tools/mne-python/issues/4833](https://github.com/mne-tools/mne-python/issues/4833)
 
@@ -44,27 +42,27 @@ The aim is to pass the channel=level data between FieldTrip and MNE. Reading is 
 
 For these examples, we'll use the example data of [dataset 10](/faq/what_types_of_datasets_and_their_respective_analyses_are_used_on_fieldtrip#meg-tactile_dipole_fitting). Download [SubjectBraille.zip](https://download.fieldtriptoolbox.org/tutorial/SubjectBraille.zip) and extract the `.ds` folder in a convenient location.
 
-#### Export to Raw
+#### Export a FieldTrip data structure with a single trial to Raw
 
-First, we read the data, as usua
+First, we read the data, as usual
 
     cfg = [];
     cfg.dataset = 'SubjectBraille.ds';
-    cfg.trialdef.triallength = Inf;
+    cfg.trialdef.length = Inf;
     cfg = ft_definetrial(cfg);
 
     cfg.continuous = 'yes';
     cfg.channel = {'MEG', '-MLP31', '-MLO12'};
     data = ft_preprocessing(cfg);
 
-Then, we export them
+We can export then the data to a fiff file.
 
     fiff_file  = 'ctf_raw.fif';
     fieldtrip2fiff(fiff_file, data)
 
-This function will also attempt to create an event file, called ''ctf_raw-eve.fif''. Because the fiff format is less flexible than the MATLAB files, events might be recoded using numbers.
+This function will also attempt to create an event file, called ''ctf_raw-eve.fif''. The events will be represented as numbers, in a Nx3 matrix, where the first column contains the sample index of the event, and the third column contains the value. As of April 2023, also an interpretative comment will be saved in the event file, that allows to map the numbered events in the event file back onto the FieldTrip-style event representation.  
 
-You can then read the file into Python (MNE-Python 0.8)
+You can then read the file using MNE-Python
 
 ```python
     from mne.io import Raw
@@ -77,7 +75,7 @@ You can then read the file into Python (MNE-Python 0.8)
     print(events)
 ```
 
-#### Import Raw
+#### Import an MNE-python Raw object into FieldTrip
 
 Once you have the data in Python as Raw, you can use the ''save'' method.
 
@@ -85,26 +83,26 @@ Once you have the data in Python as Raw, you can use the ''save'' method.
     raw.save('mne_python_raw.fif')
 ```
 
-Then use FieldTrip to read the file
+Then we can use FieldTrip to read the file.
 
     fiff_file = 'mne_python_raw.fif';
 
     cfg = []
     cfg.dataset = fiff_file;
-    data1 = ft_preprocessing(cfg);
-    ft_datatype(data1)  % returns 'raw'
+    data_rawmne = ft_preprocessing(cfg);
+    ft_datatype(data_rawmne)  % should return 'raw'
 
-    event = mne_read_events('ctf_raw-eve.fif')
+    [event, mappings] = fiff_read_events('ctf_raw-eve.fif')
 
-So, ''data1'' is of type ''datatype_raw'' with one trial.
+So, ''data_rawmne'' is of type ''datatype_raw'' with one trial.
 
-Events are in Nx3 matrix, where the first column contains the samples and the third column the index of the events. You can use this information to create the trials in FieldTrip.
+Events are in Nx3 matrix, where the first column contains the samples and the third column the index of the events. You can use this information to create the trials in FieldTrip. The mappings string indicates how the indexed events map onto the events in the original FieldTrip style event structure. 
 
 ### datatype_raw (many trials) `<->` Epochs
 
 #### Export to Epochs
 
-Currently, there is no export functionality to create mne-Epochs from fieldtrip. Feel free to add it on [https://github.com/fieldtrip/fieldtrip](https://github.com/fieldtrip/fieldtrip).
+MNE-python also allows to work with so-called ''Epochs'' objects, which are similar to a FieldTrip raw data structure with multiple trials, with the constraint that each of the trials has exactly the same time axis.  
 
 And then in Python, you can read the ''Epochs'' with:
 
@@ -128,8 +126,8 @@ If we have the data as ''Raw'' in MNE-Python, we can create epochs, using the ''
 
     # create events based on the index in the third column of events
     event_ids = {'eventA': 4, 'eventB': 8}
-    tmin = -0.5
-    tmax = 1
+    tmin = -0.6
+    tmax = 0.6
     epochs = Epochs(raw, events, event_ids, tmin, tmax, baseline=(None, 0))
     epochs.save('mne_python-epo.fif')
     mne.write_events('mne_python-eve.fif', epochs.events)
@@ -168,15 +166,15 @@ where ''data1'' contains the data organized in multiple trials including conditi
 
 Create evoked in FieldTrip:
 
-    cfg = [];
-    cfg.dataset = 'SubjectBraille.ds';
-    cfg.trialdef.eventtype      = 'backpanel trigger';
-    cfg.trialdef.prestim        = 1;
-    cfg.trialdef.poststim       = 2;
-    cfg.trialdef.eventvalue     = 3;                    % event value of FIC
-    cfg = ft_definetrial(cfg);
-    cfg.channel   = {'MEG', '-MLP31', '-MLO12'};        % read all MEG channels except MLP31 and MLO12
-    data = ft_preprocessing(cfg);
+    cfg                     = [];
+    cfg.dataset             = 'SubjectBraille.ds';
+    cfg.trialdef.eventtype  = 'backpanel trigger';
+    cfg.trialdef.prestim    = 0.6;
+    cfg.trialdef.poststim   = 0.6;
+    cfg.trialdef.eventvalue = [4 8];
+    cfg                     = ft_definetrial(cfg);
+    cfg.channel             = {'MEG', '-MLP31', '-MLO12'};        % read all MEG channels except MLP31 and MLO12
+    data                    = ft_preprocessing(cfg);
 
     cfg = [];
     avg = ft_timelockanalysis(cfg, data);

@@ -7,9 +7,6 @@
 - name:  Reference documentation
   link:  /reference
 
-- name:  Template 3-D gradiometer descriptions
-  link:  /template/gradiometer
-
 - name:  Introduction to the FieldTrip toolbox
   link:  /tutorial/introduction
 

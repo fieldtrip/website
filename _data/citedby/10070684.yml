@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '37025164'
+- idtype: doi
+  value: 10.3389/fnsys.2023.1045396
+- idtype: pmcid
+  value: PMC10070684
+authors:
+- authtype: Author
+  name: Cho W
+- authtype: Author
+  name: Vidaurre C
+- authtype: Author
+  name: An J
+- authtype: Author
+  name: Birbaumer N
+- authtype: Author
+  name: Ramos-Murguialday A
+epubdate: 2023 Mar 21
+fulljournalname: Frontiers in Systems Neuroscience
+issue: ''
+pages: '1045396'
+pmclivedate: 2023/04/05
+printpubdate: ''
+pubdate: 2023 Mar 21
+sortdate: 2023/03/21 00:00
+source: Front Syst Neurosci
+title: Cortical processing during robot and functional electrical stimulation
+uid: '10070684'
+volume: '17'

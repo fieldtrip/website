@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '36914264'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1100-22.2023
+- idtype: pmcid
+  value: PMC10089239
+authors:
+- authtype: Author
+  name: Edalati M
+- authtype: Author
+  name: Wallois F
+- authtype: Author
+  name: Safaie J
+- authtype: Author
+  name: Ghostine G
+- authtype: Author
+  name: Kongolo G
+- authtype: Author
+  name: Trainor LJ
+- authtype: Author
+  name: Moghimi S
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '15'
+pages: 2794-2802
+pmclivedate: 2023/04/12
+printpubdate: 2023 Apr 12
+pubdate: 2023 Apr 12
+sortdate: 2023/04/12 00:00
+source: J Neurosci
+title: 'Rhythm in the Premature Neonate Brain: Very Early Processing of Auditory Beat
+  and Meter'
+uid: '10089239'
+volume: '43'
