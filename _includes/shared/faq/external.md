@@ -20,7 +20,6 @@ A number of external toolboxes is included in the `fieldtrip/external` subdirect
 - comm
 - ctf to read CTF data
 - dipoli for forward EEG modeling using BEM
-- dmlt
 - dss
 - duneuro
 - [eeglab](http://sccn.ucsd.edu/eeglab/) for independent component analysis
