@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '36373596'
+- idtype: doi
+  value: 10.1111/ejn.15863
+- idtype: pmcid
+  value: PMC10100525
+authors:
+- authtype: Author
+  name: Markiewicz R
+- authtype: Author
+  name: Mazaheri A
+- authtype: Author
+  name: Krott A
+epubdate: 2022 Nov 23
+fulljournalname: The European Journal of Neuroscience
+issue: '1'
+pages: 129-147
+pmclivedate: 2023/04/14
+printpubdate: 2023 Jan
+pubdate: 2022 Nov 23
+sortdate: 2022/11/23 00:00
+source: Eur J Neurosci
+title: Bilingualism can cause enhanced monitoring and occasional delayed responses
+  in a flanker task
+uid: '10100525'
+volume: '57'

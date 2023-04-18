@@ -1,0 +1,51 @@
+articleids:
+- idtype: pmid
+  value: '36940333'
+- idtype: doi
+  value: 10.1073/pnas.2218949120
+- idtype: pmcid
+  value: PMC10068756
+authors:
+- authtype: Author
+  name: Timmermann C
+- authtype: Author
+  name: Roseman L
+- authtype: Author
+  name: Haridas S
+- authtype: Author
+  name: Rosas FE
+- authtype: Author
+  name: Luan L
+- authtype: Author
+  name: Kettner H
+- authtype: Author
+  name: Martell J
+- authtype: Author
+  name: Erritzoe D
+- authtype: Author
+  name: Tagliazucchi E
+- authtype: Author
+  name: Pallavicini C
+- authtype: Author
+  name: Girn M
+- authtype: Author
+  name: Alamia A
+- authtype: Author
+  name: Leech R
+- authtype: Author
+  name: Nutt DJ
+- authtype: Author
+  name: Carhart-Harris RL
+epubdate: 2023 Mar 20
+fulljournalname: Proceedings of the National Academy of Sciences of the United States
+  of America
+issue: '13'
+pages: e2218949120
+pmclivedate: 2023/04/04
+printpubdate: 2023 Mar 28
+pubdate: 2023 Mar 20
+sortdate: 2023/03/20 00:00
+source: Proc Natl Acad Sci U S A
+title: Human brain effects of DMT assessed via EEG-fMRI
+uid: '10068756'
+volume: '120'

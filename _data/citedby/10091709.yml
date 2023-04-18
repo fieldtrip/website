@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '36196745'
+- idtype: doi
+  value: 10.1002/ejp.2045
+- idtype: pmcid
+  value: PMC10091709
+authors:
+- authtype: Author
+  name: Rousseaux F
+- authtype: Author
+  name: Panda R
+- authtype: Author
+  name: Toussaint C
+- authtype: Author
+  name: Bicego A
+- authtype: Author
+  name: Niimi M
+- authtype: Author
+  name: Faymonville M
+- authtype: Author
+  name: Nyssen A
+- authtype: Author
+  name: Laureys S
+- authtype: Author
+  name: Gosseries O
+- authtype: Author
+  name: Vanhaudenhuyse A
+epubdate: 2022 Oct 24
+fulljournalname: European Journal of Pain (London, England)
+issue: '1'
+pages: 148-162
+pmclivedate: 2023/04/13
+printpubdate: 2023 Jan
+pubdate: 2022 Oct 24
+sortdate: 2022/10/24 00:00
+source: Eur J Pain
+title: 'Virtual reality hypnosis in the management of pain: Self‐reported and neurophysiological
+  measures in healthy subjects'
+uid: '10091709'
+volume: '27'

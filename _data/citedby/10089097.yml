@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '36852454'
+- idtype: doi
+  value: 10.1002/hbm.26250
+- idtype: pmcid
+  value: PMC10089097
+authors:
+- authtype: Author
+  name: Lizarazu M
+- authtype: Author
+  name: Carreiras M
+- authtype: Author
+  name: Molinaro N
+epubdate: 2023 Feb 27
+fulljournalname: Human Brain Mapping
+issue: '7'
+pages: 2862-2872
+pmclivedate: 2023/04/12
+printpubdate: ''
+pubdate: 2023 Feb 27
+sortdate: 2023/02/27 00:00
+source: Hum Brain Mapp
+title: Theta‐gamma phase‐amplitude coupling in auditory cortex is modulated by language
+  proficiency
+uid: '10089097'
+volume: '44'
