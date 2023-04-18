@@ -126,8 +126,8 @@ If we have the data as ''Raw'' in MNE-Python, we can create epochs, using the ''
 
     # create events based on the index in the third column of events
     event_ids = {'eventA': 4, 'eventB': 8}
-    tmin = -0.5
-    tmax = 1
+    tmin = -0.6
+    tmax = 0.6
     epochs = Epochs(raw, events, event_ids, tmin, tmax, baseline=(None, 0))
     epochs.save('mne_python-epo.fif')
     mne.write_events('mne_python-eve.fif', epochs.events)
@@ -166,15 +166,15 @@ where ''data1'' contains the data organized in multiple trials including conditi
 
 Create evoked in FieldTrip:
 
-    cfg = [];
-    cfg.dataset = 'SubjectBraille.ds';
-    cfg.trialdef.eventtype      = 'backpanel trigger';
-    cfg.trialdef.prestim        = 1;
-    cfg.trialdef.poststim       = 2;
-    cfg.trialdef.eventvalue     = 3;                    % event value of FIC
-    cfg = ft_definetrial(cfg);
-    cfg.channel   = {'MEG', '-MLP31', '-MLO12'};        % read all MEG channels except MLP31 and MLO12
-    data = ft_preprocessing(cfg);
+    cfg                     = [];
+    cfg.dataset             = 'SubjectBraille.ds';
+    cfg.trialdef.eventtype  = 'backpanel trigger';
+    cfg.trialdef.prestim    = 0.6;
+    cfg.trialdef.poststim   = 0.6;
+    cfg.trialdef.eventvalue = [4 8];
+    cfg                     = ft_definetrial(cfg);
+    cfg.channel             = {'MEG', '-MLP31', '-MLO12'};        % read all MEG channels except MLP31 and MLO12
+    data                    = ft_preprocessing(cfg);
 
     cfg = [];
     avg = ft_timelockanalysis(cfg, data);
