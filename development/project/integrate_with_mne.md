@@ -44,20 +44,20 @@ For these examples, we'll use the example data of [dataset 10](/faq/what_types_o
 
 #### Export a FieldTrip data structure with a single trial to Raw
 
-First, we read the data, as usual
+First, we read the data as a continuous chunk. Note that the example dataset used has actually been acquired in 'trial'-mode, which means that it consists of discontinuous segments of data.
 
-    cfg = [];
-    cfg.dataset = 'SubjectBraille.ds';
+    cfg                 = [];
+    cfg.dataset         = 'SubjectBraille.ds';
     cfg.trialdef.length = Inf;
-    cfg = ft_definetrial(cfg);
+    cfg                 = ft_definetrial(cfg);
 
     cfg.continuous = 'yes';
-    cfg.channel = {'MEG', '-MLP31', '-MLO12'};
-    data = ft_preprocessing(cfg);
+    cfg.channel    = {'MEG', '-MLP31', '-MLO12'};
+    data           = ft_preprocessing(cfg);
 
-We can export then the data to a fiff file.
+We can now export the data to a fiff file, pretending as if it's raw data. Note that the original fiff-file definition stores the data in single precision (32-bit per data point) format. By default, FieldTrip stores the data in the same precision of data, which can be double (and even complex-valued). MNE-python should be capable of dealing with this type of numeric precision, but other software might not. If the data needs to be stored in single precision, you can use the key-value pair ''precision', 'single''.
 
-    fiff_file  = 'ctf_raw.fif';
+    fiff_file  = 'ctf-raw.fif';
     fieldtrip2fiff(fiff_file, data)
 
 This function will also attempt to create an event file, called ''ctf_raw-eve.fif''. The events will be represented as numbers, in a Nx3 matrix, where the first column contains the sample index of the event, and the third column contains the value. As of April 2023, also an interpretative comment will be saved in the event file, that allows to map the numbered events in the event file back onto the FieldTrip-style event representation.  
@@ -66,35 +66,35 @@ You can then read the file using MNE-Python
 
 ```python
     from mne.io import Raw
-    raw = Raw('ctf_raw.fif')
+    raw = Raw('ctf-raw.fif')
     print(raw)
     print(raw.info)
 
     from mne import read_events
-    events = read_events('ctf_raw-eve.fif')
+    events = read_events('ctf-raw-eve.fif')
     print(events)
 ```
 
 #### Import an MNE-python Raw object into FieldTrip
 
-Once you have the data in Python as Raw, you can use the ''save'' method.
+Once you have the data in Python as a Raw object, you can use the ''save'' method to save it again as a fiff-file. This is a silly operation in itself, but we do it here, in order to be able to compare both versions of the files in MATLAB.
 
 ```python
-    raw.save('mne_python_raw.fif')
+    raw.save('mne_python-raw.fif',fmt='double')
 ```
 
 Then we can use FieldTrip to read the file.
 
-    fiff_file = 'mne_python_raw.fif';
+    fiff_file = 'mne_python-raw.fif';
 
-    cfg = []
+    cfg         = []
     cfg.dataset = fiff_file;
-    data_rawmne = ft_preprocessing(cfg);
-    ft_datatype(data_rawmne)  % should return 'raw'
+    data_mp     = ft_preprocessing(cfg);
+    ft_datatype(data_mp)  % should return 'raw'
 
-    [event, mappings] = fiff_read_events('ctf_raw-eve.fif')
+    [event, mappings] = fiff_read_events('ctf-raw-eve.fif')
 
-So, ''data_rawmne'' is of type ''datatype_raw'' with one trial.
+So, ''data_mp'' is of type ''datatype_raw'', containing a single trial.
 
 Events are in Nx3 matrix, where the first column contains the samples and the third column the index of the events. You can use this information to create the trials in FieldTrip. The mappings string indicates how the indexed events map onto the events in the original FieldTrip style event structure. 
 
@@ -102,13 +102,26 @@ Events are in Nx3 matrix, where the first column contains the samples and the th
 
 #### Export to Epochs
 
-MNE-python also allows to work with so-called ''Epochs'' objects, which are similar to a FieldTrip raw data structure with multiple trials, with the constraint that each of the trials has exactly the same time axis.  
+MNE-python also allows to work with so-called ''Epochs'' objects, which are similar to a FieldTrip raw data structure with multiple trials, with the constraint that each of the trials has exactly the same time axis. Let's start by reading the trials into FieldTrip, from the original dataset, and then save the data object as a fiff-file.
 
+    cfg                     = [];
+    cfg.dataset             = 'SubjectBraille.ds';
+    cfg.trialdef.eventtype  = 'backpanel trigger';
+    cfg.trialdef.prestim    = 0.6;
+    cfg.trialdef.poststim   = 0.6;
+    cfg.trialdef.eventvalue = [4 8]; % these are the trigger values coded on the backpanel trigger, indicating targets and non-targets
+    cfg                     = ft_definetrial(cfg);
+    cfg.channel             = {'MEG', '-MLP31', '-MLO12'}; % read all MEG channels except MLP31 and MLO12
+    data                    = ft_preprocessing(cfg);
+
+    fiff_file  = 'ctf-epo.fif';
+    fieldtrip2fiff(fiff_file, data)
+    
 And then in Python, you can read the ''Epochs'' with:
 
 ```python
     from mne import read_epochs
-    epochs = read_epochs('ctf-epo.fif')
+    epochs_ctf = read_epochs('ctf-epo.fif')
     print(type(epochs))
 ```
 
@@ -117,20 +130,20 @@ And then in Python, you can read the ''Epochs'' with:
 If we have the data as ''Raw'' in MNE-Python, we can create epochs, using the ''Epochs'' class
 
 ```python
-    from mne import read_events, Epochs
-    from mne.fiff import Raw
+    from mne import read_events, write_events, Epochs
+    from mne.io import Raw
 
-    raw = Raw('ctf_raw.fif')
-    events = read_events('ctf_raw-eve.fif')
+    raw = Raw('ctf-raw.fif')
+    events = read_events('ctf-raw-eve.fif')
     print(events)
 
     # create events based on the index in the third column of events
-    event_ids = {'eventA': 4, 'eventB': 8}
+    event_ids = {'backpanel trigger_4': 5, 'backpanel trigger_8': 6}
     tmin = -0.6
     tmax = 0.6
-    epochs = Epochs(raw, events, event_ids, tmin, tmax, baseline=(None, 0))
+    epochs = Epochs(raw, events, event_ids, tmin, tmax, baseline=None)
     epochs.save('mne_python-epo.fif')
-    mne.write_events('mne_python-eve.fif', epochs.events)
+    write_events('mne_python-eve.fif', epochs.events)
 ```
 
 And then in MATLAB
