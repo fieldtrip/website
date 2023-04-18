@@ -143,31 +143,30 @@ If we have the data as ''Raw'' in MNE-Python, we can create epochs, using the ''
     tmax = 0.6-1/600
     epochs = Epochs(raw, events, event_ids, tmin, tmax, baseline=None)
     epochs.save('mne_python-epo.fif')
-    write_events('mne_python-eve.fif', epochs.events)
 ```
 
 And then in MATLAB
 
     fiff_file   = 'mne_python-epo.fif';
-    events_file = 'mne_python-eve.fif';
     
     cfg         = [];
     cfg.dataset = fiff_file;
     data_mp     = ft_preprocessing(cfg);
 
-    [eventlist, mappings] = fiff_read_events(events_file);
+    [eventlist, mappings] = fiff_read_events(fiff_file); % an epoch file contains events
     data_mp.trialinfo = eventlist(:,3); % note that the events have been recoded w.r.t. the original trigger values
     
 where ''data_mp'' contains the data organized in multiple trials.
 
-Alternatively, one could also use the FieldTrip function [ft_definetrial](/reference/ft_definetrial/
+Alternatively, one could also use the FieldTrip function [ft_definetrial](/reference/ft_definetrial/. 
 
     fiff_file = 'mne_python-epo.fif';
-    cfg = [];
-    cfg.dataset = fiff_file_epo;
-    cfg.trialdef.eventtype  = 'trial';
-    cfg.trialfun = 'ft_trialfun_general';
-    cfg = ft_definetrial(cfg);
+    
+    cfg                    = [];
+    cfg.dataset            = fiff_file;
+    cfg.trialdef.eventtype = 'trial';
+    cfg.trialfun           = 'ft_trialfun_general';
+    cfg                    = ft_definetrial(cfg);
 
 where ''data1'' contains the data organized in multiple trials including condition labelling.
 
