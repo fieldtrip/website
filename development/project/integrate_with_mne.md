@@ -140,7 +140,7 @@ If we have the data as ''Raw'' in MNE-Python, we can create epochs, using the ''
     # create events based on the index in the third column of events
     event_ids = {'backpanel trigger_4': 5, 'backpanel trigger_8': 6}
     tmin = -0.6
-    tmax = 0.6
+    tmax = 0.6-1/600
     epochs = Epochs(raw, events, event_ids, tmin, tmax, baseline=None)
     epochs.save('mne_python-epo.fif')
     write_events('mne_python-eve.fif', epochs.events)
@@ -148,21 +148,19 @@ If we have the data as ''Raw'' in MNE-Python, we can create epochs, using the ''
 
 And then in MATLAB
 
-    fiff_file = 'mne_python-epo.fif';
+    fiff_file   = 'mne_python-epo.fif';
     events_file = 'mne_python-eve.fif';
-    cfg = [];
+    
+    cfg         = [];
     cfg.dataset = fiff_file;
-    data1 = ft_preprocessing(cfg);
+    data_mp     = ft_preprocessing(cfg);
 
-    event_file = mne_read_events(events_file);
-    data1.trialinfo = event_file(:,3);
-    data1.cfg.trl(:,4) = event_file(:,3);
+    [eventlist, mappings] = fiff_read_events(events_file);
+    data_mp.trialinfo = eventlist(:,3); % note that the events have been recoded w.r.t. the original trigger values
+    
+where ''data_mp'' contains the data organized in multiple trials.
 
-    ft_datatype(data1)  % returns 'raw'
-
-where ''data1'' contains the data organized in multiple trials.
-
-Better, one could also use the inbuilt-function [ft_definetrial](/reference/ft_definetrial/
+Alternatively, one could also use the FieldTrip function [ft_definetrial](/reference/ft_definetrial/
 
     fiff_file = 'mne_python-epo.fif';
     cfg = [];
