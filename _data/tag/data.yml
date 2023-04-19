@@ -70,7 +70,7 @@
 - name:  Getting started with ASA and EEProbe
   link:  /getting_started/antneuro
 
-- name:  How can I use AnyWave for reviewing continuous data?
+- name:  Getting started with AnyWave
   link:  /getting_started/anywave
 
 - name:  Getting started with Artinis NIRS data
@@ -118,7 +118,7 @@
 - name:  Getting started with EEGLAB
   link:  /getting_started/eeglab
 
-- name:  Getting started with Philips/EGI data
+- name:  Getting started with EGI/Philips/Magstim data
   link:  /getting_started/egi
 
 - name:  Getting started with SR-Research EyeLink eye-tracker data

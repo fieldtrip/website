@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1016/j.isci.2023.106384
+- idtype: pmcid
+  value: PMC10064222
+authors:
+- authtype: Author
+  name: Vandewouw MM
+- authtype: Author
+  name: Pang EW
+- authtype: Author
+  name: Lai MC
+- authtype: Author
+  name: Kelley E
+- authtype: Author
+  name: Ayub M
+- authtype: Author
+  name: Lerch JP
+- authtype: Author
+  name: Taylor MJ
+- authtype: Author
+  name: Anagnostou E
+epubdate: 2023 Mar 11
+fulljournalname: iScience
+issue: '4'
+pages: '106384'
+pmclivedate: 2023/04/01
+printpubdate: ''
+pubdate: 2023 Mar 11
+sortdate: 2023/03/11 00:00
+source: iScience
+title: 'Richer than we thought: neurophysiological methods reveal rich-club network
+  development is frequency- and sex-dependent'
+uid: '10064222'
+volume: '26'

@@ -136,6 +136,9 @@
 - name:  Template 3-D electrode sets
   link:  /template/electrode
 
+- name:  Template 3-D gradiometer descriptions
+  link:  /template/gradiometer
+
 - name:  Introduction on dealing with artifacts
   link:  /tutorial/artifacts
 

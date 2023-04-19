@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fnins.2023.1118650
+- idtype: pmcid
+  value: PMC10025410
+authors:
+- authtype: Author
+  name: Li Y
+- authtype: Author
+  name: Li C
+- authtype: Author
+  name: Zhang T
+- authtype: Author
+  name: Wu L
+- authtype: Author
+  name: Lin X
+- authtype: Author
+  name: Li Y
+- authtype: Author
+  name: Wang L
+- authtype: Author
+  name: Yang H
+- authtype: Author
+  name: Lu D
+- authtype: Author
+  name: Miao D
+- authtype: Author
+  name: Fang P
+epubdate: 2023 Mar 6
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '1118650'
+pmclivedate: 2023/03/21
+printpubdate: ''
+pubdate: 2023 Mar 6
+sortdate: 2023/03/06 00:00
+source: Front Neurosci
+title: 'Questionnaires based on natural language processing elicit immersive ruminative
+  thinking in ruminators: Evidence from behavioral responses and EEG data'
+uid: '10025410'
+volume: '17'

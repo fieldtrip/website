@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3390/brainsci13030441
+- idtype: pmcid
+  value: PMC10046466
+authors:
+- authtype: Author
+  name: Batista AR
+- authtype: Author
+  name: Catronas D
+- authtype: Author
+  name: Folia V
+- authtype: Author
+  name: Silva S
+epubdate: 2023 Mar 4
+fulljournalname: Brain Sciences
+issue: '3'
+pages: '441'
+pmclivedate: 2023/03/29
+printpubdate: ''
+pubdate: 2023 Mar 4
+sortdate: 2023/03/04 00:00
+source: Brain Sci
+title: 'Increased Pre-Boundary Lengthening Does Not Enhance Implicit Intonational
+  Phrase Perception in European Portuguese: An EEG Study'
+uid: '10046466'
+volume: '13'

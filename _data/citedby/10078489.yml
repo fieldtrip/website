@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '36153813'
+- idtype: doi
+  value: 10.1111/psyp.14191
+- idtype: pmcid
+  value: PMC10078489
+authors:
+- authtype: Author
+  name: Simor P
+- authtype: Author
+  name: Bogdány T
+- authtype: Author
+  name: Sifuentes‐Ortega R
+- authtype: Author
+  name: Rovai A
+- authtype: Author
+  name: Peigneux P
+epubdate: 2022 Sep 25
+fulljournalname: Psychophysiology
+issue: '3'
+pages: e14191
+pmclivedate: 2023/04/07
+printpubdate: 2023 Mar
+pubdate: 2022 Sep 25
+sortdate: 2022/09/25 00:00
+source: Psychophysiology
+title: Lateralized tactile stimulation during NREM sleep globally increases both slow
+  and fast frequency activities
+uid: '10078489'
+volume: '60'

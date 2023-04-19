@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '37032829'
+- idtype: doi
+  value: 10.3389/fnagi.2023.1081058
+- idtype: pmcid
+  value: PMC10075364
+authors:
+- authtype: Author
+  name: van den Berg M
+- authtype: Author
+  name: Toen D
+- authtype: Author
+  name: Verhoye M
+- authtype: Author
+  name: Keliris GA
+epubdate: 2023 Mar 22
+fulljournalname: Frontiers in Aging Neuroscience
+issue: ''
+pages: '1081058'
+pmclivedate: 2023/04/06
+printpubdate: ''
+pubdate: 2023 Mar 22
+sortdate: 2023/03/22 00:00
+source: Front Aging Neurosci
+title: Alterations in theta-gamma coupling and sharp wave-ripple, signs of prodromal
+  hippocampal network impairment in the TgF344-AD rat model
+uid: '10075364'
+volume: '15'

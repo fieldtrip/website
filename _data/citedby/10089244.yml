@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '36894317'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1641-22.2023
+- idtype: pmcid
+  value: PMC10089244
+authors:
+- authtype: Author
+  name: Blackman RK
+- authtype: Author
+  name: Crowe DA
+- authtype: Author
+  name: DeNicola AL
+- authtype: Author
+  name: Sakellaridi S
+- authtype: Author
+  name: Westerberg JA
+- authtype: Author
+  name: Huynh AM
+- authtype: Author
+  name: MacDonald AW
+- authtype: Author
+  name: Sponheim SR
+- authtype: Author
+  name: Chafee MV
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '15'
+pages: 2767-2781
+pmclivedate: ''
+printpubdate: 2023 Apr 12
+pubdate: 2023 Apr 12
+sortdate: 2023/04/12 00:00
+source: J Neurosci
+title: Shared Neural Activity But Distinct Neural Dynamics for Cognitive Control in
+  Monkey Prefrontal and Parietal Cortex
+uid: '10089244'
+volume: '43'

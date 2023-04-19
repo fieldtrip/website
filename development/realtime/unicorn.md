@@ -1,9 +1,9 @@
 ---
-title: Unicorn Hybrid Black
+title: Streaming realtime data from Unicorn Hybrid Black
 tags: [realtime, unicorn]
 ---
 
-# Unicorn Hybrid Black
+# Streaming realtime data from Unicorn Hybrid Black
 
 The [Unicorn Hybrid Black](https://www.unicorn-bi.com) 8-channel EEG is a low-cost head-mounted and wireless EEG system that is developed and distributed by [Gtec](https://www.gtec.at). Besides 8 channels of EEG, it provides 3 accelerometer channels, 3 gyroscope channel, the battery status and a sample counter.
 

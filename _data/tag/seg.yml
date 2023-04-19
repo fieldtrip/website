@@ -4,6 +4,12 @@
 - name:  How is the segmentation defined?
   link:  /faq/how_is_the_segmentation_defined
 
-- name:  How can I use Seg3D to check and modify segmentation results?
+- name:  Getting started with ParaView
+  link:  /getting_started/paraview
+
+- name:  Getting started with Seg3D
   link:  /getting_started/seg3d
+
+- name:  Creating a FEM volume conduction model of the head for source reconstruction of EEG data
+  link:  /tutorial/headmodel_eeg_fem
 

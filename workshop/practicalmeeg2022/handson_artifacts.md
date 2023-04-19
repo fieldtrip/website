@@ -100,7 +100,7 @@ We might want to decide that we want to exclude trials with blinks from further 
            89251       89760
           112201      112710
 
-This `artifact` matrix is very comparable to the `trl` matrix that **[ft_definetrial](/reference/ft_definetrial)** returns. In this case it contains the begin and endsample of each artifact that was detected using the "channel" method in **[ft_rejectvisual](/ft_rejectvisual)**.
+This `artifact` matrix is very comparable to the `trl` matrix that **[ft_definetrial](/reference/ft_definetrial)** returns. In this case it contains the begin and endsample of each artifact that was detected using the "channel" method in **[ft_rejectvisual](/reference/ft_rejectvisual)**.
 
 {% include markup/info %}
 Had the data structure contained the `sampleinfo` field with a specification how each trial maps onto the continuous recording on disk, then the artifacts would have been expressed relative to the recording on disk. This allows for the same visual/manual identification of artifacts to be used repeatedly, even if you do the preprocessing again and for example extend the pre- or post-stimulus time a bit.

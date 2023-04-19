@@ -1,9 +1,9 @@
 ---
-title: Emotiv neuroheadset
+title: Streaming realtime data from Emotiv neuroheadset
 tags: [realtime, emotiv]
 ---
 
-# Emotiv neuroheadset
+# Streaming realtime data from Emotiv neuroheadset
 
 This page describes the interface between the 14-channel Emotiv neuroheadset and the FieldTrip buffer.
 

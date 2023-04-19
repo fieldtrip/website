@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1007/s11571-022-09832-z
+- idtype: pmcid
+  value: PMC10050242
+authors:
+- authtype: Author
+  name: Martín-Chinea K
+- authtype: Author
+  name: Ortega J
+- authtype: Author
+  name: Gómez-González JF
+- authtype: Author
+  name: Pereda E
+- authtype: Author
+  name: Toledo J
+- authtype: Author
+  name: Acosta L
+epubdate: 2022 Jul 1
+fulljournalname: Cognitive Neurodynamics
+issue: '2'
+pages: 385-398
+pmclivedate: 2023/03/30
+printpubdate: 2023 Apr
+pubdate: 2022 Jul 1
+sortdate: 2022/07/01 00:00
+source: Cogn Neurodyn
+title: Effect of time windows in LSTM networks for EEG-based BCIs
+uid: '10050242'
+volume: '17'

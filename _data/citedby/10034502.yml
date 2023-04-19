@@ -1,0 +1,23 @@
+articleids:
+- idtype: pmid
+  value: '36970022'
+- idtype: doi
+  value: 10.1016/j.mex.2023.102116
+- idtype: pmcid
+  value: PMC10034502
+authors:
+- authtype: Author
+  name: Candia-Rivera D
+epubdate: 2023 Mar 8
+fulljournalname: MethodsX
+issue: ''
+pages: '102116'
+pmclivedate: 2023/03/24
+printpubdate: ''
+pubdate: 2023 Mar 8
+sortdate: 2023/03/08 00:00
+source: MethodsX
+title: Modeling brain-heart interactions from Poincaré plot-derived measures of sympathetic-vagal
+  activity
+uid: '10034502'
+volume: '10'

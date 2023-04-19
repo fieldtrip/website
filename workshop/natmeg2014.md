@@ -1,11 +1,13 @@
 ---
 title: FieldTrip course at the NatMEG in Stockholm
-tags: [natmeg, meg-audodd]
+tags: [natmeg2014, meg-audodd]
+redirect_from:
+  - /workshop/natmeg/
 ---
 
 # FieldTrip course at the NatMEG in Stockholm
 
-{% include image src="/assets/img/workshop/natmeg/natmeg_pos.png" width="200" %}
+{% include image src="/assets/img/workshop/natmeg2014/natmeg_pos.png" width="200" %}
 
 - Where: NatMEG, Karolinska Institute, Stockholm, Sweden
 - When: 29 Sept - 3 Oct 2014
@@ -21,11 +23,11 @@ You can watch all lectures on NatMEG's [online lectures page](http://natmeg.se/l
 
 The following tutorials will be covered in the hands-on sessions during the MEG-EEG FieldTrip workshop at NatMEG in Stockholm, Sweden (September 29th - October 3rd, 2014).
 
-We will use the same dataset throughout the workshop. Please familiarize yourself with the [dataset](/workshop/natmeg/meg_audodd) that we recorded.
+We will use the same dataset throughout the workshop. Please familiarize yourself with the [dataset](/workshop/natmeg2014/meg_audodd) that we recorded.
 
-You can download the dataset from our [download server](https://download.fieldtriptoolbox.org/workshop/natmeg/).
+You can download the dataset from our [download server](https://download.fieldtriptoolbox.org/workshop/natmeg2014/).
 
-- Tuesday: [Preprocessing and event-related activity in MEG and EEG](/workshop/natmeg/preprocessing)
-- Wednesday: [Time-frequency analysis](/workshop/natmeg/timefrequency) and [Dipole fitting](/workshop/natmeg/dipolefitting)
-- Thursday: [Beamforming](/workshop/natmeg/beamforming)
-- Friday: [Statistics](/workshop/natmeg/statistics)
+- Tuesday: [Preprocessing and event-related activity in MEG and EEG](/workshop/natmeg2014/preprocessing)
+- Wednesday: [Time-frequency analysis](/workshop/natmeg2014/timefrequency) and [Dipole fitting](/workshop/natmeg2014/dipolefitting)
+- Thursday: [Beamforming](/workshop/natmeg2014/beamforming)
+- Friday: [Statistics](/workshop/natmeg2014/statistics)

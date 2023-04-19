@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '36863546'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2023.119998
+- idtype: pmcid
+  value: PMC7614400
+- idtype: MID
+  value: EMS173193
+authors:
+- authtype: Author
+  name: Dowdall JR
+- authtype: Author
+  name: Vinck M
+epubdate: 2023 Feb 28
+fulljournalname: NeuroImage
+issue: ''
+pages: '119998'
+pmclivedate: 2023/04/07
+printpubdate: 2023 Feb 28
+pubdate: 2023 Feb 28
+sortdate: 2023/02/28 00:00
+source: Neuroimage
+title: Coherence fails to reliably capture inter-areal interactions in bidirectional
+  neural systems with transmission delays
+uid: '7614400'
+volume: '271'

@@ -1,7 +1,7 @@
 - name:  MEG dataformats
   link:  /dataformat/meg
 
-- name:  Neuromag/Elekta/Megin
+- name:  Streaming realtime data from Neuromag/Elekta/Megin
   link:  /development/realtime/neuromag
 
 - name:  Find the orientation of planar gradiometers
@@ -15,4 +15,7 @@
 
 - name:  Getting started with Neuromag/Elekta/Megin data
   link:  /getting_started/neuromag
+
+- name:  Template 3-D gradiometer descriptions
+  link:  /template/gradiometer
 

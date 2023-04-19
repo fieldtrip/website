@@ -28,13 +28,13 @@
 - name:  Parametric and non-parametric statistics on event-related fields
   link:  /tutorial/eventrelatedstatistics
 
-- name:  Creating a BEM volume conduction model of the head for source-reconstruction of EEG data
+- name:  Creating a BEM volume conduction model of the head for source reconstruction of EEG data
   link:  /tutorial/headmodel_eeg_bem
 
-- name:  Creating a FEM volume conduction model of the head for source-reconstruction of EEG data
+- name:  Creating a FEM volume conduction model of the head for source reconstruction of EEG data
   link:  /tutorial/headmodel_eeg_fem
 
-- name:  Creating a volume conduction model of the head for source-reconstruction of MEG data
+- name:  Creating a volume conduction model of the head for source reconstruction of MEG data
   link:  /tutorial/headmodel_meg
 
 - name:  Details of the MEG language dataset
@@ -46,7 +46,7 @@
 - name:  Preprocessing - Segmenting and reading trial-based EEG and MEG data
   link:  /tutorial/preprocessing
 
-- name:  Creating a sourcemodel for source-reconstruction of MEG or EEG data
+- name:  Creating a sourcemodel for source reconstruction of MEG or EEG data
   link:  /tutorial/sourcemodel
 
 - name:  Time-frequency analysis using Hanning window, multitapers and wavelets
@@ -54,4 +54,7 @@
 
 - name:  Visual artifact rejection
   link:  /tutorial/visual_artifact_rejection
+
+- name:  Time-frequency analysis using Hanning window, multitapers and wavelets
+  link:  /workshop/ni2_timefrequencyanalysis
 

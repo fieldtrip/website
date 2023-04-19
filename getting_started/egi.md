@@ -1,17 +1,17 @@
 ---
-title: Getting started with Philips/EGI data
+title: Getting started with EGI/Philips/Magstim data
 tags: [dataformat, egi, eeg]
 ---
 
-# Getting started with EGI/Philips data
+# Getting started with EGI/Philips/Magstim data
 
-Please add information if you're using EGI/Philips data and want to share info with other FieldTrip users.
+Please add information if you're using EGI/Philips/Magstim data and want to share info with other FieldTrip users.
 
 ## Introduction to the EGI file formats
 
 Net Station can export data to several data formats that FieldTrip can read in.
 
-- Data in the .egis, .sbin, and .mff formats can be read in by FieldTrip. We don't have details on how well they work, and what the known issues are. 
+- Data in the .egis, .sbin, and .mff formats can be read in by FieldTrip. We don't have details on how well they work, and what the known issues are.
 - For the simple binary (.raw) format only the channels from the hdEEG net are exported, the PIB channels, for instance, are not. Channel labels are not present in this format, and are thus made on the fly by FieldTrip. Events are present and read in correctly. Data sets containing multiple epochs are exported by NetStation as separate .raw files. The events are, however, exported as one file, which make it tricky (read impossible) to align data and events properly when having multiple discontinuous epochs.
 - After exporting to EDF/EDF+ (.edf) all channels, including PIB channels, are read in correctly, including channel labels. However, the events, which are stored on the annotation channel, are written in a way by Net Station that is not compatible with the edf+ reading implementation in FieldTrip. So, events do not come out properly. Also discontinuous epochs are "glued" together as one "continuous" data stream.
 - Other formats like .ave, .gave, .ses are not supported, but the data can be read by exporting to one of the supported formats.

@@ -410,19 +410,6 @@ You should use the gcc compiler that is included in the Xcode package. Further d
 
 Although a nested function has certain advantages, it makes maintaining the code more difficult. Furthermore, ft_preamble and eval are not fully compatible with nested functions.
 
-## Avoid using inline functions
-
-The inline construction
-
-    assign = @(var, val) assignin('caller', var, val);
-
-is not supported in GNU Octave; instead you should define a sub-function like this
-
-    function assign_var(var, val)
-    assignin('caller', var, val);
-
-to accomplish the same goal.
-
 ## Use a consistent spacing
 
 It is annoying to get large git diffs just because of changes in the whitespace. That is why all developers are encouraged to work with two spaces instead of tabs. In the MATLAB editor you can specify this in Preferences->Editor/Debugger->Tab, where you can specify "2" and "tab key inserts spaces".

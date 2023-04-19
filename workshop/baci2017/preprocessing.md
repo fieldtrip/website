@@ -53,7 +53,6 @@ The median nerve of the subject's right wrist was stimulated using square electr
 The EEG system records event-triggers in separate channels. These channels are recorded simultaneously with the data channels, and at the same sampling rate. The onset can therefore be precisely timed with respect to the data. The following trigger codes can be used for the analysis we will be doing during the worksho
 
 - Onset of standard stimulus: 2
-
 - Name of standard stimulus : rightArm
 
 #### Data
@@ -81,10 +80,9 @@ The following steps are taken in the EEG section of the tutorial:
 
 To get going, you need to start MATLAB. Then, you need to issue the following command
 
-    clc;
-    clear;
-    close all;
-
+    clc
+    clear
+    close all
     restoredefaultpath    % restore default folder for matlab
 
     maindir = pwd;        % keep main path
@@ -133,7 +131,6 @@ We will filter the data using **[ft_preprocessing](/reference/ft_preprocessing)*
 The output of data is the structure data which has the following field
 
     data =
-
              hdr: [1x1 struct]
             elec: [1x1 struct]
          fsample: 1200
@@ -176,7 +173,7 @@ We should rereference the averaged EEG data for later use in the inverse problem
     cfg.reref         = 'yes';
     cfg.refchannel    = 'all';
     cfg.refmethod     = 'avg';
-    EEG_avg           = ft_preprocessing(cfg,EEG_avg);
+    EEG_avg           = ft_preprocessing(cfg, EEG_avg);
 
 ### Global Mean Field Power
 
@@ -189,26 +186,26 @@ where t is time, V is the voltage at channel i and K is the number of channels.
 
 FieldTrip has a built-in function to calculate the GMFP; [ft_globalmeanfield](/reference/ft_globalmeanfield). This function requires timelocked data as input. We will use similar preprocessing as applied in [Esser et al. (2006)](http://dx.doi.org/10.1016/j.brainresbull.2005.11.003).
 
-    %global mean field power calculation for visualization purposes
-    cfg = [];
-    cfg.method = 'amplitude';
-    EEG_gmfp = ft_globalmeanfield(cfg, EEG_avg);
+    % global mean field power calculation for visualization purposes
+    cfg         = [];
+    cfg.method  = 'amplitude';
+    EEG_gmfp    = ft_globalmeanfield(cfg, EEG_avg);
 
 ### Plotting the results of EEG
 
 Using the plot functions **[ft_topoplotER](/reference/ft_topoplotER)** and **[ft_multiplotER](/reference/ft_multiplotER)** you can plot the average of the trials. You can find information about plotting also in the [Plotting data at the channel and source level](/tutorial/plotting) tutorial. Furthermore, we use the below script to visualize single trial with global mean field power and we find the time of interest and we save it together with the EEG_avg.
 
-    figure;
+    figure
 
     pol = -1;     % correct polarity
     scale = 10^6; % scale for eeg data micro volts
 
-    signal = scale*pol*EEG_avg.avg; % add signle trials in a new value
+    signal = scale * pol * EEG_avg.avg; % add single trials in a new value
 
     % plot single trial together with global mean field power
-    h1 = plot(EEG_avg.time,signal,'color',[0,0,0.5]);
+    h1 = plot(EEG_avg.time,signal, 'color',[0,0,0.5]);
     hold on;
-    h2 = plot(EEG_avg.time,scale*EEG_gmfp.avg,'color',[1,0,0],'linewidth',1);
+    h2 = plot(EEG_avg.time,scale*EEG_gmfp.avg, 'color',[1,0,0], 'linewidth',1);
 
 {% include image src="/assets/img/workshop/baci2017/preprocessing/baci_sep_singleploter.png" width="600" %}
 
@@ -216,11 +213,11 @@ _Figure 2: Representation of single trial (blue) and the global mean field power
 
 We set up values to create the image you observe before.
 
-    legend([h1(1,1),h2],{'EEG','GMFP'});
+    legend([h1(1,1),h2],{'EEG', 'GMFP'});
     grid on;
-    ylabel('SEP (\muV)','Interpreter','Tex');
+    ylabel('SEP (\muV)', 'Interpreter', 'Tex');
     xlabel('Time (s)')
-    set(gca,'fontsize',18,'fontname','Century Gothic');
+    set(gca, 'fontsize',18, 'fontname', 'Century Gothic');
 
     mx = max(max(signal));
     mn = min(min(signal));
@@ -236,7 +233,7 @@ We set up values to create the image you observe before.
 We save the data and the picture.
 
     % save the single trial with the time of interest
-    save('EEG_avg.mat','EEG_avg','toi_mean_trial')
+    save('EEG_avg.mat', 'EEG_avg', 'toi_mean_trial')
 
     set(gcf, 'Position',[1 1 1200 800])
     print -dpng baci_sep_singleplotER.png
@@ -250,7 +247,7 @@ Use **[ft_multiplotER](/reference/ft_multiplotER)** to plot all sensors in one f
     cfg.ylim     = [-5e-6 5e-6];
     cfg.xlim     = [-0.1 0.2];
 
-    figure;
+    figure
     ft_multiplotER(cfg, EEG_avg);
 
     set(gcf, 'Position',[1 1 1200 800])
@@ -270,7 +267,7 @@ Use **[ft_topoplotER](/reference/ft_topoplotER)** to plot the topographic distri
     cfg.layout     = 'elec1010.lay';
     cfg.fontsize   = 14;
 
-    figure;
+    figure
     ft_topoplotER(cfg, EEG_avg);
 
     set(gcf, 'Position',[1 1 1200 800])

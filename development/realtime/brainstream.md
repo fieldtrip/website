@@ -1,11 +1,9 @@
 ---
-title: BrainStream
+title: Streaming realtime data from and to BrainStream
 tags: [realtime]
 ---
 
-# BrainStream
-
-## Introduction
+# Streaming realtime data from and to BrainStream
 
 [BrainStream ](http://www.brainstream.nu) is a MATLAB application that is being developed in the context of the [BrainGain ](http://www.braingain.nl) project by Philip van den Broek, Peter Desain and coworkers at the [Donders Centre for Cognition](https://www.ru.nl/cognition) (formerly the NICI).
 

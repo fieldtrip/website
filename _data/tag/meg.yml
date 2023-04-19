@@ -160,13 +160,13 @@
 - name:  Fourier analysis of neuronal oscillations and synchronization
   link:  /tutorial/fourier
 
-- name:  Creating a BEM volume conduction model of the head for source-reconstruction of EEG data
+- name:  Creating a BEM volume conduction model of the head for source reconstruction of EEG data
   link:  /tutorial/headmodel_eeg_bem
 
-- name:  Creating a FEM volume conduction model of the head for source-reconstruction of EEG data
+- name:  Creating a FEM volume conduction model of the head for source reconstruction of EEG data
   link:  /tutorial/headmodel_eeg_fem
 
-- name:  Creating a volume conduction model of the head for source-reconstruction of MEG data
+- name:  Creating a volume conduction model of the head for source reconstruction of MEG data
   link:  /tutorial/headmodel_meg
 
 - name:  Cleaning artifacts using ICA
@@ -193,7 +193,7 @@
 - name:  Sensor-level ERF, TFR and connectivity analyses
   link:  /tutorial/sensor_analysis
 
-- name:  Creating a sourcemodel for source-reconstruction of MEG or EEG data
+- name:  Creating a sourcemodel for source reconstruction of MEG or EEG data
   link:  /tutorial/sourcemodel
 
 - name:  Time-frequency analysis using Hanning window, multitapers and wavelets
@@ -239,25 +239,28 @@
   link:  /workshop/meg-uk-2015/spm_stats
 
 - name:  FieldTrip course at the NatMEG in Stockholm
-  link:  /workshop/natmeg
+  link:  /workshop/natmeg2014
 
 - name:  Beamforming oscillatory responses in combined MEG/EEG data
-  link:  /workshop/natmeg/beamforming
+  link:  /workshop/natmeg2014/beamforming
 
 - name:  Dipole fitting of combined MEG/EEG data
-  link:  /workshop/natmeg/dipolefitting
+  link:  /workshop/natmeg2014/dipolefitting
 
 - name:  Description of the auditory oddball MEG+EEG dataset
-  link:  /workshop/natmeg/meg_audodd
+  link:  /workshop/natmeg2014/meg_audodd
 
 - name:  Preprocessing and event-related activity in combined MEG/EEG data
-  link:  /workshop/natmeg/preprocessing
+  link:  /workshop/natmeg2014/preprocessing
 
 - name:  Statistical analysis and multiple comparison correction for combined MEG/EEG data
-  link:  /workshop/natmeg/statistics
+  link:  /workshop/natmeg2014/statistics
 
 - name:  Time-frequency analysis of combined MEG/EEG data
-  link:  /workshop/natmeg/timefrequency
+  link:  /workshop/natmeg2014/timefrequency
+
+- name:  Time-frequency analysis using Hanning window, multitapers and wavelets
+  link:  /workshop/ni2_timefrequencyanalysis
 
 - name:  Beamforming oscillatory responses in MEG data
   link:  /workshop/oslo2019/beamforming

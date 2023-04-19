@@ -328,9 +328,23 @@ The figure created like this is interactive, like all multiplot figures, and you
 
 The topographic interpretation of the color-coded interpolated values on the ECoG grids is quite OK (although be aware of the interpolation artefacts where the two grids are close to each other), but the color-coded interpolated values on the shafts should be interpreted with caution.
 
+## Making a layout for LFP/spike electrodes
+
+FieldTrip does not include specific template layouts for LFP or spike data. However, the functionality that is available for sEEG probes (see above) can also be used for laminar probes, and the functionality for ECoG grids (see above) can be used for regular NxM arrangemnents of electrodes that are more common in silicon probes like the Utah array.
+
+For regular arragements the following options for `cfg.layout`  in **[ft_prepare_layout](/reference/ft_prepare_layout)** can be used:
+
+- 'ordered'    will give you a NxN ordered layout
+- 'vertical'   will give you a Nx1 ordered layout
+- 'horizontal' will give you a 1xN ordered layout
+
+and the ordered layout can be specified in more detail with the options `cfg.rows`, `cfg.columns` and `cfg.direction`. Once you have a layout for a specific probe, you can save it to disk as a `.mat` or `.lay` file, share it and/or reuse it.
+
+See also the [probeinterface](https://probeinterface.readthedocs.io) Python package with which you can design and specify probes for electrophysiological recordings.
+
 ## Functions that make use of a 2D layout for visualization
 
-Layouts are used in all 2D plotting functions in FieldTrip:
+Layouts that are constructed (or read from disk) using **[ft_prepare_layout](/reference/ft_prepare_layout)** are subsequently used in all 2D plotting functions in FieldTrip:
 
 - **[ft_multiplotER](/reference/ft_multiplotER)**
 - **[ft_multiplotTFR](/reference/ft_multiplotTFR)**
@@ -342,11 +356,11 @@ Layouts are used in all 2D plotting functions in FieldTrip:
 - **[ft_neighbourplot](/reference/ft_neighbourplot)**
 - **[ft_layoutplot](/reference/ft_layoutplot)**
 
-Furthermore, the **[ft_prepare_neighbours](/reference/ft_prepare_neighbours)** function allows you to specify a channel layout to determine neighboring channels. Please note that it is more accurate to determine neighbors from the 3D representation of the channel positions, you should only use the layout if you don't have actual 3D channel positions.
+Furthermore, the **[ft_prepare_neighbours](/reference/ft_prepare_neighbours)** function allows you to specify a channel layout to determine neighboring channels. Note that it is more accurate to determine neighbors from the 3D representation of the channel positions, so you should only use the 2D layout if you don't have actual 3D channel positions.
 
 ## The format of layout files
 
-The layout is represented on disk in ASCII file with the extension .lay, or in MATLAB files that contain a variable with the name "layout" or "lay". In general, MATLAB layout files are preferred since they allow a detailed specification of the outlines of the head shape (EEG) or helmet (MEG). For ASCII layout files a standard head shape that consists of a circle (for the head) with ears and the nose at the top will be drawn around the normalized channel positions.
+The layout is represented on disk in ASCII file with the extension `.lay`, or in MATLAB `.mat` files that contain a variable with the name "layout" or "lay". In general, MATLAB layout files are preferred since they allow a detailed specification of the outlines of the head shape (EEG) or helmet (MEG). For ASCII layout files a standard head shape that consists of a circle (for the head) with ears and the nose at the top will be drawn around the normalized channel positions.
 
 Here is a small snippet of an ASCII layout file:
 

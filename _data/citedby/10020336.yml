@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fpain.2023.1072786
+- idtype: pmcid
+  value: PMC10020336
+authors:
+- authtype: Author
+  name: Ramadan A
+- authtype: Author
+  name: König SD
+- authtype: Author
+  name: Zhang M
+- authtype: Author
+  name: Ross EK
+- authtype: Author
+  name: Herman A
+- authtype: Author
+  name: Netoff TI
+- authtype: Author
+  name: Darrow DP
+epubdate: 2023 Mar 3
+fulljournalname: Frontiers in Pain Research
+issue: ''
+pages: '1072786'
+pmclivedate: 2023/03/18
+printpubdate: ''
+pubdate: 2023 Mar 3
+sortdate: 2023/03/03 00:00
+source: Front Pain Res (Lausanne)
+title: Methods and system for recording human physiological signals from implantable
+  leads during spinal cord stimulation
+uid: '10020336'
+volume: '4'

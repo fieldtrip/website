@@ -36,7 +36,7 @@ There will also be other experts from MNE-Python, BrainStorm and EEGLAB with the
 
 ### Get an overview of FieldTrip
 
-Please take a quick look at the [FieldTrip reference paper](https://doi.org/10.1155/2011/156869) if you havenot done so already. If you have an hour or so, you can watch this [introductory lecture](https://www.youtube.com/watch?v=7B4rDZYwQLM). Note that more recorded lectures are available as [video](/video).
+Please take a quick look at the [FieldTrip reference paper](https://doi.org/10.1155/2011/156869) if you have not done so already. If you have an hour or so, you can watch this [introductory lecture](https://www.youtube.com/watch?v=7B4rDZYwQLM). Note that more recorded lectures are available as [video](/video).
 
 ### Download and install a recent FieldTrip version
 

@@ -16,7 +16,8 @@ The aim of this tutorial is to solve the EEG forward problem using two different
 ## Procedure
 
 As already mentioned, the goal of this session is to solve the EEG forward problem, more precisely we want to compute EEG leadfields so that the inverse problem can be solved in the next session ([inverse problem](/workshop/baci2017/inverseproblem)).
-In order to compute leadfields, there are 9 main steps that have to be followed.
+
+To compute the leadfields, there are 9 main steps that have to be followed.
 
 1.  Load and read the anatomical data, namely a T1-MRI (**[ft_read_mri](/reference/fileio/ft_read_mri)**);
 2.  Align the MRI to the electrodes. As the electrodes are expressed in the CTF coordinate system, we translate the MRI in the CTF coordinate system (**[ft_volumerealign](/reference/ft_volumerealign)**);
@@ -28,23 +29,24 @@ In order to compute leadfields, there are 9 main steps that have to be followed.
 8.  The sourcemodel is created, where the location of the sources is restrained to the brain compartment (from the BEM mesh) (**[ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)**);
 9.  Leadfields can be computed (**[ft_prepare_leadfield](/reference/ft_prepare_leadfield)**).
 
-The first 3 steps are the same for BEM and FEM. Steps from 4 to 8 differ between BEM and FEM.
-A more detailed description of these steps is following.
+The first 3 steps are the same for BEM and FEM. Steps from 4 to 8 differ between BEM and FEM. A more detailed description of these steps is following.
 
 {% include image src="/assets/img/workshop/baci2017/forwardproblem/scheme.png" %}
-_Figure1: pipeline for forward computation, in the blue box there are the steps which differ between BEM and FEM_
+
+_Figure 1: pipeline for forward computation, in the blue box there are the steps which differ between BEM and FEM_
 
 ## 1. Read the MRI
 
     mri_orig = ft_read_mri('subject01.nii');
 
-Visualize the MRI
+Visualize the MRI.
 
-    cfg=[];
-    ft_sourceplot(cfg,mri_orig);
+    cfg = [];
+    ft_sourceplot(cfg, mri_orig);
 
 {% include image src="/assets/img/workshop/baci2017/forwardproblem/mri_orig.png" %}
-_Figure2: visualization of the MRI_
+
+_Figure 2: visualization of the MRI_
 
 ## 2. Realign the MRI
 
@@ -61,7 +63,8 @@ We can visualize the realigned MRI
     ft_sourceplot(cfg, mri_realigned);
 
 {% include image src="/assets/img/workshop/baci2017/forwardproblem/mri_resliced.png" %}
-_Figure3: visualization of the realigned MRI_
+
+_Figure 3: visualization of the realigned MRI_
 
 ## 3. Reslice the MRI
 
@@ -78,12 +81,12 @@ We can visualize the resliced MRI
 ## 4A. Segment the MRI
 
     cfg = [];
-    cfg.output = {'brain','skull', 'scalp'};
+    cfg.output = {'brain', 'skull', 'scalp'};
     mri_segmented_3_compartment = ft_volumesegment(cfg, mri_resliced);
 
 Visualize the segmentation
 
-    seg_i = ft_datatype_segmentation(mri_segmented_3_compartment,'segmentationstyle','indexed');
+    seg_i = ft_datatype_segmentation(mri_segmented_3_compartment, 'segmentationstyle', 'indexed');
 
     cfg = [];
     cfg.funparameter = 'seg';
@@ -93,28 +96,27 @@ Visualize the segmentation
     ft_sourceplot(cfg, seg_i);
 
 {% include image src="/assets/img/workshop/baci2017/forwardproblem/mri_segmented_bem.png" %}
-_Figure4: 3 compartment segmentation output_
+
+_Figure 4: 3 compartment segmentation output_
 
 ## 5A. Create the mesh
 
     cfg = [];
-    cfg.tissue = {'brain','skull','scalp'};
+    cfg.tissue = {'brain', 'skull', 'scalp'};
     cfg.numvertices = [3000 2000 1000];
-    mesh_bem=ft_prepare_mesh(cfg,mri_segmented_3_compartment);
+    mesh_bem = ft_prepare_mesh(cfg, mri_segmented_3_compartment);
 
 Visualize the mesh and the electrode
 
     load elec; %load the electrodes
-    figure, ft_plot_mesh(mesh_bem(1),'surfaceonly','yes','vertexcolor','none','facecolor',...
-               'skin','facealpha',0.5,'edgealpha',0.1)
-    ft_plot_mesh(mesh_bem(2),'surfaceonly','yes','vertexcolor','none','facecolor',...
-               'skin','facealpha',0.5,'edgealpha',0.1)
-    ft_plot_mesh(mesh_bem(3),'surfaceonly','yes','vertexcolor','none','facecolor',...
-               'skin','facealpha',0.5,'edgealpha',0.1)
+    figure, ft_plot_mesh(mesh_bem(1), 'surfaceonly', 'yes', 'vertexcolor', 'none', 'facecolor', 'skin', 'facealpha',0.5, 'edgealpha',0.1)
+    ft_plot_mesh(mesh_bem(2), 'surfaceonly', 'yes', 'vertexcolor', 'none', 'facecolor', 'skin', 'facealpha',0.5, 'edgealpha',0.1)
+    ft_plot_mesh(mesh_bem(3), 'surfaceonly', 'yes', 'vertexcolor', 'none', 'facecolor', 'skin', 'facealpha',0.5, 'edgealpha',0.1)
     hold on, ft_plot_sens(elec, 'style', '*g');
 
 {% include image src="/assets/img/workshop/baci2017/forwardproblem/mesh_bem_elec.png" %}
-_Figure5: 3 compartment mesh with electrodes_
+
+_Figure 5: 3 compartment mesh with electrodes_
 
 ## 6A. Create the headmodel
 
@@ -141,31 +143,32 @@ Check the alignment visually.
     figure;
     ft_plot_axes(mesh_bem)
     hold on;
-    ft_plot_mesh(mesh_bem.bnd(1),'surfaceonly','yes','vertexcolor','none','facecolor',...
-               'skin','facealpha',0.5,'edgealpha',0.1)
-    ft_plot_sens(elec,'style', '.k');
+    ft_plot_mesh(mesh_bem.bnd(1), 'surfaceonly', 'yes', 'vertexcolor', 'none', 'facecolor', 'skin', 'facealpha',0.5, 'edgealpha',0.1)
+    ft_plot_sens(elec, 'style', '.k');
 
 {% include image src="/assets/img/workshop/baci2017/forwardproblem/aligned.png" %}
-_Figure6: mesh, electrodes and axes._
+
+_Figure 6: mesh, electrodes and axes._
 
 ## 8A. Create the sourcemodel
 
     cfg = [];
-    cfg.resolution = 7.5;
-    cfg.threshold = 0.1;
-    cfg.smooth = 5;
-    cfg.headmodel = headmodel_bem;
-    cfg.inwardshift = 1; %shifts dipoles away from surfaces
+    cfg.resolution  = 7.5;
+    cfg.threshold   = 0.1;
+    cfg.smooth      = 5;
+    cfg.headmodel   = headmodel_bem;
+    cfg.inwardshift = 1; % shifts dipoles away from surfaces
     sourcemodel = ft_prepare_sourcemodel(cfg);
 
 Visualize the sourcemodel
 
     figure, ft_plot_mesh(sourcemodel.pos(sourcemodel.inside,:))
-    hold on, ft_plot_mesh(mesh_bem.bnd(1),'surfaceonly','yes','vertexcolor','none','facecolor',...
-               'skin','facealpha',0.5,'edgealpha',0.1)
+    hold on, ft_plot_mesh(mesh_bem.bnd(1), 'surfaceonly', 'yes', 'vertexcolor', 'none', 'facecolor',...
+               'skin', 'facealpha',0.5, 'edgealpha',0.1)
 
 {% include image src="/assets/img/workshop/baci2017/forwardproblem/sourcemodel_all.png" %}
-_Figure7: sourcemodel on the brain compartment_
+
+_Figure 7: sourcemodel on the brain compartment_
 
 Save the sourcemode
 
@@ -174,18 +177,18 @@ Save the sourcemode
 ## 9A. Compute the leadfield
 
     cfg = [];
-    cfg.grid = sourcemodel;
-    cfg.headmodel= headmodel_bem;
-    cfg.elec = elec;
-    cfg.reducerank = 3;
+    cfg.grid        = sourcemodel;
+    cfg.headmodel   = headmodel_bem;
+    cfg.elec        = elec;
+    cfg.reducerank  = 3;
     leadfield_bem = ft_prepare_leadfield(cfg);
 
 ## B. Finite Element Method (FEM)
 
 ## 4B. Segment the MRI
 
-    cfg           = [];
-    cfg.output         = {'scalp','skull','csf','gray','white'};
+    cfg = [];
+    cfg.output         = {'scalp', 'skull', 'csf', 'gray', 'white'};
     cfg.brainsmooth    = 1;
     cfg.scalpthreshold = 0.11;
     cfg.skullthreshold = 0.15;
@@ -194,9 +197,9 @@ Save the sourcemode
 
 Visualize the segmentation result
 
-    seg_i = ft_datatype_segmentation(mri_segmented_5_compartment,'segmentationstyle','indexed');
+    seg_i = ft_datatype_segmentation(mri_segmented_5_compartment, 'segmentationstyle', 'indexed');
 
-    cfg              = [];
+    cfg = [];
     cfg.funparameter = 'seg';
     cfg.funcolormap  = gray(5); % distinct color per tissue
     cfg.location     = 'center';
@@ -204,11 +207,12 @@ Visualize the segmentation result
     ft_sourceplot(cfg, seg_i);
 
 {% include image src="/assets/img/workshop/baci2017/forwardproblem/mri_segmented_fem.png" %}
-_Figure8: 5 compartment segmentation output _
+
+_Figure 8: 5 compartment segmentation output_
 
 ## 5B. Create the mesh
 
-    cfg        = [];
+    cfg = [];
     cfg.shift  = 0.3;
     cfg.method = 'hexahedral';
     cfg.resolution = 1; % this is in mm
@@ -219,7 +223,7 @@ _Figure8: 5 compartment segmentation output _
     cfg = [];
     cfg.method = 'simbio';
     cfg.conductivity = [0.43 0.0024 1.79 0.14 0.33]; % same as tissuelabel in vol_simbio
-    cfg.tissuelabel = {'scalp', 'skull', 'csf', 'gray','white'};
+    cfg.tissuelabel = {'scalp', 'skull', 'csf', 'gray', 'white'};
     headmodel_fem = ft_prepare_headmodel(cfg, mesh_fem);
 
 Visualize the headmodel and the electrodes (it might take time and memory)
@@ -236,9 +240,9 @@ Visualize the headmodel and the electrodes (it might take time and memory)
     patch('Faces',mesh_ed.poly,...
       'Vertices',mesh_ed.pos,...
       'FaceAlpha',.5,...
-      'LineStyle','none',...
+      'LineStyle', 'none',...
       'FaceColor',[1 1 1],...
-      'FaceLighting','gouraud');
+      'FaceLighting', 'gouraud');
 
     xlabel('coronal');
     ylabel('sagital');
@@ -249,7 +253,8 @@ Visualize the headmodel and the electrodes (it might take time and memory)
     ft_plot_sens(elec, 'style', '*g');
 
 {% include image src="/assets/img/workshop/baci2017/forwardproblem/mesh_fem_elec.png" %}
-_Figure9: visualization of headmodel_fem and electrodes_
+
+_Figure 9: visualization of headmodel_fem and electrodes_
 
 ## 7B. Align the electrodes
 
@@ -270,13 +275,13 @@ We will use the sourcemodel already generated in 7A.
 ## 9B. Compute the leadfield
 
 {% include markup/danger %}
-Please DO NOT run _ft_prepare_vol_sens_ in this tutorial session! It will take too much time and memory. Load "headmodel_fem_tr".
+Please DO NOT run `ft_prepare_vol_sens` in this tutorial session! It will take too much time and memory. Load `headmodel_fem_tr.mat` from disk instead.
 {% include markup/end %}
 
-    %% compute the transfer matrix
+    % compute the transfer matrix
     [headmodel_fem_tr, elec] = ft_prepare_vol_sens(headmodel_fem, elec);
 
-    %% compute the leadfield
+    % compute the leadfield
     cfg = [];
     cfg.grid = sourcemodel;
     cfg.headmodel= headmodel_fem_tr;
@@ -286,8 +291,7 @@ Please DO NOT run _ft_prepare_vol_sens_ in this tutorial session! It will take t
 
 ## Summary and Comments
 
-This tutorial was about the computation of leadfields that could be feed into the inverse problem which will be explain i
-[Inverse problem](/workshop/baci2017/inverseproblem).
+This tutorial was about the computation of leadfields that could be feed into the inverse problem which will be explain in the part on the [inverse problem](/workshop/baci2017/inverseproblem).
 
 ---
 

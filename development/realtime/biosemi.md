@@ -1,9 +1,9 @@
 ---
-title: Biosemi ActiveTwo EEG amplifier
+title: Streaming realtime data from Biosemi ActiveTwo EEG amplifier
 tags: [realtime, biosemi]
 ---
 
-# Biosemi ActiveTwo EEG amplifier
+# Streaming realtime data from Biosemi ActiveTwo EEG amplifier
 
 This page describes the interface between the [Biosemi EEG amplifier](http://www.biosemi.com) and the [FieldTrip buffer](/development/realtime/buffer).
 

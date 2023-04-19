@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1016/j.neuron.2023.01.002
+- idtype: pmcid
+  value: PMC10109109
+authors:
+- authtype: Author
+  name: Strube A
+- authtype: Author
+  name: Horing B
+- authtype: Author
+  name: Rose M
+- authtype: Author
+  name: Büchel C
+epubdate: ''
+fulljournalname: Neuron
+issue: '7'
+pages: 1136-1151.e7
+pmclivedate: 2023/04/18
+printpubdate: 2023 Apr 5
+pubdate: 2023 Apr 5
+sortdate: 2023/04/05 00:00
+source: Neuron
+title: Agency affects pain inference through prior shift as opposed to likelihood
+  precision modulation in a Bayesian pain model
+uid: '10109109'
+volume: '111'

@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fnins.2023.1130685
+- idtype: pmcid
+  value: PMC10050425
+authors:
+- authtype: Author
+  name: Li L
+- authtype: Author
+  name: Zhang Y
+- authtype: Author
+  name: Fan L
+- authtype: Author
+  name: Zhao J
+- authtype: Author
+  name: Guo J
+- authtype: Author
+  name: Li C
+- authtype: Author
+  name: Wang J
+- authtype: Author
+  name: Liu T
+epubdate: 2023 Mar 15
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '1130685'
+pmclivedate: 2023/03/30
+printpubdate: ''
+pubdate: 2023 Mar 15
+sortdate: 2023/03/15 00:00
+source: Front Neurosci
+title: Activation of the brain during motor imagination task with auditory stimulation
+uid: '10050425'
+volume: '17'

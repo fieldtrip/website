@@ -21,7 +21,7 @@ In general you should get started with the [tutorials](/tutorial). The pages tha
 - [Getting started with BESA data](/getting_started/besa)
 - [Getting started with Biosemi BDF data](/getting_started/biosemi)
 - [Getting started with EDF data](/getting_started/edf)
-- [Getting started with EGI/Philips data](/getting_started/egi)
+- [Getting started with EGI/Philips/Magstim data](/getting_started/egi)
 - [Getting started with Nicolet data](/getting_started/nicolet)
 - [Getting started with TMSi data](/getting_started/tmsi)
 
@@ -63,6 +63,8 @@ In general you should get started with the [tutorials](/tutorial). The pages tha
 - [Getting started with BIDS](/getting_started/bids)
 - [Getting started with AnyWave](/getting_started/anywave)
 - [Getting started with Seg3D](/getting_started/seg3d)
+- [Getting started with ParaView](/getting_started/paraview)
+- [Getting started with MeshLab](/getting_started/meshlab)
 - [Getting started with LIMO EEG](/getting_started/limo)
 - [Getting started with data from EEGLAB](/getting_started/eeglab)
 - [Getting started with data from SPM](/getting_started/spm)

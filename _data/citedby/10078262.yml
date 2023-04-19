@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '35343042'
+- idtype: doi
+  value: 10.1111/desc.13259
+- idtype: pmcid
+  value: PMC10078262
+authors:
+- authtype: Author
+  name: Meyer M
+- authtype: Author
+  name: van Schaik JE
+- authtype: Author
+  name: Poli F
+- authtype: Author
+  name: Hunnius S
+epubdate: 2022 Apr 7
+fulljournalname: Developmental Science
+issue: '1'
+pages: e13259
+pmclivedate: 2023/04/07
+printpubdate: 2023 Jan
+pubdate: 2022 Apr 7
+sortdate: 2022/04/07 00:00
+source: Dev Sci
+title: 'How infant‐directed actions enhance infants’ attention, learning, and exploration:
+  Evidence from EEG and computational modeling'
+uid: '10078262'
+volume: '26'

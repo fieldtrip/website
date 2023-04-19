@@ -1,9 +1,9 @@
 ---
-title: Neurosky ThinkCap
+title: Streaming realtime data from Neurosky ThinkCap
 tags: [realtime, neurosky]
 ---
 
-# Neurosky ThinkCap
+# Streaming realtime data from Neurosky ThinkCap
 
 This page describes the interface between the 7 channel wireless ThinkCap of Neurosky and the FieldTrip buffer.
 

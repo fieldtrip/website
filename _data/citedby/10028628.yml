@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '36715216'
+- idtype: doi
+  value: 10.1002/hbm.26214
+- idtype: pmcid
+  value: PMC10028628
+authors:
+- authtype: Author
+  name: Hutcheon EA
+- authtype: Author
+  name: Vakorin VA
+- authtype: Author
+  name: Nunes A
+- authtype: Author
+  name: Ribary U
+- authtype: Author
+  name: Ferguson S
+- authtype: Author
+  name: Claydon VE
+- authtype: Author
+  name: Doesburg SM
+epubdate: 2023 Jan 30
+fulljournalname: Human Brain Mapping
+issue: '6'
+pages: 2345-2364
+pmclivedate: 2023/03/22
+printpubdate: ''
+pubdate: 2023 Jan 30
+sortdate: 2023/01/30 00:00
+source: Hum Brain Mapp
+title: Associations between spontaneous electroencephalogram oscillations and oxygen
+  saturation across normobaric and hypobaric hypoxia
+uid: '10028628'
+volume: '44'

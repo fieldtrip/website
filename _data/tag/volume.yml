@@ -7,6 +7,9 @@
 - name:  My MRI is upside down, is this a problem?
   link:  /faq/my_mri_is_upside_down_is_this_a_problem
 
-- name:  How can I use Seg3D to check and modify segmentation results?
+- name:  Getting started with ParaView
+  link:  /getting_started/paraview
+
+- name:  Getting started with Seg3D
   link:  /getting_started/seg3d
 

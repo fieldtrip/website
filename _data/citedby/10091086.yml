@@ -1,0 +1,34 @@
+articleids:
+- idtype: pmid
+  value: '36719044'
+- idtype: doi
+  value: 10.1093/sleep/zsad017
+- idtype: pmcid
+  value: PMC10091086
+authors:
+- authtype: Author
+  name: Kwon H
+- authtype: Author
+  name: Walsh KG
+- authtype: Author
+  name: Berja ED
+- authtype: Author
+  name: Manoach DS
+- authtype: Author
+  name: Eden UT
+- authtype: Author
+  name: Kramer MA
+- authtype: Author
+  name: Chu CJ
+epubdate: 2023 Jan 31
+fulljournalname: Sleep
+issue: '4'
+pages: zsad017
+pmclivedate: ''
+printpubdate: ''
+pubdate: 2023 Jan 31
+sortdate: 2023/01/31 00:00
+source: Sleep
+title: Sleep spindles in the healthy brain from birth through 18 years
+uid: '10091086'
+volume: '46'

@@ -1,0 +1,117 @@
+articleids:
+- idtype: pmid
+  value: '36993557'
+- idtype: doi
+  value: 10.21203/rs.3.rs-2649734/v1
+- idtype: pmcid
+  value: PMC10055538
+authors:
+- authtype: Author
+  name: Renton AI
+- authtype: Author
+  name: Dao TT
+- authtype: Author
+  name: Johnstone T
+- authtype: Author
+  name: Civier O
+- authtype: Author
+  name: Sullivan RP
+- authtype: Author
+  name: White DJ
+- authtype: Author
+  name: Lyons P
+- authtype: Author
+  name: Slade BM
+- authtype: Author
+  name: Abbott DF
+- authtype: Author
+  name: Amos TJ
+- authtype: Author
+  name: Bollmann S
+- authtype: Author
+  name: Botting A
+- authtype: Author
+  name: Campbell ME
+- authtype: Author
+  name: Chang J
+- authtype: Author
+  name: Close TG
+- authtype: Author
+  name: Eckstein K
+- authtype: Author
+  name: Egan GF
+- authtype: Author
+  name: Evas S
+- authtype: Author
+  name: Flandin G
+- authtype: Author
+  name: Garner KG
+- authtype: Author
+  name: Garrido MI
+- authtype: Author
+  name: Ghosh SS
+- authtype: Author
+  name: Grignard M
+- authtype: Author
+  name: Hannan AJ
+- authtype: Author
+  name: Huber R
+- authtype: Author
+  name: Kaczmarzyk JR
+- authtype: Author
+  name: Kasper L
+- authtype: Author
+  name: Kuhlmann L
+- authtype: Author
+  name: Lou K
+- authtype: Author
+  name: Mantilla-Ramos YJ
+- authtype: Author
+  name: Mattingley JB
+- authtype: Author
+  name: Morris J
+- authtype: Author
+  name: Narayanan A
+- authtype: Author
+  name: Pestilli F
+- authtype: Author
+  name: Puce A
+- authtype: Author
+  name: Ribeiro FL
+- authtype: Author
+  name: Rogasch NC
+- authtype: Author
+  name: Rorden C
+- authtype: Author
+  name: Schira M
+- authtype: Author
+  name: Shaw TB
+- authtype: Author
+  name: Sowman PF
+- authtype: Author
+  name: Spitz G
+- authtype: Author
+  name: Stewart A
+- authtype: Author
+  name: Ye X
+- authtype: Author
+  name: Zhu JD
+- authtype: Author
+  name: Hughes ME
+- authtype: Author
+  name: Narayanan A
+- authtype: Author
+  name: Bollmann S
+epubdate: 2023 Mar 13
+fulljournalname: Research Square
+issue: ''
+pages: rs.3.rs-2649734
+pmclivedate: 2023/03/30
+printpubdate: ''
+pubdate: 2023 Mar 13
+sortdate: 2023/03/13 00:00
+source: Res Sq
+title: 'Neurodesk: An accessible, flexible, and portable data analysis environment
+  for reproducible neuroimaging'
+uid: '10055538'
+volume: ''

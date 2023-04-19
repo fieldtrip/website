@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '36993248'
+- idtype: doi
+  value: 10.1101/2023.03.14.23286691
+- idtype: pmcid
+  value: PMC10055448
+authors:
+- authtype: Author
+  name: Blanpain LT
+- authtype: Author
+  name: Chen E
+- authtype: Author
+  name: Park J
+- authtype: Author
+  name: Walelign MY
+- authtype: Author
+  name: Gross RE
+- authtype: Author
+  name: Cabaniss BT
+- authtype: Author
+  name: Willie JT
+- authtype: Author
+  name: Singer AC
+epubdate: 2023 Mar 17
+fulljournalname: medRxiv
+issue: ''
+pages: 2023.03.14.23286691
+pmclivedate: 2023/03/30
+printpubdate: ''
+pubdate: 2023 Mar 17
+sortdate: 2023/03/17 00:00
+source: medRxiv
+title: Multisensory Flicker Modulates Widespread Brain Networks and Reduces Interictal
+  Epileptiform Discharges in Humans
+uid: '10055448'
+volume: ''

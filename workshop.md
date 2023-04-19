@@ -61,7 +61,7 @@ Previous FieldTrip workshops took place at
 -   2015, [Barcelona, Spain](/workshop/barcelona)
 -   2015, [MEG/EEG toolkit](/workshop/toolkit2015) - Nijmegen, NL
 -   2015, [MEG-UK meeting](/workshop/meg-uk-2015) - at Aston University, Birmingham, UK
--   2014, [Stockholm, Sweden](/workshop/natmeg) - EEG/MEG with a pitch towards clinical research
+-   2014, [Stockholm, Sweden](/workshop/natmeg2014) - EEG/MEG with a pitch towards clinical research
 -   2014, [Birmingham, UK](/workshop/birmingham) - for the whole UK-MEG community
 -   2014, [Parma, Italy](/workshop/parma)
 -   2014, [Zurich, Switzerland](/workshop/zurich)

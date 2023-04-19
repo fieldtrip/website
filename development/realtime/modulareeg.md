@@ -1,9 +1,9 @@
 ---
-title: Modular EEG, OpenEEG
+title: Streaming realtime data from Modular EEG (aka OpenEEG)
 tags: [realtime, modeeg, openeeg]
 ---
 
-# Modular EEG, OpenEEG
+# Streaming realtime data from Modular EEG (aka OpenEEG)
 
 This page describes the interface between the 2-6 channel Modular EEG amplifier of the OpenEEG project and the FieldTrip [buffer](/development/realtime/buffer).
 

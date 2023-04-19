@@ -1,11 +1,9 @@
 ---
-title: Neuralynx
+title: Streaming realtime data from Neuralynx
 tags: [realtime, neuralynx]
 ---
 
-# Neuralynx
-
-## Introduction
+# Streaming realtime data from Neuralynx
 
 The Neuralynx electrophysiology system is used at the DCCN for high-density recordings of LFP and spike activity of up to 256 channels. Furthermore, at the DCC a 32 channel Neuralynx setup is used.
 

@@ -15,7 +15,7 @@ rm _data/tag/*.yml
 TAGFILE=`mktemp`
 
 # this constructs a list of all tags
-find . -name \*.md | xargs grep -h '^tags:' | cut -d : -f 2 | tr -d '[] ' | tr , '\n' | sort | uniq > $TAGFILE
+find . -name \*.md | xargs grep -h '^tags:' | cut -d : -f 2 | tr -d '[] ' | tr , '\n' | sort -u > $TAGFILE
 
 # this constructs an overview page for each tag
 for TAG in `cat ${TAGFILE}` ; do

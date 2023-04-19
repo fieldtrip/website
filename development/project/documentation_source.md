@@ -1,10 +1,10 @@
 ---
-title: Developing the documentation of the source-reconstruction methods
+title: Developing the documentation of the source reconstruction methods
 ---
 
 {% include /shared/development/warning.md %}
 
-# Developing the documentation of the source-reconstruction methods
+# Developing the documentation of the source reconstruction methods
 
 ## Introduction
 
@@ -12,7 +12,7 @@ This page contains questions that users could ask when they analyze their data w
 
 ## Questions and Answers
 
-## What kind of source-reconstruction methods are implemented in FieldTrip?
+## What kind of source reconstruction methods are implemented in FieldTrip?
 
 The [Inverse source parameter estimates from EEG/MEG data](/development/module/inverse) page describes under the second point which are the supported methods.
 
@@ -44,7 +44,7 @@ The reference of the **[ft_sourceanalysis](/reference/ft_sourceanalysis)** funct
 
 Here are the [References to implemented methods](/references_to_implemented_methods).
 
-## What kind of source-reconstruction method should I use?
+## What kind of source reconstruction method should I use?
 
 - _Does it depend on the data?_ (EEG vs. MEG, oscillations vs event-related, realistic vs. non-realistic headmodel)
 
@@ -56,15 +56,15 @@ beamforming: lcmv - ?
 - _Does it depend on a priori hypothesis of the source involved?_ (cortical sheets vs. 3D grid)
 - _Does it depend on what kind of information I am interested in?_ (e.g., changes in time or not)
 
-## What kind of data I need for source-reconstruction?
+## What kind of data I need for source reconstruction?
 
 functional data, anatomical data, channel/electrode positions
 
-## Why should I use source-reconstruction?
+## Why should I use source reconstruction?
 
 point to introductionary literature
 
-## How should I do source-reconstruction?
+## How should I do source reconstruction?
 
 depends on the specific method; available documentation in FT at the momen
 
@@ -85,7 +85,7 @@ none.
 
 _Why is this fixme?_
 
-[Source-reconstruction using two dipoles](/development/project/symmetric_dipoles)
+[source reconstruction using two dipoles](/development/project/symmetric_dipoles)
 
 _This is under construction, but it is not really clear how this exactly relates to dipole fitting._
 

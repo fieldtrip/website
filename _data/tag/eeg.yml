@@ -1,4 +1,4 @@
-- name:  Modular EEG, OpenEEG
+- name:  Streaming realtime data from Modular EEG (aka OpenEEG)
   link:  /development/realtime/modulareeg
 
 - name:  Example analysis pipeline for Biosemi data
@@ -109,10 +109,10 @@
 - name:  Getting started with EEGLAB
   link:  /getting_started/eeglab
 
-- name:  Getting started with Philips/EGI data
+- name:  Getting started with EGI/Philips/Magstim data
   link:  /getting_started/egi
 
-- name:  Human ECoG
+- name:  Getting started with human ECoG data
   link:  /getting_started/human_ecog
 
 - name:  Getting started with LIMO MEEG
@@ -120,9 +120,6 @@
 
 - name:  Getting started with Nicolet data
   link:  /getting_started/nicolet
-
-- name:  How can I use Seg3D to check and modify segmentation results?
-  link:  /getting_started/seg3d
 
 - name:  Getting started with TMSi data
   link:  /getting_started/tmsi
@@ -154,10 +151,10 @@
 - name:  Fourier analysis of neuronal oscillations and synchronization
   link:  /tutorial/fourier
 
-- name:  Creating a BEM volume conduction model of the head for source-reconstruction of EEG data
+- name:  Creating a BEM volume conduction model of the head for source reconstruction of EEG data
   link:  /tutorial/headmodel_eeg_bem
 
-- name:  Creating a FEM volume conduction model of the head for source-reconstruction of EEG data
+- name:  Creating a FEM volume conduction model of the head for source reconstruction of EEG data
   link:  /tutorial/headmodel_eeg_fem
 
 - name:  Analysis of human ECoG and sEEG recordings
@@ -224,22 +221,25 @@
   link:  /workshop/madrid2019/tutorial_stats
 
 - name:  Beamforming oscillatory responses in combined MEG/EEG data
-  link:  /workshop/natmeg/beamforming
+  link:  /workshop/natmeg2014/beamforming
 
 - name:  Dipole fitting of combined MEG/EEG data
-  link:  /workshop/natmeg/dipolefitting
+  link:  /workshop/natmeg2014/dipolefitting
 
 - name:  Description of the auditory oddball MEG+EEG dataset
-  link:  /workshop/natmeg/meg_audodd
+  link:  /workshop/natmeg2014/meg_audodd
 
 - name:  Preprocessing and event-related activity in combined MEG/EEG data
-  link:  /workshop/natmeg/preprocessing
+  link:  /workshop/natmeg2014/preprocessing
 
 - name:  Statistical analysis and multiple comparison correction for combined MEG/EEG data
-  link:  /workshop/natmeg/statistics
+  link:  /workshop/natmeg2014/statistics
 
 - name:  Time-frequency analysis of combined MEG/EEG data
-  link:  /workshop/natmeg/timefrequency
+  link:  /workshop/natmeg2014/timefrequency
+
+- name:  Time-frequency analysis using Hanning window, multitapers and wavelets
+  link:  /workshop/ni2_timefrequencyanalysis
 
 - name:  FieldTrip workshop in Oslo
   link:  /workshop/oslo2019

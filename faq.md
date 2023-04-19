@@ -175,7 +175,6 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [How can I compile the mex files and command-line programs?](/faq/compile)
 - [How can I compile the mex files on 64-bit Windows?](/faq/how_can_i_compile_the_mex_files_on_64_bit_windows)
 - [How can I compile the mex files on macOS?](/faq/how_can_i_compile_the_mex_files_on_os_x)
-- [How can I determine the number of threads that MATLAB uses?](/faq/how_can_i_determine_the_number_of_threads_that_matlab_uses)
 - [How many lines of code does FieldTrip consist of?](/faq/how_many_lines_of_code_does_fieldtrip_consist_of)
 - [How to select the correct SPM toolbox?](/faq/how_to_select_the_correct_spm_toolbox)
 - [MATLAB complains about a missing or invalid MEX file, what should I do?](/faq/matlab_complains_about_a_missing_or_invalid_mex_file_what_should_i_do)

@@ -9,11 +9,11 @@ tags: [oslo2019, beamforming, source, meg, meg-audodd]
 
 This tutorial explains beamformer source reconstruction techniques in the frequency domain. You will learn how to compute appropriate time-frequency windows, how to apply the spatial filter, and about options for contrasting the effect of interest against some control/baseline. Finally, you will be guided through different options to visualize the results overlaid on a structural MRI.
 
-For this, we will continue working on the [paradigm](/workshop/natmeg/meg_audodd) we used in the previous tutorial. However, we will do the source reconstruction using the MEG data recorded in the same session, not the EEG data.
+For this, we will continue working on the [paradigm](/workshop/natmeg2014/meg_audodd) we used in the previous tutorial. However, we will do the source reconstruction using the MEG data recorded in the same session, not the EEG data.
 Please note that later in this workshop you will learn how to construct a forward model, so details on that step are omitted here. The forward modeling lecture will be geared towards EEG, so that you can apply what you learn here also to EEG data.
 
 {% include markup/info %}
-This tutorial contains the hands-on material for the [Oslo 2019 workshop](/workshop/oslo2019) and is complemented by this lecture, which was filmed at an [earlier workshop at NatMEG](/workshop/natmeg).
+This tutorial contains the hands-on material for the [Oslo 2019 workshop](/workshop/oslo2019) and is complemented by this lecture, which was filmed at an [earlier workshop at NatMEG](/workshop/natmeg2014).
 
 {% include youtube id="7eS11DtbIPw" %}
 {% include markup/end %}
@@ -37,7 +37,7 @@ This tutorial does not cover forward model computation. We will load the needed 
 - Visualize the result with **[ft_sourceplot](/reference/ft_sourceplot)**
 - Compute a common spatial filter to difference two conditions
 
-{% include image src="/assets/img/workshop/natmeg/beamforming/bf_pipeline.jpg" width="650" %}
+{% include image src="/assets/img/workshop/natmeg2014/beamforming/bf_pipeline.jpg" width="650" %}
 
 _Figure: An example of a pipeline to locate oscillatory sources._
 
@@ -93,7 +93,7 @@ _Figure: The different parts for the forward model all line up._
 
 We want to identify the sources of the oscillatory activity in the beta band. We have identified 18 Hz as the center frequency of the beta activity. We first use **[ft_redefinetrial](/reference/ft_redefinetrial)** to extract the relevant time window from the complete trials. Remember, that it is important that the length of the time window matches with an integer number of oscillatory cycles. Here 9 cycles are used, resulting in a 9/18 Hz = 0.5 s time window. Thus, the time window we will use ranges from 0.35 to 0.85 second after response onset (see Figure 2).
 
-{% include image src="/assets/img/workshop/natmeg/beamforming/natmeg_beam5.png" width="500" %}
+{% include image src="/assets/img/workshop/natmeg2014/beamforming/natmeg_beam5.png" width="500" %}
 
 _Figure: The time-frequency presentation used to determine the time- and frequency-windows prior to beamforming._
 

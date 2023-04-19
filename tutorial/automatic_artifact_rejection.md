@@ -203,14 +203,7 @@ z-value cutoff values.
 
 {% include image src="/assets/img/tutorial/automatic_artifact_rejection/figure12.png" width="600" %}
 
-_Interactive figure of ft_artifact_zvalue. The left panel shows the
-z-score of the processed data, along with the threshold. Suprathreshold
-data points are marked in red. The lower right panel shows the z-score
-of the processed data for a particular trial, and the upper right panel
-shows the unprocessed data of the channel that contributed most to the
-(cumulated) z-score. You can browse through the trials using the buttons
-at the bottom of the figure. Also, you can adjust the threshold, and
-manually keep/reject trials._
+_Interactive figure of ft_artifact_zvalue. The left panel shows the z-score of the processed data, along with the threshold. Data points from the current trial are marked in pink and suprathreshold data points are marked in red. The lower right panel shows the z-score of the processed data for a particular trial, and the upper right panel shows the unprocessed data of the channel that contributed most to the (cumulated) z-score. You can browse through the trials using the buttons at the bottom of the figure. Also, you can adjust the threshold, and manually keep/reject trials._
 
 In this example data set, a lot of data points are detected to be a
 'jump' artifact, although they seem more often 'muscular' in nature. A

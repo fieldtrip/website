@@ -94,7 +94,7 @@ So first of all we need to specify what marker codes belongs to what condition. 
 
 Then there is the timing we need to define. Let's already put it in a cfg structure (more about the cfg structure later):
 
-    cfg = \[];                                  % create an empty variable called cfg
+    cfg = [];                                   % create an empty variable called cfg
     cfg.trialdef.prestim = 0.5;                 % in seconds
     cfg.trialdef.poststim = 2;                  % in seconds
 
@@ -212,7 +212,7 @@ The ICA will return as many components as you put channels in. Each component co
 
 When ft_componentanalysis is done (it could take a while) we have to find those components we want to subtract from our data. We'll use ft_databrowser for this again, only looking at ten 'channels' (components) at a time:
 
-    cfg = \[];
+    cfg = [];
     cfg.viewmode = 'component';
     cfg.continuous = 'yes';
     cfg.blocksize = 30;
@@ -225,7 +225,7 @@ Components are automatically sorted based upon on the sum of the weighting facto
 
 To recompose the data without components 1, 2 and 4 use ft_rejectcomponent
 
-    cfg = \[];
+    cfg = [];
     cfg.component = [1 2 4];
     data_iccleaned = ft_rejectcomponent(cfg, ic_data);
 
@@ -251,7 +251,7 @@ Filtering your data will also get rid of some common artifacts, especially line 
 If you are doing an event-related-potential (ERP) study you might not even be interested in higher frequencies. Indeed, doing a low-pass filter on your data will make your ERP's look much smoother. By adding the following before running preprocessing you will be left with data only composed of frequencies below that of the specified cut-off frequency. Note, however, that you are throwing away a lot of data. These higher frequencies might be very useful to detect for instance movement artifacts or to compute accurate independent components for eye-blink correction. Using the band-pass filter in this way therefore is better done after you did all your other previous methods of artifact rejection.
 This brings us to a slightly different use of ft_preprocessing where we supply it data instead of letting it read from disk. For instance, continuing with the data from the previous page, we could do the following:
 
-    cfg = \[];
+    cfg = [];
     cfg.lpfilter = 'yes';
     cfg.lpfreq = [35];
     data_lp = ft_preprocessing(cfg,data_manual);

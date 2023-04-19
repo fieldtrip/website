@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '36934153'
+- idtype: doi
+  value: 10.1038/s42003-023-04648-x
+- idtype: pmcid
+  value: PMC10024695
+authors:
+- authtype: Author
+  name: Hindriks R
+- authtype: Author
+  name: Tewarie PK
+epubdate: 2023 Mar 18
+fulljournalname: Communications Biology
+issue: ''
+pages: '286'
+pmclivedate: 2023/03/20
+printpubdate: ''
+pubdate: 2023 Mar 18
+sortdate: 2023/03/18 00:00
+source: Commun Biol
+title: Dissociation between phase and power correlation networks in the human brain
+  is driven by co-occurrent bursts
+uid: '10024695'
+volume: '6'

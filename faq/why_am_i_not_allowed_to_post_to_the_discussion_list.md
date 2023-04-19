@@ -11,10 +11,12 @@ _You are not allowed to post to this mailing list, and your message has been aut
 
 It might be due to you not having registered. Only people registered to the mailing list are allowed to send messages on it, and will receive messages from it.
 
-It might also be due to having sent the email from another email address than the one with you used when registering. The email list server cares about the details of the address, so your.name@fcdonders.ru.nl is considered to be a different person than your.name@donders.ru.nl. A similar situation that happened in the past was that the UCL system administrators decided to change somebody@ion.ucl.ac.uk into somebody@ucl.ac.uk.
+It might also be due to having sent the email from another email address than the one with you used when registering and the one  in which you receive emails.
+
+The email list server cares about the precise address: **john.doe@donders.ru.nl** is considered to be a different person than **j.doe@donders.ru.nl** or **john.doe@ru.nl**, even though your university might link all of those addresses to the same inbox.
 
 {% include markup/danger %}
-A common cause for confusion - especially in Germany - is that people sometimes seem to be using yourname@googlemail.com and yourname@gmail.com interchangeably. The mailing list server will consider these as two different addresses!
+A common cause for confusion - especially in Germany - is that people sometimes seem to be using **john.doe@googlemail.com** and **john.doe@gmail.com** interchangeably. The mailing list server will consider these as two different addresses!
 {% include markup/end %}
 
 Please check very carefully on which email address you are receiving the postings from the FieldTrip list, and what you have configured as the "from" address in your email client. If that does not resolve it, please contact the list owner.

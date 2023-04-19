@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '36947552'
+- idtype: doi
+  value: 10.1371/journal.pbio.3002046
+- idtype: pmcid
+  value: PMC10079236
+authors:
+- authtype: Author
+  name: Su Y
+- authtype: Author
+  name: MacGregor LJ
+- authtype: Author
+  name: Olasagasti I
+- authtype: Author
+  name: Giraud AL
+epubdate: 2023 Mar 22
+fulljournalname: PLOS Biology
+issue: '3'
+pages: e3002046
+pmclivedate: 2023/04/07
+printpubdate: ''
+pubdate: 2023 Mar 22
+sortdate: 2023/03/22 00:00
+source: PLoS Biol
+title: A deep hierarchy of predictions enables online meaning extraction in a computational
+  model of human speech comprehension
+uid: '10079236'
+volume: '21'

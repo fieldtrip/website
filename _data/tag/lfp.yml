@@ -1,7 +1,7 @@
 - name:  Spike and LFP dataformats
   link:  /dataformat/spike
 
-- name:  Working with animal electrophysiology data
+- name:  Getting started with animal electrophysiology data, including spikes
   link:  /getting_started/animal
 
 - name:  Getting started with Blackrock data
