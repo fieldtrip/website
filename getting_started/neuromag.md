@@ -11,9 +11,10 @@ The company based in Helsinki (Finland) making these MEG systems started as Neur
 
 ## Introduction
 
-All Neuromag data is stored in .fif files, where the files can contain different data objects. The following data objects can be read and used in FieldTrip: MEG data, EEG data, gradiometer positions, single sphere models, BEM models (using the MEG-CALC toolbox). FieldTrip reads Neuromag fif files using low-level MATLAB functions from the MNE toolbox from Matti Hämäläinen, see [MNE software](http://www.nmr.mgh.harvard.edu/martinos/userInfo/data/MNE_register/index.php). This will work on any platform, as it is based on open source m-files. To load the data into MATLAB you need the MNE toolbox from Matti Hämäläinen, see [MNE software](http://www.nmr.mgh.harvard.edu/martinos/userInfo/data/MNE_register/index.php).
+All Neuromag data is stored in .fif files, where the files can contain different data objects. The following data objects can be read and used in FieldTrip: MEG data, EEG data, gradiometer positions, single sphere models, BEM models (using the MEG-CALC toolbox). FieldTrip reads Neuromag fif files using low-level MATLAB functions from the MNE-matlab toolbox, originally written by Matti Hämäläinen, see [MNE software](https://mne.tools/stable/overview/matlab.html). This will work on any platform, as it is based on open source m-files.
 
-Alternative support for Neuromag data is implemented by calling the mex files from [Kimmo Uutela's MEG-PD toolbox](http://www.kolumbus.fi/kuutela/programs/meg-pd/). The files in the MEG-PD toolbox are not included with FieldTrip, but you can download them[here](http://www.kolumbus.fi/kuutela/programs/meg-pd/). Extract the toolbox and put it on your MATLAB path, or copy the files into the "fieldtrip/private" directory. This is used if you select the file format as "neuromag_fif".
+Alternative support for Neuromag data is implemented by calling the mex files from [Kimmo Uutela's MEG-PD toolbox](https://kimmouutela.yolasite.com/meg-pd.php). The files in the MEG-PD toolbox are not included with FieldTrip, but you can download them 
+(works on Linux only). Extract the toolbox and put it on your MATLAB path, or copy the files into the "fieldtrip/fileio/private" directory. This is used if you select the file format as "neuromag_fif".
 
 Note that the MEG-PD toolbox will only function on 32-bit machines, and requires either a Linux or HP-UX system to run. As the mex files are compiled code, it is not possible to modify these to run on 64-bit machines (which are becoming increasingly common), at present.
 
