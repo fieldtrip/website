@@ -250,8 +250,6 @@ To plot the result use **[ft_singleplotTFR](/reference/ft_singleplotTFR)**:
     figure
     ft_singleplotTFR(cfg, TFRhann7);
 
-#### Exercise 3
-
 {% include markup/exercise %}
 **Exercise 7**: Adjust the length of the time-window and thereby degree of smoothing. Use **[ft_singleplotTFR](/reference/ft_singleplotTFR)** to show the results. Discuss the consequences of changing these setting.
 {% include markup/end%}
