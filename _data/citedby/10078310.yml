@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '35918912'
+- idtype: doi
+  value: 10.1111/psyp.14156
+- idtype: pmcid
+  value: PMC10078310
+authors:
+- authtype: Author
+  name: Paraskevoudi N
+- authtype: Author
+  name: SanMiguel I
+epubdate: 2022 Aug 2
+fulljournalname: Psychophysiology
+issue: '1'
+pages: e14156
+pmclivedate: 2023/04/07
+printpubdate: 2023 Jan
+pubdate: 2022 Aug 2
+sortdate: 2022/08/02 00:00
+source: Psychophysiology
+title: Sensory suppression and increased neuromodulation during actions disrupt memory
+  encoding of unpredictable self‐initiated stimuli
+uid: '10078310'
+volume: '60'
