@@ -652,6 +652,9 @@ A detailed description of each function is available in the [reference documenta
 **cfg.coilaccuracy** - [ft_preprocessing](/reference/ft_preprocessing)  
 
 
+**cfg.coildeffile** - [ft_preprocessing](/reference/ft_preprocessing)  
+
+
 **cfg.coilfreq** - [ft_realtime_coillocalizer](/reference/realtime/online_meg/ft_realtime_coillocalizer), [ft_realtime_headlocalizer](/reference/realtime/online_meg/ft_realtime_headlocalizer)  
 
 
