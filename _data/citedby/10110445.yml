@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '36130089'
+- idtype: doi
+  value: 10.1093/cercor/bhac356
+- idtype: pmcid
+  value: PMC10110445
+authors:
+- authtype: Author
+  name: Wang L
+- authtype: Author
+  name: Schoot L
+- authtype: Author
+  name: Brothers T
+- authtype: Author
+  name: Alexander E
+- authtype: Author
+  name: Warnke L
+- authtype: Author
+  name: Kim M
+- authtype: Author
+  name: Khan S
+- authtype: Author
+  name: Hämäläinen M
+- authtype: Author
+  name: Kuperberg GR
+epubdate: 2022 Sep 20
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '8'
+pages: 4478-4497
+pmclivedate: ''
+printpubdate: ''
+pubdate: 2022 Sep 20
+sortdate: 2022/09/20 00:00
+source: Cereb Cortex
+title: Predictive coding across the left fronto-temporal hierarchy during language
+  comprehension
+uid: '10110445'
+volume: '33'

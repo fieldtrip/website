@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '37034791'
+- idtype: doi
+  value: 10.1101/2023.03.31.535153
+- idtype: pmcid
+  value: PMC10081325
+authors:
+- authtype: Author
+  name: König SD
+- authtype: Author
+  name: Safo S
+- authtype: Author
+  name: Miller K
+- authtype: Author
+  name: Herman AB
+- authtype: Author
+  name: Darrow DP
+epubdate: 2023 Apr 2
+fulljournalname: bioRxiv
+issue: ''
+pages: 2023.03.31.535153
+pmclivedate: 2023/04/08
+printpubdate: ''
+pubdate: 2023 Apr 2
+sortdate: 2023/04/02 00:00
+source: bioRxiv
+title: Flexible Multi-Step Hypothesis Testing of Human ECoG Data using Cluster-based
+  Permutation Tests with GLMEs
+uid: '10081325'
+volume: ''

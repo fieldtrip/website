@@ -1,0 +1,57 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fnbeh.2023.1096720
+- idtype: pmcid
+  value: PMC10113484
+authors:
+- authtype: Author
+  name: Isotalus HK
+- authtype: Author
+  name: Carr WJ
+- authtype: Author
+  name: Blackman J
+- authtype: Author
+  name: Averill GG
+- authtype: Author
+  name: Radtke O
+- authtype: Author
+  name: Selwood J
+- authtype: Author
+  name: Williams R
+- authtype: Author
+  name: Ford E
+- authtype: Author
+  name: McCullagh L
+- authtype: Author
+  name: McErlane J
+- authtype: Author
+  name: O’Donnell C
+- authtype: Author
+  name: Durant C
+- authtype: Author
+  name: Bartsch U
+- authtype: Author
+  name: Jones MW
+- authtype: Author
+  name: Muñoz-Neira C
+- authtype: Author
+  name: Wearn AR
+- authtype: Author
+  name: Grogan JP
+- authtype: Author
+  name: Coulthard EJ
+epubdate: 2023 Apr 5
+fulljournalname: Frontiers in Behavioral Neuroscience
+issue: ''
+pages: '1096720'
+pmclivedate: 2023/04/20
+printpubdate: ''
+pubdate: 2023 Apr 5
+sortdate: 2023/04/05 00:00
+source: Front Behav Neurosci
+title: L-DOPA increases slow-wave sleep duration and selectively modulates memory
+  persistence in older adults
+uid: '10113484'
+volume: '17'

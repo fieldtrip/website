@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '36368888'
+- idtype: doi
+  value: 10.1093/cercor/bhac373
+- idtype: pmcid
+  value: PMC10110426
+authors:
+- authtype: Author
+  name: Ahtola E
+- authtype: Author
+  name: Leikos S
+- authtype: Author
+  name: Tuiskula A
+- authtype: Author
+  name: Haataja L
+- authtype: Author
+  name: Smeds E
+- authtype: Author
+  name: Piitulainen H
+- authtype: Author
+  name: Jousmäki V
+- authtype: Author
+  name: Tokariev A
+- authtype: Author
+  name: Vanhatalo S
+epubdate: 2022 Nov 11
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '8'
+pages: 4699-4713
+pmclivedate: 2023/04/19
+printpubdate: ''
+pubdate: 2022 Nov 11
+sortdate: 2022/11/11 00:00
+source: Cereb Cortex
+title: Cortical networks show characteristic recruitment patterns after somatosensory
+  stimulation by pneumatically evoked repetitive hand movements in newborn infants
+uid: '10110426'
+volume: '33'

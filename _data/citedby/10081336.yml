@@ -1,0 +1,38 @@
+articleids:
+- idtype: pmid
+  value: '37034780'
+- idtype: doi
+  value: 10.1101/2023.03.31.535073
+- idtype: pmcid
+  value: PMC10081336
+authors:
+- authtype: Author
+  name: Wischnewski M
+- authtype: Author
+  name: Tran H
+- authtype: Author
+  name: Zhao Z
+- authtype: Author
+  name: Shirinpour S
+- authtype: Author
+  name: Haigh ZJ
+- authtype: Author
+  name: Rotteveel J
+- authtype: Author
+  name: Alekseichuk I
+- authtype: Author
+  name: Zimmermann J
+- authtype: Author
+  name: Opitz A
+epubdate: 2023 Apr 2
+fulljournalname: bioRxiv
+issue: ''
+pages: 2023.03.31.535073
+pmclivedate: 2023/04/08
+printpubdate: ''
+pubdate: 2023 Apr 2
+sortdate: 2023/04/02 00:00
+source: bioRxiv
+title: Induced neural phase precession through exogeneous electric fields
+uid: '10081336'
+volume: ''
