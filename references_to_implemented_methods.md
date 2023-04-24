@@ -179,7 +179,7 @@ Maris E. [Statistical Testing in Electrophysiological Studies](http://onlinelibr
 
 Maris E., Oostenveld R. [Nonparametric statistical testing of EEG- and MEG-data.](http://www.ncbi.nlm.nih.gov/sites/entrez?Db=pubmed&Cmd=ShowDetailView&TermToSearch=17517438) J Neurosci Methods. 2007 Apr 10;
 
-Maris E., Schoffelen J.M., Fries P. [Nonparametric statistical testing of coherence differences.](http://www.ncbi.nlm.nih.gov/sites/entrez?Db=pubmed&Cmd=ShowDetailView&TermToSearch=17395267) J Neurosci Methods. 2007 Jun 15;163(1):161-75.
+Maris E., Schoffelen J.M., Fries P. [Nonparametric statistical testing of coherence differences.](https://www.sciencedirect.com/science/article/pii/S0165027007001707) J Neurosci Methods. 2007 Jun 15;163(1):161-75.
 
 ### Multiple comparison corrections
 
@@ -189,7 +189,7 @@ Hochberg Y. [A Sharper Bonferroni Procedure for Multiple Tests of Significance](
 
 Genovese C.R., Lazar N.A., Nichols T. [Thresholding of Statistical Maps in Functional Neuroimaging Using the False Discovery Rate](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.208.9215&rep=rep1&type=pdf) Neuroimage Vol. 15 No. 4 (2002), pp. 870-8.
 
-### Machine learning
+## Machine learning
 
 Van Gerven, M.A.J., Hesse, C., Jensen, O., Heskes, T. [Interpreting Single Trial Data using Groupwise Regularisation.](http://www.ncbi.nlm.nih.gov/pubmed/19285139) Neuroimage. 2009; 46(3):665-76.
 
