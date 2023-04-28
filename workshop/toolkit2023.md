@@ -34,7 +34,7 @@ Note that this is still a tentative program that is subject to change.
 ### Tuesday May 23, 2023
 
 | 09:00-09:30 | Morning chill or workout |
-| 09:45-11:00 | Speaking: evidence from electrophysiology and brain lesions - lecture by Vitória Piai |
+| 09:45-11:00 | Special interest lecture - lecture by TBA |
 | 11:00-11:15 | Coffee Break |
 | 11:15-12:30 | Time frequency analysis of power - lecture by Jan-Mathijs Schoffelen |
 | 12:30-13:30 | Lunch |
@@ -48,7 +48,7 @@ Note that this is still a tentative program that is subject to change.
 | 09:00-09:30 | Morning chill or workout |
 | 09:45-11:00 | Forward and inverse - lecture by Robert |
 | 11:00-11:15 | Coffee Break |
-| 11:15-12:30 | Source reconstruction using beamformers - lecture by Britta Westner |
+| 11:15-12:30 | Source reconstruction using beamformers - lecture by TBA |
 | 12:30-13:30 | Lunch |
 | 13:30-15:45 | Beamforming - [hands-on](/tutorial/beamformer) |
 | 15:45-16:00 | Tea Break |
