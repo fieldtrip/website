@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '37066145'
+- idtype: doi
+  value: 10.1101/2023.04.05.535772
+- idtype: pmcid
+  value: PMC10104113
+authors:
+- authtype: Author
+  name: Daume J
+- authtype: Author
+  name: Kaminski J
+- authtype: Author
+  name: Schjetnan AG
+- authtype: Author
+  name: Salimpour Y
+- authtype: Author
+  name: Khan U
+- authtype: Author
+  name: Reed C
+- authtype: Author
+  name: Anderson W
+- authtype: Author
+  name: Valiante TA
+- authtype: Author
+  name: Mamelak AN
+- authtype: Author
+  name: Rutishauser U
+epubdate: 2023 Apr 7
+fulljournalname: bioRxiv
+issue: ''
+pages: 2023.04.05.535772
+pmclivedate: 2023/04/15
+printpubdate: ''
+pubdate: 2023 Apr 7
+sortdate: 2023/04/07 00:00
+source: bioRxiv
+title: Control of working memory maintenance by theta-gamma phase amplitude coupling
+  of human hippocampal neurons
+uid: '10104113'
+volume: ''

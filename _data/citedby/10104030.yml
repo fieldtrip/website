@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '37066306'
+- idtype: doi
+  value: 10.1101/2023.04.05.535577
+- idtype: pmcid
+  value: PMC10104030
+authors:
+- authtype: Author
+  name: Peterson V
+- authtype: Author
+  name: Vissani M
+- authtype: Author
+  name: Luo S
+- authtype: Author
+  name: Rabbani Q
+- authtype: Author
+  name: Crone NE
+- authtype: Author
+  name: Bush A
+- authtype: Author
+  name: Richardson RM
+epubdate: 2023 Apr 6
+fulljournalname: bioRxiv
+issue: ''
+pages: 2023.04.05.535577
+pmclivedate: 2023/04/15
+printpubdate: ''
+pubdate: 2023 Apr 6
+sortdate: 2023/04/06 00:00
+source: bioRxiv
+title: A supervised data-driven spatial filter denoising method for acoustic-induced
+  artifacts in intracranial electrophysiological recordings
+uid: '10104030'
+volume: ''
