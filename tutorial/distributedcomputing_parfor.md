@@ -13,7 +13,7 @@ Goals of this tutorial:
 
 -   introduce looping to perform the same analysis on multiple subjects
 -   use the [MATLAB Parallel Computing toolbox](http://www.mathworks.com/products/parallel-computing/) to do parallel computations and analyze multiple subjects at once
--   set up the code to deal with problematic subjects, such that successful analysis steps do not have to be repeated
+-   set up the code to deal with problematic subjects, such that successfully completed analyses do not have to be repeated if one fails
 
 This tutorial is focused on parallel computing, hence the code samples are set up to bring this aspect to the front. To keep it simple, as a consequence most of the code samples do NOT follow the recommendations in [Creating a clean analysis pipeline](/tutorial/scripting) regarding separating subject details from the analysis code, writing wrapper analysis functions, or handling of the input and output data through files. The final example also does not completely follow the guidelines, but does show what functions to use when interacting with files and paths to files in a parallel computing setting.
 
@@ -48,13 +48,13 @@ To use parallel computing, the minimum requirement is to have the [Parallel Comp
         % then PCT is installed, but you do not have a valid license to use it.
     end
 
-This tutorial requires the original MEG datasets for the four subjects, and one additional dataset that is on purpose incorrect, which are available from:  
+This tutorial requires the original MEG datasets for the four subjects, plus one additional dataset that is on purpose inconsistent with the others. These are available from:  
 
 -   [Subject01.zip](https://download.fieldtriptoolbox.org/tutorial/Subject01.zip)
 -   [Subject02.zip](https://download.fieldtriptoolbox.org/tutorial/Subject02.zip)
 -   [Subject03.zip](https://download.fieldtriptoolbox.org/tutorial/Subject03.zip)
 -   [Subject04.zip](https://download.fieldtriptoolbox.org/tutorial/Subject04.zip)
--   [SubjectSEF.zip](https://download.fieldtriptoolbox.org/tutorial/SubjectSEF.zip)
+-   [SubjectSEF.zip](https://download.fieldtriptoolbox.org/tutorial/SubjectSEF.zip) to show how to deal with errors
 
 Additional prerequisites:
 
@@ -62,26 +62,26 @@ Additional prerequisites:
 -   Have the necessary data next to each other in a single directory: the directories 'Subject01.ds', 'Subject02.ds', 'Subject03.ds', 'Subject04.ds', 'SubjectSEF.ds' should all be next to each other.
 -   Put your test scripts also in this directory
 
-## Starting code: single-subject, stripped version of eventrelatedaveraging
+## Starting simple with a single-subject
 
-Here we give the code that will be the basis for the rest of the tutorial. It is an adaptation of the code in the [Event related averaging tutorial](/tutorial/eventrelatedstatistics). The adaptations were made to reduce the runtime and amount of generated files and plots, to be able to focus on the goals of this particular tutorial.
+Here we give the code that will be the basis for the rest of the tutorial. It is an adaptation of the code in the [event-related averaging tutorial](/tutorial/eventrelatedaveraging). The adaptations were made to reduce the runtime, the number of generated files and plots, and to be able to focus on the specific goals of this tutorial.
 
-For reference, the changes in detail w.r.t. the [Event related averaging tutorial](/tutorial/eventrelatedstatistics):
+For reference, the changes in detail w.r.t. the [event-related averaging tutorial](/tutorial/eventrelatedaveraging) are:
 
--   Removed the line where select only trials that don't have artifacts. It is subject-specific, so needs to be handled on a per-subject basis. See [Creating a clean analysis pipeline](/tutorial/scripting) on how to define and use subject-specific settings. For this tutorial, we will ignore the fact that certain trials have artifacts.
+-   Removed the line that selects trials without artifacts. It is subject-specific, so needs to be handled on a per-subject basis. See the tutorial on [creating a clean analysis pipeline](/tutorial/scripting) how you can handle subject-specific details. For this tutorial we will ignore the artifacts.
 -   Only use FIC condition, removed the IC and FC related lines. This to reduce the amount of code and calculation time.
--   No separate ft_selectdata call and saving of the intermediate data. Replaced with condition-data-selection inside ft_timelockanalysis call.
--   All data plotting removed (including setting `cfg.feedback = 'no'` for ft_prepare_neighbours), because useful when developing the analysis, but less so when applying analysis to multiple subjects.
--   The cfg and call signature of ft_timelockgrandaverage have been filled in.
+-   No separate ft_selectdata call and saving of the intermediate data. Replaced with trial selection with the ft_timelockanalysis call.
+-   Removed the plotting of data and results, including setting `cfg.feedback = 'no'` for ft_prepare_neighbours. This is useful when developing the pipeline, but less so when applying it to many subjects.
+-   Added a call to ft_timelockgrandaverage to get group results.
 
 ### Exercise
 
 {% include markup/info %}
--   Add a loop, such that both Subject01 and Subject02 are analyzed, and the results from both analyses are available at the end
+-   Add a loop, such that both Subject01 and Subject02 are analyzed and that results from both analyses are available at the end
 -   Use the combined results in a call to ft_timelockgrandaverage  
 {% include markup/end %}
 
-    %% Trial definition
+    % Trial definition
     cfg = [];
     cfg.dataset             = 'Subject01.ds';
     cfg.trialfun            = 'ft_trialfun_general';          % this is the default
@@ -92,7 +92,7 @@ For reference, the changes in detail w.r.t. the [Event related averaging tutoria
 
     cfg = ft_definetrial(cfg);
 
-    %% Preprocess the data
+    % Preprocess the data
     cfg.channel         = {'MEG', '-MLP31', '-MLO12'};        % read all MEG channels except MLP31 and MLO12
     cfg.demean          = 'yes';
     cfg.baselinewindow  = [-0.2 0];
@@ -101,14 +101,14 @@ For reference, the changes in detail w.r.t. the [Event related averaging tutoria
 
     data_all = ft_preprocessing(cfg);
 
-    %% Timelockanalysis
+    % Timelockanalysis
     cfg = [];
     cfg.trials = data_all.trialinfo == 3;
     avgFIC = ft_timelockanalysis(cfg, data_all);
 
-    %% HERE you would save intermediate results to file, in a non-tutorial script
+    % HERE you would save intermediate results to file
 
-    %% Planar gradient
+    % Planar gradient
     cfg = [];
     cfg.feedback        = 'no';
     cfg.method          = 'template';
@@ -119,16 +119,15 @@ For reference, the changes in detail w.r.t. the [Event related averaging tutoria
     cfg = [];
     avgFICplanarComb = ft_combineplanar(cfg, avgFICplanar);
 
-    %% HERE you would definitely save the results to file, in a non-tutorial script, since this is the end of the per-subject analysis
+    % HERE you would definitely save the results to file
 
-    %% Calculate grand average
-    % Grand average is on multiple subjects, so first need to do the analysis
-    % on multiple subjects.
+    % Calculate the grand average over multiple subjects, this requires that we first do the analysis on multiple subjects
+    %
     % cfg = [];
     % cfg.channel   = 'all';
     % cfg.latency   = 'all';
     % cfg.parameter = 'avg';
-    % grandavgFIC = ft_timelockgrandaverage(cfg, allsubj_FIC_pc{:});
+    % grandavgFIC = ft_timelockgrandaverage(cfg, avgFICplanarComb_subj1, avgFICplanarComb_subj2, ...);
 
 ## Multi-subject, sequential loop
 
@@ -145,24 +144,23 @@ Note that, as mentioned earlier, the data organization for this tutorial deviate
 ### Exercise
 
 {% include markup/info %}
--   Add SubjectSEF in the middle of the list of datasets, observe what happens.
+-   Add SubjectSEF in the middle of the list of allsubj_dataset, observe what happens.
 -   What results are available?
 -   Adapt the code so the loop runs in parallel.
 {% include markup/end %}
 
-    %% Loop over subjects
-    datasets = {'Subject01.ds', 'Subject02.ds', 'Subject03.ds', 'Subject04.ds'};
-    nr_subjects = length(datasets);
-    allsubj_FIC_pc = cell(1, nr_subjects); % Initialize the output variable
+    nsubj = 4;
+    allsubj_dataset = {'Subject01.ds', 'Subject02.ds', 'Subject03.ds', 'Subject04.ds'};
+    allsubj_result  = cell(1, nsubj); % Initialize the output variable
 
-    for i_set = 1:nr_subjects
+    % Loop over subjects
+    for subjectnr = 1:nsubj
 
-        %% Select current subject
         % Get the info of the subject for this loop iteration
-        % In this case, only the dataset name
-        subjectinfo = datasets{i_set};
+        % Here the only subject-specific information is the name of the dataset
+        subjectinfo = allsubj_dataset{subjectnr};
 
-        %% Trial definition
+        % Trial definition
         cfg = [];
         cfg.dataset             = subjectinfo;
         cfg.trialfun            = 'ft_trialfun_general';          % this is the default
@@ -173,7 +171,7 @@ Note that, as mentioned earlier, the data organization for this tutorial deviate
 
         cfg = ft_definetrial(cfg);
 
-        %% Preprocess the data
+        % Preprocess the data
         cfg.channel         = {'MEG', '-MLP31', '-MLO12'};        % read all MEG channels except MLP31 and MLO12
         cfg.demean          = 'yes';
         cfg.baselinewindow  = [-0.2 0];
@@ -182,14 +180,14 @@ Note that, as mentioned earlier, the data organization for this tutorial deviate
 
         data_all = ft_preprocessing(cfg);
 
-        %% Timelockanalysis
+        % Timelockanalysis
         cfg = [];
-        cfg.trials = data_all.trialinfo == 3;
+        cfg.trials = (data_all.trialinfo==3);
         avgFIC = ft_timelockanalysis(cfg, data_all);
 
-        %% HERE you would save intermediate results to file, in a non-tutorial script
+        % HERE you could save intermediate results to file
 
-        %% Planar gradient
+        % Planar gradient
         cfg = [];
         cfg.feedback     = 'no';
         cfg.method       = 'template';
@@ -200,53 +198,89 @@ Note that, as mentioned earlier, the data organization for this tutorial deviate
         cfg = [];
         avgFICplanarComb = ft_combineplanar(cfg, avgFICplanar);
 
-        %% Save subject results
-        allsubj_FIC_pc{i_set} = avgFICplanarComb;
+        % Save the results from this subject
+        allsubj_result{subjectnr} = avgFICplanarComb;
 
-        %% HERE you would definitely save the results to file, in a non-tutorial script, since this is the end of the per-subject analysis
+        % HERE you would definitely save the results to file
     end
 
-    %% Calculate grand average
+    % Calculate the grand average over multiple subjects
     cfg = [];
     cfg.channel   = 'all';
     cfg.latency   = 'all';
     cfg.parameter = 'avg';
-    grandavgFIC = ft_timelockgrandaverage(cfg, allsubj_FIC_pc{:});
+    grandavgFIC = ft_timelockgrandaverage(cfg, allsubj_result{:});
 
-    %% HERE you would save the grandaverage results to file, in a non-tutorial script
+    % HERE you would save the grand average to file
 
     cfg = [];
     cfg.showlabels  = 'yes';
     cfg.layout      = 'CTF151_helmet.mat';
-    figure; % Create a fresh figure for the next plot
+    cfg.figure      = figure; % Create a fresh figure
     ft_multiplotER(cfg, grandavgFIC)
+
+
+{% include markup/info %}
+Saving data and figures to disk can be done using the MATLAB [save](https://www.mathworks.com/help/matlab/ref/save.html) and [savefig](https://www.mathworks.com/help/matlab/ref/savefig.html) or [saveas](https://www.mathworks.com/help/matlab/ref/saveas.html) commands. Since you want to distinguish the data from different subjects, you can use  [sprintf](https://www.mathworks.com/help/matlab/ref/sprintf.html) to construct a unique filenames.
+
+For example:
+
+    filename = sprintf('avgFIC_Subject%02d.mat', subjectnr);
+    save(filename, 'avgFIC')
+
+or to write the data in different directories for every subject:
+
+    subjid = sprintf('Subject%02d', subjectnr);
+    filename = fullfile('results', subjid, 'avgFIC.mat');
+    save(filename, 'avgFIC')
+
+Most FieldTrip functions also support the `cfg.inputfile` and `cfg.outputfile` options, which means that you can do something like
+
+    subjid = sprintf('Subject%02d', subjectnr);
+    filename = fullfile('results', subjid, 'avgFIC.mat');
+
+    cfg = [];
+    cfg.trials      = (data_all.trialinfo==3);
+    cfg.outputfile  = filename;
+    avgFIC = ft_timelockanalysis(cfg, data_all);
+
+and
+
+    subjid = sprintf('Subject%02d', subjectnr);
+    filename = fullfile('results', subjid, 'avgFIC.fig');
+
+    cfg = [];
+    cfg.layout = 'CTF151_helmet';
+    cfg.outputfile = filename;
+    ft_multiplotER(cfg, avgFIC);
+{% include markup/end %}
 
 
 ## Multi-subject, parfor loop
 
-To do the same analysis as above, but in parallel over the subjects, all we have to do is change the for to a parfor. This holds if the sequential loop was already set up as above. However, often a sequential loop is not directly ready for parallel computing, or can be improved to be more robust.
+To do the same analysis as above, but in parallel over the subjects, all we have to do is change the `for` to a `parfor`. This holds if the sequential loop was already set up as above. However, often a sequential loop is not directly ready for parallel computing, or can be improved to be more robust.
 
 ### Exercise
 
 {% include markup/info %}
--   Add SubjectSEF.ds in the middle of the list of datasets. What happens when running the script? What results are available inside the allsubj_FIC_pc variable?
-- Remove the line near the top that states "allsubj_FIC_pc = cell(1, nr_subjects); % Initialize the output variable", and change the last non-comment line within the loop to read "allsubj_FIC_pc{end+1} = avgFICplanarComb;" What happens when running the script?
--   After the comment line "%% HERE you would save intermediate results to file, in a non-tutorial script", add an actual save call, to save the intermediate result avgFIC to a mat file, e.g. "save('avgFIC.mat', 'avgFIC');". What happens when running the script?
+-   Add SubjectSEF.ds in the middle of the list of `allsubj_dataset`. What happens when running the script? What results are available inside the `allsubj_result` variable?
+- Remove the line near the top that states `allsubj_result = cell(1, nsubj)` and change the last non-comment line within the loop to read `allsubj_result{end+1} = avgFICplanarComb`. What happens when running the script?
+-   After the comment line `% HERE you could save intermediate results to file`, add the code to save the intermediate result to disk, e.g. `save('avgFIC.mat', 'avgFIC')`. What happens when running the script?
 {% include markup/end %}
 
-    %% Loop over subjects
-    datasets = {'Subject01.ds', 'Subject02.ds', 'Subject03.ds', 'Subject04.ds'};
-    nr_subjects = length(datasets);
-    allsubj_FIC_pc = cell(1, nr_subjects); % Initialize the output variable
+    nsubj = 4;
+    allsubj_dataset = {'Subject01.ds', 'Subject02.ds', 'Subject03.ds', 'Subject04.ds'};
+    allsubj_result  = cell(1, nsubj); % Initialize the output variable
 
-    parfor i_set = 1:nr_subjects
+    % Loop over subjects
+    parfor subjectnr = 1:nsubj
 
-        %% Select current subject
+        % Select current subject
         % Get the info of the subject for this loop iteration
         % In this case, only the dataset name
-        subjectinfo = datasets{i_set};
+        subjectinfo = allsubj_dataset{subjectnr};
 
-        %% Trial definition
+        % Trial definition
         cfg                         = [];
         cfg.dataset                 = subjectinfo;
         cfg.trialfun                = 'ft_trialfun_general';          % this is the default
@@ -257,7 +291,7 @@ To do the same analysis as above, but in parallel over the subjects, all we have
 
         cfg = ft_definetrial(cfg);
 
-        %% Preprocess the data
+        % Preprocess the data
         cfg.channel         = {'MEG', '-MLP31', '-MLO12'};        % read all MEG channels except MLP31 and MLO12
         cfg.demean          = 'yes';
         cfg.baselinewindow  = [-0.2 0];
@@ -266,14 +300,14 @@ To do the same analysis as above, but in parallel over the subjects, all we have
 
         data_all = ft_preprocessing(cfg);
 
-        %% Timelockanalysis
+        % Timelockanalysis
         cfg = [];
         cfg.trials = data_all.trialinfo == 3;
         avgFIC = ft_timelockanalysis(cfg, data_all);
 
-        %% HERE you would save intermediate results to file, in a non-tutorial script
+        % HERE you would save intermediate results to file
 
-        %% Planar gradient
+        % Planar gradient
         cfg                 = [];
         cfg.feedback        = 'no';
         cfg.method          = 'template';
@@ -284,79 +318,73 @@ To do the same analysis as above, but in parallel over the subjects, all we have
         cfg = [];
         avgFICplanarComb = ft_combineplanar(cfg, avgFICplanar);
 
-        %% Save subject results
-        allsubj_FIC_pc{i_set} = avgFICplanarComb;
+        % Save subject results
+        allsubj_result{subjectnr} = avgFICplanarComb;
 
-        %% HERE you would definitely save the results to file, in a non-tutorial script, since this is the end of the per-subject analysis
+        % HERE you would definitely save the results to file
     end
 
-    %% Calculate grand average
+    % Calculate the grand average over multiple subjects
     cfg = [];
     cfg.channel   = 'all';
     cfg.latency   = 'all';
     cfg.parameter = 'avg';
-    grandavgFIC  = ft_timelockgrandaverage(cfg, allsubj_FIC_pc{:});
+    grandavgFIC  = ft_timelockgrandaverage(cfg, allsubj_result{:});
 
-    %% HERE you would save the grandaverage results to file, in a non-tutorial script
+    % HERE you would save the grand average to file
 
     cfg = [];
     cfg.showlabels  = 'yes';
     cfg.layout      = 'CTF151_helmet.mat';
-    figure; % Create a fresh figure for the next plot
+    cfg.figure      = figure; % Create a fresh figure
     ft_multiplotER(cfg, grandavgFIC)
 
 ## Error handling and saving results to file in (parallel) loops
 
-Below an example that adds several improvements over the previous code, to show additional considerations when creating an analysis script. Note that most of these improvements are also beneficial in regular analysis scripts, not just when doing parallel loops.
+Below an example analysis script that addresses several improvements and considerations. Most of these improvements are also beneficial in regular analysis scripts, not just when doing parallel loops.
 
 -   Use separate files/scripts for the per-subject analysis part and for the analysis part that works on combined results
--   Use a single variable with the base path, and construct all other file and directory paths relative to that variable
+-   Use a single variable with the base path and construct all other file and directory paths relative to that variable
 -   Use the try-catch construct within the loop
--   Make sure the output directory exists by always doing mkdir (which will do-nothing when already available)
+-   Make sure the output directory always exists by doing mkdir, this will do nothing when already available
 -   Save intermediate and final results to file
--   Check results after the end of the per-subject loop, because when a lot of subjects are analysed, any error messages displayed during the loop might be missed
+-   Check results after the per-subject loop: when a lot of subjects are analysed, any error messages displayed during the loop might be missed
 -   Check the per-subject input before doing the combined analysis
 -   Use fullfile() when working with filenames and directory paths
 
-When done correctly, all problematic subjects will be known after just one run of the script. It is then still needed to go over the subjects in the problem list to see what is wrong, and whether it can be fixed, or the subject should be excluded.
+When done correctly, all problematic subjects will be known after just one run of the script. It is then still needed to go over the subjects in the problem list to see what is wrong, and whether the script can be improved, whether exceptions for the subject can be handled, or whether the subject should be excluded from further analysis.
 
 ### Exercise
 
 {% include markup/info %}
--   Add SubjectSEF in the middle of the list of datasets, observe what happens.
+-   Add SubjectSEF in the middle of the list of allsubj_dataset, observe what happens.
 -   What results are available in the output directory? What are the differences with the previous implementations?
 {% include markup/end %}
 
-    %% Set base path information
-    is_pool_remote = false; % Set this to true when using a remote cluster for the parallel computations
-    if is_pool_remote
-        % The base path on the remote machine, to be used within the parallel loop
-        base_path = 'PUT CORRECT BASE PATH ON REMOTE MACHINE HERE'; %#ok<UNRCH>
-    else
-        % The base path on the local machine
-        base_path = pwd();
-    end
+    % Set the base path, the example here assumes that teh data is on a shared network drive
+    base_path = pwd();
 
-    %% Loop over subjects
-    subjects = {'Subject01', 'Subject02', 'Subject03', 'Subject04'};
-    nr_subjects = length(subjects);
-    allsubj_FIC_result_available = false(1, nr_subjects); % Initialize the output variable
+    nsubj = 5;
+    allsubj_id = {'Subject01', 'Subject02', 'Subject03', 'Subject04', 'SubjectSEF'};
+    allsubj_succes = false(1, nsubj); % Initialize the output variable
 
-    parfor i_set = 1:nr_subjects
+    % Loop over subjects
+    parfor subjectnr = 1:nsubj
 
-        %% Select current subject
+        % Select current subject
         % Get the info of the subject for this loop iteration
         % In this case, only the dataset name
-        subjectinfo = subjects{i_set};
+        subjectid = allsubj_id{subjectnr};
 
         try
             % Create the directory where the results will be saved
-            save_file_directory = fullfile(base_path, 'results', subjectinfo);
-            mkdir(save_file_directory);
+            rawdata_directory = base_path;
+            result_directory = fullfile(base_path, 'results', subjectid);
+            mkdir(result_directory);
 
-            %% Trial definition
+            % Trial definition
             cfg                     = [];
-            cfg.dataset             = strcat(subjectinfo, '.ds');
+            cfg.dataset             = fullfile(rawdata_directory, [subjectid '.ds']);
             cfg.trialfun            = 'ft_trialfun_general';          % this is the default
             cfg.trialdef.eventtype  = 'backpanel trigger';
             cfg.trialdef.eventvalue = [3 5 9];                        % condition are: 3 = fully incongruent (FIC), 5 = initially congruent (IC), 9 = fully congruent (FC)
@@ -365,109 +393,115 @@ When done correctly, all problematic subjects will be known after just one run o
 
             cfg = ft_definetrial(cfg);
 
-            %% Preprocess the data
+            % Preprocess the data
             cfg.channel         = {'MEG', '-MLP31', '-MLO12'};        % read all MEG channels except MLP31 and MLO12
             cfg.demean          = 'yes';
             cfg.baselinewindow  = [-0.2 0];
             cfg.lpfilter        = 'yes';                              % apply lowpass filter
             cfg.lpfreq          = 35;                                 % lowpass at 35 Hz.
 
+            cfg.outputfile      = fullfile(result_directory, 'data_all.mat');
             data_all = ft_preprocessing(cfg);
 
-            %% Timelockanalysis
+            % Timelockanalysis
             cfg = [];
-            cfg.trials = data_all.trialinfo == 3;
+            cfg.trials      = data_all.trialinfo == 3;
+            cfg.outputfile  = fullfile(result_directory, 'avgFIC.mat');
             avgFIC = ft_timelockanalysis(cfg, data_all);
 
-            % Save the intermediate result to file
-            % Within a parfor loop, the save() function cannot be used.
-            % However, it is possible to use a matfile object.
-            save_file_name = fullfile(save_file_directory, 'avgFIC.mat');
-            matObj = matfile(save_file_name, 'Writable', true);
-            matObj.avgFIC = avgFIC;
-
-            %% Planar gradient
+            % Planar gradient
             cfg = [];
             cfg.feedback        = 'no';
             cfg.method          = 'template';
             cfg.neighbours      = ft_prepare_neighbours(cfg, avgFIC);
             cfg.planarmethod    = 'sincos';
+            cfg.outputfile      = fullfile(result_directory, 'avgFICplanar.mat');
             avgFICplanar = ft_megplanar(cfg, avgFIC);
 
             cfg = [];
+            cfg.outputfile = fullfile(result_directory, 'avgFICplanarComb.mat');
             avgFICplanarComb = ft_combineplanar(cfg, avgFICplanar);
 
-            % Save the final per-subject result to file
-            save_file_name = fullfile(save_file_directory, 'avgFICplanarComb.mat');
-            matObj = matfile(save_file_name, 'Writable', true);
-            matObj.avgFICplanarComb = avgFICplanarComb;
-
-            % Mark this subject as processed
-            allsubj_FIC_result_available(i_set) = true;
+            % Mark this subject as successfully processed
+            allsubj_succes(subjectnr) = true;
         catch ME
             disp(ME)
-            disp("Error while analysing subject " + string(i_set) + " in the list of subjects.")
+            disp("Error while analysing subject " + string(subjectnr) + " in the list of subjects.")
         end
     end
 
-    %% Check the results
-    if any(~allsubj_FIC_result_available)
-        problem_ids = strjoin(string(find(~allsubj_FIC_result_available)));
+    % Check the results
+    if ~all(allsubj_succes)
+        problem_ids = strjoin(string(find(~allsubj_succes)));
         error(strcat("The following subjects had an error during analysis: ", problem_ids))
     end
 
 Using the combined results goes in a different script, because that way it isn't needed to rerun the whole loop each time an analysis on combined results is done.
 
+{% include markup/info %}
+The MATLAB [save](https://nl.mathworks.com/help/matlab/ref/save.html?) function [cannot be used](https://nl.mathworks.com/matlabcentral/answers/135285-how-do-i-use-save-with-a-parfor-loop-using-parallel-computing-toolbox) within a parfor loop. However, it is possible to use a [matfile](https://nl.mathworks.com/help/matlab/ref/matlab.io.matfile.html) object. For example, following ft_timelockanalysis in the parfor loop you can do:
+
+    result_filename = fullfile(result_directory, 'avgFIC.mat');
+    matObj = matfile(result_filename, 'Writable', true);
+    matObj.avgFIC = avgFIC;
+
+In the tutorial code above we avoided the problem by using the `cfg.outputfile` option.
+{% include markup/end %}
+
 ### Exercise
 
 {% include markup/info %}
--   Add SubjectSEF in the middle of the list of datasets, observe what happens.
+-   Add SubjectSEF in the middle of the list of allsubj_dataset, observe what happens.
 {% include markup/end %}
 
-    %% Load and check the per-subject results
-    % If the parallel loop of the first script ran on a remote cluster, results
-    % files may have to be transfered from the remote location to (subdirectories
-    % of) the current directory first.
+    % Load and check the per-subject results
     base_path = pwd();
 
-    subjects = {'Subject01', 'Subject02', 'Subject03', 'Subject04'};
-    nr_subjects = length(subjects);
-    allsubj_FIC_pc = cell(1,nr_subjects);
+    nsubj = 4;
+    allsubj_id = {'Subject01', 'Subject02', 'Subject03', 'Subject04'};
+    allsubj_result = cell(1, nsubj);
 
-    for i_set = 1:nr_subjects
-        % Select current subject
-        % Get the info of the subject for this loop iteration
-        % In this case, only the dataset name
-        subjectinfo = subjects{i_set};
+    parfor subjectnr = 1:nsubj
+      % Select current subject
+      % Get the info of the subject for this loop iteration
+      % In this case, only the dataset name
+      subjectid = allsubj_id{subjectnr};
 
-        % Load result for this subject
-        save_file_name = fullfile(base_path, 'results', subjectinfo, 'avgFICplanarComb.mat');
-        result_name = 'avgFICplanarComb';
-        mat_struct = load(save_file_name, result_name);
+      % When using cfgt.outputfile, the single variable contained in the file is called "data"
+      % Use an anonymous function to load and rename this variable on the fly
+      loadvar = @(file, var) load(file).(whos('-file', file).name);
 
-        % Check result
-        if isempty(mat_struct) || isempty(mat_struct.(result_name))
-            % Do have a hard error here, because only valid results are to be used.
-            % If one of the subjects has a problem, either go back to the per-subject
-            % script to fix the problem, or remove that subject from the list here.
-            error(strcat("The following subject had an error during analysis: ", subjectinfo))
-        end
+      try
+        % Load the result for this subject
+        result_filename = fullfile(base_path, 'results', subjectid, 'avgFICplanarComb.mat');
+        avgFICplanarComb = loadvar(result_filename, 'avgFICplanarComb');
+      catch
+        % Give a hard error here, because only valid results are to be used.
+        % If one of the subjects has a problem, either go back to the per-subject
+        % script to fix the problem, or remove that subject from the list here.
+        error(strcat("The following subject had an error during analysis: ", subjectid))
+      end
 
-        % Add to collection
-        allsubj_FIC_pc{i_set} = mat_struct.(result_name);
+      % Add to the collection of results
+      allsubj_result{subjectnr} = avgFICplanarComb;
     end
 
-    %% Calculate grand average
+    % Check the history of the analysis, look at the original filename
+    for subjectnr = 1:nsubj
+      disp(allsubj_result{subjectnr}.cfg.previous.previous.previous.dataset)
+    end
+
+    % Calculate the grand average over multiple subjects
     cfg = [];
     cfg.channel   = 'all';
     cfg.latency   = 'all';
     cfg.parameter = 'avg';
-    grandavgFIC = ft_timelockgrandaverage(cfg, allsubj_FIC_pc{:});
+    grandavgFIC = ft_timelockgrandaverage(cfg, allsubj_result{:});
 
     cfg = [];
     cfg.showlabels  = 'yes';
     cfg.layout      = 'CTF151_helmet.mat';
-    figure; % Create a fresh figure for the next plot
+    cfg.figure      = figure; % Create a fresh figure
     ft_multiplotER(cfg, grandavgFIC)
 
-    %% HERE add follow up combined-results analyses
+    % HERE you could follow up with statistical analysis
