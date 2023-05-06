@@ -1,0 +1,59 @@
+articleids:
+- idtype: pmid
+  value: '37094437'
+- idtype: doi
+  value: 10.1016/j.nicl.2023.103407
+- idtype: pmcid
+  value: PMC10149415
+authors:
+- authtype: Author
+  name: Lassi M
+- authtype: Author
+  name: Fabbiani C
+- authtype: Author
+  name: Mazzeo S
+- authtype: Author
+  name: Burali R
+- authtype: Author
+  name: Vergani AA
+- authtype: Author
+  name: Giacomucci G
+- authtype: Author
+  name: Moschini V
+- authtype: Author
+  name: Morinelli C
+- authtype: Author
+  name: Emiliani F
+- authtype: Author
+  name: Scarpino M
+- authtype: Author
+  name: Bagnoli S
+- authtype: Author
+  name: Ingannato A
+- authtype: Author
+  name: Nacmias B
+- authtype: Author
+  name: Padiglioni S
+- authtype: Author
+  name: Micera S
+- authtype: Author
+  name: Sorbi S
+- authtype: Author
+  name: Grippo A
+- authtype: Author
+  name: Bessi V
+- authtype: Author
+  name: Mazzoni A
+epubdate: 2023 Apr 19
+fulljournalname: 'NeuroImage : Clinical'
+issue: ''
+pages: '103407'
+pmclivedate: 2023/05/02
+printpubdate: ''
+pubdate: 2023 Apr 19
+sortdate: 2023/04/19 00:00
+source: Neuroimage Clin
+title: 'Degradation of EEG microstates patterns in subjective cognitive decline and
+  mild cognitive impairment: Early biomarkers along the Alzheimer’s Disease continuum?'
+uid: '10149415'
+volume: '38'

@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '36346308'
+- idtype: doi
+  value: 10.1093/cercor/bhac439
+- idtype: pmcid
+  value: PMC10152090
+authors:
+- authtype: Author
+  name: Bonetti L
+- authtype: Author
+  name: Brattico E
+- authtype: Author
+  name: Bruzzone SE
+- authtype: Author
+  name: Donati G
+- authtype: Author
+  name: Deco G
+- authtype: Author
+  name: Pantazis D
+- authtype: Author
+  name: Vuust P
+- authtype: Author
+  name: Kringelbach ML
+epubdate: 2022 Nov 8
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '9'
+pages: 5524-5537
+pmclivedate: 2023/05/03
+printpubdate: ''
+pubdate: 2022 Nov 8
+sortdate: 2022/11/08 00:00
+source: Cereb Cortex
+title: 'Brain recognition of previously learned versus novel temporal sequences: a
+  differential simultaneous processing'
+uid: '10152090'
+volume: '33'

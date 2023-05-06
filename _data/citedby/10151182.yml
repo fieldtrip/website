@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '36352511'
+- idtype: doi
+  value: 10.1093/brain/awac416
+- idtype: pmcid
+  value: PMC10151182
+authors:
+- authtype: Author
+  name: Convertino L
+- authtype: Author
+  name: Bush D
+- authtype: Author
+  name: Zheng F
+- authtype: Author
+  name: Adams RA
+- authtype: Author
+  name: Burgess N
+epubdate: 2022 Nov 10
+fulljournalname: Brain
+issue: '5'
+pages: 2191-2198
+pmclivedate: 2023/05/02
+printpubdate: ''
+pubdate: 2022 Nov 10
+sortdate: 2022/11/10 00:00
+source: Brain
+title: Reduced grid-like theta modulation in schizophrenia
+uid: '10151182'
+volume: '146'

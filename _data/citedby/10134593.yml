@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '37106388'
+- idtype: doi
+  value: 10.1186/s12984-023-01175-y
+- idtype: pmcid
+  value: PMC10134593
+authors:
+- authtype: Author
+  name: Cockx H
+- authtype: Author
+  name: Nonnekes J
+- authtype: Author
+  name: Bloem B
+- authtype: Author
+  name: van Wezel R
+- authtype: Author
+  name: Cameron I
+- authtype: Author
+  name: Wang Y
+epubdate: 2023 Apr 27
+fulljournalname: Journal of NeuroEngineering and Rehabilitation
+issue: ''
+pages: '53'
+pmclivedate: 2023/04/28
+printpubdate: ''
+pubdate: 2023 Apr 27
+sortdate: 2023/04/27 00:00
+source: J Neuroeng Rehabil
+title: 'Dealing with the heterogeneous presentations of freezing of gait: how reliable
+  are the freezing index and heart rate for freezing detection?'
+uid: '10134593'
+volume: '20'

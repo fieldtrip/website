@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '37087819'
+- idtype: doi
+  value: 10.1016/j.nicl.2023.103408
+- idtype: pmcid
+  value: PMC10149418
+authors:
+- authtype: Author
+  name: Safar K
+- authtype: Author
+  name: Pang EW
+- authtype: Author
+  name: Vandewouw MM
+- authtype: Author
+  name: de Villa K
+- authtype: Author
+  name: Arnold PD
+- authtype: Author
+  name: Iaboni A
+- authtype: Author
+  name: Ayub M
+- authtype: Author
+  name: Kelley E
+- authtype: Author
+  name: Lerch JP
+- authtype: Author
+  name: Anagnostou E
+- authtype: Author
+  name: Taylor MJ
+epubdate: 2023 Apr 18
+fulljournalname: 'NeuroImage : Clinical'
+issue: ''
+pages: '103408'
+pmclivedate: 2023/05/02
+printpubdate: ''
+pubdate: 2023 Apr 18
+sortdate: 2023/04/18 00:00
+source: Neuroimage Clin
+title: Atypical oscillatory dynamics during emotional face processing in paediatric
+  obsessive–compulsive disorder with MEG
+uid: '10149418'
+volume: '38'

@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '36907349'
+- idtype: doi
+  value: 10.1016/j.pneurobio.2023.102433
+- idtype: pmcid
+  value: PMC10074474
+authors:
+- authtype: Author
+  name: Liu B
+- authtype: Author
+  name: Nobre AC
+- authtype: Author
+  name: van Ede F
+epubdate: ''
+fulljournalname: Progress in Neurobiology
+issue: ''
+pages: '102433'
+pmclivedate: 2023/05/01
+printpubdate: 2023 May
+pubdate: 2023 May
+sortdate: 2023/05/01 00:00
+source: Prog Neurobiol
+title: Microsaccades transiently lateralise EEG alpha activity
+uid: '10074474'
+volume: '224'

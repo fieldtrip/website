@@ -1,0 +1,42 @@
+articleids:
+- idtype: pmid
+  value: '37100795'
+- idtype: doi
+  value: 10.1038/s41598-023-29920-2
+- idtype: pmcid
+  value: PMC10130812
+authors:
+- authtype: Author
+  name: Poorganji M
+- authtype: Author
+  name: Zomorrodi R
+- authtype: Author
+  name: Hawco C
+- authtype: Author
+  name: Hill AT
+- authtype: Author
+  name: Hadas I
+- authtype: Author
+  name: Zrenner C
+- authtype: Author
+  name: Rajji TK
+- authtype: Author
+  name: Chen R
+- authtype: Author
+  name: Voineskos D
+- authtype: Author
+  name: Blumberger DM
+- authtype: Author
+  name: Daskalakis ZJ
+epubdate: 2023 Apr 26
+fulljournalname: Scientific Reports
+issue: ''
+pages: '6796'
+pmclivedate: 2023/04/27
+printpubdate: ''
+pubdate: 2023 Apr 26
+sortdate: 2023/04/26 00:00
+source: Sci Rep
+title: Isolating sensory artifacts in the suprathreshold TMS-EEG signal over DLPFC
+uid: '10130812'
+volume: '13'
