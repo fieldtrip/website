@@ -23,7 +23,7 @@ Note that this is still a tentative program that is subject to change.
 
 | 09:00-09:30 | Registration and coffee |
 | 09:30-10:00 | Welcome |
-| 10:00-11:00 | Data acquisition demonstration in the EEG and MEG labs |
+| 10:00-11:00 | Introduction round |
 | 11:00-11:15 | Coffee Break |
 | 11:15-12:30 | Introduction to EEG/MEG and introduction to the FieldTrip toolbox - lecture by Robert Oostenveld |
 | 12:30-13:30 | Lunch |
