@@ -90,12 +90,12 @@ For the hands-on sessions you will work on a Desktop PC that is provided by us. 
 
 ## Getting started with the hands-on sessions
 
-For the hands-on sessions we will use MATLAB R2022b, which is installed on the PCs in the instruction rooms. If you log in with the credentials that are provided for each of the course computers, you should start MATLAB using the Desktop shortcut.
+For the hands-on sessions we will use MATLAB R2021b, which is installed on the PCs in the instruction rooms. If you log in with the credentials that are provided for each of the course computers, you should start MATLAB using the Desktop shortcut. On the desktop there will also be a browser shortcut to this internet page.
 
 To ensure that everything runs smoothly, we will work with a clean and well-tested version of FieldTrip that we have installed on all computers. Importantly, the tutorial data does _not_ have to be downloaded on the PCs and has already been placed in the course accounts' home directories. These home directories are mounted as the computer's M-drive, and the FieldTrip code plus the necessary data are located in `M:\toolkit2023`. If you start MATLAB from the Desktop shortcut, FieldTrip will be automatically added to the MATLAB path, and you will be taken to the directory that contains the course data.
 
 {% include markup/danger %}
-Please do not use another MATLAB version than R2022b. It should be available on all hands-on computers.
+Please do not use another MATLAB version than R2021b. It should be available on all hands-on computers.
 {% include markup/end %}
 
 A recent copy of FieldTrip and the data have been preinstalled on the computer and you do not have to download anything. Also, it should NOT be necessary to execute the following lines of code. These are only needed if you DO NOT start the MATLAB from the Desktop shortcut. In other words, you will probably always want to start MATLAB from the Desktop shortcut.
