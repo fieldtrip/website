@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '37147388'
+- idtype: doi
+  value: 10.1038/s41467-023-38338-3
+- idtype: pmcid
+  value: PMC10163237
+authors:
+- authtype: Author
+  name: Kong E
+- authtype: Author
+  name: Lee KH
+- authtype: Author
+  name: Do J
+- authtype: Author
+  name: Kim P
+- authtype: Author
+  name: Lee D
+epubdate: 2023 May 5
+fulljournalname: Nature Communications
+issue: ''
+pages: '2597'
+pmclivedate: 2023/05/07
+printpubdate: ''
+pubdate: 2023 May 5
+sortdate: 2023/05/05 00:00
+source: Nat Commun
+title: Dynamic and stable hippocampal representations of social identity and reward
+  expectation support associative social memory in male mice
+uid: '10163237'
+volume: '14'

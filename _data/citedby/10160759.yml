@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '37153429'
+- idtype: doi
+  value: 10.1016/j.heliyon.2023.e15600
+- idtype: pmcid
+  value: PMC10160759
+authors:
+- authtype: Author
+  name: Bonetti L
+- authtype: Author
+  name: Bruzzone SE
+- authtype: Author
+  name: Paunio T
+- authtype: Author
+  name: Kantojärvi K
+- authtype: Author
+  name: Kliuchko M
+- authtype: Author
+  name: Vuust P
+- authtype: Author
+  name: Palva S
+- authtype: Author
+  name: Brattico E
+epubdate: 2023 Apr 18
+fulljournalname: Heliyon
+issue: '5'
+pages: e15600
+pmclivedate: 2023/05/06
+printpubdate: ''
+pubdate: 2023 Apr 18
+sortdate: 2023/04/18 00:00
+source: Heliyon
+title: Moderate associations between BDNF Val66Met gene polymorphism, musical expertise,
+  and mismatch negativity
+uid: '10160759'
+volume: '9'

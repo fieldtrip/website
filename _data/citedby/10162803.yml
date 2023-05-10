@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '37083626'
+- idtype: doi
+  value: 10.7554/eLife.83161
+- idtype: pmcid
+  value: PMC10162803
+authors:
+- authtype: Author
+  name: van den Bosch R
+- authtype: Author
+  name: Hezemans FH
+- authtype: Author
+  name: Määttä JI
+- authtype: Author
+  name: Hofmans L
+- authtype: Author
+  name: Papadopetraki D
+- authtype: Author
+  name: Verkes RJ
+- authtype: Author
+  name: Marquand AF
+- authtype: Author
+  name: Booij J
+- authtype: Author
+  name: Cools R
+epubdate: 2023 Apr 21
+fulljournalname: eLife
+issue: ''
+pages: e83161
+pmclivedate: 2023/05/06
+printpubdate: ''
+pubdate: 2023 Apr 21
+sortdate: 2023/04/21 00:00
+source: eLife
+title: Evidence for absence of links between striatal dopamine synthesis capacity
+  and working memory capacity, spontaneous eye-blink rate, and trait impulsivity
+uid: '10162803'
+volume: '12'

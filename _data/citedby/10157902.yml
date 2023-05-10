@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '37143057'
+- idtype: doi
+  value: 10.1186/s12984-023-01181-0
+- idtype: pmcid
+  value: PMC10157902
+authors:
+- authtype: Author
+  name: Won K
+- authtype: Author
+  name: Kim H
+- authtype: Author
+  name: Gwon D
+- authtype: Author
+  name: Ahn M
+- authtype: Author
+  name: Nam CS
+- authtype: Author
+  name: Jun SC
+epubdate: 2023 May 4
+fulljournalname: Journal of NeuroEngineering and Rehabilitation
+issue: ''
+pages: '60'
+pmclivedate: 2023/05/05
+printpubdate: ''
+pubdate: 2023 May 4
+sortdate: 2023/05/04 00:00
+source: J Neuroeng Rehabil
+title: Can vibrotactile stimulation and tDCS help inefficient BCI users?
+uid: '10157902'
+volume: '20'

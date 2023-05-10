@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '37138236'
+- idtype: doi
+  value: 10.1186/s12868-023-00799-z
+- idtype: pmcid
+  value: PMC10157967
+authors:
+- authtype: Author
+  name: Freiberg J
+- authtype: Author
+  name: Lang L
+- authtype: Author
+  name: Kaernbach C
+- authtype: Author
+  name: Keil J
+epubdate: 2023 May 3
+fulljournalname: BMC Neuroscience
+issue: ''
+pages: '29'
+pmclivedate: 2023/05/05
+printpubdate: ''
+pubdate: 2023 May 3
+sortdate: 2023/05/03 00:00
+source: BMC Neurosci
+title: Characterization of the planarian surface electroencephalogram
+uid: '10157967'
+volume: '24'
