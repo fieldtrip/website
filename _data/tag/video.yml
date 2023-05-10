@@ -1,6 +1,3 @@
-- name:  Guidelines for audio and video material
-  link:  /development/guideline/video
-
 - name:  Converting an example video dataset for sharing in BIDS
   link:  /example/bids_video
 
