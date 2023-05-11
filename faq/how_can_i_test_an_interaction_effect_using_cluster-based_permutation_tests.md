@@ -5,7 +5,7 @@ tags: [faq, statistics]
 
 # How to test an interaction effect using cluster-based permutation tests?
 
-You can use cluster-based permutation tests for some but not for all interaction effects. Specifically, you can only use them for testing interaction effects in factorial designs with only a single between-subjects factor. In this text, I only consider two-way designs (of which only a single "way" corresponds to a between-subjects factor), although generalisation to to multi-way designs is possible.
+You can use cluster-based permutation tests for some but not for all interaction effects.
 
 ## A 2-by-2 factorial design
 
