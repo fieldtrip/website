@@ -118,6 +118,9 @@
 - name:  Getting started with LIMO MEEG
   link:  /getting_started/limo
 
+- name:  Getting started with MNE(-python)
+  link:  /getting_started/mne
+
 - name:  Getting started with Nicolet data
   link:  /getting_started/nicolet
 

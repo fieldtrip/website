@@ -139,6 +139,9 @@
 - name:  Getting started with LORETA
   link:  /getting_started/loreta
 
+- name:  Getting started with MNE(-python)
+  link:  /getting_started/mne
+
 - name:  Getting started with Neuralynx data
   link:  /getting_started/neuralynx
 
