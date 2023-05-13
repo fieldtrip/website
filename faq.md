@@ -118,6 +118,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [How can I define neighbouring sensors?](/faq/how_can_i_define_neighbouring_sensors)
 - [How can I determine the onset of an effect?](/faq/how_can_i_determine_the_onset_of_an_effect)
 - [How can I test an interaction effect using cluster-based permutation tests?](/faq/how_can_i_test_an_interaction_effect_using_cluster-based_permutation_tests)
+- [Should I use t or F values for cluster-based permutation tests?](/faq/should_I_use_t_or_F_values_for_cluster-based_permutation_tests)
 - [How can I test for correlations between neuronal data and quantitative stimulus and behavioural variables?](/faq/how_can_i_test_for_correlations_between_neuronal_data_and_quantitative_stimulus_and_behavioural_variables)
 - [How can I test whether a behavioral measure is phasic?](/faq/how_can_i_test_whether_a_behavioral_measure_is_phasic)
 - [How can I use the ivar, uvar, wvar and cvar options to precisely control the permutations?](/faq/how_can_i_use_the_ivar_uvar_wvar_and_cvar_options_to_precisely_control_the_permutations)
