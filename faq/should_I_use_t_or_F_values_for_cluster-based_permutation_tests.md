@@ -28,3 +28,6 @@ Obtaining different p-values in two procedures which are supposed to be mathemat
 
 - Compute statistics as t-tests between differences (or in the case of interactions, differences of differences) instead of F-test from an Anova on the full experimental design.
 - If you compute statistics with an Anova, adjust the cluster-based permutation algorithm to take the square root of the F-value before computing the cluster mass. Some functions might provide this option already.
+
+Slides with more detailed explanations and graphs can be found here:
+[Christoph-cluster_test_answer-2023-03-06.pptx](https://github.com/chsquare/website/files/11469147/Christoph-cluster_test_answer-2023-03-06.pptx)
