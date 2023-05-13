@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '37161049'
+- idtype: doi
+  value: 10.1038/s41598-023-34749-w
+- idtype: pmcid
+  value: PMC10169840
+authors:
+- authtype: Author
+  name: Cadwallader CJ
+- authtype: Author
+  name: Steiniger J
+- authtype: Author
+  name: Cooper PS
+- authtype: Author
+  name: Zhou SH
+- authtype: Author
+  name: Hendrikse J
+- authtype: Author
+  name: Sumner RL
+- authtype: Author
+  name: Kirk IJ
+- authtype: Author
+  name: Chong TT
+- authtype: Author
+  name: Coxon JP
+epubdate: 2023 May 9
+fulljournalname: Scientific Reports
+issue: ''
+pages: '7491'
+pmclivedate: 2023/05/11
+printpubdate: ''
+pubdate: 2023 May 9
+sortdate: 2023/05/09 00:00
+source: Sci Rep
+title: Acute exercise as a modifier of neocortical plasticity and aperiodic activity
+  in the visual cortex
+uid: '10169840'
+volume: '13'

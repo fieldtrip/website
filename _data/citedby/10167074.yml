@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '37155028'
+- idtype: doi
+  value: 10.1186/s40708-023-00191-x
+- idtype: pmcid
+  value: PMC10167074
+authors:
+- authtype: Author
+  name: Gauthier-Umaña C
+- authtype: Author
+  name: Valderrama M
+- authtype: Author
+  name: Múnera A
+- authtype: Author
+  name: Nava-Mesa MO
+epubdate: 2023 May 8
+fulljournalname: Brain Informatics
+issue: '1'
+pages: '12'
+pmclivedate: 2023/05/10
+printpubdate: ''
+pubdate: 2023 May 8
+sortdate: 2023/05/08 00:00
+source: Brain Inform
+title: 'BOARD-FTD-PACC: a graphical user interface for the synaptic and cross-frequency
+  analysis derived from neural signals'
+uid: '10167074'
+volume: '10'

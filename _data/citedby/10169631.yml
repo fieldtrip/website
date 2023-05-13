@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fncom.2023.1142948
+- idtype: pmcid
+  value: PMC10169631
+authors:
+- authtype: Author
+  name: Rosenfelder MJ
+- authtype: Author
+  name: Spiliopoulou M
+- authtype: Author
+  name: Hoppenstedt B
+- authtype: Author
+  name: Pryss R
+- authtype: Author
+  name: Fissler P
+- authtype: Author
+  name: della Piedra Walter M
+- authtype: Author
+  name: Kolassa IT
+- authtype: Author
+  name: Bender A
+epubdate: 2023 Apr 26
+fulljournalname: Frontiers in Computational Neuroscience
+issue: ''
+pages: '1142948'
+pmclivedate: 2023/05/11
+printpubdate: ''
+pubdate: 2023 Apr 26
+sortdate: 2023/04/26 00:00
+source: Front Comput Neurosci
+title: Stability of mental motor-imagery classification in EEG depends on the choice
+  of classifier model and experiment design, but not on signal preprocessing
+uid: '10169631'
+volume: '17'
