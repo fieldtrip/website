@@ -34,7 +34,7 @@ Note that this is still a tentative program that is subject to change.
 ### Tuesday May 23, 2023
 
 | 09:00-09:30 | Morning chill or workout |
-| 09:45-11:00 | Special interest lecture, something with EEG and babies - lecture by Marlene Meyer |
+| 09:45-11:00 | Special interest lecture, infant EEG - the beauty and the beast of developmental EEG  - lecture by Marlene Meyer |
 | 11:00-11:15 | Coffee Break |
 | 11:15-12:30 | Time frequency analysis of power - lecture by Jan-Mathijs Schoffelen |
 | 12:30-13:30 | Lunch |
