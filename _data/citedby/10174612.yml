@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '37169738'
+- idtype: doi
+  value: 10.1038/s41467-023-38253-7
+- idtype: pmcid
+  value: PMC10174612
+authors:
+- authtype: Author
+  name: Huang Y
+- authtype: Author
+  name: Wang JB
+- authtype: Author
+  name: Parker JJ
+- authtype: Author
+  name: Shivacharan R
+- authtype: Author
+  name: Lal RA
+- authtype: Author
+  name: Halpern CH
+epubdate: 2023 May 11
+fulljournalname: Nature Communications
+issue: ''
+pages: '2729'
+pmclivedate: 2023/05/13
+printpubdate: ''
+pubdate: 2023 May 11
+sortdate: 2023/05/11 00:00
+source: Nat Commun
+title: Spectro-spatial features in distributed human intracranial activity proactively
+  encode peripheral metabolic activity
+uid: '10174612'
+volume: '14'

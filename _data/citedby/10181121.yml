@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '37177443'
+- idtype: doi
+  value: 10.3390/s23094239
+- idtype: pmcid
+  value: PMC10181121
+authors:
+- authtype: Author
+  name: Ortega-Rodríguez J
+- authtype: Author
+  name: Gómez-González JF
+- authtype: Author
+  name: Pereda E
+epubdate: 2023 Apr 24
+fulljournalname: Sensors (Basel, Switzerland)
+issue: '9'
+pages: '4239'
+pmclivedate: 2023/05/13
+printpubdate: ''
+pubdate: 2023 Apr 24
+sortdate: 2023/04/24 00:00
+source: Sensors (Basel)
+title: Selection of the Minimum Number of EEG Sensors to Guarantee Biometric Identification
+  of Individuals
+uid: '10181121'
+volume: '23'

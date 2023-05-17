@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '37131777'
+- idtype: doi
+  value: 10.1101/2023.04.18.537382
+- idtype: pmcid
+  value: PMC10153130
+authors:
+- authtype: Author
+  name: Marciano D
+- authtype: Author
+  name: Bellier L
+- authtype: Author
+  name: Mayer I
+- authtype: Author
+  name: Ruvalcaba M
+- authtype: Author
+  name: Lee S
+- authtype: Author
+  name: Hsu M
+- authtype: Author
+  name: Knight RT
+epubdate: 2023 Apr 18
+fulljournalname: bioRxiv
+issue: ''
+pages: 2023.04.18.537382
+pmclivedate: 2023/05/03
+printpubdate: ''
+pubdate: 2023 Apr 18
+sortdate: 2023/04/18 00:00
+source: bioRxiv
+title: 'Dynamic expectations: Behavioral and electrophysiological evidence of sub-second
+  updates in reward predictions'
+uid: '10153130'
+volume: ''

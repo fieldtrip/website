@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '37169826'
+- idtype: doi
+  value: 10.1038/s42003-023-04855-6
+- idtype: pmcid
+  value: PMC10175284
+authors:
+- authtype: Author
+  name: Singh B
+- authtype: Author
+  name: Wang Z
+- authtype: Author
+  name: Constantinidis C
+epubdate: 2023 May 11
+fulljournalname: Communications Biology
+issue: ''
+pages: '505'
+pmclivedate: 2023/05/13
+printpubdate: ''
+pubdate: 2023 May 11
+sortdate: 2023/05/11 00:00
+source: Commun Biol
+title: Neuronal selectivity for stimulus information determines prefrontal LFP gamma
+  power regardless of task execution
+uid: '10175284'
+volume: '6'

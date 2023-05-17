@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '37173436'
+- idtype: doi
+  value: 10.1038/s41598-023-34895-1
+- idtype: pmcid
+  value: PMC10176297
+authors:
+- authtype: Author
+  name: Timofeeva P
+- authtype: Author
+  name: Quiñones I
+- authtype: Author
+  name: Geng S
+- authtype: Author
+  name: de Bruin A
+- authtype: Author
+  name: Carreiras M
+- authtype: Author
+  name: Amoruso L
+epubdate: 2023 May 12
+fulljournalname: Scientific Reports
+issue: ''
+pages: '7725'
+pmclivedate: 2023/05/14
+printpubdate: ''
+pubdate: 2023 May 12
+sortdate: 2023/05/12 00:00
+source: Sci Rep
+title: Behavioral and oscillatory signatures of switch costs in highly proficient
+  bilinguals
+uid: '10176297'
+volume: '13'
