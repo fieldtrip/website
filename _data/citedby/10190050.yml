@@ -1,0 +1,50 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1186/s12886-023-02944-y
+- idtype: pmcid
+  value: PMC10190050
+authors:
+- authtype: Author
+  name: Simon-Martinez C
+- authtype: Author
+  name: Antoniou MP
+- authtype: Author
+  name: Bouthour W
+- authtype: Author
+  name: Bavelier D
+- authtype: Author
+  name: Levi D
+- authtype: Author
+  name: Backus BT
+- authtype: Author
+  name: Dornbos B
+- authtype: Author
+  name: Blaha JJ
+- authtype: Author
+  name: Kropp M
+- authtype: Author
+  name: Müller H
+- authtype: Author
+  name: Murray M
+- authtype: Author
+  name: Thumann G
+- authtype: Author
+  name: Steffen H
+- authtype: Author
+  name: Matusz PJ
+epubdate: 2023 May 17
+fulljournalname: BMC Ophthalmology
+issue: ''
+pages: '220'
+pmclivedate: 2023/05/18
+printpubdate: ''
+pubdate: 2023 May 17
+sortdate: 2023/05/17 00:00
+source: BMC Ophthalmol
+title: 'Stereoptic serious games as a visual rehabilitation tool for individuals with
+  a residual amblyopia (AMBER trial): a protocol for a crossover randomized controlled
+  trial'
+uid: '10190050'
+volume: '23'

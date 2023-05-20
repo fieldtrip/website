@@ -1,0 +1,77 @@
+articleids:
+- idtype: pmid
+  value: '35792291'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2022.119438
+- idtype: pmcid
+  value: PMC10190110
+- idtype: MID
+  value: NIHMS1887208
+authors:
+- authtype: Author
+  name: Mercier MR
+- authtype: Author
+  name: Dubarry AS
+- authtype: Author
+  name: Tadel F
+- authtype: Author
+  name: Avanzini P
+- authtype: Author
+  name: Axmacher N
+- authtype: Author
+  name: Cellier D
+- authtype: Author
+  name: Del Vecchio M
+- authtype: Author
+  name: Hamilton LS
+- authtype: Author
+  name: Hermes D
+- authtype: Author
+  name: Kahana MJ
+- authtype: Author
+  name: Knight RT
+- authtype: Author
+  name: Llorens A
+- authtype: Author
+  name: Megevand P
+- authtype: Author
+  name: Melloni L
+- authtype: Author
+  name: Miller KJ
+- authtype: Author
+  name: Piai V
+- authtype: Author
+  name: Puce A
+- authtype: Author
+  name: Ramsey NF
+- authtype: Author
+  name: Schwiedrzik CM
+- authtype: Author
+  name: Smith SE
+- authtype: Author
+  name: Stolk A
+- authtype: Author
+  name: Swann NC
+- authtype: Author
+  name: Vansteensel MJ
+- authtype: Author
+  name: Voytek B
+- authtype: Author
+  name: Wang L
+- authtype: Author
+  name: Lachaux JP
+- authtype: Author
+  name: Oostenveld R
+epubdate: 2022 Jul 2
+fulljournalname: NeuroImage
+issue: ''
+pages: '119438'
+pmclivedate: 2023/05/17
+printpubdate: 2022 Oct 15
+pubdate: 2022 Jul 2
+sortdate: 2022/07/02 00:00
+source: Neuroimage
+title: Advances in human intracranial electroencephalography research, guidelines
+  and good practices
+uid: '10190110'
+volume: '260'

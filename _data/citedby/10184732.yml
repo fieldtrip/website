@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '36931711'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1967-22.2023
+- idtype: pmcid
+  value: PMC10184732
+authors:
+- authtype: Author
+  name: Contreras MP
+- authtype: Author
+  name: Fechner J
+- authtype: Author
+  name: Born J
+- authtype: Author
+  name: Inostroza M
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '19'
+pages: 3509-3519
+pmclivedate: ''
+printpubdate: 2023 May 10
+pubdate: 2023 May 10
+sortdate: 2023/05/10 00:00
+source: J Neurosci
+title: 'Accelerating Maturation of Spatial Memory Systems by Experience: Evidence
+  from Sleep Oscillation Signatures of Memory Processing'
+uid: '10184732'
+volume: '43'

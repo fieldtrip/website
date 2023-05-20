@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '36562997'
+- idtype: doi
+  value: 10.1093/cercor/bhac504
+- idtype: pmcid
+  value: PMC10183732
+authors:
+- authtype: Author
+  name: Dreyer AM
+- authtype: Author
+  name: Michalke L
+- authtype: Author
+  name: Perry A
+- authtype: Author
+  name: Chang EF
+- authtype: Author
+  name: Lin JJ
+- authtype: Author
+  name: Knight RT
+- authtype: Author
+  name: Rieger JW
+epubdate: 2022 Dec 23
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '10'
+pages: 6291-6298
+pmclivedate: ''
+printpubdate: ''
+pubdate: 2022 Dec 23
+sortdate: 2022/12/23 00:00
+source: Cereb Cortex
+title: Grasp-specific high-frequency broadband mirror neuron activity during reach-and-grasp
+  movements in humans
+uid: '10183732'
+volume: '33'

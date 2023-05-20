@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '36724048'
+- idtype: doi
+  value: 10.1093/cercor/bhac499
+- idtype: pmcid
+  value: PMC10183750
+authors:
+- authtype: Author
+  name: Branzi FM
+- authtype: Author
+  name: Martin CD
+- authtype: Author
+  name: Biau E
+epubdate: 2023 Feb 1
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '10'
+pages: 6228-6240
+pmclivedate: 2023/05/16
+printpubdate: ''
+pubdate: 2023 Feb 1
+sortdate: 2023/02/01 00:00
+source: Cereb Cortex
+title: 'Activating words without language: beta and theta oscillations reflect lexical
+  access and control processes during verbal and non-verbal object recognition tasks'
+uid: '10183750'
+volume: '33'
