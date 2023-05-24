@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '37059462'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1500-22.2023
+- idtype: pmcid
+  value: PMC10198453
+authors:
+- authtype: Author
+  name: Zioga I
+- authtype: Author
+  name: Weissbart H
+- authtype: Author
+  name: Lewis AG
+- authtype: Author
+  name: Haegens S
+- authtype: Author
+  name: Martin AE
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '20'
+pages: 3718-3732
+pmclivedate: ''
+printpubdate: 2023 May 17
+pubdate: 2023 May 17
+sortdate: 2023/05/17 00:00
+source: J Neurosci
+title: Naturalistic Spoken Language Comprehension Is Supported by Alpha and Beta Oscillations
+uid: '10198453'
+volume: '43'

@@ -1,0 +1,48 @@
+articleids:
+- idtype: pmid
+  value: '36989866'
+- idtype: doi
+  value: 10.1016/j.clinph.2023.03.004
+- idtype: pmcid
+  value: PMC10192072
+- idtype: MID
+  value: NIHMS1884007
+authors:
+- authtype: Author
+  name: Firestone E
+- authtype: Author
+  name: Sonoda M
+- authtype: Author
+  name: Kuroda N
+- authtype: Author
+  name: Sakakura K
+- authtype: Author
+  name: Jeong JW
+- authtype: Author
+  name: Lee MH
+- authtype: Author
+  name: Wada K
+- authtype: Author
+  name: Takayama Y
+- authtype: Author
+  name: Iijima K
+- authtype: Author
+  name: Iwasaki M
+- authtype: Author
+  name: Miyazaki T
+- authtype: Author
+  name: Asano E
+epubdate: 2023 Mar 17
+fulljournalname: 'Clinical neurophysiology : official journal of the International
+  Federation of Clinical Neurophysiology'
+issue: ''
+pages: 17-30
+pmclivedate: ''
+printpubdate: 2023 Jun
+pubdate: 2023 Mar 17
+sortdate: 2023/03/17 00:00
+source: Clin Neurophysiol
+title: Sevoflurane-induced high-frequency oscillations, effective connectivity and
+  intraoperative classification of epileptic brain areas
+uid: '10192072'
+volume: '150'

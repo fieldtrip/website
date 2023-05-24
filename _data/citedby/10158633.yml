@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '37216060'
+- idtype: doi
+  value: 10.1162/nol_a_00070
+- idtype: pmcid
+  value: PMC10158633
+authors:
+- authtype: Author
+  name: Coopmans CW
+- authtype: Author
+  name: de Hoop H
+- authtype: Author
+  name: Hagoort P
+- authtype: Author
+  name: Martin AE
+epubdate: 2022 Jun 21
+fulljournalname: Neurobiology of Language
+issue: '3'
+pages: 386-412
+pmclivedate: 2023/05/19
+printpubdate: ''
+pubdate: 2022 Jun 21
+sortdate: 2022/06/21 00:00
+source: Neurobiol Lang (Camb)
+title: Effects of Structure and Meaning on Cortical Tracking of Linguistic Units in
+  Naturalistic Speech
+uid: '10158633'
+volume: '3'

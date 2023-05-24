@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '37216146'
+- idtype: doi
+  value: 10.1162/nol_a_00033
+- idtype: pmcid
+  value: PMC10158622
+authors:
+- authtype: Author
+  name: Kolozsvári OB
+- authtype: Author
+  name: Xu W
+- authtype: Author
+  name: Gerike G
+- authtype: Author
+  name: Parviainen T
+- authtype: Author
+  name: Nieminen L
+- authtype: Author
+  name: Noiray A
+- authtype: Author
+  name: Hämäläinen JA
+epubdate: 2021 May 7
+fulljournalname: Neurobiology of Language
+issue: '2'
+pages: 226-253
+pmclivedate: 2023/05/19
+printpubdate: ''
+pubdate: 2021 May 7
+sortdate: 2021/05/07 00:00
+source: Neurobiol Lang (Camb)
+title: Coherence Between Brain Activation and Speech Envelope at Word and Sentence
+  Levels Showed Age-Related Differences in Low Frequency Bands
+uid: '10158622'
+volume: '2'

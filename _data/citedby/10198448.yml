@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '36944487'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.2068-22.2023
+- idtype: pmcid
+  value: PMC10198448
+authors:
+- authtype: Author
+  name: Luo J
+- authtype: Author
+  name: Collins T
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '20'
+pages: 3658-3665
+pmclivedate: ''
+printpubdate: 2023 May 17
+pubdate: 2023 May 17
+sortdate: 2023/05/17 00:00
+source: J Neurosci
+title: The Representational Similarity between Visual Perception and Recent Perceptual
+  History
+uid: '10198448'
+volume: '43'

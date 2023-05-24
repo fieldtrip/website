@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '37215328'
+- idtype: doi
+  value: 10.1162/nol_a_00047
+- idtype: pmcid
+  value: PMC10158576
+authors:
+- authtype: Author
+  name: Kaestner E
+- authtype: Author
+  name: Wu X
+- authtype: Author
+  name: Friedman D
+- authtype: Author
+  name: Dugan P
+- authtype: Author
+  name: Devinsky O
+- authtype: Author
+  name: Carlson C
+- authtype: Author
+  name: Doyle W
+- authtype: Author
+  name: Thesen T
+- authtype: Author
+  name: Halgren E
+epubdate: 2022 Feb 10
+fulljournalname: Neurobiology of Language
+issue: '1'
+pages: 18-45
+pmclivedate: 2023/05/19
+printpubdate: ''
+pubdate: 2022 Feb 10
+sortdate: 2022/02/10 00:00
+source: Neurobiol Lang (Camb)
+title: The Precentral Gyrus Contributions to the Early Time-Course of Grapheme-to-Phoneme
+  Conversion
+uid: '10158576'
+volume: '3'

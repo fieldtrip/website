@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '37215342'
+- idtype: doi
+  value: 10.1162/nol_a_00077
+- idtype: pmcid
+  value: PMC10158645
+authors:
+- authtype: Author
+  name: Lo CW
+- authtype: Author
+  name: Tung TY
+- authtype: Author
+  name: Ke AH
+- authtype: Author
+  name: Brennan JR
+epubdate: 2022 Sep 22
+fulljournalname: Neurobiology of Language
+issue: '4'
+pages: 538-555
+pmclivedate: 2023/05/19
+printpubdate: ''
+pubdate: 2022 Sep 22
+sortdate: 2022/09/22 00:00
+source: Neurobiol Lang (Camb)
+title: Hierarchy, Not Lexical Regularity, Modulates Low-Frequency Neural Synchrony
+  During Language Comprehension
+uid: '10158645'
+volume: '3'

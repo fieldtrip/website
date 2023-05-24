@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '37213926'
+- idtype: doi
+  value: 10.3389/fnhum.2023.1174720
+- idtype: pmcid
+  value: PMC10196181
+authors:
+- authtype: Author
+  name: Luo C
+- authtype: Author
+  name: Gao Y
+- authtype: Author
+  name: Fan J
+- authtype: Author
+  name: Liu Y
+- authtype: Author
+  name: Yu Y
+- authtype: Author
+  name: Zhang X
+epubdate: 2023 May 5
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '1174720'
+pmclivedate: 2023/05/20
+printpubdate: ''
+pubdate: 2023 May 5
+sortdate: 2023/05/05 00:00
+source: Front Hum Neurosci
+title: Compromised word-level neural tracking in the high-gamma band for children
+  with attention deficit hyperactivity disorder
+uid: '10196181'
+volume: '17'

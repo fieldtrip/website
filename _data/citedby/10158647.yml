@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '37216063'
+- idtype: doi
+  value: 10.1162/nol_a_00074
+- idtype: pmcid
+  value: PMC10158647
+authors:
+- authtype: Author
+  name: Menn KH
+- authtype: Author
+  name: Ward EK
+- authtype: Author
+  name: Braukmann R
+- authtype: Author
+  name: van den Boomen C
+- authtype: Author
+  name: Buitelaar J
+- authtype: Author
+  name: Hunnius S
+- authtype: Author
+  name: Snijders TM
+epubdate: 2022 Aug 17
+fulljournalname: Neurobiology of Language
+issue: '3'
+pages: 495-514
+pmclivedate: 2023/05/19
+printpubdate: ''
+pubdate: 2022 Aug 17
+sortdate: 2022/08/17 00:00
+source: Neurobiol Lang (Camb)
+title: Neural Tracking in Infancy Predicts Language Development in Children With and
+  Without Family History of Autism
+uid: '10158647'
+volume: '3'

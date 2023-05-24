@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '37214390'
+- idtype: doi
+  value: 10.3389/fnins.2023.1004763
+- idtype: pmcid
+  value: PMC10192635
+authors:
+- authtype: Author
+  name: Passera B
+- authtype: Author
+  name: Harquel S
+- authtype: Author
+  name: Chauvin A
+- authtype: Author
+  name: Gérard P
+- authtype: Author
+  name: Lai L
+- authtype: Author
+  name: Moro E
+- authtype: Author
+  name: Meoni S
+- authtype: Author
+  name: Fraix V
+- authtype: Author
+  name: David O
+- authtype: Author
+  name: Raffin E
+epubdate: 2023 May 4
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '1004763'
+pmclivedate: 2023/05/19
+printpubdate: ''
+pubdate: 2023 May 4
+sortdate: 2023/05/04 00:00
+source: Front Neurosci
+title: 'Multi-scale and cross-dimensional TMS mapping: A proof of principle in patients
+  with Parkinson’s disease and deep brain stimulation'
+uid: '10192635'
+volume: '17'
