@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '36988453'
+- idtype: doi
+  value: 10.1002/hbm.26295
+- idtype: pmcid
+  value: PMC10203810
+authors:
+- authtype: Author
+  name: Kida T
+- authtype: Author
+  name: Tanaka E
+- authtype: Author
+  name: Kakigi R
+- authtype: Author
+  name: Inui K
+epubdate: 2023 Mar 29
+fulljournalname: Human Brain Mapping
+issue: '9'
+pages: 3519-3540
+pmclivedate: 2023/05/24
+printpubdate: ''
+pubdate: 2023 Mar 29
+sortdate: 2023/03/29 00:00
+source: Hum Brain Mapp
+title: Brain‐wide network analysis of resting‐state neuromagnetic data
+uid: '10203810'
+volume: '44'

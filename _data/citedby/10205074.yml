@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1162/nol_a_00089
+- idtype: pmcid
+  value: PMC10205074
+authors:
+- authtype: Author
+  name: Rimmele JM
+- authtype: Author
+  name: Sun Y
+- authtype: Author
+  name: Michalareas G
+- authtype: Author
+  name: Ghitza O
+- authtype: Author
+  name: Poeppel D
+epubdate: 2023 Mar 8
+fulljournalname: Neurobiology of Language
+issue: '1'
+pages: 120-144
+pmclivedate: 2023/05/24
+printpubdate: ''
+pubdate: 2023 Mar 8
+sortdate: 2023/03/08 00:00
+source: Neurobiol Lang (Camb)
+title: Dynamics of Functional Networks for Syllable and Word-Level Processing
+uid: '10205074'
+volume: '4'

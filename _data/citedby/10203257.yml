@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '37217510'
+- idtype: doi
+  value: 10.1038/s41467-023-38675-3
+- idtype: pmcid
+  value: PMC10203257
+authors:
+- authtype: Author
+  name: Rassi E
+- authtype: Author
+  name: Zhang Y
+- authtype: Author
+  name: Mendoza G
+- authtype: Author
+  name: Méndez JC
+- authtype: Author
+  name: Merchant H
+- authtype: Author
+  name: Haegens S
+epubdate: 2023 May 22
+fulljournalname: Nature Communications
+issue: ''
+pages: '2923'
+pmclivedate: 2023/05/24
+printpubdate: ''
+pubdate: 2023 May 22
+sortdate: 2023/05/22 00:00
+source: Nat Commun
+title: Distinct beta frequencies reflect categorical decisions
+uid: '10203257'
+volume: '14'

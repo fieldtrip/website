@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '37215560'
+- idtype: doi
+  value: 10.1162/nol_a_00061
+- idtype: pmcid
+  value: PMC10158570
+authors:
+- authtype: Author
+  name: Pinto D
+- authtype: Author
+  name: Prior A
+- authtype: Author
+  name: Zion Golumbic E
+epubdate: 2022 Feb 16
+fulljournalname: Neurobiology of Language
+issue: '2'
+pages: 214-234
+pmclivedate: 2023/05/19
+printpubdate: ''
+pubdate: 2022 Feb 16
+sortdate: 2022/02/16 00:00
+source: Neurobiol Lang (Camb)
+title: Assessing the Sensitivity of EEG-Based Frequency-Tagging as a Metric for Statistical
+  Learning
+uid: '10158570'
+volume: '3'

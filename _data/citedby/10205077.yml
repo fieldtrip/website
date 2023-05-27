@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1162/nol_a_00086
+- idtype: pmcid
+  value: PMC10205077
+authors:
+- authtype: Author
+  name: Weiss AR
+- authtype: Author
+  name: Korzeniewska A
+- authtype: Author
+  name: Chrabaszcz A
+- authtype: Author
+  name: Bush A
+- authtype: Author
+  name: Fiez JA
+- authtype: Author
+  name: Crone NE
+- authtype: Author
+  name: Richardson RM
+epubdate: 2023 Jan 18
+fulljournalname: Neurobiology of Language
+issue: '1'
+pages: 53-80
+pmclivedate: 2023/05/24
+printpubdate: ''
+pubdate: 2023 Jan 18
+sortdate: 2023/01/18 00:00
+source: Neurobiol Lang (Camb)
+title: Lexicality-Modulated Influence of Auditory Cortex on Subthalamic Nucleus During
+  Motor Planning for Speech
+uid: '10205077'
+volume: '4'
