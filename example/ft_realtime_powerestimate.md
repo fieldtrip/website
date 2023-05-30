@@ -16,7 +16,7 @@ The **[ft_realtime_powerestimate](/reference/realtime/example/ft_realtime_powere
 The easiest way to try out the **[ft_realtime_powerestimate](/reference/realtime/example/ft_realtime_powerestimate)** example is by starting two MATLAB sessions. In the first session you create some random signal and write it to the buffer by means of **[ft_realtime_signalproxy](/reference/realtime/example/ft_realtime_signalproxy)**:
 
     cfg                = [];
-    cfg.channel        = 1:10;                         % list with channel "names"
+    cfg.channel        = mat2cell(1:10,1,ones(10,1))'; % list with channel "names"
     cfg.blocksize      = 1;                            % seconds
     cfg.fsample        = 250;                          % sampling frequency, Hz
     cfg.lpfilter       = 'yes';                        % apply a low-pass filter
