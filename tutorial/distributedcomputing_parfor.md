@@ -48,6 +48,14 @@ To use parallel computing, the minimum requirement is to have the [Parallel Comp
         % then PCT is installed, but you do not have a valid license to use it.
     end
 
+A very quick thing to try out next is the following. When using the normal `for` function, it will execute the pause sequentially. When using the `parfor` function the pause is executed in parallel.
+
+    tic; for i=1:4; pause(1); end; toc
+      Elapsed time is 4.001463 seconds.
+
+    tic; parfor i=1:4; pause(1); end; toc
+      Elapsed time is 1.084468 seconds.
+
 This tutorial requires the original MEG datasets for the four subjects, plus one additional dataset that is on purpose inconsistent with the others. These are available from:  
 
 -   [Subject01.zip](https://download.fieldtriptoolbox.org/tutorial/Subject01.zip)
