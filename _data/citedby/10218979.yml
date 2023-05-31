@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '36977584'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1966-21.2022
+- idtype: pmcid
+  value: PMC10218979
+authors:
+- authtype: Author
+  name: Pereira SI
+- authtype: Author
+  name: Santamaria L
+- authtype: Author
+  name: Andrews R
+- authtype: Author
+  name: Schmidt E
+- authtype: Author
+  name: Van Rossum MC
+- authtype: Author
+  name: Lewis P
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '21'
+pages: 3838-3848
+pmclivedate: ''
+printpubdate: 2023 May 24
+pubdate: 2023 May 24
+sortdate: 2023/05/24 00:00
+source: J Neurosci
+title: Rule Abstraction Is Facilitated by Auditory Cuing in REM Sleep
+uid: '10218979'
+volume: '43'

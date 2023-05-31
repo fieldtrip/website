@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '37185238'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1663-22.2023
+- idtype: pmcid
+  value: PMC10218004
+authors:
+- authtype: Author
+  name: Oganian Y
+- authtype: Author
+  name: Kojima K
+- authtype: Author
+  name: Breska A
+- authtype: Author
+  name: Cai C
+- authtype: Author
+  name: Findlay A
+- authtype: Author
+  name: Chang E
+- authtype: Author
+  name: Nagarajan SS
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '21'
+pages: 3909-3921
+pmclivedate: 2023/05/27
+printpubdate: 2023 May 24
+pubdate: 2023 May 24
+sortdate: 2023/05/24 00:00
+source: J Neurosci
+title: Phase Alignment of Low-Frequency Neural Activity to the Amplitude Envelope
+  of Speech Reflects Evoked Responses to Acoustic Edges, Not Oscillatory Entrainment
+uid: '10218004'
+volume: '43'

@@ -1,0 +1,45 @@
+articleids:
+- idtype: pmid
+  value: '37216848'
+- idtype: doi
+  value: 10.1016/j.nicl.2023.103433
+- idtype: pmcid
+  value: PMC10209543
+authors:
+- authtype: Author
+  name: Xia Y
+- authtype: Author
+  name: Sun H
+- authtype: Author
+  name: Hua L
+- authtype: Author
+  name: Dai Z
+- authtype: Author
+  name: Wang X
+- authtype: Author
+  name: Tang H
+- authtype: Author
+  name: Han Y
+- authtype: Author
+  name: Du Y
+- authtype: Author
+  name: Zhou H
+- authtype: Author
+  name: Zou H
+- authtype: Author
+  name: Yao Z
+- authtype: Author
+  name: Lu Q
+epubdate: 2023 May 16
+fulljournalname: 'NeuroImage : Clinical'
+issue: ''
+pages: '103433'
+pmclivedate: 2023/05/26
+printpubdate: ''
+pubdate: 2023 May 16
+sortdate: 2023/05/16 00:00
+source: Neuroimage Clin
+title: Spontaneous beta power, motor-related beta power and cortical thickness in
+  major depressive disorder with psychomotor disturbance
+uid: '10209543'
+volume: '38'

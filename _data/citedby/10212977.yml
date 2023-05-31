@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1016/j.isci.2023.106845
+- idtype: pmcid
+  value: PMC10212977
+authors:
+- authtype: Author
+  name: Minami S
+- authtype: Author
+  name: Watanabe K
+- authtype: Author
+  name: Saijo N
+- authtype: Author
+  name: Kashino M
+epubdate: 2023 May 9
+fulljournalname: iScience
+issue: '6'
+pages: '106845'
+pmclivedate: 2023/05/27
+printpubdate: ''
+pubdate: 2023 May 9
+sortdate: 2023/05/09 00:00
+source: iScience
+title: Neural oscillation amplitude in the frontal cortex predicts esport results
+uid: '10212977'
+volume: '26'

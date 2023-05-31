@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3390/s23104661
+- idtype: pmcid
+  value: PMC10223377
+authors:
+- authtype: Author
+  name: Kurkin S
+- authtype: Author
+  name: Gordleeva S
+- authtype: Author
+  name: Savosenkov A
+- authtype: Author
+  name: Grigorev N
+- authtype: Author
+  name: Smirnov N
+- authtype: Author
+  name: Grubov VV
+- authtype: Author
+  name: Udoratina A
+- authtype: Author
+  name: Maksimenko V
+- authtype: Author
+  name: Kazantsev V
+- authtype: Author
+  name: Hramov AE
+epubdate: 2023 May 11
+fulljournalname: Sensors (Basel, Switzerland)
+issue: '10'
+pages: '4661'
+pmclivedate: 2023/05/28
+printpubdate: ''
+pubdate: 2023 May 11
+sortdate: 2023/05/11 00:00
+source: Sensors (Basel)
+title: Transcranial Magnetic Stimulation of the Dorsolateral Prefrontal Cortex Increases
+  Posterior Theta Rhythm and Reduces Latency of Motor Imagery
+uid: '10223377'
+volume: '23'

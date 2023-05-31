@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '37239242'
+- idtype: doi
+  value: 10.3390/brainsci13050770
+- idtype: pmcid
+  value: PMC10216358
+authors:
+- authtype: Author
+  name: Zhang J
+- authtype: Author
+  name: Xia J
+- authtype: Author
+  name: Liu X
+- authtype: Author
+  name: Olichney J
+epubdate: 2023 May 7
+fulljournalname: Brain Sciences
+issue: '5'
+pages: '770'
+pmclivedate: 2023/05/27
+printpubdate: ''
+pubdate: 2023 May 7
+sortdate: 2023/05/07 00:00
+source: Brain Sci
+title: Machine Learning on Visibility Graph Features Discriminates the Cognitive Event-Related
+  Potentials of Patients with Early Alzheimer’s Disease from Healthy Aging
+uid: '10216358'
+volume: '13'

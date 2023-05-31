@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '36434480'
+- idtype: doi
+  value: 10.1007/s10803-022-05797-4
+- idtype: pmcid
+  value: PMC10209352
+- idtype: MID
+  value: NIHMS1894919
+authors:
+- authtype: Author
+  name: Dwyer P
+- authtype: Author
+  name: Vukusic S
+- authtype: Author
+  name: Williams ZJ
+- authtype: Author
+  name: Saron CD
+- authtype: Author
+  name: Rivera SM
+epubdate: 2022 Nov 25
+fulljournalname: Journal of autism and developmental disorders
+issue: ''
+pages: 10.1007/s10803-022-05797-4
+pmclivedate: ''
+printpubdate: ''
+pubdate: 2022 Nov 25
+sortdate: 2022/11/25 00:00
+source: J Autism Dev Disord
+title: “Neural Noise” in Auditory Responses in Young Autistic and Neurotypical Children
+uid: '10209352'
+volume: ''
