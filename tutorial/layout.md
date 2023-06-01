@@ -200,7 +200,7 @@ The direction of the electrode contacts along the shaft can be specified as 'LR'
 (left-to-right) or RL for horizontal, and 'TB' (top-to-bottom) and 'BT' for
 vertical.
 
-You can also use the raw or processed iEEG data to specify channel names. For example, the dataset used in the [ECoG and sEEG tutorial](/tutorial/human_ecog) has sEEG electrode shafts that start with the letters LAM, LHH, LTH, RAM, RHH, RTH and ROC. You can download the spectrally analyzed data [SubjectUCI29_freq.mat](https://download.fieldtriptoolbox.org/tutorial/human_ecog/SubjectUCI29/SubjectUCI29_freq.mat) and use the following
+You can also use the raw or processed iEEG data to specify channel names. For example, the dataset used in the [ECoG and sEEG tutorial](/tutorial/human_ecog) has sEEG electrode shafts that start with the letters LAM, LHH, LTH, RAM, RHH, RTH and ROC. You can download the spectrally analyzed data [SubjectUCI29_freq.mat](https://download.fieldtriptoolbox.org/tutorial/layout/SubjectUCI29_freq.mat) and use the following
 
     load SubjectUCI29_freq.mat
 

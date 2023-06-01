@@ -7,23 +7,18 @@ tags: [tutorial, eeg, meg, multivariate, timelock, freq]
 
 ## Introduction
 
-The objective of this tutorial is to give an introduction to the classification of event-related
-data using the [MVPA-Light](https://github.com/treder/MVPA-Light) toolbox. For a general introduction to the toolbox refer to the [MVPA-Light paper](https://www.frontiersin.org/articles/10.3389/fnins.2020.00289/full). The [MVPA-Light readme file](https://github.com/treder/MVPA-Light/blob/master/README.md) is the most up to date reference. This tutorial builds on skills acquired in the [preprocessing](/tutorial/preprocessing), [event-related averaging](/tutorial/eventrelatedaveraging) and [time-frequency analysis](/tutorial/timefrequencyanalysis) tutorials.
+The objective of this tutorial is to give an introduction to the classification of event-related data using the [MVPA-Light](https://github.com/treder/MVPA-Light) toolbox. For a general introduction to the toolbox refer to the [MVPA-Light paper](https://www.frontiersin.org/articles/10.3389/fnins.2020.00289/full). The [MVPA-Light readme file](https://github.com/treder/MVPA-Light/blob/master/README.md) is the most up to date reference. This tutorial builds on skills acquired in the [preprocessing](/tutorial/preprocessing), [event-related averaging](/tutorial/eventrelatedaveraging) and [time-frequency analysis](/tutorial/timefrequencyanalysis) tutorials.
 
 
 ## Installation
 
 MVPA-Light is a stand-alone MATLAB toolbox for multivariate pattern analysis involving classification or regression. It features cross-validation, various classifiers, regression models, performance metrics, as well as nested preprocessing and hyperparameter selection. FieldTrip provides a high-level interface to its functions so one does not need to directly interact with the toolbox.
-However, it needs to be installed and included in
-MATLAB's search path. To this end, [follow the installation instructions](https://github.com/treder/MVPA-Light#installation-) on its GitHub
+However, it needs to be installed and included in MATLAB's search path. To this end, [follow the installation instructions](https://github.com/treder/MVPA-Light#installation-) on its GitHub
 page.
 
 ## Procedure
 
-We will use classifiers to analyze the [MEG-language dataset](/faq/what_types_of_datasets_and_their_respective_analyses_are_used_on_fieldtrip) which
-features one subject with three types of trials: fully incongruent (FIC), fully congruent (FC), and
-initially congruent (IC). These three classes are stored in different files available here:
- [dataFIC_LP.mat](https://download.fieldtriptoolbox.org/tutorial/eventrelatedaveraging/dataFIC_LP.mat), [dataFC_LP.mat](https://download.fieldtriptoolbox.org/tutorial/eventrelatedaveraging/dataFC_LP.mat) and [dataIC_LP.mat](https://download.fieldtriptoolbox.org/tutorial/eventrelatedaveraging/dataIC_LP.mat).
+We will use classifiers to analyze the [MEG-language dataset](/faq/what_types_of_datasets_and_their_respective_analyses_are_used_on_fieldtrip) which features one subject with three types of trials: fully incongruent (FIC), fully congruent (FC), and initially congruent (IC). These three classes are stored in different files available here: [dataFIC_LP.mat](https://download.fieldtriptoolbox.org/tutorial/mvpa_light/dataFIC_LP.mat), [dataFC_LP.mat](https://download.fieldtriptoolbox.org/tutorial/mvpa_light/dataFC_LP.mat) and [dataIC_LP.mat](https://download.fieldtriptoolbox.org/tutorial/mvpa_light/dataIC_LP.mat).
 
 The data can be loaded into MATLAB using
 
@@ -31,8 +26,7 @@ The data can be loaded into MATLAB using
     load dataFC_LP
     load dataIC_LP
 
-To get started, we investigate whether we can discriminate between the three classes
-FIC, FC, and IC, using the average activity in the 0.5-0.7 s post-stimulus interval.
+To get started, we investigate whether we can discriminate between the three classes FIC, FC, and IC, using the average activity in the 0.5-0.7 s post-stimulus interval.
 
 After this, we will focus on two out of the three classes, namely FIC vs FC, and we will investigate the following questions:
 
@@ -93,24 +87,14 @@ The resulting classification accuracy can slighty vary due to the random assignm
 
     fprintf('Classification accuracy: %0.2f\n', stat.accuracy)
 
-For multi-class problems, the [confusion matrix](https://en.wikipedia.org/wiki/Confusion_matrix) is
-a useful metric. In a confusion matrix, rows correspond to the true class labels,
-columns correspond to predicted class labels. The (i,j)-th element gives the
-proportion of samples of class i that have been classified as class j. Consequently,
-the diagonal of the confusion matrix contains the proportion of correct classifications. Off-diagonal elements specify the misclassifications. To obtain
-the confusion matrix, all we need to do is to change the `metric` field:
+For multi-class problems, the [confusion matrix](https://en.wikipedia.org/wiki/Confusion_matrix) is a useful metric. In a confusion matrix, rows correspond to the true class labels, columns correspond to predicted class labels. The (i,j)-th element gives the proportion of samples of class i that have been classified as class j. Consequently, the diagonal of the confusion matrix contains the proportion of correct classifications. Off-diagonal elements specify the misclassifications. To obtain the confusion matrix, all we need to do is to change the `metric` field:
 
     cfg.mvpa.metric      = 'confusion';
     stat = ft_timelockstatistics(cfg, dataFIC_LP, dataFC_LP, dataIC_LP)
 
     stat.confusion
 
-Looking at the diagonal of the matrix tells us that the classifier is better
-at predicting classes 1 and 2 than it is at predicting class 3.
-For a simple visualization of this result, we can use a plotting function in  [MVPA-Light](https://github.com/treder/MVPA-Light)
-called [`mv_plot_result`](https://github.com/treder/MVPA-Light/blob/master/plot/mv_plot_result.m).
-It takes the result structure returned in `stat.mvpa` which contains the
-classification results in a format required by the function.
+Looking at the diagonal of the matrix tells us that the classifier is better at predicting classes 1 and 2 than it is at predicting class 3. For a simple visualization of this result, we can use a plotting function in [MVPA-Light](https://github.com/treder/MVPA-Light) called [`mv_plot_result`](https://github.com/treder/MVPA-Light/blob/master/plot/mv_plot_result.m). It takes the result structure returned in `stat.mvpa` which contains the classification results in a format required by the function.
 
     mv_plot_result(stat.mvpa)
 
@@ -150,36 +134,26 @@ Many neuroimaging datasets have a 3-D structure _[trials x channels x time]_. Cl
     cfg.mvpa.repeat      = 2;
     cfg.design           = [ones(nFIC,1); 2*ones(nFC,1)];
 
-For simplicity, we will limit ourselves to comparing only FIC and FC. As classifier,
-we use Linear Discriminant Analysis (LDA). As metric, we use area under the ROC curve (AUC).
-It is calculated using 10-fold cross-validation with 2 repetitions.
+For simplicity, we will limit ourselves to comparing only FIC and FC. As classifier, we use Linear Discriminant Analysis (LDA). As metric, we use area under the ROC curve (AUC). It is calculated using 10-fold cross-validation with 2 repetitions.
 
     stat = ft_timelockstatistics(cfg, dataFIC_LP, dataFC_LP);
 
-Note that the metric is now a vector with 900 values, one AUC value for each time point in the trial.
-It can be plotted as a function of time using
+Note that the metric is now a vector with 900 values, one AUC value for each time point in the trial. It can be plotted as a function of time using
 
     plot(stat.auc)
 
-For a slightly nicer plot, one can again use `mv_plot_result`. As a second parameter,
-we pass the time values to make sure that the x-axis is formatted correctly.
+For a slightly nicer plot, one can again use `mv_plot_result`. As a second parameter, we pass the time values to make sure that the x-axis is formatted correctly.
 
     mv_plot_result(stat.mvpa, stat.time)
 
-The resultant plot shows AUC across time in the trial. The shaded area
-is the standard deviation of the AUC metric across the different test sets in the
-cross-validation.
+The resultant plot shows AUC across time in the trial. The shaded area is the standard deviation of the AUC metric across the different test sets in the cross-validation.
 
-
-    {% include image src="/assets/img/tutorial/mvpa_light/figure2.png" width="300" %}
-
-
+{% include image src="/assets/img/tutorial/mvpa_light/figure2.png" width="300" %}
 
 ### Exercise 2
 
 {% include markup/info %}
-Perform classification across time using all three classes FIC, FC, and IC. As
-classifier, use kernel FDA. As metric, use classification accuracy.
+Perform classification across time using all three classes FIC, FC, and IC. As classifier, use kernel FDA. As metric, use classification accuracy.
 {% include markup/end %}
 
 
@@ -195,13 +169,10 @@ Which channels contribute most to classification performance? The answer to this
     cfg.design        = [ones(nFIC,1); 2*ones(nFC,1)];
     stat = ft_timelockstatistics(cfg, dataFIC_LP, dataFC_LP)
 
-Since we did not specify a classifier and a metric, the default values (LDA as classifier and classification accuracy as metric) are used. In searchlight analysis, the _time points_ in a trial are used as
-features, for each channel separately. Set `cfg.latency` to restrict the analysis to
-a specific time window. Set `cfg.features = 'time'` to indicate that the time dimension serves as features.
+Since we did not specify a classifier and a metric, the default values (LDA as classifier and classification accuracy as metric) are used. In searchlight analysis, the _time points_ in a trial are used as features, for each channel separately. Set `cfg.latency` to restrict the analysis to a specific time window. Set `cfg.features = 'time'` to indicate that the time dimension serves as features.
 If we would set `cfg.features = 'chan'`, _all_ channels would be used as features at once. Note that since the time dimension is a singleton dimension (we are averaging over time) you could also set `cfg.features = []` instead of `cfg.features = 'time'`.
 
-Since a classification result is obtained for each channel, classification accuracy can be plotted as a topography.
-We call `ft_topoplotER` to do the plotting.
+Since a classification result is obtained for each channel, classification accuracy can be plotted as a topography. We call `ft_topoplotER` to do the plotting.
 
     cfg              = [];
     cfg.parameter    = 'accuracy';
@@ -210,24 +181,16 @@ We call `ft_topoplotER` to do the plotting.
     cfg.colorbar     = 'yes';
     ft_topoplotER(cfg, stat);
 
-
 {% include image src="/assets/img/tutorial/mvpa_light/figure3.png" width="200" %}
-
 
 ### Exercise 3
 
 {% include markup/info %}
-Although we set `cfg.features = 'time'`, there was acually only one time point since `cfg.avgovertime='yes'`.
-To use the multiple time points as separate features, repeat the analysis setting `cfg.avgovertime = 'no'`. This time, for each channel, all time points in the 0.3-0.7 s window
-are used as features rather than just their average. The maximum performance should increase slightly.
+Although we set `cfg.features = 'time'`, there was acually only one time point since `cfg.avgovertime='yes'`. To use the multiple time points as separate features, repeat the analysis setting `cfg.avgovertime = 'no'`. This time, for each channel, all time points in the 0.3-0.7 s window are used as features rather than just their average. The maximum performance should increase slightly.
 {% include markup/end %}
 
 
-In the previous analysis, classification has been performed for each channel separately.
-However, the spatial arrangement of MEG channels can be exploited in order to
- group neighbouring channels as features in the searchlight. To build the neighbourhood
-structure, we use
-`ft_prepare_neighbours`.
+In the previous analysis, classification has been performed for each channel separately. However, the spatial arrangement of MEG channels can be exploited in order to group neighbouring channels as features in the searchlight. To build the neighbourhood structure, we use `ft_prepare_neighbours`.
 
     cfg = [];
     cfg.method      = 'triangulation';
@@ -235,8 +198,7 @@ structure, we use
     cfg.channel     = dataFC_LP.label;
     neighbours = ft_prepare_neighbours(cfg);
 
-We are now ready to re-run the searchlight analysis. We can pass the neighbourhood structure
-via the parameter `cfg.neighbours`.
+We are now ready to re-run the searchlight analysis. We can pass the neighbourhood structure via the parameter `cfg.neighbours`.
 
       cfg = [] ;  
       cfg.method        = 'mvpa';
@@ -286,10 +248,7 @@ In this case, both channels and time points act as search dimensions and the res
 
 ## Time generalization (time x time classification)
 
-Classification across time does not give insight into whether information is shared across different time points. For example, is the information that the classifier uses early in a trial (t=80 ms) the same that it uses later (t=300ms)? In time generalization, this question is answered by training the classifier at a certain time point t. The classifier is then tested at the same time point t but it is also tested at all other time points in the trial ([King and Dehaene, 2014](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5635958/)). This procedure is then repeated for every
-possible training time point. To perform
-time x time classification, we need to set the `cfg.generalize` parameter:
-
+Classification across time does not give insight into whether information is shared across different time points. For example, is the information that the classifier uses early in a trial (t=80 ms) the same that it uses later (t=300ms)? In time generalization, this question is answered by training the classifier at a certain time point t. The classifier is then tested at the same time point t but it is also tested at all other time points in the trial ([King and Dehaene, 2014](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5635958/)). This procedure is then repeated for every possible training time point. To perform time x time classification, we need to set the `cfg.generalize` parameter:
 
     cfg = [] ;  
     cfg.method           = 'mvpa';
@@ -299,25 +258,17 @@ time x time classification, we need to set the `cfg.generalize` parameter:
 
     stat = ft_timelockstatistics(cfg, dataFIC_LP, dataFC_LP);
 
-It returns a 2-D matrix of classification performances, with performance calculated for each combination of training time point and testing time point. We plot the
-result using [`mv_plot_result`](https://github.com/treder/MVPA-Light/blob/master/plot/mv_plot_result.m). As parameters, we pass the classification result. To lay out the axes, we pass `stat.time` twice, once for the x-axis and once for the y-axis.
+It returns a 2-D matrix of classification performances, with performance calculated for each combination of training time point and testing time point. We plot the result using [`mv_plot_result`](https://github.com/treder/MVPA-Light/blob/master/plot/mv_plot_result.m). As parameters, we pass the classification result. To lay out the axes, we pass `stat.time` twice, once for the x-axis and once for the y-axis.
 
     mv_plot_result(stat.mvpa, stat.time, stat.time)
 
-In the resultant plot, each row (corresponding to a value of on the y-axis)  corresponds to the
-time point at which the classifier was trained. Each point on the x-axis corresponds
-to a time point at which the respective classifier was tested. The classifier attains peak performance roughly in the 0.45-0.65s period.
-
+In the resultant plot, each row (corresponding to a value of on the y-axis) corresponds to the time point at which the classifier was trained. Each point on the x-axis corresponds to a time point at which the respective classifier was tested. The classifier attains peak performance roughly in the 0.45-0.65s period.
 
 {% include image src="/assets/img/tutorial/mvpa_light/figure6.png" width="300" %}
 
 ## Classification of time-frequency data
 
-The techniques we explored for 3-D _[samples x chan x time]_ data seamlessly generalize to higher-dimensional datasets.
-For instance, let us consider 4-D _[samples x chan x freq x time]_ data. We create such a dataset by performing a
-time-frequency analysis on the timelocked data (see [Time-frequency analysis using Hanning window, multitapers and wavelets](http://www.fieldtriptoolbox.org/tutorial/timefrequencyanalysis/)
- for details on time-frequency analysis).
-
+The techniques we explored for 3-D _[samples x chan x time]_ data seamlessly generalize to higher-dimensional datasets. For instance, let us consider 4-D _[samples x chan x freq x time]_ data. We create such a dataset by performing a time-frequency analysis on the timelocked data (see [Time-frequency analysis using Hanning window, multitapers and wavelets](http://www.fieldtriptoolbox.org/tutorial/timefrequencyanalysis/) for details on time-frequency analysis).
 
       cfg              = [];
       cfg.output       = 'pow';
@@ -332,9 +283,7 @@ time-frequency analysis on the timelocked data (see [Time-frequency analysis usi
       freqFC = ft_freqanalysis(cfg, dataFC_LP);
 
 
-We aim to perform classification for
-each time-frequency point separately using channels as features. To this end,
-we only need to set `cfg.features = 'chan'`.
+We aim to perform classification for each time-frequency point separately using channels as features. To this end, we only need to set `cfg.features = 'chan'`.
 
     cfg = [] ;  
     cfg.method        = 'mvpa';
@@ -345,12 +294,9 @@ we only need to set `cfg.features = 'chan'`.
 
     mv_plot_result(stat.mvpa, stat.time, stat.freq)
 
-
 {% include image src="/assets/img/tutorial/mvpa_light/figure7.png" width="300" %}
 
-
-This yields a _[freq x time]_ matrix of classification accuracies. However, we are not limited
-to a classification for every time-frequency point. A large array of different multivariate analyses can be realized by changing the value of `cfg.features`. Let us look at some of the options:
+This yields a _[freq x time]_ matrix of classification accuracies. However, we are not limited to a classification for every time-frequency point. A large array of different multivariate analyses can be realized by changing the value of `cfg.features`. Let us look at some of the options:
 
 - `cfg.features = 'time'`: if time serves as features, a search is performed across channels and frequencies. Therefore, the result is a _[chan x freq]_ matrix of classification accuracies.
 - `cfg.features = 'freq'`: the result is a _[chan x time]_ matrix of classification accuracies.
@@ -361,8 +307,7 @@ to a classification for every time-frequency point. A large array of different m
 ### Exercise 4
 
 {% include markup/info %}
-Building on the previous example, perform a classification analysis for every frequency bin.
-To this end, use channels and time points as features.
+Building on the previous example, perform a classification analysis for every frequency bin. To this end, use channels and time points as features.
 {% include markup/end %}
 <!--
 Confirm that kernel FDA with a linear
@@ -370,16 +315,7 @@ kernel is indeed faster than ordinary LDA by running the analysis for both
 classifiers and stopping the time using the `tic` and `toc` functions.
 -->
 
-Similar to what we did in the 'where' analysis, we can control the size of the searchlight by specifying neighbouring channels/times/frequencies
-for each of the search dimensions. As an example, let us run an analysis across
-frequencies and time, this time taking into account neighbouring time points as well.
-To this end, we set `cfg.timwin = 5` which means that a total of 5 time points is
-considered in each analysis: the given center time point and its two immediately
-preceding and following time points. Including neighbouring
-channels/frequencies/time points increases the dimensionality of the feature space.
-In this example, the feature space has the dimension 149 (channel) x 5 (time points) = 745.
-A larger feature space provides more information to the classifier but it also is more
-computationally demanding and potentially holds the danger of overfitting.
+Similar to what we did in the 'where' analysis, we can control the size of the searchlight by specifying neighbouring channels/times/frequencies for each of the search dimensions. As an example, let us run an analysis across frequencies and time, this time taking into account neighbouring time points as well. To this end, we set `cfg.timwin = 5` which means that a total of 5 time points is considered in each analysis: the given center time point and its two immediately preceding and following time points. Including neighbouring channels/frequencies/time points increases the dimensionality of the feature space. In this example, the feature space has the dimension 149 (channel) x 5 (time points) = 745. A larger feature space provides more information to the classifier but it also is more computationally demanding and potentially holds the danger of overfitting.
 
     cfg = [] ;  
     cfg.method        = 'mvpa';
@@ -400,27 +336,20 @@ logic applies to `cfg.freqwin` (for frequencies) and `cfg.neighbours` (for chann
 ### Exercise 5
 
 {% include markup/info %}
-In the previous analysis we considered 5 time points in each analysis.
-Instead, now consider 5 frequencies by setting the `cfg.freqwin` parameter accordingly.
-Use `mv_plot_result` to visually confirm that this leads to smoothing
-along the frequency axis.
+In the previous analysis we considered 5 time points in each analysis. Instead, now consider 5 frequencies by setting the `cfg.freqwin` parameter accordingly. Use `mv_plot_result` to visually confirm that this leads to smoothing along the frequency axis.
 {% include markup/end %}
 
 ## Hyperparameters
 
-Many classifiers have parameters that control their properties and need to
-be set by the user, so-called *hyperparameters*. For a list of hyperparameters for each classifier, see the respective `train_`
-functions in the [model folder](https://github.com/treder/MVPA-Light/tree/master/model).
-The default values suffice for many scenarios, but sometimes you may want to manually change the parameters.
-This can be easily done using the `hyperparameter` substruct. For instance, in Support
+Many classifiers have parameters that control their properties and need to be set by the user, so-called *hyperparameters*. For a list of hyperparameters for each classifier, see the respective `train_` functions in the [model folder](https://github.com/treder/MVPA-Light/tree/master/model). The default values suffice for many scenarios, but sometimes you may want to manually change the parameters. This can be easily done using the `hyperparameter` substruct. For instance, in Support
 Vector Machines (SVM), the type of kernel is a hyperparameter. If an RBF kernel is used the parameter `gamma` controls the kernel width:
-
 
     cfg.mvpa.hyperparameter           = [];
     cfg.mvpa.hyperparameter.kernel    = 'rbf';
     cfg.mvpa.hyperparameter.gamma     = 1;
 
 See [train_svm](https://github.com/treder/MVPA-Light/blob/master/model/train_svm.m) for a full list of SVM hyperparameters and their default values.
+
 To give another example, in LDA the `lambda` parameter controls the amount of regularization of the covariance matrix. The default value `'auto'` is usually sufficient but we can also set it to a specific value:
 
     cfg.mvpa.hyperparameter           = [];
@@ -436,10 +365,7 @@ For SVM, define a polynomial kernel of degree 3. Refer to [train_svm](https://gi
 
 ## Preprocessing
 
-In this example we look into preprocessing pipelines. Preprocessing
-includes demeaning, z-scoring, PCA, sample averaging, feature
-extraction methods such as PCA, and any other
-approaches that operate on the data prior to training.
+In this example we look into preprocessing pipelines. Preprocessing includes demeaning, z-scoring, PCA, sample averaging, feature extraction methods such as PCA, and any other approaches that operate on the data prior to training.
 
 It is important to distinguish between _global_ vs _nested_ preprocessing. In _global_ preprocessing, an
 operation is applied to the whole dataset (including both train and
