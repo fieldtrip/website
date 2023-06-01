@@ -48,28 +48,30 @@ Please read [this FAQ](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my
 
 We will use a small `datainfo_subject.m` function that specifies the input and output data files for each participant. You can download that from the `code` folder on our [download server](https://download.fieldtriptoolbox.org/workshop/practicalmeeg2022/). Please organize the workshop data and code as follows:
 
-    /Volumes/SamsungT7/practicalmeeg2022/
-    ├── README
-    ├── code
-    │   ├── README.md
-    │   ├── atlas_subparc374_8k.mat
-    │   ├── datainfo_subject.m
-    │   └── ...
-    └── ds000117-pruned
-    │   ├── CHANGES
-    │   ├── README
-    │   ├── dataset_description.json
-    │   ├── derivatives
-    │   ├── participants.tsv
-    │   ├── stimuli
-    │   ├── sub-01
-    │   └── ...
-    └── derivatives
-        ├── anatomy
-        ├── groupanalysis
-        ├── raw2erp
-        ├── sensoranalysis
-        └── sourceanalysis
+```bash
+/Volumes/SamsungT7/practicalmeeg2022/
+├── README
+├── code
+│   ├── README.md
+│   ├── atlas_subparc374_8k.mat
+│   ├── datainfo_subject.m
+│   └── ...
+└── ds000117-pruned
+│   ├── CHANGES
+│   ├── README
+│   ├── dataset_description.json
+│   ├── derivatives
+│   ├── participants.tsv
+│   ├── stimuli
+│   ├── sub-01
+│   └── ...
+└── derivatives
+    ├── anatomy
+    ├── groupanalysis
+    ├── raw2erp
+    ├── sensoranalysis
+    └── sourceanalysis
+```
 
 The `/Volumes/SamsungT7/practicalmeeg2022` directory is where I have the data on my laptop (actually on an external SSD), for you that would be somewhere else. There should be a code directory with (at least) the `datainfo_subject.m` function, there should be the `ds000117-pruned` directory with the raw data in subdirectories, and there should be a `derivatives` directory with one subdirectory per analysis step.
 
@@ -82,8 +84,3 @@ You can get the data that we will work with from [Zenodo](https://doi.org/10.528
 You can alternatively download the raw data from the `ds000117-pruned` folder on our [download server](https://download.fieldtriptoolbox.org/workshop/practicalmeeg2022/). Note that this is a WebDav server and you should use a WebDav client like CyberDuck or FileZilla. On Windows you can also [map it as a network drive](https://www.maketecheasier.com/map-webdav-drive-windows10/). By using a WebDav client you can maintain the folder structure when downloading, which is important!
 
 Besides the raw data, we will also use some already processed data (as some computations take too long). Specifically, we have prepared and shared the headmodel and sourcemodel for the selected subject. Furthermore, we have processed all subjects up to and including to the source level, as that is what we will use for the group analysis. This processed data is available from the `derivatives` folder on our [download server](https://download.fieldtriptoolbox.org/workshop/practicalmeeg2022/). Please note that this is **not** the same as the derivatives that is contained within the BIDS ds000117-pruned data: that only contains the MaxFiltered data and the FreeSurfer output, not the FieldTrip-processed data.
-
-
-
-
- 

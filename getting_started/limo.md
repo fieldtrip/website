@@ -36,7 +36,7 @@ The outputs of LIMO are generated at each levels:
 The following outline shows the BIDS raw data and derivatives structure that represents the pipeline inputs and outputs, going from raw -> preproc -> timelock -> LIMO 1st level -> LIMO 2nd level analysis:
 
 ```bash
-/
+dataset/
 ├── dataset_description.json
 ├── participants.tsv
 ├── README

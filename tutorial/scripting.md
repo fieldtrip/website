@@ -16,7 +16,7 @@ This tutorial is intended to provide some guidelines and suggestions how to set 
 The examples here are about preprocessing of the data, but it does not provide detailed information about it. If you are interested in how to preprocess your data, you can check for example, [this](/tutorial/preprocessing) tutorial.
 
 {% include markup/info %}
-The paper [Seven quick tips for analysis scripts in neuroimaging](https://doi.org/10.1371/journal.pcbi.1007358) by Marijn van Vliet (2020, Plos Comp Biol) also provides very useful guidelines for writing and organizing your analysis code. Althoug the examples it provides use Python, the ideas it presents apply equally well to MATLAB.
+The paper [Seven quick tips for analysis scripts in neuroimaging](https://doi.org/10.1371/journal.pcbi.1007358) by Marijn van Vliet (2020, Plos Comp Biol) provides very useful guidelines for writing and organizing your analysis code. Althoug the examples it provides are based on Python, the ideas it presents apply equally well to MATLAB.
 
 {% include badge doi="10.1371/journal.pcbi.1007358" pmid="32214316" pmcid="PMC7098566" %}
 {% include markup/end %}
@@ -76,7 +76,7 @@ Do not save your own functions and/or scripts in the FieldTrip folder as it make
 In general we recommend to keep your raw data, your scripts and your results in three separate directories.
 {% include markup/end %}
 
-Having saved your function in a folder of your MATLAB path you can, from within any script or from the command line, use your function. In our example `MyOwnFunction(4)` will give you the answer `2` To put the answer in a variable for storage or future use you need to call something like `output = MyOwnFunction(4)`
+Having saved your function in a folder of your MATLAB path you can, from within any script or from the command line, use your function. In our example executing `MyOwnFunction(4)` will give you the answer `2`. To put the answer in a variable for storage or future use you need to call something like `output = MyOwnFunction(4)`
 
 This is the way most FieldTrip functions work: you provide the parameters together with data as the input and the function will return the results as the output.
 
@@ -97,49 +97,51 @@ In this way all your functions (i.e., analysis steps) can read the output of the
 We suggest that you store a single variable per file. This will in general make it possible to more easily only read what is necessary. Furthermore, if you give the files a clear and consistent name, you can easily delete the files (intermediate results) that are not needed anymore. Note that you can sort in the file manager on filename, as well as on creation date. The latter is convenient to quickly get an overview of the most recent files after you notice yet another bug in your analysis script 😁.
 
 The file and folder organization on disk could then look something like this:
-  
-    myProject/
-    ├── code
-    │   ├── MyOwnFunction.m
-    │   ├── Subject01.m
-    │   ├── Subject02.m
-    │   ├── Subject03.m
-    │   └── Subject04.m
-    ├── rawdata
-    │   ├── EEG
-    │   │   ├── subject01.eeg
-    │   │   ├── subject02.eeg
-    │   │   ├── subject03.eeg
-    │   │   └── subject04.eeg
-    │   └── MRI
-    │       ├── 01_mri.nii
-    │       └── 02_mri.nii
-    └── results
-        ├── Subject01
-        │   ├── avg_cond1.mat
-        │   ├── avg_cond1_filtered.mat
-        │   ├── avg_cond2.mat
-        │   ├── avg_cond2_filtered.mat
-        │   ├── avg_cond3.mat
-        │   ├── avg_cond3_filtered.mat
-        │   ├── rawdata.mat
-        │   └── rawdata_filtered.mat
-        ├── Subject02
-        ├── Subject03
-        └── Subject04
+
+```bash
+myProject/
+├── code
+│   ├── MyOwnFunction.m
+│   ├── Subject01.m
+│   ├── Subject02.m
+│   ├── Subject03.m
+│   └── Subject04.m
+├── rawdata
+│   ├── EEG
+│   │   ├── subject01.eeg
+│   │   ├── subject02.eeg
+│   │   ├── subject03.eeg
+│   │   └── subject04.eeg
+│   └── MRI
+│       ├── 01_mri.nii
+│       └── 02_mri.nii
+└── results
+    ├── Subject01
+    │   ├── avg_cond1.mat
+    │   ├── avg_cond1_filtered.mat
+    │   ├── avg_cond2.mat
+    │   ├── avg_cond2_filtered.mat
+    │   ├── avg_cond3.mat
+    │   ├── avg_cond3_filtered.mat
+    │   ├── rawdata.mat
+    │   └── rawdata_filtered.mat
+    ├── Subject02
+    ├── Subject03
+    └── Subject04
+```
 
 Along the way, you will most likely expand on the subject-specific information. For instance, in the first step you may have used **[ft_databrowser](/reference/ft_databrowser)** to select some unusual artifacts in one subject, which you could store in your subject-specific .m file:
 
     subjectdata.artfctdef.visual.artifact = [
-      160611,162906
-      473717,492076
-      604850,606076
-      702196,703615
-      736261,738205
-      850361,852159
-      887956,895200
-      959974,972785
-      1096344,1099772
+       160611  162906
+       473717  492076
+       604850  606076
+       702196  703615
+       736261  738205
+       850361  852159
+       887956  895200
+       959974  972785
+      1096344 1099772
      ];
 
 ## Batching
@@ -167,43 +169,44 @@ Large datasets often require quite some processing time, hence it is convenient 
 
 The following function will load the data as specified in Subject01.m, uses the databrowser for visual inspection of artifacts, rejects those trials containing artifacts and then saves the data in a separate folder as “01_preproc_dataM.mat”. You can simply call it as `do_preprocess_MM('Subject01')`.
 
-    function do_preproces_MM(Subjectm)
+    function do_preprocess_MM(SubjectXX)
 
-    cfg = [];
     if nargin == 0
       disp('Not enough input arguments');
       return;
     end
-    subjectdata = feval(Subjectm);
-    outputdir = 'AnalysisM';
+    subjectdata = feval(SubjectXX);
+    outputdir   = 'AnalysisM';
 
-    %%% define trials
-    cfg.dataset            = [subjectdata.subjectdir filesep subjectdata.datadir];
-    cfg.trialdef.eventtype = 'trigger';
-    cfg.trialdef.prestim   = 1.5;
-    cfg.trialdef.poststim  = 1.5;
-    %cfg.continuous         = 'no';
+    %% define trials
+    cfg = [];
+    cfg.dataset             = [subjectdata.subjectdir filesep subjectdata.datadir];
+    cfg.trialdef.eventtype  = 'trigger';
+    cfg.trialdef.prestim    = 1.5;
+    cfg.trialdef.poststim   = 1.5;
     cfg.lpfilter            = 'no';
+    % cfg.continuous          = 'no';
     cfg.continuous          = 'yes';
     cfg.trialfun            = 'motormirror_trialfun';   % located in code directory
     cfg.layout              = 'EEG1020.lay';
     cfg = ft_definetrial(cfg);
 
-    %%% if there are visual artifacts already in subject m-file use those, they will show up in databrowser
+    %% if there are visual artifacts already in the subject m-file use those, they will show up in databrowser
     try
       cfg.artfctdef.visual.artifact = subjectdata.artfctdef.visual.artifact;
     catch
+      cfg.artfctdef.visual.artifact = []];
     end
 
-    %%% visual detection of other artifacts
+    %% visual detection of other artifacts
     cfg.continuous = 'yes';
     cfg.blocksize  = 20;
     cfg.eventfile  = [];
     cfg.viewmode   = 'butterfly';
     cfg = ft_databrowser(cfg);
 
-    %%% enter visually detected artifacts in subject m-file;
-    fid = fopen([subjectdata.mfiledir filesep Subjectm '.m'],'At');
+    %% enter visually detected artifacts in the subject m-file;
+    fid = fopen([subjectdata.mfiledir filesep SubjectXX '.m'],'At');
     fprintf(fid,'\n%s\n',['%%% Entered @ ' datestr(now)]);
     fprintf(fid,'%s',['subjectdata.visualartifacts = [ ' ]);
     if isempty(cfg.artfctdef.visual.artifact) == 0
@@ -215,19 +218,19 @@ The following function will load the data as specified in Subject01.m, uses the 
     fprintf(fid,'%s\n',[ ' ]; ']);
     fclose all;
 
-    %%% reject artifacts
+    %% reject artifacts
     cfg.artfctdef.reject = 'complete';
     cfg = ft_rejectartifact(cfg);
 
-    %%% make directory, if needed, to save all analysis data
+    %% make directory, if needed, to save all analysis data
     if exist(outputdir) == 0
       mkdir(outputdir)
     end
 
-    %%% Preprocess and SAVE
+    %% Preprocess and SAVE
     dataM = ft_preprocessing(cfg);
     save([outputdir filesep 'preproc_dataM'], 'dataM', '-V7.3')
-    clear all;
+    clear all
 
 ## Summary and suggested further readings
 
