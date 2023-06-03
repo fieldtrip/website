@@ -1,0 +1,45 @@
+articleids:
+- idtype: pmid
+  value: '37214984'
+- idtype: doi
+  value: 10.1101/2023.05.08.539503
+- idtype: pmcid
+  value: PMC10197594
+authors:
+- authtype: Author
+  name: Blenkmann AO
+- authtype: Author
+  name: Leske SL
+- authtype: Author
+  name: Llorens A
+- authtype: Author
+  name: Lin JJ
+- authtype: Author
+  name: Chang E
+- authtype: Author
+  name: Brunner P
+- authtype: Author
+  name: Schalk G
+- authtype: Author
+  name: Ivanovic J
+- authtype: Author
+  name: Larsson PG
+- authtype: Author
+  name: Knight RT
+- authtype: Author
+  name: Endestad T
+- authtype: Author
+  name: Solbakk AK
+epubdate: 2023 May 11
+fulljournalname: bioRxiv
+issue: ''
+pages: 2023.05.08.539503
+pmclivedate: 2023/05/20
+printpubdate: ''
+pubdate: 2023 May 11
+sortdate: 2023/05/11 00:00
+source: bioRxiv
+title: Anatomical registration of intracranial electrodes. Robust model-based localization
+  and deformable smooth brain-shift compensation methods
+uid: '10197594'
+volume: ''

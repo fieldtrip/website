@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.34133/cbsystems.0034
+- idtype: pmcid
+  value: PMC10231647
+authors:
+- authtype: Author
+  name: Yeh CH
+- authtype: Author
+  name: Zhang C
+- authtype: Author
+  name: Shi W
+- authtype: Author
+  name: Lo MT
+- authtype: Author
+  name: Tinkhauser G
+- authtype: Author
+  name: Oswal A
+epubdate: 2023 May 31
+fulljournalname: Cyborg and Bionic Systems
+issue: ''
+pages: '0034'
+pmclivedate: 2023/06/01
+printpubdate: ''
+pubdate: 2023 May 31
+sortdate: 2023/05/31 00:00
+source: Cyborg Bionic Syst
+title: Cross-Frequency Coupling and Intelligent Neuromodulation
+uid: '10231647'
+volume: '4'

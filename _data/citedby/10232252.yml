@@ -1,0 +1,46 @@
+articleids:
+- idtype: pmid
+  value: '36445730'
+- idtype: doi
+  value: 10.1093/brain/awac456
+- idtype: pmcid
+  value: PMC10232252
+authors:
+- authtype: Author
+  name: Manssuer L
+- authtype: Author
+  name: Ding Q
+- authtype: Author
+  name: Zhang Y
+- authtype: Author
+  name: Gong H
+- authtype: Author
+  name: Liu W
+- authtype: Author
+  name: Yang R
+- authtype: Author
+  name: Zhang C
+- authtype: Author
+  name: Zhao Y
+- authtype: Author
+  name: Pan Y
+- authtype: Author
+  name: Zhan S
+- authtype: Author
+  name: Li D
+- authtype: Author
+  name: Sun B
+- authtype: Author
+  name: Voon V
+epubdate: 2022 Nov 29
+fulljournalname: Brain
+issue: '6'
+pages: 2642-2653
+pmclivedate: 2023/06/01
+printpubdate: ''
+pubdate: 2022 Nov 29
+sortdate: 2022/11/29 00:00
+source: Brain
+title: Risk and aversion coding in human habenula high gamma activity
+uid: '10232252'
+volume: '146'

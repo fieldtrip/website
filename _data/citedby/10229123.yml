@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '37252780'
+- idtype: doi
+  value: 10.7554/eLife.84911
+- idtype: pmcid
+  value: PMC10229123
+authors:
+- authtype: Author
+  name: Navarro Lobato I
+- authtype: Author
+  name: Aleman-Zapata A
+- authtype: Author
+  name: Samanta A
+- authtype: Author
+  name: Bogers M
+- authtype: Author
+  name: Narayanan S
+- authtype: Author
+  name: Rayan A
+- authtype: Author
+  name: Alonso A
+- authtype: Author
+  name: van der Meij J
+- authtype: Author
+  name: Khamassi M
+- authtype: Author
+  name: Khan ZU
+- authtype: Author
+  name: Genzel L
+epubdate: 2023 May 30
+fulljournalname: eLife
+issue: ''
+pages: e84911
+pmclivedate: 2023/05/31
+printpubdate: ''
+pubdate: 2023 May 30
+sortdate: 2023/05/30 00:00
+source: eLife
+title: Increased cortical plasticity leads to memory interference and enhanced hippocampal-cortical
+  interactions
+uid: '10229123'
+volume: '12'
