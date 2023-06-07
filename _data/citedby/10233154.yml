@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '37274188'
+- idtype: doi
+  value: 10.3389/fnins.2023.1142892
+- idtype: pmcid
+  value: PMC10233154
+authors:
+- authtype: Author
+  name: Chailloux Peguero JD
+- authtype: Author
+  name: Hernández-Rojas LG
+- authtype: Author
+  name: Mendoza-Montoya O
+- authtype: Author
+  name: Caraza R
+- authtype: Author
+  name: Antelis JM
+epubdate: 2023 May 18
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '1142892'
+pmclivedate: 2023/06/02
+printpubdate: ''
+pubdate: 2023 May 18
+sortdate: 2023/05/18 00:00
+source: Front Neurosci
+title: SSVEP detection assessment by combining visual stimuli paradigms and no-training
+  detection methods
+uid: '10233154'
+volume: '17'

@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '36617790'
+- idtype: doi
+  value: 10.1093/cercor/bhac528
+- idtype: pmcid
+  value: PMC10233232
+authors:
+- authtype: Author
+  name: Schubert J
+- authtype: Author
+  name: Schmidt F
+- authtype: Author
+  name: Gehmacher Q
+- authtype: Author
+  name: Bresgen A
+- authtype: Author
+  name: Weisz N
+epubdate: 2023 Jan 9
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '11'
+pages: 6608-6619
+pmclivedate: 2023/06/02
+printpubdate: ''
+pubdate: 2023 Jan 9
+sortdate: 2023/01/09 00:00
+source: Cereb Cortex
+title: Cortical speech tracking is related to individual prediction tendencies
+uid: '10233232'
+volume: '33'

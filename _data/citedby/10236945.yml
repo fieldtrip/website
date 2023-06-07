@@ -1,0 +1,38 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1093/braincomms/fcad168
+- idtype: pmcid
+  value: PMC10236945
+authors:
+- authtype: Author
+  name: Cuesta P
+- authtype: Author
+  name: Bruña R
+- authtype: Author
+  name: Shah E
+- authtype: Author
+  name: Laohathai C
+- authtype: Author
+  name: Garcia-Tarodo S
+- authtype: Author
+  name: Funke M
+- authtype: Author
+  name: Von Allmen G
+- authtype: Author
+  name: Maestú F
+epubdate: 2023 May 25
+fulljournalname: Brain Communications
+issue: '3'
+pages: fcad168
+pmclivedate: 2023/06/03
+printpubdate: ''
+pubdate: 2023 May 25
+sortdate: 2023/05/25 00:00
+source: Brain Commun
+title: 'An individual data-driven virtual resection model based on epileptic network
+  dynamics in children with intractable epilepsy: a magnetoencephalography interictal
+  activity application'
+uid: '10236945'
+volume: '5'

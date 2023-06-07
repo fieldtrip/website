@@ -1,0 +1,51 @@
+articleids:
+- idtype: pmid
+  value: '37270511'
+- idtype: doi
+  value: 10.1186/s12888-023-04844-3
+- idtype: pmcid
+  value: PMC10239091
+authors:
+- authtype: Author
+  name: Xia Y
+- authtype: Author
+  name: Hua L
+- authtype: Author
+  name: Dai Z
+- authtype: Author
+  name: Han Y
+- authtype: Author
+  name: Du Y
+- authtype: Author
+  name: Zhao S
+- authtype: Author
+  name: Zhou H
+- authtype: Author
+  name: Wang X
+- authtype: Author
+  name: Yan R
+- authtype: Author
+  name: Wang X
+- authtype: Author
+  name: Zou H
+- authtype: Author
+  name: Sun H
+- authtype: Author
+  name: Huang Y
+- authtype: Author
+  name: Yao Z
+- authtype: Author
+  name: Lu Q
+epubdate: 2023 Jun 3
+fulljournalname: BMC Psychiatry
+issue: ''
+pages: '395'
+pmclivedate: 2023/06/04
+printpubdate: ''
+pubdate: 2023 Jun 3
+sortdate: 2023/06/03 00:00
+source: BMC Psychiatry
+title: 'Attenuated post-movement beta rebound reflects psychomotor alterations in
+  major depressive disorder during a simple visuomotor task: a MEG study'
+uid: '10239091'
+volume: '23'

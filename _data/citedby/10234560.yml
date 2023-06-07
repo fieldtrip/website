@@ -1,0 +1,42 @@
+articleids:
+- idtype: pmid
+  value: '37262014'
+- idtype: doi
+  value: 10.1371/journal.pbio.3002140
+- idtype: pmcid
+  value: PMC10234560
+authors:
+- authtype: Author
+  name: Herz DM
+- authtype: Author
+  name: Bange M
+- authtype: Author
+  name: Gonzalez-Escamilla G
+- authtype: Author
+  name: Auer M
+- authtype: Author
+  name: Muthuraman M
+- authtype: Author
+  name: Glaser M
+- authtype: Author
+  name: Bogacz R
+- authtype: Author
+  name: Pogosyan A
+- authtype: Author
+  name: Tan H
+- authtype: Author
+  name: Groppa S
+- authtype: Author
+  name: Brown P
+epubdate: 2023 Jun 1
+fulljournalname: PLOS Biology
+issue: '6'
+pages: e3002140
+pmclivedate: 2023/06/02
+printpubdate: ''
+pubdate: 2023 Jun 1
+sortdate: 2023/06/01 00:00
+source: PLoS Biol
+title: Dynamic modulation of subthalamic nucleus activity facilitates adaptive behavior
+uid: '10234560'
+volume: '21'
