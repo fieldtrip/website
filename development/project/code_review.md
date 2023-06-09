@@ -5,12 +5,9 @@ title: FieldTrip from a software development perspective
 # FieldTrip from a software development perspective
 
 {% include markup/success %}
-This page reports the insights from a MathWorks Community Toolbox Project that was sponsored by MathWorks and carried out by [Aljen Uitbeijerse](https://www.linkedin.com/in/aljenuitbeijerse/) at [VORtech](https://www.vortech.nl/en). The version presented here has been edited from the [original PDF version](/assets/pdf/project/code_review.pdf); the edits include formatting and fixing small typos.
+This page reports the insights from a MathWorks Community Toolbox Project that was sponsored by MathWorks and carried out by [Aljen Uitbeijerse](https://www.linkedin.com/in/aljenuitbeijerse/) at [VORtech](https://www.vortech.nl/en). The version presented here has been edited from the [original PDF version](/assets/pdf/project/code_review.pdf) (from April 20, 2023). The edits include formatting and fixing small typos.
 {% include markup/end %}
 
-```
-Version: April 20, 2023
-```
 
 ## 1. Introduction
 
@@ -79,11 +76,11 @@ The website does have pages that are related to these questions.
 
 - The architecture page can be used as a reference for where to put additions. However, it gives the same answer as the repository itself, i.e. in a directory that already has a large number of files.
 
-- The functions listing (https://www.fieldtriptoolbox.org/reference/) could be seen as a first answer to whether fieldtrip has certain functionality. However, the web page only gives a partial list of high level functions. And given the size of the toolbox and the lack of automated technical documentation generation, it cannot be expected from the website to be complete. Also, for utility functions, code organization is very helpful to guide developers in addition to / in lieu of documentation.
+- The functions listing (<https://www.fieldtriptoolbox.org/reference/>) could be seen as a first answer to whether fieldtrip has certain functionality. However, the web page only gives a partial list of high level functions. And given the size of the toolbox and the lack of automated technical documentation generation, it cannot be expected from the website to be complete. Also, for utility functions, code organization is very helpful to guide developers in addition to / in lieu of documentation.
 
-- The contributing page (https://www.fieldtriptoolbox.org/development/contribute/) does have guidelines for what additions should look like, although not all questions are answered yet (e.g. function naming).
+- The contributing page (<https://www.fieldtriptoolbox.org/development/contribute/>) does have guidelines for what additions should look like, although not all questions are answered yet (e.g. function naming).
 
-- The page on testing (https://www.fieldtriptoolbox.org/development/testing/) answers how edits can be tested. However, the main answer on whether an edit affects other code, appears to be to wait for an email from someone at the Donders Institute on whether your pull request has passed the tests.
+- The page on testing (<https://www.fieldtriptoolbox.org/development/testing/>) answers how edits can be tested. However, the main answer on whether an edit affects other code, appears to be to wait for an email from someone at the Donders Institute on whether your pull request has passed the tests.
 
 **Recommendations:**
 
@@ -94,12 +91,11 @@ The website does have pages that are related to these questions.
 - To make it easier to find out what is available, expand the reference documentation to include all public API functions. This would be separate from the existing reference page, as that page is dedicated to listing only the most important functions. The expanded
   documentation would need be automatically generated, various tools are available to help with that.
 
-- To have an answer directly in the repository on what is expected of contributions, and to be in line with the common practice for GitHub, add a CONTRIBUTING.md file. It can mostly link to various pages on the website, e.g. look quite like the https://www.fieldtriptoolbox.org/development/ page. Do add a part on naming conventions for files to that page.
+- To have an answer directly in the repository on what is expected of contributions, and to be in line with the common practice for GitHub, add a CONTRIBUTING.md file. It can mostly link to various pages on the website, e.g. look quite like the <https://www.fieldtriptoolbox.org/development/> page. Do add a part on naming conventions for files to that page.
 
 - To make it easy to run at least a relevant subset of tests, update the tests organization
 
-The next chapter has additional background and information related to recommendations on the
-code organization and testing.
+The next chapter has additional background and information related to recommendations on the code organization and testing.
 
 ## 3. Topics of special interest
 
@@ -123,7 +119,7 @@ To encourage developers to run tests during development, and before submitting a
 
 There exists a function `ft_test` (located in the utilities folder) that was meant to provide much of this functionality. However, it has largely gone unused (the dashboard does not use it) and undocumented (it is only mentioned in passing in one location in the documentation). It includes a custom implementation of (unit)test functionality that is also provided by Matlab itself. Because it is a custom implementation, it cannot use the additional functionality that is available within the Matlab unittest framework (e.g. reporting in jUnit format), does not allow potential testers to use the Matlab provided documentation to improve the functionality, and does not let developers that are familiar with the Matlab unittest framework to build on that knowledge.
 
-Using `matlab.unittest.TestCase` enables various additional features. One feature is the use of setup methods, teardown methods and fixtures. These can be used to reset the matlab session to a correct state for the next test also when a test does error, to close all figure windows after a test, or to temporarily manipulate what directories are on the path. Another feature is the ability to easily collect code coverage information, which can be used to identify functions that are not or only poorly tested, through the CodeCoveragePlugin. The code coverage result can be exported in Cobertura XML format, which is a generally used format in continuous integration pipelines, and where various tools are available to help interpret the results. One such tool is ReportGenerator (https://github.com/danielpalme/ReportGenerator ), which has the ability to merge multiple reports.
+Using `matlab.unittest.TestCase` enables various additional features. One feature is the use of setup methods, teardown methods and fixtures. These can be used to reset the matlab session to a correct state for the next test also when a test does error, to close all figure windows after a test, or to temporarily manipulate what directories are on the path. Another feature is the ability to easily collect code coverage information, which can be used to identify functions that are not or only poorly tested, through the CodeCoveragePlugin. The code coverage result can be exported in Cobertura XML format, which is a generally used format in continuous integration pipelines, and where various tools are available to help interpret the results. One such tool is [ReportGenerator](https://github.com/danielpalme/ReportGenerator), which has the ability to merge multiple reports.
 
 **Recommendations** : To enable developers to run a valid subset of the tests
 
@@ -131,9 +127,9 @@ Using `matlab.unittest.TestCase` enables various additional features. One featur
 
 - Make it possible to select a subset of tests based on the mentioned criteria. Implement this by taking advantage of what is already available in the matlab unittest framework. This framework facilitates various selection methods, has additional features that can be useful for follow up improvements to tests usage, and is very well documented. To be able to select on the mentioned criteria, two alternatives present itself:
 
-       - Alternative one is to wrap each existing test function in a matlab.unittest.TestCase. The information on runtime etc. can then be stored such that direct selection through the matlab unittest framework is possible. It gives the most flexibility in adapting the tests for additional features, and the closest connection with the matlab documentation on using the unittest framwork. The work to create the wrappers can be scripted. This option does require that a few changes are made to both the dashboard and how the octave testing calls the tests.
+  - Alternative one is to wrap each existing test function in a matlab.unittest.TestCase. The information on runtime etc. can then be stored such that direct selection through the matlab unittest framework is possible. It gives the most flexibility in adapting the tests for additional features, and the closest connection with the matlab documentation on using the unittest framwork. The work to create the wrappers can be scripted. This option does require that a few changes are made to both the dashboard and how the octave testing calls the tests.
 
-       - Alternative two is to add a single matlab.unittest.TestCase wrapperfunction around the tests (details in Appendix: A single matlab.unittest.TestCase wrapper) to enable subset selection. This option does not require changes to the tests scripts, however it does introduce an additional, non-standard layer and requires more implementation and maintenance effort.
+  - Alternative two is to add a single matlab.unittest.TestCase wrapperfunction around the tests (details in Appendix: A single matlab.unittest.TestCase wrapper) to enable subset selection. This option does not require changes to the tests scripts, however it does introduce an additional, non-standard layer and requires more implementation and maintenance effort.
 
 - Add a test runner utility function, for ease of use and to do the actual selection, and document how to run a subset of tests
 
@@ -145,14 +141,19 @@ With the above recommendations in place, additional improvements are possible to
 Listed in order of priority these would be
 
 - Organize the tests directory with subdirectories that follow the modularity of the main directory structure. This will help in getting a better view of what is, and what is not tested. Later, it will make it possible to test if indeed specific modules are self-contained (see also the section on self-contained modules later in this document).
-- Update the runtime and memory usage information inside the tests, and apply overhead calculations on the outside. Currently overhead is included in each test’s info. Because the tests are executed with https://github.com/fieldtrip/dashboard/blob/master/schedule-batch.sh every night, and the cluster scheduler/monitor will kill jobs that exceed requested resources (i.e. run too long), currently the requested time and memory are over-allocated. For a test that takes 1 second, 10 minutes are requested. For a test that takes 1 hour, 2 hours are requested. This also shows from a small sample run where tests were running in under a minute, whereas the test stated a runtime of 10 minutes. Consider using the runtime (as reported by the matlab unittest framework) and memory usage (see memory profiling, peak memory) as reported by matlab, instead of also including the Matlab startup time and memory use. The Matlab startup time is not relevant when running multiple tests in a single Matlab session. The Matlab memory use will be different for each Matlab version and can also depend on installed toolboxes and apps. Both the startup time and extra memory can easily be added later to the test runtime and memory if needed. For example for the submission bash script, it would be better if this over allocation of time and memory were done in the script, rather than in the specification in the m-file header.
+
+- Update the runtime and memory usage information inside the tests, and apply overhead calculations on the outside. Currently overhead is included in each test’s info. Because the tests are executed with <https://github.com/fieldtrip/dashboard/blob/master/schedule-batch.sh> every night, and the cluster scheduler/monitor will kill jobs that exceed requested resources (i.e. run too long), currently the requested time and memory are over-allocated. For a test that takes 1 second, 10 minutes are requested. For a test that takes 1 hour, 2 hours are requested. This also shows from a small sample run where tests were running in under a minute, whereas the test stated a runtime of 10 minutes. Consider using the runtime (as reported by the matlab unittest framework) and memory usage (see memory profiling, peak memory) as reported by matlab, instead of also including the Matlab startup time and memory use. The Matlab startup time is not relevant when running multiple tests in a single Matlab session. The Matlab memory use will be different for each Matlab version and can also depend on installed toolboxes and apps. Both the startup time and extra memory can easily be added later to the test runtime and memory if needed. For example for the submission bash script, it would be better if this over allocation of time and memory were done in the script, rather than in the specification in the m-file header.
 
 - Add GitHub actions to run a large subset of the tests on pull requests. A developer will typically only test on one Matlab version, and not run all possible tests. To give additional quick feedback on the quality of the pull request, add GitHub actions to run on a pull request. The actions can include both the latest Matlab, and the earliest supported (or for now available as GitHub action: 2020a) Matlab. To have the actions finish faster, multiple different subsets of tests can be run in parallel. The runner utility can be updated to provide the test results in a format which can be parsed by github.
 
-- Add GitHub actions to run a large subset of the tests on Octave. Matlab users will probably not test Octave compatibility, whereas Fieldtrip does want to be compatible with Octave. A possibly useful GitHub action for this effort is https://github.com/joergbrech/moxunit- action. Not all matlab unittest framework features are directly compatible with Octave testing, so this will require code additions as well, or possibly the current contrib/MOxUnit_fieldtrip within Fieldtrip already has most of what is needed.
-- Add GitHub actions (triggerable or automatic) that run all nondata tests, if the default on- pull-request action does not include them all.
+- Add GitHub actions to run a large subset of the tests on Octave. Matlab users will probably not test Octave compatibility, whereas Fieldtrip does want to be compatible with Octave. A possibly useful GitHub action for this effort is <https://github.com/joergbrech/moxunit-action>. Not all matlab unittest framework features are directly compatible with Octave testing, so this will require code additions as well, or possibly the current contrib/MOxUnit_fieldtrip within Fieldtrip already has most of what is needed.
+
+- Add GitHub actions (triggerable or automatic) that run all nondata tests, if the default on-pull-request action does not include them all.
+
 - Add GitHub action (triggerable or automatic) that runs all the public-data tests. This would need to include an action step to download the required data, and possibly code changes for the tests to be able to find the data.
+
 - Consider updating the dependencies information. This information is aimed at listing the public API functions used, not at giving a full dependency tree. It should be quite possible to parse the output of a profiler session around a test (added e.g. through a trigger in the runner) and retrieve the public API functions that are touched by the test. This can then be used to update the dependencies information.
+
 - Consider updating the fieldtrip/dashboard repository to use the wrapper and runner.
 
 ### 3.2. Code organization
@@ -163,7 +164,7 @@ _“Where to put my addition, and its dependencies? Does Fieldtrip already have 
 
 How code is organized has a large influence on how easy it is to do quality development. It affects ease of testing, how easy it is to find whether functionality already exists, how easy it is to get an overview of the codebase, where there are virtual boundaries within the codebase.
 
-The current organization is described in https://www.fieldtriptoolbox.org/development/architecture/. The main items to mention here are that functions are divided into three categories (high-level, low-level and private) and the directory structure is set up to reflect a modular design. The distinction between high-level and low-level functions is related to the modular design, in that each module should be self-contained, and thus low-level functions should not call high-level functions. The private functions category is related to the modularity in that each module should have a stable public API, and the private functions are explicitly excluded from that API.
+The current organization is described in <https://www.fieldtriptoolbox.org/development/architecture/>. The main items to mention here are that functions are divided into three categories (high-level, low-level and private) and the directory structure is set up to reflect a modular design. The distinction between high-level and low-level functions is related to the modular design, in that each module should be self-contained, and thus low-level functions should not call high-level functions. The private functions category is related to the modularity in that each module should have a stable public API, and the private functions are explicitly excluded from that API.
 
 The directory organization approximately follows the architecture. However, the “Fieldtrip main functions” from the architecture image are not contained as such and placed above the modules. Instead, all the main functions are next to each other directly in the top level of the directory structure, next to the high level modules (distributed computing and contrib.), and next to the submodules. The de-facto entry point to fieldtrip, the ft_defaults function, is also located at this level.
 
@@ -171,8 +172,9 @@ The directory organization approximately follows the architecture. However, the 
 
 #### 3.2.2. Private directories versus packages
 
-_“Finally, we have private functions that by design cannot be called by the end-user.”
-https://www.fieldtriptoolbox.org/development/architecture/_
+_“Finally, we have private functions that by design cannot be called by the end-user.”_
+
+<https://www.fieldtriptoolbox.org/development/architecture/>
 
 Having lots of functions in private directories does make a clear distinction between the public API and the internal functions. However, there are also considerable drawbacks to having many private directories, with many functions in each:
 
@@ -190,27 +192,29 @@ Within the Matlab environment, using private directories used to be the only rel
 
 When Fieldtrip started with the current architecture, using packages was not an option yet. Fieldtrip aims to be backward compatible with about 5 years of Matlab versions. So packages being introduced in Matlab R2008a (and soon after also in Octave) were too new a feature for use in Fieldtrip when the current architecture came into being (in March 2011 already the modules and private-folders architecture with file synchronization is clearly visible). Also, within the Matlab community, this feature was at first seen as a part of the object-oriented features that were introduced at the same time.
 
-By now, using packages and namespaces in Matlab is a viable alternative way of distinguishing between public and internal functions. Mathworks themselves are also heavily using packages in any newer features they introduce to the language. And there too, packages are used to distinguish between public and internal functions. From https://nl.mathworks.com/help/matlab/matlab_oop/scoping-classes-with-packages.html: “Internal Packages“; “MathWorks® reserves the use of packages named internal for utility functions used by internal MATLAB code. Functions that belong to an internal package are intended for MathWorks use only. Using functions or classes that belong to an internal package is discouraged. These functions and classes are not guaranteed to work in a consistent manner from one release to the next. Any of these functions and classes might be removed from the MATLAB software in any subsequent release without notice and without documentation in the product release notes.”
+By now, using packages and namespaces in Matlab is a viable alternative way of distinguishing between public and internal functions. Mathworks themselves are also heavily using packages in any newer features they introduce to the language. And there too, packages are used to distinguish between public and internal functions. From <https://nl.mathworks.com/help/matlab/matlab_oop/scoping-classes-with-packages.html>: “Internal Packages“; “MathWorks® reserves the use of packages named internal for utility functions used by internal MATLAB code. Functions that belong to an internal package are intended for MathWorks use only. Using functions or classes that belong to an internal package is discouraged. These functions and classes are not guaranteed to work in a consistent manner from one release to the next. Any of these functions and classes might be removed from the MATLAB software in any subsequent release without notice and without documentation in the product release notes.”
 
 **Recommendation**: Use packages instead of private directories for distinguishing between public and internal functions, to resolve the drawbacks of having many private functions as mentioned above. The exact naming of and hierarchy within the packages can be a gradual development. Various things to take into account when deciding on the naming and location of packages have been listed in Appendix: Considerations for the naming convention and subdivision of packages.
 
 #### 3.2.3. Self-contained modules
 
-The Fieldtrip architecture page (https://www.fieldtriptoolbox.org/development/architecture/) states that one of the aims is for the low-level modules in FieldTrip to be fully self-contained. For the qsub and fileio modules, this goal is materialized in that they have their own repositories within the fieldtrip organization on github (https://github.com/orgs/fieldtrip/repositories), next to the main fieldtrip repository.
+The Fieldtrip [architecture page](https://www.fieldtriptoolbox.org/development/architecture/) states that one of the aims is for the low-level modules in FieldTrip to be fully self-contained. For the qsub and fileio modules, this goal is materialized in that they have their own repositories within the fieldtrip organization on github (<https://github.com/orgs/fieldtrip/repositories>), next to the main fieldtrip repository.
 
 However, this goal is at odds with the architecture decision to give the utilities module a special treatment, currently phrased as “There is an exception for the utilities directory which allows lower- level functions to be called by the end-user at the level of the main FieldTrip functions.” And indeed functions from the utilities directory are called directly in many places in the other modules. Thus even the fileio module, which does have its own repository, is not usable without also getting the utilities directory from the main fieldtrip repository.
 
 **Recommendation** :
 
-- Update the documentation to be more clear that self-contained is not strict, but includes the
-  utilities directory as a dependency.
+- Update the documentation to be more clear that self-contained is not strict, but includes the utilities directory as a dependency.
+
 - For modules / directories that are expected to be self-contained, add tests to check that they are indeed self-contained. Tests for functions in that module should be (able to) run with only that module’s directory added to the Matlab path.
+
 - For modules that are provided as separate repositories, have everything in that repository that is expected for an independent piece of software. This would include:
 
-       - At least a minimum of documentation
-       - The software in a form that can be run as is, or information how to get the dependencies
-       - Tests that show the software works correctly (possibly just using a subset of the Fieldtrip tests is enough for this, see also the section on tests earlier in this document)
+  - At least a minimum of documentation
 
+  - The software in a form that can be run as is, or information how to get the dependencies
+
+  - Tests that show the software works correctly (possibly just using a subset of the Fieldtrip tests is enough for this, see also the section on tests earlier in this document)
 
 - For modules that are provided as separate repositories, since the modules will need more than just their own directory from the main Fieldtrip repository, the module repository should be set up such that it is easy to synchronize all the needed parts from the Fieldtrip repository to the module repository.
 
@@ -246,7 +250,7 @@ The preamble and postamble functions are used in all high level analysis functio
 
 The main drawback of the current implementation of preamble and postamble is that it is not transparent that these functions modify the workspace of the function they are called from. While in effect, they do add several new variables, and modify existing variables (in particular the cfg variable).
 
-A related drawback is their use of assignin, evalin and worker scripts, which makes it hard to follow what happens, and where. And the use of assignin and evalin also makes that currently, nested functions cannot be used in any function that calls preamble or postamble. Because the use evalin and assignin is not compatible with nested functions, as also stated in the documentation: https://nl.mathworks.com/help/matlab/matlab_prog/resolve-error-attempt-to-add-variable-to-a- static-workspace.html. Even though regular functions and subfunctions are usually to be preferred over nested functions, not being able to use nested functions at all is an unnecessary restriction.
+A related drawback is their use of assignin, evalin and worker scripts, which makes it hard to follow what happens, and where. And the use of assignin and evalin also makes that currently, nested functions cannot be used in any function that calls preamble or postamble. Because the use evalin and assignin is not compatible with nested functions, as also stated in the documentation: <https://nl.mathworks.com/help/matlab/matlab_prog/resolve-error-attempt-to-add-variable-to-a-static-workspace.html>. Even though regular functions and subfunctions are usually to be preferred over nested functions, not being able to use nested functions at all is an unnecessary restriction.
 
 From a first look at what the preamble and postamble worker scripts try to achieve, it seems possible to rework them to a version 2 implementation, that does show transparantly what variables are added / edited in the calling function’s workspace. The final implementation could have a single function call for each of preamble and postamble. That call takes multiple cell arrays as input, one for each preamble ‘script’ that should be executed, followed by any other input data needed by that particular ‘script’. The special cfg input would be a shared first input. The call will return cfg, and for the preamble a single variable that holds any extra info needed by the postambles, and the extra variables that are requested from the loadvar option as varargout output towards named variables in the caller function. The final implementation does not have to do any assignin calls or addition of extra variables under the hood. And most likely it will not even need to call evalin. Another result will be that the functions that use preamble and postamble, can get rid of the separate ft_nargin, ft_nargout and ft_revision variables.
 
@@ -272,17 +276,17 @@ This chapter aims to introduce these analysis tools and provide recommendations 
 
 Applying a code duplication analysis tool on the current Fieldtrip will give a lot of duplication sites, since there is known function duplication through the synchronization mechanism. Thus it is currently hard to assess if there is also additional code duplication. However, even while looking at only a few random functions, there were indications that there is also in-function code duplication. There are tools that can help to detect code duplication.
 
-- MathWorks has PolySpace for example (https://nl.mathworks.com/products/polyspace.html), however, that appears to be for c/c++ code only.
+- MathWorks has PolySpace for example (<https://nl.mathworks.com/products/polyspace.html>), however, that appears to be for c/c++ code only.
 
-- There is the copy-paste detector (CPD) of PMD, which claims to support Matlab (https://pmd.github.io), though only for the CPD part, not for all of PMD. Not yet checked whether this only detects exact matches, or also near-exact duplication.
+- There is the copy-paste detector (CPD) of PMD, which claims to support Matlab (<https://pmd.github.io>), though only for the CPD part, not for all of PMD. Not yet checked whether this only detects exact matches, or also near-exact duplication.
 
-- It might be possible to adapt pylints similarity checker to run correctly on Matlab code (currently at https://github.com/pylint-dev/pylint/blob/main/pylint/checkers/similar.py)
+- It might be possible to adapt pylints similarity checker to run correctly on Matlab code (currently at <https://github.com/pylint-dev/pylint/blob/main/pylint/checkers/similar.py>)
 
 **Recommendation** : Apply a code duplication analysis tool on the code base, once the known function duplication has been removed, to help find additional code duplication.
 
 ### 4.2. Mlint and Code Analyzer
 
-The well-known mlint errors and warnings (that show up as squiggles in the matlab editor) can now easily be viewed in one overall report, since as of Matlab 2022b there is Code Analyzer App (https://nl.mathworks.com/help/matlab/ref/codeanalyzer-app.html), and a codeIssues function (https://blogs.mathworks.com/developer/2023/03/15/static-analysis-code-checking-and-linting- with-codeissues/). Previously it was also possible to collect these messages, but not this easily. Running the analysis on the full fieldtrip folder gives [1 28 error, 18 143 warning, 299 0 9 info] messages. Note that this is a total. For instance, the warning “TRY statement should have a CATCH statement to check for unexpected errors.” is given on 235 different lines in the code, concentrated in even fewer different files.
+The well-known mlint errors and warnings (that show up as squiggles in the matlab editor) can now easily be viewed in one overall report, since as of Matlab 2022b there is Code Analyzer App (<https://nl.mathworks.com/help/matlab/ref/codeanalyzer-app.html>), and a codeIssues function (<https://blogs.mathworks.com/developer/2023/03/15/static-analysis-code-checking-and-linting-with-codeissues/>). Previously it was also possible to collect these messages, but not this easily. Running the analysis on the full fieldtrip folder gives [1 28 error, 18 143 warning, 299 0 9 info] messages. Note that this is a total. For instance, the warning “TRY statement should have a CATCH statement to check for unexpected errors.” is given on 235 different lines in the code, concentrated in even fewer different files.
 
 For a screenshot of the errors summary, see Appendix: Code Analyzer app results.
 
@@ -295,6 +299,7 @@ For a screenshot of the errors summary, see Appendix: Code Analyzer app results.
 **Additional recommendations:**
 
 - Make a pass over the list of warning messages, and determine which are serious enough to require fixing. Warnings can indicate various types of problems, of which some are more serious than others.
+
 - Add an automated test to detect whether edits increase the number of error and warning messages. And schedule a periodic update of the reference number-of-errors and number- of-warnings (it should be going down over time).
 
 ### 4.3. Code Compatibility Analyzer
@@ -313,7 +318,7 @@ Compatibility of the code with a given Matlab version, can be checked with the C
 
 The function checkcode, with the option –cyc or – modcyc, will give “the McCabe cyclomatic complexity of each function in the file. In general, lower complexity values indicate programs that are easier to understand and modify. Evidence suggests that programs with higher complexity values are more likely to contain errors. Frequently, you can lower the complexity of a function by dividing it into smaller, simpler functions.”
 
-Given that the analysis functions follow a similar pattern in general, that introduces some complexity, a low complexity number is not to be expected for the main analysis functions. Thus the general guidelines with boundaries at 10, 20 and 50 (https://nl.mathworks.com/help/matlab/matlab_prog/measure-code-complexity-using-cyclomatic- complexity.html) may not directly apply. However, complexity numbers above 100 do indicate that a function implementation will probably be hard to follow. With some scriptingcheckcode could be used to find the fieldtrip files that are the most. A first example and result can be found in Appendix: Results of checkCode complexity report.
+Given that the analysis functions follow a similar pattern in general, that introduces some complexity, a low complexity number is not to be expected for the main analysis functions. Thus the general guidelines with boundaries at 10, 20 and 50 (<https://nl.mathworks.com/help/matlab/matlab_prog/measure-code-complexity-using-cyclomatic-complexity.html>) may not directly apply. However, complexity numbers above 100 do indicate that a function implementation will probably be hard to follow. With some scriptingcheckcode could be used to find the fieldtrip files that are the most. A first example and result can be found in Appendix: Results of checkCode complexity report.
 
 **Recommendations** :
 
@@ -322,7 +327,7 @@ Given that the analysis functions follow a similar pattern in general, that intr
 
 ### 4.5. Dependency analysis
 
-A dependency analysis gives information on how functions interact with other functions. Matlab does have functionality for dependency analysis, however as far as I can find it is only available within the Matlab Project functionality. Thus first a Matlab Project needs to be created for Fieldtrip, before the dependency analysis can be used. Creating a project did work, although it took quite some time. However, accessing the dependency analysis though the GUI of the Matlab Project failed, a message came up that it was unable to finish creating a graph. There is also a command line interface to the dependency analysis (since 2019a), that still relies on first creating a Matlab Project. The reference for the Matlab Project (https://nl.mathworks.com/help/matlab/ref/matlab.project.project.html) shows the command line interface for matlab projects, including examples of interacting with the dependencies information. More examples, for instance of how to get dependency information for particular files, can be found on https://nl.mathworks.com/help/matlab/matlab_prog/create-and-edit-projects- programmatically.html, section Get File Dependencies. Note that even once the Matlab Project is created, calling the updateDependencies method again takes a long time.
+A dependency analysis gives information on how functions interact with other functions. Matlab does have functionality for dependency analysis, however as far as I can find it is only available within the Matlab Project functionality. Thus first a Matlab Project needs to be created for Fieldtrip, before the dependency analysis can be used. Creating a project did work, although it took quite some time. However, accessing the dependency analysis though the GUI of the Matlab Project failed, a message came up that it was unable to finish creating a graph. There is also a command line interface to the dependency analysis (since 2019a), that still relies on first creating a Matlab Project. The reference for the [Matlab Project](https://nl.mathworks.com/help/matlab/ref/matlab.project.project.html) shows the command line interface for matlab projects, including examples of interacting with the dependencies information. More examples, for instance of how to get dependency information for particular files, can be found on <https://nl.mathworks.com/help/matlab/matlab_prog/create-and-edit-projects-programmatically.html>, section "Get File Dependencies". Note that even once the Matlab Project is created, calling the updateDependencies method again takes a long time.
 
 **Recommendation** : Do not invest time yet in dependency analysis. This tooling can be useful if there is a particular goal to be achieved that requires information on function dependencies. However, there does not appear to be such a goal at present. Also, the use of many private directories with duplicated functions makes that the dependency analysis will not be exhaustive in showing what functions depend on a certain lower level function, making it less useful in evaluating the impact of changes to a lower level function.
 
@@ -362,7 +367,9 @@ In `ft_crossfrequencyanalysis`
 - Multiple places where there is a `strcmp(xxx, ‘no’)`, whereas there is also an istrue function.
 
 - Why is the cfg option output for these even a string, instead of a boolean value? Why not have ft_checkconfig or ft_getopt return a boolean value for such fields?
+
 - In the swich case for “do the actual computation” around line 215, multiple cases have the exact same code.
+
 - The case ‘mi’ has an if-else, where the inner part of both branches is exactly the same. Why is that part not a subfunction? (A nested function might be even nicer, since that could go directly at that location, but the preamble prevents use of nested functions?)
 
 Naming of ft_xxxx_option versus ft_xxxx combined with cfg.method There are many analysis functions that have a switch case on cfg.method. However, there are also some top-level functions that appear to have the method as a suffix. Why?
@@ -373,7 +380,7 @@ Fieldtrip `compat` folder has entries that go back to before 2013b. However, the
 
 Fixcoordsys uses an if-elseif construct that has no final else statement. Not sure if the static code analysis tools pick that up. However, even if it is correct to do-nothing, there should be an else that describes the motivation why it is correct. Similar for switch case statements, they should always have a final otherwise.
 
-Website, https://www.fieldtriptoolbox.org/development/architecture/: “All high-level functions within the FieldTrip directories may call functions within the same directory, from other directories at the same hierarchical level, or directories lower in the hierarchy. But, low-level functions should not call high-level functions. There is an exception for the utilities directory which allows lower-level functions to be called by the end-user at the level of the main FieldTrip functions.” I think I understand the idea, however I don’t understand the last sentence’s phrasing.
+Website, <https://www.fieldtriptoolbox.org/development/architecture/>: “All high-level functions within the FieldTrip directories may call functions within the same directory, from other directories at the same hierarchical level, or directories lower in the hierarchy. But, low-level functions should not call high-level functions. There is an exception for the utilities directory which allows lower-level functions to be called by the end-user at the level of the main FieldTrip functions.” I think I understand the idea, however I don’t understand the last sentence’s phrasing.
 
 Something that was not looked at yet, is an answer to “would like to refactor some of the plotting related functions, but not sure how” Most plotting functions are like regular fieldtrip functions, but with a lot of subfunctions for e.g. callbacks. Only ft_plot_mesh_interactive uses a classdef, and is actually the only object-oriented file in the fieldtrip code (except for certain places in the external folder).
 
@@ -385,13 +392,13 @@ There are about 100 top level functions. This is quite overwhelming.
 
 _“Finding the right function is indeed a challenge. Only a selection of all analysis functions is linked on https://www.fieldtriptoolbox.org/reference/. And since these are direct links to the github repository, the help content of the functions is not part of the website, and not indexed by search engines.”_
 
-- Automatically generating technical documentation, to be included as a part of a website should be feasible. Sphynx for instance (https://www.sphinx-doc.org/en/master/) has extensions that let it parse Matlab files (https://github.com/sphinx-contrib/matlabdomain) and produce output in markdown format or restructured text. Thus the technical documentation can either be made a part of the official Fieldtrip website, or be hosted separately on Read the Docs (https://readthedocs.org/).
+- Automatically generating technical documentation, to be included as a part of a website should be feasible. [Sphynx](https://www.sphinx-doc.org/en/master/) for instance has extensions that let it parse Matlab files (<https://github.com/sphinx-contrib/matlabdomain>) and produce output in markdown format or restructured text. Thus the technical documentation can either be made a part of the official Fieldtrip website, or be hosted separately on [Read the Docs](https://readthedocs.org/).
 
 Many top level folders.
 
 - How do they relate to each other? Do they all serve a similar purpose?
 
-Only some of the top-level folders are considered part of the public interface, according to what is put on the matlab path when running ft_defaults, and the information in https://www.fieldtriptoolbox.org/development/architecture/ The architecture page has some background on the current architecture.
+Only some of the top-level folders are considered part of the public interface, according to what is put on the matlab path when running ft_defaults, and the information in <https://www.fieldtriptoolbox.org/development/architecture/>. The architecture page has some background on the current architecture.
 
 - Why are there many non-interface folders on the top level, instead of having them all together in one folder, called developers or resources or extras or ...? Or even in one or more subfolders of utilities?
 
@@ -442,11 +449,11 @@ Lots of mex files, all over the code base, and mixed with other files.
 
 _“The idea is that the fieldtrip-native mex-files' source code is in fieldtrip/src/, all the other mex-files seem to be in external packages mostly, and a bit in the realtime module. I found one instance of a \*.c file in a private folder. This one should be removed. Also we have discussed removing the external/dmlt altogether, which would get rid of a large chunck of code anyhow.”_
 
-The modules of Fieldtrip are supposed to be independent: “We aim for the low-level modules in FieldTrip that they have a consistent API and are fully self-contained, i.e. if you copy the corresponding directory out of the main FieldTrip directory, they should still work. This facilitates the low level code to be reused in other projects.”
+The modules of Fieldtrip are supposed to be independent: “We aim for the low-level modules in FieldTrip that they have a consistent API and are fully self-contained, i.e., if you copy the corresponding directory out of the main FieldTrip directory, they should still work. This facilitates the low level code to be reused in other projects.”
 
 - Should they not be separate repositories then, so it is possible to test this goal is achieved? Which tests are for what module? Is this statement true for all the low-level modules? Is this feature ever used?
 
-The compat folder has code to make fieldtrip compatible with older Matlab releases. The oldest release mentioned is R2010b. The website states that 5 years of backward compatibility is at least aimed for. The dashboard script (https://github.com/fieldtrip/dashboard/blob/master/schedule- matlabs.sh) shows that only R2012a and later is tested. The code has locations where the table datatype is used, introduced in R2013b.
+The `compat` folder has code to make fieldtrip compatible with older Matlab releases. The oldest release mentioned is R2010b. The website states that 5 years of backward compatibility is at least aimed for. The dashboard script (https://github.com/fieldtrip/dashboard/blob/master/schedule-matlabs.sh) shows that only R2012a and later is tested. The code has locations where the table datatype is used, introduced in R2013b.
 
 - With the table datatype being used in multiple places in fieldtrip, isn’t backward compatibility currently limited to 2013b and later?
 
@@ -456,9 +463,9 @@ The compat folder has code to make fieldtrip compatible with older Matlab releas
 
 ## 7. Appendix: A single matlab.unittest.TestCase wrapper
 
-The standard way of using a matlab.unittest.TestCase, defines the tests as methods of a class that derives from matlab.unittest.TestCase. Selecting a subset of those tests can be done by grouping them in different methods blocks, each with a different set of tags. See for example https://nl.mathworks.com/help/matlab/matlab_prog/tag-unit-tests.html Reusing the current implementation of the tests is possible, by setting up a matlab.unittest.TestCase that collects the available test, and through test parameterization enables selecting specific subsets. The main ideas can be derived from this example, https://nl.mathworks.com/help/matlab/matlab_prog/define-parameters-at-suite-creation- time.html
+The standard way of using a matlab.unittest.TestCase, defines the tests as methods of a class that derives from matlab.unittest.TestCase. Selecting a subset of those tests can be done by grouping them in different methods blocks, each with a different set of tags. See for example <https://nl.mathworks.com/help/matlab/matlab_prog/tag-unit-tests.html> Reusing the current implementation of the tests is possible, by setting up a matlab.unittest.TestCase that collects the available test, and through test parameterization enables selecting specific subsets. The main ideas can be derived from this example, <https://nl.mathworks.com/help/matlab/matlab_prog/define-parameters-at-suite-creation-time.html>
 
-The wrapper would need to first collect all available tests, and parse them to extract information on runtime, memory use, data use etc. This can probably re-use code available in ft_test. Each of these properties will become a separate testparameter, and by defining the ParameterCombination attribute on the single test method as sequential, one testcase per test function will be created. The test runner utility function can then apply constraints on the parameters (https://nl.mathworks.com/help/matlab/ref/matlab.unittest.constraints-package.html and https://nl.mathworks.com/help/matlab/ref/matlab.unittest.testsuite.selectif.html), to select a subset of tests, for instance tests with a runtime of less than 3 minutes, using NODATA and having a name starting with test\_.
+The wrapper would need to first collect all available tests, and parse them to extract information on runtime, memory use, data use etc. This can probably re-use code available in ft_test. Each of these properties will become a separate testparameter, and by defining the ParameterCombination attribute on the single test method as sequential, one testcase per test function will be created. The test runner utility function can then apply constraints on the parameters (<https://nl.mathworks.com/help/matlab/ref/matlab.unittest.constraints-package.html> and <https://nl.mathworks.com/help/matlab/ref/matlab.unittest.testsuite.selectif.html>), to select a subset of tests, for instance tests with a runtime of less than 3 minutes, using NODATA and having a name starting with test\_.
 
 ## 8. Appendix: Considerations for the naming convention and subdivision of packages
 
@@ -490,7 +497,7 @@ The module specific package can be inside the module directory. The ft_internal.
 
 A namespace in Matlab can be built from directories in multiple locations. Thus, it is possible to have a directory “+ft_internal” at multiple locations, and they will all be part of the ft_internal package.
 
-If packages are at first only going to be used for the organization of the internal functions, and the public APIs will remain packageless, it might not be worth it to have an extra layer of packaging / directories called “+ft_internal”, like in “fieldtrip/specest/+ft_internal/+specest/ETC”. Instead it could be considered to not have a shared ft_internal package, but multiple packages that start with the same name, and thus have single package directory layer per module, like “fieldtrip/specest/+ft_internal_specest/ETC”.
+If packages are at first only going to be used for the organization of the internal functions, and the public APIs will remain packageless, it might not be worth it to have an extra layer of packaging / directories called `+ft_internal`, like in `fieldtrip/specest/+ft_internal/+specest/ETC`. Instead it could be considered to not have a shared ft_internal package, but multiple packages that start with the same name, and thus have single package directory layer per module, like `fieldtrip/specest/+ft_internal_specest/ETC`.
 
 ## 9. Appendix: Code examples for reimplementation of preamble / postamble
 
@@ -556,7 +563,6 @@ What the analysis function would look like with the v2 of preamble / postamlbe
     % do the general setup of the function (no separate ft_nargin etc
     % variables)
 
-
     [cfg, p_amble, data] = ft_preamble_v2(cfg, ...
     {'init', nargin, nargout}, ...
     'debug', ...
@@ -590,16 +596,13 @@ What the analysis function would look like with the v2 of preamble / postamlbe
     {'provenance', 2}, ...
     {'history', 2}, ...
     {'savevar', 2});
-    % Note that the number input to previous, provenance, history and
-    savevar
-    % indicates which of the inputs are input for that part. Instead of
-    a
+
+    % Note that the number input to previous, provenance, history and savevar
+    % indicates which of the inputs are input for that part. Instead of a
     % scalar, this can also be a vector of numbers.
     % The number input would be a required input, and have a scalar 0 to
-    % indicate no input data used. It can be followed by an optional
-    input
-    % string / chararray 'vararg' to indicate that the input is a cell
-    array.
+    % indicate no input data used. It can be followed by an optional input
+    % string / chararray 'vararg' to indicate that the input is a cell array.
 
     % and sometimes a small code piece after the postamble
 
@@ -619,9 +622,7 @@ Some details of v2 of preamble and underlying functions
 
     [cfg, p_amble] = ft_preamble_debug(cfg, p_amble);
 
-    [cfg, p_amble, varargout] = ft_preamble_loadvar(cfg, p_amble,
-    load_args);
-
+    [cfg, p_amble, varargout] = ft_preamble_loadvar(cfg, p_amble, load_args);
 
     [cfg, p_amble] = ft_preamble_provenance(cfg, p_amble, prov_args);
 
