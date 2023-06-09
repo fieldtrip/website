@@ -9,6 +9,7 @@ This section lists information aimed at developers of FieldTrip and collaboratin
 
 ## Active projects
 
+- [Toolbox code review](/development/project/code_review)
 - [Improve artifact handling](/development/project/artifacts)
 - [Improve integration with other toolboxes](/development/project/integration)
 - [Improve regression testing](/development/project/regression)
