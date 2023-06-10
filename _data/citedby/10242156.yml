@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '37287586'
+- idtype: doi
+  value: 10.3389/fninf.2023.1128866
+- idtype: pmcid
+  value: PMC10242156
+authors:
+- authtype: Author
+  name: Fuhrer J
+- authtype: Author
+  name: Glette K
+- authtype: Author
+  name: Llorens A
+- authtype: Author
+  name: Endestad T
+- authtype: Author
+  name: Solbakk AK
+- authtype: Author
+  name: Blenkmann AO
+epubdate: 2023 May 23
+fulljournalname: Frontiers in Neuroinformatics
+issue: ''
+pages: '1128866'
+pmclivedate: 2023/06/07
+printpubdate: ''
+pubdate: 2023 May 23
+sortdate: 2023/05/23 00:00
+source: Front Neuroinform
+title: Quantifying evoked responses through information-theoretical measures
+uid: '10242156'
+volume: '17'

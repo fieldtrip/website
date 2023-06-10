@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1093/braincomms/fcad161
+- idtype: pmcid
+  value: PMC10244064
+authors:
+- authtype: Author
+  name: Sheybani L
+- authtype: Author
+  name: Mégevand P
+- authtype: Author
+  name: Roehri N
+- authtype: Author
+  name: Spinelli L
+- authtype: Author
+  name: Kleinschmidt A
+- authtype: Author
+  name: van Mierlo P
+- authtype: Author
+  name: Seeck M
+- authtype: Author
+  name: Vulliémoz S
+epubdate: 2023 May 24
+fulljournalname: Brain Communications
+issue: '3'
+pages: fcad161
+pmclivedate: 2023/06/08
+printpubdate: ''
+pubdate: 2023 May 24
+sortdate: 2023/05/24 00:00
+source: Brain Commun
+title: Asymmetry of sleep electrophysiological markers in patients with focal epilepsy
+uid: '10244064'
+volume: '5'

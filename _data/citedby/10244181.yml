@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '37264156'
+- idtype: doi
+  value: 10.1038/s41593-023-01324-5
+- idtype: pmcid
+  value: PMC10244181
+authors:
+- authtype: Author
+  name: Geva-Sagiv M
+- authtype: Author
+  name: Mankin EA
+- authtype: Author
+  name: Eliashiv D
+- authtype: Author
+  name: Epstein S
+- authtype: Author
+  name: Cherry N
+- authtype: Author
+  name: Kalender G
+- authtype: Author
+  name: Tchemodanov N
+- authtype: Author
+  name: Nir Y
+- authtype: Author
+  name: Fried I
+epubdate: 2023 Jun 1
+fulljournalname: Nature Neuroscience
+issue: '6'
+pages: 1100-1110
+pmclivedate: 2023/06/08
+printpubdate: '2023'
+pubdate: 2023 Jun 1
+sortdate: 2023/06/01 00:00
+source: Nat Neurosci
+title: Augmenting hippocampal–prefrontal neuronal synchrony during sleep enhances
+  memory consolidation in humans
+uid: '10244181'
+volume: '26'

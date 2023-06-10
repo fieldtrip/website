@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '37141095'
+- idtype: doi
+  value: 10.1016/j.celrep.2023.112467
+- idtype: pmcid
+  value: PMC10242451
+authors:
+- authtype: Author
+  name: Eisenkolb VM
+- authtype: Author
+  name: Held LM
+- authtype: Author
+  name: Utzschmid A
+- authtype: Author
+  name: Lin XX
+- authtype: Author
+  name: Krieg SM
+- authtype: Author
+  name: Meyer B
+- authtype: Author
+  name: Gempt J
+- authtype: Author
+  name: Jacob SN
+epubdate: 2023 May 2
+fulljournalname: Cell Reports
+issue: '5'
+pages: '112467'
+pmclivedate: 2023/06/07
+printpubdate: ''
+pubdate: 2023 May 2
+sortdate: 2023/05/02 00:00
+source: Cell Rep
+title: Human acute microelectrode array recordings with broad cortical access, single-unit
+  resolution, and parallel behavioral monitoring
+uid: '10242451'
+volume: '42'
