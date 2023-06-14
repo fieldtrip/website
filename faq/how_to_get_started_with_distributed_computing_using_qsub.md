@@ -63,6 +63,10 @@ To pick up the results of the job, you type in matlab
     
 The matrix with the results contains 100x100 random numbers, just as you would get when calling `rand(100)` on the MATLAB command line.
 
+{% include markup/danger %} ### Important note to keep in mind
+
+If you write your own function @myfunction, to be executed by qsubfeval, beware **NOT** to do a `clear all`, `clear mex`, `clear functions` because this may cause failures with uninformative segmentation faults, which are difficult to debug. {% include markup/end %}
+
 ### Submitting a batch of jobs
 
 To execute few jobs in parallel as a batch you will use **[qsubcellfun](/reference/qsub/qsubcellfun)**. It is very similar to **[qsubfeval](/reference/qsub/qsubfeval)**, but instead of one input argument, you specify a cell-array of arguments. Qsubcellfun then evaluates your function with each element of the array. In fact it calls **[qsubfeval](/reference/qsub/qsubfeval)** as many times as the number of elements in the array.
@@ -168,5 +172,3 @@ Or with fewer lines of code using the standard [cellfun](http://www.mathworks.nl
     % start MATLAB again
     load jobidarray.mat
     results = cellfun(@qsubget, jobidarray, 'UniformOutput', false);
-
-{% include markup/danger %} If you write your own function @myfunction, to be executed by qsubfeval, beware **NOT** to do a 'clear all', 'clear mex', 'clear functions' because this may cause failures with uninformative segmentation faults, which are difficult to debug. {% include markup/end %}
