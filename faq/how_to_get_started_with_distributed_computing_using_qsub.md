@@ -63,9 +63,8 @@ To pick up the results of the job, you type in matlab
     
 The matrix with the results contains 100x100 random numbers, just as you would get when calling `rand(100)` on the MATLAB command line.
 
-{% include markup/danger %} ### Important note to keep in mind
-
-If you write your own function @myfunction, to be executed by qsubfeval, beware **NOT** to do a `clear all`, `clear mex`, `clear functions` because this may cause failures with uninformative segmentation faults, which are difficult to debug. {% include markup/end %}
+### Important note to keep in mind
+{% include markup/danger %}If you write your own function @myfunction, to be executed by qsubfeval, beware **NOT** to do a `clear all`, `clear mex`, `clear functions` because this may cause failures with uninformative segmentation faults, which are difficult to debug. {% include markup/end %}
 
 ### Submitting a batch of jobs
 
