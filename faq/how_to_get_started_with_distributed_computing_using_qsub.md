@@ -168,3 +168,5 @@ Or with fewer lines of code using the standard [cellfun](http://www.mathworks.nl
     % start MATLAB again
     load jobidarray.mat
     results = cellfun(@qsubget, jobidarray, 'UniformOutput', false);
+
+{% include markup/danger %} If you write your own function @myfunction, to be executed by qsubfeval, beware **NOT** to do a 'clear all', 'clear mex', 'clear functions' because this may cause failures with uninformative segmentation faults, which are difficult to debug. {% include markup/end %}
