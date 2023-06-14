@@ -7,7 +7,7 @@ tags: [faq, qsub]
 
 The [FieldTrip qsub toolbox](https://github.com/fieldtrip/fieldtrip/tree/master/qsub) is a small stand-alone toolbox to facilitate distributed computing. The idea of the qsub toolbox is to provide you with an easy MATLAB interface to distribute your jobs and not have to go to the Linux command-line to use the qsub command from there. Besides the Torque cluster (which we have at the Donders in Nijmegen) it also supports Linux clusters with other PBS versions, Sun Grid Engine (SGE), Oracle Grid Engine, SLURM and LSF as batch queueing systems.
 
-You should start by adding the qsub toolbox to your MATLAB pat
+You should start by adding the qsub toolbox to your MATLAB path:
 
     >> addpath /home/common/matlab/fieldtrip/qsub/
 
@@ -133,7 +133,7 @@ If you run your interactive MATLAB session on a torque execution host with a lim
 
 Rather than waiting for all jobs to return, you can submit the batch and close the interactive MATLAB session. The next day or week, when all batch jobs have finished (use "qstat" to check on them) you can start MATLAB again to collect the results.
 
-With a single job you could simply d
+With a single job you could simply do
 
     jobid = qsubfeval(@myfunction, inputarg);
     save jobid.mat jobid
@@ -143,7 +143,7 @@ With a single job you could simply d
     load jobid.mat
     result = qsubget(jobid);
 
-A complete batch of jobs can be dealt with in a similar manne
+A complete batch of jobs can be dealt with in a similar manner
 
     jobidarray = {};
     for i=1:10
@@ -159,7 +159,7 @@ A complete batch of jobs can be dealt with in a similar manne
       results{i} = qsubget(jobidarray{i});
     end
 
-Or with fewer lines of code using the standard [cellfun](http://www.mathworks.nl/help/matlab/ref/cellfun.html) function a
+Or with fewer lines of code using the standard [cellfun](http://www.mathworks.nl/help/matlab/ref/cellfun.html) function as
 
     jobidarray = cellfun(@qsubfeval, repmat(@myfunction, size(inputarg)), inputarg, 'UniformOutput', false);
     save jobidarray.mat jobidarray
