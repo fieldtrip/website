@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '37305701'
+- idtype: doi
+  value: 10.1016/j.isci.2023.106849
+- idtype: pmcid
+  value: PMC10251127
+authors:
+- authtype: Author
+  name: Orf M
+- authtype: Author
+  name: Wöstmann M
+- authtype: Author
+  name: Hannemann R
+- authtype: Author
+  name: Obleser J
+epubdate: 2023 May 12
+fulljournalname: iScience
+issue: '6'
+pages: '106849'
+pmclivedate: 2023/06/10
+printpubdate: ''
+pubdate: 2023 May 12
+sortdate: 2023/05/12 00:00
+source: iScience
+title: Target enhancement but not distractor suppression in auditory neural tracking
+  during continuous speech
+uid: '10251127'
+volume: '26'

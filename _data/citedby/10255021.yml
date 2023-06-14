@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '37160365'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.2181-22.2023
+- idtype: pmcid
+  value: PMC10255021
+authors:
+- authtype: Author
+  name: Kraus F
+- authtype: Author
+  name: Tune S
+- authtype: Author
+  name: Obleser J
+- authtype: Author
+  name: Herrmann B
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '23'
+pages: 4352-4364
+pmclivedate: ''
+printpubdate: 2023 Jun 7
+pubdate: 2023 Jun 7
+sortdate: 2023/06/07 00:00
+source: J Neurosci
+title: Neural α Oscillations and Pupil Size Differentially Index Cognitive Demand
+  under Competing Audiovisual Task Conditions
+uid: '10255021'
+volume: '43'

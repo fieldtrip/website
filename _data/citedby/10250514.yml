@@ -1,0 +1,34 @@
+articleids:
+- idtype: pmid
+  value: '37129622'
+- idtype: doi
+  value: 10.1007/s00429-023-02646-7
+- idtype: pmcid
+  value: PMC10250514
+authors:
+- authtype: Author
+  name: Pirazzini G
+- authtype: Author
+  name: Starita F
+- authtype: Author
+  name: Ricci G
+- authtype: Author
+  name: Garofalo S
+- authtype: Author
+  name: di Pellegrino G
+- authtype: Author
+  name: Magosso E
+- authtype: Author
+  name: Ursino M
+epubdate: 2023 May 2
+fulljournalname: Brain Structure & Function
+issue: '5'
+pages: 1259-1281
+pmclivedate: 2023/06/10
+printpubdate: '2023'
+pubdate: 2023 May 2
+sortdate: 2023/05/02 00:00
+source: Brain Struct Funct
+title: Changes in brain rhythms and connectivity tracking fear acquisition and reversal
+uid: '10250514'
+volume: '228'

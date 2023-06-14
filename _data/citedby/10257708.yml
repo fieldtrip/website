@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '37301936'
+- idtype: doi
+  value: 10.1038/s42003-023-05001-y
+- idtype: pmcid
+  value: PMC10257708
+authors:
+- authtype: Author
+  name: Ponce-Alvarez A
+- authtype: Author
+  name: Kringelbach ML
+- authtype: Author
+  name: Deco G
+epubdate: 2023 Jun 10
+fulljournalname: Communications Biology
+issue: ''
+pages: '627'
+pmclivedate: 2023/06/12
+printpubdate: ''
+pubdate: 2023 Jun 10
+sortdate: 2023/06/10 00:00
+source: Commun Biol
+title: Critical scaling of whole-brain resting-state dynamics
+uid: '10257708'
+volume: '6'

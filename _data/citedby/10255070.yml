@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '37160363'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0007-22.2023
+- idtype: pmcid
+  value: PMC10255070
+authors:
+- authtype: Author
+  name: Goussi-Denjean C
+- authtype: Author
+  name: Fontanier V
+- authtype: Author
+  name: Stoll FM
+- authtype: Author
+  name: Procyk E
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '23'
+pages: 4329-4340
+pmclivedate: 2023/06/10
+printpubdate: 2023 Jun 7
+pubdate: 2023 Jun 7
+sortdate: 2023/06/07 00:00
+source: J Neurosci
+title: The Differential Weights of Motivational and Task Performance Measures on Medial
+  and Lateral Frontal Neural Activity
+uid: '10255070'
+volume: '43'

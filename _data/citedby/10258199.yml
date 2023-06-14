@@ -1,0 +1,40 @@
+articleids:
+- idtype: pmid
+  value: '37303002'
+- idtype: doi
+  value: 10.1038/s41598-023-34744-1
+- idtype: pmcid
+  value: PMC10258199
+authors:
+- authtype: Author
+  name: Pusil S
+- authtype: Author
+  name: Zegarra-Valdivia J
+- authtype: Author
+  name: Cuesta P
+- authtype: Author
+  name: Laohathai C
+- authtype: Author
+  name: Cebolla AM
+- authtype: Author
+  name: Haueisen J
+- authtype: Author
+  name: Fiedler P
+- authtype: Author
+  name: Funke M
+- authtype: Author
+  name: Maestú F
+- authtype: Author
+  name: Cheron G
+epubdate: 2023 Jun 11
+fulljournalname: Scientific Reports
+issue: ''
+pages: '9489'
+pmclivedate: 2023/06/13
+printpubdate: ''
+pubdate: 2023 Jun 11
+sortdate: 2023/06/11 00:00
+source: Sci Rep
+title: Effects of spaceflight on the EEG alpha power and functional connectivity
+uid: '10258199'
+volume: '13'

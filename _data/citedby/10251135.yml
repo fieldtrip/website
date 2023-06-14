@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '34729843'
+- idtype: doi
+  value: 10.1111/ejn.15514
+- idtype: pmcid
+  value: PMC10251135
+- idtype: MID
+  value: NIHMS1891535
+authors:
+- authtype: Author
+  name: Plöchl M
+- authtype: Author
+  name: Fiebelkorn I
+- authtype: Author
+  name: Kastner S
+- authtype: Author
+  name: Obleser J
+epubdate: 2021 Nov 10
+fulljournalname: The European journal of neuroscience
+issue: 11-12
+pages: 3067-3082
+pmclivedate: 2023/06/09
+printpubdate: 2022 Jun
+pubdate: 2021 Nov 10
+sortdate: 2021/11/10 00:00
+source: Eur J Neurosci
+title: Attentional sampling of visual and auditory objects is captured by theta-modulated
+  neural activity
+uid: '10251135'
+volume: '55'

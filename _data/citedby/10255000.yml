@@ -1,0 +1,42 @@
+articleids:
+- idtype: pmid
+  value: '37253497'
+- idtype: doi
+  value: 10.1136/bmjopen-2023-071726
+- idtype: pmcid
+  value: PMC10255000
+authors:
+- authtype: Author
+  name: Xie S
+- authtype: Author
+  name: Shi L
+- authtype: Author
+  name: Xiong W
+- authtype: Author
+  name: Chen L
+- authtype: Author
+  name: Li X
+- authtype: Author
+  name: Tong Y
+- authtype: Author
+  name: Yang W
+- authtype: Author
+  name: Wang A
+- authtype: Author
+  name: Zhang J
+- authtype: Author
+  name: Han R
+epubdate: 2023 May 30
+fulljournalname: BMJ Open
+issue: '5'
+pages: e071726
+pmclivedate: 2023/06/10
+printpubdate: ''
+pubdate: 2023 May 30
+sortdate: 2023/05/30 00:00
+source: BMJ Open
+title: 'Choice of anaesthesia in microelectrode recording-guided deep-brain stimulation
+  for Parkinson’s disease (CHAMPION): study protocol for a single-centre, open-label,
+  non-inferiority randomised controlled trial'
+uid: '10255000'
+volume: '13'
