@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '37328511'
+- idtype: doi
+  value: 10.1038/s41531-023-00540-x
+- idtype: pmcid
+  value: PMC10275865
+authors:
+- authtype: Author
+  name: Torrecillos F
+- authtype: Author
+  name: He S
+- authtype: Author
+  name: Kühn AA
+- authtype: Author
+  name: Tan H
+epubdate: 2023 Jun 16
+fulljournalname: NPJ Parkinson's Disease
+issue: ''
+pages: '93'
+pmclivedate: 2023/06/18
+printpubdate: ''
+pubdate: 2023 Jun 16
+sortdate: 2023/06/16 00:00
+source: NPJ Parkinsons Dis
+title: Average power and burst analysis revealed complementary information on drug-related
+  changes of motor performance in Parkinson’s disease
+uid: '10275865'
+volume: '9'

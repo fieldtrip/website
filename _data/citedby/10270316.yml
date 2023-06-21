@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '37236786'
+- idtype: doi
+  value: 10.1523/ENEURO.0258-22.2023
+- idtype: pmcid
+  value: PMC10270316
+authors:
+- authtype: Author
+  name: Nadra JG
+- authtype: Author
+  name: Bengson JJ
+- authtype: Author
+  name: Morales AB
+- authtype: Author
+  name: Mangun GR
+epubdate: 2023 Jun 9
+fulljournalname: eNeuro
+issue: '6'
+pages: ENEURO.0258-22.2023
+pmclivedate: 2023/06/16
+printpubdate: ''
+pubdate: 2023 Jun 9
+sortdate: 2023/06/09 00:00
+source: eNeuro
+title: 'Attention without Constraint: Alpha Lateralization in Uncued Willed Attention'
+uid: '10270316'
+volume: '10'

@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '37325037'
+- idtype: doi
+  value: 10.3389/fnins.2023.1102350
+- idtype: pmcid
+  value: PMC10267879
+authors:
+- authtype: Author
+  name: Kim H
+- authtype: Author
+  name: Epp B
+epubdate: 2023 May 30
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '1102350'
+pmclivedate: 2023/06/15
+printpubdate: ''
+pubdate: 2023 May 30
+sortdate: 2023/05/30 00:00
+source: Front Neurosci
+title: Intensity discrimination and neural representation of a masked tone in the
+  presence of three types of masking release
+uid: '10267879'
+volume: '17'

@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '36928162'
+- idtype: doi
+  value: 10.1093/cercor/bhad054
+- idtype: pmcid
+  value: PMC10267635
+authors:
+- authtype: Author
+  name: Rapaport H
+- authtype: Author
+  name: Seymour RA
+- authtype: Author
+  name: Benikos N
+- authtype: Author
+  name: He W
+- authtype: Author
+  name: Pellicano E
+- authtype: Author
+  name: Brock J
+- authtype: Author
+  name: Sowman PF
+epubdate: 2023 Mar 16
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '12'
+pages: 7489-7499
+pmclivedate: 2023/06/15
+printpubdate: ''
+pubdate: 2023 Mar 16
+sortdate: 2023/03/16 00:00
+source: Cereb Cortex
+title: Investigating predictive coding in younger and older children using MEG and
+  a multi-feature auditory oddball paradigm
+uid: '10267635'
+volume: '33'

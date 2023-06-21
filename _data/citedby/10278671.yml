@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '37208175'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1849-22.2023
+- idtype: pmcid
+  value: PMC10278671
+authors:
+- authtype: Author
+  name: Henke L
+- authtype: Author
+  name: Lewis AG
+- authtype: Author
+  name: Meyer L
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '24'
+pages: 4461-4469
+pmclivedate: 2023/06/20
+printpubdate: 2023 Jun 14
+pubdate: 2023 Jun 14
+sortdate: 2023/06/14 00:00
+source: J Neurosci
+title: Fast and Slow Rhythms of Naturalistic Reading Revealed by Combined Eye-Tracking
+  and Electroencephalography
+uid: '10278671'
+volume: '43'

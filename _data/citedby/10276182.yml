@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '37307650'
+- idtype: doi
+  value: 10.1016/j.nicl.2023.103446
+- idtype: pmcid
+  value: PMC10276182
+authors:
+- authtype: Author
+  name: Wagner F
+- authtype: Author
+  name: Rogenz J
+- authtype: Author
+  name: Opitz L
+- authtype: Author
+  name: Maas J
+- authtype: Author
+  name: Schmidt A
+- authtype: Author
+  name: Brodoehl S
+- authtype: Author
+  name: Ullsperger M
+- authtype: Author
+  name: Klingner CM
+epubdate: 2023 May 31
+fulljournalname: 'NeuroImage : Clinical'
+issue: ''
+pages: '103446'
+pmclivedate: 2023/06/18
+printpubdate: ''
+pubdate: 2023 May 31
+sortdate: 2023/05/31 00:00
+source: Neuroimage Clin
+title: Reward network dysfunction is associated with cognitive impairment after stroke
+uid: '10276182'
+volume: '39'

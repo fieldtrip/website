@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '36935096'
+- idtype: doi
+  value: 10.1093/cercor/bhad061
+- idtype: pmcid
+  value: PMC10267643
+authors:
+- authtype: Author
+  name: Klaver LM
+- authtype: Author
+  name: Brinkhof LP
+- authtype: Author
+  name: Sikkens T
+- authtype: Author
+  name: Casado-Román L
+- authtype: Author
+  name: Williams AG
+- authtype: Author
+  name: van Mourik-Donga L
+- authtype: Author
+  name: Mejías JF
+- authtype: Author
+  name: Pennartz CM
+- authtype: Author
+  name: Bosman CA
+epubdate: 2023 Mar 18
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '12'
+pages: 7564-7581
+pmclivedate: 2023/06/15
+printpubdate: ''
+pubdate: 2023 Mar 18
+sortdate: 2023/03/18 00:00
+source: Cereb Cortex
+title: Spontaneous variations in arousal modulate subsequent visual processing and
+  local field potential dynamics in the ferret during quiet wakefulness
+uid: '10267643'
+volume: '33'

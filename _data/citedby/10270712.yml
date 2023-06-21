@@ -1,0 +1,38 @@
+articleids:
+- idtype: pmid
+  value: '37334007'
+- idtype: doi
+  value: 10.1162/netn_a_00270
+- idtype: pmcid
+  value: PMC10270712
+authors:
+- authtype: Author
+  name: Sorrentino P
+- authtype: Author
+  name: Rabuffo G
+- authtype: Author
+  name: Baselice F
+- authtype: Author
+  name: Troisi Lopez E
+- authtype: Author
+  name: Liparoti M
+- authtype: Author
+  name: Quarantelli M
+- authtype: Author
+  name: Sorrentino G
+- authtype: Author
+  name: Bernard C
+- authtype: Author
+  name: Jirsa V
+epubdate: 2023 Jan 1
+fulljournalname: Network Neuroscience
+issue: '1'
+pages: 73-85
+pmclivedate: 2023/06/16
+printpubdate: ''
+pubdate: 2023 Jan 1
+sortdate: 2023/01/01 00:00
+source: Netw Neurosci
+title: Dynamical interactions reconfigure the gradient of cortical timescales
+uid: '10270712'
+volume: '7'

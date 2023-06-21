@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '37308784'
+- idtype: doi
+  value: 10.1038/s41598-023-36753-6
+- idtype: pmcid
+  value: PMC10261137
+authors:
+- authtype: Author
+  name: Eskelin JJ
+- authtype: Author
+  name: Lundblad LC
+- authtype: Author
+  name: Wallin BG
+- authtype: Author
+  name: Karlsson T
+- authtype: Author
+  name: Riaz B
+- authtype: Author
+  name: Lundqvist D
+- authtype: Author
+  name: Schneiderman JF
+- authtype: Author
+  name: Elam M
+epubdate: 2023 Jun 12
+fulljournalname: Scientific Reports
+issue: ''
+pages: '9507'
+pmclivedate: 2023/06/15
+printpubdate: ''
+pubdate: 2023 Jun 12
+sortdate: 2023/06/12 00:00
+source: Sci Rep
+title: 'From MEG to clinical EEG: evaluating a promising non-invasive estimator of
+  defense-related muscle sympathetic nerve inhibition'
+uid: '10261137'
+volume: '13'

@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '37332673'
+- idtype: doi
+  value: 10.1016/j.isci.2023.106939
+- idtype: pmcid
+  value: PMC10275727
+authors:
+- authtype: Author
+  name: Wilken S
+- authtype: Author
+  name: Böttcher A
+- authtype: Author
+  name: Adelhöfer N
+- authtype: Author
+  name: Raab M
+- authtype: Author
+  name: Hoffmann S
+- authtype: Author
+  name: Beste C
+epubdate: 2023 May 22
+fulljournalname: iScience
+issue: '7'
+pages: '106939'
+pmclivedate: 2023/06/18
+printpubdate: ''
+pubdate: 2023 May 22
+sortdate: 2023/05/22 00:00
+source: iScience
+title: The neurophysiology of continuous action monitoring
+uid: '10275727'
+volume: '26'
