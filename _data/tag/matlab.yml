@@ -64,6 +64,6 @@
 - name:  Making a memory efficient analysis pipeline
   link:  /tutorial/memory
 
-- name:  Creating a clean analysis pipeline
+- name:  Creating a clean and efficient analysis pipeline
   link:  /tutorial/scripting
 
