@@ -109,7 +109,7 @@
 - name:  Preprocessing of EEG data and computing ERPs
   link:  /tutorial/preprocessing_erp
 
-- name:  Creating a clean and efficient analysis pipeline
+- name:  Creating a clean analysis pipeline
   link:  /tutorial/scripting
 
 - name:  Sensor-level ERF, TFR and connectivity analyses
