@@ -13,7 +13,7 @@ The simplest example for continuous data without any events or triggers is a sim
 
 ## Example use
 
-The easiest way to try out the **[ft_realtime_signalviewer](/reference/realtime/example/ft_realtime_signalviewer)** example is by starting two MATLAB sessions. In the first session you create some random signal and write it to the buffe
+The easiest way to try out the **[ft_realtime_signalviewer](/reference/realtime/example/ft_realtime_signalviewer)** example is by starting two MATLAB sessions. In the first session you create some random signal and write it to the buffer.
 
     cfg                = [];
     cfg.channel        = 1:10;                         % list with channel "names"
@@ -22,7 +22,7 @@ The easiest way to try out the **[ft_realtime_signalviewer](/reference/realtime/
     cfg.target.dataset = 'buffer://localhost:1972';    % where to write the data
     ft_realtime_signalproxy(cfg)
 
-In the second MATLAB session you start the **[ft_realtime_signalviewer](/reference/realtime/example/ft_realtime_signalviewer)** and point it to the buffe
+In the second MATLAB session you start the **[ft_realtime_signalviewer](/reference/realtime/example/ft_realtime_signalviewer)** and point it to the buffer.
 
     cfg                = [];
     cfg.blocksize      = 1;                            % seconds
