@@ -1,6 +1,6 @@
 ---
 title: Making your analysis pipeline reproducible using reproducescript
-tags: [example, script]
+tags: [example, reproducescript, script]
 ---
 
 # Making your analysis pipeline reproducible using reproducescript
