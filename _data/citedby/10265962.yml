@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '37253014'
+- idtype: doi
+  value: 10.1073/pnas.2219310120
+- idtype: pmcid
+  value: PMC10265962
+authors:
+- authtype: Author
+  name: Voigtlaender VA
+- authtype: Author
+  name: Sandhaeger F
+- authtype: Author
+  name: Hawellek DJ
+- authtype: Author
+  name: Hage SR
+- authtype: Author
+  name: Siegel M
+epubdate: 2023 May 30
+fulljournalname: Proceedings of the National Academy of Sciences of the United States
+  of America
+issue: '23'
+pages: e2219310120
+pmclivedate: 2023/06/15
+printpubdate: 2023 Jun 6
+pubdate: 2023 May 30
+sortdate: 2023/05/30 00:00
+source: Proc Natl Acad Sci U S A
+title: Neural representations of the content and production of human vocalization
+uid: '10265962'
+volume: '120'

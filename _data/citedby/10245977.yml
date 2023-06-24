@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '37292960'
+- idtype: doi
+  value: 10.1101/2023.05.26.542448
+- idtype: pmcid
+  value: PMC10245977
+authors:
+- authtype: Author
+  name: Rodriguez-Larios J
+- authtype: Author
+  name: Haegens S
+epubdate: 2023 May 26
+fulljournalname: bioRxiv
+issue: ''
+pages: 2023.05.26.542448
+pmclivedate: 2023/06/08
+printpubdate: ''
+pubdate: 2023 May 26
+sortdate: 2023/05/26 00:00
+source: bioRxiv
+title: 'Genuine beta bursts in human working memory: controlling for the influence
+  of lower-frequency rhythms'
+uid: '10245977'
+volume: ''
