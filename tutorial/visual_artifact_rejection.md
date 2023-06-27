@@ -1,9 +1,9 @@
 ---
-title: Visual artifact rejection
+title: Visual or manual artifact rejection
 tags: [tutorial, artifact, meg, raw, preprocessing, meg-language]
 ---
 
-# Visual artifact rejection
+# Visual or manual artifact rejection
 
 ## Introduction
 

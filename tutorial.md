@@ -23,7 +23,7 @@ When adding or contributing to the tutorials please consider the [documentation 
 - [Preprocessing - Reading continuous EEG and MEG data](/tutorial/continuous)
 - [Preprocessing - Trigger based trial selection](/tutorial/preprocessing)
 - [Introduction on dealing with artifacts](/tutorial/artifacts)
-- [Visual artifact rejection](/tutorial/visual_artifact_rejection)
+- [Visual or manual artifact rejection](/tutorial/visual_artifact_rejection)
 - [Automatic artifact rejection](/tutorial/automatic_artifact_rejection)
 - [Cleaning artifacts using ICA](/tutorial/ica_artifact_cleaning)
 
