@@ -133,7 +133,7 @@
 - name:  Sensor-level ERF, TFR and connectivity analyses
   link:  /tutorial/sensor_analysis
 
-- name:  Visual artifact rejection
+- name:  Visual or manual artifact rejection
   link:  /tutorial/visual_artifact_rejection
 
 - name:  Preprocessing and event-related activity in combined MEG/EEG data

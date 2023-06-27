@@ -55,7 +55,7 @@
 - name:  Extracting the brain state and events from continuous sleep EEG
   link:  /tutorial/sleep
 
-- name:  Visual artifact rejection
+- name:  Visual or manual artifact rejection
   link:  /tutorial/visual_artifact_rejection
 
 - name:  Dealing with artifacts

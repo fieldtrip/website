@@ -64,7 +64,7 @@
 - name:  Preprocessing - Segmenting and reading trial-based EEG and MEG data
   link:  /tutorial/preprocessing
 
-- name:  Visual artifact rejection
+- name:  Visual or manual artifact rejection
   link:  /tutorial/visual_artifact_rejection
 
 - name:  FieldTrip Walkthrough

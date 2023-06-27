@@ -133,7 +133,7 @@
 - name:  Dealing with TMS-EEG datasets
   link:  /tutorial/tms-eeg
 
-- name:  Visual artifact rejection
+- name:  Visual or manual artifact rejection
   link:  /tutorial/visual_artifact_rejection
 
 - name:  Beamforming evoked fields and potentials in combined MEG/EEG data
