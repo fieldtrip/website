@@ -1,0 +1,42 @@
+articleids:
+- idtype: pmid
+  value: '37230765'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1828-22.2023
+- idtype: pmcid
+  value: PMC10286944
+authors:
+- authtype: Author
+  name: Kam K
+- authtype: Author
+  name: Vetter K
+- authtype: Author
+  name: Tejiram RA
+- authtype: Author
+  name: Pettibone WD
+- authtype: Author
+  name: Shim K
+- authtype: Author
+  name: Audrain M
+- authtype: Author
+  name: Yu L
+- authtype: Author
+  name: Daehn IS
+- authtype: Author
+  name: Ehrlich ME
+- authtype: Author
+  name: Varga AW
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '25'
+pages: 4738-4749
+pmclivedate: ''
+printpubdate: 2023 Jun 21
+pubdate: 2023 Jun 21
+sortdate: 2023/06/21 00:00
+source: J Neurosci
+title: Effect of Aging and a Dual Orexin Receptor Antagonist on Sleep Architecture
+  and Non-REM Oscillations Including an REM Behavior Disorder Phenotype in the PS19
+  Mouse Model of Tauopathy
+uid: '10286944'
+volume: '43'

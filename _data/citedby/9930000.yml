@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '33369343'
+- idtype: doi
+  value: 10.7507/1001-5515.201908003
+- idtype: pmcid
+  value: PMC9930000
+authors:
+- authtype: Unknown
+  name: ''
+- authtype: Unknown
+  name: ''
+- authtype: Unknown
+  name: ''
+- authtype: Unknown
+  name: ''
+- authtype: Unknown
+  name: ''
+- authtype: Unknown
+  name: ''
+epubdate: ''
+fulljournalname: Sheng Wu Yi Xue Gong Cheng Xue Za Zhi = Journal of Biomedical Engineering
+issue: '6'
+pages: 1037-1044
+pmclivedate: 2023/06/22
+printpubdate: 2020 Dec 25
+pubdate: 2020 Dec 25
+sortdate: 2020/12/25 00:00
+source: Sheng Wu Yi Xue Gong Cheng Xue Za Zhi
+title: 基于脑网络参数优化的青少年抑郁症患者与健康人群分类识别研究
+uid: '9930000'
+volume: '37'
