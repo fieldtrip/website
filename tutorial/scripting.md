@@ -142,9 +142,9 @@ where the `%02d` results in a zero-padded number of two digits long, which is us
 Another useful MATLAB commands are [fullfile](https://www.mathworks.com/help/matlab/ref/fullfile.html) to construct a path, or [filesep](https://www.mathworks.com/help/matlab/ref/filesep.html) for the forward and backward slashes in the path, which are different between Windows (`/`) and Linux/macOS (`/`).
 
 For example
+
     rawdatadir = '/Users/robert/myProject/rawdata'
     resultsdir = '/Users/robert/myProject/results'
-    
     outputfile = fullfile(resultsdir, sprintf('Subject%02d', i), 'data_raw.mat')
     save(outputfile, 'data_raw')
 {% include markup/end %}
