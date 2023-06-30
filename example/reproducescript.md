@@ -29,6 +29,8 @@ To explain the new reproducescript functionality, we will demonstrate its use wi
 
 To show how the reproducescript functionality works, we apply it to a script from the tutorial on [Segmenting and reading trial-based EEG and MEG data](/tutorial/preprocessing). Note that before calling **[ft_topoplotER](/reference/ft_topoplotER)**, we changed the units from T to fT. This is usually not done, but in this instance it serves as an example for how reproducescript handles analysis steps that were performed outside the FieldTrip ecosystem (i.e., arbitrary code).
 
+    %% LISTING 1
+    
     data_dir = '../rawdata/';
     results_dir = 'analysis/';
 
@@ -162,7 +164,7 @@ Note that the fields from the cfg input to **[ft_definetrial](/reference/ft_defi
 
 Finally, the reproduce folder contains a file named `hashes.mat`. This is a file containing MD5 hashes for bookkeeping all input and output files. It allows reproducescript to match the output files of any one step to the input files of any subsequent step. For example, the output from **[ft_preprocessing](/reference/ft_preprocessing)** is used as input to **[ft_timelockanalysis](/reference/ft_preprocessing)**, which means that the data structure only needs to be stored once and `xxx_ft_timelockanalysis_input_timelock.mat` does not have to be additionally saved to disk. If the output data from one function and the input data to the next function are slightly different, they are both saved under different file names. This happens when the researcher modified the data using custom code (as in the example when converting channel units). The `hashes.mat` file furthermore allows any researcher to check the integrity of all the intermediate and final result files of the pipeline.
 
-### Note on using functions outside of the FieldTrip ecosystem
+### Using functions outside the FieldTrip ecosystem
 
 All analysis steps that do not use FieldTrip functions will create such comments and save the data structure. Importantly, the pipeline thus remains reproducible without relying on external code. However, this does mean that it will be important to annotate script.m after it's created and note where the data with unknown provenance comes from. Even if the pipeline exclusively uses FieldTrip functions, some FieldTrip functions evaluate custom-written code. For example, a user can specify custom code to select trials in **[ft_definetrial](/reference/ft_definetrial)** (i.e., cfg.trialfun). If this code were not shared, this particular analysis step could not be re-executed, but since intermediate results are stored as well (in the example of cfg.trialfun, cfg.trl is stored), it is always possible to skip a particular step and continue with the rest of the pipeline.
 

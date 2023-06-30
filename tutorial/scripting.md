@@ -98,9 +98,9 @@ The `do_complete_analysis` script calls the others and could look like this
     % do the group-level statistics
     do_group_analysis
 
-In reality it is likely that you will not be executing `do_complete_analysis` like this all at once, because the construction of the BIDS conversion script and the script with general stuff will take you some time and effort. While you are writing these scripts, you are already trying them out and executing them piecewise to get everything right. However, the `do_complete_analysis` script does explain to others (and your future self) how to rerun the analysis.
+In reality it is likely that you will not be executing `do_complete_analysis` like this all at once, because the construction of the BIDS conversion script and the gereral preparatory scripts for the [layout](/tutorial/layout) and [neighbours](/example/neighbours) will take you some time and effort. While you are writing these, you are already trying them out and executing them piecewise to get everything right. However, the `do_complete_analysis` script does explain to others (and your future self) how to rerun the analysis.
 
-Also the construction of the `do_singlesubject_analysis` is a process that will take you some time, probably multiple days. While you are writing the single-subject analysis, you can in trial-and-error fashion repeatedly run a part of that script. Only once it is complete, you run the for-loop that executes it for all participants. If you are doing MEG or EEG source reconstruction, it makes sense to split `do_singlesubject_analysis` into three scripts: one for the anatomical processing, one for the channel-level processing, and one for the source reconstruction.
+The construction of the `do_singlesubject_analysis` will likely involve some trial-and-error and takes time, probably multiple days. While you are writing the single-subject analysis, you can repeatedly run a part of that script. Only once it is complete, you run the for-loop that executes it for all participants. If you are doing more sophisticated analyses, such as MEG or EEG source reconstruction, it makes sense to split `do_singlesubject_analysis` into multiple scripts: for example one for the anatomical processing, one for the channel-level processing, and one for the source reconstruction.
 
 {% include markup/danger %}
 Do not save your own scripts inside the FieldTrip folder as it makes it harder to update your FieldTrip toolbox to a new version.
@@ -117,7 +117,7 @@ Saving intermediate or final results to disk is done with the [save](https://www
 to save the output to `data_raw.mat` in the present working directory, i.e., the directory you are currently in. To determine the present working directory, you can use [pwd](https://www.mathworks.com/help/matlab/ref/pwd.html).
 
 {% include markup/info %}
-We recommend in general storing a single FieldTrip data structure per file, and to give the file the same name as the data structure that it contains. This makes it more predictable what ends up in memory if you load the file. Furthermore, with a clear and consistent name you can easily delete outdated files, or files with intermediate results that are not needed anymore.
+We recommend in general storing a single FieldTrip data structure per file, and to give the file the same name as the data structure that it contains. This makes it more predictable what ends up in memory if you load the file. Furthermore, with a consistent naming scheme you can more easily delete files with intermediate results or outdated files.
 
 A consequence of the one-variable-per-file strategy is that the files will have the same name for every subject, hence you need to store them in subject-specific directories.
 {% include markup/end %}
