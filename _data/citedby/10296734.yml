@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '37371427'
+- idtype: doi
+  value: 10.3390/brainsci13060949
+- idtype: pmcid
+  value: PMC10296734
+authors:
+- authtype: Author
+  name: Lian J
+- authtype: Author
+  name: Xu L
+- authtype: Author
+  name: Song T
+- authtype: Author
+  name: Peng Z
+- authtype: Author
+  name: Zhang Z
+- authtype: Author
+  name: An X
+- authtype: Author
+  name: Chen S
+- authtype: Author
+  name: Zhong X
+- authtype: Author
+  name: Shao Y
+epubdate: 2023 Jun 14
+fulljournalname: Brain Sciences
+issue: '6'
+pages: '949'
+pmclivedate: 2023/06/28
+printpubdate: ''
+pubdate: 2023 Jun 14
+sortdate: 2023/06/14 00:00
+source: Brain Sci
+title: Reduced Resting-State EEG Power Spectra and Functional Connectivity after 24
+  and 36 Hours of Sleep Deprivation
+uid: '10296734'
+volume: '13'

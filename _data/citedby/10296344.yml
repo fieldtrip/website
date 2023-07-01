@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '37371399'
+- idtype: doi
+  value: 10.3390/brainsci13060921
+- idtype: pmcid
+  value: PMC10296344
+authors:
+- authtype: Author
+  name: Costanzo M
+- authtype: Author
+  name: Leodori G
+- authtype: Author
+  name: Cutrona C
+- authtype: Author
+  name: Marchet F
+- authtype: Author
+  name: De Bartolo MI
+- authtype: Author
+  name: Mancuso M
+- authtype: Author
+  name: Belvisi D
+- authtype: Author
+  name: Conte A
+- authtype: Author
+  name: Berardelli A
+- authtype: Author
+  name: Fabbrini G
+epubdate: 2023 Jun 7
+fulljournalname: Brain Sciences
+issue: '6'
+pages: '921'
+pmclivedate: 2023/06/28
+printpubdate: ''
+pubdate: 2023 Jun 7
+sortdate: 2023/06/07 00:00
+source: Brain Sci
+title: 'Motor Cortical Correlates of Paired Associative Stimulation Induced Plasticity:
+  A TMS-EEG Study'
+uid: '10296344'
+volume: '13'

@@ -1,0 +1,34 @@
+articleids:
+- idtype: pmid
+  value: '37371702'
+- idtype: doi
+  value: 10.3390/biomedicines11061607
+- idtype: pmcid
+  value: PMC10296084
+authors:
+- authtype: Author
+  name: Turri C
+- authtype: Author
+  name: Di Dona G
+- authtype: Author
+  name: Santoni A
+- authtype: Author
+  name: Zamfira DA
+- authtype: Author
+  name: Franchin L
+- authtype: Author
+  name: Melcher D
+- authtype: Author
+  name: Ronconi L
+epubdate: 2023 Jun 1
+fulljournalname: Biomedicines
+issue: '6'
+pages: '1607'
+pmclivedate: 2023/06/28
+printpubdate: ''
+pubdate: 2023 Jun 1
+sortdate: 2023/06/01 00:00
+source: Biomedicines
+title: Periodic and Aperiodic EEG Features as Potential Markers of Developmental Dyslexia
+uid: '10296084'
+volume: '11'
