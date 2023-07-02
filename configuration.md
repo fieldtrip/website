@@ -1186,6 +1186,9 @@ A detailed description of each function is available in the [reference documenta
 **cfg.freqlow** - [ft_crossfrequencyanalysis](/reference/ft_crossfrequencyanalysis)  
 
 
+**cfg.freqscale** - [ft_icabrowser](/reference/contrib/misc/ft_icabrowser)  
+
+
 **cfg.frequency** - [ft_dipolefitting](/reference/ft_dipolefitting), [ft_freqdescriptives](/reference/ft_freqdescriptives), [ft_freqstatistics](/reference/ft_freqstatistics), [ft_sourceanalysis](/reference/ft_sourceanalysis), [ft_sourceplot](/reference/ft_sourceplot)  
 
 
