@@ -1,0 +1,34 @@
+articleids:
+- idtype: pmid
+  value: '35661100'
+- idtype: doi
+  value: 10.1007/s12311-022-01419-y
+- idtype: pmcid
+  value: PMC10307711
+authors:
+- authtype: Author
+  name: Sasaki R
+- authtype: Author
+  name: Hand BJ
+- authtype: Author
+  name: Liao WY
+- authtype: Author
+  name: Rogasch NC
+- authtype: Author
+  name: Fernandez L
+- authtype: Author
+  name: Semmler JG
+- authtype: Author
+  name: Opie GM
+epubdate: 2022 Jun 4
+fulljournalname: Cerebellum (London, England)
+issue: '4'
+pages: 544-558
+pmclivedate: 2023/06/30
+printpubdate: '2023'
+pubdate: 2022 Jun 4
+sortdate: 2022/06/04 00:00
+source: Cerebellum
+title: Utilising TMS-EEG to Assess the Response to Cerebellar-Brain Inhibition
+uid: '10307711'
+volume: '22'

@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '36213937'
+- idtype: doi
+  value: 10.1177/15500594221130896
+- idtype: pmcid
+  value: PMC10311936
+authors:
+- authtype: Author
+  name: Roach BJ
+- authtype: Author
+  name: Hirano Y
+- authtype: Author
+  name: Ford JM
+- authtype: Author
+  name: Spencer KM
+- authtype: Author
+  name: Mathalon DH
+epubdate: 2022 Oct 10
+fulljournalname: Clinical EEG and Neuroscience
+issue: '4'
+pages: 370-378
+pmclivedate: 2023/07/01
+printpubdate: 2023 Jul
+pubdate: 2022 Oct 10
+sortdate: 2022/10/10 00:00
+source: Clin EEG Neurosci
+title: Phase Delay of the 40 Hz Auditory Steady-State Response Localizes to Left Auditory
+  Cortex in Schizophrenia
+uid: '10311936'
+volume: '54'

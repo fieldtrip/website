@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '36813952'
+- idtype: doi
+  value: 10.1007/s12264-023-01035-8
+- idtype: pmcid
+  value: PMC10313590
+authors:
+- authtype: Author
+  name: Zhuravlev M
+- authtype: Author
+  name: Novikov M
+- authtype: Author
+  name: Parsamyan R
+- authtype: Author
+  name: Selskii A
+- authtype: Author
+  name: Runnova A
+epubdate: 2023 Feb 22
+fulljournalname: Neuroscience Bulletin
+issue: '7'
+pages: 1105-1116
+pmclivedate: ''
+printpubdate: ''
+pubdate: 2023 Feb 22
+sortdate: 2023/02/22 00:00
+source: Neurosci Bull
+title: 'The Objective Assessment of Event-Related Potentials: An Influence of Chronic
+  Pain on ERP Parameters'
+uid: '10313590'
+volume: '39'

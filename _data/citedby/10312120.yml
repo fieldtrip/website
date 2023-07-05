@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '37364994'
+- idtype: doi
+  value: 10.1523/ENEURO.0473-22.2023
+- idtype: pmcid
+  value: PMC10312120
+authors:
+- authtype: Author
+  name: Rassi E
+- authtype: Author
+  name: Lin WM
+- authtype: Author
+  name: Zhang Y
+- authtype: Author
+  name: Emmerzaal J
+- authtype: Author
+  name: Haegens S
+epubdate: 2023 Jun 27
+fulljournalname: eNeuro
+issue: '6'
+pages: ENEURO.0473-22.2023
+pmclivedate: 2023/07/01
+printpubdate: ''
+pubdate: 2023 Jun 27
+sortdate: 2023/06/27 00:00
+source: eNeuro
+title: β Band Rhythms Influence Reaction Times
+uid: '10312120'
+volume: '10'
