@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '37263267'
+- idtype: doi
+  value: 10.1016/j.xcrm.2023.101060
+- idtype: pmcid
+  value: PMC10313932
+authors:
+- authtype: Author
+  name: Han S
+- authtype: Author
+  name: Li XX
+- authtype: Author
+  name: Wei S
+- authtype: Author
+  name: Zhao D
+- authtype: Author
+  name: Ding J
+- authtype: Author
+  name: Xu Y
+- authtype: Author
+  name: Yu C
+- authtype: Author
+  name: Chen Z
+- authtype: Author
+  name: Zhou DS
+- authtype: Author
+  name: Yuan TF
+epubdate: 2023 May 31
+fulljournalname: Cell Reports Medicine
+issue: '6'
+pages: '101060'
+pmclivedate: 2023/07/02
+printpubdate: ''
+pubdate: 2023 May 31
+sortdate: 2023/05/31 00:00
+source: Cell Rep Med
+title: 'Orbitofrontal cortex-hippocampus potentiation mediates relief for depression:
+  A randomized double-blind trial and TMS-EEG study'
+uid: '10313932'
+volume: '4'

@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '37221093'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0964-22.2023
+- idtype: pmcid
+  value: PMC10312058
+authors:
+- authtype: Author
+  name: Slaats S
+- authtype: Author
+  name: Weissbart H
+- authtype: Author
+  name: Schoffelen JM
+- authtype: Author
+  name: Meyer AS
+- authtype: Author
+  name: Martin AE
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '26'
+pages: 4867-4883
+pmclivedate: ''
+printpubdate: 2023 Jun 28
+pubdate: 2023 Jun 28
+sortdate: 2023/06/28 00:00
+source: J Neurosci
+title: Delta-Band Neural Responses to Individual Words Are Modulated by Sentence Processing
+uid: '10312058'
+volume: '43'

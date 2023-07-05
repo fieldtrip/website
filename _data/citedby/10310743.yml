@@ -1,0 +1,24 @@
+articleids:
+- idtype: pmid
+  value: '37385988'
+- idtype: doi
+  value: 10.1038/s41467-023-39355-y
+- idtype: pmcid
+  value: PMC10310743
+authors:
+- authtype: Author
+  name: de Vries IE
+- authtype: Author
+  name: Wurm MF
+epubdate: 2023 Jun 29
+fulljournalname: Nature Communications
+issue: ''
+pages: '3858'
+pmclivedate: 2023/07/01
+printpubdate: ''
+pubdate: 2023 Jun 29
+sortdate: 2023/06/29 00:00
+source: Nat Commun
+title: Predictive neural representations of naturalistic dynamic input
+uid: '10310743'
+volume: '14'

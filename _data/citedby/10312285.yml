@@ -1,0 +1,47 @@
+articleids:
+- idtype: pmid
+  value: '37397876'
+- idtype: doi
+  value: 10.1162/netn_a_00299
+- idtype: pmcid
+  value: PMC10312285
+authors:
+- authtype: Author
+  name: Perl YS
+- authtype: Author
+  name: Zamora-Lopez G
+- authtype: Author
+  name: Montbrió E
+- authtype: Author
+  name: Monge-Asensio M
+- authtype: Author
+  name: Vohryzek J
+- authtype: Author
+  name: Fittipaldi S
+- authtype: Author
+  name: Campo CG
+- authtype: Author
+  name: Moguilner S
+- authtype: Author
+  name: Ibañez A
+- authtype: Author
+  name: Tagliazucchi E
+- authtype: Author
+  name: Yeo BT
+- authtype: Author
+  name: Kringelbach ML
+- authtype: Author
+  name: Deco G
+epubdate: 2023 Jun 30
+fulljournalname: Network Neuroscience
+issue: '2'
+pages: 632-660
+pmclivedate: 2023/07/01
+printpubdate: ''
+pubdate: 2023 Jun 30
+sortdate: 2023/06/30 00:00
+source: Netw Neurosci
+title: The impact of regional heterogeneity in whole-brain dynamics in the presence
+  of oscillations
+uid: '10312285'
+volume: '7'

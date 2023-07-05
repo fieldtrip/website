@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '37141791'
+- idtype: doi
+  value: 10.1016/j.dcn.2023.101251
+- idtype: pmcid
+  value: PMC10311145
+authors:
+- authtype: Author
+  name: Schneider JM
+- authtype: Author
+  name: Poudel S
+- authtype: Author
+  name: Abel AD
+- authtype: Author
+  name: Maguire MJ
+epubdate: 2023 May 2
+fulljournalname: Developmental Cognitive Neuroscience
+issue: ''
+pages: '101251'
+pmclivedate: 2023/07/01
+printpubdate: ''
+pubdate: 2023 May 2
+sortdate: 2023/05/02 00:00
+source: Dev Cogn Neurosci
+title: Age and vocabulary knowledge differentially influence the N400 and theta responses
+  during semantic retrieval
+uid: '10311145'
+volume: '61'
