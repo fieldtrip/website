@@ -38,7 +38,7 @@ We welcome the contributions of all external users, even if the changes are smal
 
 [Git](https://git-scm.com/) is version control system to keep track of the changes to files and maintain a consistent repository, like [SVN](http://subversion.tigris.org/). While SVN follows a linear approach to versioning, where each user makes some changes to the main code and then a second user can make the next change, Git allows for multiple users to work in parallel and then merge their code in the main repository. This approach scales very well, considering that, for example, the [Linux kernel](http://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git) and [Android](https://android.googlesource.com/) use git.
 
-There are lots of resources available on the internet to learn more about Git. The starting point is [the official Git documentation](https://git-scm.com/documentation). If you have a question, it's most likely already being answered on [Stack Overflow](http://stackoverflow.com/questions/tagged/git). Git is extremely powerful and flexible, so the following tutorial will give only the most basic ideas and tools to modify the FieldTrip code.
+There are lots of resources available on the internet to learn more about Git. The starting point is [the official Git documentation](https://git-scm.com/documentation). If you have a question, it's most likely already been answered on [Stack Overflow](http://stackoverflow.com/questions/tagged/git). Git is extremely powerful and flexible, so the following tutorial will give only the most basic ideas and tools to modify the FieldTrip code.
 
 #### Basic concepts
 
@@ -72,7 +72,7 @@ To recap, the main commands that you'll need are:
 -   **checkout -b** to create a new branch
 -   **merge** to merge a branch with your main local branch
 
-You can use any of these commands on the command line, in Linux or Mac, by doing:
+You can use any of these commands on the command line, in Linux, Mac or Windows, by doing:
 
 ```bash
 git name_of_the_command <arguments>
@@ -163,7 +163,7 @@ In addition to this function, we will also modify the function **[ft_defaults](/
 
 ### 5. Commit your changes
 
-To see how git reacts to this changes, you can now type:
+To see how git reacts to these changes, you can now type:
 
 ```bash
 git status
@@ -251,7 +251,7 @@ Switching between branches is really fast, so do not be afraid of doing it when 
 
 ### 6. Push the commits
 
-We modified our local repository, but the remote repository has not changed. We need to push our commits to our personal remote repository (i.e. our fork). By default, the remote repository is called **origin**. You can rename it. If you want more information about remote repository, just typ
+We modified our local repository, but the remote repository has not changed. We need to push our commits to our personal remote repository (i.e. our fork). By default, the remote repository is called **origin**. You can rename it. If you want more information about remote repository, just type:
 
 ```bash
 git remote -v
