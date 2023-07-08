@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '37106572'
+- idtype: doi
+  value: 10.1093/cercor/bhad139
+- idtype: pmcid
+  value: PMC10321090
+authors:
+- authtype: Author
+  name: Justus SA
+- authtype: Author
+  name: Mirjalili S
+- authtype: Author
+  name: Powell PS
+- authtype: Author
+  name: Duarte A
+epubdate: 2023 Apr 27
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '13'
+pages: 8546-8556
+pmclivedate: ''
+printpubdate: ''
+pubdate: 2023 Apr 27
+sortdate: 2023/04/27 00:00
+source: Cereb Cortex
+title: Neural reinstatement of context memory in adults with autism spectrum disorder
+uid: '10321090'
+volume: '33'

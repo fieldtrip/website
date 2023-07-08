@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '37401720'
+- idtype: doi
+  value: 10.1093/gigascience/giad049
+- idtype: pmcid
+  value: PMC10318494
+authors:
+- authtype: Author
+  name: Mittal D
+- authtype: Author
+  name: Mease R
+- authtype: Author
+  name: Kuner T
+- authtype: Author
+  name: Flor H
+- authtype: Author
+  name: Kuner R
+- authtype: Author
+  name: Andoh J
+epubdate: 2023 Jul 4
+fulljournalname: GigaScience
+issue: ''
+pages: giad049
+pmclivedate: 2023/07/05
+printpubdate: ''
+pubdate: 2023 Jul 4
+sortdate: 2023/07/04 00:00
+source: Gigascience
+title: Data management strategy for a collaborative research center
+uid: '10318494'
+volume: '12'

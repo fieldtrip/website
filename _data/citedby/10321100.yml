@@ -1,0 +1,24 @@
+articleids:
+- idtype: pmid
+  value: '37160327'
+- idtype: doi
+  value: 10.1093/cercor/bhad150
+- idtype: pmcid
+  value: PMC10321100
+authors:
+- authtype: Author
+  name: Lu Y
+- authtype: Author
+  name: Singer W
+epubdate: 2023 May 9
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '13'
+pages: 8679-8692
+pmclivedate: 2023/07/06
+printpubdate: ''
+pubdate: 2023 May 9
+sortdate: 2023/05/09 00:00
+source: Cereb Cortex
+title: 'Dynamic signatures of the Eureka effect: an EEG study'
+uid: '10321100'
+volume: '33'

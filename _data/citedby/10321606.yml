@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '37405982'
+- idtype: doi
+  value: 10.1371/journal.pone.0276470
+- idtype: pmcid
+  value: PMC10321606
+authors:
+- authtype: Author
+  name: Bögels S
+- authtype: Author
+  name: Levinson SC
+epubdate: 2023 Jul 5
+fulljournalname: PLOS ONE
+issue: '7'
+pages: e0276470
+pmclivedate: 2023/07/06
+printpubdate: ''
+pubdate: 2023 Jul 5
+sortdate: 2023/07/05 00:00
+source: PLoS One
+title: 'Ultrasound measurements of interactive turn-taking in question-answer sequences:
+  Articulatory preparation is delayed but not tied to the response'
+uid: '10321606'
+volume: '18'

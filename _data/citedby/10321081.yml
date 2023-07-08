@@ -1,0 +1,49 @@
+articleids:
+- idtype: pmid
+  value: '37143180'
+- idtype: doi
+  value: 10.1093/cercor/bhad152
+- idtype: pmcid
+  value: PMC10321081
+authors:
+- authtype: Author
+  name: Bista S
+- authtype: Author
+  name: Coffey A
+- authtype: Author
+  name: Fasano A
+- authtype: Author
+  name: Buxo T
+- authtype: Author
+  name: Mitchell M
+- authtype: Author
+  name: Giglia ER
+- authtype: Author
+  name: Dukic S
+- authtype: Author
+  name: Heverin M
+- authtype: Author
+  name: Muthuraman M
+- authtype: Author
+  name: Carson RG
+- authtype: Author
+  name: Lowery M
+- authtype: Author
+  name: Hardiman O
+- authtype: Author
+  name: McManus L
+- authtype: Author
+  name: Nasseroleslami B
+epubdate: 2023 May 4
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '13'
+pages: 8712-8723
+pmclivedate: 2023/07/06
+printpubdate: ''
+pubdate: 2023 May 4
+sortdate: 2023/05/04 00:00
+source: Cereb Cortex
+title: Cortico-muscular coherence in primary lateral sclerosis reveals abnormal cortical
+  engagement during motor function beyond primary motor areas
+uid: '10321081'
+volume: '33'

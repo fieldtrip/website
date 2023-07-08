@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '37197766'
+- idtype: doi
+  value: 10.1093/cercor/bhad156
+- idtype: pmcid
+  value: PMC10321083
+authors:
+- authtype: Author
+  name: Lu J
+- authtype: Author
+  name: Kemmerer SK
+- authtype: Author
+  name: Riecke L
+- authtype: Author
+  name: de Gelder B
+epubdate: 2023 May 17
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '13'
+pages: 8748-8758
+pmclivedate: 2023/07/06
+printpubdate: ''
+pubdate: 2023 May 17
+sortdate: 2023/05/17 00:00
+source: Cereb Cortex
+title: Early threat perception is independent of later cognitive and behavioral control.
+  A virtual reality-EEG-ECG study
+uid: '10321083'
+volume: '33'

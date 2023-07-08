@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '37408682'
+- idtype: doi
+  value: 10.1016/j.isci.2023.107064
+- idtype: pmcid
+  value: PMC10319215
+authors:
+- authtype: Author
+  name: Bevilacqua M
+- authtype: Author
+  name: Huxlin KR
+- authtype: Author
+  name: Hummel FC
+- authtype: Author
+  name: Raffin E
+epubdate: 2023 Jun 7
+fulljournalname: iScience
+issue: '7'
+pages: '107064'
+pmclivedate: 2023/07/05
+printpubdate: ''
+pubdate: 2023 Jun 7
+sortdate: 2023/06/07 00:00
+source: iScience
+title: Pathway and directional specificity of Hebbian plasticity in the cortical visual
+  motion processing network
+uid: '10319215'
+volume: '26'

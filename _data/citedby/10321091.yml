@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '37160345'
+- idtype: doi
+  value: 10.1093/cercor/bhad162
+- idtype: pmcid
+  value: PMC10321091
+authors:
+- authtype: Author
+  name: Joensen BH
+- authtype: Author
+  name: Bush D
+- authtype: Author
+  name: Vivekananda U
+- authtype: Author
+  name: Horner AJ
+- authtype: Author
+  name: Bisby JA
+- authtype: Author
+  name: Diehl B
+- authtype: Author
+  name: Miserocchi A
+- authtype: Author
+  name: McEvoy AW
+- authtype: Author
+  name: Walker MC
+- authtype: Author
+  name: Burgess N
+epubdate: 2023 May 9
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '13'
+pages: 8792-8802
+pmclivedate: 2023/07/06
+printpubdate: ''
+pubdate: 2023 May 9
+sortdate: 2023/05/09 00:00
+source: Cereb Cortex
+title: Hippocampal theta activity during encoding promotes subsequent associative
+  memory in humans
+uid: '10321091'
+volume: '33'
