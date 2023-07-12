@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '37417736'
+- idtype: doi
+  value: 10.7554/eLife.82386
+- idtype: pmcid
+  value: PMC10328533
+authors:
+- authtype: Author
+  name: Tezcan F
+- authtype: Author
+  name: Weissbart H
+- authtype: Author
+  name: Martin AE
+epubdate: 2023 Jul 7
+fulljournalname: eLife
+issue: ''
+pages: e82386
+pmclivedate: 2023/07/08
+printpubdate: ''
+pubdate: 2023 Jul 7
+sortdate: 2023/07/07 00:00
+source: eLife
+title: A tradeoff between acoustic and linguistic feature encoding in spoken language
+  comprehension
+uid: '10328533'
+volume: '12'

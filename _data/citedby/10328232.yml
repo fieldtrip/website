@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '37418486'
+- idtype: doi
+  value: 10.1371/journal.pone.0287921
+- idtype: pmcid
+  value: PMC10328232
+authors:
+- authtype: Author
+  name: Soper DJ
+- authtype: Author
+  name: Reich D
+- authtype: Author
+  name: Ross A
+- authtype: Author
+  name: Salami P
+- authtype: Author
+  name: Cash SS
+- authtype: Author
+  name: Basu I
+- authtype: Author
+  name: Peled N
+- authtype: Author
+  name: Paulk AC
+epubdate: 2023 Jul 7
+fulljournalname: PLOS ONE
+issue: '7'
+pages: e0287921
+pmclivedate: 2023/07/08
+printpubdate: ''
+pubdate: 2023 Jul 7
+sortdate: 2023/07/07 00:00
+source: PLoS One
+title: Modular pipeline for reconstruction and localization of implanted intracranial
+  ECoG and sEEG electrodes
+uid: '10328232'
+volume: '18'

@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '37398268'
+- idtype: doi
+  value: 10.1101/2023.06.09.23291166
+- idtype: pmcid
+  value: PMC10312828
+authors:
+- authtype: Author
+  name: Verdonk C
+- authtype: Author
+  name: Teed AR
+- authtype: Author
+  name: White EJ
+- authtype: Author
+  name: Ren X
+- authtype: Author
+  name: Stewart JL
+- authtype: Author
+  name: Paulus MP
+- authtype: Author
+  name: Khalsa SS
+epubdate: 2023 Jun 12
+fulljournalname: medRxiv
+issue: ''
+pages: 2023.06.09.23291166
+pmclivedate: 2023/07/01
+printpubdate: ''
+pubdate: 2023 Jun 12
+sortdate: 2023/06/12 00:00
+source: medRxiv
+title: Heartbeat-evoked neural response abnormalities in generalized anxiety disorder
+  during peripheral adrenergic stimulation
+uid: '10312828'
+volume: ''

@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '37336758'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1731-22.2023
+- idtype: pmcid
+  value: PMC10324990
+authors:
+- authtype: Author
+  name: Brown A
+- authtype: Author
+  name: Pinto D
+- authtype: Author
+  name: Burgart K
+- authtype: Author
+  name: Zvilichovsky Y
+- authtype: Author
+  name: Zion-Golumbic E
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '27'
+pages: 5045-5056
+pmclivedate: ''
+printpubdate: 2023 Jul 5
+pubdate: 2023 Jul 5
+sortdate: 2023/07/05 00:00
+source: J Neurosci
+title: Neurophysiological Evidence for Semantic Processing of Irrelevant Speech and
+  Own-Name Detection in a Virtual Café
+uid: '10324990'
+volume: '43'
