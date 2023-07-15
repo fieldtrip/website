@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '37414784'
+- idtype: doi
+  value: 10.1038/s41598-023-37113-0
+- idtype: pmcid
+  value: PMC10326015
+authors:
+- authtype: Author
+  name: Nara S
+- authtype: Author
+  name: Raza H
+- authtype: Author
+  name: Carreiras M
+- authtype: Author
+  name: Molinaro N
+epubdate: 2023 Jul 6
+fulljournalname: Scientific Reports
+issue: ''
+pages: '10979'
+pmclivedate: 2023/07/08
+printpubdate: ''
+pubdate: 2023 Jul 6
+sortdate: 2023/07/06 00:00
+source: Sci Rep
+title: 'Decoding numeracy and literacy in the human brain: insights from MEG and MVPA'
+uid: '10326015'
+volume: '13'

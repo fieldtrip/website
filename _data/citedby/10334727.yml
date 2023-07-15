@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '37399398'
+- idtype: doi
+  value: 10.1073/pnas.2220523120
+- idtype: pmcid
+  value: PMC10334727
+authors:
+- authtype: Author
+  name: Weber J
+- authtype: Author
+  name: Iwama G
+- authtype: Author
+  name: Solbakk AK
+- authtype: Author
+  name: Blenkmann AO
+- authtype: Author
+  name: Larsson PG
+- authtype: Author
+  name: Ivanovic J
+- authtype: Author
+  name: Knight RT
+- authtype: Author
+  name: Endestad T
+- authtype: Author
+  name: Helfrich R
+epubdate: 2023 Jul 3
+fulljournalname: Proceedings of the National Academy of Sciences of the United States
+  of America
+issue: '28'
+pages: e2220523120
+pmclivedate: ''
+printpubdate: 2023 Jul 11
+pubdate: 2023 Jul 3
+sortdate: 2023/07/03 00:00
+source: Proc Natl Acad Sci U S A
+title: Subspace partitioning in the human prefrontal cortex resolves cognitive interference
+uid: '10334727'
+volume: '120'

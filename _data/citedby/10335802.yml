@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fnhum.2023.1129362
+- idtype: pmcid
+  value: PMC10335802
+authors:
+- authtype: Author
+  name: Gemborn Nilsson M
+- authtype: Author
+  name: Tufvesson P
+- authtype: Author
+  name: Heskebeck F
+- authtype: Author
+  name: Johansson M
+epubdate: 2023 Jun 27
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '1129362'
+pmclivedate: 2023/07/12
+printpubdate: ''
+pubdate: 2023 Jun 27
+sortdate: 2023/06/27 00:00
+source: Front Hum Neurosci
+title: 'An open-source human-in-the-loop BCI research framework: method and design'
+uid: '10335802'
+volume: '17'
