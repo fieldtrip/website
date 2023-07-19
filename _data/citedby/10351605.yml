@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fnbeh.2023.1206011
+- idtype: pmcid
+  value: PMC10351605
+authors:
+- authtype: Author
+  name: Rochas V
+- authtype: Author
+  name: Montandon ML
+- authtype: Author
+  name: Rodriguez C
+- authtype: Author
+  name: Herrmann FR
+- authtype: Author
+  name: Eytan A
+- authtype: Author
+  name: Pegna AJ
+- authtype: Author
+  name: Michel CM
+- authtype: Author
+  name: Giannakopoulos P
+epubdate: 2023 Jul 3
+fulljournalname: Frontiers in Behavioral Neuroscience
+issue: ''
+pages: '1206011'
+pmclivedate: 2023/07/18
+printpubdate: ''
+pubdate: 2023 Jul 3
+sortdate: 2023/07/03 00:00
+source: Front Behav Neurosci
+title: 'Mentalizing and self-other distinction in visual perspective taking: the analysis
+  of temporal neural processing using high-density EEG'
+uid: '10351605'
+volume: '17'

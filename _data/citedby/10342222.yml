@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '37339875'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0213-23.2023
+- idtype: pmcid
+  value: PMC10342222
+authors:
+- authtype: Author
+  name: Pierrieau E
+- authtype: Author
+  name: Berret B
+- authtype: Author
+  name: Lepage JF
+- authtype: Author
+  name: Bernier PM
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '28'
+pages: 5264-5275
+pmclivedate: ''
+printpubdate: 2023 Jul 12
+pubdate: 2023 Jul 12
+sortdate: 2023/07/12 00:00
+source: J Neurosci
+title: 'From Motivation to Action: Action Cost Better Predicts Changes in Premovement
+  Beta-Band Activity than Speed'
+uid: '10342222'
+volume: '43'

@@ -1,0 +1,45 @@
+articleids:
+- idtype: pmid
+  value: '37454150'
+- idtype: doi
+  value: 10.1038/s42003-023-05108-2
+- idtype: pmcid
+  value: PMC10349830
+authors:
+- authtype: Author
+  name: Liu J
+- authtype: Author
+  name: Bayle DJ
+- authtype: Author
+  name: Spagna A
+- authtype: Author
+  name: Sitt JD
+- authtype: Author
+  name: Bourgeois A
+- authtype: Author
+  name: Lehongre K
+- authtype: Author
+  name: Fernandez-Vidal S
+- authtype: Author
+  name: Adam C
+- authtype: Author
+  name: Lambrecq V
+- authtype: Author
+  name: Navarro V
+- authtype: Author
+  name: Seidel Malkinson T
+- authtype: Author
+  name: Bartolomeo P
+epubdate: 2023 Jul 15
+fulljournalname: Communications Biology
+issue: ''
+pages: '730'
+pmclivedate: 2023/07/17
+printpubdate: ''
+pubdate: 2023 Jul 15
+sortdate: 2023/07/15 00:00
+source: Commun Biol
+title: Fronto-parietal networks shape human conscious report through attention gain
+  and reorienting
+uid: '10349830'
+volume: '6'

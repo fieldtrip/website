@@ -1,0 +1,38 @@
+articleids:
+- idtype: pmid
+  value: '37457628'
+- idtype: doi
+  value: 10.1117/1.JBO.28.7.075001
+- idtype: pmcid
+  value: PMC10344469
+authors:
+- authtype: Author
+  name: Ruesch A
+- authtype: Author
+  name: Acharya D
+- authtype: Author
+  name: Bulger E
+- authtype: Author
+  name: Cao J
+- authtype: Author
+  name: Christopher McKnight J
+- authtype: Author
+  name: Manley M
+- authtype: Author
+  name: Fahlman A
+- authtype: Author
+  name: Shinn-Cunningham BG
+- authtype: Author
+  name: Kainerstorfer JM
+epubdate: 2023 Jul 13
+fulljournalname: Journal of Biomedical Optics
+issue: '7'
+pages: '075001'
+pmclivedate: 2023/07/14
+printpubdate: 2023 Jul
+pubdate: 2023 Jul 13
+sortdate: 2023/07/13 00:00
+source: J Biomed Opt
+title: Evaluating feasibility of functional near-infrared spectroscopy in dolphins
+uid: '10344469'
+volume: '28'

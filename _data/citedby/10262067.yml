@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '37169118'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2023.120116
+- idtype: pmcid
+  value: PMC10262067
+authors:
+- authtype: Author
+  name: Lopez KL
+- authtype: Author
+  name: Monachino AD
+- authtype: Author
+  name: Vincent KM
+- authtype: Author
+  name: Peck FC
+- authtype: Author
+  name: Gabard-Durnam LJ
+epubdate: ''
+fulljournalname: Neuroimage
+issue: ''
+pages: '120116'
+pmclivedate: 2023/07/15
+printpubdate: 2023 Jul 15
+pubdate: 2023 Jul 15
+sortdate: 2023/07/15 00:00
+source: Neuroimage
+title: 'Stability, change, and reliable individual differences in electroencephalography
+  measures: A lifespan perspective on progress and opportunities'
+uid: '10262067'
+volume: '275'

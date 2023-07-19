@@ -1,0 +1,24 @@
+articleids:
+- idtype: pmid
+  value: '37450213'
+- idtype: doi
+  value: 10.1186/s40708-023-00197-5
+- idtype: pmcid
+  value: PMC10348975
+authors:
+- authtype: Author
+  name: Adama S
+- authtype: Author
+  name: Bogdan M
+epubdate: 2023 Jul 14
+fulljournalname: Brain Informatics
+issue: '1'
+pages: '16'
+pmclivedate: 2023/07/16
+printpubdate: ''
+pubdate: 2023 Jul 14
+sortdate: 2023/07/14 00:00
+source: Brain Inform
+title: Assessing consciousness in patients with disorders of consciousness using soft-clustering
+uid: '10348975'
+volume: '10'
