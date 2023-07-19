@@ -51,7 +51,7 @@ The following code shows how to extract spectral features from simulated data.
     % subtract the fractal component from the power spectrum
     cfg               = [];
     cfg.parameter     = 'powspctrm';
-    cfg.operation     = 'x2-x1';
+    cfg.operation     = '10^(log10(x2)-log10(x1))';%'x2-x1';
     oscillatory = ft_math(cfg, fractal, original);
 
     % display the spectra on a log-log scale
