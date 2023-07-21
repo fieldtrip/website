@@ -67,7 +67,7 @@ _Figure. Different views of the headmodel showing edges projected on a slice (mi
 
 Next we need to prepare the electrodes. This means (1) aligning them with the MR image and (2) converting the result to a format which SimNIBS can read. We use the same template montage as is used in the above-mentioned FEM tutorial.
 
-We start by aligning the electrodes to the MRI (and therefore also the headmodel). We will do this by matching the fiducials in the template montage (included in the template file) to the corresponding positions in the MRI (i.e., the target positions below which was manually identified on the MRI). Note that we set the channel type of the first three positions to `fiducial` as they correspond to LPA, RPA, and nasion, respectively. We do this so that they will be ignored by SimNIBS when converting the montage to CSV (as SimNIBS will only include channels with chantype `eeg`). We use `method = 'template'` in order to estimate a global rescaling parameters as well as translations and rotations.
+We start by aligning the electrodes to the MRI (and therefore also the headmodel). We will do this by matching the fiducials in the template montage (included in the template file) to the corresponding positions in the MRI (i.e., the target positions below which was manually identified on the MRI). Note that we set the channel type of the first three positions to `fiducial` as they correspond to LPA, RPA, and nasion, respectively. We do this so that they will be ignored by SimNIBS when converting the montage to CSV (as SimNIBS will only include channels with chantype `eeg`). We use `method = 'template'` in order to estimate a global rescaling parameter as well as translations and rotations.
 
     % matlab
     elec = ft_read_sens('standard_1020.elc');
@@ -100,15 +100,31 @@ which should output something like
                  unit: 'mm'
                   cfg: [1×1 struct]
 
+We can check the coregistration by loading the head mesh and plotting it together with the electrodes
+
+    % matlab
+    mesh = ft_read_headshape('m2m_Subject01/Subject01.msh');
+
+    figure;
+    hold on;
+    ft_plot_mesh(mesh,'surfaceonly','yes','vertexcolor', 'none', ...
+        'edgecolor','none','facecolor','skin');
+    camlight;
+    ft_plot_sens(elec,'elecshape','sphere');
+    view(150, 26);
+    hold off;
+
+Which should look something like the image below. As we are fitting template positions, the fit is not perfect.
+
+{% include image src="/assets/img/getting_started/simnibs/headmodel_electrodes_aligned.png" width="600" %}
+_Figure. Electrodes aligned with headmodel._
+
 Next, we will use the function `prepare_eeg_montage` provided by SimNIBS to write the electrode information to a CSV file. This function assumes that the electrode structure is represented in the default FieldTrip format (as printed above). It reads a MAT file and assumes that it contains a variable `elec` describing the electrode montage. Now convert the montage to CSV
 
     # shell
     prepare_eeg_montage fieldtrip elec.csv elec.mat
 
 This creates `elec.csv`. (Actually, we only require the fields `elecpos`, `chanunit`, `chantype`, and `label` to be present in the electrode structure.)
-
-{% include image src="/assets/img/getting_started/simnibs/headmodel_electrode_aligned.png" width="600" %}
-_Figure. Electrodes aligned and projected on headmodel._
 
 
 ### Running the FEM simulation
@@ -122,11 +138,14 @@ SimNIBS supports two solvers, PETSc (default) and PARDISO. The latter requires m
 
 The subsampling flag, `-s`, sets the number of vertices (per hemisphere) where we want to compute the solution. (The original cortical surfaces produced by SimNIBS contain about 100,000 vertices per hemisphere.) These are selected by even subsampling over the whole surface. By default, we model electrodes as points, however, by using `--mesh_electrodes`, it is possible to mesh the electrodes onto the head model. Currently, electrodes are modeled as rings with a diameter of 10 mm and thickness of 4 mm. In our experiments, we have not found substantial effects of meshing electrodes, hence we omit this. By default, the results are stored in a directory called `fem_Subject01`.
 
-To visualize the headmodel along with the electrodes, we can use `gmsh` (which is included with SimNIBS)
+To visualize the headmodel along with the electrodes projected on the skin surface (which is what we use in the simulations), we can use `gmsh` (which is included with SimNIBS)
 
-    gmsh m2m_Subject01/Subject01.msh -merge fem_Subject01/*.geo
+    gmsh m2m_Subject01/Subject01.msh -merge fem_Subject01/Subject01_electrodes_elec_proj.geo
 
-The `.geo` files describe the electrode positions before and after projection onto the skin surface. Simulations are done using the projected positions. To show these, tick the boxes under post-processing in the pane on the left-hand side.
+(To show the electrode positions, tick the box under post-processing in the pane on the left-hand side.) Compare these with the positions before projection in the previous section.
+
+{% include image src="/assets/img/getting_started/simnibs/headmodel_electrodes_aligned_projected.png" width="600" %}
+_Figure. Electrodes aligned and projected on headmodel._
 
 
 ### Calculating the final forward model and exporting to FieldTrip
