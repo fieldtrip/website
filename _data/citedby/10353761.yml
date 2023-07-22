@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '37469860'
+- idtype: doi
+  value: 10.1093/braincomms/fcad190
+- idtype: pmcid
+  value: PMC10353761
+authors:
+- authtype: Author
+  name: Pelentritou A
+- authtype: Author
+  name: Nguissi NA
+- authtype: Author
+  name: Iten M
+- authtype: Author
+  name: Haenggi M
+- authtype: Author
+  name: Zubler F
+- authtype: Author
+  name: Rossetti AO
+- authtype: Author
+  name: De Lucia M
+epubdate: 2023 Jun 28
+fulljournalname: Brain Communications
+issue: '4'
+pages: fcad190
+pmclivedate: 2023/07/19
+printpubdate: ''
+pubdate: 2023 Jun 28
+sortdate: 2023/06/28 00:00
+source: Brain Commun
+title: The effect of sedation and time after cardiac arrest on coma outcome prognostication
+  based on EEG power spectra
+uid: '10353761'
+volume: '5'
