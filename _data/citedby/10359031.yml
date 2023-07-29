@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '37369588'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0156-23.2023
+- idtype: pmcid
+  value: PMC10359031
+authors:
+- authtype: Author
+  name: Yan Y
+- authtype: Author
+  name: Zhan J
+- authtype: Author
+  name: Ince RA
+- authtype: Author
+  name: Schyns PG
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '29'
+pages: 5391-5405
+pmclivedate: ''
+printpubdate: 2023 Jul 19
+pubdate: 2023 Jul 19
+sortdate: 2023/07/19 00:00
+source: J Neurosci
+title: Network Communications Flexibly Predict Visual Contents That Enhance Representations
+  for Faster Visual Categorization
+uid: '10359031'
+volume: '43'
