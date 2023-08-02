@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '35570149'
+- idtype: doi
+  value: 10.1016/j.neurom.2022.04.033
+- idtype: pmcid
+  value: PMC10385018
+- idtype: MID
+  value: NIHMS1920112
+authors:
+- authtype: Author
+  name: Manssuer L
+- authtype: Author
+  name: Wang L
+- authtype: Author
+  name: Ding Q
+- authtype: Author
+  name: Li J
+- authtype: Author
+  name: Zhang Y
+- authtype: Author
+  name: Zhang C
+- authtype: Author
+  name: Hallett M
+- authtype: Author
+  name: Li D
+- authtype: Author
+  name: Sun B
+- authtype: Author
+  name: Voon V
+epubdate: 2022 May 13
+fulljournalname: 'Neuromodulation : journal of the International Neuromodulation Society'
+issue: '2'
+pages: 414-423
+pmclivedate: ''
+printpubdate: 2023 Feb
+pubdate: 2022 May 13
+sortdate: 2022/05/13 00:00
+source: Neuromodulation
+title: Subthalamic Oscillatory Activity of Reward and Loss Processing Using the Monetary
+  Incentive Delay Task in Parkinson Disease
+uid: '10385018'
+volume: '26'

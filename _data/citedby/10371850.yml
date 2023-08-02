@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '37454468'
+- idtype: doi
+  value: 10.1016/j.nicl.2023.103467
+- idtype: pmcid
+  value: PMC10371850
+authors:
+- authtype: Author
+  name: You Y
+- authtype: Author
+  name: Correas A
+- authtype: Author
+  name: White DR
+- authtype: Author
+  name: Wagner LC
+- authtype: Author
+  name: Jao Keehn RJ
+- authtype: Author
+  name: Rosen BQ
+- authtype: Author
+  name: Alemu K
+- authtype: Author
+  name: Müller RA
+- authtype: Author
+  name: Marinkovic K
+epubdate: 2023 Jul 6
+fulljournalname: 'NeuroImage : Clinical'
+issue: ''
+pages: '103467'
+pmclivedate: 2023/07/28
+printpubdate: ''
+pubdate: 2023 Jul 6
+sortdate: 2023/07/06 00:00
+source: Neuroimage Clin
+title: 'Mapping access to meaning in adolescents with autism: Atypical lateralization
+  and spatiotemporal patterns as a function of language ability'
+uid: '10371850'
+volume: '39'
