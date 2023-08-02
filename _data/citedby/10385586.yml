@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '37514591'
+- idtype: doi
+  value: 10.3390/s23146296
+- idtype: pmcid
+  value: PMC10385586
+authors:
+- authtype: Author
+  name: Monroe DC
+- authtype: Author
+  name: Berry NT
+- authtype: Author
+  name: Fino PC
+- authtype: Author
+  name: Rhea CK
+epubdate: 2023 Jul 11
+fulljournalname: Sensors (Basel, Switzerland)
+issue: '14'
+pages: '6296'
+pmclivedate: 2023/07/30
+printpubdate: ''
+pubdate: 2023 Jul 11
+sortdate: 2023/07/11 00:00
+source: Sensors (Basel)
+title: 'A Dynamical Systems Approach to Characterizing Brain–Body Interactions during
+  Movement: Challenges, Interpretations, and Recommendations'
+uid: '10385586'
+volume: '23'

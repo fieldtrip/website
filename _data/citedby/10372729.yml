@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '37520729'
+- idtype: doi
+  value: 10.1016/j.isci.2023.107281
+- idtype: pmcid
+  value: PMC10372729
+authors:
+- authtype: Author
+  name: Abbasi O
+- authtype: Author
+  name: Kluger DS
+- authtype: Author
+  name: Chalas N
+- authtype: Author
+  name: Steingräber N
+- authtype: Author
+  name: Meyer L
+- authtype: Author
+  name: Gross J
+epubdate: 2023 Jul 4
+fulljournalname: iScience
+issue: '8'
+pages: '107281'
+pmclivedate: 2023/07/28
+printpubdate: ''
+pubdate: 2023 Jul 4
+sortdate: 2023/07/04 00:00
+source: iScience
+title: Predictive coordination of breathing during intra-personal speaking and listening
+uid: '10372729'
+volume: '26'
