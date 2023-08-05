@@ -1,0 +1,46 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1186/s40337-023-00852-6
+- idtype: pmcid
+  value: PMC10394844
+authors:
+- authtype: Author
+  name: Ursumando L
+- authtype: Author
+  name: Ponzo V
+- authtype: Author
+  name: Monteleone AM
+- authtype: Author
+  name: Menghini D
+- authtype: Author
+  name: Fucà E
+- authtype: Author
+  name: Lazzaro G
+- authtype: Author
+  name: Esposito R
+- authtype: Author
+  name: Picazio S
+- authtype: Author
+  name: Koch G
+- authtype: Author
+  name: Zanna V
+- authtype: Author
+  name: Vicari S
+- authtype: Author
+  name: Costanzo F
+epubdate: 2023 Aug 2
+fulljournalname: Journal of Eating Disorders
+issue: ''
+pages: '127'
+pmclivedate: 2023/08/03
+printpubdate: ''
+pubdate: 2023 Aug 2
+sortdate: 2023/08/02 00:00
+source: J Eat Disord
+title: 'The efficacy of non-invasive brain stimulation in the treatment of children
+  and adolescents with Anorexia Nervosa: study protocol of a randomized, double blind,
+  placebo-controlled trial'
+uid: '10394844'
+volume: '11'

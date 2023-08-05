@@ -1,0 +1,34 @@
+articleids:
+- idtype: pmid
+  value: '37377190'
+- idtype: doi
+  value: 10.1152/jn.00042.2023
+- idtype: pmcid
+  value: PMC10396220
+authors:
+- authtype: Author
+  name: Santoyo AE
+- authtype: Author
+  name: Gonzales MG
+- authtype: Author
+  name: Iqbal ZJ
+- authtype: Author
+  name: Backer KC
+- authtype: Author
+  name: Balasubramaniam R
+- authtype: Author
+  name: Bortfeld H
+- authtype: Author
+  name: Shahin AJ
+epubdate: 2023 Jun 28
+fulljournalname: Journal of Neurophysiology
+issue: '2'
+pages: 291-302
+pmclivedate: ''
+printpubdate: 2023 Aug 1
+pubdate: 2023 Jun 28
+sortdate: 2023/06/28 00:00
+source: J Neurophysiol
+title: Neurophysiological time course of timbre-induced music-like perception
+uid: '10396220'
+volume: '130'
