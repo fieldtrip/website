@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '37429914'
+- idtype: doi
+  value: 10.1038/s41593-023-01381-w
+- idtype: pmcid
+  value: PMC10400429
+authors:
+- authtype: Author
+  name: Staresina BP
+- authtype: Author
+  name: Niediek J
+- authtype: Author
+  name: Borger V
+- authtype: Author
+  name: Surges R
+- authtype: Author
+  name: Mormann F
+epubdate: 2023 Jul 10
+fulljournalname: Nature Neuroscience
+issue: '8'
+pages: 1429-1437
+pmclivedate: 2023/08/05
+printpubdate: '2023'
+pubdate: 2023 Jul 10
+sortdate: 2023/07/10 00:00
+source: Nat Neurosci
+title: How coupled slow oscillations, spindles and ripples coordinate neuronal processing
+  and communication during human sleep
+uid: '10400429'
+volume: '26'

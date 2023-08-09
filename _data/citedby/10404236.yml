@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '37543697'
+- idtype: doi
+  value: 10.1038/s41467-023-40250-9
+- idtype: pmcid
+  value: PMC10404236
+authors:
+- authtype: Author
+  name: Kluger DS
+- authtype: Author
+  name: Forster C
+- authtype: Author
+  name: Abbasi O
+- authtype: Author
+  name: Chalas N
+- authtype: Author
+  name: Villringer A
+- authtype: Author
+  name: Gross J
+epubdate: 2023 Aug 5
+fulljournalname: Nature Communications
+issue: ''
+pages: '4699'
+pmclivedate: 2023/08/07
+printpubdate: ''
+pubdate: 2023 Aug 5
+sortdate: 2023/08/05 00:00
+source: Nat Commun
+title: Modulatory dynamics of periodic and aperiodic activity in respiration-brain
+  coupling
+uid: '10404236'
+volume: '14'
