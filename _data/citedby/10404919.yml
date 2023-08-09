@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '37545310'
+- idtype: doi
+  value: 10.1098/rstb.2022.0346
+- idtype: pmcid
+  value: PMC10404919
+authors:
+- authtype: Author
+  name: Marly A
+- authtype: Author
+  name: Yazdjian A
+- authtype: Author
+  name: Soto-Faraco S
+epubdate: 2023 Aug 7
+fulljournalname: 'Philosophical Transactions of the Royal Society B: Biological Sciences'
+issue: '1886'
+pages: '20220346'
+pmclivedate: 2023/08/08
+printpubdate: 2023 Sep 25
+pubdate: 2023 Aug 7
+sortdate: 2023/08/07 00:00
+source: Philos Trans R Soc Lond B Biol Sci
+title: 'The role of conflict processing in multisensory perception: behavioural and
+  electroencephalography evidence'
+uid: '10404919'
+volume: '378'
