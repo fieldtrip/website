@@ -70,7 +70,7 @@ The following code shows how to extract spectral features from simulated data.
     plot(log(original.freq), log(original.powspctrm),'k');
     plot(log(fractal.freq), log(fractal.powspctrm));
     plot(log(fractal.freq), log(oscillatory.powspctrm));
-    xlabel('log-freq'); ylabel('log-power');
+    xlabel('log-freq'); ylabel('log-power'); grid on;
     legend({'original','fractal','oscillatory = spectrum-fractal'},'location','southwest');
     if F~=0 && O==0
       title('pure fractal signal');
@@ -83,7 +83,7 @@ The following code shows how to extract spectral features from simulated data.
     plot(log(original.freq), log(original.powspctrm),'k');
     plot(log(fractal.freq), log(fractal.powspctrm));
     plot(log(oscillatory_alt.freq), log(oscillatory_alt.powspctrm));
-    xlabel('log-freq'); ylabel('log-power');
+    xlabel('log-freq'); ylabel('log-power'); grid on;
     legend({'original','fractal','oscillatory = spectrum/fractal'},'location','southwest');
     title('oscillatory = spectrum / fractal');
 ```
