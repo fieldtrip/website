@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '37558701'
+- idtype: doi
+  value: 10.1038/s41598-023-39398-7
+- idtype: pmcid
+  value: PMC10412611
+authors:
+- authtype: Author
+  name: Sysoeva O
+- authtype: Author
+  name: Maximenko V
+- authtype: Author
+  name: Kuc A
+- authtype: Author
+  name: Voinova V
+- authtype: Author
+  name: Martynova O
+- authtype: Author
+  name: Hramov A
+epubdate: 2023 Aug 9
+fulljournalname: Scientific Reports
+issue: ''
+pages: '12932'
+pmclivedate: 2023/08/11
+printpubdate: ''
+pubdate: 2023 Aug 9
+sortdate: 2023/08/09 00:00
+source: Sci Rep
+title: Abnormal spectral and scale-free properties of resting-state EEG in girls with
+  Rett syndrome
+uid: '10412611'
+volume: '13'
