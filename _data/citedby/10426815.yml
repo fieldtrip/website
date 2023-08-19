@@ -1,0 +1,40 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.59390/JVIC5712
+- idtype: pmcid
+  value: PMC10426815
+authors:
+- authtype: Author
+  name: Chagas AM
+- authtype: Author
+  name: Canli T
+- authtype: Author
+  name: Ziadlou D
+- authtype: Author
+  name: Forlano PM
+- authtype: Author
+  name: Samaddar S
+- authtype: Author
+  name: Chua E
+- authtype: Author
+  name: Baskerville KA
+- authtype: Author
+  name: Poon K
+- authtype: Author
+  name: Neuwirth LS
+epubdate: 2023 May 19
+fulljournalname: Journal of Undergraduate Neuroscience Education
+issue: '2'
+pages: E2-E7
+pmclivedate: 2023/08/16
+printpubdate: ''
+pubdate: 2023 May 19
+sortdate: 2023/05/19 00:00
+source: J Undergrad Neurosci Educ
+title: 'Using Open Neuroscience to Advance Equity in the Pedagogy and Research Infrastructure
+  in Colleges/Universities Still Financially Impacted by COVID-19: The Emergence of
+  a Global Resource Network Aimed at Integrating Neuroscience and Society'
+uid: '10426815'
+volume: '21'
