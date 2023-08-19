@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '37535694'
+- idtype: doi
+  value: 10.1371/journal.pcbi.1011007
+- idtype: pmcid
+  value: PMC10426958
+authors:
+- authtype: Author
+  name: Cabrera-Álvarez J
+- authtype: Author
+  name: Doorn N
+- authtype: Author
+  name: Maestú F
+- authtype: Author
+  name: Susi G
+epubdate: 2023 Aug 3
+fulljournalname: PLOS Computational Biology
+issue: '8'
+pages: e1011007
+pmclivedate: 2023/08/16
+printpubdate: ''
+pubdate: 2023 Aug 3
+sortdate: 2023/08/03 00:00
+source: PLoS Comput Biol
+title: 'Modeling the role of the thalamus in resting-state functional connectivity:
+  Nature or structure'
+uid: '10426958'
+volume: '19'

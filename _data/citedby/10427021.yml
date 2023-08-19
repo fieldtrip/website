@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1371/journal.pbio.3002176
+- idtype: pmcid
+  value: PMC10427021
+authors:
+- authtype: Author
+  name: Bellier L
+- authtype: Author
+  name: Llorens A
+- authtype: Author
+  name: Marciano D
+- authtype: Author
+  name: Gunduz A
+- authtype: Author
+  name: Schalk G
+- authtype: Author
+  name: Brunner P
+- authtype: Author
+  name: Knight RT
+epubdate: 2023 Aug 15
+fulljournalname: PLOS Biology
+issue: '8'
+pages: e3002176
+pmclivedate: 2023/08/16
+printpubdate: ''
+pubdate: 2023 Aug 15
+sortdate: 2023/08/15 00:00
+source: PLoS Biol
+title: Music can be reconstructed from human auditory cortex activity using nonlinear
+  decoding models
+uid: '10427021'
+volume: '21'
