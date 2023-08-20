@@ -1,0 +1,46 @@
+spellchecker: aspell
+
+matrix:
+- name: Markdown
+  pipeline:
+  - pyspelling.filters.url:
+  - pyspelling.filters.markdown:
+      markdown_extensions:
+      - pymdownx.superfences:
+  - pyspelling.filters.html:
+      comments: false
+      attributes:
+      - title
+      - alt
+      ignores:
+      - code
+      - pre
+      - tt
+  default_encoding: utf-8
+  aspell:
+    lang: en
+    d: en_US
+  dictionary:
+    wordlists:
+    - assets/wordlist-ignore.txt
+    output: assets/wordlist-ignore.dic
+    encoding: utf-8
+  sources:
+  - './*.md|!./configuration.md'
+  - ./_includes/**/*.md
+  - ./_layouts/**/*.md
+  - ./_posts/**/*.md
+  - ./_scripts/**/*.md
+  - ./assets/**/*.md
+  - ./build/**/*.md
+  - ./dataformat/**/*.md
+  - ./development/**/*.md
+  - ./error/**/*.md
+  - ./example/**/*.md
+  - ./faq/**/*.md
+  - ./getting_started/**/*.md
+  - ./reference/**/*.md
+  - ./template/**/*.md
+  - ./tutorial/**/*.md
+  - ./video/**/*.md
+  - ./workshop/**/*.md
