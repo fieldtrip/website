@@ -335,7 +335,7 @@ compelled to copy the source along with the object code.
    infringement or for any other reason (not limited to patent issues),
    conditions are imposed on you (whether by court order, agreement or
    otherwise) that contradict the conditions of this License, they do not
-   excuse you from the conditions of this License. If you cannnot
+   excuse you from the conditions of this License. If you cannot
    distribute so as to satisfy simultaneously your obligations under this
    License and any other pertinent obligations, then as a consequence you
    may not distribute the Program at all. For example, if a patent
@@ -357,7 +357,7 @@ implemented by public license practices. Many people have made
 generous contributions to the wide range of software distributed
 through that system in reliance on consistent application of that
 system; it is up to the author/donor to decide if he or she is willing
-to distribute software through any other system and a licensee cannnot
+to distribute software through any other system and a licensee cannot
 impose that choice.
 
 This section is intended to make thoroughly clear what is believed to
