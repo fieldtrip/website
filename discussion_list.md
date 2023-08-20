@@ -7,7 +7,7 @@ tags: [support]
 
 Please realize that the main developers are busy with research and teaching themselves and therefore in general cannot be expected to answer each individual question. Therefore we kindly request you to ask for support on the FieldTrip [email discussion list](http://mailman.science.ru.nl/mailman/listinfo/fieldtrip). It aims to foster an open communication among users themselves to build up expertise, and between users and developers.
 
-You can easily (un)subscribe yourself on the list's [webpage](http://mailman.science.ru.nl/mailman/listinfo/fieldtrip). Only people who are subscribed to the discussion list can send and will receive messages. Once subscribed, you can send your questions and contributions to <fieldtrip@science.ru.nl>.
+You can easily subscribe/unsubscribe yourself on the list's [webpage](http://mailman.science.ru.nl/mailman/listinfo/fieldtrip). Only people who are subscribed to the discussion list can send and will receive messages. Once subscribed, you can send your questions and contributions to <fieldtrip@science.ru.nl>.
 
 {% include markup/warning %}
 If you get the message <em>"You are not allowed to post to this mailing list, and your message has been automatically rejected"</em> then please read <a href="/faq/why_am_i_not_allowed_to_post_to_the_discussion_list">this frequently asked question</a>.
