@@ -142,7 +142,7 @@ The following piece of code will read the first 10 seconds data from a continuou
 
 ```
 hdr = ft_read_header(filename);
-dat = ft_read_data(filename, 'begsample', 1, 'endsample', 10\*hdr.fsample);
+dat = ft_read_data(filename, 'begsample', 1, 'endsample', 10*hdr.Fs);
 ```
 
 The following piece of code will read a one-second segment of data from a continuous dataset around the first trigger with value "4"
