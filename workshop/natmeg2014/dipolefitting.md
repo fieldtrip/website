@@ -352,7 +352,7 @@ As before, we also compute the difference waveform, i.e. the [mismatch negativit
 
 ### Fit a dipole model to the MEG data
 
-Having constructed the volume conduction model and completed the processing of the channel level data, we can investigate how well the data can be modeled with an Equivalent current Dipole (ECD) model. Since we expect activity in both auditory cortices, we will use a two-dipole model. Scanning the whole brain with two separate dipoles is not possible, but we can also start with the assumtion that the two dipoles are symmetric. In the [Neuromag coordinate system](/faq/coordsys#details_of_the_neuromag_coordinate_system) the x-axis runs from the right to the left, hence we specify symmetry along the x-direction.
+Having constructed the volume conduction model and completed the processing of the channel level data, we can investigate how well the data can be modeled with an Equivalent current Dipole (ECD) model. Since we expect activity in both auditory cortices, we will use a two-dipole model. Scanning the whole brain with two separate dipoles is not possible, but we can also start with the assumption that the two dipoles are symmetric. In the [Neuromag coordinate system](/faq/coordsys#details_of_the_neuromag_coordinate_system) the x-axis runs from the right to the left, hence we specify symmetry along the x-direction.
 
     cfg = [];
     cfg.latency = [0.080 0.110];

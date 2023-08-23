@@ -108,7 +108,7 @@ _stat_t_ contains:
 - _stat_ contains the _t-values_ at all channels and time points
 - _df_ is the degrees of freedom determining the _t-distribution_ that the _t-value_ is compared against to obtain the _p-values_
 - _critval_ contains the critical values for the test performed; if a _t-value_ is lesser than the negative value or greater than the positive value, the difference is declared significant. The _critval_ is dependent on _cfg.alpha_ and the degrees of freedom (_df_)
-- _prob_ contains the _p-values_ assciated with the _t-values_ given the degrees of freedom (_df_)
+- _prob_ contains the _p-values_ associated with the _t-values_ given the degrees of freedom (_df_)
 - _mask_ is a _logical_ matrix, 0's are where _p-values_ (_prob_) are greater than _cfg.alpha_, 1's are where they are lesser than _cfg.alpha_
 - _dimord_ indicates the ordering of dimensions, rows are channels and columns are time
 - _elec_ contains information about the electrodes, e.g., positions and names
