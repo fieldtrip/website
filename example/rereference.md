@@ -86,7 +86,7 @@ We recommend the median reference when you have a lot of channels and when it is
 
 The REST or Reference Electrode Standardization Technique for scalp EEG recordings approximates a reference at a point at infinity. See [A method to standardize a reference of scalp EEG recordings to a point at infinity](https://doi.org/10.1088/0967-3334/22/4/305) by Dezhong Yao (2001) for details.
 
-This method requires a forward model for the sources that are assumned to have generated the EEG data, this can be computed using **[ft_prepare_leadfield](/reference/ft_prepare_leadfield)**.
+This method requires a forward model for the sources that are assumed to have generated the EEG data, this can be computed using **[ft_prepare_leadfield](/reference/ft_prepare_leadfield)**.
 
 The following example uses a spherical arrangement of the electrodes, in combination with a three layer sperical headmodel. The sources consist of a layer of 642 evenly distributed dipoles that are shifted inward from the inner skull surface.
 
