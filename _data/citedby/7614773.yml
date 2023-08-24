@@ -1,0 +1,42 @@
+articleids:
+- idtype: pmid
+  value: '36108798'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2022.119624
+- idtype: pmcid
+  value: PMC7614773
+- idtype: MID
+  value: EMS177461
+authors:
+- authtype: Author
+  name: Rajpal H
+- authtype: Author
+  name: Mediano PA
+- authtype: Author
+  name: Rosas FE
+- authtype: Author
+  name: Timmermann CB
+- authtype: Author
+  name: Brugger S
+- authtype: Author
+  name: Muthukumaraswamy S
+- authtype: Author
+  name: Seth AK
+- authtype: Author
+  name: Bor D
+- authtype: Author
+  name: Carhart-Harris RL
+- authtype: Author
+  name: Jensen HJ
+epubdate: 2022 Sep 13
+fulljournalname: NeuroImage
+issue: ''
+pages: '119624'
+pmclivedate: 2023/07/18
+printpubdate: 2022 Nov 1
+pubdate: 2022 Sep 13
+sortdate: 2022/09/13 00:00
+source: Neuroimage
+title: 'Psychedelics and schizophrenia: Distinct alterations to Bayesian inference'
+uid: '7614773'
+volume: '263'

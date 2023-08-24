@@ -1,0 +1,55 @@
+articleids:
+- idtype: pmid
+  value: '37269959'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2023.120212
+- idtype: pmcid
+  value: PMC10300241
+authors:
+- authtype: Author
+  name: Messé A
+- authtype: Author
+  name: Hollensteiner KJ
+- authtype: Author
+  name: Delettre C
+- authtype: Author
+  name: Dell-Brown LA
+- authtype: Author
+  name: Pieper F
+- authtype: Author
+  name: Nentwig LJ
+- authtype: Author
+  name: Galindo-Leon EE
+- authtype: Author
+  name: Larrat B
+- authtype: Author
+  name: Mériaux S
+- authtype: Author
+  name: Mangin JF
+- authtype: Author
+  name: Reillo I
+- authtype: Author
+  name: de Juan Romero C
+- authtype: Author
+  name: Borrell V
+- authtype: Author
+  name: Engler G
+- authtype: Author
+  name: Toro R
+- authtype: Author
+  name: Engel AK
+- authtype: Author
+  name: Hilgetag CC
+epubdate: ''
+fulljournalname: Neuroimage
+issue: ''
+pages: '120212'
+pmclivedate: 2023/08/01
+printpubdate: 2023 Aug 1
+pubdate: 2023 Aug 1
+sortdate: 2023/08/01 00:00
+source: Neuroimage
+title: Structural basis of envelope and phase intrinsic coupling modes in the cerebral
+  cortex
+uid: '10300241'
+volume: '276'

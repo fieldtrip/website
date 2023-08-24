@@ -5,7 +5,7 @@ tags: [faq, fiducial, mri, ctf, source, coordinate]
 
 # How are the Left and Right Pre-Auricular (LPA and RPA) points defined?
 
-The definition of the pre-auriciular point taken from <http://www.medilexicon.com> is _"a point of the posterior root of the zygomatic arch lying immediately in front of the upper end of the tragus"_. The [zygomatic arch](https://en.wikipedia.org/wiki/Zygomatic_arch) or cheek bone is the skull bone in front of the ear as depicted in this figure
+The definition of the pre-auricular point taken from <http://www.medilexicon.com> is _"a point of the posterior root of the zygomatic arch lying immediately in front of the upper end of the tragus"_. The [zygomatic arch](https://en.wikipedia.org/wiki/Zygomatic_arch) or cheek bone is the skull bone in front of the ear as depicted in this figure
 
 {% include image src="/assets/img/faq/how_are_the_lpa_and_rpa_points_defined/zygomatic_arch.png" width="200" %}
 
@@ -13,7 +13,7 @@ and the [tragus](<https://en.wikipedia.org/wiki/Tragus_(ear)>) is a small backwa
 
 {% include image src="/assets/img/faq/how_are_the_lpa_and_rpa_points_defined/tragus.png" width="200" %}
 
-The approximate position of the pre-auriciular point is indicated in the figure above by the green point. It can be palpated (i.e. felt with the finger tip) the best if the subject moves his jaw by opening and closing his or her mouth.
+The approximate position of the pre-auricular point is indicated in the figure above by the green point. It can be palpated (i.e. felt with the finger tip) the best if the subject moves his jaw by opening and closing his or her mouth.
 
 The problem with using the LPA and RPA according to this definition is that it can be really difficult to localize them precisely on the anatomical MRI. Mislocalization of these points can lead to severe misregistration between the MRI and MEG/EEG, and consequently affect the accuracy of source localization.
 

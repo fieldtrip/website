@@ -12,7 +12,7 @@ There can be specific cases that do require resampling. For instance, when to si
 
 ## How is the resampling done?
 
-The help documentation of **[ft_resampledata](/reference/ft_resampledata)** provides some more details. It implements several resampling methods. The most important thing to be aware of, when resampling to a lower sampling rate, is the phenomenon of [aliasing](https://en.wikipedia.org/wiki/Aliasing). Signal components present in teh original signal that cannot be anymore represented by the new discrete sampling rate (i.e., signal components that are present in the original signal's bandwidth that is beyond the new signal's Nyquist frequency) wrap around to the lower frequencies, and thus may artificially inflate the noise at lower frequencies, which is undesired.
+The help documentation of **[ft_resampledata](/reference/ft_resampledata)** provides some more details. It implements several resampling methods. The most important thing to be aware of, when resampling to a lower sampling rate, is the phenomenon of [aliasing](https://en.wikipedia.org/wiki/Aliasing). Signal components present in the original signal that cannot be anymore represented by the new discrete sampling rate (i.e., signal components that are present in the original signal's bandwidth that is beyond the new signal's Nyquist frequency) wrap around to the lower frequencies, and thus may artificially inflate the noise at lower frequencies, which is undesired.
 
 ## Do I need to worry about this aliasing, and can it be avoided?
 

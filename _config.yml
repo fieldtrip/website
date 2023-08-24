@@ -81,8 +81,8 @@ exclude:
 #  - faq/*
 #  - getting_started/*
 #  - reference/*
-#  - template/*
 #  - tag/*
+#  - template/*
 #  - tutorial/*
 #  - video/*
 #  - workshop/*

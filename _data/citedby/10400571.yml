@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '37537328'
+- idtype: doi
+  value: 10.1038/s41598-023-39500-z
+- idtype: pmcid
+  value: PMC10400571
+authors:
+- authtype: Author
+  name: Callara AL
+- authtype: Author
+  name: Greco A
+- authtype: Author
+  name: Scilingo EP
+- authtype: Author
+  name: Bonfiglio L
+epubdate: 2023 Aug 3
+fulljournalname: Scientific Reports
+issue: ''
+pages: '12617'
+pmclivedate: 2023/08/05
+printpubdate: ''
+pubdate: 2023 Aug 3
+sortdate: 2023/08/03 00:00
+source: Sci Rep
+title: Neuronal correlates of eyeblinks are an expression of primary consciousness
+  phenomena
+uid: '10400571'
+volume: '13'

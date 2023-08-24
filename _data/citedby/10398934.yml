@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '37533093'
+- idtype: doi
+  value: 10.1186/s12984-023-01223-7
+- idtype: pmcid
+  value: PMC10398934
+authors:
+- authtype: Author
+  name: Bai Z
+- authtype: Author
+  name: Zhang JJ
+- authtype: Author
+  name: Fong KN
+epubdate: 2023 Aug 2
+fulljournalname: Journal of NeuroEngineering and Rehabilitation
+issue: ''
+pages: '100'
+pmclivedate: 2023/08/04
+printpubdate: ''
+pubdate: 2023 Aug 2
+sortdate: 2023/08/02 00:00
+source: J Neuroeng Rehabil
+title: 'Intracortical and intercortical networks in patients after stroke: a concurrent
+  TMS-EEG study'
+uid: '10398934'
+volume: '20'

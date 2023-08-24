@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fnimg.2022.924811
+- idtype: pmcid
+  value: PMC10406240
+authors:
+- authtype: Author
+  name: Clark RA
+- authtype: Author
+  name: Smith K
+- authtype: Author
+  name: Escudero J
+- authtype: Author
+  name: Ibáñez A
+- authtype: Author
+  name: Parra MA
+epubdate: 2022 Jul 11
+fulljournalname: Frontiers in Neuroimaging
+issue: ''
+pages: '924811'
+pmclivedate: 2023/08/08
+printpubdate: ''
+pubdate: 2022 Jul 11
+sortdate: 2022/07/11 00:00
+source: Front Neuroimaging
+title: Robust Assessment of EEG Connectivity Patterns in Mild Cognitive Impairment
+  and Alzheimer's Disease
+uid: '10406240'
+volume: '1'

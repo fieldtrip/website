@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '37522043'
+- idtype: doi
+  value: 10.1007/s11571-022-09862-7
+- idtype: pmcid
+  value: PMC10374503
+authors:
+- authtype: Author
+  name: Wei J
+- authtype: Author
+  name: Yao Z
+- authtype: Author
+  name: Huang G
+- authtype: Author
+  name: Li L
+- authtype: Author
+  name: Liang Z
+- authtype: Author
+  name: Zhang L
+- authtype: Author
+  name: Zhang Z
+epubdate: 2022 Aug 24
+fulljournalname: Cognitive Neurodynamics
+issue: '4'
+pages: 815-827
+pmclivedate: ''
+printpubdate: 2023 Aug
+pubdate: 2022 Aug 24
+sortdate: 2022/08/24 00:00
+source: Cogn Neurodyn
+title: Frontal-occipital phase synchronization predicts occipital alpha power in perceptual
+  decision-making
+uid: '10374503'
+volume: '17'

@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '37575197'
+- idtype: doi
+  value: 10.1016/j.isci.2023.107430
+- idtype: pmcid
+  value: PMC10415800
+authors:
+- authtype: Author
+  name: Bianco V
+- authtype: Author
+  name: Arrigoni E
+- authtype: Author
+  name: Di Russo F
+- authtype: Author
+  name: Romero Lauro LJ
+- authtype: Author
+  name: Pisoni A
+epubdate: 2023 Jul 20
+fulljournalname: iScience
+issue: '8'
+pages: '107430'
+pmclivedate: 2023/08/12
+printpubdate: ''
+pubdate: 2023 Jul 20
+sortdate: 2023/07/20 00:00
+source: iScience
+title: Top-down reconfiguration of SMA cortical connectivity during action preparation
+uid: '10415800'
+volume: '26'

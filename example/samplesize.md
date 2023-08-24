@@ -27,7 +27,7 @@ In this example, we will first briefly introduce how to estimate sample size thr
 
 ## Power analysis through simulations – an intuitive example of coin-toss
 
-Let's start by a brief introduction to estimate sample size using an intuitive example of coin-tossing. For a more detailed and excellent introduction, please see [Dr. Julian Quandt’s website](https://julianquandt.com/post/power-analysis-by-data-simulation-in-r-part-i/). The following section is inspired by Dr. Quandt’s excellent introduction.
+Let's start by a brief introduction to estimate sample size using an intuitive example of coin-tossing. For a more detailed and excellent introduction, please see [Dr. Julian Quandt's website](https://julianquandt.com/post/power-analysis-by-data-simulation-in-r-part-i/). The following section is inspired by Dr. Quandt's excellent introduction.
 
 Suppose we are presented with a coin and we want to know whether it is fair (50% chance lands on head). We can test it by running coin-tossing experiments. Consider the following two experiment scenarios. In Experiment 1, we tossed it 2 times, and observed 2 heads; In Experiment 2, we tossed it 5 times and observed 5 heads. With either experiment, we are inclined to think the coin is unfair. But intuitively, we will be more confident of the coin’s unfairness following Experiment 2 than following Experiment 1. But still, we don’t know how sure we are about our decision to call the coin unfair. We can clarify this using  inferential statistics.
 

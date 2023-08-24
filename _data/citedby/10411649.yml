@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '37548958'
+- idtype: doi
+  value: 10.1167/jov.23.8.9
+- idtype: pmcid
+  value: PMC10411649
+authors:
+- authtype: Author
+  name: Chawoush B
+- authtype: Author
+  name: Draschkow D
+- authtype: Author
+  name: van Ede F
+epubdate: 2023 Aug 7
+fulljournalname: Journal of Vision
+issue: '8'
+pages: '9'
+pmclivedate: 2023/08/10
+printpubdate: ''
+pubdate: 2023 Aug 7
+sortdate: 2023/08/07 00:00
+source: J Vis
+title: Capacity and selection in immersive visual working memory following naturalistic
+  object disappearance
+uid: '10411649'
+volume: '23'

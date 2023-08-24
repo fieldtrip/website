@@ -7,5 +7,6 @@ _site
 _site/*
 assets/pdf
 assets/root
+assets/*.dic
 *.pptx
 *.bak

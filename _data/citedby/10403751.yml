@@ -1,0 +1,53 @@
+articleids:
+- idtype: pmid
+  value: '37547265'
+- idtype: doi
+  value: 10.1093/noajnl/vdad091
+- idtype: pmcid
+  value: PMC10403751
+authors:
+- authtype: Author
+  name: Samuel N
+- authtype: Author
+  name: Harmsen IE
+- authtype: Author
+  name: Ding MY
+- authtype: Author
+  name: Sarica C
+- authtype: Author
+  name: Vetkas A
+- authtype: Author
+  name: Wong C
+- authtype: Author
+  name: Lawton V
+- authtype: Author
+  name: Yang A
+- authtype: Author
+  name: Rowland NC
+- authtype: Author
+  name: Kalia SK
+- authtype: Author
+  name: Valiante T
+- authtype: Author
+  name: Wennberg R
+- authtype: Author
+  name: Zadeh G
+- authtype: Author
+  name: Kongkham P
+- authtype: Author
+  name: Kalyvas A
+- authtype: Author
+  name: Lozano AM
+epubdate: 2023 Jul 21
+fulljournalname: Neuro-Oncology Advances
+issue: '1'
+pages: vdad091
+pmclivedate: 2023/08/06
+printpubdate: ''
+pubdate: 2023 Jul 21
+sortdate: 2023/07/21 00:00
+source: Neurooncol Adv
+title: Investigation of neurophysiologic and functional connectivity changes following
+  glioma resection using magnetoencephalography
+uid: '10403751'
+volume: '5'

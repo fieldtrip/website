@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1098/rstb.2022.0339
+- idtype: pmcid
+  value: PMC10404923
+authors:
+- authtype: Author
+  name: Stange L
+- authtype: Author
+  name: Ossandón JP
+- authtype: Author
+  name: Röder B
+epubdate: 2023 Aug 7
+fulljournalname: 'Philosophical Transactions of the Royal Society B: Biological Sciences'
+issue: '1886'
+pages: '20220339'
+pmclivedate: ''
+printpubdate: 2023 Sep 25
+pubdate: 2023 Aug 7
+sortdate: 2023/08/07 00:00
+source: Philos Trans R Soc Lond B Biol Sci
+title: Crossmodal visual predictions elicit spatially specific early visual cortex
+  activity but later than real visual stimuli
+uid: '10404923'
+volume: '378'
