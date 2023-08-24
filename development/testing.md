@@ -43,7 +43,7 @@ It is important to keep in mind that the test files or directories related to a 
 
 The directory `fieldtrip/test/invalid` contains failed and obsolete tests. These usually relate to bugs that were hard to reproduce and/or could not be fixed directly, and to obsolete tests for functionality that is not important anymore. This directory exists for historical reasons and the tests that it includes are not considered for automatic execution.
 
-### List of requirements and dependencies
+### Requirements and dependencies
 
 In the beginning of each test script a list of dependencies is provided. This helps to select an appropriate subset of tests to run based on:
 1. **WALLTIME**: The duration that a test needs to run. This duration is usually more than the actual duration needed since it also includes the time that MATLAB itself takes to start (which is about 30-60 seconds) and the time that it takes to load the test data.
@@ -188,12 +188,12 @@ All test scripts SHOULD ideally include a line that lists the **dependencies**, 
 
 Some test scripts use simulated data generated in the test script and don't need any external data to run. 
 
-For test scripts that do read data from disk, it is required for the data files to be present on the DCCN central storage. There are two types of test data: private and public.  
+For test scripts that do read data from disk, it is required for the data files to be present on the DCCN central storage. There are two types of test data: private and public.
 
 The private test data is stored in the directory `/home/common/matlab/fieldtrip/data/test`, which on the DCCN Windows desktops is available on `H:\common\matlab\fieldtrip\data\test`. This is only available to users inside the DCCN.
 
-The public test data is stored in the directory `/home/common/matlab/fieldtrip/data/ftp`, which on the Donders Windows desktops is available on `H:\common\matlab\fieldtrip\data\ftp`. This data is also available to through the [download server](https://download.fieldtriptoolbox.org/).
+The public test data is stored in the directory `/home/common/matlab/fieldtrip/data/ftp`, which on the Donders Windows desktops is available on `H:\common\matlab\fieldtrip\data\ftp`. This data is also available from the [download server](https://download.fieldtriptoolbox.org/).
 
 {% include markup/info %}
-Note that test scripts with ``DATA no`` and ``DATA public`` can be executed by every user. If needed, the **[dccnpath](/utilities/dccnpath)** function will download the public data automatically. 
+Note that test scripts with `DATA no` and `DATA public` can be executed by every user. If needed, the **[dccnpath](/utilities/dccnpath)** function will download the public data automatically. 
 {% include markup/end %}
