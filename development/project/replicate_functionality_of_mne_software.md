@@ -97,7 +97,7 @@ When this step is ready, it is possible to check if the Talairach transformation
     tkregister2 --mgz --s <subject's name> --fstal
     tkmedit <subject's name> brainmask.mgz -aux T1.mgz
 
-##### autorecon 2 and atutorecon 3
+##### autorecon 2 and autorecon 3
 
 The next two steps are creating the surfaces (white, pial and inflated).
 

@@ -76,7 +76,7 @@ You can reposition to i.e. to a previous recording session by specifying cfg.tem
 
 {% include image src="/assets/img/faq/how_can_i_monitor_a_subject_s_head_position_during_a_meg_session/anims1.gif" width="600" %}
 
-_Figure 1: Top (left plot) and back view (right plot) of the subject's head. Nasion is represented by a triangular marker and both aurical points by circular markers. To aid the subject with repositioning, the real-time fiducial positions are color coded to indicate the distances to the targets (green `< 1.5 mm, orange < 3 mm, and red >` 3 mm). If all three markers are within limits, the head turns light blue (CTF only). Click on the image for the animation._
+_Figure 1: Top (left plot) and back view (right plot) of the subject's head. Nasion is represented by a triangular marker and both auricular points by circular markers. To aid the subject with repositioning, the real-time fiducial positions are color coded to indicate the distances to the targets (green `< 1.5 mm, orange < 3 mm, and red >` 3 mm). If all three markers are within limits, the head turns light blue (CTF only). Click on the image for the animation._
 
 ### Replaying a subject's recorded head position
 

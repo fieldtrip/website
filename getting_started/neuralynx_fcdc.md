@@ -185,7 +185,7 @@ To visualize the data, we take advantage of the several specialized plotting fun
 ### Dealing with layouts
 
 Datasets obtained from electrocortigraphic (ECoG) grids might be particular for each recording. Number, position and relation with anatomical number of the electrodes used in a grid might differ completely to the same parameters in another ECoG grid. The FieldTrip function **[ft_prepare_layout](/reference/ft_prepare_layout)** allows the possibility to create a particular layout structures of a electrode grid from an image of the grid.
-In the following, we will show the layout structures that are currently used in our datasets. These layouts are avalaible upon request.
+In the following, we will show the layout structures that are currently used in our datasets. These layouts are available upon request.
 
 For example, a schematic layout of the 256 electrode grid might be obtained using the following the function **[ft_layoutplot](/reference/ft_layoutplot)**:
 
