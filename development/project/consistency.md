@@ -60,7 +60,7 @@ All 0th order (local options) and 1st order (direct dependency on a private func
 
 Status: done.
 
-## Step 3: automize the creation of the html documentation for the FieldTrip site
+## Step 3: automatize the creation of the html documentation for the FieldTrip site
 
 The documentation should consist of an overview of the main commands with the complete help similar as in MATLAB ([reference](/reference)) and an index with all [cfg options](/configuration). Status: done.
 

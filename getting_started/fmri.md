@@ -135,7 +135,7 @@ You could also do the interpolation the other way around, but interpolating the 
 
 ## Parcellate using an atlas
 
-It is also possible to use an atlas for the parcellation, see [here](/template/atlas) for a description of the template atlasses that are included. Note that you can also construct and use your own atlas, the only requirement is that it represented as a [parcellated](/reference/utilities/ft_datatype_parcellation) or [segmented](/reference/utilities/ft_datatype_segmentation) data structure with an indexed representation, i.e. each voxel or vertex belongs to a single tissue type.
+It is also possible to use an atlas for the parcellation, see [here](/template/atlas) for a description of the template atlases that are included. Note that you can also construct and use your own atlas, the only requirement is that it represented as a [parcellated](/reference/utilities/ft_datatype_parcellation) or [segmented](/reference/utilities/ft_datatype_segmentation) data structure with an indexed representation, i.e. each voxel or vertex belongs to a single tissue type.
 
 ```
 
