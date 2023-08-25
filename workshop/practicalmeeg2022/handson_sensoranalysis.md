@@ -122,7 +122,7 @@ However, we can also use plain MATLAB plotting functions. Let's look at a specif
 
     % this shows that MEG0741 corresponds to channel 84
     find(strcmp(freq.label, 'MEG0741'))
-    
+
     figure
     plot(freq.freq, freq.powspctrm(84,:));
     xlabel('frequency')
@@ -148,9 +148,9 @@ Or we can log transform the data ourselves. The following converts the data into
 
 _Figure: Power spectrum for channel MEG0741_
 
-We can see that the powerspectrum ranges from 0 to 150 Hz, which is due to the data being downsampled from 1100 to 300 Hz and the [Nyquist frequency](https://en.wikipedia.org/wiki/Nyquist_frequency) is 1/2 times the sampling rate. We can also see the effect of the [anti-aliassing filter](https://en.wikipedia.org/wiki/Aliasing) around 140 Hz, which was applied prior to downsampling.
+We can see that the powerspectrum ranges from 0 to 150 Hz, which is due to the data being downsampled from 1100 to 300 Hz and the [Nyquist frequency](https://en.wikipedia.org/wiki/Nyquist_frequency) is 1/2 times the sampling rate. We can also see the effect of the [anti-aliasing filter](https://en.wikipedia.org/wiki/Aliasing) around 140 Hz, which was applied prior to downsampling.
 
-Furthermore, we see clear peaks at 50, 100 and 150 Hz, corresponding to the line-noise and its [harmonics](https://en.wikipedia.org/wiki/Harmonic). There is quite some low-frequency noise below 5 Hz (which would probably be way less if we would have worked with the artifact-cleaned data). There is an alpha peak around 10 Hz, and not really a peak but rather a "shoulder" at 25 Hz, corresponding to the beta band.  
+Furthermore, we see clear peaks at 50, 100 and 150 Hz, corresponding to the line-noise and its [harmonics](https://en.wikipedia.org/wiki/Harmonic). There is quite some low-frequency noise below 5 Hz (which would probably be way less if we would have worked with the artifact-cleaned data). There is an alpha peak around 10 Hz, and not really a peak but rather a "shoulder" at 25 Hz, corresponding to the beta band.
 
 If we would want to continue all subsequent analysis with the power converted to decibel, we could use the **[ft_math](/reference/ft_math)** function to convert the `powspctrm` field to dB. That function can also be used to do mathematical operations on data structures, such as computing the difference between ERPs or computing the ratio between powerspectra. The following implements the dB transformation:
 
@@ -158,7 +158,7 @@ If we would want to continue all subsequent analysis with the power converted to
     cfg.operation = '10*log10(x1)';
     cfg.parameter = 'powspctrm'; % this is represented by x, and x1 refers to the first (and only) input data structure
     freq_db = ft_math(cfg, freq);
-    
+
 Since the power spectrum averaged over all trials shows a nice alpha peak, we could also check whether the alpha power increases over time. That is similar to how we computed the ERP image: we recompute the power spectrum, now only for one channel (to speed it up and use less memory) and we plot a color coded version of the trials-by-frequencies matrix.
 
     cfg = [];
@@ -201,7 +201,7 @@ After reading and preprocessing the data, we can compute the time-frequency repr
 
     cfg.trials = ismember(data.trialinfo(:,1), Scrambled);
     freqlow_scrambled = ft_freqanalysis(cfg, data);
-    
+
 Regardless of the method used for calculating the TFR, the output format is identical. It is a structure with the following fields:
 
     freqlow_famous =
@@ -289,7 +289,7 @@ How are the responses different? Discuss the assumptions behind choosing a relat
 ##### Exercise 2
 
 {% include markup/info %}
-Plot the TFR of sensor MEG1921. How do you account for the increased power at ~100-200 ms? Hint: compare it to the ERFs.  
+Plot the TFR of sensor MEG1921. How do you account for the increased power at ~100-200 ms? Hint: compare it to the ERFs.
 {% include markup/end %}
 
 ##### Exercise 3
@@ -355,7 +355,7 @@ Adjust the length of the time-window and thereby degree of smoothing. Use **[ft_
     cfg.foi          = 2:1:30;
     cfg.trials       = find(data.trialinfo(:,1)==1);
     cfg.toi          = -0.8:0.05:1.5;
-    
+
     cfg.t_ftimwin    = 4./cfg.foi;  % 4 cycles per time window
     TFRhann4         = ft_freqanalysis(cfg, data);
 

@@ -124,7 +124,7 @@ How it's currently implemented in these function
   if ~isfield(cfg, 'yparam'), cfg.yparam='freq'; end
   if ~isfield(cfg, 'zparam'), cfg.zparam='powspctrm'; end
 
-##### Relevant fields (trl) should be adjusted accordingl
+##### Relevant fields (trl) should be adjusted accordingly
 
 (note: when cfg.trials='all' this doesn't apply)
 

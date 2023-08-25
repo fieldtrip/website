@@ -70,14 +70,14 @@ A common issue with anatomical MRI data is that it is plotted [upside down](/faq
 
 The **[ft_volumereslice](/reference/ft_volumereslice)** function can be used to flip the volume such that the 1st dimension of the three-dimensional `mri.anatomy` array corresponds approximately with the x-axis of the coordinate system, that the 2nd dimension corresponds approximately to the y-axis, and the 3rd dimension to the z-axis.
 
-Note that the axes of the coordinate system in general will not be exactly aligned with the orientation and direction of the slices of the MRI during acquisition.  You can also use **[ft_volumereslice](/reference/ft_volumereslice)** to properly reslice your anatomical MRI; in that case it will be interpolated onto a regular and isotropic grid in which the volume is alignbed with the axes and the size of the voxel is identical in each direction. This is recommended when you use morphological image operations such as [imerode](https://www.mathworks.com/help/images/ref/imerode.html) and [imdilate](https://www.mathworks.com/help/images/ref/imdilate.html), which is common for constructing the segmentation that underlies the triangulated surfaces for the boundary element method (BEM).
+Note that the axes of the coordinate system in general will not be exactly aligned with the orientation and direction of the slices of the MRI during acquisition.  You can also use **[ft_volumereslice](/reference/ft_volumereslice)** to properly reslice your anatomical MRI; in that case it will be interpolated onto a regular and isotropic grid in which the volume is aligned with the axes and the size of the voxel is identical in each direction. This is recommended when you use morphological image operations such as [imerode](https://www.mathworks.com/help/images/ref/imerode.html) and [imdilate](https://www.mathworks.com/help/images/ref/imdilate.html), which is common for constructing the segmentation that underlies the triangulated surfaces for the boundary element method (BEM).
 
 The following flips the volume such that the anatomical volume approximately aligns with the axes
 
     cfg = [];
     cfg.method = 'flip';
     mri_resliced = ft_volumereslice(cfg, mri_realigned);
-    
+
     save mri_resliced mri_resliced
 
 If you would want to align it exactly with the axes and/or make the voxels isotropic, you could use the 'linear' method in **[ft_volumereslice](/reference/ft_volumereslice)**.
@@ -87,7 +87,7 @@ Following the reslicing, the MRI should be shown with the correct side up, the f
     cfg = [];
     cfg.method = 'ortho';
     ft_sourceplot(cfg, mri_resliced)
-    
+
 {% include image src="/assets/img/tutorial/headmodel_eeg_fem/figure2.png" width="600" %}
 
 _Figure; The MRI after assigning the desired coordinate system and reslicing_
@@ -105,7 +105,7 @@ Note that the segmentation is quite time consuming (~15mins) and if you want you
     cfg           = [];
     cfg.output    = {'gray', 'white', 'csf', 'skull', 'scalp'};
     segmentedmri  = ft_volumesegment(cfg, mri_resliced);
-    
+
     save segmentedmri segmentedmri
 
      disp(segmentedmri)
@@ -140,7 +140,7 @@ The function **[ft_sourceplot](/reference/ft_sourceplot)** can be used to plot t
 
     % convert from probabilistic/binary into indexed representation
     segmentedmri_indexed = ft_datatype_segmentation(segmentedmri, 'segmentationstyle', 'indexed');
-    
+
     % also add the anatomical mri
     segmentedmri_indexed.anatomy = mri_resliced.anatomy;
 
@@ -166,7 +166,7 @@ To improve how the mesh approximates the head shape, a node-shift can be applied
     cfg.shift  = 0.3;
     cfg.method = 'hexahedral';
     mesh = ft_prepare_mesh(cfg, segmentedmri);
-    
+
     save mesh mesh
 
     disp(mesh)
@@ -177,7 +177,7 @@ To improve how the mesh approximates the head shape, a node-shift can be applied
                unit: 'mm'
            coordsys: 'ctf'
                 cfg: [1x1 struct]
-                
+
 The mesh contains the following field
 
 - **pos** : The position of the vertices.
@@ -212,7 +212,7 @@ Now that gray matter, white matter, csf, skull and skin has been modeled as a me
     cfg.method = 'simbio';
     cfg.conductivity = [1.79 0.33 0.43 0.01 0.14];   % the order follows mesh.tissuelabel, which is 'csf', 'gray', 'scalp', 'skull', 'white'
     headmodel  = ft_prepare_headmodel(cfg, mesh);
-    
+
     save headmodel headmodel
 
     disp(headmodel)
@@ -273,7 +273,7 @@ The procedure to align the electrodes is basically the same as for a BEM head mo
 
     % you may need to specify the full path to the file
     elec = ft_read_sens('standard_1020.elc');
-    
+
     disp(elec)
         chanpos: [97x3 double]
        chantype: {97x1 cell}
@@ -333,7 +333,7 @@ The following starts with a 8 mm regular grid. The dipole positions are subseque
     cfg.headmodel.type = 'simbio';
     cfg.movetocentroids = 'yes';
     sourcemodel = ft_prepare_sourcemodel(cfg)
-    
+
     save sourcemodel sourcemodel
 
 We can plot the complete sourcemodel and compare it to only the sources inside the grey matter. This makes use of the MATLAB [linkprop](https://nl.mathworks.com/help/matlab/ref/linkprop.html) command to keep the two subplots in sync.
@@ -367,7 +367,7 @@ The construction of the sourcemodel above takes quite some time as many dipoles 
     cfg.headmodel.type = 'simbio';
     cfg.movetocentroids = 'yes';
     sourcemodel = ft_prepare_sourcemodel(cfg)
-       
+
 ## Summary and suggested further reading
 
 This tutorial explained how to build a volume conduction model of the head using a single subject anatomical MRI and a finite element method (FEM) using the FieldTrip-SIMBIO pipeline.
