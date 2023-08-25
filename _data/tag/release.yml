@@ -1,0 +1,12 @@
+- name:  Release and quality control
+  link:  /development/releasing
+
+- name:  Testing
+  link:  /development/testing
+
+- name:  I am having problems downloading
+  link:  /faq/i_am_having_problems_downloading
+
+- name:  Which version of FieldTrip should I download?
+  link:  /faq/which_version_of_fieldtrip_should_i_download
+
