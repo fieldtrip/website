@@ -48,7 +48,7 @@ The directory `fieldtrip/test/invalid` contains failed and obsolete tests. These
 In the beginning of each test script a list of dependencies is provided. This helps to select an appropriate subset of tests to run based on:
 1. **WALLTIME**: The duration that a test needs to run. This duration is usually more than the actual duration needed since it also includes the time that MATLAB itself takes to start (which is about 30-60 seconds) and the time that it takes to load the test data.
 2. **MEM**: MEM stands for memory, and it represents the amount of memory required for a test to run.
-3. **DATA**: The external data that the test requires to run. More specifically, `DATA no` means that the test doesn't need any external data to run. `DATA public` means it needs data available from the [download server](https://download.fieldtriptoolbox.org/). `DATA private` means that it needs data that are not publicly accesible but only to people working in the DCCN.
+3. **DATA**: The external data that the test requires to run. More specifically, `DATA no` means that the test doesn't need any external data to run. `DATA public` means it needs data available from the [download server](https://download.fieldtriptoolbox.org/). `DATA private` means that it needs data that are not publicly accessible but only to people working in the DCCN.
 4. **DEPENDENCY**: The dependencies, i.e. high- or low-level FieldTrip functions to which the test script is particularly sensitive.
 
 An example of the requirements and dependencies is: 
