@@ -100,7 +100,7 @@
 - name:  Scratchpad for the realtime buffer interface
   link:  /development/realtime/scratchpad
 
-- name:  Software quality control and release process
+- name:  Release and quality control
   link:  /development/releasing
 
 - name:  Accessing the FieldTrip source code through SVN
