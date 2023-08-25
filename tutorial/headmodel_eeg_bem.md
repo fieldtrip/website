@@ -65,7 +65,7 @@ An advantage of reslicing is that it also aligns the voxels with the axes of the
     cfg = [];
     cfg.method = 'linear';
     mri_resliced = ft_volumereslice(cfg, mri_realigned);
-    
+
     save mri_resliced mri_resliced
 
 Following the reslicing, the MRI should be shown with the correct side up, the field-of-view should be symmetric from left to right. If you move along the first axis, you should see that the first voxel index `i` increase _and_ that the `x` position increases (idem for `j/y` and `k/z`).
@@ -73,7 +73,7 @@ Following the reslicing, the MRI should be shown with the correct side up, the f
     cfg = [];
     cfg.method = 'ortho';
     ft_sourceplot(cfg, mri_resliced)
-    
+
 {% include image src="/assets/img/tutorial/headmodel_eeg_bem/figure4.png" width="600" %}
 
 _Figure; The MRI after assigning the desired coordinate system and reslicing_
@@ -144,11 +144,11 @@ We can change the segmentation from the probabilistic (or in this case Boolean) 
               cfg: [1x1 struct]
            tissue: [256x256x256 double]
       tissuelabel: {'scalp'  'skull'  'brain'}
-      
+
 After adding the anatomical data to the segmentation, we can plot them together. By specifying our own colormap, we can be sure that the tissue types have clearly distinguishable colors.
 
     segmentedmri_indexed.anatomy = mri_resliced.anatomy;
-    
+
     cfg = [];
     cfg.method = 'ortho';
     cfg.anaparameter = 'anatomy';
@@ -299,7 +299,7 @@ The electrode positions are described in the `elecpos` field and the `label` fie
 The head model is expressed in the same units and coordinates as the anatomical MRI, in this case the CTF [coordinate system](/faq/coordsys)). Therefore, the electrode positions need to be specified accordingly. We can do a first check with
 
     elec = ft_determine_coordsys(elec)
-    
+
     Do you want to change the anatomical labels for the axes [Y, n]? y
     What is the anatomical label for the positive X-axis [r, l, a, p, s, i]? r
     What is the anatomical label for the positive Y-axis [r, l, a, p, s, i]? a
@@ -315,7 +315,7 @@ We cannot see what the origin of the coordinate system is aligned to. It is defi
 {% include markup/success %}
 The specific template electrode set that we are using here is in fact coregistered with the MNI coordinate system. It is documented in more detail [here](/template/electrode/) and the corresponding template BEM headmodel is documented [here](/template/headmodel/#standard_bemmat).
 {% include markup/end %}
-    
+
 #### Manual alignment of the template electrodes
 
 To align the template electrodes with the head model, we can take the scalp surface that we constructed earlier. However, that is (for computational reasons) relatively coarse. We can also make a new scalp surface description with more detail. If we align the electrodes with that, they will also be aligned with the lower resolution head model.
@@ -324,7 +324,7 @@ To align the template electrodes with the head model, we can take the scalp surf
     cfg.tissue      = 'scalp';
     cfg.numvertices = 10000;
     scalp = ft_prepare_mesh(cfg, segmentedmri);
-    
+
     save scalp scalp
 
 We can plot the electrode positions together with the
@@ -356,7 +356,7 @@ We can use **[ft_electroderealign](/reference/ft_electroderealign)** for interac
     cfg.elec       = elec;
     cfg.headshape  = scalp;
     elec_realigned = ft_electroderealign(cfg);
-    
+
     save elec_realigned elec_realigned
 
 Since rotations and translations do not "commute", i.e. the order in which you execute the rotation matters, it can be confusing to specify all rotations and translations in one go. Instead, you can use the "apply" button to do the transformations stepwise.
@@ -403,7 +403,7 @@ Or we can use the anatomical MRI to identify them
     cfg.method = 'volume';
     cfg.channel = {'nas', 'ini', 'lpa', 'rpa'};
     fiducials = ft_electrodeplacement(cfg, mri_resliced);
-    
+
     save fiducials fiducials
 
 The headshape method is easiest for the pre-auricular points, as you can regognize the whole shape of the ears. The volume method is the easiest for the nasion, and by far the most accurate for the inion.
@@ -429,9 +429,9 @@ After having identified the anatomical landmarks, we can
     cfg.fiducial.lpa = fiducials.elecpos(3,:);
     cfg.fiducial.rpa = fiducials.elecpos(4,:);
     elec_placed = ft_electrodeplacement(cfg, scalp);
-    
+
     save elec_placed elec_placed
-   
+
 Again we can plot the electrodes together with the head surface.
 
     figure

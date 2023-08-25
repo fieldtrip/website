@@ -34,7 +34,7 @@ The primary responsibility of the mex file is to allow you from within MATLAB to
 
 Furthermore, it is possible to instantiate the buffer as network transparent server, linked to the MATLAB application (the "tcpserver" thread). It is even possible to start a second thread that emulates an EEG acquisition system (the "sinewave" thread).
 
-### Writing a new proxy for acquring data in MATLAB
+### Writing a new proxy for acquiring data in MATLAB
 
 You should start by studying the example scripts in the 'realtime' directory, e.g., **[ft_realtime_signalproxy](/reference/realtime/example/ft_realtime_signalproxy)** as an example of how to write random data to a buffer, or **[ft_realtime_pooraudioproxy](/reference/realtime/example/ft_realtime_pooraudioproxy)** as a simple example for reading data from some hardware device and writing into a buffer.
 

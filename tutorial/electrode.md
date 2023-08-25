@@ -96,7 +96,7 @@ To check, you can plot it again.
 
     ft_plot_headshape(head_surface, 'axes', true) % plot it together with the axes
 
-After this step, the nose points approximately along the x-axis and the vertex along the z-axis. Note however that the y-axis crosses at the posterior part of the ears, not passing through any specific anatomical landmarks, so althopugh it is upright, it is not yet in a well-defined [coordinate system](/faq/coordsys).
+After this step, the nose points approximately along the x-axis and the vertex along the z-axis. Note however that the y-axis crosses at the posterior part of the ears, not passing through any specific anatomical landmarks, so although it is upright, it is not yet in a well-defined [coordinate system](/faq/coordsys).
 
 In the next step we will transform the mesh into [CTF coordinates](/faq/coordsys). For this we have to specify the nasion (NAS), left preauricular (LPA) and right preauricular (RPA) points.
 

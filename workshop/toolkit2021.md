@@ -23,7 +23,7 @@ All interactive sessions will take place between 10:00 and 17:00 CET, i.e. cente
 
 We will also record the lectures and provide them for offline viewing at another moment, but especially the participation in Q&A and hands-on sessions requires you being online at the same time as us. If you cannot attend online, but want to watch the lectures anyway, have a look at the [online videos](/video) from previous years.
 
-To try and accomodate time-zone differences a little bit, we will also provide opportunities for more informal interactions among each other and with the tutors early in the morning and in the evening. Note that these do not replace interaction during the core of the day.
+To try and accommodate time-zone differences a little bit, we will also provide opportunities for more informal interactions among each other and with the tutors early in the morning and in the evening. Note that these do not replace interaction during the core of the day.
 
 This is the [public URL to the calendar](https://calendar.google.com/calendar/embed?src=lqm5cfqalbdfi1hen59r889rdg%40group.calendar.google.com) that you can view online.
 
@@ -64,16 +64,16 @@ This should be a MATLAB version > 2016b. For people who use a computer at the DC
 ### 3. Ensure that you have an up-to-date version of FieldTrip
 
 For people that **do not** use a computer at the DCCN:
-  
+
 Download the latest release version of the FieldTrip toolbox from [here](https://github.com/fieldtrip/fieldtrip/releases). For those of you familiar with git, you can also clone directly from GitHub with
 
       git clone https://github.com/fieldtrip/fieldtrip.git
       git checkout release
 
 Please note that the stable release version corresponds to the "release" branch, and the cutting-edge development version to the "master" branch (which might be a few steps ahead).
-  
+
 For people that **do** use a computer at the DCCN (either a PC via remote desktop or the DCCN cluster):
-  
+
 FieldTrip is installed on the cluster, on /home/common/matlab/fieldtrip. (on Windows PCs, this is usually mounted on H:\\common\\matlab\\fieldrip. So you don’t need to download the latest release version of the FieldTrip toolbox from here or from here.
 
 ### 4. Download the handson data in advance, or check whether you can access it
@@ -96,7 +96,7 @@ For people that **do** use a computer at the DCCN (either a desktop PC via remot
 The data needed for the tutorials are available on `/home/common`, so if you are working on the compute cluster at the DCCN, you don’t need to download this in advance. If you insist on downloading the data in advance, you can follow the instructions below.
 
 The raw MEG data set of ‘Subject01’, and associated data are located in `/home/common/matlab/fieldtrip/data`. Additional hands-on session specific data are located in  `/home/common/matlab/fieldtrip/data/ftp/tutorial`. These data are needed once we get to the respective hands-on session:
-  
+
 -   `/home/common/matlab/fieldtrip/data/ftp/tutorial/eventrelatedaveraging`
 -   `/home/common/matlab/fieldtrip/data/ftp/tutorial/timefrequencyanalysis`
 -   `/home/common/matlab/fieldtrip/data/ftp/tutorial/beamformer`

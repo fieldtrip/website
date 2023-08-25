@@ -27,7 +27,7 @@ The data analyses will follow the following steps:
 - Cut the data into overlapping segments with **[ft_redefinetrial](/reference/ft_redefinetrial)**.
 - Compute sensor level power spectra and determine peak frequency using **[ft_freqanalysis](/reference/ft_freqanalysis)** and **[ft_multiplotER](/reference/ft_multiplotER)**.
 - Align the EEG electrodes to the scalp surface using **[ft_electroderealign](/reference/ft_electroderealign)**.
-- Plot and evaluate the alignement using **[ft_plot_headmodel](/reference/plotting/ft_plot_headmodel)**, **[ft_plot_mesh](/reference/plotting/ft_plot_mesh)** and **[ft_plot_sens](/reference/plotting/ft_plot_sens)** in combination.
+- Plot and evaluate the alignment using **[ft_plot_headmodel](/reference/plotting/ft_plot_headmodel)**, **[ft_plot_mesh](/reference/plotting/ft_plot_mesh)** and **[ft_plot_sens](/reference/plotting/ft_plot_sens)** in combination.
 - Construct a forward model using **[ft_prepare_leadfield](/reference/ft_prepare_leadfield)**.
 - Compute spatial filters and estimate the amplitude of the sources using **[ft_sourceanalysis](/reference/ft_sourceanalysis)**.
 - Visualize the results, with **[ft_sourceplot](/reference/ft_sourceplot)**.
@@ -53,7 +53,7 @@ The aim is to identify the frequency and topography of an 10Hz oscillation. You 
     % convert elec positions in mm
     elec        = ft_convert_units(elec,'mm');
     data.elec   = elec;
-    
+
 ### Prepare electrode layout for plotting
 
 Using the EEG electrodes we compute a 2D layout in order to plot topographies. We use **[ft_prepare_layout](/reference/ft_prepare_layout)** and visualize it using **[ft_plot_layout](/reference/plotting/ft_plot_layout)**.
@@ -142,7 +142,7 @@ In Figure 3 it is apparent that the electrodes do not align with the scalp surfa
     elec_aligned  = ft_electroderealign(cfg);
     % make sure the aligned electrodes are updated
     dataseg.elec  = elec_aligned;
-    
+
 
 {% include image src="/assets/img/tutorial/networkanalysis_eeg/figure4.png" width="400" %}
 
@@ -161,7 +161,7 @@ Before we proceed it is always useful to check the corregistration between the e
         index = find(dkatlas.tissue==i);
        if ~isempty(index)
           vertexcolor(index,:) = repmat(colr(i,:),  length(index), 1);
-       end   
+       end
     end
 
     % make the headmodel surface transparent
@@ -169,7 +169,7 @@ Before we proceed it is always useful to check the corregistration between the e
     ft_plot_mesh(dkatlas, 'facecolor', 'brain',  'vertexcolor', vertexcolor, 'facealpha', .5);
     ft_plot_sens(elec_aligned);
     view([0 -90 0])
-    
+
 {% include image src="/assets/img/tutorial/networkanalysis_eeg/figure5.png" width="400" %}
 
 _Figure 5: Alignment of headmodel (grey), electrodes (black) and sourcemodel(color). Individual parcels are assigned different color value._
@@ -177,8 +177,8 @@ _Figure 5: Alignment of headmodel (grey), electrodes (black) and sourcemodel(col
 Now we can proceed with the computation of the leadfield matrix, using **[ft_prepare_leadfield](/reference/ft_prepare_leadfield)**.
 
     cfg         = [];
-    cfg.elec    = elec_aligned;            
-    cfg.channel = dataseg.label;  
+    cfg.elec    = elec_aligned;
+    cfg.channel = dataseg.label;
     cfg.sourcemodel.pos    = sourcemodel.pos;           % 2002v source points
     cfg.sourcemodel.inside = 1:size(sourcemodel.pos,1); % all source points are inside of the brain
     cfg.headmodel = headmodel_eeg;                      % volume conduction model
@@ -234,7 +234,7 @@ In order to visualize source-reconstructed data, the function [ft_sourceplot](/r
     cfg.maskparameter = cfg.funparameter;
     cfg.opacitymap    = 'rampup';
     cfg.colorbar      = 'no';
-    
+
     figure(6);
     ft_sourceplot(cfg, sourceint);
     colorbar off
@@ -289,7 +289,7 @@ Now, we can compute the spectra for the two sets of epochs using **[ft_freqdescr
     cfg.parameter = 'powspctrm';
     cfg.operation = 'divide';
     powratio      = ft_math(cfg, datapow_high, datapow_low);
-    
+
     %% plot the topography of the difference along with the spectra
     cfg        = [];
     cfg.layout = lay;
@@ -420,7 +420,7 @@ We can now explore the structure in the estimated connectivity matrices using gr
     cfg.parameter = 'degrees';
     network_int   = ft_sourceinterpolate(cfg, network_full, dkatlas);
     network_int   = ft_sourceparcellate([], network_int, dkatlas);
-    
+
     %% create a fancy mask
     cfg              = [];
     cfg.method       = 'surface';

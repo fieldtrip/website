@@ -34,7 +34,7 @@ data = [];
 for k = 1:nrpt
   data.time{k} = linspace(start_time, end_time, nsamples);
   data.trial{k} = randn(nchan,nsamples);
-end  
+end
 data.label = cellstr(num2str((1:nchan).'));
 
 % the default functionality in ft_resampledata applies a firls
@@ -107,7 +107,7 @@ If the signal has a flat spectrum in the original bandwidth (red line, 'original
 data_hf_broad = data;
 for k = 1:nchan
   data_hf_broad.trial{k}(1,:) = data_hf_broad.trial{k}(1,:) + ft_preproc_highpassfilter(randn(1,nsamples), fs, 110, [], 'firws').*50;
-  data_hf_broad.time{k} = data_hf_broad.time{1};    
+  data_hf_broad.time{k} = data_hf_broad.time{1};
 end
 data_hf_broad.trial{1} = data_hf_broad.trial{1}(1,:);
 data_hf_broad.label    = data_hf_broad.label(1);
@@ -174,14 +174,14 @@ ylabel('power');
 
 {% include image src="/assets/img/faq/resampling/resampling2.png" width="600" %}
 
-The above example is an extreme case that illustrates the need of applying a bit more 'aggressive' lowpass filtering for the `rs_native` (blue) line. Although the applied lowpass filter is sufficient for the `resample` method, this filter is still not good enough to get rid of all aliasing for the `interp1` method. 
+The above example is an extreme case that illustrates the need of applying a bit more 'aggressive' lowpass filtering for the `rs_native` (blue) line. Although the applied lowpass filter is sufficient for the `resample` method, this filter is still not good enough to get rid of all aliasing for the `interp1` method.
 
 ```
 % add a very high amplitude narrowband component
 data_hf_narrow = data;
 for k = 1:nchan
   data_hf_narrow.trial{k}(1,:) = data_hf_narrow.trial{k}(1,:) + ft_preproc_bandpassfilter(randn(1,nsamples), fs, [110 120], [], 'firws').*50;
-  data_hf_narrow.time{k} = data_hf_narrow.time{1};    
+  data_hf_narrow.time{k} = data_hf_narrow.time{1};
 end
 data_hf_narrow.trial{1} = data_hf_narrow.trial{1}(1,:);
 data_hf_narrow.label    = data_hf_narrow.label(1);

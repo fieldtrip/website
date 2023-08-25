@@ -8,7 +8,7 @@ Before starting with FieldTrip, it is important that you set up your [MATLAB pat
 Then, you can read in the anatomical MRI data.
 
     mri = ft_read_mri('Subject01.mri');
-    
+
     save mri mri
 
     disp(mri)
@@ -82,7 +82,7 @@ Using the fiducial locations (in voxels) written down in the previous step, we w
     cfg.fiducial.rpa = [144  142  158];
     cfg.coordsys = 'ctf'; % the desired coordinate system
     mri_realigned = ft_volumerealign(cfg, mri)
-    
+
     save mri_realigned mri_realigned
 
 If we did not pay attention to the anatomical landmarks when looking at **[ft_sourceplot](/reference/ft_sourceplot)**, we could also use **[ft_volumerealign](/reference/ft_volumerealign)** to find them.

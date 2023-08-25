@@ -137,7 +137,7 @@ Let us have a look at the NIRS data
 
 ## Examining the TTL triggers and events
 
-Let us have a look at the triggers, together with a single NIRS channel for comparison. Using ft_databrowser I already identified that the "s" channel (with the stimulus accordimng to the `.nirs` format) does not contain anything. The channels "aux1" and "aux2" are interesting.
+Let us have a look at the triggers, together with a single NIRS channel for comparison. Using ft_databrowser I already identified that the "s" channel (with the stimulus according to the `.nirs` format) does not contain anything. The channels "aux1" and "aux2" are interesting.
 
     cfg = [];
     cfg.viewmode = 'vertical';

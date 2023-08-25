@@ -12,7 +12,7 @@ To communicate with and reach a wide audience, we use the following channels
 - [GitHub](https://github.com/fieldtrip), for interaction between developpers
 - [Mastodon](https://fosstodon.org/@fieldtriptoolbox), for release announcements and news items
 
-With each of these we reach out to a specific group FieldTrip stakeholders but - alhough they are partially overlapping - there is none through which we reach everyone.
+With each of these we reach out to a specific group FieldTrip stakeholders but - although they are partially overlapping - there is none through which we reach everyone.
 
 ## News items and releases
 

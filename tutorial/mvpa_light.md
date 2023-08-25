@@ -125,7 +125,7 @@ useful to repeat the cross-validation multiple times? (hint: samples are randoml
 
 Many neuroimaging datasets have a 3-D structure _[trials x channels x time]_. Classification across time can help identify the time points in a trial _when_ discriminative information shows up. To this end, classification is performed for each time point separately. First, we need to make sure that the time dimension is not averaged out. We can set `cfg.avgovertime = 'no'`, but since the default value is `'no'` we can simply omit this parameter.
 
-    cfg = [] ;  
+    cfg = [] ;
     cfg.method           = 'mvpa';
     cfg.features         = 'chan';
     cfg.mvpa.classifier  = 'lda';
@@ -161,7 +161,7 @@ Perform classification across time using all three classes FIC, FC, and IC. As c
 
 Which channels contribute most to classification performance? The answer to this question can be used to better interpret the data or to perform feature selection. To this end, we will perform a separate classification analysis for each channel.
 
-    cfg = [] ;  
+    cfg = [] ;
     cfg.method        = 'mvpa';
     cfg.latency       = [0.3, 0.7];
     cfg.avgovertime   = 'yes';
@@ -176,7 +176,7 @@ Since a classification result is obtained for each channel, classification accur
 
     cfg              = [];
     cfg.parameter    = 'accuracy';
-    cfg.layout       = 'CTF151_helmet.mat';            
+    cfg.layout       = 'CTF151_helmet.mat';
     cfg.xlim         = [0, 0];
     cfg.colorbar     = 'yes';
     ft_topoplotER(cfg, stat);
@@ -186,7 +186,7 @@ Since a classification result is obtained for each channel, classification accur
 ### Exercise 3
 
 {% include markup/info %}
-Although we set `cfg.features = 'time'`, there was acually only one time point since `cfg.avgovertime='yes'`. To use the multiple time points as separate features, repeat the analysis setting `cfg.avgovertime = 'no'`. This time, for each channel, all time points in the 0.3-0.7 s window are used as features rather than just their average. The maximum performance should increase slightly.
+Although we set `cfg.features = 'time'`, there was actually only one time point since `cfg.avgovertime='yes'`. To use the multiple time points as separate features, repeat the analysis setting `cfg.avgovertime = 'no'`. This time, for each channel, all time points in the 0.3-0.7 s window are used as features rather than just their average. The maximum performance should increase slightly.
 {% include markup/end %}
 
 
@@ -200,7 +200,7 @@ In the previous analysis, classification has been performed for each channel sep
 
 We are now ready to re-run the searchlight analysis. We can pass the neighbourhood structure via the parameter `cfg.neighbours`.
 
-      cfg = [] ;  
+      cfg = [] ;
       cfg.method        = 'mvpa';
       cfg.features      = 'time';
       cfg.design        = [ones(nFIC,1); 2*ones(nFC,1)];
@@ -216,7 +216,7 @@ Call `ft_topoplotER` to plot the result as a topography.
 
       cfg              = [];
       cfg.parameter    = 'accuracy';
-      cfg.layout       = 'CTF151_helmet.mat';            
+      cfg.layout       = 'CTF151_helmet.mat';
       cfg.xlim         = [0, 0];
       cfg.colorbar     = 'yes';
       ft_topoplotER(cfg, stat);
@@ -230,7 +230,7 @@ As expected, the resultant topography is slightly more smeared out. Peak classif
 
 Notice the symmetry between the previous two analyses: for the 'when' analysis, we performed a classification for each time point using channels as features, for the 'where' analysis we performed a classification for each channel using time points as features. We select between these two analyses by setting `cfg.features` to either `'chan'` or `'time'`. What happens if we set `cfg.features = []`?
 
-    cfg = [] ;  
+    cfg = [] ;
     cfg.method        = 'mvpa';
     cfg.latency       = [-0.1, 0.8];
     cfg.features      = [];
@@ -250,7 +250,7 @@ In this case, both channels and time points act as search dimensions and the res
 
 Classification across time does not give insight into whether information is shared across different time points. For example, is the information that the classifier uses early in a trial (t=80 ms) the same that it uses later (t=300ms)? In time generalization, this question is answered by training the classifier at a certain time point t. The classifier is then tested at the same time point t but it is also tested at all other time points in the trial ([King and Dehaene, 2014](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5635958/)). This procedure is then repeated for every possible training time point. To perform time x time classification, we need to set the `cfg.generalize` parameter:
 
-    cfg = [] ;  
+    cfg = [] ;
     cfg.method           = 'mvpa';
     cfg.features         = 'chan';
     cfg.generalize       = 'time';
@@ -285,7 +285,7 @@ The techniques we explored for 3-D _[samples x chan x time]_ data seamlessly gen
 
 We aim to perform classification for each time-frequency point separately using channels as features. To this end, we only need to set `cfg.features = 'chan'`.
 
-    cfg = [] ;  
+    cfg = [] ;
     cfg.method        = 'mvpa';
     cfg.features      = 'chan';
     cfg.design        = [ones(nFIC,1); 2*ones(nFC,1)];
@@ -317,7 +317,7 @@ classifiers and stopping the time using the `tic` and `toc` functions.
 
 Similar to what we did in the 'where' analysis, we can control the size of the searchlight by specifying neighbouring channels/times/frequencies for each of the search dimensions. As an example, let us run an analysis across frequencies and time, this time taking into account neighbouring time points as well. To this end, we set `cfg.timwin = 5` which means that a total of 5 time points is considered in each analysis: the given center time point and its two immediately preceding and following time points. Including neighbouring channels/frequencies/time points increases the dimensionality of the feature space. In this example, the feature space has the dimension 149 (channel) x 5 (time points) = 745. A larger feature space provides more information to the classifier but it also is more computationally demanding and potentially holds the danger of overfitting.
 
-    cfg = [] ;  
+    cfg = [] ;
     cfg.method        = 'mvpa';
     cfg.features      = 'chan';
     cfg.design        = [ones(nFIC,1); 2*ones(nFC,1)];

@@ -165,7 +165,7 @@ In the section above, we have created a set of `trl` matrices, which contain, fo
 The above chunk of code uses **[ft_preprocessing](/reference/ft_preprocessing)** four times per run, with channel type specific processing options. Note the exclusion of a subset of the EEG channels which correspond to non-brain recording EEG signals (EOG/ECG etc.). The EEG data are average-referenced, the other channels are not. After the data for each group of channels has been read from disk, **[ft_resampledata](/reference/ft_resampledata)** is used to downsample the data to a sampling frequency of 300 Hz. Then, the data structures are combined into a single run-specific data structure, using **[ft_appenddata](/reference/ft_appenddata)**.
 
 {% include markup/warning %}
-There is no advantage in resampling the data other than saving some memory. If your computer is big enough to handle your data, we recommend not to resample as there can be some annoying side effects. The anti-aliassing filter can affect your data, and post-hoc bookeeping of events (which are indicated with sample numbers) gets more complicated.
+There is no advantage in resampling the data other than saving some memory. If your computer is big enough to handle your data, we recommend not to resample as there can be some annoying side effects. The anti-aliasing filter can affect your data, and post-hoc bookeeping of events (which are indicated with sample numbers) gets more complicated.
 
 In this specific case we are resampling to fit it in memory of the participants' laptops and to speed up subsequent computations.
 {% include markup/end %}
@@ -229,7 +229,7 @@ First of all, let's look at the plotting the data directly using standard MATLAB
 To find a specific channel, we can use the following
 
     find(strcmp(avg_famous.label, 'EEG065'))
-    
+
 and to plot the 'EEG065' channel channel we can do
 
     plot(avg_famous.time, avg_famous.avg(367,:), 'b')
@@ -243,7 +243,7 @@ The same figure can be achieved using the following code
     cfg.channel = 'EEG065'
     ft_singleplotER(cfg, avg_famous, avg_unfamiliar, avg_scrambled)
 
-There are in total 102 magnetometer channels, 204 planar gradiometer channels, and 70 EEG channels. We would not want to make a separate figure for each of them. We can plot the channels of one specific type (and with the same units) together in one figure, where each channel is plotted at the corresponding location.  
+There are in total 102 magnetometer channels, 204 planar gradiometer channels, and 70 EEG channels. We would not want to make a separate figure for each of them. We can plot the channels of one specific type (and with the same units) together in one figure, where each channel is plotted at the corresponding location.
 
     % visualise the magnetometer data
     cfg        = [];
@@ -278,7 +278,7 @@ For the visualisation of the gradiometers, we first compute the magnitude of the
     cfg        = [];
     cfg.layout = 'neuromag306cmb_helmet.mat';
     figure; ft_multiplotER(cfg, avg_famous_c, avg_unfamiliar_c, avg_scrambled_c);
-    
+
 Just like plotting the MEG data, we can plot the EEG data. Since EEG data is recorded with widely different EEG systems, numbers of channels, and electrode layouts, we need to specify the layout of the channels to be plotted. This is explained in detail in the [layout tutorial](/tutorial/layout). FieldTrip also comes with a wide range of [template layouts](/template/layout), but the 70-channel EEG system used here is not one of them. Luckily we have the electctrode positions, which were digitized with a Polhemus.
 
     % create an EEG channel layout on-the-fly and visualise the eeg data
@@ -406,7 +406,7 @@ You can thresholded the ERP using the SEM to highlight parts of the time series:
     ft_plot_vector(avg_famous.time, avg, 'highlight', significant, 'highlightstyle', 'thickness', 'color', 'b');
     axis tight
     grid on
-    
+
 {% include image src="/assets/img/workshop/practicalmeeg2022/handson_raw2erp/figure9.png" width="400" %}{% include image src="/assets/img/workshop/practicalmeeg2022/handson_raw2erp/figure10.png" width="400" %}
 
 _Figure: the ERP with the SEM as highlighted region, and the ERP that highlights the threshold._

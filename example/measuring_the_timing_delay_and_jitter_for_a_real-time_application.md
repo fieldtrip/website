@@ -462,7 +462,7 @@ This shows no samples missing and no accumulative delays
 
 {% include image src="/assets/img/example/measuring_the_timing_delay_and_jitter_for_a_real-time_application/delay_hist._1200hz_hl_off.jpg" %}
 
-We note that the delays are smaller when the continuous HL is off. This is probably to do with an additinal data granularity related to the time required to fit a dipole while doing continuous localization- more details on this will follow soon...
+We note that the delays are smaller when the continuous HL is off. This is probably to do with an additional data granularity related to the time required to fit a dipole while doing continuous localization- more details on this will follow soon...
 
 As the speed of the streaming is proportional to the number odf samples in the buffer (how fast the buffer gets filled) this is expected to increase a) with increasing channel numbers b) with increasing sample rate
 
