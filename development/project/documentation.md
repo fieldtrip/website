@@ -44,7 +44,7 @@ In the source statistics part there is cfg.grid=grid but grid is never defined. 
 
 In this tutorial there are ofter lines with load .... (for any reason) but these files are not in the tutorial data that people download. Maybe they should be there because if a certain part doesn't work anymore they can load the results and work further. We could also include lines to save the results like in the first tutorial.
 
-Because I didn't do source analysis myself until now I don't now the best way to sovle these problems.(16 dec 2008)
+Because I didn't do source analysis myself until now I don't now the best way to solve these problems.(16 dec 2008)
 
 ### Statistics using cluster-based permutation tests
 

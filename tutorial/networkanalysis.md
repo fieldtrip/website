@@ -211,7 +211,7 @@ Now we can proceed with the computation of the leadfield matrix, using **[ft_pre
     cfg.channel     = {'MEG'};
     lf              = ft_prepare_leadfield(cfg, dataica);
 
-### Estimating teh sources
+### Estimating the sources
 
 In addition to a forward model, the beamformer needs a sensor-level covariance matrix, or a cross-spectral density matrix. The preliminaries for the cross-spectral density matrix can be obtained with
 

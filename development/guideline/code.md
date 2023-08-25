@@ -258,7 +258,7 @@ like this:
     facecolor   = ft_getopt(varargin, 'facecolor',   'white');
     vertexcolor = ft_getopt(varargin, 'vertexcolor', 'none');
 
-The function ft_getopt is specific to check syntactic consinstency of the arguments, and the
+The function ft_getopt is specific to check syntactic consistency of the arguments, and the
 optional third input arguments specifies the default value for the option in the function. If this optional input argument is not specified, it defaults to \[].
 In this way the variables which are used in the function are always correctly initialized.
 
@@ -273,7 +273,7 @@ Ensuring that all executables can co-exist on all platforms (and especially on t
       C = computer returns character vector C denoting the type of computer
       on which MATLAB is executing. Possibilities are:
 
-                                                ISPC ISUNIX ISMAC ARCHSTR    
+                                                ISPC ISUNIX ISMAC ARCHSTR
       64-Bit Platforms
         PCWIN64  - Microsoft Windows on x64       1     0     0   win64
         GLNXA64  - Linux on x86_64                0     1     0   glnxa64

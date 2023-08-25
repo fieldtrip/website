@@ -321,7 +321,7 @@ This electrode structure can be used later when the leadfield is computed with *
 
 ### Construct source model
 
-With single-shell and BEM volume conduction models you can place the dipoles of the source model anywhere in the brain compartment. With more detailed FEM models, you want the dipoles only in the grey matter. Furthermore, the FEM computations will be more accurate if the dipoles are placed at the centroids of the voume elements.
+With single-shell and BEM volume conduction models you can place the dipoles of the source model anywhere in the brain compartment. With more detailed FEM models, you want the dipoles only in the grey matter. Furthermore, the FEM computations will be more accurate if the dipoles are placed at the centroids of the volume elements.
 
 The following starts with a 8 mm regular grid. The dipole positions are subsequently moved to the nearest centroid.
 

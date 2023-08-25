@@ -24,7 +24,7 @@ _However, as we will see below, the shared dataset contains 28 NIRS channels, wh
 
 The paper writes that the experiment uses an event-related design, however the stimuli anr not randomized but are presented in blocks. Condition blocks were randomized (over subjects) to rule out any effect of order, and all sentences of one condition were presented together. Each listening condition (block) began with three practice sentences for familiarization followed by 20 randomized sentences, for a total of 69 trials across all three conditions.
 
-_Below we will see that the shared data does not match 3 contitions/blocks with 69 trials each._
+_Below we will see that the shared data does not match 3 conditions/blocks with 69 trials each._
 
 Sentences were digitally isolated from their respective lists into 3-second trials using Audacity. The 3-second trials allowed for a variable silence before and after the sentence presentation.
 

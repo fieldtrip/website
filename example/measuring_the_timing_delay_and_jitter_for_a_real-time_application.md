@@ -41,7 +41,7 @@ On the trigger sending side, the code looks something like this:
     %% close serial port
     fclose(serobjw);
 
-On the receiving side (the machine, that reads the data online from shared memory), we need to read the appropriate trigger channel, detect incoming triggers and then once a trigger is detected, write a new trigger to the data (in this case this was done by sending a command to serial port that was connnected to PPT1 of the MEG system and recorded on channel UPPT001 with the data).
+On the receiving side (the machine, that reads the data online from shared memory), we need to read the appropriate trigger channel, detect incoming triggers and then once a trigger is detected, write a new trigger to the data (in this case this was done by sending a command to serial port that was connected to PPT1 of the MEG system and recorded on channel UPPT001 with the data).
 
     %% This is where we are reading the data from from, this, in this case shared memory for the MEG at FCDC
     cfg.headerfile = 'shm://';
@@ -492,7 +492,7 @@ Although, here we only have 200 delays (compared to 2000 before), we see that th
 
 Since **acq2ftx** constantly monitors the state of the shared memory ringbuffer slot that Acq is about to fill next, it can determine the timing of those blocks quite accurately. We carried out a quick test where we measured the delay between the arrival of successive data blocks in shared memory using the ''gettimeofday'' system call, which on Odin (running a 2.4 kernel) yields an accuracy of about 10ms. During the operation, we looked at the time **dT** between each two slots, but also monitored the mean and standard deviation of that value.
 
-Without head localization, **dT** matches the block size of the MEG system up to quantization effects due to the low timer resolution. For example, if the block size is 82 samples and the sampling rate is 1200Hz, the duration of one block is slightly less than 70ms, and consequently **dT** comes out as 60 or 80ms roughly alternatingly. The mean of **dT** quickly approaches the theoritcal block duration.
+Without head localization, **dT** matches the block size of the MEG system up to quantization effects due to the low timer resolution. For example, if the block size is 82 samples and the sampling rate is 1200Hz, the duration of one block is slightly less than 70ms, and consequently **dT** comes out as 60 or 80ms roughly alternatingly. The mean of **dT** quickly approaches the theoretical block duration.
 
 With continuous head localization however, we observed a wider spread of **dT** values around the (still correct) mean. This effect is most visible for high sampling rates. For example, at 4000Hz and 80 samples blocksize, the theoretical block duration is 20ms. The **dT** values reported by **acq2ft** however are often 0, but sometimes go up to 100 or 120ms. This means that with continuous head localization turned on, **Acq** fills the shared ringbuffer with considerable temporal jitter. We have not written the timing values to disk yet and thus cannot make accurate statements, but it seems that the head localization calculation buffers the data for about 100ms independent of the sampling frequency, and writes it out in bursts of 4-5 slots into the shared memory.
 

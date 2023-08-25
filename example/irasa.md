@@ -40,7 +40,7 @@ for rpt = 1:1
     data.trialinfo(rpt,1) = rpt;
 end
 
-% chunk 2-second segments (gives 1Hz frequency resolution) for long/continous trials
+% chunk 2-second segments (gives 1Hz frequency resolution) for long/continuous trials
 cfg           = [];
 cfg.length    = 2; % freqency resolution = 1/2^floor(log2(cfg.length*0.9))
 cfg.overlap   = 0.5;

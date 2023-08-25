@@ -201,7 +201,7 @@ After having confirmed that the segmentations are consistent with the anatomical
 Why do we use fewer vertices for the outer mesh than for the inner mesh?
 {% include markup/end %}
 
-These meshes are all relatively coarse and don't look so nice in a visualization. Using the _isosurface_ method (also known as [Marching Cubes](https://en.wikipedia.org/wiki/Marching_cubes)) we can extract a much nicer looking skin conpartment.
+These meshes are all relatively coarse and don't look so nice in a visualization. Using the _isosurface_ method (also known as [Marching Cubes](https://en.wikipedia.org/wiki/Marching_cubes)) we can extract a much nicer looking skin compartment.
 
     cfg = [];
     cfg.method = 'isosurface';

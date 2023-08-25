@@ -132,7 +132,7 @@ The first thing to check is whether the segmented volumes have a reasonable size
     total segmented :     4254 ml ( 25.35 %)
     total volume    :    16777 ml (100.00 %)
 
-We can change the segmentation from the probabilistic (or in this case Boolean) representation into an indexed representation; this represents the tissue types by succesive integers, which we can plot together color-codes in a single image.
+We can change the segmentation from the probabilistic (or in this case Boolean) representation into an indexed representation; this represents the tissue types by successive integers, which we can plot together color-codes in a single image.
 
     segmentedmri_indexed = ft_checkdata(segmentedmri, 'segmentationstyle', 'indexed')
 
