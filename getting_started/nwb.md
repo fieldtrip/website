@@ -9,7 +9,7 @@ tags: [dataformat, spike, nwb]
 
 ## Introduction
 
-Fieldtrip allows reading in spike and LFP data from .nwb files. Importantly, the user has to install the NWB Matlab interface *MatNWB* ([instructions on how to install MatNWB](https://neurodatawithoutborders.github.io/matnwb/)) and run the MatNWB function [*generateCore*](https://neurodatawithoutborders.github.io/matnwb/doc/generateCore.html) successfully before attempting to read files with FieldTrip.
+FieldTrip allows reading in spike and LFP data from .nwb files. Importantly, the user has to install the NWB Matlab interface *MatNWB* ([instructions on how to install MatNWB](https://neurodatawithoutborders.github.io/matnwb/)) and run the MatNWB function [*generateCore*](https://neurodatawithoutborders.github.io/matnwb/doc/generateCore.html) successfully before attempting to read files with FieldTrip.
 
 ## Example script
 
@@ -73,7 +73,7 @@ In case you are trying to load a file using a different schema version than the 
 
 ## Missing functionality
 
-At its current stage, the NWB integration into Fieldtrip is not feature-complete. For example:
+At its current stage, the NWB integration into FieldTrip is not feature-complete. For example:
 
 - Reading events (ft_read_event). NWB:N is a pretty generic dataformat and can contain very diverse types of data. Therefore, it is not trivial to programmatically and reliably create an event output that could be used in a trial function.
 
