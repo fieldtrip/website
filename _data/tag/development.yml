@@ -100,10 +100,13 @@
 - name:  Scratchpad for the realtime buffer interface
   link:  /development/realtime/scratchpad
 
+- name:  Software quality control and release process
+  link:  /development/releasing
+
 - name:  Accessing the FieldTrip source code through SVN
   link:  /development/svn
 
-- name:  Code testing and release versions
+- name:  Testing
   link:  /development/testing
 
 - name:  How can I keep track of changes to the code?
