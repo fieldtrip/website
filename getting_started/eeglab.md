@@ -68,6 +68,6 @@ Both EEGLAB and FieldTrip work with data structures in MATLAB memory. The design
 
 Together with the EEGLAB developers we maintain two functions for converting the data back and forth: **[fieldtrip2eeglab](/reference/external/eeglab/fieldtrip2eeglab)** and **[eeglab2fieldtrip](/reference/external/eeglab/eeglab2fieldtrip)**.
 
-## Releasing Fieldtrip code to EEGLAB users
+## Releasing FieldTrip code to EEGLAB users
 
-EEGLAB developers have created a simple [tutorial](https://eeglab.org/others/EEGLAB_and_Fieldtrip.html#wrap-up-your-fieldtrip-scripts-into-eeglab-plugin-menu-items) so Fieldtrip users can release their Fieldtrip code as EEGLAB plugins. This will allow a more extensive diffusion of your methods. A template [plugin](https://github.com/sccn/erpsource) also contain methods to convert data formats between the two toolboxes.
+EEGLAB developers have created a simple [tutorial](https://eeglab.org/others/EEGLAB_and_FieldTrip.html#wrap-up-your-fieldtrip-scripts-into-eeglab-plugin-menu-items) so FieldTrip users can release their FieldTrip code as EEGLAB plugins. This will allow a more extensive diffusion of your methods. A template [plugin](https://github.com/sccn/erpsource) also contain methods to convert data formats between the two toolboxes.

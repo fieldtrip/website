@@ -14,7 +14,7 @@ Commonly, in such models, electrodes are considered to record the potential in j
 
 ## Organization of FEMfuns in FieldTrip
 
-FEMfuns is a python based open-source pipeline and will be called externally from FieldTrip. Within FieldTrip, the headmodel and electrode positions are created, after which the forward solution is found using FEMfuns code under the hood. We split incorporating FEMfuns into Fieldtrip in three steps:
+FEMfuns is a python based open-source pipeline and will be called externally from FieldTrip. Within FieldTrip, the headmodel and electrode positions are created, after which the forward solution is found using FEMfuns code under the hood. We split incorporating FEMfuns into FieldTrip in three steps:
 
 - integrate complex meshing routines in FieldTrip
 - test on sphere: compute the forward solutions in FieldTrip using a compiled binary of FEMfuns
@@ -25,16 +25,16 @@ The general workflow consists of calling many toolboxes and subroutines from MAT
 {% include image src="/assets/img/development/project/femfuns/workflow_fieldtrip.png" width="500" %}
 _Figure1: Schematic representation of the general workflow._
 
-The user is suggested to work from a MATLAB script, where they will call both FieldTrip and FEMfuns (see Figure 1). Before starting with such a script, it is necessary to set up both Fieldtrip and FEMfuns (Figure 1, gray box).
+The user is suggested to work from a MATLAB script, where they will call both FieldTrip and FEMfuns (see Figure 1). Before starting with such a script, it is necessary to set up both FieldTrip and FEMfuns (Figure 1, gray box).
 
-While Fieldtrip is MATLAB-based, FEMfuns is Python-based and, in particular, it externally calls Fenics to solve partial differential equations. For this, the whole procedure resembles a Russian doll (see Figure 2).
+While FieldTrip is MATLAB-based, FEMfuns is Python-based and, in particular, it externally calls Fenics to solve partial differential equations. For this, the whole procedure resembles a Russian doll (see Figure 2).
 
 {% include image src="/assets/img/development/project/femfuns/workflow_doll_embedded.png" width="500" %}
 _Figure 2: General workflow of the interface between FEMfuns and FieldTrip. From left to right: FieldTrip is called directly by MATLAB. To call FEMfuns from MATLAB, a shell script is launched in MATLAB. This shell script runs under the hood and calls FEMfuns routines implemented in Python._
 
 Currently (April 2022), the MATLAB fuctions to add electrodes to an existing finite element head model and use leadfields computed in FEMfuns in FieldTrip analysis are available [here](https://github.com/Donders-Institute/FEMfuns/tree/master/external/fieldtrip)
 
-Besides Fieldtrip, other external software is used in the workflow, e.g., FEniCS, Trident and ISO2MESH. A summary can be found in the schema below, which shows the order in which the softwares are used and for which steps in the pipeline:
+Besides FieldTrip, other external software is used in the workflow, e.g., FEniCS, Trident and ISO2MESH. A summary can be found in the schema below, which shows the order in which the softwares are used and for which steps in the pipeline:
 
 {% include image src="/assets/img/development/project/femfuns/schema_doll_embedded.png" width="500" %}
 
