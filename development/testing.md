@@ -113,7 +113,7 @@ You can then select the tests that depend on `ft_preprocessing`.
     keepRows = contains(test.dependency, 'ft_preprocessing');
     filtered_test = filtered_test(keepRows, :)
 
-If you are an external contribitor with no access to the [DCCN intranet](https://intranet.donders.ru.nl/), you can only run tests that don't use data and use publicly available data. In that case you have to remove the test scripts that require private data:
+If you are an external contributor with no access to the [DCCN intranet](https://intranet.donders.ru.nl/), you can only run tests that don't use data and use publicly available data. In that case you have to remove the test scripts that require private data:
 
     keepRows = ~strcmp(filtered_test.data, 'private');
     filtered_test = filtered_test(keepRows, :)
