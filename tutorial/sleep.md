@@ -392,7 +392,7 @@ Create a new combined channel from the normalized signal of slow-wave activity (
     cfg.montage = montage_sum;
     data_continuous_perband_sum = ft_preprocessing(cfg, data_continuous_perband);
 
-View the whole sleep data in frequency band power now including the combined sleep spindle and SWA power. **Is this enough t to find the sleep stages and cylces?**
+View the whole sleep data in frequency band power now including the combined sleep spindle and SWA power. **Is this enough t to find the sleep stages and cycles?**
 
     cfg = [];
     cfg.continuous   = 'yes';
@@ -623,7 +623,7 @@ From this R-wave samples we can also compute a continuous heart rate signal.
 
 #### Filter for non-REM data for detection
 
-Before we can detect concrete events in non-REM we need to prepare the data for this analysis by excluding all the epochs from the data that would intefere with our detection method. First we discard all trials that are wake or REM from the information of the hypnogram we stored previously in the trialinfo of the epoched data. since spindles and non-REM mostly occur during Stages 2, 3 and 4 this is the epochs we want to focus on (Stage 1 by definition does not contain sleep spindles or slow waves). Here you can choose if you want to contine with the information of the prescored hypnogram or our estimated one.
+Before we can detect concrete events in non-REM we need to prepare the data for this analysis by excluding all the epochs from the data that would interfere with our detection method. First we discard all trials that are wake or REM from the information of the hypnogram we stored previously in the trialinfo of the epoched data. since spindles and non-REM mostly occur during Stages 2, 3 and 4 this is the epochs we want to focus on (Stage 1 by definition does not contain sleep spindles or slow waves). Here you can choose if you want to contine with the information of the prescored hypnogram or our estimated one.
 
     cfg        = [];
     cfg.trials = (data_epoched.trialinfo >= 2  & data_epoched.trialinfo <= 4); % Only non-REM stages, but not Stage 1

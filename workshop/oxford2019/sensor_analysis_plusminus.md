@@ -73,7 +73,7 @@ Now you could start working with these localizer data.
 For the rest of this tutorial we will be focusing on the data that were recorded during the main experiment described above. These data were read in and preprocessed already for your convenience. Clear the localizer data from memory:
 
     clear data
-    
+
 We will download [subjectK.mat](https://download.fieldtriptoolbox.org/tutorial/sensor_analysis/subjectK.mat) and load the already preprocessed data with the following command:
 
     load subjectK
@@ -266,7 +266,7 @@ The structure data_small contains less trials than the original data, because we
     cfg.pad             = 2;
     freq                = ft_freqanalysis(cfg, data_small);
 
-Again we have to combine the two components of the planar gradien
+Again we have to combine the two components of the planar gradient
 
     cfg                 = [];
     freq                = ft_combineplanar(cfg, freq);

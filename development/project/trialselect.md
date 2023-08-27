@@ -45,7 +45,7 @@ Consistent implementation of option for trial selection in all relevant function
 - multiplotER.m -done-
 - multiplotTFR.m -done-
 
-##### Functions where this has already been implemente
+##### Functions where this has already been implemented
 
 - componentanalysis.m -done-
 - nonlinearassociation.m -done-

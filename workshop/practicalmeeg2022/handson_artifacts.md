@@ -13,7 +13,7 @@ This tutorial was written specifically for the [PracticalMEEG workshop in Aix-en
 
 In this tutorial, we will learn how to deal with artifacts in the data. We do have a more [general tutorial on dealing with artifacts](/tutorial/artifacts), which is followed by a tutorial on [visual artifact rejection](/tutorial/visual_artifact_rejection) and a tutorial on [automatic artifact rejection](/tutorial/automatic_artifact_rejection). In the remainder of this tutorial we will give a short background, which is followed by a specific look at the artifacts that are present in the specific data. The focus will not be on cleaning up the data, but rather on learning how artifacts can be detected and dealt with.
 
-In the remaining tutorials on this dataset for the [PracticalMEEG workshop](/workshop/practicalmeeg2022) the data for all subjects is **not** cleaned but processed as-is. As you will see, the MEG data does not have such a strong representation of the blinks and the beamformer source reconstruction which we do to end up with group statistics on the source-level will quite well supress the contribution of the eye activity.
+In the remaining tutorials on this dataset for the [PracticalMEEG workshop](/workshop/practicalmeeg2022) the data for all subjects is **not** cleaned but processed as-is. As you will see, the MEG data does not have such a strong representation of the blinks and the beamformer source reconstruction which we do to end up with group statistics on the source-level will quite well suppress the contribution of the eye activity.
 
 However, had we planned other types of analysis, such as connectivity, then dealing with the EOG and especially ECG artifacts would have been more important. Furthermore, to increase the sensitivity of finding the effects of interest, a cleanup of the data would have been good. However, for didactical reasons, and since we don't have the time for a complete and thorough analysis of all 16 subjects, we will not deal with artifacts outside of this tutorial. This tutorial demonstrates on the basis of subject 1 how we can detect and deal with artifacts; following this tutorial you may want to go back to [computing ERPs/ERFs](/workshop/practicalmeeg2022/handson_raw2erp) and look how the cleaning affects the results.
 
@@ -467,7 +467,7 @@ Using the previously determined `cfg_automatic_threshold`, which does not mark t
 
 _Figure; Occurence of artifacts over time in the trial, i.e., relative to the stimulus_
 
-It is clear that most blinks happened at the start and expecially towards the end of the trial. Looking at this, we can conclude that thet participant was trying to supress their blinks during stimulus presentation. It is not likely that the frequent eye blinks will have affected the perception of the stimulus as a (famous or unfamiliar) face, or as a scrambled object.
+It is clear that most blinks happened at the start and expecially towards the end of the trial. Looking at this, we can conclude that thet participant was trying to suppress their blinks during stimulus presentation. It is not likely that the frequent eye blinks will have affected the perception of the stimulus as a (famous or unfamiliar) face, or as a scrambled object.
 
 ## Removing the eye and heart artifacts
 

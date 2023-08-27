@@ -367,7 +367,7 @@ The current standards to deal with differences in mouse brain size are very comp
 
 For the mouse the electrode grids are however of fixed dimensions, but the head sizes still differ.
 
-For example, let's think about a case of targetting CA1 hippocampus which is (AP, ML, DV) = -2, 1.5, -2 with respect to the bregma according to the mouse atlas. Each idividual mouse has different brain size. What we do is to measure the length between bregma to lambda, and if the length is 4.2 mm, we multiply the target distance by 4.2/3.9 ~= 1.077. Hence the steretaxic target for CA1 would be (AP, ML, DV) = -2.15, 1.62, -2.15.
+For example, let's think about a case of targetting CA1 hippocampus which is (AP, ML, DV) = -2, 1.5, -2 with respect to the bregma according to the mouse atlas. Each individual mouse has different brain size. What we do is to measure the length between bregma to lambda, and if the length is 4.2 mm, we multiply the target distance by 4.2/3.9 ~= 1.077. Hence the steretaxic target for CA1 would be (AP, ML, DV) = -2.15, 1.62, -2.15.
 Since the tolerance range of the stereotaxic is 0.1 mm, the actual target would be -2.1, 1.6, -2.1.
 I observed that some group rescale only anterior posterior (AP). Hence according to them the target coordinate would be -2.1, 1.5, -2. Unlike human, mouse has a secondary confirmation procedure, which is called histology. Hence, we can confirm whether we hit the target or not via histological procedure after recordings.
 For your information, many neuroscientists agree that this rescaling method can work as a rule of thumb but individual difference between animals cannot be neglected, emphasizing the post-hoc histological confirmation.
@@ -773,7 +773,7 @@ You see that this figure is not what you would expect. This is due to the electr
 To coregistrate with them,
 
 1.  use ft_headcoordinates function with input variables (bregma_middle, lambda_middle, and bregma_ventral).
-    The bregma_middle inducates the bregma point [0, 0, 0].
+    The bregma_middle indicates the bregma point [0, 0, 0].
     The lambda_middle indicates the lambda point [0, y, 0] aligned with anterio-parietal axis.
     The bregma_ventral indicates inside direction of electrode array.
 

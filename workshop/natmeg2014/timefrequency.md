@@ -189,7 +189,7 @@ _Figure: Topographic representation of the time-frequency representations of bet
 So what do you think we are looking at? I guess the introduction gave it away, but how would you argue for it?
 {% include markup/end %}
 
-Perhaps we should now also look at the beta-rebound after a response of the other (right) hand? We can use the same parameters to make them comparabl
+Perhaps we should now also look at the beta-rebound after a response of the other (right) hand? We can use the same parameters to make them comparable
 
     cfg = [];
     cfg.baseline     = [-0.5 -0.1];

@@ -56,7 +56,7 @@ To determine what the dimensions of a data field represent, FIeldTrip functions 
 
 Most of the elements of the dimord match a corresponding metadata field.
 
-| dimord element | correspondiong metadata field |
+| dimord element | corresponding metadata field |
 | -------------- | ----------------------------- |
 | `time`         | `time`                        |
 | `freq`         | `freq`                        |

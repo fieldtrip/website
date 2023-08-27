@@ -78,5 +78,5 @@ If any of the chunks the client asked for is not available, the server will only
 - [draft network](/development/realtime/draft_network)
 - [draft implementation](/development/realtime/draft_implementation)
 - [draft header chunks](/development/realtime/draft_header_chunks)
-- [draft compatability](/development/realtime/draft_compatability)
+- [draft compatibility](/development/realtime/draft_compatability)
 - [scratchpad](/development/realtime/scratchpad)

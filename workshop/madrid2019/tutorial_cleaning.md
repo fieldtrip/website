@@ -422,7 +422,7 @@ quickly redo the ICA unmixing.
     comp = ft_componentanalysis(cfg, data);
 
 We now visualize the components to select which ones model the artifacts. We add
-the visually indentified artifacts in order to see, which of those are matched
+the visually identified artifacts in order to see, which of those are matched
 by the independent component's time course.
 
     data.elec = prepare_elec_chennu2016(data.label);

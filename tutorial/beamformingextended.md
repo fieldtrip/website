@@ -107,7 +107,7 @@ If the yellow-greyish brain shows up in the subject's heads, everything went fin
 You might wonder why the anatomical MRI shows upside down: this is a [frequently asked question](/faq/why_does_my_anatomical_mri_show_upside-down_when_plotting_it_with_ft_sourceplot).
 {% include markup/end %}
 
-Now prepare the head model from the segmented brain surfac
+Now prepare the head model from the segmented brain surface
 
     cfg        = [];
     cfg.method = 'singleshell';
@@ -122,7 +122,7 @@ If you want to do a source reconstruction of EEG data, you have to pay special a
 
 Prior to doing the spectral decomposition with **[ft_freqanalysis](/reference/ft_freqanalysis)** you have to ensure with **[ft_preprocessing](/reference/ft_preprocessing)** that all channels are re-referenced to the common average reference.
 
-Furthermore, after selecting the channels you want to use in the source reconstruction (excluding bad and absent channels) and after re-referencing them, you should not make sub-selections of channels any more and discard channels, as that would cause the data not be average referenced any more.  
+Furthermore, after selecting the channels you want to use in the source reconstruction (excluding bad and absent channels) and after re-referencing them, you should not make sub-selections of channels any more and discard channels, as that would cause the data not be average referenced any more.
 {% include markup/end %}
 
 #### Exercise: head model
@@ -384,7 +384,7 @@ With the use of `cfg.atlas` (only available with `cfg.method = 'ortho'`) you can
 #### Exercise: regularization
 
 {% include markup/info %}
-The regularization parameter was lambda = '5%'. Change it to 0 or to '50%' and plot the power estimate with respect to baseline. How does the regularization parameter affect the properties of the spatial filter?  
+The regularization parameter was lambda = '5%'. Change it to 0 or to '50%' and plot the power estimate with respect to baseline. How does the regularization parameter affect the properties of the spatial filter?
 {% include markup/end %}
 
 ## Localization of cortical sources that are coherent with the EMG

@@ -96,7 +96,7 @@ The example that follows uses the EEG of the multimodal [Wakeman & Henson (2015)
 
 The first step is to design the model corresponding to the study. This design consists of different steps:
 
-The required paths and some additional informations have to be defined
+The required paths and some additional information have to be defined
 
     PATH_TO_ROOT  = bids_root_folder;        % location of the top level BIDS directory with the raw data
     PATH_TO_DERIV = bids_derivatives_folder; % location of the preprocessed EEG data
@@ -117,7 +117,7 @@ We define the contrast we want to study
 
 The split of the covariates (regressors) has to be defined. Here we want to create 1 column of covariates-by-regressor to analyse the influence on each condition:
 
-    regress_cat = { 1 , 1;   
+    regress_cat = { 1 , 1;
                     2 , 2;
                     3 , 3};  % correspondance between covariate and categories. Here, we create 1 column of covariate by category.
 
@@ -169,7 +169,7 @@ Finally, we run the second level analysis specifying the desired statistical tes
     stat_test = 'one sample t-test';  % desired statistical test
     nboot = 1000;                     % number of boostrap repetition
     tfce = true;                      % set this to false if TFCE does not have to be run
-    
+
     LIMOPath = limo_random_select(stat_test,expected_chanlocs,'LIMOfiles',...
         LIMOfiles,'analysis_type','Full scalp analysis',...
         'type','Channels','nboot',nboot,'tfce',tfce,'skip design check','yes');

@@ -343,7 +343,7 @@ We use a bit of standard MATLAB code to find the regional peaks in the kurtosis
 
 {% include image src="/assets/img/tutorial/epilepsy/case3/ctf/figure7.gif" width="700" %}
 
-##### Visualize the kurtisis images in MRIcro
+##### Visualize the kurtosis images in MRIcro
 
 At this stage, we can also write out our images (i.e., the resliced MRI and the kurtosis image that we just made) into NIFTI format so they can be imported into other software that may be more prevalent in clinical settings and allows the results to merged with other clinical information.
 
@@ -635,7 +635,7 @@ The remainder of the analysis is identical to the CTF analysis: we interpolate a
 
 {% include image src="/assets/img/tutorial/epilepsy/case3/neuromag/figure15.gif" width="700" %}
 
-##### Visualize the kurtisis images in MRIcro
+##### Visualize the kurtosis images in MRIcro
 
     cfg = [];
     cfg.filename = 'Case3_anatomy.nii';

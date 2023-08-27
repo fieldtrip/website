@@ -211,7 +211,7 @@ The structure data_small contains less trials than the original data, because we
     cfg.pad             = 2;
     freq                = ft_freqanalysis(cfg, data_small);
 
-Again we have to combine the two components of the planar gradien
+Again we have to combine the two components of the planar gradient
 
     cfg                 = [];
     freq                = ft_combineplanar(cfg, freq);

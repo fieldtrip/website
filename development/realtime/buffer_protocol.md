@@ -433,5 +433,5 @@ These chunks contain .fif files as written by the neuromag2ft realtime interface
 - [draft network](/development/realtime/draft_network)
 - [draft implementation](/development/realtime/draft_implementation)
 - [draft header chunks](/development/realtime/draft_header_chunks)
-- [draft compatability](/development/realtime/draft_compatability)
+- [draft compatibility](/development/realtime/draft_compatability)
 - [scratchpad](/development/realtime/scratchpad)

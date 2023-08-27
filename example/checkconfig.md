@@ -26,7 +26,7 @@ Any high-level FieldTrip function that you call automatically uses **[ft_checkco
 
 You can specify these two options yourself in your scripts. However, it is likely that you will always want to have the same behavior.
 
-When you use a FieldTrip function, this automatically calls the function `ft_defaults`, which takes care of path setting, plus it sets defaults to be used throughout FieldTrip. It does this by creating a global variable called `ft_default` (without the 's') that is globally available to all functions everywhere, but not directly visible to the user. You can make it visible by typing `global ft_default`. The variable `ft_default` includes the following fields that you can chane.
+When you use a FieldTrip function, this automatically calls the function `ft_defaults`, which takes care of path setting, plus it sets defaults to be used throughout FieldTrip. It does this by creating a global variable called `ft_default` (without the 's') that is globally available to all functions everywhere, but not directly visible to the user. You can make it visible by typing `global ft_default`. The variable `ft_default` includes the following fields that you can change.
 
     ft_default.checkconfig = 'loose'; % or 'pedantic' or 'silent'
     ft_default.checksize   = 1e5;

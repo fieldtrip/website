@@ -47,7 +47,7 @@ We can explore the different higher order synthetic gradiometer forward solution
 
 The left part of the figure shows how the first order gradiometer forward solution is computed. The X and the Y axes are the MEG sensors inside grad.balance.G1BR.labelnew and grad.balance.G1BR.labelold. The right plot shows how to compute the first order gradiometer for a specific MEG sensor, in this case sensor MLC12, which is the second sensor of the CTF151 system. You can notice that on the x axes the second sensor, the MLC12 scores one, and the rest of the 150 MEG sensors scored zero (blue dots). This is important because the forward computation of the first order gradient is basically constituted by the field contribution of each MEG sensor. However, colored in red, there are some MEG sensors (the environment sensors) that slightly deviated from zero, which means that they're also contribution to the field of sensor MLC12 but with a negligible degree.
 
-If we explore the second and the third synthetic gradiometers, things become very interestin
+If we explore the second and the third synthetic gradiometers, things become very interesting
 
     figure;
     subplot(2,2,[1 3]);imagesc(grad.balance.G2BR.tra);

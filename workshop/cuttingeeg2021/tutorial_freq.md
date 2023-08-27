@@ -11,7 +11,7 @@ In this tutorial we will be looking at frequency analysis, and specifically on t
 
 Using this tutorial you will learn how to do EEG preprocessing, time-frequency analysis and continuous analysis (as if it were sleep or resting-state data). After this tutorial, you could continue with the [tutorials on statistics](/tutorial/#statistics), or with one of the example scripts on using general linear modeling (GLM) on [time series data](/example/glm_timeseries) or over [trials](/example/glm_trials).
 
-We assume that you are already familar with the basic concepts of EEG processing, that you know how to use MATLAB, and that you have some idea on how to use FieldTrip. The focus will be on explaining the strategy used for data analysis, i.e. building a FieldTrip analysis pipeline, and explaining the options relevant for the analysis.
+We assume that you are already familiar with the basic concepts of EEG processing, that you know how to use MATLAB, and that you have some idea on how to use FieldTrip. The focus will be on explaining the strategy used for data analysis, i.e. building a FieldTrip analysis pipeline, and explaining the options relevant for the analysis.
 
 In case EEG, preprocessing, spectral analysis and FieldTrip are new to you, we recommend you watch some of the [video lectures](/video).
 
