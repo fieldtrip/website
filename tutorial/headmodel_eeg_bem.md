@@ -116,7 +116,7 @@ Occasionally, the quality of the anatomical image is not sufficient to provide a
 For more information, you can consult this [frequently asked question](/faq/why_does_my_eegheadmodel_look_funny).
 {% include markup/end %}
 
-The first thing to check is whether the segmented volumes have a reasonable size. The brain compartment should be about 1300-1600 ml, and the skull compartment about 400-500 ml when using `cfg.spmmethod='old'` which results in the "inflated brain" as skull compartment (see figure below). The volume of the scalp compartment can be arbirarily large, as it extends to the neck.
+The first thing to check is whether the segmented volumes have a reasonable size. The brain compartment should be about 1300-1600 ml, and the skull compartment about 400-500 ml when using `cfg.spmmethod='old'` which results in the "inflated brain" as skull compartment (see figure below). The volume of the scalp compartment can be arbitrarily large, as it extends to the neck.
 
     ft_checkdata(segmentedmri, 'feedback', 'yes') % display some information about the segmentation
 

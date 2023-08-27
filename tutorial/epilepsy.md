@@ -411,7 +411,7 @@ Finally we can automatically mark potential spikes in the source time series dat
     end
     fclose(fid);
 
-The data can now be opened in AnyWave. Once the file is opened, to see sources alongside source data, click 'Add View' in the top/middle toolbar. Then use the eyeball icon to set each view so that one has 'MEG' and one has 'SOURCE' data. Set the timescale to be 0.3 sec/cm (close to the clinical standard 3cm/sec) and scale the amplitudes appropritely. Use the menu to import the marker file that we just created.
+The data can now be opened in AnyWave. Once the file is opened, to see sources alongside source data, click 'Add View' in the top/middle toolbar. Then use the eyeball icon to set each view so that one has 'MEG' and one has 'SOURCE' data. Set the timescale to be 0.3 sec/cm (close to the clinical standard 3cm/sec) and scale the amplitudes appropriately. Use the menu to import the marker file that we just created.
 
 {% include image src="/assets/img/tutorial/epilepsy/case3/ctf/figure9.png" width="700" %}
 

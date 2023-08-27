@@ -90,7 +90,7 @@ Processing data through FieldTrip functions and performing statistical analyses 
 
 {% include image src="/assets/img/getting_started/limo/block_schematic_pipeline.png" width="500" %}
 
-The example that follows uses the EEG of the multimodal [Wakeman & Henson (2015)](https://www.nature.com/articles/sdata20151) dataset. This data is aquired during visual stimulation with 3 face categories (famous, unknown and scrambled) and 1 covariate (the time between the first and the second repeated presentation of the same face). With the statistical analysis we want to identify spatio-temporal regions with a significant effect of the face type on the ERP, as well as the effect of the time between the repeated presentations of the same face. Categories have been coded as integer values: 1 (famous), 2 (unknown), 3 (scrambled), and the covariates are continuous values.
+The example that follows uses the EEG of the multimodal [Wakeman & Henson (2015)](https://www.nature.com/articles/sdata20151) dataset. This data is acquired during visual stimulation with 3 face categories (famous, unknown and scrambled) and 1 covariate (the time between the first and the second repeated presentation of the same face). With the statistical analysis we want to identify spatio-temporal regions with a significant effect of the face type on the ERP, as well as the effect of the time between the repeated presentations of the same face. Categories have been coded as integer values: 1 (famous), 2 (unknown), 3 (scrambled), and the covariates are continuous values.
 
 #### Model Design
 

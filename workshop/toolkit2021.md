@@ -43,7 +43,7 @@ During the Q&A following the lectures we will go through any remaining questions
 
 ## Hands-on sessions
 
-In the hands-on sessions we will take you through selected FieldTrip tutorials. You execute these yourself on your own computer, that is why you need to have access to MATLAB. In the hands-on sessions we will focus on consolidating the knowledge you aquired during the lectures and we translate it into practical steps in your analysis.
+In the hands-on sessions we will take you through selected FieldTrip tutorials. You execute these yourself on your own computer, that is why you need to have access to MATLAB. In the hands-on sessions we will focus on consolidating the knowledge you acquired during the lectures and we translate it into practical steps in your analysis.
 
 ## Playground
 

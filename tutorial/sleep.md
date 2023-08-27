@@ -857,7 +857,7 @@ Also we looked at the distribution of different sleep frequency bands, their flu
 
 Finally we explored how easy it is to detect spontaneous events in signals like ECG and EEG by using simple filtering and thresholding of the cleaned data epochs as a basis, e.g., we found R-waves, sleep slow waves and spindles. These have been then viewed in the **[ft_databrowser](/reference/ft_databrowser)** and we looked at the typical spontaneous events by aligning them by time (ERP) and look at time-locked frequency activity (ERF), all in a single channel.
 
-This should give you a basis of also recognizing other data and see that recordings are highly dependent on the current state. Importantly, this might also apply to wake recordings of task in which the subjects might doze off, loose focus or have their eyes closed or directed away at important periods of the task. The techinques here can thus also be used as sanity check in other data.
+This should give you a basis of also recognizing other data and see that recordings are highly dependent on the current state. Importantly, this might also apply to wake recordings of task in which the subjects might doze off, loose focus or have their eyes closed or directed away at important periods of the task. The techniques here can thus also be used as sanity check in other data.
 
 Interesting to continue the analysis if you want to go further:
 
