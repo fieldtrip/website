@@ -58,7 +58,7 @@ The following template layout sets are provided
 {% include image src="/assets/img/template/layout/easycapm3.png" width="200" %}
 {% include image src="/assets/img/template/layout/easycapm3.mat.png" width="200" %}
 
-#### easycapM22 - Small Equidistant 29-Channel-Arrangment (used in Braincap32)
+#### easycapM22 - Small Equidistant 29-Channel-Arrangement (used in Braincap32)
 
 {% include image src="/assets/img/template/layout/easycapm22.png" width="200" %}
 {% include image src="/assets/img/template/layout/easycapm22.mat.png" width="200" %}

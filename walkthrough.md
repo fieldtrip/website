@@ -26,7 +26,7 @@ First of all it is very important to get comfortable with the way FieldTrip mana
 
 {% include image src="/assets/img/walkthrough/figure2.png" width="600" %}
 
-In Fieltrip this is contained within in a single data matrix of [channels x timepoints], for instance:
+In Fieldtrip this is contained within in a single data matrix of [channels x timepoints], for instance:
 
     data.trial{1}: [32x1000 double]
 

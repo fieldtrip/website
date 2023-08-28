@@ -12,7 +12,7 @@ Please be aware that you should *not* do
 
     addpath(genpath('/home/user/fieldtrip'))
 
-because that will add many toolbox directories to your path that you won't use. Furthermore, it would cause some toolboxes to be on your path twice (such as SPM) and creates problems with builtin MATLAB functions for which FieldTtrip has backward-compatibility replacements.
+because that will add many toolbox directories to your path that you won't use. Furthermore, it would cause some toolboxes to be on your path twice (such as SPM) and creates problems with builtin MATLAB functions for which FieldTrip has backward-compatibility replacements.
 {% include markup/end %}
 
 ## Step 1

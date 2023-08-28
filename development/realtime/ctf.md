@@ -153,7 +153,7 @@ There is a problem in the CTF acquisition software that sometimes causes the sha
        int data[28160];
     } ACQ_MessagePacketType;
 
-So in total each packet is `5*4+28160*4` bytes long, and there are 600 of those in shared memory. If the `numChannels*numSamples` of the previous block is slightly larger than 28160, it means that Acq is trying to write more data points into the "data" section of that packet than fits in, causing the data to flow over into the next packet. The first couple of integers in the next packet (indicating the Type and other details) are therefore messed up, and Aqc thinks that that packet is already filled. Then it stops writing to shared memory altogether.
+So in total each packet is `5*4+28160*4` bytes long, and there are 600 of those in shared memory. If the `numChannels*numSamples` of the previous block is slightly larger than 28160, it means that Acq is trying to write more data points into the "data" section of that packet than fits in, causing the data to flow over into the next packet. The first couple of integers in the next packet (indicating the Type and other details) are therefore messed up, and Acq thinks that that packet is already filled. Then it stops writing to shared memory altogether.
 
 I have tested this idea with a specially tweaked version of my AcqBuffer shared memory "maintenance" program and indeed see this happen for a data block that has `91*310=28210` samples in it, which is 50 more than the 28160 that would fit in. The next block is therefore corrupt.
 

@@ -318,7 +318,7 @@ The function **[ft_rejectartifact](/reference/ft_rejectartifact)** can adjust th
     cfg_ringing = ft_artifact_tms(cfg);     % Detect TMS artifacts
 
 {% include markup/warning %}
-In **[ft_artifact_tms](/reference/ft_artifact_tms)** we use cfg.prestim and cfg.poststim to indicate the time range around the TMS pulse that should be removed. There is no restriction, however, that prevents both time points from being located after the pulse (in case of a recharging artefact, for example). It is therefore also possible to mark artifacts that have on- and offsets both after onset of the TMS pulse.
+In **[ft_artifact_tms](/reference/ft_artifact_tms)** we use cfg.prestim and cfg.poststim to indicate the time range around the TMS pulse that should be removed. There is no restriction, however, that prevents both time points from being located after the pulse (in case of a recharging artifact, for example). It is therefore also possible to mark artifacts that have on- and offsets both after onset of the TMS pulse.
 
 In case you wish to specify an artifact onset that occurs after the TMS pulse (e.g., in case of a recharging artifact), cfg.prestim must be negative (e.g., -0.500 for 500 ms after pulse onset) as cfg.prestim refers to time **before** stimulus onset.
 {% include markup/end %}

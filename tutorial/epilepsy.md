@@ -132,7 +132,7 @@ We want to store all processed results in a different directory than the one con
     outputdir = '/data/epilepsy/processed/case3'; % this is where results will be saved
     cd(outputdir)
 
-#### Coregistering the MEG and MRI data
+#### Coregistration of the MEG and MRI data
 
 The original MRI that is provided for this patient has been partially processed with the CTF software and MRIcro, and is stored in NIFTI format. This MRI is _not shared_ for privacy reasons. Nevertheless, here we will show how it was processed in FieldTrip.
 
@@ -430,7 +430,7 @@ To ensure that we are not mixing up the two datasets, we will clear all variable
     outputdir = '/data/epilepsy/processed/case3/neuromag';
     cd(outputdir)
 
-#### Coregistering the MEG and MRI data
+#### Coregistration of the MRI data to the MEG data
 
 For patient confidentiality we only include here the MRI which has already been coregistered with the data, defaced, and resliced to align it to the data head co-ordinate system. The process for coregistration is identical to the one described above, except that in the Neuromag system the Polhemus head shape points are stored in the raw data file.
 

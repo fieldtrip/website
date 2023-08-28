@@ -157,7 +157,7 @@ Contrary to the description in the accompanying publication (see table 1 in the 
                y: [3x75 double]
        className: {'RIGHT'  'LEFT'  'FOOT'}
 
-# Convering the MATLAB structure to a FieldTrip raw data structure
+# Converting the MATLAB structure to a FieldTrip raw data structure
 
 Since the data is not stored on disk in a [dataformat](/faq/dataformat) that FieldTrip can directly read, we will circumvent the FieldTrip reading functions as outlined in [this frequenly asked question](/faq/how_can_i_import_my_own_dataformat/#circumvent-the-fieldtrip-reading-functions).
 
@@ -434,7 +434,7 @@ This step benefits from the layout having an outline and especially a mask, othe
 {% include image src="/assets/img/example/nirs_fingertapping/figure7.png" width="400" %}
 
 {% include image src="/assets/img/example/nirs_fingertapping/figure8.png" width="400" %}
-  
+
 {% include markup/success %}
 From the topographic arrangements it is clear that the left hemisphere responds with an increase in HbO to the right fingertapping task and the right hemisphere to the left fingertapping task; the HbR (on the right side of the figure) shows the opposite pattern. Also interesting is that both left and right hemisphere show a decrease in HbO and an increase in HbR during the tapping of the foot.
 {% include markup/end %}

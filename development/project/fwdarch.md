@@ -600,7 +600,7 @@ become
 
 The triangulation methods are generally applied to pre-processed volumetric objects (e.g., segmented brain compartments) to generate a geometrical description expressed in terms of points and edges (a connectivity matrix).
 
-These methods are commonly used in FieldTri
+These methods are commonly used in FieldTrip
 
 - The marching cubes algorithm implemented by the MATLAB function isosurface.m
 - The projection of lines from the center of an icosaedron, to obtain the points of the volume that correspond to the transition between inside and outside of the volume
@@ -659,7 +659,7 @@ This function classifies the cluster of neighboring voxels and attaches a label 
 
 ## The functions in Forward module
 
-This functions are responsible to generate the lead fields for the different available methods. They are contained in the Forwrd/private folder.
+This functions are responsible to generate the lead fields for the different available methods. They are contained in the Forward/private folder.
 
 - eeg_halfspace_medium_leadfield.m
 - leadfield_simbio.m

@@ -422,7 +422,7 @@ for i=1:numel(filename)
    cfg.task = 'prac';
  case 'task1'
    cfg.task = 'motor';
- end   
+ end
  cfg.acq = 'txt'; % this is needed to distinguish the different recordings of the events
 
  cfg.writetsv = 'replace';
@@ -505,14 +505,14 @@ for i=1:numel(filename)
    cfg.task = 'rest';
  case 'task1'
    cfg.task = 'motor';
- end   
+ end
  cfg.acq = 'smi'; % this is needed to distinguish the different recordings of the events
 
  data2bids(cfg);
 end
 ```
 
-## Alining the time of the different measurements
+## Aligning the time of the different measurements
 
 All measurements that were performed are represented in the `_scans.tsv` file. This is what `sub-POM1FM0031237_scans.tsv` contains for the functional data after the initial conversion to BIDS:
 
@@ -574,7 +574,7 @@ We start with aligning the resting state task, which consists of functional MRI,
 
 #### EMG
 
-Looking at the `_events.tsv` files for the EMG recording - which were derived from the trigger channel in the BrainVsision recording - we can see that the first `Response` event with value `R 1` happens after about 15 seconds. This indicates that EMG acquisition was started about 15 seconds _prior_ to the MRI scanner being switched on. This is the case for both motor task and resting state EMG recordings, and for both subjects. We can take the onset value of the first `R 1` event and subtract that from the acquisition time of the corresponding functional MRI scan (for 'task-motor' and 'task-rest, respectively).
+Looking at the `_events.tsv` files for the EMG recording - which were derived from the trigger channel in the BrainVision recording - we can see that the first `Response` event with value `R 1` happens after about 15 seconds. This indicates that EMG acquisition was started about 15 seconds _prior_ to the MRI scanner being switched on. This is the case for both motor task and resting state EMG recordings, and for both subjects. We can take the onset value of the first `R 1` event and subtract that from the acquisition time of the corresponding functional MRI scan (for 'task-motor' and 'task-rest, respectively).
 
 From the `_scans.tsv` we can get for the start of the functional MRI acquisition
 

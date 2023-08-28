@@ -573,7 +573,7 @@ The units can be fixed by
 
     mri_realigned.unit = 'mm';
 
-After coregistering the MRI with the Paxinos coordinate system, it is [convenient to reslice it](/faq/why_does_my_anatomical_mri_show_upside-down_when_plotting_it_with_ft_sourceplot), i.e. to interpolate the greyscale values on a 3-D grid that is nicely aligned with the cardinal axes.
+After coregistration of the MRI with the Paxinos coordinate system, it is [convenient to reslice it](/faq/why_does_my_anatomical_mri_show_upside-down_when_plotting_it_with_ft_sourceplot), i.e. to interpolate the greyscale values on a 3-D grid that is nicely aligned with the cardinal axes.
 
     cfg = [];
     cfg.xrange = [-6 6];

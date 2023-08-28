@@ -52,7 +52,7 @@ Before starting with FieldTrip, it is important that you set up your [MATLAB pat
     cd <path_to_fieldtrip>
     ft_defaults
 
-### Loading and coregistering data
+### Loading the data and coregistration
 
 We start with loading the Structure Sensor file into memory. This also reads the `.mtl` and `.jpg` file and performs the [texture mapping](https://en.wikipedia.org/wiki/Texture_mapping) of the color photo onto the triangulated surface mesh.
 

@@ -12,9 +12,4 @@ There are a number of differences though, which are relevant in processing Field
 ## Reading and processing triggers
 
 
-## Coregistering with MRI
-
-
- 
-
- 
+## Coregistration with anatomical MRI
