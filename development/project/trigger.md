@@ -10,7 +10,7 @@ The read_event used to have multiple re-implementations of flank detection for t
 
 It is not yet used for biosemi, and it also has not yet replaced the read_ctf_trigger function. This should still be done.
 
-Issues to be solved in the flank detectio
+Issues to be solved in the flank detection
 
 - multiple trigger channels (OK)
 - downgoing flank also interesting (OK)

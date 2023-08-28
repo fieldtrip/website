@@ -66,9 +66,9 @@ Codes are included that works on Linux (with bash type of shell) and on Siemens 
 
 environmental variables have to be set up:
 export FREESURFER_HOME=<path to freesurfer>
-export SUBJECTS_DIR=<path to an existing directory where FS output should go>  
+export SUBJECTS_DIR=<path to an existing directory where FS output should go>
  sourcing F
-source \$FREESURFER_HOME/SetUpFreeSurfer.sh  
+source \$FREESURFER_HOME/SetUpFreeSurfer.sh
  importing dat
 recon-all -i<path to direcotry of xxx.ima files>/<name of first xxx.ima file>.IMA -s&lt;subject's name>\\
 
@@ -119,7 +119,7 @@ Then, a second (major) **intensity correction** is performed again. Now, the int
 
 In the next stage (**white matter segmentation**), the white matter is separated from everything else.
 
-Then (**cutting and filling**), the mid brain is cut from cerebellum and the hemispheres are cut from eachother. The left hemisphere is binarized to 255, the righ hemisphere to 127.
+Then (**cutting and filling**), the mid brain is cut from cerebellum and the hemispheres are cut from each other. The left hemisphere is binarized to 255, the righ hemisphere to 127.
 
 Next (**tessellation**), the surface is created by covering the filled hemispheres with triangles.
 
@@ -165,7 +165,7 @@ MNE provides also a support for three-dimensional source spaces and for arbitrar
 
 ##### Creating the BEM meshes
 
-In MNE, the calculation of the forward solution is using the boundary-element model (BEM). This requires that surface separating separating regions of different electrical conductivities are tessellated. This software employes **triangular tessellation**.
+In MNE, the calculation of the forward solution is using the boundary-element model (BEM). This requires that surface separating separating regions of different electrical conductivities are tessellated. This software employs **triangular tessellation**.
 
 mne_watershed_bem
 

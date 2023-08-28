@@ -213,7 +213,7 @@ We start with constructing a MATLAB data structure according to **[ft_datatype_r
 
 ## Convert the optode montage to a layout for plotting
 
-In FieldTrip we can have a [detailled description](/faq/how_are_electrodes_magnetometers_or_gradiometers_described/#the-definition-of-nirs-sensors) of the NIRS optode placement and how optodes are combined to form channels. However, in this dataset this information is not complete and we cannot make a complete `opto` structure.
+In FieldTrip we can have a [detailed description](/faq/how_are_electrodes_magnetometers_or_gradiometers_described/#the-definition-of-nirs-sensors) of the NIRS optode placement and how optodes are combined to form channels. However, in this dataset this information is not complete and we cannot make a complete `opto` structure.
 
 This is how far we can get
 
@@ -221,7 +221,7 @@ This is how far we can get
     opto.label = nirs.mnt.clab(:);
     opto.chanpos = nirs.mnt.pos_3d'; % these are all nan
 
-But this is not a complete description of the channel and sensor information according to **[ft_dataype_sens](/reference/utilities/ft_datatype_sens)**. However, a full sensor definitioon is also not required: the opical densities have already been converted in HbO and HbR prior to sharing, so we only care about channel positions for plotting.
+But this is not a complete description of the channel and sensor information according to **[ft_dataype_sens](/reference/utilities/ft_datatype_sens)**. However, a full sensor definition is also not required: the opical densities have already been converted in HbO and HbR prior to sharing, so we only care about channel positions for plotting.
 
 For the plotting of channel level data (see also [this tutorial](/tutorial/plotting)) we need a 2D layout. That is explained in detail in [this tutorial](/tutorial/layout). If the `opto` definition had included 2D or 3D channel positions, then we could have used **[ft_prepare_layout](/reference/ft_prepare_layout)** but now we will manually construct the layout structure.
 

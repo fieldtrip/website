@@ -38,7 +38,7 @@ We will keep this page up to date and post new information here when available.
 
 - 9:00 - 11:00 Hands-on 3: [Parametric and non-parametric statistics on event-related fields](/tutorial/eventrelatedstatistics)
 
-  - If you finish the above early and time permits (or you want to do something more in-depth immediately; feel free!), you may want to try eithe
+  - If you finish the above early and time permits (or you want to do something more in-depth immediately; feel free!), you may want to try either
     - [Cluster-based permutation tests on event-related fields](/tutorial/cluster_permutation_timelock) and/or
     - [Cluster-based permutation tests on time-frequency data](/tutorial/cluster_permutation_freq)
 

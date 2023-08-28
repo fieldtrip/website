@@ -169,7 +169,7 @@ When visualizing the volume, we should check that the skull and scalp compartmen
 
 ### Construct meshes for the boundaries
 
-In this step, triangulated surface meshes are created at the borders between the different tissue types using **[ft_prepare_mesh](/reference/ft_prepare_mesh)**. The output consists of surfaces represented by points or vertices that are connected in triangles. The tissues from which the surfaces are created have to be specified and also the number of vertices for each tissue. Since the potential changes the most rapidly on the outside of the brain (or inside of the skull), we want that surface to be the most detailled. The potential does not change rapidly over the scalp, so that can remain relatively coarse. It is common to use the ratio 3/2/1 for the scalp/skull/brain.
+In this step, triangulated surface meshes are created at the borders between the different tissue types using **[ft_prepare_mesh](/reference/ft_prepare_mesh)**. The output consists of surfaces represented by points or vertices that are connected in triangles. The tissues from which the surfaces are created have to be specified and also the number of vertices for each tissue. Since the potential changes the most rapidly on the outside of the brain (or inside of the skull), we want that surface to be the most detailed. The potential does not change rapidly over the scalp, so that can remain relatively coarse. It is common to use the ratio 3/2/1 for the scalp/skull/brain.
 
     cfg = [];
     cfg.tissue      = {'brain', 'skull', 'scalp'};
@@ -184,7 +184,7 @@ In this step, triangulated surface meshes are created at the borders between the
         unit: 'mm'
     coordsys: 'ctf'
 
-The mesh structure is an array with three surfaces. Each surface contains the (x,y,z) positions of alll vertices in `pos` and the triangulation in `tri`, in which each row defines the indices (the row numbers) of three vertices that form a triangle. The first surface represents the boundary between the brain and the inside of the skull, the second the outside surface of the skull, and the third represents the boundary between the scalp and the air.
+The mesh structure is an array with three surfaces. Each surface contains the (x,y,z) positions of all vertices in `pos` and the triangulation in `tri`, in which each row defines the indices (the row numbers) of three vertices that form a triangle. The first surface represents the boundary between the brain and the inside of the skull, the second the outside surface of the skull, and the third represents the boundary between the scalp and the air.
 
 ### Visualization
 

@@ -73,7 +73,7 @@ Using the EEG electrodes we compute a 2D layout in order to plot topographies. W
 
 {% include image src="/assets/img/tutorial/networkanalysis_eeg/figure1.png" width="400" %}
 
-_Figure 1: 2D electorde layout._
+_Figure 1: 2D electrode layout._
 
 ### Data segmentation
 

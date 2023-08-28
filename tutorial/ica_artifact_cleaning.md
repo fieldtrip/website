@@ -59,7 +59,7 @@ The ICA decomposition can take a long time, especially if you have to do it mult
     cfg.detrend      = 'no';
     data = ft_resampledata(cfg, data_orig);
 
-For the purpose of this tutorial and since we want you to try out various settings, we will continue with the downsampled data. If you apply this on your own data, please do try to work with the original instead the downsampled data; that will improve the quality of the decompositon.
+For the purpose of this tutorial and since we want you to try out various settings, we will continue with the downsampled data. If you apply this on your own data, please do try to work with the original instead the downsampled data; that will improve the quality of the decomposiion.
 
 ### Rejecting atypical artifacts
 
@@ -164,14 +164,14 @@ If you inspect `data_clean`in ft_databrowser, you will see that parts of the dat
 
 ### ICA decomposition
 
-We use **[ft_componentanalysis](/reference/ft_componentanalysis)** for the ICA decomposition. It has many options, and supports different methods for decomposing the data, including PCA and different ICA algorithms. Here we will be using the Extended Infomax alrorithm using the `runica` method from EEGLAB. You do not have to have EEGLAB installed for this, the required functions are included in the `fieldtrip/external` directory.
+We use **[ft_componentanalysis](/reference/ft_componentanalysis)** for the ICA decomposition. It has many options, and supports different methods for decomposing the data, including PCA and different ICA algorithms. Here we will be using the Extended Infomax algorithm using the `runica` method from EEGLAB. You do not have to have EEGLAB installed for this, the required functions are included in the `fieldtrip/external` directory.
 
 {% include markup/success %}
-There are other ICA algorithms that you can consider. For example, the `fastica` algorithm is fast and does not need to do a complete decompositon of the data; it can also identify a few components only. The components that fastica identifies first are the components with the largest variance, these are often the artifacts. The `amica` algorithm is among the best algorithms for identifying biophysically plausible ICA components. It results in components that are _more_ independent than `runica`.
+There are other ICA algorithms that you can consider. For example, the `fastica` algorithm is fast and does not need to do a complete decomposition of the data; it can also identify a few components only. The components that fastica identifies first are the components with the largest variance, these are often the artifacts. The `amica` algorithm is among the best algorithms for identifying biophysically plausible ICA components. It results in components that are _more_ independent than `runica`.
 
 The paper Delorme et al. [Independent EEG sources are dipolar.](https://doi.org/10.1371/journal.pone.0030135) PLoS One (2012) compares many ICA algorithms and concludes that more independent components are also more dipolar, which is compatible with an interpretation of many maximally independent EEG components as being volume-conducted projections of partially-synchronous local cortical field activity within single compact cortical domains.
 
-Another strategy for component analysis that is not completely blind is "denoising source separation" or `dss`, a method in which specific explicit features are maximized duting the ICA decomposition. If you know how your EOG or ECG artifacts look like in advance, you can use `dss` to capitalize on that and efficiently clean the data.
+Another strategy for component analysis that is not completely blind is "denoising source separation" or `dss`, a method in which specific explicit features are maximized during the ICA decomposition. If you know how your EOG or ECG artifacts look like in advance, you can use `dss` to capitalize on that and efficiently clean the data.
 {% include markup/end %}
 
 To perform the ICA decomposition, you can use the following code. Here we use a PCA reduction of the data prior to the decomposition to speed up the processing for the purpose of this tutorial. Note that the PCA reduction can negatively affect the quality of the decomposition, so in general it is better to have some more patience when the computation runs through.
@@ -220,7 +220,7 @@ Note that due to eye components in MEG look different than eye components in EEG
 
 ### Identifying bad channels
 
-Both EEG and MEG give a relatively blurry representation of the physiological activity. Components that are very localized in space, i.e., that are only active on a single of very few channels, are not likely to represent physiological sources in the brain or from the heart. If you would not have removed the SQUID jumps earlier, those would show up as very localized artifacts. EEG eLectrodes that move or that have a sudden change in impedance can also show up as very localized.
+Both EEG and MEG give a relatively blurry representation of the physiological activity. Components that are very localized in space, i.e., that are only active on a single of very few channels, are not likely to represent physiological sources in the brain or from the heart. If you would not have removed the SQUID jumps earlier, those would show up as very localized artifacts. EEG electrodes that move or that have a sudden change in impedance can also show up as very localized.
 
 If that happens, you can use ft_databrowser on the component time series to identify when the jump or other short-lived artifact lives, you can bark the time window as visual artifact, andusing the output `cfg` of ft_databrowser you can goback and remove that section from the data prior to ICA decomposition (or fill that section with NaNs as we did here). Subsequently, you would redo the ICA decomposition and once more check the cpomponent topographies and time series.
 
@@ -248,7 +248,7 @@ In this tutorial we have looked at how toprepare your data for ICA decomposition
 
 What we _did not_ show in this tutorial is that you can also interpret the ICA components as sources in the brain. Just as it is possible to use all FieldTrip plotting and analysis strategies on artifactual components, it is also possible to analyze the brain components. All of the components are represented as channel time-series and all channel-level analyses can be applied. For example, following segmentation of your data in stimulus-locked trials, you can use **[ft_timelockanalysis](/reference/ft_timelockanalysis)**, **[ft_freqanalysis](/reference/ft_freqanalysis)** or **[ft_componentanalysis](/reference/ft_componentanalysis)** to investigate each of the components of interest and to use statistics to compare them between conditions.
 
-The decompositon not only gives you the component time-series but also their topography. Besides using these to identify artifacts, you can also cleary recognize components that represent activity in the brain. You can use **[ft_dipolefitting](/reference/ft_dipolefitting)** to localize these components with simple dipole models, or **[ft_sourceanalysis](/reference/ft_sourceanalysis)** to localize them with distributed models. The only source reconstruction strategy that you cannot apply (easily) is beamforming, since at the component-level you only have a single topography, but no data covariance matrix. As a spatial filtering technique, beamforming is too simililar to independent component analysis (although based on a biophysical model and the assumption of uncorrelated rather than independent sources).
+The decomposition not only gives you the component time-series but also their topography. Besides using these to identify artifacts, you can also cleary recognize components that represent activity in the brain. You can use **[ft_dipolefitting](/reference/ft_dipolefitting)** to localize these components with simple dipole models, or **[ft_sourceanalysis](/reference/ft_sourceanalysis)** to localize them with distributed models. The only source reconstruction strategy that you cannot apply (easily) is beamforming, since at the component-level you only have a single topography, but no data covariance matrix. As a spatial filtering technique, beamforming is too simililar to independent component analysis (although based on a biophysical model and the assumption of uncorrelated rather than independent sources).
 
 ## Suggested further reading
 

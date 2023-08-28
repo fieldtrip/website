@@ -53,7 +53,7 @@ When a new function is written in FieldTrip, it is important to include these fe
 The short text messages which accompany errors and warnings on the screen are often not enough to provide insight for the users. The text message on screen should be kept short, but a [Frequently Asked Question](/faq) should explain the warning and why an error occurred. The identifiers should help the user to find the relevant FAQ. The FAQ
 should also have the same 'warning' or 'error' tag (e.g., `FieldTrip:fileio:fileNotExisting`).
 
-## Use the dimord field to describe or deciper the data
+## Use the dimord field to describe or decipher the data
 
 In general (although some exceptions apply, see below) the specification of the dimensions in the data structure is like this
 

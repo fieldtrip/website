@@ -35,7 +35,7 @@ Consistent implementation of option for trial selection in all relevant function
 - timelockanalysis.m -done-
 - freqanalysis.m -done-
 
-##### Functions that (could) use data with an 'rpt' dimensio
+##### Functions that (could) use data with an 'rpt' dimension
 
 - freqdescriptives.m -done-
 - singleplotER.m -done-

@@ -43,7 +43,7 @@ To fit the dipole models to the data, we will perform the following steps:
 - After creating meshes with the triangulated description of the outer brain, skull and skin compartment with **[ft_prepare_mesh](/reference/ft_prepare_mesh)**, we create a volume conduction model using **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)**;
 - We preprocess the MEG and EEG data using **[ft_definetrial](/reference/ft_definetrial)** and **[ft_preprocessing](/reference/ft_preprocessing)** and compute the average over trials using **[ft_timelockanalysis](/reference/ft_timelockanalysis)**.
 - Using **[ft_dipolefitting](/reference/ft_dipolefitting)** we will fit dipole models to the averaged data for each condition and to the difference between the conditions.
-- Throughout this tutorial, we will use the [high-level plotting](/tutorial/plotting) functions to look at the data, and some [lower-level plotting](/development/module/plotting) functions to make detailled visualizations.
+- Throughout this tutorial, we will use the [high-level plotting](/tutorial/plotting) functions to look at the data, and some [lower-level plotting](/development/module/plotting) functions to make detailed visualizations.
 
 ### Read and visualise the anatomical data
 
@@ -101,7 +101,7 @@ The first step consists of a coarse coregistration, based on three anatomical la
 
     save mri_realigned1 mri_realigned1
 
-It is difficult to precisely determine the position of the pre auricular points. One solution therefore is to use markers that are visible in the MRI, which is the [strategy we commonly emply at the Donders Institute](/faq/how_can_i_convert_an_anatomical_mri_from_dicom_into_ctf_format). The alternative, which is often used at 4D/BTi and Neuromag sites, is to record the shape of the head using a Polhemus electromagnetic tracker. The Polhemus head shape and the skin surface that is extracted from the MRI are subsequently coregistered.
+It is difficult to precisely determine the position of the pre auricular points. One solution therefore is to use markers that are visible in the MRI, which is the [strategy we commonly employ at the Donders Institute](/faq/how_can_i_convert_an_anatomical_mri_from_dicom_into_ctf_format). The alternative, which is often used at 4D/BTi and Neuromag sites, is to record the shape of the head using a Polhemus electromagnetic tracker. The Polhemus head shape and the skin surface that is extracted from the MRI are subsequently coregistered.
 
     cfg = [];
     cfg.method = 'headshape';

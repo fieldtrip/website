@@ -87,7 +87,7 @@ More information can be found in the [automatic artifact rejection](/tutorial/au
 
 ### Rejecting segments with artifacts from the data
 
-If you use eiter manual/visual or automatic detection of artifactual segments, you usually would proceed to reject those segments from subsequent analysis with **[ft_rejectartifact](/reference/ft_rejectartifact)**. FieldTrip supports variable trial length data, which allows you to reject only those pieces of data containing the artifact, keeping the rest of the trial. This is especially useful if your experiment consists of very long trials.
+If you use either manual/visual or automatic detection of artifactual segments, you usually would proceed to reject those segments from subsequent analysis with **[ft_rejectartifact](/reference/ft_rejectartifact)**. FieldTrip supports variable trial length data, which allows you to reject only those pieces of data containing the artifact, keeping the rest of the trial. This is especially useful if your experiment consists of very long trials.
 
 ### Rejecting channels with artifacts from the data
 

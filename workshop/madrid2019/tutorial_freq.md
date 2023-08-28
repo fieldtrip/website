@@ -380,7 +380,7 @@ Spectral analysis with on multitapers is done with the function
 **[ft_freqanalysis](/reference/ft_freqanalysis)**. The function uses the time in
 which the data has been segmented during preprocessing. Prior to the Fourier
 transformations, the data are "tapered". A single taper can be applied (e.g.
-Hannning) or several orthogonal tapers might be used for each time window (e.g.
+Hanning) or several orthogonal tapers might be used for each time window (e.g.
 DPSS). The power is calculated for each tapered data segment and then averaged
 over tapers. In the example below we already have the data segmented in windows
 of different sizes (1, 2, 4 seconds) and we can compute the power spectra using

@@ -744,12 +744,12 @@ First we will load our data subset
     load data_EEG
     load data_MEG
 
-Now we will combine both subsets into one datase
+Now we will combine both subsets into a single dataset
 
     cfg      = [];
     data_all = ft_appenddata(cfg, data_MEG, data_EEG);
 
-As we can see, the new dataset contains all 434 channels (128 EEG + 306 MEG) agai
+As we can see, the new dataset contains all 434 channels (128 EEG + 306 MEG) again
 
     data_all =
 

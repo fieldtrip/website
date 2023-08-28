@@ -24,7 +24,7 @@ The structure of the `mri` variable contains the following fields:
 
 -   `dim` gives information on the size (i.e. the number of voxels) of the anatomical volume into each direction
 -   `anatomy` is a matrix (with the size and number of dimensions specified in `dim`) that contains the anatomical information
--   `hdr` contains the detailled header information from the original file, it contents vary, depending on the file format
+-   `hdr` contains the detailed header information from the original file, it contents vary, depending on the file format
 -   `transform` is a homogenous [transformation matrix](/faq/homogenous) that allows expressing the voxel positions (in the field `anatomy`) in a certain coordinate system
 -   `fid` is an optional structure with fiducial information, this will in general not be present
 -   `coordsys` specifies the coordinate system

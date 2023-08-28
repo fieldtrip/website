@@ -153,7 +153,7 @@ Let us have a look at the triggers, together with a single NIRS channel for comp
 
 Using the "channel" button at the bottom of the screen we can make a different selection of channels to be displayed.
 
-The stimulus channel does not contain any events, the "aux1" and "aux2" channels contain analog TTL pulses. There is an aux1 trigger all the way at the start, well before the regular sequence starts. We can see that "aux1" and "aux2" are alternating, there is about 4 seconds (with some jitter) between successive triggers in these two channels, which matches the desciption of the trial structure in the PDF manuscript. The alternating pattern starts after about 350 seconds, which is about 6 minutes into the recording.
+The stimulus channel does not contain any events, the "aux1" and "aux2" channels contain analog TTL pulses. There is an aux1 trigger all the way at the start, well before the regular sequence starts. We can see that "aux1" and "aux2" are alternating, there is about 4 seconds (with some jitter) between successive triggers in these two channels, which matches the description of the trial structure in the PDF manuscript. The alternating pattern starts after about 350 seconds, which is about 6 minutes into the recording.
 
 My interpretation of this sequence of TTL pulses in the "aux1" and "aux2" channels is that aux1 codes for the onset of the sentence being played and aux2 codes for the click that cues the participant to repeat the sentence.
 
@@ -423,4 +423,4 @@ After baseline correcting (which is done while making the figure, it could also 
 
 ## Closing remarks
 
-Looking at some more datasets, I noticed that the dataset `S1001_run01.nirs` contains overall clean data. The data for subject 2 (`S1002_run01.nirs`) is not shared. The data of subject 3 `S1003_run01.nirs` has some movement(?) artifacts, but also a channel that seems to show a response on every "aux1" stimulus. It would be interesting to follow up these analyses with a more detailled look into the time-locked and the spontaneous artifacts that can be observed in the data.
+Looking at some more datasets, I noticed that the dataset `S1001_run01.nirs` contains overall clean data. The data for subject 2 (`S1002_run01.nirs`) is not shared. The data of subject 3 `S1003_run01.nirs` has some movement(?) artifacts, but also a channel that seems to show a response on every "aux1" stimulus. It would be interesting to follow up these analyses with a more detailed look into the time-locked and the spontaneous artifacts that can be observed in the data.

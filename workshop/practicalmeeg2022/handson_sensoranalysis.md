@@ -135,7 +135,7 @@ Rather than plotting power along a linear axis, we can also use a logarithmic ax
     xlabel('frequency')
     ylabel('power')
 
-Or we can log transform the data ourselves. The following converts the data into decidel (dB).
+Or we can log transform the data ourselves. The following converts the data into decibel (dB).
 
     figure
     plot(freq.freq, 10*log10(freq.powspctrm(84,:)));

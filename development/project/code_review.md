@@ -642,12 +642,12 @@ FIXME missing figure
 
 Using the matlab debugger, it is possible to stop at that line, and check the size of the datacov variable before and after the line is executed.
 
-Runnig whos before `ft_checkdata` is called shows
+Runnng whos before `ft_checkdata` is called shows
 
     Name Size Bytes Class Attributes
     datacov 1x1 337531528 struct
 
-Runnig whos after `ft_checkdata` is called shows
+Running whos after `ft_checkdata` is called shows
 
     Name Size Bytes Class Attributes
     datacov 1x1 545328786 struct

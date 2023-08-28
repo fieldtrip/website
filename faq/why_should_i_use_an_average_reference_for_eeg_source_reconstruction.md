@@ -5,7 +5,7 @@ tags: [faq, eeg, reference, source]
 
 # Why should I use an average reference for EEG source reconstruction?
 
-With EEG we measure potential differencesa. This means we always need N+1 electrodes to obtain N independent representations of the potential differences. This is the case with a common reference (e.g., M1 behind the left ear), with offline re-referenced linked mastoids (i.e. using the average of M1 and M2 as the reference), and also with a common average reference over all electrodes.
+With EEG we measure potential differences. This means we always need N+1 electrodes to obtain N independent representations of the potential differences. This is the case with a common reference (e.g., M1 behind the left ear), with offline re-referenced linked mastoids (i.e. using the average of M1 and M2 as the reference), and also with a common average reference over all electrodes.
 
 If you have recorded relative to a reference electrode that is not in the data file (which happens in most cases), you can add that implicit reference channel using the `cfg.implicitref` option in **[ft_preprocessing](/reference/ft_preprocessing)**. This adds a channel for the reference electrode containing all zeros. Subsequently (in the same call to ft_preprocessing) you can specify that you want to re-reference with the `cfg.reref` and `cfg.refchannel` options.
 

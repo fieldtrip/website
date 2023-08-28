@@ -36,12 +36,12 @@ If a researcher has a single do-single-subject-analysis script, it is not too ha
 
 ## Parallel computing in each high-level function
 
-Rather than doing the parallelization at the level of the users' scripts (the top red arrow in the figure above), an alternativs is to parallelize closer to the actual implementation of the algorithm just below the FieldTrip function interface (the bottom red arrow in the figure above). In this case it would be below the level of bookkeeping by the user in his/her script, and preferably also just below the level of the (shared) bookeeping with regard to the data structure handling. The batch here would e.g., consist of doing a FFT for every trial, computing some feature for each channel, or scanning a section of the brain (rather than the whole brain).
+Rather than doing the parallelization at the level of the users' scripts (the top red arrow in the figure above), an alternative is to parallelize closer to the actual implementation of the algorithm just below the FieldTrip function interface (the bottom red arrow in the figure above). In this case it would be below the level of bookkeeping by the user in his/her script, and preferably also just below the level of the (shared) bookeeping with regard to the data structure handling. The batch here would e.g., consist of doing a FFT for every trial, computing some feature for each channel, or scanning a section of the brain (rather than the whole brain).
 
 Possibly this could be implemented something like this:
 
     poolobj = parpool;
-    
+
     cfg = [];
     cfg.method = 'mtmfft';
     cfg.taper = 'hanning';
@@ -49,7 +49,7 @@ Possibly this could be implemented something like this:
     cfg.trials = 1:100;
     cfg.parallel = poolobj; % this allows looking up the pool details and number of workers
     freq = ft_freqanalysis(cfg, data)
-    
+
     delete(poolobj);
 
 This would distribute 100 jobs for the 100 trials over the workers in the parallel pool.

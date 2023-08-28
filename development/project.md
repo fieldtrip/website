@@ -15,7 +15,7 @@ This section lists information aimed at developers of FieldTrip and collaboratin
 - [Improve regression testing](/development/project/regression)
 - [Implement a common distributed computing backend](/development/project/distributed)
 - [Import and export data to and from MNE-Python](/development/project/integrate_with_mne)
-- [Implemention of realistic electrode properties in forward volume conduction models](/development/project/femfuns)
+- [Implementation of realistic electrode properties in forward volume conduction models](/development/project/femfuns)
 
 ## Stale projects
 

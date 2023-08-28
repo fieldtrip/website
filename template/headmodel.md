@@ -26,10 +26,10 @@ You can load and visualize it with
         mat: [3000x3000 double]
        type: 'dipoli'
        unit: 'mm'
-       
+
      ft_plot_headmodel(headmodel, 'facealpha', 0.6)
 
-The BEM model is based on the segmentation from [BrainWeb: Anatomical Model of Normal Brain](http://brainweb.bic.mni.mcgill.ca/brainweb/anatomic_normal.html). Its construction is detailled by Oostenveld et al. in [Clin Neurophysiol. 2003 Jul;114(7):1194-202](http://www.ncbi.nlm.nih.gov/pubmed/12842715); please cite this paper if you use this template volume conduction model in your analyses.
+The BEM model is based on the segmentation from [BrainWeb: Anatomical Model of Normal Brain](http://brainweb.bic.mni.mcgill.ca/brainweb/anatomic_normal.html). Its construction is detailed by Oostenveld et al. in [Clin Neurophysiol. 2003 Jul;114(7):1194-202](http://www.ncbi.nlm.nih.gov/pubmed/12842715); please cite this paper if you use this template volume conduction model in your analyses.
 
 A very similar BEM volume conduction model that was based on the same template MRI is described and validated by Fuchs et al. in [Clin Neurophysiol. 2002 May;113(5):702-12.](http://www.ncbi.nlm.nih.gov/pubmed/11976050).
 

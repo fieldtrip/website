@@ -178,7 +178,7 @@ interpolate temporally-local channel-specific glitches._
 {% include markup/danger %}
 Note we deliberately skip step _2. apply robust detrending to each channel_ for
 later because it is necessary to find first the pieces of data with artifacts
-and to exclude them. De Cheveigne and Arzounian's detrending algorith has the
+and to exclude them. De Cheveigne and Arzounian's detrending algorithm has the
 possibility to exclude outliers so this is the main reason for us to change the
 order (check their _nt_detrend.m_ function).
 {% include markup/end %}

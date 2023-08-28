@@ -731,7 +731,7 @@ To look at the data in topographical vie
 Adjust... Full view layout... CTF-151
 Windows... Show full view
 
-I had to create a new event list in a text edito
+I had to create a new event list in a text editor
 
     0 0.000        0   0
     600 1.000        0   1

@@ -376,7 +376,7 @@ Also when it comes to your statistical analysis FieldTrip doesn't let you down: 
 
 {% include image src="/assets/img/walkthrough/figure14.png" width="600" %}
 
-### Input - data and your designmatrix
+### Input - data and your design matrix
 
 It should be obvious that besides feeding data we need to specify how the separate data entries should be treated – which belong to the same condition for instance. What is common to all designs is that data entries are always assumed to be in a row. In the simplest case we only need to specify a code corresponding to the independent variable for every data entry. Note the use of the parameters ivar and uvar. They denote nothing more than the row-number in the design-matrix to find either your independent variables (ivar) or units of observation (uvar).
 

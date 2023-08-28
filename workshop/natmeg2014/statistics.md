@@ -214,7 +214,7 @@ The result of **[ft_freqstatistics](/reference/ft_freqstatistics)** is a structu
 Having computed the probability without correcting for multiple comparisons, we proceed with three methods that do correct for the MCP.
 
     cfg.method    = 'analytic';
-    cfg.correctm  = 'bonferoni';
+    cfg.correctm  = 'bonferroni';
     TFR_stat2     = ft_freqstatistics(cfg, TFR_logpow);
 
     cfg.method    = 'analytic';
@@ -357,7 +357,7 @@ We proceed by computing the statistical test, which returns the t-value, the pro
     ERF_stat1     = ft_timelockstatistics(cfg, ERF_all);
 
     cfg.method    = 'analytic';
-    cfg.correctm  = 'bonferoni';
+    cfg.correctm  = 'bonferroni';
     ERF_stat2     = ft_timelockstatistics(cfg, ERF_all);
 
     cfg.method    = 'analytic';

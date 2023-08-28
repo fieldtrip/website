@@ -99,7 +99,7 @@ B) Average single trials planar data (vertical and horizontal components) and th
     cfg.combinemethod  = 'sum';
     freq_combined_avg2 = ft_combineplanar(cfg,freq_planar_avg);
 
-Let's plot the results and see if there's a differenc
+Let's plot the results and see if there's a difference
 
     cfg         = [];
     cfg.layout  = 'CTF275.lay';

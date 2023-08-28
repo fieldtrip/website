@@ -61,7 +61,7 @@ Local organizer: Daniel van de Velden.
 For the hands-on sessions you have to start MATLAB. Make sure you have downloaded the hands-on data prior to the start of the workshop as it is quite a large download. A recent version of FieldTrip can be downloaded [here](https://depot.uni-konstanz.de/cgi-bin/exchange.pl?g=8qar4m9rlc), and the tutorial data can be downloaded [here](https://depot.uni-konstanz.de/cgi-bin/exchange.pl?g=25qbtdhtpp).
 
 {% include markup/danger %}
-Depending on the unzip program you are using (e.g., Winrar), the name of the zip file might also appear as directiory, resulting in path_to_directory/fieldtrip-xxxxxxxx/fieldtrip-xxxxxxxx, i.e. the FieldTrip directory in a FieldTrip directory. Please fix that by moving all files one level up.
+Depending on the unzip program you are using (e.g., Winrar), the name of the zip file might also appear as directory, resulting in path_to_directory/fieldtrip-xxxxxxxx/fieldtrip-xxxxxxxx, i.e. the FieldTrip directory in a FieldTrip directory. Please fix that by moving all files one level up.
 {% include markup/end %}
 
 After copying all files to your computer and unzipping then, you start MATLAB. To ensure that the right version of FieldTrip is used, and not another version (such as the one included in SPM or EEGLAB), you type in the MATLAB command window

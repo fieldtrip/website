@@ -71,7 +71,7 @@ The discrete model is represented in a MATLAB .mat file as
 
     >> load brainweb_discrete
     >> disp(segmentation)
-    
+
     segmentation =
               dim: [181 217 181]
         transform: [4x4 double]
@@ -83,7 +83,7 @@ The fuzzy model is represented in a MATLAB .mat file as
 
     >> load brainweb_fuzzy
     >> disp(segmentation)
-    
+
     segmentation =
                   dim: [181 217 181]
             transform: [4x4 double]
@@ -99,7 +99,7 @@ The fuzzy model is represented in a MATLAB .mat file as
            connective: [181x217x181 double]
            background: [181x217x181 double]
 
-Both discrete and fuzzy model are consistent with the data representation descibed in **[ft_datatype_segmentation](/reference/utilities/ft_datatype_segmentation)**.
+Both discrete and fuzzy model are consistent with the data representation described in **[ft_datatype_segmentation](/reference/utilities/ft_datatype_segmentation)**.
 
 ## The Eickhoff/Zilles/Amunts cytoarchitectonic atlas
 
@@ -110,7 +110,7 @@ The atlas and the toolbox are described in the publication belo
 S.B. Eickhoff, K.E. Stephan, H. Mohlberg, C. Grefkes, G.R. Fink, K. Amunts, K. Zilles, _A new SPM toolbox for combining probabilistic cytoarchitectonic maps and functional imaging data_, NeuroImage, Volume 25, Issue 4, 1 May 2005, Pages 1325-1335.
 
     >> atlas = ft_read_atlas('fieldtrip/template/atlas/spm_anatomy/AllAreas_v17_MPM')
-    
+
     atlas =
               dim: [151 188 154]
               hdr: [1x1 struct]
@@ -133,7 +133,7 @@ Cortex. Cerebral Cortex. 25: 3911-3931
 
     >> load ('fieldtrip/template/atlas/vtpm.mat')
     >> disp(vtpm)
-    
+
     vtpm =
               dim: [182 218 182]
               hdr: [1x1 struct]
@@ -162,7 +162,7 @@ Fan, L., Li, H., Zhuo, J., Zhang, Y., Wang, J., Chen, L., Yang, Z., Chu, C., Xie
 In FieldTrip, the atlas is included as a nifti file, complemented with a text file with the tissue labels. You can read it like this:
 
     >> brainnetome = ft_read_atlas('template/atlas/brainnetome/BNA_MPM_thr25_1.25mm.nii')
-    
+
     brainnetome =
               dim: [145 173 145]
               hdr: [1x1 struct]
@@ -188,7 +188,7 @@ Yeo BT, Krienen FM, Sepulcre J, Sabuncu MR, Lashkari D, Hollinshead M, Roffman J
 In FieldTrip, the two atlases are included as nifti files. You can read them like this:
 
     >> yeo7 = ft_read_atlas('/template/atlas/yeo/Yeo2011_7Networks_MNI152_FreeSurferConformed1mm_LiberalMask_colin27.nii')
-        
+
     yeo7 =
             dim: [256 256 256]
             hdr: [1x1 struct]
@@ -199,7 +199,7 @@ In FieldTrip, the two atlases are included as nifti files. You can read them lik
        coordsys: 'mni'
 
     >> yeo17 = ft_read_atlas('/template/atlas/yeo/Yeo2011_17Networks_MNI152_FreeSurferConformed1mm_LiberalMask_colin27.nii')
-    
+
     yeo17 =
             dim: [256 256 256]
             hdr: [1x1 struct]
@@ -241,4 +241,4 @@ The atlas can be read into FieldTrip using the following code:
 
 ## See also
 
-You can find more atlases on <https://www.loni.usc.edu/research/atlases> and on <http://www.bmap.ucla.edu/portfolio/atlases>. 
+You can find more atlases on <https://www.loni.usc.edu/research/atlases> and on <http://www.bmap.ucla.edu/portfolio/atlases>.
