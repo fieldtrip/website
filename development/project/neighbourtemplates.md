@@ -23,7 +23,7 @@ Find below the old project notes
 
 #### Goals
 
-1. Provide functionaltity for supporting neighbour templates [check]
+1. Provide functionality for supporting neighbour templates [check]
 2. Provide information how to create own neighbour templates and check using ft_neighbourplot [check]
 3. Update the community on this functionality
 4. Make user obliged to call neighbourselection

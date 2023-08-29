@@ -181,7 +181,7 @@ you can select the events that were annotated as 'noise' and 'text'. Alternative
     cfg.trialdef.eventtype  = 'analogtrig';
     cfg.trialdef.eventvalue = 'TRIG162';
 
-you can select the trials based on the triggers signals of the channel 'TRIG162'. This trigger-based trial selection can also be achieved by using your own trial functio
+you can select the trials based on the triggers signals of the channel 'TRIG162'. This trigger-based trial selection can also be achieved by using your own trial function
 
     %% Define trials
     cfg                      = [];

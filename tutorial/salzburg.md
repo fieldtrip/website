@@ -194,7 +194,7 @@ Since the data is of equal length we equalize the time axis of pre and post stim
     tfrpre.freq = round(tfrpre.freq);
     tfrpst.freq = round(tfrpst.freq);
 
-Now we compute the statistical evaluation using permutation approach. All of the details are explained [elsewere](/tutorial/cluster_permutation_freq).
+Now we compute the statistical evaluation using permutation approach. All of the details are explained [elsewhere](/tutorial/cluster_permutation_freq).
 
     cfg = [];
     cfg.channel          = {'MEG'};

@@ -12,7 +12,7 @@ This tutorial demonstrates how to construct an electrode model based on a single
 This tutorial does not cover how to create a 2-D channel layout for plotting, nor how to do the source estimation itself.
 
 {% include markup/warning %}
-Please cite the follwing paper when using this implementation for localizing electrodes with the Structure Sensor 3D-scanner.
+Please cite the following paper when using this implementation for localizing electrodes with the Structure Sensor 3D-scanner.
 
 Homölle S, Oostenveld R. [Using a structured-light 3D scanner to improve EEG source modeling with more accurate electrode positions.](https://doi.org/10.1016/j.jneumeth.2019.108378) J Neurosci Methods (2019).
 {% include markup/end %}

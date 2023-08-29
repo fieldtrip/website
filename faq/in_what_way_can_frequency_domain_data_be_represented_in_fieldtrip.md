@@ -82,7 +82,7 @@ Note that this representation lacks a 'labelcmb' field, and that the 'dimord' is
 
 ## Toggling between the different representations
 
-It is possible (but not recommended for non-expert users) to toggle between the different representations using **[ft_checkdata](/reference/utilities/ft_checkdata)** in combination with the key 'cmbrepresentation'. For exampl
+It is possible (but not recommended for non-expert users) to toggle between the different representations using **[ft_checkdata](/reference/utilities/ft_checkdata)** in combination with the key 'cmbrepresentation'. For example
 
     freq =
 

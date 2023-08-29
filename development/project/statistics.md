@@ -14,7 +14,7 @@ title: Redesign and implement a common statistical backend for various data type
 
 ## Step 1: verify the implementations on simulated data
 
-The purpose is to examine the correctness and completeness of the currently implemented methods. Backward compatibility with exising scripts has to be maintained, therefore the current implementation can serve as reference implementation.
+The purpose is to examine the correctness and completeness of the currently implemented methods. Backward compatibility with existing scripts has to be maintained, therefore the current implementation can serve as reference implementation.
 
 Besides showing that the current implementations are correct, this also reveals the different output formats that are presented to the end user.
 

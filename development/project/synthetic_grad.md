@@ -156,7 +156,7 @@ BG2: cBG2 _ gBG2 / gMLC11
 BG3: cBG3 _ gBG3 / gMLC11
 G11: cG11 \* gG11 / gMLC11
 ...
-Exampl
+Example
 G3OI coefficient for data in phi0 for MLC1
 G11 (G11-1105): 0.143393
 G12 (G12-1105): -0.00166001

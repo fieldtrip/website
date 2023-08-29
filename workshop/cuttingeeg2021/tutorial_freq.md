@@ -458,7 +458,7 @@ Exercise: Explore the data of the other condition, as well as the difference bet
 
 ## Continuous analysis, chunked spectral decomposition
 
-And now for something completely different. The next part of this tutorial deals with an analysis that treats the data more as a continuous chunk, rather than a collection of experimentally relevant epochs. The idea behind this, is that there might be fluctuations in some aspects of the brain signals, on longer time scales than the relevant cognitive events, which could interact with the way in which the brain responds to those events. Below we are going to perform a time-frequency analysis on the whole >1 hour recording. This part of the tutorial can be eplored on itself, for which the data needs to be processed from the raw datafile.
+And now for something completely different. The next part of this tutorial deals with an analysis that treats the data more as a continuous chunk, rather than a collection of experimentally relevant epochs. The idea behind this, is that there might be fluctuations in some aspects of the brain signals, on longer time scales than the relevant cognitive events, which could interact with the way in which the brain responds to those events. Below we are going to perform a time-frequency analysis on the whole >1 hour recording. This part of the tutorial can be explored on itself, for which the data needs to be processed from the raw datafile.
 
 
 ### Load the continuous data or use the cleaned continuous data computed earlier

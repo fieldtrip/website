@@ -153,7 +153,7 @@ MNE requires to set up the same environmental variables as FS. It is because MNE
 
     mne_setup_source_space --ico -6
 
-MNE is using a distributed inverse solver for EEG/MEG source estimation. Therefore, it discretize a source space into locations on the cortical surface. At a later stage, the desired solution will be computed by findig a source distribution with a minimum overall energy that depends on all sources in the source space.
+MNE is using a distributed inverse solver for EEG/MEG source estimation. Therefore, it discretize a source space into locations on the cortical surface. At a later stage, the desired solution will be computed by finding a source distribution with a minimum overall energy that depends on all sources in the source space.
 
 This stage creates a **decimated dipole grid on the white matter surface**, and saves this source space file in fif format. The location of the sources in the source space are expressed in "surface RAS coordinates" in the fif files. (The origin of this coordinate system is at the center of the conformed FreeSurfer MRI volumes and the axes are oriented along the axes of this volume.)
 
@@ -508,7 +508,7 @@ In MATLAB:
 
 {% include image src="/assets/img/development/project/replicate_functionality_of_mne_software/mesh_bnd_ts_mne.jpg" width="750" %}
 
-And the source space of the same volume created in FieldTrip, and reduced to the same number of vertices with the MATLAB reducepatch functio
+And the source space of the same volume created in FieldTrip, and reduced to the same number of vertices with the MATLAB reducepatch function
 
     bnd2_ft = bnd_ft;
     [bnd2_ft.tri, bnd2_ft.pnt]=reducepatch(bnd_ft.tri, bnd_ft.pnt, 16384);

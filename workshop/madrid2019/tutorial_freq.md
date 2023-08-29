@@ -129,7 +129,7 @@ the power at all time points. This gives the **absolute change** in power with
 respect to the baseline interval. Another method is (b) dividing, for each
 frequency, the power at all time points by the average power in the baseline
 interval. This gives the **relative increase** (or relative decrease) of the
-power at all ferquencies and time points with respect to the power in the
+power at all frequencies and time points with respect to the power in the
 baseline interval. Note that the relative baseline is expressed as a ratio; i.e.
 no change is represented by 1.
 

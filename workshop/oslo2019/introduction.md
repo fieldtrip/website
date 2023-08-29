@@ -26,7 +26,7 @@ There are largely two alternative approaches for preprocessing, which especially
 1. Read all data from the file into memory, apply filters, and subsequently cut the data into interesting segments
 2. Identify the interesting segments, read those segments from the data file and apply filters to those segments only
 
-An advantage of the first approach is that it allows you to apply most temporal fitlers to your data without the distorting the data. In the latter approach, you have to be more careful with the temporal filtering you apply, but it is much more memory-friendly, especially for big datasets.  
+An advantage of the first approach is that it allows you to apply most temporal filters to your data without the distorting the data. In the latter approach, you have to be more careful with the temporal filtering you apply, but it is much more memory-friendly, especially for big datasets.
  Here we are using the second approach. The approach for reading and filtering continuous data and segmenting afterwards is explained in [another tutorial](/tutorial/continuous).
 
 We are going to define segments of interest (epochs/trials) based on triggers encoded in a specific trigger channel.

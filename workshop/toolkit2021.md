@@ -74,7 +74,7 @@ Please note that the stable release version corresponds to the "release" branch,
 
 For people that **do** use a computer at the DCCN (either a PC via remote desktop or the DCCN cluster):
 
-FieldTrip is installed on the cluster, on /home/common/matlab/fieldtrip. (on Windows PCs, this is usually mounted on H:\\common\\matlab\\fieldrip. So you don’t need to download the latest release version of the FieldTrip toolbox from here or from here.
+FieldTrip is installed on the cluster, on /home/common/matlab/fieldtrip. (on Windows PCs, this is usually mounted on H:\\common\\matlab\\fieldtrip. So you don’t need to download the latest release version of the FieldTrip toolbox from here or from here.
 
 ### 4. Download the handson data in advance, or check whether you can access it
 

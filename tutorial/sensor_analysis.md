@@ -252,7 +252,7 @@ Exactly the same can be achieved using **[ft_analysispipeline](/reference/ft_ana
     cfg = [];
     ft_analysispipeline(cfg, freq);
 
-The function ft_analysispipeline puts all conducted analysis steps into perspective and visualizes them in a flowchar
+The function ft_analysispipeline puts all conducted analysis steps into perspective and visualizes them in a flowchart
 
 {% include image src="/assets/img/tutorial/sensor_analysis/figure10.png" %}
 

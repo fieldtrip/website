@@ -35,7 +35,7 @@ The ls statement shows the list of files in the present directory, and you can v
 
 The `addpath(pwd)` statement adds the
 present working directory, i.e. the directory containing the fieldtrip
-main funcctions. The `ft_defaults` command ensures that all required
+main functions. The `ft_defaults` command ensures that all required
 subdirectories are added to the path.
 
 If you get the error "can't find the command ft_defaults" you should check the present working directory.

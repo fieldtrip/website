@@ -159,7 +159,7 @@ Contrary to the description in the accompanying publication (see table 1 in the 
 
 # Converting the MATLAB structure to a FieldTrip raw data structure
 
-Since the data is not stored on disk in a [dataformat](/faq/dataformat) that FieldTrip can directly read, we will circumvent the FieldTrip reading functions as outlined in [this frequenly asked question](/faq/how_can_i_import_my_own_dataformat/#circumvent-the-fieldtrip-reading-functions).
+Since the data is not stored on disk in a [dataformat](/faq/dataformat) that FieldTrip can directly read, we will circumvent the FieldTrip reading functions as outlined in [this frequently asked question](/faq/how_can_i_import_my_own_dataformat/#circumvent-the-fieldtrip-reading-functions).
 
 We start with constructing a MATLAB data structure according to **[ft_datatype_raw](/reference/utilities/ft_datatype_raw)**, as if it were produced by **[ft_preprocessing](/reference/ft_preprocessing)**.
 

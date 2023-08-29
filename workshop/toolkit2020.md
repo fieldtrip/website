@@ -237,7 +237,7 @@ For people that use a computer at the DCCN (either a PC via remote desktop or th
 
 2.  Use a MATLAB version > 2016b.
 
-3.  FieldTrip is installed on the cluster, on /home/common/matlab/fieldtrip. (on Windows PCs, this is usually mounted on H:\\common\\matlab\\fieldrip. So you don’t need to download the latest release version of the FieldTrip toolbox from here or from here. Add FieldTrip to the MATLAB path in your MATLAB session
+3.  FieldTrip is installed on the cluster, on /home/common/matlab/fieldtrip. (on Windows PCs, this is usually mounted on H:\\common\\matlab\\fieldtrip. So you don’t need to download the latest release version of the FieldTrip toolbox from here or from here. Add FieldTrip to the MATLAB path in your MATLAB session
 
         restoredefaultpath
         addpath <path_to_fieldtrip>

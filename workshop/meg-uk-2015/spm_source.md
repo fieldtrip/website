@@ -74,7 +74,7 @@ With the previous steps, we invert data of whole trials from -100 to +800ms acro
 
 #### Generating batch scripts
 
-You can use the batch framework to construct a processing pipeline across a group of subjects or across different source reconstruction approaches. A brief exampl
+You can use the batch framework to construct a processing pipeline across a group of subjects or across different source reconstruction approaches. A brief example
 
 1.  Save the batch by going to “File” in the Batch editor and select “save Batch and Script“. As file name write 'batch_localise_inv'. This will result in two files: a batch file 'batch_localise_inv_job.m' and a Matlab script 'batch_localise_inv.m' which runs the batch file. Take a look at the job-file by entering “open batch_localise_inv_job.m” in the MATLAB command window.
 2.  In batch_localise_inv.m replace nrun = X; with nrun = 1 and save the file. We could now run this Matlab script with the same results as if we had pressed the green “Run” button in the Batch Editor.

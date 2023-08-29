@@ -467,7 +467,7 @@ Using the previously determined `cfg_automatic_threshold`, which does not mark t
 
 _Figure; Occurence of artifacts over time in the trial, i.e., relative to the stimulus_
 
-It is clear that most blinks happened at the start and expecially towards the end of the trial. Looking at this, we can conclude that thet participant was trying to suppress their blinks during stimulus presentation. It is not likely that the frequent eye blinks will have affected the perception of the stimulus as a (famous or unfamiliar) face, or as a scrambled object.
+It is clear that most blinks happened at the start and especially towards the end of the trial. Looking at this, we can conclude that thet participant was trying to suppress their blinks during stimulus presentation. It is not likely that the frequent eye blinks will have affected the perception of the stimulus as a (famous or unfamiliar) face, or as a scrambled object.
 
 ## Removing the eye and heart artifacts
 
