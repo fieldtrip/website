@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '37620589'
+- idtype: doi
+  value: 10.1038/s42003-023-05199-x
+- idtype: pmcid
+  value: PMC10449862
+authors:
+- authtype: Author
+  name: Marciano D
+- authtype: Author
+  name: Bellier L
+- authtype: Author
+  name: Mayer I
+- authtype: Author
+  name: Ruvalcaba M
+- authtype: Author
+  name: Lee S
+- authtype: Author
+  name: Hsu M
+- authtype: Author
+  name: Knight RT
+epubdate: 2023 Aug 24
+fulljournalname: Communications Biology
+issue: ''
+pages: '871'
+pmclivedate: 2023/08/26
+printpubdate: ''
+pubdate: 2023 Aug 24
+sortdate: 2023/08/24 00:00
+source: Commun Biol
+title: 'Dynamic expectations: Behavioral and electrophysiological evidence of sub-second
+  updates in reward predictions'
+uid: '10449862'
+volume: '6'

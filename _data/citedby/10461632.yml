@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fnhum.2023.1186594
+- idtype: pmcid
+  value: PMC10461632
+authors:
+- authtype: Author
+  name: Park HJ
+- authtype: Author
+  name: Lee B
+epubdate: 2023 Aug 10
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '1186594'
+pmclivedate: 2023/08/29
+printpubdate: ''
+pubdate: 2023 Aug 10
+sortdate: 2023/08/10 00:00
+source: Front Hum Neurosci
+title: Multiclass classification of imagined speech EEG using noise-assisted multivariate
+  empirical mode decomposition and multireceptive field convolutional neural network
+uid: '10461632'
+volume: '17'
