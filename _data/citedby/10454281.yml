@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '37624638'
+- idtype: doi
+  value: 10.1002/brb3.3176
+- idtype: pmcid
+  value: PMC10454281
+authors:
+- authtype: Author
+  name: Gyulai A
+- authtype: Author
+  name: Körmendi J
+- authtype: Author
+  name: Issa MF
+- authtype: Author
+  name: Juhasz Z
+- authtype: Author
+  name: Nagy Z
+epubdate: 2023 Jul 21
+fulljournalname: Brain and Behavior
+issue: '8'
+pages: e3176
+pmclivedate: 2023/08/26
+printpubdate: ''
+pubdate: 2023 Jul 21
+sortdate: 2023/07/21 00:00
+source: Brain Behav
+title: 'Event‐Related Spectral Perturbation, Inter Trial Coherence, and Functional
+  Connectivity in motor execution: A comparative EEG study of old and young subjects'
+uid: '10454281'
+volume: '13'
