@@ -133,6 +133,9 @@
 - name:  Sensor-level ERF, TFR and connectivity analyses
   link:  /tutorial/sensor_analysis
 
+- name:  Dealing with TMS-EEG datasets
+  link:  /tutorial/tms-eeg
+
 - name:  Visual or manual artifact rejection
   link:  /tutorial/visual_artifact_rejection
 
