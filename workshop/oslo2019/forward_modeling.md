@@ -7,7 +7,7 @@ tags: [oslo2019, eeg-audodd, headmodel]
 
 ## Introduction
 
-This tutorial goes through the necessary steps for creating a robust forward model for EEG source reconstruction.  
+This tutorial goes through the necessary steps for creating a robust forward model for EEG source reconstruction.
 
 It is part of the [Oslo 2019 workshop tutorials](/workshop/oslo2019), where tutorials can be found on [preprocessing and ERPs](/workshop/oslo2019/introduction), [time-frequency representations](/workshop/oslo2019/timefrequency), [statistics](/workshop/oslo2019/statistics) and [source reconstruction](/workshop/oslo2019/beamforming).
 
@@ -25,10 +25,10 @@ There are four components of a forward model
 1. A _head model_: we need to know how the electric currents generated at the source spread throughout the volume conductor (the head, containing the borders between brain and skull and between skull and skin)
 2. A _sensor description_: we need to know where the sensors are that pick up the activity coming from the sources
 3. A _source model_: we need to know where the sources are - preferably they should be in the brain
-4. A _lead field_ : we need to know how the sources and sensors "connect" to one another. That is, for each source (activated at unit strength (1 Am)) we calculate the electic potential vector at each sensor (electrode). It may be seen that the _lead field_ (component 4) is really the "sum" of the information from components 1-3.
+4. A _lead field_ : we need to know how the sources and sensors "connect" to one another. That is, for each source (activated at unit strength (1 Am)) we calculate the electric potential vector at each sensor (electrode). It may be seen that the _lead field_ (component 4) is really the "sum" of the information from components 1-3.
 
 {% include markup/info %}
-Note that the _forward model_ is completely independent of the actual EEG data.  
+Note that the _forward model_ is completely independent of the actual EEG data.
 All it models is how a source _given_ that it was active with a given current (1 Am), _would_ be seen at the sensor level.
 {% include markup/end %}
 
@@ -341,7 +341,7 @@ Let's have a look at the output of _sourcemodel_and_leadfield_
 
 ### Plotting the lead field
 
-It is always recommended to plot the lead fields alongside the electrodes and head model to see if things look okay.  
+It is always recommended to plot the lead fields alongside the electrodes and head model to see if things look okay.
 The code for this takes a bit more work as can be seen by the length of the code below. Note that we use a realistic source current of 100 nAm (_sensory_dipole_current_)
 
     figure('units', 'normalized', 'outerposition', [0 0 0.5 0.5])
@@ -510,6 +510,6 @@ _Figure 15: The_ brain _(white),_ skull _(yellow) and_ scalp _surfaces (red). No
 
 ## Which BEM algorithm to use?
 
-If possible, you should use the [OpenMEEG algorihtm](https://openmeeg.github.io/) implemented in FieldTrip (in **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)** use _cfg.method = 'openmeeg'_. This may require some [careful installation](/faq/how_do_i_install_the_openmeeg_binaries) before it works, and it only works on Linux and Mac systems.
+If possible, you should use the [OpenMEEG algorithm](https://openmeeg.github.io/) implemented in FieldTrip (in **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)** use _cfg.method = 'openmeeg'_. This may require some [careful installation](/faq/how_do_i_install_the_openmeeg_binaries) before it works, and it only works on Linux and Mac systems.
 
 If you cannot make this work, then _dipoli_, which also only works on Linux and Mac systems (at the moment) is your next choice, and finally _bemcp_ which works on all platforms.

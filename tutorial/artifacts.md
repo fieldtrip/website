@@ -38,7 +38,7 @@ Detecting the artifacts without reading the complete data into memory allows you
 
 ## Rejecting segments with artifacts
 
-With this strategy, pieces of data contaminated by artifacts are identified and removed from further analysis. For example, a bad channel is excluded, or trials with artifacts are removed. You may want to use this strategy not only to deal with the artifact, but also to deal with undesired behaviour of your participant. For example if in a visual stimulus-detection task the subject blinks exactly at the moment that the (short) stimulus appears on screen, chances are that he did not see the stimulus. In that case the reason to exclude the trial is not because of the EOG artifact, but because of the subject's brain activity in that trial not being of interest.  
+With this strategy, pieces of data contaminated by artifacts are identified and removed from further analysis. For example, a bad channel is excluded, or trials with artifacts are removed. You may want to use this strategy not only to deal with the artifact, but also to deal with undesired behaviour of your participant. For example if in a visual stimulus-detection task the subject blinks exactly at the moment that the (short) stimulus appears on screen, chances are that he did not see the stimulus. In that case the reason to exclude the trial is not because of the EOG artifact, but because of the subject's brain activity in that trial not being of interest.
 
 ### Manual/visual detection
 
@@ -87,7 +87,7 @@ More information can be found in the [automatic artifact rejection](/tutorial/au
 
 ### Rejecting segments with artifacts from the data
 
-If you use eiter manual/visual or automatic detection of artifactual segments, you usually would proceed to reject those segments from subsequent analysis with **[ft_rejectartifact](/reference/ft_rejectartifact)**. FieldTrip supports variable trial length data, which allows you to reject only those pieces of data containing the artifact, keeping the rest of the trial. This is especially useful if your experiment consists of very long trials.
+If you use either manual/visual or automatic detection of artifactual segments, you usually would proceed to reject those segments from subsequent analysis with **[ft_rejectartifact](/reference/ft_rejectartifact)**. FieldTrip supports variable trial length data, which allows you to reject only those pieces of data containing the artifact, keeping the rest of the trial. This is especially useful if your experiment consists of very long trials.
 
 ### Rejecting channels with artifacts from the data
 

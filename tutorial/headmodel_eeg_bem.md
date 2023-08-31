@@ -7,7 +7,7 @@ tags: [tutorial, eeg, source, headmodel, mri, plotting, meg-language]
 
 ## Introduction
 
-This tutorial demonstrates how to construct a Boundary Element Method (BEM) volume conduction model of the head, also known as head model, based on an individual subject's anatomical MRI. For didactic resons we will use the anatomical MRI corresponding to the data that was also analyzed in other tutorials. The original anatomical MRI data, along with the (intermediate) results of this tutorial, can be downloaded from [out download server](https://download.fieldtriptoolbox.org/tutorial/headmodel_eeg_bem/).
+This tutorial demonstrates how to construct a Boundary Element Method (BEM) volume conduction model of the head, also known as head model, based on an individual subject's anatomical MRI. For didactic reasons we will use the anatomical MRI corresponding to the data that was also analyzed in other tutorials. The original anatomical MRI data, along with the (intermediate) results of this tutorial, can be downloaded from [out download server](https://download.fieldtriptoolbox.org/tutorial/headmodel_eeg_bem/).
 
 In reality we did _not_ record EEG data for this subject, nor do we have recorded electrode positions. To demonstrate the EEG volume conduction model, we will use [template](/template/electrode) electrodes. The template electrodes are not aligned with the individual MRI and head model, hence we will conclude with the alignment of the electrodes.
 
@@ -116,7 +116,7 @@ Occasionally, the quality of the anatomical image is not sufficient to provide a
 For more information, you can consult this [frequently asked question](/faq/why_does_my_eegheadmodel_look_funny).
 {% include markup/end %}
 
-The first thing to check is whether the segmented volumes have a reasonable size. The brain compartment should be about 1300-1600 ml, and the skull compartment about 400-500 ml when using `cfg.spmmethod='old'` which results in the "inflated brain" as skull compartment (see figure below). The volume of the scalp compartment can be arbirarily large, as it extends to the neck.
+The first thing to check is whether the segmented volumes have a reasonable size. The brain compartment should be about 1300-1600 ml, and the skull compartment about 400-500 ml when using `cfg.spmmethod='old'` which results in the "inflated brain" as skull compartment (see figure below). The volume of the scalp compartment can be arbitrarily large, as it extends to the neck.
 
     ft_checkdata(segmentedmri, 'feedback', 'yes') % display some information about the segmentation
 
@@ -132,7 +132,7 @@ The first thing to check is whether the segmented volumes have a reasonable size
     total segmented :     4254 ml ( 25.35 %)
     total volume    :    16777 ml (100.00 %)
 
-We can change the segmentation from the probabilistic (or in this case Boolean) representation into an indexed representation; this represents the tissue types by succesive integers, which we can plot together color-codes in a single image.
+We can change the segmentation from the probabilistic (or in this case Boolean) representation into an indexed representation; this represents the tissue types by successive integers, which we can plot together color-codes in a single image.
 
     segmentedmri_indexed = ft_checkdata(segmentedmri, 'segmentationstyle', 'indexed')
 
@@ -169,7 +169,7 @@ When visualizing the volume, we should check that the skull and scalp compartmen
 
 ### Construct meshes for the boundaries
 
-In this step, triangulated surface meshes are created at the borders between the different tissue types using **[ft_prepare_mesh](/reference/ft_prepare_mesh)**. The output consists of surfaces represented by points or vertices that are connected in triangles. The tissues from which the surfaces are created have to be specified and also the number of vertices for each tissue. Since the potential changes the most rapidly on the outside of the brain (or inside of the skull), we want that surface to be the most detailled. The potential does not change rapidly over the scalp, so that can remain relatively coarse. It is common to use the ratio 3/2/1 for the scalp/skull/brain.
+In this step, triangulated surface meshes are created at the borders between the different tissue types using **[ft_prepare_mesh](/reference/ft_prepare_mesh)**. The output consists of surfaces represented by points or vertices that are connected in triangles. The tissues from which the surfaces are created have to be specified and also the number of vertices for each tissue. Since the potential changes the most rapidly on the outside of the brain (or inside of the skull), we want that surface to be the most detailed. The potential does not change rapidly over the scalp, so that can remain relatively coarse. It is common to use the ratio 3/2/1 for the scalp/skull/brain.
 
     cfg = [];
     cfg.tissue      = {'brain', 'skull', 'scalp'};
@@ -184,7 +184,7 @@ In this step, triangulated surface meshes are created at the borders between the
         unit: 'mm'
     coordsys: 'ctf'
 
-The mesh structure is an array with three surfaces. Each surface contains the (x,y,z) positions of alll vertices in `pos` and the triangulation in `tri`, in which each row defines the indices (the row numbers) of three vertices that form a triangle. The first surface represents the boundary between the brain and the inside of the skull, the second the outside surface of the skull, and the third represents the boundary between the scalp and the air.
+The mesh structure is an array with three surfaces. Each surface contains the (x,y,z) positions of all vertices in `pos` and the triangulation in `tri`, in which each row defines the indices (the row numbers) of three vertices that form a triangle. The first surface represents the boundary between the brain and the inside of the skull, the second the outside surface of the skull, and the third represents the boundary between the scalp and the air.
 
 ### Visualization
 
@@ -406,7 +406,7 @@ Or we can use the anatomical MRI to identify them
 
     save fiducials fiducials
 
-The headshape method is easiest for the pre-auricular points, as you can regognize the whole shape of the ears. The volume method is the easiest for the nasion, and by far the most accurate for the inion.
+The headshape method is easiest for the pre-auricular points, as you can recognize the whole shape of the ears. The volume method is the easiest for the nasion, and by far the most accurate for the inion.
 
     disp(fiducials.elecpos)
       113.5789   -1.3870   -0.8349

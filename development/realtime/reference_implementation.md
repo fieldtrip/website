@@ -5,7 +5,7 @@ tags: [realtime, development]
 
 # FieldTrip buffer reference implementation
 
-This page is part of the documentation series of the FieldTrip buffer for realtime aquisition. The FieldTrip buffer is a standard that defines a central hub (the [FieldTrip buffer](/development/realtime)) that facilitates realtime exchange of neurophysiological data. The documentation is organized in five main sections, bein
+This page is part of the documentation series of the FieldTrip buffer for realtime acquisition. The FieldTrip buffer is a standard that defines a central hub (the [FieldTrip buffer](/development/realtime)) that facilitates realtime exchange of neurophysiological data. The documentation is organized in five main sections, being
 
 1.  description and general [overview of the buffer](/development/realtime/buffer),
 2.  definition of the [buffer protocol](/development/realtime/buffer_protocol),
@@ -36,7 +36,7 @@ A plain-text version of the BSD License is included with the FieldTrip
 buffer source code release in the file LICENSE_BSD. It can also be found
 [here](http://www.opensource.org/licenses/bsd-license.php).
 
-The FieldTrip buffer makes use of POSIX threads. This is available by default on UNIX-like operating systems. A well-tested implementation of POSIX threads is also available for windows at http://sourceware.org/pthreads-win32/. The pthreads-win32 library is released under the [GNU Lesser General Public License (LPGL)](http://sourceware.org/pthreads-win32/copying.html), which explicitely allows it to be used in closed-source commercial applications.
+The FieldTrip buffer makes use of POSIX threads. This is available by default on UNIX-like operating systems. A well-tested implementation of POSIX threads is also available for windows at http://sourceware.org/pthreads-win32/. The pthreads-win32 library is released under the [GNU Lesser General Public License (LPGL)](http://sourceware.org/pthreads-win32/copying.html), which explicitly allows it to be used in closed-source commercial applications.
 
 ## Implementation of the C-library
 

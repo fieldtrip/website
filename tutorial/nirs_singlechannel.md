@@ -36,7 +36,7 @@ Analyses can be conducted in many different ways and in different orders, depend
 The following steps provide a good standard approach for analyzing fNIRS data, see Figure 1 for an overview:
 
 - read continuous data
-- (optinally) trim the beginning and the end of the recording if these are noisy and not of interest
+- (optionally) trim the beginning and the end of the recording if these are noisy and not of interest
 - remove bad segments in the channels of interest, e.g., due to motion artifacts
 - transform optical densities to changes in oxyhemoglobin (oxyHb) and deoxyhemoglobin (deoxyHb) concentration
 - separate functional from systemic responses; which can be done using either one of, or a combination of
@@ -197,7 +197,7 @@ Apart from motion artifacts, which appear as spikes in the data, fNIRS measureme
 
 Because we are interested to find whether the brain responds specifically to the events that took place during the experiment, we want to focus our analyses on the timewindows in which the events took place (these timewindows are often called epochs or trials). More specifically, we want to investigate whether there is increase in oxygenation in the channel of interest timelocked to the experimental event. In the current dataset, the events are fingertaps of the participant. To be able to analyze these specific event-related responses, we have not only recorded the NIRS signal, but also when which event happened, stored in a so-called trigger channel. The triggers indicate when what happened in the experiment.
 
-Earlier, we have read in all epochs by not specifying cfg.trl during our previous call to **[ft_preprocessing](/reference/ft_preprocessing)**. In the help documentation cfg.trl points to **[ft_definetrial](/reference/ft_definetrial)**, which we will now use to define our trials. So let us have a look at the functio
+Earlier, we have read in all epochs by not specifying cfg.trl during our previous call to **[ft_preprocessing](/reference/ft_preprocessing)**. In the help documentation cfg.trl points to **[ft_definetrial](/reference/ft_definetrial)**, which we will now use to define our trials. So let us have a look at the function
 
     help ft_definetrial
 
@@ -244,7 +244,7 @@ We can now remove the trials containing the artifacts that we determined earlier
     cfg.artfctdef.zvalue.artifact = artifact;
     cfg.artfctdef.reject = 'complete';
     data_epoch = ft_rejectartifact(cfg, data_epoch);
-  
+
 So we pulled our data out of the measurement. The data looks crisps and clear.
 
 #### Exercise 4

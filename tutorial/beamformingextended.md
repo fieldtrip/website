@@ -23,7 +23,7 @@ The brain is divided in a regular three dimensional grid and the source strength
 
 When conducting a multiple-subject study, it is essential that averaging over subjects does not violate any statistical assumption. One of these assumptions is that subject's sources are represented in a common space, i.e. an averaged grid point represents the estimate of the same brain region across subjects. One way to get subjects in a common space is by spatially deforming and interpolating the source reconstruction after beamforming. However, we will use (and recommend) an alternative way that does not require interpolation. Prior to source estimation we construct a regular grid in MNI template space and spatially deform this grid to each of the individual subjects (note that you will only have the data from one subject here). The beamformer estimation is done on the direct grid mapped to MNI space, so that the results can be compared over subjects. This procedure is explained in detail [in this example code](/example/sourcemodel_aligned2mni). Creating the MNI template grid only needs to be done once, and the result is provided in the fieldtrip/template directory. We strongly suggest that you have a quick (but thorough) look at the example code page and understand the essence of what is being done there anyway!
 
-The tutorial is split into three parts. In the first part of the tutorial, we will explain how to compute the forward and inverse model, which is the fundamental basic for source level analysis. In the second part, we will localize the sources responsible for the posterior gamma activity upon visual stimlation. In the third part of the tutorial, we will compute coherence to study the oscillatory synchrony between two sources in the brain. This is computed in the frequency domain by normalizing the magnitude of the summed cross-spectral density between two signals by their respective power. For each frequency bin the coherence value is a number between 0 and 1. The coherence values reflect the consistency of the phase difference between the two signals at a given frequency. In the dataset we will analyze the subject was required to maintain an isometric contraction of a forearm muscle. The example in this session covers thus cortico-muscular coherence on source level. The same principles, however, apply to cortico-cortical coherence, for which the interested reader can have a look at [another tutorial](/tutorial/connectivityextended).
+The tutorial is split into three parts. In the first part of the tutorial, we will explain how to compute the forward and inverse model, which is the fundamental basic for source level analysis. In the second part, we will localize the sources responsible for the posterior gamma activity upon visual stimulation. In the third part of the tutorial, we will compute coherence to study the oscillatory synchrony between two sources in the brain. This is computed in the frequency domain by normalizing the magnitude of the summed cross-spectral density between two signals by their respective power. For each frequency bin the coherence value is a number between 0 and 1. The coherence values reflect the consistency of the phase difference between the two signals at a given frequency. In the dataset we will analyze the subject was required to maintain an isometric contraction of a forearm muscle. The example in this session covers thus cortico-muscular coherence on source level. The same principles, however, apply to cortico-cortical coherence, for which the interested reader can have a look at [another tutorial](/tutorial/connectivityextended).
 
 ## Procedure
 
@@ -107,7 +107,7 @@ If the yellow-greyish brain shows up in the subject's heads, everything went fin
 You might wonder why the anatomical MRI shows upside down: this is a [frequently asked question](/faq/why_does_my_anatomical_mri_show_upside-down_when_plotting_it_with_ft_sourceplot).
 {% include markup/end %}
 
-Now prepare the head model from the segmented brain surfac
+Now prepare the head model from the segmented brain surface
 
     cfg        = [];
     cfg.method = 'singleshell';
@@ -122,7 +122,7 @@ If you want to do a source reconstruction of EEG data, you have to pay special a
 
 Prior to doing the spectral decomposition with **[ft_freqanalysis](/reference/ft_freqanalysis)** you have to ensure with **[ft_preprocessing](/reference/ft_preprocessing)** that all channels are re-referenced to the common average reference.
 
-Furthermore, after selecting the channels you want to use in the source reconstruction (excluding bad and absent channels) and after re-referencing them, you should not make sub-selections of channels any more and discard channels, as that would cause the data not be average referenced any more.  
+Furthermore, after selecting the channels you want to use in the source reconstruction (excluding bad and absent channels) and after re-referencing them, you should not make sub-selections of channels any more and discard channels, as that would cause the data not be average referenced any more.
 {% include markup/end %}
 
 #### Exercise: head model
@@ -384,7 +384,7 @@ With the use of `cfg.atlas` (only available with `cfg.method = 'ortho'`) you can
 #### Exercise: regularization
 
 {% include markup/info %}
-The regularization parameter was lambda = '5%'. Change it to 0 or to '50%' and plot the power estimate with respect to baseline. How does the regularization parameter affect the properties of the spatial filter?  
+The regularization parameter was lambda = '5%'. Change it to 0 or to '50%' and plot the power estimate with respect to baseline. How does the regularization parameter affect the properties of the spatial filter?
 {% include markup/end %}
 
 ## Localization of cortical sources that are coherent with the EMG

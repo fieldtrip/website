@@ -181,7 +181,7 @@ you can select the events that were annotated as 'noise' and 'text'. Alternative
     cfg.trialdef.eventtype  = 'analogtrig';
     cfg.trialdef.eventvalue = 'TRIG162';
 
-you can select the trials based on the triggers signals of the channel 'TRIG162'. This trigger-based trial selection can also be achieved by using your own trial functio
+you can select the trials based on the triggers signals of the channel 'TRIG162'. This trigger-based trial selection can also be achieved by using your own trial function
 
     %% Define trials
     cfg                      = [];
@@ -342,7 +342,7 @@ For an exported .con file that contains the information of digitized points, `he
 
 The first three components of `headshape.fid` denote the digitized anatomical landmarks, NAS, LPA, and RPA. The middle five components, 'HPI_3', 'HPI_1', 'HPI_2', 'HPI_4', and 'HPI_5', denote the "digitized" HPI points that corresponds to the HPIs (marker coils), 'CPF', 'LPA', 'RPA', 'LPF', and 'RPF', respectively. The values of the positions of these digitized points are given by those in the MEG (i.e., dewar) coordinate. The last five components of 'headshape.fid' are secured for reading the HPI (marker coils) information and accordingly provides the information of the HPI positions with the label of 'CPF', 'LPA', 'RPA', 'LPF', and 'RPF'.
 
-On contrary to an exported .con file, an original (not-exported) data file (.con, .ave, .mrk) contains only HPI information without digitized points. The `headshape.fid` of an original data file provides only marker-coil informatio
+On contrary to an exported .con file, an original (not-exported) data file (.con, .ave, .mrk) contains only HPI information without digitized points. The `headshape.fid` of an original data file provides only marker-coil information
 
     headshape = ft_read_headshape(fullfile(meg_path, meg_file));
 
@@ -423,7 +423,7 @@ To refine the above fiducial-points based registration, it is recommended to uti
     cfg.coordsys = 'ctf';
     mri_coreg = ft_volumerealign(cfg, mri_coreg);
 
-    %% For representing anatomical landmarks and HPIs in the head coordinate syste
+    %% For representing anatomical landmarks and HPIs in the head coordinate system
     fid_mri = ft_warp_apply(mri_coreg.transform, fid_vox, 'homogeneous');
     hpi_mri = ft_warp_apply(mri_coreg.transform, hpi_vox, 'homogeneous');
 

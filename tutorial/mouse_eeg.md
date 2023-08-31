@@ -66,7 +66,7 @@ We will do the following
 
 The purpose of the study in which the data that is demonstrated here is to use EEG with Optogenetic Stimulation (opto-EEG) for studying sensorymotor integration.
 
-Sensorymotor integration is a neurological process dealing with somatosensation inputs into motor outputs in an effective way. Numerous studies have shown the direct signal pathways within somatosensor-motor circuits, however little is known how the tactile sensations with different stimulation frequency are processed from somatosensory to motor cortex in order to react appropriately to different types of stimulation. In present study, we mimicked the peripheral sensation by direct stimulation of S1, S2, M1 and sensory thalamus using optogenetic method and concurrently recorded the frequency dependent responses (1, 10, 20, 30, 40 and 50 Hz) with a depth electrode in the region of the optode (i.e. S1, S2, M1 and thalamus), and recording the EEG using the surface micro electrode array.
+Sensorimotor integration is a neurological process dealing with somatosensation inputs into motor outputs in an effective way. Numerous studies have shown the direct signal pathways within somatosensor-motor circuits, however little is known how the tactile sensations with different stimulation frequency are processed from somatosensory to motor cortex in order to react appropriately to different types of stimulation. In present study, we mimicked the peripheral sensation by direct stimulation of S1, S2, M1 and sensory thalamus using optogenetic method and concurrently recorded the frequency dependent responses (1, 10, 20, 30, 40 and 50 Hz) with a depth electrode in the region of the optode (i.e. S1, S2, M1 and thalamus), and recording the EEG using the surface micro electrode array.
 
 ### Subject and Experiment
 
@@ -216,7 +216,7 @@ The segments of interest are specified by their begin- and end-sample and by the
 
 ### preprocessing
 
-After the segments of interest have been added to the configuration structure, we read them from the raw data file into memory. At this spet we also add the other preprocessing options to the configuration, such as the filter settings.
+After the segments of interest have been added to the configuration structure, we read them from the raw data file into memory. At this step we also add the other preprocessing options to the configuration, such as the filter settings.
 
     cfg.channel   = 'all';
     cfg.baseline  = [-0.30, -0.05];
@@ -367,12 +367,12 @@ The current standards to deal with differences in mouse brain size are very comp
 
 For the mouse the electrode grids are however of fixed dimensions, but the head sizes still differ.
 
-For example, let's think about a case of targetting CA1 hippocampus which is (AP, ML, DV) = -2, 1.5, -2 with respect to the bregma according to the mouse atlas. Each idividual mouse has different brain size. What we do is to measure the length between bregma to lambda, and if the length is 4.2 mm, we multiply the target distance by 4.2/3.9 ~= 1.077. Hence the steretaxic target for CA1 would be (AP, ML, DV) = -2.15, 1.62, -2.15.
+For example, let's think about a case of targetting CA1 hippocampus which is (AP, ML, DV) = -2, 1.5, -2 with respect to the bregma according to the mouse atlas. Each individual mouse has different brain size. What we do is to measure the length between bregma to lambda, and if the length is 4.2 mm, we multiply the target distance by 4.2/3.9 ~= 1.077. Hence the stereotaxic target for CA1 would be (AP, ML, DV) = -2.15, 1.62, -2.15.
 Since the tolerance range of the stereotaxic is 0.1 mm, the actual target would be -2.1, 1.6, -2.1.
 I observed that some group rescale only anterior posterior (AP). Hence according to them the target coordinate would be -2.1, 1.5, -2. Unlike human, mouse has a secondary confirmation procedure, which is called histology. Hence, we can confirm whether we hit the target or not via histological procedure after recordings.
 For your information, many neuroscientists agree that this rescaling method can work as a rule of thumb but individual difference between animals cannot be neglected, emphasizing the post-hoc histological confirmation.
 
-The anatomical structure of mouse brain due not vary dramatically if the weight and/or the length between bregma and lambda are in the similar range, in a sense of a few hundreds micrometer. For example, any structure with a dimension ranging larger than a couple of hundreds um, we seldom fail to hit this structure. However, when we aim for a structure with a sharp shape with dimension smaller than a couple of hundreds um, we half fail to hit that structure. But if this structure is on the cortex or near, we seldome fail.
+The anatomical structure of mouse brain due not vary dramatically if the weight and/or the length between bregma and lambda are in the similar range, in a sense of a few hundreds micrometer. For example, any structure with a dimension ranging larger than a couple of hundreds um, we seldom fail to hit this structure. However, when we aim for a structure with a sharp shape with dimension smaller than a couple of hundreds um, we half fail to hit that structure. But if this structure is on the cortex or near, we seldom fail.
 
 ### compute and visualize the ERPs
 
@@ -542,7 +542,7 @@ and by clicking in the figure, we can determine the location of three landmarks,
     lambda      = [0 -5.0 2.0];
     midsagittal = [0.2 -0.7 -2.0];
 
-The **[ft_headcoordinates](/reference/utilities/ft_headcoordinates)** function provides the homogenous transformation matrix to rotate and translate the MRI into the Paxinos coordinate syste
+The **[ft_headcoordinates](/reference/utilities/ft_headcoordinates)** function provides the homogenous transformation matrix to rotate and translate the MRI into the Paxinos coordinate system
 
     head2paxinos = ft_headcoordinates(bregma, lambda, midsagittal, 'paxinos')
 
@@ -573,7 +573,7 @@ The units can be fixed by
 
     mri_realigned.unit = 'mm';
 
-After coregistering the MRI with the Paxinos coordinate system, it is [convenient to reslice it](/faq/why_does_my_anatomical_mri_show_upside-down_when_plotting_it_with_ft_sourceplot), i.e. to interpolate the greyscale values on a 3-D grid that is nicely aligned with the cardinal axes.
+After coregistration of the MRI with the Paxinos coordinate system, it is [convenient to reslice it](/faq/why_does_my_anatomical_mri_show_upside-down_when_plotting_it_with_ft_sourceplot), i.e. to interpolate the greyscale values on a 3-D grid that is nicely aligned with the cardinal axes.
 
     cfg = [];
     cfg.xrange = [-6 6];
@@ -773,7 +773,7 @@ You see that this figure is not what you would expect. This is due to the electr
 To coregistrate with them,
 
 1.  use ft_headcoordinates function with input variables (bregma_middle, lambda_middle, and bregma_ventral).
-    The bregma_middle inducates the bregma point [0, 0, 0].
+    The bregma_middle indicates the bregma point [0, 0, 0].
     The lambda_middle indicates the lambda point [0, y, 0] aligned with anterio-parietal axis.
     The bregma_ventral indicates inside direction of electrode array.
 

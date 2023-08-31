@@ -11,7 +11,7 @@ FieldTrip supports plotting of channel-level and source-level data using functio
 
 The goal of the shared plotting functions (compared to MATLAB) is to reuse the same functionality in different functions and be able to improve the functionality everywhere.
 
-Furthermore, the shared plotting functions allow a power-user to construct more detailled data visualizations.
+Furthermore, the shared plotting functions allow a power-user to construct more detailed data visualizations.
 
 ## Module layout
 

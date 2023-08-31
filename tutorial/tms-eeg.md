@@ -1,6 +1,6 @@
 ---
 title: Dealing with TMS-EEG datasets
-tags: [tutorial, tms, eeg, preprocesing, plotting, eeg-tms]
+tags: [tutorial, tms, eeg, preprocessing, plotting, eeg-tms]
 ---
 
 # Dealing with TMS-EEG datasets
@@ -318,7 +318,7 @@ The function **[ft_rejectartifact](/reference/ft_rejectartifact)** can adjust th
     cfg_ringing = ft_artifact_tms(cfg);     % Detect TMS artifacts
 
 {% include markup/warning %}
-In **[ft_artifact_tms](/reference/ft_artifact_tms)** we use cfg.prestim and cfg.poststim to indicate the time range around the TMS pulse that should be removed. There is no restriction, however, that prevents both time points from being located after the pulse (in case of a recharging artefact, for example). It is therefore also possible to mark artifacts that have on- and offsets both after onset of the TMS pulse.
+In **[ft_artifact_tms](/reference/ft_artifact_tms)** we use cfg.prestim and cfg.poststim to indicate the time range around the TMS pulse that should be removed. There is no restriction, however, that prevents both time points from being located after the pulse (in case of a recharging artifact, for example). It is therefore also possible to mark artifacts that have on- and offsets both after onset of the TMS pulse.
 
 In case you wish to specify an artifact onset that occurs after the TMS pulse (e.g., in case of a recharging artifact), cfg.prestim must be negative (e.g., -0.500 for 500 ms after pulse onset) as cfg.prestim refers to time **before** stimulus onset.
 {% include markup/end %}
@@ -347,7 +347,7 @@ We have already read-in the data segments without the artifacts for you. You can
 
     load data_tms_segmented.mat
 
-**You can skip the following block of code if you have downloaded data_tms_segmented in the previous step.** Else, you can read the artifact-free segments usin
+**You can skip the following block of code if you have downloaded data_tms_segmented in the previous step.** Else, you can read the artifact-free segments using
 
     cfg.channel     = {'all' '-5' '-mastoid L' '-mastoid R'};
     cfg.reref       = 'yes';
@@ -839,7 +839,7 @@ Now we can plot the GMFP of both conditions.
 #### Exercise: GMFP vs TEPs
 
 {% include markup/exercise %}
-Are there differences between the outcome of this analysis and the comparison between time-locked verages in the previous section? Can you see an advantage of using GMFP to compare conditions?
+Are there differences between the outcome of this analysis and the comparison between time-locked averages in the previous section? Can you see an advantage of using GMFP to compare conditions?
 {% include markup/end %}
 
 ### Time-frequency analysis

@@ -129,7 +129,7 @@ Rosenberg et al. [The Fourier approach to the identification of functional coupl
 
 ### Phase locking value
 
-Lachaux et al. [Measuring phase sychrony in brain signals.](http://www.ncbi.nlm.nih.gov/pubmed/10619414) Human Brain Mapping, 1999; 8; 194-208
+Lachaux et al. [Measuring phase synchrony in brain signals.](http://www.ncbi.nlm.nih.gov/pubmed/10619414) Human Brain Mapping, 1999; 8; 194-208
 
 ### Partial coherence
 

@@ -54,7 +54,7 @@ The output data contains:
     '3'
     '4'
 
-Channel 1 represents time, channel 2 is the horizontal x-coordinate, channel 3 is the vertical y-coordinate and channel 4 is the pupil dilation. FieldTrip just created 'dummy' labels for the individual channels, although usually there is a fixed order. Sometimes there is a 5'th channel present, which - for data obtained at the Donders Centre for Cognitive Neuroimaging (DCCN) - contains the digital triggers sent by the stimulus presentation computer. This might be useful information for synchronization with data from another recording modality (e.g., EEG or MEG). 
+Channel 1 represents time, channel 2 is the horizontal x-coordinate, channel 3 is the vertical y-coordinate and channel 4 is the pupil dilation. FieldTrip just created 'dummy' labels for the individual channels, although usually there is a fixed order. Sometimes there is a 5'th channel present, which - for data obtained at the Donders Centre for Cognitive Neuroimaging (DCCN) - contains the digital triggers sent by the stimulus presentation computer. This might be useful information for synchronization with data from another recording modality (e.g., EEG or MEG).
 
 If you want your channel names to be more informative, you can use the following montage (see **[ft_apply_montage](/reference/forward/ft_apply_montage)**) to rename the channels while preprocessing:
 
@@ -174,7 +174,7 @@ Important to notice here is that the stimulus events in the EEG dataset largely 
 {% include markup/info %}
 There are 1400 triggers in one, and 2822 triggers in the other. This is mostly explained by each trigger onset **and** offset being represented in the Eyelink events, but only the onsets being represented in the CTF events.
 
-There are 2 triggers in the CTF file, that are not specified anywhere and should not be there (with a value of 64). These are not present in other subjects' data sets from the same experiment. I have no clue where they would come from but suspect it to be a hardware glitch of the Bitsi box (which links the serial port of the presentation computer with the input of the CTF and Eyelink acquisition systems). The Eyelink and CTF system might have different detection thresholds and different minimum durations of the TTL pulse, therefore it might show up in one dataaset and not the other.
+There are 2 triggers in the CTF file, that are not specified anywhere and should not be there (with a value of 64). These are not present in other subjects' data sets from the same experiment. I have no clue where they would come from but suspect it to be a hardware glitch of the Bitsi box (which links the serial port of the presentation computer with the input of the CTF and Eyelink acquisition systems). The Eyelink and CTF system might have different detection thresholds and different minimum durations of the TTL pulse, therefore it might show up in one dataset and not the other.
 
 There are 9 triggers (without doubling) in the EDF explained by the fact that the recording of the EDF file, but not the MEG file, includes practice trials (because I usually start the recording of the EDF during practice to check whether the eye tracking looks okay).
 

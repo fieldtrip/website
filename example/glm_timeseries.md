@@ -14,7 +14,7 @@ However, for the high temporal resolution EEG and MEG data it is also possible t
 -   [Regularization and a General Linear Model for Event-Related Potential Estimation](https://doi.org/10.3758/s13428-017-0856-z) by Kristensen et al.
 -   [LIMO EEG: A Toolbox for Hierarchical LInear MOdeling of ElectroEncephaloGraphic Data](https://doi.org/10.1155/2011/831409) by Pernet et al.
 
-Since GLM is a very general and broadly applicable technique, it is not trivial to implement it in a single FIeldTrip function. There are a number of functions that under the hood make use of GLMs, such as **[ft_regressconfound](/reference/ft_regressconfound)**, **[ft_denoise_tsr](/reference/ft_denoise_tsr)**, and various "statfuns" that have been used by researchers in combination with timelock-, freq- and sourcestatistics.
+Since GLM is a very general and broadly applicable technique, it is not trivial to implement it in a single FieldTrip function. There are a number of functions that under the hood make use of GLMs, such as **[ft_regressconfound](/reference/ft_regressconfound)**, **[ft_denoise_tsr](/reference/ft_denoise_tsr)**, and various "statfuns" that have been used by researchers in combination with timelock-, freq- and sourcestatistics.
 
 The following example demonstrates how you can use GLM in the analysis of time series data. It uses EEG data from a a study by [Simanova et al.](https://doi.org/10.1371/journal.pone.0014465) that investigated semantic processing of stimuli presented as pictures (black line drawings on white background), visually displayed text or as auditory presented words. The stimuli consisted of concepts from three semantic categories: two relevant categories (animals, tools) and a task category that varied across subjects, either clothing or vegetables. The same EEG dataset is also used [elsewhere](/tag/eeg-language) in the FieldTrip documentation and described in detail [here](/tutorial/eeg_language). You can download the [SubjectEEG.zip](https://download.fieldtriptoolbox.org/tutorial/SubjectEEG.zip) dataset from our download server.
 
@@ -79,7 +79,7 @@ We also read the events from the original file, we need the timing to make the G
     sel = ismember({event.value}, trigAUD);
     sampleAUD = [event(sel).sample];
 
-There are 400 visual stimuli and 400 auditory simuli. We can plot the time of each stimulus by converting the sample numbers into seconds.
+There are 400 visual stimuli and 400 auditory stimuli. We can plot the time of each stimulus by converting the sample numbers into seconds.
 
     figure
     hold on
@@ -284,4 +284,4 @@ We can also look at how well the model explains the data
 
 {% include image src="/assets/img/example/glm_timeseries/figure8.png" width="400" %}
 
-Note that in the visualization of the time series we are scaling the continuous representation of the model ERP potentials with a factor of 10. The averaged ERPs are of much smaller amplitude than the continuous EEG, and without scaling we could hardly recognize them.   
+Note that in the visualization of the time series we are scaling the continuous representation of the model ERP potentials with a factor of 10. The averaged ERPs are of much smaller amplitude than the continuous EEG, and without scaling we could hardly recognize them.

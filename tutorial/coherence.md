@@ -267,7 +267,7 @@ b) 10 Hz smoothing (e.g., cfg.tapsmofrq = 10 Hz)
     cfg.channelcmb = {'MEG' 'EMG'};
     fd10          = ft_connectivityanalysis(cfg,freq10);
 
-Plot the results of the 5, 2, and 10 Hz smoothin
+Plot the results of the 5, 2, and 10 Hz smoothing
 
     cfg               = [];
     cfg.parameter     = 'cohspctrm';

@@ -26,7 +26,7 @@ Any high-level FieldTrip function that you call automatically uses **[ft_checkco
 
 You can specify these two options yourself in your scripts. However, it is likely that you will always want to have the same behavior.
 
-When you use a FieldTrip function, this automatically calls the function `ft_defaults`, which takes care of path setting, plus it sets defaults to be used throughout FieldTrip. It does this by creating a global variable called `ft_default` (without the 's') that is globally available to all functions everywhere, but not directly visible to the user. You can make it visible by typing `global ft_default`. The variable `ft_default` includes the following fields that you can chane.
+When you use a FieldTrip function, this automatically calls the function `ft_defaults`, which takes care of path setting, plus it sets defaults to be used throughout FieldTrip. It does this by creating a global variable called `ft_default` (without the 's') that is globally available to all functions everywhere, but not directly visible to the user. You can make it visible by typing `global ft_default`. The variable `ft_default` includes the following fields that you can change.
 
     ft_default.checkconfig = 'loose'; % or 'pedantic' or 'silent'
     ft_default.checksize   = 1e5;
@@ -57,7 +57,7 @@ This determines the maximum size allowed for output cfg fields (i.e. the outputd
 
 As explained above, you can use cfg.checksize to set a limit to the size of fields in the output cfg, **[ft_checkconfig](/reference/utilities/ft_checkconfig)** then empties fields that are too big. Crucial fields such as the trl will never be removed. This all pertains to the output cfg, i.e. the cfg that comes out of the function (depending on the FieldTrip function you are using, this is either cfg or data.cfg). This does _not_ change any data.cfg.previous fields.
 
-However, you may have lots of analysed data on disk, with data.cfgs that might be taking up quite some of your disk space. Especially after doing beamforming (sourceanalysis) the output cfg can be large, since the grid is always kept in the data.cfg. If you would like to free some disk space (and are sure you can do without these fields), the following trick can be applie
+However, you may have lots of analysed data on disk, with data.cfgs that might be taking up quite some of your disk space. Especially after doing beamforming (sourceanalysis) the output cfg can be large, since the grid is always kept in the data.cfg. If you would like to free some disk space (and are sure you can do without these fields), the following trick can be applied
 
     %%% script to downsize cfgs of stored data
     %%% this can free up significant amounts of disk space

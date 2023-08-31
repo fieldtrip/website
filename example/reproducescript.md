@@ -30,7 +30,7 @@ To explain the new reproducescript functionality, we will demonstrate its use wi
 To show how the reproducescript functionality works, we apply it to a script from the tutorial on [Segmenting and reading trial-based EEG and MEG data](/tutorial/preprocessing). Note that before calling **[ft_topoplotER](/reference/ft_topoplotER)**, we changed the units from T to fT. This is usually not done, but in this instance it serves as an example for how reproducescript handles analysis steps that were performed outside the FieldTrip ecosystem (i.e., arbitrary code).
 
     %% LISTING 1
-    
+
     data_dir = '../rawdata/';
     results_dir = 'analysis/';
 
@@ -168,11 +168,11 @@ Finally, the reproduce folder contains a file named `hashes.mat`. This is a file
 
 All analysis steps that do not use FieldTrip functions will create such comments and save the data structure. Importantly, the pipeline thus remains reproducible without relying on external code. However, this does mean that it will be important to annotate script.m after it's created and note where the data with unknown provenance comes from. Even if the pipeline exclusively uses FieldTrip functions, some FieldTrip functions evaluate custom-written code. For example, a user can specify custom code to select trials in **[ft_definetrial](/reference/ft_definetrial)** (i.e., cfg.trialfun). If this code were not shared, this particular analysis step could not be re-executed, but since intermediate results are stored as well (in the example of cfg.trialfun, cfg.trl is stored), it is always possible to skip a particular step and continue with the rest of the pipeline.
 
-If a researcher wishes that _every_ analysis step can be re-exceuted, including non-FieldTrip code, a user can "FieldTrip-ify" their non-FieldTrip functions by writing a wrapper around it (see **[ft_examplefunction](/reference/ft_examplefunction)**) and [Implementing a new high-level function](/development/guideline/code/#implementing-a-new-high-level-function), such that there are no unknowns in the data provenance. Under the hood, this wrapper function uses low level FieldTrip bookkeeping functions (see [Toolbox architecture and organization of the source code](/development/architecture/#toolbox-architecture-and-organization-of-the-source-code) for more information).
+If a researcher wishes that _every_ analysis step can be re-executed, including non-FieldTrip code, a user can "FieldTrip-ify" their non-FieldTrip functions by writing a wrapper around it (see **[ft_examplefunction](/reference/ft_examplefunction)**) and [Implementing a new high-level function](/development/guideline/code/#implementing-a-new-high-level-function), such that there are no unknowns in the data provenance. Under the hood, this wrapper function uses low level FieldTrip bookkeeping functions (see [Toolbox architecture and organization of the source code](/development/architecture/#toolbox-architecture-and-organization-of-the-source-code) for more information).
 
 ## Conclusion
 
-FieldTrip provides researchers with a tool to easily share complete analysis pipelines that use the FieldTrip toolbox. This is espcially aimed at researchers with limited coding experience, that nevertheless want to share their analysis code and/or data with the confidence that their code is reproducible.
+FieldTrip provides researchers with a tool to easily share complete analysis pipelines that use the FieldTrip toolbox. This is especially aimed at researchers with limited coding experience, that nevertheless want to share their analysis code and/or data with the confidence that their code is reproducible.
 
 Here we applied _reproducescript_ to the simplest analysis pipeline, which is example 1 in [Reducing the efforts to create reproducible analysis code with FieldTrip](https://doi.org/10.1101/2021.02.05.429886). For more complicated analysis pipelines, have a look at example [2](/example/reproducescript_group/#example-2) and [3](/example/reproducescript_andersen/#example-3) in the links in the [Suggested further reading](#suggested-further-reading).
 

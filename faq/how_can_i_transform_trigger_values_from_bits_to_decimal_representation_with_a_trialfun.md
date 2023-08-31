@@ -7,7 +7,7 @@ tags: [faq, trialfun]
 
 Some EEG acquisition systems allow users to represent trigger values in bits (see [NETSTATION acquisition manual](http://cb3.unl.edu/dbrainlab/wp-content/uploads/sites/2/2013/12/Acquisition_Manual.pdf) pages 62-72). At some point, the user might be also interested to transform the binary representation to decimal. You can archive a smooth conversion writing your own custom function for the trial definition (see also the [preprocessing tutorial](/tutorial/preprocessing#use_your_own_function_for_trial_selection), the [example1](/example/detect_the_muscle_activity_in_an_emg_channel_and_use_that_as_trial_definition) and [example2](/example/making_your_own_trialfun_for_conditional_trial_definition) to explore other approaches)
 
-The following code transforms bits to decimal numbers in a \*.RAW fileformat from NETSTATION EEG system whos trigger channels are named as "DIN". For example the number 11 is represented with the following trigger sequence: DIN1 + DIN8 + DIN2. The trigger channel name can be changed and it is then LAB SPECIFIC. However you can follow the logic of the code and try to adapt it to a specific syste
+The following code transforms bits to decimal numbers in a \*.RAW fileformat from NETSTATION EEG system whos trigger channels are named as "DIN". For example the number 11 is represented with the following trigger sequence: DIN1 + DIN8 + DIN2. The trigger channel name can be changed and it is then LAB SPECIFIC. However you can follow the logic of the code and try to adapt it to a specific system
 
     function trl = trialfun_bit2dec(cfg)
 

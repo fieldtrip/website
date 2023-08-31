@@ -28,7 +28,7 @@ The following BCI actor agents are desired
 - virtual keyboard (using VNC)
 - virtual mouse (using VNC)
 - serial port
-- paralell port
+- parallel port
 - NBS Presentation
 - E-Prime
 - wheelchair

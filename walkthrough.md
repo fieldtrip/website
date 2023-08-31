@@ -26,7 +26,7 @@ First of all it is very important to get comfortable with the way FieldTrip mana
 
 {% include image src="/assets/img/walkthrough/figure2.png" width="600" %}
 
-In Fieltrip this is contained within in a single data matrix of [channels x timepoints], for instance:
+In Fieldtrip this is contained within in a single data matrix of [channels x timepoints], for instance:
 
     data.trial{1}: [32x1000 double]
 
@@ -183,7 +183,7 @@ We can also specify if we want to look at the data trial-by-trial, or if we want
 
 {% include image src="/assets/img/walkthrough/figure6.png" width="600" %}
 
-If we now call ''cfg = ft_databrowser(cfg,data)'', we are able to scroll through the data and select those segments containing muscle artifacts and the like. In the case you want to remove eye artifacts with ICA you can leave those in. If we now exit the databrowser by pressing 'q' our cfg is returned with an extra field containing a list of start and end samples for every data segment we selecte
+If we now call ''cfg = ft_databrowser(cfg,data)'', we are able to scroll through the data and select those segments containing muscle artifacts and the like. In the case you want to remove eye artifacts with ICA you can leave those in. If we now exit the databrowser by pressing 'q' our cfg is returned with an extra field containing a list of start and end samples for every data segment we selected
 
     cfg.artfctdef.visual.artifact: [2xnArtifacts double]
 
@@ -376,7 +376,7 @@ Also when it comes to your statistical analysis FieldTrip doesn't let you down: 
 
 {% include image src="/assets/img/walkthrough/figure14.png" width="600" %}
 
-### Input - data and your designmatrix
+### Input - data and your design matrix
 
 It should be obvious that besides feeding data we need to specify how the separate data entries should be treated – which belong to the same condition for instance. What is common to all designs is that data entries are always assumed to be in a row. In the simplest case we only need to specify a code corresponding to the independent variable for every data entry. Note the use of the parameters ivar and uvar. They denote nothing more than the row-number in the design-matrix to find either your independent variables (ivar) or units of observation (uvar).
 

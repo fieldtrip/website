@@ -53,7 +53,7 @@ When a new function is written in FieldTrip, it is important to include these fe
 The short text messages which accompany errors and warnings on the screen are often not enough to provide insight for the users. The text message on screen should be kept short, but a [Frequently Asked Question](/faq) should explain the warning and why an error occurred. The identifiers should help the user to find the relevant FAQ. The FAQ
 should also have the same 'warning' or 'error' tag (e.g., `FieldTrip:fileio:fileNotExisting`).
 
-## Use the dimord field to describe or deciper the data
+## Use the dimord field to describe or decipher the data
 
 In general (although some exceptions apply, see below) the specification of the dimensions in the data structure is like this
 
@@ -258,7 +258,7 @@ like this:
     facecolor   = ft_getopt(varargin, 'facecolor',   'white');
     vertexcolor = ft_getopt(varargin, 'vertexcolor', 'none');
 
-The function ft_getopt is specific to check syntactic consinstency of the arguments, and the
+The function ft_getopt is specific to check syntactic consistency of the arguments, and the
 optional third input arguments specifies the default value for the option in the function. If this optional input argument is not specified, it defaults to \[].
 In this way the variables which are used in the function are always correctly initialized.
 
@@ -273,7 +273,7 @@ Ensuring that all executables can co-exist on all platforms (and especially on t
       C = computer returns character vector C denoting the type of computer
       on which MATLAB is executing. Possibilities are:
 
-                                                ISPC ISUNIX ISMAC ARCHSTR    
+                                                ISPC ISUNIX ISMAC ARCHSTR
       64-Bit Platforms
         PCWIN64  - Microsoft Windows on x64       1     0     0   win64
         GLNXA64  - Linux on x86_64                0     1     0   glnxa64

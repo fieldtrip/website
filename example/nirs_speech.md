@@ -24,7 +24,7 @@ _However, as we will see below, the shared dataset contains 28 NIRS channels, wh
 
 The paper writes that the experiment uses an event-related design, however the stimuli anr not randomized but are presented in blocks. Condition blocks were randomized (over subjects) to rule out any effect of order, and all sentences of one condition were presented together. Each listening condition (block) began with three practice sentences for familiarization followed by 20 randomized sentences, for a total of 69 trials across all three conditions.
 
-_Below we will see that the shared data does not match 3 contitions/blocks with 69 trials each._
+_Below we will see that the shared data does not match 3 conditions/blocks with 69 trials each._
 
 Sentences were digitally isolated from their respective lists into 3-second trials using Audacity. The 3-second trials allowed for a variable silence before and after the sentence presentation.
 
@@ -153,7 +153,7 @@ Let us have a look at the triggers, together with a single NIRS channel for comp
 
 Using the "channel" button at the bottom of the screen we can make a different selection of channels to be displayed.
 
-The stimulus channel does not contain any events, the "aux1" and "aux2" channels contain analog TTL pulses. There is an aux1 trigger all the way at the start, well before the regular sequence starts. We can see that "aux1" and "aux2" are alternating, there is about 4 seconds (with some jitter) between successive triggers in these two channels, which matches the desciption of the trial structure in the PDF manuscript. The alternating pattern starts after about 350 seconds, which is about 6 minutes into the recording.
+The stimulus channel does not contain any events, the "aux1" and "aux2" channels contain analog TTL pulses. There is an aux1 trigger all the way at the start, well before the regular sequence starts. We can see that "aux1" and "aux2" are alternating, there is about 4 seconds (with some jitter) between successive triggers in these two channels, which matches the description of the trial structure in the PDF manuscript. The alternating pattern starts after about 350 seconds, which is about 6 minutes into the recording.
 
 My interpretation of this sequence of TTL pulses in the "aux1" and "aux2" channels is that aux1 codes for the onset of the sentence being played and aux2 codes for the click that cues the participant to repeat the sentence.
 
@@ -238,7 +238,7 @@ We can look at the number of trials per block (or condition):
         33
 
 
-Again this does not match the PDF manuscript, which mentions three blocks of 96 trials each. When we do the same for the 2nd dataset, we recognize the same number of trials in the different blocks, but they occur in another order (46, 36, 46, 33, 33). This is consistent with the description in the PDF manuscript that condition blocks were randomized over subjects. So it seems that the experiment described in the PDF document is very similar to, but not exactly the same, as the one in the shared data. We do not know which 5 conditions were employed in the shared dataset; we also do not know in which order they were presented to each of the subjects. If each of the blocks would have had a unique number of trials (and indentical over subjects), then we could at least have matched the blocks over subjects. Now we have two blocks with 46 and two blocks of 33 trials, which makes matching the (unknown) conditions over subjects impossible. The only condition/block that can be matched over subjects is the one with 36 trials.
+Again this does not match the PDF manuscript, which mentions three blocks of 96 trials each. When we do the same for the 2nd dataset, we recognize the same number of trials in the different blocks, but they occur in another order (46, 36, 46, 33, 33). This is consistent with the description in the PDF manuscript that condition blocks were randomized over subjects. So it seems that the experiment described in the PDF document is very similar to, but not exactly the same, as the one in the shared data. We do not know which 5 conditions were employed in the shared dataset; we also do not know in which order they were presented to each of the subjects. If each of the blocks would have had a unique number of trials (and identical over subjects), then we could at least have matched the blocks over subjects. Now we have two blocks with 46 and two blocks of 33 trials, which makes matching the (unknown) conditions over subjects impossible. The only condition/block that can be matched over subjects is the one with 36 trials.
 
 Let me plot the TTL channels and the timepoints at which I think the onsets of the sentences is in each condition.
 
@@ -380,10 +380,10 @@ We can make selective averages by specifying `cfg.trials`
 
 {% include image src="/assets/img/example/nirs_speech/figure9.png" %}
 
-In the lower right we can see the average of the "aux1" and "aux2" channels, which contain the TTL pulses. It is clear that due to the long segment that we selected for each trial, not only the stimulus related activity is included, but also the reposnee related activity (which is jittered a bit). We can even see the onset of the stimulus in the next next trial at the end of each segment.
+In the lower right we can see the average of the "aux1" and "aux2" channels, which contain the TTL pulses. It is clear that due to the long segment that we selected for each trial, not only the stimulus related activity is included, but also the response related activity (which is jittered a bit). We can even see the onset of the stimulus in the next next trial at the end of each segment.
 
 There are a number of channels that show a clear up-down deflection. Since the experimental design consists of a continuous sequence of
-stimulus-response-stimulus-response-etc, it is hard to tell whether we have stimulus related activity or response related activity, or both. Even worse for the interpretation is that the optodes are placed over the temporal region of the head and that the subjects were responding with overt speack, which meant that they made regular jaw and head movements. Without further information about the experiment it is hard to rule out that the observed sequence of responses is not merely due to a repetetive movement or muscle artifact.
+stimulus-response-stimulus-response-etc, it is hard to tell whether we have stimulus related activity or response related activity, or both. Even worse for the interpretation is that the optodes are placed over the temporal region of the head and that the subjects were responding with overt speech, which meant that they made regular jaw and head movements. Without further information about the experiment it is hard to rule out that the observed sequence of responses is not merely due to a repetitive movement or muscle artifact.
 
 ## Selective averaging of stimulus-related activity in different conditions
 
@@ -423,4 +423,4 @@ After baseline correcting (which is done while making the figure, it could also 
 
 ## Closing remarks
 
-Looking at some more datasets, I noticed that the dataset `S1001_run01.nirs` contains overall clean data. The data for subject 2 (`S1002_run01.nirs`) is not shared. The data of subject 3 `S1003_run01.nirs` has some movement(?) artifacts, but also a channel that seems to show a response on every "aux1" stimulus. It would be interesting to follow up these analyses with a more detailled look into the time-locked and the spontaneous artifacts that can be observed in the data.
+Looking at some more datasets, I noticed that the dataset `S1001_run01.nirs` contains overall clean data. The data for subject 2 (`S1002_run01.nirs`) is not shared. The data of subject 3 `S1003_run01.nirs` has some movement(?) artifacts, but also a channel that seems to show a response on every "aux1" stimulus. It would be interesting to follow up these analyses with a more detailed look into the time-locked and the spontaneous artifacts that can be observed in the data.

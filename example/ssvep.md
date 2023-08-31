@@ -9,9 +9,9 @@ Steady-state stimulation is frequently used for sensory stimulation in the visua
 
 ## Analyze experimental data
 
-The design of a trial is shown in the figure below. On each trial, a ring is flashing at 8.33 Hz for 4.56 s (at 100 Hz, on for 6 frames and off for 6 frames). During this time, a 100-ms rectangle is shown about every 1 s for four times. In a block of 40 trials, the task is either low load (i.e., count color, e.g., black) or high load (i.e., count a certain combination, e.g., black horizontal rectangle and white vertical rectangle). After each trial, subjects report if they counted 2 or 3 targets. Within each block, the ring is shown at four excentricities: 2, 3, 4, and 6 visual degrees (10 trials at each excentricity), in pseudorandom order for each subject. Load levels alternate between blocks (i.e., LHLHLHLH or HLHLHLHL , counterbalanced across subjects).
+The design of a trial is shown in the figure below. On each trial, a ring is flashing at 8.33 Hz for 4.56 s (at 100 Hz, on for 6 frames and off for 6 frames). During this time, a 100-ms rectangle is shown about every 1 s for four times. In a block of 40 trials, the task is either low load (i.e., count color, e.g., black) or high load (i.e., count a certain combination, e.g., black horizontal rectangle and white vertical rectangle). After each trial, subjects report if they counted 2 or 3 targets. Within each block, the ring is shown at four eccentricities: 2, 3, 4, and 6 visual degrees (10 trials at each excentricity), in pseudorandom order for each subject. Load levels alternate between blocks (i.e., LHLHLHLH or HLHLHLHL , counterbalanced across subjects).
 
-There are 2 loads x 4 blocks x 4 ring excentricities x 10 trials = 320 SSVEP trials. Because 4 rectangles are shown within each trial, this gives 4 x 320 = 1280 rectangle trials. This gives a total of 320 + 1280 = 1600 trials.
+There are 2 loads x 4 blocks x 4 ring eccentricities x 10 trials = 320 SSVEP trials. Because 4 rectangles are shown within each trial, this gives 4 x 320 = 1280 rectangle trials. This gives a total of 320 + 1280 = 1600 trials.
 
 {% include image src="/assets/img/example/ssvep/ssvep.jpg" width="600" %}
 

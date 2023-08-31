@@ -153,7 +153,7 @@ Note especially how the output now contains a field `time` and that `powspctrm` 
 To visualize the event-related power changes, a normalization with respect to a baseline interval will be performed. There are two possibilities for normalizing:
 
 - Subtracting, for each frequency, the average power in a baseline interval from all other power values. This gives, for each frequency, the _absolute change_ in power with respect to the baseline interval.
-- Expressing the raw power values as the relative increase or decrease with respect to the power in the baseline interval (for each frequency): active period devided by baseline. Note that the _relative baseline_ is expressed as a ratio; i.e., no change is represented by 1.
+- Expressing the raw power values as the relative increase or decrease with respect to the power in the baseline interval (for each frequency): active period divided by baseline. Note that the _relative baseline_ is expressed as a ratio; i.e., no change is represented by 1.
 
 Let's first look at the topographical representation of the power changes in a specified time-interval using **[ft_topoplotTFR](/reference/ft_topoplotTFR)**. We choose to look at 400 to 800 ms and plot the data with an absolute baseline.
 

@@ -11,7 +11,7 @@ These templates are based on "data", where data should be seen in a broad sense.
 
 These pages on the website describe the templates and how they are constructed. For some templates there have historically been different versions, which we also try to get represented here.
 
-The following categories of templates exis
+The following categories of templates exist
 
 - [atlas](/template/atlas)
 - [anatomy](/template/anatomy)

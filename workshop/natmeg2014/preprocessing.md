@@ -159,7 +159,7 @@ We will now do the trial definition for both the standard and deviant trial
 
 This results in a cfg.trl in which the beginning, the trigger offset and the end of each trial relative to the beginning of the raw data is defined. In addition, we've added an extra column in the _.trl_ that describing whether the trial consist of a normal tone (1) or deviant (2). We will use this later to separately average these conditions. You can find more details about the trialinfo field in the [FAQ: Is it possible to keep track of trial-specific information in my FieldTrip analysis pipeline?](/faq/is_it_possible_to_keep_track_of_trial-specific_information_in_my_fieldtrip_analysis_pipeline) and [Making your own trialfun for conditional trial definition](/example/making_your_own_trialfun_for_conditional_trial_definition).
 
-The output of **[ft_definetrial](/reference/ft_definetrial)** is an updated _cfg_ strucure that can be used for **[ft_preprocessing](/reference/ft_preprocessing)**, which uses the information about the start-sample, end-sample and offset to cut it up in separate trials and to align the segments to each other.
+The output of **[ft_definetrial](/reference/ft_definetrial)** is an updated _cfg_ structure that can be used for **[ft_preprocessing](/reference/ft_preprocessing)**, which uses the information about the start-sample, end-sample and offset to cut it up in separate trials and to align the segments to each other.
 
     cfg.continuous              = 'yes';
     cfg.hpfilter                = 'no';
@@ -420,7 +420,7 @@ We will now zoom in on one combined channel, for instance in the combined channe
 
 _Figure: The event-related field plotted using ft_singleplotER. The event-related fields were calculated using ft_preprocessing followed by ft_timelockanalysis_
 
-Now we are going to look at the topographical spread of the field by usin
+Now we are going to look at the topographical spread of the field by using
 
     cfg                 = [];
     cfg.layout          = 'neuromag306cmb.lay'; % name will change
@@ -744,12 +744,12 @@ First we will load our data subset
     load data_EEG
     load data_MEG
 
-Now we will combine both subsets into one datase
+Now we will combine both subsets into a single dataset
 
     cfg      = [];
     data_all = ft_appenddata(cfg, data_MEG, data_EEG);
 
-As we can see, the new dataset contains all 434 channels (128 EEG + 306 MEG) agai
+As we can see, the new dataset contains all 434 channels (128 EEG + 306 MEG) again
 
     data_all =
 

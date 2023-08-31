@@ -9,7 +9,7 @@ From 19-23 April 2021 we will host the “Advanced MEG/EEG toolkit”. Although 
 
 Organizers: Robert Oostenveld and Jan-Mathijs Schoffelen.
 
-The toolkit course is aimed at PhD and postdoctoral researchers that already have some experience with EEG and/or MEG data acquisition (eithert a pilot or a full study) and that have a good understanding of their own experimental design. Furthermore, we expect that you know the basics of MATLAB and that you already have some experience with MEG/EEG preprocessing and analysis. We will teach you advanced data analysis methods and cover preprocessing, frequency analysis, source reconstruction, connectivity and various statistical methods. Furthermore, we will give attention to good practices for reproducible research, Open Data and Open Science.
+The toolkit course is aimed at PhD and postdoctoral researchers that already have some experience with EEG and/or MEG data acquisition (either a pilot or a full study) and that have a good understanding of their own experimental design. Furthermore, we expect that you know the basics of MATLAB and that you already have some experience with MEG/EEG preprocessing and analysis. We will teach you advanced data analysis methods and cover preprocessing, frequency analysis, source reconstruction, connectivity and various statistical methods. Furthermore, we will give attention to good practices for reproducible research, Open Data and Open Science.
 
 The toolkit will consist of a number of interactive online lectures, followed by Q&A sessions. Besides lectures we will have interactive hands-on sessions in which you will be tutored through the complete analysis of a MEG/EEG data set using the FieldTrip toolbox. There will be plenty of opportunity to interact and also ask questions about your research and data. On the final day you will have the opportunity to work on your own dataset under supervision of skilled tutors.
 
@@ -43,7 +43,7 @@ During the Q&A following the lectures we will go through any remaining questions
 
 ## Hands-on sessions
 
-In the hands-on sessions we will take you through selected FieldTrip tutorials. You execute these yourself on your own computer, that is why you need to have access to MATLAB. In the hands-on sessions we will focus on consolidating the knowledge you aquired during the lectures and we translate it into practical steps in your analysis.
+In the hands-on sessions we will take you through selected FieldTrip tutorials. You execute these yourself on your own computer, that is why you need to have access to MATLAB. In the hands-on sessions we will focus on consolidating the knowledge you acquired during the lectures and we translate it into practical steps in your analysis.
 
 ## Playground
 
@@ -74,7 +74,7 @@ Please note that the stable release version corresponds to the "release" branch,
 
 For people that **do** use a computer at the DCCN (either a PC via remote desktop or the DCCN cluster):
 
-FieldTrip is installed on the cluster, on /home/common/matlab/fieldtrip. (on Windows PCs, this is usually mounted on H:\\common\\matlab\\fieldrip. So you don’t need to download the latest release version of the FieldTrip toolbox from here or from here.
+FieldTrip is installed on the cluster, on /home/common/matlab/fieldtrip. (on Windows PCs, this is usually mounted on H:\\common\\matlab\\fieldtrip. So you don’t need to download the latest release version of the FieldTrip toolbox from here or from here.
 
 ### 4. Download the handson data in advance, or check whether you can access it
 

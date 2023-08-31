@@ -26,9 +26,9 @@ You load the head shape measured during the MEG recording with the Polhemus and 
     template = ft_convert_units(template, 'mm');
 
 
-Note that the template head model contains three surfaces describing the three compartments of scalp, skull and brain. Furthermore, it descibes the conductivities and the BEM system matrix, computed with dipoli. Here is how the complete structure looks like
+Note that the template head model contains three surfaces describing the three compartments of scalp, skull and brain. Furthermore, it describes the conductivities and the BEM system matrix, computed with dipoli. Here is how the complete structure looks like
 
-    template = 
+    template =
       struct with fields:
 
          bnd: [1x3 struct]
@@ -113,8 +113,8 @@ It is important that the template scalp surface only contains features that are 
 We visualize both meshes:
 
     figure;
-    ft_plot_mesh(template.bnd(1));  
-    ft_plot_mesh(polhemus);  
+    ft_plot_mesh(template.bnd(1));
+    ft_plot_mesh(polhemus);
 
 {% include image src="/assets/img/example/fittemplate/template_surface_polhemus_surface_plot.png" %}
 
@@ -138,8 +138,8 @@ The Polhemus has facial details which are not in the template scalp surface, and
 We have another look how well the surfaces match
 
     figure;
-    ft_plot_mesh(defaced_template);  
-    ft_plot_mesh(defaced_polhemus);  
+    ft_plot_mesh(defaced_template);
+    ft_plot_mesh(defaced_polhemus);
 
 {% include image src="/assets/img/example/fittemplate/defaced_template_surface_polhemus_surface_plot.png" %}
 
@@ -177,7 +177,7 @@ We create the volume conduction models using Openmeeg. This model can be later u
     cfg               = [];
     cfg.conductivity  = [0.33 0.0042 0.33];
     cfg.method        = 'openmeeg';
-    headmodel_surface = ft_prepare_headmodel(cfg, template_fit_surface);    
+    headmodel_surface = ft_prepare_headmodel(cfg, template_fit_surface);
 
     figure;
     ft_plot_mesh(headmodel_sphere.bnd(1))

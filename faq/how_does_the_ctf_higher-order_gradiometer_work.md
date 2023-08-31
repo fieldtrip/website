@@ -47,7 +47,7 @@ We can explore the different higher order synthetic gradiometer forward solution
 
 The left part of the figure shows how the first order gradiometer forward solution is computed. The X and the Y axes are the MEG sensors inside grad.balance.G1BR.labelnew and grad.balance.G1BR.labelold. The right plot shows how to compute the first order gradiometer for a specific MEG sensor, in this case sensor MLC12, which is the second sensor of the CTF151 system. You can notice that on the x axes the second sensor, the MLC12 scores one, and the rest of the 150 MEG sensors scored zero (blue dots). This is important because the forward computation of the first order gradient is basically constituted by the field contribution of each MEG sensor. However, colored in red, there are some MEG sensors (the environment sensors) that slightly deviated from zero, which means that they're also contribution to the field of sensor MLC12 but with a negligible degree.
 
-If we explore the second and the third synthetic gradiometers, things become very interestin
+If we explore the second and the third synthetic gradiometers, things become very interesting
 
     figure;
     subplot(2,2,[1 3]);imagesc(grad.balance.G2BR.tra);
@@ -77,6 +77,6 @@ If we explore the second and the third synthetic gradiometers, things become ver
 
 Now is more evident that the higher the synthetic gradiometer, the higher the contribution of other MEG sensors to the Nth-order gradiometer forward solution.
 
-In you are interested in an extended explanation regarding MEG signal acquisition and processing in general, not only for CTF systems, please take a look to this referenc
+In you are interested in an extended explanation regarding MEG signal acquisition and processing in general, not only for CTF systems, please take a look to this reference
 
 Vrba, J., & Robinson, S. E. (2001). Signal Processing in Magnetoencephalography. Methods, 25(2), 249-271. doi: http://dx.doi.org/10.1006/meth.2001.1238

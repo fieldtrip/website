@@ -13,9 +13,9 @@ This tutorial was written specifically for the [PracticalMEEG workshop in Aix-en
 
 In this tutorial, we will learn how to deal with artifacts in the data. We do have a more [general tutorial on dealing with artifacts](/tutorial/artifacts), which is followed by a tutorial on [visual artifact rejection](/tutorial/visual_artifact_rejection) and a tutorial on [automatic artifact rejection](/tutorial/automatic_artifact_rejection). In the remainder of this tutorial we will give a short background, which is followed by a specific look at the artifacts that are present in the specific data. The focus will not be on cleaning up the data, but rather on learning how artifacts can be detected and dealt with.
 
-In the remaining tutorials on this dataset for the [PracticalMEEG workshop](/workshop/practicalmeeg2022) the data for all subjects is **not** cleaned but processed as-is. As you will see, the MEG data does not have such a strong representation of the blinks and the beamformer source reconstruction which we do to end up with group statistics on the source-level will quite well supress the contribution of the eye activity.
- 
-However, had we planned other types of analysis, such as connectivity, then dealing with the EOG and especially ECG artifacts would have been more important. Furthermore, to increase the sensitivity of finding the effects of interest, a cleanup of the data would have been good. However, for didactical reasons, and since we don't have the time for a complete and thourough analysis of all 16 subjects, we will not deal with artifacts outside of this tutorial. This tutorial demonstrates on the basis of subject 1 how we can detect and deal with artifacts; following this tutorial you may want to go back to [computing ERPs/ERFs](/workshop/practicalmeeg2022/handson_raw2erp) and look how the cleaning affects the results.
+In the remaining tutorials on this dataset for the [PracticalMEEG workshop](/workshop/practicalmeeg2022) the data for all subjects is **not** cleaned but processed as-is. As you will see, the MEG data does not have such a strong representation of the blinks and the beamformer source reconstruction which we do to end up with group statistics on the source-level will quite well suppress the contribution of the eye activity.
+
+However, had we planned other types of analysis, such as connectivity, then dealing with the EOG and especially ECG artifacts would have been more important. Furthermore, to increase the sensitivity of finding the effects of interest, a cleanup of the data would have been good. However, for didactical reasons, and since we don't have the time for a complete and thorough analysis of all 16 subjects, we will not deal with artifacts outside of this tutorial. This tutorial demonstrates on the basis of subject 1 how we can detect and deal with artifacts; following this tutorial you may want to go back to [computing ERPs/ERFs](/workshop/practicalmeeg2022/handson_raw2erp) and look how the cleaning affects the results.
 
 Since the data is very large, with more than 400 channels at 1100Hz for a total recording duration of 50 minutes, the strategy that we follow is to first define the segments with **[ft_definetrial](/reference/ft_definetrial)** and then only reading the segments of interest with **[ft_preprocessing](/reference/ft_preprocessing)**.
 
@@ -57,7 +57,7 @@ This data structure is about 1.5 GB large and should fit in the RAM of your comp
     >> whos data
 
       Name      Size                 Bytes  Class     Attributes
-      data      1x1             1465245106  struct              
+      data      1x1             1465245106  struct
 
 The complete data represented in double precision would amount to approximately 50\*60\*1100\*404\*8 (50 minutes, times 60 seconds, times 1100 samples per second, times 404 channels, times 8 bytes per sample) is 10 GB and would most likely cause memory problems if you would process it using a laptop with limited memory.
 
@@ -88,7 +88,7 @@ Besides there being many channels, there are also many trials. Visualizing them 
 
 Please scroll to the VEOG channel by clicking about 40 times on the `>>` button which takes you 10 channels further and then clicking a few times on the `>` or `<` button. The EOG channels are located _after_ all EEG channels, and _before_ the STI channels. You can see that there are quite some blinks. You can also recognize that in the first 100 trials or so there are very few blinks, but that after trial 200 or so they start occuring more frequently. Remember that there are about 100 trials per block/run, and there are 6 runs in total.
 
-If you click two channels further to the ECG channel, you can also see that there is a heartbeat (and sometimes two) in every trial. That is a good sign: the participant is alive! This makes directly clear that rejecting trials that contain a heartbeat does not make sense. We will later look at removing the heartbeat artifacts using ICA.  
+If you click two channels further to the ECG channel, you can also see that there is a heartbeat (and sometimes two) in every trial. That is a good sign: the participant is alive! This makes directly clear that rejecting trials that contain a heartbeat does not make sense. We will later look at removing the heartbeat artifacts using ICA.
 
 We might want to decide that we want to exclude trials with blinks from further analysis. You can click on trials to exclude. However, you will realize that this involves a lot of clicking, as there are so many trials. In the next section we will automate the detection of blinks, but for now please select a few trials with blinks and click `quit`. This returns a data structure with slightly fewer trials. However, it also specifies where the artifacts were that you identified:
 
@@ -132,7 +132,7 @@ Again the output data excludes those trials that were rejected, however we don't
           154021      154530
           339661      340170
           ...
-          
+
     % remove the marked segments from the complete MEG+EEG data structure
     cfg = [];
     cfg.artfctdef = data_eog_clean.cfg.artfctdef; % use the artifacts that we just identified
@@ -199,7 +199,7 @@ Since we have the two EOG channels, we don't need a fancy combination of z-value
     cfg.artfctdef.threshold.bpfilter = 'no';
     cfg = ft_artifact_threshold(cfg, data);
 
-The way that the output represents the segments that were marked is the same as before, except that it now also includes an offset of the peaks. This can be useful if you want to align and process the artifacts specifically, for example if you want to compute an averaged eye blink or ECG template.  
+The way that the output represents the segments that were marked is the same as before, except that it now also includes an offset of the peaks. This can be useful if you want to align and process the artifacts specifically, for example if you want to compute an averaged eye blink or ECG template.
 
     >> disp(cfg.artfctdef.threshold.artifact)
            26419       26419           0
@@ -211,7 +211,7 @@ The way that the output represents the segments that were marked is the same as 
            69337       69360         -12
            70348       70365          -6
            ...
-       
+
     % remember it for later inspection
     cfg_automatic_threshold.artfctdef = cfg.artfctdef;
 
@@ -299,7 +299,7 @@ _Figure; ft_rejectvisual with the summary method applied to the EOG channels_
 
 This shows the variance of the EOG channels. You can switch to the `std` or standard-deviation metric, which is slightly easier to understand. In the lower left you see the maximum over the HEOG and VEOG channel. It ranges up to `4e-4` or `4*10^-4` volt, which corresponds to 400 microvolt.
 
-A realistic range for the background activity and noise in the EOG channels _if there are no blinks or saccades_ is a standard deviation in the order of magniture of 20 microvolt: that is what we see in the trials of the first block. We can drag and select trials to exclude. If we reject all trials with a standard deviation in the EOG channels larger than 20 microvolt, we see that _"361 trials are marked to INCLUDE, 526 trials are marked to EXCLUDE"_, i.e., we loose more than half of the trials.
+A realistic range for the background activity and noise in the EOG channels _if there are no blinks or saccades_ is a standard deviation in the order of magnitude of 20 microvolt: that is what we see in the trials of the first block. We can drag and select trials to exclude. If we reject all trials with a standard deviation in the EOG channels larger than 20 microvolt, we see that _"361 trials are marked to INCLUDE, 526 trials are marked to EXCLUDE"_, i.e., we loose more than half of the trials.
 
 #### Exercise 2
 
@@ -467,7 +467,7 @@ Using the previously determined `cfg_automatic_threshold`, which does not mark t
 
 _Figure; Occurence of artifacts over time in the trial, i.e., relative to the stimulus_
 
-It is clear that most blinks happened at the start and expecially towards the end of the trial. Looking at this, we can conclude that thet participant was trying to supress their blinks during stimulus presentation. It is not likely that the frequent eye blinks will have affected the perception of the stimulus as a (famous or unfamiliar) face, or as a scrambled object.
+It is clear that most blinks happened at the start and especially towards the end of the trial. Looking at this, we can conclude that the participant was trying to suppress their blinks during stimulus presentation. It is not likely that the frequent eye blinks will have affected the perception of the stimulus as a (famous or unfamiliar) face, or as a scrambled object.
 
 ## Removing the eye and heart artifacts
 

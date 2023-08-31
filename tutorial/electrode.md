@@ -12,7 +12,7 @@ This tutorial demonstrates how to construct an electrode model based on a single
 This tutorial does not cover how to create a 2-D channel layout for plotting, nor how to do the source estimation itself.
 
 {% include markup/warning %}
-Please cite the follwing paper when using this implementation for localizing electrodes with the Structure Sensor 3D-scanner.
+Please cite the following paper when using this implementation for localizing electrodes with the Structure Sensor 3D-scanner.
 
 Homölle S, Oostenveld R. [Using a structured-light 3D scanner to improve EEG source modeling with more accurate electrode positions.](https://doi.org/10.1016/j.jneumeth.2019.108378) J Neurosci Methods (2019).
 {% include markup/end %}
@@ -52,7 +52,7 @@ Before starting with FieldTrip, it is important that you set up your [MATLAB pat
     cd <path_to_fieldtrip>
     ft_defaults
 
-### Loading and coregistering data
+### Loading the data and coregistration
 
 We start with loading the Structure Sensor file into memory. This also reads the `.mtl` and `.jpg` file and performs the [texture mapping](https://en.wikipedia.org/wiki/Texture_mapping) of the color photo onto the triangulated surface mesh.
 
@@ -186,7 +186,7 @@ The electrode location are now digitized on the outer surface of the scanned sur
 
 In this tutorial we demonstrated how to extract electrode positions from a 3D scanned head surface. The resulting electrode model can be used for volume conduction model, or in the construction of a [2D layout](/tutorial/layout) for data visualization.
 
-We suggest you read the frequently asked question about [coordinate systems](/faq/coordsys) to understand the different coordinate systemsin which data can be expressed. Since electrode models are often used in source reconstruction, we also suggest you to read the tutorials about [BEM](/tutorial/headmodel_eeg_bem) and [FEM](/tutorial/headmodel_eeg_fem) volume conduction models.
+We suggest you read the frequently asked question about [coordinate systems](/faq/coordsys) to understand the different coordinate systems in which data can be expressed. Since electrode models are often used in source reconstruction, we also suggest you to read the tutorials about [BEM](/tutorial/headmodel_eeg_bem) and [FEM](/tutorial/headmodel_eeg_fem) volume conduction models.
 
 Frequently asked questions that relate to electrodes are:
 

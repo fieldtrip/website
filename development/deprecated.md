@@ -91,7 +91,7 @@ January 2006: The XXXvolume functions have all been renamed to volumeXXX to make
 - **normalisevolume.m** has been renamed to volumenormalise
 - **segmentvolume.m** has been renamed to volumesegment
 
-January 2006: Some of the artifact detection functions have been completely rewritten. Although the new functions should have the same behavior, the exact same result cannot be guaranteed. To allow people to use the old implementations, they are stil available:
+January 2006: Some of the artifact detection functions have been completely rewritten. Although the new functions should have the same behavior, the exact same result cannot be guaranteed. To allow people to use the old implementations, they are still available:
 
 - **artifact_eog_old.m** is the old implementation of artifact_eog
 - **artifact_jump_old.m** is the old implementation of artifact_jump

@@ -42,9 +42,9 @@ The structure `sourceDiffIntN` has no inside field, so it cannot be removed. Mak
 
 In the source statistics part there is cfg.grid=grid but grid is never defined. So there is an error there. Because of this error you cannot make sourceSTAT and therefore it is not possible to do the rest of the tutorial.
 
-In this tutorial there are ofter lines with load .... (for any reason) but these files are not in the tutorial data that people download. Maybe they should be there because if a certain part doesn't work anymore they can load the results and work further. We could also include lines to save the results like in the first tutorial.
+In this tutorial there are many lines with load .... (for any reason) but these files are not in the tutorial data that people download. Maybe they should be there because if a certain part doesn't work anymore they can load the results and work further. We could also include lines to save the results like in the first tutorial.
 
-Because I didn't do source analysis myself until now I don't now the best way to sovle these problems.(16 dec 2008)
+Because I didn't do source analysis myself until now I don't now the best way to solve these problems.(16 dec 2008)
 
 ### Statistics using cluster-based permutation tests
 

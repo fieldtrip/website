@@ -43,7 +43,7 @@ The Child Mind Institute provides both raw and preprocessed EEG data in the [Mul
 
 The Max Planck Institut in Leipzig shares the [LEMON Mind-Brain-Body Dataset](http://fcon_1000.projects.nitrc.org/indi/retro/MPI_LEMON.html) which includes data from 228 healthy participants comprising a young (N=154, range 20–35 years) and an elderly group (N=74, range 59–77 years). During a two-day assessment, participants completed 3T MRI and a 62-channel EEG experiment at rest.
 
-The Brainclinics Foundation [TDBRAIN clinical lifespan database](https://doi.org/10.1038/s41597-022-01409-z) contains resting-state, raw EEG-data complemented with relevant clinical and demographic data of a heterogenous collection of 1274 psychiatric patients (5–89 years) collected between 2001 to 2021. Clinical, demographic-, personality- and day of measurement data are also included in the database.
+The Brainclinics Foundation [TDBRAIN clinical lifespan database](https://doi.org/10.1038/s41597-022-01409-z) contains resting-state, raw EEG-data complemented with relevant clinical and demographic data of a heterogeneous collection of 1274 psychiatric patients (5–89 years) collected between 2001 to 2021. Clinical, demographic-, personality- and day of measurement data are also included in the database.
 
 On [Physionet](https://physionet.org/about/database/#neuro) you can find a list of clinical and cognitive EEG datasets, plus also various other ExG and physiological datasets. They are especially useful when developing and/or testing new data analysis methods.
 

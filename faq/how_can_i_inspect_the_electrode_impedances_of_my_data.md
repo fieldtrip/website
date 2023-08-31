@@ -9,7 +9,7 @@ The quality of EEG signals depends for a large part on how well the electrodes m
 
 In general, the higher the impedance of an electrode, the lower the signal-to-noise ratio of the EEG signal. Importantly, recording EEG with a lower signal-to-noise ratio may increase noise levels and decrease the probability of obtaining statistically signifcant effects.
 
-Most modern EEG systems are capable of measuring the impedance at each eletrode, and save these values in the header file. The following example script can be used to visualize the impedance values at the start of the recording of your EEG dataset.
+Most modern EEG systems are capable of measuring the impedance at each electrode, and save these values in the header file. The following example script can be used to visualize the impedance values at the start of the recording of your EEG dataset.
 
 This example reads the impedance values from an EEG dataset recorded with [BrainVision PyCorder](http://www.brainvision.com/pycorder.html).
 

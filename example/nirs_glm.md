@@ -35,7 +35,7 @@ Then we read the events, which are represented as markers or triggers, indicatin
     move_offset = [event(strcmp({event.value}, 'B')).sample]; % this indicates the end of the movement
 
     nchans   = length(data_stim.label);
-    nsamples = length(data_stim.time{1}); % it is a continous representation, hence one trial/segment
+    nsamples = length(data_stim.time{1}); % it is a continuous representation, hence one trial/segment
 
     data_stim.trial{1} = zeros(nchans, nsamples);
     data_stim.trial{1}(1,move_onset)  = 1;
@@ -49,7 +49,7 @@ Then we read the events, which are represented as markers or triggers, indicatin
     % show the experimental design as a matrix
     figure
     imagesc(data_stim.trial{1})
-    
+
 {% include image src="/assets/img/example/nirs_glm/figure1.png" width="400" %}
 
 You actually have to zoom in a lot to see all details, since there are more samples than horizontal pixels on your screen
@@ -64,7 +64,7 @@ You actually have to zoom in a lot to see all details, since there are more samp
 
 ## Perform a GLM analysis
 
-This is explained on http://mri-q.com/general-linear-model.html with an excelent introduction, and
+This is explained on http://mri-q.com/general-linear-model.html with an excellent introduction, and
 on https://www.brainvoyager.com/bv/doc/UsersGuide/StatisticalAnalysis/TheGeneralLinearModel.html.
 
     close all

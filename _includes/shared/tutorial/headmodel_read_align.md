@@ -24,7 +24,7 @@ The structure of the `mri` variable contains the following fields:
 
 -   `dim` gives information on the size (i.e. the number of voxels) of the anatomical volume into each direction
 -   `anatomy` is a matrix (with the size and number of dimensions specified in `dim`) that contains the anatomical information
--   `hdr` contains the detailled header information from the original file, it contents vary, depending on the file format
+-   `hdr` contains the detailed header information from the original file, it contents vary, depending on the file format
 -   `transform` is a homogenous [transformation matrix](/faq/homogenous) that allows expressing the voxel positions (in the field `anatomy`) in a certain coordinate system
 -   `fid` is an optional structure with fiducial information, this will in general not be present
 -   `coordsys` specifies the coordinate system
@@ -92,4 +92,4 @@ If we did not pay attention to the anatomical landmarks when looking at **[ft_so
     cfg.coordsys = 'ctf'; % the desired coordinate system
     mri_realigned = ft_volumerealign(cfg, mri)
 
-Identifying the nasion is easy. However, it is difficult, if not impossible, to visually distinguish the left and right side from the anatomical MRI. That is why at the DCCN (where this scan was made) we _always_ include a vitamine-E capsule at the right side of the head. Sometimes teh vitamine-E capsule is taped on the right mastoid, sometimes it is taped into the right earshell of the protective headphones. To determine the rpa in this specific MRI, you first search for the vitamine-E capsule and then search for the fiducial that marks the right ear canal. Once the rpa been determined, you can move on to the lpa. Other labs might use vitamine-E capsules at the anatomical landmarks themselves, or might not use any fiducials, so please update your own coregistration procedure accordingly.
+Identifying the nasion is easy. However, it is difficult, if not impossible, to visually distinguish the left and right side from the anatomical MRI. That is why at the DCCN (where this scan was made) we _always_ include a vitamine-E capsule at the right side of the head. Sometimes the vitamine-E capsule is taped on the right mastoid, sometimes it is taped into the right earshell of the protective headphones. To determine the rpa in this specific MRI, you first search for the vitamine-E capsule and then search for the fiducial that marks the right ear canal. Once the rpa been determined, you can move on to the lpa. Other labs might use vitamine-E capsules at the anatomical landmarks themselves, or might not use any fiducials, so please update your own coregistration procedure accordingly.

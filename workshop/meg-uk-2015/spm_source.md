@@ -18,7 +18,7 @@ We start by opening SPM1
 We will use the subject's structural MRI to define meshes describing the cortex, skull and scalp of our subject. Due to the different conductivities (for example between the skull and the scalp) the geometry of the head is important to derive realistic physical forward models that predict how cortical current sources map onto the M/EEG sensors.
 
 1.  In the SPM window click on the batch button. In the batch window select “SPM – M/EEG - Source reconstruction - Head model specification”
-2.  Double-click on “M/EEG datasets” and select “PapMcbdspmeeg_run_01_sss” from the Sensor-level statistics demo as input file. This file contains artefact corrected single trial data for EEG, MEG magnetometers, planar gradiometers and combined gradiometers.
+2.  Double-click on “M/EEG datasets” and select “PapMcbdspmeeg_run_01_sss” from the Sensor-level statistics demo as input file. This file contains artifact corrected single trial data for EEG, MEG magnetometers, planar gradiometers and combined gradiometers.
 3.  Next, set the inversion index to “3”. This index allows you to track different types of forward models and inverse solutions and compare their log model evidences. We choose “3” here as we will later use some pre-calculated inversion models filed under the inversion indices 1 and 2.
 4.  Additional comments relating to each index can be inserted if “comments” is selected. We leave this field empty for now.
 5.  In the field “meshes” first select “mesh source”. From here specify “Individual structural image” and select the NIfTI file “mprage.nii”. The mesh resolution can be kept as normal (approximately 4000 vertices per hemisphere). This step will generate scalp, skull and cortical meshes by warping meshes from a template brain with the inverse spatial normalisation of the subject's brain.
@@ -61,7 +61,7 @@ distributed.
 
 #### Time-frequency contrasts
 
-With the previous steps, we invert data of whole trials from -100 to +800ms across all frequencies. Next we want to localise the evoked activity around the N/M170 face component by averaging power across a suitable time-frequency windo
+With the previous steps, we invert data of whole trials from -100 to +800ms across all frequencies. Next we want to localise the evoked activity around the N/M170 face component by averaging power across a suitable time-frequency window
 
 1.  Select “M/EEG - Source reconstruction – Inversion Results”.
 2.  Again, select “PapMcbdspmeeg_run_01_sss.mat” as input file; set the inversion index to 1. We will first investigate averaged source power across the time-frequency window of interest for the MSP solution.
@@ -74,7 +74,7 @@ With the previous steps, we invert data of whole trials from -100 to +800ms acro
 
 #### Generating batch scripts
 
-You can use the batch framework to construct a processing pipeline across a group of subjects or across different source reconstruction approaches. A brief exampl
+You can use the batch framework to construct a processing pipeline across a group of subjects or across different source reconstruction approaches. A brief example
 
 1.  Save the batch by going to “File” in the Batch editor and select “save Batch and Script“. As file name write 'batch_localise_inv'. This will result in two files: a batch file 'batch_localise_inv_job.m' and a Matlab script 'batch_localise_inv.m' which runs the batch file. Take a look at the job-file by entering “open batch_localise_inv_job.m” in the MATLAB command window.
 2.  In batch_localise_inv.m replace nrun = X; with nrun = 1 and save the file. We could now run this Matlab script with the same results as if we had pressed the green “Run” button in the Batch Editor.

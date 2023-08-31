@@ -214,7 +214,7 @@ The result of **[ft_freqstatistics](/reference/ft_freqstatistics)** is a structu
 Having computed the probability without correcting for multiple comparisons, we proceed with three methods that do correct for the MCP.
 
     cfg.method    = 'analytic';
-    cfg.correctm  = 'bonferoni';
+    cfg.correctm  = 'bonferroni';
     TFR_stat2     = ft_freqstatistics(cfg, TFR_logpow);
 
     cfg.method    = 'analytic';
@@ -306,7 +306,7 @@ The **[ft_selectdata](/reference/utilities/ft_selectdata)** function is a very h
 
 {% include image src="/assets/img/workshop/natmeg2014/statistics/natmeg_stat_erf.png" width="500" %}
 
-To assess whether there is a significant difference between the two conditions, we also need to know what the variance in the data is. In principle we could use the variance that is estimated by **[ft_timelockanalysis](/reference/ft_timelockanalysis)** and manualy compute the [t-test](https://en.wikipedia.org/wiki/Student%27s_t-test).
+To assess whether there is a significant difference between the two conditions, we also need to know what the variance in the data is. In principle we could use the variance that is estimated by **[ft_timelockanalysis](/reference/ft_timelockanalysis)** and manually compute the [t-test](https://en.wikipedia.org/wiki/Student%27s_t-test).
 
     disp(ERF_std)
 
@@ -357,7 +357,7 @@ We proceed by computing the statistical test, which returns the t-value, the pro
     ERF_stat1     = ft_timelockstatistics(cfg, ERF_all);
 
     cfg.method    = 'analytic';
-    cfg.correctm  = 'bonferoni';
+    cfg.correctm  = 'bonferroni';
     ERF_stat2     = ft_timelockstatistics(cfg, ERF_all);
 
     cfg.method    = 'analytic';

@@ -22,7 +22,7 @@ In general there are various ways that you can use the continuous head localizat
 
 The first way of dealing with it requires that you visualize and decide on the movements. This is demonstrated in the first half of the example script.
 
-The second way of dealing with the movements means that you perform **[ft_timelockanalysis](/reference/ft_timelockanalysis)**, **[ft_freqanalysis](/reference/ft_freqanalysis)** or **[ft_sourceanalysis](/reference/ft_sourceanalysis)** with the option ```cfg.keeptrials=yes```. This will give trial estimates of the ERF, the power or the source strength for each trial. The effect that the variable head position has on those single-trial estimates can be estimated and removed from the data using **[ft_regressconfound](/reference/ft_regressconfound)**. This method has been found to significantly improve statistical sensivity following head movements, [up to 30%](https://doi.org/10.1016/j.neuroimage.2012.11.047), and is therefore demonstrated in the second half of the example script.
+The second way of dealing with the movements means that you perform **[ft_timelockanalysis](/reference/ft_timelockanalysis)**, **[ft_freqanalysis](/reference/ft_freqanalysis)** or **[ft_sourceanalysis](/reference/ft_sourceanalysis)** with the option ```cfg.keeptrials=yes```. This will give trial estimates of the ERF, the power or the source strength for each trial. The effect that the variable head position has on those single-trial estimates can be estimated and removed from the data using **[ft_regressconfound](/reference/ft_regressconfound)**. This method has been found to significantly improve statistical sensitivity following head movements, [up to 30%](https://doi.org/10.1016/j.neuroimage.2012.11.047), and is therefore demonstrated in the second half of the example script.
 
 The third way of dealing with the movements requires that you make a spatial interpolation of the raw MEG data at each moment in time, in which you correct for the movements. In principle this could be done using the **[ft_megrealign](/reference/ft_megrealign)** function, but at this moment (May 2012) that function cannot yet deal with within-session movements.
 
@@ -104,14 +104,14 @@ MEG experiments typically involve repeated trials of an evoked or induced brain 
     cfg.trialdef.poststim = 0.3;
     cfg.continuous = 'yes';
     cfg = ft_definetrial(cfg);
-   
+
    % preprocess the MEG data
    cfg.channel = {'MEG'};
    cfg.demean = 'yes';
    cfg.baselinewindow = [-0.2 0];
    cfg.dftfilter = 'yes'; % notch filter to filter out 50Hz
    data = ft_preprocessing(cfg);
-   
+
    % timelock analysis
    cfg = [];
    cfg.keeptrials = 'yes';
@@ -190,7 +190,7 @@ Stolk A, Todorovic A, Schoffelen JM, Oostenveld R. **[Online and offline tools f
 {% include markup/end %}
 
 ## Appendix: circumcenter
-   
+
     function [cc] = circumcenter(coil1,coil2,coil3)
 
     % CIRCUMCENTER determines the position and orientation of the circumcenter

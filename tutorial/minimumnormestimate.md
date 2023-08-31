@@ -19,7 +19,7 @@ To calculate distributed neuronal activation we will use the minimum-norm estima
 
 ## Procedure
 
-Figure 1 shows a schematic of the steps needed for the calculation of the minimum-norm estimate. It shows that the computation of the inverse solution is based on the outputs of two independent processing steps: the processing of the anatomical images that leads to a forward model and the processing of the MEG data. To create a useable source model, additional software is needed, for example FreeSurfer (for the creation of a model of the cortical sheet), and MNE Suite or HCP workbench (to get a minimally distorted low-resultion version of the cortical sheet).
+Figure 1 shows a schematic of the steps needed for the calculation of the minimum-norm estimate. It shows that the computation of the inverse solution is based on the outputs of two independent processing steps: the processing of the anatomical images that leads to a forward model and the processing of the MEG data. To create a useable source model, additional software is needed, for example FreeSurfer (for the creation of a model of the cortical sheet), and MNE Suite or HCP workbench (to get a minimally distorted low-resolution version of the cortical sheet).
 
 {% include image src="/assets/img/tutorial/minimumnormestimate/figure1.png" width="550" %}
 
@@ -81,7 +81,7 @@ The trials belonging to one condition will now be averaged with the onset of the
 
       load dataFC_LP
       load dataFIC_LP
-      
+
       cfg = [];
       cfg.covariance = 'yes';
       cfg.covariancewindow = [-inf 0]; %it will calculate the covariance matrix
@@ -98,7 +98,7 @@ The source space, the volume conduction model and the position of the sensors ar
     load tlck
     load Subject01_sourcemodel_15684
     load Subject01_headmodel
-    
+
     cfg         = [];
     cfg.grad    = tlckFC.grad;   % sensor information
     cfg.channel = tlckFC.label;  % the used channels
@@ -115,7 +115,7 @@ The **[ft_sourceanalysis](/reference/ft_sourceanalysis)** function calculates th
 
 The lambda value is a scaling factor that is responsible for scaling the noise-covariance matrix. If it is zero the noise-covariance estimation will be not taken into account during the computation of the inverse solution. Noise-covariance is estimated in each trial separately and then averaged, while the functional data (of which we calculate the source-analysis) is simply averaged across all the trials. Therefore, the higher the number of trials the lower the noise is in the averaged, functional data, but the number trials is not reducing the noise in the noise-covariance estimation. This is the reason while it is useful to use a scaling factor for the noise-covariance matrix if we want to estimate more realistically the amount of noise.
 
-You do not have to specify of the noise-covariance matrix separatly, because it is in the tlckFC.cov and in the tlckFIC.cov fields, and ft_sourceanalysis will take it into account automatically.
+You do not have to specify of the noise-covariance matrix separately, because it is in the tlckFC.cov and in the tlckFIC.cov fields, and ft_sourceanalysis will take it into account automatically.
 
     load tlck;
     load Subject01_leadfield;

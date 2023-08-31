@@ -48,7 +48,7 @@ _Figure; BEM model consisting of single sphere, including electrodes_
 
 ## Building the geometrical head model with BEM
 
-The following code generates different BEM (Dipoli) system matrixes, describing head properties which are depending on the increasing number of triangles used for each mesh. This implements Oostendorp and van Oosterom, 1989, eq. 2.3, 2.4
+The following code generates different BEM (Dipoli) system matrices, describing head properties which are depending on the increasing number of triangles used for each mesh. This implements Oostendorp and van Oosterom, 1989, eq. 2.3, 2.4
 
     % construct a dense triangulated mesh
     [X, Y, Z] = sphere(100);

@@ -303,7 +303,7 @@ To create a standard script from the analysis pipeline, the `ft_default` variabl
 
 {% include image src="/assets/img/example/reproducescript/filedir_example2_reproducescript.jpg" width="435" %}
 
-We devoted a specific folder to the reproducescript content of each subject, and one for the group analysis. Thus, upon execution of the master script in `analyze.m`, folders are created for each of the subjects, and for the group analysis. These all contain the intermediate data, a standardized script, and a `hashes.mat` file for the bookkeeping. The reproducescript standardized scripts for the single-subject analysis and group analysis can be found below. Note that these are quite lenghty, but they unambiguously list all analysis steps.
+We devoted a specific folder to the reproducescript content of each subject, and one for the group analysis. Thus, upon execution of the master script in `analyze.m`, folders are created for each of the subjects, and for the group analysis. These all contain the intermediate data, a standardized script, and a `hashes.mat` file for the bookkeeping. The reproducescript standardized scripts for the single-subject analysis and group analysis can be found below. Note that these are quite lengthy, but they unambiguously list all analysis steps.
 
 #### Single subject reproduced analysis
 
@@ -760,7 +760,7 @@ This is the resulting code in the file `project/example2/reproduce_Group/script.
 
 ## Conclusion
 
-This example demonstrated how _reproducescript_ can be applied to a group analysis by enabling it seperately for each subject, and then once for the group analysis. It would be possible as well to enable reproducescript only once at the top of the master script, but we found the current solution to have a more clear organisation. There is one more example in which we apply reproducescript to full study published by Andersen et al. This shows how _reproducescript_ would be applied in a more complex scenario.
+This example demonstrated how _reproducescript_ can be applied to a group analysis by enabling it separately for each subject, and then once for the group analysis. It would be possible as well to enable reproducescript only once at the top of the master script, but we found the current solution to have a more clear organisation. There is one more example in which we apply reproducescript to full study published by Andersen et al. This shows how _reproducescript_ would be applied in a more complex scenario.
 
 Note that there are other strategies for improving shareability and reproducibility, and we don't claim that _reproducescript_ is the best way in every scenario. Rather, it is one of many tools that can aid the researcher to improve the community's standard in methodological transparency and robustness of results. For other strategies, we refer the reader to the pre-print in which we first described _reproducescript_.
 

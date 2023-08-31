@@ -31,7 +31,7 @@ Another '**no-no**' is the practice of collecting all your steps in a single lar
 
 It is recommended to start your analysis by first [converting your data to BIDS](/example/bids). This pushes some of the challenging data curation and coding steps to the early phase of your analysis. It also requires that you identify and resolve inconsistencies at the start, rather than as you are going along. It comes at the expense of investing in data management and curation up-front, but it will save you time later, as the actual analysis becomes simpler.
 
-Bidsifying your data early on also means practically that your data acquisition was not so long ago and you better remember the peculiarities of your subjects and the recordings.
+Converting your data into BIDS early on also means practically that your data acquisition was not so long ago and you better remember the peculiarities of your subjects and the recordings.
 
 If you incrementally bidsify your data immediately following the recording of each subject, you are furthermore more likely to notice potential issues in your experimental procedure, which you can improve for the subsequent subjects.
 
@@ -40,7 +40,7 @@ If you incrementally bidsify your data immediately following the recording of ea
 As stated before, by making our own scripts, we can in a later stage easily repeat them, e.g., over multiple subjects. It is common that every subject might have different and possibly slightly inconsistent filenames, different trials that have to be rejected, etc. A good idea, therefore, is to first **write all your subject-specific details in a separate m-file**. You can choose to have one m-file per subject, or one in which you combine all subjects. In the current example we will use the first option, and we specify these m-files to be a [function](https://www.mathworks.com/help/matlab/ref/function.html):
 
     function [subjectinfo] = Subject01
-    
+
     % This function returns the subject-specific details
     %
     % the first few lines with comments are displayed as help
@@ -59,7 +59,7 @@ Save this as `Subject01.m` in a personal folder that you will need to add to the
 We can now use this in our own functions, giving flexibility in combining generic functions and subject-specific settings. In addition, you could use this file to add further notes, such as `% subject pressed the response button twice on the first trial`.
 
 {% include markup/info %}
-An example that uses subject-specific m-files can be found [here](https://github.com/robertoostenveld/Wakeman-and-Henson-2015). The same dataset has later also been [converted to BIDS](https://doi.org/10.18112/openneuro.ds000117.v1.0.5) and a version of the analysis that starts from the BIDS dataset is documented [here](/workshop/practicalmeeg2022) and [here](https://download.fieldtriptoolbox.org/workshop/practicalmeeg2022/code).  
+An example that uses subject-specific m-files can be found [here](https://github.com/robertoostenveld/Wakeman-and-Henson-2015). The same dataset has later also been [converted to BIDS](https://doi.org/10.18112/openneuro.ds000117.v1.0.5) and a version of the analysis that starts from the BIDS dataset is documented [here](/workshop/practicalmeeg2022) and [here](https://download.fieldtriptoolbox.org/workshop/practicalmeeg2022/code).
 
 A similar example is [this one](https://github.com/Donders-Institute/infant-cluster-effectsize), which also starts from a consistent [BIDS dataset](https://doi.org/10.34973/gvr3-6g88) (hence fewer exceptions needed) and which stores subject-specific details like the selected trials and the bad segments and channels in [mat-files](https://doi.org/10.34973/g4we-5v66) rather than m-files.
 {% include markup/end %}
@@ -87,7 +87,7 @@ The `do_complete_analysis` script calls the others and could look like this
     % prepare the layout for plotting and neighbours for interpolation and cluster-stats
     do_prepare_layout
     do_prepare_neighbours
-        
+
     for i=1:20
       % load the subject-specific information
       eval(sprintf('Subject%02d', i))
@@ -98,7 +98,7 @@ The `do_complete_analysis` script calls the others and could look like this
     % do the group-level statistics
     do_group_analysis
 
-In reality it is likely that you will not be executing `do_complete_analysis` like this all at once, because the construction of the BIDS conversion script and the gereral preparatory scripts for the [layout](/tutorial/layout) and [neighbours](/example/neighbours) will take you some time and effort. While you are writing these, you are already trying them out and executing them piecewise to get everything right. However, the `do_complete_analysis` script does explain to others (and your future self) how to rerun the analysis.
+In reality it is likely that you will not be executing `do_complete_analysis` like this all at once, because the construction of the BIDS conversion script and the general preparatory scripts for the [layout](/tutorial/layout) and [neighbours](/example/neighbours) will take you some time and effort. While you are writing these, you are already trying them out and executing them piecewise to get everything right. However, the `do_complete_analysis` script does explain to others (and your future self) how to rerun the analysis.
 
 The construction of the `do_singlesubject_analysis` will likely involve some trial-and-error and takes time, probably multiple days. While you are writing the single-subject analysis, you can repeatedly run a part of that script. Only once it is complete, you run the for-loop that executes it for all participants. If you are doing more sophisticated analyses, such as MEG or EEG source reconstruction, it makes sense to split `do_singlesubject_analysis` into multiple scripts: for example one for the anatomical processing, one for the channel-level processing, and one for the source reconstruction.
 
@@ -205,7 +205,7 @@ In the end we'll end up with a collection of several function calls that are org
 
 {% include image src="/assets/img/tutorial/scripting/figure1.png" width="600" %}
 
-Interactive or manual steps are often required for the the visual inspection and identification of artifacts, to identify artifactual ICA components, to localize electrodes in a 3D scan, to coregister the data with an MRI, and for quality control. Separating the interactive/manual steps from the non-interactive steps allows us to automate the non-interactive parts. This is called _batching_.   
+Interactive or manual steps are often required for the the visual inspection and identification of artifacts, to identify artifactual ICA components, to localize electrodes in a 3D scan, to coregister the data with an MRI, and for quality control. Separating the interactive/manual steps from the non-interactive steps allows us to automate the non-interactive parts. This is called _batching_.
 
 Large datasets often require quite some processing time, hence it is convenient to run a batch of analysis steps overnight. The worst that can happen is that the next morning you'll see some red lines in your MATLAB command window just because of a small mistake in one of the first subjects. Therefore, you might want to try using the [try-catch](https://www.mathworks.com/help/matlab/ref/try.html) syntax in MATLAB. Whenever something goes wrong between the `try` and `catch` it will jump to the catch after which it will simply continue. For example:
 

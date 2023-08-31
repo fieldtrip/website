@@ -5,7 +5,7 @@ tags: [template, electrode]
 
 # Template 3-D electrode sets
 
-Electrodes are represented as points in 3-D Carthesian space, i.e. with an X, Y and Z position for each electrode. Furthermore, each electrode has a label. There is a frequently asked question about [how the electrode structure is described](/faq/how_are_electrodes_magnetometers_or_gradiometers_described).
+Electrodes are represented as points in 3-D Cartesian space, i.e. with an X, Y and Z position for each electrode. Furthermore, each electrode has a label. There is a frequently asked question about [how the electrode structure is described](/faq/how_are_electrodes_magnetometers_or_gradiometers_described).
 
 You can use the following snippet of code to get a quick overview of the template electrode sets.
 
@@ -21,7 +21,7 @@ You can use the following snippet of code to get a quick overview of the templat
       rotate3d
       view(135, 20);
       title(filename{i}, 'Interpreter', 'none');
-      
+
       [p, f, x] = fileparts(filename{i});
       print([lower(f) '.png'], '-dpng');
     end

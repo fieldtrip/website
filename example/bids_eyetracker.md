@@ -11,7 +11,7 @@ The [BIDS standard](https://bids.neuroimaging.io) does currently not specify how
 
 Eye tracking data can be stored in the BIDS representation similar to [behavioral data](https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/07-behavioral-experiments.html). This not only includes the gaze position, pupil diameter, but also allows for presentation (stimulus and response events) and saccades to be represented in the events.tsv file.
 
-Rather than storing the eye tracker data as generic pysiological data in the `_pysio.tsv` file, the implementation of **[data2bids](/reference/data2bids)** allows it to be specified as eyetracker data, resulting it to be written in an `_eyetracker.tsv` file, with an associated `_eyetracker.json` file with metadata details on the equipment and experiment.
+Rather than storing the eye tracker data as generic physiological data in the `_pysio.tsv` file, the implementation of **[data2bids](/reference/data2bids)** allows it to be specified as eyetracker data, resulting it to be written in an `_eyetracker.tsv` file, with an associated `_eyetracker.json` file with metadata details on the equipment and experiment.
 
 {% include markup/info %}
 Information that need to be further considered to be documented in the metadata is for example whether both eyes or only one was tracked, sapling rate, if and how pupil diameter is quantified, what calibration process was used, how to interpret the gaze position (pixels, degrees), whether the origin is at the center of the screen or the upper left corner, etc.

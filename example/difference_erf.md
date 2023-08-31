@@ -25,7 +25,7 @@ and
 
 In this example the activity of source 1 is not different in the two conditions, but the strength of source 2 is slightly weaker in the second condition.
 
-In either condition A or condition B, the field distribution is dominated by source 1 and it will not be apparent that multiple dipoles are required for a correct source reconstruction of eihter condition. After a dipole fit of either condition with a single dipole the goodness of fit (or residual variance) will also not give a clear indication that the model is inappropriate. Attempting a source reconstruction of the field distribution produced by two sources in general will result in a dipole with a location representing the center of mass of the activity of the two actual sources. If the sources are equally strong, this will result in the dipole in between the two actual sources.
+In either condition A or condition B, the field distribution is dominated by source 1 and it will not be apparent that multiple dipoles are required for a correct source reconstruction of either condition. After a dipole fit of either condition with a single dipole the goodness of fit (or residual variance) will also not give a clear indication that the model is inappropriate. Attempting a source reconstruction of the field distribution produced by two sources in general will result in a dipole with a location representing the center of mass of the activity of the two actual sources. If the sources are equally strong, this will result in the dipole in between the two actual sources.
 
 Dipole fitting works by minimizing the error between the model and measured data. In this example the stronger source 1 has much more contribution to this error, and hence on the resulting dipole location. Therefore if one source is stronger than the other, the center of mass and the fitted dipole will be closer to that stronger source. In the example above, source 1 is considerably stronger than source 2 in both conditions. The resulting dipole location for condition A and B therefore will be very similar, with only a small shift of the center of mass (dipole location) towards S1 in condition B. Since there is also noise in the data, there will be some added random fluctuation in the dipole location in both conditions, making it even more difficult to distinguish and interpret the underlying source differences.
 
@@ -51,7 +51,7 @@ Here the original field distributions in both conditions are dominated by the st
 
 ## Applied to the experimental data
 
-In this experiment, MEG was recorded during stimulation of the affected/painfull hand prior to, and after application of a pain blocker. These correspond to the conditions A and B as explained above. First the MEG topography of the M24 event-related field is given for both conditions separately.
+In this experiment, MEG was recorded during stimulation of the affected/painful hand prior to, and after application of a pain blocker. These correspond to the conditions A and B as explained above. First the MEG topography of the M24 event-related field is given for both conditions separately.
 
 {% include image src="/assets/img/example/difference_erf/difference_erf_pain.png" %}
 
@@ -71,7 +71,7 @@ The difference map shows two dipolar patterns with opposing directions. The nega
 
 A second dipolar field that is more posterior and slightly more central is now also visible (indicated with a green arrow). This green source is not obvious in either separate condition.
 
-Given the two source locations that can be identified from the difference map, it makes sense to estimate the source strength for each of the two sources in both separate conditions (i.e. fit the strength, not the location), and explicitely compare the dipole strength between the two conditions for each dipole. It might be possible to get a better estimate of the source location by performing a dipole fit with two dipoles on the grand average of the two conditions, as that results in a better signal to noise, and under the null-hypothesis the sources are the same anyway. The optimal source locations can then be fixed and source strength can again be estimated for each separate condition and compared over conditions.
+Given the two source locations that can be identified from the difference map, it makes sense to estimate the source strength for each of the two sources in both separate conditions (i.e. fit the strength, not the location), and explicitly compare the dipole strength between the two conditions for each dipole. It might be possible to get a better estimate of the source location by performing a dipole fit with two dipoles on the grand average of the two conditions, as that results in a better signal to noise, and under the null-hypothesis the sources are the same anyway. The optimal source locations can then be fixed and source strength can again be estimated for each separate condition and compared over conditions.
 
 To summarize, using the “difference dipole fit “ approach reveals two sources that contribute to the M24 event-related field, and differentiates the effect of the application of a pain blocker onto the two sources.
 

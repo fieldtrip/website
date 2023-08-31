@@ -85,7 +85,7 @@ Subsequently you can save the data to disk.
       save dataFIC_LP dataFIC_LP
       save dataFC_LP dataFC_LP
 
-Using the preprocessed data, we now create a data structure that is the average across trials, time-locked to a particular event, using **[ft_timelockanalysis](/reference/ft_timelockanalysis)**. The output of **[ft_timelockanalysis](/reference/ft_timelockanalysis)** contains an .avg field with the average event-related field, and a .trial field with the individual trial data. The output is stored in timelockFIC and timelockFC for the fully incongruent and the fully congruent condition. This output is then suitable, as well, for statististical analyses.
+Using the preprocessed data, we now create a data structure that is the average across trials, time-locked to a particular event, using **[ft_timelockanalysis](/reference/ft_timelockanalysis)**. The output of **[ft_timelockanalysis](/reference/ft_timelockanalysis)** contains an .avg field with the average event-related field, and a .trial field with the individual trial data. The output is stored in timelockFIC and timelockFC for the fully incongruent and the fully congruent condition. This output is then suitable, as well, for statistical analyses.
 
 To obtain the preprocessed data required by **[ft_timelockanalysis](/reference/ft_timelockanalysis)** you can get it here from our download server: [dataFIC_LP](https://download.fieldtriptoolbox.org/tutorial/cluster_permutation_timelock/dataFIC_LP.mat) and [dataFC_LP.mat](https://download.fieldtriptoolbox.org/tutorial/cluster_permutation_timelock/dataFC_LP.mat).
 
@@ -127,7 +127,7 @@ Some fields of the configuration (cfg), such as channel and latency, are not spe
 
     n_fc  = size(timelockFC.trial, 1);
     n_fic = size(timelockFIC.trial, 1);
-    
+
     cfg.design           = [ones(1,n_fic), ones(1,n_fc)*2]; % design matrix
     cfg.ivar             = 1; % number or list with indices indicating the independent variable(s)
 
@@ -191,7 +191,7 @@ The output of **[ft_timelockstatistics](/reference/ft_timelockstatistics)** has 
 - The field **clusterstat** contains the cluster-level test statistic (here: the sum of the T-values in this cluster).
 
 - The field **prob** contains the proportion of draws from the permutation distribution with a maximum cluster-level statistic that is larger than the cluster-level test statistic.
-  The elements in the array stat.posclusters are sorted according to these probabilities: the cluster with the smallest p-value comes first, followed by the cluster with the second-smallest, etc. Thus, if the k-th cluster has a p-value that is larger than the critical alpha-level (e.g., 0.025), then so does the (k+1)-th. Type stat.posclusters(k) on the MATLAB command line to see the information for the k-th cluster. Note, however, that in fact for the statistical inferential decision (i.e. reject or not the null hypothesis), only the p-value of the largest cluster is relevant. Therefore, importantly, it is a bit silly to use the terminology 'significant clusters' in this context, by evaluating the cluster-associated p-values.  
+  The elements in the array stat.posclusters are sorted according to these probabilities: the cluster with the smallest p-value comes first, followed by the cluster with the second-smallest, etc. Thus, if the k-th cluster has a p-value that is larger than the critical alpha-level (e.g., 0.025), then so does the (k+1)-th. Type stat.posclusters(k) on the MATLAB command line to see the information for the k-th cluster. Note, however, that in fact for the statistical inferential decision (i.e. reject or not the null hypothesis), only the p-value of the largest cluster is relevant. Therefore, importantly, it is a bit silly to use the terminology 'significant clusters' in this context, by evaluating the cluster-associated p-values.
 
 The field stat.posclusterslabelmat is a spatiotemporal matrix. This matrix contains numbers that identify the clusters to which the (channel,time)-pairs (the samples) belong. For example, all (channel,time)-pairs that belong to the third cluster, are identified by the number 3. As will be shown in the following, this information can be used to visualize the topography of the clusters.
 
@@ -201,7 +201,7 @@ By inspecting stat.posclusters and stat.negclusters, it can be seen that only th
 
     stat.posclusters(1)
     ans =
-    
+
                prob: 0.0099
         clusterstat: 8.2721e+03
              stddev: 0.0099
@@ -450,7 +450,7 @@ The configuration looks as follows:
     design = zeros(2, Nsubj*2);
     design(1,:) = [1:Nsubj 1:Nsubj];
     design(2,:) = [ones(1,Nsubj) ones(1,Nsubj)*2];
-    
+
     cfg.design = design;
     cfg.uvar   = 1;
     cfg.ivar   = 2;
@@ -504,7 +504,7 @@ With the output, we can now create the plots
     sample_count  = length(stat.time);
     j = [0:timestep:1];   % Temporal endpoints (in seconds) of the ERP average computed in each subplot
     m = [1:timestep*sampling_rate:sample_count];  % temporal endpoints in M/EEG samples
-    
+
     % get relevant values
     pos_cluster_pvals = [stat.posclusters(:).prob];
     pos_clust = find(pos_cluster_pvals < 0.025);

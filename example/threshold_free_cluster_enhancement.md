@@ -13,11 +13,11 @@ When using clusting to correct for multiple comparisons, we need to define the c
 
 ## How does it work?
 
-Each voxel’s TFCE score is given by the sum of the scores of all “supporting sections” underneath it; as the height 𝒉 is incrementally raised from zero up to the height (signal intensity) 𝒉<sub>p</sub> of a given point 𝒑, the image is thresholded at 𝒉, and the single contiguous cluster containing p is used to define the score for that height 𝒉. This score is simply the height 𝒉 (raised to some power 𝑯, which is by default set to 2 in FieldTrip and can be adjusted via `cfg.tfce_H`) multiplied by the cluster extent 𝒆 (raised to some power 𝑬, which is by default set to 0.5 in FieldTrip and can be adjusted via `cfg.tfce_E`). For more detailed information, see [Smith and Nichols (2009)](https://doi.org/10.1016/j.neuroimage.2008.03.061).
+Each voxel's TFCE score is given by the sum of the scores of all “supporting sections” underneath it; as the height 𝒉 is incrementally raised from zero up to the height (signal intensity) 𝒉<sub>p</sub> of a given point 𝒑, the image is thresholded at 𝒉, and the single contiguous cluster containing p is used to define the score for that height 𝒉. This score is simply the height 𝒉 (raised to some power 𝑯, which is by default set to 2 in FieldTrip and can be adjusted via `cfg.tfce_H`) multiplied by the cluster extent 𝒆 (raised to some power 𝑬, which is by default set to 0.5 in FieldTrip and can be adjusted via `cfg.tfce_E`). For more detailed information, see [Smith and Nichols (2009)](https://doi.org/10.1016/j.neuroimage.2008.03.061).
 
 {% include image src="/assets/img/example/threshold_free_cluster_enhancement/schematic.png" width="500" %}
 
-_TFCE schmeatic, [adapted](https://benediktehinger.de/blog/science/threshold-free-cluster-enhancement-explained/) from [Benedikt V. Ehinger](https://www.benediktehinger.de) (used under CC-BY)_
+_TFCE schematic, [adapted](https://benediktehinger.de/blog/science/threshold-free-cluster-enhancement-explained/) from [Benedikt V. Ehinger](https://www.benediktehinger.de) (used under CC-BY)_
 
 ## Example code
 

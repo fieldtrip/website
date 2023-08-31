@@ -27,4 +27,4 @@ Continuous EEG was registered using a 64 channel ActiCap system (Brain Products 
 
 {% include image src="/assets/img/workshop/madrid2019/datasets/simanova_fig2.png" width="400" %}
 
-One electrode was placed under the right eye to compute bipolar signals ("vectical EOG" and "horizontal EOG"). During acquisition the reference at the right mastoid; an additional electrode measured the voltage on the left mastoid, Channels 1-60 correspond to electrodes that are located on the head, except for channel 53 which is located at the right mastoid. Channels 61, 62, 63 are not connected to an electrode at all. Channel 64 is connected to an electrode placed below the left eye.
+One electrode was placed under the right eye to compute bipolar signals ("vertical EOG" and "horizontal EOG"). During acquisition the reference at the right mastoid; an additional electrode measured the voltage on the left mastoid, Channels 1-60 correspond to electrodes that are located on the head, except for channel 53 which is located at the right mastoid. Channels 61, 62, 63 are not connected to an electrode at all. Channel 64 is connected to an electrode placed below the left eye.

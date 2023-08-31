@@ -44,7 +44,7 @@ Most data has already been prepared in the previous tutorial, here we just load 
 
 ### Whole brain connectivity, starting at a seed location
 
-Previously we computed the time-ferquency representation over the full time and frequency range, and we computed with "mtmfft" the multi-tapered spectral representation at a single time-frequency point. We can also use wavelets to obtain the spectral estimate at a single time-ferquency point.
+Previously we computed the time-frequency representation over the full time and frequency range, and we computed with "mtmfft" the multi-tapered spectral representation at a single time-frequency point. We can also use wavelets to obtain the spectral estimate at a single time-frequency point.
 
     cfg = [];
     cfg.channel = 'meg';

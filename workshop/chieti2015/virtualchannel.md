@@ -199,7 +199,7 @@ We should now only have movements of a single type, and only see a single moveme
     tfr_lh = ft_freqanalysis(cfg, data_lh);
     tfr_rh = ft_freqanalysis(cfg, data_rh);
 
-Having computed the TFR, we want to visualise it. However, we computed the single-trial Fourier representation. With ft_freqdescriptives we can compute the average powe
+Having computed the TFR, we want to visualise it. However, we computed the single-trial Fourier representation. With ft_freqdescriptives we can compute the average power
 
     cfg = [];
     tfr_lh_pow = ft_freqdescriptives(cfg, tfr_lh);

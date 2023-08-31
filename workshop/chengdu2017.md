@@ -213,7 +213,7 @@ After installing FieldTrip to your path, you need to change into the hands-on sp
     cfg.viewmode = 'component';
     cfg.continuous = 'yes';
     ft_databrowser(cfg, comp)
-    % in the GUI: write down the artefact components
+    % in the GUI: write down the artifact components
 
     cfg = [];
     cfg.component = [1 2];

@@ -16,7 +16,7 @@ Subsequently it does a beamformer source reconstruction to localize the activity
 
 A double-dipole source model in the beamformer scan can be used to circumvent the problem of correlated sources.
 
-NOTE: the example below uses some low-level functions from the FieldTrip/private directory that will not be found in the default installation of FieldTrip. For the example below to work, you should rename the FieldTrip/private directory and add it explicitely to your path.
+NOTE: the example below uses some low-level functions from the FieldTrip/private directory that will not be found in the default installation of FieldTrip. For the example below to work, you should rename the FieldTrip/private directory and add it explicitly to your path.
 
 ## Generate simulated data
 

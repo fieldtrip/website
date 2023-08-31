@@ -55,6 +55,6 @@ Both for the "trial" and for the "trigger" event you can define a data segment o
 
 So for the trial event, the first sample of the trial is at (1-1-300)/1000 = -0.3 s = -300 ms and if you construct a time axis, the first sample in that time axis has a time of -300 ms. The time of that sample is relative to whatever caused that trial.
 
-You can also define trials based on the trigger event. If we don't define a baseline period, then the 1st sample of the time-axis based on the trigger event is at (1-1-0)/1000 = 0 s = 0 ms. Relative to the trigger, the trigger happens at time zero. If we include a baseline of 300 samples, the first sample in the baseline corresponds to the first sample of therecording. That first sample is then at time t = -300 ms.
+You can also define trials based on the trigger event. If we don't define a baseline period, then the 1st sample of the time-axis based on the trigger event is at (1-1-0)/1000 = 0 s = 0 ms. Relative to the trigger, the trigger happens at time zero. If we include a baseline of 300 samples, the first sample in the baseline corresponds to the first sample of the recording. That first sample is then at time t = -300 ms.
 
 In this example (the Subject01.ds dataset used in the tutorials), the events in the data are represented twice. The individual triggers are represented in a trigger channel and in the "backpanel trigger" event, but the triggers also caused the file to be written to disk in epochs. These epochs are represented as the "trial" events.

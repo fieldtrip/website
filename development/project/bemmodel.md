@@ -53,7 +53,7 @@ This requires the computation of the surface laplacial (i.e. smoothness) of the 
     - Any vertex where the surface laplacian is not sufficiently smooth
 2.  Remove suspicious vertices and replace them by interpolation (using minimum laplacian)
 3.  Check that the 2.5 and 3.5 criteria are optimally met
-4.  Go back to step 1 and repeat untill it converges
+4.  Go back to step 1 and repeat until it converges
 
 {% include image src="/assets/img/development/project/bemmodel/bemmodel6.png" %}
 

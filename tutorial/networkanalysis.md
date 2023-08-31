@@ -60,7 +60,7 @@ The ft_redefinetrial and ft_preprocessing functions require the original MEG dat
     cfg.trials = 1:(numel(data.trial)-6);
     data       = ft_preprocessing(cfg, data);
 
-### Artefact rejection
+### Artifact rejection
 
 We will first clean the data from potential bad segments such as SQUID jumps and/or bad channels using **[ft_rejectvisual](/reference/ft_rejectvisual)**. Subsequently, we will identify occular and cardiac artifacts by means of ICA using **[ft_componentanalysis](/reference/ft_componentanalysis)**. Since, these type of artifacts are predominately low frequent and we are interested in a 10Hz signal, we will downsample the data using **[ft_resampledata](/reference/ft_resampledata)** in order to speed up calculations during ft_componentanalysis and reduce potential working memory issues. Alternatively, you can skip these steps and download the data [here](https://download.fieldtriptoolbox.org/tutorial/networkanalysis).
 
@@ -211,7 +211,7 @@ Now we can proceed with the computation of the leadfield matrix, using **[ft_pre
     cfg.channel     = {'MEG'};
     lf              = ft_prepare_leadfield(cfg, dataica);
 
-### Estimating teh sources
+### Estimating the sources
 
 In addition to a forward model, the beamformer needs a sensor-level covariance matrix, or a cross-spectral density matrix. The preliminaries for the cross-spectral density matrix can be obtained with
 

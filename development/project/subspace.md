@@ -1,10 +1,10 @@
 ---
-title: Implement support for a seperation of data into a signal and noise subspace
+title: Implement support for a separation of data into a signal and noise subspace
 ---
 
 {% include /shared/development/warning.md %}
 
-# Implement support for a seperation of data into a signal and noise subspace
+# Implement support for a separation of data into a signal and noise subspace
 
 ## Objectives
 

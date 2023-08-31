@@ -27,7 +27,7 @@ A number of external toolboxes is included in the `fieldtrip/external` subdirect
 - egi_mff_v2
 - ezc3d
 - [fastica](http://research.ics.tkk.fi/ica/fastica/) for independent component analysis
-- [fileexchange](https://www.mathworks.com/matlabcentral/fileexchange) varous functions from Mathworks File Exchange
+- [fileexchange](https://www.mathworks.com/matlabcentral/fileexchange) various functions from Mathworks File Exchange
 - fns
 - freesurfer to read MRI data
 - gcmi

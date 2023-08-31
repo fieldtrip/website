@@ -26,7 +26,7 @@ From the segmentation, you can make triangulated surface meshes with
 
 For a BEM model, we want the innermost mesh (the brain) to be the most detailed. The potential distribution varies the most on that surface, whereas on the scalp it does not vay that much.
 
-You can also make more detailled meshes for visualisation and coregistration purposes.
+You can also make more detailed meshes for visualisation and coregistration purposes.
 
     cfg             = [];
     cfg.method      = 'isosurface';
@@ -35,7 +35,7 @@ You can also make more detailled meshes for visualisation and coregistration pur
     mesh = ft_prepare_mesh(cfg, segmentedmri);
 
 One of the fileformats supported by MeshLab and many other softwares is [STL](https://en.wikipedia.org/wiki/STL_(file_format)).
- 
+
     % write one surface per file
     ft_write_headshape('surface_brain.stl', mesh(1), 'format', 'stl')
     ft_write_headshape('surface_skull.stl', mesh(2), 'format', 'stl')

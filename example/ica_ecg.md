@@ -115,7 +115,7 @@ You can go on with the analysis now.
     cfg.channel    = {'MEG'};
     data_ecg       = ft_preprocessing(cfg, data_orig);
 
-    % resample to speed up the decomposition and frequency analysis, especially usefull for 1200Hz MEG data
+    % resample to speed up the decomposition and frequency analysis, especially useful for 1200Hz MEG data
     cfg            = [];
     cfg.resamplefs = 300;
     cfg.detrend    = 'no';

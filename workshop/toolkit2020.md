@@ -192,7 +192,7 @@ _We discussed the video recordings with the participants prior to the actual rec
 
 By attending the online Zoom sessions, you implicitly give us permission to record these sessions on video.
 
-We will record the online lectures and the Q&A sessions via Zoom’s local recording function ([see here](https://support.Zoom.us/hc/en-us/articles/201362473-Local-Recording)), to enable archiving and sharing (e.g., via the FieldTrip website and YouTube). We will share at least with all toolkit participants (especially those that cannot attend live), and if the quality is good, also with the wider public FieldTrip community.  
+We will record the online lectures and the Q&A sessions via Zoom’s local recording function ([see here](https://support.Zoom.us/hc/en-us/articles/201362473-Local-Recording)), to enable archiving and sharing (e.g., via the FieldTrip website and YouTube). We will share at least with all toolkit participants (especially those that cannot attend live), and if the quality is good, also with the wider public FieldTrip community.
 
 The layout “Shared screen with active speaker” will be used by default during the recording. By default, all attendees to the Zoom session will be assigned as co-hosts, and therefore technically would have the right to start recording on their local machines. However, as a toolkit participant you are not allowed to make any recordings yourself!
 
@@ -221,7 +221,7 @@ For people that do not use a computer at the DCCN:
 
 4.  Download the tutorial data required for the hands-on from the ftp server by going to <https://download.fieldtriptoolbox.org/tutorial/> and download Subject01.zip
 
-    You should also download some pre-computed intermediate results for each tutorial: 	
+    You should also download some pre-computed intermediate results for each tutorial:
 
     -   <https://download.fieldtriptoolbox.org/tutorial/eventrelatedaveraging/>
     -   <https://download.fieldtriptoolbox.org/tutorial/timefrequencyanalysis/>
@@ -237,7 +237,7 @@ For people that use a computer at the DCCN (either a PC via remote desktop or th
 
 2.  Use a MATLAB version > 2016b.
 
-3.  FieldTrip is installed on the cluster, on /home/common/matlab/fieldtrip. (on Windows PCs, this is usually mounted on H:\\common\\matlab\\fieldrip. So you don’t need to download the latest release version of the FieldTrip toolbox from here or from here. Add FieldTrip to the MATLAB path in your MATLAB session
+3.  FieldTrip is installed on the cluster, on /home/common/matlab/fieldtrip. (on Windows PCs, this is usually mounted on H:\\common\\matlab\\fieldtrip. So you don’t need to download the latest release version of the FieldTrip toolbox from here or from here. Add FieldTrip to the MATLAB path in your MATLAB session
 
         restoredefaultpath
         addpath <path_to_fieldtrip>
@@ -269,7 +269,7 @@ When the hands-on session comes to an end, we will close all breakout rooms and 
 
 After 3 1/2 days of getting familiar with the FieldTrip functions and possibilities in the analyses and in designing and implementing analysis pipelines that suit specific research questions, everything you have learned will come together in the Playground session. The Playground will largely follow the format of the hands-on sessions, but you will be working on your own data and your very own analysis pipeline. These sessions will provide you with ample time to create your analysis script from scratch with the support of the Toolkit team's expertise. Tutors will be there to help you overcome the occasional noisy trial, misaligned topography or even just find that damn missing parenthesis.
 
-The playground is a great opportunity to do a first exploration of your data or play around with different analysis options. Even if you only have preliminary data, do not hesitate to bring it along! The Playground will give you a head-start on any future analysis and get you FieldTrippin' in no time.
+The playground is a great opportunity to do a first exploration of your data or play around with different analysis options. Even if you only have preliminary data, do not hesitate to bring it along! The Playground will give you a head-start on any future analysis and get you FieldTripping in no time.
 
 In case you don’t have your own MEG or EEG data yet, please contact Jan-Mathijs or Robert (preferably a bit in advance). We have a lot of different example and tutorial datasets and we can share one with you that resembles the data from a system similar to the one you will work with and/or the experiment that you plan to do in the future.
 

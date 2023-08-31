@@ -62,7 +62,7 @@ Analyses can be conducted in many different ways and in different orders, depend
 The order of steps for this specific tutorial is as follows (see the figure below for an overview):
 
 - read continuous data
-- optinally downsample the data to reduce memory requirements
+- optionally downsample the data to reduce memory requirements
 - remove bad channels
 - define epochs
 - transform optical densities to changes in oxyhemoglobin (oxyHb) and deoxyhemoglobin (deoxyHb) concentration
@@ -163,7 +163,7 @@ Since the hemodynamic response takes about 5 to 10 s to reach its peak (i.e. cor
 If the resampling factor is larger than 10, it is better to resample multiple times. See [here](https://allsignalprocessing.com/very-low-frequency-filtering/).
 {% include markup/end %}
 
-Downsampling of the slow (compared to EEG and MEG) NIRS signal would normally not be needed, but further down we will segment the data in the reponses to the standard and to the deviant tones. In EEG or MEG the segments of each trial are usually in the order of magnitude of a second or so, and trials do not overlap. In NIRS we need very long segments in the analyusis since the HRF is so slow. The auditory stimuly in this experiment follow each other rapidly, which causes the data segments for the trials to overlap. These overlapping segments are memory inefficient, hence we use downsampling. An alternative would have been to skip the processing of the responses to the standard tones (which we don't look at anyway) and only process the deviants.
+Downsampling of the slow (compared to EEG and MEG) NIRS signal would normally not be needed, but further down we will segment the data in the reponses to the standard and to the deviant tones. In EEG or MEG the segments of each trial are usually in the order of magnitude of a second or so, and trials do not overlap. In NIRS we need very long segments in the analyusis since the HRF is so slow. The auditory stimuli in this experiment follow each other rapidly, which causes the data segments for the trials to overlap. These overlapping segments are memory inefficient, hence we use downsampling. An alternative would have been to skip the processing of the responses to the standard tones (which we don't look at anyway) and only process the deviants.
 
 {% include markup/info %}
 The resampling also includes low-pass filtering of the data. As the new sampling rate is 10 Hz, we will lose data with frequencies larger than 5 Hz. This means we will lose a lot of information from the standards in our experiment, as they are presented near 6.7 Hz, but we keep the deviant information, which is presented near 0.6 Hz. For the current analysis, we are only interested in the deviant data. Just remember: be wary of filtering!

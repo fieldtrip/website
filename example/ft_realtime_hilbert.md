@@ -11,7 +11,7 @@ The thesis (in Italian) which describes all details and the results is available
 
 The signal analysis details are available [here](/assets/pdf/example/gamma_analisys.pdf).
 
-Neurofeedback, as the word suggest, is feeding back to the subject it's neuronal activity analyzed by it's EEG activity in (almost) real time. In this training we give back to the subjest a visual stimulation (vertical bars) when it's gamma phase synchronization between F3-P3 and F4-P4 increased over the baseline (bars up) or decreased (bars down).
+Neurofeedback, as the word suggest, is feeding back to the subject it's neuronal activity analyzed by it's EEG activity in (almost) real time. In this training we give back to the subject a visual stimulation (vertical bars) when it's gamma phase synchronization between F3-P3 and F4-P4 increased over the baseline (bars up) or decreased (bars down).
 Here is the feedback
 
 {% include image src="/assets/img/example/ft_realtime_hilbert/picture_12.png" width="400" %}

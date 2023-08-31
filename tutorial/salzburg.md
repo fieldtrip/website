@@ -58,7 +58,7 @@ Next, we perform the independent component analysis according to the following s
 
 - Resampling the data to a lower sample rate in order to speed up ICA computation **[ft_resampledata](/reference/ft_resampledata)**.
 - Perform the independent components analysis on the resampled data **[ft_componentanalysis](/reference/ft_componentanalysis)**
-- Repeat the independent components analysis on the original data by applying the linear demixing and topography lebels form the previous step
+- Repeat the independent components analysis on the original data by applying the linear demixing and topography labels form the previous step
 
 Note, that we will compute the ICA twice in order to retain the original sampling rate. The option **cfg.resamplefs** depends on your knowledge about the spectral characteristics of the artifacts you would like to discover. Vertical and horizontal eye movements are typically dominated by high energy in the low frequency < 10 Hz. Therefore everything above the Nyquist frequency of the targeted signal, in this case 20 Hz, is an appropriate sampling rate. Cardiac artifacts vary over the entire frequency spectrum, although there is some dominance in the slower frequencies too. The decision about the new sampling frequency thus strongly depends on your needs. If you are interested in the detection of caridac and oculo-motor activity, a sampling rate of >100 Hz will be appropriate for most of the cases.
 
@@ -194,7 +194,7 @@ Since the data is of equal length we equalize the time axis of pre and post stim
     tfrpre.freq = round(tfrpre.freq);
     tfrpst.freq = round(tfrpst.freq);
 
-Now we compute the statistical evaluation using permutation approach. All of the details are explained [elsewere](/tutorial/cluster_permutation_freq).
+Now we compute the statistical evaluation using permutation approach. All of the details are explained [elsewhere](/tutorial/cluster_permutation_freq).
 
     cfg = [];
     cfg.channel          = {'MEG'};
@@ -631,7 +631,7 @@ So far we have identified three potential "nodes" involved in the processing of 
 
 Based on visual inspection of the data provided by the interactive navigation after the call to **[ft_sourceplot](/reference/ft_sourceplot)** we can determine the coordinates of the locations subject to further examination.
 
-Alternative approach is enabled due to the utilized parcellation strategy. We can derive the coordinates of all locations corresponding to a particular parcel, e.g., left heschl gyrus. In the following we will reduce the data to three loacations: left and right heschl gyri and left Cingulum_Mid in the frontal cortex.
+Alternative approach is enabled due to the utilized parcellation strategy. We can derive the coordinates of all locations corresponding to a particular parcel, e.g., left heschl gyrus. In the following we will reduce the data to three locations: left and right heschl gyri and left Cingulum_Mid in the frontal cortex.
 
 {% include markup/warning %}
 We used statistics to reject the hypothesis that: the data in the pre and post stimulus intervals is exchangeable. It might appear that the decision about which nodes to choose is based on this statistical evaluation. However this is false. The spatial aspect of the data is not subject to hypothesis testing. We motivate our decision on the basis of our interpretation of the conclusion- the data is not exchangeable. The interpretation and not the statistical testing per se is based on prior knowledge, knowledge about function-anatomy, credible expectations of spatial patterns in the context of the experimental design and many other factors. Consulting this [FAQ](/faq/how_not_to_interpret_results_from_a_cluster-based_permutation_test) is recommended.
@@ -816,7 +816,7 @@ The color scale in this figure now represents the strength of coherence, which v
 
 However this descriptive description of the obtained result could be entirely wrong. This is because an additional confound commonly known as volume conduction is also present in the data. The consequence of such a confound is that a single source could emerge at multiple nodes. Accordingly these nodes would appear connected but in reality they are not.
 
-A property of volume conduction is instantaneousness. As a consequence a given pattern of activity is visible at two independent sites with no time delay. This is typically described as a zero phase lag relationship. Mathematically, a cosine function has a phase angle of zero degree. Now, consider a complex plain with real (abscissa) and imaginary (ordinate) components. According to the definition, volume conduction, i.e. zero phase lag relationship, is entirely represented along the real axis. This suggest that in order to disregard the contribution of volume conduction one could take into account only signals that have non zero values on the imaginary axis. This strategy is also known as the imaginary part of coherency. The following section demonstrates how to assess this quantity.
+A property of volume conduction is that it is instantaneously. As a consequence a given pattern of activity is visible at two independent sites with no time delay. This is typically described as a zero phase lag relationship. Mathematically, a cosine function has a phase angle of zero degree. Now, consider a complex plain with real (abscissa) and imaginary (ordinate) components. According to the definition, volume conduction, i.e. zero phase lag relationship, is entirely represented along the real axis. This suggest that in order to disregard the contribution of volume conduction one could take into account only signals that have non zero values on the imaginary axis. This strategy is also known as the imaginary part of coherency. The following section demonstrates how to assess this quantity.
 
     cfg = [];
     cfg.method = 'coh';

@@ -5,7 +5,7 @@ tags: [realtime, development]
 
 # Specific software implementations for realtime EEG/MEG/fMRI/NIRS
 
-This page is part of the documentation series of the FieldTrip buffer for realtime aquisition. The FieldTrip buffer is a standard that defines a central hub (the [FieldTrip buffer](/development/realtime)) that facilitates realtime exchange of neurophysiological data. The documentation is organized in five main sections, being:
+This page is part of the documentation series of the FieldTrip buffer for realtime acquisition. The FieldTrip buffer is a standard that defines a central hub (the [FieldTrip buffer](/development/realtime)) that facilitates realtime exchange of neurophysiological data. The documentation is organized in five main sections, being:
 
 1.  description and general [overview of the buffer](/development/realtime/buffer),
 2.  definition of the [buffer protocol](/development/realtime/buffer_protocol),
@@ -15,7 +15,7 @@ This page is part of the documentation series of the FieldTrip buffer for realti
 
 This page deals with specific implemenations of the FieldTrip buffer protocol. This includes interfacing with specific hardware (e.g., TMSi, Biosemi, CTF, Unicorn), software platforms (e.g., BCI2000, BrainStream) and links to the implementation in specific programming languages (e.g., MATLAB, Java, C/C++, Python).
 
-## Implementations for specific aquisition systems
+## Implementations for specific acquisition systems
 
 - [ANT NeuroSDK](/development/realtime/neurosdk)
 - [Artinis Medical Systems (NIRS)](/development/realtime/artinis)

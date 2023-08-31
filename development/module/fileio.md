@@ -21,7 +21,7 @@ A list of the data formats that are supported is given [here](/faq/dataformat). 
 
 ## Module layout
 
-The fileio module contains high-level functions that are publicly available for the end-user. The functionality of the functions within this module depends on low-level functions for reading particular data formats from varying aquisition systems and are not available for the end-user and combined in a private directory.
+The fileio module contains high-level functions that are publicly available for the end-user. The functionality of the functions within this module depends on low-level functions for reading particular data formats from varying acquisition systems and are not available for the end-user and combined in a private directory.
 
 The remainder of this page mainly describes the core features for reading electrophysiological data. The other functions for reading sensor sensor information, headshapes, anatomical MRIs and spikes are pretty much self-explanatory.
 

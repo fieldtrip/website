@@ -211,7 +211,7 @@ The structure data_small contains less trials than the original data, because we
     cfg.pad             = 2;
     freq                = ft_freqanalysis(cfg, data_small);
 
-Again we have to combine the two components of the planar gradien
+Again we have to combine the two components of the planar gradient
 
     cfg                 = [];
     freq                = ft_combineplanar(cfg, freq);
@@ -252,7 +252,7 @@ Exactly the same can be achieved using **[ft_analysispipeline](/reference/ft_ana
     cfg = [];
     ft_analysispipeline(cfg, freq);
 
-The function ft_analysispipeline puts all conducted analysis steps into perspective and visualizes them in a flowchar
+The function ft_analysispipeline puts all conducted analysis steps into perspective and visualizes them in a flowchart
 
 {% include image src="/assets/img/tutorial/sensor_analysis/figure10.png" %}
 
@@ -295,7 +295,7 @@ After computing the cross-spectral density, we can invoke **[ft_connectivityanal
 
 ### Plotting
 
-Non-time-resolved spectra (such as our coherence spectrum) can be visualized using the same functions as for the plotting of event-related data, in particular **[ft_multiplotER](/reference/ft_multiplotER)** is of relevance. The plotting functions plot the coherence of one channel X to typically all MEG channels. The channel X is determined by the parameter cfg.refchanne
+Non-time-resolved spectra (such as our coherence spectrum) can be visualized using the same functions as for the plotting of event-related data, in particular **[ft_multiplotER](/reference/ft_multiplotER)** is of relevance. The plotting functions plot the coherence of one channel X to typically all MEG channels. The channel X is determined by the parameter cfg.refchannel
 
     cfg                 = [];
     cfg.parameter       = 'cohspctrm';

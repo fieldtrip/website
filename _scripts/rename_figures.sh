@@ -4,7 +4,7 @@
 #   rename_figures.sh <page.md>
 #
 # This script does not do the conversion itself, but prints the commands to screen.
-# The user of the script shoudl check teh commands prior to execution
+# The user of the script should check the commands prior to execution
 
 [ -e "$1" ]  || exit 1
 

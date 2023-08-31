@@ -90,7 +90,7 @@ It seems natural to represent each PE by an object of a specific class, where al
 
 #### Old style classes
 
-Each type of PE would get its own directory, e.g., @MotionCorrection, with separate files for the constructor (~**init**), the **proces** routine, and possible getter/setter methods and helper routines. Invoking this pipeline would be like this
+Each type of PE would get its own directory, e.g., @MotionCorrection, with separate files for the constructor (~**init**), the **process** routine, and possible getter/setter methods and helper routines. Invoking this pipeline would be like this
 
     MCPE{k} = MotionCorrection(refVolume, flags);
     ...

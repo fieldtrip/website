@@ -15,13 +15,13 @@ The discussed issues regard, among others, the following topic
 - Units can be estimated by looking at the raw datasets, does the 'units' field have to be attached from the beginning?
 - In case of absence of units, they can be recovered by looking at the header
 - Default units could be assigned in case of standard datasets (MEG: T or fT, EEG: uV or V)
-- The user should dispose of function to convert to the wanted units: i.e. I dont know what the units are but i want my data in microvolts
+- The user should dispose of function to convert to the wanted units: i.e. I don't know what the units are but i want my data in microvolts
 
 This topic is important and its implementation impacts both on FT and SPM users, so: BE CAREFUL!
 
 ## Some actions to take (Cristiano)
 
-Here is the list of the functions in the module Forward (folders: \_fieldtrip/forward and \_fieldtrip/forwar/private) that need the units to be documented in their help (this is necessary also for other modules, like e.g., the fileio module
+Here is the list of the functions in the module Forward (folders: \_fieldtrip/forward and \_fieldtrip/forward/private) that need the units to be documented in their help (this is necessary also for other modules, like e.g., the fileio module
 
 ### \_fieldtrip/forward
 

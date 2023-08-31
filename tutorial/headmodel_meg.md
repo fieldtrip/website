@@ -7,7 +7,7 @@ tags: [tutorial, source, meg, headmodel, mri, plotting, meg-language]
 
 ## Introduction
 
-This tutorial describes how to construct a volume conduction model of the head (head model) based on an indivdual subject's MRI. We will use the anatomical images that belong to the same subject whose data were analyzed in the [Preprocessing - Segmenting and reading trial-based EEG and MEG data](/tutorial/preprocessing) and the [Event-related averaging and MEG planar gradient](/tutorial/eventrelatedaveraging) tutorials. The corresponding anatomical MRI data is available from the [download server](https://download.fieldtriptoolbox.org/tutorial/Subject01.zip).
+This tutorial describes how to construct a volume conduction model of the head (head model) based on an individual subject's MRI. We will use the anatomical images that belong to the same subject whose data were analyzed in the [Preprocessing - Segmenting and reading trial-based EEG and MEG data](/tutorial/preprocessing) and the [Event-related averaging and MEG planar gradient](/tutorial/eventrelatedaveraging) tutorials. The corresponding anatomical MRI data is available from the [download server](https://download.fieldtriptoolbox.org/tutorial/Subject01.zip).
 
 The volume conduction model of the head that will be constructed here is specific to the computation and source reconstruction of MEG data. Different strategies can be used for the construction of head models. The processing pipeline of the tutorial is an example which we think is the most appropriate for the tutorial-dataset.
 

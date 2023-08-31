@@ -19,7 +19,7 @@ OS/2, for example.
 
 On a 32-bits Linux/RHEL4 machine (mentat068) I got the following error
 "libgcc_s.so.1 must be installed for pthread_cancel to work"
-Searching the internet did not give much helpfull suggestions, but using
+Searching the internet did not give much helpful suggestions, but using
 strace did help. It turned out that there was a version of libgcc_s on
 the LD_LIBRARY_PATH that was loaded prior to the system one. Changing
 it to first having /lib and then the rest solved it.
@@ -258,5 +258,5 @@ FAQ: How is time synchronised?
 - [draft network](/development/realtime/draft_network)
 - [draft implementation](/development/realtime/draft_implementation)
 - [draft header chunks](/development/realtime/draft_header_chunks)
-- [draft compatability](/development/realtime/draft_compatability)
+- [draft compatibility](/development/realtime/draft_compatability)
 - [scratchpad](/development/realtime/scratchpad)

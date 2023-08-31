@@ -7,7 +7,7 @@ tags: [dataformat, brainvision, easycap, eeg, layout]
 
 ## Introduction
 
-[Brain Products GmbH](http://www.brainproducts.com) provides technical and software solutions for neurophysiological and psychophysiological research and clinical applications. Their BrainAmp ExG amplifier allows to record signals with a sampling rate up to 5000 Hz and a broad hardware bandwidth ranging from DC to 1000 Hz. 
+[Brain Products GmbH](http://www.brainproducts.com) provides technical and software solutions for neurophysiological and psychophysiological research and clinical applications. Their BrainAmp ExG amplifier allows to record signals with a sampling rate up to 5000 Hz and a broad hardware bandwidth ranging from DC to 1000 Hz.
 
 Brain Products also provides EEG caps with the electrodes distributed over the head according to the 1020 standard or to an equidistant scheme. Most of the caps provided by BrainProducts are actually fabricated by [EasyCap](http://www.easycap.de), on whose website you can find more information. Although it is possible to use a BrainAmp amplifier with another type of cap, or to use an Easycap with an different amplifier, the most common case is to use them together and that is why we describe them jointly on this page.
 
@@ -67,7 +67,7 @@ Even for raw data, the data are considered segmented by FieldTrip. The data file
 Sometimes users have already done some processing (e.g., rereferencing, epoching, artifact identification) in BrainVision Analyzer, and in order to avoid repeating the time consuming / subjective selection steps, it might be preferable to start from the processed data. BrainVision Analyzer stores the processing steps in a so called history file, keeping the raw data unchanged, and applying the processing steps on-the-fly. This is not something that FieldTrip can work with, so you need to export your data first.
 
 The following describes the recipe to export the processed data into a format the FieldTrip can deal with. It produces a triplet of files (.vhdr, .vmrk and .dat (instead of .eeg)), that can be imported into FieldTrip, in much the same way as described above.
-You can do all the preprocessing you want to do in BrainVision Analyzer (e.g., iltering and re-referencing can be done too) and once you have the data segmented the way you want it select 'export > generic data'. You'll get a window (maybe 2 consecutive windows) popping up asking for various settings. Leave everything as it is, except make sure the following are set:
+You can do all the preprocessing you want to do in BrainVision Analyzer (e.g., filtering and re-referencing can be done too) and once you have the data segmented the way you want it select 'export > generic data'. You'll get a window (maybe 2 consecutive windows) popping up asking for various settings. Leave everything as it is, except make sure the following are set:
 
 1.  The filename for output should be .dat instead of .eeg (which I think is the default)
 2.  DataFormat should be 'BINARY'
@@ -82,7 +82,7 @@ When comparing your preprocessed data from FieldTrip to preprocessed data from B
 
 ## Plotting
 
-Using FieldTrip, data recorded with Brain Vision hard- and software is readily plotted. It is important that the channel labels match that of the manufacturer specifications. 
+Using FieldTrip, data recorded with Brain Vision hard- and software is readily plotted. It is important that the channel labels match that of the manufacturer specifications.
 
 FieldTrip provides template electrode layouts for plotting data recorded with Easycap EEG caps. These layouts are stored in .mat files and are based on the manufacturer's original drawings, which can also be found bitmaps on the [template layout](/template/layout/#easycap) page.
 

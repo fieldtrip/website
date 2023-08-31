@@ -10,7 +10,7 @@ This page describe the experimental situations in which some typical users find 
 
 ## Scenario #1
 
-Cristiano is an engineer working in collaboration with psycologists and medical doctors who are responsible for the acquisition of ECoG data from hospitalized epilepsy patients.
+Cristiano is an engineer working in collaboration with psychologists and medical doctors who are responsible for the acquisition of ECoG data from hospitalized epilepsy patients.
 During their time in the hospital, these patients undergo a set of cognitive experiments during which their brain activity is recorded along with triggers.
 
 Cristiano would like to make source reconstruction on these datasets and comes about the SIMBIO platform, containing an engine for FEM forward solution calculating lead fields.

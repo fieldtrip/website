@@ -88,7 +88,7 @@ utilizing an icosahedron equally subdivided to create a highly
 tessellated surface. Some manual editing was applied to the T1 images
 in order to optimize the performance of the watershed algorithm.
 
-The meshes were subsequenlty warped using the deformation field created
+The meshes were subsequently warped using the deformation field created
 by the new segmentaton algorithm, so that the reference space was defined
 by spm8/toolbox/Seg/TPM.nii, to improve the accuracy of the alignment.
 
@@ -99,7 +99,7 @@ They are saved in the GIfTI file format, with GZipBase64Binary encoding.
 - Dale, A.M., Fischl, B., Sereno, M.I., 1999. Cortical surface-based
   analysis. I. Segmentation and surface reconstruction. Neuroimage 9,
   179-194.
-- Fischl, B., Liu, A., Dale, A.M., 2001. Automated manifold surger
+- Fischl, B., Liu, A., Dale, A.M., 2001. Automated manifold surgery
   constructing geometrically accurate and topologically correct models
   of the human cerebral cortex. IEEE Trans Med Imaging 20, 70-80.
 - Fischl, B., Sereno, M.I., Dale, A.M., 1999. Cortical surface-based

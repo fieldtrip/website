@@ -7,7 +7,7 @@ tags: [dataformat, video]
 
 You can read, preprocess and analyze video files in a similar way as and [fMRI timeseries data](/getting_started/fmri), as if they were a bunch of timeseries, one for each pixel. This can be handy to determine changes in a specific region of interest in the video, for example if you recorded the stimulus presentation screen, or to track mnotion of your subject. You can also take the temporal derivative over time (i.e. subsequent frames) to determine moments of large variance and hence motion.
 
-To read video and represent it as a bunch of timeserie channels, you use
+To read video and represent it as a bunch of timeseries channels, you use
 
     cfg = [];
     cfg.dataset = 'Untitled.mov';
@@ -30,7 +30,7 @@ The low-level functions can also be handy, especially if you plan to do your own
              orig: [1x1 struct]
 
     dat = ft_read_data('Untitled.mov', 'header', hdr); % pass the previously read header to speed it up
-    
+
 You can take one frame out of the video recording and convert it back to an RGB image.
 
     frame = dat(:,100);
@@ -38,7 +38,7 @@ You can take one frame out of the video recording and convert it back to an RGB 
     h = hdr.orig.Height;
     w = hdr.orig.Width
     frame = reshape(frame, h, w, 3);
-    
+
     figure
     image(frame)
     axis equal

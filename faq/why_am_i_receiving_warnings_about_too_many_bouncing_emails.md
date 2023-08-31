@@ -7,7 +7,7 @@ tags: [faq, email]
 
 A "bounce" means that the email from the mailing list cannot be delivered to your email server.
 
-Please see http://www.list.org/mailman-member/node25.html and note the sectio
+Please see http://www.list.org/mailman-member/node25.html and note the section
 
 _If your mail provider "bounces" too many messages (that is, it tells Mailman that the message could not be delivered) Mailman eventually stops trying to send you mail. This feature allows Mailman to gracefully handle addresses which no longer exist (for example, the subscriber has found a new internet service provider and forgot to unsubscribe the old address), as well as addresses which are temporarily out-of-service (for example, the subscriber has used up all of the allotted space for his or her email account, or the subscriber's mail provider is experiencing difficulties)._
 

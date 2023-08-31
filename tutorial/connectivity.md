@@ -45,7 +45,7 @@ In short, the dataset consists of combined MEG and EMG recordings while the subj
 
 ### Compute the spatial filter for the region of interest
 
-We start with determining the motor cortex as the region of interest. At the [end of the coherence tutorial](/tutorial/coherence#appendix_1localisation_of_neuronal_sources_coherent_with_the_emg_using_beamformers) it is demonstrated how to make a 3-D reconstruction of the cortico-muscolar coherence (CMC) using the DICS algorithm. That source reconstruction serves as starting point for this analysis.
+We start with determining the motor cortex as the region of interest. At the [end of the coherence tutorial](/tutorial/coherence#appendix_1localisation_of_neuronal_sources_coherent_with_the_emg_using_beamformers) it is demonstrated how to make a 3-D reconstruction of the cortico-muscular coherence (CMC) using the DICS algorithm. That source reconstruction serves as starting point for this analysis.
 
 You can download the (source.mat)(https://download.fieldtriptoolbox.org/tutorial/connectivity/source.mat) file with the result from the DICS reconstruction.
 
@@ -119,7 +119,7 @@ In this case, the headmodel coordinates were defined in cm, this might be differ
 {% include markup/warning %}
 The LCMV spatial filter is computed using data in the time domain. However, no time-domain spatial filters (during preprocessing e.g., low-pass or high-pass filters) have been applied before hand. Consequently, the filter will suppress all noise in the data in all frequency bands. The spatial filter derived from the broadband data allows us to compute a broadband source level time series.
 
-If you would know that the subsequent analysis would be limited to a specific frequency range in the data (e.g., everything above 30 Hz), you could first apply a filter using **[ft_preprocessing](/reference/ft_preprocessing)** (e.g., _cfg.hpfilter=yes_ and _cfg.hpfreq=30_) prior to computing the covariance and the spatial filter.  
+If you would know that the subsequent analysis would be limited to a specific frequency range in the data (e.g., everything above 30 Hz), you could first apply a filter using **[ft_preprocessing](/reference/ft_preprocessing)** (e.g., _cfg.hpfilter=yes_ and _cfg.hpfreq=30_) prior to computing the covariance and the spatial filter.
 {% include markup/end %}
 
 The _sourcedata_ structure resembles the raw-data output of **[ft_preprocessing](/reference/ft_preprocessing)** and consequently can be used in any follow-up function. You can for example visualize the single-trial virtual channel time series using **[ft_databrowser](/reference/ft_databrowser)**:
@@ -238,7 +238,7 @@ The spectral decomposition was performed with mutitapering and 5 Hz spectral smo
 #### Exercise 10
 
 {% include markup/info %}
-Rather than looking at undirected coherence, the virtual channel level data can now also easily be submitted to directed connectivity measures. Compute the spectrally resolved granger connectivity and try to assess whether the directionality is from cortex to EMG or vice versa.  
+Rather than looking at undirected coherence, the virtual channel level data can now also easily be submitted to directed connectivity measures. Compute the spectrally resolved granger connectivity and try to assess whether the directionality is from cortex to EMG or vice versa.
 {% include markup/end %}
 
 #### Exercise 11

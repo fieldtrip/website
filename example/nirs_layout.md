@@ -7,7 +7,7 @@ tags: [example, nirs, layout, plotting]
 
 FieldTrip uses layouts to specify in 2D (e.g., on screen) where channels are to be
 plotted. This is used for example in ft_multiplotER and ft_multiplotTFR, and also
-in ft_topoplotER and ft_topoplotTFR. The layout does not only describe wher ethe
+in ft_topoplotER and ft_topoplotTFR. The layout does not only describe where the
 channel is located (which is required for the topographies), but also how large the
 channel should be displayed when plotting ERPs on the channel position.
 Furthermore, it contains an outline to help you to orient (usually a circle

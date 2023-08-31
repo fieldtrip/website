@@ -66,9 +66,9 @@ Codes are included that works on Linux (with bash type of shell) and on Siemens 
 
 environmental variables have to be set up:
 export FREESURFER_HOME=<path to freesurfer>
-export SUBJECTS_DIR=<path to an existing directory where FS output should go>  
+export SUBJECTS_DIR=<path to an existing directory where FS output should go>
  sourcing F
-source \$FREESURFER_HOME/SetUpFreeSurfer.sh  
+source \$FREESURFER_HOME/SetUpFreeSurfer.sh
  importing dat
 recon-all -i<path to direcotry of xxx.ima files>/<name of first xxx.ima file>.IMA -s&lt;subject's name>\\
 
@@ -119,7 +119,7 @@ Then, a second (major) **intensity correction** is performed again. Now, the int
 
 In the next stage (**white matter segmentation**), the white matter is separated from everything else.
 
-Then (**cutting and filling**), the mid brain is cut from cerebellum and the hemispheres are cut from eachother. The left hemisphere is binarized to 255, the righ hemisphere to 127.
+Then (**cutting and filling**), the mid brain is cut from cerebellum and the hemispheres are cut from each other. The left hemisphere is binarized to 255, the righ hemisphere to 127.
 
 Next (**tessellation**), the surface is created by covering the filled hemispheres with triangles.
 
@@ -127,7 +127,7 @@ Finally, the pial, white and inflated **surfaces** are created. The white surfac
 
 In order to run the last processing stage of the figure (spherical inflation) one should run the third automatic reconstruction step of FS.
 recon-all -autorecon3 -subjid&lt;subject's name>\\
-This step requires also quite much time (around 8-10 hours). It inflates the surface into sphere. But it does more than only the **spherical inflation**. However, as far as I know, MNE is using only the output of this first procccessing stage of -autorecon3. Therefore, maybe it would be useful to run only this stage instead of the entire -autorecon3. It takes around 3-4 hours. :
+This step requires also quite much time (around 8-10 hours). It inflates the surface into sphere. But it does more than only the **spherical inflation**. However, as far as I know, MNE is using only the output of this first proccessing stage of -autorecon3. Therefore, maybe it would be useful to run only this stage instead of the entire -autorecon3. It takes around 3-4 hours. :
 
     mris_sphere rh.inflated rh.sphere
     mris_sphere lh.inflated lh.sphere
@@ -153,19 +153,19 @@ MNE requires to set up the same environmental variables as FS. It is because MNE
 
     mne_setup_source_space --ico -6
 
-MNE is using a distributed inverse solver for EEG/MEG source estimation. Therefore, it discretize a source space into locations on the cortical surface. At a later stage, the desired solution will be computed by findig a source distribution with a minimum overall energy that depends on all sources in the source space.
+MNE is using a distributed inverse solver for EEG/MEG source estimation. Therefore, it discretize a source space into locations on the cortical surface. At a later stage, the desired solution will be computed by finding a source distribution with a minimum overall energy that depends on all sources in the source space.
 
 This stage creates a **decimated dipole grid on the white matter surface**, and saves this source space file in fif format. The location of the sources in the source space are expressed in "surface RAS coordinates" in the fif files. (The origin of this coordinate system is at the center of the conformed FreeSurfer MRI volumes and the axes are oriented along the axes of this volume.)
 
 This script is looking for a surface as **input** in the $SUBJECTS_DIR/$SUBJECT/surf directory. By default, the "white" surface is used (rh.white and lh.white). The grid spacing for the source space can be specified in mm. By default, 7mm is used. It is also possible to create the source space using the topology of a recursively subdivided icosahedron or octahedron (by using option --ico). This method is using the cortical surface inflated to a sphere, therefore, it is looking also for the FS surfaces, $SUBJECTS_DIR/$SUBJECT/surf/rh.sphere and lh.sphere as input.
 
-The source space will have triangulation information for the decimated verticles included. In this code, for example, -ico -6 will create a source space with 4.9 mm spacing. If it is specified, it can also compute the cortical patch statistics. It is also possible to use the source space created by using another subject's data and to morph it to the actual subject.
+The source space will have triangulation information for the decimated vertices included. In this code, for example, -ico -6 will create a source space with 4.9 mm spacing. If it is specified, it can also compute the cortical patch statistics. It is also possible to use the source space created by using another subject's data and to morph it to the actual subject.
 
 MNE provides also a support for three-dimensional source spaces and for arbitrarily located source points.
 
 ##### Creating the BEM meshes
 
-In MNE, the calculation of the forward solution is using the boundary-element model (BEM). This requires that surface separating separating regions of different electrical conductivities are tessellated. This software employes **triangular tessellation**.
+In MNE, the calculation of the forward solution is using the boundary-element model (BEM). This requires that surface separating separating regions of different electrical conductivities are tessellated. This software employs **triangular tessellation**.
 
 mne_watershed_bem
 
@@ -397,7 +397,7 @@ And this is for plotting a mesh (inner skull) created by F
 
     ft_plot_mesh(vol.bnd(3),'facecolor','skin');camlight;
 
-The following picture show the BEM meshe
+The following picture show the BEM meshes
 
 {% include image src="/assets/img/development/project/replicate_functionality_of_mne_software/meshes2.jpg" width="500" %}
 
@@ -479,7 +479,7 @@ Test on phantom data
 | source space                           | grid with 635 points   | grid with 641 points | grid with 635 points |
 | lambda                                 | 0.01                   |                      |                      |
 | noise-covariance matrix                | eye(186)               | eye(151)             |                      |
-| source-covariance                      | ? no depth weightening | depth weightening    |                      |
+| source-covariance                      | ? no depth weighting   | depth weighting      |                      |
 
 Plot inverse solution at max (in time):
 
@@ -508,7 +508,7 @@ In MATLAB:
 
 {% include image src="/assets/img/development/project/replicate_functionality_of_mne_software/mesh_bnd_ts_mne.jpg" width="750" %}
 
-And the source space of the same volume created in FieldTrip, and reduced to the same number of vertices with the MATLAB reducepatch functio
+And the source space of the same volume created in FieldTrip, and reduced to the same number of vertices with the MATLAB reducepatch function
 
     bnd2_ft = bnd_ft;
     [bnd2_ft.tri, bnd2_ft.pnt]=reducepatch(bnd_ft.tri, bnd_ft.pnt, 16384);

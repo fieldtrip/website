@@ -167,7 +167,7 @@ As an alternative to the above procedure, it might be possible in some situation
     cfg.trialdef.chanindx = 225:232;
     cfg.trialdef.threshold = 2.5; % this is a meaningful value if the pulses have an amplitude of ~5 V
     cfg.trialdef.eventtype = 'combined_binary_trigger'; % this will be the type of the event if combinebinary = true
-    cfg.trialdef.combinebinary = 1; 
+    cfg.trialdef.combinebinary = 1;
     cfg.trialdef.trigshift = 2; % return the value of the combined pulse 2 samples after the on-ramp (in case of small staircases)
     cfg = ft_definetrial(cfg);
 
@@ -214,7 +214,7 @@ The `layout` structure may then be passed in `cfg.layout` to plotting functions 
 
 Each of the scanners used in neuroimaging research in principle has its own hardware-based coordinate system: the MRI has a coordinate system that relates to the bore, the MEG has a coordinate system that relates to the dewar, and the polhemus tracker has a coordinate system relative to the transmitter (the two-inch gray cube). Using a combination of the three systems (MRI, MEG, Polhemus) we try to relate the neuronal activity in the MEG to an anatomical location in the MRI.
 
-The general principle of coordinate system coregistration is to measure the same fiducial locations as points of reference with the different systems. Often, but not always, the fiducial locations are chosen to match clearly defined anatomical landmarks, such as the nasion (the bridge of the nose) and points that relate to the ear (e.g., pre-auricular points, mastoids, the ear canal). To ensure that the same points can be recorded with the different types of scanners, the points are marke
+The general principle of coordinate system coregistration is to measure the same fiducial locations as points of reference with the different systems. Often, but not always, the fiducial locations are chosen to match clearly defined anatomical landmarks, such as the nasion (the bridge of the nose) and points that relate to the ear (e.g., pre-auricular points, mastoids, the ear canal). To ensure that the same points can be recorded with the different types of scanners, the points are marked
 
 1.  MRI using vitamine E capsules or another oily substance that has a large MR contrast
 2.  MEG using coils through which an alternating electrical current can be passed, resulting in a small but well-localized magnetic field

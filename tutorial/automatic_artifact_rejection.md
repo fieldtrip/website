@@ -15,7 +15,7 @@ Prior to the analyses explained in any of the other tutorials, it is best to hav
 
 Artifact rejection aims to reduce variance in the data due to factors unrelated to your experimental conditions. The artifacts in your data can either be physiological or the result of the acquisition electronics. The strongest physiological artifacts in EEG and MEG stem from eye blinks, eye movements and head movements. Muscle artifacts from swallowing and neck contraction can be a problem as well. An example of artifacts related to the electronics are 'SQUID jumps' or spikes.
 
-Of course it is best to try to avoid those artifacts in the first place. For instance, you might give your researech participants some well-defined time interval between the trials in which they are allowed to blink, but ask them to withold blinks in the time intervals of interest. Sooner or later, however, you would like to go through the data and make sure artifacts are detected, removed or corrected.
+Of course it is best to try to avoid those artifacts in the first place. For instance, you might give your research participants some well-defined time interval between the trials in which they are allowed to blink, but ask them to withhold blinks in the time intervals of interest. Sooner or later, however, you would like to go through the data and make sure artifacts are detected, removed or corrected.
 
 ## Procedure
 

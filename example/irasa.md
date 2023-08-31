@@ -40,7 +40,7 @@ for rpt = 1:1
     data.trialinfo(rpt,1) = rpt;
 end
 
-% chunk 2-second segments (gives 1Hz frequency resolution) for long/continous trials
+% chunk 2-second segments (gives 1Hz frequency resolution) for long/continuous trials
 cfg           = [];
 cfg.length    = 2; % freqency resolution = 1/2^floor(log2(cfg.length*0.9))
 cfg.overlap   = 0.5;
@@ -222,13 +222,13 @@ Consistent with [(Stolk et al. 2019)](https://elifesciences.org/articles/48065),
 ## Updates to the IRASA implementation
 
 {% include markup/warning %}
-Starting from version 20210114 the implementation of **[ft_specest_irasa](/reference/specest/ft_specest_irasa)** has been changed. The current implementation corrects the computational order of geometric and arithmetic means for esitmating the fractal power-spectrum [(Wen & Liu, 2016)](https://link.springer.com/article/10.1007/s10548-015-0448-0), which were swapped in the previous implementation (see [issue 1546](https://github.com/fieldtrip/fieldtrip/pull/1602)).
+Starting from version 20210114 the implementation of **[ft_specest_irasa](/reference/specest/ft_specest_irasa)** has been changed. The current implementation corrects the computational order of geometric and arithmetic means for estimating the fractal power-spectrum [(Wen & Liu, 2016)](https://link.springer.com/article/10.1007/s10548-015-0448-0), which were swapped in the previous implementation (see [issue 1546](https://github.com/fieldtrip/fieldtrip/pull/1602)).
 
 If you have used the previous implementation of IRASA, we recommend you to adapt your analysis script according the the following points:
 
 - The current implementation enables IRASA and FFT for estimating both the fractal and original power-spectra, respectively. You do not have to use cfg.method='mtmfft' any more for computing the original power-spectrum. We recommend to compute both of them with cfg.method='irasa' to ensure a consistent frequency resolution and tapering of the fractal and original power-spectra. For that you should call **[ft_freqanalysis](/reference/ft_freqanalysis)** twice, once with cfg.output='fractal', and once with cfg.output='original'.
 
-- The current implementation partition the trials automatically, so you do not have to call **[ft_redefinetrial](/reference/ft_redefinetrial)**. However, if you are analyzing a continuous trial or trials with unequal lengthes, it is recommended to segment the data following [the Welch's method](https://en.wikipedia.org/wiki/Welch%27s_method) before spectrum estimation, as illustrated in the example scripts above. The frequency resolution of the output will be `fs/2^floor(log2(L*fs*0.9))` where L is the length of the segments in seconds and fs refers to the sampling rate.
+- The current implementation partition the trials automatically, so you do not have to call **[ft_redefinetrial](/reference/ft_redefinetrial)**. However, if you are analyzing a continuous trial or trials with unequal length, it is recommended to segment the data following [the Welch's method](https://en.wikipedia.org/wiki/Welch%27s_method) before spectrum estimation, as illustrated in the example scripts above. The frequency resolution of the output will be `fs/2^floor(log2(L*fs*0.9))` where L is the length of the segments in seconds and fs refers to the sampling rate.
 
-Note that the upper limit of cfg.foilim has to be specified 1.9 (the maximal resampling factor of IRASA) times as large as your intent, due to the resampling procedure of IRASA. For instance, you are interested in 100 Hz, the upper limit shall be set as 1.9 * 100 = 190 Hz. The same logic holds when you apply IRASA onto a band-pass or low-pass filtered dataset. Keep in mind, the filters might be done with your own analysis piplines and/or with the acquisition system itself. For example, MEG data aquired at the Donders Centre for Cognitive Neuroimaging (DCCN) with standard acquisition settings at 1200 Hz will have been subjected to a 300 Hz low-pass filter.
+Note that the upper limit of cfg.foilim has to be specified 1.9 (the maximal resampling factor of IRASA) times as large as your intent, due to the resampling procedure of IRASA. For instance, you are interested in 100 Hz, the upper limit shall be set as 1.9 * 100 = 190 Hz. The same logic holds when you apply IRASA onto a band-pass or low-pass filtered dataset. Keep in mind, the filters might be done with your own analysis piplines and/or with the acquisition system itself. For example, MEG data acquired at the Donders Centre for Cognitive Neuroimaging (DCCN) with standard acquisition settings at 1200 Hz will have been subjected to a 300 Hz low-pass filter.
 {% include markup/end %}
