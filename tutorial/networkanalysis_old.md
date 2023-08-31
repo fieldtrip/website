@@ -502,7 +502,7 @@ Now we plot the result together with the scalp topography again.
 
 _Figure 7: Source reconstructed activity illustrating the relative change in alpha power increase between the high and low alpha conditions._
 
-Now comparing the results from Figure 4 and Figure 7 yields two important observations. Namely, both approaches are capable of reconstructing occipital neural activity. Yet, due to an SNR trade-off in the second case the reconstructed results are less ambiguous. That is, the alpha power increase during eyes closed happens predominantly in occipito-parietal brain regions. There is little room for speculations about the involvment of sensorimotor and deep brain areas.
+Now comparing the results from Figure 4 and Figure 7 yields two important observations. Namely, both approaches are capable of reconstructing occipital neural activity. Yet, due to an SNR trade-off in the second case the reconstructed results are less ambiguous. That is, the alpha power increase during eyes closed happens predominantly in occipito-parietal brain regions. There is little room for speculations about the involvement of sensorimotor and deep brain areas.
 
 ### Network analysis
 

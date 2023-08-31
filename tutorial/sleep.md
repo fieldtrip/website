@@ -348,7 +348,7 @@ The resulting data structure should then look like this:
          time: {[1x1154 double]}
           cfg: [1x1 struct]
 
-Now we divide the signal by its standard deviation and scale it with a factor of 100 to make changes in the signal equally visible accross frequency bands, because usually each frequency band has different absolute power values (higher frequency usually means less absolute power in brain signals).
+Now we divide the signal by its standard deviation and scale it with a factor of 100 to make changes in the signal equally visible across frequency bands, because usually each frequency band has different absolute power values (higher frequency usually means less absolute power in brain signals).
 
       cfg        = [];
       cfg.scale  = 100; % in percent

@@ -31,7 +31,7 @@ Here are some pieces of equipment that we use at the Donders Institute _and_ tha
 - video recordings, often with combined audio, in a `.mov`, `.avi` or `.mp4` file
 - responses to questionnaires
 
-This list does not cover all pieces of lab equipment, only those that record data on disk for later analysis. Also some types of "measuremnents" in the lab that do not result immediately in digital data are left out, such as drawing of blood samples, or acquiring DNA material using a cheek swab,
+This list does not cover all pieces of lab equipment, only those that record data on disk for later analysis. Also some types of "measurements" in the lab that do not result immediately in digital data are left out, such as drawing of blood samples, or acquiring DNA material using a cheek swab,
 
 (\*) The BrainVision system cannot only be used for EEG, but also for ECG, EMG, EOG, ERG, and other physiological signals such as GSR, optical pulse sensors for blood flow, high-speed temperature sensors and elastic breathing belts for respiration, etc. Although not all of these correspond to bioelectric signals of nerve or muscle tissue, we will commonly refer to them as ExG recordings.
 

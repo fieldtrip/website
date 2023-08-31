@@ -388,7 +388,7 @@ This electrode structure can be used later when the leadfield is computed with *
 
 #### Automatic placement based on the anatomical landmarks
 
-When working with EEG recorded from electrodes placed according to the 10-20 system, we can also use **[ft_electrodeplacement](/reference/ft_electrodeplacement)** to determine the electrodes. For that we first need to determine the anatomical landmarks, which are sometimes - incorrectly - referred to as fidicuals.
+When working with EEG recorded from electrodes placed according to the 10-20 system, we can also use **[ft_electrodeplacement](/reference/ft_electrodeplacement)** to determine the electrodes. For that we first need to determine the anatomical landmarks, which are sometimes - incorrectly - referred to as fiducials.
 
 We can use either the scalp surface to click on them:
 

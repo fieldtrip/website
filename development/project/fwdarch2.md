@@ -13,7 +13,7 @@ The functions' types available at the moment deal with different types of object
 - **anatomies**: from MRI or CT scans (for example). They are volumetric matrices
 - **segmentations**: they are volumetric binary masks of tissue compartments
 - **surfaces**: triangulations (faces and nodes) of anatomical surfaces. Normally from anatomies or segmentations
-- **meshes**: they are 3D meshes (nodes and elements) describing a wireframe structure. Used in FEM, FDM methods can be tetrahedrons, hexahedrons (cubes) or others
+- **meshes**: they are 3D meshes (nodes and elements) describing a wireframe structure. Used in FEM, FDM methods can be tetrahedrons, hexahedra (cubes) or others
 - **head models**: a structure containing the necessary information to run a forward model algorithm (geometry+conductivity+others)
 
 * The from (rows)-to (columns) matrix
