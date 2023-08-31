@@ -295,7 +295,7 @@ After computing the cross-spectral density, we can invoke **[ft_connectivityanal
 
 ### Plotting
 
-Non-time-resolved spectra (such as our coherence spectrum) can be visualized using the same functions as for the plotting of event-related data, in particular **[ft_multiplotER](/reference/ft_multiplotER)** is of relevance. The plotting functions plot the coherence of one channel X to typically all MEG channels. The channel X is determined by the parameter cfg.refchanne
+Non-time-resolved spectra (such as our coherence spectrum) can be visualized using the same functions as for the plotting of event-related data, in particular **[ft_multiplotER](/reference/ft_multiplotER)** is of relevance. The plotting functions plot the coherence of one channel X to typically all MEG channels. The channel X is determined by the parameter cfg.refchannel
 
     cfg                 = [];
     cfg.parameter       = 'cohspctrm';

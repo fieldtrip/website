@@ -105,7 +105,7 @@ Each coil is described by:
 - unit normal vector (p) (use the position relative to head coordinate system)
 - baseline from previous coil (for coils other than the first)
 
-To compute the "field" picked up by a senso
+To compute the "field" picked up by a sensor
 
 1. Compute and sum the flux picked up by each coil.
 2. To convert from flux to "field", divide the total flux by the effective

@@ -7,7 +7,7 @@ tags: [tutorial, eeg, source, headmodel, mri, plotting, meg-language]
 
 ## Introduction
 
-This tutorial demonstrates how to construct a Boundary Element Method (BEM) volume conduction model of the head, also known as head model, based on an individual subject's anatomical MRI. For didactic resons we will use the anatomical MRI corresponding to the data that was also analyzed in other tutorials. The original anatomical MRI data, along with the (intermediate) results of this tutorial, can be downloaded from [out download server](https://download.fieldtriptoolbox.org/tutorial/headmodel_eeg_bem/).
+This tutorial demonstrates how to construct a Boundary Element Method (BEM) volume conduction model of the head, also known as head model, based on an individual subject's anatomical MRI. For didactic reasons we will use the anatomical MRI corresponding to the data that was also analyzed in other tutorials. The original anatomical MRI data, along with the (intermediate) results of this tutorial, can be downloaded from [out download server](https://download.fieldtriptoolbox.org/tutorial/headmodel_eeg_bem/).
 
 In reality we did _not_ record EEG data for this subject, nor do we have recorded electrode positions. To demonstrate the EEG volume conduction model, we will use [template](/template/electrode) electrodes. The template electrodes are not aligned with the individual MRI and head model, hence we will conclude with the alignment of the electrodes.
 
@@ -406,7 +406,7 @@ Or we can use the anatomical MRI to identify them
 
     save fiducials fiducials
 
-The headshape method is easiest for the pre-auricular points, as you can regognize the whole shape of the ears. The volume method is the easiest for the nasion, and by far the most accurate for the inion.
+The headshape method is easiest for the pre-auricular points, as you can recognize the whole shape of the ears. The volume method is the easiest for the nasion, and by far the most accurate for the inion.
 
     disp(fiducials.elecpos)
       113.5789   -1.3870   -0.8349

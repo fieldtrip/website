@@ -43,6 +43,6 @@ You can find the template gradiometer descriptions that are included in FieldTri
 
 SQUID-based MEG systems have the sensors placed in a rigid and fixed-size helmet. The position of the sensors relative to the head varies from subject to subject and from recording to recording. In the forward modeling the size of the head and the location of the sensors relative to the head should be taken into account.
 
-Some of the gradiometer definitions (notably for the CTF and BTI systems) also include reference channels that are further away from the scfalp surface; these channels are used to record and suppress environmental noise.
+Some of the gradiometer definitions (notably for the CTF and BTI systems) also include reference channels that are further away from the scalp surface; these channels are used to record and suppress environmental noise.
 
 The gradiometer descriptions shared here as templates are all expressed in meter, without balancing, with the lowest resolution (single integration point per coil), and have been manually aligned with a representative subject.

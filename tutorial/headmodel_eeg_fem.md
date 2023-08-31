@@ -7,7 +7,7 @@ tags: [tutorial, eeg, source, headmodel, mri, plotting, paraview, seg3d, meg-lan
 
 ## Introduction
 
-This tutorial demonstrates how to construct a Finite Element Method (FEM) volume conduction model of the head, also known as head model, based on an individual subject's anatomical MRI. For didactic resons we will use the anatomical MRI corresponding to the data that was also analyzed in other tutorials. The original anatomical MRI data, along with the (intermediate) results of this tutorial, can be downloaded from [out download server](https://download.fieldtriptoolbox.org/tutorial/headmodel_eeg_fem/).
+This tutorial demonstrates how to construct a Finite Element Method (FEM) volume conduction model of the head, also known as head model, based on an individual subject's anatomical MRI. For didactic reasons we will use the anatomical MRI corresponding to the data that was also analyzed in other tutorials. The original anatomical MRI data, along with the (intermediate) results of this tutorial, can be downloaded from [out download server](https://download.fieldtriptoolbox.org/tutorial/headmodel_eeg_fem/).
 
 In reality we did _not_ record EEG data for this subject, nor do we have recorded electrode positions. To demonstrate the EEG volume conduction model, we will use [template](/template/electrode) electrodes. The template electrodes are not aligned with the individual MRI and head model, hence we will conclude with the alignment of the electrodes.
 
@@ -66,7 +66,7 @@ Check that the homogenous transformation matrix in `mri_realigned` is the same a
 
 ### Reslicing
 
-A common issue with anatomical MRI data is that it is plotted [upside down](/faq/my_mri_is_upside_down_is_this_a_problem). This is not neccessarily a problem for the FEM model that we will make, as we know the position of each MRI voxel relative to the coordinate system, but it is a bit inconvenient in the plottting of MRI slices and quality control later in the pipeline.
+A common issue with anatomical MRI data is that it is plotted [upside down](/faq/my_mri_is_upside_down_is_this_a_problem). This is not necessarily a problem for the FEM model that we will make, as we know the position of each MRI voxel relative to the coordinate system, but it is a bit inconvenient in the plotting of MRI slices and quality control later in the pipeline.
 
 The **[ft_volumereslice](/reference/ft_volumereslice)** function can be used to flip the volume such that the 1st dimension of the three-dimensional `mri.anatomy` array corresponds approximately with the x-axis of the coordinate system, that the 2nd dimension corresponds approximately to the y-axis, and the 3rd dimension to the z-axis.
 

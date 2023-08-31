@@ -77,6 +77,6 @@ If we explore the second and the third synthetic gradiometers, things become ver
 
 Now is more evident that the higher the synthetic gradiometer, the higher the contribution of other MEG sensors to the Nth-order gradiometer forward solution.
 
-In you are interested in an extended explanation regarding MEG signal acquisition and processing in general, not only for CTF systems, please take a look to this referenc
+In you are interested in an extended explanation regarding MEG signal acquisition and processing in general, not only for CTF systems, please take a look to this reference
 
 Vrba, J., & Robinson, S. E. (2001). Signal Processing in Magnetoencephalography. Methods, 25(2), 249-271. doi: http://dx.doi.org/10.1006/meth.2001.1238

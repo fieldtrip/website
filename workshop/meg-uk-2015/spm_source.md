@@ -61,7 +61,7 @@ distributed.
 
 #### Time-frequency contrasts
 
-With the previous steps, we invert data of whole trials from -100 to +800ms across all frequencies. Next we want to localise the evoked activity around the N/M170 face component by averaging power across a suitable time-frequency windo
+With the previous steps, we invert data of whole trials from -100 to +800ms across all frequencies. Next we want to localise the evoked activity around the N/M170 face component by averaging power across a suitable time-frequency window
 
 1.  Select “M/EEG - Source reconstruction – Inversion Results”.
 2.  Again, select “PapMcbdspmeeg_run_01_sss.mat” as input file; set the inversion index to 1. We will first investigate averaged source power across the time-frequency window of interest for the MSP solution.

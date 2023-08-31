@@ -760,7 +760,7 @@ This is the resulting code in the file `project/example2/reproduce_Group/script.
 
 ## Conclusion
 
-This example demonstrated how _reproducescript_ can be applied to a group analysis by enabling it seperately for each subject, and then once for the group analysis. It would be possible as well to enable reproducescript only once at the top of the master script, but we found the current solution to have a more clear organisation. There is one more example in which we apply reproducescript to full study published by Andersen et al. This shows how _reproducescript_ would be applied in a more complex scenario.
+This example demonstrated how _reproducescript_ can be applied to a group analysis by enabling it separately for each subject, and then once for the group analysis. It would be possible as well to enable reproducescript only once at the top of the master script, but we found the current solution to have a more clear organisation. There is one more example in which we apply reproducescript to full study published by Andersen et al. This shows how _reproducescript_ would be applied in a more complex scenario.
 
 Note that there are other strategies for improving shareability and reproducibility, and we don't claim that _reproducescript_ is the best way in every scenario. Rather, it is one of many tools that can aid the researcher to improve the community's standard in methodological transparency and robustness of results. For other strategies, we refer the reader to the pre-print in which we first described _reproducescript_.
 

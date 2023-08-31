@@ -36,7 +36,7 @@ Analyses can be conducted in many different ways and in different orders, depend
 The following steps provide a good standard approach for analyzing fNIRS data, see Figure 1 for an overview:
 
 - read continuous data
-- (optinally) trim the beginning and the end of the recording if these are noisy and not of interest
+- (optionally) trim the beginning and the end of the recording if these are noisy and not of interest
 - remove bad segments in the channels of interest, e.g., due to motion artifacts
 - transform optical densities to changes in oxyhemoglobin (oxyHb) and deoxyhemoglobin (deoxyHb) concentration
 - separate functional from systemic responses; which can be done using either one of, or a combination of

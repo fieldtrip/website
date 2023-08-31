@@ -186,7 +186,7 @@ The electrode location are now digitized on the outer surface of the scanned sur
 
 In this tutorial we demonstrated how to extract electrode positions from a 3D scanned head surface. The resulting electrode model can be used for volume conduction model, or in the construction of a [2D layout](/tutorial/layout) for data visualization.
 
-We suggest you read the frequently asked question about [coordinate systems](/faq/coordsys) to understand the different coordinate systemsin which data can be expressed. Since electrode models are often used in source reconstruction, we also suggest you to read the tutorials about [BEM](/tutorial/headmodel_eeg_bem) and [FEM](/tutorial/headmodel_eeg_fem) volume conduction models.
+We suggest you read the frequently asked question about [coordinate systems](/faq/coordsys) to understand the different coordinate systems in which data can be expressed. Since electrode models are often used in source reconstruction, we also suggest you to read the tutorials about [BEM](/tutorial/headmodel_eeg_bem) and [FEM](/tutorial/headmodel_eeg_fem) volume conduction models.
 
 Frequently asked questions that relate to electrodes are:
 

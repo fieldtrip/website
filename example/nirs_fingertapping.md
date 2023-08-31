@@ -221,7 +221,7 @@ This is how far we can get
     opto.label = nirs.mnt.clab(:);
     opto.chanpos = nirs.mnt.pos_3d'; % these are all nan
 
-But this is not a complete description of the channel and sensor information according to **[ft_dataype_sens](/reference/utilities/ft_datatype_sens)**. However, a full sensor definition is also not required: the opical densities have already been converted in HbO and HbR prior to sharing, so we only care about channel positions for plotting.
+But this is not a complete description of the channel and sensor information according to **[ft_dataype_sens](/reference/utilities/ft_datatype_sens)**. However, a full sensor definition is also not required: the optical densities have already been converted in HbO and HbR prior to sharing, so we only care about channel positions for plotting.
 
 For the plotting of channel level data (see also [this tutorial](/tutorial/plotting)) we need a 2D layout. That is explained in detail in [this tutorial](/tutorial/layout). If the `opto` definition had included 2D or 3D channel positions, then we could have used **[ft_prepare_layout](/reference/ft_prepare_layout)** but now we will manually construct the layout structure.
 
@@ -247,7 +247,7 @@ We can plot the layout using **[ft_plot_layout](/reference/plotting/ft_plot_layo
 
 {% include image src="/assets/img/example/nirs_fingertapping/figure1.png" width="400" %}
 
-This shows four groups, with two groups of oxy channels on the left of the figure (for the left and right hemisphere), and the corresponding deoxy channels on the right of the figure. This matches with the schepatic display in figure 1 of the PDF manuscript, and with the displayed data in figure 3 of the PDF manuscript.
+This shows four groups, with two groups of oxy channels on the left of the figure (for the left and right hemisphere), and the corresponding deoxy channels on the right of the figure. This matches with the schematic display in figure 1 of the PDF manuscript, and with the displayed data in figure 3 of the PDF manuscript.
 
 To improve the plotting of topographies, we can also make an outline and mask. The outline comproses extra lines that are added to the figure, often we include a circle (representing the head) with a triangle at the top (representing the nose). The mask comprises a series of polygons that are used in topographic interpolation and masking the interpolated data that is outside the head, but also by masking the interpolated data that is in between the grid on the left and right hemisphere. This will become more clear at the end of this example script.
 

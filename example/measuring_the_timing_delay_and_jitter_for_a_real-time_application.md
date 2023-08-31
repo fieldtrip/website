@@ -311,7 +311,7 @@ Note that this is replacing the reading of the header in the previous example, i
 
       hdr = read_header(cfg.headerfile, 'headerformat', cfg.headerformat, 'cache', true);
 
-remember that we were only interested in the hdr.nSamples, which allows to determine whether there any new samples (when compared to the remembred previous sample).
+remember that we were only interested in the hdr.nSamples, which allows to determine whether there any new samples (when compared to the remembered previous sample).
 The number of new samples is now already returned by the ft_poll_buffer function ==newNum.nsamples. We therefore replace hdr.nSamples in our code with this number
 
       hdr.nSamples = newNum.nsamples;
@@ -466,7 +466,7 @@ We note that the delays are smaller when the continuous HL is off. This is proba
 
 As the speed of the streaming is proportional to the number odf samples in the buffer (how fast the buffer gets filled) this is expected to increase a) with increasing channel numbers b) with increasing sample rate
 
-Here we increase the sampel rate to Fs=4000Hz
+Here we increase the sampling rate to Fs=4000Hz
 
 ### CHL on, Fs=4KHz, Nchans=341
 
@@ -500,7 +500,7 @@ We should a) try to measure these timing issues more accurately, and b) try to f
 
 ## Timing of the CTF MEG system data stream
 
-The first example shows how you can read data from a real-time acquisition ssytem (in this example it is the MEG system at the FCDC) and determine the timing of each data block as it comes in.
+The first example shows how you can read data from a real-time acquisition system (in this example it is the MEG system at the FCDC) and determine the timing of each data block as it comes in.
 
     filename = 'buffer://odin:1972';
 

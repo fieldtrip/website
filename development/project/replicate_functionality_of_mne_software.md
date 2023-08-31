@@ -127,7 +127,7 @@ Finally, the pial, white and inflated **surfaces** are created. The white surfac
 
 In order to run the last processing stage of the figure (spherical inflation) one should run the third automatic reconstruction step of FS.
 recon-all -autorecon3 -subjid&lt;subject's name>\\
-This step requires also quite much time (around 8-10 hours). It inflates the surface into sphere. But it does more than only the **spherical inflation**. However, as far as I know, MNE is using only the output of this first procccessing stage of -autorecon3. Therefore, maybe it would be useful to run only this stage instead of the entire -autorecon3. It takes around 3-4 hours. :
+This step requires also quite much time (around 8-10 hours). It inflates the surface into sphere. But it does more than only the **spherical inflation**. However, as far as I know, MNE is using only the output of this first proccessing stage of -autorecon3. Therefore, maybe it would be useful to run only this stage instead of the entire -autorecon3. It takes around 3-4 hours. :
 
     mris_sphere rh.inflated rh.sphere
     mris_sphere lh.inflated lh.sphere
@@ -159,7 +159,7 @@ This stage creates a **decimated dipole grid on the white matter surface**, and 
 
 This script is looking for a surface as **input** in the $SUBJECTS_DIR/$SUBJECT/surf directory. By default, the "white" surface is used (rh.white and lh.white). The grid spacing for the source space can be specified in mm. By default, 7mm is used. It is also possible to create the source space using the topology of a recursively subdivided icosahedron or octahedron (by using option --ico). This method is using the cortical surface inflated to a sphere, therefore, it is looking also for the FS surfaces, $SUBJECTS_DIR/$SUBJECT/surf/rh.sphere and lh.sphere as input.
 
-The source space will have triangulation information for the decimated verticles included. In this code, for example, -ico -6 will create a source space with 4.9 mm spacing. If it is specified, it can also compute the cortical patch statistics. It is also possible to use the source space created by using another subject's data and to morph it to the actual subject.
+The source space will have triangulation information for the decimated vertices included. In this code, for example, -ico -6 will create a source space with 4.9 mm spacing. If it is specified, it can also compute the cortical patch statistics. It is also possible to use the source space created by using another subject's data and to morph it to the actual subject.
 
 MNE provides also a support for three-dimensional source spaces and for arbitrarily located source points.
 
@@ -479,7 +479,7 @@ Test on phantom data
 | source space                           | grid with 635 points   | grid with 641 points | grid with 635 points |
 | lambda                                 | 0.01                   |                      |                      |
 | noise-covariance matrix                | eye(186)               | eye(151)             |                      |
-| source-covariance                      | ? no depth weightening | depth weightening    |                      |
+| source-covariance                      | ? no depth weighting   | depth weighting      |                      |
 
 Plot inverse solution at max (in time):
 

@@ -79,7 +79,7 @@ We also read the events from the original file, we need the timing to make the G
     sel = ismember({event.value}, trigAUD);
     sampleAUD = [event(sel).sample];
 
-There are 400 visual stimuli and 400 auditory simuli. We can plot the time of each stimulus by converting the sample numbers into seconds.
+There are 400 visual stimuli and 400 auditory stimuli. We can plot the time of each stimulus by converting the sample numbers into seconds.
 
     figure
     hold on

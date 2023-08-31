@@ -423,7 +423,7 @@ To refine the above fiducial-points based registration, it is recommended to uti
     cfg.coordsys = 'ctf';
     mri_coreg = ft_volumerealign(cfg, mri_coreg);
 
-    %% For representing anatomical landmarks and HPIs in the head coordinate syste
+    %% For representing anatomical landmarks and HPIs in the head coordinate system
     fid_mri = ft_warp_apply(mri_coreg.transform, fid_vox, 'homogeneous');
     hpi_mri = ft_warp_apply(mri_coreg.transform, hpi_vox, 'homogeneous');
 

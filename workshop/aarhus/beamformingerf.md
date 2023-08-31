@@ -126,7 +126,7 @@ Take your time to browse and evaluate the topographies and the corresponding tim
 
 ### Averaging and plotting the response related field
 
-In the first step we re-segment the data into left and right hand responses using the information orgnized in the trialinfo substructure. We use **[ft_redefinetrial](/reference/ft_redefinetrial)**. After this we'll focus on right hand responses for simplicity and average over repetitions using **[ft_timelockanalysis](/reference/ft_timelockanalysis)**. Finally, we use **[ft_topoplotER](/reference/ft_topoplotER)** and **[ft_singleplotER](/reference/ft_singleplotER)** with a predefined latency window to plot the topography and time course of the early motor evoked field.
+In the first step we re-segment the data into left and right hand responses using the information organized in the trialinfo substructure. We use **[ft_redefinetrial](/reference/ft_redefinetrial)**. After this we'll focus on right hand responses for simplicity and average over repetitions using **[ft_timelockanalysis](/reference/ft_timelockanalysis)**. Finally, we use **[ft_topoplotER](/reference/ft_topoplotER)** and **[ft_singleplotER](/reference/ft_singleplotER)** with a predefined latency window to plot the topography and time course of the early motor evoked field.
 
     cfg = [];
     cfg.trials    = find(data_meg_clean_ica.trialinfo(:,1) == 256);
@@ -156,7 +156,7 @@ _Figure 1: Topography and time course of the motor evoked response performed wit
 Use your knowledge about the distribution of the ingoing and outgoing field.
 
 - What is the orientation of the source?
-- Is this source likely located on a gyral bank or sylcus wall?
+- Is this source likely located on a gyral bank or sulcal wall?
   {% include markup/end %}
 
 ### Loading the headmodel
@@ -212,7 +212,7 @@ The grid data structure has the following field
                   cfg: [1x1 struct]                   % Grid points outside the brain
             leadfield: {1x3528 cell}                  % Leadfield for every position in grid
                 label: {102x1 cell}                   % Sensor labels
-      leadfielddimord: '{pos}_chan_ori'               % Dimord sturcture of the leadfield
+      leadfielddimord: '{pos}_chan_ori'               % Dimord structure of the leadfield
 
 ## (MEG) Source analysis on motor evoked field
 
@@ -486,7 +486,7 @@ The ultimate motivation of source analysis of M/EEG data is the reconstruction o
     cfg.lcmv.lamda = '5%';
     source = ft_sourceanalysis(cfg, avg);
 
-##### Multiply filters with the data and organize into FieldTrip sensable data structure
+##### Multiply filters with the data and organize into FieldTrip sensible data structure
 
     spatialfilter = cat(1,source.avg.filter{:});
     virtsens = [];
@@ -653,7 +653,7 @@ And interpolate the result onto the anatomical MRI.
     cfg.interpmethod = 'nearest';
     source_int  = ft_sourceinterpolate(cfg, M1eeg, mri_segmented);
 
-Finally, we can plot the result using the same masking strategy as in the MEG sectio
+Finally, we can plot the result using the same masking strategy as in the MEG section
 
     source_int.mask = source_int.pow > max(source_int.pow(:))*.3; % 50 % of maximum
     cfg               = [];

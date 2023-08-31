@@ -87,7 +87,7 @@ Following preprocessing, the data will have the following fields
     sampleinfo: [1 90000]
            cfg: [1x1 struct]
 
-Subsequently we will add the electrode description. For this we will use a custom script which is included with the data on the download server. The main reason for a custom script is that the EEG cap used in this stidy is the Electrical Geodesics Inc. (EGI) geodesic net, which has its own specific nomenclature for electrode positions, but some of the electrode positions correspond to the 10-10 standard system. If you are curious about the equivalence between the two systems, take a look at the custom function and [here](https://www.researchgate.net/publication/266609828_Determination_of_the_Geodesic_Sensor_Nets'_Average_Electrode_Positions_and_Their_10_-_10_International_Equivalents).
+Subsequently we will add the electrode description. For this we will use a custom script which is included with the data on the download server. The main reason for a custom script is that the EEG cap used in this study is the Electrical Geodesics Inc. (EGI) geodesic net, which has its own specific nomenclature for electrode positions, but some of the electrode positions correspond to the 10-10 standard system. If you are curious about the equivalence between the two systems, take a look at the custom function and [here](https://www.researchgate.net/publication/266609828_Determination_of_the_Geodesic_Sensor_Nets'_Average_Electrode_Positions_and_Their_10_-_10_International_Equivalents).
 
     data.elec = prepare_elec_chennu2016(data.label);
 

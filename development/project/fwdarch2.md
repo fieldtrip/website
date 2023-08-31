@@ -76,7 +76,7 @@ TBD
 Useful for example to extract a surface from the wireframe
 Implementation suggestion of mesh2surf.m:
 for each triangle of the tetrahedron
-count the number of belonging tetrahedres
+count the number of belonging tetrahedra
 end
 keep the triangles with count == 1
 [Back](#Dealing with the geometry of the forward model)

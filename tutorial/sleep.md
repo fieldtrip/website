@@ -235,7 +235,7 @@ Let us view the data in 2-hour blocks again after excluding the parts with EMG o
 
 {% include image src="/assets/img/tutorial/sleep/figure5.png" width="800" %}
 
-## Estimating frequency-represtation over sleep
+## Estimating frequency-representation over sleep
 
 Electrophysiological recordings can also be used to identify wake periods. In the EEG we focus on 4 frequency bands, which are slow-wave activity (0.5 to 4 Hz), theta (4 to 8 Hz), alpha (8-11) and sleep spindle band/ sigma (11-16 Hz). Note that the frequency bands might be defined here differently than in some other literature.
 
@@ -808,7 +808,7 @@ Visualize the event-related time-frequency around the event time-locked to the t
 {% include image src="/assets/img/tutorial/sleep/figure19.png" width="400" %}
 {% include image src="/assets/img/tutorial/sleep/figure20.png" width="400" %}
 
-View the detected events in the orginal data.
+View the detected events in the original data.
 
     cfg                                 = [];
     cfg.continuous                       = 'yes';

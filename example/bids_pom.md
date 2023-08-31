@@ -691,7 +691,7 @@ The events from the presentation log file can also be aligned using the MRI trig
 
 #### Presentation custom log file (.txt)
 
-The events in the custom `.txt` log file from presentation was not processed by the **[ft_read_event](/reference/fileio/ft_read_event)** function, but rather using MATLAB [readtable](https://www.mathworks.com/help/matlab/ref/readtable.html). As a consequence, it has many more details, i.e. rows, however the rows are not standardized. Also, it does not contain one "event" per row, but it contains one "trial" per row, which consists of both a stimulus and response. Furthermore, each trial is scored as correct/oincorrect.
+The events in the custom `.txt` log file from presentation was not processed by the **[ft_read_event](/reference/fileio/ft_read_event)** function, but rather using MATLAB [readtable](https://www.mathworks.com/help/matlab/ref/readtable.html). As a consequence, it has many more details, i.e. rows, however the rows are not standardized. Also, it does not contain one "event" per row, but it contains one "trial" per row, which consists of both a stimulus and response. Furthermore, each trial is scored as correct/incorrect.
 
 There are 132 trials in the `.txt` file, hence we expect 132 corresponding events for the presentation log and the EMG.
 

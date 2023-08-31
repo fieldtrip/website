@@ -380,10 +380,10 @@ We can make selective averages by specifying `cfg.trials`
 
 {% include image src="/assets/img/example/nirs_speech/figure9.png" %}
 
-In the lower right we can see the average of the "aux1" and "aux2" channels, which contain the TTL pulses. It is clear that due to the long segment that we selected for each trial, not only the stimulus related activity is included, but also the reposnee related activity (which is jittered a bit). We can even see the onset of the stimulus in the next next trial at the end of each segment.
+In the lower right we can see the average of the "aux1" and "aux2" channels, which contain the TTL pulses. It is clear that due to the long segment that we selected for each trial, not only the stimulus related activity is included, but also the response related activity (which is jittered a bit). We can even see the onset of the stimulus in the next next trial at the end of each segment.
 
 There are a number of channels that show a clear up-down deflection. Since the experimental design consists of a continuous sequence of
-stimulus-response-stimulus-response-etc, it is hard to tell whether we have stimulus related activity or response related activity, or both. Even worse for the interpretation is that the optodes are placed over the temporal region of the head and that the subjects were responding with overt speack, which meant that they made regular jaw and head movements. Without further information about the experiment it is hard to rule out that the observed sequence of responses is not merely due to a repetetive movement or muscle artifact.
+stimulus-response-stimulus-response-etc, it is hard to tell whether we have stimulus related activity or response related activity, or both. Even worse for the interpretation is that the optodes are placed over the temporal region of the head and that the subjects were responding with overt speech, which meant that they made regular jaw and head movements. Without further information about the experiment it is hard to rule out that the observed sequence of responses is not merely due to a repetitive movement or muscle artifact.
 
 ## Selective averaging of stimulus-related activity in different conditions
 

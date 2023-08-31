@@ -34,7 +34,7 @@ The smri-seghead file is the name of a analyze format file (.hdr, .img) which co
 
 electrodes.h5 contains the electrodes matrix with a row for each electrode and 4 columns (X,Y,Z positions of the electrode in voxel space) and label.
 
-contable.csv is a comma saparated file which assigns a conductivity value for each tissue type present in the analyze file.
+contable.csv is a comma separated file which assigns a conductivity value for each tissue type present in the analyze file.
 
 ## Steps to be taken
 
@@ -46,7 +46,7 @@ contable.csv is a comma saparated file which assigns a conductivity value for ea
 - the input argument --3dmesh contains the coordinates of the voxels' centers (all and only voxels belonging to the head) and an additional columns with the tissue label of each voxel. The resulting matrix V has dimensions [N (head voxels) X 4]
 - the input argument dim contains the dimensions of the MRI (e.g., 256X256X256] in order to be able to build the box around the head
 - output argument --data datafile now contains only a matrix M of dimensions [skinXbrain voxels], no additional fields
-- provide Hung with 2 files: one semgmented labeled MRI, one text file with the output voxels, containing the positions of the solutions in voxels coordinates
+- provide Hung with 2 files: one segmented labeled MRI, one text file with the output voxels, containing the positions of the solutions in voxels coordinates
 
 ## Steps to be taken (Cristiano)
 

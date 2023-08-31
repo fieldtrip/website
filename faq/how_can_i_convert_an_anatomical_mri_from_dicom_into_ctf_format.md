@@ -51,14 +51,14 @@ To keep your data files organized, it is advised that you use a logical director
 
 | directory                | contents                                |
 | ------------------------ | --------------------------------------- |
-| /home/.../\$subjectcode/ | CTF files (.hdm .mri .shape .shapejnfo) |
+| /home/.../\$subjectcode/ | CTF files (.hdm .mri .shape .shapeinfo) |
 | analyze/                 | Analyze files (.hdr .img)               |
 | dicom/                   | 208 MRI data files (.ima or .dcm)       |
 | misc/                    | MRI localizer files (.ima or .dcm)      |
 
 Where '\$subjectcode' is the coded name of your subject data, for instance: subject_01.
 
-Do the following before starting.the actual conversion procedur
+Do the following before starting.the actual conversion procedure
 
 - Create a directory '\$subjectcode'
 - Create the directory structure as depicted in the format outline.

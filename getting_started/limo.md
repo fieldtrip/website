@@ -86,7 +86,7 @@ After having estimated the betas with the 1st-level analysis, LIMO continues wit
 
 ### Global framework
 
-Processing data through FieldTrip functions and performing statistical analyses on the proceesed data in LIMO is easy. The users can specify the experimental design (the GLM model) and the FieldTrip data as input. Using BIDS raw and derived data, the whole pipeline going from raw data, preprocessing, 1st-level analysis and 2nd-level testing, can be considered as follows:
+Processing data through FieldTrip functions and performing statistical analyses on the processed data in LIMO is easy. The users can specify the experimental design (the GLM model) and the FieldTrip data as input. Using BIDS raw and derived data, the whole pipeline going from raw data, preprocessing, 1st-level analysis and 2nd-level testing, can be considered as follows:
 
 {% include image src="/assets/img/getting_started/limo/block_schematic_pipeline.png" width="500" %}
 

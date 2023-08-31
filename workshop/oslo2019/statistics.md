@@ -53,7 +53,7 @@ We will clear all variables that we have in the workspace, restore the default p
 First, we load the data that we created in the [ERP tutorial](/workshop/oslo2019/introduction)
 
 {% include markup/info %}
-Note the naming convention used - each saved _.mat-file_ contains _one and only one_ variable, which has the _same_ name as the _.mat-file_  
+Note the naming convention used - each saved _.mat-file_ contains _one and only one_ variable, which has the _same_ name as the _.mat-file_
 This makes it clear what variables are loaded into the workspace.
 {% include markup/end %}
 
@@ -70,7 +70,7 @@ We then apply the same preprocessing as before.
 
 #### The Student's t-test
 
-A ubiquitous test used to assess statistical significance is the Student's t-test [Wikipedia entry](https://en.wikipedia.org/wiki/Student's_t-test) [original article](https://doi.org/10.1093/biomet/6.1.1).  
+A ubiquitous test used to assess statistical significance is the Student's t-test [Wikipedia entry](https://en.wikipedia.org/wiki/Student's_t-test) [original article](https://doi.org/10.1093/biomet/6.1.1).
 To perform the t-test, _t-values_ need to be calculated, which a bit simplified are: \frac{µ}{SEM}, where µ is the mean difference between the conditions and SEM is the standard deviation divided by \sqrt{n}, where _n_ is the number of observations.
 
 We will do a within-subject between-trials statistical test.
@@ -201,7 +201,7 @@ _Figure 3: Electrode neighbor structure_
 
 ##### Permutation
 
-The cluster correction is not meaningful for parametric statistics, e.g., _t-tests_, therefore we are going to use a non-parameteric test.  
+The cluster correction is not meaningful for parametric statistics, e.g., _t-tests_, therefore we are going to use a non-parametric test.
 We will first run it and then discuss some of the options and details afterwards.
 
     cfg                  = [];
@@ -301,7 +301,7 @@ _Figure 6: The observed positive and negative_ T-values compared to the permuted
 
 ###### Compare against _cfg.alpha_ (steps 5 and 6)
 
-Since both the _positive_ and _negative p-values_ are lesser than _cfg.alpha_ (0.025), we reject the null hypothesis for both the positive and negative directions.  
+Since both the _positive_ and _negative p-values_ are lesser than _cfg.alpha_ (0.025), we reject the null hypothesis for both the positive and negative directions.
 _Put informally_: **our way of labelling the conditions _does_ matter**
 
 Let's have a look at the cluster corrected channel:
@@ -311,10 +311,10 @@ _Figure 7: Single channel plot - Cluster correction_
 
 And here the three tested corrections are side by side
 
-{% include image src="/assets/img/workshop/oslo2019/singleplots_side_by_side.png " width="650" %}  
+{% include image src="/assets/img/workshop/oslo2019/singleplots_side_by_side.png " width="650" %}
 _Figure 8: Single channel plot - corrections side by side_
 
-We can also do topographical plots.  
+We can also do topographical plots.
 Here are the three side by side at 168 ms
 
     n_plots = 3;
@@ -345,11 +345,11 @@ Here are the three side by side at 168 ms
 
     print -dpng difference_wave_topoplots.png
 
-{% include image src="/assets/img/workshop/oslo2019/difference_wave_topoplots.png " width="650" %}  
+{% include image src="/assets/img/workshop/oslo2019/difference_wave_topoplots.png " width="650" %}
 _Figure 9: Difference wave (MMN) topographical plots_
 
-And here's the difference between the normal _t-mask_ and the _t-cluster-mask_. Note it is that not big.  
-{% include image src="/assets/img/workshop/oslo2019/difference_between_masks.png " width="650" %}  
+And here's the difference between the normal _t-mask_ and the _t-cluster-mask_. Note it is that not big.
+{% include image src="/assets/img/workshop/oslo2019/difference_between_masks.png " width="650" %}
 _Figure 10: Difference wave showing the difference in masks coming from stat_t and stat_t_cluster_
 
 {% include markup/info %}
@@ -395,7 +395,7 @@ We can see the sizes and ordering of dimensions using the in-built function _siz
 
     rpt_chan_freq_time
 
-meaning that we have 110 trials on 128 channels at 20 frequencies and at 26 time points.  
+meaning that we have 110 trials on 128 channels at 20 frequencies and at 26 time points.
 For the difference between the averages, we have:
 
     >> size(tfr_difference.powspctrm)
@@ -519,7 +519,7 @@ Note that we here apply the tests on the frequency range between 15 Hz and 30 Hz
 
     set(h, 'units', 'normalized', 'outerposition', [0 0 1 1])
 
-{% include image src="/assets/img/workshop/oslo2019/tfr_stats.png " width="650" %}  
+{% include image src="/assets/img/workshop/oslo2019/tfr_stats.png " width="650" %}
 _Figure 11: Three multiplots showing the differences between the three tests/corrections_
 
 Note how the cluster correction seems to catch the clusters that "catch" our eyes, while not showing the many non-clustered values that the non-corrected _t-test_ showed. Also note that the Bonferroni correction removed all significant effects, showing that it is too conservative to apply to TFR data.
@@ -527,11 +527,11 @@ Note how the cluster correction seems to catch the clusters that "catch" our eye
 ## Extending the frequency and time ranges of the tests
 
 {% include markup/exercise %}
-Do the three tests again without setting _cfg.frequency_ and _cfg.latency_ (you can comment them out)  
+Do the three tests again without setting _cfg.frequency_ and _cfg.latency_ (you can comment them out)
 Compare with the plot below - why may it be important to use one's _prior_ knowledge?
 {% include markup/end %}
 
-{% include image src="/assets/img/workshop/oslo2019/tfr_stats_all.png " width="650" %}  
+{% include image src="/assets/img/workshop/oslo2019/tfr_stats_all.png " width="650" %}
 _Figure 12: **Testing on all frequencies and all latencies** Three multiplots showing the differences between the three tests/corrections. Note what this means for the cluster corrected test_
 
 ## Appendix - code snippets for producing images

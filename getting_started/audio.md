@@ -12,9 +12,9 @@ The following reads the continuous audio data, in this case from a 4-channel WAV
   cfg = [];
   cfg.dataset = '4ch.wav';
   data = ft_preprocessing(cfg)
-  
+
 The following information will be printed on screen:
-  
+
     processing channel { '4ch channel 1' '4ch channel 2' '4ch channel 3' '4ch channel 4' }
     reading and preprocessing
     reading and preprocessing trial 1 from 1
@@ -31,7 +31,7 @@ The following information will be printed on screen:
       sampleinfo: [1 211355]
              cfg: [1x1 struct]
 
-Also usefull can be to use **[ft_databrowser](/reference/ft_databrowser)** to have a quick look at the time series.
+Also useful can be to use **[ft_databrowser](/reference/ft_databrowser)** to have a quick look at the time series.
 
     cfg = [];
     cfg.dataset = '4ch.wav';

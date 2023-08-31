@@ -364,7 +364,7 @@ In `ft_crossfrequencyanalysis`
 
 Naming of ft_xxxx_option versus ft_xxxx combined with cfg.method There are many analysis functions that have a switch case on cfg.method. However, there are also some top-level functions that appear to have the method as a suffix. Why?
 
-In `ft_artifact_nan`, there is a double loop, where every inner loop iteration causes a memory allocation. As also suggested by the mlint squigle, it would be more efficient to pre-allocate, just before the inner loop.
+In `ft_artifact_nan`, there is a double loop, where every inner loop iteration causes a memory allocation. As also suggested by the mlint squiggle, it would be more efficient to pre-allocate, just before the inner loop.
 
 FieldTrip `compat` folder has entries that go back to before 2013b. However, the table datatype is being used in multiple places in fieldtrip, so even though the matlablt2013b folder has a istable function, isn’t backward compatibility currently limited to 2013b and later?
 
@@ -543,7 +543,7 @@ An example of what the current implementation looks like
 
 ### 9.2. Analysis function with preamble and postamble v2
 
-What the analysis function would look like with the v2 of preamble / postamlbe
+What the analysis function would look like with the v2 of preamble / postamble
 
     function [outputs] = ft_important_analysis_final(cfg, inputs)
 

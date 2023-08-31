@@ -103,7 +103,7 @@ From the autoregressive coefficients it is now possible to compute the spectral 
              dof: 500
             label: {3x1 cell}
            dimord: 'chan_chan_freq'
-              cfg: [1x1 struct]          
+              cfg: [1x1 struct]
 
 The resulting **mfreq** data structure contains the pairwise transfer function between the 3 channels for 101 frequencies.
 
@@ -132,7 +132,7 @@ Some connectivity metrics can be computed from a non-parametric spectral estimat
 The resulting **freq** structure contains the spectral estimate for 3 tapers in each of the 500 trials (hence 1500 estimates), for each of the 3 channels and for 101 frequencies. It is not necessary to compute the cross-spectral density at this stage, because the function used in the next step, **[ft_connectivityanalysis](/reference/ft_connectivityanalysis)**, contains functionality to compute the cross-spectral density from the Fourier coefficients.
 
 {% include markup/warning %}
-We apply frequency smoothing of 2Hz. The tapsmofrq parameter should already be familiar to you from the [multitapers section of the frequency analysis tutorial](/tutorial/timefrequencyanalysis/#multitapers). How much smoothing is desired will depend on your research question (i.e. frequency band of interest) but also on wether you decide to use the parametric or non-parametric estimation methods for connectivity analysis:
+We apply frequency smoothing of 2Hz. The tapsmofrq parameter should already be familiar to you from the [multitapers section of the frequency analysis tutorial](/tutorial/timefrequencyanalysis/#multitapers). How much smoothing is desired will depend on your research question (i.e. frequency band of interest) but also on whether you decide to use the parametric or non-parametric estimation methods for connectivity analysis:
 
 Parametric and non-parametric estimation of Granger causality yield very comparable results, particularly in well-behaved simulated data. The main advantage in calculating Granger causality using the non-parametric technique is that it does not require the determination of the model order for the autoregressive model. When relying on the non-parametric factorization approach more data is required as well as some smoothing for the algorithm to converge to a stable result. Thus the choice of parametric vs. non-paramteric estimation of Granger causality will depend on your data and your certainty of model order.
 (find this information and more in [Bastos and Schoffelen 2016](http://journal.frontiersin.org/article/10.3389/fnsys.2015.00175/full))

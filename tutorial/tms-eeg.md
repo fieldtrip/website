@@ -1,6 +1,6 @@
 ---
 title: Dealing with TMS-EEG datasets
-tags: [tutorial, tms, eeg, preprocesing, plotting, eeg-tms]
+tags: [tutorial, tms, eeg, preprocessing, plotting, eeg-tms]
 ---
 
 # Dealing with TMS-EEG datasets
@@ -347,7 +347,7 @@ We have already read-in the data segments without the artifacts for you. You can
 
     load data_tms_segmented.mat
 
-**You can skip the following block of code if you have downloaded data_tms_segmented in the previous step.** Else, you can read the artifact-free segments usin
+**You can skip the following block of code if you have downloaded data_tms_segmented in the previous step.** Else, you can read the artifact-free segments using
 
     cfg.channel     = {'all' '-5' '-mastoid L' '-mastoid R'};
     cfg.reref       = 'yes';
@@ -839,7 +839,7 @@ Now we can plot the GMFP of both conditions.
 #### Exercise: GMFP vs TEPs
 
 {% include markup/exercise %}
-Are there differences between the outcome of this analysis and the comparison between time-locked verages in the previous section? Can you see an advantage of using GMFP to compare conditions?
+Are there differences between the outcome of this analysis and the comparison between time-locked averages in the previous section? Can you see an advantage of using GMFP to compare conditions?
 {% include markup/end %}
 
 ### Time-frequency analysis

@@ -72,7 +72,7 @@ How it's currently implemented in these function
 
 ---
 
-##### Ensure consistency in solutio
+##### Ensure consistency in solution
 
 **For raw data input functions (implement before 'Ntrials=...' or equivalent):**
 

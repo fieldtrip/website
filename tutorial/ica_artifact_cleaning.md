@@ -9,7 +9,7 @@ tags: [tutorial, artifact, meg, raw, preprocessing, meg-artifact]
 
 In this tutorial we will demonstrate ICA cleaning on the [ArtifactMEG.zip](https://download.fieldtriptoolbox.org/tutorial/ArtifactMEG.zip) example MEG dataset. This is a resting state recording without an explicit experimental task, however in this recording the subject was on putpose making certain types of artifacts, such as blinking with the eyes, looking back and forth, making headmovements, and biting their teeth to induce EMG activity in the jaw muscles.
 
-This dataset not only includes MEG data, but also separate bipolar recordings from the EOG and ECG, plus two bipolar EMG channels that record activity from neck and jaw muscles. In principle we could use thexe extra channels to find artifacts or to facilitate or even automate the identification of artifactual ICA components. In the remainder we will _not_ make use of the EOG, ECG and EMG channels, we will only show how ICA can be used on the MEG channels.
+This dataset not only includes MEG data, but also separate bipolar recordings from the EOG and ECG, plus two bipolar EMG channels that record activity from neck and jaw muscles. In principle we could use these extra channels to find artifacts or to facilitate or even automate the identification of artifactual ICA components. In the remainder we will _not_ make use of the EOG, ECG and EMG channels, we will only show how ICA can be used on the MEG channels.
 
 ## Background
 
@@ -50,7 +50,7 @@ To load this dataset into MATLAB and preprocess with FieldTrip, use:
     cfg.channel    = {'MEG', 'MEGREF', 'EOG', 'ECG', 'jaw', 'neck'};
     data = ft_preprocessing(cfg);
 
-The ICA decomposition can take a long time, especially if you have to do it multiple times. If it takes too long, you can consider to downsample the data to a lower sampling rate, here from 1200Hz to 300Hz. Using the downsampled dataset you can estimate the ICA components and subsequently remove those from the original data. However, you should be aware that downsampling potentially affect some data features and artifacts. For example, high frequency muslce artifacts will be less well captured. The consequence is that the removal of those artifacts might also be less optimal.
+The ICA decomposition can take a long time, especially if you have to do it multiple times. If it takes too long, you can consider to downsample the data to a lower sampling rate, here from 1200Hz to 300Hz. Using the downsampled dataset you can estimate the ICA components and subsequently remove those from the original data. However, you should be aware that downsampling potentially affect some data features and artifacts. For example, high frequency muscle artifacts will be less well captured. The consequence is that the removal of those artifacts might also be less optimal.
 
     data_orig = data;
 
@@ -154,7 +154,7 @@ Now that the data is cut into segments (aka trials) of a second each, we can ide
 
 {% include image src="/assets/img/tutorial/ica_artifact_cleaning/figure3.png" width="600" %}
 
-We can now "stich" the segmented data back together in a continuous representation:
+We can now "stitch" the segmented data back together in a continuous representation:
 
     cfg = [];
     cfg.continuous = 'yes';
@@ -186,7 +186,7 @@ To perform the ICA decomposition, you can use the following code. Here we use a 
     cfg.channel      = {'MEG', 'MEGREF'};
     data_comp = ft_componentanalysis(cfg, data_clean); % using the data without atypical artifacts
 
-You should do the decomposition only on channels that see the brain and artifactual components in a simmilar way and that together represent a linear mixture of the underlying sources. If you have EEG and EOG channels that are recorded using the same reference, the EEEG and EOG channels can goin there together. If you have EEG relative to one reference and bipolar EOG channels, you should not combine them in a single ICA decomposition. When you have combined MEG and EEG data, the MEG and EEG channels will both see the brain and artifactual sources, but have different sensitivity to them and to effects due to movement of the head relative to the MEG helmet; in that case we also recommend to use the ICA separately on the MEG and on the EEG channels.
+You should do similar way and that together represent a linear mixture of the underlying sources. If you have EEG and EOG channels that are recorded using the same reference, the EEEG and EOG channels can goin there together. If you have EEG relative to one reference and bipolar EOG channels, you should not combine them in a single ICA decomposition. When you have combined MEG and EEG data, the MEG and EEG channels will both see the brain and artifactual sources, but have different sensitivity to them and to effects due to movement of the head relative to the MEG helmet; in that case we also recommend to use the ICA separately on the MEG and on the EEG channels.
 
 ### Identifying artifactual components
 
@@ -200,11 +200,11 @@ The decomposed data structure `data_comp` represents the topographies of the com
 
 {% include image src="/assets/img/tutorial/ica_artifact_cleaning/figure4.png" width="600" %}
 
-With some experience, you can relatively quickly identify components that are suspect for artifacts. Eye-related components are spatially localized on the frontal channels, blinks and vertical saccacdes are symmetric and horizontal saccades show a distinct left-right pattern. Heart-related components in MEG show up as avery deep source with a bipolar projecting over the left and right side ofthe helmet. It is common for both eye and heart components that you will see a few of them. You may want to write down the number of each of the suspect components.
+With some experience, you can relatively quickly identify components that are suspect for artifacts. Eye-related components are spatially localized on the frontal channels, blinks and vertical saccades are symmetric and horizontal saccades show a distinct left-right pattern. Heart-related components in MEG show up as avery deep source with a bipolar projecting over the left and right side of the helmet. It is common for both eye and heart components that you will see a few of them. You may want to write down the number of each of the suspect components.
 
 In the figure above, components 10 and 12 look like eye-related components. Component 5 and 6 probably still relate to the SQUID jumps on MLT24 and neighbouring channels. In this case there are no obvous heart-related component visible
 
-Subsequently you can look at the time course of the components. The heart-related components will show a regular heartbeat that you should be able torecognize already in the first few seconds of the decomposition. The eye-related components only show deflections in the time series if the subject blinks or makes a saccade; to see those you probably have to scroll though the data or to zoom out to see a larger piece of data.
+Subsequently you can look at the time course of the components. The heart-related components will show a regular heartbeat that you should be able to recognize already in the first few seconds of the decomposition. The eye-related components only show deflections in the time series if the subject blinks or makes a saccade; to see those you probably have to scroll though the data or to zoom out to see a larger piece of data.
 
     cfg = [];
     cfg.viewmode  = 'component';
@@ -236,7 +236,7 @@ After identification of the artifactual components you can use **[ft_rejectcompo
     cfg.component = [10 12]; % to be removed
     data_clean = ft_rejectcomponent(cfg, comp)
 
-If you have computed the components on a resampled version of the data, you can also use **[ft_rejectcomponent](/reference/ft_rejectcomponent)** to project the artifacts out ofthe original data. That only requires the component topographies, which are then applied to unmix and re-mix the data at the original sampling rate.
+If you have computed the components on a resampled version of the data, you can also use **[ft_rejectcomponent](/reference/ft_rejectcomponent)** to project the artifacts out of the original data. That only requires the component topographies, which are then applied to unmix and re-mix the data at the original sampling rate.
 
     cfg = [];
     cfg.component = [10 12]; % to be removed
@@ -244,11 +244,11 @@ If you have computed the components on a resampled version of the data, you can 
 
 ## Summary and conclusion
 
-In this tutorial we have looked at how toprepare your data for ICA decomposition, how todeal with infrequent and atypical artifacts. We shortly discussed different ICA approaches and, using a specific approach, show how you can speed up your ICA by downsampling the data and by reducing the number of components that are estimated. Given the ICA decomposition we demonstrated how to visualize them and identify the artifacts, and discussed that - if you get very focal components (in space and/or in time) you might want to remove that part of your data and start again. After obtaining a clean ICA decomposition, we explained how to back-project the components to a channel-level representation for further analysis or how touse the components to clean the original data.
+In this tutorial we have looked at how to prepare your data for ICA decomposition, how todeal with infrequent and atypical artifacts. We shortly discussed different ICA approaches and, using a specific approach, show how you can speed up your ICA by downsampling the data and by reducing the number of components that are estimated. Given the ICA decomposition we demonstrated how to visualize them and identify the artifacts, and discussed that - if you get very focal components (in space and/or in time) you might want to remove that part of your data and start again. After obtaining a clean ICA decomposition, we explained how to back-project the components to a channel-level representation for further analysis or how to use the components to clean the original data.
 
 What we _did not_ show in this tutorial is that you can also interpret the ICA components as sources in the brain. Just as it is possible to use all FieldTrip plotting and analysis strategies on artifactual components, it is also possible to analyze the brain components. All of the components are represented as channel time-series and all channel-level analyses can be applied. For example, following segmentation of your data in stimulus-locked trials, you can use **[ft_timelockanalysis](/reference/ft_timelockanalysis)**, **[ft_freqanalysis](/reference/ft_freqanalysis)** or **[ft_componentanalysis](/reference/ft_componentanalysis)** to investigate each of the components of interest and to use statistics to compare them between conditions.
 
-The decomposition not only gives you the component time-series but also their topography. Besides using these to identify artifacts, you can also cleary recognize components that represent activity in the brain. You can use **[ft_dipolefitting](/reference/ft_dipolefitting)** to localize these components with simple dipole models, or **[ft_sourceanalysis](/reference/ft_sourceanalysis)** to localize them with distributed models. The only source reconstruction strategy that you cannot apply (easily) is beamforming, since at the component-level you only have a single topography, but no data covariance matrix. As a spatial filtering technique, beamforming is too simililar to independent component analysis (although based on a biophysical model and the assumption of uncorrelated rather than independent sources).
+The decomposition not only gives you the component time-series but also their topography. Besides using these to identify artifacts, you can also cleary recognize components that represent activity in the brain. You can use **[ft_dipolefitting](/reference/ft_dipolefitting)** to localize these components with simple dipole models, or **[ft_sourceanalysis](/reference/ft_sourceanalysis)** to localize them with distributed models. The only source reconstruction strategy that you cannot apply (easily) is beamforming, since at the component-level you only have a single topography, but no data covariance matrix. As a spatial filtering technique, beamforming is too similar to independent component analysis (although based on a biophysical model and the assumption of uncorrelated rather than independent sources).
 
 ## Suggested further reading
 

@@ -46,7 +46,7 @@ We will perform the following steps in this tutorial:
 
 ## Reading-in preprocessed and time-locked data in planar gradient format, and grand averaged data
 
-To begin with we will load the source reconstructed and parcellated results from all individual subjects. These result from the [source analysis pipeline](/workshop/practicalmeeg2022/handson_sourceanalysis). The result of the source analysis pipeline is represented in the valable `mom`, which stands for "dipole moment". However, the FieldTrip code that we will use in this hands-on session expects channel-level data; hence we will rename the `mon` variable into `avg` to make the data appear as if it is the result of a straightforward channel-level analysis.
+To begin with we will load the source reconstructed and parcellated results from all individual subjects. These result from the [source analysis pipeline](/workshop/practicalmeeg2022/handson_sourceanalysis). The result of the source analysis pipeline is represented in the variable `mom`, which stands for "dipole moment". However, the FieldTrip code that we will use in this hands-on session expects channel-level data; hence we will rename the `mon` variable into `avg` to make the data appear as if it is the result of a straightforward channel-level analysis.
 
     % load individual subject data
     clear subj

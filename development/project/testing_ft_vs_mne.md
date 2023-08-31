@@ -6,7 +6,7 @@ title: Testing minimum-norm estimate in FieldTrip and in MNE Suite
 
 # Testing minimum-norm estimate in FieldTrip and in MNE Suite
 
-To test the equality of the two softwers solving the inverse solution with minimum-norm estimate we use a phantom data set from a 151 CTF MEG system.
+To test the equality of the two softwares solving the inverse solution with minimum-norm estimate we use a phantom data set from a 151 CTF MEG system.
 
 ## Minimum-norm estimate in FieldTrip
 

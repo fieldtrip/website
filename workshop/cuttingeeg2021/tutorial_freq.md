@@ -303,7 +303,7 @@ We want to use as much data as possible to identify the eye movement related act
     data            = ft_preprocessing(cfg);
 
 
-### Extract the vEOG as separate data struture, to use for blink detection
+### Extract the vEOG as separate data structure, to use for blink detection
 
 Identify and remove eye blinks using the DSS algorithm. See [this example](/example/use_denoising_source_separation_dss_to_remove_ecg_artifacts) for details.
 

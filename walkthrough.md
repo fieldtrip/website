@@ -183,7 +183,7 @@ We can also specify if we want to look at the data trial-by-trial, or if we want
 
 {% include image src="/assets/img/walkthrough/figure6.png" width="600" %}
 
-If we now call ''cfg = ft_databrowser(cfg,data)'', we are able to scroll through the data and select those segments containing muscle artifacts and the like. In the case you want to remove eye artifacts with ICA you can leave those in. If we now exit the databrowser by pressing 'q' our cfg is returned with an extra field containing a list of start and end samples for every data segment we selecte
+If we now call ''cfg = ft_databrowser(cfg,data)'', we are able to scroll through the data and select those segments containing muscle artifacts and the like. In the case you want to remove eye artifacts with ICA you can leave those in. If we now exit the databrowser by pressing 'q' our cfg is returned with an extra field containing a list of start and end samples for every data segment we selected
 
     cfg.artfctdef.visual.artifact: [2xnArtifacts double]
 

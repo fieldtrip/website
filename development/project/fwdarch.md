@@ -30,7 +30,7 @@ According to the different anatomy acquisition techniques it is possible to dist
 - Headshape, closed surface
 - Nothing
 
-All the routines which create a forward model need a description of the volume conductor model as input. This model is represented in a vol structure which contains a set of fields, among which vol.method (e.g., vol.method = 'dipoli'). All other fields are specific for the various methods and are generated in a pipeline which can be summarized in the following pictur
+All the routines which create a forward model need a description of the volume conductor model as input. This model is represented in a vol structure which contains a set of fields, among which vol.method (e.g., vol.method = 'dipoli'). All other fields are specific for the various methods and are generated in a pipeline which can be summarized in the following picture
 
 {% include image src="/assets/img/development/project/fwdarch/wikie_scheme2.jpg" width="600" %})
 

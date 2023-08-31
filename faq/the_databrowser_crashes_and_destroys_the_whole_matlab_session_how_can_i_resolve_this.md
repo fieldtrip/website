@@ -33,7 +33,7 @@ incompatibilities due to the many different graphics cards out there and
 also the many different driver versions that exist for each of these cards.
 
 So, you can try and switch to the software implementation of OpenGL by
-executing the following command in the command windos:
+executing the following command in the command window:
 
     >> opengl software
 

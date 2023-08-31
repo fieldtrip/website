@@ -63,7 +63,7 @@ If you want to do the same with high-level FieldTrip functions, invoke the above
     hdr.nTrials = 75;
     event = ft_read_event(cfg.dataset,'eventformat','ctf_old','header',hdr);
 
-Before preprocessin
+Before preprocessing
 
     cfg.dataformat = 'ctf_old';
     cfg.headerformat = 'ctf_old';

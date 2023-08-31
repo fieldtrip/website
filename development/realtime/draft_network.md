@@ -38,7 +38,7 @@ Currently (V1) the server sends an error identifier that is specific to each req
 
 When retrieving events, the server should always send the index of each event along with the response,
 as this makes filtering and housekeeping much easier. With a minimal change versus V1, we can just amend the GET_EVT
-request so it trasmits the event index before the rest of its definition, so for this request only, events
+request so it transmits the event index before the rest of its definition, so for this request only, events
 would be transported by the following structure (fixed part = 36 bytes now
 
 | field           | type   | description                                      |
