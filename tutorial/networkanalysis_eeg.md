@@ -148,7 +148,7 @@ In Figure 3 it is apparent that the electrodes do not align with the scalp surfa
 
 _Figure 4: Headmodel and electrode array aligned correctly._
 
-Before we proceed it is always useful to check the corregistration between the electrodes, headmodel and sourcemodel.
+Before we proceed it is always useful to check the coregistration between the electrodes, headmodel and sourcemodel.
 
     %% visualize the coregistration of electrodes, headmodel, and sourcemodel.
     figure(5);

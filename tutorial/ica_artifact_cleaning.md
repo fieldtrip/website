@@ -59,7 +59,7 @@ The ICA decomposition can take a long time, especially if you have to do it mult
     cfg.detrend      = 'no';
     data = ft_resampledata(cfg, data_orig);
 
-For the purpose of this tutorial and since we want you to try out various settings, we will continue with the downsampled data. If you apply this on your own data, please do try to work with the original instead the downsampled data; that will improve the quality of the decomposiion.
+For the purpose of this tutorial and since we want you to try out various settings, we will continue with the downsampled data. If you apply this on your own data, please do try to work with the original instead the downsampled data; that will improve the quality of the decomposition.
 
 ### Rejecting atypical artifacts
 

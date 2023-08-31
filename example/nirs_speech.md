@@ -7,7 +7,7 @@ tags: [example, nirs]
 
 This example script demonstrates the analysis of data that is shared by Jessica Defenderfer and Aaron Buss in _[fNIRS data files for event-related vocoding/background noise study](http://dx.doi.org/10.17632/4cjgvyg5p2.1)_.
 
-In the shared data the authors refer to an article _"Examining the hemodynamic response during perception of noise-vocoded speech and speech in background noise: An image-based fNIRS study"_. However, I have not been able to find an article with precisely that title, althoug another article from the same authors has a title that comes close. The following links point to the shared data and to the published PDF manuscript that explains (some aspects of) the shared data.
+In the shared data the authors refer to an article _"Examining the hemodynamic response during perception of noise-vocoded speech and speech in background noise: An image-based fNIRS study"_. However, I have not been able to find an article with precisely that title, although another article from the same authors has a title that comes close. The following links point to the shared data and to the published PDF manuscript that explains (some aspects of) the shared data.
 
 - <http://dx.doi.org/10.17632/4cjgvyg5p2.1> for the dataset
 - <https://doi.org/10.1016/j.neuropsychologia.2017.09.004> for the PDF manuscript

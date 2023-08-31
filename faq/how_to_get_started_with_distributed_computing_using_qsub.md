@@ -55,7 +55,7 @@ For detailed information on the submitted job use qstat -f JobI
   ...
 ```
 
-The **[qsubfeval](/reference/qsub/qsubfeval)** command creates a bunch of tempory files in your working directory. STDIN.oXXX is the standard output, i.e. the output that MATLAB normally prints in the command window. STDIN.eXXX is an error message file. For the job to complete successfully, this file should be empty.
+The **[qsubfeval](/reference/qsub/qsubfeval)** command creates a bunch of temporary files in your working directory. STDIN.oXXX is the standard output, i.e. the output that MATLAB normally prints in the command window. STDIN.eXXX is an error message file. For the job to complete successfully, this file should be empty.
 
 To pick up the results of the job, you type in matlab
     

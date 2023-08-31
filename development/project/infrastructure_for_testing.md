@@ -25,7 +25,7 @@ suggested directory layout
 
 * code stability testing in general
 * frequently occurring problems:
-* small changes in existing code to evoke compatibility with a newly created function (prevent by testing before comitting)
+* small changes in existing code to evoke compatibility with a newly created function (prevent by testing before committing)
 * output structure is organised differently
 
 - Should be

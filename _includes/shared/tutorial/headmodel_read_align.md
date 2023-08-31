@@ -49,7 +49,7 @@ Things to pay attention to when judging the quality of the MRI are
 - is the MRI image of good quality overall?
 - is the coverage complete, including the tip of the nose, back and top of the head and the ears? Complete coverage is especially important for EEG, as the headmodel includes the scalp.
 - is the MRI contrast homogenous over the whole volume? If not, consider **[ft_volumebiascorrect](/reference/ft_volumebiascorrect)**.
-- do you see the fidicuals that you expect, such as vitamine-E capsules? In this case there are [earmold markers](/faq/how_are_the_lpa_and_rpa_points_defined/#the-lparpa-in-the-donders-meg-and-mri-labs) along the ear canals, and a marker behind the right ear (for a left/right check).
+- do you see the fiducials that you expect, such as vitamine-E capsules? In this case there are [earmold markers](/faq/how_are_the_lpa_and_rpa_points_defined/#the-lparpa-in-the-donders-meg-and-mri-labs) along the ear canals, and a marker behind the right ear (for a left/right check).
 - is the part of the MRI outside the head (i.e., the air) uniform and black? If not, you might be able to clean it up with  **[ft_defacevolume](/reference/ft_defacevolume)**.
 - are the anatomical landmarks at the expected coordinates? In this case the nasion is at (116,0,0) mm, the left ear at (0,72,0) mm, the right ear at (0,-71,0) mm, in line with the CTF convention. If not, you will have to realign the MRI to the desired coordinate system (see next section).
 

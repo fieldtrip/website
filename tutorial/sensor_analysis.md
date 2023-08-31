@@ -147,7 +147,7 @@ We can compute the planar magnetic gradient using **[ft_megplanar](/reference/ft
     cfg                 = [];
     tl_plancmb          = ft_combineplanar(cfg, tl_planar);
 
-Note that we create a 'neighbours' structure before calling **[ft_megplanar](/reference/ft_megplanar)**. This is required by **[ft_megplanar](/reference/ft_megplanar)** because the 'sincos' algorithm needs to know which channels are adjacent to one another. Plot the results agai
+Note that we create a 'neighbours' structure before calling **[ft_megplanar](/reference/ft_megplanar)**. This is required by **[ft_megplanar](/reference/ft_megplanar)** because the 'sincos' algorithm needs to know which channels are adjacent to one another. Plot the results again
 
     cfg                 = [];
     cfg.showlabels      = 'yes';

@@ -20,7 +20,7 @@ A: All inverse methods in FieldTrip are independent from the forward model, i.e.
 
 1. FNS computes the forward solution starting from segmented volumes (does not require necessarily meshes as input, but uses FSL (if installed) to segment them)
 2. The output of FNS is a volumetric image representing the voltage in all points of the space
-3. FNS on a Linux machine requires MATLAB and [Biolectromagnetism MATLAB toolbox](http://eeg.sourceforge.net/) (for time series visualization?)
+3. FNS on a Linux machine requires MATLAB and [Bioelectromagnetism MATLAB toolbox](http://eeg.sourceforge.net/) (for time series visualization?)
 4. To run FNS forward solver a user need to have 1 GByte of memory available
 
 ## How it works
