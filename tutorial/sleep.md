@@ -548,7 +548,7 @@ Other than detecting periods of hightened or lowered activity often it is intere
 
 ### R-waves and heart rate in ECG
 
-Detect R-waves using **[ft_artifact_zvalue](/reference/ft_artifact_zvalue)** by filtering in a frequency band that puts an emphasis on the R-waves frequency in the ECG. As R-waves are concrete peaks we find the maxima in the envelope of the envelope signals. Note that this methods also works if the R-waves would be inversed pointing towards the negative values.
+Detect R-waves using **[ft_artifact_zvalue](/reference/ft_artifact_zvalue)** by filtering in a frequency band that puts an emphasis on the R-waves frequency in the ECG. As R-waves are concrete peaks we find the maxima in the envelope of the envelope signals. Note that this methods also works if the R-waves would be inverted pointing towards the negative values.
 
     %% find heart R-waves in ECG
     cfg            = [];

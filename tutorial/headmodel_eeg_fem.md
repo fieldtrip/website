@@ -158,9 +158,9 @@ _Figure. Binary representations of gray matter, white matter, csf, skull, and sc
 
 ### Meshing
 
-The next step is to create a geometrical description of the head by the **[ft_prepare_mesh](/reference/ft_prepare_mesh)** function. At the moment FieldTrip-SIMBIO only supports hexahedrons. The hexahedral mesh elements consist of 8 vertices at the corners that are connected like cubes. Each hexahedron is assigned to one of the five tissue-types.
+The next step is to create a geometrical description of the head by the **[ft_prepare_mesh](/reference/ft_prepare_mesh)** function. At the moment FieldTrip-SIMBIO only supports hexahedra. The hexahedral mesh elements consist of 8 vertices at the corners that are connected like cubes. Each hexahedron is assigned to one of the five tissue-types.
 
-To improve how the mesh approximates the head shape, a node-shift can be applied. This shifts vertices at the boundaries in the direction of those hexahedrons that represent the minority around it (see figure). The magnitude of the shift is controlled by a shift parameter which can range from 0 (no shift) to 0.3.
+To improve how the mesh approximates the head shape, a node-shift can be applied. This shifts vertices at the boundaries in the direction of those hexahedra that represent the minority around it (see figure). The magnitude of the shift is controlled by a shift parameter which can range from 0 (no shift) to 0.3.
 
     cfg        = [];
     cfg.shift  = 0.3;
@@ -236,7 +236,7 @@ Note that the unit of measurement used in the geometrical description of headmod
 
 ### Visualization
 
-The hexahedral mesh is a geometrical description of the head. It is built up from hexahedrons. For visualization, it is possible to use the **[ft_plot_mesh](/reference/plotting/ft_plot_mesh)** function which is generally used for plotting any type of meshes in FieldTrip. Because of the large number of points in a mesh, it is advised to use the 'surfaceonly' option. In this case, the function will plot hexagonal surfaces of those hexahedrons which create the outside surface of the head.
+The hexahedral mesh is a geometrical description of the head. It is built up from hexahedra. For visualization, it is possible to use the **[ft_plot_mesh](/reference/plotting/ft_plot_mesh)** function which is generally used for plotting any type of meshes in FieldTrip. Because of the large number of points in a mesh, it is advised to use the 'surfaceonly' option. In this case, the function will plot hexagonal surfaces of those hexahedra which create the outside surface of the head.
 
     ft_plot_mesh(mesh, 'edgecolor','none', 'facecolor', 'skin', 'facealpha', 0.7);
     ft_plot_axes(mesh)
@@ -258,7 +258,7 @@ This only shows the outside of the scalp. To see the other tissues, you can spli
     mesh_skull = rmfield(mesh, {'tissue', 'tissuelabel'});
     mesh_white = rmfield(mesh, {'tissue', 'tissuelabel'});
 
-    % only keep the hexaheders for the corresponding tissue type
+    % only keep the hexahedra for the corresponding tissue type
     mesh_csf.hex   = mesh.hex(mesh.tissue==1,:);
     mesh_gray.hex  = mesh.hex(mesh.tissue==2,:);
     mesh_scalp.hex = mesh.hex(mesh.tissue==3,:);

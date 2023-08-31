@@ -90,7 +90,7 @@ Next, we perform the independent component analysis according to the following s
 
 - Resampling the data to a lower sample rate in order to speed up ICA computation **[ft_resampledata](/reference/ft_resampledata)**. Note, that we will compute the ICA twice in order to retain the original sampling rate. The option **cfg.resamplefs** depends on your knowledge about the spectral characteristics of the artifacts you would like to discover. Vertical and horizontal eye movements are typically dominated by high energy in the low frequency <10 Hz. Therefore everything above the Nyquist frequency of the targeted signal, in this case 20 Hz, is an appropriate sampling rate. Cardiac artifacts vary over the entire frequency spectrum, although there is some dominance in the slower frequencies too. The decision about the new sampling frequency thus strongly depends on your needs. If you are interested in the detection of caridac and oculo-motor activity a sampling rate of >100 Hz will be appropriate for most of the cases.
 - Perform the independent components analysis on the resampled data **[ft_componentanalysis](/reference/ft_componentanalysis)**
-- Repeat the independent components analysis on the original data by applying the linear demixing and topography lebels form the previous step
+- Repeat the independent components analysis on the original data by applying the linear demixing and topography labels form the previous step
 
   % project the cont data thru the components
   cfg = [];
@@ -321,7 +321,7 @@ With the use of cfg.atlas you can specify a lookup atlas, which **[ft_sourceplot
 #### Exercise: regularization
 
 {% include markup/info %}
-The regularization parameter was lambda = '5%'. Change it to '0%' or to '10%' and plot the power estimate. How does the regularization parameter affect the properties of the spatial filter?  
+The regularization parameter was lambda = '5%'. Change it to '0%' or to '10%' and plot the power estimate. How does the regularization parameter affect the properties of the spatial filter?
 {% include markup/end %}
 
 #### Exercise: covariance matrix computation
@@ -372,7 +372,7 @@ Next, we repeat the three subsequent calls to **[ft_sourceanalysis](/reference/f
     cfg.lcmv.lambda = '5%';
     cfg.channel = {'MEG'};
     sourceavg = ft_sourceanalysis(cfg, avg);
-    
+
     cfg = [];
     cfg.method = 'lcmv';
     cfg.grid = grid;
@@ -574,7 +574,7 @@ We will continue to analyze the EEG data according to a series of steps similar 
     datapre = ft_redefinetrial(cfg, data_eeg_right);
     cfg.toilim = [.05 .15];
     datapost = ft_redefinetrial(cfg, data_eeg_right);
-    
+
     %% output cov matrix of the entire interval
     cfg = [];
     cfg.covariance='yes';
@@ -640,7 +640,7 @@ Now that we have everything prepared we can start to calculate the spatial filte
     sourcepreM1=ft_sourceanalysis(cfg, avgpre);
     sourcepstM1=ft_sourceanalysis(cfg, avgpst);
 
-Again we express the source power as relative change to the pre response interva
+Again we express the source power as relative change to the pre response interval
 
     M1eeg=sourcepstM1;
     M1eeg.avg.pow=(sourcepstM1.avg.pow-sourcepreM1.avg.pow)./sourcepreM1.avg.pow;

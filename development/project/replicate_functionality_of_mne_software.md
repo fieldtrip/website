@@ -397,7 +397,7 @@ And this is for plotting a mesh (inner skull) created by F
 
     ft_plot_mesh(vol.bnd(3),'facecolor','skin');camlight;
 
-The following picture show the BEM meshe
+The following picture show the BEM meshes
 
 {% include image src="/assets/img/development/project/replicate_functionality_of_mne_software/meshes2.jpg" width="500" %}
 

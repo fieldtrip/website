@@ -113,7 +113,7 @@ Note that the jumps are easier to identify if you would not have applied a high-
 {% include markup/info %}
 Preprocessing and filtering serves to reduce artifacts (such as drifts) and hence makes artifacts less visible. Unpreprocessed data gives the best representation of the artifacts.
 
-Repeat the inspection with ft_databrowser on the original data, without high-pass filter and without resampling. That requires that you have to call ft_preprocessing again. Look at the channels that start with `MTL*` around 178 seconds into the recording and compare the juimp to the one you observed in the filtered and downsampled data.
+Repeat the inspection with ft_databrowser on the original data, without high-pass filter and without resampling. That requires that you have to call ft_preprocessing again. Look at the channels that start with `MTL*` around 178 seconds into the recording and compare the jump to the one you observed in the filtered and downsampled data.
 
 Be aware that artifacts (and trials) are expressed in samples, so you can look at the same time in the recording, but you cannot refer to the artifacts in the original and downsampled data using the same sample numbers.
 {% include markup/end %}
@@ -186,7 +186,7 @@ To perform the ICA decomposition, you can use the following code. Here we use a 
     cfg.channel      = {'MEG', 'MEGREF'};
     data_comp = ft_componentanalysis(cfg, data_clean); % using the data without atypical artifacts
 
-You should do the decomposition only on channels that see the brain and artifactual components in a simmilar way and that together represent a linear mixture of the underlying sources. If you have EEG and EOG channels that are recorded using the same reference, the EEEG and EOG channels can goin there together. If you have EEG relative to one reference and bipolar EOG channels, you should not combine them in a single ICA decomposition. When you have combined MEG and EEG data, the MEG and EEG channels will both see the brain and artifactual sources, but have different sensitivity to them and to effects due to movement of the head relative to the MEG melmet; in that case we also recommend to use the ICA separately on the MEG and on the EEG channels.
+You should do the decomposition only on channels that see the brain and artifactual components in a simmilar way and that together represent a linear mixture of the underlying sources. If you have EEG and EOG channels that are recorded using the same reference, the EEEG and EOG channels can goin there together. If you have EEG relative to one reference and bipolar EOG channels, you should not combine them in a single ICA decomposition. When you have combined MEG and EEG data, the MEG and EEG channels will both see the brain and artifactual sources, but have different sensitivity to them and to effects due to movement of the head relative to the MEG helmet; in that case we also recommend to use the ICA separately on the MEG and on the EEG channels.
 
 ### Identifying artifactual components
 
@@ -200,7 +200,7 @@ The decomposed data structure `data_comp` represents the topographies of the com
 
 {% include image src="/assets/img/tutorial/ica_artifact_cleaning/figure4.png" width="600" %}
 
-With some experience, you can relatively quickly identify components that are suspect for artifacts. Eye-related components are spatially localized on the frontal channels, blinks and vertical saccacdes are symmetric and horozontal saccades show a distinct left-right pattern. Heart-related components in MEG show up as avery deep source with a bipolar projecting over the left and right side ofthe helmet. It is common for both eye and heart components that you will see a few of them. You may want to write down the number of each of the suspect components.
+With some experience, you can relatively quickly identify components that are suspect for artifacts. Eye-related components are spatially localized on the frontal channels, blinks and vertical saccacdes are symmetric and horizontal saccades show a distinct left-right pattern. Heart-related components in MEG show up as avery deep source with a bipolar projecting over the left and right side ofthe helmet. It is common for both eye and heart components that you will see a few of them. You may want to write down the number of each of the suspect components.
 
 In the figure above, components 10 and 12 look like eye-related components. Component 5 and 6 probably still relate to the SQUID jumps on MLT24 and neighbouring channels. In this case there are no obvous heart-related component visible
 
@@ -216,7 +216,7 @@ Subsequently you can look at the time course of the components. The heart-relate
 
 Again you write down the components that represent artifacts.
 
-Note that due to eye components in MEG look different than eye components in EEG, that is due to the orientation of the MEG channels: on the left side of the head the channels point to the right and on the right side they point to the left, this cause their "polarity" to flip. With EEG electrodes all frontal electrodes have the same polarity. In combination with the component time series you can figure out which component reflects horozontal movements and which reflects blinks.
+Note that due to eye components in MEG look different than eye components in EEG, that is due to the orientation of the MEG channels: on the left side of the head the channels point to the right and on the right side they point to the left, this cause their "polarity" to flip. With EEG electrodes all frontal electrodes have the same polarity. In combination with the component time series you can figure out which component reflects horizontal movements and which reflects blinks.
 
 ### Identifying bad channels
 

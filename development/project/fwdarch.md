@@ -37,7 +37,7 @@ All the routines which create a forward model need a description of the volume c
 The leftmost box indicates a set of functions (MATLAB/external toolboxes, FieldTrip) that deal with anatomical volumes (a 3D matrix filled with intensity values - a set of voxels).
 This step manages the volumetric information (MRI/CT scans) and transforms the anatomy into a processed anatomy ('ana2ana' functions), transforms the anatomy into a binary segmentation ('ana2seg' functions) or manipulates segmented images ('seg2seg' functions, i.e. morphology operators).
 
-The content of the central box is a set of functions which refines the geometrical description derived from the volumetric analysis. Any visual quality control is processed in this section, including interactions with the operator. The input can be a segmented volume, a triangulated set of points or a cloud of points. The output is a geometry (geom), defined as a geometrical description other than volumetric, like for example a triangulated mesh, a cloud of points representing the head, a 3D lattice of tetrahedrons/hexahedrons, etc.
+The content of the central box is a set of functions which refines the geometrical description derived from the volumetric analysis. Any visual quality control is processed in this section, including interactions with the operator. The input can be a segmented volume, a triangulated set of points or a cloud of points. The output is a geometry (geom), defined as a geometrical description other than volumetric, like for example a triangulated mesh, a cloud of points representing the head, a 3D lattice of tetrahedra/hexahedra, etc.
 
 The third block (Post-processing) performs all automatic steps to build the description of the volume conductor ('vol' structure with various fields). This last step provides the piece of information which is fed to the forward solution algorithms ([the various lead field computation routines](#The functions in Forward module)). This post-processing functions are **not supposed to change the meshes anymore** and call method-specific head model functions (**[ft_headmodel_XXX](#A list of the headmodel functions.m)** routines)
 
@@ -155,7 +155,7 @@ volume of the scalp, the skull, inside of the skull, inside of the CSF
 --the skull
 --the scalp
 OR
-8-10b - Generate a set of hexahedrons using vgrid
+8-10b - Generate a set of hexahedra using vgrid
 11 - Assign the conductivity tensor to each -hedron element (from literature and DTI data)
 12 - Check the consistency of tetrahedral/hexahedral normals (vertices order has to be consistent)
 
@@ -509,7 +509,7 @@ OR
 2 - Create a filled outer skull compartment
 3 - Use marching cubes (isosurface.m) to determine the mesh
 OR
-3 - Project lines out of a inner icosaedron onto the outer skull to determine the mesh
+3 - Project lines out of a inner icosahedron onto the outer skull to determine the mesh
 
 [Back](#Architecture/ defining a table for the possible implementations)
 
@@ -603,7 +603,7 @@ The triangulation methods are generally applied to pre-processed volumetric obje
 These methods are commonly used in FieldTrip
 
 - The marching cubes algorithm implemented by the MATLAB function isosurface.m
-- The projection of lines from the center of an icosaedron, to obtain the points of the volume that correspond to the transition between inside and outside of the volume
+- The projection of lines from the center of an icosahedron, to obtain the points of the volume that correspond to the transition between inside and outside of the volume
 - The use of edge detection to determine the points of the volumetric boundaries (see the **edge** function in the Image Processing Toolbox)
 
 The second method is more stable in case of noise in the volumetric compartment

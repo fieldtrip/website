@@ -38,7 +38,7 @@ Frequency Analysis progress:
   - tfr and wltconvol have different amplitudes then the other methods.
   - tfr and wltconvol averages have the same shape.
   - mtmwelch and mtmfft are the same when taking t_ftimwin the length of total timewindow (/hanvdgei/test_HD_002/freq002_a).
-  - mtmwelch and mtmconvol give the same results when taking t_ftimwin the same lengthes (/hanvdgei/test_HD_002/freq002_b).
+  - mtmwelch and mtmconvol give the same results when taking t_ftimwin the same lengths (/hanvdgei/test_HD_002/freq002_b).
   - tfr and wltconvol increase amplitude when cfg.waveletwidth or cfg.width (is same: expresse the width of the wavelets in nr of cycles) is increased from 5 to 7. (/hanvdgei/test_HD_002/freq002_c).
   - More cycles increase the amplitudes more. 6 cycles is closest (Maybe should be default?, /hanvdgei/test_HD_002/freq002_d).
   - tested taper smoothing for mtmfft with 10, 20, 30 and 40 Hz smoothing (/hanvdgei/test_HD_002/freq002_e).

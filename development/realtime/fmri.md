@@ -17,7 +17,7 @@ Further to that, a small modification needs to be made to the applied MR sequenc
 
 Recent Siemens software versions (VB17) include an option for realtime export of DICOM images, however it seems there is considerable jitter in the arrival of those files. Alternatively, there is an example of how to export data directly from within an ICE component. However, that piece of code would run on the imager, which is not directly connected to the outside world network. It was therefore decided to build a custom solution based on accessing files on the scanner host.
 
-There are essentially two steps involved for using this mechanis
+There are essentially two steps involved for using this mechanism
 
 1.  Start a FieldTrip buffer server on some machine and port number in the network, e.g., on mentat069:1972.
 2.  On the scanner console, start **gui_streamer** and enter "mentat069" as well as "1972" in the "hostname" and "port" input fields, then press "Connect".

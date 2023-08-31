@@ -3273,8 +3273,6 @@ gpDemarchi
 gradiometer
 gradiometers
 gradmul
-gradometer
-gradometers
 gradscale
 graining
 gramm
@@ -3308,7 +3306,6 @@ hR
 hackathon
 haemodynamic
 halfspace
-halway
 handson
 hann
 hannel
@@ -3354,18 +3351,13 @@ hebben
 hedron
 helenacockx
 helpdesk
-helpfull
 hemifield
 hemodynamic
-herarchical
 heschl
 het
-heterogenous
-hexaheders
 hexahedra
 hexahedral
 hexahedron
-hexahedrons
 hfig
 hgp
 hh
@@ -3396,10 +3388,8 @@ holms
 homog
 homogen
 homogenous
-horozontal
 hostname
 hotspot
-hould
 howto's
 hpfilter
 hpfreq
@@ -3430,7 +3420,6 @@ icabrowser
 icasso
 ico
 icoh
-icosaedron
 icosahedron
 icp
 idtype
@@ -3453,7 +3442,6 @@ immunities
 imopen
 impedances
 implemenations
-implementated
 implementatie
 imregionalmax
 incongruent
@@ -3464,7 +3452,6 @@ indepsamplesWilksLambda
 indepsamplesZcoh
 indepsamplesregrT
 indx
-inferface
 infos
 ingoing
 inhomogeneities
@@ -3486,13 +3473,10 @@ inputargs
 inputdata
 inputfile
 inscripts
-instantaneousness
 instanteneous
 instrfind
-intefere
 integrations
 intel
-interative
 interaural
 interauricular
 interdependencies
@@ -3508,7 +3492,6 @@ interpretability
 interpretable
 interpretational
 intertrial
-interva
 intra
 intracellular
 intracortically
@@ -3517,13 +3500,9 @@ intrahemispheric
 intrepretation
 introductionary
 inv
-invdidual
 inventorise
 inventorize
-inversed
 inverseproblem
-invividual
-involvment
 inwardshift
 io
 ioGain
@@ -3572,7 +3551,6 @@ jpsth
 json
 jsonlab
 judgement
-juimp
 june
 jyvaskyla
 kB
@@ -3600,7 +3578,6 @@ klopt
 koehler
 ku
 kurt
-kurtisis
 kurtosis
 l'Hôpital
 lFFA
@@ -3623,7 +3600,6 @@ lateralisation
 laterality
 lateralization
 lateralized
-laterlisation
 layoutplot
 lcc
 lcmv
@@ -3636,10 +3612,7 @@ leadfields
 leadfmne
 learnt
 leaveout
-lebels
 leftui
-lenghty
-lengthes
 leuven
 lf
 lfp
@@ -3668,7 +3641,6 @@ linkprop
 linux
 lm
 ln
-loacations
 loadset
 loadvar
 loc
@@ -3685,7 +3657,6 @@ localspheres
 localspheresctf
 localspheresfths
 localspheresftsegment
-locic
 logfile
 logi
 london
@@ -3720,10 +3691,8 @@ maketrials
 malleolus
 mannheim
 manova
-manualy
 manzana
 maplimits
-marke
 markercolor
 markerfontsize
 markergui
@@ -3739,7 +3708,6 @@ matbin
 matfile
 matfiles
 mathijs
-matix
 matlab
 matlab's
 matlabXXXX
@@ -3748,9 +3716,7 @@ matlablt
 matlabpool
 matnwb
 matplotlib
-matri
 matricial
-matrixes
 maxStat
 maxabs
 maxfilter
@@ -3769,8 +3735,6 @@ mclust
 mcpiastra
 md
 mdata
-measuremnents
-mechanis
 medianfilter
 mediante
 megconnectome
@@ -3781,7 +3745,6 @@ megplanar
 megrealign
 megrepair
 megscale
-melmet
 memcopy
 memcpy's
 memor
@@ -3791,7 +3754,6 @@ memtoc
 mentat
 mentats
 merchantability
-meshe
 meshinfl
 meshlab
 meshorig

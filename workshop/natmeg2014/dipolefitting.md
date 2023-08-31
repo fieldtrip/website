@@ -693,7 +693,7 @@ _After dilation of 2 voxels _
 
 _The final segmentation _
 
-Using a combination of imerode and Boolean locic with the “AND” operator, we can make a segmentation of the scalp, skull and skin that is **not inflated**.
+Using a combination of imerode and Boolean logic with the “AND” operator, we can make a segmentation of the scalp, skull and skin that is **not inflated**.
 
 {% include markup/info %}
 Compare the four figures and toggle back and forth. Can you see the effect of the dilation on the outside of the scalp?

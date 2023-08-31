@@ -219,7 +219,7 @@ stat_standard_oddball_clusstats  = ft_timelockstatistics(cfg, standard_all{:}, o
 % save(fullfile(output_dir, 'stat_standard_oddball_clusstats.mat'), 'stat_standard_oddball_clusstats');
 ```
 
-You can compare the design matrix to that of an GLM analysis of fMRI data, except that it does not code invividual fMRI volumes but subjects, and is transposed with the subjects along colums.
+You can compare the design matrix to that of an GLM analysis of fMRI data, except that it does not code individual fMRI volumes but subjects, and is transposed with the subjects along colums.
 
     figure
     imagesc(cfg.design)

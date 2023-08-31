@@ -303,7 +303,7 @@ To create a standard script from the analysis pipeline, the `ft_default` variabl
 
 {% include image src="/assets/img/example/reproducescript/filedir_example2_reproducescript.jpg" width="435" %}
 
-We devoted a specific folder to the reproducescript content of each subject, and one for the group analysis. Thus, upon execution of the master script in `analyze.m`, folders are created for each of the subjects, and for the group analysis. These all contain the intermediate data, a standardized script, and a `hashes.mat` file for the bookkeeping. The reproducescript standardized scripts for the single-subject analysis and group analysis can be found below. Note that these are quite lenghty, but they unambiguously list all analysis steps.
+We devoted a specific folder to the reproducescript content of each subject, and one for the group analysis. Thus, upon execution of the master script in `analyze.m`, folders are created for each of the subjects, and for the group analysis. These all contain the intermediate data, a standardized script, and a `hashes.mat` file for the bookkeeping. The reproducescript standardized scripts for the single-subject analysis and group analysis can be found below. Note that these are quite lengthy, but they unambiguously list all analysis steps.
 
 #### Single subject reproduced analysis
 

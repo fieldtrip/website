@@ -16,7 +16,7 @@ The functions' types available at the moment deal with different types of object
 - **meshes**: they are 3D meshes (nodes and elements) describing a wireframe structure. Used in FEM, FDM methods can be tetrahedrons, hexahedrons (cubes) or others
 - **head models**: a structure containing the necessary information to run a forward model algorithm (geometry+conductivity+others)
 
-* The from (rows)-to (columns) matri
+* The from (rows)-to (columns) matrix
 
 | ^ ana ^ seg ^ surf ^ mesh ^ hdm |
 | ------------------------------- |

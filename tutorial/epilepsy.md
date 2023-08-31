@@ -78,7 +78,7 @@ The flexibility of FieldTrip can offer additional information to support data in
 
 {% include markup/success %}
 Female, age 14. Epilepsy. Referral for MEG because EEG did not
-allow laterlisation or localization of discharges, though clinically
+allow lateralisation or localization of discharges, though clinically
 they appeared to come from the left hemisphere. Functional neuroimaging
 in the form of a PET scan showed a right area of hypometabolism.
 
