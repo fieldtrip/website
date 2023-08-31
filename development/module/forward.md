@@ -23,7 +23,7 @@ Please note that if you are an end-user interested in analyzing experimental EEG
 
 ## Module layout
 
-The [forward](/development/module/forward) module contains functions with a user interface that will be easily understood by experimenced programmers and methods developers and can be considered medium-level functions. They have a clear and consistent programming interface (API) which hides the specific details particular volume conduction models and that allows software developers to write forward methods without having to worry about integrating it with the inverse methods worry about data handling. The low-level functions on which the functions in the forward module depend are located in a private subdirectory which is not accessible from the MATLAB command line.
+The [forward](/development/module/forward) module contains functions with a user interface that will be easily understood by experienced programmers and methods developers and can be considered medium-level functions. They have a clear and consistent programming interface (API) which hides the specific details particular volume conduction models and that allows software developers to write forward methods without having to worry about integrating it with the inverse methods worry about data handling. The low-level functions on which the functions in the forward module depend are located in a private subdirectory which is not accessible from the MATLAB command line.
 
 The forward module is complemented by an [inverse](/development/module/inverse) module that contains the implementation of various high-quality inverse source estimation algorithms, such as dipole fitting, beamforming and linear estimation using the minimum-norm approach.
 
@@ -50,7 +50,7 @@ The following forward methods are implemented for computing the magnetic field (
 
 ## Definition of the high-level function-calls (user interface)
 
-Normally, end-users of the FieldTrip toolbox would use the functions in the main FieldTrip directory and not be calling the functions that are part of the forward module directly . The high-level FieldTrip functions characterize themself by having a cfg argument as the first input, doing data handling, conversions of objects and try to support backward-compatibility with older end-user analysis scripts.
+Normally, end-users of the FieldTrip toolbox would use the functions in the main FieldTrip directory and not be calling the functions that are part of the forward module directly . The high-level FieldTrip functions characterize themselves by having a cfg argument as the first input, doing data handling, conversions of objects and try to support backward-compatibility with older end-user analysis scripts.
 
 Some high-level functions that are of relevance for forward modeling are
 

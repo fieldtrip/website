@@ -5,7 +5,7 @@ tags: [dataformat, xsens, motion]
 
 # Getting started with XSens motion tracking data
 
-[XSens](http://www.xsens.com) is a company that makes IMU-based motion capture systems that are used in the animation industry and in research. Their MVN Analyze system comprises full-body sensor systems and aquisition and analysis software. By default the software stores the data in the proprietary MVN file format, but it allows the data to be exported to open formats that are supported by FieldTrip
+[XSens](http://www.xsens.com) is a company that makes IMU-based motion capture systems that are used in the animation industry and in research. Their MVN Analyze system comprises full-body sensor systems and acquisition and analysis software. By default the software stores the data in the proprietary MVN file format, but it allows the data to be exported to open formats that are supported by FieldTrip
 
 ## C3D
 
@@ -26,7 +26,7 @@ This returns a data structure like this:
              trial: {[192x26229 double]}
            fsample: 60
         sampleinfo: [1 26229]
-               cfg: [1x1 struct]  
+               cfg: [1x1 struct]
 
 where the channels correspond to the time-varying positions of of the reconstructed stick-figure reference points. There are 64 reference points, represented as (x, y, z) in 192 channels:
 
@@ -51,7 +51,7 @@ where the channels correspond to the time-varying positions of of the reconstruc
         ...
         {'pLeftToe_x'               }
         {'pLeftToe_y'               }
-        {'pLeftToe_z'               }  
+        {'pLeftToe_z'               }
         ...
 
 

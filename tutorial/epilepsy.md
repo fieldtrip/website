@@ -78,7 +78,7 @@ The flexibility of FieldTrip can offer additional information to support data in
 
 {% include markup/success %}
 Female, age 14. Epilepsy. Referral for MEG because EEG did not
-allow laterlisation or localization of discharges, though clinically
+allow lateralisation or localization of discharges, though clinically
 they appeared to come from the left hemisphere. Functional neuroimaging
 in the form of a PET scan showed a right area of hypometabolism.
 
@@ -132,7 +132,7 @@ We want to store all processed results in a different directory than the one con
     outputdir = '/data/epilepsy/processed/case3'; % this is where results will be saved
     cd(outputdir)
 
-#### Coregistering the MEG and MRI data
+#### Coregistration of the MEG and MRI data
 
 The original MRI that is provided for this patient has been partially processed with the CTF software and MRIcro, and is stored in NIFTI format. This MRI is _not shared_ for privacy reasons. Nevertheless, here we will show how it was processed in FieldTrip.
 
@@ -343,7 +343,7 @@ We use a bit of standard MATLAB code to find the regional peaks in the kurtosis
 
 {% include image src="/assets/img/tutorial/epilepsy/case3/ctf/figure7.gif" width="700" %}
 
-##### Visualize the kurtisis images in MRIcro
+##### Visualize the kurtosis images in MRIcro
 
 At this stage, we can also write out our images (i.e., the resliced MRI and the kurtosis image that we just made) into NIFTI format so they can be imported into other software that may be more prevalent in clinical settings and allows the results to merged with other clinical information.
 
@@ -411,7 +411,7 @@ Finally we can automatically mark potential spikes in the source time series dat
     end
     fclose(fid);
 
-The data can now be opened in AnyWave. Once the file is opened, to see sources alongside source data, click 'Add View' in the top/middle toolbar. Then use the eyeball icon to set each view so that one has 'MEG' and one has 'SOURCE' data. Set the timescale to be 0.3 sec/cm (close to the clinical standard 3cm/sec) and scale the amplitudes appropritely. Use the menu to import the marker file that we just created.
+The data can now be opened in AnyWave. Once the file is opened, to see sources alongside source data, click 'Add View' in the top/middle toolbar. Then use the eyeball icon to set each view so that one has 'MEG' and one has 'SOURCE' data. Set the timescale to be 0.3 sec/cm (close to the clinical standard 3cm/sec) and scale the amplitudes appropriately. Use the menu to import the marker file that we just created.
 
 {% include image src="/assets/img/tutorial/epilepsy/case3/ctf/figure9.png" width="700" %}
 
@@ -430,7 +430,7 @@ To ensure that we are not mixing up the two datasets, we will clear all variable
     outputdir = '/data/epilepsy/processed/case3/neuromag';
     cd(outputdir)
 
-#### Coregistering the MEG and MRI data
+#### Coregistration of the MRI data to the MEG data
 
 For patient confidentiality we only include here the MRI which has already been coregistered with the data, defaced, and resliced to align it to the data head co-ordinate system. The process for coregistration is identical to the one described above, except that in the Neuromag system the Polhemus head shape points are stored in the raw data file.
 
@@ -635,7 +635,7 @@ The remainder of the analysis is identical to the CTF analysis: we interpolate a
 
 {% include image src="/assets/img/tutorial/epilepsy/case3/neuromag/figure15.gif" width="700" %}
 
-##### Visualize the kurtisis images in MRIcro
+##### Visualize the kurtosis images in MRIcro
 
     cfg = [];
     cfg.filename = 'Case3_anatomy.nii';

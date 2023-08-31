@@ -11,7 +11,7 @@ In this tutorial we will be looking at frequency analysis, and specifically on t
 
 Using this tutorial you will learn how to do EEG preprocessing, time-frequency analysis and continuous analysis (as if it were sleep or resting-state data). After this tutorial, you could continue with the [tutorials on statistics](/tutorial/#statistics), or with one of the example scripts on using general linear modeling (GLM) on [time series data](/example/glm_timeseries) or over [trials](/example/glm_trials).
 
-We assume that you are already familar with the basic concepts of EEG processing, that you know how to use MATLAB, and that you have some idea on how to use FieldTrip. The focus will be on explaning the strategy used for data analysis, i.e. building a FieldTrip analysis pipeline, and explaining the options relevant for the analysis.
+We assume that you are already familiar with the basic concepts of EEG processing, that you know how to use MATLAB, and that you have some idea on how to use FieldTrip. The focus will be on explaining the strategy used for data analysis, i.e. building a FieldTrip analysis pipeline, and explaining the options relevant for the analysis.
 
 In case EEG, preprocessing, spectral analysis and FieldTrip are new to you, we recommend you watch some of the [video lectures](/video).
 
@@ -97,7 +97,7 @@ In the next step we compute the average for groups of trials that belong to spec
     cfg.preproc.lpfilter   = 'yes';
     cfg.preproc.lpfreq     = 30;
     cfg.preproc.lpfilttype = 'firws';
-    
+
     cfg.trials       = strcmp(data_segmented_clean.trialinfo.modality, 'spoken');
     timelock_spoken  = ft_timelockanalysis(cfg, data_segmented_clean);
 
@@ -126,7 +126,7 @@ Repeat the filtering and averaging, but now for a different partitioning of the 
     cfg.preproc.lpfilter   = 'yes';
     cfg.preproc.lpfreq     = 30;
     cfg.preproc.lpfilttype = 'firws';
-    
+
     cfg.trials       = strcmp(data_segmented_clean.trialinfo.category, 'animals');
     timelock_animals = ft_timelockanalysis(cfg, data_segmented_clean);
 
@@ -303,7 +303,7 @@ We want to use as much data as possible to identify the eye movement related act
     data            = ft_preprocessing(cfg);
 
 
-### Extract the vEOG as separate data struture, to use for blink detection
+### Extract the vEOG as separate data structure, to use for blink detection
 
 Identify and remove eye blinks using the DSS algorithm. See [this example](/example/use_denoising_source_separation_dss_to_remove_ecg_artifacts) for details.
 
@@ -354,7 +354,7 @@ In this step, the approximate onsets of eye blinks are identified. This is based
     cfg = ft_artifact_zvalue(cfg, eogv_stitched);
 
 
-#### Estimate components wit the desnoising source separation (DSS) algorithm
+#### Estimate components wit the denoising source separation (DSS) algorithm
 
 DSS is a blind source separation algorithm that aims at identifying underlying sources based on some constraints. Here, the sources are separated based on the constraint that they show a large signal time-locked to the eye blink (hence the peak detection in the previous step).
 
@@ -458,7 +458,7 @@ Exercise: Explore the data of the other condition, as well as the difference bet
 
 ## Continuous analysis, chunked spectral decomposition
 
-And now for something completely different. The next part of this tutorial deals with an analysis that treats the data more as a continuous chunk, rather than a collection of experimentally relevant epochs. The idea behind this, is that there might be fluctuations in some aspects of the brain signals, on longer time scales than the relevant cognitive events, which could interact with the way in which the brain responds to those events. Below we are going to perform a time-frequency analysis on the whole >1 hour recording. This part of the tutorial can be eplored on itself, for which the data needs to be processed from the raw datafile.
+And now for something completely different. The next part of this tutorial deals with an analysis that treats the data more as a continuous chunk, rather than a collection of experimentally relevant epochs. The idea behind this, is that there might be fluctuations in some aspects of the brain signals, on longer time scales than the relevant cognitive events, which could interact with the way in which the brain responds to those events. Below we are going to perform a time-frequency analysis on the whole >1 hour recording. This part of the tutorial can be explored on itself, for which the data needs to be processed from the raw datafile.
 
 
 ### Load the continuous data or use the cleaned continuous data computed earlier

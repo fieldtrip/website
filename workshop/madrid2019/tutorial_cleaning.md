@@ -87,7 +87,7 @@ Following preprocessing, the data will have the following fields
     sampleinfo: [1 90000]
            cfg: [1x1 struct]
 
-Subsequently we will add the electrode description. For this we will use a custom script which is included with the data on the download server. The main reason for a custom script is that the EEG cap used in this stidy is the Electrical Geodesics Inc. (EGI) geodesic net, which has its own specific nomenclature for electrode positions, but some of the electrode positions correspond to the 10-10 standard system. If you are curious about the equivalence between the two systems, take a look at the custom function and [here](https://www.researchgate.net/publication/266609828_Determination_of_the_Geodesic_Sensor_Nets'_Average_Electrode_Positions_and_Their_10_-_10_International_Equivalents).
+Subsequently we will add the electrode description. For this we will use a custom script which is included with the data on the download server. The main reason for a custom script is that the EEG cap used in this study is the Electrical Geodesics Inc. (EGI) geodesic net, which has its own specific nomenclature for electrode positions, but some of the electrode positions correspond to the 10-10 standard system. If you are curious about the equivalence between the two systems, take a look at the custom function and [here](https://www.researchgate.net/publication/266609828_Determination_of_the_Geodesic_Sensor_Nets'_Average_Electrode_Positions_and_Their_10_-_10_International_Equivalents).
 
     data.elec = prepare_elec_chennu2016(data.label);
 
@@ -178,7 +178,7 @@ interpolate temporally-local channel-specific glitches._
 {% include markup/danger %}
 Note we deliberately skip step _2. apply robust detrending to each channel_ for
 later because it is necessary to find first the pieces of data with artifacts
-and to exclude them. De Cheveigne and Arzounian's detrending algorith has the
+and to exclude them. De Cheveigne and Arzounian's detrending algorithm has the
 possibility to exclude outliers so this is the main reason for us to change the
 order (check their _nt_detrend.m_ function).
 {% include markup/end %}
@@ -422,7 +422,7 @@ quickly redo the ICA unmixing.
     comp = ft_componentanalysis(cfg, data);
 
 We now visualize the components to select which ones model the artifacts. We add
-the visually indentified artifacts in order to see, which of those are matched
+the visually identified artifacts in order to see, which of those are matched
 by the independent component's time course.
 
     data.elec = prepare_elec_chennu2016(data.label);

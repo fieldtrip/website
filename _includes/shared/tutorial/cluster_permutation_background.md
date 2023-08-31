@@ -26,7 +26,7 @@ The two UO-types (**subjects** and **trials**) and the two experimental designs 
 
 The statistical testing in FieldTrip is performed by the functions **[ft_timelockstatistics](/reference/ft_timelockstatistics)** and **[ft_freqstatistics](/reference/ft_freqstatistics)**. From a statistical point of view, the calculations performed by these two functions are very similar. These functions differ with respect to the data structures on which they operate: **[ft_timelockstatistics](/reference/ft_timelockstatistics)** operates on data structures produced by **[ft_timelockanalysis](/reference/ft_timelockanalysis)** and **[ft_timelockgrandaverage](/reference/ft_timelockgrandaverage)**, and **[ft_freqstatistics](/reference/ft_freqstatistics)** operates on data structures produced by **[ft_freqanalysis](/reference/ft_freqanalysis)**, **[ft_freqgrandaverage](/reference/ft_freqgrandaverage)**, and **[ft_freqdescriptives](/reference/ft_freqdescriptives)**.
 
-To correct for multiple comparisons, one has to specify the field cfg.correctm. This field can have the values 'no', 'max', 'cluster', 'bonferoni', 'holms', or 'fdr'. In this tutorial, we only use cfg.correctm = 'cluster', which solves the MCP by calculating a so-called cluster-based test statistic and its significance probability.
+To correct for multiple comparisons, one has to specify the field cfg.correctm. This field can have the values 'no', 'max', 'cluster', 'bonferroni', 'holms', or 'fdr'. In this tutorial, we only use cfg.correctm = 'cluster', which solves the MCP by calculating a so-called cluster-based test statistic and its significance probability.
 
 #### The calculation of this cluster-based test statistic
 

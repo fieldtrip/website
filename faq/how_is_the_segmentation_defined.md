@@ -17,7 +17,7 @@ An example segmentation obtained after ft_volumesegment with the default segment
           white: [256x256x256 double] % probabilistic map of the white matter
             csf: [256x256x256 double] % probabilistic map of the cerebrospinal fluid
 
-The tissue type of each voxel can be represented in the FieldTrip structure in two different ways, which are mutually exclusive. The representation can be either _"probablistic"_ or _"indexed"_. The remainder of this page explains the difference between the two representations.
+The tissue type of each voxel can be represented in the FieldTrip structure in two different ways, which are mutually exclusive. The representation can be either _"probabilistic"_ or _"indexed"_. The remainder of this page explains the difference between the two representations.
 
 ## Probabilistic representation
 

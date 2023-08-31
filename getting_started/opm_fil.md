@@ -22,7 +22,7 @@ This is how the test dataset looks like. It consists of multiple files, that are
     mrifile       = 'testData/T1w.nii';
     cortexfile    = 'testData/testCustom.gii';
 
-Note that the data and headerinformation is scatered over multiple files, similar to BrainVision (vhdr,vmrk,eeg) and other formats. In FieldTrip we use cfg.dataset to indicate such a collection; in this case cfg.dataset can either refer to the headerfile or to the datafile.
+Note that the data and headerinformation is scattered over multiple files, similar to BrainVision (vhdr,vmrk,eeg) and other formats. In FieldTrip we use cfg.dataset to indicate such a collection; in this case cfg.dataset can either refer to the headerfile or to the datafile.
 
 ## Time series data
 
@@ -112,7 +112,7 @@ which is an interactive function. You have to provide the following answers:
 
 which results in the coordinate system being updated to RAS. This means that the x goes to the Right, the y goes to Anterior, and the z goes to superior. See also [this FAQ](/faq/coordsys) on coordinate systems.
 
-We could in principle now continue with further coregistration, usiing either one (or a combination) of these
+We could in principle now continue with further coregistration, using either one (or a combination) of these
 
 1.  coregister the OPM sensor positions to anatomical landmarks on the head
 2.  coregister the OPM positions to an antomical MRI

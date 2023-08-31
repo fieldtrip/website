@@ -201,7 +201,7 @@ You can play around with cfg.mne.lambda? Do you see the influence of different l
 #### Exercise 3
 
 {% include markup/info %}
-You can also play around with other parameters for the MNE. To find out more about MNE just type "help minimumnormestimate" into MatLab
+You can also play around with other parameters for the MNE. To find out more about MNE just type "help minimumnormestimate" into Matlab
 {% include markup/end %}
 
 #### Exercise 4

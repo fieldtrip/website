@@ -7,7 +7,7 @@ tags: [tutorial, eeg, source, headmodel, mri, plotting, paraview, seg3d, meg-lan
 
 ## Introduction
 
-This tutorial demonstrates how to construct a Finite Element Method (FEM) volume conduction model of the head, also known as head model, based on an individual subject's anatomical MRI. For didactic resons we will use the anatomical MRI corresponding to the data that was also analyzed in other tutorials. The original anatomical MRI data, along with the (intermediate) results of this tutorial, can be downloaded from [out download server](https://download.fieldtriptoolbox.org/tutorial/headmodel_eeg_fem/).
+This tutorial demonstrates how to construct a Finite Element Method (FEM) volume conduction model of the head, also known as head model, based on an individual subject's anatomical MRI. For didactic reasons we will use the anatomical MRI corresponding to the data that was also analyzed in other tutorials. The original anatomical MRI data, along with the (intermediate) results of this tutorial, can be downloaded from [out download server](https://download.fieldtriptoolbox.org/tutorial/headmodel_eeg_fem/).
 
 In reality we did _not_ record EEG data for this subject, nor do we have recorded electrode positions. To demonstrate the EEG volume conduction model, we will use [template](/template/electrode) electrodes. The template electrodes are not aligned with the individual MRI and head model, hence we will conclude with the alignment of the electrodes.
 
@@ -66,7 +66,7 @@ Check that the homogenous transformation matrix in `mri_realigned` is the same a
 
 ### Reslicing
 
-A common issue with anatomical MRI data is that it is plotted [upside down](/faq/my_mri_is_upside_down_is_this_a_problem). This is not neccessarily a problem for the FEM model that we will make, as we know the position of each MRI voxel relative to the coordinate system, but it is a bit inconvenient in the plottting of MRI slices and quality control later in the pipeline.
+A common issue with anatomical MRI data is that it is plotted [upside down](/faq/my_mri_is_upside_down_is_this_a_problem). This is not necessarily a problem for the FEM model that we will make, as we know the position of each MRI voxel relative to the coordinate system, but it is a bit inconvenient in the plotting of MRI slices and quality control later in the pipeline.
 
 The **[ft_volumereslice](/reference/ft_volumereslice)** function can be used to flip the volume such that the 1st dimension of the three-dimensional `mri.anatomy` array corresponds approximately with the x-axis of the coordinate system, that the 2nd dimension corresponds approximately to the y-axis, and the 3rd dimension to the z-axis.
 
@@ -158,9 +158,9 @@ _Figure. Binary representations of gray matter, white matter, csf, skull, and sc
 
 ### Meshing
 
-The next step is to create a geometrical description of the head by the **[ft_prepare_mesh](/reference/ft_prepare_mesh)** function. At the moment FieldTrip-SIMBIO only supports hexahedrons. The hexahedral mesh elements consist of 8 vertices at the corners that are connected like cubes. Each hexahedron is assigned to one of the five tissue-types.
+The next step is to create a geometrical description of the head by the **[ft_prepare_mesh](/reference/ft_prepare_mesh)** function. At the moment FieldTrip-SIMBIO only supports hexahedra. The hexahedral mesh elements consist of 8 vertices at the corners that are connected like cubes. Each hexahedron is assigned to one of the five tissue-types.
 
-To improve how the mesh approximates the head shape, a node-shift can be applied. This shifts vertices at the boundaries in the direction of those hexahedrons that represent the minority around it (see figure). The magnitude of the shift is controlled by a shift parameter which can range from 0 (no shift) to 0.3.
+To improve how the mesh approximates the head shape, a node-shift can be applied. This shifts vertices at the boundaries in the direction of those hexahedra that represent the minority around it (see figure). The magnitude of the shift is controlled by a shift parameter which can range from 0 (no shift) to 0.3.
 
     cfg        = [];
     cfg.shift  = 0.3;
@@ -236,7 +236,7 @@ Note that the unit of measurement used in the geometrical description of headmod
 
 ### Visualization
 
-The hexahedral mesh is a geometrical description of the head. It is built up from hexahedrons. For visualization, it is possible to use the **[ft_plot_mesh](/reference/plotting/ft_plot_mesh)** function which is generally used for plotting any type of meshes in FieldTrip. Because of the large number of points in a mesh, it is advised to use the 'surfaceonly' option. In this case, the function will plot hexagonal surfaces of those hexahedrons which create the outside surface of the head.
+The hexahedral mesh is a geometrical description of the head. It is built up from hexahedra. For visualization, it is possible to use the **[ft_plot_mesh](/reference/plotting/ft_plot_mesh)** function which is generally used for plotting any type of meshes in FieldTrip. Because of the large number of points in a mesh, it is advised to use the 'surfaceonly' option. In this case, the function will plot hexagonal surfaces of those hexahedra which create the outside surface of the head.
 
     ft_plot_mesh(mesh, 'edgecolor','none', 'facecolor', 'skin', 'facealpha', 0.7);
     ft_plot_axes(mesh)
@@ -258,7 +258,7 @@ This only shows the outside of the scalp. To see the other tissues, you can spli
     mesh_skull = rmfield(mesh, {'tissue', 'tissuelabel'});
     mesh_white = rmfield(mesh, {'tissue', 'tissuelabel'});
 
-    % only keep the hexaheders for the corresponding tissue type
+    % only keep the hexahedra for the corresponding tissue type
     mesh_csf.hex   = mesh.hex(mesh.tissue==1,:);
     mesh_gray.hex  = mesh.hex(mesh.tissue==2,:);
     mesh_scalp.hex = mesh.hex(mesh.tissue==3,:);
@@ -321,7 +321,7 @@ This electrode structure can be used later when the leadfield is computed with *
 
 ### Construct source model
 
-With single-shell and BEM volume conduction models you can place the dipoles of the source model anywhere in the brain compartment. With more detailed FEM models, you want the dipoles only in the grey matter. Furthermore, the FEM computations will be more accurate if the dipoles are placed at the centroids of the voume elements.
+With single-shell and BEM volume conduction models you can place the dipoles of the source model anywhere in the brain compartment. With more detailed FEM models, you want the dipoles only in the grey matter. Furthermore, the FEM computations will be more accurate if the dipoles are placed at the centroids of the volume elements.
 
 The following starts with a 8 mm regular grid. The dipole positions are subsequently moved to the nearest centroid.
 

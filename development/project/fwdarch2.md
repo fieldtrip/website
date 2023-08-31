@@ -6,7 +6,7 @@ title: Dealing with the geometry of the forward model
 
 # Dealing with the geometry of the forward model
 
-This part overviews the available routines (and not yet available too!) to get an optimal description of the head geometry in order to build a forwaard model.
+This part overviews the available routines (and not yet available too!) to get an optimal description of the head geometry in order to build a forward model.
 
 The functions' types available at the moment deal with different types of object
 
@@ -16,7 +16,7 @@ The functions' types available at the moment deal with different types of object
 - **meshes**: they are 3D meshes (nodes and elements) describing a wireframe structure. Used in FEM, FDM methods can be tetrahedrons, hexahedrons (cubes) or others
 - **head models**: a structure containing the necessary information to run a forward model algorithm (geometry+conductivity+others)
 
-* The from (rows)-to (columns) matri
+* The from (rows)-to (columns) matrix
 
 | ^ ana ^ seg ^ surf ^ mesh ^ hdm |
 | ------------------------------- |
@@ -76,7 +76,7 @@ TBD
 Useful for example to extract a surface from the wireframe
 Implementation suggestion of mesh2surf.m:
 for each triangle of the tetrahedron
-count the number of belonging tetrahedres
+count the number of belonging tetrahedra
 end
 keep the triangles with count == 1
 [Back](#Dealing with the geometry of the forward model)

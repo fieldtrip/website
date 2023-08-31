@@ -35,7 +35,7 @@ Consistent implementation of option for trial selection in all relevant function
 - timelockanalysis.m -done-
 - freqanalysis.m -done-
 
-##### Functions that (could) use data with an 'rpt' dimensio
+##### Functions that (could) use data with an 'rpt' dimension
 
 - freqdescriptives.m -done-
 - singleplotER.m -done-
@@ -45,7 +45,7 @@ Consistent implementation of option for trial selection in all relevant function
 - multiplotER.m -done-
 - multiplotTFR.m -done-
 
-##### Functions where this has already been implemente
+##### Functions where this has already been implemented
 
 - componentanalysis.m -done-
 - nonlinearassociation.m -done-
@@ -72,7 +72,7 @@ How it's currently implemented in these function
 
 ---
 
-##### Ensure consistency in solutio
+##### Ensure consistency in solution
 
 **For raw data input functions (implement before 'Ntrials=...' or equivalent):**
 

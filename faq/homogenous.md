@@ -11,7 +11,7 @@ A homogenous transformation matrix allows you to transform 3D points from one co
 
 In FieldTrip, as in many other software packages that deal with volumetrically defined data, we also use a homogen(e)ous coordinate transformation matrix to describe the relation between voxels in the volumetric data, and real-world or "head" coordinates. The [real-world coordinates](/faq/coordsys) are usually related to anatomical landmarks and the voxel coordinates are directly related to the 3D array with the grey-scale numbers that represent the MRI images.
 
-The FieldTrip data structure that describes **[volumetric data](/reference/utilities/ft_datatype_volume)** includes a `transform` field with the homogenous 4x4 trasformation matrix that maps from voxel indices to the head (or device) coordinate system. If the head coordinate system is known, it is specified in the `coordsys` field.
+The FieldTrip data structure that describes **[volumetric data](/reference/utilities/ft_datatype_volume)** includes a `transform` field with the homogenous 4x4 transformation matrix that maps from voxel indices to the head (or device) coordinate system. If the head coordinate system is known, it is specified in the `coordsys` field.
 
 Indexing of numerical arrays in MATLAB starts with 1, i.e., the first voxel in the volume is described by the indices (1,1,1). Thus, if you want to obtain the real world coordinate of a voxel with indices (i,j,k), you have to perform the following multiplication:
 

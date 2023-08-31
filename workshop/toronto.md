@@ -73,7 +73,7 @@ If you work on your own laptop you need the USB stick:
 3.  Unzip the Subject01.zip file, you should place the contents in the tutorial directory.
 
 {% include markup/danger %}
-Depending on the unzip program you are using (e.g., Winrar), the name of the zip file might also appear as directiory, resulting in path_to_directory/fieldtrip-xxxxxxxx/fieldtrip-xxxxxxxx, i.e. the FieldTrip directory in a FieldTrip directory. Please fix that by moving all files one level up.
+Depending on the unzip program you are using (e.g., Winrar), the name of the zip file might also appear as directory, resulting in path_to_directory/fieldtrip-xxxxxxxx/fieldtrip-xxxxxxxx, i.e. the FieldTrip directory in a FieldTrip directory. Please fix that by moving all files one level up.
 {% include markup/end %}
 
 After copying all files to your computer and unzipping then, you start MATLAB. To ensure that the right version of FieldTrip is used, and not another version (such as the one included in SPM or EEGLAB), you type in the **MATLAB command window**
@@ -88,7 +88,7 @@ The `restoredefaultpath` command clears your path, keeping only the official MAT
 
 The ls statement shows the list of files in the present directory, and you can visually check that the contents are correct and for example not in another subfolder. You should see a long list of ft_xxx.m functions.
 
-The `addpath(pwd)` statement adds the present working directory, i.e. the directory containing the FieldTrip main funcctions. The `ft_defaults` command ensures that all required subdirectories are added to the path.
+The `addpath(pwd)` statement adds the present working directory, i.e. the directory containing the FieldTrip main functions. The `ft_defaults` command ensures that all required subdirectories are added to the path.
 
 If you get the error "can't find the command ft_defaults" you should check the present working directory.
 

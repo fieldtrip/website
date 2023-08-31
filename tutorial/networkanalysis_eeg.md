@@ -73,11 +73,11 @@ Using the EEG electrodes we compute a 2D layout in order to plot topographies. W
 
 {% include image src="/assets/img/tutorial/networkanalysis_eeg/figure1.png" width="400" %}
 
-_Figure 1: 2D electorde layout._
+_Figure 1: 2D electrode layout._
 
 ### Data segmentation
 
-Next, the data is segmented into overlapping segemnts of 1 second length.
+Next, the data is segmented into overlapping segments of 1 second length.
 
     %% resegment the data into 1 sec chunks
     cfg         = [];
@@ -115,7 +115,7 @@ _Figure 2: Left- scalp topography of oscillatory power centered at 10 Hz. Right-
 
 ## Computation of the forward model
 
-We first load the precomputed mni-standard [Desikan-Killiani](https://surfer.nmr.mgh.harvard.edu/fswiki/CorticalParcellation) atlas, BEM headmodel and the sourcemodel. In the following section we will compute the forward model, i.e. the leadfield matrix that defines for a set of predefined dipole locations the expected electromagnetic scalop distribution as it is picked up by the EEG electrodes. In this tutorial we will use a cortical sheet based source model, in which the individual dipole locations are constrained to the cortical sheet. This anatomical model has been obtained with freesurfer and it takes quite some time to generate. This falls outside the scope of this tutorial. If you would like to get an idea how this can be done, please have a look at our [sourcemodel tutorial](/tutorial/sourcemodel).
+We first load the precomputed mni-standard [Desikan-Killiani](https://surfer.nmr.mgh.harvard.edu/fswiki/CorticalParcellation) atlas, BEM headmodel and the sourcemodel. In the following section we will compute the forward model, i.e. the leadfield matrix that defines for a set of predefined dipole locations the expected electromagnetic scalp distribution as it is picked up by the EEG electrodes. In this tutorial we will use a cortical sheet based source model, in which the individual dipole locations are constrained to the cortical sheet. This anatomical model has been obtained with freesurfer and it takes quite some time to generate. This falls outside the scope of this tutorial. If you would like to get an idea how this can be done, please have a look at our [sourcemodel tutorial](/tutorial/sourcemodel).
 Alternatively, one could create a volumetric dipole grid based on regularly spaced 3-dimensional grid of dipole locations, or an inverse-warp from MNI normalized volumetric space of a template 3D grid. More information about this can be found in our [sourcemodel tutorial](/tutorial/sourcemodel) as well.
 
     %% load the required geometrical information

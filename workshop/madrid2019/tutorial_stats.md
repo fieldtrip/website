@@ -450,8 +450,8 @@ for every cluste
   the k-th cluster.
 
 The field `stat1.posclusterslabelmat` contains indices (i.e. numbers 1, 2, 3,
-...) that identify the clusters to which the (channel,ferquency)-pairs (the samples)
-belong. For example, all (channel,ferquency)-pairs that belong to the third cluster,
+...) that identify the clusters to which the (channel,frequency)-pairs (the samples)
+belong. For example, all (channel,frequency)-pairs that belong to the third cluster,
 are identified by the number 3. As will be shown in the following, this
 information can be used to visualize the topography of the clusters.
 

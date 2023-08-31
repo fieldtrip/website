@@ -42,7 +42,7 @@ TODO: This requires testing on real data using the CTF software as gold standard
 
 The gradiometer array is described by all coil (positions and orientations) and the weights (+1 or -1) to combine the coils into hardware channels. From the FAQ:
 
-_The gradiometer definition generally consists of multiple coils per channel, e.g., two coils for a 1st order gradiometer in which the orientation of the coils is opposite. Each coil is described separately and one large matrix (can be sparse) has to be given that defines how the forward computed field is combined over the coils to generate the output of each channel. The gradiometer definition constsis of the following fields_
+_The gradiometer definition generally consists of multiple coils per channel, e.g., two coils for a 1st order gradiometer in which the orientation of the coils is opposite. Each coil is described separately and one large matrix (can be sparse) has to be given that defines how the forward computed field is combined over the coils to generate the output of each channel. The gradiometer definition consists of the following fields_
 
     grad.pnt   % Mx3 matrix with the position of each coil
     grad.ori   % Mx3 matrix with the orientation of each coil
@@ -105,7 +105,7 @@ Each coil is described by:
 - unit normal vector (p) (use the position relative to head coordinate system)
 - baseline from previous coil (for coils other than the first)
 
-To compute the "field" picked up by a senso
+To compute the "field" picked up by a sensor
 
 1. Compute and sum the flux picked up by each coil.
 2. To convert from flux to "field", divide the total flux by the effective
@@ -156,7 +156,7 @@ BG2: cBG2 _ gBG2 / gMLC11
 BG3: cBG3 _ gBG3 / gMLC11
 G11: cG11 \* gG11 / gMLC11
 ...
-Exampl
+Example
 G3OI coefficient for data in phi0 for MLC1
 G11 (G11-1105): 0.143393
 G12 (G12-1105): -0.00166001

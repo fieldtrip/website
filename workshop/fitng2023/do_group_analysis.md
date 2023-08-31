@@ -77,7 +77,7 @@ excluded_participants = [];
 for ii = 1:size(subjectlist,1)
   sub       = subjectlist{ii};
   input_dir = fullfile(results, sub);
-  
+
   % Find information on how many trials were rejected & calculate percent
   % of rejected trials
   if exist([input_dir filesep 'badtrials.mat'], 'file') && exist([input_dir filesep 'trials.mat'], 'file')
@@ -92,8 +92,8 @@ for ii = 1:size(subjectlist,1)
       excluded_participants = [excluded_participants, ii];
     end
   else
-    % Give warning if artefact rejection has not been performed yet
-    warning('Continuing to group analysis, but artefact rejection results cannot be found');
+    % Give warning if artifact rejection has not been performed yet
+    warning('Continuing to group analysis, but artifact rejection results cannot be found');
   end
 end
 
@@ -219,7 +219,7 @@ stat_standard_oddball_clusstats  = ft_timelockstatistics(cfg, standard_all{:}, o
 % save(fullfile(output_dir, 'stat_standard_oddball_clusstats.mat'), 'stat_standard_oddball_clusstats');
 ```
 
-You can compare the design matrix to that of an GLM analysis of fMRI data, except that it does not code invividual fMRI volumes but subjects, and is transposed with the subjects along colums.
+You can compare the design matrix to that of an GLM analysis of fMRI data, except that it does not code individual fMRI volumes but subjects, and is transposed with the subjects along colums.
 
     figure
     imagesc(cfg.design)
@@ -283,12 +283,12 @@ m                       = [1:timestep*sampling_rate:sample_count]; % start of ea
 
 figure
 for k = 1:30
-  
+
   cfg                  = [];
   cfg.figure           = subplot(6,5,k);
   cfg.xlim             = [j(k) j(k+1)]; % current interval
   cfg.zlim             = [-6 6]; % set minimum and maximum z-axis
- 
+
   pos_int              = zeros(numel(grandavg_diff_standard_oddball.label),1);
   neg_int              = zeros(numel(grandavg_diff_standard_oddball.label),1);
   pos_int(i1)          = all(pos(i2, m(k):m(k+1)),2); % determine which channels are in a cluster throughout the current time interval (pos cluster)
@@ -326,14 +326,14 @@ for ii = 1:size(subjectlist_new,1)
   folder                  = [results filesep subjectlist_new{ii}];
   load([folder filesep 'timelock_standard.mat']);
   load([folder filesep 'timelock_oddball.mat']);
-  
+
   a = standard.avg(effect_window_pos);
   b = oddball.avg(effect_window_pos);
   c = a-b;
   Pos.ERP_Diff_alltimechan(ii,:) =c;
   Pos.ERP_Diff(ii) = nanmean([a - b]);
   clear expected unexpected a b c
-  
+
 end
 
 % Calculate Cohen's d
@@ -349,14 +349,14 @@ for ii = 1:size(subjectlist_new,1)
   folder                  = [results filesep subjectlist_new{ii}];
   load([folder filesep 'timelock_standard.mat']);
   load([folder filesep 'timelock_oddball.mat']);
-  
+
   a = standard.avg(effect_window_neg);
   b = oddball.avg(effect_window_neg);
   c = a-b;
   Neg.ERP_Diff_alltimechan(ii,:) =c;
   Neg.ERP_Diff(ii) = nanmean([a - b]);
   clear expected unexpected a b c
-  
+
 end
 
 % Calculate Cohen's d

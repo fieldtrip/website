@@ -37,7 +37,7 @@ Subsequently you can save it to a MATLAB file or to a NIFTI file using
 
     ft_write_mri('subjectXX_anon.nii', mri_anon.anatomy, 'transform', mri_anon.transform, 'dataformat', 'nifti');
 
-You can also combine defacing with brain segmentation to ensure that you do not accidently remove the orbitofrontal cortex. To do that, first we segment the anatomical MRI to extract the skull-stripped brain (including csf, white and gray matter) using **[ft_volumesegment](/reference/ft_volumesegment)**. Then we inflate the brain compartment a little bit using the MATLAB **[imdilate](https://nl.mathworks.com/help/images/ref/imdilate.html)** function, for example, with a 5-voxel padding all around the brain. After defacing the MRI with **[ft_defacevolume](/reference/ft_defacevolume)** function and possibly cutting off the orbitofrontal cortex, we can re-insert the brain anatomy back into the defaced MRI using the padded segmentation of the brain. The following script demonstrates this:
+You can also combine defacing with brain segmentation to ensure that you do not accidentally remove the orbitofrontal cortex. To do that, first we segment the anatomical MRI to extract the skull-stripped brain (including csf, white and gray matter) using **[ft_volumesegment](/reference/ft_volumesegment)**. Then we inflate the brain compartment a little bit using the MATLAB **[imdilate](https://nl.mathworks.com/help/images/ref/imdilate.html)** function, for example, with a 5-voxel padding all around the brain. After defacing the MRI with **[ft_defacevolume](/reference/ft_defacevolume)** function and possibly cutting off the orbitofrontal cortex, we can re-insert the brain anatomy back into the defaced MRI using the padded segmentation of the brain. The following script demonstrates this:
 
     cfg = [];
     cfg.output    = {'brain'};
@@ -80,5 +80,5 @@ If you share your MATLAB files with others, note that there might also be identi
 
 In principle FieldTrip keeps full track of all analyses that you do. The consequence might be that the original file name (identifying the subject) is included in the provenance information. You can use the **[ft_anonymizedata](/reference/ft_anonymizedata)** function to scrub the provenance from unwanted information.
 
-Better is not to use the subject's name, date of birth or other identifying information as the filename if you acquire the data. If you - or the person from whom you received the data - nevertheless did use identifying information in the file name: the earlier you rename it, the better!  
+Better is not to use the subject's name, date of birth or other identifying information as the filename if you acquire the data. If you - or the person from whom you received the data - nevertheless did use identifying information in the file name: the earlier you rename it, the better!
 {% include markup/end %}

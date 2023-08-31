@@ -11,7 +11,7 @@ After source analysis (e.g., power estimation with the DICS method as explained 
 
 In the following, it is assumed that there is a single subject source reconstruction (_source_) which contains the source estimates for the single trials, and a design matrix (_design_, 1xN vector) which indicates for each trial to which condition it belongs. By using **[ft_sourcestatistics](/reference/ft_sourcestatistics)** we will derive the statistical values for the source activation at each grid point.
 
-To evaluate the reliability of the activation by a statistical measure we will calculate a dependent samples t statistic and plot t maps. Since we are testing for each grid point separately, we have to deal with the multiple comparison problem. One way to control for this is by using a cluster based randomization test. This is further explained in the cluster permutation tutorials for [ERFs](/tutorial/cluster_permutation_timelock) and [time frequency data](/tutorial/cluster_permutation_freq). We will now show how to use a cluster based multiple comparison correction on data for one subjec
+To evaluate the reliability of the activation by a statistical measure we will calculate a dependent samples t statistic and plot t maps. Since we are testing for each grid point separately, we have to deal with the multiple comparison problem. One way to control for this is by using a cluster based randomization test. This is further explained in the cluster permutation tutorials for [ERFs](/tutorial/cluster_permutation_timelock) and [time frequency data](/tutorial/cluster_permutation_freq). We will now show how to use a cluster based multiple comparison correction on data for one subject
 
     % run sourcestatistics using cluster based correction %
     cfg = [];

@@ -12,7 +12,7 @@ This example demonstrates how you can combine detailed information from Eyelink 
 ### Why use information from the Eyelink and not use the eyetracker traces from the MEG data?
 
 The advantage of an ad-hoc analysis of the eyetracker traces that have been collected along with the MEG data, is that the extracted events will be easily synchronized with the timing in the MEG data. This is simply because all data traces have the same shared time axis. The event timings that are stored in the Eyelink file are relative to the Eyelink recording, and need to be mapped onto the timings in the MEG recording. The latter recording might have been started either before or after the Eyelink recording, and moreover will very likely have a different sampling frequency. The example below explains how this mapping can be performed.
-The advantage of using the marked events from the Eyelink data, is that you don't need to rely on your own implementation of the artifact marking, which forn instance can be achieved using **[ft_artifact_zvalue](/reference/ft_artifact_zvalue)** on one of the eyetracker signals, in combination with well chosen set of processing parameters. Instead, you will rely on the heuristics that Eyelink has used to mark events.  
+The advantage of using the marked events from the Eyelink data, is that you don't need to rely on your own implementation of the artifact marking, which for instance can be achieved using **[ft_artifact_zvalue](/reference/ft_artifact_zvalue)** on one of the eyetracker signals, in combination with well chosen set of processing parameters. Instead, you will rely on the heuristics that Eyelink has used to mark events.
 
 ## Procedure
 
@@ -24,7 +24,7 @@ In order to express the timing of the events from the Eyelink file relative to t
 
 ## Example dataset
 
-The dataset used for this example is the first session of the first subject of the Sherlock dataset, which can be downloaded from [the Donders Data Repository](https://doi.org/10.34973/5rpw-rn92). The example can be adjusted to use your own data, under the assumption that the converted Eyelink ASC-file (obtained by running EDF2ASC, see the [Eyelink](/getting_started/eyelink) getting started page) contains the trigger information sent by the presentation computer during the experiment. 
+The dataset used for this example is the first session of the first subject of the Sherlock dataset, which can be downloaded from [the Donders Data Repository](https://doi.org/10.34973/5rpw-rn92). The example can be adjusted to use your own data, under the assumption that the converted Eyelink ASC-file (obtained by running EDF2ASC, see the [Eyelink](/getting_started/eyelink) getting started page) contains the trigger information sent by the presentation computer during the experiment.
 
 ### What to do if my experimental data does not contain any triggers, or when the Eyelink data does not contain them?
 
@@ -36,7 +36,7 @@ We start by reading the events from both files.
 
     fname_meg = '/Users/jansch/Desktop/sub-001/ses-001/meg/sub-001_ses-001_task-compr_meg.ds';
     fname_asc = '/Users/jansch/Desktop/sub-001/ses-001/eyelink/sub-001_ses-001_eye.asc';
-    
+
     event_meg = ft_read_event(fname_meg);
     event_asc = ft_read_event(fname_asc);
 
@@ -44,11 +44,11 @@ The experimental setup at the DCCN is such that triggers, sent by the stimulus p
 
     selmeg = strcmp({event_meg.type}', 'UPPT001');
     event_meg = event_meg(selmeg);
-    
+
     event_asc_all = event_asc;
     selasc = strcmp({event_asc.type}', 'INPUT');
     event_asc = event_asc(selasc);
-    
+
     val = [event_asc.value];
     event_asc = event_asc(val~=0);
 
@@ -80,14 +80,14 @@ With the trigger events aligned, based on the trigger values, we can estimate th
 
     smp_asc = [event_asc.timestamp];
     smp_meg = [event_meg.sample]; % assuming MEG to be derived from a continuous recording
-    
+
     offset_meg = mean(smp_meg);
     offset_asc = mean(smp_asc);
-    
+
     x = smp_asc - offset_asc;
     y = smp_meg - offset_meg;
     slope = y/x; % this should be about 1.2 (1kHz vs. 1.2kHz)
-    
+
     % plot the residuals between the MEG samples and the 'modelled' MEG samples
     res = smp_meg - offset_meg - slope.*(smp_asc - offset_asc); % conclusion: it is anywhere between -1.5 of 1.5 sample
     figure;histogram(res);
@@ -96,7 +96,7 @@ As can be seen from the histogram, the difference in timing is on the order of l
 
 {% include image src="/assets/img/example/meg_eyelink/histogram_trigger.png" width="600" %}
 
-{% include markup/danger %} 
+{% include markup/danger %}
 Note that in this example, the estimated slope is not exactly 1.2, but 1.1999465. This is due to a very small difference in clock speed between the MEG acquisition computer and the Eyelink computer. If the mapping of events would have been based on a value of 1.2, and an alignment of a single early event in both recordings, then the asynchrony further along during the recording can become quite severe, on the order of ~225 ms for a 70 minute recording.
 {% include markup/end %}
 
@@ -104,13 +104,13 @@ Then, to adjust the timing of **all** Eyelink events:
 
     S    = [event_asc_all.timestamp];
     Snew = slope.*(S-offset_asc) + offset_meg;
-    
+
     % remap the event_asc_all's samples to samples of the MEG recording
     % adjust the duration from milliseconds to samples, NOTE: this assumes 1kHz
     % sampling, i.e. 1 timestamp step is 1 ms.
     for k = 1:numel(event_asc_all)
       event_asc_all(k).sample = Snew(k);
-      event_asc_all(k).duration = round(event_asc_all(k).duration.*slope); 
+      event_asc_all(k).duration = round(event_asc_all(k).duration.*slope);
     end
 
 ## What next?

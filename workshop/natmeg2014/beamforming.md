@@ -88,7 +88,7 @@ Now we select the time windows of interest, the post-response window using **[ft
 
 As mentioned in the Background, it is ideal to contrast the activity of interest against some control.
 
-1.  Suitable control windows are, for exampl
+1.  Suitable control windows are, for example
     - Activity contrasted with baseline (example not shown)
     - Activity of condition 1 contrasted with condition 2 (example shown here using left vs right)
 2.  However, if no other suitable data condition or baseline time-window exists, then
@@ -304,7 +304,7 @@ With the use of cfg.atlas you can specify a lookup atlas, which **[ft_sourceplot
 #### Exercise: regularization
 
 {% include markup/info %}
-The regularization parameter was lambda = '5%'. Change it to '0%' or to '10%' and plot the power estimate. How does the regularization parameter affect the properties of the spatial filter?  
+The regularization parameter was lambda = '5%'. Change it to '0%' or to '10%' and plot the power estimate. How does the regularization parameter affect the properties of the spatial filter?
 {% include markup/end %}
 
 ## (EEG) The forward model and lead field matrix

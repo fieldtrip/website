@@ -88,7 +88,7 @@ If you have additionally used the Polhemus to record the headshape and the locat
     mri                       = ft_volumerealign(cfg, mri);
 
 {% include markup/danger %}
-Note that it really only makes sense to take additional head shape information into account if it is congruent with the data acquisition. If you record information about the head shape in relation to the head localizer coils (fuiducials) on LPA/RPA and on nasion, you should make sure to use the same fiducial locations as those used during the MEG session.
+Note that it really only makes sense to take additional head shape information into account if it is congruent with the data acquisition. If you record information about the head shape in relation to the head localizer coils (fiducials) on LPA/RPA and on nasion, you should make sure to use the same fiducial locations as those used during the MEG session.
 {% include markup/end %}
 
 

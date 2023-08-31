@@ -116,7 +116,7 @@ We can compute the power using the `mtmfft` method using a single hanning window
     cfg.taper = 'hanning';
     freq = ft_freqanalysis(cfg, data);
 
-To plot the data, we can use **[ft_singleplotER](/reference/ft_singleplotER)** and **[ft_multiplotER](/reference/ft_multiplotER)**. Note that the same functions are used for ERPs and non-time-resolved spectra, both types of data are represented in a 2D matrix, which is channels-by-time or channels-by-frequency. Rather than plotting time along the horizontal axis, for the power spectrum the functions will plot the frequency along the horozontal axis.
+To plot the data, we can use **[ft_singleplotER](/reference/ft_singleplotER)** and **[ft_multiplotER](/reference/ft_multiplotER)**. Note that the same functions are used for ERPs and non-time-resolved spectra, both types of data are represented in a 2D matrix, which is channels-by-time or channels-by-frequency. Rather than plotting time along the horizontal axis, for the power spectrum the functions will plot the frequency along the horizontal axis.
 
 However, we can also use plain MATLAB plotting functions. Let's look at a specific MEG channel
 
@@ -135,7 +135,7 @@ Rather than plotting power along a linear axis, we can also use a logarithmic ax
     xlabel('frequency')
     ylabel('power')
 
-Or we can log transform the data ourselves. The following converts the data into decidel (dB).
+Or we can log transform the data ourselves. The following converts the data into decibel (dB).
 
     figure
     plot(freq.freq, 10*log10(freq.powspctrm(84,:)));

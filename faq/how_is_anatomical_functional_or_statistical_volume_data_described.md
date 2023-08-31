@@ -12,7 +12,7 @@ All functions that accept volume data as input, or that give volume data as outp
     volume.dim = [Nx Ny Nz]  % number of voxels along each dimensions
     volume.transform         % 4*4 matrix with homogeneous transformation (optional, see below)
 
-Note that FieldTrip adheres to the MATLAB convention for counting voxels, starting to count from 1 and not from 0. The fields above are only needed for the bookkeeping, the actual content of the volume depends on what the data describes. If the volume describes anatomical (MRI) data, it will have the fiel
+Note that FieldTrip adheres to the MATLAB convention for counting voxels, starting to count from 1 and not from 0. The fields above are only needed for the bookkeeping, the actual content of the volume depends on what the data describes. If the volume describes anatomical (MRI) data, it will have the field
 
     volume.anatomy            % Nx * Ny * Nz matrix
 

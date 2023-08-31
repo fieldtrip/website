@@ -9,11 +9,11 @@ tags: [tutorial, artifact, meg, raw, preprocessing, meg-artifact]
 
 In this tutorial we will demonstrate ICA cleaning on the [ArtifactMEG.zip](https://download.fieldtriptoolbox.org/tutorial/ArtifactMEG.zip) example MEG dataset. This is a resting state recording without an explicit experimental task, however in this recording the subject was on putpose making certain types of artifacts, such as blinking with the eyes, looking back and forth, making headmovements, and biting their teeth to induce EMG activity in the jaw muscles.
 
-This dataset not only includes MEG data, but also separate bipolar recordings from the EOG and ECG, plus two bipolar EMG channels that record activity from neck and jaw muscles. In principle we could use thexe extra channels to find artifacts or to facilitate or even automate the identification of artifactual ICA components. In the remainder we will _not_ make use of the EOG, ECG and EMG channels, we will only show how ICA can be used on the MEG channels.  
+This dataset not only includes MEG data, but also separate bipolar recordings from the EOG and ECG, plus two bipolar EMG channels that record activity from neck and jaw muscles. In principle we could use these extra channels to find artifacts or to facilitate or even automate the identification of artifactual ICA components. In the remainder we will _not_ make use of the EOG, ECG and EMG channels, we will only show how ICA can be used on the MEG channels.
 
 ## Background
 
-Independent component analysis (ICA) is a spatio-temporal decomposition strategy that assumes that the underlying sources of the EEG or MEG have a stationary spatial projection to the channels, and are temporally maximally independent. Using ICA it is possible to estimate as many components as there are channels. We know that there are many more neuronal sources than channels, especially if the recordings are very long. As such, the ICA decomposition will only be an approximation of the most visible independent components. We also know that the number of prominient artifactual contributions to the data is usually rather limited, so that means that we probably only need a few components to explain the artifacts. Following the ICA decomposition we can identify the artifactual components, and backproject all other components to the channel level, excluding the artifacts.
+Independent component analysis (ICA) is a spatio-temporal decomposition strategy that assumes that the underlying sources of the EEG or MEG have a stationary spatial projection to the channels, and are temporally maximally independent. Using ICA it is possible to estimate as many components as there are channels. We know that there are many more neuronal sources than channels, especially if the recordings are very long. As such, the ICA decomposition will only be an approximation of the most visible independent components. We also know that the number of prominent artifactual contributions to the data is usually rather limited, so that means that we probably only need a few components to explain the artifacts. Following the ICA decomposition we can identify the artifactual components, and backproject all other components to the channel level, excluding the artifacts.
 
 As ICA assumes spatially stationary sources and can only estimate a limited set of sources, we should try to preprocess our data so that we don't "loose" ICA components to trivial artifacts in the data. If your subject is still moving in the first few minutes of the recording because the experiment did not start yet, you would want to exclude that section from the ICA decomposition.
 
@@ -21,7 +21,7 @@ For efficiency reasons we often do the preprocessing by first identifying the tr
 
 ## Procedure
 
-To clean the MEG data using ICA, we will follow the following procvedure
+To clean the MEG data using ICA, we will follow the following procedure
 
 -   read the data with minimal preprocessing using **[ft_preprocessing](/reference/ft_preprocessing)**
 -   remove segments with infrequent atypical artifacts using either **[ft_rejectvisual](/reference/ft_rejectvisual)** or **[ft_databrowser](/reference/ft_databrowser) (or both)
@@ -50,7 +50,7 @@ To load this dataset into MATLAB and preprocess with FieldTrip, use:
     cfg.channel    = {'MEG', 'MEGREF', 'EOG', 'ECG', 'jaw', 'neck'};
     data = ft_preprocessing(cfg);
 
-The ICA decomposition can take a long time, especially if you have to do it multiple times. If it takes too long, you can consider to downsample the data to a lower sampling rate, here from 1200Hz to 300Hz. Using the downsampled dataset you can estimate the ICA components and subsequently remove those from the original data. However, you should be aware that downsampling potentially affect some data features and artifacts. For example, high frequency muslce artifacts will be less well captured. The consequence is that the removal of those artifacts might also be less optimal.
+The ICA decomposition can take a long time, especially if you have to do it multiple times. If it takes too long, you can consider to downsample the data to a lower sampling rate, here from 1200Hz to 300Hz. Using the downsampled dataset you can estimate the ICA components and subsequently remove those from the original data. However, you should be aware that downsampling potentially affect some data features and artifacts. For example, high frequency muscle artifacts will be less well captured. The consequence is that the removal of those artifacts might also be less optimal.
 
     data_orig = data;
 
@@ -59,7 +59,7 @@ The ICA decomposition can take a long time, especially if you have to do it mult
     cfg.detrend      = 'no';
     data = ft_resampledata(cfg, data_orig);
 
-For the purpose of this tutorial and since we want you to try out various settings, we will continue with the downsampled data. If you apply this on your own data, please do try to work with the original instead the downsampled data; that will improve the quality of the decompositon.
+For the purpose of this tutorial and since we want you to try out various settings, we will continue with the downsampled data. If you apply this on your own data, please do try to work with the original instead the downsampled data; that will improve the quality of the decomposiion.
 
 ### Rejecting atypical artifacts
 
@@ -84,7 +84,7 @@ Note that we are interested in the output `cfg` of **[ft_databrowser](/reference
 
 {% include image src="/assets/img/tutorial/ica_artifact_cleaning/figure2.png" width="600" %}
 
-All the way at the end of the recording something weird is happening: the CTF acquisition software writes data in blocks of 10 seconds. If the acquisition is ended prior to the last block being complete (whichis always the case), the remainder of that block will be written to disk as all zeros. Hence you should mark the last section of the data as an artifact.
+All the way at the end of the recording something weird is happening: the CTF acquisition software writes data in blocks of 10 seconds. If the acquisition is ended prior to the last block being complete (which is always the case), the remainder of that block will be written to disk as all zeros. Hence you should mark the last section of the data as an artifact.
 
 In channel MLT024 (and simultaneously at some others) you can observe so-called SQUID jumps. These are the consequence of a hardware instability in the SQUID, causing a large change of one flux quantum in the signal. These show up as large jumps. Identify each of the jumps in MLT024 and mark it as an artifact.
 
@@ -104,7 +104,7 @@ and this is the time in seconds at which they happen in the continuous recording
       178.1817
       225.5412
       289.8267
-      739.2663   
+      739.2663
 
 Note that the jumps are easier to identify if you would not have applied a high-pass filter at the initial preprocessing and if we would not have downsampled the data. Especially the high-pass filter is a bit annoying here: it spreads the jumps over a much longer time range.
 
@@ -113,9 +113,9 @@ Note that the jumps are easier to identify if you would not have applied a high-
 {% include markup/info %}
 Preprocessing and filtering serves to reduce artifacts (such as drifts) and hence makes artifacts less visible. Unpreprocessed data gives the best representation of the artifacts.
 
-Repeat the inspection with ft_databrowser on the original data, without high-pass filter and without resampling. That requires that you have to call ft_preprocessing again. Look at the channels that start with `MTL*` around 178 seconds into the recording and compare the juimp to the one you observed in the filtered and downsampled data.
+Repeat the inspection with ft_databrowser on the original data, without high-pass filter and without resampling. That requires that you have to call ft_preprocessing again. Look at the channels that start with `MTL*` around 178 seconds into the recording and compare the jump to the one you observed in the filtered and downsampled data.
 
-Be aware that artifacts (and trials) are expresed in samples, so you can look at the same time in the recording, but you cannot refer to the artifacts in the original and downsampled data using the same sample numbers.
+Be aware that artifacts (and trials) are expressed in samples, so you can look at the same time in the recording, but you cannot refer to the artifacts in the original and downsampled data using the same sample numbers.
 {% include markup/end %}
 
 Following the identification of atypical artifacts, you can remove them from further analysis. For the purpose of this tutorial and working on continuous data, we will not reject them but rather fill them with NaNs (not-a-number values). It is also possible on the continuous data to use **[ft_rejectartifact](/reference/ft_rejectartifact)** with the option `cfg.artfctdef.reject = 'partial'`. Here we will use the option `nan`.
@@ -154,7 +154,7 @@ Now that the data is cut into segments (aka trials) of a second each, we can ide
 
 {% include image src="/assets/img/tutorial/ica_artifact_cleaning/figure3.png" width="600" %}
 
-We can now "stich" the segmented data back together in a continuous representation:
+We can now "stitch" the segmented data back together in a continuous representation:
 
     cfg = [];
     cfg.continuous = 'yes';
@@ -164,14 +164,14 @@ If you inspect `data_clean`in ft_databrowser, you will see that parts of the dat
 
 ### ICA decomposition
 
-We use **[ft_componentanalysis](/reference/ft_componentanalysis)** for the ICA decomposition. It has many options, and supports different methods for decomposing the data, including PCA and different ICA algorithms. Here we will be using the Extended Infomax alrorithm using the `runica` method from EEGLAB. You do not have to have EEGLAB installed for this, the required functions are included in the `fieldtrip/external` directory.
+We use **[ft_componentanalysis](/reference/ft_componentanalysis)** for the ICA decomposition. It has many options, and supports different methods for decomposing the data, including PCA and different ICA algorithms. Here we will be using the Extended Infomax algorithm using the `runica` method from EEGLAB. You do not have to have EEGLAB installed for this, the required functions are included in the `fieldtrip/external` directory.
 
 {% include markup/success %}
-There are other ICA algorithms that you can consider. For example, the `fastica` algorithm is fast and does not need to do a complete decompositon of the data; it can also identify a few components only. The components that fastica identifies first are the components with the largest variance, these are often the artifacts. The `amica` algorithm is among the best algorithms for identifying biophysically plausible ICA components. It results in components that are _more_ independent than `runica`.
+There are other ICA algorithms that you can consider. For example, the `fastica` algorithm is fast and does not need to do a complete decomposition of the data; it can also identify a few components only. The components that fastica identifies first are the components with the largest variance, these are often the artifacts. The `amica` algorithm is among the best algorithms for identifying biophysically plausible ICA components. It results in components that are _more_ independent than `runica`.
 
 The paper Delorme et al. [Independent EEG sources are dipolar.](https://doi.org/10.1371/journal.pone.0030135) PLoS One (2012) compares many ICA algorithms and concludes that more independent components are also more dipolar, which is compatible with an interpretation of many maximally independent EEG components as being volume-conducted projections of partially-synchronous local cortical field activity within single compact cortical domains.
 
-Another strategy for component analysis that is not completely blind is "denoising source separation" or `dss`, a method in which specific explicit features are maximized duting the ICA decomposition. If you know how your EOG or ECG artifacts look like in advance, you can use `dss` to capitalize on that and efficiently clean the data.
+Another strategy for component analysis that is not completely blind is "denoising source separation" or `dss`, a method in which specific explicit features are maximized during the ICA decomposition. If you know how your EOG or ECG artifacts look like in advance, you can use `dss` to capitalize on that and efficiently clean the data.
 {% include markup/end %}
 
 To perform the ICA decomposition, you can use the following code. Here we use a PCA reduction of the data prior to the decomposition to speed up the processing for the purpose of this tutorial. Note that the PCA reduction can negatively affect the quality of the decomposition, so in general it is better to have some more patience when the computation runs through.
@@ -186,7 +186,7 @@ To perform the ICA decomposition, you can use the following code. Here we use a 
     cfg.channel      = {'MEG', 'MEGREF'};
     data_comp = ft_componentanalysis(cfg, data_clean); % using the data without atypical artifacts
 
-You should do the decomposition only on channels that see the brain and artifactual components in a simmilar way and that together represent a linear mixture of the underlying sources. If you have EEG and EOG channels that are recorded using the same reference, the EEEG and EOG channels can goin there together. If you have EEG relative to one reference and bipolar EOG channels, you should not combine them in a single ICA decomposition. When you have combined MEG and EEG data, the MEG and EEG channels will both see the brain and artifactual sources, but have different sensitivity to them and to effects due to movement of the head relative to the MEG melmet; in that case we also recommend to use the ICA separately on the MEG and on the EEG channels.
+You should do similar way and that together represent a linear mixture of the underlying sources. If you have EEG and EOG channels that are recorded using the same reference, the EEEG and EOG channels can goin there together. If you have EEG relative to one reference and bipolar EOG channels, you should not combine them in a single ICA decomposition. When you have combined MEG and EEG data, the MEG and EEG channels will both see the brain and artifactual sources, but have different sensitivity to them and to effects due to movement of the head relative to the MEG helmet; in that case we also recommend to use the ICA separately on the MEG and on the EEG channels.
 
 ### Identifying artifactual components
 
@@ -200,11 +200,11 @@ The decomposed data structure `data_comp` represents the topographies of the com
 
 {% include image src="/assets/img/tutorial/ica_artifact_cleaning/figure4.png" width="600" %}
 
-With some experience, you can relatively quickly identify components that are suspect for artifacts. Eye-related components are spatially localized on the frontal channels, blinks and vertical saccacdes are symmetric and horozontal saccades show a distinct left-right pattern. Heart-related components in MEG show up as avery deep source with a bipolar projecting over the left and right side ofthe helmet. It is common for both eye and heart components that you will see a few of them. You may want to write down the number of each of the suspect components.
+With some experience, you can relatively quickly identify components that are suspect for artifacts. Eye-related components are spatially localized on the frontal channels, blinks and vertical saccades are symmetric and horizontal saccades show a distinct left-right pattern. Heart-related components in MEG show up as avery deep source with a bipolar projecting over the left and right side of the helmet. It is common for both eye and heart components that you will see a few of them. You may want to write down the number of each of the suspect components.
 
 In the figure above, components 10 and 12 look like eye-related components. Component 5 and 6 probably still relate to the SQUID jumps on MLT24 and neighbouring channels. In this case there are no obvous heart-related component visible
 
-Subsequently you can look at the time course of the components. The heart-related components will show a regular heartbeat that you should be able torecognize already in the first few seconds of the decomposition. The eye-related components only show deflections in the time series if the subject blinks or makes a saccade; to see those you probably have to scroll though the data or to zoom out to see a larger piece of data.
+Subsequently you can look at the time course of the components. The heart-related components will show a regular heartbeat that you should be able to recognize already in the first few seconds of the decomposition. The eye-related components only show deflections in the time series if the subject blinks or makes a saccade; to see those you probably have to scroll though the data or to zoom out to see a larger piece of data.
 
     cfg = [];
     cfg.viewmode  = 'component';
@@ -216,17 +216,17 @@ Subsequently you can look at the time course of the components. The heart-relate
 
 Again you write down the components that represent artifacts.
 
-Note that due to eye components in MEG look different than eye components in EEG, that is due to the orientation of the MEG channels: on the left side of the head the channels point to the right and on the right side they point to the left, this cause their "polarity" to flip. With EEG electrodes all frontal electrodes have the same polarity. In combination with the component time series you can figure out which component reflects horozontal movements and which reflects blinks.
+Note that due to eye components in MEG look different than eye components in EEG, that is due to the orientation of the MEG channels: on the left side of the head the channels point to the right and on the right side they point to the left, this cause their "polarity" to flip. With EEG electrodes all frontal electrodes have the same polarity. In combination with the component time series you can figure out which component reflects horizontal movements and which reflects blinks.
 
 ### Identifying bad channels
 
-Both EEG and MEG give a relatively blurry representation of the physiological activity. Components that are very localized in space, i.e., that are only active on a single of very few channels, are not likely to represent physiological sources in the brain or from the heart. If you would not have removed the SQUID jumps earlier, those would show up as very localized artifacts. EEG eLectrodes that move or that have a sudden change in impedance can also show up as very localized.
+Both EEG and MEG give a relatively blurry representation of the physiological activity. Components that are very localized in space, i.e., that are only active on a single of very few channels, are not likely to represent physiological sources in the brain or from the heart. If you would not have removed the SQUID jumps earlier, those would show up as very localized artifacts. EEG electrodes that move or that have a sudden change in impedance can also show up as very localized.
 
 If that happens, you can use ft_databrowser on the component time series to identify when the jump or other short-lived artifact lives, you can bark the time window as visual artifact, andusing the output `cfg` of ft_databrowser you can goback and remove that section from the data prior to ICA decomposition (or fill that section with NaNs as we did here). Subsequently, you would redo the ICA decomposition and once more check the cpomponent topographies and time series.
 
 It can also happen that you find one or a few componens that are very localized in space due to the corresponding channels being bad or noisy over a long time segment. In that case you will want to reject those channels from your data and to do the ICA decomposition and backprojecting without those channels. If many of your participants have bad channels, and/or if those bad channels are very varying over participants, you may want to interpolate those channels using **[ft_channelrepair](/reference/ft_channelrepair)**; this is something you would do _after_ the backprojection of the components to get clean channel-level data, but _prior_ to doing time-locked ERP or frequency/time-frequency analysis.
 
-With high-density EEG, you may sometimes see very localized muscle twitches, especially over the temporal region but possibly also elsewhere over the scalp. These can be less or more frequent, depending on your participant and task. Although these are spatially quite compact, they do represent a physiological source and ICA is an appropriate techique to remove them.
+With high-density EEG, you may sometimes see very localized muscle twitches, especially over the temporal region but possibly also elsewhere over the scalp. These can be less or more frequent, depending on your participant and task. Although these are spatially quite compact, they do represent a physiological source and ICA is an appropriate technique to remove them.
 
 ### Removing artifactual components
 
@@ -236,7 +236,7 @@ After identification of the artifactual components you can use **[ft_rejectcompo
     cfg.component = [10 12]; % to be removed
     data_clean = ft_rejectcomponent(cfg, comp)
 
-If you have computed the components on a resampled version of the data, you can also use **[ft_rejectcomponent](/reference/ft_rejectcomponent)** to project the artifacts out ofthe original data. That only requires the component topographies, which are then applied to unmix and re-mix the data at the original sampling rate.
+If you have computed the components on a resampled version of the data, you can also use **[ft_rejectcomponent](/reference/ft_rejectcomponent)** to project the artifacts out of the original data. That only requires the component topographies, which are then applied to unmix and re-mix the data at the original sampling rate.
 
     cfg = [];
     cfg.component = [10 12]; % to be removed
@@ -244,11 +244,11 @@ If you have computed the components on a resampled version of the data, you can 
 
 ## Summary and conclusion
 
-In this tutorial we have looked at how toprepare your data for ICA decomposition, how todeal with infrequent and atypical artifacts. We shortly discussed different ICA approaches and, using a specific approach, show how you can speed up your ICA by downsampling the data and by reducing the number of compoennts that are estimated. Given the ICA decomposition we demonstrated how to visualize them and identify the artifacts, and discussed that - if you get very focal components (in space and/or in time) you might want to remove that part of your data and start again. After obtaining a clean ICA decomposition, we explained how to back-project the components to a channel-level representation for further analysis or how touse the components to clean the original data.
+In this tutorial we have looked at how to prepare your data for ICA decomposition, how todeal with infrequent and atypical artifacts. We shortly discussed different ICA approaches and, using a specific approach, show how you can speed up your ICA by downsampling the data and by reducing the number of components that are estimated. Given the ICA decomposition we demonstrated how to visualize them and identify the artifacts, and discussed that - if you get very focal components (in space and/or in time) you might want to remove that part of your data and start again. After obtaining a clean ICA decomposition, we explained how to back-project the components to a channel-level representation for further analysis or how to use the components to clean the original data.
 
-What we _did not_ show in this tutorial is that you can also interpret the ICA components as sources in the brain. Just as it is possible to use all FieldTrip plotting and analysis strategies on artifactual components, it is also possible to analyze the brain components. All of the compnents are represented as channel time-series and all channel-level analyses can be applied. For example, following segmentation of your data in stimulus-locked trials, you can use **[ft_timelockanalysis](/reference/ft_timelockanalysis)**, **[ft_freqanalysis](/reference/ft_freqanalysis)** or **[ft_componentanalysis](/reference/ft_componentanalysis)** to investigate each of the components of interest and to use statistics to compare them between conditions.
+What we _did not_ show in this tutorial is that you can also interpret the ICA components as sources in the brain. Just as it is possible to use all FieldTrip plotting and analysis strategies on artifactual components, it is also possible to analyze the brain components. All of the components are represented as channel time-series and all channel-level analyses can be applied. For example, following segmentation of your data in stimulus-locked trials, you can use **[ft_timelockanalysis](/reference/ft_timelockanalysis)**, **[ft_freqanalysis](/reference/ft_freqanalysis)** or **[ft_componentanalysis](/reference/ft_componentanalysis)** to investigate each of the components of interest and to use statistics to compare them between conditions.
 
-The decompositon not only gives you the component time-series but also their topography. Besides using these to identifyartifacts, you can also cleary recognize components that represent activity in the brain. You can use **[ft_dipolefitting](/reference/ft_dipolefitting)** to localize these components with simple dipole models, or **[ft_sourceanalysis](/reference/ft_sourceanalysis)** to localize them with distributed models. The only source reconstruction strategy that you cannot apply (easily) is beamforming, since at the component-level you only have a single topography, but no data covariance matrix. As a spatial filtering techinique, beamforming is too simililar to independent component analysis (although based on a biophysical model and the assumption of uncorrelated rather than independent sources).
+The decomposition not only gives you the component time-series but also their topography. Besides using these to identify artifacts, you can also cleary recognize components that represent activity in the brain. You can use **[ft_dipolefitting](/reference/ft_dipolefitting)** to localize these components with simple dipole models, or **[ft_sourceanalysis](/reference/ft_sourceanalysis)** to localize them with distributed models. The only source reconstruction strategy that you cannot apply (easily) is beamforming, since at the component-level you only have a single topography, but no data covariance matrix. As a spatial filtering technique, beamforming is too similar to independent component analysis (although based on a biophysical model and the assumption of uncorrelated rather than independent sources).
 
 ## Suggested further reading
 

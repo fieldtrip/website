@@ -17,7 +17,7 @@ For the hands-on sessions you have to start MATLAB. To ensure that everything ru
 3.  Put all the data files in a directory called 'tutorial' (or something else you'll remember).
 
 {% include markup/danger %}
-Depending on the unzip program you are using (e.g., Winrar), the name of the zip file might also appear as directiory, resulting in path_to_directory/fieldtrip-xxxxxxxx/fieldtrip-xxxxxxxx, i.e. the FieldTrip directory in a FieldTrip directory. Please fix that by moving all files one level up.
+Depending on the unzip program you are using (e.g., Winrar), the name of the zip file might also appear as directory, resulting in path_to_directory/fieldtrip-xxxxxxxx/fieldtrip-xxxxxxxx, i.e. the FieldTrip directory in a FieldTrip directory. Please fix that by moving all files one level up.
 {% include markup/end %}
 
 After copying all files to your computer and unzipping then, you start MATLAB. To ensure that the right version of FieldTrip is used, and not another version (such as the one included in SPM or EEGLAB), you type in the MATLAB command window
@@ -33,7 +33,7 @@ Please do NOT use the graphical path management tool from MATLAB. In this hands-
 Please do NOT add FieldTrip with all subdirectories, subdirectories will be added automatically when needed, and only when needed.
 {% include markup/end %}
 
-The `restoredefaultpath` command clears your path, keeping only the official MATLAB toolboxes. The `addpath(pwd)` statement adds the present working directory, i.e. the directory containing the FieldTrip main funcctions. The `ft_defaults` command ensures that all required subdirectories are added to the path.
+The `restoredefaultpath` command clears your path, keeping only the official MATLAB toolboxes. The `addpath(pwd)` statement adds the present working directory, i.e. the directory containing the FieldTrip main functions. The `ft_defaults` command ensures that all required subdirectories are added to the path.
 
 If you get the error "can't find the command ft_defaults" you should check the present working directory.
 

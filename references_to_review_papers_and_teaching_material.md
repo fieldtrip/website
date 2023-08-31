@@ -15,9 +15,9 @@ Sylvain Baillet wrote a recent review manuscript on [Magnetoencephalography for 
 
 [The brain in time: insights from neuromagnetic recordings](http://onlinelibrary.wiley.com/doi/10.1111/j.1749-6632.2010.05438.x/abstract) by Riitta Hari, Lauri Parkkonen and Cathy Nangini gives a comprehensive introduction to MEG.
 
-Two somewhat older, but certainly not outdated papers on SQUID-based MEG instrumentation and signal analysis is [Magnetoencephalography—theory, instrumentation, and applications to noninvasive studies of the working human brain](https://doi.org/10.1103/RevModPhys.65.413) by Hämäläinen et al. (1993) and [Signal Processing in Magnetoencephalography](https://pdfs.semanticscholar.org/94b1/1b4e0bec484376f810a557492fa776b40b28.pdf) by Vrbra and Robinson (2001).
+Two somewhat older, but certainly not outdated papers on SQUID-based MEG instrumentation and signal analysis is [Magnetoencephalography—theory, instrumentation, and applications to noninvasive studies of the working human brain](https://doi.org/10.1103/RevModPhys.65.413) by Hämäläinen et al. (1993) and [Signal Processing in Magnetoencephalography](https://pdfs.semanticscholar.org/94b1/1b4e0bec484376f810a557492fa776b40b28.pdf) by Vrba and Robinson (2001).
 
-A recent review of advancements in OPM-based MEG research is given in [Moving magnetoencephalography towards real-world applications with a wearable system](https://doi.org/10.1038/nature26147) by Boto et al. (2018).  
+A recent review of advancements in OPM-based MEG research is given in [Moving magnetoencephalography towards real-world applications with a wearable system](https://doi.org/10.1038/nature26147) by Boto et al. (2018).
 
 ### Books
 

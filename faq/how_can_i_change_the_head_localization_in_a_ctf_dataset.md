@@ -7,7 +7,7 @@ tags: [faq, ctf]
 
 ## Introduction
 
-The res4 file in a CTF dataset contains information about the location of each gradiometer with respect to the head. This information is computed and stored using the localizer measurements prior to, and after the real experiment. It is important to know the location of the gradometers exactly if you want to do source analysis (in fieldtrip, CTF or Curry), or if you want to realign the data to a template head location.
+The res4 file in a CTF dataset contains information about the location of each gradiometer with respect to the head. This information is computed and stored using the localizer measurements prior to, and after the real experiment. It is important to know the location of the gradiometers exactly if you want to do source analysis (in fieldtrip, CTF or Curry), or if you want to realign the data to a template head location.
 
 If you only want to analyze the data on the channel level, the location of the gradiometers is not used. If you want to use channel-level statistics on the channel-level data, you do need the channel locations, but it is not important that they are accurate.
 

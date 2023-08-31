@@ -79,7 +79,7 @@ title: Add support for reading data from any file format supported by neuroshare
       event(i).sample    = tmp.event.sample(i);
     end
 
-    % FIXME: i dont understand the neuroshare event structure yet...
+    % FIXME: i don't understand the neuroshare event structure yet...
     % for i=1:length(tmp.event.timestamp)
     %     event(i).type      = tmp.hdr.eventinfo(i).EventType;
     %     event(i).value     = tmp.event.data(i);

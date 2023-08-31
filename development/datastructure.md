@@ -52,11 +52,11 @@ To document the data fields unambiguously, the structure can include a `dimord` 
 2. A data structure can have a one or multiple `xxxdimord` fields, where xxx refers to the data parameter. For example `powspctrmdimord` to document `powspctrm`, and `cohspctrmdimord` to document `cohspctrm`.
 3. It is also allowed that a data structure does _not_ have an explicit dimord. In that case FieldTrip will - where needed - use heuristics to determine how the data field is to be interpreted.
 
-To determine what the dimensions of a data field represent, FIeldTrip functions use the private **[getdimord](/reference/private/getdimord)** function. To determine their size, they use the private **[getdimsiz](/reference/private/getdimsiz)** function. Another private function that plays a role for managing the dimord field is **[fixdimord](/reference/private/fixdimord)**.
+To determine what the dimensions of a data field represent, FieldTrip functions use the private **[getdimord](/reference/private/getdimord)** function. To determine their size, they use the private **[getdimsiz](/reference/private/getdimsiz)** function. Another private function that plays a role for managing the dimord field is **[fixdimord](/reference/private/fixdimord)**.
 
 Most of the elements of the dimord match a corresponding metadata field.
 
-| dimord element | correspondiong metadata field |
+| dimord element | corresponding metadata field |
 | -------------- | ----------------------------- |
 | `time`         | `time`                        |
 | `freq`         | `freq`                        |

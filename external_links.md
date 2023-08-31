@@ -10,7 +10,7 @@ Feel free to edit this page and add links that you think are appropriate.
 
 - The Donders Centre for Cognitive Neuroimaging (DCCN), Donders Centre for Cognition (DCC), Donders Centre for Neuroscience (DCN) and Donders Centre for Medical Neuroscience (DCMN) are all part of the [Donders Institute for Brain, Cognition and Behaviour](https://www.ru.nl/donders) at the [Radboud University](https://www.ru.nl), Nijmegen, The Netherlands.
 - [Max Planck Institute for Psycholinguistics](http://www.mpi.nl), Nijmegen, The Netherlands
-- [NatMEG](http://www.natmeg.se), the Swedish National Facility for Magnetoencephalograpy, hosted at the [Karolinska Institute](http://www.ki.se) in Stockholm, Sweden.
+- [NatMEG](http://www.natmeg.se), the Swedish National Facility for Magnetoencephalography, hosted at the [Karolinska Institute](http://www.ki.se) in Stockholm, Sweden.
 - [Swartz Center for Computational Neuroscience](http://sccn.ucsd.edu), Institute for Neural Computation, University of California, San Diego, USA
 - [CCNi, Centre for Cognitive Neuroimaging in Glasgow](http://www.ccni.gla.ac.uk), University of Glasgow, Glasgow, UK
 - [Wellcome Trust Centre for Neuroimaging](http://www.fil.ion.ucl.ac.uk/), Institute of Neurology, University College London, London, UK

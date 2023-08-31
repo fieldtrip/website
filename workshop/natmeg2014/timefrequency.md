@@ -83,7 +83,7 @@ At this stage in the processing pipeline you could remove bad trials using, for 
 
 We will here describe how to calculate time frequency representations using Hanning tapers. When choosing for a fixed window length procedure the frequency resolution is defined according to the length of the time window (delta T). The frequency resolution (delta f in the first) = 1/length of time window in sec (delta T in the first figure). Thus a 500 ms time window results in a 2 Hz frequency resolution (1/0.5 sec= 2 Hz) meaning that power can be calculated for 2 Hz, 4 Hz, 6 Hz etc. An integer number of cycles must fit in the time window. In the following example a time window with length 500 ms is applied.
 
-Since we have two conditions (responses with left and right index finger), we will calculate the data separately for both so that we can compare them. We select the trials based on the .trialinfo field. We created this field when we called _trialfun_oddball_responselocked_ in ft_definetrial. In addition to the three colums in the .trl, it also added a column with response side based on the response trigger (256 and 2048 for left and right, respectively). After preprocessing, this column is added in the data structure as the field .trailinfo. This is a good example of keeping your own internal bookkeeping. You can e.g., also add response times, or accuracy. This info will travel with you throughout your analysis as long as it represents separate trials (and not averages).
+Since we have two conditions (responses with left and right index finger), we will calculate the data separately for both so that we can compare them. We select the trials based on the .trialinfo field. We created this field when we called _trialfun_oddball_responselocked_ in ft_definetrial. In addition to the three colums in the .trl, it also added a column with response side based on the response trigger (256 and 2048 for left and right, respectively). After preprocessing, this column is added in the data structure as the field .trialinfo. This is a good example of keeping your own internal bookkeeping. You can e.g., also add response times, or accuracy. This info will travel with you throughout your analysis as long as it represents separate trials (and not averages).
 
     cfg              = [];
     cfg.output       = 'pow';
@@ -146,7 +146,7 @@ There are three ways of graphically representing the data: 1) time-frequency plo
 
 _Figure: Time-frequency representations calculated using ft_freqanalysis and plotted with ft_multiplotTFR_
 
-Note that by using the options cfg.baseline and cfg.baselinetype when calling plotting functions, baseline correction can be applied to the data. Baseline correction can also be applied directly by calling **[ft_freqbaseline](/reference/ft_freqbaseline)**. You can combine the various visualization options/functions interactively to explore your data. Currently, this is the default ploting behavior because the configuration option cfg.interactive='yes' is activated unless you explicitly select cfg.interactive='no' before calling **[ft_multiplotTFR](/reference/ft_multiplotTFR)** to deactivate it. See also the [plotting tutorial](/tutorial/plotting) for more details.
+Note that by using the options cfg.baseline and cfg.baselinetype when calling plotting functions, baseline correction can be applied to the data. Baseline correction can also be applied directly by calling **[ft_freqbaseline](/reference/ft_freqbaseline)**. You can combine the various visualization options/functions interactively to explore your data. Currently, this is the default plotting behavior because the configuration option cfg.interactive='yes' is activated unless you explicitly select cfg.interactive='no' before calling **[ft_multiplotTFR](/reference/ft_multiplotTFR)** to deactivate it. See also the [plotting tutorial](/tutorial/plotting) for more details.
 
 Something interesting seems to happen at channel MEG1041. To make a plot of a single channel use the function **[ft_singleplotTFR](/reference/ft_singleplotTFR)**.
 
@@ -189,7 +189,7 @@ _Figure: Topographic representation of the time-frequency representations of bet
 So what do you think we are looking at? I guess the introduction gave it away, but how would you argue for it?
 {% include markup/end %}
 
-Perhaps we should now also look at the beta-rebound after a response of the other (right) hand? We can use the same parameters to make them comparabl
+Perhaps we should now also look at the beta-rebound after a response of the other (right) hand? We can use the same parameters to make them comparable
 
     cfg = [];
     cfg.baseline     = [-0.5 -0.1];

@@ -235,7 +235,7 @@ Let us view the data in 2-hour blocks again after excluding the parts with EMG o
 
 {% include image src="/assets/img/tutorial/sleep/figure5.png" width="800" %}
 
-## Estimating frequency-represtation over sleep
+## Estimating frequency-representation over sleep
 
 Electrophysiological recordings can also be used to identify wake periods. In the EEG we focus on 4 frequency bands, which are slow-wave activity (0.5 to 4 Hz), theta (4 to 8 Hz), alpha (8-11) and sleep spindle band/ sigma (11-16 Hz). Note that the frequency bands might be defined here differently than in some other literature.
 
@@ -392,7 +392,7 @@ Create a new combined channel from the normalized signal of slow-wave activity (
     cfg.montage = montage_sum;
     data_continuous_perband_sum = ft_preprocessing(cfg, data_continuous_perband);
 
-View the whole sleep data in frequency band power now including the combined sleep spindle and SWA power. **Is this enough t to find the sleep stages and cylces?**
+View the whole sleep data in frequency band power now including the combined sleep spindle and SWA power. **Is this enough t to find the sleep stages and cycles?**
 
     cfg = [];
     cfg.continuous   = 'yes';
@@ -548,7 +548,7 @@ Other than detecting periods of hightened or lowered activity often it is intere
 
 ### R-waves and heart rate in ECG
 
-Detect R-waves using **[ft_artifact_zvalue](/reference/ft_artifact_zvalue)** by filtering in a frequency band that puts an emphasis on the R-waves frequency in the ECG. As R-waves are concrete peaks we find the maxima in the envelope of the envelope signals. Note that this methods also works if the R-waves would be inversed pointing towards the negative values.
+Detect R-waves using **[ft_artifact_zvalue](/reference/ft_artifact_zvalue)** by filtering in a frequency band that puts an emphasis on the R-waves frequency in the ECG. As R-waves are concrete peaks we find the maxima in the envelope of the envelope signals. Note that this methods also works if the R-waves would be inverted pointing towards the negative values.
 
     %% find heart R-waves in ECG
     cfg            = [];
@@ -623,7 +623,7 @@ From this R-wave samples we can also compute a continuous heart rate signal.
 
 #### Filter for non-REM data for detection
 
-Before we can detect concrete events in non-REM we need to prepare the data for this analysis by excluding all the epochs from the data that would intefere with our detection method. First we discard all trials that are wake or REM from the information of the hypnogram we stored previously in the trialinfo of the epoched data. since spindles and non-REM mostly occur during Stages 2, 3 and 4 this is the epochs we want to focus on (Stage 1 by definition does not contain sleep spindles or slow waves). Here you can choose if you want to contine with the information of the prescored hypnogram or our estimated one.
+Before we can detect concrete events in non-REM we need to prepare the data for this analysis by excluding all the epochs from the data that would interfere with our detection method. First we discard all trials that are wake or REM from the information of the hypnogram we stored previously in the trialinfo of the epoched data. since spindles and non-REM mostly occur during Stages 2, 3 and 4 this is the epochs we want to focus on (Stage 1 by definition does not contain sleep spindles or slow waves). Here you can choose if you want to contine with the information of the prescored hypnogram or our estimated one.
 
     cfg        = [];
     cfg.trials = (data_epoched.trialinfo >= 2  & data_epoched.trialinfo <= 4); % Only non-REM stages, but not Stage 1
@@ -808,7 +808,7 @@ Visualize the event-related time-frequency around the event time-locked to the t
 {% include image src="/assets/img/tutorial/sleep/figure19.png" width="400" %}
 {% include image src="/assets/img/tutorial/sleep/figure20.png" width="400" %}
 
-View the detected events in the orginal data.
+View the detected events in the original data.
 
     cfg                                 = [];
     cfg.continuous                       = 'yes';
@@ -857,7 +857,7 @@ Also we looked at the distribution of different sleep frequency bands, their flu
 
 Finally we explored how easy it is to detect spontaneous events in signals like ECG and EEG by using simple filtering and thresholding of the cleaned data epochs as a basis, e.g., we found R-waves, sleep slow waves and spindles. These have been then viewed in the **[ft_databrowser](/reference/ft_databrowser)** and we looked at the typical spontaneous events by aligning them by time (ERP) and look at time-locked frequency activity (ERF), all in a single channel.
 
-This should give you a basis of also recognizing other data and see that recordings are highly dependent on the current state. Importantly, this might also apply to wake recordings of task in which the subjects might doze off, loose focus or have their eyes closed or directed away at important periods of the task. The techinques here can thus also be used as sanity check in other data.
+This should give you a basis of also recognizing other data and see that recordings are highly dependent on the current state. Importantly, this might also apply to wake recordings of task in which the subjects might doze off, loose focus or have their eyes closed or directed away at important periods of the task. The techniques here can thus also be used as sanity check in other data.
 
 Interesting to continue the analysis if you want to go further:
 

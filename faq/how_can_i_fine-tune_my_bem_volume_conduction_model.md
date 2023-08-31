@@ -11,7 +11,7 @@ The strategy employed in FieldTrip for constructing the BEM model boils down to 
 
 - anatomical MRI, described as voxels in a regular 3-D lattice, grey values
 - segmented MRI, described as voxels in a regular 3-D lattice, boolean or probabilistic values
-- mesh, consisting of vertices and elements (triangles, tetraheders, hexaheders)
+- mesh, consisting of vertices and elements (triangles, tetrahedra, hexahedra)
 
 In case of the BEM, the volume conduction model consists of one or multiple homogenous and isotropic compartments. The compartment boundaries are closed and non-intersecting surfaces that are described by triangulated meshes. Furthermore, each of the compartments is described by a conductivity.
 
@@ -73,7 +73,7 @@ The **[ft_prepare_mesh](/reference/ft_prepare_mesh)** function allows you to int
 
 The **[ft_prepare_mesh](/reference/ft_prepare_mesh)** function has the 'projectmesh', 'iso2mesh' and 'isosurface' methods for constructing a mesh from a segmentation.
 
-The projectmesh method works by projecting lines from the center of an icosaedron or other nice sphretical mesh through the vertices, to obtain the points of the volume that correspond to the transition between inside (true) and outside (false of the binary volume. The resulting surface is closed and topologically equivalent to a sphere. However, the triangles are not uniformly sized over the whole surface.
+The projectmesh method works by projecting lines from the center of an icosahedron or other nice spherical mesh through the vertices, to obtain the points of the volume that correspond to the transition between inside (true) and outside (false of the binary volume. The resulting surface is closed and topologically equivalent to a sphere. However, the triangles are not uniformly sized over the whole surface.
 
 The isosurface method corresponds to the [marching cubes algorithm](https://en.wikipedia.org/wiki/Marching_cubes) implemented by the MATLAB isosurface.m function. This results in a very detailed description of the surface. The level of detail is typically too large for BEM, making it computationally too slow. Furthermore, the resulting mesh is not guaranteed to be closed (i.e. topologically equivalent to a sphere).
 

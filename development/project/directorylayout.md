@@ -39,7 +39,7 @@ All changes have been made with backward compatibility in mind. This is achieved
 
 ## Known problems that should be fixed
 
-using the MATLAB "depfun" functio
+using the MATLAB "depfun" function
 
     FUNCTION dipolefitting
     /home/common/matlab/fieldtrip/fixpath/rv.m

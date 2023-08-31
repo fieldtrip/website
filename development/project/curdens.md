@@ -36,7 +36,7 @@ Examples with code/command lines instructions
 - segment the outer brain from the MRI
 - project the electrodes from CT onto inner skull (CT space)
 - superimpose two surfaces (electrodes are expressed in brain coordinates afterwards)
-  This is done in SPM by coregistering CT to MRI images.
+  This is done in SPM by coregistration of the CT to MRI images.
   This automatically gives the transfer matrix from CT to MRI coordinates (and hence you also have the electrodes expressed in MRI coordinates)
 
 - check the surface does not contain self intersections

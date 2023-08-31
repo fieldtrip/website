@@ -49,7 +49,7 @@ The **[ft_singleplotER](/reference/ft_singleplotER)** function first selects the
 
 {% include image src="/assets/img/tutorial/plotting/figure1.png" %}
 
-You could make the same plot by the following code, using the MATLAB plot command. 
+You could make the same plot by the following code, using the MATLAB plot command.
 
     selected_data = avgFC.avg(9,241:601); % MLC24 is the 9th channel, -0.2 to 1.0 is sample 241 to 601
     selected_time = avgFC.time(241:601);
@@ -236,7 +236,7 @@ You can compare this to the more realistic helmet-style layout, which better ack
 
 {% include image src="/assets/img/tutorial/plotting/figure17.png" %}
 
-The baseline correction computes the power difference compared to the pre-stimuls baseline. We can also look at the power ratio
+The baseline correction computes the power difference compared to the pre-stimulus baseline. We can also look at the power ratio
 
     cfg = [];
     cfg.xlim = [0.9 1.3];
@@ -531,7 +531,7 @@ Scalar data (e.g., time-averaged activity, frequency-specific power estimates, s
 
 {% include image src="/assets/img/tutorial/plotting/figure34.png" %}
 
-If you enable the camera toolbar (menu option "view", "camera toolbar") you have more options for controlling the 3-dimensional rendering, e.g., change perspective, change the position of the light (used for relection and shadows).
+If you enable the camera toolbar (menu option "view", "camera toolbar") you have more options for controlling the 3-dimensional rendering, e.g., change perspective, change the position of the light (used for reflection and shadows).
 
 As with the channel-level multiplots, you can change the colormap that maps the functional values on the colors.
 
@@ -552,7 +552,7 @@ As with the channel-level multiplots, you can change the colormap that maps the 
 
 If you right-click with the mouse on the colorbar in the figure, you can also do this interactively.
 
-To interactively explore higher-dimensional data (such as TFR data) on the surface, **[ft_sourceplot](/reference/ft_sourceplot)** cannot be used. You can make selections of a specific time and/or frequency and make a series of sublplots.
+To interactively explore higher-dimensional data (such as TFR data) on the surface, **[ft_sourceplot](/reference/ft_sourceplot)** cannot be used. You can make selections of a specific time and/or frequency and make a series of subplots.
 
 #### Higher dimensional source-level data
 
@@ -568,7 +568,7 @@ Volumetric and surface based data can be exported to standard file formats using
 - [OpenWallnut](http://www.openwalnut.org)
 - [Connectome Workbench](http://www.humanconnectome.org/software/connectome-workbench.html)
 
-For geometrical data, such as segmented anatomical MRIs, triangulated surfaces, or tesselated meshes, you can use
+For geometrical data, such as segmented anatomical MRIs, triangulated surfaces, or tessellated meshes, you can use
 
 - [meshlab](https://www.meshlab.net)
 - [Seg3D](https://www.sci.utah.edu/cibc-software/seg3d.html)

@@ -14,7 +14,7 @@ title: Redesign and implement a common statistical backend for various data type
 
 ## Step 1: verify the implementations on simulated data
 
-The purpose is to examine the correctness and completeness of the currently implemented methods. Backward compatibility with exising scripts has to be maintained, therefore the current implementation can serve as reference implementation.
+The purpose is to examine the correctness and completeness of the currently implemented methods. Backward compatibility with existing scripts has to be maintained, therefore the current implementation can serve as reference implementation.
 
 Besides showing that the current implementations are correct, this also reveals the different output formats that are presented to the end user.
 
@@ -39,7 +39,7 @@ Implementing a new structure requires that
 1.  existing statistical tests have to be refitted under the common structure
 2.  handling of critical values has to be implemented consistently (required for parametric tests and clustering)
 3.  missing values have to be dealt with (if possible)
-4.  multiple comparison corrections have to be implemented consistently, (not only maxStat and clusterSum, but also Bonferoni and FDR)
+4.  multiple comparison corrections have to be implemented consistently, (not only maxStat and clusterSum, but also Bonferroni and FDR)
 
 ## Step 3: ensure that the efficiency of the implementation is adequate for real-world use
 

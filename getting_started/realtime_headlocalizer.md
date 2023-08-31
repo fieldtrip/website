@@ -17,7 +17,7 @@ The following documentation describes how to set up the interface between the [C
 
 There are multiple reasons for running the visualization separate from the acquisition computer. First of all, we do not want to interrupt the acquisition or put load on that computer. Furthermore, it is more convenient to display the screen of a second (presentation) computer on the beamer to the subject (see below).
 
-The CTF / Neuromag acquisition computer only runs a small program in the background (acq2ftx / neuromag2ft). Note that MATLAB does not need to be installed on the acquisition computer as this program is written in C-code and provided in compiled form. This program reads the data from the real-time inferface (using shared memory) and makes the data available on a TCP/IP socket in a [buffer](/development/realtime/buffer).
+The CTF / Neuromag acquisition computer only runs a small program in the background (acq2ftx / neuromag2ft). Note that MATLAB does not need to be installed on the acquisition computer as this program is written in C-code and provided in compiled form. This program reads the data from the real-time interface (using shared memory) and makes the data available on a TCP/IP socket in a [buffer](/development/realtime/buffer).
 
 The second (visualization / real-time analysis) computer runs MATLAB, reads the data over the network from the buffer and does the plotting using **[ft_realtime_headlocalizer](/reference/realtime/online_meg/ft_realtime_headlocalizer)**.
 

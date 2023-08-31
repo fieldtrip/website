@@ -9,7 +9,7 @@ If you use 'mtmfft' as a method for frequency analysis it could happen that appa
 
 This phenomenon is caused by the discrete nature of the spectral transformation, and by one of the default algorithmic details of the spectral decomposition in FieldTrip. Specifically, FieldTrip removes the DC-component (signal mean) by default, prior to spectral transformation. This brings down the 0 Hz component to have a power of ~0. Next, if there's a 1/f power profile in the underlying data, the first non-zero frequency bin will show the highest power in the spectrum of the DC-corrected signal. The location of this first non-zero bin depends on the spectral resolution, which is determined by the segments' length.
 
-If you don't want the DC-component to be removed prior to spectral transformation, you hould specify the option ``cfg.polyremoval = -1`` before calling ``ft_freqanalysis``. The motivation for the DC-component removal is explained in the FAQ: [Why does my TFR look strange (part I)?](/faq/why_does_my_tfr_look_strange)
+If you don't want the DC-component to be removed prior to spectral transformation, you should specify the option ``cfg.polyremoval = -1`` before calling ``ft_freqanalysis``. The motivation for the DC-component removal is explained in the FAQ: [Why does my TFR look strange (part I)?](/faq/why_does_my_tfr_look_strange)
 
     clear all;
     data.time{1} = (0:99999)./1000;
@@ -18,10 +18,10 @@ If you don't want the DC-component to be removed prior to spectral transformatio
     for k = 2:100000
         data.trial{1}(k)=randn(1)+1.*data.trial{1}(k-1);
     end
-    
+
     cfg2.method = 'mtmfft';
     cfg2.taper  = 'boxcar';
-    
+
     L = [0.5 1 2 4];
     for k = 1:numel(L)
         cfg1.length = L(k);
@@ -34,7 +34,7 @@ If you don't want the DC-component to be removed prior to spectral transformatio
     end
     xlim([0 10])
     ylim([-2 4]);
-    
+
     cfg2.polyremoval=-1;
     for k = 1:4
         cfg1.length = L(k);
@@ -45,7 +45,7 @@ If you don't want the DC-component to be removed prior to spectral transformatio
         plot(freq{k}.freq,log10(freq{k}.powspctrm));
     end
     xlim([0 10])
-    ylim([-2 4])    
+    ylim([-2 4])
 
 ### Figure: spectra from signal with large DC component with (left) and without (right) demeaning prior to ft_freqanalysis
 

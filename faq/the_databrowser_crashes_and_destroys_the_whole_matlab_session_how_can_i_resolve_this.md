@@ -15,7 +15,7 @@ prior to the call to ft_databrowser.
 This error and solution has been confirmed by the MathWorks. Thanks to Martine van Schouwenburg for contacting MathWorks and forwarding their response.
 {% include markup/end %}
 
-EMAIL SUPPORT TEAM MATHWORK
+EMAIL SUPPORT TEAM MATHWORKS
 
 "I have a feeling that the crash might be because of the renderer being
 chosen by MATLAB to plot the surface plot.
@@ -33,7 +33,7 @@ incompatibilities due to the many different graphics cards out there and
 also the many different driver versions that exist for each of these cards.
 
 So, you can try and switch to the software implementation of OpenGL by
-executing the following command in the command windos:
+executing the following command in the command window:
 
     >> opengl software
 

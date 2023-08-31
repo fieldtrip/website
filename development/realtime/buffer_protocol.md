@@ -172,7 +172,7 @@ The fixed part (32 bytes) consists of the following fields (`eventdef_t` in "mes
 
 After the fixed part, you need to first transmit the _type_ in the form specified by `type_type` and `type_numel`, and after that the _value_ of this event. Multiple events can be transmitted one after another. Please note that the `bufsize` field above should always contain `type_numel` times the size per _type_ element plus the same product for the _value_ field.
 
-The response of the buffer server will be the usual triple `version`=1,`command`,`bufsize`=0, with `command` equal to 0x104 (=260 / PUT_OK) on sucess, or 0x105 (=261 / PUT_ERR) in case an error occurred.
+The response of the buffer server will be the usual triple `version`=1,`command`,`bufsize`=0, with `command` equal to 0x104 (=260 / PUT_OK) on success, or 0x105 (=261 / PUT_ERR) in case an error occurred.
 
 #### Example
 
@@ -433,5 +433,5 @@ These chunks contain .fif files as written by the neuromag2ft realtime interface
 - [draft network](/development/realtime/draft_network)
 - [draft implementation](/development/realtime/draft_implementation)
 - [draft header chunks](/development/realtime/draft_header_chunks)
-- [draft compatability](/development/realtime/draft_compatability)
+- [draft compatibility](/development/realtime/draft_compatability)
 - [scratchpad](/development/realtime/scratchpad)

@@ -22,7 +22,7 @@ You would then call the application like this:
 where "COM5:" is the serial port on which the amplifier is connected (use something like "/dev/ttyS0" on Linux), "config.txt" is the name of the configuration file, "nameOfGDF" is the name of the GDF file where data should be saved to (extension ".gdf" will be added automatically), and "localhost" and "1972" are the address and port number of the buffer server (actually, these are the defaults for the last two arguments, so you can leave them out). In case you want to have the buffer server
 inside this application, replace the hostname by a minus (-).
 
-The second tool is called **modeeg2ft_2chn** and is basically a simplication of **modeeg2ft**: For this, always two channels are read, and there is no need for a configuration file. Just call for example
+The second tool is called **modeeg2ft_2chn** and is basically a simplification of **modeeg2ft**: For this, always two channels are read, and there is no need for a configuration file. Just call for example
 
     modeeg2ft_2chn COM5:  nameOfGDF  localhost  1972
 

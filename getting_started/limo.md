@@ -86,17 +86,17 @@ After having estimated the betas with the 1st-level analysis, LIMO continues wit
 
 ### Global framework
 
-Processing data through FieldTrip functions and performing statistical analyses on the proceesed data in LIMO is easy. The users can specify the experimental design (the GLM model) and the FieldTrip data as input. Using BIDS raw and derived data, the whole pipeline going from raw data, preprocessing, 1st-level analysis and 2nd-level testing, can be considered as follows:
+Processing data through FieldTrip functions and performing statistical analyses on the processed data in LIMO is easy. The users can specify the experimental design (the GLM model) and the FieldTrip data as input. Using BIDS raw and derived data, the whole pipeline going from raw data, preprocessing, 1st-level analysis and 2nd-level testing, can be considered as follows:
 
 {% include image src="/assets/img/getting_started/limo/block_schematic_pipeline.png" width="500" %}
 
-The example that follows uses the EEG of the multimodal [Wakeman & Henson (2015)](https://www.nature.com/articles/sdata20151) dataset. This data is aquired during visual stimulation with 3 face categories (famous, unknown and scrambled) and 1 covariate (the time between the first and the second repeated presentation of the same face). With the statistical analysis we want to identify spatio-temporal regions with a significant effect of the face type on the ERP, as well as the effect of the time between the repeated presentations of the same face. Categories have been coded as integer values: 1 (famous), 2 (unknown), 3 (scrambled), and the covariates are continuous values.
+The example that follows uses the EEG of the multimodal [Wakeman & Henson (2015)](https://www.nature.com/articles/sdata20151) dataset. This data is acquired during visual stimulation with 3 face categories (famous, unknown and scrambled) and 1 covariate (the time between the first and the second repeated presentation of the same face). With the statistical analysis we want to identify spatio-temporal regions with a significant effect of the face type on the ERP, as well as the effect of the time between the repeated presentations of the same face. Categories have been coded as integer values: 1 (famous), 2 (unknown), 3 (scrambled), and the covariates are continuous values.
 
 #### Model Design
 
 The first step is to design the model corresponding to the study. This design consists of different steps:
 
-The required paths and some additional informations have to be defined
+The required paths and some additional information have to be defined
 
     PATH_TO_ROOT  = bids_root_folder;        % location of the top level BIDS directory with the raw data
     PATH_TO_DERIV = bids_derivatives_folder; % location of the preprocessed EEG data
@@ -117,7 +117,7 @@ We define the contrast we want to study
 
 The split of the covariates (regressors) has to be defined. Here we want to create 1 column of covariates-by-regressor to analyse the influence on each condition:
 
-    regress_cat = { 1 , 1;   
+    regress_cat = { 1 , 1;
                     2 , 2;
                     3 , 3};  % correspondance between covariate and categories. Here, we create 1 column of covariate by category.
 
@@ -169,7 +169,7 @@ Finally, we run the second level analysis specifying the desired statistical tes
     stat_test = 'one sample t-test';  % desired statistical test
     nboot = 1000;                     % number of boostrap repetition
     tfce = true;                      % set this to false if TFCE does not have to be run
-    
+
     LIMOPath = limo_random_select(stat_test,expected_chanlocs,'LIMOfiles',...
         LIMOfiles,'analysis_type','Full scalp analysis',...
         'type','Channels','nboot',nboot,'tfce',tfce,'skip design check','yes');

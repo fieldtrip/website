@@ -47,7 +47,7 @@ After using edf2fieldtrip, some extra fields need to be created with the correct
 
 ### Define trials
 
-Now the data is structured nicely, we can continue with extracting the events. As mentioned before, you **must** have read the events via *readevents(*Events.edf,_Raw.edf)_ in ABM's B-Alert Lab software. Only after this, we can extract the events from a .csv file. Now, specifiy each of the configuration variables as shown below, so that **[ft_trialfun_balert](/reference/trialfun/ft_trialfun_balert)** can interpret it. There are no default values.
+Now the data is structured nicely, we can continue with extracting the events. As mentioned before, you **must** have read the events via *readevents(*Events.edf,_Raw.edf)_ in ABM's B-Alert Lab software. Only after this, we can extract the events from a .csv file. Now, specify each of the configuration variables as shown below, so that **[ft_trialfun_balert](/reference/trialfun/ft_trialfun_balert)** can interpret it. There are no default values.
 
     eventDir = dir('*_Events.csv');
     % load in event markers

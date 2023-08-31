@@ -11,7 +11,7 @@ You can use the following snippet of code to get a quick overview of the templat
 
     dirlist  = dir('template/layout/*.*');
     filename = {dirlist(~[dirlist.isdir]).name}';
-    
+
     for i=1:length(filename)
       cfg = [];
       cfg.layout = filename{i};
@@ -58,7 +58,7 @@ The following template layout sets are provided
 {% include image src="/assets/img/template/layout/easycapm3.png" width="200" %}
 {% include image src="/assets/img/template/layout/easycapm3.mat.png" width="200" %}
 
-#### easycapM22 - Small Equidistant 29-Channel-Arrangment (used in Braincap32)
+#### easycapM22 - Small Equidistant 29-Channel-Arrangement (used in Braincap32)
 
 {% include image src="/assets/img/template/layout/easycapm22.png" width="200" %}
 {% include image src="/assets/img/template/layout/easycapm22.mat.png" width="200" %}
@@ -155,7 +155,7 @@ This is a custom 64-Channel-Arrangement for the MPI. Note that the electrode pos
 
 #### acticap-64ch-standard2.mat
 
-This is the standard 64-channel-Arrangement from [Brain Products](http://www.brainproducts.com/files/public/downloads/actiCAP-64-channel-Standard-2_1201.pdf). It is based on the same coordinates as the easycap electrode caps. This particular layout was created using the [easycapM1 layout](/assets/img/template/layout/easycapm1.png) and then removing eight electrodes (FPz, Iz, F9, F10, P9, P10, O9, O10) which are not present in the cap. Furthermore, two eletrodes (AFz, FCz) were renamed to their purpose of being Ground (Gnd) and Reference (Ref) electrode.
+This is the standard 64-channel-Arrangement from [Brain Products](http://www.brainproducts.com/files/public/downloads/actiCAP-64-channel-Standard-2_1201.pdf). It is based on the same coordinates as the easycap electrode caps. This particular layout was created using the [easycapM1 layout](/assets/img/template/layout/easycapm1.png) and then removing eight electrodes (FPz, Iz, F9, F10, P9, P10, O9, O10) which are not present in the cap. Furthermore, two electrodes (AFz, FCz) were renamed to their purpose of being Ground (Gnd) and Reference (Ref) electrode.
 
 {% include image src="/assets/img/template/layout/acticap-64-channel-standard-2.jpg" width="200" %}
 {% include image src="/assets/img/template/layout/acticap-64-channel-standard-2.mat.jpg" width="200" %}

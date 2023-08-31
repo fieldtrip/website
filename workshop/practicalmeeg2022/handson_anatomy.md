@@ -58,7 +58,7 @@ Next, we can inspect the location of the landmarks in the anatomical image.
 
 If the contrast of the image is a bit low, you can use the 'shift+' key to increase the contrast. The coordinates of the anatomical landmarks are expressed in voxels.
 
-To align the coordinates of the MRI with the anatomical landmarks, we use the following.  
+To align the coordinates of the MRI with the anatomical landmarks, we use the following.
 
     cfg              = [];
     cfg.method       = 'fiducial';
@@ -88,7 +88,7 @@ Now, we can coregister the MRI image to the coordinate system as used for the ME
     cfg.fiducial.rpa = RPA(:)';
     cfg.coordsys     = 'neuromag';
     mri              = ft_volumerealign(cfg, mri_orig);
-    
+
     filename = fullfile(subj.outputpath, 'anatomy', subj.name, sprintf('%s_mri', subj.name));
     % save(filename, 'mri');
     % load(filename, 'mri');
@@ -100,7 +100,7 @@ Inspect the location of the NAS, LPA and RPA of the coregistered MRI. Pay specia
 {% include markup/end %}
 
 {% include markup/info %}
-Following the initial alignment of the MRI with the MEG coordinate system on the basis of the anatomical landmarks, we can further improve the coregistration by using an interative-closest-points (ICP) procedure. In that procedure, we fit the scalp surface than can be obtained from the MRI to a detailed measurement of the scalp surface using a Polhemus electromagnetic tracker. The measured head surface points can be read with **[ft_read_headshape](/reference/fileio/ft_read_headshape)** and are available as `sub-01/ses-meg/meg/sub-01_ses-meg_headshape.pos` or can be read directly from the fif file.
+Following the initial alignment of the MRI with the MEG coordinate system on the basis of the anatomical landmarks, we can further improve the coregistration by using an interactive-closest-points (ICP) procedure. In that procedure, we fit the scalp surface than can be obtained from the MRI to a detailed measurement of the scalp surface using a Polhemus electromagnetic tracker. The measured head surface points can be read with **[ft_read_headshape](/reference/fileio/ft_read_headshape)** and are available as `sub-01/ses-meg/meg/sub-01_ses-meg_headshape.pos` or can be read directly from the fif file.
 {% include markup/end %}
 
 ## Creation of the single shell head model
@@ -140,7 +140,7 @@ To creation of a state-of-the-art source model based on the cortical sheet is de
 
 The generation of a source model based on the cortical sheet can be rather time consuming, so we are **not going to do that** here. Instead, the sourcemodels have already been computed, according to a slightly modified version of the recipe described in the aforementioned tutorial. Below, the code is referenced that was used to generate the source models. It serves as an illustrative example, because it was executed on the Donders Institute's compute cluster, which uses a specific way to execute computational jobs (qsub). The overall idea would be to tweak a set of shell scripts `ft_freesurferscript.sh` and `ft_postfreesurferscript.sh` that are located in `fieldtrip/bin`, and execute those on your own computer. This requires a Linux or macOS environment with FreeSurfer and HCP workbench installed.
 
-In contrast to the [source model tutorial](/tutorial/sourcemodel) that is written for CTF data, the input MRI image here coregistered to the Neuromag MEG coordinate system. This coordinate system is sufficently similar to the coordinate system expected by freesurfer, so that the overall (post)freesurfer pipeline runs through fine. If, by contrast, the MEG coordinate system is according to the CTF system's convention, an intermediate (temporary) coregistration is required.
+In contrast to the [source model tutorial](/tutorial/sourcemodel) that is written for CTF data, the input MRI image here coregistered to the Neuromag MEG coordinate system. This coordinate system is sufficiently similar to the coordinate system expected by freesurfer, so that the overall (post)freesurfer pipeline runs through fine. If, by contrast, the MEG coordinate system is according to the CTF system's convention, an intermediate (temporary) coregistration is required.
 
     % this part creates a FreeSurfer output base directory and fills it with
     % an anatomical image that is going to be used by FreeSurfer
@@ -154,7 +154,7 @@ In contrast to the [source model tutorial](/tutorial/sourcemodel) that is writte
 
     % this part runs a standard automatic FreeSurfer pipeline. It is not
     % guaranteed to work out-of-the-box and may require some manual tweaks
-    
+
     [dum, ft_path] = ft_version;
     scriptname = fullfile(ft_path,'bin','ft_freesurferscript.sh');
     subj_dir   = fullfile(subj.outputpath, 'anatomy', subj.name, 'freesurfer');
@@ -162,7 +162,7 @@ In contrast to the [source model tutorial](/tutorial/sourcemodel) that is writte
     system(cmd_str);
 
     % this part runs a set of postprocessing steps, and requires connectome workbench to be available
-    
+
     [dum, ft_path] = ft_version;
     scriptname = fullfile(ft_path,'bin','ft_postfreesurferscript.sh');
     subj_dir   = fullfile(subj.outputpath, 'anatomy', subj.name, 'freesurfer');
@@ -265,7 +265,7 @@ The important thing to note is that the majority of files with the .gii extensio
 
       <subjectname>.<hemisphere>.<somename>.<number>k_fs_LR.<someothername>.gii
 
-Starting off with <number>, which here is 4, 8, 32, or 164. This refers to the approximate resolution of the corresponding mesh. All files with the same number 'belong' together. The <hemisphere> can be either L or R, reflecting the left or right hemispheres respectively. Then, the <someothername> gives an idea of what is represented in the file. If this is 'surf', the file actually contains topological information, i.e. a combination of vertex positions and triangle definitions. For a given hemisphere and resolution, the triangle definitions will be the same for all corresponding surf.gii files, only the positions differ. The <somename> gives an indication of what is represented. For the surf.gii files, <somename> can be white, midthickness, pial, inflated, very_inflated, and sphere. Relevant for our further purposes are the midthickness meshes, reflecting the halway point between the grey-white matter boundary and the pial surface, which will be used as the source models. Furthermore, we will use the inflated meshes, which allow for nice visualisation in some situations.
+Starting off with <number>, which here is 4, 8, 32, or 164. This refers to the approximate resolution of the corresponding mesh. All files with the same number 'belong' together. The <hemisphere> can be either L or R, reflecting the left or right hemispheres respectively. Then, the <someothername> gives an idea of what is represented in the file. If this is 'surf', the file actually contains topological information, i.e. a combination of vertex positions and triangle definitions. For a given hemisphere and resolution, the triangle definitions will be the same for all corresponding surf.gii files, only the positions differ. The <somename> gives an indication of what is represented. For the surf.gii files, <somename> can be white, midthickness, pial, inflated, very_inflated, and sphere. Relevant for our further purposes are the midthickness meshes, reflecting the halfway point between the grey-white matter boundary and the pial surface, which will be used as the source models. Furthermore, we will use the inflated meshes, which allow for nice visualisation in some situations.
 
 Next to the surf.gii files, there are shape.gii and label.gii files, which contain scalar information about local properties (for instance curvature) or contain parcellation information (for instance the anatomical parcel to which a given vertex belongs).
 

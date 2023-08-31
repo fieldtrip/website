@@ -21,9 +21,9 @@ This tutorial is focused on parallel computing, hence the code samples are set u
 
 Parallel computing is different from sequential computing, especially when the actual computing is done on another computer than where the script is started. Some minimal information that you should be aware of:
 
--   **Variables indexing**: Parfor does have certain requirements on how variables are accessed that are used both inside and outside the loop. The Matlab editor will give hints, noticable by red and orange squigly lines, on code that is incompatible with the parfor requirements.
+-   **Variables indexing**: Parfor does have certain requirements on how variables are accessed that are used both inside and outside the loop. The Matlab editor will give hints, noticable by red and orange squiggly lines, on code that is incompatible with the parfor requirements.
 -   **Local versus remote**: The parallel loop will use a parallel pool of compute resources. This can be your local machine, but also a compute cluster elsewhere that has been made available, depending on what is specified in your Matlab settings. To check, and switch, where the code is run go to the Home tab, then in the Environment section, use the Parallel drowdown menu item. More information on the parallel settings can be found on the [MathWorks website](https://mathworks.com/help/parallel-computing/parallel-preferences.html), and in the local MATLAB  documentation. For instance how to find remote clusters, and how to change the default number of parallel workers.
--   **Memory usage**: Especially when running on your local machine, computer memory can be a problem. Since analysis in parallel, will use more computer memory. If total is more than actually available, will actually be slower than running sequential.  
+-   **Memory usage**: Especially when running on your local machine, computer memory can be a problem. Since analysis in parallel, will use more computer memory. If total is more than actually available, will actually be slower than running sequential.
 -   **Paths to files**: When running on a remote cluster, and data is read from or written to file, the (relative) paths to the files as used in the code, should be such that they match the location of the data files as seen by the cluster.
 -   **Parallel on the outside:** There is some overhead in transferring the work of a loop iteration to the parallel workers, even on your local machine. Thus, it is beneficial to have the worker do as much work as possible per loop iteration. This means that in general, the most outer loop should be the one that is parallelized.
 
@@ -56,7 +56,7 @@ A very quick thing to try out next is the following. When using the normal `for`
     tic; parfor i=1:4; pause(1); end; toc
       Elapsed time is 1.084468 seconds.
 
-This tutorial requires the original MEG datasets for the four subjects, plus one additional dataset that is on purpose inconsistent with the others. These are available from:  
+This tutorial requires the original MEG datasets for the four subjects, plus one additional dataset that is on purpose inconsistent with the others. These are available from:
 
 -   [Subject01.zip](https://download.fieldtriptoolbox.org/tutorial/Subject01.zip)
 -   [Subject02.zip](https://download.fieldtriptoolbox.org/tutorial/Subject02.zip)
@@ -86,7 +86,7 @@ For reference, the changes in detail w.r.t. the [event-related averaging tutoria
 
 {% include markup/info %}
 -   Add a loop, such that both Subject01 and Subject02 are analyzed and that results from both analyses are available at the end
--   Use the combined results in a call to ft_timelockgrandaverage  
+-   Use the combined results in a call to ft_timelockgrandaverage
 {% include markup/end %}
 
     % Trial definition
@@ -369,7 +369,7 @@ When done correctly, all problematic subjects will be known after just one run o
 -   What results are available in the output directory? What are the differences with the previous implementations?
 {% include markup/end %}
 
-    % Set the base path, the example here assumes that teh data is on a shared network drive
+    % Set the base path, the example here assumes that the data is on a shared network drive
     base_path = pwd();
 
     nsubj = 5;

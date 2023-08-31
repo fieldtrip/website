@@ -129,7 +129,7 @@ the power at all time points. This gives the **absolute change** in power with
 respect to the baseline interval. Another method is (b) dividing, for each
 frequency, the power at all time points by the average power in the baseline
 interval. This gives the **relative increase** (or relative decrease) of the
-power at all ferquencies and time points with respect to the power in the
+power at all frequencies and time points with respect to the power in the
 baseline interval. Note that the relative baseline is expressed as a ratio; i.e.
 no change is represented by 1.
 
@@ -380,7 +380,7 @@ Spectral analysis with on multitapers is done with the function
 **[ft_freqanalysis](/reference/ft_freqanalysis)**. The function uses the time in
 which the data has been segmented during preprocessing. Prior to the Fourier
 transformations, the data are "tapered". A single taper can be applied (e.g.
-Hannning) or several orthogonal tapers might be used for each time window (e.g.
+Hanning) or several orthogonal tapers might be used for each time window (e.g.
 DPSS). The power is calculated for each tapered data segment and then averaged
 over tapers. In the example below we already have the data segmented in windows
 of different sizes (1, 2, 4 seconds) and we can compute the power spectra using

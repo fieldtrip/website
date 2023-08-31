@@ -364,7 +364,7 @@ In `ft_crossfrequencyanalysis`
 
 Naming of ft_xxxx_option versus ft_xxxx combined with cfg.method There are many analysis functions that have a switch case on cfg.method. However, there are also some top-level functions that appear to have the method as a suffix. Why?
 
-In `ft_artifact_nan`, there is a double loop, where every inner loop iteration causes a memory allocation. As also suggested by the mlint squigle, it would be more efficient to pre-allocate, just before the inner loop.
+In `ft_artifact_nan`, there is a double loop, where every inner loop iteration causes a memory allocation. As also suggested by the mlint squiggle, it would be more efficient to pre-allocate, just before the inner loop.
 
 FieldTrip `compat` folder has entries that go back to before 2013b. However, the table datatype is being used in multiple places in fieldtrip, so even though the matlablt2013b folder has a istable function, isn’t backward compatibility currently limited to 2013b and later?
 
@@ -543,7 +543,7 @@ An example of what the current implementation looks like
 
 ### 9.2. Analysis function with preamble and postamble v2
 
-What the analysis function would look like with the v2 of preamble / postamlbe
+What the analysis function would look like with the v2 of preamble / postamble
 
     function [outputs] = ft_important_analysis_final(cfg, inputs)
 
@@ -642,12 +642,12 @@ FIXME missing figure
 
 Using the matlab debugger, it is possible to stop at that line, and check the size of the datacov variable before and after the line is executed.
 
-Runnig whos before `ft_checkdata` is called shows
+Runnng whos before `ft_checkdata` is called shows
 
     Name Size Bytes Class Attributes
     datacov 1x1 337531528 struct
 
-Runnig whos after `ft_checkdata` is called shows
+Running whos after `ft_checkdata` is called shows
 
     Name Size Bytes Class Attributes
     datacov 1x1 545328786 struct
@@ -672,7 +672,7 @@ When we enable memory profiling, the Allocated Memory and Freed Memory columns s
 
 In this case, it is indeed possible to reduce the amount of memory allocation and freeing, by preusing the ‘dum’ variable that is already present, and splitting the line so the matlab interpreter is able to determine that the same variable is both input and output to the nested fftshift and ifft calls.
 
-Note that dum will be created 77 times, for each call to ft_specest_mtmconvol. This does match the Allocated Memory of 77\*2Mb approx 160Mb. And note that the Freed Memory over the now two lines is nearly 0 compared to the earlier 2Gb. Thus in this case indeed, within each call to ft_specest_mtmconvol, the memory allocated to dum is reused in each loop iteration. This is possible, because the size of dum does not change from the functions applied to it. Both the data put into it in the first line and the fftshift and ifft calls in the second line, all produce output that is the same size. And the fft functions have apparantly been implemented by MATLAB to efficiently use the already allocated memory when possible.
+Note that dum will be created 77 times, for each call to ft_specest_mtmconvol. This does match the Allocated Memory of 77\*2Mb approx 160Mb. And note that the Freed Memory over the now two lines is nearly 0 compared to the earlier 2Gb. Thus in this case indeed, within each call to ft_specest_mtmconvol, the memory allocated to dum is reused in each loop iteration. This is possible, because the size of dum does not change from the functions applied to it. Both the data put into it in the first line and the fftshift and ifft calls in the second line, all produce output that is the same size. And the fft functions have apparently been implemented by MATLAB to efficiently use the already allocated memory when possible.
 
 ## 12. Appendix: Results of checkCode complexity report
 

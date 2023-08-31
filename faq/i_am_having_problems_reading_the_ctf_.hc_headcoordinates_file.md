@@ -9,7 +9,7 @@ The most likely problem that you have with your CTF dataset is due to a bug in t
 
 The 5th line in the file is
 
-'' stadard left ear coil position relative to dewar (cm):''
+'' standard left ear coil position relative to dewar (cm):''
 
 but should be
 

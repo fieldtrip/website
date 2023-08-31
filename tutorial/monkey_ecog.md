@@ -22,9 +22,9 @@ The tutorial will follow the steps:
 
 - prepare a 2D electrode layout for visualization that will be used throughout the tutorial with **[ft_prepare_layout](/reference/ft_prepare_layout)** and plot it with **[ft_layoutplot](/reference/ft_layoutplot)**
 - load data into MATLAB and assemble it into a format FieldTrip can deal with
-- define a trial sturcture and subsequently use **[ft_redefinetrial](/reference/ft_redefinetrial)** in order to separate the eight conditions/orientations.
+- define a trial structure and subsequently use **[ft_redefinetrial](/reference/ft_redefinetrial)** in order to separate the eight conditions/orientations.
 - append the data into a common dataset **[ft_appenddata](/reference/ft_appenddata)** apply an independent component analysis using **[ft_componentanalysis](/reference/ft_componentanalysis)** after which we will plot and explore some components using **[ft_databrowser](/reference/ft_databrowser)**
-- Compute time-frequency representaions of power and plot using **[ft_freqanalysis](/reference/ft_freqanalysis)** and **[ft_multiplotTFR](/reference/ft_multiplotTFR)** respectively.
+- Compute time-frequency representations of power and plot using **[ft_freqanalysis](/reference/ft_freqanalysis)** and **[ft_multiplotTFR](/reference/ft_multiplotTFR)** respectively.
 - Compute coherence between reference electrode and the remaining electrodes using **[ft_connectivityanalysis](/reference/ft_connectivityanalysis)**.
 - Perform networkanalysis using **[ft_networkanalysis](/reference/ft_networkanalysis)**
 
@@ -134,7 +134,7 @@ _Figure 4: Power spectrum of components #11 and #43 illustrating a clear 10.89 H
 
 ### Time-frequency analysis
 
-After rejecting bad components with **[ft_rejectcomponent](/reference/ft_rejectcomponent)** a time-frequency analysis can be performed. Detailed information regarding this analysis step is extensively covered [here](/tutorial/timefrequencyanalysis). Furthermore, we will use different settings for the estimates of low (`<40Hz) and high (>`40Hz) frequencies. The rational behind this strategy is also covered in the time-freuqncy tutorial and extensively explained by Robert in the video lecture [here](https://www.youtube.com/watch?v=6EIBh5lHNSc). The time-frequency representation of power is calculated with **[ft_freqanalysis](/reference/ft_freqanalysis)**. Subsequently the power estimates are baseline corrected with **[ft_freqbaseline](/reference/ft_freqbaseline)** and plotted with **[ft_multiplotTFR](/reference/ft_multiplotTFR)**.
+After rejecting bad components with **[ft_rejectcomponent](/reference/ft_rejectcomponent)** a time-frequency analysis can be performed. Detailed information regarding this analysis step is extensively covered [here](/tutorial/timefrequencyanalysis). Furthermore, we will use different settings for the estimates of low (`<40Hz) and high (>`40Hz) frequencies. The rational behind this strategy is also covered in the time-frequency tutorial and extensively explained by Robert in the video lecture [here](https://www.youtube.com/watch?v=6EIBh5lHNSc). The time-frequency representation of power is calculated with **[ft_freqanalysis](/reference/ft_freqanalysis)**. Subsequently the power estimates are baseline corrected with **[ft_freqbaseline](/reference/ft_freqbaseline)** and plotted with **[ft_multiplotTFR](/reference/ft_multiplotTFR)**.
 
     % perform time-frequency analysis
     cfg              = [];

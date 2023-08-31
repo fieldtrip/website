@@ -5,12 +5,12 @@ tags: [example, eeg, preprocessing, laplace, bipolar]
 
 # Re-reference EEG and iEEG data
 
-EEG and intracranial EEG (iEEG) data, which includes sEEG and ECoG, is often recorded relative to a reference electrode that is good for the signal quality and for noise suppression (e.g., with an electrode firmly attached on the mastoid behind the ear), but that is not neccessarily the most optimal for subsequent analysis or interpretation of the data. Hence, it is common to apply some re-referencing in the preprocessing of EEG and iEEG data.
+EEG and intracranial EEG (iEEG) data, which includes sEEG and ECoG, is often recorded relative to a reference electrode that is good for the signal quality and for noise suppression (e.g., with an electrode firmly attached on the mastoid behind the ear), but that is not necessarily the most optimal for subsequent analysis or interpretation of the data. Hence, it is common to apply some re-referencing in the preprocessing of EEG and iEEG data.
 
 FieldTrip implements multiple methods for re-referencing in the **[ft_preprocessing](/reference/ft_preprocessing)** function. To use these, you specify `cfg.reref='yes'` and give the specific method as `cfg.refmethod`. Alternatively, if you have a more complex referencing scheme or want more control over the re-referencing, you can specify `cfg.reref='no'` and rather use `cfg.montage` in combination with **[ft_prepare_montage](/reference/ft_prepare_montage)**.
 
 The process and consequences of applying a certain re-referencing scheme which is also known as a "montage" to clinical 1020 EEG recordings is very nicely explained on the [Learning EEG](https://www.learningeeg.com/montages-and-technical-components) website.
- 
+
 ## avg
 
 With `cfg.refmethod='avg'` the average is computed over the channels specified in `cfg.refchannel` and subtracted from all channels that were selected in **[ft_preprocessing](/reference/ft_preprocessing)**.
@@ -88,7 +88,7 @@ The REST or Reference Electrode Standardization Technique for scalp EEG recordin
 
 This method requires a forward model for the sources that are assumed to have generated the EEG data, this can be computed using **[ft_prepare_leadfield](/reference/ft_prepare_leadfield)**.
 
-The following example uses a spherical arrangement of the electrodes, in combination with a three layer sperical headmodel. The sources consist of a layer of 642 evenly distributed dipoles that are shifted inward from the inner skull surface.
+The following example uses a spherical arrangement of the electrodes, in combination with a three layer spherical headmodel. The sources consist of a layer of 642 evenly distributed dipoles that are shifted inward from the inner skull surface.
 
     elec = ft_read_sens('template/electrode/easycap-M1.txt');
 
@@ -163,7 +163,7 @@ If you are analyzing an sEEG dataset, you might want to re-reference separately 
 
 ## laplace
 
-The Laplacian re-referencing scheme is relatively similar to the bipolar scheme. It allows to reduce the number of task-correlated channels by increaseing the degree of correlation between the signal and the task. This scheme consists of the re-referencing of each channel against the mean of its two clostest neighbours. As for the bipolar re-referencing, channels should be given in input to **[ft_preprocessing](/reference/ft_preprocessing)** in the order that should be used to re-reference them. In this case, the first and last channels of the order will be simply re-referenced against their closest neighbor. Laplacian re-referencing is be performed by specifying  `cfg.refmethod = 'laplace'` as in the following example.
+The Laplacian re-referencing scheme is relatively similar to the bipolar scheme. It allows to reduce the number of task-correlated channels by increasing the degree of correlation between the signal and the task. This scheme consists of the re-referencing of each channel against the mean of its two clostest neighbours. As for the bipolar re-referencing, channels should be given in input to **[ft_preprocessing](/reference/ft_preprocessing)** in the order that should be used to re-reference them. In this case, the first and last channels of the order will be simply re-referenced against their closest neighbor. Laplacian re-referencing is be performed by specifying  `cfg.refmethod = 'laplace'` as in the following example.
 
     cfg = [];
     cfg.channel = 'all'; % this is the default

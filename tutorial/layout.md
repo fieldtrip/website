@@ -45,7 +45,7 @@ Sometimes a schematic layout is more convenient, since it "flattens" the head an
 
 ### Using a template layout
 
-Since MEG sensors are in generally fixed in a rigid helmet inside the dewar, and since the arrangement of sensors is the same for all MEG systemsof the same type (e.g., CTT275, Neuromag306), it is not common to construct individual-subject MEG layouts. Instead, most people will simply use one of the [template layouts](/template/layout).
+Since MEG sensors are in generally fixed in a rigid helmet inside the dewar, and since the arrangement of sensors is the same for all MEG systems of the same type (e.g., CTT275, Neuromag306), it is not common to construct individual-subject MEG layouts. Instead, most people will simply use one of the [template layouts](/template/layout).
 
 For future [OPM-based MEG systems](https://dx.doi.org/10.1038/nature26147) it is more likely that MEG sensor layouts will differ from one subject to another subject. Constructing 2D layouts for OPM based systems can be done similar to the way that they are constructed for EEG systems. If you have the 3D description of the MEG sensors, you can also specify that as `cfg.grad` into **[ft_prepare_layout](/reference/ft_prepare_layout)** to make a 3D layout.
 

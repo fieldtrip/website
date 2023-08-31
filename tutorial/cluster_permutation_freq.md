@@ -262,7 +262,7 @@ To calculate the TFRs for the synthetic planar gradient data, we must run the fo
     freqFIC_activation_planar = ft_freqanalysis(cfg, dataFIC_activation_planar);
     freqFIC_baseline_planar   = ft_freqanalysis(cfg, dataFIC_baseline_planar);
 
-Finally, we combine the two planar gradients at each sensor and add the gradiometer definitio
+Finally, we combine the two planar gradients at each sensor and add the gradiometer definition
 
     cfg = [];
     freqFIC_baseline_planar_cmb   = ft_combineplanar(cfg,freqFIC_baseline_planar);
