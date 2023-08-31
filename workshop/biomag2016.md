@@ -45,7 +45,7 @@ This is a mulimodal dataset containing simultaneous M/EEG recordings on 19 healt
 
 The start of a trial was indicated with a fixation cross of random duration between 400 to 600 ms.
 The face stimuli was superimposed on the fixation cross for a random duration of 800 to 1,000 ms.
-Interstimulus interval of 1,700 ms comprised a central white circle.
+Inter stimulus interval of 1,700 ms comprised a central white circle.
 
 Two types of stimulation pattern:
 

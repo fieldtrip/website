@@ -16,7 +16,7 @@ LIMO tools rely on a hierarchical general linear model (GLM), accounting for wit
 
 The following figure illustrates the hierarchical analysis consisting of a 1st-level estimation of a GLM regression model and a 2nd-level statistical test of specific contrasts:
 
-{% include image src="/assets/img/getting_started/limo/herarchical_analysis.png" width="500" %}
+{% include image src="/assets/img/getting_started/limo/hierarchical_analysis.png" width="500" %}
 
 LIMO was initially designed as a plug-in of EEGLAB, but more recent versions are also compatible with FieldTrip **[raw](/reference/utilities/ft_datatype_raw)** and **[source](/reference/utilities/ft_datatype_source)** data. Statistical analyses can be performed on other data representations, but that requires some manual reformatting of the data structures.
 

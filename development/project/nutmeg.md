@@ -49,7 +49,7 @@ See [/development/compat](/development/project/compat) for mydepfun example
 - single precision used as long as double not needed (e.g., initial loading single but covariance computation double)
 - how does FT reduce/display data computed with vector inverse method and therefore the source data has 3 components per voxel?
   _ Specifically, can the s_perp (1 or 2 extra components not of primary direction) be displayed or further manipulated (e.g., in statistics)?
-  _ How is s_perp computed 'on the fly' after weights and/or leadfield not present anymore? \* (see email correspondene with Sarang called '3-dim orientation' in 2008)
+  _ How is s_perp computed 'on the fly' after weights and/or leadfield not present anymore? \* (see email correspondence with Sarang called '3-dim orientation' in 2008)
 - option of when in pipeline to normalise leadfield (specific to scalar LCMV)
 - Wilcoxon ranksum test in NM: uses single trial info per time-freq bin on the fly to compute Z/p values, but then only saves these averages, not save out single-trial info for each time-freq bin (assuming 20000 voxels, 100 time, 10 freq, that would be too large!)
 - weight normalisation? (rather than leadfield norm)? (could be better for EEG data, whereas leadfield norm better for MEG...just hearsay at the moment)

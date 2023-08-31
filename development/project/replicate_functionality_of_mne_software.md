@@ -127,7 +127,7 @@ Finally, the pial, white and inflated **surfaces** are created. The white surfac
 
 In order to run the last processing stage of the figure (spherical inflation) one should run the third automatic reconstruction step of FS.
 recon-all -autorecon3 -subjid&lt;subject's name>\\
-This step requires also quite much time (around 8-10 hours). It inflates the surface into sphere. But it does more than only the **spherical inflation**. However, as far as I know, MNE is using only the output of this first proccessing stage of -autorecon3. Therefore, maybe it would be useful to run only this stage instead of the entire -autorecon3. It takes around 3-4 hours. :
+This step requires also quite much time (around 8-10 hours). It inflates the surface into sphere. But it does more than only the **spherical inflation**. However, as far as I know, MNE is using only the output of this first processing stage of -autorecon3. Therefore, maybe it would be useful to run only this stage instead of the entire -autorecon3. It takes around 3-4 hours. :
 
     mris_sphere rh.inflated rh.sphere
     mris_sphere lh.inflated lh.sphere

@@ -69,7 +69,7 @@ The implicit reference is added prior to searching for the reference channels. I
 
 ## median
 
-Using `cfg.refmethod='median'` works largely the same as taking the average, but it computes the median instead of the mean. This is expecially useful when you have one (or a few) channels with a lot of noise: the median will be less sensitive to the outlier values than the mean.
+Using `cfg.refmethod='median'` works largely the same as taking the average, but it computes the median instead of the mean. This is especially useful when you have one (or a few) channels with a lot of noise: the median will be less sensitive to the outlier values than the mean.
 
     cfg = [];
     cfg.channel = 'all'; % this is the default
