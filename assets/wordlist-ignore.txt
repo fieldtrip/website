@@ -3206,6 +3206,7 @@ ftbuffer
 ftcolors
 ftgrid
 ftimwin
+ftmriN
 ftplotmesh
 ftwiki
 ftx
