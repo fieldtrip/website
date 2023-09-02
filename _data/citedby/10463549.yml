@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '37649907'
+- idtype: doi
+  value: 10.1101/2023.08.03.23293450
+- idtype: pmcid
+  value: PMC10463549
+authors:
+- authtype: Author
+  name: Oehrn CR
+- authtype: Author
+  name: Cernera S
+- authtype: Author
+  name: Hammer LH
+- authtype: Author
+  name: Shcherbakova M
+- authtype: Author
+  name: Yao J
+- authtype: Author
+  name: Hahn A
+- authtype: Author
+  name: Wang S
+- authtype: Author
+  name: Ostrem JL
+- authtype: Author
+  name: Little S
+- authtype: Author
+  name: Starr PA
+epubdate: 2023 Aug 8
+fulljournalname: medRxiv
+issue: ''
+pages: 2023.08.03.23293450
+pmclivedate: 2023/08/30
+printpubdate: ''
+pubdate: 2023 Aug 8
+sortdate: 2023/08/08 00:00
+source: medRxiv
+title: Personalized chronic adaptive deep brain stimulation outperforms conventional
+  stimulation in Parkinson’s disease
+uid: '10463549'
+volume: ''
