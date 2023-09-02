@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1177/17562864231190298
+- idtype: pmcid
+  value: PMC10467269
+authors:
+- authtype: Author
+  name: Ladisich B
+- authtype: Author
+  name: Rampp S
+- authtype: Author
+  name: Trinka E
+- authtype: Author
+  name: Weisz N
+- authtype: Author
+  name: Schwartz C
+- authtype: Author
+  name: Kraus T
+- authtype: Author
+  name: Sherif C
+- authtype: Author
+  name: Marhold F
+- authtype: Author
+  name: Demarchi G
+epubdate: 2023 Aug 29
+fulljournalname: Therapeutic Advances in Neurological Disorders
+issue: ''
+pages: '17562864231190298'
+pmclivedate: 2023/08/31
+printpubdate: ''
+pubdate: 2023 Aug 29
+sortdate: 2023/08/29 00:00
+source: Ther Adv Neurol Disord
+title: 'Network topology in brain tumor patients with and without structural epilepsy:
+  a prospective MEG study'
+uid: '10467269'
+volume: '16'
