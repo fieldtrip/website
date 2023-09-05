@@ -117,19 +117,18 @@ You can then select the tests that for example depend on `ft_preprocessing`.
     keepRows = contains(filtered_test.dependency, 'ft_preprocessing');
     filtered_test = filtered_test(keepRows, :);
 
-If you are an external contributor outside the DCCN network, you can only run tests that use publicly available data or that do not use data. In that case you have to remove the test scripts that require private data:
+If you are an external contributor outside the DCCN network, you can select tests that only use publicly available or no data. In that case you have to remove the test scripts that depend on private data:
 
     keepRows = ~strcmp(filtered_test.data, 'private');
     filtered_test = filtered_test(keepRows, :);
 
-To quickly find errors, it can be more efficient to run the short and small tests first. You can sort the tests with increasing memory and walltime:
+To quickly find potential errors, you may want to run the short and small tests first. You can sort the tests with increasing memory and walltime:
 
-    % Convert the contents of filtered_test.mem to double-precision values to enable arithmetical sorting. 
+    % Convert the memory from string to numbers to allow sorting. 
     filtered_test.mem = str2double(filtered_test.mem); 
 
     filtered_test = sortrows(filtered_test, 'mem',      'ascend');
     filtered_test = sortrows(filtered_test, 'walltime', 'ascend');
-    
 
 To run the first 10 tests, you can do:
 
@@ -141,7 +140,7 @@ To run the first 10 tests, you can do:
 
 ## Extending existing tests
 
-Test scripts validate specific functionality that is used in tutorials and/or in the analysis scripts that other people are writing or have written in the past. For this reason, you should in general _not change_ or remove perceived problems from existing test scripts, as that might break backward compatibility.
+The test scripts validate specific functionality that is used in tutorials and/or in the analysis scripts that other people are writing or have written in the past. For this reason, you should in general _not change_ or remove perceived problems from the existing test scripts themselves, as that might break backward compatibility.
 
 If you modify a function and subsequently encounter errors in its corresponding test script, it is likely due to your change to the code. You should correct your changes and rerun the test script until it passes.
 
