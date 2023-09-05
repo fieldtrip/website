@@ -76,7 +76,9 @@ For example, let's say you made a modification to the **[ft_preprocessing](/ft_p
     [ftver, ftpath] = ft_version;
     
     % list all m-files in the test directory
-    d = dir(fullfile(ftpath, 'test', 'test_*.m'));
+    d1 = dir(fullfile(ftpath, 'test', 'test_*.m'));
+    d2 = dir(fullfile(ftpath, 'test', 'inspect_*.m'));
+    d  = [d1; d2];
     
     name        = cell(numel(d), 1);
     walltime    = cell(numel(d), 1);
@@ -96,7 +98,7 @@ For example, let's say you made a modification to the **[ft_preprocessing](/ft_p
       if length(line1)==1 && length(line2)==1 && length(line3)==1 && length(line4)==1
         name{i}        = d(i).name(1:end-2); % remove the .m
         walltime{i}    = lines{line1}(length('% WALLTIME ')+1:end);
-        mem{i}         = lines{line2}(length('% MEM ')+1:end);
+        mem{i}         = lines{line2}(length('% MEM ')+1:end-2); % remove the "gb"
         data{i}        = lines{line3}(length('% DATA ')+1:end);
         dependency{i}  = lines{line4}(length('% DEPENDENCY ')+1:end);
       else
@@ -112,22 +114,26 @@ For example, let's say you made a modification to the **[ft_preprocessing](/ft_p
 
 You can then select the tests that for example depend on `ft_preprocessing`.
     
-    keepRows = contains(test.dependency, 'ft_preprocessing');
-    filtered_test = filtered_test(keepRows, :)
+    keepRows = contains(filtered_test.dependency, 'ft_preprocessing');
+    filtered_test = filtered_test(keepRows, :);
 
 If you are an external contributor outside the DCCN network, you can only run tests that use publicly available data or that do not use data. In that case you have to remove the test scripts that require private data:
 
     keepRows = ~strcmp(filtered_test.data, 'private');
-    filtered_test = filtered_test(keepRows, :)
+    filtered_test = filtered_test(keepRows, :);
 
-To quickly find errors, it can be more efficient to run the short and small tests first. You can sort the tests with increasing walltime and memory:
+To quickly find errors, it can be more efficient to run the short and small tests first. You can sort the tests with increasing memory and walltime:
 
-    filtered_test = sortrows(filtered_test, 'walltime', 'ascend');
+    % Convert the contents of filtered_test.mem to double-precision values to enable arithmetical sorting. 
+    filtered_test.mem = str2double(filtered_test.mem); 
+
     filtered_test = sortrows(filtered_test, 'mem',      'ascend');
+    filtered_test = sortrows(filtered_test, 'walltime', 'ascend');
+    
 
 To run the first 10 tests, you can do:
 
-    for i=1:10
+    for i=1:size(filtered_test,1)
         fprintf('\n ------------------------ \n');
         fprintf('Running test: %s \n\n', filtered_test.name{i})
         eval(filtered_test.name{i});
