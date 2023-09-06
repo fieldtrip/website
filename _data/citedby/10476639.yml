@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '37536980'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0263-23.2023
+- idtype: pmcid
+  value: PMC10476639
+authors:
+- authtype: Author
+  name: Shen L
+- authtype: Author
+  name: Wu Z
+- authtype: Author
+  name: Yue Z
+- authtype: Author
+  name: Li B
+- authtype: Author
+  name: Chen Q
+- authtype: Author
+  name: Han B
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '35'
+pages: 6164-6175
+pmclivedate: ''
+printpubdate: 2023 Aug 30
+pubdate: 2023 Aug 30
+sortdate: 2023/08/30 00:00
+source: J Neurosci
+title: Prior Knowledge Uses Prestimulus Alpha Band Oscillations and Persistent Poststimulus
+  Neural Templates for Conscious Perception
+uid: '10476639'
+volume: '43'

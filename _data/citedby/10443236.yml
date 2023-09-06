@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '37451375'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2023.120275
+- idtype: pmcid
+  value: PMC10443236
+authors:
+- authtype: Author
+  name: Stier C
+- authtype: Author
+  name: Braun C
+- authtype: Author
+  name: Focke NK
+epubdate: ''
+fulljournalname: Neuroimage
+issue: ''
+pages: '120275'
+pmclivedate: 2023/09/01
+printpubdate: 2023 Sep
+pubdate: 2023 Sep
+sortdate: 2023/09/01 00:00
+source: Neuroimage
+title: Adult lifespan trajectories of neuromagnetic signals and interrelations with
+  cortical thickness
+uid: '10443236'
+volume: '278'
