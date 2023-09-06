@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '37470446'
+- idtype: doi
+  value: 10.1002/hbm.26420
+- idtype: pmcid
+  value: PMC10472916
+authors:
+- authtype: Author
+  name: Oliveira R
+- authtype: Author
+  name: De Lucia M
+- authtype: Author
+  name: Lutti A
+epubdate: 2023 Jul 20
+fulljournalname: Human Brain Mapping
+issue: '14'
+pages: 4859-4874
+pmclivedate: 2023/09/02
+printpubdate: ''
+pubdate: 2023 Jul 20
+sortdate: 2023/07/20 00:00
+source: Hum Brain Mapp
+title: Single‐subject electroencephalography measurement of interhemispheric transfer
+  time for the in‐vivo estimation of axonal morphology
+uid: '10472916'
+volume: '44'

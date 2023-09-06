@@ -1,0 +1,24 @@
+articleids:
+- idtype: pmid
+  value: '37429371'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2023.120258
+- idtype: pmcid
+  value: PMC10443234
+authors:
+- authtype: Author
+  name: Sandhaeger F
+- authtype: Author
+  name: Siegel M
+epubdate: ''
+fulljournalname: Neuroimage
+issue: ''
+pages: '120258'
+pmclivedate: 2023/09/01
+printpubdate: 2023 Sep
+pubdate: 2023 Sep
+sortdate: 2023/09/01 00:00
+source: Neuroimage
+title: Testing the generalization of neural representations
+uid: '10443234'
+volume: '278'
