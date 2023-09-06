@@ -61,10 +61,13 @@ To pick up the results of the job, you type in matlab
     
     result = qsubget(jobid);
     
-The matrix with the results contains 100x100 random numbers, just as you would get when calling `rand(100)` on the MATLAB command line.
+The matrix with the results contains 100x100 random numbers, just as you would get when calling `rand(100)` on the MATLAB command line. 
 
-### Important note to keep in mind
-{% include markup/danger %}If you write your own function @myfunction, to be executed by qsubfeval, beware **NOT** to do a `clear all`, `clear mex`, `clear functions` because this may cause failures with uninformative segmentation faults, which are difficult to debug. {% include markup/end %}
+Rather than specifying the function `'rand'` as a string, you can also specify it as a [function handle](https://www.mathworks.com/help/matlab/matlab_prog/creating-a-function-handle.html) with `@rand`.
+
+{% include markup/danger %}
+If you write your own function `@myfunction`, to be executed by `qsubfeval`, beware **NOT** to do a `clear all`, `clear mex`, `clear functions` inside your function, as this messes up the enviroment in which the job gets executed. Rest assured that your job always starts in a fresh MATLAB instance, so there is no reason to clear anything.
+{% include markup/end %}
 
 ### Submitting a batch of jobs
 
