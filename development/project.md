@@ -9,6 +9,7 @@ This section lists information aimed at developers of FieldTrip and collaboratin
 
 ## Active projects
 
+- [Code coverage](/development/project/code_coverage)
 - [Toolbox code review](/development/project/code_review)
 - [Improve artifact handling](/development/project/artifacts)
 - [Improve integration with other toolboxes](/development/project/integration)
