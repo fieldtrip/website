@@ -45,18 +45,23 @@ The directory `fieldtrip/test/invalid` contains failed and obsolete tests. These
 
 ### Requirements and dependencies
 
-In the beginning of each test script a list of dependencies is provided. This helps to select an appropriate subset of tests to run based on:
-1. **WALLTIME**: The duration that a test needs to run. This duration is usually more than the actual duration needed since it also includes the time that MATLAB itself takes to start (which is about 30-60 seconds) and the time that it takes to load the test data.
-2. **MEM**: MEM stands for memory, and it represents the amount of memory required for a test to run.
-3. **DATA**: The external data that the test requires to run. More specifically, `DATA no` means that the test doesn't need any external data to run. `DATA public` means it needs data available from the [download server](https://download.fieldtriptoolbox.org/). `DATA private` means that it needs data that are not publicly accessible but only to people working in the DCCN.
-4. **DEPENDENCY**: The dependencies, i.e. high- or low-level FieldTrip functions to which the test script is particularly sensitive.
-
-An example of the requirements and dependencies is:
+In the beginning of each test script a list of dependencies is provided. An example of this list is:
 
     % WALLTIME 00:10:00
     % MEM 2gb
     % DATA no
     % DEPENDENCY ft_definetrial ft_preprocessing
+
+This helps to select an appropriate subset of tests to run based on:
+1. **WALLTIME**: The duration that a test needs to run. This duration is usually more than the actual duration needed since it also includes the time that MATLAB itself takes to start (which is about 30-60 seconds) and the time that it takes to load the test data.
+2. **MEM**: MEM stands for memory, and it represents the amount of memory required for a test to run.
+3. **DATA**: The external data that the test requires to run. More specifically, `DATA no` means that the test doesn't need any external data to run. `DATA public` means it needs data available from the [download server](https://download.fieldtriptoolbox.org/). `DATA private` means that it needs data that are not publicly accessible but only to people working in the DCCN.
+4. **DEPENDENCY**: The dependencies, i.e. high- or low-level FieldTrip functions to which the test script is particularly sensitive. There are three types of dependencies within the FieldTrip codebase: self-dependencies (where a function relies on itself), direct dependencies (comprising both [high-level and some low-level FieldTrip functions](https://www.fieldtriptoolbox.org/development/architecture/#high-level-low-level-and-private-functions) called directly within a test script), and indirect dependencies (involving [some low-level functions and all the private FieldTrip functions](https://www.fieldtriptoolbox.org/development/architecture/#high-level-low-level-and-private-functions) that, while they are not directly called within a test script, still play a role in the execution process). For example, in FieldTrip you can run: 
+    
+        ft_test find_dependencies test_bug46
+
+    to find what are the direct dependencies of test_bug46.
+
 
 ## Running existing tests
 
@@ -70,7 +75,9 @@ More background information about this test and others that are named `test_bugX
 
 When you modify or remove pre-existing code, you should find the necessary [test scripts](https://github.com/fieldtrip/fieldtrip/tree/master/test) and run them on your local computer. Note that these test scripts are also included in your own `fieldtrip/test` directory.
 
-For example, let's say you made a modification to the **[ft_preprocessing](/ft_preprocessing)** function. You can list all test scripts together with their list of requirements and dependencies in a [MATLAB table](https://nl.mathworks.com/help/matlab/ref/table.html):
+For example, let's say you made a modification to the **[ft_preprocessing](/ft_preprocessing)** function. You first need to see if the corresponding test for **[ft_preprocessing](/ft_preprocessing)** exists. These tests are always starting with `test_ft_xxx` where `ft_xxx` is the function being tested. In our case **[test_ft_preprocessing](/test/test_ft_preprocessing)** exists. So, we need to run this test first.
+
+ If **[test_ft_preprocessing](/test/test_ft_preprocessing)** did not exist or if you want to do a more detailed testing, you can list all test scripts together with their list of requirements and dependencies in a [MATLAB table](https://nl.mathworks.com/help/matlab/ref/table.html):
 
     % find your copy of FieldTrip
     [ftver, ftpath] = ft_version;
@@ -112,7 +119,7 @@ For example, let's say you made a modification to the **[ft_preprocessing](/ft_p
     % continue with the ones that specify the WALLTIME, MEG, DATA and DEPENDENCY
     filtered_test = test(~skip,:);
 
-You can then select the tests that for example depend on `ft_preprocessing`.
+You can then select the tests that for example depend on **[ft_preprocessing](/ft_preprocessing)**.
     
     keepRows = contains(filtered_test.dependency, 'ft_preprocessing');
     filtered_test = filtered_test(keepRows, :);
