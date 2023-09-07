@@ -58,7 +58,7 @@ This helps to select an appropriate subset of tests to run based on:
 3. **DATA**: The external data that the test requires to run. More specifically, `DATA no` means that the test doesn't need any external data to run. `DATA public` means it needs data available from the [download server](https://download.fieldtriptoolbox.org/). `DATA private` means that it needs data that are not publicly accessible but only to people working in the DCCN.
 4. **DEPENDENCY**: The dependencies, i.e. high- or low-level FieldTrip functions to which the test script is particularly sensitive. There are three types of dependencies within the FieldTrip codebase: self-dependencies (where a function relies on itself), direct dependencies (comprising both [high-level and some low-level FieldTrip functions](https://www.fieldtriptoolbox.org/development/architecture/#high-level-low-level-and-private-functions) called directly within a test script), and indirect dependencies (involving [some low-level functions and all the private FieldTrip functions](https://www.fieldtriptoolbox.org/development/architecture/#high-level-low-level-and-private-functions) that, while they are not directly called within a test script, still play a role in the execution process). For example, in FieldTrip you can run: 
     
-        ft_test find_dependencies test_bug46
+        ft_test find_dependency test_bug46
 
     to find what are the direct dependencies of test_bug46.
 
