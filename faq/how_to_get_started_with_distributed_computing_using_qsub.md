@@ -160,7 +160,7 @@ A complete batch of jobs can be dealt with in a similar manner
 
     % start MATLAB again
     load jobidarray.mat
-    outputarg = {};
+    results = {};
     for i=1:10
       results{i} = qsubget(jobidarray{i});
     end
