@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '37558464'
+- idtype: doi
+  value: 10.1523/ENEURO.0050-23.2023
+- idtype: pmcid
+  value: PMC10481640
+authors:
+- authtype: Author
+  name: Kim B
+- authtype: Author
+  name: Erickson BA
+- authtype: Author
+  name: Fernandez-Nunez G
+- authtype: Author
+  name: Rich R
+- authtype: Author
+  name: Mentzelopoulos G
+- authtype: Author
+  name: Vitale F
+- authtype: Author
+  name: Medaglia JD
+epubdate: 2023 Sep 1
+fulljournalname: eNeuro
+issue: '9'
+pages: ENEURO.0050-23.2023
+pmclivedate: 2023/09/07
+printpubdate: ''
+pubdate: 2023 Sep 1
+sortdate: 2023/09/01 00:00
+source: eNeuro
+title: 'EEG Phase Can Be Predicted with Similar Accuracy across Cognitive States after
+  Accounting for Power and Signal-to-Noise Ratio '
+uid: '10481640'
+volume: '10'

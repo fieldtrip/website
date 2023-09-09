@@ -1,0 +1,42 @@
+articleids:
+- idtype: pmid
+  value: '37645970'
+- idtype: doi
+  value: 10.21203/rs.3.rs-3203894/v1
+- idtype: pmcid
+  value: PMC10462191
+authors:
+- authtype: Author
+  name: Brima T
+- authtype: Author
+  name: Freedman EG
+- authtype: Author
+  name: Prinsloo KD
+- authtype: Author
+  name: Augustine EF
+- authtype: Author
+  name: Adams HR
+- authtype: Author
+  name: Wang KH
+- authtype: Author
+  name: Mink JW
+- authtype: Author
+  name: Shaw LH
+- authtype: Author
+  name: Mantel EP
+- authtype: Author
+  name: Foxe JJ
+epubdate: 2023 Aug 17
+fulljournalname: Research Square
+issue: ''
+pages: rs.3.rs-3203894
+pmclivedate: 2023/08/29
+printpubdate: ''
+pubdate: 2023 Aug 17
+sortdate: 2023/08/17 00:00
+source: Res Sq
+title: 'Assessing the integrity of auditory sensory memory processing in CLN3 disease
+  (Juvenile Neuronal Ceroid Lipofuscinosis (Batten disease)): An auditory evoked potential
+  study of the duration-evoked mismatch negativity (MMN)'
+uid: '10462191'
+volume: ''
