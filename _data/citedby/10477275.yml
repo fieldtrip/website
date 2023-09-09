@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '37666838'
+- idtype: doi
+  value: 10.1038/s41598-023-40851-w
+- idtype: pmcid
+  value: PMC10477275
+authors:
+- authtype: Author
+  name: Eleőd H
+- authtype: Author
+  name: Gácsi M
+- authtype: Author
+  name: Bunford N
+- authtype: Author
+  name: Kis A
+epubdate: 2023 Sep 4
+fulljournalname: Scientific Reports
+issue: ''
+pages: '14518'
+pmclivedate: 2023/09/06
+printpubdate: ''
+pubdate: 2023 Sep 4
+sortdate: 2023/09/04 00:00
+source: Sci Rep
+title: Event-related potentials indicate differential neural reactivity to species
+  and valence information in vocal stimuli in sleeping dogs
+uid: '10477275'
+volume: '13'

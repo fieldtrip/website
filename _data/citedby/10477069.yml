@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '37674986'
+- idtype: doi
+  value: 10.1016/j.isci.2023.107653
+- idtype: pmcid
+  value: PMC10477069
+authors:
+- authtype: Author
+  name: Llorens A
+- authtype: Author
+  name: Bellier L
+- authtype: Author
+  name: Blenkmann AO
+- authtype: Author
+  name: Ivanovic J
+- authtype: Author
+  name: Larsson PG
+- authtype: Author
+  name: Lin JJ
+- authtype: Author
+  name: Endestad T
+- authtype: Author
+  name: Solbakk AK
+- authtype: Author
+  name: Knight RT
+epubdate: 2023 Aug 17
+fulljournalname: iScience
+issue: '10'
+pages: '107653'
+pmclivedate: 2023/09/06
+printpubdate: ''
+pubdate: 2023 Aug 17
+sortdate: 2023/08/17 00:00
+source: iScience
+title: Decision and response monitoring during working memory are sequentially represented
+  in the human insula
+uid: '10477069'
+volume: '26'
