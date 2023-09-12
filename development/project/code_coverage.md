@@ -4,42 +4,40 @@ title: Code coverage
 
 {% include /shared/development/warning.md %}
 
-## Code coverage
+# Code coverage
 
-Using **[ft_untested_functions](/utilities/private/ft_test_untested_functions.m)** we can find which high-level FieldTrip functions are not tested by any test scripts. So which functions have 0% line coverage. To run **[ft_untested_functions](/utilities/private/ft_test_untested_functions.m)** you should use the wrapper function **[ft_test](/utilities/ft_test.m)**:
+Using **[ft_untested_functions](/utilities/private/ft_test_untested_functions.m)** we can find which high-level FieldTrip functions are not tested by any test scripts, i.e., which functions have 0% line coverage. To run **[ft_untested_functions](/utilities/private/ft_test_untested_functions.m)** you should use the wrapper function **[ft_test](/utilities/ft_test.m)**:
 
     ft_test untested_functions
 
 The results we get by running this command are:
 
->Untested functions:<br>
-bis2fieldtrip              
-fieldtrip2besa             
-fieldtrip2bis              
-fieldtrip2spss             
-ft_anonymizedata           
-ft_audiovideobrowser       
-ft_examplefunction         
-ft_geometryplot            
-ft_multiplotCC             
-ft_reproducescript         
-ft_sourcemovie             
-ft_statistics_analytic     
-ft_statistics_crossvalidate
-ft_statistics_mvpa         
-ft_statistics_stats        
-ft_wizard                  
-imotions2fieldtrip         
-loreta2fieldtrip           
-nutmeg2fieldtrip           
-spass2fieldtrip            
->
-> Number of untested functions: 20
+    Untested functions:
+    
+    bis2fieldtrip              
+    fieldtrip2besa             
+    fieldtrip2bis              
+    fieldtrip2spss             
+    ft_anonymizedata           
+    ft_audiovideobrowser       
+    ft_examplefunction         
+    ft_geometryplot            
+    ft_multiplotCC             
+    ft_reproducescript         
+    ft_sourcemovie             
+    ft_statistics_analytic     
+    ft_statistics_crossvalidate
+    ft_statistics_mvpa         
+    ft_statistics_stats        
+    ft_wizard                  
+    imotions2fieldtrip         
+    loreta2fieldtrip           
+    nutmeg2fieldtrip           
+    spass2fieldtrip            
+    
+    Number of untested functions: 20
 
- 
-However, to have a more complete code coverage it is important to acquire a line-by-line coverage of the high-level FieldTrip functions.
-
-To do that we first created a test case for each of the FieldTrip tests. That way all of the tests follow the [unit testing MATLAB framework](https://nl.mathworks.com/help/matlab/matlab-unit-test-framework.html?s_tid=CRUX_lftnav). To generate the report as an HTML file we used the ``ReportCoverageFor`` name-value argument of the **[runtests](https://nl.mathworks.com/help/matlab/ref/runtests.html)** MATLAB function. All of that is done with the **``inspect_codecoverage``** function.
+For a more complete and detailled code coverage we want to acquire line-by-line coverage of the high-level FieldTrip functions. To do that we first created a test case for each of the FieldTrip tests. That way all of the tests follow the [unit testing MATLAB framework](https://nl.mathworks.com/help/matlab/matlab-unit-test-framework.html?s_tid=CRUX_lftnav). To generate the report as an HTML file we used the ``ReportCoverageFor`` name-value argument of the **[runtests](https://nl.mathworks.com/help/matlab/ref/runtests.html)** MATLAB function. All of that can be done with the **``inspect_codecoverage``** function.
 
 ## MATLAB Code: inspect_codecoverage.m
 
@@ -148,6 +146,7 @@ end
 % Run the coverage report
 runtests('inspect_codecoverage.m', 'ReportCoverageFor', sourceFunctions);
 ```
+
 {% include markup/info %}
 Using **``inspect_codecoverage``** we found the full FieldTrip coverage (i.e., the coverage provided by the [``test_*``](https://github.com/fieldtrip/fieldtrip/tree/master/test) test scripts. In total 955 such test scripts exist)  and the partial FieldTrip coverage (i.e., the coverage provided by the [``test_ft_*``](https://github.com/fieldtrip/fieldtrip/tree/master/test) test scripts. In total 202 such test scripts exist). Interestingly, it was found that for the high-level FieldTrip functions the line-by-line full coverage provided by the [``test_*``](https://github.com/fieldtrip/fieldtrip/tree/master/test) test scripts is **41 %** (the full coverage report can be found [here](/assets/coverage/full/)) and the line-by-line partial coverage provided by the [``test_ft_*``](https://github.com/fieldtrip/fieldtrip/tree/master/test) test scripts is **37 %** (the partial coverage report can be found [here](/assets/coverage/partial/)). This proves that the [``test_ft_*``](https://github.com/fieldtrip/fieldtrip/tree/master/test) test scripts can be used for line-by-line coverage, while the rest of the test scripts can be used for [regression testing](https://en.wikipedia.org/wiki/Regression_testing) of the FieldTrip toolbox.
 {% include markup/end %}
@@ -157,14 +156,15 @@ Using **``inspect_codecoverage``** we found the full FieldTrip coverage (i.e., t
 Future goal is to also find the coverage of the low-level FieldTrip functions.
 {% include markup/end %}
 
-
 ## Alternative way
 
 {% include markup/warning %}
 This alternative way needs to be checked more. The line
+
 ```matlab 
 sourceCodeFolder = fullfile(ftpath, '*.m'); % List the high-level FieldTrip functions (Contents.m is not excluded in this case)
 ``` 
+
 might need to be edited.
 {% include markup/end %}
 
@@ -185,7 +185,6 @@ sourceCodeFolder = fullfile(ftpath, '*.m'); % List the high-level FieldTrip func
 reportFolder = "coverageReport";
 reportFormat = CoverageReport(reportFolder);
 
-
 p = CodeCoveragePlugin.forFolder(sourceCodeFolder,"Producing",reportFormat);
 runner.addPlugin(p)
 
@@ -197,4 +196,4 @@ We decided to apply the first method using **[runtests](https://nl.mathworks.com
 
 ## Using HPC cluster to speed up the process
 
-At first sight it seems that the HPC cluster of the Donders Institute can not be used to speed up the code coverage process. All the tests need to run _sequentially_ in one MATLAB session in order to acquire a full coverage report. However, we can look back to it in the future.
+At first sight it seems that the HPC cluster of the DCCN can not be used to speed up the code coverage process. All the tests need to run _sequentially_ in one MATLAB session in order to acquire a full coverage report. However, we can investigate more efficient execution of the coverage tests in the future.
