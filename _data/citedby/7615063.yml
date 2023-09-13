@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '36228894'
+- idtype: doi
+  value: 10.1016/j.jneumeth.2022.109726
+- idtype: pmcid
+  value: PMC7615063
+- idtype: MID
+  value: EMS185163
+authors:
+- authtype: Author
+  name: Brickwedde M
+- authtype: Author
+  name: Bezsudnova Y
+- authtype: Author
+  name: Kowalczyk A
+- authtype: Author
+  name: Jensen O
+- authtype: Author
+  name: Zhigalov A
+epubdate: 2022 Oct 10
+fulljournalname: Journal of neuroscience methods
+issue: ''
+pages: '109726'
+pmclivedate: 2023/09/08
+printpubdate: 2022 Dec 1
+pubdate: 2022 Oct 10
+sortdate: 2022/10/10 00:00
+source: J Neurosci Methods
+title: Application of rapid invisible frequency tagging for brain computer interfaces
+uid: '7615063'
+volume: '382'

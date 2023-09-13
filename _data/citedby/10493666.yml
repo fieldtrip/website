@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '37122156'
+- idtype: doi
+  value: 10.1111/cns.14241
+- idtype: pmcid
+  value: PMC10493666
+authors:
+- authtype: Author
+  name: Bi Y
+- authtype: Author
+  name: Wang P
+- authtype: Author
+  name: Yu J
+- authtype: Author
+  name: Wang Z
+- authtype: Author
+  name: Yang H
+- authtype: Author
+  name: Deng Y
+- authtype: Author
+  name: Guan J
+- authtype: Author
+  name: Zhang W
+epubdate: 2023 Apr 30
+fulljournalname: CNS Neuroscience & Therapeutics
+issue: '10'
+pages: 2998-3013
+pmclivedate: 2023/09/12
+printpubdate: ''
+pubdate: 2023 Apr 30
+sortdate: 2023/04/30 00:00
+source: CNS Neurosci Ther
+title: Eltoprazine modulated gamma oscillations on ameliorating L‐dopa‐induced dyskinesia
+  in rats
+uid: '10493666'
+volume: '29'

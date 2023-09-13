@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '37591736'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0452-23.2023
+- idtype: pmcid
+  value: PMC10490471
+authors:
+- authtype: Author
+  name: Wienke C
+- authtype: Author
+  name: Grueschow M
+- authtype: Author
+  name: Haghikia A
+- authtype: Author
+  name: Zaehle T
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '36'
+pages: 6306-6319
+pmclivedate: 2023/09/09
+printpubdate: 2023 Sep 6
+pubdate: 2023 Sep 6
+sortdate: 2023/09/06 00:00
+source: J Neurosci
+title: Phasic, Event-Related Transcutaneous Auricular Vagus Nerve Stimulation Modifies
+  Behavioral, Pupillary, and Low-Frequency Oscillatory Power Responses
+uid: '10490471'
+volume: '43'
