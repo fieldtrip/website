@@ -121,6 +121,8 @@ if ~isempty(errorScripts)
 else
     fprintf('\nAll test scripts ran successfully.\n');
 end
+
+end % function
 ```
 
 With the code above saved as a local `inspect_codecoverage.m` function, we run it using the [runtests](https://nl.mathworks.com/help/matlab/ref/runtests.html) MATLAB function. 
@@ -170,7 +172,7 @@ A future goal is to also find the coverage of FielddTrip functions that are part
 
 Another way to find the line-by-line coverage is by adding an instance of the [CodeCoveragePlugin](https://nl.mathworks.com/help/matlab/ref/matlab.unittest.plugins.codecoverageplugin-class.html) class to a test runner. This is part of the [class-based unit testing MATLAB framework](https://nl.mathworks.com/help/matlab/class-based-unit-tests.html). 
 
-First create the `inspect_codecoverage.m` function as above and put it inside a new folder `code_coverage` at the root level. Then run in the command window:
+First create the `inspect_codecoverage.m` function as above and put it inside a new folder `codecoverage` at the root level. Then run in the command window:
 
 ```matlab
 %%%%%%% Run this in the command window %%%%%%%%%%
@@ -188,17 +190,14 @@ reportFormat = CoverageReport(reportFolder);
 p = CodeCoveragePlugin.forFolder(sourceCodeFolder,'Producing',reportFormat);
 runner.addPlugin(p)
 
-suite1 = testsuite(fullfile(ftpath, code_coverage)); % 'inpect_codecoverage.m' is inside the folder called 'code_coverage'
-results = runner.run(suite1);
+suite = testsuite(fullfile(ftpath, 'codecoverage')); % 'inpect_codecoverage.m' is the only one inside this folder
+results = runner.run(suite);
 ```
 
-We opted for the first method using [runtests](https://nl.mathworks.com/help/matlab/ref/runtests.html and not the alternative with [CodeCoveragePlugin](https://nl.mathworks.com/help/matlab/ref/matlab.unittest.plugins.codecoverageplugin-class.html), because it has less lines of code, it is easier to interpret for a non-software engineer and provides the same results.
+We opted for the first method using [runtests](https://nl.mathworks.com/help/matlab/ref/runtests.html) and not the alternative with [CodeCoveragePlugin](https://nl.mathworks.com/help/matlab/ref/matlab.unittest.plugins.codecoverageplugin-class.html), because it has less lines of code, it is easier to interpret for a non-software engineer and provides the same results.
 
 {% include markup/warning %}
-The alternative way outlined above needs to be checked more and may need edits for the line 
-
-    % List the high-level FieldTrip functions (Contents.m is not excluded in this case)
-    sourceCodeFolder = fullfile(ftpath, '*.m'); 
+The alternative above does not work; the function `inpect_codecoverage.m` is not picked up. If you rename it to `inspect_test.m` or something else with "test" in the filename, it does get picked up.
 {% include markup/end %}
 
 ## Parallel execution
