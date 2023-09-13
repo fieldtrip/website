@@ -203,3 +203,26 @@ The alternative above does not work; the function `inpect_codecoverage.m` is not
 ## Parallel execution
 
 All the tests need to run _sequentially_ in one MATLAB session in order to acquire a full coverage report. Hence, at first sight, it seems that the HPC cluster of the DCCN cannot be used to speed up the code coverage process. We can investigate more efficient execution of the coverage tests in the future.
+
+## Make compatible test scripts
+
+In FieldTrip we have a lot of test scripts (actually functions) that were written without consideration of the MATLAB testing framework. To make these compatible with [runtests](https://nl.mathworks.com/help/matlab/ref/runtests.html), a little bit of code can be added to the top, like this:
+
+```matlab
+function tests = test_whatever
+
+if nargout
+  % assume that this is called by RUNTESTS
+  tests = functiontests(localfunctions);
+else
+  % assume that this is called from the command line
+  fn = localfunctions;
+  for i = 1:numel(fn)
+    feval(fn{i});
+  end
+end % nargout
+
+function executeTest(testCase)
+% this subfunction contains the actual code to be tested
+% ...
+```
