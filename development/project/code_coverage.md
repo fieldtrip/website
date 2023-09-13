@@ -47,20 +47,15 @@ All of that can be done with the code below
 
 ```matlab
 %%%%%%% Save this to a file "inspect_codecoverage.m" %%%%%%%%%%
+
 function tests = inspect_codecoverage
 
 if nargout
-    % assume that this is called by RUNTESTS
-    tests = functiontests(localfunctions);
+  % This will be executed by RUNTESTS
+  tests = functiontests(localfunctions);
 else
-    % assume that this is called from the command line
-    fn = localfunctions;
-    for i = 1:numel(fn)
-        feval(fn{i});
-    end
-end % nargout
-
-end % function
+  error('This is not to be called from the command-line')
+end
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 function testEverything(testCase)
@@ -72,57 +67,40 @@ function testEverything(testCase)
 % Define the folder containing test scripts
 testFolder = fullfile(ftpath, 'test');
 
-% List all files in the test folder that start with test_*
-list = dir(fullfile(testFolder, 'test_*'));
-testScripts = {list.name};
-
+% List all m-files in the test folder that start with test_
+list = dir(fullfile(testFolder, 'test_*.m'));
 % Remove the ".m" extension from test script names
-for i = 1:length(testScripts)
-    testScripts{i} = strrep(testScripts{i}, '.m', '');
-end
+[~, testScripts] = cellfun(@fileparts, {list.name}, 'Uniformoutput', false);
 
 % Some test scripts were causing MATLAB to crash on a DCCN Windows PC, these need to be excluded
-indices = ~contains(testScripts, 'test_bug1818'); 
+indices = ~contains(testScripts, 'test_bug1818');
 testScripts = testScripts(indices);
 indices = ~contains(testScripts, 'test_old_buffer_latency_bandwidth');
 testScripts = testScripts(indices);
-indices = ~contains(testScripts, 'test_bug472'); 
+indices = ~contains(testScripts, 'test_bug472');
 testScripts = testScripts(indices);
-
-% Keep an eye on which of the scripts give an error
-errorScripts = {};
+success = false(size(testScripts));
 
 % Loop through the test scripts
 for i = 1:length(testScripts)
-    try
-        % Execute the current test script
-        disp(i);
-        fprintf('\n Running **%s** \n', testScripts{i});
-        eval(testScripts{i});
-    catch exception
-        % If an error occurs, store the script name in the errorScripts array
-        errorScripts{end + 1} = testScripts{i};
-        fprintf('Error in script %s:\n', testScripts{i});
-        disp(exception.message); % Display the error message
-    end
-
-    % Clear the memory so we the RAM won't be overloaded
-    close all;
-    clc;
-    clear functions;
+  try
+    % Execute the current test script
+    fprintf('\nRunning **%s**\n', testScripts{i});
+    eval(testScripts{i});
+    success(i) = true;
+  catch
+    success(i) = true;
+  end
 end
 
-% Print the list of test scripts that gave errors
-if ~isempty(errorScripts)
-    fprintf('\nTest scripts with errors:\n');
-    for i = 1:length(errorScripts)
-        fprintf('%s\n', errorScripts{i});
-    end
+if all(success)
+  fprintf('\nAll test scripts ran successfully.\n');
 else
-    fprintf('\nAll test scripts ran successfully.\n');
+  fprintf('\nThe following test scripts failed:\n');
+  for i=find(~success)
+    fprintf('%s\n', testScripts{i});
+  end
 end
-
-end % function
 ```
 
 With the code above saved as a local `inspect_codecoverage.m` function, we run it using the [runtests](https://nl.mathworks.com/help/matlab/ref/runtests.html) MATLAB function. 
@@ -149,8 +127,8 @@ sourceFunctions = {sourceFunctions.name};
 
 % Replace "sourceFunctions" with its full filename, including its path
 for i = 1:length(sourceFunctions)
-    fullname = which(sourceFunctions{i});
-    sourceFunctions{i} = fullname;
+  fullname = which(sourceFunctions{i});
+  sourceFunctions{i} = fullname;
 end
 
 % Run the coverage report
@@ -198,6 +176,8 @@ We opted for the first method using [runtests](https://nl.mathworks.com/help/mat
 
 {% include markup/warning %}
 The alternative above does not work; the function `inpect_codecoverage.m` is not picked up. If you rename it to `inspect_test.m` or something else with "test" in the filename, it does get picked up.
+
+From the MATLAB documentation: _The name of the test file must start or end with the word 'test', which is case-insensitive. If the file name does not start or end with the word 'test', the tests in the file might be ignored in certain cases._
 {% include markup/end %}
 
 ## Parallel execution
