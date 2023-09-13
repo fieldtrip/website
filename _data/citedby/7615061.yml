@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '36403733'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2022.119747
+- idtype: pmcid
+  value: PMC7615061
+- idtype: MID
+  value: EMS185165
+authors:
+- authtype: Author
+  name: Bezsudnova Y
+- authtype: Author
+  name: Kowalczyk AU
+- authtype: Author
+  name: Koponen LM
+- authtype: Author
+  name: Barontini G
+- authtype: Author
+  name: Jensen O
+epubdate: 2022 Nov 18
+fulljournalname: NeuroImage
+issue: ''
+pages: '119747'
+pmclivedate: 2023/09/08
+printpubdate: 2022 Dec 1
+pubdate: 2022 Nov 18
+sortdate: 2022/11/18 00:00
+source: Neuroimage
+title: Optimising the sensing volume of OPM sensors for MEG source reconstruction
+uid: '7615061'
+volume: '264'

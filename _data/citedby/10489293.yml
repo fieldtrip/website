@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1093/braincomms/fcad232
+- idtype: pmcid
+  value: PMC10489293
+authors:
+- authtype: Author
+  name: Federici A
+- authtype: Author
+  name: Bennett CR
+- authtype: Author
+  name: Bauer CM
+- authtype: Author
+  name: Manley CE
+- authtype: Author
+  name: Ricciardi E
+- authtype: Author
+  name: Bottari D
+- authtype: Author
+  name: Merabet LB
+epubdate: 2023 Aug 28
+fulljournalname: Brain Communications
+issue: '5'
+pages: fcad232
+pmclivedate: ''
+printpubdate: ''
+pubdate: 2023 Aug 28
+sortdate: 2023/08/28 00:00
+source: Brain Commun
+title: Altered neural oscillations underlying visuospatial processing in cerebral
+  visual impairment
+uid: '10489293'
+volume: '5'

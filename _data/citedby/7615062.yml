@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '37001836'
+- idtype: doi
+  value: 10.1101/2022.09.28.509870
+- idtype: pmcid
+  value: PMC7615062
+- idtype: MID
+  value: EMS185162
+authors:
+- authtype: Author
+  name: Zhigalov A
+- authtype: Author
+  name: Jensen O
+epubdate: 2023 Mar 29
+fulljournalname: NeuroImage
+issue: ''
+pages: '120047'
+pmclivedate: 2023/09/08
+printpubdate: 2023 May 15
+pubdate: 2023 Mar 29
+sortdate: 2023/03/29 00:00
+source: Neuroimage
+title: Travelling waves observed in MEG data can be explained by two discrete sources
+uid: '7615062'
+volume: '272'

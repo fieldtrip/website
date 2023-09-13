@@ -1,0 +1,44 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fnhum.2023.1216758
+- idtype: pmcid
+  value: PMC10488711
+authors:
+- authtype: Author
+  name: Erdbrügger T
+- authtype: Author
+  name: Westhoff A
+- authtype: Author
+  name: Höltershinken M
+- authtype: Author
+  name: Radecke JO
+- authtype: Author
+  name: Buschermöhle Y
+- authtype: Author
+  name: Buyx A
+- authtype: Author
+  name: Wallois F
+- authtype: Author
+  name: Pursiainen S
+- authtype: Author
+  name: Gross J
+- authtype: Author
+  name: Lencer R
+- authtype: Author
+  name: Engwer C
+- authtype: Author
+  name: Wolters C
+epubdate: 2023 Aug 22
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '1216758'
+pmclivedate: 2023/09/09
+printpubdate: ''
+pubdate: 2023 Aug 22
+sortdate: 2023/08/22 00:00
+source: Front Hum Neurosci
+title: CutFEM forward modeling for EEG source analysis
+uid: '10488711'
+volume: '17'

@@ -1,0 +1,50 @@
+articleids:
+- idtype: pmid
+  value: '37586871'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0586-23.2023
+- idtype: pmcid
+  value: PMC10490476
+authors:
+- authtype: Author
+  name: Züst MA
+- authtype: Author
+  name: Mikutta C
+- authtype: Author
+  name: Omlin X
+- authtype: Author
+  name: DeStefani T
+- authtype: Author
+  name: Wunderlin M
+- authtype: Author
+  name: Zeller CJ
+- authtype: Author
+  name: Fehér KD
+- authtype: Author
+  name: Hertenstein E
+- authtype: Author
+  name: Schneider CL
+- authtype: Author
+  name: Teunissen CE
+- authtype: Author
+  name: Tarokh L
+- authtype: Author
+  name: Klöppel S
+- authtype: Author
+  name: Feige B
+- authtype: Author
+  name: Riemann D
+- authtype: Author
+  name: Nissen C
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '36'
+pages: 6268-6279
+pmclivedate: 2023/09/09
+printpubdate: 2023 Sep 6
+pubdate: 2023 Sep 6
+sortdate: 2023/09/06 00:00
+source: J Neurosci
+title: The Hierarchy of Coupled Sleep Oscillations Reverses with Aging in Humans
+uid: '10490476'
+volume: '43'

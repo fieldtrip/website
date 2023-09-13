@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '37687895'
+- idtype: doi
+  value: 10.3390/s23177440
+- idtype: pmcid
+  value: PMC10490595
+authors:
+- authtype: Author
+  name: Samimisabet P
+- authtype: Author
+  name: Krieger L
+- authtype: Author
+  name: Nethar T
+- authtype: Author
+  name: Pipa G
+epubdate: 2023 Aug 26
+fulljournalname: Sensors (Basel, Switzerland)
+issue: '17'
+pages: '7440'
+pmclivedate: 2023/09/09
+printpubdate: ''
+pubdate: 2023 Aug 26
+sortdate: 2023/08/26 00:00
+source: Sensors (Basel)
+title: Introducing a New Mobile Electroencephalography System and Evaluating Its Quality
+  in Comparison to Clinical Electroencephalography
+uid: '10490595'
+volume: '23'
