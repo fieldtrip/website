@@ -6,11 +6,11 @@ title: Code coverage
 
 # Code coverage
 
-Using **[ft_untested_functions](/utilities/private/ft_test_untested_functions.m)** we can find which high-level FieldTrip functions are not tested by any test scripts, i.e., which functions have 0% line coverage. To run **[ft_untested_functions](/utilities/private/ft_test_untested_functions.m)** you should use the wrapper function **[ft_test](/utilities/ft_test.m)**:
+Using the `untested_functions` command for **[ft_test](/reference/utilities/ft_test)**, we can find which high-level FieldTrip functions are not directly called by any test scripts, i.e., which functions seem to have no coverage at all.
 
     ft_test untested_functions
 
-The results we get by running this command are:
+The result we get by running this command are:
 
     Untested functions:
     
@@ -37,11 +37,16 @@ The results we get by running this command are:
     
     Number of untested functions: 20
 
-For a more complete and detailled code coverage we want to acquire line-by-line coverage of the high-level FieldTrip functions. To do that we first created a test case for each of the FieldTrip tests. That way all of the tests follow the [unit testing MATLAB framework](https://nl.mathworks.com/help/matlab/matlab-unit-test-framework.html?s_tid=CRUX_lftnav). To generate the report as an HTML file we used the ``ReportCoverageFor`` name-value argument of the **[runtests](https://nl.mathworks.com/help/matlab/ref/runtests.html)** MATLAB function. All of that can be done with the **``inspect_codecoverage``** function.
+A more complete and detailled code coverage can be obtained with line-by-line coverage of the high-level FieldTrip functions. To do that we first create a test case that includes of the FieldTrip tests, which ensures all of the tests follow the [unit testing MATLAB framework](https://nl.mathworks.com/help/matlab/matlab-unit-test-framework.html?s_tid=CRUX_lftnav).
 
-## MATLAB Code: inspect_codecoverage.m
+To generate the report as an HTML file we used the `ReportCoverageFor` name-value argument of the **[runtests](https://nl.mathworks.com/help/matlab/ref/runtests.html)** MATLAB function. 
+
+All of that can be done with the code below
+
+## Determine code coverage
 
 ```matlab
+%%%%%%% Save this to a file "inspect_codecoverage.m" %%%%%%%%%%
 function tests = inspect_codecoverage
 
 if nargout
@@ -53,11 +58,12 @@ else
     for i = 1:numel(fn)
         feval(fn{i});
     end
-end
-end
+end % nargout
+
+end % function
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-function testOptions(testCase)
+function testEverything(testCase)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Get FieldTrip version and path
@@ -75,16 +81,16 @@ for i = 1:length(testScripts)
     testScripts{i} = strrep(testScripts{i}, '.m', '');
 end
 
-% The test scripts were ran in the DCCN PC and some of them gave error. Initialize an empty cell array to store the names of scripts that gave errors
-errorScripts = {};
-
-% Some test scripts were crashibg MATLAB in the DCCN PC without giving an error. We need to exclude those too
+% Some test scripts were causing MATLAB to crash on a DCCN Windows PC, these need to be excluded
 indices = ~contains(testScripts, 'test_bug1818'); 
 testScripts = testScripts(indices);
 indices = ~contains(testScripts, 'test_old_buffer_latency_bandwidth');
 testScripts = testScripts(indices);
 indices = ~contains(testScripts, 'test_bug472'); 
 testScripts = testScripts(indices);
+
+% Keep an eye on which of the scripts give an error
+errorScripts = {};
 
 % Loop through the test scripts
 for i = 1:length(testScripts)
@@ -117,10 +123,12 @@ else
 end
 ```
 
-Once we have defined the **``inspect_codecoverage``** function, we need to run it using the **[runtests](https://nl.mathworks.com/help/matlab/ref/runtests.html)** MATLAB function. Additionally, we need to define what functions we want to find the coverage for. Here I opt only for the high-level FieldTrip functions:
+With the code above saved as a local `inspect_codecoverage.m` function, we run it using the [runtests](https://nl.mathworks.com/help/matlab/ref/runtests.html) MATLAB function. 
+
+Additionally, we define the functions we want to find the coverage for. Here I opt only for the high-level FieldTrip functions:
 
 ```matlab
-%%%%%%% Run that in the command window %%%%%%%%%%
+%%%%%%% Run this in the command window %%%%%%%%%%
 
 % Get FieldTrip version and path
 [~, ftpath] = ft_version;
@@ -147,53 +155,52 @@ end
 runtests('inspect_codecoverage.m', 'ReportCoverageFor', sourceFunctions);
 ```
 
-{% include markup/info %}
-Using **``inspect_codecoverage``** we found the full FieldTrip coverage (i.e., the coverage provided by the [``test_*``](https://github.com/fieldtrip/fieldtrip/tree/master/test) test scripts. In total 955 such test scripts exist)  and the partial FieldTrip coverage (i.e., the coverage provided by the [``test_ft_*``](https://github.com/fieldtrip/fieldtrip/tree/master/test) test scripts. In total 202 such test scripts exist). Interestingly, it was found that for the high-level FieldTrip functions the line-by-line full coverage provided by the [``test_*``](https://github.com/fieldtrip/fieldtrip/tree/master/test) test scripts is **41 %** (the full coverage report can be found [here](/assets/coverage/full/)) and the line-by-line partial coverage provided by the [``test_ft_*``](https://github.com/fieldtrip/fieldtrip/tree/master/test) test scripts is **37 %** (the partial coverage report can be found [here](/assets/coverage/partial/)). This proves that the [``test_ft_*``](https://github.com/fieldtrip/fieldtrip/tree/master/test) test scripts can be used for line-by-line coverage, while the rest of the test scripts can be used for [regression testing](https://en.wikipedia.org/wiki/Regression_testing) of the FieldTrip toolbox.
+Using the code above we determined the "full" coverage provided by all the 955 `test_xxx` scripts. We also determined the "partial" coverage provided by the 202 `test_ft_xxx` scripts. 
+
+It was found that the line-by-line full coverage is **41 %**, which can and can be found [here](/assets/coverage/full/). The line-by-line partial coverage is **37 %**, which can be found [here](/assets/coverage/partial/). 
+
+This reveals that the `test_ft_xxx` scripts already provide most of the current coverage. The remaining test scripts (especially the `test_bugXXX` and `test_issueXXX`) were more designed for [regression testing](https://en.wikipedia.org/wiki/Regression_testing) and can be continued to be used for that.
 {% include markup/end %}
 
-
 {% include markup/info %}
-Future goal is to also find the coverage of the low-level FieldTrip functions.
+A future goal is to also find the coverage of FielddTrip functions that are part of the modules (fileio, preproc, etc.) and other low-level functions.
 {% include markup/end %}
 
 ## Alternative way
 
-{% include markup/warning %}
-This alternative way needs to be checked more. The line
-
-```matlab 
-sourceCodeFolder = fullfile(ftpath, '*.m'); % List the high-level FieldTrip functions (Contents.m is not excluded in this case)
-``` 
-
-might need to be edited.
-{% include markup/end %}
-
 Another way to find the line-by-line coverage is by adding an instance of the [CodeCoveragePlugin](https://nl.mathworks.com/help/matlab/ref/matlab.unittest.plugins.codecoverageplugin-class.html) class to a test runner. This is part of the [class-based unit testing MATLAB framework](https://nl.mathworks.com/help/matlab/class-based-unit-tests.html). 
 
-First create and add **``inspect_codecoverage``** function inside a new folder called ``code_coverage`` in the main FieldTrip repository. Then run in the command window:
+First create the `inspect_codecoverage.m` function as above and put it inside a new folder `code_coverage` at the root level. Then run in the command window:
 
 ```matlab
-%%%%%%% Run that in the command window %%%%%%%%%%
+%%%%%%% Run this in the command window %%%%%%%%%%
 
 import matlab.unittest.plugins.CodeCoveragePlugin
 import matlab.unittest.plugins.codecoverage.CoverageReport
 
 [~, ftpath] = ft_version;
 
-runner = testrunner("textoutput");
-sourceCodeFolder = fullfile(ftpath, '*.m'); % List the high-level FieldTrip functions (Contents.m is not excluded in this case)
-reportFolder = "coverageReport";
+runner = testrunner('textoutput');
+sourceCodeFolder = fullfile(ftpath, '*.m');
+reportFolder = 'coverageReport';
 reportFormat = CoverageReport(reportFolder);
 
-p = CodeCoveragePlugin.forFolder(sourceCodeFolder,"Producing",reportFormat);
+p = CodeCoveragePlugin.forFolder(sourceCodeFolder,'Producing',reportFormat);
 runner.addPlugin(p)
 
-suite1 = testsuite(fullfile(ftpath, code_coverage)); % "inpect_codecoverage.m" is inside the folder called "code_coverage"
+suite1 = testsuite(fullfile(ftpath, code_coverage)); % 'inpect_codecoverage.m' is inside the folder called 'code_coverage'
 results = runner.run(suite1);
 ```
 
-We decided to apply the first method using **[runtests](https://nl.mathworks.com/help/matlab/ref/runtests.html)**, and not this alternative way, because it has less lines of code, it is easier to interpret for a non-software engineer and provides the same results.
+We opted for the first method using [runtests](https://nl.mathworks.com/help/matlab/ref/runtests.html and not the alternative with [CodeCoveragePlugin](https://nl.mathworks.com/help/matlab/ref/matlab.unittest.plugins.codecoverageplugin-class.html), because it has less lines of code, it is easier to interpret for a non-software engineer and provides the same results.
 
-## Using HPC cluster to speed up the process
+{% include markup/warning %}
+The alternative way outlined above needs to be checked more and may need edits for the line 
 
-At first sight it seems that the HPC cluster of the DCCN can not be used to speed up the code coverage process. All the tests need to run _sequentially_ in one MATLAB session in order to acquire a full coverage report. However, we can investigate more efficient execution of the coverage tests in the future.
+    % List the high-level FieldTrip functions (Contents.m is not excluded in this case)
+    sourceCodeFolder = fullfile(ftpath, '*.m'); 
+{% include markup/end %}
+
+## Parallel execution
+
+All the tests need to run _sequentially_ in one MATLAB session in order to acquire a full coverage report. Hence, at first sight, it seems that the HPC cluster of the DCCN cannot be used to speed up the code coverage process. We can investigate more efficient execution of the coverage tests in the future.
