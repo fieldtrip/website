@@ -209,9 +209,9 @@ BrainStream
 BrainSuite
 BrainVisa
 BrainVision
+BrainVision
 BrainVista
 BrainVoyager
-BrainVision
 BrainWeb
 Braincap
 Brainclinics
@@ -2515,6 +2515,7 @@ codeCompatibilityReport
 codeIssues
 codebase
 codebases
+codecoverage
 coef
 coeffcients
 coeffvar
@@ -4533,6 +4534,7 @@ runica
 runnable
 runname
 runnning
+runtests
 runtime
 rusult
 rv
