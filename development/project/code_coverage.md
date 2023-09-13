@@ -37,7 +37,7 @@ The result we get by running this command are:
     
     Number of untested functions: 20
 
-A more complete and detailled code coverage can be obtained with line-by-line coverage of the high-level FieldTrip functions. To do that we first create a test case that includes of the FieldTrip tests, which ensures all of the tests follow the [unit testing MATLAB framework](https://nl.mathworks.com/help/matlab/matlab-unit-test-framework.html?s_tid=CRUX_lftnav).
+A more complete and detailed code coverage can be obtained with line-by-line coverage of the high-level FieldTrip functions. To do that we first create a test case that includes of the FieldTrip tests, which ensures all of the tests follow the [unit testing MATLAB framework](https://nl.mathworks.com/help/matlab/matlab-unit-test-framework.html?s_tid=CRUX_lftnav).
 
 To generate the report as an HTML file we used the `ReportCoverageFor` name-value argument of the **[runtests](https://nl.mathworks.com/help/matlab/ref/runtests.html)** MATLAB function. 
 
