@@ -165,7 +165,7 @@ This reveals that the `test_ft_xxx` scripts already provide most of the current 
 {% include markup/end %}
 
 {% include markup/info %}
-A future goal is to also find the coverage of FielddTrip functions that are part of the modules (fileio, preproc, etc.) and other low-level functions.
+A future goal is to also find the coverage of FieldTrip functions that are part of the modules (fileio, preproc, etc.) and other low-level functions.
 {% include markup/end %}
 
 ## Alternative way
