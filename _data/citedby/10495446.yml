@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '37696851'
+- idtype: doi
+  value: 10.1038/s41597-023-02525-0
+- idtype: pmcid
+  value: PMC10495446
+authors:
+- authtype: Author
+  name: Gil Ávila C
+- authtype: Author
+  name: Bott FS
+- authtype: Author
+  name: Tiemann L
+- authtype: Author
+  name: Hohn VD
+- authtype: Author
+  name: May ES
+- authtype: Author
+  name: Nickel MM
+- authtype: Author
+  name: Zebhauser PT
+- authtype: Author
+  name: Gross J
+- authtype: Author
+  name: Ploner M
+epubdate: 2023 Sep 11
+fulljournalname: Scientific Data
+issue: ''
+pages: '613'
+pmclivedate: 2023/09/13
+printpubdate: ''
+pubdate: 2023 Sep 11
+sortdate: 2023/09/11 00:00
+source: Sci Data
+title: 'DISCOVER-EEG: an open, fully automated EEG pipeline for biomarker discovery
+  in clinical neuroscience'
+uid: '10495446'
+volume: '10'
