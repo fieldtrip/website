@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '37475679'
+- idtype: doi
+  value: 10.1002/brb3.3158
+- idtype: pmcid
+  value: PMC10498076
+authors:
+- authtype: Author
+  name: Phan L
+- authtype: Author
+  name: Tariq A
+- authtype: Author
+  name: Lam G
+- authtype: Author
+  name: Mirza M
+- authtype: Author
+  name: Paiva D
+- authtype: Author
+  name: Lazic M
+- authtype: Author
+  name: Emami Z
+- authtype: Author
+  name: Anagnostou E
+- authtype: Author
+  name: Gordon KA
+- authtype: Author
+  name: Pang EW
+epubdate: 2023 Jul 21
+fulljournalname: Brain and Behavior
+issue: '9'
+pages: e3158
+pmclivedate: 2023/09/14
+printpubdate: ''
+pubdate: 2023 Jul 21
+sortdate: 2023/07/21 00:00
+source: Brain Behav
+title: 'Children with autism spectrum disorder who demonstrate normal language scores
+  use a bottom‐up semantic processing strategy: Evidence from N400 recordings'
+uid: '10498076'
+volume: '13'

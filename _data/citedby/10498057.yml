@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '37367435'
+- idtype: doi
+  value: 10.1002/brb3.3132
+- idtype: pmcid
+  value: PMC10498057
+authors:
+- authtype: Author
+  name: Han S
+- authtype: Author
+  name: Gao J
+- authtype: Author
+  name: Xing W
+- authtype: Author
+  name: Zhou X
+- authtype: Author
+  name: Luo Y
+epubdate: 2023 Jun 27
+fulljournalname: Brain and Behavior
+issue: '9'
+pages: e3132
+pmclivedate: 2023/09/14
+printpubdate: ''
+pubdate: 2023 Jun 27
+sortdate: 2023/06/27 00:00
+source: Brain Behav
+title: Facial attractiveness in the eyes of men with high arousal
+uid: '10498057'
+volume: '13'

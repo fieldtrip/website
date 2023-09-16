@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fnins.2023.1212558
+- idtype: pmcid
+  value: PMC10495592
+authors:
+- authtype: Author
+  name: Jørgensen ML
+- authtype: Author
+  name: Hyvärinen P
+- authtype: Author
+  name: Caporali S
+- authtype: Author
+  name: Dau T
+epubdate: 2023 Aug 29
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '1212558'
+pmclivedate: 2023/09/13
+printpubdate: ''
+pubdate: 2023 Aug 29
+sortdate: 2023/08/29 00:00
+source: Front Neurosci
+title: Effect of sound therapy on whole scalp oscillatory brain activity and distress
+  in chronic tinnitus patients
+uid: '10495592'
+volume: '17'
