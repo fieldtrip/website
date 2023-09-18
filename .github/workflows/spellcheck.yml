@@ -3,9 +3,13 @@ name: Spellcheck
 on:  
   workflow_dispatch:
   push:
-    branches: [master]
+    branches: 
+      - master
   pull_request:
-    types: [opened, reopened]
+    types: 
+      - opened
+    paths-ignore:
+      - '_posts/*-release.md'
 
 jobs:
   spellcheck:
