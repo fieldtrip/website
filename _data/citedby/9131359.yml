@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '34210170'
+- idtype: doi
+  value: 10.1089/brain.2020.0989
+- idtype: pmcid
+  value: PMC9131359
+authors:
+- authtype: Author
+  name: Kudo K
+- authtype: Author
+  name: Morise H
+- authtype: Author
+  name: Ranasinghe KG
+- authtype: Author
+  name: Mizuiri D
+- authtype: Author
+  name: Bhutada AS
+- authtype: Author
+  name: Chen J
+- authtype: Author
+  name: Findlay A
+- authtype: Author
+  name: Kirsch HE
+- authtype: Author
+  name: Nagarajan SS
+epubdate: 2022 May 12
+fulljournalname: Brain Connectivity
+issue: '4'
+pages: 362-373
+pmclivedate: 2022/05/25
+printpubdate: 2022 May 1
+pubdate: 2022 May 12
+sortdate: 2022/05/12 00:00
+source: Brain Connect
+title: Magnetoencephalography Imaging Reveals Abnormal Information Flow in Temporal
+  Lobe Epilepsy
+uid: '9131359'
+volume: '12'
