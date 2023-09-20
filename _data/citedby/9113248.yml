@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '34668519'
+- idtype: doi
+  value: 10.1093/cercor/bhab352
+- idtype: pmcid
+  value: PMC9113248
+authors:
+- authtype: Author
+  name: Somervail R
+- authtype: Author
+  name: Bufacchi RJ
+- authtype: Author
+  name: Salvatori C
+- authtype: Author
+  name: Neary-Zajiczek L
+- authtype: Author
+  name: Guo Y
+- authtype: Author
+  name: Novembre G
+- authtype: Author
+  name: Iannetti GD
+epubdate: 2021 Oct 20
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '10'
+pages: 2231-2244
+pmclivedate: 2022/05/18
+printpubdate: ''
+pubdate: 2021 Oct 20
+sortdate: 2021/10/20 00:00
+source: Cereb Cortex
+title: 'Brain Responses to Surprising Stimulus Offsets: Phenomenology and Functional
+  Significance'
+uid: '9113248'
+volume: '32'
