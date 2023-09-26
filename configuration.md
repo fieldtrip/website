@@ -1147,6 +1147,9 @@ A detailed description of each function is available in the [reference documenta
 **cfg.flank.ztransform** - [ft_spikedetection](/reference/contrib/spike/ft_spikedetection)  
 
 
+**cfg.flip** - [ft_volumerealign](/reference/ft_volumerealign)  
+
+
 **cfg.flipdim** - [ft_sliceinterp](/reference/ft_sliceinterp)  
 
 
