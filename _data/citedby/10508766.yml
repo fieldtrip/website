@@ -1,0 +1,44 @@
+articleids:
+- idtype: pmid
+  value: '37732263'
+- idtype: doi
+  value: 10.1101/2023.09.06.556554
+- idtype: pmcid
+  value: PMC10508766
+authors:
+- authtype: Author
+  name: Singh B
+- authtype: Author
+  name: Wang Z
+- authtype: Author
+  name: Madiah LM
+- authtype: Author
+  name: Gatti SE
+- authtype: Author
+  name: Fulton JN
+- authtype: Author
+  name: Johnson GW
+- authtype: Author
+  name: Li R
+- authtype: Author
+  name: Dawant BM
+- authtype: Author
+  name: Englot DJ
+- authtype: Author
+  name: Bick SK
+- authtype: Author
+  name: Roberson SW
+- authtype: Author
+  name: Constantinidis C
+epubdate: 2023 Sep 7
+fulljournalname: bioRxiv
+issue: ''
+pages: 2023.09.06.556554
+pmclivedate: 2023/09/20
+printpubdate: ''
+pubdate: 2023 Sep 7
+sortdate: 2023/09/07 00:00
+source: bioRxiv
+title: Brain-wide human oscillatory LFP activity during visual working memory
+uid: '10508766'
+volume: ''

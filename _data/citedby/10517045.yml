@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '37658858'
+- idtype: doi
+  value: 10.1007/s00429-023-02698-9
+- idtype: pmcid
+  value: PMC10517045
+authors:
+- authtype: Author
+  name: Muñoz V
+- authtype: Author
+  name: Muñoz-Caracuel M
+- authtype: Author
+  name: Angulo-Ruiz BY
+- authtype: Author
+  name: Gómez CM
+epubdate: 2023 Sep 2
+fulljournalname: Brain Structure & Function
+issue: '8'
+pages: 1943-1961
+pmclivedate: 2023/09/24
+printpubdate: '2023'
+pubdate: 2023 Sep 2
+sortdate: 2023/09/02 00:00
+source: Brain Struct Funct
+title: 'Neurovascular coupling during auditory stimulation: event-related potentials
+  and fNIRS hemodynamic'
+uid: '10517045'
+volume: '228'
