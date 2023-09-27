@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '37421617'
+- idtype: doi
+  value: 10.1016/j.xpro.2023.102370
+- idtype: pmcid
+  value: PMC10511849
+authors:
+- authtype: Author
+  name: Mazzini S
+- authtype: Author
+  name: Holler J
+- authtype: Author
+  name: Drijvers L
+epubdate: 2023 Jul 7
+fulljournalname: STAR Protocols
+issue: '3'
+pages: '102370'
+pmclivedate: 2023/09/22
+printpubdate: ''
+pubdate: 2023 Jul 7
+sortdate: 2023/07/07 00:00
+source: STAR Protoc
+title: Studying naturalistic human communication using dual-EEG and audio-visual recordings
+uid: '10511849'
+volume: '4'

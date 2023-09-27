@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '37745863'
+- idtype: doi
+  value: 10.1016/j.sleepx.2023.100086
+- idtype: pmcid
+  value: PMC10511487
+authors:
+- authtype: Author
+  name: Miletínová E
+- authtype: Author
+  name: Piorecký M
+- authtype: Author
+  name: Koudelka V
+- authtype: Author
+  name: Jiříček S
+- authtype: Author
+  name: Tomeček D
+- authtype: Author
+  name: Brunovský M
+- authtype: Author
+  name: Horáček J
+- authtype: Author
+  name: Bušková J
+epubdate: 2023 Sep 14
+fulljournalname: 'Sleep Medicine: X'
+issue: ''
+pages: '100086'
+pmclivedate: 2023/09/22
+printpubdate: ''
+pubdate: 2023 Sep 14
+sortdate: 2023/09/14 00:00
+source: Sleep Med X
+title: Alterations of sleep initiation in NREM parasomnia after sleep deprivation
+  – A multimodal pilot study
+uid: '10511487'
+volume: '6'

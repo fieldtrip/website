@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '37740012'
+- idtype: doi
+  value: 10.1038/s41598-023-43027-8
+- idtype: pmcid
+  value: PMC10516972
+authors:
+- authtype: Author
+  name: Li KE
+- authtype: Author
+  name: Dimitrijevic A
+- authtype: Author
+  name: Gordon KA
+- authtype: Author
+  name: Pang EW
+- authtype: Author
+  name: Greiner HM
+- authtype: Author
+  name: Kadis DS
+epubdate: 2023 Sep 22
+fulljournalname: Scientific Reports
+issue: ''
+pages: '15849'
+pmclivedate: 2023/09/24
+printpubdate: ''
+pubdate: 2023 Sep 22
+sortdate: 2023/09/22 00:00
+source: Sci Rep
+title: Age-related increases in right hemisphere support for prosodic processing in
+  children
+uid: '10516972'
+volume: '13'

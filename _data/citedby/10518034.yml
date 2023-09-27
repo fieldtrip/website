@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '36966391'
+- idtype: doi
+  value: 10.1016/j.celrep.2023.112254
+- idtype: pmcid
+  value: PMC10518034
+- idtype: MID
+  value: NIHMS1895565
+authors:
+- authtype: Author
+  name: Nanda A
+- authtype: Author
+  name: Johnson GW
+- authtype: Author
+  name: Mu Y
+- authtype: Author
+  name: Ahrens MB
+- authtype: Author
+  name: Chang C
+- authtype: Author
+  name: Englot DJ
+- authtype: Author
+  name: Breakspear M
+- authtype: Author
+  name: Rubinov M
+epubdate: 2023 Mar 24
+fulljournalname: Cell reports
+issue: '4'
+pages: '112254'
+pmclivedate: ''
+printpubdate: ''
+pubdate: 2023 Mar 24
+sortdate: 2023/03/24 00:00
+source: Cell Rep
+title: Time-resolved correlation of distributed brain activity tracks E-I balance
+  and accounts for diverse scale-free phenomena
+uid: '10518034'
+volume: '42'
