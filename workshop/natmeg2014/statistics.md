@@ -328,10 +328,7 @@ However, we will leave the statistical evaluation to the **[ft_timelockstatistic
 
     disp(ERF_all)
 
-          avg: [102x251 double]
-          var: [102x251 double]
          time: [1x251 double]
-          dof: [102x251 double]
         label: {102x1 cell}
         trial: [100x102x251 double]
        dimord: 'rpt_chan_time'
