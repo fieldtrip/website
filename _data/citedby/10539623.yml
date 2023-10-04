@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '37780963'
+- idtype: doi
+  value: 10.3389/fnhum.2023.1241589
+- idtype: pmcid
+  value: PMC10539623
+authors:
+- authtype: Author
+  name: Batista AR
+- authtype: Author
+  name: Catronas D
+- authtype: Author
+  name: Sousa J
+- authtype: Author
+  name: Folia V
+- authtype: Author
+  name: Torres NL
+- authtype: Author
+  name: Silva S
+epubdate: 2023 Sep 14
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '1241589'
+pmclivedate: 2023/09/30
+printpubdate: ''
+pubdate: 2023 Sep 14
+sortdate: 2023/09/14 00:00
+source: Front Hum Neurosci
+title: Domain-general but not speech-specific auditory duration perception predicts
+  pseudoword reading in adults
+uid: '10539623'
+volume: '17'
