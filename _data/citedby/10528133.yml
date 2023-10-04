@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '37522890'
+- idtype: doi
+  value: 10.1113/JP284505
+- idtype: pmcid
+  value: PMC10528133
+- idtype: MID
+  value: NIHMS1917576
+authors:
+- authtype: Author
+  name: Jacobsen NA
+- authtype: Author
+  name: Ferris DP
+epubdate: 2023 Jul 31
+fulljournalname: The Journal of physiology
+issue: '17'
+pages: 3921-3944
+pmclivedate: ''
+printpubdate: 2023 Sep
+pubdate: 2023 Jul 31
+sortdate: 2023/07/31 00:00
+source: J Physiol
+title: Electrocortical Activity Correlated with Locomotor Adaptation during Split-belt
+  Treadmill Walking
+uid: '10528133'
+volume: '601'

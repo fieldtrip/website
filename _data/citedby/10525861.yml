@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '37760145'
+- idtype: doi
+  value: 10.3390/bioengineering10091043
+- idtype: pmcid
+  value: PMC10525861
+authors:
+- authtype: Author
+  name: Chaudhari A
+- authtype: Author
+  name: Wang X
+- authtype: Author
+  name: Wu A
+- authtype: Author
+  name: Liu H
+epubdate: 2023 Sep 5
+fulljournalname: Bioengineering
+issue: '9'
+pages: '1043'
+pmclivedate: 2023/09/28
+printpubdate: ''
+pubdate: 2023 Sep 5
+sortdate: 2023/09/05 00:00
+source: Bioengineering (Basel)
+title: Repeated Transcranial Photobiomodulation with Light-Emitting Diodes Improves
+  Psychomotor Vigilance and EEG Networks of the Human Brain
+uid: '10525861'
+volume: '10'

@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '37780960'
+- idtype: doi
+  value: 10.3389/fnhum.2023.1191284
+- idtype: pmcid
+  value: PMC10538631
+authors:
+- authtype: Author
+  name: Grijalva C
+- authtype: Author
+  name: Hale D
+- authtype: Author
+  name: Wu L
+- authtype: Author
+  name: Toosizadeh N
+- authtype: Author
+  name: Laksari K
+epubdate: 2023 Sep 14
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '1191284'
+pmclivedate: 2023/09/29
+printpubdate: ''
+pubdate: 2023 Sep 14
+sortdate: 2023/09/14 00:00
+source: Front Hum Neurosci
+title: Hyper-acute effects of sub-concussive soccer headers on brain function and
+  hemodynamics
+uid: '10538631'
+volume: '17'

@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '37639111'
+- idtype: doi
+  value: 10.1007/s10548-023-00983-8
+- idtype: pmcid
+  value: PMC10522533
+authors:
+- authtype: Author
+  name: Talwar S
+- authtype: Author
+  name: Barbero FM
+- authtype: Author
+  name: Calce RP
+- authtype: Author
+  name: Collignon O
+epubdate: 2023 Aug 28
+fulljournalname: Brain Topography
+issue: '6'
+pages: 854-869
+pmclivedate: 2023/09/28
+printpubdate: '2023'
+pubdate: 2023 Aug 28
+sortdate: 2023/08/28 00:00
+source: Brain Topogr
+title: Automatic Brain Categorization of Discrete Auditory Emotion Expressions
+uid: '10522533'
+volume: '36'

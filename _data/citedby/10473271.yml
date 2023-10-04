@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '37781151'
+- idtype: doi
+  value: 10.1162/netn_a_00300
+- idtype: pmcid
+  value: PMC10473271
+authors:
+- authtype: Author
+  name: Deco G
+- authtype: Author
+  name: Sanz Perl Y
+- authtype: Author
+  name: de la Fuente L
+- authtype: Author
+  name: Sitt JD
+- authtype: Author
+  name: Yeo BT
+- authtype: Author
+  name: Tagliazucchi E
+- authtype: Author
+  name: Kringelbach ML
+epubdate: 2023 Oct 1
+fulljournalname: Network Neuroscience
+issue: '3'
+pages: 966-998
+pmclivedate: 2023/10/01
+printpubdate: ''
+pubdate: 2023 Oct 1
+sortdate: 2023/10/01 00:00
+source: Netw Neurosci
+title: 'The arrow of time of brain signals in cognition: Potential intriguing role
+  of parts of the default mode network'
+uid: '10473271'
+volume: '7'

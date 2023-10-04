@@ -1,0 +1,61 @@
+articleids:
+- idtype: pmid
+  value: '37540599'
+- idtype: doi
+  value: 10.1016/j.celrep.2023.112906
+- idtype: pmcid
+  value: PMC10530698
+- idtype: MID
+  value: NIHMS1928253
+authors:
+- authtype: Author
+  name: Lowet E
+- authtype: Author
+  name: Sheehan DJ
+- authtype: Author
+  name: Chialva U
+- authtype: Author
+  name: Pena RD
+- authtype: Author
+  name: Mount RA
+- authtype: Author
+  name: Xiao S
+- authtype: Author
+  name: Zhou SL
+- authtype: Author
+  name: Tseng HA
+- authtype: Author
+  name: Gritton H
+- authtype: Author
+  name: Shroff S
+- authtype: Author
+  name: Kondabolu K
+- authtype: Author
+  name: Cheung C
+- authtype: Author
+  name: Wang Y
+- authtype: Author
+  name: Piatkevich KD
+- authtype: Author
+  name: Boyden ES
+- authtype: Author
+  name: Mertz J
+- authtype: Author
+  name: Hasselmo ME
+- authtype: Author
+  name: Rotstein HG
+- authtype: Author
+  name: Han X
+epubdate: 2023 Aug 3
+fulljournalname: Cell reports
+issue: '8'
+pages: '112906'
+pmclivedate: 2023/09/27
+printpubdate: 2023 Aug 29
+pubdate: 2023 Aug 3
+sortdate: 2023/08/03 00:00
+source: Cell Rep
+title: Theta and gamma rhythmic coding through two spike output modes in the hippocampus
+  during spatial navigation
+uid: '10530698'
+volume: '42'

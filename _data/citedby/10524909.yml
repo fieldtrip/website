@@ -1,0 +1,47 @@
+articleids:
+- idtype: pmid
+  value: '37212619'
+- idtype: doi
+  value: 10.1111/psyp.14336
+- idtype: pmcid
+  value: PMC10524909
+- idtype: MID
+  value: NIHMS1902296
+authors:
+- authtype: Author
+  name: Conte S
+- authtype: Author
+  name: Richards JE
+- authtype: Author
+  name: Fox NA
+- authtype: Author
+  name: Valadez EA
+- authtype: Author
+  name: McSweeney M
+- authtype: Author
+  name: Tan E
+- authtype: Author
+  name: Pine DS
+- authtype: Author
+  name: Winkler AM
+- authtype: Author
+  name: Liuzzi L
+- authtype: Author
+  name: Cardinale EM
+- authtype: Author
+  name: White LK
+- authtype: Author
+  name: Buzzell GA
+epubdate: 2023 May 22
+fulljournalname: Psychophysiology
+issue: '10'
+pages: e14336
+pmclivedate: ''
+printpubdate: 2023 Oct
+pubdate: 2023 May 22
+sortdate: 2023/05/22 00:00
+source: Psychophysiology
+title: Multimodal study of the neural sources of error monitoring in adolescents and
+  adults
+uid: '10524909'
+volume: '60'
