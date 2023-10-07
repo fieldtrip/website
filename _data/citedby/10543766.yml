@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '37778275'
+- idtype: doi
+  value: 10.1016/j.dcn.2023.101297
+- idtype: pmcid
+  value: PMC10543766
+authors:
+- authtype: Author
+  name: Çetinçelik M
+- authtype: Author
+  name: Rowland CF
+- authtype: Author
+  name: Snijders TM
+epubdate: 2023 Sep 29
+fulljournalname: Developmental Cognitive Neuroscience
+issue: ''
+pages: '101297'
+pmclivedate: 2023/10/03
+printpubdate: ''
+pubdate: 2023 Sep 29
+sortdate: 2023/09/29 00:00
+source: Dev Cogn Neurosci
+title: Ten-month-old infants’ neural tracking of naturalistic speech is not facilitated
+  by the speaker’s eye gaze
+uid: '10543766'
+volume: '64'

@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '37014750'
+- idtype: doi
+  value: 10.1016/j.celrep.2023.112331
+- idtype: pmcid
+  value: PMC10545811
+- idtype: MID
+  value: NIHMS1895580
+authors:
+- authtype: Author
+  name: Schechtman E
+- authtype: Author
+  name: Heilberg J
+- authtype: Author
+  name: Paller KA
+epubdate: 2023 Apr 3
+fulljournalname: Cell reports
+issue: '4'
+pages: '112331'
+pmclivedate: ''
+printpubdate: ''
+pubdate: 2023 Apr 3
+sortdate: 2023/04/03 00:00
+source: Cell Rep
+title: Memory consolidation during sleep involves context reinstatement in humans
+uid: '10545811'
+volume: '42'

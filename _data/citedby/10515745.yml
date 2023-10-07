@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '37745436'
+- idtype: doi
+  value: 10.1101/2023.06.21.545778
+- idtype: pmcid
+  value: PMC10515745
+authors:
+- authtype: Author
+  name: Elorette C
+- authtype: Author
+  name: Fujimoto A
+- authtype: Author
+  name: Stoll FM
+- authtype: Author
+  name: Fujimoto SH
+- authtype: Author
+  name: Fleysher L
+- authtype: Author
+  name: Bienkowska N
+- authtype: Author
+  name: Russ BE
+- authtype: Author
+  name: Rudebeck PH
+epubdate: 2023 Sep 15
+fulljournalname: bioRxiv
+issue: ''
+pages: 2023.06.21.545778
+pmclivedate: 2023/09/23
+printpubdate: ''
+pubdate: 2023 Sep 15
+sortdate: 2023/09/15 00:00
+source: bioRxiv
+title: The neural basis of resting-state fMRI functional connectivity in fronto-limbic
+  circuits revealed by chemogenetic manipulation
+uid: '10515745'
+volume: ''
