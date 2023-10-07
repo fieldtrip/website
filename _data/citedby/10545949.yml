@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '36752815'
+- idtype: doi
+  value: 10.1007/s00213-023-06318-6
+- idtype: pmcid
+  value: PMC10545949
+- idtype: MID
+  value: NIHMS1933346
+authors:
+- authtype: Author
+  name: Weyrich L
+- authtype: Author
+  name: Arif Y
+- authtype: Author
+  name: Schantell M
+- authtype: Author
+  name: Johnson HJ
+- authtype: Author
+  name: Willett MP
+- authtype: Author
+  name: Okelberry HJ
+- authtype: Author
+  name: Wilson TW
+epubdate: 2023 Feb 8
+fulljournalname: Psychopharmacology
+issue: '4'
+pages: 769-783
+pmclivedate: ''
+printpubdate: 2023 Apr
+pubdate: 2023 Feb 8
+sortdate: 2023/02/08 00:00
+source: Psychopharmacology (Berl)
+title: Altered Functional Connectivity and Oscillatory Dynamics in Polysubstance and
+  Cannabis Only Users During Visuospatial Processing
+uid: '10545949'
+volume: '240'

@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '37770106'
+- idtype: doi
+  value: 10.1101/lm.053685.122
+- idtype: pmcid
+  value: PMC10547370
+authors:
+- authtype: Author
+  name: Rodheim K
+- authtype: Author
+  name: Kainec K
+- authtype: Author
+  name: Noh E
+- authtype: Author
+  name: Jones B
+- authtype: Author
+  name: Spencer RM
+epubdate: 2023 Sep
+fulljournalname: Learning & Memory
+issue: '9'
+pages: 237-244
+pmclivedate: ''
+printpubdate: ''
+pubdate: 2023 Sep
+sortdate: 2023/09/01 00:00
+source: Learn Mem
+title: Emotional memory consolidation during sleep is associated with slow oscillation–spindle
+  coupling strength in young and older adults
+uid: '10547370'
+volume: '30'

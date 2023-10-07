@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '37726143'
+- idtype: doi
+  value: 10.1101/lm.053683.122
+- idtype: pmcid
+  value: PMC10547374
+authors:
+- authtype: Author
+  name: Wick A
+- authtype: Author
+  name: Rasch B
+epubdate: 2023 Sep
+fulljournalname: Learning & Memory
+issue: '9'
+pages: 192-200
+pmclivedate: ''
+printpubdate: ''
+pubdate: 2023 Sep
+sortdate: 2023/09/01 00:00
+source: Learn Mem
+title: 'Targeted memory reactivation during slow-wave sleep vs. sleep stage N2: no
+  significant differences in a vocabulary task'
+uid: '10547374'
+volume: '30'

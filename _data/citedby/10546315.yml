@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '37794908'
+- idtype: doi
+  value: 10.3389/fpsyg.2023.1160605
+- idtype: pmcid
+  value: PMC10546315
+authors:
+- authtype: Author
+  name: Kuc A
+- authtype: Author
+  name: Maksimenko V
+- authtype: Author
+  name: Savosenkov A
+- authtype: Author
+  name: Grigorev N
+- authtype: Author
+  name: Grubov V
+- authtype: Author
+  name: Badarin A
+- authtype: Author
+  name: Kazantsev V
+- authtype: Author
+  name: Gordleeva S
+- authtype: Author
+  name: Hramov A
+epubdate: 2023 Sep 19
+fulljournalname: Frontiers in Psychology
+issue: ''
+pages: '1160605'
+pmclivedate: 2023/10/04
+printpubdate: ''
+pubdate: 2023 Sep 19
+sortdate: 2023/09/19 00:00
+source: Front Psychol
+title: Studying perceptual bias in favor of the from-above Necker cube perspective
+  in a goal-directed behavior
+uid: '10546315'
+volume: '14'
