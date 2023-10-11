@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '37544901'
+- idtype: doi
+  value: 10.1002/advs.202304037
+- idtype: pmcid
+  value: PMC10558655
+authors:
+- authtype: Author
+  name: Pan Y
+- authtype: Author
+  name: Vinding MC
+- authtype: Author
+  name: Zhang L
+- authtype: Author
+  name: Lundqvist D
+- authtype: Author
+  name: Olsson A
+epubdate: 2023 Aug 6
+fulljournalname: Advanced Science
+issue: '28'
+pages: '2304037'
+pmclivedate: 2023/10/08
+printpubdate: ''
+pubdate: 2023 Aug 6
+sortdate: 2023/08/06 00:00
+source: Adv Sci (Weinh)
+title: A Brain‐To‐Brain Mechanism for Social Transmission of Threat Learning
+uid: '10558655'
+volume: '10'

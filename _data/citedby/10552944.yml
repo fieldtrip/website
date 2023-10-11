@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '37607822'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0112-22.2023
+- idtype: pmcid
+  value: PMC10552944
+authors:
+- authtype: Author
+  name: Wang X
+- authtype: Author
+  name: Delgado J
+- authtype: Author
+  name: Marchesotti S
+- authtype: Author
+  name: Kojovic N
+- authtype: Author
+  name: Sperdin HF
+- authtype: Author
+  name: Rihs TA
+- authtype: Author
+  name: Schaer M
+- authtype: Author
+  name: Giraud AL
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '40'
+pages: 6779-6795
+pmclivedate: 2023/10/06
+printpubdate: 2023 Oct 4
+pubdate: 2023 Oct 4
+sortdate: 2023/10/04 00:00
+source: J Neurosci
+title: Speech Reception in Young Children with Autism Is Selectively Indexed by a
+  Neural Oscillation Coupling Anomaly
+uid: '10552944'
+volume: '43'
