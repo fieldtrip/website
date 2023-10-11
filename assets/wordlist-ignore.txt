@@ -386,7 +386,6 @@ DAC
 DANDI
 DCBT
 DCC
-DCC
 DCCN
 DCCN's
 DCE
@@ -2742,6 +2741,7 @@ datetime
 davis
 dbd
 dbstop
+dcc
 dccn
 dccnpath
 dcm
@@ -4526,6 +4526,7 @@ ringbuffer
 rmextremes
 rmfield
 rmpath
+rnet
 robert
 robertoostenveld
 roboos
