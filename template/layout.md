@@ -22,7 +22,7 @@ You can use the following snippet of code to get a quick overview of the templat
       title(filename{i}, 'Interpreter', 'none');
 
       [p, f, x] = fileparts(filename{i});
-      print([lower(f) '.png'], '-dpng');
+      print([lower(f) x '.png'], '-dpng');
     end
 
 {% include markup/warning %}
@@ -35,7 +35,7 @@ These layouts are meant for plotting on a 2D screen or on paper. If you are look
 
 The following series of template layouts is for the electrode caps from [EASYCAP](http://www.easycap.de). They are sorted based on their electrode montages. FieldTrip provides .mat files (since r5201 - feb 2012) that are based on the bitmap images obtained from the easycap website and shown below. The layout structure stored in those .mat files contains fields that describe the position (.pos), the width (.width), and the height (.height), and the naming (.label) of the electrodes. Furthermore, it contains fields that describe the topographic interpolation boundaries (.mask) and the outlines of the 'head' (.outline).
 
-### 10%-Arrangements
+### 10% arrangements
 
 The following template layout sets are provided
 
@@ -58,32 +58,32 @@ The following template layout sets are provided
 {% include image src="/assets/img/template/layout/easycapm3.png" width="200" %}
 {% include image src="/assets/img/template/layout/easycapm3.mat.png" width="200" %}
 
-#### easycapM22 - Small Equidistant 29-Channel-Arrangement (used in Braincap32)
+#### easycapM22 - Small Equidistant 29-channel arrangement (used in Braincap32)
 
 {% include image src="/assets/img/template/layout/easycapm22.png" width="200" %}
 {% include image src="/assets/img/template/layout/easycapm22.mat.png" width="200" %}
 
-#### easycapM23 - Large Equidistant 32-Channel-Arrangement
+#### easycapM23 - Large Equidistant 32-channel arrangement
 
 {% include image src="/assets/img/template/layout/easycapm23.png" width="200" %}
 {% include image src="/assets/img/template/layout/easycapm23.mat.png" width="200" %}
 
-#### easycapM24 - Large Equidistant 34-Channel-Arrangement (used in EC40)
+#### easycapM24 - Large Equidistant 34-channel arrangement (used in EC40)
 
 {% include image src="/assets/img/template/layout/easycapm24.png" width="200" %}
 {% include image src="/assets/img/template/layout/easycapm24.mat.png" width="200" %}
 
-#### easycapM11 - 61-Channel-Arrangement ("10%-System") (used in BrainCap64)
+#### easycapM11 - 61-channel arrangement ("10%-System") (used in BrainCap64)
 
 {% include image src="/assets/img/template/layout/easycapm11.png" width="200" %}
 {% include image src="/assets/img/template/layout/easycapm11.mat.png" width="200" %}
 
-#### easycapM1 - 74-Channel-Arrangement (used in EC80)
+#### easycapM1 - 74-channel arrangement (used in EC80)
 
 {% include image src="/assets/img/template/layout/easycapm1.png" width="200" %}
 {% include image src="/assets/img/template/layout/easycapm1.mat.png" width="200" %}
 
-#### easycapM15 - 128-Channel-Arrangement
+#### easycapM15 - 128-channel arrangement
 
 {% include image src="/assets/img/template/layout/easycapm15.png" width="200" %}
 {% include image src="/assets/img/template/layout/easycapm15.mat.png" width="200" %}
@@ -97,22 +97,22 @@ The following template layout sets are provided
 - easycapM16.mat
 - easycapM14.mat
 
-#### easycapM7 - Spherical 32-Channel-Arrangement
+#### easycapM7 - Spherical 32-channel arrangement
 
 {% include image src="/assets/img/template/layout/easycapm7.png" width="200" %}
 {% include image src="/assets/img/template/layout/easycapm7.mat.png" width="200" %}
 
-#### easycapM10 - Equidistant 61-Channel-Arrangement
+#### easycapM10 - Equidistant 61-channel arrangement
 
 {% include image src="/assets/img/template/layout/easycapm10.png" width="200" %}
 {% include image src="/assets/img/template/layout/easycapm10.mat.png" width="200" %}
 
-#### easycapM16 - Equidistant 88-Channel-Arrangement
+#### easycapM16 - Equidistant 88-channel arrangement
 
 {% include image src="/assets/img/template/layout/easycapm16.png" width="200" %}
 {% include image src="/assets/img/template/layout/easycapm16.mat.png" width="200" %}
 
-#### easycapM14 - Spherical 124-Channel-Arrangement
+#### easycapM14 - Spherical 124-channel arrangement
 
 {% include image src="/assets/img/template/layout/easycapm14.png" width="200" %}
 {% include image src="/assets/img/template/layout/easycapm14.mat.png" width="200" %}
@@ -125,12 +125,12 @@ The following template layout sets are provided
 - easycapM17.mat
 - easycapM19.mat
 
-#### easycapM20 - BESA 32-Channel-Arrangement for Epilepsy Diagnostics
+#### easycapM20 - BESA 32-channel arrangement for Epilepsy Diagnostics
 
 {% include image src="/assets/img/template/layout/easycapm20.png" width="200" %}
 {% include image src="/assets/img/template/layout/easycapm20.mat.png" width="200" %}
 
-#### easycapM17 - 29-Channel-Arrangement for Language Research
+#### easycapM17 - 29-channel arrangement for Language Research
 
 {% include image src="/assets/img/template/layout/easycapm17.png" width="200" %}
 {% include image src="/assets/img/template/layout/easycapm17.mat.png" width="200" %}
@@ -141,24 +141,38 @@ The following template layouts are for electrode caps from [Brain Products actiC
 
 #### dccn_customized_acticap64.mat
 
-This is a custom 64-Channel-Arrangement for the Donders Centre for Cognitive Neuroimaging (DCCN). The 32 channels from the 1st amplifier are located central, the 32 channels from the 2nd amplifier are along the rim.
+This is a custom 64-channel arrangement for the Donders Centre for Cognitive Neuroimaging (DCCN). It is based on a equidistant M10 cap and has electrode numbers rather than electrode names. The 32 channels from the 1st amplifier are located central, the 32 channels from the 2nd amplifier are along the rim, which means that electrodes preparation goes in outward moving circles.
 
 {% include image src="/assets/img/template/layout/dccn_customized_acticap64.png" width="200" %}
 {% include image src="/assets/img/template/layout/dccn_customized_acticap64.mat.png" width="200" %}
 
 #### mpi_customized_acticap64.mat
 
-This is a custom 64-Channel-Arrangement for the MPI. Note that the electrode positions are the same as for the DCCN customized version, but that the channel order is different. The MPI version has the 32 channels from the 1st amplifier on the right and the 32 channels from the 2nd amplifier on the left.
+This is a custom 64-channel arrangement for the Max Planck Institute for Psycholinguistics (MPI). It is based on a equidistant M10 cap and has electrode numbers rather than electrode names. Note that the electrode positions are the same as for the DCCN customized version above, but that the channel order is different. The MPI version has the 32 channels from the 1st amplifier on the right and the 32 channels from the 2nd amplifier on the left, making it easier for two researchers to prepare the EEG cap on the subject simultaneously.
 
 {% include image src="/assets/img/template/layout/mpi_customized_acticap64.png" width="200" %}
 {% include image src="/assets/img/template/layout/mpi_customized_acticap64.mat.png" width="200" %}
 
+#### dcc_customized_acticap64.mat
+
+This is a custom 64-channel arrangement for the Donders Centre for Cognition (DCC). It is based on a 10-10 electrode layout, and uses two 32-channel EEG amplifiers. The green electrode holders correspond to the 32 channels from the 1st amplifier, and the yellow electrode holders correspond to the 32 channels from the 2nd amplifier. The reference and ground are included in the layout with the original name for the electrode location (TP9 and AFz).
+
+{% include image src="/assets/img/template/layout/dcc_customized_acticap64.png" width="200" %}
+{% include image src="/assets/img/template/layout/dcc_customized_acticap64.mat.png" width="200" %}
+
 #### acticap-64ch-standard2.mat
 
-This is the standard 64-channel-Arrangement from [Brain Products](http://www.brainproducts.com/files/public/downloads/actiCAP-64-channel-Standard-2_1201.pdf). It is based on the same coordinates as the easycap electrode caps. This particular layout was created using the [easycapM1 layout](/assets/img/template/layout/easycapm1.png) and then removing eight electrodes (FPz, Iz, F9, F10, P9, P10, O9, O10) which are not present in the cap. Furthermore, two electrodes (AFz, FCz) were renamed to their purpose of being Ground (Gnd) and Reference (Ref) electrode.
+This is the standard 64-channel arrangement from [Brain Products](http://www.brainproducts.com/files/public/downloads/actiCAP-64-channel-Standard-2_1201.pdf). It is based on the same coordinates as the EasyCap electrode caps. This particular layout was created using the [easycapM1 layout](/assets/img/template/layout/easycapm1.png) and then removing eight electrodes (FPz, Iz, F9, F10, P9, P10, O9, O10) which are not present in the cap. Furthermore, two electrodes (AFz, FCz) were renamed to their purpose of being Ground (Gnd) and Reference (Ref) electrode.
 
 {% include image src="/assets/img/template/layout/acticap-64-channel-standard-2.jpg" width="200" %}
 {% include image src="/assets/img/template/layout/acticap-64-channel-standard-2.mat.jpg" width="200" %}
+
+## BrainProducts R-Net
+
+The following layout is for the 64-channel wet-sponge [R-Net](https://www.brainproducts.com/solutions/r-net/) from BrainProducts.
+
+{% include image src="/assets/img/template/layout/rnet64.png" width="200" %}
+{% include image src="/assets/img/template/layout/rnet64.mat.png" width="200" %}
 
 ## NeuroScan Quick-Cap
 
