@@ -1,0 +1,61 @@
+articleids:
+- idtype: pmid
+  value: '37817124'
+- idtype: doi
+  value: 10.1186/s12888-023-05243-4
+- idtype: pmcid
+  value: PMC10566125
+authors:
+- authtype: Author
+  name: Watson M
+- authtype: Author
+  name: Chaves AR
+- authtype: Author
+  name: Gebara A
+- authtype: Author
+  name: Desforges M
+- authtype: Author
+  name: Broomfield A
+- authtype: Author
+  name: Landry N
+- authtype: Author
+  name: Lemoyne A
+- authtype: Author
+  name: Shim S
+- authtype: Author
+  name: Drodge J
+- authtype: Author
+  name: Cuda J
+- authtype: Author
+  name: Kiaee N
+- authtype: Author
+  name: Nasr Y
+- authtype: Author
+  name: Carleton C
+- authtype: Author
+  name: Daskalakis ZJ
+- authtype: Author
+  name: Taylor R
+- authtype: Author
+  name: Tuominen L
+- authtype: Author
+  name: Brender R
+- authtype: Author
+  name: Antochi R
+- authtype: Author
+  name: McMurray L
+- authtype: Author
+  name: Tremblay S
+epubdate: 2023 Oct 10
+fulljournalname: BMC Psychiatry
+issue: ''
+pages: '739'
+pmclivedate: 2023/10/12
+printpubdate: ''
+pubdate: 2023 Oct 10
+sortdate: 2023/10/10 00:00
+source: BMC Psychiatry
+title: A naturalistic study comparing the efficacy of unilateral and bilateral sequential
+  theta burst stimulation in treating major depression – the U-B-D study protocol
+uid: '10566125'
+volume: '23'
