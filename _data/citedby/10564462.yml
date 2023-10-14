@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '37816222'
+- idtype: doi
+  value: 10.1371/journal.pbio.3002324
+- idtype: pmcid
+  value: PMC10564462
+authors:
+- authtype: Author
+  name: Sandhaeger F
+- authtype: Author
+  name: Omejc N
+- authtype: Author
+  name: Pape AA
+- authtype: Author
+  name: Siegel M
+epubdate: 2023 Oct 10
+fulljournalname: PLOS Biology
+issue: '10'
+pages: e3002324
+pmclivedate: 2023/10/11
+printpubdate: ''
+pubdate: 2023 Oct 10
+sortdate: 2023/10/10 00:00
+source: PLoS Biol
+title: Abstract perceptual choice signals during action-linked decisions in the human
+  brain
+uid: '10564462'
+volume: '21'
