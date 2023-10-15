@@ -1609,7 +1609,7 @@ A detailed description of each function is available in the [reference documenta
 **cfg.layout** - [ft_databrowser](/reference/ft_databrowser), [ft_icabrowser](/reference/contrib/misc/ft_icabrowser), [ft_layoutplot](/reference/ft_layoutplot), [ft_layoutplot](/reference/ft_layoutplot), [ft_movieplotER](/reference/ft_movieplotER), [ft_movieplotTFR](/reference/ft_movieplotTFR), [ft_multiplotER](/reference/ft_multiplotER), [ft_multiplotTFR](/reference/ft_multiplotTFR), [ft_neighbourplot](/reference/ft_neighbourplot), [ft_prepare_layout](/reference/ft_prepare_layout), [ft_prepare_layout](/reference/ft_prepare_layout), [ft_prepare_layout](/reference/ft_prepare_layout), [ft_prepare_layout](/reference/ft_prepare_layout), [ft_prepare_layout](/reference/ft_prepare_layout), [ft_prepare_layout](/reference/ft_prepare_layout), [ft_prepare_neighbours](/reference/ft_prepare_neighbours), [ft_realtime_topography](/reference/realtime/example/ft_realtime_topography), [ft_realtime_topography](/reference/realtime/example/ft_realtime_topography), [ft_topoplotCC](/reference/ft_topoplotCC), [ft_topoplotER](/reference/ft_topoplotER), [ft_topoplotIC](/reference/ft_topoplotIC), [ft_topoplotTFR](/reference/ft_topoplotTFR)  
 
 
-**cfg.layouttopo** - [ft_prepare_layout](/reference/ft_prepare_layout), [ft_singleplotER](/reference/ft_singleplotER)  
+**cfg.layouttopo** - [ft_singleplotER](/reference/ft_singleplotER)  
 
 
 **cfg.leadfield** - [ft_preprocessing](/reference/ft_preprocessing)  
