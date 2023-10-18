@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '37836967'
+- idtype: doi
+  value: 10.3390/s23198136
+- idtype: pmcid
+  value: PMC10575356
+authors:
+- authtype: Author
+  name: Bruña R
+- authtype: Author
+  name: Fuggetta G
+- authtype: Author
+  name: Pereda E
+epubdate: 2023 Sep 28
+fulljournalname: Sensors (Basel, Switzerland)
+issue: '19'
+pages: '8136'
+pmclivedate: 2023/10/14
+printpubdate: ''
+pubdate: 2023 Sep 28
+sortdate: 2023/09/28 00:00
+source: Sensors (Basel)
+title: 'One Definition to Join Them All: The N-Spherical Solution for the EEG Lead
+  Field'
+uid: '10575356'
+volume: '23'
