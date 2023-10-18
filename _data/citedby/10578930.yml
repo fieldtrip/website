@@ -1,0 +1,40 @@
+articleids:
+- idtype: pmid
+  value: '37843985'
+- idtype: doi
+  value: 10.7554/eLife.85786
+- idtype: pmcid
+  value: PMC10578930
+authors:
+- authtype: Author
+  name: Viejo G
+- authtype: Author
+  name: Levenstein D
+- authtype: Author
+  name: Skromne Carrasco S
+- authtype: Author
+  name: Mehrotra D
+- authtype: Author
+  name: Mahallati S
+- authtype: Author
+  name: Vite GR
+- authtype: Author
+  name: Denny H
+- authtype: Author
+  name: Sjulson L
+- authtype: Author
+  name: Battaglia FP
+- authtype: Author
+  name: Peyrache A
+epubdate: 2023 Oct 16
+fulljournalname: eLife
+issue: ''
+pages: RP85786
+pmclivedate: 2023/10/17
+printpubdate: ''
+pubdate: 2023 Oct 16
+sortdate: 2023/10/16 00:00
+source: eLife
+title: Pynapple, a toolbox for data analysis in neuroscience
+uid: '10578930'
+volume: '12'

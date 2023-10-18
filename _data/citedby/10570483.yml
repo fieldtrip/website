@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '37496396'
+- idtype: doi
+  value: 10.1002/brb3.3196
+- idtype: pmcid
+  value: PMC10570483
+authors:
+- authtype: Author
+  name: Li Y
+- authtype: Author
+  name: Wang L
+- authtype: Author
+  name: Han Q
+- authtype: Author
+  name: Han Q
+- authtype: Author
+  name: Jiang L
+- authtype: Author
+  name: Wu Y
+- authtype: Author
+  name: Feng Y
+epubdate: 2023 Jul 26
+fulljournalname: Brain and Behavior
+issue: '10'
+pages: e3196
+pmclivedate: 2023/10/14
+printpubdate: ''
+pubdate: 2023 Jul 26
+sortdate: 2023/07/26 00:00
+source: Brain Behav
+title: Preoperative resting‐state microstate as a marker for chronic pain after breast
+  cancer surgery
+uid: '10570483'
+volume: '13'

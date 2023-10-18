@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '37775312'
+- idtype: doi
+  value: 10.1523/ENEURO.0026-23.2023
+- idtype: pmcid
+  value: PMC10576259
+authors:
+- authtype: Author
+  name: Berto M
+- authtype: Author
+  name: Ricciardi E
+- authtype: Author
+  name: Pietrini P
+- authtype: Author
+  name: Weisz N
+- authtype: Author
+  name: Bottari D
+epubdate: 2023 Oct 12
+fulljournalname: eNeuro
+issue: '10'
+pages: ENEURO.0026-23.2023
+pmclivedate: 2023/10/15
+printpubdate: ''
+pubdate: 2023 Oct 12
+sortdate: 2023/10/12 00:00
+source: eNeuro
+title: Distinguishing Fine Structure and Summary Representation of Sound Textures
+  from Neural Activity
+uid: '10576259'
+volume: '10'
