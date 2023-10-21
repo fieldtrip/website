@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '37854147'
+- idtype: doi
+  value: 10.3389/fpsyg.2023.1255835
+- idtype: pmcid
+  value: PMC10580073
+authors:
+- authtype: Author
+  name: Pech GP
+- authtype: Author
+  name: Caspar EA
+epubdate: 2023 Oct 3
+fulljournalname: Frontiers in Psychology
+issue: ''
+pages: '1255835'
+pmclivedate: 2023/10/18
+printpubdate: ''
+pubdate: 2023 Oct 3
+sortdate: 2023/10/03 00:00
+source: Front Psychol
+title: Does the cowl make the monk? The effect of military and Red Cross uniforms
+  on empathy for pain, sense of agency and moral behaviors
+uid: '10580073'
+volume: '14'
