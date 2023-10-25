@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '37865721'
+- idtype: doi
+  value: 10.1038/s41598-023-45308-8
+- idtype: pmcid
+  value: PMC10590435
+authors:
+- authtype: Author
+  name: Hutcheon EA
+- authtype: Author
+  name: Vakorin VA
+- authtype: Author
+  name: Nunes AS
+- authtype: Author
+  name: Ribary U
+- authtype: Author
+  name: Ferguson S
+- authtype: Author
+  name: Claydon VE
+- authtype: Author
+  name: Doesburg SM
+epubdate: 2023 Oct 21
+fulljournalname: Scientific Reports
+issue: ''
+pages: '18021'
+pmclivedate: 2023/10/23
+printpubdate: ''
+pubdate: 2023 Oct 21
+sortdate: 2023/10/21 00:00
+source: Sci Rep
+title: Comparing neuronal oscillations during visual spatial attention orienting between
+  normobaric and hypobaric hypoxia
+uid: '10590435'
+volume: '13'

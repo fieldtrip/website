@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '37857618'
+- idtype: doi
+  value: 10.1038/s41467-023-42052-5
+- idtype: pmcid
+  value: PMC10587070
+authors:
+- authtype: Author
+  name: Zhao L
+- authtype: Author
+  name: Wang X
+epubdate: 2023 Oct 19
+fulljournalname: Nature Communications
+issue: ''
+pages: '6634'
+pmclivedate: 2023/10/21
+printpubdate: ''
+pubdate: 2023 Oct 19
+sortdate: 2023/10/19 00:00
+source: Nat Commun
+title: Frontal cortex activity during the production of diverse social communication
+  calls in marmoset monkeys
+uid: '10587070'
+volume: '14'

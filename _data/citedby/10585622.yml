@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1016/j.dib.2023.109661
+- idtype: pmcid
+  value: PMC10585622
+authors:
+- authtype: Author
+  name: Gallego-Rudolf J
+- authtype: Author
+  name: Corsi-Cabrera M
+- authtype: Author
+  name: Concha L
+- authtype: Author
+  name: Ricardo-Garcell J
+- authtype: Author
+  name: Pasaye-Alcaraz E
+epubdate: 2023 Oct 10
+fulljournalname: Data in Brief
+issue: ''
+pages: '109661'
+pmclivedate: 2023/10/20
+printpubdate: ''
+pubdate: 2023 Oct 10
+sortdate: 2023/10/10 00:00
+source: Data Brief
+title: 'Simultaneous and independent electroencephalography and magnetic resonance
+  imaging: A multimodal neuroimaging dataset'
+uid: '10585622'
+volume: '51'

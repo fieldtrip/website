@@ -1,0 +1,63 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fnagi.2023.1258315
+- idtype: pmcid
+  value: PMC10585115
+authors:
+- authtype: Author
+  name: Rashid-López R
+- authtype: Author
+  name: Macías-García P
+- authtype: Author
+  name: Sánchez-Fernández FL
+- authtype: Author
+  name: Cano-Cano F
+- authtype: Author
+  name: Sarrias-Arrabal E
+- authtype: Author
+  name: Sanmartino F
+- authtype: Author
+  name: Méndez-Bértolo C
+- authtype: Author
+  name: Lozano-Soto E
+- authtype: Author
+  name: Gutiérrez-Cortés R
+- authtype: Author
+  name: González-Moraleda Á
+- authtype: Author
+  name: Forero L
+- authtype: Author
+  name: López-Sosa F
+- authtype: Author
+  name: Zuazo A
+- authtype: Author
+  name: Gómez-Molinero R
+- authtype: Author
+  name: Gómez-Ramírez J
+- authtype: Author
+  name: Paz-Expósito J
+- authtype: Author
+  name: Rubio-Esteban G
+- authtype: Author
+  name: Espinosa-Rosso R
+- authtype: Author
+  name: Cruz-Gómez ÁJ
+- authtype: Author
+  name: González-Rosa JJ
+epubdate: 2023 Oct 5
+fulljournalname: Frontiers in Aging Neuroscience
+issue: ''
+pages: '1258315'
+pmclivedate: 2023/10/20
+printpubdate: ''
+pubdate: 2023 Oct 5
+sortdate: 2023/10/05 00:00
+source: Front Aging Neurosci
+title: 'Neuroimaging and serum biomarkers of neurodegeneration and neuroplasticity
+  in Parkinson’s disease patients treated by intermittent theta-burst stimulation
+  over the bilateral primary motor area: a randomized, double-blind, sham-controlled,
+  crossover trial study'
+uid: '10585115'
+volume: '15'
