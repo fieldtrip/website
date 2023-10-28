@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '37876817'
+- idtype: doi
+  value: 10.1016/j.isci.2023.108154
+- idtype: pmcid
+  value: PMC10590735
+authors:
+- authtype: Author
+  name: Dehnavi F
+- authtype: Author
+  name: Koo-Poeggel PC
+- authtype: Author
+  name: Ghorbani M
+- authtype: Author
+  name: Marshall L
+epubdate: 2023 Oct 6
+fulljournalname: iScience
+issue: '11'
+pages: '108154'
+pmclivedate: 2023/10/24
+printpubdate: ''
+pubdate: 2023 Oct 6
+sortdate: 2023/10/06 00:00
+source: iScience
+title: Memory ability and retention performance relate differentially to sleep depth
+  and spindle type
+uid: '10590735'
+volume: '26'
