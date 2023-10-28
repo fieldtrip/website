@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '37872313'
+- idtype: doi
+  value: 10.1038/s42003-023-05448-z
+- idtype: pmcid
+  value: PMC10593846
+authors:
+- authtype: Author
+  name: Rossi C
+- authtype: Author
+  name: Vidaurre D
+- authtype: Author
+  name: Costers L
+- authtype: Author
+  name: Akbarian F
+- authtype: Author
+  name: Woolrich M
+- authtype: Author
+  name: Nagels G
+- authtype: Author
+  name: Van Schependom J
+epubdate: 2023 Oct 23
+fulljournalname: Communications Biology
+issue: ''
+pages: '1079'
+pmclivedate: 2023/10/25
+printpubdate: ''
+pubdate: 2023 Oct 23
+sortdate: 2023/10/23 00:00
+source: Commun Biol
+title: A data-driven network decomposition of the temporal, spatial, and spectral
+  dynamics underpinning visual-verbal working memory processes
+uid: '10593846'
+volume: '6'

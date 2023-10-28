@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '37857509'
+- idtype: doi
+  value: 10.1523/ENEURO.0328-23.2023
+- idtype: pmcid
+  value: PMC10591275
+authors:
+- authtype: Author
+  name: Wang Z
+- authtype: Author
+  name: Magnotti JF
+- authtype: Author
+  name: Zhang X
+- authtype: Author
+  name: Beauchamp MS
+epubdate: 2023 Oct 18
+fulljournalname: eNeuro
+issue: '10'
+pages: ENEURO.0328-23.2023
+pmclivedate: 2023/10/24
+printpubdate: ''
+pubdate: 2023 Oct 18
+sortdate: 2023/10/18 00:00
+source: eNeuro
+title: 'YAEL: Your Advanced Electrode Localizer'
+uid: '10591275'
+volume: '10'

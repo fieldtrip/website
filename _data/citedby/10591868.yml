@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '37708021'
+- idtype: doi
+  value: 10.1016/j.celrep.2023.113133
+- idtype: pmcid
+  value: PMC10591868
+- idtype: MID
+  value: NIHMS1933920
+authors:
+- authtype: Author
+  name: Bastos G
+- authtype: Author
+  name: Holmes JT
+- authtype: Author
+  name: Ross JM
+- authtype: Author
+  name: Rader AM
+- authtype: Author
+  name: Gallimore CG
+- authtype: Author
+  name: Wargo JA
+- authtype: Author
+  name: Peterka DS
+- authtype: Author
+  name: Hamm JP
+epubdate: 2023 Sep 19
+fulljournalname: Cell reports
+issue: '9'
+pages: '113133'
+pmclivedate: 2023/10/23
+printpubdate: 2023 Sep 26
+pubdate: 2023 Sep 19
+sortdate: 2023/09/19 00:00
+source: Cell Rep
+title: Top-down input modulates visual context processing through an interneuron-specific
+  circuit
+uid: '10591868'
+volume: '42'

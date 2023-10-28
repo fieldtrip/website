@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '37876480'
+- idtype: doi
+  value: 10.1016/j.heliyon.2023.e20725
+- idtype: pmcid
+  value: PMC10590850
+authors:
+- authtype: Author
+  name: Michalareas G
+- authtype: Author
+  name: Rudwan IM
+- authtype: Author
+  name: Lehr C
+- authtype: Author
+  name: Gessini P
+- authtype: Author
+  name: Tavano A
+- authtype: Author
+  name: Grabenhorst M
+epubdate: 2023 Oct 13
+fulljournalname: Heliyon
+issue: '10'
+pages: e20725
+pmclivedate: 2023/10/24
+printpubdate: ''
+pubdate: 2023 Oct 13
+sortdate: 2023/10/13 00:00
+source: Heliyon
+title: A scalable and robust system for audience EEG recordings
+uid: '10590850'
+volume: '9'
