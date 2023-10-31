@@ -1123,7 +1123,7 @@ A detailed description of each function is available in the [reference documenta
 **cfg.figurename** - [ft_geometryplot](/reference/ft_geometryplot), [ft_sourceplot](/reference/ft_sourceplot)  
 
 
-**cfg.filename** - [ft_analysispipeline](/reference/ft_analysispipeline), [ft_realtime_modeegproxy](/reference/realtime/example/ft_realtime_modeegproxy), [ft_realtime_sensysproxy](/reference/realtime/example/ft_realtime_sensysproxy), [ft_realtime_unicornproxy](/reference/realtime/example/ft_realtime_unicornproxy), [ft_sourcewrite](/reference/ft_sourcewrite), [ft_volumewrite](/reference/ft_volumewrite)  
+**cfg.filename** - [ft_analysispipeline](/reference/ft_analysispipeline), [ft_realtime_modeegproxy](/reference/realtime/example/ft_realtime_modeegproxy), [ft_realtime_unicornproxy](/reference/realtime/example/ft_realtime_unicornproxy), [ft_sourcewrite](/reference/ft_sourcewrite), [ft_volumewrite](/reference/ft_volumewrite)  
 
 
 **cfg.filetype** - [ft_analysispipeline](/reference/ft_analysispipeline), [ft_sourcewrite](/reference/ft_sourcewrite), [ft_volumewrite](/reference/ft_volumewrite)  
@@ -1198,7 +1198,7 @@ A detailed description of each function is available in the [reference documenta
 **cfg.freqwin** - [ft_statistics_mvpa](/reference/ft_statistics_mvpa)  
 
 
-**cfg.fsample** - [ft_connectivitysimulation](/reference/ft_connectivitysimulation), [ft_dipolesimulation](/reference/ft_dipolesimulation), [ft_freqsimulation](/reference/ft_freqsimulation), [ft_nonlinearassociation](/reference/contrib/misc/ft_nonlinearassociation), [ft_realtime_pooraudioproxy](/reference/realtime/example/ft_realtime_pooraudioproxy), [ft_realtime_sensysproxy](/reference/realtime/example/ft_realtime_sensysproxy), [ft_realtime_signalproxy](/reference/realtime/example/ft_realtime_signalproxy), [ft_spike_waveform](/reference/contrib/spike/ft_spike_waveform), [ft_spikedensity](/reference/contrib/spike/ft_spikedensity), [ft_spikedownsample](/reference/contrib/spike/ft_spikedownsample), [ft_steadystatesimulation](/reference/ft_steadystatesimulation), [ft_timelocksimulation](/reference/ft_timelocksimulation)  
+**cfg.fsample** - [ft_connectivitysimulation](/reference/ft_connectivitysimulation), [ft_dipolesimulation](/reference/ft_dipolesimulation), [ft_freqsimulation](/reference/ft_freqsimulation), [ft_nonlinearassociation](/reference/contrib/misc/ft_nonlinearassociation), [ft_realtime_fieldnulling](/reference/realtime/online_meg/ft_realtime_fieldnulling), [ft_realtime_pooraudioproxy](/reference/realtime/example/ft_realtime_pooraudioproxy), [ft_realtime_sensysproxy](/reference/realtime/example/ft_realtime_sensysproxy), [ft_realtime_signalproxy](/reference/realtime/example/ft_realtime_signalproxy), [ft_spike_waveform](/reference/contrib/spike/ft_spike_waveform), [ft_spikedensity](/reference/contrib/spike/ft_spikedensity), [ft_spikedownsample](/reference/contrib/spike/ft_spikedownsample), [ft_steadystatesimulation](/reference/ft_steadystatesimulation), [ft_timelocksimulation](/reference/ft_timelocksimulation)  
 
 
 **cfg.fshome** - [ft_electroderealign](/reference/ft_electroderealign), [ft_prepare_mesh](/reference/ft_prepare_mesh)  
@@ -2593,6 +2593,9 @@ A detailed description of each function is available in the [reference documenta
 
 
 **cfg.serial** - [ft_omri_quality](/reference/realtime/online_mri/ft_omri_quality)  
+
+
+**cfg.serialport** - [ft_realtime_fieldnulling](/reference/realtime/online_meg/ft_realtime_fieldnulling), [ft_realtime_sensysproxy](/reference/realtime/example/ft_realtime_sensysproxy)  
 
 
 **cfg.shading** - [ft_databrowser](/reference/ft_databrowser), [ft_topoplotER](/reference/ft_topoplotER), [ft_topoplotIC](/reference/ft_topoplotIC), [ft_topoplotTFR](/reference/ft_topoplotTFR)  
