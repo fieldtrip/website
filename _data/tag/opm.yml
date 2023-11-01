@@ -118,6 +118,12 @@
 - name:  Why was FieldTrip maintained in SVN and not in Git?
   link:  /faq/why_is_fieldtrip_maintained_in_svn_and_not_in_git
 
+- name:  Getting started with Cerca OPM data
+  link:  /getting_started/cerca
+
+- name:  Getting started with FieldLine OPM data
+  link:  /getting_started/fieldline
+
 - name:  Getting started with OPM data recorded at the FIL
   link:  /getting_started/opm_fil
 

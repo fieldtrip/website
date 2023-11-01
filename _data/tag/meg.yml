@@ -85,6 +85,9 @@
 - name:  Getting started with BTi/4D data
   link:  /getting_started/bti
 
+- name:  Getting started with Cerca OPM data
+  link:  /getting_started/cerca
+
 - name:  Getting started with CTF data
   link:  /getting_started/ctf
 
