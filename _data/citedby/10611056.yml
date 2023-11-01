@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '37896747'
+- idtype: doi
+  value: 10.3390/s23208654
+- idtype: pmcid
+  value: PMC10611056
+authors:
+- authtype: Author
+  name: Wang Z
+- authtype: Author
+  name: Juhasz Z
+epubdate: 2023 Oct 23
+fulljournalname: Sensors (Basel, Switzerland)
+issue: '20'
+pages: '8654'
+pmclivedate: 2023/10/28
+printpubdate: ''
+pubdate: 2023 Oct 23
+sortdate: 2023/10/23 00:00
+source: Sensors (Basel)
+title: GPU Implementation of the Improved CEEMDAN Algorithm for Fast and Efficient
+  EEG Time–Frequency Analysis
+uid: '10611056'
+volume: '23'

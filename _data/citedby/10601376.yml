@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '37704373'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0816-23.2023
+- idtype: pmcid
+  value: PMC10601376
+authors:
+- authtype: Author
+  name: Azizi L
+- authtype: Author
+  name: Polti I
+- authtype: Author
+  name: van Wassenhove V
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '43'
+pages: 7186-7197
+pmclivedate: 2023/10/27
+printpubdate: 2023 Oct 25
+pubdate: 2023 Oct 25
+sortdate: 2023/10/25 00:00
+source: J Neurosci
+title: Spontaneous α Brain Dynamics Track the Episodic “When”
+uid: '10601376'
+volume: '43'
