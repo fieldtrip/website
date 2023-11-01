@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '37883173'
+- idtype: doi
+  value: 10.7554/eLife.82823
+- idtype: pmcid
+  value: PMC10602589
+authors:
+- authtype: Author
+  name: Ruesseler M
+- authtype: Author
+  name: Weber LA
+- authtype: Author
+  name: Marshall TR
+- authtype: Author
+  name: O'Reilly J
+- authtype: Author
+  name: Hunt LT
+epubdate: 2023 Oct 26
+fulljournalname: eLife
+issue: ''
+pages: e82823
+pmclivedate: 2023/10/27
+printpubdate: ''
+pubdate: 2023 Oct 26
+sortdate: 2023/10/26 00:00
+source: eLife
+title: Quantifying decision-making in dynamic, continuously evolving environments
+uid: '10602589'
+volume: '12'

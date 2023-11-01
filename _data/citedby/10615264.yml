@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1371/journal.pone.0293546
+- idtype: pmcid
+  value: PMC10615264
+authors:
+- authtype: Author
+  name: Pillen S
+- authtype: Author
+  name: Shulga A
+- authtype: Author
+  name: Zrenner C
+- authtype: Author
+  name: Ziemann U
+- authtype: Author
+  name: Bergmann TO
+epubdate: 2023 Oct 30
+fulljournalname: PLOS ONE
+issue: '10'
+pages: e0293546
+pmclivedate: 2023/10/31
+printpubdate: ''
+pubdate: 2023 Oct 30
+sortdate: 2023/10/30 00:00
+source: PLoS One
+title: Repetitive sensorimotor mu-alpha phase-targeted afferent stimulation produces
+  no phase-dependent plasticity related changes in somatosensory evoked potentials
+  or sensory thresholds
+uid: '10615264'
+volume: '18'
