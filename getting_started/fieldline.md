@@ -5,10 +5,10 @@ tags: [dataformat, meg, opm, fieldline]
 
 # Getting started with FieldLine OPM data
 
-[FieldLine](https://fieldlineinc.com/) is a company located in Boulder, Colorado that develops OPM sensors and complete OPM-based MEG systems. The data from their current systems is stored in the \*.fif format, which is developed and still used by [Neuromag/Elekta/Megin](/getting_started/neuromag). The \*.fif file format is already supported by FieldTrip, which means that no special functions are needed for reading the data.
+[FieldLine](https://fieldlineinc.com/) is a company located in Boulder, Colorado that develops OPM sensors and complete OPM-based MEG systems. The data from their current systems is stored in the \*.fif format, which is developed and used by [Neuromag/Elekta/Megin](/getting_started/neuromag). The \*.fif file format is already supported by FieldTrip, which means that no special functions are needed for reading the data.
 
     cfg = [];
-    cfg.dataset = 'RestingStateEyesClosed_raw.fif';
+    cfg.dataset = 'OPM_RestingStateEyesClosed_raw.fif';
     data = ft_preprocessing(cfg);
     
     cfg = [];
@@ -23,7 +23,7 @@ There are a number of differences though, which are relevant for processing Fiel
 
 Depending on the generation of the FieldLine OPM system that you are working with, the triggers may be represented as an analog channel (with voltages) or as a digital channel. In this case the experiment consisted of a median nerve stimulation on the right wrist. Each stimulus is coded with an analog trigger represented in the `Input-1` channel.
 
-    filename = 'MedianNerve_wCoils_11mA_3Hz_StimBreakStim2min_Pos1_raw.fif';
+    filename = 'OPM_MedianNerve_wCoils_11mA_3Hz_StimBreakStim2min_Pos1_raw.fif';
     hdr = ft_read_header(filename);
 
     disp(hdr.label)
@@ -102,21 +102,20 @@ When we look at this recording, we see channel names like `00:01-BZ_OL` and `00:
 
 The data structure returned by **[ft_preprocessing](/reference/ft_preprocessing)** or the header from **[ft_read_header](/reference/fileio/ft_read_header)** include the `grad` field, which describes the sensor positions (see also [this FAQ](/faq/how_are_electrodes_magnetometers_or_gradiometers_described)). However, in this case the recording software did not know in which slots of the 3D-printed helmet the OPMs were placed. The `data.grad.coilpos` and `data.grad.coilori` fields that are obtained from the fif file also don't make sense.
 
-In this specific recording the OPM sensors were placed in an early version of the FieldLine smart helmet that the company refers to as the "Alpha-1" version. The FieldTrip [templates](/template/gradiometer) includes a detailed description of this sensor, and there is a [layout](/template/layout/#fieldline) for 2D topographic plotting.
+In this specific recording the OPM sensors were placed in an early version of the FieldLine smart helmet that the company refers to as the "Alpha1" version. The specific helmet has 107 slots for OPM sensors, but of course not all slots need to be filled. The FieldTrip [templates](/template/gradiometer) includes a detailed description of this helmet, and there is a [layout](/template/layout/#fieldline) for 2D topographic plotting.
 
-The researchers acquiring the data maintained a table in an Excel file that maps the channel numbers in the electronics chassis, to the OPM sensors, and to the slots in the 3D-printed helmet.
-
+During acquisition of the data, an Excel table was maintained to map the channel numbers in the electronics chassis, to the OPM sensors, and to the corresponding slots in the 3D-printed helmet.
 
 | channel | OPM sensor | helmet position |
 |---------|------------|-----------------|
-| 1       | 338        | 'FL30'          |
-| 2       | 119        | 'FL30'          |
-| 3       | 323        | 'FL30'          |
-| 4       | 111        | 'FL30'          |
-| 5       | 62         | 'FL30'          |
-| 6       | 336        | 'FL30'          |
-| 7       | 22         | 'FL30'          |
-| 8       | 246        | 'FL30'          |
+| 1       | 338        | FL30            |
+| 2       | 119        | FL21            |
+| 3       | 323        | FL20            |
+| 4       | 111        | FL23            |
+| 5       | 62         | FL36            |
+| 6       | 336        | FL35            |
+| 7       | 22         | FL34            |
+| 8       | 246        | FL84            |
 
 
 {% include markup/info %}
@@ -164,6 +163,6 @@ For topographic plotting the channel names (in `data.label`) should match the lo
 
 ## Merging multiple recordings
 
-The researchers acquiring the data performed three subsequent recordings on the same participant in which the 8 OPM sensors were moved to different positions in the Apha1 helmet. Each recording is stored in a different fif file. Using the example above, we can construct three raw data structures with the trials. After removing the noisy trials in each of the three recordings, we can average each of the recordings.  
+In this experiment three subsequent recordings were performed on the same participant in which the 8 OPM sensors were moved to different positions in the Apha1 helmet. Each recording is stored in a different fif file. Using the example above, we can construct three raw data structures with the trials. After removing the noisy trials in each of the three recordings, we can average each of the recordings.  
 
 Since channels in a FieldTrip data structure are required have a unique channel name, we cannot immediately use **[ft_appenddata](/reference/ft_appenddata)** or **[ft_appendtimelock](/reference/ft_appendtimelock)** to concatenate the data along the channel direction; we first have to rename the channels to make them unique. Using three separate montages to map (rename) the channels in each recording onto the corresponding names of the slots in the 3D printed helmet, we get raw data (or timelock) structures with unique channel names that can be appended.
