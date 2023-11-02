@@ -386,7 +386,7 @@ In the previous steps, you averaged over all standard trials and baseline correc
     cfg.baseline  = [-5 0];
     timelockDEV   = ft_timelockbaseline(cfg, timelockDEV);
 
-To visualize the data in spatial terms (i.e. to answer the question "where on the head do we find functional brain activity in response to my different conditions?"), FieldTrip requires information about the spatial layout about the location of the channel on the head. For this tutorial a layout file is provided, which is called `nirs_48ch_layout.mat`. In case you would like to get an idea of how to create your own layout file, the following page might be informative: [/tutorial/layout](/tutorial/layout).
+To visualize the data in spatial terms (i.e. to answer the question "where on the head do we find functional brain activity in response to my different conditions?"), FieldTrip requires information about the spatial layout about the location of the channel on the head. For this tutorial a layout file is provided, which is called `nirs_48ch_layout.mat`. The [layout tutorial](/tutorial/layout) explains how to create your own channel layout for plotting, and we have a NIRS [layout example](/example/nirs_layout) that shows it in detail.
 
 The channel layout can be read the `nirs_48ch_layout.mat` file using the standard MATLAB function `load`. The file contains a structure called `lay`. The channel layout has been designed to show the O2Hb and HHb channels on top of each other.
 
