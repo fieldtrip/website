@@ -31,7 +31,7 @@ The geometrically most accurate layout representation can be obtained from a 3D 
 
 ### Template layout from disk
 
-A [template layout](/template/layout) from disk is easy to use. Furthermore, it has the advantage that care has been taken to add an outline of geometric features (e.g., the ears and nose, or the outline of the MEG helmet) and that a well-fitting interpolation mask (i.e. the region in which the topoplot functions should interpolate) is present. For example the [CTF helmet layouts](/template/layout/#with-a-more-realistic-display-of-temporal-sensors-1) looks much more realistic than what you would get by projecting the 3D sensors onto a 2D place and drawing a circle with nose and ears around it.
+A [template layout](/template/layout) from disk is easy to use. Furthermore, it has the advantage that care has been taken to add an outline of geometric features (e.g., the ears and nose, or the outline of the MEG helmet) and that a well-fitting interpolation mask (i.e. the region in which the topoplot functions should interpolate) is present. For example the [CTF helmet layouts](/template/layout/#with-a-more-realistic-display-along-the-rim) looks much more realistic than what you would get by projecting the 3D sensors onto a 2D place and drawing a circle with nose and ears around it.
 
 ### From a picture
 

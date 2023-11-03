@@ -102,7 +102,7 @@ When we look at this recording, we see channel names like `00:01-BZ_OL` and `00:
 
 The data structure returned by **[ft_preprocessing](/reference/ft_preprocessing)** or the header from **[ft_read_header](/reference/fileio/ft_read_header)** include the `grad` field, which describes the sensor positions (see also [this FAQ](/faq/how_are_electrodes_magnetometers_or_gradiometers_described)). However, in this case the recording software did not know in which slots of the 3D-printed helmet the OPMs were placed. The `data.grad.coilpos` and `data.grad.coilori` fields that are obtained from the fif file also don't make sense.
 
-In this specific recording the OPM sensors were placed in an early version of the FieldLine smart helmet that the company refers to as the "Alpha1" version. The specific helmet has 107 slots for OPM sensors, but of course not all slots need to be filled. The FieldTrip [templates](/template/gradiometer) includes a detailed description of this helmet, and there is a [layout](/template/layout/#fieldline) for 2D topographic plotting.
+In this specific recording the OPM sensors were placed in an early version of the FieldLine smart helmet that the company refers to as the "Alpha1" version. The specific helmet has 107 slots for OPM sensors, but of course not all slots need to be filled. The FieldTrip [templates](/template/gradiometer) includes a detailed description of this helmet, and there is a [layout](/template/layout/#fieldline-opm-system) for 2D topographic plotting.
 
 During acquisition of the data, an Excel table was maintained to map the channel numbers in the electronics chassis, to the OPM sensors, and to the corresponding slots in the 3D-printed helmet.
 

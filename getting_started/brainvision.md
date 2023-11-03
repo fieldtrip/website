@@ -7,9 +7,9 @@ tags: [dataformat, brainvision, easycap, eeg, layout]
 
 ## Introduction
 
-[Brain Products GmbH](http://www.brainproducts.com) provides technical and software solutions for neurophysiological and psychophysiological research and clinical applications. Their BrainAmp ExG amplifier allows to record signals with a sampling rate up to 5000 Hz and a broad hardware bandwidth ranging from DC to 1000 Hz.
+[BrainProducts GmbH](http://www.brainproducts.com) provides technical and software solutions for neurophysiological and psychophysiological research and clinical applications. Their BrainAmp ExG amplifier allows to record signals with a sampling rate up to 5000 Hz and a broad hardware bandwidth ranging from DC to 1000 Hz.
 
-Brain Products also provides EEG caps with the electrodes distributed over the head according to the 1020 standard or to an equidistant scheme. Most of the caps provided by BrainProducts are actually fabricated by [EasyCap](http://www.easycap.de), on whose website you can find more information. Although it is possible to use a BrainAmp amplifier with another type of cap, or to use an Easycap with an different amplifier, the most common case is to use them together and that is why we describe them jointly on this page.
+BrainProducts also provides EEG caps with the electrodes distributed over the head according to the 1020 standard or to an equidistant scheme. Most of the caps provided by BrainProducts are actually fabricated by [EasyCap](http://www.easycap.de), on whose website you can find more information. Although it is possible to use a BrainAmp amplifier with another type of cap, or to use an Easycap with an different amplifier, the most common case is to use them together and that is why we describe them jointly on this page.
 
 ##  BrainVision data format
 
@@ -26,7 +26,7 @@ Both text files are based on the Microsoft Windows INI format consisting of:
 - key-value pairs marked as `key=value`
 
 {% include markup/info %}
-The BrainVision Recorded and Analyzer software packages use a well-defined file format that is supported by many software packages (e.g., FieldTrip, EEGLAB, SPM, MNE-Python) and that is used in [BIDS for EEG](https://psyarxiv.com/63a4y). The details of the BrainVision data format are available from the [Brain Products website](https://www.brainproducts.com/productdetails.php?id=21&tab=5).
+The BrainVision Recorded and Analyzer software packages use a well-defined file format that is supported by many software packages (e.g., FieldTrip, EEGLAB, SPM, MNE-Python) and that is used in [BIDS for EEG](https://psyarxiv.com/63a4y). The details of the BrainVision data format are available from the [BrainProducts website](https://www.brainproducts.com/productdetails.php?id=21&tab=5).
 {% include markup/end %}
 
 For example, see this excerpt from a BrainVision header file (.vhdr):
@@ -82,11 +82,11 @@ When comparing your preprocessed data from FieldTrip to preprocessed data from B
 
 ## Plotting
 
-Using FieldTrip, data recorded with Brain Vision hard- and software is readily plotted. It is important that the channel labels match that of the manufacturer specifications.
+Using FieldTrip, data recorded with BrainProducts hard- and software is readily plotted. It is important that the channel labels match that of the manufacturer specifications.
 
-FieldTrip provides template electrode layouts for plotting data recorded with Easycap EEG caps. These layouts are stored in .mat files and are based on the manufacturer's original drawings, which can also be found bitmaps on the [template layout](/template/layout/#easycap) page.
+FieldTrip provides template electrode layouts for plotting data recorded with BrainProducts and EasyCap electrode caps. These layouts are stored in .mat files and are based on the manufacturer's original drawings, which can also be found bitmaps on the [template layout](/template/layout/#easycap) page.
 
-Specify the layout that matches your set-up/easycap when plotting, e.g.
+Specify the layout that matches your set-up when plotting, for example:
 
     cfg.layout = 'easycapM1.lay';
 
