@@ -133,6 +133,9 @@
 - name:  References to implemented methods
   link:  /references_to_implemented_methods
 
+- name:  Template 2-D layouts for plotting
+  link:  /template/layout
+
 - name:  Introduction on dealing with artifacts
   link:  /tutorial/artifacts
 
