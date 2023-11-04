@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '37879243'
+- idtype: doi
+  value: 10.1016/j.dcn.2023.101313
+- idtype: pmcid
+  value: PMC10618693
+authors:
+- authtype: Author
+  name: Nguyen T
+- authtype: Author
+  name: Reisner S
+- authtype: Author
+  name: Lueger A
+- authtype: Author
+  name: Wass SV
+- authtype: Author
+  name: Hoehl S
+- authtype: Author
+  name: Markova G
+epubdate: 2023 Oct 24
+fulljournalname: Developmental Cognitive Neuroscience
+issue: ''
+pages: '101313'
+pmclivedate: 2023/11/02
+printpubdate: ''
+pubdate: 2023 Oct 24
+sortdate: 2023/10/24 00:00
+source: Dev Cogn Neurosci
+title: 'Sing to me, baby: Infants show neural tracking and rhythmic movements to live
+  and dynamic maternal singing'
+uid: '10618693'
+volume: '64'

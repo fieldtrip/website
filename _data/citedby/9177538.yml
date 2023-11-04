@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '35676293'
+- idtype: doi
+  value: 10.1038/s41597-022-01382-7
+- idtype: pmcid
+  value: PMC9177538
+authors:
+- authtype: Author
+  name: Armeni K
+- authtype: Author
+  name: Güçlü U
+- authtype: Author
+  name: van Gerven M
+- authtype: Author
+  name: Schoffelen JM
+epubdate: 2022 Jun 8
+fulljournalname: Scientific Data
+issue: ''
+pages: '278'
+pmclivedate: 2022/06/10
+printpubdate: ''
+pubdate: 2022 Jun 8
+sortdate: 2022/06/08 00:00
+source: Sci Data
+title: A 10-hour within-participant magnetoencephalography narrative dataset to test
+  models of language comprehension
+uid: '9177538'
+volume: '9'

@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '37728249'
+- idtype: doi
+  value: 10.1002/hbm.26486
+- idtype: pmcid
+  value: PMC10619371
+authors:
+- authtype: Author
+  name: Pscherer C
+- authtype: Author
+  name: Wendiggensen P
+- authtype: Author
+  name: Mückschel M
+- authtype: Author
+  name: Bluschke A
+- authtype: Author
+  name: Beste C
+epubdate: 2023 Sep 20
+fulljournalname: Human Brain Mapping
+issue: '17'
+pages: 5936-5952
+pmclivedate: 2023/11/02
+printpubdate: ''
+pubdate: 2023 Sep 20
+sortdate: 2023/09/20 00:00
+source: Hum Brain Mapp
+title: Alpha and theta band activity share information relevant to proactive and reactive
+  control during conflict‐modulated response inhibition
+uid: '10619371'
+volume: '44'

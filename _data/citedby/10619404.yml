@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '37672569'
+- idtype: doi
+  value: 10.1002/hbm.26476
+- idtype: pmcid
+  value: PMC10619404
+authors:
+- authtype: Author
+  name: Akbarian F
+- authtype: Author
+  name: Rossi C
+- authtype: Author
+  name: Costers L
+- authtype: Author
+  name: D'hooghe MB
+- authtype: Author
+  name: D'haeseleer M
+- authtype: Author
+  name: Nagels G
+- authtype: Author
+  name: Van Schependom J
+epubdate: 2023 Sep 6
+fulljournalname: Human Brain Mapping
+issue: '17'
+pages: 5784-5794
+pmclivedate: 2023/11/02
+printpubdate: ''
+pubdate: 2023 Sep 6
+sortdate: 2023/09/06 00:00
+source: Hum Brain Mapp
+title: The spectral slope as a marker of excitation/inhibition ratio and cognitive
+  functioning in multiple sclerosis
+uid: '10619404'
+volume: '44'

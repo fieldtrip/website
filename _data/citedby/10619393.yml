@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '37792296'
+- idtype: doi
+  value: 10.1002/hbm.26506
+- idtype: pmcid
+  value: PMC10619393
+authors:
+- authtype: Author
+  name: Ody E
+- authtype: Author
+  name: Kircher T
+- authtype: Author
+  name: Straube B
+- authtype: Author
+  name: He Y
+epubdate: 2023 Oct 4
+fulljournalname: Human Brain Mapping
+issue: '17'
+pages: 6198-6213
+pmclivedate: 2023/11/02
+printpubdate: ''
+pubdate: 2023 Oct 4
+sortdate: 2023/10/04 00:00
+source: Hum Brain Mapp
+title: Pre‐movement event‐related potentials and multivariate pattern of EEG encode
+  action outcome prediction
+uid: '10619393'
+volume: '44'
