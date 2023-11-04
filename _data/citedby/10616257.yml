@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '37916179'
+- idtype: doi
+  value: 10.3389/fnins.2023.1247290
+- idtype: pmcid
+  value: PMC10616257
+authors:
+- authtype: Author
+  name: Truong NC
+- authtype: Author
+  name: Wang X
+- authtype: Author
+  name: Liu H
+epubdate: 2023 Oct 17
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '1247290'
+pmclivedate: 2023/11/01
+printpubdate: ''
+pubdate: 2023 Oct 17
+sortdate: 2023/10/17 00:00
+source: Front Neurosci
+title: Temporal and spectral analyses of EEG microstate reveals neural effects of
+  transcranial photobiomodulation on the resting brain
+uid: '10616257'
+volume: '17'

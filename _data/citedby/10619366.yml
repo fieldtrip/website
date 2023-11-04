@@ -1,0 +1,49 @@
+articleids:
+- idtype: pmid
+  value: '37688547'
+- idtype: doi
+  value: 10.1002/hbm.26478
+- idtype: pmcid
+  value: PMC10619366
+authors:
+- authtype: Author
+  name: Alho J
+- authtype: Author
+  name: Samuelsson JG
+- authtype: Author
+  name: Khan S
+- authtype: Author
+  name: Mamashli F
+- authtype: Author
+  name: Bharadwaj H
+- authtype: Author
+  name: Losh A
+- authtype: Author
+  name: McGuiggan NM
+- authtype: Author
+  name: Graham S
+- authtype: Author
+  name: Nayal Z
+- authtype: Author
+  name: Perrachione TK
+- authtype: Author
+  name: Joseph RM
+- authtype: Author
+  name: Stoodley CJ
+- authtype: Author
+  name: Hämäläinen MS
+- authtype: Author
+  name: Kenet T
+epubdate: 2023 Sep 9
+fulljournalname: Human Brain Mapping
+issue: '17'
+pages: 5810-5827
+pmclivedate: 2023/11/02
+printpubdate: ''
+pubdate: 2023 Sep 9
+sortdate: 2023/09/09 00:00
+source: Hum Brain Mapp
+title: Both stronger and weaker cerebro‐cerebellar functional connectivity patterns
+  during processing of spoken sentences in autism spectrum disorder
+uid: '10619366'
+volume: '44'

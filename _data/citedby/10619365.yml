@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '37792277'
+- idtype: doi
+  value: 10.1002/hbm.26505
+- idtype: pmcid
+  value: PMC10619365
+authors:
+- authtype: Author
+  name: Junker FB
+- authtype: Author
+  name: Schmidt‐Wilcke T
+- authtype: Author
+  name: Schnitzler A
+- authtype: Author
+  name: Lange J
+epubdate: 2023 Oct 4
+fulljournalname: Human Brain Mapping
+issue: '17'
+pages: 6185-6197
+pmclivedate: 2023/11/02
+printpubdate: ''
+pubdate: 2023 Oct 4
+sortdate: 2023/10/04 00:00
+source: Hum Brain Mapp
+title: 'Temporal dynamics of oscillatory activity during nonlexical language decoding:
+  Evidence from Morse code and magnetoencephalography'
+uid: '10619365'
+volume: '44'

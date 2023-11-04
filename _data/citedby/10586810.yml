@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '37590093'
+- idtype: doi
+  value: 10.1162/jocn_a_02043
+- idtype: pmcid
+  value: PMC10586810
+authors:
+- authtype: Author
+  name: Karapetian A
+- authtype: Author
+  name: Boyanova A
+- authtype: Author
+  name: Pandaram M
+- authtype: Author
+  name: Obermayer K
+- authtype: Author
+  name: Kietzmann TC
+- authtype: Author
+  name: Cichy RM
+epubdate: 2023 Nov 1
+fulljournalname: Journal of Cognitive Neuroscience
+issue: '11'
+pages: 1879-1897
+pmclivedate: 2023/10/31
+printpubdate: ''
+pubdate: 2023 Nov 1
+sortdate: 2023/11/01 00:00
+source: J Cogn Neurosci
+title: Empirically Identifying and Computationally Modeling the Brain–Behavior Relationship
+  for Human Scene Categorization
+uid: '10586810'
+volume: '35'

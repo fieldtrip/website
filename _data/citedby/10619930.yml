@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1126/sciadv.adh2560
+- idtype: pmcid
+  value: PMC10619930
+authors:
+- authtype: Author
+  name: Menn KH
+- authtype: Author
+  name: Männel C
+- authtype: Author
+  name: Meyer L
+epubdate: 2023 Nov 1
+fulljournalname: Science Advances
+issue: '44'
+pages: eadh2560
+pmclivedate: 2023/11/02
+printpubdate: ''
+pubdate: 2023 Nov 1
+sortdate: 2023/11/01 00:00
+source: Sci Adv
+title: 'Phonological acquisition depends on the timing of speech sounds: Deconvolution
+  EEG modeling across the first five years'
+uid: '10619930'
+volume: '9'
