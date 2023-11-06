@@ -47,13 +47,15 @@ The electrodes are stored in an ASA `.elc` file which can be read with **[ft_rea
 
 The following template electrode sets are for the [EGI](http://www.egi.com) geodesic sensor net and were downloaded from the EGI [FTP server](ftp://www.egi.com/).
 
+- GSN-HydroCel-32.sfp
+- GSN-HydroCel-64.sfp
+- GSN-HydroCel-65.sfp
 - GSN-HydroCel-128.sfp
 - GSN-HydroCel-129.sfp
 - GSN-HydroCel-256.sfp
 - GSN-HydroCel-257.sfp
-- GSN-HydroCel-32.sfp
-- GSN-HydroCel-64_1.0.sfp
-- GSN-HydroCel-65_1.0.sfp
+
+Note that the even versions (32, 64, 128, 256) do not include the position of the reference electrode which is on the vertex (aka Cz), whereas the odd versions (65, 129, 257) do include the position of the reference electrode.
 
 ## Easycap electrode arrangements
 
