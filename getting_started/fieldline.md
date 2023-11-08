@@ -119,7 +119,7 @@ During acquisition of the data, an Excel table was maintained to map the channel
 
 
 {% include markup/info %}
-Note that the OPM sensor number is not used here, but it might be relevant if you want to apply fine calibration, or if you want to account for the different noise characteristics of the differentt OPMs.
+Note that the OPM sensor number is not used here, but it might be relevant if you want to apply fine calibration, or if you want to account for the different noise characteristics of the different OPMs.
 {% include markup/end %}
 
 For topographic plotting the channel names (in `data.label`) should match the locations on the head. To keep the script clean and reproducible, we will **not** go in the data structure and manually rename the channels to match, but we will use a [montage](/example/rereference/#montage), similar to how EEG and iEEG channels can be renamed, combined, added, and subtracted.
@@ -163,6 +163,6 @@ For topographic plotting the channel names (in `data.label`) should match the lo
 
 ## Merging multiple recordings
 
-In this experiment three subsequent recordings were performed on the same participant in which the 8 OPM sensors were moved to different positions in the Apha1 helmet. Each recording is stored in a different fif file. Using the example above, we can construct three raw data structures with the trials. After removing the noisy trials in each of the three recordings, we can average each of the recordings.  
+In this experiment three subsequent recordings were performed on the same participant in which the 8 OPM sensors were moved to different positions in the Alpha1 helmet. Each recording is stored in a different fif file. Using the example above, we can construct three raw data structures with the trials. After removing the noisy trials in each of the three recordings, we can average each of the recordings.  
 
 Since channels in a FieldTrip data structure are required have a unique channel name, we cannot immediately use **[ft_appenddata](/reference/ft_appenddata)** or **[ft_appendtimelock](/reference/ft_appendtimelock)** to concatenate the data along the channel direction; we first have to rename the channels to make them unique. Using three separate montages to map (rename) the channels in each recording onto the corresponding names of the slots in the 3D printed helmet, we get raw data (or timelock) structures with unique channel names that can be appended.
