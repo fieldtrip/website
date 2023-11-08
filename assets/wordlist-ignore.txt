@@ -860,6 +860,7 @@ ISR
 ITAB
 Ikkai
 Ilmoniemi
+ImageMagick
 ImageVis
 Infomax
 InfraRed
@@ -3087,6 +3088,7 @@ fidt
 fiducial
 fiducials
 fieldline
+fieldlinealpha
 fieldnames
 fieldtrip
 fieldtripSource
@@ -3305,6 +3307,7 @@ gridscale
 gridsearch
 gris
 groupanalysis
+gsn
 gtec
 gui
 gyral
@@ -3411,6 +3414,7 @@ html
 http
 https
 hus
+hydrocel
 hygroma
 hyperparameter
 hyperparameters
