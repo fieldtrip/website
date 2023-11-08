@@ -425,7 +425,7 @@ A detailed description of each function is available in the [reference documenta
 **cfg.baselinewindow** - [ft_combineplanar](/reference/ft_combineplanar), [ft_connectivitysimulation](/reference/ft_connectivitysimulation), [ft_connectivitysimulation](/reference/ft_connectivitysimulation), [ft_preprocessing](/reference/ft_preprocessing), [ft_resampledata](/reference/ft_resampledata)  
 
 
-**cfg.baudrate** - [ft_omri_quality](/reference/realtime/online_mri/ft_omri_quality)  
+**cfg.baudrate** - [ft_omri_quality](/reference/realtime/online_mri/ft_omri_quality), [ft_realtime_fieldnulling](/reference/realtime/online_meg/ft_realtime_fieldnulling)  
 
 
 **cfg.bcifun** - [ft_realtime_asynchronous](/reference/realtime/example/ft_realtime_asynchronous), [ft_realtime_packettimer](/reference/realtime/example/ft_realtime_packettimer), [ft_realtime_synchronous](/reference/realtime/example/ft_realtime_synchronous)  
@@ -569,6 +569,15 @@ A detailed description of each function is available in the [reference documenta
 ## C 
 
 **cfg.calibration** - [ft_realtime_jaga16proxy](/reference/realtime/example/ft_realtime_jaga16proxy), [ft_spikedownsample](/reference/contrib/spike/ft_spikedownsample)  
+
+
+**cfg.calibration.amplitude** - [ft_realtime_fieldnulling](/reference/realtime/online_meg/ft_realtime_fieldnulling)  
+
+
+**cfg.calibration.duration** - [ft_realtime_fieldnulling](/reference/realtime/online_meg/ft_realtime_fieldnulling)  
+
+
+**cfg.calibration.frequency** - [ft_realtime_fieldnulling](/reference/realtime/online_meg/ft_realtime_fieldnulling)  
 
 
 **cfg.camlight** - [ft_sourceplot](/reference/ft_sourceplot)  
@@ -963,6 +972,12 @@ A detailed description of each function is available in the [reference documenta
 
 
 **cfg.enableedit** - [ft_neighbourplot](/reference/ft_neighbourplot)  
+
+
+**cfg.enableinput** - [ft_realtime_fieldnulling](/reference/realtime/online_meg/ft_realtime_fieldnulling)  
+
+
+**cfg.enableoutput** - [ft_realtime_fieldnulling](/reference/realtime/online_meg/ft_realtime_fieldnulling)  
 
 
 **cfg.endsample** - [ft_redefinetrial](/reference/ft_redefinetrial)  
@@ -2163,6 +2178,9 @@ A detailed description of each function is available in the [reference documenta
 **cfg.point** - [ft_prepare_headmodel](/reference/ft_prepare_headmodel)  
 
 
+**cfg.polarity** - [ft_realtime_fieldnulling](/reference/realtime/online_meg/ft_realtime_fieldnulling)  
+
+
 **cfg.polhemus** - [ft_realtime_headlocalizer](/reference/realtime/online_meg/ft_realtime_headlocalizer)  
 
 
@@ -2336,6 +2354,9 @@ A detailed description of each function is available in the [reference documenta
 
 
 **cfg.randomseed** - [ft_componentanalysis](/reference/ft_componentanalysis), [ft_componentanalysis](/reference/ft_componentanalysis), [ft_connectivitysimulation](/reference/ft_connectivitysimulation), [ft_dipolesimulation](/reference/ft_dipolesimulation), [ft_freqsimulation](/reference/ft_freqsimulation), [ft_statistics_montecarlo](/reference/ft_statistics_montecarlo), [ft_steadystatesimulation](/reference/ft_steadystatesimulation), [ft_timelocksimulation](/reference/ft_timelocksimulation)  
+
+
+**cfg.range** - [ft_realtime_fieldnulling](/reference/realtime/online_meg/ft_realtime_fieldnulling)  
 
 
 **cfg.rawtrial** - [ft_sourceanalysis](/reference/ft_sourceanalysis)  
@@ -3181,6 +3202,9 @@ A detailed description of each function is available in the [reference documenta
 
 
 **cfg.vmpversion** - [ft_volumewrite](/reference/ft_volumewrite)  
+
+
+**cfg.voltage** - [ft_realtime_fieldnulling](/reference/realtime/online_meg/ft_realtime_fieldnulling)  
 
 
 **cfg.voxels** - [ft_realtime_fmriproxy](/reference/realtime/example/ft_realtime_fmriproxy)  
