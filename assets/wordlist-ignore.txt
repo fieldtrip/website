@@ -306,6 +306,7 @@ Cbb
 Cellfun
 CentOS
 Centre
+Cerca
 Cfin
 ChR
 ChannelSelection
@@ -1130,6 +1131,7 @@ MacPro
 Macbook
 MagPro
 Magnes
+Magnetics
 Magnetoencephalography
 Magnetometry
 Magnetostatics
@@ -1388,6 +1390,7 @@ OHBM
 OOP
 OPM
 OPMEG
+OPMs
 OSF
 OSX
 Obiviously
@@ -2192,13 +2195,12 @@ anywave
 apear
 apecific
 api
-appendata
 appenddata
 appendfreq
 appendlayout
 appendspike
+appendtimelock
 april
-aquisition
 ar
 arXiv
 arduino
@@ -2282,7 +2284,6 @@ baselinecorrection
 baselinetype
 baselining
 bashrc
-basline
 bayesFactor
 bb
 bbf
