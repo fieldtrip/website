@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '37751812'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2023.120389
+- idtype: pmcid
+  value: PMC10577447
+authors:
+- authtype: Author
+  name: Minarik T
+- authtype: Author
+  name: Berger B
+- authtype: Author
+  name: Jensen O
+epubdate: ''
+fulljournalname: Neuroimage
+issue: ''
+pages: '120389'
+pmclivedate: 2023/11/01
+printpubdate: 2023 Nov 1
+pubdate: 2023 Nov 1
+sortdate: 2023/11/01 00:00
+source: Neuroimage
+title: Optimal parameters for rapid (invisible) frequency tagging using MEG
+uid: '10577447'
+volume: '281'

@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '37541951'
+- idtype: doi
+  value: 10.1016/j.bja.2023.06.044
+- idtype: pmcid
+  value: PMC10624770
+authors:
+- authtype: Author
+  name: Wehrman JJ
+- authtype: Author
+  name: Casey C
+- authtype: Author
+  name: Tanabe S
+- authtype: Author
+  name: Mohanta S
+- authtype: Author
+  name: Filbey W
+- authtype: Author
+  name: Weber L
+- authtype: Author
+  name: Banks MI
+- authtype: Author
+  name: Pearce RA
+- authtype: Author
+  name: Saalmann Y
+- authtype: Author
+  name: Sanders RD
+epubdate: 2023 Aug 3
+fulljournalname: 'BJA: British Journal of Anaesthesia'
+issue: '4'
+pages: 705-714
+pmclivedate: ''
+printpubdate: 2023 Oct
+pubdate: 2023 Aug 3
+sortdate: 2023/08/03 00:00
+source: Br J Anaesth
+title: 'Subanaesthetic doses of ketamine reduce but do not eliminate predictive coding
+  responses: implications for mechanisms of sensory disconnection'
+uid: '10624770'
+volume: '131'
