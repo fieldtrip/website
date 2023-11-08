@@ -62,7 +62,7 @@ The following layout is for the 64-channel wet-sponge [R-Net](https://www.brainp
 
 ### BioSemi
 
-The following template layouts are for headcaps for active electrodes from [BioSemi](http://www.biosemi.com).
+The following template layouts are for [BioSemi](http://www.biosemi.com) caps for active electrodes.
 
 {% include image src="/assets/img/template/layout/biosemi16.lay.png" width="200" %}
 {% include image src="/assets/img/template/layout/biosemi32.lay.png" width="200" %}
@@ -328,7 +328,7 @@ You can use the following code to get a quick overview of the template layouts.
       close all
     end
 
-After creating all bitmaps you can use [Image Magick](https://www.imagemagick.org/script/command-line-options.php#trim) on the Linux or macOS command-line to trim the whitespace.
+After creating all bitmaps you can use [ImageMagick](https://www.imagemagick.org/script/command-line-options.php#trim) on the Linux or macOS command-line to trim the whitespace.
 
 ```bash
 for file in *.png ; do convert $file -trim $file ; done
