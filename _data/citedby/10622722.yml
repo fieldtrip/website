@@ -1,0 +1,24 @@
+articleids:
+- idtype: pmid
+  value: '37455508'
+- idtype: doi
+  value: 10.3988/jcn.2022.0415
+- idtype: pmcid
+  value: PMC10622722
+authors:
+- authtype: Author
+  name: Candia-Rivera D
+- authtype: Author
+  name: Machado C
+epubdate: 2023 Jun 1
+fulljournalname: Journal of Clinical Neurology (Seoul, Korea)
+issue: '6'
+pages: 581-588
+pmclivedate: 2023/11/04
+printpubdate: 2023 Nov
+pubdate: 2023 Jun 1
+sortdate: 2023/06/01 00:00
+source: J Clin Neurol
+title: Reduced Heartbeat-Evoked Responses in a Near-Death Case Report
+uid: '10622722'
+volume: '19'
