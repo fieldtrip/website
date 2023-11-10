@@ -56,9 +56,9 @@ Before starting with FieldTrip, it is important that you set up your [MATLAB pat
 
 We start with loading the Structure Sensor file into memory. This also reads the `.mtl` and `.jpg` file and performs the [texture mapping](https://en.wikipedia.org/wiki/Texture_mapping) of the color photo onto the triangulated surface mesh.
 
-    head_surface = ft_read_headshape('Model/Model.obj')
+    headshape = ft_read_headshape('Model/Model.obj')
 
-    disp(head_surface)
+    disp(headshape)
           pos: [177642x3 double]
           tri: [200000x3 double]
         color: [177642x3 double]
@@ -66,11 +66,11 @@ We start with loading the Structure Sensor file into memory. This also reads the
 
 We convert the units to mm
 
-    head_surface = ft_convert_units(head_surface, 'mm');
+    headshape = ft_convert_units(headshape, 'mm');
 
 and visualize the mesh surface
 
-    ft_plot_headsurface(head_surface)
+    ft_plot_headshape(headshape)
 
 {% include image src="/assets/img/tutorial/electrode/figure1.png" width="600" %}
 _Figure: Head shape as recorded with the Structure Sensor 3D-scanner_
@@ -79,7 +79,7 @@ The head is shown upside down and rotated by about 45 degrees. We can use **[ft_
 
     cfg = [];
     cfg.method = 'interactive';
-    head_surface = ft_meshrealign(cfg, head_surface);
+    headshape = ft_meshrealign(cfg, headshape);
 
 {% include image src="/assets/img/tutorial/electrode/figure2.png" width="600" %}
 _Figure: ft_meshrealign graphical user interface_
@@ -94,7 +94,7 @@ The first rotation to be applied to the mesh is -90 degrees around the x-axis. C
 
 To check, you can plot it again.
 
-    ft_plot_headshape(head_surface, 'axes', true) % plot it together with the axes
+    ft_plot_headshape(headshape, 'axes', true) % plot it together with the axes
 
 After this step, the nose points approximately along the x-axis and the vertex along the z-axis. Note however that the y-axis crosses at the posterior part of the ears, not passing through any specific anatomical landmarks, so although it is upright, it is not yet in a well-defined [coordinate system](/faq/coordsys).
 
@@ -103,7 +103,7 @@ In the next step we will transform the mesh into [CTF coordinates](/faq/coordsys
     cfg = [];
     cfg.method = 'headshape';
     cfg.channel = {'nas', 'lpa', 'rpa'};
-    fiducials = ft_electrodeplacement(cfg, head_surface);
+    fiducials = ft_electrodeplacement(cfg, headshape);
 
 {% include image src="/assets/img/tutorial/electrode/figure3.png" width="600" %}
 _Figure: ft_electrodeplacement graphical user interface_
@@ -122,11 +122,11 @@ Now that we have the position of the fiducials relative to the original coordina
     cfg.fiducial.nas  = fiducials.elecpos(1,:); %position of NAS
     cfg.fiducial.lpa  = fiducials.elecpos(2,:); %position of LPA
     cfg.fiducial.rpa  = fiducials.elecpos(3,:); %position of RPA
-    head_surface = ft_meshrealign(cfg, head_surface);
+    headshape = ft_meshrealign(cfg, headshape);
 
 Again we visualize the head surface, including the axes of the coordinate system. You can check that the positive and negative y-axes go through the preauricular points.
 
-    ft_plot_mesh(head_surface, 'axes', true)
+    ft_plot_mesh(headshape, 'axes', true)
 
 {% include image src="/assets/img/tutorial/electrode/figure4.png" width="600" %}
 _Figure: Realigned head surface in CTF coordinates_
@@ -139,7 +139,7 @@ The previous step ensured that our head surface is in the coordinate system in w
     cfg.method = 'headshape';
     % optionally you can specify the list of electrode names
     % cfg.channel = {'1'	'2'	'3'	'4'	'5'	'6'	'7'	'8'	'9'	'10'	'11'	'12'	'13'	'14'	'15'	'16'	'17'	'18'	'19'	'20'	'21'	'22'	'23'	'24'	'25'	'26'	'27'	'28'	'29'	'30'	'31'	'32'	'33'	'34'	'35'	'36'	'37'	'38'	'39'	'40'	'41'	'42'	'43'	'44'	'45'	'46'	'47'	'48'	'49'	'50'	'51'	'52'	'53'	'54'	'55'	'56'	'57'	'58'	'59'	'60', 'REF', 'GND', 'nas', 'lpa', 'rpa'};
-    elec = ft_electrodeplacement(cfg, head_surface);
+    elec = ft_electrodeplacement(cfg, headshape);
 
 {% include image src="/assets/img/tutorial/electrode/figure5.png" width="600" %}
 _Figure: ft_electrodeplacement graphical user interface_
@@ -166,7 +166,7 @@ To assign the correct electrode labels to the last 5 positions that we clicked f
 
 A final visualization shows the electrodes on the colored surface mesh of the subject.
 
-    ft_plot_headshape(head_surface)
+    ft_plot_headshape(headshape)
     ft_plot_sens(elec, 'label', 'on', 'fontsize', 15, 'elecshape', 'disc', 'elecsize', 10)
 
 {% include image src="/assets/img/tutorial/electrode/figure6.png" width="600" %}
