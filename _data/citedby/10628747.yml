@@ -1,0 +1,44 @@
+articleids:
+- idtype: pmid
+  value: '37942013'
+- idtype: doi
+  value: 10.1016/j.isci.2023.108235
+- idtype: pmcid
+  value: PMC10628747
+authors:
+- authtype: Author
+  name: Yang Y
+- authtype: Author
+  name: Wang H
+- authtype: Author
+  name: Liu Z
+- authtype: Author
+  name: Wang Y
+- authtype: Author
+  name: Han X
+- authtype: Author
+  name: Jia Y
+- authtype: Author
+  name: Pang J
+- authtype: Author
+  name: Xie F
+- authtype: Author
+  name: Yu D
+- authtype: Author
+  name: Zhang Y
+- authtype: Author
+  name: Xiang M
+- authtype: Author
+  name: Ning X
+epubdate: 2023 Oct 17
+fulljournalname: iScience
+issue: '11'
+pages: '108235'
+pmclivedate: 2023/11/08
+printpubdate: ''
+pubdate: 2023 Oct 17
+sortdate: 2023/10/17 00:00
+source: iScience
+title: Co-registration of OPM-MCG signals with CT using optical scanning
+uid: '10628747'
+volume: '26'

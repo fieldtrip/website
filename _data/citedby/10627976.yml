@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '36192669'
+- idtype: doi
+  value: 10.1007/s10803-022-05767-w
+- idtype: pmcid
+  value: PMC10627976
+authors:
+- authtype: Author
+  name: Barik K
+- authtype: Author
+  name: Watanabe K
+- authtype: Author
+  name: Bhattacharya J
+- authtype: Author
+  name: Saha G
+epubdate: 2022 Oct 3
+fulljournalname: Journal of Autism and Developmental Disorders
+issue: '12'
+pages: 4830-4848
+pmclivedate: 2023/11/08
+printpubdate: '2023'
+pubdate: 2022 Oct 3
+sortdate: 2022/10/03 00:00
+source: J Autism Dev Disord
+title: A Fusion-Based Machine Learning Approach for Autism Detection in Young Children
+  Using Magnetoencephalography Signals
+uid: '10627976'
+volume: '53'

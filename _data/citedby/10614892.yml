@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '37905141'
+- idtype: doi
+  value: 10.1101/2023.10.18.562969
+- idtype: pmcid
+  value: PMC10614892
+authors:
+- authtype: Author
+  name: Vissani M
+- authtype: Author
+  name: Bush A
+- authtype: Author
+  name: Lipski WJ
+- authtype: Author
+  name: Fischer P
+- authtype: Author
+  name: Neudorfer C
+- authtype: Author
+  name: Holt LL
+- authtype: Author
+  name: Fiez JA
+- authtype: Author
+  name: Turner RS
+- authtype: Author
+  name: Richardson RM
+epubdate: 2023 Oct 19
+fulljournalname: bioRxiv
+issue: ''
+pages: 2023.10.18.562969
+pmclivedate: 2023/10/31
+printpubdate: ''
+pubdate: 2023 Oct 19
+sortdate: 2023/10/19 00:00
+source: bioRxiv
+title: Speech induces spatiotemporal and frequency specific subthalamic-cortical spike-phase
+  coupling events
+uid: '10614892'
+volume: ''
