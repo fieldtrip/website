@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '37871963'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0995-23.2023
+- idtype: pmcid
+  value: PMC10634570
+authors:
+- authtype: Author
+  name: Lee Masson H
+- authtype: Author
+  name: Isik L
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '45'
+pages: 7700-7711
+pmclivedate: ''
+printpubdate: 2023 Nov 8
+pubdate: 2023 Nov 8
+sortdate: 2023/11/08 00:00
+source: J Neurosci
+title: 'Rapid Processing of Observed Touch through Social Perceptual Brain Regions:
+  An EEG-fMRI Fusion Study'
+uid: '10634570'
+volume: '43'

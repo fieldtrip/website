@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '37952232'
+- idtype: doi
+  value: 10.1093/scan/nsad066
+- idtype: pmcid
+  value: PMC10640853
+authors:
+- authtype: Author
+  name: Bao H
+- authtype: Author
+  name: Xie M
+- authtype: Author
+  name: Huang Y
+- authtype: Author
+  name: Liu Y
+- authtype: Author
+  name: Lan C
+- authtype: Author
+  name: Lin Z
+- authtype: Author
+  name: Wang Y
+- authtype: Author
+  name: Qin P
+epubdate: 2023 Nov 7
+fulljournalname: Social Cognitive and Affective Neuroscience
+issue: '1'
+pages: nsad066
+pmclivedate: 1900/01/01
+printpubdate: ''
+pubdate: 2023 Nov 7
+sortdate: 2023/11/07 00:00
+source: Soc Cogn Affect Neurosci
+title: Specificity in the processing of a subject’s own name
+uid: '10640853'
+volume: '18'

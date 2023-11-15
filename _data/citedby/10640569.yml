@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '37951971'
+- idtype: doi
+  value: 10.1038/s41467-023-43165-7
+- idtype: pmcid
+  value: PMC10640569
+authors:
+- authtype: Author
+  name: Williamson BJ
+- authtype: Author
+  name: Greiner HM
+- authtype: Author
+  name: Kadis DS
+epubdate: 2023 Nov 11
+fulljournalname: Nature Communications
+issue: ''
+pages: '7313'
+pmclivedate: 1900/01/01
+printpubdate: ''
+pubdate: 2023 Nov 11
+sortdate: 2023/11/11 00:00
+source: Nat Commun
+title: Virtual lesions in MEG reveal increasing vulnerability of the language network
+  from early childhood through adolescence
+uid: '10640569'
+volume: '14'

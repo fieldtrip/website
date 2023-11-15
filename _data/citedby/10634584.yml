@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '37816599'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1889-22.2023
+- idtype: pmcid
+  value: PMC10634584
+authors:
+- authtype: Author
+  name: Wang SH
+- authtype: Author
+  name: Siebenhühner F
+- authtype: Author
+  name: Arnulfo G
+- authtype: Author
+  name: Myrov V
+- authtype: Author
+  name: Nobili L
+- authtype: Author
+  name: Breakspear M
+- authtype: Author
+  name: Palva S
+- authtype: Author
+  name: Palva JM
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '45'
+pages: 7642-7656
+pmclivedate: ''
+printpubdate: 2023 Nov 8
+pubdate: 2023 Nov 8
+sortdate: 2023/11/08 00:00
+source: J Neurosci
+title: Critical-like Brain Dynamics in a Continuum from Second- to First-Order Phase
+  Transition
+uid: '10634584'
+volume: '43'

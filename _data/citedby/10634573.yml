@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '37833065'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1334-23.2023
+- idtype: pmcid
+  value: PMC10634573
+authors:
+- authtype: Author
+  name: Choo Y
+- authtype: Author
+  name: Mather A
+- authtype: Author
+  name: Wessel JR
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '45'
+pages: 7678-7689
+pmclivedate: ''
+printpubdate: 2023 Nov 8
+pubdate: 2023 Nov 8
+sortdate: 2023/11/08 00:00
+source: J Neurosci
+title: Early Action Error Processing Is Due to Domain-General Surprise, Whereas Later
+  Processing Is Error Specific
+uid: '10634573'
+volume: '43'

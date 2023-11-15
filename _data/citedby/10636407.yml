@@ -1,0 +1,44 @@
+articleids:
+- idtype: pmid
+  value: '37694825'
+- idtype: doi
+  value: 10.1002/brb3.3250
+- idtype: pmcid
+  value: PMC10636407
+authors:
+- authtype: Author
+  name: Tahedl M
+- authtype: Author
+  name: Tan EL
+- authtype: Author
+  name: Chipika RH
+- authtype: Author
+  name: Lope J
+- authtype: Author
+  name: Hengeveld JC
+- authtype: Author
+  name: Doherty MA
+- authtype: Author
+  name: McLaughlin RL
+- authtype: Author
+  name: Hardiman O
+- authtype: Author
+  name: Hutchinson S
+- authtype: Author
+  name: McKenna MC
+- authtype: Author
+  name: Bede P
+epubdate: 2023 Sep 11
+fulljournalname: Brain and Behavior
+issue: '11'
+pages: e3250
+pmclivedate: ''
+printpubdate: ''
+pubdate: 2023 Sep 11
+sortdate: 2023/09/11 00:00
+source: Brain Behav
+title: 'The involvement of language‐associated networks, tracts, and cortical regions
+  in frontotemporal dementia and amyotrophic lateral sclerosis: Structural and functional
+  alterations'
+uid: '10636407'
+volume: '13'
