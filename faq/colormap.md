@@ -86,7 +86,7 @@ The following sections of code loop through a large number of the available colo
 
 {% include image src="/assets/img/faq/colormap/colorcet.png" width="600" %}
 
-## Cyclic copormaps for phase plots
+## Cyclic colormaps for phase plots
 
 To plot phase color-coded, you need a colormap that starts and ends at the same color. Some of the colormaps that can be used are `hsv`, `phase`, `phase2`, `phase4`, and `cyclicgrey`. You can check these yourself using the following code.
 
