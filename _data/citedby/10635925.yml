@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '37737925'
+- idtype: doi
+  value: 10.1007/s00221-023-06706-6
+- idtype: pmcid
+  value: PMC10635925
+authors:
+- authtype: Author
+  name: Ortega-Auriol P
+- authtype: Author
+  name: Byblow WD
+- authtype: Author
+  name: Besier T
+- authtype: Author
+  name: McMorland AJ
+epubdate: 2023 Sep 22
+fulljournalname: Experimental Brain Research
+issue: 11-12
+pages: 2627-2643
+pmclivedate: ''
+printpubdate: '2023'
+pubdate: 2023 Sep 22
+sortdate: 2023/09/22 00:00
+source: Exp Brain Res
+title: Muscle synergies are associated with intermuscular coherence and cortico-synergy
+  coherence in an isometric upper limb task
+uid: '10635925'
+volume: '241'

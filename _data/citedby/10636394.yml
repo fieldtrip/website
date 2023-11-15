@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '37752097'
+- idtype: doi
+  value: 10.1002/brb3.3257
+- idtype: pmcid
+  value: PMC10636394
+authors:
+- authtype: Author
+  name: Süß AM
+- authtype: Author
+  name: Hug M
+- authtype: Author
+  name: Conradi N
+- authtype: Author
+  name: Kienitz R
+- authtype: Author
+  name: Rosenow F
+- authtype: Author
+  name: Rampp S
+- authtype: Author
+  name: Merkel N
+epubdate: 2023 Sep 26
+fulljournalname: Brain and Behavior
+issue: '11'
+pages: e3257
+pmclivedate: ''
+printpubdate: ''
+pubdate: 2023 Sep 26
+sortdate: 2023/09/26 00:00
+source: Brain Behav
+title: Lateralization of delta band power in magnetoencephalography (MEG) in patients
+  with unilateral focal epilepsy and its relation to verbal fluency
+uid: '10636394'
+volume: '13'

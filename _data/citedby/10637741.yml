@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '37948520'
+- idtype: doi
+  value: 10.1126/sciadv.adi2321
+- idtype: pmcid
+  value: PMC10637741
+authors:
+- authtype: Author
+  name: Chen L
+- authtype: Author
+  name: Cichy RM
+- authtype: Author
+  name: Kaiser D
+epubdate: 2023 Nov 10
+fulljournalname: Science Advances
+issue: '45'
+pages: eadi2321
+pmclivedate: 2023/11/11
+printpubdate: ''
+pubdate: 2023 Nov 10
+sortdate: 2023/11/10 00:00
+source: Sci Adv
+title: Alpha-frequency feedback to early visual cortex orchestrates coherent naturalistic
+  vision
+uid: '10637741'
+volume: '9'

@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '37948467'
+- idtype: doi
+  value: 10.1371/journal.pone.0284836
+- idtype: pmcid
+  value: PMC10637696
+authors:
+- authtype: Author
+  name: Ringer H
+- authtype: Author
+  name: Schröger E
+- authtype: Author
+  name: Grimm S
+epubdate: 2023 Nov 10
+fulljournalname: PLOS ONE
+issue: '11'
+pages: e0284836
+pmclivedate: 2023/11/11
+printpubdate: ''
+pubdate: 2023 Nov 10
+sortdate: 2023/11/10 00:00
+source: PLoS One
+title: Neural signatures of automatic repetition detection in temporally regular and
+  jittered acoustic sequences
+uid: '10637696'
+volume: '18'
