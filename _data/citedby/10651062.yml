@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '37688470'
+- idtype: doi
+  value: 10.1002/aur.3022
+- idtype: pmcid
+  value: PMC10651062
+- idtype: MID
+  value: NIHMS1938147
+authors:
+- authtype: Author
+  name: Dwyer P
+- authtype: Author
+  name: Williams ZJ
+- authtype: Author
+  name: Vukusic S
+- authtype: Author
+  name: Saron CD
+- authtype: Author
+  name: Rivera SM
+epubdate: 2023 Sep 9
+fulljournalname: 'Autism research : official journal of the International Society
+  for Autism Research'
+issue: '10'
+pages: 1903-1923
+pmclivedate: ''
+printpubdate: 2023 Oct
+pubdate: 2023 Sep 9
+sortdate: 2023/09/09 00:00
+source: Autism Res
+title: Habituation of Auditory Responses in Young Autistic and Neurotypical Children
+uid: '10651062'
+volume: '16'

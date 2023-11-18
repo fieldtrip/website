@@ -1,0 +1,23 @@
+articleids:
+- idtype: pmid
+  value: '37954936'
+- idtype: doi
+  value: 10.3389/fnhum.2023.1268972
+- idtype: pmcid
+  value: PMC10634455
+authors:
+- authtype: Author
+  name: Brunet NM
+epubdate: 2023 Oct 25
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '1268972'
+pmclivedate: 2023/11/10
+printpubdate: ''
+pubdate: 2023 Oct 25
+sortdate: 2023/10/25 00:00
+source: Front Hum Neurosci
+title: 'Face processing and early event-related potentials: replications and novel
+  findings'
+uid: '10634455'
+volume: '17'

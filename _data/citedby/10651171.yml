@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '37888955'
+- idtype: doi
+  value: 10.7554/eLife.75352
+- idtype: pmcid
+  value: PMC10651171
+authors:
+- authtype: Author
+  name: Candia-Rivera D
+- authtype: Author
+  name: Raimondo F
+- authtype: Author
+  name: Pérez P
+- authtype: Author
+  name: Naccache L
+- authtype: Author
+  name: Tallon-Baudry C
+- authtype: Author
+  name: Sitt JD
+epubdate: 2023 Oct 27
+fulljournalname: eLife
+issue: ''
+pages: e75352
+pmclivedate: 1900/01/01
+printpubdate: ''
+pubdate: 2023 Oct 27
+sortdate: 2023/10/27 00:00
+source: eLife
+title: Conscious processing of global and local auditory irregularities causes differentiated
+  heartbeat-evoked responses
+uid: '10651171'
+volume: '12'
