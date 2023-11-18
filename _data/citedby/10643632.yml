@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '37957177'
+- idtype: doi
+  value: 10.1038/s41598-023-45807-8
+- idtype: pmcid
+  value: PMC10643632
+authors:
+- authtype: Author
+  name: Hou J
+- authtype: Author
+  name: Wang C
+- authtype: Author
+  name: Jia L
+- authtype: Author
+  name: Ma H
+epubdate: 2023 Nov 13
+fulljournalname: Scientific Reports
+issue: ''
+pages: '19719'
+pmclivedate: 1900/01/01
+printpubdate: ''
+pubdate: 2023 Nov 13
+sortdate: 2023/11/13 00:00
+source: Sci Rep
+title: Long-term exposure to high altitude reduces alpha and beta bands event-related
+  desynchronization in a Go/NoGo task
+uid: '10643632'
+volume: '13'
