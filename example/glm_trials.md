@@ -1,6 +1,6 @@
 ---
 title: Using General Linear Modeling over trials
-tags: [example, statistics, eeg-language]
+tags: [example, glm, statistics, eeg-language]
 ---
 
 # Using General Linear Modeling over trials
