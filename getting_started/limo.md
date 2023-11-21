@@ -1,6 +1,6 @@
 ---
 title: Getting started with LIMO MEEG
-tags: [statistics, GLM, limo, eeg, meg]
+tags: [statistics, glm, limo, eeg, meg]
 ---
 
 # Getting started with LIMO EEG
