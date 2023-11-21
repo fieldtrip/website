@@ -16,6 +16,12 @@ The layout is a MATLAB structure with the following elements
     layout.mask    = optional cell-array with line segments that determine the area for topographic interpolation
     layout.outline = optional cell-array with line segments that represent the head, nose, ears, sulci or other anatomical features
 
+You should note that the 2D channel layout for plotting deals with channels, which are not always identical to sensors or electrodes. For example, MEG sensors can have a considerable spatial extent. In the case of EEG you could record the HEOG by placing two _electrodes_ on the left and right side of the eyes. The HEOG _channel_ however is conceptually not located at either one of those electrode locations, but rather "between" those electrodes. You may choose to plot it in between the two electrodes, but also somewhere else in the layout and hence in your figure.
+
+Furthermore, it can happen that multiple channels  technically share the same sensor location, for example with the two planar gradiometers and the magnetometers of the Neuromag MEG system, or with the radial and tangential magnetometers of some OPM systems. To distinguish them in the multiplot display, some offset is needed between them. For a correct topographic interpolation, the different channels should be in separate layouts, which can then be combined in a single figure using **[ft_appendlayout](/reference/ft_appendlayout)** (see below for examples).
+
+Finally, there are cases where you _do_ want different channels to overlap exactly in the layout, for example if you want to make a multiplot with fNIRS oxyhemoglobin and deoxyhemoglobin channels on the same place (using different colors to distinguish them).
+
 ## Constructing a layout
 
 Many of the FieldTrip plotting functions use a 2D layout of the channels for plotting. The layout is a schematic 2D representation for displaying the data on the computer screen or in print on paper. The layout results from **[ft_prepare_layout](/reference/ft_prepare_layout)** and can be constructed from
