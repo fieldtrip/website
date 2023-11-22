@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1016/j.isci.2023.108327
+- idtype: pmcid
+  value: PMC10656268
+authors:
+- authtype: Author
+  name: Samanta A
+- authtype: Author
+  name: Aleman-Zapata A
+- authtype: Author
+  name: Agarwal K
+- authtype: Author
+  name: Özsezer P
+- authtype: Author
+  name: Alonso A
+- authtype: Author
+  name: van der Meij J
+- authtype: Author
+  name: Rayan A
+- authtype: Author
+  name: Navarro-Lobato I
+- authtype: Author
+  name: Genzel L
+epubdate: 2023 Oct 24
+fulljournalname: iScience
+issue: '11'
+pages: '108327'
+pmclivedate: 1900/01/01
+printpubdate: ''
+pubdate: 2023 Oct 24
+sortdate: 2023/10/24 00:00
+source: iScience
+title: CBD lengthens sleep but shortens ripples and leads to intact simple but worse
+  cumulative memory
+uid: '10656268'
+volume: '26'

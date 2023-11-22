@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fneur.2023.1257886
+- idtype: pmcid
+  value: PMC10656620
+authors:
+- authtype: Author
+  name: Sarma AK
+- authtype: Author
+  name: Popli G
+- authtype: Author
+  name: Anzalone A
+- authtype: Author
+  name: Contillo N
+- authtype: Author
+  name: Cornell C
+- authtype: Author
+  name: Nunn AM
+- authtype: Author
+  name: Rowland JA
+- authtype: Author
+  name: Godwin DW
+- authtype: Author
+  name: Flashman LA
+- authtype: Author
+  name: Couture D
+- authtype: Author
+  name: Stapleton-Kotloski JR
+epubdate: 2023 Nov 3
+fulljournalname: Frontiers in Neurology
+issue: ''
+pages: '1257886'
+pmclivedate: 1900/01/01
+printpubdate: ''
+pubdate: 2023 Nov 3
+sortdate: 2023/11/03 00:00
+source: Front Neurol
+title: Use of magnetic source imaging to assess recovery after severe traumatic brain
+  injury—an MEG pilot study
+uid: '10656620'
+volume: '14'
