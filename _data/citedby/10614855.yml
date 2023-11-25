@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '37905099'
+- idtype: doi
+  value: 10.1101/2023.10.18.562880
+- idtype: pmcid
+  value: PMC10614855
+authors:
+- authtype: Author
+  name: Wynn SC
+- authtype: Author
+  name: Townsend CD
+- authtype: Author
+  name: Nyhus E
+epubdate: 2023 Oct 19
+fulljournalname: bioRxiv
+issue: ''
+pages: 2023.10.18.562880
+pmclivedate: 2023/10/31
+printpubdate: ''
+pubdate: 2023 Oct 19
+sortdate: 2023/10/19 00:00
+source: bioRxiv
+title: The role of theta and gamma oscillations in item memory, source memory, and
+  memory confidence
+uid: '10614855'
+volume: ''

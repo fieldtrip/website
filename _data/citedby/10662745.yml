@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '37943963'
+- idtype: doi
+  value: 10.1371/journal.pcbi.1011613
+- idtype: pmcid
+  value: PMC10662745
+authors:
+- authtype: Author
+  name: Itälinna V
+- authtype: Author
+  name: Kaltiainen H
+- authtype: Author
+  name: Forss N
+- authtype: Author
+  name: Liljeström M
+- authtype: Author
+  name: Parkkonen L
+epubdate: 2023 Nov 9
+fulljournalname: PLOS Computational Biology
+issue: '11'
+pages: e1011613
+pmclivedate: 1900/01/01
+printpubdate: ''
+pubdate: 2023 Nov 9
+sortdate: 2023/11/09 00:00
+source: PLoS Comput Biol
+title: Using normative modeling and machine learning for detecting mild traumatic
+  brain injury from magnetoencephalography data
+uid: '10662745'
+volume: '19'

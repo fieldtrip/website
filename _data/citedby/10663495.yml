@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '37989781'
+- idtype: doi
+  value: 10.1038/s41598-023-45897-4
+- idtype: pmcid
+  value: PMC10663495
+authors:
+- authtype: Author
+  name: Orioli G
+- authtype: Author
+  name: Parisi I
+- authtype: Author
+  name: van Velzen JL
+- authtype: Author
+  name: Bremner AJ
+epubdate: 2023 Nov 21
+fulljournalname: Scientific Reports
+issue: ''
+pages: '19300'
+pmclivedate: 1900/01/01
+printpubdate: ''
+pubdate: 2023 Nov 21
+sortdate: 2023/11/21 00:00
+source: Sci Rep
+title: Visual objects approaching the body modulate subsequent somatosensory processing
+  at 4 months of age
+uid: '10663495'
+volume: '13'

@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fnbeh.2023.1285773
+- idtype: pmcid
+  value: PMC10663268
+authors:
+- authtype: Author
+  name: Sáringer S
+- authtype: Author
+  name: Fehér Á
+- authtype: Author
+  name: Sáry G
+- authtype: Author
+  name: Kaposvári P
+epubdate: 2023 Nov 8
+fulljournalname: Frontiers in Behavioral Neuroscience
+issue: ''
+pages: '1285773'
+pmclivedate: 1900/01/01
+printpubdate: ''
+pubdate: 2023 Nov 8
+sortdate: 2023/11/08 00:00
+source: Front Behav Neurosci
+title: Gamma oscillations in visual statistical learning correlate with individual
+  behavioral differences
+uid: '10663268'
+volume: '17'
