@@ -1,0 +1,51 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1093/braincomms/fcad298
+- idtype: pmcid
+  value: PMC10664414
+authors:
+- authtype: Author
+  name: Kremer NI
+- authtype: Author
+  name: Roberts MJ
+- authtype: Author
+  name: Potters WV
+- authtype: Author
+  name: Dilai J
+- authtype: Author
+  name: Mathiopoulou V
+- authtype: Author
+  name: Rijks N
+- authtype: Author
+  name: Drost G
+- authtype: Author
+  name: van Laar T
+- authtype: Author
+  name: van Dijk JM
+- authtype: Author
+  name: Beudel M
+- authtype: Author
+  name: de Bie RM
+- authtype: Author
+  name: van den Munckhof P
+- authtype: Author
+  name: Janssen ML
+- authtype: Author
+  name: Schuurman PR
+- authtype: Author
+  name: Bot M
+epubdate: 2023 Nov 11
+fulljournalname: Brain Communications
+issue: '6'
+pages: fcad298
+pmclivedate: 1900/01/01
+printpubdate: ''
+pubdate: 2023 Nov 11
+sortdate: 2023/11/11 00:00
+source: Brain Commun
+title: 'Dorsal subthalamic nucleus targeting in deep brain stimulation: microelectrode
+  recording versus 7-Tesla connectivity'
+uid: '10664414'
+volume: '5'
