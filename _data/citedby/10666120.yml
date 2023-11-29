@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '37963247'
+- idtype: doi
+  value: 10.1073/pnas.2306279120
+- idtype: pmcid
+  value: PMC10666120
+authors:
+- authtype: Author
+  name: Schroën JA
+- authtype: Author
+  name: Gunter TC
+- authtype: Author
+  name: Numssen O
+- authtype: Author
+  name: Kroczek LO
+- authtype: Author
+  name: Hartwigsen G
+- authtype: Author
+  name: Friederici AD
+epubdate: 2023 Nov 14
+fulljournalname: Proceedings of the National Academy of Sciences of the United States
+  of America
+issue: '47'
+pages: e2306279120
+pmclivedate: 1900/01/01
+printpubdate: 2023 Nov 21
+pubdate: 2023 Nov 14
+sortdate: 2023/11/14 00:00
+source: Proc Natl Acad Sci U S A
+title: Causal evidence for a coordinated temporal interplay within the language network
+uid: '10666120'
+volume: '120'

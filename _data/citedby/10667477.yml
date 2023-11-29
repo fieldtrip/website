@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fnins.2023.1191213
+- idtype: pmcid
+  value: PMC10667477
+authors:
+- authtype: Author
+  name: Horr NK
+- authtype: Author
+  name: Mousavi B
+- authtype: Author
+  name: Han K
+- authtype: Author
+  name: Li A
+- authtype: Author
+  name: Tang R
+epubdate: 2023 Nov 10
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '1191213'
+pmclivedate: 1900/01/01
+printpubdate: ''
+pubdate: 2023 Nov 10
+sortdate: 2023/11/10 00:00
+source: Front Neurosci
+title: Human behavior in free search online shopping scenarios can be predicted from
+  EEG activation using Hjorth parameters
+uid: '10667477'
+volume: '17'

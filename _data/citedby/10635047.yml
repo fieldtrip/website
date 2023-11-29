@@ -1,0 +1,22 @@
+articleids:
+- idtype: pmid
+  value: '37961578'
+- idtype: doi
+  value: 10.1101/2023.11.01.565154
+- idtype: pmcid
+  value: PMC10635047
+authors:
+- authtype: Author
+  name: Rawls E
+epubdate: 2023 Nov 4
+fulljournalname: bioRxiv
+issue: ''
+pages: 2023.11.01.565154
+pmclivedate: 2023/11/13
+printpubdate: ''
+pubdate: 2023 Nov 4
+sortdate: 2023/11/04 00:00
+source: bioRxiv
+title: 'NeuroFreq: a MATLAB Toolbox for Time-Frequency Analysis of M/EEG Data'
+uid: '10635047'
+volume: ''

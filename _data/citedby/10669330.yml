@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '38002460'
+- idtype: doi
+  value: 10.3390/bioengineering10111336
+- idtype: pmcid
+  value: PMC10669330
+authors:
+- authtype: Author
+  name: Sissons C
+- authtype: Author
+  name: Saeed F
+- authtype: Author
+  name: Carter C
+- authtype: Author
+  name: Lee K
+- authtype: Author
+  name: Kerr K
+- authtype: Author
+  name: Shahdadian S
+- authtype: Author
+  name: Liu H
+epubdate: 2023 Nov 20
+fulljournalname: Bioengineering
+issue: '11'
+pages: '1336'
+pmclivedate: 1900/01/01
+printpubdate: ''
+pubdate: 2023 Nov 20
+sortdate: 2023/11/20 00:00
+source: Bioengineering (Basel)
+title: Unilateral Mitochondrial–Hemodynamic Coupling and Bilateral Connectivity in
+  the Prefrontal Cortices of Young and Older Healthy Adults
+uid: '10669330'
+volume: '10'

@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '37837620'
+- idtype: doi
+  value: 10.1016/j.celrep.2023.113249
+- idtype: pmcid
+  value: PMC10679823
+- idtype: MID
+  value: NIHMS1941923
+authors:
+- authtype: Author
+  name: Parto-Dezfouli M
+- authtype: Author
+  name: Vezoli J
+- authtype: Author
+  name: Bosman CA
+- authtype: Author
+  name: Fries P
+epubdate: 2023 Oct 12
+fulljournalname: Cell reports
+issue: '10'
+pages: '113249'
+pmclivedate: 2023/11/27
+printpubdate: 2023 Oct 31
+pubdate: 2023 Oct 12
+sortdate: 2023/10/12 00:00
+source: Cell Rep
+title: Enhanced behavioral performance through interareal gamma and beta synchronization
+uid: '10679823'
+volume: '42'
