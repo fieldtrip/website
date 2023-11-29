@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '37999945'
+- idtype: doi
+  value: 10.7554/eLife.83565
+- idtype: pmcid
+  value: PMC10672804
+authors:
+- authtype: Author
+  name: Joechner AK
+- authtype: Author
+  name: Hahn MA
+- authtype: Author
+  name: Gruber G
+- authtype: Author
+  name: Hoedlmoser K
+- authtype: Author
+  name: Werkle-Bergner M
+epubdate: 2023 Nov 24
+fulljournalname: eLife
+issue: ''
+pages: e83565
+pmclivedate: 1900/01/01
+printpubdate: ''
+pubdate: 2023 Nov 24
+sortdate: 2023/11/24 00:00
+source: eLife
+title: Sleep spindle maturity promotes slow oscillation-spindle coupling across child
+  and adolescent development
+uid: '10672804'
+volume: '12'
