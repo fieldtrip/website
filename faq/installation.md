@@ -47,7 +47,7 @@ Please be aware that you should *not* do
 
 because that will add many toolbox directories to your path that you won't use. Furthermore, it would cause some toolboxes to be on your path twice (such as SPM) and creates problems with builtin MATLAB functions for which FieldTrip has backward-compatibility replacements.
 
-## Avoid unsing the graphical path setup tool
+## Avoid using the graphical path setup tool
 
 We recommend *not* to use the graphical path setup tool that MATLAB offers and especially not the "add with subdirectories" button. The graphical path setup tool often results in multiple versions of the same toolbox being on the path, or in outdated versions of a toolbox being on the path. It can even cause MathWorks own toolboxes to become messed up, for example by including the image processing toolbox of MATLAB version `xxx` to be added to the path of MATLAB `yyy` when you upgrade.
 
