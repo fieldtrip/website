@@ -16,6 +16,9 @@
 - name:  How fast is the FieldTrip buffer for realtime data streaming?
   link:  /faq/how_fast_is_the_fieldtrip_buffer_for_realtime_data_streaming
 
+- name:  Should I add FieldTrip with all subdirectories to my MATLAB path?
+  link:  /faq/installation
+
 - name:  MATLAB complains about a missing or invalid mex file, what should I do?
   link:  /faq/matlab_complains_about_a_missing_or_invalid_mex_file_what_should_i_do
 
@@ -36,9 +39,6 @@
 
 - name:  What are the MATLAB and external requirements?
   link:  /faq/requirements
-
-- name:  Should I add FieldTrip with all subdirectories to my MATLAB path?
-  link:  /faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path
 
 - name:  What are the different approaches I can take for distributed computing?
   link:  /faq/what_are_the_different_approaches_i_can_take_for_distributed_computing
