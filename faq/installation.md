@@ -1,6 +1,8 @@
 ---
 title: Should I add FieldTrip with all subdirectories to my MATLAB path?
 tags: [faq, matlab, path, warning]
+redirect_from:
+  - /faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path/
 ---
 
 # Should I add FieldTrip with all subdirectories to my MATLAB path?
