@@ -7,7 +7,7 @@
 - name:  I am working at the Donders, should I also download FieldTrip?
   link:  /faq/i_am_working_at_the_donders_should_i_also_download_fieldtrip
 
-- name:  Should I add FieldTrip with all subdirectories to my MATLAB path?
+- name:  Installation and setting up the path
   link:  /faq/installation
 
 - name:  Replacements for functions from MathWorks toolboxes

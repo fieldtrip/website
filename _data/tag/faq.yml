@@ -322,7 +322,7 @@
 - name:  In what way can frequency domain data be represented in FieldTrip?
   link:  /faq/in_what_way_can_frequency_domain_data_be_represented_in_fieldtrip
 
-- name:  Should I add FieldTrip with all subdirectories to my MATLAB path?
+- name:  Installation and setting up the path
   link:  /faq/installation
 
 - name:  Is it good or bad to have dipole locations outside of the brain for which the source reconstruction is computed?
