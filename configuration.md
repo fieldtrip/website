@@ -1809,6 +1809,9 @@ A detailed description of each function is available in the [reference documenta
 **cfg.minblocksize** - [ft_realtime_fileproxy](/reference/realtime/example/ft_realtime_fileproxy)  
 
 
+**cfg.mindistance** - [ft_heartrate](/reference/ft_heartrate)  
+
+
 **cfg.minlength** - [ft_redefinetrial](/reference/ft_redefinetrial)  
 
 
