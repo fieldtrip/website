@@ -70,7 +70,7 @@ Creating the environment is only needed once, but every new session where FEMfun
 
     conda activate femfuns
 
-Before starting with FieldTrip, it is important that you set up your [MATLAB path](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path) properly.
+Before starting with FieldTrip, it is important that you set up your [MATLAB path](/faq/installation) properly.
 
     cd <path_to_fieldtrip>
     ft_defaults

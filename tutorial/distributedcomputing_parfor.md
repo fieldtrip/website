@@ -66,7 +66,7 @@ This tutorial requires the original MEG datasets for the four subjects, plus one
 
 Additional prerequisites:
 
--   Make sure FieldTrip is on your path, see this [FAQ](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path)
+-   Make sure FieldTrip is on your path, see this [FAQ](/faq/installation)
 -   Have the necessary data next to each other in a single directory: the directories 'Subject01.ds', 'Subject02.ds', 'Subject03.ds', 'Subject04.ds', 'SubjectSEF.ds' should all be next to each other.
 -   Put your test scripts also in this directory
 

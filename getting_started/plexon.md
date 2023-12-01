@@ -19,7 +19,7 @@ The .plx files contain the multiplexed raw acquisition data. During acquisition 
 
 There are some constraints related to the way that FieldTrip represents continuous and spike data. All main FieldTrip functions read continuous data using the **[ft_read_header](/reference/fileio/ft_read_header)** and **[ft_read_data](/reference/fileio/ft_read_data)** functions. These functions require the continuous data in all channels contained in the file to have the same sampling frequency. This can be a problem because Plexon file formats often contain both 40kHz spike data and 1kHz sampled LFP data in the same file. One solution is to resave all source files into two separate files. The other is to modify the fileio functions to select the correct sampling frequency and channels.
 
-To get started, you should add the FieldTrip main directory to your path, and execute the **[ft_defaults](/reference/ft_defaults)** function, which sets the defaults and configures up the minimal required path settings. See also this [frequently asked question](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path).
+To get started, you should add the FieldTrip main directory to your path, and execute the **[ft_defaults](/reference/ft_defaults)** function, which sets the defaults and configures up the minimal required path settings. See also this [frequently asked question](/faq/installation).
 
     addpath <path_to_fieldtrip>
     ft_defaults
