@@ -15,4 +15,4 @@ The common FieldTrip version on the shared network drive is automatically update
 
 If you want to do your computations on your laptop or at home, you can use the download or github version.
 
-See also this FAQ on [how to setup your FieldTrip path in MATLAB](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path).
+See also this FAQ on [how to setup your FieldTrip path in MATLAB](/faq/installation).

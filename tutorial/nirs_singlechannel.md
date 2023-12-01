@@ -52,7 +52,7 @@ _Figure 1: Overview of a standard fNIRS analysis procedure._
 
 ### Getting Started
 
-The dataset that we would like to analyze is called 'motor_cortex.oxy3'. First, we need to point FieldTrip to this file. Note that FieldTrip does not feature a graphical-user interface, but instead requires you to script your way to the end goal. To let MATLAB know that we want to use FieldTrip and it's file locations, add the FieldTrip folder to your path ([without subfolders](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path)) and then execute the **[ft_defaults](/reference/ft_defaults)** function by typing:
+The dataset that we would like to analyze is called 'motor_cortex.oxy3'. First, we need to point FieldTrip to this file. Note that FieldTrip does not feature a graphical-user interface, but instead requires you to script your way to the end goal. To let MATLAB know that we want to use FieldTrip and it's file locations, add the FieldTrip folder to your path ([without subfolders](/faq/installation)) and then execute the **[ft_defaults](/reference/ft_defaults)** function by typing:
 
     ft_defaults
 

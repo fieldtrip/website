@@ -47,7 +47,7 @@ The structure sensor is attached to an iPad mini. We use the [Scanner - Structur
 
 [Here](https://download.fieldtriptoolbox.org/tutorial/electrode/3D-Scan.zip) you can download the result of the 3D-scan that we will use in this tutorial. Note that the Structure Sensor data comprises three files that should be kept together: an `.obj` file with the geometry, a `.jpg` file with the color photo texture mapping, and an `.mtl` file that maps between the geometry and the colors. If the `.mtl` and `.jpg` file are missing, there is no color information for the mesh.
 
-Before starting with FieldTrip, it is important that you set up your [MATLAB path](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path) properly.
+Before starting with FieldTrip, it is important that you set up your [MATLAB path](/faq/installation) properly.
 
     cd <path_to_fieldtrip>
     ft_defaults

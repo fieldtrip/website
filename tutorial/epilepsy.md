@@ -117,7 +117,7 @@ surgery, though the extent of the polymicrogyria rendered this a difficult
 option.
 {% include markup/end %}
 
-The shared data is available from our [download server](https://download.fieldtriptoolbox.org/tutorial/epilepsy/). After downloading the data, we set up the path and ensure that FieldTrip is the only toolbox on the path. See also [this FAQ](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path).
+The shared data is available from our [download server](https://download.fieldtriptoolbox.org/tutorial/epilepsy/). After downloading the data, we set up the path and ensure that FieldTrip is the only toolbox on the path. See also [this FAQ](/faq/installation).
 
     restoredefaultpath
     addpath ~/matlab/fieldtrip/

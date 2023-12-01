@@ -94,7 +94,7 @@ FieldTrip is composed of a collection of scripts running in MATLAB. The toolbox 
 
 It is now possible to execute the MATLAB scripts by copying/pasting the relevant text from the tutorials (To copy from a Window browser to MATLAB running under Linux from X-Win32, use the mouse to highlight the text in the browser and press crtl-c. Then use ctrl-v or the middle mouse button to paste in MATLAB).
 
-Make sure that the path is set correctly to the directory of the FieldTrip toolbox and the data. For the tutorials it is recommend to 'cd' to the directory where the data are. Look at [this FAQ](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path) for more information on how to correctly set your path for FieldTrip.
+Make sure that the path is set correctly to the directory of the FieldTrip toolbox and the data. For the tutorials it is recommend to 'cd' to the directory where the data are. Look at [this FAQ](/faq/installation) for more information on how to correctly set your path for FieldTrip.
 
 ## Making an analysis protocol
 

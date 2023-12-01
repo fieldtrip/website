@@ -183,7 +183,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [MATLAB complains that mexmaci64 cannot be opened because the developer cannot be verified](/faq/mexmaci64_cannot_be_opened_because_the_developer_cannot_be_verified)
 - [MATLAB does not see the functions in the "private" directory](/faq/matlab_does_not_see_the_functions_in_the_private_directory)
 - [MATLAB version 7.3 (2006b)_crashes_when_I_try_to_do_...](/faq/matlab_version_7.3_2006b_crashes_when_i_try_to_do)
-- [Should I add FieldTrip with all subdirectories to my MATLAB path?](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path)
+- [Should I add FieldTrip with all subdirectories to my MATLAB path?](/faq/installation)
 - [The databrowser crashes and destroys the whole MATLAB session, how can I resolve this?](/faq/the_databrowser_crashes_and_destroys_the_whole_matlab_session_how_can_i_resolve_this)
 - [What are the MATLAB requirements for using FieldTrip?](/faq/requirements)
 - [What is the relation between "events" (such as_triggers) and "trials"?](/faq/what_is_the_relation_between_events_such_as_triggers_and_trials)

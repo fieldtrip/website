@@ -46,7 +46,7 @@ _Figure 2. Pipeline of creating and visualizing a head model_
 
 ### Reading in the anatomical data
 
-Before starting to use FieldTrip, it is important that you set up your MATLAB path properly. You can read about how to set up your MATLAB path [here](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path).
+Before starting to use FieldTrip, it is important that you set up your MATLAB path properly. You can read about how to set up your MATLAB path [here](/faq/installation).
 
     cd <path_to_fieldtrip>
     ft_defaults

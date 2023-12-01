@@ -42,7 +42,7 @@ Please take a quick look at the [FieldTrip reference paper](https://doi.org/10.1
 
 Please download the most recent version of the FieldTrip toolbox from [here](/download) or from [GitHub](https://github.com/fieldtrip/fieldtrip/tags). As we did some last miniute bugfixes to make all tutorials run smoothly, you should have version **20221207** or later.
 
-Please read [this FAQ](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path/) on how to set your path. After adding the FieldTrip main directory to your path, you should type `ft_defaults` which will add the required subdirectories (which depend on your MATLAB version). We recommend to put `ft_defaults` in your MATLAB [startup.m](https://nl.mathworks.com/help/matlab/ref/startup.html) file.
+Please read [this FAQ](/faq/installation/) on how to set your path. After adding the FieldTrip main directory to your path, you should type `ft_defaults` which will add the required subdirectories (which depend on your MATLAB version). We recommend to put `ft_defaults` in your MATLAB [startup.m](https://nl.mathworks.com/help/matlab/ref/startup.html) file.
 
 ### Download and organize the scripts and data
 

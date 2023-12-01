@@ -13,7 +13,7 @@ The general idea behind the real-time processing of EEG/MEG data in FieldTrip in
 To get some quick satisfaction with streaming data, you might want to try out the example given in this [frequently asked question](/faq/how_should_i_get_started_with_the_fieldtrip_realtime_buffer).
 {% include markup/end %}
 
-To get started, you should add the FieldTrip main directory to your path, and execute the **[ft_defaults](/reference/ft_defaults)** function, which sets the defaults and configures up the minimal required path settings. See also this [frequently asked question](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path).
+To get started, you should add the FieldTrip main directory to your path, and execute the **[ft_defaults](/reference/ft_defaults)** function, which sets the defaults and configures up the minimal required path settings. See also this [frequently asked question](/faq/installation).
 
     addpath <path_to_fieldtrip>
     ft_defaults
