@@ -1,21 +1,13 @@
 ---
-title: Should I add FieldTrip with all subdirectories to my MATLAB path?
+title: Installation and setting up the path
 tags: [faq, matlab, path, warning]
 redirect_from:
   - /faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path/
 ---
 
-# Should I add FieldTrip with all subdirectories to my MATLAB path?
+# Installation and setting up the path
 
-In general you should **not** add FieldTrip with all subdirectories to your path. There are a number of external toolboxes (in fieldtrip/external) which are irrelevant for most users, and even can cause some problems if they overlap with other (custom) toolboxes on your path. Furthermore, there are some functions for backward compatibility in fieldtrip/compat, which should *only* be added to your path in case you use the corresponding old MATLAB release.
-
-{% include markup/danger %}
-Please be aware that you should *not* do
-
-    addpath(genpath('/home/user/fieldtrip'))
-
-because that will add many toolbox directories to your path that you won't use. Furthermore, it would cause some toolboxes to be on your path twice (such as SPM) and creates problems with builtin MATLAB functions for which FieldTrip has backward-compatibility replacements.
-{% include markup/end %}
+In general you should *not* add FieldTrip with all subdirectories to your path. There are a number of external toolboxes in `fieldtrip/external` that are irrelevant for most users, and even can cause some problems if they overlap with other (custom) toolboxes on your path. Furthermore, there are some functions for backward compatibility in `fieldtrip/compat`, which should *only* be added to your path in case you use the corresponding old MATLAB release.
 
 ## Step 1
 
@@ -45,17 +37,31 @@ If a subsequent FieldTrip function need an external toolbox that is present in f
 
 ## Making it persistent
 
-It is most convenient to have the addpath and **[ft_defaults](/reference/ft_defaults)** in a script with the name **startup.m**, which is located in your own MATLAB directory. See [this information from MathWorks](http://www.mathworks.com/access/helpdesk/help/techdoc/ref/startup.html).
+It is most convenient to have the addpath and **[ft_defaults](/reference/ft_defaults)** in a script with the name `startup.m`, which is located in your own MATLAB directory. See [this information from MathWorks](http://www.mathworks.com/access/helpdesk/help/techdoc/ref/startup.html).
+
+## Avoid addpath(genpath(...))
+
+Please be aware that you should *not* do
+
+    addpath(genpath('/home/user/fieldtrip'))
+
+because that will add many toolbox directories to your path that you won't use. Furthermore, it would cause some toolboxes to be on your path twice (such as SPM) and creates problems with builtin MATLAB functions for which FieldTrip has backward-compatibility replacements.
+
+## Avoid unsing the graphical path setup tool
+
+We recommend *not* to use the graphical path setup tool that MATLAB offers and especially not the "add with subdirectories" button. The graphical path setup tool often results in multiple versions of the same toolbox being on the path, or in outdated versions of a toolbox being on the path. It can even cause MathWorks own toolboxes to become messed up, for example by including the image processing toolbox of MATLAB version `xxx` to be added to the path of MATLAB `yyy` when you upgrade.
+
+Instead we recommend to create a [startup.m](https://nl.mathworks.com/help/matlab/ref/startup.html) file and use that to explicitly manage the toolboxes and versions.
 
 ## Clean up your path
 
-If you want to ensure that you have a clean version of the FieldTrip toolbox on your MATLAB path, please do
+If you want to ensure that you have a totally clean version of the FieldTrip toolbox on your MATLAB path, please use [restoredefaultpath](https://nl.mathworks.com/help/matlab/ref/restoredefaultpath.htm) like this
 
     restoredefaultpath
-    addpath /home/common/matlab/fieldtrip
+    addpath <path_to_fieldtrip>
     ft_defaults
 
-All other dependencies will subsequently be added automatically when needed.
+All dependencies will subsequently be added automatically as needed.
 
 ## How to deal with toolboxes that FieldTrip uses?
 
@@ -63,4 +69,4 @@ In case FieldTrip function needs additional functions (e.g., for reading a speci
 
 The main FieldTrip functions such as **[ft_preprocessing](/reference/ft_preprocessing)** and **[ft_freqanalysis](/reference/ft_freqanalysis)** all call the **[ft_defaults](/reference/ft_defaults)** function at the beginning. The **[ft_defaults](/reference/ft_defaults)** function ensures that the required subdirectories such as fieldtrip/preproc and fieldtrip/fileio are added. All other toolboxes in fieldtrip/external will only be added upon request, i.e. only when a function from one of those toolboxes is really needed.
 
-You might be worried that this automatic path-checking and path-adding on every function call makes it slow. The **[ft_hastoolbox](//reference/utilities/ft_hastoolbox)** function remembers (with a persistent variable) whether a certain toolbox has already been checked, and therefore does not check the same toolbox twice. In case FieldTrip folders are removed, for instance by using rmpath or restoredefaultpath, make sure to reset the persistent variable in the ft_hastoolbox function again by executing "clear ft_hastoolbox".
+You might be worried that this automatic path-checking and path-adding on every function call makes it slow. The **[ft_hastoolbox](//reference/utilities/ft_hastoolbox)** function remembers (with a persistent variable) whether a certain toolbox has already been checked, and therefore does not check the same toolbox twice. In case FieldTrip folders are removed, for instance by using rmpath or restoredefaultpath, make sure to reset the persistent variable in the ft_hastoolbox function again by executing `clear ft_hastoolbox`.
