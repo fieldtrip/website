@@ -322,6 +322,9 @@
 - name:  In what way can frequency domain data be represented in FieldTrip?
   link:  /faq/in_what_way_can_frequency_domain_data_be_represented_in_fieldtrip
 
+- name:  Should I add FieldTrip with all subdirectories to my MATLAB path?
+  link:  /faq/installation
+
 - name:  Is it good or bad to have dipole locations outside of the brain for which the source reconstruction is computed?
   link:  /faq/is_it_good_or_bad_to_have_dipole_locations_outside_of_the_brain_for_which_the_source_reconstruction_is_computed
 
@@ -375,9 +378,6 @@
 
 - name:  Should I use t or F values for cluster-based permutation tests?
   link:  /faq/should_I_use_t_or_F_values_for_cluster-based_permutation_tests
-
-- name:  Should I add FieldTrip with all subdirectories to my MATLAB path?
-  link:  /faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path
 
 - name:  Is it OK for vertices/dipoles to stick out of the volume conductor?
   link:  /faq/sticking_out
