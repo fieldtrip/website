@@ -1,0 +1,93 @@
+articleids:
+- idtype: pmid
+  value: '37961359'
+- idtype: doi
+  value: 10.1101/2023.10.24.563768
+- idtype: pmcid
+  value: PMC10634799
+authors:
+- authtype: Author
+  name: Windolf C
+- authtype: Author
+  name: Yu H
+- authtype: Author
+  name: Paulk AC
+- authtype: Author
+  name: Meszéna D
+- authtype: Author
+  name: Muñoz W
+- authtype: Author
+  name: Boussard J
+- authtype: Author
+  name: Hardstone R
+- authtype: Author
+  name: Caprara I
+- authtype: Author
+  name: Jamali M
+- authtype: Author
+  name: Kfir Y
+- authtype: Author
+  name: Xu D
+- authtype: Author
+  name: Chung JE
+- authtype: Author
+  name: Sellers KK
+- authtype: Author
+  name: Ye Z
+- authtype: Author
+  name: Shaker J
+- authtype: Author
+  name: Lebedeva A
+- authtype: Author
+  name: Raghavan M
+- authtype: Author
+  name: Trautmann E
+- authtype: Author
+  name: Melin M
+- authtype: Author
+  name: Couto J
+- authtype: Author
+  name: Garcia S
+- authtype: Author
+  name: Coughlin B
+- authtype: Author
+  name: Horváth C
+- authtype: Author
+  name: Fiáth R
+- authtype: Author
+  name: Ulbert I
+- authtype: Author
+  name: Movshon JA
+- authtype: Author
+  name: Shadlen MN
+- authtype: Author
+  name: Churchland MM
+- authtype: Author
+  name: Churchland AK
+- authtype: Author
+  name: Steinmetz NA
+- authtype: Author
+  name: Chang EF
+- authtype: Author
+  name: Schweitzer JS
+- authtype: Author
+  name: Williams ZM
+- authtype: Author
+  name: Cash SS
+- authtype: Author
+  name: Paninski L
+- authtype: Author
+  name: Varol E
+epubdate: 2023 Oct 29
+fulljournalname: bioRxiv
+issue: ''
+pages: 2023.10.24.563768
+pmclivedate: 2023/11/13
+printpubdate: ''
+pubdate: 2023 Oct 29
+sortdate: 2023/10/29 00:00
+source: bioRxiv
+title: 'DREDge: robust motion correction for high-density extracellular recordings
+  across species'
+uid: '10634799'
+volume: ''

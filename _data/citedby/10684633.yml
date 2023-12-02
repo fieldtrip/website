@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '37880568'
+- idtype: doi
+  value: 10.3758/s13415-023-01132-1
+- idtype: pmcid
+  value: PMC10684633
+authors:
+- authtype: Author
+  name: Roxburgh AD
+- authtype: Author
+  name: White DJ
+- authtype: Author
+  name: Grillon C
+- authtype: Author
+  name: Cornwell BR
+epubdate: 2023 Oct 25
+fulljournalname: Cognitive, Affective & Behavioral Neuroscience
+issue: '6'
+pages: 1534-1544
+pmclivedate: 2023/11/30
+printpubdate: '2023'
+pubdate: 2023 Oct 25
+sortdate: 2023/10/25 00:00
+source: Cogn Affect Behav Neurosci
+title: A neural oscillatory signature of sustained anxiety
+uid: '10684633'
+volume: '23'

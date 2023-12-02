@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '37846551'
+- idtype: doi
+  value: 10.1002/hbm.26511
+- idtype: pmcid
+  value: PMC10681658
+authors:
+- authtype: Author
+  name: Capouskova K
+- authtype: Author
+  name: Zamora‐López G
+- authtype: Author
+  name: Kringelbach ML
+- authtype: Author
+  name: Deco G
+epubdate: 2023 Oct 17
+fulljournalname: Human Brain Mapping
+issue: '18'
+pages: 6349-6363
+pmclivedate: 2023/10/17
+printpubdate: ''
+pubdate: 2023 Oct 17
+sortdate: 2023/10/17 00:00
+source: Hum Brain Mapp
+title: Integration and segregation manifolds in the brain ensure cognitive flexibility
+  during tasks and rest
+uid: '10681658'
+volume: '44'
