@@ -1,0 +1,47 @@
+articleids:
+- idtype: pmid
+  value: '37327379'
+- idtype: doi
+  value: 10.1093/brain/awad206
+- idtype: pmcid
+  value: PMC10681666
+authors:
+- authtype: Author
+  name: Paulo DL
+- authtype: Author
+  name: Qian H
+- authtype: Author
+  name: Subramanian D
+- authtype: Author
+  name: Johnson GW
+- authtype: Author
+  name: Zhao Z
+- authtype: Author
+  name: Hett K
+- authtype: Author
+  name: Kang H
+- authtype: Author
+  name: Chris Kao C
+- authtype: Author
+  name: Roy N
+- authtype: Author
+  name: Summers JE
+- authtype: Author
+  name: Claassen DO
+- authtype: Author
+  name: Dhima K
+- authtype: Author
+  name: Bick SK
+epubdate: 2023 Jun 16
+fulljournalname: Brain
+issue: '9'
+pages: 3662-3675
+pmclivedate: ''
+printpubdate: ''
+pubdate: 2023 Jun 16
+sortdate: 2023/06/16 00:00
+source: Brain
+title: Corticostriatal beta oscillation changes associated with cognitive function
+  in Parkinson’s disease
+uid: '10681666'
+volume: '146'

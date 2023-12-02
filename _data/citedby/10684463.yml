@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '37819489'
+- idtype: doi
+  value: 10.1007/s13311-023-01447-4
+- idtype: pmcid
+  value: PMC10684463
+authors:
+- authtype: Author
+  name: Sil T
+- authtype: Author
+  name: Hanafi I
+- authtype: Author
+  name: Eldebakey H
+- authtype: Author
+  name: Palmisano C
+- authtype: Author
+  name: Volkmann J
+- authtype: Author
+  name: Muthuraman M
+- authtype: Author
+  name: Reich MM
+- authtype: Author
+  name: Peach R
+epubdate: 2023 Oct 11
+fulljournalname: Neurotherapeutics
+issue: '6'
+pages: 1767-1778
+pmclivedate: 2023/11/30
+printpubdate: 2023 Oct
+pubdate: 2023 Oct 11
+sortdate: 2023/10/11 00:00
+source: Neurotherapeutics
+title: 'Wavelet-Based Bracketing, Time–Frequency Beta Burst Detection: New Insights
+  in Parkinson’s Disease'
+uid: '10684463'
+volume: '20'

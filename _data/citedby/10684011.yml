@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '38015826'
+- idtype: doi
+  value: 10.1371/journal.pbio.3002393
+- idtype: pmcid
+  value: PMC10684011
+authors:
+- authtype: Author
+  name: Al E
+- authtype: Author
+  name: Stephani T
+- authtype: Author
+  name: Engelhardt M
+- authtype: Author
+  name: Haegens S
+- authtype: Author
+  name: Villringer A
+- authtype: Author
+  name: Nikulin VV
+epubdate: 2023 Nov 28
+fulljournalname: PLOS Biology
+issue: '11'
+pages: e3002393
+pmclivedate: 2023/11/30
+printpubdate: ''
+pubdate: 2023 Nov 28
+sortdate: 2023/11/28 00:00
+source: PLoS Biol
+title: Cardiac activity impacts cortical motor excitability
+uid: '10684011'
+volume: '21'
