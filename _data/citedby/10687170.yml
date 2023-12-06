@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '38030611'
+- idtype: doi
+  value: 10.1038/s41467-023-43257-4
+- idtype: pmcid
+  value: PMC10687170
+authors:
+- authtype: Author
+  name: Breault MS
+- authtype: Author
+  name: Sacré P
+- authtype: Author
+  name: Fitzgerald ZB
+- authtype: Author
+  name: Gale JT
+- authtype: Author
+  name: Cullen KE
+- authtype: Author
+  name: González-Martínez JA
+- authtype: Author
+  name: Sarma SV
+epubdate: 2023 Nov 29
+fulljournalname: Nature Communications
+issue: ''
+pages: '7837'
+pmclivedate: 2023/11/30
+printpubdate: ''
+pubdate: 2023 Nov 29
+sortdate: 2023/11/29 00:00
+source: Nat Commun
+title: Internal states as a source of subject-dependent movement variability are represented
+  by large-scale brain networks
+uid: '10687170'
+volume: '14'

@@ -1,0 +1,47 @@
+articleids:
+- idtype: pmid
+  value: '38033537'
+- idtype: doi
+  value: 10.3389/fnins.2023.1269474
+- idtype: pmcid
+  value: PMC10687141
+authors:
+- authtype: Author
+  name: Bai Z
+- authtype: Author
+  name: Zhu F
+- authtype: Author
+  name: Lou X
+- authtype: Author
+  name: Zhang JJ
+- authtype: Author
+  name: Jin M
+- authtype: Author
+  name: Qin W
+- authtype: Author
+  name: Tang C
+- authtype: Author
+  name: Li J
+- authtype: Author
+  name: Lu J
+- authtype: Author
+  name: Lin J
+- authtype: Author
+  name: Jin L
+- authtype: Author
+  name: Qi Q
+- authtype: Author
+  name: Fong KN
+epubdate: 2023 Nov 16
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '1269474'
+pmclivedate: 2023/11/30
+printpubdate: ''
+pubdate: 2023 Nov 16
+sortdate: 2023/11/16 00:00
+source: Front Neurosci
+title: Considerable effects of lateralization and aging in intracortical excitation
+  and inhibition
+uid: '10687141'
+volume: '17'

@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '37804250'
+- idtype: doi
+  value: 10.1093/cercor/bhad367
+- idtype: pmcid
+  value: PMC10690871
+authors:
+- authtype: Author
+  name: Herrera B
+- authtype: Author
+  name: Sajad A
+- authtype: Author
+  name: Errington SP
+- authtype: Author
+  name: Schall JD
+- authtype: Author
+  name: Riera JJ
+epubdate: 2023 Oct 6
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '23'
+pages: 11300-11319
+pmclivedate: ''
+printpubdate: ''
+pubdate: 2023 Oct 6
+sortdate: 2023/10/06 00:00
+source: Cereb Cortex
+title: Cortical origin of theta error signals
+uid: '10690871'
+volume: '33'
