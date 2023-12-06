@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '38033709'
+- idtype: doi
+  value: 10.1016/j.ynpai.2023.100140
+- idtype: pmcid
+  value: PMC10687342
+authors:
+- authtype: Author
+  name: Marinkovic K
+- authtype: Author
+  name: Woodruff D
+- authtype: Author
+  name: White DR
+- authtype: Author
+  name: Caudle MM
+- authtype: Author
+  name: Cronan T
+epubdate: 2023 Jul 22
+fulljournalname: Neurobiology of Pain
+issue: ''
+pages: '100140'
+pmclivedate: 2023/11/30
+printpubdate: ''
+pubdate: 2023 Jul 22
+sortdate: 2023/07/22 00:00
+source: Neurobiol Pain
+title: Neural indices of multimodal sensory and autonomic hyperexcitability in fibromyalgia
+uid: '10687342'
+volume: '14'

@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '37702021'
+- idtype: doi
+  value: 10.1002/epi4.12827
+- idtype: pmcid
+  value: PMC10690668
+authors:
+- authtype: Author
+  name: Cserpan D
+- authtype: Author
+  name: Guidi G
+- authtype: Author
+  name: Alessandri B
+- authtype: Author
+  name: Fedele T
+- authtype: Author
+  name: Rüegger A
+- authtype: Author
+  name: Pisani F
+- authtype: Author
+  name: Sarnthein J
+- authtype: Author
+  name: Ramantani G
+epubdate: 2023 Sep 20
+fulljournalname: Epilepsia Open
+issue: '4'
+pages: 1491-1502
+pmclivedate: 2023/12/02
+printpubdate: ''
+pubdate: 2023 Sep 20
+sortdate: 2023/09/20 00:00
+source: Epilepsia Open
+title: Scalp high‐frequency oscillations differentiate neonates with seizures from
+  healthy neonates
+uid: '10690668'
+volume: '8'
