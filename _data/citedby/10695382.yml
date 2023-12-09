@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '37983253'
+- idtype: doi
+  value: 10.1371/journal.pbio.3002399
+- idtype: pmcid
+  value: PMC10695382
+authors:
+- authtype: Author
+  name: Liu J
+- authtype: Author
+  name: Xia T
+- authtype: Author
+  name: Chen D
+- authtype: Author
+  name: Yao Z
+- authtype: Author
+  name: Zhu M
+- authtype: Author
+  name: Antony JW
+- authtype: Author
+  name: Lee TM
+- authtype: Author
+  name: Hu X
+epubdate: 2023 Nov 20
+fulljournalname: PLOS Biology
+issue: '11'
+pages: e3002399
+pmclivedate: 2023/12/05
+printpubdate: ''
+pubdate: 2023 Nov 20
+sortdate: 2023/11/20 00:00
+source: PLoS Biol
+title: Item-specific neural representations during human sleep support long-term memory
+uid: '10695382'
+volume: '21'

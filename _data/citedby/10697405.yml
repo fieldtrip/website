@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '37788939'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0197-23.2023
+- idtype: pmcid
+  value: PMC10697405
+authors:
+- authtype: Author
+  name: Fan JM
+- authtype: Author
+  name: Kudo K
+- authtype: Author
+  name: Verma P
+- authtype: Author
+  name: Ranasinghe KG
+- authtype: Author
+  name: Morise H
+- authtype: Author
+  name: Findlay AM
+- authtype: Author
+  name: Vossel K
+- authtype: Author
+  name: Kirsch HE
+- authtype: Author
+  name: Raj A
+- authtype: Author
+  name: Krystal AD
+- authtype: Author
+  name: Nagarajan SS
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '48'
+pages: 8157-8171
+pmclivedate: ''
+printpubdate: 2023 Nov 29
+pubdate: 2023 Nov 29
+sortdate: 2023/11/29 00:00
+source: J Neurosci
+title: Cortical Synchrony and Information Flow during Transition from Wakefulness
+  to Light Non-Rapid Eye Movement Sleep
+uid: '10697405'
+volume: '43'

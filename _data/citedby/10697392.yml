@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '37793909'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0235-23.2023
+- idtype: pmcid
+  value: PMC10697392
+authors:
+- authtype: Author
+  name: Inbar M
+- authtype: Author
+  name: Genzer S
+- authtype: Author
+  name: Perry A
+- authtype: Author
+  name: Grossman E
+- authtype: Author
+  name: Landau AN
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '48'
+pages: 8189-8200
+pmclivedate: ''
+printpubdate: 2023 Nov 29
+pubdate: 2023 Nov 29
+sortdate: 2023/11/29 00:00
+source: J Neurosci
+title: Intonation Units in Spontaneous Speech Evoke a Neural Response
+uid: '10697392'
+volume: '43'
