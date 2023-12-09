@@ -1,0 +1,42 @@
+articleids:
+- idtype: pmid
+  value: '38036557'
+- idtype: doi
+  value: 10.1038/s41467-023-42971-3
+- idtype: pmcid
+  value: PMC10689494
+authors:
+- authtype: Author
+  name: Sheybani L
+- authtype: Author
+  name: Vivekananda U
+- authtype: Author
+  name: Rodionov R
+- authtype: Author
+  name: Diehl B
+- authtype: Author
+  name: Chowdhury FA
+- authtype: Author
+  name: McEvoy AW
+- authtype: Author
+  name: Miserocchi A
+- authtype: Author
+  name: Bisby JA
+- authtype: Author
+  name: Bush D
+- authtype: Author
+  name: Burgess N
+- authtype: Author
+  name: Walker MC
+epubdate: 2023 Nov 30
+fulljournalname: Nature Communications
+issue: ''
+pages: '7397'
+pmclivedate: 2023/12/02
+printpubdate: ''
+pubdate: 2023 Nov 30
+sortdate: 2023/11/30 00:00
+source: Nat Commun
+title: Wake slow waves in focal human epilepsy impact network activity and cognition
+uid: '10689494'
+volume: '14'
