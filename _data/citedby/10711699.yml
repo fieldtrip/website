@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '37845035'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.2238-22.2023
+- idtype: pmcid
+  value: PMC10711699
+authors:
+- authtype: Author
+  name: Schwey A
+- authtype: Author
+  name: Battaglia D
+- authtype: Author
+  name: Bahuguna J
+- authtype: Author
+  name: Malfait N
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '49'
+pages: 8472-8486
+pmclivedate: ''
+printpubdate: 2023 Dec 6
+pubdate: 2023 Dec 6
+sortdate: 2023/12/06 00:00
+source: J Neurosci
+title: Different Faces of Medial Beta-Band Activity Reflect Distinct Visuomotor Feedback
+  Signals
+uid: '10711699'
+volume: '43'

@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '38054952'
+- idtype: doi
+  value: 10.7554/eLife.86740
+- idtype: pmcid
+  value: PMC10703440
+authors:
+- authtype: Author
+  name: Braun A
+- authtype: Author
+  name: Donner TH
+epubdate: 2023 Dec 6
+fulljournalname: eLife
+issue: ''
+pages: RP86740
+pmclivedate: 2023/12/08
+printpubdate: ''
+pubdate: 2023 Dec 6
+sortdate: 2023/12/06 00:00
+source: eLife
+title: Adaptive biasing of action-selective cortical build-up activity by stimulus
+  history
+uid: '10703440'
+volume: '12'
