@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '37833066'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0886-23.2023
+- idtype: pmcid
+  value: PMC10711718
+authors:
+- authtype: Author
+  name: Rayson H
+- authtype: Author
+  name: Szul MJ
+- authtype: Author
+  name: El-Khoueiry P
+- authtype: Author
+  name: Debnath R
+- authtype: Author
+  name: Gautier-Martins M
+- authtype: Author
+  name: Ferrari PF
+- authtype: Author
+  name: Fox N
+- authtype: Author
+  name: Bonaiuto JJ
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '49'
+pages: 8487-8503
+pmclivedate: 2023/12/12
+printpubdate: 2023 Dec 6
+pubdate: 2023 Dec 6
+sortdate: 2023/12/06 00:00
+source: J Neurosci
+title: 'Bursting with Potential: How Sensorimotor Beta Bursts Develop from Infancy
+  to Adulthood'
+uid: '10711718'
+volume: '43'

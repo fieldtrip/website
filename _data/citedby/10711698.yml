@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '37857486'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0709-23.2023
+- idtype: pmcid
+  value: PMC10711698
+authors:
+- authtype: Author
+  name: Nasrawi R
+- authtype: Author
+  name: Boettcher SE
+- authtype: Author
+  name: van Ede F
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '49'
+pages: 8515-8524
+pmclivedate: 2023/12/12
+printpubdate: 2023 Dec 6
+pubdate: 2023 Dec 6
+sortdate: 2023/12/06 00:00
+source: J Neurosci
+title: Prospection of Potential Actions during Visual Working Memory Starts Early,
+  Is Flexible, and Predicts Behavior
+uid: '10711698'
+volume: '43'
