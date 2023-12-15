@@ -206,6 +206,13 @@ The following template layouts are for a sensor array of the CTF MEG system.
 
 {% include image src="/assets/img/template/layout/fieldlinealpha1_helmet.mat.png" width="200" %}
 
+##### Beta-2 smart helmet
+
+{% include image src="/assets/img/template/layout/fieldlinebeta2bx_helmet.mat.png" width="200" %}
+{% include image src="/assets/img/template/layout/fieldlinebeta2by_helmet.mat.png" width="200" %}
+{% include image src="/assets/img/template/layout/fieldlinebeta2bz_helmet.mat.png" width="200" %}
+{% include image src="/assets/img/template/layout/fieldlinebeta2all_helmet.mat.png" width="200" %}
+
 ### Neuromag/Elekta/Megin system
 
 #### 306-channel system
