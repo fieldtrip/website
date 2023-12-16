@@ -2406,6 +2406,9 @@ buttonpress
 buttonui
 bvery
 bwlabeln
+bx
+by
+bz
 cBG
 cG
 calc
