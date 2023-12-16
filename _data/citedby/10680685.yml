@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '38014071'
+- idtype: doi
+  value: 10.1101/2023.11.15.567302
+- idtype: pmcid
+  value: PMC10680685
+authors:
+- authtype: Author
+  name: Munot S
+- authtype: Author
+  name: Kim N
+- authtype: Author
+  name: Huang Y
+- authtype: Author
+  name: Keller CJ
+epubdate: 2023 Nov 17
+fulljournalname: bioRxiv
+issue: ''
+pages: 2023.11.15.567302
+pmclivedate: 2023/11/27
+printpubdate: ''
+pubdate: 2023 Nov 17
+sortdate: 2023/11/17 00:00
+source: bioRxiv
+title: Direct cortical stimulation induces short-term plasticity of neural oscillations
+  in humans
+uid: '10680685'
+volume: ''
