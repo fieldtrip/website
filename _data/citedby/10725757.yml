@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1098/rstb.2022.0426
+- idtype: pmcid
+  value: PMC10725757
+authors:
+- authtype: Author
+  name: Drew A
+- authtype: Author
+  name: Soto-Faraco S
+epubdate: 2023 Dec 18
+fulljournalname: 'Philosophical Transactions of the Royal Society B: Biological Sciences'
+issue: '1895'
+pages: '20220426'
+pmclivedate: 2023/12/18
+printpubdate: 2024 Jan 29
+pubdate: 2023 Dec 18
+sortdate: 2023/12/18 00:00
+source: Philos Trans R Soc Lond B Biol Sci
+title: 'Perceptual oddities: assessing the relationship between film editing and prediction
+  processes'
+uid: '10725757'
+volume: '379'

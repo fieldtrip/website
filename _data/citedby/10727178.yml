@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '37852789'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1016-23.2023
+- idtype: pmcid
+  value: PMC10727178
+authors:
+- authtype: Author
+  name: Perera ND
+- authtype: Author
+  name: Alekseichuk I
+- authtype: Author
+  name: Shirinpour S
+- authtype: Author
+  name: Wischnewski M
+- authtype: Author
+  name: Linn G
+- authtype: Author
+  name: Masiello K
+- authtype: Author
+  name: Butler B
+- authtype: Author
+  name: Russ BE
+- authtype: Author
+  name: Schroeder CE
+- authtype: Author
+  name: Falchier A
+- authtype: Author
+  name: Opitz A
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '50'
+pages: 8649-8662
+pmclivedate: ''
+printpubdate: 2023 Dec 13
+pubdate: 2023 Dec 13
+sortdate: 2023/12/13 00:00
+source: J Neurosci
+title: Dissociation of Centrally and Peripherally Induced Transcranial Magnetic Stimulation
+  Effects in Nonhuman Primates
+uid: '10727178'
+volume: '43'

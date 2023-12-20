@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '37092862'
+- idtype: doi
+  value: 10.1017/S0033291723000843
+- idtype: pmcid
+  value: PMC10719690
+authors:
+- authtype: Author
+  name: Perera MP
+- authtype: Author
+  name: Mallawaarachchi S
+- authtype: Author
+  name: Bailey NW
+- authtype: Author
+  name: Murphy OW
+- authtype: Author
+  name: Fitzgerald PB
+epubdate: 2023 Apr 24
+fulljournalname: Psychological Medicine
+issue: '15'
+pages: 7287-7299
+pmclivedate: 2023/12/15
+printpubdate: 2023 Nov
+pubdate: 2023 Apr 24
+sortdate: 2023/04/24 00:00
+source: Psychol Med
+title: Obsessive–compulsive disorder (OCD) is associated with increased engagement
+  of frontal brain regions across multiple event-related potentials
+uid: '10719690'
+volume: '53'
