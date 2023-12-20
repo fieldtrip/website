@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '38102191'
+- idtype: doi
+  value: 10.1038/s41539-023-00209-3
+- idtype: pmcid
+  value: PMC10724295
+authors:
+- authtype: Author
+  name: Liu J
+- authtype: Author
+  name: Fan T
+- authtype: Author
+  name: Chen Y
+- authtype: Author
+  name: Zhao J
+epubdate: 2023 Dec 16
+fulljournalname: NPJ Science of Learning
+issue: ''
+pages: '60'
+pmclivedate: 2023/12/16
+printpubdate: ''
+pubdate: 2023 Dec 16
+sortdate: 2023/12/16 00:00
+source: NPJ Sci Learn
+title: Seeking the neural representation of statistical properties in print during
+  implicit processing of visual words
+uid: '10724295'
+volume: '8'

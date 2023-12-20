@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1098/rstb.2022.0418
+- idtype: pmcid
+  value: PMC10725772
+authors:
+- authtype: Author
+  name: Tiihonen M
+- authtype: Author
+  name: Haumann NT
+- authtype: Author
+  name: Shtyrov Y
+- authtype: Author
+  name: Vuust P
+- authtype: Author
+  name: Jacobsen T
+- authtype: Author
+  name: Brattico E
+epubdate: 2023 Dec 18
+fulljournalname: 'Philosophical Transactions of the Royal Society B: Biological Sciences'
+issue: '1895'
+pages: '20220418'
+pmclivedate: ''
+printpubdate: 2024 Jan 29
+pubdate: 2023 Dec 18
+sortdate: 2023/12/18 00:00
+source: Philos Trans R Soc Lond B Biol Sci
+title: The impact of crossmodal predictions on the neural processing of aesthetic
+  stimuli
+uid: '10725772'
+volume: '379'

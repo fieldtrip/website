@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '38107505'
+- idtype: doi
+  value: 10.1093/braincomms/fcad330
+- idtype: pmcid
+  value: PMC10724050
+authors:
+- authtype: Author
+  name: Faiman I
+- authtype: Author
+  name: Sparks R
+- authtype: Author
+  name: Winston JS
+- authtype: Author
+  name: Brunnhuber F
+- authtype: Author
+  name: Ciulini N
+- authtype: Author
+  name: Young AH
+- authtype: Author
+  name: Shotbolt P
+epubdate: 2023 Nov 30
+fulljournalname: Brain Communications
+issue: '6'
+pages: fcad330
+pmclivedate: 2023/12/16
+printpubdate: ''
+pubdate: 2023 Nov 30
+sortdate: 2023/11/30 00:00
+source: Brain Commun
+title: Limited clinical validity of univariate resting-state EEG markers for classifying
+  seizure disorders
+uid: '10724050'
+volume: '5'

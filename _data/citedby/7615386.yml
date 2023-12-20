@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '37402765'
+- idtype: doi
+  value: 10.1038/s41386-023-01628-x
+- idtype: pmcid
+  value: PMC7615386
+authors:
+- authtype: Author
+  name: Doherty JL
+- authtype: Author
+  name: Cunningham AC
+- authtype: Author
+  name: Chawner SJ
+- authtype: Author
+  name: Moss HM
+- authtype: Author
+  name: Dima DC
+- authtype: Author
+  name: Linden DE
+- authtype: Author
+  name: Owen MJ
+- authtype: Author
+  name: van den Bree MB
+- authtype: Author
+  name: Singh KD
+epubdate: 2023 Jul 4
+fulljournalname: Neuropsychopharmacology
+issue: '2'
+pages: 368-376
+pmclivedate: 2023/12/17
+printpubdate: 2024 Jan
+pubdate: 2023 Jul 4
+sortdate: 2023/07/04 00:00
+source: Neuropsychopharmacology
+title: Atypical cortical networks in children at high-genetic risk of psychiatric
+  and neurodevelopmental disorders
+uid: '7615386'
+volume: '49'
