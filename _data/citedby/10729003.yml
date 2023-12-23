@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '38116107'
+- idtype: doi
+  value: 10.3389/fneur.2023.1268165
+- idtype: pmcid
+  value: PMC10729003
+authors:
+- authtype: Author
+  name: Picciuca C
+- authtype: Author
+  name: Assogna M
+- authtype: Author
+  name: Esposito R
+- authtype: Author
+  name: D’Acunto A
+- authtype: Author
+  name: Ferraresi M
+- authtype: Author
+  name: Picazio S
+- authtype: Author
+  name: Borghi I
+- authtype: Author
+  name: Martino Cinnera A
+- authtype: Author
+  name: Bonnì S
+- authtype: Author
+  name: Chiurazzi P
+- authtype: Author
+  name: Koch G
+epubdate: 2023 Dec 5
+fulljournalname: Frontiers in Neurology
+issue: ''
+pages: '1268165'
+pmclivedate: 2023/12/19
+printpubdate: ''
+pubdate: 2023 Dec 5
+sortdate: 2023/12/05 00:00
+source: Front Neurol
+title: 'Transcranial direct current stimulation combined with speech therapy in Fragile
+  X syndrome patients: a pilot study'
+uid: '10729003'
+volume: '14'
