@@ -1,0 +1,47 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1186/s40779-023-00502-7
+- idtype: pmcid
+  value: PMC10729551
+authors:
+- authtype: Author
+  name: Zhang H
+- authtype: Author
+  name: Zhou QQ
+- authtype: Author
+  name: Chen H
+- authtype: Author
+  name: Hu XQ
+- authtype: Author
+  name: Li WG
+- authtype: Author
+  name: Bai Y
+- authtype: Author
+  name: Han JX
+- authtype: Author
+  name: Wang Y
+- authtype: Author
+  name: Liang ZH
+- authtype: Author
+  name: Chen D
+- authtype: Author
+  name: Cong FY
+- authtype: Author
+  name: Yan JQ
+- authtype: Author
+  name: Li XL
+epubdate: 2023 Dec 19
+fulljournalname: Military Medical Research
+issue: ''
+pages: '67'
+pmclivedate: 2023/12/19
+printpubdate: ''
+pubdate: 2023 Dec 19
+sortdate: 2023/12/19 00:00
+source: Mil Med Res
+title: The applied principles of EEG analysis methods in neuroscience and clinical
+  neurology
+uid: '10729551'
+volume: '10'

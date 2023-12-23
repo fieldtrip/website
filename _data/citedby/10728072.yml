@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '38110418'
+- idtype: doi
+  value: 10.1038/s41467-023-43450-5
+- idtype: pmcid
+  value: PMC10728072
+authors:
+- authtype: Author
+  name: Schreiner T
+- authtype: Author
+  name: Petzka M
+- authtype: Author
+  name: Staudigl T
+- authtype: Author
+  name: Staresina BP
+epubdate: 2023 Dec 18
+fulljournalname: Nature Communications
+issue: ''
+pages: '8351'
+pmclivedate: 2023/12/19
+printpubdate: ''
+pubdate: 2023 Dec 18
+sortdate: 2023/12/18 00:00
+source: Nat Commun
+title: Respiration modulates sleep oscillations and memory reactivation in humans
+uid: '10728072'
+volume: '14'
