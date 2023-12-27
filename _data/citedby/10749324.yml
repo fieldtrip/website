@@ -1,0 +1,40 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fneur.2023.1231736
+- idtype: pmcid
+  value: PMC10749324
+authors:
+- authtype: Author
+  name: Yavuz M
+- authtype: Author
+  name: İyiköşker P
+- authtype: Author
+  name: Mutlu N
+- authtype: Author
+  name: Kiliçparlar S
+- authtype: Author
+  name: Şalci ÖH
+- authtype: Author
+  name: Dolu G
+- authtype: Author
+  name: Kaymakçilar EN
+- authtype: Author
+  name: Akkol S
+- authtype: Author
+  name: Onat F
+epubdate: 2023 Dec 11
+fulljournalname: Frontiers in Neurology
+issue: ''
+pages: '1231736'
+pmclivedate: 2023/12/25
+printpubdate: ''
+pubdate: 2023 Dec 11
+sortdate: 2023/12/11 00:00
+source: Front Neurol
+title: 'Dexmedetomidine, an alpha 2A receptor agonist, triggers seizures unilaterally
+  in GAERS during the pre-epileptic phase: does the onset of spike-and-wave discharges
+  occur in a focal manner?'
+uid: '10749324'
+volume: '14'

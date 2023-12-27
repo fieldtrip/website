@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '38129440'
+- idtype: doi
+  value: 10.1038/s41467-023-44248-1
+- idtype: pmcid
+  value: PMC10739882
+authors:
+- authtype: Author
+  name: Hoy CW
+- authtype: Author
+  name: Quiroga-Martinez DR
+- authtype: Author
+  name: Sandoval E
+- authtype: Author
+  name: King-Stephens D
+- authtype: Author
+  name: Laxer KD
+- authtype: Author
+  name: Weber P
+- authtype: Author
+  name: Lin JJ
+- authtype: Author
+  name: Knight RT
+epubdate: 2023 Dec 21
+fulljournalname: Nature Communications
+issue: ''
+pages: '8520'
+pmclivedate: 2023/12/22
+printpubdate: ''
+pubdate: 2023 Dec 21
+sortdate: 2023/12/21 00:00
+source: Nat Commun
+title: Asymmetric coding of reward prediction errors in human insula and dorsomedial
+  prefrontal cortex
+uid: '10739882'
+volume: '14'

@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '38127998'
+- idtype: doi
+  value: 10.1371/journal.pone.0266586
+- idtype: pmcid
+  value: PMC10735026
+authors:
+- authtype: Author
+  name: Snyder DB
+- authtype: Author
+  name: Beardsley SA
+- authtype: Author
+  name: Hyngstrom AS
+- authtype: Author
+  name: Schmit BD
+epubdate: 2023 Dec 21
+fulljournalname: PLOS ONE
+issue: '12'
+pages: e0266586
+pmclivedate: 2023/12/21
+printpubdate: ''
+pubdate: 2023 Dec 21
+sortdate: 2023/12/21 00:00
+source: PLoS One
+title: 'Cortical effects of wrist tendon vibration during an arm tracking task in
+  chronic stroke survivors: An EEG study'
+uid: '10735026'
+volume: '18'

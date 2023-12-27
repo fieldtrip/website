@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '38129437'
+- idtype: doi
+  value: 10.1038/s41598-023-49121-1
+- idtype: pmcid
+  value: PMC10739941
+authors:
+- authtype: Author
+  name: Courteau É
+- authtype: Author
+  name: Royle P
+- authtype: Author
+  name: Steinhauer K
+epubdate: 2023 Dec 21
+fulljournalname: Scientific Reports
+issue: ''
+pages: '22836'
+pmclivedate: 2023/12/22
+printpubdate: ''
+pubdate: 2023 Dec 21
+sortdate: 2023/12/21 00:00
+source: Sci Rep
+title: 'Number agreement processing in adolescents with and without developmental
+  language disorder (DLD): evidence from event-related brain potentials'
+uid: '10739941'
+volume: '13'
