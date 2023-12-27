@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '38106063'
+- idtype: doi
+  value: 10.1101/2023.12.05.570285
+- idtype: pmcid
+  value: PMC10723308
+authors:
+- authtype: Author
+  name: Hoy CW
+- authtype: Author
+  name: de Hemptinne C
+- authtype: Author
+  name: Wang SS
+- authtype: Author
+  name: Harmer CJ
+- authtype: Author
+  name: Apps MA
+- authtype: Author
+  name: Husain M
+- authtype: Author
+  name: Starr PA
+- authtype: Author
+  name: Little S
+epubdate: 2023 Dec 6
+fulljournalname: bioRxiv
+issue: ''
+pages: 2023.12.05.570285
+pmclivedate: 2023/12/16
+printpubdate: ''
+pubdate: 2023 Dec 6
+sortdate: 2023/12/06 00:00
+source: bioRxiv
+title: Beta and theta oscillations track effort and previous reward in human basal
+  ganglia and prefrontal cortex during decision making
+uid: '10723308'
+volume: ''

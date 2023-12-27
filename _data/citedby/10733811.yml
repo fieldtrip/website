@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '38130839'
+- idtype: doi
+  value: 10.1093/braincomms/fcad327
+- idtype: pmcid
+  value: PMC10733811
+authors:
+- authtype: Author
+  name: Kricheldorff J
+- authtype: Author
+  name: Ficke J
+- authtype: Author
+  name: Debener S
+- authtype: Author
+  name: Witt K
+epubdate: 2023 Nov 30
+fulljournalname: Brain Communications
+issue: '6'
+pages: fcad327
+pmclivedate: 2023/12/21
+printpubdate: ''
+pubdate: 2023 Nov 30
+sortdate: 2023/11/30 00:00
+source: Brain Commun
+title: Impaired proactive cognitive control in Parkinson’s disease
+uid: '10733811'
+volume: '5'
