@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '37848332'
+- idtype: doi
+  value: 10.1212/WNL.0000000000207942
+- idtype: pmcid
+  value: PMC10752648
+authors:
+- authtype: Author
+  name: Bender AC
+- authtype: Author
+  name: Jaleel A
+- authtype: Author
+  name: Pellerin KR
+- authtype: Author
+  name: Moguilner S
+- authtype: Author
+  name: Sarkis RA
+- authtype: Author
+  name: Cash SS
+- authtype: Author
+  name: Lam AD
+epubdate: ''
+fulljournalname: Neurology
+issue: '23'
+pages: e2376-e2387
+pmclivedate: ''
+printpubdate: 2023 Dec 5
+pubdate: 2023 Dec 5
+sortdate: 2023/12/05 00:00
+source: Neurology
+title: Altered Sleep Microarchitecture and Cognitive Impairment in Patients With Temporal
+  Lobe Epilepsy
+uid: '10752648'
+volume: '101'
