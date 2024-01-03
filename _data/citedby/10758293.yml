@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '37926216'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2023.120444
+- idtype: pmcid
+  value: PMC10758293
+- idtype: MID
+  value: NIHMS1949323
+authors:
+- authtype: Author
+  name: Tatti E
+- authtype: Author
+  name: Cacciola A
+- authtype: Author
+  name: Carrara F
+- authtype: Author
+  name: Luciani A
+- authtype: Author
+  name: Quartarone A
+- authtype: Author
+  name: Ghilardi MF
+epubdate: 2023 Nov 4
+fulljournalname: NeuroImage
+issue: ''
+pages: '120444'
+pmclivedate: 2024/01/01
+printpubdate: 2023 Dec 15
+pubdate: 2023 Nov 4
+sortdate: 2023/11/04 00:00
+source: Neuroimage
+title: Movement-related ERS and connectivity in the gamma frequency decrease with
+  practice
+uid: '10758293'
+volume: '284'

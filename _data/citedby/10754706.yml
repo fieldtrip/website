@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '38061133'
+- idtype: doi
+  value: 10.1016/j.dcn.2023.101321
+- idtype: pmcid
+  value: PMC10754706
+authors:
+- authtype: Author
+  name: Bánki A
+- authtype: Author
+  name: Köster M
+- authtype: Author
+  name: Cichy RM
+- authtype: Author
+  name: Hoehl S
+epubdate: 2023 Dec 6
+fulljournalname: Developmental Cognitive Neuroscience
+issue: ''
+pages: '101321'
+pmclivedate: 2023/12/29
+printpubdate: ''
+pubdate: 2023 Dec 6
+sortdate: 2023/12/06 00:00
+source: Dev Cogn Neurosci
+title: Communicative signals during joint attention promote neural processes of infants
+  and caregivers
+uid: '10754706'
+volume: '65'
