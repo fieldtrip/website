@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fnhum.2023.1228859
+- idtype: pmcid
+  value: PMC10757939
+authors:
+- authtype: Author
+  name: Agboada D
+- authtype: Author
+  name: Osnabruegge M
+- authtype: Author
+  name: Rethwilm R
+- authtype: Author
+  name: Kanig C
+- authtype: Author
+  name: Schwitzgebel F
+- authtype: Author
+  name: Mack W
+- authtype: Author
+  name: Schecklmann M
+- authtype: Author
+  name: Seiberl W
+- authtype: Author
+  name: Schoisswohl S
+epubdate: 2023 Dec 18
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '1228859'
+pmclivedate: 2024/01/01
+printpubdate: ''
+pubdate: 2023 Dec 18
+sortdate: 2023/12/18 00:00
+source: Front Hum Neurosci
+title: 'Semi-automated motor hotspot search (SAMHS): a framework toward an optimised
+  approach for motor hotspot identification'
+uid: '10757939'
+volume: '17'
