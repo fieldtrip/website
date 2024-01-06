@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '38168089'
+- idtype: doi
+  value: 10.1038/s41467-023-44632-x
+- idtype: pmcid
+  value: PMC10762147
+authors:
+- authtype: Author
+  name: Algermissen J
+- authtype: Author
+  name: Swart JC
+- authtype: Author
+  name: Scheeringa R
+- authtype: Author
+  name: Cools R
+- authtype: Author
+  name: den Ouden HE
+epubdate: 2024 Jan 2
+fulljournalname: Nature Communications
+issue: ''
+pages: '19'
+pmclivedate: 2024/01/04
+printpubdate: ''
+pubdate: 2024 Jan 2
+sortdate: 2024/01/02 00:00
+source: Nat Commun
+title: Prefrontal signals precede striatal signals for biased credit assignment in
+  motivational learning biases
+uid: '10762147'
+volume: '15'
