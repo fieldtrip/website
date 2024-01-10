@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '38172140'
+- idtype: doi
+  value: 10.1038/s41467-023-44295-8
+- idtype: pmcid
+  value: PMC10764865
+authors:
+- authtype: Author
+  name: Zhang H
+- authtype: Author
+  name: Skelin I
+- authtype: Author
+  name: Ma S
+- authtype: Author
+  name: Paff M
+- authtype: Author
+  name: Mnatsakanyan L
+- authtype: Author
+  name: Yassa MA
+- authtype: Author
+  name: Knight RT
+- authtype: Author
+  name: Lin JJ
+epubdate: 2024 Jan 3
+fulljournalname: Nature Communications
+issue: ''
+pages: '215'
+pmclivedate: 2024/01/04
+printpubdate: ''
+pubdate: 2024 Jan 3
+sortdate: 2024/01/03 00:00
+source: Nat Commun
+title: Awake ripples enhance emotional memory encoding in the human brain
+uid: '10764865'
+volume: '15'

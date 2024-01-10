@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '38168451'
+- idtype: doi
+  value: 10.1101/2023.12.14.571683
+- idtype: pmcid
+  value: PMC10760132
+authors:
+- authtype: Author
+  name: Siefert EM
+- authtype: Author
+  name: Uppuluri S
+- authtype: Author
+  name: Mu. J
+- authtype: Author
+  name: Tandoc MC
+- authtype: Author
+  name: Antony JW
+- authtype: Author
+  name: Schapiro AC
+epubdate: 2023 Dec 14
+fulljournalname: bioRxiv
+issue: ''
+pages: 2023.12.14.571683
+pmclivedate: 2024/01/03
+printpubdate: ''
+pubdate: 2023 Dec 14
+sortdate: 2023/12/14 00:00
+source: bioRxiv
+title: Memory reactivation during sleep does not act holistically on object memory
+uid: '10760132'
+volume: ''
