@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '37996562'
+- idtype: doi
+  value: 10.1007/s10548-023-01018-y
+- idtype: pmcid
+  value: PMC10771591
+authors:
+- authtype: Author
+  name: Song Y
+- authtype: Author
+  name: Gordon PC
+- authtype: Author
+  name: Metsomaa J
+- authtype: Author
+  name: Rostami M
+- authtype: Author
+  name: Belardinelli P
+- authtype: Author
+  name: Ziemann U
+epubdate: 2023 Nov 23
+fulljournalname: Brain Topography
+issue: '1'
+pages: 19-36
+pmclivedate: 2024/01/08
+printpubdate: '2024'
+pubdate: 2023 Nov 23
+sortdate: 2023/11/23 00:00
+source: Brain Topogr
+title: Evoked EEG Responses to TMS Targeting Regions Outside the Primary Motor Cortex
+  and Their Test–Retest Reliability
+uid: '10771591'
+volume: '37'

@@ -1,0 +1,42 @@
+articleids:
+- idtype: pmid
+  value: '38183037'
+- idtype: doi
+  value: 10.1186/s11689-023-09515-8
+- idtype: pmcid
+  value: PMC10770910
+authors:
+- authtype: Author
+  name: Brima T
+- authtype: Author
+  name: Freedman EG
+- authtype: Author
+  name: Prinsloo KD
+- authtype: Author
+  name: Augustine EF
+- authtype: Author
+  name: Adams HR
+- authtype: Author
+  name: Wang KH
+- authtype: Author
+  name: Mink JW
+- authtype: Author
+  name: Shaw LH
+- authtype: Author
+  name: Mantel EP
+- authtype: Author
+  name: Foxe JJ
+epubdate: 2024 Jan 6
+fulljournalname: Journal of Neurodevelopmental Disorders
+issue: ''
+pages: '3'
+pmclivedate: 2024/01/06
+printpubdate: ''
+pubdate: 2024 Jan 6
+sortdate: 2024/01/06 00:00
+source: J Neurodev Disord
+title: 'Assessing the integrity of auditory sensory memory processing in CLN3 disease
+  (Juvenile Neuronal Ceroid Lipofuscinosis (Batten disease)): an auditory evoked potential
+  study of the duration-evoked mismatch negativity (MMN)'
+uid: '10770910'
+volume: '16'
