@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '38187580'
+- idtype: doi
+  value: 10.1101/2023.12.22.571929
+- idtype: pmcid
+  value: PMC10769427
+authors:
+- authtype: Author
+  name: Smith SS
+- authtype: Author
+  name: Jahn KN
+- authtype: Author
+  name: Sugai JA
+- authtype: Author
+  name: Hancock KE
+- authtype: Author
+  name: Polley DB
+epubdate: 2023 Dec 23
+fulljournalname: bioRxiv
+issue: ''
+pages: 2023.12.22.571929
+pmclivedate: 2024/01/06
+printpubdate: ''
+pubdate: 2023 Dec 23
+sortdate: 2023/12/23 00:00
+source: bioRxiv
+title: The human pupil and face encode sound affect and provide objective signatures
+  of tinnitus and auditory hypersensitivity disorders
+uid: '10769427'
+volume: ''

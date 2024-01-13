@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '38191506'
+- idtype: doi
+  value: 10.1038/s41598-023-50760-7
+- idtype: pmcid
+  value: PMC10774351
+authors:
+- authtype: Author
+  name: Arnold DH
+- authtype: Author
+  name: Saurels BW
+- authtype: Author
+  name: Anderson N
+- authtype: Author
+  name: Andresen I
+- authtype: Author
+  name: Schwarzkopf DS
+epubdate: 2024 Jan 8
+fulljournalname: Scientific Reports
+issue: ''
+pages: '836'
+pmclivedate: 2024/01/09
+printpubdate: ''
+pubdate: 2024 Jan 8
+sortdate: 2024/01/08 00:00
+source: Sci Rep
+title: Predicting the subjective intensity of imagined experiences from electrophysiological
+  measures of oscillatory brain activity
+uid: '10774351'
+volume: '14'
