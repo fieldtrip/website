@@ -7,11 +7,9 @@ redirect_from:
 
 # Testing
 
-## Why is testing important?
+To make sure everything works correctly, we use [regression testing](https://en.wikipedia.org/wiki/Regression_testing). This way, we can be confident that when we add, modify, or remove a function, we won't break the existing ones. Testing also helps us find and fix any issues early on, ensuring that FieldTrip functions smoothly for all users. We use nightly testing as part of the [release](/development/releasing) procedure.
 
-FieldTrip is a toolbox with many functions, designed to be compatible with each other. This means that one function often relies on the output of another function. Functions are categorized as [high, low-level, or private](https://www.fieldtriptoolbox.org/development/architecture/#high-level-low-level-and-private-functions), with high-level functions depending on low-level and private functions.
-
-To make sure everything works correctly, we use [regression testing](https://en.wikipedia.org/wiki/Regression_testing). This way, we can be confident that when we add, modify, or remove a function, we won't break the existing ones. Testing also helps us find and fix any issues early on, ensuring that FieldTrip functions smoothly for all users. We use nightly testing as part of the [release](/development/release) procedure.
+FieldTrip is a toolbox with many functions, designed to be compatible with each other. This means that one function often relies on the output of another function. Functions are categorized as [high, low-level, or private](https://www.fieldtriptoolbox.org/development/architecture/#high-level-low-level-and-private-functions), with high-level functions depending on low-level and private functions. The regression testing mainly focusses on high- and low-level functions that users can call from their analysis scripts. 
 
 ## How are the tests organized in FieldTrip?
 
@@ -56,7 +54,7 @@ This helps to select an appropriate subset of tests to run based on:
 1. **WALLTIME**: The duration that a test needs to run. This duration is usually more than the actual duration needed since it also includes the time that MATLAB itself takes to start (which is about 30-60 seconds) and the time that it takes to load the test data.
 2. **MEM**: MEM stands for memory, and it represents the amount of memory required for a test to run.
 3. **DATA**: The external data that the test requires to run. More specifically, `DATA no` means that the test doesn't need any external data to run. `DATA public` means it needs data available from the [download server](https://download.fieldtriptoolbox.org/). `DATA private` means that it needs data that are not publicly accessible but only to people working in the DCCN.
-4. **DEPENDENCY**: The dependencies, i.e. high- or low-level FieldTrip functions to which the test script is particularly sensitive. There are three types of dependencies within the FieldTrip codebase: self-dependencies (where a function relies on itself), direct dependencies (comprising both [high-level and some low-level FieldTrip functions](https://www.fieldtriptoolbox.org/development/architecture/#high-level-low-level-and-private-functions) called directly within a test script), and indirect dependencies (involving [some low-level functions and all the private FieldTrip functions](https://www.fieldtriptoolbox.org/development/architecture/#high-level-low-level-and-private-functions) that, while they are not directly called within a test script, still play a role in the execution process). For example, in FieldTrip you can run: 
+4. **DEPENDENCY**: The dependencies, i.e. high- or low-level FieldTrip functions to which the test script is particularly sensitive. There are three types of dependencies within the FieldTrip codebase: self-dependencies (where a function relies on itself), direct dependencies (comprising both [high-level and some low-level FieldTrip functions](https://www.fieldtriptoolbox.org/development/architecture/#high-level-low-level-and-private-functions) called directly within a test script), and indirect dependencies (involving [some low-level functions and all the private FieldTrip functions](https://www.fieldtriptoolbox.org/development/architecture/#high-level-low-level-and-private-functions) that, while they are not directly called within a test script, still play a role in the execution process). For example, in FieldTrip you can run:
     
         ft_test find_dependency test_bug46
 
@@ -131,8 +129,8 @@ If you are an external contributor outside the DCCN network, you can select test
 
 To quickly find potential errors, you may want to run the short and small tests first. You can sort the tests with increasing memory and walltime:
 
-    % Convert the memory from string to numbers to allow sorting. 
-    filtered_test.mem = str2double(filtered_test.mem); 
+    % Convert the memory from string to numbers to allow sorting.
+    filtered_test.mem = str2double(filtered_test.mem);
 
     filtered_test = sortrows(filtered_test, 'mem',      'ascend');
     filtered_test = sortrows(filtered_test, 'walltime', 'ascend');
