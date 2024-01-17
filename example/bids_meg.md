@@ -107,7 +107,7 @@ for subindx=1:numel(subj)
     
     % optional for dataset_description.json
     cfg.dataset_description.License             = 'RU-DI-HD-1.0';
-    cfg.dataset_description.Authors             = 'Te Woerd ES, Oostenveld R, de Lange FP, Praamstra P';
+    cfg.dataset_description.Authors             = {'Te Woerd ES', 'Oostenveld R', 'de Lange FP, Praamstra P'};
     cfg.dataset_description.ReferencesAndLinks  = {'https://doi.org/10.1152/jn.00547.2016'};
     cfg.dataset_description.EthicsApprovals     = 'DCCN 3018009.04';
     
