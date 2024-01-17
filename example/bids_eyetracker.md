@@ -183,7 +183,7 @@ cfg.dataset_description.Name                = 'Visual Stability: predictive rema
 cfg.dataset_description.BIDSVersion         = 'unofficial extension';
 
 % optional for dataset_description.json
-cfg.dataset_description.Authors             = 'Tao He, Matthias Fritsche, Floris de Lange';
+cfg.dataset_description.Authors             = {'Tao He', 'Matthias Fritsche', 'Floris de Lange'};
 cfg.dataset_description.DatasetDOI          = 'http://hdl.handle.net/11633/di.dccn.DSC_3018034.01_694';
 cfg.dataset_description.License             = 'RU-DI-HD-1.0';
 cfg.dataset_description.Acknowledgements    = 'n/a';
