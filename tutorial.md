@@ -32,6 +32,7 @@ When adding or contributing to the tutorials please consider the [documentation 
 - [Event-related fields and MEG planar gradient](/tutorial/eventrelatedaveraging)
 - [Preprocessing of EEG data and computing ERPs](/tutorial/preprocessing_erp)
 - [Preprocessing and event-related activity in combined MEG/EEG data](/workshop/natmeg2014/preprocessing)
+- [Preprocessing of Optically Pumped Magnetometer (OPM) data](/tutorial/preprocessing_opm)
 - [Time-frequency analysis using Hanning window, multitapers and wavelets](/tutorial/timefrequencyanalysis)
 - [Time-frequency analysis of combined MEG/EEG data](/workshop/natmeg2014/timefrequency)
 - [Sensor-level ERF, TFR and connectivity analyses](/tutorial/sensor_analysis)
