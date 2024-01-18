@@ -25,7 +25,7 @@ The EEG dataset used in this script is available [here](https://download.fieldtr
 
 Make sure that all files that you have downloaded are unzipped and are located in the present working directory in MATLAB. In the command window, you can type [pwd](http://www.mathworks.nl/help/techdoc/ref/pwd.html) to see what the present directory is, and you can type [dir](http://www.mathworks.nl/help/techdoc/ref/dir.html) to see the content of the working directory.
 
-For memory efficiency (especially relevant for large datasets in comparison to the available RAM), with FieldTrip we historically commonly use the strategy to only read in those segments of data that are of interest. This requires first to define the segments of interest (the trials) and subsequently to read them in and preprocess them. It is also possible to read in the whole continuous data, and segment the data in memory [(see here)](/tutorial/continuous). 
+For memory efficiency (especially relevant for large datasets in comparison to the available RAM), with FieldTrip we historically commonly use the strategy to only read in those segments of data that are of interest. This requires first to define the segments of interest (the trials) and subsequently to read them in and preprocess them. It is also possible to read in the whole continuous data, and segment the data in memory [(see here)](/tutorial/continuous).
 
 Instead of using the default 'trialfun_general' function with **[ft_definetrial](/reference/ft_definetrial)**, we will use a custom 'trialfun_affcog' that has been written specifically for this experiment. This custom function reads markers from the EEG record and identifies trials that belong to condition 1 (positive-negative judgement) or 2 (animal-human judgement). The function is available along with the data.
 
@@ -169,19 +169,14 @@ You can check the channel labels that are now present in the data and use **[ft_
     disp(data.label')
       Columns 1 through 12
         '1'    '2'    '3'    '4'    '5'    '6'    '7'    '8'    '9'    '10'    '11'    '12'
-
       Columns 13 through 23
         '13'    '14'    '15'    '16'    '17'    '18'    '19'    '20'    '21'    '22'    '23'
-
       Columns 24 through 34
         '24'    '26'    '27'    '28'    '29'    '30'    '31'    'RM'    '33'    '34'    '35'
-
       Columns 35 through 45
         '36'    '37'    '38'    '39'    '40'    '41'    '42'    '43'    '44'    '45'    '46'
-
       Columns 46 through 56
         '47'    '48'    '49'    '50'    '51'    '52'    '54'    '55'    '56'    '58'    '59'
-
       Columns 57 through 59
         '60'    'eogv'    'eogh'
 
