@@ -46,9 +46,9 @@ We start with a quick look at the data in ft_databrowser. This allows us to chec
 
 {% include image src="/assets/img/tutorial/preprocessing_opm/figure1.png" width="550" %}
 
-Another way to get information about the data in the file is by reading the header using the low-level ft_read_header function.
+Another way to get information about the data in the file is by reading the header using the low-level **[ft_read_header](/reference/fileio/ft_read_header)** function.
 
-hdr = ft_read_header('MedianNerve_StimBreakStim2min_Pos1.fif');
+    hdr = ft_read_header('MedianNerve_StimBreakStim2min_Pos1.fif');
 
 This shows that we have 9 channels (8 for the OPMs and one for the triggers), that the sampling rate is 1000Hz, that the recording is about 6 minutes (365120 samples divided by 1000 is 365 seconds) and some other details.
 
@@ -66,7 +66,7 @@ This shows that we have 9 channels (8 for the OPMs and one for the triggers), th
             chantype: {9x1 cell}
             chanunit: {9x1 cell}
 
-We can do the same for the events with the low-level ft_read_event function:
+We can do the same for the events with the low-level **[ft_read_event](/reference/ft_read_event)** function:
 
     event = ft_read_event('MedianNerve_StimBreakStim2min_Pos1.fif');
 
@@ -215,11 +215,17 @@ The `montage_pos1.tra` field is an identity matrix, which means that each channe
     montage_pos3.labelnew = pos3; % labels according to the helmet
     montage_pos3.tra = eye(8);
 
-Now that we have the three montages, we can use the cfg.montage option in ft_preprocessing, or directly call the low-level ft_apply_montage function.
+Now that we have the three montages, we can use the cfg.montage option in **[ft_preprocessing](/reference/ft_preprocessing)**, or directly call the low-level **[ft_apply_montage](/reference/forward/ft_apply_montage)** function.
 
-    data_pos1 = ft_apply_montage(data_pos1, montage_pos1);
-    data_pos2 = ft_apply_montage(data_pos2, montage_pos2);
-    data_pos3 = ft_apply_montage(data_pos3, montage_pos3);
+    cfg = [];
+    cfg.montage = montage_pos1;
+    data_pos1 = ft_preprocessing(cfg, data_pos1);
+
+    cfg.montage = montage_pos2;
+    data_pos2 = ft_preprocessing(cfg, data_pos2);
+
+    cfg.montage = montage_pos3;
+    data_pos3 = ft_preprocessing(cfg, data_pos3);
 
 #### Exercise 1
 
@@ -239,16 +245,16 @@ The summary method in ft_rejectvisual offers a quick screening of the whole data
 
 {% include image src="/assets/img/tutorial/preprocessing_opm/figure2.png" width="550" %}
 
-When you look at the maximum variance in each of the trials (the subplot in the lower left), a variance thereshold of 2e-24 appears appropriate to remove the more noisy ones.
+When you look at the maximum variance in each of the trials (the subplot in the lower left), a variance threshold of 2e-24 appears appropriate to remove the more noisy ones.
 
 We use the same method for the data at the other two positions:
     
     data_pos2_clean = ft_rejectvisual(cfg, data_pos2);
     data_pos3_clean = ft_rejectvisual(cfg, data_pos3);
 
-The variance threshold that we identied was 2e-24, which is in units of Tesla-squared. We can also use the standard deviation as the metric, which is the square root of the variance. That gives `sqrt(2e-24)` corresponding to a threshold of 1.4e-12 (or 1.4 pT).
+The variance threshold that we identified was 2e-24, which is in units of Tesla-squared. We can also use the standard deviation as the metric, which is the square root of the variance. That gives `sqrt(2e-24)` corresponding to a threshold of 1.4e-12 (or 1.4 pT).
 
-With ft_rejectvisual we manually click in the vigure to select the threshold. If we know the threshold that we want to apply and we want to make it consistent over all recordings, we can also use the ft_badsegment function. That function does not reject the trials immediately, like ft_rejectvisual, but merely marks where the artifacts are, just like most other artifact detection functions. This is explained in more detail in the [introduction on dealing with artifacts](/tutorial/artifacts). The ft_rejectartifact function does the actual work in removing them from the data structures.
+With **[ft_rejectvisual](/reference/ft_rejectvisual)** we manually click in the figure to select the threshold. If we know the threshold that we want to apply and we want to make it consistent over all recordings, we can also use the **[ft_badsegment](/reference/ft_badsegment)** function. That function does not reject the trials immediately, like ft_rejectvisual, but merely marks where the artifacts are, just like most other artifact detection functions. This is explained in more detail in the [introduction on dealing with artifacts](/tutorial/artifacts). The **[ft_rejectartifact](/reference/ft_rejectartifact)** function does the actual work in removing them from the raw data structures.
 
     cfg = [];
     cfg.metric = 'std';
@@ -296,7 +302,7 @@ Now that we only have the clean trials left, we can average them to obtain the E
 
 ### Concatenate the data over the three positions
 
-The three data structures with the ERFs for the 3x8 positions can be concatenated using the ft_appendtimelock function.
+The three data structures with the ERFs for the 3x8 positions can be concatenated using the **[ft_appendtimelock](/reference/ft_appendtimelock)** function.
 
     cfg = [];
     cfg.appenddim = 'chan';
@@ -349,11 +355,11 @@ We can make the same topographic figure by calling ft_topoplotER.
 
 You should notice that the topographic interpolation of the data spans the whole head, whereas we only recorded recorded the activity over the left somatosensory cortex (and one channel on the right). That means that most of the field distribution that you see cannot be trusted, as it is [extrapolated](https://en.wikipedia.org/wiki/Extrapolation).
 
-Interpolating (and extrapolating) is excatly what ft_topoplotER is supposed to do, as it needs to assign a color code to each location around the head, also to those locations where no sensor was placed.
+Interpolating (and extrapolating) is exactly what ft_topoplotER is supposed to do, as it needs to assign a color code to each location around the head, also to those locations where no sensor was placed.
 
 ### Improve the visualization of the ERFs
 
-The ft_multiplotER function determines the intersection between the data and the layout and only shows those channels. We know that there are many more slots in the helmet and showing those can help to interpret the spatial distribution. We can achieve this by "padding" the ERF data with NaN or Not-a-Number values.
+The **[ft_multiplotER](/reference/ft_multiplotER)** function determines the intersection between the data and the layout and only shows those channels. We know that there are many more slots in the helmet and showing those can help to interpret the spatial distribution. We can achieve this by "padding" the ERF data with NaN or Not-a-Number values.
 
 We fist identify the channels in the layout that are not present in the measurement:
 
@@ -440,7 +446,7 @@ The result is an topographic interpolation where the fake channels are shown as 
 
 ### Mask the topographic interpolation
 
-Adding fake channels with NaNs to the data and using the `cfg.interpolatenan` option is one way to make a topography that shows the whole head without incorrect collors over areas where we did not record. Another way is described here; this is based on a modified version of the layout.
+Adding fake channels with NaNs to the data and using the `cfg.interpolatenan` option is one way to make a topography that shows the whole head without incorrect colors over areas where we did not record. Another way is described here; this is based on a modified version of the layout.
 
 We start with loading the layout
 
