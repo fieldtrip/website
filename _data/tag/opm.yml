@@ -130,3 +130,6 @@
 - name:  Template 2-D layouts for plotting
   link:  /template/layout
 
+- name:  Preprocessing of Optically Pumped Magnetometer (OPM) data
+  link:  /tutorial/preprocessing_opm
+

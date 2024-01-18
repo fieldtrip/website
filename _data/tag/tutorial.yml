@@ -109,6 +109,9 @@
 - name:  Preprocessing of EEG data and computing ERPs
   link:  /tutorial/preprocessing_erp
 
+- name:  Preprocessing of Optically Pumped Magnetometer (OPM) data
+  link:  /tutorial/preprocessing_opm
+
 - name:  Creating a clean analysis pipeline
   link:  /tutorial/scripting
 
