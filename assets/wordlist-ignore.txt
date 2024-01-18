@@ -596,6 +596,7 @@ FIXME
 FIXME's
 FIl
 FLTK
+FLxx
 FNS
 FOOOF
 FOV
@@ -1192,6 +1193,7 @@ Mbps
 McCabe
 McCann
 MedTech
+MedianNerve
 Meer
 Megin
 Megis
@@ -1791,6 +1793,7 @@ Stegeman
 Steina
 Stenroos
 Stereotaxic
+StimBreakStim
 Stolk
 StolkArjen
 StringServer
