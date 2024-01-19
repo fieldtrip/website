@@ -52,6 +52,9 @@
 - name:  Can I compare EEG channels between different electrode caps?
   link:  /faq/capmapping
 
+- name:  Which datasets are used in the documentation and where are they used?
+  link:  /faq/datasets
+
 - name:  How should I specify the fiducials for electrode realignment?
   link:  /faq/fiducial
 
@@ -78,9 +81,6 @@
 
 - name:  Is it important to have accurate measurements of electrode locations for EEG source reconstruction?
   link:  /faq/is_it_important_to_have_accurate_measurements_of_electrode_locations_for_eeg_source_reconstruction
-
-- name:  Which datasets are used in the documentation and where are they used?
-  link:  /faq/what_types_of_datasets_and_their_respective_analyses_are_used_on_fieldtrip
 
 - name:  Why is FieldTrip developed separately from EEGLAB?
   link:  /faq/why_is_fieldtrip_developed_separately_from_eeglab

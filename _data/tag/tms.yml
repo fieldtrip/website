@@ -2,7 +2,7 @@
   link:  /development/realtime/tmsi
 
 - name:  Which datasets are used in the documentation and where are they used?
-  link:  /faq/what_types_of_datasets_and_their_respective_analyses_are_used_on_fieldtrip
+  link:  /faq/datasets
 
 - name:  Getting started with TMSi data
   link:  /getting_started/tmsi

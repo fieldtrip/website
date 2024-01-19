@@ -19,6 +19,9 @@
 - name:  What dataformats are supported?
   link:  /faq/dataformat
 
+- name:  Which datasets are used in the documentation and where are they used?
+  link:  /faq/datasets
+
 - name:  How are the various MATLAB data structures defined?
   link:  /faq/how_are_the_various_data_structures_defined
 
@@ -63,9 +66,6 @@
 
 - name:  What does a typical call to a FieldTrip function look like?
   link:  /faq/what_does_a_typical_call_to_a_fieldtrip_function_look_like
-
-- name:  Which datasets are used in the documentation and where are they used?
-  link:  /faq/what_types_of_datasets_and_their_respective_analyses_are_used_on_fieldtrip
 
 - name:  Getting started with ASA and EEProbe
   link:  /getting_started/antneuro
