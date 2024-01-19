@@ -230,7 +230,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [How should I prepare for the upcoming FieldTrip workshop?](/faq/how_should_i_prepare_for_the_upcoming_fieldtrip_workshop)
 - [How should I specify the coordinate systems in a BIDS dataset?](/faq/bids_coordsystem)
 - [What are the units of the data and of the derived results?](/faq/units)
-- [What types of datasets (and their respective analyses) are used on FieldTrip?](/faq/what_types_of_datasets_and_their_respective_analyses_are_used_on_fieldtrip)
+- [Which datasets are used in the documentation and where are they used?](/faq/datasets)
 - [What usage information is FieldTrip tracking?](/faq/tracking)
 - [Where can I find open access MEG/EEG data?](/faq/open_data)
 - [Which methodological details should I report in an EEG/MEG manuscript?](/faq/checklist)
