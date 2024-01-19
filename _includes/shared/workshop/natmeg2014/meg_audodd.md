@@ -1,4 +1,4 @@
-For the EEG-MEG workshop at NatMEG we recorded a dataset of a single subject to allow you to work through all the different steps involved in EEG-MEG analysis: from event-related averaging to frequency analysis, source modeling and statistics.
+For the 2014 EEG-MEG workshop at NatMEG we recorded a dataset of a single subject to allow you to work through all the different steps involved in EEG and MEG analysis: from event-related averaging to frequency analysis, source modeling and statistics.
 
 ### The oddball paradigm
 
@@ -24,6 +24,7 @@ For a recent overview of sensorimotor rhythms, including the beta rebound, pleas
 ### Training with feedback and blink trials
 
 Before the recording, the subject performed the experiment in a short training session to get acquainted with the task. Whenever the subject was too late in responding (>2 seconds), or pressed the wrong button, feedback was provided. In the actual experiment the subject was always on time and responded with the correct hand each time.
+
 Finally, after each response, a blink trial is presented in which subjects are asked to blink so that they can remain fixated on the fixation cross - without blinking - throughout the period in time in which we are interested in the brain signal.
 
 ### Stimuli
