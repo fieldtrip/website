@@ -1,6 +1,6 @@
 ---
 title: Preprocessing of Optically Pumped Magnetometer (OPM) data
-tags: [tutorial, opm]
+tags: [tutorial, opm, opm-mediannerve]
 ---
 
 # Preprocessing of Optically Pumped Magnetometer (OPM) data
@@ -23,13 +23,13 @@ In this tutorial we will use recordings made with a small set of 8 OPM sensors d
 
 The participant was seated in a magnetically shielded room that also houses a Neuromag SQUID-based MEG system. Note that the Neuromag system is without a cryocooler; this is relevant as the cryocooler cold head would have introduced additional noise.
 
-FIXME: give the dataset a name and description in the FAQ.
+### The dataset used in this tutorial
 
 OPM recordings were done using a FieldLine v2 system comprised of 8 OPMs sensitive in the radial (or axial) direction. The OPMs were placed in a FieldLine alpha-1 helmet, which allows them to be slide inwards, touching the scalp surface.
 
 The participant received electrical stimulation of the median nerve of the right hand. We therefore expect an N20 component over the left somatosensory cortex. The median nerve stimulation protocol was repeated three times, with different positions of the OPM sensors. An Excel sheet was used to document the mapping of which sensor (or channel) was placed where.
 
-In the second part of this tutorial we will compare empty room recordings to recordings with a participant to compare the background environmental noise and the physiological and movement-related noise that is introduced by the participant.
+The data for this tutorial can be downloaded [here](https://download.fieldtriptoolbox.org/tutorial/preprocessing_opm/) from our download server.
 
 ## Procedure
 

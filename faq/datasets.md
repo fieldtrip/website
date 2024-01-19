@@ -1,6 +1,8 @@
 ---
 title: Which datasets are used in the documentation and where are they used?
 tags: [faq, tutorial, dataset, meg-language, meg-artifact, meg-removal, meg-visuomotor151, meg-visuomotor151-k, meg-attention, meg-tactile, meg-audodd, eeg-audodd, eeg-language, eeg-affective, eeg-sedation, eeg-tms, hcp-motort, mmfaces, meg-epilepsy, spike-attention, spike-placefield, neurotycho, ecog-visual, ecog-protocol, nirs-singlechannel, nirs-multichannel]
+redirect_from:
+- /faq/what_types_of_datasets_and_their_respective_analyses_are_used_on_fieldtrip
 ---
 
 # Which datasets are used in the documentation and where are they used?
@@ -93,11 +95,22 @@ Documentation referring to this dataset:
 Documentation referring to this dataset:
 {% include seealso tag1="meg-audodd" %}
 
+## OPM-mediannerve
+
+- MEG recordings using a FieldLine v2 system comprised of 8 radial OPM sensors
+- Measurement over the left-somatosensory area while the right median nerve was electrically stimulated
+- Three recordings were done with median nerve stimulation, with the OPM sensors over  different positions to cover the whole ROI
+- Two additional resting state recordings were done with eyes open and closed, with the sensors over the 3rd position
+- Download the dataset [here](https://download.fieldtriptoolbox.org/tutorial/preprocessing_opm/) from our download server.
+
+Documentation referring to this dataset:
+{% include seealso tag1="opm-mediannerve" %}
+
 ## EEG-audodd
 
 - Combined MEG/EEG dataset recorded at the NatMEG in Stockholm
 - Experimental [details](/workshop/natmeg2014/meg_audodd)
-- This is the same dataset as MEG-audodd, but only with the EEG channels and reformatted as BrainVision file
+- This is the same dataset as [MEG-audodd](#meg-audodd), but only with the EEG channels and reformatted as BrainVision file
 - Download the dataset [here](https://download.fieldtriptoolbox.org/workshop/oslo2019/) from our download server.
 
 Documentation referring to this dataset:

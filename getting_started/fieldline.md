@@ -1,6 +1,6 @@
 ---
 title: Getting started with FieldLine OPM data
-tags: [dataformat, meg, opm, fieldline]
+tags: [dataformat, meg, opm, opm-mediannerve, fieldline]
 ---
 
 # Getting started with FieldLine OPM data
@@ -8,7 +8,7 @@ tags: [dataformat, meg, opm, fieldline]
 [FieldLine](https://fieldlineinc.com/) is a company located in Boulder, Colorado that develops OPM sensors and complete OPM-based MEG systems. The data from their current systems is stored in the \*.fif format, which is developed and used by [Neuromag/Elekta/Megin](/getting_started/neuromag). The \*.fif file format is already supported by FieldTrip, which means that no special functions are needed for reading the data.
 
     cfg = [];
-    cfg.dataset = 'OPM_RestingStateEyesClosed_raw.fif';
+    cfg.dataset = 'MedianNerve_RestingStateEyesClosed.fif';
     data = ft_preprocessing(cfg);
     
     cfg = [];
@@ -25,7 +25,7 @@ Depending on the generation of the FieldLine OPM system that you are working wit
 
 In this case the recording is from a FieldLine v2 system and the experiment consisted of a median nerve stimulation on the right wrist. Each stimulus is coded with an analog trigger represented in the `Input-1` channel.
 
-    filename = 'OPM_MedianNerve_wCoils_11mA_3Hz_StimBreakStim2min_Pos1_raw.fif';
+    filename = 'MedianNerve_StimBreakStim2min_Pos1.fif';
     hdr = ft_read_header(filename);
 
     disp(hdr.label)
@@ -171,4 +171,4 @@ Since channels in a FieldTrip data structure are required have a unique channel 
 
 # Coregistration
 
-TODO: in this section we will document (or link to) the different methods to coregister the OPM sensors with the head and with the anatomical MRI.
+FIXME: in this section we will document (or link to) the different methods to coregister the OPM sensors with the head and with the anatomical MRI.
