@@ -7,9 +7,9 @@ tags: [tutorial]
 
 The tutorials contain background on the different analysis methods and include code that you can copy-and-paste in MATLAB to walk through the different analysis options. The [frequently asked questions](/faq) and [example scripts](/example) are other forms of documentation.
 
-Some of these tutorials are also used during the "Advanced EEG/MEG analysis" [toolkit course](https://www.ru.nl/donders/agenda/donders-tool-kits/) that is presented at the Centre for Cognitive Neuroimaging of the Donders Institute for Brain, Cognition and Behaviour each year. Furthermore, we use these tutorials during the various [workshops](/workshop).
+Some of these tutorials are also used during the "Advanced EEG/MEG analysis" [toolkit course](https://www.ru.nl/donders/agenda/donders-tool-kits/) that is presented at the Centre for Cognitive Neuroimaging of the Donders Institute for Brain, Cognition and Behaviour each year. Furthermore, we use or have used these tutorials during the various [workshops](/workshop).
 
-For information on what types of datasets we have here on FieldTrip, and which datasets are used in which tutorials see this overview of the [datasets used in the tutorials](/faq/datasets).
+For information on what types of datasets we have here on FieldTrip, and which datasets are used in which tutorials see this overview of the [datasets used in the tutorials](/faq/datasets). The datasets used in the tutorials are in general available from our [download server](https://download.fieldtriptoolbox.org/tutorial/).
 
 When adding or contributing to the tutorials please consider the [documentation guidelines](/development/guideline/documentation).
 
@@ -96,5 +96,3 @@ When adding or contributing to the tutorials please consider the [documentation 
 - [Making a memory efficient analysis pipeline](/tutorial/memory)
 - [Speeding up your analysis using distributed computing with qsub](/tutorial/distributedcomputing_qsub)
 - [Speeding up your analysis using distributed computing with parfor](/tutorial/distributedcomputing_parfor)
-
-The data that is used for the tutorials is available from <https://download.fieldtriptoolbox.org/tutorial/>.
