@@ -21,7 +21,17 @@ The EEG dataset used in this script is available [here](https://download.fieldtr
 
 ## Procedure
 
-### Defining trials
+The preprocessing of the EEG data and the computation of the ERP consists of the following steps:
+
+- Defining trials using **[ft_definetrial](/reference/ft_definetrial)**
+- Pre-processing and re-referencing using **[ft_preprocessing](/reference/ft_preprocessing)**
+- Extracting the EOG signals using **[ft_selectdata](/reference/utilities/ft_selectdata)** and **[ft_preprocessing](/reference/ft_preprocessing)**
+- Identifying and rejecting artifacts using **[ft_rejectvisual](/reference/ft_rejectvisual)**
+- Computing the ERPs using **[ft_timelockanalysis](/reference/ft_timelockanalysis)**
+- Computing the ERP difference using **[ft_math](/reference/ft_math)**
+- Plotting the ERPs using **[ft_multiplotER](/reference/ft_multiplotER)**
+
+## Defining trials
 
 Make sure that all files that you have downloaded are unzipped and are located in the present working directory in MATLAB. In the command window, you can type [pwd](http://www.mathworks.nl/help/techdoc/ref/pwd.html) to see what the present directory is, and you can type [dir](http://www.mathworks.nl/help/techdoc/ref/dir.html) to see the content of the working directory.
 
@@ -29,7 +39,7 @@ For memory efficiency (especially relevant for large datasets in comparison to t
 
 Instead of using the default 'trialfun_general' function with **[ft_definetrial](/reference/ft_definetrial)**, we will use a custom 'trialfun_affcog' that has been written specifically for this experiment. This custom function reads markers from the EEG record and identifies trials that belong to condition 1 (positive-negative judgement) or 2 (animal-human judgement). The function is available along with the data.
 
-The custom trial function is available from [here](https://download.fieldtriptoolbox.org/tutorial/preprocessing_erp/trialfun_affcog.m) or can be found at the end in the [appendix](#appendix-the-trialfun-used-in-this-example) of this example script. Please save it to a local file with the name `trialfun_affcog.m`.
+The custom trial function is available from [the download server](https://download.fieldtriptoolbox.org/tutorial/preprocessing_erp/trialfun_affcog.m) or can be found at the end in the [appendix](#appendix-the-trialfun-used-in-this-example) of this example script. Please save it to a local file with the name `trialfun_affcog.m`.
 
     cfg              = [];
     cfg.trialfun     = 'trialfun_affcog';
@@ -49,7 +59,7 @@ After the call to **[ft_definetrial](/reference/ft_definetrial)**, the cfg now n
            74747       75347        -100           1
            ...
 
-### Pre-processing and re-referencing
+## Pre-processing and re-referencing
 
 In this raw BrainVision dataset, the signal from all electrodes is recorded unipolar and referenced to an electrode on the left mastoid. We want the signal to be referenced to linked (left and right) mastoids. During the acquisition an 'RM' electrode (number 32) was placed on the right mastoid and recorded along with all EEG channels.
 
@@ -85,7 +95,7 @@ You can also use **[ft_databrowser](/reference/ft_databrowser)** to visualize th
     cfg.dataset = 's04.vhdr';
     ft_databrowser(cfg);
 
-#### Exercise
+### Exercise
 
 {% include markup/info %}
 Why is there a vertical line with label S141 on the first call to ft_databrowser(cfg,data)?
@@ -114,7 +124,7 @@ and note that, if you wanted to, you could plot a single trial with default MATL
 
     plot(data.time{1}, data.trial{1});
 
-### Extracting the EOG signals
+## Extracting the EOG signals
 
 We now continue with re-referencing to extract the bipolar EOG signal from the data. In the BrainAmp acquisition system, all channels are measured relative to a common reference. For the horizontal EOG we will compute the potential difference between channels 57 and 25 (see the plot of the layout and the figure below). For the vertical EOG we will use channel 53 and channel "LEOG" which was placed below the subjects' left eye (not pictured on the layout).
 
@@ -180,7 +190,7 @@ You can check the channel labels that are now present in the data and use **[ft_
       Columns 57 through 59
         '60'    'eogv'    'eogh'
 
-### Channel layout
+## Channel layout
 
 For topoplotting and sometimes for analysis it is necessary to know how the electrodes were positioned on the scalp. In contrast to the sensor arrangement from a given MEG manufacturer, the topographical arrangement of the channels in EEG is not fixed. Different acquisition systems are designed for different electrode montages, and the number and position of electrodes can be adjusted depending on the experimental goal. In the current experiment, so-called 64-electrodes equidistant montage (ActiCap, BrainVision) was used.
 
@@ -194,11 +204,11 @@ The channel positions are not stored in the EEG dataset. You have to use a layou
 
 Note that the layout should contain correct channel labels that match the channel labels in the data (channel labels not present in either will not be plotted when using a given layout).
 
-### Artifacts
+## Artifacts
 
 An next important step of EEG preprocessing is detection (and rejection) of artifacts. Different approaches of dealing with artifacts are presented in details in the [introductory tutorial on artifacts](/tutorial/artifacts), the [visual artifact removal tutorial](/tutorial/visual_artifact_rejection) and the [automatic artifact rejection removal tutorial](/tutorial/automatic_artifact_rejection). In this example script, we will use **[ft_rejectvisual](/reference/ft_rejectvisual)** function to visually inspect the data and reject the trials or channels that contain artifacts. We first will try the "channel" mode. In this mode all trials are displayed at once allowing paging through the channels. Then we will try the "summary" mode.
 
-#### Channel mode
+### Channel mode
 
     cfg        = [];
     cfg.method = 'channel';
@@ -212,7 +222,7 @@ You can scroll to the vertical EOG channel ('veog', number 61) and confirm to yo
 In **[ft_rejectvisual](/reference/ft_rejectvisual)** with cfg.method='channel' you can go to channel '43' (note that the channel name is '43' and its number is also 43). There you will see that in trials 138 to 149 this channel is a bit more noisy, suggesting that the electrode contact on this side of the cap was temporarily bad. Neighboring channels also suggest that at trial 138 something happened, perhaps a movement of the electrode cap. We are not going to deal with this now, but it is something that you might want to keep in mind for optional cleaning of the data with **[ft_componentanalysis](/reference/ft_componentanalysis)** and **[ft_rejectcomponent](/reference/ft_rejectcomponent)**
 {% include markup/end %}
 
-#### Summary mode
+### Summary mode
 
 The data can be also displayed in a "summary" mode, in which case the variance (or another metric) in each channel and each trial is computed. Close the "channel" mode figure and try the "summary" mode. Note, that a new variable "data_clean" will be created now.
 
@@ -238,7 +248,7 @@ After removing data segments that contain artifacts, you might want to do a last
 Note that you can also use **[ft_databrowser](/reference/ft_databrowser)** to mark artifacts instead of - or in addition to - ft_rejectvisual. The artifacts marked in ft_databrowser can be removed using **[ft_rejectartifact](/reference/ft_rejectartifact)**. The important difference between the two is that ft_rejectvisual can only be used to reject complete trials, whereas ft_rejectartifact can also be used to reject small sections from continuous data or from long trials.
 {% include markup/end %}
 
-### Computing and plotting the ERPs
+## Computing and plotting the ERPs
 
 We now would like to compute the ERPs for two conditions: positive-negative judgement and human-animal judgement. For each trial, the condition is assigned by the trialfun that we used in the beginning when defined the trials, this information is kept with the data in data.trialinfo.
 
