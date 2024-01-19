@@ -7,7 +7,7 @@
 - name:  Dipole fitting of combined MEG/EEG data
   link:  /workshop/natmeg2014/dipolefitting
 
-- name:  Description of the auditory oddball MEG+EEG dataset
+- name:  Details of the auditory oddball MEG+EEG dataset
   link:  /workshop/natmeg2014/meg_audodd
 
 - name:  Preprocessing and event-related activity in combined MEG/EEG data
