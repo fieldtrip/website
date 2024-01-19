@@ -13,7 +13,7 @@ OPMs are individual sensors that do not need a dewar for the cryocooling. Due to
 
 An important difference between OPMs and most SQUID-based MEG systems is that OPMs are magnetometers, whereas most conventional MEG systems consist of (mostly) gradiometers. Gradiometers are designed to suppress the environmental field, as explained in [this video](https://youtu.be/CPj4jJACeIs?t=350). Magnetometers see more of the environmental noise and consequently the static earth magnetic field can also become visible as noise due to (small) movements. Movements of the head, and thereby of the sensors, cause the OPMs to move through the residual earth magnetic field in the MSR. As head movements are relatively slow, this results in low-frequency noise.
 
-This tutorial focusses on preprocessing of OPM data and some simple analyses. Following the computation of the ERFs, you could you could in principle continue with source reconstruction: the early components of the median nerve lend themselves well to dipole fitting. However, since no coregistration was performed between the head and sensors, it is not possible to construct an accurate headmodel or to plot the sources on top of the anatopmical MRI of the participant.
+This tutorial focusses on preprocessing of OPM data and some simple analyses. Following the computation of the ERFs, you could you could in principle continue with source reconstruction: the early components of the median nerve lend themselves well to dipole fitting. However, since no coregistration was performed between the head and sensors, it is not possible to construct an accurate headmodel or to plot the sources on top of the anatomical MRI of the participant.
 
 Most follow-up analyses are not specific to OPMs and are demonstrated in other tutorials. Detecting and dealing with large movements and suppressing environmental noise in the OPM magnetometers, for example using homogenous field compensation (HFC) with **[ft_denoise_hfc](/reference/ft_denoise_hfc)**, will also not be covered in this tutorial.
 
@@ -27,7 +27,7 @@ FIXME: give the dataset a name and description in the FAQ.
 
 OPM recordings were done using a FieldLine v2 system comprised of 8 OPMs sensitive in the radial (or axial) direction. The OPMs were placed in a FieldLine alpha-1 helmet, which allows them to be slide inwards, touching the scalp surface.
 
-The participant received electrical stimuation of the median nerve of the right hand. We therefore expect an N20 component over the left somatosensory cortex. The median nerve stimulation protocol was repeated fthree times, with different positions of the OPM sensors. An Excel sheet was used to document the mapping of which sensor (or channel) was placed where.
+The participant received electrical stimulation of the median nerve of the right hand. We therefore expect an N20 component over the left somatosensory cortex. The median nerve stimulation protocol was repeated three times, with different positions of the OPM sensors. An Excel sheet was used to document the mapping of which sensor (or channel) was placed where.
 
 In the second part of this tutorial we will compare empty room recordings to recordings with a participant to compare the background environmental noise and the physiological and movement-related noise that is introduced by the participant.
 
