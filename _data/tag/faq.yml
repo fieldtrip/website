@@ -61,6 +61,9 @@
 - name:  What dataformats are supported?
   link:  /faq/dataformat
 
+- name:  Which datasets are used in the documentation and where are they used?
+  link:  /faq/datasets
+
 - name:  How can I deal with a discontinuous Neuralynx LFP recording?
   link:  /faq/discontinuous_neuralynx
 
@@ -444,9 +447,6 @@
 
 - name:  What kind of volume conduction models of the head (head models) are implemented?
   link:  /faq/what_kind_of_volume_conduction_models_are_implemented
-
-- name:  Which datasets are used in the documentation and where are they used?
-  link:  /faq/what_types_of_datasets_and_their_respective_analyses_are_used_on_fieldtrip
 
 - name:  Where can I find the dipoli command-line executable?
   link:  /faq/where_can_i_find_the_dipoli_command-line_executable

@@ -46,6 +46,9 @@
 - name:  Can I compare EEG channels between different electrode caps?
   link:  /faq/capmapping
 
+- name:  Which datasets are used in the documentation and where are they used?
+  link:  /faq/datasets
+
 - name:  How should I specify the fiducials for electrode realignment?
   link:  /faq/fiducial
 
@@ -114,9 +117,6 @@
 
 - name:  What kind of filters can I apply to my data?
   link:  /faq/what_kind_of_filters_can_i_apply_to_my_data
-
-- name:  Which datasets are used in the documentation and where are they used?
-  link:  /faq/what_types_of_datasets_and_their_respective_analyses_are_used_on_fieldtrip
 
 - name:  Why are so many of the interesting functions in the private directories?
   link:  /faq/why_are_so_many_of_the_interesting_functions_in_the_private_directories

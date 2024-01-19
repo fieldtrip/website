@@ -13,6 +13,9 @@
 - name:  Use denoising source separation (DSS) to remove ECG artifacts
   link:  /example/use_denoising_source_separation_dss_to_remove_ecg_artifacts
 
+- name:  Which datasets are used in the documentation and where are they used?
+  link:  /faq/datasets
+
 - name:  How can I consistently represent artifacts in my data?
   link:  /faq/how_can_i_consistently_represent_artifacts_in_my_data
 
@@ -30,9 +33,6 @@
 
 - name:  What kind of filters can I apply to my data?
   link:  /faq/what_kind_of_filters_can_i_apply_to_my_data
-
-- name:  Which datasets are used in the documentation and where are they used?
-  link:  /faq/what_types_of_datasets_and_their_respective_analyses_are_used_on_fieldtrip
 
 - name:  Why does my TFR look strange (part I, demeaning)?
   link:  /faq/why_does_my_tfr_look_strange

@@ -2,7 +2,7 @@
   link:  /example/ica_eog
 
 - name:  Which datasets are used in the documentation and where are they used?
-  link:  /faq/what_types_of_datasets_and_their_respective_analyses_are_used_on_fieldtrip
+  link:  /faq/datasets
 
 - name:  Automatic artifact rejection
   link:  /tutorial/automatic_artifact_rejection
