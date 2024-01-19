@@ -34,13 +34,15 @@ This depends on the function **[ft_definetrial](/reference/ft_preprocessing)**. 
 
 You can either use a default trial function or design your own. When using the default trial function, the fourth column will contain the trigger value of the trigger channel. If you do use your own trial function, you can add as many columns as you wish to the _trl_ matrix, which will be contained in your segmented data in the _.trialinfo_ field. Here, you can add information of for example response buttons, response times.
 
-## Description of the auditory oddball EEG (& MEG) Dataset
+## Details of the auditory oddball MEG+EEG Dataset
+
+_Please note that we will only be using the EEG data from this dataset._
 
 {% include /shared/workshop/natmeg2014/meg_audodd.md %}
 
 ## Have a look at the data prior to preprocessing
 
-Before we start preprocessing our data and calculate event-related potentials (ERPs), we will first have a look at our data while it is unprocessed and not yet cut into trial (following FieldTrip nomenclature: _raw_-data). To do this, we use **[ft_databrowser](/reference/ft_databrowser)**. Note that **[ft_databrowser](/reference/ft_databrowser)** is very memory efficient, as it does not read all data into memory - only the part that it displays.
+Before we start preprocessing our data and calculate event-related potentials (ERPs), we will first have a look at our data while it is unprocessed and not yet cut into trial (following FieldTrip nomenclature: _raw_ data). To do this, we use **[ft_databrowser](/reference/ft_databrowser)**. Note that **[ft_databrowser](/reference/ft_databrowser)** is very memory efficient, as it does not read all data into memory - only the part that it displays.
 
 ### How can I use the data browser?
 

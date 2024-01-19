@@ -35,7 +35,7 @@ In the schematic outline of the procedure you can see that we will use either **
 
 Furthermore, the schematic outline shows that we might have to cycle back to **[ft_rejectvisual](/reference/ft_rejectvisual)** or **[ft_databrowser](/reference/ft_databrowser)** in case we identify atypical artifacts or bad channels _after_ having done the ICA. In that case we iterate the initial cleaning and repeat the ICA.
 
-### Preprocessing
+## Preprocessing
 
 The MEG data is recorded with a 151-channel CTF system. Although the data is continuous, the CTF dataset is organized in trials of 10 seconds. As there are no discontinuities between trials, we can treat it as a continuous recording.
 
@@ -61,11 +61,11 @@ The ICA decomposition can take a long time, especially if you have to do it mult
 
 For the purpose of this tutorial and since we want you to try out various settings, we will continue with the downsampled data. If you apply this on your own data, please do try to work with the original instead the downsampled data; that will improve the quality of the decomposition.
 
-### Rejecting atypical artifacts
+## Rejecting atypical artifacts
 
 ICA assumes a mixing of stationary components and cannot estimate more components than the number of channels. If you have a few infrequent and atypical artifacts, these will be represented in components. This comes at the cost of loosingsome components for the interesting stuff, and may lead to a suboptimal decomposition. Hence we firrst want to remove sparse atypical artifacts.
 
-#### Using ft_databrowser
+### Using ft_databrowser
 
 We can use **[ft_databrowser](/reference/ft_databrowser)** to have a look at the data. Since we are looking at infrequent artifacts that might happen anywhere in the data, we should look at _all_ channels and at the _complete_ time course. It helps to "zoom out" for the time, so that we see a large time window of the data at once.
 
@@ -131,7 +131,7 @@ Note that here we are reusing the `data` and the `data_clean` variables in diffe
 To get back to the original data, you can always do `data = data_orig`.
 {% include markup/end %}
 
-#### Using ft_rejectvisual
+### Using ft_rejectvisual
 
 Another strategy to remove infrequent and atypical artifacts is to use **[ft_rejectvisual](/reference/ft_rejectvisual)**. However, this requires the data to be segmented in trials. In this case we can segment the data in a continuous stream of one-second segments.
 
@@ -162,7 +162,7 @@ We can now "stitch" the segmented data back together in a continuous representat
 
 If you inspect `data_clean`in ft_databrowser, you will see that parts of the data are not visible, those are replaced by NaNs.
 
-### ICA decomposition
+## ICA decomposition
 
 We use **[ft_componentanalysis](/reference/ft_componentanalysis)** for the ICA decomposition. It has many options, and supports different methods for decomposing the data, including PCA and different ICA algorithms. Here we will be using the Extended Infomax algorithm using the `runica` method from EEGLAB. You do not have to have EEGLAB installed for this, the required functions are included in the `fieldtrip/external` directory.
 
@@ -188,7 +188,7 @@ To perform the ICA decomposition, you can use the following code. Here we use a 
 
 You should do similar way and that together represent a linear mixture of the underlying sources. If you have EEG and EOG channels that are recorded using the same reference, the EEEG and EOG channels can goin there together. If you have EEG relative to one reference and bipolar EOG channels, you should not combine them in a single ICA decomposition. When you have combined MEG and EEG data, the MEG and EEG channels will both see the brain and artifactual sources, but have different sensitivity to them and to effects due to movement of the head relative to the MEG helmet; in that case we also recommend to use the ICA separately on the MEG and on the EEG channels.
 
-### Identifying artifactual components
+## Identifying artifactual components
 
 The decomposed data structure `data_comp` represents the topographies of the components, i.e. how each source projects to the channels, and represents the temporal activation of each source. These can both be used to identify components that correspond to artifacts.
 
@@ -218,7 +218,7 @@ Again you write down the components that represent artifacts.
 
 Note that due to eye components in MEG look different than eye components in EEG, that is due to the orientation of the MEG channels: on the left side of the head the channels point to the right and on the right side they point to the left, this cause their "polarity" to flip. With EEG electrodes all frontal electrodes have the same polarity. In combination with the component time series you can figure out which component reflects horizontal movements and which reflects blinks.
 
-### Identifying bad channels
+## Identifying bad channels
 
 Both EEG and MEG give a relatively blurry representation of the physiological activity. Components that are very localized in space, i.e., that are only active on a single of very few channels, are not likely to represent physiological sources in the brain or from the heart. If you would not have removed the SQUID jumps earlier, those would show up as very localized artifacts. EEG electrodes that move or that have a sudden change in impedance can also show up as very localized.
 
@@ -228,7 +228,7 @@ It can also happen that you find one or a few componens that are very localized 
 
 With high-density EEG, you may sometimes see very localized muscle twitches, especially over the temporal region but possibly also elsewhere over the scalp. These can be less or more frequent, depending on your participant and task. Although these are spatially quite compact, they do represent a physiological source and ICA is an appropriate technique to remove them.
 
-### Removing artifactual components
+## Removing artifactual components
 
 After identification of the artifactual components you can use **[ft_rejectcomponent](/reference/ft_rejectcomponent)** to back-project all components to the channel-level representation of the data, excluding the artifacts.
 

@@ -15,6 +15,14 @@ If your experiment consists of a sequence of trials, you may also want to start 
 
 Using this approach, you can read all data from the file into memory, apply filters, re-reference (in case of EEG), identify and subtract artifacts using ICA, and subsequently cut the data into segments or trials of interest.
 
+### The datasets used in this tutorial
+
+In this tutorial we will be using two datasets, one with EEG data and one with MEG data.
+
+The [SubjectEEG.zip](https://download.fieldtriptoolbox.org/tutorial/SubjectEEG.zip) EEG dataset was acquired by Irina Siminova in a study investigating semantic processing of stimuli presented as pictures, visually displayed text or as auditory presented words. Data was acquired with a 64-channel BrainProducts BrainAmp EEG amplifier from 60 scalp electrodes placed in an electrode cap, one electrode placed under the right eye; signals "EOGv" and "EOGh" are computed after acquisition using re-referencing. During acquisition all channels were referenced to the left mastoid and an electrode placed at the earlobe was used as the ground. Channels 1-60 correspond to electrodes that are located on the head, except for channel 53 which is located at the right mastoid. Channels 61, 62, 63 are not connected to an electrode at all. Channel 64 is connected to an electrode placed below the left eye. Hence we have 62 channels of interest: 60 from the head + eogh + eogv. More details on the experiment and data can be found [here](/tutorial/eeg_language).
+
+The [Subject01.zip](https://download.fieldtriptoolbox.org/tutorial/Subject01.zip) MEG dataset was acquired by Lin Wang in a language study on semantically congruent and incongruent sentences. Three types of sentences were used in the experiment: fully congruent (FC), fully incongruent (FIC), and initially congruent (IC). There were 87 trials per condition for each of the three conditions, and a set of 87 filler sentences (not used here). Note that the data was originally acquired and written to disk as 3-second trigger-locked epochs with discontinuities between the epochs; this data can therefore not be treated as continuous.  More details on the experiment and data can be found [here](/tutorial/meg_language).
+
 ## Procedure
 
 The following steps are taken to read data, to apply filters and to reference the data (in case of EEG), and optionally to select interesting segments of data around events or triggers or by cutting the continuous data into convenient constant-length segments.
@@ -25,14 +33,6 @@ The following steps are taken to read data, to apply filters and to reference th
 - determine interesting pieces of data based on the trigger events using **[ft_definetrial](/reference/ft_definetrial)**
 - segment the continuous data into trials using **[ft_redefinetrial](/reference/ft_redefinetrial)**
 - segment the continuous data into one-second pieces using **[ft_redefinetrial](/reference/ft_redefinetrial)**
-
-## The datasets used in this tutorial
-
-In this tutorial we will be using two datasets, one with EEG data and one with MEG data.
-
-The [SubjectEEG.zip](https://download.fieldtriptoolbox.org/tutorial/SubjectEEG.zip) EEG dataset was acquired by Irina Siminova in a study investigating semantic processing of stimuli presented as pictures, visually displayed text or as auditory presented words. Data was acquired with a 64-channel BrainProducts BrainAmp EEG amplifier from 60 scalp electrodes placed in an electrode cap, one electrode placed under the right eye; signals "EOGv" and "EOGh" are computed after acquisition using re-referencing. During acquisition all channels were referenced to the left mastoid and an electrode placed at the earlobe was used as the ground. Channels 1-60 correspond to electrodes that are located on the head, except for channel 53 which is located at the right mastoid. Channels 61, 62, 63 are not connected to an electrode at all. Channel 64 is connected to an electrode placed below the left eye. Hence we have 62 channels of interest: 60 from the head + eogh + eogv. More details on the experiment and data can be found [here](/tutorial/eeg_language).
-
-The [Subject01.zip](https://download.fieldtriptoolbox.org/tutorial/Subject01.zip) MEG dataset was acquired by Lin Wang in a language study on semantically congruent and incongruent sentences. Three types of sentences were used in the experiment: fully congruent (FC), fully incongruent (FIC), and initially congruent (IC). There were 87 trials per condition for each of the three conditions, and a set of 87 filler sentences (not used here). Note that the data was originally acquired and written to disk as 3-second trigger-locked epochs with discontinuities between the epochs; this data can therefore not be treated as continuous.  More details on the experiment and data can be found [here](/tutorial/meg_language).
 
 ## Reading continuous EEG data into memory
 

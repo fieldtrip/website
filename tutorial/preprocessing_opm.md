@@ -33,7 +33,16 @@ In the second part of this tutorial we will compare empty room recordings to rec
 
 ## Procedure
 
-FIXME: summarize which analysis steps are performed in the tutorial. This should include a picture of the analysis protocol. _For the ERF we are planning: Preprocessing, renaming channels, segmenting, averaging, appending, plotting._
+In this tutorial we will take the following steps:
+
+- Initial look at the data using **[ft_databrowser](/reference/ft_databrowser)**
+- Define trials and read the data using **[ft_preprocessing](/reference/ft_preprocessing)**
+- Renaming the channels using a montage
+- Removing artifacts using **[ft_rejectvisual](/reference/ft_rejectvisual)** and **[ft_badsegment](/reference/ft_badsegment)**
+- Compute the averaged ERFs using **[ft_timelockanalysis](/reference/ft_timelockanalysis)**
+- Concatenate the data over the three positions using **[ft_appendtimelock](/reference/ft_appendtimelock)**
+- Improve the whole-head ERF topoplot using **[ft_prepare_layout](/reference/ft_prepare_layout)**
+- Plotting the OPM sensor positions in 3D using **[ft_plot_sens]()/reference/plotting/ft_plot_sens)**
 
 ## Initial look at the data
 

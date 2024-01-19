@@ -26,6 +26,8 @@ Examples for both ways are described in this tutorial, and both ways depend on *
 
 The output of ft_definetrial is a configuration structure containing the field cfg.trl. This is a matrix representing the relevant parts of the raw datafile which are to be selected for further processing. Each row in the `trl` matrix represents a single epoch-of-interest, and the `trl` matrix has at least 3 columns. The first column defines (in samples) the beginpoint of each epoch with respect to how the data are stored in the raw datafile. The second column defines (in samples) the endpoint of each epoch, and the third column specifies the offset (in samples) of the first sample within each epoch with respect to timepoint 0 within that epoch.
 
+### The dataset used in this tutorial
+
 {% include /shared/tutorial/meg_language.md %}
 
 ## Procedure
@@ -89,7 +91,6 @@ You can split up the conditions by selecting trials according to their trigger v
 Save the preprocessed data to disk
 
     save PreprocData dataFIC dataIC dataFC -append
-
 
 These functions demonstrate how to extract trials from a dataset based on trigger information. Note that some of these trials will be contaminated with various artifact such as eye blinks or MEG sensor jumps. Artifact rejection is described in [Preprocessing - Visual artifact rejection](/tutorial/visual_artifact_rejection)
 
@@ -166,7 +167,7 @@ The output structure `dataMytrialfun` now contains fewer trials than before: onl
               grad: [1x1 struct]
                cfg: [1x1 struct]
 
-More on the trialinfo field can be found in the [faq](/faq/is_it_possible_to_keep_track_of_trial-specific_information_in_my_fieldtrip_analysis_pipeline).
+More on the `trialinfo` field can be found in the [faq](/faq/is_it_possible_to_keep_track_of_trial-specific_information_in_my_fieldtrip_analysis_pipeline).
 
 ## Suggested further reading
 
