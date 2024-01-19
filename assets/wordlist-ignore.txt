@@ -756,6 +756,7 @@ HDR
 HED
 HEOG
 HFC
+HFC
 HGP
 HGPs
 HHb
@@ -1675,6 +1676,7 @@ SPI
 SPM
 SPM's
 SPMD
+SQUIDs
 SSAEP
 SSD
 SSEC
@@ -2677,6 +2679,8 @@ crossvalidate
 crowdsourced
 crsspctrm
 crtl
+cryocooler
+cryocooling
 csc
 csd
 csddimord
@@ -3381,6 +3385,7 @@ het
 hexahedra
 hexahedral
 hexahedron
+hfc
 hfig
 hgp
 hh
