@@ -2,7 +2,7 @@
 title: Which datasets are used in the documentation and where are they used?
 tags: [faq, tutorial, dataset, meg-language, meg-artifact, meg-removal, meg-visuomotor151, meg-visuomotor151-k, meg-attention, meg-tactile, meg-audodd, meg-epilepsy, hcp-motort, opm-mediannerve, mmfaces, eeg-audodd, eeg-language, eeg-affective, eeg-sedation, eeg-tms, ecog-visual, ecog-protocol, nirs-singlechannel, nirs-multichannel, spike-attention, spike-placefield, neurotycho]
 redirect_from:
-- /faq/what_types_of_datasets_and_their_respective_analyses_are_used_on_fieldtrip
+- /faq/datasets
 ---
 
 # Which datasets are used in the documentation and where are they used?

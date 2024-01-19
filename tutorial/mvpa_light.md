@@ -18,7 +18,7 @@ page.
 
 ## Procedure
 
-We will use classifiers to analyze the [MEG-language dataset](/faq/what_types_of_datasets_and_their_respective_analyses_are_used_on_fieldtrip) which features one subject with three types of trials: fully incongruent (FIC), fully congruent (FC), and initially congruent (IC). These three classes are stored in different files available here: [dataFIC_LP.mat](https://download.fieldtriptoolbox.org/tutorial/mvpa_light/dataFIC_LP.mat), [dataFC_LP.mat](https://download.fieldtriptoolbox.org/tutorial/mvpa_light/dataFC_LP.mat) and [dataIC_LP.mat](https://download.fieldtriptoolbox.org/tutorial/mvpa_light/dataIC_LP.mat).
+We will use classifiers to analyze the [MEG-language dataset](/faq/datasets) which features one subject with three types of trials: fully incongruent (FIC), fully congruent (FC), and initially congruent (IC). These three classes are stored in different files available here: [dataFIC_LP.mat](https://download.fieldtriptoolbox.org/tutorial/mvpa_light/dataFIC_LP.mat), [dataFC_LP.mat](https://download.fieldtriptoolbox.org/tutorial/mvpa_light/dataFC_LP.mat) and [dataIC_LP.mat](https://download.fieldtriptoolbox.org/tutorial/mvpa_light/dataIC_LP.mat).
 
 The data can be loaded into MATLAB using
 
@@ -62,7 +62,7 @@ Let us unpack this:
 - `cfg.method = 'mvpa'` indicates that we want to perform multivariate pattern analysis using [MVPA-Light](https://github.com/treder/MVPA-Light). Classification is performed for every time point (see section _Classification across time_).
 - `cfg.latency` restricts the classification analysis to a specific time window (here 0.5-0.7s).
 - `cfg.avgovertime` specifies whether the activity in latency window should be averaged prior to classification.
-- `cfg.design` specifies the vector of _class labels_. Class labels indicate which class (or experimental condition) trials belong to. The task of the classifier is to predict these class labels given the data. To this end, we create a vector with _1_'s for the trials belonging to class 1, _2_'s for trials belonging to class 2, and so on. The [MEG-language dataset](/faq/what_types_of_datasets_and_their_respective_analyses_are_used_on_fieldtrip),
+- `cfg.design` specifies the vector of _class labels_. Class labels indicate which class (or experimental condition) trials belong to. The task of the classifier is to predict these class labels given the data. To this end, we create a vector with _1_'s for the trials belonging to class 1, _2_'s for trials belonging to class 2, and so on. The [MEG-language dataset](/faq/datasets),
 comprises three classes, namely FIC (class 1), FC (class 2), and IC (class 3). You can also use
 a different set of numbers (e.g., trigger codes) to denote the classes. MVPA-Light then
 internally translates them into _1_'s, _2_'s and _3_'s.

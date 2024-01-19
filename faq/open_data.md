@@ -6,10 +6,10 @@ tags: [faq, dataset, sharing]
 # Where can I find open access MEG/EEG data?
 
 {% include markup/warning %}
-Feel free to hit the **edit** button at the bottom of this page to add more links to other open access datasets.
+Feel free to hit the **edit** button at the bottom of this page to add links to other open access datasets.
 {% include markup/end %}
 
-The FieldTrip tutorials include a lot of smaller tutorial datasets that are available for [download](https://download.fieldtriptoolbox.org/). These datasets are detailed in [this frequently asked question](/faq/what_types_of_datasets_and_their_respective_analyses_are_used_on_fieldtrip). Other MEG/EEG data analysis toolboxes like SPM, MNE, EEGLAB and BrainStorm also share tutorial datasets.
+The FieldTrip tutorials include a lot of smaller tutorial datasets that are available for [download](https://download.fieldtriptoolbox.org/). These datasets are detailed in [this frequently asked question](/faq/datasets). Other MEG/EEG data analysis toolboxes like SPM, MNE, EEGLAB and BrainStorm also share tutorial datasets.
 
 On the [Donders Repository](https://data.donders.ru.nl/collections/published), [OpenNeuro](https://openneuro.org), [DataDryad](https://datadryad.org/stash/) and on [Zenodo](https://zenodo.org) you can find many publicly accessible EEG, MEG and fMRI datasets.
 
@@ -59,9 +59,9 @@ Brad Voytek maintains a list of [Open Datasets in Human Electrophysiology](https
 
 NeuroTechX maintains a list of [Open EEG datasets](https://github.com/NeuroTechX/awesome-bci#brain-databases).
 
-## Other ECoG datasets
+## Other IEEG datasets
 
-Kahana and Rizutto have released [EGoG data from 251 subjects](http://memory.psych.upenn.edu/RAM_Public_Data) collected during Phase I and II of the Restoring Active Memory (RAM) project. The dataset includes information from 700 sessions, and for every patient, intracranial recording files from 100 to 200 electrode channels, neuro-anatomical information indicating the location of each electrode, precise records of patient behavior and the experimental design documents.
+Kahana and Rizutto have released [ECoG data from 251 subjects](http://memory.psych.upenn.edu/RAM_Public_Data) collected during Phase I and II of the Restoring Active Memory (RAM) project. The dataset includes information from 700 sessions, and for every patient, intracranial recording files from 100 to 200 electrode channels, neuro-anatomical information indicating the location of each electrode, precise records of patient behavior and the experimental design documents.
 
 ## Other LFP and spike datasets
 
