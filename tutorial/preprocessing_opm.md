@@ -31,11 +31,13 @@ The participant received electrical stimulation of the median nerve of the right
 
 In the second part of this tutorial we will compare empty room recordings to recordings with a participant to compare the background environmental noise and the physiological and movement-related noise that is introduced by the participant.
 
-## Procedure for the ERFs
+## Procedure
 
 FIXME: summarize which analysis steps are performed in the tutorial. This should include a picture of the analysis protocol. _For the ERF we are planning: Preprocessing, renaming channels, segmenting, averaging, appending, plotting._
 
-We start with a quick look at the data in ft_databrowser. This allows us to check the signals but also some extra information such as how many channels the data contains, the channel labels, and how triggers are encoded.
+## Initial look at the data
+
+We start with a quick initial look at the data in **[ft_databrowser](/reference/ft_databrowser)**. This allows us to check the signals but also some extra information such as how many channels the data contains, the channel labels, and how triggers are encoded.
 
     cfg = [];
     cfg.dataset = 'MedianNerve_StimBreakStim2min_Pos1.fif';
@@ -82,7 +84,7 @@ There are 733 events corresponding to the electrical stimulation of the median n
            offset: []
          duration: []
 
-### Define trials and read the data
+## Define trials and read the data
 
 Using ft_definetrial we proceed to define the segments of interest. This will again read the events and determine a segment around each of them.
 
@@ -159,7 +161,7 @@ Just like the first recording, we read the recordings that were done with the OP
     cfg.baselinewindow = [-inf 0];
     data_pos3 = ft_preprocessing(cfg);
 
-### Renaming the channels
+## Renaming the channels
 
 Each OPM sensor has a serial number. Furthermore, each sensor is connected to a channel in the electronics chassis. The serial numbers are not starting from 1, but the electronics channels are. However, we don't care which sensor is attached to channel "1", we care where each channel is relative to the head.
 
@@ -227,13 +229,13 @@ Now that we have the three montages, we can use the cfg.montage option in **[ft_
     cfg.montage = montage_pos3;
     data_pos3 = ft_preprocessing(cfg, data_pos3);
 
-#### Exercise 1
+### Exercise 1
 
 {% include markup/info %}
 Check what the channel names are in the data structure just before applying the montage, and after applying the montage. Please note that in the code above we have used the same MATLAB variable name `data_pos1` for both versions, so don't confuse the original data structure with the one in which the channels were renamed.
 {% include markup/end %}
 
-### Removing artifacts
+## Removing artifacts
 
 As the OPM sensors are magnetometers, there will be some noise that they pick up. With the small number of channels in each of the recordings, denoising is not so easily done. We have a lot of trials and we can remove those that show a lot of noise.
 
@@ -279,7 +281,7 @@ With **[ft_rejectvisual](/reference/ft_rejectvisual)** we manually click in the 
 
 Do note that the trials are 400ms long with 100ms baseline, and that the stimuli are only ~300ms spaced. Consequently the trials are partially overlapping and the number of artifacts detected and number of trials removed does not match: there are artifacts that are present in multiple consecutive trials.
 
-#### Exercise 2
+### Exercise 2
 
 {% include markup/info %}
 Besides removing the artifacts from the data, we can also use the output of ft_badsegment to look in more detail at the artifacts.
@@ -291,7 +293,7 @@ Return to the ft_databrowser section at the start of the tutorial, now adding th
 Scroll through the continuous data and find the segments that were identified as having a standard deviation above the threshold.
 {% include markup/end %}
 
-### Compute the averaged ERFs
+## Compute the averaged ERFs
 
 Now that we only have the clean trials left, we can average them to obtain the ERF.
 
@@ -300,7 +302,7 @@ Now that we only have the clean trials left, we can average them to obtain the E
     timelock_pos2 = ft_timelockanalysis(cfg, data_pos2_clean);
     timelock_pos3 = ft_timelockanalysis(cfg, data_pos3_clean);
 
-### Concatenate the data over the three positions
+## Concatenate the data over the three positions
 
 The three data structures with the ERFs for the 3x8 positions can be concatenated using the **[ft_appendtimelock](/reference/ft_appendtimelock)** function.
 
@@ -318,7 +320,7 @@ The resulting data structure contains 24 channels.
 Note that we cannot concatenate the trial-based data, as the data in trial 1 at position 1 does not correspond to trial 1 in position 2. Also the number of trials per position/condition can be different.
 {% include markup/end %}
 
-### Visualize the ERFs
+## Visualize the ERFs
 
 We can visualize the ERFs from the OPM data just as we would do with other MEG or EEG data, as explained in the plotting tutorial](/tutorial/plotting). For that we need a layout which specifies the location of each channel in the figure. The construction of a layout is explained in the [layout tutorial](/tutorial/layout); but in this case we can use the [template layout](/template/layout) that is included in FieldTrip.
 
@@ -338,7 +340,7 @@ Subsequently, you can click again to make a selection over time to get to a topo
 
 {% include image src="/assets/img/tutorial/preprocessing_opm/figure5.png" width="550" %}
 
-#### Exercise 3
+### Exercise 3
 
 {% include markup/info %}
 Use the mouse to make a selection over channels and plot the average over those channels. Some channels will have a positive deflection and some will have a negative deflection; if you select and average  the positive and negative ones together, the overall ERF will be diminished. Around 20 ms after stimulation there should be the well-known N20 peak in the ERFs: select that and plot the topography.
@@ -357,7 +359,7 @@ You should notice that the topographic interpolation of the data spans the whole
 
 Interpolating (and extrapolating) is exactly what ft_topoplotER is supposed to do, as it needs to assign a color code to each location around the head, also to those locations where no sensor was placed.
 
-### Improve the visualization of the ERFs
+## Improve the visualization of the ERFs
 
 The **[ft_multiplotER](/reference/ft_multiplotER)** function determines the intersection between the data and the layout and only shows those channels. We know that there are many more slots in the helmet and showing those can help to interpret the spatial distribution. We can achieve this by "padding" the ERF data with NaN or Not-a-Number values.
 
@@ -444,7 +446,7 @@ The result is an topographic interpolation where the fake channels are shown as 
 
 {% include image src="/assets/img/tutorial/preprocessing_opm/figure9.png" width="550" %}
 
-### Mask the topographic interpolation
+## Mask the topographic interpolation
 
 Adding fake channels with NaNs to the data and using the `cfg.interpolatenan` option is one way to make a topography that shows the whole head without incorrect colors over areas where we did not record. Another way is described here; this is based on a modified version of the layout.
 
@@ -533,7 +535,7 @@ An even better trimmed layout can be constructed if we also exclude channel 'FL8
 
 {% include image src="/assets/img/tutorial/preprocessing_opm/figure11.png" width="550" %}
 
-### Plotting the OPM positions in 3D
+## Plotting the OPM positions in 3D
 
 The multiplot and the topoplot are both projections on the 2D surface of our screen. It can be helpful to look at the OPM sensors in 3D. For that we can load the full [definition of the sensors](/faq/how_are_electrodes_magnetometers_or_gradiometers_described/).  
 
@@ -557,11 +559,16 @@ Again it makes sense to look at the specific selection of OPM sensors that was u
 
 {% include image src="/assets/img/tutorial/preprocessing_opm/figure13.png" width="550" %}
 
-## Summary and conclusion:
+## Summary and suggested further reading
 
+This tutorial gave an introduction on processing OPM data, specifically dealing with a small OPM array that was used to record activity sequentially over multiple locations that together cover the region-of-interest. Furthermore, it showed how to plot the data topographically, given that not the whole head was covered by the measurement.  
 
-FIXME: add the following
+You may want to continue with the more general [tutorials](/tutorial/) on processing MEG (and EEG) data, or have a look at the [system specific details](/getting_started) for the OPM data that you are working with.
 
-- What has been covered?
-- What has not been covered but is relevant in the context of the tutorial?
-- Provide links to suggested further reading, related FAQs and example scripts.
+Furthermore, you can explore example scripts that deal with OPMs:
+
+{% include seealso tag1="example" tag2="opm" %}
+
+and frequently asked questions:
+
+{% include seealso tag1="faq" tag2="opm" %}
