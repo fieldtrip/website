@@ -1,6 +1,6 @@
 ---
 title: Which datasets are used in the documentation and where are they used?
-tags: [faq, tutorial, dataset, meg-language, meg-artifact, meg-removal, meg-visuomotor151, meg-visuomotor151-k, meg-attention, meg-tactile, meg-audodd, eeg-audodd, eeg-language, eeg-affective, eeg-sedation, eeg-tms, hcp-motort, mmfaces, meg-epilepsy, spike-attention, spike-placefield, neurotycho, ecog-visual, ecog-protocol, nirs-singlechannel, nirs-multichannel]
+tags: [faq, tutorial, dataset, meg-language, meg-artifact, meg-removal, meg-visuomotor151, meg-visuomotor151-k, meg-attention, meg-tactile, meg-audodd, meg-epilepsy, hcp-motort, opm-mediannerve, mmfaces, eeg-audodd, eeg-language, eeg-affective, eeg-sedation, eeg-tms, ecog-visual, ecog-protocol, nirs-singlechannel, nirs-multichannel, spike-attention, spike-placefield, neurotycho]
 redirect_from:
 - /faq/what_types_of_datasets_and_their_respective_analyses_are_used_on_fieldtrip
 ---
@@ -95,6 +95,25 @@ Documentation referring to this dataset:
 Documentation referring to this dataset:
 {% include seealso tag1="meg-audodd" %}
 
+## MEG-epilepsy
+
+- This dataset contains MEG data from two patients. The data was recorded at Aston Brain Centre (ABC) using a 275-channel CTF system and using a Neuromag/Elekta/Megin 306-channel system, i.e. for both patients there are the recordings with the two MEG systems. This clinical data was kindly provided by Professor Stefano Seri.
+- Download the dataset [here](https://download.fieldtriptoolbox.org/tutorial/epilepsy/) from our download server.
+
+Documentation referring to this dataset:
+{% include seealso tag1="meg-epilepsy" %}
+
+## HCP-motort
+
+- Motor task dataset from Human Connectome Project (HCP)
+- Recorded at 2000Hz with 248-channel 4D/BTi MEG scanner in St. Louis, USA.
+- Subjects do a movement with either left hand, right hand, left foot or right foot.
+- Details [HCP-motort](/tutorial/hcp_motort)
+- Download the dataset from the [HCP website](http://db.humanconnectome.org/).
+
+Documentation referring to this dataset:
+{% include seealso tag1="hcp-motort" %}
+
 ## OPM-mediannerve
 
 - MEG recordings using a FieldLine v2 system comprised of 8 radial OPM sensors
@@ -105,6 +124,18 @@ Documentation referring to this dataset:
 
 Documentation referring to this dataset:
 {% include seealso tag1="opm-mediannerve" %}
+
+## mmfaces
+
+- EEG, MEG, structural MRI and fMRI data from 16 subjects, also used in SPM8 and SPM12 documentation
+- Recorded by Daniel Wakeman and Rik Henson in Cambridge, using 306-channel Neuromag/Elekta/MEGIN system
+- Subjects watch familiar, unfamiliar and scrambled faces
+- Link to [publication](https://doi.org/10.1038/sdata.2015.1) by Wakeman and Henson (2015).
+- Download the dataset from [OpenNeuro](https://doi.org/10.18112/openneuro.ds000117.v1.0.5)  
+- Details [mmfaces](/tutorial/mmfaces)
+
+Documentation referring to this dataset:
+{% include seealso tag1="mmfaces" %}
 
 ## EEG-audodd
 
@@ -157,61 +188,6 @@ Documentation referring to this dataset:
 Documentation referring to this dataset:
 {% include seealso tag1="eeg-tms" %}
 
-## HCP-motort
-
-- Motor task dataset from Human Connectome Project (HCP)
-- Recorded at 2000Hz with 248-channel 4D/BTi MEG scanner in St. Louis, USA.
-- Subjects do a movement with either left hand, right hand, left foot or right foot.
-- Details [HCP-motort](/tutorial/hcp_motort)
-- Download the dataset from the [HCP website](http://db.humanconnectome.org/).
-
-Documentation referring to this dataset:
-{% include seealso tag1="hcp-motort" %}
-
-## mmfaces
-
-- EEG, MEG, structural MRI and fMRI data from 16 subjects, also used in SPM8 and SPM12 documentation
-- Recorded by Daniel Wakeman and Rik Henson in Cambridge, using 306-channel Neuromag/Elekta/MEGIN system
-- Subjects watch familiar, unfamiliar and scrambled faces
-- Link to [publication](https://doi.org/10.1038/sdata.2015.1) by Wakeman and Henson (2015).
-- Download the dataset from [OpenNeuro](https://doi.org/10.18112/openneuro.ds000117.v1.0.5)  
-- Details [mmfaces](/tutorial/mmfaces)
-
-Documentation referring to this dataset:
-{% include seealso tag1="mmfaces" %}
-
-## MEG-epilepsy
-
-- This dataset contains MEG data from two patients. The data was recorded at Aston Brain Centre (ABC) using a 275-channel CTF system and using a Neuromag/Elekta/Megin 306-channel system, i.e. for both patients there are the recordings with the two MEG systems. This clinical data was kindly provided by Professor Stefano Seri.
-- Download the dataset [here](https://download.fieldtriptoolbox.org/tutorial/epilepsy/) from our download server.
-
-Documentation referring to this dataset:
-{% include seealso tag1="meg-epilepsy" %}
-
-## Spike-attention
-
-- Monkeys attended to relevant the stimulus while ignoring distracters. Activity is recorded in V4 and analyzed as a function of whether neurons were activated by stimulus or distractors.
-- Link to the [publication](http://dx.doi.org/10.1126/science.1055465) by Fries et al.(2001).
-- Download the dataset [p029_sort_final_01.nex](https://download.fieldtriptoolbox.org/tutorial/spikefield/p029_sort_final_01.nex) from our download server.
-
-Documentation referring to this dataset:
-{% include seealso tag1="spike-attention" %}
-
-## Spike-placefield
-
-- Rat CA1 hippocampal activity measured during exploration of maze.
-- Download the dataset [tt6_7.t](https://download.fieldtriptoolbox.org/tutorial/spike/tt6_7.t) from our download server.
-
-Documentation referring to this dataset:
-{% include seealso tag1="spike-placefield" %}
-
-## NeuroTycho
-
-- The [NeuroTycho](http://neurotycho.org) project shares ECoG and sEEG data recorded in monkeys while performing various tasks, plus behavioral data. The datasets were recorded in the Laboratory for Adaptive Intelligence, BSI, RIKEN and have been made publicly available.
-
-Documentation referring to this dataset:
-{% include seealso tag1="neurotycho" %}
-
 ## ECoG-visual
 
 - ECoG data recorded at the Comprehensive Epilepsy Center of the New York University School of Medicine and processed in collaboration with members of the Multisensory Integration Research Group (Charité - University Medicine Berlin).
@@ -246,3 +222,27 @@ Documentation referring to this dataset:
 
 Documentation referring to this dataset:
 {% include seealso tag1="nirs-multichannel" %}
+
+## Spike-attention
+
+- Monkeys attended to relevant the stimulus while ignoring distracters. Activity is recorded in V4 and analyzed as a function of whether neurons were activated by stimulus or distractors.
+- Link to the [publication](http://dx.doi.org/10.1126/science.1055465) by Fries et al.(2001).
+- Download the dataset [p029_sort_final_01.nex](https://download.fieldtriptoolbox.org/tutorial/spikefield/p029_sort_final_01.nex) from our download server.
+
+Documentation referring to this dataset:
+{% include seealso tag1="spike-attention" %}
+
+## Spike-placefield
+
+- Rat CA1 hippocampal activity measured during exploration of maze.
+- Download the dataset [tt6_7.t](https://download.fieldtriptoolbox.org/tutorial/spike/tt6_7.t) from our download server.
+
+Documentation referring to this dataset:
+{% include seealso tag1="spike-placefield" %}
+
+## NeuroTycho
+
+- The [NeuroTycho](http://neurotycho.org) project shares ECoG and sEEG data recorded in monkeys while performing various tasks, plus behavioral data. The datasets were recorded in the Laboratory for Adaptive Intelligence, BSI, RIKEN and have been made publicly available.
+
+Documentation referring to this dataset:
+{% include seealso tag1="neurotycho" %}
