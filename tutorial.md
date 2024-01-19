@@ -9,7 +9,7 @@ The tutorials contain background on the different analysis methods and include c
 
 Some of these tutorials are also used during the "Advanced EEG/MEG analysis" [toolkit course](https://www.ru.nl/donders/agenda/donders-tool-kits/) that is presented at the Centre for Cognitive Neuroimaging of the Donders Institute for Brain, Cognition and Behaviour each year. Furthermore, we use these tutorials during the various [workshops](/workshop).
 
-For information on what types of datasets we have here on FieldTrip, and which datasets are used in which tutorials see this overview of the [datasets used in the tutorials](/faq/what_types_of_datasets_and_their_respective_analyses_are_used_on_fieldtrip).
+For information on what types of datasets we have here on FieldTrip, and which datasets are used in which tutorials see this overview of the [datasets used in the tutorials](/faq/datasets).
 
 When adding or contributing to the tutorials please consider the [documentation guidelines](/development/guideline/documentation).
 
