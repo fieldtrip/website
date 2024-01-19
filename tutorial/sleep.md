@@ -29,7 +29,7 @@ Sleep states can only be reliably identified by using combined EEG, EOG and EMG.
 
 _Figure 1: Hypnogram and sleep stages according to manual sleep scoring rules by Rechtschaffen and Kales (1968) and how they transfer to a sleep table._
 
-## Description of the dataset
+### The dataset used in this tutorial
 
 For this tutorial we will use recordings from the healthy sample of the CAP Sleep Database that are openly available in PhysioNet ([https://www.physionet.org/physiobank/database/capslpdb/](https://www.physionet.org/physiobank/database/capslpdb/)). The number of channels has been reduced and the data has been sampled down to 128 Hz for convenience. The data is stored in EDF format and two subjects can be downloaded from our [download server](https://download.fieldtriptoolbox.org/tutorial/sleep/).
 
