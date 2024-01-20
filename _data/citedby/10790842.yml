@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '38235471'
+- idtype: doi
+  value: 10.3389/fnrgo.2022.948080
+- idtype: pmcid
+  value: PMC10790842
+authors:
+- authtype: Author
+  name: Watanabe H
+- authtype: Author
+  name: Naruse Y
+epubdate: 2022 Oct 21
+fulljournalname: Frontiers in Neuroergonomics
+issue: ''
+pages: '948080'
+pmclivedate: 2024/01/17
+printpubdate: ''
+pubdate: 2022 Oct 21
+sortdate: 2022/10/21 00:00
+source: Front Neurogenom
+title: 'P300 as a neural indicator for setting levels of goal scores in educational
+  gamification applications from the perspective of intrinsic motivation: An ERP study'
+uid: '10790842'
+volume: '3'
