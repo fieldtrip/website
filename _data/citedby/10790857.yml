@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '38236482'
+- idtype: doi
+  value: 10.3389/fnrgo.2021.625343
+- idtype: pmcid
+  value: PMC10790857
+authors:
+- authtype: Author
+  name: Gouraud J
+- authtype: Author
+  name: Delorme A
+- authtype: Author
+  name: Berberian B
+epubdate: 2021 Apr 1
+fulljournalname: Frontiers in Neuroergonomics
+issue: ''
+pages: '625343'
+pmclivedate: 2024/01/17
+printpubdate: ''
+pubdate: 2021 Apr 1
+sortdate: 2021/04/01 00:00
+source: Front Neurogenom
+title: Mind Wandering Influences EEG Signal in Complex Multimodal Environments
+uid: '10790857'
+volume: '2'
