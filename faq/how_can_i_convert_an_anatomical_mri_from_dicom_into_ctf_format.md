@@ -91,7 +91,7 @@ At the DCCN we use ear-molds that come in a variety of sizes to position the MEG
 {% include markup/danger %}
 Note that the photo above is incorrect and misleading: it shows one of the markers plugged into the earmold on the _inside_, whereas in reality they are plugged into the mold on the _outside_, facing away from the ear. The markers would actually also be too big to fit in the ear canal.
 
-In the MRI below you can see the small dot (the marker) with the yellow arrow hovering outside the ear; the silcon earmold itself is not visible on the MRI.
+In the MRI below you can see the small dot (the marker) with the yellow arrow hovering outside the ear; the silicone earmold itself is not visible on the MRI.
 {% include markup/end %}
 
 On top of that, the right ear also contains a large vitamine E marker to help distinguish left and right. At the location of the nasion we don't put a marker. Below you see three slices with the right-ear marker. Note that the ear marker is the small dot in the middle of the ear shell (yellow arrow), not the large dot close to the ear lobe (red arrow; that is the vitamine E capsule to indicate the right side).
