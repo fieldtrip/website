@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '38233455'
+- idtype: doi
+  value: 10.1038/s41598-023-50857-z
+- idtype: pmcid
+  value: PMC10794184
+authors:
+- authtype: Author
+  name: Boetzel C
+- authtype: Author
+  name: Stecher HI
+- authtype: Author
+  name: Kasten FH
+- authtype: Author
+  name: Herrmann CS
+epubdate: 2024 Jan 17
+fulljournalname: Scientific Reports
+issue: ''
+pages: '1505'
+pmclivedate: 2024/01/18
+printpubdate: ''
+pubdate: 2024 Jan 17
+sortdate: 2024/01/17 00:00
+source: Sci Rep
+title: Modulating the difficulty of a visual oddball-like task and P3m amplitude
+uid: '10794184'
+volume: '14'
