@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '38249572'
+- idtype: doi
+  value: 10.3389/fnhum.2023.1243051
+- idtype: pmcid
+  value: PMC10796678
+authors:
+- authtype: Author
+  name: Binder M
+- authtype: Author
+  name: Papiernik J
+- authtype: Author
+  name: Griskova-Bulanova I
+- authtype: Author
+  name: Frycz S
+- authtype: Author
+  name: Chojnacki B
+- authtype: Author
+  name: Górska-Klimowska U
+epubdate: 2024 Jan 5
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '1243051'
+pmclivedate: 2024/01/19
+printpubdate: ''
+pubdate: 2024 Jan 5
+sortdate: 2024/01/05 00:00
+source: Front Hum Neurosci
+title: Diagnosing awareness in disorders of consciousness with gamma-band auditory
+  responses
+uid: '10796678'
+volume: '17'
