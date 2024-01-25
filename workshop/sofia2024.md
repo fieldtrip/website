@@ -22,55 +22,55 @@ Tzvetan Popov with local organizers and the generous hardware support by [MBrain
 **Session I**
 
 - **09:00 – 09:15** Registration and welcome
-- **09:15 – 10:15 *Lecture***: Introduction to EEG and the FieldTrip Toolbox
+- **09:15 – 10:15** **_Lecture_**: Introduction to EEG and the FieldTrip Toolbox
 - **10:15 – 10:30** Coffee break
-- **10:30 – 12:30 *[Hands-on***: Initiation to FieldTrip; Analyzing EEG data (event-related potentials)](https://www.notion.so/9b48e6f48d824aa488b7cea8084a827c?pvs=21)
+- **10:30 – 12:30** **_Hands-on_**: [Initiation to FieldTrip; Analyzing EEG data (event-related potentials)](https://www.notion.so/9b48e6f48d824aa488b7cea8084a827c?pvs=21)
 
 **Session II**
 
 - **12:30 – 13:30** Lunch
-- **13:30 – 14:30 *Lecture***: Fundamentals of neuronal oscillations and synchrony
+- **13:30 – 14:30** **_Lecture_**: Fundamentals of neuronal oscillations and synchrony
 - **14:30 – 14:45** Coffee break
-- **14:45 – 16:30** ***Hands-on***: Time-frequency Analysis of Power
+- **14:45 – 16:30** **_Hands-on_**: Time-frequency Analysis of Power
 - **16:30 – 17:00** Wrap-up-the-day and Summary
 
 ### **Day 2- 08.02.2024**
 
 **Session III**
 
-- **9:00 – 10:45** ***Lecture***: Non-parametric permutation techniques
+- **9:00 – 10:45** **_Lecture_**: Non-parametric permutation techniques
 - **10:45 – 11:00** Coffee break
-- **11:00 – 12:30 *Hands-On***: Statistical Analyses- cluster permutation strategies I
+- **11:00 – 12:30** **_Hands-On_**: Statistical Analyses- cluster permutation strategies I
 - **12:30 – 13:30** Lunch
 
 **Session IV**
 
-- **13:30 – 14:45** ***Hands-On***: Statistical Analyses- cluster permutation strategies II
+- **13:30 – 14:45** **_Hands-On_**: Statistical Analyses- cluster permutation strategies II
 - **14:45 – 15:00** Coffee break
-- **15:00 – 16:30** ***Hands-On***: Statistical Analyses- MVPA and decoding
+- **15:00 – 16:30** **_Hands-On_**: Statistical Analyses- MVPA and decoding
 - **16:30 – 17:00** Wrap-up-the-day and Summary
 
 ### **Day 3 - 09.02.2024**
 
 **Session V**
 
-- **9:00 – 10:30** ***Lecture***: Source reconstruction in FieldTrip
+- **9:00 – 10:30** **_Lecture_**: Source reconstruction in FieldTrip
 - **10:30 – 10:45** Coffee break
-- **10:45 – 12:30** ***Hands-on***: Source Reconstruction on oscillatory data (beamformer)
+- **10:45 – 12:30** **_Hands-on_**: Source Reconstruction on oscillatory data (beamformer)
 - **12:30 – 13:30** Lunchs
 
 **Session VI**
 
-- **13:30 – 15:30** ***Lecture***: Connectivity analysis
+- **13:30 – 15:30** **_Lecture_**: Connectivity analysis
 - **15:30 – 15:45** Coffee break
-- **15:45 – 16:30** ***Hands-on***: Connectivity analysis
+- **15:45 – 16:30** **_Hands-on_**: Connectivity analysis
 - **16:30 – 17:00** Wrap-up-the-day and Closing remarks
 
 ### **Day 4 - 10.02.2024**
 
-- **09:30 – 11:30** ***FieldTrip Playground*** (bring your own data)
+- **09:30 – 11:30** **_FieldTrip Playground_** (bring your own data)
 - **11:30 – 11:45** Coffee break
-- **11:45 – 13:30** ***FieldTrip Playground continued***
+- **11:45 – 13:30** **_FieldTrip Playground continued_**
 - **13:30 – 14:00** Wrap-up-the-day and Closing remarks
 
 ## Getting started with the hands-on sessions
