@@ -78,7 +78,7 @@ Tzvetan Popov with local organizers and the generous hardware support by [MBrain
 For the hands-on sessions you have to start MATLAB. Make sure you 
 have downloaded the hands-on data prior to the start of the workshop as 
 it is quite a large download. A recent version of FieldTrip can be 
-downloaded [here](https://depot.uni-konstanz.de/cgi-bin/exchange.pl?g=8qar4m9rlc), and the tutorial data can be downloaded [here](https://depot.uni-konstanz.de/cgi-bin/exchange.pl?g=25qbtdhtpp).
+downloaded [here](https://cloud.uni-konstanz.de/index.php/s/EkqPeQ9sxYqpCcB), and the tutorial data can be downloaded [here](https://www.dropbox.com/scl/fo/29r037lr39mbfzvgrcjmn/h?rlkey=skpwe3ggpx6jeava7udrej4h5&dl=0).
 
 Depending on the unzip program you are using (e.g., Winrar), the 
 name of the zip file might also appear as directory, resulting in 
