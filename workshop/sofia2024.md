@@ -1,3 +1,6 @@
+LOL
+
+
 # FieldTrip workshop Sofia 07-10.02.2024
 
 [The Institute of Neurobiology](https://inb.bas.bg/index-en.html) at  the [Bulgarian Academy of Science](https://www.bas.bg/?lang=en) is organizing a FieldTrip worshop in Sofia.
