@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '38263324'
+- idtype: doi
+  value: 10.1038/s41598-023-49588-y
+- idtype: pmcid
+  value: PMC10805777
+authors:
+- authtype: Author
+  name: Liparoti M
+- authtype: Author
+  name: Cipriano L
+- authtype: Author
+  name: Troisi Lopez E
+- authtype: Author
+  name: Polverino A
+- authtype: Author
+  name: Minino R
+- authtype: Author
+  name: Sarno L
+- authtype: Author
+  name: Sorrentino G
+- authtype: Author
+  name: Lucidi F
+- authtype: Author
+  name: Sorrentino P
+epubdate: 2024 Jan 23
+fulljournalname: Scientific Reports
+issue: ''
+pages: '1976'
+pmclivedate: 2024/01/24
+printpubdate: ''
+pubdate: 2024 Jan 23
+sortdate: 2024/01/23 00:00
+source: Sci Rep
+title: Brain flexibility increases during the peri-ovulatory phase as compared to
+  early follicular phase of the menstrual cycle
+uid: '10805777'
+volume: '14'

@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '38245516'
+- idtype: doi
+  value: 10.1038/s41467-023-44571-7
+- idtype: pmcid
+  value: PMC10799948
+authors:
+- authtype: Author
+  name: Weber J
+- authtype: Author
+  name: Solbakk AK
+- authtype: Author
+  name: Blenkmann AO
+- authtype: Author
+  name: Llorens A
+- authtype: Author
+  name: Funderud I
+- authtype: Author
+  name: Leske S
+- authtype: Author
+  name: Larsson PG
+- authtype: Author
+  name: Ivanovic J
+- authtype: Author
+  name: Knight RT
+- authtype: Author
+  name: Endestad T
+- authtype: Author
+  name: Helfrich RF
+epubdate: 2024 Jan 20
+fulljournalname: Nature Communications
+issue: ''
+pages: '637'
+pmclivedate: 2024/01/21
+printpubdate: ''
+pubdate: 2024 Jan 20
+sortdate: 2024/01/20 00:00
+source: Nat Commun
+title: Ramping dynamics and theta oscillations reflect dissociable signatures during
+  rule-guided human behavior
+uid: '10799948'
+volume: '15'

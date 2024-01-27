@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '38268794'
+- idtype: doi
+  value: 10.3389/fnbeh.2023.1280608
+- idtype: pmcid
+  value: PMC10806096
+authors:
+- authtype: Author
+  name: Horka P
+- authtype: Author
+  name: Langova V
+- authtype: Author
+  name: Hubeny J
+- authtype: Author
+  name: Vales K
+- authtype: Author
+  name: Chrtkova I
+- authtype: Author
+  name: Horacek J
+epubdate: 2024 Jan 10
+fulljournalname: Frontiers in Behavioral Neuroscience
+issue: ''
+pages: '1280608'
+pmclivedate: 2024/01/24
+printpubdate: ''
+pubdate: 2024 Jan 10
+sortdate: 2024/01/10 00:00
+source: Front Behav Neurosci
+title: Open field test for the assessment of anxiety-like behavior in Gnathonemus
+  petersii fish
+uid: '10806096'
+volume: '17'
