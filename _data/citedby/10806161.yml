@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '38268560'
+- idtype: doi
+  value: 10.3389/fpsyt.2023.1293347
+- idtype: pmcid
+  value: PMC10806161
+authors:
+- authtype: Author
+  name: Yun S
+- authtype: Author
+  name: Jo SH
+- authtype: Author
+  name: Jeon HJ
+- authtype: Author
+  name: Choo B
+- authtype: Author
+  name: Seok JH
+- authtype: Author
+  name: Shin H
+- authtype: Author
+  name: Kim IY
+- authtype: Author
+  name: Choi SW
+- authtype: Author
+  name: Koo BH
+epubdate: 2024 Jan 10
+fulljournalname: Frontiers in Psychiatry
+issue: ''
+pages: '1293347'
+pmclivedate: 2024/01/24
+printpubdate: ''
+pubdate: 2024 Jan 10
+sortdate: 2024/01/10 00:00
+source: Front Psychiatry
+title: Neurophysiological insights into impaired mentalization in borderline personality
+  disorder an electroencephalography study
+uid: '10806161'
+volume: '14'
