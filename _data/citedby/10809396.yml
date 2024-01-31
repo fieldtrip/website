@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '38274682'
+- idtype: doi
+  value: 10.3389/fpsyg.2023.1282113
+- idtype: pmcid
+  value: PMC10809396
+authors:
+- authtype: Author
+  name: Wang J
+- authtype: Author
+  name: Song F
+- authtype: Author
+  name: He X
+- authtype: Author
+  name: Bao M
+epubdate: 2024 Jan 11
+fulljournalname: Frontiers in Psychology
+issue: ''
+pages: '1282113'
+pmclivedate: 2024/01/25
+printpubdate: ''
+pubdate: 2024 Jan 11
+sortdate: 2024/01/11 00:00
+source: Front Psychol
+title: Negligible contribution of adaptation of ocular opponency neurons to the effect
+  of short-term monocular deprivation
+uid: '10809396'
+volume: '14'
