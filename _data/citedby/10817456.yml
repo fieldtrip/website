@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '38248802'
+- idtype: doi
+  value: 10.3390/jpm14010101
+- idtype: pmcid
+  value: PMC10817456
+authors:
+- authtype: Author
+  name: Noda Y
+- authtype: Author
+  name: Sakaue K
+- authtype: Author
+  name: Wada M
+- authtype: Author
+  name: Takano M
+- authtype: Author
+  name: Nakajima S
+epubdate: 2024 Jan 17
+fulljournalname: Journal of Personalized Medicine
+issue: '1'
+pages: '101'
+pmclivedate: 2024/01/27
+printpubdate: ''
+pubdate: 2024 Jan 17
+sortdate: 2024/01/17 00:00
+source: J Pers Med
+title: Development of Artificial Intelligence for Determining Major Depressive Disorder
+  Based on Resting-State EEG and Single-Pulse Transcranial Magnetic Stimulation-Evoked
+  EEG Indices
+uid: '10817456'
+volume: '14'

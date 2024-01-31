@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '38248257'
+- idtype: doi
+  value: 10.3390/brainsci14010042
+- idtype: pmcid
+  value: PMC10813673
+authors:
+- authtype: Author
+  name: Campos A
+- authtype: Author
+  name: Tuomainen J
+- authtype: Author
+  name: Tuomainen O
+epubdate: 2023 Dec 31
+fulljournalname: Brain Sciences
+issue: '1'
+pages: '42'
+pmclivedate: 2024/01/27
+printpubdate: ''
+pubdate: 2023 Dec 31
+sortdate: 2023/12/31 00:00
+source: Brain Sci
+title: Mismatch Responses to Speech Contrasts in Preschoolers with and without Developmental
+  Language Disorder
+uid: '10813673'
+volume: '14'
