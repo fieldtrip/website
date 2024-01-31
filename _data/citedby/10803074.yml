@@ -1,0 +1,34 @@
+articleids:
+- idtype: pmid
+  value: '37494151'
+- idtype: doi
+  value: 10.1109/TBME.2023.3298957
+- idtype: pmcid
+  value: PMC10803074
+- idtype: MID
+  value: NIHMS1954261
+authors:
+- authtype: Author
+  name: Forenzo D
+- authtype: Author
+  name: Liu Y
+- authtype: Author
+  name: Kim J
+- authtype: Author
+  name: Ding Y
+- authtype: Author
+  name: Yoon T
+- authtype: Author
+  name: He B
+epubdate: 2023 Dec 22
+fulljournalname: IEEE transactions on bio-medical engineering
+issue: '1'
+pages: 282-294
+pmclivedate: ''
+printpubdate: 2024 Jan
+pubdate: 2023 Dec 22
+sortdate: 2023/12/22 00:00
+source: IEEE Trans Biomed Eng
+title: Integrating simultaneous motor imagery and spatial attention for EEG-BCI control
+uid: '10803074'
+volume: '71'

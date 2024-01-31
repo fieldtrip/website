@@ -1,0 +1,51 @@
+articleids:
+- idtype: pmid
+  value: '38269118'
+- idtype: doi
+  value: 10.3389/fncel.2023.1224558
+- idtype: pmcid
+  value: PMC10806452
+authors:
+- authtype: Author
+  name: Rodríguez-Arzate CA
+- authtype: Author
+  name: Noguez-Imm R
+- authtype: Author
+  name: Reyes-Ortega P
+- authtype: Author
+  name: Rodríguez-Ortiz LR
+- authtype: Author
+  name: García-Peña MF
+- authtype: Author
+  name: Ordaz RP
+- authtype: Author
+  name: Vélez-Uriza F
+- authtype: Author
+  name: Cisneros-Mejorado A
+- authtype: Author
+  name: Arellano RO
+- authtype: Author
+  name: Pérez CI
+- authtype: Author
+  name: Hernández-Zimbrón LF
+- authtype: Author
+  name: Dégardin J
+- authtype: Author
+  name: Simonutti M
+- authtype: Author
+  name: Picaud S
+- authtype: Author
+  name: Thébault SC
+epubdate: 2024 Jan 8
+fulljournalname: Frontiers in Cellular Neuroscience
+issue: ''
+pages: '1224558'
+pmclivedate: 2024/01/24
+printpubdate: ''
+pubdate: 2024 Jan 8
+sortdate: 2024/01/08 00:00
+source: Front Cell Neurosci
+title: Potential contributions of the intrinsic retinal oscillations recording using
+  non-invasive electroretinogram to bioelectronics
+uid: '10806452'
+volume: '17'

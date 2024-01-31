@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '37734587'
+- idtype: doi
+  value: 10.1016/j.brs.2023.09.010
+- idtype: pmcid
+  value: PMC10811591
+- idtype: MID
+  value: NIHMS1941405
+authors:
+- authtype: Author
+  name: Rolle CE
+- authtype: Author
+  name: Ng GY
+- authtype: Author
+  name: Nho YH
+- authtype: Author
+  name: Barbosa DA
+- authtype: Author
+  name: Shivacharan RS
+- authtype: Author
+  name: Gold JI
+- authtype: Author
+  name: Bassett DS
+- authtype: Author
+  name: Halpern CH
+- authtype: Author
+  name: Buch V
+epubdate: 2023 Sep 19
+fulljournalname: Brain stimulation
+issue: '5'
+pages: 1384-1391
+pmclivedate: 2024/01/26
+printpubdate: 2023 Sep-Oct
+pubdate: 2023 Sep 19
+sortdate: 2023/09/19 00:00
+source: Brain Stimul
+title: Accumbens connectivity during deep-brain stimulation differentiates loss of
+  control from physiologic behavioral states
+uid: '10811591'
+volume: '16'

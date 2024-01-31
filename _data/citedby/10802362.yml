@@ -1,0 +1,46 @@
+articleids:
+- idtype: pmid
+  value: '38260246'
+- idtype: doi
+  value: 10.1101/2024.01.04.573933
+- idtype: pmcid
+  value: PMC10802362
+authors:
+- authtype: Author
+  name: Rier L
+- authtype: Author
+  name: Rhodes N
+- authtype: Author
+  name: Pakenham D
+- authtype: Author
+  name: Boto E
+- authtype: Author
+  name: Holmes N
+- authtype: Author
+  name: Hill RM
+- authtype: Author
+  name: Rivero GR
+- authtype: Author
+  name: Shah V
+- authtype: Author
+  name: Doyle C
+- authtype: Author
+  name: Osborne J
+- authtype: Author
+  name: Bowtell R
+- authtype: Author
+  name: Taylor MJ
+- authtype: Author
+  name: Brookes MJ
+epubdate: 2024 Jan 4
+fulljournalname: bioRxiv
+issue: ''
+pages: 2024.01.04.573933
+pmclivedate: 2024/01/23
+printpubdate: ''
+pubdate: 2024 Jan 4
+sortdate: 2024/01/04 00:00
+source: bioRxiv
+title: 'The neurodevelopmental trajectory of beta band oscillations: an OPM-MEG study'
+uid: '10802362'
+volume: ''
