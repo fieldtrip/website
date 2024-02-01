@@ -38,28 +38,26 @@ Tzvetan Popov with local organizers and the generous hardware support by [MBrain
 
 **Session III**
 
-- **9:00 – 10:45** **_Lecture_**: Non-parametric permutation techniques
+- **9:00 – 10:45** **_Hyperscanning Demo_**: Demonstration and data aquistion of multiple participants in social cognition context [Ivan Gligorijevic](https://rs.linkedin.com/in/ivan-gligorijevic) from  [MBrainTrain](https://mbraintrain.com/)
 - **10:45 – 11:00** Coffee break
-- **11:00 – 12:30** **_Hands-On_**: Statistical Analyses- cluster permutation strategies I
+- **11:00 – 12:30** **_Hyperscanning Demo_**: Continued
 - **12:30 – 13:30** Lunch
-
-**Session IV**
-
-- **13:30 – 14:45** **_Hands-On_**: Statistical Analyses- cluster permutation strategies II
+- **13:30 – 14:45** **_Lecture_**: Non-parametric permutation techniques
 - **14:45 – 15:00** Coffee break
-- **15:00 – 16:30** **_Hands-On_**: Statistical Analyses- MVPA and decoding
+- **15:00 – 16:30** **_Hands-On_**: Statistical Analyses- cluster permutation strategies, MVPA and decoding
 - **16:30 – 17:00** Wrap-up-the-day and Summary
+
 
 ### **Day 3 - 09.02.2024**
 
-**Session V**
+**Session IV**
 
 - **9:00 – 10:30** **_Lecture_**: Source reconstruction in FieldTrip
 - **10:30 – 10:45** Coffee break
 - **10:45 – 12:30** **_Hands-on_**: Source Reconstruction on oscillatory data (beamformer)
 - **12:30 – 13:30** Lunchs
 
-**Session VI**
+**Session V**
 
 - **13:30 – 15:30** **_Lecture_**: Connectivity analysis
 - **15:30 – 15:45** Coffee break
@@ -67,6 +65,8 @@ Tzvetan Popov with local organizers and the generous hardware support by [MBrain
 - **16:30 – 17:00** Wrap-up-the-day and Closing remarks
 
 ### **Day 4 - 10.02.2024**
+
+**Session V**
 
 - **09:30 – 11:30** **_FieldTrip Playground_** (bring your own data)
 - **11:30 – 11:45** Coffee break
