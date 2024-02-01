@@ -9,8 +9,6 @@ Initial FieldTrip code development from 2004 onwards was using [CVS](https://en.
 
 Please see our [GitHub tutorial](/development/git) for details.
 
-### Related documentation
+## See also
 
-{% include seealso tag="git" %}
-{% include seealso tag="svn" %}
 {% include seealso tag="cvs" %}

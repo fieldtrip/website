@@ -9,8 +9,6 @@ The FieldTrip code used to be managed using the [Subversion](https://subversion.
 
 Please see our [GitHub tutorial](/development/git) for details.
 
-### Related documentation
+## See also
 
-{% include seealso tag="git" %}
 {% include seealso tag="svn" %}
-{% include seealso tag="cvs" %}
