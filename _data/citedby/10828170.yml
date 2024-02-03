@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '38105400'
+- idtype: doi
+  value: 10.1007/s11357-023-01020-z
+- idtype: pmcid
+  value: PMC10828170
+authors:
+- authtype: Author
+  name: Fernández A
+- authtype: Author
+  name: Cuesta P
+- authtype: Author
+  name: Marcos A
+- authtype: Author
+  name: Montenegro-Peña M
+- authtype: Author
+  name: Yus M
+- authtype: Author
+  name: Rodríguez-Rojo IC
+- authtype: Author
+  name: Bruña R
+- authtype: Author
+  name: Maestú F
+- authtype: Author
+  name: López ME
+epubdate: 2023 Dec 18
+fulljournalname: GeroScience
+issue: '2'
+pages: 2619-2640
+pmclivedate: 2024/02/01
+printpubdate: ''
+pubdate: 2023 Dec 18
+sortdate: 2023/12/18 00:00
+source: GeroScience
+title: 'Sex differences in the progression to Alzheimer’s disease: a combination of
+  functional and structural markers'
+uid: '10828170'
+volume: '46'

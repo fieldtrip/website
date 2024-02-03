@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '38285671'
+- idtype: doi
+  value: 10.1371/journal.pbio.3002383
+- idtype: pmcid
+  value: PMC10824454
+authors:
+- authtype: Author
+  name: Marshall TR
+- authtype: Author
+  name: Ruesseler M
+- authtype: Author
+  name: Hunt LT
+- authtype: Author
+  name: O’Reilly JX
+epubdate: 2024 Jan 29
+fulljournalname: PLOS Biology
+issue: '1'
+pages: e3002383
+pmclivedate: 2024/01/29
+printpubdate: ''
+pubdate: 2024 Jan 29
+sortdate: 2024/01/29 00:00
+source: PLoS Biol
+title: The representation of priors and decisions in the human parietal cortex
+uid: '10824454'
+volume: '22'

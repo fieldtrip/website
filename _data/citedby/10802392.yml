@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '38260606'
+- idtype: doi
+  value: 10.1101/2024.01.09.574848
+- idtype: pmcid
+  value: PMC10802392
+authors:
+- authtype: Author
+  name: Mohanta S
+- authtype: Author
+  name: Cleveland D
+- authtype: Author
+  name: Afrasiabi M
+- authtype: Author
+  name: Rhone A
+- authtype: Author
+  name: Górska U
+- authtype: Author
+  name: Cooper Borkenhagen M
+- authtype: Author
+  name: Sanders R
+- authtype: Author
+  name: Boly M
+- authtype: Author
+  name: Nourski K
+- authtype: Author
+  name: Saalmann Y
+epubdate: 2024 Jan 10
+fulljournalname: bioRxiv
+issue: ''
+pages: 2024.01.09.574848
+pmclivedate: 2024/01/23
+printpubdate: ''
+pubdate: 2024 Jan 10
+sortdate: 2024/01/10 00:00
+source: bioRxiv
+title: Traveling waves shape neural population dynamics enabling predictions and internal
+  model updating
+uid: '10802392'
+volume: ''

@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1002/hbm.26602
+- idtype: pmcid
+  value: PMC10826894
+authors:
+- authtype: Author
+  name: Oswal A
+- authtype: Author
+  name: Abdi‐Sargezeh B
+- authtype: Author
+  name: Sharma A
+- authtype: Author
+  name: Özkurt TE
+- authtype: Author
+  name: Taulu S
+- authtype: Author
+  name: Sarangmat N
+- authtype: Author
+  name: Green AL
+- authtype: Author
+  name: Litvak V
+epubdate: 2024 Jan 30
+fulljournalname: Human Brain Mapping
+issue: '2'
+pages: e26602
+pmclivedate: 2024/01/30
+printpubdate: ''
+pubdate: 2024 Jan 30
+sortdate: 2024/01/30 00:00
+source: Hum Brain Mapp
+title: 'Spatiotemporal signal space separation for regions of interest: Application
+  for extracting neuromagnetic responses evoked by deep brain stimulation'
+uid: '10826894'
+volume: '45'
