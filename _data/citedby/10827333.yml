@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '38292249'
+- idtype: doi
+  value: 10.1016/j.brain.2023.100086
+- idtype: pmcid
+  value: PMC10827333
+- idtype: MID
+  value: NIHMS1950973
+authors:
+- authtype: Author
+  name: Grijalva C
+- authtype: Author
+  name: Mullins VA
+- authtype: Author
+  name: Michael BR
+- authtype: Author
+  name: Hale D
+- authtype: Author
+  name: Wu L
+- authtype: Author
+  name: Toosizadeh N
+- authtype: Author
+  name: Chilton FH
+- authtype: Author
+  name: Laksari K
+epubdate: 2023 Nov 24
+fulljournalname: Brain multiphysics
+issue: ''
+pages: '100086'
+pmclivedate: 2024/01/30
+printpubdate: 2023 Dec
+pubdate: 2023 Nov 24
+sortdate: 2023/11/24 00:00
+source: Brain Multiphys
+title: Neuroimaging, wearable sensors, and blood-based biomarkers reveal hyperacute
+  changes in the brain after sub-concussive impacts
+uid: '10827333'
+volume: '5'

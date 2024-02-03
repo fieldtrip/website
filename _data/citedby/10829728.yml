@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '38151021'
+- idtype: doi
+  value: 10.1016/j.xcrm.2023.101347
+- idtype: pmcid
+  value: PMC10829728
+authors:
+- authtype: Author
+  name: Tian W
+- authtype: Author
+  name: Zhao D
+- authtype: Author
+  name: Ding J
+- authtype: Author
+  name: Zhan S
+- authtype: Author
+  name: Zhang Y
+- authtype: Author
+  name: Etkin A
+- authtype: Author
+  name: Wu W
+- authtype: Author
+  name: Yuan TF
+epubdate: 2023 Dec 26
+fulljournalname: Cell Reports Medicine
+issue: '1'
+pages: '101347'
+pmclivedate: 2024/02/01
+printpubdate: ''
+pubdate: 2023 Dec 26
+sortdate: 2023/12/26 00:00
+source: Cell Rep Med
+title: An electroencephalographic signature predicts craving for methamphetamine
+uid: '10829728'
+volume: '5'
