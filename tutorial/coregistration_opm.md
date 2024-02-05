@@ -29,7 +29,7 @@ Furthermore, this tutorial will also not cover the processing of the MEG signals
 
 ## Background
 
-_Some background on the methods used_
+The common aim of the three coregistration methods that we explore in this tutorial is to align geometrical objects - i.e. 'things' that have a position in 3D-space - with respect to one another. Ultimately, we want know the location  of the OPM MEG sensors relative to the participant's head. In the examples below, the OPM MEG sensors are expressed relative to a coordinate system that is defined by the fieldlinebeta2 helmet, which leaves some freedom in the exact position of the head. For reasons outlined below (inspired by arguments that facilitate the downstream analysis of the signals), it is custom to start from (or end up with) a coordinate system that is defined based on anatomical landmarks on the participant's head.  o this end, we need to compute  with In order to achieve this, we need to first ensure that the 3D coordinate system, in which the spatial coordinates are expressed, is the same for the objects that are used for the coregistration.  one first needs to decide on the target coordinate system in which the  
 
 ## Procedure
 
@@ -45,7 +45,7 @@ Other 3D pointing devices such as the Optotrak (optical) and the Zebris (acousti
 
 The following example is based on a Polhemus recording, which - besides a description of the coordinate system based on the fiducials placed on the participant's head - contains a set of digitized points which correspond to 8 fixed locations on the Fieldline smart helmet.
  
-### Step 1.1: fixing the Polhemus recording error to obtain a corred head-based coordinate system
+### Step 1.1: fixing the Polhemus recording error to obtain a correct head-based coordinate system
 
 The following example is a bit ugly, because we mixed up LPA and RPA in the Polhemus recording. This caused the scan to be upside down. This should be fixed (and can be done so here by swapping the LPA and RPA by hand, after reading them in into MATLAB). Also, this Polhemus measurement has been obtained with the (too bulky) plastic security glasses and the reference sensor around the neck, which is not realistic. A real measurement should have the ref sensor taped to the forehead, just so that it does not limit the participant moving into the helmet.  
 
