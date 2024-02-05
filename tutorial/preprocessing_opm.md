@@ -42,7 +42,7 @@ In this tutorial we will take the following steps:
 - Compute the averaged ERFs using **[ft_timelockanalysis](/reference/ft_timelockanalysis)**
 - Concatenate the data over the three positions using **[ft_appendtimelock](/reference/ft_appendtimelock)**
 - Improve the whole-head ERF topoplot using **[ft_prepare_layout](/reference/ft_prepare_layout)**
-- Plotting the OPM sensor positions in 3D using **[ft_plot_sens]()/reference/plotting/ft_plot_sens)**
+- Plotting the OPM sensor positions in 3D using **[ft_plot_sens](/reference/plotting/ft_plot_sens)**
 
 ## Initial look at the data
 
