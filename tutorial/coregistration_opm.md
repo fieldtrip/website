@@ -45,44 +45,37 @@ Other 3D pointing devices such as the Optotrak (optical) and the Zebris (acousti
 
 The following example is based on a Polhemus recording, which - besides a description of the coordinate system based on the fiducials placed on the participant's head - contains a set of digitized points which correspond to 8 fixed locations on the Fieldline smart helmet.
  
-### Step 1.1: fixing the Polhemus recording error to obtain a correct head-based coordinate system
+### Step 1.1: read the Polhemus file and impose a RAS head-based coordinate system
 
-The following example is a bit ugly, because we mixed up LPA and RPA in the Polhemus recording. This caused the scan to be upside down. This should be fixed (and can be done so here by swapping the LPA and RPA by hand, after reading them in into MATLAB). Also, this Polhemus measurement has been obtained with the (too bulky) plastic security glasses and the reference sensor around the neck, which is not realistic. A real measurement should have the ref sensor taped to the forehead, just so that it does not limit the participant moving into the helmet.  
+This Polhemus measurement has been obtained with the (too bulky) plastic security glasses and the reference sensor around the neck, which is not realistic. A real measurement should have the ref sensor taped to the forehead, just so that it does not limit the participant moving into the helmet. Note, that the file used here was created using software that used the CTF convention for the definition of the X/Y/Z axes of the coordinate system (i.e. ALS). 
 
     %% read in the data and enforce the units to be in 'mm'
-    filename  = '20231119_hedscan3.pos';
+    filename  = '20231119_hedscan3_fixed.pos';
     headshape = ft_read_headshape(filename);
     headshape = ft_convert_units(headshape, 'mm');
 
-    %% visualisation, head is upside-down
+    %% visualisation, coordinate axes are ALS
     figure
     ft_plot_headshape(headshape)
     ft_plot_axes(headshape)
     view([-27 20]) 
 
-{% include image src="/assets/img/tutorial/coregistration_opm/headshape_upsidedown.png" width="400" %}
-_Figure: recorded headshape is upside-down, also note the labels of the axes._
+{% include image src="/assets/img/tutorial/coregistration_opm/headshape_upsideup_ctf.png" width="400" %}
+_Figure: recorded headshape has the coordinate axes according to the CTF-convention, with the X-axis pointing towards the nose._
 
-    %% fix the swapped LPA/RPA during the recording
-    lpa = headshape.fid.pos(3,:);
-    nas = headshape.fid.pos(2,:);
-    rpa = headshape.fid.pos(1,:);
 
-    % this is the transformation matrix that will put the head upside-up
-    transform = ft_headcoordinates(nas, lpa, rpa, [], 'neuromag');
 
-    headshape = ft_transform_geometry(transform, headshape);
-    headshape.fid.label = {'rpa', 'nas', 'lpa'};
-    headshape.coordsys  = 'neuromag';
+    headshape.coordsys = 'ctf';
+    headshape = ft_convert_coordsys(headshape, 'neuromag');
     
-    %% visualisation, head is upside-up again
+    %% visualisation, coordinate axes are now RAS
     figure
     ft_plot_headshape(headshape)
     ft_plot_axes(headshape)
     view([114 20])
 
 {% include image src="/assets/img/tutorial/coregistration_opm/headshape_upsideup.png" width="400" %}
-_Figure: adjusted headshape is upside-up, also note the labels of the axes, thanks to the manual addition of the coordsys._
+_Figure: adjusted headshape with new coordinate system._
     
 ### Step 1.2: identification of reference points, and calculation of the transformation parameters
 
