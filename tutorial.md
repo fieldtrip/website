@@ -26,6 +26,7 @@ When adding or contributing to the tutorials please consider the [documentation 
 - [Visual or manual artifact rejection](/tutorial/visual_artifact_rejection)
 - [Automatic artifact rejection](/tutorial/automatic_artifact_rejection)
 - [Cleaning artifacts using ICA](/tutorial/ica_artifact_cleaning)
+- [Coregistration of optically pumped magnetometer (OPM) data](/tutorial/coregistration_opm)
 
 ## Sensor-level analyses
 
