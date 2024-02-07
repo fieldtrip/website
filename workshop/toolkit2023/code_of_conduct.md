@@ -1,6 +1,6 @@
 ---
 title: Code of Conduct
-tags: [toolkit2022]
+tags: [toolkit2023]
 ---
 
 # Code of Conduct

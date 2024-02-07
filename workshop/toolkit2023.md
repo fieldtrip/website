@@ -17,8 +17,6 @@ The fee for PhD students is € 450; and € 650 for senior researchers.
 
 ## Program
 
-Note that this is still a tentative program that is subject to change.
-
 ### Monday May 22, 2023
 
 | 09:00-09:30 | Registration and coffee |
