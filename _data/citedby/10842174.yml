@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '37918767'
+- idtype: doi
+  value: 10.1016/j.neulet.2023.137539
+- idtype: pmcid
+  value: PMC10842174
+- idtype: MID
+  value: NIHMS1942268
+authors:
+- authtype: Author
+  name: Sharma VV
+- authtype: Author
+  name: Kadis DS
+epubdate: 2023 Oct 31
+fulljournalname: Neuroscience letters
+issue: ''
+pages: '137539'
+pmclivedate: ''
+printpubdate: 2024 Jan 1
+pubdate: 2023 Oct 31
+sortdate: 2023/10/31 00:00
+source: Neurosci Lett
+title: A powerful metric for expressive language lateralization in MEG
+uid: '10842174'
+volume: '818'

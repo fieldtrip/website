@@ -1,0 +1,38 @@
+articleids:
+- idtype: pmid
+  value: '37695013'
+- idtype: doi
+  value: 10.1002/alz.13471
+- idtype: pmcid
+  value: PMC10840828
+- idtype: MID
+  value: NIHMS1927688
+authors:
+- authtype: Author
+  name: Gjini K
+- authtype: Author
+  name: Casey C
+- authtype: Author
+  name: Kunkel D
+- authtype: Author
+  name: Her M
+- authtype: Author
+  name: Banks MI
+- authtype: Author
+  name: Pearce RA
+- authtype: Author
+  name: Lennertz R
+- authtype: Author
+  name: Sanders RD
+epubdate: 2023 Sep 11
+fulljournalname: 'Alzheimer''s & dementia : the journal of the Alzheimer''s Association'
+issue: '1'
+pages: 511-524
+pmclivedate: ''
+printpubdate: 2024 Jan
+pubdate: 2023 Sep 11
+sortdate: 2023/09/11 00:00
+source: Alzheimers Dement
+title: Delirium is associated with loss of feedback cortical connectivity
+uid: '10840828'
+volume: '20'

@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '37774910'
+- idtype: doi
+  value: 10.1016/j.neuroscience.2023.09.012
+- idtype: pmcid
+  value: PMC10842245
+- idtype: MID
+  value: NIHMS1937963
+authors:
+- authtype: Author
+  name: Patelaki E
+- authtype: Author
+  name: Foxe JJ
+- authtype: Author
+  name: McFerren AL
+- authtype: Author
+  name: Freedman EG
+epubdate: 2023 Sep 27
+fulljournalname: Neuroscience
+issue: ''
+pages: 113-132
+pmclivedate: ''
+printpubdate: 2023 Nov 10
+pubdate: 2023 Sep 27
+sortdate: 2023/09/27 00:00
+source: Neuroscience
+title: 'Maintaining task performance levels under cognitive load while walking requires
+  widespread reallocation of neural resources: A Mobile Brain-Body Imaging (MoBI)
+  study'
+uid: '10842245'
+volume: '532'

@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1002/hbm.26607
+- idtype: pmcid
+  value: PMC10836172
+authors:
+- authtype: Author
+  name: Eisenhauer S
+- authtype: Author
+  name: Gonzalez Alam TR
+- authtype: Author
+  name: Cornelissen PL
+- authtype: Author
+  name: Smallwood J
+- authtype: Author
+  name: Jefferies E
+epubdate: 2024 Feb 2
+fulljournalname: Human Brain Mapping
+issue: '2'
+pages: e26607
+pmclivedate: 2024/02/02
+printpubdate: ''
+pubdate: 2024 Feb 2
+sortdate: 2024/02/02 00:00
+source: Hum Brain Mapp
+title: Individual word representations dissociate from linguistic context along a
+  cortical unimodal to heteromodal gradient
+uid: '10836172'
+volume: '45'
