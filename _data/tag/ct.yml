@@ -1,24 +1,3 @@
-- name:  MEG dataformats
-  link:  /dataformat/meg
-
-- name:  Connectivity estimates for EEG/MEG time series data
-  link:  /development/module/connectivity
-
-- name:  CTF
-  link:  /development/realtime/ctf
-
-- name:  Converting an example MEG dataset for sharing in BIDS
-  link:  /example/bids_meg
-
-- name:  Conditional Granger causality in the frequency domain
-  link:  /example/connectivity_conditional_granger
-
-- name:  Fit a dipole to the tactile ERF after mechanical stimulation
-  link:  /example/dipolefit_somatosensory_erf
-
-- name:  Fixing a missing channel
-  link:  /example/fixing_a_missing_sensor
-
 - name:  How to incorporate head movements in MEG analysis
   link:  /example/headmovement_meg
 
@@ -31,95 +10,29 @@
 - name:  Combine MEG with Eyelink eyetracker data
   link:  /example/meg_eyelink
 
-- name:  Interpolating data from the CTF151 to the CTF275 sensor array using megrealign
-  link:  /example/megrealign
-
 - name:  Use denoising source separation (DSS) to remove ECG artifacts
   link:  /example/use_denoising_source_separation_dss_to_remove_ecg_artifacts
-
-- name:  Can I create an artificial CTF dataset using MATLAB?
-  link:  /example/writing_simulated_data_to_a_ctf_dataset
-
-- name:  Can I use Octave instead of MATLAB?
-  link:  /faq/can_i_use_octave_instead_of_matlab
-
-- name:  Can I compare EEG channels between different electrode caps?
-  link:  /faq/capmapping
 
 - name:  Which datasets are used in the documentation and where are they used?
   link:  /faq/datasets
 
-- name:  How should I specify the fiducials for electrode realignment?
-  link:  /faq/fiducial
-
-- name:  How are electrodes, magnetometers or gradiometers described?
-  link:  /faq/how_are_electrodes_magnetometers_or_gradiometers_described
-
-- name:  How are the Left and Right Pre-Auricular (LPA and RPA) points defined?
-  link:  /faq/how_are_the_lpa_and_rpa_points_defined
-
-- name:  How can I anonymize or deidentify a CTF dataset?
-  link:  /faq/how_can_i_anonymize_a_ctf_dataset
-
-- name:  How can I change the head localization in a CTF dataset?
-  link:  /faq/how_can_i_change_the_head_localization_in_a_ctf_dataset
-
 - name:  How can I consistently represent artifacts in my data?
   link:  /faq/how_can_i_consistently_represent_artifacts_in_my_data
-
-- name:  How can I convert an anatomical MRI from DICOM into CTF format?
-  link:  /faq/how_can_i_convert_an_anatomical_mri_from_dicom_into_ctf_format
-
-- name:  How can I fix a corrupt CTF meg4 file?
-  link:  /faq/how_can_i_fix_a_corrupt_ctf_meg4_data_file
-
-- name:  How can I fix a corrupt CTF res4 header file?
-  link:  /faq/how_can_i_fix_a_corrupt_ctf_res4_header_file
-
-- name:  How can I inspect the electrode impedances of my data?
-  link:  /faq/how_can_i_inspect_the_electrode_impedances_of_my_data
 
 - name:  How can I interpret the different types of padding in FieldTrip?
   link:  /faq/how_can_i_interpret_the_different_types_of_padding_that_i_find_when_dealing_with_artifacts
 
-- name:  How can I read corrupted (unsaved) CTF data?
-  link:  /faq/how_can_i_read_corrupted_unsaved_ctf_data
-
 - name:  How can I use the databrowser?
   link:  /faq/how_can_i_use_the_databrowser
-
-- name:  How does the CTF higher-order gradiometer work?
-  link:  /faq/how_does_the_ctf_higher-order_gradiometer_work
 
 - name:  How does the filter padding in preprocessing work?
   link:  /faq/how_does_the_filter_padding_in_preprocessing_work
 
-- name:  How should I report the positions of the fiducial points on the head?
-  link:  /faq/how_should_i_report_the_positions_of_the_fiducial_points_on_the_head
-
 - name:  I am getting strange artifacts in figures that use opacity
   link:  /faq/i_am_getting_strange_artifacts_in_figures_that_use_opacity
 
-- name:  I am having problems reading the CTF .hc headcoordinates file
-  link:  /faq/i_am_having_problems_reading_the_ctf_.hc_headcoordinates_file
-
-- name:  In what way can frequency domain data be represented in FieldTrip?
-  link:  /faq/in_what_way_can_frequency_domain_data_be_represented_in_fieldtrip
-
-- name:  MATLAB does not see the functions in the "private" directory
-  link:  /faq/matlab_does_not_see_the_functions_in_the_private_directory
-
-- name:  Should I use a Polhemus or a Structure Sensor to record electrode positions?
-  link:  /faq/structuresensor
-
-- name:  What does a typical call to a FieldTrip function look like?
-  link:  /faq/what_does_a_typical_call_to_a_fieldtrip_function_look_like
-
 - name:  What kind of filters can I apply to my data?
   link:  /faq/what_kind_of_filters_can_i_apply_to_my_data
-
-- name:  Why are so many of the interesting functions in the private directories?
-  link:  /faq/why_are_so_many_of_the_interesting_functions_in_the_private_directories
 
 - name:  Why does my TFR look strange (part I, demeaning)?
   link:  /faq/why_does_my_tfr_look_strange
@@ -130,32 +43,11 @@
 - name:  Why is there a residual 50Hz line-noise component after applying a DFT filter?
   link:  /faq/why_is_there_a_residual_50hz_line-noise_component_after_applying_a_dft_filter
 
-- name:  Getting started with CTF data
-  link:  /getting_started/ctf
-
-- name:  Template 3-D electrode sets
-  link:  /template/electrode
-
-- name:  Template 3-D gradiometer descriptions
-  link:  /template/gradiometer
-
 - name:  Introduction on dealing with artifacts
   link:  /tutorial/artifacts
 
 - name:  Automatic artifact rejection
   link:  /tutorial/automatic_artifact_rejection
-
-- name:  Analysis of corticomuscular coherence
-  link:  /tutorial/coherence
-
-- name:  Analysis of sensor- and source-level connectivity
-  link:  /tutorial/connectivity
-
-- name:  Extended analysis of sensor- and source-level connectivity
-  link:  /tutorial/connectivityextended
-
-- name:  Localizing electrodes using a 3D-scanner
-  link:  /tutorial/electrode
 
 - name:  Analysis of human ECoG and sEEG recordings
   link:  /tutorial/human_ecog
@@ -163,51 +55,9 @@
 - name:  Cleaning artifacts using ICA
   link:  /tutorial/ica_artifact_cleaning
 
-- name:  Whole brain connectivity and network analysis
-  link:  /tutorial/networkanalysis
-
-- name:  Whole brain connectivity and network analysis
-  link:  /tutorial/networkanalysis_eeg
-
-- name:  Whole brain connectivity and network analysis
-  link:  /tutorial/networkanalysis_old
-
-- name:  Preprocessing of EEG data and computing ERPs
-  link:  /tutorial/preprocessing_erp
-
-- name:  Extracting the brain state and events from continuous sleep EEG
-  link:  /tutorial/sleep
-
 - name:  Visual or manual artifact rejection
   link:  /tutorial/visual_artifact_rejection
 
-- name:  Simulating and estimating, what about model (mis)match?
-  link:  /workshop/chieti2015/simulation
-
-- name:  FieldTrip connectivity demo
-  link:  /workshop/meg-uk-2015/fieldtrip-connectivity-demo
-
-- name:  PracticalMEEG workshop in Aix-en-Provence
-  link:  /workshop/practicalmeeg2022
-
-- name:  Multimodal faces dataset
-  link:  /workshop/practicalmeeg2022/dataset
-
-- name:  Creation of headmodels and sourcemodels for source reconstruction
-  link:  /workshop/practicalmeeg2022/handson_anatomy
-
 - name:  Dealing with artifacts
   link:  /workshop/practicalmeeg2022/handson_artifacts
-
-- name:  Group-level statistics with parametric and non-parametric methods
-  link:  /workshop/practicalmeeg2022/handson_groupanalysis
-
-- name:  Preprocessing raw data and computing ERPs/ERFs
-  link:  /workshop/practicalmeeg2022/handson_raw2erp
-
-- name:  Time-frequency analysis using Hanning window, multitapers and wavelets
-  link:  /workshop/practicalmeeg2022/handson_sensoranalysis
-
-- name:  Reconstructing source activity using beamformers
-  link:  /workshop/practicalmeeg2022/handson_sourceanalysis
 

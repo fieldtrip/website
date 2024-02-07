@@ -91,9 +91,6 @@
 - name:  Is it important to have accurate measurements of electrode locations for EEG source reconstruction?
   link:  /faq/is_it_important_to_have_accurate_measurements_of_electrode_locations_for_eeg_source_reconstruction
 
-- name:  Is it OK for vertices/dipoles to stick out of the volume conductor?
-  link:  /faq/sticking_out
-
 - name:  What is the conductivity of the brain, CSF, skull and skin tissue?
   link:  /faq/what_is_the_conductivity_of_the_brain_csf_skull_and_skin_tissue
 
@@ -102,9 +99,6 @@
 
 - name:  Where can I find the dipoli command-line executable?
   link:  /faq/where_can_i_find_the_dipoli_command-line_executable
-
-- name:  Why is the source model deformed or incorrectly aligned after warping template?
-  link:  /faq/why_is_the_source_model_deformed_or_incorrectly_aligned_after_warping_template
 
 - name:  Why is there a rim around the brain for which the source reconstruction is not computed?
   link:  /faq/why_is_there_a_rim_around_the_brain_for_which_the_source_reconstruction_is_not_computed
@@ -117,9 +111,6 @@
 
 - name:  References to implemented methods
   link:  /references_to_implemented_methods
-
-- name:  Template models for source reconstruction
-  link:  /template/sourcemodel
 
 - name:  Localizing oscillatory sources using beamformer techniques
   link:  /tutorial/beamformer
@@ -153,16 +144,4 @@
 
 - name:  Beamforming oscillatory responses in MEG data
   link:  /workshop/oslo2019/beamforming
-
-- name:  Creation of headmodels and sourcemodels for source reconstruction
-  link:  /workshop/paris2019/handson_anatomy
-
-- name:  Reconstructing source activity using beamformers
-  link:  /workshop/paris2019/handson_sourceanalysis
-
-- name:  Creation of headmodels and sourcemodels for source reconstruction
-  link:  /workshop/practicalmeeg2022/handson_anatomy
-
-- name:  Reconstructing source activity using beamformers
-  link:  /workshop/practicalmeeg2022/handson_sourceanalysis
 

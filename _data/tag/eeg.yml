@@ -82,9 +82,6 @@
 - name:  Is it important to have accurate measurements of electrode locations for EEG source reconstruction?
   link:  /faq/is_it_important_to_have_accurate_measurements_of_electrode_locations_for_eeg_source_reconstruction
 
-- name:  Why is FieldTrip developed separately from EEGLAB?
-  link:  /faq/why_is_fieldtrip_developed_separately_from_eeglab
-
 - name:  Why should I use an average reference for EEG source reconstruction?
   link:  /faq/why_should_i_use_an_average_reference_for_eeg_source_reconstruction
 
@@ -196,9 +193,6 @@
 - name:  Beamforming evoked fields and potentials in combined MEG/EEG data
   link:  /workshop/aarhus/beamformingerf
 
-- name:  FieldTrip tutorial at CuttingEEG 2021 in Aix-en-Provence
-  link:  /workshop/cuttingeeg2021
-
 - name:  Convert the EEG language dataset for sharing in BIDS
   link:  /workshop/cuttingeeg2021/bids_language
 
@@ -261,28 +255,4 @@
 
 - name:  Time-frequency analysis of EEG data
   link:  /workshop/oslo2019/timefrequency
-
-- name:  PracticalMEEG workshop in Aix-en-Provence
-  link:  /workshop/practicalmeeg2022
-
-- name:  Multimodal faces dataset
-  link:  /workshop/practicalmeeg2022/dataset
-
-- name:  Creation of headmodels and sourcemodels for source reconstruction
-  link:  /workshop/practicalmeeg2022/handson_anatomy
-
-- name:  Dealing with artifacts
-  link:  /workshop/practicalmeeg2022/handson_artifacts
-
-- name:  Group-level statistics with parametric and non-parametric methods
-  link:  /workshop/practicalmeeg2022/handson_groupanalysis
-
-- name:  Preprocessing raw data and computing ERPs/ERFs
-  link:  /workshop/practicalmeeg2022/handson_raw2erp
-
-- name:  Time-frequency analysis using Hanning window, multitapers and wavelets
-  link:  /workshop/practicalmeeg2022/handson_sensoranalysis
-
-- name:  Reconstructing source activity using beamformers
-  link:  /workshop/practicalmeeg2022/handson_sourceanalysis
 

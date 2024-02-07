@@ -16,36 +16,9 @@
 - name:  The databrowser crashes and destroys the whole MATLAB session, how can I resolve this?
   link:  /faq/the_databrowser_crashes_and_destroys_the_whole_matlab_session_how_can_i_resolve_this
 
-- name:  What is the plotting convention for anatomical MRIs?
-  link:  /faq/what_is_the_plotting_convention_for_anatomical_mris
-
-- name:  Why does my anatomical MRI show upside-down when plotting it with ft_sourceplot?
-  link:  /faq/why_does_my_anatomical_mri_show_upside-down_when_plotting_it_with_ft_sourceplot
-
 - name:  Why does my ICA output contain complex numbers?
   link:  /faq/why_does_my_ica_output_contain_complex_numbers
 
-- name:  PracticalMEEG workshop in Aix-en-Provence
-  link:  /workshop/practicalmeeg2022
-
-- name:  Multimodal faces dataset
-  link:  /workshop/practicalmeeg2022/dataset
-
-- name:  Creation of headmodels and sourcemodels for source reconstruction
-  link:  /workshop/practicalmeeg2022/handson_anatomy
-
 - name:  Dealing with artifacts
   link:  /workshop/practicalmeeg2022/handson_artifacts
-
-- name:  Group-level statistics with parametric and non-parametric methods
-  link:  /workshop/practicalmeeg2022/handson_groupanalysis
-
-- name:  Preprocessing raw data and computing ERPs/ERFs
-  link:  /workshop/practicalmeeg2022/handson_raw2erp
-
-- name:  Time-frequency analysis using Hanning window, multitapers and wavelets
-  link:  /workshop/practicalmeeg2022/handson_sensoranalysis
-
-- name:  Reconstructing source activity using beamformers
-  link:  /workshop/practicalmeeg2022/handson_sourceanalysis
 

@@ -61,9 +61,6 @@
 - name:  Localizing oscillatory sources using beamformer techniques
   link:  /tutorial/beamformer
 
-- name:  Virtual channel analysis of epilepsy MEG data
-  link:  /tutorial/epilepsy
-
 - name:  Creating a BEM volume conduction model of the head for source reconstruction of EEG data
   link:  /tutorial/headmodel_eeg_bem
 

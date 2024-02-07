@@ -52,9 +52,6 @@
 - name:  Cleaning artifacts using ICA
   link:  /tutorial/ica_artifact_cleaning
 
-- name:  Extracting the brain state and events from continuous sleep EEG
-  link:  /tutorial/sleep
-
 - name:  Visual or manual artifact rejection
   link:  /tutorial/visual_artifact_rejection
 
