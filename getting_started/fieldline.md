@@ -171,4 +171,4 @@ Since channels in a FieldTrip data structure are required have a unique channel 
 
 # Coregistration
 
-FIXME: in this section we will document (or link to) the different methods to coregister the OPM sensors with the head and with the anatomical MRI.
+There is a dedicated [tutorial](/tutorial/coregistration_opm) that deals with various ways in which coregistration can be done..
