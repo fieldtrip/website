@@ -1,6 +1,6 @@
 ---
 title: Test your MATLAB and FieldTrip installation in advance
-tags: [toolkit2022]
+tags: [toolkit2023]
 ---
 
 # Test your MATLAB and FieldTrip installation in advance
