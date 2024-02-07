@@ -124,14 +124,8 @@
 - name:  Simulating and estimating, what about model (mis)match?
   link:  /workshop/chieti2015/simulation
 
-- name:  Time-frequency analysis of combined MEG/EEG data
-  link:  /workshop/natmeg2014/timefrequency
-
 - name:  Time-frequency analysis using Hanning window, multitapers and wavelets
   link:  /workshop/ni2_timefrequencyanalysis
-
-- name:  Time-frequency analysis of EEG data
-  link:  /workshop/oslo2019/timefrequency
 
 - name:  Reading in data and performing sensor-level ERF and TFR analyses
   link:  /workshop/oxford2019/sensor_analysis_plusminus

@@ -1,11 +1,5 @@
-- name:  Streaming realtime data from TMSI EEG amplifiers
-  link:  /development/realtime/tmsi
-
 - name:  Which datasets are used in the documentation and where are they used?
   link:  /faq/datasets
-
-- name:  Getting started with TMSi data
-  link:  /getting_started/tmsi
 
 - name:  Dealing with TMS-EEG datasets
   link:  /tutorial/tms-eeg

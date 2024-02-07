@@ -1,18 +1,3 @@
 - name:  How can I check whether the grid that I have is aligned to the segmented volume and to the sensor gradiometer?
   link:  /faq/how_can_i_check_whether_the_grid_that_i_have_is_aligned_to_the_segmented_volume_and_to_the_sensor_gradiometer
 
-- name:  How is the segmentation defined?
-  link:  /faq/how_is_the_segmentation_defined
-
-- name:  Getting started with ParaView
-  link:  /getting_started/paraview
-
-- name:  Getting started with Seg3D
-  link:  /getting_started/seg3d
-
-- name:  Getting started with SimNIBS
-  link:  /getting_started/simnibs
-
-- name:  Creating a FEM volume conduction model of the head for source reconstruction of EEG data
-  link:  /tutorial/headmodel_eeg_fem
-
