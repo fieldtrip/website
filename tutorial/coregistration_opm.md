@@ -7,28 +7,18 @@ tags: [tutorial, opm, coordsys]
 
 ## Introduction
 
-
-- What will you learn from this tutorial?
-- What does this tutorial expect as background understanding or skills?
-- Which topics are not covered in this tutorial?_
-
 Optically Pumped Magnetometers (OPMs) are magnetic field sensors that can be used for MEG. Conventionally SQUID sensors are used for MEG; SQUIDs are superconductive sensors that require cryocooling, and hence need to be placed as an array in a fixed helmet-shaped dewar. OPMs do not require cryocooling and can be placed individually.
 
 Due to their small size and flexibility, different strategies are used to place OPM sensors on the head. Some labs use flexible caps, like EEG and fNIRS caps. These flexible caps don't constrain the orientation of the sensors very well, which means that the sensor orientation relative to the head can change during the experiment depending on the head orientation and that the sensors can wobble due to movement. Since the magnetic field measured with MEG is a vector, the measurement is sensitive to these orientation differences.
 
-To ensure a well-defined sensor orientation, we often use helmets that place the OPM sensors relative to the head. These helmets can be designed and 3-D printed to fit optimally to the individual head, or can be designed as standard helmets to fit multiple participants (with different sized helmets for children and adults).
+To ensure a well-defined sensor placement, we often use helmets that place the OPM sensors relative to the head. These helmets can be designed and 3-D printed to fit optimally to the individual head, or can be designed as standard helmets to fit multiple participants (with different sized helmets for children and adults). For a good interpretation of the MEG signals recorded with the OPM sensors over the head, it is important to coregister the OPM sensors (location and orientation) with the head. Also for source reconstruction it is required to coregister the sensors with the anatomical MRI, the volume conduction model, and the source model. As a side note, for conventional SQUID-based MEG coregistration is also relevant, but here the coregistration procedure is more easily standardized.
 
-For a good interpretation of the MEG signals recorded with the OPM sensors over the head, it is important to coregister the OPM sensors (location and orientation) with the head. Also for source reconstruction it is required to coregister the sensors with the anatomical MRI, the volume conduction model, and the source model. As a side note, for conventional SQUID-based MEG coregistration is also relevant, but here the coregistration procedure is more easily standardized.
-
-This tutorial demonstrates four different methods for coregistering OPM sensors that are placed in a standard helmet to the subjects head. It demonstrates each of the methods, including data that you can download to carry out all steps yourself. Furthermore, it discusses the advantages and disadvantages of each method.
-
-In this tutorial we will _not_ consider the coregistration of OPM sensors in flexible EEG-like caps. We will also _not_ discuss the coregistration of individually designed 3D printed helmets, as for those the coregistration is usually part of the design process and the helmet will fit only one way on the participant's head.
-
-Furthermore, this tutorial will also not cover the processing of the MEG signals recorded from the participants brain, this is covered in the **[preprocessing_opm](/tutorial/preprocessing_opm)** tutorial.
+This tutorial demonstrates four different methods for coregistering OPM sensors that are placed in a standard helmet to the subjects head. It demonstrates each of the methods, including data that you can download to carry out all steps yourself. Furthermore, it discusses the advantages and disadvantages of each method. The data for this tutorial can be downloaded [here](https://download.fieldtriptoolbox.org/tutorial/coregistration_opm/) from our download server.
+In this tutorial we will _not_ consider the coregistration of OPM sensors in flexible EEG-like caps. We will also _not_ discuss the coregistration of individually designed 3D printed helmets, as for those the coregistration is usually part of the design process and the helmet will fit only one way on the participant's head. Finally, this tutorial will also not cover the processing of the MEG signals recorded from the participants brain, this is covered in the **[preprocessing_opm](/tutorial/preprocessing_opm)** tutorial.
 
 ## Background
 
-The common aim of the three coregistration methods that we explore in this tutorial is to align geometrical objects - i.e. 'things' that have a position and orientation in 3D-space - with respect to one another. Ultimately, we want know the location  of the OPM MEG sensors relative to the participant's head. In the examples below, the OPM MEG sensors are expressed relative to a coordinate system that is defined by the Fieldline smart helmet, which leaves some freedom in the exact position of the head. For reasons outlined below (inspired by arguments that facilitate the downstream analysis of the MEG signals, e.g. for group level analysis), it is custom to start from (or end up with) a coordinate system that is defined based on anatomical landmarks on the participant's head. Some basic background about coordinate systems, and the exact definition of some widely used coordinate systems is given in this **[FAQ](/faq/coordsys)**.  To this end, we need to compute  with In order to achieve this, we need to first ensure that the 3D coordinate system, in which the spatial coordinates are expressed, is the same for the objects that are used for the coregistration. 
+The common aim of the three coregistration methods that we explore in this tutorial is to align geometrical objects - i.e. 'things' that have a position and orientation in 3D-space - with respect to one another. Ultimately, we want know the location  of the OPM MEG sensors relative to the participant's head. In the examples below, the OPM MEG sensors are expressed relative to a coordinate system that is defined by the Fieldline smart helmet, which leaves some freedom in the exact position of the head. For reasons outlined below (inspired by arguments that facilitate the downstream analysis of the MEG signals, e.g. for group level analysis), it is custom to start from (or end up with) a coordinate system that is defined based on anatomical landmarks on the participant's head. Some basic background about coordinate systems, and the exact definition of some widely used coordinate systems is given in this **[FAQ](/faq/coordsys)**.  on. 
 
 ## Procedure
 
@@ -37,7 +27,6 @@ Procedural outlines of the examples are provided in detail below. This tutorial 
 - Using head localization coils, where the location of the coils on the head is known, and the location of the coils relative to the sensors is calculated.
 - Using a 3D model from a 3D scanner of the head and helmet, and aligning this model with more detailed anatomical and sensor information.
 - Using sensor depth information from the Fieldline smart helmet as a proxy for the head surface.  
-
 
 
 ## Coregistration using a Polhemus tracker
@@ -61,8 +50,7 @@ This part consists of the following steps:
 This Polhemus measurement has been obtained with the (too bulky) plastic security glasses and the reference sensor around the neck, which is not realistic. A real measurement should have the ref sensor taped to the forehead, just so that it does not limit the participant moving into the helmet. Note, that the file used here was created using software that used the CTF convention for the definition of the X/Y/Z axes of the coordinate system (i.e. ALS). For consistency with the other examples in this tutorial, we will first convert the head-based coordinate system to be RAS. 
 
     %% read in the data and enforce the units to be in 'mm'
-    filename  = '20231119_hedscan3_fixed.pos';
-    headshape = ft_read_headshape(filename);
+    headshape = ft_read_headshape('example1_head_markers.pos');
     headshape = ft_convert_units(headshape, 'mm');
 
     %% visualisation, coordinate axes are ALS
@@ -111,7 +99,7 @@ The Polhemus file contains a specification of the helmet reference points, the e
     fid_helmet     = fieldlinebeta2.fid;
 
     %% show the misalignment
-    headshape2 = headshape;
+    headshape2     = headshape;
     headshape2.fid = fid_measured; % replace the original fit, for plotting purposes
     
     figure
@@ -166,16 +154,15 @@ The dataset used here is a 32-channel dataset, with the OPM-sensors distributed 
 This part exists of the following steps:
 - Processing of the data to highlight the contribution of the individual HPI coils to the measured signals, using **[ft_preprocessing](/reference/ft_preprocessing)**, and **[ft_selectdata](/reference/ft_selectdata)**. To evaluate the spectrum of the signals, we will use **[ft_freqanalysis](/reference/ft_freqanalysis)**.
 - Fitting of dipoles to the topographies of the first principal components of the bandpass filtered data, using **[ft_componentanalysis](/reference/ft_componentanalysis)**, and **[ft_dipolefitting](/reference/ft_dipolefitting)**. For visualization of the spatial topogrphies, we use **[ft_topoplotIC](/reference/ft_topoplotic)**, and for the dipole fit we start with a grid search, and we use **[ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)** to create the search grid.  
+- Calculation of the transformation matrix that moves the sensors to the head-based coordinate system, using **[ft_headcoordinates](/reference/ft_headcoordinates)**.
 
 ### Processing of the data to capture the signal of the HPI coils
 
     % load in the data
-    datadir = '/project/3055060.01/202311xx_opm_installation/20231121_opm_sub-magneticphantom/sub-Magneticphantom';
-    
-    cfg = [];
-    cfg.dataset = fullfile(datadir, '20231121_143558_sub-Magneticphantom_file- HPIplusdipoleset6_raw.fif');
+    cfg              = [];
+    cfg.dataset      = 'example2_magneticphantom_HPIplusdipoleset6_raw.fif';
     cfg.coilaccuracy = 0;
-    data_all = ft_preprocessing(cfg);
+    data_all         = ft_preprocessing(cfg);
 
 Now we cut out the relevant time segment, and exclude channels for which the positions were incorrectly stored in the file. Both selection criteria are specific to the file we use here. 
 
@@ -235,8 +222,8 @@ _Figure: Two seconds of data of the measurement, band-pass filtered for 8 Hz._
 
 We proceed by performing a principal component analysis (PCA) on the recorded signals. The idea is that - given that the signals on the coils are the strongest signal components in the measurement, and given that we have pre bandpass filtered the time series - the strongest principal components will be the 'spatial fingerprints' of the coils impacting the sensors. Those fingerprints will be used to perform a dipole fit, i.e. find the parameters of a dipole that optimally explain those principal components.
 
-    cfg = [];
-    cfg.method = 'pca';
+    cfg            = [];
+    cfg.method     = 'pca';
     cfg.updatesens = 'no';
     comp08 = ft_componentanalysis(cfg, data08);
     comp11 = ft_componentanalysis(cfg, data11);
@@ -244,16 +231,16 @@ We proceed by performing a principal component analysis (PCA) on the recorded si
 
     %% look at the topographies
     load fieldlinebeta2bz_helmet.mat
-    cfg           = [];
-    cfg.component = 1;
-    cfg.layout    = layout;
-    cfg.gridscale = 150;
+    cfg              = [];
+    cfg.component    = 1;
+    cfg.layout       = layout;
+    cfg.gridscale    = 150;
     cfg.interplimits = 'electrodes';
-    cfg.figure = subplot('position',[0 0 1/3 1]);
+    cfg.figure       = subplot('position',[0 0 1/3 1]);
     ft_topoplotIC(cfg, comp08);
-    cfg.figure = subplot('position',[1/3 0 1/3 1]);
+    cfg.figure       = subplot('position',[1/3 0 1/3 1]);
     ft_topoplotIC(cfg, comp11);
-    cfg.figure = subplot('position',[2/3 0 1/3 1]);
+    cfg.figure       = subplot('position',[2/3 0 1/3 1]);
     ft_topoplotIC(cfg, comp14);
 
 {% include image src="/assets/img/tutorial/coregistration_opm/hpi_topo.png" width="700" %}
@@ -268,7 +255,7 @@ For the dipolefit, we will use a gridsearch based initial scan, followed by a no
     headmodel = ft_headmodel_infinite();
     
     % this is a definition of the boundary points
-    hs = [];
+    hs      = [];
     hs.pos  = fieldlinebeta2.coilpos;
     hs.unit = 'm';
 
@@ -304,10 +291,10 @@ The data in this example was obtained using the CTF magnetic phantom, with the H
 - L-R: 0.1532
 - N-R/N-L: 0.1083
 
-We can verify the reconstructed distances as follows. Note that for a real measurement, one would need to measure the distance between the fiducials first (e.g. with a Polhemus scanner, see above) in order to be able to make such a comparison.
+We can verify the reconstructed distances as follows. Note that for a real measurement, one would need to measure the distance between the fiducials first (e.g. with a Polhemus scanner, see above) in order to be able to make such a comparison. 
 
     % for verification
-    p = [dip08.dip.pos; dip14.dip.pos; dip11.dip.pos];
+    p     = [dip08.dip.pos; dip14.dip.pos; dip11.dip.pos];
     delta = pdist(p);
     disp(delta);
 
@@ -316,8 +303,8 @@ We can verify the reconstructed distances as follows. Note that for a real measu
 
 Now, we can use the identified location, to compute the coregistration matrix, that transforms the sensor positions from 'helmet' coordinates to the head coordinate system, as defined by the positions of the fiducial locations. Here, we use the neuromag convention.
 
-    % dewar coordinates into head coordinates (RAS)
-    T = ft_headcoordinates(dip08.dip.pos, dip14.dip.pos, dip11.dip.pos, 'neuromag');
+    % sensor coordinates into head coordinates (RAS)
+    transform_sens2head = ft_headcoordinates(dip08.dip.pos, dip14.dip.pos, dip11.dip.pos, 'neuromag');
 
 
 ## Coregistration using a 3D scanner
@@ -340,9 +327,7 @@ This part consists of the following steps:
 Here, we read in the anatomical MRI of the participant, and define the coordinate system based on the conventions that are typically used for SQUID-based MEG. That is, using anatomical landmarks on the surface of the head, a coordinate system is defined, that can also be defined using a Polhemus tracker (as in coregistration strategy 1, see above). Note that alternatively the coordinate system can be defined based on anatomical structures in the brain (cf. the anterior and posterior commissures), which facilitates spatial alignment/normalisation across participants.
 
     % read in the anatomical MRI
-    datadir = '/project/3055060.01/jansch_sandbox/scans/structuresensor_helmet_jm';
-    fname = fullfile(datadir, 'anatomical.nii.gz');
-    mri   = ft_read_mri(fname);
+    mri   = ft_read_mri('example3_anatomical.nii.gz');
     ft_determine_coordsys(mri);
 
 {% include image src="/assets/img/tutorial/coregistration_opm/mri_notaligned.png" width="400" %}
@@ -363,11 +348,7 @@ _Figure: anatomical MRI image with a 'neuromag' coordinate system._
 
 Here, we read in the 3D-model from the structure scan, and define a coordinate system that has its axes pointing into more or less canonical directions (relative to the participant). The next steps remove irrelevant parts of the image (e.g. the back of a chair etc), and here we also choose to separate the 'face' part from the 'helmet' part, to facilitate the alignment. Strictly speaking this separation is not necessary.
 
-    % this file is a depth-only image
-    datadir = '/project/3055060.01/jansch_sandbox/scans/structuresensor_helmet_jm/';
-    fname   = fullfile(datadir, 'Model5.obj');
-     
-    scan      = ft_read_headshape(fname);
+    scan      = ft_read_headshape('example3_face_helmet.obj');
     scan.unit = 'm';
     
     figure;hold on;
@@ -542,13 +523,18 @@ Note that in this particular example, the participant was not positioned very hi
 
 _This is specific for the FieldLine smart helmet._
 
-### Step 4.1
+More info to follow: stay tuned!
 
-### Step 4.2
+## Summary and suggested further reading
 
+This tutorial gave an introduction on the coregistration of OPM data, specifically dealing with OPM data that has been collected with the sensors positioned in in a known helmet configuration.  
 
-## Summary and conclusion:
+You may want to continue with the more general [tutorials](/tutorial/) on processing MEG (and EEG) data, or have a look at the [system specific details](/getting_started) for the OPM data that you are working with. Also, you may want to proceed with the [opm preprocessing tutorial](/tutorial/preprocessing_opm).
 
-- What has been covered?
-- What has not been covered but is relevant in the context of the tutorial?
-- Provide links to suggested further reading, related FAQs and example scripts.
+Furthermore, you can explore example scripts that deal with OPMs:
+
+{% include seealso tag1="example" tag2="opm" %}
+
+and frequently asked questions:
+
+{% include seealso tag1="faq" tag2="opm" %}
