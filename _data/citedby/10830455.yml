@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '38296972'
+- idtype: doi
+  value: 10.1038/s41597-024-02987-w
+- idtype: pmcid
+  value: PMC10830455
+authors:
+- authtype: Author
+  name: Vinding MC
+- authtype: Author
+  name: Eriksson A
+- authtype: Author
+  name: Comarovschii I
+- authtype: Author
+  name: Waldthaler J
+- authtype: Author
+  name: Manting CL
+- authtype: Author
+  name: Oostenveld R
+- authtype: Author
+  name: Ingvar M
+- authtype: Author
+  name: Svenningsson P
+- authtype: Author
+  name: Lundqvist D
+epubdate: 2024 Jan 31
+fulljournalname: Scientific Data
+issue: ''
+pages: '150'
+pmclivedate: 2024/02/01
+printpubdate: ''
+pubdate: 2024 Jan 31
+sortdate: 2024/01/31 00:00
+source: Sci Data
+title: The Swedish National Facility for Magnetoencephalography Parkinson’s disease
+  dataset
+uid: '10830455'
+volume: '11'

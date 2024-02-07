@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '37852264'
+- idtype: doi
+  value: 10.1016/j.cub.2023.09.065
+- idtype: pmcid
+  value: PMC10842514
+- idtype: MID
+  value: NIHMS1938761
+authors:
+- authtype: Author
+  name: Raposo I
+- authtype: Author
+  name: Szczepanski SM
+- authtype: Author
+  name: Haaland K
+- authtype: Author
+  name: Endestad T
+- authtype: Author
+  name: Solbakk AK
+- authtype: Author
+  name: Knight RT
+- authtype: Author
+  name: Helfrich RF
+epubdate: 2023 Oct 17
+fulljournalname: 'Current biology : CB'
+issue: '22'
+pages: 4893-4904.e3
+pmclivedate: ''
+printpubdate: 2023 Nov 20
+pubdate: 2023 Oct 17
+sortdate: 2023/10/17 00:00
+source: Curr Biol
+title: Periodic attention deficits after frontoparietal lesions provide causal evidence
+  for rhythmic attentional sampling
+uid: '10842514'
+volume: '33'

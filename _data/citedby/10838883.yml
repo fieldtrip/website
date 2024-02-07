@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '37847448'
+- idtype: doi
+  value: 10.1007/s12264-023-01134-6
+- idtype: pmcid
+  value: PMC10838883
+authors:
+- authtype: Author
+  name: Su M
+- authtype: Author
+  name: Hu K
+- authtype: Author
+  name: Liu W
+- authtype: Author
+  name: Wu Y
+- authtype: Author
+  name: Wang T
+- authtype: Author
+  name: Cao C
+- authtype: Author
+  name: Sun B
+- authtype: Author
+  name: Zhan S
+- authtype: Author
+  name: Ye Z
+epubdate: 2023 Oct 17
+fulljournalname: Neuroscience Bulletin
+issue: '2'
+pages: 147-156
+pmclivedate: ''
+printpubdate: ''
+pubdate: 2023 Oct 17
+sortdate: 2023/10/17 00:00
+source: Neurosci Bull
+title: Theta Oscillations Support Prefrontal-hippocampal Interactions in Sequential
+  Working Memory
+uid: '10838883'
+volume: '40'

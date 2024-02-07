@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '38186005'
+- idtype: doi
+  value: 10.1093/cercor/bhad522
+- idtype: pmcid
+  value: PMC10839845
+authors:
+- authtype: Author
+  name: Kujala J
+- authtype: Author
+  name: Ciumas C
+- authtype: Author
+  name: Jung J
+- authtype: Author
+  name: Bouvard S
+- authtype: Author
+  name: Lecaignard F
+- authtype: Author
+  name: Lothe A
+- authtype: Author
+  name: Bouet R
+- authtype: Author
+  name: Ryvlin P
+- authtype: Author
+  name: Jerbi K
+epubdate: 2024 Jan 6
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '2'
+pages: bhad522
+pmclivedate: 2024/02/05
+printpubdate: ''
+pubdate: 2024 Jan 6
+sortdate: 2024/01/06 00:00
+source: Cereb Cortex
+title: GABAergic inhibition shapes behavior and neural dynamics in human visual working
+  memory
+uid: '10839845'
+volume: '34'
