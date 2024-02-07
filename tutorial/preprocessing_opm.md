@@ -42,7 +42,7 @@ In this tutorial we will take the following steps:
 - Compute the averaged ERFs using **[ft_timelockanalysis](/reference/ft_timelockanalysis)**
 - Concatenate the data over the three positions using **[ft_appendtimelock](/reference/ft_appendtimelock)**
 - Improve the whole-head ERF topoplot using **[ft_prepare_layout](/reference/ft_prepare_layout)**
-- Plotting the OPM sensor positions in 3D using **[ft_plot_sens]()/reference/plotting/ft_plot_sens)**
+- Plotting the OPM sensor positions in 3D using **[ft_plot_sens](/reference/plotting/ft_plot_sens)**
 
 ## Initial look at the data
 
@@ -572,7 +572,7 @@ Again it makes sense to look at the specific selection of OPM sensors that was u
 
 This tutorial gave an introduction on processing OPM data, specifically dealing with a small OPM array that was used to record activity sequentially over multiple locations that together cover the region-of-interest. Furthermore, it showed how to plot the data topographically, given that not the whole head was covered by the measurement.  
 
-You may want to continue with the more general [tutorials](/tutorial/) on processing MEG (and EEG) data, or have a look at the [system specific details](/getting_started) for the OPM data that you are working with.
+You may want to continue with the more general [tutorials](/tutorial/) on processing MEG (and EEG) data, or have a look at the [system specific details](/getting_started) for the OPM data that you are working with. Also, you could have a look at the tutorial about [coregistration of OPM data](/tutorial/coregistration_opm).
 
 Furthermore, you can explore example scripts that deal with OPMs:
 
