@@ -34,6 +34,9 @@
 - name:  Preprocessing - Reading continuous EEG and MEG data
   link:  /tutorial/continuous
 
+- name:  Coregistration of Optically Pumped Magnetometer (OPM) data
+  link:  /tutorial/coregistration_opm
+
 - name:  Speeding up your analysis using distributed computing with parfor
   link:  /tutorial/distributedcomputing_parfor
 
