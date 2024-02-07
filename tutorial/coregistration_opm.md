@@ -14,11 +14,11 @@ Due to their small size and flexibility, different strategies are used to place 
 To ensure a well-defined sensor placement, we often use helmets that place the OPM sensors relative to the head. These helmets can be designed and 3-D printed to fit optimally to the individual head, or can be designed as standard helmets to fit multiple participants (with different sized helmets for children and adults). For a good interpretation of the MEG signals recorded with the OPM sensors over the head, it is important to coregister the OPM sensors (location and orientation) with the head. Also for source reconstruction it is required to coregister the sensors with the anatomical MRI, the volume conduction model, and the source model. As a side note, for conventional SQUID-based MEG coregistration is also relevant, but here the coregistration procedure is more easily standardized.
 
 This tutorial demonstrates four different methods for coregistering OPM sensors that are placed in a standard helmet to the subjects head. It demonstrates each of the methods, including data that you can download to carry out all steps yourself. Furthermore, it discusses the advantages and disadvantages of each method. The data for this tutorial can be downloaded [here](https://download.fieldtriptoolbox.org/tutorial/coregistration_opm/) from our download server.
-In this tutorial we will _not_ consider the coregistration of OPM sensors in flexible EEG-like caps. We will also _not_ discuss the coregistration of individually designed 3D printed helmets, as for those the coregistration is usually part of the design process and the helmet will fit only one way on the participant's head. Finally, this tutorial will also not cover the processing of the MEG signals recorded from the participants brain, this is covered in the **[preprocessing_opm](/tutorial/preprocessing_opm)** tutorial.
+In this tutorial we will _not_ consider the coregistration of OPM sensors in flexible EEG-like caps. We will also _not_ discuss the coregistration of individually designed 3D printed helmets, as for those the coregistration is usually part of the design process and the helmet will fit only one way on the participant's head. Finally, this tutorial will also not cover the processing of the MEG signals recorded from the participants brain, this is covered in the [preprocessing_opm](/tutorial/preprocessing_opm) tutorial.
 
 ## Background
 
-The common aim of the three coregistration methods that we explore in this tutorial is to align geometrical objects - i.e. 'things' that have a position and orientation in 3D-space - with respect to one another. Ultimately, we want know the location  of the OPM MEG sensors relative to the participant's head. In the examples below, the OPM MEG sensors are expressed relative to a coordinate system that is defined by the Fieldline smart helmet, which leaves some freedom in the exact position of the head. For reasons outlined below (inspired by arguments that facilitate the downstream analysis of the MEG signals, e.g. for group level analysis), it is custom to start from (or end up with) a coordinate system that is defined based on anatomical landmarks on the participant's head. Some basic background about coordinate systems, and the exact definition of some widely used coordinate systems is given in this **[FAQ](/faq/coordsys)**.  on. 
+The common aim of the three coregistration methods that we explore in this tutorial is to align geometrical objects - i.e. 'things' that have a position and orientation in 3D-space - with respect to one another. Ultimately, we want know the location  of the OPM MEG sensors relative to the participant's head. In the examples below, the OPM MEG sensors are expressed relative to a coordinate system that is defined by the Fieldline smart helmet, which leaves some freedom in the exact position of the head. For reasons outlined below (inspired by arguments that facilitate the downstream analysis of the MEG signals, e.g. for group level analysis), it is custom to start from (or end up with) a coordinate system that is defined based on anatomical landmarks on the participant's head. Some basic background about coordinate systems, and the exact definition of some widely used coordinate systems is given in this [FAQ](/faq/coordsys). 
 
 ## Procedure
 
@@ -41,7 +41,8 @@ The following example is based on a Polhemus recording, which - besides a descri
 
 This part consists of the following steps:
 - Read in the headshape and change the coordinate system, using **[ft_read_headshape](/reference/ft_read_headshape)** and **[ft_convert_coordsys](/reference/ft_convert_coordsys)**. for visualisation we use **[ft_plot_headshape](/reference/ft_plot_headshape)** and **[ft_plot_axes](/reference/ft_plot_axes)**.
-- Identification of the reference location and calculation of the transformation parameters, using **[ft_electroderealign](/reference/ft_electroderealign)**.
+- Identification of the reference points
+- Calculation of the transformation parameters, using **[ft_electroderealign](/reference/ft_electroderealign)**.
 - Apply the transformation parameters to the sensors, using **[ft_transform_geometry](/reference/ft_transform_geometry)**, and **[ft_plot_sens](/reference/ft_plot_sens)** for visualisation.
 
  
@@ -77,7 +78,7 @@ _Figure: recorded headshape has the coordinate axes according to the CTF-convent
 _Figure: adjusted headshape with new coordinate system._
 
     
-### Identification of reference points, and calculation of the transformation parameters
+### Identification of reference points
 
 The Polhemus file contains a specification of the helmet reference points, the exact identity of those points were not stored in the file, so the order of the points was noted during the Polhemus collection. Here, the last 8 points recorded in the file coincide with those reference points, which on the Fieldline helmet are indicated with labels A1-A8. The order of the points were recorded in the order:  left, front-to-back, then right front-to-back: 'A5', 'A6', 'A7', 'A8', 'A1', 'A2', 'A3', 'A4'. The idea is now to calculate the transformation parameters that are needed to move the set of points as defined in the helmet coordinate system, to the coordinate system that is defined within the Polhemus measurement. To this end, we will use a function from FieldTrip that was originally written to align a set of electrode positions to a head surface. As it turns out, this code can also be used to align - more generically - two sets of points.
 
@@ -110,6 +111,8 @@ The Polhemus file contains a specification of the helmet reference points, the e
 
 {% include image src="/assets/img/tutorial/coregistration_opm/coreg_polhemus_before.png" width="400" %}
 _Figure: OPM sensor locations are not in register with the Polhemus headshape._
+
+### Calculation of the transformation parameters
 
 The alignment parameters can now be estimated, using the ```template``` method in ```ft_electroderealign```. Since we want to express the sensors' coordinates in the head coordinate system, the measured positions will be used as the target.
 
@@ -155,6 +158,7 @@ This part exists of the following steps:
 - Processing of the data to highlight the contribution of the individual HPI coils to the measured signals, using **[ft_preprocessing](/reference/ft_preprocessing)**, and **[ft_selectdata](/reference/ft_selectdata)**. To evaluate the spectrum of the signals, we will use **[ft_freqanalysis](/reference/ft_freqanalysis)**.
 - Fitting of dipoles to the topographies of the first principal components of the bandpass filtered data, using **[ft_componentanalysis](/reference/ft_componentanalysis)**, and **[ft_dipolefitting](/reference/ft_dipolefitting)**. For visualization of the spatial topogrphies, we use **[ft_topoplotIC](/reference/ft_topoplotic)**, and for the dipole fit we start with a grid search, and we use **[ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)** to create the search grid.  
 - Calculation of the transformation matrix that moves the sensors to the head-based coordinate system, using **[ft_headcoordinates](/reference/ft_headcoordinates)**.
+- Apply the transformation matrix to the sensors, using **[ft_transform_geometry](/reference/ft_transform_geometry)**.
 
 ### Processing of the data to capture the signal of the HPI coils
 
@@ -306,6 +310,11 @@ Now, we can use the identified location, to compute the coregistration matrix, t
     % sensor coordinates into head coordinates (RAS)
     transform_sens2head = ft_headcoordinates(dip08.dip.pos, dip14.dip.pos, dip11.dip.pos, 'neuromag');
 
+### Apply the transformation matrix to the sensors
+
+load fieldlinebeta2;
+fieldlinebeta2_hpi = ft_transform_geometry(transform_sens2head, fieldlinebeta2);
+
 
 ## Coregistration using a 3D scanner
 
@@ -320,7 +329,8 @@ This part consists of the following steps:
 - Read in the 3D model, assign a meaningful coordinate system, and erase the irrelevant parts, using **[ft_read_headshape](/reference/ft_read_headshape)**, **[ft_meshrealign](/reference/ft_meshrealign)**, and **[ft_defacemesh](/reference/ft_defacemesh)**.
 - Interactive alignment of the face - extracted from the 3D model -  with the MRI-extracted scalp surface, using **[ft_volumesegment](/reference/ft_volumesegment)**, **[ft_prepare_mesh](/reference/ft_prepare_mesh)**, and **[ft_meshrealign](/reference/ft_meshrealign)**.
 - Interactive alignment of the helmet with the reference sensors/helmet, using **[ft_meshrealign](/reference/ft_meshrealign)**.
-- Combination of the obtained alignment parameters into a single transformation matrix, and application of the resulting transformation to the sensor array, using **[ft_transform_geometry](/reference/ft_transform_geometry)**. 
+- Combination of the obtained alignment parameters into a single transformation matrix
+- Application of the resulting transformation to the sensor array, using **[ft_transform_geometry](/reference/ft_transform_geometry)**. 
 
 ### Definition of the head-based coordinate system
 
@@ -496,14 +506,18 @@ We can also attempt to interactively align the helmet model with the template he
 {% include image src="/assets/img/tutorial/coregistration_opm/helmet_aligned.png" width="400" %}
 _Figure: 3D-model of the helmet aligned with Fieldline helmet._
 
-### Putting everything together
+### Calculation of the transformation matrix
 
 Now we can use the transformations that align the 3D scan's face with the MRI-derived facial surface, and that align the 3D scan's helmet with the sensor positions to calculate the transformation that aligns the sensors with the anatomy. 
 
-    transform_scan2helmet = jm_helmet_aligned.cfg.transform;
-    transform_scan2face   = jm_face_aligned.cfg.transform;
+    transform_scan2helmet = scan_helmet_aligned.cfg.transform;
+    transform_scan2face   = scan_face_aligned.cfg.transform;
     transform_helmet2face = transform_scan2face/transform_scan2helmet;
     
+### Apply the transformation matrix to the sensors
+
+The transformation matrix ```transform_helmet2face``` can now be used to update the sensor definition, which aligns the sensors with head-based coordinate system .
+
     % align the sensors to the head
     fieldlinebeta2_head = ft_transform_geometry(transform_helmet2face, fieldlinebeta2);
     
