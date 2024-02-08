@@ -580,4 +580,4 @@ Furthermore, you can explore example scripts that deal with OPMs:
 
 and frequently asked questions:
 
-{% include seealso tag1="faq" tag2="opm" %}
+{% include seealso tag1="opm" %}
