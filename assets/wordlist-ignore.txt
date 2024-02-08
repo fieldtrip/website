@@ -721,6 +721,7 @@ Gio
 Girgis
 Gitlab
 Glessner
+Gligorijevic
 Glioma
 Globus
 Glowacki
@@ -741,6 +742,7 @@ Granger
 Gratton
 Grefkes
 Gregoriou
+GRK
 Groesbeek
 Groppe
 Groupwise
@@ -1594,6 +1596,7 @@ ROIs
 RPA
 RPF
 RSP
+RTG
 RTH
 RW
 Radboud
@@ -1936,6 +1939,7 @@ UPPT
 UPTT
 URI
 USBamp
+USD
 UTF
 UX
 Uddén
@@ -2103,6 +2107,7 @@ Yuchtman
 YutaMouse
 ZBwh
 ZI
+Zebris
 Zeitler
 Zenodo
 Zhang
@@ -2233,6 +2238,7 @@ asa
 asaproxy
 asc
 ascii
+asion
 asm
 asround
 assignin
@@ -2640,6 +2646,7 @@ coreg
 coregis
 coregister
 coregistered
+coregistering
 coregistrate
 coregistration
 coregistring
@@ -2945,6 +2952,7 @@ effector
 effectsize
 efontsize
 efsize
+eft
 eg
 egi
 egis
@@ -3068,6 +3076,7 @@ fSeqCheck
 fT
 fUw
 fabiobaselice
+facehelmet
 facto
 familar
 faq
@@ -3352,6 +3361,7 @@ hd
 hdEEG
 hdm
 hdr
+headcasts
 headcoil
 headcoils
 headcolor
@@ -4042,6 +4052,7 @@ neurophysiologists
 neurophysiology
 neuropil
 neuroscan
+neurosciences
 neuroscientific
 neuroscientist
 neuroscientists
@@ -4094,6 +4105,7 @@ normalisevolume
 normalizations
 normals
 nosym
+notaligned
 notchfilter
 noticable
 notrials
@@ -4536,6 +4548,7 @@ retag
 rethrow
 retinotopic
 retriangulation
+revolutionise
 rfDC
 rfXXXX
 rfhp
@@ -4729,6 +4742,7 @@ sortable
 sortdate
 sortindex
 sortlist
+sosoaligned
 soundcard
 sourcanalysis
 sourcePost
@@ -5146,6 +5160,7 @@ uperior
 upfirdn
 upsample
 upscaled
+upsideup
 usalzburg
 usb
 useable

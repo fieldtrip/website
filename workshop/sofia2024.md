@@ -38,7 +38,7 @@ Tzvetan Popov with local organizers and the generous hardware support by [MBrain
 
 **Session III**
 
-- **9:00 – 10:45** **_Hyperscanning Demo_**: Demonstration and data acquistion of multiple participants in social cognition context [Ivan Gligorijevic](https://rs.linkedin.com/in/ivan-gligorijevic) from  [MBrainTrain](https://mbraintrain.com/)
+- **9:00 – 10:45** **_Hyperscanning Demo_**: Demonstration and data acquisition of multiple participants in social cognition context [Ivan Gligorijevic](https://rs.linkedin.com/in/ivan-gligorijevic) from  [MBrainTrain](https://mbraintrain.com/)
 - **10:45 – 11:00** Coffee break
 - **11:00 – 12:30** **_Hyperscanning Demo_**: Continued
 - **12:30 – 13:30** Lunch
