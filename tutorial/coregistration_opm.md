@@ -545,10 +545,6 @@ This tutorial gave an introduction on the coregistration of OPM data, specifical
 
 You may want to continue with the more general [tutorials](/tutorial/) on processing MEG (and EEG) data, or have a look at the [system specific details](/getting_started) for the OPM data that you are working with. Also, you may want to proceed with the [opm preprocessing tutorial](/tutorial/preprocessing_opm).
 
-Furthermore, you can explore example scripts that deal with OPMs:
+Furthermore, you can explore other pages that deal with OPMs:
 
-{% include seealso tag1="example" tag2="opm" %}
-
-and frequently asked questions:
-
-{% include seealso tag1="faq" tag2="opm" %}
+{% include seealso tag1="opm" %}
