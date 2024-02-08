@@ -140,7 +140,7 @@ _Figure: OPM sensor locations are in register with the Polhemus headshape._
 
 ## Coregistration using head localizer coils
 
-Conventional SQUID MEG systems commonly head localization coils, which are also known as head position indicator (HPI) coils. All SQUID systems are based on certain number of sensors (e.g., 275 or 306) that are placed in a fixed-size helmet to accomodate most participants. Unless when using [custom headcasts](Barnes paper), the SQUID MEG helmet gives the subject a few cm of space around the head. The heads of different participants are therefore not in the same position, and also for an individual participant the position of the head in the helmet will differ between sessions, and can even vary a bit within a session.
+Conventional SQUID MEG systems commonly head localization coils, which are also known as head position indicator (HPI) coils. All SQUID systems are based on certain number of sensors (e.g., 275 or 306) that are placed in a fixed-size helmet to accommodate most participants. Unless when using [custom headcasts](Barnes paper), the SQUID MEG helmet gives the subject a few cm of space around the head. The heads of different participants are therefore not in the same position, and also for an individual participant the position of the head in the helmet will differ between sessions, and can even vary a bit within a session.
 
 To localize the head relative to the SQUID MEG helmet, HPI coils are placed on the head - often on well-defined [anatomical landmarks](/faq/xxx) - and the coils are energized to create small magnetic dipoles at the start of the recording session. Sometimes the localization is repeated at the end of the recording session, and sometimes the localization is done continuously. These magnetic dipoles can be localized, thereby determining the position of the sensors relative to the anatomical landmarks. All commercial SQUID MEG systems have a standard procedure for this that is well-integrated in the acquisition protocol and software, consequently the MEG recordings stored by the acquisition software include the sensor positions in [head coordinates](/faq/coordsys).
 
@@ -156,7 +156,7 @@ The dataset used here is a 32-channel dataset, with the OPM-sensors distributed 
 
 This part exists of the following steps:
 - Processing of the data to highlight the contribution of the individual HPI coils to the measured signals, using **[ft_preprocessing](/reference/ft_preprocessing)**, and **[ft_selectdata](/reference/ft_selectdata)**. To evaluate the spectrum of the signals, we will use **[ft_freqanalysis](/reference/ft_freqanalysis)**.
-- Fitting of dipoles to the topographies of the first principal components of the bandpass filtered data, using **[ft_componentanalysis](/reference/ft_componentanalysis)**, and **[ft_dipolefitting](/reference/ft_dipolefitting)**. For visualization of the spatial topogrphies, we use **[ft_topoplotIC](/reference/ft_topoplotic)**, and for the dipole fit we start with a grid search, and we use **[ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)** to create the search grid.  
+- Fitting of dipoles to the topographies of the first principal components of the bandpass filtered data, using **[ft_componentanalysis](/reference/ft_componentanalysis)**, and **[ft_dipolefitting](/reference/ft_dipolefitting)**. For visualization of the spatial topographies, we use **[ft_topoplotIC](/reference/ft_topoplotic)**, and for the dipole fit we start with a grid search, and we use **[ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)** to create the search grid.  
 - Calculation of the transformation matrix that moves the sensors to the head-based coordinate system, using **[ft_headcoordinates](/reference/ft_headcoordinates)**.
 - Apply the transformation matrix to the sensors, using **[ft_transform_geometry](/reference/ft_transform_geometry)**.
 
@@ -341,9 +341,9 @@ Here, we read in the anatomical MRI of the participant, and define the coordinat
     ft_determine_coordsys(mri);
 
 {% include image src="/assets/img/tutorial/coregistration_opm/mri_notaligned.png" width="400" %}
-_Figure: anatomical MRI image with an underdefined coordinate system._
+_Figure: anatomical MRI image with an not clearly defined coordinate system._
 
-After reading in the MRI, you can check the coordinate system with ```ft_determine_coordsys```. As the above figure shows, the axes are labelled as 'unknown', but it seems that they are oriented according to the RAS convention, while the origin of the coordinate system is ill-defined. For this reason, we will explicitly impose an anatomical landmark based coordinate system next, which requires interactive identification of the relevant landmarks (nasion, left/right pre auricular points).
+After reading in the MRI, you can check the coordinate system with ```ft_determine_coordsys```. As the above figure shows, the axes are labeled as 'unknown', but it seems that they are oriented according to the RAS convention, while the origin of the coordinate system is ill-defined. For this reason, we will explicitly impose an anatomical landmark based coordinate system next, which requires interactive identification of the relevant landmarks (nasion, left/right pre auricular points).
 
     % define a head based coordinate system
     cfg          = [];
@@ -367,7 +367,7 @@ Here, we read in the 3D-model from the structure scan, and define a coordinate s
     lighting gouraud; material dull; h=light;
 
 {% include image src="/assets/img/tutorial/coregistration_opm/scan_notaligned.png" width="400" %}
-_Figure: 3D-model with an underdefined coordinate system._
+_Figure: 3D-model with an not clearly defined coordinate system._
 
 In the example model, the coordinate axes' orientations relative to the participant more or less are well-behaved, i.e. the axes are pointing approximately along the left/right, anterior/posterior, and superior inferior directions, but the order of the axes is not conventional. As a first step we might want to assign a better defined coordinate system to the model. Note that the exact coordinate system does not matter too much. Here we define the coordinate system such that the X/Y/Z axes are pointing into the same direction as the head  coordinate system defined in the MRI image, i.e. R(ight)A(nterior)S(uperior). We use ```cfg.coordsys='neuromag'``` because this method allows us to approximately indicate the N(asion)/L(eft preauricular point), and R(ight) preauricular point. Note that in the below procedure, the ears are not visible in the model, instead we will use the protruding points on the helmet's rim to define 'l' and 'r'.
 
