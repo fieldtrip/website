@@ -149,7 +149,7 @@ and it'll tell you:
 Switched to a new branch 'welcome'
 ```
 
-If you have filed a bug on [Bugzilla](/development/issues), you could name your new branch _bugXXXX_ where XXXX is the number of the bug. If you have filed an issue on [GitHub](/development/issues), you could name your new branch _issueXXXX_ with the number. This helps linking your code suggestions to the discussion on that specific bug or issue.
+If you have filed an issue on [GitHub](/development/issues), you could name your new branch _issueXXXX_ with the number; this helps linking your code suggestions to the discussion on that specific bug or issue. If you have not filed an issue yet, just give the new branch a short name that refers to the things you want to change.
 
 ### 4. Add and edit files
 

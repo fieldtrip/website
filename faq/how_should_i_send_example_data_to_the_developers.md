@@ -1,6 +1,6 @@
 ---
 title: How should I share example data with the email list or developers?
-tags: [faq, email, development, bugzilla]
+tags: [faq, email, development, git]
 ---
 
 # How should I share example data with the email list or developers?

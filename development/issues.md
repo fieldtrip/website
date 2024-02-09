@@ -51,7 +51,3 @@ Please create a small test script and a piece of data that are both as small and
 If there is a chance of the bug being platform dependent, please also specify the platform (Windows, macOS, Linux), the version of your operating system (Windows 10, Redhat 7.2, High Sierra, ...) and the version of MATLAB that you are using.
 
 Example data (e.g., your MATLAB workspace) that helps to pinpoint a specific issue can be uploaded to the GitHub server as an attachment. This only works for relatively small files. If the data that you want to share is too large, please use a file hosting service as explained [here](/faq/how_should_i_send_example_data_to_the_developers).
-
-## Issues on bugzilla
-
-In the past we used our own [Bugzilla](http://bugzilla.fieldtriptoolbox.org) server for tracking the development and issues, but we have moved over to [GitHub issues](https://github.com/fieldtrip/fieldtrip/issues). The bugzilla server is still available at <http://bugzilla.fieldtriptoolbox.org> for reference to documentation of previous issues.

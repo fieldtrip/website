@@ -78,11 +78,11 @@ We used the DCCN [download server](https://download.fieldtriptoolbox.org/) to di
 
 ## Bugzilla - obsolete
 
-In the past we used [Bugzilla](http://www.bugzilla.org) as an "issue tracker". This allows to maintain and distribute to-do lists and supports the follow up communication with users that report problems or suggestions. Our bugzilla server is still online for reference and can be found at <http://bugzilla.fieldtriptoolbox.org>.
+In the past we used [Bugzilla](https://www.bugzilla.org) as an "issue tracker" to maintain to-do lists, distribute work, and to support follow-up communication with users. Our bugzilla server has been discontinued in 2024. The archived bug reports and discussions are still available on <http://bugzilla.fieldtriptoolbox.org>.
 
 ## Dokuwiki - obsolete
 
-In the past we used [dokuwiki](http://dokuwiki.org/) as the CMS system for our website.
+In the past we used [dokuwiki](http://dokuwiki.org/) as the CMS system for our website. In 2018 we switched to Jekyll and GitHub.
 
 ## SVN - obsolete
 
@@ -106,7 +106,7 @@ We used to maintain a copy of the SVN repository with the software on [SourceFor
 
 ## Facebook - obsolete
 
-We used <http://facebook.com/fieldtriptoolbox> to announce events and to post photos and messages that relate to the social interaction between developers and users. The Facebook page is **not** used to provide support. In the past we also listed people who like our Facebook page on the start page. or linked in news items to photos from Facebook albums. Due to privacy concerns we stopped using FaceBook.
+We used <http://facebook.com/fieldtriptoolbox> to announce events and to post photos and messages that relate to the social interaction between developers and users. The Facebook page was never used to provide support. In the past we also listed people who like our Facebook page on the start page, or linked from news items to photos in Facebook albums. Due to privacy concerns we stopped using FaceBook.
 
 ## Twitter - obsolete
 
