@@ -1,0 +1,60 @@
+articleids:
+- idtype: pmid
+  value: '38293030'
+- idtype: doi
+  value: 10.1101/2024.01.17.576120
+- idtype: pmcid
+  value: PMC10827201
+authors:
+- authtype: Author
+  name: Cleary DR
+- authtype: Author
+  name: Tchoe Y
+- authtype: Author
+  name: Bourhis A
+- authtype: Author
+  name: Dickey CW
+- authtype: Author
+  name: Stedelin B
+- authtype: Author
+  name: Ganji M
+- authtype: Author
+  name: Lee SH
+- authtype: Author
+  name: Lee J
+- authtype: Author
+  name: Siler DA
+- authtype: Author
+  name: Brown EC
+- authtype: Author
+  name: Rosen BQ
+- authtype: Author
+  name: Kaestner E
+- authtype: Author
+  name: Yang JC
+- authtype: Author
+  name: Soper DJ
+- authtype: Author
+  name: Han SJ
+- authtype: Author
+  name: Paulk AC
+- authtype: Author
+  name: Cash SS
+- authtype: Author
+  name: Raslan AM
+- authtype: Author
+  name: Dayeh SA
+- authtype: Author
+  name: Halgren E
+epubdate: 2024 Jan 19
+fulljournalname: bioRxiv
+issue: ''
+pages: 2024.01.17.576120
+pmclivedate: 2024/01/31
+printpubdate: ''
+pubdate: 2024 Jan 19
+sortdate: 2024/01/19 00:00
+source: bioRxiv
+title: Modular Phoneme Processing in Human Superior Temporal Gyrus
+uid: '10827201'
+volume: ''

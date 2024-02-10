@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '37777153'
+- idtype: doi
+  value: 10.1016/j.neuropsychologia.2023.108694
+- idtype: pmcid
+  value: PMC10843092
+- idtype: MID
+  value: NIHMS1936532
+authors:
+- authtype: Author
+  name: Chowdhury A
+- authtype: Author
+  name: van Lutterveld R
+- authtype: Author
+  name: Laukkonen RE
+- authtype: Author
+  name: Slagter HA
+- authtype: Author
+  name: Ingram DM
+- authtype: Author
+  name: Sacchet MD
+epubdate: 2023 Sep 28
+fulljournalname: Neuropsychologia
+issue: ''
+pages: '108694'
+pmclivedate: ''
+printpubdate: 2023 Nov 5
+pubdate: 2023 Sep 28
+sortdate: 2023/09/28 00:00
+source: Neuropsychologia
+title: Investigation of advanced mindfulness meditation “cessation” experiences using
+  EEG spectral analysis in an intensively sampled case-study
+uid: '10843092'
+volume: '190'

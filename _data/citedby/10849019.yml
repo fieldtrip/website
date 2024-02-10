@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '38164580'
+- idtype: doi
+  value: 10.1523/ENEURO.0384-23.2023
+- idtype: pmcid
+  value: PMC10849019
+authors:
+- authtype: Author
+  name: Mongold SJ
+- authtype: Author
+  name: Georgiev C
+- authtype: Author
+  name: Legrand T
+- authtype: Author
+  name: Bourguignon M
+epubdate: 2024 Jan 19
+fulljournalname: eNeuro
+issue: '1'
+pages: ENEURO.0384-23.2023
+pmclivedate: 2024/02/07
+printpubdate: ''
+pubdate: 2024 Jan 19
+sortdate: 2024/01/19 00:00
+source: eNeuro
+title: 'Afferents to Action: Cortical Proprioceptive Processing Assessed with Corticokinematic
+  Coherence Specifically Relates to Gross Motor Skills'
+uid: '10849019'
+volume: '11'

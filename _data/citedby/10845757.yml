@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '38317077'
+- idtype: doi
+  value: 10.1186/s12868-024-00844-5
+- idtype: pmcid
+  value: PMC10845757
+authors:
+- authtype: Author
+  name: Murphy RJ
+- authtype: Author
+  name: Godfrey K
+- authtype: Author
+  name: Shaw AD
+- authtype: Author
+  name: Muthukumaraswamy S
+- authtype: Author
+  name: Sumner RL
+epubdate: 2024 Feb 5
+fulljournalname: BMC Neuroscience
+issue: ''
+pages: '7'
+pmclivedate: 2024/02/06
+printpubdate: ''
+pubdate: 2024 Feb 5
+sortdate: 2024/02/05 00:00
+source: BMC Neurosci
+title: Modulation of long-term potentiation following microdoses of LSD captured by
+  thalamo-cortical modelling in a randomised, controlled trial
+uid: '10845757'
+volume: '25'

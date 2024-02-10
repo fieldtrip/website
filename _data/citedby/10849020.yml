@@ -1,0 +1,24 @@
+articleids:
+- idtype: pmid
+  value: '38176905'
+- idtype: doi
+  value: 10.1523/ENEURO.0276-23.2023
+- idtype: pmcid
+  value: PMC10849020
+authors:
+- authtype: Author
+  name: de Vries E
+- authtype: Author
+  name: van Ede F
+epubdate: 2024 Jan 19
+fulljournalname: eNeuro
+issue: '1'
+pages: ENEURO.0276-23.2023
+pmclivedate: 2024/02/07
+printpubdate: ''
+pubdate: 2024 Jan 19
+sortdate: 2024/01/19 00:00
+source: eNeuro
+title: Microsaccades Track Location-Based Object Rehearsal in Visual Working Memory
+uid: '10849020'
+volume: '11'
