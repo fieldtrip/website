@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '38323011'
+- idtype: doi
+  value: 10.1016/j.isci.2024.108816
+- idtype: pmcid
+  value: PMC10844823
+authors:
+- authtype: Author
+  name: Lazar A
+- authtype: Author
+  name: Klein L
+- authtype: Author
+  name: Klon-Lipok J
+- authtype: Author
+  name: Bányai M
+- authtype: Author
+  name: Orbán G
+- authtype: Author
+  name: Singer W
+epubdate: 2024 Jan 6
+fulljournalname: iScience
+issue: '2'
+pages: '108816'
+pmclivedate: 2024/02/06
+printpubdate: ''
+pubdate: 2024 Jan 6
+sortdate: 2024/01/06 00:00
+source: iScience
+title: Paying attention to natural scenes in area V1
+uid: '10844823'
+volume: '27'
