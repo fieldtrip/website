@@ -1,0 +1,46 @@
+articleids:
+- idtype: pmid
+  value: '38214686'
+- idtype: doi
+  value: 10.1021/acschemneuro.3c00289
+- idtype: pmcid
+  value: PMC10853937
+authors:
+- authtype: Author
+  name: Mediano PA
+- authtype: Author
+  name: Rosas FE
+- authtype: Author
+  name: Timmermann C
+- authtype: Author
+  name: Roseman L
+- authtype: Author
+  name: Nutt DJ
+- authtype: Author
+  name: Feilding A
+- authtype: Author
+  name: Kaelen M
+- authtype: Author
+  name: Kringelbach ML
+- authtype: Author
+  name: Barrett AB
+- authtype: Author
+  name: Seth AK
+- authtype: Author
+  name: Muthukumaraswamy S
+- authtype: Author
+  name: Bor D
+- authtype: Author
+  name: Carhart-Harris RL
+epubdate: 2024 Jan 12
+fulljournalname: ACS Chemical Neuroscience
+issue: '3'
+pages: 462-471
+pmclivedate: 2024/02/10
+printpubdate: ''
+pubdate: 2024 Jan 12
+sortdate: 2024/01/12 00:00
+source: ACS Chem Neurosci
+title: Effects of External Stimulation on Psychedelic State Neurodynamics
+uid: '10853937'
+volume: '15'

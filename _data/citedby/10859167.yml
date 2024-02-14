@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '29154954'
+- idtype: doi
+  value: 10.1016/j.ijpsycho.2017.11.010
+- idtype: pmcid
+  value: PMC10859167
+- idtype: MID
+  value: NIHMS1913091
+authors:
+- authtype: Author
+  name: Kiat JE
+- authtype: Author
+  name: Cheadle JE
+- authtype: Author
+  name: Goosby BJ
+epubdate: 2017 Nov 15
+fulljournalname: 'International journal of psychophysiology : official journal of
+  the International Organization of Psychophysiology'
+issue: ''
+pages: 48-57
+pmclivedate: 2024/02/11
+printpubdate: 2018 Jan
+pubdate: 2017 Nov 15
+sortdate: 2017/11/15 00:00
+source: Int J Psychophysiol
+title: The impact of social exclusion on anticipatory attentional processing
+uid: '10859167'
+volume: '123'

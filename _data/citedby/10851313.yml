@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '37485986'
+- idtype: doi
+  value: 10.1111/psyp.14399
+- idtype: pmcid
+  value: PMC10851313
+authors:
+- authtype: Author
+  name: Hassall CD
+- authtype: Author
+  name: Yan Y
+- authtype: Author
+  name: Hunt LT
+epubdate: 2023 Jul 24
+fulljournalname: Psychophysiology
+issue: '12'
+pages: e14399
+pmclivedate: 2024/02/09
+printpubdate: 2023 Dec
+pubdate: 2023 Jul 24
+sortdate: 2023/07/24 00:00
+source: Psychophysiology
+title: The neural correlates of continuous feedback processing
+uid: '10851313'
+volume: '60'
