@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '38333713'
+- idtype: doi
+  value: 10.1016/j.isci.2024.108963
+- idtype: pmcid
+  value: PMC10850742
+authors:
+- authtype: Author
+  name: Günseli E
+- authtype: Author
+  name: Foster JJ
+- authtype: Author
+  name: Sutterer DW
+- authtype: Author
+  name: Todorova L
+- authtype: Author
+  name: Vogel EK
+- authtype: Author
+  name: Awh E
+epubdate: 2024 Jan 17
+fulljournalname: iScience
+issue: '2'
+pages: '108963'
+pmclivedate: 2024/02/08
+printpubdate: ''
+pubdate: 2024 Jan 17
+sortdate: 2024/01/17 00:00
+source: iScience
+title: Encoded and updated spatial working memories share a common representational
+  format in alpha activity
+uid: '10850742'
+volume: '27'
