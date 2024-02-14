@@ -4,3 +4,6 @@
 - name:  Should I use a Polhemus or a Structure Sensor to record electrode positions?
   link:  /faq/structuresensor
 
+- name:  Coregistration of Optically Pumped Magnetometer (OPM) data
+  link:  /tutorial/coregistration_opm
+
