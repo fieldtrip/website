@@ -4,7 +4,7 @@ categories: [news]
 tweet: Attention fieldtrippers! Sadly, we found a bug in FieldTrip starting from release 20200701. It concerns ft_sourceanalysis with the DICS method. See https://www.fieldtriptoolbox.org/#27-november-2020 for more information.
 ---
 
-### 27 November, 2020
+### 27 November 2020
 
 Regretfully we identified a bug in FieldTrip releases starting from release [20200701](https://github.com/fieldtrip/fieldtrip/releases/tag/20200701) onward, which might have affected your results.
 

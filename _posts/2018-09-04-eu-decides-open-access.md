@@ -1,9 +1,9 @@
 ---
-title: 04 September, 2018 - EU decides on open access
+title: 04 September 2018 - EU decides on open access
 categories: [news]
 ---
 
-### 04 September, 2018
+### 04 September 2018
 
 Eleven EU countries have decided that all scientific publications
 funded by their respective national science councils should be full

@@ -1,9 +1,9 @@
 ---
-title: 03 September, 2018 - BIOMAG open science panel
+title: 03 September 2018 - BIOMAG open science panel
 categories: [news]
 ---
 
-### 03 September, 2018
+### 03 September 2018
 
 Here are the slides of the topics that we presented and discussed in the Open Science Panel session at the [BIOMAG 2018](http://www.biomag2018.org/) conference in Philadelphia last week:
 
