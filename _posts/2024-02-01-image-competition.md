@@ -4,7 +4,7 @@ categories: [news]
 tweet: EEG Image Competition - $500 USD Prize. See http://www.fieldtriptoolbox.org/#1-february-2024
 ---
 
-### 1 February, 2024
+### 1 February 2024
 
 **EEG100 Image Competition - \$500 USD Prize - Closing 29th February 2024**
 

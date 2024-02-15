@@ -1,9 +1,9 @@
 ---
-title: 5 December, 2018 - New website ready
+title: 5 December 2018 - New website ready
 categories: [news]
 ---
 
-### 5 December, 2018
+### 5 December 2018
 
 We have completed the move to the new website which you are now seeing. See this [message on the mailing list](https://mailman.science.ru.nl/pipermail/fieldtrip/2018-December/012579.html) for details. The [old website](http://old.fieldtriptoolbox.org) is still available in case you want to look up something there.
 

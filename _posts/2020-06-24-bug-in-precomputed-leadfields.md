@@ -3,7 +3,7 @@ title: 24 June 2020 - Bug in precomputed leadfields
 categories: [news]
 ---
 
-### 24 June, 2020
+### 24 June 2020
 
 We are sorry to report that with merging the recent pull request [#1377](https://github.com/fieldtrip/fieldtrip/pull/1377) about a month ago, we introduced a bug in the FieldTrip release that might have affected your computations.
 

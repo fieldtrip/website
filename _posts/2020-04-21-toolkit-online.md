@@ -3,7 +3,7 @@ title: 21 April 2020 - M/EEG toolkit online
 categories: [news, toolkit2020]
 ---
 
-### 21 April, 2020
+### 21 April 2020
 
 We kicked off the online MEG/EEG toolkit yesterday, and today it was again in full swing! After this week we will post the material online on the [2020 toolkit page](/workshop/toolkit2020), including details on how we organized the online lectures, interactive sessions and hands-on practical exercises with the tutors being virtually available to help the participants.
 
