@@ -17,11 +17,11 @@ To ensure a well-defined sensor placement, labs also often use helmets to positi
 
 This tutorial demonstrates different methods for coregistering OPM sensors. Each method is demonstrated including data that you can download to carry out all steps yourself. Furthermore, it discusses the advantages and disadvantages of each method.
 
-In this tutorial we will _not_ consider the coregistration of OPM sensors in flexible EEG-like caps. We will also _not_ discuss the coregistration of individually designed 3D printed helmets, as for those the coregistration is usually part of the design process and the helmet will fit only one way on the participant's head. Finally, this tutorial will also not cover the processing of the MEG signals recorded from the participants brain, this is covered in the [preprocessing_opm](/tutorial/preprocessing_opm) tutorial.
+In this tutorial we will _not_ consider the coregistration of OPM sensors in flexible EEG-like caps. This tutorial will also not cover the processing of the MEG signals recorded from the participants brain, that is covered in the tutorial on [preprocessing of OPM data](/tutorial/preprocessing_opm).
 
 ## Background
 
-The common aim of the coregistration methods that we explore in this tutorial is to align geometrical objects - i.e. 'things' that have a position and orientation in 3D space - with respect to one another. Ultimately, we want know the location  of the OPM sensors relative to the participant's head and brain.
+The common aim of the coregistration methods that we explore in this tutorial is to align geometrical objects - 'things' that have a position and orientation in 3D space - with respect to one another. Ultimately, we want know the location  of the OPM sensors relative to the participant's head and brain.
 
 In the examples below, the OPM sensor positions and orientations are initially expressed in a coordinate system relative to the FieldLine smart helmet. To facilitate the downstream analysis of the MEG signals, e.g. for group level analysis, it is customary to aim for the OPM sensors expressed in a coordinate system that is defined based on anatomical landmarks on the participant's head.
 
@@ -45,7 +45,7 @@ This tutorial describes different ways to achieve coregistration:
 - Using head localization coils, where the location of the coils on the head is known, and the location of the coils relative to the sensors can be calculated.
 - Using a 3D model from a camera-based 3D scanner of the head and helmet, and aligning this model with more detailed anatomical and sensor information.
 - Using sensor-depth information from the FieldLine smart helmet as a proxy for the head surface.  
-- Using a computer-designed custom helmet for a specific individual
+- Using individually designed 3D printed helmets
 
 Procedural outlines of each of the examples are provided in more detail below.
 
@@ -59,7 +59,7 @@ Other 3D pointing devices such as the Optotrak (optical) and the Zebris (acousti
 
 The following example is based on a Polhemus recording, which - besides a measurement of some points on the participant's head surface - contains the digitized locations of 8 small indentations that serve as landmarks on the FieldLine smart helmet. These 8 fixed locations are also defined in the `fieldlinebeta2` template helmet, but there expressed in a different coordinate system.  
 
-This part consists of the following steps:
+The procedure for this consists of the following steps:
 
 - Read in the headshape and change the coordinate system, using **[ft_read_headshape](/reference/ft_read_headshape)** and **[ft_convert_coordsys](/reference/ft_convert_coordsys)**. For visualization we use **[ft_plot_headshape](/reference/ft_plot_headshape)** and **[ft_plot_axes](/reference/ft_plot_axes)**.
 - Identification of the reference points in the Polhemus measurement
@@ -84,8 +84,12 @@ For consistency with the other examples in this tutorial, we will first convert 
     ft_plot_axes(headshape)
     view([-27 20])
 
+If you 3D rotate the figure, you can recognize the nose; it is just below the red +X (unknown) axis.
+
 {% include image src="/assets/img/tutorial/coregistration_opm/headshape_upsideup_ctf.png" width="400" %}
 _Figure: Polhemus recorded headshape with the coordinate axes according to the CTF-convention: the X-axis is pointing towards the nose._
+
+From the figure we can see that the first X axis pointing to the nose or anterior, the second Y axis is pointing to the left, and the third Z axis is pointing to superior. Hence we refer to this as an ALS coordinate system. In fact, closer inspection reveals that the origin is exactly between the two ears, which means that it is consistent with the [CTF coordinate system](/faq/coordsys#details-of-the-ctf-coordinate-system). This is information we can add to the data structure to facilitate automatic coordinate system conversion.
 
     headshape.coordsys = 'ctf';
     headshape = ft_convert_coordsys(headshape, 'neuromag');  % this rotates it such that the X-axis points to the right
@@ -95,6 +99,8 @@ _Figure: Polhemus recorded headshape with the coordinate axes according to the C
     ft_plot_headshape(headshape)
     ft_plot_axes(headshape)
     view([114 20])
+
+The nose is now just below the green +X axis, which now also specifies that it corresponds to the anterior direction. The **[ft_plot_axes](/reference/plotting/ft_plot_axes)** function automatically adds these labels whenever an object specifies the coordinate system. You can click in the figure with the right mouse button and change the view to any of top/bottom, left/right, and front/back.
 
 {% include image src="/assets/img/tutorial/coregistration_opm/headshape_upsideup.png" width="400" %}
 _Figure: Adjusted headshape expressed in the RAS coordinate system._
@@ -199,7 +205,8 @@ The dataset used here contains 32 channels, with the OPM-sensors relatively unif
 
 We will analyse an ~1 minute segment of data, during which the 3 HPI coils were energized with 3 sinusoidal signals at different frequencies: at 8 Hz for the 'nasion' coil, 11 Hz for the 'right ear' coil, and 14 Hz for the 'left ear' coil. These sinewave signals are orthogonal, i.e., uncorrelated in time. When the data is bandpass filtered, we can get the signal generated by each of the individual coils. Subsequently we can fit dipoles to the spatial topography of the first principal component of the bandpass-filtered data.
 
-This part exists of the following steps:
+The procedure for this consists of the following steps:
+
 - To evaluate the MEG signal and the spectrum, we start off with **[ft_preprocessing](/reference/ft_preprocessing)**, **[ft_databrowser](/reference/ft_databrowser)**, **[ft_selectdata](/reference/ft_selectdata)** and **[ft_freqanalysis](/reference/ft_freqanalysis)**.
 - Processing of the data to get the contribution of each individual HPI coil, using **[ft_preprocessing](/reference/ft_preprocessing)**, .
 - Fitting of dipoles to the topographies of the first principal components of the bandpass filtered data, using **[ft_componentanalysis](/reference/ft_componentanalysis)**, and **[ft_dipolefitting](/reference/ft_dipolefitting)**. For visualization of the spatial topographies, we use **[ft_topoplotIC](/reference/ft_topoplotic)**, and for the dipole fit we start with a grid search, and we use **[ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)** to create the search grid.  
@@ -393,7 +400,8 @@ Note that if you are using 3D scanner based on an iPhone or iPad, such as the [S
 
 The idea here is to make a sufficiently high quality 3D-model that captures the participant's facial features in register with the the helmet, such that the facial features can be used for coregistration with a surface image obtained from an anatomical MRI. From the image of the helmet, the position of the sensors can be deduced. Thus, the 3D-model serves as an intermediary to link the anatomy with the sensors.
 
-This part consists of the following steps:
+The procedure for this consists of the following steps:
+
 - Read the anatomical MRI, and assign a head-based coordinate system, using **[ft_read_mri](/reference/ft_read_mri)**, and **[ft_volumerealign](/reference/ft_volumerealign)**.
 - Read in the 3D model, assign a meaningful coordinate system, and erase the irrelevant parts, using **[ft_read_headshape](/reference/ft_read_headshape)**, **[ft_meshrealign](/reference/ft_meshrealign)**, and **[ft_defacemesh](/reference/ft_defacemesh)**.
 - Interactive alignment of the face - extracted from the 3D model -  with the MRI-extracted scalp surface, using **[ft_volumesegment](/reference/ft_volumesegment)**, **[ft_prepare_mesh](/reference/ft_prepare_mesh)**, and **[ft_meshrealign](/reference/ft_meshrealign)**.
@@ -609,9 +617,15 @@ _This is specific for the FieldLine smart helmet._
 More info to follow: stay tuned!
 
 
-## Coregistration of a computer-designed individual custom helmet
+## Coregistration of individually designed 3D printed helmets
 
-More info to follow: stay tuned!
+The coregistration of individually designed 3D printed helmets is mostly done during the design phase, as the helmet is designed around a geometrical model of the head surface.
+
+The procedure for this consists of the following steps:
+
+- Import the anatomical MRI from the participant with **[ft_read_mri](/reference/fileio/ft_read_mri)**, use **[ft_volumerealign](/reference/ft_volumerealign)** to align and **[ft_volumesegment](/reference/ft_volumesegment)** to segment the scalp surface. Then use **[ft_prepare_mesh](/reference/ft_prepare_mesh) to construct a triangulated surface.
+- Alternatively to starting with an MRI, you can also start with a 3D scan of the participants head. while wearing a swimming cap or similar to press down the hair. In that case you proceed with **[ft_read_headshape](/reference/fileio/ft_read_headshape)**, **[ft_meshrealign](/reference/ft_meshrealign)** to align, and **[ft_defacemesh](/reference/ft_defacemesh)** to remove unwanted parts from the mesh, like the shoulders and/or the face.
+- You export the mesh as an STL file using **[ft_write_headshape](/reference/fileio/ft_write_headshape)** and import it in your favourite 3D design software like Fusion360, Solidworks or Blender. From there it is up to you to design the helmet, including the OPM sensor holders.
 
 
 ## Summary and suggested further reading
