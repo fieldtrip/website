@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '38348255'
+- idtype: doi
+  value: 10.3389/fpsyg.2024.1285792
+- idtype: pmcid
+  value: PMC10859427
+authors:
+- authtype: Author
+  name: Fu WJ
+- authtype: Author
+  name: Gao F
+- authtype: Author
+  name: Zhang X
+- authtype: Author
+  name: Dong B
+- authtype: Author
+  name: Chen XL
+- authtype: Author
+  name: Xu X
+- authtype: Author
+  name: Yang ZY
+- authtype: Author
+  name: Liu Y
+epubdate: 2024 Jan 29
+fulljournalname: Frontiers in Psychology
+issue: ''
+pages: '1285792'
+pmclivedate: 2024/02/12
+printpubdate: ''
+pubdate: 2024 Jan 29
+sortdate: 2024/01/29 00:00
+source: Front Psychol
+title: Tree–shrub–grass composite woodland better facilitates emotional recovery in
+  college students emotion better than other plant communities
+uid: '10859427'
+volume: '15'

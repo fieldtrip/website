@@ -1,0 +1,59 @@
+articleids:
+- idtype: pmid
+  value: '38226843'
+- idtype: doi
+  value: 10.1002/acn3.51974
+- idtype: pmcid
+  value: PMC10863921
+authors:
+- authtype: Author
+  name: Samudra N
+- authtype: Author
+  name: Lerner H
+- authtype: Author
+  name: Yack L
+- authtype: Author
+  name: Walsh CM
+- authtype: Author
+  name: Kirsch HE
+- authtype: Author
+  name: Kudo K
+- authtype: Author
+  name: Yballa C
+- authtype: Author
+  name: La Joie R
+- authtype: Author
+  name: Gorno‐Tempini ML
+- authtype: Author
+  name: Spina S
+- authtype: Author
+  name: Seeley WW
+- authtype: Author
+  name: Neylan TC
+- authtype: Author
+  name: Miller BL
+- authtype: Author
+  name: Rabinovici GD
+- authtype: Author
+  name: Boxer A
+- authtype: Author
+  name: Grinberg LT
+- authtype: Author
+  name: Rankin KP
+- authtype: Author
+  name: Nagarajan SS
+- authtype: Author
+  name: Ranasinghe KG
+epubdate: 2024 Jan 16
+fulljournalname: Annals of Clinical and Translational Neurology
+issue: '2'
+pages: 525-535
+pmclivedate: 2024/02/14
+printpubdate: ''
+pubdate: 2024 Jan 16
+sortdate: 2024/01/16 00:00
+source: Ann Clin Transl Neurol
+title: Spatiotemporal characteristics of neurophysiological changes in patients with
+  four‐repeat tauopathies
+uid: '10863921'
+volume: '11'

@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '38352236'
+- idtype: doi
+  value: 10.3389/fnagi.2024.1273738
+- idtype: pmcid
+  value: PMC10861731
+authors:
+- authtype: Author
+  name: Hoshi H
+- authtype: Author
+  name: Hirata Y
+- authtype: Author
+  name: Fukasawa K
+- authtype: Author
+  name: Kobayashi M
+- authtype: Author
+  name: Shigihara Y
+epubdate: 2024 Jan 30
+fulljournalname: Frontiers in Aging Neuroscience
+issue: ''
+pages: '1273738'
+pmclivedate: 2024/02/13
+printpubdate: ''
+pubdate: 2024 Jan 30
+sortdate: 2024/01/30 00:00
+source: Front Aging Neurosci
+title: Oscillatory characteristics of resting-state magnetoencephalography reflect
+  pathological and symptomatic conditions of cognitive impairment
+uid: '10861731'
+volume: '16'
