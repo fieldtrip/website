@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '38351803'
+- idtype: doi
+  value: 10.1098/rspb.2023.2908
+- idtype: pmcid
+  value: PMC10865004
+authors:
+- authtype: Author
+  name: Arnold DH
+- authtype: Author
+  name: Electricity F
+- authtype: Author
+  name: Saurels BW
+epubdate: 2024 Feb 14
+fulljournalname: 'Proceedings of the Royal Society B: Biological Sciences'
+issue: '2016'
+pages: '20232908'
+pmclivedate: ''
+printpubdate: ''
+pubdate: 2024 Feb 14
+sortdate: 2024/02/14 00:00
+source: Proc Biol Sci
+title: Enhanced electrophysiological responses to explicitly predicted and pre-imagined
+  inputs, with confirmation from online decoding with neuro-feedback
+uid: '10865004'
+volume: '291'

@@ -1,0 +1,49 @@
+articleids:
+- idtype: pmid
+  value: '37977135'
+- idtype: doi
+  value: 10.1177/00315125231213167
+- idtype: pmcid
+  value: PMC10863375
+authors:
+- authtype: Author
+  name: Alemi R
+- authtype: Author
+  name: Wolfe J
+- authtype: Author
+  name: Neumann S
+- authtype: Author
+  name: Manning J
+- authtype: Author
+  name: Hanna L
+- authtype: Author
+  name: Towler W
+- authtype: Author
+  name: Wilson C
+- authtype: Author
+  name: Bien A
+- authtype: Author
+  name: Miller S
+- authtype: Author
+  name: Schafer E
+- authtype: Author
+  name: Gemignani J
+- authtype: Author
+  name: Koirala N
+- authtype: Author
+  name: Gracco VL
+- authtype: Author
+  name: Deroche M
+epubdate: 2023 Nov 17
+fulljournalname: Perceptual and Motor Skills
+issue: '1'
+pages: 74-105
+pmclivedate: 2024/02/14
+printpubdate: 2024 Feb
+pubdate: 2023 Nov 17
+sortdate: 2023/11/17 00:00
+source: Percept Mot Skills
+title: Motor Processing in Children With Cochlear Implants as Assessed by Functional
+  Near-Infrared Spectroscopy
+uid: '10863375'
+volume: '131'

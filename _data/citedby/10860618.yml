@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '38050110'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0398-23.2023
+- idtype: pmcid
+  value: PMC10860618
+authors:
+- authtype: Author
+  name: Li J
+- authtype: Author
+  name: Cao D
+- authtype: Author
+  name: Yu S
+- authtype: Author
+  name: Wang H
+- authtype: Author
+  name: Imbach L
+- authtype: Author
+  name: Stieglitz L
+- authtype: Author
+  name: Sarnthein J
+- authtype: Author
+  name: Jiang T
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '4'
+pages: e0398232023
+pmclivedate: ''
+printpubdate: 2024 Jan 24
+pubdate: 2024 Jan 24
+sortdate: 2024/01/24 00:00
+source: J Neurosci
+title: Theta–Alpha Connectivity in the Hippocampal–Entorhinal Circuit Predicts Working
+  Memory Load
+uid: '10860618'
+volume: '44'
