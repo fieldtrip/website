@@ -48,6 +48,11 @@ defaults:
       type: "pages"
     values:
       sitemap: false
+  -
+    scope:
+      path: "assets/**/*.pdf"
+    values:
+      sitemap: false
 
 toc:
   min_level: 2 # default: 1
