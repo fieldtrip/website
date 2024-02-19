@@ -32,7 +32,7 @@ You can find the template 3-D electrode sets included in FieldTrip [here](https:
 
 ## The 10-20, 10-10 and 10-5 system for electrode placement
 
-The following template electrode sets describe the 10-20 EEG electrodes and were constructed by Robert Oostenveld as part of the study described in _Robert Oostenveld and Peter Praamstra. **The five percent electrode system for high-resolution EEG and ERP measurements.** Clin Neurophysiol. 2001 Apr;112(4):713-9._ More details on the electrode positioning and the different naming schemes can be found in the paper (link to [pubmed](http://www.ncbi.nlm.nih.gov/pubmed/11275545), [sciencedirect](http://www.sciencedirect.com/science/article/pii/S1388245700005277)) and on Robert's [personal blog](http://robertoostenveld.nl/?p=5).
+The following template electrode sets describe the 10-20 EEG electrodes and were constructed by Robert Oostenveld and described in [The five percent electrode system for high-resolution EEG and ERP measurements](https://doi.org/10.1016/s1388-2457(00)00527-7). More details on the electrode positioning and the different naming schemes can be found in the five percent paper and on Robert's [personal blog](http://robertoostenveld.nl/?p=5).
 
 The electrodes are stored in an ASA `.elc` file which can be read with **[ft_read_sens](/reference/fileio/ft_read_sens)**. The electrode positions are represented in mm in the MNI coordinate system and correspond to the template BEM volume conduction model detailed in [this publication](http://www.ncbi.nlm.nih.gov/pubmed/12842715) and that is available in the `fieldtrip/template/headmodel` directory as `standard_bem.mat`. See also [this page](/template/headmodel/#standard_bemmat).
 
@@ -55,11 +55,11 @@ The following template electrode sets are for the [EGI](http://www.egi.com) geod
 - GSN-HydroCel-256.sfp
 - GSN-HydroCel-257.sfp
 
-Note that the even versions (32, 64, 128, 256) do not include the position of the reference electrode which is on the vertex (aka Cz), whereas the odd versions (65, 129, 257) do include the position of the reference electrode.
+Note that the _even_ versions (32, 64, 128, 256) do not include the position of the vertex reference electrode (aka Cz), whereas the _odd_ versions (65, 129, 257) do include the position of the vertex reference electrode.
 
 ## Easycap electrode arrangements
 
 The following template electrode sets are for the [Easycap](http://www.easycap.de/easycap/e/products/products.htm) electrode arrangements and were downloaded from the Easycap [download page](http://www.easycap.de/easycap/e/downloads/electrode_sites_coordinates.htm).
 
-- easycap-M1.sfp (Full 10%-System)
-- easycap-M10.sfp (Equidistant 61-Channel-Arrangement)
+- easycap-M1.sfp with full 10% system
+- easycap-M10.sfp with equidistant 61-channel arrangement
