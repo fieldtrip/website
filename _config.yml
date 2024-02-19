@@ -82,6 +82,7 @@ exclude:
 #  - assets/img/*
 #  - dataformat/*
 #  - development/*
+#  - error/*
 #  - example/*
 #  - faq/*
 #  - getting_started/*

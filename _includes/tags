@@ -1,12 +1,10 @@
-<span>
-  <span class="text-muted small">
-    {% if page.tags != nill and page.tags != "" %}
-      Tags:
-      {% for t in page.tags %}
-        <a href="/tag/{{ t }}/">{{ t }}</a>
-      {% endfor %}
-    {% else %}
-      &nbsp;
-    {% endif %}
-  </span>
+<span class="text-muted small">
+  {% if page.tags != nill and page.tags != "" %}
+    Tags:
+    {% for t in page.tags %}
+      <a href="/tag/{{ t }}/">{{ t }}</a>
+    {% endfor %}
+  {% else %}
+    &nbsp;
+  {% endif %}
 </span>
