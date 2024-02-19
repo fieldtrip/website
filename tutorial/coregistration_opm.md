@@ -63,12 +63,13 @@ The procedure for this consists of the following steps:
 
 - Read in the headshape and change the coordinate system, using **[ft_read_headshape](/reference/ft_read_headshape)** and **[ft_convert_coordsys](/reference/ft_convert_coordsys)**. For visualization we use **[ft_plot_headshape](/reference/ft_plot_headshape)** and **[ft_plot_axes](/reference/ft_plot_axes)**.
 - Identification of the reference points in the Polhemus measurement
+- Reading the template sensor positions using **[ft_read_sens](/reference/fileio/ft_read_sens)**
 - Calculation of the transformation parameters, using **[ft_electroderealign](/reference/ft_electroderealign)**.
-- Apply the transformation to the sensors, using **[ft_transform_geometry](/reference/ft_transform_geometry)**, and **[ft_plot_sens](/reference/ft_plot_sens)** for visualization.
+- Apply the transformation to the template sensors, using **[ft_transform_geometry](/reference/ft_transform_geometry)**, and **[ft_plot_sens](/reference/ft_plot_sens)** for visualization.
 
 ### Read the Polhemus file and impose a head-based coordinate system
 
-This specific Polhemus measurement has been obtained as a pilot at the DCCN with the reference sensor mounted on plastic security glasses. Since the security glasses were too bulky to fit under the MEG helmet, we secured them around the neck of the participant. A more appropriate procedure could have been implemented by using smaller security glasses that would fit under the OPM helmet, or by separating the reference sensor from the glasses and taping it straight onto the forehead of the participant.
+This specific Polhemus measurement has been obtained as a pilot at the DCCN with the reference sensor mounted on plastic safety glasses. Since the safety glasses were too bulky to fit under the MEG helmet, we secured them around the neck of the participant. A more appropriate procedure could have been implemented by using smaller safety glasses that would fit under the OPM helmet, or by separating the reference sensor from the glasses and taping it straight onto the forehead of the participant.
 
 The Polhemus recording was done using the CTF software. The software requires the experimenter to click the left ear, the right ear, and the nasion. It then expresses all subsequent points according to the CTF convention for the definition of the X/Y/Z axes of the coordinate system, which is anterior-left-superior (ALS).
 
@@ -132,9 +133,9 @@ We can explicitly add the fiducials to the data structure that describes the hea
 
     headshape.fid = fid_measured
 
-We also have the definition of the OPM sensor locations with the corresponding set of reference points for the FieldLine beta 2 helmet. The **[ft_plot_sens](/reference/ft_plot_sens)** function will also plot the reference points or fiducials.
+We also have the template specification of the OPM sensor locations with the corresponding set of reference points for the FieldLine beta 2 helmet. The **[ft_plot_sens](/reference/ft_plot_sens)** function will also plot the reference points or fiducials.
 
-    load fieldlinebeta2;
+    fieldlinebeta2 = ft_read_sens('fieldlinebeta2.mat');
     fieldlinebeta2 = ft_convert_units(fieldlinebeta2, 'mm');
     fid_helmet     = fieldlinebeta2.fid;
 
