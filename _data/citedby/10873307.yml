@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '38365955'
+- idtype: doi
+  value: 10.1038/s42003-024-05825-2
+- idtype: pmcid
+  value: PMC10873307
+authors:
+- authtype: Author
+  name: Navarrete M
+- authtype: Author
+  name: Greco V
+- authtype: Author
+  name: Rakowska M
+- authtype: Author
+  name: Bellesi M
+- authtype: Author
+  name: Lewis PA
+epubdate: 2024 Feb 16
+fulljournalname: Communications Biology
+issue: ''
+pages: '193'
+pmclivedate: 2024/02/17
+printpubdate: ''
+pubdate: 2024 Feb 16
+sortdate: 2024/02/16 00:00
+source: Commun Biol
+title: Auditory stimulation during REM sleep modulates REM electrophysiology and cognitive
+  performance
+uid: '10873307'
+volume: '7'

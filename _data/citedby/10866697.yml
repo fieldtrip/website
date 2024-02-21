@@ -1,0 +1,52 @@
+articleids:
+- idtype: pmid
+  value: '38297120'
+- idtype: doi
+  value: 10.1038/s41586-023-06982-w
+- idtype: pmcid
+  value: PMC10866697
+authors:
+- authtype: Author
+  name: Khanna AR
+- authtype: Author
+  name: Muñoz W
+- authtype: Author
+  name: Kim YJ
+- authtype: Author
+  name: Kfir Y
+- authtype: Author
+  name: Paulk AC
+- authtype: Author
+  name: Jamali M
+- authtype: Author
+  name: Cai J
+- authtype: Author
+  name: Mustroph ML
+- authtype: Author
+  name: Caprara I
+- authtype: Author
+  name: Hardstone R
+- authtype: Author
+  name: Mejdell M
+- authtype: Author
+  name: Meszéna D
+- authtype: Author
+  name: Zuckerman A
+- authtype: Author
+  name: Schweitzer J
+- authtype: Author
+  name: Cash S
+- authtype: Author
+  name: Williams ZM
+epubdate: 2024 Jan 31
+fulljournalname: Nature
+issue: '7999'
+pages: 603-610
+pmclivedate: 2024/02/16
+printpubdate: '2024'
+pubdate: 2024 Jan 31
+sortdate: 2024/01/31 00:00
+source: Nature
+title: Single-neuronal elements of speech production in humans
+uid: '10866697'
+volume: '626'

@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '38370436'
+- idtype: doi
+  value: 10.3389/fnins.2024.1295615
+- idtype: pmcid
+  value: PMC10869546
+authors:
+- authtype: Author
+  name: D’Andrea A
+- authtype: Author
+  name: Croce P
+- authtype: Author
+  name: O’Byrne J
+- authtype: Author
+  name: Jerbi K
+- authtype: Author
+  name: Pascarella A
+- authtype: Author
+  name: Raffone A
+- authtype: Author
+  name: Pizzella V
+- authtype: Author
+  name: Marzetti L
+epubdate: 2024 Feb 2
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '1295615'
+pmclivedate: 2024/02/16
+printpubdate: ''
+pubdate: 2024 Feb 2
+sortdate: 2024/02/02 00:00
+source: Front Neurosci
+title: Mindfulness meditation styles differently modulate source-level MEG microstate
+  dynamics and complexity
+uid: '10869546'
+volume: '18'
