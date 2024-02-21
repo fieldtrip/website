@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '38092900'
+- idtype: doi
+  value: 10.1007/s00221-023-06751-1
+- idtype: pmcid
+  value: PMC10872341
+- idtype: MID
+  value: NIHMS1952921
+authors:
+- authtype: Author
+  name: Riehm CD
+- authtype: Author
+  name: Bonnette S
+- authtype: Author
+  name: Rush JL
+- authtype: Author
+  name: Diekfuss JA
+- authtype: Author
+  name: Koohestani M
+- authtype: Author
+  name: Myer GD
+- authtype: Author
+  name: Norte GE
+- authtype: Author
+  name: Sherman DA
+epubdate: 2023 Dec 13
+fulljournalname: Experimental brain research
+issue: '2'
+pages: 355-365
+pmclivedate: ''
+printpubdate: 2024 Feb
+pubdate: 2023 Dec 13
+sortdate: 2023/12/13 00:00
+source: Exp Brain Res
+title: Corticomuscular cross-recurrence analysis reveals between-limb differences
+  in motor control among individuals with ACL reconstruction
+uid: '10872341'
+volume: '242'

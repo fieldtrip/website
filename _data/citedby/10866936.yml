@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '38355712'
+- idtype: doi
+  value: 10.1038/s41598-024-54298-0
+- idtype: pmcid
+  value: PMC10866936
+authors:
+- authtype: Author
+  name: Esmailpour H
+- authtype: Author
+  name: Vogels R
+epubdate: 2024 Feb 14
+fulljournalname: Scientific Reports
+issue: ''
+pages: '3757'
+pmclivedate: 2024/02/15
+printpubdate: ''
+pubdate: 2024 Feb 14
+sortdate: 2024/02/14 00:00
+source: Sci Rep
+title: Location-specific deviant responses to object sequences in macaque inferior
+  temporal cortex
+uid: '10866936'
+volume: '14'

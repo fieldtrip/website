@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '38242691'
+- idtype: doi
+  value: 10.1523/ENEURO.0163-23.2023
+- idtype: pmcid
+  value: PMC10867721
+authors:
+- authtype: Author
+  name: Nie JZ
+- authtype: Author
+  name: Flint RD
+- authtype: Author
+  name: Prakash P
+- authtype: Author
+  name: Hsieh JK
+- authtype: Author
+  name: Mugler EM
+- authtype: Author
+  name: Tate MC
+- authtype: Author
+  name: Rosenow JM
+- authtype: Author
+  name: Slutzky MW
+epubdate: 2024 Feb 9
+fulljournalname: eNeuro
+issue: '2'
+pages: ENEURO.0163-23.2023
+pmclivedate: 2024/02/15
+printpubdate: ''
+pubdate: 2024 Feb 9
+sortdate: 2024/02/09 00:00
+source: eNeuro
+title: High-Gamma Activity Is Coupled to Low-Gamma Oscillations in Precentral Cortices
+  and Modulates with Movement and Speech
+uid: '10867721'
+volume: '11'
