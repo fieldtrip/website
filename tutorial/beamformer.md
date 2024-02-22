@@ -42,7 +42,7 @@ To localize the oscillatory sources for the example dataset we will perform the 
 
 ## Preprocessing
 
-The aim is to identify the sources of oscillatory activity in the beta band. From the section time-frequency analysis we have identified 18 Hz as the center frequency for which the power estimates should be calculated. We seek to compare the activation in the post-stimulus to the activation in the pre-stimulus interval. We first use **[ft_preprocessing](/reference/ft_preprocessing)** and **[ft_selectdata](/reference/ft_selectdata)** to extract relevant data. It is important that the length of each data piece matches an integer number of oscillatory cycles. Here 9 cycles are used resulting in a 9/18 Hz = 0.5 s time window. Thus, the post-stimulus time-window range between 0.8 to 1.3 s and the pre-stimulus interval between -0.5 to 0.0 s (see Figure 1).
+The aim is to identify the sources of oscillatory activity in the beta band. From the section time-frequency analysis we have identified 18 Hz as the center frequency for which the power estimates should be calculated. We seek to compare the activation in the post-stimulus to the activation in the pre-stimulus interval. We first use **[ft_preprocessing](/reference/ft_preprocessing)** and **[ft_selectdata](/reference/utilities/ft_selectdata)** to extract relevant data. It is important that the length of each data piece matches an integer number of oscillatory cycles. Here 9 cycles are used resulting in a 9/18 Hz = 0.5 s time window. Thus, the post-stimulus time-window range between 0.8 to 1.3 s and the pre-stimulus interval between -0.5 to 0.0 s (see Figure 1).
 
 {% include image src="/assets/img/tutorial/beamformer/figure2.png" width="700" %}
 
@@ -57,7 +57,7 @@ _Figure 1: The time-frequency presentation used to determine the time- and frequ
 ### Select conditions and time windows of interest
 
 We have identified the beta band effect on trials belonging to the fully incongruent condition (FIC, coded with a trigger value of 3). We will therefore now select all trials belonging to this condition based on the trigger information, which is preserved in the trialinfo field during the call to ft_preprocessing.
-Further we need to 'cut' out the time windows of interest: the pre- and post stimulus windows. We will do the selection of trials and time windows in one call to **[ft_selectdata](/reference/ft_selectdata)**:
+Further we need to 'cut' out the time windows of interest: the pre- and post stimulus windows. We will do the selection of trials and time windows in one call to **[ft_selectdata](/reference/utilities/ft_selectdata)**:
 
     cfg = [];
     cfg.trials  = data_all.trialinfo == 3;
