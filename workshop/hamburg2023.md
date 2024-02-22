@@ -1,3 +1,7 @@
+---
+title: FieldTrip workshop in Hamburg in 2023
+---
+
 # FieldTrip workshop in Hamburg 2023
 
 The research training group [Emotional Learning and Memory](https://www.grk2753.uni-hamburg.de/) GRK/RTG 2753 organizes a FieldTrip workshop at the University of Hamburg, Germany.
@@ -60,21 +64,21 @@ Tzvetan Popov with local organizers.
 
 ## Getting started with the hands-on sessions
 
-For the hands-on sessions you have to start MATLAB. Make sure you 
-have downloaded the hands-on data prior to the start of the workshop as 
-it is quite a large download. A recent version of FieldTrip can be 
-downloaded [here](https://www.fieldtriptoolbox.org/download/), and the 
+For the hands-on sessions you have to start MATLAB. Make sure you
+have downloaded the hands-on data prior to the start of the workshop as
+it is quite a large download. A recent version of FieldTrip can be
+downloaded [here](https://www.fieldtriptoolbox.org/download/), and the
 tutorial data can be downloaded here.
 
-Depending on the unzip program you are using (e.g., Winrar), the 
-name of the zip file might also appear as directory, resulting in 
-path_to_directory/fieldtrip-xxxxxxxx/fieldtrip-xxxxxxxx, i.e. the 
-FieldTrip directory in a FieldTrip directory. Please fix that by moving 
+Depending on the unzip program you are using (e.g., Winrar), the
+name of the zip file might also appear as directory, resulting in
+path_to_directory/fieldtrip-xxxxxxxx/fieldtrip-xxxxxxxx, i.e. the
+FieldTrip directory in a FieldTrip directory. Please fix that by moving
 all files one level up.
 
-After copying all files to your computer and unzipping then, you 
+After copying all files to your computer and unzipping then, you
 start MATLAB. To ensure that the right version of FieldTrip is used, and
- not another version (such as the one included in SPM or EEGLAB), you 
+ not another version (such as the one included in SPM or EEGLAB), you
 type in the MATLAB command window
 
 ```matlab
@@ -84,9 +88,9 @@ addpath(pwd)
 ft_defaults
 ```
 
-Please do NOT use the graphical path management tool from MATLAB. 
-In this hands-on session we’ll manage the path from the command line, 
-but in general you are much better off using a startup.m file than the 
+Please do NOT use the graphical path management tool from MATLAB.
+In this hands-on session we’ll manage the path from the command line,
+but in general you are much better off using a startup.m file than the
 path GUI.
 
 Please do NOT add FieldTrip with all subdirectories, subdirectories
@@ -98,7 +102,7 @@ present working directory, i.e. the directory containing the fieldtrip
 main functions. The `ft_defaults` command ensures that all required
 subdirectories are added to the path.
 
-If you get the error “can’t find the command ft_defaults” you should 
+If you get the error “can’t find the command ft_defaults” you should
 check the present working directory.
 
 After installing FieldTrip to your path, you change into the data directory
