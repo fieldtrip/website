@@ -28,7 +28,7 @@ We use <https://shields.io> to generate badges for the DOIs, PMIDs and PMCIDs.
 
 ## YouTube
 
-We use a YouTube [video channel](https://www.youtube.com/fieldtriptoolbox) that contains video recordings of lectures. More details are [here](/video) and [here](/development/guideline/video).
+We use a YouTube [video channel](https://www.youtube.com/fieldtriptoolbox) that contains video recordings of lectures. The videos are embedded in some tutorial pages and [listed as an overview](/video) on their own page.
 
 ## GitHub
 

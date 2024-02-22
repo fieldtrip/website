@@ -1,4 +1,4 @@
-The EEG/MEG signals measured on or around the scalp do not directly reflect the activated neurons in the brain. To reconstruct the actual activity in the brain, source reconstruction techniques are used. You can read more about the different methods in the review papers that are listed [here](references_to_review_papers_and_teaching_material/#source-estimation).
+The EEG/MEG signals measured on or around the scalp do not directly reflect the activated neurons in the brain. To reconstruct the actual activity in the brain, source reconstruction techniques are used. You can read more about the different methods in the review papers that are listed [here](/references_to_review_papers_and_teaching_material/#source-estimation).
 
 The activity in the brain is estimated from the EEG or MEG signals using
 

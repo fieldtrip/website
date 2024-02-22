@@ -73,9 +73,9 @@ More background information about this test and others that are named `test_bugX
 
 When you modify or remove pre-existing code, you should find the necessary [test scripts](https://github.com/fieldtrip/fieldtrip/tree/master/test) and run them on your local computer. Note that these test scripts are also included in your own `fieldtrip/test` directory.
 
-For example, let's say you made a modification to the **[ft_preprocessing](/ft_preprocessing)** function. You first need to see if the corresponding test for **[ft_preprocessing](/ft_preprocessing)** exists. These tests are always starting with `test_ft_xxx` where `ft_xxx` is the function being tested. In our case **[test_ft_preprocessing](/test/test_ft_preprocessing)** exists. So, we need to run this test first.
+For example, let's say you made a modification to the **[ft_preprocessing](/reference/ft_preprocessing)** function. You first need to see if the corresponding test for **[ft_preprocessing](/reference/ft_preprocessing)** exists. These tests are always starting with `test_ft_xxx` where `ft_xxx` is the function being tested. In our case **[test_ft_preprocessing](/reference/test/test_ft_preprocessing)** exists. So, we need to run this test first.
 
- If **[test_ft_preprocessing](/test/test_ft_preprocessing)** did not exist or if you want to do a more detailed testing, you can list all test scripts together with their list of requirements and dependencies in a [MATLAB table](https://nl.mathworks.com/help/matlab/ref/table.html):
+ If **[test_ft_preprocessing](/reference/test/test_ft_preprocessing)** did not exist or if you want to do a more detailed testing, you can list all test scripts together with their list of requirements and dependencies in a [MATLAB table](https://nl.mathworks.com/help/matlab/ref/table.html):
 
     % find your copy of FieldTrip
     [ftver, ftpath] = ft_version;
@@ -207,5 +207,5 @@ Private test data is stored in the directory `/home/common/matlab/fieldtrip/data
 Public test data is stored in the directory `/home/common/matlab/fieldtrip/data/ftp`, which on the Donders Windows desktops is available on `H:\common\matlab\fieldtrip\data\ftp`. This data is also available from the [download server](https://download.fieldtriptoolbox.org/).
 
 {% include markup/info %}
-Note that test scripts that depend on public data or that do not require any data can be executed by everyone. If needed, the **[dccnpath](/utilities/dccnpath)** function will download the public data automatically.
+Note that test scripts that depend on public data or that do not require any data can be executed by everyone. If needed, the **[dccnpath](/reference/utilities/dccnpath)** function will download the public data automatically.
 {% include markup/end %}
