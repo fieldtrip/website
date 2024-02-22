@@ -61,11 +61,11 @@ The following example is based on a Polhemus recording, which - besides a measur
 
 The procedure for this consists of the following steps:
 
-- Read in the headshape and change the coordinate system, using **[ft_read_headshape](/reference/ft_read_headshape)** and **[ft_convert_coordsys](/reference/ft_convert_coordsys)**. For visualization we use **[ft_plot_headshape](/reference/ft_plot_headshape)** and **[ft_plot_axes](/reference/ft_plot_axes)**.
+- Read in the headshape and change the coordinate system, using **[ft_read_headshape](/reference/fileio/ft_read_headshape)** and **[ft_convert_coordsys](/reference/utilities/ft_convert_coordsys)**. For visualization we use **[ft_plot_headshape](/reference/plotting/ft_plot_headshape)** and **[ft_plot_axes](/reference/plotting/ft_plot_axes)**.
 - Identification of the reference points in the Polhemus measurement
 - Reading the template sensor positions using **[ft_read_sens](/reference/fileio/ft_read_sens)**
 - Calculation of the transformation parameters, using **[ft_electroderealign](/reference/ft_electroderealign)**.
-- Apply the transformation to the template sensors, using **[ft_transform_geometry](/reference/ft_transform_geometry)**, and **[ft_plot_sens](/reference/ft_plot_sens)** for visualization.
+- Apply the transformation to the template sensors, using **[ft_transform_geometry](/reference/utility/ft_transform_geometry)**, and **[ft_plot_sens](/reference/plotting/ft_plot_sens)** for visualization.
 
 ### Read the Polhemus file and impose a head-based coordinate system
 
@@ -133,7 +133,7 @@ We can explicitly add the fiducials to the data structure that describes the hea
 
     headshape.fid = fid_measured
 
-We also have the template specification of the OPM sensor locations with the corresponding set of reference points for the FieldLine beta 2 helmet. The **[ft_plot_sens](/reference/ft_plot_sens)** function will also plot the reference points or fiducials.
+We also have the template specification of the OPM sensor locations with the corresponding set of reference points for the FieldLine beta 2 helmet. The **[ft_plot_sens](/reference/plotting/ft_plot_sens)** function will also plot the reference points or fiducials.
 
     fieldlinebeta2 = ft_read_sens('fieldlinebeta2.mat');
     fieldlinebeta2 = ft_convert_units(fieldlinebeta2, 'mm');
@@ -208,11 +208,11 @@ We will analyze a ~1 minute segment of data during which the 3 HPI coils were en
 
 The procedure for this consists of the following steps:
 
-- To evaluate the MEG signal and the spectrum, we start off with **[ft_preprocessing](/reference/ft_preprocessing)**, **[ft_databrowser](/reference/ft_databrowser)**, **[ft_selectdata](/reference/ft_selectdata)** and **[ft_freqanalysis](/reference/ft_freqanalysis)**.
+- To evaluate the MEG signal and the spectrum, we start off with **[ft_preprocessing](/reference/ft_preprocessing)**, **[ft_databrowser](/reference/ft_databrowser)**, **[ft_selectdata](/reference/utilities/ft_selectdata)** and **[ft_freqanalysis](/reference/ft_freqanalysis)**.
 - Processing of the data to get the contribution of each individual HPI coil, using **[ft_preprocessing](/reference/ft_preprocessing)**, .
-- Fitting of dipoles to the topographies of the first principal components of the bandpass filtered data, using **[ft_componentanalysis](/reference/ft_componentanalysis)**, and **[ft_dipolefitting](/reference/ft_dipolefitting)**. For visualization of the spatial topographies, we use **[ft_topoplotIC](/reference/ft_topoplotic)**, and for the dipole fit we start with a grid search, and we use **[ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)** to create the search grid.  
-- Calculation of the transformation matrix that moves the sensors to the head-based coordinate system, using **[ft_headcoordinates](/reference/ft_headcoordinates)**.
-- Apply the transformation matrix to the sensors, using **[ft_transform_geometry](/reference/ft_transform_geometry)**.
+- Fitting of dipoles to the topographies of the first principal components of the bandpass filtered data, using **[ft_componentanalysis](/reference/ft_componentanalysis)**, and **[ft_dipolefitting](/reference/ft_dipolefitting)**. For visualization of the spatial topographies, we use **[ft_topoplotIC](/reference/ft_topoplotIC)**, and for the dipole fit we start with a grid search, and we use **[ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)** to create the search grid.  
+- Calculation of the transformation matrix that moves the sensors to the head-based coordinate system, using **[ft_headcoordinates](/reference/utilities/ft_headcoordinates)**.
+- Apply the transformation matrix to the sensors, using **[ft_transform_geometry](/reference/utilities/ft_transform_geometry)**.
 
 ### Processing of the data to capture the signal of the HPI coils
 
@@ -235,7 +235,7 @@ You can recognize four blocks of about 60 seconds each, followed by a final bloc
 There are two channels which have the wrong position/orientation information in the specific example data used here. We won't elaborate on it but simply remove those channels from further processing.
 {% include markup/end %}
 
-We cut out the relevant time segment using **[ft_selectdata](/reference/ft_selectdata)**. After this step the data is exactly 300000 samples long (60 seconds times 5000 samples/second).
+We cut out the relevant time segment using **[ft_selectdata](/reference/utilities/ft_selectdata)**. After this step the data is exactly 300000 samples long (60 seconds times 5000 samples/second).
 
     % this is the time of a single sample
     tsample = 1./data_all.fsample
@@ -403,12 +403,12 @@ The idea here is to make a sufficiently high quality 3D-model that captures the 
 
 The procedure for this consists of the following steps:
 
-- Read the anatomical MRI, and assign a head-based coordinate system, using **[ft_read_mri](/reference/ft_read_mri)**, and **[ft_volumerealign](/reference/ft_volumerealign)**.
+- Read the anatomical MRI, and assign a head-based coordinate system, using **[ft_read_mri](/reference/fileio/ft_read_mri)**, and **[ft_volumerealign](/reference/ft_volumerealign)**.
 - Read in the 3D model, assign a meaningful coordinate system, and erase the irrelevant parts, using **[ft_read_headshape](/reference/ft_read_headshape)**, **[ft_meshrealign](/reference/ft_meshrealign)**, and **[ft_defacemesh](/reference/ft_defacemesh)**.
 - Interactive alignment of the face - extracted from the 3D model -  with the MRI-extracted scalp surface, using **[ft_volumesegment](/reference/ft_volumesegment)**, **[ft_prepare_mesh](/reference/ft_prepare_mesh)**, and **[ft_meshrealign](/reference/ft_meshrealign)**.
 - Interactive alignment of the helmet with the reference sensors/helmet, using **[ft_meshrealign](/reference/ft_meshrealign)**.
 - Combination of the obtained alignment parameters into a single transformation matrix
-- Application of the resulting transformation to the sensor array, using **[ft_transform_geometry](/reference/ft_transform_geometry)**.
+- Application of the resulting transformation to the sensor array, using **[ft_transform_geometry](/reference/utility/ft_transform_geometry)**.
 
 ### Definition of the head-based coordinate system
 

@@ -42,7 +42,7 @@ Alternatively you can use the [batch](https://www.mathworks.com/help/distcomp/ba
 
     data = batch(@ft_preprocessing, 3, cfg);
 
-The batch function works similar to the standard MATLAB cellfun function, and thereby to the FieldTrip **[qsubcellfun](/reference/qsub/qsubcellfun)** and **[peercellfun](/reference/peer/peercellfun)** functions.
+The batch function works similar to the standard MATLAB cellfun function, and thereby to the FieldTrip **[qsubcellfun](/reference/qsub/qsubcellfun)** function.
 
 A third approach that is available in the distributed computing toolbox is to use the [spmd](https://nl.mathworks.com/help/parallel-computing/spmd.html) construct. Given the same definition of the dataset as a cell-array with three strings as above, this would look like
 

@@ -342,7 +342,7 @@ Note that `1/data.fsample = 0.075`, i.e., with the 13.333 Hz sampling rate each 
 
 ## Segment the continuous data into trials
 
-To segment the data we have to create a so-called "trial definition". This would normally be done using **[ft_definetrial](/reference/ft_definetrials)** and using the events that were read from the data on disk (had it been a supported file format). The trial definition specifies the begin and end sample of each trial, and the offset, i.e., how many samples the time defined as t=0 is shifted relative to the data segment. Furthermore, it can contain additional columns with trial specific information, such as condition codes.
+To segment the data we have to create a so-called "trial definition". This would normally be done using **[ft_definetrial](/reference/ft_definetrial)** and using the events that were read from the data on disk (had it been a supported file format). The trial definition specifies the begin and end sample of each trial, and the offset, i.e., how many samples the time defined as t=0 is shifted relative to the data segment. Furthermore, it can contain additional columns with trial specific information, such as condition codes.
 
 The temporal structure of each trial is
 

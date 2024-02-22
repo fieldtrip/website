@@ -77,7 +77,7 @@ This shows that we have 9 channels (8 for the OPMs and one for the triggers), th
             chantype: {9x1 cell}
             chanunit: {9x1 cell}
 
-We can do the same for the events with the low-level **[ft_read_event](/reference/ft_read_event)** function:
+We can do the same for the events with the low-level **[ft_read_event](/reference/fileio/ft_read_event)** function:
 
     event = ft_read_event('MedianNerve_StimBreakStim2min_Pos1.fif');
 
