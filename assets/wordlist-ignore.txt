@@ -756,6 +756,7 @@ HD
 HDF
 HDR
 HED
+HEDscan
 HEOG
 HFC
 HFC
@@ -1074,6 +1075,7 @@ MCPE
 MCR
 MDl
 MEEG
+MEF
 MEGCoordinateSystem
 MEGIN
 MEGMAG
@@ -1776,6 +1778,7 @@ Smoller
 Sociedad
 Sofía
 Soldevilla
+Solidworks
 Sónia
 SourceForge
 Spaak
@@ -3781,6 +3784,7 @@ mdata
 medianfilter
 mediannerve
 mediante
+mef
 megconnectome
 megdata
 megin
@@ -4301,6 +4305,7 @@ placable
 placefield
 planarortho
 plexon
+plexiglass
 plotly
 plottrl
 plusminus
