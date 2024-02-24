@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '38352422'
+- idtype: doi
+  value: 10.1101/2024.01.28.577656
+- idtype: pmcid
+  value: PMC10862695
+authors:
+- authtype: Author
+  name: Tsunada J
+- authtype: Author
+  name: Eliades SJ
+epubdate: 2024 Jan 29
+fulljournalname: bioRxiv
+issue: ''
+pages: 2024.01.28.577656
+pmclivedate: 2024/02/14
+printpubdate: ''
+pubdate: 2024 Jan 29
+sortdate: 2024/01/29 00:00
+source: bioRxiv
+title: Frontal-Auditory Cortical Interactions and Sensory Prediction During Vocal
+  Production in Marmoset Monkeys
+uid: '10862695'
+volume: ''

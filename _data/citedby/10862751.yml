@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '38352585'
+- idtype: doi
+  value: 10.1101/2024.01.29.577843
+- idtype: pmcid
+  value: PMC10862751
+authors:
+- authtype: Author
+  name: Hoffman SJ
+- authtype: Author
+  name: Dotson NM
+- authtype: Author
+  name: Lima V
+- authtype: Author
+  name: Gray CM
+epubdate: 2024 Jan 30
+fulljournalname: bioRxiv
+issue: ''
+pages: 2024.01.29.577843
+pmclivedate: 2024/02/14
+printpubdate: ''
+pubdate: 2024 Jan 30
+sortdate: 2024/01/30 00:00
+source: bioRxiv
+title: The Primate Cortical LFP Exhibits Multiple Spectral and Temporal Gradients
+  and Widespread Task-Dependence During Visual Short-Term Memory
+uid: '10862751'
+volume: ''

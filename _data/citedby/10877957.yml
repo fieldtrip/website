@@ -1,0 +1,45 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1016/j.isci.2024.109130
+- idtype: pmcid
+  value: PMC10877957
+authors:
+- authtype: Author
+  name: Singh B
+- authtype: Author
+  name: Wang Z
+- authtype: Author
+  name: Madiah LM
+- authtype: Author
+  name: Gatti SE
+- authtype: Author
+  name: Fulton JN
+- authtype: Author
+  name: Johnson GW
+- authtype: Author
+  name: Li R
+- authtype: Author
+  name: Dawant BM
+- authtype: Author
+  name: Englot DJ
+- authtype: Author
+  name: Bick SK
+- authtype: Author
+  name: Roberson SW
+- authtype: Author
+  name: Constantinidis C
+epubdate: 2024 Feb 5
+fulljournalname: iScience
+issue: '3'
+pages: '109130'
+pmclivedate: 2024/02/20
+printpubdate: ''
+pubdate: 2024 Feb 5
+sortdate: 2024/02/05 00:00
+source: iScience
+title: Brain-wide human oscillatory local field potential activity during visual working
+  memory
+uid: '10877957'
+volume: '27'

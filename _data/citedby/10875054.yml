@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '38375447'
+- idtype: doi
+  value: 10.3389/fninf.2024.1338886
+- idtype: pmcid
+  value: PMC10875054
+authors:
+- authtype: Author
+  name: Dimulescu C
+- authtype: Author
+  name: Donle L
+- authtype: Author
+  name: Cakan C
+- authtype: Author
+  name: Goerttler T
+- authtype: Author
+  name: Khakimova L
+- authtype: Author
+  name: Ladenbauer J
+- authtype: Author
+  name: Flöel A
+- authtype: Author
+  name: Obermayer K
+epubdate: 2024 Feb 5
+fulljournalname: Frontiers in Neuroinformatics
+issue: ''
+pages: '1338886'
+pmclivedate: 2024/02/19
+printpubdate: ''
+pubdate: 2024 Feb 5
+sortdate: 2024/02/05 00:00
+source: Front Neuroinform
+title: Improving the detection of sleep slow oscillations in electroencephalographic
+  data
+uid: '10875054'
+volume: '18'
