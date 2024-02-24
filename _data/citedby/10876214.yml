@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '38334469'
+- idtype: doi
+  value: 10.7554/eLife.86386
+- idtype: pmcid
+  value: PMC10876214
+authors:
+- authtype: Author
+  name: Asko O
+- authtype: Author
+  name: Blenkmann AO
+- authtype: Author
+  name: Leske SL
+- authtype: Author
+  name: Foldal MD
+- authtype: Author
+  name: LLorens A
+- authtype: Author
+  name: Funderud I
+- authtype: Author
+  name: Meling TR
+- authtype: Author
+  name: Knight RT
+- authtype: Author
+  name: Endestad T
+- authtype: Author
+  name: Solbakk AK
+epubdate: 2024 Feb 9
+fulljournalname: eLife
+issue: ''
+pages: e86386
+pmclivedate: 2024/02/19
+printpubdate: ''
+pubdate: 2024 Feb 9
+sortdate: 2024/02/09 00:00
+source: eLife
+title: Altered hierarchical auditory predictive processing after lesions to the orbitofrontal
+  cortex
+uid: '10876214'
+volume: '13'
