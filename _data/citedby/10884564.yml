@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '38388423'
+- idtype: doi
+  value: 10.1523/ENEURO.0512-22.2023
+- idtype: pmcid
+  value: PMC10884564
+authors:
+- authtype: Author
+  name: Ding L
+- authtype: Author
+  name: Patel A
+- authtype: Author
+  name: Shankar S
+- authtype: Author
+  name: Driscoll N
+- authtype: Author
+  name: Zhou C
+- authtype: Author
+  name: Rex TS
+- authtype: Author
+  name: Vitale F
+- authtype: Author
+  name: Gallagher MJ
+epubdate: 2024 Feb 9
+fulljournalname: eNeuro
+issue: '2'
+pages: ENEURO.0512-22.2023
+pmclivedate: 2024/02/23
+printpubdate: ''
+pubdate: 2024 Feb 9
+sortdate: 2024/02/09 00:00
+source: eNeuro
+title: An Open-Source Mouse Chronic EEG Array System with High-Density MXene-Based
+  Skull Surface Electrodes
+uid: '10884564'
+volume: '11'

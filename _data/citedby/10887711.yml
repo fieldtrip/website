@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '38396447'
+- idtype: doi
+  value: 10.3390/diagnostics14040408
+- idtype: pmcid
+  value: PMC10887711
+authors:
+- authtype: Author
+  name: Siemann J
+- authtype: Author
+  name: Kroeger A
+- authtype: Author
+  name: Bender S
+- authtype: Author
+  name: Muthuraman M
+- authtype: Author
+  name: Siniatchkin M
+epubdate: 2024 Feb 13
+fulljournalname: Diagnostics
+issue: '4'
+pages: '408'
+pmclivedate: 2024/02/24
+printpubdate: ''
+pubdate: 2024 Feb 13
+sortdate: 2024/02/13 00:00
+source: Diagnostics (Basel)
+title: Segregated Dynamical Networks for Biological Motion Perception in the Mu and
+  Beta Range Underlie Social Deficits in Autism
+uid: '10887711'
+volume: '14'

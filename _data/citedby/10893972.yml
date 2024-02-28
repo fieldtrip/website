@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '38401134'
+- idtype: doi
+  value: 10.1002/hbm.26590
+- idtype: pmcid
+  value: PMC10893972
+authors:
+- authtype: Author
+  name: Weber S
+- authtype: Author
+  name: Christophel T
+- authtype: Author
+  name: Görgen K
+- authtype: Author
+  name: Soch J
+- authtype: Author
+  name: Haynes J
+epubdate: 2024 Feb 24
+fulljournalname: Human Brain Mapping
+issue: '3'
+pages: e26590
+pmclivedate: 2024/02/24
+printpubdate: ''
+pubdate: 2024 Feb 24
+sortdate: 2024/02/24 00:00
+source: Hum Brain Mapp
+title: Working memory signals in early visual cortex are present in weak and strong
+  imagers
+uid: '10893972'
+volume: '45'
