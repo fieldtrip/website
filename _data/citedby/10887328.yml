@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '38391747'
+- idtype: doi
+  value: 10.3390/brainsci14020173
+- idtype: pmcid
+  value: PMC10887328
+authors:
+- authtype: Author
+  name: Askari P
+- authtype: Author
+  name: Cardoso da Fonseca N
+- authtype: Author
+  name: Pruitt T
+- authtype: Author
+  name: Maldjian JA
+- authtype: Author
+  name: Alick-Lindstrom S
+- authtype: Author
+  name: Davenport EM
+epubdate: 2024 Feb 9
+fulljournalname: Brain Sciences
+issue: '2'
+pages: '173'
+pmclivedate: 2024/02/24
+printpubdate: ''
+pubdate: 2024 Feb 9
+sortdate: 2024/02/09 00:00
+source: Brain Sci
+title: Magnetoencephalography (MEG) Data Processing in Epilepsy Patients with Implanted
+  Responsive Neurostimulation (RNS) Devices
+uid: '10887328'
+volume: '14'

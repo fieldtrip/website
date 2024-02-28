@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '38389790'
+- idtype: doi
+  value: 10.3389/fnins.2024.1321001
+- idtype: pmcid
+  value: PMC10882627
+authors:
+- authtype: Author
+  name: Černý F
+- authtype: Author
+  name: Piorecká V
+- authtype: Author
+  name: Kliková M
+- authtype: Author
+  name: Kopřivová J
+- authtype: Author
+  name: Bušková J
+- authtype: Author
+  name: Piorecký M
+epubdate: 2024 Feb 8
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '1321001'
+pmclivedate: 2024/02/22
+printpubdate: ''
+pubdate: 2024 Feb 8
+sortdate: 2024/02/08 00:00
+source: Front Neurosci
+title: All-night spectral and microstate EEG analysis in patients with recurrent isolated
+  sleep paralysis
+uid: '10882627'
+volume: '18'

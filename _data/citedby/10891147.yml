@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '38396068'
+- idtype: doi
+  value: 10.1038/s42003-024-05895-2
+- idtype: pmcid
+  value: PMC10891147
+authors:
+- authtype: Author
+  name: Pelentritou A
+- authtype: Author
+  name: Pfeiffer C
+- authtype: Author
+  name: Schwartz S
+- authtype: Author
+  name: De Lucia M
+epubdate: 2024 Feb 23
+fulljournalname: Communications Biology
+issue: ''
+pages: '226'
+pmclivedate: 2024/02/24
+printpubdate: ''
+pubdate: 2024 Feb 23
+sortdate: 2024/02/23 00:00
+source: Commun Biol
+title: Cardio-audio synchronization elicits neural and cardiac surprise responses
+  in human wakefulness and sleep
+uid: '10891147'
+volume: '7'

@@ -1,0 +1,40 @@
+articleids:
+- idtype: pmid
+  value: '38402188'
+- idtype: doi
+  value: 10.1038/s41467-024-45898-5
+- idtype: pmcid
+  value: PMC10894208
+authors:
+- authtype: Author
+  name: Wischnewski M
+- authtype: Author
+  name: Tran H
+- authtype: Author
+  name: Zhao Z
+- authtype: Author
+  name: Shirinpour S
+- authtype: Author
+  name: Haigh ZJ
+- authtype: Author
+  name: Rotteveel J
+- authtype: Author
+  name: Perera ND
+- authtype: Author
+  name: Alekseichuk I
+- authtype: Author
+  name: Zimmermann J
+- authtype: Author
+  name: Opitz A
+epubdate: 2024 Feb 24
+fulljournalname: Nature Communications
+issue: ''
+pages: '1687'
+pmclivedate: 2024/02/25
+printpubdate: ''
+pubdate: 2024 Feb 24
+sortdate: 2024/02/24 00:00
+source: Nat Commun
+title: Induced neural phase precession through exogenous electric fields
+uid: '10894208'
+volume: '15'

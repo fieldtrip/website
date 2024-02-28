@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '38272676'
+- idtype: doi
+  value: 10.1523/ENEURO.0351-23.2023
+- idtype: pmcid
+  value: PMC10884563
+authors:
+- authtype: Author
+  name: Bueno FD
+- authtype: Author
+  name: Nobre AC
+- authtype: Author
+  name: Cravo AM
+epubdate: 2024 Feb 21
+fulljournalname: eNeuro
+issue: '2'
+pages: ENEURO.0351-23.2023
+pmclivedate: 2024/02/23
+printpubdate: ''
+pubdate: 2024 Feb 21
+sortdate: 2024/02/21 00:00
+source: eNeuro
+title: Time for What? Dissociating Explicit Timing Tasks through Electrophysiological
+  Signatures
+uid: '10884563'
+volume: '11'

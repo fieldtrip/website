@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '36939988'
+- idtype: doi
+  value: 10.1007/s10548-023-00952-1
+- idtype: pmcid
+  value: PMC10884069
+authors:
+- authtype: Author
+  name: Mikutta CA
+- authtype: Author
+  name: Knight RT
+- authtype: Author
+  name: Sammler D
+- authtype: Author
+  name: Müller TJ
+- authtype: Author
+  name: Koenig T
+epubdate: 2023 Mar 20
+fulljournalname: Brain Topography
+issue: '2'
+pages: 287-295
+pmclivedate: 2024/02/24
+printpubdate: '2024'
+pubdate: 2023 Mar 20
+sortdate: 2023/03/20 00:00
+source: Brain Topogr
+title: Electrocorticographic Activation Patterns of Electroencephalographic Microstates
+uid: '10884069'
+volume: '37'

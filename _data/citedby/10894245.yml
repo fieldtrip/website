@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '38402231'
+- idtype: doi
+  value: 10.1038/s41398-024-02738-w
+- idtype: pmcid
+  value: PMC10894245
+authors:
+- authtype: Author
+  name: Sumner RL
+- authtype: Author
+  name: McMillan RL
+- authtype: Author
+  name: Forsyth A
+- authtype: Author
+  name: Muthukumaraswamy SD
+- authtype: Author
+  name: Shaw AD
+epubdate: 2024 Feb 24
+fulljournalname: Translational Psychiatry
+issue: ''
+pages: '116'
+pmclivedate: 2024/02/25
+printpubdate: ''
+pubdate: 2024 Feb 24
+sortdate: 2024/02/24 00:00
+source: Transl Psychiatry
+title: Neurophysiological evidence that frontoparietal connectivity and GABA-A receptor
+  changes underpin the antidepressant response to ketamine
+uid: '10894245'
+volume: '14'
