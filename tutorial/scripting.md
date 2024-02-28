@@ -37,7 +37,7 @@ If you incrementally bidsify your data immediately following the recording of ea
 
 ## Separating subject-specific details from the code
 
-As stated before, by making our own scripts, we can in a later stage easily repeat them, e.g., over multiple subjects. It is common that every subject might have different and possibly slightly inconsistent filenames, different trials that have to be rejected, etc. A good idea, therefore, is to first **write all your subject-specific details in a separate m-file**. You can choose to have one m-file per subject, or one in which you combine all subjects. In the current example we will use the first option, and we specify these m-files to be a [function](https://www.mathworks.com/help/matlab/ref/function.html):
+As stated before, by making our own scripts, we can in a later stage easily repeat them, e.g., over multiple subjects. It is common that every subject might have different and possibly slightly inconsistent filenames, different trials that have to be rejected, etc. A good idea, therefore, is to first **write all your subject-specific details in a separate m-file**. You can choose to have a single m-file per subject, like `Subject01.m`, `Subject02.m`, etcetera , or one in which you combine all subjects. In the current example we will use the first option, and we specify these m-files to be a [function](https://www.mathworks.com/help/matlab/ref/function.html):
 
     function [subjectinfo] = Subject01
 
