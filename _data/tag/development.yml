@@ -1,3 +1,6 @@
+- name:  Development
+  link:  /development
+
 - name:  Toolbox architecture and organization of the source code
   link:  /development/architecture
 
@@ -30,9 +33,6 @@
 
 - name:  Reporting issues
   link:  /development/issues
-
-- name:  Development
-  link:  /development
 
 - name:  Meetings
   link:  /development/meeting

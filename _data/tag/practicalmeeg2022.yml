@@ -1,3 +1,6 @@
+- name:  PracticalMEEG workshop in Aix-en-Provence
+  link:  /workshop/practicalmeeg2022
+
 - name:  Multimodal faces dataset
   link:  /workshop/practicalmeeg2022/dataset
 
@@ -18,7 +21,4 @@
 
 - name:  Reconstructing source activity using beamformers
   link:  /workshop/practicalmeeg2022/handson_sourceanalysis
-
-- name:  PracticalMEEG workshop in Aix-en-Provence
-  link:  /workshop/practicalmeeg2022
 

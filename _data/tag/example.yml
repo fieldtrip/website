@@ -1,3 +1,6 @@
+- name:  Example MATLAB scripts
+  link:  /example
+
 - name:  Apply non-parametric statistics with clustering on TFRs of power that were computed with BESA
   link:  /example/apply_clusterrandanalysis_on_tfrs_of_power_that_were_computed_with_besa
 
@@ -52,14 +55,14 @@
 - name:  Common filters in beamforming
   link:  /example/common_filters_in_beamforming
 
+- name:  Compute forward simulated data using ft_dipolesimulation
+  link:  /example/compute_forward_simulated_data
+
 - name:  Compute forward simulated data and apply a beamformer scan
   link:  /example/compute_forward_simulated_data_and_apply_a_beamformer_scan
 
 - name:  Compute forward simulated data and apply a dipole fit
   link:  /example/compute_forward_simulated_data_and_apply_a_dipole_fit
-
-- name:  Compute forward simulated data using ft_dipolesimulation
-  link:  /example/compute_forward_simulated_data
 
 - name:  Compute forward simulated data with the low-level ft_compute_leadfield
   link:  /example/compute_leadfield
@@ -91,11 +94,11 @@
 - name:  Analysis of high-gamma band signals in human ECoG
   link:  /example/ecog_ny
 
-- name:  Computing and reporting the effect size
-  link:  /example/effectsize
-
 - name:  Effects of tapering for power estimates
   link:  /example/effects_of_tapering
+
+- name:  Computing and reporting the effect size
+  link:  /example/effectsize
 
 - name:  Align EEG electrode positions to BEM headmodel
   link:  /example/electrodes2bem
@@ -163,9 +166,6 @@
 - name:  Making your own trialfun for conditional trial definition
   link:  /example/making_your_own_trialfun_for_conditional_trial_definition
 
-- name:  Example MATLAB scripts
-  link:  /example
-
 - name:  Measuring the timing delay and jitter for a real-time application
   link:  /example/measuring_the_timing_delay_and_jitter_for_a_real-time_application
 
@@ -196,14 +196,14 @@
 - name:  Plotting the result of source reconstruction on a cortical mesh
   link:  /example/plotting_source_surface
 
+- name:  Making your analysis pipeline reproducible using reproducescript
+  link:  /example/reproducescript
+
 - name:  Using reproducescript on a full study
   link:  /example/reproducescript_andersen
 
 - name:  Using reproducescript for a group analysis
   link:  /example/reproducescript_group
-
-- name:  Making your analysis pipeline reproducible using reproducescript
-  link:  /example/reproducescript
 
 - name:  Re-reference EEG and iEEG data
   link:  /example/rereference
@@ -211,11 +211,11 @@
 - name:  Using simulations to estimate the sample size for cluster-based permutation test
   link:  /example/samplesize
 
-- name:  Create MNI-aligned grids in individual head-space
-  link:  /example/sourcemodel_aligned2mni
-
 - name:  Source statistics
   link:  /example/source_statistics
+
+- name:  Create MNI-aligned grids in individual head-space
+  link:  /example/sourcemodel_aligned2mni
 
 - name:  Analyze Steady-State Visual Evoked Potentials (SSVEPs)
   link:  /example/ssvep
