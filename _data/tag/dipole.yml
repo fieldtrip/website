@@ -1,11 +1,11 @@
-- name:  Compute forward simulated data using ft_dipolesimulation
-  link:  /example/compute_forward_simulated_data
-
 - name:  Compute forward simulated data and apply a beamformer scan
   link:  /example/compute_forward_simulated_data_and_apply_a_beamformer_scan
 
 - name:  Compute forward simulated data and apply a dipole fit
   link:  /example/compute_forward_simulated_data_and_apply_a_dipole_fit
+
+- name:  Compute forward simulated data using ft_dipolesimulation
+  link:  /example/compute_forward_simulated_data
 
 - name:  Compute forward simulated data with the low-level ft_compute_leadfield
   link:  /example/compute_leadfield

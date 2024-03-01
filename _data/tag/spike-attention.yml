@@ -1,9 +1,9 @@
 - name:  Which datasets are used in the documentation and where are they used?
   link:  /faq/datasets
 
-- name:  Preprocessing and analysis of spike-train data
-  link:  /tutorial/spike
-
 - name:  Preprocessing and analysis of spike and local field potential data
   link:  /tutorial/spikefield
+
+- name:  Preprocessing and analysis of spike-train data
+  link:  /tutorial/spike
 
