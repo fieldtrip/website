@@ -11,17 +11,17 @@ MNE-python is an interactive python toolbox for processing EEG, MEG and other el
 
 ## How does FieldTrip use MNE-python?
 
-FieldTrip relies on the m-files in fieldtrip/external/mne, which are copied over from the MNE-matlab toolbox, which is a companion repository to the MNE-python code on [github](https://github.com/mne-tools). FieldTrip data structures can be exported to fif-files, using the **[fieldtrip2fiff](/reference/fieldtrip2fiff)** function. Besides writing the time series into a fif-file, this function makes an attempt to also write some of the metadata in a format the MNE-python can work with. 
+FieldTrip relies on the m-files in fieldtrip/external/mne, which are copied over from the MNE-matlab toolbox, which is a companion repository to the MNE-python code on [github](https://github.com/mne-tools). FieldTrip data structures can be exported to fif-files, using the **[fieldtrip2fiff](/reference/fieldtrip2fiff)** function. Besides writing the time series into a fif-file, this function makes an attempt to also write some of the metadata in a format the MNE-python can work with.
 
 ## How does MNE-python use FieldTrip?
 
-MNE-python has functionality to extract channel time series from FieldTrip structures, by operating on matfiles that contain a supported data structure, **[Raw](https://mne.tools/stable/generated/mne.read_raw_fieldtrip.html)** data containing a single trial, **[Epoched](https://mne.tools/stable/generated/mne.read_epochs_fieldtrip.html)** data containing multiple trials, or **[Evoked](https://mne.tools/stable/generated/mne.read_evoked_fieldtrip.html)** data. This functionality does not allow for the extraction of the relevant metadata from the FieldTrip structures, such as channel position information or events. In many occasions, using this route to import data from FieldTrip, access to the original dataset's header information would be needed (or some metadata needs to be creatively hand-crafted). 
+MNE-python has functionality to extract channel time series from FieldTrip structures, by operating on matfiles that contain a supported data structure, **[Raw](https://mne.tools/stable/generated/mne.read_raw_fieldtrip.html)** data containing a single trial, **[Epoched](https://mne.tools/stable/generated/mne.read_epochs_fieldtrip.html)** data containing multiple trials, or **[Evoked](https://mne.tools/stable/generated/mne.read_evoked_fieldtrip.html)** data. This functionality does not allow for the extraction of the relevant metadata from the FieldTrip structures, such as channel position information or events. In many occasions, using this route to import data from FieldTrip, access to the original dataset's header information would be needed (or some metadata needs to be creatively hand-crafted).
 
 ## Complementary use of both toolboxes
 
-Both toolboxes share a lot of functionality with respect to time series processing and forward/inverse modelling. FieldTrip's historical perspective is based on CTF MEG data, advanced spectral analysis and beamformers for source reconstruction. MNE-python's historical perspective is based in Elekta/neuromag MEG data, evoked-field analysis, and minimum norm estimation for source reconstruction. These days, however, both toolboxes have moved ahead substantially. 
+Both toolboxes share a lot of functionality with respect to time series processing and forward/inverse modelling. FieldTrip's historical perspective is based on CTF MEG data, advanced spectral analysis and beamformers for source reconstruction. MNE-python's historical perspective is based in Elekta/neuromag MEG data, evoked-field analysis, and minimum norm estimation for source reconstruction. These days, however, both toolboxes have moved ahead substantially.
 
-## Practical issues 
+## Practical issues
 
 FieldTrip and MNE-Python have conceptually similar but not identical processing pipelines and data representations. A common pipeline in FieldTrip is to create trials by reading the data directly from disk (in order to have a **[ft_datatype_raw](/reference/utilities/ft_datatype_raw)**) and then use this preprocessed data to create ERP (**[ft_datatype_timelock](/reference/utilities/ft_datatype_timelock)**). In MNE-Python, the whole continuous recording is imported (with the **[Raw](https://mne.tools/stable/generated/mne.read_raw_fieldtrip.html)** class), then trials are extracted with the **[Epoched](https://mne.tools/stable/generated/mne.read_epochs_fieldtrip.html)** class and finally trials are averaged into the **[Evoked](https://mne.tools/stable/generated/mne.read_evoked_fieldtrip.html)** class. The below table shows the correspondence between datatypes in the two packages
 
@@ -35,9 +35,9 @@ In order to import data from MNE-python into FieldTrip, it is most straightforwa
 
 Below are some practical examples that demonstrate how to export FieldTrip data to a fif-file. For this we use the example data of [dataset 10](/faq/datasets#meg-tactile_dipole_fitting). If you want to try this out yourself, please download [SubjectBraille.zip](https://download.fieldtriptoolbox.org/tutorial/SubjectBraille.zip) and extract the `.ds` folder in a convenient location.
 
-### example: export raw - single trial - data structure 
+### example: export raw - single trial - data structure
 
-As a first example, we read the data as a continuous chunk. Note that the example dataset used has actually been acquired in 'trial'-mode, which means that it consists of discontinuous segments of data. 
+As a first example, we read the data as a continuous chunk. Note that the example dataset used has actually been acquired in 'trial'-mode, which means that it consists of discontinuous segments of data.
 
 	datadir = <path-to-data>;
 	dataset = fullfile(datadir, 'SubjectBraille.ds');
@@ -58,7 +58,7 @@ We can now export the data to a fiff file, pretending as if it's raw data. Note 
 	fieldtrip2fiff(fiff_file, data, 'headshape', hs);
 	save(fullfile(datadir, 'ctf-raw.mat'), 'data'); % for comparison
 
-Including the headshape information as an extra input argument will result in the fif-file to also contain the information about the location of the HPI-coils. This might be relevant for a smooth experience in MNE-python, e.g. if one wishes to apply tSSS to the data.
+Including the headshape information as an extra input argument will result in the fif-file to also contain the information about the location of the HPI-coils. This might be relevant for a smooth experience in MNE-python, e.g., if one wishes to apply tSSS to the data.
 
 Also, **[fieldtrip2fiff](/reference/fieldtrip2fiff)** will attempt to create an event file (provided the data object has an event structure buried somewhere in the processing history, called `'ctf_raw-eve.fif'`. The events will be represented as numbers, in a Nx3 matrix, where the first column contains the sample index of the event, and the third column contains the value. As of April 2023, also an interpretative comment will be saved in the event file, that allows to map the numbered events in the event file back onto the FieldTrip-style event representation.  
 
@@ -91,4 +91,3 @@ Timelocked data can be exported to an **Evoked** object representation:
 	fieldtrip2fiff(fiff_file, avg);
 	save(fullfile(datadir, 'ctf-ave.mat'), 'avg');
 	
-

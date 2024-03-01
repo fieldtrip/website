@@ -273,7 +273,7 @@ To do the same analysis as above, but in parallel over the subjects, all we have
 {% include markup/info %}
 -   Add SubjectSEF.ds in the middle of the list of `allsubj_dataset`. What happens when running the script? What results are available inside the `allsubj_result` variable?
 - Remove the line near the top that states `allsubj_result = cell(1, nsubj)` and change the last non-comment line within the loop to read `allsubj_result{end+1} = avgFICplanarComb`. What happens when running the script?
--   After the comment line `% HERE you could save intermediate results to file`, add the code to save the intermediate result to disk, e.g. `save('avgFIC.mat', 'avgFIC')`. What happens when running the script?
+-   After the comment line `% HERE you could save intermediate results to file`, add the code to save the intermediate result to disk, e.g., `save('avgFIC.mat', 'avgFIC')`. What happens when running the script?
 {% include markup/end %}
 
     nsubj = 4;

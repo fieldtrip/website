@@ -23,7 +23,7 @@ In this tutorial we will _not_ consider the coregistration of OPM sensors in fle
 
 The common aim of the coregistration methods that we explore in this tutorial is to align geometrical objects - 'things' that have a position and orientation in 3D space - with respect to one another. Ultimately, we want know the location of the OPM sensors relative to the participant's head and brain.
 
-In the examples below, the OPM sensor positions and orientations are initially expressed in a coordinate system relative to the FieldLine smart helmet. To facilitate the downstream analysis of the MEG signals, e.g. for group level analysis, it is customary to aim for the OPM sensors expressed in a coordinate system that is defined based on anatomical landmarks on the participant's head.
+In the examples below, the OPM sensor positions and orientations are initially expressed in a coordinate system relative to the FieldLine smart helmet. To facilitate the downstream analysis of the MEG signals, e.g., for group level analysis, it is customary to aim for the OPM sensors expressed in a coordinate system that is defined based on anatomical landmarks on the participant's head.
 
 {% include markup/info %}
 Some basic background about coordinate systems, and the exact definition of some widely used coordinate systems is given in this [FAQ](/faq/coordsys).
@@ -375,7 +375,7 @@ The data in this example was obtained with the HPI coils placed on well-defined 
 - LPA-RPA should be 15.32 cm
 - Nasion-LPA and Nasion-RPA should be 10.83 cm
 
-We can verify the reconstructed distances as follows. Note that for a real measurement, one would need to measure the distance between the fiducials first (e.g. with a Polhemus scanner, see above) in order to be able to make such a comparison.
+We can verify the reconstructed distances as follows. Note that for a real measurement, one would need to measure the distance between the fiducials first (e.g., with a Polhemus scanner, see above) in order to be able to make such a comparison.
 
     % for verification
     disp(norm(dip11.dip.pos - dip14.dip.pos)*100) % in cm

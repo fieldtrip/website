@@ -5,7 +5,7 @@ tags: [faq, mtmfft, freq, demean]
 
 # Why is the largest peak in the spectrum at the frequency which is 1/segment length?
 
-If you use 'mtmfft' as a method for frequency analysis it could happen that apparently the largest peak in the spectrum is invariably at the first non-zero frequency bin. In addition, when changing the epoch length, e.g. by cutting a long data segment into 1-second snippets, rather than into 1-second segments, it seems that this peak is shifting from 0.5 to 1 Hz.
+If you use 'mtmfft' as a method for frequency analysis it could happen that apparently the largest peak in the spectrum is invariably at the first non-zero frequency bin. In addition, when changing the epoch length, e.g., by cutting a long data segment into 1-second snippets, rather than into 1-second segments, it seems that this peak is shifting from 0.5 to 1 Hz.
 
 This phenomenon is caused by the discrete nature of the spectral transformation, and by one of the default algorithmic details of the spectral decomposition in FieldTrip. Specifically, FieldTrip removes the DC-component (signal mean) by default, prior to spectral transformation. This brings down the 0 Hz component to have a power of ~0. Next, if there's a 1/f power profile in the underlying data, the first non-zero frequency bin will show the highest power in the spectrum of the DC-corrected signal. The location of this first non-zero bin depends on the spectral resolution, which is determined by the segments' length.
 

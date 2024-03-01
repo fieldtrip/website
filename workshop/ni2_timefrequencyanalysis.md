@@ -89,7 +89,7 @@ The resulting `cfg` structure will have a `cfg.trl` matrix which contains the be
 
 ### Cleaning
 
-Some trials have previously been identified as artifactual (due to e.g. eye blinks or MEG SQUID jumps). Also, two MEG channels were malfunctioning. Both these trials and channels need to be removed. Furthermore, while reading in the data, we remove the overall per-trial and per-channel mean to facilitate downstream time-frequency analysis. The following code achieves all this and reads in the data:
+Some trials have previously been identified as artifactual (due to for example eye blinks or MEG SQUID jumps). Also, two MEG channels were malfunctioning. Both these trials and channels need to be removed. Furthermore, while reading in the data, we remove the overall per-trial and per-channel mean to facilitate downstream time-frequency analysis. The following code achieves all this and reads in the data:
 
     % remove the trials that have artifacts from the trl
     cfg.trl([2, 5, 6, 8, 9, 10, 12, 39, 43, 46, 49, 52, 58, 84, 102, 107, 114, 115, 116, 119, 121, 123, 126, 127, 128, 133, 137, 143, 144, 147, 149, 158, 181, 229, 230, 233, 241, 243, 245, 250, 254, 260],:) = [];
