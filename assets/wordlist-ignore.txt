@@ -386,6 +386,7 @@ Cz
 Czienskowski
 DAC
 DANDI
+DBS
 DCBT
 DCC
 DCCN
@@ -694,6 +695,7 @@ GND
 GPL
 GPUs
 GQ
+GRK
 GSN
 GSR
 GZipBase
@@ -742,7 +744,6 @@ Granger
 Gratton
 Grefkes
 Gregoriou
-GRK
 Groesbeek
 Groppe
 Groupwise
@@ -2113,6 +2114,7 @@ ZI
 Zebris
 Zeitler
 Zenodo
+Zetter
 Zhang
 Zheng
 Zhou
@@ -4304,8 +4306,8 @@ pixeldata
 placable
 placefield
 planarortho
-plexon
 plexiglass
+plexon
 plotly
 plottrl
 plusminus
