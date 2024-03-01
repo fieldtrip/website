@@ -423,7 +423,7 @@ Note that the HPI coils were placed on the CTF magnetic dipole phantom, which wa
 Note that if you are using 3D scanner based on an iPhone or iPad, such as the [Structure Sensor](https://structure.io), and if you have the OPMs in the same magnetically shielded room (MSR) as a SQUID MEG system, you will want to turn the iPhone or iPad to **airplane mode** prior to taking it into the MSR. Otherwise the electromagnetic fields of the cellular and/or wifi radio may cause problems with the SQUIDs.
 {% include markup/end %}
 
-The procedure that we follow here is published in [Zetter et al. 2019](https://doi.org/10.1038/s41598-019-41763-4). An optical 3D scaner can be used to capture the participant's facial features combined with the OPM helmet. The face from the 3D scan can be coregistered with a 3D model of the face obtained from the individual's anatomical MRI. Similarly, the helmet from the 3D can be coregistered with a 3D model of the helmet. Thus, the optical 3D scan serves as an intermediary to link the face and anatomical MRI to the helmet and sensors.
+The procedure that we follow here is published in [Zetter et al. 2019](https://doi.org/10.1038/s41598-019-41763-4). An optical 3D scanner can be used to capture the participant's facial features combined with the OPM helmet. The face from the 3D scan can be coregistered with a 3D model of the face obtained from the individual's anatomical MRI. Similarly, the helmet from the 3D can be coregistered with a 3D model of the helmet. Thus, the optical 3D scan serves as an intermediary to link the face and anatomical MRI to the helmet and sensors.
 
 The procedure for this consists of the following steps:
 
@@ -436,7 +436,7 @@ The procedure for this consists of the following steps:
 
 ### Processing the optical 3D scan
 
-We read in the model from the optical 3D scanner. The first step is to coergister the 3D scan with a coordinate system that has its axes pointing into more or less canonical directions (relative to the participant). In the next step we remove irrelevant parts of the image, such as the back of a chair. Then we separate the 'face' part from the 'helmet' part to facilitate their respective alignments.
+We read in the model from the optical 3D scanner. The first step is to coregister the 3D scan with a coordinate system that has its axes pointing into more or less canonical directions (relative to the participant). In the next step we remove irrelevant parts of the image, such as the back of a chair. Then we separate the 'face' part from the 'helmet' part to facilitate their respective alignments.
 
     scan      = ft_read_headshape('example3_face_helmet.obj');
     scan.unit = 'm';
