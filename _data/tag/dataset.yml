@@ -1,8 +1,8 @@
-- name:  How can I share my MEG data?
-  link:  /faq/data_sharing
-
 - name:  Which datasets are used in the documentation and where are they used?
   link:  /faq/datasets
+
+- name:  How can I share my MEG data?
+  link:  /faq/data_sharing
 
 - name:  Where can I find open access MEG/EEG data?
   link:  /faq/open_data

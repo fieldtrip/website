@@ -1,6 +1,3 @@
-- name:  Real-time access to neurophysiological data
-  link:  /development/realtime
-
 - name:  Streaming realtime EEG data to and from Arduino
   link:  /development/realtime/arduino
 
@@ -19,9 +16,6 @@
 - name:  Streaming realtime data from and to BrainStream
   link:  /development/realtime/brainstream
 
-- name:  Overview of the realtime buffer
-  link:  /development/realtime/buffer
-
 - name:  FieldTrip buffer C implementation
   link:  /development/realtime/buffer_c
 
@@ -33,6 +27,9 @@
 
 - name:  FieldTrip buffer MATLAB interface
   link:  /development/realtime/buffer_matlab
+
+- name:  Overview of the realtime buffer
+  link:  /development/realtime/buffer
 
 - name:  Low-level FieldTrip buffer TCP network protocol
   link:  /development/realtime/buffer_protocol
@@ -69,6 +66,9 @@
 
 - name:  Streaming realtime data from Jinga-Hi
   link:  /development/realtime/jinga-hi
+
+- name:  Real-time access to neurophysiological data
+  link:  /development/realtime
 
 - name:  Streaming realtime data from Micromed
   link:  /development/realtime/micromed
@@ -145,11 +145,11 @@
 - name:  How should I get started with the FieldTrip realtime buffer?
   link:  /faq/how_should_i_get_started_with_the_fieldtrip_realtime_buffer
 
-- name:  Getting started with real-time analysis for BCI/neurofeedback
-  link:  /getting_started/realtime
-
 - name:  Getting started with real-time head localization in MEG
   link:  /getting_started/realtime_headlocalizer
+
+- name:  Getting started with real-time analysis for BCI/neurofeedback
+  link:  /getting_started/realtime
 
 - name:  Realtime MEG BCI hands-on session in Nijmegen
   link:  /workshop/realtime
