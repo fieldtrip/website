@@ -1,9 +1,9 @@
 - name:  Analysis of monkey ECoG recordings
   link:  /tutorial/monkey_ecog
 
-- name:  Preprocessing and analysis of spike and local field potential data
-  link:  /tutorial/spikefield
-
 - name:  Preprocessing and analysis of spike-train data
   link:  /tutorial/spike
+
+- name:  Preprocessing and analysis of spike and local field potential data
+  link:  /tutorial/spikefield
 

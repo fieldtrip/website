@@ -124,11 +124,11 @@
 - name:  Preprocessing and averaging of single-channel NIRS data
   link:  /tutorial/nirs_singlechannel
 
-- name:  Preprocessing of EEG data and computing ERPs
-  link:  /tutorial/preprocessing_erp
-
 - name:  Preprocessing - Segmenting and reading trial-based EEG and MEG data
   link:  /tutorial/preprocessing
+
+- name:  Preprocessing of EEG data and computing ERPs
+  link:  /tutorial/preprocessing_erp
 
 - name:  Sensor-level ERF, TFR and connectivity analyses
   link:  /tutorial/sensor_analysis
