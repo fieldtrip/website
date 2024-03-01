@@ -1,3 +1,6 @@
+- name:  Frequently Asked Questions
+  link:  /faq
+
 - name:  What is the difference between the ACPC, MNI, SPM and TAL coordinate systems?
   link:  /faq/acpc
 
@@ -43,23 +46,23 @@
 - name:  Which colormaps are supported?
   link:  /faq/colormap
 
-- name:  Can I use FieldTrip without MATLAB license?
-  link:  /faq/compiled
-
 - name:  How can I compile the mex files and command-line executable?
   link:  /faq/compile
 
+- name:  Can I use FieldTrip without MATLAB license?
+  link:  /faq/compiled
+
 - name:  How are the different head and MRI coordinate systems defined?
   link:  /faq/coordsys
+
+- name:  How can I share my MEG data?
+  link:  /faq/data_sharing
 
 - name:  What dataformats are supported?
   link:  /faq/dataformat
 
 - name:  Which datasets are used in the documentation and where are they used?
   link:  /faq/datasets
-
-- name:  How can I share my MEG data?
-  link:  /faq/data_sharing
 
 - name:  How can I deal with a discontinuous Neuralynx LFP recording?
   link:  /faq/discontinuous_neuralynx
@@ -223,15 +226,6 @@
 - name:  How to change the MRI orientation, the voxel size or the field-of-view?
   link:  /faq/how_change_mri_orientation_size_fov
 
-- name:  How does a difference in trial numbers per condition affect my statistical test
-  link:  /faq/how_does_a_difference_in_trial_numbers_per_condition_affect_my_statistical_test
-
-- name:  How does the CTF higher-order gradiometer work?
-  link:  /faq/how_does_the_ctf_higher-order_gradiometer_work
-
-- name:  How does the filter padding in preprocessing work?
-  link:  /faq/how_does_the_filter_padding_in_preprocessing_work
-
 - name:  How do I construct a layout file for the plotting functions?
   link:  /faq/how_do_i_construct_a_layout_file_for_the_plotting_functions
 
@@ -240,6 +234,15 @@
 
 - name:  How do I prevent FieldTrip from printing the time and memory after each function call?
   link:  /faq/how_do_i_prevent_fieldtrip_from_printing_the_time_and_memory_after_each_function_call
+
+- name:  How does a difference in trial numbers per condition affect my statistical test
+  link:  /faq/how_does_a_difference_in_trial_numbers_per_condition_affect_my_statistical_test
+
+- name:  How does the CTF higher-order gradiometer work?
+  link:  /faq/how_does_the_ctf_higher-order_gradiometer_work
+
+- name:  How does the filter padding in preprocessing work?
+  link:  /faq/how_does_the_filter_padding_in_preprocessing_work
 
 - name:  How fast is the FieldTrip buffer for realtime data streaming?
   link:  /faq/how_fast_is_the_fieldtrip_buffer_for_realtime_data_streaming
@@ -313,11 +316,17 @@
 - name:  I have problems reading in neuroscan .cnt files. How can I fix this?
   link:  /faq/i_have_problems_reading_in_neuroscan_.cnt_files._how_can_i_fix_this
 
-- name:  Installation and setting up the path
-  link:  /faq/installation
+- name:  I used ICA on my MEG data from before 2012 and now FieldTrip crashes, why is that?
+  link:  /faq/i_used_ica_on_my_meg_data_from_before_2012_and_now_fieldtrip_crashes_why_is_that
+
+- name:  I used to work with trl-matrices that have more than 3 columns. Why is this not supported anymore?
+  link:  /faq/i_used_to_work_with_trl-matrices_that_have_more_than_3_columns._why_is_this_not_supported_anymore
 
 - name:  In what way can frequency domain data be represented in FieldTrip?
   link:  /faq/in_what_way_can_frequency_domain_data_be_represented_in_fieldtrip
+
+- name:  Installation and setting up the path
+  link:  /faq/installation
 
 - name:  Is it good or bad to have dipole locations outside of the brain for which the source reconstruction is computed?
   link:  /faq/is_it_good_or_bad_to_have_dipole_locations_outside_of_the_brain_for_which_the_source_reconstruction_is_computed
@@ -330,12 +339,6 @@
 
 - name:  How can I compute inter-trial coherence?
   link:  /faq/itc
-
-- name:  I used ICA on my MEG data from before 2012 and now FieldTrip crashes, why is that?
-  link:  /faq/i_used_ica_on_my_meg_data_from_before_2012_and_now_fieldtrip_crashes_why_is_that
-
-- name:  I used to work with trl-matrices that have more than 3 columns. Why is this not supported anymore?
-  link:  /faq/i_used_to_work_with_trl-matrices_that_have_more_than_3_columns._why_is_this_not_supported_anymore
 
 - name:  MATLAB complains about a missing or invalid mex file, what should I do?
   link:  /faq/matlab_complains_about_a_missing_or_invalid_mex_file_what_should_i_do
@@ -351,9 +354,6 @@
 
 - name:  MATLAB version 7.3 (2006b) crashes when I try to do ...
   link:  /faq/matlab_version_7.3_2006b_crashes_when_i_try_to_do
-
-- name:  Frequently Asked Questions
-  link:  /faq
 
 - name:  MATLAB complains that mexmaci64 cannot be opened because the developer cannot be verified
   link:  /faq/mexmaci64_cannot_be_opened_because_the_developer_cannot_be_verified
@@ -511,14 +511,14 @@
 - name:  Why is my message rejected from the email discussion list?
   link:  /faq/why_is_my_message_rejected_from_the_email_discussion_list
 
+- name:  Why is the source model deformed or incorrectly aligned after warping template?
+  link:  /faq/why_is_the_source_model_deformed_or_incorrectly_aligned_after_warping_template
+
 - name:  Why is there a residual 50Hz line-noise component after applying a DFT filter?
   link:  /faq/why_is_there_a_residual_50hz_line-noise_component_after_applying_a_dft_filter
 
 - name:  Why is there a rim around the brain for which the source reconstruction is not computed?
   link:  /faq/why_is_there_a_rim_around_the_brain_for_which_the_source_reconstruction_is_not_computed
-
-- name:  Why is the source model deformed or incorrectly aligned after warping template?
-  link:  /faq/why_is_the_source_model_deformed_or_incorrectly_aligned_after_warping_template
 
 - name:  Why is the largest peak in the spectrum at the frequency which is 1/segment length?
   link:  /faq/why_largest_peak_spectrum
