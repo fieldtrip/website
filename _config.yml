@@ -1,7 +1,8 @@
 title: FieldTrip toolbox
 email: fieldtriptoolbox@gmail.com
 description: FieldTrip - the toolbox for MEG, EEG and iEEG
-
+logo: /assets/img/fieldtriplogo-high.png
+  
 baseurl: "/"                                # the subpath of your site, e.g. /blog
 url: "https://www.fieldtriptoolbox.org"     # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: fieldtriptoolbx
@@ -73,6 +74,8 @@ plugins:
   - jekyll-toc           # https://github.com/toshimaru/jekyll-toc
   - jekyll-sitemap       # https://github.com/jekyll/jekyll-sitemap
   - jekyll-redirect-from # https://blog.webjeda.com/jekyll-redirect/
+  - jekyll-seo-tag       # https://github.com/jekyll/jekyll-seo-tag
+#  - premonition          # https://github.com/lazee/premonition
 
 exclude:
   - README.md
@@ -86,7 +89,6 @@ exclude:
 #  - example/*
 #  - faq/*
 #  - getting_started/*
-#  - reference/*
 #  - tag/*
 #  - template/*
 #  - tutorial/*

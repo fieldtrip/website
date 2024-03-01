@@ -4,13 +4,6 @@
   {{ content | toc_only }}
 {% endif %}
 
-{% if page.tags != nill and page.tags != "" %}
-  Tags:
-  {% for t in page.tags %}
-    <a href="/tag/{{ t }}/">{{ t }}</a>
-  {% endfor %}
-{% else %}
-  &nbsp;
-{% endif %}
+{% include tags %}
 
 </div>
