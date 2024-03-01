@@ -1,2 +1,2 @@
-<!-- Embed a Vimeo video using the do-not-track option-->
+<!-- Embed a Vimeo video using the do-not-track option -->
 <iframe width="500" height="281" src="https://player.vimeo.com/video/{{ include.id }}?dnt=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>

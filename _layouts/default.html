@@ -4,6 +4,7 @@
     {% include head %}
     {% include favicon %}
     {% include plausible %}
+    {% seo %}
   </head>
 
   <body>
@@ -16,7 +17,9 @@
           {% include left %}
         </div>
         <div class="col-sm-8 main-page-content">
-          {% include tags %}
+          <span class="text-muted small">
+            {% include tags %}
+          </span>
           {{ content }}
         </div>
         <div class="col-sm-3">
