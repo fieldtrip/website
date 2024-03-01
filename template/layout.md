@@ -299,7 +299,7 @@ Furthermore, this section from the **[ft_prepare_layout](/reference/ft_prepare_l
     %
     % For an ECoG grid the option cfg.layout='ordered' is useful to represent the
     % channels in a grid array. In this case you can also specify the number of rows
-    % and/or columns and hwo the channels increment over the grid (e.g. first
+    % and/or columns and hwo the channels increment over the grid (e.g., first
     % left-to-right, then top-to-bottom). You can check the channel order of your grid
     % using FT_PLOT_LAYOUT.
     %   cfg.rows      = number of rows (default is automatic)
