@@ -28,9 +28,9 @@ In the examples below, the OPM sensor positions and orientations are initially e
 {% include markup/info %}
 Some basic background about coordinate systems, and the exact definition of some widely used coordinate systems is given in this [FAQ](/faq/coordsys).
 
-In general you can think of coordinate systems in the same way as time zones. To make an online appointment with a colleague on the other side of the world, you have to align your respective agendas. The appointment subsequently appears in your agenda according to your timezone, and in their agenda in another timezone.
+In general you can think of coordinate systems in the same way as [time zones](https://en.wikipedia.org/wiki/Time_zone). To make an online appointment with a colleague on the other side of the world, you have to align your respective agendas. The appointment subsequently appears in your agenda according to your timezone, and in their agenda according to theirs.
 
-The process of aligning or coregistering means figuring out how much shift is needed to get the same object (or appointment) expressed in your respective coordinate systems (or time zone) to make sure that it corresponds on both sides. Once you know the shift, you can express the object (or appointment) in either coordinate system (or time zone).
+The process of "aligning" or "coregistering" requires figuring out how much shift is needed to get the same object (or appointment) expressed in your respective coordinate systems (or time zone) to make sure that it corresponds on both sides. Once you know the shift, you can express the object (or appointment) in either coordinate system (or time zone).
 {% include markup/end %}
 
 ### The dataset used in this tutorial
@@ -43,7 +43,7 @@ This tutorial describes different ways to achieve coregistration:
 
 - Using geometric information from a Polhemus 3D tracker, matching two sets of points that are known to match one-to-one.
 - Using head localization coils, where the location of the coils on the head is known, and the location of the coils relative to the sensors can be calculated.
-- Using an optical 3D scan of the head and helmet, and aligning this with more detailed anatomical and sensor information.
+- Using an optical 3D scan of the head and helmet, and aligning this with an anatomical MRI and template sensor positions.
 - Using sensor-depth information from the FieldLine smart helmet as a proxy for the head surface.
 - Using individually designed 3D printed helmets
 
@@ -252,7 +252,7 @@ We cut the data into 10-second segments with 80% overlap and compute the average
     cfg            = [];
     cfg.length     = 10;
     cfg.overlap    = 0.8;
-    data_segmented = ft_redefinetrial(cfg, data)
+    data_segmented = ft_redefinetrial(cfg, data);
 
     cfg           = [];
     cfg.method    = 'mtmfft';
@@ -641,6 +641,12 @@ The transformation matrix `transform_helmet2face` can now be used to update the 
 _Figure: sensors aligned with the anatomical MRI._
 
 We can see that the participant was not positioned very high in the FieldLine helmet. This particular example was acquired to demonstrate the coregistration, not for an actual OPM MEG measurement.
+
+{% include markup/warning %}
+Here we have coregistered the OPM sensor positions of the template helmet with the anatomical MRI. However, the FieldLine smart helmet does not have fixed sensor positions but is designed to slide the OPM sensors inwards until they touch the scalp.
+
+For a real OPM measurement you should therefore not use this `fieldlinebeta2.mat` template helmet, but the OPM positions as they are determined in the fif file of your recording. Following **[ft_preprocessing](/reference/ft_preprpocessing)** the OPM sensor positions are represented in the `data.grad` field, which you can also read from the fif file using **[ft_read_sens](/reference/fileio/ft_read_sens)**.
+{% include markup/end %}
 
 ## Coregistration using the sensors following the head shape
 
