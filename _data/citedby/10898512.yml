@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '38415219'
+- idtype: doi
+  value: 10.1093/pnasnexus/pgae061
+- idtype: pmcid
+  value: PMC10898512
+authors:
+- authtype: Author
+  name: Barnett B
+- authtype: Author
+  name: Andersen LM
+- authtype: Author
+  name: Fleming SM
+- authtype: Author
+  name: Dijkstra N
+epubdate: 2024 Feb 14
+fulljournalname: PNAS Nexus
+issue: '2'
+pages: pgae061
+pmclivedate: 2024/02/27
+printpubdate: ''
+pubdate: 2024 Feb 14
+sortdate: 2024/02/14 00:00
+source: PNAS Nexus
+title: Identifying content-invariant neural signatures of perceptual vividness
+uid: '10898512'
+volume: '3'

@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '38420593'
+- idtype: doi
+  value: 10.1016/j.isci.2024.109150
+- idtype: pmcid
+  value: PMC10901088
+authors:
+- authtype: Author
+  name: Buschermöhle Y
+- authtype: Author
+  name: Höltershinken MB
+- authtype: Author
+  name: Erdbrügger T
+- authtype: Author
+  name: Radecke JO
+- authtype: Author
+  name: Sprenger A
+- authtype: Author
+  name: Schneider TR
+- authtype: Author
+  name: Lencer R
+- authtype: Author
+  name: Gross J
+- authtype: Author
+  name: Wolters CH
+epubdate: 2024 Feb 6
+fulljournalname: iScience
+issue: '3'
+pages: '109150'
+pmclivedate: 2024/02/28
+printpubdate: ''
+pubdate: 2024 Feb 6
+sortdate: 2024/02/06 00:00
+source: iScience
+title: Comparing the performance of beamformer algorithms in estimating orientations
+  of neural sources
+uid: '10901088'
+volume: '27'

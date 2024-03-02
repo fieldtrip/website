@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '38343802'
+- idtype: doi
+  value: 10.1101/2024.01.25.24301723
+- idtype: pmcid
+  value: PMC10854351
+authors:
+- authtype: Author
+  name: Brima T
+- authtype: Author
+  name: Beker S
+- authtype: Author
+  name: Prinsloo KD
+- authtype: Author
+  name: Butler JS
+- authtype: Author
+  name: Djukic A
+- authtype: Author
+  name: Freedman EG
+- authtype: Author
+  name: Molholm S
+- authtype: Author
+  name: Foxe JJ
+epubdate: 2024 Jan 26
+fulljournalname: medRxiv
+issue: ''
+pages: 2024.01.25.24301723
+pmclivedate: 2024/02/10
+printpubdate: ''
+pubdate: 2024 Jan 26
+sortdate: 2024/01/26 00:00
+source: medRxiv
+title: Probing a neural unreliability account of auditory sensory processing atypicalities
+  in Rett Syndrome
+uid: '10854351'
+volume: ''

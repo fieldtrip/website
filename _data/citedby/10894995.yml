@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '38410258'
+- idtype: doi
+  value: 10.3389/fnhum.2024.1279183
+- idtype: pmcid
+  value: PMC10894995
+authors:
+- authtype: Author
+  name: Piastra MC
+- authtype: Author
+  name: Oostenveld R
+- authtype: Author
+  name: Homölle S
+- authtype: Author
+  name: Han B
+- authtype: Author
+  name: Chen Q
+- authtype: Author
+  name: Oostendorp T
+epubdate: 2024 Feb 12
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '1279183'
+pmclivedate: 2024/02/26
+printpubdate: ''
+pubdate: 2024 Feb 12
+sortdate: 2024/02/12 00:00
+source: Front Hum Neurosci
+title: How to assess the accuracy of volume conduction models? A validation study
+  with stereotactic EEG data
+uid: '10894995'
+volume: '18'
