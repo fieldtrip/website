@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '38405722'
+- idtype: doi
+  value: 10.1101/2024.02.09.579718
+- idtype: pmcid
+  value: PMC10888735
+authors:
+- authtype: Author
+  name: Silverstein BH
+- authtype: Author
+  name: Kolbman N
+- authtype: Author
+  name: Nelson A
+- authtype: Author
+  name: Liu T
+- authtype: Author
+  name: Guzzo P
+- authtype: Author
+  name: Gilligan J
+- authtype: Author
+  name: Lee U
+- authtype: Author
+  name: Mashour GA
+- authtype: Author
+  name: Vanini G
+- authtype: Author
+  name: Pal D
+epubdate: 2024 Feb 15
+fulljournalname: bioRxiv
+issue: ''
+pages: 2024.02.09.579718
+pmclivedate: 2024/02/24
+printpubdate: ''
+pubdate: 2024 Feb 15
+sortdate: 2024/02/15 00:00
+source: bioRxiv
+title: Psilocybin induces dose-dependent changes in functional network organization
+  in rat cortex
+uid: '10888735'
+volume: ''
