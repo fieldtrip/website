@@ -37,6 +37,7 @@ In general you should get started with the [tutorials](/tutorial). The pages tha
 - [Getting started with animal electrophysiology data, including spikes](/getting_started/animal)
 - [Getting started with human intracranial electrophysiology data](/getting_started/human_ecog)
 - [Getting started with Neurodata Without Borders (NWB) data](/getting_started/nwb)
+- [Getting started with Multiscale Electrophysiology File Format (MEF)](/getting_started/mef)
 
 ## Getting started with NIRS data
 
