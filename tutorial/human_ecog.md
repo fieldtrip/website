@@ -1,6 +1,6 @@
 ---
 title: Analysis of human ECoG and sEEG recordings
-tags: [tutorial, ieeg, ecog, seeg, anatomy, human, localization, mri, ct, freesurfer, ecog-protocol]
+tags: [tutorial, ieeg, ecog, seeg, anatomy, mri, ct, freesurfer, ecog-protocol]
 ---
 
 # Analysis of human ECoG and sEEG recordings
@@ -53,11 +53,13 @@ The two workflows become intrinsically connected for the first time during the e
 
 **3**) Determine the native orientation of the anatomical MRI's left-right axis using ft_determine_coordsys (Box 3 and [Supplementary Video 1](https://static-content.springer.com/esm/art%3A10.1038%2Fs41596-018-0009-6/MediaObjects/41596_2018_9_MOESM6_ESM.mp4) of the original paper).
 
-    ft_determine_coordsys(mri);
+    mri = ft_determine_coordsys(mri);
 
 CRITICAL STEP To correctly fuse the MRI and CT scans at a later step, accuracy in demarcating the right hemisphere landmark in the following step is important for avoiding an otherwise hard to detect flip of the scan's left and right orientation.
 
-**4**) Align the anatomical MRI to the ACPC coordinate system, a preferred convention for the FreeSurfer operation optionally used in a later step. In this coordinate system, the origin (coordinate [0,0,0]) is at the anterior commissure (AC), the Y-axis runs along the line between the anterior and posterior commissure (PC), and the Z-axis lies in the midline dividing the two cerebral hemispheres. Specify the anterior and posterior commissure, an interhemispheric location along the midline at the top of the brain, and a location in the brain's right hemisphere. If the scan was found to have a left-to-right orientation in the previous step, the right hemisphere is identified as the hemisphere having larger values along the left-right axis. Vice versa, in a right-to-left system, the right hemisphere has smaller values along that axis than its left counterpart ([Supplementary Video 2](https://static-content.springer.com/esm/art%3A10.1038%2Fs41596-018-0009-6/MediaObjects/41596_2018_9_MOESM7_ESM.mp4)).
+**4**) Align the anatomical MRI to the ACPC coordinate system, a preferred convention for the FreeSurfer operation optionally used in a later step. In this coordinate system, the origin (coordinate [0,0,0]) is at the anterior commissure (AC), the Y-axis runs along the line between the anterior and posterior commissure (PC), and the Z-axis lies in the midline dividing the two cerebral hemispheres. Specify the anterior and posterior commissure, an interhemispheric location along the midline at the top of the brain, and a location in the brain's right hemisphere.
+
+If the scan was found to have a left-to-right orientation in the previous step, the right hemisphere is identified as the hemisphere having larger values along the left-right axis. Vice versa, in a right-to-left system, the right hemisphere has smaller values along that axis than its left counterpart ([Supplementary Video 2](https://static-content.springer.com/esm/art%3A10.1038%2Fs41596-018-0009-6/MediaObjects/41596_2018_9_MOESM7_ESM.mp4)).
 
     cfg           = [];
     cfg.method    = 'interactive';
@@ -153,15 +155,21 @@ CRITICAL STEP Accuracy of the fusion operation is important for correctly placin
 
 ### Electrode placement
 
-**16**) Import the header information from the recording file, if possible. By giving the electrode labels originating from the header as input to ft_electrodeplacement in the next step, the labels will appear as a to-do list during the interactive electrode placement activity. A second benefit is that the electrode locations can be directly assigned to labels collected from the recording file, obviating the need to sort and rename electrodes to match the electrophysiological data.
+**16**) Import the header information from the recording file, if possible. By giving the electrode labels originating from the header as input to **[ft_electrodeplacement](/reference/ft_electrodeplacement)** in the next step, the labels will appear as a to-do list during the interactive electrode placement activity. A second benefit is that the electrode locations can be directly assigned to labels collected from the recording file, obviating the need to sort and rename electrodes to match the electrophysiological data.
 
 {% include markup/warning %}
-Raw recording files are not shared, in order to protect the subject's identity. For tutorial purposes, load the header, which is normally obtained using ft_read_header, and continue with step 17: load([subjID '_hdr.mat']);
+Raw recording files are not shared, in order to protect the subject's identity. For tutorial purposes, load the header, which is normally obtained using **[ft_read_header](/reference/fileio/ft_read_header)**, and continue with step 17:
+
+    load([subjID '_hdr.mat']);
 {% include markup/end %}
 
     hdr = ft_read_header(<path to recording file>);
 
-**17**) Localize the electrodes in the post-implant CT with ft_electrodeplacement, shown in the figure below. Clicking an electrode label in the list will directly assign that label to the current crosshair location ([Supplementary Video 4](https://static-content.springer.com/esm/art%3A10.1038%2Fs41596-018-0009-6/MediaObjects/41596_2018_9_MOESM9_ESM.mp4)). Several in-app features facilitate efficient yet precise navigation of the anatomical image, such as a zoom mode, a magnet option that transports the crosshair to the nearest weighted maximum with subvoxel accuracy (or minimum in case of a post-implant MRI), and an interactive three-dimensional scatter figure that is linked to the two-dimensional volume representations. Furthermore, passing on the pre-implant MRI, fsmri_acpc, to ft_electrodeplacement allows toggling between CT and MRI views for the identification of specific electrodes based on their anatomical location. Generally, electrode #1 is the electrode farthest away from the craniotomy or burr hole in case of depths and single-row strips. The present subject had 6 bilateral depths targeting left and right amygdalae (LAM/RAM) and the heads/anterior and tails/posterior of both hippocampi (LHH/RHH & LTH/RTH). Furthermore, one depth targeted right occipital cortex (ROC). Careful notes taken during surgery and recording are critical for determining the numbering of grid and multi-row strip electrodes. For an example, see this [schematic drawing](https://zenodo.org/record/1201560/files/SubjectUCI29_grids.png?download=1) of the left parietal and temporal grids (LPG/LTG).
+**17**) Localize the electrodes in the post-implant CT with **[ft_electrodeplacement](/reference/ft_electrodeplacement)**, shown in the figure below. Clicking an electrode label in the list will directly assign that label to the current crosshair location ([Supplementary Video 4](https://static-content.springer.com/esm/art%3A10.1038%2Fs41596-018-0009-6/MediaObjects/41596_2018_9_MOESM9_ESM.mp4)). Several in-app features facilitate efficient yet precise navigation of the anatomical image, such as a zoom mode, a magnet option that transports the crosshair to the nearest weighted maximum with subvoxel accuracy (or minimum in case of a post-implant MRI), and an interactive three-dimensional scatter figure that is linked to the two-dimensional volume representations.
+
+Furthermore, passing on the pre-implant MRI, fsmri_acpc, to **[ft_electrodeplacement](/reference/ft_electrodeplacement)** allows toggling between CT and MRI views for the identification of specific electrodes based on their anatomical location. Generally, electrode #1 is the electrode farthest away from the craniotomy or burr hole in case of depths and single-row strips.
+
+The present subject had 6 bilateral depths targeting left and right amygdalae (LAM/RAM) and the heads/anterior and tails/posterior of both hippocampi (LHH/RHH & LTH/RTH). Furthermore, one depth targeted right occipital cortex (ROC). Careful notes taken during surgery and recording are critical for determining the numbering of grid and multi-row strip electrodes. For an example, see this [schematic drawing](https://zenodo.org/record/1201560/files/SubjectUCI29_grids.png?download=1) of the left parietal and temporal grids (LPG/LTG).
 
     cfg         = [];
     cfg.channel = hdr.label;
@@ -169,7 +177,9 @@ Raw recording files are not shared, in order to protect the subject's identity. 
 
 {% include image src="/assets/img/tutorial/human_ecog/figure2.png" width="800" %}
 
-**18**) Examine whether the variables in resulting electrode structure elec_acpc_f match the recording parameters, e.g., the number of channels stored in the label field. The electrode and channel positions are stored in the elecpos and chanpos fields, respectively. The elecpos field contains the original electrode positions. With exception of possible brain shift compensation, this field is not adjusted. The channel positions in the chanpos field are initially identical to the electrode positions but may be updated to accommodate offline adjustments in channel combinations, i.e. during re-montaging. For bipolar iEEG data, the best considered channel position is in between the two corresponding electrode positions. The chanpos field is used for overlaying the neural data on (sub-)cortical models during data visualization. The tra field is a matrix with the weight of each electrode into each channel, which at this stage merely is an identity matrix reflecting one-to-one mappings between electrodes and channels.
+**18**) Examine whether the variables in resulting electrode structure elec_acpc_f match the recording parameters, e.g., the number of channels stored in the label field. The electrode and channel positions are stored in the elecpos and chanpos fields, respectively. The elecpos field contains the original electrode positions. With exception of possible brain shift compensation, this field is not adjusted.
+
+The channel positions in the chanpos field are initially identical to the electrode positions but may be updated to accommodate offline adjustments in channel combinations, i.e. during re-montaging. For bipolar iEEG data, the best considered channel position is in between the two corresponding electrode positions. The chanpos field is used for overlaying the neural data on (sub-)cortical models during data visualization. The tra field is a matrix with the weight of each electrode into each channel, which at this stage merely is an identity matrix reflecting one-to-one mappings between electrodes and channels.
 
     elec_acpc_f =
 
@@ -183,8 +193,9 @@ Raw recording files are not shared, in order to protect the subject's identity. 
 
 **19**) Visualize the MRI along with the electrodes and their labels and examine whether they show expected behavior.
 
+    figure
     ft_plot_ortho(fsmri_acpc.anatomy, 'transform', fsmri_acpc.transform, 'style', 'intersect');
-    ft_plot_sens(elec_acpc_f, 'label', 'on', 'fontcolor', 'w');
+    ft_plot_sens(elec_acpc_f, 'label', 'on', 'fontcolor', 'w', 'style', 'm.');
 
 ?TROUBLESHOOTING
 
@@ -197,7 +208,10 @@ Raw recording files are not shared, in order to protect the subject's identity. 
 **21**) In case of "brain shift", i.e. the inward displacement of brain tissue and electrodes due to pressure changes related to the craniotomy, realignment of electrode grids to the pre-implant cortical surface may be necessary. To prevent inwardly displaced electrodes from being incorrectly placed in nearby cortical sulci during back-projection, create a smooth hull around the cortical mesh generated by FreeSurfer. This hull tracks the (exposed) outer surface on which the cortical grid rested.
 
 {% include markup/warning %}
-The computation of the cortical hull takes some time. For tutorial purposes, load the hull from file and continue with step 23: load([subjID '_hull_lh.mat']); hull_lh = mesh;
+The computation of the cortical hull takes some time. For tutorial purposes, load the hull from file and continue with step 23:
+
+    load([subjID '_hull_lh.mat']);
+    hull_lh = mesh;
 {% include markup/end %}
 
     cfg           = [];
@@ -212,30 +226,36 @@ The computation of the cortical hull takes some time. For tutorial purposes, loa
 
 **23**) Project the electrode grids to the surface hull of the implanted hemisphere. Given that different grids can move independently from one another and that the projection algorithm specified in cfg.warp considers the global electrode configuration of a grid, it is recommended to realign electrode grids individually by running separate realignment procedures for each grid. Here, we realign the electrodes of the left parietal grid followed by the electrodes of the left temporal grid (LPG and LTG respectively) and store the updated grid electrode information in a new variable together with the unaltered coordinates of the depth electrodes.
 
-    elec_acpc_fr = elec_acpc_f;
     grids = {'LPG*', 'LTG*'};
+    elec_acpc_fr = elec_acpc_f;  % start with a copy
+
     for g = 1:numel(grids)
-    cfg             = [];
-    cfg.channel     = grids{g};
-    cfg.keepchannel = 'yes';
-    cfg.elec        = elec_acpc_fr;
-    cfg.method      = 'headshape';
-    cfg.headshape   = hull_lh;
-    cfg.warp        = 'dykstra2012';
-    cfg.feedback    = 'yes';
-    elec_acpc_fr = ft_electroderealign(cfg);
+      cfg             = [];
+      cfg.channel     = grids{g}; % first project LPGxx, then project LTGxx
+      cfg.keepchannel = 'yes';
+      cfg.elec        = elec_acpc_fr;
+      cfg.method      = 'headshape';
+      cfg.headshape   = hull_lh;
+      cfg.warp        = 'dykstra2012';
+      cfg.feedback    = 'yes';
+      elec_acpc_fr = ft_electroderealign(cfg);
     end
 
 **24**) Visualize the cortex and electrodes together and examine whether they show expected behavior (figure below).
 
 CRITICAL STEP Accuracy of the realignment operation is important for correctly placing the electrodes in anatomical context in a following step.
 
+    figure
+    
     ft_plot_mesh(pial_lh);
-    ft_plot_sens(elec_acpc_fr);
-    view([-55 10]);
-    material dull;
-    lighting gouraud;
-    camlight;
+    % ft_plot_mesh(hull_lh); % plot the hull
+    ft_plot_sens(elec_acpc_fr, 'style', 'k.');
+    % ft_plot_sens(elec_acpc_f, 'style', 'r.'); % plot the electrodes prior to projection
+    view([-55 10])
+    material dull
+    % alpha 0.5 % make the surface mesh transparent
+    lighting gouraud
+    camlight
 
 {% include image src="/assets/img/tutorial/human_ecog/figure3.png" width="800" %}
 
@@ -265,15 +285,15 @@ CRITICAL STEP Accuracy of the spatial normalization step is important for correc
     [ftver, ftpath] = ft_version;
     load([ftpath filesep 'template/anatomy/surface_pial_left.mat']);
     
-    % rename the variable that we read from the file, as not to confuse it with the MATLAB mesh plotting function   
+    % rename the variable that we read from the file, as not to confuse it with the MATLAB mesh plotting function
     template_lh = mesh; clear mesh;
     
     ft_plot_mesh(template_lh);
     ft_plot_sens(elec_mni_frv);
-    view([-90 20]);
-    material dull;
-    lighting gouraud;
-    camlight;
+    view([-90 20])
+    material dull
+    lighting gouraud
+    camlight
 
 ?TROUBLESHOOTING
 
@@ -286,8 +306,8 @@ CRITICAL STEP Accuracy of the spatial normalization step is important for correc
 **30**) To generalize the electrode coordinates to other brains in a later step, map the electrodes onto FreeSurfer's fsaverage brain. The surface-based registration technique solely considers the curvature patterns of the cortex and thus can be used for the spatial normalization of electrodes located on or near the cortical surface. In the example case, this pertains to all electrodes of the left parietal and temporal grids.
 
     cfg           = [];
-    cfg.channel   = {'LPG*', 'LTG*'};
     cfg.elec      = elec_acpc_fr;
+    cfg.channel   = {'LPG*', 'LTG*'};
     cfg.method    = 'headshape';
     cfg.headshape = 'freesurfer/surf/lh.pial';
     cfg.warp      = 'fsaverage';
@@ -302,10 +322,10 @@ CRITICAL STEP Accuracy of the spatial normalization step is important for correc
     fspial_lh.coordsys = 'fsaverage';
     ft_plot_mesh(fspial_lh);
     ft_plot_sens(elec_fsavg_frs);
-    view([-90 20]);
-    material dull;
-    lighting gouraud;
-    camlight;
+    view([-90 20])
+    material dull
+    lighting gouraud
+    camlight
 
 {% include image src="/assets/img/tutorial/human_ecog/figure4.png" width="500" %}
 
@@ -317,6 +337,7 @@ CRITICAL STEP Accuracy of the spatial normalization step is important for correc
 
 **33**) FieldTrip supports looking up the anatomical or functional labels corresponding to the electrodes in a number of atlases, including the AFNI Talairach Tournoux atlas, the AAL atlas, the BrainWeb data set, the JuBrain cytoarchitectonic atlas, the VTPM atlas, and the Brainnetome atlas, in addition to the subject-tailored Desikan-Killiany and Destrieux atlases produced by FreeSurfer. Given that no two electrodes end up in the exact same location across subjects due to inter-individual variability in electrode coverage and brain anatomy, atlases are particularly useful for the systematic combination of neural activity from different subjects in a so-called region of interest (ROI) analysis. With exception of the above FreeSurfer-based atlases, the atlases are in MNI coordinate space and require the electrodes to be spatially normalized (Steps 26 through 27). First, import an atlas of interest, e.g., the AAL atlas, into the MATLAB workspace.
 
+    [ftver, ftpath] = ft_version;
     atlas = ft_read_atlas([ftpath filesep 'template/atlas/aal/ROI_MNI_V4.nii']);
 
 **34**) Look up the corresponding anatomical label of an electrode of interest, e.g., electrode LHH1, targeting the left hemisphere's hippocampus. [Supplementary File 3](https://static-content.springer.com/esm/art%3A10.1038%2Fs41596-018-0009-6/MediaObjects/41596_2018_9_MOESM5_ESM.pdf) represents a tool that automatically overlays all channels in an electrode structure with all of the above atlases and stores the resulting anatomical labels in an excel table (e.g., SubjectUCI29_electable.xlsx in the zip file). A more recent version of this tool can be found [here](/faq/how_can_i_determine_the_anatomical_label_of_a_source).
@@ -324,8 +345,7 @@ CRITICAL STEP Accuracy of the spatial normalization step is important for correc
     cfg            = [];
     cfg.roi        = elec_mni_frv.chanpos(match_str(elec_mni_frv.label,'LHH1'),:);
     cfg.atlas      = atlas;
-    cfg.inputcoord = 'mni';
-    cfg.output     = 'label';
+    cfg.output     = 'single';
     labels = ft_volumelookup(cfg, atlas);
 
     [~, indx] = max(labels.count);
@@ -343,7 +363,9 @@ CRITICAL STEP Accuracy of the spatial normalization step is important for correc
 **35**) Define the trials, that is, the segments of data that will be used for further processing and analysis. This step produces a matrix cfg.trl containing for each segment the begin and end sample in the recording file. In the case of the example provided in the shared data, the segments of interest begin 400 ms before tone onset, are marked with a '4' in the trigger channel, and end 900 ms thereafter.
 
 {% include markup/warning %}
-Raw recording files are not shared, in order to protect the subject's identity. For tutorial purposes, load the preprocessed data, which is the product of steps 35 & 36, and continue with step 37: load([subjID '_data.mat'], 'data');
+Raw recording files are not shared, in order to protect the subject's identity. For tutorial purposes, load the preprocessed data, which is the product of steps 35 & 36, and continue with step 37:
+
+    load([subjID '_data.mat'], 'data');
 {% include markup/end %}
 
     cfg                     = [];
@@ -352,7 +374,7 @@ Raw recording files are not shared, in order to protect the subject's identity. 
     cfg.trialdef.eventvalue = 4;
     cfg.trialdef.prestim    = 0.4;
     cfg.trialdef.poststim   = 0.9;
-    cfg = ft definetrial(cfg);
+    cfg = ft_definetrial(cfg);
 
 **36**) Import the data segments of interest into the MATLAB workspace and filter the data for high-frequency and power line noise (see the documentation of ft_preprocessing for filtering options).
 
@@ -364,19 +386,18 @@ Raw recording files are not shared, in order to protect the subject's identity. 
     cfg.padtype        = 'data';
     cfg.bsfilter       = 'yes';
     cfg.bsfiltord      = 3;
-    cfg.bsfreq         = [59 61; 119 121; 179 181];
+    cfg.bsfreq         = [59 61; 119 121; 179 181];  % line noise at 60 Hz in USA  
     data = ft_preprocessing(cfg);
 
 **37**) Examine whether the variables in the output data structure match the recording and preprocessing parameters, i.e. the sampling rate (fsample), number of recording channels (label), and segmentation into the experiment's twenty-six trials (trial, and their respective time axes in time).
 
     data =
-
-    label: {152x1 cell}
-    time: {1x26 cell}
-    trial: {1x26 cell}
-    fsample: 5000
-    sampleinfo: [26x2 double]
-    cfg: [1x1 struct]
+             time: {1×26 cell}
+            label: {152×1 cell}
+            trial: {1×26 cell}
+          fsample: 5000
+       sampleinfo: [26×2 double]
+        trialinfo: [26×1 double]
 
 **38**) Add the elec structure originating from the anatomical workflow and save the preprocessed electrophysiological data to file. The advantage of adding the electrode information at this stage is that it will be kept consistent with the neural data going forward, as when applying the same montage used for the neural recordings to the channel positions.
 
@@ -393,6 +414,7 @@ CRITICAL STEP Identifying bad channels is important for avoiding the contaminati
 
 **40**) Remove any bad segments marked in the above step.
 
+    cfg.artfctdef.reject = 'complete';
     data = ft_rejectartifact(cfg, data);
 
 **41**) Re-montage the cortical grids to a common average reference in order to remove noise that is shared across all channels. Box 4 provides a background on re-montaging. Bad channels identified in Step 39 can be excluded from this step by adding those channels to cfg.channel with a minus prefix. That is, cfg.channel = {'LPG*', 'LTG*', '-LPG1'} if one were to exclude the LPG1 channel from the list of LPG and LTG channels.
@@ -408,13 +430,13 @@ CRITICAL STEP Identifying bad channels is important for avoiding the contaminati
 
     depths = {'RAM*', 'RHH*', 'RTH*', 'ROC*', 'LAM*', 'LHH*', 'LTH*'};
     for d = 1:numel(depths)
-    cfg            = [];
-    cfg.channel    = ft_channelselection(depths{d}, data.label);
-    cfg.reref      = 'yes';
-    cfg.refchannel = 'all';
-    cfg.refmethod  = 'bipolar';
-    cfg.updatesens = 'yes';
-    reref_depths{d} = ft_preprocessing(cfg, data);
+      cfg            = [];
+      cfg.channel    = ft_channelselection(depths{d}, data.label);
+      cfg.reref      = 'yes';
+      cfg.refchannel = 'all';
+      cfg.refmethod  = 'bipolar';
+      cfg.updatesens = 'yes';
+      reref_depths{d} = ft_preprocessing(cfg, data);
     end
 
 **43**) Combine the data from both electrode types into one data structure for the ease of further processing.
@@ -447,7 +469,9 @@ CRITICAL STEP Identifying bad channels is important for avoiding the contaminati
 
 ### Interactive plotting
 
-**47**) For an anatomically informed exploration of the multidimensional outcome of an analysis, create a layout based on the three-dimensional electrode locations. This layout is a symbolic representation in which the channels are projected on the two-dimensional medium offered by paper or a computer screen. The layout is complemented by an automatic outline of the cortical sheet that is specified in cfg.headshape. The cfg.boxchannel option allows selecting channels whose two-dimensional distances are used to determine the plotting box sizes in the following step.
+**47**) For an anatomically informed exploration of the multidimensional outcome of an analysis, create a layout based on the three-dimensional electrode locations. This layout is a symbolic representation in which the channels are projected on the two-dimensional medium offered by paper or a computer screen, see also the [layout tutorial](tutorial/layout).
+
+The layout is complemented by an automatic outline of the cortical sheet that is specified in cfg.headshape. The cfg.boxchannel option allows selecting channels whose two-dimensional distances are used to determine the plotting box sizes in the following step.
 
     cfg            = [];
     cfg.headshape  = pial_lh;
@@ -456,6 +480,7 @@ CRITICAL STEP Identifying bad channels is important for avoiding the contaminati
     cfg.viewpoint  = 'left';
     cfg.mask       = 'convex';
     cfg.boxchannel = {'LTG30', 'LTG31'};
+    cfg.feedback   = 'yes';
     lay = ft_prepare_layout(cfg, freq);
 
 **48**) Express the time-frequency representation of neural activity at each channel in terms of the relative change in activity from the baseline interval. We exclude the baseline interval from -100 to 0 ms given that powerspectral data points in this interval were estimated using 200 ms time windows that extend into the task period.
@@ -495,10 +520,11 @@ CRITICAL STEP Identifying bad channels is important for avoiding the contaminati
     cfg.sphereradius = 8;
     cfg.camlight     = 'no';
     ft_sourceplot(cfg, freq_sel, pial_lh);
-    view([-90 20]);
-    material dull;
-    lighting gouraud;
-    camlight;
+    
+    view([-90 20])
+    material dull
+    lighting gouraud
+    camlight
 
 **52**) Add the electrodes to the figure (shown below). By looping around Steps 50 and 51 while breaking down the time interval of interest specified with cfg.latency in consecutive steps, it becomes feasible to observe the spatiotemporal dynamics of neural activity occurring in relation to known experimental structure and behavior ([Supplementary Video 6](https://static-content.springer.com/esm/art%3A10.1038%2Fs41596-018-0009-6/MediaObjects/41596_2018_9_MOESM11_ESM.mp4)). See help getframe for capturing and assembling time-lapse movies.
 
@@ -512,8 +538,8 @@ CRITICAL STEP Identifying bad channels is important for avoiding the contaminati
 
     atlas = ft_read_atlas('freesurfer/mri/aparc+aseg.mgz');
     atlas.coordsys = 'acpc';
+
     cfg            = [];
-    cfg.inputcoord = 'acpc';
     cfg.atlas      = atlas;
     cfg.roi        = {'Right-Hippocampus', 'Right-Amygdala'};
     mask_rha = ft_volumelookup(cfg, atlas);
@@ -522,6 +548,7 @@ CRITICAL STEP Identifying bad channels is important for avoiding the contaminati
 
     seg = keepfields(atlas, {'dim', 'unit','coordsys','transform'});
     seg.brain = mask_rha;
+    
     cfg             = [];
     cfg.method      = 'iso2mesh';
     cfg.radbound    = 2;
@@ -541,16 +568,17 @@ CRITICAL STEP Identifying bad channels is important for avoiding the contaminati
 **56**) Interpolate the high-frequency-band activity in the bipolar channels on a spherical cloud around the channel positions, while overlaying the neural activity with the above mesh ([Supplementary File 4](https://static-content.springer.com/esm/art%3A10.1038%2Fs41596-018-0009-6/MediaObjects/41596_2018_9_MOESM1_ESM.pdf) highlights the currently available cloud types for plotting). By repeating the current step for neural data corresponding to consecutive time intervals, similarly to the process outlined in Step 52, it becomes feasible to create time-lapse movies of the spatiotemporal dynamics of deep-brain activity ([Supplementary Video 7](https://static-content.springer.com/esm/art%3A10.1038%2Fs41596-018-0009-6/MediaObjects/41596_2018_9_MOESM12_ESM.mp4) shows the spatiotemporal evolution of epileptiform activity in a separate subject).
 
     cfg              = [];
+    cfg.method       = 'cloud';
     cfg.funparameter = 'powspctrm';
     cfg.funcolorlim  = [-.5 .5];
-    cfg.method       = 'cloud';
     cfg.slice        = '3d';
     cfg.nslices      = 2;
     cfg.facealpha    = .25;
     ft_sourceplot(cfg, freq_sel2, mesh_rha);
-    view([120 40]);
-    lighting gouraud;
-    camlight;
+
+    view([120 40])
+    lighting gouraud
+    camlight
 
 **57**) To create a more definitive image of the neural activity at particular positions, generate two-dimensional slices through the three-dimensional representations. This combination provides the most complete and integrated representation of neural and anatomical data (figure below).
 
@@ -561,7 +589,9 @@ CRITICAL STEP Identifying bad channels is important for avoiding the contaminati
 
 ## Summary and conclusion
 
-Upon completion of this tutorial, one should obtain an integrated representation of neural and anatomical data. The exact results depend ultimately on the clinical or research question at hand, contingencies in the experimental paradigm, and decisions made during the execution of the protocol. This tutorial demonstrated the analysis of spatiotemporal neural dynamics occurring in relation to known experimental structure and relatively simple behavior, namely the pressing of a button with the right hand when hearing a target tone. However, with small adaptations of the protocol it is feasible to track the spatiotemporal evolution of epileptiform activity with high precision (e.g., [Supplementary Video 7](https://static-content.springer.com/esm/art%3A10.1038%2Fs41596-018-0009-6/MediaObjects/41596_2018_9_MOESM12_ESM.mp4)), or to perform group-level investigations of fine-grained emotion- or language-related neural dynamics in human hippocampus. A precise fusion of the anatomical images with the electrophysiological data is key to reproducible analyses and findings. Hence, it is important to examine the outcome of any critical step, as we have done above.
+Upon completion of this tutorial, one should obtain an integrated representation of neural and anatomical data. The exact results depend ultimately on the clinical or research question at hand, contingencies in the experimental paradigm, and decisions made during the execution of the protocol.
+
+This tutorial demonstrated the analysis of spatiotemporal neural dynamics occurring in relation to known experimental structure and relatively simple behavior, namely the pressing of a button with the right hand when hearing a target tone. However, with small adaptations of the protocol it is feasible to track the spatiotemporal evolution of epileptiform activity with high precision (e.g., [Supplementary Video 7](https://static-content.springer.com/esm/art%3A10.1038%2Fs41596-018-0009-6/MediaObjects/41596_2018_9_MOESM12_ESM.mp4)), or to perform group-level investigations of fine-grained emotion- or language-related neural dynamics in human hippocampus. A precise fusion of the anatomical images with the electrophysiological data is key to reproducible analyses and findings. Hence, it is important to examine the outcome of any critical step, as we have done above.
 
 We recommend that the user construct a single script for a single subject by copying and pasting code from this protocol into the MATLAB editor (e.g., [Supplementary File 1](https://static-content.springer.com/esm/art%3A10.1038%2Fs41596-018-0009-6/MediaObjects/41596_2018_9_MOESM3_ESM.pdf)), and evaluating segments of that script in the MATLAB command window. Once the script produces satisfactory results, it can be converted into a batch analysis by breaking it into separate components. By looping around the separate components for all subjects, the entire analysis pipeline for all subjects in a study can easily be executed and intermediate results can be saved and evaluated.
 
