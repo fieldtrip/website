@@ -11,7 +11,7 @@ To attend the hands-on tutorials, participants will have to register [here](http
 
 ## Program
 
-We will look at the **Anatomical workflow** and the **Functional workflow** of the tutorial on the [Analysis of human ECoG and sEEG recordings](/tutorial/human_ecog).
+We will look at the **Anatomical workflow** and the **Functional workflow** of the tutorial on the [Analysis of human ECoG and sEEG recordings](/tutorial/human_ecog). This comprises section 2, 3, and 4 in the outline of the [Advances in human intracranial electroencephalography research, guidelines and good practices](https://doi.org/10.1016/j.neuroimage.2022.119438) paper. Section 5 on statistics and section 6 on perspectives are obvously also relevant and we will take some time to discuss these.
 
 ## How to prepare
 
@@ -19,9 +19,13 @@ We will look at the **Anatomical workflow** and the **Functional workflow** of t
 
 Please take a quick look at the [FieldTrip reference paper](https://doi.org/10.1155/2011/156869) if you have not done so already. If you have an hour or so, you can watch this [introductory lecture](https://www.youtube.com/watch?v=7B4rDZYwQLM). Note that more recorded lectures are available as [video](/video).
 
+### Read up on intracranial analyses
+
+Have a look at the recent paper [Advances in human intracranial electroencephalography research, guidelines and good practices](https://doi.org/10.1016/j.neuroimage.2022.119438). It is quite a long and detailled paper, so you may not be able to read it in a single session.
+
 ### Make sure you have a recent version of MATLAB
 
-We develop FieldTrip such that it is compatible with MATLAB versions up to 5 years old. Please note that we may not always be running the latest MATLAB version ourselves, so sometimes it can happen that your brand-new MATLAB release causes some issues that we have not encountered yet.
+We develop FieldTrip to be compatible with MATLAB versions up to 5 years old. Please note that we may not always be running the latest MATLAB version ourselves, so sometimes it can happen that your brand-new MATLAB release causes some issues that we have not encountered and fixed yet.
 
 ### Download and install a recent FieldTrip version
 
