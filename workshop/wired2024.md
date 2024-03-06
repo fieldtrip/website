@@ -11,7 +11,7 @@ To attend the hands-on tutorials, participants will have to register [here](http
 
 ## Program
 
-We will look at the **Anatomical workflow** and the **Functional workflow** of the tutorial on the [Analysis of human ECoG and sEEG recordings](/tutorial/human_ecog). This comprises section 2, 3, and 4 in the outline of the [Advances in human intracranial electroencephalography research, guidelines and good practices](https://doi.org/10.1016/j.neuroimage.2022.119438) paper. Section 5 on statistics and section 6 on perspectives are obvously also relevant and we will take some time to discuss these.
+We will look at the **Anatomical workflow** and the **Functional workflow** of the tutorial on the [Analysis of human ECoG and sEEG recordings](/tutorial/human_ecog). This comprises section 2, 3, and 4 in the outline of the [Advances in human intracranial electroencephalography research, guidelines and good practices](https://doi.org/10.1016/j.neuroimage.2022.119438) paper. Section 5 on statistics and section 6 on perspectives are obviously also relevant and we will take some time to discuss these.
 
 ## How to prepare
 
@@ -21,7 +21,7 @@ Please take a quick look at the [FieldTrip reference paper](https://doi.org/10.1
 
 ### Read up on intracranial analyses
 
-Have a look at the recent paper [Advances in human intracranial electroencephalography research, guidelines and good practices](https://doi.org/10.1016/j.neuroimage.2022.119438). It is quite a long and detailled paper, so you may not be able to read it in a single session.
+Have a look at the recent paper [Advances in human intracranial electroencephalography research, guidelines and good practices](https://doi.org/10.1016/j.neuroimage.2022.119438). It is quite a long and detailed paper, so you may not be able to read it in a single session.
 
 ### Make sure you have a recent version of MATLAB
 
