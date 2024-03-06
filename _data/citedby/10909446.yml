@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '37160669'
+- idtype: doi
+  value: 10.1111/psyp.14322
+- idtype: pmcid
+  value: PMC10909446
+authors:
+- authtype: Author
+  name: Hellerstedt R
+- authtype: Author
+  name: Bekinschtein T
+- authtype: Author
+  name: Talmi D
+epubdate: 2023 May 9
+fulljournalname: Psychophysiology
+issue: '9'
+pages: e14322
+pmclivedate: 2024/03/04
+printpubdate: 2023 Sep
+pubdate: 2023 May 9
+sortdate: 2023/05/09 00:00
+source: Psychophysiology
+title: Can neural correlates of encoding explain the context dependence of reward‐enhanced
+  memory?
+uid: '10909446'
+volume: '60'

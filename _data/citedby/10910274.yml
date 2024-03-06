@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1016/j.isci.2024.109250
+- idtype: pmcid
+  value: PMC10910274
+authors:
+- authtype: Author
+  name: Yuan Z
+- authtype: Author
+  name: Lin S
+- authtype: Author
+  name: Liu Y
+- authtype: Author
+  name: Tang J
+- authtype: Author
+  name: Long T
+- authtype: Author
+  name: Zhai Y
+epubdate: 2024 Feb 16
+fulljournalname: iScience
+issue: '3'
+pages: '109250'
+pmclivedate: 2024/03/04
+printpubdate: ''
+pubdate: 2024 Feb 16
+sortdate: 2024/02/16 00:00
+source: iScience
+title: Gradient phase and amplitude errors in atomic magnetic gradiometers for biomagnetic
+  imaging systems
+uid: '10910274'
+volume: '27'

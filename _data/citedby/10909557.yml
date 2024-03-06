@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '37691098'
+- idtype: doi
+  value: 10.1111/psyp.14435
+- idtype: pmcid
+  value: PMC10909557
+authors:
+- authtype: Author
+  name: Schubert J
+- authtype: Author
+  name: Suess N
+- authtype: Author
+  name: Weisz N
+epubdate: 2023 Sep 10
+fulljournalname: Psychophysiology
+issue: '1'
+pages: e14435
+pmclivedate: 2024/03/04
+printpubdate: 2024 Jan
+pubdate: 2023 Sep 10
+sortdate: 2023/09/10 00:00
+source: Psychophysiology
+title: Individual prediction tendencies do not generalize across modalities
+uid: '10909557'
+volume: '61'
