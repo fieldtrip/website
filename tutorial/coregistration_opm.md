@@ -439,12 +439,14 @@ The procedure for this consists of the following steps:
 We read in the model from the optical 3D scanner. The first step is to coregister the 3D scan with a coordinate system that has its axes pointing into more or less canonical directions (relative to the participant). In the next step we remove irrelevant parts of the image, such as the back of a chair. Then we separate the 'face' part from the 'helmet' part to facilitate their respective alignments.
 
     scan      = ft_read_headshape('example3_face_helmet.obj');
-    scan.unit = 'm';
+    scan.unit = 'm'; % the estimated 'dm' is not correct
 
     figure; hold on;
     ft_plot_headshape(scan);
     ft_plot_axes(scan);
-    lighting gouraud; material dull; light;
+    lighting gouraud
+    material dull
+    light
 
 {% include image src="/assets/img/tutorial/coregistration_opm/scan_notaligned.png" width="400" %}
 _Figure: 3D scan with a not so clearly defined coordinate system._
@@ -464,23 +466,35 @@ To facilitate later processing, we will assign a better defined coordinate syste
     ft_plot_headshape(scan);
     ft_plot_axes(scan);
     view([125 10]);
-    lighting gouraud; material dull; light;
+    lighting gouraud
+    material dull
+    light
 
 {% include image src="/assets/img/tutorial/coregistration_opm/scan_sosoaligned.png" width="400" %}
 _Figure: 3D scan with a coordinate system relating to the head and helmet._
 
+{% include markup/info %}
+As the ears are not visible, you have to click on dummy locations that appropriate the LPA and RPA points. Consequently, your coarse coregistration will be somewhat different from the one here in the tuturioal. In the subsequent code we will use some parameters (rotations, transloations) that depend on this initial coarse coregistration. To make sure that your subsequent results match what is presented here, you should download [example3_face_helmet_aligned.mat](https://download.fieldtriptoolbox.org/tutorial/coregistration_opm/example3_face_helmet_aligned.mat) and load it in MATLAB.
+
+    load example3_face_helmet_aligned.mat  % this contains the aligned scan
+    
+Also if you somehow mess up your analysis in the next steps and overwrite the `scan` variable, you can just reload it and start again.
+{% include markup/end %}
+
 In the example scan, a large part of the body of the participant is also present. We remove it to facilitate the alignment. The below code uses `ft_defacemesh` with `cfg.method='plane'`. This particular method discards parts of the scan that are on one side of the plane, which is indicated by the direction of the stick that is sticking out from the middle of the plane. By setting the viewpoint in the interactive window to 'right', we get a convenient view to specify the plane. Note that the viewpoint does not have a consequence for the points to be excluded. Here, good results were obtained by using the following numbers to define the cutting plane: rotate `[-40 0 0]`, translate `[0 0 -140]`.
 
-    % cut off the irrelevant parts, this might require a few iterations
-    cfg        = [];
-    cfg.method = 'plane';
-    scan       = ft_defacemesh(cfg, scan);
+    % cut off the irrelevant parts
+    cfg         = [];
+    cfg.method  = 'plane';
+    scan_head   = ft_defacemesh(cfg, scan); % viewpoint left,  rotate [-30 0 0], translate [0 0 -130];
 
-    figure;hold on;
-    ft_plot_headshape(scan);
-    ft_plot_axes(scan);
+    figure; hold on;
+    ft_plot_headshape(scan_head);
+    ft_plot_axes(scan_head);
     view([125 10]);
-    lighting gouraud; material dull; h=light;
+    lighting gouraud
+    material dull
+    light
 
 {% include image src="/assets/img/tutorial/coregistration_opm/scan_facehelmet.png" width="400" %}
 _Figure: 3D scan with only the face and helmet._
@@ -489,49 +503,37 @@ In the following, we separate the 'helmet' part of the scan from the 'face' part
 
     % separate the face from the helmet, it's easier to keep the face at first
     % instance, and then go back to the original mesh to get the helmet
-    scan_face    = scan;
-    scan_face    = ft_defacemesh(cfg, scan_face); % viewpoint: front, rotate: [0 -90 0], translate: [85 0 20].
-    scan_face    = ft_defacemesh(cfg, scan_face); % viewpoint: front, rotate: [0  90 0], translate: [-67 0 20].
-    scan_face    = ft_defacemesh(cfg, scan_face); % viewpoint: left,  rotate: [140 0 0], translate: [0 0 55];
+    
+    cfg        = [];
+    cfg.method = 'box';
+    cfg.selection = 'inside';
+    scan_face  = ft_defacemesh(cfg, scan_head); % rotate [-30 0 0], scale [0.15 0.20 0.20], translate [3 0 -80]
 
     figure; hold on;
     ft_plot_headshape(scan_face);
     ft_plot_axes(scan_face);
     view([125 10]);
-    lighting gouraud; material dull; light;
+    lighting gouraud
+    material dull
+    light
 
 {% include image src="/assets/img/tutorial/coregistration_opm/scan_face.png" width="400" %}
 _Figure: 3D scan with only the face._
 
-The surface mesh of the helmet will be extracted by removing the face from the scan. This is not so straightforward: we need to do a little bit of coding and use a function which is located in a private folder.
+The surface mesh of the helmet will be extracted by removing the face from the scan. We use the same selection as in the extraction of the face, but now we keep the outside of the box rather than the inside.
 
-    % get the helmet by excluding the face nodes from the scan
-    scan_helmet  = scan;
-
-    % this requires a temporary change into a private folder
-    [ftver, ftdir] = ft_version;
-    pdir = fullfile(ftdir, 'private');
-    cd(pdir);
-
-    % the intersect(a, b, 'rows') does not give the full intersection because of duplicate points
-    pos1 = scan_face.pos;
-    pos2 = scan_helmet.pos;
-    mindist = nan(size(pos1,1),1);
-    indx    = nan(size(pos1,1),1);
-    sel     = cell(size(pos1,1),1);
-    for k = 1:size(pos1,1)
-      delta = sqrt(sum((pos2 - pos1(k,:)).^2,2));
-      [mindist(k), indx(k)] = min(delta);
-      sel{k} = find(delta==mindist(k));
-    end
-    sel = unique(cat(1,sel{:}));
-    [scan_helmet.pos, scan_helmet.tri] = remove_vertices(scan_helmet.pos, scan_helmet.tri, sel);
+    cfg           = [];
+    cfg.method    = 'box';
+    cfg.selection = 'outside';
+    scan_helmet   = ft_defacemesh(cfg, scan_head); % rotate [-30 0 0], scale [0.15 0.20 0.20], translate [3 0 -80]
 
     figure; hold on;
     ft_plot_headshape(scan_helmet);
     ft_plot_axes(scan_helmet);
     view([125 10]);
-    lighting gouraud; material dull; light;
+    lighting gouraud
+    material dull
+    light
 
 {% include image src="/assets/img/tutorial/coregistration_opm/scan_helmet.png" width="400" %}
 _Figure: 3D scan with only the helmet._
@@ -543,8 +545,8 @@ Here, we read in the anatomical MRI and define the coordinate system based on th
 After reading in the MRI, you can check the coordinate system with `ft_determine_coordsys`.
 
     % read in the anatomical MRI
-    mri = ft_read_mri('example3_anatomical.nii.gz');
-    ft_determine_coordsys(mri);
+    mri = ft_read_mri('example3_anatomical.nii');
+    ft_determine_coordsys(mri, 'interactive', 'no');
 
 {% include image src="/assets/img/tutorial/coregistration_opm/mri_notaligned.png" width="400" %}
 _Figure: anatomical MRI in the original scanner coordinates._
@@ -553,18 +555,18 @@ As the above figure shows, the axes are labeled as 'unknown', but it seems that 
 
 We will explicitly align the MRI to an anatomical landmark-based coordinate system next, which requires interactive identification of the relevant landmarks (Nasion, Left, and Right pre-auricular points).
 
-    % define a head based coordinate system
+    % define a head coordinate system linked to the anatomical landmarks
     cfg          = [];
     cfg.coordsys = 'neuromag';
     mri          = ft_volumerealign(cfg, mri);
-    ft_determine_coordsys(mri);
+    ft_determine_coordsys(mri, 'interactive', 'no');
 
 {% include image src="/assets/img/tutorial/coregistration_opm/mri_aligned.png" width="400" %}
-_Figure: anatomical MRI image with a 'neuromag' coordinate system._
+_Figure: anatomical MRI image with a 'neuromag' head coordinate system._
 
 ### Alignment of the 3D scan face with the MRI
 
-We can extract the scalp surface from the anatomical MRI and interactively align this with the face from the 3D scan. In theory, an automatic algorithm, such as the iterative closest point (ICP) algorithm could be used, but the results of that highly depends on the number of points, and the quality of the initial alignment. Hence, in this example we stick to a manual alignment. To achieve a reasonably good alignment, the following values can be specified for the rotation (without clicking the 'apply' button in between): `[13.5 0.2 -4]`, and for the translation: `[-0.003 0.0825 -0.0083]`. Note that the units are now expressed in 'm'.
+We can extract the scalp surface from the anatomical MRI and interactively align this with the face from the 3D scan. In theory, an automatic algorithm, such as the iterative closest point (ICP) algorithm could be used, but the results of that highly depends on the number of points, and the quality of the initial alignment. Hence, in this example we stick to a manual alignment.
 
     % segment the scalp
     cfg          = [];
@@ -578,8 +580,11 @@ We can extract the scalp surface from the anatomical MRI and interactively align
     mri_face        = ft_prepare_mesh(cfg, seg);
     mri_face        = ft_convert_units(mri_face, 'm');
 
+To achieve a reasonably good alignment, the following values can be specified (without clicking the 'apply' button in between) for the rotation: `[13.5 0 -4]`, and for the translation: `[-0.003 0.07 -0.008]`. Note that the units are now expressed in 'm'.
+
     % align the 3D scan face to the face extracted from the anatomical mri
     cfg             = [];
+    cfg.method      = 'interactive';
     cfg.headshape   = mri_face;
     cfg.meshstyle   = {'edgecolor', 'k', 'facecolor', 'skin'};
     scan_face_aligned = ft_meshrealign(cfg, scan_face);
@@ -588,31 +593,38 @@ We can extract the scalp surface from the anatomical MRI and interactively align
     ft_plot_headshape(mri_face, 'facealpha', 0.4);
     ft_plot_mesh(scan_face_aligned, 'facecolor','skin');
     view([125 10]);
-    lighting gouraud; material dull; light;
+    lighting gouraud
+    material dull
+    light
 
 {% include image src="/assets/img/tutorial/coregistration_opm/face_aligned.png" width="400" %}
 _Figure: 3D scan of the face aligned with the MRI-derived face._
 
-### Interactive alignment of the helmet with the reference sensors/helmet
+### Interactive alignment of the helmet with the template helmet
 
-We can also interactively align the helmet from the 3D scan with the template helmet. Here, we found the following values for the rotation: `[24 0 -3]`, and for the translation: `[-0.009 0.07 -0.05]`.
+We can also interactively align the helmet from the 3D scan with the template helmet. For this we use the 3D model of the actual FieldLine helmet. The template helmet only contains the rim around the face.
 
-    fieldlinebeta2 = ft_read_sens('fieldlinebeta2.mat');  % from fieldtrip/template/grad
-    fieldlinebeta2.coordsys = 'ras';
+    helmet_rim = ft_read_headshape('fieldlinebeta2_helmet_rim.mat');
+    helmet_rim.coordsys = 'ras';
+
+To achieve a reasonably good alignment between the scanned helmet and the 3D model helmet rim, the following values can be specified (without clicking the 'apply' button in between) for the rotation: `[20 -2 0]`, and for the translation: `[-0.003 0.065 -0.045]`. Note that the units are expressed in 'm'.
 
     cfg = [];
-    cfg.grad = fieldlinebeta2;
-    cfg.meshstyle = {'edgecolor','k','facecolor','skin'};
+    cfg.method = 'interactive';
+    cfg.headshape = helmet_rim;
+    cfg.meshstyle = {'edgecolor', 'none', 'facecolor', [1 0.5 0.5]};
     scan_helmet_aligned = ft_meshrealign(cfg, scan_helmet);
 
     figure; hold on;
-    ft_plot_sens(fieldlinebeta2);
-    ft_plot_mesh(scan_helmet_aligned, 'facecolor', [0.5 0.5 1], 'facealpha', 0.4, 'edgecolor', 'none');
-    view([125 10]);
-    lighting gouraud; material dull; h = light;
+    ft_plot_mesh(model_helmet_rim, 'edgecolor', 'none', 'facecolor', [0.5 0.5 1], 'facealpha', 0.4);
+    ft_plot_mesh(scan_helmet_aligned, 'edgecolor', 'none', 'facecolor', [1 0.5 0.5], 'facealpha', 0.4);
+    view([145 10]);
+    lighting gouraud
+    material dull
+    light
 
 {% include image src="/assets/img/tutorial/coregistration_opm/helmet_aligned.png" width="400" %}
-_Figure: 3D scan of the helmet aligned with the FieldLine template helmet._
+_Figure: 3D scan of the helmet aligned with the 3D model of the actual FieldLine helmet._
 
 ### Calculation of the transformation matrix
 
@@ -623,10 +635,19 @@ Now we can use the transformation that align the face from the 3D scan with the 
     transform_scan2helmet = scan_helmet_aligned.cfg.transform;
     transform_scan2face   = scan_face_aligned.cfg.transform;
     transform_helmet2face = transform_scan2face/transform_scan2helmet;
+    
+These are all expressed as 4x4 matrices that represent [homogenous coordinate transformations](/faq/homogenous).
 
 ### Apply the transformation matrix to the sensors
 
-The transformation matrix `transform_helmet2face` can now be used to update the sensor definition, which aligns the sensors with head-based coordinate system .
+The transformation matrix `transform_helmet2face` can now be used to update the sensor definition, which aligns the sensors with head-based coordinate system.
+
+    fieldlinebeta2 = ft_read_sens('fieldlinebeta2.mat');  % from fieldtrip/template/grad
+    fieldlinebeta2.coordsys = 'ras';
+
+{% include markup/danger %}
+In this case we did not do an actual OPM MEG measurement but only a 3D scan for demonstration purposes. Hence we read the sensor positions from the FieldLine beta 2 template grad structure. In normal situations you would read the sensor positions from the actual fif file that you recorded. In The FieldLine system the OPM sensors slide into the smart helmet; the fif file contains the actual position of the sensors relative to the helmet.
+{% include markup/end %}
 
     % align the sensors to the head
     fieldlinebeta2_head = ft_transform_geometry(transform_helmet2face, fieldlinebeta2);
@@ -635,7 +656,9 @@ The transformation matrix `transform_helmet2face` can now be used to update the 
     ft_plot_sens(fieldlinebeta2_head);
     ft_plot_headshape(mri_face, 'facecolor', [0.5 0.5 1], 'facealpha', 0.4, 'edgecolor', 'none');
     view([125 10]);
-    lighting gouraud; material dull; light;
+    lighting gouraud
+    material dull
+    light
 
 {% include image src="/assets/img/tutorial/coregistration_opm/sensors_face_aligned.png" width="400" %}
 _Figure: sensors aligned with the anatomical MRI._
