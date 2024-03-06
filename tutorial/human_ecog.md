@@ -392,12 +392,12 @@ Raw recording files are not shared, in order to protect the subject's identity. 
 **37**) Examine whether the variables in the output data structure match the recording and preprocessing parameters, i.e. the sampling rate (fsample), number of recording channels (label), and segmentation into the experiment's twenty-six trials (trial, and their respective time axes in time).
 
     data =
-             time: {1×26 cell}
-            label: {152×1 cell}
-            trial: {1×26 cell}
+             time: {1x26 cell}
+            label: {152x1 cell}
+            trial: {1x26 cell}
           fsample: 5000
-       sampleinfo: [26×2 double]
-        trialinfo: [26×1 double]
+       sampleinfo: [26x2 double]
+        trialinfo: [26x1 double]
 
 **38**) Add the elec structure originating from the anatomical workflow and save the preprocessed electrophysiological data to file. The advantage of adding the electrode information at this stage is that it will be kept consistent with the neural data going forward, as when applying the same montage used for the neural recordings to the channel positions.
 
