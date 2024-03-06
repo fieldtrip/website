@@ -546,6 +546,8 @@ After reading in the MRI, you can check the coordinate system with `ft_determine
 
     % read in the anatomical MRI
     mri = ft_read_mri('example3_anatomical.nii');
+    
+    % check the coordinate system
     ft_determine_coordsys(mri, 'interactive', 'no');
 
 {% include image src="/assets/img/tutorial/coregistration_opm/mri_notaligned.png" width="400" %}
@@ -556,13 +558,21 @@ As the above figure shows, the axes are labeled as 'unknown', but it seems that 
 We will explicitly align the MRI to an anatomical landmark-based coordinate system next, which requires interactive identification of the relevant landmarks (Nasion, Left, and Right pre-auricular points).
 
     % define a head coordinate system linked to the anatomical landmarks
-    cfg          = [];
-    cfg.coordsys = 'neuromag';
-    mri          = ft_volumerealign(cfg, mri);
-    ft_determine_coordsys(mri, 'interactive', 'no');
+    cfg           = [];
+    cfg.coordsys  = 'neuromag';
+    mri_realigned = ft_volumerealign(cfg, mri);
+
+    % check the coordinate system after realignment
+    ft_determine_coordsys(mri_realigned, 'interactive', 'no');
 
 {% include image src="/assets/img/tutorial/coregistration_opm/mri_aligned.png" width="400" %}
 _Figure: anatomical MRI image with a 'neuromag' head coordinate system._
+
+{% include markup/info %}
+During MRI coregistration you have to click on the nasion, left and right ear. The landmark points at the ears are [ambiguous](/faq/how_are_the_lpa_and_rpa_points_defined) and if you click on different points, your alignment could be off by a centimeter or so. In the subsequent code we will use some rotation and translation parameters. To make sure that your subsequent results match what is presented here, you should download [example3_face_mri_realigned.mat](https://download.fieldtriptoolbox.org/tutorial/coregistration_opm/example3_mri_realigned.mat) and load it in MATLAB.
+
+    load example3_mri_realigned.mat % this contains the realigned mri
+{% include markup/end %}
 
 ### Alignment of the 3D scan face with the MRI
 
@@ -571,7 +581,7 @@ We can extract the scalp surface from the anatomical MRI and interactively align
     % segment the scalp
     cfg          = [];
     cfg.output   = 'scalp';
-    seg          = ft_volumesegment(cfg, mri);
+    seg          = ft_volumesegment(cfg, mri_realigned);
 
     % create a mesh for the scalp
     cfg             = [];
