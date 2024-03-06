@@ -477,8 +477,6 @@ _Figure: 3D scan with a coordinate system relating to the head and helmet._
 As the ears are not visible, you have to click on dummy locations that appropriate the LPA and RPA points. Consequently, your coarse coregistration will be somewhat different from the one here in the tuturioal. In the subsequent code we will use some parameters (rotations, transloations) that depend on this initial coarse coregistration. To make sure that your subsequent results match what is presented here, you should download [example3_face_helmet_aligned.mat](https://download.fieldtriptoolbox.org/tutorial/coregistration_opm/example3_face_helmet_aligned.mat) and load it in MATLAB.
 
     load example3_face_helmet_aligned.mat  % this contains the aligned scan
-    
-Also if you somehow mess up your analysis in the next steps and overwrite the `scan` variable, you can just reload it and start again.
 {% include markup/end %}
 
 In the example scan, a large part of the body of the participant is also present. We remove it to facilitate the alignment. The below code uses `ft_defacemesh` with `cfg.method='plane'`. This particular method discards parts of the scan that are on one side of the plane, which is indicated by the direction of the stick that is sticking out from the middle of the plane. By setting the viewpoint in the interactive window to 'right', we get a convenient view to specify the plane. Note that the viewpoint does not have a consequence for the points to be excluded. Here, good results were obtained by using the following numbers to define the cutting plane: rotate `[-40 0 0]`, translate `[0 0 -140]`.
