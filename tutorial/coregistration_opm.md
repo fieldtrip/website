@@ -65,7 +65,7 @@ The procedure for this consists of the following steps:
 - Identification of the reference points in the Polhemus measurement
 - Reading the template sensor positions using **[ft_read_sens](/reference/fileio/ft_read_sens)**
 - Calculation of the transformation parameters, using **[ft_electroderealign](/reference/ft_electroderealign)**.
-- Apply the transformation to the template sensors, using **[ft_transform_geometry](/reference/utility/ft_transform_geometry)**, and **[ft_plot_sens](/reference/plotting/ft_plot_sens)** for visualization.
+- Apply the transformation to the template sensors, using **[ft_transform_geometry](/reference/utilities/ft_transform_geometry)**, and **[ft_plot_sens](/reference/plotting/ft_plot_sens)** for visualization.
 
 ### Read the Polhemus file and impose a head-based coordinate system
 
