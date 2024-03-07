@@ -3,40 +3,36 @@ title: Mouse EEG - channel and source analysis
 ---
 
 {% include markup/danger %}
-The purpose of this page is just to serve as todo or scratch pad for the development project and to list and share some ideas.
-
-After making changes to the code and/or documentation, this page should remain on the website as a reminder of what was done and how it was done. However, there is no guarantee that this page is updated in the end to reflect the final state of the project
-
-So chances are that this page is considerably outdated and irrelevant. The notes here might not reflect the current state of the code, and you should **not use this as serious documentation**.
+This page is a draft tutorial that is not yet finished.
 {% include markup/end %}
 
 # Mouse EEG - channel and source analysis
 
 ## Introduction
 
-This tutorial describes how to deal with mouse EEG in the aspect of preprocessing, time-frequency analysis, and visualization layout and how to apply the coregistration steps for making volume conduction model.
-If you are interested in how to measure mouse EEG prior to main process, you can check the nice [video tutorial](http://www.jove.com/video/2562/high-density-eeg-recordings-freely-moving-mice-using-polyimide-based), which also includes links to information how to stimulate the mouse brain by optical fiber. If you want to learn how to process EEG data conventionally, check the tutorial on [Preprocessing of EEG data and computing ERPs](/tutorial/preprocessing_erp).
+This tutorial describes the processing of mouse EEG data. It deals with preprocessing, computing ERPs, time-frequency analysis, and visualization of channel-level data. Furtermore, it deals with reading and processing anatomical data, the coregistration with EEg electrodes, and the construction of a volume conduction model and source model. Finally, the EEG data is source reconstructed.
 
-## Goals
+The method to record the mouse EEG as used in this tutorial is explained in this [video tutorial](http://www.jove.com/video/2562/high-density-eeg-recordings-freely-moving-mice-using-polyimide-based), which also points to information on optical stimulation of the mouse brain through an optical fiber. To learn how to process EEG data in more general, we suggest you check the tutorial on [Preprocessing of EEG data and computing ERPs](/tutorial/preprocessing_erp).
 
-- improve channel level analysis
+## Background
 
-  - preprocessing and re-referencing
-  - visualization
-  - statistics
-  - coregistration of data over different animals
+The purpose of the study was to use EEG combined with optogenetic stimulation (so called opto-EEG) for studying sensorimotor integration. Sensorimotor integration is a neurological process dealing with somatosensation inputs into motor outputs in an effective way. Numerous studies have shown the direct signal pathways within somatosensor-motor circuits, however little is known how the tactile sensations with different stimulation frequency are processed from somatosensory to motor cortex in order to react appropriately to different types of stimulation.
 
-- improve source level analysis
+Transgenic mice were used for the study (Thy1-ChR2-EYFP, B6 mice, 12 weeks; body weight 27 g, male[http://jaxmice.jax.org/strain/007615.html](http://jaxmice.jax.org/strain/007615.html)). For implantation of electrodes on the skull and sensory thalamus (VPM; 1.82 mm posterior, 1.5 mm lateral and 3.7 mm ventral to bregma), mice were anesthetized (ketamine/xylazine cocktail, 120 and 6 mg/kg, respectively) and then positioned in a stereotaxic apparatus.
 
-  - provide template volume conduction model
-  - provide template electrode specification
-  - coregistration/scaling/warping of template to actual animal dimensions
+For optogenetic stimulation, we used a semiconductor laser (USA & BCL-040-445; 445 nm wavelength and 40 mW/mm2 maximum output power; CrystaLaser LLC., Reno, NV, USA) that was gated using a pulse generator (575 digital delay, Berkeley Nucleonics Corp., Berkeley, CA, USA). Blue light from the laser was guided to the brain using an optic fiber with clad/core diameters of 125 mm and 3.4 mm, respectively (P1-405A-FC-5; Thorlabs Inc., Newton, NJ, USA). The light intensity from the tip of optical fiber was approximately 2 mW/mm2 measured by integrating sphere coupled to spectrometer (BLUE-Wave-VIS2/IC2/IRRAD-CAL, Stellar-Net Inc., Tampa, FL, USA). Various pulse trains with a 20 ms pulse width were delivered in four different cortical regions (somatosensory cortices, primary motor cortex, and sensory thalamus marked as S1, S2, M1, and VPM in below figure, respectively).
 
-- evaluation of data analysis methods
+{% include image src="/assets/img/tutorial/mouse_eeg/figure1.png" width="500" %}
+
+We mimicked peripheral sensation by direct optogenetic stimulation of S1, S2, M1 and sensory thalamus and concurrently recorded the frequency dependent responses (1, 10, 20, 30, 40 and 50 Hz) with a depth electrode in the region of the optode (i.e. S1, S2, M1 and thalamus). Furthermore, we recorded EEG on the surface of the skull using a high-density micro electrode array. We allocated two electrodes in the most anterior region as the reference and ground electrodes. The signals from the brain were recorded both by high-density micro electrode array (EEG = 38 channels, plus ground and reference, so 40 electrodeds) and as the local field potential (single channel). The EEG and LFP were acquired with an analog amplifier (Synamp, Neuroscan, USA) with a sampling frequency of 2000 Hz.
+
+### The dataset used in this tutorial
+
+The data for this tutorial can be downloaded from our [download server](https://download.fieldtriptoolbox.org/tutorial/mouse_eeg/).
 
 ## Procedure
 
-We will do the following
+The procedure consists of the following steps:
 
 - define trials
 - preprocessing
@@ -62,31 +58,13 @@ We will do the following
 - visualize source reconstruction
 - look up source reconstruction results in atlas
 
-## Background on the dataset
-
-The purpose of the study in which the data that is demonstrated here is to use EEG with Optogenetic Stimulation (opto-EEG) for studying sensorymotor integration.
-
-Sensorimotor integration is a neurological process dealing with somatosensation inputs into motor outputs in an effective way. Numerous studies have shown the direct signal pathways within somatosensor-motor circuits, however little is known how the tactile sensations with different stimulation frequency are processed from somatosensory to motor cortex in order to react appropriately to different types of stimulation. In present study, we mimicked the peripheral sensation by direct stimulation of S1, S2, M1 and sensory thalamus using optogenetic method and concurrently recorded the frequency dependent responses (1, 10, 20, 30, 40 and 50 Hz) with a depth electrode in the region of the optode (i.e. S1, S2, M1 and thalamus), and recording the EEG using the surface micro electrode array.
-
-### Subject and Experiment
-
-In the study applied here, we used the transgenic mice (Thy1-ChR2-EYFP, B6 mice, 12 weeks; body weight 27 g, male[http://jaxmice.jax.org/strain/007615.html](http://jaxmice.jax.org/strain/007615.html)). For implantation of electrodes on the skull and sensory thalamus (VPM; 1.82 mm posterior, 1.5 mm lateral and 3.7 mm ventral to bregma), mice were anesthetized (ketamine/xylazine cocktail, 120 and 6 mg/kg, respectively) and then positioned in a stereotaxic apparatus. Location of electrode placement is going to describe in section ?. We allocated two electrodes in the most anterior region as reference and ground electrodes. The brain signals are recorded by both high-density electrode array (EEG-38 channels + ground and reference-2 channels) and local field potential (single channel). The EEGs were acquired with an analog amplifier (Synamp, Neuroscan, USA) with a sampling frequency of 2000 Hz.
-
-### Optogenetic Stimulation
-
-For optogenetic stimulation, we used a semiconductor laser (USA & BCL-040-445; 445 nm wavelength and 40 mW/mm2 maximum output power; CrystaLaser LLC., Reno, NV, USA) that was gated using a pulse generator (575 digital delay, Berkeley Nucleonics Corp., Berkeley, CA, USA). Blue light from the laser was guided to the brain using an optic fiber with clad/core diameters of 125 mm and 3.4 mm, respectively (P1-405A-FC-5; Thorlabs Inc., Newton, NJ, USA). The light intensity from the tip of optical fiber was approximately 2 mW/mm2 measured by integrating sphere coupled to spectrometer (BLUE-Wave-VIS2/IC2/IRRAD-CAL, Stellar-Net Inc., Tampa, FL, USA). Various pulse trains with a 20 ms pulse width were delivered in four different cortical regions (somatosensory cortices, primary motor cortex, and sensory thalamus marked as S1, S2, M1, and VPM in below figure, respectively).
-
-{% include image src="/assets/img/tutorial/mouse_eeg/figure1.jpg" width="500" %}
-
 ## Preprocessing
 
-### define trials
+### Define trials
 
-Using the FieldTrip function **[ft_definetrial](/reference/ft_definetrial)** you can define the pieces of data that will be read in for preprocessing. Trials are defined by their begin and end sample in the data file and each trial has an offset that defines where the relative t=0 point (usually the point of the optogenetic stimulus-trigger) is for that trial.
-The **[ft_definetrial](/reference/ft_definetrial)** and **[ft_preprocessing](/reference/ft_preprocessing)** functions require the original EEG dataset acquiring from Synamp system.
+Using **[ft_definetrial](/reference/ft_definetrial)** and **[ft_preprocessing](/reference/ft_preprocessing)** we define, read and preprocess the data segmentsof interest. Trials are specified by their begin and end sample in the data file and each trial has an offset that defines where the relative t=0 point (usually the point of the optogenetic stimulus-trigger) is for that trial.
 
-Actually, example dataset has not digital trigger information. To mark stimulation timing in the file, they use analog input (41th channel) as trigger information. Since FieldTrip can offer to support customized function by using cfg.trialfun, this tutorial shows how to make trial-based dataset.
-This results in a cfg.trl = 'mousetrialfun' in which the beginning, the trigger offset and the end of each trial relative to the beginning of the raw data is defined.
+The dataset used here does not include conventional digital trigger information. To record the timing of stimulation, an analog input channel 'HL1' was used to record TTL triggers. We use a customized function and the `cfg.trialfun='mousetrialfun'` option to define the segments. The trial function results in a `cfg.trl` Nx3 array that ccontains the begin- and endsample, and the trigger offset of each trial relative to the beginning of the raw data on disk.
 
     function trl = mousetrialfun(cfg)
 
@@ -126,6 +104,8 @@ This results in a cfg.trl = 'mousetrialfun' in which the beginning, the trigger 
     trigger_event(1,:) = idx;
     clear idx
 
+    % give some feedback
+    figure
     plot(trigger_event(1,:),0,'go')
 
     % extracts, trigger contents ----------------------------------------------
@@ -184,27 +164,26 @@ This results in a cfg.trl = 'mousetrialfun' in which the beginning, the trigger 
       end
     end
 
-Using this trial function, we can call **[ft_definetrial](/reference/ft_definetrial)** to find the trials, or segments of interest.
+Using this trial function, we can call **[ft_definetrial](/reference/ft_definetrial)** to find the trials or segments of interest.
 
     cfg = [];
     cfg.dataset  = 'S1s_10Hz.cnt';
-    cfg.trialfun = 'mousetrialfun'; % ft_definetrial will call your function and pass on the cfg
+    cfg.trialfun = 'mousetrialfun'; % see above
     cfg.trialdef.eventtype  = '?';
     cfg.trialdef.eventvalue = 40000;
     cfg.trialdef.prestim    = 1; % in seconds
     cfg.trialdef.poststim   = 2; % in seconds
     cfg = ft_definetrial(cfg);
 
-You will see that the trial function produces a figure, which can be used to check whether the threshold was at the appropriate level and whether the onset of stimulation is properly detected.
+You will see that the trial function produces a figure, which can be used to check whether the threshold was at the appropriate level and whether the stimulation onsets are properly detected.
 
 FIXME insert figure (1 data loading)
 
-The segments of interest are specified by their begin- and end-sample and by the offset that specifies the timing relative to the data segment. The offset is zero here indicating that the first sample is interpreted as time t=0.
+The segments of interest are specified by their begin- and endsample and by the offset that specifies the timing relative to the data segment. The offset is zero here indicating that the first sample is interpreted as time t=0.
 
     >> cfg.trl
 
     ans =
-
             7447       13446           0
            17447       23446           0
            27447       33446           0
@@ -216,7 +195,7 @@ The segments of interest are specified by their begin- and end-sample and by the
 
 ### preprocessing
 
-After the segments of interest have been added to the configuration structure, we read them from the raw data file into memory. At this step we also add the other preprocessing options to the configuration, such as the filter settings.
+After the segments of interest have been specified as `cfg.trl`, we read them from disk into memory. At this step we also specify other preprocessing options such as the filter settings.
 
     cfg.channel   = 'all';
     cfg.baseline  = [-0.30, -0.05];
@@ -230,7 +209,6 @@ After the segments of interest have been added to the configuration structure, w
 The output of ft_preprocessing is a structure which has the following field
 
     data =
-
                hdr: [1x1 struct]
              label: {39x1 cell}
               time: {1x88 cell}
@@ -239,55 +217,58 @@ The output of ft_preprocessing is a structure which has the following field
         sampleinfo: [88x2 double]
                cfg: [1x1 struct]
 
-In the data.sampleinfo you can find the begin and endsample of each trial. The offset has been used to make an individual time axis for each trial.
+In `data.sampleinfo` you can find the begin and endsample of each trial. The offset has been used to make an individual time axis `data.time` for each trial.
 
-We can simply plot all channels in a single trial using standard MATLAB cod
+We can plot all channels for a single trial using standard MATLAB code:
 
+    figure
     plot(data.time{1}, data.trial{1});
     legend(data.label);
     grid on
 
 FIXME insert figure (2 single trial plot )
 
-### checking for artifacts
+### Checking for artifacts
 
-Using **[ft_databrowser](/reference/ft_databrowser)** we can do a quick visual inspection of the data and check whether there are artefacts.
+Using **[ft_databrowser](/reference/ft_databrowser)** we can do a quick visual inspection of the data in all trials and check for artefacts.
 
     cfg = [];
+    cfg.viewmode = 'butterfly';
     cfg = ft_databrowser(cfg, data);
 
 FIXME insert figure (3 datatrial browser)
 
-The HL1 channel contains the analog representation of the stimulus, which is of much larger amplitude than all other channels. We can exclude it in the guy (click "channel" button) or using the following:
+The 41th channel with th elabel 'HL1' contains the analog TTL trigger, which is of much larger amplitude than all other channels. We can exclude it in the GUI by clicking the "channel" button or by using the following code:
 
     cfg = [];
     cfg.viewmode = 'vertical';
     cfg.channel = {'all', '-HL1'};
     cfg = ft_databrowser(cfg, data);
 
-We see that some channels show a much lower noise level than others (e.g., AF8). This might be due to differences in electrode-skull impedance.
+Some channels show a much lower noise level than others (e.g., AF8). This might be due to differences in the electrode-skull impedance.
 
 FIXME insert figure (4 check the impedance and report it here)
 
-### rereferencing
+### Rereferencing
 
-The two most frontal electrodes in the grid were used as ground and reference during acquisition. These two electrodes are placed just anterior of the Fp1 and the Fp2 electrode.
-
-This section shows a technique known as common average referencing (CAR) to generate a simple re-referencing method for array-type electrode recordings. CAR is a computationally simple technique. CAR is commonly used in EEG, where it is necessary to identify small signal sources in very noisy recordings.
-
-We hypothesize that CAR will improve neural recording quality with respect to 38 ch electrode references.
+During acquisition the two most frontal electrodes in the grid were used as the ground and reference. These two electrodes are placed just anterior of the Fp1 and the Fp2 electrode. We rereference the data to a common average over all electrodes.
 
     cfg            = [];
     cfg.reref      = 'yes';
-    cfg.refchannel = {'FP1';'FP2';'AF3';'AF4';'AF7';'AF8';...
-                  'F1';'F2';'F5';'F6';'FC1';'FC2';'FC5';'FC6';...
-                  'C1';'C2';'C3';'C4';'C5';'C6';...
-                  'CP1';'CP2';'CP3';'CP4';'CP5';'CP6';...
-                  'P1';'P2';'P3';'P4';'P5';'P6';'PO3';'PO4';'PO7';'PO8';'O1';'O2'};
+    cfg.channel    = {'all', '-HL1'};  % we don't want to re-reference the trigger channel
+    cfg.refchannel = {'FP1';'FP2';...
+                      'AF3';'AF4';'AF7';'AF8';...
+                      'F1';'F2';'F5';'F6';...
+                      'FC1';'FC2';'FC5';'FC6';...
+                      'C1';'C2';'C3';'C4';'C5';'C6';...
+                      'CP1';'CP2';'CP3';'CP4';'CP5';'CP6';...
+                      'P1';'P2';'P3';'P4';'P5';'P6';...
+                      'PO3';'PO4';'PO7';'PO8';...
+                      'O1';'O2'};
     data_car       = ft_preprocessing(cfg, data);
 
-If you want to see the improvement of CAR, re-run for ft_databrowser with different variable (data_car).
-
+You can compare the original and re-referenced data using ft_databrowser.
+ 
     cfg            = [];
     cfg.viewmode   = 'vertical';
     cfg.channel    = {'all', '-HL1'};
@@ -300,13 +281,16 @@ FIXME insert figure (5 datatrial browser)
 ### making a channel layout and deal with animal size
 
 In order to make layout of high-density electrode array (HD-array) on mouse skull, FieldTrip support layout files ('mouse_layout.mat') that gives you exact control of the 2-D position of the sensors for topoplotting, and of the per-channel local coordinate axes for the multiplotting. The mat-file containing various variables to draw outlines of the headshape within the name “lay”.
+
 Let us give you the information how to make customized layout for HD-array by using FieldTrip.
 This figure indicates an electrode arrangement of HD-array (this example photo is taken from Lee et al. (2011) Journal of Visualized Experiments ([video](http://www.jove.com/video/2562/high-density-eeg-recordings-freely-moving-mice-using-polyimide-based), [pdf](http://www.jove.com/pdf/2562/jove-protocol-2562-high-density-eeg-recordings-freely-moving-mice-using-polyimide-based)).
 
-{% include image src="/assets/img/tutorial/mouse_eeg/figure2.jpg" width="400" %}
+{% include image src="/assets/img/tutorial/mouse_eeg/figure2.png" width="400" %}
 
 You can specify cfg.image in ft_prepare_layout and subsequently click on the location of each electrode. After specifying each electrode location, you'll be asked to specify the outlines of the head (i.e. the circle around the head, the eyes, the nose and ears (dash lines) and optionally some lines representing other important landmarks: bold lines, bregma, and lambda) and to specify the mask for the topographic interpolation (green dash line).
+
 Find the bregma and lambda points on the skull, and record them with the stereotaxic ruler. The bregma and lambda points are located in the same anterio-posterior axis.
+
 The anterio-posterior axis of high-density electrode array (HD-array) matches the line between bregma and lambda points. The bregma point (0, 0) should be located at the middle of the 4th layer of the anterior of HD-array because we follow the Paxinos coordinate system. We implemented a mouse layout on fixed length (4.2 mm) of between bregma and lambda.
 
     cfg         = [];
@@ -341,7 +325,7 @@ To confirm your calibration,
 
 FIXME insert figure (7 layout plot)
 
-If you are satisfy with the result, you can save it to a MATLAB fil
+If you are satisfy with the result, you can save it to a MATLAB file:
 
     save mouse_eeg.mat lay
 
@@ -359,7 +343,7 @@ To confirm your calibration,
     cfg.layout      = lay_new;
     ft_layoutplot(cfg);
 
-{% include image src="/assets/img/tutorial/mouse_eeg/figure3.jpg" width="400" %}
+{% include image src="/assets/img/tutorial/mouse_eeg/figure3.png" width="400" %}
 
 :!: This is discussed on <http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=2602>
 
