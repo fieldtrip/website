@@ -362,7 +362,7 @@ Now we can perform the dipole fits.
 
     cfg             = [];
     cfg.headmodel   = headmodel;
-    cfg.grad        = fieldlinebeta2;
+    cfg.grad        = data.grad;
     cfg.component   = 1;
     cfg.gridsearch  = 'yes';
     cfg.sourcemodel = sourcemodel;
@@ -382,9 +382,9 @@ We can verify the reconstructed distances as follows. Note that for a real measu
     disp(norm(dip08.dip.pos - dip11.dip.pos)*100)
     disp(norm(dip08.dip.pos - dip14.dip.pos)*100)
 
-    17.3090
-    12.6005
-    11.7938
+    15.4760
+    10.2201
+    10.5455
 
 ### Definition of the head-based coordinate system
 
