@@ -10,7 +10,7 @@ This page is a draft tutorial that is not yet finished.
 
 ## Introduction
 
-This tutorial describes the processing of mouse EEG data. It deals with preprocessing, computing ERPs, time-frequency analysis, and visualization of channel-level data. Furtermore, it deals with reading and processing anatomical data, the coregistration with EEg electrodes, and the construction of a volume conduction model and source model. Finally, the EEG data is source reconstructed.
+This tutorial describes the processing of mouse EEG data. It deals with preprocessing, computing ERPs, time-frequency analysis, and visualization of channel-level data. Furthermore, it deals with reading and processing anatomical data, the coregistration with EEG electrodes, and the construction of a volume conduction model and source model. Finally, the EEG data is source reconstructed.
 
 The method to record the mouse EEG as used in this tutorial is explained in this [video tutorial](http://www.jove.com/video/2562/high-density-eeg-recordings-freely-moving-mice-using-polyimide-based), which also points to information on optical stimulation of the mouse brain through an optical fiber. To learn how to process EEG data in more general, we suggest you check the tutorial on [Preprocessing of EEG data and computing ERPs](/tutorial/preprocessing_erp).
 
@@ -24,7 +24,7 @@ For optogenetic stimulation, we used a semiconductor laser (USA & BCL-040-445; 4
 
 {% include image src="/assets/img/tutorial/mouse_eeg/figure1.png" width="500" %}
 
-We mimicked peripheral sensation by direct optogenetic stimulation of S1, S2, M1 and sensory thalamus and concurrently recorded the frequency dependent responses (1, 10, 20, 30, 40 and 50 Hz) with a depth electrode in the region of the optode (i.e. S1, S2, M1 and thalamus). Furthermore, we recorded EEG on the surface of the skull using a high-density micro electrode array. We allocated two electrodes in the most anterior region as the reference and ground electrodes. The signals from the brain were recorded both by high-density micro electrode array (EEG = 38 channels, plus ground and reference, so 40 electrodeds) and as the local field potential (single channel). The EEG and LFP were acquired with an analog amplifier (Synamp, Neuroscan, USA) with a sampling frequency of 2000 Hz.
+We mimicked peripheral sensation by direct optogenetic stimulation of S1, S2, M1 and sensory thalamus and concurrently recorded the frequency dependent responses (1, 10, 20, 30, 40 and 50 Hz) with a depth electrode in the region of the optode (i.e. S1, S2, M1 and thalamus). Furthermore, we recorded EEG on the surface of the skull using a high-density micro electrode array. We allocated two electrodes in the most anterior region as the reference and ground electrodes. The signals from the brain were recorded both by high-density micro electrode array (EEG = 38 channels, plus ground and reference, so 40 electrodes) and as the local field potential (single channel). The EEG and LFP were acquired with an analog amplifier (Synamp, Neuroscan, USA) with a sampling frequency of 2000 Hz.
 
 ### The dataset used in this tutorial
 
@@ -62,7 +62,7 @@ The procedure consists of the following steps:
 
 ### Define trials
 
-Using **[ft_definetrial](/reference/ft_definetrial)** and **[ft_preprocessing](/reference/ft_preprocessing)** we define, read and preprocess the data segmentsof interest. Trials are specified by their begin and end sample in the data file and each trial has an offset that defines where the relative t=0 point (usually the point of the optogenetic stimulus-trigger) is for that trial.
+Using **[ft_definetrial](/reference/ft_definetrial)** and **[ft_preprocessing](/reference/ft_preprocessing)** we define, read and preprocess the data segments of interest. Trials are specified by their begin and end sample in the data file and each trial has an offset that defines where the relative t=0 point (usually the point of the optogenetic stimulus-trigger) is for that trial.
 
 We start with a visual inspection of the data.
 
@@ -72,7 +72,7 @@ We start with a visual inspection of the data.
     cfg.blocksize = 30; % show 30 seconds per page
     cfg = ft_databrowser(cfg);
 
-The dataset used here does not include digital trigger information. To record the timing of stimulation, an analog input channel 'HL1' was used to record TTL triggers. We use a customized function and the `cfg.trialfun='mousetrialfun'` option to define the segments. The trial function results in a `cfg.trl` Nx3 array that ccontains the begin- and endsample, and the trigger offset of each trial relative to the beginning of the raw data on disk.
+The dataset used here does not include digital trigger information. To record the timing of stimulation, an analog input channel 'HL1' was used to record TTL triggers. We use a customized function and the `cfg.trialfun='mousetrialfun'` option to define the segments. The trial function results in a `cfg.trl` Nx3 array that contains the begin- and endsample, and the trigger offset of each trial relative to the beginning of the raw data on disk.
 
     function trl = mousetrialfun(cfg)
 
@@ -314,7 +314,7 @@ FIXME insert figure (6 layout plot)
 
 If you think that some outlines (nose, eyes, head, whiskers and ears) are not necessary, you can pass without assigning any outline. Next step is zero point calibration for the bregma point. If you, however, use customized layout for single subject, you don't need to carry out next step.
 
-Coinsidering the mouse anatomy, the bregma point is located in the middle of the 4th layer of the anterior of the EEG array that it should be set (0, 0) because we follow the Paxinos coordinate system. To calibrate layout position, we just subtract the value of bregma on the layout that we constructed in the previous step.
+Considering the mouse anatomy, the bregma point is located in the middle of the 4th layer of the anterior of the EEG array that it should be set (0, 0) because we follow the Paxinos coordinate system. To calibrate layout position, we just subtract the value of bregma on the layout that we constructed in the previous step.
 
     bregma = [382, 280];
     layout.pos = layout.pos - repmat(bregma, size(layout.pos, 1), 1);
@@ -344,7 +344,7 @@ If you are satisfied with the result, you should save it to a MATLAB file. Howev
 
 ### Deal with differences in animal size
 
-The polyimide film from which the high-density EEG array is made is not strechable. Each mouse, however, has a different head size depending on its strain, age, weight and sex. To deal with the different sizes, we use the distance between bregma and lambda and a reference scale of 4.2 mm. If you have a smaller mouse, and consequently a relatively wider spaced EEG array for that specific mouse, you can scale the layout to accommodate this. The approach here to deal with differences in the mouse brain size is very comparable to the one adopted in the Talairach-Tournoux anatomical atlas of the human brain.
+The polyimide film from which the high-density EEG array is made is not strechable. Each mouse, however, has a different head size depending on its strain, age, weight and sex. To deal with the different sizes, we use a reference scale of 4.2 mm for the distance between bregma and lambda. If you have a smaller mouse, and consequently a relatively wider spaced EEG array for that specific mouse, you can scale the layout to accommodate this. The approach here to deal with differences in the mouse brain size is very comparable to the one adopted in the Talairach-Tournoux anatomical atlas of the human brain.
 
 For example for a mouse with a bregma-lambda distance of 3.8, you can do the following.
 
@@ -405,7 +405,7 @@ Rather than plotting all ERPs on top of each other, we can also plot them accord
 
 FIXME insert figure (9 timelock plot)
 
-When you specify `cfg.interactive = 'no'` you can use the MATLAB zoom buttons. With `cfg.interactive = 'yes'` the zoom buttonsd don't work properly, but you can make a selection of channels and click in the selection, which causes them to be averaged and displayed in a single plot. In the single plot, you can again make a selection of time, which is subsequently averaged (for all channels) and shown as the interpolated topographic distribution of the potential.
+When you specify `cfg.interactive = 'no'` you can use the MATLAB zoom buttons. With `cfg.interactive = 'yes'` the zoom buttons don't work properly, but you can make a selection of channels and click in the selection, which causes them to be averaged and displayed in a single plot. In the single plot, you can again make a selection of time, which is subsequently averaged (for all channels) and shown as the interpolated topographic distribution of the potential.
 
 FIXME insert figure (singleplot)
 
@@ -454,7 +454,7 @@ The results of the time-frequency analysis can be plotted with **[ft_multiplotTF
 FIXME insert figure (10 ft_multiplotTFR)
 FIXME insert figure (11 ft_topoplotTFR)
 
-Again with `cfg.interactive = 'yes'`, which is the default, you can select one or multiple channels, click on them and get an average TFR over those channels,. In that average you can make a time and frequency selection, click in it, and get a spatial topopgraphy of the relative power over all channels in that fime-frequency range.
+Again with `cfg.interactive = 'yes'`, which is the default, you can select one or multiple channels, click on them and get an average TFR over those channels,. In that average you can make a time and frequency selection, click in it, and get a spatial topopgraphy of the relative power over all channels in that time-frequency range.
 
 If you did not construct a layout, you can visualize the TFRs sequentially over all channels. An advantage of this is that in contrast to the previous figure, channel VMP is now also plotted. There is no location for that channel in the layout contained in the `mouse_layout.mat` file.
 
