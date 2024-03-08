@@ -405,6 +405,7 @@ DICOMs
 DICS
 DIPFIT
 DK
+DKT
 DKTatlas
 DL
 DLL
@@ -1430,6 +1431,7 @@ Oosterom
 OpenBCI
 OpenEEG
 OpenFMRI
+OpenScience
 OpenGL
 OpenMEEG
 OpenMP
@@ -1986,6 +1988,7 @@ VEOG
 VEP
 VER
 VIS
+VMP
 VNC
 VOC
 VORtech
