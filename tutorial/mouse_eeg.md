@@ -314,18 +314,18 @@ FIXME insert figure (6 layout plot)
 
 If you think that some outlines (nose, eyes, head, whiskers and ears) are not necessary, you can pass without assigning any outline. Next step is zero point calibration for the bregma point. If you, however, use customized layout for single subject, you don't need to carry out next step.
 
-Coinsidering the mouse anatomy, the bregma point is located in the middle of the 4th layer of the anterior of the EEG array that it should be set (0, 0) because we follow the Paxinos coordinate system. To calibrate layout position, we just subtract the value of bregma on acquired layout from previous step.
+Coinsidering the mouse anatomy, the bregma point is located in the middle of the 4th layer of the anterior of the EEG array that it should be set (0, 0) because we follow the Paxinos coordinate system. To calibrate layout position, we just subtract the value of bregma on the layout that we constructed in the previous step.
 
     bregma = [382, 280];
-    layout.pos = layout.pos – repmat(bregma, size(layout.pos, 1), 1);
+    layout.pos = layout.pos - repmat(bregma, size(layout.pos, 1), 1);
     for i=1:numel(layout.outline)
-      layout.outline{i}= layout.outline{i} - repmat(bregma, size(layout.outline{1, i}, 1), 1);
+      layout.outline{i} = layout.outline{i} - repmat(bregma, size(layout.outline{1, i}, 1), 1);
     end
     for i=1:numel(layout.mask)
-      layout.mask{i}= layout.mask{i} - repmat(bregma, size(layout.mask{1, i}, 1), 1);
+      layout.mask{i} = layout.mask{i} - repmat(bregma, size(layout.mask{1, i}, 1), 1);
     end
 
-To confirm your calibration,
+We plot it to confirm the calibration.
 
     figure
     ft_plot_layout(layout)
@@ -334,7 +334,7 @@ To confirm your calibration,
 
 FIXME insert figure (7 layout plot)
 
-If you are satisfy with the result, you should save it to a MATLAB file. However, in the case of this specific tutorial you probably don't want to overwrite the mat file that you downloaded, but rather read it from disk and inspect it with **[ft_plot_layout](/reference/plotting/ft_plot_layout)**.
+If you are satisfied with the result, you should save it to a MATLAB file. However, in the case of this specific tutorial you probably don't want to overwrite the mat file that you have downloaded, but rather want to read that from disk and inspect it with **[ft_plot_layout](/reference/plotting/ft_plot_layout)**.
 
     if false
       save mouse_layout.mat layout
@@ -344,7 +344,7 @@ If you are satisfy with the result, you should save it to a MATLAB file. However
 
 ### Deal with differences in animal size
 
-The polyimide fiml from which the EEG array is made is not strechable. Each mouse, however, has a different head size depending on its strain, age, weight and sex. To deal with the different sizes, we use the distance between bregma and lambda and a reference scale of 4.2 mm. If you have a smaller mouse, and consequently a relatively wider spaced EEG array for that specific mouse, you can scale the layout to accommodate this. The approach here to deal with differences in the mouse brain size are very comparable to those adopted in the Talairach-Tournoux anatomical atlas of the human brain.
+The polyimide film from which the high-density EEG array is made is not strechable. Each mouse, however, has a different head size depending on its strain, age, weight and sex. To deal with the different sizes, we use the distance between bregma and lambda and a reference scale of 4.2 mm. If you have a smaller mouse, and consequently a relatively wider spaced EEG array for that specific mouse, you can scale the layout to accommodate this. The approach here to deal with differences in the mouse brain size is very comparable to the one adopted in the Talairach-Tournoux anatomical atlas of the human brain.
 
 For example for a mouse with a bregma-lambda distance of 3.8, you can do the following.
 
@@ -353,7 +353,7 @@ For example for a mouse with a bregma-lambda distance of 3.8, you can do the fol
 
     ratio = 4.2/3.8; % the electrodes span a relatively larger part of the head on the smaller-sized animal
 
-    layout38.pos = layout42.pos; * ratio;
+    layout38.pos = layout42.pos * ratio;
     for i=1:numel(layout38.outline)
       layout38.outline{i} = layout42.outline{i} * ratio;
     end
@@ -370,7 +370,7 @@ Again, to confirm your calibration:
 
 {% include image src="/assets/img/tutorial/mouse_eeg/figure3.png" width="400" %}
 
-For human EEG it is convenient to make use of a single template for the electrode positions. Human EEG caps come in different sizes, for example ranging from 52 to 60 cm head circumference in 2cm steps, and those are also are slightly variable. This range of human EEG caps can therefore accommodate approximately a 15% difference in head circumference. For the mouse the electrode grids are however fixed dimensions, whereas the head sizes still differ.
+For the human EEG it is convenient to make use of a single [template](/template/layout) for the channel positions. Human EEG caps come in different sizes, for example ranging from 52 to 60 cm head circumference in 2cm steps, and those caps also are slightly strechable. The range of human EEG caps can therefore accommodate approximately a 15% difference in head circumference. For the mouse, the electrode grids are however fixed, whereas the head sizes still differ.
 
 For example, let's think about a case of targetting CA1 hippocampus which is (AP, ML, DV) = (-2, 1.5, -2) with respect to the bregma according to the mouse atlas. Each individual mouse has different brain size. What we do is to measure the length between bregma to lambda, and if the length is 3.9 mm, we multiply the target distance by `4.2/3.9 = 1.077`. Hence the stereotaxic target for CA1 would be (AP, ML, DV) = (-2.15, 1.62, -2.15). Since the accuracy of the stereotaxic is 0.1 mm, the actual target becomes be (-2.1, 1.6, -2.1).
 
@@ -435,7 +435,7 @@ The output of **[ft_freqanalysis](/reference/ft_freqanalysis)** is a structure w
              time: [-1 -0.9900 -0.9800 -0.9700 ... 2.9900 3.0000]
               cfg: [1x1 struct]
 
-The element `freq.powspctrm` contains the power for each of the 39 channels, for each of the 401 timepoints, and for each of the 25 frequencies (from 4 to 100 in 4Hz steps).
+The field `freq.powspctrm` contains the power for each of the 39 channels, for each of the 401 timepoints, and for each of the 25 frequencies (from 4 to 100 in 4Hz steps).
 
 The results of the time-frequency analysis can be plotted with **[ft_multiplotTFR](/reference/ft_multiplotTFR)** and **[ft_singleplotTFR](/reference/ft_singleplotTFR)**. To visualize the power changes due to stimulation and to compare the power over frequencies, we perform a normalization with respect to the baseline. By specifying `cfg.baselinetype = 'relchange'` we compute the relative change, which is the power minus the average power in the baseline, divided the average power in the baseline.
 
@@ -489,11 +489,11 @@ You can also explicitly visualize a TFR  for a specific channel.
 
 FIXME insert figure (13 ft_singleplotTFR with order)
 
-## Coregistration of anatomy and construction of volume conduction model
+## Anatomical processing and construction of the volume conduction model
 
 ### Reading and coregistring the anatomical data
 
-The anatomical MRI is obtained from http://brainatlas.mbi.ufl.edu.
+The anatomical MRI is originally obtained from <http://brainatlas.mbi.ufl.edu>, but is also available from our [download server](https://download.fieldtriptoolbox.org/tutorial/mouse_eeg/).
 
     mri = ft_read_mri('Num1_MinDef_M_Normal_age12_num10.hdr')
 
@@ -502,7 +502,7 @@ The anatomical MRI is obtained from http://brainatlas.mbi.ufl.edu.
 
 FIXME insert figure (13 ft_determine_coordsys)
 
-This gives a figure that shows the origin (white sphere), the x-, y-, and z-axes. We notice that the origin is not at Bregma, nor at the interaural point. This is inconsistent with the desired [coordinate system](/faq/coordsys#details_on_the_paxinos-franklin_mouse_coordinate_system), hence we have to realign the anatomical MRI.
+This gives a figure that shows the origin as a white sphere, the x-axis in red, the y-axis in green and the z-axis in blue (remember RGB). We notice that the origin is not at Bregma, nor at the interaural point. This is inconsistent with the desired [coordinate system](/faq/coordsys#details_on_the_paxinos-franklin_mouse_coordinate_system), hence we have to realign the anatomical MRI.
 
 #### Coregistration using high-level graphical function
 
@@ -514,10 +514,9 @@ We can use the **[ft_volumerealign](/reference/ft_volumerealign)** function to c
 
 FIXME insert figure (14 ft_volumerealign)
 
-The anatomical MRI is displayed in three orthogonal plots. You have to visually identify the fiducials and press "b" for bregma, "l" for lambda and "z" for a midsagittal point. Using "f" you can toggle the fiducials on and off. Once you are happy with their placement, you press "q" and the realigned mri is returned
+The anatomical MRI is displayed in three orthogonal plots. You have to visually identify the anatomical landmark location and press "b" for bregma, "l" for lambda and "z" for a midsagittal point. Using "f" you can toggle the landmarks or fiducials on and off. Once you are happy with their placement, you press "q" and the realigned mri is returned:
 
     mri_realigned =
-
                   dim: [256 256 512]
               anatomy: [256x256x512 double]
                   hdr: [1x1 struct]
@@ -547,7 +546,7 @@ and by clicking in the figure, we can determine the location of three landmarks,
     lambda      = [0 -5.0 2.0];
     midsagittal = [0.2 -0.7 -2.0];
 
-The **[ft_headcoordinates](/reference/utilities/ft_headcoordinates)** function provides the homogenous transformation matrix to rotate and translate the MRI into the Paxinos coordinate system
+The **[ft_headcoordinates](/reference/utilities/ft_headcoordinates)** function provides the homogenous transformation matrix to rotate and translate the MRI into the Paxinos coordinate system.
 
     head2paxinos = ft_headcoordinates(bregma, lambda, midsagittal, 'paxinos')
 
@@ -558,27 +557,29 @@ The **[ft_headcoordinates](/reference/utilities/ft_headcoordinates)** function p
         0.0256   -0.0000   -0.9997    3.8987
              0         0         0    1.0000
 
-We can apply this transformation to the MRI with
+We can apply this [homogenous transformation matrix](/faq/homogenous) to the MRI with
 
     vox2head    = mri.transform;
     vox2paxinos = head2paxinos * vox2head;
 
-    mri_realigned2           = mri;         % copy the original MRI
-    mri_realigned2.transform = vox2paxinos; % update the homogenous transformation matrix
+    mri_realigned           = mri;         % copy the original MRI
+    mri_realigned.transform = vox2paxinos; % update the homogenous transformation matrix
 
 It is useful to also explicitly specify the coordinate system in the anatomical MRI. It is used in **[ft_sourceplot](/reference/ft_sourceplot)** and various other functions to check whether various geometrical objects are expressed in the same coordinate system.
 
-    mri_realigned2.coordsys = 'paxinos';
+    mri_realigned.coordsys = 'paxinos';
 
 #### Correcting the units of the anatomical MRI
 
-Finally, we notice is that the units are off by a factor 10x. In the figure of **[ft_determine_coordsys](/reference/utilities/ft_determine_coordsys)**, the sphere at the origin, each thick line segment is by default 1 cm, and the axes are 15 cm long, as that is appropriate for judging the human anatomy. We can also plot it with
+Finally, we notice that the units are off by a factor 10x. Upon reading FieldTrip estimates the geometrical units and it expects that the object (the anatomical MRI in this case) that it reads corresponds to the size of a human head, whereas the mouse MRI is much smaller.
+
+In the figure of **[ft_determine_coordsys](/reference/utilities/ft_determine_coordsys)**, the sphere at the origin, and the distance between each thick line segment is by default 1 cm, and the axes are 15 cm long, as that is appropriate for judging the human anatomy.
 
 The units can be fixed by
 
     mri_realigned.unit = 'mm';
 
-After coregistration of the MRI with the Paxinos coordinate system, it is [convenient to reslice it](/faq/why_does_my_anatomical_mri_show_upside-down_when_plotting_it_with_ft_sourceplot), i.e. to interpolate the greyscale values on a 3-D grid that is nicely aligned with the cardinal axes.
+After coregistration of the MRI with the Paxinos coordinate system, it is [convenient to reslice it](/faq/why_does_my_anatomical_mri_show_upside-down_when_plotting_it_with_ft_sourceplot), i.e., to interpolate the greyscale values on a 3-D grid that is nicely aligned with the cardinal axes.
 
     cfg = [];
     cfg.xrange = [-6 6];
@@ -594,64 +595,67 @@ FIXME insert figure (16 ft_sourceplot)
 
 ### Reading and coregistring the anatomical atlas
 
-On <http://brainatlas.mbi.ufl.edu> there is also an anatomically labeled version of the same brain available. We can use this as anatomical atlas.
+On <http://brainatlas.mbi.ufl.edu> (and our download server) there is also an anatomically labeled version of the same brain available. We can use this as anatomical atlas.
 
     atlas = ft_read_atlas('Num1_MinDef_M_Normal_age12_num10Atlas.hdr')
 
 Since the original anatomical and labeled MRI are expressed in the same coordinate system, we can apply the same transformation to the atlas. Again, we also fix the units and specify the coordinate system.
-
-    atlas.transform = mri_realigned.transform;
-    atlas.unit      = mri_realigned.unit;
-    atlas.coordsys  = mri_realigned.coordsys;
+    
+    atlas_realigned           = atlas;
+    atlas_realigned.transform = mri_realigned.transform;
+    atlas_realigned.unit      = mri_realigned.unit;
+    atlas_realigned.coordsys  = mri_realigned.coordsys;
 
 We can visualise the atlas in the same way as the anatomical MRI.
 
     cfg = [];
-    cfg.anaparameter = 'brick0'; % use brick0 instead of anatomy
     ft_sourceplot(cfg, atlas);
 
 FIXME insert figure (17 ft_sourceplot)
 
-You can see (by clicking around) that it contains integer values. Each area with the same integer value is a single region. The name of the region is specified in
+You can see (by clicking around) that it contains integer values. Each area with the same integer value is a single region.
 
-    >> atlas.brick0label
+The MRI file does not include the labels of the different tissue types. We can fix this and manually assign the labels from this [paper](http://www.sciencedirect.com/science/article/pii/S0306452205007633#).
 
-    ans =
+      % rename "anatomy" into "tissue"
+      atlas_realigned.tissue = atlas_realigned.anatomy;
+      atlas_realigned = rmfield(atlas_realigned, 'anatomy');
 
-      Columns 1 through 14
-        'tissue 1'    'tissue 2'    'tissue 3'    'tissue 4'    'tissue 5'    'tissue 6'    'tissue 7'    'tissue 8'    'tissue 9'    'tissue 10'    'tissue 11'    'tissue 12'    'tissue 13'    'tissue 14'
-
-      Columns 15 through 20
-        'tissue 15'    'tissue 16'    'tissue 17'    'tissue 18'    'tissue 19'    'tissue 20'
-
-You see that the anatomical labels are not what you would expect. This is due to the anatomically labeled MRI file not specifying the correct labels. We can fix this and manually assign the labels from this [paper](http://www.sciencedirect.com/science/article/pii/S0306452205007633#).
-
-      atlas.brick0label = {'Hippocampus', 'External_capsule', 'Caudate_putamen',...
-        'Ant_commissure', 'Globus_pallidus', 'Internal_Capsule', 'Thalamus',...
-        'Cerebellum', 'Superior_colliculi', 'Ventricles', 'Hypothalamus',...
-        'Inferior_colliculi', 'Central_grey', 'Neocortex', 'Amygdala',...
-        'Olfactoryt_bulb', 'Brain_stem', 'Rest_of_Midbrain',...
-        'BasalForebrain_septum', 'Fimbria' };
+      % add a "tissuelabel" cell-array with the names
+      atlas_realigned.tissuelabel = {'Hippocampus', 'External_capsule', 'Caudate_putamen', ...
+        'Ant_commissure', 'Globus_pallidus', 'Internal_Capsule', 'Thalamus', ...
+        'Cerebellum', 'Superior_colliculi', 'Ventricles', 'Hypothalamus', ...
+        'Inferior_colliculi', 'Central_grey', 'Neocortex', 'Amygdala', ...
+        'Olfactoryt_bulb', 'Brain_stem', 'Rest_of_Midbrain', ...
+        'BasalForebrain_septum', 'Fimbria'};
 
 With the correct labels, we can use **[ft_sourceplot](/reference/ft_sourceplot)** to plot the anatomy and to show the corresponding atlas label by clicking on a location in the brain.
 
     cfg = [];
-    cfg.atlas = atlas;
+    cfg.atlas = atlas_realigned;
     ft_sourceplot(cfg, mri_resliced)
 
 FIXME insert figure (18 ft_sourceplot with atlas label)
 
-It is also possible to explore only the atlas itself, using the anatomical labels in the atlas.
+It is also possible to explore only the atlas itself, using the anatomical labels in the atlas. For that it is again convenient to reslice the atlas so that the voxels are aligned with the canonical axes. Note that we do **not** want to interpolate th evalues, since a voxel that happens to be in between tissue 1 and 2 cannot be assumed to correspond to tissue label 2.
 
     cfg = [];
-    cfg.atlas = atlas;
-    cfg.funparameter = 'brick0';
+    cfg.xrange = [-6 6];
+    cfg.yrange = [-8 1];
+    cfg.zrange = [-7 10];
+    cfg.resolution = 0.0470;
+    cfg.method = 'nearest'; % take the nearest value, do not interpolate
+    atlas_resliced = ft_volumereslice(cfg, atlas_realigned)
+
+    cfg = [];
+    cfg.atlas = atlas_resliced;
+    cfg.funparameter = 'tissue';
     cfg.funcolormap = 'lines';
-    ft_sourceplot(cfg, atlas)
+    ft_sourceplot(cfg, atlas_resliced)
 
 FIXME insert figure (19 ft_sourceplot with atlas label and color)
 
-### make segmentation of tissue inside skull
+### Make segmentation of the brain and skull
 
 We start with a histogram of the grey-scale values
 
@@ -668,31 +672,36 @@ Make a binary image of the brain
     combined = mri_resliced.skull + mri_resliced.brain;
     imagesc(combined(:,:,256))
 
-The skull shows up with integer value 1, the brain (which is fully enclosed in the skull) shows up with integer value 2.
+The skull shows up with integer value 1 and the brain (which is fully enclosed in the skull) shows up with integer value 2.
 
 FIXME insert figure (20 image segmentation)
 
-### make mesh of brain-skull and skull-skin boundary
+### Make mesh of the brain-skull and skull-skin boundary
 
-This part describes how to make the volume conduction model for the source localization.
-In Previous section we did volume segmentation to extract brain and skull. Since we use In vitro MRI without skull, virtual skull was made by image dilation method from brain surface.
-To set up mesh objects, we use the **[ft_prepare_mesh](/reference/ft_prepare_mesh)** to get the triangulated meshes for skull and brain.
+This part describes how to make the volume conduction model for the source localization. In the previous section we performed a segmentation to extract the brain and skull. Since we use an in-vitro MRI without skull, a virtual skull was made from the brain surface by image dilation. To construct the surfaces of the boundaries, we use the **[ft_prepare_mesh](/reference/ft_prepare_mesh)** to get the triangulated meshes for skull and brain.
 
     cfg             = [];
     cfg.tissue      = {'skull', 'brain'};
     cfg.numvertices = [1500, 1500];
-    bnd             = ft_prepare_mesh(cfg, mri_resliced);
+    mesh            = ft_prepare_mesh(cfg, mri_resliced);
 
 FIXME insert figure (21 ft_prepare_mesh plot)
 
 We've been set limited number of vertices in **[ft_prepare_mesh](/reference/ft_prepare_mesh)**.
 Because [OpenMEEG](http://www-sop.inria.fr/athena/software/OpenMEEG/) could not support to bigger volume above around 1500 vertices.
 
-### make BEM volume conduction model
+### Make BEM volume conduction model
 
-After making up volume objects, we perform the **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)** for assigning the electrical property of volumes. From the literature in human study, the brain conductivity ranges from 0.12-0.48/Ω.m [1-3], and the human skull from 0.006-0.015/Ω.m [4,5] or even higher as 0.032-0.080/Ω.m [5]. According to another studies for the conductivity ratio between skull and brain, they reported numerical value with large variation the ranges from 25 to 80 times [6]. It is hard to specify the brain-to-skull conductivity ratio from these values with such large variations. In this step, we just assign conductivities applying to 80 times ratio between skull and brain.
+After making up volume objects, we perform the **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)** for assigning the electrical property of volumes. From the literature in human study, the brain conductivity ranges from 0.12-0.48/Ω.m [ref 1-3], and the human skull from 0.006-0.015/Ω.m [ref 4,5] or even higher as 0.032-0.080/Ω.m [ref 5]. According to another studies for the conductivity ratio between skull and brain, they reported numerical value with large variation the ranges from 25 to 80 times [ref 6]. It is hard to specify the brain-to-skull conductivity ratio from these values with such large variations. In this step, we just assign conductivities applying to 80 times ratio between skull and brain.
 
-[OpenMEEG](http://www-sop.inria.fr/athena/software/OpenMEEG/) is an external package that solves the forward problems. It implements a Boundary Element Method (BEM) and provides accurate solutions when dealing with realistic head models. As we mentioned above segmentation section, we are computing the two volume layers (skull and brain).
+1.  Nicholson, Paul W. "Specific impedance of cerebral white matter." Experimental neurology 13.4 (1965): 386-401.
+2.  Gonçalves, Sónia I., et al. "In vivo measurement of the brain and skull resistivities using an EIT-based method and realistic models for the head." Biomedical Engineering, IEEE Transactions on 50.6 (2003): 754-767.
+3.  Oostendorp, Thom F., Jean Delbeke, and Dick F. Stegeman. "The conductivity of the human skull: results of in vivo and in vitro measurements." Biomedical Engineering, IEEE Transactions on 47.11 (2000): 1487-1492.
+4.  Hoekema, R., et al. "Measurement of the conductivity of skull, temporarily removed during epilepsy surgery." Brain topography 16.1 (2003): 29-38.
+5.  Rush, S., and Daniel A. D. "Current distribution in the brain from surface electrodes." Anesthesia & Analgesia 47.6 (1968): 717-723.
+6.  Lai, Y., et al. "Estimation of in vivo human brain-to-skull conductivity ratio from simultaneous extra-and intra-cranial electrical potential recordings." Clinical neurophysiology 116.2 (2005): 456-465.
+
+[OpenMEEG](http://www-sop.inria.fr/athena/software/OpenMEEG/) is an external package that solves the forward problem. It implements a Boundary Element Method (BEM) and provides accurate solutions when dealing with realistic head models. As we mentioned above in the segmentation section, we are computing the BEM for two layers (brain and skull).
 
     bnd_in.bnd = bnd;
     bnd_in.conductivity = [0.33/80, 0.33];
@@ -712,184 +721,196 @@ After making up volume objects, we perform the **[ft_prepare_headmodel](/referen
                 unit: 'cm'
                  cfg: [1x1 struct]
 
----
-
-1.  Nicholson, Paul W. "Specific impedance of cerebral white matter." Experimental neurology 13.4 (1965): 386-401.
-2.  Gonçalves, Sónia I., et al. "In vivo measurement of the brain and skull resistivities using an EIT-based method and realistic models for the head." Biomedical Engineering, IEEE Transactions on 50.6 (2003): 754-767.
-3.  Oostendorp, Thom F., Jean Delbeke, and Dick F. Stegeman. "The conductivity of the human skull: results of in vivo and in vitro measurements." Biomedical Engineering, IEEE Transactions on 47.11 (2000): 1487-1492.
-4.  Hoekema, R., et al. "Measurement of the conductivity of skull, temporarily removed during epilepsy surgery." Brain topography 16.1 (2003): 29-38.
-5.  Rush, S., and Daniel A. D. "Current distribution in the brain from surface electrodes." Anesthesia & Analgesia 47.6 (1968): 717-723.
-6.  Lai, Y., et al. "Estimation of in vivo human brain-to-skull conductivity ratio from simultaneous extra-and intra-cranial electrical potential recordings." Clinical neurophysiology 116.2 (2005): 456-465.
-
 ## Specification of electrodes
 
-Now, we have the volume conduction model (vol) from MRI and the channel information (loc) for array electrode within different coordinate.
-This channel information is real distances of each electrode from middle of 4th layer (bregma point) in high-density electrode array.
+Now that we have the volume conduction model, we need to specify where the electrodes are relative to the head model. The electrode positions consist of real distances of each electrode to the middle of the 4th layer (bregma point).
 
-    loc = [-1.461  3.457  0.437357631
-    1.461  3.457  0.437357631
-    -1.461  2.396  0.328018223
-    1.461  2.396  0.328018223
-    -2.147  2.396  0.482915718
-    2.147  2.396  0.482915718
-    -1.461  1.131  0.23690205
-    1.461  1.131  0.23690205
-    -2.396  1.131  0.501138952
-    2.396  1.131  0.501138952
-    -1.71  0  0.264236902
-    1.71  0  0.264236902
-    -3.243  0  0.738041002
-    3.243  0  0.738041002
-    -1.559  -0.989  0.118451025
-    1.559  -0.989  0.118451025
-    -2.512  -0.989  0.291571754
-    2.512  -0.989  0.291571754
-    -3.51  -0.989  0.765375854
-    3.51  -0.989  0.765375854
-    -1.666  -2.254  0.027334852
-    1.666  -2.254  0.027334852
-    -2.673  -2.254  0.118451025
-    2.673  -2.254  0.118451025
-    -3.67  -2.254  0.61047836
-    3.67  -2.254  0.61047836
-    -1.684  -3.332  0.018223235
-    1.684  -3.332  0.018223235
-    -2.949  -3.332  0.346241458
-    2.949  -3.332  0.346241458
-    -4.009  -3.332  0.84738041
-    4.009  -3.332  0.84738041
-    -1.675  -4.695  0.291571754
-    1.675  -4.695  0.291571754
-    -2.619  -4.695  0.464692483
-    2.619  -4.695  0.464692483
-    -1.764  -5.702  0.4738041
-    1.764  -5.702  0.4738041];
+    loc = [
+      -1.461  3.457  0.437357631
+      1.461  3.457  0.437357631
+      -1.461  2.396  0.328018223
+      1.461  2.396  0.328018223
+      -2.147  2.396  0.482915718
+      2.147  2.396  0.482915718
+      -1.461  1.131  0.23690205
+      1.461  1.131  0.23690205
+      -2.396  1.131  0.501138952
+      2.396  1.131  0.501138952
+      -1.71  0  0.264236902
+      1.71  0  0.264236902
+      -3.243  0  0.738041002
+      3.243  0  0.738041002
+      -1.559  -0.989  0.118451025
+      1.559  -0.989  0.118451025
+      -2.512  -0.989  0.291571754
+      2.512  -0.989  0.291571754
+      -3.51  -0.989  0.765375854
+      3.51  -0.989  0.765375854
+      -1.666  -2.254  0.027334852
+      1.666  -2.254  0.027334852
+      -2.673  -2.254  0.118451025
+      2.673  -2.254  0.118451025
+      -3.67  -2.254  0.61047836
+      3.67  -2.254  0.61047836
+      -1.684  -3.332  0.018223235
+      1.684  -3.332  0.018223235
+      -2.949  -3.332  0.346241458
+      2.949  -3.332  0.346241458
+      -4.009  -3.332  0.84738041
+      4.009  -3.332  0.84738041
+      -1.675  -4.695  0.291571754
+      1.675  -4.695  0.291571754
+      -2.619  -4.695  0.464692483
+      2.619  -4.695  0.464692483
+      -1.764  -5.702  0.4738041
+      1.764  -5.702  0.4738041
+    ];
 
-If you want to confirm the alignment of between volumes and electrode, you can see the merged 3D figure using below simple code.
+To confirm the alignment between the headmodel and electrode positions, we make a 3D figure using the following code.
 
-    ft_plot_mesh(bnd(1), 'facecolor', 'skin', 'edgecolor', 'b'); hold on;
-    alpha 0.5; camlight;
-    plot3(loc(:, 1), loc(:, 2), loc(:, 3), '*g'); hold off;
+    ft_plot_mesh(mesh, 'facecolor', 'skin', 'edgecolor', 'b');
+    hold on
+    alpha 0.5
+    camlight
+    plot3(loc(:, 1), loc(:, 2), loc(:, 3), '*g');
+    hold off
 
 FIXME insert figure (22 plot_mesh with electrode)
 
-You see that this figure is not what you would expect. This is due to the electrode position is not specifying the correct coordinate. We can fix this and manually assign the correct angle.
+You see that the figure is not what you would expect. The electrode positions are not expressed in the correct coordinates. We can fix this manually.
 
-To coregistrate with them,
+We use the ft_headcoordinates function with the input variables bregma_middle, lambda_middle, and bregma_ventral.
 
-1.  use ft_headcoordinates function with input variables (bregma_middle, lambda_middle, and bregma_ventral).
-    The bregma_middle indicates the bregma point [0, 0, 0].
-    The lambda_middle indicates the lambda point [0, y, 0] aligned with anterio-parietal axis.
-    The bregma_ventral indicates inside direction of electrode array.
+- The bregma_middle indicates the bregma point [0, 0, 0].
+- The lambda_middle indicates the lambda point [0, y, 0] aligned with anterio-parietal axis.
+- The bregma_ventral indicates a location inside the brain compared to the electrode array.
 
-          bregma_middle      = mean(loc(11:12, :));
-          lambda_middle      = mean(loc([27 28 33 34], :));
-          bregma_ventral     = bregma_middle + [0 0 1];
+          bregma_middle  = mean(loc(11:12, :));
+          lambda_middle  = mean(loc([27 28 33 34], :));
+          bregma_ventral = bregma_middle + [0 0 1];
 
-          trans              = ft_headcoordinates(bregma_middle, lambda_middle, bregma_ventral, 'paxinos');
+          elec2head = ft_headcoordinates(bregma_middle, lambda_middle, bregma_ventral, 'paxinos');
 
-2.  apply transformation matrix to electrode position,
+Subsequently, we can apply the transformation matrix to the electrode position. We first organize the electrode positions in a MATLAB structure, in line with the FieldTrip [description of electrodes](/faq/how_are_electrodes_magnetometers_or_gradiometers_described).
 
-We can get homogeneous transformation matrix (trans). Next, we calculate coregistered matrix by ft_transform_sens.
-Input argument (loc_tmp) have to follow below format.
+    elec.elecpos  = loc;
+    elec.label = {
+        'FP1';'FP2';
+        'AF3';'AF4';'AF7';'AF8';...
+        'F1';'F2';'F5';'F6';
+        'FC1';'FC2';'FC5';'FC6';...
+        'C1';'C2';'C3';'C4';'C5';'C6';
+        'CP1';'CP2';'CP3';'CP4';'CP5';'CP6';...
+        'P1';'P2';'P3';'P4';'P5';'P6';
+        'PO3';'PO4';'PO7';'PO8';
+        'O1';'O2'
+      };
+    
+    % apply the transformation
+    elec = ft_transform_geometry(elec2head, elec);
+    
+    % remember the coordinate system that we assigned
+    elec.coordsys = 'paxinos';
 
-    loc_tmp.elecpos    = loc;
-    loc_tmp.label      = {'FP1';'FP2';'AF3';'AF4';'AF7';'AF8';...
-        'F1';'F2';'F5';'F6';'FC1';'FC2';'FC5';'FC6';...
-        'C1';'C2';'C3';'C4';'C5';'C6';'CP1';'CP2';'CP3';'CP4';'CP5';'CP6';...
-        'P1';'P2';'P3';'P4';'P5';'P6';'PO3';'PO4';'PO7';'PO8';'O1';'O2'};
-    [sens]             = ft_transform_sens(trans, loc_tmp);
+We check the result of co-registration between the headmodel and electrodes in a 3D figure.
 
-3.  verify co-registration
-    Then, we can get registered electrode position like below figur
-
-          sens.elecpos
-
-          ans =
-
-              1.4610   -0.0789   -3.4604
-             -1.4610   -0.0789   -3.4604
-              1.4610    0.0015   -2.3968
-             -1.4610    0.0015   -2.3968
-          ...
-
-If you want to check graphical result for co-registration of between volume and electrode.
-
-    ft_plot_mesh(bnd(1), 'facecolor', 'skin', 'edgecolor', 'b'); hold on;
-    ft_plot_sens(sens); hold off;
-    axis on; grid;
+    figure
+    ft_plot_mesh(mesh, 'facecolor', 'skin', 'edgecolor', 'b');
+    hold on
+    ft_plot_sens(elec);
+    hold off
+    axis on
+    grid
 
 FIXME insert figure (23 plot_mesh with electrode)
 
-Even after processing the co-registration, there could be have some gaps between electrode and skull surface. However, in the case of EEG in FieldTrip toolbox, the 3D electrode position is projected orthogonally onto the skull surface automatically.
+After the co-registration there are still some small gaps between the electrode positions and the skull surface. When computing the BEM solutions, FieldTrip will automaticall project the 3D electrode positions orthogonally onto the skull surfacey.
 
-### make leadfield matrix
+### Deal with differences in animal size
 
-The final procedure of the forward problem is to generate a leadfield that representing the linear relation between sourcemodel and measurements (Gain matrix).
-By using **[ft_prepare_leadfield](/reference/ft_prepare_leadfield)** we can get the matrices with respect to aligned electrode position and BEM meshes.
+Compared to human EEG, in the mouse EEG recordings the electrode grid does not scale along with the size of the animal. Consequently, the position of the electrodes relative to the brain depends on the head size. This affects the topographic plotting of channel level data, the comparison (group stats) of channel-level data from multiple animals, and the electrode positions and volume conduction model used for source reconstruction.
 
-    cfg                 = [];
-    cfg.elec            = ft_convert_units(sens, 'mm');
-    cfg.headmodel       = ft_convert_units(vol, 'mm');
-    cfg.reducerank      = 3;
-    cfg.normalize       = 'yes';
-    cfg.channel         = sens.label;
+The principled solution to this is that the experimentally measured lambda-bregma distance (or some other measure of head size) is used to scale the background image in the channel layout and to scale the volume conduction model of the head.
+
+The more pragmatic solution that we use here is to inverse-scale the electrodes and keep the head size constant. Effectively the result is the same, but it is easier to manage. Furthermore, it makes the source-level results directly comparable over animals.
+
+### Make the leadfields
+
+The final procedure of the forward problem is to generate the leadfield matrices that representing the linear relation between the dipole positoins in the sourcemodel and the predicted measurements on the electrodes. Sometimes this is also referred to as the gain matrix.
+
+
+With **[ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)** we place a grid of dipoles in the head model.
+
+    cfg            = [];
+    cfg.elec       = ft_convert_units(elec, 'mm');
+    cfg.headmodel  = ft_convert_units(headmodel, 'mm');
     cfg.xgrid      = -6:0.25:6;
     cfg.ygrid      = -8:0.25:1;
     cfg.zgrid      = -7:0.25:10;
     cfg.unit       = 'mm';
-    leadfieldM          = ft_prepare_leadfield(cfg);
+    sourcemodel    = ft_prepare_sourcemodel(cfg);
 
-    leadfieldM =
+
+With **[ft_prepare_leadfield](/reference/ft_prepare_leadfield)** we can get the matrices with respect to aligned electrode position and BEM meshes.
+
+    cfg                 = [];
+    cfg.sourcemodel     = sourcemodel;
+    cfg.elec            = ft_convert_units(elec, 'mm');
+    cfg.headmodel       = ft_convert_units(headmodel, 'mm');
+    cfg.reducerank      = 3;
+    cfg.normalize       = 'yes';
+    cfg.channel         = sens.label;
+    leadfield           = ft_prepare_leadfield(cfg);
+
+    leadfield =
 
             xgrid: [1x40 double]
             ygrid: [1x29 double]
             zgrid: [1x59 double]
               dim: [40 29 59]
               pos: [68440x3 double]
+        leadfield: {68440x1 cell}
+           inside: [68440x1 logical]
              unit: 'mm'
-           inside: [1x28155 double]
-          outside: [1x40285 double]
               cfg: [1x1 struct]
-        leadfield: {1x68440 cell}
 
 ## Calculating the cross spectral density matrix
 
-The beamforming technique is based on the spatial filter. [The DICS spatial filter](http://www.pnas.org/content/98/2/694.short) is derived from the frequency counterpart of the covariance matrix (the cross-spectral density matrix). This matrix contains the cross-spectral densities for all electrode combinations and is computed from the Fourier transformed data of the single trials. It is given as output when cfg.output = 'powandcsd'. The frequency of interest is 10 Hz and the smoothing window is +/-4 Hz:
+The [beamforming technique](/tutorial/beamformer) for EEG and MEG source reconstruction is based on a spatial filter. The [DICS spatial filter](http://www.pnas.org/content/98/2/694.short) is derived from the cross-spectral density matrix, which is the frequency-domain counterpart of the covariance matrix. This matrix contains the cross-spectral densities for all channel combinations and is computed from the Fourier transformed data of the single trials. It is given as output by **[ft_freqanalysis](/reference/ft_freqanalysis)** when `cfg.output = 'powandcsd'`.
 
-Before applying cross-spectral density matrix, the redefine of time interval and the channel selection will be carry out like below.
+Before computing the cross-spectral density matrix, we make subselections of the data in the pre-stimulus and post-stimulus intervals. We will use these later to make a contrast between the two conditions.
 
-    % data redefine and cross frequency analysis
+    % make selections in the data
     cfg          = [];
     cfg.toilim   = [-0.6 -0.1];
-    dataPre      = ft_redefinetrial(cfg, data_reref);
-    cfg          = [];
-    cfg.channel  = {'all', '-VPM', '-Sync', '-HL1'};
-    dataPre      = ft_preprocessing(cfg, dataPre);
+    cfg.channel  = {'all', '-VPM'};
+    dataPre      = ft_preprocessing(cfg, data_reref);
+    
     cfg          = [];
     cfg.toilim   = [0.1 0.6];
-    dataPost     = ft_redefinetrial(cfg, data);
-    cfg          = [];
-    cfg.channel  = {'all', '-VPM', '-Sync', '-HL1'};
-    dataPost     = ft_preprocessing(cfg, dataPost);
+    cfg.channel  = {'all', '-VPM'};
+    dataPost     = ft_redefinetrial(cfg, data_reref);
 
     cfg          = [];
-    cfg.method   = 'mtmfft';
-    cfg.output   = 'powandcsd';
-    cfg.tapsmofrq= 4;
-    cfg.foilim   = [10 10];
-    cfg.channel  = {'all'};
-    freqPre      = ft_freqanalysis(cfg, dataPre);
+    dataAll      = ft_appenddata(cfg, dataPre, dataPost);
 
-    cfg          = [];
-    cfg.method   = 'mtmfft';
-    cfg.output   = 'powandcsd';
-    cfg.tapsmofrq= 4;
-    cfg.foilim   = [10 10];
-    cfg.channel  = {'all'};
-    freqPost     = ft_freqanalysis(cfg, dataPost);
+The frequency of interest is 10 Hz and we use multitapering with a smoothing window of +/-4 Hz:
 
-    dataAll      = ft_appenddata([], dataPre, dataPost);
+    % compute the cross-spectral density
+    cfg           = [];
+    cfg.method    = 'mtmfft';
+    cfg.output    = 'powandcsd';
+    cfg.tapsmofrq = 4;
+    cfg.foilim    = [10 10];
+    freqPre       = ft_freqanalysis(cfg, dataPre);
+
+    cfg           = [];
+    cfg.method    = 'mtmfft';
+    cfg.output    = 'powandcsd';
+    cfg.tapsmofrq = 4;
+    cfg.foilim    = [10 10];
+    freqPost      = ft_freqanalysis(cfg, dataPost);
+
     cfg = [];
     cfg.method    = 'mtmfft';
     cfg.output    = 'powandcsd';
@@ -901,22 +922,23 @@ Before applying cross-spectral density matrix, the redefine of time interval and
 
 Using the covariance matrices and the leadfield matrices a spatial filtering is calculated and estimated the dipole intensity for each grid point. By applying the filter to the Fourier transformed data we can then estimate the power for neural activity by optogenetic stimuli (10 Hz). This results in a power estimate for each grid point. To get normalized index for the neural activity we have to do the spatial filtering both pre-stimulus and post-stimulus.
 
-    cfg                 = [];
-    cfg.elec            = ft_convert_units(sens, 'mm');
-    cfg.method          = 'dics';
-    cfg.frequency       = 10;
-    cfg.grid            = leadfieldM;
-    cfg.headmodel       = vol;
-    cfg.channel         = sens.label;
+    cfg                   = [];
+    cfg.elec              = ft_convert_units(elec, 'mm');
+    cfg.method            = 'dics';
+    cfg.frequency         = 10;
+    cfg.grid              = leadfield;
+    cfg.headmodel         = headmodel;
+    cfg.channel           = elec.label;
     cfg.dics.projectnoise = 'yes';
     cfg.dics.lambda       = '5%';
     cfg.dics.keepfilter   = 'yes';
     cfg.dics.realfilter   = 'yes';
-    sourceAll           = ft_sourceanalysis(cfg, freqAll);
+    sourceAll             = ft_sourceanalysis(cfg, freqAll);
 
-    cfg.sourcemodel.filter     = sourceAll.avg.filter;
-    sourcePre           = ft_sourceanalysis(cfg, freqPre );
-    sourcePost          = ft_sourceanalysis(cfg, freqPost);
+    % use the common filter approach to make a clean statistical contrast
+    cfg.sourcemodel.filter  = sourceAll.avg.filter;
+    sourcePre             = ft_sourceanalysis(cfg, freqPre);
+    sourcePost            = ft_sourceanalysis(cfg, freqPost);
 
 To calculate neural activity index is the same like below equation. The function **[ft_sourceinterpolate](/reference/ft_sourceinterpolate)** interpolates the source reconstructed activity or a statistical distribution onto the voxels or vertices of an anatomical description of the brain (MRI with atlas).
 
@@ -942,18 +964,10 @@ To calculate neural activity index is the same like below equation. The function
 
 FIXME insert figure (24 source localization by DICS -ortho view)
 
-## Dealing with differences in size
+## Suggested further reading
 
-Compared to human EEG, in the mouse EEG recordings the electrode grid does not scale along with the size of the animal. Consequently, the position of the electrodes relative to the brain depends on the head size. This affects the topographic plotting of channel level data, the comparison (group stats) of channel-level data from multiple animals, and the electrode positions and volume conduction model used for source reconstruction.
-
-The principled solution to this is that the experimentally measured lambda-bregma distance (or some other measure of head size) is used to scale the background image in the channel layout and to scale the volume conduction model of the head.
-
-An more pragmatic solution is to keep the head size the same, but rather to inverse-scale the electrodes and keep the head size constant. Effectively the result is the same, but it is easier to manage. Furthermore, it makes the source-level results directly comparable over animals.
-
-## Links to background material
-
-- video: http://www.jove.com/video/2562/high-density-eeg-recordings-freely-moving-mice-using-polyimide-based
-- mouse EEG PLoS ONE 2013: http://www.ncbi.nlm.nih.gov/pubmed/24244506
-- monkey ECoG: http://www.ncbi.nlm.nih.gov/pubmed/19436080
-- rat ECoG part 1: http://www.ncbi.nlm.nih.gov/pubmed/24820913
-- rat ECoG part 2: http://www.ncbi.nlm.nih.gov/pubmed/24814253
+- video that describes the high-density mouse EEG array: <http://www.jove.com/video/2562/high-density-eeg-recordings-freely-moving-mice-using-polyimide-based>
+- PLoS ONE (2013) paper about the mouse EEG source reconstruction: <http://www.ncbi.nlm.nih.gov/pubmed/24244506>
+- comparable monkey ECoG: <http://www.ncbi.nlm.nih.gov/pubmed/19436080>
+- comparable rat ECoG part 1: <http://www.ncbi.nlm.nih.gov/pubmed/24820913>
+- comparable rat ECoG part 2: <http://www.ncbi.nlm.nih.gov/pubmed/24814253>
