@@ -12,7 +12,7 @@ In general an atlas can be read with **[ft_read_atlas](/reference/fileio/ft_read
 You can find volumetric and surface-based atlases in the `fieldtrip/template/xxx` directory, with XXX referring to the specific template (e.g., "aal" or "afni").
 
 {% include markup/warning %}
-You can have a look at the template anatomical atlases and parcellation schemes [here on GitHub](https://github.com/fieldtrip/fieldtrip/tree/master/template/atlas). Furthermore, this page describes some atlasses that are released along with FreeSurfer and FSL.
+You can have a look at the template anatomical atlases and parcellation schemes [here on GitHub](https://github.com/fieldtrip/fieldtrip/tree/master/template/atlas). Furthermore, this page describes some atlases that are released along with FreeSurfer and FSL.
 {% include markup/end %}
 
 ## The AAL atlas
