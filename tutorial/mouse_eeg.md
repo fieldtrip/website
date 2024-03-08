@@ -10,7 +10,7 @@ This page is a draft tutorial that is not yet finished.
 
 ## Introduction
 
-This tutorial describes the processing of mouse EEG data. It deals with preprocessing, computing ERPs, time-frequency analysis, and visualization of channel-level data. Furtermore, it deals with reading and processing anatomical data, the coregistration with EEg electrodes, and the construction of a volume conduction model and source model. Finally, the EEG data is source reconstructed.
+This tutorial describes the processing of mouse EEG data. It deals with preprocessing, computing ERPs, time-frequency analysis, and visualization of channel-level data. Furthermore, it deals with reading and processing anatomical data, the coregistration with EEG electrodes, and the construction of a volume conduction model and source model. Finally, the EEG data is source reconstructed.
 
 The method to record the mouse EEG as used in this tutorial is explained in this [video tutorial](http://www.jove.com/video/2562/high-density-eeg-recordings-freely-moving-mice-using-polyimide-based), which also points to information on optical stimulation of the mouse brain through an optical fiber. To learn how to process EEG data in more general, we suggest you check the tutorial on [Preprocessing of EEG data and computing ERPs](/tutorial/preprocessing_erp).
 
@@ -24,7 +24,7 @@ For optogenetic stimulation, we used a semiconductor laser (USA & BCL-040-445; 4
 
 {% include image src="/assets/img/tutorial/mouse_eeg/figure1.png" width="500" %}
 
-We mimicked peripheral sensation by direct optogenetic stimulation of S1, S2, M1 and sensory thalamus and concurrently recorded the frequency dependent responses (1, 10, 20, 30, 40 and 50 Hz) with a depth electrode in the region of the optode (i.e. S1, S2, M1 and thalamus). Furthermore, we recorded EEG on the surface of the skull using a high-density micro electrode array. We allocated two electrodes in the most anterior region as the reference and ground electrodes. The signals from the brain were recorded both by high-density micro electrode array (EEG = 38 channels, plus ground and reference, so 40 electrodeds) and as the local field potential (single channel). The EEG and LFP were acquired with an analog amplifier (Synamp, Neuroscan, USA) with a sampling frequency of 2000 Hz.
+We mimicked peripheral sensation by direct optogenetic stimulation of S1, S2, M1 and sensory thalamus and concurrently recorded the frequency dependent responses (1, 10, 20, 30, 40 and 50 Hz) with a depth electrode in the region of the optode (i.e. S1, S2, M1 and thalamus). Furthermore, we recorded EEG on the surface of the skull using a high-density micro electrode array. We allocated two electrodes in the most anterior region as the reference and ground electrodes. The signals from the brain were recorded both by high-density micro electrode array (EEG = 38 channels, plus ground and reference, so 40 electrodes) and as the local field potential (single channel). The EEG and LFP were acquired with an analog amplifier (Synamp, Neuroscan, USA) with a sampling frequency of 2000 Hz.
 
 ### The dataset used in this tutorial
 
@@ -62,7 +62,7 @@ The procedure consists of the following steps:
 
 ### Define trials
 
-Using **[ft_definetrial](/reference/ft_definetrial)** and **[ft_preprocessing](/reference/ft_preprocessing)** we define, read and preprocess the data segmentsof interest. Trials are specified by their begin and end sample in the data file and each trial has an offset that defines where the relative t=0 point (usually the point of the optogenetic stimulus-trigger) is for that trial.
+Using **[ft_definetrial](/reference/ft_definetrial)** and **[ft_preprocessing](/reference/ft_preprocessing)** we define, read and preprocess the data segments of interest. Trials are specified by their begin and end sample in the data file and each trial has an offset that defines where the relative t=0 point (usually the point of the optogenetic stimulus-trigger) is for that trial.
 
 We start with a visual inspection of the data.
 
@@ -72,7 +72,7 @@ We start with a visual inspection of the data.
     cfg.blocksize = 30; % show 30 seconds per page
     cfg = ft_databrowser(cfg);
 
-The dataset used here does not include digital trigger information. To record the timing of stimulation, an analog input channel 'HL1' was used to record TTL triggers. We use a customized function and the `cfg.trialfun='mousetrialfun'` option to define the segments. The trial function results in a `cfg.trl` Nx3 array that ccontains the begin- and endsample, and the trigger offset of each trial relative to the beginning of the raw data on disk.
+The dataset used here does not include digital trigger information. To record the timing of stimulation, an analog input channel 'HL1' was used to record TTL triggers. We use a customized function and the `cfg.trialfun='mousetrialfun'` option to define the segments. The trial function results in a `cfg.trl` Nx3 array that contains the begin- and endsample, and the trigger offset of each trial relative to the beginning of the raw data on disk.
 
     function trl = mousetrialfun(cfg)
 
