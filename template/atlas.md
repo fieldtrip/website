@@ -79,9 +79,9 @@ Besides the 'v17' version, the 'v18' is also supported.
 
 ## FreeSurfer FsAverage
 
-We often use [FreeSurfer](https://surfer.nmr.mgh.harvard.edu/fswiki/FreeSurferWiki) to extract cortical sheets which we use as the basis for a [source model](/tutorial/sourcemodel) or for the projection of [ECoG electrodes](/tutorial/human_ecog). FreeSurfer also comes with atlasses (or cortical parcellations), which can be used to label the vertices of the individual's cortical sheet.
+We often use [FreeSurfer](https://surfer.nmr.mgh.harvard.edu/fswiki/FreeSurferWiki) to extract cortical sheets which we use as the basis for a [source model](/tutorial/sourcemodel) or for the projection of [ECoG electrodes](/tutorial/human_ecog). FreeSurfer also comes with atlases (or cortical parcellations), which can be used to label the vertices of the individual's cortical sheet.
 
-The FreeSurfer atlasses are quite large and therefore not copied into FieldTrip, but you may have them on your local computer. There are multiple [parcellations available](https://surfer.nmr.mgh.harvard.edu/fswiki/CorticalParcellation):
+The FreeSurfer atlases are quite large and therefore not copied into FieldTrip, but you may have them on your local computer. There are multiple [parcellations available](https://surfer.nmr.mgh.harvard.edu/fswiki/CorticalParcellation):
 
 - Desikan-Killiany Atlas (?h.aparc.annot)
 - Destrieux Atlas (?h.aparc.a2009s.annot)
@@ -111,9 +111,9 @@ You can read the FsAverage parcellations per hemisphere like this:
 
 Following the segmentation and meshing of your individual participant with [recon-all](https://surfer.nmr.mgh.harvard.edu/fswiki/recon-all), you can find a similar `surf` and `label` directory for your participant. Reading the individual parcellation with the anatomical labels is therefore similar to reading them from the fsaverage template.
 
-## FSL atlasses
+## FSL atlases
 
-The [FMRIB Software Library](https://fsl.fmrib.ox.ac.uk/fsl/fslwiki) (FSL) release comes with a number of [atlasses](https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/Atlases) that you can also read directly into FieldTrip.
+The [FMRIB Software Library](https://fsl.fmrib.ox.ac.uk/fsl/fslwiki) (FSL) release comes with a number of [atlases](https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/Atlases) that you can also read directly into FieldTrip.
 
     >> cd /opt/fsl/6.0.6/data/atlases  % or wherever your FSL is installed
     >> talairach = ft_read_atlas('Talairach.xml')
@@ -275,7 +275,7 @@ The atlas is described in:
 
 ## See also
 
-The **[ft_read_atlas](/reference/fileio/ft_read_atlas)** function can read geometrical information and anatomical labels from a variety of file formats, and can therefore also be used for other atlasses. You can find more atlases here:
+The **[ft_read_atlas](/reference/fileio/ft_read_atlas)** function can read geometrical information and anatomical labels from a variety of file formats, and can therefore also be used for other atlases. You can find more atlases here:
 - <https://www.loni.usc.edu/research/atlases>
 - <http://www.bmap.ucla.edu/portfolio/atlases>
 - <https://www.ebrains.eu/tools/human-brain-atlas>
