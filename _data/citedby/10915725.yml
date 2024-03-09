@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '38050773'
+- idtype: doi
+  value: 10.1002/hbm.26550
+- idtype: pmcid
+  value: PMC10915725
+authors:
+- authtype: Author
+  name: Dercksen TT
+- authtype: Author
+  name: Widmann A
+- authtype: Author
+  name: Noesselt T
+- authtype: Author
+  name: Wetzel N
+epubdate: 2023 Dec 5
+fulljournalname: Human Brain Mapping
+issue: '4'
+pages: e26550
+pmclivedate: 2024/03/06
+printpubdate: ''
+pubdate: 2023 Dec 5
+sortdate: 2023/12/05 00:00
+source: Hum Brain Mapp
+title: Somatosensory omissions reveal action‐related predictive processing
+uid: '10915725'
+volume: '45'
