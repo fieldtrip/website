@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '38443402'
+- idtype: doi
+  value: 10.1038/s41531-024-00669-3
+- idtype: pmcid
+  value: PMC10915140
+authors:
+- authtype: Author
+  name: Vinding MC
+- authtype: Author
+  name: Waldthaler J
+- authtype: Author
+  name: Eriksson A
+- authtype: Author
+  name: Manting CL
+- authtype: Author
+  name: Ferreira D
+- authtype: Author
+  name: Ingvar M
+- authtype: Author
+  name: Svenningsson P
+- authtype: Author
+  name: Lundqvist D
+epubdate: 2024 Mar 5
+fulljournalname: NPJ Parkinson's Disease
+issue: ''
+pages: '51'
+pmclivedate: 2024/03/06
+printpubdate: ''
+pubdate: 2024 Mar 5
+sortdate: 2024/03/05 00:00
+source: NPJ Parkinsons Dis
+title: Oscillatory and non-oscillatory features of the magnetoencephalic sensorimotor
+  rhythm in Parkinson’s disease
+uid: '10915140'
+volume: '10'
