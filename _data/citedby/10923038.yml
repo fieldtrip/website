@@ -1,0 +1,48 @@
+articleids:
+- idtype: pmid
+  value: '38301454'
+- idtype: doi
+  value: 10.1016/j.yebeh.2024.109659
+- idtype: pmcid
+  value: PMC10923038
+- idtype: MID
+  value: NIHMS1963720
+authors:
+- authtype: Author
+  name: Young JJ
+- authtype: Author
+  name: Chan AH
+- authtype: Author
+  name: Jette N
+- authtype: Author
+  name: Bender HA
+- authtype: Author
+  name: Saad AE
+- authtype: Author
+  name: Saez I
+- authtype: Author
+  name: Panov F
+- authtype: Author
+  name: Ghatan S
+- authtype: Author
+  name: Yoo JY
+- authtype: Author
+  name: Singh A
+- authtype: Author
+  name: Fields MC
+- authtype: Author
+  name: Marcuse LV
+- authtype: Author
+  name: Mayberg HS
+epubdate: 2024 Feb 1
+fulljournalname: 'Epilepsy & behavior : E&B'
+issue: ''
+pages: '109659'
+pmclivedate: ''
+printpubdate: 2024 Mar
+pubdate: 2024 Feb 1
+sortdate: 2024/02/01 00:00
+source: Epilepsy Behav
+title: Elevated Phase Amplitude Coupling as a Depression Biomarker in Epilepsy
+uid: '10923038'
+volume: '152'

@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '38366143'
+- idtype: doi
+  value: 10.1038/s41593-023-01550-x
+- idtype: pmcid
+  value: PMC10917673
+authors:
+- authtype: Author
+  name: Kunz L
+- authtype: Author
+  name: Staresina BP
+- authtype: Author
+  name: Reinacher PC
+- authtype: Author
+  name: Brandt A
+- authtype: Author
+  name: Guth TA
+- authtype: Author
+  name: Schulze-Bonhage A
+- authtype: Author
+  name: Jacobs J
+epubdate: 2024 Feb 16
+fulljournalname: Nature Neuroscience
+issue: '3'
+pages: 587-599
+pmclivedate: 2024/03/08
+printpubdate: '2024'
+pubdate: 2024 Feb 16
+sortdate: 2024/02/16 00:00
+source: Nat Neurosci
+title: Ripple-locked coactivity of stimulus-specific neurons and human associative
+  memory
+uid: '10917673'
+volume: '27'
