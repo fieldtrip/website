@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '38448446'
+- idtype: doi
+  value: 10.1038/s41598-024-55652-y
+- idtype: pmcid
+  value: PMC10917749
+authors:
+- authtype: Author
+  name: Dwivedi K
+- authtype: Author
+  name: Sadiya S
+- authtype: Author
+  name: Balode MP
+- authtype: Author
+  name: Roig G
+- authtype: Author
+  name: Cichy RM
+epubdate: 2024 Mar 6
+fulljournalname: Scientific Reports
+issue: ''
+pages: '5573'
+pmclivedate: 2024/03/07
+printpubdate: ''
+pubdate: 2024 Mar 6
+sortdate: 2024/03/06 00:00
+source: Sci Rep
+title: Visual features are processed before navigational affordances in the human
+  brain
+uid: '10917749'
+volume: '14'

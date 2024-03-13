@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '38199864'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0870-23.2023
+- idtype: pmcid
+  value: PMC10919203
+authors:
+- authtype: Author
+  name: Seijdel N
+- authtype: Author
+  name: Schoffelen JM
+- authtype: Author
+  name: Hagoort P
+- authtype: Author
+  name: Drijvers L
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '10'
+pages: e0870232023
+pmclivedate: ''
+printpubdate: 2024 Mar 6
+pubdate: 2024 Mar 6
+sortdate: 2024/03/06 00:00
+source: J Neurosci
+title: Attention Drives Visual Processing and Audiovisual Integration During Multimodal
+  Communication
+uid: '10919203'
+volume: '44'

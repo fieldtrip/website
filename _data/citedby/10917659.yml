@@ -1,0 +1,55 @@
+articleids:
+- idtype: pmid
+  value: '38238431'
+- idtype: doi
+  value: 10.1038/s41593-023-01554-7
+- idtype: pmcid
+  value: PMC10917659
+authors:
+- authtype: Author
+  name: Mendoza-Halliday D
+- authtype: Author
+  name: Major AJ
+- authtype: Author
+  name: Lee N
+- authtype: Author
+  name: Lichtenfeld MJ
+- authtype: Author
+  name: Carlson B
+- authtype: Author
+  name: Mitchell B
+- authtype: Author
+  name: Meng PD
+- authtype: Author
+  name: Xiong Y(
+- authtype: Author
+  name: Westerberg JA
+- authtype: Author
+  name: Jia X
+- authtype: Author
+  name: Johnston KD
+- authtype: Author
+  name: Selvanayagam J
+- authtype: Author
+  name: Everling S
+- authtype: Author
+  name: Maier A
+- authtype: Author
+  name: Desimone R
+- authtype: Author
+  name: Miller EK
+- authtype: Author
+  name: Bastos AM
+epubdate: 2024 Jan 18
+fulljournalname: Nature Neuroscience
+issue: '3'
+pages: 547-560
+pmclivedate: 2024/03/08
+printpubdate: '2024'
+pubdate: 2024 Jan 18
+sortdate: 2024/01/18 00:00
+source: Nat Neurosci
+title: A ubiquitous spectrolaminar motif of local field potential power across the
+  primate cortex
+uid: '10917659'
+volume: '27'
