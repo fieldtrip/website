@@ -124,8 +124,9 @@ CRITICAL STEP To correctly fuse the MRI and CT scans at a later step, accuracy i
     cfg.coordsys  = 'ctf';
     ct_ctf = ft_volumerealign(cfg, ct);
 
-**12**) Automatically convert the CT's coordinate system into an approximation of the ACPC coordinate system, the same system the anatomical MRI was aligned to.
+**12**) Automatically convert the CT's coordinate system into an approximation of the ACPC coordinate system, the same system the anatomical MRI was aligned to. The call to **[ft_hastoolbox](/reference/utilities/ft_hastoolbox)** ensures that the required SPM toolbox is on the path.
 
+    ft_hastoolbox('spm12', 1);
     ct_acpc = ft_convert_coordsys(ct_ctf, 'acpc');
 
 ### Fusion of the CT with the MRI
