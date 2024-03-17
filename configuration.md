@@ -1096,7 +1096,13 @@ A detailed description of each function is available in the [reference documenta
 **cfg.fiducial.ac** - [ft_volumerealign](/reference/ft_volumerealign)  
 
 
+**cfg.fiducial.bregma** - [ft_volumerealign](/reference/ft_volumerealign)  
+
+
 **cfg.fiducial.ini** - [ft_electrodeplacement](/reference/ft_electrodeplacement)  
+
+
+**cfg.fiducial.lambda** - [ft_volumerealign](/reference/ft_volumerealign)  
 
 
 **cfg.fiducial.lpa** - [ft_electrodeplacement](/reference/ft_electrodeplacement), [ft_meshrealign](/reference/ft_meshrealign), [ft_volumerealign](/reference/ft_volumerealign), [ft_volumewrite](/reference/ft_volumewrite)  
@@ -1112,6 +1118,9 @@ A detailed description of each function is available in the [reference documenta
 
 
 **cfg.fiducial.xzpoint** - [ft_volumerealign](/reference/ft_volumerealign)  
+
+
+**cfg.fiducial.yzpoint** - [ft_volumerealign](/reference/ft_volumerealign)  
 
 
 **cfg.fiducial.zpoint** - [ft_volumerealign](/reference/ft_volumerealign)  
