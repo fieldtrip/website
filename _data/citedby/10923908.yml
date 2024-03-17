@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '38459227'
+- idtype: doi
+  value: 10.1038/s42003-024-05947-7
+- idtype: pmcid
+  value: PMC10923908
+authors:
+- authtype: Author
+  name: Santamaria L
+- authtype: Author
+  name: Kashif I
+- authtype: Author
+  name: McGinley N
+- authtype: Author
+  name: Lewis PA
+epubdate: 2024 Mar 8
+fulljournalname: Communications Biology
+issue: ''
+pages: '288'
+pmclivedate: 2024/03/09
+printpubdate: ''
+pubdate: 2024 Mar 8
+sortdate: 2024/03/08 00:00
+source: Commun Biol
+title: Memory reactivation in slow wave sleep enhances relational learning in humans
+uid: '10923908'
+volume: '7'

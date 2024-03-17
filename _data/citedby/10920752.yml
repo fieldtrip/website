@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '38454047'
+- idtype: doi
+  value: 10.1038/s41598-024-56400-y
+- idtype: pmcid
+  value: PMC10920752
+authors:
+- authtype: Author
+  name: Ülkü S
+- authtype: Author
+  name: Getzmann S
+- authtype: Author
+  name: Wascher E
+- authtype: Author
+  name: Schneider D
+epubdate: 2024 Mar 7
+fulljournalname: Scientific Reports
+issue: ''
+pages: '5679'
+pmclivedate: 2024/03/08
+printpubdate: ''
+pubdate: 2024 Mar 7
+sortdate: 2024/03/07 00:00
+source: Sci Rep
+title: 'Be prepared for interruptions: EEG correlates of anticipation when dealing
+  with task interruptions and the role of aging'
+uid: '10920752'
+volume: '14'
