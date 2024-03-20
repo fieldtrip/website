@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '37691137'
+- idtype: doi
+  value: 10.1111/ejn.16140
+- idtype: pmcid
+  value: PMC10946728
+authors:
+- authtype: Author
+  name: Pomper U
+- authtype: Author
+  name: Curetti LZ
+- authtype: Author
+  name: Chait M
+epubdate: 2023 Sep 10
+fulljournalname: The European Journal of Neuroscience
+issue: '8'
+pages: 3859-3878
+pmclivedate: 2024/03/19
+printpubdate: 2023 Oct
+pubdate: 2023 Sep 10
+sortdate: 2023/09/10 00:00
+source: Eur J Neurosci
+title: Neural dynamics underlying successful auditory short‐term memory performance
+uid: '10946728'
+volume: '58'

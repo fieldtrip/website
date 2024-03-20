@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '38407185'
+- idtype: doi
+  value: 10.7554/eLife.91033
+- idtype: pmcid
+  value: PMC10942625
+authors:
+- authtype: Author
+  name: Grob AM
+- authtype: Author
+  name: Heinbockel H
+- authtype: Author
+  name: Milivojevic B
+- authtype: Author
+  name: Doeller CF
+- authtype: Author
+  name: Schwabe L
+epubdate: 2024 Feb 26
+fulljournalname: eLife
+issue: ''
+pages: RP91033
+pmclivedate: 2024/03/15
+printpubdate: ''
+pubdate: 2024 Feb 26
+sortdate: 2024/02/26 00:00
+source: eLife
+title: Causal role of the angular gyrus in insight-driven memory reconfiguration
+uid: '10942625'
+volume: '12'
