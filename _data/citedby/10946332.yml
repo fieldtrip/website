@@ -1,0 +1,47 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1016/j.isci.2024.109381
+- idtype: pmcid
+  value: PMC10946332
+authors:
+- authtype: Author
+  name: Sun Y
+- authtype: Author
+  name: Zhong M
+- authtype: Author
+  name: Xu N
+- authtype: Author
+  name: Zhang X
+- authtype: Author
+  name: Sun H
+- authtype: Author
+  name: Wang Y
+- authtype: Author
+  name: Lu Y
+- authtype: Author
+  name: Nie Y
+- authtype: Author
+  name: Li Q
+- authtype: Author
+  name: Sun Q
+- authtype: Author
+  name: Jiang J
+- authtype: Author
+  name: Tang YC
+- authtype: Author
+  name: Chang HC
+epubdate: 2024 Mar 1
+fulljournalname: iScience
+issue: '4'
+pages: '109381'
+pmclivedate: 2024/03/18
+printpubdate: ''
+pubdate: 2024 Mar 1
+sortdate: 2024/03/01 00:00
+source: iScience
+title: High-frequency neural activity dysregulation is associated with sleep and psychiatric
+  disorders in BMAL1-deficient animal models
+uid: '10946332'
+volume: '27'

@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '38486293'
+- idtype: doi
+  value: 10.1186/s12916-024-03341-y
+- idtype: pmcid
+  value: PMC10941423
+authors:
+- authtype: Author
+  name: Duville MM
+- authtype: Author
+  name: Alonso-Valerdi LM
+- authtype: Author
+  name: Ibarra-Zarate DI
+epubdate: 2024 Mar 14
+fulljournalname: BMC Medicine
+issue: ''
+pages: '121'
+pmclivedate: 2024/03/15
+printpubdate: ''
+pubdate: 2024 Mar 14
+sortdate: 2024/03/14 00:00
+source: BMC Med
+title: Improved emotion differentiation under reduced acoustic variability of speech
+  in autism
+uid: '10941423'
+volume: '22'
