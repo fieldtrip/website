@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '38505100'
+- idtype: doi
+  value: 10.3389/fnhum.2024.1358809
+- idtype: pmcid
+  value: PMC10949531
+authors:
+- authtype: Author
+  name: Reichert C
+- authtype: Author
+  name: Sweeney-Reed CM
+- authtype: Author
+  name: Hinrichs H
+- authtype: Author
+  name: Dürschmid S
+epubdate: 2024 Mar 4
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '1358809'
+pmclivedate: 2024/03/19
+printpubdate: ''
+pubdate: 2024 Mar 4
+sortdate: 2024/03/04 00:00
+source: Front Hum Neurosci
+title: A toolbox for decoding BCI commands based on event-related potentials
+uid: '10949531'
+volume: '18'

@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '38499615'
+- idtype: doi
+  value: 10.1038/s41598-024-56878-6
+- idtype: pmcid
+  value: PMC10948796
+authors:
+- authtype: Author
+  name: Safar K
+- authtype: Author
+  name: Vandewouw MM
+- authtype: Author
+  name: Sato J
+- authtype: Author
+  name: Devasagayam J
+- authtype: Author
+  name: Hill RM
+- authtype: Author
+  name: Rea M
+- authtype: Author
+  name: Brookes MJ
+- authtype: Author
+  name: Taylor MJ
+epubdate: 2024 Mar 18
+fulljournalname: Scientific Reports
+issue: ''
+pages: '6513'
+pmclivedate: 2024/03/19
+printpubdate: ''
+pubdate: 2024 Mar 18
+sortdate: 2024/03/18 00:00
+source: Sci Rep
+title: Using optically pumped magnetometers to replicate task-related responses in
+  next generation magnetoencephalography
+uid: '10948796'
+volume: '14'

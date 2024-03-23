@@ -1,0 +1,38 @@
+articleids:
+- idtype: pmid
+  value: '36527426'
+- idtype: doi
+  value: 10.1111/epi.17495
+- idtype: pmcid
+  value: PMC10952144
+authors:
+- authtype: Author
+  name: Macdonald‐Laurs E
+- authtype: Author
+  name: Warren AE
+- authtype: Author
+  name: Lee WS
+- authtype: Author
+  name: Yang JY
+- authtype: Author
+  name: MacGregor D
+- authtype: Author
+  name: Lockhart PJ
+- authtype: Author
+  name: Leventer RJ
+- authtype: Author
+  name: Neal A
+- authtype: Author
+  name: Harvey AS
+epubdate: 2022 Dec 27
+fulljournalname: Epilepsia
+issue: '2'
+pages: 348-363
+pmclivedate: 2024/03/21
+printpubdate: 2023 Feb
+pubdate: 2022 Dec 27
+sortdate: 2022/12/27 00:00
+source: Epilepsia
+title: Intrinsic and secondary epileptogenicity in focal cortical dysplasia type II
+uid: '10952144'
+volume: '64'

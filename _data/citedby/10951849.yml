@@ -1,0 +1,45 @@
+articleids:
+- idtype: pmid
+  value: '38433600'
+- idtype: doi
+  value: 10.1192/bjo.2024.17
+- idtype: pmcid
+  value: PMC10951849
+authors:
+- authtype: Author
+  name: Haaf M
+- authtype: Author
+  name: Polomac N
+- authtype: Author
+  name: Starcevic A
+- authtype: Author
+  name: Lack M
+- authtype: Author
+  name: Kellner S
+- authtype: Author
+  name: Dohrmann AL
+- authtype: Author
+  name: Fuger U
+- authtype: Author
+  name: Steinmann S
+- authtype: Author
+  name: Rauh J
+- authtype: Author
+  name: Nolte G
+- authtype: Author
+  name: Mulert C
+- authtype: Author
+  name: Leicht G
+epubdate: 2024 Mar 4
+fulljournalname: BJPsych Open
+issue: '2'
+pages: e58
+pmclivedate: 2024/03/20
+printpubdate: ''
+pubdate: 2024 Mar 4
+sortdate: 2024/03/04 00:00
+source: BJPsych Open
+title: Frontal theta oscillations during emotion regulation in people with borderline
+  personality disorder
+uid: '10951849'
+volume: '10'
