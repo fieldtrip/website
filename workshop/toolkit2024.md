@@ -24,10 +24,10 @@ FIXME this is still a tentative program that is subject to change. We will have 
 ### Monday May 27, 2024
 
 | 09:00-09:30 | Registration and coffee |
-| 09:30-10:00 | Welcome |
-| 10:00-11:00 | Introduction round |
+| 09:30-10:00 | Welcome and personal introduction round |
+| 10:00-11:00 | Introduction to EEG/MEG and introduction to the FieldTrip toolbox - lecture by Robert Oostenveld |
 | 11:00-11:15 | Coffee Break |
-| 11:15-12:30 | Introduction to EEG/MEG and introduction to the FieldTrip toolbox - lecture by Robert Oostenveld |
+| 11:15-12:30 | EEG, MEG and OPM lab demonstrations |
 | 12:30-13:30 | Lunch |
 | 13:30-15:45 | Pre-processing - [hands-on](/tutorial/eventrelatedaveraging) |
 | 15:45-16:00 | Tea Break |
@@ -36,11 +36,12 @@ FIXME this is still a tentative program that is subject to change. We will have 
 ### Tuesday May 28, 2024
 
 | 09:00-09:30 | Morning chill or workout |
-| 09:45-11:00 | Special interest lecture, infant EEG - the beauty and the beast of developmental EEG  - lecture by Marlene Meyer |
-| 11:00-11:15 | Coffee Break |
-| 11:15-12:30 | Time frequency analysis of power - lecture by Jan-Mathijs Schoffelen |
+| 09:45-10:45 | Time frequency analysis of power - lecture by Jan-Mathijs Schoffelen |
+| 10:45-11:00 | Coffee Break |
+| 11:00-12:30 | Time-frequency analysis of power - [hands-on](/tutorial/timefrequencyanalysis) |
 | 12:30-13:30 | Lunch |
-| 13:30-15:45 | Time-frequency analysis of power - [hands-on](/tutorial/timefrequencyanalysis) |
+| 13:30-14:30 | hands-on (continued) |
+| 14:30-15:45 | Forward and inverse - lecture by Robert |
 | 15:45-16:00 | Tea Break |
 | 16:00-17:30 | FieldTrip playground, apply your newly acquired knowledge and skills |
 | 18:30-22:00 | Drinks & dinner |
@@ -48,7 +49,7 @@ FIXME this is still a tentative program that is subject to change. We will have 
 ### Wednesday May 29, 2024
 
 | 09:00-09:30 | Morning chill or workout |
-| 09:45-11:00 | Forward and inverse - lecture by Robert |
+| 09:30-11:00 | Special interest lecture, infant EEG - the beauty and the beast of developmental EEG  - lecture by Marlene Meyer |
 | 11:00-11:15 | Coffee Break |
 | 11:15-12:30 | Source reconstruction using beamformers - lecture by Britta Westner |
 | 12:30-13:30 | Lunch |
@@ -59,7 +60,7 @@ FIXME this is still a tentative program that is subject to change. We will have 
 ### Thursday May 30, 2024
 
 | 09:00-09:30 | Morning chill or workout |
-| 09:45-11:00 | Connectivity analysis of MEG and EEG data - lecture by Jan-Mathijs |
+| 09:45-11:00 | Connectivity analysis of MEG and EEG data - lecture by Jan-Mathijs (TBD) |
 | 11:00-11:15 | Coffee Break |
 | 11:15-12:30 | Statistics using non-parametric randomization techniques - lecture by Robert |
 | 12:30-13:30 | Lunch |
