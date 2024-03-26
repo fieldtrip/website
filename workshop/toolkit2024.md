@@ -5,7 +5,7 @@ tags: [toolkit2024]
 
 # Advanced MEG/EEG toolkit at the Donders
 
-From May 27-31 2024 we will host our annual MEG/EEG Tool-kit course in Nijmegen. During this 5-day toolkit course we will teach you advanced MEG and EEG data analysis skills. Pre-processing, frequency analysis, source reconstruction, connectivity analysis and various statistical methods will be covered. Furthermore, we will give special attention to new opportunities in experimental design and measurements with Optically Pumped Magnetometer (OPM) systems and mobile EEG.
+From May 27-31 2024 we will host our annual MEG/EEG Tool-kit course in Nijmegen. During this 5-day toolkit course we will teach you advanced MEG and EEG data analysis skills. Pre-processing, frequency analysis, source reconstruction, analysis methods such as RSA and TRFs, and various statistical methods will be covered. Furthermore, we will give special attention to new opportunities in experimental design and measurements with Optically Pumped Magnetometer (OPM) systems and mobile EEG.
 
 The toolkit consists of a number of lectures, followed by hands-on sessions in which you will be tutored through the analysis of a MEG data set using the FieldTrip toolbox. Furthermore, we will schedule time for you to work on your own data under supervision of experienced tutors.
 
@@ -15,11 +15,11 @@ You can [pre-register here](https://www.ru.nl/en/donders-institute/agenda/donder
 
 We will inform you as to whether you obtained a place in this course not later than Thursday April 29, 2024.
 
-The fee for PhD students is € 550; and € 750 for senior researchers.
+The fee is €550 for PhD students and €750 for senior researchers. If your institute is based in a low/middle income country, you will also be able to request a discount.
 
 ## Program
 
-FIXME this is still a tentative program that is subject to change. We will have to fit the lab visits in, including a demonstration of the OPM system and of mobile EEG.
+Note that the tentative program below still might change a bit.
 
 ### Monday May 27, 2024
 
@@ -51,7 +51,7 @@ FIXME this is still a tentative program that is subject to change. We will have 
 | 09:00-09:30 | Morning chill or workout |
 | 09:30-11:00 | Special interest lecture, infant EEG - the beauty and the beast of developmental EEG  - lecture by Marlene Meyer |
 | 11:00-11:15 | Coffee Break |
-| 11:15-12:30 | Source reconstruction using beamformers - lecture by Britta Westner |
+| 11:15-12:30 | Source reconstruction using beamformers - lecture (TBD) |
 | 12:30-13:30 | Lunch |
 | 13:30-15:45 | Beamforming - [hands-on](/tutorial/beamformer) |
 | 15:45-16:00 | Tea Break |
@@ -60,7 +60,7 @@ FIXME this is still a tentative program that is subject to change. We will have 
 ### Thursday May 30, 2024
 
 | 09:00-09:30 | Morning chill or workout |
-| 09:45-11:00 | Connectivity analysis of MEG and EEG data - lecture by Jan-Mathijs (TBD) |
+| 09:45-11:00 | New methods for experimental design and analysis - lecture (TBD) |
 | 11:00-11:15 | Coffee Break |
 | 11:15-12:30 | Statistics using non-parametric randomization techniques - lecture by Robert |
 | 12:30-13:30 | Lunch |
