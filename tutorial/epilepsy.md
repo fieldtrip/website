@@ -195,7 +195,7 @@ and we use **[ft_volumereslice](/reference/ft_volumereslice)** to reslice the MR
 
 #### Importing and filtering the sensor level data
 
-The kurtosis beamformer is typically run within a bandpass filter (here 10-70 Hz) which excludes some physiological artifacts such as eye blinks or EMG that might affect the analysis, while preserving as much signal from the spikes as possible. At this point we assume that the clinician has already visually screened the raw data. The current dataset is pretty clean and free of artifacts.
+The kurtosis beamformer is typically run within a bandpass filter (here 10-70 Hz) which excludes some physiological artifacts such as eye blinks or EMG that might affect the analysis, while preserving as much signal from the spikes as possible. At this point we assume that the clinician has already visually screened the raw data. The current dataset is pretty clean and free of artifacts, apart from a big SQUID-jump that occurred around 50 seconds after the onset of the 2-minute recording. It is well known that the application of a filter to such a jump artifact leads to large amplitude filter ringing, with all kinds of potential consequences for the downstream analysis. Therefore, in the below, ideally we should have excluded the data segment that was affected by the SQUID-jump. However, for educational purposes, in the below we assume that the jump artifact did not affect the downstream analysis extensively, so that we don't get stuck with the somewhat more complicated data handling that is needed to deal with this in the downstream pipeline.
 
     dataset = fullfile(datadir, 'ctf', 'case3.ds');
 
@@ -209,7 +209,7 @@ The kurtosis beamformer is typically run within a bandpass filter (here 10-70 Hz
     cfg.coilaccuracy = 0; % ensure that sensors are expressed in SI units
     data = ft_preprocessing(cfg);
 
-In the following stage, we compute the data covariance matrix for the beamformer source reconstruction. We use the **[ft_timelockanalysis](/reference/ft_sourceanalysis)** function (more commonly used elsewhere to compute an average), and because we have not defined individual trials within the data it will produce the covariance matrix for the whole time period of the data.
+In the following stage, we compute the data covariance matrix for the beamformer source reconstruction. We use the **[ft_timelockanalysis](/reference/ft_timelockanalysis)** function (more commonly used elsewhere to compute an average across trials), but which can also be used to compute the covariance matrix. Unless otherwise specified in the ```cfg``` it will produce the covariance matrix for the whole time period of the data.
 
     cfg = [];
     cfg.channel = 'MEG';
