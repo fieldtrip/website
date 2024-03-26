@@ -112,7 +112,7 @@ jerks. She presented with difficulties in verbal comprehension and
 memory.
 
 Her MRI revealed right perisylvian polymicrogyria. Medication included
-Leviteracetum and Carbmazepine. Investigations were to consider epilepsy
+Leviteracetum and Carbamazepine. Investigations were to consider epilepsy
 surgery, though the extent of the polymicrogyria rendered this a difficult
 option.
 {% include markup/end %}
