@@ -19,3 +19,6 @@
 - name:  Analysis of monkey ECoG recordings
   link:  /tutorial/monkey_ecog
 
+- name:  Channel and source analysis of mouse EEG
+  link:  /tutorial/mouse_eeg
+
