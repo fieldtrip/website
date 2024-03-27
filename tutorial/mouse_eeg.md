@@ -989,7 +989,7 @@ The [beamforming technique](/tutorial/beamformer) that we also use for EEG and M
 
 ### Calculating the cross spectral density matrix
 
-Before computing the cross-spectral density matrix, we make subselections of the data in the pre-stimulus and post-stimulus intervals. We will use these later to make a contrast between the two conditions.
+Before computing the cross-spectral density matrix, we make a subselection of the data in the pre-stimulus and in the post-stimulus interval. We will use these later to make a contrast between the two conditions.
 
     % make selections in the data
     cfg          = [];
