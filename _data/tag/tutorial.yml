@@ -85,6 +85,9 @@
 - name:  Analysis of monkey ECoG recordings
   link:  /tutorial/monkey_ecog
 
+- name:  Channel and source analysis of mouse EEG
+  link:  /tutorial/mouse_eeg
+
 - name:  Classification of event-related MEG data using MVPA-Light
   link:  /tutorial/mvpa_light
 
