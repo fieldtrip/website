@@ -13,9 +13,9 @@ This tutorial makes use of the preprocessed data from the [preprocessing tutoria
 
 ## Background
 
-For a successful analysis of EEG or MEG signals, "clean" data is required. That means that you should try to reduce the amount of variance in the data due to factors that you cannot influence. One of the factors that is difficult to control is the presence of artifacts in the data. These artifact can be physiological, can relate to the behaviour of the subject, or can result from the acquisition electronics. The strongest physiological artifacts stem from eye blinks, eye movements and head movements. Muscle artifact from swallowing and neck contraction can be a problem as well. Artifacts related to the electronics are 'SQUID jumps' or spikes seen in several channels.
+For a successful analysis of EEG or MEG signals you want to have "clean" data. That means that you should try to reduce the variance in the data due to factors that you cannot influence. One of those factors is the presence of artifacts in the data. These artifact can be physiological, can relate to the behaviour of the subject, or can result from the acquisition electronics or environmental sources. The strongest physiological artifacts stem from eye blinks, eye movements and head movements. Muscle artifact from swallowing and neck contraction can be a problem as well. Artifacts related to the electronics are for example 'SQUID jumps' in MEG.
 
-To start with, it is best to avoid those artifacts during the recording. You can instruct the subject not to blink during the trial, but instead give him some well-defined time between the trials in which he is allowed to blink. But of course there will always be some artifacts in the raw data.
+In general it is best to avoid artifacts during the recording. You can instruct the subject not to blink during the trial, and instead give him some well-defined time between the trials in which he is allowed to blink. But of course there will always be some artifacts in the raw data.
 
 While detecting artifacts by visual inspection, keep in mind that it is a subjective decision to reject certain trials and keep other trials. Which type of artifacts should be rejected depends on the analysis you would like to do on the clean data. If you would like to do a time-frequency analysis of power in the gamma band it is important to reject all trials with muscle artifacts, but for a ERF analysis it is more important to reject trials with drifts and eye artifacts.
 
@@ -80,7 +80,7 @@ If you would like to keep track of which trials you reject, keep in mind that th
 
 ### Manual artifact rejection - display one channel at a time
 
-It can also be convenient to view data from one channel at a time. This can be particularly relevant for the EOG channel. To do so write:
+It can also be convenient to view data from one channel at a time. This can be particularly relevant for the EOG channel. To do so, write:
 
     cfg          = [];
     cfg.method   = 'channel';
@@ -95,7 +95,7 @@ Click through the data using the `>` button. While clicking through all the tria
 
 ### Manual artifact rejection - display a summary
 
-To produce an overview of the data choose the cfg.method 'summary
+To produce an overview of the data choose the cfg.method 'summary':
 
     cfg          = [];
     cfg.method   = 'summary';
@@ -194,17 +194,13 @@ An alternative way to remove artifacts is to page through the butterfly plots of
 
     % open the browser and page through the trials
     cfg = [];
-    artf = ft_databrowser(cfg, data_meg);
+    cfg = ft_databrowser(cfg, data_meg);
 
 In the image below are two figures for the same trial (trial 228). As in the left figure first drag the mouse on the artifact to create dotted lines on either side of the artifact (left image). Then, as in the right figure click within the dotted lines
 
 {% include image src="/assets/img/tutorial/visual_artifact_rejection/figure6.png" width="600" %}
 
-The resulting variable contains the field
-
-    artf.artfctdef.visual.artifact = [begsample endsample]
-
-with the begin and end sample for all marked sections.
+The resulting variable contains the field `cfg.artfctdef.visual.artifact` with an Nx2 matrix that represents the begin and end sample for each of the N marked sections. You can use **[ft_rejectartifact](/reference/ft_rejectartifact)** to reject the artifacts.
 
 ## Summary and conclusion
 
