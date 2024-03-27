@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '37769460'
+- idtype: doi
+  value: 10.1016/j.compbiomed.2023.107516
+- idtype: pmcid
+  value: PMC10955626
+- idtype: MID
+  value: NIHMS1936042
+authors:
+- authtype: Author
+  name: Lee S
+- authtype: Author
+  name: Shirinpour S
+- authtype: Author
+  name: Alekseichuk I
+- authtype: Author
+  name: Perera N
+- authtype: Author
+  name: Linn G
+- authtype: Author
+  name: Schroeder CE
+- authtype: Author
+  name: Falchier AY
+- authtype: Author
+  name: Opitz A
+epubdate: 2023 Sep 20
+fulljournalname: Computers in biology and medicine
+issue: ''
+pages: '107516'
+pmclivedate: ''
+printpubdate: ''
+pubdate: 2023 Sep 20
+sortdate: 2023/09/20 00:00
+source: Comput Biol Med
+title: Predicting the phase distribution during multi-channel transcranial alternating
+  current stimulation in silico and in vivo
+uid: '10955626'
+volume: '166'

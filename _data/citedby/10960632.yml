@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '38413198'
+- idtype: doi
+  value: 10.1523/ENEURO.0337-23.2023
+- idtype: pmcid
+  value: PMC10960632
+authors:
+- authtype: Author
+  name: Pauley C
+- authtype: Author
+  name: Karlsson A
+- authtype: Author
+  name: Sander MC
+epubdate: 2024 Mar 12
+fulljournalname: eNeuro
+issue: '3'
+pages: ENEURO.0337-23.2023
+pmclivedate: 2024/03/23
+printpubdate: ''
+pubdate: 2024 Mar 12
+sortdate: 2024/03/12 00:00
+source: eNeuro
+title: Early Visual Cortices Reveal Interrelated Item and Category Representations
+  in Aging
+uid: '10960632'
+volume: '11'

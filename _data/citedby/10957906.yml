@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '38514713'
+- idtype: doi
+  value: 10.1038/s41598-024-57426-y
+- idtype: pmcid
+  value: PMC10957906
+authors:
+- authtype: Author
+  name: Momenian M
+- authtype: Author
+  name: Vaghefi M
+- authtype: Author
+  name: Sadeghi H
+- authtype: Author
+  name: Momtazi S
+- authtype: Author
+  name: Meyer L
+epubdate: 2024 Mar 21
+fulljournalname: Scientific Reports
+issue: ''
+pages: '6818'
+pmclivedate: 2024/03/22
+printpubdate: ''
+pubdate: 2024 Mar 21
+sortdate: 2024/03/21 00:00
+source: Sci Rep
+title: 'Language prediction in monolingual and bilingual speakers: an EEG study'
+uid: '10957906'
+volume: '14'
