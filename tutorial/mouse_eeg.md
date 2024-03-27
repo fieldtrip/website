@@ -267,7 +267,7 @@ If you have selected visual artifacts, the output `cfg` of **[ft_databrowser](/r
 
 ### Rereferencing
 
-The two most frontal electrodes in the grid, just anterior of the Fp1 and the Fp2 electrode, were used durig the recording as the ground and reference. For the subsequent analyses we rereference the data to a common average over all electrodes.
+The two most frontal electrodes in the grid, just anterior of the Fp1 and the Fp2 electrode, were used during the recording as the ground and reference. For the subsequent analyses we rereference the data to a common average over all electrodes.
 
     cfg            = [];
     cfg.reref      = 'yes';
@@ -299,7 +299,7 @@ You can compare the original and re-referenced data using **[ft_databrowser](/re
     ft_databrowser(cfg, data_reref);
 
 {% include image src="/assets/img/tutorial/mouse_eeg/figure7.png" width="500" %}
-_Figure: Single trial in ft_databrowser after re-rerefencing._
+_Figure: Single trial in ft_databrowser after re-referencing._
 
 ### Making a channel layout for plotting
 
@@ -314,7 +314,7 @@ For the layout of the EEG array, we start with a photo of the electrode arrangem
 
 You can specify `cfg.image` in **[ft_prepare_layout](/reference/ft_prepare_layout)** and subsequently click on the location of each electrode. Note that you should click on the electrode positions in the right order and that you should skip the two most frontal electrodes, as those are the ground and reference and don't have a corresponding channel.
 
-After specifying each electrode location, you'll be asked to specify points that - when connected - form the outlines of the head. In human EEG the we would use a circle around the head as the outline, here we draw the eyes, the ears, and the nose with some wiskers. Furthermore we add lines representing other important landmarks that help to orient: in this case bregma and lambda. Besides the bold lines that specify the outline, we specify a mask for the topographic interpolation (dashed line).
+After specifying each electrode location, you'll be asked to specify points that - when connected - form the outlines of the head. In human EEG the we would use a circle around the head as the outline, here we draw the eyes, the ears, and the nose with some whiskers. Furthermore we add lines representing other important landmarks that help to orient: in this case bregma and lambda. Besides the bold lines that specify the outline, we specify a mask for the topographic interpolation (dashed line).
 
     cfg          = [];
     cfg.image    = 'mouse_skull_with_HDEEG.png';
@@ -324,7 +324,7 @@ After specifying each electrode location, you'll be asked to specify points that
 {% include image src="/assets/img/tutorial/mouse_eeg/figure9.png" width="500" %}
 _Figure: The background image in ft_prepare_layout._
 
-For the purpose of this tutorial, making precise and detailled outlines of the eyes, nose, whiskers and ears are not necessary, but you should try to understand how you can add them and how they are represented in the `layout` structure.
+For the purpose of this tutorial, making precise and detailed outlines of the eyes, nose, whiskers and ears are not necessary, but you should try to understand how you can add them and how they are represented in the `layout` structure.
 
 After creating the layout, you should check that all channel labels match with the corresponding position. The channel order in `layout.label` should correspond to the sequence in which you clicked the electrodes. You will see that placeholders have been added for the comments (COMNT) and the scale (SCALE). You can repeatedly call **[ft_plot_layout](/reference/plotting/ft_plot_layout)** for a visual inspection of the layout. Furthermore, you can add the original image as the background.
 
@@ -344,7 +344,7 @@ A stereotactic ruler was used to determine the size of the specific mouse depict
     bregma = [343 252];
     lambda = [343 130];
 
-To make a calibrated layout in milimeter that matches the actual animal size, we want to get the bregma point precisely at the origin (0,0). We subtract the position of the bregma in the image from the position of all electrodes, outlines and masks. We furthermore want the distance between bregma and lambda to be 4.2 mm, hence we scale all positions by the ratio between the distance in pixels and milimeters.
+To make a calibrated layout in millimeters that matches the actual animal size, we want to get the bregma point precisely at the origin (0,0). We subtract the position of the bregma in the image from the position of all electrodes, outlines and masks. We furthermore want the distance between bregma and lambda to be 4.2 mm, hence we scale all positions by the ratio between the distance in pixels and millimeters.
 
     layout_mm = layout_pixels;
 
@@ -392,9 +392,9 @@ If you are satisfied with the result, you should save it to a MATLAB file. Howev
 
 ### Deal with differences in animal size
 
-Human heads differ in size, but the EEG caps also come in different sizes, for example ranging from 52 to 60 cm head circumference in 2cm steps. Furthermore, those EEG caps are slightly strechable to have a tight but comfortable fit and to deal with the 2 cm range of the confection sizes. For the channel level plotting of human EEG we can therefore conveniently make use of [template layouts](/template/layout) that are the same for all participants.
+Human heads differ in size, but the EEG caps also come in different sizes, for example ranging from 52 to 60 cm head circumference in 2cm steps. Furthermore, those EEG caps are slightly stretchable to have a tight but comfortable fit and to deal with the 2 cm range of the confection sizes. For the channel level plotting of human EEG we can therefore conveniently make use of [template layouts](/template/layout) that are the same for all participants.
 
-The polyimide film from which the high-density mouse EEG array is made is not strechable. Each mouse, however, has a different head size depending on its strain, age, weight and sex. To deal with the different sizes, we use a reference scale of 4.2 mm for the distance between bregma and lambda. If you have a smaller mouse, and consequently a _relatively_ wider spaced EEG array for that specific mouse, you can scale the layout to accommodate this. The approach here to deal with differences in the mouse brain size is very comparable to the one adopted in the Talairach-Tournoux anatomical atlas of the human brain.
+The polyimide film from which the high-density mouse EEG array is made is not stretchable. Each mouse, however, has a different head size depending on its strain, age, weight and sex. To deal with the different sizes, we use a reference scale of 4.2 mm for the distance between bregma and lambda. If you have a smaller mouse, and consequently a _relatively_ wider spaced EEG array for that specific mouse, you can scale the layout to accommodate this. The approach here to deal with differences in the mouse brain size is very comparable to the one adopted in the Talairach-Tournoux anatomical atlas of the human brain.
 
 For example, let's think about a case of targetting CA1 hippocampus which is (AP, ML, DV) = (-2, 1.5, -2) with respect to the bregma according to the mouse atlas. Each individual mouse has a different brain size. What we do is to measure the length between bregma to lambda, and if the length is 3.8 mm, we multiply the target distance by `38/42 = 0.9048`. Hence the stereotaxic target for CA1 becomes (AP, ML, DV) = (-1.8095, 1.3571, -1.8095) and since the accuracy of the stereotaxic is 0.1 mm, the actual target becomes (-1.8, 1.4, -1.8). Note that some mouse research groups rescale only anterior posterior (AP) and according to them the target coordinate would be (-1.8, 1.5, -2).
 
@@ -624,7 +624,7 @@ We can check the coordinate axes once more. Besides printing the axis labels for
 {% include image src="/assets/img/tutorial/mouse_eeg/figure24.png" width="500" %}
 _Figure: check the Paxinos coordinate system._
 
-#### ... by specfying landmarks
+#### ... by specifying landmarks
 
 We can also explicitly determine the location of three landmarks (expressed in the original coordinate system) using **[ft_sourceplot](/reference/ft_sourceplot)** and write them down.
 
@@ -722,7 +722,7 @@ With the correct labels, we can use **[ft_sourceplot](/reference/ft_sourceplot)*
 {% include image src="/assets/img/tutorial/mouse_eeg/figure27.png" width="500" %}
 _Figure: resliced anatomical MRI, with the anatomical labels from the realigned atlas_
 
-It is also possible to explore only the atlas itself, using the anatomical labels in the atlas. For that it is again convenient to reslice the atlas so that the voxels are aligned with the canonical axes. Note that we do **not** want to interpolate th evalues, since a voxel that happens to be in between tissue 1 and 2 cannot be assumed to correspond to tissue label 2.
+It is also possible to explore only the atlas itself, using the anatomical labels in the atlas. For that it is again convenient to reslice the atlas so that the voxels are aligned with the canonical axes. Note that we do **not** want to interpolate the values, since a voxel that happens to be in between tissue 1 and 2 cannot be assumed to correspond to tissue label 2.
 
     cfg = [];
     cfg.xrange = [-6 6];
@@ -819,7 +819,7 @@ After making up volume objects, we perform the **[ft_prepare_headmodel](/referen
 
 ## Compute forward model
 
-Now that we have the volume conduction model, the final procedure of the forward problem is to generate the source model and the leadfield matrices. These leadfield matrixes are sometimes also referred to as the gain matrix. They represent the relation between the activity for each model dipole and the potential distribution at the electrodes.
+Now that we have the volume conduction model, the final procedure of the forward problem is to generate the source model and the leadfield matrices. These leadfield matrices are sometimes also referred to as the gain matrix. They represent the relation between the activity for each model dipole and the potential distribution at the electrodes.
 
 ### Specification of 3D electrode positions
 
@@ -961,7 +961,7 @@ With **[ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)** we construc
     cfg.unit       = 'mm';
     sourcemodel    = ft_prepare_sourcemodel(cfg);
 
-With **[ft_prepare_leadfield](/reference/ft_prepare_leadfield)** we can compute the leadfield matrices that specify the spatial topograpy on all EEG electrodes for each of the dipoles in the source model.
+With **[ft_prepare_leadfield](/reference/ft_prepare_leadfield)** we can compute the leadfield matrices that specify the spatial topography on all EEG electrodes for each of the dipoles in the source model.
 
     cfg                 = [];
     cfg.sourcemodel     = sourcemodel;
@@ -1006,7 +1006,7 @@ Before computing the cross-spectral density matrix, we make subselections of the
     cfg.keepsampleinfo = 'no';
     dataAll = ft_appenddata(cfg, dataPre, dataPost)
 
-The cross-spectrum is computed from the Fourier transformed data and returned as output by **[ft_freqanalysis](/reference/ft_freqanalysis)** when whe specify `cfg.output = 'powandcsd'`. The frequency of interest is 10 Hz and we use multitapering with a smoothing window of +/-4 Hz:
+The cross-spectrum is computed from the Fourier transformed data and returned as output by **[ft_freqanalysis](/reference/ft_freqanalysis)** when we specify `cfg.output = 'powandcsd'`. The frequency of interest is 10 Hz and we use multitapering with a smoothing window of +/-4 Hz:
 
     % compute the cross-spectral density
     cfg           = [];
