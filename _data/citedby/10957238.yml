@@ -1,0 +1,38 @@
+articleids:
+- idtype: pmid
+  value: '38516275'
+- idtype: doi
+  value: 10.1093/pnasnexus/pgae095
+- idtype: pmcid
+  value: PMC10957238
+authors:
+- authtype: Author
+  name: Faghel-Soubeyrand S
+- authtype: Author
+  name: Ramon M
+- authtype: Author
+  name: Bamps E
+- authtype: Author
+  name: Zoia M
+- authtype: Author
+  name: Woodhams J
+- authtype: Author
+  name: Richoz AR
+- authtype: Author
+  name: Caldara R
+- authtype: Author
+  name: Gosselin F
+- authtype: Author
+  name: Charest I
+epubdate: 2024 Mar 1
+fulljournalname: PNAS Nexus
+issue: '3'
+pages: pgae095
+pmclivedate: 2024/03/21
+printpubdate: ''
+pubdate: 2024 Mar 1
+sortdate: 2024/03/01 00:00
+source: PNAS Nexus
+title: Decoding face recognition abilities in the human brain
+uid: '10957238'
+volume: '3'
