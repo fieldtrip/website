@@ -744,7 +744,7 @@ _Figure: realigned and resliced anatomical atlas, including labels_
 
 ## Construction of the forward model
 
-Source reconstruction requires a forward model that allows us to compute the relation between the activity for each model dipole and the potential distribution at the electrodes. The forward model is hased on a geometrical model for the head, the conductive properties of the tissues, and the electrode positions. Furthermore, the sourcemodel specifies the locations at which we want to probe for the activity. If we have the headmodel, the sourcemodel and electrodes, we can compute the so-called leadfield matrices which are used for the source reconstruction.
+Source reconstruction requires a forward model that allows us to compute the relation between the activity for each model dipole and the potential distribution at the electrodes. The forward model is based on a geometrical model for the head, the conductive properties of the tissues, and the electrode positions. Furthermore, the sourcemodel specifies the locations at which we want to probe for the activity. If we have the headmodel, the sourcemodel and electrodes, we can compute the so-called leadfield matrices which are used for the source reconstruction.
 
 ### Make segmentation of the brain and skull
 
