@@ -49,12 +49,13 @@ The procedure consists of the following steps:
   - coregister it
   - read the atlas data
   - coregister it
+- prepare the headmodel
   - make segmentation of brain tissue
   - make mesh of boundaries
   - make BEM volume conduction model
-- make the source model and leadfields
   - specification of electrodes
   - deal with differences in animal size
+  - make the source model and leadfields
 - do source reconstruction
   - visualize source reconstruction
   - look up source results in atlas
@@ -741,7 +742,11 @@ It is also possible to explore only the atlas itself, using the anatomical label
 {% include image src="/assets/img/tutorial/mouse_eeg/figure28.png" width="500" %}
 _Figure: realigned and resliced anatomical atlas, including labels_
 
-### Make segmentation of the brain and skull
+## Construction of the forward model
+
+Source reconstruction requires a forward model that allows us to compute the relation between the activity for each model dipole and the potential distribution at the electrodes. The forward model is hased on a geometrical model for the head, the conductive properties of the tissues, and the electrode positions. Furthermore, the sourcemodel specifies the locations at which we want to probe for the activity. If we have the headmodel, the sourcemodel and electrodes, we can compute the so-called leadfield matrices which are used for the source reconstruction.
+
+## Make segmentation of the brain and skull
 
 We start with a histogram of the grey-scale values
 
@@ -799,13 +804,11 @@ After making up volume objects, we perform the **[ft_prepare_headmodel](/referen
 
 [OpenMEEG](http://www-sop.inria.fr/athena/software/OpenMEEG/) is an external package that solves the forward problem. It implements a Boundary Element Method (BEM) and provides accurate solutions when dealing with realistic head models. As we mentioned above in the segmentation section, we are computing the BEM for two layers (brain and skull).
 
-    bnd_in.bnd = bnd;
-    bnd_in.conductivity = [0.33/80, 0.33];
-
     cfg = [];
     cfg.tissue = {'skull', 'brain'};
+    cfg.conductivity = [0.33/80, 0.33];
     cfg.method = 'openmeeg';
-    headmodel = ft_prepare_headmodel(cfg, bnd_in);
+    headmodel = ft_prepare_headmodel(cfg, mesh);
 
     headmodel =
                  bnd: [1x2 struct]
@@ -816,10 +819,6 @@ After making up volume objects, we perform the **[ft_prepare_headmodel](/referen
                 type: 'openmeeg'
                 unit: 'cm'
                  cfg: [1x1 struct]
-
-## Compute forward model
-
-Now that we have the volume conduction model, the final procedure of the forward problem is to generate the source model and the leadfield matrices. These leadfield matrices are sometimes also referred to as the gain matrix. They represent the relation between the activity for each model dipole and the potential distribution at the electrodes.
 
 ### Specification of 3D electrode positions
 
@@ -882,8 +881,9 @@ _Figure: triangulated mesh of the skull with the electrodes, clearly not aligned
 You see that this is not what you would expect as the electrode positions are not aligned with the skull surface. This is because they are not expressed in the correct coordinates. We can fix this by specifying the known location of the anatomical landmarks. We again use the **[ft_headcoordinates](/reference/utilities/ft_headcoordinates)** function with the input variables `bregma`, `lambda`, and `midsagittal`.
 
 - The bregma point should be at at [0, 0, 0].
-- The lambda point should be at [0, y, 0] aligned with anterio-parietal axis.
+- The lambda point should be at [0, y, 0] aligned with the anterio-parietal axis.
 - The midsagittal point should be at a location inside the brain compared to the electrode array, so a little bit down.
+
 
     bregma      = mean(loc(11:12, :));
     lambda      = mean(loc([27 28 33 34], :));
@@ -948,7 +948,7 @@ The more pragmatic solution that we use here is to inverse-scale the electrodes 
 
 For this specific animal no further scaling is needed.
 
-## Make sourcemodel and leadfields
+### Make sourcemodel and leadfields
 
 With **[ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)** we construct a regular grid of dipoles that spans the complete brain.
 
@@ -969,7 +969,7 @@ With **[ft_prepare_leadfield](/reference/ft_prepare_leadfield)** we can compute 
     cfg.headmodel       = headmodel;
     cfg.reducerank      = 3;
     cfg.normalize       = 'yes';
-    cfg.channel         = elec.label;
+    cfg.channel         = elec_projected.label;
     leadfield           = ft_prepare_leadfield(cfg);
 
     leadfield =
