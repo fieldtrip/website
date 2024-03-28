@@ -1030,6 +1030,21 @@ The cross-spectrum is computed from the Fourier transformed data and returned as
     cfg.foilim    = [10 10];
     freqAll       = ft_freqanalysis(cfg, dataAll);
 
+To check the selected data and computations so far, we can compute and plot the difference between the power spectrum in the Post and Pre time windows as dB change using **[ft_math](/reference/ft_math)**. Note that for frequency data without time axis (as here) you should _not_ use **[ft_topoplotTFR](/reference/ft_topoplotTFR)** for plotting, but **[ft_topoplotER](/reference/ft_topoplotER)** (and idem for multiplot and singleplot).
+
+    cfg           = [];
+    cfg.parameter = 'powspctrm';
+    cfg.operation = '10*log10(x1/x2)'; % convert to dB difference
+    freqContrast  = ft_math(cfg, freqPost, freqPre);
+
+    cfg             = [];
+    cfg.layout      = 'layout42.mat'; % from disk
+    cfg.zlim        = 'maxabs';
+    cfg.showoutline = 'yes';
+    cfg.marker      = 'labels';
+    cfg.colorbar    = 'yes';
+    ft_topoplotER(cfg, freqContrast);
+
 Using the covariance matrices and the leadfield matrices, a spatial filtering is calculated and estimated the dipole intensity for each grid point. By applying the filter to the Fourier transformed data we can then estimate the power for neural activity by optogenetic stimuli (10 Hz). This results in a power estimate for each grid point. To get normalized index for the neural activity we have to do the spatial filtering both pre-stimulus and post-stimulus.
 
     cfg                   = [];
@@ -1060,7 +1075,7 @@ To calculate neural activity index is the same like below equation. The function
 
     cfg = [];
     cfg.parameter = 'pow';
-    cfg.operation = 'log10(x1/x2)';
+    cfg.operation = '10*log10(x1/x2)'; % convert to dB difference
     sourceDiff = ft_math(cfg, sourcePost, sourcePre);
     
     % copy the 'mm' over from the leadfield and sourcemodel structures
@@ -1082,7 +1097,7 @@ To calculate neural activity index is the same like below equation. The function
     ft_sourceplot(cfg, sourceDiffInt);
 
 {% include image src="/assets/img/tutorial/mouse_eeg/figure33.png" width="500" %}
-_Figure: contrast between the source reconstruction of the activity versus baseline_
+_Figure: source reconstruction, contrast of the activity versus baseline_
 
 ## Suggested further reading
 
