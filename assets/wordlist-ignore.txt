@@ -1415,6 +1415,7 @@ RSA
 TRFs
 appenddim
 appendsource
+biopac
 fieldname
 paxinos
 
