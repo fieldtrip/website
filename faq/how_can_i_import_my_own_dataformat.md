@@ -13,27 +13,31 @@ The first and preferred way of implementing a new data format is by extending th
 
 ## Using your own low-level reading functions when calling ft_read_header/data/event
 
-If you want to use ft_read_header/data/event for reading in your data, but your data format is very atypical and used only by your lab, it is preferred **not to add** the format to FieldTrip. However, there is a simple way you can still use your own reading functions: make your `read_xxx_header`, `read_xxx_data` and `read_xxx_event` functions, and be sure they are on the path. When calling for example **[ft_preprocessing](/reference/ft_preprocessing)**, you should specify the headerformat, dataformat and eventformat configuration options as the name of your specific function.
+If you want to use ft_read_header/data/event for reading in your data, but your data format is atypical and not widely used outside your lab, it is perfectly fine **not to add** the format to the FieldTrip code-base but to only share it inside your lab.
+
+There is a simple way you can use your own reading functions: make your own function `YourFormat.m`. When calling for example **[ft_preprocessing](/reference/ft_preprocessing)**, you should specify the name of your specific function as the 'headerformat', 'dataformat' and 'eventformat' option. This will result in your reading function being called under the hood.
 
 For example:
 
     cfg = [];
-    cfg.headerfile   = 'yourxxxfile'
-    cfg.headerformat = 'read_xxx_header'
-    cfg.datafile     = 'yourxxxfile'
-    cfg.dataformat   = 'read_xxx_data'
-    cfg.eventfile    = 'yourxxxfile'
-    cfg.eventformat  = 'read_xxx_event'
+    cfg.headerfile   = 'yourfile.ext'
+    cfg.headerformat = 'YourFormat'
+    cfg.datafile     = 'yourfile.ext'
+    cfg.dataformat   = 'YourFormat'
+    cfg.eventfile    = 'yourfile.ext'
+    cfg.eventformat  = 'YourFormat'
     ...
     data = ft_preprocessing(cfg)
 
-Keep in mind that your reading functions have to follow the following input/output format.  
+Your reading function has to use the following input/output format:
 
-    hdr   = read_xxx_header(filename)
-    dat   = read_xxx_data(filename, hdr, begsample, endsample, chanindx)
-    event = read_xxx_event(filename, hdr)
+    hdr   = YourFormat(filename)
+    dat   = YourFormat(filename, hdr, begsample, endsample, chanindx)
+    event = YourFormat(filename, hdr)
 
-See the help and the code of ft_read_header, ft_read_data and ft_read_event for the details of each of these variables.
+Depending on the number of input arguments that your function receives (1, 5 or 2), it should return the header, the data or the events.
+
+Please look at the help and expecially the code of **[ft_read_header](/reference/fileio/ft_read_header)**, **[ft_read_data](/reference/fileio/ft_read_data)** and **[ft_read_event](/reference/fileio/ft_read_event)** for the details of the implementation. Some examples of file formats implemented in FieldTrip using this approach are [biopac_acq.m](https://github.com/fieldtrip/fieldtrip/blob/master/fileio/private/biopac_acq.m), [snirf.m](https://github.com/fieldtrip/fieldtrip/blob/master/fileio/private/snirf.m), [motion_c3d.m](https://github.com/fieldtrip/fieldtrip/blob/master/fileio/private/motion_c3d.m), [qualisys_tsv.m](https://github.com/fieldtrip/fieldtrip/blob/master/fileio/private/qualisys_tsv.m), and [liberty_csv.m](https://github.com/fieldtrip/fieldtrip/blob/master/fileio/private/liberty_csv.m).
 
 ## Circumvent the FieldTrip reading functions
 
@@ -56,7 +60,7 @@ Each trial can have a different number of samples (i.e. variable length), that i
 
 If your data represents a continuous recording, you can also consider taking a simple two-step approach by first representing your data into _one long trial_ as described above, and then cutting it up into individual trials using **[ft_redefinetrial](/reference/ft_redefinetrial)**. Note also that if you want to add trial-specific information related to the short trials you cut out of the continuous representation, you need to create the trialinfo field only _after_ your call to ft_redefinetrial. If your data is a single continuous trial, you can simply call **[ft_redefinetrial](/reference/ft_redefinetrial)**, supplying a trial definition in the config, e.g.
 
-    cfg.trl = [1    100 -10;
+    cfg.trl = [  1  100 -10;
                101  200 -10;
                201  300 -10];
     newdata = ft_redefinetrial(cfg, data);
