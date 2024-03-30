@@ -1,0 +1,47 @@
+articleids:
+- idtype: pmid
+  value: '38531880'
+- idtype: doi
+  value: 10.1038/s41467-024-46013-4
+- idtype: pmcid
+  value: PMC10965949
+authors:
+- authtype: Author
+  name: Seidel Malkinson T
+- authtype: Author
+  name: Bayle DJ
+- authtype: Author
+  name: Kaufmann BC
+- authtype: Author
+  name: Liu J
+- authtype: Author
+  name: Bourgeois A
+- authtype: Author
+  name: Lehongre K
+- authtype: Author
+  name: Fernandez-Vidal S
+- authtype: Author
+  name: Navarro V
+- authtype: Author
+  name: Lambrecq V
+- authtype: Author
+  name: Adam C
+- authtype: Author
+  name: Margulies DS
+- authtype: Author
+  name: Sitt JD
+- authtype: Author
+  name: Bartolomeo P
+epubdate: 2024 Mar 26
+fulljournalname: Nature Communications
+issue: ''
+pages: '2586'
+pmclivedate: 2024/03/27
+printpubdate: ''
+pubdate: 2024 Mar 26
+sortdate: 2024/03/26 00:00
+source: Nat Commun
+title: Intracortical recordings reveal vision-to-action cortical gradients driving
+  human exogenous attention
+uid: '10965949'
+volume: '15'

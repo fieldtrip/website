@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '38534560'
+- idtype: doi
+  value: 10.3390/bioengineering11030286
+- idtype: pmcid
+  value: PMC10967870
+authors:
+- authtype: Author
+  name: Lin L
+- authtype: Author
+  name: Qing W
+- authtype: Author
+  name: Huang Y
+- authtype: Author
+  name: Ye F
+- authtype: Author
+  name: Rong W
+- authtype: Author
+  name: Li W
+- authtype: Author
+  name: Jiao J
+- authtype: Author
+  name: Hu X
+epubdate: 2024 Mar 17
+fulljournalname: Bioengineering
+issue: '3'
+pages: '286'
+pmclivedate: 2024/03/28
+printpubdate: ''
+pubdate: 2024 Mar 17
+sortdate: 2024/03/17 00:00
+source: Bioengineering (Basel)
+title: Comparison of Immediate Neuromodulatory Effects between Focal Vibratory and
+  Electrical Sensory Stimulations after Stroke
+uid: '10967870'
+volume: '11'

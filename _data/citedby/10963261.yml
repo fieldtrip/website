@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '38135734'
+- idtype: doi
+  value: 10.1038/s41562-023-01791-7
+- idtype: pmcid
+  value: PMC10963261
+authors:
+- authtype: Author
+  name: Blume C
+- authtype: Author
+  name: Cajochen C
+- authtype: Author
+  name: Schöllhorn I
+- authtype: Author
+  name: Slawik HC
+- authtype: Author
+  name: Spitschan M
+epubdate: 2023 Dec 22
+fulljournalname: Nature Human Behaviour
+issue: '3'
+pages: 590-605
+pmclivedate: 2024/03/27
+printpubdate: '2024'
+pubdate: 2023 Dec 22
+sortdate: 2023/12/22 00:00
+source: Nat Hum Behav
+title: Effects of calibrated blue–yellow changes in light on the human circadian clock
+uid: '10963261'
+volume: '8'
