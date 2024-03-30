@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '38545514'
+- idtype: doi
+  value: 10.3389/fnhum.2024.1359753
+- idtype: pmcid
+  value: PMC10965712
+authors:
+- authtype: Author
+  name: Luria G
+- authtype: Author
+  name: Viani A
+- authtype: Author
+  name: Pascarella A
+- authtype: Author
+  name: Bornfleth H
+- authtype: Author
+  name: Sommariva S
+- authtype: Author
+  name: Sorrentino A
+epubdate: 2024 Mar 13
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '1359753'
+pmclivedate: 2024/03/27
+printpubdate: ''
+pubdate: 2024 Mar 13
+sortdate: 2024/03/13 00:00
+source: Front Hum Neurosci
+title: 'The SESAMEEG package: a probabilistic tool for source localization and uncertainty
+  quantification in M/EEG'
+uid: '10965712'
+volume: '18'
