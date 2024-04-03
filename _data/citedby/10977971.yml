@@ -1,0 +1,44 @@
+articleids:
+- idtype: pmid
+  value: '38546337'
+- idtype: doi
+  value: 10.7554/eLife.91044
+- idtype: pmcid
+  value: PMC10977971
+authors:
+- authtype: Author
+  name: Kudo K
+- authtype: Author
+  name: Ranasinghe KG
+- authtype: Author
+  name: Morise H
+- authtype: Author
+  name: Syed F
+- authtype: Author
+  name: Sekihara K
+- authtype: Author
+  name: Rankin KP
+- authtype: Author
+  name: Miller BL
+- authtype: Author
+  name: Kramer JH
+- authtype: Author
+  name: Rabinovici GD
+- authtype: Author
+  name: Vossel K
+- authtype: Author
+  name: Kirsch HE
+- authtype: Author
+  name: Nagarajan SS
+epubdate: 2024 Mar 28
+fulljournalname: eLife
+issue: ''
+pages: RP91044
+pmclivedate: 2024/03/28
+printpubdate: ''
+pubdate: 2024 Mar 28
+sortdate: 2024/03/28 00:00
+source: eLife
+title: Neurophysiological trajectories in Alzheimer’s disease progression
+uid: '10977971'
+volume: '12'

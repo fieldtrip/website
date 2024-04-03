@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '38471778'
+- idtype: doi
+  value: 10.1523/ENEURO.0259-23.2024
+- idtype: pmcid
+  value: PMC10978822
+authors:
+- authtype: Author
+  name: Höhn C
+- authtype: Author
+  name: Hahn MA
+- authtype: Author
+  name: Lendner JD
+- authtype: Author
+  name: Hoedlmoser K
+epubdate: 2024 Mar 25
+fulljournalname: eNeuro
+issue: '3'
+pages: ENEURO.0259-23.2024
+pmclivedate: 2024/03/29
+printpubdate: ''
+pubdate: 2024 Mar 25
+sortdate: 2024/03/25 00:00
+source: eNeuro
+title: Spectral Slope and Lempel–Ziv Complexity as Robust Markers of Brain States
+  during Sleep and Wakefulness
+uid: '10978822'
+volume: '11'
