@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '38071480'
+- idtype: doi
+  value: 10.1002/epi4.12879
+- idtype: pmcid
+  value: PMC10984306
+authors:
+- authtype: Author
+  name: Yavuz M
+- authtype: Author
+  name: Akkol S
+- authtype: Author
+  name: Onat F
+epubdate: 2024 Jan 18
+fulljournalname: Epilepsia Open
+issue: '2'
+pages: 534-547
+pmclivedate: 2024/04/02
+printpubdate: ''
+pubdate: 2024 Jan 18
+sortdate: 2024/01/18 00:00
+source: Epilepsia Open
+title: 'Alpha‐2a adrenergic receptor activation in genetic absence epilepsy: An absence
+  status model?'
+uid: '10984306'
+volume: '9'

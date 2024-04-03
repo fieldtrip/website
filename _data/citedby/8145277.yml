@@ -1,0 +1,42 @@
+articleids:
+- idtype: pmid
+  value: '33925326'
+- idtype: doi
+  value: 10.3390/brainsci11050547
+- idtype: pmcid
+  value: PMC8145277
+authors:
+- authtype: Author
+  name: Schwimmbeck F
+- authtype: Author
+  name: Staffen W
+- authtype: Author
+  name: Höhn C
+- authtype: Author
+  name: Rossini F
+- authtype: Author
+  name: Renz N
+- authtype: Author
+  name: Lobendanz M
+- authtype: Author
+  name: Reichenpfader P
+- authtype: Author
+  name: Iglseder B
+- authtype: Author
+  name: Aigner L
+- authtype: Author
+  name: Trinka E
+- authtype: Author
+  name: Höller Y
+epubdate: 2021 Apr 27
+fulljournalname: Brain Sciences
+issue: '5'
+pages: '547'
+pmclivedate: 2021/05/26
+printpubdate: ''
+pubdate: 2021 Apr 27
+sortdate: 2021/04/27 00:00
+source: Brain Sci
+title: 'Cognitive Effects of Montelukast: A Pharmaco-EEG Study'
+uid: '8145277'
+volume: '11'
