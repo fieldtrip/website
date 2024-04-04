@@ -755,12 +755,15 @@ We start with a histogram of the grey-scale values
 
 From the histogram we can determine a threshold in between the two bumps and use that to make a binary image of the brain.
 
-    mri_resliced.brain = mri_resliced.anatomy>6000;
+    % start with a copy
+    mri_resliced_segmented = mri_resliced;
+
+    mri_resliced_segmented.brain = mri_resliced.anatomy>6000;
 
     se = strel('sphere', 9); % see "doc strel"
-    mri_resliced.skull = imdilate(mri_resliced.brain, se);
+    mri_resliced_segmented.skull = imdilate(mri_resliced.brain, se);
 
-    combined = mri_resliced.skull + mri_resliced.brain;
+    combined = mri_resliced_segmented.skull + mri_resliced_segmented.brain;
 
     figure
     for i=1:15
@@ -781,7 +784,7 @@ In the previous section we performed a segmentation to extract the brain and sku
     cfg             = [];
     cfg.tissue      = {'skull', 'brain'};  % value 1 is skull, value 2 is brain
     cfg.numvertices = [1500, 1500];
-    mesh            = ft_prepare_mesh(cfg, mri_resliced);
+    mesh            = ft_prepare_mesh(cfg, mri_resliced_segmented);
     
     figure
     ft_plot_mesh(mesh(1), 'facecolor', 'none', 'edgecolor', 'b')
@@ -817,7 +820,7 @@ After making up volume objects, we perform the **[ft_prepare_headmodel](/referen
               source: 2
                  mat: [5996x5996 double]
                 type: 'openmeeg'
-                unit: 'cm'
+                unit: 'mm'
                  cfg: [1x1 struct]
 
 ### Specification of 3D electrode positions
@@ -878,35 +881,36 @@ To confirm the alignment between the headmodel and electrode positions, we make 
 {% include image src="/assets/img/tutorial/mouse_eeg/figure31.png" width="500" %}
 _Figure: triangulated mesh of the skull with the electrodes, clearly not aligned_
 
-You see that this is not what you would expect as the electrode positions are not aligned with the skull surface. This is because they are not expressed in the correct coordinates. We can fix this by specifying the known location of the anatomical landmarks. We again use the **[ft_headcoordinates](/reference/utilities/ft_headcoordinates)** function with the input variables `bregma`, `lambda`, and `midsagittal`.
+You see that this is not what you would expect, as the electrode positions are totally not aligned with the skull surface. This is because they are not expressed in the correct coordinates. We can fix this by using the known location of the anatomical landmarks. We again use the **[ft_headcoordinates](/reference/utilities/ft_headcoordinates)** function with the input variables `bregma`, `lambda`, and `midsagittal`.
 
 - The bregma point should be at at [0, 0, 0].
 - The lambda point should be at [0, y, 0] aligned with the anterio-parietal axis.
 - The midsagittal point should be at a location inside the brain compared to the electrode array, so a little bit down.
 
+The bregma and lambda points can be found by averaging the electrode positions on their left and right.
 
-    bregma      = mean(loc(11:12, :));
-    lambda      = mean(loc([27 28 33 34], :));
-    midsagittal = bregma + [0 0 1];
+    bregma      = mean(loc(11:12, :));      % in between FC2 and FC1
+    lambda      = mean(loc([27 28], :));    % in between P2 and P1
+    midsagittal = bregma + [0 0 1];         % in the positive z direction
 
     elec2paxinos = ft_headcoordinates(bregma, lambda, midsagittal, 'paxinos');
 
 Subsequently, we can apply the transformation matrix to the electrode position. We first organize the electrode positions in a MATLAB structure, in line with the FieldTrip [description of electrodes](/faq/how_are_electrodes_magnetometers_or_gradiometers_described).
 
     elec = [];
-    elec.unit = 'mm';
-    elec.elecpos = loc;
-    elec.label = {
-        'FP2';'FP1';
-        'AF8';'AF7';'AF4';'AF3';...
-        'F6';'F5';'F2';'F1';
-        'FC6';'FC5';'FC2';'FC1';...
-        'C6';'C5';'C4';'C3';'C2';'C1';
-        'CP6';'CP5';'CP4';'CP3';'CP2';'CP1';...
-        'P6';'P5';'P4';'P3';'P2';'P1';
-        'PO8';'PO7';'PO4';'PO3';
-        'O2';'O1'
-      };
+    elec.elecpos  = loc;
+    elec.unit     = 'mm';
+    elec.label    = {
+      'FP2';'FP1';
+      'AF4';'AF3';'AF8';'AF7';...
+      'F2';'F1';'F6';'F5';
+      'FC2';'FC1';'FC6';'FC5';...
+      'C2';'C1';'C4';'C3';'C6';'C5';
+      'CP2';'CP1';'CP4';'CP3';'CP6';'CP5';...
+      'P2';'P1';'P4';'P3';'P6';'P5';
+      'PO4';'PO3';'PO8';'PO7';
+      'O2';'O1'
+    };
 
     % apply the transformation
     elec_realigned = ft_transform_geometry(elec2paxinos, elec);
@@ -993,18 +997,12 @@ Before computing the cross-spectral density matrix, we make a subselection of th
 
     % make selections in the data
     cfg          = [];
-    cfg.toilim   = [-0.5995 -0.1]; % aim for exactly 1000 samples
-    cfg.channel  = {'all', '-VPM'};
+    cfg.toilim   = [-0.5500 -0.0505]; % aim for exactly 1000 samples
     dataPre      = ft_redefinetrial(cfg, data_reref);
 
     cfg          = [];
-    cfg.toilim   = [0.1 0.5995]; % aim for exactly 1000 samples
-    cfg.channel  = {'all', '-VPM'};
+    cfg.toilim   = [-0.0500 0.4495]; % aim for exactly 1000 samples
     dataPost     = ft_redefinetrial(cfg, data_reref);
-
-    cfg = [];
-    cfg.keepsampleinfo = 'no';
-    dataAll = ft_appenddata(cfg, dataPre, dataPost)
 
 The cross-spectrum is computed from the Fourier transformed data and returned as output by **[ft_freqanalysis](/reference/ft_freqanalysis)** when we specify `cfg.output = 'powandcsd'`. The frequency of interest is 10 Hz and we use multitapering with a smoothing window of +/-4 Hz:
 
@@ -1022,13 +1020,6 @@ The cross-spectrum is computed from the Fourier transformed data and returned as
     cfg.tapsmofrq = 4;
     cfg.foilim    = [10 10];
     freqPost      = ft_freqanalysis(cfg, dataPost);
-
-    cfg           = [];
-    cfg.method    = 'mtmfft';
-    cfg.output    = 'powandcsd';
-    cfg.tapsmofrq = 4;
-    cfg.foilim    = [10 10];
-    freqAll       = ft_freqanalysis(cfg, dataAll);
 
 To check the selected data and computations so far, we can compute and plot the difference between the power spectrum in the Post and Pre time windows as dB change using **[ft_math](/reference/ft_math)**. Note that for frequency data without time axis (as here) you should _not_ use **[ft_topoplotTFR](/reference/ft_topoplotTFR)** for plotting, but **[ft_topoplotER](/reference/ft_topoplotER)** (and idem for multiplot and singleplot).
 
@@ -1055,19 +1046,15 @@ Using the covariance matrices and the leadfield matrices, a spatial filtering is
     cfg.sourcemodel       = leadfield;
     cfg.headmodel         = headmodel;
     cfg.dics.projectnoise = 'yes';
+    cfg.dics.kappa        = 37;  % the rank of the EEG data
     cfg.dics.lambda       = '5%';
-    cfg.dics.keepfilter   = 'yes';
+    cfg.dics.keepfilter   = 'no';
     cfg.dics.realfilter   = 'yes';
-    sourceAll             = ft_sourceanalysis(cfg, freqAll);
-
-    % use the common filter approach to make a clean statistical contrast
-    cfg.sourcemodel.filter  = sourceAll.avg.filter;
     sourcePre             = ft_sourceanalysis(cfg, freqPre);
     sourcePost            = ft_sourceanalysis(cfg, freqPost);
     
     % the units are not stored, and when guessed later on will be incorrect
     % copy the 'mm' over from the leadfield and sourcemodel structures
-    sourceAll.unit  = leadfield.unit;
     sourcePre.unit  = leadfield.unit;
     sourcePost.unit = leadfield.unit;
 
