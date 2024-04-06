@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1093/cercor/bhae125
+- idtype: pmcid
+  value: PMC10988024
+authors:
+- authtype: Author
+  name: Kluge A
+- authtype: Author
+  name: Somila N
+- authtype: Author
+  name: Lankinen K
+- authtype: Author
+  name: Levy J
+epubdate: 2024 Apr 2
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '4'
+pages: bhae125
+pmclivedate: 2024/04/04
+printpubdate: ''
+pubdate: 2024 Apr 2
+sortdate: 2024/04/02 00:00
+source: Cereb Cortex
+title: Neural alignment during outgroup intervention predicts future change of affect
+  towards outgroup
+uid: '10988024'
+volume: '34'

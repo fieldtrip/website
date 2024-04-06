@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '38490743'
+- idtype: doi
+  value: 10.1523/ENEURO.0312-23.2024
+- idtype: pmcid
+  value: PMC10988358
+authors:
+- authtype: Author
+  name: Zioga I
+- authtype: Author
+  name: Zhou YJ
+- authtype: Author
+  name: Weissbart H
+- authtype: Author
+  name: Martin AE
+- authtype: Author
+  name: Haegens S
+epubdate: 2024 Mar 29
+fulljournalname: eNeuro
+issue: '4'
+pages: ENEURO.0312-23.2024
+pmclivedate: 2024/04/04
+printpubdate: ''
+pubdate: 2024 Mar 29
+sortdate: 2024/03/29 00:00
+source: eNeuro
+title: Alpha and Beta Oscillations Differentially Support Word Production in a Rule-Switching
+  Task
+uid: '10988358'
+volume: '11'

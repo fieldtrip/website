@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '37783897'
+- idtype: doi
+  value: 10.3758/s13423-023-02385-0
+- idtype: pmcid
+  value: PMC10985416
+- idtype: MID
+  value: NIHMS1952102
+authors:
+- authtype: Author
+  name: Wang L
+- authtype: Author
+  name: Brothers T
+- authtype: Author
+  name: Jensen O
+- authtype: Author
+  name: Kuperberg GR
+epubdate: 2023 Oct 2
+fulljournalname: Psychonomic bulletin & review
+issue: ''
+pages: 10.3758/s13423-023-02385-0
+pmclivedate: ''
+printpubdate: ''
+pubdate: 2023 Oct 2
+sortdate: 2023/10/02 00:00
+source: Psychon Bull Rev
+title: 'Dissociating the Pre-activation of Word Meaning and Form During Sentence Comprehension:
+  Evidence From EEG Representational Similarity Analysis'
+uid: '10985416'
+volume: ''
