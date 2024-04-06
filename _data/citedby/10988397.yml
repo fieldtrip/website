@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '38324061'
+- idtype: doi
+  value: 10.1556/2006.2023.00077
+- idtype: pmcid
+  value: PMC10988397
+authors:
+- authtype: Author
+  name: Yin Y
+- authtype: Author
+  name: Li X
+- authtype: Author
+  name: Lau JT
+- authtype: Author
+  name: Nan S
+- authtype: Author
+  name: Ouyang M
+- authtype: Author
+  name: Cai X
+- authtype: Author
+  name: Wang P
+epubdate: 2024 Feb 6
+fulljournalname: Journal of Behavioral Addictions
+issue: '1'
+pages: 120-133
+pmclivedate: 2024/04/04
+printpubdate: ''
+pubdate: 2024 Feb 6
+sortdate: 2024/02/06 00:00
+source: J Behav Addict
+title: 'Negative emotions mediate the association between the topology of the complex
+  brain network and smartphone use disorder: A resting-state EEG study'
+uid: '10988397'
+volume: '13'

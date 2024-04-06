@@ -1,0 +1,63 @@
+articleids:
+- idtype: pmid
+  value: '38558964'
+- idtype: doi
+  value: 10.1101/2024.03.06.583313
+- idtype: pmcid
+  value: PMC10979878
+authors:
+- authtype: Author
+  name: Schofield H
+- authtype: Author
+  name: Hill RM
+- authtype: Author
+  name: Feys O
+- authtype: Author
+  name: Holmes N
+- authtype: Author
+  name: Osborne J
+- authtype: Author
+  name: Doyle C
+- authtype: Author
+  name: Bobela D
+- authtype: Author
+  name: Corvilian P
+- authtype: Author
+  name: Wens V
+- authtype: Author
+  name: Rier L
+- authtype: Author
+  name: Bowtell R
+- authtype: Author
+  name: Ferez M
+- authtype: Author
+  name: Mullinger KJ
+- authtype: Author
+  name: Coleman S
+- authtype: Author
+  name: Rhodes N
+- authtype: Author
+  name: Rea M
+- authtype: Author
+  name: Tanner Z
+- authtype: Author
+  name: Boto E
+- authtype: Author
+  name: de Tiège X
+- authtype: Author
+  name: Shah V
+- authtype: Author
+  name: Brookes MJ
+epubdate: 2024 Mar 11
+fulljournalname: bioRxiv
+issue: ''
+pages: 2024.03.06.583313
+pmclivedate: 2024/03/30
+printpubdate: ''
+pubdate: 2024 Mar 11
+sortdate: 2024/03/11 00:00
+source: bioRxiv
+title: A Novel, Robust, and Portable Platform for Magnetoencephalography using Optically
+  Pumped Magnetometers
+uid: '10979878'
+volume: ''

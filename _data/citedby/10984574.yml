@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '38562308'
+- idtype: doi
+  value: 10.1093/braincomms/fcae092
+- idtype: pmcid
+  value: PMC10984574
+authors:
+- authtype: Author
+  name: Takacs A
+- authtype: Author
+  name: Toth-Faber E
+- authtype: Author
+  name: Schubert L
+- authtype: Author
+  name: Tárnok Z
+- authtype: Author
+  name: Ghorbani F
+- authtype: Author
+  name: Trelenberg M
+- authtype: Author
+  name: Nemeth D
+- authtype: Author
+  name: Münchau A
+- authtype: Author
+  name: Beste C
+epubdate: 2024 Mar 14
+fulljournalname: Brain Communications
+issue: '2'
+pages: fcae092
+pmclivedate: 2024/04/01
+printpubdate: ''
+pubdate: 2024 Mar 14
+sortdate: 2024/03/14 00:00
+source: Brain Commun
+title: Resting network architecture of theta oscillations reflects hyper-learning
+  of sensorimotor information in Gilles de la Tourette syndrome
+uid: '10984574'
+volume: '6'
