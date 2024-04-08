@@ -60,7 +60,7 @@ Note that the tentative program below still might change a bit.
 ### Thursday May 30, 2024
 
 | 09:00-09:30 | Morning chill or workout |
-| 09:45-11:00 | New methods for experimental design and analysis - lecture (TBD) |
+| 09:45-11:00 | New methods for experimental design and analysis - lecture by Britta Westner |
 | 11:00-11:15 | Coffee Break |
 | 11:15-12:30 | Statistics using non-parametric randomization techniques - lecture by Robert |
 | 12:30-13:30 | Lunch |
