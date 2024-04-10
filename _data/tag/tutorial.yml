@@ -166,9 +166,6 @@
 - name:  Time-frequency analysis of combined MEG/EEG data
   link:  /workshop/natmeg2014/timefrequency
 
-- name:  Time-frequency analysis using Hanning window, multitapers and wavelets
-  link:  /workshop/ni2_timefrequencyanalysis
-
 - name:  Reading in data and performing sensor-level ERF and TFR analyses
   link:  /workshop/oxford2019/sensor_analysis_plusminus
 
