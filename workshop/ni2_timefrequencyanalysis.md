@@ -1,15 +1,15 @@
 ---
-title: Time-frequency analysis using Hanning window, multitapers and wavelets
-tags: [tutorial, freq, meg, eeg, plotting, meg-language]
+title: SPED4: Time-frequency analysis in practice using FieldTrip
+tags: [ni2]
 ---
 
 # SPED4: Time-frequency analysis in practice using FieldTrip
 
 ## Introduction
 
-This is an adapted version of the [general FieldTrip tutorial on time-frequency analysis](/tutorial/timefrequencyanalysis), made specifically for the course Neuroimaging 2: Electrophysiological Methods, module Signal Processing for Electrophysiological Data (SPED), taught by Eelke Spaak at Radboud University in 2023. Some of the concepts convered here should by now be familiar to you, while some other concepts will be new. The main purpose of this week's tutorial is to show you how spectral and time-frequency data analysis is done when using a typical, widely used, analysis toolbox. This is in contrast to previous weeks, in which the focus was much more on implementing the basic methods yourself and understanding their intricacies.
+This is an adapted version of the [general FieldTrip tutorial on time-frequency analysis](/tutorial/timefrequencyanalysis), made specifically for the module _Signal Processing for Electrophysiological Data (SPED)_ in the course _Neuroimaging 2: Electrophysiological Methods_, in the _Cognitive Neuroscience Masters (CNS)_ program at Radboud University. This module is taught by Eelke Spaak.
 
-Specifically, this tutorial will cover the time-frequency analysis of a single subject's MEG data using a Hanning window, multitapers and wavelets. The tutorial also shows how to visualize the results.
+Some of the concepts convered here should by now be familiar to you, while some other concepts will be new. The main purpose of this week's tutorial is to show you how spectral and time-frequency data analysis is done when using a typical, widely used, analysis toolbox. This is in contrast to previous weeks, in which the focus was much more on implementing the basic methods yourself and understanding their intricacies. Specifically, this tutorial will cover the time-frequency analysis of a single subject's MEG data using a Hanning window, multitapers and wavelets. The tutorial also shows how to visualize the results.
 
 Please collect all the code you write for this tutorial in a single MATLAB live script file, which you can hand in via Brightspace. Ensure that your answers to the exercises are in separate text or code cells with clear labels ("**Exercise 1**" etc. in bold face will do). Also please start new code cells in your live script for each snippet of code provided here in the tutorial. You can break up a code cell by typing three dashes on a code line (`---`). Make sure all code cells are executed and the relevant plots are embedded.
 
@@ -129,7 +129,6 @@ In the following example, a time window with length 500 ms is applied:
 The field `cfg.method = 'mtmconvol';` instructs `ft_freqanalysis` to execute a convolution-type analysis. (The "mtm" stands for "multitaper method", which will be explained in more detail below, but is mainly there for historical reasons, since the function also supports convolution that is *not* based on multitapers.) Regardless of the method used for calculating the TFR, the output format is identical. It is a structure with the following fields:
 
     TFRhann =
-
             label: {149x1 cell}                % Channel names
            dimord: 'chan_freq_time'            % Dimensions contained in powspctrm, channels X frequencies X time
              freq: [2 4 6 8 10 12 14 16 18 20 22 24 26 28 30]  % Array of frequencies of interest (the elements of freq may be different from your cfg.foi input depending on your trial length)
@@ -345,12 +344,12 @@ A final more detailed note on what multitapering actually does. While the fundam
 
 ## Optional further reading
 
-The following are links to FieldTrip FAQs or (brief) example scripts that deal with (time-)frequency analysis in some way:
+Here are links to other documentation that deals with frequency and time-frequency analysis.
 
-Frequently asked question
+Frequently asked questions:
 {% include seealso tag1="faq" tag2="freq" %}
 
-Example script
+Example scripts:
 {% include seealso tag1="example" tag2="freq" %}
 
 ## References
