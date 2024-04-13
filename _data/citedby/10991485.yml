@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '38570599'
+- idtype: doi
+  value: 10.1038/s41598-024-58227-z
+- idtype: pmcid
+  value: PMC10991485
+authors:
+- authtype: Author
+  name: Ostrowski J
+- authtype: Author
+  name: Rose M
+epubdate: 2024 Apr 3
+fulljournalname: Scientific Reports
+issue: ''
+pages: '7895'
+pmclivedate: 2024/04/04
+printpubdate: ''
+pubdate: 2024 Apr 3
+sortdate: 2024/04/03 00:00
+source: Sci Rep
+title: Increases in pre-stimulus theta and alpha oscillations precede successful encoding
+  of crossmodal associations
+uid: '10991485'
+volume: '14'

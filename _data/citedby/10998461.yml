@@ -1,0 +1,45 @@
+articleids:
+- idtype: pmid
+  value: '38585670'
+- idtype: doi
+  value: 10.1093/braincomms/fcae112
+- idtype: pmcid
+  value: PMC10998461
+authors:
+- authtype: Author
+  name: Cipriano L
+- authtype: Author
+  name: Minino R
+- authtype: Author
+  name: Liparoti M
+- authtype: Author
+  name: Polverino A
+- authtype: Author
+  name: Romano A
+- authtype: Author
+  name: Bonavita S
+- authtype: Author
+  name: Pirozzi MA
+- authtype: Author
+  name: Quarantelli M
+- authtype: Author
+  name: Jirsa V
+- authtype: Author
+  name: Sorrentino G
+- authtype: Author
+  name: Sorrentino P
+- authtype: Author
+  name: Troisi Lopez E
+epubdate: 2024 Apr 2
+fulljournalname: Brain Communications
+issue: '2'
+pages: fcae112
+pmclivedate: 2024/04/06
+printpubdate: ''
+pubdate: 2024 Apr 2
+sortdate: 2024/04/02 00:00
+source: Brain Commun
+title: Flexibility of brain dynamics is increased and predicts clinical impairment
+  in relapsing–remitting but not in secondary progressive multiple sclerosis
+uid: '10998461'
+volume: '6'

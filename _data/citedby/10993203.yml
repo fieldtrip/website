@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '38514193'
+- idtype: doi
+  value: 10.1523/ENEURO.0183-23.2023
+- idtype: pmcid
+  value: PMC10993203
+authors:
+- authtype: Author
+  name: López-Madrona VJ
+- authtype: Author
+  name: Trébuchon A
+- authtype: Author
+  name: Mindruta I
+- authtype: Author
+  name: Barbeau EJ
+- authtype: Author
+  name: Barborica A
+- authtype: Author
+  name: Pistol C
+- authtype: Author
+  name: Oane I
+- authtype: Author
+  name: Alario FX
+- authtype: Author
+  name: Bénar CG
+epubdate: 2024 Mar 29
+fulljournalname: eNeuro
+issue: '4'
+pages: ENEURO.0183-23.2023
+pmclivedate: 2024/04/04
+printpubdate: ''
+pubdate: 2024 Mar 29
+sortdate: 2024/03/29 00:00
+source: eNeuro
+title: Identification of Early Hippocampal Dynamics during Recognition Memory with
+  Independent Component Analysis
+uid: '10993203'
+volume: '11'

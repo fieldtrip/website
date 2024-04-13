@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '38585361'
+- idtype: doi
+  value: 10.3389/fneur.2024.1362712
+- idtype: pmcid
+  value: PMC10995240
+authors:
+- authtype: Author
+  name: Visani E
+- authtype: Author
+  name: Panzica F
+- authtype: Author
+  name: Franceschetti S
+- authtype: Author
+  name: Golfrè Andreasi N
+- authtype: Author
+  name: Cilia R
+- authtype: Author
+  name: Rinaldo S
+- authtype: Author
+  name: Rossi Sebastiano D
+- authtype: Author
+  name: Lanteri P
+- authtype: Author
+  name: Eleopra R
+epubdate: 2024 Mar 22
+fulljournalname: Frontiers in Neurology
+issue: ''
+pages: '1362712'
+pmclivedate: 2024/04/05
+printpubdate: ''
+pubdate: 2024 Mar 22
+sortdate: 2024/03/22 00:00
+source: Front Neurol
+title: Early cortico-muscular coherence and cortical network changes in Parkinson’s
+  patients treated with MRgFUS
+uid: '10995240'
+volume: '15'

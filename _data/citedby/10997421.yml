@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '38586300'
+- idtype: doi
+  value: 10.1155/2024/9844809
+- idtype: pmcid
+  value: PMC10997421
+authors:
+- authtype: Author
+  name: Geffen R
+- authtype: Author
+  name: Braun C
+epubdate: 2024 Mar 29
+fulljournalname: 'Evidence-based Complementary and Alternative Medicine : eCAM'
+issue: ''
+pages: '9844809'
+pmclivedate: 2024/04/05
+printpubdate: ''
+pubdate: 2024 Mar 29
+sortdate: 2024/03/29 00:00
+source: Evid Based Complement Alternat Med
+title: Effects of Geometric Sound on Brainwave Activity Patterns, Autonomic Nervous
+  System Markers, Emotional Response, and Faraday Wave Pattern Morphology
+uid: '10997421'
+volume: '2024'

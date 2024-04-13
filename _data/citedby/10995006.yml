@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '37440117'
+- idtype: doi
+  value: 10.1007/s10877-023-01054-w
+- idtype: pmcid
+  value: PMC10995006
+authors:
+- authtype: Author
+  name: Vrijdag XC
+- authtype: Author
+  name: Hallum LE
+- authtype: Author
+  name: Tonks EI
+- authtype: Author
+  name: van Waart H
+- authtype: Author
+  name: Mitchell SJ
+- authtype: Author
+  name: Sleigh JW
+epubdate: 2023 Jul 13
+fulljournalname: Journal of Clinical Monitoring and Computing
+issue: '2'
+pages: 363-371
+pmclivedate: 2024/04/06
+printpubdate: '2024'
+pubdate: 2023 Jul 13
+sortdate: 2023/07/13 00:00
+source: J Clin Monit Comput
+title: Support-vector classification of low-dose nitrous oxide administration with
+  multi-channel EEG power spectra
+uid: '10995006'
+volume: '38'

@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '38591012'
+- idtype: doi
+  value: 10.1016/j.isci.2024.109521
+- idtype: pmcid
+  value: PMC11000016
+authors:
+- authtype: Author
+  name: Elmers J
+- authtype: Author
+  name: Yu S
+- authtype: Author
+  name: Talebi N
+- authtype: Author
+  name: Prochnow A
+- authtype: Author
+  name: Beste C
+epubdate: 2024 Mar 18
+fulljournalname: iScience
+issue: '4'
+pages: '109521'
+pmclivedate: 2024/04/08
+printpubdate: ''
+pubdate: 2024 Mar 18
+sortdate: 2024/03/18 00:00
+source: iScience
+title: Neurophysiological effective network connectivity supports a threshold-dependent
+  management of dynamic working memory gating
+uid: '11000016'
+volume: '27'
