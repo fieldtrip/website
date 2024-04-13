@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '38350998'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1894-23.2024
+- idtype: pmcid
+  value: PMC10993036
+authors:
+- authtype: Author
+  name: Hu M
+- authtype: Author
+  name: Bianco R
+- authtype: Author
+  name: Hidalgo AR
+- authtype: Author
+  name: Chait M
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '14'
+pages: e1894232024
+pmclivedate: 2024/04/05
+printpubdate: 2024 Apr 3
+pubdate: 2024 Apr 3
+sortdate: 2024/04/03 00:00
+source: J Neurosci
+title: Concurrent Encoding of Sequence Predictability and Event-Evoked Prediction
+  Error in Unfolding Auditory Patterns
+uid: '10993036'
+volume: '44'

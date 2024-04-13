@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '38582905'
+- idtype: doi
+  value: 10.1038/s41467-024-46921-5
+- idtype: pmcid
+  value: PMC10998831
+authors:
+- authtype: Author
+  name: Fouragnan EF
+- authtype: Author
+  name: Hosking B
+- authtype: Author
+  name: Cheung Y
+- authtype: Author
+  name: Prakash B
+- authtype: Author
+  name: Rushworth M
+- authtype: Author
+  name: Sel A
+epubdate: 2024 Apr 6
+fulljournalname: Nature Communications
+issue: ''
+pages: '2976'
+pmclivedate: 2024/04/07
+printpubdate: ''
+pubdate: 2024 Apr 6
+sortdate: 2024/04/06 00:00
+source: Nat Commun
+title: Timing along the cardiac cycle modulates neural signals of reward-based learning
+uid: '10998831'
+volume: '15'
