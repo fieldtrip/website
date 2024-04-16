@@ -18,7 +18,7 @@ In general, one could construct a source model that defines positions of dipoles
 
 ## Procedure
 
-We will describe a few different ways to create a source model based on the anatomical mri of the [tutorial data set](/tutorial/meg_language) which is available [here](https://download.fieldtriptoolbox.org/tutorial/Subject01.zip). Some of these procedures can be done entirely using high-level FieldTrip functions. Other procedures require the use of external software, in particular FreeSurfer, or HCP-workbench.
+We will describe a few different ways to create a source model based on the anatomical mri of the [tutorial data set](/tutorial/meg_language) which is available [here](https://download.fieldtriptoolbox.org/tutorial/Subject01.zip). Some of these procedures can be done entirely using high-level FieldTrip functions. Other procedures require the use of external software, in particular FreeSurfer, and Connectome-workbench.
 
 - Construction of a source model based on a regular 3-dimensional grid of dipole positions.
 - Construction of a source model based on a surface description of the cortical sheet.
@@ -46,7 +46,7 @@ Thus, the input of the preprocessing is the anatomical MRI. The output is two an
 
 #### 0. Preamble
 
-For this part of the tutorial you need a working copy of FreeSurfer (the below works for version 6.0), and of HCP-workbench.
+For this part of the tutorial you need a working copy of FreeSurfer (the below was written for version 6.0, but likely also works for higher versions), and of [Connectome-workbench](https://www.humanconnectome.org/software/connectome-workbench).
 
 #### 1. Preparation of the anatomical MRI: read in MRI data
 
@@ -144,23 +144,23 @@ Also save the acpc-coregistered anatomical image, this file will be the input fi
 
 The MATLAB-based preparation of the anatomical data is now finished. We created two .mgz files, one that can be used for the creation of a cortical sheet-based source model (Subject01.mgz), and one that can be used for the creation of a volume conduction model of the head (Subject01ctf.mgz). Moreover, 2 coregistration matrices have been constructed that enable switching between coordinate systems.
 
-### Creation of cortical sheet with FreeSurfer and resampling with HCP workbench
+### Creation of cortical sheet with FreeSurfer and resampling with Connectome workbench
 
 #### Source model: Introduction
 
-We will use FreeSurfer to create a source model that is based on a description of the cortical sheet. Essentially, we will construct a triangulated cortical mesh, ideally consisting of a number of approximately equally sized triangles that form a topological sphere for each of the cerebral hemispheres. FreeSurfer generates meshes with > 100000 vertices per hemisphere, which is too much for a workable M/EEG source reconstruction. Therefore, we use HCP workbench to downsample the triangulated meshes. This step serves the purpose of retaining a topologically correct description of the surface, and keeping the variance in triangle size low. In contrast, MATLAB's reducepatch function breaks the topology and leads to a bigger variance in triangle size. A convenient byproduct of the proposed HCP workbench-based processing is that the resulting cortical meshes are surface-registered to a common template, which allows for direct comparison of dipole locations with the same index across subjects.
+We will use FreeSurfer to create a source model that is based on a description of the cortical sheet. Essentially, we will construct a triangulated cortical mesh, ideally consisting of a number of approximately equally sized triangles that form a topological sphere for each of the cerebral hemispheres. FreeSurfer generates meshes with > 100000 vertices per hemisphere, which is too much for a workable M/EEG source reconstruction. Therefore, we use Connectome workbench to downsample the triangulated meshes. This step serves the purpose of retaining a topologically correct description of the surface, and keeping the variance in triangle size low. In contrast, MATLAB's reducepatch function breaks the topology and leads to a bigger variance in triangle size. A convenient byproduct of the proposed Connectome workbench-based processing is that the resulting cortical meshes are surface-registered to a common template, which allows for direct comparison of dipole locations with the same index across subjects.
 
 The creation process of the source-space can be divided into 3 stages:
 
 1.  Volumetric and surface-based processing in FreeSurfer.
-2.  Creation of the mesh using HCP workbench.
+2.  Creation of the mesh using Connectome workbench.
 3.  Coregistration of the source model to the MEEG-based coordinate system with FieldTrip.
 
 The volumetric and surface based processing typically take a long time (on the order of 10 hours). These steps will run automatically, and most of the time don't require user intervention. Sometimes, however, the automatic procedure fails, which requires inspection of the logs and/or inspection of the files created by FreeSurfer. In our experience, the most likely causes are a mismatch of input coordinate system (which can be resolved by checking and fixing the MATLAB-based coregistration steps), or an otherwise suboptimal white matter segmentation, or skullstripping. This is mostly due to slabs of dura being attached to the white matter volumes. This needs to be corrected manually. Please refer to the FreeSurfer documentation for more information. In practice this would mean that parts of the FreeSurfer pipeline needs to be redone after correction of the relevant volumes.
 
 The input of the creation process of the meshes is the acpc-coregistered mgz file that was created previously. The output is the source model that is a MATLAB structure called 'sourcemodel' in this tutorial.
 
-The exact specifics of how to run FreeSurfer and HCP workbench may depend on your local computing infrastructure. The code below has been tested to work for users that work with the compute cluster at the Centre for Cognitive Neuroimaging of the Donders Institute in Nijmegen.
+The exact specifics of how to run FreeSurfer and Connectome workbench may depend on your local computing infrastructure. The code below has been tested to work for users that work with the compute cluster at the Centre for Cognitive Neuroimaging of the Donders Institute in Nijmegen.
 
 #### 1. Source model: Volumetric and surface-based processing in FreeSurfer
 
@@ -174,7 +174,7 @@ Here is a [link](http://surfer.nmr.mgh.harvard.edu/fswiki/ReconAllDevTable) to t
 
 There are a few analysis steps in FreeSurfer which are not guaranteed to give a nice result, and may require some user interaction to get it right. Moreover, FreeSurfer can be quite picky with respect to the exact format of the MRI-volumes. One step which in our experience is notorious for not being very robust in older versions of FreeSurfer is automatic skull-stripping. Therefore, we used to advocate a hybrid approach that uses SPM or FSL for an initial segmentation of the anatomical MRI during the preparation. With this segmentation, we can create a skull-stripped image, which is a prerequisite for a correct segmentation in FreeSurfer. Since this approach is a bit convoluted (because it required the skullstripped image to be copied into the FreeSurfer directory in a specific format), and given the interdependencies between different files generated along the FreeSurfer pipeline (which moreover are FreeSurfer version specific), tapping into this pipeline at a random point is quite complicated. For this reason we discontinue the dissemination of this hybrid approach, and hope for the better that more recent versions of FreeSurfer work more robustly.
 
-In order to be able to use FreeSurfer, you need to have a working installation of the package. It can be downloaded from [here](http://surfer.nmr.mgh.harvard.edu/fswiki). If you are working at the Donders Centre for Cognitive Neuroimaging (DCCN), FreeSurfer is available at the compute cluster, and you can find more versions of FreeSurfer under the /opt/FreeSurferXXX directories. (If you are working at the MPI for Psycholinguistics, you should install the software yourself in your directory.) We recommend using FreeSurfer 6.0. You can run the commands just copying and pasting them into the terminal window of the Linux system.
+In order to be able to use FreeSurfer, you need to have a working installation of the package. It can be downloaded from [here](http://surfer.nmr.mgh.harvard.edu/fswiki). If you are working at the Donders Centre for Cognitive Neuroimaging (DCCN), FreeSurfer is available at the compute cluster, and you can find more versions of FreeSurfer under the /opt/FreeSurferXXX directories, and it will be typically available in a terminally (i.e. the module is automatically loaded upon opening a terminal). If you are working at the MPI for Psycholinguistics, you should install the software yourself in your directory. This tutorial has been written and tested with FreeSurfer 6.0, but most likely higher versions will also work. You can run the commands just copying and pasting them into the terminal window of the Linux system.
 
 To get started, you need to set up your environment variables. Please pay close attention to the spaces in the following commands, or the lack thereof.
 
@@ -182,7 +182,7 @@ To get started, you need to set up your environment variables. Please pay close 
     export SUBJECTS_DIR=<Subject directory>
     export SUBJECTNAME=<Subject name>
 
-SUBJECTS_DIR is the directory where you will store all the FreeSurfer-processed anatomical data of all your subjects. Then, type this command to set up FreeSurfer
+SUBJECTS_DIR is the directory where you will store all the FreeSurfer-processed anatomical data of all your subjects. Then, type this command to set up FreeSurfer (this is not needed when at DCCN, but probably won't hurt)
 
     source $FREESURFER_HOME/SetUpFreeSurfer.sh
 
@@ -208,7 +208,7 @@ After these steps (which may take quite a while) you end up with a bunch of file
 
 #### 2. Source model: Creation of the mesh using HCP workbench
 
-Just like with FreeSurfer, you have to first take care that HCP workbench is installed and loaded. If you work on the compute cluster of the DCCN in Nijmegen, this is already installed. Otherwise, please refer to the HCP workbench documentation to set up the software [here](https://www.humanconnectome.org/software/connectome-workbench). In addition, this step needs as set of template files, that for now need to be retrieved from two different locations. First, you need to get the standard/mesh_atlases directory from [here](https://github.com/Washington-University/HCPpipelines), which is located in the global/templates/ directory. One way to do this would be to selectively copy the contents of this directory to a location on your file system. Then, you also need to copy the template spherical meshes from fieldtrip/template/sourcemodel to the same directory. The files you need are the ones that are named L.\*.gii, and R.\*.gii. Once all files are in place, you should ensure that the HCP workbench module is loaded and ready to use. The precise details of how to do this will depend on your local computing infrastructure, but if you are working at the Center for Cognitive Neuroimaging at the Donders Institute in Nijmegen you can do this by typing the following command in your Linux/Unix terminal:
+Just like with FreeSurfer, you have to first take care that Connectome workbench is installed and available on the path. If you work on the compute cluster of the DCCN in Nijmegen, this is already installed. Otherwise, please refer to the Connectome workbench documentation to set up the software [here](https://www.humanconnectome.org/software/connectome-workbench). In addition, this step needs as set of template files, that for now need to be retrieved from two different locations. First, you need to get the standard/mesh_atlases directory from [here](https://github.com/Washington-University/HCPpipelines), which is located in the global/templates/ directory. One way to do this would be to selectively copy the contents of this directory to a location on your file system. Then, you also need to copy the template spherical meshes from fieldtrip/template/sourcemodel to the same directory. The files you need are the ones that are named L.\*.gii, and R.\*.gii. Once all files are in place, you should ensure that the Connectome workbench module is loaded and ready to use. The precise details of how to do this will depend on your local computing infrastructure, but if you are working at the Center for Cognitive Neuroimaging at the Donders Institute in Nijmegen you can do this by typing the following command in your Linux/Unix terminal:
 
     module load hcp-workbench
 
