@@ -178,32 +178,38 @@ In order to be able to use FreeSurfer, you need to have a working installation o
 
 To get started, you need to set up your environment variables. Please pay close attention to the spaces in the following commands, or the lack thereof.
 
-    export FREESURFER_HOME=<path to FreeSurfer>
-    export SUBJECTS_DIR=<Subject directory>
-    export SUBJECTNAME=<Subject name>
+```shell
+export FREESURFER_HOME=<path to FreeSurfer>
+export SUBJECTS_DIR=<Subject directory>
+export SUBJECTNAME=<Subject name>
+```
 
 SUBJECTS_DIR is the directory where you will store all the FreeSurfer-processed anatomical data of all your subjects. Then, type this command to set up FreeSurfer (this is not needed when at DCCN, but probably won't hurt)
 
-    source $FREESURFER_HOME/SetUpFreeSurfer.sh
+```shell
+source $FREESURFER_HOME/SetUpFreeSurfer.sh
+```
 
 The following populates an empty subject-specific directory with empty subdirectories
 
-    mksubjdirs $SUBJECTS_DIR/$SUBJECTNAME
+```shell
+mksubjdirs $SUBJECTS_DIR/$SUBJECTNAME
+```
 
 Now, we are ready to start using FreeSurfer. As a first step, we have to 'convert' the anatomical MRI once more, but now using a FreeSurfer command. You start by putting the prepared acpc-registered MRI file which you created during the preparation steps in the subject specific "mri" directory. Subsequently, this image is once more converted (adjusting the image orientation), using the mri_convert function from FreeSurfer.
 
 ```shell
-    cp $SUBJECTS_DIR/$SUBJECTNAME.mgz $SUBJECTS_DIR/$SUBJECTNAME/mri/$SUBJECTNAME.mgz
+cp $SUBJECTS_DIR/$SUBJECTNAME.mgz $SUBJECTS_DIR/$SUBJECTNAME/mri/$SUBJECTNAME.mgz
 
-    cd $SUBJECTS_DIR/$SUBJECTNAME/mri
-    mri_convert -c -oc 0 0 0 $SUBJECTNAME.mgz orig.mgz
-    cp orig.mgz orig/001.mgz
-    # This last step is needed in version 6.0, not needed in 5.3
+cd $SUBJECTS_DIR/$SUBJECTNAME/mri
+mri_convert -c -oc 0 0 0 $SUBJECTNAME.mgz orig.mgz
+cp orig.mgz orig/001.mgz
+# This last step is needed in version 6.0, not needed in 5.3
 
-    # Now run the automatic processing
-    recon-all -autorecon1 -subjid $SUBJECTNAME
-    recon-all -autorecon2 -subjid $SUBJECTNAME
-    recon-all -autorecon3 -subjid $SUBJECTNAME
+# Now run the automatic processing
+recon-all -autorecon1 -subjid $SUBJECTNAME
+recon-all -autorecon2 -subjid $SUBJECTNAME
+recon-all -autorecon3 -subjid $SUBJECTNAME
 ```
 
 After these steps (which may take quite a while) you end up with a bunch of files in the **Subject01/surf/** directory. The commands referenced above are also available as a Bash-script in fieldtrip/bin/ft_freesurferscript.sh, for instance to be used in a batch processing mode.
