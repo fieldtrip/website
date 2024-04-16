@@ -192,6 +192,7 @@ The following populates an empty subject-specific directory with empty subdirect
 
 Now, we are ready to start using FreeSurfer. As a first step, we have to 'convert' the anatomical MRI once more, but now using a FreeSurfer command. You start by putting the prepared acpc-registered MRI file which you created during the preparation steps in the subject specific "mri" directory. Subsequently, this image is once more converted (adjusting the image orientation), using the mri_convert function from FreeSurfer.
 
+```shell
     cp $SUBJECTS_DIR/$SUBJECTNAME.mgz $SUBJECTS_DIR/$SUBJECTNAME/mri/$SUBJECTNAME.mgz
 
     cd $SUBJECTS_DIR/$SUBJECTNAME/mri
@@ -203,6 +204,7 @@ Now, we are ready to start using FreeSurfer. As a first step, we have to 'conver
     recon-all -autorecon1 -subjid $SUBJECTNAME
     recon-all -autorecon2 -subjid $SUBJECTNAME
     recon-all -autorecon3 -subjid $SUBJECTNAME
+```
 
 After these steps (which may take quite a while) you end up with a bunch of files in the **Subject01/surf/** directory. The commands referenced above are also available as a Bash-script in fieldtrip/bin/ft_freesurferscript.sh, for instance to be used in a batch processing mode.
 
