@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '38605017'
+- idtype: doi
+  value: 10.1038/s41467-024-47263-y
+- idtype: pmcid
+  value: PMC11009358
+authors:
+- authtype: Author
+  name: Blanpain LT
+- authtype: Author
+  name: Cole ER
+- authtype: Author
+  name: Chen E
+- authtype: Author
+  name: Park JK
+- authtype: Author
+  name: Walelign MY
+- authtype: Author
+  name: Gross RE
+- authtype: Author
+  name: Cabaniss BT
+- authtype: Author
+  name: Willie JT
+- authtype: Author
+  name: Singer AC
+epubdate: 2024 Apr 11
+fulljournalname: Nature Communications
+issue: ''
+pages: '3156'
+pmclivedate: 2024/04/12
+printpubdate: ''
+pubdate: 2024 Apr 11
+sortdate: 2024/04/11 00:00
+source: Nat Commun
+title: Multisensory flicker modulates widespread brain networks and reduces interictal
+  epileptiform discharges
+uid: '11009358'
+volume: '15'

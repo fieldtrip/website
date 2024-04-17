@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '38610512'
+- idtype: doi
+  value: 10.3390/s24072301
+- idtype: pmcid
+  value: PMC11014248
+authors:
+- authtype: Author
+  name: Ambrosanio M
+- authtype: Author
+  name: Troisi Lopez E
+- authtype: Author
+  name: Polverino A
+- authtype: Author
+  name: Minino R
+- authtype: Author
+  name: Cipriano L
+- authtype: Author
+  name: Vettoliere A
+- authtype: Author
+  name: Granata C
+- authtype: Author
+  name: Mandolesi L
+- authtype: Author
+  name: Curcio G
+- authtype: Author
+  name: Sorrentino G
+- authtype: Author
+  name: Sorrentino P
+epubdate: 2024 Apr 4
+fulljournalname: Sensors (Basel, Switzerland)
+issue: '7'
+pages: '2301'
+pmclivedate: 2024/04/13
+printpubdate: ''
+pubdate: 2024 Apr 4
+sortdate: 2024/04/04 00:00
+source: Sensors (Basel)
+title: 'The Effect of Sleep Deprivation on Brain Fingerprint Stability: A Magnetoencephalography
+  Validation Study'
+uid: '11014248'
+volume: '24'

@@ -1,0 +1,34 @@
+articleids:
+- idtype: pmid
+  value: '38395616'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1381-23.2024
+- idtype: pmcid
+  value: PMC11007311
+authors:
+- authtype: Author
+  name: Riddle J
+- authtype: Author
+  name: McPherson T
+- authtype: Author
+  name: Sheikh A
+- authtype: Author
+  name: Shin H
+- authtype: Author
+  name: Hadar E
+- authtype: Author
+  name: Frohlich F
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '15'
+pages: e1381232024
+pmclivedate: ''
+printpubdate: 2024 Apr 10
+pubdate: 2024 Apr 10
+sortdate: 2024/04/10 00:00
+source: J Neurosci
+title: 'Internal Representations Are Prioritized by Frontoparietal Theta Connectivity
+  and Suppressed by alpha Oscillation Dynamics: Evidence from Concurrent Transcranial
+  Magnetic Stimulation EEG and Invasive EEG'
+uid: '11007311'
+volume: '44'
