@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '38605062'
+- idtype: doi
+  value: 10.1038/s41467-024-47555-3
+- idtype: pmcid
+  value: PMC11009405
+authors:
+- authtype: Author
+  name: Bange M
+- authtype: Author
+  name: Gonzalez-Escamilla G
+- authtype: Author
+  name: Herz DM
+- authtype: Author
+  name: Tinkhauser G
+- authtype: Author
+  name: Glaser M
+- authtype: Author
+  name: Ciolac D
+- authtype: Author
+  name: Pogosyan A
+- authtype: Author
+  name: Kreis SL
+- authtype: Author
+  name: Luhmann HJ
+- authtype: Author
+  name: Tan H
+- authtype: Author
+  name: Groppa S
+epubdate: 2024 Apr 12
+fulljournalname: Nature Communications
+issue: ''
+pages: '3166'
+pmclivedate: 2024/04/12
+printpubdate: ''
+pubdate: 2024 Apr 12
+sortdate: 2024/04/12 00:00
+source: Nat Commun
+title: Subthalamic stimulation modulates context-dependent effects of beta bursts
+  during fine motor control
+uid: '11009405'
+volume: '15'
