@@ -54,7 +54,7 @@ In FieldTrip, the atlas is included as a nifti file, complemented with a text fi
          coordsys: 'mni'
       tissuelabel: {1x246 cell}
 
-    >> imagesc(brainnetome.atlas(:,:,68))
+    >> imagesc(brainnetome.tissue(:,:,68))
 
 {% include image src="/assets/img/template/atlas/brainnetome_atlas2.png" width="400" %}
 
