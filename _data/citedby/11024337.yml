@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '38638697'
+- idtype: doi
+  value: 10.3389/fnins.2024.1355565
+- idtype: pmcid
+  value: PMC11024337
+authors:
+- authtype: Author
+  name: Whittaker HT
+- authtype: Author
+  name: Khayyat L
+- authtype: Author
+  name: Fortier-Lavallée J
+- authtype: Author
+  name: Laverdière M
+- authtype: Author
+  name: Bélanger C
+- authtype: Author
+  name: Zatorre RJ
+- authtype: Author
+  name: Albouy P
+epubdate: 2024 Apr 4
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '1355565'
+pmclivedate: 2024/04/18
+printpubdate: ''
+pubdate: 2024 Apr 4
+sortdate: 2024/04/04 00:00
+source: Front Neurosci
+title: 'Information-based rhythmic transcranial magnetic stimulation to accelerate
+  learning during auditory working memory training: a proof-of-concept study'
+uid: '11024337'
+volume: '18'

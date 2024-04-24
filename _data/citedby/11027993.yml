@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '38646121'
+- idtype: doi
+  value: 10.3389/fpsyg.2024.1149750
+- idtype: pmcid
+  value: PMC11027993
+authors:
+- authtype: Author
+  name: Giannopulu I
+- authtype: Author
+  name: Lee K
+- authtype: Author
+  name: Abdi E
+- authtype: Author
+  name: Noori-Hoshyar A
+- authtype: Author
+  name: Brotto G
+- authtype: Author
+  name: Van Velsen M
+- authtype: Author
+  name: Lin T
+- authtype: Author
+  name: Gauchan P
+- authtype: Author
+  name: Gorman J
+- authtype: Author
+  name: Indelicato G
+epubdate: 2024 Apr 5
+fulljournalname: Frontiers in Psychology
+issue: ''
+pages: '1149750'
+pmclivedate: 2024/04/19
+printpubdate: ''
+pubdate: 2024 Apr 5
+sortdate: 2024/04/05 00:00
+source: Front Psychol
+title: Predicting neural activity of whole body cast shadow through object cast shadow
+  in dynamic environments
+uid: '11027993'
+volume: '15'

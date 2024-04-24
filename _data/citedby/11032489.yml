@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '38588422'
+- idtype: doi
+  value: 10.1073/pnas.2401196121
+- idtype: pmcid
+  value: PMC11032489
+authors:
+- authtype: Author
+  name: Romagnano V
+- authtype: Author
+  name: Kubon J
+- authtype: Author
+  name: Sokolov AN
+- authtype: Author
+  name: Fallgatter AJ
+- authtype: Author
+  name: Braun C
+- authtype: Author
+  name: Pavlova MA
+epubdate: 2024 Apr 8
+fulljournalname: Proceedings of the National Academy of Sciences of the United States
+  of America
+issue: '16'
+pages: e2401196121
+pmclivedate: 2024/04/22
+printpubdate: 2024 Apr 16
+pubdate: 2024 Apr 8
+sortdate: 2024/04/08 00:00
+source: Proc Natl Acad Sci U S A
+title: Dynamic brain communication underwriting face pareidolia
+uid: '11032489'
+volume: '121'
