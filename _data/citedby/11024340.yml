@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '38638694'
+- idtype: doi
+  value: 10.3389/fnins.2024.1373136
+- idtype: pmcid
+  value: PMC11024340
+authors:
+- authtype: Author
+  name: Wang NN
+- authtype: Author
+  name: Yu SF
+- authtype: Author
+  name: Dang P
+- authtype: Author
+  name: Su R
+- authtype: Author
+  name: Li H
+- authtype: Author
+  name: Ma HL
+- authtype: Author
+  name: Liu M
+- authtype: Author
+  name: Zhang DL
+epubdate: 2024 Apr 4
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '1373136'
+pmclivedate: 2024/04/18
+printpubdate: ''
+pubdate: 2024 Apr 4
+sortdate: 2024/04/04 00:00
+source: Front Neurosci
+title: 'The neuroimmune pathway of high-altitude adaptation: influence of erythrocytes
+  on attention networks through inflammation and the autonomic nervous system'
+uid: '11024340'
+volume: '18'

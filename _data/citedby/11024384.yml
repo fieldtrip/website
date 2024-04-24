@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '38638804'
+- idtype: doi
+  value: 10.3389/fnhum.2024.1358380
+- idtype: pmcid
+  value: PMC11024384
+authors:
+- authtype: Author
+  name: Mueller JL
+- authtype: Author
+  name: Weyers I
+- authtype: Author
+  name: Friederici AD
+- authtype: Author
+  name: Männel C
+epubdate: 2024 Apr 4
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '1358380'
+pmclivedate: 2024/04/18
+printpubdate: ''
+pubdate: 2024 Apr 4
+sortdate: 2024/04/04 00:00
+source: Front Hum Neurosci
+title: Individual differences in auditory perception predict learning of non-adjacent
+  tone sequences in 3-year-olds
+uid: '11024384'
+volume: '18'
