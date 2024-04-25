@@ -7,7 +7,7 @@ tags: [example, source, mri, plotting]
 
 The following code makes a number of figures that can be used as quality control for the procedure to coregister the MRI with the MEG.
 
-{% include markup/danger %}
+{% include markup/red %}
 Please note that this is an example where the coregistration was not completely correct. The head is tilted to the left.
 {% include markup/end %}
 

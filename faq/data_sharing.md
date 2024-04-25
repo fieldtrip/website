@@ -49,7 +49,7 @@ The MEG and corresponding imaging data should be pseudonomized (i.e. using subje
 
 For CTF data, you can look in this [FAQ on anonymizing a CTF dataset](/faq/how_can_i_anonymize_a_ctf_dataset).
 
-{% include markup/danger %}
+{% include markup/red %}
 Note that "anonymous" or "pseudonomized" does not imply that it is impossible to link the data, just that the link is not directly provided with the data. e.g., am photo of a participant without its name or social security number is anonymous, but could nevertheless still be linked to the participants identity using Google reverse image search. That is why you should also consider to use deidentification methods.
 {% include markup/end %}
 

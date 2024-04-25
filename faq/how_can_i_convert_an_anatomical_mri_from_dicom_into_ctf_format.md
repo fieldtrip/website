@@ -5,7 +5,7 @@ tags: [faq, mri, meg, ctf, dataformat, coordinate]
 
 # How can I convert an anatomical MRI from DICOM into CTF format?
 
-{% include markup/warning %}
+{% include markup/yellow %}
 This page describes how we do the conversion at the Donders Centre for Cognitive Neuroimaging (DCCN) in Nijmegen and some of the items described here are specific to us, such as the directory layout and the precise definition of the ear landmarks, but most of this description applies in general.
 {% include markup/end %}
 
@@ -88,7 +88,7 @@ At the DCCN we use ear-molds that come in a variety of sizes to position the MEG
 
 {% include image src="/assets/img/faq/how_can_i_convert_an_anatomical_mri_from_dicom_into_ctf_format/ear_molds_2.jpg" width="400" %}
 
-{% include markup/danger %}
+{% include markup/red %}
 Note that the photo above is incorrect and misleading: it shows one of the markers plugged into the earmold on the _inside_, whereas in reality they are plugged into the mold on the _outside_, facing away from the ear. The markers would actually also be too big to fit in the ear canal.
 
 In the MRI below you can see the small dot (the marker) with the yellow arrow hovering outside the ear; the silicone earmold itself is not visible on the MRI.

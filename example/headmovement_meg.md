@@ -183,7 +183,7 @@ Second, the same trials in the headposition data have to be selected as those pr
 
 Finally, note that the circumcenter function is a helper function that calculates the position (geometrical center of the three localizer coils) and orientation of the head. This saves some **degrees of freedom** (df=6) as compared to taking into account the x,y,z-coordinates of each coil separately (n=3) as regressors (df=9). If you want to also use the squares, cubes, and derivatives as regressors (to account for non-linear effects of head motion on the MEG signal), this can save quite a bit of degrees. However, too large a number of covariates can reduce statistical efficiency for procedures. In that case, MATLAB will produce the Warning 'Rank deficient'. A rule of thumb is to roughly have 10% of the sample size (based on chapter 8 of Tabachnick & Fidell (1996)).
 
-{% include markup/warning %}
+{% include markup/yellow %}
 Please cite this paper when you have used the offline head movement compensation in your study:
 
 Stolk A, Todorovic A, Schoffelen JM, Oostenveld R. **[Online and offline tools for head movement compensation in MEG.](https://doi.org/10.1016/j.neuroimage.2012.11.047.m)** Neuroimage. 2013 Mar;68:39-48. doi: 10.1016/j.neuroimage.2012.11.047.

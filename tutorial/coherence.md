@@ -115,7 +115,7 @@ _Figure: An example of the raw MEG data from sensor MLC21 (upper frame) and the 
 
 #### Exercise 1
 
-{% include markup/info %}
+{% include markup/blue %}
 Explore the MEG and EMG in figure 1, e.g., by zooming in. How are the signals different from one another?
 {% include markup/end %}
 
@@ -193,7 +193,7 @@ _Figure: The coherence spectrum between the EMG and sensor MRC21._
 
 ### Exercise 2
 
-{% include markup/exercise %}
+{% include markup/blue %}
 a) What determines the frequency resolution of the spectrum, as displayed in figure 3? How can it be increased or decreased? Answer the same question for smoothing.
 
 b) Plot a topographical distribution of the coherence in the beta band. The variable cfg.xlim defines the edges of the frequency band.
@@ -213,7 +213,7 @@ _Figure: A topographic representation of the coherence between the left EMG and 
 
 ### Exercise 3
 
-{% include markup/exercise %}
+{% include markup/blue %}
 Explain the pattern of activation in Figure 4.
 
 Plot the topographic representation for other frequencies that might be of interest.
@@ -221,7 +221,7 @@ Plot the topographic representation for other frequencies that might be of inter
 
 ### Exercise 4
 
-{% include markup/exercise %}
+{% include markup/blue %}
 Explore the consequence of changing the smoothing in the frequency domain. Do this by recomputing the cortico-muscular coherence between the EMG signal and MEG sensor MRC21 for different degrees of smoothing. Compute the powerspectra and the cross-spectra, and the corresponding coherence using different degrees of smoothing.
 
 a) 2 Hz smoothing (cfg.tapsmofrq = 2 Hz)
@@ -282,7 +282,7 @@ Which degree of smoothing do you consider optimal in the calculations above?
 
 ### Exercise 5
 
-{% include markup/exercise %}
+{% include markup/blue %}
 Another question pertains to how the estimate of coherence is affected by the number of trials. We will compare the cortico-muscular coherence at two MEG sensors for different amount of data.
 
 Create the following configuration, and compute the coherence.

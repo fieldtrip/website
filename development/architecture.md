@@ -7,7 +7,7 @@ redirect_from:
 
 # Toolbox architecture and organization of the source code
 
-{% include markup/info %}
+{% include markup/blue %}
 The **[ft_examplefunction](/reference/ft_examplefunction)** provides a documented walkthrough of a typical high-level FieldTrip function that demonstrates a lot of the features presented below.
 {% include markup/end %}
 

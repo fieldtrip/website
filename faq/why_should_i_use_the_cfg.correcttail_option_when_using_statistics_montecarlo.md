@@ -9,7 +9,7 @@ When running statistics using **[ft_freqstatistics](/reference/ft_freqstatistics
 
     % cfg.correcttail = correct p-values or alpha-values when doing a two-sided test, 'alpha','prob' or 'no' (default = 'no')
 
-{% include markup/warning %}
+{% include markup/yellow %}
 When doing a two-sided test with alpha = 0.05 and *not correcting*, you are effectively testing with alpha = 0.1.
 {% include markup/end %}
 

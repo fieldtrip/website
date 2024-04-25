@@ -7,7 +7,7 @@ tags: [faq, meg, realtime]
 
 The CTF/Neuromag acquisition software provides a shared memory in which the the data from the MEG channels and all auxiliary channels are available in real-time. The acq2ftx/neuromag2ft application transfers this data from the shared memory to a [FieldTrip buffer](/development/realtime/buffer) on the acquisition computer. MATLAB software running on another computer can then be used to analyze the real-time data. See the [getting started](/getting_started/realtime_headlocalizer) page for setting up this interface on your MEG system.
 
-{% include markup/warning %}
+{% include markup/yellow %}
 Please cite this paper when you use the realtime head localizer in your research:
 
 Stolk A, Todorovic A, Schoffelen JM, Oostenveld R. **[Online and offline tools for head movement compensation in MEG.](https://doi.org/10.1016/j.neuroimage.2012.11.047.m)** Neuroimage, 2013.

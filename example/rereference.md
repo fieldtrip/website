@@ -30,7 +30,7 @@ You can use this to compute an average reference over all electrodes like this:
 
 After this preprocessing step, the average or mean over all channels will be zero.
 
-{% include markup/success %}
+{% include markup/green %}
 Note that you can also do the reading and re-referencing in one step like this:
 
     cfg = [];
@@ -134,7 +134,7 @@ The following example uses a spherical arrangement of the electrodes, in combina
 
 ## bipolar
 
-{% include markup/warning %}
+{% include markup/yellow %}
 The implementation for `cfg.refmethod = 'bipolar'` is primarily designed for sEEG where each contact along each chaft starts with the same letter(s). If you have EEG data with a 1020 electrode placement, you probably want to use one of the explicit bipolar schemes, such as the double banana (see below).
 {% include markup/end %}
 

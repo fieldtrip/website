@@ -7,7 +7,7 @@ tags: [example, bids, sharing, anonymize]
 
 The [BIDS standard](https://bids.neuroimaging.io) describes a simple and easy to adopt way of organizing neuroimaging and behavioral data. This example describes how we prepared a combined MEG/fMRI dataset in BIDS format for sharing. The project involved 204 subjects, which participated in either a auditory or a visual version of a language experiment. For every subject resting-state and task MEG and fMRI was recorded. The data and the experiment are described in more details in the references that you find at the end of this page.
 
-{% include markup/success %}
+{% include markup/green %}
 The data is shared on the Donders Repository with the digital object identifier [10.34973/37n0-yc51](https://doi.org/10.34973/37n0-yc51) and the corresponding publication "A 204-subject multimodal neuroimaging dataset to study language processing" has been published as [10.1038/s41597-019-0020-y](https://doi.org/10.1038/s41597-019-0020-y).
 {% include markup/end %}
 
@@ -62,7 +62,7 @@ raw/A2001/mri_task
 
 for each subject. The actual data files (CTF, DICOM, Presentation log files, Polhemus, etc.) are located in these directories.
 
-{% include markup/warning %}
+{% include markup/yellow %}
 Since preparing the data for publication and creating this page, the **[data2bids](/reference/data2bids)** function has been greatly improved. Nowadays Bash and Python are not needed any more, but (almost) the whole dataset conversion and reorganization can be done with a MATLAB script. The only part where the Linux command line is still needed is for renaming and anonimizing the CTF datasets, which requires the `newDs` command line application.
 
 We keep the documentation here for reference, but suggest that you look at more recent examples to learn how to [convert your data to BIDS](/tag/bids).
@@ -85,7 +85,7 @@ After each of the automated steps the results should be checked. For that I have
 
 It is important that you use appropriate tools. Command line utilities are very handy, but also a good graphical (code) editor that allows you to navigate through the full directory structure and check the file content. I have been using the Atom editor with the network directory mounted on my desktop computer. There are good [alternatives](https://alternativeto.net/software/atom/).
 
-{% include markup/info %}
+{% include markup/blue %}
 The scripts are included on this page for completeness. You can also download them from our [download server](https://download.fieldtriptoolbox.org/example/bids_mous/).
 {% include markup/end %}
 
@@ -222,7 +222,7 @@ newDs -anon $RAW/V1090/meg/V1090_301102009_03.ds  $BIDS/sub-V1090/meg/sub-V1090_
 find $BIDS -name \*.res4 -exec $HOME/bids-tools/bin/remove_ctf_datetime -d {} \;
 ```
 
-{% include markup/info %}
+{% include markup/blue %}
 You can see a few exceptions, which reflect datasets that did not convert well automatically. The reason for this is the fact that during data acquisition, the data ended up in two different .ds datasets. According to BIDS, these are supposed to be represented by different 'runs'.
 {% include markup/end %}
 
@@ -486,7 +486,7 @@ end % for each subject
 
 <br>
 
-{% include markup/info %}
+{% include markup/blue %}
 This script here deals with some dataset specific exceptions. Indeed, given the fact that we are working with real data here, due to various reasons, automatic conversions (one-size-fits-all) are likely to occasionally fail.
 
 In the current context, the tricky part happened to be the creation of the events.tsv files for the MEG task data. In order to create these files, **[data2bids](/reference/data2bids)** attempts to align the experimental events, as extracted from the presentation software logfile, with the experimental events, as extracted from the digital trigger channel in the MEG data files. This only works well and unambiguously, if there's a one-to-one-mapping of the events (or a specific type of event) in the two representations.

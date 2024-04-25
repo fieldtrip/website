@@ -87,7 +87,7 @@ If you have additionally used the Polhemus to record the headshape and the locat
     cfg.headshape.interactive = 'yes';
     mri                       = ft_volumerealign(cfg, mri);
 
-{% include markup/danger %}
+{% include markup/red %}
 Note that it really only makes sense to take additional head shape information into account if it is congruent with the data acquisition. If you record information about the head shape in relation to the head localizer coils (fiducials) on LPA/RPA and on nasion, you should make sure to use the same fiducial locations as those used during the MEG session.
 {% include markup/end %}
 
@@ -116,7 +116,7 @@ For later use, we also save the transformation matrix.
     cfg.parameter   = 'anatomy';
     ft_volumewrite(cfg, mri);
 
-{% include markup/danger %}
+{% include markup/red %}
 Importantly, the mgz-filetype is not fully supported on Windows platforms. Reading **and** writing can be done on Linux and Mac platforms. When you are processing the anatomical information on one of these platforms it is OK to save as mgz (and useful too, because it compresses the files and uses less diskspace as a consequence). These files cannot be saved on a Windows PC (although reading is possible). If you use MATLAB on Windows, you can save the volume as a nifti file using cfg.filetype = 'nifti'. Subsequently, if needed, you can convert it to mgz using [mri_convert](http://surfer.nmr.mgh.harvard.edu/fswiki/mri_convert) with FreeSurfer. Note, however, that as far as the writer of this tutorial knows, FreeSurfer itself does not run on Windows.
 {% include markup/end %}
 
@@ -371,7 +371,7 @@ It is not required to create a volume conduction model of the head in order to c
 
 **fig 3: template grid in single-subject head coordinates, superimposed onto the headmodel**
 
-{% include markup/danger %}
+{% include markup/red %}
 Keep in mind that the .pos field in the source models are subject specific. When you want to do group analysis across subjects, which now in principle is allowed due to the equivalence of the dipole positions in normalized space, you need to replace the positions with the normalized positions of the template sourcemodel. Otherwise, FieldTrip will throw an error.
 {% include markup/end %}
 

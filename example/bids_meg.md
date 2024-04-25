@@ -5,7 +5,7 @@ tags: [example, bids, sharing, meg, ctf]
 
 # Converting an example MEG dataset for sharing in BIDS
 
-{% include markup/info %}
+{% include markup/blue %}
 
 The general description of how MEG data can be shared in the [BIDS format](https://bids.neuroimaging.io) is described in the paper [MEG-BIDS, the brain imaging data structure extended to magnetoencephalography](https://doi.org/10.1038/sdata.2018.110) by Guiomar Niso, et al. Scientific Data volume 5, Article number: 180110 (2018). The BIDS standard itself with all details can be found on <https://bids-standard.org>.
  

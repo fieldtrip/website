@@ -142,7 +142,7 @@ It was found that the line-by-line full coverage is **41 %**, which can and can 
 This reveals that the `test_ft_xxx` scripts already provide most of the current coverage. The remaining test scripts (especially the `test_bugXXX` and `test_issueXXX`) were more designed for [regression testing](https://en.wikipedia.org/wiki/Regression_testing) and can be continued to be used for that.
 {% include markup/end %}
 
-{% include markup/info %}
+{% include markup/blue %}
 A future goal is to also find the coverage of FieldTrip functions that are part of the modules (fileio, preproc, etc.) and other low-level functions.
 {% include markup/end %}
 
@@ -174,7 +174,7 @@ results = runner.run(suite);
 
 We opted for the first method using [runtests](https://nl.mathworks.com/help/matlab/ref/runtests.html) and not the alternative with [CodeCoveragePlugin](https://nl.mathworks.com/help/matlab/ref/matlab.unittest.plugins.codecoverageplugin-class.html), because it has less lines of code, it is easier to interpret for a non-software engineer and provides the same results.
 
-{% include markup/warning %}
+{% include markup/yellow %}
 The alternative above does not work; the function `inpect_codecoverage.m` is not picked up. If you rename it to `inspect_test.m` or something else with "test" in the filename, it does get picked up.
 
 From the MATLAB documentation: _The name of the test file must start or end with the word 'test', which is case-insensitive. If the file name does not start or end with the word 'test', the tests in the file might be ignored in certain cases._

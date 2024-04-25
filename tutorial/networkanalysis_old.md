@@ -192,7 +192,7 @@ In the following section we will compute the ingredients for accurate reconstruc
 
 _Figure 3: Sensors (green), head model (grey) and source model(blue) are properly aligned all in units of cm._
 
-{% include markup/danger %}
+{% include markup/red %}
 The source model describes a regular 3D grid. Not all positions of the source model are inside the brain. This is represented in the "inside" field.
 {% include markup/end %}
 
@@ -263,7 +263,7 @@ The source model describes a regular 3D grid. Not all positions of the source mo
 
 _Figure 4: Reconstructed activity (neural activity index) with peak maxima in occipital but also sensorimotor and some deep brain areas._
 
-{% include markup/info %}
+{% include markup/blue %}
 The accurate judgment of the source reconstructed data is often not straight forward. However, you can make your judgment dependent on the comparison of sensor and source topography. In the present case the activation of the visual areas provide a good match to the observed scalp topography.
 
     cfg               = [];
@@ -626,7 +626,7 @@ Of course one can use also phase locking value or some other metric for quantifi
 
 ##### Exercise 1
 
-{% include markup/info %}
+{% include markup/blue %}
 Compare both network configurations. Obiviously, they have little in common.
 
 Why? Discuss the difference between 'icoh' and 'plv'.

@@ -9,7 +9,7 @@ tags: [segmentation, volume, headmodel, seg3d]
 
 In Seg3D is easy to manually modify a segmentation that was for example created with **[ft_volumesegment](/reference/ft_volumesegment)** and the underlying SPM algorithms.
 
-{% include markup/success %}
+{% include markup/green %}
 Seg3D calls a binary 3D array that represents a single type of tissue a "mask". Seg3D can import and export these masks as .mat files; these should each contain a single binary 3D array. The 4x4 `transform` matrix that is used in FieldTrip to determine the size of the voxels and the origin of the coordinate system is not exported to Seg3D.
 {% include markup/end %}
 
@@ -90,7 +90,7 @@ You can subsequently export the modified masks as a .mat file and load them agai
     cfg.atlas        = segmentedmri_edit_indexed;
     ft_sourceplot(cfg, segmentedmri_edit_indexed);
     
-{% include markup/danger %}
+{% include markup/red %}
 Some operations in Seg3D work the best if the volume consists of isotropic voxels, i.e., the space between the center of any two adjacent voxels is the same along each axis x, y, z. You can make a volume isotropic with **[ft_volumereslice](/reference/ft_volumereslice)**
 {% include markup/end %}
 

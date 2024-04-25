@@ -25,7 +25,7 @@ Both text files are based on the Microsoft Windows INI format consisting of:
 - comments marked as `; comment`
 - key-value pairs marked as `key=value`
 
-{% include markup/info %}
+{% include markup/blue %}
 The BrainVision Recorded and Analyzer software packages use a well-defined file format that is supported by many software packages (e.g., FieldTrip, EEGLAB, SPM, MNE-Python) and that is used in [BIDS for EEG](https://psyarxiv.com/63a4y). The details of the BrainVision data format are available from the [BrainProducts website](https://www.brainproducts.com/productdetails.php?id=21&tab=5).
 {% include markup/end %}
 
@@ -40,11 +40,11 @@ For example, see this excerpt from a BrainVision header file (.vhdr):
 
 In this short example we can observe a challenge that is caused by having three separate files for each dataset: It means that the single files have internal pointers to each other's locations (see the DataFile and MarkerFile keys in the example).
 
-{% include markup/info %}
+{% include markup/blue %}
 Manually renaming BrainVision datasets may lead to errors, since the .vhdr and .vmrk file headers contain the name of the linked data file. Paul Czienskowski from the MPI for Human Development in Berlin, Germany, has written a small windows program that you can use: http://code.google.com/p/eeg-renamer/. Or you can use [this MATLAB function](https://gist.github.com/CPernet/e037df46e064ca83a49fb4c595d4566a). When renaming a single or small number of datasets, you could also use a text editor to fix the header.
 {% include markup/end %}
 
-{% include markup/success %}
+{% include markup/green %}
 For validation of BrainVision file triplets, you can use the [brainvision-validator](https://github.com/sappelhoff/brainvision-validator), which is a command line tool developed in nodejs.
 {% include markup/end %}
 
@@ -76,7 +76,7 @@ You can do all the preprocessing you want to do in BrainVision Analyzer (e.g., f
 5.  DataType should be 'TIMEDOMAIN'
 6.  BinaryFormat should be 'IEEE_FLOAT_32'
 
-{% include markup/info %}
+{% include markup/blue %}
 When comparing your preprocessed data from FieldTrip to preprocessed data from BrainVision Analyzer, you might notice subtle differences. This might be due to two reasons: First, the filtersettings of BVA are hard to mimic using FieldTrip, because FieldTrip is using different defaults. Also, the order of preprocessing steps is fixed in FieldTrip, whereas you have to perform them manually, which makes it possible to do them in any order in BVA. The effect filters have on your data depend on the order of the preprocessing steps.
 {% include markup/end %}
 

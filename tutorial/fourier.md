@@ -3,7 +3,7 @@ title: Fourier analysis of neuronal oscillations and synchronization
 tags: [example, freq, coherence, eeg, meg, fixme]
 ---
 
-{% include markup/warning %}
+{% include markup/yellow %}
 This tutorial does not follow the structure of the "main" FieldTrip tutorials, but rather explains the lower-level MATLAB functions instead of **[ft_freqanalysis](/reference/ft_freqanalysis)**.
 
 Perhaps you are looking for the tutorial on [time-frequency analysis](/tutorial/timefrequencyanalysis)?
@@ -381,6 +381,6 @@ _Figure: Coherence spectrum for two 10 Hz signals with a somewhat consistent pha
 
 ### Exercise
 
-{% include markup/info %}
+{% include markup/blue %}
 Change the phase spread factor (phsspreadfac) in the coherence analysis and see what the outcome is.
 {% include markup/end %}

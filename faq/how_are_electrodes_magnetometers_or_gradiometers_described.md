@@ -23,7 +23,7 @@ To explicitly represent the reference, an additional field is needed in the `ele
 
 This tells FieldTrip (and specifically the EEG forward modeling code) how to combine the electrodes into channels. This makes the reference explicit and allows to set the position of the reference electrode in unipolar recordings. In case `elec.tra` is not provided, the forward and inverse calculations will be performed assuming an average reference over all electrodes.
 
-{% include markup/warning %}
+{% include markup/yellow %}
 The EEG potential is in first instance computed on the locations specified in `elec.elecpos`, and when applicable combined using `elec.tra`. The `elec.chanpos` field is not used in the forward computations, but only for data visualization and for determining neighbours.
 {% include markup/end %}
 
@@ -40,7 +40,7 @@ The gradiometer definition generally consists of multiple coils per channel, e.g
 
 The channel orientation is used for synthetic gradient computation for axial gradiometer or magnetometer systems. If you don't know what it means and if you need to construct your own grad structure, you can set it to `nan(N,3)`.
 
-{% include markup/warning %}
+{% include markup/yellow %}
 MEG forward computations are performed for each `grad.coilpos` and `grad.coilori`, and subsequently combined using `grad.tra`. Although they are called "coils", you can better think of them as integration points.
 
 By default a first order gradiometer is described by 2 "coils", but you could use more integration points to get a more accurate forward model (see `cfg.coilaccuracy` in **[ft_preprocessing](/reference/ft_preprocessing)**).

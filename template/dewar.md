@@ -13,6 +13,6 @@ To help position the subject in the MEG dewar (i.e. the helmet), you can use **[
 - MEG sensor positions
 - dewar outline
 
-{% include markup/warning %}
+{% include markup/yellow %}
 You can find the template MEG dewar shapes included in FieldTrip [here](https://github.com/fieldtrip/fieldtrip/tree/master/template/dewar).
 {% include markup/end %}

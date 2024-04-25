@@ -5,7 +5,7 @@ tags: [practicalmeeg2022, artifact, ica, preprocessing, mmfaces]
 
 # Dealing with artifacts
 
-{% include markup/info %}
+{% include markup/blue %}
 This tutorial was written specifically for the [PracticalMEEG workshop in Aix-en-Provence](/workshop/practicalmeeg2022) in December 2022 and is part of a coherent sequence of tutorials.
 {% include markup/end %}
 
@@ -51,7 +51,7 @@ We start with the raw data that we preprocessed in the [previous tutorial](/work
     filename = fullfile(subj.outputpath, 'raw2erp', subj.name, sprintf('%s_data', subj.name));
     load(filename, 'data')
 
-{% include markup/info %}
+{% include markup/blue %}
 This data structure is about 1.5 GB large and should fit in the RAM of your computer.
 
     >> whos data
@@ -82,7 +82,7 @@ This function allows you to click on a trial to remove it from the data. It retu
 
 _Figure; The single-trial responses for the VEOG channel_
 
-{% include markup/warning %}
+{% include markup/yellow %}
 Besides there being many channels, there are also many trials. Visualizing them on a small computer screen might be hard. Remember: if you are working with large data, you better use a large computer (screen, memory, disk).
 {% include markup/end %}
 
@@ -102,7 +102,7 @@ We might want to decide that we want to exclude trials with blinks from further 
 
 This `artifact` matrix is very comparable to the `trl` matrix that **[ft_definetrial](/reference/ft_definetrial)** returns. In this case it contains the begin and endsample of each artifact that was detected using the "channel" method in **[ft_rejectvisual](/reference/ft_rejectvisual)**.
 
-{% include markup/info %}
+{% include markup/blue %}
 Had the data structure contained the `sampleinfo` field with a specification how each trial maps onto the continuous recording on disk, then the artifacts would have been expressed relative to the recording on disk. This allows for the same visual/manual identification of artifacts to be used repeatedly, even if you do the preprocessing again and for example extend the pre- or post-stimulus time a bit.
 
 In this case you may have noticed _"Warning: reconstructing sampleinfo by assuming that the trials are consecutive segments of a continuous recording"_. This indicates that the original sampleinfo is not present, hence the artifacts are expressed relative to the data in memory.
@@ -175,7 +175,7 @@ The EOG detection above makes use of **[ft_artifact_zvalue](/reference/ft_artifa
 
 #### Exercise 1
 
-{% include markup/info %}
+{% include markup/blue %}
 Using the following code, use all EEG channels instead of the dedicated EOG channels to identify the eye artifacts.
 
     cfg = [];
@@ -303,7 +303,7 @@ A realistic range for the background activity and noise in the EOG channels _if 
 
 #### Exercise 2
 
-{% include markup/info %}
+{% include markup/blue %}
 Use the same approach on the EEG channels. The EEG channels have a different spacing to the reference electrode and different signal amplitudes. What threshold is realistic for the standard deviation of the EEG channels?
 {% include markup/end %}
 
@@ -395,7 +395,7 @@ Using the following code we can count how many trials we originally had in each 
 
 #### Exercise 3
 
-{% include markup/info %}
+{% include markup/blue %}
 Is there a reason to believe that this participant was blinking more in the faces than in the scrambled faces condition? Do you think there is a confounding effect of the behaviour of the participant on the contrast of interest?
 {% include markup/end %}
 
@@ -479,7 +479,7 @@ Note that ICA assumes a stationary mixing of all the (brain and artifact) source
 
 #### Exercise 4
 
-{% include markup/info %}
+{% include markup/blue %}
 Use **[ft_componentanalysis](/reference/ft_componentanalysis)**  and **[ft_rejectcomponent](/reference/ft_rejectcomponent)** to remove the eye- and heart-related artifacts from the EEG and the MEG data.
 
 You can follow the tutorial on [Cleaning artifacts using ICA](/tutorial/ica_artifact_cleaning).

@@ -247,7 +247,7 @@ In order to visualize source-reconstructed data, the function [ft_sourceplot](/r
 
 _Figure 6: Reconstructed activity (neural activity index) of resting state alpha power is not as instructive as one would hope._
 
-{% include markup/info %}
+{% include markup/blue %}
 Compare the distribution of the neural activity index with the electrode topography plotted earlier. How do they compare? Could you give an explanation of why the correspondence could be poor?
 {% include markup/end %}
 
@@ -379,7 +379,7 @@ We now visualize the log-difference on the cortical sheet.
 
 _Figure 8: Source reconstructed activity illustrating the relative difference in alpha power between the high and low alpha conditions._
 
-{% include markup/info %}
+{% include markup/blue %}
 Compare this source reconstruction with the scalp topography generated above. How do the two representations compare?
 {% include markup/end %}
 
@@ -437,7 +437,7 @@ We can now explore the structure in the estimated connectivity matrices using gr
 
 _Figure 10: Node degree based on imaginary part of coherency, thresholded at a value of 0.1. Dark colors indicated few suptrathreshold connections, hot colors indicate many suprathreshold connections._
 
-{% include markup/info %}
+{% include markup/blue %}
 Compare the degree values for the parcellated and the full connectomes. Why are the values different? What determines the maximum value?
 
 Explore and compare both figures a bit more by 3D rotation. Identify the overlap and discrepancies. What could cause this?
@@ -448,13 +448,13 @@ Re-compute the parcellated connectome using cfg.method = 'max', and inspect the 
 {% include markup/end %}
 
 
-{% include markup/info %}
+{% include markup/blue %}
 Invoke the function and explore the data.
 {% include markup/end %}
 
 ### Effect of occipital alpha power on the connectivity results
 
-{% include markup/info %}
+{% include markup/blue %}
 Compute the connectomes separately on the subsets of trials with low and high occipital alpha power, respectively and inspect the results.
 {% include markup/end %}
 
@@ -462,7 +462,7 @@ Compute the connectomes separately on the subsets of trials with low and high oc
 
 Obviously, one can choose from a large amount of different connectivity measures, each of which has its advantages and disadvantages.
 
-{% include markup/info %}
+{% include markup/blue %}
 Compute the phase locking value between all pairs of dipoles, as well as a parcellated version. Explore the results, and compare them with the imaginary part of coherency.
 
 Compute the envelope correlations using the 'powcorr' method, as well as a parcellated version. Explore the results.

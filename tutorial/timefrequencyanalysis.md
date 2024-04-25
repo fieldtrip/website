@@ -13,7 +13,7 @@ Here, we will work on the MEG-language dataset, you can click [here](/tutorial/m
 
 There is no information in this tutorial about how to compare conditions, how to grandaverage the results across subjects or how to do statistical analysis on the time-frequency data. Some of these issues are covered in other tutorials (see the [summary and suggested further reading](#Summary and suggested further reading) section).
 
-{% include markup/info %}
+{% include markup/blue %}
 This tutorial contains hands-on material that we use for the [MEG/EEG toolkit course](/workshop/toolkit2018) and it is complemented by this lecture.
 
 {% include youtube id="dHTuzMsjVJA" %}
@@ -110,7 +110,7 @@ Regardless of the method used for calculating the TFR, the output format is iden
 
 The field TFRhann.powspctrm contains the temporal evolution of the raw power values for each specified frequency.
 
-{% include markup/warning %}
+{% include markup/yellow %}
 If you specify frequencies in cfg.foi of which no integer number of cycles fit into you time window (cfg.t_ftimwin), FieldTrip doesn't always give an error and the output will contain these frequencies. For example, try using cfg.foi = 1:1:30 with the 500 ms time window. Note that the uneven frequencies cannot be interpreted. So you should always think critically about your time and frequency resolution.
 {% include markup/end %}
 
@@ -180,7 +180,7 @@ _Figure: A topographic representation of the time-frequency representations (15 
 
 ##### Exercise 1
 
-{% include markup/info %}
+{% include markup/blue %}
 Plot the power with respect to a relative baseline (hint: use `cfg.zlim=[0 3.0]` and use the cfg.baselinetype option)
 
 How are the responses different? Discuss the assumptions behind choosing a relative or absolute baseline
@@ -188,7 +188,7 @@ How are the responses different? Discuss the assumptions behind choosing a relat
 
 ##### Exercise 2
 
-{% include markup/info %}
+{% include markup/blue %}
 Plot the TFR of sensor MLC24. How do you account for the increased power at ~300 ms (hint: compare to ERFs)?  
 {% include markup/end %}
 
@@ -231,7 +231,7 @@ _Figure: A time-frequency representation of channel MRC15 obtained using ft_sing
 
 If you see artifacts in your figure, see [this FAQ](/faq/i_am_getting_strange_artifacts_in_figures_that_use_opacity).
 
-{% include markup/warning %}
+{% include markup/yellow %}
 **Boundary effects**
 Note the boundary effects, in particular for the lower frequency bins, i.e. the blue (or white) region in the time frequency plane. Within this region, no power values are calculated. The reason for this is that for the corresponding time points, the requested timewindow is not entirely filled with data. For example for 2 Hz the time window has a length of 3.5 s (7 cycles for 2 cycles/s = 3.5 s), this does not fit in the 3 sec window that is preprocessed and therefore there is no data point here. For 5 Hz the window has a length of 1.4 s (7 cycles for 5 cycles/s = 1.4 s). We preprocessed data between t = -1 sec and t = 2 sec so the first power value is assigned to t= -0.3 (since -1 + (0.5 \* 1.4) = -0.3). Because of these boundary effects it is important to apply **[ft_freqanalysis ](/reference/ft_freqanalysis)** to a larger time window to get all the time frequency points for your time window of interest. This requires some thinking ahead when designing your experiment, because inclusion of data from epochs-of-non-interest might contaminate your data with artifacts or other unwanted data features (e.g., stimulus-offset related rebounds).
 {% include markup/end %}
@@ -240,7 +240,7 @@ If you would like to learn more about plotting of time-frequency representations
 
 #### Exercise 3
 
-{% include markup/exercise %}
+{% include markup/blue %}
 Adjust the length of the time-window and thereby degree of smoothing. Use **[ft_singleplotTFR](/reference/ft_singleplotTFR)** to show the results. Discuss the consequences of changing these setting.
 
 4 cycles per time window:
@@ -350,7 +350,7 @@ Plot the result
 _Figure: Time-frequency representations of power calculated using Morlet wavelets._
 
 **Exercise 4**:
-{% include markup/info %}
+{% include markup/blue %}
  Adjust cfg.width and see how the TFRs change.
 {% include markup/end %}
 

@@ -5,7 +5,7 @@ tags: [example, bids, sharing, emg]
 
 # Converting an example EMG dataset for sharing in BIDS
 
-{% include markup/danger %}
+{% include markup/red %}
 The [BIDS standard](https://bids.neuroimaging.io) does currently not specify how to represent EMG recordings. This example - and the support that is implemented in the **[data2bids](/reference/data2bids)** function - should be considered as a preliminary proposal to help researchers with their existing data. This example may also serve to start a discussion on whether and how this data type should be added to the [BIDS specification](http://bids-specification.readthedocs.io).  
 {% include markup/end %}
 
@@ -15,7 +15,7 @@ EMG is not part as an individual data type in the BIDS specification. In the **[
 
 ## Example
 
-{% include markup/success %}
+{% include markup/green %}
 The example data is available from our [download server](https://download.fieldtriptoolbox.org/example/bids_emg/)
 {% include markup/end %}
 

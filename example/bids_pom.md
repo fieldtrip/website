@@ -531,7 +531,7 @@ All measurements that were performed are represented in the `_scans.tsv` file. T
 
 Contrary to most simple examples of functional MRI data on the [BIDS website](https://bids.neuroimaging.io), where the presentation log file is converted into an `_events.tsv` that is placed besides the functional `_bold.nii.gz` file as a "sidecar", here we represent the behavioral data explicitly in the `beh` folder. This allows the behavioral data to also be expressed in relation to the eyetracker data, or in relation to the EMG data.
 
-{% include markup/warning %}
+{% include markup/yellow %}
 We use the strategy that _each recording_ of data to disk is as important as _any other recording_. e.g., for people studying eye movements the eyetracker data is the most important, for people studying tremor the EMG might be the most important, and neuroimaging people would consider the MR data as the most important.
 
 Keeping the different types of data represented symmetrically allows for arbitrary combinations of data to be recorded and investigated, e.g., video in combination with EEG, audio in combination with motion capture, iEEG in combination with MEG, or functional MRI in relation with behavior.

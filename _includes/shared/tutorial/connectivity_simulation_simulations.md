@@ -76,13 +76,13 @@ In this tutorial we will use the bsmart toolbox. The relevant functions have bee
 
 The resulting variable **mdata** contains a description of the data in terms of a multivariate autoregressive model. For each time-lag up to the model order (cfg.order), a 3x3 matrix of coefficients is outputted. The noisecov-field contains covariance matrix of the model's residuals.
 
-{% include markup/warning %}
+{% include markup/yellow %}
 Here, we know the model order a priori because we simulated the data and we choose a slightly higher model order (five instead of two) to get more interesting results in the output. For real data the appropriate model order for fitting the autoregressive model can vary depending on subject, experimental task, quality and complexity of the data, and model estimation technique that is used. You can estimate the optimal model order for your data by relying on information criteria methods such as the Akaike information criterion or the Bayesian information criterion. Alternatively, you can choose to use a non-parametric approach without having to decide on model order at all (see next section on [Non-parametric computation of the cross-spectral density matrix](/tutorial/connectivity#non-parametric-computation-of-the-cross-spectral-density-matrix))
 {% include markup/end %}
 
 #### Exercise 1
 
-{% include markup/info %}
+{% include markup/blue %}
 Compare the parameters specified for the simulation with the estimated coefficients and discuss.
 {% include markup/end %}
 
@@ -131,7 +131,7 @@ Some connectivity metrics can be computed from a non-parametric spectral estimat
 
 The resulting **freq** structure contains the spectral estimate for 3 tapers in each of the 500 trials (hence 1500 estimates), for each of the 3 channels and for 101 frequencies. It is not necessary to compute the cross-spectral density at this stage, because the function used in the next step, **[ft_connectivityanalysis](/reference/ft_connectivityanalysis)**, contains functionality to compute the cross-spectral density from the Fourier coefficients.
 
-{% include markup/warning %}
+{% include markup/yellow %}
 We apply frequency smoothing of 2Hz. The tapsmofrq parameter should already be familiar to you from the [multitapers section of the frequency analysis tutorial](/tutorial/timefrequencyanalysis/#multitapers). How much smoothing is desired will depend on your research question (i.e. frequency band of interest) but also on whether you decide to use the parametric or non-parametric estimation methods for connectivity analysis:
 
 Parametric and non-parametric estimation of Granger causality yield very comparable results, particularly in well-behaved simulated data. The main advantage in calculating Granger causality using the non-parametric technique is that it does not require the determination of the model order for the autoregressive model. When relying on the non-parametric factorization approach more data is required as well as some smoothing for the algorithm to converge to a stable result. Thus the choice of parametric vs. non-paramteric estimation of Granger causality will depend on your data and your certainty of model order.
@@ -171,7 +171,7 @@ The coherence measure is a symmetric measure, which means that it does not provi
 
 #### Exercise 2
 
-{% include markup/info %}
+{% include markup/blue %}
 Compute the granger output using instead the 'freq' data structure. Plot them side-by-side using ft_connectivityplot.
 {% include markup/end %}
 
@@ -190,12 +190,12 @@ Instead of plotting it with **[ft_connectivityplot](/reference/ft_connectivitypl
 
 #### Exercise 3
 
-{% include markup/info %}
+{% include markup/blue %}
 Discuss the differences between the granger causality spectra, and the coherence spectra.
 {% include markup/end %}
 
 #### Exercise 4
 
-{% include markup/info %}
+{% include markup/blue %}
 Compute the following connectivity measures from the **mfreq** data, and visualize and discuss the results: partial directed coherence (pdc), directed transfer function (dtf), phase slope index (psi). (Note that psi will require specifying cfg.bandwidth. What is the meaning of this parameter?)
 {% include markup/end %}

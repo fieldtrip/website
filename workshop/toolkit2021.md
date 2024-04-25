@@ -13,7 +13,7 @@ The toolkit course is aimed at PhD and postdoctoral researchers that already hav
 
 The toolkit will consist of a number of interactive online lectures, followed by Q&A sessions. Besides lectures we will have interactive hands-on sessions in which you will be tutored through the complete analysis of a MEG/EEG data set using the FieldTrip toolbox. There will be plenty of opportunity to interact and also ask questions about your research and data. On the final day you will have the opportunity to work on your own dataset under supervision of skilled tutors.
 
-{% include markup/info %}
+{% include markup/blue %}
 The number of participants is limited to ensure good interaction and sufficient individual attention to participants. The pre-registration has closed and participants that have been selected have been informed about this.
 {% include markup/end %}
 

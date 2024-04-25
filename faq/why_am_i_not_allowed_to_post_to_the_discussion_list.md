@@ -15,7 +15,7 @@ It might also be due to having sent the email from another email address than th
 
 The email list server cares about the precise address: **john.doe@donders.ru.nl** is considered to be a different person than **j.doe@donders.ru.nl** or **john.doe@ru.nl**, even though your university might link all of those addresses to the same inbox.
 
-{% include markup/danger %}
+{% include markup/red %}
 A common cause for confusion - especially in Germany - is that people sometimes seem to be using **john.doe@googlemail.com** and **john.doe@gmail.com** interchangeably. The mailing list server will consider these as two different addresses!
 {% include markup/end %}
 

@@ -11,7 +11,7 @@ This tutorial demonstrates how to construct an electrode model based on a single
 
 This tutorial does not cover how to create a 2-D channel layout for plotting, nor how to do the source estimation itself.
 
-{% include markup/warning %}
+{% include markup/yellow %}
 Please cite the following paper when using this implementation for localizing electrodes with the Structure Sensor 3D-scanner.
 
 Homölle S, Oostenveld R. [Using a structured-light 3D scanner to improve EEG source modeling with more accurate electrode positions.](https://doi.org/10.1016/j.jneumeth.2019.108378) J Neurosci Methods (2019).
@@ -23,7 +23,7 @@ The quality of EEG source estimates depends on the accuracy of the volume conduc
 
 In this tutorial we demonstrate the localization of EEG electrodes based on 3D-scan of a subject's head. The specific device we are using is the [structure sensor](http://structure.io) by Occipital. However, other 3D scanning devices would also work, as long as you can read the output of the 3D-scanner into MATLAB.
 
-{% include markup/info %}
+{% include markup/blue %}
 This youtube video shows the procedure that is explained in this tutorial
 
 {% include youtube id="d6FZlZTf-Hg" %}
@@ -86,7 +86,7 @@ _Figure: ft_meshrealign graphical user interface_
 
 We suggest that you set the alpha level (the transparency) to 1.0. You can use the standard MATLAB 3D plotting options to rotate the 3D view. Rotate the view such that the positive z-axis is pointing to the top of the figure.
 
-{% include markup/info %}
+{% include markup/blue %}
 As subsequent 3D rotations, translations and scalings are not [commutative](https://en.wikipedia.org/wiki/Commutative_property), the order matters. Whenever you click "apply", the specified rotations, translations and scaling is applied to the mesh and you can start again without having to think about the interaction between the operations.
 {% include markup/end %}
 

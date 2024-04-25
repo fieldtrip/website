@@ -32,6 +32,6 @@ In the baseline condition no drug was given. Later they injected participants co
 
 Data containing excessive eye movement or muscular artifacts were rejected by a quasi-automated procedure: abnormally noisy channels and epochs were identified by calculating their normalized variance and then manually rejected or retained by visual inspection. Finally, previously rejected channels were interpolated using spherical spline interpolation, and data were re-referenced to the average of all channels.
 
-{% include markup/danger %}
+{% include markup/red %}
 The baseline correction following segmentation means that there are (possibly small) jumps in each channel at the segment boundaries. When reading and segmenting this data, you should ensure that your segments are aligned with the 10-second segments used in the original preprocessing.
 {% include markup/end %}

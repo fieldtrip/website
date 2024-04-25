@@ -341,7 +341,7 @@ After creating all bitmaps you can use [ImageMagick](https://www.imagemagick.org
 for file in *.png ; do convert $file -trim $file ; done
 ```
 
-{% include markup/warning %}
+{% include markup/yellow %}
 You can find all template 2-D layouts for plotting [here on GitHub](https://github.com/fieldtrip/fieldtrip/tree/master/template/layout/).
 {% include markup/end %}
 

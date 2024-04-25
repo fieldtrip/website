@@ -21,7 +21,7 @@ segments, only read those segments from the data file and apply the filters each
 segment. The remainder of this tutorial explains the second approach; it is in
 general more memory efficient also works for large data sets.
 
-{% include markup/warning %}
+{% include markup/yellow %}
 Please note that the dataset used in this tutorial is not particularly large; we
 could also have used the first approach. But we want to demonstrate how to work
 in general with large data (or with computers that have a small memory). You can
@@ -116,7 +116,7 @@ data. For the vertical EOG we will use channel 50 and channel 64. For the
 horizontal EOG we will compute the difference between the potential recorded in
 channels 51 and 60.
 
-{% include markup/warning %}
+{% include markup/yellow %}
 Some acquisition systems, such as the CTF system or the Biosemi system, allow
 for direct bipolar recording of ECG, EOG and EMG. The re-referencing step to
 obtain the EOG is therefore not required when working with Biosemi or other
@@ -212,7 +212,7 @@ reject all trials with (high frequency) muscle artifacts, but for a ERF analysis
 it is more important to reject trials with (low frequency) drifts and eye
 artifacts.
 
-{% include markup/danger %}
+{% include markup/red %}
 It is important that you make your selection of trials _blind_ to the experimental manipulation. e.g., in an oddball experiment when you have many standards and few oddballs, you might be tempted to be more strict on the standards and more lenient on the oddballs. This would result in more remaining artifacts in your oddball condition, which could cause a trivial difference in the ERP waveforms.
 
 So you should apply the same criteria for artifact rejection to all your experimental conditions.
@@ -234,7 +234,7 @@ movement.
 
 ##### Exercise 1
 
-{% include markup/exercise %}
+{% include markup/blue %}
 Skip through a couple of data segments and see if you can already spot some
 artifacts. Use the buttons to mark an artifact. Are there any bad channels in
 this dataset?
@@ -272,7 +272,7 @@ figure. Click through the trials using the `>` button to inspect each trial.
 
 ##### Exercise 2
 
-{% include markup/exercise %}
+{% include markup/blue %}
 Can you spot which channels are noisier than others? Using
 the mouse, you can select channels that you want to remove from the data.
 {% include markup/end %}
@@ -322,11 +322,11 @@ channels that are noisy.
 
 ##### Exercise 3
 
-{% include markup/exercise %}
+{% include markup/blue %}
 Which channels show the most variance? Why is that?
 {% include markup/end %}
 
-{% include markup/danger %}
+{% include markup/red %}
 If you would like to keep track of which trials you reject, keep in mind that
 the trial numbers change when you call
 **[ft_rejectvisual](/reference/ft_rejectvisual)** more than once, or if you use
@@ -400,7 +400,7 @@ For each trial, the condition information is kept with the data structure in `da
 
 ##### Exercise 4
 
-{% include markup/exercise %}
+{% include markup/blue %}
 Inspect the resulting data structure after
 **[ft_timelockanalysis](/reference/ft_timelockanalysis)**.
 
@@ -426,7 +426,7 @@ back and forth between the topographic and time representation of the data.
 
 ##### Exercise 5
 
-{% include markup/exercise %}
+{% include markup/blue %}
 Select the time window where the conditions differ the most. Do the topographies
 look as you would expect?
 {% include markup/end %}
@@ -444,7 +444,7 @@ different ways of visualizing, i.e.
 
 ##### Exercise 6
 
-{% include markup/exercise %}
+{% include markup/blue %}
 The following code allows you to compute at the ERP difference waves.
 
     cfg = [];

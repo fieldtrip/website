@@ -47,7 +47,7 @@ This is implemented with small snippets of html code that are contained in the `
 {% raw %}
 
 ```liquid
-{% include markup/info %}
+{% include markup/blue %}
 info
 {% include markup/end %}
 ```
@@ -56,23 +56,23 @@ info
 
 and it would show up like this
 
-{% include markup/info %}
+{% include markup/blue %}
 info
 {% include markup/end %}
 
-{% include markup/success %}
+{% include markup/green %}
 success
 {% include markup/end %}
 
-{% include markup/warning %}
+{% include markup/yellow %}
 warning
 {% include markup/end %}
 
-{% include markup/danger %}
+{% include markup/red %}
 danger
 {% include markup/end %}
 
-{% include markup/exercise %}
+{% include markup/blue %}
 exercise
 {% include markup/end %}
 

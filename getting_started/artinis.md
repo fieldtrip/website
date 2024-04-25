@@ -9,11 +9,11 @@ tags: [dataformat, nirs, artinis]
 
 The data that is recorded with Oxysoft is organized in various files: all data recorded during a measurement is contained in binary `.oxy3` or `.oxy4` files. The information about the transmitter and receiver optodes is represented in `optodetemplates.xml`, which is usually located in `C:\Program files\Artinis Medical Systems\Oxysoft\`. Following data acquisition, some processing can be done using OxySoft, the results of this are stored in a project file, which again is an XML file.
 
-{% include markup/warning %}
+{% include markup/yellow %}
 The `optodetemplates.xml` file should be in the same directory as the oxy3 or oxy4 files.
 {% include markup/end %}
 
-{% include markup/danger %}
+{% include markup/red %}
 The `.oxy4` file format is currently only supported when you run MATLAB on a Windows computer.
 {% include markup/end %}
 

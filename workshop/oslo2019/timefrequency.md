@@ -9,7 +9,7 @@ tags: [oslo2019, eeg-audodd, frequency]
 
 In this tutorial, you can find information about the frequency and  time-frequency analysis of a single subject's EEG data. We will use both Fourier analysis with Hanning tapers and Morlet wavelets; and we will have a special focus on how to visualize the data. We will learn how to compare conditions in the frequency domain, looking at differences in beta band activity after left versus the right hand responses. You can familiarize yourself with the paradigm and data by reading the [example dataset description](/workshop/natmeg2014/meg_audodd).
 
-{% include markup/info %}
+{% include markup/blue %}
 This tutorial contains the hands-on material for the [Oslo 2019 workshop](/workshop/oslo2019) and is complemented by this lecture, which was filmed at an [earlier workshop at NatMEG](/workshop/natmeg2014).
 
 {% include youtube id="QLvsa1r1Voc" %}
@@ -179,7 +179,7 @@ Let's first look at the topographical representation of the power changes in a s
 
 _Figure: Topographic representation of absolute power changes to baseline._
 
-{% include markup/exercise %}
+{% include markup/blue %}
 Let's pause for a moment and look at those results. Do they match what you expected with regard to localization and lateralization? How would you explain those results?
 {% include markup/end %}
 
@@ -256,7 +256,7 @@ _Figure: Topographic representation of the time-frequency representations of the
 
 An alternative for calculating TFRs is to use wavelets instead of Fourier analysis. A special thing about wavelets is that their temporal resolution scales with frequency (for a given number of cycles). In our analysis above, we used a sliding time window that was fixed, i.e., it was (in our case) always 500 ms long, irrespective of the frequency. This means that for higher frequencies, more cycles fit into this window: for example, 5 cycles of a 10 Hz oscillation fit in 500 ms, whereas for 30 Hz we can fit 15 cycles. For wavelets, we instead specify the number of cycles (equal to the width of the wavelet) directly, setting the parameter `cfg.width`.
 
-{% include markup/info %}
+{% include markup/blue %}
 Making the width of a wavelet smaller will increase the temporal resolution at the expense of frequency resolution and vice versa. The spectral bandwidth at a given frequency F is equal to F/width \* 2 (so, at 30 Hz and a width of 7, the spectral bandwidth is 30/7 \* 2 = 8.6 Hz) while the wavelet duration is equal to width/F/pi (in this case, 7/30/pi = 0.074s = 74ms)  ([Tallon-Baudry & Bertrand, 1999](https://doi.org/10.1016/S1364-6613(99)01299-1)).
 {% include markup/end %}
 
@@ -300,6 +300,6 @@ As for our first analysis, we want to look at the difference between the conditi
 
 _Figure: Time-frequency representations of power calculated using Morlet wavelets, difference between the conditions._
 
-{% include markup/exercise %}
+{% include markup/blue %}
 **Exercise:** Find out how what happens to the TFR if you change the `cfg.width` parameter.
 {% include markup/end %}

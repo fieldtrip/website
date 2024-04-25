@@ -410,7 +410,7 @@ _Running this script for some of the subjects, I noticed that the the data of su
 
 {% include image src="/assets/img/example/nirs_fingertapping/figure5.png" width="400" %}
 
-{% include markup/success %}
+{% include markup/green %}
 Although some of the more noisy channels dominate the figure due to the automatic vertical scaling, if you zoom in and pay attention to `Ch4oxy`, `Ch5oxy`, and `Ch6oxy` over the left hemisphere, and `Ch14oxy` and `Ch16oxy` over the right hemisphere, you can see that the left hemisphere shows more activity during the right fingertapping task (blue) and the right hemisphere shows more activity following the left fingertapping task (red).
 {% include markup/end %}
 
@@ -435,6 +435,6 @@ This step benefits from the layout having an outline and especially a mask, othe
 
 {% include image src="/assets/img/example/nirs_fingertapping/figure8.png" width="400" %}
 
-{% include markup/success %}
+{% include markup/green %}
 From the topographic arrangements it is clear that the left hemisphere responds with an increase in HbO to the right fingertapping task and the right hemisphere to the left fingertapping task; the HbR (on the right side of the figure) shows the opposite pattern. Also interesting is that both left and right hemisphere show a decrease in HbO and an increase in HbR during the tapping of the foot.
 {% include markup/end %}

@@ -137,7 +137,7 @@ You can specify cfg.image in **[ft_prepare_layout](/reference/ft_prepare_layout)
 
 The sEEG and ECoG electrodes can be localized in 3D from a CT and/or MRI scan as explained in the [human iEEG tutorial](/tutorial/human_ecog). Following the electrode localization, you can make layouts using the orthographic projection method described in step 47 of that tutorial.
 
-{% include markup/warning %}
+{% include markup/yellow %}
 
 The procedure for anatomical coregistration and subsequent localizing of the electrodes explained in the [ECoG and sEEG tutorial](/tutorial/human_ecog) is based on the paper by Stolk, Griffin et al., **[Integrated analysis of anatomical and electrophysiological human intracranial data](https://www.nature.com/articles/s41596-018-0009-6.m)**, Nature Protocols, 2018.
 
@@ -180,7 +180,7 @@ Once you are happy with the result, you can save it to a MATLAB file like this:
 
 The MATLAB file can subsequently be specified as cfg.layout='layout_ecog.mat' whenever you need a layout for plotting. Alternatively, you can load the layout in memory and specify the layout like cfg.layout=layout_ecog.
 
-{% include markup/warning %}
+{% include markup/yellow %}
 
 The advantage of the MATLAB file over the ASCII file, is that the MATLAB file can also contain a user-specified outline of the head and user-specified mask, whereas for the ASCII layout file the same circle with nose and ears will be used.
 

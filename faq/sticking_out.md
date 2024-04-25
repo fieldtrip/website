@@ -27,6 +27,6 @@ If you are working with regular 3D grids as source model, you don't have to do a
 
 If you do not want to flag any of your dipoles as outside and exclude them from the source estimation, you have to modify your source model. First of all, you should ensure that your cortical sheet is properly aligned with your volume conduction model of the head. The `cfg.moveinward` option in **[ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)** takes all dipoles that are outside, and projects then on an inward-shifted surface of the inside-skull. I.e. it deforms the cortical sheet by pushing some vertices inward. This should work both for spherical models (i.e. concentric spheres) and BEM models. In the case of spherical models, it will result in a cortical mesh that is squeezed in to a sphere shape.
 
-{% include markup/info %}
+{% include markup/blue %}
 Since for MEG singleshell, singlesphere and localspheres models it does not matter that they stick out, we often specify a negative value for `cfg.inwardshift`. This causes dipoles that are just outside the brain still to be flagged as inside. This results in nicer interpolations and deals with the issue that is discussed in [this faq](/faq/why_is_there_a_rim_around_the_brain_for_which_the_source_reconstruction_is_not_computed).
 {% include markup/end %}

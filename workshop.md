@@ -11,7 +11,7 @@ We also organize occasional FieldTrip workshops at conferences or upon invitatio
 
 We have [video lectures](/video) from previous FieldTrip training events. You can also use these to [organize your own](/faq/can_i_organize_my_own_workshop) training events.
 
-{% include markup/danger %}
+{% include markup/red %}
 If there is no information listed for a potential workshop below, then we don't have that information yet. Please don't bother asking. We will update the information here once details are known.
 {% include markup/end %}
 

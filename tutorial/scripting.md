@@ -5,7 +5,7 @@ tags: [tutorial, matlab, script]
 
 # Creating a clean analysis pipeline
 
-{% include markup/warning %}
+{% include markup/yellow %}
 If you are completely new to FieldTrip, we recommend that you skip this tutorial for now. You can read the [introduction tutorial](/tutorial/introduction/) and then move on with the tutorials on [preprocessing](/tutorial/#reading-and-preprocessing-data). Once you get the hang of it, you can return to this tutorial on the technical aspects of coding.
 {% include markup/end %}
 
@@ -15,7 +15,7 @@ This tutorial provides some guidelines and suggestions how to set up an analysis
 
 The examples here are mainly about preprocessing of the data, but it does not provide detailed information about it. If you are interested in how to preprocess your data, you can check for example, [this](/tutorial/preprocessing) tutorial.
 
-{% include markup/info %}
+{% include markup/blue %}
 The paper [Seven quick tips for analysis scripts in neuroimaging](https://doi.org/10.1371/journal.pcbi.1007358) by Marijn van Vliet (2020, Plos Comp Biol) provides very useful guidelines for writing and organizing your analysis code. Although the examples it provides are based on Python, the ideas it presents apply equally well to MATLAB.
 
 {% include badge doi="10.1371/journal.pcbi.1007358" pmid="32214316" pmcid="PMC7098566" %}
@@ -58,7 +58,7 @@ Save this as `Subject01.m` in a personal folder that you will need to add to the
 
 We can now use this in our own functions, giving flexibility in combining generic functions and subject-specific settings. In addition, you could use this file to add further notes, such as `% subject pressed the response button twice on the first trial`.
 
-{% include markup/info %}
+{% include markup/blue %}
 An example that uses subject-specific m-files can be found [here](https://github.com/robertoostenveld/Wakeman-and-Henson-2015). The same dataset has later also been [converted to BIDS](https://doi.org/10.18112/openneuro.ds000117.v1.0.5) and a version of the analysis that starts from the BIDS dataset is documented [here](/workshop/practicalmeeg2022) and [here](https://download.fieldtriptoolbox.org/workshop/practicalmeeg2022/code).
 
 A similar example is [this one](https://github.com/Donders-Institute/infant-cluster-effectsize), which also starts from a consistent [BIDS dataset](https://doi.org/10.34973/gvr3-6g88) (hence fewer exceptions needed) and which stores subject-specific details like the selected trials and the bad segments and channels in [mat-files](https://doi.org/10.34973/g4we-5v66) rather than m-files.
@@ -102,7 +102,7 @@ In reality it is likely that you will not be executing `do_complete_analysis` li
 
 The construction of the `do_singlesubject_analysis` will likely involve some trial-and-error and takes time, probably multiple days. While you are writing the single-subject analysis, you can repeatedly run a part of that script. Only once it is complete, you run the for-loop that executes it for all participants. If you are doing more sophisticated analyses, such as MEG or EEG source reconstruction, it makes sense to split `do_singlesubject_analysis` into multiple scripts: for example one for the anatomical processing, one for the channel-level processing, and one for the source reconstruction.
 
-{% include markup/danger %}
+{% include markup/red %}
 Do not save your own scripts inside the FieldTrip folder as it makes it harder to update your FieldTrip toolbox to a new version.
 
 In general we recommend to keep your raw data, your code or scripts, and your results in three separate directories. See below for an example directory layout.
@@ -116,7 +116,7 @@ Saving intermediate or final results to disk is done with the [save](https://www
 
 to save the output to `data_raw.mat` in the present working directory, i.e., the directory you are currently in. To determine the present working directory, you can use [pwd](https://www.mathworks.com/help/matlab/ref/pwd.html).
 
-{% include markup/info %}
+{% include markup/blue %}
 We recommend in general storing a single FieldTrip data structure per file, and to give the file the same name as the data structure that it contains. This makes it more predictable what ends up in memory if you load the file. Furthermore, with a consistent naming scheme you can more easily delete files with intermediate results or outdated files.
 
 A consequence of the one-variable-per-file strategy is that the files will have the same name for every subject, hence you need to store them in subject-specific directories.
@@ -132,7 +132,7 @@ you can program a generic solution to save all analysis steps of every subject i
 
 In this way all your scripts (i.e., analysis steps) can read the input of the previous step and write their results as `.mat` files based upon the subject number.
 
-{% include markup/info %}
+{% include markup/blue %}
 We recommend padding numbers in filenames and variables with zeros, so that they nicely align and are sorted consistently. Rather than '1, 2, 3, ..., 10, 11, 12', you are better off with '01, 02, 03, ..., 10, 11, 12'. One way to achieve this in your script is by using [sprintf](https://www.mathworks.com/help/matlab/ref/sprintf.html).
 
     outputdir = sprintf('Subject%02d', i);

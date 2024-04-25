@@ -23,7 +23,7 @@ The data files created by Jinga-hi software can also be read using **[ft_read_he
 
 ## MATLAB-based interface
 
-{% include markup/info %}
+{% include markup/blue %}
 The MATLAB implementation is mainly for educational and testing purposes. For proper real-time analyses we recommend you to use the standalone interface, which is faster and requires less system resources.
 {% include markup/end %}
 

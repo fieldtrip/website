@@ -124,7 +124,7 @@ _Figure 5: 3 compartment mesh with electrodes_
     cfg.method ='dipoli'; % You can also specify 'bemcp', or another method.
     headmodel_bem       = ft_prepare_headmodel(cfg, mesh_bem);
 
-{% include markup/danger %}
+{% include markup/red %}
 In Windows the method 'dipoli' does not work. You can either load "headmodel_bem" and continue with this tutorial, or explore other BEM method like 'bemcp'. If you use 'bemcp', the conductivity field has a different order: {'brain', 'skull', 'skin'}.
 {% include markup/end %}
 
@@ -274,7 +274,7 @@ We will use the sourcemodel already generated in 7A.
 
 ## 9B. Compute the leadfield
 
-{% include markup/danger %}
+{% include markup/red %}
 Please DO NOT run `ft_prepare_vol_sens` in this tutorial session! It will take too much time and memory. Load `headmodel_fem_tr.mat` from disk instead.
 {% include markup/end %}
 

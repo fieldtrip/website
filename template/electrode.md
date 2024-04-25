@@ -26,7 +26,7 @@ You can use the following snippet of code to get a quick overview of the templat
       print([lower(f) '.png'], '-dpng');
     end
 
-{% include markup/warning %}
+{% include markup/yellow %}
 You can find the template 3-D electrode sets included in FieldTrip [here](https://github.com/fieldtrip/fieldtrip/tree/master/template/electrode).
 {% include markup/end %}
 

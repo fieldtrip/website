@@ -7,7 +7,7 @@ tags: [example, freq, coherence]
 
 This example script uses simulated signals to demonstrate the effect of the signal to noise ratio (SNR) on the coherence estimate. Two datasets are simulated that have the same underlying signal, but that have different amounts of noise.
 
-{% include markup/warning %}
+{% include markup/yellow %}
 Note that in this example we are changing the noise. We could also have kept the noise constant and have varied the amplitude of the signal. The results of the simulated would not be different.
 {% include markup/end %}
 

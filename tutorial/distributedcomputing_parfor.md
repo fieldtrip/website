@@ -84,7 +84,7 @@ For reference, the changes in detail w.r.t. the [event-related averaging tutoria
 
 ### Exercise
 
-{% include markup/info %}
+{% include markup/blue %}
 -   Add a loop, such that both Subject01 and Subject02 are analyzed and that results from both analyses are available at the end
 -   Use the combined results in a call to ft_timelockgrandaverage
 {% include markup/end %}
@@ -151,7 +151,7 @@ Note that, as mentioned earlier, the data organization for this tutorial deviate
 
 ### Exercise
 
-{% include markup/info %}
+{% include markup/blue %}
 -   Add SubjectSEF in the middle of the list of allsubj_dataset, observe what happens.
 -   What results are available?
 -   Adapt the code so the loop runs in parallel.
@@ -228,7 +228,7 @@ Note that, as mentioned earlier, the data organization for this tutorial deviate
     ft_multiplotER(cfg, grandavgFIC)
 
 
-{% include markup/info %}
+{% include markup/blue %}
 Saving data and figures to disk can be done using the MATLAB [save](https://www.mathworks.com/help/matlab/ref/save.html) and [savefig](https://www.mathworks.com/help/matlab/ref/savefig.html) or [saveas](https://www.mathworks.com/help/matlab/ref/saveas.html) commands. Since you want to distinguish the data from different subjects, you can use  [sprintf](https://www.mathworks.com/help/matlab/ref/sprintf.html) to construct a unique filenames.
 
 For example:
@@ -270,7 +270,7 @@ To do the same analysis as above, but in parallel over the subjects, all we have
 
 ### Exercise
 
-{% include markup/info %}
+{% include markup/blue %}
 -   Add SubjectSEF.ds in the middle of the list of `allsubj_dataset`. What happens when running the script? What results are available inside the `allsubj_result` variable?
 - Remove the line near the top that states `allsubj_result = cell(1, nsubj)` and change the last non-comment line within the loop to read `allsubj_result{end+1} = avgFICplanarComb`. What happens when running the script?
 -   After the comment line `% HERE you could save intermediate results to file`, add the code to save the intermediate result to disk, e.g., `save('avgFIC.mat', 'avgFIC')`. What happens when running the script?
@@ -364,7 +364,7 @@ When done correctly, all problematic subjects will be known after just one run o
 
 ### Exercise
 
-{% include markup/info %}
+{% include markup/blue %}
 -   Add SubjectSEF in the middle of the list of allsubj_dataset, observe what happens.
 -   What results are available in the output directory? What are the differences with the previous implementations?
 {% include markup/end %}
@@ -446,7 +446,7 @@ When done correctly, all problematic subjects will be known after just one run o
 
 Using the combined results goes in a different script, because that way it isn't needed to rerun the whole loop each time an analysis on combined results is done.
 
-{% include markup/info %}
+{% include markup/blue %}
 The MATLAB [save](https://nl.mathworks.com/help/matlab/ref/save.html?) function [cannot be used](https://nl.mathworks.com/matlabcentral/answers/135285-how-do-i-use-save-with-a-parfor-loop-using-parallel-computing-toolbox) within a parfor loop. However, it is possible to use a [matfile](https://nl.mathworks.com/help/matlab/ref/matlab.io.matfile.html) object. For example, following ft_timelockanalysis in the parfor loop you can do:
 
     result_filename = fullfile(result_directory, 'avgFIC.mat');
@@ -458,7 +458,7 @@ In the tutorial code above we avoided the problem by using the `cfg.outputfile` 
 
 ### Exercise
 
-{% include markup/info %}
+{% include markup/blue %}
 -   Add SubjectSEF in the middle of the list of allsubj_dataset, observe what happens.
 {% include markup/end %}
 

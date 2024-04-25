@@ -7,7 +7,7 @@ tags: [example, eeg, dataformat, biosemi, bdf]
 
 The following is an example analysis pipeline that was used for the FieldTrip workshop at [CUNY, New York](http://www.cuny.edu) by Stephen and Saskia in 2011.
 
-{% include markup/danger %}
+{% include markup/red %}
 Biosemi BDF data should always be off-line referenced to one of the electrodes that is present in the data. The raw data in the file is relative to the CMS and still contains relatively much artifactual and line-noise. See also the [Biosemi website](https://www.biosemi.com/faq/cms&drl.htm).
 {% include markup/end %}
 

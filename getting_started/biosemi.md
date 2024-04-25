@@ -78,7 +78,7 @@ To find out what the trigger codes are in your BDF file, you can use the followi
 
 ## The BDF fileformat
 
-{% include markup/danger %}
+{% include markup/red %}
 The documentation below is only for reference. To work with this data format you can simply use the standard reading functions **[ft_read_header](/reference/fileio/ft_read_header)**, **[ft_read_data](/reference/fileio/ft_read_data)** and **[ft_read_event](/reference/fileio/ft_read_event)**.
 {% include markup/end %}
 
@@ -118,7 +118,7 @@ Number of samples in each data record
 N x 32 bytes  
 (ASCII)
 
-{% include markup/info %}
+{% include markup/blue %}
 Total header length (for BDF and EDF) is: {(N+1)\*256} bytes, where N is number of channels (including the status channel).
 
 The "gain" of a specific channel can be calculated by: (Physical max - Physical min) / (Digital max - Digital min). The result is the LSB value in the specified Physical dimension of channels. (31,25nV / 1uV in the BDF/EDF example Header from above).

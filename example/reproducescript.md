@@ -74,7 +74,7 @@ The way our files are organised can be seen in this directory tree:
 
 The _reproducescript_ functionality is initiated with the following code, combined with the pipeline above. The _reproducescript_ option is enabled at the top of the script. We specify the directory to which the standard script and intermediate data are written in the reproducescript field of the global `ft_default` variable. `ft_default` is the structure in which global configuration defaults are stored; it is used throughout all FieldTrip functions and global options are at the start of the function merged with the user-supplied options in the cfg structure specific to the function. Note that we are additionally specifying `ft_default.checksize = inf`, which instructs FieldTrip to never remove (large) fields from any cfg-structure, thus ensuring perfect reproducibility. We recommend enabling this additional option whenever reproducescript is used.
 
-{% include markup/danger %}
+{% include markup/red %}
 Using _reproducescript_ can lead to a lot of data being written to disk. Be mindful of where you save it!
 {% include markup/end %}
 

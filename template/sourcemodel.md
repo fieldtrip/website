@@ -7,7 +7,7 @@ tags: [template, sourcemodel, grid]
 
 Source models are a necessary ingredient for estimating the cortical activity from EEG or MEG data. Sources are typically modeled as equivalent current dipoles (ECDs), i.e. point sources with a location, orientation and strength.
 
-{% include markup/warning %}
+{% include markup/yellow %}
 You can find the template models for source reconstruction included in FieldTrip [here](https://github.com/fieldtrip/fieldtrip/tree/master/template/sourcemodel).
 {% include markup/end %}
 
@@ -117,7 +117,7 @@ They are saved in the GIfTI file format, with GZipBase64Binary encoding.
 
 Up until March 7, 2013 (svn revision number 7600) the sourcemodels were a bit tight at the top of the brain. This means that for most of the individual subjects (after warping the template grid from standardized space into individual space) the very top of the brain was not fully covered by dipoles. This is demonstrated in figure 1 below. The reason for this turned out to be the fact that we used the blurry T1.nii template MRI to make a surface description of the brain (determining the inside and outside dipoles). This turned out to be too tight for most individual (non-blurred) anatomicals, see figure 2. We therefore uploaded a new set of sourcemodels to be released with FieldTrip as of March 7, 2013. These new sourcemodels provide a looser fit to the template brain surface. The template brain surface was extracted using a 1 mm resolution non-blurred template MRI. An example of the updated sourcemodel, warped to an individual brain is shown in figure 3.
 
-{% include markup/danger %}
+{% include markup/red %}
 The new set of sourcemodels are not compatible with the old set. If you were in the middle of an analysis, that relies on the template sourcemodels in FieldTrip, you should either stick to the old version of the sourcemodels, or recompute all results using the new version of the sourcemodels. The old version of the sourcemodels will not be kept in the release version of FieldTrip, but they are recoverable from FieldTrip version predating March 7, 2013.
 {% include markup/end %}
 

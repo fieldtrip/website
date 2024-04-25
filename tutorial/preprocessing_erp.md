@@ -97,7 +97,7 @@ You can also use **[ft_databrowser](/reference/ft_databrowser)** to visualize th
 
 ### Exercise
 
-{% include markup/info %}
+{% include markup/blue %}
 Why is there a vertical line with label S141 on the first call to ft_databrowser(cfg,data)?
 
 Can you find this line (or lines with other labels) on the second call to ft_databrowser(cfg)?
@@ -128,7 +128,7 @@ and note that, if you wanted to, you could plot a single trial with default MATL
 
 We now continue with re-referencing to extract the bipolar EOG signal from the data. In the BrainAmp acquisition system, all channels are measured relative to a common reference. For the horizontal EOG we will compute the potential difference between channels 57 and 25 (see the plot of the layout and the figure below). For the vertical EOG we will use channel 53 and channel "LEOG" which was placed below the subjects' left eye (not pictured on the layout).
 
-{% include markup/warning %}
+{% include markup/yellow %}
 Some acquisition systems, such as Biosemi, allow for direct bipolar recording of EOG. The following re-referencing step to obtain the EOG channels is not needed when working with bipolar data.
 {% include markup/end %}
 
@@ -218,7 +218,7 @@ You can scroll to the vertical EOG channel ('veog', number 61) and confirm to yo
 
 {% include image src="/assets/img/tutorial/preprocessing_erp/figure3.png" width="600" %}
 
-{% include markup/info %}
+{% include markup/blue %}
 In **[ft_rejectvisual](/reference/ft_rejectvisual)** with cfg.method='channel' you can go to channel '43' (note that the channel name is '43' and its number is also 43). There you will see that in trials 138 to 149 this channel is a bit more noisy, suggesting that the electrode contact on this side of the cap was temporarily bad. Neighboring channels also suggest that at trial 138 something happened, perhaps a movement of the electrode cap. We are not going to deal with this now, but it is something that you might want to keep in mind for optional cleaning of the data with **[ft_componentanalysis](/reference/ft_componentanalysis)** and **[ft_rejectcomponent](/reference/ft_rejectcomponent)**
 {% include markup/end %}
 
@@ -238,7 +238,7 @@ The left lower box of Figure 4 shows the variance of the signal in each trial. B
 
 Rejection of trials based on visual inspection is somewhat arbitrary; it is not always easy to decide if a trial should be rejected or not. In this exercise we suggest that you remove 8 trials with the highest variance (trial numbers 22, 42, 89, 90, 92, 126, 136 and 150). As you see, the trials with blinks that we saw in the "Channel" mode are among them. To complete the rejection press "Quit" button. You get the data_clean variable that will be used for subsequent analyses.
 
-{% include markup/info %}
+{% include markup/blue %}
 After removing data segments that contain artifacts, you might want to do a last visual inspection of the EEG traces.
 
     cfg = [];
@@ -306,7 +306,7 @@ The following code allows you to look at the ERP difference waves.
     cfg.showoutline = 'yes';
     ft_multiplotER(cfg, difference);
 
-{% include markup/info %}
+{% include markup/blue %}
 Explore the event-related potential by dragging boxes around (groups of) sensors and time points in the 'multiplot' and the resulting 'singleplots' and 'topoplots'.
 {% include markup/end %}
 

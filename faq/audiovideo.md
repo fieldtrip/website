@@ -16,7 +16,7 @@ For both functions you should consider that:
 
 The synchronization between the two recordings is realized by specifying both in _timestamps_ that are expressed relative a common temporal reference (e.g., the time on an external clock) using the offset and slope, where _timestamp=offset+slope\*sample_.
 
-{% include markup/info %}
+{% include markup/blue %}
 This functionality has been implemented specifically for the [VideoMEG](https://github.com/andreyzhd/VideoMEG) software, but also works with audio and video recordings stored in another format as demonstrated above. For the VideoMEG system the synchronization between audio/video and MEG is realized by triggers that are sent by the VideoMEG to the MEG data stream.
 {% include markup/end %}
 

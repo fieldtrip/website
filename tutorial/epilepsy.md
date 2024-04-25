@@ -5,7 +5,7 @@ tags: [tutorial, meg-epilepsy, anywave, mricro]
 
 # Virtual channel analysis of epilepsy MEG data
 
-{% include markup/danger %}
+{% include markup/red %}
 The FieldTrip toolbox is designed for research purposes only. The FieldTrip project and development team make no representation that FieldTrip is a clinically approved medical device, and users understand and accept that any result or its display presented in whatever form obtained using FieldTrip must not be used for any purpose other than research.
 
 FieldTrip is released under the [GNU General Public License](https://www.gnu.org/copyleft/gpl.html) and you should review its terms and conditions.
@@ -43,7 +43,7 @@ Since there are some small differences in the parameters for the beamformer anal
 
 ## Case 1
 
-{% include markup/success %}
+{% include markup/green %}
 Male, age 9. Right parietal Glioma with epilepsy. Corticography also
 showed interictal discharges in the frontal lobe, though the majority
 of seizures were of parietal origin. This was a complex multifocal
@@ -76,7 +76,7 @@ The flexibility of FieldTrip can offer additional information to support data in
 
 ## Case 2
 
-{% include markup/success %}
+{% include markup/green %}
 Female, age 14. Epilepsy. Referral for MEG because EEG did not
 allow lateralisation or localization of discharges, though clinically
 they appeared to come from the left hemisphere. Functional neuroimaging
@@ -104,7 +104,7 @@ Rather than reading the headshape from the fif file, it should be read from the 
 
 ## Case 3
 
-{% include markup/success %}
+{% include markup/green %}
 Female, age 10. She was referred for investigation with a history
 of symptomatic focal epilepsy. At the time of investigation there
 had been an increase in seizures which included blank episodes and
@@ -136,7 +136,7 @@ We want to store all processed results in a different directory than the one con
 
 The original MRI that is provided for this patient has been partially processed with the CTF software and MRIcro, and is stored in NIFTI format. This MRI is _not shared_ for privacy reasons. Nevertheless, here we will show how it was processed in FieldTrip.
 
-{% include markup/info %}
+{% include markup/blue %}
 For coregistration we need the original MRI with full facial details, however this is not shared for reasons of anonymity. You should skip this section and continue after the coregistration.
 {% include markup/end %}
 

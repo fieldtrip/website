@@ -15,7 +15,7 @@ In this tutorial we will continue working on the [dataset](/tutorial/meg_languag
 
 This tutorial is not covering statistical test on event-related fields. If you are interested in that, you can read the [Cluster-based permutation tests on event-related fields](/tutorial/cluster_permutation_timelock) tutorial. If you are interested how parametric statistical tests can be used, you can read the [Parametric and non-parametric statistics on event-related fields](/tutorial/eventrelatedstatistics) tutorial.
 
-{% include markup/info %}
+{% include markup/blue %}
 This tutorial contains hands-on material that we use for the [MEG/EEG toolkit course](/workshop/toolkit2015) and it is complemented by this lecture.
 
 {% include youtube id="x0hR-VsHZj8" %}
@@ -425,7 +425,7 @@ _Figure 3: T-statistic of the difference (FIC-FC) (of the combined planar gradie
 
 #### Exercise
 
-{% include markup/info %}
+{% include markup/blue %}
 Try calling clusterplot with cfg.alpha = 0.05;
 {% include markup/end %}
 

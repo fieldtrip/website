@@ -7,7 +7,7 @@ tags: [chieti, tutorial, freq, connectivity, coherence, granger, dtf, pdc]
 
 ## Introduction
 
-{% include markup/info %}
+{% include markup/blue %}
 This tutorial contains hands-on material that we use for the [MEG connectivity workshop in Chieti](/workshop/chieti2015).
 {% include markup/end %}
 

@@ -58,7 +58,7 @@ The device that we have at the Donders has a "BlueSmirf FireFly" bluetooth inter
 
 ## Native MATLAB implementation
 
-{% include markup/info %}
+{% include markup/blue %}
 The MATLAB implementation is mainly for educational and testing purposes. For proper real-time analyses we recommend you to use the standalone interface, which is faster and requires less system resources.
 {% include markup/end %}
 

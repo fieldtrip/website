@@ -143,7 +143,7 @@ We can also plot the differences between conditions, for each subject, in a diff
 
 {% include image src="/assets/img/tutorial/eventrelatedstatistics/figure4.png" width="400" %}
 
-{% include markup/danger %}
+{% include markup/red %}
 We are starting here with a single-channel analysis here for purely didactical reasons, i.e. start with a simple test without multiple comparisons, and then build up the complexity by adding multiple time points and channels.
 
 In practice you should _not_ guide your statistical analysis by a visual inspection of the data; you should state your hypothesis up-front and avoid [data dredging or p-hacking](https://en.wikipedia.org/wiki/Data_dredging).
@@ -184,7 +184,7 @@ From the code above you can see that the statistical comparison is between condi
 
 #### Exercise 1
 
-{% include markup/info %}
+{% include markup/blue %}
 Look at the temporal evolution of the effect by changing cfg.latency and cfg.avgovertime in **[ft_timelockstatistics](/reference/ft_timelockstatistics)**. You can plot the t-value versus time, the probability versus time and the statistical mask versus time. Note that the output of the **[ft_timelockstatistics](/reference/ft_timelockstatistics)** function closely resembles the output of the **[ft_timelockanalysis](/reference/ft_timelockanalysis)** function.
 {% include markup/end %}
 
@@ -408,7 +408,7 @@ So far we predefined a time window over which the effect was averaged, and teste
 
 {% include image src="/assets/img/tutorial/eventrelatedstatistics/figure12.png" width="400" %}
 
-{% include markup/info %}
+{% include markup/blue %}
 To properly write up your results in a manuscript, you should check the guidelines on [how NOT to interpret results from a cluster-based permutation test](/faq/how_not_to_interpret_results_from_a_cluster-based_permutation_test).
 {% include markup/end %}
 

@@ -15,7 +15,7 @@ This tutorial will **not** show how to perform the source reconstruction itself.
 
 We have another tutorial that demonstrates how to make a [Boundary Element Method (BEM) headmodel for EEG](/tutorial/headmodel_eeg_bem). Furthermore, if you are interested in MEG head models, we recommend that you go to the corresponding [MEG tutorial](/tutorial/headmodel_meg).
 
-{% include markup/warning %}
+{% include markup/yellow %}
 The FEM method described here is based on the SimBio software, which is described in detail [here](https://www.mrt.uni-jena.de/simbio/index.php/Main_Page#Welcome). The integration with FieldTrip is described in the paper below. Please cite this paper if you use the FieldTrip-SimBio pipeline in your research.
 
 Vorwerk, J., Oostenveld, R., Piastra, M.C., Magyari, L., & Wolters, C. H. **The FieldTrip‐SimBio pipeline for EEG forward solutions.** BioMed Eng OnLine (2018). {% include badge doi="10.1186/s12938-018-0463-y" %}
@@ -29,7 +29,7 @@ This tutorial is focusing on how to build the **FEM volume conduction model for 
 
 {% include /shared/tutorial/headmodel_background.md %}
 
-{% include markup/info %}
+{% include markup/blue %}
 If you do not have an MRI for your subject, you can consider to use a template MRI or a template head model that is located in the FieldTrip `template` directory. See [here](/template/headmodel) for more info.
 
 If you do not have an MRI, but do have a measurement of the scalp surface and/or of the electrodes (e.g., with a Polhemus tracker), you could also fit a concentric spheres model to the scalp and/or electrodes. However, we recommend to use a realistic template head model and fit the measured electrodes to the template head model rather than the other way around.
@@ -60,7 +60,7 @@ _Figure; Pipeline for creating a FEM model_
 
 #### Exercise 1
 
-{% include markup/info %}
+{% include markup/blue %}
 Check that the homogenous transformation matrix in `mri_realigned` is the same as the one in `mri`. If so, that means that each voxel is at exactly the same position. If you misspecify the voxel indices of the fiducials or anatomical landmarks, they will be different.
 {% include markup/end %}
 
@@ -98,7 +98,7 @@ You should check that all parts of the head are present in the resliced images, 
 
 In this step, the voxels of the anatomical MRI are segmented or classified using **[ft_volumesegment](/reference/ft_volumesegment)** into the three different tissue types: scalp, skull, csf (cerebro-spinal fluid), gray and white matter. You can read more about how the tissue-types are represented in the output of this function in this [FAQ](/faq/how_is_the_segmentation_defined). The resulting segmentation should be a binary representation of the 5 tissue types without overlap, i.e., each voxel belongs to exactly one tissue type.
 
-{% include markup/warning %}
+{% include markup/yellow %}
 Note that the segmentation is quite time consuming (~15mins) and if you want you can load the result and skip ahead to the next step. You can download the segmented MRI of this tutorial data from the [download server](https://download.fieldtriptoolbox.org/tutorial/headmodel_eeg_fem/).
 {% include markup/end %}
 
@@ -130,7 +130,7 @@ The segmentedmri data structure is similar to the mri data structure, but contai
 
 The segmentation does not change the coordinate system, nor the size of the voxels or volume. You can see this in the first three fields (`dim`, `transform` and `coordsys`) which are the same as the corresponding fields in the MRI. The field `transform` aligns the 3D array in `gray`,, `white`, `csf`, `skull` and `scalp` to the coordinate system defined in the `coordsys` field, just like it did for the `anatomy` field in the anatomical MRI. It is good practice to check at this point in a figure, whether the segmented compartments look as expected.
 
-{% include markup/warning %}
+{% include markup/yellow %}
 Occasionally, the quality of the anatomical image is not sufficient to provide a good segmentation out-of-the-box. This for example happens if there are large spatial inhomogeneities in the MRI that are caused by the anatomical MRI being acquired while the subject was wearing an EEG cap. The **[ft_volumebiascorrect](/reference/ft_volumebiascorrect)** function allows correcting for these inhomogeneities. The **[ft_defacevolume](/reference/ft_defacevolume)** function can be used to erase parts of the MRI where there should be no signal, for example artifacts outside the head.
 
 For more information, you can consult this [frequently asked question](/faq/why_does_my_eegheadmodel_look_funny).

@@ -19,7 +19,7 @@ Note: **do not** add the folder recursively, i.e., do not use `addpath(genpath('
 - Run 'ft_defaults' in MATLAB.
 - Confirm that FT has been successfully added to your path, for example by typing 'which ft_preprocessing' in Matlab; the correct path should be displayed.
 
-{% include markup/danger %}
+{% include markup/red %}
 If you get any warnings about specific functions or SPM or EEGLAB being on your path multiple times, you should type
 
     restoredefaultpath
@@ -45,7 +45,7 @@ Copying many small and empty files can take a lot of time, hence we expect that 
 
 ### ds000117-zipped
 
-{% include markup/danger %}
+{% include markup/red %}
 It turned out that this approach with the multiple zip files did not work to distribute the data reliably; Windows users would unzip with the graphical user interface and get all files scattered over different places.
 {% include markup/end %}
 

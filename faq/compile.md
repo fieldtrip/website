@@ -9,7 +9,7 @@ We try to provide FieldTrip with all the mex files compiled for the most common 
 
 Note that for compiling the mex files and/or executables you will need to have write access to the installation directory. If you are using a shared version that is installed on a network drive, that might not be the case.
 
-{% include markup/warning %}
+{% include markup/yellow %}
 Compilation of the mex files is only supported for the *full* version of FieldTrip, which you can download from our download server or from Github. It is not supported for the *lite* version that that is released along with some other toolboxes, such as EEGLAB. If you want to recompile mex files for the FieldTrip copy included with EEGLAB, please update it to the full version, preferably the one from Github.
 {% include markup/end %}
 

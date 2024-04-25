@@ -7,7 +7,7 @@ tags: [dataformat, nirs, nirx]
 
 FieldTrip does not offer direct support for the NIRx NIRS data yet, but you can make use of a work-around using the [Homer2](https://www.nitrc.org/projects/homer2) toolbox and a conversion script that is shared on [NITRC](https://www.nitrc.org).
 
-{% include markup/info %}
+{% include markup/blue %}
 We are working on implementing direct support for the NIRx file formats. To keep track of developments, please check [this GitHub issue](https://github.com/fieldtrip/fieldtrip/issues/1528).  
 {% include markup/end %}
 

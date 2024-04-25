@@ -17,7 +17,7 @@ In case of the BEM, the volume conduction model consists of one or multiple homo
 
 To make the highest quality BEM volume conduction model, FieldTrip offers a number of functions to manipulate these three classes of geometrical data. If we summarize the geometrical data as **anatomy**, **segmentation** and **mesh**, then we can consider functions that take one type of geometrical data as input, and return the same or another type.
 
-{% include markup/info %}
+{% include markup/blue %}
 We will refrain from using "head model" in the subsequent explanation, since each of the representations can be thought of as a "model describing the head".
 {% include markup/end %}
 

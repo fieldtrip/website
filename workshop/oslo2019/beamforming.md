@@ -12,7 +12,7 @@ This tutorial explains beamformer source reconstruction techniques in the freque
 For this, we will continue working on the [paradigm](/workshop/natmeg2014/meg_audodd) we used in the previous tutorial. However, we will do the source reconstruction using the MEG data recorded in the same session, not the EEG data.
 Please note that later in this workshop you will learn how to construct a forward model, so details on that step are omitted here. The forward modeling lecture will be geared towards EEG, so that you can apply what you learn here also to EEG data.
 
-{% include markup/info %}
+{% include markup/blue %}
 This tutorial contains the hands-on material for the [Oslo 2019 workshop](/workshop/oslo2019) and is complemented by this lecture, which was filmed at an [earlier workshop at NatMEG](/workshop/natmeg2014).
 
 {% include youtube id="7eS11DtbIPw" %}
@@ -24,7 +24,7 @@ In the [Time-Frequency Analysis tutorial](/workshop/oslo2019/timefrequency), we 
 
 For beamforming, the brain is divided in a regular 3D grid and the source strength for each grid point is computed. The method applied here is termed Dynamical Imaging of Coherent Sources (DICS) and the estimates are calculated in the frequency domain ([Gross et al. 2001](https://www.pnas.org/content/98/2/694)). Other beamformer methods estimate source activity in the time domain, e.g., the Linearly Constrained Minimum Variance (LCMV) and the Synthetic Aperture Magnetometry (SAM) methods (van Veen et al., 1997; Robinson and Cheyne, 1997). All of these methods can produce a 3D spatial distribution of source power. This distribution is then overlaid on a structural image of the subject's brain. Furthermore, these distributions of source power can be subjected to statistical analysis. It is ideal to contrast the activity of interest against an explicit control or baseline activity. Options for this will be discussed below, but it is best to keep this in mind when designing your experiment from the start, rather than struggle to find a suitable control/baseline after data collection.
 
-{% include markup/warning %}
+{% include markup/yellow %}
 This tutorial does not cover forward model computation. We will load the needed ingredients for this from disk. However, there will be a forward modeling tutorial at a later stage of this workshop.
 {% include markup/end %}
 
@@ -106,7 +106,7 @@ Now we select the time window of interest using **[ft_redefinetrial](/reference/
 
 ### Exercise 1: data length
 
-{% include markup/exercise %}
+{% include markup/blue %}
 Why is it important that the length of each data piece is the length of a fixed number of oscillatory cycles?
 {% include markup/end %}
 
@@ -143,7 +143,7 @@ The cross-spectral density data structure has a similar data structure as other 
            grad: [1x1 struct]     % MEG sensor information
             cfg: [1x1 struct]     % Configuration
 
-{% include markup/exercise %}
+{% include markup/blue %}
 How come our target frequency is 17.8571, didn't we ask for 18? _Hint: How large is our time window?_
 {% include markup/end %}
 
@@ -218,7 +218,7 @@ It is ideal to contrast the activity of interest against some control.
     - Use normalized leadfields (that is what we did above!)
     - Activity contrasted with estimated noise
 
-{% include markup/exercise %}
+{% include markup/blue %}
 Why shouldn't we calculate a spatial filter for both conditions separately in the case of contrasting conditions? Would there be a reason to do so?
 {% include markup/end %}
 
@@ -245,7 +245,7 @@ To start with this, we need to compute the oscillatory power for both conditions
     powcsd_right     = ft_freqanalysis(cfg, data_timewindow);
 
 
-{% include markup/info %}
+{% include markup/blue %}
 You could also compute powcsd_all with `cfg.keeptrials` set to `yes` and use the `cfg.trials` option later in **[ft_sourceanalysis](/reference/ft_sourceanalysis)** or using **[ft_selectdata](/reference/utilities/ft_selectdata)**. This would be computationally more efficient, but requires more memory.
 {% include markup/end %}
 
@@ -286,7 +286,7 @@ After successfully applying the above steps, we obtained an estimate of the beta
     source_diff.avg.pow = (source_left.avg.pow - source_right.avg.pow) ./ ...
                           (source_left.avg.pow + source_right.avg.pow);
 
-{% include markup/warning %}
+{% include markup/yellow %}
 It would be better here to use **[ft_math](/reference/ft_math)** to compute the contrast between the condition. It will ensure that the data is consistent (i.e. prevent accidentally combining different source locations in the two estimates for the two conditions) and it keeps the [provenance](https://en.wikipedia.org/wiki/Provenance#Data_provenance) consistent.
 {% include markup/end %}
 
@@ -314,16 +314,16 @@ _Figure: Source plot of the difference in beta power between the left and right 
 
 ### Exercise 2: understanding the results
 
-{% include markup/exercise %}
+{% include markup/blue %}
 Try to explain the location of the red and blue blobs.
 {% include markup/end %}
 
-{% include markup/exercise %}
+{% include markup/blue %}
 The 'ortho' method is not the only plotting method implemented. Use the 'help' of **[ft_sourceplot](/reference/ft_sourceplot)** to find what other methods there are and plot the source level results. What are the benefits and drawbacks of these plotting routines?
 {% include markup/end %}
 
 ### Exercise 3: regularization
 
-{% include markup/exercise %}
+{% include markup/blue %}
 The regularization parameter `lambda` was '5%'. Change it to '0%' or to '10%' and plot the power estimate. How does the regularization parameter affect the properties of the spatial filter?
 {% include markup/end %}

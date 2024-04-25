@@ -21,7 +21,7 @@ So instead of sending the large file as attachment, you would just include the d
 
 You can also share example data by storing it in a GitHub hosted repository using [Git LFS](https://git-lfs.github.com/). In addition to sharing a snapshot of a file's state, this also lets you track changes to the files over time, control access to the shared data, easily sync it between multiple machines, and collaborate by allowing multiple users to write changes to the file set.
 
-{% include markup/danger %}
+{% include markup/red %}
 If this is confidential data, remember that by default, GitHub repositories are public and visible to everyone. To keep your data private, you must make it a private repo, and selectively grant access to the users you wish to see it.
 {% include markup/end %}
 

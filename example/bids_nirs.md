@@ -5,7 +5,7 @@ tags: [example, bids, sharing, nirs, artinis, homer, snirf]
 
 # Converting an example NIRS dataset for sharing in BIDS
 
-{% include markup/warning %}
+{% include markup/yellow %}
 NIRS is part of the [BIDS standard](https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/11-near-infrared-spectroscopy.html) as of version 1.8.0 and uses the [SNIRF file format](https://github.com/fNIRS/snirf/blob/v1.1/snirf_specification.md).
 {% include markup/end %}
 
@@ -19,7 +19,7 @@ The windows software that comes with the Arinis system is called "Oxysoft" and i
 
 The example here is based on the dataset that is also used in the tutorial on [preprocessing and averaging of multi-channel NIRS data](/tutorial/nirs_multichannel). The data was recorded in an auditory oddball task. Details can be found in the tutorial.
 
-{% include markup/success %}
+{% include markup/green %}
 The raw data is available on our download server, together with the script to convert the data to BIDS and the resulting BIDS dataset. You can find all three [here](https://download.fieldtriptoolbox.org/example/bids_nirs/artinis/).
 {% include markup/end %}
 
@@ -94,7 +94,7 @@ For the example here we are using the dataset that is shared on Mendeley by Jess
 
 To convert the dataset from Homer `.nirs` format to BIDS and SNIRF, we use the following script. Since we do not have so much information about the actual dataset, we can only provide some general metadata. The original data is shared under the "CC BY 4.0 license", which allows redistribution of the data and derived data. This is also one of the fields in the required `dataset_description.json`.
 
-{% include markup/success %}
+{% include markup/green %}
 The complete original dataset is available from Mendeley, a subset of the raw data has been made available on our download server, together with the script to convert the data to BIDS and the resulting BIDS dataset. You can find all three [here](https://download.fieldtriptoolbox.org/example/bids_nirs/homer/).
 {% include markup/end %}
 

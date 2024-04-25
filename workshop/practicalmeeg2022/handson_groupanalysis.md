@@ -5,7 +5,7 @@ tags: [practicalmeeg2022, meg, timelock, statistics, plotting, mmfaces]
 
 # Group-level statistics with parametric and non-parametric methods
 
-{% include markup/info %}
+{% include markup/blue %}
 This tutorial was written specifically for the [PracticalMEEG workshop in Aix-en-Provence](/workshop/practicalmeeg2022) in December 2022 and is part of a coherent sequence of tutorials. It is an adjusted version of the [event-related statistics tutorial](/tutorial/eventrelatedstatistics) and an updated version of the corresponding tutorial for [Paris 2019](/workshop/paris2019).
 {% include markup/end %}
 
@@ -152,7 +152,7 @@ We can use the `brainordinate` field of one of the subjects to determine where t
 
 _Figure; Location of the parcel corresponding to the virtual channel of interest_
 
-{% include markup/warning %}
+{% include markup/yellow %}
 We will continue with a single parcel here. However, there is no reason to assume that the effect of face recognition is lateralized to the right, so a better approach might be to average the corresponding parcels in both hemispheres.
 {% include markup/end %}
 
@@ -207,7 +207,7 @@ We can also plot the differences between conditions, for each subject, in a diff
 
 _Figure; Single subject results, averaged for the channel of interest and the time window of interest_
 
-{% include markup/danger %}
+{% include markup/red %}
 We are starting with a single-channel analysis here for purely didactical reasons, i.e. start with a simple test without multiple comparisons, and then build up the complexity by adding multiple time points and parcels.
 
 In practice you should _not_ guide your statistical analysis by a visual inspection of the data; you should state your hypothesis up-front and avoid [data dredging or p-hacking](https://en.wikipedia.org/wiki/Data_dredging).
@@ -248,7 +248,7 @@ From the code above you can see that the statistical comparison is between condi
 
 #### Exercise 1
 
-{% include markup/exercise %}
+{% include markup/blue %}
 Look at the temporal evolution of the effect by changing cfg.latency and cfg.avgovertime in **[ft_timelockstatistics](/reference/ft_timelockstatistics)**. You can plot the t-value versus time, the probability versus time and the statistical mask versus time. Note that the output of the **[ft_timelockstatistics](/reference/ft_timelockstatistics)** function closely resembles the output of the **[ft_timelockanalysis](/reference/ft_timelockanalysis)** function.
 {% include markup/end %}
 
@@ -386,7 +386,7 @@ _Figure; Nonparametric test, plot of the effect size with significant channels i
 
 #### Exercise 2
 
-{% include markup/exercise %}
+{% include markup/blue %}
 Perform the same statistical test, but now without selecting the time range of interest and without averaging over time. This increases the number of statistical comparisons from Nchan to Nchan x Ntime. The statistics function also returns a Boolean mask that you can use for plotting:
 
     % make the plot
@@ -471,12 +471,12 @@ _Figure; Spatial distribution of p-values over the parcels_
 
 #### Exercise 3
 
-{% include markup/exercise %}
+{% include markup/blue %}
 Explain why the results of the cluster-based permutation test are not showing the same as the statistical tests for the region of interest and/or the time window of interest. What can you learn from the outcome of this statistical test?
 {% include markup/end %}
 
 Although the distribution of the p-values can be informative to learn something about the distribution of the effect, the decision to reject the null-hypothesis is only based on the "largest" cluster, i.e. the most unlikely piece of evidence that you have against the H0.
 
-{% include markup/warning %}
+{% include markup/yellow %}
 To properly write up your results in a manuscript, you should check the guidelines on [how NOT to interpret results from a cluster-based permutation test](/faq/how_not_to_interpret_results_from_a_cluster-based_permutation_test).
 {% include markup/end %}

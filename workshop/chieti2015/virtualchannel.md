@@ -7,7 +7,7 @@ tags: [chieti, hcp-motort]
 
 ## Introduction
 
-{% include markup/info %}
+{% include markup/blue %}
 This tutorial contains hands-on material that we used for the [MEG connectivity workshop in Chieti](/workshop/chieti2015).
 {% include markup/end %}
 
@@ -61,7 +61,7 @@ Best is always to check the coordinate system of the MRI.
 
 {% include image src="/assets/img/workshop/chieti2015/virtualchannel/screen_shot_2015-09-17_at_09.36.22.png" width="500" %}
 
-{% include markup/info %}
+{% include markup/blue %}
 Click around in the figure and look at the "bti" head coordinates that are printed in the screen. Subsequently look up the definition of the 4D/BTi head coordinate system in this [frequently asked question](/faq/coordsys#details_of_the_4dbti_coordinate_system).
 
 You can see that the orientation of the MRI is not as expected. Especially annoying is that it has a left-right flip. Note that each voxel's coordinates are technically OK, but the interpretation of the figure will be easier if the MRI is resliced on a voxel grid that is aligned along the axes of the 4D/BTi coordinate system.
@@ -149,7 +149,7 @@ Each movement instruction is followed by a movement, which can be seen in the co
 
 {% include image src="/assets/img/workshop/chieti2015/virtualchannel/screen_shot_2015-09-17_at_09.38.23.png" width="500" %}
 
-{% include markup/info %}
+{% include markup/blue %}
 Does the mapping of the trigger codes correspond to the sequence of EMG activity?
 {% include markup/end %}
 
@@ -238,7 +238,7 @@ We can also compute the difference between the power in the left and right-hand 
 
 {% include image src="/assets/img/workshop/chieti2015/virtualchannel/screen_shot_2015-09-17_at_09.38.55.png" width="500" %}
 
-{% include markup/info %}
+{% include markup/blue %}
 You should use the interactive functionality of the **[ft_multiplotTFR](/reference/ft_multiplotTFR)** figures. Click in the figures to identify the time, frequency and channel selections that show interesting effects.
 {% include markup/end %}
 
@@ -311,7 +311,7 @@ Using the cross-spectral density matrix, we can do the beamformer estimate of th
     dics_rh = ft_sourceanalysis(cfg, tfr_rh_sel);
     dics_lh = ft_sourceanalysis(cfg, tfr_lh_sel);
 
-{% include markup/info %}
+{% include markup/blue %}
 The source reconstruction contains the power at each grid location, but also the noise. Explore the structure, especially "source.avg". Can you find the power and the noise estimate? Why is the estimate not computed for all grid locations?
 {% include markup/end %}
 
@@ -434,7 +434,7 @@ With the covariance and the forward model for the specific seed points, we can c
 
     lcmv_rh = ft_sourceanalysis(cfg, timelock_rh);
 
-{% include markup/info %}
+{% include markup/blue %}
 Look at the source structure, again in "source.avg". Can you find the representation of the spatial filter?
 {% include markup/end %}
 
@@ -539,6 +539,6 @@ The virtual channel time series seem to be consistent with what we expect to hap
 
 {% include image src="/assets/img/workshop/chieti2015/virtualchannel/screen_shot_2015-09-17_at_09.42.01.png" width="500" %}
 
-{% include markup/info %}
+{% include markup/blue %}
 There are many more connectivity methods available in **[ft_connectivityanalysis](/reference/ft_connectivityanalysis)**. Try out some of the others.
 {% include markup/end %}
