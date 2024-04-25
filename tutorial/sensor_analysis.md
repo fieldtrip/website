@@ -44,7 +44,7 @@ Plot the data for the first trial, 130th channe
 
     plot(data_left.time{1}, data_left.trial{1}(130,:));
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Which channel is the 130th channel?
 {% include markup/end %}
 
@@ -116,7 +116,7 @@ Again, you can select a time range and click it to bring up a topographical plot
 
 _Figure 5: topographical representation of the ERF deflection around 300ms after visual stimulus onset._
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Given that the CTF system uses axial gradiometers (i.e. detecting the magnetic gradient orthogonal to the scalp), what electrical dipole configuration would explain the observed field pattern in the above figure?
 
 Feel free to click around a bit in the multi- and singleplots to explore the characteristics of the ERF.
@@ -237,7 +237,7 @@ _Figure 7: Time-frequency representation using a Hanning taper with a fixed wind
 
 This is an interactive plot, so just as with the event-related part you can select sensors and click to get an average TFR. With this, you can select a time and frequency range and plot a topography.
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Click around the multiplot to explore the visual gamma response and its topography!
 {% include markup/end %}
 
@@ -313,7 +313,7 @@ Again, this is an interactive plot, so click around it to get a nice overview of
 
 _Figure 8: results of sensor-level analysis of corticomuscular coherence. Reference channel was the left EMG._
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 After exploring the coherence results when the reference channel is the left EMG, do the same for the right EMG (which is called 'EMGrgt'). What do you conclude?
 
 Try changing the cfg.tapsmofrq parameter in the **[ft_freqanalysis](/reference/ft_freqanalysis)** step. How does this affect the resulting coherence spectrum?

@@ -9,7 +9,7 @@ With FieldTrip it is possible to analyze EEG/MEG data in real-time and to create
 
 The general idea behind the real-time processing of EEG/MEG data in FieldTrip in particular, or in MATLAB in general, is to separate the streaming/buffering from the analysis. Below we'll first describe the buffering of the data, followed by some real-time analysis examples.
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 To get some quick satisfaction with streaming data, you might want to try out the example given in this [frequently asked question](/faq/how_should_i_get_started_with_the_fieldtrip_realtime_buffer).
 {% include markup/end %}
 

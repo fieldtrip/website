@@ -27,7 +27,7 @@ There are four components of a forward model
 3. A _source model_: we need to know where the sources are - preferably they should be in the brain
 4. A _lead field_ : we need to know how the sources and sensors "connect" to one another. That is, for each source (activated at unit strength (1 Am)) we calculate the electric potential vector at each sensor (electrode). It may be seen that the _lead field_ (component 4) is really the "sum" of the information from components 1-3.
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Note that the _forward model_ is completely independent of the actual EEG data.
 All it models is how a source _given_ that it was active with a given current (1 Am), _would_ be seen at the sensor level.
 {% include markup/end %}
@@ -99,7 +99,7 @@ We follow this up by a check running **[ft_volumerealign](/reference/ft_volumere
 {% include image src="/assets/img/workshop/oslo2019/headshape_registration.png" width="650" %}
 _Figure 2: Plot of the co-registration after applying Iterative Closest Points on the Polhemus head shape points_
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 A version of _mri_aligned_headshape_ is already included in downloaded data. Using this, you will achieve the same solutions as us, but do try to do the co-registration yourself as well. Note also that _neuromag_ coordinates are seen under the voxel indices when you run **[ft_sourceplot](/reference/ft_sourceplot)** on _mri_aligned_headshape_.
 {% include markup/end %}
 
@@ -125,7 +125,7 @@ and when we plot it now, the axes are more conveniently located - note that ever
 {% include image src="/assets/img/workshop/oslo2019/mri_aligned_resliced.png" width="650" %}
 _Figure 3: Plot of the resliced MRI, where axes are located in a more convenient manner_
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Make sure that the coordinate system is correct, i.e. _up_ is _z-positive_, _anterior_ is _y-positive_ and _right_ is _x-positive_
 {% include markup/end %}
 
@@ -432,7 +432,7 @@ Let's change to the _dipoli_ head model (load it if you cannot create it)
 
 and run the code creating _elec_realigned_, _sourcemodel_ and _sourcemodel_and_leadfield_ again with _headmodel_ as _headmodel_dipoli_
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Now the plots look **correct** - (the electric potentials are in the order of microvolts and the topographies look smooth)
 {% include markup/end %}
 
@@ -442,11 +442,11 @@ _Figure 12: Lead fields in the_ XYZ-_directions for_ headmodel_dipoli _for a sup
 {% include image src="/assets/img/workshop/oslo2019/leadfield_magnitude_topo.png" width="650" %}
 _Figure 13: Magnitude of the lead fields for_ headmodel_dipoli _for a superficial source_
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 When plotting the lead field topographies, try to change _source_index_ and _sensory_dipole_current_ to change the topography and get a feeling for how it works. Also change the source index (will work for a number between 1 and 1659)
 {% include markup/end %}
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Do always check the lead field of both a superficial source, as this is where errors are most prone, and a central source. If you see errors for the superficial sources, you can use _cfg.inwardshift_ from **[ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)** as this removes sources from the outermost parts of the brain
 {% include markup/end %}
 

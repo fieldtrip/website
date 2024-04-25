@@ -51,7 +51,7 @@ These functions are available for manual/visual artifact detection:
 
 The **[ft_rejectvisual](/reference/ft_rejectvisual)** function works only for segmented data (i.e. trials) that have already been read into memory. It allows you to browse through the large amounts of data in a MATLAB figure by showing all channels at once (per trial), or by showing all trials at once (per channel), or by showing a summary of all channels and trials in a single figure. Using the mouse, you can select trials and/or channels that are to be removed. This function directly returns the data with the noisy parts removed and you don't have to call **[ft_rejectartifact](/reference/ft_rejectartifact)** or **[ft_rejectcomponent](/reference/ft_rejectcomponent)**.
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 If you want to use **[ft_rejectvisual](/reference/ft_rejectvisual)** on continuous data, you can first segment it in one-second pieces using **[ft_redefinetrial](/reference/ft_redefinetrial)** and then call ft_rejectvisual. Segmenting continuous data is explained in [this FAQ](/faq/how_can_i_process_continuous_data_without_triggers).
 {% include markup/end %}
 

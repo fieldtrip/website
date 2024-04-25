@@ -5,7 +5,7 @@ tags: [practicalmeeg2022, meg, freq, mmfaces]
 
 # Time-frequency analysis using Hanning window, multitapers and wavelets
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 This tutorial was written specifically for the [PracticalMEEG workshop in Aix-en-Provence](/workshop/practicalmeeg2022) in December 2022 and is part of a coherent sequence of tutorials. It is an adjusted version of the [time-frequency analysis tutorial](/tutorial/timefrequencyanalysis) and an updated version of the corresponding tutorial for [Paris 2019](/workshop/paris2019).
 {% include markup/end %}
 
@@ -280,7 +280,7 @@ _Figure: A topographic representation of the time-frequency representations (15 
 
 ##### Exercise 1
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Plot the power with respect to a relative baseline (hint: use `cfg.zlim=[0 2.0]` and use the cfg.baselinetype option)
 
 How are the responses different? Discuss the assumptions behind choosing a relative or absolute baseline.
@@ -288,13 +288,13 @@ How are the responses different? Discuss the assumptions behind choosing a relat
 
 ##### Exercise 2
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Plot the TFR of sensor MEG1921. How do you account for the increased power at ~100-200 ms? Hint: compare it to the ERFs.
 {% include markup/end %}
 
 ##### Exercise 3
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Visualize the TFR of the gradiometers. Use what you have learnt from the raw2erp tutorial to first combine the horizontal and planar gradient channels into a single estimate.
 {% include markup/end %}
 
@@ -342,7 +342,7 @@ If you would like to learn more about plotting of time-frequency representations
 
 #### Exercise 4
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Adjust the length of the time-window and thereby degree of smoothing. Use **[ft_singleplotTFR](/reference/ft_singleplotTFR)** to show the results. Discuss the consequences of changing these setting.
 
 4 cycles per time window:
@@ -422,7 +422,7 @@ If you would like to learn more about plotting of time-frequency representations
 
 #### Exercise 5
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Rather than visualising the TFRs in isolated conditions (after a baseline correction), you can also visualise the difference between 2 conditions, for example in the following way, using **[ft_math](/reference/ft_math)**.
 
     cfg = [];
@@ -475,7 +475,7 @@ _Figure: Time-frequency representations of power calculated using Morlet wavelet
 
 #### Exercise 6
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Adjust cfg.width and see how the TFRs change.
 {% include markup/end %}
 

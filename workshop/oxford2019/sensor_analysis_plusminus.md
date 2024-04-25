@@ -5,7 +5,7 @@ tags: [oxford2019, tutorial, meg, freq, timelock, preprocessing, plotting, meg-v
 
 # Reading in data and performing sensor-level ERF and TFR analyses
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 This tutorial was written specifically for the workshop in Oxford in May 2019, and is a modified version of the [sensor analysis](/tutorial/sensor_analysis) tutorial. Specifically, a bit is added here about reading in data and preprocessing, and the bit about sensor-level connectivity analysis is removed.
 {% include markup/end %}
 
@@ -99,7 +99,7 @@ Plot the data for the first trial, 130th channel
 
     plot(data_left.time{1}, data_left.trial{1}(130,:));
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Which channel is the 130th channel?
 {% include markup/end %}
 
@@ -171,7 +171,7 @@ Again, you can select a time range and click it to bring up a topographical plot
 
 _Figure 5: topographical representation of the ERF deflection around 300ms after visual stimulus onset._
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Given that the CTF system uses axial gradiometers (i.e. detecting the magnetic gradient orthogonal to the scalp), what electrical dipole configuration would explain the observed field pattern in the above figure?
 
 Feel free to click around a bit in the multi- and singleplots to explore the characteristics of the ERF.
@@ -292,7 +292,7 @@ _Figure 7: Time-frequency representation using a Hanning taper with a fixed wind
 
 This is an interactive plot, so just as with the event-related part you can select sensors and click to get an average TFR. With this, you can select a time and frequency range and plot a topography.
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Click around the multiplot to explore the visual gamma response and its topography!
 {% include markup/end %}
 

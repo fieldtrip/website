@@ -115,7 +115,7 @@ it.
 
 ##### Exercise 1
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Browse through the segments to get a feel for the data. Do you see any obvious
 artifacts? There is one channel carrying several artifacts throughout the
 recording, can you find it? Use the identify button to see the channel name.
@@ -253,7 +253,7 @@ combine the trials into one structure again.
 
 ##### Exercise 2
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Visualize the selected artifacts in data_bad with
 **[ft_databrowser](/reference/ft_databrowser)** and compare it to data_fixed.
 You can also just plot the bad channel by specifying its name in cfg.channel. Or
@@ -279,7 +279,7 @@ artifacts and append the fixed data.
 
 ##### Exercise 3
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Inspect the new data structure. What has changed?
 {% include markup/end %}
 
@@ -450,7 +450,7 @@ by the independent component's time course.
 
 ##### Exercise 4
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Use **[ft_databrowser](/reference/ft_databrowser)** one last time to view the
 cleaned data. Did the ICA successfully correct all eye blinks?
 {% include markup/end %}

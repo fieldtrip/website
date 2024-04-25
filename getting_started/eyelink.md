@@ -9,7 +9,7 @@ At the Donders we have an [Eyelink 1000 eyetracker](http://www.sr-research.com/e
 
 The eye-tracker can be used on itself, or in combination with other data acquisition techniques (e.g., EEG, MEG, TMS or fMRI). FieldTrip allows you to analyze the eye-tracker data in all of these situations. In the following, we will provide the background of the data acquisition and present some examples on how to analyze eye-tracker data.
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 With your presentation script on the stimulus presentation computer you can also write data to disk in the form of behavioral log files. In the subsequent examples we will not consider integrating the physiological measurements with the data in these behavioral log files. We will only consider physiological data from the eye-tracker, from the EEG system, and from the MEG system.
 {% include markup/end %}
 
@@ -171,7 +171,7 @@ Important to notice here is that the stimulus events in the EEG dataset largely 
       duration
       offset
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 There are 1400 triggers in one, and 2822 triggers in the other. This is mostly explained by each trigger onset **and** offset being represented in the Eyelink events, but only the onsets being represented in the CTF events.
 
 There are 2 triggers in the CTF file, that are not specified anywhere and should not be there (with a value of 64). These are not present in other subjects' data sets from the same experiment. I have no clue where they would come from but suspect it to be a hardware glitch of the Bitsi box (which links the serial port of the presentation computer with the input of the CTF and Eyelink acquisition systems). The Eyelink and CTF system might have different detection thresholds and different minimum durations of the TTL pulse, therefore it might show up in one dataset and not the other.

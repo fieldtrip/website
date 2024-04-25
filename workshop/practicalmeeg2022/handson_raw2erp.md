@@ -5,7 +5,7 @@ tags: [practicalmeeg2022, meg, timelock, preprocessing, mmfaces]
 
 # Preprocessing raw data and computing ERPs/ERFs
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 This tutorial was written specifically for the [PracticalMEEG workshop in Aix-en-Provence](/workshop/practicalmeeg2022) in December 2022 and is part of a coherent sequence of tutorials. It is an updated version of the corresponding tutorial for [Paris 2019](/workshop/paris2019).
 {% include markup/end %}
 
@@ -170,7 +170,7 @@ There is no advantage in resampling the data other than saving some memory. If y
 In this specific case we are resampling to fit it in memory of the participants' laptops and to speed up subsequent computations.
 {% include markup/end %}
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 The recorded data apparently has a delay of 34.5 ms relative to the onset of the triggers and relative to the `events.tsv` file. This can be corrected with **[ft_redefinetrial](/reference/ft_redefinetrial)** like this
 
     cfg            = [];
@@ -338,7 +338,7 @@ Now that we have a combined layout, we can plot all three datatypes and all thre
 
 #### Exercise 1
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Explore the data, using the interactive property of the figure. Visualize the topographies of the ERF/ERPs in the latency window between 175 and 250 ms. Also inspect the topographies in the latency window from 300-450 ms. Explain the differences in topography (between latencies and channel types) based on putative underlying neuronal generators.
 
 {% include image src="/assets/img/workshop/practicalmeeg2022/handson_raw2erp/figure6.png" width="600" %}
@@ -349,7 +349,7 @@ _Figure: Topographies of the average across selected latency window for one of t
 
 #### Exercise 2
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 The `avg_famous` structure not only contains the average, but also the variance. That can be used to compute the standard deviation and the standard error of the mean (SEM).
 
 Use the following code to compute and plot the ERP together with the standard deviation:
@@ -388,7 +388,7 @@ _Figure: the averaged ERP on EEG065, plus and minus the SEM._
 
 #### Exercise 3
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 
 Using the more low-level function **[ft_plot_vector](/reference/plotting/ft_plot_vector)** we can make a more fancy visualisation of the confidence interval around the ERP. Try the following:
 
@@ -415,7 +415,7 @@ _Figure: the ERP with the SEM as highlighted region, and the ERP that highlights
 
 #### Exercise 4
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Rather than looking at the average and go to the thresholded statistics straight away, we can also look at the individual trials. For that it helps to represent the data according to the `timelock` structure, but keeping all the trials.
 
     cfg = [];;

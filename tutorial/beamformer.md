@@ -15,7 +15,7 @@ It is expected that you understand the previous steps of preprocessing and filte
 
 This tutorial will not cover the time-domain option for LCMV/SAM beamformers (but see [this tutorial for an example on data from a Neuromag/Elekta/MEGIN system](/workshop/paris2019/handson_sourceanalysis)), nor for beamformers applied to evoked/averaged data (although see an example of how to calculate [virtual sensors using LCMV](/tutorial/virtual_sensors) for an example of this).
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 This tutorial contains hands-on material that we use for the [MEG/EEG toolkit course](/workshop/toolkit2018) and it is complemented by this lecture.
 
 {% include youtube id="pE0WAKd_Ve4" %}
@@ -70,7 +70,7 @@ Further we need to 'cut' out the time windows of interest: the pre- and post sti
 
 ### Exercise 1: data length
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Why is it important that the length of each data piece matches an integer number of oscillatory cycles?
 {% include markup/end %}
 
@@ -158,7 +158,7 @@ You can now visualise the headmodel together with the sensor positions:
 
 ### Exercise 2: head model
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Why might a single sphere model be inadequate for performing beamformer estimates?
 {% include markup/end %}
 
@@ -251,7 +251,7 @@ Notice that the power is strongest in the center of the brain. There are several
 
 ### Exercise 3: center of head bias
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Discuss why the source power is overestimated in the center of the brain. Hint 1: what are the lead field values in the center of the head? Why? Hint 2: Remember the 'unit-gain constraint' of beamformer spatial filters.
 {% include markup/end %}
 
@@ -290,7 +290,7 @@ _Figure 3: The neural activity index (NAI) plotted for the post-stimulus time wi
 
 ### Exercise 4: lead field normalization
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Another option, besides contrasting to the noise estimate, is to normalize the lead field when you compute it (cfg.normalize='yes' in the call to ft_prepare_leadfield). Recompute the lead field and source estimate this way and plot the result.
 {% include markup/end %}
 
@@ -369,19 +369,19 @@ _Figure 4: sourceplot with method "slice" ._
 
 ### Exercise 5: comparing normalizations
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Compare figure 3 and 4. It appears that normalizing the power with the baseline activity result in fewer and more focal sources. Why?
 {% include markup/end %}
 
 ### Exercise 6: regularization
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 The regularization parameter was cfg.dics.lambda = '5%'. Change it to 0 or to '100%' and plot the power estimate with respect to baseline. How does the regularization parameter affect the properties of the spatial filter?  
 {% include markup/end %}
 
 ### Exercise 7: lead field normalization
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Which configuration options you have used above for ft_sourceanalysis were specific to the type of contrast chosen?
 {% include markup/end %}
 

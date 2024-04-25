@@ -93,10 +93,10 @@ This computes the spectral decomposition and the coherence spectrum between all 
 
 The spectrum reveals a strong coherence peak around 20 Hz between the right motor cortex and the left EMG, as expected, and as we found in the beamforming tutorial as well, where we beamed the sensor-level coherence directly. Additionally, we also see a corticomuscular coherence peak in the gamma frequency range.
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Rather than looking at undirected coherence, the virtual channel level data can now also easily be submitted to directed connectivity measures. Compute the spectrally resolved granger connectivity and try to assess whether the directionality is from cortex to EMG or vice versa.
 {% include markup/end %}
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Now that you have the virtual channel data, you can also use it to look at, for instance, power correlations across trials between visual gamma and motor beta. Do this! (Hint: this involves computing trial-specific estimates of power using ft_freqanalysis, extracting those estimates from the resulting freq structure, and using matlab's own corr function.)
 {% include markup/end %}

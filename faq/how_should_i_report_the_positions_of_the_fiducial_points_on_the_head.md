@@ -26,7 +26,7 @@ Clarity and precision in the definition and measurement of the fiducial points c
 
 {% include image src="/assets/img/faq/how_should_i_report_the_positions_of_the_fiducial_points_on_the_head/fiducial_points.png" width="350" %}
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 The Helix-Tragus Junction (i.e. LHJ and RHJ) is the best defined in anatomical MRIs and in 3D scans.
 {% include markup/end %}
 

@@ -25,7 +25,7 @@ The common aim of the coregistration methods that we explore in this tutorial is
 
 In the examples below, the OPM sensor positions and orientations are initially expressed in a coordinate system relative to the FieldLine smart helmet. To facilitate the downstream analysis of the MEG signals, e.g., for group level analysis, it is customary to aim for the OPM sensors expressed in a coordinate system that is defined based on anatomical landmarks on the participant's head.
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Some basic background about coordinate systems, and the exact definition of some widely used coordinate systems is given in this [FAQ](/faq/coordsys).
 
 In general you can think of coordinate systems in the same way as [time zones](https://en.wikipedia.org/wiki/Time_zone). To make an online appointment with a colleague on the other side of the world, you have to align your respective agendas. The appointment subsequently appears in your agenda according to your timezone, and in their agenda according to theirs.
@@ -233,7 +233,7 @@ We can visualize the data with **[ft_databrowser](/reference/ft_databrowser)** t
 
 You can recognize four blocks of about 60 seconds each, followed by a final block of about 60 seconds in which you don't see much. In the first block all three coils were energized at the same time, at different (orthogonal) frequencies. That is the part of the data that we will use. A bit later in the recording each of the coils was energized individually; those pieces of data would have been useful if all coils would have been driven with the same frequency. In the last block the magnetic dipole that is at the center of the CTF phantom was energized at 11 Hz; the signal there is much weaker since the coil is further away from the OPM sensors.
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 There are two channels which have the wrong position/orientation information in the specific example data used here. We won't elaborate on it but simply remove those channels from further processing.
 {% include markup/end %}
 
@@ -473,7 +473,7 @@ To facilitate later processing, we will assign a better defined coordinate syste
 {% include image src="/assets/img/tutorial/coregistration_opm/scan_sosoaligned.png" width="400" %}
 _Figure: 3D scan with a coordinate system relating to the head and helmet._
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 As the ears are not visible, you have to click on dummy locations that appropriate the LPA and RPA points. Consequently, your coarse coregistration will be somewhat different from the one here in the tutorial. In the subsequent code we will use some parameters (rotations, translations) that depend on this initial coarse coregistration. To make sure that your subsequent results match what is presented here, you should download [example3_face_helmet_aligned.mat](https://download.fieldtriptoolbox.org/tutorial/coregistration_opm/example3_face_helmet_aligned.mat) and load it in MATLAB.
 
     load example3_face_helmet_aligned.mat  % this contains the aligned scan
@@ -566,7 +566,7 @@ We will explicitly align the MRI to an anatomical landmark-based coordinate syst
 {% include image src="/assets/img/tutorial/coregistration_opm/mri_aligned.png" width="400" %}
 _Figure: anatomical MRI image with a 'neuromag' head coordinate system._
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 During MRI coregistration you have to click on the nasion, left and right ear. The landmark points at the ears are [ambiguous](/faq/how_are_the_lpa_and_rpa_points_defined) and if you click on different points, your alignment could be off by a centimeter or so. In the subsequent code we will use some rotation and translation parameters. To make sure that your subsequent results match what is presented here, you should download [example3_face_mri_realigned.mat](https://download.fieldtriptoolbox.org/tutorial/coregistration_opm/example3_mri_realigned.mat) and load it in MATLAB.
 
     load example3_mri_realigned.mat % this contains the realigned mri

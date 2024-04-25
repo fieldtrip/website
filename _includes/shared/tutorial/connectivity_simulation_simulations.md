@@ -82,7 +82,7 @@ Here, we know the model order a priori because we simulated the data and we choo
 
 #### Exercise 1
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Compare the parameters specified for the simulation with the estimated coefficients and discuss.
 {% include markup/end %}
 
@@ -171,7 +171,7 @@ The coherence measure is a symmetric measure, which means that it does not provi
 
 #### Exercise 2
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Compute the granger output using instead the 'freq' data structure. Plot them side-by-side using ft_connectivityplot.
 {% include markup/end %}
 
@@ -190,12 +190,12 @@ Instead of plotting it with **[ft_connectivityplot](/reference/ft_connectivitypl
 
 #### Exercise 3
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Discuss the differences between the granger causality spectra, and the coherence spectra.
 {% include markup/end %}
 
 #### Exercise 4
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Compute the following connectivity measures from the **mfreq** data, and visualize and discuss the results: partial directed coherence (pdc), directed transfer function (dtf), phase slope index (psi). (Note that psi will require specifying cfg.bandwidth. What is the meaning of this parameter?)
 {% include markup/end %}

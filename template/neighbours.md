@@ -30,7 +30,7 @@ Currently, the following neighbour templates are shipping with FieldTrip (note t
 - Easycap M14 (easycapM14_neighb.mat)
 - Easycap M15 (easycapM15_neighb.mat)
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Other 'Easycaps' constitute a subset of one of these systems or feature freely placable electrodes. You are required to manually edit them for your purposes. Please see [the layout section](/template/layout) and [the Easycap webpage](http://www.easycap.de) for more information.
 {% include markup/end %}
 
@@ -78,7 +78,7 @@ MEG neighbour templates are based on [automatic, symmetric triangulation](/faq/h
 - Neuromag306, only planar gradiometer (neuromag306planar_neighb.mat)
 - Neuromag306, only magnetometer (neuromag306mag_neighb.mat)
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Please see our FAQ for [why there are multiple neighbour templates for the neuromag306 system](/faq/why_are_there_multiple_neighbour_templates_for_the_neuromag306_system)
 {% include markup/end %}
 

@@ -5,7 +5,7 @@ tags: [dataformat, edf, eeg]
 
 # Getting started with EDF (European Data Format) data
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Please feel free to add information here if you're using EDF data and want to share info with other FieldTrip users.  
 {% include markup/end %}
 

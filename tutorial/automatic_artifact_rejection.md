@@ -19,7 +19,7 @@ Of course it is best to try to avoid those artifacts in the first place. For ins
 
 ## Procedure
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 The functions **[ft_artifact_eog](/reference/ft_artifact_eog)**, **[ft_artifact_muscle](/reference/ft_artifact_muscle)** and **[ft_artifact_jump](/reference/ft_artifact_jump)** are just wrappers around the **[ft_artifact_zvalue](/reference/ft_artifact_zvalue)** function with some default parameters set. Please look at that function if you want to know in detail how it works.
 {% include markup/end %}
 

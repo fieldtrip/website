@@ -17,7 +17,7 @@ Another concern for subject confidentiality is the anatomical MRI, which might i
 
 Furthermore, depending on how strict you want to be, the date at which a subject is recorded or the data at which a subject's data was processed might also contain clues about identifying the subject.
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 In the [Human Connectome Project](http://www.humanconnectome.org) (HCP) we decided that the date at which the subject was scanned (i.e. date of acquisition) should not be revealed, as it would mean that not only the participant him/herself, but potentially also family members, friends and other people that were informed about the subject participating would be able to identify the individual subject in the database. This is one of the reasons for releasing subjects in the HCP in larger batches and not continuously.
 
 You may want to review the [elements](http://www.humanconnectome.org/data/data-use-terms/restricted-data-reference.html) of the HCP related to the gradual sensitivity of human data and the [data use terms](http://www.humanconnectome.org/data/data-use-terms/) for the open and restricted access elements of the HCP data.

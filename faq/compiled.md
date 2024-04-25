@@ -30,6 +30,6 @@ where MATLABROOT points to either your local MATLAB installation, or to the loca
 
 Note that the "press a button to exit" statement is used to prevent the compiled application from closing as soon as the data browser appears, since that would also close the figure again. Most pipelines will not need this.
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 This is the strategy we also used for running the Human Connectome Project [megconnectome](https://github.com/Washington-University/megconnectome) analysis pipelines on the WashU compute cluster.
 {% include markup/end %}

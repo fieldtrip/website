@@ -48,7 +48,7 @@ You can read the fcdc_matbin file just like any other file format in FieldTrip, 
 
 and the **[ft_preprocessing](/reference/ft_preprocessing)** function (or any other function that needs to read from the file) will automatically figure out that the data is contained in the bin/mat pair.
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 With the code above the events (e.g., trigger codes) are not stored in the output. Since the sample indexing remains exactly the same, you can simply do
 
     event = ft_read_event('eeg1_2.dat')

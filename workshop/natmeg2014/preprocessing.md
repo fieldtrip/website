@@ -13,7 +13,7 @@ This tutorial describes how to define epochs-of-interest (trials) from your reco
 
 This tutorial does the preprocessing and segmenting in a single step. If you are interested in how to do preprocessing on your continuous data prior to segmenting it into trials, you can check the [Preprocessing - Reading continuous data](/tutorial/continuous) tutorial.
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 This tutorial contains the hands-on material of the [NatMEG workshop](/workshop/natmeg2014) and is complemented by this lecture.
 
 {% include youtube id="zOxCqcYmIfA" %}
@@ -82,7 +82,7 @@ If your recorded data is continuous, specify _cfg.continuous = 'yes'_, if you ha
 
 _Figure: Raw plot from magnetometers using ft_databrowser_
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Try to get a feel of your data by browsing through the data. Do you see any obvious artifacts?
 {% include markup/end %}
 
@@ -115,7 +115,7 @@ Finally, we will look at the EEG channel
 
 _Figure: Raw plot from EEG channels using ft_databrowser_
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 At first glance, can you see any differences between the MEG and EEG data or artifacts?
 {% include markup/end %}
 
@@ -359,7 +359,7 @@ To plot the topographic distribution of the data averaged over the time interval
 
 _Figure: Topoplot of the data averaged between 0.08 and 0.15 seconds using ft_topoplotER_
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Can you try to explain the topographical distribution in terms of a dipole?
 {% include markup/end %}
 
@@ -396,7 +396,7 @@ Use **[ft_multiplotER](/reference/ft_multiplotER)** to plot all sensors in one f
 
 _Figure: The event-related fields plotted using ft_multiplotER. The event-related fields were calculated using ft_preprocessing followed by ft_timelockanalysis_
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 How does this figure compare to the plot with the magnetometer data? Do you understand why these are different?
 {% include markup/end %}
 
@@ -453,7 +453,7 @@ Now we are going to look at the topographical spread of the field by using
 
 _Figure: Topographic plot of the event-related fields obtained using ft_topoplotER_
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Compare this distribution with those resulting from the magnetometers. Do you understand the differences?
 
 Which type of source configuration can explain the topography?
@@ -509,7 +509,7 @@ We start by repeating the same preprocessing procedure as with the MEG. We start
     data_EEG                    = ft_preprocessing(cfg);
     save data_EEG data_EEG -v7.3
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Notice what is different from loading MEG data.
 {% include markup/end %}
 
@@ -632,7 +632,7 @@ _Figure: The event-related potentials plotted for three conditions for channel E
 
 _Figure: The event-related fields plotted for three conditions for channel MEG0211 using ft_singleplotER_
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Compare this plot to the single-channel ERFs obtained from the magnetometer data (see Figure 9). Can you identify similar components?
 {% include markup/end %}
 
@@ -670,7 +670,7 @@ To plot the topographic distribution of the data averaged over the time interval
 
 _Figure: Topographic plot of the event-related potentials obtained using ft_topoplotER_
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 To which MEG channels can we best compare the topographical plots from the EEG data, the magnetometers or the gradiometers?
 {% include markup/end %}
 
@@ -729,7 +729,7 @@ Note that if you get plotting artifacts in these figures, such as colorbars that
 
 _Figure: Topoplot of the scalp current density averaged between 0.08 and 0.15 seconds using ft_topoplotER_
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Did calculating the scalp current density help in narrowing down the source of the EEG activity?
 
 How do these results compare to the MEG results?

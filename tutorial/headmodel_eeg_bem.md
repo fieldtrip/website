@@ -23,7 +23,7 @@ This tutorial is focusing on how to build the **BEM volume conduction model for 
 
 {% include /shared/tutorial/headmodel_background.md %}
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 If you do not have an MRI for your subject, you can consider to use a template MRI or a template head model that is located in the FieldTrip `template` directory. See [here](/template/headmodel) for more info.
 
 If you do not have an MRI, but do have a measurement of the scalp surface and/or of the electrodes (e.g., with a Polhemus tracker), you could also fit a concentric spheres model to the scalp and/or electrodes. However, we recommend to use a realistic template head model and fit the measured electrodes to the template head model rather than the other way around.
@@ -52,7 +52,7 @@ _Figure; Pipeline for creating a BEM model_
 
 #### Exercise 1
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Check that the homogenous transformation matrix in `mri_realigned` is the same as the one in `mri`. If so, that means that each voxel is at exactly the same position. If you misspecify the voxel indices of the fiducials or anatomical landmarks, they will be different.
 {% include markup/end %}
 
@@ -82,7 +82,7 @@ _Figure; The MRI after assigning the desired coordinate system and reslicing_
 
 In this step, the voxels of the anatomical MRI are segmented or classified using **[ft_volumesegment](/reference/ft_volumesegment)** into the three different tissue types: scalp, skull and brain. You can read more about how the tissue-types are represented in the output of this function in this [FAQ](/faq/how_is_the_segmentation_defined).
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 The segmentation is quite time consuming (~15 minutes). For the purpose of this tutorial you can skip this and load the result and move on to the next step. You can download the result from our [download server](https://download.fieldtriptoolbox.org/tutorial/headmodel_eeg_bem/).
 {% include markup/end %}
 
@@ -456,7 +456,7 @@ _Figure; Comparing the aligned template positions (red) and the automatically pl
 
 ### Exercise 2
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Create a head model with method 'concentricspheres' that you fit on scalp, skull and brain surfaces, i.e. using the already made mesh.
 
 Plot the head model using **[ft_plot_headmodel](/reference/plotting/ft_plot_headmodel)**. You can use `facealpha` for the transparency, this helps to see the spheres together.
@@ -469,7 +469,7 @@ Note that the scalp is unrealistically thick compared to the skull; this is beca
 
 ### Exercise 3
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 In exercise 2, you created a head model with method 'concentricspheres'. How is its geometrical description defined? What is the difference between the geometrical description of the concentric spheres model and BEM model?
 {% include markup/end %}
 

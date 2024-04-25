@@ -103,7 +103,7 @@ _Figure: The segmented MRI and the original MRI on top of each other. If everyth
 
 If the yellow-greyish brain shows up in the subject's heads, everything went fine as shown in above Figure. Otherwise, it might be that you need to flip either of the three dimensions or that some unit conversion went wrong before segmenting the MRI.
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 You might wonder why the anatomical MRI shows upside down: this is a [frequently asked question](/faq/why_does_my_anatomical_mri_show_upside-down_when_plotting_it_with_ft_sourceplot).
 {% include markup/end %}
 
@@ -127,7 +127,7 @@ Furthermore, after selecting the channels you want to use in the source reconstr
 
 #### Exercise: head model
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Why might a single sphere model be inadequate for performing beamformer estimates?
 {% include markup/end %}
 
@@ -176,7 +176,7 @@ When all these align up well, we have all the geometric ingredients for source a
 
 #### Exercise: averaging over subjects
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 What would be the consequence of averaging over subject specific grids?
 {% include markup/end %}
 
@@ -190,7 +190,7 @@ _Figure: The time-frequency presentation used to determine the time- and frequen
 
 #### Exercise: data length
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Why does the length of each data piece has to have the length of a fixed number of oscillatory cycles?
 {% include markup/end %}
 
@@ -297,7 +297,7 @@ The purpose of cfg.fixedori is that we only keep the largest of the three dipole
 
 #### Exercise: complex numbers
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 What would keeping a complex-valued filter imply for the mapping from sources to sensors?
 {% include markup/end %}
 
@@ -355,14 +355,14 @@ Congratulations, you successfully beamed visual gamma!
 
 #### Exercise: interpolation options
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 You may have noticed that the MNI template brain is a bit blurry. Can you think of why this is?
 You could also interpolate your results onto the individual subject's anatomical MRI. Try this out.
 {% include markup/end %}
 
 #### Exercise: plotting options
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 The 'slice' method is not the only plotting method implemented. Use the 'help' of **[ft_sourceplot](/reference/ft_sourceplot)** to find what other methods there are and plot the source level results. What are the benefits and drawbacks of the various plotting routines?
 
 Use these settings for 'surface' plotting
@@ -375,7 +375,7 @@ Use these settings for 'surface' plotting
 
 #### Exercise: determining anatomical labels
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 If you were to name the anatomical label of the source of this visual gamma, what you say? What plotting method is most appropriate for this?
 
 With the use of `cfg.atlas` (only available with `cfg.method = 'ortho'`) you can specify a lookup atlas, which **[ft_sourceplot](/reference/ft_sourceplot)** will use to return appropriate anatomical labels. One for the MNI template is distributed with FieldTrip and can be found in 'fieldtrip/template/atlas/aal/ROI_MNI_V4.nii'.
@@ -383,7 +383,7 @@ With the use of `cfg.atlas` (only available with `cfg.method = 'ortho'`) you can
 
 #### Exercise: regularization
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 The regularization parameter was lambda = '5%'. Change it to 0 or to '50%' and plot the power estimate with respect to baseline. How does the regularization parameter affect the properties of the spatial filter?
 {% include markup/end %}
 
@@ -432,7 +432,7 @@ This step requires the subject's head- and sourcemodel that we both computed abo
     cfg.sourcemodel     = sourcemodel;
     source_coh_lft      = ft_sourceanalysis(cfg, freq_csd);
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 If you input a sourcemodel on which you have **not** already computed the leadfield matrices, **[ft_sourceanalysis](/reference/ft_sourceanalysis)** will compute the leadfield matrices itself first. This step typically takes longer than the actual inverse computation, so it often is wise to precompute leadfields, as we have done above.
 {% include markup/end %}
 
@@ -471,19 +471,19 @@ Since the data is expressed in MNI coordinates, you can also make a surface rend
 
 #### Note and exercise: flipped axes?
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 The template MRI included with SPM (and therefore with FieldTrip) is oriented such that the anatomical left is projected to the right side of the screen, and vice versa. This is why the volumetric above are also oriented as such. You could [download a version of the MNI brain](http://nist.mni.mcgill.ca/?p=957) (see bottom of that page, use NIFTI format, file 'average305_t1_tal_lin.nii' in the resulting ZIP) that is oriented differently, and use it instead, if you want to prevent this.
 {% include markup/end %}
 
 #### Exercise: anatomical labeling
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Determine the anatomical location of the coherence peak. How does this result compare to coherence with the right EMG?
 {% include markup/end %}
 
 #### Exercise: comparison with sensor level analysis
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 How do all these beamforming result relate to the [sensor level analysis](/tutorial/sensor_analysis)?
 {% include markup/end %}
 

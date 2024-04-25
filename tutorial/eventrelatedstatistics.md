@@ -184,7 +184,7 @@ From the code above you can see that the statistical comparison is between condi
 
 #### Exercise 1
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Look at the temporal evolution of the effect by changing cfg.latency and cfg.avgovertime in **[ft_timelockstatistics](/reference/ft_timelockstatistics)**. You can plot the t-value versus time, the probability versus time and the statistical mask versus time. Note that the output of the **[ft_timelockstatistics](/reference/ft_timelockstatistics)** function closely resembles the output of the **[ft_timelockanalysis](/reference/ft_timelockanalysis)** function.
 {% include markup/end %}
 
@@ -408,7 +408,7 @@ So far we predefined a time window over which the effect was averaged, and teste
 
 {% include image src="/assets/img/tutorial/eventrelatedstatistics/figure12.png" width="400" %}
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 To properly write up your results in a manuscript, you should check the guidelines on [how NOT to interpret results from a cluster-based permutation test](/faq/how_not_to_interpret_results_from_a_cluster-based_permutation_test).
 {% include markup/end %}
 

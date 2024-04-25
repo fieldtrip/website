@@ -142,7 +142,7 @@ It was found that the line-by-line full coverage is **41 %**, which can and can 
 This reveals that the `test_ft_xxx` scripts already provide most of the current coverage. The remaining test scripts (especially the `test_bugXXX` and `test_issueXXX`) were more designed for [regression testing](https://en.wikipedia.org/wiki/Regression_testing) and can be continued to be used for that.
 {% include markup/end %}
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 A future goal is to also find the coverage of FieldTrip functions that are part of the modules (fileio, preproc, etc.) and other low-level functions.
 {% include markup/end %}
 

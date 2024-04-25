@@ -326,19 +326,19 @@ Please DO NOT run `ft_prepare_vol_sens` in this tutorial session! It will take t
 
 #### Exercise 1
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Realign the electrodes in the file `elec_shifted.mat` to the headmodel you created.
 {% include markup/end %}
 
 #### Exercise 2
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Compute a finer sourcemodel, e.g., 2 mm resolution and compute the respective EEG and MEG forward solutions.
 {% include markup/end %}
 
 #### Exercise 3
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Compute the EEG and MEG forward solution using the Boundary Element Method (BEM), e.g., following [this tutorial](/workshop/baci2017/forwardproblem).
 {% include markup/end %}
 

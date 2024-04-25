@@ -259,7 +259,7 @@ Now we can plot the result in a similar way as illustrated above. The difference
 
 In this section we would demonstrate how to derive the time series of neuronal activity at a particular brain location. We will apply a beamforming technique.
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Before you continue it is recommended to make your self familiar with the relevant concepts by watching the following lecture.
 
 {% include youtube id="7eS11DtbIPw" %}
@@ -504,7 +504,7 @@ In the previous section we used an arbitrary threshold (80% of maximum) to illus
 
 It is recommended to make yourself familiar with the permutation framework before you continue. This is explained in detail in the statics tutorial. You might also consult this on-line lecture.
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 This tutorial contains the hands-on material of the [Salzburg workshop](/workshop/salzburg). The background is explained in this lecture, which was recorded at the [Aston MEG-UK workshop](/workshop/birmingham).
 
 {% include youtube id="vOSfabsDUNg" %}
@@ -842,7 +842,7 @@ A property of volume conduction is that it is instantaneously. As a consequence 
 
 #### Exercise: coherence vs. imaginary part of coherency
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Take your time to evaluate both outputs. To what extend the description of the interacting sources still holds?
 {% include markup/end %}
 

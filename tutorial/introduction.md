@@ -9,7 +9,7 @@ tags: [tutorial, meg, eeg, raw, timelock, freq, source, statistics, lfp, spike, 
 
 This tutorial will give you an introduction into how to use FieldTrip with MATLAB and how to make an analysis protocol. You will read a few examples of analysis protocols of EEG/MEG data analysis. This introduction, however, does not give detailed information about each analysis step. You will find those in other tutorials. You will find also useful information about how to use FieldTrip in the [walkthrough](/walkthrough).
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 This short tutorial introduces the design of the FieldTrip toolbox. If you have some more time, you can watch a more elaborate introduction in this lecture.
 
 {% include youtube id="eUVL_twWNdk" %}

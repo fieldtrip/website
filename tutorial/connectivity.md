@@ -9,7 +9,7 @@ tags: [tutorial, freq, connectivity, coherence, granger, dtf, pdc]
 
 {% include /shared/tutorial/connectivity_simulation_intro.md %}
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 This tutorial contains hands-on material that we use for the [MEG/EEG toolkit course](/workshop/toolkit2015) and it is complemented by this lecture.
 
 {% include youtube id="ZBwh0Vm4fh4" %}
@@ -164,7 +164,7 @@ We now recompute the virtual channel time series, but now only for the dipole di
 
 #### Exercise 8
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Rather than using a sourcemodel in the beamformer that consists of all three (x, y, z) directions, you can also have the beamformer compute the filter for only the optimal source orientation. This is implemented using the _cfg.lcmv.fixedori='yes'_ option.
 
 Recompute the spatial filter for the optimal source orientation and using that spatial filter (a 1x151 vector) recompute the time series.
@@ -231,19 +231,19 @@ The spectrum reveals coherence peaks at 10 and 20 Hz (remember that the initial 
 
 #### Exercise 9
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 The spectral decomposition was performed with mutitapering and 5 Hz spectral smoothing (i.e. 5Hz in both directions). Recompute the spectral decomposition and the coherence with a hanning taper. Recompute it with mutitapering and 10 Hz smoothing. Plot the three coherence spectra and look at the differences.
 {% include markup/end %}
 
 #### Exercise 10
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Rather than looking at undirected coherence, the virtual channel level data can now also easily be submitted to directed connectivity measures. Compute the spectrally resolved granger connectivity and try to assess whether the directionality is from cortex to EMG or vice versa.
 {% include markup/end %}
 
 #### Exercise 11
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Let's say you wanted to look at cortico-cortical connectivity, e.g., interactions between visual and motor cortex in a particular frequency band. How would you approach this?
 {% include markup/end %}
 

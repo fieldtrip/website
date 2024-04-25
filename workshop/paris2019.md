@@ -87,13 +87,13 @@ If you are doing these tutorials outside the practicalMEEG course, you should re
 
 ### Ensure that you have a recent version of FieldTrip on your computer
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 For this workshop, we have created a set of dedicated tutorials, and fixed some small bugs in FieldTrip in order to get everything to run smoothly. Therefore, you should have a really recent version of the code, otherwise the tutorials will not run through without errors. Specifically, you need to have the code not 'older' than November 25, 2019.
 {% include markup/end %}
 
 You should start by getting an up-to-date copy of FieldTrip. This is best done through github, as is explained in detail in a dedicated [page](/development/git). The FieldTrip code and website are both maintained on [https://github.com/fieldtrip](https://github.com/fieldtrip).
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 To quickly get access to the code, you would do the following from the command line or the equivalent in a graphical git interface, such as the [GitHub desktop](https://desktop.github.com).
 
 ```bash

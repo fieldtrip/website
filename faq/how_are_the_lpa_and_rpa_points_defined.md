@@ -17,7 +17,7 @@ The approximate position of the pre-auricular point is indicated in the figure a
 
 The problem with using the LPA and RPA according to this definition is that it can be really difficult to localize them precisely on the anatomical MRI. Mislocalization of these points can lead to severe misregistration between the MRI and MEG/EEG, and consequently affect the accuracy of source localization.
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Because of the challenge of localizing the LPA and RPA points when doing EEG or MEG measurements, in the anatomical MRI, and in 3D surface scans, various labs around the world have adopted slightly different conventions. These are discussed in more detail in the FAQ on [how to report the positions of the fiducial points on the head](/faq/how_should_i_report_the_positions_of_the_fiducial_points_on_the_head).
 {% include markup/end %}
 
