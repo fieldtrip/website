@@ -47,8 +47,8 @@ This is implemented with small snippets of html code that are contained in the `
 {% raw %}
 
 ```liquid
-{% include markup/blue %}
-info
+{% include markup/yellow %}
+yellow
 {% include markup/end %}
 ```
 
@@ -77,7 +77,7 @@ yellow
 {% include markup/end %}
 
 {% include markup/skyblue %}
-yellow
+skyblue
 {% include markup/end %}
 
 {% include markup/white %}
