@@ -41,7 +41,7 @@ To get going, you need to start MATLAB. Then, you need to issue the following co
     global ft_default
     ft_default.spmversion = 'spm12';
 
-{% include markup/danger %}
+{% include markup/red %}
 Please do NOT use the graphical path management tool from MATLAB. In this hands-on session we'll manage the path from the command line, but in general you are much better off using the startup.m file than the path GUI.
 
 Please do NOT add FieldTrip with all subdirectories, subdirectories will be added automatically when needed, and only when needed.
@@ -180,7 +180,7 @@ Now we are ready and to create the a head model on the basis of the mesh.
     cfg.method = 'dipoli'; % You can also specify 'bemcp', or another method.
     headmodel_bem = ft_prepare_headmodel(cfg, mesh_bem);
 
-{% include markup/danger %}
+{% include markup/red %}
 In Windows the method 'dipoli' does not work. You can explore other BEM method like 'bemcp'. If you use 'bemcp', the conductivity field has a different order: {'brain', 'skull', 'skin'}.
 {% include markup/end %}
 
@@ -252,7 +252,7 @@ This is the last step for creating a forward model. We could now use the lead fi
 
 #### Exercise 1
 
-{% include markup/info %}
+{% include markup/blue %}
 So far we only created a BEM volume conduction model. To create a FEM volume conduction model use the same steps as beforehand.
 {% include markup/end %}
 
@@ -271,7 +271,7 @@ and Step 6 into
 
 #### Exercise 2
 
-{% include markup/info %}
+{% include markup/blue %}
 You can also find the segmentation 'AVG14-0Years3T_segmented_BEM3.mat' to create a head model. This a segmentation is processed version of a segmentation provided by alongside the MRI in the Neurodevelopmental MRI Database from the [John E. Richards Lab](https://jerlab.sc.edu). The segmentation was already preprocessed with the Steps 1-4.
 {% include markup/end %}
 

@@ -11,7 +11,7 @@ In general an atlas can be read with **[ft_read_atlas](/reference/fileio/ft_read
 
 You can find volumetric and surface-based atlases in the `fieldtrip/template/xxx` directory, with XXX referring to the specific template (e.g., "aal" or "afni").
 
-{% include markup/warning %}
+{% include markup/yellow %}
 You can have a look at the template anatomical atlases and parcellation schemes [here on GitHub](https://github.com/fieldtrip/fieldtrip/tree/master/template/atlas). Furthermore, this page describes some atlases that are released along with FreeSurfer and FSL.
 {% include markup/end %}
 
@@ -154,7 +154,7 @@ In FieldTrip, the two atlases are included as nifti files. You can read them lik
 
 This is a binary representation of the Talairach Tournoux atlas [ref 1]. It was digitized for the Talairach Daemon [ref 2] and converted into AFNI format. It is described in some detail on the [AFNI website](https://sscc.nimh.nih.gov/afni/doc/misc/afni_ttatlas/index_html). Note that the website seems to be unstable and relatively often unresponsive. Next to the template that is shipped with FieldTrip, it is also possible to load in other atlases that are defined in AFNI format. For instance, the atlases that can be obtained from [here](https://afni.nimh.nih.gov/pub/dist/atlases/).
 
-{% include markup/danger %}
+{% include markup/red %}
 Note that this atlas is defined in [Talairach-Tournoux coordinates](/faq/coordsys/#details-of-the-talairach-tournoux-coordinate-system) (tal) and not in MNI/SPM coordinates.
 {% include markup/end %}
 

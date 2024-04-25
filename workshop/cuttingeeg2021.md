@@ -30,7 +30,7 @@ The "minimal" dataset (~260MB) contains one subject and is enough to run the tut
 
 ## Getting started with the hands-on session
 
-{% include markup/danger %}
+{% include markup/red %}
 Please download and unzip a recent version of FieldTrip from <https://github.com/fieldtrip/fieldtrip/releases>. We will be using some cutting edge features in FieldTrip, so you should download and install release [20210928](https://github.com/fieldtrip/fieldtrip/releases/tag/20210928) or later.
 {% include markup/end %}
 
@@ -43,7 +43,7 @@ To get going, you need to start MATLAB. Then, you need to issue the following co
 
 The `<your_fieldtrip_location>` is the directory in which all the code is after you have unzipped the downloaded folder.
 
-{% include markup/danger %}
+{% include markup/red %}
 Please do NOT use the graphical path management tool from MATLAB. In this hands-on session we'll manage the path from the command line, but in general you are much better off using the `startup.m` file than the path GUI.
 
 Please do NOT add FieldTrip with all subdirectories, subdirectories will be added automatically when needed, and only when needed. See also this [frequently asked question](/faq/installation).

@@ -11,7 +11,7 @@ FieldTrip relies on MATLABs plotting routines, which uses specific renderers. Un
 
 prior to the call to ft_databrowser.
 
-{% include markup/info %}
+{% include markup/blue %}
 This error and solution has been confirmed by the MathWorks. Thanks to Martine van Schouwenburg for contacting MathWorks and forwarding their response.
 {% include markup/end %}
 

@@ -4,7 +4,7 @@ title: Advanced analysis and source modeling of EEG and MEG data
 
 # Advanced analysis and source modeling of EEG and MEG data
 
-{% include markup/danger %}
+{% include markup/red %}
 The code in line 1604-1606 in ft_volumerealign.m should be commented out to work around the MATLAB 2012b error with the slider.
 
     % set(h1,'sortMethod','childorder')
@@ -77,7 +77,7 @@ Vismarkt 7 (Waalkade, i.e. along the river front)
 
 For the hands-on sessions we will use MATLAB R2012b, which you can start from the Desktop shortcut. To ensure that everything runs smooth, we will work with a clean and well-tested version of FieldTrip that we have installed on all computers and that we will bring on on a USB stick. Importantly, the tutorial data does not have to be downloaded but will also be distributed on the computers and available on the USB stick.
 
-{% include markup/danger %}
+{% include markup/red %}
 Please do not use another MATLAB version than 2012b. It should be available on all hands-on computers.
 {% include markup/end %}
 
@@ -92,7 +92,7 @@ A recent copy of FieldTrip and the data have been preinstalled on the computer a
 
 The `restoredefaultpath` command clears your path, keeping only the official MATLAB toolboxes. The `addpath(pwd)` statement adds the present working directory, i.e. the directory containing the FieldTrip main functions. The `ft_defaults` command ensures that all required subdirectories are added to the path.
 
-{% include markup/danger %}
+{% include markup/red %}
 In general, please do NOT use the graphical path management tool from MATLAB. In this hands-on session we'll manage the path from the command line, but in general you are much better off using the startup.m file than the path GUI.
 
 Furthermore, please do NOT add FieldTrip with all subdirectories, subdirectories will be added automatically when needed, and only when needed (see this [FAQ](/faq/installation)).

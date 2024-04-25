@@ -110,7 +110,7 @@ Note that the jumps are easier to identify if you would not have applied a high-
 
 #### Exercise
 
-{% include markup/info %}
+{% include markup/blue %}
 Preprocessing and filtering serves to reduce artifacts (such as drifts) and hence makes artifacts less visible. Unpreprocessed data gives the best representation of the artifacts.
 
 Repeat the inspection with ft_databrowser on the original data, without high-pass filter and without resampling. That requires that you have to call ft_preprocessing again. Look at the channels that start with `MTL*` around 178 seconds into the recording and compare the jump to the one you observed in the filtered and downsampled data.
@@ -125,7 +125,7 @@ Following the identification of atypical artifacts, you can remove them from fur
     cfg.artfctdef.reject  = 'nan';
     data_clean = ft_rejectartifact(cfg, data);
 
-{% include markup/warning %}
+{% include markup/yellow %}
 Note that here we are reusing the `data` and the `data_clean` variables in different ways, as we are going back ant forth demonstrating different ways of processing and cleaning the data. Don't get confused with what the clean data represents.
 
 To get back to the original data, you can always do `data = data_orig`.
@@ -166,7 +166,7 @@ If you inspect `data_clean`in ft_databrowser, you will see that parts of the dat
 
 We use **[ft_componentanalysis](/reference/ft_componentanalysis)** for the ICA decomposition. It has many options, and supports different methods for decomposing the data, including PCA and different ICA algorithms. Here we will be using the Extended Infomax algorithm using the `runica` method from EEGLAB. You do not have to have EEGLAB installed for this, the required functions are included in the `fieldtrip/external` directory.
 
-{% include markup/success %}
+{% include markup/green %}
 There are other ICA algorithms that you can consider. For example, the `fastica` algorithm is fast and does not need to do a complete decomposition of the data; it can also identify a few components only. The components that fastica identifies first are the components with the largest variance, these are often the artifacts. The `amica` algorithm is among the best algorithms for identifying biophysically plausible ICA components. It results in components that are _more_ independent than `runica`.
 
 The paper Delorme et al. [Independent EEG sources are dipolar.](https://doi.org/10.1371/journal.pone.0030135) PLoS One (2012) compares many ICA algorithms and concludes that more independent components are also more dipolar, which is compatible with an interpretation of many maximally independent EEG components as being volume-conducted projections of partially-synchronous local cortical field activity within single compact cortical domains.

@@ -7,11 +7,11 @@ tags: [faq, source, headmodel, inverse, warning]
 
 For forward and inverse computations several geometrical objects need to be correctly coregistered. It's good practice to verify this coregistration before proceeding with the next steps of the analysis. The simplest way of verification is obviously visual inspection. FieldTrip allows for the plotting of various geometrical objects by means of the functions in the [plotting module](/development/module/plotting). The following describes how you can use the lower-level plotting functions for the visualization.
 
-{% include markup/danger %}
+{% include markup/red %}
 Nice visualization of MEG multisphere volume conductor models is not supported by the low-level plotting functions, but see this [frequently asked question](/faq/how_can_i_visualize_a_localspheres_volume_conductor_model).
 {% include markup/end %}
 
-{% include markup/danger %}
+{% include markup/red %}
 In general, we advise to use the singleshell as a volume conductor model for MEG, rather than the multisphere model.
 {% include markup/end %}
 

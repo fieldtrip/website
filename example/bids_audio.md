@@ -5,7 +5,7 @@ tags: [example, bids, sharing, audio]
 
 # Converting an example audio dataset for sharing in BIDS
 
-{% include markup/danger %}
+{% include markup/red %}
 The [BIDS standard](https://bids.neuroimaging.io)  does currently not specify how to represent audio recordings. This example - and the support that is implemented in the **[data2bids](/reference/data2bids)** function - should be considered as a preliminary proposal to help researchers with their existing data. This example may also serve to start a discussion on whether and how this data type should be added to the [BIDS specification](http://bids-specification.readthedocs.io).  
 {% include markup/end %}
 
@@ -13,7 +13,7 @@ In language studies, and especially speech production experiments, audio might b
 
 ## Example
 
-{% include markup/success %}
+{% include markup/green %}
 The example data is available from our [download server](https://download.fieldtriptoolbox.org/example/bids_audio/).
 {% include markup/end %}
 

@@ -7,7 +7,7 @@ tags: [faq, sharing]
 
 This is a checklist for authors to use it prior to submission of a manuscript, to ensure that the manuscript provides key information. It originates from the following paper, which also provides more background on how to report methodological details on MEG and EEG studies.
 
-{% include markup/warning %}
+{% include markup/yellow %}
 
 Keil A, Debener S, Gratton G, Junghöfer M, Kappenman ES, Luck SJ, Luu P, Miller GA, Yee CM. **Committee report: publication guidelines and recommendations for studies using electroencephalography and magnetoencephalography.** Psychophysiology. 2014 Jan;51(1):1-21. {% include badge doi="10.1111/psyp.12147" pmid="24147581" %}
 

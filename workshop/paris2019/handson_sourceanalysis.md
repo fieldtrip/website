@@ -5,7 +5,7 @@ tags: [paris2019, meg, sourceanalysis, beamformer, mmfaces]
 
 # Reconstructing source activity using beamformers
 
-{% include markup/info %}
+{% include markup/blue %}
 This tutorial was written specifically for the [PracticalMEEG workshop in Paris](/workshop/paris2019) in December 2019.
 {% include markup/end %}
 
@@ -105,7 +105,7 @@ The prewhitening operator is defined as the inverse of the matrix square root of
 
 #### Exercise 1
 
-{% include markup/info %}
+{% include markup/blue %}
 Select the 200 ms baseline from the dataw_meg structure, compute the covariance, and inspect the covariance matrix with imagesc() after grouping the magnetometers and the gradiometers. Also inspect the singular value spectrum of the whitened baseline covariance matrix.
 {% include markup/end %}
 
@@ -126,7 +126,7 @@ _Figure: Visual artifact rejection window_
 
 #### Exercise 2
 
-{% include markup/info %}
+{% include markup/blue %}
 Consult the [visual artifact rejection tutorial](/tutorial/visual_artifact_rejection) and remove the obvious outlier trials from the data structure. The specification of a layout in the cfg allows for a more detailed inspection of the outlier trials. Note these trial numbers, inspect the spatial topography and time courses, and remove them from the data. Also inspect trials 72 and 832, and discuss their spatiotemporal properties.
 {% include markup/end %}
 
@@ -236,13 +236,13 @@ The function **[ft_sourceplot_interactive](/reference/ft_sourceplot_interactive)
 
 #### Exercise 3
 
-{% include markup/info %}
+{% include markup/blue %}
 Explore the spatial distribution of the prominent ERF peaks. Try and explain why the topographies occasionally look 'patchy'.
 {% include markup/end %}
 
 #### Exercise 4
 
-{% include markup/info %}
+{% include markup/blue %}
 Compute the absolute of the dipole moment with ft_math:
 
     cfg = [];

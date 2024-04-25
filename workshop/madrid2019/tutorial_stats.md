@@ -373,7 +373,7 @@ In the following section we will describe the various options one-by-one.
   which we must compare the test statistic (i.e., the maximum and the
   minimum cluster-level statistic).
 
-{% include markup/danger %}
+{% include markup/red %}
 If you want to run a two-sided test, i.e. you want to test both the left
 (negative clusters) and the right (positive clusters) tail of the distribution.
 you have to split the critical alpha value by setting cfg.correcttail = 'alpha';
@@ -778,7 +778,7 @@ And for the occipital region of interest:
 
 {% include image src="/assets/img/workshop/madrid2019/tutorial_stats/fig5_psd.png" width="800" %}
 
-{% include markup/warning %}
+{% include markup/yellow %}
 The remainder of the tutorial contains some more challenging exercises.
 {% include markup/end %}
 

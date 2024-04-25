@@ -98,7 +98,7 @@ _Figure 2. Minimum norm estimation with BEM model_
 
 #### Exercise 1
 
-{% include markup/info %}
+{% include markup/blue %}
 You can play around with cfg.mne.lambda? Do you see the influence of different lambdas?
 
 ## FEM
@@ -166,13 +166,13 @@ _Figure 5. Comparison of a BEM and FEM dipole fit_
 
 #### Exercise 2
 
-{% include markup/info %}
+{% include markup/blue %}
 Can you think of reasons why the dipoles are at different locations?
 {% include markup/end %}
 
 #### Exercise 3
 
-{% include markup/info %}
+{% include markup/blue %}
 Changing parameters of the forward model influences the Inverse solutions. Play around with different parameters of the BEM forward model (e.g., changing conductivity values) and redo the inverse solution. If you need more input for this please ask us!
 {% include markup/end %}
 

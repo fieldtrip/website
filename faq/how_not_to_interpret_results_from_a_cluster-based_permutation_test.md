@@ -9,7 +9,7 @@ tags: [faq, statistics]
 
 The permutation test as implemented in **[ft_statistics_montecarlo](/reference/ft_statistics_montecarlo)** serves to test the null hypothesis (H0) that the data in the experimental conditions come from (are drawn from) the same probability distribution. In specialised statistics books, one sometimes reads the technical term that the probability distributions are **exchangeable**. Getting a significant result means that we can reject the null hypothesis (H0) that the data come from the same probability distribution in favour of the alternative hypothesis (H1) that the data come from different distributions. Based on a significant test result, you therefore can report that **"there is a significant difference between condition A and condition B"**.
 
-{% include markup/danger %}
+{% include markup/red %}
 H0: The data in the experimental conditions come from the same probability distribution, i.e. the data in the conditions cannot be distinguished.
 
 H1: The data in the experimental conditions do **not** come from the same probability distributions, i.e. the data are different.
@@ -21,7 +21,7 @@ However, you cannot report a significant outcome of a permutation test as **"the
 
 After you have made the decision that you reject H0 in favour of H1, you may want to interpret the difference in the data. Here is where the cluster might be useful because it points you to the feature(s) on the basis of which you came to the conclusion to believe in H1 over H0.
 
-{% include markup/info %}
+{% include markup/blue %}
 If you test that the physical dimensions of male bodies are different from those of female bodies, you will likely find that the H0 (the physical dimensions of male and female bodies come from the same probability distribution) will be rejected in favour of the alternative (they come from different distributions).
 
 However, from this result, one cannot conclude that men and women have different foot sizes. In fact, it may be that the test statistic that was used to compare male and female bodies was sensitive to other aspects than foot size.
@@ -49,13 +49,13 @@ If you a-priori select a certain time window and some scalp location in which to
 
 However, this does not necessarily represent the entire true effect in the data.
 
-{% include markup/info %}
+{% include markup/blue %}
 Here is what NOT to write:
 
 "We found a significant cluster in area X, between time point A and B"
 {% include markup/end %}
 
-{% include markup/info %}
+{% include markup/blue %}
 Here are some examples of what you CAN write
 
 "After selecting the a-priori time and region of interest in our data, the cluster-based permutation tests revealed a difference between the fully congruent and fully incongruent condition."

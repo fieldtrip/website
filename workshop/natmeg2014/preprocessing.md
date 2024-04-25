@@ -13,7 +13,7 @@ This tutorial describes how to define epochs-of-interest (trials) from your reco
 
 This tutorial does the preprocessing and segmenting in a single step. If you are interested in how to do preprocessing on your continuous data prior to segmenting it into trials, you can check the [Preprocessing - Reading continuous data](/tutorial/continuous) tutorial.
 
-{% include markup/info %}
+{% include markup/blue %}
 This tutorial contains the hands-on material of the [NatMEG workshop](/workshop/natmeg2014) and is complemented by this lecture.
 
 {% include youtube id="zOxCqcYmIfA" %}
@@ -50,7 +50,7 @@ The databrowser supports three viewmodes: butterfly, vertical or component. In '
 
 When the databrowser opens, you will see buttons to navigate along the bottom of the screen and buttons for artifact annotation to the right. Note that also artifacts that were marked with the automatic artifact detection methods will be displayed here, see the [automatic artifact rejection tutorial](/tutorial/automatic_artifact_rejection). You can click on one of the artifact types, drag over a timewindow to select the start and the end of the artifact and then double click into the selected area to mark this artifact. To remove such an artifact, simply repeat the same procedure.
 
-{% include markup/warning %}
+{% include markup/yellow %}
 The databrowser will **not** change your data in any way. If you specify a cfg as output, it will just store your selected or de-selected artifacts in your cfg.
 {% include markup/end %}
 
@@ -74,7 +74,7 @@ We will first start with the magnetometer
     set(gcf, 'Position',[1 1 1200 800])
     print -dpng natmeg_databrowser1.png
 
-{% include markup/warning %}
+{% include markup/yellow %}
 If your recorded data is continuous, specify _cfg.continuous = 'yes'_, if you have recorded your data in trials, specify _cfg.continuous = 'no'_
 {% include markup/end %}
 
@@ -82,7 +82,7 @@ If your recorded data is continuous, specify _cfg.continuous = 'yes'_, if you ha
 
 _Figure: Raw plot from magnetometers using ft_databrowser_
 
-{% include markup/info %}
+{% include markup/blue %}
 Try to get a feel of your data by browsing through the data. Do you see any obvious artifacts?
 {% include markup/end %}
 
@@ -115,7 +115,7 @@ Finally, we will look at the EEG channel
 
 _Figure: Raw plot from EEG channels using ft_databrowser_
 
-{% include markup/info %}
+{% include markup/blue %}
 At first glance, can you see any differences between the MEG and EEG data or artifacts?
 {% include markup/end %}
 
@@ -218,7 +218,7 @@ This demonstrate how to extract trials from a dataset based on trigger informati
 
 _Figure: An overview of the data using ft_rejectvisual_
 
-{% include markup/warning %}
+{% include markup/yellow %}
 Use the mouse to click and drag a selection box over the trials you wish to reject. You can see the trials that were marked for rejection on the right. If you wish to unmark a trial for rejection, type the number of the trial in the 'toggle trial' box and press enter. You can change from _zvalue_ to another metrics to detect outliers.
 
 Please be aware that while _cfg.keepchannel='yes'_ is specified, you can disable channels in the display but those will not be removed from the data.
@@ -359,7 +359,7 @@ To plot the topographic distribution of the data averaged over the time interval
 
 _Figure: Topoplot of the data averaged between 0.08 and 0.15 seconds using ft_topoplotER_
 
-{% include markup/info %}
+{% include markup/blue %}
 Can you try to explain the topographical distribution in terms of a dipole?
 {% include markup/end %}
 
@@ -396,7 +396,7 @@ Use **[ft_multiplotER](/reference/ft_multiplotER)** to plot all sensors in one f
 
 _Figure: The event-related fields plotted using ft_multiplotER. The event-related fields were calculated using ft_preprocessing followed by ft_timelockanalysis_
 
-{% include markup/info %}
+{% include markup/blue %}
 How does this figure compare to the plot with the magnetometer data? Do you understand why these are different?
 {% include markup/end %}
 
@@ -453,7 +453,7 @@ Now we are going to look at the topographical spread of the field by using
 
 _Figure: Topographic plot of the event-related fields obtained using ft_topoplotER_
 
-{% include markup/info %}
+{% include markup/blue %}
 Compare this distribution with those resulting from the magnetometers. Do you understand the differences?
 
 Which type of source configuration can explain the topography?
@@ -509,7 +509,7 @@ We start by repeating the same preprocessing procedure as with the MEG. We start
     data_EEG                    = ft_preprocessing(cfg);
     save data_EEG data_EEG -v7.3
 
-{% include markup/info %}
+{% include markup/blue %}
 Notice what is different from loading MEG data.
 {% include markup/end %}
 
@@ -632,7 +632,7 @@ _Figure: The event-related potentials plotted for three conditions for channel E
 
 _Figure: The event-related fields plotted for three conditions for channel MEG0211 using ft_singleplotER_
 
-{% include markup/info %}
+{% include markup/blue %}
 Compare this plot to the single-channel ERFs obtained from the magnetometer data (see Figure 9). Can you identify similar components?
 {% include markup/end %}
 
@@ -670,7 +670,7 @@ To plot the topographic distribution of the data averaged over the time interval
 
 _Figure: Topographic plot of the event-related potentials obtained using ft_topoplotER_
 
-{% include markup/info %}
+{% include markup/blue %}
 To which MEG channels can we best compare the topographical plots from the EEG data, the magnetometers or the gradiometers?
 {% include markup/end %}
 
@@ -729,7 +729,7 @@ Note that if you get plotting artifacts in these figures, such as colorbars that
 
 _Figure: Topoplot of the scalp current density averaged between 0.08 and 0.15 seconds using ft_topoplotER_
 
-{% include markup/info %}
+{% include markup/blue %}
 Did calculating the scalp current density help in narrowing down the source of the EEG activity?
 
 How do these results compare to the MEG results?

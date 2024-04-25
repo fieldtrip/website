@@ -1,4 +1,4 @@
-{% include markup/danger %}
+{% include markup/red %}
 In general you should get started with the [tutorials](/tutorial). The pages that are listed below only serve to explain system specific details and peculiarities, but lack the complete overview that the tutorials provide.
 {% include markup/end %}
 

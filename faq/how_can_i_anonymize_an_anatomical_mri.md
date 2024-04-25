@@ -5,7 +5,7 @@ tags: [faq, mri, anonymize, sharing]
 
 # How can I anonymize or deidentify an anatomical MRI?
 
-{% include markup/info %}
+{% include markup/blue %}
 This is something that in general you will want to do **after** the coregistration of the anatomical MRI with the MEG data (using **[ft_volumerealign](/reference/ft_volumerealign)**), as the coregistration often relies on facial landmarks.
 {% include markup/end %}
 
@@ -75,7 +75,7 @@ You can also combine defacing with brain segmentation to ensure that you do not 
 
 See also this frequently asked question on [how to anonymize a CTF MEG dataset](/faq/how_can_i_anonymize_a_ctf_dataset).
 
-{% include markup/danger %}
+{% include markup/red %}
 If you share your MATLAB files with others, note that there might also be identifying information in the [provenance](https://en.wikipedia.org/wiki/Provenance) information in the "cfg" field that is included in the FieldTrip data structure.
 
 In principle FieldTrip keeps full track of all analyses that you do. The consequence might be that the original file name (identifying the subject) is included in the provenance information. You can use the **[ft_anonymizedata](/reference/ft_anonymizedata)** function to scrub the provenance from unwanted information.

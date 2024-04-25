@@ -11,7 +11,7 @@ The [effect size](https://en.wikipedia.org/wiki/Effect_size) is a way of quantif
 
 This specific example starts with a ROI that is based on visual inspection, i.e. picking the channel and time window with the highest effect. Note, however, that this is only for didactical reasons. In reality it would be inappropriate to test only the largest observed effect. Rather, in the absence of an a priori region and/or latency of interest, you should test all channels and time points and correct for multiple comparisons to ensure that you are controlling the false alarm rate.
 
-{% include markup/danger %}
+{% include markup/red %}
 If you are doing hypothesis-driven research, you should _not_ guide your statistical analysis by a visual inspection of the data; you should state your hypothesis up-front and avoid [data dredging or p-hacking](https://en.wikipedia.org/wiki/Data_dredging).
 
 On the other hand: if you are doing exploratory research, you should not compute p-values. Effect sizes are interesting and relevant to report for both exploratory and hypothesis-driven research.   
@@ -99,7 +99,7 @@ Above we demonstrated how to compute it by hand. The same equation for Cohen\'s 
           time: 0.5000
            cfg: [1x1 struct]
 
- {% include markup/info %}
+ {% include markup/blue %}
  Note that Cohen\'s d is not the only way to quantify the effect size. If you look into the code of `ft_statfun_cohensd`, you will see that it is easy to implement other measures. You could also use a statfun to implement the [Bayes factor](https://www.statisticshowto.datasciencecentral.com/bayes-factor-definition/) to quantify the evidence of one hypothesis versus another.
  {% include markup/end %}
 
@@ -115,7 +115,7 @@ However, note that the computations demonstrated above are not the best way of t
 
 This is larger than the previous estimate, part of the variance is explained by between-subject differences that are the same for both conditions.
 
-{% include markup/success %}
+{% include markup/green %}
 The effect size is 1.58 after averaging in the time window from 300 to 700 milliseconds for a hand-picked channel (MLT12).
 {% include markup/end %}
 
@@ -179,7 +179,7 @@ The channels with the largest effect are over the left temporal region, in line 
 
     maximum effect of 2.28609 on channel MLT13 at latency 0.406667
 
-{% include markup/success %}
+{% include markup/green %}
 The maximum effect of 2.29 is observed on channel MLT13 at 407 milliseconds following stimulus onset.
 {% include markup/end %}
 
@@ -213,7 +213,7 @@ We can also compute the effect for an average of the data in a region of interes
           time: 0.4500
            cfg: [1x1 struct]
 
-{% include markup/success %}
+{% include markup/green %}
 The effect size is 1.47 when averaging over 7 left-temporal channels, and from 350 to 550 milliseconds.
 {% include markup/end %}
 
@@ -342,7 +342,7 @@ And again we can compute the effect size:
     disp(cohensd)
       1.7369
 
-{% include markup/success %}
+{% include markup/green %}
 When averaging the data over the largest cluster, i.e. the one on the basis of which we rejected H0, we see that the estimated effect size is 1.74.
 {% include markup/end %}
 
@@ -428,7 +428,7 @@ The advantage of the list of channels and the begin- and end-latency is that the
           time: 0.4283
            cfg: [1x1 struct]    
 
-{% include markup/success %}
+{% include markup/green %}
 The effect size for the data averaged in the circumscribed rectangle is 1.43.
 {% include markup/end %}
 

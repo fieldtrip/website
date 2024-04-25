@@ -7,7 +7,7 @@ tags: [example, bids, sharing]
 
 This example describes how to use **[data2bids](/reference/data2bids)** to convert an EEG dataset for sharing according to the [BIDS standard](https://bids.neuroimaging.io).  
 
-{% include markup/warning %}
+{% include markup/yellow %}
 If you want to share data, there are multiple things to consider. For example the file format of the data, the place to share the data (openneuro/zenodo/figshare/dataverse), the access mechanism for the data (ftp/http/sftp), the license or data use agreement, whether all data or only part of the data is shared, using pseudonyms in the description of the data, scrubbing the date and time of recording, removing identifying features from the data, etc.
 
 In this example we will only be dealing with the format in which the data is organized (over directories) and stored (in files), for which we use BIDS. Please see the [BIDS website](https://bids.neuroimaging.io) for background information and the [BIDS specification](https://bids-specification.readthedocs.io/en/stable/) for further details on the file and directory organization.
@@ -17,7 +17,7 @@ We will describe two approaches: in the first the data files are is kept in thei
 
 It is important that you use appropriate tools. BIDS stores metadata in TSV and JSON files, which makes then not only machine readable, but also human readable. A good graphical text/code editor helps you to navigate through the full directory structure and check or update the content of individual files. We recommend the [atom editor](http://atom.io/), but there are good [alternatives](https://alternativeto.net/software/atom/).
 
-{% include markup/info %}
+{% include markup/blue %}
 The BIDS standard for EEG is introduced in [this preprint publication](https://psyarxiv.com/63a4y/), which has been peer reviewed and accepted for publication in [Scientific Data](http://nature.com/sdata/). The full [BIDS specification](https://bids-specification.readthedocs.io/en/stable/) including MEG, iEEG, MRI and behavioral data is maintained and available online.
 {% include markup/end %}
 
@@ -144,7 +144,7 @@ In this example it all looks very simple, which is because the data files are pe
 - for one subject the triggers were recorded incorrectly
 - etc.
 
-{% include markup/warning %}
+{% include markup/yellow %}
 As a rule of thumb - if you have few exceptions, better don't try to make the scripts above too complex, but deal with them manually.
 
 If you have many exceptions of a similar type, it is worthwhile to invest into making these scripts smarter to automate the exception handling.

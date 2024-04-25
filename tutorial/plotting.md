@@ -125,7 +125,7 @@ Still, the power is more difficult to interpret due to it being larger for low f
 
 The multiplot functions work similarly to the singleplot functions, again first by selecting the data and subsequently using the MATLAB functions plot and imagesc. But instead of one plot, multiple plots are made; one for each channel. These plots are arranged according to a specified layout in one pair of axes.
 
-{% include markup/info %}
+{% include markup/blue %}
 There is a separate tutorial that explains how to [specify the channel layout for plotting](/tutorial/layout).
 {% include markup/end %}
 
@@ -349,7 +349,7 @@ The function automatically finds the clusters in the data which are smaller than
 
 Stat should be 2D, i.e. channels-by-time, or channels-by frequency. You cannot visualize channels-by-frequency-by-time, that case requires either averaging over time, or averaging over frequency.
 
-{% include markup/danger %}
+{% include markup/red %}
 Although the code below shows how to visualize clusters, you should be [cautious on how to interpret clusters](/faq/how_not_to_interpret_results_from_a_cluster-based_permutation_test).
 {% include markup/end %}
 

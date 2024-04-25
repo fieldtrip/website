@@ -15,7 +15,7 @@ tags: [faq, bids, sharing]
 
 When we say that the "thing" _xxx_ is expressed in the _XXXCoordinatesystem_, we mean that the position of _xxx_ is expressed (in the data file) as numbers, and those numbers are relative to some known origin [0,0,0], with the x, y and z-axis pointing in known directions (e.g., x to the right) and in some units (e.g., mm). So the position indicated with the three numbers [70,0,0] can be interpreted properly.
 
-{% include markup/info %}
+{% include markup/blue %}
 Note that MRI measurements are not measurements of space, but measurements of intensity or grey-scale values. The position of voxels (after reconstruction) are the a-priori specified locations at which intensity is measured.
 {% include markup/end %}
 

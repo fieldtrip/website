@@ -2,7 +2,7 @@
 title: Read neuromag .fif mri and create a MNI-aligned single-shell head model
 ---
 
-{% include markup/danger %}
+{% include markup/red %}
 The below example code is hopelessly outdated (thus deprecated) and will probably not work anymore. This page is kept in place just for reference. If you ended up on this page because you are curious to learn about the creation of dipole grids from .fif MRI, please look at [this](/example/sourcemodel_aligned2mni) example script.
 {% include markup/end %}
 

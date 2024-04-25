@@ -13,7 +13,7 @@ Traditionally in EEG, and in line with the 10-20 electrode placement standard (s
 
 To address this issue and allow for MRI coregistration, various labs utilize in-house standards for fiducials or anatomical landmarks slightly different from the pre-auricular points. Unfortunately, some (including the Donders MEG lab) do so while retaining the LPA/RPA label.
 
-{% include markup/danger %}
+{% include markup/red %}
 Regardless of which convention you use for the points representing the left and right ear landmarks, you have to be aware of it and use it consistently throughout.
 {% include markup/end %}
 
@@ -26,7 +26,7 @@ Clarity and precision in the definition and measurement of the fiducial points c
 
 {% include image src="/assets/img/faq/how_should_i_report_the_positions_of_the_fiducial_points_on_the_head/fiducial_points.png" width="350" %}
 
-{% include markup/info %}
+{% include markup/blue %}
 The Helix-Tragus Junction (i.e. LHJ and RHJ) is the best defined in anatomical MRIs and in 3D scans.
 {% include markup/end %}
 

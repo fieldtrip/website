@@ -19,7 +19,7 @@ Try the following:
 
     jobid = qsubfeval('rand', 100, 'timreq', 60, 'memreq', 1024*1024*1024)
 
-{% include markup/info %}
+{% include markup/blue %}
 Besides the memory requirements for your computation, MATLAB also requires memory for itself. The **[qsubfeval](/reference/qsub/qsubfeval)** and **[qsubcellfun](/reference/qsub/qsubcellfun)** functions have the option `memoverhead` for this, which is by default 1GB (which is 1024\*1024\*1024 bytes). The `memreq` option itself does not have a default value. The torque job is started with a memory reservation of `memoverhead + memreq`, which adds up to 2GB in this example.
 {% include markup/end %}
 
@@ -65,7 +65,7 @@ The matrix with the results contains 100x100 random numbers, just as you would g
 
 Rather than specifying the function `'rand'` as a string, you can also specify it as a [function handle](https://www.mathworks.com/help/matlab/matlab_prog/creating-a-function-handle.html) with `@rand`.
 
-{% include markup/danger %}
+{% include markup/red %}
 If you write your own function `@myfunction`, to be executed by `qsubfeval`, beware **NOT** to do something like `clear all`, `clear mex`, or `clear functions` inside your function, as this messes up the environment in which the job gets executed. Rest assured that your job always starts in a fresh MATLAB instance, so there is no reason to clear anything.
 {% include markup/end %}
 

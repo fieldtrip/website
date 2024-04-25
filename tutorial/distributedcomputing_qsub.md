@@ -5,7 +5,7 @@ tags: [tutorial, matlab, script, qsub, distcomp, meg-language]
 
 # Speeding up your analysis using distributed computing with qsub
 
-{% include markup/warning %}
+{% include markup/yellow %}
 If you are new to FieldTrip, we recommend that you skip this tutorial for now. You can read the [introduction tutorial](/tutorial/introduction/) and then move on with the tutorials on [preprocessing](/tutorial/#reading-and-preprocessing-data). Once you get the hang of it, you can return to this tutorial which is more on the technical and coding aspects.
 {% include markup/end %}
 

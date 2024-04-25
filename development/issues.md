@@ -42,7 +42,7 @@ to see if anybody else has made a comparable request:
 
 ## Provide informative details about your issue
 
-{% include markup/info %}
+{% include markup/blue %}
 The easier it is for one of the developers to reproduce your bug, the more likely it is that we'll fix the problem. Good bug reports include a small test script and the data (i.e. mat file) required to reproduce the bug.
 {% include markup/end %}
 

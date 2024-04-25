@@ -11,7 +11,7 @@ This tutorial describes how to define epochs of interest (trials) from recorded 
 
 In this tutorial, preprocessing and segmenting the data into epochs/trials are done in a single step. If you are interested in how to do preprocessing on continuous data prior to segmenting it into epochs/trials, you can check the [Preprocessing - Reading continuous data](/tutorial/continuous) tutorial.
 
-{% include markup/info %}
+{% include markup/blue %}
 This data in this tutorial is originally from the [NatMEG workshop](/workshop/natmeg2014) and it is complemented by this lecture. This lectured featured the combination of MEG and EEG. Please go [here](/workshop/natmeg2014) to see in its entirety.
 
 {% include youtube id="zOxCqcYmIfA" %}
@@ -52,7 +52,7 @@ The data browser supports three view modes: _butterfly_, _vertical_ and _compone
 
 When the data browser opens, you will see button to navigate along the bottom of the screen and buttons for artifact annotation to the right. Note that also artifacts that were marked with automatic artifact detection methods will be displayed here (see the [automatic artifact rejection tutorial](/tutorial/automatic_artifact_rejection)). You can click on one of the artifact types, drag over a time window to select the beginning and the end of the artifact and then double-click in the selected area to mark it as an artifact. Double-clicking again will remove the selection.
 
-{% include markup/warning %}
+{% include markup/yellow %}
 The data browser will **not** change your data in an way. If you specify a _cfg_ as output, it will just store your selected artifacts in that output cfg.
 {% include markup/end %}
 
@@ -81,14 +81,14 @@ The EEG dataset used in this tutorial is available [here](https://download.field
     set(gcf, 'units', 'normalized', 'outerposition', [0 0 1 1]) % full screen
     print -dpng databrowser_oslo2019.png
 
-{% include markup/warning %}
+{% include markup/yellow %}
 If your recorded is continuous, specify _cfg.continuous = 'yes'_. If your data is segmented into epochs/trials, specify _cfg.continuous = 'no'_.
 {% include markup/end %}
 
 {% include image src="/assets/img/workshop/oslo2019/databrowser.png" width="650" %}
 _Figure 1: Raw plot of electrodes using ft_databrowser_
 
-{% include markup/info %}
+{% include markup/blue %}
 Get a feel of your data by browsing through it. Do you see any obvious artifacts?
 {% include markup/end %}
 
@@ -158,7 +158,7 @@ The output of _ft_preprocessing(cfg)_ is _data_, which is a structure that has t
 - _trialinfo_ is a column vector indicating the type of trial (1=standard, 2=deviant)
 - _cfg_ contains information about the call leading to this output
 
-{% include markup/warning %}
+{% include markup/yellow %}
 Make absolutely sure that you have **no** bad channels in your data before you do an average reference. Or more generally, make sure your reference isn't bad.
 {% include markup/end %}
 
@@ -191,7 +191,7 @@ _Figure 2: The visual summary plot tool_
 
 You can use different metrics to calculate the summary, but variance is usually a good metric.
 
-{% include markup/exercise %}
+{% include markup/blue %}
 What is best - using an _objective_ automatic procedure with a common threshold between subjects, or should you use this more _"subjective"_ method?
 {% include markup/end %}
 
@@ -388,6 +388,6 @@ _Figure 9: A topographical plot showing the MMN (average over 100 to 170 ms)_
 
 Play around with the _zlim_ to get a feeling for how the _difference_wave_ changes topography. Try also plotting the the ERPs themselves.
 
-{% include markup/exercise %}
+{% include markup/blue %}
 **Exercise:** The topographies that we have seen in the figures and movie have a rather loose fit of the circle (representing the head) around the electrodes. Explore the **[ft_prepare_layout](/reference/ft_prepare_layout)** function and [documentation](/tutorial/layout) to improve the topographic representation.
 {% include markup/end %}

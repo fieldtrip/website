@@ -6,7 +6,7 @@ title: How to create a volumetric current density
 
 # How to create a volumetric current density
 
-{% include markup/info %}
+{% include markup/blue %}
 Upon reviewing this page on the website, it seems to me that this project is not going to happen. Although the FieldTrip code base might be used (in combination with other code), the released code will not be extended to specifically facilitate this.
 {% include markup/end %}
 

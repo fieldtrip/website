@@ -9,7 +9,7 @@ The following code demonstrates how to make a layout for the 21 channels of the 
 
 Important to realize is that EEG caps and electrode arrangements have subtle variations between labs, even if you use a so-called standard layout. e.g., your particular selection of 64-channels from the extended 10-20 (or 10-10, or 10%) system can contain another subset than that used in another lab.
 
-{% include markup/danger %}
+{% include markup/red %}
 Although FieldTrip includes some functions that help you to construct a neighbour definition, you are yourself responsible to ensure it matches your measurement setup. The definition of neighbours influences how clusters will be formed: channels with many neighbours are be more likely to be part of large clusters than channels with few neighbours. As such the neighbour definition influences the clustering process and the statistical sensitivity. The false-alarm rate is not affected, as explained in the [Nonparametric statistical testing of EEG- and MEG-data](https://doi.org/10.1016/j.jneumeth.2007.03.024) paper.
 {% include markup/end %}
 

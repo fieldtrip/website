@@ -17,7 +17,7 @@ Every evening one of the FieldTrip [automation scripts](https://github.com/field
 
 The [fieldtrip/test](https://github.com/fieldtrip/fieldtrip/tree/master/test) directory contains many test scripts (technically they are functions). We use these initially to reproduce and identifying the cause of a bug, or for designing new end-user scripts that matches some new functionality that we want to implement. Once a reported bug has been fixed and/or the new functionality has been implemented, we keep the test scripts for [regression testing](https://en.wikipedia.org/wiki/Regression_testing).
 
-{% include markup/info %}
+{% include markup/blue %}
 If you suspect a problem with the FieldTrip code, the best way to resolve it is to post it on [GitHub](https://github.com/fieldtrip/fieldtrip/issues) and to contribute a (small) test script that helps us to reproduce the problem. These test scripts help us reproduce the problem. After fixing the problem, we add the script to the test directory to ensure future code quality.  
 {% include markup/end %}
 
@@ -25,7 +25,7 @@ The [master branch](https://github.com/fieldtrip/fieldtrip/tree/master) is teste
 
 ## Guidelines to contributors
 
-{% include markup/info %}
+{% include markup/blue %}
 When you [contribute](/development/contribute) to FieldTrip, it is recommended that you [test your changes](/development/testing). If the necessary test scripts pass, you can submit a [pull request](https://github.com/fieldtrip/fieldtrip/pulls).
 {% include markup/end %}
 

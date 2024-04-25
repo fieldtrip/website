@@ -45,6 +45,6 @@ Some of the gradiometer definitions (notably for the CTF and BTI systems) also i
 
 The gradiometer descriptions shared here as templates are all expressed in meter, without balancing, with the lowest resolution (single integration point per coil), and have been manually aligned with a representative subject.
 
-{% include markup/warning %}
+{% include markup/yellow %}
 You can find the template gradiometer descriptions that are included in FieldTrip [here](https://github.com/fieldtrip/fieldtrip/tree/master/template/gradiometer).
 {% include markup/end %}

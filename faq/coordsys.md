@@ -7,7 +7,7 @@ redirect_from:
 
 # How are the different head and MRI coordinate systems defined?
 
-{% include markup/warning %}
+{% include markup/yellow %}
 To understand the coordinate system in which data is expressed, you should consider:
 
 - What is the definition of the origin of the coordinate system, i.e. where is [0,0,0]?

@@ -13,7 +13,7 @@ In this tutorial you can find information about how to fit dipole models to the 
 
 This tutorial will not show how to combine source-level data over multiple subjects. It will also not describe how to do source-localization of oscillatory activation. You can check the [Localizing oscillatory sources using beamformer techniques](/workshop/natmeg2014/beamforming) tutorial if you are interested in the later.
 
-{% include markup/info %}
+{% include markup/blue %}
 This tutorial contains the hands-on material of the [NatMEG workshop](/workshop/natmeg2014) and is complemented by this lecture.
 
 {% include youtube id="4pVaY6f25w0" %}
@@ -112,7 +112,7 @@ The headshape based coregistration starts with an interactive step to improve th
 
     save mri_realigned2 mri_realigned2
 
-{% include markup/info %}
+{% include markup/blue %}
 Check once more with **[ft_sourceplot](/reference/ft_sourceplot)** whether the coordinate system is consistent with the MRI. Is the problem of the MRI being upside down resolved? Is the coordinate system correct?
 {% include markup/end %}
 
@@ -173,7 +173,7 @@ By treating the segmentation of brain/skull/scalp as a “functional” volume, 
 
 {% include image src="/assets/img/workshop/natmeg2014/dipolefitting/natmeg_dip_segmented_scalp.png" width="400" %}
 
-{% include markup/warning %}
+{% include markup/yellow %}
 You should check that the segmentation covers the appropriate part of the anatomical MRI and that it does not have any artefacts due to noisy voxels in the MRI or local contrast drop-out.
 {% include markup/end %}
 
@@ -197,7 +197,7 @@ After having confirmed that the segmentations are consistent with the anatomical
     cfg.numvertices = 1000;
     mesh_scalp = ft_prepare_mesh(cfg, mri_segmented);
 
-{% include markup/info %}
+{% include markup/blue %}
 Why do we use fewer vertices for the outer mesh than for the inner mesh?
 {% include markup/end %}
 
@@ -229,7 +229,7 @@ These meshes are all relatively coarse and don't look so nice in a visualization
 
 {% include image src="/assets/img/workshop/natmeg2014/dipolefitting/natmeg_dip_highres_scalp.png" width="400" %}
 
-{% include markup/info %}
+{% include markup/blue %}
 You can type "camlight" multiple times, to get light from various directions.
 
 It is also convenient to switch on the “Camera Toolbar” (under the figure menu -> View).
@@ -369,7 +369,7 @@ Having constructed the volume conduction model and completed the processing of t
     cfg.channel = 'MEG*1';
     source_mag = ft_dipolefitting(cfg, timelock_all);
 
-{% include markup/info %}
+{% include markup/blue %}
 Inspect the content of the source_mag structure. Can you identify where the position of the two dipoles is represented? And the orientation?
 {% include markup/end %}
 
@@ -549,7 +549,7 @@ We can plot the dipoles together in 3D. Note the color-coding that is used to di
 
 {% include image src="/assets/img/workshop/natmeg2014/dipolefitting/natmeg_dip_sourcedif.png" width="400" %}
 
-{% include markup/info %}
+{% include markup/blue %}
 The dipole positions are not exactly the same. Explain the difference in the dipole position and how the MMN might contribute to the dipole position of the deviant being shifted inward.
 {% include markup/end %}
 
@@ -695,7 +695,7 @@ _The final segmentation _
 
 Using a combination of imerode and Boolean logic with the “AND” operator, we can make a segmentation of the scalp, skull and skin that is **not inflated**.
 
-{% include markup/info %}
+{% include markup/blue %}
 Compare the four figures and toggle back and forth. Can you see the effect of the dilation on the outside of the scalp?
 {% include markup/end %}
 
@@ -755,7 +755,7 @@ The three meshes are combined in one struct-array and used as input to **[ft_pre
 
     save headmodel_eeg headmodel_eeg
 
-{% include markup/info %}
+{% include markup/blue %}
 Here we've set the ratio of conductivity between the different tissue types to [1 1/20 1]. What would happen if we would change the ratio to: [1 1/80 1]? See [What is the conductivity of the brain, CSF, skull and skin tissue?](/faq/what_is_the_conductivity_of_the_brain_csf_skull_and_skin_tissue)
 {% include markup/end %}
 
@@ -804,7 +804,7 @@ As before we are going to check for, and remove bad trial
     cfg.preproc.refchannel = 'all';
     data_eeg_clean = ft_rejectvisual(cfg, data_eeg);
 
-{% include markup/warning %}
+{% include markup/yellow %}
 The EEG forward model is computed with an common average reference. Consequently, the EEG data that you want to fit also should be average referenced. Whenever you remove a (bad) channel from the data, you have to recompute the common average reference in the EEG data.
 {% include markup/end %}
 
@@ -925,7 +925,7 @@ The EEG dipole fit is not so trustworthy as the MEG dipole fit. We can try to re
     axis tight
     axis off
 
-{% include markup/info %}
+{% include markup/blue %}
 How does this fit compare to the previous? Can you explain the difference?
 {% include markup/end %}
 

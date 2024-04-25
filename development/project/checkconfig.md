@@ -71,7 +71,7 @@ Control the output cfg:
 
 **trackconfig:**
 
-{% include markup/danger %}
+{% include markup/red %}
 In November 2022 the config object and the `cfg.trackconfig` functionality have been removed, see <https://github.com/fieldtrip/fieldtrip/issues/2127>.
 {% include markup/end %}
 

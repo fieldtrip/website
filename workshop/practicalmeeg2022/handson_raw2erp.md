@@ -5,7 +5,7 @@ tags: [practicalmeeg2022, meg, timelock, preprocessing, mmfaces]
 
 # Preprocessing raw data and computing ERPs/ERFs
 
-{% include markup/info %}
+{% include markup/blue %}
 This tutorial was written specifically for the [PracticalMEEG workshop in Aix-en-Provence](/workshop/practicalmeeg2022) in December 2022 and is part of a coherent sequence of tutorials. It is an updated version of the corresponding tutorial for [Paris 2019](/workshop/paris2019).
 {% include markup/end %}
 
@@ -13,7 +13,7 @@ This tutorial was written specifically for the [PracticalMEEG workshop in Aix-en
 
 In this tutorial, we will learn how to read in 'raw' data from a file, and to apply some basic processing and averaging in order to inspect event-related fields.
 
-{% include markup/warning %}
+{% include markup/yellow %}
 This tutorial only briefly covers the steps required to import data into FieldTrip and preprocess it. Rather, this tutorial has a focus on processing multiple runs of the same dataset, and exploring the different channel types. Preprocessing is covered in more detail in the [preprocessing](/tutorial/preprocessing) tutorial, which you can refer to if you want more details.
 {% include markup/end %}
 
@@ -76,7 +76,7 @@ We can now run the following chunk of code:
 
     end % for each run
 
-{% include markup/danger %}
+{% include markup/red %}
 In the previous code we are making use of numeric trigger codes instead of the events that are coded in the BIDS dataset. This is because the pruned derivative dataset is NOT according to the BIDS standard. First of all, some files are missing due to the pruning. More importantly, MEG and EEG derivatives are not finalized and not part of BIDS yet. They are being discussed [here](https://bids.neuroimaging.io/bep021).
 
 Although we have the MaxFiltered fif file with the data and original trigger codes
@@ -164,13 +164,13 @@ In the section above, we have created a set of `trl` matrices, which contain, fo
 
 The above chunk of code uses **[ft_preprocessing](/reference/ft_preprocessing)** four times per run, with channel type specific processing options. Note the exclusion of a subset of the EEG channels which correspond to non-brain recording EEG signals (EOG/ECG etc.). The EEG data are average-referenced, the other channels are not. After the data for each group of channels has been read from disk, **[ft_resampledata](/reference/ft_resampledata)** is used to downsample the data to a sampling frequency of 300 Hz. Then, the data structures are combined into a single run-specific data structure, using **[ft_appenddata](/reference/ft_appenddata)**.
 
-{% include markup/warning %}
+{% include markup/yellow %}
 There is no advantage in resampling the data other than saving some memory. If your computer is big enough to handle your data, we recommend not to resample as there can be some annoying side effects. The anti-aliasing filter can affect your data, and post-hoc bookeeping of events (which are indicated with sample numbers) gets more complicated.
 
 In this specific case we are resampling to fit it in memory of the participants' laptops and to speed up subsequent computations.
 {% include markup/end %}
 
-{% include markup/info %}
+{% include markup/blue %}
 The recorded data apparently has a delay of 34.5 ms relative to the onset of the triggers and relative to the `events.tsv` file. This can be corrected with **[ft_redefinetrial](/reference/ft_redefinetrial)** like this
 
     cfg            = [];
@@ -338,7 +338,7 @@ Now that we have a combined layout, we can plot all three datatypes and all thre
 
 #### Exercise 1
 
-{% include markup/info %}
+{% include markup/blue %}
 Explore the data, using the interactive property of the figure. Visualize the topographies of the ERF/ERPs in the latency window between 175 and 250 ms. Also inspect the topographies in the latency window from 300-450 ms. Explain the differences in topography (between latencies and channel types) based on putative underlying neuronal generators.
 
 {% include image src="/assets/img/workshop/practicalmeeg2022/handson_raw2erp/figure6.png" width="600" %}
@@ -349,7 +349,7 @@ _Figure: Topographies of the average across selected latency window for one of t
 
 #### Exercise 2
 
-{% include markup/info %}
+{% include markup/blue %}
 The `avg_famous` structure not only contains the average, but also the variance. That can be used to compute the standard deviation and the standard error of the mean (SEM).
 
 Use the following code to compute and plot the ERP together with the standard deviation:
@@ -388,7 +388,7 @@ _Figure: the averaged ERP on EEG065, plus and minus the SEM._
 
 #### Exercise 3
 
-{% include markup/info %}
+{% include markup/blue %}
 
 Using the more low-level function **[ft_plot_vector](/reference/plotting/ft_plot_vector)** we can make a more fancy visualisation of the confidence interval around the ERP. Try the following:
 
@@ -415,7 +415,7 @@ _Figure: the ERP with the SEM as highlighted region, and the ERP that highlights
 
 #### Exercise 4
 
-{% include markup/info %}
+{% include markup/blue %}
 Rather than looking at the average and go to the thresholded statistics straight away, we can also look at the individual trials. For that it helps to represent the data according to the `timelock` structure, but keeping all the trials.
 
     cfg = [];;

@@ -37,7 +37,7 @@ When you observe a inverse warped template grid that is weird, you can do a "man
 
 {% include image src="/assets/img/faq/why_is_the_source_model_deformed_or_incorrectly_aligned_after_warping_template/Cronenberg.png" %}
 
-{% include markup/info %}
+{% include markup/blue %}
 In early 2020 we switched the default SPM version used by FieldTrip from SPM8 to SPM12.
 {% include markup/end %}
 

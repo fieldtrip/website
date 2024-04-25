@@ -52,7 +52,7 @@ Otherwise run the following code:
 
 {% include /shared/tutorial/preprocessing_lp.md %}
 
-{% include markup/info %}
+{% include markup/blue %}
 A note about padding: The padding parameter (cfg.padding) defines the duration to which the data in the trial will be padded (i.e. data-padded, not zero-padded). The padding is removed from the trial after filtering. Padding the data is beneficial, since the edge artifacts that are typically seen after filtering will be in the padding and not in the part of interest. Padding can also be relevant for DFT filtering of the 50Hz line noise artifact: long padding ensures a higher frequency resolution for the DFT filter, causing a narrower notch to be removed from the data. Padding can only be done on data that is stored in continuous format, therefore it is not used here.
 {% include markup/end %}
 
@@ -200,7 +200,7 @@ _Figure: The topography of event-related fields over time obtained using ft_topo
 
 #### Exercise 1
 
-{% include markup/info %}
+{% include markup/blue %}
 What changes in the data if you extend the baseline correction (which is initially from -200 ms to 0 ms) to a longer period from -500 ms to 0?
 
 Apply a band-pass filter in the preprocessing instead of only a low-pass filter. Use for example the values from 1 Hz to 30 Hz. What changes in the data? What are the pros and cons of using a high-pass filter?
@@ -208,7 +208,7 @@ Apply a band-pass filter in the preprocessing instead of only a low-pass filter.
 
 #### Exercise 2
 
-{% include markup/info %}
+{% include markup/blue %}
 Which type of source configuration can explain the topography?
 {% include markup/end %}
 
@@ -260,7 +260,7 @@ _Figure: A comparison of event-related fields from the axial gradiometers (left)
 
 #### Exercise 3
 
-{% include markup/info %}
+{% include markup/blue %}
 Compare the axial and planar gradient field
 
 Why are there only positive values above the sources in the representation of the combined planar gradient?

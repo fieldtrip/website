@@ -14,7 +14,7 @@ In this tutorial we will continue working on the dataset described in the [Prepr
 
 This tutorial is not covering group analysis. Look [here](/tutorial/eventrelatedstatistics) for that. If you are interested, you can read the other tutorials that cover cluster-based permutation tests on [event-related fields](/tutorial/cluster_permutation_timelock) and on [time-frequency data](/tutorial/cluster_permutation_freq). If you are interested in a more gentle introduction as to how parametric statistical tests can be used with FieldTrip, you can read the [Parametric and non-parametric statistics on event-related fields](/tutorial/eventrelatedstatistics) tutorial.
 
-{% include markup/info %}
+{% include markup/blue %}
 This tutorial contains the hands-on material of the [NatMEG workshop](/workshop/natmeg2014). The background is explained in this lecture, which was recorded at the [Aston MEG-UK workshop](/workshop/birmingham).
 
 {% include youtube id="vOSfabsDUNg" %}
@@ -52,7 +52,7 @@ We will clear all variables that we have in the workspace, restore the default p
 
 First, we load the data that we created in the [ERP tutorial](/workshop/oslo2019/introduction)
 
-{% include markup/info %}
+{% include markup/blue %}
 Note the naming convention used - each saved _.mat-file_ contains _one and only one_ variable, which has the _same_ name as the _.mat-file_
 This makes it clear what variables are loaded into the workspace.
 {% include markup/end %}
@@ -146,7 +146,7 @@ Here, we will show **[ft_singleplotER](/reference/ft_singleplotER)**
 {% include image src="/assets/img/workshop/oslo2019/singleplot_t_uncorrected.png" width="650" %}
 _Figure 1: Single channel plot - no correction_
 
-{% include markup/info %}
+{% include markup/blue %}
 Note that we see the MMN difference (~120-200 ms), but we also see other differences and even a pre-zero one. We cannot decide which are _true positives_ and which are _false positives_. In fact, we know that there will be a lot _false positives_ (assuming that the data were from identical distributions, i.e. the null hypothesis is true, we would expect that 5% of our significant differences are _false positives_)
 {% include markup/end %}
 
@@ -171,7 +171,7 @@ We will now control the _false positives_ by using the Bonferroni Correction [Wi
 {% include image src="/assets/img/workshop/oslo2019/singleplot_t_bonferroni.png" width="650" %}
 _Figure 2: Single channel plot - Bonferroni correction_
 
-{% include markup/info %}
+{% include markup/blue %}
 The Bonferroni correction has eliminated some likely _false positives_, but probably at the expense of introducing some _false negatives_. According to our image, only the peak of our MMN is significant. But EEG responses are not peaky in nature, they wax and wane smoothly in time and are smeared out over several electrodes. The Bonferroni correction implicitly assumes that EEG responses are uncorrelated, which they are patently not. Our next correction, the _cluster correction_ addresses the issue of correlation.
 {% include markup/end %}
 
@@ -181,7 +181,7 @@ As noted above, EEG data is smooth over the spatio-temporal dimensions. We can e
 
 ##### Neighbors
 
-{% include markup/danger %}
+{% include markup/red %}
 Sometimes we use the word 'neighbour' according to the British spelling and sometimes we use it as neighbor according to the American spelling.
 {% include markup/end %}
 
@@ -352,7 +352,7 @@ And here's the difference between the normal _t-mask_ and the _t-cluster-mask_. 
 {% include image src="/assets/img/workshop/oslo2019/difference_between_masks.png " width="650" %}
 _Figure 10: Difference wave showing the difference in masks coming from stat_t and stat_t_cluster_
 
-{% include markup/info %}
+{% include markup/blue %}
 Do note that we, in EEG, most of the time do not make the inference at the level of the individual subject, but it is relevant to do so in for example diagnostic measurements.
 {% include markup/end %}
 
@@ -526,7 +526,7 @@ Note how the cluster correction seems to catch the clusters that "catch" our eye
 
 ## Extending the frequency and time ranges of the tests
 
-{% include markup/exercise %}
+{% include markup/blue %}
 Do the three tests again without setting _cfg.frequency_ and _cfg.latency_ (you can comment them out)
 Compare with the plot below - why may it be important to use one's _prior_ knowledge?
 {% include markup/end %}

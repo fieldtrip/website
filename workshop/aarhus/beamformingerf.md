@@ -11,7 +11,7 @@ In this tutorial we will apply beaforming techniques to event-realted fields. Th
 
 In this tutorial you will learn about applying beamformer techniques in the time domain. This tutorial further assumes that you made yourself familiar with all the necessary steps such as computing an appropriate head model and lead field matrix, and various options for contrasting the effect of interest against some control/baseline. It is important that you understand the basics of these previous steps explained in the [tutorial:natmeg:beamforming](/workshop/natmeg2014/beamforming).
 
-{% include markup/info %}
+{% include markup/blue %}
 This tutorial contains the hands-on material of the [NatMEG workshop](/workshop/natmeg2014) and is complemented by this lecture.
 
 {% include youtube id="7eS11DtbIPw" %}
@@ -152,7 +152,7 @@ In the first step we re-segment the data into left and right hand responses usin
 
 _Figure 1: Topography and time course of the motor evoked response performed with the right hand._
 
-{% include markup/exercise %}
+{% include markup/blue %}
 Use your knowledge about the distribution of the ingoing and outgoing field.
 
 - What is the orientation of the source?
@@ -172,7 +172,7 @@ Load the forward model using the following cod
 
 The next step is to discretize the brain volume into a grid. For each grid point the lead field matrix is calculated. It is calculated with respect to a grid with a 1 cm resolution.
 
-{% include markup/warning %}
+{% include markup/yellow %}
 Sensors that were previously removed from the data set should also be removed when calculating the leadfield.
 {% include markup/end %}
 
@@ -306,13 +306,13 @@ After which, we can plot the interpolated data. In order to emphasize "the hill"
 
 _Figure 2: A source plot of the motor evoked field- ratio between the pre- and post-response conditions._
 
-{% include markup/info %}
+{% include markup/blue %}
 The 'ortho' method is not the only plotting method implemented. Use the 'help' of **[ft_sourceplot](/reference/ft_sourceplot)** to find what other methods there are and plot the source level results. What are the benefits and drawbacks of these plotting routines?
 {% include markup/end %}
 
 #### Exercise: determining anatomical labels
 
-{% include markup/info %}
+{% include markup/blue %}
 If you were to name the anatomical label of the source of this motor beta, what you say? What plotting method is most appropriate for this?
 
 With the use of cfg.atlas you can specify a lookup atlas, which **[ft_sourceplot](/reference/ft_sourceplot)** will use to return appropriate anatomical labels. One for the MNI template is distributed with FieldTrip and can be found in 'fieldtrip/template/atlas/aal/ROI_MNI_V4.nii'. Be aware that for this to work you need to realign your anatomical and functional data into MNI coordinates. An example how to achieve this is to [align the leadfield grid of the individual subject to a leadfield grid in MNI space](/example/sourcemodel_aligned2mni).
@@ -320,13 +320,13 @@ With the use of cfg.atlas you can specify a lookup atlas, which **[ft_sourceplot
 
 #### Exercise: regularization
 
-{% include markup/info %}
+{% include markup/blue %}
 The regularization parameter was lambda = '5%'. Change it to '0%' or to '10%' and plot the power estimate. How does the regularization parameter affect the properties of the spatial filter?
 {% include markup/end %}
 
 #### Exercise: covariance matrix computation
 
-{% include markup/info %}
+{% include markup/blue %}
 The covariance matrix was computed on the basis of the single trials. Compute the cov matrix on the basis of the mean over the trials and redo the steps above. Why and how is the source reconstructed power changed?
 {% include markup/end %}
 
@@ -334,7 +334,7 @@ The covariance matrix was computed on the basis of the single trials. Compute th
 
 In the previous step we applied an arbitrary chosen threshold for plotting the data. It is also possible to apply the permutation framework as extensively described in the statistic tutorials. It is strongly recommended to make yourself familiar with the framework and consult also the on-line lecture.
 
-{% include markup/info %}
+{% include markup/blue %}
 This tutorial contains the hands-on material of the [NatMEG workshop](/workshop/natmeg2014) and is complemented by this lecture.
 
 {% include youtube id="x0hR-VsHZj8" %}
@@ -449,7 +449,7 @@ _Figure 3: A source plot of the difference between the pre- and post-response co
 
 #### Exercise: discuss and evaluate the spm map
 
-{% include markup/info %}
+{% include markup/blue %}
 Uncomment the option **cfg.maskparameter = 'mask';** and try to interpret what you see. Consider the scalp topography too. In the context of the present question 'Whereare the generators of the MEP?' is there a favorable thresholding approach? If so, why?
 {% include markup/end %}
 
@@ -550,7 +550,7 @@ _Figure 4: Time course of activity in the primary motor cortex averaged across t
 
 #### Exercise: evoked vs. induced activity
 
-{% include markup/info %}
+{% include markup/blue %}
 Take your time to verbalize what you see. Try to decompose the averaged response into the time-frequency domain. Plot the result with and without baseline correction. Why is there a difference?
 {% include markup/end %}
 
@@ -608,7 +608,7 @@ The leadfield is calculated using **[ft_prepare_leadfield](/reference/ft_prepare
     [grid] = ft_prepare_leadfield(cfg);
     save grid_eeg grid
 
-{% include markup/info %}
+{% include markup/blue %}
 Discuss the option **cfg.lcmv.reducerank = 3**
 {% include markup/end %}
 

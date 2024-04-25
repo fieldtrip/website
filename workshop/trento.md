@@ -22,7 +22,7 @@ If you work on your own laptop you need the USB stick:
 2.  Unzip the fieldtrip-xxxxxxxx.zip file.
 3.  Unzip the Subject01.zip file, you should place the contents in the tutorial directory.
 
-{% include markup/danger %}
+{% include markup/red %}
 Depending on the unzip program you are using (e.g., Winrar), the name of the zip file might also appear as directory, resulting in path_to_directory/fieldtrip-xxxxxxxx/fieldtrip-xxxxxxxx, i.e. the FieldTrip directory in a FieldTrip directory. Please fix that by moving all files one level up.
 {% include markup/end %}
 
@@ -42,7 +42,7 @@ The `addpath(pwd)` statement adds the present working directory, i.e. the direct
 
 If you get the error "can't find the command ft_defaults" you should check the present working directory.
 
-{% include markup/danger %}
+{% include markup/red %}
 Please do NOT use the graphical path management tool from MATLAB. In this hands-on session we'll manage the path from the command line, but in general you are much better off using the startup.m file than the path GUI.
 
 Please do NOT add FieldTrip with all subdirectories, subdirectories will be added automatically when needed, but only when needed.

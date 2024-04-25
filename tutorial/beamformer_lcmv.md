@@ -3,7 +3,7 @@ title: Localizing sources using beamformer techniques
 tags: [fixme]
 ---
 
-{% include markup/danger %}
+{% include markup/red %}
 This page is a draft for a future tutorial and is still developing. Hence, there is no guarantee that the content of this page at this moment is correct and complete.
 
 See <http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=1718> for the progress.
@@ -160,7 +160,7 @@ Now prepare the head model from the segmented brain surface:
     headmodel          = ft_prepare_headmodel(cfg, seg);
     headmodel          = ft_convert_units(headmodel, 'cm'); % mm to cm, just to be sure
 
-{% include markup/warning %}
+{% include markup/yellow %}
 If you want to do a beamformer source reconstruction on EEG data, you have to pay special attention to the EEG referencing. The forward model will be made with an common average reference (except in some rare cases like with bipolar iEEG electrode montages), i.e. the mean value over all electrodes is zero. Consequently, this also has to be true in your data.
 
 Prior to averaging the data with ft_timelockanalysis you have to ensure with ft_preprocessing that all channels are re-referenced to the common average reference.

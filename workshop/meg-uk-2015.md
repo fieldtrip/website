@@ -42,7 +42,7 @@ For FieldTrip (all taken from <https://www.fieldtriptoolbox.org/video>)
 
 The programme mixes short theoretical sessions with hands-on computer assignments. The day ends with a supervised computer session where people are free to work on their dataset of choice.
 
-{% include markup/info %}
+{% include markup/blue %}
 Please look at the [general instructions](/workshop/meg-uk-2015/general) for the hands-on sessions to start MATLAB and navigate to the data directory on the Aston computer-lab machines.
 {% include markup/end %}
 
@@ -65,7 +65,7 @@ Please look at the [general instructions](/workshop/meg-uk-2015/general) for the
 
 All demonstrations will be using the same [dataset](/workshop/meg-uk-2015/dataset).
 
-{% include markup/warning %}
+{% include markup/yellow %}
 Following the workshop, the data has also been made available on the [download server](https://download.fieldtriptoolbox.org/example/meg-uk-2015/). You can download all example data that we used in Aston, except for the toolbox code itself. You should get the latest version of [FieldTrip](/download) and [SPM](http://www.fil.ion.ucl.ac.uk/spm/software/download.html) from their respective download pages.
 
 Downloading the data to your own computer should allow you to go through the demonstrations once more, but now at your own pace.

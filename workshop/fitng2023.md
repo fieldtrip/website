@@ -53,7 +53,7 @@ For reference, the raw data (not needed for this workshop) is available from <ht
 
 ### Setting up MATLAB
 
-{% include markup/danger %}
+{% include markup/red %}
 Please download and unzip the version of FieldTrip that is listed above and don't use the FieldTrip version that you might already have on your computer, for example as part of EEGLAB or SPM.
 {% include markup/end %}
 
@@ -79,7 +79,7 @@ After this, you should do
 
 to add the scripts directory to your path. This should work if you have unzipped fieldtrip and the data in the correct locations. If you get the error "Unable to change current folder" then you have not unzipped correctly. Please check the previous section.
 
-{% include markup/danger %}
+{% include markup/red %}
 Please do NOT use the graphical path management tool from MATLAB. In this hands-on session we'll manage the path from the command line, but in general you are much better off using the `startup.m` file than the path GUI.
 
 Please do NOT add FieldTrip with all subdirectories, subdirectories will be added automatically when needed, and only when needed. See also this [frequently asked question](/faq/installation).
@@ -109,7 +109,7 @@ The `bidsroot` directory with the original raw data is **not** installed, but ca
 
 ### Check your macOS security settings
 
-{% include markup/danger %}
+{% include markup/red %}
 This section is relevant to macOS users only.
 {% include markup/end %}
 

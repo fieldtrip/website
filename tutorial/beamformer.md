@@ -15,7 +15,7 @@ It is expected that you understand the previous steps of preprocessing and filte
 
 This tutorial will not cover the time-domain option for LCMV/SAM beamformers (but see [this tutorial for an example on data from a Neuromag/Elekta/MEGIN system](/workshop/paris2019/handson_sourceanalysis)), nor for beamformers applied to evoked/averaged data (although see an example of how to calculate [virtual sensors using LCMV](/tutorial/virtual_sensors) for an example of this).
 
-{% include markup/info %}
+{% include markup/blue %}
 This tutorial contains hands-on material that we use for the [MEG/EEG toolkit course](/workshop/toolkit2018) and it is complemented by this lecture.
 
 {% include youtube id="pE0WAKd_Ve4" %}
@@ -70,7 +70,7 @@ Further we need to 'cut' out the time windows of interest: the pre- and post sti
 
 ### Exercise 1: data length
 
-{% include markup/info %}
+{% include markup/blue %}
 Why is it important that the length of each data piece matches an integer number of oscillatory cycles?
 {% include markup/end %}
 
@@ -137,7 +137,7 @@ Then prepare the head model from the segmented brain surface:
     cfg.method = 'singleshell';
     headmodel = ft_prepare_headmodel(cfg, segmentedmri);
 
-{% include markup/warning %}
+{% include markup/yellow %}
 **EEG headmodels**
 
 The volume conduction model created here is MEG specific and cannot be used for EEG source reconstruction. If you are interested in EEG source reconstruction methods, you can go to the corresponding [EEG headmodel tutorial](/tutorial/headmodel_eeg).
@@ -158,7 +158,7 @@ You can now visualise the headmodel together with the sensor positions:
 
 ### Exercise 2: head model
 
-{% include markup/info %}
+{% include markup/blue %}
 Why might a single sphere model be inadequate for performing beamformer estimates?
 {% include markup/end %}
 
@@ -166,7 +166,7 @@ Why might a single sphere model be inadequate for performing beamformer estimate
 
 The next step is to discretize the brain volume into a regular grid with dipoles. For each grid point the lead field matrix is calculated. It is calculated with respect to a grid with a 1 cm resolution.
 
-{% include markup/warning %}
+{% include markup/yellow %}
 Sensors MLP31 and MLO12 were removed from the data set. Thus it is essential to remove these sensors as well when calculating the lead fields.
 {% include markup/end %}
 
@@ -180,7 +180,7 @@ Sensors MLP31 and MLO12 were removed from the data set. Thus it is essential to 
     cfg.sourcemodel.unit = 'cm';
     sourcemodel = ft_prepare_leadfield(cfg);
 
-{% include markup/warning %}
+{% include markup/yellow %}
 If you are not contrasting the activity of interest against another condition or baseline time-window, then you may choose to normalize the lead field (cfg.normalize='yes'), which will help control against the power bias towards the center of the head.
 {% include markup/end %}
 
@@ -195,7 +195,7 @@ At this point we have computed all necessary ingredients for the beamformer sour
     - Activity contrasted with estimated noise (example shown below using only dataPost)
     - Use normalized lead fields (see also note above and Exercise 4)
 
-{% include markup/warning %}
+{% include markup/yellow %}
 The null hypothesis for both options within (1) is that the data in both conditions are the same, and thus the best spatial filter is the one that is computed using both data conditions together (also known as ['common filters'](/example/common_filters_in_beamforming)). This common filter is then applied separately to each condition.
 Hence, the parameters of your source analysis (i.e. whether to compute common filters, whether to normalize lead fields or not) might change slightly depending on which of those strategies above you decide to use. Which strategy to use, will in turn depend on your experimental design and your research question. In the following we show two possible approaches.
 {% include markup/end %}
@@ -251,7 +251,7 @@ Notice that the power is strongest in the center of the brain. There are several
 
 ### Exercise 3: center of head bias
 
-{% include markup/info %}
+{% include markup/blue %}
 Discuss why the source power is overestimated in the center of the brain. Hint 1: what are the lead field values in the center of the head? Why? Hint 2: Remember the 'unit-gain constraint' of beamformer spatial filters.
 {% include markup/end %}
 
@@ -280,7 +280,7 @@ Plot it:
     cfg.opacitymap    = 'rampup';
     ft_sourceplot(cfg, sourceNAIInt);
 
-{% include markup/warning %}
+{% include markup/yellow %}
 We limit the colormap for the functional data together with the opacity parameter to better see where source power is maximal. The lower limit of 4 is an arbitrary choice here. Instead, if you have a statistical map you could mask the data based on where power is significantly stronger (i.e. as compared to baseline).
 {% include markup/end %}
 
@@ -290,7 +290,7 @@ _Figure 3: The neural activity index (NAI) plotted for the post-stimulus time wi
 
 ### Exercise 4: lead field normalization
 
-{% include markup/info %}
+{% include markup/blue %}
 Another option, besides contrasting to the noise estimate, is to normalize the lead field when you compute it (cfg.normalize='yes' in the call to ft_prepare_leadfield). Recompute the lead field and source estimate this way and plot the result.
 {% include markup/end %}
 
@@ -369,19 +369,19 @@ _Figure 4: sourceplot with method "slice" ._
 
 ### Exercise 5: comparing normalizations
 
-{% include markup/info %}
+{% include markup/blue %}
 Compare figure 3 and 4. It appears that normalizing the power with the baseline activity result in fewer and more focal sources. Why?
 {% include markup/end %}
 
 ### Exercise 6: regularization
 
-{% include markup/info %}
+{% include markup/blue %}
 The regularization parameter was cfg.dics.lambda = '5%'. Change it to 0 or to '100%' and plot the power estimate with respect to baseline. How does the regularization parameter affect the properties of the spatial filter?  
 {% include markup/end %}
 
 ### Exercise 7: lead field normalization
 
-{% include markup/info %}
+{% include markup/blue %}
 Which configuration options you have used above for ft_sourceanalysis were specific to the type of contrast chosen?
 {% include markup/end %}
 

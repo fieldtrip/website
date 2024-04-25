@@ -5,7 +5,7 @@ tags: [practicalmeeg2022, meg, headmodel, sourcemodel, sourceanalysis, mmfaces]
 
 # Creation of headmodels and sourcemodels for source reconstruction
 
-{% include markup/info %}
+{% include markup/blue %}
 This tutorial was written specifically for the [PracticalMEEG workshop in Aix-en-Provence](/workshop/practicalmeeg2022) in December 2022 and is part of a coherent sequence of tutorials. It is an adjusted version of the [MEG headmodel tutorial](/tutorial/headmodel_meg) and an updated version of the corresponding tutorial for [Paris 2019](/workshop/paris2019).
 {% include markup/end %}
 
@@ -17,7 +17,7 @@ We will use the anatomical images that belong to the same subject whose data wer
 
 This tutorial will **not** show how to perform the source reconstruction itself. If you are interested in source reconstruction methods, you can go to the [Localizing oscillatory sources using beamformer techniques](/tutorial/beamformer) and to the [Source reconstruction of event-related fields using minimum-norm estimate](/tutorial/minimumnormestimate) tutorials.
 
-{% include markup/success %}
+{% include markup/green %}
 The volume conduction model created here is MEG specific and **cannot be used** for EEG source reconstruction. If you are interested in EEG source reconstruction methods, you can go to the corresponding [EEG headmodel tutorial](/tutorial/headmodel_eeg).
 {% include markup/end %}
 
@@ -42,7 +42,7 @@ First, we extract the positions of the landmarks from the subject's MRI metadata
     coordinates = ft_read_json(subj.fidfile);
     mri_orig    = ft_read_mri(subj.mrifile);
 
-{% include markup/warning %}
+{% include markup/yellow %}
 On some Windows computers, the file cannot be read and you get an error when calling **[ft_read_mri](/reference/fileio/ft_read_mri)**. If this happens, you need to manually unzip the file and read the unzipped file:
 
     gunzip(subj.mrifile);
@@ -75,7 +75,7 @@ _Figure: The location of the NAS indicated by the crosshair in the anatomical MR
 
 #### Exercise 1
 
-{% include markup/exercise %}
+{% include markup/blue %}
 Inspect the location of the LPA and RPA.
 {% include markup/end %}
 
@@ -95,11 +95,11 @@ Now, we can coregister the MRI image to the coordinate system as used for the ME
 
 #### Exercise 2
 
-{% include markup/exercise %}
+{% include markup/blue %}
 Inspect the location of the NAS, LPA and RPA of the coregistered MRI. Pay special attention to the location coordinates, as compared to the location coordinates of the original MRI.
 {% include markup/end %}
 
-{% include markup/info %}
+{% include markup/blue %}
 Following the initial alignment of the MRI with the MEG coordinate system on the basis of the anatomical landmarks, we can further improve the coregistration by using an interactive-closest-points (ICP) procedure. In that procedure, we fit the scalp surface than can be obtained from the MRI to a detailed measurement of the scalp surface using a Polhemus electromagnetic tracker. The measured head surface points can be read with **[ft_read_headshape](/reference/fileio/ft_read_headshape)** and are available as `sub-01/ses-meg/meg/sub-01_ses-meg_headshape.pos` or can be read directly from the fif file.
 {% include markup/end %}
 

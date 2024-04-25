@@ -13,7 +13,7 @@ Because of these algorithms the data is structured in a slightly different way. 
 
 It is expected that you have basic knowledge of FieldTrip and the use of configurations (cfg). In this tutorial, we will only focus on restructuring and resegmenting data.
 
-{% include markup/danger %}
+{% include markup/red %}
 For the events to be extracted, you need ABM's paid software B-Alert Lab. For the time being, there is no possibility to extract the events via FieldTrip functions.
 {% include markup/end %}
 

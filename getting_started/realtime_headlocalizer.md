@@ -7,7 +7,7 @@ tags: [realtime, meg]
 
 Using FieldTrip it is possible to [monitor](/faq/how_can_i_monitor_a_subject_s_head_position_during_a_meg_session) a subject's head position during a MEG recording session. This allows you as experimenter to reposition your subject within sessions, e.g., after each experimental block. It also allows you to reposition your subject at the start of a session to the same head position of a previous session.
 
-{% include markup/warning %}
+{% include markup/yellow %}
 Please cite this paper when you use the realtime head localizer in your research:
 
 Stolk A, Todorovic A, Schoffelen JM, Oostenveld R. **[Online and offline tools for head movement compensation in MEG.](https://doi.org/10.1016/j.neuroimage.2012.11.047.m)** Neuroimage. 2013 Mar;68:39-48. doi: 10.1016/j.neuroimage.2012.11.047.

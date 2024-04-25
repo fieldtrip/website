@@ -23,7 +23,7 @@ This tutorial is focusing on how to build the **BEM volume conduction model for 
 
 {% include /shared/tutorial/headmodel_background.md %}
 
-{% include markup/info %}
+{% include markup/blue %}
 If you do not have an MRI for your subject, you can consider to use a template MRI or a template head model that is located in the FieldTrip `template` directory. See [here](/template/headmodel) for more info.
 
 If you do not have an MRI, but do have a measurement of the scalp surface and/or of the electrodes (e.g., with a Polhemus tracker), you could also fit a concentric spheres model to the scalp and/or electrodes. However, we recommend to use a realistic template head model and fit the measured electrodes to the template head model rather than the other way around.
@@ -52,7 +52,7 @@ _Figure; Pipeline for creating a BEM model_
 
 #### Exercise 1
 
-{% include markup/info %}
+{% include markup/blue %}
 Check that the homogenous transformation matrix in `mri_realigned` is the same as the one in `mri`. If so, that means that each voxel is at exactly the same position. If you misspecify the voxel indices of the fiducials or anatomical landmarks, they will be different.
 {% include markup/end %}
 
@@ -82,7 +82,7 @@ _Figure; The MRI after assigning the desired coordinate system and reslicing_
 
 In this step, the voxels of the anatomical MRI are segmented or classified using **[ft_volumesegment](/reference/ft_volumesegment)** into the three different tissue types: scalp, skull and brain. You can read more about how the tissue-types are represented in the output of this function in this [FAQ](/faq/how_is_the_segmentation_defined).
 
-{% include markup/info %}
+{% include markup/blue %}
 The segmentation is quite time consuming (~15 minutes). For the purpose of this tutorial you can skip this and load the result and move on to the next step. You can download the result from our [download server](https://download.fieldtriptoolbox.org/tutorial/headmodel_eeg_bem/).
 {% include markup/end %}
 
@@ -110,7 +110,7 @@ The `segmentedmri` data structure is similar to the `mri` data structure, but co
 
 The segmentation does not change the coordinate system, nor the size of the voxels or volume. You can see this in the first three fields (`dim`, `transform` and `coordsys`) which are the same as the corresponding fields in the MRI. The field `transform` aligns the 3D array in `brain`, `skull` and `scalp` to the coordinate system defined in the `coordsys` field, just like it did for the `anatomy` field in the anatomical MRI. It is good practice to check at this point in a figure, whether the segmented compartments look as expected.
 
-{% include markup/warning %}
+{% include markup/yellow %}
 Occasionally, the quality of the anatomical image is not sufficient to provide a good segmentation out-of-the-box. This for example happens if there are large spatial inhomogeneities in the MRI that are caused by the anatomical MRI being acquired while the subject was wearing an EEG cap. The **[ft_volumebiascorrect](/reference/ft_volumebiascorrect)** function allows correcting for these inhomogeneities. The **[ft_defacevolume](/reference/ft_defacevolume)** function can be used to erase parts of the MRI where there should be no signal, for example artifacts outside the head.
 
 For more information, you can consult this [frequently asked question](/faq/why_does_my_eegheadmodel_look_funny).
@@ -274,7 +274,7 @@ The headmodel data structure contains the following fields:
 
 The `bnd` field is the same as the mesh that we created in the previous step. The head model also contains a conductivity value for each compartment and a matrix used for the volume conduction model. Note that, as the unit of measurement for the head model is 'mm' and the coordsys is 'ctf', the EEG sensors should be also defined in 'mm' and the CTF coordinate system.
 
-{% include markup/danger %}
+{% include markup/red %}
 The order in which the different boundaries and tissue types are represented in the output of **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)** may depend on the BEM method you are using.
 {% include markup/end %}
 
@@ -312,7 +312,7 @@ _Figure; Determine the coordinate system in which the original electrodes are ex
 
 We cannot see what the origin of the coordinate system is aligned to. It is definitely _not_ interauricular, as none of the axes passes (approximately) through the ears. By answering the questions, we can establish that the electrodes are in a RAS coordinate system with the first positive x axis pointing to Right, the second positive y axis to Anterior and the third positive z axis to Superior.
 
-{% include markup/success %}
+{% include markup/green %}
 The specific template electrode set that we are using here is in fact coregistered with the MNI coordinate system. It is documented in more detail [here](/template/electrode/) and the corresponding template BEM headmodel is documented [here](/template/headmodel/#standard_bemmat).
 {% include markup/end %}
 
@@ -456,7 +456,7 @@ _Figure; Comparing the aligned template positions (red) and the automatically pl
 
 ### Exercise 2
 
-{% include markup/info %}
+{% include markup/blue %}
 Create a head model with method 'concentricspheres' that you fit on scalp, skull and brain surfaces, i.e. using the already made mesh.
 
 Plot the head model using **[ft_plot_headmodel](/reference/plotting/ft_plot_headmodel)**. You can use `facealpha` for the transparency, this helps to see the spheres together.
@@ -469,7 +469,7 @@ Note that the scalp is unrealistically thick compared to the skull; this is beca
 
 ### Exercise 3
 
-{% include markup/info %}
+{% include markup/blue %}
 In exercise 2, you created a head model with method 'concentricspheres'. How is its geometrical description defined? What is the difference between the geometrical description of the concentric spheres model and BEM model?
 {% include markup/end %}
 

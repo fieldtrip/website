@@ -120,7 +120,7 @@ During acquisition of the data, an Excel table was maintained to map the channel
 | 8       | 246        | FL84            |
 
 
-{% include markup/info %}
+{% include markup/blue %}
 Note that the OPM sensor number is not used here, but it might be relevant if you want to apply fine calibration, or if you want to account for the different noise characteristics of the different OPMs.
 {% include markup/end %}
 

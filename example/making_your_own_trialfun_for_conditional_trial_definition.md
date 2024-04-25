@@ -13,7 +13,7 @@ This trial-function should be a MATLAB function with the following function defi
 
 The configuration structure will contain the fields cfg.dataset, cfg.headerfile and cfg.datafile. If you want to pass additional information (e.g., trigger value), then you should do that in the sub-structure cfg.trialdef.xxx. The second output argument of the trialfun is optional, it will be added to the configuration if present (i.e. for later reference).
 
-{% include markup/info %}
+{% include markup/blue %}
 In the [fieldtrip/trialfun](https://github.com/fieldtrip/fieldtrip/tree/master/trialfun) directory you can find a number of example trial functions.
 {% include markup/end %}
 

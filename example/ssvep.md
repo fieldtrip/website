@@ -33,13 +33,13 @@ Finally, consider whether the stimulation contains
 
 ### Using time-domain analysis
 
-{% include markup/danger %}
+{% include markup/red %}
 This section is still to be written.
 {% include markup/end %}
 
 ### Using frequency analysis
 
-{% include markup/danger %}
+{% include markup/red %}
 This section should be made specific to the example dataset.
 {% include markup/end %}
 

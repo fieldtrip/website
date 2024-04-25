@@ -11,7 +11,7 @@ The Unicorn is available in a "Black" version, including head-mounted enclosure,
 
 ## Interface with MATLAB and FieldTrip
 
-{% include markup/info %}
+{% include markup/blue %}
 This MATLAB implementation mainly serves the purpose to test and demonstrate whether the Bluetooth protocol can directly be used on other (non-Windows) computers and to decipher the data stream. This implementation is inefficient and unstable, hence we recommend not to use this for serious research.
 {% include markup/end %}
 

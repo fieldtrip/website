@@ -96,7 +96,7 @@ As can be seen from the histogram, the difference in timing is on the order of l
 
 {% include image src="/assets/img/example/meg_eyelink/histogram_trigger.png" width="600" %}
 
-{% include markup/danger %}
+{% include markup/red %}
 Note that in this example, the estimated slope is not exactly 1.2, but 1.1999465. This is due to a very small difference in clock speed between the MEG acquisition computer and the Eyelink computer. If the mapping of events would have been based on a value of 1.2, and an alignment of a single early event in both recordings, then the asynchrony further along during the recording can become quite severe, on the order of ~225 ms for a 70 minute recording.
 {% include markup/end %}
 

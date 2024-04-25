@@ -11,6 +11,6 @@ When combining the source-level estimates of activity in multiple subjects, the 
 
 It is also possible to define the source reconstruction grid for each individual subject in such a way that all these grids are already aligned in MNI-space. The combination or statistic of source-level data across subjects can then directly be computed within the source-structure _without the need_ to interpolate and normalize each volume.
 
-{% include markup/info %}
+{% include markup/blue %}
 The content of this page has moved to another location, and is dealt with **in context** in the tutorial about [the construction of different types of source models](/tutorial/sourcemodel#subject-specific_grids_that_are_equivalent_across_subjects_in_normalized_space).
 {% include markup/end %}

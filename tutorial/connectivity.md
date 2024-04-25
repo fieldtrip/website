@@ -9,7 +9,7 @@ tags: [tutorial, freq, connectivity, coherence, granger, dtf, pdc]
 
 {% include /shared/tutorial/connectivity_simulation_intro.md %}
 
-{% include markup/info %}
+{% include markup/blue %}
 This tutorial contains hands-on material that we use for the [MEG/EEG toolkit course](/workshop/toolkit2015) and it is complemented by this lecture.
 
 {% include youtube id="ZBwh0Vm4fh4" %}
@@ -86,7 +86,7 @@ Rather than doing all the preprocessing again, you can download the preprocessed
 
 The source reconstruction contains the estimated power and the source-level time series of the averaged ERF, but here we are not interested in those. The _cfg.keepfilter_ option results in the spatial filter being kept in the output source structure. This filter can be used to reconstruct the single-trial time series as a virtual channel by multiplying it with the original MEG data.
 
-{% include markup/warning %}
+{% include markup/yellow %}
 In this case, the headmodel coordinates were defined in cm, this might be different for different headmodels. You can inspect the units of the headmodel with **[ft_read_headmodel](/reference/fileio/ft_read_headmodel)**
 
     hdm = ft_read_headmodel('SubjectCMC.hdm')
@@ -116,7 +116,7 @@ In this case, the headmodel coordinates were defined in cm, this might be differ
       sourcedata.trial{i} = beamformer * data.trial{i}(chansel,:);
     end
 
-{% include markup/warning %}
+{% include markup/yellow %}
 The LCMV spatial filter is computed using data in the time domain. However, no time-domain spatial filters (during preprocessing e.g., low-pass or high-pass filters) have been applied before hand. Consequently, the filter will suppress all noise in the data in all frequency bands. The spatial filter derived from the broadband data allows us to compute a broadband source level time series.
 
 If you would know that the subsequent analysis would be limited to a specific frequency range in the data (e.g., everything above 30 Hz), you could first apply a filter using **[ft_preprocessing](/reference/ft_preprocessing)** (e.g., _cfg.hpfilter=yes_ and _cfg.hpfreq=30_) prior to computing the covariance and the spatial filter.
@@ -164,7 +164,7 @@ We now recompute the virtual channel time series, but now only for the dipole di
 
 #### Exercise 8
 
-{% include markup/info %}
+{% include markup/blue %}
 Rather than using a sourcemodel in the beamformer that consists of all three (x, y, z) directions, you can also have the beamformer compute the filter for only the optimal source orientation. This is implemented using the _cfg.lcmv.fixedori='yes'_ option.
 
 Recompute the spatial filter for the optimal source orientation and using that spatial filter (a 1x151 vector) recompute the time series.
@@ -231,19 +231,19 @@ The spectrum reveals coherence peaks at 10 and 20 Hz (remember that the initial 
 
 #### Exercise 9
 
-{% include markup/info %}
+{% include markup/blue %}
 The spectral decomposition was performed with mutitapering and 5 Hz spectral smoothing (i.e. 5Hz in both directions). Recompute the spectral decomposition and the coherence with a hanning taper. Recompute it with mutitapering and 10 Hz smoothing. Plot the three coherence spectra and look at the differences.
 {% include markup/end %}
 
 #### Exercise 10
 
-{% include markup/info %}
+{% include markup/blue %}
 Rather than looking at undirected coherence, the virtual channel level data can now also easily be submitted to directed connectivity measures. Compute the spectrally resolved granger connectivity and try to assess whether the directionality is from cortex to EMG or vice versa.
 {% include markup/end %}
 
 #### Exercise 11
 
-{% include markup/info %}
+{% include markup/blue %}
 Let's say you wanted to look at cortico-cortical connectivity, e.g., interactions between visual and motor cortex in a particular frequency band. How would you approach this?
 {% include markup/end %}
 

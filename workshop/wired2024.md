@@ -29,7 +29,7 @@ We develop FieldTrip to be compatible with MATLAB versions up to 5 years old. Pl
 
 ### Download and install a recent FieldTrip version
 
-{% include markup/info %}
+{% include markup/blue %}
 Please download and unzip a recent version of FieldTrip from <https://github.com/fieldtrip/fieldtrip/releases> and download the tutorial data.
 {% include markup/end %}
 
@@ -42,7 +42,7 @@ To get going, you need to start MATLAB. Then, you need to issue the following co
 
 The `<your_fieldtrip_location>` is the directory in which all the code is after you have unzipped the downloaded folder.
 
-{% include markup/danger %}
+{% include markup/red %}
 Please do NOT use the graphical path management tool from MATLAB. In this hands-on session we'll manage the path from the command line, but in general you are much better off using the `startup.m` file than the path GUI.
 
 Please do NOT add FieldTrip with all subdirectories, subdirectories will be added automatically when needed, and only when needed. See also this [frequently asked question](/faq/installation).

@@ -5,7 +5,7 @@ tags: [example, bids, sharing, eyelink, smi, tobii]
 
 # Converting an example eye tracker dataset for sharing in BIDS
 
-{% include markup/danger %}
+{% include markup/red %}
 The [BIDS standard](https://bids.neuroimaging.io) does currently not specify how to represent eye tracker data. This example - and the support that is implemented in the **[data2bids](/reference/data2bids)** function - should be considered as a preliminary proposal to help researchers with their existing data. This example may also serve to start a discussion on whether and how this data type should be added to the [BIDS specification](http://bids-specification.readthedocs.io).
 {% include markup/end %}
 
@@ -13,13 +13,13 @@ Eye tracking data can be stored in the BIDS representation similar to [behaviora
 
 Rather than storing the eye tracker data as generic physiological data in the `_pysio.tsv` file, the implementation of **[data2bids](/reference/data2bids)** allows it to be specified as eyetracker data, resulting it to be written in an `_eyetracker.tsv` file, with an associated `_eyetracker.json` file with metadata details on the equipment and experiment.
 
-{% include markup/info %}
+{% include markup/blue %}
 Information that need to be further considered to be documented in the metadata is for example whether both eyes or only one was tracked, sapling rate, if and how pupil diameter is quantified, what calibration process was used, how to interpret the gaze position (pixels, degrees), whether the origin is at the center of the screen or the upper left corner, etc.
 {% include markup/end %}
 
 If the online analysis in the eye tracker software also detects blinks, saccades, and other events with a distinct time (i.e. non-continuous), those can also be added to the `_events.tsv` file.
 
-{% include markup/success %}
+{% include markup/green %}
 All data for the following examples is available from our [download server](https://download.fieldtriptoolbox.org/example/bids_eyetracker/).
 {% include markup/end %}
 
@@ -29,7 +29,7 @@ In general: if your original data is in a different format than the BIDS represe
 
 There are numerous eye tracking systems, such as SR Research EyeLink, Tobii, EyeTech, GazePoint, SmartEye and Pupil Labs. We cannot provide examples for all of them, but in principle data from each system would be stored in the same standard BIDS representation, allowing it to be reused by others.
 
-{% include markup/info %}
+{% include markup/blue %}
 There is a draft BIDS extension proposal (BEP) to extend the specification with eye tracker data, you can find the discussion on [google docs](https://docs.google.com/document/d/1eggzTCzSHG3AEKhtnEDbcdk-2avXN6I94X8aUPEBVsw/edit#).
 {% include markup/end %}
 

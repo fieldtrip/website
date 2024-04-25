@@ -77,6 +77,6 @@ Registration is closed.
 
 For the hands-on sessions we will use MATLAB R2016b, which you can start from the Windows menu. To ensure that everything runs smooth, we will work with a clean and well-tested version of FieldTrip that we have installed on all computers. Importantly, the tutorial data does not have to be downloaded but will also be distributed on the Windows computers under the `D:\toolkit2019` directory.
 
-{% include markup/danger %}
+{% include markup/red %}
 Please use MATLAB version 2016b when available. Only a few of the hands-on computers don't have version 2016b installed, please use the latest MATLAB version that is available on those.
 {% include markup/end %}

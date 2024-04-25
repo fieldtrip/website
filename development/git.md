@@ -7,7 +7,7 @@ tags: [development, git]
 
 The FieldTrip code and website are both maintained on [https://github.com/fieldtrip](https://github.com/fieldtrip).
 
-{% include markup/info %}
+{% include markup/blue %}
 To quickly get access to the code, you would do the following from the command line or the equivalent in a graphical git interface, such as the [GitHub desktop](https://desktop.github.com).
 
 ```bash
@@ -155,7 +155,7 @@ If you have filed an issue on [GitHub](/development/issues), you could name your
 
 Now we will create a function that displays _Welcome to FieldTrip_ on screen. Let's call it _ft_welcome.m_, just as you'd create any new MATLAB function.
 
-{% include markup/warning %}
+{% include markup/yellow %}
 When you create a new function or edit an existing one, follow the [code guidelines](/development/guideline/code) for consistent and readable code.
 {% include markup/end %}
 
@@ -223,7 +223,7 @@ where the option -m allows you to add a log entry. git will return:
 create mode 100644 ft_welcome.m
 ```
 
-{% include markup/warning %}
+{% include markup/yellow %}
 Follow these [guidelines](/development/guideline/code#svn_log_messages) when writing a log entry.
 {% include markup/end %}
 
@@ -275,7 +275,7 @@ which means that we are pushing the commits in the branch called _welcome_ to th
 
 Go to your copy of the repository on [github.com](https://github.com) to review the changes. By default you are shown the branch _master_, so you should switch to the newly created branch called _welcome_. Review the commits, by clicking on _commits_. Click on **pull request** in the top middle. The next page will show you the changes that are part of the pull request.
 
-{% include markup/warning %}
+{% include markup/yellow %}
 You are about to send the changes to the main developers of FieldTrip, so explain in the box what you did and why. Please, review the commits very carefully before sending the pull request. It sometimes happens that you have commits that you forgot about and you did not intend to share.
 {% include markup/end %}
 
@@ -294,7 +294,7 @@ git push origin :welcome
 
 Your suggested contributions to FieldTrip will not be the only changes; the code on the master branch is constantly being updated by other developers/contributors as well. This means that you should regularly synchronize to benefit from these updates, and to ensure that you won't be making changes to an outdated version of the code.
 
-{% include markup/warning %}
+{% include markup/yellow %}
 It is important to first pull the changes from others before you start implementing your own changes, otherwise your (new) changes might conflict with already accepted changes to the code.
 {% include markup/end %}
 

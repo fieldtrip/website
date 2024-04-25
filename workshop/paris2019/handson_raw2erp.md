@@ -5,7 +5,7 @@ tags: [paris2019, meg, timelock, preprocessing, mmfaces]
 
 # From raw data to ERP
 
-{% include markup/info %}
+{% include markup/blue %}
 This tutorial was written specifically for the [PracticalMEEG workshop in Paris](/workshop/paris2019) in December 2019.
 {% include markup/end %}
 
@@ -13,7 +13,7 @@ This tutorial was written specifically for the [PracticalMEEG workshop in Paris]
 
 In this tutorial, we will learn how to read in 'raw' data from a file, and to apply some basic processing and averaging in order to inspect event-related fields.
 
-{% include markup/warning %}
+{% include markup/yellow %}
 This tutorial only briefly covers the steps required to import data into FieldTrip and preprocess it. Rather, this tutorial has a focus on processing multiple runs of the same dataset, and exploring the different channel types. Preprocessing is covered in more detail in the [preprocessing](/tutorial/preprocessing) tutorial, which you can refer to if you want more details.
 {% include markup/end %}
 
@@ -241,7 +241,7 @@ Alternatively, the data of different channel types can be visualised within a si
 
 #### Exercise
 
-{% include markup/info %}
+{% include markup/blue %}
 Explore the data, using the interactive property of the figure. Visualize the topographies of the ERF/ERPs in the latency window between 175 and 250 ms. Also inspect the topographies in the latency window from 300-450 ms. Explain the differences in topography (between latencies and channel types) based on putative underlying neuronal generators.
 {% include markup/end %}
 

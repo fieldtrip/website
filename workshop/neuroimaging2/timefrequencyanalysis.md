@@ -59,7 +59,7 @@ In this tutorial, procedures of 4 types of time-frequency analysis will be shown
 
 The first step is to read the data using the function **[ft_preprocessing](/reference/ft_preprocessing)**. It is recommended to read larger time intervals than the time period of interest. In this example, the time of interest is from -0.5 s to 1.5 s (t = 0 s defines the time of stimulus); however, the script reads the data from -1.0 s to 2.0 s.
 
-{% include markup/exercise %}
+{% include markup/blue %}
 **Exercise 1**: Why is it recommended to read in larger time intervals than the time window of interest when we want to do time-frequency analysis?
 {% include markup/end%}
 
@@ -83,7 +83,7 @@ Then, execute the following code, which will determine the time indices of the t
 
     cfg = ft_definetrial(cfg);
 
-{% include markup/exercise %}
+{% include markup/blue %}
 **Exercise 2**: What do the configuration values `cfg.trialdef.prestim` and `cfg.trialdef.poststim` denote? Have a look at the documentation by doing `edit ft_definetrial` (or browse this wiki) if needed.
 {% include markup/end%}
 
@@ -154,7 +154,7 @@ To facilitate understanding of the output of `ft_freqanalysis`, it is instructiv
     xlabel('time (s)');
     ylabel('frequency (Hz)');
 
-{% include markup/exercise %}
+{% include markup/blue %}
 **Exercise 3**: What do you notice most clearly in these raw power values? How does power vary across frequencies? And across time?
 {% include markup/end%}
 
@@ -207,11 +207,11 @@ From the previous figure you can see that there is an increase in power around 1
     figure
     ft_topoplotTFR(cfg, TFRhann);
 
-{% include markup/exercise %}
+{% include markup/blue %}
 **Exercise 4**: By default, FieldTrip plotting functions support an interactive mode. This interactive mode does not work in combination with Matlab Live scripts. Therefore: also execute the code for `ft_multiplotTFR` in the Matlab command window directly. That allows you to drag a box around sensors of interest, click that box, and you'll get an average TFR for those sensors only. In the resulting TFR plot, drag a box around a time/frequency window of interest, and you'll see a topographical plot. From that topoplot, you can again select sensors and go to an averaged TFR, etc. Optionally see also the [plotting tutorial](/tutorial/plotting) for more details. Play around with interactive mode and reflect briefly on what you see.
 {% include markup/end%}
 
-{% include markup/exercise %}
+{% include markup/blue %}
 **Exercise 5**: Plot the TFR of sensor MLC24. How do you account for the increased power at ~300 ms post-stimulus (hint: compare to what you might expect in an event-related field)?
 {% include markup/end%}
 
@@ -219,7 +219,7 @@ From the previous figure you can see that there is an increase in power around 1
 
 It is also possible to calculate the TFRs with respect to a time window that varies with frequency. Typically the time window gets shorter with an increase in frequency. The main advantage of this approach is that the temporal smoothing decreases with higher frequencies, leading to increased sensitivity to short-lived effects. However, an increased temporal resolution is at the expense of frequency resolution.
 
-{% include markup/exercise %}
+{% include markup/blue %}
 **Exercise 6**: Why is it the case that increased temporal resolution is at the expence of frequency resolution?
 {% include markup/end%}
 
@@ -251,7 +251,7 @@ To plot the result use **[ft_singleplotTFR](/reference/ft_singleplotTFR)**:
     figure
     ft_singleplotTFR(cfg, TFRhann7);
 
-{% include markup/exercise %}
+{% include markup/blue %}
 **Exercise 7**: Adjust the length of the time-window and thereby degree of smoothing. Use **[ft_singleplotTFR](/reference/ft_singleplotTFR)** to show the results. Discuss the consequences of changing these setting.
 {% include markup/end%}
 
@@ -259,7 +259,7 @@ To plot the result use **[ft_singleplotTFR](/reference/ft_singleplotTFR)**:
 
 As discussed in detail in the videos, lectures, and last week's assignment, a common way to calculate TFRs is convolution with Morlet wavelets. The approach is equivalent to calculating TFRs with sliding time windows that depend on frequency using a taper with a Gaussian shape.
 
-{% include markup/exercise %}
+{% include markup/blue %}
 **Exercise 8**: Why are the two approaches equivalent? (Approach 1: slide a time window over your data, multiply the data in each window with a Gaussian, then FFT; approach 2: construct a wavelet by multiplying a complex sinusoid with a Gaussian window, and convolve that wavelet with your data.)
 {% include markup/end%}
 
@@ -289,7 +289,7 @@ Plot the result (again, recommended to do this in the command window directly be
     ft_multiplotTFR(cfg, TFRwave)
 
 
-{% include markup/exercise %}
+{% include markup/blue %}
 **Exercise 9A**: Adjust `cfg.width` and see how the TFRs change. **Exercise 9B**: Make some plots using `absolute` baseline correction instead of `db` and see how the TFRs change. I'd recommend switching to `ft_singleplotTFR` for one or a few channels of interest for these exercises, rather than doing the full `ft_multiplotTFR` each time.
 {% include markup/end%}
 
@@ -336,7 +336,7 @@ Plot the result (again in the command window for interactive plotting):
     figure
     ft_multiplotTFR(cfg, TFRmult)
 
-{% include markup/exercise %}
+{% include markup/blue %}
 **Exercise 10**: Explore the TFRs that result from multitapering. Reflect on how the alpha/beta-band (~10-20 Hz) response around 1-1.5s post-stimulus appears now, in comparison with the earlier approaches. Why might it be beneficial to use multitapering?
 {% include markup/end%}
 

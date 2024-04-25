@@ -17,7 +17,7 @@ When reading MEG data from the original files, the gradiometer sensor data is au
 
 For source reconstruction we need to express all geometrical data in a consistent coordinate system that is defined relative to the participant's head. In FieldTrip it is common to do MEG source reconstruction in the coordinate system of the MEG acquisition device. Consequently, the MRI needs to be updated using **[ft_volumerealign](/reference/ft_volumerealign)** so that it is expressed relative to the same anatomical landmarks as the MEG data.
 
-{% include markup/danger %}
+{% include markup/red %}
 Other MEG analysis software may use other conventions. For example in MNE-Python it is common to do MEG source reconstruction in a coordinate system that is the result of the Freesurfer pipeline which is used to extract the cortical sheet. That means that, rather than aligning the MRI to the MEG, it aligns the MEG to one of the Freesurfer outputs.
 {% include markup/end %}
 

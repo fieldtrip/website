@@ -96,7 +96,7 @@ For the hands-on sessions we will use MATLAB R2021b, which is installed on the P
 
 To ensure that everything runs smoothly, we will work with a clean and well-tested version of FieldTrip that we have installed on all computers. Importantly, the tutorial data does _not_ have to be downloaded on the PCs and has already been placed in the course accounts' home directories. These home directories are mounted as the computer's M-drive, and the FieldTrip code plus the necessary data are located in `M:\toolkit2023`. If you start MATLAB from the Desktop shortcut, FieldTrip will be automatically added to the MATLAB path, and you will be taken to the directory that contains the course data.
 
-{% include markup/danger %}
+{% include markup/red %}
 Please do not use another MATLAB version than R2021b. It should be available on all hands-on computers.
 {% include markup/end %}
 
@@ -108,7 +108,7 @@ A recent copy of FieldTrip and the data have been preinstalled on the computer a
 
 The `restoredefaultpath` command clears your path, keeping only the official MATLAB toolboxes. The addpath statement adds the present working directory, i.e. the directory containing the FieldTrip main functions. The `startup` command runs the `startup.m` file in the `toolkit2023` directory, which ensures that all required subdirectories are added to the path.
 
-{% include markup/danger %}
+{% include markup/red %}
 In general, please do NOT use the graphical path management tool from MATLAB. In this hands-on session we'll manage the path from the command line, but in general you are much better off using the startup.m file than the path GUI.
 
 Furthermore, please do NOT add FieldTrip with all subdirectories, subdirectories will be added automatically when needed, and only when needed (see this [FAQ](/faq/installation).

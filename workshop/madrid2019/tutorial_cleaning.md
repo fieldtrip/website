@@ -70,7 +70,7 @@ We will start with some minimal preprocessing:
     cfg.refmethod  = 'avg';
     data = ft_preprocessing(cfg);
 
-{% include markup/danger %}
+{% include markup/red %}
 As you notice we use the average reference, which is breaking with de Cheveigne & Arzounian's guidelines. We do it anyways because the average reference enhances the interpretability of the data when using
 **[ft_databrowser](/reference/ft_databrowser)**. For example, interpreting topoplots to identify both artifacts and interesting electrophysiological phenomena is always easier with an average reference. Keep in mind though that by subtracting an average, noisy periods present in only few EEG channels will spread to all other channels.
 {% include markup/end %}
@@ -115,7 +115,7 @@ it.
 
 ##### Exercise 1
 
-{% include markup/info %}
+{% include markup/blue %}
 Browse through the segments to get a feel for the data. Do you see any obvious
 artifacts? There is one channel carrying several artifacts throughout the
 recording, can you find it? Use the identify button to see the channel name.
@@ -175,7 +175,7 @@ noisy segments.
 Following de Cheveigne and Arzounian's third step, we are going to _detect and
 interpolate temporally-local channel-specific glitches._
 
-{% include markup/danger %}
+{% include markup/red %}
 Note we deliberately skip step _2. apply robust detrending to each channel_ for
 later because it is necessary to find first the pieces of data with artifacts
 and to exclude them. De Cheveigne and Arzounian's detrending algorithm has the
@@ -216,7 +216,7 @@ your data structure and compare them to the original data structure.
 Subsequently we identify the channels with the artifacts using the algorithm
 by de Cheveigne (see nt_find_bad_channels.m in Noisetools).
 
-{% include markup/danger %}
+{% include markup/red %}
 The following (rather complicated) piece of code is a mix of regular MATLAB code
 with FieldTrip functions. If it is useful, we might add it to one of the
 FieldTrip functions later to make it easier to use.
@@ -253,7 +253,7 @@ combine the trials into one structure again.
 
 ##### Exercise 2
 
-{% include markup/info %}
+{% include markup/blue %}
 Visualize the selected artifacts in data_bad with
 **[ft_databrowser](/reference/ft_databrowser)** and compare it to data_fixed.
 You can also just plot the bad channel by specifying its name in cfg.channel. Or
@@ -279,7 +279,7 @@ artifacts and append the fixed data.
 
 ##### Exercise 3
 
-{% include markup/info %}
+{% include markup/blue %}
 Inspect the new data structure. What has changed?
 {% include markup/end %}
 
@@ -402,7 +402,7 @@ with the 'topo' and 'unmixing' matrix we can reconstruct everything.
     comp = rmfield(comp, 'trial');
     save([subj 'run-03_comp.mat'], '-struct', 'comp');
 
-{% include markup/danger %}
+{% include markup/red %}
 In general we recommend to **not** change the FieldTrip structures. It increases
 the chances of accidental data corruption and errors later in your analysis
 pipeline.
@@ -450,7 +450,7 @@ by the independent component's time course.
 
 ##### Exercise 4
 
-{% include markup/info %}
+{% include markup/blue %}
 Use **[ft_databrowser](/reference/ft_databrowser)** one last time to view the
 cleaned data. Did the ICA successfully correct all eye blinks?
 {% include markup/end %}
