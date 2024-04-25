@@ -11,7 +11,7 @@ This tutorial describes how to define epochs of interest (trials) from recorded 
 
 In this tutorial, preprocessing and segmenting the data into epochs/trials are done in a single step. If you are interested in how to do preprocessing on continuous data prior to segmenting it into epochs/trials, you can check the [Preprocessing - Reading continuous data](/tutorial/continuous) tutorial.
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 This data in this tutorial is originally from the [NatMEG workshop](/workshop/natmeg2014) and it is complemented by this lecture. This lectured featured the combination of MEG and EEG. Please go [here](/workshop/natmeg2014) to see in its entirety.
 
 {% include youtube id="zOxCqcYmIfA" %}
@@ -88,7 +88,7 @@ If your recorded is continuous, specify _cfg.continuous = 'yes'_. If your data i
 {% include image src="/assets/img/workshop/oslo2019/databrowser.png" width="650" %}
 _Figure 1: Raw plot of electrodes using ft_databrowser_
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Get a feel of your data by browsing through it. Do you see any obvious artifacts?
 {% include markup/end %}
 
@@ -191,7 +191,7 @@ _Figure 2: The visual summary plot tool_
 
 You can use different metrics to calculate the summary, but variance is usually a good metric.
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 What is best - using an _objective_ automatic procedure with a common threshold between subjects, or should you use this more _"subjective"_ method?
 {% include markup/end %}
 
@@ -388,6 +388,6 @@ _Figure 9: A topographical plot showing the MMN (average over 100 to 170 ms)_
 
 Play around with the _zlim_ to get a feeling for how the _difference_wave_ changes topography. Try also plotting the the ERPs themselves.
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 **Exercise:** The topographies that we have seen in the figures and movie have a rather loose fit of the circle (representing the head) around the electrodes. Explore the **[ft_prepare_layout](/reference/ft_prepare_layout)** function and [documentation](/tutorial/layout) to improve the topographic representation.
 {% include markup/end %}

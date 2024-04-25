@@ -110,7 +110,7 @@ Note that the jumps are easier to identify if you would not have applied a high-
 
 #### Exercise
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Preprocessing and filtering serves to reduce artifacts (such as drifts) and hence makes artifacts less visible. Unpreprocessed data gives the best representation of the artifacts.
 
 Repeat the inspection with ft_databrowser on the original data, without high-pass filter and without resampling. That requires that you have to call ft_preprocessing again. Look at the channels that start with `MTL*` around 178 seconds into the recording and compare the jump to the one you observed in the filtered and downsampled data.

@@ -120,7 +120,7 @@ The new electronics comes with a new (beta) version of the acquisition software.
 
 Regardless whether you have the 3000-series electronics or not, the new version of the software (probably version 6.x and up) has the same shared-memory interface.
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Whereas in the software version _6.1.5-el6_7.x86_64-20160720-3344_ the ACQ_BUFFER_SIZE was changed from 28160 into 40000, and the scaling of the HLC channels seems to be off in this version, the more recent software version _6.1.14-beta-el6_8.x86_64-20180116-3847_ writes the data to shared memory in the original format with 28160 samples per packet. Please look in the code **[ctf.h](https://github.com/fieldtrip/fieldtrip/blob/master/realtime/src/acquisition/ctf/ctf.h)** and adjust the ACQ_BUFFER_SIZE for your software version.
 {% include markup/end %}
 

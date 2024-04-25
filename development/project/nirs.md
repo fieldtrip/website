@@ -78,7 +78,7 @@ additional fields can contain the lookup table for the absorption coefficient or
 
 The resulting transform matrix can be multiplied with the data to obtain the concentrations. A respective ft_convertToODs function can be made to undo the conversion.
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 I think we actually _do_ need a high-level function dealing directly with the data. Otherwise the channel labels will not be updated respectively. The ft_convertODs function can, however, serve as the low-level implementation.
 
 Update: We might overcome this problem by having the function return a montage, which contains the new channel labels and the mixing coefficient of the channels

@@ -252,7 +252,7 @@ This is the last step for creating a forward model. We could now use the lead fi
 
 #### Exercise 1
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 So far we only created a BEM volume conduction model. To create a FEM volume conduction model use the same steps as beforehand.
 {% include markup/end %}
 
@@ -271,7 +271,7 @@ and Step 6 into
 
 #### Exercise 2
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 You can also find the segmentation 'AVG14-0Years3T_segmented_BEM3.mat' to create a head model. This a segmentation is processed version of a segmentation provided by alongside the MRI in the Neurodevelopmental MRI Database from the [John E. Richards Lab](https://jerlab.sc.edu). The segmentation was already preprocessed with the Steps 1-4.
 {% include markup/end %}
 

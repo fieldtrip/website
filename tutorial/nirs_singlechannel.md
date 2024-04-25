@@ -64,7 +64,7 @@ It might also be helpful to check out the code to obtain an understanding of wha
 
     edit ft_preprocessing
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 If this is your first time using FieldTrip you might also want to have a look at the [introduction to the toolbox and MATLAB tutorial](/tutorial/introduction).
 {% include markup/end %}
 
@@ -88,7 +88,7 @@ FieldTrip is finished when you see something like this on the screen
 
     >> the call to "ft_preprocessing" took 9 seconds
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 There are more options to specify when reading in your data, such as cfg.padding, cfg.padtype and cfg.continuous. Those options have default values or are determined automatically, so we ignore them here but you can find all of them in the help documentation.
 
 Through the option cfg.trl you can specify which trials should be read in. For now we will read in all trials, but we will make a selection later on.
@@ -135,7 +135,7 @@ _Figure 3: Display of one pair of channels (two wavelengths) in the databrowser.
 
 #### Exercise 1
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Take a moment to familiarize yourself with the user-interface. Change the horizontal and vertical scales until you can see the heartbeat signal in the selected channels. Tip: A time slice of something between 10 to 20 seconds is optimal. Picking up the heartbeat in the NIRS measurement is a sign of good data quality, if the heartbeat cannot be detected in the data, contact with the skin must have been poor.
 {% include markup/end %}
 
@@ -159,7 +159,7 @@ You will see that FieldTrip identified 8 artifacts through this procedure. Note 
 
 #### Exercise 2
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Play around with the cut-off z-value. You can do this by running the artifact rejection in interactive mode by adding
 
     cfg.artfctdef.zvalue.interactive = 'yes';
@@ -180,7 +180,7 @@ You might have noticed that you were looking at optical density (OD) values rath
 
 #### Exercise 3
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Check out the data again! As expected, the selected channel, in which you were able to see a clear heartbeat in the raw signal, also shows a clean signal once transformed to oxy- and deoxyHb values, right?
 {% include markup/end %}
 
@@ -249,13 +249,13 @@ So we pulled our data out of the measurement. The data looks crisps and clear.
 
 #### Exercise 4
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 All signal values seem to be around the same values. Why could that be?
 {% include markup/end %}
 
 #### Exercise 5
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 You might want to perform an additional preprocessing step now. What steps do you consider useful? Check out the options in **[ft_preprocessing](/reference/ft_preprocessing)**!
 {% include markup/end %}
 

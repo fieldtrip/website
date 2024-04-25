@@ -381,6 +381,6 @@ _Figure: Coherence spectrum for two 10 Hz signals with a somewhat consistent pha
 
 ### Exercise
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Change the phase spread factor (phsspreadfac) in the coherence analysis and see what the outcome is.
 {% include markup/end %}

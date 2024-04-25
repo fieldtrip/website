@@ -34,7 +34,7 @@ Considering an experiment from the general perspective of an ANOVA, we can have 
 
 In the [eeg-language](/tutorial/eeg_language) dataset there is one factor for "stimulus modality" with three levels for pictures, visual, and auditory. Another factor is the "stimulus category" with two levels for animals and tools. This can be represented in a 3-by-2 table.
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Note that the data in the [eeg-language](/tutorial/eeg_language) dataset has additional characteristics that are experimentally controlled, such as different stimulus items in each category, targets versus non-targets, and also responses on the targets with varying response latencies. We are not further considering these here, but you could extend the table with these factors.
 {% include markup/end %}
 

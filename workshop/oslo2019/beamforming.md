@@ -12,7 +12,7 @@ This tutorial explains beamformer source reconstruction techniques in the freque
 For this, we will continue working on the [paradigm](/workshop/natmeg2014/meg_audodd) we used in the previous tutorial. However, we will do the source reconstruction using the MEG data recorded in the same session, not the EEG data.
 Please note that later in this workshop you will learn how to construct a forward model, so details on that step are omitted here. The forward modeling lecture will be geared towards EEG, so that you can apply what you learn here also to EEG data.
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 This tutorial contains the hands-on material for the [Oslo 2019 workshop](/workshop/oslo2019) and is complemented by this lecture, which was filmed at an [earlier workshop at NatMEG](/workshop/natmeg2014).
 
 {% include youtube id="7eS11DtbIPw" %}
@@ -106,7 +106,7 @@ Now we select the time window of interest using **[ft_redefinetrial](/reference/
 
 ### Exercise 1: data length
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Why is it important that the length of each data piece is the length of a fixed number of oscillatory cycles?
 {% include markup/end %}
 
@@ -143,7 +143,7 @@ The cross-spectral density data structure has a similar data structure as other 
            grad: [1x1 struct]     % MEG sensor information
             cfg: [1x1 struct]     % Configuration
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 How come our target frequency is 17.8571, didn't we ask for 18? _Hint: How large is our time window?_
 {% include markup/end %}
 
@@ -218,7 +218,7 @@ It is ideal to contrast the activity of interest against some control.
     - Use normalized leadfields (that is what we did above!)
     - Activity contrasted with estimated noise
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Why shouldn't we calculate a spatial filter for both conditions separately in the case of contrasting conditions? Would there be a reason to do so?
 {% include markup/end %}
 
@@ -245,7 +245,7 @@ To start with this, we need to compute the oscillatory power for both conditions
     powcsd_right     = ft_freqanalysis(cfg, data_timewindow);
 
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 You could also compute powcsd_all with `cfg.keeptrials` set to `yes` and use the `cfg.trials` option later in **[ft_sourceanalysis](/reference/ft_sourceanalysis)** or using **[ft_selectdata](/reference/utilities/ft_selectdata)**. This would be computationally more efficient, but requires more memory.
 {% include markup/end %}
 
@@ -314,16 +314,16 @@ _Figure: Source plot of the difference in beta power between the left and right 
 
 ### Exercise 2: understanding the results
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Try to explain the location of the red and blue blobs.
 {% include markup/end %}
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 The 'ortho' method is not the only plotting method implemented. Use the 'help' of **[ft_sourceplot](/reference/ft_sourceplot)** to find what other methods there are and plot the source level results. What are the benefits and drawbacks of these plotting routines?
 {% include markup/end %}
 
 ### Exercise 3: regularization
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 The regularization parameter `lambda` was '5%'. Change it to '0%' or to '10%' and plot the power estimate. How does the regularization parameter affect the properties of the spatial filter?
 {% include markup/end %}

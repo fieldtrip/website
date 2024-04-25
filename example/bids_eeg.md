@@ -17,7 +17,7 @@ We will describe two approaches: in the first the data files are is kept in thei
 
 It is important that you use appropriate tools. BIDS stores metadata in TSV and JSON files, which makes then not only machine readable, but also human readable. A good graphical text/code editor helps you to navigate through the full directory structure and check or update the content of individual files. We recommend the [atom editor](http://atom.io/), but there are good [alternatives](https://alternativeto.net/software/atom/).
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 The BIDS standard for EEG is introduced in [this preprint publication](https://psyarxiv.com/63a4y/), which has been peer reviewed and accepted for publication in [Scientific Data](http://nature.com/sdata/). The full [BIDS specification](https://bids-specification.readthedocs.io/en/stable/) including MEG, iEEG, MRI and behavioral data is maintained and available online.
 {% include markup/end %}
 

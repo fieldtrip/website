@@ -98,7 +98,7 @@ You will see something like this in the command window:
 
 The structure **data_raw** contains all data and information about the experiment, all stored in separate fields.
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 For information about FieldTrip data structures and their fields, see this [frequently asked question](/faq/how_are_the_various_data_structures_defined).
 {% include markup/end %}
 
@@ -133,7 +133,7 @@ Plotting the data from ADC001 and ADC002 will yield the figure below, showing th
 
 _Figure 4: Oddball paradigm trigger. All stimuli onsets are indicated by the blue lines. Red dotted lines indicate onsets of the deviants. You can recognize four blocks of events._
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 **Exercise 1**:
 Zoom in on 355 to 365 seconds to better see what is going on. All stimuli onsets are indicated by the blue lines. Red dotted lines indicate onsets of the deviants (the oddballs). Can you now better spot the oddball?
 {% include markup/end %}
@@ -142,7 +142,7 @@ FieldTrip detects the onset in the ADC channels automatically and represents the
 
     event = ft_read_event('LR-01-2015-06-01-0002.oxy3')
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 **Exercise 2**:
 Explore the information in the event structure. How many stimuli were played, and how many oddballs? As not all events are stimuli onsets, it might help to select the oddballs with `adc002 = find(strcmp({event.type}, 'ADC002'));`
 {% include markup/end %}
@@ -159,13 +159,13 @@ Since the hemodynamic response takes about 5 to 10 s to reach its peak (i.e. cor
     cfg.resamplefs        = 10;
     data_down             = ft_resampledata(cfg, data_raw);
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 If the resampling factor is larger than 10, it is better to resample multiple times. See [here](https://allsignalprocessing.com/very-low-frequency-filtering/).
 {% include markup/end %}
 
 Downsampling of the slow (compared to EEG and MEG) NIRS signal would normally not be needed, but further down we will segment the data in the reponses to the standard and to the deviant tones. In EEG or MEG the segments of each trial are usually in the order of magnitude of a second or so, and trials do not overlap. In NIRS we need very long segments in the analyusis since the HRF is so slow. The auditory stimuli in this experiment follow each other rapidly, which causes the data segments for the trials to overlap. These overlapping segments are memory inefficient, hence we use downsampling. An alternative would have been to skip the processing of the responses to the standard tones (which we don't look at anyway) and only process the deviants.
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 The resampling also includes low-pass filtering of the data. As the new sampling rate is 10 Hz, we will lose data with frequencies larger than 5 Hz. This means we will lose a lot of information from the standards in our experiment, as they are presented near 6.7 Hz, but we keep the deviant information, which is presented near 0.6 Hz. For the current analysis, we are only interested in the deviant data. Just remember: be wary of filtering!
 {% include markup/end %}
 
@@ -293,7 +293,7 @@ _Figure 7: Epoched optical density data around the first deviant stimulus._
 
 The most obvious thing you should see, is the heartbeat. This is great! It means that your subject is alive and has some blood flowing through his/her brain (or skin). Importantly, this is an indicative sign of a good measurement. If you would not see this, you could throw this data in the bin (see next paragraph).
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 **Exercise 3**:
 Inspect the signal carefully! When does it increase/decrease, when does it peak? Could this be a functional response? We have to do a few more additional analysis steps, before we know for sure.
 {% include markup/end %}
@@ -325,7 +325,7 @@ You can see that you throw away some channels in data_sci.label, where we now on
 
 We already removed major motion artifacts by epoching, thus removing the periods in between blocks, and by throwing away poorly coupled optodes. Therefore, this step can be ignored for this dataset.
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 **Exercise 4**: We just wrote "Therefore, this step can be ignored." Check this yourself, are there indeed no artifacts? Hint: you can use `cfg.artfctdef.zvalue.interactive = 'yes';` and `[cfg, artifact] = ft_artifact_zvalue(cfg, data_epoch);` like in Exercise 2 of the single channel tutorial.
 {% include markup/end %}
 
@@ -416,7 +416,7 @@ _Figure 11: A so-called multiplot of the data: the average time course displayed
 
 You can also generate a spatial representation of the signal at a certain time point, or averaged over a time window. To plot the response that was found during a specific time window, you will need to specify this by setting limitations to the time dimension. The time window can be set by using `cfg.xlim = [5 7];`. The scale for the strength of the response can be set from -0.2 to 0.2, but this depends on your data: many fNIRS researchers use block designs, and depending on the block duration, the response may gain a larger amplitude. In the current data, the scale can be derived from the previous figure, which was generated an automatic scaling of the response amplitude.
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Per default FieldTrip uses the minimum and the maximum in the selected part of the data for the `zlim` parameter. Setting the scale manually has the advantage that you can set zero as the middle point in the scale, which can be helpful for the interpretation of the color-coded graph.
 {% include markup/end %}
 

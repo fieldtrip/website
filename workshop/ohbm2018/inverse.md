@@ -188,25 +188,25 @@ _Figure 4. Minimum norm estimation with FEM model for MEG_
 
 #### Exercise 1
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Can you think of reasons why the dipoles are at different locations?
 {% include markup/end %}
 
 #### Exercise 2
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 You can play around with cfg.mne.lambda? Do you see the influence of different lambdas on the MNE solution?
 {% include markup/end %}
 
 #### Exercise 3
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 You can also play around with other parameters for the MNE. To find out more about MNE just type "help minimumnormestimate" into Matlab
 {% include markup/end %}
 
 #### Exercise 4
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Changing parameters of the forward model influences the Inverse solutions. Play around with different parameters of the FEM forward model (e.g., changing conductivity values, move electrodes or play around with the segmentation) and redo the inverse solution. If you need more input for this please ask us!
 {% include markup/end %}
 

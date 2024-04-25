@@ -48,7 +48,7 @@ If you have data to share and it exceeds 1 MB, do not send it as attachment, but
 
 Here is an example of an inefficient question:
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Subject: HELP
 
 **I am getting to load Eyetracking data from .EDF to .ASC then wish to have the image present on the screen in order t draw ROIs. As I follow the step from this link https://www.fieldtriptoolbox.org/getting_started/eyelink. The function of FieldTrip called "dataset2file.m" cannot accept file type of structure in matlab**. The error message show "Undefined function 'dataset2files' for input arguments of type 'struct'." How can I change the code so the function can read structure file.
@@ -58,7 +58,7 @@ Subject: HELP
 
 If this is your first mail, please introduce yourself shortly.
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Subject: Improper matrix assignment in ft_functionname
 
 Dear community,

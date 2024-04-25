@@ -85,7 +85,7 @@ After each of the automated steps the results should be checked. For that I have
 
 It is important that you use appropriate tools. Command line utilities are very handy, but also a good graphical (code) editor that allows you to navigate through the full directory structure and check the file content. I have been using the Atom editor with the network directory mounted on my desktop computer. There are good [alternatives](https://alternativeto.net/software/atom/).
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 The scripts are included on this page for completeness. You can also download them from our [download server](https://download.fieldtriptoolbox.org/example/bids_mous/).
 {% include markup/end %}
 
@@ -222,7 +222,7 @@ newDs -anon $RAW/V1090/meg/V1090_301102009_03.ds  $BIDS/sub-V1090/meg/sub-V1090_
 find $BIDS -name \*.res4 -exec $HOME/bids-tools/bin/remove_ctf_datetime -d {} \;
 ```
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 You can see a few exceptions, which reflect datasets that did not convert well automatically. The reason for this is the fact that during data acquisition, the data ended up in two different .ds datasets. According to BIDS, these are supposed to be represented by different 'runs'.
 {% include markup/end %}
 
@@ -486,7 +486,7 @@ end % for each subject
 
 <br>
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 This script here deals with some dataset specific exceptions. Indeed, given the fact that we are working with real data here, due to various reasons, automatic conversions (one-size-fits-all) are likely to occasionally fail.
 
 In the current context, the tricky part happened to be the creation of the events.tsv files for the MEG task data. In order to create these files, **[data2bids](/reference/data2bids)** attempts to align the experimental events, as extracted from the presentation software logfile, with the experimental events, as extracted from the digital trigger channel in the MEG data files. This only works well and unambiguously, if there's a one-to-one-mapping of the events (or a specific type of event) in the two representations.

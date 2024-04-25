@@ -7,7 +7,7 @@ tags: [development, git]
 
 The FieldTrip code and website are both maintained on [https://github.com/fieldtrip](https://github.com/fieldtrip).
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 To quickly get access to the code, you would do the following from the command line or the equivalent in a graphical git interface, such as the [GitHub desktop](https://desktop.github.com).
 
 ```bash

@@ -210,7 +210,7 @@ _Figure: A topographic representation of the time-frequency representations (3 -
 
 ##### Exercise 1
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Plot the power with respect to a relative
 baseline (hint: use cfg.zlim = [-0.7 -0.7] and use the cfg.baselinetype
 option)
@@ -221,7 +221,7 @@ a relative or absolute baseline
 
 ##### Exercise 2
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Plot the TFR of sensor 1.
 
 How do you account for the increased power at ~200 ms
@@ -272,7 +272,7 @@ _Figure: Time-frequency representations of power calculated using Morlet wavelet
 
 ##### Exercise 3
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Adjust `cfg.width` and see how the TFRs change.
 {% include markup/end %}
 

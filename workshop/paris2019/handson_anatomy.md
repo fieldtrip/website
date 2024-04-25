@@ -5,7 +5,7 @@ tags: [paris2019, meg, headmodel, sourcemodel, sourceanalysis, mmfaces]
 
 # Creation of headmodels and sourcemodels for source reconstruction
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 This tutorial was written specifically for the [PracticalMEEG workshop in Paris](/workshop/paris2019) in December 2019, and is an adjusted version of the [MEG headmodel tutorial](/tutorial/headmodel_meg).
 {% include markup/end %}
 
@@ -86,7 +86,7 @@ _Figure: The location of the NAS indicated by the crosshair in the anatomical MR
 
 #### Exercise 1
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Inspect the location of the LPA and RPA.
 {% include markup/end %}
 
@@ -102,7 +102,7 @@ Now, we can coregister the MRI image to the coordinate system as used for the ME
 
 #### Exercise 2
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Inspect the location of the NAS, LPA and RPA of the coregistered MRI. Pay special attention to the location coordinates, as compared to the location coordinates of the original MRI.
 {% include markup/end %}
 

@@ -116,7 +116,7 @@ For k-fold cross-validation, the total number of training and testing iterations
 
 ### Exercise 1
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 What is the effect of setting k to a very large vs very small value? Why is it
 useful to repeat the cross-validation multiple times? (hint: samples are randomly assigned to folds)
 {% include markup/end %}
@@ -152,7 +152,7 @@ The resultant plot shows AUC across time in the trial. The shaded area is the st
 
 ### Exercise 2
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Perform classification across time using all three classes FIC, FC, and IC. As classifier, use kernel FDA. As metric, use classification accuracy.
 {% include markup/end %}
 
@@ -185,7 +185,7 @@ Since a classification result is obtained for each channel, classification accur
 
 ### Exercise 3
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Although we set `cfg.features = 'time'`, there was actually only one time point since `cfg.avgovertime='yes'`. To use the multiple time points as separate features, repeat the analysis setting `cfg.avgovertime = 'no'`. This time, for each channel, all time points in the 0.3-0.7 s window are used as features rather than just their average. The maximum performance should increase slightly.
 {% include markup/end %}
 
@@ -306,7 +306,7 @@ This yields a _[freq x time]_ matrix of classification accuracies. However, we a
 
 ### Exercise 4
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Building on the previous example, perform a classification analysis for every frequency bin. To this end, use channels and time points as features.
 {% include markup/end %}
 <!--
@@ -335,7 +335,7 @@ logic applies to `cfg.freqwin` (for frequencies) and `cfg.neighbours` (for chann
 
 ### Exercise 5
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 In the previous analysis we considered 5 time points in each analysis. Instead, now consider 5 frequencies by setting the `cfg.freqwin` parameter accordingly. Use `mv_plot_result` to visually confirm that this leads to smoothing along the frequency axis.
 {% include markup/end %}
 
@@ -359,7 +359,7 @@ See [train_lda](https://github.com/treder/MVPA-Light/blob/master/model/train_lda
 
 ### Exercise 6
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 For SVM, define a polynomial kernel of degree 3. Refer to [train_svm](https://github.com/treder/MVPA-Light/blob/master/model/train_svm.m) to find the corresponding names for the two hyperparameters you need to set.
 {% include markup/end %}
 

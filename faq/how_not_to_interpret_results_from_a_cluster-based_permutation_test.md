@@ -21,7 +21,7 @@ However, you cannot report a significant outcome of a permutation test as **"the
 
 After you have made the decision that you reject H0 in favour of H1, you may want to interpret the difference in the data. Here is where the cluster might be useful because it points you to the feature(s) on the basis of which you came to the conclusion to believe in H1 over H0.
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 If you test that the physical dimensions of male bodies are different from those of female bodies, you will likely find that the H0 (the physical dimensions of male and female bodies come from the same probability distribution) will be rejected in favour of the alternative (they come from different distributions).
 
 However, from this result, one cannot conclude that men and women have different foot sizes. In fact, it may be that the test statistic that was used to compare male and female bodies was sensitive to other aspects than foot size.
@@ -49,13 +49,13 @@ If you a-priori select a certain time window and some scalp location in which to
 
 However, this does not necessarily represent the entire true effect in the data.
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Here is what NOT to write:
 
 "We found a significant cluster in area X, between time point A and B"
 {% include markup/end %}
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Here are some examples of what you CAN write
 
 "After selecting the a-priori time and region of interest in our data, the cluster-based permutation tests revealed a difference between the fully congruent and fully incongruent condition."

@@ -23,7 +23,7 @@ The quality of EEG source estimates depends on the accuracy of the volume conduc
 
 In this tutorial we demonstrate the localization of EEG electrodes based on 3D-scan of a subject's head. The specific device we are using is the [structure sensor](http://structure.io) by Occipital. However, other 3D scanning devices would also work, as long as you can read the output of the 3D-scanner into MATLAB.
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 This youtube video shows the procedure that is explained in this tutorial
 
 {% include youtube id="d6FZlZTf-Hg" %}
@@ -86,7 +86,7 @@ _Figure: ft_meshrealign graphical user interface_
 
 We suggest that you set the alpha level (the transparency) to 1.0. You can use the standard MATLAB 3D plotting options to rotate the 3D view. Rotate the view such that the positive z-axis is pointing to the top of the figure.
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 As subsequent 3D rotations, translations and scalings are not [commutative](https://en.wikipedia.org/wiki/Commutative_property), the order matters. Whenever you click "apply", the specified rotations, translations and scaling is applied to the mesh and you can start again without having to think about the interaction between the operations.
 {% include markup/end %}
 

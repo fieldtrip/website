@@ -234,7 +234,7 @@ movement.
 
 ##### Exercise 1
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Skip through a couple of data segments and see if you can already spot some
 artifacts. Use the buttons to mark an artifact. Are there any bad channels in
 this dataset?
@@ -272,7 +272,7 @@ figure. Click through the trials using the `>` button to inspect each trial.
 
 ##### Exercise 2
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Can you spot which channels are noisier than others? Using
 the mouse, you can select channels that you want to remove from the data.
 {% include markup/end %}
@@ -322,7 +322,7 @@ channels that are noisy.
 
 ##### Exercise 3
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Which channels show the most variance? Why is that?
 {% include markup/end %}
 
@@ -400,7 +400,7 @@ For each trial, the condition information is kept with the data structure in `da
 
 ##### Exercise 4
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Inspect the resulting data structure after
 **[ft_timelockanalysis](/reference/ft_timelockanalysis)**.
 
@@ -426,7 +426,7 @@ back and forth between the topographic and time representation of the data.
 
 ##### Exercise 5
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Select the time window where the conditions differ the most. Do the topographies
 look as you would expect?
 {% include markup/end %}
@@ -444,7 +444,7 @@ different ways of visualizing, i.e.
 
 ##### Exercise 6
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 The following code allows you to compute at the ERP difference waves.
 
     cfg = [];

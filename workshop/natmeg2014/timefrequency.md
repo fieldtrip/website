@@ -11,7 +11,7 @@ redirect_from:
 
 In this tutorial you can find information about the time-frequency analysis of a single subject's EEG-MEG data using a Hanning window. This tutorial also shows how to visualize the results, which will now have an extra dimension beyond time and sensor: frequency. We will pay special attention to differences between EEG and MEG, which will shown themselves not only in visualizing the results, but also in the effects of having a reference in EEG, i.e. of having relative signals versus absolute signals in MEG. We will also compare conditions in the frequency domain, looking at differences in beta-rebound after left versus the right hand responses. Familiarize yourself with the paradigm and data we recorded by re-reading [the example dataset description](/workshop/natmeg2014/meg_audodd)
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 This tutorial contains the hands-on material of the [NatMEG workshop](/workshop/natmeg2014) and is complemented by this lecture.
 
 {% include youtube id="QLvsa1r1Voc" %}
@@ -185,7 +185,7 @@ From the previous figure you can see that there is an increase in power around 1
 
 _Figure: Topographic representation of the time-frequency representations of beta (15-25 Hz) after (0.5-1.0s) left-finger response, obtained using ft_topoplotTFR._
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 So what do you think we are looking at? I guess the introduction gave it away, but how would you argue for it?
 {% include markup/end %}
 
@@ -237,7 +237,7 @@ _Figure: Topographic representation of the time-frequency representations of the
 
 We will now proceed with doing the time-frequency analysis of the EEG data. Note we are using mainly similar parameters as in the MEG analysis.
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Keep an eye open for the differences in processing and visualizing EEG.
 {% include markup/end %}
 
@@ -364,7 +364,7 @@ Great! Now lets plot the EEG and see what we get.
 
 _Figure: Frequency topography (EEG) calculated using ft_freqanalysis. Plotting was done with ft_topoplotTFR._
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Hmmm... What do you think? A bit strange, right? Is this real, or perhaps an artifact? Try to find it out using the interactive mode.
 {% include markup/end %}
 
@@ -386,7 +386,7 @@ In fact, we are now encountering an aspect of EEG recordings we haven't seen in 
 
 _Figure: Frequency topography (EEG) calculated using ft_freqanalysis. Plotting was done with ft_topoplotTFR._
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Why this difference?
 
 To round up our comparison between EEG and MEG, lets plot the difference between conditions.
@@ -440,7 +440,7 @@ Finally, lets take a look at how the topography looks when we use the MEG planar
 
 _Figure: A topographic representation of the time-frequency representations of the relative change in beta (15-25 Hz) power, for gradiometers, after 0.5-1.0s, obtained using ft_topoplotTFR._
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Now that looks a bit funky, right? Do you know why?
 {% include markup/end %}
 
@@ -495,7 +495,7 @@ _Figure: A topographic representation of the time-frequency representations of t
 
 We have now reached the end of the MEG-EEG part of the tutorial.
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Please take some time to reflect on the differences and similarities between EEG and MEG in frequency analysis. Please write down any questions you might have so that we can discuss them together.
 {% include markup/end %}
 

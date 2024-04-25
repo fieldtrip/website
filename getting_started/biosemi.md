@@ -118,7 +118,7 @@ Number of samples in each data record
 N x 32 bytes  
 (ASCII)
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Total header length (for BDF and EDF) is: {(N+1)\*256} bytes, where N is number of channels (including the status channel).
 
 The "gain" of a specific channel can be calculated by: (Physical max - Physical min) / (Digital max - Digital min). The result is the LSB value in the specified Physical dimension of channels. (31,25nV / 1uV in the BDF/EDF example Header from above).

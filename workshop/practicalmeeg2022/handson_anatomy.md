@@ -5,7 +5,7 @@ tags: [practicalmeeg2022, meg, headmodel, sourcemodel, sourceanalysis, mmfaces]
 
 # Creation of headmodels and sourcemodels for source reconstruction
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 This tutorial was written specifically for the [PracticalMEEG workshop in Aix-en-Provence](/workshop/practicalmeeg2022) in December 2022 and is part of a coherent sequence of tutorials. It is an adjusted version of the [MEG headmodel tutorial](/tutorial/headmodel_meg) and an updated version of the corresponding tutorial for [Paris 2019](/workshop/paris2019).
 {% include markup/end %}
 
@@ -75,7 +75,7 @@ _Figure: The location of the NAS indicated by the crosshair in the anatomical MR
 
 #### Exercise 1
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Inspect the location of the LPA and RPA.
 {% include markup/end %}
 
@@ -95,11 +95,11 @@ Now, we can coregister the MRI image to the coordinate system as used for the ME
 
 #### Exercise 2
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Inspect the location of the NAS, LPA and RPA of the coregistered MRI. Pay special attention to the location coordinates, as compared to the location coordinates of the original MRI.
 {% include markup/end %}
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Following the initial alignment of the MRI with the MEG coordinate system on the basis of the anatomical landmarks, we can further improve the coregistration by using an interactive-closest-points (ICP) procedure. In that procedure, we fit the scalp surface than can be obtained from the MRI to a detailed measurement of the scalp surface using a Polhemus electromagnetic tracker. The measured head surface points can be read with **[ft_read_headshape](/reference/fileio/ft_read_headshape)** and are available as `sub-01/ses-meg/meg/sub-01_ses-meg_headshape.pos` or can be read directly from the fif file.
 {% include markup/end %}
 

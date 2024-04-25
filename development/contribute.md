@@ -23,7 +23,7 @@ You can share your MATLAB code with us and help us to integrate it into the Fiel
 
 If your contribution is considerable, for example a completely new algorithm, there are some additional requirements: your code contribution must be in FieldTrip style, the algorithm must be of broad interest (i.e. more than a single lab), must be maintainable and must be documented not only with help in the code, but also on the website as a tutorial or as example script.
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 When you contribute code, please consider the [code guidelines](/development/guideline/code) to keep it consistent and compatible with the existing implementation. Also try to adhere to the existing representation of the data in the [data structures](/faq/how_are_the_various_data_structures_defined).
 {% include markup/end %}
 
@@ -37,6 +37,6 @@ You can also edit pages on this website directly in your browser: just go to the
 
 {% include image src="/assets/img/development/contribute/edit-on-github.png" %}
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 When adding documentation, please consider the [documentation guidelines](/development/guideline/documentation) to keep it consistent with other documentation and to facilitate cross-linking.
 {% include markup/end %}

@@ -136,7 +136,7 @@ We want to store all processed results in a different directory than the one con
 
 The original MRI that is provided for this patient has been partially processed with the CTF software and MRIcro, and is stored in NIFTI format. This MRI is _not shared_ for privacy reasons. Nevertheless, here we will show how it was processed in FieldTrip.
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 For coregistration we need the original MRI with full facial details, however this is not shared for reasons of anonymity. You should skip this section and continue after the coregistration.
 {% include markup/end %}
 

@@ -13,7 +13,7 @@ The acquisition setup consists of the Digital Lynx amplifier hardware and the Ch
 
 ## MATLAB-based interface
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 The MATLAB implementation is mainly for educational and testing purposes. For proper real-time analyses we recommend you to use the standalone interface, which is faster and requires less system resources.
 {% include markup/end %}
 

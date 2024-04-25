@@ -17,7 +17,7 @@ It is expected that you understand the previous steps of preprocessing and filte
 
 This tutorial will not cover the time-domain option for LCMV/SAM beamformers (described in Background), nor for beamformers applied to evoked/averaged data (although see an example of how to calculate [virtual sensors using LCMV](/tutorial/virtual_sensors) for an example of this).
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 This tutorial contains the hands-on material of the [NatMEG workshop](/workshop/natmeg2014) and is complemented by this lecture.
 
 {% include youtube id="7eS11DtbIPw" %}
@@ -99,13 +99,13 @@ The null hypothesis for both options within (1) is that the data in both conditi
 
 ### Exercise 1: data length
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Why is it important that the length of each data piece is the length of a fixed number of oscillatory cycles?
 {% include markup/end %}
 
 ### Exercise 2: common filter data
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Why shouldn't we calculate a spatial filter for both conditions separately in this case? Would there be a reason to do so?
 {% include markup/end %}
 
@@ -146,7 +146,7 @@ The cross-spectral density data structure has a similar data structure as other 
            grad: [1x1 struct]     % MEG sensor information
             cfg: [1x1 struct]     % Configuration
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 How come our target frequency is 17.8657, didn't we ask for 18? _Hint: How large is our time window?_
 {% include markup/end %}
 
@@ -272,7 +272,7 @@ Now, we can plot the interpolated data:
 
 _Figure: Source plot of the beta response in the left-hand condition._
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 As you can see the strongest motor response is located in the center of the head. Can you explain this finding?
 {% include markup/end %}
 
@@ -283,17 +283,17 @@ As you can see the strongest motor response is located in the center of the head
 
 _Figure: Source plot of the beta response ratio between the left- and right-hand conditions._
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Try to explain the location of the red and blue blobs.
 {% include markup/end %}
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 The 'ortho' method is not the only plotting method implemented. Use the 'help' of **[ft_sourceplot](/reference/ft_sourceplot)** to find what other methods there are and plot the source level results. What are the benefits and drawbacks of these plotting routines?
 {% include markup/end %}
 
 #### Exercise: determining anatomical labels
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 If you were to name the anatomical label of the source of this motor beta, what you say? What plotting method is most appropriate for this?
 {% include markup/end %}
 
@@ -303,7 +303,7 @@ With the use of cfg.atlas you can specify a lookup atlas, which **[ft_sourceplot
 
 #### Exercise: regularization
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 The regularization parameter was lambda = '5%'. Change it to '0%' or to '10%' and plot the power estimate. How does the regularization parameter affect the properties of the spatial filter?
 {% include markup/end %}
 
@@ -378,7 +378,7 @@ Now that we have everything prepared we can start to calculate the common filter
     cfg.dics.lambda     = '15%';
     source_all = ft_sourceanalysis(cfg, powcsd_all);
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 How does the value for lambda set here compare to the one for the MEG dataset? Why do you think it is different?
 {% include markup/end %}
 
@@ -430,7 +430,7 @@ _Figure: An EEG-source plot of the beta response in the left-hand condition._
 
 _Figure: An EEG-source plot of ratio of the beta response in the left versus the right hand condition._
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 How well can you identify the source of the beta-response ration in the EEG source reconstruction? The image seems quite noisy, could you think of a way to enhance the image?
 {% include markup/end %}
 
@@ -438,11 +438,11 @@ How well can you identify the source of the beta-response ration in the EEG sour
 
 _Figure: A MEG-source plot of the beta response in the left versus the right hand condition._
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 How do the EEG and MEG source plots compare?
 {% include markup/end %}
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 If you've made it this far, perhaps you could try beamforming a different time window. Looking at the time-frequency plot you might be interested in trying to localise the less obvious beta-band response between 0.75 and 1.25 seconds after response.
 
 {% include image src="/assets/img/workshop/natmeg2014/beamforming/natmeg_beam5.png" width="400" %}

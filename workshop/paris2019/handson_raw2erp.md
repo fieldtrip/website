@@ -5,7 +5,7 @@ tags: [paris2019, meg, timelock, preprocessing, mmfaces]
 
 # From raw data to ERP
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 This tutorial was written specifically for the [PracticalMEEG workshop in Paris](/workshop/paris2019) in December 2019.
 {% include markup/end %}
 
@@ -241,7 +241,7 @@ Alternatively, the data of different channel types can be visualised within a si
 
 #### Exercise
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Explore the data, using the interactive property of the figure. Visualize the topographies of the ERF/ERPs in the latency window between 175 and 250 ms. Also inspect the topographies in the latency window from 300-450 ms. Explain the differences in topography (between latencies and channel types) based on putative underlying neuronal generators.
 {% include markup/end %}
 

@@ -5,7 +5,7 @@ tags: [paris2019, meg, timelock, statistics, plotting, mmfaces]
 
 # Group-level statistics with parametric and non-parametric methods
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 This tutorial was written specifically for the [PracticalMEEG workshop in Paris](/workshop/paris2019) in December 2019, and is an adjusted version of the [event-related statistics tutorial](/tutorial/eventrelatedstatistics).
 {% include markup/end %}
 
@@ -248,7 +248,7 @@ From the code above you can see that the statistical comparison is between condi
 
 #### Exercise 1
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Look at the temporal evolution of the effect by changing cfg.latency and cfg.avgovertime in **[ft_timelockstatistics](/reference/ft_timelockstatistics)**. You can plot the t-value versus time, the probability versus time and the statistical mask versus time. Note that the output of the **[ft_timelockstatistics](/reference/ft_timelockstatistics)** function closely resembles the output of the **[ft_timelockanalysis](/reference/ft_timelockanalysis)** function.
 {% include markup/end %}
 
@@ -386,7 +386,7 @@ _Figure; Nonparametric test, plot of the effect size with significant channels i
 
 #### Exercise 2
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Perform the same statistical test, but now without selecting the time range of interest and without averaging over time. This increases the number of statistical comparisons from Nchan to Nchan x Ntime. The statistics function also returns a Boolean mask that you can use for plotting:
 
     % make the plot
@@ -471,7 +471,7 @@ _Figure; Spatial distribution of p-values over the parcels_
 
 #### Exercise 3
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Explain why the results of the cluster-based permutation test are not showing the same as the statistical tests for the region of interest and/or the time window of interest. What can you learn from the outcome of this statistical test?
 {% include markup/end %}
 

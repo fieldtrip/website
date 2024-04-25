@@ -5,7 +5,7 @@ tags: [faq, development, cvs, svn, git]
 
 # Why was FieldTrip maintained in SVN and not in Git?
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 This question does not apply any more.
 {% include markup/end %}
 

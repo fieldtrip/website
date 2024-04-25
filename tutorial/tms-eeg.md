@@ -53,7 +53,7 @@ Before starting your analysis, it helps to consider your experiment relative to 
 
 In many cases you will want to analyze your data with respect to some interesting event, e.g., a visual stimulus onset, the subjects response to a stimulus, or in this case the onset of a TMS pulse. It is, however, also possible to analyze your data in a continuous way. For example, you might be interested in resting-state EEG changes over time after participants have received theta-burst stimulation. In those cases you are not going to divide your data into experimentally defined trials but rather analyze the data in a continuous fashion.
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 This tutorial is written with a trial-based analysis in mind and as such may not be directly applicable to continuous data. Furthermore, this tutorial uses EEG data recorded during a single-pulse TMS stimulation protocol.
 {% include markup/end %}
 
@@ -157,7 +157,7 @@ The cfg structure we obtained from **[ft_definetrial](/reference/ft_definetrial)
 
 Here you have to make sure that the .mat file is located in the present working directory of MATLAB.
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 You can skip the following block of code if you have downloaded data_tms_raw in the previous step.**
 {% include markup/end %}
 
@@ -296,7 +296,7 @@ In this channel we can find ringing/step response, cranial muscle, exponential d
 
 #### Exercise: find artifacts in other channels
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Try to see if the artifacts are present in all channels and if there are differences in their extent in time.
 {% include markup/end %}
 
@@ -485,7 +485,7 @@ We can now browse the averaged data in the same way we browsed our channel data.
 
 #### Exercise: plotting components
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Try to plot the components using MATLAB's built-in plot function. Which do you prefer to browse the components?
 {% include markup/end %}
 
@@ -504,7 +504,7 @@ Using **[ft_databrowser](/reference/ft_databrowser)**, or MATLAB's plotting func
 
 #### Exercise: find the components
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Try to find components reflecting the decay and/or muscle artifact. Which ones would you remove?
 {% include markup/end %}
 
@@ -516,7 +516,7 @@ Due to various factors it is likely that you will not be able to fully capture b
 
 #### Exercise: removing other types of noise
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 At this stage you can also use your ICA data to remove other types of artifacts/noise. ICA is particularly well-suited to deal with eye-blinks and saccades, and can potentially remove other types of noise as well (also see the examples on [EOG artifacts](/example/ica_eog) and [ECG artifacts](/example/ica_ecg)).
 
 As these types of noise are not time-locked to onset of the TMS-pulse you can use **[ft_databrowser](/reference/ft_databrowser)** to browse through the trials in a component view. Be aware that in this case you are browsing the segments of the original trials.
@@ -584,7 +584,7 @@ We can now have a look at the current status of our data.
 
 #### Exercise: how successful were we in removing TMS artifacts?
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 At the beginning we determined we had to deal with ringing/step response, cranial muscle, recharging and exponential decay artifacts. Have a look at the data, how successful were we in removing all of them? What is left and how could we deal with this?
 {% include markup/end %}
 
@@ -775,11 +775,11 @@ A nice feature of **[ft_singleplotER](/reference/ft_singleplotER)** is that you 
 
 #### Exercise: where are the differences?
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Where can you find the largest differences? How does the topography of these differences look like? Does it make sense given that we know we stimulated left-M1?
 {% include markup/end %}
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 FieldTrip supports numerous ways of plotting your data. Each suited for a particular purpose. Most plotting functions can be subdivided into three categories, each category has a plotting function for a specific datatype. For us the following are the most useful
 
 - ft_singleplotXXX for single channel data.
@@ -838,7 +838,7 @@ Now we can plot the GMFP of both conditions.
 
 #### Exercise: GMFP vs TEPs
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Are there differences between the outcome of this analysis and the comparison between time-locked averages in the previous section? Can you see an advantage of using GMFP to compare conditions?
 {% include markup/end %}
 
@@ -925,13 +925,13 @@ This plot is fully interactive, click and drag to select one or more channels, c
 
 #### Exercise: additional information
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 What additional information can be gained by analyzing time-frequency data?
 {% include markup/end %}
 
 #### Exercise: conclusion
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Now that we have described three ways of looking at our data, can we conclude the conditions differ? If so, how do they differ specifically?
 {% include markup/end %}
 

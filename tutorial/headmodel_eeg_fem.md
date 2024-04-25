@@ -29,7 +29,7 @@ This tutorial is focusing on how to build the **FEM volume conduction model for 
 
 {% include /shared/tutorial/headmodel_background.md %}
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 If you do not have an MRI for your subject, you can consider to use a template MRI or a template head model that is located in the FieldTrip `template` directory. See [here](/template/headmodel) for more info.
 
 If you do not have an MRI, but do have a measurement of the scalp surface and/or of the electrodes (e.g., with a Polhemus tracker), you could also fit a concentric spheres model to the scalp and/or electrodes. However, we recommend to use a realistic template head model and fit the measured electrodes to the template head model rather than the other way around.
@@ -60,7 +60,7 @@ _Figure; Pipeline for creating a FEM model_
 
 #### Exercise 1
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Check that the homogenous transformation matrix in `mri_realigned` is the same as the one in `mri`. If so, that means that each voxel is at exactly the same position. If you misspecify the voxel indices of the fiducials or anatomical landmarks, they will be different.
 {% include markup/end %}
 

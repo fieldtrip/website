@@ -29,7 +29,7 @@ We develop FieldTrip to be compatible with MATLAB versions up to 5 years old. Pl
 
 ### Download and install a recent FieldTrip version
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Please download and unzip a recent version of FieldTrip from <https://github.com/fieldtrip/fieldtrip/releases> and download the tutorial data.
 {% include markup/end %}
 

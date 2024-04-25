@@ -112,7 +112,7 @@ The field `cfg.trl` represents the trials or segments of interest. We proceed by
     cfg.baselinewindow = [-inf 0];
     data_pos1 = ft_preprocessing(cfg);
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 
 Rather than reading only the segments of interest, we can also start by reading the whole continuous recording into memory and then segment it.
 
@@ -240,7 +240,7 @@ Now that we have the three montages, we can use the cfg.montage option in **[ft_
 
 ### Exercise 1
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Check what the channel names are in the data structure just before applying the montage, and after applying the montage. Please note that in the code above we have used the same MATLAB variable name `data_pos1` for both versions, so don't confuse the original data structure with the one in which the channels were renamed.
 {% include markup/end %}
 
@@ -292,7 +292,7 @@ Do note that the trials are 400ms long with 100ms baseline, and that the stimuli
 
 ### Exercise 2
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Besides removing the artifacts from the data, we can also use the output of ft_badsegment to look in more detail at the artifacts.
 
 Return to the ft_databrowser section at the start of the tutorial, now adding the option:
@@ -351,7 +351,7 @@ Subsequently, you can click again to make a selection over time to get to a topo
 
 ### Exercise 3
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Use the mouse to make a selection over channels and plot the average over those channels. Some channels will have a positive deflection and some will have a negative deflection; if you select and average  the positive and negative ones together, the overall ERF will be diminished. Around 20 ms after stimulation there should be the well-known N20 peak in the ERFs: select that and plot the topography.
 {% include markup/end %}
 

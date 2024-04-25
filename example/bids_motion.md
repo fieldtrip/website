@@ -15,7 +15,7 @@ There are numerous companies that manufacture research-oriented motion capture s
 
 Motion tracking data - optionally in relation to the presentation of stimulus material and responses (e.g., button presses) that are given by the subject - can be stored in the BIDS representation in line with the specification of [behavioral data](https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/07-behavioral-experiments.html). We store the continuously motion tracking data in tab-separated-value format (TSV) in the `_motion.tsv` file. The events corresponding to stimuli and responses are stored in the `_events.tsv` file, similar as for other types of data in BIDS.
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Besides storing the output of the motion capture system, the position of the (optical) markers on the body, the frame of reference (coordinate system) and the units should be documented in the sidecar JSON file. This can be added to the `cfg.motion` field to **[data2bids](/reference/data2bids)** function, e.g., as `cfg.motion.MarkerPositions` and `cfg.motion.MotionCoordinateSystem`.
 {% include markup/end %}
 

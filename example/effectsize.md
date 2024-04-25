@@ -99,7 +99,7 @@ Above we demonstrated how to compute it by hand. The same equation for Cohen\'s 
           time: 0.5000
            cfg: [1x1 struct]
 
- {% include markup/blue %}
+ {% include markup/skyblue %}
  Note that Cohen\'s d is not the only way to quantify the effect size. If you look into the code of `ft_statfun_cohensd`, you will see that it is easy to implement other measures. You could also use a statfun to implement the [Bayes factor](https://www.statisticshowto.datasciencecentral.com/bayes-factor-definition/) to quantify the evidence of one hypothesis versus another.
  {% include markup/end %}
 

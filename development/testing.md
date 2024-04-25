@@ -29,11 +29,11 @@ Analysis scripts used by researchers are often based on the [tutorial](/tutorial
 
 To link related scripts to the background information on bug reports and/or online discussions that we have when making changes to the code, test scripts that relate to a bug on <http://bugzilla.fieldtriptoolbox.org/> are named as `text_bugXXX`, test scripts that relate to an issue on <https://github.com/fieldtrip/fieldtrip/issues/> are named as `test_issueXXX`, and test script that relate to a pull request on <https://github.com/fieldtrip/fieldtrip/pulls/> are named as `test_pullXXX`, where `XXX` is the number of the bug, issue or pull request. This allows everyone to look up the initial report and the follow-up discussion.
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 If you suspect a problem with the FieldTrip code, the best way to resolve it is to post it on [GitHub as an issue](https://github.com/fieldtrip/fieldtrip/issues) and to contribute a (small) test script that helps us to reproduce the problem. After fixing the problem, we then add the script to the test directory to ensure future code quality. More information on that topic is provided in the [reporting issues](/development/issues) FieldTrip webpage.
 {% include markup/end %}
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Test data that is related to a specific GitHub or Bugzilla issue is named correspondingly, for example `bugXXX.mat` or `issueXXX.mat`.
 {% include markup/end %}
 
@@ -206,6 +206,6 @@ Private test data is stored in the directory `/home/common/matlab/fieldtrip/data
 
 Public test data is stored in the directory `/home/common/matlab/fieldtrip/data/ftp`, which on the Donders Windows desktops is available on `H:\common\matlab\fieldtrip\data\ftp`. This data is also available from the [download server](https://download.fieldtriptoolbox.org/).
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Note that test scripts that depend on public data or that do not require any data can be executed by everyone. If needed, the **[dccnpath](/reference/utilities/dccnpath)** function will download the public data automatically.
 {% include markup/end %}

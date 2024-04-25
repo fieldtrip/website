@@ -5,7 +5,7 @@ tags: [practicalmeeg2022, meg, sourceanalysis, beamformer, mmfaces]
 
 # Reconstructing source activity using beamformers
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 This tutorial was written specifically for the [PracticalMEEG workshop in Aix-en-Provence](/workshop/practicalmeeg2022) in December 2022 and is part of a coherent sequence of tutorials. It is an updated version of the corresponding tutorial for [Paris 2019](/workshop/paris2019).
 {% include markup/end %}
 
@@ -84,7 +84,7 @@ When thus plotted on a log scale, it can be seen that there is a range of 16 ord
 
 Just using the 'normal' way of computing the covariance matrix' inverse, by using MATLAB's [inv](https://nl.mathworks.com/help/matlab/ref/inv.html) function is asking for numerical problems, because the spatial components with very small singular values (which don't reflect any real signal) are blown up big time in the inverse. For this reason, regularised or truncated inversion techniques are to be used. In addition to applying more thoughtful algorithms for matrix inversion, spatial prewhitening techniques can be used, which manipulate the data in a way to make them, as the name suggests, spatially (more or less) white. This means that the signals are uncorrelated to each other, and have the same variance. As a byproduct, when the whitening is done separately for the magnetometers and gradiometers, the scale difference between the different channel types disappears, and thus prewhitening results in an 'equal' treatment of both channel types, and allows for a relatively straightforward combination of the different channel types during source reconstruction.
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 The effect of MaxFilter on beamformers and how to deal with it is discussed in detail in the following paper:
 
 Westner BU, Dalal SS, Gramfort A, Litvak V, Mosher JC, Oostenveld R, Schoffelen JM. A unified view on beamformers for M/EEG source reconstruction. Neuroimage. 2021. {% include badge doi="10.1016/j.neuroimage.2021.118789" %}
@@ -112,7 +112,7 @@ The prewhitening operator is defined as the inverse of the matrix square root of
 
 #### Exercise 1
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Select the 200 ms baseline from the dataw_meg structure, compute the covariance, and inspect the covariance matrix with [imagesc](https://nl.mathworks.com/help/matlab/ref/imagesc.html) after grouping the magnetometers and the gradiometers. Also inspect the singular value spectrum of the whitened baseline covariance matrix.
 {% include markup/end %}
 
@@ -133,7 +133,7 @@ _Figure: Visual artifact rejection window_
 
 #### Exercise 2
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Consult the [visual artifact rejection tutorial](/tutorial/visual_artifact_rejection) and remove the obvious outlier trials from the data structure. The specification of `cfg.layout` allows for a more detailed inspection of the outlier trials. Note these trial numbers, inspect the spatial topography and time courses, and remove them from the data. Also inspect trials 72 and 832, and discuss their spatiotemporal properties.
 {% include markup/end %}
 
@@ -247,13 +247,13 @@ The function **[ft_sourceplot_interactive](/reference/ft_sourceplot_interactive)
 
 #### Exercise 3
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Explore the spatial distribution of the prominent ERF peaks. Try and explain why the topographies occasionally look 'patchy'.
 {% include markup/end %}
 
 #### Exercise 4
 
-{% include markup/blue %}
+{% include markup/skyblue %}
 Compute the absolute of the dipole moment with ft_math:
 
     cfg = [];
