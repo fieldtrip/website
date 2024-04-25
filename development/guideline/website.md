@@ -42,7 +42,7 @@ Please ensure that the page title in the header and the first `#` section title 
 
 ## Text block highlighting
 
-This is implemented with small snippets of html code that are contained in the `_includes/markup` directory. Most of them directly correspond to Bootstrap [alerts](https://getbootstrap.com/docs/4.0/components/alerts/#examples). The syntax is like this
+This is implemented with small snippets of html code that are contained in the `_includes/markup` directory. They correspond to Bootstrap [alerts](https://getbootstrap.com/docs/4.0/components/alerts/#examples). The syntax is like this
 
 {% raw %}
 
@@ -57,23 +57,35 @@ info
 and it would show up like this
 
 {% include markup/blue %}
-info
+blue
+{% include markup/end %}
+
+{% include markup/gray %}
+gray
 {% include markup/end %}
 
 {% include markup/green %}
-success
-{% include markup/end %}
-
-{% include markup/yellow %}
-warning
+green
 {% include markup/end %}
 
 {% include markup/red %}
-danger
+red
 {% include markup/end %}
 
-{% include markup/blue %}
-exercise
+{% include markup/yellow %}
+yellow
+{% include markup/end %}
+
+{% include markup/skyblue %}
+yellow
+{% include markup/end %}
+
+{% include markup/white %}
+white
+{% include markup/end %}
+
+{% include markup/darkgray %}
+darkgray
 {% include markup/end %}
 
 ## Code syntax highlighting
