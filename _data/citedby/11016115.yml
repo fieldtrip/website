@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '38615053'
+- idtype: doi
+  value: 10.1038/s41598-024-59169-2
+- idtype: pmcid
+  value: PMC11016115
+authors:
+- authtype: Author
+  name: Numasawa K
+- authtype: Author
+  name: Miyamoto T
+- authtype: Author
+  name: Kizuka T
+- authtype: Author
+  name: Ono S
+epubdate: 2024 Apr 13
+fulljournalname: Scientific Reports
+issue: ''
+pages: '8582'
+pmclivedate: 2024/04/14
+printpubdate: ''
+pubdate: 2024 Apr 13
+sortdate: 2024/04/13 00:00
+source: Sci Rep
+title: Prediction error in implicit adaptation during visually- and memory-guided
+  reaching tasks
+uid: '11016115'
+volume: '14'

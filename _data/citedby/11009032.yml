@@ -1,0 +1,111 @@
+articleids:
+- idtype: pmid
+  value: '38227830'
+- idtype: doi
+  value: 10.1093/sleep/zsae012
+- idtype: pmcid
+  value: PMC11009032
+authors:
+- authtype: Author
+  name: Champetier P
+- authtype: Author
+  name: André C
+- authtype: Author
+  name: Rehel S
+- authtype: Author
+  name: Ourry V
+- authtype: Author
+  name: Landeau B
+- authtype: Author
+  name: Mézenge F
+- authtype: Author
+  name: Roquet D
+- authtype: Author
+  name: Vivien D
+- authtype: Author
+  name: de La Sayette V
+- authtype: Author
+  name: Chételat G
+- authtype: Author
+  name: Rauchs G
+- authtype: CollectiveName
+  name: the Medit-Ageing Research Group BejaninAlexandreANormandie Univ, UNICAEN,
+    INSERM, U1237, PhIND Physiopathology and Imaging of Neurological Disorders, Institut
+    Blood and Brain @ Caen-Normandie, Cyceron, 14000 Caen, FranceChauveauLéaLNormandie
+    Univ, UNICAEN, INSERM, U1237, PhIND Physiopathology and Imaging of Neurological
+    Disorders, Institut Blood and Brain @ Caen-Normandie, Cyceron, 14000 Caen, FranceChocatAnneANormandie
+    Univ, UNICAEN, INSERM, U1237, PhIND Physiopathology and Imaging of Neurological
+    Disorders, Institut Blood and Brain @ Caen-Normandie, Cyceron, 14000 Caen, FranceColletteFabienneFGIGA-CRC
+    In Vivo Imaging, Université de Liège, National Fund for Scientific Research (F.R.S-FNRS),
+    Liège, BelgiumPsychology and Neuroscience of Cognition, University of Liège, Liège,
+    BelgiumFund for Scientific Research FNRS, 1000, Brussels, BelgiumDautricourtSophieSNormandie
+    Univ, UNICAEN, INSERM, U1237, PhIND Physiopathology and Imaging of Neurological
+    Disorders, Institut Blood and Brain @ Caen-Normandie, Cyceron, 14000 Caen, FranceDe
+    FloresRobinRNormandie Univ, UNICAEN, INSERM, U1237, PhIND Physiopathology and
+    Imaging of Neurological Disorders, Institut Blood and Brain @ Caen-Normandie,
+    Cyceron, 14000 Caen, FranceDelarueMarionMNormandie Univ, UNICAEN, INSERM, U1237,
+    PhIND Physiopathology and Imaging of Neurological Disorders, Institut Blood and
+    Brain @ Caen-Normandie, Cyceron, 14000 Caen, FranceDemnitz-KingHarrietHDivision
+    of Psychiatry, University College London, London, United KingdomEspérouHélèneHInserm,
+    pôle de recherche clinique, institut de santé publique, 75013 Paris, FranceFauvelSéverineSNormandie
+    Univ, UNICAEN, INSERM, U1237, PhIND Physiopathology and Imaging of Neurological
+    Disorders, Institut Blood and Brain @ Caen-Normandie, Cyceron, 14000 Caen, FranceFelisattiFrancescaFNormandie
+    Univ, UNICAEN, INSERM, U1237, PhIND Physiopathology and Imaging of Neurological
+    Disorders, Institut Blood and Brain @ Caen-Normandie, Cyceron, 14000 Caen, FranceFerrand
+    DevougeEglantineENormandie Univ, UNICAEN, INSERM, U1237, PhIND Physiopathology
+    and Imaging of Neurological Disorders, Institut Blood and Brain @ Caen-Normandie,
+    Cyceron, 14000 Caen, FranceNormandie Univ, UNIROUEN, Department of General Practice,
+    Rouen, FranceRouen University Hospital, CIC-CRB 1404, F 76000, Rouen, FranceCHU
+    Bordeaux, Service d’information médicale, Bordeaux, FranceFrisonEricEEUCLID/F-CRIN
+    Clinical Trials Platform, Univ. Bordeaux, Inserm, Bordeaux Population Health Center,
+    Bordeaux, FranceGonneaudJulieJNormandie Univ, UNICAEN, INSERM, U1237, PhIND Physiopathology
+    and Imaging of Neurological Disorders, Institut Blood and Brain @ Caen-Normandie,
+    Cyceron, 14000 Caen, FranceHaudrySachaSNormandie Univ, UNICAEN, INSERM, U1237,
+    PhIND Physiopathology and Imaging of Neurological Disorders, Institut Blood and
+    Brain @ Caen-Normandie, Cyceron, 14000 Caen, FranceHébertOrianeONormandie Univ,
+    UNICAEN, INSERM, U1237, PhIND Physiopathology and Imaging of Neurological Disorders,
+    Institut Blood and Brain @ Caen-Normandie, Cyceron, 14000 Caen, FranceKlimeckiOlgaOSwiss
+    Center for Affective Sciences, Department of Medicine and Department of Psychology,
+    University of Geneva, Geneva, SwitzerlandClinical Psychology and Behavioral Neuroscience,
+    Faculty of Psychology, Technische Universität Dresden, 01187, Dresden, GermanyKuhnElizabethENormandie
+    Univ, UNICAEN, INSERM, U1237, PhIND Physiopathology and Imaging of Neurological
+    Disorders, Institut Blood and Brain @ Caen-Normandie, Cyceron, 14000 Caen, FranceLandeauBrigitteBNormandie
+    Univ, UNICAEN, INSERM, U1237, PhIND Physiopathology and Imaging of Neurological
+    Disorders, Institut Blood and Brain @ Caen-Normandie, Cyceron, 14000 Caen, FranceLefrancValérieVNormandie
+    Univ, UNICAEN, INSERM, U1237, PhIND Physiopathology and Imaging of Neurological
+    Disorders, Institut Blood and Brain @ Caen-Normandie, Cyceron, 14000 Caen, FranceMarchantNatalieNDivision
+    of Psychiatry, University College London, London, United KingdomMezengeFlorenceFNormandie
+    Univ, UNICAEN, INSERM, U1237, PhIND Physiopathology and Imaging of Neurological
+    Disorders, Institut Blood and Brain @ Caen-Normandie, Cyceron, 14000 Caen, FrancePalixCassandreCNormandie
+    Univ, UNICAEN, INSERM, U1237, PhIND Physiopathology and Imaging of Neurological
+    Disorders, Institut Blood and Brain @ Caen-Normandie, Cyceron, 14000 Caen, FranceQuillardAnneANormandie
+    Univ, UNICAEN, INSERM, U1237, PhIND Physiopathology and Imaging of Neurological
+    Disorders, Institut Blood and Brain @ Caen-Normandie, Cyceron, 14000 Caen, FranceRequierFlorenceFGIGA-CRC
+    In Vivo Imaging, Université de Liège, National Fund for Scientific Research (F.R.S-FNRS),
+    Liège, BelgiumSalmonEricEDivision of Nuclear Medicine, Department of Medical Physics,
+    Cyclotron Research Center, University Hospital of Liège, University of Liège,
+    Liège, BelgiumTouronEdelweissENormandie Univ, UNICAEN, INSERM, U1237, PhIND Physiopathology
+    and Imaging of Neurological Disorders, Institut Blood and Brain @ Caen-Normandie,
+    Cyceron, 14000 Caen, FranceTurpinAnne-LaureALNormandie Univ, UNICAEN, INSERM,
+    U1237, PhIND Physiopathology and Imaging of Neurological Disorders, Institut Blood
+    and Brain @ Caen-Normandie, Cyceron, 14000 Caen, FranceVuilleumierPatrikPSwiss
+    Center for Affective Sciences, University of Geneva, Geneva, SwitzerlandLaboratory
+    for Behavioral Neurology and Imaging of Cognition, Department of Neuroscience,
+    Medical School, University of Geneva, Geneva, SwitzerlandWhitfieldTimTDivision
+    of Psychiatry, University College London, London, United KingdomWirthMirankaMCharité-Universitätsmedizin
+    Berlin, corporate member of Freie Universität Berlin, Humbold- Universität zu
+    Berlin and Berlin Institute of Health, NeuroCure Clinical Research Center, Berlin,
+    GermanyGerman Center for Neurodegenerative Diseases (DZNE), Dresden, Germany
+epubdate: 2024 Jan 16
+fulljournalname: Sleep
+issue: '4'
+pages: zsae012
+pmclivedate: 2024/04/12
+printpubdate: ''
+pubdate: 2024 Jan 16
+sortdate: 2024/01/16 00:00
+source: Sleep
+title: Multimodal neuroimaging correlates of spectral power in NREM sleep delta sub-bands
+  in cognitively unimpaired older adults
+uid: '11009032'
+volume: '47'

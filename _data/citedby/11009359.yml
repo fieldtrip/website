@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '38605061'
+- idtype: doi
+  value: 10.1038/s41598-024-57014-0
+- idtype: pmcid
+  value: PMC11009359
+authors:
+- authtype: Author
+  name: Basti A
+- authtype: Author
+  name: Nolte G
+- authtype: Author
+  name: Guidotti R
+- authtype: Author
+  name: Ilmoniemi RJ
+- authtype: Author
+  name: Romani GL
+- authtype: Author
+  name: Pizzella V
+- authtype: Author
+  name: Marzetti L
+epubdate: 2024 Apr 11
+fulljournalname: Scientific Reports
+issue: ''
+pages: '8461'
+pmclivedate: 2024/04/12
+printpubdate: ''
+pubdate: 2024 Apr 11
+sortdate: 2024/04/11 00:00
+source: Sci Rep
+title: A bicoherence approach to analyze multi-dimensional cross-frequency coupling
+  in EEG/MEG data
+uid: '11009359'
+volume: '14'

@@ -1,0 +1,45 @@
+articleids:
+- idtype: pmid
+  value: '38565296'
+- idtype: doi
+  value: 10.1523/ENEURO.0309-23.2024
+- idtype: pmcid
+  value: PMC11015949
+authors:
+- authtype: Author
+  name: Schoisswohl S
+- authtype: Author
+  name: Kanig C
+- authtype: Author
+  name: Osnabruegge M
+- authtype: Author
+  name: Agboada D
+- authtype: Author
+  name: Langguth B
+- authtype: Author
+  name: Rethwilm R
+- authtype: Author
+  name: Hebel T
+- authtype: Author
+  name: Abdelnaim MA
+- authtype: Author
+  name: Mack W
+- authtype: Author
+  name: Seiberl W
+- authtype: Author
+  name: Kuder M
+- authtype: Author
+  name: Schecklmann M
+epubdate: 2024 Apr 11
+fulljournalname: eNeuro
+issue: '4'
+pages: ENEURO.0309-23.2024
+pmclivedate: 2024/04/13
+printpubdate: ''
+pubdate: 2024 Apr 11
+sortdate: 2024/04/11 00:00
+source: eNeuro
+title: Monitoring Changes in TMS-Evoked EEG and EMG Activity During 1 Hz rTMS of the
+  Healthy Motor Cortex
+uid: '11015949'
+volume: '11'

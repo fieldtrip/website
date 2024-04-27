@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '38651629'
+- idtype: doi
+  value: 10.1002/hbm.26687
+- idtype: pmcid
+  value: PMC11036379
+authors:
+- authtype: Author
+  name: Auer T
+- authtype: Author
+  name: Goldthorpe R
+- authtype: Author
+  name: Peach R
+- authtype: Author
+  name: Hebron H
+- authtype: Author
+  name: Violante IR
+epubdate: 2024 Apr 23
+fulljournalname: Human Brain Mapping
+issue: '6'
+pages: e26687
+pmclivedate: 2024/04/23
+printpubdate: ''
+pubdate: 2024 Apr 23
+sortdate: 2024/04/23 00:00
+source: Hum Brain Mapp
+title: Functionally annotated electrophysiological neuromarkers of healthy ageing
+  and memory function
+uid: '11036379'
+volume: '45'

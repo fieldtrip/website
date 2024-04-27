@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '38651390'
+- idtype: doi
+  value: 10.3390/clockssleep6020015
+- idtype: pmcid
+  value: PMC11036246
+authors:
+- authtype: Author
+  name: Baselgia S
+- authtype: Author
+  name: Kasten FH
+- authtype: Author
+  name: Herrmann CS
+- authtype: Author
+  name: Rasch B
+- authtype: Author
+  name: Paβmann S
+epubdate: 2024 Mar 25
+fulljournalname: Clocks & Sleep
+issue: '2'
+pages: 211-233
+pmclivedate: 2024/04/24
+printpubdate: ''
+pubdate: 2024 Mar 25
+sortdate: 2024/03/25 00:00
+source: Clocks Sleep
+title: No Benefit in Memory Performance after Nocturnal Memory Reactivation Coupled
+  with Theta-tACS
+uid: '11036246'
+volume: '6'

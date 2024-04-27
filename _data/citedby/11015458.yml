@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '38617556'
+- idtype: doi
+  value: 10.1016/j.isci.2024.109565
+- idtype: pmcid
+  value: PMC11015458
+authors:
+- authtype: Author
+  name: Kandemir G
+- authtype: Author
+  name: Wilhelm SA
+- authtype: Author
+  name: Axmacher N
+- authtype: Author
+  name: Akyürek EG
+epubdate: 2024 Mar 26
+fulljournalname: iScience
+issue: '4'
+pages: '109565'
+pmclivedate: 2024/04/13
+printpubdate: ''
+pubdate: 2024 Mar 26
+sortdate: 2024/03/26 00:00
+source: iScience
+title: 'Maintenance of color memoranda in activity-quiescent working memory states:
+  Evidence from impulse perturbation'
+uid: '11015458'
+volume: '27'
