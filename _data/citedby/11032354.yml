@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '38643331'
+- idtype: doi
+  value: 10.1038/s41598-024-59696-y
+- idtype: pmcid
+  value: PMC11032354
+authors:
+- authtype: Author
+  name: Carbone J
+- authtype: Author
+  name: Bibian C
+- authtype: Author
+  name: Born J
+- authtype: Author
+  name: Forcato C
+- authtype: Author
+  name: Diekelmann S
+epubdate: 2024 Apr 20
+fulljournalname: Scientific Reports
+issue: ''
+pages: '9057'
+pmclivedate: 2024/04/21
+printpubdate: ''
+pubdate: 2024 Apr 20
+sortdate: 2024/04/20 00:00
+source: Sci Rep
+title: Comparing targeted memory reactivation during slow wave sleep and sleep stage
+  2
+uid: '11032354'
+volume: '14'

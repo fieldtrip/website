@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '38646607'
+- idtype: doi
+  value: 10.3389/fnins.2024.1368641
+- idtype: pmcid
+  value: PMC11027739
+authors:
+- authtype: Author
+  name: Choi HJ
+- authtype: Author
+  name: Kyong JS
+- authtype: Author
+  name: Won JH
+- authtype: Author
+  name: Shim HJ
+epubdate: 2024 Apr 5
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '1368641'
+pmclivedate: 2024/04/19
+printpubdate: ''
+pubdate: 2024 Apr 5
+sortdate: 2024/04/05 00:00
+source: Front Neurosci
+title: Effect of spectral degradation on speech intelligibility and cortical representation
+uid: '11027739'
+volume: '18'

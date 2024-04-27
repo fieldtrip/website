@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '38380504'
+- idtype: doi
+  value: 10.1002/advs.202308277
+- idtype: pmcid
+  value: PMC11040378
+authors:
+- authtype: Author
+  name: Yüksel MB
+- authtype: Author
+  name: Atik AC
+- authtype: Author
+  name: Külah H
+epubdate: 2024 Feb 21
+fulljournalname: Advanced Science
+issue: '16'
+pages: '2308277'
+pmclivedate: 2024/04/25
+printpubdate: ''
+pubdate: 2024 Feb 21
+sortdate: 2024/02/21 00:00
+source: Adv Sci (Weinh)
+title: Piezoelectric Multi‐Channel Bilayer Transducer for Sensing and Filtering Ossicular
+  Vibration
+uid: '11040378'
+volume: '11'

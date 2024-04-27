@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '38172488'
+- idtype: doi
+  value: 10.1007/s11357-023-01036-5
+- idtype: pmcid
+  value: PMC11009204
+authors:
+- authtype: Author
+  name: García-Colomo A
+- authtype: Author
+  name: Nebreda A
+- authtype: Author
+  name: Carrasco-Gómez M
+- authtype: Author
+  name: de Frutos-Lucas J
+- authtype: Author
+  name: Ramirez-Toraño F
+- authtype: Author
+  name: Spuch C
+- authtype: Author
+  name: Comis-Tuche M
+- authtype: Author
+  name: Bruña R
+- authtype: Author
+  name: Alfonsín S
+- authtype: Author
+  name: Maestú F
+epubdate: 2024 Jan 4
+fulljournalname: GeroScience
+issue: '3'
+pages: 2989-3003
+pmclivedate: 2024/04/13
+printpubdate: ''
+pubdate: 2024 Jan 4
+sortdate: 2024/01/04 00:00
+source: GeroScience
+title: Longitudinal changes in the functional connectivity of individuals at risk
+  of Alzheimer’s disease
+uid: '11009204'
+volume: '46'

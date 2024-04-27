@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1038/s44271-023-00042-9
+- idtype: pmcid
+  value: PMC11041649
+authors:
+- authtype: Author
+  name: de Vries E
+- authtype: Author
+  name: Fejer G
+- authtype: Author
+  name: van Ede F
+epubdate: 2023 Dec 14
+fulljournalname: Communications Psychology
+issue: '1'
+pages: '41'
+pmclivedate: 2024/04/25
+printpubdate: '2023'
+pubdate: 2023 Dec 14
+sortdate: 2023/12/14 00:00
+source: Commun Psychol
+title: No obligatory trade-off between the use of space and time for working memory
+uid: '11041649'
+volume: '1'

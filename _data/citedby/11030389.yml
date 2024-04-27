@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '38645050'
+- idtype: doi
+  value: 10.1101/2024.04.11.589006
+- idtype: pmcid
+  value: PMC11030389
+authors:
+- authtype: Author
+  name: Lewis CM
+- authtype: Author
+  name: Wunderle T
+- authtype: Author
+  name: Fries P
+epubdate: 2024 Apr 12
+fulljournalname: bioRxiv
+issue: ''
+pages: 2024.04.11.589006
+pmclivedate: 2024/04/20
+printpubdate: ''
+pubdate: 2024 Apr 12
+sortdate: 2024/04/12 00:00
+source: bioRxiv
+title: Top-down modulation of visual cortical stimulus encoding and gamma independent
+  of firing rates
+uid: '11030389'
+volume: ''

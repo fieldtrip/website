@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '38632350'
+- idtype: doi
+  value: 10.1038/s41598-024-59579-2
+- idtype: pmcid
+  value: PMC11024164
+authors:
+- authtype: Author
+  name: Pluta D
+- authtype: Author
+  name: Hadj-Amar B
+- authtype: Author
+  name: Li M
+- authtype: Author
+  name: Zhao Y
+- authtype: Author
+  name: Versace F
+- authtype: Author
+  name: Vannucci M
+epubdate: 2024 Apr 17
+fulljournalname: Scientific Reports
+issue: ''
+pages: '8856'
+pmclivedate: 2024/04/18
+printpubdate: ''
+pubdate: 2024 Apr 17
+sortdate: 2024/04/17 00:00
+source: Sci Rep
+title: Improved data quality and statistical power of trial-level event-related potentials
+  with Bayesian random-shift Gaussian processes
+uid: '11024164'
+volume: '14'

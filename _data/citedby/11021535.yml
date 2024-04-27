@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '38627572'
+- idtype: doi
+  value: 10.1038/s41598-024-59302-1
+- idtype: pmcid
+  value: PMC11021535
+authors:
+- authtype: Author
+  name: Becker J
+- authtype: Author
+  name: Korn CW
+- authtype: Author
+  name: Blank H
+epubdate: 2024 Apr 16
+fulljournalname: Scientific Reports
+issue: ''
+pages: '8739'
+pmclivedate: 2024/04/17
+printpubdate: ''
+pubdate: 2024 Apr 16
+sortdate: 2024/04/16 00:00
+source: Sci Rep
+title: Pupil diameter as an indicator of sound pair familiarity after statistically
+  structured auditory sequence
+uid: '11021535'
+volume: '14'

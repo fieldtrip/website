@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1002/hbm.26677
+- idtype: pmcid
+  value: PMC11041380
+authors:
+- authtype: Author
+  name: Catrambone V
+- authtype: Author
+  name: Candia‐Rivera D
+- authtype: Author
+  name: Valenza G
+epubdate: 2024 Apr 24
+fulljournalname: Human Brain Mapping
+issue: '6'
+pages: e26677
+pmclivedate: 2024/04/24
+printpubdate: ''
+pubdate: 2024 Apr 24
+sortdate: 2024/04/24 00:00
+source: Hum Brain Mapp
+title: 'Intracortical brain‐heart interplay: An EEG model source study of sympathovagal
+  changes'
+uid: '11041380'
+volume: '45'
