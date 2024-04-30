@@ -119,7 +119,7 @@ unzip(url_fieldtrip);
 
 Upon completion of this step, the folder structure should look something like this: 
 
-```
+```bash
 fieldtrip-20240417/
 |-- bin
 |-- compat
@@ -193,16 +193,50 @@ fnames = {'ERF_orig.mat' 'GA_ERF_orig.mat' 'dataFC_LP.mat' 'dataFIC_LP.mat' 'sta
 for k = 1:numel(fnames)
   websave(fnames{k}, fullfile(url_tutorial, fnames{k}));
 end
-cd('../');
+cd('../../');
+```
+At this stage, you ideally have a directory structure that looks like the following one:
+```bash
+.
+|-- data
+|   |-- Subject01.ds
+|   |-- beamformer
+|   |-- cluster_permutation_timelock
+|   |-- eventrelatedaveraging
+|   `-- timefrequencyanalysis
+`-- fieldtrip-20240417
+    |-- bin
+    |-- compat
+    |-- connectivity
+    |-- contrib
+    |-- external
+    |-- fileio
+    |-- forward
+    |-- inverse
+    |-- plotting
+    |-- preproc
+    |-- private
+    |-- qsub
+    |-- realtime
+    |-- specest
+    |-- src
+    |-- statfun
+    |-- template
+    |-- test
+    |-- trialfun
+    `-- utilities
+```
+So, if you from now on - that is for the duration of the toolkit - *ALWAYS* execute the following steps after starting a fresh MATLAB session, you should be all good to go:
+
+```
+% change into the 'toolkit2024' folder and then do the following
+restoredfaultpath
+addpath('fieldtrip-20240417');
+addpath(genpath('data'));
+ft_defaults;
 ```
 
-
-
-    cd M:\toolkit2024
-    restoredefaultpath
-    startup
-
-The `restoredefaultpath` command clears your path, keeping only the official MATLAB toolboxes. The addpath statement adds the present working directory, i.e. the directory containing the FieldTrip main functions. The `startup` command runs the `startup.m` file in the `toolkit2024` directory, which ensures that all required subdirectories are added to the path.
+The `restoredefaultpath` command clears your path, keeping only the official MATLAB toolboxes. The `addpath` statement adds the `fieldtrip-20240417` directory, i.e. the directory containing the FieldTrip main functions. The other `addpath` statement tells MATLAB where to find the relevant data, and the `ft_defaults` command ensures that all of FieldTrip's required subdirectories are added to the path.
 
 {% include markup/red %}
 In general, please do NOT use the graphical path management tool from MATLAB. In this hands-on session we'll manage the path from the command line, but in general you are much better off using the startup.m file than the path GUI.
