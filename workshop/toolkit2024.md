@@ -93,20 +93,108 @@ A large part of the toolkit will consist of playground sessions, in which ideall
 
 ### Test your MATLAB and FieldTrip installation in advance
 
-For the hands-on sessions we assume that you will work on your own laptop computer. To have a smooth experience - and to avoid having to spend precious debugging time during the hands-on sessions - we recommend that you [test your MATLAB and FieldTrip installation in advance](/workshop/toolkit2024/test_installation).
+For the hands-on sessions we assume that you will work on your own laptop computer. To have a smooth experience - and to avoid having to spend precious debugging time during the hands-on sessions - we recommend that you [test your MATLAB and FieldTrip installation in advance](/workshop/toolkit2024/test_installation), and download the data that we will need during the hands-on sessions. Before running thist test, we recommend that you prepare your laptop as per the instructions in the next section, which explains in some more detail what needs to be downloaded in advance, as well as how you can easily obtain (and install) a copy of FieldTrip on your computer.
 
 ## Getting started with the hands-on sessions
 
-For the hands-on sessions we will use MATLAB R2021b, which is installed on the PCs in the instruction rooms. If you log in with the credentials that are provided for each of the course computers, you should start MATLAB using the Desktop shortcut. On the desktop there will also be a browser shortcut to this internet page.
+For the hands-on sessions we assume that you have a computer with a relatively recent version of MATLAB installed (preferably < 5 years old, >= 2019a/b).
 
-To ensure that everything runs smoothly, we will work with a clean and well-tested version of FieldTrip that we have installed on all computers. Importantly, the tutorial data does _not_ have to be downloaded on the PCs and has already been placed in the course accounts' home directories. These home directories are mounted as the computer's M-drive, and the FieldTrip code plus the necessary data are located in `M:\toolkit2024`. If you start MATLAB from the Desktop shortcut, FieldTrip will be automatically added to the MATLAB path, and you will be taken to the directory that contains the course data.
+To ensure that everything runs smoothly, we recommend that you set up your computer with a clean and well-tested version of FieldTrip, and download the data that are needed for the hands-on sessions in advance.
 
 {% include markup/red %}
-Please do not use another MATLAB version than R2021b. It should be available on all hands-on computers.
+You can either 'click around' using web browsers and/or explorer windows to grab the data that are needed, or instead (less work, at least if it works) execute the MATLAB code below.
 {% include markup/end %}
 
-A recent copy of FieldTrip and the data have been preinstalled on the computer and you do not have to download anything. Also, it should NOT be necessary to execute the following lines of code. These are only needed if you DO NOT start the MATLAB from the Desktop shortcut. In other words, you will probably always want to start MATLAB from the Desktop shortcut.
+To get a recent copy of FieldTrip, you can follow this [link](https://github.com/fieldtrip/fieldtrip/releases/tag/20240417), download the zip-file, and unzip it at a convenient location on your laptop's hard drive. Alternatively, you could do the following in the MATLAB command window. 
 
+```
+% create a folder that will contain the code and the data, and change directory
+mkdir('toolkit2024');
+cd('toolkit2024');
+
+% download and unzip fieldtrip into the newly created folder
+url_fieldtrip = 'https://github.com/fieldtrip/fieldtrip/archive/refs/tags/20240417.zip';
+unzip(url_fieldtrip);
+```
+
+Upon completion of this step, the folder structure should look something like this: 
+
+```
+fieldtrip-20240417/
+|-- bin
+|-- compat
+|-- connectivity
+|-- contrib
+|-- external
+|-- fileio
+|-- forward
+|-- inverse
+|-- plotting
+|-- preproc
+|-- private
+|-- qsub
+|-- realtime
+|-- specest
+|-- src
+|-- statfun
+|-- template
+|-- test
+|-- trialfun
+`-- utilities
+```
+
+{% include markup/red %}
+If you have downloaded and unzipped by hand, it could be that there's an 'extra folder layer' in your directory structure. We recommend that you remove this extra layer, i.e. move all content one level up.
+{% include markup/end %}
+
+Next, we proceed with downloading the relevant data. The data that are used in the hands-on sessions, are stored on the FieldTrip [download-server](https://download.fieldtriptoolbox.org/tutorial/). The tutorial documentation contains links to the relevant files, but it is easier to pre-install (and if needed to unzip) the data. To this end, you can use the recipe below. Please ensure that your present working directory is the ```toolkit2024``` folder, which you created in the previous step.
+
+```
+% create a folder (within toolkit2024) that will contain the data, to keep a clean structure
+mkdir('data');
+cd('data');
+
+% then download and unzip the Subject01 dataset
+url_subject01 = 'https://download.fieldtriptoolbox.org/tutorial/Subject01.zip';
+unzip(url_subject01);
+
+% next, create for each of the tutorials a folder, and download the data
+mkdir('eventrelatedaveraging');
+cd('eventrelatedaveraging');
+url_tutorial = 'https://download.fieldtriptoolbox.org/tutorial/eventrelatedaveraging';
+fnames = {'dataFC_LP.mat' 'dataFIC_LP.mat' 'dataIC_LP.mat'};
+for k = 1:numel(fnames)
+  websave(fnames{k}, fullfile(url_tutorial, fnames{k}));
+end
+cd('../');
+
+mkdir('timefrequencyanalysis');
+cd('timefrequencyanalysis');
+url_tutorial = 'https://download.fieldtriptoolbox.org/tutorial/timefrequencyanalysis';
+fnames = {'dataFIC.mat'};
+for k = 1:numel(fnames)
+  websave(fnames{k}, fullfile(url_tutorial, fnames{k}));
+end
+cd('../');
+
+mkdir('beamformer');
+cd('beamformer');
+url_tutorial = 'https://download.fieldtriptoolbox.org/tutorial/beamformer';
+fnames = {'Subject01.mri' 'dataPost.mat' 'dataPre.mat' 'data_all.mat' 'freqPost.mat' 'freqPre.mat' 'headmodel.mat' 'segmentedmri.mat' 'sourcePost_con.mat' 'sourcePost_nocon.mat' sourcePre_con.mat' 'sourcemodel.mat'};
+for k = 1:numel(fnames)
+  websave(fnames{k}, fullfile(url_tutorial, fnames{k}));
+end
+cd('../');
+
+mkdir('cluster_permutation_timelock');
+cd('cluster_permutation_timelock');
+url_tutorial = 'https://download.fieldtriptoolbox.org/tutorial/cluster_permutation_timelock';
+fnames = {'ERF_orig.mat' 'GA_ERF_orig.mat' 'dataFC_LP.mat' 'dataFIC_LP.mat' 'stat_ERF_axial_FICvsFC.mat' 'stat_ERF_planar_FICvsFC.mat'};
+for k = 1:numel(fnames)
+  websave(fnames{k}, fullfile(url_tutorial, fnames{k}));
+end
+cd('../');
+```
     cd M:\toolkit2024
     restoredefaultpath
     startup
