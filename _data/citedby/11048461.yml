@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '38671984'
+- idtype: doi
+  value: 10.3390/brainsci14040332
+- idtype: pmcid
+  value: PMC11048461
+authors:
+- authtype: Author
+  name: Mancuso M
+- authtype: Author
+  name: Cruciani A
+- authtype: Author
+  name: Sveva V
+- authtype: Author
+  name: Casula E
+- authtype: Author
+  name: Brown KE
+- authtype: Author
+  name: Di Lazzaro V
+- authtype: Author
+  name: Rothwell JC
+- authtype: Author
+  name: Rocchi L
+epubdate: 2024 Mar 29
+fulljournalname: Brain Sciences
+issue: '4'
+pages: '332'
+pmclivedate: 2024/04/27
+printpubdate: ''
+pubdate: 2024 Mar 29
+sortdate: 2024/03/29 00:00
+source: Brain Sci
+title: Changes in Cortical Activation by Transcranial Magnetic Stimulation Due to
+  Coil Rotation Are Not Attributable to Cranial Muscle Activation
+uid: '11048461'
+volume: '14'

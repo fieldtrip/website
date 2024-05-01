@@ -1,0 +1,56 @@
+articleids:
+- idtype: pmid
+  value: '38680452'
+- idtype: doi
+  value: 10.3389/fnins.2024.1237245
+- idtype: pmcid
+  value: PMC11047451
+authors:
+- authtype: Author
+  name: Areces-Gonzalez A
+- authtype: Author
+  name: Paz-Linares D
+- authtype: Author
+  name: Riaz U
+- authtype: Author
+  name: Wang Y
+- authtype: Author
+  name: Li M
+- authtype: Author
+  name: Razzaq FA
+- authtype: Author
+  name: Bosch-Bayard JF
+- authtype: Author
+  name: Gonzalez-Moreira E
+- authtype: CollectiveName
+  name: Lifespan Brain Chart Consortium (LBCC)
+- authtype: CollectiveName
+  name: Global Brain Consortium (GBC)
+- authtype: CollectiveName
+  name: Cuban Human Brain Mapping Project (CHBMP)
+- authtype: Author
+  name: Ontivero-Ortega M
+- authtype: Author
+  name: Galan-Garcia L
+- authtype: Author
+  name: Martínez-Montes E
+- authtype: Author
+  name: Minati L
+- authtype: Author
+  name: Valdes-Sosa MJ
+- authtype: Author
+  name: Bringas-Vega ML
+- authtype: Author
+  name: Valdes-Sosa PA
+epubdate: 2024 Apr 12
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '1237245'
+pmclivedate: 2024/04/26
+printpubdate: ''
+pubdate: 2024 Apr 12
+sortdate: 2024/04/12 00:00
+source: Front Neurosci
+title: 'CiftiStorm pipeline: facilitating reproducible EEG/MEG source connectomics'
+uid: '11047451'
+volume: '18'

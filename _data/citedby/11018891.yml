@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '38628260'
+- idtype: doi
+  value: 10.3389/fpsyt.2024.1358018
+- idtype: pmcid
+  value: PMC11018891
+authors:
+- authtype: Author
+  name: van der Wijk G
+- authtype: Author
+  name: Enkhbold Y
+- authtype: Author
+  name: Cnudde K
+- authtype: Author
+  name: Szostakiwskyj MW
+- authtype: Author
+  name: Blier P
+- authtype: Author
+  name: Knott V
+- authtype: Author
+  name: Jaworska N
+- authtype: Author
+  name: Protzner AB
+epubdate: 2024 Apr 2
+fulljournalname: Frontiers in Psychiatry
+issue: ''
+pages: '1358018'
+pmclivedate: 2024/04/16
+printpubdate: ''
+pubdate: 2024 Apr 2
+sortdate: 2024/04/02 00:00
+source: Front Psychiatry
+title: 'One size does not fit all: notable individual variation in brain activity
+  correlates of antidepressant treatment response'
+uid: '11018891'
+volume: '15'

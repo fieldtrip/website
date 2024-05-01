@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '38366104'
+- idtype: doi
+  value: 10.1038/s41562-024-01820-z
+- idtype: pmcid
+  value: PMC11045450
+authors:
+- authtype: Author
+  name: Brus J
+- authtype: Author
+  name: Heng JA
+- authtype: Author
+  name: Beliaeva V
+- authtype: Author
+  name: Gonzalez Pinto F
+- authtype: Author
+  name: Cassarà AM
+- authtype: Author
+  name: Neufeld E
+- authtype: Author
+  name: Grueschow M
+- authtype: Author
+  name: Imbach L
+- authtype: Author
+  name: Polanía R
+epubdate: 2024 Feb 16
+fulljournalname: Nature Human Behaviour
+issue: '4'
+pages: 743-757
+pmclivedate: 2024/04/27
+printpubdate: '2024'
+pubdate: 2024 Feb 16
+sortdate: 2024/02/16 00:00
+source: Nat Hum Behav
+title: Causal phase-dependent control of non-spatial attention in human prefrontal
+  cortex
+uid: '11045450'
+volume: '8'
