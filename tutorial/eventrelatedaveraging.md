@@ -25,7 +25,7 @@ The CTF MEG system has (151 in this dataset, or 275 in newer systems) first-orde
 
 ### The dataset used for this tutorial 
 
-The dataset that we use in this (and many other) tutorial(s), is the Subject01.ds dataset. This is data obtained with a 151-channel CTF MEG system, while the participant listened to Dutch sentences. The experimental manipulation was designed to investigate the brain effects of semantic (in)congruency.
+The dataset that we use in this (and many other) tutorial(s), is the [Subject01.ds](https://download.fieldtriptoolbox.org/tutorial/Subject01.zip) dataset. This is data obtained with a 151-channel CTF MEG system, while the participant listened to Dutch sentences. The experimental manipulation was designed to investigate the brain effects of semantic (in)congruency.
 
 ## Procedure
 
