@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.3389/fpsyg.2024.1369485
+- idtype: pmcid
+  value: PMC11056517
+authors:
+- authtype: Author
+  name: Costa M
+- authtype: Author
+  name: Visentin C
+- authtype: Author
+  name: Occhionero M
+- authtype: Author
+  name: Tonetti L
+- authtype: Author
+  name: Prodi N
+- authtype: Author
+  name: Natale V
+epubdate: 2024 Apr 15
+fulljournalname: Frontiers in Psychology
+issue: ''
+pages: '1369485'
+pmclivedate: 2024/04/29
+printpubdate: ''
+pubdate: 2024 Apr 15
+sortdate: 2024/04/15 00:00
+source: Front Psychol
+title: 'Pentatonic sequences and monaural beats to facilitate relaxation: an EEG study'
+uid: '11056517'
+volume: '15'
