@@ -23,6 +23,10 @@ When analyzing EEG or MEG signals, the aim is to investigate the modulation of t
 
 The CTF MEG system has (151 in this dataset, or 275 in newer systems) first-order axial gradiometer sensors that measure the gradient of the magnetic field in the radial direction, i.e. orthogonal to the scalp. Often it is helpful to interpret the MEG fields after transforming the data to a planar gradient configuration, i.e. by computing the gradient tangential to the scalp. This representation of MEG data is comparable to the field measured by planar gradiometer sensors. One advantage of the planar gradient transformation is that the signal amplitude typically is largest directly above a source.
 
+### The dataset used for this tutorial 
+
+The dataset that we use in this (and many other) tutorial(s), is the Subject01.ds dataset. This is data obtained with a 151-channel CTF MEG system, while the participant listened to Dutch sentences. The experimental manipulation was designed to investigate the brain effects of semantic (in)congruency.
+
 ## Procedure
 
 To calculate the event-related field / potential for the example dataset we will perform the following steps:
