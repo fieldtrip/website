@@ -946,6 +946,7 @@ Kabani
 Kahana
 Kales
 Kaminski
+Kanazawa
 Kapittelweg
 Kappenman
 Karger
@@ -4102,6 +4103,7 @@ nex
 nicolet
 niet
 nifti
+ni
 nii
 niix
 nirs
