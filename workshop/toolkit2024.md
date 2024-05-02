@@ -230,7 +230,7 @@ So, if you from now on - that is for the duration of the toolkit - *ALWAYS* exec
 
 ```
 % change into the 'toolkit2024' folder and then do the following
-restoredfaultpath
+restoredefaultpath
 addpath('fieldtrip-20240417');
 addpath(genpath('data'));
 ft_defaults;
@@ -239,7 +239,7 @@ ft_defaults;
 The `restoredefaultpath` command clears your path, keeping only the official MATLAB toolboxes. The `addpath` statement adds the `fieldtrip-20240417` directory, i.e. the directory containing the FieldTrip main functions. The other `addpath` statement tells MATLAB where to find the relevant data, and the `ft_defaults` command ensures that all of FieldTrip's required subdirectories are added to the path.
 
 {% include markup/red %}
-In general, please do NOT use the graphical path management tool from MATLAB. In this hands-on session we'll manage the path from the command line, but in general you are much better off using the startup.m file than the path GUI.
+In general, please do NOT use the graphical path management tool from MATLAB. In this hands-on session we'll manage the path from the command line, but in general you are much better off using a startup.m file than the path GUI. You can find more information about startup files in the MATLAB documentation.
 
 Furthermore, please do NOT add FieldTrip with all subdirectories, subdirectories will be added automatically when needed, and only when needed (see this [FAQ](/faq/installation).
 {% include markup/end %}
