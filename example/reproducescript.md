@@ -5,7 +5,7 @@ tags: [example, reproducescript, script]
 
 # Making your analysis pipeline reproducible using reproducescript
 
-This example script will introduce you to functionality in the FieldTrip toolbox designed to aid in making your analysis pipeline - including code, data and results - easily reproducible and shareable. It is based on the manuscript [Reducing the efforts to create reproducible analysis code with FieldTrip](https://doi.org/10.1101/2021.02.05.429886).
+This example script will introduce you to functionality in the FieldTrip toolbox designed to aid in making your analysis pipeline - including code, data and results - easily reproducible and shareable. It is based on the manuscript [Reducing the efforts to create reproducible analysis code with FieldTrip](http://dx.doi.org/10.21105/joss.05566).
 
 ## Description
 
@@ -174,12 +174,12 @@ If a researcher wishes that _every_ analysis step can be re-executed, including 
 
 FieldTrip provides researchers with a tool to easily share complete analysis pipelines that use the FieldTrip toolbox. This is especially aimed at researchers with limited coding experience, that nevertheless want to share their analysis code and/or data with the confidence that their code is reproducible.
 
-Here we applied _reproducescript_ to the simplest analysis pipeline, which is example 1 in [Reducing the efforts to create reproducible analysis code with FieldTrip](https://doi.org/10.1101/2021.02.05.429886). For more complicated analysis pipelines, have a look at example [2](/example/reproducescript_group/#example-2) and [3](/example/reproducescript_andersen/#example-3) in the links in the [Suggested further reading](#suggested-further-reading).
+Here we applied _reproducescript_ to the simplest analysis pipeline, which is example 1 in [Reducing the efforts to create reproducible analysis code with FieldTrip](http://dx.doi.org/10.21105/joss.05566). For more complicated analysis pipelines, have a look at example [2](/example/reproducescript_group/#example-2) and [3](/example/reproducescript_andersen/#example-3) in the links in the [Suggested further reading](#suggested-further-reading).
 
 Note that there are other strategies for improving shareability and reproducibility, and we don't assume that _reproducescript_ is the best way in every scenario. Rather, it is one of many tools that can aid the researcher to improve the community's standard in methodological transparency and robustness of results. For other strategies, we refer the reader to the pre-print in which we introduce the _reproducescript_ functionality.
 
 ## Suggested further reading
 
-- [Reducing the efforts to create reproducible analysis code with FieldTrip](https://doi.org/10.1101/2021.02.05.429886)
+- [Reducing the efforts to create reproducible analysis code with FieldTrip](http://dx.doi.org/10.21105/joss.05566)
 - [Using reproducescript for a group analysis](/example/reproducescript_group)
 - [Using reproducescript on a full study](/example/reproducescript_andersen)
