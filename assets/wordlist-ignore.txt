@@ -288,6 +288,7 @@ CUNY
 CXX
 CXXFLAGS
 Caa
+Cabunoc
 Calibri
 Calle
 CamCAN
@@ -900,6 +901,8 @@ JJ
 JL
 JM
 JM's
+JOSS
+JOSSCast
 JPSTH
 JQ
 JRE
@@ -1204,6 +1207,7 @@ Maxfilter
 Maxfiltered
 Maxfiltering
 Maximilien
+Mayes
 Mazaheri
 Mazoyer
 Mazziotta
@@ -1413,6 +1417,7 @@ OHBM
 OOP
 RIA
 RSA
+Spotify
 TRFs
 appenddim
 appendsource
