@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '31374801'
+- idtype: doi
+  value: 10.1109/ICORR.2019.8779373
+- idtype: pmcid
+  value: PMC11062591
+- idtype: MID
+  value: NIHMS1956280
+authors:
+- authtype: Author
+  name: Ricci S
+- authtype: Author
+  name: Tatti E
+- authtype: Author
+  name: Mehraram R
+- authtype: Author
+  name: Panday P
+- authtype: Author
+  name: Ghilardi MF
+epubdate: ''
+fulljournalname: 'IEEE ... International Conference on Rehabilitation Robotics : [proceedings]'
+issue: ''
+pages: 1254-1259
+pmclivedate: 2024/05/01
+printpubdate: 2019 Jun
+pubdate: 2019 Jun
+sortdate: 2019/06/01 00:00
+source: IEEE Int Conf Rehabil Robot
+title: Beta band frequency differences between motor and frontal cortices in reaching
+  movements
+uid: '11062591'
+volume: '2019'
