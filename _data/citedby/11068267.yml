@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '38707651'
+- idtype: doi
+  value: 10.1117/1.JBO.29.S3.S33302
+- idtype: pmcid
+  value: PMC11068267
+authors:
+- authtype: Author
+  name: Kamar F
+- authtype: Author
+  name: Shoemaker LN
+- authtype: Author
+  name: Eskandari R
+- authtype: Author
+  name: Milej D
+- authtype: Author
+  name: Drosdowech D
+- authtype: Author
+  name: Murkin JM
+- authtype: Author
+  name: St. Lawrence K
+- authtype: Author
+  name: Chui J
+- authtype: Author
+  name: Diop M
+epubdate: 2024 May 3
+fulljournalname: Journal of Biomedical Optics
+issue: Suppl 3
+pages: S33302
+pmclivedate: 2024/05/04
+printpubdate: 2024 Jun
+pubdate: 2024 May 3
+sortdate: 2024/05/03 00:00
+source: J Biomed Opt
+title: Assessing changes in regional cerebral hemodynamics in adults with a high-density
+  full-head coverage time-resolved near-infrared spectroscopy device
+uid: '11068267'
+volume: '29'
