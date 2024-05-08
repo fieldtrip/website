@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '38702194'
+- idtype: doi
+  value: 10.1523/ENEURO.0251-23.2024
+- idtype: pmcid
+  value: PMC11069433
+authors:
+- authtype: Author
+  name: Ghosh P
+- authtype: Author
+  name: Talwar S
+- authtype: Author
+  name: Banerjee A
+epubdate: 2024 May 2
+fulljournalname: eNeuro
+issue: '5'
+pages: ENEURO.0251-23.2024
+pmclivedate: 2024/05/06
+printpubdate: ''
+pubdate: 2024 May 2
+sortdate: 2024/05/02 00:00
+source: eNeuro
+title: Unsupervised Characterization of Prediction Error Markers in Unisensory and
+  Multisensory Streams Reveal the Spatiotemporal Hierarchy of Cortical Information
+  Processing
+uid: '11069433'
+volume: '11'

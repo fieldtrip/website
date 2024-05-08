@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '38693186'
+- idtype: doi
+  value: 10.1038/s41467-024-48126-2
+- idtype: pmcid
+  value: PMC11063150
+authors:
+- authtype: Author
+  name: Gehmacher Q
+- authtype: Author
+  name: Schubert J
+- authtype: Author
+  name: Schmidt F
+- authtype: Author
+  name: Hartmann T
+- authtype: Author
+  name: Reisinger P
+- authtype: Author
+  name: Rösch S
+- authtype: Author
+  name: Schwarz K
+- authtype: Author
+  name: Popov T
+- authtype: Author
+  name: Chait M
+- authtype: Author
+  name: Weisz N
+epubdate: 2024 May 1
+fulljournalname: Nature Communications
+issue: ''
+pages: '3692'
+pmclivedate: 2024/05/02
+printpubdate: ''
+pubdate: 2024 May 1
+sortdate: 2024/05/01 00:00
+source: Nat Commun
+title: Eye movements track prioritized auditory features in selective attention to
+  natural speech
+uid: '11063150'
+volume: '15'
