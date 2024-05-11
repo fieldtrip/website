@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '38710040'
+- idtype: doi
+  value: 10.1097/WNP.0000000000000988
+- idtype: pmcid
+  value: PMC11076005
+- idtype: MID
+  value: NIHMS1848130
+authors:
+- authtype: Author
+  name: Nix KC
+- authtype: Author
+  name: Oh A
+- authtype: Author
+  name: Goad BS
+- authtype: Author
+  name: Wu W
+- authtype: Author
+  name: Lucas MV
+- authtype: Author
+  name: Baumer FM
+epubdate: ''
+fulljournalname: 'Journal of clinical neurophysiology : official publication of the
+  American Electroencephalographic Society'
+issue: '4'
+pages: 334-343
+pmclivedate: ''
+printpubdate: 2024 May 1
+pubdate: 2024 May 1
+sortdate: 2024/05/01 00:00
+source: J Clin Neurophysiol
+title: Detection of Language Lateralization using Spectral Analysis of EEG
+uid: '11076005'
+volume: '41'
