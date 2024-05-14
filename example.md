@@ -62,6 +62,7 @@ See also the [tutorials](/tutorial) and [frequently asked questions](/faq).
 - [Localizing the sources underlying the difference in event-related fields](/example/difference_erf)
 - [Make leadfields using different headmodels](/example/make_leadfields_using_different_headmodels)
 - [Read neuromag .fif mri and create a MNI-aligned single-shell head model](/example/neuromag_aligned2mni)
+- [Symmetric dipole pairs for beamforming](/example/symmetry)
 - [Testing BEM created lead fields](/example/testing_bem_created_leadfields)
 - [Use your own forward leadfield model in an inverse beamformer computation](/example/use_your_own_forward_leadfield_model_in_an_inverse_beamformer_computation)
 
