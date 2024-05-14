@@ -223,6 +223,9 @@
 - name:  Stratify the distribution of one variable that differs in two conditions
   link:  /example/stratify
 
+- name:  Symmetric dipole pairs for beamforming
+  link:  /example/symmetry
+
 - name:  Testing BEM created EEG lead fields
   link:  /example/testing_bem_created_leadfields
 
