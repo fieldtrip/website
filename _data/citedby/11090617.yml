@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '38581681'
+- idtype: doi
+  value: 10.1016/j.celrep.2024.114028
+- idtype: pmcid
+  value: PMC11090617
+- idtype: MID
+  value: NIHMS1988695
+authors:
+- authtype: Author
+  name: Kang JU
+- authtype: Author
+  name: Mooshagian E
+- authtype: Author
+  name: Snyder LH
+epubdate: 2024 Apr 5
+fulljournalname: Cell reports
+issue: '4'
+pages: '114028'
+pmclivedate: 2024/05/13
+printpubdate: 2024 Apr 23
+pubdate: 2024 Apr 5
+sortdate: 2024/04/05 00:00
+source: Cell Rep
+title: Functional organization of posterior parietal cortex circuitry based on inferred
+  information flow
+uid: '11090617'
+volume: '43'

@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '38712161'
+- idtype: doi
+  value: 10.1101/2024.04.19.589047
+- idtype: pmcid
+  value: PMC11071436
+authors:
+- authtype: Author
+  name: Glynos NG
+- authtype: Author
+  name: Huels ER
+- authtype: Author
+  name: Nelson A
+- authtype: Author
+  name: Kim Y
+- authtype: Author
+  name: Kennedy RT
+- authtype: Author
+  name: Mashour GA
+- authtype: Author
+  name: Pal D
+epubdate: 2024 Apr 22
+fulljournalname: bioRxiv
+issue: ''
+pages: 2024.04.19.589047
+pmclivedate: 2024/05/07
+printpubdate: ''
+pubdate: 2024 Apr 22
+sortdate: 2024/04/22 00:00
+source: bioRxiv
+title: Neurochemical and Neurophysiological Effects of Intravenous Administration
+  of N,N-dimethyltryptamine in Rats
+uid: '11071436'
+volume: ''

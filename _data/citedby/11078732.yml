@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '38632400'
+- idtype: doi
+  value: 10.1038/s41586-024-07309-z
+- idtype: pmcid
+  value: PMC11078732
+authors:
+- authtype: Author
+  name: Daume J
+- authtype: Author
+  name: Kamiński J
+- authtype: Author
+  name: Schjetnan AG
+- authtype: Author
+  name: Salimpour Y
+- authtype: Author
+  name: Khan U
+- authtype: Author
+  name: Kyzar M
+- authtype: Author
+  name: Reed CM
+- authtype: Author
+  name: Anderson WS
+- authtype: Author
+  name: Valiante TA
+- authtype: Author
+  name: Mamelak AN
+- authtype: Author
+  name: Rutishauser U
+epubdate: 2024 Apr 17
+fulljournalname: Nature
+issue: '8011'
+pages: 393-401
+pmclivedate: 2024/05/10
+printpubdate: '2024'
+pubdate: 2024 Apr 17
+sortdate: 2024/04/17 00:00
+source: Nature
+title: Control of working memory by phase–amplitude coupling of human hippocampal
+  neurons
+uid: '11078732'
+volume: '629'

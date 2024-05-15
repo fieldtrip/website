@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '38725290'
+- idtype: doi
+  value: 10.1093/cercor/bhae186
+- idtype: pmcid
+  value: PMC11082477
+authors:
+- authtype: Author
+  name: Bush A
+- authtype: Author
+  name: Zou JF
+- authtype: Author
+  name: Lipski WJ
+- authtype: Author
+  name: Kokkinos V
+- authtype: Author
+  name: Richardson RM
+epubdate: 2024 May 9
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '5'
+pages: bhae186
+pmclivedate: 2024/05/10
+printpubdate: ''
+pubdate: 2024 May 9
+sortdate: 2024/05/09 00:00
+source: Cereb Cortex
+title: Aperiodic components of local field potentials reflect inherent differences
+  between cortical and subcortical activity
+uid: '11082477'
+volume: '34'

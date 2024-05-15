@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '36752305'
+- idtype: doi
+  value: 10.1111/psyp.14255
+- idtype: pmcid
+  value: PMC11088305
+- idtype: MID
+  value: NIHMS1980364
+authors:
+- authtype: Author
+  name: Wood M
+- authtype: Author
+  name: Grenier AE
+- authtype: Author
+  name: Wicha NY
+epubdate: 2023 Feb 8
+fulljournalname: Psychophysiology
+issue: '6'
+pages: e14255
+pmclivedate: 2024/05/11
+printpubdate: 2023 Jun
+pubdate: 2023 Feb 8
+sortdate: 2023/02/08 00:00
+source: Psychophysiology
+title: 'Development is in the details: Event-related theta oscillations reveal children
+  and adults verify multiplication facts differently'
+uid: '11088305'
+volume: '60'

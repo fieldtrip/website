@@ -1,0 +1,24 @@
+articleids:
+- idtype: pmid
+  value: '38538144'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1475-23.2024
+- idtype: pmcid
+  value: PMC11079964
+authors:
+- authtype: Author
+  name: van Ede F
+- authtype: Author
+  name: Nobre AC
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '19'
+pages: e1475232024
+pmclivedate: 2024/05/10
+printpubdate: 2024 May 8
+pubdate: 2024 May 8
+sortdate: 2024/05/08 00:00
+source: J Neurosci
+title: A Neural Decision Signal during Internal Sampling from Working Memory in Humans
+uid: '11079964'
+volume: '44'
