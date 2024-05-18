@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1038/s41598-024-61045-y
+- idtype: pmcid
+  value: PMC11094085
+authors:
+- authtype: Author
+  name: Yasoda-Mohan A
+- authtype: Author
+  name: Faubert J
+- authtype: Author
+  name: Ost J
+- authtype: Author
+  name: Kropotov JD
+- authtype: Author
+  name: Vanneste S
+epubdate: 2024 May 14
+fulljournalname: Scientific Reports
+issue: ''
+pages: '11036'
+pmclivedate: 2024/05/15
+printpubdate: ''
+pubdate: 2024 May 14
+sortdate: 2024/05/14 00:00
+source: Sci Rep
+title: Investigating sensitivity to multi-domain prediction errors in chronic auditory
+  phantom perception
+uid: '11094085'
+volume: '14'
