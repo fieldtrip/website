@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '24099977'
+- idtype: doi
+  value: 10.1088/1741-2560/10/6/066004
+- idtype: pmcid
+  value: PMC3848963
+- idtype: MID
+  value: NIHMS531772
+authors:
+- authtype: Author
+  name: Huang Y
+- authtype: Author
+  name: Dmochowski JP
+- authtype: Author
+  name: Su Y
+- authtype: Author
+  name: Datta A
+- authtype: Author
+  name: Rorden C
+- authtype: Author
+  name: Parra LC
+epubdate: 2013 Oct 8
+fulljournalname: Journal of neural engineering
+issue: '6'
+pages: 10.1088/1741-2560/10/6/066004
+pmclivedate: 2014/12/01
+printpubdate: 2013 Dec
+pubdate: 2013 Oct 8
+sortdate: 2013/10/08 00:00
+source: J Neural Eng
+title: Automated MRI Segmentation for Individualized Modeling of Current Flow in the
+  Human Head
+uid: '3848963'
+volume: '10'

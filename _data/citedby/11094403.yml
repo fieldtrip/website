@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1093/cercor/bhae183
+- idtype: pmcid
+  value: PMC11094403
+authors:
+- authtype: Author
+  name: Guttesen AÁ
+- authtype: Author
+  name: Denis D
+- authtype: Author
+  name: Gaskell MG
+- authtype: Author
+  name: Cairney SA
+epubdate: 2024 May 14
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '5'
+pages: bhae183
+pmclivedate: 2024/05/15
+printpubdate: ''
+pubdate: 2024 May 14
+sortdate: 2024/05/14 00:00
+source: Cereb Cortex
+title: Delineating memory reactivation in sleep with verbal and non-verbal retrieval
+  cues
+uid: '11094403'
+volume: '34'

@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1038/s41467-024-48374-2
+- idtype: pmcid
+  value: PMC11093997
+authors:
+- authtype: Author
+  name: Piza DB
+- authtype: Author
+  name: Corrigan BW
+- authtype: Author
+  name: Gulli RA
+- authtype: Author
+  name: Do Carmo S
+- authtype: Author
+  name: Cuello AC
+- authtype: Author
+  name: Muller L
+- authtype: Author
+  name: Martinez-Trujillo J
+epubdate: 2024 May 14
+fulljournalname: Nature Communications
+issue: ''
+pages: '4053'
+pmclivedate: 2024/05/15
+printpubdate: ''
+pubdate: 2024 May 14
+sortdate: 2024/05/14 00:00
+source: Nat Commun
+title: Primacy of vision shapes behavioral strategies and neural substrates of spatial
+  navigation in marmoset hippocampus
+uid: '11093997'
+volume: '15'

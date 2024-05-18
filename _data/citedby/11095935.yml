@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '38747572'
+- idtype: doi
+  value: 10.7554/eLife.90874
+- idtype: pmcid
+  value: PMC11095935
+authors:
+- authtype: Author
+  name: Liu B
+- authtype: Author
+  name: Alexopoulou ZS
+- authtype: Author
+  name: van Ede F
+epubdate: 2024 May 15
+fulljournalname: eLife
+issue: ''
+pages: RP90874
+pmclivedate: 2024/05/15
+printpubdate: ''
+pubdate: 2024 May 15
+sortdate: 2024/05/15 00:00
+source: eLife
+title: Jointly looking to the past and the future in visual working memory
+uid: '11095935'
+volume: '12'
