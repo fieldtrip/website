@@ -34,7 +34,7 @@ All hands on sessions will be using the same [dataset](/workshop/paris2019/datas
 
 ## Schedule
 
-#### Day 1 (Tuesday December 3, 2019)
+### Day 1 (Tuesday December 3, 2019)
 
 - 08:30 – 09:00 Registration, with coffee/tea + Welcome & intro
 - 09:00 – 10:30 Lecture 1: Data organization (Robert) and initial data processing(Alex)
@@ -51,7 +51,7 @@ All hands on sessions will be using the same [dataset](/workshop/paris2019/datas
 - 15:00 – 17:00 Hands-on 2c: [Sensor level analysis using MNE-Python](https://github.com/agramfort/mne_pratical_meeg/blob/master/2-sensors_time_frequency.ipynb)
 - 17:00 – 17:30 Wrap-up / Q&A session
 
-#### Day 2 (Wednesday December 4, 2019)
+### Day 2 (Wednesday December 4, 2019)
 
 - 09:00 – 10:30 Lecture 3: Source estimation 1 (Alex & François)
 - 10:30 – 12:30 Hands-on 3a: [Creating head and source models using FieldTrip](/workshop/paris2019/handson_anatomy)
@@ -66,7 +66,7 @@ All hands on sessions will be using the same [dataset](/workshop/paris2019/datas
 - 15:00 – 17:00 Hands-on 4c: [Single](https://github.com/agramfort/mne_pratical_meeg/blob/master/4a-Inverse_source_localization_dipole_fit.ipynb)  and [distributed sources using MNE-Python](https://github.com/agramfort/mne_pratical_meeg/blob/master/4b-Inverse_source_localization_mne_dspm.ipynb)
 - 17:00 – 17:30 Wrap-up / Q&A session
 
-#### Day 3 (Thursday December 5, 2019)
+### Day 3 (Thursday December 5, 2019)
 
 - 09:00 – 10:30 Lecture 5: Group level analysis (Robert)
 - 10:30 – 12:30 Hands-on 5a: [Group level analysis using FieldTrip](/workshop/paris2019/handson_groupanalysis)
@@ -118,4 +118,4 @@ Note: **do not** add the folder recursively, i.e., do not use `addpath(genpath('
 
 ### Get the example data that is used throughout this set of tutorials
 
-The full dataset can be obtained at [https://openneuro.org/datasets/ds000117/versions/1.0.3], and has a size of about 460 GB. The pruned subset of the data that is needed for this collection of tutorials - and the results of running these tutorials - can be downloaded from <https://download.fieldtriptoolbox.org/workshop/paris2019/> and specifically in the `ds000117-pruned` folder. The results of the pipelines used in these tutorials are located in the `derivatives` folder.
+The full dataset can be obtained from [OpenNeuro](https://openneuro.org/datasets/ds000117/versions/1.0.3), and has a size of about 460 GB. The pruned subset of the data that is needed for this collection of tutorials - and the results of running these tutorials - can be downloaded from our [download server](https://download.fieldtriptoolbox.org/workshop/paris2019/) and specifically in the `ds000117-pruned` folder. The results of the pipelines used in these tutorials are located in the `derivatives` folder.
