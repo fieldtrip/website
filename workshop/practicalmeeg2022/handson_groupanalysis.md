@@ -345,7 +345,7 @@ FieldTrip also has other methods implemented for performing a multiple compariso
 
 Instead of using the analytic t-distribution to calculate the appropriate p-value for your effect, you can use a nonparametric randomization test to obtain the p-value.
 
-This is implemented in FieldTrip in the function **[ft_statistics_montecarlo](/reference/ft_statistics_montecarlo)**, which is called by **[ft_timelockstatistics](/reference/ft_timelockstatistics)** when you set `cfg.method = 'montecarlo'``. A Monte-Carlo estimate of the significance probabilities and/or critical values is calculated based on randomizing (or permuting) your data many times between the conditions.
+This is implemented in FieldTrip in the function **[ft_statistics_montecarlo](/reference/ft_statistics_montecarlo)**, which is called by **[ft_timelockstatistics](/reference/ft_timelockstatistics)** when you set `cfg.method = 'montecarlo'`. A Monte-Carlo estimate of the significance probabilities and/or critical values is calculated based on randomizing (or permuting) your data many times between the conditions.
 
     cfg = [];
     cfg.channel = 'all';
