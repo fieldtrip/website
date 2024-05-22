@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '38760337'
+- idtype: doi
+  value: 10.1038/s41467-024-48375-1
+- idtype: pmcid
+  value: PMC11101474
+authors:
+- authtype: Author
+  name: Amemori S
+- authtype: Author
+  name: Graybiel AM
+- authtype: Author
+  name: Amemori KI
+epubdate: 2024 May 17
+fulljournalname: Nature Communications
+issue: ''
+pages: '4201'
+pmclivedate: 2024/05/18
+printpubdate: ''
+pubdate: 2024 May 17
+sortdate: 2024/05/17 00:00
+source: Nat Commun
+title: Cingulate microstimulation induces negative decision-making via reduced top-down
+  influence on primate fronto-cingulo-striatal network
+uid: '11101474'
+volume: '15'

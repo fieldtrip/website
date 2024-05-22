@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '38764980'
+- idtype: doi
+  value: 10.3389/fnsys.2024.1327674
+- idtype: pmcid
+  value: PMC11099220
+authors:
+- authtype: Author
+  name: Dayarian N
+- authtype: Author
+  name: Khadem A
+epubdate: 2024 May 3
+fulljournalname: Frontiers in Systems Neuroscience
+issue: ''
+pages: '1327674'
+pmclivedate: 2024/05/17
+printpubdate: ''
+pubdate: 2024 May 3
+sortdate: 2024/05/03 00:00
+source: Front Syst Neurosci
+title: A hybrid boundary element-finite element approach for solving the EEG forward
+  problem in brain modeling
+uid: '11099220'
+volume: '18'
