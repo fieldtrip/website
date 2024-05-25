@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '38773109'
+- idtype: doi
+  value: 10.1038/s41467-024-48302-4
+- idtype: pmcid
+  value: PMC11109219
+authors:
+- authtype: Author
+  name: Bonetti L
+- authtype: Author
+  name: Fernández-Rubio G
+- authtype: Author
+  name: Carlomagno F
+- authtype: Author
+  name: Dietz M
+- authtype: Author
+  name: Pantazis D
+- authtype: Author
+  name: Vuust P
+- authtype: Author
+  name: Kringelbach ML
+epubdate: 2024 May 21
+fulljournalname: Nature Communications
+issue: ''
+pages: '4313'
+pmclivedate: 2024/05/22
+printpubdate: ''
+pubdate: 2024 May 21
+sortdate: 2024/05/21 00:00
+source: Nat Commun
+title: Spatiotemporal brain hierarchies of auditory memory recognition and predictive
+  coding
+uid: '11109219'
+volume: '15'

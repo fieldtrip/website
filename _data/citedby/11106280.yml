@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '38769313'
+- idtype: doi
+  value: 10.1038/s41598-024-62135-7
+- idtype: pmcid
+  value: PMC11106280
+authors:
+- authtype: Author
+  name: Koenig-Robert R
+- authtype: Author
+  name: Quek GL
+- authtype: Author
+  name: Grootswagers T
+- authtype: Author
+  name: Varlet M
+epubdate: 2024 May 20
+fulljournalname: Scientific Reports
+issue: ''
+pages: '11499'
+pmclivedate: 2024/05/21
+printpubdate: ''
+pubdate: 2024 May 20
+sortdate: 2024/05/20 00:00
+source: Sci Rep
+title: Movement trajectories as a window into the dynamics of emerging neural representations
+uid: '11106280'
+volume: '14'
