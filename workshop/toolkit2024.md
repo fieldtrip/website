@@ -51,7 +51,7 @@ Note that the tentative program below still might change a bit.
 | 09:00-09:30 | Morning chill or workout |
 | 09:30-11:00 | Special interest lecture, infant EEG - the beauty and the beast of developmental EEG  - lecture by Marlene Meyer |
 | 11:00-11:15 | Coffee Break |
-| 11:15-12:30 | Source reconstruction using beamformers - lecture by Britta Westner) |
+| 11:15-12:30 | Source reconstruction using beamformers - lecture by Britta Westner |
 | 12:30-13:30 | Lunch |
 | 13:30-15:45 | Beamforming - [hands-on](/tutorial/beamformer) |
 | 15:45-16:00 | Tea Break |
@@ -87,11 +87,11 @@ This will be an in-person event with no possibilities for hybrid or online atten
 
 If you need wifi access and you don't have a eduroam account through your institution, it is possible to get a visitor access. This needs to be renewed each day. Please follow the instructions on [this intranet page](https://intranet.donders.ru.nl/index.php?id=eva).
 
-### FieldTrip playground sessions: BYOD (bring-your-own-data)
+### Playground sessions: bring-your-own-data
 
 A large part of the toolkit will consist of playground sessions, in which ideally you will be working on your own data. Please think a bit about what you want to achieve, and ensure that you have your data easily accessible (preferably, if possible on the laptop that you bring yourself, or on an external USB-drive). If you don't have data to work with, please let us know in time so that we can think about an alternative. We have plenty of tutorial data available, so this can be used to practice your data analysis skills.
 
-### Test your MATLAB and FieldTrip installation in advance
+### Test your installation in advance
 
 For the hands-on sessions we assume that you will work on your own laptop computer. To have a smooth experience - and to avoid having to spend precious debugging time during the hands-on sessions - we recommend that you [test your MATLAB and FieldTrip installation in advance](/workshop/toolkit2024/test_installation), and download the data that we will need during the hands-on sessions. Before running this test, we recommend that you prepare your laptop as per the instructions in the next section, which explains in some more detail what needs to be downloaded in advance, as well as how you can easily obtain (and install) a copy of FieldTrip on your computer.
 
