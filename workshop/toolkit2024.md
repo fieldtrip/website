@@ -25,7 +25,7 @@ Note that the tentative program below still might change a bit.
 
 | 09:00-09:30 | Registration and coffee |
 | 09:30-10:00 | Welcome and personal introduction round |
-| 10:00-11:00 | Introduction to EEG/MEG and introduction to the FieldTrip toolbox - lecture by Robert Oostenveld |
+| 10:00-11:00 | Introduction to EEG/MEG and introduction to the FieldTrip toolbox - [lecture](/assets/pdf/workshop/toolkit2024/introduction.pdf) by Robert Oostenveld |
 | 11:00-11:15 | Coffee Break |
 | 11:15-12:30 | EEG, MEG and OPM lab demonstrations |
 | 12:30-13:30 | Lunch |
