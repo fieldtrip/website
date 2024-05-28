@@ -44,7 +44,7 @@ Note that the tentative program below still might change a bit.
 | 14:30-15:45 | Forward and inverse - lecture by Robert |
 | 15:45-16:00 | Tea Break |
 | 16:00-17:30 | FieldTrip playground, apply your newly acquired knowledge and skills |
-| 18:30-22:00 | Drinks & dinner |
+| 18:30-22:00 | Drinks & dinner, eetbar [Mikmak](https://www.eetbarmikmak.nl), which is located [here](https://www.google.nl/maps/place/Kelfkensbos+45,+6511+TB+Nijmegen) |
 
 ### Wednesday May 29, 2024
 
