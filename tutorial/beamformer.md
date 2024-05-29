@@ -123,7 +123,7 @@ Note that segmentation is quite time consuming and takes about 10 minutes. For t
 
 Otherwise, segmentation involves the following steps:
 
-First the segmentation (**[ft_volumesegment](/reference/ft_volumesegment)** makes use of SPM, and in its default behavior returns a probabilistic segmentation of the grey, white and csd compartments. The necessary SPM-files are located in fieldtripXXX/external/spm8)
+First the segmentation (**[ft_volumesegment](/reference/ft_volumesegment)** makes use of SPM, and in its default behavior returns a probabilistic segmentation of the gray, white and csf compartments. The necessary SPM-files are located in fieldtripXXX/external/spm8)
 
     mri = ft_read_mri('Subject01.mri');
     
