@@ -1,11 +1,13 @@
 ---
 title: Making your own trialfun for conditional trial definition
 tags: [example, raw, preprocessing, trialfun, trialdef]
+redirect_from:
+- /example/trialfun/
 ---
 
 # Making your own trialfun for conditional trial definition
 
-The **[ft_definetrial](/reference/ft_definetrial)** function allows you to specify your own MATLAB function for conditional selection of data segments or trials of interest. That is done using the **cfg.trialfun** option. Using a trial-function you can use an arbitrary complex conditional sequence of events to select data, e.g., only correct responses, or only responses that happened between 300 and 750 ms after the presentation of the stimulus. You can also use your own reading function to obtain the events, or you can read the data from an EMG channel to detect the onset of muscle activity.
+The **[ft_definetrial](/reference/ft_definetrial)** function allows you to specify your own MATLAB function for conditional selection of data segments or trials of interest. That is done using the `cfg.trialfun` option. Using a trial-function you can use an arbitrary complex conditional sequence of events to select data, e.g., only correct responses, or only responses that happened between 300 and 750 ms after the presentation of the stimulus. You can also use your own reading function to obtain the events, or you can read the data from an EMG channel to detect the onset of muscle activity.
 
 This trial-function should be a MATLAB function with the following function definition
 
@@ -13,13 +15,19 @@ This trial-function should be a MATLAB function with the following function defi
 
 The configuration structure will contain the fields cfg.dataset, cfg.headerfile and cfg.datafile. If you want to pass additional information (e.g., trigger value), then you should do that in the sub-structure cfg.trialdef.xxx. The second output argument of the trialfun is optional, it will be added to the configuration if present (i.e. for later reference).
 
+Ensure that your trial function is available on the MATLAB path for it to be found by MATLAB and invoked by the call to **[ft_definetrial](/reference/ft_definetrial)**. 
+
 {% include markup/skyblue %}
 In the [fieldtrip/trialfun](https://github.com/fieldtrip/fieldtrip/tree/master/trialfun) directory you can find a number of example trial functions.
 {% include markup/end %}
 
-## An example
+## Examples
 
-    function [trl, event] = your_trialfun_name(cfg);
+### Conditional on the trigger sequence
+
+This is an example for a trial function that detects trigger code 7, followed by trigger code 64. 
+
+    function [trl, event] = trialfun_conditionaltrigger(cfg);
 
     % read the header information and the events from the data
     hdr   = ft_read_header(cfg.dataset);
@@ -51,7 +59,7 @@ In the [fieldtrip/trialfun](https://github.com/fieldtrip/fieldtrip/tree/master/t
 When calling **[ft_definetrial](/reference/ft_definetrial)**, you would specify
 
     cfg = ...
-    cfg.trialfun = 'your_trialfun_name';
+    cfg.trialfun = 'trialfun_conditionaltrigger';
     cfg.trialdef.pre  = 0.5;
     cfg.trialdef.post = 1.0;
 
@@ -65,11 +73,11 @@ followed by
 
 You could of course also make the trigger value (which are hard-coded here) configurable by passing them in the cfg structure.
 
-## Another example
+### Conditional on stimulus and response
 
 Let's say that your EEG acquisition system has separate inputs for the stimulus and the response and that ft_read_event represents them as a "stimulus" and as a "response", then the following trialfun could be used to select trials time-locked to the stimulus but conditional to the response.
 
-    function [trl, event] = another_trialfun_example(cfg);
+    function [trl, event] = trialfun_stimulusresponse(cfg);
 
     % read the header information and the events from the data
     hdr   = ft_read_header(cfg.dataset);
@@ -113,7 +121,7 @@ Let's say that your EEG acquisition system has separate inputs for the stimulus 
 When calling **[ft_definetrial](/reference/ft_definetrial)**, you would specify
 
     cfg = ...
-    cfg.trialfun = 'another_trialfun_example';
+    cfg.trialfun = 'trialfun_stimulusresponse';
     cfg.trialdef.pre  = 0.5;
     cfg.trialdef.post = 1.0;
 
@@ -125,9 +133,77 @@ followed by
 
     data = ft_preprocessing(cfg);
 
+### Rising flank of a TTL trigger
+
+The example scripts assume that the event is marked by an 'up' flank in the recorded signal (e.g., by virtue of an increase in light on the photodiode transducer). Downward going flanks can also be detected by specifying cfg.detectflank = 'down'. The trigger threshold can be a hard threshold, i.e., numeric, or flexibly defined by an executable string, for example to calculate the 'median' of the analog signal. 
+
+In this example, we define a 'segment' or 'trial' as one second preceding this trigger until 2 seconds thereafter:
+
+    function [trl, event] = trialfun_ttl(cfg)
+
+    % read the header information
+    hdr           = ft_read_header(cfg.dataset);
+
+    detectflank   = 'up'; % detect rising flanks
+    threshold     = 'midrange'; % or for example '0.7*max'
+    chanindx      = 1;
+
+    % when the event channel index is unknown, but its name or a part thereof (e.g., 'Trig') is known, you can use
+    % chanindx = find(ismember(hdr.label, ft_channelselection('Trig*', hdr.label)));
+
+    % read the events from the data
+    event         = ft_read_event(cfg.dataset, 'chanindx', chanindx, 'detectflank', detectflank, 'threshold', threshold);
+
+    % define trials around the events
+    trl           = [];
+    pretrig       = round(1 * hdr.Fs); % e.g., 1 sec before trigger
+    posttrig      = round(2 * hdr.Fs); % e.g., 2 sec after trigger
+    for i = 1:numel(event)
+      offset    = -pretrig;  % number of samples prior to the trigger
+      trlbegin  = event(i).sample - pretrig;
+      trlend    = event(i).sample + posttrig;
+      newtrl    = [trlbegin trlend offset];
+      trl       = [trl; newtrl]; % store in the trl matrix
+    end
+
+### While the trigger is on
+
+In this example, we define a data segment as the whole period during which the trigger was on, i.e., from the 'up' flank until the 'down' flank.
+
+    function [trl, event] = trialfun_updown(cfg)
+
+    % read the header information
+    hdr           = ft_read_header(cfg.dataset);
+
+    detectflank   = 'both'; % detect up and down flanks
+    threshold     = 'midrange'; % or for example '0.7*max'
+    chanindx      = 1;
+
+    % when the event channel index is unknown, but its name or a part thereof (e.g., 'Trig') is known, you can use
+    % chanindx = find(ismember(hdr.label, ft_channelselection('Trig*', hdr.label)));
+
+    % read the events from the data
+    event         = ft_read_event(cfg.dataset, 'chanindx', chanindx, 'detectflank', detectflank, 'threshold', threshold);
+
+    % look for up events that are followed by down events (peaks in the analog signal)
+    trl           = [];
+    waitfordown   = false;
+    for i = 1:numel(event)
+        if ~isempty(strfind(event(i).type, 'up')) % up event
+            uptrl       = i;
+            waitfordown = true;
+        elseif ~isempty(strfind(event(i).type, 'down')) && waitfordown % down event
+            trlbegin  = event(uptrl).sample;
+            trlend    = event(i).sample;
+            newtrl    = [trlbegin trlend 0];
+            trl       = [trl; newtrl]; % store in the trl matrix
+            waitfordown = false;
+        end
+    end
+
 ## Finding out which trigger codes are used
 
-You can use a small piece of code like this to see which trigger codes are used in your recording.
+You can use a code snippet like this to see which trigger codes are used in your recording.
 
     event = ft_read_event(filename);
     plot([event.sample], [event.value], '.')

@@ -2,7 +2,7 @@
   link:  /example/getting_started_with_reading_raw_eeg_or_meg_data
 
 - name:  Making your own trialfun for conditional trial definition
-  link:  /example/making_your_own_trialfun_for_conditional_trial_definition
+  link:  /example/trialfun
 
 - name:  I used to work with trl-matrices that have more than 3 columns. Why is this not supported anymore?
   link:  /faq/i_used_to_work_with_trl-matrices_that_have_more_than_3_columns._why_is_this_not_supported_anymore

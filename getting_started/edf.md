@@ -99,7 +99,7 @@ Events can also be stored in an extra channel that is appended to the brain data
     cfg.trialfun   = 'trialfun_ttl';
     cfg            = ft_definetrial(cfg);
 
-where 'trialfun_ttl' is a self-specified MATLAB function for conditional selection of data segments or trials of interest. See below and [this page](/example/making_your_own_trialfun_for_conditional_trial_definition) for examples.
+where `trialfun_ttl` is your own MATLAB function for conditional selection of data segments or trials of interest. See [this page](/example/trialfun) for the actual `trialfun_ttl` example function.
 
     % read and preprocess the data
     cfg.continuous = 'yes';
@@ -112,68 +112,6 @@ Note that filtering, re-referencing, etcetera can be performed at the preprocess
     cfg            = [];
     cfg.viewmode   = 'vertical';
     ft_databrowser(cfg, data);
-
-### Trial functions
-
-Hereunder are two examples of a trial function for parsing a continuously sampled TTL channel. See also [this page](/example/making_your_own_trialfun_for_conditional_trial_definition) for more examples. Ensure that your trial function is available on the MATLAB path for it to be found by MATLAB and invoked by the call to ft_define_trial (see above). The below examples assume that the experiment events are stored in a data channel whose name or index (referred to as chanindx in the code) is known to the user.
-
-The example scripts also assume that the event is marked by an 'up flank' in the recorded signal (e.g., by virtue of an increase in light on the photodiode transducer). Down flanks can also be detected by specifying cfg.detectflank = 'down'. The trigger threshold can be a hard threshold, i.e. numeric, or flexibly defined by an executable string (e.g., to calculate the 'median' of the analog signal). In the first example, we define a 'segment' as one second preceding this trigger until 2 seconds thereafter:
-
-    function [trl, event] = trialfun_ttl(cfg)
-
-    % read the header information
-    hdr           = ft_read_header(cfg.dataset);
-
-    % read the events from the data
-    chanindx      = 1;
-    detectflank   = 'up';
-    threshold     = '(3/2)*nanmedian'; % or, e.g., 1/2 times the median for down flanks
-    event         = ft_read_event(cfg.dataset, 'chanindx', chanindx, 'detectflank', detectflank, 'threshold', threshold);
-
-    % define trials around the events
-    trl           = [];
-    pretrig       = 1 * hdr.Fs; % e.g., 1 sec before trigger
-    posttrig      = 2 * hdr.Fs; % e.g., 2 sec after trigger
-    for i = 1:numel(event)
-      offset    = -hdr.nSamplesPre;  % number of samples prior to the trigger
-      trlbegin  = event(i).sample - pretrig;
-      trlend    = event(i).sample + posttrig;
-      newtrl    = [trlbegin trlend offset];
-      trl       = [trl; newtrl]; % store in the trl matrix
-    end
-
-In this second example, we define a data segment as the time the trigger was 'on', i.e. during the 'up flank', until it was 'off
-
-    function [trl, event] = trialfun_ttl(cfg)
-
-    % read the header information
-    hdr           = ft_read_header(cfg.dataset);
-
-    % read the events from the data
-    chanindx      = 1;
-    detectflank   = 'both'; % detect up and down flanks
-    threshold     = '(3/2)*nanmedian';
-    event         = ft_read_event(cfg.dataset, 'chanindx', chanindx, 'detectflank', detectflank, 'threshold', threshold);
-
-    % look for up events that are followed by down events (peaks in the analog signal)
-    trl           = [];
-    waitfordown   = 0;
-    for i = 1:numel(event)
-    if ~isempty(strfind(event(i).type, 'up')) % up event
-      uptrl     = i;
-      waitfordown = 1;
-    elseif ~isempty(strfind(event(i).type, 'down')) && waitfordown % down event
-      offset    = -hdr.nSamplesPre;  % number of samples prior to the trigger
-      trlbegin  = event(uptrl).sample;
-      trlend    = event(i).sample;
-      newtrl    = [trlbegin trlend offset];
-      trl       = [trl; newtrl]; % store in the trl matrix
-      waitfordown = 0;
-    end
-    end
-
-Alternatively, when the event channel index is unknown, but its name, or a part thereof (e.g., 'DC01'), is, one may us
-chanindx = find(ismember(hdr.label, ft_channelselection('_DC01_', hdr.label)));
 
 ## See also
 
