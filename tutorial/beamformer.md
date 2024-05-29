@@ -269,7 +269,7 @@ If it is not possible to compare two conditions (e.g., A versus B or post versus
 
 Plot it:
 
-    maxval = max(sourceNAIInt.pow);
+    maxval = max(sourceNAIInt.pow, [], 'all');
 
     cfg = [];
     cfg.method        = 'slice';
@@ -352,7 +352,7 @@ Then interpolate the source to the MRI:
 
 Now plot the power ratios:
 
-    maxval = max(sourceDiffInt.pow);
+    maxval = max(sourceDiffInt.pow, [], 'all');
 
     cfg = [];
     cfg.method        = 'slice';
