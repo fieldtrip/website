@@ -54,3 +54,7 @@ Using the **[data2bids](/reference/data2bids)** function you can organize your d
 There are various examples that show how to convert different types of data:
 
 {% include seealso tag1="example" tag2="bids" %}
+
+## See also
+
+{% include seealso tag="bids" %}

@@ -24,3 +24,7 @@ The optode template specifies the configuration of the transmitting and receivin
 The project file can contain data that was added _after_ the measurement, e.g., events extracted from the trigger channel, or events that were manually added after the measurement. This makes the project file relevant in **[ft_definetrial](/reference/ft_definetrial)** and Artinis will upon request provide a custom trial function to parse this file and to use it for segmenting the continuous data in trials. Furthermore, the project file can contain spatial 3D MNI-coordinates of the optodes. Note that the project file can refer to multiple recordings, but also that one oxy3/oxy4 file can be included in multiple project files. This means that there is no guaranteed unique mapping between oxy3/oxy4 files and project files.
 
 The use of datasets from an Artinis NIRS system is demonstrated in the [single-channel](/tutorial/nirs_singlechannel) and [multi-channel](/tutorial/nirs_multichannel) NIRS tutorials.
+
+## See also
+
+{% include seealso tag="artinis" %}

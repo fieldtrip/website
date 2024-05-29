@@ -60,3 +60,7 @@ For more information have a look at [javaaddpath](http://www.mathworks.nl/help/t
 ### Installing the EGI Java implementation for version 3
 
 Download the source code from <https://github.com/arnodelorme/mffmatlabio> and add it to your path.
+
+## See also
+
+{% include seealso tag="egi" %}

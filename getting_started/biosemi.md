@@ -127,3 +127,7 @@ The last 10 fields are defined for each fields separately. Each channel can be d
 {% include markup/end %}
 
 {% include image src="/assets/img/getting_started/biosemi/file_format_bdf.png" %}
+
+## See also
+
+{% include seealso tag="biosemi" %}

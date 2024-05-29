@@ -127,3 +127,7 @@ The BTi/4D neuroimaging software contains functionality to compute and apply a s
 {% include markup/red %}
 Application of the balancing for 148-channel systems is still disabled, because the header information is not explicit with respect to the channel order of the digital weights.
 {% include markup/end %}
+
+## See also
+
+{% include seealso tag="bti" %}
