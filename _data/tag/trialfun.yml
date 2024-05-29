@@ -2,7 +2,7 @@
   link:  /example/detect_the_muscle_activity_in_an_emg_channel_and_use_that_as_trial_definition
 
 - name:  Making your own trialfun for conditional trial definition
-  link:  /example/making_your_own_trialfun_for_conditional_trial_definition
+  link:  /example/trialfun
 
 - name:  How can I transform trigger values from bits to decimal representation with a trialfun?
   link:  /faq/how_can_i_transform_trigger_values_from_bits_to_decimal_representation_with_a_trialfun

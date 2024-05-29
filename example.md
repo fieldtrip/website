@@ -14,7 +14,7 @@ See also the [tutorials](/tutorial) and [frequently asked questions](/faq).
 ### Reading and preprocessing data
 
 - [Getting started with reading raw EEG or MEG data](/example/getting_started_with_reading_raw_eeg_or_meg_data)
-- [Making your own trialfun for conditional trial definition](/example/making_your_own_trialfun_for_conditional_trial_definition)
+- [Making your own trialfun for conditional trial definition](/example/trialfun)
 - [Detect the muscle activity in an EMG channel and use that as trial definition](/example/detect_the_muscle_activity_in_an_emg_channel_and_use_that_as_trial_definition)
 - [Independent component analysis (ICA) to remove ECG artifacts](/example/ica_ecg)
 - [Independent component analysis (ICA) to remove EOG artifacts](/example/ica_eog)

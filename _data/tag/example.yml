@@ -164,7 +164,7 @@
   link:  /example/make_leadfields_using_different_headmodels
 
 - name:  Making your own trialfun for conditional trial definition
-  link:  /example/making_your_own_trialfun_for_conditional_trial_definition
+  link:  /example/trialfun
 
 - name:  Measuring the timing delay and jitter for a real-time application
   link:  /example/measuring_the_timing_delay_and_jitter_for_a_real-time_application

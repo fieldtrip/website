@@ -17,7 +17,7 @@
   link:  /example/ica_eog
 
 - name:  Making your own trialfun for conditional trial definition
-  link:  /example/making_your_own_trialfun_for_conditional_trial_definition
+  link:  /example/trialfun
 
 - name:  Combine MEG with Eyelink eyetracker data
   link:  /example/meg_eyelink
