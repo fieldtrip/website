@@ -16,14 +16,14 @@
 - name:  Independent component analysis (ICA) to remove EOG artifacts
   link:  /example/ica_eog
 
-- name:  Making your own trialfun for conditional trial definition
-  link:  /example/trialfun
-
 - name:  Combine MEG with Eyelink eyetracker data
   link:  /example/meg_eyelink
 
 - name:  Re-reference EEG and iEEG data
   link:  /example/rereference
+
+- name:  Making your own trialfun for conditional trial definition
+  link:  /example/trialfun
 
 - name:  Use denoising source separation (DSS) to remove ECG artifacts
   link:  /example/use_denoising_source_separation_dss_to_remove_ecg_artifacts

@@ -163,9 +163,6 @@
 - name:  Make leadfields using different headmodels
   link:  /example/make_leadfields_using_different_headmodels
 
-- name:  Making your own trialfun for conditional trial definition
-  link:  /example/trialfun
-
 - name:  Measuring the timing delay and jitter for a real-time application
   link:  /example/measuring_the_timing_delay_and_jitter_for_a_real-time_application
 
@@ -231,6 +228,9 @@
 
 - name:  Using threshold-free cluster enhancement for cluster statistics
   link:  /example/threshold_free_cluster_enhancement
+
+- name:  Making your own trialfun for conditional trial definition
+  link:  /example/trialfun
 
 - name:  Use denoising source separation (DSS) to remove ECG artifacts
   link:  /example/use_denoising_source_separation_dss_to_remove_ecg_artifacts
