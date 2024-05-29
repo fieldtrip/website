@@ -169,6 +169,10 @@ In this experiment three subsequent recordings were performed on the same partic
 
 Since channels in a FieldTrip data structure are required have a unique channel name, we cannot immediately use **[ft_appenddata](/reference/ft_appenddata)** or **[ft_appendtimelock](/reference/ft_appendtimelock)** to concatenate the data along the channel direction; we first have to rename the channels to make them unique. Using three separate montages to map (rename) the channels in each recording onto the corresponding names of the slots in the 3D printed helmet, we get raw data (or timelock) structures with unique channel names that can be appended.
 
-# Coregistration
+## Coregistration
 
 There is a dedicated [tutorial](/tutorial/coregistration_opm) that deals with various ways to coregister the OPM sensors with the head and the anatomical MRI. 
+
+## See also
+
+{% include seealso tag="fieldline" %}

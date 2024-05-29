@@ -72,3 +72,7 @@ Once you have figured out what the proper low-level settings are for your setup 
     % read the segments of interest
     data = ft_preprocessing(cfg);
     
+
+## See also
+
+{% include seealso tag="tmsi" %}

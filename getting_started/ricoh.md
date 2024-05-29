@@ -461,3 +461,7 @@ To refine the above fiducial-points based registration, it is recommended to uti
     plot3(hpi_mri(3,1), hpi_mri(3,2), hpi_mri(3,3), 'g.', 'MarkerSize', 25);
     plot3(hpi_mri(4,1), hpi_mri(4,2), hpi_mri(4,3), 'g.', 'MarkerSize', 25);
     plot3(hpi_mri(5,1), hpi_mri(5,2), hpi_mri(5,3), 'g.', 'MarkerSize', 25);
+
+## See also
+
+{% include seealso tag="ricoh" %}

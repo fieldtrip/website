@@ -96,3 +96,7 @@ After combining data from separate runs using ft_appenddata, you can run PCA usi
 ### Should I use or avoid using MaxFilter?
 
 It depends on several factors, including the level of noise in your recording, the presence of artefacts from outside the helmet and large amounts of head movement. Optimising source-localisation for Maxfiltered data is still under development. N.B. If you used Internal Active Shielding (IAS), running Maxfilter prior to processing in FieldTrip is obligatory.
+
+## See also
+
+{% include seealso tag="neuromag" %}

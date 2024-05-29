@@ -157,3 +157,7 @@ atlas = ft_read_atlas(fullfile(ftpath, 'template', 'atlas', 'aal', 'ROI_MNI_V4.n
 % - interpolate the atlas onto the 3D and 4D representation
 % - average the non-interpolated functional data over some parcels
 ```
+
+## See also
+
+{% include seealso tag="fmri" %}

@@ -71,3 +71,7 @@ Together with the EEGLAB developers we maintain two functions for converting the
 ## Releasing FieldTrip code to EEGLAB users
 
 EEGLAB developers have created a simple [tutorial](https://eeglab.org/others/EEGLAB_and_FieldTrip.html#wrap-up-your-fieldtrip-scripts-into-eeglab-plugin-menu-items) so FieldTrip users can release their FieldTrip code as EEGLAB plugins. This will allow a more extensive diffusion of your methods. A template [plugin](https://github.com/sccn/erpsource) also contain methods to convert data formats between the two toolboxes.
+
+## See also
+
+{% include seealso tag="eeglab" %}
