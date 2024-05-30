@@ -66,7 +66,7 @@ The fee for PhD students is € 450; and € 650 for senior researchers.
 ### Friday May 26, 2023
 
 | 09:00-09:30 | Morning chill or workout |
-| 09:45-11:00 | Lecture good scientific practices - lecture by Robert |
+| 09:45-11:00 | Open science and good practices - lecture by Robert |
 | 11:00-11:15 | Coffee Break |
 | 11:15-12:30 | FieldTrip playground, apply your newly acquired knowledge and skills |
 | 12:30-13:30 | Lunch |
