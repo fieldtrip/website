@@ -40,6 +40,9 @@
 - name:  Getting started with BIDS
   link:  /getting_started/bids
 
+- name:  Getting started with Cerca OPM data
+  link:  /getting_started/cerca
+
 - name:  Convert the EEG language dataset for sharing in BIDS
   link:  /workshop/cuttingeeg2021/bids_language
 
