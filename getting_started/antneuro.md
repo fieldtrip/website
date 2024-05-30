@@ -1,5 +1,5 @@
 ---
-title: Getting started with ASA and EEProbe
+title: Getting started with ANT-Neuro, ASA and EEProbe data
 tags: [dataformat, eeg, ant, asa, eeprobe]
 ---
 

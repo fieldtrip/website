@@ -18,7 +18,7 @@ In general you should get started with the [tutorials](/tutorial). The pages tha
 
 - [Getting started with BrainVision Analyzer and Easycap](/getting_started/brainvision)
 - [Getting started with 20%, 10% and 5% electrode arrangements](/getting_started/1020)
-- [Getting started with ASA and EEProbe data](/getting_started/antneuro)
+- [Getting started with ANT-Neuro, ASA and EEProbe data](/getting_started/antneuro)
 - [Getting started with Advanced Brain Monitoring (ABM)'s B-Alert EEG data](/getting_started/b_alert)
 - [Getting started with BESA data](/getting_started/besa)
 - [Getting started with Biosemi BDF data](/getting_started/biosemi)
