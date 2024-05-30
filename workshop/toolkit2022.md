@@ -70,7 +70,7 @@ We will inform you as to whether you obtained a place in this course not later t
 ### Friday May 13, 2022
 
 | 09:00-09:30 | Morning chill or workout|
-| 09:45-11:00 | Lecture good scientific practices - [lecture by Robert](/assets/pdf/workshop/toolkit2022/openscience.pdf)|
+| 09:45-11:00 | Open science and good practices - [lecture by Robert](/assets/pdf/workshop/toolkit2022/openscience.pdf)|
 | 11:00-11:15 | Coffee Break|
 | 11:15-12:30 | FieldTrip playground, apply your newly acquired knowledge and skills|
 | 12:30-13:30 | Lunch|
