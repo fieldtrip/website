@@ -29,6 +29,11 @@ This is an example for a trial function that detects trigger code 7, followed by
 
     function [trl, event] = trialfun_conditionaltrigger(cfg);
 
+    % TRIALFUN_CONDITIONALTRIGGER requires the following configuration settings
+    %   cfg.dataset         = filename
+    %   cfg.trialdef.pre    = pre-trigger time, in seconds
+    %   cfg.trialdef.post   = post-trigger time, in seconds
+
     % read the header information and the events from the data
     hdr   = ft_read_header(cfg.dataset);
     event = ft_read_event(cfg.dataset);
@@ -78,6 +83,11 @@ You could of course also make the trigger value (which are hard-coded here) conf
 Let's say that your EEG acquisition system has separate inputs for the stimulus and the response and that ft_read_event represents them as a "stimulus" and as a "response", then the following trialfun could be used to select trials time-locked to the stimulus but conditional to the response.
 
     function [trl, event] = trialfun_stimulusresponse(cfg);
+ 
+    % TRIALFUN_STIMULUSRESPONSE requires the following configuration settings
+    %   cfg.dataset         = filename
+    %   cfg.trialdef.pre    = pre-trigger time, in seconds
+    %   cfg.trialdef.post   = post-trigger time, in seconds
 
     % read the header information and the events from the data
     hdr   = ft_read_header(cfg.dataset);
@@ -141,6 +151,10 @@ In this example, we define a 'segment' or 'trial' as one second preceding this t
 
     function [trl, event] = trialfun_ttl(cfg)
 
+    % TRIALFUN_TTL requires the following configuration settings
+    %   cfg.dataset         = filename
+    % The trigger channel index and the length of the window around the trigger are hard-coded below.
+
     % read the header information
     hdr           = ft_read_header(cfg.dataset);
 
@@ -171,6 +185,10 @@ In this example, we define a 'segment' or 'trial' as one second preceding this t
 In this example, we define a data segment as the whole period during which the trigger was on, i.e., from the 'up' flank until the 'down' flank.
 
     function [trl, event] = trialfun_updown(cfg)
+
+    % TRIALFUN_UPDOWN requires the following configuration settings
+    %   cfg.dataset         = filename
+    % The trigger channel index and the length of the window around the trigger are hard-coded below.
 
     % read the header information
     hdr           = ft_read_header(cfg.dataset);
@@ -218,3 +236,7 @@ you can use this to select only the events of a particular type
     % select only the trigger codes, not the CM_in_range and Epoch events
     sel = find(strcmp({event.type}, 'STATUS'));
     event = event(sel);
+
+## See also
+
+{% include seealso tag="trialfun" %}
