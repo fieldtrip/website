@@ -99,9 +99,7 @@ To obtain the preprocessed data required by **[ft_timelockanalysis](/reference/f
 
 ### Permutation test
 
-Cluster-level permutation tests for event-related fields are performed by the function **[ft_timelockstatistics](/reference/ft_timelockstatistics)**. This function takes as its input arguments a configuration structure(cfg) and two or more data structures. These data structures must be produced by **[ft_timelockanalysis](/reference/ft_timelockanalysis)** or **[ft_timelockgrandaverage](/reference/ft_timelockgrandaverage)**, which all operate on preprocessed data. The argument list of **[ft_timelockstatistics](/reference/ft_timelockstatistics)** must contain one data structure for every experimental condition. For comparing the data structures timelockFIC and timelockFC, you must call **[ft_timelockstatistics](/reference/ft_timelockstatistics)** as follows:
-
-    [stat] = ft_timelockstatistics(cfg, timelockFIC, timelockFC);
+Cluster-level permutation tests for event-related fields are performed by the function **[ft_timelockstatistics](/reference/ft_timelockstatistics)**. This function takes as its input arguments a configuration structure `cfg` and two or more data structures. These data structures must be produced by **[ft_timelockanalysis](/reference/ft_timelockanalysis)** or **[ft_timelockgrandaverage](/reference/ft_timelockgrandaverage)**, which all operate on preprocessed data. The argument list of **[ft_timelockstatistics](/reference/ft_timelockstatistics)** must contain one data structure for every experimental condition. 
 
 #### The configuration settings
 
