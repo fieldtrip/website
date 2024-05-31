@@ -61,6 +61,9 @@
 - name:  Which datasets are used in the documentation and where are they used?
   link:  /faq/datasets
 
+- name:  What material is used for the flexible MEG headcasts?
+  link:  /faq/headcast
+
 - name:  How are electrodes, magnetometers or gradiometers described?
   link:  /faq/how_are_electrodes_magnetometers_or_gradiometers_described
 
