@@ -79,6 +79,9 @@
 - name:  How should I specify the fiducials for electrode realignment?
   link:  /faq/fiducial
 
+- name:  What material is used for the flexible MEG headcasts?
+  link:  /faq/headcast
+
 - name:  How do homogenous coordinate transformation matrices work?
   link:  /faq/homogenous
 
