@@ -105,6 +105,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [Should I use a Polhemus or a Structure Sensor to record electrode positions?](/faq/structuresensor)
 - [What is the conductivity of the brain, CSF, skull and skin tissue?](/faq/what_is_the_conductivity_of_the_brain_csf_skull_and_skin_tissue)
 - [What is the difference between the ACPC, MNI, SPM and TAL coordinate systems?](/faq/acpc)
+- [What material is used for the flexible MEG headcasts?](/faq/headcast)
 - [What kind of volume conduction models are implemented?](/faq/what_kind_of_volume_conduction_models_are_implemented)
 - [Where can I find the dipoli command-line executable?](/faq/where_can_i_find_the_dipoli_command-line_executable)
 - [Where is the anterior commissure?](/faq/anterior_commissure)
