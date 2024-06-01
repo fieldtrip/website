@@ -389,6 +389,7 @@ Cz
 Czienskowski
 DAC
 DANDI
+DAQ
 DBS
 DCBT
 DCC
@@ -1040,9 +1041,13 @@ Lashkari
 Lastname
 Lau
 Laure
+Layx
+Layy
+Layz
 Lazar
 Ldistance
 Leahy
+Lef
 Lehmann
 Lehre
 Leijten
@@ -1234,6 +1239,7 @@ Microsystems
 MidiToBuffer
 Mikkel
 Miklody
+Mikmak
 MinGW
 Mingzhou
 Mislocalization
@@ -1418,13 +1424,17 @@ OHBM
 OOP
 RIA
 RSA
+Rig
+Sofie
 Spotify
 TRFs
 appenddim
 appendsource
 biopac
+eetbar
 fieldname
 paxinos
+triaxial
 
 OPM
 OPMEG
