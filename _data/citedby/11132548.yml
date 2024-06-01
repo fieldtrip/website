@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '38812796'
+- idtype: doi
+  value: 10.1080/23273798.2024.2344162
+- idtype: pmcid
+  value: PMC11132548
+authors:
+- authtype: Author
+  name: Mulder K
+- authtype: Author
+  name: Brand S
+- authtype: Author
+  name: Boves L
+- authtype: Author
+  name: Ernestus M
+epubdate: 2024 Apr 24
+fulljournalname: Language, Cognition and Neuroscience
+issue: '5'
+pages: 527-551
+pmclivedate: 2024/05/29
+printpubdate: ''
+pubdate: 2024 Apr 24
+sortdate: 2024/04/24 00:00
+source: Lang Cogn Neurosci
+title: 'Processing reduced speech in the L1 and L2: a combined eye-tracking and ERP
+  study'
+uid: '11132548'
+volume: '39'

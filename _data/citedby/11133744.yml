@@ -1,0 +1,38 @@
+articleids:
+- idtype: pmid
+  value: '38812743'
+- idtype: doi
+  value: 10.3389/fninf.2024.1384250
+- idtype: pmcid
+  value: PMC11133744
+authors:
+- authtype: Author
+  name: Shi J
+- authtype: Author
+  name: Gong X
+- authtype: Author
+  name: Song Z
+- authtype: Author
+  name: Xie W
+- authtype: Author
+  name: Yang Y
+- authtype: Author
+  name: Sun X
+- authtype: Author
+  name: Wei P
+- authtype: Author
+  name: Wang C
+- authtype: Author
+  name: Zhao G
+epubdate: 2024 May 15
+fulljournalname: Frontiers in Neuroinformatics
+issue: ''
+pages: '1384250'
+pmclivedate: 2024/05/29
+printpubdate: ''
+pubdate: 2024 May 15
+sortdate: 2024/05/15 00:00
+source: Front Neuroinform
+title: 'EPAT: a user-friendly MATLAB toolbox for EEG/ERP data processing and analysis'
+uid: '11133744'
+volume: '18'

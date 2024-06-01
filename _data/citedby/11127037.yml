@@ -1,0 +1,34 @@
+articleids:
+- idtype: pmid
+  value: '38795358'
+- idtype: doi
+  value: 10.1093/cercor/bhae211
+- idtype: pmcid
+  value: PMC11127037
+authors:
+- authtype: Author
+  name: Faghel-Soubeyrand S
+- authtype: Author
+  name: Richoz AR
+- authtype: Author
+  name: Waeber D
+- authtype: Author
+  name: Woodhams J
+- authtype: Author
+  name: Caldara R
+- authtype: Author
+  name: Gosselin F
+- authtype: Author
+  name: Charest I
+epubdate: 2024 May 24
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '5'
+pages: bhae211
+pmclivedate: 2024/05/25
+printpubdate: ''
+pubdate: 2024 May 24
+sortdate: 2024/05/24 00:00
+source: Cereb Cortex
+title: Neural computations in prosopagnosia
+uid: '11127037'
+volume: '34'

@@ -1,0 +1,47 @@
+articleids:
+- idtype: pmid
+  value: '38790917'
+- idtype: doi
+  value: 10.3390/biomedicines12050955
+- idtype: pmcid
+  value: PMC11118810
+authors:
+- authtype: Author
+  name: Marzetti L
+- authtype: Author
+  name: Basti A
+- authtype: Author
+  name: Guidotti R
+- authtype: Author
+  name: Baldassarre A
+- authtype: Author
+  name: Metsomaa J
+- authtype: Author
+  name: Zrenner C
+- authtype: Author
+  name: D’Andrea A
+- authtype: Author
+  name: Makkinayeri S
+- authtype: Author
+  name: Pieramico G
+- authtype: Author
+  name: Ilmoniemi RJ
+- authtype: Author
+  name: Ziemann U
+- authtype: Author
+  name: Romani GL
+- authtype: Author
+  name: Pizzella V
+epubdate: 2024 Apr 25
+fulljournalname: Biomedicines
+issue: '5'
+pages: '955'
+pmclivedate: 2024/05/25
+printpubdate: ''
+pubdate: 2024 Apr 25
+sortdate: 2024/04/25 00:00
+source: Biomedicines
+title: 'Exploring Motor Network Connectivity in State-Dependent Transcranial Magnetic
+  Stimulation: A Proof-of-Concept Study'
+uid: '11118810'
+volume: '12'

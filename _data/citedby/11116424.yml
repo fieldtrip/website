@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '38782921'
+- idtype: doi
+  value: 10.1038/s41598-024-61404-9
+- idtype: pmcid
+  value: PMC11116424
+authors:
+- authtype: Author
+  name: Xu M
+- authtype: Author
+  name: Nikolin S
+- authtype: Author
+  name: Moffa AM
+- authtype: Author
+  name: Xu XM
+- authtype: Author
+  name: Su Y
+- authtype: Author
+  name: Li R
+- authtype: Author
+  name: Chan HF
+- authtype: Author
+  name: Loo CK
+- authtype: Author
+  name: Martin DM
+epubdate: 2024 May 24
+fulljournalname: Scientific Reports
+issue: ''
+pages: '11847'
+pmclivedate: 2024/05/24
+printpubdate: ''
+pubdate: 2024 May 24
+sortdate: 2024/05/24 00:00
+source: Sci Rep
+title: Prolonged intermittent theta burst stimulation targeting the left prefrontal
+  cortex and cerebellum does not affect executive functions in healthy individuals
+uid: '11116424'
+volume: '14'
