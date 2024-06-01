@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.2196/26332
+- idtype: pmcid
+  value: PMC11135186
+authors:
+- authtype: Author
+  name: Fu H
+- authtype: Author
+  name: Garrett B
+- authtype: Author
+  name: Tao G
+- authtype: Author
+  name: Cordingley E
+- authtype: Author
+  name: Ofoghi Z
+- authtype: Author
+  name: Taverner T
+- authtype: Author
+  name: Sun C
+- authtype: Author
+  name: Cheung T
+epubdate: 2021 Jun 24
+fulljournalname: JMIR Biomedical Engineering
+issue: '2'
+pages: e26332
+pmclivedate: 2024/05/29
+printpubdate: ''
+pubdate: 2021 Jun 24
+sortdate: 2021/06/24 00:00
+source: JMIR Biomed Eng
+title: 'Virtual Reality–Guided Meditation for Chronic Pain in Patients With Cancer:
+  Exploratory Analysis of Electroencephalograph Activity'
+uid: '11135186'
+volume: '6'

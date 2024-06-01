@@ -1,0 +1,49 @@
+articleids:
+- idtype: pmid
+  value: '38799618'
+- idtype: doi
+  value: 10.1093/braincomms/fcae165
+- idtype: pmcid
+  value: PMC11126314
+authors:
+- authtype: Author
+  name: Shi H
+- authtype: Author
+  name: Pattnaik AR
+- authtype: Author
+  name: Aguila C
+- authtype: Author
+  name: Lucas A
+- authtype: Author
+  name: Sinha N
+- authtype: Author
+  name: Prager B
+- authtype: Author
+  name: Mojena M
+- authtype: Author
+  name: Gallagher R
+- authtype: Author
+  name: Parashos A
+- authtype: Author
+  name: Bonilha L
+- authtype: Author
+  name: Gleichgerrcht E
+- authtype: Author
+  name: Davis KA
+- authtype: Author
+  name: Litt B
+- authtype: Author
+  name: Conrad EC
+epubdate: 2024 May 13
+fulljournalname: Brain Communications
+issue: '3'
+pages: fcae165
+pmclivedate: 2024/05/24
+printpubdate: ''
+pubdate: 2024 May 13
+sortdate: 2024/05/13 00:00
+source: Brain Commun
+title: Utility of intracranial EEG networks depends on re-referencing and connectivity
+  choice
+uid: '11126314'
+volume: '6'

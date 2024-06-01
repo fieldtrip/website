@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '38790465'
+- idtype: doi
+  value: 10.3390/brainsci14050487
+- idtype: pmcid
+  value: PMC11118442
+authors:
+- authtype: Author
+  name: Wan W
+- authtype: Author
+  name: Gu Z
+- authtype: Author
+  name: Peng CK
+- authtype: Author
+  name: Cui X
+epubdate: 2024 May 11
+fulljournalname: Brain Sciences
+issue: '5'
+pages: '487'
+pmclivedate: 2024/05/25
+printpubdate: ''
+pubdate: 2024 May 11
+sortdate: 2024/05/11 00:00
+source: Brain Sci
+title: 'Beyond Frequency Bands: Complementary-Ensemble-Empirical-Mode-Decomposition-Enhanced
+  Microstate Sequence Non-Randomness Analysis for Aiding Diagnosis and Cognitive Prediction
+  of Dementia'
+uid: '11118442'
+volume: '14'

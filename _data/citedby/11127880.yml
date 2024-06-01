@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '38243018'
+- idtype: doi
+  value: 10.1007/s00406-023-01745-0
+- idtype: pmcid
+  value: PMC11127880
+authors:
+- authtype: Author
+  name: Fernández-Linsenbarth I
+- authtype: Author
+  name: Mijancos-Martínez G
+- authtype: Author
+  name: Bachiller A
+- authtype: Author
+  name: Núñez P
+- authtype: Author
+  name: Rodríguez-González V
+- authtype: Author
+  name: Beño-Ruiz-de-la-Sierra RM
+- authtype: Author
+  name: Roig-Herrero A
+- authtype: Author
+  name: Arjona-Valladares A
+- authtype: Author
+  name: Poza J
+- authtype: Author
+  name: Mañanas MÁ
+- authtype: Author
+  name: Molina V
+epubdate: 2024 Jan 19
+fulljournalname: European Archives of Psychiatry and Clinical Neuroscience
+issue: '4'
+pages: 837-847
+pmclivedate: 2024/05/27
+printpubdate: '2024'
+pubdate: 2024 Jan 19
+sortdate: 2024/01/19 00:00
+source: Eur Arch Psychiatry Clin Neurosci
+title: 'Relation between task-related activity modulation and cortical inhibitory
+  function in schizophrenia and healthy controls: a TMS–EEG study'
+uid: '11127880'
+volume: '274'

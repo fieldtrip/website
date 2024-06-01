@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '38754325'
+- idtype: doi
+  value: 10.1016/j.nicl.2024.103614
+- idtype: pmcid
+  value: PMC11126539
+authors:
+- authtype: Author
+  name: Desowska A
+- authtype: Author
+  name: Coffman S
+- authtype: Author
+  name: Kim I
+- authtype: Author
+  name: Underwood E
+- authtype: Author
+  name: Tao A
+- authtype: Author
+  name: Lopez KL
+- authtype: Author
+  name: Nelson CA
+- authtype: Author
+  name: Hensch TK
+- authtype: Author
+  name: Gabard-Durnam L
+- authtype: Author
+  name: Cornelissen L
+- authtype: Author
+  name: Berde CB
+epubdate: 2024 May 4
+fulljournalname: 'NeuroImage : Clinical'
+issue: ''
+pages: '103614'
+pmclivedate: 2024/05/25
+printpubdate: ''
+pubdate: 2024 May 4
+sortdate: 2024/05/04 00:00
+source: Neuroimage Clin
+title: 'Neurodevelopment of children exposed to prolonged anesthesia in infancy: GABA
+  study interim analysis of resting-state brain networks at 2, 4, and 10-months old'
+uid: '11126539'
+volume: '42'
