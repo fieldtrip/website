@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '38834699'
+- idtype: doi
+  value: 10.1038/s41598-024-63320-4
+- idtype: pmcid
+  value: PMC11150249
+authors:
+- authtype: Author
+  name: Stecher R
+- authtype: Author
+  name: Kaiser D
+epubdate: 2024 Jun 4
+fulljournalname: Scientific Reports
+issue: ''
+pages: '12796'
+pmclivedate: 2024/06/05
+printpubdate: ''
+pubdate: 2024 Jun 4
+sortdate: 2024/06/04 00:00
+source: Sci Rep
+title: Representations of imaginary scenes and their properties in cortical alpha
+  activity
+uid: '11150249'
+volume: '14'

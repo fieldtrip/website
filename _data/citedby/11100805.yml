@@ -1,0 +1,42 @@
+articleids:
+- idtype: pmid
+  value: '38766098'
+- idtype: doi
+  value: 10.1101/2024.05.10.593652
+- idtype: pmcid
+  value: PMC11100805
+authors:
+- authtype: Author
+  name: Huang Y
+- authtype: Author
+  name: Gopal J
+- authtype: Author
+  name: Kakusa B
+- authtype: Author
+  name: Li AH
+- authtype: Author
+  name: Huang W
+- authtype: Author
+  name: Wang JB
+- authtype: Author
+  name: Persad A
+- authtype: Author
+  name: Ramayya A
+- authtype: Author
+  name: Parvizi J
+- authtype: Author
+  name: Buch VP
+- authtype: Author
+  name: Keller C
+epubdate: 2024 May 12
+fulljournalname: bioRxiv
+issue: ''
+pages: 2024.05.10.593652
+pmclivedate: 2024/05/18
+printpubdate: ''
+pubdate: 2024 May 12
+sortdate: 2024/05/12 00:00
+source: bioRxiv
+title: Naturalistic acute pain states decoded from neural and facial dynamics
+uid: '11100805'
+volume: ''

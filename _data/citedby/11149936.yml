@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '38831694'
+- idtype: doi
+  value: 10.7554/eLife.85567
+- idtype: pmcid
+  value: PMC11149936
+authors:
+- authtype: Author
+  name: Porciello G
+- authtype: Author
+  name: Monti A
+- authtype: Author
+  name: Panasiti MS
+- authtype: Author
+  name: Aglioti SM
+epubdate: 2024 Jun 4
+fulljournalname: eLife
+issue: ''
+pages: e85567
+pmclivedate: 2024/06/04
+printpubdate: ''
+pubdate: 2024 Jun 4
+sortdate: 2024/06/04 00:00
+source: eLife
+title: Ingestible pills reveal gastric correlates of emotions
+uid: '11149936'
+volume: '13'

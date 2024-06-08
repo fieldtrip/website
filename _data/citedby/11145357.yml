@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '38832023'
+- idtype: doi
+  value: 10.1016/j.isci.2024.109951
+- idtype: pmcid
+  value: PMC11145357
+authors:
+- authtype: Author
+  name: El Zein M
+- authtype: Author
+  name: Mennella R
+- authtype: Author
+  name: Sequestro M
+- authtype: Author
+  name: Meaux E
+- authtype: Author
+  name: Wyart V
+- authtype: Author
+  name: Grèzes J
+epubdate: 2024 May 9
+fulljournalname: iScience
+issue: '6'
+pages: '109951'
+pmclivedate: 2024/06/03
+printpubdate: ''
+pubdate: 2024 May 9
+sortdate: 2024/05/09 00:00
+source: iScience
+title: Prioritized neural processing of social threats during perceptual decision-making
+uid: '11145357'
+volume: '27'

@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '38811162'
+- idtype: doi
+  value: 10.1523/ENEURO.0528-23.2024
+- idtype: pmcid
+  value: PMC11137809
+authors:
+- authtype: Author
+  name: Choi HJ
+- authtype: Author
+  name: Kyong JS
+- authtype: Author
+  name: Lee JH
+- authtype: Author
+  name: Han SH
+- authtype: Author
+  name: Shim HJ
+epubdate: 2024 May 24
+fulljournalname: eNeuro
+issue: '5'
+pages: ENEURO.0528-23.2024
+pmclivedate: 2024/05/30
+printpubdate: ''
+pubdate: 2024 May 24
+sortdate: 2024/05/24 00:00
+source: eNeuro
+title: The Impact of Spectral and Temporal Degradation on Vocoded Speech Recognition
+  in Early-Blind Individuals
+uid: '11137809'
+volume: '11'

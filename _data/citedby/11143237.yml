@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '38821963'
+- idtype: doi
+  value: 10.1038/s41467-024-49140-0
+- idtype: pmcid
+  value: PMC11143237
+authors:
+- authtype: Author
+  name: Elorette C
+- authtype: Author
+  name: Fujimoto A
+- authtype: Author
+  name: Stoll FM
+- authtype: Author
+  name: Fujimoto SH
+- authtype: Author
+  name: Bienkowska N
+- authtype: Author
+  name: London L
+- authtype: Author
+  name: Fleysher L
+- authtype: Author
+  name: Russ BE
+- authtype: Author
+  name: Rudebeck PH
+epubdate: 2024 May 31
+fulljournalname: Nature Communications
+issue: ''
+pages: '4669'
+pmclivedate: 2024/06/01
+printpubdate: ''
+pubdate: 2024 May 31
+sortdate: 2024/05/31 00:00
+source: Nat Commun
+title: The neural basis of resting-state fMRI functional connectivity in fronto-limbic
+  circuits revealed by chemogenetic manipulation
+uid: '11143237'
+volume: '15'

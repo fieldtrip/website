@@ -1,0 +1,47 @@
+articleids:
+- idtype: pmid
+  value: '38831699'
+- idtype: doi
+  value: 10.7554/eLife.94561
+- idtype: pmcid
+  value: PMC11149934
+authors:
+- authtype: Author
+  name: Rier L
+- authtype: Author
+  name: Rhodes N
+- authtype: Author
+  name: Pakenham DO
+- authtype: Author
+  name: Boto E
+- authtype: Author
+  name: Holmes N
+- authtype: Author
+  name: Hill RM
+- authtype: Author
+  name: Reina Rivero G
+- authtype: Author
+  name: Shah V
+- authtype: Author
+  name: Doyle C
+- authtype: Author
+  name: Osborne J
+- authtype: Author
+  name: Bowtell RW
+- authtype: Author
+  name: Taylor M
+- authtype: Author
+  name: Brookes MJ
+epubdate: 2024 Jun 4
+fulljournalname: eLife
+issue: ''
+pages: RP94561
+pmclivedate: 2024/06/04
+printpubdate: ''
+pubdate: 2024 Jun 4
+sortdate: 2024/06/04 00:00
+source: eLife
+title: Tracking the neurodevelopmental trajectory of beta band oscillations with optically
+  pumped magnetometer-based magnetoencephalography
+uid: '11149934'
+volume: '13'
