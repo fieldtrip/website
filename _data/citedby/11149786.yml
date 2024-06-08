@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '38631480'
+- idtype: doi
+  value: 10.1016/j.pneurobio.2024.102613
+- idtype: pmcid
+  value: PMC11149786
+- idtype: MID
+  value: NIHMS1997087
+authors:
+- authtype: Author
+  name: Choi JW
+- authtype: Author
+  name: Malekmohammadi M
+- authtype: Author
+  name: Niketeghad S
+- authtype: Author
+  name: Cross KA
+- authtype: Author
+  name: Ebadi H
+- authtype: Author
+  name: Alijanpourotaghsara A
+- authtype: Author
+  name: Aron A
+- authtype: Author
+  name: Rutishauser U
+- authtype: Author
+  name: Pouratian N
+epubdate: 2024 Apr 15
+fulljournalname: Progress in neurobiology
+issue: ''
+pages: '102613'
+pmclivedate: ''
+printpubdate: 2024 May
+pubdate: 2024 Apr 15
+sortdate: 2024/04/15 00:00
+source: Prog Neurobiol
+title: Prefrontal-Subthalamic Theta Signaling Mediates Delayed Responses during Conflict
+  Processing
+uid: '11149786'
+volume: '236'

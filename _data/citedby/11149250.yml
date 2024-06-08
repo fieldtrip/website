@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '38831410'
+- idtype: doi
+  value: 10.1186/s11689-024-09544-x
+- idtype: pmcid
+  value: PMC11149250
+authors:
+- authtype: Author
+  name: Brima T
+- authtype: Author
+  name: Beker S
+- authtype: Author
+  name: Prinsloo KD
+- authtype: Author
+  name: Butler JS
+- authtype: Author
+  name: Djukic A
+- authtype: Author
+  name: Freedman EG
+- authtype: Author
+  name: Molholm S
+- authtype: Author
+  name: Foxe JJ
+epubdate: 2024 Jun 3
+fulljournalname: Journal of Neurodevelopmental Disorders
+issue: ''
+pages: '28'
+pmclivedate: 2024/06/04
+printpubdate: ''
+pubdate: 2024 Jun 3
+sortdate: 2024/06/03 00:00
+source: J Neurodev Disord
+title: Probing a neural unreliability account of auditory sensory processing atypicalities
+  in Rett Syndrome
+uid: '11149250'
+volume: '16'

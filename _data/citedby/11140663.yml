@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '38649270'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1669-23.2024
+- idtype: pmcid
+  value: PMC11140663
+authors:
+- authtype: Author
+  name: Christian P
+- authtype: Author
+  name: Kaiser J
+- authtype: Author
+  name: Taylor PC
+- authtype: Author
+  name: George M
+- authtype: Author
+  name: Schütz-Bosbach S
+- authtype: Author
+  name: Soutschek A
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '22'
+pages: e1669232024
+pmclivedate: ''
+printpubdate: 2024 May 29
+pubdate: 2024 May 29
+sortdate: 2024/05/29 00:00
+source: J Neurosci
+title: 'Belief Updating during Social Interactions: Neural Dynamics and Causal Role
+  of Dorsomedial Prefrontal Cortex'
+uid: '11140663'
+volume: '44'

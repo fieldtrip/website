@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '38831943'
+- idtype: doi
+  value: 10.3389/fpsyg.2024.1376664
+- idtype: pmcid
+  value: PMC11144928
+authors:
+- authtype: Author
+  name: Szaszkó B
+- authtype: Author
+  name: Habeler M
+- authtype: Author
+  name: Forstinger M
+- authtype: Author
+  name: Pomper U
+- authtype: Author
+  name: Scheftner M
+- authtype: Author
+  name: Stolte M
+- authtype: Author
+  name: Grüner M
+- authtype: Author
+  name: Ansorge U
+epubdate: 2024 May 20
+fulljournalname: Frontiers in Psychology
+issue: ''
+pages: '1376664'
+pmclivedate: 2024/06/03
+printpubdate: ''
+pubdate: 2024 May 20
+sortdate: 2024/05/20 00:00
+source: Front Psychol
+title: 10 Hz rhythmic stimulation modulates electrophysiological, but not behavioral
+  markers of suppression
+uid: '11144928'
+volume: '15'

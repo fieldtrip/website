@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '38826206'
+- idtype: doi
+  value: 10.1101/2024.05.17.594750
+- idtype: pmcid
+  value: PMC11142039
+authors:
+- authtype: Author
+  name: Nuñez Ponasso G
+- authtype: Author
+  name: McSweeney RC
+- authtype: Author
+  name: Wartman WA
+- authtype: Author
+  name: Lai P
+- authtype: Author
+  name: Haueisen J
+- authtype: Author
+  name: Maess B
+- authtype: Author
+  name: Knösche TR
+- authtype: Author
+  name: Weise K
+- authtype: Author
+  name: Noetscher GM
+- authtype: Author
+  name: Raij T
+- authtype: Author
+  name: Makaroff SN
+epubdate: 2024 May 21
+fulljournalname: bioRxiv
+issue: ''
+pages: 2024.05.17.594750
+pmclivedate: 2024/06/01
+printpubdate: ''
+pubdate: 2024 May 21
+sortdate: 2024/05/21 00:00
+source: bioRxiv
+title: Accuracy of dipole source reconstruction in the 3-layer BEM model against the
+  5-layer BEM-FMM model
+uid: '11142039'
+volume: ''
