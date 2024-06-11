@@ -115,7 +115,9 @@ Now, apply the beamformer based on the non-symmetric 'normal' source model, calc
 
 ### Correlated symmetric sources with non-symmetric source model
 
+### Un-correlated symmetric sources with symmetric source model
 
+### Correlated symmetric sources with non-symmetric source model
 
 ## Example auditory steady state response
 
