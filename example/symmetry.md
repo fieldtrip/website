@@ -83,7 +83,6 @@ We now define two conditions with uncorrelated (i.e. phase shifted) symmetric 40
     cfg.sourcemodel.signal = repmat({[0.9*sin(40*2*pi*(0:999)/1000); 1.1*cos(40*2*pi*(0:999)/1000)]}, 1, 10);
     dataLR_attR = ft_dipolesimulation(cfg);
 
-
 Compute the data covariance matrix, which will capture the activity of each simulated dipole and is needed for the beamformer source estimation:
 
     cfg = [];
@@ -111,11 +110,51 @@ Now, apply the beamformer based on the non-symmetric 'normal' source model, calc
     cfg.funparameter = 'pow';
     figure; ft_sourceplot(cfg, contrastLR_attL_attR);
 
-{% include image src="/assets/img/example/symmetry/contrastLR_attL_attR.png" width="300" %}
+{% include image src="/assets/img/example/symmetry/contrastLR_attL_attR_nonsym_uncor.png" width="300" %}
 
 ### Correlated symmetric sources with non-symmetric source model
 
+Now, let's make the oscillations of the two symmetric dipoles correlated by changing the right dipole signals from cosines to sines:
+
+    cfg.sourcemodel.pos = dippos(:,:);
+    cfg.sourcemodel.mom = dipmom(:,:);
+    % create some left-right amplitude imbalance, emulating lateral attention modulation.
+    % OBS: Notice the right dipole signal is now also defined by a sine
+    cfg.sourcemodel.signal = repmat({[1.1*sin(40*2*pi*(0:999)/1000); 0.9*sin(40*2*pi*(0:999)/1000)]}, 1, 10);
+    dataLR_attL = ft_dipolesimulation(cfg);
+    cfg.sourcemodel.signal = repmat({[0.9*sin(40*2*pi*(0:999)/1000); 1.1*sin(40*2*pi*(0:999)/1000)]}, 1, 10);
+    dataLR_attR = ft_dipolesimulation(cfg);
+
+We then compute the covariance and apply the beamformer still with the non-symetric source model:
+
+    cfg = [];
+    cfg.covariance = 'yes';
+    timelockLR_attL  = ft_timelockanalysis(cfg, dataLR_attL);
+    timelockLR_attR  = ft_timelockanalysis(cfg, dataLR_attR);
+
+    cfg = [];
+    cfg.headmodel = vol;
+    cfg.grad = grad;
+    cfg.sourcemodel = sourcemodel_normal;
+    cfg.method = 'lcmv';
+    singleLR_attL = ft_sourceanalysis(cfg, timelockLR_attL);
+    singleLR_attR = ft_sourceanalysis(cfg, timelockLR_attR);
+
+    cfg           = [];
+    cfg.operation = '(x2-x1)/(x1+x2)'; % right minus left
+    cfg.parameter = 'pow';
+    contrastLR_attL_attR = ft_math(cfg, singleLR_attL, singleLR_attR);
+
+    cfg = [];
+    cfg.method = 'slice';
+    cfg.funparameter = 'pow';
+    figure; ft_sourceplot(cfg, contrastLR_attL_attR);
+
+{% include image src="/assets/img/example/symmetry/contrastLR_attL_attR_nonsym_cor.png" width="300" %}
+
 ### Un-correlated symmetric sources with symmetric source model
+
+
 
 ### Correlated symmetric sources with non-symmetric source model
 
