@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1136/gpsych-2023-101486
+- idtype: pmcid
+  value: PMC11163598
+authors:
+- authtype: Author
+  name: Prochnow A
+- authtype: Author
+  name: Zhou X
+- authtype: Author
+  name: Ghorbani F
+- authtype: Author
+  name: Roessner V
+- authtype: Author
+  name: Hommel B
+- authtype: Author
+  name: Beste C
+epubdate: 2024 Jun 5
+fulljournalname: General Psychiatry
+issue: '3'
+pages: e101486
+pmclivedate: 2024/06/10
+printpubdate: ''
+pubdate: 2024 Jun 5
+sortdate: 2024/06/05 00:00
+source: Gen Psychiatr
+title: 'Event segmentation in ADHD: neglect of social information and deviant theta
+  activity point to a mechanism underlying ADHD'
+uid: '11163598'
+volume: '37'

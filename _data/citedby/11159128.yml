@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '38855441'
+- idtype: doi
+  value: 10.3389/fnins.2024.1339479
+- idtype: pmcid
+  value: PMC11159128
+authors:
+- authtype: Author
+  name: Hoshi H
+- authtype: Author
+  name: Ishii A
+- authtype: Author
+  name: Shigihara Y
+- authtype: Author
+  name: Yoshikawa T
+epubdate: 2024 May 24
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '1339479'
+pmclivedate: 2024/06/07
+printpubdate: ''
+pubdate: 2024 May 24
+sortdate: 2024/05/24 00:00
+source: Front Neurosci
+title: Binocularly suppressed stimuli induce brain activities related to aesthetic
+  emotions
+uid: '11159128'
+volume: '18'

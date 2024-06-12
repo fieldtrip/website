@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '38850214'
+- idtype: doi
+  value: 10.1093/cercor/bhae243
+- idtype: pmcid
+  value: PMC11161864
+authors:
+- authtype: Author
+  name: Thum JA
+- authtype: Author
+  name: Malekmohammadi M
+- authtype: Author
+  name: Toker D
+- authtype: Author
+  name: Sparks H
+- authtype: Author
+  name: Alijanpourotaghsara A
+- authtype: Author
+  name: Choi JW
+- authtype: Author
+  name: Hudson AE
+- authtype: Author
+  name: Monti MM
+- authtype: Author
+  name: Pouratian N
+epubdate: 2024 Jun 8
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '6'
+pages: bhae243
+pmclivedate: ''
+printpubdate: ''
+pubdate: 2024 Jun 8
+sortdate: 2024/06/08 00:00
+source: Cereb Cortex
+title: Globus pallidus externus drives increase in network-wide alpha power with propofol-induced
+  loss-of-consciousness in humans
+uid: '11161864'
+volume: '34'
