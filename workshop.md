@@ -17,10 +17,11 @@ If there is no information listed for a potential workshop below, then we don't 
 
 We are considering and/or concretely planning to have FieldTrip workshops in
 
--   2024, [MEG/EEG toolkit](/workshop/toolkit2024) - Nijmegen, NL
+-   2025, MEG/EEG toolkit - Nijmegen, NL
 
 Previous FieldTrip workshops took place at
 
+-   2024, [MEG/EEG toolkit](/workshop/toolkit2024) - Nijmegen, NL
 -   2024, [WIRED at ICM, Paris](/workshop/wired2024)
 -   2024, [Sofia, Bulgaria](/workshop/sofia2024)
 -   2023, [Hamburg, Germany](/workshop/hamburg2023)
