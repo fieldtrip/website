@@ -171,8 +171,15 @@ To deal with the correlation between the symmetric dipoles, the source model is 
 
 In the symmetric sourcemodel, the `.pos` field is a `N/2x6` matrix (where `N` is the number of vertices in the grid), rather than the usual `Nx3`, where the xyz-coordinates of the vertices are given in pairs of triplets.
 
-    sourcemodel_double.pos
-        ans = 
+    >> head(sourcemodel_double.pos)
+        -9.5000   -9.0000         0    9.5000   -9.0000         0
+        -8.5000   -9.0000         0    8.5000   -9.0000         0
+        -7.5000   -9.0000         0    7.5000   -9.0000         0
+        -6.5000   -9.0000         0    6.5000   -9.0000         0
+        -5.5000   -9.0000         0    5.5000   -9.0000         0
+        -4.5000   -9.0000         0    4.5000   -9.0000         0
+        -3.5000   -9.0000         0    3.5000   -9.0000         0
+        -2.5000   -9.0000         0    2.5000   -9.0000         0
 
 Plot the symmetrically defined grid, colour coding each hemisphere:
 
