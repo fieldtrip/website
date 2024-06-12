@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '38844457'
+- idtype: doi
+  value: 10.1038/s41467-024-49040-3
+- idtype: pmcid
+  value: PMC11156671
+authors:
+- authtype: Author
+  name: Albouy P
+- authtype: Author
+  name: Mehr SA
+- authtype: Author
+  name: Hoyer RS
+- authtype: Author
+  name: Ginzburg J
+- authtype: Author
+  name: Du Y
+- authtype: Author
+  name: Zatorre RJ
+epubdate: 2024 Jun 6
+fulljournalname: Nature Communications
+issue: ''
+pages: '4835'
+pmclivedate: 2024/06/07
+printpubdate: ''
+pubdate: 2024 Jun 6
+sortdate: 2024/06/06 00:00
+source: Nat Commun
+title: Spectro-temporal acoustical markers differentiate speech from song across cultures
+uid: '11156671'
+volume: '15'

@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '38854799'
+- idtype: doi
+  value: 10.7717/peerj.17451
+- idtype: pmcid
+  value: PMC11162180
+authors:
+- authtype: Author
+  name: Jacobsen NA
+- authtype: Author
+  name: Ferris DP
+epubdate: 2024 Jun 5
+fulljournalname: PeerJ
+issue: ''
+pages: e17451
+pmclivedate: 2024/06/08
+printpubdate: ''
+pubdate: 2024 Jun 5
+sortdate: 2024/06/05 00:00
+source: PeerJ
+title: Electrocortical theta activity may reflect sensory prediction errors during
+  adaptation to a gradual gait perturbation
+uid: '11162180'
+volume: '12'

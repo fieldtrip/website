@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '38769012'
+- idtype: doi
+  value: 10.1523/ENEURO.0285-23.2024
+- idtype: pmcid
+  value: PMC11140657
+authors:
+- authtype: Author
+  name: Denis D
+- authtype: Author
+  name: Payne JD
+epubdate: 2024 May 24
+fulljournalname: eNeuro
+issue: '5'
+pages: ENEURO.0285-23.2024
+pmclivedate: 2024/05/31
+printpubdate: ''
+pubdate: 2024 May 24
+sortdate: 2024/05/24 00:00
+source: eNeuro
+title: Targeted Memory Reactivation during Nonrapid Eye Movement Sleep Enhances Neutral,
+  But Not Negative, Components of Memory
+uid: '11140657'
+volume: '11'

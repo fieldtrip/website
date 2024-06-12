@@ -1,0 +1,45 @@
+articleids:
+- idtype: pmid
+  value: '37245560'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2023.120200
+- idtype: pmcid
+  value: PMC11163516
+- idtype: MID
+  value: NIHMS1999560
+authors:
+- authtype: Author
+  name: Migeot J
+- authtype: Author
+  name: Hesse E
+- authtype: Author
+  name: Fittipaldi S
+- authtype: Author
+  name: Mejía J
+- authtype: Author
+  name: Fraile M
+- authtype: Author
+  name: García AM
+- authtype: Author
+  name: García MD
+- authtype: Author
+  name: Ortega R
+- authtype: Author
+  name: Lawlor B
+- authtype: Author
+  name: Lopez V
+- authtype: Author
+  name: Ibáñez A
+epubdate: 2023 May 26
+fulljournalname: NeuroImage
+issue: ''
+pages: '120200'
+pmclivedate: 2024/06/10
+printpubdate: 2023 Aug 1
+pubdate: 2023 May 26
+sortdate: 2023/05/26 00:00
+source: Neuroimage
+title: 'Allostatic-interoceptive anticipation of social rejection: Anticipation of
+  social rejection'
+uid: '11163516'
+volume: '276'

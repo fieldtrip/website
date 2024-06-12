@@ -1,0 +1,23 @@
+articleids:
+- idtype: pmid
+  value: '38843176'
+- idtype: doi
+  value: 10.1371/journal.pone.0303959
+- idtype: pmcid
+  value: PMC11156340
+authors:
+- authtype: Author
+  name: Sun L
+epubdate: 2024 Jun 6
+fulljournalname: PLOS ONE
+issue: '6'
+pages: e0303959
+pmclivedate: 2024/06/06
+printpubdate: ''
+pubdate: 2024 Jun 6
+sortdate: 2024/06/06 00:00
+source: PLoS One
+title: The investigation of dysregulated visual perceptual organization in adults
+  with autism spectrum disorders with phase-amplitude coupling and directed connectivity
+uid: '11156340'
+volume: '19'

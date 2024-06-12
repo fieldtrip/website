@@ -1,0 +1,51 @@
+articleids:
+- idtype: pmid
+  value: '38846536'
+- idtype: doi
+  value: 10.1093/braincomms/fcae175
+- idtype: pmcid
+  value: PMC11154148
+authors:
+- authtype: Author
+  name: Deroche ML
+- authtype: Author
+  name: Wolfe J
+- authtype: Author
+  name: Neumann S
+- authtype: Author
+  name: Manning J
+- authtype: Author
+  name: Hanna L
+- authtype: Author
+  name: Towler W
+- authtype: Author
+  name: Wilson C
+- authtype: Author
+  name: Bien AG
+- authtype: Author
+  name: Miller S
+- authtype: Author
+  name: Schafer E
+- authtype: Author
+  name: Gemignani J
+- authtype: Author
+  name: Alemi R
+- authtype: Author
+  name: Muthuraman M
+- authtype: Author
+  name: Koirala N
+- authtype: Author
+  name: Gracco VL
+epubdate: 2024 May 21
+fulljournalname: Brain Communications
+issue: '3'
+pages: fcae175
+pmclivedate: 2024/06/06
+printpubdate: ''
+pubdate: 2024 May 21
+sortdate: 2024/05/21 00:00
+source: Brain Commun
+title: 'Cross-modal plasticity in children with cochlear implant: converging evidence
+  from EEG and functional near-infrared spectroscopy'
+uid: '11154148'
+volume: '6'

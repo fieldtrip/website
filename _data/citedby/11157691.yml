@@ -1,0 +1,38 @@
+articleids:
+- idtype: pmid
+  value: '37437702'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2023.120252
+- idtype: pmcid
+  value: PMC11157691
+authors:
+- authtype: Author
+  name: Mellor S
+- authtype: Author
+  name: Tierney TM
+- authtype: Author
+  name: Seymour RA
+- authtype: Author
+  name: Timms RC
+- authtype: Author
+  name: O'Neill GC
+- authtype: Author
+  name: Alexander N
+- authtype: Author
+  name: Spedden ME
+- authtype: Author
+  name: Payne H
+- authtype: Author
+  name: Barnes GR
+epubdate: ''
+fulljournalname: Neuroimage
+issue: ''
+pages: '120252'
+pmclivedate: 2024/06/08
+printpubdate: 2023 Sep
+pubdate: 2023 Sep
+sortdate: 2023/09/01 00:00
+source: Neuroimage
+title: Real-time, model-based magnetic field correction for moving, wearable MEG
+uid: '11157691'
+volume: '278'

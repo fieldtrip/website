@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1038/s44271-024-00105-5
+- idtype: pmcid
+  value: PMC11163589
+authors:
+- authtype: Author
+  name: Ignatiadis K
+- authtype: Author
+  name: Baier D
+- authtype: Author
+  name: Barumerli R
+- authtype: Author
+  name: Sziller I
+- authtype: Author
+  name: Tóth B
+- authtype: Author
+  name: Baumgartner R
+epubdate: 2024 Jun 8
+fulljournalname: Communications Psychology
+issue: '1'
+pages: '56'
+pmclivedate: 2024/06/10
+printpubdate: '2024'
+pubdate: 2024 Jun 8
+sortdate: 2024/06/08 00:00
+source: Commun Psychol
+title: Cortical signatures of auditory looming bias show cue-specific adaptation between
+  newborns and young adults
+uid: '11163589'
+volume: '2'

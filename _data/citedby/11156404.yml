@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '38843236'
+- idtype: doi
+  value: 10.1371/journal.pone.0299275
+- idtype: pmcid
+  value: PMC11156404
+authors:
+- authtype: Author
+  name: Rodriguez-Larios J
+- authtype: Author
+  name: Foong Wong K
+- authtype: Author
+  name: Lim J
+epubdate: 2024 Jun 6
+fulljournalname: PLOS ONE
+issue: '6'
+pages: e0299275
+pmclivedate: 2024/06/06
+printpubdate: ''
+pubdate: 2024 Jun 6
+sortdate: 2024/06/06 00:00
+source: PLoS One
+title: Assessing the effects of an 8-week mindfulness training program on neural oscillations
+  and self-reports during meditation practice
+uid: '11156404'
+volume: '19'
