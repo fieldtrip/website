@@ -346,56 +346,153 @@ Finally, we show the effect of using a symmetric source model to estimate two un
 ## Example auditory steady state response
 
 {% include markup/yellow %}
-This is explained for Steady State Auditory Potentials (SSAEPs) in the paper by Tzvetan Popov, Robert Oostenveld, Jan M. Schoffelen (2018) [FieldTrip Made Easy: An Analysis Protocol for Group Analysis of the Auditory Steady State Brain Response in Time, Frequency, and Space](https://doi.org/10.3389/fnins.2018.00711). Supporting material, including all data and scripts can be found on the [Radboud Data Repository](https://doi.org/10.34973/fkgz-8d22).
+The use of symmetric dipoles is explained for Steady State Auditory Potentials (SSAEPs) in the paper by Tzvetan Popov, Robert Oostenveld, Jan M. Schoffelen (2018) [FieldTrip Made Easy: An Analysis Protocol for Group Analysis of the Auditory Steady State Brain Response in Time, Frequency, and Space](https://doi.org/10.3389/fnins.2018.00711). Supporting material, including all data and scripts can be found on the [Radboud Data Repository](https://doi.org/10.34973/fkgz-8d22).
 
 {% include badge doi="10.3389/fnins.2018.00711" pmid="30356712" pmcid="PMC6189392" %}
 {% include markup/end %}
 
+The following exerpts from [`ASSR_dics.m` (download)](https://data.ru.nl/api/di/downloadFiles/download?filePath=analysis_scripts%2FASSR_dics.m&versionId=di_44792555) make up the analysis pipeline of the SSAEPs from [Popov et. al. 2018](https://doi.org/10.3389/fnins.2018.00711) using symmetric dipoles and [Dynamic imaging of coherent sources](https://doi.org/10.1073/pnas.98.2.694) (DICS). The SSAEP is a very high SNR signal, leading to (near) simultaneous (i.e. zero-lag correlated) activation in bilateral auditory areas. Therefore, the traditional beamformer will fail to yield good results. Note that the exerpts present the method on a single subject, while `ASSR_dics.m` provide analysis accross subjects as well.
 
-    mri = ft_read_mri('Subject01.mri');
+Configure data and FieldTrip paths, and specify some study metadata:
 
-    % just to check that it is in CTF coordinates and that the y axis is from right (-y) to left (+y)
-    ft_determine_coordsys(mri, 'interactive', false)
+    % initialize fieldtrip
+    path_ft   = '/path/to/fieldtrip';
+    path_data = '/path/to/data/ASSR';
 
-    % we only need the brain surface, as we'll use a singleshell MEG volume conductor
-    cfg = [];
-    cfg.output = {'brain'};
-    cfg.spmmethod = 'new';
-    cfg.spmversion = 'spm12';
-    mri_segmented = ft_volumesegment(cfg, mri);
+    % this adds fieldtrip to the matlab path + the relevant subdirectories
+    addpath(path_ft);
+    ft_defaults;
 
-    cfg = [];
-    cfg.method = 'singleshell';
-    headmodel = ft_prepare_headmodel(cfg, mri_segmented);
+    % we choose a single subject for demonstration purposes
+    subject = '45048'
 
-    % just to be sure, since we'll specify numbers further down
-    headmodel = ft_convert_units(headmodel, 'mm');
+Load in the precomputed geometric data that is needed for source
+reconstruction: the forward model (leadfields), as well as the volume
+conductor model of the head, and the electrodes. Strictly speaking, once
+the forward model is available, the other objects are not needed anymore,
+but FieldTrip expects them to be present in the cfg. 
 
-    cfg = [];
-    cfg.headmodel = headmodel;
-    cfg.symmetry = 'y';
-    cfg.xgrid = -150:10:150; % in mm
-    cfg.ygrid =    5:10:150; % in mm, one hemisphere, offset to the midline
-    cfg.zgrid = -150:10:150; % in mm
-    sourcemodel = ft_prepare_sourcemodel(cfg);
+    load(fullfile(path_data,'templates','headmodel.mat'));
+    load(fullfile(path_data,'templates','leadfield.mat'));
+    load(fullfile(path_data,'templates','elec_aligned.mat'));
 
-    % the source position is specified as 1547x6
-    % corresponding to 1547 dipole pairs
+In this example here, we have already computed leadfields,
+so we will create for each original dipole location a leadfield
+consisting of a concatenation of this dipole's leadfield with its
+counterpart in the opposite hemisphere. Note that the x-coordinate here
+is the left/right direction.
+
+    lf1 = reshape(leadfield.leadfield, leadfield.dim);
+    lf2 = flip(lf1,1);
+    for k = 1:numel(lf1)
+        if ~isempty(lf1{k})&&~isempty(lf2{k})
+            leadfield.leadfield{k} = [lf1{k} lf2{k}];
+        else
+            leadfield.leadfield{k} = [];
+            leadfield.inside(k)    = false;
+        end
+    end
+    clear lf1 lf2
+
+Load the data and divide it into pre and post stimulus segments. We also concatenate the two for the purpose of estimating a common spatial filter.
+
+    datafile = fullfile(path_data, 'data', subject, 'data.mat');
+    load(datafile)
+
+    % remove bad channels
+    cfg         = [];
+    cfg.channel = {'all' '-E30' '-E3' '-E4' '-E11' '-E12' '-Cz' '-E192'};
+    data        = ft_selectdata(cfg, data);
     
-    % using the sensor description from the corresponding MEG data
-    % we can now compute the leadfields
-    grad = ft_read_sens('Subject01.ds', 'senstype', 'meg');
+    % this chunk of code creates a 'dummy' reference channel to be used for
+    % the coherence analysis
+    trial = cell(size(data.trial));
+    for k = 1:numel(trial)
+        trial{k} = sin(2.*pi.*40.*data.time{k});
+    end
+    refdata.trial = trial;
+    refdata.time  = data.time;
+    refdata.label = {'refchan'};
+    data          = ft_appenddata([], data, refdata);
+    data.fsample  = 1000;
+    
+    % re-segment the data into pre and post stimulus onset intervals
+    cfg        = [];                                              
+    cfg.toilim = [-1 0-1./data.fsample];    
+    datapre    = ft_redefinetrial(cfg, data);
+    
+    cfg.toilim = [1 2-1./data.fsample]; 
+    datapost   = ft_redefinetrial(cfg, data);
 
-    cfg = [];
-    cfg.grad = grad;
-    cfg.channel = {'MEGGRAD'};
-    cfg.headmodel = headmodel;
-    cfg.sourcemodel = sourcemodel;
-    leadfield = ft_prepare_leadfield(cfg);
+    % append data to facilitate the computation of a 'common' spatial filter 
+    dataall = ft_appenddata([], datapre, datapost);
 
-    % each leadfield matrix is 6x151, where 6 corresponds to 3 orientations for
-    % the dipole in left and 3 orientations for the dipole in the right hemisphere
+The cross-spectral density matrices are calculated for each of the two conditions and the concatenated data. Here, we focus on the 40 Hz component:
+    
+    cfg        = [];
+    cfg.method = 'mtmfft';
+    cfg.output = 'fourier';
+    cfg.taper  = 'hanning';
+    cfg.foilim = [40 40];
+    freqpre    = ft_freqanalysis(cfg, datapre);
+    freqpost   = ft_freqanalysis(cfg, datapost);
+    freqall    = ft_freqanalysis(cfg, dataall);
+    
+    % the data consists of fewer channels than the precomputed
+    % leadfields, the following chunk of code takes care of this
+    [a,b] = match_str(data.label, leadfield.label);
+    for k = 1:numel(leadfield.leadfield)
+        if ~isempty(leadfield.leadfield{k})
+            tmp = leadfield.leadfield{k};
+            tmp = tmp(b,:);
+            tmp = tmp-repmat(mean(tmp,1),[size(tmp,1) 1]); % average re-ref
+            leadfield.leadfield{k} = tmp;
+        end
+    end
+    leadfield.label = leadfield.label(b);
+    
+Perform source reconstruction using the DICS method . Note that `cfg.dics.keepfilter = 'yes'` allows us to pass the estimated spatial filter to the subsequent source analysis of individual conditions.
 
-    figure
-    ft_plot_mesh(leadfield.pos(leadfield.inside, 1:3), 'vertexcolor', 'r')
-    ft_plot_mesh(leadfield.pos(leadfield.inside, 4:6), 'vertexcolor', 'b')
+    cfg                   = []; 
+    cfg.method            = 'dics';
+    cfg.frequency         = 40;  
+    cfg.channel           = data.label;
+    cfg.elec              = elec_aligned;
+    cfg.grid              = leadfield;
+    cfg.headmodel         = headmodel;
+    cfg.dics.keepfilter   = 'yes';
+    cfg.dics.fixedori     = 'no';
+    cfg.dics.projectnoise = 'yes';
+    cfg.dics.lambda       = '5%';
+    cfg.dics.realfilter   = 'yes';
+    cfg.dics.keepcsd      = 'yes';
+    cfg.refchan           = {'refchan'};
+    sourceall             = ft_sourceanalysis(cfg, freqall);
+    
+    % apply common filters to pre and post stimulus data
+    cfg.grid.filter = sourceall.avg.filter;
+    
+Now we need to extract the dipole pairs' full csd matrix with respect to the reference channel, which is not possible in the traditional DICS implementation, but can be achieved with PCC
+
+    cfg.method   = 'pcc';
+    cfg          = rmfield(cfg, 'dics');
+    sourcepre    = ft_sourceanalysis(cfg, freqpre);
+    sourcepst    = ft_sourceanalysis(cfg, freqpost);
+    
+Now we need to adjust the 'csdlabel', in order to compute the single dipole-of-interest coherence with the reference. source.avg.csd contains for each dipole pair the cross-spectral density as a 7x7 matrix, two triplets of rows/columns for each of the dipoles in the pair, and one for the reference signal. **[ft_sourcedescriptives](https://github.com/fieldtrip/fieldtrip/blob/master/ft_sourcedescriptives.m)** will return the coherence between the 'scandip' and the 'refchan', so we need to relabel the second dipole's label
+
+    for k = 1:size(sourcepre.pos,1)
+        if ~isempty(sourcepre.avg.csdlabel{k})
+            sourcepre.avg.csdlabel{k}(4:6) = {'supdip'};
+            sourcepst.avg.csdlabel{k}(4:6) = {'supdip'};
+        end
+    end
+    sourcepre = ft_sourcedescriptives([], sourcepre);
+    sourcepst = ft_sourcedescriptives([], sourcepst);
+    
+Contrast post stimulus onset activity with respect to baseline
+
+    cfg           = [];
+    cfg.operation = 'x2-x1';
+    cfg.parameter = 'avg.coh';
+    source_dics   = ft_math(cfg,sourcepre,sourcepst);
