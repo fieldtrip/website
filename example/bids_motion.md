@@ -6,9 +6,9 @@ tags: [example, bids, sharing, motion, qualisys, optotrak, xsens]
 # Converting an example motion tracking dataset for sharing in BIDS
 
 {% include markup/red %}
-The [BIDS standard](https://bids.neuroimaging.io) does currently not specify how to represent motion tracking data. This example - and the support that is implemented in the **[data2bids](/reference/data2bids)** function - should be considered as a preliminary proposal to help researchers with their existing data.
+Motion data is part of the [BIDS standard](https://bids-specification.readthedocs.io/en/stable/modality-specific-files/motion.html) as of version 1.9.0. 
 
-See [this issue](https://github.com/bids-standard/bids-specification/issues/443) on GitHub and [this Google doc](https://docs.google.com/document/d/1iaaLKgWjK5pcISD1MVxHKexB3PZWfE2aAC5HF_pCZWo/edit?usp=sharing) with the draft specification that is being discussed.
+This example predates the official merge of motion data in the BIDS standard. This example - and the support that is implemented in the **[data2bids](/reference/data2bids)** function - might therefore not yet be fully up to date with the official standard. 
 {% include markup/end %}
 
 There are numerous companies that manufacture research-oriented motion capture systems, such as Polhemus, Qualisys, NDI Polaris, X-Sens, etc. Furthermore, there are multiple technologies that are used for motion tracking, such as optical cameras (often with IR markers), electromagnetic tracking, or using inertial measurement units (IMUs). Optical and electromagnetic tracking systems result in measurements that can directly be interpreted as the position of the marker, which changes over time. Systems based on IMUs record signals from multiple accelerometers, gyroscopes, and (sometimes) magnetometers; the raw data from these systems requires further processing before it can be interpreted as position.
