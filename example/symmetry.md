@@ -1,6 +1,6 @@
 ---
 title: Symmetric dipole pairs for beamforming
-tags: [example, source]
+tags: [example, source, symmetry]
 ---
 
 # Symmetric dipole pairs for beamforming
