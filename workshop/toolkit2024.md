@@ -71,7 +71,7 @@ Note that the tentative program below still might change a bit.
 ### Friday May 31, 2024
 
 | 09:00-09:30 | Morning chill or workout |
-| 09:45-11:00 | Open science and good practices - lecture by Robert |
+| 09:45-11:00 | Open science and good practices - [lecture](/assets/pdf/workshop/toolkit2024/09_open_science.pdf) by Robert |
 | 11:00-11:15 | Coffee Break |
 | 11:15-12:30 | FieldTrip playground, apply your newly acquired knowledge and skills |
 | 12:30-13:30 | Lunch |
