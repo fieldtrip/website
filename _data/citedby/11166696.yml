@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '38868193'
+- idtype: doi
+  value: 10.1016/j.isci.2024.110003
+- idtype: pmcid
+  value: PMC11166696
+authors:
+- authtype: Author
+  name: Boring MJ
+- authtype: Author
+  name: Richardson RM
+- authtype: Author
+  name: Ghuman AS
+epubdate: 2024 May 15
+fulljournalname: iScience
+issue: '6'
+pages: '110003'
+pmclivedate: 2024/06/12
+printpubdate: ''
+pubdate: 2024 May 15
+sortdate: 2024/05/15 00:00
+source: iScience
+title: Interacting ventral temporal gradients of timescales and functional connectivity
+  and their relationships to visual behavior
+uid: '11166696'
+volume: '27'
