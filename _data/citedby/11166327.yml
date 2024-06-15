@@ -1,0 +1,38 @@
+articleids:
+- idtype: pmid
+  value: '38815000'
+- idtype: doi
+  value: 10.1371/journal.pcbi.1012161
+- idtype: pmcid
+  value: PMC11166327
+authors:
+- authtype: Author
+  name: Brands AM
+- authtype: Author
+  name: Devore S
+- authtype: Author
+  name: Devinsky O
+- authtype: Author
+  name: Doyle W
+- authtype: Author
+  name: Flinker A
+- authtype: Author
+  name: Friedman D
+- authtype: Author
+  name: Dugan P
+- authtype: Author
+  name: Winawer J
+- authtype: Author
+  name: Groen II
+epubdate: 2024 May 30
+fulljournalname: PLOS Computational Biology
+issue: '5'
+pages: e1012161
+pmclivedate: 2024/06/11
+printpubdate: ''
+pubdate: 2024 May 30
+sortdate: 2024/05/30 00:00
+source: PLoS Comput Biol
+title: Temporal dynamics of short-term neural adaptation across human visual cortex
+uid: '11166327'
+volume: '20'

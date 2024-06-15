@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '38846535'
+- idtype: doi
+  value: 10.1093/braincomms/fcae173
+- idtype: pmcid
+  value: PMC11154150
+authors:
+- authtype: Author
+  name: Höhn C
+- authtype: Author
+  name: Hahn MA
+- authtype: Author
+  name: Gruber G
+- authtype: Author
+  name: Pletzer B
+- authtype: Author
+  name: Cajochen C
+- authtype: Author
+  name: Hoedlmoser K
+epubdate: 2024 May 17
+fulljournalname: Brain Communications
+issue: '3'
+pages: fcae173
+pmclivedate: 2024/06/06
+printpubdate: ''
+pubdate: 2024 May 17
+sortdate: 2024/05/17 00:00
+source: Brain Commun
+title: Effects of evening smartphone use on sleep and declarative memory consolidation
+  in male adolescents and young adults
+uid: '11154150'
+volume: '6'
