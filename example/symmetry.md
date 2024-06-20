@@ -351,7 +351,7 @@ The use of symmetric dipoles is explained for Steady State Auditory Potentials (
 {% include badge doi="10.3389/fnins.2018.00711" pmid="30356712" pmcid="PMC6189392" %}
 {% include markup/end %}
 
-The following exerpt from [`ASSR_dics.m` (download)](https://data.ru.nl/api/di/downloadFiles/download?filePath=analysis_scripts%2FASSR_dics.m&versionId=di_44792555) makes up the analysis pipeline of the SSAEPs from [Popov et. al. 2018](https://doi.org/10.3389/fnins.2018.00711) using symmetric dipoles and [Dynamic imaging of coherent sources](https://doi.org/10.1073/pnas.98.2.694) (DICS). The SSAEP is a very high SNR signal, leading to (near) simultaneous (i.e. zero-lag correlated) activation in bilateral auditory areas. Therefore, the traditional beamformer will fail to yield good results. Note that the exerpt here presents the method on a single subject, while `ASSR_dics.m` provide the analysis across subjects as well.
+The following excerpts from [`ASSR_dics.m` (download)](https://data.ru.nl/api/di/downloadFiles/download?filePath=analysis_scripts%2FASSR_dics.m&versionId=di_44792555) make up the analysis pipeline of the SSAEPs from [Popov et. al. 2018](https://doi.org/10.3389/fnins.2018.00711) using symmetric dipoles and [Dynamic imaging of coherent sources](https://doi.org/10.1073/pnas.98.2.694) (DICS). The SSAEP is a very high SNR signal, leading to (near) simultaneous (i.e. zero-lag correlated) activation in bilateral auditory areas. Therefore, the traditional beamformer will fail to yield good results. Note that the excerpts here present the method on a single subject, while `ASSR_dics.m` provide the analysis across subjects as well.
 
 Configure data and FieldTrip paths, and specify some study metadata:
 
