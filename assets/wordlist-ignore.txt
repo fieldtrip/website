@@ -621,6 +621,7 @@ FT'ers
 FT's
 FTDI
 FTbugs
+FUNNI
 FWE
 FWER
 FZlZTf
@@ -1430,11 +1431,19 @@ Spotify
 TRFs
 appenddim
 appendsource
+attL
+attR
 biopac
+contrastLR
+csdlabel
 eetbar
 fieldname
+nonsym
 paxinos
+scandip
+sym
 triaxial
+uncor
 
 OPM
 OPMEG

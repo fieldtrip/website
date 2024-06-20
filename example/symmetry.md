@@ -13,7 +13,7 @@ This is especially beneficial when the source activity in left and right hemisph
 
 To investigate the effects of applying a symmetry constraint to the beamformer analysis, we will simulate two scenarios of symmetric dipoles; correlated and un-correlated. We will then attempt to estimate them with and without symmetry constraints. There coherent simulation script is available **[here](https://github.com/henneysq/meg-ahat/blob/main/simulations/symmetric_dipoles_tutorial.m)**.
 
-First, the symmetric dipoles and a spherical volume conducter model are defined:
+First, the symmetric dipoles and a spherical volume conductor model are defined:
 
     % Define two dipole positions and two directions of moment
     dippos = [-4 -4 4; 4 -4 4];
@@ -39,7 +39,7 @@ Then, a 'normal' non-symmetric source model is defined, and the grid is plotted:
 
     % Define a non-symmetric 'normal' source model
     cfg = [];
-    cfg.headmodel = vol; % use the spherical volume conducter as head model
+    cfg.headmodel = vol; % use the spherical volume conductor as head model
     cfg.grad = grad;
     % Source models are defined with x-axis normal to the midline.
     cfg.xgrid = -9.5:9.5; % ensure that the midline is not included
@@ -124,7 +124,7 @@ Now, let's make the oscillations of the two symmetric dipoles correlated by chan
     cfg.sourcemodel.signal = repmat({[0.9*sin(40*2*pi*(0:999)/1000); 1.1*sin(40*2*pi*(0:999)/1000)]}, 1, 10);
     dataLR_attR = ft_dipolesimulation(cfg);
 
-Compute the covariance and apply the beamformer still with the non-symetric source model:
+Compute the covariance and apply the beamformer still with the non-symmetric source model:
 
     cfg = [];
     cfg.covariance = 'yes';
@@ -151,7 +151,7 @@ Compute the covariance and apply the beamformer still with the non-symetric sour
 
 {% include image src="/assets/img/example/symmetry/contrastLR_attL_attR_nonsym_cor.png" width="600" %}
 
-Due to the correlation between the spatially seperated source signals, the LCMV estimator produces a sub-optimal spatial filter that is less sensitive to both sources.
+Due to the correlation between the spatially separated source signals, the LCMV estimator produces a sub-optimal spatial filter that is less sensitive to both sources.
 
 ---
 
@@ -351,7 +351,7 @@ The use of symmetric dipoles is explained for Steady State Auditory Potentials (
 {% include badge doi="10.3389/fnins.2018.00711" pmid="30356712" pmcid="PMC6189392" %}
 {% include markup/end %}
 
-The following exerpts from [`ASSR_dics.m` (download)](https://data.ru.nl/api/di/downloadFiles/download?filePath=analysis_scripts%2FASSR_dics.m&versionId=di_44792555) make up the analysis pipeline of the SSAEPs from [Popov et. al. 2018](https://doi.org/10.3389/fnins.2018.00711) using symmetric dipoles and [Dynamic imaging of coherent sources](https://doi.org/10.1073/pnas.98.2.694) (DICS). The SSAEP is a very high SNR signal, leading to (near) simultaneous (i.e. zero-lag correlated) activation in bilateral auditory areas. Therefore, the traditional beamformer will fail to yield good results. Note that the exerpts present the method on a single subject, while `ASSR_dics.m` provide analysis accross subjects as well.
+The following exerpt from [`ASSR_dics.m` (download)](https://data.ru.nl/api/di/downloadFiles/download?filePath=analysis_scripts%2FASSR_dics.m&versionId=di_44792555) makes up the analysis pipeline of the SSAEPs from [Popov et. al. 2018](https://doi.org/10.3389/fnins.2018.00711) using symmetric dipoles and [Dynamic imaging of coherent sources](https://doi.org/10.1073/pnas.98.2.694) (DICS). The SSAEP is a very high SNR signal, leading to (near) simultaneous (i.e. zero-lag correlated) activation in bilateral auditory areas. Therefore, the traditional beamformer will fail to yield good results. Note that the exerpt here presents the method on a single subject, while `ASSR_dics.m` provide the analysis across subjects as well.
 
 Configure data and FieldTrip paths, and specify some study metadata:
 
