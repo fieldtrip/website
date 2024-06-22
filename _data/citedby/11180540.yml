@@ -1,0 +1,127 @@
+articleids:
+- idtype: pmid
+  value: '38191935'
+- idtype: doi
+  value: 10.1038/s41592-023-02145-x
+- idtype: pmcid
+  value: PMC11180540
+- idtype: MID
+  value: NIHMS1996180
+authors:
+- authtype: Author
+  name: Renton AI
+- authtype: Author
+  name: Dao TT
+- authtype: Author
+  name: Johnstone T
+- authtype: Author
+  name: Civier O
+- authtype: Author
+  name: Sullivan RP
+- authtype: Author
+  name: White DJ
+- authtype: Author
+  name: Lyons P
+- authtype: Author
+  name: Slade BM
+- authtype: Author
+  name: Abbott DF
+- authtype: Author
+  name: Amos TJ
+- authtype: Author
+  name: Bollmann S
+- authtype: Author
+  name: Botting A
+- authtype: Author
+  name: Campbell ME
+- authtype: Author
+  name: Chang J
+- authtype: Author
+  name: Close TG
+- authtype: Author
+  name: Dörig M
+- authtype: Author
+  name: Eckstein K
+- authtype: Author
+  name: Egan GF
+- authtype: Author
+  name: Evas S
+- authtype: Author
+  name: Flandin G
+- authtype: Author
+  name: Garner KG
+- authtype: Author
+  name: Garrido MI
+- authtype: Author
+  name: Ghosh SS
+- authtype: Author
+  name: Grignard M
+- authtype: Author
+  name: Halchenko YO
+- authtype: Author
+  name: Hannan AJ
+- authtype: Author
+  name: Heinsfeld AS
+- authtype: Author
+  name: Huber L
+- authtype: Author
+  name: Hughes ME
+- authtype: Author
+  name: Kaczmarzyk JR
+- authtype: Author
+  name: Kasper L
+- authtype: Author
+  name: Kuhlmann L
+- authtype: Author
+  name: Lou K
+- authtype: Author
+  name: Mantilla-Ramos YJ
+- authtype: Author
+  name: Mattingley JB
+- authtype: Author
+  name: Meier ML
+- authtype: Author
+  name: Morris J
+- authtype: Author
+  name: Narayanan A
+- authtype: Author
+  name: Pestilli F
+- authtype: Author
+  name: Puce A
+- authtype: Author
+  name: Ribeiro FL
+- authtype: Author
+  name: Rogasch NC
+- authtype: Author
+  name: Rorden C
+- authtype: Author
+  name: Schira MM
+- authtype: Author
+  name: Shaw TB
+- authtype: Author
+  name: Sowman PF
+- authtype: Author
+  name: Spitz G
+- authtype: Author
+  name: Stewart AW
+- authtype: Author
+  name: Ye X
+- authtype: Author
+  name: Zhu JD
+- authtype: Author
+  name: Narayanan A
+- authtype: Author
+  name: Bollmann S
+epubdate: 2024 Jan 8
+fulljournalname: Nature methods
+issue: '5'
+pages: 804-808
+pmclivedate: 2024/06/16
+printpubdate: 2024 May
+pubdate: 2024 Jan 8
+sortdate: 2024/01/08 00:00
+source: Nat Methods
+title: 'Neurodesk: an accessible, flexible and portable data analysis environment
+  for reproducible neuroimaging'
+uid: '11180540'
+volume: '21'

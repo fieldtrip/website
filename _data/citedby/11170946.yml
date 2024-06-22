@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '38670804'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.2029-23.2024
+- idtype: pmcid
+  value: PMC11170946
+authors:
+- authtype: Author
+  name: Toso A
+- authtype: Author
+  name: Wermuth AP
+- authtype: Author
+  name: Arazi A
+- authtype: Author
+  name: Braun A
+- authtype: Author
+  name: Jong TG
+- authtype: Author
+  name: Uhlhaas PJ
+- authtype: Author
+  name: Donner TH
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '24'
+pages: e2029232024
+pmclivedate: 2024/06/14
+printpubdate: 2024 Jun 12
+pubdate: 2024 Jun 12
+sortdate: 2024/06/12 00:00
+source: J Neurosci
+title: 40 Hz Steady-State Response in Human Auditory Cortex Is Shaped by Gabaergic
+  Neuronal Inhibition
+uid: '11170946'
+volume: '44'

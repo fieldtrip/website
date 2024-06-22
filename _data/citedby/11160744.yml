@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '38854147'
+- idtype: doi
+  value: 10.1101/2024.05.29.596323
+- idtype: pmcid
+  value: PMC11160744
+authors:
+- authtype: Author
+  name: Carrasco-Gómez M
+- authtype: Author
+  name: García-Colomo A
+- authtype: Author
+  name: Nebreda A
+- authtype: Author
+  name: Bruña R
+- authtype: Author
+  name: Santos A
+- authtype: Author
+  name: Maestú F
+epubdate: 2024 Jun 1
+fulljournalname: bioRxiv
+issue: ''
+pages: 2024.05.29.596323
+pmclivedate: 2024/06/08
+printpubdate: ''
+pubdate: 2024 Jun 1
+sortdate: 2024/06/01 00:00
+source: bioRxiv
+title: Dynamic functional connectivity is modulated by the amount of p-Tau231 in blood
+  in cognitively intact participants
+uid: '11160744'
+volume: ''

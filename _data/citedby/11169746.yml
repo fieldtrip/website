@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '37905907'
+- idtype: doi
+  value: 10.1002/pchj.696
+- idtype: pmcid
+  value: PMC11169746
+authors:
+- authtype: Author
+  name: Liu Y
+- authtype: Author
+  name: Zhao C
+- authtype: Author
+  name: Sander‐Thömmes T
+- authtype: Author
+  name: Yang T
+- authtype: Author
+  name: Bao Y
+epubdate: 2023 Oct 31
+fulljournalname: PsyCh Journal
+issue: '3'
+pages: 347-354
+pmclivedate: 2024/06/14
+printpubdate: ''
+pubdate: 2023 Oct 31
+sortdate: 2023/10/31 00:00
+source: Psych J
+title: Beta oscillation is an indicator for two patterns of sensorimotor synchronization
+uid: '11169746'
+volume: '13'

@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '38889194'
+- idtype: doi
+  value: 10.1371/journal.pbio.3002651
+- idtype: pmcid
+  value: PMC11185466
+authors:
+- authtype: Author
+  name: Hebron H
+- authtype: Author
+  name: Lugli B
+- authtype: Author
+  name: Dimitrova R
+- authtype: Author
+  name: Jaramillo V
+- authtype: Author
+  name: Yeh LR
+- authtype: Author
+  name: Rhodes E
+- authtype: Author
+  name: Grossman N
+- authtype: Author
+  name: Dijk DJ
+- authtype: Author
+  name: Violante IR
+epubdate: 2024 Jun 18
+fulljournalname: PLOS Biology
+issue: '6'
+pages: e3002651
+pmclivedate: 2024/06/18
+printpubdate: ''
+pubdate: 2024 Jun 18
+sortdate: 2024/06/18 00:00
+source: PLoS Biol
+title: A closed-loop auditory stimulation approach selectively modulates alpha oscillations
+  and sleep onset dynamics in humans
+uid: '11185466'
+volume: '22'

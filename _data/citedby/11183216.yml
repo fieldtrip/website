@@ -1,0 +1,47 @@
+articleids:
+- idtype: pmid
+  value: '38886376'
+- idtype: doi
+  value: 10.1038/s41467-024-48746-8
+- idtype: pmcid
+  value: PMC11183216
+authors:
+- authtype: Author
+  name: Bourdillon P
+- authtype: Author
+  name: Ren L
+- authtype: Author
+  name: Halgren M
+- authtype: Author
+  name: Paulk AC
+- authtype: Author
+  name: Salami P
+- authtype: Author
+  name: Ulbert I
+- authtype: Author
+  name: Fabó D
+- authtype: Author
+  name: King JR
+- authtype: Author
+  name: Sjoberg KM
+- authtype: Author
+  name: Eskandar EN
+- authtype: Author
+  name: Madsen JR
+- authtype: Author
+  name: Halgren E
+- authtype: Author
+  name: Cash SS
+epubdate: 2024 Jun 17
+fulljournalname: Nature Communications
+issue: ''
+pages: '5153'
+pmclivedate: 2024/06/18
+printpubdate: ''
+pubdate: 2024 Jun 17
+sortdate: 2024/06/17 00:00
+source: Nat Commun
+title: Differential cortical layer engagement during seizure initiation and spread
+  in humans
+uid: '11183216'
+volume: '15'
