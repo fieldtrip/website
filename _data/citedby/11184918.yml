@@ -1,0 +1,52 @@
+articleids:
+- idtype: pmid
+  value: '35491275'
+- idtype: doi
+  value: 10.1016/j.biopsych.2022.02.955
+- idtype: pmcid
+  value: PMC11184918
+- idtype: MID
+  value: NIHMS1998262
+authors:
+- authtype: Author
+  name: Birba A
+- authtype: Author
+  name: Santamaría-García H
+- authtype: Author
+  name: Prado P
+- authtype: Author
+  name: Cruzat J
+- authtype: Author
+  name: Ballesteros AS
+- authtype: Author
+  name: Legaz A
+- authtype: Author
+  name: Fittipaldi S
+- authtype: Author
+  name: Duran-Aniotz C
+- authtype: Author
+  name: Slachevsky A
+- authtype: Author
+  name: Santibañez R
+- authtype: Author
+  name: Sigman M
+- authtype: Author
+  name: García AM
+- authtype: Author
+  name: Whelan R
+- authtype: Author
+  name: Moguilner S
+- authtype: Author
+  name: Ibáñez A
+epubdate: 2022 Feb 24
+fulljournalname: Biological psychiatry
+issue: '1'
+pages: 54-67
+pmclivedate: 2024/06/18
+printpubdate: 2022 Jul 1
+pubdate: 2022 Feb 24
+sortdate: 2022/02/24 00:00
+source: Biol Psychiatry
+title: Allostatic-Interoceptive Overload in Frontotemporal Dementia
+uid: '11184918'
+volume: '92'

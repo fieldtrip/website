@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '38604779'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0022-24.2024
+- idtype: pmcid
+  value: PMC11170671
+authors:
+- authtype: Author
+  name: Siefert EM
+- authtype: Author
+  name: Uppuluri S
+- authtype: Author
+  name: Mu J
+- authtype: Author
+  name: Tandoc MC
+- authtype: Author
+  name: Antony JW
+- authtype: Author
+  name: Schapiro AC
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '24'
+pages: e0022242024
+pmclivedate: ''
+printpubdate: 2024 Jun 12
+pubdate: 2024 Jun 12
+sortdate: 2024/06/12 00:00
+source: J Neurosci
+title: Memory Reactivation during Sleep Does Not Act Holistically on Object Memory
+uid: '11170671'
+volume: '44'

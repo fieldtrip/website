@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '38889141'
+- idtype: doi
+  value: 10.1371/journal.pone.0305333
+- idtype: pmcid
+  value: PMC11185458
+authors:
+- authtype: Author
+  name: Lo CW
+- authtype: Author
+  name: Meyer L
+epubdate: 2024 Jun 18
+fulljournalname: PLOS ONE
+issue: '6'
+pages: e0305333
+pmclivedate: 2024/06/18
+printpubdate: ''
+pubdate: 2024 Jun 18
+sortdate: 2024/06/18 00:00
+source: PLoS One
+title: 'Chunk boundaries disrupt dependency processing in an AG: Reconciling incremental
+  processing and discrete sampling'
+uid: '11185458'
+volume: '19'
