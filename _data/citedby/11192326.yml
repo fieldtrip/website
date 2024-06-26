@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '38905211'
+- idtype: doi
+  value: 10.1371/journal.pone.0299677
+- idtype: pmcid
+  value: PMC11192326
+authors:
+- authtype: Author
+  name: Carretié L
+- authtype: Author
+  name: Fernández-Folgueiras U
+- authtype: Author
+  name: Kessel D
+- authtype: Author
+  name: Alba G
+- authtype: Author
+  name: Veiga-Zarza E
+- authtype: Author
+  name: Tapia M
+- authtype: Author
+  name: Álvarez F
+epubdate: 2024 Jun 21
+fulljournalname: PLOS ONE
+issue: '6'
+pages: e0299677
+pmclivedate: 2024/06/21
+printpubdate: ''
+pubdate: 2024 Jun 21
+sortdate: 2024/06/21 00:00
+source: PLoS One
+title: 'An extremely fast neural mechanism to detect emotional visual stimuli: A two-experiment
+  study'
+uid: '11192326'
+volume: '19'

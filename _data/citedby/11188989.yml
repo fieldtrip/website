@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '38903475'
+- idtype: doi
+  value: 10.3389/fpsyg.2024.1114811
+- idtype: pmcid
+  value: PMC11188989
+authors:
+- authtype: Author
+  name: Dash D
+- authtype: Author
+  name: Teplansky K
+- authtype: Author
+  name: Ferrari P
+- authtype: Author
+  name: Babajani-Feremi A
+- authtype: Author
+  name: Calley CS
+- authtype: Author
+  name: Heitzman D
+- authtype: Author
+  name: Austin SG
+- authtype: Author
+  name: Wang J
+epubdate: 2024 Jun 6
+fulljournalname: Frontiers in Psychology
+issue: ''
+pages: '1114811'
+pmclivedate: 2024/06/20
+printpubdate: ''
+pubdate: 2024 Jun 6
+sortdate: 2024/06/06 00:00
+source: Front Psychol
+title: 'Automatic detection of ALS from single-trial MEG signals during speech tasks:
+  a pilot study'
+uid: '11188989'
+volume: '15'

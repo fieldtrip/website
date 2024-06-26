@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '38911463'
+- idtype: doi
+  value: 10.1162/nol_a_00141
+- idtype: pmcid
+  value: PMC11192516
+authors:
+- authtype: Author
+  name: Baus C
+- authtype: Author
+  name: Millan I
+- authtype: Author
+  name: Chen XJ
+- authtype: Author
+  name: Blanco-Elorrieta E
+epubdate: 2024 Jun 3
+fulljournalname: Neurobiology of Language
+issue: '2'
+pages: 484-496
+pmclivedate: 2024/06/21
+printpubdate: ''
+pubdate: 2024 Jun 3
+sortdate: 2024/06/03 00:00
+source: Neurobiol Lang (Camb)
+title: 'Exploring the Interplay Between Language Comprehension and Cortical Tracking:
+  The Bilingual Test Case'
+uid: '11192516'
+volume: '5'
