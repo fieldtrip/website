@@ -1,0 +1,51 @@
+articleids:
+- idtype: pmid
+  value: '38890380'
+- idtype: doi
+  value: 10.1038/s41467-024-49541-1
+- idtype: pmcid
+  value: PMC11189531
+authors:
+- authtype: Author
+  name: Tan H
+- authtype: Author
+  name: Zeng X
+- authtype: Author
+  name: Ni J
+- authtype: Author
+  name: Liang K
+- authtype: Author
+  name: Xu C
+- authtype: Author
+  name: Zhang Y
+- authtype: Author
+  name: Wang J
+- authtype: Author
+  name: Li Z
+- authtype: Author
+  name: Yang J
+- authtype: Author
+  name: Han C
+- authtype: Author
+  name: Gao Y
+- authtype: Author
+  name: Yu X
+- authtype: Author
+  name: Han S
+- authtype: Author
+  name: Meng F
+- authtype: Author
+  name: Ma Y
+epubdate: 2024 Jun 18
+fulljournalname: Nature Communications
+issue: ''
+pages: '5203'
+pmclivedate: 2024/06/20
+printpubdate: ''
+pubdate: 2024 Jun 18
+sortdate: 2024/06/18 00:00
+source: Nat Commun
+title: Intracranial EEG signals disentangle multi-areal neural dynamics of vicarious
+  pain perception
+uid: '11189531'
+volume: '15'

@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '38911459'
+- idtype: doi
+  value: 10.1162/nol_a_00145
+- idtype: pmcid
+  value: PMC11192515
+authors:
+- authtype: Author
+  name: De Rosa M
+- authtype: Author
+  name: Vignali L
+- authtype: Author
+  name: D’Urso A
+- authtype: Author
+  name: Ktori M
+- authtype: Author
+  name: Bottini R
+- authtype: Author
+  name: Crepaldi D
+epubdate: 2024 Jun 3
+fulljournalname: Neurobiology of Language
+issue: '2'
+pages: 528-552
+pmclivedate: 2024/06/21
+printpubdate: ''
+pubdate: 2024 Jun 3
+sortdate: 2024/06/03 00:00
+source: Neurobiol Lang (Camb)
+title: Selective Neural Entrainment Reveals Hierarchical Tuning to Linguistic Regularities
+  in Reading
+uid: '11192515'
+volume: '5'

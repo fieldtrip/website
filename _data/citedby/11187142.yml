@@ -1,0 +1,38 @@
+articleids:
+- idtype: pmid
+  value: '38898100'
+- idtype: doi
+  value: 10.1038/s41467-024-49572-8
+- idtype: pmcid
+  value: PMC11187142
+authors:
+- authtype: Author
+  name: Schreiner T
+- authtype: Author
+  name: Griffiths BJ
+- authtype: Author
+  name: Kutlu M
+- authtype: Author
+  name: Vollmar C
+- authtype: Author
+  name: Kaufmann E
+- authtype: Author
+  name: Quach S
+- authtype: Author
+  name: Remi J
+- authtype: Author
+  name: Noachtar S
+- authtype: Author
+  name: Staudigl T
+epubdate: 2024 Jun 19
+fulljournalname: Nature Communications
+issue: ''
+pages: '5249'
+pmclivedate: 2024/06/20
+printpubdate: ''
+pubdate: 2024 Jun 19
+sortdate: 2024/06/19 00:00
+source: Nat Commun
+title: Spindle-locked ripples mediate memory reactivation during human NREM sleep
+uid: '11187142'
+volume: '15'

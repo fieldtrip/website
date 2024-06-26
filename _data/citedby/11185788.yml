@@ -1,0 +1,41 @@
+articleids:
+- idtype: pmid
+  value: '38895215'
+- idtype: doi
+  value: 10.1101/2024.06.07.598024
+- idtype: pmcid
+  value: PMC11185788
+authors:
+- authtype: Author
+  name: Wartman WA
+- authtype: Author
+  name: Nuñez Ponasso G
+- authtype: Author
+  name: Qi Z
+- authtype: Author
+  name: Haueisen J
+- authtype: Author
+  name: Maess B
+- authtype: Author
+  name: Knösche TR
+- authtype: Author
+  name: Weise K
+- authtype: Author
+  name: Noetscher GM
+- authtype: Author
+  name: Raij T
+- authtype: Author
+  name: Makaroff SN
+epubdate: 2024 Jun 8
+fulljournalname: bioRxiv
+issue: ''
+pages: 2024.06.07.598024
+pmclivedate: 2024/06/19
+printpubdate: ''
+pubdate: 2024 Jun 8
+sortdate: 2024/06/08 00:00
+source: bioRxiv
+title: Fast and Accurate EEG/MEG BEM-Based Forward Problem Solution for High-Resolution
+  Head Models
+uid: '11185788'
+volume: ''

@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '38854074'
+- idtype: doi
+  value: 10.1101/2024.05.27.596015
+- idtype: pmcid
+  value: PMC11160642
+authors:
+- authtype: Author
+  name: Wynn SC
+- authtype: Author
+  name: Marshall TR
+- authtype: Author
+  name: Nyhus E
+epubdate: 2024 Jun 1
+fulljournalname: bioRxiv
+issue: ''
+pages: 2024.05.27.596015
+pmclivedate: 2024/06/08
+printpubdate: ''
+pubdate: 2024 Jun 1
+sortdate: 2024/06/01 00:00
+source: bioRxiv
+title: Utilizing tACS to enhance memory confidence and EEG to predict individual differences
+  in brain stimulation efficacy
+uid: '11160642'
+volume: ''
