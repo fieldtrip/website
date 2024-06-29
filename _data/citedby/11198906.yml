@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '38917200'
+- idtype: doi
+  value: 10.1371/journal.pbio.3002670
+- idtype: pmcid
+  value: PMC11198906
+authors:
+- authtype: Author
+  name: Nougaret S
+- authtype: Author
+  name: López-Galdo L
+- authtype: Author
+  name: Caytan E
+- authtype: Author
+  name: Poitreau J
+- authtype: Author
+  name: Barthélemy FV
+- authtype: Author
+  name: Kilavik BE
+epubdate: 2024 Jun 25
+fulljournalname: PLOS Biology
+issue: '6'
+pages: e3002670
+pmclivedate: 2024/06/25
+printpubdate: ''
+pubdate: 2024 Jun 25
+sortdate: 2024/06/25 00:00
+source: PLoS Biol
+title: Low and high beta rhythms have different motor cortical sources and distinct
+  roles in movement control and spatiotemporal attention
+uid: '11198906'
+volume: '22'
