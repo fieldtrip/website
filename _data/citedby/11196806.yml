@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '38919600'
+- idtype: doi
+  value: 10.3389/fnagi.2024.1406664
+- idtype: pmcid
+  value: PMC11196806
+authors:
+- authtype: Author
+  name: Ziloochi F
+- authtype: Author
+  name: Niazi IK
+- authtype: Author
+  name: Amjad I
+- authtype: Author
+  name: Cade A
+- authtype: Author
+  name: Duehr J
+- authtype: Author
+  name: Ghani U
+- authtype: Author
+  name: Holt K
+- authtype: Author
+  name: Haavik H
+- authtype: Author
+  name: Shalchyan V
+epubdate: 2024 Jun 11
+fulljournalname: Frontiers in Aging Neuroscience
+issue: ''
+pages: '1406664'
+pmclivedate: 2024/06/25
+printpubdate: ''
+pubdate: 2024 Jun 11
+sortdate: 2024/06/11 00:00
+source: Front Aging Neurosci
+title: Investigating the effects of chiropractic care on resting-state EEG of MCI
+  patients
+uid: '11196806'
+volume: '16'
