@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '38946812'
+- idtype: doi
+  value: 10.1007/s13534-024-00361-8
+- idtype: pmcid
+  value: PMC11208373
+authors:
+- authtype: Author
+  name: Lee YS
+- authtype: Author
+  name: Kim WJ
+- authtype: Author
+  name: Shim M
+- authtype: Author
+  name: Hong KH
+- authtype: Author
+  name: Choi H
+- authtype: Author
+  name: Song JJ
+- authtype: Author
+  name: Hwang HJ
+epubdate: 2024 Feb 24
+fulljournalname: Biomedical Engineering Letters
+issue: '4'
+pages: 677-687
+pmclivedate: ''
+printpubdate: ''
+pubdate: 2024 Feb 24
+sortdate: 2024/02/24 00:00
+source: Biomed Eng Lett
+title: Investigating neuromodulatory effect of transauricular vagus nerve stimulation
+  on resting-state electroencephalography
+uid: '11208373'
+volume: '14'

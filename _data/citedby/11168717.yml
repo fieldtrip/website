@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1162/netn_a_00369
+- idtype: pmcid
+  value: PMC11168717
+authors:
+- authtype: Author
+  name: Candia-Rivera D
+- authtype: Author
+  name: Chavez M
+- authtype: Author
+  name: De Vico Fallani F
+epubdate: 2024 Jul 1
+fulljournalname: Network Neuroscience
+issue: '2'
+pages: 557-575
+pmclivedate: 2024/07/01
+printpubdate: ''
+pubdate: 2024 Jul 1
+sortdate: 2024/07/01 00:00
+source: Netw Neurosci
+title: Measures of the coupling between fluctuating brain network organization and
+  heartbeat dynamics
+uid: '11168717'
+volume: '8'

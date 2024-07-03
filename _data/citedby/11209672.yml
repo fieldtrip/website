@@ -1,0 +1,24 @@
+articleids:
+- idtype: pmid
+  value: '38729761'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1444-23.2024
+- idtype: pmcid
+  value: PMC11209672
+authors:
+- authtype: Author
+  name: Redding ZV
+- authtype: Author
+  name: Fiebelkorn IC
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '25'
+pages: e1444232024
+pmclivedate: ''
+printpubdate: 2024 Jun 19
+pubdate: 2024 Jun 19
+sortdate: 2024/06/19 00:00
+source: J Neurosci
+title: Separate Cue- and Alpha-Related Mechanisms for Distractor Suppression
+uid: '11209672'
+volume: '44'

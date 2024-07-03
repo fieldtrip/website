@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '38915700'
+- idtype: doi
+  value: 10.1101/2024.06.11.598596
+- idtype: pmcid
+  value: PMC11195234
+authors:
+- authtype: Author
+  name: Chowdhury NS
+- authtype: Author
+  name: Taseen K
+- authtype: Author
+  name: Chiang A
+- authtype: Author
+  name: Chang WJ
+- authtype: Author
+  name: Millard SK
+- authtype: Author
+  name: Seminowicz DA
+- authtype: Author
+  name: Schabrun SM
+epubdate: 2024 Jun 13
+fulljournalname: bioRxiv
+issue: ''
+pages: 2024.06.11.598596
+pmclivedate: 2024/06/25
+printpubdate: ''
+pubdate: 2024 Jun 13
+sortdate: 2024/06/13 00:00
+source: bioRxiv
+title: A 5-day course of rTMS before pain onset ameliorates future pain and increases
+  sensorimotor peak alpha frequency
+uid: '11195234'
+volume: ''
