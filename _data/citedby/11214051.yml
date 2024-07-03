@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '38889147'
+- idtype: doi
+  value: 10.1073/pnas.2318361121
+- idtype: pmcid
+  value: PMC11214051
+authors:
+- authtype: Author
+  name: Lavan N
+- authtype: Author
+  name: Rinke P
+- authtype: Author
+  name: Scharinger M
+epubdate: 2024 Jun 18
+fulljournalname: Proceedings of the National Academy of Sciences of the United States
+  of America
+issue: '26'
+pages: e2318361121
+pmclivedate: 2024/06/30
+printpubdate: 2024 Jun 25
+pubdate: 2024 Jun 18
+sortdate: 2024/06/18 00:00
+source: Proc Natl Acad Sci U S A
+title: The time course of person perception from voices in the brain
+uid: '11214051'
+volume: '121'

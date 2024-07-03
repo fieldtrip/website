@@ -1,0 +1,38 @@
+articleids:
+- idtype: pmid
+  value: '38760163'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1883-23.2024
+- idtype: pmcid
+  value: PMC11211717
+authors:
+- authtype: Author
+  name: Monov G
+- authtype: Author
+  name: Stein H
+- authtype: Author
+  name: Klock L
+- authtype: Author
+  name: Gallinat J
+- authtype: Author
+  name: Kühn S
+- authtype: Author
+  name: Lincoln T
+- authtype: Author
+  name: Krkovic K
+- authtype: Author
+  name: Murphy PR
+- authtype: Author
+  name: Donner TH
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '26'
+pages: e1883232024
+pmclivedate: 2024/06/29
+printpubdate: 2024 Jun 26
+pubdate: 2024 Jun 26
+sortdate: 2024/06/26 00:00
+source: J Neurosci
+title: Linking Cognitive Integrity to Working Memory Dynamics in the Aging Human Brain
+uid: '11211717'
+volume: '44'

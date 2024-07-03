@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '38760162'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1182-23.2024
+- idtype: pmcid
+  value: PMC11211716
+authors:
+- authtype: Author
+  name: Trautwein FM
+- authtype: Author
+  name: Schweitzer Y
+- authtype: Author
+  name: Dor-Ziderman Y
+- authtype: Author
+  name: Nave O
+- authtype: Author
+  name: Ataria Y
+- authtype: Author
+  name: Fulder S
+- authtype: Author
+  name: Berkovich-Ohana A
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '26'
+pages: e1182232024
+pmclivedate: ''
+printpubdate: 2024 Jun 26
+pubdate: 2024 Jun 26
+sortdate: 2024/06/26 00:00
+source: J Neurosci
+title: Suspending the Embodied Self in Meditation Attenuates Beta Oscillations in
+  the Posterior Medial Cortex
+uid: '11211716'
+volume: '44'
