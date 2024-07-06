@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '38948829'
+- idtype: doi
+  value: 10.1101/2024.06.20.599841
+- idtype: pmcid
+  value: PMC11212943
+authors:
+- authtype: Author
+  name: Guth TA
+- authtype: Author
+  name: Brandt A
+- authtype: Author
+  name: Reinacher PC
+- authtype: Author
+  name: Schulze-Bonhage A
+- authtype: Author
+  name: Jacobs J
+- authtype: Author
+  name: Kunz L
+epubdate: 2024 Jun 20
+fulljournalname: bioRxiv
+issue: ''
+pages: 2024.06.20.599841
+pmclivedate: 2024/06/29
+printpubdate: ''
+pubdate: 2024 Jun 20
+sortdate: 2024/06/20 00:00
+source: bioRxiv
+title: Theta-phase locking of single neurons during human spatial memory
+uid: '11212943'
+volume: ''

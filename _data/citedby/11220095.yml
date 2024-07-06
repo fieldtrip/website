@@ -1,0 +1,48 @@
+articleids:
+- idtype: pmid
+  value: '38956172'
+- idtype: doi
+  value: 10.1038/s42003-024-06462-5
+- idtype: pmcid
+  value: PMC11220095
+authors:
+- authtype: Author
+  name: Voegtle A
+- authtype: Author
+  name: Terzic L
+- authtype: Author
+  name: Farahat A
+- authtype: Author
+  name: Hartong N
+- authtype: Author
+  name: Galazky I
+- authtype: Author
+  name: Hinrichs H
+- authtype: Author
+  name: Nasuto SJ
+- authtype: Author
+  name: de Oliveira Andrade A
+- authtype: Author
+  name: Knight RT
+- authtype: Author
+  name: Ivry RB
+- authtype: Author
+  name: Voges J
+- authtype: Author
+  name: Deliano M
+- authtype: Author
+  name: Buentjen L
+- authtype: Author
+  name: Sweeney-Reed CM
+epubdate: 2024 Jul 2
+fulljournalname: Communications Biology
+issue: ''
+pages: '798'
+pmclivedate: 2024/07/03
+printpubdate: ''
+pubdate: 2024 Jul 2
+sortdate: 2024/07/02 00:00
+source: Commun Biol
+title: Ventrointermediate thalamic stimulation improves motor learning in humans
+uid: '11220095'
+volume: '7'

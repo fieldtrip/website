@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '38956071'
+- idtype: doi
+  value: 10.1038/s41597-024-03559-8
+- idtype: pmcid
+  value: PMC11219788
+authors:
+- authtype: Author
+  name: Jeung S
+- authtype: Author
+  name: Cockx H
+- authtype: Author
+  name: Appelhoff S
+- authtype: Author
+  name: Berg T
+- authtype: Author
+  name: Gramann K
+- authtype: Author
+  name: Grothkopp S
+- authtype: Author
+  name: Warmerdam E
+- authtype: Author
+  name: Hansen C
+- authtype: Author
+  name: Oostenveld R
+- authtype: CollectiveName
+  name: BIDS MaintainersAppelhoffStefanS6MarkiewiczChristopher J.CJ9SaloTaylorT10GauRémiR11BlairRossR9GalassiAnthonyA12EarlEricE12RogersChristineC13HardcastleNellN9RayKimberlyK14
+- authtype: Author
+  name: Welzel J
+epubdate: 2024 Jul 2
+fulljournalname: Scientific Data
+issue: ''
+pages: '716'
+pmclivedate: 2024/07/03
+printpubdate: ''
+pubdate: 2024 Jul 2
+sortdate: 2024/07/02 00:00
+source: Sci Data
+title: 'Motion-BIDS: an extension to the brain imaging data structure to organize
+  motion data for reproducible research'
+uid: '11219788'
+volume: '11'
