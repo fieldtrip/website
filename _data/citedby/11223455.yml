@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '38724284'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.2149-23.2024
+- idtype: pmcid
+  value: PMC11223455
+authors:
+- authtype: Author
+  name: Gopalakrishnan R
+- authtype: Author
+  name: Cunningham DA
+- authtype: Author
+  name: Hogue O
+- authtype: Author
+  name: Schroedel M
+- authtype: Author
+  name: Campbell BA
+- authtype: Author
+  name: Baker KB
+- authtype: Author
+  name: Machado AG
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '27'
+pages: e2149232024
+pmclivedate: ''
+printpubdate: 2024 Jul 3
+pubdate: 2024 Jul 3
+sortdate: 2024/07/03 00:00
+source: J Neurosci
+title: Electrophysiological Correlates of Dentate Nucleus Deep Brain Stimulation for
+  Poststroke Motor Recovery
+uid: '11223455'
+volume: '44'

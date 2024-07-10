@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '38291167'
+- idtype: doi
+  value: 10.1038/s41386-024-01806-5
+- idtype: pmcid
+  value: PMC11224228
+authors:
+- authtype: Author
+  name: Verdonk C
+- authtype: Author
+  name: Teed AR
+- authtype: Author
+  name: White EJ
+- authtype: Author
+  name: Ren X
+- authtype: Author
+  name: Stewart JL
+- authtype: Author
+  name: Paulus MP
+- authtype: Author
+  name: Khalsa SS
+epubdate: 2024 Jan 30
+fulljournalname: Neuropsychopharmacology
+issue: '8'
+pages: 1246-1254
+pmclivedate: ''
+printpubdate: 2024 Jul
+pubdate: 2024 Jan 30
+sortdate: 2024/01/30 00:00
+source: Neuropsychopharmacology
+title: Heartbeat-evoked neural response abnormalities in generalized anxiety disorder
+  during peripheral adrenergic stimulation
+uid: '11224228'
+volume: '49'
