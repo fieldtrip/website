@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '38968325'
+- idtype: doi
+  value: 10.7554/eLife.91327
+- idtype: pmcid
+  value: PMC11226228
+authors:
+- authtype: Author
+  name: Pan Y
+- authtype: Author
+  name: Frisson S
+- authtype: Author
+  name: Federmeier KD
+- authtype: Author
+  name: Jensen O
+epubdate: 2024 Jul 5
+fulljournalname: eLife
+issue: ''
+pages: RP91327
+pmclivedate: 2024/07/05
+printpubdate: ''
+pubdate: 2024 Jul 5
+sortdate: 2024/07/05 00:00
+source: eLife
+title: Early parafoveal semantic integration in natural reading
+uid: '11226228'
+volume: '12'

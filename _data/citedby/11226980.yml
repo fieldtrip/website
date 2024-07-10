@@ -1,0 +1,44 @@
+articleids:
+- idtype: pmid
+  value: '38974971'
+- idtype: doi
+  value: 10.1016/j.isci.2024.110101
+- idtype: pmcid
+  value: PMC11226980
+authors:
+- authtype: Author
+  name: Sorrentino P
+- authtype: Author
+  name: Pathak A
+- authtype: Author
+  name: Ziaeemehr A
+- authtype: Author
+  name: Troisi Lopez E
+- authtype: Author
+  name: Cipriano L
+- authtype: Author
+  name: Romano A
+- authtype: Author
+  name: Sparaco M
+- authtype: Author
+  name: Quarantelli M
+- authtype: Author
+  name: Banerjee A
+- authtype: Author
+  name: Sorrentino G
+- authtype: Author
+  name: Jirsa V
+- authtype: Author
+  name: Hashemi M
+epubdate: 2024 May 24
+fulljournalname: iScience
+issue: '7'
+pages: '110101'
+pmclivedate: 2024/07/06
+printpubdate: ''
+pubdate: 2024 May 24
+sortdate: 2024/05/24 00:00
+source: iScience
+title: The virtual multiple sclerosis patient
+uid: '11226980'
+volume: '27'
