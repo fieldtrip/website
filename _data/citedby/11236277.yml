@@ -1,0 +1,74 @@
+articleids:
+- idtype: pmid
+  value: '35283287'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2022.119056
+- idtype: pmcid
+  value: PMC11236277
+- idtype: MID
+  value: NIHMS2004552
+authors:
+- authtype: Author
+  name: Niso G
+- authtype: Author
+  name: Krol LR
+- authtype: Author
+  name: Combrisson E
+- authtype: Author
+  name: Dubarry AS
+- authtype: Author
+  name: Elliott MA
+- authtype: Author
+  name: François C
+- authtype: Author
+  name: Héjja-Brichard Y
+- authtype: Author
+  name: Herbst SK
+- authtype: Author
+  name: Jerbi K
+- authtype: Author
+  name: Kovic V
+- authtype: Author
+  name: Lehongre K
+- authtype: Author
+  name: Luck SJ
+- authtype: Author
+  name: Mercier M
+- authtype: Author
+  name: Mosher JC
+- authtype: Author
+  name: Pavlov YG
+- authtype: Author
+  name: Puce A
+- authtype: Author
+  name: Schettino A
+- authtype: Author
+  name: Schön D
+- authtype: Author
+  name: Sinnott-Armstrong W
+- authtype: Author
+  name: Somon B
+- authtype: Author
+  name: Šoškić A
+- authtype: Author
+  name: Styles SJ
+- authtype: Author
+  name: Tibon R
+- authtype: Author
+  name: Vilas MG
+- authtype: Author
+  name: van Vliet M
+- authtype: Author
+  name: Chaumon M
+epubdate: 2022 Mar 10
+fulljournalname: NeuroImage
+issue: ''
+pages: '119056'
+pmclivedate: 2024/07/10
+printpubdate: 2022 Aug 15
+pubdate: 2022 Mar 10
+sortdate: 2022/03/10 00:00
+source: Neuroimage
+title: 'Good scientific practice in EEG and MEG research: Progress and perspectives'
+uid: '11236277'
+volume: '257'
