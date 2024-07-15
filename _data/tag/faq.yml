@@ -145,6 +145,9 @@
 - name:  How can I do time-frequency analysis on continuous data?
   link:  /faq/how_can_i_do_time-frequency_analysis_on_continuous_data
 
+- name:  Which version of FieldTrip should I download?
+  link:  /faq/how_can_i_download_a_specific_version
+
 - name:  How can I extend the reading functions with a new dataformat?
   link:  /faq/how_can_i_extend_the_reading_functions_with_a_new_dataformat
 

@@ -4,6 +4,9 @@
 - name:  Testing
   link:  /development/testing
 
+- name:  Which version of FieldTrip should I download?
+  link:  /faq/how_can_i_download_a_specific_version
+
 - name:  I am having problems downloading
   link:  /faq/i_am_having_problems_downloading
 

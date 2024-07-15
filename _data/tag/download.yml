@@ -1,6 +1,9 @@
 - name:  Download the FieldTrip toolbox
   link:  /download
 
+- name:  Which version of FieldTrip should I download?
+  link:  /faq/how_can_i_download_a_specific_version
+
 - name:  How can I keep track of changes to the code?
   link:  /faq/how_can_i_keep_track_of_the_changes_to_the_code
 
