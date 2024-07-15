@@ -49,7 +49,7 @@ Depending on your unzip utility, you might end up with a directory inside a dire
 
 you should take the content of `data/data` and move it one directory up, and idem for `fieldtrip-20230215/fieldtrip-20230215`.
 
-For reference, the raw data (not needed for this workshop) is available from <https://doi.org/10.34973/gvr3-6g88>, the code is also available from <https://github.com/Donders-Institute/infant-cluster-effectsize> and the processed data is also available from <https://doi.org/10.34973/g4we-5v66>. But right now you can get all that you need for the workshop from the FieldTrip [download server](https://download.fieldtriptoolbox.org/workshop/fitng2023).
+For reference, the raw data (not needed for this workshop) is available from <https://doi.org/10.34973/gvr3-6g88>, the code is also available from <https://github.com/Donders-Institute/infant-cluster-effectsize> and the processed data is also available from <https://doi.org/10.34973/g4we-5v66>. But right now you can get all that you need for the workshop from our [download server](https://download.fieldtriptoolbox.org/workshop/fitng2023).
 
 ### Setting up MATLAB
 
