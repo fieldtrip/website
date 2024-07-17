@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '38987366'
+- idtype: doi
+  value: 10.1038/s41598-024-66522-y
+- idtype: pmcid
+  value: PMC11237136
+authors:
+- authtype: Author
+  name: Rochas V
+- authtype: Author
+  name: Montandon ML
+- authtype: Author
+  name: Rodriguez C
+- authtype: Author
+  name: Herrmann FR
+- authtype: Author
+  name: Eytan A
+- authtype: Author
+  name: Pegna AJ
+- authtype: Author
+  name: Michel CM
+- authtype: Author
+  name: Giannakopoulos P
+epubdate: 2024 Jul 10
+fulljournalname: Scientific Reports
+issue: ''
+pages: '15973'
+pmclivedate: 2024/07/11
+printpubdate: ''
+pubdate: 2024 Jul 10
+sortdate: 2024/07/10 00:00
+source: Sci Rep
+title: Visual perspective taking neural processing in forensic cases with high density
+  EEG
+uid: '11237136'
+volume: '14'

@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '38992101'
+- idtype: doi
+  value: 10.1038/s42003-024-06545-3
+- idtype: pmcid
+  value: PMC11239931
+authors:
+- authtype: Author
+  name: Chao ZC
+- authtype: Author
+  name: Komatsu M
+- authtype: Author
+  name: Matsumoto M
+- authtype: Author
+  name: Iijima K
+- authtype: Author
+  name: Nakagaki K
+- authtype: Author
+  name: Ichinohe N
+epubdate: 2024 Jul 12
+fulljournalname: Communications Biology
+issue: ''
+pages: '851'
+pmclivedate: 2024/07/12
+printpubdate: ''
+pubdate: 2024 Jul 12
+sortdate: 2024/07/12 00:00
+source: Commun Biol
+title: Erroneous predictive coding across brain hierarchies in a non-human primate
+  model of autism spectrum disorder
+uid: '11239931'
+volume: '7'

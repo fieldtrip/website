@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '39006483'
+- idtype: doi
+  value: 10.1016/j.isci.2024.110247
+- idtype: pmcid
+  value: PMC11246002
+authors:
+- authtype: Author
+  name: Pérez-Navarro J
+- authtype: Author
+  name: Klimovich-Gray A
+- authtype: Author
+  name: Lizarazu M
+- authtype: Author
+  name: Piazza G
+- authtype: Author
+  name: Molinaro N
+- authtype: Author
+  name: Lallier M
+epubdate: 2024 Jun 11
+fulljournalname: iScience
+issue: '7'
+pages: '110247'
+pmclivedate: 2024/07/13
+printpubdate: ''
+pubdate: 2024 Jun 11
+sortdate: 2024/06/11 00:00
+source: iScience
+title: Early language experience modulates the tradeoff between acoustic-temporal
+  and lexico-semantic cortical tracking of speech
+uid: '11246002'
+volume: '27'
