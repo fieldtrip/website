@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '38871456'
+- idtype: doi
+  value: 10.1523/ENEURO.0515-23.2024
+- idtype: pmcid
+  value: PMC11242882
+authors:
+- authtype: Author
+  name: Jacobsen NA
+- authtype: Author
+  name: Ferris DP
+epubdate: 2024 Jul 4
+fulljournalname: eNeuro
+issue: '7'
+pages: ENEURO.0515-23.2024
+pmclivedate: 2024/07/12
+printpubdate: ''
+pubdate: 2024 Jul 4
+sortdate: 2024/07/04 00:00
+source: eNeuro
+title: 'Exploring Electrocortical Signatures of Gait Adaptation: Differential Neural
+  Dynamics in Slow and Fast Gait Adapters'
+uid: '11242882'
+volume: '11'

@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '38865780'
+- idtype: doi
+  value: 10.1016/j.clinph.2024.05.008
+- idtype: pmcid
+  value: PMC11246810
+- idtype: MID
+  value: NIHMS1998638
+authors:
+- authtype: Author
+  name: Gogulski J
+- authtype: Author
+  name: Cline CC
+- authtype: Author
+  name: Ross JM
+- authtype: Author
+  name: Truong J
+- authtype: Author
+  name: Sarkar M
+- authtype: Author
+  name: Parmigiani S
+- authtype: Author
+  name: Keller CJ
+epubdate: 2024 May 27
+fulljournalname: 'Clinical neurophysiology : official journal of the International
+  Federation of Clinical Neurophysiology'
+issue: ''
+pages: 138-148
+pmclivedate: ''
+printpubdate: 2024 Aug
+pubdate: 2024 May 27
+sortdate: 2024/05/27 00:00
+source: Clin Neurophysiol
+title: Mapping cortical excitability in the human dorsolateral prefrontal cortex
+uid: '11246810'
+volume: '164'

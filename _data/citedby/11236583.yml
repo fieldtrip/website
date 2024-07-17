@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '38839302'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.1041-23.2024
+- idtype: pmcid
+  value: PMC11236583
+authors:
+- authtype: Author
+  name: Lamekina Y
+- authtype: Author
+  name: Titone L
+- authtype: Author
+  name: Maess B
+- authtype: Author
+  name: Meyer L
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '28'
+pages: e1041232024
+pmclivedate: 2024/07/12
+printpubdate: 2024 Jul 10
+pubdate: 2024 Jul 10
+sortdate: 2024/07/10 00:00
+source: J Neurosci
+title: Speech Prosody Serves Temporal Prediction of Language via Contextual Entrainment
+uid: '11236583'
+volume: '44'
