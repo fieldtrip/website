@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '39009697'
+- idtype: doi
+  value: 10.1038/s41598-024-67111-9
+- idtype: pmcid
+  value: PMC11251044
+authors:
+- authtype: Author
+  name: Collins T
+- authtype: Author
+  name: Zhu E
+- authtype: Author
+  name: Rateau P
+epubdate: 2024 Jul 15
+fulljournalname: Scientific Reports
+issue: ''
+pages: '16324'
+pmclivedate: 2024/07/16
+printpubdate: ''
+pubdate: 2024 Jul 15
+sortdate: 2024/07/15 00:00
+source: Sci Rep
+title: The neural representation of stereotype content
+uid: '11251044'
+volume: '14'

@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '39009601'
+- idtype: doi
+  value: 10.1038/s41531-024-00740-z
+- idtype: pmcid
+  value: PMC11251161
+authors:
+- authtype: Author
+  name: Oliveira AM
+- authtype: Author
+  name: Carvalho E
+- authtype: Author
+  name: Barros B
+- authtype: Author
+  name: Soares C
+- authtype: Author
+  name: Ferreira-Pinto MJ
+- authtype: Author
+  name: Vaz R
+- authtype: Author
+  name: Aguiar P
+epubdate: 2024 Jul 15
+fulljournalname: NPJ Parkinson's Disease
+issue: ''
+pages: '132'
+pmclivedate: 2024/07/16
+printpubdate: ''
+pubdate: 2024 Jul 15
+sortdate: 2024/07/15 00:00
+source: NPJ Parkinsons Dis
+title: DBScope as a versatile computational toolbox for the visualization and analysis
+  of sensing data from deep brain stimulation
+uid: '11251161'
+volume: '10'
