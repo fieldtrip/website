@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '39017666'
+- idtype: doi
+  value: 10.7554/eLife.91650
+- idtype: pmcid
+  value: PMC11254381
+authors:
+- authtype: Author
+  name: Ghafari T
+- authtype: Author
+  name: Mazzetti C
+- authtype: Author
+  name: Garner K
+- authtype: Author
+  name: Gutteling T
+- authtype: Author
+  name: Jensen O
+epubdate: 2024 Jul 17
+fulljournalname: eLife
+issue: ''
+pages: RP91650
+pmclivedate: 2024/07/17
+printpubdate: ''
+pubdate: 2024 Jul 17
+sortdate: 2024/07/17 00:00
+source: eLife
+title: Modulation of alpha oscillations by attention is predicted by hemispheric asymmetry
+  of subcortical regions
+uid: '11254381'
+volume: '12'
