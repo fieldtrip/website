@@ -59,9 +59,11 @@ Brad Voytek maintains a list of [Open Datasets in Human Electrophysiology](https
 
 NeuroTechX maintains a list of [Open EEG datasets](https://github.com/NeuroTechX/awesome-bci#brain-databases).
 
-## Other IEEG datasets
+## Other iEEG datasets
 
 Kahana and Rizutto have released [ECoG data from 251 subjects](http://memory.psych.upenn.edu/RAM_Public_Data) collected during Phase I and II of the Restoring Active Memory (RAM) project. The dataset includes information from 700 sessions, and for every patient, intracranial recording files from 100 to 200 electrode channels, neuro-anatomical information indicating the location of each electrode, precise records of patient behavior and the experimental design documents.
+
+Kai J. Miller has shared [A library of human electrocorticographic data and analyses](https://doi.org/10.1038/s41562-019-0678-3) which includes electrocorticographic data and analyses for 16 behavioural experiments, with 204 individual datasets from 34 patients recorded with the same amplifiers and at the same settings. For each dataset, electrode positions were carefully registered to brain anatomy. A large set of fully annotated analysis scripts with which to interpret these data is embedded in the library alongside them. The actual data is avaialble [here](https://searchworks.stanford.edu/view/zk881ps0522).
 
 ## Other LFP and spike datasets
 
