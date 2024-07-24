@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1080/23273798.2024.2345302
+- idtype: pmcid
+  value: PMC11261742
+authors:
+- authtype: Author
+  name: Ramotowska S
+- authtype: Author
+  name: Archambeau K
+- authtype: Author
+  name: Augurzky P
+- authtype: Author
+  name: Schlotterbeck F
+- authtype: Author
+  name: Berberyan HS
+- authtype: Author
+  name: Van Maanen L
+- authtype: Author
+  name: Szymanik J
+epubdate: 2024 Apr 30
+fulljournalname: Language, Cognition and Neuroscience
+issue: '5'
+pages: 632-656
+pmclivedate: 2024/07/22
+printpubdate: ''
+pubdate: 2024 Apr 30
+sortdate: 2024/04/30 00:00
+source: Lang Cogn Neurosci
+title: Testing two-step models of negative quantification using a novel machine learning
+  analysis of EEG
+uid: '11261742'
+volume: '39'

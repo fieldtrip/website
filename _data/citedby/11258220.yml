@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '39025957'
+- idtype: doi
+  value: 10.1038/s41598-024-67153-z
+- idtype: pmcid
+  value: PMC11258220
+authors:
+- authtype: Author
+  name: Zhao J
+- authtype: Author
+  name: Martin AE
+- authtype: Author
+  name: Coopmans CW
+epubdate: 2024 Jul 18
+fulljournalname: Scientific Reports
+issue: ''
+pages: '16603'
+pmclivedate: 2024/07/19
+printpubdate: ''
+pubdate: 2024 Jul 18
+sortdate: 2024/07/18 00:00
+source: Sci Rep
+title: Structural and sequential regularities modulate phrase-rate neural tracking
+uid: '11258220'
+volume: '14'
