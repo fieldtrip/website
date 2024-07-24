@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '39035777'
+- idtype: doi
+  value: 10.3389/fnins.2024.1391437
+- idtype: pmcid
+  value: PMC11259972
+authors:
+- authtype: Author
+  name: Stoupi NA
+- authtype: Author
+  name: Weijs ML
+- authtype: Author
+  name: Imbach L
+- authtype: Author
+  name: Lenggenhager B
+epubdate: 2024 Jul 5
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '1391437'
+pmclivedate: 2024/07/20
+printpubdate: ''
+pubdate: 2024 Jul 5
+sortdate: 2024/07/05 00:00
+source: Front Neurosci
+title: 'Heartbeat-evoked potentials following voluntary hyperventilation in epilepsy
+  patients: respiratory influences on cardiac interoception'
+uid: '11259972'
+volume: '18'
