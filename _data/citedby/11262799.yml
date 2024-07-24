@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '39038076'
+- idtype: doi
+  value: 10.7554/eLife.94509
+- idtype: pmcid
+  value: PMC11262799
+authors:
+- authtype: Author
+  name: te Rietmolen N
+- authtype: Author
+  name: Mercier MR
+- authtype: Author
+  name: Trébuchon A
+- authtype: Author
+  name: Morillon B
+- authtype: Author
+  name: Schön D
+epubdate: 2024 Jul 22
+fulljournalname: eLife
+issue: ''
+pages: RP94509
+pmclivedate: 2024/07/22
+printpubdate: ''
+pubdate: 2024 Jul 22
+sortdate: 2024/07/22 00:00
+source: eLife
+title: Speech and music recruit frequency-specific distributed and overlapping cortical
+  networks
+uid: '11262799'
+volume: '13'

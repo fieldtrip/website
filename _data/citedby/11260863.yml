@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1016/j.isci.2024.110173
+- idtype: pmcid
+  value: PMC11260863
+authors:
+- authtype: Author
+  name: Do J
+- authtype: Author
+  name: James O
+- authtype: Author
+  name: Kim YJ
+epubdate: 2024 Jun 4
+fulljournalname: iScience
+issue: '7'
+pages: '110173'
+pmclivedate: 2024/07/22
+printpubdate: ''
+pubdate: 2024 Jun 4
+sortdate: 2024/06/04 00:00
+source: iScience
+title: Choice-dependent delta-band neural trajectory during semantic category decision
+  making in the human brain
+uid: '11260863'
+volume: '27'
