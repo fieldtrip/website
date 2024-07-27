@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '39041175'
+- idtype: doi
+  value: 10.1002/hbm.26797
+- idtype: pmcid
+  value: PMC11263810
+authors:
+- authtype: Author
+  name: Matyjek M
+- authtype: Author
+  name: Kita S
+- authtype: Author
+  name: Torralba Cuello M
+- authtype: Author
+  name: Soto Faraco S
+epubdate: 2024 Jul 23
+fulljournalname: Human Brain Mapping
+issue: '11'
+pages: e26797
+pmclivedate: 2024/07/23
+printpubdate: ''
+pubdate: 2024 Jul 23
+sortdate: 2024/07/23 00:00
+source: Hum Brain Mapp
+title: Multisensory integration of speech and gestures in a naturalistic paradigm
+uid: '11263810'
+volume: '45'
