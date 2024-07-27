@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '38423264'
+- idtype: doi
+  value: 10.1016/j.neuroimage.2024.120557
+- idtype: pmcid
+  value: PMC11268380
+- idtype: MID
+  value: NIHMS2008097
+authors:
+- authtype: Author
+  name: König SD
+- authtype: Author
+  name: Safo S
+- authtype: Author
+  name: Miller K
+- authtype: Author
+  name: Herman AB
+- authtype: Author
+  name: Darrow DP
+epubdate: 2024 Feb 27
+fulljournalname: NeuroImage
+issue: ''
+pages: '120557'
+pmclivedate: 2024/07/24
+printpubdate: 2024 Apr 15
+pubdate: 2024 Feb 27
+sortdate: 2024/02/27 00:00
+source: Neuroimage
+title: Flexible Multi-Step Hypothesis Testing of Human ECoG Data using Cluster-based
+  Permutation Tests with GLMEs
+uid: '11268380'
+volume: '290'

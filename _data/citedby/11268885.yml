@@ -1,0 +1,24 @@
+articleids:
+- idtype: pmid
+  value: '39046319'
+- idtype: doi
+  value: 10.7554/eLife.93158
+- idtype: pmcid
+  value: PMC11268885
+authors:
+- authtype: Author
+  name: Huang Q
+- authtype: Author
+  name: Luo H
+epubdate: 2024 Jul 24
+fulljournalname: eLife
+issue: ''
+pages: RP93158
+pmclivedate: 2024/07/24
+printpubdate: ''
+pubdate: 2024 Jul 24
+sortdate: 2024/07/24 00:00
+source: eLife
+title: Shared structure facilitates working memory of multiple sequences
+uid: '11268885'
+volume: '12'

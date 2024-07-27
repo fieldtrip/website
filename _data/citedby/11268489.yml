@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '34292586'
+- idtype: doi
+  value: 10.1002/dev.22163
+- idtype: pmcid
+  value: PMC11268489
+- idtype: MID
+  value: NIHMS2003372
+authors:
+- authtype: Author
+  name: Vincent KM
+- authtype: Author
+  name: Xie W
+- authtype: Author
+  name: Nelson CA
+epubdate: 2021 Jul 22
+fulljournalname: Developmental psychobiology
+issue: '6'
+pages: e22163
+pmclivedate: 2024/07/24
+printpubdate: 2021 Sep
+pubdate: 2021 Jul 22
+sortdate: 2021/07/22 00:00
+source: Dev Psychobiol
+title: Using different methods for calculating frontal alpha asymmetry (FAA) to study
+  its development from infancy to 3 years of age in a large longitudinal sample
+uid: '11268489'
+volume: '63'

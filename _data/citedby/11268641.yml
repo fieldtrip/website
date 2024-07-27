@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1371/journal.pone.0307524
+- idtype: pmcid
+  value: PMC11268641
+authors:
+- authtype: Author
+  name: Dell’Acqua C
+- authtype: Author
+  name: Moretta T
+- authtype: Author
+  name: Messerotti Benvenuti S
+epubdate: 2024 Jul 24
+fulljournalname: PLOS ONE
+issue: '7'
+pages: e0307524
+pmclivedate: 2024/07/24
+printpubdate: ''
+pubdate: 2024 Jul 24
+sortdate: 2024/07/24 00:00
+source: PLoS One
+title: 'Reduced approach disposition in familial risk for depression: Evidence from
+  time-frequency alpha asymmetries'
+uid: '11268641'
+volume: '19'
