@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '39061454'
+- idtype: doi
+  value: 10.3390/brainsci14070714
+- idtype: pmcid
+  value: PMC11274865
+authors:
+- authtype: Author
+  name: Ashaie SA
+- authtype: Author
+  name: Hernandez-Pavon JC
+- authtype: Author
+  name: Houldin E
+- authtype: Author
+  name: Cherney LR
+epubdate: 2024 Jul 16
+fulljournalname: Brain Sciences
+issue: '7'
+pages: '714'
+pmclivedate: 2024/07/27
+printpubdate: ''
+pubdate: 2024 Jul 16
+sortdate: 2024/07/16 00:00
+source: Brain Sci
+title: Behavioral, Functional Imaging, and Neurophysiological Outcomes of Transcranial
+  Direct Current Stimulation and Speech-Language Therapy in an Individual with Aphasia
+uid: '11274865'
+volume: '14'

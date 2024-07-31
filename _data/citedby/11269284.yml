@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '39055925'
+- idtype: doi
+  value: 10.1016/j.isci.2024.110341
+- idtype: pmcid
+  value: PMC11269284
+authors:
+- authtype: Author
+  name: Yao Z
+- authtype: Author
+  name: Xia T
+- authtype: Author
+  name: Wei J
+- authtype: Author
+  name: Zhang Z
+- authtype: Author
+  name: Lin X
+- authtype: Author
+  name: Zhang D
+- authtype: Author
+  name: Qin P
+- authtype: Author
+  name: Ma Y
+- authtype: Author
+  name: Hu X
+epubdate: 2024 Jun 21
+fulljournalname: iScience
+issue: '7'
+pages: '110341'
+pmclivedate: 2024/07/25
+printpubdate: ''
+pubdate: 2024 Jun 21
+sortdate: 2024/06/21 00:00
+source: iScience
+title: Reactivating cue approached positive personality traits during sleep promotes
+  positive self-referential processing
+uid: '11269284'
+volume: '27'

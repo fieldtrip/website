@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '39030222'
+- idtype: doi
+  value: 10.1038/s41598-024-67034-5
+- idtype: pmcid
+  value: PMC11271609
+authors:
+- authtype: Author
+  name: Kaboodvand N
+- authtype: Author
+  name: Karimi H
+- authtype: Author
+  name: Iravani B
+epubdate: 2024 Jul 19
+fulljournalname: Scientific Reports
+issue: ''
+pages: '16682'
+pmclivedate: 2024/07/25
+printpubdate: ''
+pubdate: 2024 Jul 19
+sortdate: 2024/07/19 00:00
+source: Sci Rep
+title: 'Preparatory activity of anterior insula predicts conflict errors: integrating
+  convolutional neural networks and neural mass models'
+uid: '11271609'
+volume: '14'
