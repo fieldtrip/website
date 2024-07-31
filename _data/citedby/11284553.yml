@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1016/j.neurot.2024.e00384
+- idtype: pmcid
+  value: PMC11284553
+authors:
+- authtype: Author
+  name: Dong HW
+- authtype: Author
+  name: Weiss K
+- authtype: Author
+  name: Baugh K
+- authtype: Author
+  name: Meadows MJ
+- authtype: Author
+  name: Niswender CM
+- authtype: Author
+  name: Neul JL
+epubdate: 2024 Jun 15
+fulljournalname: Neurotherapeutics
+issue: '4'
+pages: e00384
+pmclivedate: 2024/07/29
+printpubdate: ''
+pubdate: 2024 Jun 15
+sortdate: 2024/06/15 00:00
+source: Neurotherapeutics
+title: Potentiation of the muscarinic acetylcholine receptor 1 modulates neurophysiological
+  features in a mouse model of Rett syndrome
+uid: '11284553'
+volume: '21'

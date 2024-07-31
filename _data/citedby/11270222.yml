@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '39051196'
+- idtype: doi
+  value: 10.3390/audiolres14040052
+- idtype: pmcid
+  value: PMC11270222
+authors:
+- authtype: Author
+  name: Mertel K
+- authtype: Author
+  name: Dimitrijevic A
+- authtype: Author
+  name: Thaut M
+epubdate: 2024 Jul 6
+fulljournalname: Audiology Research
+issue: '4'
+pages: 611-624
+pmclivedate: 2024/07/26
+printpubdate: ''
+pubdate: 2024 Jul 6
+sortdate: 2024/07/06 00:00
+source: Audiol Res
+title: Can Music Enhance Working Memory and Speech in Noise Perception in Cochlear
+  Implant Users? Design Protocol for a Randomized Controlled Behavioral and Electrophysiological
+  Study
+uid: '11270222'
+volume: '14'

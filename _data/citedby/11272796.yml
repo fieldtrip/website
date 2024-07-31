@@ -1,0 +1,45 @@
+articleids:
+- idtype: pmid
+  value: '39054324'
+- idtype: doi
+  value: 10.1038/s41467-024-50113-6
+- idtype: pmcid
+  value: PMC11272796
+authors:
+- authtype: Author
+  name: Wolf D
+- authtype: Author
+  name: Hartig R
+- authtype: Author
+  name: Zhuo Y
+- authtype: Author
+  name: Scheller MF
+- authtype: Author
+  name: Articus M
+- authtype: Author
+  name: Moor M
+- authtype: Author
+  name: Grinevich V
+- authtype: Author
+  name: Linster C
+- authtype: Author
+  name: Russo E
+- authtype: Author
+  name: Weber-Fahr W
+- authtype: Author
+  name: Reinwald JR
+- authtype: Author
+  name: Kelsch W
+epubdate: 2024 Jul 25
+fulljournalname: Nature Communications
+issue: ''
+pages: '6274'
+pmclivedate: 2024/07/26
+printpubdate: ''
+pubdate: 2024 Jul 25
+sortdate: 2024/07/25 00:00
+source: Nat Commun
+title: Oxytocin induces the formation of distinctive cortical representations and
+  cognitions biased toward familiar mice
+uid: '11272796'
+volume: '15'

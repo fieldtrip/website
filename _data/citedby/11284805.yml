@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '38319885'
+- idtype: doi
+  value: 10.1162/jocn_a_02124
+- idtype: pmcid
+  value: PMC11284805
+- idtype: MID
+  value: NIHMS2009047
+authors:
+- authtype: Author
+  name: Pagnotta MF
+- authtype: Author
+  name: Riddle J
+- authtype: Author
+  name: D’Esposito M
+epubdate: ''
+fulljournalname: Journal of cognitive neuroscience
+issue: '5'
+pages: 916-935
+pmclivedate: 2024/07/29
+printpubdate: 2024 May 1
+pubdate: 2024 May 1
+sortdate: 2024/05/01 00:00
+source: J Cogn Neurosci
+title: Multiplexed Levels of Cognitive Control through Delta and Theta Neural Oscillations
+uid: '11284805'
+volume: '36'

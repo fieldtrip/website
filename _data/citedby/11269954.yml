@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '39055930'
+- idtype: doi
+  value: 10.1016/j.isci.2024.110301
+- idtype: pmcid
+  value: PMC11269954
+authors:
+- authtype: Author
+  name: Borhanazad M
+- authtype: Author
+  name: van Wijk BC
+- authtype: Author
+  name: Buizer AI
+- authtype: Author
+  name: Kerkman JN
+- authtype: Author
+  name: Bekius A
+- authtype: Author
+  name: Dominici N
+- authtype: Author
+  name: Daffertshofer A
+epubdate: 2024 Jun 17
+fulljournalname: iScience
+issue: '7'
+pages: '110301'
+pmclivedate: 2024/07/25
+printpubdate: ''
+pubdate: 2024 Jun 17
+sortdate: 2024/06/17 00:00
+source: iScience
+title: Lateralized modulation of cortical beta power during human gait is related
+  to arm swing
+uid: '11269954'
+volume: '27'
