@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '38977304'
+- idtype: doi
+  value: 10.1523/ENEURO.0112-24.2024
+- idtype: pmcid
+  value: PMC11289585
+authors:
+- authtype: Author
+  name: Alexander NA
+- authtype: Author
+  name: Kelly CL
+- authtype: Author
+  name: Wang H
+- authtype: Author
+  name: Nash RA
+- authtype: Author
+  name: Beebe S
+- authtype: Author
+  name: Brookes MJ
+- authtype: Author
+  name: Kessler K
+epubdate: 2024 Jul 26
+fulljournalname: eNeuro
+issue: '7'
+pages: ENEURO.0112-24.2024
+pmclivedate: 2024/07/31
+printpubdate: ''
+pubdate: 2024 Jul 26
+sortdate: 2024/07/26 00:00
+source: eNeuro
+title: Oscillatory Neural Correlates of Police Firearms Decision-Making in Virtual
+  Reality
+uid: '11289585'
+volume: '11'

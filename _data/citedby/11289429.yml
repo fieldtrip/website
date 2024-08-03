@@ -1,0 +1,32 @@
+articleids:
+- idtype: pmid
+  value: '39081074'
+- idtype: doi
+  value: 10.1002/hbm.26727
+- idtype: pmcid
+  value: PMC11289429
+authors:
+- authtype: Author
+  name: Zhou X
+- authtype: Author
+  name: Ghorbani F
+- authtype: Author
+  name: Roessner V
+- authtype: Author
+  name: Hommel B
+- authtype: Author
+  name: Prochnow A
+- authtype: Author
+  name: Beste C
+epubdate: 2024 Jul 30
+fulljournalname: Human Brain Mapping
+issue: '11'
+pages: e26727
+pmclivedate: 2024/07/31
+printpubdate: ''
+pubdate: 2024 Jul 30
+sortdate: 2024/07/30 00:00
+source: Hum Brain Mapp
+title: The metacontrol of event segmentation—A neurophysiological and behavioral perspective
+uid: '11289429'
+volume: '45'
