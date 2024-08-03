@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '39028693'
+- idtype: doi
+  value: 10.1073/pnas.2315438121
+- idtype: pmcid
+  value: PMC11287159
+authors:
+- authtype: Author
+  name: Verdonschot RG
+- authtype: Author
+  name: van der Wal J
+- authtype: Author
+  name: Lewis A
+- authtype: Author
+  name: Knudsen B
+- authtype: Author
+  name: von Grebmer zu Wolfsthurn S
+- authtype: Author
+  name: Schiller NO
+- authtype: Author
+  name: Hagoort P
+epubdate: 2024 Jul 19
+fulljournalname: Proceedings of the National Academy of Sciences of the United States
+  of America
+issue: '30'
+pages: e2315438121
+pmclivedate: 2024/07/31
+printpubdate: 2024 Jul 23
+pubdate: 2024 Jul 19
+sortdate: 2024/07/19 00:00
+source: Proc Natl Acad Sci U S A
+title: 'Information structure in Makhuwa: Electrophysiological evidence for a universal
+  processing account'
+uid: '11287159'
+volume: '121'
