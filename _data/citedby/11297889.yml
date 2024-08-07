@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1007/s11571-023-10058-w
+- idtype: pmcid
+  value: PMC11297889
+authors:
+- authtype: Author
+  name: Wu Q
+- authtype: Author
+  name: Sun L
+- authtype: Author
+  name: Ding N
+- authtype: Author
+  name: Yang Y
+epubdate: 2024 Jan 20
+fulljournalname: Cognitive Neurodynamics
+issue: '4'
+pages: 1955-1976
+pmclivedate: ''
+printpubdate: 2024 Aug
+pubdate: 2024 Jan 20
+sortdate: 2024/01/20 00:00
+source: Cogn Neurodyn
+title: Musical tension is affected by metrical structure dynamically and hierarchically
+uid: '11297889'
+volume: '18'

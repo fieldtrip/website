@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '39099632'
+- idtype: doi
+  value: 10.3389/fnins.2024.1433583
+- idtype: pmcid
+  value: PMC11294212
+authors:
+- authtype: Author
+  name: Liao XY
+- authtype: Author
+  name: Gao YX
+- authtype: Author
+  name: Qian TT
+- authtype: Author
+  name: Zhou LH
+- authtype: Author
+  name: Li LQ
+- authtype: Author
+  name: Gong Y
+- authtype: Author
+  name: Ye TF
+epubdate: 2024 Jul 19
+fulljournalname: Frontiers in Neuroscience
+issue: ''
+pages: '1433583'
+pmclivedate: 2024/08/02
+printpubdate: ''
+pubdate: 2024 Jul 19
+sortdate: 2024/07/19 00:00
+source: Front Neurosci
+title: Bibliometric analysis of electroencephalogram research in Parkinson’s disease
+  from 2004 to 2023
+uid: '11294212'
+volume: '18'

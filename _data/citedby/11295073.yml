@@ -1,0 +1,38 @@
+articleids:
+- idtype: pmid
+  value: '39047043'
+- idtype: doi
+  value: 10.1073/pnas.2322869121
+- idtype: pmcid
+  value: PMC11295073
+authors:
+- authtype: Author
+  name: Hoy CW
+- authtype: Author
+  name: de Hemptinne C
+- authtype: Author
+  name: Wang SS
+- authtype: Author
+  name: Harmer CJ
+- authtype: Author
+  name: Apps MA
+- authtype: Author
+  name: Husain M
+- authtype: Author
+  name: Starr PA
+- authtype: Author
+  name: Little S
+epubdate: 2024 Jul 24
+fulljournalname: Proceedings of the National Academy of Sciences of the United States
+  of America
+issue: '31'
+pages: e2322869121
+pmclivedate: 2024/08/03
+printpubdate: 2024 Jul 30
+pubdate: 2024 Jul 24
+sortdate: 2024/07/24 00:00
+source: Proc Natl Acad Sci U S A
+title: Beta and theta oscillations track effort and previous reward in the human basal
+  ganglia and prefrontal cortex during decision making
+uid: '11295073'
+volume: '121'

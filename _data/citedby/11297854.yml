@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1007/s11571-023-09991-7
+- idtype: pmcid
+  value: PMC11297854
+authors:
+- authtype: Author
+  name: Wei Y
+- authtype: Author
+  name: Wang Y
+- authtype: Author
+  name: Okazaki YO
+- authtype: Author
+  name: Kitajo K
+- authtype: Author
+  name: So RH
+epubdate: 2023 Jul 17
+fulljournalname: Cognitive Neurodynamics
+issue: '4'
+pages: 1525-1537
+pmclivedate: ''
+printpubdate: 2024 Aug
+pubdate: 2023 Jul 17
+sortdate: 2023/07/17 00:00
+source: Cogn Neurodyn
+title: Motion sickness resistant people showed suppressed steady-state visually evoked
+  potential (SSVEP) under vection-inducing stimulation
+uid: '11297854'
+volume: '18'
