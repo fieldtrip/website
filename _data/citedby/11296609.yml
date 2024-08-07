@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '33652372'
+- idtype: doi
+  value: 10.1016/j.bandl.2021.104916
+- idtype: pmcid
+  value: PMC11296609
+- idtype: MID
+  value: NIHMS1678624
+authors:
+- authtype: Author
+  name: Momsen J
+- authtype: Author
+  name: Gordon J
+- authtype: Author
+  name: Wu YC
+- authtype: Author
+  name: Coulson S
+epubdate: 2021 Feb 27
+fulljournalname: Brain and language
+issue: ''
+pages: '104916'
+pmclivedate: 2024/08/02
+printpubdate: 2021 May
+pubdate: 2021 Feb 27
+sortdate: 2021/02/27 00:00
+source: Brain Lang
+title: 'Event related spectral perturbations of gesture congruity: Visuospatial resources
+  are recruited for multimodal discourse comprehension'
+uid: '11296609'
+volume: '216'
