@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '38416707'
+- idtype: doi
+  value: 10.1152/jn.00450.2023
+- idtype: pmcid
+  value: PMC11305630
+authors:
+- authtype: Author
+  name: Chen L
+- authtype: Author
+  name: Cichy RM
+- authtype: Author
+  name: Kaiser D
+epubdate: 2024 Feb 28
+fulljournalname: Journal of Neurophysiology
+issue: '4'
+pages: 619-625
+pmclivedate: 2024/08/08
+printpubdate: 2024 Apr 1
+pubdate: 2024 Feb 28
+sortdate: 2024/02/28 00:00
+source: J Neurophysiol
+title: Coherent categorical information triggers integration-related alpha dynamics
+uid: '11305630'
+volume: '131'

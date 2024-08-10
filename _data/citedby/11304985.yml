@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '39110413'
+- idtype: doi
+  value: 10.1093/cercor/bhae320
+- idtype: pmcid
+  value: PMC11304985
+authors:
+- authtype: Author
+  name: Bonetti L
+- authtype: Author
+  name: Brattico E
+- authtype: Author
+  name: Carlomagno F
+- authtype: Author
+  name: Cabral J
+- authtype: Author
+  name: Stevner A
+- authtype: Author
+  name: Deco G
+- authtype: Author
+  name: Whybrow PC
+- authtype: Author
+  name: Pearce M
+- authtype: Author
+  name: Pantazis D
+- authtype: Author
+  name: Vuust P
+- authtype: Author
+  name: Kringelbach ML
+epubdate: 2024 Aug 7
+fulljournalname: Cerebral Cortex (New York, NY)
+issue: '8'
+pages: bhae320
+pmclivedate: 2024/08/07
+printpubdate: ''
+pubdate: 2024 Aug 7
+sortdate: 2024/08/07 00:00
+source: Cereb Cortex
+title: Spatiotemporal whole-brain activity and functional connectivity of melodies
+  recognition
+uid: '11304985'
+volume: '34'
