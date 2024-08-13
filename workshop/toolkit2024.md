@@ -51,7 +51,7 @@ Note that the tentative program below still might change a bit.
 | 09:00-09:30 | Morning chill or workout |
 | 09:30-11:00 | Special interest [lecture](/assets/pdf/workshop/toolkit2024/05_infant_eeg.pdf): The beauty and the beast of developmental EEG  - lecture by Marlene Meyer |
 | 11:00-11:15 | Coffee Break |
-| 11:15-12:30 | Source reconstruction using beamformers - lecture by Britta Westner |
+| 11:15-12:30 | Source reconstruction using beamformers - [lecture](/assets/pdf/workshop/toolkit2024/06_beamforming.pdf) by Britta Westner |
 | 12:30-13:30 | Lunch |
 | 13:30-15:45 | Beamforming - [hands-on](/tutorial/beamformer) |
 | 15:45-16:00 | Tea Break |
