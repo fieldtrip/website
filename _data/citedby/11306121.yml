@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '39118818'
+- idtype: doi
+  value: 10.3389/fnhum.2024.1385624
+- idtype: pmcid
+  value: PMC11306121
+authors:
+- authtype: Author
+  name: Varlet M
+- authtype: Author
+  name: Grootswagers T
+epubdate: 2024 Jul 25
+fulljournalname: Frontiers in Human Neuroscience
+issue: ''
+pages: '1385624'
+pmclivedate: 2024/08/08
+printpubdate: ''
+pubdate: 2024 Jul 25
+sortdate: 2024/07/25 00:00
+source: Front Hum Neurosci
+title: 'Measuring information alignment in hyperscanning research with representational
+  analyses: moving beyond interbrain synchrony'
+uid: '11306121'
+volume: '18'

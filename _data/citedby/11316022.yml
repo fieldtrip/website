@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '39122960'
+- idtype: doi
+  value: 10.1038/s42003-024-06677-6
+- idtype: pmcid
+  value: PMC11316022
+authors:
+- authtype: Author
+  name: Huang YT
+- authtype: Author
+  name: Wu CT
+- authtype: Author
+  name: Fang YX
+- authtype: Author
+  name: Fu CK
+- authtype: Author
+  name: Koike S
+- authtype: Author
+  name: Chao ZC
+epubdate: 2024 Aug 9
+fulljournalname: Communications Biology
+issue: ''
+pages: '965'
+pmclivedate: 2024/08/10
+printpubdate: ''
+pubdate: 2024 Aug 9
+sortdate: 2024/08/09 00:00
+source: Commun Biol
+title: Crossmodal hierarchical predictive coding for audiovisual sequences in the
+  human brain
+uid: '11316022'
+volume: '7'

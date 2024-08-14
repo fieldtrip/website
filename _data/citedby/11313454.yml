@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '38821396'
+- idtype: doi
+  value: 10.1016/j.brs.2024.05.014
+- idtype: pmcid
+  value: PMC11313454
+- idtype: MID
+  value: NIHMS2004001
+authors:
+- authtype: Author
+  name: Solomon EA
+- authtype: Author
+  name: Wang JB
+- authtype: Author
+  name: Oya H
+- authtype: Author
+  name: Howard MA
+- authtype: Author
+  name: Trapp NT
+- authtype: Author
+  name: Uitermarkt BD
+- authtype: Author
+  name: Boes AD
+- authtype: Author
+  name: Keller CJ
+epubdate: 2024 May 30
+fulljournalname: Brain stimulation
+issue: '3'
+pages: 698-712
+pmclivedate: 2024/08/09
+printpubdate: 2024 May-Jun
+pubdate: 2024 May 30
+sortdate: 2024/05/30 00:00
+source: Brain Stimul
+title: TMS provokes target-dependent intracranial rhythms across human cortical and
+  subcortical sites
+uid: '11313454'
+volume: '17'
