@@ -40,9 +40,9 @@ Furthermore, it is necessary to provide the voxel coordinates of the same fiduci
     vox2head = mri.transform; % transformation matrix of individual MRI
 
     % transform voxel indices to MRI head coordinates
-    head_Nas          = warp_apply(vox2head, vox_Nas, 'homogenous'); % nasion
-    head_Lpa          = warp_apply(vox2head, vox_Lpa, 'homogenous'); % Left preauricular
-    head_Rpa          = warp_apply(vox2head, vox_Rpa, 'homogenous'); % Right preauricular
+    head_Nas          = ft_warp_apply(vox2head, vox_Nas, 'homogenous'); % nasion
+    head_Lpa          = ft_warp_apply(vox2head, vox_Lpa, 'homogenous'); % Left preauricular
+    head_Rpa          = ft_warp_apply(vox2head, vox_Rpa, 'homogenous'); % Right preauricular
 
     elec_mri.chanpos = [
       head_Nas
