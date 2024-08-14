@@ -1,0 +1,36 @@
+articleids:
+- idtype: pmid
+  value: '39130516'
+- idtype: doi
+  value: 10.1093/braincomms/fcae248
+- idtype: pmcid
+  value: PMC11316206
+authors:
+- authtype: Author
+  name: Billaud CH
+- authtype: Author
+  name: Wood AG
+- authtype: Author
+  name: Griffiths-King D
+- authtype: Author
+  name: Kessler K
+- authtype: Author
+  name: Wassmer E
+- authtype: Author
+  name: Foley E
+- authtype: Author
+  name: Wright SK
+epubdate: 2024 Aug 8
+fulljournalname: Brain Communications
+issue: '4'
+pages: fcae248
+pmclivedate: 2024/08/10
+printpubdate: ''
+pubdate: 2024 Aug 8
+sortdate: 2024/08/08 00:00
+source: Brain Commun
+title: 'Examining cognition and brain networks using magnetoencephalography in paediatric
+  autoimmune encephalitis and acute disseminated encephalomyelitis: a preliminary
+  study'
+uid: '11316206'
+volume: '6'
