@@ -153,7 +153,7 @@ Check the coregistration of the Polhemus headshape and the anatomical MRI. In th
     ft_determine_coordsys(mri_orig, 'interactive', 'no')
     ft_plot_headshape(headshape);
 
-{% include image src="/assets/img/tutorial/epilepsy/case3/ctf/figure2.png" width="700" %}
+{% include image src="/assets/img/tutorial/epilepsy/figure2.png" width="700" %}
 
 The nose in the MRI is pointing toward the +X direction, whereas the noise in the headshape is pointing in the +Y direction, i.e. the MRI is 90 degrees off with the headshape, which is in CTF coordinates.
 
@@ -184,7 +184,7 @@ The headshape not only covers the scalp, but also the face and nose. Hence the c
 
     save mri_defaced.mat mri_defaced % save the data for sharing
 
-{% include image src="/assets/img/tutorial/epilepsy/case3/ctf/figure3.png" width="700" %}
+{% include image src="/assets/img/tutorial/epilepsy/figure3.png" width="700" %}
 
 and we use **[ft_volumereslice](/reference/ft_volumereslice)** to reslice the MRI, so that the axes of the volume are aligned with the axes of the coordinate system. This facilitates plotting and ensures that results interpolated on the MRI are not displayed upside-down.
 
@@ -267,7 +267,7 @@ We again visualize the source model, in combination with the MRI and head model,
     ft_plot_ortho(mri_resliced.anatomy, 'transform', mri_resliced.transform, 'style', 'intersect', 'unit', 'mm');
     alpha 0.5
 
-{% include image src="/assets/img/tutorial/epilepsy/case3/ctf/figure4.png" width="700" %}
+{% include image src="/assets/img/tutorial/epilepsy/figure4.png" width="700" %}
 
 Next we precompute the leadfields, which is not obligatory, but speeds up the subsequent steps.
 
@@ -311,14 +311,14 @@ We are ready to explore the results visually, starting with the volumetric image
     cfg.method = 'ortho'; % orthogonal slices with crosshairs at peak (default anyway if not specified)
     ft_sourceplot(cfg, source_interp);
 
-{% include image src="/assets/img/tutorial/epilepsy/case3/ctf/figure5.png" width="700" %}
+{% include image src="/assets/img/tutorial/epilepsy/figure5.png" width="700" %}
 
     cfg = [];
     cfg.funparameter = 'kurtosis';
     cfg.method = 'slice'; % plot a series of slices
     ft_sourceplot(cfg, source_interp);
 
-{% include image src="/assets/img/tutorial/epilepsy/case3/ctf/figure6.png" width="700" %}
+{% include image src="/assets/img/tutorial/epilepsy/figure6.png" width="700" %}
 
 In our figure in FieldTrip, we can scroll through the slices to see where the areas of high kurtosis fall. But to be more objective, it is useful to identify each discrete peak location in the kurtosis data. This can be done using the [imregionalmax](https://nl.mathworks.com/help/images/ref/imregionalmax.html) function from the Image Processing toolbox. An alternative is to use a 3rd party function called [findpeaksn.m](https://github.com/vigente/gerardus/blob/master/matlab/PointsToolbox/findpeaksn.m) which needs to be downloaded separately and added to the MATLAB path. The Aston clinical team would typically examine every single peak but for simplicity we will just look at the top few. We display the co-ordinates and plot some images.
 
@@ -341,7 +341,7 @@ We use a bit of standard MATLAB code to find the regional peaks in the kurtosis
       ft_sourceplot(cfg, source_interp);
     end
 
-{% include image src="/assets/img/tutorial/epilepsy/case3/ctf/figure7.gif" width="700" %}
+{% include image src="/assets/img/tutorial/epilepsy/figure7.gif" width="700" %}
 
 ##### Visualize the kurtosis images in MRIcro
 
@@ -362,7 +362,7 @@ At this stage, we can also write out our images (i.e., the resliced MRI and the 
 
 The MRIcro software from [Chris Rorden's lab](https://www.mccauslandcenter.sc.edu/crnl/tools) is very useful to visualize anatomical in combination with functional data, to change thresholds on the fly, and to make 3D renderings of the peaks of the activity in relation to the anatomy.
 
-{% include image src="/assets/img/tutorial/epilepsy/case3/ctf/figure8.png" width="700" %}
+{% include image src="/assets/img/tutorial/epilepsy/figure8.png" width="700" %}
 
 ##### Visualize the beamformer time series in AnyWave
 
@@ -413,7 +413,7 @@ Finally we can automatically mark potential spikes in the source time series dat
 
 The data can now be opened in AnyWave. Once the file is opened, to see sources alongside source data, click 'Add View' in the top/middle toolbar. Then use the eyeball icon to set each view so that one has 'MEG' and one has 'SOURCE' data. Set the timescale to be 0.3 sec/cm (close to the clinical standard 3cm/sec) and scale the amplitudes appropriately. Use the menu to import the marker file that we just created.
 
-{% include image src="/assets/img/tutorial/epilepsy/case3/ctf/figure9.png" width="700" %}
+{% include image src="/assets/img/tutorial/epilepsy/figure9.png" width="700" %}
 
 ### Analysis of the Neuromag dataset
 
@@ -461,7 +461,7 @@ For patient confidentiality we only include here the MRI which has already been 
     ft_determine_coordsys(mri_realigned, 'interactive', 'no')
     ft_plot_headshape(headshape);
 
-{% include image src="/assets/img/tutorial/epilepsy/case3/neuromag/figure10.png" width="700" %}
+{% include image src="/assets/img/tutorial/epilepsy/figure10.png" width="700" %}
 
     cfg = [];
     cfg.translate = [0 70 -60];
@@ -566,7 +566,7 @@ Again we plot all geometrical data to check their alignment.
     ft_plot_ortho(mri_resliced.anatomy, 'transform', mri_resliced.transform, 'style', 'intersect');
     alpha 0.5 % make the anatomical MRI slices a bit transparent
 
-{% include image src="/assets/img/tutorial/epilepsy/case3/neuromag/figure11.png" width="700" %}
+{% include image src="/assets/img/tutorial/epilepsy/figure11.png" width="700" %}
 
 #### Compute the beamformer virtual channels and kurtosis
 
@@ -576,7 +576,7 @@ At this point the analysis deviates from the CTF analysis because we need to acc
     figure;
     semilogy(diag(s),'o-');
 
-{% include image src="/assets/img/tutorial/epilepsy/case3/neuromag/figure12.png" width="700" %}
+{% include image src="/assets/img/tutorial/epilepsy/figure12.png" width="700" %}
 
 As we compute the LCMV beamformer below, we can use the information from the SVD to help regularize the covariance matrix using a truncation parameter called kappa. We set this at a value before the big 'cliff' in the singular values. We also set a parameter called lambda which can be considered a weighting factor for the regularization.
 
@@ -607,14 +607,14 @@ The remainder of the analysis is identical to the CTF analysis: we interpolate a
     cfg.method = 'ortho'; % orthogonal slices with crosshairs at peak (default anyway if not specified)
     ft_sourceplot(cfg, source_interp);
 
-{% include image src="/assets/img/tutorial/epilepsy/case3/neuromag/figure13.png" width="700" %}
+{% include image src="/assets/img/tutorial/epilepsy/figure13.png" width="700" %}
 
     cfg = [];
     cfg.funparameter = 'kurtosis';
     cfg.method = 'slice'; % plot slices
     ft_sourceplot(cfg, source_interp);
 
-{% include image src="/assets/img/tutorial/epilepsy/case3/neuromag/figure14.png" width="700" %}
+{% include image src="/assets/img/tutorial/epilepsy/figure14.png" width="700" %}
 
     array = reshape(source.avg.kurtosis, source.dim);
     array(isnan(array)) = 0;
@@ -633,7 +633,7 @@ The remainder of the analysis is identical to the CTF analysis: we interpolate a
       ft_sourceplot(cfg, source_interp);
     end
 
-{% include image src="/assets/img/tutorial/epilepsy/case3/neuromag/figure15.gif" width="700" %}
+{% include image src="/assets/img/tutorial/epilepsy/figure15.gif" width="700" %}
 
 ##### Visualize the kurtosis images in MRIcro
 
@@ -650,7 +650,7 @@ The remainder of the analysis is identical to the CTF analysis: we interpolate a
     cfg.datatype = 'float'; % integer datatypes will be scaled to the maximum, floating point datatypes not
     ft_volumewrite(cfg, source_interp);
 
-{% include image src="/assets/img/tutorial/epilepsy/case3/neuromag/figure16.png" width="700" %}
+{% include image src="/assets/img/tutorial/epilepsy/figure16.png" width="700" %}
 
 ##### Visualize the beamformer time series in AnyWave
 
@@ -697,7 +697,7 @@ The remainder of the analysis is identical to the CTF analysis: we interpolate a
     end
     fclose(fid);
 
-{% include image src="/assets/img/tutorial/epilepsy/case3/neuromag/figure17.png" width="700" %}
+{% include image src="/assets/img/tutorial/epilepsy/figure17.png" width="700" %}
 
 
 ## Summary and Conclusions
