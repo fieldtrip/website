@@ -87,7 +87,7 @@ For consistency with the other examples in this tutorial, we will first convert 
 
 If you 3D rotate the figure, you can recognize the nose; it is just below the red +X (unknown) axis.
 
-{% include image src="/assets/img/tutorial/coregistration_opm/headshape_upsideup_ctf.png" width="400" %}
+{% include image src="/assets/img/tutorial/coregistration_opm/figure1.png" width="400" %}
 _Figure: Polhemus recorded headshape with the coordinate axes according to the CTF-convention: the X-axis is pointing towards the nose._
 
 From the figure we can see that the first X axis pointing to the nose or anterior, the second Y axis is pointing to the left, and the third Z axis is pointing to superior. Hence we refer to this as an ALS coordinate system. In fact, closer inspection reveals that the origin is exactly between the two ears, which means that it is consistent with the [CTF coordinate system](/faq/coordsys#details-of-the-ctf-coordinate-system). This is information we can add to the data structure to facilitate automatic coordinate system conversion.
@@ -103,7 +103,7 @@ From the figure we can see that the first X axis pointing to the nose or anterio
 
 The nose is now just below the green +X axis, which now also specifies that it corresponds to the anterior direction. The **[ft_plot_axes](/reference/plotting/ft_plot_axes)** function automatically adds these labels whenever an object specifies the coordinate system. You can click in the figure with the right mouse button and change the view to any of top/bottom, left/right, and front/back.
 
-{% include image src="/assets/img/tutorial/coregistration_opm/headshape_upsideup.png" width="400" %}
+{% include image src="/assets/img/tutorial/coregistration_opm/figure2.png" width="400" %}
 _Figure: Adjusted headshape expressed in the RAS coordinate system._
 
 ### Identification of reference points
@@ -146,7 +146,7 @@ We also have the template specification of the OPM sensor locations with the cor
     ft_plot_sens(fieldlinebeta2)
     view([102 5]);
 
-{% include image src="/assets/img/tutorial/coregistration_opm/coreg_polhemus_before.png" width="400" %}
+{% include image src="/assets/img/tutorial/coregistration_opm/figure3.png" width="400" %}
 _Figure: The reference points of the Polhemus measurement are **not** aligned with those of the OPM helmet; you can see the head stick out at the top of the helmet._
 
 We will proceed with **[ft_electroderealign](/reference/ft_electroderealign)**, which was originally implemented to align EEG electrode positions to a head surface. As it turns out, it can also be used more general to align two sets of points.
@@ -174,7 +174,7 @@ The output data structure `fid_aligned` not only contains the aligned fiducials,
     ft_plot_sens(fieldlinebeta2_head)
     view([102 5]);
 
-{% include image src="/assets/img/tutorial/coregistration_opm/coreg_polhemus_after.png" width="400" %}
+{% include image src="/assets/img/tutorial/coregistration_opm/figure4.png" width="400" %}
 _Figure: OPM sensor locations are in register with the Polhemus headshape._
 
 If you rotate the image, the first thing to notice is that the nose is properly pointing towards the opening of the helmet where the face should be. Furthermore, careful inspection shows that there are now two sets of overlapping fiducials. Since we made sure previously that the fiducials are sorted from 1 to 8, we can compute the difference between the positions in the aligned helmet and the Polhemus measurement. The reason for the overlap not being perfect is that the Polhemus measurement has some inaccuracies, both in placing the stylus, and in the digitization process.
@@ -267,7 +267,7 @@ We cut the data into 10-second segments with 80% overlap and compute the average
     xlabel('frequency (Hz)');
     ylabel('log_10 power')
 
-{% include image src="/assets/img/tutorial/coregistration_opm/powerspectrum_hpi.png" width="400" %}
+{% include image src="/assets/img/tutorial/coregistration_opm/figure5.png" width="400" %}
 _Figure: Powerspectrum from a measurement containing strong signals at 8, 11 and 14 Hz, and at their harmonics._
 
 To focus on the signals of the specific HPI-coils, we bandpass filter the data in the frequency bands corresponding to each of the coils, and cut off the edges for any potential filter edge artifacts.
@@ -298,7 +298,7 @@ To focus on the signals of the specific HPI-coils, we bandpass filter the data i
     xlabel('time (s)');
     ylabel('magnetic field strength (T)');
 
-{% include image src="/assets/img/tutorial/coregistration_opm/hpi_8hz.png" width="400" %}
+{% include image src="/assets/img/tutorial/coregistration_opm/figure6.png" width="400" %}
 _Figure: Two seconds of data, bandpass filtered around 8 Hz._
 
 ### Fit dipoles to the sensor topographies
@@ -325,7 +325,7 @@ We proceed by performing a principal component analysis (PCA) on the filtered da
     cfg.figure       = subplot('position',[2/3 0 1/3 1]);
     ft_topoplotIC(cfg, comp14);
 
-{% include image src="/assets/img/tutorial/coregistration_opm/hpi_topo.png" width="700" %}
+{% include image src="/assets/img/tutorial/coregistration_opm/figure7.png" width="700" %}
 _Figure: Spatial topographies of the signals generated by the 3 HPI coils._
 
 For the fitting the magnetic dipole positions, we will use a grid search as an initial scan over the whole volume, followed by a iterative non-linear optimization. The grid search is motivated by the fact that a non-linear search of the whole parameter space (i.e., volume of space covered by the helmet) might result in convergence to a local minimum.
@@ -448,7 +448,7 @@ We read in the model from the optical 3D scanner. The first step is to coregiste
     material dull
     light
 
-{% include image src="/assets/img/tutorial/coregistration_opm/scan_notaligned.png" width="400" %}
+{% include image src="/assets/img/tutorial/coregistration_opm/figure8.png" width="400" %}
 _Figure: 3D scan with a not so clearly defined coordinate system._
 
 In the example scan, the coordinate axes' orientations relative to the participant are not cleary defined. The origin `[0, 0, 0]` is somewhere in the chest, but the axes are reasonably well-behaved, i.e., pointing approximately along the left/right, anterior/posterior, and superior inferior directions. However, this will depend on the 3D scanner and the angle from which you start the scan.
@@ -470,7 +470,7 @@ To facilitate later processing, we will assign a better defined coordinate syste
     material dull
     light
 
-{% include image src="/assets/img/tutorial/coregistration_opm/scan_sosoaligned.png" width="400" %}
+{% include image src="/assets/img/tutorial/coregistration_opm/figure9.png" width="400" %}
 _Figure: 3D scan with a coordinate system relating to the head and helmet._
 
 {% include markup/skyblue %}
@@ -494,7 +494,7 @@ In the example scan, a large part of the body of the participant is also present
     material dull
     light
 
-{% include image src="/assets/img/tutorial/coregistration_opm/scan_facehelmet.png" width="400" %}
+{% include image src="/assets/img/tutorial/coregistration_opm/figure10.png" width="400" %}
 _Figure: 3D scan with only the face and helmet._
 
 In the following, we separate the 'helmet' part of the scan from the 'face' part, because this facilitates the alignment performed below. Note that we need to ensure that any change in the coordinates of one of these objects should be reflected in the other object as well. Clearly, this is needed because the 3D scan of the two objects is the crucial link from facial anatomy towards sensors.
@@ -515,7 +515,7 @@ In the following, we separate the 'helmet' part of the scan from the 'face' part
     material dull
     light
 
-{% include image src="/assets/img/tutorial/coregistration_opm/scan_face.png" width="400" %}
+{% include image src="/assets/img/tutorial/coregistration_opm/figure11.png" width="400" %}
 _Figure: 3D scan with only the face._
 
 The surface mesh of the helmet will be extracted by removing the face from the scan. We use the same selection as in the extraction of the face, but now we keep the outside of the box rather than the inside.
@@ -533,7 +533,7 @@ The surface mesh of the helmet will be extracted by removing the face from the s
     material dull
     light
 
-{% include image src="/assets/img/tutorial/coregistration_opm/scan_helmet.png" width="400" %}
+{% include image src="/assets/img/tutorial/coregistration_opm/figure12.png" width="400" %}
 _Figure: 3D scan with only the helmet._
 
 ### Processing of the anatomical MRI
@@ -548,7 +548,7 @@ After reading in the MRI, you can check the coordinate system with `ft_determine
     % check the coordinate system
     ft_determine_coordsys(mri, 'interactive', 'no');
 
-{% include image src="/assets/img/tutorial/coregistration_opm/mri_notaligned.png" width="400" %}
+{% include image src="/assets/img/tutorial/coregistration_opm/figure13.png" width="400" %}
 _Figure: anatomical MRI in the original scanner coordinates._
 
 As the above figure shows, the axes are labeled as 'unknown', but it seems that they are oriented according to the RAS convention, while the origin of the coordinate system is ill-defined, as that depends how the subject was lying in the MRI scanner and how the scanned volume was configured.
@@ -563,7 +563,7 @@ We will explicitly align the MRI to an anatomical landmark-based coordinate syst
     % check the coordinate system after realignment
     ft_determine_coordsys(mri_realigned, 'interactive', 'no');
 
-{% include image src="/assets/img/tutorial/coregistration_opm/mri_aligned.png" width="400" %}
+{% include image src="/assets/img/tutorial/coregistration_opm/figure14.png" width="400" %}
 _Figure: anatomical MRI image with a 'neuromag' head coordinate system._
 
 {% include markup/skyblue %}
@@ -605,7 +605,7 @@ To achieve a reasonably good alignment, the following values can be specified (w
     material dull
     light
 
-{% include image src="/assets/img/tutorial/coregistration_opm/face_aligned.png" width="400" %}
+{% include image src="/assets/img/tutorial/coregistration_opm/figure15.png" width="400" %}
 _Figure: 3D scan of the face aligned with the MRI-derived face._
 
 ### Interactive alignment of the helmet with the template helmet
@@ -631,7 +631,7 @@ To achieve a reasonably good alignment between the scanned helmet and the 3D mod
     material dull
     light
 
-{% include image src="/assets/img/tutorial/coregistration_opm/helmet_aligned.png" width="400" %}
+{% include image src="/assets/img/tutorial/coregistration_opm/figure16.png" width="400" %}
 _Figure: 3D scan of the helmet aligned with the 3D model of the actual FieldLine helmet._
 
 ### Calculation of the transformation matrix
@@ -668,7 +668,7 @@ In this case we did not do an actual OPM MEG measurement but only a 3D scan for 
     material dull
     light
 
-{% include image src="/assets/img/tutorial/coregistration_opm/sensors_face_aligned.png" width="400" %}
+{% include image src="/assets/img/tutorial/coregistration_opm/figure17.png" width="400" %}
 _Figure: sensors aligned with the anatomical MRI._
 
 We can see that the participant was not positioned very high in the FieldLine helmet. This particular example was acquired to demonstrate the coregistration, not for an actual OPM MEG measurement.
