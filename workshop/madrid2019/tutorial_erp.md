@@ -123,7 +123,7 @@ obtain the EOG is therefore not required when working with Biosemi or other
 bipolar data.
 {% include markup/end %}
 
-{% include image src="/assets/img/tutorial/preprocessing_erp/example_eog.png" width="200" %}
+{% include image src="/assets/img/workshop/madrid2019/tutorial_erp/figure1.png" width="200" %}
 
 Select the channels that we need for the vertical EOG
 
