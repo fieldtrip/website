@@ -35,59 +35,58 @@ In order to import data from MNE-python into FieldTrip, it is most straightforwa
 
 Below are some practical examples that demonstrate how to export FieldTrip data to a fif-file. For this we use the example data of [dataset 10](/faq/datasets#meg-tactile_dipole_fitting). If you want to try this out yourself, please download [SubjectBraille.zip](https://download.fieldtriptoolbox.org/tutorial/SubjectBraille.zip) and extract the `.ds` folder in a convenient location.
 
-### example: export raw - single trial - data structure
+### Example: export raw - single trial - data structure
 
 As a first example, we read the data as a continuous chunk. Note that the example dataset used has actually been acquired in 'trial'-mode, which means that it consists of discontinuous segments of data.
 
-	datadir = <path-to-data>;
-	dataset = fullfile(datadir, 'SubjectBraille.ds');
-	
-	cfg                 = [];
-	cfg.dataset         = dataset;
-	cfg.trialdef.length = Inf;
-	cfg                 = ft_definetrial(cfg);
+    datadir = <path-to-data>;
+    dataset = fullfile(datadir, 'SubjectBraille.ds');
+    
+    cfg                 = [];
+    cfg.dataset         = dataset;
+    cfg.trialdef.length = Inf;
+    cfg                 = ft_definetrial(cfg);
 
-	cfg.continuous = 'yes';
-	cfg.channel    = {'MEG', '-MLP31', '-MLO12'};
-	data           = ft_preprocessing(cfg);
-	hs             = ft_read_headshape(cfg.dataset); % let's also read this information
+    cfg.continuous = 'yes';
+    cfg.channel    = {'MEG', '-MLP31', '-MLO12'};
+    data           = ft_preprocessing(cfg);
+    hs             = ft_read_headshape(cfg.dataset); % let's also read this information
 
 We can now export the data to a fiff file, pretending as if it's raw data. Note that the original fiff-file definition stores the data in single precision (32-bit per data point) format. By default, FieldTrip stores the data in the same precision of the actual data, which usually is double (and even complex-valued). MNE-python should be capable of dealing with this type of numeric precision, but other software might not. If the data needs to be stored in single precision, you can use the key-value pair `'precision', 'single'`. Also, note that the current example is a bit silly, given that MNE-python is perfectly capable of reading in native CTF data. Here, it is presented as a proof-of-principle.
 
-	fiff_file  = fullfile(datadir, 'ctf-raw.fif');
-	fieldtrip2fiff(fiff_file, data, 'headshape', hs);
-	save(fullfile(datadir, 'ctf-raw.mat'), 'data'); % for comparison
+    fiff_file  = fullfile(datadir, 'ctf-raw.fif');
+    fieldtrip2fiff(fiff_file, data, 'headshape', hs);
+    save(fullfile(datadir, 'ctf-raw.mat'), 'data'); % for comparison
 
 Including the headshape information as an extra input argument will result in the fif-file to also contain the information about the location of the HPI-coils. This might be relevant for a smooth experience in MNE-python, e.g., if one wishes to apply tSSS to the data.
 
 Also, **[fieldtrip2fiff](/reference/fieldtrip2fiff)** will attempt to create an event file (provided the data object has an event structure buried somewhere in the processing history, called `'ctf_raw-eve.fif'`. The events will be represented as numbers, in a Nx3 matrix, where the first column contains the sample index of the event, and the third column contains the value. As of April 2023, also an interpretative comment will be saved in the event file, that allows to map the numbered events in the event file back onto the FieldTrip-style event representation.  
 
-### example: export raw - multiple trial - data structure
+### Example: export raw - multiple trial - data structure
 
 MNE-python also allows to work with so-called **Epoched** objects, which are similar to a FieldTrip raw data structure with multiple trials, with the constraint that each of the trials has exactly the same time axis. Let's start by reading the trials into FieldTrip, from the original dataset, and then save the data object as a fiff-file. Event information, if present in the `data` structure's `trialinfo` field will be stored in the fiff-file as well.
 
-	cfg                     = [];
-	cfg.dataset             = dataset;
-	cfg.trialdef.eventtype  = 'backpanel trigger';
-	cfg.trialdef.prestim    = 0.6; % this is constrained by the way the data were collected
-	cfg.trialdef.poststim   = 0.6;
-	cfg.trialdef.eventvalue = [4 8]; % these are the trigger values coded on the backpanel trigger, indicating targets and non-targets
-	cfg                     = ft_definetrial(cfg);
-	cfg.channel             = {'MEG', '-MLP31', '-MLO12'}; % read all MEG channels except MLP31 and MLO12
-	data                    = ft_preprocessing(cfg);
+    cfg                     = [];
+    cfg.dataset             = dataset;
+    cfg.trialdef.eventtype  = 'backpanel trigger';
+    cfg.trialdef.prestim    = 0.6; % this is constrained by the way the data were collected
+    cfg.trialdef.poststim   = 0.6;
+    cfg.trialdef.eventvalue = [4 8]; % these are the trigger values coded on the backpanel trigger, indicating targets and non-targets
+    cfg                     = ft_definetrial(cfg);
+    cfg.channel             = {'MEG', '-MLP31', '-MLO12'}; % read all MEG channels except MLP31 and MLO12
+    data                    = ft_preprocessing(cfg);
 
-	fiff_file  = fullfile(datadir, 'ctf-epo.fif');
-	fieldtrip2fiff(fiff_file, data);
-	save(fullfile(datadir, 'ctf-epo.mat'), 'data');
+    fiff_file  = fullfile(datadir, 'ctf-epo.fif');
+    fieldtrip2fiff(fiff_file, data);
+    save(fullfile(datadir, 'ctf-epo.mat'), 'data');
 
-### example: export timelocked - evoked field - data structure
+### Example: export timelocked - evoked field - data structure
 
 Timelocked data can be exported to an **Evoked** object representation:
 
-	cfg        = [];
-	cfg.trials = data.trialinfo==8;
-	avg        = ft_timelockanalysis(cfg, data);
-	fiff_file  = fullfile(datadir, 'ctf-ave.fif');
-	fieldtrip2fiff(fiff_file, avg);
-	save(fullfile(datadir, 'ctf-ave.mat'), 'avg');
-	
+    cfg        = [];
+    cfg.trials = data.trialinfo==8;
+    avg        = ft_timelockanalysis(cfg, data);
+    fiff_file  = fullfile(datadir, 'ctf-ave.fif');
+    fieldtrip2fiff(fiff_file, avg);
+    save(fullfile(datadir, 'ctf-ave.mat'), 'avg');

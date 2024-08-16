@@ -13,59 +13,59 @@ FieldTrip allows reading in spike and LFP data from .nwb files. Importantly, the
 
 ## Example script
 
-```
-% Data taken from https://osf.io/hv7ja/
-% About the data: https://github.com/rutishauserlab/recogmem-release-NWB
+    % Data taken from https://osf.io/hv7ja/
+    % About the data: https://github.com/rutishauserlab/recogmem-release-NWB
 
-% Optional: Make sure no duplicate versions of +types are in the search path
-% restoredefaultpath()
+    % Optional: Make sure no duplicate versions of +types are in the search path
+    % restoredefaultpath()
 
-% Navigate to an appropriate working directory (necessary because a few folders and files will be created by MatNWB here)
-cd('X:/examplefolder') % change as needed
+    % Navigate to an appropriate working directory (necessary because a few folders and files will be created by MatNWB here)
+    cd('X:/examplefolder') % change as needed
 
-% Add fieldtrip to search path and initialize
-addpath('../fieldtrip') % change as needed
-ft_defaults
+    % Add fieldtrip to search path and initialize
+    addpath('../fieldtrip') % change as needed
+    ft_defaults
 
-% Add matnwb to search path
-addpath(genpath('../matnwb'))
+    % Add matnwb to search path
+    addpath(genpath('../matnwb'))
 
-% (re-)generate core classes for matNWB from it's schema (lands in +types)
-generateCore()
+    % (re-)generate core classes for matNWB from it's schema (lands in +types)
+    generateCore()
 
-% Filename and path
-nwbFile = 'X:/examplefolder/sub-YutaMouse41_ses-YutaMouse41-150831_behavior+ecephys.nwb';
+    % Filename and path
+    nwbFile = 'X:/examplefolder/sub-YutaMouse41_ses-YutaMouse41-150831_behavior+ecephys.nwb';
 
-% Show schema version of the file. If this does not match your installed version, see 'Change NWB schema version' below
-disp(util.getSchemaVersion(nwbFile))
+    % Show schema version of the file. If this does not match your installed version, see 'Change NWB schema version' below
+    disp(util.getSchemaVersion(nwbFile))
 
-% Load data in nwb format
-nwb = nwbRead(nwbFile);
-disp(nwb)
+    % Load data in nwb format
+    nwb = nwbRead(nwbFile);
+    disp(nwb)
 
-% Try to obtain hdr, lfp data and spike data in FieldTrip format
-try
-	hdr = ft_read_header(nwbFile); % contains no lfp data: throws error
-catch ME
-	disp('Could not load in hdr information')
-	rethrow(ME)
-end
-try
-	dat = ft_read_data(nwbFile); % contains no lfp data: throws error
-catch ME
-	disp('Could not load in NWB data')
-	rethrow(ME)
-end
-try
-	spike = ft_read_spike(nwbFile); % contains spike data: Converts
-catch ME
-	disp('Could not read in spike data from NWB file.')
-	rethrow(ME)
-end
- ```
+    % Try to obtain hdr, lfp data and spike data in FieldTrip format
+    try
+        hdr = ft_read_header(nwbFile); % contains no lfp data: throws error
+    catch ME
+        disp('Could not load in hdr information')
+        rethrow(ME)
+    end
+    try
+        dat = ft_read_data(nwbFile); % contains no lfp data: throws error
+    catch ME
+        disp('Could not load in NWB data')
+        rethrow(ME)
+    end
+    try
+        spike = ft_read_spike(nwbFile); % contains spike data: Converts
+    catch ME
+        disp('Could not read in spike data from NWB file.')
+        rethrow(ME)
+    end
 
 ## Change NWB schema version
+
 In case you are trying to load a file using a different schema version than the one installed on your system this may cause an error (often something like 'Unable to resolve the name types.core.DynamicTableRegion'). If so:
+
 - go to the [NWB release site](https://github.com/NeurodataWithoutBorders/nwb-schema/releases),
 - choose the schema closest to your file's schema,
 - download the zip file associated with that schema,
@@ -76,5 +76,4 @@ In case you are trying to load a file using a different schema version than the 
 At its current stage, the NWB integration into FieldTrip is not feature-complete. For example:
 
 - Reading events (ft_read_event). NWB:N is a pretty generic dataformat and can contain very diverse types of data. Therefore, it is not trivial to programmatically and reliably create an event output that could be used in a trial function.
-
 - Reading waveforms (voltage time series around identified spikes) by ft_read_spike.

@@ -14,12 +14,12 @@ Notably, mMSE is able to reveal brain-behavior links in EEG data that go undetec
 ## Download and install the mMSE toolbox
 
 To run entropy analysis on your data, download the mMSE toolbox for FieldTrip from our GitHub page as follows:
-	
-	git clone https://github.com/LNDG/mMSE.git
+
+    git clone https://github.com/LNDG/mMSE.git
 
 or use the Download button on the GitHub page. The mMSE toolbox folder can be placed anywhere – it is not necessary to have it in your FieldTrip folder. However, the folder needs to be added to the path so MATLAB can find it. Furthermore, availability of the FieldTrip toolbox is required as the mMSE code relies on various FieldTrip helper functions. You can do this as follows:
 
-	addpath /path/to/your/mMSEfolder
+    addpath /path/to/your/mMSEfolder
 
 After this step, you can call **[ft_entropyanalysis](https://github.com/LNDG/mMSE/blob/release/ft_entropyanalysis.m)** as any other FieldTrip function.
 
@@ -33,17 +33,17 @@ A final point pertains to the boundaries that are set around each data point to 
 
 To run mMSE analysis on your preprocessed data, first define the configuration:
 
-	cfg = [];
-	cfg.m                 = 2;                 % pattern length
-	cfg.r                 = 0.5;               % similarity parameter
-	cfg.timwin            = 0.5;               % sliding window size
-	cfg.toi               = -0.5:0.05:1;       % set this according to your trial length
-	cfg.timescales        = 1:42;              % timescale list
-	cfg.recompute_r       = 'perscale_toi_sp'; % when to recompute similarity parameter
-	cfg.coarsegrainmethod = 'filtskip';        % pointavg or filtskip
-	cfg.filtmethod        = 'lp';              % chooise low pass filter for pointskip
-	cfg.mem_available     = 16e9;              % memory available, in bytes
-	cfg.allowgpu          = true;              % allow GPU computations, if available
+    cfg = [];
+    cfg.m                 = 2;                 % pattern length
+    cfg.r                 = 0.5;               % similarity parameter
+    cfg.timwin            = 0.5;               % sliding window size
+    cfg.toi               = -0.5:0.05:1;       % set this according to your trial length
+    cfg.timescales        = 1:42;              % timescale list
+    cfg.recompute_r       = 'perscale_toi_sp'; % when to recompute similarity parameter
+    cfg.coarsegrainmethod = 'filtskip';        % pointavg or filtskip
+    cfg.filtmethod        = 'lp';              % chooise low pass filter for pointskip
+    cfg.mem_available     = 16e9;              % memory available, in bytes
+    cfg.allowgpu          = true;              % allow GPU computations, if available
 
 These settings define the following parameters in the computation:
 - `cfg.m` is the length of the data pattern that are being counted, consisting of `m` and `m+1` patterns. `cfg.m = 2` means that 2-element patterns are counted and compared with the number of 3-element patterns.
@@ -59,20 +59,20 @@ These settings define the following parameters in the computation:
 
 After defining the cfg structure, entropy analysis is then simply run as follows:
 
-	[mmse] = ft_entropyanalysis(cfg, data);
+    [mmse] = ft_entropyanalysis(cfg, data);
 
 The `mmse` output struct has the following fields:
 
 `mmse` =
 
-	    dimord: 'chan_timescales_time'     defines how the numeric data should be interpreted
-	    sampen: [48x42x26 double]          sample entropy
-	     label: {48x1 cell}                the channel labels
-	timescales: [1x42 double]              the timescales, expressed in ms
-	   fsample: [1x42 double]              data sampling rate at each coarse graining step (timescale)
-	      time: [1x26 double]              the time, expressed in seconds
-	         r: [48x42x26 double]          the boundary similarity parameter computed for each bin
-	       cfg: [1x1 struct]               the configuration used by the function that generated this data structure
+        dimord: 'chan_timescales_time'     defines how the numeric data should be interpreted
+        sampen: [48x42x26 double]          sample entropy
+         label: {48x1 cell}                the channel labels
+    timescales: [1x42 double]              the timescales, expressed in ms
+       fsample: [1x42 double]              data sampling rate at each coarse graining step (timescale)
+          time: [1x26 double]              the time, expressed in seconds
+             r: [48x42x26 double]          the boundary similarity parameter computed for each bin
+           cfg: [1x1 struct]               the configuration used by the function that generated this data structure
 
 The `mmse` struct is structurally comparable to a `freq` structure as obtained from **[ft_freqanalysis](/reference/ft_freqanalysis)**, with the following exceptions: `timescales` replaces the `frequency` field, indicating the timescales axis; `sampen` replaces the `powspctrm` field, containing the resulting sample entropy values; `fsample` indicates the sampling rate of the data at each coarsegraining step; `r` contains the r values computed at each channel-by-timescales-by-time location.
 
@@ -82,20 +82,19 @@ If, after computing mMSE, you would like to use the FieldTrip functions for plot
 
 Finally, it is also possible to run standard MSE analysis with our function. Standard MSE is computed across the complete timeseries at once so it has no time dimension. Furthermore, data is coarsened by averaging adjacent samples (point averaging). Finally, the r parameter is computed only once, instead of recomputed for each timescale. Please see the original MSE paper for details (**[Costa et al. 2002](https://doi.org/10.1103/PhysRevLett.89.068102.m)**).
 
-To run standard MSE analysis, define your cfg as follows:
+To run standard MSE analysis, define your `cfg` as follows:
 
-	cfg = [];
-	cfg.m                 = 2;                 		% pattern length
-	cfg.r                 = 0.5;               		% similarity parameter
-	cfg.timwin            = data.time{1}(end)-data.time{1}(1);   % Assuming 1 trial with continuous data
-	cfg.toi               = median(data.time{1});   % middle time point
-	cfg.timescales        = 1:42;              		% timescale list
-	cfg.recompute_r       = 'per_toi'; 				% use same similarity parameter across scales
-	cfg.coarsegrainmethod = 'pointavg';       		% pointavg original implementation
-	cfg.mem_available     = 16e9;              		% memory available, in bytes
-	cfg.allowgpu          = true;              		% allow GPU computations, if available
-	[mse] = ft_entropyanalysis(cfg, data);
- 
+    cfg = [];
+    cfg.m                 = 2;                         % pattern length
+    cfg.r                 = 0.5;                       % similarity parameter
+    cfg.timwin            = data.time{1}(end)-data.time{1}(1);   % Assuming 1 trial with continuous data
+    cfg.toi               = median(data.time{1});      % middle time point
+    cfg.timescales        = 1:42;                      % timescale list
+    cfg.recompute_r       = 'per_toi';                 % use same similarity parameter across scales
+    cfg.coarsegrainmethod = 'pointavg';                % pointavg original implementation
+    cfg.mem_available     = 16e9;                      % memory available, in bytes
+    cfg.allowgpu          = true;                      % allow GPU computations, if available
+    [mse] = ft_entropyanalysis(cfg, data);
 
 Please contact us via [@neuro_klooster](https://twitter.com/neuro_klooster) or kloosterman\[at\]mpib-berlin.mpg.de if you have questions or if you find bugs. You can also send us a Pull Request on the Github page.
 

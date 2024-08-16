@@ -585,7 +585,7 @@ func/sub-POM1FM0023671_task-rest_acq-MB8_run-1_bold.nii.gz  1900-01-01T18:57:57
 From the corresponding EMG `_events.tsv` we can get
 
 ```bash
-14.5752	0.0002	72877	Response	R  1
+14.5752    0.0002    72877    Response    R  1
 ```
 
 which indicates that the first scan (coded in the EMG recording as response event "R 1") starts 14.5752 seconds _after_ the start of EMG acquisition. The EMG can therefore be aligned with the wall-time clock by means of the MRI triggers

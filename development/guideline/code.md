@@ -316,7 +316,7 @@ Here is a list of MATLAB release dates; a complete list can be found on [Wikiped
 
 | version number | release name | release date |
 | -------------- | ------------ | ------------ |
-| MATLAB 9.9     | R2020b		| 17 Sep 2020 |
+| MATLAB 9.9     | R2020b       | 17 Sep 2020 |
 | MATLAB 9.8     | R2020a       | 19 Mar 2020 |
 | MATLAB 9.6     | R2019a       | 20 Mar 2019  |
 | MATLAB 9.5     | R2018b       | 12 Sep 2018  |

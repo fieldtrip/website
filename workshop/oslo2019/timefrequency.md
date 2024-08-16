@@ -211,16 +211,16 @@ _Figure: Topographic representation of relative power changes to baseline._
 
 This looks better! We can also plot the time-resolved activity using **[ft_singleplotTFR](/reference/ft_singleplotTFR)**. Let's choose the same central electrode as we used above for the power spectra:
 
-	cfg          = [];
-	cfg.colorbar = 'yes';
-	cfg.zlim     = 'maxabs';
-	cfg.ylim     = [10 Inf];  % plot alpha band upwards
-	cfg.layout   = 'natmeg_customized_eeg1005.lay';
-	cfg.channel  = 'EEG126';
+    cfg          = [];
+    cfg.colorbar = 'yes';
+    cfg.zlim     = 'maxabs';
+    cfg.ylim     = [10 Inf];  % plot alpha band upwards
+    cfg.layout   = 'natmeg_customized_eeg1005.lay';
+    cfg.channel  = 'EEG126';
 
-	figure;
-	ft_singleplotTFR(cfg, tfr_left);
-	title('Left hand reaction');
+    figure;
+    ft_singleplotTFR(cfg, tfr_left);
+    title('Left hand reaction');
 
 {% include image src="/assets/img/workshop/oslo2019/tfr_channel_left.png" %}
 

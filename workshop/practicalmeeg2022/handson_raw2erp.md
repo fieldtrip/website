@@ -119,15 +119,16 @@ In the section above, we have created a set of `trl` matrices, which contain, fo
       data_eeg       = ft_preprocessing(cfg);
 
       % this is what we can see in the BIDS channels.tsv file
-      % EEG061	HEOG	V	horizontaleog
-      % EEG062	VEOG	V	verticaleog
-      % EEG063	ECG  	V	cardiac
+      % EEG061    HEOG    V    horizontaleog
+      % EEG062    VEOG    V    verticaleog
+      % EEG063    ECG     V    cardiac
 
       % settings for EOG and ECG channels
       cfg.channel = {'EEG061' 'EEG062' 'EEG063'};
       cfg.demean  = 'yes';
       cfg.reref   = 'no';
       cfg.bpfilter = 'no';
+      
       % use a one-to-one montage to rename the channels, see FT_APPLY_MONTAGE
       cfg.montage.labelold = {'EEG061' 'EEG062' 'EEG063'};
       cfg.montage.labelnew = {'HEOG' 'VEOG' 'ECG'};
