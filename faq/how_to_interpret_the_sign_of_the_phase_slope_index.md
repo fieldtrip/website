@@ -13,43 +13,41 @@ Alternative to the answer above, if you're unsure what's going on, you can alway
 
 The following chunk of code provides data that would allow you to answer the above question yourself:
 
-	clear all;
- 	
-	% simulate some data
-	fsample = 1000;
-	nsample = fsample*30;
-	 
-	dat = randn(1,nsample+100);
-	 
-	data.trial{1}(1,:) = dat(1,1:nsample) + 0.1.*randn(1,nsample);
-	data.trial{1}(2,:) = dat(1,100+(1:nsample)) + 0.1.*randn(1,nsample);
-	data.time{1} = (1:nsample)./fsample;
-	data.label   = {'a';'b'}; % channel 2 is leading channel 1
-	 
-	figure;plot(data.time{1},data.trial{1}); xlim([0 1]);
-	 
-	% cut into 2 second snippets
-	cfg = [];
-	cfg.length = 2;
-	data = ft_redefinetrial(cfg, data);
-	 
-	% spectral decomposition
-	cfg = [];
-	cfg.method = 'mtmfft';
-	cfg.output = 'fourier';
-	cfg.tapsmofrq = 2;
-	cfg.foilim = [0 100];
-	freq = ft_freqanalysis(cfg, data);
-	 
-	% connectivity estimation
-	cfg = [];
-	cfg.method = 'psi';
-	cfg.bandwidth = 5;
-	psi = ft_connectivityanalysis(cfg, freq);
-	 
-	% visualization
-	cfg = [];
-	cfg.parameter = 'psispctrm';
-	ft_connectivityplot(cfg, psi);
-
-
+    clear all;
+    
+    % simulate some data
+    fsample = 1000;
+    nsample = fsample*30;
+     
+    dat = randn(1,nsample+100);
+     
+    data.trial{1}(1,:) = dat(1,1:nsample) + 0.1.*randn(1,nsample);
+    data.trial{1}(2,:) = dat(1,100+(1:nsample)) + 0.1.*randn(1,nsample);
+    data.time{1} = (1:nsample)./fsample;
+    data.label   = {'a';'b'}; % channel 2 is leading channel 1
+     
+    figure;plot(data.time{1},data.trial{1}); xlim([0 1]);
+     
+    % cut into 2 second snippets
+    cfg = [];
+    cfg.length = 2;
+    data = ft_redefinetrial(cfg, data);
+     
+    % spectral decomposition
+    cfg = [];
+    cfg.method = 'mtmfft';
+    cfg.output = 'fourier';
+    cfg.tapsmofrq = 2;
+    cfg.foilim = [0 100];
+    freq = ft_freqanalysis(cfg, data);
+     
+    % connectivity estimation
+    cfg = [];
+    cfg.method = 'psi';
+    cfg.bandwidth = 5;
+    psi = ft_connectivityanalysis(cfg, freq);
+     
+    % visualization
+    cfg = [];
+    cfg.parameter = 'psispctrm';
+    ft_connectivityplot(cfg, psi);

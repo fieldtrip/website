@@ -26,7 +26,7 @@ Specify the parameters of the two datasets.
     ntrials1   = 100;
     ntrials2   = 100;
     ntrials    = ntrials1 + ntrials2;
-	
+    
     % introduce a random phase difference between the two channels on each trial
     phaseFz = 2*pi * (zeros(1,ntrials)                      );
     phasePz = 2*pi * (zeros(1,ntrials) + 0.1*rand(1,ntrials));

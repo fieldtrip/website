@@ -67,10 +67,10 @@ The number of events are not necessarily matched. Under the assumption that a pa
       % right-aligned
       if nmin==numel(event_meg)
         event_asc = event_asc((end-nmin+1):end);
-	event_meg = event_meg(1:nmin);
+        event_meg = event_meg(1:nmin);
       else
         event_meg = event_meg((end-nmin+1):end);
-	event_asc = event_asc(1:nmin);
+        event_asc = event_asc(1:nmin);
       end
     end
 

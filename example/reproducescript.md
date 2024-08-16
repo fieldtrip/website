@@ -53,7 +53,7 @@ To show how the reproducescript functionality works, we apply it to a script fro
     cfg = [];
     avgFIC = ft_timelockanalysis(cfg, dataFIC);
 
-    % let's make a manual change to the data that is not caputured in the 	provenance
+    % let's make a manual change to the data that is not caputured in the provenance
     avgFIC.avg = avgFIC.avg * 1e15; % convert from T to fT
 
     % save time-locked data
