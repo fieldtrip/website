@@ -1,0 +1,61 @@
+articleids:
+- idtype: pmid
+  value: '39134592'
+- idtype: doi
+  value: 10.1038/s41598-024-69037-8
+- idtype: pmcid
+  value: PMC11319604
+authors:
+- authtype: Author
+  name: Krueger J
+- authtype: Author
+  name: Krauth R
+- authtype: Author
+  name: Reichert C
+- authtype: Author
+  name: Perdikis S
+- authtype: Author
+  name: Vogt S
+- authtype: Author
+  name: Huchtemann T
+- authtype: Author
+  name: Dürschmid S
+- authtype: Author
+  name: Sickert A
+- authtype: Author
+  name: Lamprecht J
+- authtype: Author
+  name: Huremovic A
+- authtype: Author
+  name: Görtler M
+- authtype: Author
+  name: Nasuto SJ
+- authtype: Author
+  name: Tsai IC
+- authtype: Author
+  name: Knight RT
+- authtype: Author
+  name: Hinrichs H
+- authtype: Author
+  name: Heinze HJ
+- authtype: Author
+  name: Lindquist S
+- authtype: Author
+  name: Sailer M
+- authtype: Author
+  name: Millán JD
+- authtype: Author
+  name: Sweeney-Reed CM
+epubdate: 2024 Aug 12
+fulljournalname: Scientific Reports
+issue: ''
+pages: '18700'
+pmclivedate: 2024/08/13
+printpubdate: ''
+pubdate: 2024 Aug 12
+sortdate: 2024/08/12 00:00
+source: Sci Rep
+title: Hebbian plasticity induced by temporally coincident BCI enhances post-stroke
+  motor recovery
+uid: '11319604'
+volume: '14'
