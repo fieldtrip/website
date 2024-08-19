@@ -241,6 +241,9 @@
 - name:  Time-frequency analysis of combined MEG/EEG data
   link:  /workshop/natmeg2014/timefrequency
 
+- name:  Time-frequency analysis using Hanning window, multitapers and wavelets
+  link:  /workshop/ni2_timefrequencyanalysis
+
 - name:  FieldTrip workshop in Oslo
   link:  /workshop/oslo2019
 
