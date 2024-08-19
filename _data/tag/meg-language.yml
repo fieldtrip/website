@@ -55,3 +55,6 @@
 - name:  Visual or manual artifact rejection
   link:  /tutorial/visual_artifact_rejection
 
+- name:  Time-frequency analysis using Hanning window, multitapers and wavelets
+  link:  /workshop/ni2_timefrequencyanalysis
+
