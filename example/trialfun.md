@@ -15,7 +15,7 @@ This trial-function should be a MATLAB function with the following function defi
 
 The configuration structure will contain the fields cfg.dataset, cfg.headerfile and cfg.datafile. If you want to pass additional information (e.g., trigger value), then you should do that in the sub-structure cfg.trialdef.xxx. The second output argument of the trialfun is optional, it will be added to the configuration if present (i.e. for later reference).
 
-Ensure that your trial function is available on the MATLAB path for it to be found by MATLAB and invoked by the call to **[ft_definetrial](/reference/ft_definetrial)**. 
+Ensure that your trial function is available on the MATLAB path for it to be found by MATLAB and invoked by the call to **[ft_definetrial](/reference/ft_definetrial)**.
 
 {% include markup/skyblue %}
 In the [fieldtrip/trialfun](https://github.com/fieldtrip/fieldtrip/tree/master/trialfun) directory you can find a number of example trial functions.
@@ -25,7 +25,7 @@ In the [fieldtrip/trialfun](https://github.com/fieldtrip/fieldtrip/tree/master/t
 
 ### Conditional on the trigger sequence
 
-This is an example for a trial function that detects trigger code 7, followed by trigger code 64. 
+This is an example for a trial function that detects trigger code 7, followed by trigger code 64.
 
     function [trl, event] = trialfun_conditionaltrigger(cfg);
 
@@ -145,7 +145,7 @@ followed by
 
 ### Rising flank of a TTL trigger
 
-The example scripts assume that the event is marked by an 'up' flank in the recorded signal (e.g., by virtue of an increase in light on the photodiode transducer). Downward going flanks can also be detected by specifying cfg.detectflank = 'down'. The trigger threshold can be a hard threshold, i.e., numeric, or flexibly defined by an executable string, for example to calculate the 'median' of the analog signal. 
+The example scripts assume that the event is marked by an 'up' flank in the recorded signal (e.g., by virtue of an increase in light on the photodiode transducer). Downward going flanks can also be detected by specifying cfg.detectflank = 'down'. The trigger threshold can be a hard threshold, i.e., numeric, or flexibly defined by an executable string, for example to calculate the 'median' of the analog signal.
 
 In this example, we define a 'segment' or 'trial' as one second preceding this trigger until 2 seconds thereafter:
 
