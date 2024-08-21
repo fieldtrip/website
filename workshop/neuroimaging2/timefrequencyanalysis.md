@@ -1,11 +1,11 @@
 ---
-title: SPED4: Time-frequency analysis in practice using FieldTrip
+title: (SPED4) Time-frequency analysis in practice using FieldTrip
 tags: [ni2]
 redirect_from:
   - /workshop/ni2_timefrequencyanalysis/
 ---
 
-# SPED4: Time-frequency analysis in practice using FieldTrip
+# (SPED4) Time-frequency analysis in practice using FieldTrip
 
 ## Introduction
 
