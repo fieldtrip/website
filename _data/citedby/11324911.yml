@@ -1,0 +1,38 @@
+articleids:
+- idtype: pmid
+  value: '39143083'
+- idtype: doi
+  value: 10.1038/s41467-024-51443-1
+- idtype: pmcid
+  value: PMC11324911
+authors:
+- authtype: Author
+  name: Huang Y
+- authtype: Author
+  name: Zelmann R
+- authtype: Author
+  name: Hadar P
+- authtype: Author
+  name: Dezha-Peralta J
+- authtype: Author
+  name: Richardson RM
+- authtype: Author
+  name: Williams ZM
+- authtype: Author
+  name: Cash SS
+- authtype: Author
+  name: Keller CJ
+- authtype: Author
+  name: Paulk AC
+epubdate: 2024 Aug 14
+fulljournalname: Nature Communications
+issue: ''
+pages: '6982'
+pmclivedate: 2024/08/15
+printpubdate: ''
+pubdate: 2024 Aug 14
+sortdate: 2024/08/14 00:00
+source: Nat Commun
+title: Theta-burst direct electrical stimulation remodels human brain networks
+uid: '11324911'
+volume: '15'

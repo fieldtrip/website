@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '39152203'
+- idtype: doi
+  value: 10.1038/s41598-024-70027-z
+- idtype: pmcid
+  value: PMC11329743
+authors:
+- authtype: Author
+  name: Zioga I
+- authtype: Author
+  name: Harrison PM
+- authtype: Author
+  name: Pearce M
+- authtype: Author
+  name: Bhattacharya J
+- authtype: Author
+  name: Di Bernardi Luft C
+epubdate: 2024 Aug 16
+fulljournalname: Scientific Reports
+issue: ''
+pages: '19048'
+pmclivedate: 2024/08/17
+printpubdate: ''
+pubdate: 2024 Aug 16
+sortdate: 2024/08/16 00:00
+source: Sci Rep
+title: The association between liking, learning and creativity in music
+uid: '11329743'
+volume: '14'
