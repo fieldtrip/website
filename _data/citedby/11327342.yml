@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '39147788'
+- idtype: doi
+  value: 10.1038/s41597-024-03768-1
+- idtype: pmcid
+  value: PMC11327342
+authors:
+- authtype: Author
+  name: Rassoulou F
+- authtype: Author
+  name: Steina A
+- authtype: Author
+  name: Hartmann CJ
+- authtype: Author
+  name: Vesper J
+- authtype: Author
+  name: Butz M
+- authtype: Author
+  name: Schnitzler A
+- authtype: Author
+  name: Hirschmann J
+epubdate: 2024 Aug 15
+fulljournalname: Scientific Data
+issue: ''
+pages: '889'
+pmclivedate: 2024/08/16
+printpubdate: ''
+pubdate: 2024 Aug 15
+sortdate: 2024/08/15 00:00
+source: Sci Data
+title: Exploring the electrophysiology of Parkinson’s disease with magnetoencephalography
+  and deep brain recordings
+uid: '11327342'
+volume: '11'

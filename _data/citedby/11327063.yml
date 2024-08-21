@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '39156825'
+- idtype: doi
+  value: 10.3389/fphys.2024.1446868
+- idtype: pmcid
+  value: PMC11327063
+authors:
+- authtype: Author
+  name: Orphanides GA
+- authtype: Author
+  name: Karittevlis C
+- authtype: Author
+  name: Alsadder L
+- authtype: Author
+  name: Ioannides AA
+epubdate: 2024 Aug 2
+fulljournalname: Frontiers in Physiology
+issue: ''
+pages: '1446868'
+pmclivedate: 2024/08/16
+printpubdate: ''
+pubdate: 2024 Aug 2
+sortdate: 2024/08/02 00:00
+source: Front Physiol
+title: Using spectral continuity to extract breathing rate from heart rate and its
+  applications in sleep physiology
+uid: '11327063'
+volume: '15'

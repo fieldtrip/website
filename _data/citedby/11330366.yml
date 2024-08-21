@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '38715221'
+- idtype: doi
+  value: 10.1111/psyp.14602
+- idtype: pmcid
+  value: PMC11330366
+- idtype: MID
+  value: NIHMS1990197
+authors:
+- authtype: Author
+  name: Wynn SC
+- authtype: Author
+  name: Townsend CD
+- authtype: Author
+  name: Nyhus E
+epubdate: 2024 May 7
+fulljournalname: Psychophysiology
+issue: '9'
+pages: e14602
+pmclivedate: ''
+printpubdate: 2024 Sep
+pubdate: 2024 May 7
+sortdate: 2024/05/07 00:00
+source: Psychophysiology
+title: The role of theta and gamma oscillations in item memory, source memory, and
+  memory confidence
+uid: '11330366'
+volume: '61'
