@@ -186,7 +186,7 @@ For the FieldTrip website you have to do
 
 {% endraw %}
 
-Please keep images in `assets/img` with subdirectories according to the place where the image appears. The preferred filename is `figureXX.png`, with XX being the sequential number of the image appearing on the page. The preferred format for screenshots is png. The preferred format for photos is jpg. Do not crosslink to figures from another tutorial or example, but copy that figure over (otherwise changes to the original page with the figure might break the page that crosslinks to the figure). 
+Please keep images in `assets/img` with subdirectories according to the place where the image appears. The preferred filename is `figureXX.png`, with XX being the sequential number of the image appearing on the page. The preferred format for screenshots is png. The preferred format for photos is jpg. Do not cross-link to figures from another tutorial or example, but copy that figure over (otherwise changes to the original page with the figure might break the page that cross-links to the figure). 
 
 ## Pdf documents
 

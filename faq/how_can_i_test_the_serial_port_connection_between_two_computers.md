@@ -5,7 +5,7 @@ tags: [faq, realtime]
 
 # What kind of cable do I need for a serial port connection between two computers?
 
-For the type of connection we are talking about here, you need a so called 'null modem cable'. [A null modem cable is an RS-232 serial cable where the transmit and receive lines are crosslinked.](https://en.wikipedia.org/wiki/Null_modem)
+For the type of connection we are talking about here, you need a so called 'null modem cable'. [A null modem cable is an RS-232 serial cable where the transmit and receive lines are cross-linked.](https://en.wikipedia.org/wiki/Null_modem)
 
 ## How can I test the serial port connection between two computers?
 
