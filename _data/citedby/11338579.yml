@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '39137890'
+- idtype: doi
+  value: 10.1098/rspb.2024.0865
+- idtype: pmcid
+  value: PMC11338579
+authors:
+- authtype: Author
+  name: Billington J
+- authtype: Author
+  name: Hassall C
+- authtype: Author
+  name: Craddock M
+epubdate: 2024 Aug 14
+fulljournalname: 'Proceedings of the Royal Society B: Biological Sciences'
+issue: '2028'
+pages: '20240865'
+pmclivedate: 2024/08/21
+printpubdate: ''
+pubdate: 2024 Aug 14
+sortdate: 2024/08/14 00:00
+source: Proc Biol Sci
+title: Camouflage patterning modulates neural signatures of attention and decision-making
+uid: '11338579'
+volume: '291'

@@ -1,0 +1,28 @@
+articleids:
+- idtype: pmid
+  value: '38409458'
+- idtype: doi
+  value: 10.3758/s13428-023-02331-x
+- idtype: pmcid
+  value: PMC11335833
+authors:
+- authtype: Author
+  name: Nunez MD
+- authtype: Author
+  name: Fernandez K
+- authtype: Author
+  name: Srinivasan R
+- authtype: Author
+  name: Vandekerckhove J
+epubdate: 2024 Feb 26
+fulljournalname: Behavior Research Methods
+issue: '6'
+pages: 6020-6050
+pmclivedate: 2024/08/22
+printpubdate: '2024'
+pubdate: 2024 Feb 26
+sortdate: 2024/02/26 00:00
+source: Behav Res Methods
+title: A tutorial on fitting joint models of M/EEG and behavior to understand cognition
+uid: '11335833'
+volume: '56'
