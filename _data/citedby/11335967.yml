@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '39122554'
+- idtype: doi
+  value: 10.1523/ENEURO.0122-24.2024
+- idtype: pmcid
+  value: PMC11335967
+authors:
+- authtype: Author
+  name: García-Lázaro HG
+- authtype: Author
+  name: Teng S
+epubdate: 2024 Aug 16
+fulljournalname: eNeuro
+issue: '8'
+pages: ENEURO.0122-24.2024
+pmclivedate: 2024/08/21
+printpubdate: ''
+pubdate: 2024 Aug 16
+sortdate: 2024/08/16 00:00
+source: eNeuro
+title: Sensory and Perceptual Decisional Processes Underlying the Perception of Reverberant
+  Auditory Environments
+uid: '11335967'
+volume: '11'

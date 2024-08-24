@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '39164318'
+- idtype: doi
+  value: 10.1038/s41598-024-69433-0
+- idtype: pmcid
+  value: PMC11336227
+authors:
+- authtype: Author
+  name: Jaap C
+- authtype: Author
+  name: Rose M
+epubdate: 2024 Aug 20
+fulljournalname: Scientific Reports
+issue: ''
+pages: '19263'
+pmclivedate: 2024/08/21
+printpubdate: ''
+pubdate: 2024 Aug 20
+sortdate: 2024/08/20 00:00
+source: Sci Rep
+title: Relevance of pre-stimulus oscillatory activity for the perceived valence of
+  emotional facial expressions
+uid: '11336227'
+volume: '14'
