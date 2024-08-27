@@ -200,7 +200,7 @@ The decomposed data structure `data_comp` represents the topographies of the com
 
 {% include image src="/assets/img/tutorial/ica_artifact_cleaning/figure4.png" width="600" %}
 
-With some experience, you can relatively quickly identify components that are suspect for artifacts. Eye-related components are spatially localized on the frontal channels, blinks and vertical saccades are symmetric and horizontal saccades show a distinct left-right pattern. Heart-related components in MEG show up as avery deep source with a bipolar projecting over the left and right side of the helmet. It is common for both eye and heart components that you will see a few of them. You may want to write down the number of each of the suspect components.
+With some experience, you can relatively quickly identify components that are suspect for artifacts. Eye-related components are spatially localized on the frontal channels, blinks and vertical saccades are symmetric and horizontal saccades show a distinct left-right pattern. Heart-related components in MEG show up as a very deep source with a bipolar projecting over the left and right side of the helmet. It is common for both eye and heart components that you will see a few of them. You may want to write down the number of each of the suspect components.
 
 In the figure above, components 10 and 12 look like eye-related components. Component 5 and 6 probably still relate to the SQUID jumps on MLT24 and neighbouring channels. In this case there are no obvous heart-related component visible
 
