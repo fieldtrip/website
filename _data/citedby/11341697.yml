@@ -1,0 +1,42 @@
+articleids:
+- idtype: pmid
+  value: '39174504'
+- idtype: doi
+  value: 10.1038/s41467-024-51070-w
+- idtype: pmcid
+  value: PMC11341697
+authors:
+- authtype: Author
+  name: Mitsuhashi M
+- authtype: Author
+  name: Yamaguchi R
+- authtype: Author
+  name: Kawasaki T
+- authtype: Author
+  name: Ueno S
+- authtype: Author
+  name: Sun Y
+- authtype: Author
+  name: Isa K
+- authtype: Author
+  name: Takahashi J
+- authtype: Author
+  name: Kobayashi K
+- authtype: Author
+  name: Onoe H
+- authtype: Author
+  name: Takahashi R
+- authtype: Author
+  name: Isa T
+epubdate: 2024 Aug 22
+fulljournalname: Nature Communications
+issue: ''
+pages: '6762'
+pmclivedate: 2024/08/23
+printpubdate: ''
+pubdate: 2024 Aug 22
+sortdate: 2024/08/22 00:00
+source: Nat Commun
+title: Stage-dependent role of interhemispheric pathway for motor recovery in primates
+uid: '11341697'
+volume: '15'

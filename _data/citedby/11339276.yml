@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '39169024'
+- idtype: doi
+  value: 10.1038/s41467-024-51543-y
+- idtype: pmcid
+  value: PMC11339276
+authors:
+- authtype: Author
+  name: Nigam T
+- authtype: Author
+  name: Schwiedrzik CM
+epubdate: 2024 Aug 21
+fulljournalname: Nature Communications
+issue: ''
+pages: '7196'
+pmclivedate: 2024/08/22
+printpubdate: ''
+pubdate: 2024 Aug 21
+sortdate: 2024/08/21 00:00
+source: Nat Commun
+title: Predictions enable top-down pattern separation in the macaque face-processing
+  hierarchy
+uid: '11339276'
+volume: '15'

@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '39184997'
+- idtype: doi
+  value: 10.3389/fninf.2024.1415512
+- idtype: pmcid
+  value: PMC11341374
+authors:
+- authtype: Author
+  name: Cox R
+- authtype: Author
+  name: Weber FD
+- authtype: Author
+  name: Van Someren EJ
+epubdate: 2024 Aug 9
+fulljournalname: Frontiers in Neuroinformatics
+issue: ''
+pages: '1415512'
+pmclivedate: 2024/08/23
+printpubdate: ''
+pubdate: 2024 Aug 9
+sortdate: 2024/08/09 00:00
+source: Front Neuroinform
+title: Customizable automated cleaning of multichannel sleep EEG in SleepTrip
+uid: '11341374'
+volume: '18'

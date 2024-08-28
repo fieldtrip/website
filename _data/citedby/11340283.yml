@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '39048314'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.2039-23.2024
+- idtype: pmcid
+  value: PMC11340283
+authors:
+- authtype: Author
+  name: Khoshnoud S
+- authtype: Author
+  name: Leitritz D
+- authtype: Author
+  name: Çinar Bozdağ M
+- authtype: Author
+  name: Alvarez Igarzábal F
+- authtype: Author
+  name: Noreika V
+- authtype: Author
+  name: Wittmann M
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '34'
+pages: e2039232024
+pmclivedate: ''
+printpubdate: 2024 Aug 21
+pubdate: 2024 Aug 21
+sortdate: 2024/08/21 00:00
+source: J Neurosci
+title: 'When the Heart Meets the Mind: Exploring the Brain–Heart Interaction during
+  Time Perception'
+uid: '11340283'
+volume: '44'

@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1038/s41398-024-03038-z
+- idtype: pmcid
+  value: PMC11344772
+authors:
+- authtype: Author
+  name: Dal Bò E
+- authtype: Author
+  name: Cecchetto C
+- authtype: Author
+  name: Callara AL
+- authtype: Author
+  name: Greco A
+- authtype: Author
+  name: Mura F
+- authtype: Author
+  name: Vanello N
+- authtype: Author
+  name: Di Francesco F
+- authtype: Author
+  name: Scilingo EP
+- authtype: Author
+  name: Gentili C
+epubdate: 2024 Aug 24
+fulljournalname: Translational Psychiatry
+issue: ''
+pages: '342'
+pmclivedate: 2024/08/25
+printpubdate: ''
+pubdate: 2024 Aug 24
+sortdate: 2024/08/24 00:00
+source: Transl Psychiatry
+title: 'Emotion perception through the nose: how olfactory emotional cues modulate
+  the perception of neutral facial expressions in affective disorders'
+uid: '11344772'
+volume: '14'
