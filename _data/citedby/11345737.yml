@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1177/23312165241266316
+- idtype: pmcid
+  value: PMC11345737
+authors:
+- authtype: Author
+  name: MacIntyre AD
+- authtype: Author
+  name: Carlyon RP
+- authtype: Author
+  name: Goehring T
+epubdate: 2024 Aug 25
+fulljournalname: Trends in Hearing
+issue: ''
+pages: '23312165241266316'
+pmclivedate: 2024/08/26
+printpubdate: ''
+pubdate: 2024 Aug 25
+sortdate: 2024/08/25 00:00
+source: Trends Hear
+title: 'Neural Decoding of the Speech Envelope: Effects of Intelligibility and Spectral
+  Degradation'
+uid: '11345737'
+volume: '28'

@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1002/hbm.26779
+- idtype: pmcid
+  value: PMC11345702
+authors:
+- authtype: Author
+  name: Costa GN
+- authtype: Author
+  name: Schaum M
+- authtype: Author
+  name: Duarte JV
+- authtype: Author
+  name: Martins R
+- authtype: Author
+  name: Duarte IC
+- authtype: Author
+  name: Castelhano J
+- authtype: Author
+  name: Wibral M
+- authtype: Author
+  name: Castelo‐Branco M
+epubdate: 2024 Aug 26
+fulljournalname: Human Brain Mapping
+issue: '12'
+pages: e26779
+pmclivedate: 2024/08/26
+printpubdate: ''
+pubdate: 2024 Aug 26
+sortdate: 2024/08/26 00:00
+source: Hum Brain Mapp
+title: Distinct oscillatory patterns differentiate between segregation and integration
+  processes in perceptual grouping
+uid: '11345702'
+volume: '45'
