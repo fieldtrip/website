@@ -1,0 +1,29 @@
+articleids:
+- idtype: pmid
+  value: '39136991'
+- idtype: doi
+  value: 10.1073/pnas.2411167121
+- idtype: pmcid
+  value: PMC11348099
+authors:
+- authtype: Author
+  name: Zoefel B
+- authtype: Author
+  name: Abbasi O
+- authtype: Author
+  name: Gross J
+- authtype: Author
+  name: Kotz SA
+epubdate: 2024 Aug 13
+fulljournalname: Proceedings of the National Academy of Sciences of the United States
+  of America
+issue: '34'
+pages: e2411167121
+pmclivedate: ''
+printpubdate: 2024 Aug 20
+pubdate: 2024 Aug 13
+sortdate: 2024/08/13 00:00
+source: Proc Natl Acad Sci U S A
+title: Entrainment echoes in the cerebellum
+uid: '11348099'
+volume: '121'
