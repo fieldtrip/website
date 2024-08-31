@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '39126820'
+- idtype: doi
+  value: 10.1016/j.dcn.2024.101433
+- idtype: pmcid
+  value: PMC11350249
+authors:
+- authtype: Author
+  name: Vandewouw MM
+- authtype: Author
+  name: Sato J
+- authtype: Author
+  name: Safar K
+- authtype: Author
+  name: Rhodes N
+- authtype: Author
+  name: Taylor MJ
+epubdate: 2024 Aug 10
+fulljournalname: Developmental Cognitive Neuroscience
+issue: ''
+pages: '101433'
+pmclivedate: 2024/08/28
+printpubdate: ''
+pubdate: 2024 Aug 10
+sortdate: 2024/08/10 00:00
+source: Dev Cogn Neurosci
+title: 'The development of aperiodic and periodic resting-state power between early
+  childhood and adulthood: New insights from optically pumped magnetometers'
+uid: '11350249'
+volume: '69'

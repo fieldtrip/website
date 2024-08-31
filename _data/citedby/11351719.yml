@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '39194514'
+- idtype: doi
+  value: 10.3390/biology13080576
+- idtype: pmcid
+  value: PMC11351719
+authors:
+- authtype: Author
+  name: Greco A
+- authtype: Author
+  name: D’Alessandro M
+- authtype: Author
+  name: Gallitto G
+- authtype: Author
+  name: Rastelli C
+- authtype: Author
+  name: Braun C
+- authtype: Author
+  name: Caria A
+epubdate: 2024 Jul 30
+fulljournalname: Biology
+issue: '8'
+pages: '576'
+pmclivedate: 2024/08/29
+printpubdate: ''
+pubdate: 2024 Jul 30
+sortdate: 2024/07/30 00:00
+source: Biology (Basel)
+title: Statistical Learning of Incidental Perceptual Regularities Induces Sensory
+  Conditioned Cortical Responses
+uid: '11351719'
+volume: '13'
