@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '38940724'
+- idtype: doi
+  value: 10.1162/jocn_a_02203
+- idtype: pmcid
+  value: PMC11324249
+authors:
+- authtype: Author
+  name: Kandemir G
+- authtype: Author
+  name: Olivers C
+epubdate: 2024 Sep 1
+fulljournalname: Journal of Cognitive Neuroscience
+issue: '9'
+pages: 1807-1826
+pmclivedate: 2024/08/31
+printpubdate: ''
+pubdate: 2024 Sep 1
+sortdate: 2024/09/01 00:00
+source: J Cogn Neurosci
+title: Comparing Neural Correlates of Memory Encoding and Maintenance for Foveal and
+  Peripheral Stimuli
+uid: '11324249'
+volume: '36'

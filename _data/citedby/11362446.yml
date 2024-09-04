@@ -1,0 +1,35 @@
+articleids:
+- idtype: pmid
+  value: '38773029'
+- idtype: doi
+  value: 10.3758/s13428-024-02421-4
+- idtype: pmcid
+  value: PMC11362446
+authors:
+- authtype: Author
+  name: Rutkowska JM
+- authtype: Author
+  name: Ghilardi T
+- authtype: Author
+  name: Vacaru SV
+- authtype: Author
+  name: van Schaik JE
+- authtype: Author
+  name: Meyer M
+- authtype: Author
+  name: Hunnius S
+- authtype: Author
+  name: Oostenveld R
+epubdate: 2024 May 21
+fulljournalname: Behavior Research Methods
+issue: '7'
+pages: 7331-7344
+pmclivedate: 2024/08/31
+printpubdate: '2024'
+pubdate: 2024 May 21
+sortdate: 2024/05/21 00:00
+source: Behav Res Methods
+title: 'Optimal processing of surface facial EMG to identify emotional expressions:
+  A data-driven approach'
+uid: '11362446'
+volume: '56'
