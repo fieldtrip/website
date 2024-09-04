@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '39215169'
+- idtype: doi
+  value: 10.1038/s41598-024-71219-3
+- idtype: pmcid
+  value: PMC11364843
+authors:
+- authtype: Author
+  name: Ryu S
+- authtype: Author
+  name: Gwon D
+- authtype: Author
+  name: Park C
+- authtype: Author
+  name: Ha Y
+- authtype: Author
+  name: Ahn M
+epubdate: 2024 Aug 30
+fulljournalname: Scientific Reports
+issue: ''
+pages: '20188'
+pmclivedate: 2024/08/31
+printpubdate: ''
+pubdate: 2024 Aug 30
+sortdate: 2024/08/30 00:00
+source: Sci Rep
+title: Resting-state frontal electroencephalography (EEG) biomarkers for detecting
+  the severity of chronic neuropathic pain
+uid: '11364843'
+volume: '14'

@@ -1,0 +1,40 @@
+articleids:
+- idtype: pmid
+  value: '39209979'
+- idtype: doi
+  value: 10.1038/s42003-024-06587-7
+- idtype: pmcid
+  value: PMC11362492
+authors:
+- authtype: Author
+  name: Bonetti L
+- authtype: Author
+  name: Fernández-Rubio G
+- authtype: Author
+  name: Lumaca M
+- authtype: Author
+  name: Carlomagno F
+- authtype: Author
+  name: Risgaard Olsen E
+- authtype: Author
+  name: Criscuolo A
+- authtype: Author
+  name: Kotz SA
+- authtype: Author
+  name: Vuust P
+- authtype: Author
+  name: Brattico E
+- authtype: Author
+  name: Kringelbach ML
+epubdate: 2024 Aug 29
+fulljournalname: Communications Biology
+issue: ''
+pages: '1036'
+pmclivedate: 2024/08/30
+printpubdate: ''
+pubdate: 2024 Aug 29
+sortdate: 2024/08/29 00:00
+source: Commun Biol
+title: Age-related neural changes underlying long-term recognition of musical sequences
+uid: '11362492'
+volume: '7'
