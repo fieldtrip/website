@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1002/hbm.70009
+- idtype: pmcid
+  value: PMC11345635
+authors:
+- authtype: Author
+  name: Yilmaz SK
+- authtype: Author
+  name: Kafaligonul H
+epubdate: 2024 Aug 26
+fulljournalname: Human Brain Mapping
+issue: '12'
+pages: e70009
+pmclivedate: 2024/08/26
+printpubdate: ''
+pubdate: 2024 Aug 26
+sortdate: 2024/08/26 00:00
+source: Hum Brain Mapp
+title: Attentional demands in the visual field modulate audiovisual interactions in
+  the temporal domain
+uid: '11345635'
+volume: '45'

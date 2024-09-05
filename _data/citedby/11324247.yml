@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '38820555'
+- idtype: doi
+  value: 10.1162/jocn_a_02194
+- idtype: pmcid
+  value: PMC11324247
+authors:
+- authtype: Author
+  name: Fulvio JM
+- authtype: Author
+  name: Haegens S
+- authtype: Author
+  name: Postle BR
+epubdate: 2024 Sep 1
+fulljournalname: Journal of Cognitive Neuroscience
+issue: '9'
+pages: 1827-1846
+pmclivedate: 2024/08/31
+printpubdate: ''
+pubdate: 2024 Sep 1
+sortdate: 2024/09/01 00:00
+source: J Cogn Neurosci
+title: Single-pulse Transcranial Magnetic Stimulation Affects Working-memory Performance
+  via Posterior Beta-band Oscillations
+uid: '11324247'
+volume: '36'

@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '39106531'
+- idtype: doi
+  value: 10.1016/j.ebiom.2024.105259
+- idtype: pmcid
+  value: PMC11347073
+authors:
+- authtype: Author
+  name: Bomatter P
+- authtype: Author
+  name: Paillard J
+- authtype: Author
+  name: Garces P
+- authtype: Author
+  name: Hipp J
+- authtype: Author
+  name: Engemann DA
+epubdate: 2024 Aug 5
+fulljournalname: eBioMedicine
+issue: ''
+pages: '105259'
+pmclivedate: 2024/08/26
+printpubdate: ''
+pubdate: 2024 Aug 5
+sortdate: 2024/08/05 00:00
+source: eBioMedicine
+title: Machine learning of brain-specific biomarkers from EEG
+uid: '11347073'
+volume: '106'
