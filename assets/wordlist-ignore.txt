@@ -41,6 +41,7 @@ Afectiva
 Ageing
 Agostinho
 Aiguier
+Aina
 Aine
 Aix
 Akaike
@@ -86,6 +87,7 @@ ArtifactMEG
 ArtifactRemoval
 Artinis
 Aruliah
+Arvaneh
 Arzounian
 Arzounian's
 AtlasViewer
@@ -928,6 +930,7 @@ Jichai
 Jinbo
 Jinga
 Jinwoo
+Jirsa
 Joachim
 JobI
 Joern
@@ -1169,6 +1172,7 @@ Magnetostatics
 Magstim
 Magventure
 Magyari
+Mahnaz
 Makefile
 Makefiles
 Makeig
@@ -1430,6 +1434,7 @@ Rig
 Sofie
 Spotify
 TRFs
+Viktor
 appenddim
 appendsource
 attL
@@ -1443,6 +1448,7 @@ nonsym
 paxinos
 scandip
 sym
+symposia
 triaxial
 uncor
 
