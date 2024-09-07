@@ -1,0 +1,53 @@
+articleids:
+- idtype: pmid
+  value: '38874456'
+- idtype: doi
+  value: 10.1093/brain/awae189
+- idtype: pmcid
+  value: PMC11370787
+authors:
+- authtype: Author
+  name: Doss DJ
+- authtype: Author
+  name: Shless JS
+- authtype: Author
+  name: Bick SK
+- authtype: Author
+  name: Makhoul GS
+- authtype: Author
+  name: Negi AS
+- authtype: Author
+  name: Bibro CE
+- authtype: Author
+  name: Rashingkar R
+- authtype: Author
+  name: Gummadavelli A
+- authtype: Author
+  name: Chang C
+- authtype: Author
+  name: Gallagher MJ
+- authtype: Author
+  name: Naftel RP
+- authtype: Author
+  name: Reddy SB
+- authtype: Author
+  name: Williams Roberson S
+- authtype: Author
+  name: Morgan VL
+- authtype: Author
+  name: Johnson GW
+- authtype: Author
+  name: Englot DJ
+epubdate: 2024 Jun 14
+fulljournalname: Brain
+issue: '9'
+pages: 3009-3017
+pmclivedate: 2024/09/04
+printpubdate: ''
+pubdate: 2024 Jun 14
+sortdate: 2024/06/14 00:00
+source: Brain
+title: The interictal suppression hypothesis is the dominant differentiator of seizure
+  onset zones in focal epilepsy
+uid: '11370787'
+volume: '147'

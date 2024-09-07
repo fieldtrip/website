@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '39229492'
+- idtype: doi
+  value: 10.1093/braincomms/fcae259
+- idtype: pmcid
+  value: PMC11369826
+authors:
+- authtype: Author
+  name: Cockx HM
+- authtype: Author
+  name: Oostenveld R
+- authtype: Author
+  name: Flórez R YA
+- authtype: Author
+  name: Bloem BR
+- authtype: Author
+  name: Cameron IG
+- authtype: Author
+  name: van Wezel RJ
+epubdate: 2024 Aug 2
+fulljournalname: Brain Communications
+issue: '5'
+pages: fcae259
+pmclivedate: 2024/09/03
+printpubdate: ''
+pubdate: 2024 Aug 2
+sortdate: 2024/08/02 00:00
+source: Brain Commun
+title: Freezing of gait in Parkinson's disease is related to imbalanced stopping–related
+  cortical activity
+uid: '11369826'
+volume: '6'

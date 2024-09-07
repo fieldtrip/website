@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '39229485'
+- idtype: doi
+  value: 10.1093/braincomms/fcae283
+- idtype: pmcid
+  value: PMC11369931
+authors:
+- authtype: Author
+  name: García-Colomo A
+- authtype: Author
+  name: López-Sanz D
+- authtype: Author
+  name: Stam CJ
+- authtype: Author
+  name: Hillebrand A
+- authtype: Author
+  name: Carrasco-Gómez M
+- authtype: Author
+  name: Spuch C
+- authtype: Author
+  name: Comis-Tuche M
+- authtype: Author
+  name: Maestú F
+epubdate: 2024 Aug 20
+fulljournalname: Brain Communications
+issue: '5'
+pages: fcae283
+pmclivedate: 2024/09/03
+printpubdate: ''
+pubdate: 2024 Aug 20
+sortdate: 2024/08/20 00:00
+source: Brain Commun
+title: Minimum spanning tree analysis of unimpaired individuals at risk of Alzheimer’s
+  disease
+uid: '11369931'
+volume: '6'
