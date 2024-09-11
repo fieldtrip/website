@@ -209,7 +209,7 @@ Having computed the TFR, we want to visualise it. However, we computed the singl
     cfg.baseline = [-inf -0.1];
     cfg.baselinetype = 'relative';
     cfg.showlabels = 'no';
-    cfg.layout = '4D248.lay';
+    cfg.layout = '4d248.lay';
     % cfg.zlim = [0 2];
 
     figure('name', 'LEFT HAND')
@@ -231,7 +231,7 @@ We can also compute the difference between the power in the left and right-hand 
     tfr_diff = ft_math(cfg, tfr_lh_pow, tfr_rh_pow);
 
     cfg = [];
-    cfg.layout = '4D248.lay';
+    cfg.layout = '4d248.lay';
     cfg.zlim = 'maxabs';
     figure('name', 'DIFFERENCE')
     ft_multiplotTFR(cfg, tfr_diff);
@@ -247,7 +247,7 @@ Another way of looking at the dynamics in this channel-time-frequency representa
     figure;
     cfg = [];
     cfg.zlim = 'maxabs';
-    cfg.layout = '4D248.lay';
+    cfg.layout = '4d248.lay';
     ft_movieplotTFR(cfg, tfr_diff);
 
 {% include image src="/assets/img/workshop/chieti2015/virtualchannel/screen_shot_2015-09-17_at_09.39.27.png" width="500" %}
@@ -408,7 +408,7 @@ Rather than continuing in the frequency domain at a specific frequency, we will 
 Let's look at the distribution of the movement-locked ER
 
     cfg = [];
-    cfg.layout = '4D248.lay';
+    cfg.layout = '4d248.lay';
     figure
     ft_multiplotER(cfg, timelock_rh);
 
