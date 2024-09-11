@@ -21,7 +21,9 @@ The research question that we will address in this tutorial is whether pre-contr
 
 A successful analysis of EEG signals requires clean data. That is non-trivial for EEG in general, but the TMS induced artifacts make it an even bigger challenge. As with all other artifacts, prevention is better than cure. In combined TMS-EEG experiments it is however unavoidable that some TMS artifacts appear in your data. The use of proper equipment (amplifiers, electrodes, etc) and fine-tuning of acquisition settings can help reduce the artifacts and facilitate the analysis. However, optimizing the acquisition is not the topic of this tutorial; please see the 'suggested reading' section at the end for more information on this.
 
-### Dataset Information
+### The dataset used for this tutorial
+
+The data used in this tutorial is avaialble from our [download server](https://download.fieldtriptoolbox.org/tutorial/tms/) where you can find a single-pulse dataset (used here) and a paired-pulse dataset.
 
 **Measurement:** The data were recorded using two 32-channel TMS-compatible BrainAmp DC Amplifiers (BrainProducts) connected to a 61 channel TMS-compatible EEG cap (EasyCap). Sampling was done at 5kHz with a 1kHz cut-off frequency and with 0.1 microvolt/bit resolution. Please click on the image below for an enlarged image of the [equidistant 61-channel arrangement](/template/layout#triangulated_equidistant_arrangements).
 
@@ -34,18 +36,18 @@ The coil position was determined by finding the motor hotspot. The stimulation l
 **Event markers:** An event was placed at the onset of each TMS-pulse indicating the condition. 'S 1' represents the 'Relax' condition and 'S 3' represents the 'Contract' condition.
 
 {% include markup/yellow %}
-** Memory Issues **
+**Memory Issues**
 
 In TMS-EEG research we are often dealing with large datasets due to high sampling rates and lengthy recording sessions. It is therefore quite common that data structures loaded into MATLAB's memory are multiple gigabytes in size.
 
-The maximum size a MATLAB array can be depends on the operating system, the MATLAB version and the amount of RAM. If you are running a 32-bit version of Windows, your arrays cannot be larger than 2 gigabytes. If you are running a 32-bit version of MATLAB on a 64-bit version of Windows your arrays can still not be larger than 4 gigabytes. Only when you are running both a 64-bit version of MATLAB and of Windows can you use the full extent of your RAM and are theoretically able to store arrays as large as 8 terabytes.
+The maximum size a MATLAB array can be depends on the operating system, the MATLAB version and the amount of RAM. If you are running a 32-bit version of Windows, your arrays cannot be larger than 2 gigabytes. If you are running a 32-bit version of MATLAB on a 64-bit version of Windows your arrays can still not be larger than 4 gigabytes. Only when you are running both a 64-bit version of MATLAB _and_ Windows, can you use the full extent of your RAM and are theoretically able to store arrays as large as 8 terabytes.
 
-We therefore advise you to run this tutorial on a 64-bit (Windows) operating system, running a 64-bit version of MATLAB and with at least 8GB RAM.
+We therefore advise you to run this tutorial on a 64-bit operating system, running a 64-bit version of MATLAB and with at least 8GB RAM.
 
 Also see: [Resolving "Out of Memory" Errors](http://www.mathworks.nl/help/matlab/matlab_prog/resolving-out-of-memory-errors.html)
 {% include markup/end %}
 
-### Pulses and recordings
+### TMS paradigm
 
 Before starting your analysis, it helps to consider your experiment relative to two dimensions: 1) the TMS protocol and 2) the experimental manipulation of the brain state (i.e. the task for the subject, or the absence thereof).
 
@@ -76,7 +78,7 @@ The data during the pulse can be considered to be lost.
 Depending on the range of your amplifier the signal may initially go out of range causing a clipping of the signal as can be seen by a flat line in your signal. Once the potential falls within range of the amplifier a prominent filter 'ringing' can be observed lasting up to around 7ms depending on your setup caused by a step-response due to the high gradient of the TMS-pulse. Many consider this period lost. In the figure below the signal in red reflects a combination of the pulse and the ringing/step response.
 {% include image src="/assets/img/tutorial/tms-eeg/figure4.png" %}
 
-#### Cranial Muscle artifact
+#### Cranial muscle artifact
 
 The TMS pulse may cause cranial (scalp) muscle twitches. These twitches are not to be confused with responses due to stimulation of the motor cortex but are purely twitches due to stimulation of scalp muscles. Usually they last around 10ms and are orders of magnitude larger than brain signals. Using close visual inspection of the EEG electrodes underneath the TMS coil during the actual experiment, you may observe these twitches as small movements of the electrodes.
 
@@ -94,19 +96,11 @@ It is likely that you will encounter an artifact that resembles an exponential d
 
 ## Procedure
 
-{% include markup/red %}
-It is important that you clean your data from TMS artifacts prior to any other preprocessing steps (e.g., filtering, detrending, downsampling) other than reading the data into memory. Especially filtering can produce long-lasting additional artifacts far outlasting the duration of the artifacts in the raw data, making subsequent analysis of the data troublesome.
-{% include markup/end %}
-
-{% include markup/yellow %}
-The procedures explained in this tutorial have been applied and described in the following paper:
+The procedure consists of preprocessing (and data cleaning), followed by the computation of Event Related Potentialks (ERPs) and time-frequency responsed (TFRs). The analysis in this tutorial was used for and is described in more detail in the following paper:
 
 Herring, J. D., Thut, G., Jensen, O., & Bergmann, T. O. (2015). [Attention Modulates TMS-Locked Alpha Oscillations in the Visual Cortex](http://www.jneurosci.org/content/35/43/14435). The Journal of Neuroscience, 35(43), 14435-14447.
-{% include markup/end %}
 
-**Preprocessing**
-
-We will use the following procedure to deal with TMS-EEG data:
+We will use the following procedure for preprocessing the TMS-EEG data:
 
 1.  Create a trial-structure using **[ft_definetrial](/reference/ft_definetrial)**
 2.  Indicate the onset of TMS-pulses with **[ft_artifact_tms](/reference/ft_artifact_tms)**
@@ -118,9 +112,7 @@ We will use the following procedure to deal with TMS-EEG data:
 8.  Interpolate gaps previously occupied by ringing/step response and recharge artifacts using **[ft_interpolatenan](/reference/ft_interpolatenan)**
 9.  Apply further processing such as baseline correction, detrending, and filtering using **[ft_preprocessing](/reference/ft_preprocessing)**.
 
-**Analysis**
-
-After having cleaned the data, we will perform the following analyses:
+After having preprocessed and cleaned the data, we will perform the following analyses:
 
 - Calculate time-locked averages using **[ft_timelockanalysis](/reference/ft_timelockanalysis)**
 - Time-frequency analysis using **[ft_freqanalysis](/reference/ft_freqanalysis)**
@@ -128,9 +120,13 @@ After having cleaned the data, we will perform the following analyses:
 
 ## Preprocessing
 
+{% include markup/red %}
+It is important that you clean your data from TMS artifacts _prior_ to any other preprocessing steps (e.g., filtering, detrending, downsampling) other than reading the data into memory. Especially filtering can produce long-lasting additional artifacts far outlasting the duration of the artifacts in the raw data, making subsequent analysis of the data troublesome.
+{% include markup/end %}
+
 ### Visual data inspection
 
-We start with the original dataset which is available [here](https://download.fieldtriptoolbox.org/tutorial/tms/sp/sp_motor.zip). Please be aware that the file is rather large (472 MB) due to the EEG being sampled at 5kHz.
+We start with the original dataset in BrainVision format which is available [here](https://download.fieldtriptoolbox.org/tutorial/tms/sp/sp_motor.zip). Please be aware that the file is rather large (472 MB) due to the EEG being sampled at 5kHz.
 
 We are interested in what happens in response to the TMS pulse. The TMS pulses are therefore our events of interest and our trials are defined by the pulses. As stated in the background information, event markers are present at the onset of each pulse. We will first have a look at our trials using **[ft_databrowser](/reference/ft_databrowser)**, a convenient tool to browse data directly from disk or in memory (also see this [frequently asked question](/faq/how_can_i_use_the_databrowser)).
 
@@ -153,12 +149,12 @@ The output cfg variable contains the trial structure in cfg.trl. As we will also
 
 The cfg structure we obtained from **[ft_definetrial](/reference/ft_definetrial)** contains enough information for ft_preprocessing to read our data from disk into trials. We will, however, also specify that the data should be re-referenced. As it can take quite a while (5-10 minutes) to read-in the data, the processed data can be found [here](https://download.fieldtriptoolbox.org/tutorial/tms/sp/data_tms_raw.mat). If you have downloaded this file, you can load the data with:
 
-    load data_tms_raw;
+    load data_tms_raw
 
 Here you have to make sure that the .mat file is located in the present working directory of MATLAB.
 
 {% include markup/skyblue %}
-You can skip the following block of code if you have downloaded data_tms_raw in the previous step.**
+You can skip the following block of code if you have downloaded `data_tms_raw.mat` in the previous step.
 {% include markup/end %}
 
 To read the trials from the original data file on disk, use the following:
@@ -199,7 +195,7 @@ To inspect the TMS-related artifacts we will create a time-locked average of our
 
 To save system memory we will clear the data_tms_raw structure.
 
-    clear data_tms_raw;
+    clear data_tms_raw
 
 Although we do not have any trials anymore, we can still use ft_databrowser in the same way as before to browse through all the channels. As we are interested in the occurrence, onset, and offset of TMS artifacts it as convenient to use MATLAB's built-in plotting functions.
 
@@ -208,7 +204,6 @@ The averaged data we want to plot is represented in the data_tms_avg structure. 
     >> data_tms_avg
 
     data_tms_avg =
-
            avg: [61x10000 double]
            var: [61x10000 double]
           time: [1x10000 double]
@@ -274,7 +269,7 @@ In this channel we can find ringing/step response, cranial muscle, exponential d
     ylabel('Amplitude (uV)')
     xlabel('Time (s)');
 
-    hold on; % Plotting new data does not remove old plot
+    hold on % Plotting new data does not remove old plot
 
     % Specify time-ranges to higlight
     ringing  = [-0.0002 0.0044];
@@ -360,7 +355,6 @@ We've now split-up our trials into segments free of ringing/step response, and r
     >> size(data_tms_segmented.trial)
 
     ans =
-
          1   900
 
 Using **[ft_databrowser](/reference/ft_databrowser)** we can browse through both the segmented as well as the raw data. If we use the artifact definition we previously created we can easily browse to the segments we've marked as artifacts.
@@ -395,7 +389,7 @@ As ICA is in fact a spatial filter, it relies on the artifacts having a stable t
 A stable TMS coil position increases the spatial stability of the artifacts, which is beneficial for estimating the artifact as independent component.
 {% include markup/end %}
 
-If you have downloaded comp_tms.mat, you can load the data with the following cod
+If you have downloaded `comp_tms.mat`, you can load the data with the following cod
 
     load comp_tms.mat
 
@@ -416,7 +410,7 @@ If you have downloaded comp_tms.mat, you can load the data with the following co
 
 **Memory issues**
 
-If you are having memory issues running the ICA you can downsample your data beforehand. Please be aware that prior to down sampling your data is filtered using a low pass FIR filter at roughly half the target sampling frequency (for example, if you downsample to 1000Hz, your data will be lowpass filtered at 500Hz). Use the following code to downsample your dat
+To capture the TMS artifacts in sufficient detail, teh EEG is usually acquired at the highesr sampling rate possible, which makes the datasets large. If you are having memory issues running the ICA you can downsample your data beforehand. Please be aware that prior to down sampling your data is filtered using a low pass FIR filter at roughly half the target sampling frequency (for example, if you downsample to 1000Hz, your data will be lowpass filtered at 500Hz). Use the following code to downsample your dat
 
     % save the data in the original sampling frequency
     save('data_tms_segmented','data_tms_segmented','-v7.3')
@@ -432,8 +426,8 @@ If you are having memory issues running the ICA you can downsample your data bef
 
 Now you can run the ICA. After you have run the ICA on the downsampled data, reload the original data and apply the spatial unmixing matrix on the original data. The reason for this is that the data is demeaned prior to resampling to avoid artifacts at the edge of the trials. Since our trials are divided into segments, your trials may end up with strange baseline shifts because each segment is demeaned separately.
 
-    clear data_tms_resampled;
-    load data_tms_segmented;
+    clear data_tms_resampled
+    load data_tms_segmented
 
 {% include markup/end %}
 
@@ -442,7 +436,6 @@ After having run the ICA we are left with a structure similar to our data_tms_se
     >> data_tms_segmented
 
     data_tms_segmented =
-
                hdr: [1x1 struct]
              label: {61x1 cell}
               time: {1x900 cell}
@@ -455,7 +448,6 @@ After having run the ICA we are left with a structure similar to our data_tms_se
     >> comp_tms
 
     comp_tms =
-
            fsample: 5000
               time: {1x900 cell}
              trial: {1x900 cell}
@@ -467,7 +459,7 @@ After having run the ICA we are left with a structure similar to our data_tms_se
          trialinfo: [900x1 double]
                cfg: [1x1 struct]
 
-Instead of channels by time matrices, our data is now represented in component by time matrices, one for each trial (or segment in our case). The added fields .topo, .unmixing, and .topolabel contain the information necessary to back-project the components to the channel level.
+Instead of channels by time matrices, our data is now represented in component by time matrices, one for each trial (or segment in our case). The added fields `.topo`, `.unmixing`, and `.topolabel` contain the information necessary to back-project the components to the channel level.
 
 We are now going to have a look at the timecourse of the components to identify the ones to be rejected. We will also look at a topographical representation of the components to see if they reflect spatial distributions indicating them to be an artifact (dipole, close to the site of stimulation). As we know that all our TMS-EEG artifacts are time-locked to the onset of the TMS-pulse, we can simplify the visual inspection by looking at the time-locked average representation of the components.
 
@@ -529,13 +521,13 @@ As these types of noise are not time-locked to onset of the TMS-pulse you can us
 Which components would you further suggest to remove?
 {% include markup/end %}
 
-We now have a list of component we would wish to remove:
+We now have a list of components we want to remove:
 
-- **Decay & Muscle**: 41, 56
-- **Saccades**: 7
-- **Eye-blinks**: 33
-- **Line noise**: 31
-- **Maintenance recharging/Muscle**: 1, 25, 52, 37, 49, 50
+- Decay & Muscle: 41, 56
+- Saccades: 7
+- Eye-blinks: 33
+- Line noise: 31
+- Maintenance recharging/Muscle: 1, 25, 52, 37, 49, 50
 
 We can now remove these components from the data. Using **[ft_rejectcomponent](/reference/ft_rejectcomponent)** you can remove components and transform the data back to a channel representation. First, however, we will need to revert a step we took before performing the ICA.
 
@@ -548,7 +540,7 @@ Running an ICA results in a matrix that can be used to transform our original da
     cfg.unmixing = comp_tms.unmixing; % Supply the matrix necessay to 'unmix' the channel-series data into components
     cfg.topolabel = comp_tms.topolabel; % Supply the original channel label information
 
-    comp_tms          = ft_componentanalysis(cfg, data_tms_segmented);
+    comp_tms = ft_componentanalysis(cfg, data_tms_segmented);
 
 Now we can remove the components.
 
@@ -606,7 +598,6 @@ We've now recreated the original trial structure and put all pieces of data back
     >> data_tms_clean
 
     data_tms_clean =
-
                hdr: [1x1 struct]
              label: {61x1 cell}
            fsample: 5000
@@ -623,10 +614,16 @@ When we want to know which data point corresponds to any given time point we oft
 {% include markup/end %}
 
     % Replacing muscle artifact with nans
-    muscle_window = [0.006 0.015]; % The window we would like to replace with nans
-    muscle_window_idx = [nearest(data_tms_clean.time{1},muscle_window(1)) nearest(data_tms_clean.time{1},muscle_window(2))]; % Find the indices in the time vector corresponding to our window of interest
-    for i=1:numel(data_tms_clean.trial) % Loop through all trials
-      data_tms_clean.trial{i}(:,muscle_window_idx(1):muscle_window_idx(2))=nan; % Replace the segment of data corresponding to our window of interest with nans
+
+    % Specify the window we would like to replace with nans in seconds
+    muscle_window     = [0.006 0.015];
+
+    % Find the indices in the time vector corresponding to our window of interest
+    muscle_window_idx = [nearest(data_tms_clean.time{1},muscle_window(1)) nearest(data_tms_clean.time{1},muscle_window(2))]; 
+
+    for i=1:numel(data_tms_clean.trial)
+      % Replace the segment of data corresponding to our window of interest with nans
+      data_tms_clean.trial{i}(:,muscle_window_idx(1):muscle_window_idx(2))=nan; 
     end
 
 Now that everything we would like to interpolate has been replaced by nans we can start the interpolation. The function **[ft_interpolatenan](/reference/ft_interpolatenan)** loops through trials and channels and interpolates segments containing nans using MATLAB's built-in [interp1](http://www.mathworks.nl/help/matlab/ref/interp1.html) function. You can therefore use all the methods supported by this function in your interpolation. We will use cubic interpolation as it avoids sharp transitions from your data to the edges of the interpolated segments you might create by using linear interpolation but does not appear to introduce strong artificial sinusoids as spline interpolation sometimes does. Feel free to try-out the different types of interpolation.
@@ -634,8 +631,8 @@ Now that everything we would like to interpolate has been replaced by nans we ca
     % Interpolate nans using cubic interpolation
     cfg = [];
     cfg.method = 'pchip'; % Here you can specify any method that is supported by interp1: 'nearest','linear','spline','pchip','cubic','v5cubic'
-    cfg.prewindow = 0.01; % Window prior to segment to use data points for interpolation
-    cfg.postwindow = 0.01; % Window after segment to use data points for interpolation
+    cfg.prewindow = 0.01;   % Window prior to segment to use data points for interpolation
+    cfg.postwindow = 0.01;  % Window after segment to use data points for interpolation
     data_tms_clean = ft_interpolatenan(cfg, data_tms_clean); % Clean data
 
     % compute the TEP on the cleaned data
@@ -647,21 +644,21 @@ Now that everything we would like to interpolate has been replaced by nans we ca
 
 We can now compare the raw data with the cleaned data. If you do not have the time-locked average of the raw data anymore, you can download it [here](https://download.fieldtriptoolbox.org/tutorial/tms/sp/data_tms_avg.mat) and load it with:
 
-    load data_tms_avg;
+    load data_tms_avg
 
 Using the following code we will compare the average TEP of the original data with the averaged TEP of the cleaned dat
 
     for i=1:numel(data_tms_avg.label) % Loop through all channels
-        figure;
+        figure
         plot(data_tms_avg.time, data_tms_avg.avg(i,:),'r'); % Plot all data
-        hold on;
+        hold on
         plot(data_tms_clean_avg.time, data_tms_clean_avg.avg(i,:),'b'); % Plot all data
         xlim([-0.1 0.6]); % Here we can specify the limits of what to plot on the x-axis
         ylim([-23 15]); % Here we can specify the limits of what to plot on the y-axis
-        title(['Channel ' data_tms_avg.label{i}]);
+        title(['Channel ' data_tms_avg.label{i}])
         ylabel('Amplitude (uV)')
-        xlabel('Time (s)');
-        legend({'Raw' 'Cleaned'});
+        xlabel('Time (s)')
+        legend({'Raw' 'Cleaned'})
     end
 
 {% include markup/yellow %}
@@ -686,7 +683,7 @@ For this reason we are only going to downsample our data and apply slightly diff
 
 Now that we have cleaned our data and applied our (post-)processing steps we continue on with our analysis, but first we will save our data.
 
-    save('data_tms_clean','data_tms_clean','-v7.3');
+    save('data_tms_clean','data_tms_clean','-v7.3')
 
 {% include markup/yellow %}
 When saving data we always use the switch '-v7.3' as this allows files to be larger than 4GB, which is often the case in TMS-EEG data.
@@ -705,7 +702,6 @@ Remember that we have two conditions to compare in the current dataset: 'relax' 
     >> data_tms_clean.trialinfo
 
     ans =
-
          1
          1
          1
@@ -740,7 +736,7 @@ In calculating the timelocked averages we will also apply a baseline correction 
 
 We are also going to calculate the difference between the two averages. To this end we will use the function **[ft_math](/reference/ft_math)**, which allows you to perform a certain number of mathematical operations on one or multiple data structures.
 
-    % calculate difference
+    % Calculate the difference ERP wave
     cfg = [];
     cfg.operation = 'subtract'; % Operation to apply
     cfg.parameter = 'avg'; % The field in the data structure to which to apply the operation
@@ -793,14 +789,15 @@ Please also have a look at [Plotting data at the channel and source level](/tuto
 
 ### Global Mean Field Power
 
-Global Mean Field Power (GMFP) is a measure first introduced by [Lehmann and Skandries (1979)](<http://dx.doi.org/10.1016/0013-4694(80)90419-8>), used by, for example, [Esser et al. (2006)](http://dx.doi.org/10.1016/j.brainresbull.2005.11.003) as a measure to characterize global EEG activity.
+Global Mean Field Power (GMFP) is a measure first introduced by [Lehmann and Skandries (1979)](<http://dx.doi.org/10.1016/0013-4694(80)90419-8>) and used by, for example, [Esser et al. (2006)](http://dx.doi.org/10.1016/j.brainresbull.2005.11.003) as a measure to characterize global EEG activity.
 
 GMFP can be calculated using the following formula (from [Esser et al. (2006)](http://dx.doi.org/10.1016/j.brainresbull.2005.11.003))
+
 {% include image src="/assets/img/tutorial/tms-eeg/figure22.png" %}
 
-, where t is time, V is the voltage at channel i and K is the number of channels. In [Esser et al. (2006)](http://dx.doi.org/10.1016/j.brainresbull.2005.11.003) the GMFP is calculated on the average over all subjects. As we only have one subject, we will only calculate the GMFP within this subject. If you, however, have multiple subjects you can apply the same method but on the grand average (see for examples on handling multiple subjects: [Parametric and non-parametric statistics on event-related fields](/tutorial/eventrelatedstatistics)). Basically, the GMFP is the standard deviation over channels.
+where `t` is time, `V` is the voltage at channel `i` and `K` is the number of channels. In [Esser et al. (2006)](http://dx.doi.org/10.1016/j.brainresbull.2005.11.003) the GMFP is calculated on the average over all subjects. As we only have one subject, we will only calculate the GMFP within this subject. If you, however, have multiple subjects you can apply the same method but on the grand average (see for examples on handling multiple subjects: [Parametric and non-parametric statistics on event-related fields](/tutorial/eventrelatedstatistics)). Basically, the GMFP is the standard deviation over channels.
 
-FieldTrip has a built-in function to calculate the GMFP; [ft_globalmeanfield](/reference/ft_globalmeanfield). This function requires timelocked data as input. We will use similar preprocessing as applied in [Esser et al. (2006)](http://dx.doi.org/10.1016/j.brainresbull.2005.11.003).
+FieldTrip includes the [ft_globalmeanfield](/reference/ft_globalmeanfield) function to calculate the GMFP. This requires timelocked data as input. We will use similar preprocessing as applied in [Esser et al. (2006)](http://dx.doi.org/10.1016/j.brainresbull.2005.11.003).
 
     % Create time-locked average
     cfg = [];
@@ -823,18 +820,18 @@ FieldTrip has a built-in function to calculate the GMFP; [ft_globalmeanfield](/r
 
 Now we can plot the GMFP of both conditions.
 
-    %Plot GMFP
-    figure;
+    % Plot GMFP
+    figure
     plot(relax_gmfp.time, relax_gmfp.avg,'b');
-    hold on;
+    hold on
     plot(contract_gmfp.time, contract_gmfp.avg,'r');
-    xlabel('time (s)');
-    ylabel('GMFP (uv^2)');
-    legend({'Relax' 'Contract'});
-    xlim([-0.1 0.6]);
-    ylim([0 3]);
+    xlabel('time (s)')
+    ylabel('GMFP (uv^2)')
+    legend({'Relax' 'Contract'})
+    xlim([-0.1 0.6])
+    ylim([0 3])
 
-    {% include image src="/assets/img/tutorial/tms-eeg/figure23.png" %}
+{% include image src="/assets/img/tutorial/tms-eeg/figure23.png" %}
 
 #### Exercise: GMFP vs TEPs
 
@@ -901,25 +898,27 @@ This plot is fully interactive, click and drag to select one or more channels, c
     cfg.zlim = [-3 3];
     cfg.layout = 'easycapM10';
 
-    figure;
-    subplot(1,3,1); % Use MATLAB's subplot function to divide plots into one figure
+    figure
+    % Use MATLAB's subplot function to divide plots into one figure
+
+    subplot(1,3,1) 
     ft_singleplotTFR(cfg, relax_freq_bc);
-    ylabel('Frequency (Hz)');
-    xlabel('time (s)');
-    title('Relax');
+    ylabel('Frequency (Hz)')
+    xlabel('time (s)')
+    title('Relax')
 
-    subplot(1,3,2);
+    subplot(1,3,2)
     ft_singleplotTFR(cfg, contract_freq_bc);
-    title('Contract');
-    ylabel('Frequency (Hz)');
-    xlabel('time (s)');
+    title('Contract')
+    ylabel('Frequency (Hz)')
+    xlabel('time (s)')
 
-    subplot(1,3,3);
+    subplot(1,3,3)
     cfg.zlim = [-1.5 1.5];
     ft_singleplotTFR(cfg, difference_freq);
-    title('Contract - Relax');
-    ylabel('Frequency (Hz)');
-    xlabel('time (s)');
+    title('Contract - Relax')
+    ylabel('Frequency (Hz)')
+    xlabel('time (s)')
 
 {% include image src="/assets/img/tutorial/tms-eeg/figure25.png" %}
 
