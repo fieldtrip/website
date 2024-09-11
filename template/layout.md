@@ -181,12 +181,12 @@ The following template layouts are for electrode caps from [NeuroScan](http://ww
 
 The following template layouts are for the sensor arrays of the BTi/4D MEG system.
 
-{% include image src="/assets/img/template/layout/4D148.lay.png" width="200" %}
-{% include image src="/assets/img/template/layout/4D248.lay.png" width="200" %}
+{% include image src="/assets/img/template/layout/4d148.lay.png" width="200" %}
+{% include image src="/assets/img/template/layout/4d248.lay.png" width="200" %}
 
 #### With a more realistic display along the rim
 
-{% include image src="/assets/img/template/layout/4D248_helmet.mat.png" width="200" %}
+{% include image src="/assets/img/template/layout/4d248_helmet.mat.png" width="200" %}
 
 ### CTF system
 
