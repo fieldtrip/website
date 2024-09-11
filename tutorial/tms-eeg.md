@@ -23,7 +23,7 @@ A successful analysis of EEG signals requires clean data. That is non-trivial fo
 
 ### The dataset used for this tutorial
 
-The data used in this tutorial is avaialble from our [download server](https://download.fieldtriptoolbox.org/tutorial/tms/) where you can find a single-pulse dataset (used here) and a paired-pulse dataset.
+The data used in this tutorial is available from our [download server](https://download.fieldtriptoolbox.org/tutorial/tms/) where you can find a single-pulse dataset (used here) and a paired-pulse dataset.
 
 **Measurement:** The data were recorded using two 32-channel TMS-compatible BrainAmp DC Amplifiers (BrainProducts) connected to a 61 channel TMS-compatible EEG cap (EasyCap). Sampling was done at 5kHz with a 1kHz cut-off frequency and with 0.1 microvolt/bit resolution. Please click on the image below for an enlarged image of the [equidistant 61-channel arrangement](/template/layout#triangulated_equidistant_arrangements).
 
@@ -96,7 +96,7 @@ It is likely that you will encounter an artifact that resembles an exponential d
 
 ## Procedure
 
-The procedure consists of preprocessing (and data cleaning), followed by the computation of Event Related Potentialks (ERPs) and time-frequency responsed (TFRs). The analysis in this tutorial was used for and is described in more detail in the following paper:
+The procedure consists of preprocessing (and data cleaning), followed by the computation of Event Related Potentials (ERPs) and time-frequency responses (TFRs). The analysis in this tutorial was used for and is described in more detail in the following paper:
 
 Herring, J. D., Thut, G., Jensen, O., & Bergmann, T. O. (2015). [Attention Modulates TMS-Locked Alpha Oscillations in the Visual Cortex](http://www.jneurosci.org/content/35/43/14435). The Journal of Neuroscience, 35(43), 14435-14447.
 
@@ -410,7 +410,7 @@ If you have downloaded `comp_tms.mat`, you can load the data with the following 
 
 **Memory issues**
 
-To capture the TMS artifacts in sufficient detail, teh EEG is usually acquired at the highesr sampling rate possible, which makes the datasets large. If you are having memory issues running the ICA you can downsample your data beforehand. Please be aware that prior to down sampling your data is filtered using a low pass FIR filter at roughly half the target sampling frequency (for example, if you downsample to 1000Hz, your data will be lowpass filtered at 500Hz). Use the following code to downsample your dat
+To capture the TMS artifacts in sufficient detail, the EEG is usually acquired at the highest sampling rate possible, which makes the datasets large. If you are having memory issues running the ICA you can downsample your data beforehand. Please be aware that prior to down sampling your data is filtered using a low pass FIR filter at roughly half the target sampling frequency (for example, if you downsample to 1000Hz, your data will be lowpass filtered at 500Hz). Use the following code to downsample your dat
 
     % save the data in the original sampling frequency
     save('data_tms_segmented','data_tms_segmented','-v7.3')
