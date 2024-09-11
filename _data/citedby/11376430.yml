@@ -1,0 +1,38 @@
+articleids:
+- idtype: pmid
+  value: '39137987'
+- idtype: doi
+  value: 10.1523/ENEURO.0242-24.2024
+- idtype: pmcid
+  value: PMC11376430
+authors:
+- authtype: Author
+  name: Kopf M
+- authtype: Author
+  name: Martini J
+- authtype: Author
+  name: Stier C
+- authtype: Author
+  name: Ethofer S
+- authtype: Author
+  name: Braun C
+- authtype: Author
+  name: Li Hegner Y
+- authtype: Author
+  name: Focke NK
+- authtype: Author
+  name: Marquetand J
+- authtype: Author
+  name: Helfrich RF
+epubdate: 2024 Sep 3
+fulljournalname: eNeuro
+issue: '9'
+pages: ENEURO.0242-24.2024
+pmclivedate: 2024/09/05
+printpubdate: ''
+pubdate: 2024 Sep 3
+sortdate: 2024/09/03 00:00
+source: eNeuro
+title: Aperiodic Activity Indexes Neural Hyperexcitability in Generalized Epilepsy
+uid: '11376430'
+volume: '11'

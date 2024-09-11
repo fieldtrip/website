@@ -1,0 +1,25 @@
+articleids:
+- idtype: pmid
+  value: '38836298'
+- idtype: doi
+  value: 10.1152/jn.00446.2023
+- idtype: pmcid
+  value: PMC11383386
+authors:
+- authtype: Author
+  name: Dong Y
+- authtype: Author
+  name: Kiyonaga A
+epubdate: 2024 Jun 5
+fulljournalname: Journal of Neurophysiology
+issue: '1'
+pages: 162-176
+pmclivedate: ''
+printpubdate: 2024 Jul 1
+pubdate: 2024 Jun 5
+sortdate: 2024/06/05 00:00
+source: J Neurophysiol
+title: Ocular working memory signals are flexible to behavioral priority and subjective
+  imagery strength
+uid: '11383386'
+volume: '132'

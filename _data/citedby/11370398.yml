@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '39229238'
+- idtype: doi
+  value: 10.1101/2024.08.15.607985
+- idtype: pmcid
+  value: PMC11370398
+authors:
+- authtype: Author
+  name: Khatri UU
+- authtype: Author
+  name: Pulliam K
+- authtype: Author
+  name: Manesiya M
+- authtype: Author
+  name: Cortez MV
+- authtype: Author
+  name: Millán JD
+- authtype: Author
+  name: Hussain SJ
+epubdate: 2024 Aug 19
+fulljournalname: bioRxiv
+issue: ''
+pages: 2024.08.15.607985
+pmclivedate: 2024/09/04
+printpubdate: ''
+pubdate: 2024 Aug 19
+sortdate: 2024/08/19 00:00
+source: bioRxiv
+title: Personalized whole-brain activity patterns predict human corticospinal tract
+  activation in real-time
+uid: '11370398'
+volume: ''
