@@ -19,6 +19,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [I used to work with trl-matrices that have more than 3 columns. Why is this not supported anymore?](/faq/i_used_to_work_with_trl-matrices_that_have_more_than_3_columns._why_is_this_not_supported_anymore)
 
 ### Specific data formats
+
 - [How can I read EGI mff data without the JVM?](/faq/how_can_i_read_egi_mff_data_without_the_jvm)
 - [How can I read all channels from an EDF file that contains multiple sampling rates?](/faq/how_can_i_read_all_channels_from_an_edf_file_that_contains_multiple_sampling_rates)
 - [How does the CTF higher-order gradiometer work?](/faq/how_does_the_ctf_higher-order_gradiometer_work)
@@ -40,6 +41,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [How can I convert one dataformat into an other?](/faq/how_can_i_convert_one_dataformat_into_an_other)
 - [How can I merge two datasets that were acquired simultaneously with different amplifiers?](/faq/how_can_i_merge_two_datasets_that_were_acquired_simultaneously_with_different_amplifiers)
 - [How can I preprocess a dataset that is too large to fit into memory?](/faq/how_can_i_preprocess_a_dataset_that_is_too_large_to_fit_into_memory)
+- [How can I rename channels in my data structure?](/faq?rename_channels)
 
 ### Trials, triggers and events
 
