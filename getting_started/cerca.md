@@ -5,11 +5,11 @@ tags: [dataformat, meg, opm, cerca, bids]
 
 # Getting started with Cerca OPM data
 
-[Cerca Magnetics](https://www.cercamagnetics.com) is a joint-venture spin-out company from the University of Nottingham and Magnetic Shields Limited that develops full wearable OPM-MEG systems. The data from their current systems is stored in the `*.cMEG` format, but a converter is supplied with each system to turn the data into the *.fif format for post-processing. The `*.fif` file format is already supported by FieldTrip, which means that no special functions are needed for reading the data. A separate function can be used to read the data straight from `*.cMEG` into FieldTrip – this is currently being developed.
+[Cerca Magnetics](https://www.cercamagnetics.com) is a joint-venture spin-out company from the University of Nottingham and Magnetic Shields Limited that develops full wearable OPM-MEG systems. The data from their current systems is stored in the `.cMEG` format, but a converter is supplied with each system to turn the data into the `.fif` format for post-processing. The `.fif` format is already supported by FieldTrip, which means that no special functions are needed for reading the data. A separate function can be used to read the data straight from `.cMEG` into FieldTrip – this is currently being developed.
 
 There are some differences which are relevant for processing Cerca data - and OPM data as a whole. One difference is how events or triggers are represented and detected. Another difference is in the procedure used to record the position of the OPM sensors relative to the head, which is relevant for topographic plotting and for the co-registration between MEG and MRI. Furthermore, Cerca OPM systems use either dual axis or triaxial systems, and so displaying data at a sensor-level requires some further considerations.
 
-The example data provided on the our [download server](https://download.fieldtriptoolbox.org/example/cerca/) includes a self-contained version of the data in the `.fif` format organized according to the [BIDS standard](https://www.bids-standard.org). This includes sensor locations that are already co-registered to a 3D digitization of the participant. An additional folder includes the raw files if you wish to develop a co-registration pipeline separately from what is provided. All files are detailed in the `README.txt`.
+The example data provided on the our [download server](https://download.fieldtriptoolbox.org/example/cerca/) includes a self-contained version of the data in the `.fif` format organized according to the [BIDS standard](https://www.bids-standard.org). This includes sensor locations that are already co-registered to a 3D digitization of the participant. An additional folder includes the raw files in the original `.cMEG` if you wish to develop a co-registration pipeline separately from what is provided. All files are detailed in the `README.txt`.
 
 ## Read and visualize the continuous data
 
@@ -28,7 +28,7 @@ The example data provided on the our [download server](https://download.fieldtri
 
 ## Reading and processing triggers
 
-The Cerca OPM system uses triggers that are represented as an analogue channel (with voltages).
+The Cerca OPM system uses triggers that are represented as voltages in an analogue channel.
 
 In this case the experiment consisted of a braille pattern stimulation on the left and right index fingers. Each stimulus is coded with an analogue trigger represented in the “Bra” channel (for Braille), and the stimulated finger is represented by the “Lef” or “Rig” channels (Left or Right). Here we will look at both fingers. For ease of visualisation, we will also only look at the Z (radial) channels.
 
@@ -102,20 +102,19 @@ As there is quite some drift in the signal, it is better to apply a filter to th
 
 ## Topographic plotting
 
-When we look at this recording, we see channel names like “A1X” and “F4Y”. These channels correspond to the hardware sensors, i.e. the OPMs, as they are named in the DAQ recording, with the sensitive axis indicated by the last letter, i.e. either X, Y, or Z.
+When we look at this recording, we see channel names like “A1X” and “F4Y”. These names correspond to the hardware sensors, i.e. the OPMs, as they are named in the DAQ recording, with the sensitive axis indicated by the last letter (either X, Y, or Z).
 
-The data structure returned by **[ft_preprocessing](/reference/ft_preprocessing)** or the header from **[ft_read_header](/reference/fileio/ft_read_header)** include the "grad" field, which describes the sensor positions (see also this FAQ). The recording software itself does not know the relative locations of sensors to each other in the helmet, but it requires you to select a `_HelmConfig.tsv` file that lists which slot each sensor is in, as well as their positions and orientations for each sensitive axis.
+The data structure returned by **[ft_preprocessing](/reference/ft_preprocessing)** or the header from **[ft_read_header](/reference/fileio/ft_read_header)** include the "grad" field, which describes the sensor positions (see also [this FAQ](/faq/how_are_electrodes_magnetometers_or_gradiometers_described/#the-definition-of-meg-sensors)). The recording software itself does not know the relative locations of sensors to each other in the helmet, but it requires you to select a `_HelmConfig.tsv` file that lists which slot each sensor is in, as well as their positions and orientations for each sensitive axis. In this specific recording the OPM sensors were placed in the generic purple adult large helmet supplied by Cerca.
 
-In this specific recording the OPM sensors were placed in a generic helmet (the purple adult large helmet supplied by Cerca).
+For topographic plotting, the channel names in `data.label` should be mapped to the corresponding locations on the head. To keep the script clean and reproducible, we will not go in the data structure and manually rename the channels, but use a montage as explained [here](/faq/rename_channels).
 
-For topographic plotting, the channel names (in data.label) should match the locations on the head. To keep the script clean and reproducible, we will not go in the data structure and manually rename the channels to match, but we will use a montage, similar to how EEG and iEEG channels can be renamed, combined, added, and subtracted. However, the order in which the data is saved in the acquisition is not the same as the order in which the `_HelmConfig.tsv` is made. We therefore also have to match sensor names to their respective slot name. The `_HelmConfig.tsv` file also contains 2D projection coordinates of the helmet positions (Layx and Layy). Using this, we can create a layout for the topographic plotting.
+The `_HelmConfig.tsv` file specifies the channel names (based on the name of the hardware sensors) and their placements in the helmet. It also contains 2D projection coordinates of the helmet slot positions in `Layx` and `Layy` which can be used for 2D plotting. Using the `_HelmConfig.tsv` file, we can create a [layout](/tutorial/layout) for the topographic plotting.
 
-
-    %% Rename channels
+    % Rename the channel labels using a montage
     montage = [];
     montage.labelold = data.label';
     
-    % Read helmet layout mapping
+    % Read the channel mapping
     HelmConfig = tdfread(‘Braille_example_data\11766_054_braille1\20240129_101236_cMEG_Data\ 20240129_101236_HelmConfig.tsv');
     last_line_idx = strmatch('Helmet:',HelmConfig.Name);
     field_names = fieldnames(HelmConfig);
@@ -137,19 +136,20 @@ For topographic plotting, the channel names (in data.label) should match the loc
     montage.labelnew = HC_slotnames(sensor_slot_mapping);
     montage.tra = eye(size(data.label,1)); % the data is simply copied one-to-one
     
-    % Create layout from tsv file
+    % Create layout from the HelmConfig.tsv file
     layout = [];
-    layout.pos = [HelmConfig.Layx(sensor_slot_mapping),HelmConfig.Layy(sensor_slot_mapping)];
-    layout.label = HC_slotnames(sensor_slot_mapping);
-    layout.width = repmat(0.02,size(layout.pos,1),1);
-    layout.height = repmat(0.02,size(layout.pos,1),1);
+    layout.pos(:,1) = HelmConfig.Layx(sensor_slot_mapping);
+    layout.pos(:,2) = HelmConfig.Layy(sensor_slot_mapping)];
+    layout.label    = HC_slotnames(sensor_slot_mapping);
+    layout.width    = repmat(0.02,size(layout.pos,1),1);
+    layout.height   = repmat(0.02,size(layout.pos,1),1);
     
-    % rename the channels in the raw data
+    % rename the channels in the raw data (this could have been done earlier in the processing pipeline)
     cfg = [];
     cfg.montage = montage;
     data_helmetpos = ft_preprocessing(cfg, data);
     
-    % or rename the channels in the timelocked ERF data
+    % and rename the channels in the timelocked ERF data (not needed if the raw data channels had been renamed earlier on)
     timelock_helmetpos = ft_preprocessing(cfg, timelock);
     
     % plot the ERFs on the corresponding position in the helmet
@@ -157,10 +157,10 @@ For topographic plotting, the channel names (in data.label) should match the loc
     cfg.layout = layout;
     cfg.showoutline = 'yes';
     ft_multiplotER(cfg, timelock_helmetpos)
-    
+
 ## Co-registration
 
-There is a dedicated tutorial elsewhere that deals with various ways to co-register the OPM sensors with the head and the anatomical MRI. In this demonstration, the .fif file already contains a digitization that the sensors have been co-registered to (using the dev2head transform `hdr.orig.dev_head_t`). However, the raw digitization files and CAD file for the helmet have been provided (see the README.txt). The co-registration of the sensors to the digitization was performed as described in Figure 2b in [Hill et al. 2020](https://doi.org/10.1016/j.neuroimage.2020.116995). 
+There is a dedicated tutorial elsewhere that deals with various ways to co-register the OPM sensors with the head and the anatomical MRI. In this demonstration, the .fif file already contains a digitization that the sensors have been co-registered to (using the dev2head transform `hdr.orig.dev_head_t`). However, the raw digitization files and CAD file for the helmet have also been provided on the [download server](https://download.fieldtriptoolbox.org/example/cerca/) (see README.txt). The co-registration of the sensors to the digitization was performed as described in Figure 2b in [Hill et al. 2020](https://doi.org/10.1016/j.neuroimage.2020.116995). 
 
 ## See also
 

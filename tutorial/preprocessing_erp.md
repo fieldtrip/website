@@ -126,7 +126,7 @@ and note that, if you wanted to, you could plot a single trial with default MATL
 
 ## Extracting the EOG signals
 
-We now continue with re-referencing to extract the bipolar EOG signal from the data. In the BrainAmp acquisition system, all channels are measured relative to a common reference. For the horizontal EOG we will compute the potential difference between channels 57 and 25 (see the plot of the layout and the figure below). For the vertical EOG we will use channel 53 and channel "LEOG" which was placed below the subjects' left eye (not pictured on the layout).
+We now continue with re-referencing to extract the bipolar EOG signal from the data. In the BrainAmp acquisition system, all channels are measured relative to a common reference. For the horizontal EOG we will compute the potential difference between channels "57" and "25" (see the plot of the layout and the figure below). For the vertical EOG we will use channel "53" and the "LEOG" channel, which was placed below the subject's left eye (not pictured in the 2D electrode layout).
 
 {% include markup/yellow %}
 Some acquisition systems, such as Biosemi, allow for direct bipolar recording of EOG. The following re-referencing step to obtain the EOG channels is not needed when working with bipolar data.
@@ -192,17 +192,17 @@ You can check the channel labels that are now present in the data and use **[ft_
 
 ## Channel layout
 
-For topoplotting and sometimes for analysis it is necessary to know how the electrodes were positioned on the scalp. In contrast to the sensor arrangement from a given MEG manufacturer, the topographical arrangement of the channels in EEG is not fixed. Different acquisition systems are designed for different electrode montages, and the number and position of electrodes can be adjusted depending on the experimental goal. In the current experiment, so-called 64-electrodes equidistant montage (ActiCap, BrainVision) was used.
+For topoplotting and sometimes for analysis it is necessary to know how the electrodes were positioned on the scalp. In contrast to the sensor arrangement from a given MEG manufacturer, the topographical arrangement of the channels in EEG is not fixed. Different acquisition systems are designed for different electrode layouts and montages, and the number and position of electrodes can be adjusted depending on the experimental goal. In the current experiment, a BrainVision ActiCap was used with a so-called equidistant layout.
 
 {% include image src="/assets/img/tutorial/preprocessing_erp/figure2.png" width="200" %}
 
-The channel positions are not stored in the EEG dataset. You have to use a layout file; this is a .mat file that contains the 2-D positions of the channels. FieldTrip provides a number of default layouts for BrainVision EEG caps in the fieldtrip/template/layout directory. It is also possible to create custom layouts (see **[ft_prepare_layout](/reference/ft_prepare_layout)** and the [layout tutorial](/tutorial/layout)). In this example we will use an existing layout file that is included with the example data.
+The channel positions are not stored in the EEG dataset. You have to use a layout file; this is a .mat file that contains the 2-D positions of the channels. FieldTrip provides a number of default layouts for BrainVision EEG caps in the `fieldtrip/template/layout` directory, these are documented along with the other [template layouts](/template/layout). It is also possible to create custom layouts using **[ft_prepare_layout](/reference/ft_prepare_layout)** as explained in the [layout tutorial](/tutorial/layout). In this example we will use an existing layout file that is included with the example data.
 
     cfg        = [];
     cfg.layout = 'mpi_customized_acticap64.mat';
     ft_layoutplot(cfg);
 
-Note that the layout should contain correct channel labels that match the channel labels in the data (channel labels not present in either will not be plotted when using a given layout).
+Note that the channel labels in the layout should match the channel labels in the data; channels that are not present in either one will not be plotted.
 
 ## Artifacts
 
