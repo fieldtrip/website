@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '39238484'
+- idtype: doi
+  value: 10.1016/j.scog.2024.100324
+- idtype: pmcid
+  value: PMC11375315
+authors:
+- authtype: Author
+  name: Mayol-Troncoso R
+- authtype: Author
+  name: Gaspar PA
+- authtype: Author
+  name: Verdugo R
+- authtype: Author
+  name: Mariman JJ
+- authtype: Author
+  name: Maldonado PE
+epubdate: 2024 Aug 15
+fulljournalname: 'Schizophrenia Research: Cognition'
+issue: ''
+pages: '100324'
+pmclivedate: 2024/09/05
+printpubdate: ''
+pubdate: 2024 Aug 15
+sortdate: 2024/08/15 00:00
+source: Schizophr Res Cogn
+title: Fixational eye movements and their associated evoked potentials during natural
+  vision are altered in schizophrenia
+uid: '11375315'
+volume: '38'
