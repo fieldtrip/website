@@ -190,9 +190,9 @@ We create the volume conduction models using Openmeeg. This model can be later u
 Another option for MEG is to create a single-shell model on the basis of the brain compartment.
 
     cfg                          = [];
-    cfg.method                   = 'singlesphere';
+    cfg.method                   = 'singleshell';
     headmodel_singleshell_sphere = ft_prepare_headmodel(cfg, template_fit_sphere.bnd(3));
 
     cfg                          = [];
-    cfg.method                   = 'singlesphere';
+    cfg.method                   = 'singleshell';
     headmodel_singleshell_sphere = ft_prepare_headmodel(cfg, template_fit_surface.bnd(3));
