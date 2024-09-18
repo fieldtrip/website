@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '39085585'
+- idtype: doi
+  value: 10.3758/s13415-024-01204-w
+- idtype: pmcid
+  value: PMC11390785
+authors:
+- authtype: Author
+  name: Paßmann S
+- authtype: Author
+  name: Baselgia S
+- authtype: Author
+  name: Kasten FH
+- authtype: Author
+  name: Herrmann CS
+- authtype: Author
+  name: Rasch B
+epubdate: 2024 Jul 31
+fulljournalname: Cognitive, Affective & Behavioral Neuroscience
+issue: '5'
+pages: 894-911
+pmclivedate: 2024/09/13
+printpubdate: '2024'
+pubdate: 2024 Jul 31
+sortdate: 2024/07/31 00:00
+source: Cogn Affect Behav Neurosci
+title: Differential online and offline effects of theta-tACS on memory encoding and
+  retrieval
+uid: '11390785'
+volume: '24'

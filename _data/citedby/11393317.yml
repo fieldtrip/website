@@ -1,0 +1,27 @@
+articleids:
+- idtype: pmid
+  value: '39266696'
+- idtype: doi
+  value: 10.1038/s42003-024-06834-x
+- idtype: pmcid
+  value: PMC11393317
+authors:
+- authtype: Author
+  name: Kasten FH
+- authtype: Author
+  name: Busson Q
+- authtype: Author
+  name: Zoefel B
+epubdate: 2024 Sep 12
+fulljournalname: Communications Biology
+issue: ''
+pages: '1125'
+pmclivedate: 2024/09/13
+printpubdate: ''
+pubdate: 2024 Sep 12
+sortdate: 2024/09/12 00:00
+source: Commun Biol
+title: Opposing neural processing modes alternate rhythmically during sustained auditory
+  attention
+uid: '11393317'
+volume: '7'

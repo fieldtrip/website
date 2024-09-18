@@ -1,0 +1,23 @@
+articleids:
+- idtype: pmid
+  value: '38472533'
+- idtype: doi
+  value: 10.1007/s10548-024-01040-8
+- idtype: pmcid
+  value: PMC11393026
+authors:
+- authtype: Author
+  name: Hindriks R
+epubdate: 2024 Mar 12
+fulljournalname: Brain Topography
+issue: '5'
+pages: 647-658
+pmclivedate: 2024/09/14
+printpubdate: '2024'
+pubdate: 2024 Mar 12
+sortdate: 2024/03/12 00:00
+source: Brain Topogr
+title: Characterization of Second-Order Mixing Effects in Reconstructed Cross-Spectra
+  of Random Neural Fields
+uid: '11393026'
+volume: '37'

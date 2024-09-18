@@ -1,0 +1,43 @@
+articleids:
+- idtype: pmid
+  value: '39263364'
+- idtype: doi
+  value: 10.1038/s44220-024-00289-z
+- idtype: pmcid
+  value: PMC11383798
+authors:
+- authtype: Author
+  name: Voon V
+- authtype: Author
+  name: Manssuer L
+- authtype: Author
+  name: Zhao YJ
+- authtype: Author
+  name: Ding Q
+- authtype: Author
+  name: Zhao Y
+- authtype: Author
+  name: Wang L
+- authtype: Author
+  name: Wang T
+- authtype: Author
+  name: Huang P
+- authtype: Author
+  name: Pan Y
+- authtype: Author
+  name: Sun B
+- authtype: Author
+  name: Li D
+epubdate: 2024 Jul 19
+fulljournalname: Nature. Mental Health
+issue: '9'
+pages: 1084-1095
+pmclivedate: 2024/09/11
+printpubdate: '2024'
+pubdate: 2024 Jul 19
+sortdate: 2024/07/19 00:00
+source: Nat Ment Health
+title: Modeling impulsivity and risk aversion in the subthalamic nucleus with deep
+  brain stimulation
+uid: '11383798'
+volume: '2'

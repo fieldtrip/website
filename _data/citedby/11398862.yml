@@ -1,0 +1,30 @@
+articleids:
+- idtype: pmid
+  value: '39268817'
+- idtype: doi
+  value: 10.7554/eLife.91636
+- idtype: pmcid
+  value: PMC11398862
+authors:
+- authtype: Author
+  name: Morucci P
+- authtype: Author
+  name: Nara S
+- authtype: Author
+  name: Lizarazu M
+- authtype: Author
+  name: Martin C
+- authtype: Author
+  name: Molinaro N
+epubdate: 2024 Sep 13
+fulljournalname: eLife
+issue: ''
+pages: RP91636
+pmclivedate: 2024/09/13
+printpubdate: ''
+pubdate: 2024 Sep 13
+sortdate: 2024/09/13 00:00
+source: eLife
+title: Language experience shapes predictive coding of rhythmic sound sequences
+uid: '11398862'
+volume: '12'

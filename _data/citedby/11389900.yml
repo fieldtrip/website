@@ -1,0 +1,37 @@
+articleids:
+- idtype: pmid
+  value: '39259713'
+- idtype: doi
+  value: 10.1371/journal.pbio.3002784
+- idtype: pmcid
+  value: PMC11389900
+authors:
+- authtype: Author
+  name: Wen W
+- authtype: Author
+  name: Grover S
+- authtype: Author
+  name: Hazel D
+- authtype: Author
+  name: Berning P
+- authtype: Author
+  name: Baumgardt F
+- authtype: Author
+  name: Viswanathan V
+- authtype: Author
+  name: Tween O
+- authtype: Author
+  name: Reinhart RM
+epubdate: 2024 Sep 11
+fulljournalname: PLOS Biology
+issue: '9'
+pages: e3002784
+pmclivedate: 2024/09/11
+printpubdate: ''
+pubdate: 2024 Sep 11
+sortdate: 2024/09/11 00:00
+source: PLoS Biol
+title: Beta-band neural variability reveals age-related dissociations in human working
+  memory maintenance and deletion
+uid: '11389900'
+volume: '22'

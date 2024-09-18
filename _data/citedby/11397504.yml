@@ -1,0 +1,26 @@
+articleids:
+- idtype: pmid
+  value: '39134415'
+- idtype: doi
+  value: 10.1523/ENEURO.0471-23.2024
+- idtype: pmcid
+  value: PMC11397504
+authors:
+- authtype: Author
+  name: Johannknecht M
+- authtype: Author
+  name: Schnitzler A
+- authtype: Author
+  name: Lange J
+epubdate: 2024 Sep 12
+fulljournalname: eNeuro
+issue: '9'
+pages: ENEURO.0471-23.2024
+pmclivedate: 2024/09/13
+printpubdate: ''
+pubdate: 2024 Sep 12
+sortdate: 2024/09/12 00:00
+source: eNeuro
+title: Prestimulus Alpha Phase Modulates Visual Temporal Integration
+uid: '11397504'
+volume: '11'

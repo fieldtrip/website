@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1016/j.ijchp.2024.100495
+- idtype: pmcid
+  value: PMC11402404
+authors:
+- authtype: Author
+  name: Li D
+- authtype: Author
+  name: Li X
+- authtype: Author
+  name: Li J
+- authtype: Author
+  name: Liu J
+- authtype: Author
+  name: Luo R
+- authtype: Author
+  name: Li Y
+- authtype: Author
+  name: Wang D
+- authtype: Author
+  name: Zhou D
+- authtype: Author
+  name: Zhang XY
+epubdate: 2024 Aug 30
+fulljournalname: 'International Journal of Clinical and Health Psychology : IJCHP'
+issue: '3'
+pages: '100495'
+pmclivedate: 2024/09/15
+printpubdate: 2024 Jul-Sep
+pubdate: 2024 Aug 30
+sortdate: 2024/08/30 00:00
+source: Int J Clin Health Psychol
+title: 'Neurophysiological markers of disease severity and cognitive dysfunction in
+  major depressive disorder: A TMS-EEG study'
+uid: '11402404'
+volume: '24'
