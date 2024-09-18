@@ -1,0 +1,33 @@
+articleids:
+- idtype: pmid
+  value: '39147592'
+- idtype: doi
+  value: 10.1523/JNEUROSCI.0189-24.2024
+- idtype: pmcid
+  value: PMC11391495
+authors:
+- authtype: Author
+  name: Khan A
+- authtype: Author
+  name: Ti CH
+- authtype: Author
+  name: Yuan K
+- authtype: Author
+  name: Crespo Garcia M
+- authtype: Author
+  name: Anderson MC
+- authtype: Author
+  name: Tong RK
+epubdate: ''
+fulljournalname: The Journal of Neuroscience
+issue: '37'
+pages: e0189242024
+pmclivedate: 2024/09/13
+printpubdate: 2024 Sep 11
+pubdate: 2024 Sep 11
+sortdate: 2024/09/11 00:00
+source: J Neurosci
+title: Medial Prefrontal Cortex Stimulation Reduces Retrieval-Induced Forgetting via
+  Fronto-parietal Beta Desynchronization
+uid: '11391495'
+volume: '44'

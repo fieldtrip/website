@@ -1,0 +1,45 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1016/j.nicl.2024.103666
+- idtype: pmcid
+  value: PMC11404173
+authors:
+- authtype: Author
+  name: Zhang Q
+- authtype: Author
+  name: Du Y
+- authtype: Author
+  name: Bao C
+- authtype: Author
+  name: Hua L
+- authtype: Author
+  name: Yan R
+- authtype: Author
+  name: Dai Z
+- authtype: Author
+  name: Xia Y
+- authtype: Author
+  name: Zou H
+- authtype: Author
+  name: He C
+- authtype: Author
+  name: Sun H
+- authtype: Author
+  name: Lu Q
+- authtype: Author
+  name: Yao Z
+epubdate: 2024 Aug 31
+fulljournalname: 'NeuroImage : Clinical'
+issue: ''
+pages: '103666'
+pmclivedate: 2024/09/16
+printpubdate: ''
+pubdate: 2024 Aug 31
+sortdate: 2024/08/31 00:00
+source: Neuroimage Clin
+title: 'Aberrant high-beta band functional connectivity during reward processing in
+  melancholic major depressive disorder: An MEG study'
+uid: '11404173'
+volume: '43'
