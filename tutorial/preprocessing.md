@@ -49,7 +49,7 @@ This results in a cfg.trl that contains the trial definitions of all conditions 
 The output of **[ft_definetrial](/reference/ft_definetrial)** can be used for **[ft_preprocessing](/reference/ft_preprocessing)**.
 
     cfg.channel    = {'MEG' 'EOG'};
-    cfg.continuous = 'yes';
+    cfg.continuous = 'yes'; % see https://www.fieldtriptoolbox.org/faq/continuous/
     data_all = ft_preprocessing(cfg);
 
     Save the data to disk
