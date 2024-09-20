@@ -52,7 +52,7 @@
 - name:  Can I use FieldTrip without MATLAB license?
   link:  /faq/compiled
 
-- name:  Why should I set cfg.continuous = 'yes' when preprocessing CTF trial-based data?
+- name:  Why should I set continuous to yes for CTF data?
   link:  /faq/continuous
 
 - name:  How are the different head and MRI coordinate systems defined?
