@@ -53,7 +53,7 @@ Previous FieldTrip workshops took place at
 -   2017, [Jyväskylä, Finland](/workshop/jyvaskyla2017)
 -   2017, [MEG/EEG toolkit](/workshop/toolkit2017) - Nijmegen, NL
 -   2016, [Marseille, France](/workshop/marseille2016b)
--   2016, [Tuebingen, Germany](/workshop/tuebingen2016)
+-   2016, [Tübingen, Germany](/workshop/tuebingen2016)
 -   2016, [Guangzhou, China](/workshop/guangzhou)
 -   2016, [London, UK](/workshop/london)
 -   2016, [Coimbra, Portugal](/workshop/coimbra)
@@ -78,7 +78,7 @@ Previous FieldTrip workshops took place at
 -   2013, [Hamburg, Germany](/workshop/hamburg2013)
 -   2013, [San Sebastian, Spain](/workshop/donostia2013)
 -   2013, [Toronto, Canada](/workshop/toronto)
--   2013, [Tuebingen, Germany](/workshop/tuebingen13)
+-   2013, [Tübingen, Germany](/workshop/tuebingen13)
 -   2013, MEG/EEG toolkit, Nijmegen, NL
 -   2012, [Trento, Italy](/workshop/trento)
 -   2012, [Krakow, Poland](/workshop/krakow)
@@ -86,7 +86,7 @@ Previous FieldTrip workshops took place at
 -   2012, [Hamburg, Germany](/workshop/hamburg)
 -   2012, Leipzig, Germany
 -   2012, MEG/EEG toolkit, Nijmegen, NL
--   2011, Tuebingen, Germany
+-   2011, Tübingen, Germany
 -   2011, [St Louis, USA](/workshop/stlouis)
 -   2011, New York, USA
 -   2011, MEG/EEG toolkit, Nijmegen, NL

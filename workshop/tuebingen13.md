@@ -24,7 +24,7 @@ version of FieldTrip that is distributed on a USB stcik, rather than the version
 have installed. Furthermore, the tutorial data does not have to be
 downloaded but will also be distributed on the USB stick.
 
-1.  Copy the complete Tuebingen directory from the USB stick to your computer
+1.  Copy the complete Tübingen directory from the USB stick to your computer
 2.  Unzip the fieldtrip-xxxxxxxx.zip file.
 3.  Unzip the "data.zip" and "spm atlas.zip" file, you should place the contents in the tutorial directory.
 

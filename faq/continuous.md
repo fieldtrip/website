@@ -12,8 +12,8 @@ FieldTrip does not distinguish between the CTF files that are written as blocks 
 
 The "Subject01.ds" CTF dataset that is used in some tutorials is epoched and has gaps between the trials. If you were to read that as continuous, you would see discontinuities in the MEG channels. If you were to apply the automatic artifact detection functions on that as continuous data, many trials would be detected as an artifact as they start/end with a discontinuous jump in some of the channels. Hence when reading that data the `cfg.continuous` option should be set to `"no"` (which is the default).
 
-Many other CTF datasets are recorded as pseudocontinuous without gaps between the blocks and for those you do want to set the `cfg.continuous` option to `"yes"`. 
+Many other CTF datasets are recorded as pseudo-continuous without gaps between the blocks and for those you do want to set the `cfg.continuous` option to `"yes"`. 
 
-To check whether your data is epoched or pseudocontinuous, please have a look at the `SCLK01` channel.
+To check whether your data is epoched or pseudo-continuous, please have a look at the `SCLK01` channel.
 
 Note that besides **[ft_preprocessing](/reference/ft_preprocessing)**, other functions that read data from disk also have the `cfg.continuous` option, such as  **[ft_databrowser](/reference/ft_databrowser)** and the automatic artifact detection functions.
