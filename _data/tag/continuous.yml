@@ -1,4 +1,4 @@
-- name:  Why should I set cfg.continuous = 'yes' when preprocessing CTF trial-based data?
+- name:  Why should I set continuous to yes for CTF data?
   link:  /faq/continuous
 
 - name:  How can I do time-frequency analysis on continuous data?

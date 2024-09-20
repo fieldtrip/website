@@ -31,7 +31,7 @@
 - name:  How can I append the files of two separate recordings?
   link:  /faq/append_files
 
-- name:  Why should I set cfg.continuous = 'yes' when preprocessing CTF trial-based data?
+- name:  Why should I set continuous to yes for CTF data?
   link:  /faq/continuous
 
 - name:  What dataformats are supported?
