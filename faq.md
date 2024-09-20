@@ -17,7 +17,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [How can I inspect the electrode impedances of my data?](/faq/how_can_i_inspect_the_electrode_impedances_of_my_data)
 - [Should I rereference my EEG data prior to, or after ICA?](/faq/should_I_rereference_prior_to_or_after_ica_for_artifact_removal)
 - [I used to work with trl-matrices that have more than 3 columns. Why is this not supported anymore?](/faq/i_used_to_work_with_trl-matrices_that_have_more_than_3_columns._why_is_this_not_supported_anymore)
-- [Why should I set cfg.continuous = 'yes' when preprocessing CTF trial-based data?](/faq/continuous)
+- [Why should I set continuous to yes for CTF data?](/faq/continuous)
 
 ### Specific data formats
 
