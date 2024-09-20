@@ -16,6 +16,9 @@
 - name:  Can I create an artificial CTF dataset using MATLAB?
   link:  /example/writing_simulated_data_to_a_ctf_dataset
 
+- name:  Why should I set cfg.continuous = 'yes' when preprocessing CTF trial-based data?
+  link:  /faq/continuous
+
 - name:  How are the Left and Right Pre-Auricular (LPA and RPA) points defined?
   link:  /faq/how_are_the_lpa_and_rpa_points_defined
 
