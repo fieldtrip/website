@@ -43,7 +43,7 @@ To load this dataset into MATLAB and preprocess with FieldTrip, use:
 
     cfg            = [];
     cfg.dataset    = 'ArtifactMEG.ds';
-    cfg.continuous = 'yes';
+    cfg.continuous = 'yes'; % see https://www.fieldtriptoolbox.org/faq/continuous/
     cfg.hpfilter   = 'yes';
     cfg.hpfreq     = 0.1; % this is for later segmenting, see below
     cfg.hpfiltord  = 2;

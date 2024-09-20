@@ -164,12 +164,12 @@ Finding an appropriate approach to artifact rejection is not as simple as one mi
 
 Of course, in the end you would like to have certain standardized approach to your artifact rejection that will give you the best results possible. I don't know if something like that exists and rather think everyone has his or her own personal preferences. Although seemingly rather time-consuming, I myself ended up with the following procedure. You need not follow it, it's just a suggestion. It does give me the possibility of explaining some of the following steps in more detail. In particular it will explain a use of ft_databrowser, a recently added function which is not yet documented elsewhere.
 
-1.  Visually inspect the dataset and mark those segments that contain obvious movements, (system) spikes or muscle artifacts, leaving in all but the most extreme eye artifacts.
-2.  Reject the trials that contain artifacts.
-3.  Decompose the data using ICA. Note that ICA can give very unreliable results when the data contains a lot of (correlated) noise. The cleaner the data is already, the better the ICA results.
-4.  Find components clearly corresponding to eye blinks and saccades.
-5.  Recompose data without those components.
-6.  Go through data again visually and manually selects segments that still show any remaining artifacts, being from eye blinks, movements, etc.
+1. Visually inspect the dataset and mark those segments that contain obvious movements, (system) spikes or muscle artifacts, leaving in all but the most extreme eye artifacts.
+2. Reject the trials that contain artifacts.
+3. Decompose the data using ICA. Note that ICA can give very unreliable results when the data contains a lot of (correlated) noise. The cleaner the data is already, the better the ICA results.
+4. Find components clearly corresponding to eye blinks and saccades.
+5. Recompose data without those components.
+6. Go through data again visually and manually selects segments that still show any remaining artifacts, being from eye blinks, movements, etc.
 
 I know this looks like a lot of work. However, it might pay off in the end when you are certain your data is clean and you do not have to go back to satisfy that slightly uneasy feeling that your results might 'be all artifacts'. Of course they might still be, but at least you did everything you could.
 
@@ -204,7 +204,7 @@ First we need to decompose the data into independent components. The only thing 
 
     cfg = \[];
     cfg.channel = 'EEG';
-    ic_data = ft_componentanalysis(cfg,cleandata);
+    ic_data = ft_componentanalysis(cfg, cleandata);
 
 The ICA will return as many components as you put channels in. Each component consists of a component timecourse for every trial (ic_data.trial) together with a single topography (ic_data.topo
 
@@ -217,7 +217,7 @@ When ft_componentanalysis is done (it could take a while) we have to find those 
     cfg.continuous = 'yes';
     cfg.blocksize = 30;
     cfg.channels = [1:10];
-    ft_databrowser(cfg,ic_data); 
+    ft_databrowser(cfg, ic_data); 
 
 Components are automatically sorted based upon on the sum of the weighting factors, commonly resulting in the most interesting components appearing on top. In the example below the first component is clearly an eye-blink because the appearance of an eye-blink in the time-course and the frontal topography. The second component is most probably related to eye movements for similar reasons. The fourth component is picking up the heartbeat. There is no reason to assume the third component to be artifactual.
 

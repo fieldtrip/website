@@ -47,7 +47,7 @@ As a first example, we read the data as a continuous chunk. Note that the exampl
     cfg.trialdef.length = Inf;
     cfg                 = ft_definetrial(cfg);
 
-    cfg.continuous = 'yes';
+    cfg.continuous = 'yes'; % see https://www.fieldtriptoolbox.org/faq/continuous/
     cfg.channel    = {'MEG', '-MLP31', '-MLO12'};
     data           = ft_preprocessing(cfg);
     hs             = ft_read_headshape(cfg.dataset); % let's also read this information

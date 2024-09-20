@@ -362,7 +362,7 @@ Using **[ft_databrowser](/reference/ft_databrowser)** we can browse through both
     % Browse through the segmented data
     cfg = [];
     cfg.artfctdef = cfg_artifact.artfctdef; % Store previously obtained artifact definition
-    cfg.continuous = 'yes'; % Setting this to yes forces ft_databrowser to represent our segmented data as one continuous signal
+    cfg.continuous = 'yes'; % represent the segments or trials as continuous data
     ft_databrowser(cfg, data_tms_segmented);
 
 {% include image src="/assets/img/tutorial/tms-eeg/figure12.png" %}

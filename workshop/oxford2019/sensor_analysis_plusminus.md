@@ -49,9 +49,8 @@ We will demonstrate reading in data based on the localizer task for the experime
 
 Note that we're taking the output of `ft_definetrial` and storing it in our `cfg` variable. The output `cfg` now additionally has a field `cfg.trl` that contains our trial definition. Using the created trial definition, we can add some preprocessing options and read in the data:
 
-    % the following tells the reading functions that the data on disk is
-    % continuous and not already segmented
-    cfg.continuous = 'yes';
+    % the following tells the reading functions that the data on disk is continuous and not already segmented
+    cfg.continuous = 'yes'; % see https://www.fieldtriptoolbox.org/faq/continuous/
 
     cfg.channel = {'MEG' 'EMGlft' 'EMGrgt' 'EOG' 'ECG'};
 
