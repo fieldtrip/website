@@ -46,7 +46,7 @@ To show how the reproducescript functionality works, we apply it to a script fro
 
     % loading data and basic preprocessing
     cfg.channel = {'MEG' 'EOG'};
-    cfg.continuous = 'yes';
+    cfg.continuous = 'yes'; % see https://www.fieldtriptoolbox.org/faq/continuous/
     dataFIC = ft_preprocessing(cfg);
 
     % time-lock analysis

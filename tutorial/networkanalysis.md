@@ -43,8 +43,8 @@ The ft_redefinetrial and ft_preprocessing functions require the original MEG dat
 
     %% read the continuous data and segment into 2 seconds epochs
     cfg            = [];
-    cfg.dataset    = 'SubjectRest.ds'; % note that you may need to add the full path to the .ds directory
-    cfg.continuous = 'yes';
+    cfg.dataset    = 'SubjectRest.ds'; % you may need to add the full path
+    cfg.continuous = 'yes';            % see https://www.fieldtriptoolbox.org/faq/continuous/
     cfg.channel    = {'MEG'};
     data           = ft_preprocessing(cfg);
 
