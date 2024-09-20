@@ -1,6 +1,7 @@
 ---
 title: Why should I set cfg.continuous = 'yes' when preprocessing CTF trial-based data?
 tags: [faq, ctf, preprocessing, continuous]
+authors: [Konstantinos Tsilimparis, Robert Oostenveld]
 ---
 
 # Why should I set cfg.continuous = 'yes' when preprocessing CTF trial-based data?
