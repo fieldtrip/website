@@ -1,0 +1,31 @@
+articleids:
+- idtype: pmid
+  value: '39066878'
+- idtype: doi
+  value: 10.1007/s10548-024-01071-1
+- idtype: pmcid
+  value: PMC11408544
+authors:
+- authtype: Author
+  name: Sasaki R
+- authtype: Author
+  name: Hand BJ
+- authtype: Author
+  name: Liao WY
+- authtype: Author
+  name: Semmler JG
+- authtype: Author
+  name: Opie GM
+epubdate: 2024 Jul 27
+fulljournalname: Brain Topography
+issue: '6'
+pages: 1158-1170
+pmclivedate: 2024/09/19
+printpubdate: '2024'
+pubdate: 2024 Jul 27
+sortdate: 2024/07/27 00:00
+source: Brain Topogr
+title: Investigating the Effects of Repetitive Paired-Pulse Transcranial Magnetic
+  Stimulation on Visuomotor Training Using TMS-EEG
+uid: '11408544'
+volume: '37'

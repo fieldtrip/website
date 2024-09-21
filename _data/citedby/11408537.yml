@@ -1,0 +1,39 @@
+articleids:
+- idtype: pmid
+  value: '39115626'
+- idtype: doi
+  value: 10.1007/s10548-024-01073-z
+- idtype: pmcid
+  value: PMC11408537
+authors:
+- authtype: Author
+  name: Valt C
+- authtype: Author
+  name: Tavella A
+- authtype: Author
+  name: Berchio C
+- authtype: Author
+  name: Seebold D
+- authtype: Author
+  name: Sportelli L
+- authtype: Author
+  name: Rampino A
+- authtype: Author
+  name: Salisbury DF
+- authtype: Author
+  name: Bertolino A
+- authtype: Author
+  name: Pergola G
+epubdate: 2024 Aug 8
+fulljournalname: Brain Topography
+issue: '6'
+pages: 993-1009
+pmclivedate: 2024/09/19
+printpubdate: '2024'
+pubdate: 2024 Aug 8
+sortdate: 2024/08/08 00:00
+source: Brain Topogr
+title: 'MEG Microstates: An Investigation of Underlying Brain Sources and Potential
+  Neurophysiological Processes'
+uid: '11408537'
+volume: '37'
