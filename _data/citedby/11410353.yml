@@ -1,0 +1,24 @@
+articleids:
+- idtype: pmid
+  value: '0'
+- idtype: doi
+  value: 10.1162/nol_a_00147
+- idtype: pmcid
+  value: PMC11410353
+authors:
+- authtype: Author
+  name: Politzer-Ahles S
+- authtype: Author
+  name: Jap BA
+epubdate: 2024 Sep 11
+fulljournalname: Neurobiology of Language
+issue: '4'
+pages: 818-843
+pmclivedate: 2024/09/19
+printpubdate: ''
+pubdate: 2024 Sep 11
+sortdate: 2024/09/11 00:00
+source: Neurobiol Lang (Camb)
+title: Can the Mismatch Negativity Really Be Elicited by Abstract Linguistic Contrasts?
+uid: '11410353'
+volume: '5'

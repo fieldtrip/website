@@ -1,0 +1,24 @@
+articleids:
+- idtype: pmid
+  value: '39042098'
+- idtype: doi
+  value: 10.1088/1361-6560/ad66a9
+- idtype: pmcid
+  value: PMC11410390
+- idtype: MID
+  value: NIHMS2019582
+authors:
+- authtype: Author
+  name: Ponasso GN
+epubdate: 2024 Aug 28
+fulljournalname: Physics in medicine and biology
+issue: '17'
+pages: 10.1088/1361-6560/ad66a9
+pmclivedate: ''
+printpubdate: ''
+pubdate: 2024 Aug 28
+sortdate: 2024/08/28 00:00
+source: Phys Med Biol
+title: A survey on integral equations for bioelectric modeling
+uid: '11410390'
+volume: '69'
