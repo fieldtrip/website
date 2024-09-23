@@ -34,7 +34,7 @@ The forward model requires three geometric object
 The sourcemodel and headmodel are ideally generated from a subject-specific MRI image. The description of the sensor-array typically is represented in the data (MEG), or needs to be constructed, for example with a Polhemus device (EEG). The construction of the head- and sourcemodels that are needed for the remainder of this tutorial is described in the following tutorial
 
 - [Creating a volume conduction model of the head for source reconstruction of MEG data](/tutorial/headmodel_meg)
-- [Creating a sourcemodel for source reconstruction of MEG or EEG data](/tutorial/sourcemodel)
+- [Creating a source model for source reconstruction of MEG or EEG data](/tutorial/sourcemodel)
 
 Once we have the headmodel and sourcemodel, we perform the following step
 

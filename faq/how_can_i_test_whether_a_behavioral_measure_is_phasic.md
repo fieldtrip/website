@@ -3,14 +3,13 @@ title: How can I test whether a behavioral measure is phasic?
 tags: [faq, statistics, freq]
 ---
 
-# How can I test whether a behavioral measure (or some other dependent variable is phasic?
+# How can I test whether a behavioral measure is phasic?
 
 Some experimental hypotheses address the question: *Is my measure-of-interest systematically modulated by the phase of an underlying process?*
 
 For instance, you may wish to quantify the effect of the phase of a band-limited neuronal oscillation on behavioral accuracy or reaction time. Alternatively, you may wish to quantify the effect of pre-stimulus phase on the amplitude of a stimulus-evoked transient in the neuronal signal. One way to evaluate this is to fit a sine/cosine function to the dependent variable, which (according to the hypothesis) modulates as a function of phase. Subsequently, you test the probability of observing the outcome of this fit (typically expressed as the amplitude, or modulation depth) under some null hypothesis.
 
 Here, we demonstrate how this can be achieved in a generic way, using a binning approach. Conceptually, the dependent data consists of a set of observations (typically trials), consisting of categorical variables (e.g., hit/miss) or of continuous variables (e.g., reaction time, signal amplitude). For each of these observations, there is a corresponding 'phase' of the underlying independent variable of interest. Using least-squares regression, it is possible to estimate the amplitude (and phase) of the best fitting cosine-wave to the data. A binning approach can be used to improve the sensitivity, and to better appreciate the underlying structure in the data (particularly for categorical data). The code snippet below demonstrates this approach, and provides a statfun that efficiently computes the cosinefit for multiple signals at once.
-
 
     function [s, s_unbinned, x_binned, y_binned] = demo_phasicfit
 
