@@ -7,7 +7,7 @@
 - name:  Template models for source reconstruction
   link:  /template/sourcemodel
 
-- name:  Creating a sourcemodel for source reconstruction of MEG or EEG data
+- name:  Creating a source model for source reconstruction of MEG or EEG data
   link:  /tutorial/sourcemodel
 
 - name:  Creation of headmodels and sourcemodels for source reconstruction

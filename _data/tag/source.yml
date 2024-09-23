@@ -145,7 +145,7 @@
 - name:  Channel and source analysis of mouse EEG
   link:  /tutorial/mouse_eeg
 
-- name:  Creating a sourcemodel for source reconstruction of MEG or EEG data
+- name:  Creating a source model for source reconstruction of MEG or EEG data
   link:  /tutorial/sourcemodel
 
 - name:  Beamforming oscillatory responses in MEG data

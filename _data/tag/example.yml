@@ -103,7 +103,7 @@
 - name:  Align EEG electrode positions to BEM headmodel
   link:  /example/electrodes2bem
 
-- name:  Performing modified Multiscale Entropy (mMSE) analysis on EEG/MEG/LFP data
+- name:  Perform modified Multiscale Entropy (mMSE) analysis on EEG/MEG/LFP data
   link:  /example/entropy_analysis
 
 - name:  Compute EEG leadfields using a FEM headmodel
@@ -115,7 +115,7 @@
 - name:  Fixing a missing channel
   link:  /example/fixing_a_missing_sensor
 
-- name:  Fitting oscillations and one-over-F (FOOOF).
+- name:  Fitting oscillations and one-over-F (FOOOF)
   link:  /example/fooof
 
 - name:  Example real-time average
