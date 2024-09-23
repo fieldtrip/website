@@ -118,4 +118,4 @@ See also the [tutorials](/tutorial) and [frequently asked questions](/faq).
 - [Find the orientation of planar gradiometer channels](/example/planar_orientation)
 - [How to import data from MNE-Python and FreeSurfer](/example/import_mne)
 - [How to use ft_checkconfig](/example/checkconfig)
-- [Performing modified Multiscale Entropy (mMSE) analysis](/example/entropy_analysis)
+- [Perform modified Multiscale Entropy (mMSE) analysis on EEG/MEG/LFP data](/example/entropy_analysis)
