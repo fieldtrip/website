@@ -29,6 +29,27 @@ h3, h4, h5, h6 {
   font-size: 1rem;
 }
 
+a:link {
+  color: #b0252c;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:visited {
+  color: #b0252c;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover {
+  color: #b0252c;
+  background-color: transparent;
+  text-decoration: underline;
+}
+a:active {
+  color: #b0252c;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
 /* -------------------------------------------------- */
 /* Code blocks */
 
