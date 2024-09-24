@@ -1,5 +1,6 @@
 ---
 title: Fitting a template MRI to the MEG Polhemus head shape
+tags: [example, headmodel, meg]
 redirect_from:
    - /example/sphere_fitting_and_scaling_of_the_template_colin_27_mri_to_the_meg_polhemus_headshape/
 ---
@@ -11,15 +12,15 @@ This example script demonstrates how to fit a sphere to the MEG Polhemus recorde
     load standard_mri % Colin 27 template in fieldtrip
 
     % read MEG sensor location
-    MEG_sens = ft_read_sens(dataset, 'senstype', 'meg');
-    MEG_sens = ft_convert_units(MEG_sens, 'mm');
+    grad = ft_read_sens(dataset, 'senstype', 'meg');
+    grad = ft_convert_units(grad, 'mm');
 
     % read polhemus headshape
     headshape = ft_read_headshape(dataset);
     headshape = ft_convert_units(headshape, 'mm');
 
     save headshape headshape
-    save MEG_sens MEG_sens
+    save grad grad
 
     % realign to neuromag coordinate system
     lpa    = [  7 104  26];
@@ -34,7 +35,7 @@ This example script demonstrates how to fit a sphere to the MEG Polhemus recorde
     cfg.fiducial.rpa    = rpa;
     cfg.fiducial.zpoint = zpoint;
     cfg.coordsys        = 'neuromag';
-    mri_realigned_fiducial      = ft_volumerealign(cfg,mri);
+    mri_realigned_fiducial = ft_volumerealign(cfg,mri);
 
     cfg           = [];
     cfg.output    = {'brain','skull','scalp'};
@@ -125,7 +126,7 @@ This example script demonstrates how to fit a sphere to the MEG Polhemus recorde
     brain_scaled    = ft_prepare_mesh(cfg, segmentedmri);
 
     figure
-    %ft_plot_sens(MEG_sens, 'style', '*b');
+    % ft_plot_sens(grad, 'style', '*b');
     ft_plot_headshape(headshape_denosed);
     hold on
     ft_plot_mesh(scalp_scaled, 'edgecolor', 'none', 'facecolor', [1 1 1]/1.2, 'facealpha',  0.5)
