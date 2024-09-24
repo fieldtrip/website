@@ -22,6 +22,9 @@
 - name:  Can I get an offline version of the documentation on the website?
   link:  /faq/can_i_get_an_offline_version_of_the_wiki_documentation
 
+- name:  Can I organize my own FieldTrip workshop?
+  link:  /faq/can_i_organize_my_own_workshop
+
 - name:  Can I prevent "external" toolboxes from being added to my MATLAB path?
   link:  /faq/can_i_prevent_external_toolboxes_from_being_added_to_my_matlab_path
 
@@ -145,6 +148,9 @@
 - name:  How can I determine the onset of an effect?
   link:  /faq/how_can_i_determine_the_onset_of_an_effect
 
+- name:  How can I distribute a batch of jobs?
+  link:  /faq/how_can_i_distribute_a_batch_of_jobs
+
 - name:  How can I do time-frequency analysis on continuous data?
   link:  /faq/how_can_i_do_time-frequency_analysis_on_continuous_data
 
@@ -177,6 +183,9 @@
 
 - name:  How can I keep track of changes to the code?
   link:  /faq/how_can_i_keep_track_of_the_changes_to_the_code
+
+- name:  How can I map source locations onto an anatomical label in an atlas?
+  link:  /faq/how_can_i_map_source_locations_between_two_different_representations
 
 - name:  How can I merge two datasets that were acquired simultaneously with different amplifiers?
   link:  /faq/how_can_i_merge_two_datasets_that_were_acquired_simultaneously_with_different_amplifiers
@@ -246,6 +255,9 @@
 
 - name:  How does a difference in trial numbers per condition affect my statistical test
   link:  /faq/how_does_a_difference_in_trial_numbers_per_condition_affect_my_statistical_test
+
+- name:  How does ft_prepare_neighbours work?
+  link:  /faq/how_does_ft_prepare_neighbours_work
 
 - name:  How does the CTF higher-order gradiometer work?
   link:  /faq/how_does_the_ctf_higher-order_gradiometer_work
@@ -403,6 +415,9 @@
 - name:  The databrowser crashes and destroys the whole MATLAB session, how can I resolve this?
   link:  /faq/the_databrowser_crashes_and_destroys_the_whole_matlab_session_how_can_i_resolve_this
 
+- name:  What is meant by time-frequency trade off?
+  link:  /faq/timefreqtradeoff
+
 - name:  How can I check or decipher the sequence of triggers in my data?
   link:  /faq/triggers
 
@@ -435,6 +450,9 @@
 
 - name:  What does "padding not sufficient for requested frequency resolution" mean?
   link:  /faq/what_does_padding_not_sufficient_for_requested_frequency_resolution_mean
+
+- name:  What is a good way to save images for later processing in other software?
+  link:  /faq/what_is_a_good_way_to_save_images_for_later_processing_in_other_software
 
 - name:  What is the conductivity of the brain, CSF, skull and skin tissue?
   link:  /faq/what_is_the_conductivity_of_the_brain_csf_skull_and_skin_tissue
