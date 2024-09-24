@@ -1,6 +1,6 @@
 ---
 title: Simulating and estimating, what about model (mis)match?
-tags: [chieti, tutorial, freq, connectivity, coherence, granger, dtf, pdc]
+tags: [chieti, freq, connectivity, coherence, granger, dtf, pdc]
 ---
 
 # Simulating and estimating, what about model (mis)match?
