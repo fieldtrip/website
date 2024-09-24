@@ -1,6 +1,6 @@
 ---
 title: How does ft_prepare_neighbours work?
-tags: [statistics, cluster]
+tags: [faq, statistics, cluster]
 ---
 
 # How does ft_prepare_neighbours work?

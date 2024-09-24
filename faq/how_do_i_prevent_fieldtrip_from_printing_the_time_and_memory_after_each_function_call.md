@@ -31,8 +31,8 @@ You can also pass it as a general option to all functions like this:
     global ft_default
     ft_default.showcallinfo = 'no';
 
-The configuration options in the `ft_default` global variable are (in general) on startup of each FieldTrip function merged with the cfg options that you pass to that function.
+The configuration options in the `ft_default` global variable are (in general) on startup of each FieldTrip function merged with the configuration options that you pass to that function.
 
-Of course you can add this general setting to your startup.m file so that you don't have to type it each time that you start MATLAB.
+Of course you can add this general setting to your `startup.m` file so that you don't have to type it each time that you start MATLAB.
 
-\*) Note that the memory estimate is currently not yet available on windows.
+\*) Note that the memory estimate is currently not yet available on Windows.

@@ -1,5 +1,6 @@
 ---
 title: What is meant by time-frequency trade off?
+tags: [faq, freq]
 ---
 
 # What is meant by time-frequency trade-off?
